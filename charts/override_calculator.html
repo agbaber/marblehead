@@ -24,13 +24,68 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>What the Override Costs You - Marblehead Budget Data</title>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/site.css">
+<style>
+.calc-input { margin: 0 auto 22px; max-width: 420px; text-align: center; }
+.calc-input label {
+  display: block; font-size: 12px; color: var(--text-subtle);
+  text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px;
+}
+.calc-input input {
+  width: 100%; padding: 10px 14px; font-size: 18px; font-weight: 600;
+  color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm); text-align: center;
+  font-variant-numeric: tabular-nums; font-family: var(--font-sans);
+}
+.calc-input input:focus {
+  outline: none; border-color: var(--link);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--link) 22%, transparent);
+}
+.calc-input .hint { display: block; font-size: 12px; color: var(--text-subtle); margin-top: 6px; }
+.calc-input .hint a { color: var(--link); }
+
+.tier-rows { display: flex; flex-direction: column; }
+.tier-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding: 14px 4px;
+  border-bottom: 1px solid var(--divider);
+}
+.tier-row:last-child { border-bottom: none; }
+.tier-row-label {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 600; color: var(--text); font-size: 15px;
+}
+.tier-row-cost { text-align: right; flex-shrink: 0; }
+.cost-primary {
+  font-size: 22px; font-weight: 700; color: var(--text);
+  font-variant-numeric: tabular-nums; line-height: 1.1;
+}
+.cost-primary .cost-unit {
+  font-size: 13px; font-weight: 500; color: var(--text-subtle); margin-left: 2px;
+}
+.cost-secondary {
+  font-size: 12px; color: var(--text-subtle);
+  font-variant-numeric: tabular-nums; margin-top: 3px;
+}
+@media (max-width: 520px) {
+  .tier-row { flex-direction: column; align-items: flex-start; gap: 4px; padding: 12px 2px; }
+  .tier-row-cost { text-align: left; align-self: flex-start; }
+  .cost-primary { font-size: 24px; }
+}
+</style>
 </head>
 <body class="chart-page">
 
 <div class="container">
   <a class="back" href="../">&larr; marbleheaddata.org</a>
   <h1 class="h-center">What the Override Costs You</h1>
-  <p class="subtitle h-center">Additional monthly cost by home assessed value. Median Marblehead home: $1,010,100.</p>
+  <p class="subtitle h-center">Enter your home's assessed value to see the cost year-by-year for each override tier.</p>
+
+  <div class="calc-input">
+    <label for="assessed-value">Your assessed value</label>
+    <input id="assessed-value" type="text" inputmode="numeric" value="$1,291,507" autocomplete="off">
+    <span class="hint">Don't know it? <a href="https://epay.cityhallsystems.com/selection" target="_blank" rel="noopener">Look it up on the town's tax portal</a>. Defaults to the town average single-family value.</span>
+  </div>
 
   <div class="tabs">
     <button class="tab" data-year="1">Year 1 (FY27)</button>
@@ -38,98 +93,83 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <button class="tab active" data-year="3">Year 3 (FY29)</button>
   </div>
 
-  <div class="year-panel" id="year-1">
-    <div class="table-wrap">
-      <table class="data">
-        <thead>
-          <tr><th>Option</th><th>$750K</th><th>$1M</th><th>$1.25M</th><th>$1.5M</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="swatch" style="background: var(--series-tier-1);"></span>Tier 1 ($9M)</td>
-            <td>$8/mo</td><td>$11/mo</td><td>$14/mo</td><td>$16/mo</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background: var(--series-tier-2);"></span>Tier 2 ($12M)</td>
-            <td>$18/mo</td><td>$23/mo</td><td>$29/mo</td><td>$35/mo</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background: var(--series-tier-3);"></span>Tier 3 ($15M)</td>
-            <td>$27/mo</td><td>$36/mo</td><td>$45/mo</td><td>$54/mo</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <div class="year-panel" id="year-1"></div>
+  <div class="year-panel" id="year-2"></div>
+  <div class="year-panel active" id="year-3"></div>
 
-  <div class="year-panel" id="year-2">
-    <div class="table-wrap">
-      <table class="data">
-        <thead>
-          <tr><th>Option</th><th>$750K</th><th>$1M</th><th>$1.25M</th><th>$1.5M</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="swatch" style="background: var(--series-tier-1);"></span>Tier 1 ($9M)</td>
-            <td>$39/mo</td><td>$52/mo</td><td>$65/mo</td><td>$78/mo</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background: var(--series-tier-2);"></span>Tier 2 ($12M)</td>
-            <td>$55/mo</td><td>$73/mo</td><td>$91/mo</td><td>$110/mo</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background: var(--series-tier-3);"></span>Tier 3 ($15M)</td>
-            <td>$66/mo</td><td>$88/mo</td><td>$111/mo</td><td>$133/mo</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="year-panel active" id="year-3">
-    <div class="table-wrap">
-      <table class="data">
-        <thead>
-          <tr><th>Option</th><th>$750K</th><th>$1M</th><th>$1.25M</th><th>$1.5M</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="swatch" style="background: var(--series-tier-1);"></span>Tier 1 ($9M)</td>
-            <td>$57/mo</td><td>$77/mo</td><td>$96/mo</td><td>$115/mo</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background: var(--series-tier-2);"></span>Tier 2 ($12M)</td>
-            <td>$77/mo</td><td>$102/mo</td><td>$128/mo</td><td>$154/mo</td>
-          </tr>
-          <tr>
-            <td><span class="swatch" style="background: var(--series-tier-3);"></span>Tier 3 ($15M)</td>
-            <td>$96/mo</td><td>$128/mo</td><td>$160/mo</td><td>$192/mo</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <h2>How You'll Vote</h2>
-  <p>Two ballot questions, expected June 2026.</p>
-  <p><strong>Question 1</strong> has three parts. Vote yes or no on each:</p>
-  <div style="padding: 0 0 14px 16px; font-size: 14px; color: var(--text-muted); line-height: 2;">
-    1A: $15,000,000 (Invest)<br>
-    1B: $12,000,000 (Stabilize)<br>
-    1C: $9,000,000 (Restore)
-  </div>
-  <p>Vote yes on every tier you'd accept. The highest passing tier sets the override amount. If only 1C passes, you get $9M. If all three pass, you get $15M.</p>
-  <p><strong>Question 2</strong> is a separate yes/no: fund curbside trash and recycling through the property tax instead of a flat fee ($2,298,575).</p>
-
-  <div class="footnotes" style="margin-top: 24px;">
-    <p><span class="footnote-marker"></span>Costs calculated from the Town Administrator's override presentation (April 8, 2026), scaled proportionally from the average single-family assessed value of $1,291,507.</p>
-    <p><span class="footnote-marker"></span>Tiers are nested: Tier 2 includes Tier 1, Tier 3 includes Tiers 1 and 2. Highest passing tier sets the amount.</p>
-    <p><span class="footnote-marker"></span>The override phases in because the town draws against its new capacity gradually. Each year's draw stays on the levy permanently.</p>
+  <div class="footnotes">
+    <p><span class="footnote-marker"></span>Exact numbers from the Town Administrator's override presentation (April 8, 2026). Anchored to the average single-family assessed value of $1,291,507 and scaled linearly to your value.</p>
+    <p><span class="footnote-marker"></span>Tiers are nested: Tier 2 includes Tier 1, Tier 3 includes Tiers 1 and 2. The highest passing tier sets the amount.</p>
+    <p><span class="footnote-marker"></span>Year 2 and Year 3 are cumulative and permanent: each year's figure is your new total ongoing tax bill once that year's draw kicks in, not a one-time increase.</p>
     <p><span class="footnote-marker"></span>Trash/recycling (Question 2) is not included above. You'll pay for it either way: as a levy increase (~$19/mo on a $1M home) or as a flat fee (~$22/mo per household) if the override fails.</p>
   </div>
 </div>
 
 <script>
+// Anchor: Town Administrator's override presentation, April 8, 2026.
+// Each number is the annual tax increase (dollars) on a home assessed at
+// the town average single-family value, with that year's draws fully phased in.
+const AVG_ASSESSED = 1291507;
+const RATES = {
+  1: { y1:  167.90, y2:  804.93, y3: 1186.68 }, // Tier 1 — $9M  — Restore
+  2: { y1:  361.62, y2: 1132.65, y3: 1587.17 }, // Tier 2 — $12M — Stabilize
+  3: { y1:  555.35, y2: 1369.97, y3: 1985.39 }, // Tier 3 — $15M — Invest
+};
+const TIER_META = {
+  1: { label: 'Tier 1 ($9M) — Restore',   swatch: 'var(--series-tier-1)' },
+  2: { label: 'Tier 2 ($12M) — Stabilize', swatch: 'var(--series-tier-2)' },
+  3: { label: 'Tier 3 ($15M) — Invest',    swatch: 'var(--series-tier-3)' },
+};
+
+function annualForYear(assessedValue, tier, year) {
+  return RATES[tier]['y' + year] * (assessedValue / AVG_ASSESSED);
+}
+
+function money(n) {
+  return '$' + Math.round(n).toLocaleString('en-US');
+}
+
+function renderYearPanel(assessedValue, year) {
+  const rows = [1, 2, 3].map(function(tier) {
+    const annual = annualForYear(assessedValue, tier, year);
+    const monthly = annual / 12;
+    const meta = TIER_META[tier];
+    return (
+      '<div class="tier-row">' +
+        '<div class="tier-row-label">' +
+          '<span class="swatch" style="background: ' + meta.swatch + ';"></span>' + meta.label +
+        '</div>' +
+        '<div class="tier-row-cost">' +
+          '<div class="cost-primary">' + money(monthly) + '<span class="cost-unit">/mo</span></div>' +
+          '<div class="cost-secondary">' + money(annual) + '/yr</div>' +
+        '</div>' +
+      '</div>'
+    );
+  }).join('');
+  return '<div class="tier-rows">' + rows + '</div>';
+}
+
+function parseAssessed(raw) {
+  const n = parseFloat(String(raw).replace(/[^0-9.]/g, ''));
+  return Number.isFinite(n) && n > 0 ? n : AVG_ASSESSED;
+}
+
+function formatInput(n) {
+  return '$' + Math.round(n).toLocaleString('en-US');
+}
+
+function update() {
+  const input = document.getElementById('assessed-value');
+  const value = parseAssessed(input.value);
+  for (const year of [1, 2, 3]) {
+    document.getElementById('year-' + year).innerHTML = renderYearPanel(value, year);
+  }
+}
+
+const input = document.getElementById('assessed-value');
+input.addEventListener('input', update);
+input.addEventListener('blur', () => { input.value = formatInput(parseAssessed(input.value)); update(); });
+
 document.querySelectorAll('.tab').forEach(function(btn) {
   btn.addEventListener('click', function() {
     document.querySelectorAll('.tab').forEach(function(b) { b.classList.remove('active'); });
@@ -138,6 +178,8 @@ document.querySelectorAll('.tab').forEach(function(btn) {
     document.getElementById('year-' + btn.dataset.year).classList.add('active');
   });
 });
+
+update();
 </script>
 
 </body>
