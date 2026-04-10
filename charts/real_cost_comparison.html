@@ -18,7 +18,7 @@
     border-radius: 12px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.06);
     padding: 36px 40px 32px;
-    max-width: 840px;
+    max-width: 800px;
     width: 100%;
   }
   h1 { font-size: 18px; font-weight: 700; color: #111; text-align: center; margin-bottom: 2px; }
@@ -31,100 +31,68 @@
 </style>
 </head>
 <body>
+<div style="max-width:800px;margin:0 auto;padding:12px 20px 0"><a href="../" style="font-family:-apple-system,sans-serif;font-size:12px;color:#999;text-decoration:none">&larr; marbleheaddata.org</a></div>
 <div class="container">
   <h1>Tax Levy vs. Health Insurance Spending</h1>
-  <p class="subtitle">Both indexed to FY2006 = 100. Actual values from audited financial reports. Marblehead, FY2006-FY2029 (projected).</p>
+  <p class="subtitle">Both indexed to FY2006 = 100. Actual values from audited financial reports and budget documents. Marblehead, FY2006-FY2027.</p>
 
   <div class="chart-wrapper">
-    <svg viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg">
       <!-- Baseline at 100 -->
-      <line x1="70" y1="255" x2="610" y2="255" stroke="#ddd" stroke-width="1"/>
+      <line x1="60" y1="246" x2="620" y2="246" stroke="#ddd" stroke-width="1"/>
 
       <!-- Y ticks -->
-      <line x1="66" y1="255" x2="70" y2="255" stroke="#ccc" stroke-width="1"/>
-      <text x="63" y="259" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">100</text>
-      <line x1="66" y1="192" x2="70" y2="192" stroke="#ccc" stroke-width="1"/>
-      <text x="63" y="196" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">150</text>
-      <line x1="66" y1="130" x2="70" y2="130" stroke="#ccc" stroke-width="1"/>
-      <text x="63" y="134" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">200</text>
-      <line x1="66" y1="68" x2="70" y2="68" stroke="#ccc" stroke-width="1"/>
-      <text x="63" y="72" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">250</text>
+      <line x1="56" y1="246" x2="60" y2="246" stroke="#ccc" stroke-width="1"/>
+      <text x="53" y="250" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">100</text>
+      <line x1="56" y1="160" x2="60" y2="160" stroke="#ccc" stroke-width="1"/>
+      <text x="53" y="164" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">150</text>
+      <line x1="56" y1="74" x2="60" y2="74" stroke="#ccc" stroke-width="1"/>
+      <text x="53" y="78" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">200</text>
 
       <!-- X labels -->
-      <text x="70"  y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY06</text>
-      <text x="140" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY09</text>
-      <text x="211" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY12</text>
-      <text x="281" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY15</text>
-      <text x="352" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY18</text>
-      <text x="422" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY21</text>
-      <text x="493" y="302" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY24</text>
-      <text x="563" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY27</text>
-      <text x="610" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY29</text>
+      <text x="60"  y="292" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY06</text>
+      <text x="140" y="292" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY09</text>
+      <text x="220" y="292" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY12</text>
+      <text x="300" y="292" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY15</text>
+      <text x="380" y="292" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY18</text>
+      <text x="460" y="292" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY21</text>
+      <text x="540" y="292" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY24</text>
+      <text x="620" y="292" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY27</text>
 
       <!-- GIC marker -->
-      <line x1="211" y1="50" x2="211" y2="280" stroke="#ccc" stroke-width="0.5" stroke-dasharray="3,3"/>
-      <text x="215" y="58" font-size="9" fill="#bbb" font-family="-apple-system, sans-serif">Joined state insurance pool</text>
+      <line x1="220" y1="50" x2="220" y2="270" stroke="#ccc" stroke-width="0.5" stroke-dasharray="3,3"/>
+      <text x="224" y="58" font-size="9" fill="#bbb" font-family="-apple-system, sans-serif">Joined state insurance pool</text>
 
-      <!-- === LEVY (green) === -->
-      <!-- Actual FY06-FY24 -->
-      <polyline points="70,255 93,252 117,248 140,244 164,238 187,235 211,228 234,225 258,219 281,213 305,207 328,199 352,192 375,188 399,183 422,176 446,164 469,156 493,148"
+      <!-- Levy (green) - actual FY06-FY24 -->
+      <polyline points="60,246 87,241 113,238 140,233 167,222 193,215 220,206 247,201 273,193 300,183 327,175 353,164 380,154 407,147 433,138 460,129 487,106 513,97 540,85"
                 fill="none" stroke="#059669" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
 
-      <!-- Levy projections: no override (dashed, continues at ~3%) -->
-      <polyline points="493,148 516,141 540,133 563,126 587,118 610,111"
-                fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.4"/>
-
-      <!-- Levy projections: Tier 1 fork -->
-      <polyline points="493,148 610,85"
-                fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.6"/>
-
-      <!-- Levy projections: Tier 2 fork -->
-      <polyline points="493,148 610,77"
-                fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.7"/>
-
-      <!-- Levy projections: Tier 3 fork -->
-      <polyline points="493,148 610,68"
-                fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.85"/>
-
-      <!-- Fork dots at FY29 -->
-      <circle cx="610" cy="111" r="3" fill="#059669" opacity="0.4"/>
-      <circle cx="610" cy="85" r="3" fill="#059669" opacity="0.6"/>
-      <circle cx="610" cy="77" r="3" fill="#059669" opacity="0.7"/>
-      <circle cx="610" cy="68" r="3" fill="#059669" opacity="0.85"/>
-
-      <!-- === HEALTH INSURANCE (dark) === -->
-      <!-- Actual solid FY06-FY19 -->
-      <polyline points="70,255 93,247 117,234 140,212 164,222 187,215 211,196 234,210 258,198 281,190 305,181 328,175 352,174 375,168"
+      <!-- GI (dark) - actual solid FY06-FY19 -->
+      <polyline points="60,246 87,234 113,214 140,187 167,199 193,190 220,162 247,178 273,166 300,157 327,145 353,137 380,135 407,129"
                 fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-      <!-- Dashed FY19-FY21 (gap) -->
-      <polyline points="375,168 422,163"
+      <!-- Dashed FY19-FY21 gap -->
+      <polyline points="407,129 460,122"
                 fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="4,4"/>
       <!-- Actual solid FY21-FY24 -->
-      <polyline points="422,163 446,153 469,141 493,162"
+      <polyline points="460,122 487,110 513,96 540,118"
                 fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-      <!-- Dashed FY24-FY29 (proposed + projected) -->
-      <polyline points="493,162 516,165 540,143 563,117 587,93 610,68"
+      <!-- Dashed FY24-FY27 (proposed) -->
+      <polyline points="540,118 567,122 593,97 620,69"
                 fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="5,4"/>
 
-      <!-- === END LABELS (right margin) === -->
-      <!-- Health insurance -->
-      <text x="618" y="64" font-size="10" font-weight="600" fill="#222" font-family="-apple-system, sans-serif">+150% health insurance</text>
-
-      <!-- Levy forks -->
-      <text x="618" y="113" font-size="9" fill="#059669" opacity="0.5" font-family="-apple-system, sans-serif">no override</text>
-      <text x="618" y="87" font-size="9" fill="#059669" opacity="0.6" font-family="-apple-system, sans-serif">Tier 1 ($9M)</text>
-      <text x="618" y="79" font-size="9" fill="#059669" opacity="0.7" font-family="-apple-system, sans-serif">Tier 2 ($12M)</text>
-      <text x="618" y="57" font-size="9" fill="#059669" opacity="0.85" font-family="-apple-system, sans-serif">Tier 3 ($15M)</text>
+      <!-- End labels -->
+      <text x="628" y="82" font-size="10" font-weight="600" fill="#059669" font-family="-apple-system, sans-serif">+86% levy</text>
+      <text x="628" y="66" font-size="10" font-weight="600" fill="#222" font-family="-apple-system, sans-serif">+110% health ins.</text>
     </svg>
   </div>
 
   <p class="caption">
-    Solid lines are actual data. Dashed lines after FY24 are projections: the levy continues at ~3%/yr (Prop 2.5 + new growth), with override tiers shown at full phase-in (FY29). Health insurance continues at ~9%/yr (Finance Committee long-term rate; the actual FY27 increase is 15%). FY20 health insurance data not available. The gap between FY19 and FY21 is a dashed connector.
+    Solid lines are actual data from audited financial reports. Dashed lines after FY24 are from proposed budgets (FY26-FY27). FY20 health insurance data not available (dashed connector). The tax levy grew 86% from FY06 to FY24. Health insurance spending grew 110% from FY06 to FY27 (proposed). Both indexed to FY2006 = 100.
   </p>
 
   <div class="notes">
-    <p>Tax levy from MA Department of Revenue (FY06-FY24). Health insurance from Annual Comprehensive Financial Report budget schedules (FY06-FY13) and Finance Committee reports (FY14-FY25). FY26-FY27 from proposed budget. FY28-FY29 projected at 9%/yr.</p>
-    <p>Override tier projections assume full $9M/$12M/$15M added to the levy base by FY29. Actual phase-in occurs over three years. Tier 3 at full phase-in roughly matches health insurance's projected level.</p>
+    <p>Tax levy from MA Department of Revenue (FY06-FY24). Health insurance ("Group Insurance," Line 221) from Annual Comprehensive Financial Report budget schedules (FY06-FY13) and Finance Committee reports (FY14-FY25). FY26-FY27 from proposed budget.</p>
+    <p>Health insurance includes active employee health insurance, Medicare supplement, and Medicare reimbursement for all town and school employees. Rates are set by the state Group Insurance Commission.</p>
   </div>
 </div>
 </body>
