@@ -1,0 +1,65 @@
+{
+  "source": "State of the Town Presentation, Jan 28 2026, Thatcher Kezer",
+  "revenue": {
+    "FY25_actual": {
+      "levy": 73202405,
+      "new_growth": 324437,
+      "levy_limit": 73526842,
+      "free_cash_levy": 5500000,
+      "free_cash_capital": 1000000,
+      "state_aid_town": 1578607,
+      "state_aid_school": 7247445,
+      "local_receipts": 10069737,
+      "total": 99621324
+    },
+    "FY26_projected": {
+      "levy": 75365013,
+      "new_growth": 287385,
+      "levy_limit": 75652398,
+      "free_cash_levy": 7000000,
+      "free_cash_capital": 2000000,
+      "state_aid_town": 1642836,
+      "state_aid_school": 7316696,
+      "local_receipts": 8881283,
+      "total": 103299899
+    },
+    "FY27_projected": {
+      "levy": 77543708,
+      "new_growth": 260000,
+      "levy_limit": 77803708,
+      "free_cash_levy": 5000000,
+      "free_cash_capital": 0,
+      "state_aid_town": 1666021,
+      "state_aid_school": 7658254,
+      "local_receipts": 7917995,
+      "total": 101024029
+    }
+  },
+  "expenses": {
+    "FY25_actual": {
+      "town_operating": 42717923,
+      "schools": 46294268,
+      "total_operating": 90022471,
+      "total_with_debt": 105099157
+    },
+    "FY26_projected": {
+      "town_operating": 47771952,
+      "schools": 49120287,
+      "total_operating": 98166562,
+      "total_with_debt": 112417040
+    },
+    "FY27_projected": {
+      "town_operating": 53724560,
+      "schools": 49990287,
+      "total_operating": 104801580,
+      "total_with_debt": 120594250
+    }
+  },
+  "FY27_deficit": 8471823,
+  "FY27_major_cost_drivers": {
+    "new_trash_contract": 844575,
+    "pension_costs": 462735,
+    "health_insurance_15pct": 1951708,
+    "total": 3259018
+  }
+}

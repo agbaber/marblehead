@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    padding: 36px 40px 32px;
+    max-width: 800px;
+    width: 100%;
+  }
+  h1 { font-size: 18px; font-weight: 700; color: #111; margin-bottom: 2px; }
+  .subtitle { font-size: 12px; color: #888; margin-bottom: 28px; line-height: 1.5; }
+  .chart-wrapper { margin-bottom: 16px; }
+  svg { width: 100%; height: auto; display: block; }
+  .caption { font-size: 12px; color: #666; line-height: 1.6; margin: 0 0 20px 0; }
+  .notes { font-size: 11px; color: #999; line-height: 1.5; border-top: 1px solid #eee; padding-top: 12px; }
+  .notes p + p { margin-top: 3px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Tax Levy vs. Health Insurance Spending</h1>
+  <p class="subtitle">Both indexed to FY2006 = 100. Actual values from audited financial reports and budget documents. Marblehead, FY2006-FY2027.</p>
+
+  <div class="chart-wrapper">
+    <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg">
+      <!--
+        x = 70 + (fy-2006)/21 * 560
+        y = 280 - ((val-80)/200)*250
+
+        Levy indexed (FY06=100): 100,103,106,109,114,116,121,124,128,134,139,145,150,153,158,163,173,179,186
+        GI indexed (FY06=100):   100,107,117,135,126,132,147,136,145,152,159,164,165,169,...173,182,191,175,172,190,210
+      -->
+
+      <!-- 100 baseline -->
+      <line x1="70" y1="255" x2="630" y2="255" stroke="#ddd" stroke-width="1"/>
+
+      <!-- Y ticks -->
+      <line x1="66" y1="255" x2="70" y2="255" stroke="#ccc" stroke-width="1"/>
+      <text x="63" y="259" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">100</text>
+      <line x1="66" y1="224" x2="70" y2="224" stroke="#ccc" stroke-width="1"/>
+      <text x="63" y="228" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">125</text>
+      <line x1="66" y1="192" x2="70" y2="192" stroke="#ccc" stroke-width="1"/>
+      <text x="63" y="196" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">150</text>
+      <line x1="66" y1="161" x2="70" y2="161" stroke="#ccc" stroke-width="1"/>
+      <text x="63" y="165" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">175</text>
+      <line x1="66" y1="130" x2="70" y2="130" stroke="#ccc" stroke-width="1"/>
+      <text x="63" y="134" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">200</text>
+
+      <!-- X labels -->
+      <text x="70"  y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY06</text>
+      <text x="150" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY09</text>
+      <text x="230" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY12</text>
+      <text x="310" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY15</text>
+      <text x="390" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY18</text>
+      <text x="470" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY21</text>
+      <text x="550" y="302" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY24</text>
+      <text x="630" y="302" text-anchor="middle" font-size="9" fill="#666" font-family="-apple-system, sans-serif">FY27</text>
+
+      <!-- GIC marker -->
+      <line x1="230" y1="110" x2="230" y2="280" stroke="#ccc" stroke-width="0.5" stroke-dasharray="3,3"/>
+      <text x="234" y="118" font-size="9" fill="#bbb" font-family="-apple-system, sans-serif">Joined state insurance pool</text>
+
+      <!-- Levy line (green) - actual DOR data FY06-FY24 -->
+      <polyline points="70,255 97,252 123,248 150,244 177,238 203,235 230,228 257,225 283,219 310,213 337,207 363,199 390,192 417,188 443,183 470,176 497,164 523,156 550,148"
+                fill="none" stroke="#059669" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+
+      <!-- GI line (dark) - actual budget data FY06-FY24 -->
+      <!-- Note: FY20 missing, line skips from FY19 to FY21 -->
+      <polyline points="70,255 97,247 123,234 150,212 177,222 203,215 230,196 257,210 283,198 310,190 337,181 363,175 390,174 417,168"
+                fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- FY21-FY24 (gap from missing FY20) -->
+      <polyline points="470,163 497,153 523,141 550,162"
+                fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- Dashed connector over FY20 gap -->
+      <polyline points="417,168 470,163"
+                fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+      <!-- GI dashed projection FY24-FY27 -->
+      <polyline points="550,162 577,165 603,143 630,117"
+                fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+      <!-- End labels -->
+      <text x="636" y="145" font-size="10" font-weight="600" fill="#059669" font-family="-apple-system, sans-serif">+86%</text>
+      <text x="636" y="157" font-size="9" fill="#059669" font-family="-apple-system, sans-serif">tax levy</text>
+
+      <text x="636" y="113" font-size="10" font-weight="600" fill="#222" font-family="-apple-system, sans-serif">+110%</text>
+      <text x="636" y="125" font-size="9" fill="#666" font-family="-apple-system, sans-serif">health insurance</text>
+    </svg>
+  </div>
+
+  <p class="caption">
+    Both lines use actual data indexed to FY2006 = 100. The tax levy (green) grew 86% over 18 years. Health insurance spending (black) grew 110% over 21 years (through FY27 proposed). Health insurance is lumpier year to year because of claims experience, plan changes, and the GIC transition (FY2012), but the trend consistently outpaces revenue growth. FY20 health insurance data not available (dashed connector).
+  </p>
+
+  <div class="notes">
+    <p>Tax levy from MA Department of Revenue (FY06-FY24). Health insurance from Annual Comprehensive Financial Report budget schedules (FY06-FY13) and Finance Committee reports (FY14-FY25). FY26-FY27 proposed budget (dashed).</p>
+    <p>Health insurance is the single largest line item the town does not directly control. Rates are set by the state Group Insurance Commission. The town's only lever is the employer/employee contribution split (currently 83%/17%), which requires agreement with the Public Employee Committee.</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+# Local env (tokens, secrets)
+.env
+
+# Claude Code working files
+.claude/
+.playwright-mcp/
+.DS_Store
+
+# Local-only data (too large or not public-ready)
+data/acfr/
+data/budgets/
+data/*.pdf
+data/*.xlsx
+data/*.png
+data/build_chart.py
+data/marblehead_levy_vs_costs.png
+data/ma_tax_rates_by_class.csv
+data/tax_comparison.csv
+
+# Old session artifacts
+levy/
+
+# Draft charts
+charts/drafts/
+
+# Temp files
+*.pyc
+__pycache__/
+/tmp/
