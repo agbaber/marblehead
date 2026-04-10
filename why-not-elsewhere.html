@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PQG62BJ');</script>
+<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK1KEJT3KX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZK1KEJT3KX');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
+<title>Why Isn't This a Problem Everywhere? - Marblehead Budget Data</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  /* Page-specific: archetype-colored bar charts and data tables */
+  .peer-chart {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 20px 14px;
+    margin: 18px 0 10px;
+  }
+  .peer-chart h3 {
+    font-size: 13px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.1px; color: var(--text-subtle);
+    margin-bottom: 14px;
+  }
+  .peer-row {
+    display: grid;
+    grid-template-columns: 92px 1fr 56px;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  .peer-row .t {
+    color: var(--text); text-align: right;
+    font-weight: 500;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .peer-row.mh .t { font-weight: 700; color: var(--c-buoy); }
+  .peer-row .track {
+    height: 18px; background: var(--divider); border-radius: 4px;
+    position: relative; overflow: hidden;
+  }
+  .peer-row .fill {
+    height: 100%; border-radius: 4px;
+    background: var(--bar-color, var(--c-navy));
+  }
+  .peer-row.mh .fill { background: var(--c-buoy); }
+  .peer-row .v {
+    color: var(--text-muted); font-variant-numeric: tabular-nums;
+    text-align: left; font-weight: 600;
+  }
+  .peer-row.mh .v { color: var(--c-buoy); }
+  .arch-residential .fill { background: var(--c-navy); }
+  .arch-mixed       .fill { background: var(--c-brass); }
+  .arch-commercial  .fill { background: var(--c-sage); }
+  .arch-gateway     .fill { background: var(--c-plum); }
+
+  .peer-legend {
+    display: flex; flex-wrap: wrap; gap: 12px 18px;
+    font-size: 11px; color: var(--text-subtle);
+    margin: 6px 0 0;
+    padding-top: 10px;
+    border-top: 1px solid var(--divider);
+  }
+  .peer-legend .li { display: inline-flex; align-items: center; gap: 6px; }
+  .peer-legend .sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .sw-residential { background: var(--c-navy); }
+  .sw-mixed       { background: var(--c-brass); }
+  .sw-commercial  { background: var(--c-sage); }
+  .sw-gateway     { background: var(--c-plum); }
+  .sw-marblehead  { background: var(--c-buoy); }
+
+  /* Data tables */
+  table.peer-table {
+    width: 100%; border-collapse: collapse;
+    font-size: 13px; margin: 10px 0 4px;
+    font-variant-numeric: tabular-nums;
+  }
+  table.peer-table th {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--text-subtle);
+    text-align: right; padding: 8px 6px; border-bottom: 1px solid var(--border);
+  }
+  table.peer-table th:first-child { text-align: left; }
+  table.peer-table td {
+    padding: 9px 6px; border-bottom: 1px solid var(--divider);
+    color: var(--text-muted); text-align: right;
+  }
+  table.peer-table td:first-child { text-align: left; color: var(--text); font-weight: 500; }
+  table.peer-table tr.mh td { color: var(--c-buoy); font-weight: 700; }
+  table.peer-table tr:last-child td { border-bottom: none; }
+
+  .two-stat {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    margin: 16px 0 20px;
+  }
+  .two-stat .stat {
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    padding: 14px 16px;
+  }
+  .two-stat .stat-label {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-subtle);
+    margin-bottom: 6px;
+  }
+  .two-stat .stat-value {
+    font-size: 26px; font-weight: 700; color: var(--c-buoy);
+    font-variant-numeric: tabular-nums; line-height: 1.1;
+  }
+  .two-stat .stat-desc {
+    font-size: 11px; color: var(--text-subtle); margin-top: 4px;
+  }
+
+  @media (max-width: 600px) {
+    .peer-row { grid-template-columns: 76px 1fr 48px; font-size: 11px; }
+    .two-stat { grid-template-columns: 1fr; }
+    table.peer-table { font-size: 12px; }
+    table.peer-table th, table.peer-table td { padding: 7px 4px; }
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQG62BJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="page">
+  <a class="back" href="./">&larr; marbleheaddata.org</a>
+
+  <h1>Why Isn't This a Problem Everywhere?</h1>
+  <p>Massachusetts has 351 cities and towns. Most are feeling the squeeze that Marblehead is feeling &mdash; the Massachusetts Municipal Association's October 2025 <em><a href="https://www.mma.org/wp-content/uploads/2025/10/MMA-APerfectStorm-HistoricFiscalPressures-report-10.9.25.pdf">Perfect Storm</a></em> report calls it a statewide crisis. But the squeeze isn't evenly distributed. Some towns have structural buffers that Marblehead doesn't, and those buffers explain most of the difference in when towns hit the wall.</p>
+
+  <p>Two metrics from the MA Department of Revenue tell most of the story: what share of a town's property tax levy falls on residential homeowners, and how much new construction expands the levy ceiling each year. Marblehead is at or near the extreme on both.</p>
+
+  <div class="two-stat">
+    <div class="stat">
+      <div class="stat-label">Residential share of levy (FY26)</div>
+      <div class="stat-value">95.5%</div>
+      <div class="stat-desc">Highest in the 21-town peer set below. Commercial, industrial, and personal property combined make up 4.5%.</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">5-yr avg new growth (FY22&ndash;26)</div>
+      <div class="stat-value">0.54%</div>
+      <div class="stat-desc">Lowest in the peer set. New construction adds about $460K to the levy limit each year, outside Proposition 2&frac12;'s 2.5% cap.</div>
+    </div>
+  </div>
+
+  <h2>Residential share of the tax levy, FY2026</h2>
+  <p>When a homeowner in Marblehead pays their tax bill, 95.5&cent; of every dollar collected by the town comes from residential property. In Cambridge, that figure is 33.8&cent;. The rest comes from commercial, industrial, and personal property taxes. A town with a big commercial base has a release valve that a residential-only town does not: when costs rise, the burden can be spread across office parks, labs, and retail instead of falling entirely on homeowners.</p>
+
+  <div class="peer-chart">
+    <h3>% of Total Property Tax Levy Paid by Residential</h3>
+    <div class="peer-row mh"><div class="t">Marblehead</div><div class="track"><div class="fill" style="width:95.5%"></div></div><div class="v">95.5%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Winchester</div><div class="track"><div class="fill" style="width:95.1%"></div></div><div class="v">95.1%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Arlington</div><div class="track"><div class="fill" style="width:94.8%"></div></div><div class="v">94.8%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Cohasset</div><div class="track"><div class="fill" style="width:93.9%"></div></div><div class="v">93.9%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Melrose</div><div class="track"><div class="fill" style="width:91.4%"></div></div><div class="v">91.4%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Wellesley</div><div class="track"><div class="fill" style="width:90.4%"></div></div><div class="v">90.4%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Hingham</div><div class="track"><div class="fill" style="width:90.3%"></div></div><div class="v">90.3%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Swampscott</div><div class="track"><div class="fill" style="width:88.6%"></div></div><div class="v">88.6%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Brookline</div><div class="track"><div class="fill" style="width:84.1%"></div></div><div class="v">84.1%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Stoneham</div><div class="track"><div class="fill" style="width:83.0%"></div></div><div class="v">83.0%</div></div>
+    <div class="peer-row arch-mixed"><div class="t">Natick</div><div class="track"><div class="fill" style="width:82.8%"></div></div><div class="v">82.8%</div></div>
+    <div class="peer-row arch-gateway"><div class="t">Lynn</div><div class="track"><div class="fill" style="width:82.7%"></div></div><div class="v">82.7%</div></div>
+    <div class="peer-row arch-gateway"><div class="t">Malden</div><div class="track"><div class="fill" style="width:80.4%"></div></div><div class="v">80.4%</div></div>
+    <div class="peer-row arch-mixed"><div class="t">Needham</div><div class="track"><div class="fill" style="width:79.2%"></div></div><div class="v">79.2%</div></div>
+    <div class="peer-row arch-mixed"><div class="t">Lexington</div><div class="track"><div class="fill" style="width:77.8%"></div></div><div class="v">77.8%</div></div>
+    <div class="peer-row arch-gateway"><div class="t">Salem</div><div class="track"><div class="fill" style="width:72.8%"></div></div><div class="v">72.8%</div></div>
+    <div class="peer-row arch-mixed"><div class="t">Framingham</div><div class="track"><div class="fill" style="width:67.2%"></div></div><div class="v">67.2%</div></div>
+    <div class="peer-row arch-commercial"><div class="t">Boston</div><div class="track"><div class="fill" style="width:46.1%"></div></div><div class="v">46.1%</div></div>
+    <div class="peer-row arch-commercial"><div class="t">Waltham</div><div class="track"><div class="fill" style="width:39.1%"></div></div><div class="v">39.1%</div></div>
+    <div class="peer-row arch-commercial"><div class="t">Burlington</div><div class="track"><div class="fill" style="width:37.1%"></div></div><div class="v">37.1%</div></div>
+    <div class="peer-row arch-commercial"><div class="t">Cambridge</div><div class="track"><div class="fill" style="width:33.8%"></div></div><div class="v">33.8%</div></div>
+    <div class="peer-legend">
+      <span class="li"><span class="sw sw-marblehead"></span>Marblehead</span>
+      <span class="li"><span class="sw sw-residential"></span>Residential suburbs</span>
+      <span class="li"><span class="sw sw-mixed"></span>Suburbs with commercial</span>
+      <span class="li"><span class="sw sw-commercial"></span>Commercial-heavy</span>
+      <span class="li"><span class="sw sw-gateway"></span>Gateway cities</span>
+    </div>
+  </div>
+
+  <p class="source">Source: <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=propertytaxinformation.taxlevies.leviesbyclass">MA DOR, Tax Levies by Class FY2026</a>. Peer set selected to span residential suburbs, mixed-use suburbs, commercial-anchor cities, and gateway cities.</p>
+
+  <h2>New growth: the other release valve</h2>
+  <p>Proposition 2&frac12; caps annual levy growth at 2.5%, but new construction &mdash; new homes, new office buildings, additions and renovations &mdash; adds to the levy ceiling outside that cap. DOR calls this "new growth," and towns with active development get a quiet, annual expansion of their levy limit without ever holding an override vote.</p>
+
+  <p>Marblehead's 5-year average new growth is 0.54% of prior-year levy. That works out to roughly $460,000 per year added to the levy ceiling. Needham, the top-performing residential-adjacent suburb in the peer set, averages 2.83% &mdash; about $4.1 million per year. Cambridge averages 2.74% on a levy five times larger than Marblehead's: around $18 million per year. Over a decade, the gap compounds into tens or hundreds of millions of dollars in levy capacity that Marblehead simply doesn't have.</p>
+
+  <div class="peer-chart">
+    <h3>5-yr Avg New Growth as % of Prior-Year Levy Limit</h3>
+    <div class="peer-row arch-commercial"><div class="t">Boston</div><div class="track"><div class="fill" style="width:90.0%"></div></div><div class="v">3.15%</div></div>
+    <div class="peer-row arch-mixed"><div class="t">Needham</div><div class="track"><div class="fill" style="width:80.9%"></div></div><div class="v">2.83%</div></div>
+    <div class="peer-row arch-commercial"><div class="t">Cambridge</div><div class="track"><div class="fill" style="width:78.3%"></div></div><div class="v">2.74%</div></div>
+    <div class="peer-row arch-mixed"><div class="t">Lexington</div><div class="track"><div class="fill" style="width:74.0%"></div></div><div class="v">2.59%</div></div>
+    <div class="peer-row arch-commercial"><div class="t">Waltham</div><div class="track"><div class="fill" style="width:65.4%"></div></div><div class="v">2.29%</div></div>
+    <div class="peer-row arch-commercial"><div class="t">Burlington</div><div class="track"><div class="fill" style="width:61.1%"></div></div><div class="v">2.14%</div></div>
+    <div class="peer-row arch-gateway"><div class="t">Lynn</div><div class="track"><div class="fill" style="width:52.6%"></div></div><div class="v">1.84%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Wellesley</div><div class="track"><div class="fill" style="width:46.9%"></div></div><div class="v">1.64%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Cohasset</div><div class="track"><div class="fill" style="width:46.9%"></div></div><div class="v">1.64%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Stoneham</div><div class="track"><div class="fill" style="width:44.9%"></div></div><div class="v">1.57%</div></div>
+    <div class="peer-row arch-mixed"><div class="t">Natick</div><div class="track"><div class="fill" style="width:43.1%"></div></div><div class="v">1.51%</div></div>
+    <div class="peer-row arch-gateway"><div class="t">Salem</div><div class="track"><div class="fill" style="width:38.6%"></div></div><div class="v">1.35%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Brookline</div><div class="track"><div class="fill" style="width:35.4%"></div></div><div class="v">1.24%</div></div>
+    <div class="peer-row arch-mixed"><div class="t">Framingham</div><div class="track"><div class="fill" style="width:34.9%"></div></div><div class="v">1.22%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Winchester</div><div class="track"><div class="fill" style="width:32.6%"></div></div><div class="v">1.14%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Melrose</div><div class="track"><div class="fill" style="width:32.0%"></div></div><div class="v">1.12%</div></div>
+    <div class="peer-row arch-gateway"><div class="t">Malden</div><div class="track"><div class="fill" style="width:31.7%"></div></div><div class="v">1.11%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Hingham</div><div class="track"><div class="fill" style="width:26.9%"></div></div><div class="v">0.94%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Arlington</div><div class="track"><div class="fill" style="width:25.7%"></div></div><div class="v">0.90%</div></div>
+    <div class="peer-row arch-residential"><div class="t">Swampscott</div><div class="track"><div class="fill" style="width:24.6%"></div></div><div class="v">0.86%</div></div>
+    <div class="peer-row mh"><div class="t">Marblehead</div><div class="track"><div class="fill" style="width:15.4%"></div></div><div class="v">0.54%</div></div>
+  </div>
+
+  <p class="source">Source: <a href="https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=NewGrowth.NewGrowth_dash_v2_test">MA DOR, New Growth Analysis</a>. Bars scaled to the peer set maximum (Boston, 3.15%).</p>
+
+  <h2>Four structural archetypes</h2>
+  <p>The peer towns cluster into four groups with different structural stories. None of them are "doing it right" or "doing it wrong" &mdash; each reflects a different combination of geography, history, and policy choices that residents and officials made decades ago.</p>
+
+  <h3>1. Residential-dominant suburbs (Marblehead's group)</h3>
+  <p>Mature, built-out residential towns with minimal commercial tax base. Nearly all the levy comes from homeowners. Every town in this group has either run an override in the last few years or is running one now. Marblehead sits at the top of this group on residential share and at the bottom on new growth.</p>
+
+  <table class="peer-table">
+    <thead>
+      <tr><th>Town</th><th>Res&nbsp;%</th><th>CIP&nbsp;%</th><th>5yr&nbsp;NG</th><th>Last override win</th></tr>
+    </thead>
+    <tbody>
+      <tr class="mh"><td>Marblehead</td><td>95.5%</td><td>4.5%</td><td>0.54%</td><td>FY2006</td></tr>
+      <tr><td>Winchester</td><td>95.1%</td><td>4.9%</td><td>1.14%</td><td>FY2024</td></tr>
+      <tr><td>Arlington</td><td>94.8%</td><td>5.2%</td><td>0.90%</td><td>FY2027</td></tr>
+      <tr><td>Cohasset</td><td>93.9%</td><td>6.1%</td><td>1.64%</td><td>FY2005</td></tr>
+      <tr><td>Melrose</td><td>91.4%</td><td>8.6%</td><td>1.12%</td><td>FY2026</td></tr>
+      <tr><td>Wellesley</td><td>90.4%</td><td>9.6%</td><td>1.64%</td><td>FY2015</td></tr>
+      <tr><td>Hingham</td><td>90.3%</td><td>9.7%</td><td>0.94%</td><td>FY2024</td></tr>
+      <tr><td>Swampscott</td><td>88.6%</td><td>11.4%</td><td>0.86%</td><td>FY2006</td></tr>
+      <tr><td>Brookline</td><td>84.1%</td><td>15.9%</td><td>1.24%</td><td>FY2024</td></tr>
+      <tr><td>Stoneham</td><td>83.0%</td><td>17.0%</td><td>1.57%</td><td>FY2027</td></tr>
+    </tbody>
+  </table>
+  <p class="source">Marblehead and Swampscott last passed an override in 2006 &mdash; 20 years ago. Cohasset's last override win was FY2005. Every other town in this group has passed an override more recently or is voting on one this spring.</p>
+
+  <h3>2. Suburbs with meaningful commercial presence</h3>
+  <p>Similar demographics to the first group, but with enough office parks, biotech, retail, or routes along I-90 / Route 9 to carry 17&ndash;33% of the tax levy. New growth rates are materially higher too. These towns still face pressure but have more room to maneuver before hitting a levy ceiling.</p>
+
+  <table class="peer-table">
+    <thead>
+      <tr><th>Town</th><th>Res&nbsp;%</th><th>CIP&nbsp;%</th><th>5yr&nbsp;NG</th><th>Last override win</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Natick</td><td>82.8%</td><td>17.2%</td><td>1.51%</td><td>FY2026</td></tr>
+      <tr><td>Needham</td><td>79.2%</td><td>20.8%</td><td>2.83%</td><td>FY2015</td></tr>
+      <tr><td>Lexington</td><td>77.8%</td><td>22.2%</td><td>2.59%</td><td>FY2008</td></tr>
+      <tr><td>Framingham</td><td>67.2%</td><td>32.8%</td><td>1.22%</td><td>FY2003</td></tr>
+    </tbody>
+  </table>
+  <p class="source">Needham and Lexington average almost 2x the peer-group new growth despite being mostly residential. Framingham has not passed an override since 2003. These towns still vote on overrides regularly, but the underlying pressure is less acute.</p>
+
+  <h3>3. Commercial-anchor cities</h3>
+  <p>Labs, biotech, large office campuses, retail, and in Boston's case everything. CIP class pays the majority of the levy. These four cities have <strong>never</strong> held a Proposition 2&frac12; override vote in the entire DOR history (1982&ndash;present). When costs rise, the tax burden spreads across an enormous commercial base and new construction keeps expanding the levy ceiling on its own.</p>
+
+  <table class="peer-table">
+    <thead>
+      <tr><th>Town</th><th>Res&nbsp;%</th><th>CIP&nbsp;%</th><th>5yr&nbsp;NG</th><th>Overrides ever</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Boston</td><td>46.1%</td><td>53.9%</td><td>3.15%</td><td>0</td></tr>
+      <tr><td>Waltham</td><td>39.1%</td><td>60.9%</td><td>2.29%</td><td>0</td></tr>
+      <tr><td>Burlington</td><td>37.1%</td><td>62.9%</td><td>2.14%</td><td>0</td></tr>
+      <tr><td>Cambridge</td><td>33.8%</td><td>66.2%</td><td>2.74%</td><td>0</td></tr>
+    </tbody>
+  </table>
+  <p class="source">Cambridge's new growth in a typical year (~$18M on a $679M levy) exceeds Marblehead's entire FY27 deficit. Burlington's zoning choices in the 1960s and 70s made it a regional office destination; its current fiscal stability is the downstream result.</p>
+
+  <h3>4. Gateway cities</h3>
+  <p>A completely different fiscal model. Massachusetts designates 26 "gateway cities" &mdash; former industrial centers that qualify for specialized state aid formulas. Their residential share of the levy is high (70&ndash;83%), but they receive far more Chapter 70 education aid and Unrestricted General Government Aid per capita than wealthy suburbs, which softens the blow when local revenue is flat. None of the three gateway cities in this peer set has <em>ever</em> passed a Proposition 2&frac12; override &mdash; though Malden is running its first operating override in city history this spring.</p>
+
+  <table class="peer-table">
+    <thead>
+      <tr><th>Town</th><th>Res&nbsp;%</th><th>CIP&nbsp;%</th><th>5yr&nbsp;NG</th><th>Overrides ever</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Lynn</td><td>82.7%</td><td>17.3%</td><td>1.84%</td><td>0</td></tr>
+      <tr><td>Malden</td><td>80.4%</td><td>19.6%</td><td>1.11%</td><td>0*</td></tr>
+      <tr><td>Salem</td><td>72.8%</td><td>27.2%</td><td>1.35%</td><td>0</td></tr>
+    </tbody>
+  </table>
+  <p class="source">*Malden is running its first-ever operating override in spring 2026. The fact that it took until now &mdash; after a quarter century of Prop 2&frac12; pressure &mdash; is itself a statement about gateway-city fiscal structure. Marblehead does not qualify as a gateway city (the designation is based on historical manufacturing employment and median household income) and therefore cannot access most gateway-city state aid programs.</p>
+
+  <h2>What mechanisms exist to move between groups?</h2>
+  <p>This page started with a question about where Marblehead sits. The natural follow-up is whether Marblehead could move itself into a different group. Here are the mechanisms that separate the archetypes above, and an honest read on which apply to Marblehead's situation.</p>
+
+  <div class="card">
+    <h3>Split tax rates (CIP shift)</h3>
+    <p>Massachusetts allows municipalities to tax commercial, industrial, and personal property at up to 175% of the residential rate, shifting some of the burden off homeowners. Boston, Cambridge, Waltham, and most gateway cities use this aggressively. It's the primary reason Cambridge residents have a low effective tax rate despite the city's overall wealth.</p>
+    <p><strong>Marblehead context:</strong> Marblehead already uses a single tax rate (no split) and the CIP class is only 4.5% of the levy. Even the maximum allowable shift would reduce residential taxes by a small single-digit percentage &mdash; insufficient to close the FY27 deficit and roughly the same burden-shift as paying 175% on a tiny base.</p>
+  </div>
+
+  <div class="card">
+    <h3>New construction / mixed-use development</h3>
+    <p>New growth is the quiet, annual release valve. Towns that permit new housing, office space, and mixed-use development see their levy limit expand every year without ever holding a vote. Burlington's overlay districts, Waltham's lab corridor, Needham's 128 frontage, and Framingham's Natick Mall / Route 9 retail are all consequences of zoning and permitting decisions made over decades.</p>
+    <p><strong>Marblehead context:</strong> Marblehead is a peninsula with historic districts, minimal developable land, and zoning that heavily favors single-family residential. Meaningful new growth would require either rezoning established neighborhoods, developing the few remaining open parcels, or converting existing commercial space. None of these are fast, and all are politically contentious.</p>
+  </div>
+
+  <div class="card">
+    <h3>40B affordable housing and MBTA Communities Act</h3>
+    <p>Chapter 40B allows developers to bypass local zoning if at least 20&ndash;25% of units are affordable, in towns where the affordable housing stock is below 10%. The 2021 MBTA Communities Act requires towns with rapid-transit service to zone for multifamily housing near stations. Both mechanisms can add new growth quickly if a town chooses to participate or is legally required to.</p>
+    <p><strong>Marblehead context:</strong> Marblehead has no MBTA rapid transit station and is exempt from the MBTA Communities Act. Marblehead is below the 10% affordable threshold, which means 40B projects can technically proceed, but the town's geography and existing built environment limit their scale. The 2026 Board of Selectmen have discussed affordable housing goals but no major 40B pipeline currently exists.</p>
+  </div>
+
+  <div class="card">
+    <h3>State aid formulas (Chapter 70 and UGGA)</h3>
+    <p>Chapter 70 is the state's primary school aid formula. Unrestricted General Government Aid (UGGA) is for municipal operations. Both are distributed by formulas that favor lower-income and lower-property-value communities. Gateway cities and poorer towns receive significantly more per capita than wealthy suburbs.</p>
+    <p><strong>Marblehead context:</strong> Marblehead is a high-wealth community by state measures and receives near the minimum per-capita state aid. The MMA's October 2025 <em>Perfect Storm</em> report documents that statewide UGGA is 25% below its 2002 level after inflation &mdash; but that reduction hits residential-heavy suburbs the hardest because they have the least local-revenue flexibility to absorb it.</p>
+  </div>
+
+  <h2>What this page does and doesn't say</h2>
+  <p>The data on this page shows that <strong>Massachusetts towns face different fiscal pressures because of different underlying structures</strong>, and that Marblehead sits at the residential-dominant, low-new-growth end of the spectrum. Several things this page does not claim, and should not be read to claim:</p>
+  <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.7; margin: 10px 0 10px 24px;">
+    <li>It does not claim that structural factors are the <em>only</em> reason for Marblehead's FY27 deficit. Spending decisions, benefit costs, enrollment changes, and management choices also matter &mdash; other pages on this site examine those factors in detail.</li>
+    <li>It does not claim that Marblehead should or shouldn't pursue any specific policy lever. Those are questions for voters and elected officials, and each lever has costs and tradeoffs beyond the scope of this page.</li>
+    <li>It does not claim that the override is or isn't the right solution. That's a separate judgment about values and priorities, informed by but not determined by the data here.</li>
+    <li>The peer set is selected to illustrate a range of archetypes, not to be representative of all 351 MA municipalities. Different peer sets may tell slightly different stories. The full DOR dataset is linked below.</li>
+  </ul>
+
+  <div class="notes">
+    <p><strong>Sources.</strong> Residential and CIP levy shares: <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=propertytaxinformation.taxlevies.leviesbyclass">MA DOR Tax Levies by Class FY2026</a>. New growth: <a href="https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=NewGrowth.NewGrowth_dash_v2_test">MA DOR New Growth Analysis</a> (5-year average, FY2022&ndash;2026). Override history: <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride">MA DOR Proposition 2&frac12; Override &amp; Underride Votes</a>. Statewide fiscal context: <a href="https://www.mma.org/wp-content/uploads/2025/10/MMA-APerfectStorm-HistoricFiscalPressures-report-10.9.25.pdf">MMA, <em>A Perfect Storm: Cities and Towns Face Historic Fiscal Pressures</em> (October 2025)</a>.</p>
+    <p><strong>Data files.</strong> Raw peer-town CSVs: <a href="data/peer_tax_levies_by_class_FY22-26.csv">tax levies by class</a>, <a href="data/peer_new_growth_FY22-26.csv">new growth</a>, <a href="data/peer_override_history.csv">override history</a>.</p>
+    <p><strong>Note on "new growth."</strong> The DOR metric shown is <em>total new growth applied to the levy limit as a percent of the prior-year levy limit</em>. This captures how much the levy ceiling expands each year from new construction, outside Proposition 2&frac12;'s 2.5% cap. It does not include annual 2.5% growth, value increases from reassessment, or debt exclusions.</p>
+    <p><strong>Note on gateway cities.</strong> "Gateway city" is a statutory designation under MGL Chapter 23A, Section 3A, based on historical manufacturing employment and median household income. The 26 designated gateway cities receive specialized state grants, formula aid, and zoning tools not available to other municipalities.</p>
+  </div>
+</div>
+
+</body>
+</html>
