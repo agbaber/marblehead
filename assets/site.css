@@ -394,7 +394,11 @@ p a:hover { text-decoration: underline; }
 }
 .cut-item:last-child { border-bottom: none; }
 .cut-item-name   { color: var(--text); }
-.cut-item-amount { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.cut-item-amount { color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cut-item-note {
+  display: block; font-size: 11px; color: var(--text-subtle);
+  font-weight: 400; margin-top: 2px; line-height: 1.4;
+}
 
 .section-label {
   font-size: 11px; font-weight: 700; text-transform: uppercase;
