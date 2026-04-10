@@ -9,6 +9,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5PQG62BJ');</script>
 <!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK1KEJT3KX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZK1KEJT3KX');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
@@ -24,50 +32,113 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <h1 class="h-center">What the Override Costs You</h1>
   <p class="subtitle h-center">Additional monthly cost by home assessed value. Median Marblehead home: $1,010,100.</p>
 
-  <p class="calc-year-label">At full phase-in <span>(Year 3, FY29)</span></p>
-  <div class="table-wrap">
-    <table class="data">
-      <thead>
-        <tr>
-          <th>Option</th>
-          <th>$750K</th>
-          <th>$1M</th>
-          <th>$1.25M</th>
-          <th>$1.5M</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="swatch" style="background: var(--series-tier-1);"></span>Tier 1 ($9M)</td>
-          <td>$56/mo</td>
-          <td>$75/mo</td>
-          <td>$94/mo</td>
-          <td>$113/mo</td>
-        </tr>
-        <tr>
-          <td><span class="swatch" style="background: var(--series-tier-2);"></span>Tier 2 ($12M)</td>
-          <td>$75/mo</td>
-          <td>$100/mo</td>
-          <td>$125/mo</td>
-          <td>$150/mo</td>
-        </tr>
-        <tr>
-          <td><span class="swatch" style="background: var(--series-tier-3);"></span>Tier 3 ($15M)</td>
-          <td>$94/mo</td>
-          <td>$125/mo</td>
-          <td>$156/mo</td>
-          <td>$188/mo</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="tabs">
+    <button class="tab" data-year="1">Year 1 (FY27)</button>
+    <button class="tab" data-year="2">Year 2 (FY28)</button>
+    <button class="tab active" data-year="3">Year 3 (FY29)</button>
   </div>
 
-  <div class="footnotes">
-    <p><span class="footnote-marker"></span>Tier amounts from Town Administrator's override presentation (Marblehead Independent). Years 1 and 2 are lower as the override phases in.</p>
+  <div class="year-panel" id="year-1">
+    <div class="table-wrap">
+      <table class="data">
+        <thead>
+          <tr><th>Option</th><th>$750K</th><th>$1M</th><th>$1.25M</th><th>$1.5M</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="swatch" style="background: var(--series-tier-1);"></span>Tier 1 ($9M)</td>
+            <td>$8/mo</td><td>$11/mo</td><td>$14/mo</td><td>$16/mo</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background: var(--series-tier-2);"></span>Tier 2 ($12M)</td>
+            <td>$18/mo</td><td>$23/mo</td><td>$29/mo</td><td>$35/mo</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background: var(--series-tier-3);"></span>Tier 3 ($15M)</td>
+            <td>$27/mo</td><td>$36/mo</td><td>$45/mo</td><td>$54/mo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="year-panel" id="year-2">
+    <div class="table-wrap">
+      <table class="data">
+        <thead>
+          <tr><th>Option</th><th>$750K</th><th>$1M</th><th>$1.25M</th><th>$1.5M</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="swatch" style="background: var(--series-tier-1);"></span>Tier 1 ($9M)</td>
+            <td>$39/mo</td><td>$52/mo</td><td>$65/mo</td><td>$78/mo</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background: var(--series-tier-2);"></span>Tier 2 ($12M)</td>
+            <td>$55/mo</td><td>$73/mo</td><td>$91/mo</td><td>$110/mo</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background: var(--series-tier-3);"></span>Tier 3 ($15M)</td>
+            <td>$66/mo</td><td>$88/mo</td><td>$111/mo</td><td>$133/mo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="year-panel active" id="year-3">
+    <div class="table-wrap">
+      <table class="data">
+        <thead>
+          <tr><th>Option</th><th>$750K</th><th>$1M</th><th>$1.25M</th><th>$1.5M</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="swatch" style="background: var(--series-tier-1);"></span>Tier 1 ($9M)</td>
+            <td>$57/mo</td><td>$77/mo</td><td>$96/mo</td><td>$115/mo</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background: var(--series-tier-2);"></span>Tier 2 ($12M)</td>
+            <td>$77/mo</td><td>$102/mo</td><td>$128/mo</td><td>$154/mo</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background: var(--series-tier-3);"></span>Tier 3 ($15M)</td>
+            <td>$96/mo</td><td>$128/mo</td><td>$160/mo</td><td>$192/mo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2>How You'll Vote</h2>
+  <p>Two ballot questions, expected June 2026.</p>
+  <p><strong>Question 1</strong> has three parts. Vote yes or no on each:</p>
+  <div style="padding: 0 0 14px 16px; font-size: 14px; color: var(--text-muted); line-height: 2;">
+    1A: $15,000,000 (Invest)<br>
+    1B: $12,000,000 (Stabilize)<br>
+    1C: $9,000,000 (Restore)
+  </div>
+  <p>Vote yes on every tier you'd accept. The highest passing tier sets the override amount. If only 1C passes, you get $9M. If all three pass, you get $15M.</p>
+  <p><strong>Question 2</strong> is a separate yes/no: fund curbside trash and recycling through the property tax instead of a flat fee ($2,298,575).</p>
+
+  <div class="footnotes" style="margin-top: 24px;">
+    <p><span class="footnote-marker"></span>Costs calculated from the Town Administrator's override presentation (April 8, 2026), scaled proportionally from the average single-family assessed value of $1,291,507.</p>
     <p><span class="footnote-marker"></span>Tiers are nested: Tier 2 includes Tier 1, Tier 3 includes Tiers 1 and 2. Highest passing tier sets the amount.</p>
-    <p><span class="footnote-marker"></span>Trash/recycling is a separate ballot question and is not included above. You'll pay for it either way: as a levy increase (~$19/mo on a $1M home) or as a flat fee (~$22/mo per household) if the override fails.</p>
+    <p><span class="footnote-marker"></span>The override phases in because the town draws against its new capacity gradually. Each year's draw stays on the levy permanently.</p>
+    <p><span class="footnote-marker"></span>Trash/recycling (Question 2) is not included above. You'll pay for it either way: as a levy increase (~$19/mo on a $1M home) or as a flat fee (~$22/mo per household) if the override fails.</p>
   </div>
 </div>
+
+<script>
+document.querySelectorAll('.tab').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.tab').forEach(function(b) { b.classList.remove('active'); });
+    document.querySelectorAll('.year-panel').forEach(function(p) { p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById('year-' + btn.dataset.year).classList.add('active');
+  });
+});
+</script>
 
 </body>
 </html>
