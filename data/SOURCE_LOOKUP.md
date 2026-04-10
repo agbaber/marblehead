@@ -102,8 +102,36 @@ Use this to trace any chart number back to its original document and page.
 - Sources listed within the document
 
 ## Override Tier Amounts and Tax Impact
-- Source: Marblehead Independent, ["Kezer presents $9M-to-$15M tiered override plan"](https://www.marbleheadindependent.com/kezer-presents-9m-to-15m-tiered-override-plan-and-separate-2-2m-trash-tax-option/)
-- Per-year impact on $1M home from Town Administrator's presentation:
-  - Tier 1: Year 1 +$127, Year 2 +$503, Year 3 +$270 (cumulative $900/yr)
-  - Tier 2: Year 1 +$281, Year 2 +$590, Year 3 +$329 (cumulative $1,200/yr)
-  - Tier 3: Year 1 +$430, Year 2 +$624, Year 3 +$446 (cumulative $1,500/yr)
+- Primary: [Town Administrator's Override Presentation, April 8, 2026](2026-04-08_Override_Presentation.pdf) (local copy in `data/`)
+- Summary: Marblehead Independent, ["Kezer presents $9M-to-$15M tiered override plan"](https://www.marbleheadindependent.com/kezer-presents-9m-to-15m-tiered-override-plan-and-separate-2-2m-trash-tax-option/)
+
+Extracted into:
+- `data/override_town_line_items.csv` — every town-side item funded at each tier (slide 6)
+- `data/override_school_items.csv` — school-side items by tier and fiscal year (slides 7-9)
+- `data/override_draws_schedule.csv` — year-by-year draw schedule per tier (slides 10-12)
+- `data/override_tax_impact_asf.csv` — annual/monthly tax impact on avg single-family home ($1,291,507) per tier per year (slides 13-15)
+- `data/override_trash_schedule.csv` — Question 2 trash/recycling draw breakdown (slide 20)
+
+**Cumulative annual tax increase on avg single-family home ($1,291,507):**
+- Tier 1 ($9M): FY27 +$167.90, FY28 +$804.93, FY29 +$1,186.68 (full phase-in)
+- Tier 2 ($12M): FY27 +$361.62, FY28 +$1,132.65, FY29 +$1,587.17
+- Tier 3 ($15M): FY27 +$555.35, FY28 +$1,369.97, FY29 +$1,985.39
+
+Each year's draw stays on the levy permanently; Year 3 is the ongoing annual cost.
+
+## Marblehead Independent & Current Articles (referenced across site)
+- ["Marblehead advances $122.8M budget built on cuts, defers override decisions"](https://www.marbleheadindependent.com/marblehead-advances-122-8m-budget-built-on-cuts-defers-override-decisions/) (Marblehead Independent)
+- ["Concerns over staffing cuts shape Marblehead school budget hearing"](https://www.marbleheadindependent.com/concerns-over-staffing-cuts-shape-marblehead-school-budget-hearing/) (Marblehead Independent)
+- ["Select Board locks in three-tier override structure"](https://www.marbleheadindependent.com/select-board-locks-in-three-tier-override-structure-votes-to-unite-town-and-school-ask/) (Marblehead Independent)
+- ["Kezer presents $9M-to-$15M tiered override plan"](https://www.marbleheadindependent.com/kezer-presents-9m-to-15m-tiered-override-plan-and-separate-2-2m-trash-tax-option/) (Marblehead Independent)
+- ["The line item eating Marblehead's tax levy"](https://www.marbleheadindependent.com/the-line-item-eating-marbleheads-tax-levy/) (Marblehead Independent) — healthcare costs, loss ratios
+- ["Select Board confronts the limits of Marblehead's tax cap"](https://www.marbleheadindependent.com/select-board-confronts-the-limits-of-marbleheads-tax-cap/) (Marblehead Independent)
+- ["Marblehead's $65.2M payroll"](https://www.marbleheadindependent.com/marbleheads-65-2m-payroll-what-the-town-paid-1-185-workers-in-fy2025/) (Marblehead Independent) — 1,185 employees
+- ["Possible insurance break gives Marblehead budget outlook a lift"](https://www.marbleheadindependent.com/possible-insurance-break-gives-marblehead-budget-outlook-a-lift/) (Marblehead Independent)
+- ["Marblehead officials outline stark choices"](https://www.marbleheadindependent.com/marblehead-officials-outline-stark-choices-as-town-faces-millions-in-budget-cuts-for-fy2027/) (Marblehead Independent) — FY27 deficit, cut scenarios
+- ["Marblehead officials map out possible $262 trash fee"](https://www.marbleheadindependent.com/marblehead-officials-map-out-possible-282-trash-fee-if-override-fails/) (Marblehead Independent)
+- ["Select Board approves Kezer contract through 2028"](https://marbleheadcurrent.org/2025/06/02/select-board-approves-kezer-contract-through-2028-gives-16k-raise/) (Marblehead Current)
+- ["Select Board backs tiered multi-year override framework"](https://marbleheadcurrent.org/2026/03/25/select-board-backs-tiered-multi-year-override-framework-combining-school-town-requests/) (Marblehead Current)
+- ["From ADUs to a $120M budget"](https://marbleheadcurrent.org/2025/05/08/adus-120m-budget-pass-as-town-meeting-heads-to-another-night/) (Marblehead Current)
+- ["Marblehead loses its first sustainability coordinator"](https://itemlive.com/2026/03/12/marblehead-loses-its-first-sustainability-coordinator/) (Itemlive)
+- ["Marblehead library at risk of closure amid $7 million budget deficit"](https://www.bostonglobe.com/2026/03/17/metro/marblehead-budget-deficit-risks-library-closure/) (Boston Globe)

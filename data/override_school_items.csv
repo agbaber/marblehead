@@ -1,0 +1,16 @@
+tier,fiscal_year,category,description,amount
+1,FY27,overview,Nothing restored in FY27,0
+1,FY28,salary,COLA/Step Salary Increases,
+1,FY29,salary,COLA/Step Salary Increases,
+1,FY28,staffing,Restore positions funded from Revolving Fund to General Fund,59699
+1,FY29,staffing,Restore positions funded from Revolving Fund to General Fund,209374
+1,FY28,special_ed,Restore Special Education Out of District Tuition,1500000
+1,FY29,special_ed,Restore Special Education Out of District Tuition (continuing),1500000
+2,FY27,overview,Nothing added in FY27 for Tier 2,0
+2,FY28,technology,Add Technology Lease Funding,150000
+2,FY29,technology,Add Technology Lease Funding,150000
+2,FY28,fees,Remove fee for Full Day Kindergarten,671408
+2,FY29,fees,Remove fee for Full Day Kindergarten,710711
+3,FY28,curriculum,Reestablish Curriculum Development and Professional Development (Teaching and Learning),100000
+3,FY29,special_ed,Create Special Education Program for students aged 18-22,
+3,FY29,capital,Capital funding for School Department extraordinary maintenance,500000
