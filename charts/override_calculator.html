@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
+    padding: 36px 40px 32px;
+    max-width: 700px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    text-align: center;
+    margin-bottom: 4px;
+    letter-spacing: -0.3px;
+  }
+  .subtitle {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .year-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+    padding-left: 2px;
+  }
+  .year-label span {
+    font-weight: 400;
+    color: #999;
+  }
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+  th {
+    padding: 8px 14px;
+    font-weight: 600;
+    font-size: 10px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #eee;
+    text-align: center;
+  }
+  th:first-child { text-align: left; }
+  td {
+    padding: 12px 14px;
+    text-align: center;
+    color: #222;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  td:first-child {
+    text-align: left;
+    font-size: 14px;
+  }
+  .swatch {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    margin-right: 6px;
+    position: relative;
+    top: 1px;
+  }
+  .footnotes {
+    background: #fafafa;
+    border-radius: 10px;
+    padding: 14px 18px;
+  }
+  .footnotes p {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.6;
+  }
+  .footnotes p + p { margin-top: 4px; }
+  .footnote-marker {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #ccc;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    top: -2px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>What the Override Costs You</h1>
+  <p class="subtitle">Additional monthly cost by home assessed value. Median Marblehead home: $1,010,100.</p>
+
+  <p class="year-label">At full phase-in <span>(Year 3, FY29)</span></p>
+  <table>
+    <thead>
+      <tr><th>Option</th><th>$750K</th><th>$1M</th><th>$1.25M</th><th>$1.5M</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="swatch" style="background:#3b82f6;"></span>Tier 1 ($9M)</td><td>$56/mo</td><td>$75/mo</td><td>$94/mo</td><td>$113/mo</td></tr>
+      <tr><td><span class="swatch" style="background:#8b5cf6;"></span>Tier 2 ($12M)</td><td>$75/mo</td><td>$100/mo</td><td>$125/mo</td><td>$150/mo</td></tr>
+      <tr><td><span class="swatch" style="background:#ec4899;"></span>Tier 3 ($15M)</td><td>$94/mo</td><td>$125/mo</td><td>$156/mo</td><td>$188/mo</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footnotes">
+    <p><span class="footnote-marker"></span>Tier amounts from Town Administrator's override presentation (Marblehead Independent). Years 1 and 2 are lower as the override phases in.</p>
+    <p><span class="footnote-marker"></span>Tiers are nested: Tier 2 includes Tier 1, Tier 3 includes Tiers 1 and 2. Highest passing tier sets the amount.</p>
+    <p><span class="footnote-marker"></span>Trash/recycling is a separate ballot question and is not included above. You'll pay for it either way: as a levy increase (~$19/mo on a $1M home) or as a flat fee (~$22/mo per household) if the override fails.</p>
+  </div>
+</div>
+</body>
+</html>

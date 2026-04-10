@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marblehead Budget Data</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .header {
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 32px 20px;
+    text-align: center;
+  }
+  .header h1 { font-size: 24px; font-weight: 700; color: #111; margin-bottom: 4px; }
+  .header p { font-size: 14px; color: #888; max-width: 600px; margin: 0 auto; }
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 20px;
+  }
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #888;
+    margin: 32px 0 16px 0;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    padding: 20px 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.15s;
+    display: block;
+  }
+  .card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .card h3 { font-size: 15px; font-weight: 600; color: #111; margin-bottom: 4px; }
+  .card p { font-size: 13px; color: #888; }
+  .data-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .data-link {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    padding: 12px 20px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.15s;
+  }
+  .data-link:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+  .data-link-title { font-size: 14px; font-weight: 600; color: #111; }
+  .data-link-desc { font-size: 12px; color: #888; }
+  .data-link-format { font-size: 11px; color: #aaa; font-family: monospace; }
+  .footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 12px;
+    color: #aaa;
+  }
+  .footer a { color: #888; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Marblehead Budget Data</h1>
+  <p>Open data and charts about Marblehead's municipal finances. All numbers traceable to primary sources. Not affiliated with any campaign.</p>
+</div>
+
+<div class="content">
+  <p class="section-label">Charts</p>
+  <div class="card-grid">
+    <a class="card" href="charts/real_cost_comparison.html">
+      <h3>Tax Levy vs Health Insurance</h3>
+      <p>Actual spending indexed to FY2006. Shows revenue and healthcare cost divergence over 21 years.</p>
+    </a>
+    <a class="card" href="charts/healthcare_indexed.html">
+      <h3>Health Insurance & Staffing</h3>
+      <p>Spending vs employee headcount in stacked panels. Spending doubled, staffing didn't.</p>
+    </a>
+    <a class="card" href="charts/premium_per_employee.html">
+      <h3>Premium Per Employee</h3>
+      <p>GIC family plan cost from published rate sheets. $24K to $39K in 7 years.</p>
+    </a>
+    <a class="card" href="charts/four_town_rates.html">
+      <h3>Four Town Tax Rates</h3>
+      <p>Marblehead vs Melrose, Swampscott, Stoneham. 24 years of DOR data.</p>
+    </a>
+    <a class="card" href="charts/tax_comparison.html">
+      <h3>Marblehead vs Swampscott</h3>
+      <p>Detailed comparison: tax rates, median home values, median bills, same-home comparison.</p>
+    </a>
+    <a class="card" href="charts/override_calculator.html">
+      <h3>Override Calculator</h3>
+      <p>What each tier costs monthly, by home value. Numbers from Town Administrator's presentation.</p>
+    </a>
+    <a class="card" href="charts/annual_gap.html">
+      <h3>New Revenue vs New Costs</h3>
+      <p>The annual structural gap: new levy revenue vs new healthcare, pension, and salary costs.</p>
+    </a>
+    <a class="card" href="charts/tax_rate_trend.html">
+      <h3>Tax Rate History</h3>
+      <p>Marblehead and Swampscott residential rates, FY2003-FY2026.</p>
+    </a>
+  </div>
+
+  <p class="section-label">Data</p>
+  <div class="data-links">
+    <a class="data-link" href="data/MASTER_DATA.csv">
+      <div>
+        <div class="data-link-title">Master Dataset</div>
+        <div class="data-link-desc">Every verified data point, one row per fiscal year (FY2001-FY2027)</div>
+      </div>
+      <div class="data-link-format">CSV</div>
+    </a>
+    <a class="data-link" href="data/DATA_CATALOG.md">
+      <div>
+        <div class="data-link-title">Data Catalog</div>
+        <div class="data-link-desc">What every field means, where it came from, confidence levels, caveats</div>
+      </div>
+      <div class="data-link-format">MD</div>
+    </a>
+    <a class="data-link" href="data/SOURCE_LOOKUP.md">
+      <div>
+        <div class="data-link-title">Source Lookup</div>
+        <div class="data-link-desc">Trace any number to its specific document and page</div>
+      </div>
+      <div class="data-link-format">MD</div>
+    </a>
+    <a class="data-link" href="data/case_studies.md">
+      <div>
+        <div class="data-link-title">Override Case Studies</div>
+        <div class="data-link-desc">Melrose, Stoneham, and statewide patterns after failed overrides</div>
+      </div>
+      <div class="data-link-format">MD</div>
+    </a>
+  </div>
+
+  <p class="section-label">Primary Sources</p>
+  <div class="data-links">
+    <a class="data-link" href="https://www.marbleheadma.gov/document/annual-comprehensive-financial-reports/">
+      <div>
+        <div class="data-link-title">ACFRs (FY2004-FY2024)</div>
+        <div class="data-link-desc">Audited annual financial reports. The foundation for most data here.</div>
+      </div>
+      <div class="data-link-format">marbleheadma.gov</div>
+    </a>
+    <a class="data-link" href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf">
+      <div>
+        <div class="data-link-title">FY2027 Proposed Budget</div>
+        <div class="data-link-desc">FY25 actual, FY26 budget, FY27 proposed. Every department.</div>
+      </div>
+      <div class="data-link-format">PDF</div>
+    </a>
+    <a class="data-link" href="https://marbleheadma.gov/wp-content/uploads/2026/02/2026-State-of-the-Town-Presenation-Final.pdf">
+      <div>
+        <div class="data-link-title">2026 State of the Town</div>
+        <div class="data-link-desc">Revenue/expense projections and the $8.47M deficit figure.</div>
+      </div>
+      <div class="data-link-format">PDF</div>
+    </a>
+    <a class="data-link" href="https://marbleheadma.gov/wp-content/uploads/2025/05/2026-Annual-Town-Meeting-Finance-Committee-Annual-Report.pdf">
+      <div>
+        <div class="data-link-title">FY2026 Finance Committee Report</div>
+        <div class="data-link-desc">Budget overview, cost growth rates, three-year forecast.</div>
+      </div>
+      <div class="data-link-format">PDF</div>
+    </a>
+    <a class="data-link" href="https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=PropertyTaxInformation.taxratesbyclass.taxratesbyclass_main">
+      <div>
+        <div class="data-link-title">MA DOR Tax Rates by Class</div>
+        <div class="data-link-desc">Official state tax rate data for every MA municipality.</div>
+      </div>
+      <div class="data-link-format">DOR Gateway</div>
+    </a>
+    <a class="data-link" href="https://www.mass.gov/lists/gic-benefit-rates">
+      <div>
+        <div class="data-link-title">GIC Benefit Rates</div>
+        <div class="data-link-desc">Current and previous health insurance premium rate sheets.</div>
+      </div>
+      <div class="data-link-format">mass.gov</div>
+    </a>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Built by a Marblehead resident. <a href="https://github.com/agbaber/marblehead">Source on GitHub</a>. Corrections welcome.</p>
+</div>
+</body>
+</html>

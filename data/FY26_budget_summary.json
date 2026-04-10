@@ -1,0 +1,50 @@
+{
+  "FY26_Budget": {
+    "Town_Grand_Total": 57086093,
+    "School_Grand_Total": 49120287,
+    "Combined_Total": 106206380,
+    "Town_Key_Items": {
+      "Health_Insurance_Transfer": 11828487,
+      "Debt_Service": 9314141,
+      "Pension_Contribution": 5380625,
+      "Fire": 5561260,
+      "Police": 4987087,
+      "Waste": 2943402,
+      "Medex_Insurance_Transfer": 2534769,
+      "Public_Works": 2301042,
+      "Library": 1493292,
+      "Finance": 1688913,
+      "Rec_and_Park": 1037027,
+      "Insurance_Premiums": 865056,
+      "Medicare_Reimbursement": 730651,
+      "Select_Board": 700051,
+      "Inspections": 689413,
+      "Community_Development": 494402,
+      "Cemetery": 495043,
+      "Council_on_Aging": 423460,
+      "Health": 326041,
+      "HR": 294927,
+      "Public_Buildings": 286826,
+      "Town_Clerk": 244733,
+      "Veterans": 148525,
+      "Town_Counsel": 228000,
+      "Reserve_Fund": 444000,
+      "Snow_Ice": 105000,
+      "OPEB_Trust_Transfer": 250000,
+      "Medicare_Tax": 280000
+    },
+    "School_Key_Items": {
+      "District_Wide": 14556594,
+      "High_School": 10766310,
+      "Village_School": 7679662,
+      "Middle_School": 5857003,
+      "Brown_School": 5476279,
+      "Glover_School": 4374821,
+      "Athletics": 391718,
+      "Sped_Tuition_Private_Day": 1933523,
+      "Sped_Tuition_Residential": 1026993,
+      "Sped_Tuition_Collaborative": 601647,
+      "OOD_Transportation": 996410
+    }
+  }
+}

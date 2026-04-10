@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
+    padding: 44px 48px 36px;
+    max-width: 800px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    text-align: center;
+    margin-bottom: 4px;
+    letter-spacing: -0.3px;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #999;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 24px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #555;
+  }
+  .legend-swatch {
+    width: 14px;
+    height: 3px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .chart-wrapper { margin-bottom: 24px; }
+  svg { width: 100%; height: auto; display: block; }
+  .takeaway {
+    background: #f8fafc;
+    border-left: 3px solid #dc2626;
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px;
+    margin: 0 0 24px 0;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .footnotes {
+    background: #fafafa;
+    border-radius: 10px;
+    padding: 14px 18px;
+  }
+  .footnotes p {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.6;
+  }
+  .footnotes p + p { margin-top: 4px; }
+  .footnote-marker {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #ccc;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    top: -2px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>The Structural Gap: New Revenue vs. New Costs</h1>
+  <p class="subtitle">Annual increases projected from verified FY26 data using FinCom growth rates</p>
+
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-swatch" style="background: #059669;"></div>
+      New levy revenue (~3%/yr)
+    </div>
+    <div class="legend-item">
+      <div class="legend-swatch" style="background: #dc2626;"></div>
+      New costs: HC + pensions + salaries
+    </div>
+    <div class="legend-item">
+      <div style="width:14px; height:14px; background: #dc262612; border: 1px solid #dc262633; border-radius: 2px; flex-shrink:0;"></div>
+      Annual gap
+    </div>
+  </div>
+
+  <!--
+    11 years: FY27-FY36 (increases FROM prior year bases)
+    Plus FY26 as the starting baseline year
+
+    FY26 verified bases:
+    Levy: $75.7M | HC: $13.6M | Pensions: ~$5.4M | Salaries: $68.5M
+
+    Annual revenue increase = prior levy * 0.03
+    Annual cost increase = prior HC * 0.09 + prior pensions * 0.085 + prior salaries * 0.05
+
+    Year  | Rev   | Costs | Gap
+    FY27  | 2.27  | 5.11  | 2.84
+    FY28  | 2.34  | 5.43  | 3.09
+    FY29  | 2.41  | 5.77  | 3.36
+    FY30  | 2.48  | 6.14  | 3.66
+    FY31  | 2.56  | 6.54  | 3.98
+    FY32  | 2.63  | 6.95  | 4.32
+    FY33  | 2.71  | 7.40  | 4.69
+    FY34  | 2.79  | 7.88  | 5.09
+    FY35  | 2.88  | 8.39  | 5.51
+    FY36  | 2.96  | 8.93  | 5.97
+
+    Chart: SVG 780 x 330
+    Plot area: x 60-720, y 30-280
+    10 data points, x = 60 + i * 73.3
+
+    Y range: 0 to $9.5M
+    y = 280 - (value / 9.5) * 250
+
+    x positions: 60, 133, 207, 280, 353, 427, 500, 573, 647, 720
+
+    Revenue y:
+    FY27: 2.27 -> 280-(2.27/9.5)*250 = 280-59.7 = 220
+    FY28: 2.34 -> 218
+    FY29: 2.41 -> 217
+    FY30: 2.48 -> 215
+    FY31: 2.56 -> 213
+    FY32: 2.63 -> 211
+    FY33: 2.71 -> 209
+    FY34: 2.79 -> 207
+    FY35: 2.88 -> 204
+    FY36: 2.96 -> 202
+
+    Costs y:
+    FY27: 5.11 -> 280-134.5 = 146
+    FY28: 5.43 -> 137
+    FY29: 5.77 -> 128
+    FY30: 6.14 -> 118
+    FY31: 6.54 -> 108
+    FY32: 6.95 -> 97
+    FY33: 7.40 -> 85
+    FY34: 7.88 -> 73
+    FY35: 8.39 -> 59
+    FY36: 8.93 -> 45
+  -->
+
+  <div class="chart-wrapper">
+    <svg viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gapFill" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#dc2626" stop-opacity="0.06"/>
+          <stop offset="100%" stop-color="#dc2626" stop-opacity="0.14"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Grid -->
+      <line x1="60" y1="280" x2="720" y2="280" stroke="#e0e0e0" stroke-width="1"/>
+      <line x1="60" y1="254" x2="720" y2="254" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="60" y1="228" x2="720" y2="228" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="60" y1="201" x2="720" y2="201" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="60" y1="175" x2="720" y2="175" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="60" y1="149" x2="720" y2="149" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="60" y1="122" x2="720" y2="122" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="60" y1="96" x2="720" y2="96" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="60" y1="70" x2="720" y2="70" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="60" y1="43" x2="720" y2="43" stroke="#f0f0f0" stroke-width="1"/>
+
+      <!-- Y labels -->
+      <text x="52" y="283" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$0</text>
+      <text x="52" y="231" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$2M</text>
+      <text x="52" y="178" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$4M</text>
+      <text x="52" y="126" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$6M</text>
+      <text x="52" y="73" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$8M</text>
+
+      <!-- Gap fill -->
+      <polygon points="60,146 133,137 207,128 280,118 353,108 427,97 500,85 573,73 647,59 720,45 720,202 647,204 573,207 500,209 427,211 353,213 280,215 207,217 133,218 60,220"
+               fill="url(#gapFill)"/>
+
+      <!-- Revenue line -->
+      <polyline points="60,220 133,218 207,217 280,215 353,213 427,211 500,209 573,207 647,204 720,202"
+                fill="none" stroke="#059669" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+      <!-- Cost line -->
+      <polyline points="60,146 133,137 207,128 280,118 353,108 427,97 500,85 573,73 647,59 720,45"
+                fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+      <!-- Start dots + labels -->
+      <circle cx="60" cy="220" r="4" fill="#059669"/>
+      <circle cx="60" cy="146" r="4" fill="#dc2626"/>
+      <text x="55" y="235" text-anchor="end" font-size="10" font-weight="700" fill="#059669" font-family="-apple-system, sans-serif">$2.3M</text>
+      <text x="55" y="141" text-anchor="end" font-size="10" font-weight="700" fill="#dc2626" font-family="-apple-system, sans-serif">$5.1M</text>
+
+      <!-- End dots + labels -->
+      <circle cx="720" cy="202" r="4" fill="#059669"/>
+      <circle cx="720" cy="45" r="4" fill="#dc2626"/>
+      <text x="726" y="198" font-size="11" font-weight="700" fill="#059669" font-family="-apple-system, sans-serif">$3.0M</text>
+      <text x="726" y="41" font-size="11" font-weight="700" fill="#dc2626" font-family="-apple-system, sans-serif">$8.9M</text>
+
+      <!-- Gap annotation -->
+      <text x="630" y="140" text-anchor="end" font-size="12" font-weight="700" fill="#dc2626" font-family="-apple-system, sans-serif">$6.0M gap/yr</text>
+      <text x="630" y="153" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">by FY36</text>
+
+      <!-- X labels -->
+      <text x="60"  y="300" text-anchor="middle" font-size="10" fill="#555" font-family="-apple-system, sans-serif">FY27</text>
+      <text x="207" y="300" text-anchor="middle" font-size="10" fill="#999" font-family="-apple-system, sans-serif">FY29</text>
+      <text x="353" y="300" text-anchor="middle" font-size="10" fill="#999" font-family="-apple-system, sans-serif">FY31</text>
+      <text x="500" y="300" text-anchor="middle" font-size="10" fill="#999" font-family="-apple-system, sans-serif">FY33</text>
+      <text x="647" y="300" text-anchor="middle" font-size="10" fill="#999" font-family="-apple-system, sans-serif">FY35</text>
+      <text x="720" y="300" text-anchor="middle" font-size="10" fill="#555" font-family="-apple-system, sans-serif">FY36</text>
+    </svg>
+  </div>
+
+  <div class="takeaway">
+    Each year, Prop 2.5 lets the town collect about $2.3M in new revenue. Healthcare, pensions, and salaries alone need $5.1M more. That $2.8M annual gap grows every year because costs compound faster than revenue. By FY36, the annual shortfall from just three cost categories is $6.0M per year, before the town pays for utilities, maintenance, debt service, or anything else.
+  </div>
+
+  <div class="footnotes">
+    <p><span class="footnote-marker"></span>Verified FY26 starting values: levy $75.7M (Mass.gov), healthcare $13.6M (Marblehead Independent), payroll $65.2M (Marblehead Independent).</p>
+    <p><span class="footnote-marker"></span>Pension base (~$5.4M) estimated from FY27 increase of $462,735 at 8.5% growth.</p>
+    <p><span class="footnote-marker"></span>Growth rates from Finance Committee Annual Report FY2026: HC 9%, pensions 8.5%, salaries 5%, levy ~3%.</p>
+  </div>
+</div>
+</body>
+</html>

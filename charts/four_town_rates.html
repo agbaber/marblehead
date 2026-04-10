@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
+    padding: 44px 48px 36px;
+    max-width: 840px;
+    width: 100%;
+  }
+  h1 { font-size: 22px; font-weight: 700; color: #111; text-align: center; margin-bottom: 4px; }
+  .subtitle { font-size: 13px; color: #999; text-align: center; margin-bottom: 28px; }
+  .legend { display: flex; justify-content: center; gap: 20px; margin-bottom: 24px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #555; }
+  .legend-swatch { width: 16px; height: 3px; border-radius: 2px; flex-shrink: 0; }
+  .chart-wrapper { margin-bottom: 24px; }
+  svg { width: 100%; height: auto; display: block; }
+  .takeaway {
+    background: #f8fafc; border-left: 3px solid #3b82f6;
+    border-radius: 0 10px 10px 0; padding: 16px 20px;
+    margin: 0 0 24px 0; font-size: 13px; color: #555; line-height: 1.6;
+  }
+  .footnotes { background: #fafafa; border-radius: 10px; padding: 14px 18px; }
+  .footnotes p { font-size: 12px; color: #888; line-height: 1.6; }
+  .footnotes p + p { margin-top: 4px; }
+  .fn-dot { display: inline-block; width: 5px; height: 5px; background: #ccc; border-radius: 50%; margin-right: 8px; position: relative; top: -2px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Residential Tax Rates: Four North Shore Towns</h1>
+  <p class="subtitle">Rate per $1,000 assessed value, FY2003-FY2026. Source: MA Department of Revenue.</p>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-swatch" style="background:#3b82f6;"></div>Marblehead</div>
+    <div class="legend-item"><div class="legend-swatch" style="background:#f97316;"></div>Swampscott</div>
+    <div class="legend-item"><div class="legend-swatch" style="background:#dc2626;"></div>Melrose</div>
+    <div class="legend-item"><div class="legend-swatch" style="background:#8b5cf6;"></div>Stoneham</div>
+  </div>
+
+  <!--
+    24 years (FY03-FY26), 4 towns
+    Chart: 780 x 380
+    Plot: x 55-750, y 30-310
+    Y range: $6 to $20 ($14 range)
+    y = 310 - ((val-6)/14)*280
+    x = 55 + i*(695/23) = 55 + i*30.2
+
+    Marblehead: 8.42 8.48 8.26 8.43 7.76 8.34 8.99 9.57 10.21 10.52 10.85 11.09 11.08 11.10 11.01 11.02 10.74 10.39 10.42 10.52 10.00 8.96 9.05 8.56
+    Swampscott: 13.52 12.12 11.29 12.19 12.86 13.63 14.34 16.48 16.60 17.99 18.84 18.70 17.15 17.33 17.45 16.00 15.20 14.30 13.80 12.83 11.74 11.49 11.47 12.00
+    Melrose: 12.25 11.52 9.74 9.63 9.83 10.43 11.36 12.07 12.46 12.76 13.03 13.28 12.96 12.33 11.80 11.33 10.81 11.05 10.95 10.57 10.42 9.93 9.90 11.47
+    Stoneham: 11.70 12.16 10.46 9.67 9.74 10.19 10.88 11.49 12.21 12.61 13.06 13.49 12.96 12.70 12.39 11.71 11.22 10.79 10.82 10.41 11.10 10.59 10.23 10.06
+
+    x positions (i=0..23):
+    55,85,116,146,176,206,237,267,297,327,358,388,418,448,479,509,539,569,600,630,660,690,720,750
+  -->
+
+  <div class="chart-wrapper">
+    <svg viewBox="0 0 820 400" xmlns="http://www.w3.org/2000/svg">
+      <!-- Grid -->
+      <line x1="55" y1="310" x2="750" y2="310" stroke="#e0e0e0" stroke-width="1"/>
+      <line x1="55" y1="270" x2="750" y2="270" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="55" y1="230" x2="750" y2="230" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="55" y1="190" x2="750" y2="190" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="55" y1="150" x2="750" y2="150" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="55" y1="110" x2="750" y2="110" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="55" y1="70" x2="750" y2="70" stroke="#f0f0f0" stroke-width="1"/>
+      <line x1="55" y1="30" x2="750" y2="30" stroke="#f0f0f0" stroke-width="1"/>
+
+      <!-- Y labels -->
+      <text x="48" y="313" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$6</text>
+      <text x="48" y="273" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$8</text>
+      <text x="48" y="233" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$10</text>
+      <text x="48" y="193" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$12</text>
+      <text x="48" y="153" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$14</text>
+      <text x="48" y="113" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$16</text>
+      <text x="48" y="73" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$18</text>
+      <text x="48" y="33" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$20</text>
+
+      <!-- X labels -->
+      <text x="55" y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY03</text>
+      <text x="176" y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY07</text>
+      <text x="297" y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY11</text>
+      <text x="418" y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY15</text>
+      <text x="539" y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY19</text>
+      <text x="660" y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY23</text>
+      <text x="750" y="330" text-anchor="middle" font-size="9" font-weight="600" fill="#555" font-family="-apple-system, sans-serif">FY26</text>
+
+      <!-- Melrose override annotation -->
+      <line x1="750" y1="35" x2="750" y2="310" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,3" opacity="0.3"/>
+      <text x="740" y="345" text-anchor="end" font-size="9" fill="#dc2626" font-family="-apple-system, sans-serif">Melrose override</text>
+
+      <!-- Swampscott (orange) - highest -->
+      <polyline points="55,161 85,188 116,204 146,186 176,172 206,157 237,143 267,100 297,88 327,71 358,53 388,56 418,87 448,83 479,81 509,110 539,126 569,143 600,152 630,165 660,185 690,190 720,191 750,190"
+                fill="none" stroke="#f97316" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.7"/>
+
+      <!-- Stoneham (purple) -->
+      <polyline points="55,196 85,187 116,221 146,237 176,235 206,226 237,212 267,200 297,186 327,178 358,169 388,161 418,169 448,174 479,179 509,196 539,206 569,214 600,212 630,222 660,208 690,218 720,226 750,231"
+                fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.7"/>
+
+      <!-- Melrose (red) -->
+      <polyline points="55,185 85,199 116,235 146,237 176,233 206,221 237,203 267,189 297,181 327,175 358,169 388,164 418,170 448,177 479,186 509,195 539,206 569,200 600,203 630,211 660,216 690,221 720,222 750,199"
+                fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+      <!-- Marblehead (blue) - lowest -->
+      <polyline points="55,262 85,260 116,265 146,262 176,275 206,263 237,250 267,238 297,226 327,220 358,213 388,208 418,209 448,208 479,210 509,210 539,215 569,222 600,222 630,220 660,230 690,250 720,249 750,259"
+                fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+      <!-- End labels -->
+      <text x="756" y="187" font-size="10" font-weight="700" fill="#f97316" font-family="-apple-system, sans-serif">$12.00</text>
+      <text x="756" y="196" font-size="10" font-weight="700" fill="#dc2626" font-family="-apple-system, sans-serif">$11.47</text>
+      <text x="756" y="228" font-size="10" font-weight="700" fill="#8b5cf6" font-family="-apple-system, sans-serif">$10.06</text>
+      <text x="756" y="263" font-size="10" font-weight="700" fill="#3b82f6" font-family="-apple-system, sans-serif">$8.56</text>
+
+      <!-- Melrose spike annotation -->
+      <circle cx="750" cy="199" r="4" fill="#dc2626"/>
+      <circle cx="720" cy="222" r="3" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+      <line x1="723" y1="219" x2="747" y2="202" stroke="#dc2626" stroke-width="1" stroke-dasharray="2,2"/>
+
+      <!-- Marblehead Tier 3 projection -->
+      <circle cx="750" cy="259" r="3" fill="#3b82f6"/>
+      <line x1="750" y1="259" x2="780" y2="231" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="783" y="228" font-size="9" fill="#3b82f6" font-family="-apple-system, sans-serif">~$10.06</text>
+      <text x="783" y="238" font-size="8" fill="#999" font-family="-apple-system, sans-serif">w/ Tier 3</text>
+    </svg>
+  </div>
+
+  <div class="takeaway">
+    Marblehead has had the lowest residential tax rate of all four towns for the entire 24-year period. Even with the maximum Tier 3 override ($15M), Marblehead's rate would rise to roughly $10.06, still below Melrose's post-override rate ($11.47), Swampscott ($12.00), and roughly equal to Stoneham ($10.06). The visible spike in Melrose's FY26 rate is the $13.5M override that passed after voters rejected $7.7M a year earlier and lived through 61 position cuts.
+  </div>
+
+  <div class="footnotes">
+    <p><span class="fn-dot"></span>Source: MA Department of Revenue, Division of Local Services, Tax Rates by Class FY2003-FY2026.</p>
+    <p><span class="fn-dot"></span>All four towns use split tax rates (residential vs commercial) except Marblehead, which uses a single rate for all property classes.</p>
+    <p><span class="fn-dot"></span>Melrose FY26 rate includes $13.5M override passed November 2025. Stoneham's $9.3M override (Dec 2025) is not yet reflected in FY26 rate.</p>
+    <p><span class="fn-dot"></span>Marblehead "w/ Tier 3" is an estimate: current rate + ($15M / $9.89B assessed value).</p>
+  </div>
+</div>
+</body>
+</html>
