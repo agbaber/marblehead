@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Marblehead Budget Data</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -13,6 +14,43 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    z-index: 100;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+  }
+  nav .nav-inner {
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 44px;
+    overflow-x: auto;
+  }
+  nav .nav-brand {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 8px;
+  }
+  nav a {
+    font-size: 12px;
+    color: #888;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.15s;
+  }
+  nav a:hover { color: #333; }
   .page {
     max-width: 960px;
     margin: 0 auto;
@@ -121,6 +159,18 @@
 </style>
 </head>
 <body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#">MHD Budget</a>
+    <a href="#costs">Costs</a>
+    <a href="#staffing">Staffing</a>
+    <a href="#compare">Comparisons</a>
+    <a href="#calculator">Calculator</a>
+    <a href="#data">Data</a>
+    <a href="#sources">Sources</a>
+    <a href="https://github.com/agbaber/marblehead">GitHub</a>
+  </div>
+</nav>
 <div class="page">
 
   <div class="hero">
@@ -128,7 +178,7 @@
     <p>Open data and charts about Marblehead's municipal finances. Every number is traceable to a primary source. Not affiliated with any override campaign.</p>
   </div>
 
-  <div class="section">
+  <div class="section" id="costs">
     <p class="section-label">The Cost Problem</p>
     <div class="card-grid">
       <a class="card" href="charts/real_cost_comparison.html">
@@ -146,7 +196,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="staffing">
     <p class="section-label">Staffing</p>
     <div class="card-grid">
       <a class="card" href="charts/healthcare_indexed.html">
@@ -156,7 +206,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="compare">
     <p class="section-label">How Marblehead Compares</p>
     <div class="card-grid">
       <a class="card" href="charts/four_town_rates.html">
@@ -170,7 +220,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="calculator">
     <p class="section-label">What It Means For You</p>
     <div class="card-grid">
       <a class="card" href="charts/override_calculator.html">
@@ -180,7 +230,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="data">
     <p class="section-label">Data & Sources</p>
     <div class="list-group">
       <a class="list-item" href="data/MASTER_DATA.csv">
@@ -214,7 +264,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sources">
     <p class="section-label">Primary Sources</p>
     <div class="list-group">
       <a class="list-item" href="https://www.marbleheadma.gov/document/annual-comprehensive-financial-reports/">
