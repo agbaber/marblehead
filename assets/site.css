@@ -171,7 +171,7 @@ nav.site-nav .nav-brand {
 }
 nav.site-nav a {
   font-size: 13px; color: var(--text-subtle);
-  whiteastespace: nowrap; white-space: nowrap;
+  white-space: nowrap;
 }
 nav.site-nav a:hover { color: var(--text); text-decoration: none; }
 

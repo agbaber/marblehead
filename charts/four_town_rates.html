@@ -1,130 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
-    background: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    padding: 48px 20px;
-    -webkit-font-smoothing: antialiased;
-  }
-  .container {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    padding: 36px 40px 32px;
-    max-width: 880px;
-    width: 100%;
-  }
-  h1 { font-size: 18px; font-weight: 700; color: #111; text-align: center; margin-bottom: 4px; }
-  .subtitle { font-size: 12px; color: #888; text-align: center; margin-bottom: 28px; }
-  .legend { display: flex; justify-content: center; gap: 20px; margin-bottom: 24px; flex-wrap: wrap; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #555; }
-  .legend-swatch { width: 16px; height: 3px; border-radius: 2px; flex-shrink: 0; }
-  .chart-wrapper { margin-bottom: 16px; }
-  svg { width: 100%; height: auto; display: block; }
-  .caption { font-size: 12px; color: #666; line-height: 1.6; margin: 0 0 20px 0; }
-  .notes { font-size: 11px; color: #999; line-height: 1.5; border-top: 1px solid #eee; padding-top: 12px; }
-  .notes p + p { margin-top: 3px; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
+<title>Four Town Tax Rates - Marblehead Budget Data</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
 </head>
-<body>
+<body class="chart-page">
+
 <div class="container">
-  <a href="../" style="font-size:12px;color:#999;text-decoration:none;display:block;margin-bottom:16px">&larr; marbleheaddata.org</a>
-  <h1>Residential Tax Rates: Four North Shore Towns</h1>
-  <p class="subtitle">Rate per $1,000 assessed value, FY2003-FY2026, with Marblehead override projections. Source: MA Department of Revenue.</p>
+  <a class="back" href="../">&larr; marbleheaddata.org</a>
+  <h1 class="h-center">Residential Tax Rates: Four North Shore Towns</h1>
+  <p class="subtitle h-center">Rate per $1,000 assessed value, FY2003&ndash;FY2026, with Marblehead override projections. Source: MA Department of Revenue.</p>
 
   <div class="legend">
-    <div class="legend-item"><div class="legend-swatch" style="background:#3b82f6;"></div>Marblehead</div>
-    <div class="legend-item"><div class="legend-swatch" style="background:#f97316;"></div>Swampscott</div>
-    <div class="legend-item"><div class="legend-swatch" style="background:#dc2626;"></div>Melrose</div>
-    <div class="legend-item"><div class="legend-swatch" style="background:#8b5cf6;"></div>Stoneham</div>
+    <div class="legend-item s-marblehead"><span class="legend-swatch"></span><span class="legend-text">Marblehead</span></div>
+    <div class="legend-item s-swampscott"><span class="legend-swatch"></span><span class="legend-text">Swampscott</span></div>
+    <div class="legend-item s-melrose"><span class="legend-swatch"></span><span class="legend-text">Melrose</span></div>
+    <div class="legend-item s-stoneham"><span class="legend-swatch"></span><span class="legend-text">Stoneham</span></div>
   </div>
 
   <div class="chart-wrapper">
-    <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg">
+    <svg class="chart" viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart: residential tax rates per thousand dollars of assessed value for Marblehead, Swampscott, Melrose, and Stoneham, FY2003 to FY2026, with projected Marblehead rates under three override tiers.">
       <!-- Grid -->
-      <line x1="55" y1="310" x2="750" y2="310" stroke="#e0e0e0" stroke-width="1"/>
-      <line x1="55" y1="270" x2="750" y2="270" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="55" y1="230" x2="750" y2="230" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="55" y1="190" x2="750" y2="190" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="55" y1="150" x2="750" y2="150" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="55" y1="110" x2="750" y2="110" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="55" y1="70" x2="750" y2="70" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="55" y1="30" x2="750" y2="30" stroke="#f0f0f0" stroke-width="1"/>
+      <line class="axis-base" x1="55" y1="310" x2="750" y2="310"/>
+      <line class="grid-minor" x1="55" y1="270" x2="750" y2="270"/>
+      <line class="grid-minor" x1="55" y1="230" x2="750" y2="230"/>
+      <line class="grid-minor" x1="55" y1="190" x2="750" y2="190"/>
+      <line class="grid-minor" x1="55" y1="150" x2="750" y2="150"/>
+      <line class="grid-minor" x1="55" y1="110" x2="750" y2="110"/>
+      <line class="grid-minor" x1="55" y1="70" x2="750" y2="70"/>
+      <line class="grid-minor" x1="55" y1="30" x2="750" y2="30"/>
 
       <!-- Y labels -->
-      <text x="48" y="313" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$6</text>
-      <text x="48" y="273" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$8</text>
-      <text x="48" y="233" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$10</text>
-      <text x="48" y="193" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$12</text>
-      <text x="48" y="153" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$14</text>
-      <text x="48" y="113" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$16</text>
-      <text x="48" y="73" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$18</text>
-      <text x="48" y="33" text-anchor="end" font-size="10" fill="#999" font-family="-apple-system, sans-serif">$20</text>
+      <text class="tick-label" x="48" y="313" text-anchor="end">$6</text>
+      <text class="tick-label" x="48" y="273" text-anchor="end">$8</text>
+      <text class="tick-label" x="48" y="233" text-anchor="end">$10</text>
+      <text class="tick-label" x="48" y="193" text-anchor="end">$12</text>
+      <text class="tick-label" x="48" y="153" text-anchor="end">$14</text>
+      <text class="tick-label" x="48" y="113" text-anchor="end">$16</text>
+      <text class="tick-label" x="48" y="73"  text-anchor="end">$18</text>
+      <text class="tick-label" x="48" y="33"  text-anchor="end">$20</text>
 
       <!-- X labels -->
-      <text x="55"  y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY03</text>
-      <text x="166" y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY07</text>
-      <text x="277" y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY11</text>
-      <text x="389" y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY15</text>
-      <text x="500" y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY19</text>
-      <text x="611" y="330" text-anchor="middle" font-size="9" fill="#999" font-family="-apple-system, sans-serif">FY23</text>
-      <text x="694" y="330" text-anchor="middle" font-size="9" font-weight="600" fill="#555" font-family="-apple-system, sans-serif">FY26</text>
+      <text class="tick-label tick-label--major" x="55"  y="330" text-anchor="middle">FY03</text>
+      <text class="tick-label tick-label--minor" x="166" y="330" text-anchor="middle">FY07</text>
+      <text class="tick-label tick-label--minor" x="277" y="330" text-anchor="middle">FY11</text>
+      <text class="tick-label tick-label--major" x="389" y="330" text-anchor="middle">FY15</text>
+      <text class="tick-label tick-label--minor" x="500" y="330" text-anchor="middle">FY19</text>
+      <text class="tick-label tick-label--minor" x="611" y="330" text-anchor="middle">FY23</text>
+      <text class="tick-label tick-label--major" x="694" y="330" text-anchor="middle">FY26</text>
 
-      <!-- Swampscott (orange) -->
-      <polyline points="55,160 83,188 111,204 138,186 166,173 194,157 222,143 250,100 277,98 305,70 333,53 361,56 389,87 416,83 444,81 472,110 500,126 528,144 555,154 583,173 611,195 639,200 667,201 694,190"
-                fill="none" stroke="#f97316" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.7"/>
+      <!-- Swampscott -->
+      <polyline class="data-line s-swampscott"
+                points="55,160 83,188 111,204 138,186 166,173 194,157 222,143 250,100 277,98 305,70 333,53 361,56 389,87 416,83 444,81 472,110 500,126 528,144 555,154 583,173 611,195 639,200 667,201 694,190"/>
 
-      <!-- Stoneham (purple) -->
-      <polyline points="55,196 83,187 111,221 138,237 166,235 194,226 222,212 250,200 277,186 305,178 333,169 361,160 389,171 416,176 444,182 472,196 500,206 528,214 555,214 583,222 611,208 639,218 667,225 694,229"
-                fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.7"/>
+      <!-- Stoneham -->
+      <polyline class="data-line s-stoneham"
+                points="55,196 83,187 111,221 138,237 166,235 194,226 222,212 250,200 277,186 305,178 333,169 361,160 389,171 416,176 444,182 472,196 500,206 528,214 555,214 583,222 611,208 639,218 667,225 694,229"/>
 
-      <!-- Melrose (red) -->
-      <polyline points="55,185 83,200 111,235 138,237 166,233 194,221 222,203 250,189 277,181 305,175 333,169 361,164 389,171 416,183 444,194 472,203 500,214 528,209 555,211 583,219 611,222 639,231 667,232 694,201"
-                fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- Melrose -->
+      <polyline class="data-line data-line--bold s-melrose"
+                points="55,185 83,200 111,235 138,237 166,233 194,221 222,203 250,189 277,181 305,175 333,169 361,164 389,171 416,183 444,194 472,203 500,214 528,209 555,211 583,219 611,222 639,231 667,232 694,201"/>
 
-      <!-- Marblehead (blue) -->
-      <polyline points="55,262 83,260 111,265 138,261 166,275 194,263 222,250 250,239 277,226 305,220 333,213 361,208 389,208 416,208 444,210 472,210 500,215 528,222 555,222 583,220 611,230 639,251 667,249 694,259"
-                fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- Marblehead (bold, own colour) -->
+      <polyline class="data-line data-line--bold s-marblehead"
+                points="55,262 83,260 111,265 138,261 166,275 194,263 222,250 250,239 277,226 305,220 333,213 361,208 389,208 416,208 444,210 472,210 500,215 528,222 555,222 583,220 611,230 639,251 667,249 694,259"/>
 
       <!-- Marblehead override projections (dashed to FY28) -->
-      <polyline points="694,259 750,241" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.5"/>
-      <polyline points="694,259 750,235" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.5"/>
-      <polyline points="694,259 750,229" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.5"/>
+      <polyline class="data-line data-line--thin data-line--dashed s-marblehead"
+                points="694,259 750,241" opacity="0.6"/>
+      <polyline class="data-line data-line--thin data-line--dashed s-marblehead"
+                points="694,259 750,235" opacity="0.6"/>
+      <polyline class="data-line data-line--thin data-line--dashed s-marblehead"
+                points="694,259 750,229" opacity="0.6"/>
 
       <!-- Tier dots at FY28 -->
-      <circle cx="750" cy="241" r="3" fill="#3b82f6" opacity="0.5"/>
-      <circle cx="750" cy="235" r="3" fill="#3b82f6" opacity="0.5"/>
-      <circle cx="750" cy="229" r="3" fill="#3b82f6" opacity="0.5"/>
+      <circle class="data-dot s-marblehead" cx="750" cy="241" r="3" opacity="0.6"/>
+      <circle class="data-dot s-marblehead" cx="750" cy="235" r="3" opacity="0.6"/>
+      <circle class="data-dot s-marblehead" cx="750" cy="229" r="3" opacity="0.6"/>
 
-      <!-- End labels (right margin, plenty of room) -->
-      <text x="760" y="193" font-size="10" font-weight="600" fill="#f97316" font-family="-apple-system, sans-serif">$12.00 Swampscott</text>
-      <text x="760" y="205" font-size="10" font-weight="600" fill="#dc2626" font-family="-apple-system, sans-serif">$11.47 Melrose</text>
-      <text x="760" y="232" font-size="10" font-weight="600" fill="#8b5cf6" font-family="-apple-system, sans-serif">$10.06 Stoneham</text>
-
-      <text x="760" y="262" font-size="10" font-weight="600" fill="#3b82f6" font-family="-apple-system, sans-serif">$8.56 Marblehead</text>
+      <!-- End labels -->
+      <text class="end-label s-swampscott" x="760" y="193">$12.00 Swampscott</text>
+      <text class="end-label s-melrose"    x="760" y="205">$11.47 Melrose</text>
+      <text class="end-label s-stoneham"   x="760" y="232">$10.06 Stoneham</text>
+      <text class="end-label s-marblehead" x="760" y="262">$8.56 Marblehead</text>
 
       <!-- Tier labels -->
-      <text x="756" y="242" font-size="9" fill="#3b82f6" opacity="0.6" font-family="-apple-system, sans-serif">Tier 1</text>
-      <text x="756" y="224" font-size="9" fill="#3b82f6" opacity="0.6" font-family="-apple-system, sans-serif">Tier 3</text>
+      <text class="annotation annotation--hide-sm s-marblehead" x="756" y="242">Tier 1</text>
+      <text class="annotation annotation--hide-sm s-marblehead" x="756" y="224">Tier 3</text>
     </svg>
   </div>
 
   <p class="caption">
-    Residential tax rates for four North Shore towns, FY2003-FY2026. Marblehead's rate has been the lowest throughout the period. Dashed lines show projected Marblehead rates with each override tier at full phase-in. The Melrose FY26 spike reflects a $13.5M override passed in November 2025. Tax rates move inversely with property values and do not directly indicate total tax burden or spending efficiency.
+    Residential tax rates for four North Shore towns, FY2003&ndash;FY2026. Marblehead's rate has been the lowest throughout the period. Dashed lines show projected Marblehead rates with each override tier at full phase-in. The Melrose FY26 spike reflects a $13.5M override passed in November 2025. Tax rates move inversely with property values and do not directly indicate total tax burden or spending efficiency.
   </p>
 
   <div class="notes">
-    <p>Source: MA Department of Revenue, Division of Local Services, Tax Rates by Class FY2003-FY2026.</p>
+    <p>Source: MA Department of Revenue, Division of Local Services, Tax Rates by Class FY2003&ndash;FY2026.</p>
     <p>All four towns use split tax rates (residential vs commercial) except Marblehead, which uses a single rate for all property classes.</p>
     <p>Melrose FY26 rate includes $13.5M override passed November 2025. Stoneham's $9.3M override (Dec 2025) not yet reflected.</p>
     <p>Marblehead override tiers are estimates: current rate + (override amount / $9.89B assessed value). Tier 1 ($9M) ~$9.46, Tier 2 ($12M) ~$9.76, Tier 3 ($15M) ~$10.06.</p>
   </div>
 </div>
+
 </body>
 </html>

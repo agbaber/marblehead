@@ -1,357 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
+<title>Marblehead vs. Swampscott - Marblehead Budget Data</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
-    background: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    padding: 48px 20px;
-    -webkit-font-smoothing: antialiased;
+  /* Page-specific widgets: section dividers, bar race, budget cards */
+  .section-divider {
+    display: flex; align-items: center; gap: 10px;
+    margin: 10px 0 14px;
+  }
+  .section-divider .label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.1px; color: var(--text-subtle); white-space: nowrap;
+  }
+  .section-divider .rule {
+    flex: 1; height: 1px; background: var(--divider);
+  }
+  .section-divider .pill {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.3px;
+    padding: 3px 10px; border-radius: 100px; white-space: nowrap;
+    background: var(--tag-chart-bg); color: var(--tag-chart-fg);
   }
 
-  .container {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
-    padding: 44px 48px 36px;
-    max-width: 780px;
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #111;
-    text-align: center;
-    margin-bottom: 4px;
-    letter-spacing: -0.3px;
-  }
-
-  .subtitle {
-    font-size: 13px;
-    color: #999;
-    text-align: center;
-    margin-bottom: 36px;
-  }
-
-  .section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 14px;
-  }
-
-  .section-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: #888;
-    white-space: nowrap;
-  }
-
-  .section-line {
-    flex: 1;
-    height: 1px;
-    background: #e8e8e8;
-  }
-
-  .tag {
-    font-size: 10px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 100px;
-    letter-spacing: 0.3px;
-    white-space: nowrap;
-  }
-  .tag.green { background: #ecfdf5; color: #059669; }
-
-  table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-bottom: 28px;
-    font-size: 14px;
-  }
-
-  th {
-    text-align: right;
-    padding: 10px 14px;
-    font-weight: 600;
-    font-size: 11px;
-    color: #999;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 1px solid #eee;
-  }
-  th:first-child { text-align: left; }
-
-  td {
-    padding: 12px 14px;
-    text-align: right;
-    color: #444;
-    font-variant-numeric: tabular-nums;
-  }
-  td:first-child {
-    text-align: left;
-    font-weight: 600;
-    color: #222;
-  }
-
-  tbody tr:nth-child(odd) td { background: #fafafa; }
-  tbody tr:nth-child(even) td { background: white; }
-
-  tbody tr:first-child td:first-child { border-radius: 8px 0 0 0; }
-  tbody tr:first-child td:last-child { border-radius: 0 8px 0 0; }
-
-  .result-row td {
+  table.compare tbody tr:nth-child(odd) td { background: var(--divider); }
+  table.compare .result-row td {
     background: transparent !important;
-    border-top: 2px solid #eee;
-    font-weight: 700;
-    font-size: 13px;
-    padding-top: 14px;
-    color: #999;
+    border-top: 2px solid var(--divider);
+    font-weight: 700; font-size: 12px;
+    padding-top: 14px; color: var(--text-subtle);
   }
-  .result-row.green td { color: #059669; }
-  .result-row td.neutral { color: #888; }
-  .result-row td.red { color: #dc2626; }
 
-  /* Bar comparison */
-  .bar-compare {
-    margin-bottom: 28px;
-  }
+  /* Bar-race comparison */
+  .bar-compare { margin: 8px 0 24px; }
   .bar-compare-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: #888;
-    margin-bottom: 16px;
-    text-align: center;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.1px; color: var(--text-subtle);
+    margin-bottom: 14px; text-align: center;
   }
   .bar-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    gap: 12px;
+    display: flex; align-items: center; margin-bottom: 10px; gap: 12px;
   }
   .bar-town {
-    width: 100px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #222;
-    text-align: right;
-    flex-shrink: 0;
+    width: 90px; font-size: 13px; font-weight: 600;
+    color: var(--text); text-align: right; flex-shrink: 0;
   }
   .bar-track {
-    flex: 1;
-    height: 36px;
-    background: #f5f5f5;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
+    flex: 1; height: 36px;
+    background: var(--divider); border-radius: 8px; overflow: hidden;
   }
   .bar-fill {
-    height: 100%;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    padding: 0 14px;
-    font-size: 14px;
-    font-weight: 700;
-    color: white;
-    transition: width 0.6s ease;
+    height: 100%; border-radius: 8px;
+    display: flex; align-items: center; padding: 0 14px;
+    font-size: 14px; font-weight: 700; color: white;
   }
-  .bar-fill.marblehead {
-    background: #3b82f6;
-    width: 71.6%;
-  }
-  .bar-fill.swampscott {
-    background: #f97316;
-    width: 100%;
-  }
+  .bar-fill.s-marblehead { background: var(--series-marblehead); width: 71.6%; }
+  .bar-fill.s-swampscott { background: var(--series-swampscott); width: 100%; }
   .bar-savings {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 14px;
-    padding: 10px 0;
+    display: flex; justify-content: center; align-items: baseline;
+    gap: 8px; margin-top: 14px; padding: 10px 0;
   }
   .bar-savings-amount {
-    font-size: 20px;
-    font-weight: 800;
-    color: #333;
-    letter-spacing: -0.5px;
+    font-size: 20px; font-weight: 800; color: var(--text);
+    letter-spacing: -0.3px;
   }
-  .bar-savings-label {
-    font-size: 13px;
-    color: #666;
-  }
+  .bar-savings-label { font-size: 13px; color: var(--text-muted); }
 
-  /* What $750K buys */
+  /* Budget cards */
   .budget-compare {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 28px;
+    display: flex; gap: 14px; margin: 8px 0 24px;
   }
   .budget-card {
-    flex: 1;
-    border-radius: 12px;
-    padding: 20px 22px;
-    text-align: center;
+    flex: 1; border-radius: 12px; padding: 18px 20px;
+    text-align: center; border: 1px solid var(--border);
+    background: var(--surface);
   }
-  .budget-card.marblehead {
-    background: #f0fdf4;
-    border: 1px solid #bbf7d0;
+  .budget-card.s-marblehead {
+    background: color-mix(in srgb, var(--series-marblehead) 6%, var(--surface));
+    border-color: color-mix(in srgb, var(--series-marblehead) 25%, var(--border));
   }
-  .budget-card.swampscott {
-    background: #fef2f2;
-    border: 1px solid #fecaca;
+  .budget-card.s-swampscott {
+    background: color-mix(in srgb, var(--series-swampscott) 8%, var(--surface));
+    border-color: color-mix(in srgb, var(--series-swampscott) 30%, var(--border));
   }
   .budget-card-town {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 10px;
   }
-  .budget-card.marblehead .budget-card-town { color: #059669; }
-  .budget-card.swampscott .budget-card-town { color: #dc2626; }
+  .budget-card.s-marblehead .budget-card-town { color: var(--series-marblehead); }
+  .budget-card.s-swampscott .budget-card-town { color: var(--series-swampscott); }
   .budget-card-sqft {
-    font-size: 32px;
-    font-weight: 800;
-    color: #111;
-    letter-spacing: -1px;
-    line-height: 1;
-    margin-bottom: 4px;
+    font-size: 28px; font-weight: 800; color: var(--text);
+    letter-spacing: -0.5px; line-height: 1; margin-bottom: 4px;
+    font-variant-numeric: tabular-nums;
   }
   .budget-card-unit {
-    font-size: 13px;
-    color: #888;
-    margin-bottom: 14px;
+    font-size: 12px; color: var(--text-subtle); margin-bottom: 12px;
   }
   .budget-card-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 0;
-    font-size: 12px;
-    border-top: 1px solid rgba(0,0,0,0.06);
+    display: flex; justify-content: space-between;
+    padding: 6px 0; font-size: 12px;
+    border-top: 1px solid var(--divider);
   }
-  .budget-card-row-label {
-    color: #888;
-  }
+  .budget-card-row-label { color: var(--text-subtle); }
   .budget-card-row-value {
-    font-weight: 600;
-    color: #333;
-  }
-  .budget-section-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: #888;
-    text-align: center;
-    margin-bottom: 16px;
+    font-weight: 600; color: var(--text);
+    font-variant-numeric: tabular-nums;
   }
 
-  .takeaway {
-    background: #f8fafc;
-    border-left: 3px solid #059669;
-    border-radius: 0 10px 10px 0;
-    padding: 16px 20px;
-    margin: 0 0 28px 0;
-    font-size: 13px;
-    color: #555;
-    line-height: 1.6;
-  }
-
-  .footnotes {
-    background: #fafafa;
-    border-radius: 10px;
-    padding: 14px 18px;
-  }
-  .footnotes p {
-    font-size: 12px;
-    color: #888;
-    line-height: 1.6;
-  }
-  .footnotes p + p { margin-top: 4px; }
-  .footnote-marker {
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    background: #ccc;
-    border-radius: 50%;
-    margin-right: 8px;
-    position: relative;
-    top: -2px;
+  @media (max-width: 560px) {
+    .bar-town { width: 82px; font-size: 12px; }
+    .bar-fill { font-size: 13px; padding: 0 10px; }
+    .budget-compare { flex-direction: column; gap: 12px; }
+    .budget-card-sqft { font-size: 32px; }
   }
 </style>
 </head>
-<body>
-<div class="container">
-  <a href="../" style="font-size:12px;color:#999;text-decoration:none;display:block;margin-bottom:16px">&larr; marbleheaddata.org</a>
-  <h1>Marblehead vs. Swampscott</h1>
-  <p class="subtitle">FY2026 Property Tax Comparison</p>
+<body class="chart-page">
 
-  <div class="section">
-    <span class="section-label">Tax rate x assessed value</span>
-    <span class="section-line"></span>
-    <span class="tag green">What you actually pay</span>
+<div class="container">
+  <a class="back" href="../">&larr; marbleheaddata.org</a>
+  <h1 class="h-center">Marblehead vs. Swampscott</h1>
+  <p class="subtitle h-center">FY2026 property tax comparison.</p>
+
+  <div class="section-divider">
+    <span class="label">Tax rate &times; assessed value</span>
+    <span class="rule"></span>
+    <span class="pill">What you actually pay</span>
   </div>
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th>FY26 Rate</th>
-        <th>Median Home Value</th>
-        <th>Median Tax Bill</th>
-        <th>Same $750K Home</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Marblehead</td>
-        <td>$8.59 / $1K</td>
-        <td>$1,010,100</td>
-        <td>~$8,677</td>
-        <td>$6,443</td>
-      </tr>
-      <tr>
-        <td>Swampscott</td>
-        <td>$12.00 / $1K</td>
-        <td>~$643,000</td>
-        <td>~$7,549</td>
-        <td>$9,000</td>
-      </tr>
-      <tr class="result-row">
-        <td></td>
-        <td style="color:#555">28% lower</td>
-        <td style="color:#555">57% higher</td>
-        <td style="color:#555">$1,128 higher</td>
-        <td style="color:#555">$2,557 lower</td>
-      </tr>
-    </tbody>
-  </table>
+
+  <div class="table-wrap">
+    <table class="data compare">
+      <thead>
+        <tr>
+          <th></th>
+          <th>FY26 Rate</th>
+          <th>Median Home</th>
+          <th>Median Bill</th>
+          <th>Same $750K Home</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Marblehead</td>
+          <td>$8.59 / $1K</td>
+          <td>$1,010,100</td>
+          <td>~$8,677</td>
+          <td>$6,443</td>
+        </tr>
+        <tr>
+          <td>Swampscott</td>
+          <td>$12.00 / $1K</td>
+          <td>~$643,000</td>
+          <td>~$7,549</td>
+          <td>$9,000</td>
+        </tr>
+        <tr class="result-row">
+          <td></td>
+          <td>28% lower</td>
+          <td>57% higher</td>
+          <td>$1,128 higher</td>
+          <td>$2,557 lower</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="bar-compare">
     <p class="bar-compare-label">Annual tax on the same $750,000 home</p>
     <div class="bar-row">
       <span class="bar-town">Marblehead</span>
       <div class="bar-track">
-        <div class="bar-fill marblehead">$6,443</div>
+        <div class="bar-fill s-marblehead">$6,443</div>
       </div>
     </div>
     <div class="bar-row">
       <span class="bar-town">Swampscott</span>
       <div class="bar-track">
-        <div class="bar-fill swampscott">$9,000</div>
+        <div class="bar-fill s-swampscott">$9,000</div>
       </div>
     </div>
     <div class="bar-savings">
@@ -360,9 +191,12 @@
     </div>
   </div>
 
-  <p class="budget-section-label">What $750K buys you in each town</p>
+  <div class="section-divider">
+    <span class="label">What $750K buys you in each town</span>
+    <span class="rule"></span>
+  </div>
   <div class="budget-compare">
-    <div class="budget-card marblehead">
+    <div class="budget-card s-marblehead">
       <p class="budget-card-town">Marblehead</p>
       <p class="budget-card-sqft">~1,456</p>
       <p class="budget-card-unit">square feet</p>
@@ -379,7 +213,7 @@
         <span class="budget-card-row-value">$4.43</span>
       </div>
     </div>
-    <div class="budget-card swampscott">
+    <div class="budget-card s-swampscott">
       <p class="budget-card-town">Swampscott</p>
       <p class="budget-card-sqft">~1,889</p>
       <p class="budget-card-unit">square feet</p>
@@ -398,7 +232,7 @@
     </div>
   </div>
 
-  <div class="takeaway">
+  <div class="takeaway takeaway--pos">
     Marblehead's tax rate is 28% lower than Swampscott's, and its median home value is 57% higher. The median Marblehead tax bill is ~$1,100/yr higher in absolute terms. On the same $750K home, Marblehead's annual tax is $2,557 lower. Swampscott provides ~30% more square footage per dollar of home value. Swampscott median tax bill source: Ownwell (less authoritative than DOR).
   </div>
 
@@ -407,5 +241,6 @@
     <p><span class="footnote-marker"></span>Source: Mass.gov FY2026 tax levy data, Swampscott Assessor's Office, Marblehead Assessor's Office.</p>
   </div>
 </div>
+
 </body>
 </html>

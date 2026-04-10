@@ -1,91 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
 <title>Marblehead Budget Data</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
-    background: #f0f2f5;
-    color: #333;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    padding: 0 24px;
-    display: flex; justify-content: center;
-  }
-  nav .nav-inner {
-    max-width: 960px; width: 100%;
-    display: flex; align-items: center; gap: 20px; height: 44px; overflow-x: auto;
-  }
-  nav .nav-brand { font-size: 13px; font-weight: 700; color: #111; text-decoration: none; white-space: nowrap; margin-right: 8px; }
-  nav a { font-size: 12px; color: #888; text-decoration: none; white-space: nowrap; }
-  nav a:hover { color: #333; }
-  .page { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
-  .hero {
-    text-align: center;
-    margin-bottom: 48px;
-  }
-  .hero h1 { font-size: 28px; font-weight: 700; color: #111; margin-bottom: 8px; letter-spacing: -0.5px; }
-  .hero p { font-size: 15px; color: #888; max-width: 520px; margin: 0 auto; }
-  .question-list { display: flex; flex-direction: column; gap: 12px; }
-  .question {
-    background: white;
-    border-radius: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.03);
-    padding: 22px 28px;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-  .question:hover {
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1), 0 8px 24px rgba(0,0,0,0.06);
-    transform: translateY(-1px);
-  }
-  .question h2 { font-size: 17px; font-weight: 600; color: #111; margin-bottom: 3px; }
-  .question p { font-size: 13px; color: #999; margin: 0; }
-  .question .tag {
-    display: inline-block; font-size: 10px; font-weight: 600;
-    padding: 2px 8px; border-radius: 100px; margin-top: 8px;
-  }
-  .tag-charts { background: #ecfdf5; color: #059669; }
-  .tag-text { background: #eff6ff; color: #3b82f6; }
-  .tag-data { background: #fef3c7; color: #b45309; }
-  .section-break {
-    height: 1px; background: #e8e8e8; margin: 32px 0;
-  }
-  .data-section { margin-top: 48px; }
-  .data-section h2 { font-size: 14px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
-  .data-links { display: flex; flex-direction: column; gap: 6px; }
-  .data-link {
-    background: white; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    padding: 12px 20px; text-decoration: none; color: inherit;
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .data-link:hover { box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
-  .data-link-title { font-size: 13px; font-weight: 600; color: #111; }
-  .data-link-desc { font-size: 11px; color: #999; }
-  .data-link-badge {
-    font-size: 10px; color: #bbb; font-family: monospace;
-    background: #f5f5f5; padding: 2px 8px; border-radius: 4px; flex-shrink: 0; margin-left: 12px;
-  }
-  .footer { text-align: center; padding: 40px 20px; font-size: 12px; color: #bbb; }
-  .footer a { color: #999; text-decoration: none; }
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<nav>
+
+<nav class="site-nav">
   <div class="nav-inner">
-    <a class="nav-brand" href="#">MHD Budget</a>
+    <a class="nav-brand" href="./">MHD Budget</a>
     <a href="https://github.com/agbaber/marblehead">GitHub</a>
   </div>
 </nav>
@@ -153,7 +82,7 @@
   </div>
 
   <div class="data-section">
-    <h2>Data & Sources</h2>
+    <h2>Data &amp; Sources</h2>
     <div class="data-links">
       <a class="data-link" href="data/MASTER_DATA.csv">
         <div>
@@ -190,5 +119,6 @@
     <p>Built by a Marblehead resident. <a href="https://github.com/agbaber/marblehead">Source on GitHub</a>. Corrections welcome.</p>
   </div>
 </div>
+
 </body>
 </html>
