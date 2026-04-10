@@ -13,7 +13,7 @@ An open dataset and visualization project tracking Marblehead, Massachusetts mun
 - [`data/case_studies.md`](data/case_studies.md) -- What happened in Melrose and Stoneham after failed overrides
 
 ### Charts
-Interactive HTML charts viewable at **[agbaber.github.io/marblehead](https://agbaber.github.io/marblehead/)** (or open the HTML files directly in a browser):
+Interactive HTML charts viewable at **[marbleheaddata.org](https://marbleheaddata.org/)** (or open the HTML files directly in a browser):
 
 - **Tax Levy vs Health Insurance** -- actual spending indexed to FY2006, showing the divergence
 - **Health Insurance & Staffing** -- spending vs employee headcount (stacked panels)
