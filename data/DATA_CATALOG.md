@@ -1,3 +1,8 @@
+---
+layout: default
+title: DATA CATALOG
+---
+
 # Marblehead Budget Data Catalog
 
 All data compiled April 2026 from primary public sources. Every number is either audited (ACFR), published by a state agency (DOR, GIC, PERAC), or from official town budget documents (FinCom reports, proposed budgets).

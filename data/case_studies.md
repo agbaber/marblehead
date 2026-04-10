@@ -1,3 +1,8 @@
+---
+layout: default
+title: case studies
+---
+
 # Override Case Studies: Melrose, Stoneham, and the Statewide Pattern
 
 ## Melrose (population ~28,000, median home ~$818K)
