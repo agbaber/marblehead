@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PQG62BJ');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
+<title>Enrollment vs. Staffing - Marblehead Budget Data</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  .chart-label {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 8px; padding-left: 2px;
+    color: var(--text-subtle);
+  }
+</style>
+</head>
+<body class="chart-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQG62BJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="container">
+  <a class="back" href="../">&larr; marbleheaddata.org</a>
+
+  <h1 class="h-center">School Enrollment and Education Staffing</h1>
+  <p class="subtitle h-center">Marblehead Public Schools, FY2001&ndash;FY2024. From audited Annual Comprehensive Financial Reports.</p>
+
+  <p class="chart-label">Student enrollment</p>
+  <div class="chart-wrapper">
+    <svg class="chart" viewBox="0 0 740 185" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart showing Marblehead student enrollment from FY2001 to FY2024, peaking at 3,327 in FY2014 and declining to 2,617.">
+      <!-- Baseline -->
+      <line class="axis-base" x1="70" y1="170" x2="610" y2="170"/>
+
+      <!-- Y ticks -->
+      <line class="tick" x1="66" y1="156" x2="70" y2="156"/>
+      <text class="tick-label" x="63" y="160" text-anchor="end">2,500</text>
+      <line class="tick" x1="66" y1="86" x2="70" y2="86"/>
+      <text class="tick-label" x="63" y="90" text-anchor="end">3,000</text>
+
+      <!-- Enrollment line -->
+      <polyline class="data-line s-neutral"
+                points="70,115 93,104 117,90 140,86 164,77 187,67 211,52 234,56 258,49 281,54 305,57 328,62 352,48 375,40 399,52 422,57 446,49 469,60 493,79 516,91 540,128 563,142 587,139 610,140"/>
+
+      <!-- End label -->
+      <text class="end-label s-neutral" x="616" y="136">2,617</text>
+      <!-- Peak label -->
+      <text class="annotation" x="375" y="34" text-anchor="middle">peak: 3,327</text>
+    </svg>
+  </div>
+
+  <p class="chart-label">Education full-time equivalent employees</p>
+  <div class="chart-wrapper">
+    <svg class="chart" viewBox="0 0 740 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart showing Marblehead education FTE from FY2001 to FY2024, rising from 400 to 537.">
+      <!-- Baseline -->
+      <line class="axis-base" x1="70" y1="140" x2="610" y2="140"/>
+
+      <!-- Y ticks -->
+      <line class="tick" x1="66" y1="127" x2="70" y2="127"/>
+      <text class="tick-label" x="63" y="131" text-anchor="end">400</text>
+      <line class="tick" x1="66" y1="93" x2="70" y2="93"/>
+      <text class="tick-label" x="63" y="97" text-anchor="end">450</text>
+      <line class="tick" x1="66" y1="60" x2="70" y2="60"/>
+      <text class="tick-label" x="63" y="64" text-anchor="end">500</text>
+      <line class="tick" x1="66" y1="27" x2="70" y2="27"/>
+      <text class="tick-label" x="63" y="31" text-anchor="end">550</text>
+
+      <!-- FTE line -->
+      <polyline class="data-line s-marblehead"
+                points="70,127 93,117 117,111 140,109 164,94 187,82 211,77 234,73 258,68 281,68 305,68 328,73 352,67 375,65 399,67 422,67 446,65 469,57 493,71 516,73 540,71 563,72 587,35 610,35"/>
+
+      <!-- End label -->
+      <text class="end-label s-marblehead" x="616" y="31">537</text>
+
+      <!-- Shared X labels -->
+      <text class="tick-label tick-label--major" x="70"  y="160" text-anchor="middle">FY01</text>
+      <text class="tick-label tick-label--minor" x="164" y="160" text-anchor="middle">FY05</text>
+      <text class="tick-label tick-label--minor" x="258" y="160" text-anchor="middle">FY09</text>
+      <text class="tick-label tick-label--major" x="352" y="160" text-anchor="middle">FY13</text>
+      <text class="tick-label tick-label--minor" x="446" y="160" text-anchor="middle">FY17</text>
+      <text class="tick-label tick-label--minor" x="540" y="160" text-anchor="middle">FY21</text>
+      <text class="tick-label tick-label--major" x="610" y="160" text-anchor="middle">FY24</text>
+    </svg>
+  </div>
+
+  <p class="caption">
+    Student enrollment peaked at 3,327 (FY14) and has declined 21% to 2,617 (FY24). Education FTE ranged from 400 (FY01) to 537 (FY24). The FY23 jump from 483 to 537 education FTE is unexplained in public records and may reflect federal ESSER-funded positions or a change in reporting methodology. Students per education FTE dropped from 6.8 (FY07) to 4.9 (FY24).
+  </p>
+
+  <div class="notes">
+    <p>Enrollment from ACFR "Demographic and Economic Statistics" tables. May include or exclude charter school students depending on year.</p>
+    <p>Education FTE from ACFR "Full-time Equivalent Town Employees by Function," education row. FTE counts part-time employees as fractions. Includes teachers, paraprofessionals, administrators, custodial, and all other school staff.</p>
+    <p>The declining enrollment / flat staffing pattern is common across Massachusetts and is partly driven by special education mandates (IEP-required staffing), out-of-district placements ($4.6M in FY26 school budget), and federal requirements that do not scale with enrollment.</p>
+  </div>
+</div>
+
+</body>
+</html>
