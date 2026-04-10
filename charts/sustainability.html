@@ -1,132 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
+<title>Do Override Tiers Close the Gap? - Marblehead Budget Data</title>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    padding: 48px 20px;
-    -webkit-font-smoothing: antialiased;
-  }
-  .container {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    padding: 36px 40px 32px;
-    max-width: 800px;
-    width: 100%;
-  }
-  h1 { font-size: 18px; font-weight: 700; color: #111; text-align: center; margin-bottom: 2px; }
-  .subtitle { font-size: 12px; color: #888; text-align: center; margin-bottom: 28px; line-height: 1.5; }
-  .chart-wrapper { margin-bottom: 16px; }
-  svg { width: 100%; height: auto; display: block; }
-  .caption { font-size: 12px; color: #666; line-height: 1.6; margin: 0 0 20px 0; }
-  .notes { font-size: 11px; color: #999; line-height: 1.5; border-top: 1px solid #eee; padding-top: 12px; }
-  .notes p + p { margin-top: 3px; }
-</style>
+<link rel="stylesheet" href="../assets/site.css">
 </head>
-<body>
+<body class="chart-page">
+
 <div class="container">
-  <a href="../" style="font-size:12px;color:#999;text-decoration:none;display:block;margin-bottom:16px">&larr; marbleheaddata.org</a>
-  <h1>Do the Override Tiers Close the Gap?</h1>
-  <p class="subtitle">Total projected revenue (4 scenarios) vs total projected expenses, FY2026-FY2030. FY26-FY27 from State of the Town presentation. FY28-FY30 projected using Finance Committee growth rates.</p>
+  <a class="back" href="../">&larr; marbleheaddata.org</a>
+  <h1 class="h-center">Do the Override Tiers Close the Gap?</h1>
+  <p class="subtitle h-center">Total projected revenue (4 scenarios) vs total projected expenses, FY2026&ndash;FY2030. FY26&ndash;FY27 from State of the Town presentation. FY28&ndash;FY30 projected using Finance Committee growth rates.</p>
+
+  <div class="legend">
+    <div class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">Expenses</span></div>
+    <div class="legend-item s-revenue"><span class="legend-swatch"></span><span class="legend-text">Revenue (by override tier)</span></div>
+  </div>
 
   <div class="chart-wrapper">
-    <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg">
+    <svg class="chart" viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart comparing projected total revenue under four override scenarios against projected total expenses, FY26 to FY30.">
       <!-- Grid -->
-      <line x1="80" y1="280" x2="540" y2="280" stroke="#ddd" stroke-width="1"/>
-      <line x1="80" y1="250" x2="540" y2="250" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="80" y1="220" x2="540" y2="220" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="80" y1="190" x2="540" y2="190" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="80" y1="160" x2="540" y2="160" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="80" y1="130" x2="540" y2="130" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="80" y1="100" x2="540" y2="100" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="80" y1="70" x2="540" y2="70" stroke="#f0f0f0" stroke-width="1"/>
-      <line x1="80" y1="40" x2="540" y2="40" stroke="#f0f0f0" stroke-width="1"/>
+      <line class="axis-base" x1="80" y1="280" x2="540" y2="280"/>
+      <line class="grid-minor" x1="80" y1="250" x2="540" y2="250"/>
+      <line class="grid-minor" x1="80" y1="220" x2="540" y2="220"/>
+      <line class="grid-minor" x1="80" y1="190" x2="540" y2="190"/>
+      <line class="grid-minor" x1="80" y1="160" x2="540" y2="160"/>
+      <line class="grid-minor" x1="80" y1="130" x2="540" y2="130"/>
+      <line class="grid-minor" x1="80" y1="100" x2="540" y2="100"/>
+      <line class="grid-minor" x1="80" y1="70" x2="540" y2="70"/>
+      <line class="grid-minor" x1="80" y1="40" x2="540" y2="40"/>
 
       <!-- Y labels -->
-      <line x1="76" y1="250" x2="80" y2="250" stroke="#ccc" stroke-width="1"/>
-      <text x="73" y="254" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">$100M</text>
-      <line x1="76" y1="190" x2="80" y2="190" stroke="#ccc" stroke-width="1"/>
-      <text x="73" y="194" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">$110M</text>
-      <line x1="76" y1="130" x2="80" y2="130" stroke="#ccc" stroke-width="1"/>
-      <text x="73" y="134" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">$120M</text>
-      <line x1="76" y1="70" x2="80" y2="70" stroke="#ccc" stroke-width="1"/>
-      <text x="73" y="74" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">$130M</text>
+      <line class="tick" x1="76" y1="250" x2="80" y2="250"/>
+      <text class="tick-label" x="73" y="254" text-anchor="end">$100M</text>
+      <line class="tick" x1="76" y1="190" x2="80" y2="190"/>
+      <text class="tick-label" x="73" y="194" text-anchor="end">$110M</text>
+      <line class="tick" x1="76" y1="130" x2="80" y2="130"/>
+      <text class="tick-label" x="73" y="134" text-anchor="end">$120M</text>
+      <line class="tick" x1="76" y1="70" x2="80" y2="70"/>
+      <text class="tick-label" x="73" y="74" text-anchor="end">$130M</text>
 
       <!-- X labels -->
-      <text x="80"  y="302" text-anchor="middle" font-size="10" fill="#999" font-family="-apple-system, sans-serif">FY26</text>
-      <text x="195" y="302" text-anchor="middle" font-size="10" fill="#999" font-family="-apple-system, sans-serif">FY27</text>
-      <text x="310" y="302" text-anchor="middle" font-size="10" fill="#999" font-family="-apple-system, sans-serif">FY28</text>
-      <text x="425" y="302" text-anchor="middle" font-size="10" fill="#999" font-family="-apple-system, sans-serif">FY29</text>
-      <text x="540" y="302" text-anchor="middle" font-size="10" fill="#666" font-family="-apple-system, sans-serif">FY30</text>
+      <text class="tick-label tick-label--major" x="80"  y="302" text-anchor="middle">FY26</text>
+      <text class="tick-label tick-label--major" x="195" y="302" text-anchor="middle">FY27</text>
+      <text class="tick-label tick-label--minor" x="310" y="302" text-anchor="middle">FY28</text>
+      <text class="tick-label tick-label--minor" x="425" y="302" text-anchor="middle">FY29</text>
+      <text class="tick-label tick-label--major" x="540" y="302" text-anchor="middle">FY30</text>
 
-      <!-- Verified vs projected marker -->
-      <line x1="195" y1="35" x2="195" y2="280" stroke="#eee" stroke-width="1"/>
-      <text x="138" y="32" text-anchor="middle" font-size="9" fill="#ccc" font-family="-apple-system, sans-serif">verified</text>
-      <text x="368" y="32" text-anchor="middle" font-size="9" fill="#ccc" font-family="-apple-system, sans-serif">projected</text>
+      <!-- Verified/projected divider -->
+      <line class="annotation-line" x1="195" y1="35" x2="195" y2="280"/>
+      <text class="annotation annotation--hide-sm" x="138" y="32" text-anchor="middle">verified</text>
+      <text class="annotation annotation--hide-sm" x="368" y="32" text-anchor="middle">projected</text>
 
-      <!-- Expenses line (same for all scenarios) -->
-      <polyline points="80,230 195,193"
-                fill="none" stroke="#222" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-      <polyline points="195,193 310,158 425,120 540,81"
-                fill="none" stroke="#222" stroke-width="2" stroke-dasharray="6,4" stroke-linejoin="round"/>
+      <!-- Expenses line (verified) -->
+      <polyline class="data-line data-line--bold s-neutral"
+                points="80,230 195,193"/>
+      <!-- Expenses line (projected, dashed) -->
+      <polyline class="data-line data-line--dashed s-neutral"
+                points="195,193 310,158 425,120 540,81"/>
 
       <!-- No override revenue -->
-      <polyline points="80,230 195,244"
-                fill="none" stroke="#059669" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-      <polyline points="195,244 310,219 425,212 540,197"
-                fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.4"/>
+      <g style="opacity: 0.45">
+        <polyline class="data-line s-revenue" points="80,230 195,244"/>
+        <polyline class="data-line data-line--thin data-line--dashed s-revenue" points="195,244 310,219 425,212 540,197"/>
+      </g>
 
       <!-- Tier 1 revenue -->
-      <polyline points="80,230 195,236"
-                fill="none" stroke="#059669" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-      <polyline points="195,236 310,181 425,158 540,143"
-                fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.6"/>
+      <g style="opacity: 0.65">
+        <polyline class="data-line s-revenue" points="80,230 195,236"/>
+        <polyline class="data-line data-line--thin data-line--dashed s-revenue" points="195,236 310,181 425,158 540,143"/>
+      </g>
 
       <!-- Tier 2 revenue -->
-      <polyline points="80,230 195,227"
-                fill="none" stroke="#059669" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-      <polyline points="195,227 310,168 425,140 540,125"
-                fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.75"/>
+      <g style="opacity: 0.82">
+        <polyline class="data-line s-revenue" points="80,230 195,227"/>
+        <polyline class="data-line data-line--thin data-line--dashed s-revenue" points="195,227 310,168 425,140 540,125"/>
+      </g>
 
       <!-- Tier 3 revenue -->
-      <polyline points="80,230 195,218"
-                fill="none" stroke="#059669" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-      <polyline points="195,218 310,155 425,122 540,107"
-                fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.9"/>
+      <polyline class="data-line s-revenue" points="80,230 195,218"/>
+      <polyline class="data-line data-line--thin data-line--dashed s-revenue" points="195,218 310,155 425,122 540,107"/>
 
       <!-- End dots -->
-      <circle cx="540" cy="81" r="3" fill="#222"/>
-      <circle cx="540" cy="197" r="3" fill="#059669" opacity="0.4"/>
-      <circle cx="540" cy="143" r="3" fill="#059669" opacity="0.6"/>
-      <circle cx="540" cy="125" r="3" fill="#059669" opacity="0.75"/>
-      <circle cx="540" cy="107" r="3" fill="#059669" opacity="0.9"/>
+      <circle class="data-dot s-neutral" cx="540" cy="81" r="3"/>
+      <circle class="data-dot s-revenue" cx="540" cy="197" r="3" opacity="0.45"/>
+      <circle class="data-dot s-revenue" cx="540" cy="143" r="3" opacity="0.65"/>
+      <circle class="data-dot s-revenue" cx="540" cy="125" r="3" opacity="0.82"/>
+      <circle class="data-dot s-revenue" cx="540" cy="107" r="3"/>
 
       <!-- End labels -->
-      <text x="548" y="78" font-size="10" font-weight="600" fill="#222" font-family="-apple-system, sans-serif">$128M expenses</text>
+      <text class="end-label s-neutral" x="548" y="78">$128M expenses</text>
 
-      <text x="548" y="200" font-size="9" fill="#059669" opacity="0.5" font-family="-apple-system, sans-serif">$109M no override</text>
-      <text x="548" y="146" font-size="9" fill="#059669" opacity="0.6" font-family="-apple-system, sans-serif">$118M Tier 1</text>
-      <text x="548" y="128" font-size="9" fill="#059669" opacity="0.75" font-family="-apple-system, sans-serif">$121M Tier 2</text>
-      <text x="548" y="110" font-size="9" fill="#059669" opacity="0.9" font-family="-apple-system, sans-serif">$124M Tier 3</text>
+      <text class="end-label s-revenue annotation--hide-sm" x="548" y="200" opacity="0.55">$109M no override</text>
+      <text class="end-label s-revenue annotation--hide-sm" x="548" y="146" opacity="0.75">$118M Tier 1</text>
+      <text class="end-label s-revenue annotation--hide-sm" x="548" y="128" opacity="0.85">$121M Tier 2</text>
+      <text class="end-label s-revenue" x="548" y="110">$124M Tier 3</text>
     </svg>
   </div>
 
   <p class="caption">
-    All four revenue scenarios start at the same point (FY26 balanced budget, $103.3M). Expenses (black) grow at ~5.4%/yr (blended Finance Committee rate). Revenue differs by override tier. Tier 3 roughly matches expenses through FY29, then a gap reopens by FY30 (~$4M). No tier permanently closes the gap at these growth rates. FY26-FY27 figures are from the State of the Town presentation. FY28-FY30 are projections.
+    All four revenue scenarios start at the same point (FY26 balanced budget, $103.3M). Expenses grow at ~5.4%/yr (blended Finance Committee rate). Revenue differs by override tier. Tier 3 roughly matches expenses through FY29, then a gap reopens by FY30 (~$4M). No tier permanently closes the gap at these growth rates. FY26&ndash;FY27 figures are from the State of the Town presentation. FY28&ndash;FY30 are projections.
   </p>
 
   <div class="notes">
-    <p>FY26-FY27 revenue and expenses from Town Administrator's State of the Town presentation (January 2026). FY27 revenue declines because free cash usage drops from $9M to $5M.</p>
-    <p>FY28-FY30 expenses projected at 5.4%/yr (blended: HC 9%, pensions 8.5%, salaries 5%, other 3%, weighted by FY26 budget share). Revenue: levy at 3%/yr, other sources declining through FY29 then flat. Override amounts phased in per Kezer presentation.</p>
+    <p>FY26&ndash;FY27 revenue and expenses from Town Administrator's State of the Town presentation (January 2026). FY27 revenue declines because free cash usage drops from $9M to $5M.</p>
+    <p>FY28&ndash;FY30 expenses projected at 5.4%/yr (blended: HC 9%, pensions 8.5%, salaries 5%, other 3%, weighted by FY26 budget share). Revenue: levy at 3%/yr, other sources declining through FY29 then flat. Override amounts phased in per Kezer presentation.</p>
     <p>These projections become less reliable further out. Actual results will depend on GIC rate decisions, collective bargaining outcomes, state aid, property value changes, and other factors not modeled here.</p>
   </div>
 </div>
+
 </body>
 </html>

@@ -1,140 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    padding: 48px 20px;
-    -webkit-font-smoothing: antialiased;
-  }
-  .container {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    padding: 36px 40px 32px;
-    max-width: 800px;
-    width: 100%;
-  }
-  h1 { font-size: 18px; font-weight: 700; color: #111; margin-bottom: 2px; }
-  .subtitle { font-size: 12px; color: #888; margin-bottom: 28px; line-height: 1.5; }
-  .chart-wrapper { margin-bottom: 6px; }
-  svg { width: 100%; height: auto; display: block; }
-  .caption { font-size: 12px; color: #666; line-height: 1.6; margin: 16px 0 20px 0; }
-  .notes { font-size: 11px; color: #999; line-height: 1.5; border-top: 1px solid #eee; padding-top: 12px; }
-  .notes p + p { margin-top: 3px; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
+<title>Health Insurance & Staffing - Marblehead Budget Data</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
 </head>
-<body>
+<body class="chart-page">
+
 <div class="container">
-  <a href="../" style="font-size:12px;color:#999;text-decoration:none;display:block;margin-bottom:16px">&larr; marbleheaddata.org</a>
+  <a class="back" href="../">&larr; marbleheaddata.org</a>
   <h1>Health Insurance Spending and Plan Enrollment</h1>
-  <p class="subtitle">Marblehead, FY2006-FY2027. From audited Annual Comprehensive Financial Reports and Finance Committee reports.</p>
+  <p class="subtitle">Marblehead, FY2006&ndash;FY2027. From audited Annual Comprehensive Financial Reports and Finance Committee reports.</p>
 
   <div class="chart-wrapper">
-    <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
-      <!--
-        TOP PANEL: Health insurance spending (FY06-FY27)
-        x = 70 + (fy-2006)/21 * 570 (leaving right margin for labels)
-        y_top: 20 to 180, range $6M-$18M
-        y = 180 - ((val-6000000)/12000000)*160
-
-        BOTTOM PANEL: Active members on insurance (FY11-FY24)
-        y_bot: 210 to 320, range 550 to 800
-        y = 320 - ((val-550)/250)*110
-      -->
-
+    <svg class="chart" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two-panel chart. Top: health insurance spending FY06-FY27. Bottom: full-time equivalent employees FY06-FY24.">
       <!-- === TOP PANEL === -->
-      <!-- Baseline -->
-      <line x1="70" y1="180" x2="640" y2="180" stroke="#ddd" stroke-width="1"/>
+      <line class="axis-base" x1="70" y1="180" x2="640" y2="180"/>
 
-      <!-- Y ticks -->
-      <line x1="66" y1="153" x2="70" y2="153" stroke="#ccc" stroke-width="1"/>
-      <text x="63" y="157" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">$8M</text>
-      <line x1="66" y1="100" x2="70" y2="100" stroke="#ccc" stroke-width="1"/>
-      <text x="63" y="104" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">$12M</text>
-      <line x1="66" y1="47" x2="70" y2="47" stroke="#ccc" stroke-width="1"/>
-      <text x="63" y="51" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">$16M</text>
+      <line class="tick" x1="66" y1="153" x2="70" y2="153"/>
+      <text class="tick-label" x="63" y="157" text-anchor="end">$8M</text>
+      <line class="tick" x1="66" y1="100" x2="70" y2="100"/>
+      <text class="tick-label" x="63" y="104" text-anchor="end">$12M</text>
+      <line class="tick" x1="66" y1="47" x2="70" y2="47"/>
+      <text class="tick-label" x="63" y="51" text-anchor="end">$16M</text>
 
-      <!--
-        GI spending coords:
-        x = 70 + (fy-2006)/21 * 570
-        y = 180 - ((val-6000000)/12000000)*160
-
-        06:7964196 x=70 y=154   07:8499096 x=97 y=147
-        08:9331501 x=124 y=136  09:10717120 x=151 y=117
-        10:10062084 x=178 y=126 11:10516964 x=205 y=120
-        12:11739905 x=232 y=103 13:10822087 x=260 y=116
-        14:11581448 x=287 y=106 15:12110711 x=314 y=99
-        16:12663401 x=341 y=91  17:13056765 x=368 y=86
-        18:13116584 x=395 y=85  19:13476211 x=422 y=80
-        21:13812644 x=476 y=76  22:14475406 x=503 y=67
-        23:15244117 x=530 y=57  24:13916513 x=557 y=75
-        25:13698018 x=584 y=78  26:15100893 x=611 y=59
-        27:16754748 x=640 y=37
-      -->
-
-      <!-- Spending line: solid FY06-FY25 -->
-      <polyline points="70,154 97,147 124,136 151,117 178,126 205,120 232,103 260,116 287,106 314,99 341,91 368,86 395,85 422,80 476,76 503,67 530,57 557,75 584,78"
-                fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- Spending line (solid FY06-FY25) -->
+      <polyline class="data-line s-cost"
+                points="70,154 97,147 124,136 151,117 178,126 205,120 232,103 260,116 287,106 314,99 341,91 368,86 395,85 422,80 476,76 503,67 530,57 557,75 584,78"/>
       <!-- Dashed FY25-FY27 -->
-      <polyline points="584,78 611,59 640,37"
-                fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <polyline class="data-line data-line--thin data-line--dashed s-cost"
+                points="584,78 611,59 640,37"/>
 
-      <!-- End label -->
-      <text x="646" y="40" font-size="11" font-weight="600" fill="#222" font-family="-apple-system, sans-serif">$16.8M</text>
+      <text class="end-label s-cost" x="646" y="40">$16.8M</text>
 
       <!-- GIC marker -->
-      <line x1="232" y1="20" x2="232" y2="180" stroke="#ccc" stroke-width="0.5" stroke-dasharray="3,3"/>
-      <text x="236" y="28" font-size="9" fill="#bbb" font-family="-apple-system, sans-serif">Joined state insurance pool</text>
+      <line class="annotation-line" x1="232" y1="20" x2="232" y2="180"/>
+      <text class="annotation annotation--hide-sm" x="236" y="28">Joined state insurance pool</text>
 
-      <!-- Separator -->
-      <line x1="70" y1="195" x2="640" y2="195" stroke="#eee" stroke-width="1"/>
+      <!-- Panel separator -->
+      <line class="grid-minor" x1="70" y1="195" x2="640" y2="195"/>
 
       <!-- === BOTTOM PANEL === -->
-      <!-- Baseline -->
-      <line x1="70" y1="320" x2="640" y2="320" stroke="#ddd" stroke-width="1"/>
+      <line class="axis-base" x1="70" y1="320" x2="640" y2="320"/>
 
-      <!-- Y ticks -->
-      <line x1="66" y1="254" x2="70" y2="254" stroke="#ccc" stroke-width="1"/>
-      <text x="63" y="258" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">700</text>
-      <line x1="66" y1="298" x2="70" y2="298" stroke="#ccc" stroke-width="1"/>
-      <text x="63" y="302" text-anchor="end" font-size="10" fill="#aaa" font-family="-apple-system, sans-serif">600</text>
+      <line class="tick" x1="66" y1="254" x2="70" y2="254"/>
+      <text class="tick-label" x="63" y="258" text-anchor="end">700</text>
+      <line class="tick" x1="66" y1="298" x2="70" y2="298"/>
+      <text class="tick-label" x="63" y="302" text-anchor="end">600</text>
 
-      <!--
-        Active members coords:
-        y = 320 - ((val-550)/250)*110
+      <!-- FTE line -->
+      <polyline class="data-line data-line--thin s-neutral"
+                points="70,274 97,268 124,266 151,263 179,262 206,262 233,265 260,260 287,260 314,260 341,265 369,265 396,258 423,267 450,268 477,269 504,268 531,250 559,251"/>
 
-        FY11: 700  x=205  y=254
-        FY12: 642  x=232  y=280
-        FY13: 748  x=260  y=233
-        FY15: 663  x=314  y=270
-        FY17: 717  x=368  y=246
-        FY20: 720  x=449  y=245
-        FY22: 663  x=503  y=270
-        FY24: 695  x=557  y=256
-      -->
-
-      <!-- FTE line (gray, continuous) -->
-      <polyline points="70,274 97,268 124,266 151,263 179,262 206,262 233,265 260,260 287,260 314,260 341,265 369,265 396,258 423,267 450,268 477,269 504,268 531,250 559,251"
-                fill="none" stroke="#999" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
-
-      <!-- End label -->
-      <text x="565" y="254" font-size="10" fill="#999" font-family="-apple-system, sans-serif">706 full-time equivalent</text>
+      <text class="annotation" x="565" y="254">706 full-time equivalent</text>
 
       <!-- Shared X axis -->
-      <text x="70"  y="342" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY06</text>
-      <text x="151" y="342" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY09</text>
-      <text x="232" y="342" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY12</text>
-      <text x="314" y="342" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY15</text>
-      <text x="395" y="342" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY18</text>
-      <text x="476" y="342" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY21</text>
-      <text x="557" y="342" text-anchor="middle" font-size="9" fill="#aaa" font-family="-apple-system, sans-serif">FY24</text>
-      <text x="640" y="342" text-anchor="middle" font-size="9" fill="#666" font-family="-apple-system, sans-serif">FY27</text>
+      <text class="tick-label tick-label--major" x="70"  y="342" text-anchor="middle">FY06</text>
+      <text class="tick-label tick-label--minor" x="151" y="342" text-anchor="middle">FY09</text>
+      <text class="tick-label tick-label--major" x="232" y="342" text-anchor="middle">FY12</text>
+      <text class="tick-label tick-label--minor" x="314" y="342" text-anchor="middle">FY15</text>
+      <text class="tick-label tick-label--minor" x="395" y="342" text-anchor="middle">FY18</text>
+      <text class="tick-label tick-label--minor" x="476" y="342" text-anchor="middle">FY21</text>
+      <text class="tick-label tick-label--major" x="557" y="342" text-anchor="middle">FY24</text>
+      <text class="tick-label tick-label--major" x="640" y="342" text-anchor="middle">FY27</text>
     </svg>
   </div>
 
@@ -143,9 +76,10 @@
   </p>
 
   <div class="notes">
-    <p>Spending: "Group Insurance" from Annual Comprehensive Financial Report budget schedules (FY06-FY13) and Finance Committee reports (FY14-FY25). FY20 not available. FY26-FY27 proposed (dashed). Includes active employee health insurance, Medicare supplement, and Medicare reimbursement.</p>
-    <p>Employees: full-time equivalent from audited financial report statistical sections (FY06-FY24). FTE counts a 20 hr/wk employee as 0.5. Total headcount (1,185 in FY25 per Marblehead Independent) is higher because many employees are part-time. Historical headcount data is not publicly available.</p>
+    <p>Spending: "Group Insurance" from Annual Comprehensive Financial Report budget schedules (FY06&ndash;FY13) and Finance Committee reports (FY14&ndash;FY25). FY20 not available. FY26&ndash;FY27 proposed (dashed). Includes active employee health insurance, Medicare supplement, and Medicare reimbursement.</p>
+    <p>Employees: full-time equivalent from audited financial report statistical sections (FY06&ndash;FY24). FTE counts a 20 hr/wk employee as 0.5. Total headcount (1,185 in FY25 per Marblehead Independent) is higher because many employees are part-time. Historical headcount data is not publicly available.</p>
   </div>
 </div>
+
 </body>
 </html>
