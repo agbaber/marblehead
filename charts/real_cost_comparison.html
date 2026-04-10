@@ -26,19 +26,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body class="chart-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQG62BJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div class="container">
   <a class="back" href="../">&larr; marbleheaddata.org</a>
   <h1 class="h-center">Tax Levy vs. Health Insurance Spending</h1>
-  <p class="subtitle h-center">Both indexed to FY2006 = 100. Actual values from audited financial reports and budget documents. Marblehead, FY2006&ndash;FY2027.</p>
+  <p class="subtitle h-center">Both lines start at 100 in FY2006 so you can compare how fast each grew. Marblehead, FY2006&ndash;FY2027.</p>
 
   <div class="legend">
-    <div class="legend-item s-revenue"><span class="legend-swatch"></span><span class="legend-text">Tax levy</span></div>
-    <div class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">Health insurance</span></div>
+    <div class="legend-item s-revenue"><span class="legend-swatch"></span><span class="legend-text">Total tax levy</span></div>
+    <div class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">Health insurance spending</span></div>
   </div>
 
   <div class="chart-wrapper">
-    <svg class="chart" viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart comparing tax levy growth and health insurance spending growth from FY2006 to FY2027, both indexed to FY2006 = 100.">
+    <svg class="chart" viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart comparing tax levy growth and health insurance spending growth from FY2006 to FY2027, both indexed to FY2006 equals 100. Health insurance grew faster for most of the period, with both converging near 200 by FY2027.">
+      <!--
+        Y axis: y = 246 - (index - 100) * 1.72
+        X axis: x = 60 + (FY - 2006) * 26.67
+        Scale: y=246 = index 100, y=160 = index 150, y=74 = index 200
+        All y-positions calculated from actual dollar values / FY06 base * 100.
+      -->
+
       <!-- Baseline at 100 -->
       <line class="axis-base" x1="60" y1="246" x2="620" y2="246"/>
 
@@ -50,7 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <line class="tick" x1="56" y1="74" x2="60" y2="74"/>
       <text class="tick-label" x="53" y="78" text-anchor="end">200</text>
 
-      <!-- X labels: keep major endpoints + GIC join; hide minor on mobile -->
+      <!-- X labels -->
       <text class="tick-label tick-label--major" x="60"  y="292" text-anchor="middle">FY06</text>
       <text class="tick-label tick-label--minor" x="140" y="292" text-anchor="middle">FY09</text>
       <text class="tick-label tick-label--major" x="220" y="292" text-anchor="middle">FY12</text>
@@ -60,40 +71,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <text class="tick-label tick-label--major" x="540" y="292" text-anchor="middle">FY24</text>
       <text class="tick-label tick-label--major" x="620" y="292" text-anchor="middle">FY27</text>
 
+      <!-- Verified / projected boundary -->
+      <line class="annotation-line" x1="540" y1="42" x2="540" y2="260" style="stroke-dasharray:2 4"/>
+      <text class="annotation annotation--hide-sm" x="500" y="50" text-anchor="end">actual</text>
+      <text class="annotation annotation--hide-sm" x="548" y="50">projected</text>
+
       <!-- GIC marker -->
-      <line class="annotation-line" x1="220" y1="50" x2="220" y2="270"/>
-      <text class="annotation annotation--hide-sm" x="224" y="58">Joined state insurance pool</text>
+      <line class="annotation-line" x1="220" y1="60" x2="220" y2="260"/>
+      <text class="annotation annotation--hide-sm" x="224" y="68">Joined GIC (state insurance pool)</text>
 
-      <!-- Tax levy (actual FY06-FY24) -->
+      <!-- === TAX LEVY === -->
+      <!-- Actual FY06-FY24 (DOR data, includes debt exclusions) -->
       <polyline class="data-line s-revenue"
-                points="60,246 87,241 113,238 140,233 167,222 193,215 220,206 247,201 273,193 300,183 327,175 353,164 380,154 407,147 433,138 460,129 487,106 513,97 540,85"/>
+                points="60,246 87,242 113,236 140,231 167,223 193,218 220,209 247,205 273,197 300,188 327,179 353,169 380,160 407,154 433,146 460,137 487,121 513,110 540,98"/>
+      <!-- Projected FY24-FY27 (3%/yr, Finance Committee rate) -->
+      <polyline class="data-line data-line--thin data-line--dashed s-revenue"
+                points="540,98 567,89 593,79 620,69"/>
 
-      <!-- Health insurance (actual solid FY06-FY19) -->
+      <!-- === HEALTH INSURANCE === -->
+      <!-- Actual FY06-FY19 (ACFR + FinCom) -->
       <polyline class="data-line s-neutral"
-                points="60,246 87,234 113,214 140,187 167,199 193,190 220,162 247,178 273,166 300,157 327,145 353,137 380,135 407,129"/>
-      <!-- Dashed FY19-FY21 gap -->
+                points="60,246 87,234 113,216 140,187 167,201 193,191 220,164 247,184 273,168 300,156 327,145 353,136 380,135 407,127"/>
+      <!-- Dashed FY19-FY21 (FY20 data not available) -->
       <polyline class="data-line data-line--thin data-line--dashed s-neutral"
-                points="407,129 460,122"/>
-      <!-- Actual solid FY21-FY24 -->
+                points="407,127 460,120"/>
+      <!-- Actual FY21-FY24 (FinCom) -->
       <polyline class="data-line s-neutral"
-                points="460,122 487,110 513,96 540,118"/>
-      <!-- Dashed FY24-FY27 (proposed) -->
+                points="460,120 487,105 513,89 540,117"/>
+      <!-- Proposed FY24-FY27 (budget documents) -->
       <polyline class="data-line data-line--thin data-line--dashed s-neutral"
-                points="540,118 567,122 593,97 620,69"/>
+                points="540,117 567,122 593,92 620,56"/>
 
-      <!-- End labels -->
-      <text class="end-label s-revenue" x="628" y="82">+86% levy</text>
-      <text class="end-label s-neutral" x="628" y="66">+110% health ins.</text>
+      <!-- End labels at FY27 -->
+      <text class="end-label s-neutral" x="628" y="53">+110% health ins.</text>
+      <text class="end-label s-revenue" x="628" y="78">+103% levy</text>
     </svg>
   </div>
 
   <p class="caption">
-    Solid lines are actual data from audited financial reports. Dashed lines after FY24 are from proposed budgets (FY26&ndash;FY27). FY20 health insurance data not available (dashed connector). The tax levy grew 86% from FY06 to FY24. Health insurance spending grew 110% from FY06 to FY27 (proposed). Both indexed to FY2006 = 100.
+    Health insurance spending grew faster than the total tax levy for most of FY2006&ndash;FY2023. The FY24 dip in health insurance ($15.2M to $13.9M) temporarily reversed the gap, but proposed FY26&ndash;FY27 budgets show health insurance pulling ahead again. Through FY24 (actual data for both): levy +86%, health insurance +75%. Through FY27 (projected/proposed): levy +103%, health insurance +110%. Solid lines are actual data. Dashed lines after FY24 are projected (levy at 3%/yr) or from proposed budgets (health insurance).
   </p>
 
   <div class="notes">
-    <p>Tax levy from MA Department of Revenue (FY06&ndash;FY24). Health insurance ("Group Insurance," Line 221) from Annual Comprehensive Financial Report budget schedules (FY06&ndash;FY13) and Finance Committee reports (FY14&ndash;FY25). FY26&ndash;FY27 from proposed budget.</p>
-    <p>Health insurance includes active employee health insurance, Medicare supplement, and Medicare reimbursement for all town and school employees. Rates are set by the state Group Insurance Commission.</p>
+    <p>Tax levy from MA Department of Revenue, FY06&ndash;FY24 (includes debt exclusions). FY25&ndash;FY27 projected at 3% annual growth (Finance Committee rate for levy + new growth).</p>
+    <p>Health insurance ("Group Insurance") from ACFR budget schedules (FY06&ndash;FY13), Finance Committee reports (FY14&ndash;FY25), and proposed budgets (FY26&ndash;FY27). FY20 not publicly available (dashed connector). Includes active employee health insurance, Medicare supplement, and Medicare reimbursement for all town and school employees.</p>
+    <p>Rates are set by the state Group Insurance Commission. The town joined the GIC in FY2012.</p>
   </div>
 </div>
 
