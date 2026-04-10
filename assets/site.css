@@ -1,0 +1,622 @@
+/* ==========================================================================
+   Marblehead Budget Data — shared stylesheet
+   Coastal palette, light/dark via prefers-color-scheme, mobile-first.
+   Chart series colors are applied via `color` + `currentColor` so inline SVG
+   inherits theming from CSS custom properties.
+   ========================================================================== */
+
+:root {
+  color-scheme: light dark;
+
+  /* Coastal palette — light */
+  --c-fog:      #F4F7FA;
+  --c-surface:  #FFFFFF;
+  --c-border:   #D8E1E8;
+  --c-divider:  #ECF1F5;
+  --c-text:     #0F2A3D;
+  --c-text-mid: #4A5C6A;
+  --c-text-sub: #7A8A98;
+  --c-text-faint:#A6B3BE;
+
+  --c-navy:  #1B3A57; /* weathered navy */
+  --c-buoy:  #C8553D; /* buoy red */
+  --c-teal:  #2F7D8E; /* harbor teal */
+  --c-brass: #B8860B; /* brass */
+  --c-sage:  #5B7553; /* salt marsh */
+  --c-plum:  #6C4A6E; /* plum */
+
+  /* Semantic tokens */
+  --bg:          var(--c-fog);
+  --surface:     var(--c-surface);
+  --border:      var(--c-border);
+  --divider:     var(--c-divider);
+  --text:        var(--c-text);
+  --text-muted:  var(--c-text-mid);
+  --text-subtle: var(--c-text-sub);
+  --text-faint:  var(--c-text-faint);
+
+  --link:        var(--c-teal);
+  --accent:      var(--c-navy);
+
+  /* Chart structure */
+  --chart-grid-major: #D8E1E8;
+  --chart-grid-minor: #ECF1F5;
+  --chart-axis:       #7A8A98;
+  --chart-annotation: #A6B3BE;
+
+  /* Data series (semantic, not ordinal) */
+  --series-marblehead: var(--c-navy);
+  --series-swampscott: var(--c-brass);
+  --series-melrose:    var(--c-buoy);
+  --series-stoneham:   var(--c-plum);
+
+  --series-revenue:    var(--c-sage);
+  --series-cost:       var(--c-buoy);
+  --series-neutral:    var(--c-text);
+
+  --series-tier-1: var(--c-teal);
+  --series-tier-2: var(--c-navy);
+  --series-tier-3: var(--c-buoy);
+
+  /* Tag colors (category pills) */
+  --tag-chart-bg:   #E6F0EE;
+  --tag-chart-fg:   #2F6356;
+  --tag-text-bg:    #E3ECF4;
+  --tag-text-fg:    #1B3A57;
+  --tag-data-bg:    #F4EBD6;
+  --tag-data-fg:    #7A5A15;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(15, 42, 61, 0.05), 0 1px 3px rgba(15, 42, 61, 0.04);
+  --shadow-md: 0 2px 6px rgba(15, 42, 61, 0.06), 0 10px 28px rgba(15, 42, 61, 0.05);
+
+  /* Layout */
+  --radius-lg: 14px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --page-max:  720px;
+  --chart-max: 880px;
+  --gutter:    16px;
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-fog:      #0B1620;
+    --c-surface:  #14202C;
+    --c-border:   #24323F;
+    --c-divider:  #1C2834;
+    --c-text:     #E6ECF1;
+    --c-text-mid: #AFBCC7;
+    --c-text-sub: #7D8C99;
+    --c-text-faint:#5B6B78;
+
+    --c-navy:  #8AB0C4; /* lifted navy */
+    --c-buoy:  #E57B5F;
+    --c-teal:  #6FB3C7;
+    --c-brass: #E4B363;
+    --c-sage:  #9DBC7A;
+    --c-plum:  #B08AB4;
+
+    --chart-grid-major: #24323F;
+    --chart-grid-minor: #1B2834;
+    --chart-axis:       #8A99A6;
+    --chart-annotation: #4E5D6B;
+
+    --tag-chart-bg: #132B27;
+    --tag-chart-fg: #8FC6B7;
+    --tag-text-bg:  #13202E;
+    --tag-text-fg:  #8AB0C4;
+    --tag-data-bg:  #2A220F;
+    --tag-data-fg:  #E4B363;
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+    --shadow-md: 0 2px 10px rgba(0,0,0,0.6), 0 16px 36px rgba(0,0,0,0.45);
+  }
+}
+
+/* Manual override hooks: <html data-theme="light|dark"> */
+html[data-theme="light"] { color-scheme: light; }
+html[data-theme="dark"]  { color-scheme: dark; }
+
+/* ==========================================================================
+   Reset + base
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+nav.site-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 var(--gutter);
+  display: flex; justify-content: center;
+}
+nav.site-nav .nav-inner {
+  max-width: var(--chart-max); width: 100%;
+  display: flex; align-items: center; gap: 18px;
+  min-height: 48px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+nav.site-nav .nav-inner::-webkit-scrollbar { display: none; }
+nav.site-nav .nav-brand {
+  font-size: 14px; font-weight: 700; color: var(--text);
+  white-space: nowrap; margin-right: 4px;
+}
+nav.site-nav a {
+  font-size: 13px; color: var(--text-subtle);
+  whiteastespace: nowrap; white-space: nowrap;
+}
+nav.site-nav a:hover { color: var(--text); text-decoration: none; }
+
+/* ==========================================================================
+   Page layouts
+   ========================================================================== */
+
+/* Home + long-form pages */
+.page {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 40px var(--gutter) 48px;
+}
+
+/* Chart pages are centered with a surface container */
+.chart-page {
+  display: flex;
+  justify-content: center;
+  padding: 32px var(--gutter);
+}
+.container {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 32px 36px 28px;
+  max-width: var(--chart-max);
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .page        { padding: 24px var(--gutter) 40px; }
+  .chart-page  { padding: 16px 12px 32px; }
+  .container   { padding: 20px 16px 18px; border-radius: 12px; }
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+h1 {
+  font-size: 22px; font-weight: 700; color: var(--text);
+  letter-spacing: -0.3px; line-height: 1.25; margin-bottom: 6px;
+}
+h2 {
+  font-size: 18px; font-weight: 700; color: var(--text);
+  margin: 28px 0 10px; line-height: 1.3;
+}
+h3 {
+  font-size: 15px; font-weight: 700; color: var(--text);
+  margin-bottom: 6px; line-height: 1.35;
+}
+
+.h-center { text-align: center; }
+
+.subtitle {
+  font-size: 13px; color: var(--text-subtle);
+  line-height: 1.5; margin-bottom: 24px;
+}
+.subtitle.h-center { margin-left: auto; margin-right: auto; max-width: 560px; }
+
+p {
+  font-size: 16px; color: var(--text-muted);
+  line-height: 1.65; margin-bottom: 14px;
+}
+p a { color: var(--link); }
+p a:hover { text-decoration: underline; }
+
+.caption {
+  font-size: 13px; color: var(--text-muted);
+  line-height: 1.6; margin: 16px 0 20px;
+}
+
+.notes {
+  font-size: 12px; color: var(--text-subtle);
+  line-height: 1.6;
+  border-top: 1px solid var(--divider);
+  padding-top: 14px; margin-top: 20px;
+}
+.notes p { font-size: 12px; margin: 0; color: var(--text-subtle); }
+.notes p + p { margin-top: 4px; }
+
+.source {
+  font-size: 12px; color: var(--text-faint); margin-top: 8px;
+}
+
+.back {
+  font-size: 13px; color: var(--text-subtle);
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-bottom: 16px;
+  min-height: 32px; padding: 4px 0;
+}
+.back:hover { color: var(--text); text-decoration: none; }
+
+@media (max-width: 600px) {
+  h1 { font-size: 20px; }
+  h2 { font-size: 17px; margin-top: 24px; }
+  p  { font-size: 15px; }
+  .subtitle { font-size: 12px; margin-bottom: 20px; }
+}
+
+/* ==========================================================================
+   Home page — hero + question cards
+   ========================================================================== */
+
+.hero { text-align: center; margin-bottom: 36px; }
+.hero h1 { font-size: 28px; margin-bottom: 10px; }
+.hero p  { font-size: 16px; color: var(--text-subtle); max-width: 520px; margin: 0 auto; }
+
+.question-list {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.question {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 20px 24px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 72px;
+}
+.question:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.question h2 {
+  font-size: 17px; font-weight: 600; color: var(--text);
+  margin: 0 0 4px; line-height: 1.35;
+}
+.question p {
+  font-size: 14px; color: var(--text-subtle); margin: 0;
+  line-height: 1.5;
+}
+.question .tag {
+  display: inline-block; font-size: 10px; font-weight: 700;
+  padding: 3px 9px; border-radius: 100px; margin-top: 10px;
+  letter-spacing: 0.3px;
+}
+.tag-charts { background: var(--tag-chart-bg); color: var(--tag-chart-fg); }
+.tag-text   { background: var(--tag-text-bg);  color: var(--tag-text-fg); }
+.tag-data   { background: var(--tag-data-bg);  color: var(--tag-data-fg); }
+
+@media (max-width: 600px) {
+  .hero { margin-bottom: 28px; }
+  .hero h1 { font-size: 24px; }
+  .hero p  { font-size: 15px; }
+  .question { padding: 18px 20px; }
+  .question h2 { font-size: 16px; }
+}
+
+/* Data section */
+.data-section { margin-top: 44px; }
+.data-section h2 {
+  font-size: 12px; font-weight: 700; color: var(--text-subtle);
+  text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px;
+}
+.data-links { display: flex; flex-direction: column; gap: 8px; }
+.data-link {
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 14px 18px;
+  color: inherit;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px;
+  min-height: 56px;
+}
+.data-link:hover { box-shadow: var(--shadow-md); text-decoration: none; }
+.data-link-title { font-size: 14px; font-weight: 600; color: var(--text); }
+.data-link-desc  { font-size: 12px; color: var(--text-subtle); margin-top: 2px; }
+.data-link-badge {
+  font-size: 10px; color: var(--text-subtle); font-family: var(--font-mono);
+  background: var(--divider); padding: 3px 8px; border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.footer {
+  text-align: center; padding: 40px 20px 16px;
+  font-size: 12px; color: var(--text-faint);
+}
+.footer a { color: var(--text-subtle); }
+
+/* ==========================================================================
+   Cards (used on text pages)
+   ========================================================================== */
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 20px 22px;
+  margin: 16px 0;
+}
+.card h3 { margin-bottom: 8px; }
+.card p  { font-size: 14px; margin-bottom: 8px; color: var(--text-muted); }
+.card p:last-child { margin-bottom: 0; }
+
+.tier-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--text-subtle); margin-bottom: 6px;
+}
+
+.term {
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 14px 18px;
+  margin: 8px 0;
+}
+.term p { font-size: 14px; margin: 0; color: var(--text-muted); }
+.term strong { color: var(--text); }
+
+.cut-item {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--divider);
+  font-size: 14px;
+}
+.cut-item:last-child { border-bottom: none; }
+.cut-item-name   { color: var(--text); }
+.cut-item-amount { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+.section-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--text-subtle);
+  margin: 24px 0 12px;
+}
+
+.takeaway {
+  background: color-mix(in srgb, var(--c-buoy) 8%, var(--surface));
+  border-left: 3px solid var(--c-buoy);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  margin: 0 0 24px;
+  font-size: 14px; color: var(--text-muted); line-height: 1.6;
+}
+.takeaway.takeaway--pos {
+  background: color-mix(in srgb, var(--c-sage) 10%, var(--surface));
+  border-left-color: var(--c-sage);
+}
+
+.footnotes {
+  background: var(--divider);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+}
+.footnotes p {
+  font-size: 12px; color: var(--text-subtle); line-height: 1.6; margin: 0;
+}
+.footnotes p + p { margin-top: 4px; }
+.footnote-marker {
+  display: inline-block; width: 5px; height: 5px;
+  background: var(--text-faint); border-radius: 50%;
+  margin-right: 8px; position: relative; top: -2px;
+}
+
+/* ==========================================================================
+   Tables (responsive)
+   ========================================================================== */
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
+}
+table.data {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  min-width: 420px;
+}
+table.data th {
+  padding: 10px 12px;
+  font-weight: 600; font-size: 11px;
+  color: var(--text-subtle);
+  text-transform: uppercase; letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--divider);
+  text-align: right; white-space: nowrap;
+}
+table.data th:first-child { text-align: left; }
+table.data td {
+  padding: 12px;
+  text-align: right;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600; font-size: 14px;
+  border-bottom: 1px solid var(--divider);
+  white-space: nowrap;
+}
+table.data td:first-child { text-align: left; font-weight: 600; }
+table.data tbody tr:last-child td { border-bottom: none; }
+
+.swatch {
+  display: inline-block; width: 10px; height: 10px;
+  border-radius: 2px; margin-right: 6px;
+  position: relative; top: 1px;
+}
+
+/* ==========================================================================
+   Chart SVG — reusable classes
+   Colors propagate via `color` + `currentColor` for theme compatibility.
+   ========================================================================== */
+
+.chart-wrapper { margin: 8px 0 16px; }
+svg.chart {
+  width: 100%; height: auto; display: block;
+  font-family: var(--font-sans);
+  overflow: visible;
+}
+
+svg.chart text {
+  font-family: var(--font-sans);
+  fill: var(--chart-axis);
+}
+
+svg.chart .grid-major { stroke: var(--chart-grid-major); stroke-width: 1; fill: none; }
+svg.chart .grid-minor { stroke: var(--chart-grid-minor); stroke-width: 1; fill: none; }
+svg.chart .axis-base  { stroke: var(--chart-grid-major); stroke-width: 1; fill: none; }
+svg.chart .tick       { stroke: var(--chart-grid-major); stroke-width: 1; fill: none; }
+
+svg.chart .tick-label {
+  font-size: 11px;
+  fill: var(--chart-axis);
+  font-variant-numeric: tabular-nums;
+}
+svg.chart .tick-label--major {
+  font-size: 11px; font-weight: 600; fill: var(--text-muted);
+}
+
+svg.chart .annotation {
+  font-size: 10px; fill: var(--chart-annotation);
+}
+svg.chart .annotation-line {
+  stroke: var(--chart-annotation); stroke-width: 0.75;
+  stroke-dasharray: 3 3; fill: none;
+}
+
+svg.chart .value-label {
+  font-size: 11px; font-weight: 600; fill: var(--text);
+}
+svg.chart .end-label {
+  font-size: 11px; font-weight: 600; fill: currentColor;
+}
+
+/* Data marks — stroke comes from currentColor so series class drives it */
+svg.chart .data-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.25;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+svg.chart .data-line--bold    { stroke-width: 2.75; }
+svg.chart .data-line--thin    { stroke-width: 1.5; }
+svg.chart .data-line--dashed  { stroke-dasharray: 5 4; }
+svg.chart .data-line--dotted  { stroke-dasharray: 2 3; }
+
+svg.chart .data-dot {
+  fill: currentColor;
+  stroke: none;
+}
+svg.chart .data-fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* Series color assignments via `color` so currentColor cascades */
+svg.chart .s-marblehead { color: var(--series-marblehead); }
+svg.chart .s-swampscott { color: var(--series-swampscott); }
+svg.chart .s-melrose    { color: var(--series-melrose); }
+svg.chart .s-stoneham   { color: var(--series-stoneham); }
+
+svg.chart .s-revenue    { color: var(--series-revenue); }
+svg.chart .s-cost       { color: var(--series-cost); }
+svg.chart .s-neutral    { color: var(--series-neutral); }
+
+svg.chart .s-tier-1     { color: var(--series-tier-1); }
+svg.chart .s-tier-2     { color: var(--series-tier-2); }
+svg.chart .s-tier-3     { color: var(--series-tier-3); }
+
+/* Mobile: bump chart text, thin out ticks marked .tick--minor */
+@media (max-width: 600px) {
+  svg.chart .tick-label,
+  svg.chart .tick-label--major,
+  svg.chart .end-label,
+  svg.chart .value-label { font-size: 12px; }
+  svg.chart .annotation  { font-size: 11px; }
+  svg.chart .data-line   { stroke-width: 2.5; }
+  svg.chart .data-line--thin { stroke-width: 1.75; }
+
+  svg.chart .tick-label--minor,
+  svg.chart .grid-minor,
+  svg.chart .annotation--hide-sm { display: none; }
+}
+
+/* ==========================================================================
+   Legend (above-chart)
+   ========================================================================== */
+
+.legend {
+  display: flex; flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 18px;
+  margin: 0 0 20px;
+  font-size: 12px;
+}
+.legend-item {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--text-muted);
+}
+.legend-swatch {
+  display: inline-block;
+  width: 16px; height: 3px; border-radius: 2px;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.legend-item.s-marblehead { color: var(--series-marblehead); }
+.legend-item.s-swampscott { color: var(--series-swampscott); }
+.legend-item.s-melrose    { color: var(--series-melrose); }
+.legend-item.s-stoneham   { color: var(--series-stoneham); }
+.legend-item.s-revenue    { color: var(--series-revenue); }
+.legend-item.s-cost       { color: var(--series-cost); }
+.legend-item.s-neutral    { color: var(--series-neutral); }
+.legend-item.s-tier-1     { color: var(--series-tier-1); }
+.legend-item.s-tier-2     { color: var(--series-tier-2); }
+.legend-item.s-tier-3     { color: var(--series-tier-3); }
+.legend-item span.legend-text { color: var(--text-muted); }
+
+/* ==========================================================================
+   Override calculator — specific styles
+   ========================================================================== */
+
+.calc-year-label {
+  font-size: 13px; font-weight: 700;
+  color: var(--text-muted); margin-bottom: 8px;
+}
+.calc-year-label span { font-weight: 400; color: var(--text-subtle); }
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
