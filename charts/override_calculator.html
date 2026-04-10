@@ -41,13 +41,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   outline: none; border-color: var(--link);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--link) 22%, transparent);
 }
-.calc-input .hint { display: block; font-size: 12px; color: var(--text-subtle); margin-top: 6px; }
+.calc-input .hint { display: block; font-size: 12px; color: var(--text-subtle); margin-top: 8px; }
 .calc-input .hint a { color: var(--link); }
+.calc-input .hint-default { display: block; font-size: 11px; color: var(--text-faint); margin-top: 3px; }
 
-.tier-rows { display: flex; flex-direction: column; }
+.tier-rows {
+  display: flex; flex-direction: column;
+  max-width: 520px; margin: 0 auto;
+}
 .tier-row {
   display: flex; align-items: center; justify-content: space-between;
-  gap: 16px; padding: 14px 4px;
+  gap: 24px; padding: 14px 4px;
   border-bottom: 1px solid var(--divider);
 }
 .tier-row:last-child { border-bottom: none; }
@@ -84,7 +88,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="calc-input">
     <label for="assessed-value">Your assessed value</label>
     <input id="assessed-value" type="text" inputmode="numeric" value="$1,291,507" autocomplete="off">
-    <span class="hint">Don't know it? <a href="https://epay.cityhallsystems.com/selection" target="_blank" rel="noopener">Look it up on the town's tax portal</a>. Defaults to the town average single-family value.</span>
+    <span class="hint">Don't know it? <a href="https://epay.cityhallsystems.com/selection" target="_blank" rel="noopener">Look it up on the town's tax portal</a>.</span>
+    <span class="hint-default">Defaults to the town's average single-family value.</span>
   </div>
 
   <div class="tabs">
