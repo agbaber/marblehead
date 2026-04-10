@@ -615,6 +615,43 @@ svg.chart .s-tier-3     { color: var(--series-tier-3); }
 .calc-year-label span { font-weight: 400; color: var(--text-subtle); }
 
 /* ==========================================================================
+   Tabs (segmented control)
+   ========================================================================== */
+
+.tabs {
+  display: flex;
+  background: var(--divider);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  margin-bottom: 20px;
+}
+.tab {
+  flex: 1;
+  padding: 8px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-subtle);
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  text-align: center;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+.tab:hover {
+  color: var(--text-muted);
+}
+.tab.active {
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.year-panel { display: none; }
+.year-panel.active { display: block; }
+
+/* ==========================================================================
    Reduced motion
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
