@@ -115,6 +115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 // Each number is the annual tax increase (dollars) on a home assessed at
 // the town average single-family value, with that year's draws fully phased in.
 const AVG_ASSESSED = 1291507;
+const STORAGE_KEY = 'mh_override_calc_assessed_value';
 const RATES = {
   1: { y1:  167.90, y2:  804.93, y3: 1186.68 }, // Tier 1 — $9M  — Restore
   2: { y1:  361.62, y2: 1132.65, y3: 1587.17 }, // Tier 2 — $12M — Stabilize
@@ -163,15 +164,30 @@ function formatInput(n) {
   return '$' + Math.round(n).toLocaleString('en-US');
 }
 
+function loadStored() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    const n = parseFloat(raw);
+    return Number.isFinite(n) && n > 0 ? n : null;
+  } catch (e) { return null; }
+}
+
+function saveStored(value) {
+  try { localStorage.setItem(STORAGE_KEY, String(value)); } catch (e) {}
+}
+
 function update() {
   const input = document.getElementById('assessed-value');
   const value = parseAssessed(input.value);
+  saveStored(value);
   for (const year of [1, 2, 3]) {
     document.getElementById('year-' + year).innerHTML = renderYearPanel(value, year);
   }
 }
 
 const input = document.getElementById('assessed-value');
+const stored = loadStored();
+if (stored !== null) input.value = formatInput(stored);
 input.addEventListener('input', update);
 input.addEventListener('blur', () => { input.value = formatInput(parseAssessed(input.value)); update(); });
 
