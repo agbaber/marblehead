@@ -169,6 +169,108 @@ og_url: https://marbleheaddata.org/question-2-trash.html
     color: var(--text);
   }
 
+  /* Pull quote: large call-out of a key claim from the body prose */
+  .pull-quote {
+    margin: 24px 0;
+    padding: 16px 22px 16px 26px;
+    border-left: 4px solid var(--c-navy);
+    background: color-mix(in srgb, var(--c-navy) 5%, var(--surface));
+    border-radius: 0 8px 8px 0;
+  }
+  .pull-quote p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* Budget-shift diagram: FY26 one box becomes FY27 two boxes, proportional widths */
+  .budget-shift {
+    margin: 22px 0 26px;
+    padding: 16px 18px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+  .budget-shift-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: var(--text-subtle);
+    margin: 0 0 14px;
+  }
+  .budget-shift-row {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: stretch;
+    margin-bottom: 8px;
+  }
+  .budget-shift-row:last-of-type {
+    margin-bottom: 0;
+  }
+  .budget-shift-year {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-subtle);
+    text-align: right;
+    letter-spacing: 0.5px;
+    padding-top: 14px;
+  }
+  .budget-shift-bar {
+    display: flex;
+    gap: 4px;
+    min-height: 56px;
+  }
+  .budget-shift-box {
+    padding: 10px 14px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .budget-shift-box strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+    margin-bottom: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .budget-shift-box span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .budget-shift-box--old {
+    background: color-mix(in srgb, var(--c-navy) 12%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c-navy) 30%, var(--border));
+  }
+  .budget-shift-box--kept {
+    background: color-mix(in srgb, var(--c-navy) 8%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c-navy) 22%, var(--border));
+  }
+  .budget-shift-box--new {
+    background: color-mix(in srgb, var(--c-buoy) 8%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c-buoy) 32%, var(--border));
+  }
+  .budget-shift-note {
+    font-size: 12px;
+    color: var(--text-subtle);
+    line-height: 1.55;
+    margin: 14px 0 0;
+    font-style: italic;
+  }
+
   /* "This page walks through:" intro list */
   .page-covers-lead {
     margin: 18px 0 4px;
@@ -211,6 +313,16 @@ og_url: https://marbleheaddata.org/question-2-trash.html
     .peer-trash th, .peer-trash td { padding: 9px 5px; }
     .already-decided { padding: 12px 14px; }
     .page-covers li { font-size: 13px; padding: 6px 0 6px 20px; }
+    .pull-quote { padding: 14px 16px 14px 18px; margin: 18px 0; }
+    .pull-quote p { font-size: 15px; line-height: 1.5; }
+    .budget-shift { padding: 14px 14px 16px; }
+    .budget-shift-row { grid-template-columns: 34px 1fr; gap: 8px; }
+    .budget-shift-year { font-size: 10px; padding-top: 12px; }
+    .budget-shift-bar { min-height: 50px; gap: 3px; }
+    .budget-shift-box { padding: 8px 10px; }
+    .budget-shift-box strong { font-size: 11px; }
+    .budget-shift-box span { font-size: 12px; }
+    .budget-shift-note { font-size: 11px; }
   }
 </style>
 
@@ -288,7 +400,41 @@ og_url: https://marbleheaddata.org/question-2-trash.html
 
 <p>The change has one specific trigger: a new contract with Republic Services that increased annual collection and processing costs by roughly $900,000 to $1 million. Recycling processing costs alone jumped from what the town had previously been paying (close to nothing for more than a decade) to roughly $125 per ton under the new contract terms. The earlier contract had locked in favorable terms that are no longer available on renewal.</p>
 
+<blockquote class="pull-quote">
+  <p>A new Republic Services contract added roughly $900,000 to $1 million in annual cost. That growth is the underlying driver of everything else on this page.</p>
+</blockquote>
+
 <p>The Select Board responded by restructuring the FY27 budget. The existing Waste Collection department line was reduced from $2.94 million to $1.79 million, a cut of $1.15 million. A new Curbside Collection line was created at $2.19 million. The two together total $3.98 million, roughly $1.04 million more than the FY26 waste budget. That $1.04 million matches the contract cost growth. The NEW Curbside Collection line is labeled as new in the FY27 Proposed Budget document itself, in red.</p>
+
+<div class="budget-shift">
+  <div class="budget-shift-title">How FY26's waste budget becomes FY27's two line items</div>
+
+  <div class="budget-shift-row">
+    <div class="budget-shift-year">FY26</div>
+    <div class="budget-shift-bar">
+      <div class="budget-shift-box budget-shift-box--old" style="flex: 294;">
+        <strong>Waste Collection</strong>
+        <span>$2.94M</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="budget-shift-row">
+    <div class="budget-shift-year">FY27</div>
+    <div class="budget-shift-bar">
+      <div class="budget-shift-box budget-shift-box--kept" style="flex: 179;">
+        <strong>Waste Collection</strong>
+        <span>$1.79M</span>
+      </div>
+      <div class="budget-shift-box budget-shift-box--new" style="flex: 219;">
+        <strong>NEW Curbside Collection</strong>
+        <span>$2.19M</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="budget-shift-note">FY26 curbside trash sat inside the $2.94M Waste Collection line, funded by general property tax. FY27 splits this: the smaller Waste Collection line stays in the general fund, while the new Curbside Collection line needs separate funding (a Q2 levy or a Board of Health fee). Total trash spending grew from $2.94M to $3.98M, reflecting the new Republic Services contract. Bar widths scale with dollar amounts.</p>
+</div>
 
 <p>The net effect: $1.15 million of what used to be general-fund trash spending is now available for other general fund needs. The remaining $2.19 million of trash costs needs to be funded through some new mechanism, because it is no longer in the general fund budget. That is where Question 2 (or the Board of Health's fallback fee) comes in.</p>
 
@@ -429,6 +575,10 @@ og_url: https://marbleheaddata.org/question-2-trash.html
 <p>A concern raised in local discussion is that the $2.3 million override is being described as funding curbside trash service, when residents were already paying for that same service through existing property taxes via the Waste Collection department. The concern is that the framing implies residents face a choice about whether to fund trash, when really the choice is about how.</p>
 
 <p>That concern has merit in two specific ways. First, residents were already paying for curbside trash in FY26, just not on a separate bill. Calling the $2.3 million "additional" is technically accurate because it is additional to the reduced FY27 Waste Collection line, but it is not additional to the FY26 total cost of running the service. Second, $1.15 million of the $2.3 million represents money that used to flow through the general fund for trash but has been freed up by the Select Board's restructure for other general fund spending. Voters authorizing the override are both funding trash and preserving general fund capacity for other uses that would otherwise need to be cut.</p>
+
+<blockquote class="pull-quote">
+  <p>$1.15 million of the $2.3 million override represents funding that used to flow through the general fund for trash. The Select Board's restructure has freed it up for other general fund spending. Voters authorizing the override are both paying for trash and preserving that capacity.</p>
+</blockquote>
 
 <p>The counter to that concern is that the new Republic Services contract did add genuine new cost (~$900K&ndash;$1 million) and that cost has to come from somewhere. The carve-out decision is a policy choice about whether to let that cost land in the general fund (reducing the town's ability to fund other things) or keep the general fund capacity for other needs while raising the trash cost separately. Neither direction escapes the underlying math: contracts got more expensive and someone pays.</p>
 
