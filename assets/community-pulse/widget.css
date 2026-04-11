@@ -2,17 +2,43 @@
    Reuses CSS custom properties from assets/site.css so the widget
    inherits the site's light and dark themes automatically. */
 
-.cp-widget {
+/* Flex wrapper placed around a tagged heading + its widget.
+   On desktop, the heading takes its natural width and the widget
+   floats right next to it. On narrow screens, the widget stacks
+   below the heading. */
+.cp-section-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.6rem;
-  margin: 0.4rem 0 1.2rem 0;
-  padding: 0.4rem 0.6rem;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+}
+
+.cp-section-row > :first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-right: 0;
+}
+
+.cp-widget {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 0 0 auto;
   font-size: 0.85rem;
   color: var(--text-muted, #666);
-  border-top: 1px dashed var(--border, rgba(0,0,0,0.1));
-  border-bottom: 1px dashed var(--border, rgba(0,0,0,0.1));
+}
+
+@media (max-width: 640px) {
+  .cp-section-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+  .cp-widget {
+    font-size: 0.8rem;
+  }
 }
 
 .cp-widget__buttons {
