@@ -5,7 +5,7 @@ compatibility_date = "2026-04-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "community-pulse"
-database_id = "REPLACE_WITH_DATABASE_ID_AFTER_CREATE"
+database_id = "e6c6e7ad-b93e-4d80-aeea-58e50e4ba43e"
 
 [vars]
 ALLOWED_ORIGIN = "https://marbleheaddata.org"
