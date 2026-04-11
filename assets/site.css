@@ -2047,6 +2047,18 @@ blockquote.quote--mixed p {
 
 /* --- Wide table (default, desktop) --- */
 .master-wide { display: block; margin: 16px 0 24px; }
+
+/* On the Master Dataset page only, widen the whole .page container on
+   desktop so the heading, subtitle, and wide data table all share the
+   same left and right edges. Scoped via body.doc-page--wide (set in the
+   master-data frontmatter) so other doc pages keep the narrow 720px
+   container that's sized for readable prose. Capped at 1400px so it
+   doesn't sprawl on very wide monitors. */
+@media (min-width: 900px) {
+  body.doc-page--wide .page {
+    max-width: min(1400px, calc(100vw - 40px));
+  }
+}
 .master-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
