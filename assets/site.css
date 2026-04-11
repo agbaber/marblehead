@@ -1951,3 +1951,62 @@ blockquote.quote--mixed p {
   .master-narrow { display: block; }
   body.doc-page .page { padding-left: 12px; padding-right: 12px; }
 }
+
+/* ==========================================================================
+   Featured card (promoted single-card CTA above section grids on the home page)
+   ========================================================================== */
+
+.featured-card {
+  display: block;
+  padding: 24px 28px 22px;
+  margin: 0 0 36px;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--c-navy);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.featured-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.featured-card-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--c-buoy);
+  margin-bottom: 8px;
+}
+.featured-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.featured-card-desc {
+  font-size: 14px;
+  color: var(--text-subtle);
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+.featured-card .tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 100px;
+  letter-spacing: 0.3px;
+  background: var(--tag-text-bg);
+  color: var(--tag-text-fg);
+}
+
+@media (max-width: 600px) {
+  .featured-card { padding: 20px 22px 18px; margin-bottom: 28px; }
+  .featured-card-title { font-size: 18px; }
+}
