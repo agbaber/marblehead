@@ -561,12 +561,6 @@ p a:hover { text-decoration: underline; }
 }
 
 .footer {
-<<<<<<< HEAD
-  text-align: center; padding: 40px 20px 16px;
-  font-size: 12px; color: var(--text-faint);
-  border-top: 1px solid var(--divider);
-  margin-top: 40px;
-=======
   text-align: center;
   padding: 32px 20px 28px;
   margin-top: 48px;
@@ -605,7 +599,6 @@ p a:hover { text-decoration: underline; }
   color: var(--text-faint);
   margin: 0;
   letter-spacing: 0.2px;
->>>>>>> origin/main
 }
 
 /* ==========================================================================
@@ -1802,4 +1795,159 @@ blockquote.quote--mixed p {
 @media (max-width: 600px) {
   .year-label { font-size: 28px; margin-bottom: 12px; }
   .year-line { margin: 30px 0 16px; }
+}
+
+/* ==========================================================================
+   Master Data page (data/master-data.html)
+   Wide table with sticky first column on desktop; metric cards on mobile.
+   ========================================================================== */
+.master-actions {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 16px 0 12px;
+}
+.button {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 14px;
+  background: var(--text);
+  color: var(--surface);
+  border: 1px solid var(--text);
+  border-radius: 100px;
+  font-size: 13px; font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.button:hover { opacity: 0.85; text-decoration: none; transform: translateY(-1px); }
+.button-ghost {
+  background: var(--surface);
+  color: var(--text-subtle);
+  border-color: var(--border);
+}
+.button-ghost:hover { color: var(--text); border-color: var(--text-faint); }
+
+.master-note {
+  font-size: 12px; color: var(--text-subtle);
+  border-left: 2px solid var(--divider);
+  padding: 6px 0 6px 12px;
+  margin: 16px 0 20px;
+}
+
+/* --- Wide table (default, desktop) --- */
+.master-wide { display: block; margin: 16px 0 24px; }
+.master-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+.master-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+}
+.master-table thead th {
+  position: sticky; top: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--divider);
+  padding: 8px 10px;
+  text-align: right;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+.master-table tbody th,
+.master-table tbody td {
+  padding: 6px 10px;
+  text-align: right;
+  border-bottom: 1px solid var(--divider);
+  white-space: nowrap;
+}
+.master-table tbody tr:last-child th,
+.master-table tbody tr:last-child td { border-bottom: 0; }
+.master-table tbody th { color: var(--text-subtle); font-weight: 600; }
+.master-table .sticky-col {
+  position: sticky; left: 0;
+  background: var(--surface);
+  text-align: left;
+  z-index: 1;
+  border-right: 1px solid var(--divider);
+}
+.master-table thead .sticky-col { z-index: 2; }
+.master-table tr.proposed td,
+.master-table tr.proposed th { background: color-mix(in srgb, var(--divider) 40%, var(--surface)); }
+.master-table tr.proposed .sticky-col { background: color-mix(in srgb, var(--divider) 40%, var(--surface)); }
+.master-table tbody tr:hover td,
+.master-table tbody tr:hover th { background: color-mix(in srgb, var(--divider) 25%, var(--surface)); }
+
+/* --- Narrow metric cards (mobile) --- */
+.master-narrow { display: none; }
+.metric-card {
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-sm);
+  padding: 14px 0 14px 14px;
+  margin: 0 0 12px;
+}
+.metric-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-right: 14px;
+  gap: 8px;
+}
+.metric-head h3 {
+  font-size: 14px; font-weight: 700; color: var(--text);
+  margin: 0;
+}
+.metric-count {
+  font-size: 10px; color: var(--text-faint);
+  font-family: var(--font-mono);
+  background: var(--divider);
+  padding: 2px 6px; border-radius: 4px;
+  flex-shrink: 0;
+}
+.metric-desc {
+  font-size: 11px; color: var(--text-subtle);
+  margin: 2px 14px 10px 0;
+}
+.year-strip {
+  display: flex; gap: 6px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 2px 14px 4px 0;
+  scroll-snap-type: x mandatory;
+}
+.yv {
+  flex: 0 0 auto;
+  display: flex; flex-direction: column;
+  align-items: flex-end;
+  min-width: 66px;
+  padding: 6px 8px;
+  background: color-mix(in srgb, var(--divider) 25%, var(--surface));
+  border-radius: 6px;
+  scroll-snap-align: start;
+}
+.yv .y {
+  font-size: 10px; color: var(--text-faint);
+  font-family: var(--font-mono);
+  letter-spacing: 0.3px;
+}
+.yv .v {
+  font-size: 12px; font-weight: 600; color: var(--text);
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+  margin-top: 2px;
+}
+.yv-empty .v { color: var(--text-faint); font-weight: 400; }
+.yv-proposed { background: color-mix(in srgb, var(--c-teal, #0a6) 10%, var(--surface)); }
+.yv-proposed .y { color: var(--text-subtle); }
+
+@media (max-width: 720px) {
+  .master-wide { display: none; }
+  .master-narrow { display: block; }
+  body.doc-page .page { padding-left: 12px; padding-right: 12px; }
 }
