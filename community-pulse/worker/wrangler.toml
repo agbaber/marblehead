@@ -1,0 +1,14 @@
+name = "marblehead-community-pulse"
+main = "src/index.js"
+compatibility_date = "2026-04-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "community-pulse"
+database_id = "REPLACE_WITH_DATABASE_ID_AFTER_CREATE"
+
+[vars]
+ALLOWED_ORIGIN = "https://marbleheaddata.org"
+
+# Dev-only fallback binding for local development. Real deployment
+# uses the D1 binding above, populated by `wrangler d1 create`.
