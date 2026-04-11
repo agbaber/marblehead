@@ -764,3 +764,187 @@ All of the following must be true before the plan is considered complete:
 - No em-dashes anywhere in either file.
 - No unexpanded acronyms in user-visible text.
 - Every commit in the plan is a working state; `git log --oneline` shows a clean history of the implementation.
+
+---
+
+## Task 1 research output
+
+### Scope and method
+
+This section records the verified six-category spending table that feeds Task 5 (Act 1 prose) and Task 6 (Act 1 stacked area chart). Coverage: fiscal year 2015 through fiscal year 2026, twelve rows. All figures are actual expenditures on a budgetary (cash) basis for the Town of Marblehead General Fund.
+
+Why budgetary-basis General Fund and not GAAP "Changes in Fund Balances":
+
+1. The General Fund is the money the Finance Committee builds the annual budget around and Town Meeting votes on. It is what readers think of when they hear "where has the town's money gone."
+2. The broader "Changes in Fund Balances, Governmental Funds" table (ACFR statistical section) adds special revenue funds (school food service, athletics, federal and state grants, capital projects) and state on-behalf pension payments. Those are real money but they muddy a "what did the town choose to spend" story.
+3. Budget-basis data from the ACFR "Schedule of Revenues, Expenditures and Changes in Fund Balance - Budget and Actual - General Fund" can be directly joined to the FY27 Proposed Budget (which publishes FY25 expended, FY26 budget, and FY27 proposed on the same basis). This gives one consistent twelve-year series instead of two accounting worldviews stitched together.
+
+Category definitions (applied identically every year):
+
+- **Health insurance** = Group Insurance (budget line 221) plus Medicare (the ACFR "Medicare" line under Fringe or Employee Benefits, which the town uses to reimburse retiree Medicare Part B premiums; the FY26 budget summary JSON labels this `Medicare_Reimbursement`). Does not include the Medicare payroll tax line in the FY27 Proposed Budget, which is a different, smaller item ($272K for FY25) that the town pays on active payroll. For FY25-FY26, Medicare Reimbursement has been consolidated inside the Group Insurance line in the FY27 Proposed Budget, so the Group Insurance value alone is used for those years.
+- **Pensions** = Total Pension Benefits = Contributory Retirement Fund plus Noncontributory Retirement (pre-1988 hire liability paid directly by the town). For FY25-FY26 the Noncontributory line is zero in the FY27 Proposed Budget, so only Contributory Retirement is used.
+- **Debt payments** = Total Debt Service = Maturing Debt (principal) plus Interest. Does not include bond issuance premiums or refunding transfers, which show up in the Changes in Fund Balances table but not in the budget-basis schedule.
+- **Schools** = Total Education in the ACFR budget-and-actual schedule (the Schools line plus any school capital articles voted under the schools vote). For FY25-FY27, the School Department vote total from the FY27 Proposed Budget.
+- **Public safety** = Total Public Safety in the ACFR budget-and-actual schedule (Police, Fire, Building Inspection, Sealer of Weights and Measures, Animal Inspector). This is a wider bucket than just Fire plus Police; the FY26 budget summary JSON (Fire $5,561,260 plus Police $4,987,087 equals $10,548,347) excludes Building Inspection and the minor inspectors.
+- **Everything else** = Total Expenditures minus the five named categories above. Residually includes General Government, Public Works, Human Services, Culture and Recreation, Energy and Utility Reserve, Property and Liability Insurance, State and County charges, and the small employee benefits items (Salary Reserve, Workers Comp, Training, OPEB transfer, stabilization). This is honest: it groups together every department and transfer that is not individually broken out in the chart.
+
+### Primary sources
+
+- ACFR "Schedule of Revenues, Expenditures and Changes in Fund Balance - Budget and Actual - General Fund" for each fiscal year. Page citations below are to the logical page numbers printed on the ACFR pages.
+  - `data/acfr/FY15_ACFR.pdf` pages 76 to 78
+  - `data/acfr/FY16_ACFR.pdf` pages 78 to 80
+  - `data/acfr/FY17_ACFR.pdf` pages 83 to 85
+  - `data/acfr/FY18_ACFR.pdf` pages 89 to 91
+  - `data/acfr/FY19_ACFR.pdf` pages 88 to 90
+  - `data/acfr/FY20_ACFR.pdf` pages 92 to 94
+  - `data/acfr/FY21_ACFR.pdf` pages 92 to 94
+  - `data/acfr/FY22_ACFR.pdf` pages 89 to 91
+  - `data/acfr/FY23_ACFR.pdf` pages 87 to 89
+  - `data/acfr/FY24_ACFR.pdf` pages 95 to 97
+- FY25 expended actuals, FY26 budget, FY27 proposed: `data/budgets/FY27_Proposed_Budget_No_Override.pdf` pages 1 to 4 (the "Table of Estimate Appropriations" covers every department and transfer through Total General Fund Accounts on page 4).
+- Cross-checks for FY26 only: `data/FY26_budget_summary.json`.
+
+### Verified table (dollars, not thousands)
+
+All values below are actual budgetary expenditures except FY26 (town-meeting-approved budget) and FY25 expended (from the FY27 Proposed Budget's FY25 Expended column). Total column matches the ACFR or the FY27 Proposed Budget line exactly, so "Everything else" is a clean residual.
+
+| FY   | Health insurance | Pensions  | Debt payments | Schools    | Public safety | Everything else | Total       |
+|------|------------------|-----------|---------------|------------|---------------|-----------------|-------------|
+| 2015 | 10,388,908       | 2,278,613 | 5,475,855     | 32,066,336 | 7,316,544     | 12,971,821      | 70,498,077  |
+| 2016 | 10,973,609       | 2,451,137 | 5,972,324     | 33,252,150 | 7,508,198     | 13,038,234      | 73,195,652  |
+| 2017 | 11,212,339       | 2,630,329 | 6,823,406     | 35,026,294 | 7,623,507     | 13,548,121      | 76,863,996  |
+| 2018 | 11,740,760       | 2,875,231 | 7,156,767     | 37,446,929 | 8,145,159     | 14,399,294      | 81,764,140  |
+| 2019 | 11,836,691       | 3,100,539 | 6,734,428     | 38,673,888 | 8,456,948     | 14,463,143      | 83,265,637  |
+| 2020 | 11,976,422       | 3,311,646 | 6,946,380     | 40,262,455 | 8,505,510     | 14,206,442      | 85,208,855  |
+| 2021 | 12,322,287       | 3,571,499 | 7,507,960     | 40,464,964 | 8,845,161     | 13,086,552      | 85,798,423  |
+| 2022 | 12,767,343       | 3,825,926 | 9,438,701     | 42,621,754 | 9,779,169     | 15,147,299      | 93,580,192  |
+| 2023 | 13,040,356       | 4,151,398 | 10,106,619    | 43,754,615 | 10,211,783    | 15,564,637      | 96,829,408  |
+| 2024 | 12,885,677       | 4,512,303 | 11,006,139    | 46,168,131 | 11,300,995    | 16,375,863      | 102,249,108 |
+| 2025 | 12,994,934       | 4,879,451 | 11,085,298    | 46,294,268 | 10,863,267    | 14,326,986      | 100,444,204 |
+| 2026 | 15,100,893       | 5,380,625 | 9,314,141     | 49,120,287 | 11,237,760    | 16,052,674      | 106,206,380 |
+
+Every row sums to the Total column exactly (no rounding gap, so the sanity-check tolerance of 2 percent in Step 7 is satisfied with room to spare).
+
+### Per-row source notes
+
+Each cell below cites the source used. ACFR citations use the logical page number printed on the page.
+
+**FY2015** (source: `data/acfr/FY15_ACFR.pdf` pages 76 to 78, Actual Budgetary Amounts column):
+- Health insurance: Medicare 542,558 plus Group Insurance 9,826,265 plus Group Insurance FY13 carry-forward 20,085 equals 10,388,908.
+- Pensions: Contributory Retirement 2,189,381 plus Noncontributory Retirement 89,232 equals 2,278,613 (Total Pension Benefits line).
+- Debt: Maturing Debt 3,219,000 plus Interest 2,256,855 equals 5,475,855 (Total Debt Services line).
+- Schools: Schools 31,675,819 plus Essex North Shore art. 21 233,858 plus improvement art. 11 100,000 plus Art. 10 equipment 56,659 equals 32,066,336 (Total School line).
+- Public safety: 7,316,544 (Total Public Safety line; includes Police, Fire, Building Commissioner, Sealer, Animal Inspector).
+- Everything else: Total Expenditures 70,498,077 minus the five above equals 12,971,821. Composition: Total General Government 2,291,853, Total Public Works 4,841,505, Total Human Services 635,344, Total Culture and Recreation 1,808,809, Energy Reserve 309,146, Property and Liability Insurance 318,315, Salary Reserve 60,985, Intergovernmental State 2,705,864 (sum equals 12,971,821, matches).
+
+**FY2016** (source: `data/acfr/FY16_ACFR.pdf` pages 78 to 80):
+- Health: Medicare 575,214 plus Group Insurance 10,378,199 plus Group Insurance FY13 20,196 equals 10,973,609.
+- Pensions: 2,451,137 (Total Pension Benefits).
+- Debt: 5,972,324 (Total Debt Services; 3,718,000 principal plus 2,254,324 interest).
+- Schools: 33,252,150 (Total School).
+- Public safety: 7,508,198 (Total Public Safety).
+- Everything else: 73,195,652 minus 60,157,418 equals 13,038,234.
+
+**FY2017** (source: `data/acfr/FY17_ACFR.pdf` pages 83 to 85):
+- Health: Medicare 611,840 plus Group Insurance 10,580,051 plus Group Insurance FY13 20,448 equals 11,212,339.
+- Pensions: 2,630,329.
+- Debt: 6,823,406 (4,085,000 principal plus 2,738,406 interest).
+- Schools: 35,026,294.
+- Public safety: 7,623,507.
+- Everything else: 76,863,996 minus 63,315,875 equals 13,548,121.
+
+**FY2018** (source: `data/acfr/FY18_ACFR.pdf` pages 89 to 91):
+- Health: Medicare 633,529 plus Group Insurance 11,080,919 plus Group Insurance FY13 26,312 equals 11,740,760.
+- Pensions: 2,875,231.
+- Debt: 7,156,767 (4,507,000 principal plus 2,649,767 interest).
+- Schools: 37,446,929.
+- Public safety: 8,145,159.
+- Everything else: 81,764,140 minus 67,364,846 equals 14,399,294.
+
+**FY2019** (source: `data/acfr/FY19_ACFR.pdf` pages 88 to 90):
+- Health: Medicare 653,319 plus Group Insurance 11,157,717 plus Group Insurance FY13 25,655 equals 11,836,691.
+- Pensions: 3,100,539.
+- Debt: 6,734,428 (4,150,000 principal plus 2,584,428 interest).
+- Schools: 38,673,888.
+- Public safety: 8,456,948.
+- Everything else: 83,265,637 minus 68,802,494 equals 14,463,143.
+
+**FY2020** (source: `data/acfr/FY20_ACFR.pdf` pages 92 to 94):
+- Health: Medicare 652,175 plus Group Insurance 11,303,115 plus Group Insurance FY13 21,132 equals 11,976,422.
+- Pensions: 3,311,646.
+- Debt: 6,946,380 (4,425,000 principal plus 2,521,380 interest).
+- Schools: 40,262,455.
+- Public safety: 8,505,510.
+- Everything else: 85,208,855 minus 71,002,413 equals 14,206,442.
+- Note: the `data/group_insurance_FY14-27.csv` row for FY2020 is missing. This ACFR extract fills that gap for the page-level chart.
+
+**FY2021** (source: `data/acfr/FY21_ACFR.pdf` pages 92 to 94):
+- Health: Medicare 682,833 plus Group Insurance 11,639,454 equals 12,322,287. (No Group Insurance FY13 carry-forward this year or later.)
+- Pensions: 3,571,499.
+- Debt: 7,507,960 (4,640,012 principal plus 2,867,948 interest).
+- Schools: 40,464,964.
+- Public safety: 8,845,161.
+- Everything else: 85,798,423 minus 72,711,871 equals 13,086,552.
+
+**FY2022** (source: `data/acfr/FY22_ACFR.pdf` pages 89 to 91):
+- Health: Medicare 669,038 plus Group Insurance 12,098,305 equals 12,767,343.
+- Pensions: 3,825,926.
+- Debt: 9,438,701 (5,375,000 principal plus 4,063,701 interest). Large year-on-year jump is the full-year debt service on the new high school bonds.
+- Schools: 42,621,754.
+- Public safety: 9,779,169.
+- Everything else: 93,580,192 minus 78,432,893 equals 15,147,299.
+
+**FY2023** (source: `data/acfr/FY23_ACFR.pdf` pages 87 to 89):
+- Health: Medicare 709,885 plus Group Insurance 12,330,471 equals 13,040,356.
+- Pensions: 4,151,398 (Contributory Retirement only; Noncontributory zero).
+- Debt: 10,106,619 (6,465,000 principal plus 3,641,619 interest).
+- Schools: 43,754,615.
+- Public safety: 10,211,783.
+- Everything else: 96,829,408 minus 81,264,771 equals 15,564,637.
+
+**FY2024** (source: `data/acfr/FY24_ACFR.pdf` pages 95 to 97):
+- Health: Medicare 733,655 plus Group Insurance 12,152,022 equals 12,885,677. (ACFR format change: Medicare and Group Insurance are now sub-lines of "Total Employee Benefits" at 12,944,603, which also includes Salary Reserve 58,926. The 58,926 is left in Everything Else.)
+- Pensions: 4,512,303.
+- Debt: 11,006,139 (6,980,000 principal plus 4,026,139 interest).
+- Schools: 46,168,131 (includes 468,762 Essex North Shore article).
+- Public safety: 11,300,995.
+- Everything else: 102,249,108 minus 85,873,245 equals 16,375,863.
+
+**FY2025** (source: `data/budgets/FY27_Proposed_Budget_No_Override.pdf` pages 1 to 4, "FY2025 EXPENDED" column):
+- Health: Group Insurance 12,994,934 (includes Medicare Reimbursement, which the FY27 Proposed Budget has rolled into Group Insurance; the separate "Medicare" payroll-tax line is now $248,379 and is left in Everything Else).
+- Pensions: Contributory Retirement 4,879,451 (Noncontributory Retirement line is zero in FY27 Proposed Budget).
+- Debt: Total Debt Service 11,085,298 (Maturing Debt 7,540,000 plus Interest 3,545,298).
+- Schools: 46,294,268 (School Department vote total).
+- Public safety: 10,863,267 (Total Public Safety vote).
+- Everything else: Total General Fund Accounts 100,444,204 minus 86,117,218 equals 14,326,986.
+- Cross-check: FY27 Proposed Budget lists FY25 Budget of 14,465,018 for Group Insurance. Actual came in at 12,994,934, which is 10.2 percent under budget. This matches the data catalog note that FY24-FY25 actuals were below budget due to favorable claims.
+
+**FY2026** (source: `data/budgets/FY27_Proposed_Budget_No_Override.pdf` pages 1 to 4, "FY2026 BUDGET" column; FY26 is still in progress as of April 2026 so no actuals are available):
+- Health: Group Insurance 15,100,893.
+- Pensions: Contributory Retirement 5,380,625.
+- Debt: Total Debt Service 9,314,141 (Maturing Debt 5,955,000 plus Interest 3,359,141). Drop from FY25 is a scheduled principal paydown on refunded bonds, not a debt-level reduction.
+- Schools: 49,120,287 (School Department vote).
+- Public safety: 11,237,760 (Total Public Safety vote).
+- Everything else: Total General Fund Accounts 106,206,380 minus 90,153,706 equals 16,052,674.
+- Cross-checks against `data/FY26_budget_summary.json`:
+  - Debt: JSON 9,314,141, table 9,314,141, matches exactly.
+  - Pension: JSON Pension_Contribution 5,380,625, table 5,380,625, matches exactly.
+  - Health: JSON Health_Insurance_Transfer 11,828,487 plus Medex_Insurance_Transfer 2,534,769 plus Medicare_Reimbursement 730,651 equals 15,093,907. Table shows 15,100,893. Gap of 6,986 (0.05 percent), within rounding or minor line-item reallocation.
+  - Public safety: JSON Fire 5,561,260 plus Police 4,987,087 equals 10,548,347. Table 11,237,760 includes Building Inspection 687,313, Sealer 2,100, Animal Inspector 2,400, total 10,548,347 plus 691,813 equals 11,240,160. Gap of 2,400 (0.02 percent) reconciles to a Police line adjustment (JSON 4,987,087 vs FY27 PDF 4,984,687).
+
+### Sanity checks performed
+
+1. Every twelve rows sum exactly to the published Total Expenditures / Total General Fund Accounts. No row has a residual rounding gap.
+2. Every FY26 line cross-checked against `data/FY26_budget_summary.json`. All gaps are under 0.1 percent and are traceable to line-item reallocations between documents.
+3. FY24 cross-check against the ACFR Statistical Section "Changes in Fund Balances - Governmental Funds - Last Ten Fiscal Years" (`data/acfr/FY24_ACFR.pdf` page 118). That table uses a broader all-funds basis, so its total of 128,830,811 is higher than the General Fund 102,249,108. The education line there (51,350,385) is higher than the General Fund Schools line (46,168,131) because it folds in school food service, athletics, and grant-funded programs. The pension benefits line there (12,491,338) is much higher than the General Fund pension (4,512,303) because it adds the state's on-behalf MTRS payment (approximately 7,979,035 per the budgetary-to-GAAP reconciliation on FY24 ACFR page 100). None of this contradicts the budget-basis table; it simply confirms that the two views measure different things.
+4. Health insurance row cross-check against `data/group_insurance_FY14-27.csv`. The CSV reports total Group Insurance appropriations (the budgeted amount) for each year; the budgetary table above reports actual expenditures (typically 5 to 15 percent lower than the appropriation because favorable claims left unspent balances). The shape and trend are the same.
+
+### Known deviations and uncertainties
+
+- The `data/group_insurance_FY14-27.csv` file is missing FY2020. This research uses the FY20 ACFR Budget-and-Actual schedule to fill that gap; the value (11,976,422) is actual expended.
+- FY26 is a budget number, not an actual. The page should say "FY26 budget" in any prose that uses the FY26 figures. Favorable or adverse claims during the remainder of FY26 will move the actual total.
+- FY27 projected values (not in the twelve-row table but useful for prose context) come from the same document: Group Insurance 16,754,748, Pension 5,843,360, Debt Service 11,098,398, Schools 47,620,287, Public Safety 11,861,711, Total General Fund 109,777,938. Everything else residual would be 16,599,434.
+- The "Medicare" line in the ACFR's Fringe Benefits section is interpreted as Medicare Reimbursement (retiree Part B reimbursement) based on its size (500K-750K range) and consolidation into Group Insurance in the FY25-FY27 budget documents. A Medicare payroll-tax line of about 250-280K appears separately in the FY27 Proposed Budget. These are different items; the small payroll-tax line is left in Everything Else, the retiree reimbursement line is combined into Health insurance.
+- Budgetary-basis General Fund excludes state on-behalf pension contributions (roughly 6-8M per year in recent years for the Massachusetts Teachers' Retirement System). Any prose that talks about the town's pension exposure should either note this explicitly or use the GAAP-basis pension benefits line from the Changes in Fund Balances table (`data/acfr/FY24_ACFR.pdf` page 118) instead, which is what `data/pension_expenditure_FY15-24.csv` already reports.
+- The six-category breakdown was completed in full (no fallback to the four-category simplification in Step 8 was necessary). Debt and public safety extracted cleanly from the ACFR Budget and Actual schedules.
+
