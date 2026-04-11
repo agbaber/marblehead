@@ -5,40 +5,175 @@ og_title: "What you can do"
 og_description: "How to engage with Marblehead budget decisions beyond voting yes or no on the override: who decides what, when residents can input, and what longer-term oversight looks like."
 og_url: https://marbleheaddata.org/what-you-can-do.html
 ---
+<style>
+  /* Page-scoped: TL;DR callout (same pattern as senior-tax-relief.html) */
+  .tldr {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 22px 16px;
+    margin: 0 0 24px;
+    border-top: 3px solid var(--c-navy);
+  }
+  .tldr-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.2px; color: var(--text-subtle);
+    margin-bottom: 10px;
+  }
+  .tldr ul { list-style: none; padding: 0; margin: 0; }
+  .tldr li {
+    font-size: 14px; line-height: 1.55; color: var(--text-muted);
+    padding: 6px 0 6px 22px;
+    position: relative;
+    border-top: 1px solid var(--divider);
+  }
+  .tldr li:first-child { border-top: none; padding-top: 2px; }
+  .tldr li:last-child { padding-bottom: 0; }
+  .tldr li::before {
+    content: ""; position: absolute; left: 4px; top: 14px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--c-teal);
+  }
+  .tldr li:first-child::before { top: 10px; }
+  .tldr li strong { color: var(--text); }
+
+  /* Page-scoped: goal cards (reader-stance decision menu) */
+  .goal-cards {
+    display: flex; flex-direction: column; gap: 12px;
+    margin: 10px 0 24px;
+  }
+  .goal-card {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 22px 16px;
+    border-left: 3px solid var(--c-teal);
+  }
+  .goal-card-eyebrow {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.1px; color: var(--c-teal);
+    margin-bottom: 6px;
+  }
+  .goal-card p {
+    font-size: 14px; line-height: 1.55; color: var(--text-muted);
+    margin: 0;
+  }
+  .goal-card p + p { margin-top: 8px; }
+
+  /* Page-scoped: body cards (contact info for each civic body) */
+  .body-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 10px 0 24px;
+  }
+  .body-card {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 22px 16px;
+  }
+  .body-card h3 {
+    font-size: 15px; font-weight: 700; color: var(--text);
+    margin: 0 0 10px;
+  }
+  .body-card dl {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 6px 14px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .body-card dt {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--text-subtle);
+    padding-top: 2px;
+  }
+  .body-card dd {
+    margin: 0;
+    color: var(--text-muted);
+  }
+  .body-card dd strong { color: var(--text); font-weight: 600; }
+  .body-card dd code {
+    font-family: var(--font-mono); font-size: 12px;
+    background: var(--divider); padding: 1px 5px; border-radius: 3px;
+  }
+
+  @media (min-width: 720px) {
+    .body-cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .goal-card, .body-card { padding: 16px 18px 14px; }
+    .body-card dl { grid-template-columns: 80px 1fr; font-size: 12px; }
+    .tldr { padding: 16px 18px 14px; }
+    .tldr li { font-size: 13px; }
+  }
+</style>
+
 <h1>What you can do</h1>
 
-<p><strong>The ballot has four possible outcomes: one of three override tiers passes, or no override.</strong> Structural reforms that could affect future budgets are real, but they are slow, and none of them change what is on this year's ballot.</p>
+<p>The ballot has four possible outcomes: one of three override tiers passes, or no override. Structural reforms that could affect future budgets are real, but they are slow, and none of them change what is on this year's ballot. Everything below is about influencing what comes next.</p>
 
-<p>Everything below is about influencing what comes next: how the budget gets built, who decides what, when residents can input, and what longer-term reforms exist.</p>
+<p>Still deciding on this year's ballot? See <a href="what-is-the-override.html">what is the override</a> and <a href="no-override-budget.html">what is in the no-override budget</a>.</p>
 
-<p>Still deciding on this year's ballot? See <a href="what-is-the-override.html">what is the override</a> and <a href="no-override-budget.html">what is in the no-override budget</a>. Otherwise, keep reading.</p>
+<div class="tldr">
+  <p class="tldr-label">The short version</p>
+  <ul>
+    <li><strong>Your vote this June</strong> picks one of four outcomes: Tier 1 at $9M, Tier 2 at $12M, Tier 3 at $15M, or no override. Everything else on this page is about what comes next.</li>
+    <li><strong>Town Meeting is the lever</strong> for the overall size of the town budget. The Select Board handles operations and policy. The Finance Committee reviews and recommends. The School Committee sets priorities within the school budget.</li>
+    <li><strong>Two reform ideas with precedent elsewhere:</strong> a state DLS Financial Management Review (free, independent, requested by the Select Board) and more detailed department-level budget reporting (a format choice, no warrant article needed).</li>
+    <li><strong>Every body listed below is public.</strong> Meetings are hybrid. Agendas are posted on the <a href="https://marbleheadma.gov/">town calendar</a> at least 48 hours ahead.</li>
+  </ul>
+</div>
 
 <h2>Pick the goal that matches your view</h2>
+<p>Four reader stances, four different next actions. If you recognize your view here, the matching card tells you the concrete lever.</p>
 
-<p><strong>"I want the override to pass."</strong> Vote yes on one or more tiers. The tiers are nested, so the highest one that gets a majority sets the amount. Read <a href="what-is-the-override.html">what is the override</a> for the tier breakdown. Talk to neighbors. Attend the May 4 Town Meeting to support the budget motion.</p>
+<div class="goal-cards">
+  <div class="goal-card">
+    <div class="goal-card-eyebrow">If you want the override to pass</div>
+    <p>Vote yes on one or more tiers. The tiers are nested, so the highest one that gets a majority sets the amount. Read <a href="what-is-the-override.html">what is the override</a> for the tier breakdown. Talk to neighbors. Attend the May 4 Town Meeting to support the budget motion.</p>
+  </div>
 
-<p><strong>"I want the override to fail."</strong> Vote no on all three tiers. Attend the May 4 Town Meeting to oppose specific line items. Read <a href="no-override-budget.html">what is in the no-override budget</a> to understand what takes effect if no override passes: this is a real outcome, not a hypothetical.</p>
+  <div class="goal-card">
+    <div class="goal-card-eyebrow">If you want the override to fail</div>
+    <p>Vote no on all three tiers. Attend the May 4 Town Meeting to oppose specific line items. Read <a href="no-override-budget.html">what is in the no-override budget</a> to understand what takes effect if no override passes: this is a real outcome, not a hypothetical.</p>
+  </div>
 
-<p><strong>"I want specific cuts avoided regardless of the vote outcome."</strong> Depends on the cut. School positions: the School Committee sets priorities within the school budget. Town positions: the Town Administrator and Select Board make operational hiring decisions. The override vote sets the overall size; reallocation within it is a different decision, made by different people.</p>
+  <div class="goal-card">
+    <div class="goal-card-eyebrow">If you want specific cuts avoided regardless of the vote</div>
+    <p>Depends on the cut. School positions: the School Committee sets priorities within the school budget. Town positions: the Town Administrator and Select Board make operational hiring decisions. The override vote sets the overall size; reallocation within it is a different decision, made by different people.</p>
+  </div>
 
-<p><strong>"I don't know yet; I want to understand the system."</strong> Read the town charter, the most recent <a href="https://marbleheadma.gov/finance-committee/">Finance Committee annual report</a>, and the FY27 proposed budget (linked from <a href="no-override-budget.html">what is in the no-override budget</a>). Attend any Finance Committee or Select Board meeting: they are public, hybrid, and often have a public comment period at the start. Join a committee when seats become available.</p>
+  <div class="goal-card">
+    <div class="goal-card-eyebrow">If you don't know yet and want to understand the system</div>
+    <p>Read the town charter, the most recent <a href="https://marbleheadma.gov/finance-committee/">Finance Committee annual report</a>, and the FY27 proposed budget (linked from <a href="no-override-budget.html">what is in the no-override budget</a>). Attend any Finance Committee or Select Board meeting: they are public, hybrid, and often have a public comment period at the start. Join a committee when seats become available.</p>
+  </div>
+</div>
 
 <h2>Better oversight, regardless of the vote</h2>
+<p>Budget rigor and clear explanations are not contested goals. The question is how you get there. The town already has real oversight in place, and there are two concrete reform ideas with precedent elsewhere.</p>
 
-<p>Budget rigor and clear explanations are not contested goals. The question is how you get there.</p>
+<div class="card">
+  <h3>What exists today</h3>
+  <p>The Finance Committee reviews every department's budget and holds public hearings on each warrant article. Its annual Super Saturday hearings are a full day of department-by-department justification, open to the public. Town Meeting itself can amend warrant line items from the floor, including cutting them (though not adding). The Finance Committee publishes an <a href="https://marbleheadma.gov/finance-committee/">annual report</a> before each Town Meeting, and the town publishes an independent annual audit every year.</p>
+  <p>The state <a href="https://www.mass.gov/orgs/division-of-local-services">Division of Local Services</a> also publishes a Municipal Finance Trend Dashboard for every Massachusetts town, showing revenues, expenditures, operating position, debt, demographics, and Proposition 2&frac12; data over time. Attending these meetings, reading these reports, and asking questions is the most direct form of budget oversight a resident can exercise today.</p>
+</div>
 
-<p><strong>What exists today.</strong> The Finance Committee reviews every department's budget and holds public hearings on each warrant article. Its annual Super Saturday hearings are a full day of department-by-department justification, open to the public. Town Meeting itself can amend warrant line items from the floor, including cutting them (though not adding). The Finance Committee publishes an <a href="https://marbleheadma.gov/finance-committee/">annual report</a> before each Town Meeting, and the town publishes an independent annual audit every year. The state <a href="https://www.mass.gov/orgs/division-of-local-services">Division of Local Services</a> also publishes a Municipal Finance Trend Dashboard for every Massachusetts town, showing revenues, expenditures, operating position, debt, demographics, and Proposition 2&frac12; data over time. Attending these meetings, reading these reports, and asking questions is the most direct form of budget oversight a resident can exercise today.</p>
+<div class="card">
+  <h3>Reform idea: a state DLS Financial Management Review</h3>
+  <p>The state's Financial Management Resource Bureau conducts <a href="https://www.mass.gov/info-details/financial-management-reviews">Financial Management Reviews</a> for towns on request from the Select Board. They cover government structure, fiscal planning, ongoing financial procedures, and information technology, and they produce a published report with specific recommendations.</p>
+  <p>Three Massachusetts towns received one in the last 18 months: <a href="https://www.mass.gov/doc/southborough-financial-management-review-august-2024/download">Southborough</a> (August 2024), <a href="https://www.mass.gov/doc/dudley-financial-management-review-december-2024/download">Dudley</a> (December 2024), and <a href="https://www.mass.gov/doc/wareham-financial-management-review-september-2025/download">Wareham</a> (September 2025). A Marblehead resident pushing for this would ask the Select Board to request the review. The review is free and the report is independent of town officials.</p>
+</div>
 
-<p><strong>Two concrete things that could exist, with precedent elsewhere.</strong></p>
-
-<p>The first is a <a href="https://www.mass.gov/info-details/financial-management-reviews">DLS Financial Management Review</a>. The state's Financial Management Resource Bureau conducts these for towns on request from the Select Board. They cover government structure, fiscal planning, ongoing financial procedures, and information technology, and they produce a published report with specific recommendations. Three Massachusetts towns received one in the last 18 months: <a href="https://www.mass.gov/doc/southborough-financial-management-review-august-2024/download">Southborough</a> (August 2024), <a href="https://www.mass.gov/doc/dudley-financial-management-review-december-2024/download">Dudley</a> (December 2024), and <a href="https://www.mass.gov/doc/wareham-financial-management-review-september-2025/download">Wareham</a> (September 2025). A Marblehead resident pushing for this would ask the Select Board to request the review. The review is free and the report is independent of town officials.</p>
-
-<p>The second is performance-goal and departmental-detail reporting inside the annual budget document itself. <a href="https://www.westboroughma.gov/DocumentCenter/View/4558/FY2026-Budget-Overview">Westborough's FY26 budget</a> presents each department's detailed budget along with performance goals and organizational charts. Marblehead's current budget format is more compact. A resident pushing for this would ask the Town Administrator or Finance Committee to adopt a similar structure for the FY28 budget. This does not require a warrant article; it is a choice about how the annual budget is presented.</p>
+<div class="card">
+  <h3>Reform idea: performance-goal budget reporting</h3>
+  <p><a href="https://www.westboroughma.gov/DocumentCenter/View/4558/FY2026-Budget-Overview">Westborough's FY26 budget</a> presents each department's detailed budget along with performance goals and organizational charts. Marblehead's current budget format is more compact. A resident pushing for this would ask the Town Administrator or Finance Committee to adopt a similar structure for the FY28 budget. This does not require a warrant article; it is a choice about how the annual budget is presented.</p>
+</div>
 
 <p>Both of these are slow. Neither changes this year's vote. Both have concrete precedent in Massachusetts towns of similar or smaller size.</p>
 
 <h2>Who decides what</h2>
-
 <p>Most civic decisions in Marblehead are distributed across several bodies, each with different authority. Knowing which body handles which decision is the difference between writing the right email and writing to no one.</p>
 
 <table class="peer-table">
@@ -57,7 +192,7 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
     </tr>
     <tr>
       <td><strong>Proposition 2&frac12; override or debt exclusion</strong></td>
-      <td>Select Board puts the question on the ballot; Town Meeting approves or rejects the corresponding budget; voters decide at the ballot</td>
+      <td>Select Board puts the question on the ballot; Town Meeting approves the budget; voters decide at the ballot</td>
       <td>Speak and vote at Town Meeting; vote at the ballot</td>
     </tr>
     <tr>
@@ -66,12 +201,12 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
       <td>Contact the Town Administrator or the relevant Select Board member</td>
     </tr>
     <tr>
-      <td><strong>School spending priorities</strong> (within the overall school budget Town Meeting approves)</td>
+      <td><strong>School spending priorities</strong> (within the school budget)</td>
       <td>School Committee</td>
       <td>Attend School Committee meetings; contact members directly</td>
     </tr>
     <tr>
-      <td><strong>Tax classification (single vs. split residential / commercial rate)</strong></td>
+      <td><strong>Tax classification</strong> (single vs. split residential / commercial rate)</td>
       <td>Select Board, annually at a public hearing</td>
       <td>Attend the annual tax classification hearing</td>
     </tr>
@@ -86,7 +221,7 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
       <td>Petition a warrant article with 10 registered-voter signatures for the Annual Town Meeting, or support one</td>
     </tr>
     <tr>
-      <td><strong>Licensing (alcohol, food, entertainment, lodging)</strong></td>
+      <td><strong>Licensing</strong> (alcohol, food, entertainment, lodging)</td>
       <td>Select Board</td>
       <td>Contact Select Board members directly</td>
     </tr>
@@ -98,85 +233,125 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
   </tbody>
 </table>
 
-<p>Two things worth noticing:</p>
-
-<ol>
-  <li><strong>Most meaningful budget decisions run through Town Meeting.</strong> If you care about the overall size of the town's operating budget, the warrant articles, or any structural change to how the town is governed, the lever is Town Meeting. Contacting individual Select Board members is effective for operational questions but does not change the total budget size.</li>
-  <li><strong>Some things that feel local are actually state decisions.</strong> Health insurance rates, pension contribution formulas, and most forms of state aid are set at the state level. A resident pushing to change them talks to their state legislator, not the Select Board. This is not a dodge; it is where the legal authority sits.</li>
-</ol>
+<div class="takeaway takeaway--pos">
+  <p><strong>Most meaningful budget decisions run through Town Meeting.</strong> If you care about the overall size of the town's operating budget, the warrant articles, or any structural change to how the town is governed, the lever is Town Meeting. Contacting individual Select Board members is effective for operational questions but does not change the total budget size.</p>
+  <p style="margin-top:10px;"><strong>Some things that feel local are actually state decisions.</strong> Health insurance rates, pension contribution formulas, and most forms of state aid are set at the state level. A resident pushing to change them talks to their state legislator, not the Select Board. This is not a dodge; it is where the legal authority sits.</p>
+</div>
 
 <h2>How to reach each body</h2>
+<p>All of the bodies below are public. Most meetings are hybrid (in-person plus Zoom). Agendas are posted on the <a href="https://marbleheadma.gov/">town calendar</a> at least 48 hours before each meeting.</p>
 
-<p>All of the bodies listed below are public. Most meetings are hybrid (in-person plus Zoom). Agendas are posted on the <a href="https://marbleheadma.gov/">town calendar</a> at least 48 hours before each meeting.</p>
+<div class="body-cards">
+  <div class="body-card">
+    <h3>Select Board</h3>
+    <dl>
+      <dt>Authority</dt>
+      <dd>Chief executive body. Handles licensing, budget development, fiscal oversight, policy, and appointments.</dd>
+      <dt>Members</dt>
+      <dd>Dan Fox (Chair, term ends 2027), Moses Grader (2027), Erin Noonan (2026), Alexa Singer (2026), James Zisson (2028). Individual email: <code>lastnamefirstletter@marbleheadma.gov</code>.</dd>
+      <dt>Meets</dt>
+      <dd>2nd and 4th Wednesday at 7 PM, Select Board's Room, Abbot Hall.</dd>
+      <dt>Contact</dt>
+      <dd>(781) 631-0000 &middot; <a href="https://marbleheadma.gov/select-board/">marbleheadma.gov/select-board</a></dd>
+    </dl>
+  </div>
 
-<h3>Select Board</h3>
-<ul>
-  <li><strong>Members:</strong> Dan Fox (Chair, term ends 2027), Moses Grader (2027), Erin Noonan (2026), Alexa Singer (2026), James Zisson (2028). Each member has an individual email at <code>&lt;lastname&gt;&lt;firstletter&gt;@marbleheadma.gov</code>.</li>
-  <li><strong>Meets:</strong> 2nd and 4th Wednesday of each month at 7 PM, Select Board's Room, Abbot Hall.</li>
-  <li><strong>General office:</strong> (781) 631-0000. Page: <a href="https://marbleheadma.gov/select-board/">marbleheadma.gov/select-board/</a>.</li>
-  <li><strong>Authority:</strong> Chief executive body of the town. Handles licensing, budget development, fiscal oversight, policy, and appointments.</li>
-</ul>
+  <div class="body-card">
+    <h3>Finance Committee</h3>
+    <dl>
+      <dt>Authority</dt>
+      <dd>Advisory. Reviews every department's budget and recommends on each warrant article. The committee does not appropriate money; Town Meeting does.</dd>
+      <dt>Members</dt>
+      <dd>Alec Goolsby (Chair), Pat Franklin and Molly Teets (Vice Chairs), Timothy Shotmeyer, Michael O'Neil, Eric Knight, Michael Janko, Lindsay Dube, Ramon Garcia. Nine volunteers appointed by the Select Board to staggered 3-year terms.</dd>
+      <dt>Meets</dt>
+      <dd>Monthly June through November, more frequently December through May in the lead-up to Town Meeting. Mary Alley Municipal Building, lower-level conference room.</dd>
+      <dt>Hearings</dt>
+      <dd>"Super Saturday" budget hearings run before each Town Meeting, open to the public, with department heads presenting each line.</dd>
+      <dt>Contact</dt>
+      <dd>(781) 631-1705 &middot; <a href="https://marbleheadma.gov/finance-committee/">marbleheadma.gov/finance-committee</a></dd>
+    </dl>
+  </div>
 
-<h3>Finance Committee</h3>
-<ul>
-  <li><strong>Members:</strong> 9 volunteers appointed by the Select Board to staggered 3-year terms. Currently: Alec Goolsby (Chair), Pat Franklin and Molly Teets (Vice Chairs), and members Timothy Shotmeyer, Michael O'Neil, Eric Knight, Michael Janko, Lindsay Dube, and Ramon Garcia.</li>
-  <li><strong>Meets:</strong> Monthly June through November, more frequently December through May in the lead-up to Town Meeting. Meetings held at Mary Alley Municipal Building lower-level conference room.</li>
-  <li><strong>Phone:</strong> (781) 631-1705. Page: <a href="https://marbleheadma.gov/finance-committee/">marbleheadma.gov/finance-committee/</a>.</li>
-  <li><strong>Spring hearings:</strong> "Super Saturday" budget hearings run before Town Meeting, open to the public, with department heads presenting each line.</li>
-  <li><strong>Annual report:</strong> Published before each Town Meeting, with a recommendation on every warrant article.</li>
-  <li><strong>Authority:</strong> Advisory. Reviews every department's budget and recommends on each warrant article. The committee does not appropriate money; Town Meeting does.</li>
-</ul>
+  <div class="body-card">
+    <h3>School Committee</h3>
+    <dl>
+      <dt>Authority</dt>
+      <dd>Sets spending priorities and policy within the overall school budget approved by Town Meeting.</dd>
+      <dt>Meets</dt>
+      <dd>1st and 3rd Thursday of each month at 6 PM.</dd>
+      <dt>Contact</dt>
+      <dd>School Department, (781) 639-3141, 9 Widger Road. Members and subcommittees: <a href="https://www.marbleheadschools.org/school-committee">marbleheadschools.org/school-committee</a>.</dd>
+    </dl>
+  </div>
 
-<h3>School Committee</h3>
-<ul>
-  <li><strong>Meets:</strong> 1st and 3rd Thursday of each month at 6 PM.</li>
-  <li><strong>Contact:</strong> Through the School Department at (781) 639-3141, 9 Widger Road.</li>
-  <li><strong>Members, agendas, subcommittees:</strong> <a href="https://www.marbleheadschools.org/school-committee">marbleheadschools.org/school-committee</a>.</li>
-  <li><strong>Authority:</strong> Sets spending priorities and policy within the overall school budget approved by Town Meeting.</li>
-</ul>
+  <div class="body-card">
+    <h3>Town Administrator</h3>
+    <dl>
+      <dt>Role</dt>
+      <dd>Drafts and recommends the annual operating budget and capital plan for review by the Select Board and approval by Town Meeting. Oversees 11 town departments.</dd>
+      <dt>Name</dt>
+      <dd><strong>Thatcher W. Kezer III</strong></dd>
+      <dt>Contact</dt>
+      <dd><a href="mailto:kezert@marbleheadma.gov">kezert@marbleheadma.gov</a> &middot; (781) 631-0000 &middot; Abbot Hall, 188 Washington Street</dd>
+    </dl>
+  </div>
 
-<h3>Town Administrator</h3>
-<ul>
-  <li><strong>Thatcher W. Kezer III.</strong> Email: kezert@marbleheadma.gov. Phone: (781) 631-0000. Office: Abbot Hall, 188 Washington Street.</li>
-  <li><strong>Role:</strong> Drafts and recommends the annual operating budget and capital plan for review by the Select Board and approval by Town Meeting. Oversees 11 town departments.</li>
-</ul>
+  <div class="body-card">
+    <h3>Town Clerk</h3>
+    <dl>
+      <dt>Role</dt>
+      <dd>Handles voter registration, elections, and warrant article petitions. First stop for filing a warrant article or verifying voter registration.</dd>
+      <dt>Contact</dt>
+      <dd><a href="https://marbleheadma.gov/">marbleheadma.gov</a></dd>
+    </dl>
+  </div>
 
-<h3>Town Clerk</h3>
-<ul>
-  <li><strong>Role:</strong> Handles voter registration, elections, and warrant article petitions. First stop for filing a warrant article or verifying voter registration.</li>
-  <li><strong>Contact:</strong> Listed on <a href="https://marbleheadma.gov/">marbleheadma.gov</a>.</li>
-</ul>
+  <div class="body-card">
+    <h3>State and federal representatives</h3>
+    <dl>
+      <dt>State Senator</dt>
+      <dd><a href="https://malegislature.gov/Legislators/Profile/BPC0">Brendan Crighton</a> (D-Lynn), Third Essex District. Covers Lynn, Lynnfield, Marblehead, Nahant, Saugus, and Swampscott.</dd>
+      <dt>State Rep.</dt>
+      <dd><a href="https://malegislature.gov/Legislators/Profile/JBA1">Jennifer Balinsky Armini</a>. <a href="mailto:Jennifer.Armini@mahouse.gov">Jennifer.Armini@mahouse.gov</a> &middot; (617) 722-2140 &middot; Room 21, 24 Beacon Street, Boston.</dd>
+      <dt>U.S. Rep.</dt>
+      <dd>Seth Moulton (MA-6)</dd>
+    </dl>
+  </div>
+</div>
 
-<h3>State and federal representatives</h3>
-<ul>
-  <li><strong>State Senator (Third Essex District):</strong> <a href="https://malegislature.gov/Legislators/Profile/BPC0">Brendan Crighton</a> (D-Lynn). District includes Lynn, Lynnfield, Marblehead, Nahant, Saugus, and Swampscott.</li>
-  <li><strong>State Representative:</strong> <a href="https://malegislature.gov/Legislators/Profile/JBA1">Jennifer Balinsky Armini</a>. Email: Jennifer.Armini@mahouse.gov. Phone: (617) 722-2140. Office: Room 21, 24 Beacon Street, Boston.</li>
-  <li><strong>U.S. Representative (MA-6):</strong> Seth Moulton.</li>
-</ul>
+<h2>What to expect at Town Meeting</h2>
 
-<h3>What to expect at Town Meeting</h3>
+<div class="card">
+  <h3>The basics</h3>
+  <p>Town Meeting is the legal decision-making body of the town. Any registered voter can attend, speak on any article under consideration, and vote. The meeting is held at Marblehead High School and can run multiple nights across a week until all business is concluded. Attendance is self-selected.</p>
+  <p>The Moderator controls who gets recognized to speak: you raise your hand, wait to be called on, state your name and address, and confine your remarks to the motion on the floor. Speakers who wander into unrelated material can be ruled out of order. Budget articles often pass with limited floor debate when the Finance Committee has recommended in favor. Contested articles draw longer discussion. Votes are usually by show of hands; nine or more voters can call for a written ballot.</p>
+</div>
 
-<p>Town Meeting is the legal decision-making body of the town. Any registered voter can attend, speak on any article under consideration, and vote.</p>
-
-<p>The meeting is held at Marblehead High School and can run multiple nights across a week until all business is concluded. Attendance is self-selected. The Moderator controls who gets recognized to speak: you raise your hand, wait to be called on, state your name and address, and confine your remarks to the motion on the floor. Speakers who wander into unrelated material can be ruled out of order.</p>
-
-<p>Budget articles often pass with limited floor debate when the Finance Committee has recommended in favor. Contested articles draw longer discussion. Votes are usually by show of hands; nine or more voters can call for a written ballot.</p>
-
-<p>First Town Meetings can feel procedurally dense. Reading the warrant and the Finance Committee report in advance is the main thing that makes it easier to follow. A few practical things to know before you go:</p>
-
-<ul>
-  <li>The warrant (the list of articles to be voted on) is published in advance. Pick the articles you actually care about. You do not have to pay attention to the rest.</li>
-  <li>The Finance Committee's annual report explains each article and gives a recommendation on each. It will tell you what you are voting on and why.</li>
-  <li>If you just want to vote, you do not have to speak at all.</li>
-  <li>The auditorium is warm. Bring water.</li>
-  <li>If Town Meeting adjourns before reaching your article, it resumes on a later night. Check the town calendar for the continuation date.</li>
-  <li>If you do speak, keep it short. State your position in your first sentence ("I am in favor of Article X" or "I am opposed to Article X"), address the specific motion on the table, and aim for a minute or less. Longer speeches rarely change votes and often test the Moderator's patience.</li>
-</ul>
+<div class="card">
+  <h3>Practical things to know before you go</h3>
+  <ul>
+    <li>The warrant (the list of articles to be voted on) is published in advance. Pick the articles you actually care about. You do not have to pay attention to the rest.</li>
+    <li>The Finance Committee's annual report explains each article and gives a recommendation on each. It will tell you what you are voting on and why.</li>
+    <li>If you just want to vote, you do not have to speak at all.</li>
+    <li>The auditorium is warm. Bring water.</li>
+    <li>If Town Meeting adjourns before reaching your article, it resumes on a later night. Check the town calendar for the continuation date.</li>
+    <li>If you do speak, keep it short. State your position in your first sentence ("I am in favor of Article X" or "I am opposed to Article X"), address the specific motion on the table, and aim for a minute or less. Longer speeches rarely change votes and often test the Moderator's patience.</li>
+  </ul>
+</div>
 
 <p>Town Meeting is the only place residents vote directly on the town budget and on warrant articles. Every registered voter in the room has the same vote as anyone else.</p>
 
-<h3>Petitioning a warrant article</h3>
+<h2>Petitioning a warrant article</h2>
 
-<p>To place an article on the warrant for Annual Town Meeting, gather signatures from 10 registered Marblehead voters and submit the petition to the Select Board at least 60 days before the meeting. For a Special Town Meeting, the threshold is 100 signatures. The Town Clerk's office provides the petition form and can answer procedural questions about filing requirements.</p>
+<div class="card">
+  <p>To place an article on the warrant for Annual Town Meeting, gather signatures from <strong>10 registered Marblehead voters</strong> and submit the petition to the Select Board at least <strong>60 days before the meeting</strong>. For a Special Town Meeting, the threshold is 100 signatures. The Town Clerk's office provides the petition form and can answer procedural questions about filing requirements.</p>
+  <p>Articles submitted on time appear in the printed warrant mailed to registered voters before Town Meeting. Each article gets a Finance Committee recommendation in the annual report. Citizens can sponsor articles on any subject the Town Meeting is legally allowed to act on, including appropriations, bylaws, instructions to town officials, and resolutions.</p>
+</div>
 
-<p>Articles submitted on time appear in the printed warrant mailed to registered voters before Town Meeting. Each article gets a Finance Committee recommendation in the annual report. Citizens can sponsor articles on any subject the Town Meeting is legally allowed to act on, including appropriations, bylaws, instructions to town officials, and resolutions.</p>
+<div class="read-next">
+  <div class="read-next-label">Read next</div>
+  <a class="read-next-link" href="the-debate.html">
+    <div class="read-next-title">The override debate, the best case for each side &rarr;</div>
+    <div class="read-next-desc">Still working through your vote? Five tensions in the local debate, with the strongest version of each case.</div>
+  </a>
+</div>
