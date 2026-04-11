@@ -89,23 +89,25 @@ community_pulse: off-sections
     margin: 0;
   }
   .meta-note-list {
-    list-style: none;
+    margin: 14px 0 0;
     padding: 0;
-    margin: 10px 0 0;
   }
-  .meta-note-list li {
-    padding: 7px 0 7px 14px;
-    margin-bottom: 4px;
-    line-height: 1.55;
-    border-left: 2px solid color-mix(in srgb, var(--c-navy) 30%, var(--border));
-  }
-  .meta-note-list li:last-child {
-    margin-bottom: 0;
-  }
-  .meta-note-list strong {
-    color: var(--text);
+  .meta-note-list dt {
+    font-size: 10px;
     font-weight: 700;
-    margin-right: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: var(--c-navy);
+    margin-bottom: 3px;
+  }
+  .meta-note-list dt:not(:first-of-type) {
+    margin-top: 14px;
+  }
+  .meta-note-list dd {
+    margin: 0;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.55;
   }
 
   /* TL;DR section: visually promote the summary above the five tensions */
@@ -243,12 +245,16 @@ community_pulse: off-sections
 
   <div class="meta-note">
     <p>These five tensions are not all the same kind of disagreement. Each tension below mixes four elements in different proportions:</p>
-    <ul class="meta-note-list">
-      <li><strong>Facts.</strong> Are the cost drivers really growing at the rate claimed?</li>
-      <li><strong>Interpretation.</strong> Is a 43% library reduction damage or discipline?</li>
-      <li><strong>Values.</strong> Is a multi-year reset responsible or irresponsible?</li>
-      <li><strong>Governance.</strong> Do you trust the people making the ask?</li>
-    </ul>
+    <dl class="meta-note-list">
+      <dt>Facts</dt>
+      <dd>Are the cost drivers really growing at the rate claimed?</dd>
+      <dt>Interpretation</dt>
+      <dd>Is a 43% library reduction damage or discipline?</dd>
+      <dt>Values</dt>
+      <dd>Is a multi-year reset responsible or irresponsible?</dd>
+      <dt>Governance</dt>
+      <dd>Do you trust the people making the ask?</dd>
+    </dl>
   </div>
 
   <div class="tldr">
