@@ -5,6 +5,7 @@
 .claude/
 .playwright-mcp/
 .superpowers/
+.worktrees/
 .DS_Store
 
 # Local-only data (too large or not public-ready)
