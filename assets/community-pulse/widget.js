@@ -143,9 +143,9 @@ export async function incrementReaction(sectionId) {
 // ---- Widget rendering and hydration -------------------------------------
 
 const STANCE_BUTTONS = [
-  { key: 'agree',    emoji: '👍', label: 'Agree' },
-  { key: 'disagree', emoji: '👎', label: 'Disagree' },
-  { key: 'alert',    emoji: '!',  label: 'Alert: something here caught my eye' }
+  { key: 'agree',    glyph: '+', label: 'Agree' },
+  { key: 'disagree', glyph: '−', label: 'Disagree' },
+  { key: 'alert',    glyph: '!', label: 'Alert: something here caught my eye' }
 ];
 
 let widgetCounter = 0;
@@ -163,62 +163,56 @@ function buildWidget(sectionId, sectionTitle, initialReactions, initialStance) {
   // Stance buttons.
   const buttons = document.createElement('div');
   buttons.className = 'cp-widget__buttons';
-  STANCE_BUTTONS.forEach(({ key, emoji, label }) => {
+  STANCE_BUTTONS.forEach(({ key, glyph, label }) => {
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'cp-widget__button';
     btn.dataset.stance = key;
     btn.setAttribute('aria-label', label);
     btn.title = label;
-    btn.textContent = emoji;
+    btn.textContent = glyph;
     btn.setAttribute('aria-pressed', initialStance === key ? 'true' : 'false');
     buttons.appendChild(btn);
   });
   root.appendChild(buttons);
 
-  // Reaction count + delta.
+  // Reaction count + delta. Hidden until real data arrives; no placeholder text.
   const count = document.createElement('span');
   count.className = 'cp-widget__count';
   const countNum = document.createElement('span');
   countNum.className = 'cp-widget__count-num';
-  countNum.textContent = initialReactions
-    ? `${initialReactions.total} reactions`
-    : '...'; // ellipsis placeholder until the GET /api/reactions batch resolves
   const countDelta = document.createElement('span');
   countDelta.className = 'cp-widget__delta';
-  if (initialReactions && initialReactions.last_24h > 0) {
-    countDelta.textContent = `+${initialReactions.last_24h} today`;
+  if (initialReactions) {
+    countNum.textContent = `${initialReactions.total} reactions`;
+    if (initialReactions.last_24h > 0) {
+      countDelta.textContent = `+${initialReactions.last_24h} today`;
+    }
   }
   count.appendChild(countNum);
-  if (countDelta.textContent) count.appendChild(countDelta);
+  count.appendChild(countDelta);
   root.appendChild(count);
 
-  // Share button.
+  // Share button (copy link to clipboard). Icon = two overlapping rectangles.
   const share = document.createElement('button');
   share.type = 'button';
   share.className = 'cp-widget__share';
   share.dataset.action = 'share';
-  share.setAttribute('aria-label', 'Share this section');
-  share.title = 'Share this section';
-  share.textContent = 'Share';
+  share.setAttribute('aria-label', 'Copy link to this section');
+  share.title = 'Copy link';
+  share.innerHTML = '<svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="5.5" width="8.5" height="8.5" rx="1"/><path d="M2 10.5V3a1 1 0 0 1 1-1h7.5"/></svg>';
   root.appendChild(share);
 
-  // Privacy link.
-  const privacy = document.createElement('a');
-  privacy.className = 'cp-widget__privacy';
-  privacy.href = '/privacy.html';
-  privacy.title = 'How this feature handles your data';
-  privacy.textContent = 'Privacy';
-  root.appendChild(privacy);
-
-  // Note toggle.
+  // Note toggle. Icon = three horizontal lines of decreasing length.
   const noteToggle = document.createElement('button');
   noteToggle.type = 'button';
   noteToggle.className = 'cp-widget__note-toggle';
   noteToggle.dataset.action = 'toggle-note';
   noteToggle.setAttribute('aria-expanded', 'false');
   noteToggle.setAttribute('aria-controls', `${widgetId}-note`);
-  noteToggle.textContent = 'Note';
+  noteToggle.setAttribute('aria-label', 'Write a private note');
+  noteToggle.title = 'Note';
+  noteToggle.innerHTML = '<svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="5" x2="13" y2="5"/><line x1="3" y1="8.5" x2="13" y2="8.5"/><line x1="3" y1="12" x2="10" y2="12"/></svg>';
   root.appendChild(noteToggle);
 
   // Note textarea (hidden initially).
@@ -317,26 +311,18 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
   }, 1000);
   noteField.addEventListener('input', saveNote);
 
-  // Share button.
+  // Share button: always copy the section link to the clipboard.
   shareBtn.addEventListener('click', async () => {
-    const shareData = { title: sectionTitle, url: sectionUrl };
-    if (navigator.share) {
-      try {
-        await navigator.share(shareData);
-      } catch {
-        // User cancelled or share failed silently.
-      }
-    } else if (navigator.clipboard) {
+    if (navigator.clipboard) {
       try {
         await navigator.clipboard.writeText(sectionUrl);
         showToast('Link copied');
+        return;
       } catch {
-        showToast('Copy failed');
+        // Fall through to the prompt fallback below.
       }
-    } else {
-      // Last-resort fallback: show the URL in a prompt so the user can copy it manually.
-      window.prompt('Copy this link:', sectionUrl);
     }
+    window.prompt('Copy this link:', sectionUrl);
   });
 }
 
