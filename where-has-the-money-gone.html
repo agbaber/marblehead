@@ -91,6 +91,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a class="back" href="./">&larr; marbleheaddata.org</a>
 
   <h1>Where Has Marblehead's Money Gone?</h1>
+
+  <div class="key-stats">
+    <div class="key-stat">
+      <div class="key-stat-value">$70M&rarr;$106M</div>
+      <div class="key-stat-label">FY15 to FY26</div>
+    </div>
+    <div class="key-stat">
+      <div class="key-stat-value">48%</div>
+      <div class="key-stat-label">Schools share of growth</div>
+    </div>
+    <div class="key-stat">
+      <div class="key-stat-value">+10% real</div>
+      <div class="key-stat-label">Schools after inflation</div>
+    </div>
+    <div class="key-stat">
+      <div class="key-stat-value">$7.0M</div>
+      <div class="key-stat-label">FY26 free cash used</div>
+    </div>
+  </div>
+
   <p>The property tax levy doubled from $39M in 2005 to $82M in 2024. Here is where every additional dollar went, who has been checking the books, and what grew faster than it probably should have.</p>
 
   <!-- Act 1: Where it went. Filled by Task 5 (prose and department table) and Task 6 (stacked spending chart). -->
@@ -108,7 +128,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       Public safety -> s-tier-1     (teal)
       Debt payments -> s-swampscott (brass)
       Pensions      -> s-stoneham   (plum)
-      Everything    -> s-neutral    (gray)
+      Everything    -> s-everything (light slate, dedicated catch-all token)
   -->
   <div class="legend">
     <div class="legend-item s-marblehead"><span class="legend-swatch"></span><span class="legend-text">Schools</span></div>
@@ -116,7 +136,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="legend-item s-tier-1"><span class="legend-swatch"></span><span class="legend-text">Public safety</span></div>
     <div class="legend-item s-swampscott"><span class="legend-swatch"></span><span class="legend-text">Debt payments</span></div>
     <div class="legend-item s-stoneham"><span class="legend-swatch"></span><span class="legend-text">Pensions</span></div>
-    <div class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">Everything else</span></div>
+    <div class="legend-item s-everything"><span class="legend-swatch"></span><span class="legend-text">Everything else</span></div>
   </div>
 
   <div class="chart-wrapper">
@@ -177,7 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <g class="s-stoneham">
         <polygon class="data-fill" fill-opacity="0.85" points="60,154.5 120,148.7 180,141.9 240,133.0 300,129.9 360,125.1 420,121.4 480,108.9 540,102.7 600,92.6 660,92.1 720,83.3 720,95.0 660,102.8 600,102.5 540,111.8 480,117.2 420,129.1 360,132.3 300,136.7 240,139.3 180,147.6 120,154.1 60,159.5"/>
       </g>
-      <g class="s-neutral">
+      <g class="s-everything">
         <polygon class="data-fill" fill-opacity="0.85" points="60,126.2 120,120.3 180,112.3 240,101.6 300,98.3 360,94.1 420,92.8 480,75.8 540,68.7 600,56.9 660,60.8 720,48.3 720,83.3 660,92.1 600,92.6 540,102.7 480,108.9 420,121.4 360,125.1 300,129.9 240,133.0 180,141.9 120,148.7 60,154.5"/>
       </g>
 
@@ -207,7 +227,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <p>Schools drove nearly half of the $35.7 million in growth, adding $17.0 million (a 53 percent increase). Health insurance added $4.7 million (45 percent). Public safety added $3.9 million (54 percent). Debt payments added $3.8 million (70 percent). Pensions, measured on a budgetary basis, added $3.1 million (136 percent). The remaining $3.1 million came from "everything else", the catch-all bucket that includes public works, the library, the Council on Aging, state and county charges, and every other general fund line.</p>
 
-  <p>From 2015 to 2024, the most recent year with closed-book actuals, the schools line grew from $32.1 million to $46.2 million. That is 44 percent in nominal dollars, or about 10 percent after inflation (the consumer price index rose about 31 percent over the same window). Per-pupil spending, the state Department of Education's standard comparison metric, grew from $13,504 to $20,743, about 18 percent in real terms, as enrollment fell from 3,245 students to 2,617, a 19 percent drop. Classroom teacher headcount fell slightly from 256.8 to 245.8, a decline of 11 positions or about 4 percent. About 9 percent of the FY2026 school budget, roughly $4.6 million, pays for out-of-district special education placements mandated by federal and state law.</p>
+  <p>Schools is the biggest dollar pull, so it is worth unpacking. From 2015 to 2024, the most recent year with closed-book actuals, the schools line grew from $32.1 million to $46.2 million in nominal dollars. After inflation (the consumer price index rose about 31 percent over the same window), the picture changes:</p>
+
+  <div class="stat-compare">
+    <div class="stat-row">
+      <div class="stat-label">Enrollment</div>
+      <div class="stat-bar"><div class="stat-fill" style="width: 100%"></div></div>
+      <div class="stat-value">-19%<span>3,245 to 2,617 students</span></div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Per-pupil spending</div>
+      <div class="stat-bar"><div class="stat-fill" style="width: 95%"></div></div>
+      <div class="stat-value">+18%<span>$13,504 to $20,743, real terms</span></div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Schools total</div>
+      <div class="stat-bar"><div class="stat-fill" style="width: 53%"></div></div>
+      <div class="stat-value">+10%<span>real growth FY15 to FY24</span></div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Classroom teachers</div>
+      <div class="stat-bar"><div class="stat-fill" style="width: 21%"></div></div>
+      <div class="stat-value">-4%<span>256.8 to 245.8 positions</span></div>
+    </div>
+    <p class="stat-caption">Bars are scaled to the largest absolute change (enrollment, -19%). The +/- in the value column carries the direction. Per-pupil spending is the state Department of Education's standard comparison metric.</p>
+  </div>
+
+  <p>About 9 percent of the FY2026 school budget, roughly $4.6 million, pays for out-of-district special education placements that are mandated by federal and state law.</p>
 
   <h3>Department by department, 2015 vs 2026</h3>
   <p>Every general fund line item in the town's budget, ranked by absolute dollar change. Rows at the top drove the most change in either direction. Health insurance, pensions, and debt service are shown in the chart above and are not repeated here.</p>
@@ -423,7 +469,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="card">
     <h3>Finance Committee reports</h3>
-    <p>The Marblehead Finance Committee publishes an annual report reviewing the town's proposed budget before Town Meeting votes on it. The Committee has repeatedly warned that the town's reliance on leftover surplus from prior years, known by the state's term "free cash," to balance the operating budget is not sustainable. Recent reports name the pattern directly: Town Meeting has appropriated free cash into the operating budget every year, including roughly $10.2 million in fiscal year 2023, $5.5 million in fiscal year 2025, and $7.0 million in fiscal year 2026.</p>
+    <p>The Marblehead Finance Committee publishes an annual report reviewing the town's proposed budget before Town Meeting votes on it. The Committee has repeatedly warned that the town's reliance on leftover surplus from prior years, known by the state's term "free cash," to balance the operating budget is not sustainable. Their 2025 report put it directly:</p>
+
+    <blockquote class="quote">
+      <p>"The Town continues to use a significant portion of available Free Cash to balance the budget while upholding reserves equivalent to only 2.5 percent of the operating budget. This amount falls short of the state's recommended range of 5 to 10 percent."</p>
+      <footer>Marblehead Finance Committee, 2025 Annual Report. <a href="https://marbleheadma.gov/wp-content/uploads/2025/05/2026-Annual-Town-Meeting-Finance-Committee-Annual-Report.pdf">PDF</a>.</footer>
+    </blockquote>
+
+    <p>Recent Town Meetings have appropriated free cash into the operating budget every year, including roughly $10.2 million in fiscal year 2023, $5.5 million in fiscal year 2025, and $7.0 million in fiscal year 2026.</p>
     <p class="source">Source: annual Finance Committee reports published on <a href="https://marbleheadma.gov/">marbleheadma.gov</a>; reports from 2016, 2019, 2021, 2022, 2025, and 2026 are the ones most directly relevant to the period shown above.</p>
   </div>
 

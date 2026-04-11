@@ -53,6 +53,7 @@
   --series-revenue:    var(--c-sage);
   --series-cost:       var(--c-buoy);
   --series-neutral:    var(--c-text);
+  --series-everything: #93A4B0; /* light slate, for catch-all "everything else" categories */
 
   --series-tier-1: var(--c-teal);
   --series-tier-2: var(--c-navy);
@@ -100,6 +101,8 @@
     --c-brass: #E4B363;
     --c-sage:  #9DBC7A;
     --c-plum:  #B08AB4;
+
+    --series-everything: #5B6B78;
 
     --chart-grid-major: #24323F;
     --chart-grid-minor: #1B2834;
@@ -804,6 +807,7 @@ svg.chart .s-stoneham   { color: var(--series-stoneham); }
 svg.chart .s-revenue    { color: var(--series-revenue); }
 svg.chart .s-cost       { color: var(--series-cost); }
 svg.chart .s-neutral    { color: var(--series-neutral); }
+svg.chart .s-everything { color: var(--series-everything); }
 
 svg.chart .s-tier-1     { color: var(--series-tier-1); }
 svg.chart .s-tier-2     { color: var(--series-tier-2); }
@@ -852,6 +856,7 @@ svg.chart .s-tier-3     { color: var(--series-tier-3); }
 .legend-item.s-revenue    { color: var(--series-revenue); }
 .legend-item.s-cost       { color: var(--series-cost); }
 .legend-item.s-neutral    { color: var(--series-neutral); }
+.legend-item.s-everything { color: var(--series-everything); }
 .legend-item.s-tier-1     { color: var(--series-tier-1); }
 .legend-item.s-tier-2     { color: var(--series-tier-2); }
 .legend-item.s-tier-3     { color: var(--series-tier-3); }
