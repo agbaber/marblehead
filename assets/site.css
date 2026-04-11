@@ -401,12 +401,11 @@ nav.site-nav a[aria-current="page"] {
   padding: 40px var(--gutter) 48px;
 }
 
-/* Chart pages are centered with a surface container */
-.chart-page {
-  display: flex;
-  justify-content: center;
-  padding: 32px var(--gutter);
-}
+/* Chart pages: site nav sits above a centered surface container.
+   The body used to be a flex container that centered .container
+   horizontally, but that blocked the nav include from stacking
+   above. Now the body is a normal block and .container centers
+   itself with margin auto and a max-width minus gutters. */
 .container {
   background: var(--surface);
   border: 1px solid var(--divider);
@@ -414,13 +413,18 @@ nav.site-nav a[aria-current="page"] {
   box-shadow: var(--shadow-sm);
   padding: 32px 36px 28px;
   max-width: var(--chart-max);
-  width: 100%;
+  margin: 32px auto;
+  width: calc(100% - 2 * var(--gutter));
 }
 
 @media (max-width: 600px) {
-  .page        { padding: 24px var(--gutter) 40px; }
-  .chart-page  { padding: 16px 12px 32px; }
-  .container   { padding: 20px 16px 18px; border-radius: 12px; }
+  .page { padding: 24px var(--gutter) 40px; }
+  .container {
+    padding: 20px 16px 18px;
+    border-radius: 12px;
+    margin: 16px auto 32px;
+    width: calc(100% - 24px);
+  }
 }
 
 /* ==========================================================================
