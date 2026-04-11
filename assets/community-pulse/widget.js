@@ -48,7 +48,7 @@ export function getStance(db, sectionId) {
 }
 
 /** Upsert a stance record. Stamps updated_at. */
-export function setStance(db, sectionId, { stance, note }) {
+export function setStance(db, sectionId, { stance, note, reacted }) {
   return new Promise((resolve, reject) => {
     const tx = db.transaction(STORE_NAME, 'readwrite');
     const store = tx.objectStore(STORE_NAME);
@@ -56,6 +56,7 @@ export function setStance(db, sectionId, { stance, note }) {
       section_id: sectionId,
       stance: stance ?? null,
       note: note ?? '',
+      reacted: reacted === true,
       updated_at: Date.now()
     };
     const req = store.put(record);
@@ -264,6 +265,7 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
   // Track current state in closure to avoid extra IDB reads.
   let currentStance = initialRecord?.stance ?? null;
   let currentNote = initialRecord?.note ?? '';
+  let currentReacted = initialRecord?.reacted === true;
 
   // Reflect initial note into UI (stance was already reflected by buildWidget's initialStance).
   if (currentNote) {
@@ -272,27 +274,41 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
     noteToggle.setAttribute('aria-expanded', 'true');
   }
 
+  /** Persist the current stance, note, and reacted state to IndexedDB. */
+  const persist = () => setStance(db, sectionId, {
+    stance: currentStance,
+    note: currentNote,
+    reacted: currentReacted
+  });
+
+  /**
+   * If this user has not yet been counted for this section, fire one
+   * reactions increment and mark them counted. Subsequent calls are no-ops
+   * until the user clears their browser data. Any meaningful interaction
+   * (stance activate, note content, share click) routes through this helper.
+   */
+  async function ensureCounted() {
+    if (currentReacted) return;
+    const result = await incrementReaction(sectionId);
+    if (!result) return; // network failure; try again on the next interaction
+    currentReacted = true;
+    countNum.textContent = `${result.total} reactions`;
+    countDelta.textContent = result.last_24h > 0 ? `+${result.last_24h} today` : '';
+    await persist();
+  }
+
   // Stance button handler.
   buttons.forEach(btn => {
     btn.addEventListener('click', async () => {
       const stanceKey = btn.dataset.stance;
       const currentlyPressed = btn.getAttribute('aria-pressed') === 'true';
       const newStance = currentlyPressed ? null : stanceKey;
-      // Update pressed state immediately.
       buttons.forEach(b => {
         b.setAttribute('aria-pressed', b.dataset.stance === newStance ? 'true' : 'false');
       });
-      // Persist to IndexedDB.
       currentStance = newStance;
-      await setStance(db, sectionId, { stance: currentStance, note: currentNote });
-      // Fire reactions increment only on activate.
-      if (newStance) {
-        const result = await incrementReaction(sectionId);
-        if (result) {
-          countNum.textContent = `${result.total} reactions`;
-          countDelta.textContent = result.last_24h > 0 ? `+${result.last_24h} today` : '';
-        }
-      }
+      await persist();
+      if (newStance) await ensureCounted();
     });
   });
 
@@ -304,25 +320,29 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
     if (!isOpen) noteField.focus();
   });
 
-  // Note field debounced save.
+  // Note field debounced save. Counts as a reaction only once, the first
+  // time the note contains non-empty text.
   const saveNote = debounce(async () => {
     currentNote = noteField.value;
-    await setStance(db, sectionId, { stance: currentStance, note: currentNote });
+    await persist();
+    if (currentNote.trim().length > 0) await ensureCounted();
   }, 1000);
   noteField.addEventListener('input', saveNote);
 
-  // Share button: always copy the section link to the clipboard.
+  // Share button: always copy the section link to the clipboard. Counts as a reaction once.
   shareBtn.addEventListener('click', async () => {
     if (navigator.clipboard) {
       try {
         await navigator.clipboard.writeText(sectionUrl);
         showToast('Link copied');
+        await ensureCounted();
         return;
       } catch {
         // Fall through to the prompt fallback below.
       }
     }
     window.prompt('Copy this link:', sectionUrl);
+    await ensureCounted();
   });
 }
 
