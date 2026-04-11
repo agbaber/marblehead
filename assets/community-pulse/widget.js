@@ -139,3 +139,315 @@ export async function incrementReaction(sectionId) {
     return null;
   }
 }
+
+// ---- Widget rendering and hydration -------------------------------------
+
+const STANCE_BUTTONS = [
+  { key: 'agree',    emoji: '👍', label: 'Agree' },
+  { key: 'disagree', emoji: '👎', label: 'Disagree' },
+  { key: 'alert',    emoji: '!',  label: 'Alert: something here caught my eye' }
+];
+
+/**
+ * Build the widget DOM for one section and attach it to the given parent
+ * element. Returns the widget root element.
+ */
+function buildWidget(sectionId, sectionTitle, initialReactions, initialStance) {
+  const root = document.createElement('div');
+  root.className = 'cp-widget';
+  root.dataset.sectionId = sectionId;
+
+  // Stance buttons.
+  const buttons = document.createElement('div');
+  buttons.className = 'cp-widget__buttons';
+  STANCE_BUTTONS.forEach(({ key, emoji, label }) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'cp-widget__button';
+    btn.dataset.stance = key;
+    btn.setAttribute('aria-label', label);
+    btn.title = label;
+    btn.textContent = emoji;
+    btn.setAttribute('aria-pressed', initialStance === key ? 'true' : 'false');
+    buttons.appendChild(btn);
+  });
+  root.appendChild(buttons);
+
+  // Reaction count + delta.
+  const count = document.createElement('span');
+  count.className = 'cp-widget__count';
+  const countNum = document.createElement('span');
+  countNum.className = 'cp-widget__count-num';
+  countNum.textContent = initialReactions
+    ? `${initialReactions.total} reactions`
+    : '...'; // ellipsis placeholder until the GET /api/reactions batch resolves
+  const countDelta = document.createElement('span');
+  countDelta.className = 'cp-widget__delta';
+  if (initialReactions && initialReactions.last_24h > 0) {
+    countDelta.textContent = `+${initialReactions.last_24h} today`;
+  }
+  count.appendChild(countNum);
+  if (countDelta.textContent) count.appendChild(countDelta);
+  root.appendChild(count);
+
+  // Share button.
+  const share = document.createElement('button');
+  share.type = 'button';
+  share.className = 'cp-widget__share';
+  share.dataset.action = 'share';
+  share.setAttribute('aria-label', 'Share this section');
+  share.title = 'Share this section';
+  share.textContent = 'Share';
+  root.appendChild(share);
+
+  // Privacy link.
+  const privacy = document.createElement('a');
+  privacy.className = 'cp-widget__privacy';
+  privacy.href = '/privacy.html';
+  privacy.title = 'How this feature handles your data';
+  privacy.textContent = 'Privacy';
+  root.appendChild(privacy);
+
+  // Note toggle.
+  const noteToggle = document.createElement('button');
+  noteToggle.type = 'button';
+  noteToggle.className = 'cp-widget__note-toggle';
+  noteToggle.dataset.action = 'toggle-note';
+  noteToggle.setAttribute('aria-expanded', 'false');
+  noteToggle.textContent = 'Note';
+  root.appendChild(noteToggle);
+
+  // Note textarea (hidden initially).
+  const note = document.createElement('textarea');
+  note.className = 'cp-widget__note';
+  note.placeholder = 'Write a private note. Saved locally in your browser.';
+  note.hidden = true;
+  note.rows = 3;
+  root.appendChild(note);
+
+  return root;
+}
+
+/** Show a transient toast message near the bottom of the viewport. */
+function showToast(message) {
+  const existing = document.querySelector('.cp-widget__toast');
+  if (existing) existing.remove();
+  const toast = document.createElement('div');
+  toast.className = 'cp-widget__toast';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add('cp-widget__toast--visible'));
+  setTimeout(() => toast.remove(), 2400);
+}
+
+/** Debounce helper for note field saves. */
+function debounce(fn, ms) {
+  let timer = null;
+  return (...args) => {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), ms);
+  };
+}
+
+/**
+ * Wire event handlers on a single widget: stance buttons, note toggle and
+ * save, share button. Reads and writes the IndexedDB store.
+ */
+function wireWidget(root, db, sectionId, sectionUrl, sectionTitle) {
+  const buttons = root.querySelectorAll('.cp-widget__button');
+  const noteToggle = root.querySelector('.cp-widget__note-toggle');
+  const noteField = root.querySelector('.cp-widget__note');
+  const shareBtn = root.querySelector('.cp-widget__share');
+  const countNum = root.querySelector('.cp-widget__count-num');
+  const countDelta = root.querySelector('.cp-widget__delta');
+
+  // Load stored stance and note and reflect into UI.
+  getStance(db, sectionId).then(record => {
+    if (!record) return;
+    buttons.forEach(btn => {
+      btn.setAttribute('aria-pressed', btn.dataset.stance === record.stance ? 'true' : 'false');
+    });
+    if (record.note) {
+      noteField.value = record.note;
+      noteField.hidden = false;
+      noteToggle.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Stance button handler.
+  buttons.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const stanceKey = btn.dataset.stance;
+      const currentlyPressed = btn.getAttribute('aria-pressed') === 'true';
+      const newStance = currentlyPressed ? null : stanceKey;
+      // Update pressed state immediately.
+      buttons.forEach(b => {
+        b.setAttribute('aria-pressed', b.dataset.stance === newStance ? 'true' : 'false');
+      });
+      // Persist to IndexedDB.
+      const existing = await getStance(db, sectionId);
+      await setStance(db, sectionId, {
+        stance: newStance,
+        note: existing?.note ?? ''
+      });
+      // Fire reactions increment (directionless). Only increment on activate,
+      // not on deactivate, to match "click any button to count as a reaction."
+      if (newStance) {
+        incrementReaction(sectionId).then(result => {
+          if (result) {
+            countNum.textContent = `${result.total} reactions`;
+            if (result.last_24h > 0) {
+              if (!countDelta) return;
+              countDelta.textContent = `+${result.last_24h} today`;
+            }
+          }
+        });
+      }
+    });
+  });
+
+  // Note toggle.
+  noteToggle.addEventListener('click', () => {
+    const isOpen = !noteField.hidden;
+    noteField.hidden = isOpen;
+    noteToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    if (!isOpen) noteField.focus();
+  });
+
+  // Note field debounced save.
+  const saveNote = debounce(async () => {
+    const existing = await getStance(db, sectionId);
+    await setStance(db, sectionId, {
+      stance: existing?.stance ?? null,
+      note: noteField.value
+    });
+  }, 1000);
+  noteField.addEventListener('input', saveNote);
+
+  // Share button.
+  shareBtn.addEventListener('click', async () => {
+    const shareData = { title: sectionTitle, url: sectionUrl };
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch {
+        // User cancelled or share failed silently.
+      }
+    } else if (navigator.clipboard) {
+      try {
+        await navigator.clipboard.writeText(sectionUrl);
+        showToast('Link copied');
+      } catch {
+        showToast('Copy failed');
+      }
+    } else {
+      // Last-resort fallback: show the URL in a prompt so the user can copy it manually.
+      window.prompt('Copy this link:', sectionUrl);
+    }
+  });
+}
+
+/**
+ * Walk every h2 on the page (unless opted out), assign an anchor ID, inject
+ * a widget next to it, and wire handlers. Also handle elements with an
+ * explicit data-stance-section attribute.
+ */
+export async function hydrateWidgets() {
+  // Opt-out check.
+  if (document.body.dataset.communityPulse === 'off-sections') return;
+
+  const pagePath = location.pathname.replace(/^\//, '') || 'index.html';
+  const collectedTargets = [];
+  const seenSlugs = new Set();
+
+  // Auto: every h2 on the page. Deduplicate slugs within the page.
+  document.querySelectorAll('h2').forEach(heading => {
+    const text = heading.textContent.trim();
+    let slug = slugify(text);
+    if (!slug) return;
+    if (seenSlugs.has(slug)) {
+      let suffix = 2;
+      while (seenSlugs.has(`${slug}-${suffix}`)) suffix++;
+      slug = `${slug}-${suffix}`;
+    }
+    seenSlugs.add(slug);
+    if (!heading.id) heading.id = slug;
+    collectedTargets.push({
+      element: heading,
+      sectionId: `${pagePath}#${heading.id}`,
+      title: text
+    });
+  });
+
+  // Explicit: elements with data-stance-section override.
+  document.querySelectorAll('[data-stance-section]').forEach(el => {
+    const slug = el.dataset.stanceSection.trim();
+    if (!slug) return;
+    // If this slug is already in use, skip (author should pick a unique slug).
+    if (seenSlugs.has(slug)) return;
+    seenSlugs.add(slug);
+    if (!el.id) el.id = slug;
+    const title = el.getAttribute('aria-label') || el.textContent.trim().slice(0, 80) || slug;
+    collectedTargets.push({
+      element: el,
+      sectionId: `${pagePath}#${slug}`,
+      title
+    });
+  });
+
+  if (collectedTargets.length === 0) return;
+
+  // Batch-fetch reaction counts for all targets in one request.
+  const reactionsMap = await fetchReactions(collectedTargets.map(t => t.sectionId));
+
+  // Open IndexedDB once for all widgets on the page.
+  let db;
+  try {
+    db = await openStore();
+  } catch {
+    // IndexedDB disabled (private mode, etc). Skip widgets silently.
+    return;
+  }
+
+  // Build and wire each widget.
+  for (const target of collectedTargets) {
+    const initialReactions = reactionsMap[target.sectionId];
+    const existing = await getStance(db, target.sectionId);
+    const widget = buildWidget(
+      target.sectionId,
+      target.title,
+      initialReactions,
+      existing?.stance
+    );
+    target.element.insertAdjacentElement('afterend', widget);
+    wireWidget(
+      widget,
+      db,
+      target.sectionId,
+      `${location.origin}/${target.sectionId}`,
+      target.title
+    );
+  }
+
+  // Re-scroll to a fragment if one is present (fixes runtime-anchor-generation
+  // timing: the browser tried to scroll before we inserted the IDs).
+  if (location.hash) {
+    const target = document.getElementById(location.hash.slice(1));
+    if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
+  }
+}
+
+// ---- Auto-init on DOMContentLoaded --------------------------------------
+
+if (typeof document !== 'undefined') {
+  // Configure API base URL from a script data attribute if present.
+  const script = document.currentScript || document.querySelector('script[src*="community-pulse/widget.js"]');
+  if (script && script.dataset.apiBase) {
+    configureApi({ baseUrl: script.dataset.apiBase });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hydrateWidgets);
+  } else {
+    hydrateWidgets();
+  }
+}
