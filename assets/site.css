@@ -558,12 +558,45 @@ p a:hover { text-decoration: underline; }
 }
 
 .footer {
-  text-align: center; padding: 40px 20px 16px;
-  font-size: 12px; color: var(--text-faint);
+  text-align: center;
+  padding: 32px 20px 28px;
+  margin-top: 48px;
   border-top: 1px solid var(--divider);
-  margin-top: 40px;
+  font-size: 12px;
+  color: var(--text-faint);
 }
-.footer a { color: var(--text-subtle); }
+.footer-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.footer-links a:hover {
+  background: var(--divider);
+  border-color: var(--text-faint);
+  color: var(--text);
+  text-decoration: none;
+}
+.footer-meta {
+  font-size: 11px;
+  color: var(--text-faint);
+  margin: 0;
+  letter-spacing: 0.2px;
+}
 
 /* ==========================================================================
    Cards (used on text pages)
