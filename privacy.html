@@ -48,7 +48,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h2>What lives on the server</h2>
   <p>The only information the site's server sees about community pulse activity is a single directionless reaction counter per section. When you click any stance button, the site increments the reactions number for that section by one. The server does not know which button you clicked (agree, disagree, or alert), does not know anything about you, and does not associate the increment with any identity.</p>
-  <p>To keep casual inflation of the counter tidy, the server applies a per-IP rate limit of 5 increments per section per hour. IP addresses are hashed with a rotating salt before storage and are not retained beyond the rate-limit window.</p>
+  <p>To keep casual inflation of the counter tidy, the server applies a per-IP rate limit of 5 increments per section per hour. IP addresses are hashed with a deployment salt before storage and old rate-limit rows are cleaned up when the next write comes in.</p>
 
   <h2>What clearing your browser does</h2>
   <p>Clearing browser data (cookies, site data, or IndexedDB specifically) erases your community pulse marks and notes. There is no server backup. This is by design: the server never received the data, so there is nothing to restore from. If you want to keep a record of your marks, use a future settings page (coming soon) to export them as a file.</p>
