@@ -2244,6 +2244,8 @@ sup.cite a {
   font-weight: 600;
   padding: 0 2px;
   border-radius: 2px;
+  /* Keep back-nav target clear of the sticky nav (min-height 48px + breathing room). */
+  scroll-margin-top: 72px;
 }
 sup.cite a:hover {
   text-decoration: underline;
@@ -2277,6 +2279,8 @@ sup.cite a:target {
 .sources-list-ol li {
   margin-bottom: 6px;
   padding-left: 4px;
+  /* Keep footnote target clear of the sticky nav (min-height 48px + breathing room). */
+  scroll-margin-top: 72px;
 }
 .sources-list-ol li:target {
   background: color-mix(in srgb, var(--c-teal) 12%, transparent);
