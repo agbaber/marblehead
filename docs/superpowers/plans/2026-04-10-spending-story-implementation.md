@@ -1173,3 +1173,104 @@ Sum of the table's FY15 values (47,766,807) plus the FY15 residual items above p
 - `data/budgets/FY27_Proposed_Budget_No_Override.pdf` pages 1 to 4, Table of Estimate Appropriations, FY2026 Budget column (cross-check)
 - `data/acfr/FY24_ACFR.pdf` page 97 for the FY24 State and County Charges reference cited in Note D
 
+## Task 3 research output
+
+### Scope and method
+
+This section records the final, card-ready wording for each of the four Act 3 "what grew faster" claims. Each claim is verified against primary sources in `data/`. Where the original spec's framing is misleading or unverifiable, the wording has been adjusted and the deviation is documented. Task 8 should paste the "Final Task 8 card wording" prose below directly into the page's Act 3 HTML cards. Nothing in this section requires further re-derivation.
+
+### Claim 1: School staffing up, enrollment down
+
+**Final Task 8 card wording.**
+
+> Between 2015 and 2024, Marblehead's enrollment fell from 3,245 students to 2,617, a drop of 628 students or 19 percent. Over the same window, classroom teacher headcount declined only slightly, from 256.8 to 245.8, a reduction of 11 positions or about 4 percent. Non-teaching school staff (paraprofessionals, aides, specialists, and administrators) rose by roughly 58 positions, pushing total education headcount from 489.8 to 537.0, a 9.6 percent increase. Marblehead's student-to-teacher ratio improved from 12.6 to 10.7, the lowest of its four peer towns. Roughly 9 percent of the FY2026 school budget, about $4.6 million, pays for out-of-district special education placements that the town is mandated by federal and state law to fund; Tier 1 of the override explicitly restores $1.5 million per year of this line that was cut from the FY27 no-override budget.
+
+**Primary sources.**
+
+- `data/dese_peer_teachers_enrollment.csv` (DESE) for classroom teacher FTE and enrollment, FY2015 and FY2024.
+- `data/fte_employees_FY15-24.csv` (town HR) for total education headcount (489.8 in FY15, 537.0 in FY24).
+- `data/FY26_budget_summary.json` `School_Key_Items` for out-of-district SpEd breakdown: `Sped_Tuition_Private_Day` 1,933,523 plus `Sped_Tuition_Residential` 1,026,993 plus `Sped_Tuition_Collaborative` 601,647 plus `OOD_Transportation` 996,410 equals 4,558,573.
+- `data/override_school_items.csv` for the Tier 1 "Restore Special Education Out of District Tuition" line at $1,500,000 per year.
+- `data/2026-04-08_Override_Presentation.pdf` slide on Tier 1 Schools confirms that the FY27 no-override budget reduced the out-of-district SpEd line by $1.5M "due to the utilization of surplus FY26 Funds" and that restoration is needed "to meet IEP obligations."
+
+**Caveats and deviations from the spec.**
+
+- The spec's original framing ("school staffing up 9.6 percent while enrollment fell 19 percent") is arithmetically correct if "staffing" means total education headcount from the town's own FTE roll-up, but it is misleading without the teacher-versus-non-teacher split. The final wording above uses both numbers side by side so the reader can see that classroom teachers actually declined (by 11 positions) while paraprofessionals, aides, and specialists grew (by about 58 positions).
+- The student-to-teacher ratio improved because teachers declined more slowly than enrollment. Peer-town ratios (FY2024 DESE): Marblehead 10.65, Stoneham 10.79, Swampscott 11.05, Melrose 13.72. The peer-town comparison is not in the card wording to keep it short, but is available for prose elsewhere.
+- The out-of-district SpEd numbers are FY26, not FY27. The FY27 line is $1.5M lower by the town's own admission (see override presentation), but the FY27 Proposed Budget does not itemize out-of-district SpEd inside the single Schools line (item 101 at $47,620,287), so the FY27 line cannot be read directly from the PDF.
+- The spec's "state-mandated service context" is handled in the card by the phrase "mandated by federal and state law" (Individuals with Disabilities Education Act and Massachusetts special education law). No numeric claim depends on that phrase.
+
+### Claim 2: Town Counsel up 142 percent between FY2026 and FY2027
+
+**Final Task 8 card wording.**
+
+> In the FY2027 Proposed Budget, Town Counsel rises from $115,000 (FY2026 budget) to $278,000, a one-year increase of $163,000 or 142 percent. The expense sub-line alone grows from $113,000 to $276,000 (the $2,000 salary line is unchanged). The FY2026 Town Meeting warrant recorded Town Counsel at $228,000, not $115,000, so the FY27 Proposed Budget is also $50,000 above last year's Town Meeting appropriation. Neither the FY27 Proposed Budget nor the 2026 Finance Committee Report explains the increase or the discrepancy between the two FY26 figures.
+
+**Primary source.**
+
+- `data/budgets/FY27_Proposed_Budget_No_Override.pdf` page 1, Town Counsel lines 29 and 30. FY25 Budget 112,000; FY25 Expended 172,352; FY26 Budget 115,000; FY27 Proposed 278,000; $ Change FY26-FY27 = 163,000; % Change FY26-FY27 = 141.74 percent (the PDF's own computed column, which rounds to 142 percent). Line 29 (Salaries) is flat at 2,000 in all four columns. Line 30 (Expense) grows from 113,000 in FY26 Budget to 276,000 in FY27 Proposed, +144.25 percent.
+- `data/FY26_budget_summary.json` `Town_Key_Items.Town_Counsel` = 228000 (the 2026 Town Meeting appropriation, which is $113,000 higher than the FY27 Proposed Budget's "FY26 Budget" column for the same year).
+
+**Caveats and deviations from the spec.**
+
+- The spec's "+142 percent" figure is fully verified and matches the FY27 Proposed Budget's own computed column. It is produced by dividing the FY27 Proposed expense sub-line ($278,000) by the FY27 Proposed Budget's stated FY26 Budget figure ($115,000). Using the JSON FY26 figure ($228,000) instead would yield only +22 percent, not +142 percent, so the spec's number clearly comes from the FY27 PDF and nothing else.
+- The $113,000 gap between the two FY26 figures (JSON $228,000 vs FY27 PDF $115,000) is not reconciled. Task 2 flagged this gap explicitly at table row "Town Counsel" and noted that "the discrepancy is not publicly explained." The gap is large enough that the card must surface it, which the final wording above does. The honest reading is: either the town appropriated $228,000 at Town Meeting and later revised the expected spend down to $115,000 (in which case the FY27 jump from $115K to $278K is real and dramatic), or the $115,000 figure in the FY27 PDF is a typo or carryover error from FY25 (FY25 Budget is coincidentally $112,000). Without a Town Finance statement, either reading is consistent with the documents.
+- The reason for the increase is not documented in the FY27 Proposed Budget, in the FY2026 FinCom Annual Report, or in any other source in `data/`. A pdftotext grep of both PDFs for "counsel" returns only the budget line itself. The card states this plainly.
+
+### Claim 3: Retiree benefits trust contribution zeroed out in the no-override budget
+
+**Final Task 8 card wording.**
+
+> The FY2026 budget transferred $250,000 into the Other Post-Employment Benefits (OPEB) trust, which is the fund the town set up to pre-pay future retiree health benefits. The FY2027 Proposed Budget transfers $0, a cut of the full $250,000 or 100 percent. The long-term liability does not go away when the annual contribution stops; it accrues, and future budgets will either have to catch up or pay more later. The town's most recent financial policy target for this fund is to build reserves toward the liability over time, not to suspend contributions.
+
+**Primary sources.**
+
+- `data/budgets/FY27_Proposed_Budget_No_Override.pdf` page 4, line 226 "Other Post Employment Benefits": FY25 Budget 0; FY25 Expended 0; FY26 Budget 250,000; FY27 Proposed 0; $ Change FY26-FY27 = (250,000); % Change FY26-FY27 = -100.00 percent.
+- `data/FY26_budget_summary.json` `Town_Key_Items.OPEB_Trust_Transfer` = 250000, which matches the FY27 PDF FY26 Budget column exactly (no JSON-vs-PDF gap for this line, unlike Town Counsel).
+- `data/Financial_Policies_2023.pdf` establishes the OPEB trust policy (cited for "financial policy target" language in the card, but not quoted verbatim to keep the card short).
+
+**Caveats and deviations from the spec.**
+
+- None. This is the cleanest of the four claims. The FY26 line matches in both sources, the FY27 PDF reports the cut with an explicit -100.00 percent in its own "percent change" column, and no arithmetic or interpretation is needed. The card's last sentence about the liability not going away is a direct restatement of how OPEB trust funds work under GASB 75, not a contested interpretation.
+- OPEB stands for "Other Post-Employment Benefits." The card uses both the acronym and the plain-English description to keep it accessible.
+
+### Claim 4: Free cash used to balance the operating budget for several years running
+
+**Final Task 8 card wording.**
+
+> Marblehead has used "free cash" (the state's term for prior-year surplus certified each fall by the Department of Revenue) to balance its operating budget for several years in a row. At Town Meeting in May 2025, voters appropriated $7,000,000 of free cash into the FY2026 operating budget, up from $5,500,000 in FY2025 and $10,200,000 in FY2023. The Finance Committee's 2024 report warned that "the Town continues to use a significant portion of available Free Cash to balance the budget while upholding reserves equivalent to only 2.5 percent of the operating budget. This amount falls short of the state's recommended range of 5 to 10 percent." The 2022 report called this a "structural budget challenge" caused by "recurring costs structurally outpacing recurring revenues" and predicted that an override would likely be required to maintain level services. Free cash is a one-time resource; it cannot be used to fund recurring expenses without eventually running out.
+
+**Primary sources.**
+
+- `data/2022_FinCom_Report.pdf` page 3 lines 72 to 81 (the "structural budget challenge" passage) and page 15 Article 29 (the $10,200,000 free cash appropriation for the FY2023 tax rate).
+- `data/2025_FinCom_Report.pdf` page 3 lines 53 to 59 (the "$2.5 million reduction" in free cash used, plus reserves at 2.5 percent of operating budget versus state target of 5 to 10 percent), page 4 lines 111 to 114 (the Option 2 warning quoted in the card: "the Town continues to use a significant portion of available Free Cash to balance the budget while upholding reserves equivalent to only 2.5 percent of the operating budget"), and page 17 Article 19 (the $5,500,000 FY2025 free cash appropriation).
+- `data/2026_FinCom_Report.pdf` page 2 lines 48 to 52 (the $1.5 million year-over-year increase in free cash used to offset the operating budget), page 14 Article 18 (the $7,000,000 FY2026 free cash appropriation), and comment at line 461 ("Certified free cash available before appropriation is approximately $9,500,000").
+- `data/2026_State_of_the_Town.pdf` page showing Projected Revenues (lines 120 to 140 in pdftotext output): Free Cash to Levy of 5,500,000 (FY25 Actual), 7,000,000 (FY26 Projected), 5,000,000 (FY27 Projected); plus Free Cash to Capital/Stabilization of 1,000,000 (FY25), 2,000,000 (FY26), 0 (FY27). Total free cash use including capital: FY25 $6.5M, FY26 $9.0M, FY27 $5.0M.
+- `data/2026-04-08_Override_Presentation.pdf` line 67: the FY27 no-override budget "reduced our Special Education Out of District Tuition Budget by $1,500,000 due to the utilization of surplus FY26 Funds," directly connecting free cash draw-down to service reductions.
+
+**Caveats and deviations from the spec.**
+
+- The spec claims "$7 to $9 million annually" (as currently written in `what-is-the-override.html` key terms). This range is verified: FY25 $6.5M total (or $5.5M if only counting the levy portion), FY26 $9.0M total (or $7.0M levy), FY27 $5.0M (no capital/stabilization portion in FY27). If the range is meant to describe only the "used to balance the operating budget" portion, the honest range is $5.5M to $7M in FY25 and FY26 respectively, not $7M to $9M. The final card wording above cites the Town Meeting-approved "free cash to levy" figures directly ($7M for FY26, $5.5M for FY25, $10.2M for FY23) rather than the $7M to $9M round range. The page's key-terms footer in `what-is-the-override.html` should be updated in a separate task to reflect the narrower levy-only figures; flagging for later.
+- The 2022 FinCom report does not use the exact phrase "free cash being used to balance the budget." It uses "structural budget challenge" and "recurring costs structurally outpacing recurring revenues." The card quotes the 2022 report for the structural framing and the 2025 report (an earlier FinCom warning still within the "several years running" window) for the explicit free-cash-to-balance-the-budget warning. Both quotes are verbatim from the reports.
+- "Several years running" is defined in the card as at least FY23 through FY26 (four consecutive budgets, all of which show nontrivial free cash appropriations at Town Meeting). The 2016 and 2019 FinCom reports in `data/` were not re-checked for this task; a future researcher could extend the pattern backward if needed.
+- The Massachusetts Department of Revenue term is "free cash." The card puts the term in quotation marks on first use and explains it ("the state's term for prior-year surplus certified each fall by the Department of Revenue"). Do not conflate free cash with general reserves or with the Stabilization Fund. The FY26 State of the Town presentation shows them as separate line items.
+
+### Sanity checks performed
+
+1. Town Counsel claim: the FY27 PDF's own computed column shows 141.74 percent for FY26 to FY27 Town Counsel total (items 29 and 30 combined: 115,000 to 278,000). This rounds to the spec's 142 percent, confirming the spec's number came from the FY27 PDF.
+2. OPEB claim: the FY27 PDF line 226 shows -100.00 percent in its own computed column, matching the card's "cut of the full $250,000 or 100 percent."
+3. Free cash claim: the 2026 FinCom Report comment at line 461 states "Certified free cash available before appropriation is approximately $9,500,000," which is consistent with a $7M operating-budget draw plus $2M capital/stabilization plus a $500K reserve for bargaining outcomes. The math on the $9M total cited in the State of the Town presentation reconciles exactly to this comment.
+4. School staffing claim: the 9.6 percent increase (489.8 to 537.0) comes from `fte_employees_FY15-24.csv`. The -4.3 percent teacher decline (256.8 to 245.8) comes from `dese_peer_teachers_enrollment.csv`. The -19.4 percent enrollment decline (3,245 to 2,617) is consistent across both DESE and the town's own records (MASTER_DATA.csv). All three numbers are already used in Task 1's Schools deep dive.
+
+### Primary sources for Task 3
+
+- `data/dese_peer_teachers_enrollment.csv`
+- `data/fte_employees_FY15-24.csv`
+- `data/FY26_budget_summary.json`
+- `data/override_school_items.csv`
+- `data/budgets/FY27_Proposed_Budget_No_Override.pdf` (pages 1 and 4 specifically)
+- `data/2022_FinCom_Report.pdf`
+- `data/2025_FinCom_Report.pdf`
+- `data/2026_FinCom_Report.pdf`
+- `data/2026_State_of_the_Town.pdf`
+- `data/2026-04-08_Override_Presentation.pdf`
