@@ -55,58 +55,6 @@ og_url: https://marbleheaddata.org/question-2-trash.html
     color: var(--text);
   }
 
-  /* Distributional analysis grid */
-  .dist-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-    margin: 14px 0 18px;
-    font-variant-numeric: tabular-nums;
-  }
-  .dist-table th {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.9px;
-    color: var(--text-subtle);
-    padding: 10px 8px;
-    text-align: right;
-    border-bottom: 1px solid var(--border);
-  }
-  .dist-table th:first-child {
-    text-align: left;
-  }
-  .dist-table td {
-    padding: 11px 8px;
-    border-bottom: 1px solid var(--divider);
-    color: var(--text);
-    text-align: right;
-  }
-  .dist-table td:first-child {
-    text-align: left;
-    font-weight: 600;
-  }
-  .dist-table tr.median td,
-  .dist-table tr.avg td {
-    background: color-mix(in srgb, var(--c-navy) 3%, var(--surface));
-  }
-  .dist-table tr.median td:first-child::after {
-    content: " (median)";
-    font-weight: 400;
-    color: var(--text-subtle);
-    font-size: 11px;
-  }
-  .dist-table tr.avg td:first-child::after {
-    content: " (average)";
-    font-weight: 400;
-    color: var(--text-subtle);
-    font-size: 11px;
-  }
-  .dist-table td.cheaper {
-    color: color-mix(in srgb, var(--c-sage) 70%, var(--text));
-    font-weight: 600;
-  }
-
   /* Peer towns comparison table */
   .peer-trash {
     width: 100%;
@@ -361,8 +309,7 @@ og_url: https://marbleheaddata.org/question-2-trash.html
   @media (max-width: 600px) {
     .trash-tldr { padding: 16px 18px 18px; }
     .trash-tldr h2 { font-size: 17px; }
-    .dist-table, .peer-trash { font-size: 12px; }
-    .dist-table th, .dist-table td,
+    .peer-trash { font-size: 12px; }
     .peer-trash th, .peer-trash td { padding: 9px 5px; }
     .already-decided { padding: 12px 14px; }
     .page-covers li { font-size: 13px; padding: 6px 0 6px 20px; }
@@ -549,67 +496,6 @@ og_url: https://marbleheaddata.org/question-2-trash.html
 
   <p class="q2-calc-delta" id="delta-sentence">At your home value, the flat fee costs $19 less per year than the levy.</p>
 </div>
-
-<table class="dist-table">
-  <thead>
-    <tr>
-      <th>Assessed home value</th>
-      <th>If Q2 passes (levy increase)</th>
-      <th>If Q2 fails (flat fee)</th>
-      <th>Difference</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>$500,000</td>
-      <td class="cheaper">+$117/yr</td>
-      <td>+$262/yr</td>
-      <td>Levy saves $145</td>
-    </tr>
-    <tr>
-      <td>$750,000</td>
-      <td class="cheaper">+$175/yr</td>
-      <td>+$262/yr</td>
-      <td>Levy saves $87</td>
-    </tr>
-    <tr class="median">
-      <td>$1,010,000</td>
-      <td class="cheaper">+$235/yr</td>
-      <td>+$262/yr</td>
-      <td>Levy saves $27</td>
-    </tr>
-    <tr>
-      <td>$1,150,000</td>
-      <td>+$268/yr</td>
-      <td>+$262/yr</td>
-      <td>Roughly even</td>
-    </tr>
-    <tr class="avg">
-      <td>$1,291,000</td>
-      <td>+$301/yr</td>
-      <td class="cheaper">+$262/yr</td>
-      <td>Fee saves $39</td>
-    </tr>
-    <tr>
-      <td>$1,500,000</td>
-      <td>+$350/yr</td>
-      <td class="cheaper">+$262/yr</td>
-      <td>Fee saves $88</td>
-    </tr>
-    <tr>
-      <td>$2,000,000</td>
-      <td>+$466/yr</td>
-      <td class="cheaper">+$262/yr</td>
-      <td>Fee saves $204</td>
-    </tr>
-    <tr>
-      <td>$3,000,000</td>
-      <td>+$699/yr</td>
-      <td class="cheaper">+$262/yr</td>
-      <td>Fee saves $437</td>
-    </tr>
-  </tbody>
-</table>
 
 <p>The break-even point, where the two options cost the same, is at roughly $1,140,000 in assessed value. Below that, the levy is cheaper; above it, the flat fee is cheaper. The median single-family home in Marblehead is assessed at $1,010,000, so the typical homeowner pays slightly less under the levy. The average single-family assessment of $1,291,000 is skewed upward by a smaller number of high-value properties, so the average homeowner pays slightly less under the fee.</p>
 
