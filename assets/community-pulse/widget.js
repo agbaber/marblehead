@@ -96,3 +96,46 @@ export function clearAllStances(db) {
     req.onerror = () => reject(req.error);
   });
 }
+
+// ---- Reactions API client -----------------------------------------------
+
+let apiBaseUrl = ''; // set via configureApi or a page-level data attribute
+
+/** Configure the API base URL. Called once at widget init. */
+export function configureApi({ baseUrl }) {
+  apiBaseUrl = baseUrl;
+}
+
+/**
+ * Fetch reaction counts for a batch of section IDs in one request.
+ * Returns a map of section_id to { total, last_24h }. Returns {} on any error.
+ */
+export async function fetchReactions(sectionIds) {
+  if (!sectionIds || sectionIds.length === 0) return {};
+  try {
+    const url = `${apiBaseUrl}/api/reactions?section_ids=${sectionIds.map(encodeURIComponent).join(',')}`;
+    const res = await fetch(url);
+    if (!res.ok) return {};
+    return await res.json();
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * POST an increment for one section. Returns { total, last_24h } on success
+ * or null on any error.
+ */
+export async function incrementReaction(sectionId) {
+  try {
+    const res = await fetch(`${apiBaseUrl}/api/reactions`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ section_id: sectionId })
+    });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
