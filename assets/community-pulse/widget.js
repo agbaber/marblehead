@@ -292,12 +292,21 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
    * reactions increment and mark them counted. Subsequent calls are no-ops
    * until the user clears their browser data. Any meaningful interaction
    * (stance activate, note content, share click) routes through this helper.
+   *
+   * The currentReacted flag is set synchronously before awaiting the
+   * network call, so a second caller that lands between the await and the
+   * server's response sees the flag already set and skips. If the network
+   * call fails, the flag is reverted so a retry can happen on the next
+   * interaction.
    */
   async function ensureCounted() {
     if (currentReacted) return;
-    const result = await incrementReaction(sectionId);
-    if (!result) return; // network failure; try again on the next interaction
     currentReacted = true;
+    const result = await incrementReaction(sectionId);
+    if (!result) {
+      currentReacted = false;
+      return;
+    }
     countNum.textContent = `${result.total} reactions`;
     countDelta.textContent = result.last_24h > 0 ? `+${result.last_24h} today` : '';
     await persist();
