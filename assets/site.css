@@ -261,7 +261,7 @@ p a:hover { text-decoration: underline; }
   font-size: 12px; font-weight: 500; color: var(--text-subtle);
   display: inline-flex; align-items: center; gap: 5px;
   margin-bottom: 16px;
-  min-height: 32px; padding: 5px 12px 5px 10px;
+  min-height: 32px; padding: 6px 14px;
   background: var(--divider);
   border-radius: 100px;
   transition: background 0.15s, color 0.15s;
