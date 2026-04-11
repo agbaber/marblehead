@@ -1431,7 +1431,7 @@ blockquote.quote footer a:hover {
    ========================================================================== */
 
 .statute {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Century Schoolbook", "New Century Schoolbook", "Noto Serif", "Iowan Old Style", Georgia, "Times New Roman", serif;
   background: color-mix(in srgb, var(--text-faint) 6%, var(--surface));
   border: 1px solid var(--border);
   border-left: 4px solid var(--text);
@@ -1453,7 +1453,7 @@ blockquote.quote footer a:hover {
 .statute-header .statute-ref {
   display: block;
   margin-top: 4px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Century Schoolbook", "New Century Schoolbook", "Noto Serif", "Iowan Old Style", Georgia, "Times New Roman", serif;
   font-size: 15px;
   font-weight: 400;
   font-style: italic;
@@ -1462,10 +1462,12 @@ blockquote.quote footer a:hover {
   color: var(--text);
 }
 .statute p {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--text);
+  font-family: "Century Schoolbook", "New Century Schoolbook", "Noto Serif", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-subtle);
+  text-align: justify;
+  hyphens: auto;
   margin-bottom: 12px;
 }
 .statute p:last-child {
@@ -1474,28 +1476,32 @@ blockquote.quote footer a:hover {
 .statute-sec {
   font-weight: 700;
   font-style: italic;
-  color: var(--c-navy);
+  color: var(--text-subtle);
   margin-right: 4px;
 }
 .statute-plain {
   font-family: var(--font-sans);
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: 400;
   font-style: normal;
-  color: var(--text-muted);
-  line-height: 1.55;
-  margin: -4px 0 14px 0;
-  padding: 8px 12px 8px 14px;
-  border-left: 2px solid var(--divider);
+  color: var(--text);
+  line-height: 1.6;
+  margin: 4px 0 18px 0;
+  padding: 14px 18px 14px 20px;
+  background: color-mix(in srgb, var(--c-teal) 8%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--c-teal) 22%, var(--border));
+  border-left: 3px solid var(--c-teal);
+  border-radius: 0 8px 8px 0;
 }
 .statute-plain::before {
   content: "In plain English";
   font-weight: 700;
-  font-size: 9px;
-  letter-spacing: 1.5px;
+  font-size: 10px;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
-  color: var(--text-subtle);
+  color: var(--c-teal);
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 .quoted {
   color: var(--text);
