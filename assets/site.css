@@ -258,12 +258,15 @@ p a:hover { text-decoration: underline; }
 }
 
 .back {
-  font-size: 13px; color: var(--text-subtle);
-  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 12px; font-weight: 500; color: var(--text-subtle);
+  display: inline-flex; align-items: center; gap: 5px;
   margin-bottom: 16px;
-  min-height: 32px; padding: 4px 0;
+  min-height: 32px; padding: 5px 12px 5px 10px;
+  background: var(--divider);
+  border-radius: 100px;
+  transition: background 0.15s, color 0.15s;
 }
-.back:hover { color: var(--text); text-decoration: none; }
+.back:hover { color: var(--text); background: var(--border); text-decoration: none; }
 
 @media (max-width: 600px) {
   h1 { font-size: 20px; }
