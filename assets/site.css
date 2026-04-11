@@ -1287,6 +1287,30 @@ blockquote.quote footer a:hover {
   color: var(--c-navy);
   margin-right: 4px;
 }
+.statute-plain {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-style: normal;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: -4px 0 14px 0;
+  padding: 8px 12px 8px 14px;
+  border-left: 2px solid var(--divider);
+}
+.statute-plain::before {
+  content: "In plain English";
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  display: block;
+  margin-bottom: 4px;
+}
+.quoted {
+  color: var(--c-navy);
+  font-weight: 600;
+}
 .statute-source {
   display: block;
   margin-top: 14px;
