@@ -1185,3 +1185,95 @@ blockquote.quote footer a:hover {
   .key-stat-value { font-size: 16px; }
   .key-stat-label { font-size: 9px; letter-spacing: 0.5px; }
 }
+
+/* ==========================================================================
+   Statute excerpt (lawbook-styled quote block)
+   ========================================================================== */
+
+.statute {
+  font-family: Georgia, "Times New Roman", serif;
+  background: color-mix(in srgb, var(--text-faint) 6%, var(--surface));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--text);
+  border-radius: 0 6px 6px 0;
+  padding: 20px 28px 18px 30px;
+  margin: 18px 0 22px;
+}
+.statute-header {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--text-subtle);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--divider);
+}
+.statute-header .statute-ref {
+  display: block;
+  margin-top: 4px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text);
+}
+.statute p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.statute p:last-child {
+  margin-bottom: 0;
+}
+.statute-sec {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--c-navy);
+  margin-right: 4px;
+}
+.statute-source {
+  display: block;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--divider);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-style: normal;
+  color: var(--text-subtle);
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 600px) {
+  .statute { padding: 16px 18px 14px 22px; }
+  .statute p { font-size: 13px; }
+}
+
+/* ==========================================================================
+   Year markers (timeline dividers in History section)
+   ========================================================================== */
+
+.year-line {
+  border: none;
+  border-top: 1px solid var(--divider);
+  margin: 38px 0 22px;
+}
+.year-label {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--c-teal);
+  letter-spacing: -0.8px;
+  margin: 0 0 16px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 600px) {
+  .year-label { font-size: 28px; margin-bottom: 12px; }
+  .year-line { margin: 30px 0 16px; }
+}
