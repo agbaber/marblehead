@@ -33,6 +33,20 @@ Title Case applies to files under `charts/` because chart pages are product-like
 
 Both the frontmatter `title` and the `<h1>` on a given page must use the same casing. Don't mix.
 
+### Homepage card tag convention
+
+Homepage question cards (`.question` inside a `.question-list`) can have an optional tag pill. The rule:
+
+| Card content | Tag |
+|---|---|
+| Prose / article / explainer | **no tag** |
+| Chart or data visualization | `<span class="tag tag-charts">Chart</span>` |
+| Interactive calculator | `<span class="tag tag-charts">Calculator</span>` |
+
+The purpose of the tag is to flag cards that behave *differently* from a standard reading experience. If a card is just text, it gets no tag, because every card is text by default and labeling them all is visual noise. A reader skimming the homepage sees most cards as unlabeled and the few pill tags as signals: "this one is a chart, this one is a calculator, they'll scan/work differently."
+
+Do not reintroduce `Explainer`, `History`, `Analysis`, `Guide`, `Read`, or any other prose-content label. The category is "not a chart or calculator" and the correct representation of that category is the absence of a tag.
+
 ## Required `<head>` Elements (Every Page)
 
 ```html
