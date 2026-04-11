@@ -6,7 +6,7 @@ title: Source Lookup
 
 # Source Lookup: Where Every Number Comes From
 
-Use this to trace any chart number back to its original document and page.
+Use this to trace any chart number back to its original document and page. For per-CSV methodology notes (why KFF for health insurance, why national vs Boston-metro CPI, why per-pupil data starts at FY2008, the Prop 2&frac12; ballot history row counts and caveats), see [Data File Methodology](SOURCES).
 
 ## Tax Levy ($30.2M in FY01 to $82.2M in FY24)
 - FY01-FY10: [FY10 ACFR](https://marbleheadma.gov/wp-content/uploads/2025/03/FY10-Town-of-Marblehead-ACFR.pdf) page 121, "Property Tax Levies and Collections"
