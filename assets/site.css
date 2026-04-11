@@ -129,7 +129,10 @@ html[data-theme="dark"]  { color-scheme: dark; }
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-sans);
@@ -137,12 +140,28 @@ body {
   color: var(--text);
   line-height: 1.6;
   font-size: 16px;
+  font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
+::selection {
+  background: color-mix(in srgb, var(--c-teal) 22%, transparent);
+  color: var(--text);
+}
+
 a { color: var(--link); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-teal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
 
 /* ==========================================================================
    Navigation
@@ -194,6 +213,7 @@ nav.site-nav a:hover { color: var(--text); text-decoration: none; }
 }
 .container {
   background: var(--surface);
+  border: 1px solid var(--divider);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   padding: 32px 36px 28px;
@@ -344,7 +364,14 @@ p a:hover { text-decoration: underline; }
   gap: 12px;
   min-height: 56px;
 }
-.data-link:hover { box-shadow: var(--shadow-md); text-decoration: none; }
+.data-link {
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.data-link:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
 .data-link-title { font-size: 14px; font-weight: 600; color: var(--text); }
 .data-link-desc  { font-size: 12px; color: var(--text-subtle); margin-top: 2px; }
 .data-link-badge {
@@ -356,6 +383,8 @@ p a:hover { text-decoration: underline; }
 .footer {
   text-align: center; padding: 40px 20px 16px;
   font-size: 12px; color: var(--text-faint);
+  border-top: 1px solid var(--divider);
+  margin-top: 40px;
 }
 .footer a { color: var(--text-subtle); }
 
