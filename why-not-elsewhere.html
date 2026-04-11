@@ -85,6 +85,14 @@ og_url: https://marbleheaddata.org/why-not-elsewhere.html
   table.peer-table td:first-child { text-align: left; color: var(--text); font-weight: 500; }
   table.peer-table tr.mh td { color: var(--c-buoy); font-weight: 700; }
   table.peer-table tr:last-child td { border-bottom: none; }
+  table.peer-table th .fn {
+    font-size: 0.85em;
+    vertical-align: super;
+    line-height: 0;
+    margin-left: 1px;
+    text-decoration: none;
+  }
+  table.peer-table th .fn:hover { text-decoration: underline; }
 
   .two-stat {
     display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
@@ -112,8 +120,11 @@ og_url: https://marbleheaddata.org/why-not-elsewhere.html
   @media (max-width: 600px) {
     .peer-row { grid-template-columns: 76px 1fr 48px; font-size: 11px; }
     .two-stat { grid-template-columns: 1fr; }
-    table.peer-table { font-size: 12px; }
-    table.peer-table th, table.peer-table td { padding: 7px 4px; }
+    table.peer-table { font-size: 11px; }
+    table.peer-table th {
+      font-size: 9px; letter-spacing: 0.3px; padding: 6px 3px;
+    }
+    table.peer-table td { padding: 7px 3px; }
   }
 </style>
 <h1>Why do some MA towns run overrides and others don't?</h1>
@@ -135,7 +146,7 @@ og_url: https://marbleheaddata.org/why-not-elsewhere.html
   </div>
 
   <h2 data-stance-section="residential-share">Residential share of the tax levy, FY2026</h2>
-  <p>When a homeowner in Marblehead pays their tax bill, 95.5&cent; of every dollar the town collects in property tax comes from residential property. In Cambridge, that figure is 33.8&cent;. The rest comes from commercial, industrial, and personal property taxes. Towns with a large commercial base can spread cost increases across office parks, labs, and retail instead of concentrating them on homeowners; towns without one can't. This isn't a statement about which model is better. It's a statement about what each town's tax revenue depends on.</p>
+  <p>Out of every dollar Marblehead collects in property tax, 95.5&cent; comes from residential property. In Cambridge, that figure is 33.8&cent;. The rest comes from commercial, industrial, and personal property taxes. Towns with a large commercial base can spread cost increases across office parks, labs, and retail instead of concentrating them on homeowners; towns without one can't. This isn't a statement about which model is better. It's a description of what each town's tax revenue depends on.</p>
 
   <div class="peer-chart">
     <h3>% of Total Property Tax Levy Paid by Residential</h3>
@@ -174,7 +185,7 @@ og_url: https://marbleheaddata.org/why-not-elsewhere.html
   <h2 data-stance-section="new-growth">New growth: the other lever</h2>
   <p>Proposition 2&frac12; caps annual levy growth at 2.5%, but new construction (new homes, new office buildings, additions and renovations) adds to the levy ceiling outside that cap. DOR calls this "new growth." In towns with active development, the levy limit expands every year from new construction alone, without an override vote.</p>
 
-  <p>Marblehead's 5-year average new growth is 0.54% of prior-year levy, which works out to roughly $460,000 per year added to the levy ceiling. Needham, the top residential-adjacent suburb in the peer set by this metric, averages 2.83%, about $4.1 million per year. Cambridge averages 2.74% on a levy five times larger than Marblehead's: around $18 million per year. Whether this difference is a structural advantage for the commercial towns or a price paid by their residents (in traffic, scale, or lost small-town character) depends on what you value.</p>
+  <p>Marblehead's 5-year average new growth is 0.54% of prior-year levy, which works out to roughly $460,000 per year added to the levy ceiling. Needham, the top mostly-residential suburb in the peer set by this metric, averages 2.83%, about $4.1 million per year. Cambridge averages 2.74% on a levy five times larger than Marblehead's: around $18 million per year. Whether this difference is a structural advantage for the commercial towns or a price paid by their residents (in traffic, scale, or lost small-town character) depends on what you value.</p>
 
   <div class="peer-chart">
     <h3>5-yr Avg New Growth as % of Prior-Year Levy Limit</h3>
@@ -206,14 +217,12 @@ og_url: https://marbleheaddata.org/why-not-elsewhere.html
   <h2 data-stance-section="four-archetypes">Four structural archetypes</h2>
   <p>The peer towns cluster into four groups with different structural profiles. None is "doing it right" or "doing it wrong." Each reflects a different combination of geography, history, demographics, and policy choices that residents and officials made over decades. The same structural profile can be viewed as an advantage or a tradeoff depending on what residents value.</p>
 
-  <p class="source"><strong>A note on the columns below.</strong> <em>Res&nbsp;%</em> is the residential share of the property tax levy. <em>CIP&nbsp;%</em> is the commercial, industrial, and personal-property share. <em><a href="#ng-footnote">5yr&nbsp;NG</a></em> is the five-year average new growth: the percent added to the levy ceiling each year from new construction, outside Proposition 2&frac12;'s 2.5% cap.</p>
-
   <h3>1. Residential-dominant suburbs (Marblehead's group)</h3>
   <p>Mature, mostly built-out suburbs with minimal commercial tax base. Nearly all the levy comes from homeowners. Most towns in this group have either run an override recently or have one on the ballot this spring. Marblehead sits at the top of this group on residential share and at the bottom on new growth.</p>
 
   <table class="peer-table">
     <thead>
-      <tr><th>Town</th><th>Res&nbsp;%</th><th>CIP&nbsp;%</th><th>5yr&nbsp;NG</th><th>Passed</th></tr>
+      <tr><th>Town</th><th>Residential</th><th>Commercial<a href="#cip-footnote" class="fn">*</a></th><th>New growth<a href="#ng-footnote" class="fn">*</a></th><th>Passed</th></tr>
     </thead>
     <tbody>
       <tr class="mh"><td>Marblehead</td><td>95.5%</td><td>4.5%</td><td>0.54%</td><td>FY2006</td></tr>
@@ -231,11 +240,11 @@ og_url: https://marbleheaddata.org/why-not-elsewhere.html
   <p class="source">Marblehead and Swampscott last passed an override in 2006, 20 years ago. Cohasset last passed an override in FY2005. Every other town in this group has passed an override more recently or is voting on one this spring.</p>
 
   <h3>2. Suburbs with meaningful commercial presence</h3>
-  <p>Similar demographics to the first group, but with enough office parks, biotech, retail, or routes along I-90 / Route 9 to carry 17&ndash;33% of the tax levy. New growth rates are materially higher too. These towns still hold override votes periodically, but the interval between votes tends to be longer.</p>
+  <p>Demographically, these towns look like the first group. But they have enough office parks, biotech, retail, or highway frontage along I-90 / Route 9 to carry 17&ndash;33% of the tax levy. New growth rates are materially higher too. Override votes still happen periodically, but the interval between them tends to be longer.</p>
 
   <table class="peer-table">
     <thead>
-      <tr><th>Town</th><th>Res&nbsp;%</th><th>CIP&nbsp;%</th><th>5yr&nbsp;NG</th><th>Passed</th></tr>
+      <tr><th>Town</th><th>Residential</th><th>Commercial<a href="#cip-footnote" class="fn">*</a></th><th>New growth<a href="#ng-footnote" class="fn">*</a></th><th>Passed</th></tr>
     </thead>
     <tbody>
       <tr><td>Natick</td><td>82.8%</td><td>17.2%</td><td>1.51%</td><td>FY2026</td></tr>
@@ -247,11 +256,11 @@ og_url: https://marbleheaddata.org/why-not-elsewhere.html
   <p class="source">Needham and Lexington average almost 2x the peer-group new growth despite being mostly residential. Framingham has not passed an override since 2003. These towns still vote on overrides regularly, but the underlying pressure is less acute.</p>
 
   <h3>3. Commercial-anchor cities</h3>
-  <p>Labs, biotech, large office campuses, retail, and in Boston's case everything. CIP class pays the majority of the levy. These four cities have <strong>never</strong> held a Proposition 2&frac12; override vote in the entire DOR database (1982&ndash;present). Cost increases spread across a large commercial base, and new construction expands the levy ceiling each year. Whether their residents consider this a win depends on what they think about the density, traffic, and scale that come with it.</p>
+  <p>These four cities are anchored by labs, biotech, large office campuses, retail, and in Boston's case everything. Commercial property pays the majority of the levy. None of them has <strong>ever</strong> held a Proposition 2&frac12; override vote in the entire DOR database (1982&ndash;present). Cost increases spread across a large commercial base, and new construction expands the levy ceiling each year. Whether their residents consider this a win depends on what they think about the density, traffic, and scale that come with it.</p>
 
   <table class="peer-table">
     <thead>
-      <tr><th>Town</th><th>Res&nbsp;%</th><th>CIP&nbsp;%</th><th>5yr&nbsp;NG</th><th>Overrides ever</th></tr>
+      <tr><th>Town</th><th>Residential</th><th>Commercial<a href="#cip-footnote" class="fn">*</a></th><th>New growth<a href="#ng-footnote" class="fn">*</a></th><th>Overrides ever</th></tr>
     </thead>
     <tbody>
       <tr><td>Boston</td><td>46.1%</td><td>53.9%</td><td>3.15%</td><td>0</td></tr>
@@ -267,7 +276,7 @@ og_url: https://marbleheaddata.org/why-not-elsewhere.html
 
   <table class="peer-table">
     <thead>
-      <tr><th>Town</th><th>Res&nbsp;%</th><th>CIP&nbsp;%</th><th>5yr&nbsp;NG</th><th>Overrides ever</th></tr>
+      <tr><th>Town</th><th>Residential</th><th>Commercial<a href="#cip-footnote" class="fn">*</a></th><th>New growth<a href="#ng-footnote" class="fn">*</a></th><th>Overrides ever</th></tr>
     </thead>
     <tbody>
       <tr><td>Lynn</td><td>82.7%</td><td>17.3%</td><td>1.84%</td><td>0</td></tr>
@@ -356,6 +365,7 @@ og_url: https://marbleheaddata.org/why-not-elsewhere.html
     <p><strong>Sources.</strong> Residential and CIP levy shares: <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=propertytaxinformation.taxlevies.leviesbyclass">MA DOR Tax Levies by Class FY2026</a>. New growth: <a href="https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=NewGrowth.NewGrowth_dash_v2_test">MA DOR New Growth Analysis</a> (5-year average, FY2022&ndash;2026). Override history: <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride">MA DOR Proposition 2&frac12; Override &amp; Underride Votes</a>. Statewide fiscal context: <a href="https://www.mma.org/wp-content/uploads/2025/10/MMA-APerfectStorm-HistoricFiscalPressures-report-10.9.25.pdf">MMA, <em>A Perfect Storm: Cities and Towns Face Historic Fiscal Pressures</em> (October 2025)</a>. Malden vote result: <a href="https://www.wgbh.org/news/news-programs/2026-04-01/malden-faces-painful-cuts-after-voter-reject-first-ever-tax-override">GBH News (April 1, 2026)</a>.</p>
     <p><strong>Data files.</strong> Raw peer-town CSVs: <a href="data/peer_tax_levies_by_class_FY22-26.csv">tax levies by class</a>, <a href="data/peer_new_growth_FY22-26.csv">new growth</a>, <a href="data/peer_override_history.csv">override history</a>, <a href="data/peer_premium_splits.csv">health insurance premium splits</a>.</p>
     <p><strong>Data currency.</strong> DOR data was pulled April 10, 2026. The DOR override database reflects results through late March 2026 (Arlington's $14.8M override passed March 28; Stoneham's $9.3M passed December 2025). Malden's March 31 failed override had not yet appeared in the DOR database at time of pull but is referenced in the table above from contemporaneous news sources. Winchester held a failed override vote in March 2026 that is also not yet reflected in DOR data; the "Passed" column shows the last override that passed, not all recent attempts.</p>
+    <p id="cip-footnote"><strong>Note on "Commercial."</strong> The value shown is DOR's combined commercial, industrial, and personal-property (CIP) class share of the total property tax levy. In this peer set, industrial and personal property are a small slice of CIP for most towns; commercial real estate dominates. "Commercial" in the column header is plain-English shorthand for the full CIP grouping.</p>
     <p id="ng-footnote"><strong>Note on "new growth."</strong> The DOR metric shown is <em>total new growth applied to the levy limit as a percent of the prior-year levy limit</em>. This captures how much the levy ceiling expands each year from new construction, outside Proposition 2&frac12;'s 2.5% cap. It does not include annual 2.5% growth, value increases from reassessment, or debt exclusions.</p>
     <p><strong>Note on gateway cities.</strong> "Gateway city" is a statutory designation under MGL Chapter 23A, Section 3A, based on historical manufacturing employment and median household income. The 26 designated gateway cities receive specialized state grants, formula aid, and zoning tools not available to other municipalities.</p>
   </div>
