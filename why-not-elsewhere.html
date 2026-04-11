@@ -1,37 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5PQG62BJ');</script>
-<!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK1KEJT3KX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZK1KEJT3KX');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
-<title>Why do some MA towns run overrides and others don't? - Marblehead Budget Data</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/community-pulse/widget.css">
-<meta property="og:title" content="Why not fund it somewhere else?">
-<meta property="og:description" content="A neutral walkthrough of the revenue alternatives the town has considered or rejected, with the concrete fiscal tradeoffs for each.">
-<meta property="og:image" content="https://marbleheaddata.org/favicon.svg">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://marbleheaddata.org/why-not-elsewhere.html">
+---
+title: "Why do some MA towns run overrides and others don't?"
+og_title: "Why do some MA towns run overrides and others don't?"
+og_description: A neutral walkthrough of the revenue alternatives the town has considered or rejected, with the concrete fiscal tradeoffs for each.
+og_url: https://marbleheaddata.org/why-not-elsewhere.html
+---
 <style>
-  /* Page-specific: archetype-colored bar charts and data tables */
+/* Page-specific: archetype-colored bar charts and data tables */
   .peer-chart {
     background: var(--surface);
     border-radius: var(--radius-md);
@@ -142,17 +116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     table.peer-table th, table.peer-table td { padding: 7px 4px; }
   }
 </style>
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQG62BJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<div class="page">
-  <a class="back" href="./">&larr; marbleheaddata.org</a>
-
-  <h1>Why do some MA towns run overrides and others don't?</h1>
+<h1>Why do some MA towns run overrides and others don't?</h1>
   <p>Massachusetts has 351 cities and towns. Some are running Proposition 2&frac12; override votes this year, some never have, and some haven't in decades. What separates the groups isn't primarily about management or spending levels. It's structural. Two metrics from the MA Department of Revenue explain most of the variation: what share of a town's property tax levy falls on residential homeowners, and how much new construction expands the levy ceiling each year.</p>
 
   <p>This page walks through those two metrics for a 21-town peer set spanning residential suburbs, mixed-use suburbs, commercial-anchor cities, and gateway cities. Whether any given town's situation constitutes a "problem" is a separate judgment that depends on values, priorities, and what residents want from their local government. The data here is meant to inform that judgment, not to make it.</p>
@@ -242,6 +206,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Four structural archetypes</h2>
   <p>The peer towns cluster into four groups with different structural profiles. None is "doing it right" or "doing it wrong." Each reflects a different combination of geography, history, demographics, and policy choices that residents and officials made over decades. The same structural profile can be viewed as an advantage or a tradeoff depending on what residents value.</p>
 
+  <p class="source"><strong>A note on the columns below.</strong> <em>Res&nbsp;%</em> is the residential share of the property tax levy. <em>CIP&nbsp;%</em> is the commercial, industrial, and personal-property share. <em><a href="#ng-footnote">5yr&nbsp;NG</a></em> is the five-year average new growth: the percent added to the levy ceiling each year from new construction, outside Proposition 2&frac12;'s 2.5% cap.</p>
+
   <h3>1. Residential-dominant suburbs (Marblehead's group)</h3>
   <p>Mature, mostly built-out suburbs with minimal commercial tax base. Nearly all the levy comes from homeowners. Most towns in this group have either run an override recently or have one on the ballot this spring. Marblehead sits at the top of this group on residential share and at the bottom on new growth.</p>
 
@@ -328,8 +294,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="card">
     <h3>40B affordable housing and MBTA Communities Act</h3>
-    <p>Chapter 40B allows developers to bypass local zoning if at least 20&ndash;25% of units are affordable, in towns where the affordable housing stock is below 10%. The 2021 MBTA Communities Act requires towns with rapid-transit service to zone for multifamily housing near stations. Both mechanisms can add new growth quickly if a town chooses to participate or is legally required to.</p>
-    <p><strong>Marblehead context:</strong> Marblehead has no MBTA rapid transit station and is exempt from the MBTA Communities Act. Marblehead is below the 10% affordable threshold, which means 40B projects can technically proceed, but the town's geography and existing built environment limit their scale. The 2026 Board of Selectmen have discussed affordable housing goals but no major 40B pipeline currently exists.</p>
+    <p>Chapter 40B allows developers to bypass local zoning if at least 20&ndash;25% of units are affordable, in towns where the affordable housing stock is below 10%. The 2021 MBTA Communities Act (Section 3A) requires designated MBTA communities to zone for multifamily housing by right. Both mechanisms can add new growth if a town participates or is legally required to.</p>
+    <p><strong>Marblehead context:</strong> Both mechanisms apply to Marblehead, and both are the subject of active local conflict.</p>
+    <p>Marblehead's Subsidized Housing Inventory stands at roughly 3.9% (333 of 8,528 year-round units), well below the 10% floor that keeps 40B proposals viable. The town's first 40B, the 88-unit Marblehead Highlands project (22 affordable units), is in the development pipeline.</p>
+    <p>Under Section 3A, Marblehead is classified as an <em>adjacent community</em> (adjacent to Swampscott and Salem) and is required to zone for a capacity of at least 897 multifamily units on a minimum of 27 acres at a density of at least 15 units per acre. The town has voted on MBTA zoning four times in three years. Town Meeting rejected a plan in May 2024 (410&ndash;377), then approved a compliant overlay in May 2025 (951&ndash;759), only to see a citizen-initiated referendum overturn it in July 2025 (3,642&ndash;3,297). Attorney General Andrea Campbell sued Marblehead and other non-compliant communities in February 2026. A revised plan centering the required district on Tedesco Country Club, with a second subdistrict over existing Housing Authority property on Broughton Road, returns as Article 4 at the May 4, 2026 annual Town Meeting.</p>
+    <p>Neither mechanism closes the FY27 deficit. Even if Article 4 passes and buildout proceeds on schedule, new housing takes years to permit, construct, and appear as new growth on the levy limit. Units that don't yet exist don't generate tax revenue in the year the structural gap opens. The mechanisms matter for Marblehead's long-term fiscal trajectory; they do not substitute for a decision about FY27.</p>
   </div>
 
   <div class="card">
@@ -347,15 +316,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li>The peer set is selected to illustrate a range of archetypes, not to be representative of all 351 MA municipalities. Different peer sets may tell slightly different stories. The full DOR dataset is linked below.</li>
   </ul>
 
+  <div class="read-next">
+    <div class="read-next-label">Read next</div>
+    <a class="read-next-link" href="senior-tax-relief.html">
+      <div class="read-next-title">Senior property tax relief &rarr;</div>
+      <div class="read-next-desc">Two programs that can reduce what a Marblehead senior pays: the state Senior Circuit Breaker (available today) and a pending local exemption.</div>
+    </a>
+  </div>
+
   <div class="notes">
     <p><strong>Sources.</strong> Residential and CIP levy shares: <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=propertytaxinformation.taxlevies.leviesbyclass">MA DOR Tax Levies by Class FY2026</a>. New growth: <a href="https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=NewGrowth.NewGrowth_dash_v2_test">MA DOR New Growth Analysis</a> (5-year average, FY2022&ndash;2026). Override history: <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride">MA DOR Proposition 2&frac12; Override &amp; Underride Votes</a>. Statewide fiscal context: <a href="https://www.mma.org/wp-content/uploads/2025/10/MMA-APerfectStorm-HistoricFiscalPressures-report-10.9.25.pdf">MMA, <em>A Perfect Storm: Cities and Towns Face Historic Fiscal Pressures</em> (October 2025)</a>. Malden vote result: <a href="https://www.wgbh.org/news/news-programs/2026-04-01/malden-faces-painful-cuts-after-voter-reject-first-ever-tax-override">GBH News (April 1, 2026)</a>.</p>
     <p><strong>Data files.</strong> Raw peer-town CSVs: <a href="data/peer_tax_levies_by_class_FY22-26.csv">tax levies by class</a>, <a href="data/peer_new_growth_FY22-26.csv">new growth</a>, <a href="data/peer_override_history.csv">override history</a>.</p>
     <p><strong>Data currency.</strong> DOR data was pulled April 10, 2026. The DOR override database reflects results through late March 2026 (Arlington's $14.8M override won March 28; Stoneham's $9.3M won December 2025). Malden's March 31 failed override had not yet appeared in the DOR database at time of pull but is referenced in the table above from contemporaneous news sources. Winchester held a failed override vote in March 2026 that is also not yet reflected in DOR data; the "last override win" column shows the last successful vote of record, not all recent attempts.</p>
-    <p><strong>Note on "new growth."</strong> The DOR metric shown is <em>total new growth applied to the levy limit as a percent of the prior-year levy limit</em>. This captures how much the levy ceiling expands each year from new construction, outside Proposition 2&frac12;'s 2.5% cap. It does not include annual 2.5% growth, value increases from reassessment, or debt exclusions.</p>
+    <p id="ng-footnote"><strong>Note on "new growth."</strong> The DOR metric shown is <em>total new growth applied to the levy limit as a percent of the prior-year levy limit</em>. This captures how much the levy ceiling expands each year from new construction, outside Proposition 2&frac12;'s 2.5% cap. It does not include annual 2.5% growth, value increases from reassessment, or debt exclusions.</p>
     <p><strong>Note on gateway cities.</strong> "Gateway city" is a statutory designation under MGL Chapter 23A, Section 3A, based on historical manufacturing employment and median household income. The 26 designated gateway cities receive specialized state grants, formula aid, and zoning tools not available to other municipalities.</p>
   </div>
-</div>
-
-<script type="module" src="assets/community-pulse/widget.js" data-api-base="https://marblehead-community-pulse.example.workers.dev"></script>
-</body>
-</html>

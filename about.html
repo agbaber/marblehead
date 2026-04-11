@@ -1,51 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5PQG62BJ');</script>
-<!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK1KEJT3KX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZK1KEJT3KX');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
-<title>About this site - Marblehead Budget Data</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/site.css">
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQG62BJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+---
+title: "About"
+---
+<style>
+/* Page-scoped: About me and meta pills */
+  .profile-disclosure {
+    padding: 14px 18px;
+    background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
+    border-left: 3px solid var(--c-navy);
+    border-radius: 0 10px 10px 0;
+    margin: 0 0 32px;
+  }
+  .profile-disclosure-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-subtle);
+    margin-bottom: 4px;
+  }
+  .profile-disclosure p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .meta-strip {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 40px 0 8px;
+  }
+  .meta-pill {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 7px;
+    padding: 7px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 13px;
+    color: var(--text);
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .meta-pill:hover {
+    background: var(--divider);
+    border-color: var(--text-faint);
+    text-decoration: none;
+  }
+  .meta-pill-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-subtle);
+  }
+  .meta-pill-value {
+    color: var(--text);
+    font-weight: 600;
+  }
+  @media (max-width: 600px) {
+    .meta-pill { padding: 6px 12px; font-size: 12px; }
+  }
+</style>
 
-<div class="page">
-  <a class="back" href="./">&larr; marbleheaddata.org</a>
+  <div class="profile-disclosure">
+    <div class="profile-disclosure-label">Disclosure</div>
+    <p>Not on the Select Board, the Finance Committee, or any other town body. My stake in the override is as a Marblehead homeowner and parent.</p>
+  </div>
 
-  <h1>About this site</h1>
+  <p>This vote matters. So before voting, I wanted to understand two things: how we got here, and what each possible outcome would actually mean. Is this about cuts we could make, or costs rising faster than revenue? I honestly don't know. The site is where I'm working that out.</p>
 
-  <p>I'm Andrew Baber. I've lived in Marblehead for about eight years, long enough to own a home and send my daughter to first grade at Glover. I'm a software engineer by trade, and the kind of person whose job involves coming up to speed fast on subjects I don't know well. I'm not on the Select Board, the Finance Committee, or any other town body. My stakes in the override outcome are the ones every Marblehead homeowner and parent has, and nothing beyond that.</p>
+  <h2>About AI usage</h2>
+  <p>An AI assistant (Claude) handles research, analysis, and the site's digital infrastructure. I regularly remind it to stay as neutral as possible, and I own and operate everything it produces. Every number traces to a primary source, but I don't re-verify each one against the original document myself. Errors are possible. When I find one, or a reader catches one, the page gets updated.</p>
 
-  <p>This vote matters. I wanted to know how we got here and what the result would actually mean before voting on it. So I started digging, and the site is what I found: primary sources, arguments from every side, and my own corrections when I got something wrong.</p>
+  <h2>Costs</h2>
+  <div class="card">
+    <div class="cut-item">
+      <span class="cut-item-name">Domain registration</span>
+      <span class="cut-item-amount">~$8/year</span>
+    </div>
+    <div class="cut-item">
+      <span class="cut-item-name">GitHub Pages hosting</span>
+      <span class="cut-item-amount">Free</span>
+    </div>
+    <div class="cut-item">
+      <span class="cut-item-name">Advertising, donations, outside funding</span>
+      <span class="cut-item-amount">None</span>
+    </div>
+  </div>
 
-  <p>The more I dig, the more I see we need. More data. More transparency. More reason to trust or distrust the people making decisions for us. Tax dollars should be spent well, even when that means less for my daughter's school. But "well" is the hard part. Is this about cuts we could make, or costs rising faster than revenue? I honestly don't know.</p>
+  <p><strong>Found a mistake?</strong> Open an <a href="https://github.com/agbaber/marblehead/issues/new">issue</a> or a <a href="https://github.com/agbaber/marblehead/pulls">pull request</a> on GitHub.</p>
 
-  <p>Every number on the site traces to a primary source: town budgets, Finance Committee reports, state DOR filings, Massachusetts General Laws, or named reporting from the Marblehead Current, Independent, or Itemlive. An AI assistant (Claude) does the research and drafts the pages. I review before publishing. I don't personally re-verify every source against the original document, so errors are possible. When I find one, or a reader catches one, the page gets updated.</p>
-
-  <p>If you find something that's wrong, tell me. The fastest way is through my personal site at <a href="https://babersway.com">babersway.com</a>. I'd rather fix an error than win an argument.</p>
-</div>
-
-</body>
-</html>
+  <div class="meta-strip">
+    <a class="meta-pill" href="https://github.com/agbaber/marblehead">
+      <span class="meta-pill-label">Source</span>
+      <span class="meta-pill-value">GitHub</span>
+    </a>
+    <a class="meta-pill" href="https://opensource.org/licenses/MIT">
+      <span class="meta-pill-label">Code</span>
+      <span class="meta-pill-value">MIT</span>
+    </a>
+    <a class="meta-pill" href="https://creativecommons.org/licenses/by/4.0/">
+      <span class="meta-pill-label">Content</span>
+      <span class="meta-pill-value">CC BY 4.0</span>
+    </a>
+  </div>
