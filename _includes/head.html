@@ -21,6 +21,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 <link rel="icon" href="{{ '/' | relative_url }}favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{{ '/' | relative_url }}assets/site.css">
+<script defer src="{{ '/' | relative_url }}assets/citations.js"></script>
 {% unless page.community_pulse == "off-sections" %}
 <link rel="stylesheet" href="{{ '/' | relative_url }}assets/community-pulse/widget.css">
 <script type="module" src="{{ '/' | relative_url }}assets/community-pulse/widget.js" data-api-base="https://marblehead-community-pulse.agbaber.workers.dev"></script>
