@@ -133,3 +133,45 @@ describe('POST /api/reactions', () => {
     expect(res.status).toBe(400);
   });
 });
+
+describe('POST rate limiting', () => {
+  function makeRequest(sectionId, ip = '1.2.3.4') {
+    return new Request('https://pulse.example.com/api/reactions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'CF-Connecting-IP': ip },
+      body: JSON.stringify({ section_id: sectionId })
+    });
+  }
+
+  it('allows first 5 increments from the same IP', async () => {
+    for (let i = 0; i < 5; i++) {
+      const res = await handleRequest(makeRequest('page.html#rl'), env);
+      expect(res.status).toBe(200);
+      const body = await res.json();
+      expect(body.total).toBe(i + 1);
+    }
+  });
+
+  it('stops incrementing after the 5th request from the same IP in one window', async () => {
+    // First 5 increments.
+    for (let i = 0; i < 5; i++) {
+      await handleRequest(makeRequest('page.html#rl2'), env);
+    }
+    // 6th request: should return 200 but with the same count as after the 5th.
+    const res = await handleRequest(makeRequest('page.html#rl2'), env);
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    expect(body.total).toBe(5);
+  });
+
+  it('allows different IPs independently', async () => {
+    for (let i = 0; i < 5; i++) {
+      await handleRequest(makeRequest('page.html#rl3', '1.1.1.1'), env);
+    }
+    // Different IP can still increment.
+    const res = await handleRequest(makeRequest('page.html#rl3', '2.2.2.2'), env);
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    expect(body.total).toBe(6);
+  });
+});
