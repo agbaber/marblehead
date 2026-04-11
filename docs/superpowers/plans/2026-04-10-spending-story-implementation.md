@@ -952,3 +952,99 @@ Each cell below cites the source used. ACFR citations use the logical page numbe
 - Budgetary-basis General Fund excludes state on-behalf pension contributions (roughly 6 million to 8 million per year in recent years for the Massachusetts Teachers' Retirement System). Any prose that talks about the town's pension exposure should either note this explicitly or explain that the table uses the town's direct appropriation and leaves state payments out.
 - The six-category breakdown was completed in full (no fallback to the four-category simplification in Step 8 was necessary). Debt and public safety extracted cleanly from the ACFR Budget and Actual schedules.
 
+### Schools deep dive (for Task 5 prose)
+
+The six-category table shows that schools drove roughly $17 million of the $35.7 million in Marblehead general fund spending growth between FY2015 and FY2026, about 48 percent of total growth. This section breaks down what is inside that number so Task 5 can write honest Act 1 prose. All figures below are verified against primary sources in `data/`.
+
+**Nominal growth and inflation adjustment.**
+
+Total Schools line, FY2015 budgetary basis: 32,066,336. Total Schools line, FY2024 budgetary basis (most recent closed-book actual): 46,168,131. Nominal growth: +44.0 percent.
+
+BLS CPI-U (`data/cpi_us.csv`): 2014 annual average 236.7, 2015 annual average 237.0, 2023 annual average 304.7, 2024 annual average 313.7. Using the fiscal-year midpoint method (FY15 = average of 2014 and 2015 = 236.85, FY24 = average of 2023 and 2024 = 309.2), the inflation factor is 309.2 / 236.85 = 1.306, or +30.6 percent. After inflation, the Schools line grew about 10 percent in real terms between FY2015 and FY2024.
+
+**Per-pupil spending (the standard Massachusetts comparison metric).**
+
+From `data/marblehead_per_pupil.csv`, sourced from the state Department of Elementary and Secondary Education (DESE):
+
+- FY2015 in-district per-pupil: $13,504
+- FY2024 in-district per-pupil: $20,743
+- Nominal growth: +53.6 percent
+- Real growth after inflation: about +17.6 percent
+
+Per-pupil spending grew faster than the total Schools line because enrollment fell at the same time. The in-district per-pupil metric excludes out-of-district special education tuition and is the number DESE uses for cross-town comparisons.
+
+**The teacher headcount story is not what the original plan assumed.**
+
+The original Task 3 claim in the plan says "school staffing up 9.6 percent while enrollment fell 19 percent." That comes from `data/fte_employees_FY15-24.csv`, which rolls up all education staff (classroom teachers plus paraprofessionals plus aides plus administrators plus specialists plus support staff). From `data/dese_peer_teachers_enrollment.csv`, the state DESE breaks out classroom teachers specifically:
+
+| Year | Teacher FTE (DESE) | Enrollment | Students per teacher |
+|------|--------------------|------------|----------------------|
+| 2015 | 256.8              | 3,245      | 12.64                |
+| 2024 | 245.8              | 2,617      | 10.65                |
+
+Classroom teacher headcount fell by 11.0 positions between FY2015 and FY2024, a decline of 4.3 percent. Enrollment fell by 628 students, or 19.4 percent. Teachers declined, but more slowly than enrollment, so the student-to-teacher ratio improved from 12.6 to 10.7.
+
+Non-teaching education staff (total education FTE minus DESE teacher FTE): roughly 233 in FY2015 (489.8 minus 256.8), roughly 291 in FY2024 (537.0 minus 245.8). That is an increase of about 58 positions, or about 25 percent. Most of the "staffing up while enrollment down" narrative sits in this non-teaching group: paraprofessionals, aides, and support staff.
+
+Task 5 and Task 3 must handle this carefully. The honest statement is: "Classroom teacher headcount actually fell slightly (eleven positions) between 2015 and 2024. Non-teaching staff (paraprofessionals, aides, and specialists) grew by roughly 25 percent over the same period, which is what drives the rolled-up 9.6 percent staffing increase in the town's own records."
+
+**Peer-town context (DESE, same source).**
+
+Students per classroom teacher, FY2024:
+
+- Marblehead: 10.65
+- Stoneham: 10.79
+- Swampscott: 11.05
+- Melrose: 13.72
+
+Marblehead has the lowest (richest) student-to-teacher ratio of the four peer towns in the existing comparisons on the site. Melrose has nearly 30 percent more students per teacher. This is a real choice: Marblehead has maintained a smaller class size as enrollment declined, rather than reducing teacher headcount proportionally.
+
+**Where the school budget actually goes, FY2026.**
+
+From `data/FY26_budget_summary.json` (`School_Key_Items`):
+
+| Line item                          | FY26 budget   |
+|------------------------------------|---------------|
+| District-wide                      | $14,556,594   |
+| High School                        | $10,766,310   |
+| Village Elementary                 | $7,679,662    |
+| Middle School                      | $5,857,003    |
+| Brown Elementary                   | $5,476,279    |
+| Glover Elementary                  | $4,374,821    |
+| Athletics                          | $391,718      |
+| Out-of-district SpEd (see below)   | $4,558,573    |
+
+The "District-wide" bucket is 30 percent of the school appropriation and includes central administration, district-level special education services, curriculum, assessment, and technology. Out-of-district special education tuitions and transportation sit as their own line items at approximately 9.3 percent of the total school budget:
+
+- SpEd tuition, private day: $1,933,523
+- SpEd tuition, residential: $1,026,993
+- SpEd tuition, collaborative: $601,647
+- Out-of-district transportation: $996,410
+- Total out-of-district SpEd and transportation: $4,558,573
+
+These are payments for Marblehead students whose needs cannot be met in-district. They are mandated by the federal Individuals with Disabilities Education Act and by state special education law; the town does not have discretion to reduce them.
+
+**The override directly restores out-of-district special education funding.**
+
+From `data/override_school_items.csv` (Tier 1 of the override, FY2028 and FY2029):
+
+- "Restore Special Education Out of District Tuition" at $1,500,000 per year
+
+This line is the single largest school item in Tier 1. Its presence on the override ballot means that out-of-district special education funding has been explicitly reduced in the FY27 no-override budget by approximately $1.5 million, a reduction the town will have to absorb elsewhere (presumably by delaying other services or drawing more reserves) if the override fails.
+
+**Honest statement for Task 5 Act 1 prose.**
+
+Drawing on the above, Task 5 can write something like (verify wording against these exact numbers):
+
+> Schools drove nearly half the dollar growth in Marblehead's general fund between 2015 and 2026. After adjusting for inflation, the total schools line grew about 10 percent over the nine-year window where actuals are available. Per-pupil spending, which is the Department of Education's standard comparison metric, grew about 18 percent in real terms as enrollment fell. Classroom teacher headcount declined slightly, from 257 to 246, while non-teaching school staff (paraprofessionals, aides, and specialists) grew by about 25 percent. Marblehead kept a smaller student-to-teacher ratio than Swampscott, Stoneham, or Melrose as enrollment declined. About 9 percent of the FY2026 school budget, roughly $4.6 million, pays for Marblehead students to attend special education programs outside the district. That line is mandated by federal and state law.
+
+**Sources for the deep dive.**
+
+- `data/MASTER_DATA.csv` for tax levy and pension totals cross-checks
+- `data/dese_peer_teachers_enrollment.csv` for teacher FTE and enrollment by town, 2015 through 2024
+- `data/marblehead_per_pupil.csv` for DESE in-district per-pupil spending, 2008 through 2024
+- `data/fte_employees_FY15-24.csv` for total education FTE rollup
+- `data/cpi_us.csv` for BLS CPI-U annual averages
+- `data/FY26_budget_summary.json` for the FY26 school line-item breakdown
+- `data/override_school_items.csv` for the Tier 1 special education out-of-district tuition restoration
+
