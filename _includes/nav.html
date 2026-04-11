@@ -1,15 +1,26 @@
 <nav class="site-nav">
   <div class="nav-inner">
     <a class="nav-brand" href="{{ '/' | relative_url }}">MHD Data</a>
-    <a href="{{ '/' | relative_url }}the-debate.html">Debate</a>
-    <a href="{{ '/' | relative_url }}what-is-the-override.html">Override</a>
-    <a href="{{ '/' | relative_url }}question-2-trash.html">Trash</a>
-    <a href="{{ '/' | relative_url }}how-we-got-here.html">History</a>
-    <a href="{{ '/' | relative_url }}where-has-the-money-gone.html">Spending</a>
-    <a href="{{ '/' | relative_url }}no-override-budget.html">No-Override</a>
-    <a href="{{ '/' | relative_url }}why-not-elsewhere.html">Peer Towns</a>
-    <a href="{{ '/' | relative_url }}senior-tax-relief.html">Senior Relief</a>
-    <a href="{{ '/' | relative_url }}what-you-can-do.html">Civic Guide</a>
-    <a href="{{ '/' | relative_url }}about.html">About</a>
+    <a href="{{ '/' | relative_url }}the-debate.html"{% if page.url == '/the-debate.html' %} aria-current="page"{% endif %}>Debate</a>
+    <a href="{{ '/' | relative_url }}what-is-the-override.html"{% if page.url == '/what-is-the-override.html' %} aria-current="page"{% endif %}>Override</a>
+    <a href="{{ '/' | relative_url }}question-2-trash.html"{% if page.url == '/question-2-trash.html' %} aria-current="page"{% endif %}>Trash</a>
+    <a href="{{ '/' | relative_url }}how-we-got-here.html"{% if page.url == '/how-we-got-here.html' %} aria-current="page"{% endif %}>History</a>
+    <a href="{{ '/' | relative_url }}where-has-the-money-gone.html"{% if page.url == '/where-has-the-money-gone.html' %} aria-current="page"{% endif %}>Spending</a>
+    <a href="{{ '/' | relative_url }}no-override-budget.html"{% if page.url == '/no-override-budget.html' %} aria-current="page"{% endif %}>No-Override</a>
+    <a href="{{ '/' | relative_url }}why-not-elsewhere.html"{% if page.url == '/why-not-elsewhere.html' %} aria-current="page"{% endif %}>Peer Towns</a>
+    <a href="{{ '/' | relative_url }}senior-tax-relief.html"{% if page.url == '/senior-tax-relief.html' %} aria-current="page"{% endif %}>Senior Relief</a>
+    <a href="{{ '/' | relative_url }}what-you-can-do.html"{% if page.url == '/what-you-can-do.html' %} aria-current="page"{% endif %}>Civic Guide</a>
+    <a href="{{ '/' | relative_url }}about.html"{% if page.url == '/about.html' %} aria-current="page"{% endif %}>About</a>
   </div>
 </nav>
+<script>
+  (function () {
+    if (!window.matchMedia || !window.matchMedia('(max-width: 799px)').matches) return;
+    var navInner = document.querySelector('nav.site-nav .nav-inner');
+    if (!navInner) return;
+    var current = navInner.querySelector('a[aria-current="page"]');
+    if (!current) return;
+    var target = current.offsetLeft - (navInner.clientWidth - current.offsetWidth) / 2;
+    navInner.scrollLeft = Math.max(0, target);
+  })();
+</script>
