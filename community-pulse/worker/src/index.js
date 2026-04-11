@@ -80,10 +80,10 @@ async function checkAndIncrementRateLimit(env, ip, sectionId) {
   const now = Date.now();
   const windowStart = Math.floor(now / RATE_LIMIT_WINDOW_MS) * RATE_LIMIT_WINDOW_MS;
 
-  // Lazily clean up old rows for this (ip_hash, section_id).
+  // Lazily clean up all old rows across the whole table.
   await env.DB.prepare(
-    'DELETE FROM rate_limits WHERE ip_hash = ? AND section_id = ? AND window_start < ?'
-  ).bind(ipHash, sectionId, windowStart).run();
+    'DELETE FROM rate_limits WHERE window_start < ?'
+  ).bind(windowStart).run();
 
   const existing = await env.DB.prepare(
     'SELECT count FROM rate_limits WHERE ip_hash = ? AND section_id = ? AND window_start = ?'
