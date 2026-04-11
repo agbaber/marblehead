@@ -49,8 +49,10 @@ Even after living through cuts, the larger amount STILL nearly failed. 43 votes.
   - Auburn: $500K failed, $1.3M passed 33 days later (+160%)
   - Reading: $250K failed, $4.5M passed 42 days later (+1,700%)
   - Melrose: $7.7M failed, $13.5M passed 17 months later (+75%)
-- Operating override success rate historically: ~60-65% (vs 81% for debt exclusions)
-- Marblehead's own history: 3 of 21 operating overrides approved (86% failure rate). Last success: June 2005.
+- Operating override success rate historically: ~60-65% statewide (vs ~81% statewide for debt exclusions)
+- Marblehead's own history (MA DOR primary data, pulled 2026-04-11, see `data/marblehead_prop25_votes.csv`):
+  - Operating overrides: 4 of 13 ballot attempts approved (31% success rate) since 1990, the earliest year in the DOR record. Last success: June 2005 vote, $2.73M supplemental override for the FY2006 budget.
+  - Debt exclusions: 28 of 29 ballot attempts approved (97% success rate) since 1982. The only loss in 43 years was the June 2002 Tucker's Wharf bond by 136 votes.
 
 ---
 
