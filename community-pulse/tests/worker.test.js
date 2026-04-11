@@ -63,3 +63,73 @@ describe('GET /api/reactions', () => {
     expect(res.headers.get('Access-Control-Allow-Origin')).toBeTruthy();
   });
 });
+
+describe('POST /api/reactions', () => {
+  it('creates a new section row on first increment', async () => {
+    const req = new Request('https://pulse.example.com/api/reactions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ section_id: 'page.html#sec' })
+    });
+    const res = await handleRequest(req, env);
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    expect(body.total).toBe(1);
+    expect(body.last_24h).toBe(1);
+  });
+
+  it('increments an existing section row', async () => {
+    const now = Date.now();
+    await env.DB.prepare(
+      'INSERT INTO reactions (section_id, total_count, count_24h, window_24h_start, updated_at) VALUES (?, ?, ?, ?, ?)'
+    ).bind('page.html#sec', 10, 3, now, now).run();
+
+    const req = new Request('https://pulse.example.com/api/reactions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ section_id: 'page.html#sec' })
+    });
+    const res = await handleRequest(req, env);
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    expect(body.total).toBe(11);
+    expect(body.last_24h).toBe(4);
+  });
+
+  it('resets 24h counter when window has elapsed', async () => {
+    const longAgo = Date.now() - (25 * 60 * 60 * 1000); // 25 hours ago
+    await env.DB.prepare(
+      'INSERT INTO reactions (section_id, total_count, count_24h, window_24h_start, updated_at) VALUES (?, ?, ?, ?, ?)'
+    ).bind('page.html#sec', 10, 9, longAgo, longAgo).run();
+
+    const req = new Request('https://pulse.example.com/api/reactions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ section_id: 'page.html#sec' })
+    });
+    const res = await handleRequest(req, env);
+    const body = await res.json();
+    expect(body.total).toBe(11);
+    expect(body.last_24h).toBe(1); // window reset
+  });
+
+  it('returns 400 on missing body', async () => {
+    const req = new Request('https://pulse.example.com/api/reactions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: ''
+    });
+    const res = await handleRequest(req, env);
+    expect(res.status).toBe(400);
+  });
+
+  it('returns 400 on missing section_id field', async () => {
+    const req = new Request('https://pulse.example.com/api/reactions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ other: 'data' })
+    });
+    const res = await handleRequest(req, env);
+    expect(res.status).toBe(400);
+  });
+});
