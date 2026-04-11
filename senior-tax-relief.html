@@ -49,6 +49,45 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     margin-top: 8px;
     padding-left: 38px;
   }
+  .formula-step + .formula-step {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid color-mix(in srgb, var(--c-teal) 22%, var(--border));
+  }
+  .formula-step-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: color-mix(in srgb, var(--c-teal) 70%, var(--text));
+    margin-bottom: 12px;
+  }
+  .formula-cases {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .formula-cases li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: baseline;
+    padding: 9px 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--c-teal) 15%, var(--divider));
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .formula-cases li:first-child { padding-top: 0; }
+  .formula-cases li:last-child { padding-bottom: 0; border-bottom: none; }
+  .formula-case-label { color: var(--text); }
+  .formula-case-label strong { color: var(--text); font-weight: 700; }
+  .formula-case-result {
+    color: color-mix(in srgb, var(--c-teal) 80%, var(--text));
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
+  }
   /* Page-scoped: TLDR box */
   .tldr {
     background: var(--surface);
@@ -97,6 +136,12 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     .formula { padding: 14px 16px; }
     .formula-row { font-size: 14px; }
     .formula-op { font-size: 16px; }
+    .formula-cases li {
+      grid-template-columns: 1fr;
+      gap: 2px;
+      padding: 9px 0 9px 38px;
+    }
+    .formula-cases li .formula-case-result { text-align: left; }
     .tldr { padding: 16px 18px 14px; }
     .tldr li { font-size: 13px; }
   }
@@ -157,20 +202,40 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     <p>The credit is the portion of your property tax (plus half your water and sewer) that is above 10% of your Massachusetts income, up to $2,820.</p>
 
     <div class="formula" aria-label="Circuit Breaker formula">
-      <div class="formula-row">
-        <span class="formula-op">&nbsp;</span>
-        <span class="formula-label">Your property tax<span class="formula-hint">Plus half your annual water and sewer bill</span></span>
+      <div class="formula-step">
+        <div class="formula-step-label">Step 1. Find your excess</div>
+        <div class="formula-row">
+          <span class="formula-op">&nbsp;</span>
+          <span class="formula-label">Your property tax<span class="formula-hint">Plus half your annual water and sewer bill</span></span>
+        </div>
+        <div class="formula-row">
+          <span class="formula-op">&minus;</span>
+          <span class="formula-label">10% of your Massachusetts income<span class="formula-hint">Includes Social Security, pensions, wages, and interest</span></span>
+        </div>
+        <div class="formula-rule" role="presentation"></div>
+        <div class="formula-row">
+          <span class="formula-op">=</span>
+          <span class="formula-label"><strong>Your excess</strong><span class="formula-hint">The portion of your property tax that goes above 10% of income</span></span>
+        </div>
       </div>
-      <div class="formula-row">
-        <span class="formula-op">&minus;</span>
-        <span class="formula-label">10% of your Massachusetts income<span class="formula-hint">Includes Social Security, pensions, wages, and interest</span></span>
+
+      <div class="formula-step">
+        <div class="formula-step-label">Step 2. Apply the floor and cap</div>
+        <ul class="formula-cases">
+          <li>
+            <span class="formula-case-label">If your excess is <strong>zero or negative</strong></span>
+            <span class="formula-case-result">$0 credit</span>
+          </li>
+          <li>
+            <span class="formula-case-label">If your excess is <strong>between $0 and $2,820</strong></span>
+            <span class="formula-case-result">Credit = your excess</span>
+          </li>
+          <li>
+            <span class="formula-case-label">If your excess is <strong>more than $2,820</strong></span>
+            <span class="formula-case-result">Capped at $2,820</span>
+          </li>
+        </ul>
       </div>
-      <div class="formula-rule" role="presentation"></div>
-      <div class="formula-row">
-        <span class="formula-op">=</span>
-        <span class="formula-label"><strong>Your Circuit Breaker credit</strong></span>
-      </div>
-      <p class="formula-cap">Capped at $2,820 for TY2025. If the result is zero or negative, no credit.</p>
     </div>
 
     <p>Renters qualify too: 25% of annual rent is treated as property tax in the formula.</p>
