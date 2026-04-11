@@ -103,4 +103,12 @@ All SVGs should have `class="chart"`. Use these classes instead of inline styles
 - No inline `style=""` attributes on SVG elements (use CSS classes)
 - No inline `font-family`, `fill`, `stroke` on SVG text/lines (use CSS classes)
 - No data presented without a traceable source
-- No CPI/inflation comparisons for municipal cost categories
+- No standalone CPI/inflation comparisons as the sole or primary benchmark for a
+  municipal cost category. CPI may appear when it is one of several benchmarks
+  presented alongside more directly relevant yardsticks (enrollment, headcount,
+  revenue, service levels), when it is disclosed as real-dollar context for a
+  single number, or when inflation-adjusted comparison is the standard metric in
+  the relevant field (e.g. DESE per-pupil spending in constant dollars). The
+  rule is against rhetorical "beat inflation" framings that imply waste without
+  analytical support, not against honest disclosure that a number is
+  inflation-adjusted.

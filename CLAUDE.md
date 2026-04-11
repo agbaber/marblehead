@@ -17,8 +17,8 @@ Before making any content or design change, read:
 If you touch CSS, charts, or page copy without reading STYLE_GUIDE first,
 you will violate a rule in it. (Examples of easy-to-miss rules: no
 em-dashes in site copy, no inline `style=""` on SVG elements, no
-CPI/inflation comparisons for municipal cost categories, no green/red
-value judgments on comparisons.)
+standalone CPI/inflation comparisons as the sole benchmark for a
+municipal cost category, no green/red value judgments on comparisons.)
 
 ## Editorial stance
 
