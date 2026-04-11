@@ -1,0 +1,451 @@
+// Community pulse widget module.
+// Loaded by each content page as a <script defer> tag.
+// Hydrates every <h2> on the page with a stance widget, unless the page
+// opts out via <body data-community-pulse="off-sections">.
+
+/**
+ * Convert a heading text into an anchor ID slug.
+ * Stable across runs for the same input.
+ */
+export function slugify(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')      // strip punctuation
+    .replace(/[\s_-]+/g, '-')      // collapse whitespace and hyphens
+    .replace(/^-+|-+$/g, '');      // trim leading and trailing hyphens
+}
+
+// ---- Stance store (IndexedDB wrapper) -----------------------------------
+
+const DB_NAME = 'community-pulse';
+const DB_VERSION = 1;
+const STORE_NAME = 'stances';
+
+/** Open the IndexedDB connection. Creates the object store on first use. */
+export function openStore() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(DB_NAME, DB_VERSION);
+    req.onupgradeneeded = () => {
+      const db = req.result;
+      if (!db.objectStoreNames.contains(STORE_NAME)) {
+        db.createObjectStore(STORE_NAME, { keyPath: 'section_id' });
+      }
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+/** Read a single stance record by section_id. Returns null if missing. */
+export function getStance(db, sectionId) {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, 'readonly');
+    const store = tx.objectStore(STORE_NAME);
+    const req = store.get(sectionId);
+    req.onsuccess = () => resolve(req.result || null);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+/** Upsert a stance record. Stamps updated_at. */
+export function setStance(db, sectionId, { stance, note }) {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, 'readwrite');
+    const store = tx.objectStore(STORE_NAME);
+    const record = {
+      section_id: sectionId,
+      stance: stance ?? null,
+      note: note ?? '',
+      updated_at: Date.now()
+    };
+    const req = store.put(record);
+    req.onsuccess = () => resolve(record);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+/** Return every stance record as an array. */
+export function getAllStances(db) {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, 'readonly');
+    const store = tx.objectStore(STORE_NAME);
+    const req = store.getAll();
+    req.onsuccess = () => resolve(req.result || []);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+/** Delete a single stance by section_id. */
+export function clearStance(db, sectionId) {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, 'readwrite');
+    const store = tx.objectStore(STORE_NAME);
+    const req = store.delete(sectionId);
+    req.onsuccess = () => resolve();
+    req.onerror = () => reject(req.error);
+  });
+}
+
+/** Delete every stance record. */
+export function clearAllStances(db) {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, 'readwrite');
+    const store = tx.objectStore(STORE_NAME);
+    const req = store.clear();
+    req.onsuccess = () => resolve();
+    req.onerror = () => reject(req.error);
+  });
+}
+
+// ---- Reactions API client -----------------------------------------------
+
+let apiBaseUrl = ''; // set via configureApi or a page-level data attribute
+
+/** Configure the API base URL. Called once at widget init. */
+export function configureApi({ baseUrl }) {
+  apiBaseUrl = baseUrl;
+}
+
+/**
+ * Fetch reaction counts for a batch of section IDs in one request.
+ * Returns a map of section_id to { total, last_24h }. Returns {} on any error.
+ */
+export async function fetchReactions(sectionIds) {
+  if (!sectionIds || sectionIds.length === 0) return {};
+  try {
+    const url = `${apiBaseUrl}/api/reactions?section_ids=${sectionIds.map(encodeURIComponent).join(',')}`;
+    const res = await fetch(url);
+    if (!res.ok) return {};
+    return await res.json();
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * POST an increment for one section. Returns { total, last_24h } on success
+ * or null on any error.
+ */
+export async function incrementReaction(sectionId) {
+  try {
+    const res = await fetch(`${apiBaseUrl}/api/reactions`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ section_id: sectionId })
+    });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
+// ---- Widget rendering and hydration -------------------------------------
+
+const STANCE_BUTTONS = [
+  { key: 'agree',    emoji: '👍', label: 'Agree' },
+  { key: 'disagree', emoji: '👎', label: 'Disagree' },
+  { key: 'alert',    emoji: '!',  label: 'Alert: something here caught my eye' }
+];
+
+let widgetCounter = 0;
+
+/**
+ * Build the widget DOM for one section and attach it to the given parent
+ * element. Returns the widget root element.
+ */
+function buildWidget(sectionId, sectionTitle, initialReactions, initialStance) {
+  const root = document.createElement('div');
+  root.className = 'cp-widget';
+  root.dataset.sectionId = sectionId;
+  const widgetId = `cp-widget-${++widgetCounter}`;
+
+  // Stance buttons.
+  const buttons = document.createElement('div');
+  buttons.className = 'cp-widget__buttons';
+  STANCE_BUTTONS.forEach(({ key, emoji, label }) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'cp-widget__button';
+    btn.dataset.stance = key;
+    btn.setAttribute('aria-label', label);
+    btn.title = label;
+    btn.textContent = emoji;
+    btn.setAttribute('aria-pressed', initialStance === key ? 'true' : 'false');
+    buttons.appendChild(btn);
+  });
+  root.appendChild(buttons);
+
+  // Reaction count + delta.
+  const count = document.createElement('span');
+  count.className = 'cp-widget__count';
+  const countNum = document.createElement('span');
+  countNum.className = 'cp-widget__count-num';
+  countNum.textContent = initialReactions
+    ? `${initialReactions.total} reactions`
+    : '...'; // ellipsis placeholder until the GET /api/reactions batch resolves
+  const countDelta = document.createElement('span');
+  countDelta.className = 'cp-widget__delta';
+  if (initialReactions && initialReactions.last_24h > 0) {
+    countDelta.textContent = `+${initialReactions.last_24h} today`;
+  }
+  count.appendChild(countNum);
+  if (countDelta.textContent) count.appendChild(countDelta);
+  root.appendChild(count);
+
+  // Share button.
+  const share = document.createElement('button');
+  share.type = 'button';
+  share.className = 'cp-widget__share';
+  share.dataset.action = 'share';
+  share.setAttribute('aria-label', 'Share this section');
+  share.title = 'Share this section';
+  share.textContent = 'Share';
+  root.appendChild(share);
+
+  // Privacy link.
+  const privacy = document.createElement('a');
+  privacy.className = 'cp-widget__privacy';
+  privacy.href = '/privacy.html';
+  privacy.title = 'How this feature handles your data';
+  privacy.textContent = 'Privacy';
+  root.appendChild(privacy);
+
+  // Note toggle.
+  const noteToggle = document.createElement('button');
+  noteToggle.type = 'button';
+  noteToggle.className = 'cp-widget__note-toggle';
+  noteToggle.dataset.action = 'toggle-note';
+  noteToggle.setAttribute('aria-expanded', 'false');
+  noteToggle.setAttribute('aria-controls', `${widgetId}-note`);
+  noteToggle.textContent = 'Note';
+  root.appendChild(noteToggle);
+
+  // Note textarea (hidden initially).
+  const note = document.createElement('textarea');
+  note.id = `${widgetId}-note`;
+  note.className = 'cp-widget__note';
+  note.placeholder = 'Write a private note. Saved locally in your browser.';
+  note.setAttribute('aria-label', 'Private note, saved locally in your browser');
+  note.hidden = true;
+  note.rows = 3;
+  root.appendChild(note);
+
+  return root;
+}
+
+/** Show a transient toast message near the bottom of the viewport. */
+function showToast(message) {
+  const existing = document.querySelector('.cp-widget__toast');
+  if (existing) existing.remove();
+  const toast = document.createElement('div');
+  toast.className = 'cp-widget__toast';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add('cp-widget__toast--visible'));
+  setTimeout(() => toast.remove(), 2400);
+}
+
+/** Debounce helper for note field saves. */
+function debounce(fn, ms) {
+  let timer = null;
+  return (...args) => {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), ms);
+  };
+}
+
+/**
+ * Wire event handlers on a single widget: stance buttons, note toggle and
+ * save, share button. Reads and writes the IndexedDB store.
+ */
+function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord) {
+  const buttons = root.querySelectorAll('.cp-widget__button');
+  const noteToggle = root.querySelector('.cp-widget__note-toggle');
+  const noteField = root.querySelector('.cp-widget__note');
+  const shareBtn = root.querySelector('.cp-widget__share');
+  const countNum = root.querySelector('.cp-widget__count-num');
+  const countDelta = root.querySelector('.cp-widget__delta');
+
+  // Track current state in closure to avoid extra IDB reads.
+  let currentStance = initialRecord?.stance ?? null;
+  let currentNote = initialRecord?.note ?? '';
+
+  // Reflect initial note into UI (stance was already reflected by buildWidget's initialStance).
+  if (currentNote) {
+    noteField.value = currentNote;
+    noteField.hidden = false;
+    noteToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  // Stance button handler.
+  buttons.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const stanceKey = btn.dataset.stance;
+      const currentlyPressed = btn.getAttribute('aria-pressed') === 'true';
+      const newStance = currentlyPressed ? null : stanceKey;
+      // Update pressed state immediately.
+      buttons.forEach(b => {
+        b.setAttribute('aria-pressed', b.dataset.stance === newStance ? 'true' : 'false');
+      });
+      // Persist to IndexedDB.
+      currentStance = newStance;
+      await setStance(db, sectionId, { stance: currentStance, note: currentNote });
+      // Fire reactions increment only on activate.
+      if (newStance) {
+        const result = await incrementReaction(sectionId);
+        if (result) {
+          countNum.textContent = `${result.total} reactions`;
+          countDelta.textContent = result.last_24h > 0 ? `+${result.last_24h} today` : '';
+        }
+      }
+    });
+  });
+
+  // Note toggle.
+  noteToggle.addEventListener('click', () => {
+    const isOpen = !noteField.hidden;
+    noteField.hidden = isOpen;
+    noteToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    if (!isOpen) noteField.focus();
+  });
+
+  // Note field debounced save.
+  const saveNote = debounce(async () => {
+    currentNote = noteField.value;
+    await setStance(db, sectionId, { stance: currentStance, note: currentNote });
+  }, 1000);
+  noteField.addEventListener('input', saveNote);
+
+  // Share button.
+  shareBtn.addEventListener('click', async () => {
+    const shareData = { title: sectionTitle, url: sectionUrl };
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch {
+        // User cancelled or share failed silently.
+      }
+    } else if (navigator.clipboard) {
+      try {
+        await navigator.clipboard.writeText(sectionUrl);
+        showToast('Link copied');
+      } catch {
+        showToast('Copy failed');
+      }
+    } else {
+      // Last-resort fallback: show the URL in a prompt so the user can copy it manually.
+      window.prompt('Copy this link:', sectionUrl);
+    }
+  });
+}
+
+/**
+ * Walk every h2 on the page (unless opted out), assign an anchor ID, inject
+ * a widget next to it, and wire handlers. Also handle elements with an
+ * explicit data-stance-section attribute.
+ */
+export async function hydrateWidgets() {
+  // Opt-out check.
+  if (document.body.dataset.communityPulse === 'off-sections') return;
+
+  const pagePath = location.pathname.replace(/^\//, '') || 'index.html';
+  const collectedTargets = [];
+  const seenSlugs = new Set();
+
+  // Auto: every h2 on the page. Deduplicate slugs within the page.
+  document.querySelectorAll('h2').forEach(heading => {
+    const text = heading.textContent.trim();
+    let slug = slugify(text);
+    if (!slug) return;
+    if (seenSlugs.has(slug)) {
+      let suffix = 2;
+      while (seenSlugs.has(`${slug}-${suffix}`)) suffix++;
+      slug = `${slug}-${suffix}`;
+    }
+    seenSlugs.add(slug);
+    if (!heading.id) heading.id = slug;
+    collectedTargets.push({
+      element: heading,
+      sectionId: `${pagePath}#${heading.id}`,
+      title: text
+    });
+  });
+
+  // Explicit: elements with data-stance-section override.
+  document.querySelectorAll('[data-stance-section]').forEach(el => {
+    const slug = el.dataset.stanceSection.trim();
+    if (!slug) return;
+    // If this slug is already in use, skip (author should pick a unique slug).
+    if (seenSlugs.has(slug)) return;
+    seenSlugs.add(slug);
+    if (!el.id) el.id = slug;
+    const title = el.getAttribute('aria-label') || el.textContent.trim().slice(0, 80) || slug;
+    collectedTargets.push({
+      element: el,
+      sectionId: `${pagePath}#${slug}`,
+      title
+    });
+  });
+
+  if (collectedTargets.length === 0) return;
+
+  // Batch-fetch reaction counts for all targets in one request.
+  const reactionsMap = await fetchReactions(collectedTargets.map(t => t.sectionId));
+
+  // Open IndexedDB once for all widgets on the page.
+  let db;
+  try {
+    db = await openStore();
+  } catch {
+    // IndexedDB disabled (private mode, etc). Skip widgets silently.
+    return;
+  }
+
+  // Fetch all existing stances in a single transaction (much faster than per-widget).
+  const allStances = await getAllStances(db);
+  const stanceMap = new Map(allStances.map(s => [s.section_id, s]));
+
+  // Build and wire each widget.
+  for (const target of collectedTargets) {
+    const initialReactions = reactionsMap[target.sectionId];
+    const initialRecord = stanceMap.get(target.sectionId) || null;
+    const widget = buildWidget(
+      target.sectionId,
+      target.title,
+      initialReactions,
+      initialRecord?.stance
+    );
+    target.element.insertAdjacentElement('afterend', widget);
+    wireWidget(
+      widget,
+      db,
+      target.sectionId,
+      `${location.origin}${location.pathname}#${target.element.id}`,
+      target.title,
+      initialRecord
+    );
+  }
+
+  // Re-scroll to a fragment if one is present (fixes runtime-anchor-generation
+  // timing: the browser tried to scroll before we inserted the IDs).
+  if (location.hash) {
+    const target = document.getElementById(location.hash.slice(1));
+    if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
+  }
+}
+
+// ---- Auto-init on DOMContentLoaded --------------------------------------
+
+if (typeof document !== 'undefined') {
+  // Configure API base URL from a script data attribute if present.
+  const script = document.currentScript || document.querySelector('script[src*="community-pulse/widget.js"]');
+  if (script && script.dataset.apiBase) {
+    configureApi({ baseUrl: script.dataset.apiBase });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hydrateWidgets);
+  } else {
+    hydrateWidgets();
+  }
+}

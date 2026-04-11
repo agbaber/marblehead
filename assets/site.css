@@ -558,6 +558,12 @@ p a:hover { text-decoration: underline; }
 }
 
 .footer {
+<<<<<<< HEAD
+  text-align: center; padding: 40px 20px 16px;
+  font-size: 12px; color: var(--text-faint);
+  border-top: 1px solid var(--divider);
+  margin-top: 40px;
+=======
   text-align: center;
   padding: 32px 20px 28px;
   margin-top: 48px;
@@ -596,6 +602,7 @@ p a:hover { text-decoration: underline; }
   color: var(--text-faint);
   margin: 0;
   letter-spacing: 0.2px;
+>>>>>>> origin/main
 }
 
 /* ==========================================================================
