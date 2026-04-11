@@ -2309,14 +2309,17 @@ sup.cite a:target {
   .sources-list-ol { padding-left: 24px; font-size: 11px; }
 }
 
-/* ============================================================
-   Waterfall chart (used on no-override-budget.html for the
-   FY27 gap reconciliation). Scoped to .waterfall container.
-   ============================================================ */
+/* ==========================================================================
+   Waterfall chart (used on no-override-budget.html for the FY27 gap
+   reconciliation). Scoped to .waterfall container. The positive/negative
+   bar colors encode arithmetic sign, not a good/bad judgment — green/red
+   here is approved per STYLE_GUIDE rule 5, which forbids them on
+   comparisons, not on literal signed values in a single calculation.
+   ========================================================================== */
 
 .waterfall {
   margin: 24px 0 20px;
-  max-width: 780px;
+  max-width: var(--page-max);
 }
 
 .waterfall-svg {
@@ -2398,7 +2401,7 @@ sup.cite a:target {
   margin: 12px 0 0;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   .waterfall-label,
   .waterfall-value { font-size: 11px; }
 }
