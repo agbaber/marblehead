@@ -74,33 +74,166 @@ community_pulse: off-sections
     font-style: italic;
   }
 
-  .cruxes {
-    font-size: 15px;
+  /* Meta-note: the "these tensions aren't all the same kind" paragraph above the TL;DR */
+  .meta-note {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    padding: 14px 18px;
+    margin: 18px 0 22px;
+    border-left: 3px solid var(--c-navy);
+    background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* TL;DR section: visually promote the summary above the five tensions */
+  .tldr {
+    background: color-mix(in srgb, var(--c-navy) 3%, var(--surface));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 22px 22px;
+    margin: 20px 0 40px;
+  }
+  .tldr-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--c-buoy);
+    margin-bottom: 4px;
+  }
+  .tldr-sub {
+    font-size: 13px;
+    color: var(--text-subtle);
+    font-style: italic;
+    margin: 0 0 12px;
+    line-height: 1.5;
+  }
+  .tldr .perspective {
+    background: var(--surface);
+  }
+  .tldr .perspective--for {
+    background: color-mix(in srgb, var(--c-teal) 6%, var(--surface));
+  }
+  .tldr .perspective--against {
+    background: color-mix(in srgb, var(--c-brass) 6%, var(--surface));
+  }
+
+  /* Crux map: side-by-side summary grid at the bottom */
+  .crux-map {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin: 16px 0 24px;
+  }
+  .crux-map-header {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: var(--text-subtle);
+    background: var(--surface);
+    padding: 10px 14px 8px;
+    line-height: 1.3;
+  }
+  .crux-map-header--for {
+    color: color-mix(in srgb, var(--c-teal) 80%, var(--text));
+  }
+  .crux-map-header--against {
+    color: color-mix(in srgb, var(--c-brass) 80%, var(--text));
+  }
+  .crux-map-label {
+    background: var(--surface);
+    padding: 12px 14px;
+    font-weight: 600;
     color: var(--text);
-    line-height: 1.7;
-    margin: 14px 0 10px 24px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .crux-map-cell {
+    padding: 12px 14px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text);
+  }
+  .crux-map-cell--for {
+    background: color-mix(in srgb, var(--c-teal) 4%, var(--surface));
+    border-left: 3px solid var(--c-teal);
+  }
+  .crux-map-cell--against {
+    background: color-mix(in srgb, var(--c-brass) 4%, var(--surface));
+    border-left: 3px solid var(--c-brass);
   }
 
   @media (max-width: 600px) {
     .perspective { padding: 16px 18px 14px; }
     .perspective p { font-size: 14px; line-height: 1.6; }
     .tension-heading { font-size: 18px; margin-top: 32px; }
+    .meta-note { padding: 12px 14px; font-size: 13px; }
+    .tldr { padding: 16px 16px 18px; }
+    .crux-map {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .crux-map-header--tension,
+    .crux-map-header--for,
+    .crux-map-header--against {
+      display: none;
+    }
+    .crux-map-label {
+      background: color-mix(in srgb, var(--text) 4%, var(--surface));
+      font-size: 12px;
+      padding: 10px 14px 8px;
+    }
+    .crux-map-cell {
+      font-size: 13px;
+      padding: 10px 14px 12px 17px;
+    }
+    .crux-map-cell--for::before {
+      content: "For: ";
+      font-weight: 700;
+      color: color-mix(in srgb, var(--c-teal) 80%, var(--text));
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .crux-map-cell--against::before {
+      content: "Against: ";
+      font-weight: 700;
+      color: color-mix(in srgb, var(--c-brass) 80%, var(--text));
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      display: block;
+      margin-bottom: 2px;
+    }
   }
 </style>
 
 <h1>The override debate, both sides</h1>
   <p>Marblehead residents are debating whether to approve the FY27 override. This page presents the strongest version of each side in the local debate, organized around the five tensions where voters actually disagree. It is not a recommendation or a summary. It is a map of where the real disagreements are, for readers still deciding how to vote. See <a href="about.html">about this site</a> for the author's disclosure (including that the author is genuinely undecided as of writing).</p>
 
-  <h2 class="tension-heading">The short version</h2>
+  <p class="meta-note">These five tensions are not all the same kind of disagreement. Some are mostly about facts: are the cost drivers really growing at the rate claimed? Some are about reading the same facts differently: is a 43% library reduction damage or discipline? Some are about values: is a multi-year reset responsible or irresponsible? And some depend on how you feel about local governance in ways that data alone cannot settle. Each tension below mixes these in different proportions.</p>
 
-  <div class="perspective perspective--for">
-    <div class="perspective-label">For the override</div>
-    <p>Marblehead's FY27 deficit is the predictable result of health insurance and pension costs growing faster than revenue under Proposition 2&frac12;, in a town whose 95.5%-residential tax base offers few structural alternatives. The Finance Committee has been warning about this arc since 2019. The no-override budget removes 22 town positions, 14 school positions, reduces the library 43%, and eliminates the OPEB trust contribution. These are services residents use, and the reductions would be hard to reverse.</p>
-  </div>
+  <div class="tldr">
+    <div class="tldr-eyebrow">The short version</div>
+    <p class="tldr-sub">The strongest case on each side, in roughly 75 words each. If you read nothing else, read these.</p>
 
-  <div class="perspective perspective--against">
-    <div class="perspective-label">Against the override</div>
-    <p>The same FY27 deficit reflects local choices the town made and keeps making: overhiring, an 83%/17% benefits split more generous than peers, enrollment down while school staffing grew, and a Select Board whose answer to every year's budget is "more." The override pattern won't stop, because the cost drivers don't stop. The honest path is spending discipline and structural reform now, not a bigger tax bill to postpone the reckoning.</p>
+    <div class="perspective perspective--for">
+      <div class="perspective-label">For the override</div>
+      <p>Marblehead's FY27 deficit is the predictable result of health insurance and pension costs growing faster than revenue under Proposition 2&frac12;, in a town whose 95.5%-residential tax base offers few structural alternatives. The Finance Committee has been warning about this arc since 2019. The no-override budget removes 22 town positions, 14 school positions, reduces the library 43%, and eliminates the OPEB trust contribution. These are services residents use, and the reductions would be hard to reverse.</p>
+    </div>
+
+    <div class="perspective perspective--against">
+      <div class="perspective-label">Against the override</div>
+      <p>The same FY27 deficit reflects local choices the town made and keeps making: overhiring, an 83%/17% benefits split more generous than peers, enrollment down while school staffing grew, and a Select Board whose answer to every year's budget is "more." The override pattern won't stop, because the cost drivers don't stop. The honest path is spending discipline and structural reform now, not a bigger tax bill to postpone the reckoning.</p>
+    </div>
   </div>
 
   <h2 class="tension-heading">Tension 1. Where does the cost pressure come from?</h2>
@@ -189,15 +322,33 @@ community_pulse: off-sections
   </div>
 
   <h2 class="tension-heading">Where they actually disagree</h2>
-  <p>The five tensions above are not about different facts. Both sides read the same facts: the same FY27 deficit, the same health insurance trajectory, the same Finance Committee letters, the same no-override budget. They reach different conclusions because they apply different frames. The cruxes, in one place:</p>
+  <p>The five tensions above are not about different facts. Both sides read the same facts: the same FY27 deficit, the same health insurance trajectory, the same Finance Committee letters, the same no-override budget. They reach different conclusions because they apply different frames. Each tension's crux, side by side:</p>
 
-  <ul class="cruxes">
-    <li><strong>Cost source:</strong> whether a cost the town could in principle renegotiate counts as "external"</li>
-    <li><strong>Damage or discipline:</strong> whether FY26 is the correct baseline against which to measure cuts</li>
-    <li><strong>One-time or annual:</strong> whether "reset" means "no override next year" or "no override for years"</li>
-    <li><strong>Alternatives:</strong> whether meaningful alternatives are measured over a 12-week budget cycle or a 5-year planning horizon</li>
-    <li><strong>Trust:</strong> whether past behavior plus transparent process is sufficient evidence of responsible future spending</li>
-  </ul>
+  <div class="crux-map">
+    <div class="crux-map-header crux-map-header--tension">Tension</div>
+    <div class="crux-map-header crux-map-header--for">For the override reads it as</div>
+    <div class="crux-map-header crux-map-header--against">Against the override reads it as</div>
+
+    <div class="crux-map-label">1. Cost source</div>
+    <div class="crux-map-cell crux-map-cell--for">Exogenous drivers (GIC premiums, PERAC schedules, debt, state aid decline)</div>
+    <div class="crux-map-cell crux-map-cell--against">Local policy choices the town can renegotiate over time</div>
+
+    <div class="crux-map-label">2. Damage or discipline</div>
+    <div class="crux-map-cell crux-map-cell--for">Services residents use; the reductions cause real harm</div>
+    <div class="crux-map-cell crux-map-cell--against">Correction to years of accumulated above-baseline growth</div>
+
+    <div class="crux-map-label">3. Reset or annual ask</div>
+    <div class="crux-map-cell crux-map-cell--for">Multi-year structural correction; FinCom forecasts support it</div>
+    <div class="crux-map-cell crux-map-cell--against">Delay; cost drivers continue and the next ask arrives</div>
+
+    <div class="crux-map-label">4. Alternatives</div>
+    <div class="crux-map-cell crux-map-cell--for">Don't exist at the 12-week FY27 horizon</div>
+    <div class="crux-map-cell crux-map-cell--against">Exist at the 5-year horizon; haven't been seriously tried</div>
+
+    <div class="crux-map-label">5. Trust</div>
+    <div class="crux-map-cell crux-map-cell--for">16 years of documented FinCom warnings; transparent process</div>
+    <div class="crux-map-cell crux-map-cell--against">Past behavior is not sufficient evidence of future change</div>
+  </div>
 
   <div class="notes">
     <p><strong>Sources and methodology.</strong> Each tension's factual claims are sourced on the linked pages: FY27 budget numbers and the no-override cut list on <a href="what-fails.html">what's in the no-override budget</a>; the Finance Committee transmittal letter arc on <a href="how-we-got-here.html">how we got here</a>; the ten-year spending walkthrough (which lines grew, by how much, and under which reviewers) on <a href="where-has-the-money-gone.html">where has Marblehead's money gone</a>; the peer-town structural data on <a href="why-not-elsewhere.html">why some MA towns run overrides and others don't</a>; the three-tier override structure and the ballot mechanics on <a href="what-is-the-override.html">what is the override</a>. Statewide fiscal context: MMA, <a href="https://www.mma.org/wp-content/uploads/2025/10/MMA-APerfectStorm-HistoricFiscalPressures-report-10.9.25.pdf"><em>A Perfect Storm: Cities and Towns Face Historic Fiscal Pressures</em> (October 2025)</a>.</p>
