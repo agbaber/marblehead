@@ -1183,7 +1183,9 @@ This section records the final, card-ready wording for each of the four Act 3 "w
 
 **Final Task 8 card wording.**
 
-> Between 2015 and 2024, Marblehead's enrollment fell from 3,245 students to 2,617, a drop of 628 students or 19 percent. Over the same window, classroom teacher headcount declined only slightly, from 256.8 to 245.8, a reduction of 11 positions or about 4 percent. Non-teaching school staff (paraprofessionals, aides, specialists, and administrators) rose by roughly 58 positions, pushing total education headcount from 489.8 to 537.0, a 9.6 percent increase. Marblehead's student-to-teacher ratio improved from 12.6 to 10.7, the lowest of its four peer towns. Roughly 9 percent of the FY2026 school budget, about $4.6 million, pays for out-of-district special education placements that the town is mandated by federal and state law to fund; Tier 1 of the override explicitly restores $1.5 million per year of this line that was cut from the FY27 no-override budget.
+> Between 2015 and 2024, Marblehead's enrollment fell from 3,245 students to 2,617, a drop of 628 students or 19 percent. Over the same window, classroom teacher headcount declined slightly, from 256.8 to 245.8, a reduction of 11 positions or about 4 percent. Non-teaching school staff (paraprofessionals, aides, specialists, and administrators) rose by roughly 58 positions, pushing total education headcount from 489.8 to 537.0, a 9.6 percent increase. Marblehead's student-to-teacher ratio went from 12.6 to 10.7 over the period, the lowest of its four peer towns (Stoneham 10.8, Swampscott 11.0, Melrose 13.7).
+>
+> About 9 percent of the FY2026 school budget, roughly $4.6 million, pays for out-of-district special education placements that are mandated by federal and state law. Tier 1 of the override restores $1.5 million per year of this line, which was reduced in the FY27 no-override budget.
 
 **Primary sources.**
 
@@ -1204,7 +1206,7 @@ This section records the final, card-ready wording for each of the four Act 3 "w
 
 **Final Task 8 card wording.**
 
-> In the FY2027 Proposed Budget, Town Counsel rises from $115,000 (FY2026 budget) to $278,000, a one-year increase of $163,000 or 142 percent. The expense sub-line alone grows from $113,000 to $276,000 (the $2,000 salary line is unchanged). The FY2026 Town Meeting warrant recorded Town Counsel at $228,000, not $115,000, so the FY27 Proposed Budget is also $50,000 above last year's Town Meeting appropriation. Neither the FY27 Proposed Budget nor the 2026 Finance Committee Report explains the increase or the discrepancy between the two FY26 figures.
+> In the FY2027 Proposed Budget, Town Counsel rises from $115,000 (listed as the FY2026 budget in that document) to $278,000, a one-year increase of $163,000 or 142 percent. The expense sub-line alone grows from $113,000 to $276,000 (the $2,000 salary line is unchanged). The two FY2026 town documents disagree on this line: the FY2027 Proposed Budget shows $115,000, while the FY2026 Town Meeting appropriation records $228,000. The FY2027 figure of $278,000 is $50,000 above the Town Meeting number and $163,000 above the Proposed Budget number. Neither the FY27 Proposed Budget nor the 2026 Finance Committee Report explains the increase or the discrepancy between the two FY26 figures.
 
 **Primary source.**
 
@@ -1221,7 +1223,7 @@ This section records the final, card-ready wording for each of the four Act 3 "w
 
 **Final Task 8 card wording.**
 
-> The FY2026 budget transferred $250,000 into the Other Post-Employment Benefits (OPEB) trust, which is the fund the town set up to pre-pay future retiree health benefits. The FY2027 Proposed Budget transfers $0, a cut of the full $250,000 or 100 percent. The long-term liability does not go away when the annual contribution stops; it accrues, and future budgets will either have to catch up or pay more later. The town's most recent financial policy target for this fund is to build reserves toward the liability over time, not to suspend contributions.
+> The FY2026 budget transferred $250,000 into the town's retiree benefits trust, a fund the town set up to pre-pay future retiree health benefits. The FY2027 Proposed Budget transfers $0, a reduction of $250,000 or 100 percent. The underlying long-term liability continues to accrue whether or not the annual contribution is made.
 
 **Primary sources.**
 
@@ -1231,14 +1233,14 @@ This section records the final, card-ready wording for each of the four Act 3 "w
 
 **Caveats and deviations from the spec.**
 
-- None. This is the cleanest of the four claims. The FY26 line matches in both sources, the FY27 PDF reports the cut with an explicit -100.00 percent in its own "percent change" column, and no arithmetic or interpretation is needed. The card's last sentence about the liability not going away is a direct restatement of how OPEB trust funds work under GASB 75, not a contested interpretation.
-- OPEB stands for "Other Post-Employment Benefits." The card uses both the acronym and the plain-English description to keep it accessible.
+- None. This is the cleanest of the four claims. The FY26 line matches in both sources, the FY27 PDF reports the cut with an explicit -100.00 percent in its own "percent change" column, and no arithmetic or interpretation is needed.
+- OPEB stands for "Other Post-Employment Benefits" and is the budget line's formal name in the FY27 Proposed Budget. The card uses the plain-language phrase "retiree benefits trust" per the project's acronym rules and leaves the formal name in the source citation.
 
 ### Claim 4: Free cash used to balance the operating budget for several years running
 
 **Final Task 8 card wording.**
 
-> Marblehead has used "free cash" (the state's term for prior-year surplus certified each fall by the Department of Revenue) to balance its operating budget for several years in a row. At Town Meeting in May 2025, voters appropriated $7,000,000 of free cash into the FY2026 operating budget, up from $5,500,000 in FY2025 and $10,200,000 in FY2023. The Finance Committee's 2024 report warned that "the Town continues to use a significant portion of available Free Cash to balance the budget while upholding reserves equivalent to only 2.5 percent of the operating budget. This amount falls short of the state's recommended range of 5 to 10 percent." The 2022 report called this a "structural budget challenge" caused by "recurring costs structurally outpacing recurring revenues" and predicted that an override would likely be required to maintain level services. Free cash is a one-time resource; it cannot be used to fund recurring expenses without eventually running out.
+> Marblehead has used "free cash" (the state's term for prior-year surplus certified each fall by the Department of Revenue) to balance its operating budget for several years in a row. At Town Meeting, voters appropriated $7,000,000 of free cash into the FY2026 operating budget, up from $5,500,000 in FY2025 and $10,200,000 in FY2023. The Finance Committee's 2025 annual report stated that "the Town continues to use a significant portion of available Free Cash to balance the budget while upholding reserves equivalent to only 2.5 percent of the operating budget. This amount falls short of the state's recommended range of 5 to 10 percent." The 2022 Finance Committee report described the town's situation as a "structural budget challenge" caused by "recurring costs structurally outpacing recurring revenues." Free cash is certified annually from the prior year's unspent surplus; the amount available in any given year depends on the prior year's results.
 
 **Primary sources.**
 
@@ -1251,7 +1253,7 @@ This section records the final, card-ready wording for each of the four Act 3 "w
 **Caveats and deviations from the spec.**
 
 - The spec claims "$7 to $9 million annually" (as currently written in `what-is-the-override.html` key terms). This range is verified: FY25 $6.5M total (or $5.5M if only counting the levy portion), FY26 $9.0M total (or $7.0M levy), FY27 $5.0M (no capital/stabilization portion in FY27). If the range is meant to describe only the "used to balance the operating budget" portion, the honest range is $5.5M to $7M in FY25 and FY26 respectively, not $7M to $9M. The final card wording above cites the Town Meeting-approved "free cash to levy" figures directly ($7M for FY26, $5.5M for FY25, $10.2M for FY23) rather than the $7M to $9M round range. The page's key-terms footer in `what-is-the-override.html` should be updated in a separate task to reflect the narrower levy-only figures; flagging for later.
-- The 2022 FinCom report does not use the exact phrase "free cash being used to balance the budget." It uses "structural budget challenge" and "recurring costs structurally outpacing recurring revenues." The card quotes the 2022 report for the structural framing and the 2025 report (an earlier FinCom warning still within the "several years running" window) for the explicit free-cash-to-balance-the-budget warning. Both quotes are verbatim from the reports.
+- The 2022 Finance Committee report does not use the exact phrase "free cash being used to balance the budget." It uses "structural budget challenge" and "recurring costs structurally outpacing recurring revenues." The card quotes the 2022 report for the structural framing and the 2025 report for the explicit free-cash-to-balance-the-budget warning. Both quotes are verbatim from the reports. The "override would likely be required to maintain level services" language in an earlier draft of this research output was a paraphrase, not a verbatim quote, and has been removed from the card to avoid blurring the line between quoted and paraphrased material.
 - "Several years running" is defined in the card as at least FY23 through FY26 (four consecutive budgets, all of which show nontrivial free cash appropriations at Town Meeting). The 2016 and 2019 FinCom reports in `data/` were not re-checked for this task; a future researcher could extend the pattern backward if needed.
 - The Massachusetts Department of Revenue term is "free cash." The card puts the term in quotation marks on first use and explains it ("the state's term for prior-year surplus certified each fall by the Department of Revenue"). Do not conflate free cash with general reserves or with the Stabilization Fund. The FY26 State of the Town presentation shows them as separate line items.
 
