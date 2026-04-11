@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PQG62BJ');</script>
+<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK1KEJT3KX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZK1KEJT3KX');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
+<title>Privacy - Marblehead Budget Data</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+<meta property="og:title" content="Privacy - Marblehead Budget Data">
+<meta property="og:description" content="How the community pulse feature handles reader data. The short version: your marks and notes never leave your browser.">
+<meta property="og:image" content="https://marbleheaddata.org/favicon.svg">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://marbleheaddata.org/privacy.html">
+</head>
+<body data-community-pulse="off-sections">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQG62BJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="page">
+  <a class="back" href="./">&larr; marbleheaddata.org</a>
+
+  <h1>Privacy</h1>
+  <p>This page explains how the community pulse feature (the little agree, disagree, and alert buttons next to each heading) handles your data. The short version: your marks and notes never leave your browser. There is no account, no login, and nothing about your reading habits is stored anywhere except your own device.</p>
+
+  <h2>What lives in your browser</h2>
+  <p>When you click a stance button or write a note on any section, the mark and the note are saved in your browser's local storage (specifically, IndexedDB). They are associated with the section ID. That is the full extent of what is persisted.</p>
+  <p>Your marks and notes are not synced to any server, not backed up, not shared, and not visible to anyone but you. If you open the same page on a different device, you will see no marks there, because each browser is its own separate store.</p>
+
+  <h2>What lives on the server</h2>
+  <p>The only information the site's server sees about community pulse activity is a single directionless reaction counter per section. When you click any stance button, the site increments the reactions number for that section by one. The server does not know which button you clicked (agree, disagree, or alert), does not know anything about you, and does not associate the increment with any identity.</p>
+  <p>To keep casual inflation of the counter tidy, the server applies a per-IP rate limit of 5 increments per section per hour. IP addresses are hashed with a rotating salt before storage and are not retained beyond the rate-limit window.</p>
+
+  <h2>What clearing your browser does</h2>
+  <p>Clearing browser data (cookies, site data, or IndexedDB specifically) erases your community pulse marks and notes. There is no server backup. This is by design: the server never received the data, so there is nothing to restore from. If you want to keep a record of your marks, use a future settings page (coming soon) to export them as a file.</p>
+
+  <h2>What the site does not collect</h2>
+  <p>The community pulse feature does not collect your name, email, address, phone number, device identifier, user agent, cookies beyond what your browser sends automatically, or any other information about you as a person. There is no login, no account, no profile. The only identifier tying any activity to anyone is the IP rate-limit bucket, which is hashed and ephemeral.</p>
+
+  <h2>What is on the rest of the site</h2>
+  <p>Note that the rest of the Marblehead Budget Data site uses Google Analytics via Google Tag Manager, like most modern websites. That is a separate matter from the community pulse feature and is disclosed here for completeness. Google Analytics collects the usual page-view and referrer information for every visitor to the site as a whole.</p>
+
+  <h2>Questions</h2>
+  <p>If something on this page is unclear or you want to verify any claim above, the full source code for the community pulse feature (front-end widget and server-side Worker) is published at <a href="https://github.com/agbaber/marblehead">github.com/agbaber/marblehead</a> under the <code>community-pulse/</code> and <code>assets/community-pulse/</code> directories. You can read the code and confirm these claims for yourself.</p>
+
+  <p class="notes">Last updated: April 10, 2026.</p>
+</div>
+</body>
+</html>
