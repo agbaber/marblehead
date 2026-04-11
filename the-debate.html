@@ -74,7 +74,7 @@ community_pulse: off-sections
     font-style: italic;
   }
 
-  /* Meta-note: the "these tensions aren't all the same kind" paragraph above the TL;DR */
+  /* Meta-note: the "these tensions aren't all the same kind" callout above the TL;DR */
   .meta-note {
     font-size: 14px;
     color: var(--text-muted);
@@ -84,6 +84,28 @@ community_pulse: off-sections
     border-left: 3px solid var(--c-navy);
     background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
     border-radius: 0 8px 8px 0;
+  }
+  .meta-note p {
+    margin: 0;
+  }
+  .meta-note-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+  }
+  .meta-note-list li {
+    padding: 7px 0 7px 14px;
+    margin-bottom: 4px;
+    line-height: 1.55;
+    border-left: 2px solid color-mix(in srgb, var(--c-navy) 30%, var(--border));
+  }
+  .meta-note-list li:last-child {
+    margin-bottom: 0;
+  }
+  .meta-note-list strong {
+    color: var(--text);
+    font-weight: 700;
+    margin-right: 4px;
   }
 
   /* TL;DR section: visually promote the summary above the five tensions */
@@ -219,7 +241,15 @@ community_pulse: off-sections
 <h1>The override debate, both sides</h1>
   <p>Marblehead residents are debating whether to approve the FY27 override. This page presents the strongest version of each side in the local debate, organized around the five tensions where voters actually disagree. It is not a recommendation or a summary. It is a map of where the real disagreements are, for readers still deciding how to vote. See <a href="about.html">about this site</a> for the author's disclosure (including that the author is genuinely undecided as of writing).</p>
 
-  <p class="meta-note">These five tensions are not all the same kind of disagreement. Some are mostly about facts: are the cost drivers really growing at the rate claimed? Some are about reading the same facts differently: is a 43% library reduction damage or discipline? Some are about values: is a multi-year reset responsible or irresponsible? And some depend on how you feel about local governance in ways that data alone cannot settle. Each tension below mixes these in different proportions.</p>
+  <div class="meta-note">
+    <p>These five tensions are not all the same kind of disagreement. Each tension below mixes four elements in different proportions:</p>
+    <ul class="meta-note-list">
+      <li><strong>Facts.</strong> Are the cost drivers really growing at the rate claimed?</li>
+      <li><strong>Interpretation.</strong> Is a 43% library reduction damage or discipline?</li>
+      <li><strong>Values.</strong> Is a multi-year reset responsible or irresponsible?</li>
+      <li><strong>Governance.</strong> Do you trust the people making the ask?</li>
+    </ul>
+  </div>
 
   <div class="tldr">
     <div class="tldr-eyebrow">The short version</div>
@@ -321,8 +351,8 @@ community_pulse: off-sections
     <p><strong>Where they actually disagree:</strong> whether past behavior plus transparent process is sufficient evidence that future spending will be responsible. Those for the override read the FinCom arc as evidence of disciplined governance. Those against the override read the same arc as the pattern the override perpetuates rather than interrupts.</p>
   </div>
 
-  <h2 class="tension-heading">Where they actually disagree</h2>
-  <p>The five tensions above are not about different facts. Both sides read the same facts: the same FY27 deficit, the same health insurance trajectory, the same Finance Committee letters, the same no-override budget. They reach different conclusions because they apply different frames. Each tension's crux, side by side:</p>
+  <h2 class="tension-heading">The cruxes, side by side</h2>
+  <p>The five tensions above are not about different facts. Both sides read the same facts: the same FY27 deficit, the same health insurance trajectory, the same Finance Committee letters, the same no-override budget. They reach different conclusions because they apply different frames. Each tension's crux compressed into a phrase:</p>
 
   <div class="crux-map">
     <div class="crux-map-header crux-map-header--tension">Tension</div>
@@ -330,7 +360,7 @@ community_pulse: off-sections
     <div class="crux-map-header crux-map-header--against">Against the override reads it as</div>
 
     <div class="crux-map-label">1. Cost source</div>
-    <div class="crux-map-cell crux-map-cell--for">Exogenous drivers (GIC premiums, PERAC schedules, debt, state aid decline)</div>
+    <div class="crux-map-cell crux-map-cell--for">External drivers outside the town's near-term control (GIC premiums, pension schedules, debt, state aid decline)</div>
     <div class="crux-map-cell crux-map-cell--against">Local policy choices the town can renegotiate over time</div>
 
     <div class="crux-map-label">2. Damage or discipline</div>
