@@ -88,7 +88,8 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
       Pensions      -> s-stoneham   (plum)
       Everything    -> s-everything (light slate, dedicated catch-all token)
   -->
-  <div class="legend">
+  <!-- Mobile-only legend. On desktop the SVG shows direct end-labels instead. -->
+  <div class="legend legend--stacked-mobile">
     <div class="legend-item s-marblehead"><span class="legend-swatch"></span><span class="legend-text">Schools</span></div>
     <div class="legend-item s-melrose"><span class="legend-swatch"></span><span class="legend-text">Health insurance</span></div>
     <div class="legend-item s-tier-1"><span class="legend-swatch"></span><span class="legend-text">Public safety</span></div>
@@ -98,7 +99,7 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
   </div>
 
   <div class="chart-wrapper">
-    <svg class="chart" viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stacked area chart of Marblehead general fund spending by category from FY2015 to FY2026, showing schools, health insurance, public safety, debt payments, pensions, and everything else. Total rises from 70.5 million in FY2015 to 106.2 million in FY2026. Schools is the largest layer throughout. FY2025 is expended and FY2026 is budget; the rest are audited actuals.">
+    <svg class="chart chart--stacked" viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stacked area chart of Marblehead general fund spending by category from FY2015 to FY2026, showing schools, health insurance, public safety, debt payments, pensions, and everything else. Total rises from 70.5 million in FY2015 to 106.2 million in FY2026. Schools is the largest layer throughout. FY2025 is expended and FY2026 is budget; the rest are audited actuals.">
       <!--
         X axis: x = 60 + (FY - 2015) * 60, so FY15 = 60, FY26 = 720.
         Y axis: y = 280 - dollars * 240 / 110_000_000, so $0 = 280, $110M = 40.
@@ -180,6 +181,16 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
       <text class="tick-label tick-label--major" x="600" y="300" text-anchor="middle">FY24</text>
       <text class="tick-label tick-label--minor annotation--hide-sm" x="660" y="300" text-anchor="middle">FY25</text>
       <text class="tick-label tick-label--major" x="720" y="300" text-anchor="middle">FY26</text>
+
+      <!-- Direct end-labels at the right edge of each layer. Y values are
+           the midpoint of each layer's FY26 right-edge, rounded to avoid
+           collision with neighbors. Replaces the above-chart legend. -->
+      <text class="end-label s-marblehead" x="728" y="230">Schools</text>
+      <text class="end-label s-melrose"    x="728" y="160">Health ins.</text>
+      <text class="end-label s-tier-1"     x="728" y="132">Public safety</text>
+      <text class="end-label s-swampscott" x="728" y="110">Debt</text>
+      <text class="end-label s-stoneham"   x="728" y="94">Pensions</text>
+      <text class="end-label s-everything" x="728" y="68">Everything else</text>
     </svg>
   </div>
 

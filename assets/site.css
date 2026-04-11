@@ -1000,7 +1000,23 @@ svg.chart .data-dot {
 }
 svg.chart .data-fill {
   fill: currentColor;
-  stroke: none;
+  /* Thin stroke in the page background color creates crisp visual
+     separation between adjacent stacked-area layers, even when hues
+     are similar. */
+  stroke: var(--bg);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+/* Stacked-area chart: direct end-labels on desktop, legend above on
+   mobile. The end-labels become unreadable when the SVG is scaled
+   down to phone width, so switch to the legend pattern there. The
+   double-class selector beats plain .legend specificity. */
+.legend.legend--stacked-mobile { display: none; }
+svg.chart--stacked .end-label { display: block; }
+@media (max-width: 600px) {
+  .legend.legend--stacked-mobile { display: flex; }
+  svg.chart--stacked .end-label { display: none; }
 }
 
 /* Series color assignments via `color` so currentColor cascades */
