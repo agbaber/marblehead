@@ -1122,3 +1122,86 @@ blockquote.quote footer a:hover {
   .phase-chart-bar-wrap { height: 12px; }
   .phase-chart-amt { font-size: 10px; }
 }
+
+/* ==========================================================================
+   Intro layout with At a Glance fact panel
+   ========================================================================== */
+
+.intro-wrap {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.intro-text {
+  flex: 1;
+  min-width: 0;
+}
+.intro-text p:last-child {
+  margin-bottom: 0;
+}
+.fact-panel {
+  flex: 0 0 196px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  padding: 14px 16px 16px;
+  margin-top: 4px;
+}
+.fact-panel-header {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-subtle);
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--divider);
+}
+.fact-list {
+  margin: 0;
+  padding: 0;
+}
+.fact-list dt {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-subtle);
+  margin-top: 11px;
+  line-height: 1.3;
+}
+.fact-list dt:first-of-type {
+  margin-top: 8px;
+}
+.fact-list dd {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-left: 0;
+  margin-top: 2px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.3;
+}
+.fact-list dd span {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-subtle);
+  margin-top: 1px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 600px) {
+  .intro-wrap {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .fact-panel {
+    flex: none;
+    width: 100%;
+  }
+  .fact-list dt { font-size: 10px; }
+  .fact-list dd { font-size: 13px; }
+}
