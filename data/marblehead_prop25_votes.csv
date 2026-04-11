@@ -1,0 +1,71 @@
+measure_type,fiscal_year,vote_date,win_loss,yes_votes,no_votes,department,description,amount
+Override,1991,1990-06-01,LOSS,2664,4539,GENERAL OPERATING,General Operating Budget,1000000
+Override,1992,1991-06-17,LOSS,1629,2598,GENERAL OPERATING,General Operating Expenseds,575000
+Override,1992,1991-08-19,LOSS,564,935,GENERAL OPERATING,Funding Salaries For Town Clerks Office,15716
+Override,1992,1991-08-19,LOSS,716,782,HEALTH AND HUMAN SERVICE,Funding Meals On Wheels,508
+Override,1996,1995-06-05,LOSS,2473,2553,SCHOOL,School Department Salaries,348929
+Override,1997,1996-06-10,LOSS,2737,3376,SCHOOL,School Department Expenses,870084
+Override,2001,2000-06-19,LOSS,833,1150,GENERAL GOVERNMENT,Improvements At The Old Town House,149000
+Override,2002,2001-06-18,WIN,3016,1482,PUBLIC WORKS & FACILITIES,Construction Of Sewers And Surface Drains,300000
+Override,2004,2003-06-16,WIN,3936,2350,GENERAL GOVERNMENT,Supplemental Budget Expenses,1381017
+Override,2005,2004-06-21,LOSS,2419,2661,PUBLIC SAFETY,Cruiser For Police Dept.-Van For Dog Officer-Front End Loader And Backlhoe For Waste Coll. Dept.,482590
+Override,2005,2004-06-21,WIN,2857,2289,SCHOOL,Supplemental Expenses For School Department,422246
+Override,2005,2004-06-21,LOSS,2288,2758,PUBLIC SAFETY,Supplemental Expenses Of Police Department,132500
+Override,2005,2004-06-21,WIN,2849,2240,PUBLIC WORKS & FACILITIES,Supplemental Expenses For Waste Collection,17100
+Override,2005,2004-06-21,LOSS,1639,3384,GENERAL OPERATING,General Operating Expenditures,55000
+Override,2005,2004-06-21,WIN,2775,2323,CULTURE AND RECREATION,Library Expenses,73051
+Override,2006,2005-06-15,WIN,3869,3456,GENERAL GOVERNMENT,Supplemental Expenses Of Several Town Departments,2730167
+Override,2012,2011-06-14,LOSS,2531,3567,GENERAL GOVERNMENT,"Final Design, Public Bidding And Construction For Improvements To The Old Town House",667793
+Override,2023,2022-06-21,LOSS,1802,3929,SCHOOL,School Department Operating Budget,3051093
+Override,2024,2023-06-20,LOSS,2996,3414,GENERAL GOVERNMENT,General Government Operating Budget,2472056
+Override,2025,2025-06-30,LOSS,0,0,FUNDS,Fix Clerk Error,0
+Debt Exclusion,1990,1988-06-01,WIN,2322,2167,School,Schools,
+Debt Exclusion,1991,1990-06-01,WIN,3904,3241,School,Remodel/Repair Mid.Sch Heat System,
+Debt Exclusion,1993,1990-03-01,WIN,3593,1404,School,Remodel/Repair H Sch Sci Labs,
+Debt Exclusion,1997,1992-06-01,WIN,2481,1631,School,School Renovations,
+Debt Exclusion,1998,1996-06-10,WIN,3666,2363,Public Works and Facilities,Surface Drain Construction,
+Debt Exclusion,1999,1995-06-05,WIN,3237,1785,School,Repairs To Schools,
+Debt Exclusion,2000,1990-03-01,WIN,3468,1526,Culture and Recreation,Remodel/Equip Exsisting Library,
+Debt Exclusion,2000,1994-06-01,WIN,1058,506,Public Works and Facilities,Surface-Drains Construction,
+Debt Exclusion,2000,1994-06-01,WIN,993,575,School,School Renovation,
+Debt Exclusion,2000,1995-06-05,WIN,2946,2064,Public Safety,Repairs To Police And Inspectors Build.,
+Debt Exclusion,2000,1995-06-05,WIN,2994,2032,Health and Human Service,Const. Building For Council On Aging,
+Debt Exclusion,2000,1995-06-05,WIN,3028,1973,School,Computers For School Department,
+Debt Exclusion,2000,1995-06-05,WIN,3386,1607,Public Works and Facilities,Surface Storm Drains,
+Debt Exclusion,2000,1996-06-10,WIN,3394,2671,School,Computer Equipment For School Dept.,
+Debt Exclusion,2000,1996-06-10,WIN,3454,2594,Public Safety,Equipment For Fire Department,
+Debt Exclusion,2000,1996-06-10,WIN,3538,2530,School,Repair-Construct-Equip School Bldgs.,
+Debt Exclusion,2000,1997-06-09,WIN,1797,1702,School,Remodeling Of Several Town Schools,
+Debt Exclusion,2000,1998-06-08,WIN,2569,1267,School,Repairs To Several Schools,
+Debt Exclusion,2000,1998-06-08,WIN,2323,1503,School,Computers And Software For School Dept.,
+Debt Exclusion,2000,1999-06-14,WIN,4659,2976,School,Const.Equip-Furnish New High School,
+Debt Exclusion,2001,1982-06-19,WIN,1373,625,Public Works and Facilities,Reconst Sewers For Drainage Purposes,
+Debt Exclusion,2002,2000-06-19,WIN,1361,635,Public Works and Facilities,Repairs To Existing Drainage Infrastruction,
+Debt Exclusion,2002,2001-06-18,WIN,2916,1639,School,Plans For Conversion Of Schools,
+Debt Exclusion,2003,2001-12-10,WIN,2849,1434,School,"Bonds Issued To Plan, Remodel, Reconstruct Additions To Existing High School And Convert To Middle School",
+Debt Exclusion,2003,2002-06-24,LOSS,1049,1185,Culture and Recreation,"Bonds Issued For Remodeling, Reconstruction And Making Repairs To Tucker's Wharf",
+Debt Exclusion,2005,2004-06-21,WIN,2931,2133,Public Safety,Purchase Fire Pumper Truck,
+Debt Exclusion,2006,2005-06-15,WIN,4384,2778,General Government,Purchase Equipment For Several Town Departments,
+Debt Exclusion,2006,2005-06-15,WIN,4937,2315,General Government,Purchase 3 Certain Parcels Of Land Owned By Robinson Farm Realty Trust,
+Debt Exclusion,2008,2007-06-25,WIN,1565,1061,Public Works and Facilities,"Construct, Reconstruct Ocean Ave Causewayl",
+Debt Exclusion,2008,2007-06-25,WIN,1747,864,Public Works and Facilities,"Landfill Cap, Transfer Station, Drop Off",
+Debt Exclusion,2009,2008-06-17,WIN,2365,1311,School,Feasibility Study For The Glover School Project,
+Debt Exclusion,2009,2008-06-17,WIN,2464,1213,School,Village School Project -Reconstruction,
+Debt Exclusion,2012,2011-06-14,WIN,3394,2753,School,"Funding The Design, Project Management And Construction Of A New Elementary School",
+Debt Exclusion,2012,2011-06-14,WIN,3416,2681,Public Works and Facilities,"Funding The Permitting, Public Bidding And Construction Of A Cap For The Encompassing The Old Landfill, Etc",
+Debt Exclusion,2014,2012-06-21,WIN,1905,1542,Public Safety,Quint Fire Truck,
+Debt Exclusion,2014,2012-06-21,WIN,1990,1475,General Government,Old Town House Accessibility Project,
+Debt Exclusion,2014,2012-06-21,WIN,2263,1216,General Government,Lead Mills Land Acquisition,
+Debt Exclusion,2014,2012-06-21,WIN,2394,1067,Public Works and Facilities,Pleasant Street Area Drainage Project,
+Debt Exclusion,2014,2013-06-25,WIN,3186,2235,Public Works and Facilities,Green Street Remediation,
+Debt Exclusion,2014,2013-06-25,WIN,3888,1617,General Government,Abbot Hall Tower Repairs,
+Debt Exclusion,2018,2015-06-16,WIN,1934,666,Public Works and Facilities,Bonds To Pay For Repair And Replacement Of Drainage Pipe And Construction Of New Xfer Station,
+Debt Exclusion,2018,2016-06-14,WIN,2176,875,School,Bonds For Study, Renovation And Recon Of Elbridge Gerry School,
+Debt Exclusion,2018,2016-06-14,WIN,2403,628,Public Safety,Bonds For A Pumper Truck For The Fire Dept,
+Debt Exclusion,2020,2018-06-21,WIN,1555,326,Public Works and Facilities,Costs Of Constructing And Reconstructing Seawalls And Fences,
+Debt Exclusion,2020,2019-06-18,WIN,3440,1976,School,Bonds For New Gerry School,
+Debt Exclusion,2020,2019-06-18,WIN,4492,903,General Government,Bonds For Repairs To Fort Sewall,
+Debt Exclusion,2023,2021-06-22,WIN,3021,1346,Culture and Recreation,Renovation Of Abbot Public Library,
+Debt Exclusion,2023,2021-06-22,WIN,3418,894,Public Safety,New Fire Pumper Truck,
+Debt Exclusion,2024,2022-06-21,WIN,3347,2178,General Operating,"Roof Replacements, Road & Sidewalk Improvements, Smart Panels, Hvac, Salt Shed, Hs Boiler",
+Debt Exclusion,2026,2025-06-10,WIN,4088,1857,General Government,Mary Alley Building Improvement & Hvac,
