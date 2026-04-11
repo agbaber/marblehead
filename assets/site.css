@@ -558,7 +558,15 @@ p a:hover { text-decoration: underline; }
   padding: 20px 24px;
   text-decoration: none;
   color: inherit;
-  display: block;
+  /* Flex column so the tag can be pushed to the bottom of the card
+     via margin-top: auto. In the desktop grid, sibling cards stretch
+     to equal height, so bottom-aligning the tag keeps the pill at a
+     consistent position across a row regardless of description length.
+     The gap replaces the old per-element margin-top on the tag and
+     gives uniform spacing on non-stretched mobile cards. */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   transition: box-shadow 0.2s, transform 0.2s;
   min-height: 72px;
 }
@@ -577,8 +585,14 @@ p a:hover { text-decoration: underline; }
 }
 .question .tag {
   display: inline-block; font-size: 10px; font-weight: 700;
-  padding: 3px 9px; border-radius: 100px; margin-top: 10px;
+  padding: 3px 9px; border-radius: 100px;
   letter-spacing: 0.3px;
+  /* Push to bottom of the flex column, stay at the left edge. On
+     stretched cards in the desktop grid this puts all row-sibling
+     tags at the same y-position. On non-stretched cards the 6px
+     flex-gap on .question carries the visual separation. */
+  margin-top: auto;
+  align-self: flex-start;
 }
 .tag-charts { background: var(--tag-chart-bg); color: var(--tag-chart-fg); }
 .tag-text   { background: var(--tag-text-bg);  color: var(--tag-text-fg); }
