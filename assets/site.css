@@ -661,3 +661,71 @@ svg.chart .s-tier-3     { color: var(--series-tier-3); }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* ==========================================================================
+   Attributed quotes (primary-source blockquotes with citation footer)
+   ========================================================================== */
+
+blockquote.quote {
+  position: relative;
+  margin: 28px 0;
+  padding: 24px 28px 18px 62px;
+  background: var(--surface);
+  border-left: 4px solid var(--c-teal);
+  border-radius: 0 12px 12px 0;
+  box-shadow: var(--shadow-sm);
+}
+blockquote.quote::before {
+  content: "\201C";
+  position: absolute;
+  left: 14px;
+  top: -2px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 72px;
+  line-height: 1;
+  color: var(--c-teal);
+  opacity: 0.32;
+  pointer-events: none;
+}
+blockquote.quote p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 500;
+}
+blockquote.quote p:last-of-type {
+  margin-bottom: 14px;
+}
+blockquote.quote footer {
+  font-size: 11px;
+  color: var(--text-subtle);
+  line-height: 1.55;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--divider);
+}
+blockquote.quote footer a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: var(--text-faint);
+}
+blockquote.quote footer a:hover {
+  color: var(--text);
+  text-decoration-color: var(--text);
+}
+
+@media (max-width: 600px) {
+  blockquote.quote {
+    padding: 20px 18px 14px 48px;
+    margin: 22px 0;
+  }
+  blockquote.quote::before {
+    font-size: 56px;
+    left: 12px;
+    top: -2px;
+  }
+  blockquote.quote p { font-size: 16px; }
+  blockquote.quote footer { font-size: 11px; }
+}
