@@ -327,42 +327,23 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
 }
 
 /**
- * Walk every h2 on the page (unless opted out), assign an anchor ID, inject
- * a widget next to it, and wire handlers. Also handle elements with an
- * explicit data-stance-section attribute.
+ * Walk every element with a data-stance-section attribute and inject a
+ * widget next to it. Widgets are opt-in only: authors add the attribute
+ * to the specific headings or blocks they want to capture.
  */
 export async function hydrateWidgets() {
-  // Opt-out check.
+  // Opt-out check (also used as a performance short-circuit via conditional script inclusion in the layout).
   if (document.body.dataset.communityPulse === 'off-sections') return;
 
   const pagePath = location.pathname.replace(/^\//, '') || 'index.html';
   const collectedTargets = [];
   const seenSlugs = new Set();
 
-  // Auto: every h2 on the page. Deduplicate slugs within the page.
-  document.querySelectorAll('h2').forEach(heading => {
-    const text = heading.textContent.trim();
-    let slug = slugify(text);
-    if (!slug) return;
-    if (seenSlugs.has(slug)) {
-      let suffix = 2;
-      while (seenSlugs.has(`${slug}-${suffix}`)) suffix++;
-      slug = `${slug}-${suffix}`;
-    }
-    seenSlugs.add(slug);
-    if (!heading.id) heading.id = slug;
-    collectedTargets.push({
-      element: heading,
-      sectionId: `${pagePath}#${heading.id}`,
-      title: text
-    });
-  });
-
-  // Explicit: elements with data-stance-section override.
+  // Opt-in: elements with an explicit data-stance-section attribute.
   document.querySelectorAll('[data-stance-section]').forEach(el => {
     const slug = el.dataset.stanceSection.trim();
     if (!slug) return;
-    // If this slug is already in use, skip (author should pick a unique slug).
+    // If this slug is already in use on the page, skip (author should pick a unique slug).
     if (seenSlugs.has(slug)) return;
     seenSlugs.add(slug);
     if (!el.id) el.id = slug;
@@ -392,7 +373,9 @@ export async function hydrateWidgets() {
   const allStances = await getAllStances(db);
   const stanceMap = new Map(allStances.map(s => [s.section_id, s]));
 
-  // Build and wire each widget.
+  // Build and wire each widget. Wrap the target element and the widget
+  // in a flex container so the widget floats inline-right of the target
+  // on desktop and stacks below on mobile (handled by CSS).
   for (const target of collectedTargets) {
     const initialReactions = reactionsMap[target.sectionId];
     const initialRecord = stanceMap.get(target.sectionId) || null;
@@ -402,7 +385,13 @@ export async function hydrateWidgets() {
       initialReactions,
       initialRecord?.stance
     );
-    target.element.insertAdjacentElement('afterend', widget);
+    const parent = target.element.parentNode;
+    if (!parent) continue;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'cp-section-row';
+    parent.insertBefore(wrapper, target.element);
+    wrapper.appendChild(target.element);
+    wrapper.appendChild(widget);
     wireWidget(
       widget,
       db,

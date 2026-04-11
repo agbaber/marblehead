@@ -19,6 +19,7 @@ defaults:
       path: "charts"
     values:
       layout: chart
+      community_pulse: off-sections
 
 exclude:
   - README.md
