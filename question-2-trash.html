@@ -708,3 +708,103 @@ og_url: https://marbleheaddata.org/question-2-trash.html
   <p><strong>Intermunicipal agreement framework.</strong> <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40/Section4A">MGL Chapter 40, Section 4A</a>; DLS, <a href="https://www.mass.gov/info-details/ask-dls-intermunicipal-agreements">"Ask DLS: Intermunicipal Agreements"</a>.</p>
   <p><strong>Author disclosure.</strong> See <a href="about.html">about this site</a>. The author is a Marblehead homeowner who is genuinely undecided on both override questions.</p>
 </div>
+
+<script>
+// Question 2 trash calculator.
+// Constants and derivation: see docs/superpowers/specs/2026-04-11-q2-trash-calculator-design.md
+
+// Ballot question: total levy authorization across FY27-FY29.
+// Source: data/2026-04-08_Override_Presentation.pdf slide 20
+const Q2_LEVY_TOTAL = 2298575;
+
+// Total residential assessed value base for the distributional calculation.
+// Derivation: $84.6M residential levy / $8.56 per $1000 residential rate.
+// Source: MA DOR Tax Levies by Class FY2026.
+const RESIDENTIAL_BASE = 9880000000;
+
+// Additional levy rate per $1000 of assessed value.
+const LEVY_RATE_PER_1000 = Q2_LEVY_TOTAL / (RESIDENTIAL_BASE / 1000);
+
+// Board of Health flat fee, adjusted for 3% opt-out rate.
+// Source: Marblehead Current, "Health Department estimates $281 for trash fee;
+// BoH approves budgets" (2026-03-25). Base estimate $262 before adjustment.
+const FLAT_FEE = 281;
+
+// Anchor points for context lines.
+// Source: FY26 tax classification hearing.
+const MEDIAN_ASSESSED = 1010000;
+const AVG_ASSESSED = 1291507;
+
+// Shared with charts/override_calculator.html so assessed value carries
+// across both calculators.
+const STORAGE_KEY = 'mh_override_calc_assessed_value';
+
+function money(n) {
+  return '$' + Math.round(n).toLocaleString('en-US');
+}
+
+function parseAssessed(raw) {
+  const n = parseFloat(String(raw).replace(/[^0-9.]/g, ''));
+  return Number.isFinite(n) && n > 0 ? n : AVG_ASSESSED;
+}
+
+function formatInput(n) {
+  return '$' + Math.round(n).toLocaleString('en-US');
+}
+
+function loadStored() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    const n = parseFloat(raw);
+    return Number.isFinite(n) && n > 0 ? n : null;
+  } catch (e) { return null; }
+}
+
+function saveStored(value) {
+  try { localStorage.setItem(STORAGE_KEY, String(value)); } catch (e) {}
+}
+
+function levyCost(assessedValue) {
+  return (assessedValue / 1000) * LEVY_RATE_PER_1000;
+}
+
+function deltaSentence(userLevy, fee) {
+  const diff = fee - userLevy;
+  if (Math.abs(diff) < 10) {
+    return 'At your home value, the two options cost about the same.';
+  }
+  if (diff > 0) {
+    return 'At your home value, the levy costs ' + money(diff) + ' less per year than the flat fee.';
+  }
+  return 'At your home value, the flat fee costs ' + money(-diff) + ' less per year than the levy.';
+}
+
+function update() {
+  const input = document.getElementById('trash-assessed');
+  const value = parseAssessed(input.value);
+  saveStored(value);
+  const userLevy = levyCost(value);
+  document.getElementById('levy-annual').textContent = money(userLevy);
+  document.getElementById('levy-monthly').textContent = money(userLevy / 12);
+  document.getElementById('delta-sentence').textContent = deltaSentence(userLevy, FLAT_FEE);
+}
+
+(function init() {
+  // Static context lines computed once at load.
+  document.getElementById('levy-median-out').textContent =
+    money(levyCost(MEDIAN_ASSESSED)) + '/yr';
+  document.getElementById('levy-avg-out').textContent =
+    money(levyCost(AVG_ASSESSED)) + '/yr';
+
+  const input = document.getElementById('trash-assessed');
+  const stored = loadStored();
+  if (stored !== null) input.value = formatInput(stored);
+  input.addEventListener('input', update);
+  input.addEventListener('blur', function() {
+    input.value = formatInput(parseAssessed(input.value));
+    update();
+  });
+  update();
+})();
+</script>
+
