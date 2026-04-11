@@ -1,0 +1,389 @@
+---
+title: "Question 2: trash funding"
+og_title: "Question 2: trash funding"
+og_description: The $2.3 million Question 2 trash ask, in plain English. What is actually being decided, what has already been decided, what it costs at different home values, how other Massachusetts towns handle curbside trash, and the long-term options Marblehead has considered (or hasn't).
+og_url: https://marbleheaddata.org/question-2-trash.html
+---
+<style>
+  /* Page-specific: distribution table, peer comparison table, already-decided callout */
+
+  .trash-tldr {
+    background: color-mix(in srgb, var(--c-navy) 3%, var(--surface));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 22px 22px;
+    margin: 20px 0 36px;
+  }
+  .trash-tldr-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--c-buoy);
+    margin-bottom: 4px;
+  }
+  .trash-tldr h2 {
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 0 0 12px;
+  }
+  .trash-tldr p {
+    margin: 0 0 10px;
+    line-height: 1.6;
+  }
+  .trash-tldr p:last-child {
+    margin-bottom: 0;
+  }
+
+  .already-decided {
+    border-left: 3px solid var(--c-buoy);
+    background: color-mix(in srgb, var(--c-buoy) 4%, var(--surface));
+    padding: 14px 18px;
+    margin: 18px 0 22px;
+    border-radius: 0 8px 8px 0;
+  }
+  .already-decided p {
+    margin: 0 0 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .already-decided p:last-child {
+    margin-bottom: 0;
+  }
+  .already-decided strong {
+    color: var(--text);
+  }
+
+  /* Ballot card (borrow styling from the existing ballot block pattern) */
+  .trash-ballot {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    margin: 18px 0 22px;
+    box-shadow: var(--shadow-sm);
+  }
+  .trash-ballot-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-subtle);
+    margin-bottom: 6px;
+  }
+  .trash-ballot blockquote {
+    margin: 10px 0 0;
+    padding: 12px 16px;
+    border-left: 3px solid var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 4%, var(--surface));
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+    border-radius: 0 6px 6px 0;
+  }
+  .trash-ballot blockquote em {
+    font-style: italic;
+    color: var(--text-muted);
+  }
+
+  /* Distributional analysis grid */
+  .dist-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 14px 0 18px;
+    font-variant-numeric: tabular-nums;
+  }
+  .dist-table th {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: var(--text-subtle);
+    padding: 10px 8px;
+    text-align: right;
+    border-bottom: 1px solid var(--border);
+  }
+  .dist-table th:first-child {
+    text-align: left;
+  }
+  .dist-table td {
+    padding: 11px 8px;
+    border-bottom: 1px solid var(--divider);
+    color: var(--text);
+    text-align: right;
+  }
+  .dist-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+  }
+  .dist-table tr.median td,
+  .dist-table tr.avg td {
+    background: color-mix(in srgb, var(--c-navy) 3%, var(--surface));
+  }
+  .dist-table tr.median td:first-child::after {
+    content: " (median)";
+    font-weight: 400;
+    color: var(--text-subtle);
+    font-size: 11px;
+  }
+  .dist-table tr.avg td:first-child::after {
+    content: " (average)";
+    font-weight: 400;
+    color: var(--text-subtle);
+    font-size: 11px;
+  }
+  .dist-table td.cheaper {
+    color: color-mix(in srgb, var(--c-sage) 70%, var(--text));
+    font-weight: 600;
+  }
+
+  /* Peer towns comparison table */
+  .peer-trash {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 14px 0 18px;
+    font-variant-numeric: tabular-nums;
+  }
+  .peer-trash th {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: var(--text-subtle);
+    padding: 10px 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .peer-trash td {
+    padding: 11px 8px;
+    border-bottom: 1px solid var(--divider);
+    color: var(--text);
+    vertical-align: top;
+    line-height: 1.45;
+  }
+  .peer-trash td strong {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  @media (max-width: 600px) {
+    .trash-tldr { padding: 16px 18px 18px; }
+    .trash-tldr h2 { font-size: 17px; }
+    .dist-table, .peer-trash { font-size: 12px; }
+    .dist-table th, .dist-table td,
+    .peer-trash th, .peer-trash td { padding: 9px 5px; }
+    .already-decided { padding: 12px 14px; }
+  }
+</style>
+
+<h1>Question 2: trash funding</h1>
+
+<p>On the June 9, 2026 ballot, Marblehead residents will see a second override question, separate from the main FY27 override (Question 1). Question 2 asks voters to approve adding $2,298,575 to the property tax levy for curbside trash and recycling. It is widely described as a choice between a levy increase and a flat household fee, which is accurate as far as it goes. The more complete picture is that the Select Board has already decided to move curbside trash out of the general property tax budget, and Question 2 is only about which funding mechanism replaces it.</p>
+
+<p>This page walks through what Question 2 actually does, what was decided before the ballot question existed, what each outcome means for residents at different home values, how other Massachusetts towns handle curbside trash, and the longer-term options the town has (or has not) explored.</p>
+
+<div class="trash-tldr">
+  <div class="trash-tldr-eyebrow">The short version</div>
+  <h2>What Question 2 actually decides</h2>
+  <p>Curbside trash and recycling has been paid for through general property taxes for years, via the town's Waste Collection department budget ($2.94&nbsp;million in FY26). A new Republic Services contract added roughly $900K&ndash;$1&nbsp;million to annual costs. The Select Board responded by carving curbside service out of the FY27 general fund budget and funding it through a new dedicated line item called Curbside Collection ($2.19&nbsp;million in FY27). That carve-out frees $1.15&nbsp;million of general fund capacity for other spending.</p>
+  <p>Question 2 is about how to fund that new Curbside Collection line. A <strong>yes</strong> vote raises property taxes by $2.3&nbsp;million, distributed by assessed value. A <strong>no</strong> vote means the Board of Health imposes a flat curbside fee of roughly $262&ndash;$281 per household instead. Either way, residents pay for trash. The total revenue raised is approximately the same. The difference is who pays how much: the levy scales with assessed home value, the fee is identical for every household.</p>
+</div>
+
+<div class="already-decided">
+  <p><strong>Already decided, not on the ballot:</strong> the choice to move curbside trash out of the general property tax budget was made by the Select Board before Question 2 was drafted. Whether voters approve Question 2 or reject it, the FY27 general fund Waste Collection line is still reduced by $1.15&nbsp;million, and that capacity is still available for other general fund spending. Question 2 is only about how to fund the carved-out curbside line.</p>
+</div>
+
+<h2>What is on the ballot</h2>
+
+<div class="trash-ballot">
+  <div class="trash-ballot-label">Question 2, Town of Marblehead, June 9, 2026</div>
+  <blockquote>
+    Shall the Town of Marblehead be allowed to assess an additional $2,298,575 in real estate and personal property taxes for the purposes of operating the curbside trash and recycling for the fiscal year beginning July 1, 2026?
+  </blockquote>
+</div>
+
+<p>The $2,298,575 figure covers the FY27 contract cost plus a 2.5% annual buffer for FY28 and FY29 growth, in a phased draw ($2,186,516 in FY27, +$54,663 in FY28, +$57,396 in FY29). A yes vote authorizes the town to add that amount to the property tax levy beyond the Proposition 2&frac12; cap. A no vote leaves the levy at its existing cap and triggers a Board of Health curbside fee instead.</p>
+
+<h2>How trash has been funded</h2>
+
+<p>Before FY27, curbside trash and recycling was a line in the town's Waste Collection department, funded like any other general fund department: through property taxes, state aid, and local receipts.</p>
+
+<p>The FY26 Waste Collection department budget totaled $2,943,402, broken down roughly as:</p>
+
+<ul>
+  <li><strong>Personnel:</strong> ~$545,000 (salaries, overtime, longevity, benefits for waste department staff)</li>
+  <li><strong>Disposal and collection contracts:</strong> ~$2,168,000 (including trash collection, trash disposal, recycling processing, grinding and compost removal)</li>
+  <li><strong>Operational expenses:</strong> ~$231,000 (R&amp;M, fuel, supplies, landfill monitoring)</li>
+</ul>
+
+<p>Residents did not see a separate trash charge on their bills because the cost was embedded inside property tax revenue flowing to the general fund. The Waste Collection department spent the money; the property tax base funded the department.</p>
+
+<h2>Why this changed for FY27</h2>
+
+<p>The change has one specific trigger: a new contract with Republic Services that increased annual collection and processing costs by roughly $900,000 to $1 million. Recycling processing costs alone jumped from what the town had previously been paying (close to nothing for more than a decade) to roughly $125 per ton under the new contract terms. The earlier contract had locked in favorable terms that are no longer available on renewal.</p>
+
+<p>The Select Board responded by restructuring the FY27 budget. The existing Waste Collection department line was reduced from $2.94 million to $1.79 million, a cut of $1.15 million. A new Curbside Collection line was created at $2.19 million. The two together total $3.98 million, roughly $1.04 million more than the FY26 waste budget. That $1.04 million matches the contract cost growth. The NEW Curbside Collection line is labeled as new in the FY27 Proposed Budget document itself, in red.</p>
+
+<p>The net effect: $1.15 million of what used to be general-fund trash spending is now available for other general fund needs. The remaining $2.19 million of trash costs needs to be funded through some new mechanism, because it is no longer in the general fund budget. That is where Question 2 (or the Board of Health's fallback fee) comes in.</p>
+
+<h2>What each outcome costs residents, by home value</h2>
+
+<p>Marblehead's total residential assessed value is approximately $9.9 billion, and the override of $2,298,575 translates to roughly $0.23 per $1,000 of assessed value added to the tax rate. The Board of Health's fallback fee is a flat $262 per household (or $281 assuming a 3% opt-out rate that raises the per-household cost). Both options are designed to raise approximately the same total revenue; they differ in who pays.</p>
+
+<table class="dist-table">
+  <thead>
+    <tr>
+      <th>Assessed home value</th>
+      <th>If Q2 passes (levy increase)</th>
+      <th>If Q2 fails (flat fee)</th>
+      <th>Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$500,000</td>
+      <td class="cheaper">+$117/yr</td>
+      <td>+$262/yr</td>
+      <td>Levy saves $145</td>
+    </tr>
+    <tr>
+      <td>$750,000</td>
+      <td class="cheaper">+$175/yr</td>
+      <td>+$262/yr</td>
+      <td>Levy saves $87</td>
+    </tr>
+    <tr class="median">
+      <td>$1,010,000</td>
+      <td class="cheaper">+$235/yr</td>
+      <td>+$262/yr</td>
+      <td>Levy saves $27</td>
+    </tr>
+    <tr>
+      <td>$1,150,000</td>
+      <td>+$268/yr</td>
+      <td>+$262/yr</td>
+      <td>Roughly even</td>
+    </tr>
+    <tr class="avg">
+      <td>$1,291,000</td>
+      <td>+$301/yr</td>
+      <td class="cheaper">+$262/yr</td>
+      <td>Fee saves $39</td>
+    </tr>
+    <tr>
+      <td>$1,500,000</td>
+      <td>+$350/yr</td>
+      <td class="cheaper">+$262/yr</td>
+      <td>Fee saves $88</td>
+    </tr>
+    <tr>
+      <td>$2,000,000</td>
+      <td>+$466/yr</td>
+      <td class="cheaper">+$262/yr</td>
+      <td>Fee saves $204</td>
+    </tr>
+    <tr>
+      <td>$3,000,000</td>
+      <td>+$699/yr</td>
+      <td class="cheaper">+$262/yr</td>
+      <td>Fee saves $437</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The crossover point, where the two options cost the same, is at roughly $1,140,000 in assessed value. Below that, the levy is cheaper; above it, the flat fee is cheaper. The median single-family home in Marblehead is assessed at $1,010,000, so the typical homeowner pays slightly less under the levy. The average single-family assessment of $1,291,000 is skewed upward by a smaller number of high-value properties, so the average homeowner pays slightly less under the fee.</p>
+
+<p>A note on the shape of the choice: the flat fee is regressive compared to the levy. A household in a $500,000 home pays the same $262 as a household in a $3 million home. Under the levy, the $3 million home pays $699 (nearly 2.7 times the flat fee) while the $500,000 home pays $117 (less than half the flat fee). Whether that progressive distribution is better or worse depends on who you think should bear the cost.</p>
+
+<h2>How other Massachusetts towns fund curbside trash</h2>
+
+<p>There is no single Massachusetts approach to funding curbside residential trash. Towns use a mix of property tax, flat fees, pay-as-you-throw (PAYT) systems, and hybrids. Three of Marblehead's closest comparison towns illustrate the range:</p>
+
+<table class="peer-trash">
+  <thead>
+    <tr>
+      <th style="width:130px;">Town</th>
+      <th>Funding model</th>
+      <th style="width:130px;">Cost to household</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Melrose</strong></td>
+      <td>Flat fee, billed separately on the utility bill. Last increased in 2024 after being frozen since 2005 (nearly 20 years). Hauler: Casella. Income-based discount of 50% for single residents earning less than $65,870 or married couples earning less than $75,280.</td>
+      <td>$432/yr (standard), $216/yr (income-qualified)</td>
+    </tr>
+    <tr>
+      <td><strong>Stoneham</strong></td>
+      <td>Flat fee, with a 90-gallon weekly disposal limit per household (about three standard barrels). Considering an increase to $276.47.</td>
+      <td>$252/yr (current), $276.47/yr (proposed)</td>
+    </tr>
+    <tr>
+      <td><strong>Swampscott</strong></td>
+      <td>Hybrid: curbside collection and recycling funded through the general operating budget; pay-as-you-throw stickers required for bulk items and overflow. $20 per bulk item.</td>
+      <td>Embedded in property tax; stickers per item</td>
+    </tr>
+    <tr>
+      <td><strong>Marblehead (FY26)</strong></td>
+      <td>Fully funded from general property tax via the Waste Collection department. No separate fee.</td>
+      <td>Embedded in property tax</td>
+    </tr>
+    <tr>
+      <td><strong>Marblehead (FY27, either Q2 outcome)</strong></td>
+      <td>Either a dedicated levy line (Q2 yes) or a Board of Health household fee (Q2 no). Plus the remaining Waste Collection budget for landfill, transfer station, and operational costs.</td>
+      <td>$262&ndash;$281/yr flat fee, or levy scaling with home value</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Statewide, the Massachusetts Department of Environmental Protection reports that 162 of 351 municipalities (46%) use some form of pay-as-you-throw or SMART (Save Money and Reduce Trash) program. Of those, 48 use PAYT for curbside trash, 102 use it for drop-off, and 11 use both. MassDEP recommends hybrid rate systems that combine a flat base fee with unit-based charges for additional trash. The rationale: a flat fee covers fixed costs of collection while a unit fee encourages waste reduction.</p>
+
+<h2>Long-term alternatives not on the ballot</h2>
+
+<p>Question 2 asks about the FY27 funding mechanism. Several longer-term alternatives are legally available to Marblehead but are not on the ballot. They would require Select Board decisions, Town Meeting articles, or contract negotiations outside the override process.</p>
+
+<h3>Regional shared services and intermunicipal agreements</h3>
+
+<p>Massachusetts General Law Chapter 40, Section 4A authorizes towns to enter intermunicipal agreements (IMAs) for shared services, including joint purchasing of municipal contracts and shared solid waste districts. Since 2008, two-town IMAs require only Board of Selectmen approval (no Town Meeting vote) and can run up to 25 years. Joint trash contracts are among the most common uses of the authority, and the DLS explicitly lists "shared solid waste disposal districts" as a typical arrangement.</p>
+
+<p>Theoretically, Marblehead could negotiate a joint curbside contract with one or more neighboring towns (Salem, Swampscott, or others) and potentially secure better per-household pricing through combined volume. No public record of Marblehead exploring this path appears in the available primary sources, and the new Republic Services contract was negotiated for Marblehead alone. Whether a regional approach was seriously considered, or whether it was rejected for specific reasons, is an open question.</p>
+
+<h3>Pay-as-you-throw (PAYT) or hybrid rate models</h3>
+
+<p>PAYT programs charge residents per unit of trash disposed of, typically through pre-paid bags or stickers. The Massachusetts DEP advocates for hybrid models that combine a flat base fee with a unit-based fee for additional disposal, both to cover fixed collection costs and to reduce total waste generation. Towns that have moved to PAYT typically see 30&ndash;40% reductions in trash tonnage within a year of implementation, which translates to lower disposal costs.</p>
+
+<p>Marblehead's current Board of Health proposal is a flat fee, not a PAYT model. Whether PAYT was evaluated and rejected, or simply not considered given the FY27 timeline, is another open question.</p>
+
+<h3>Consolidation or elimination of curbside service</h3>
+
+<p>A more radical option would be eliminating curbside service and requiring residents to use the transfer station, which Marblehead already operates. Several Massachusetts towns have moved in this direction as a cost-reduction measure. The Board of Health's current proposal allows an opt-out path: residents can decline the curbside fee and use the transfer station sticker program instead. The 3% opt-out assumption in the fee calculation suggests the town does not expect mass opt-out, but the option exists.</p>
+
+<h2>What the trickiness concern is actually about</h2>
+
+<p>A concern raised in local discussion is that the $2.3 million override is being described as funding curbside trash service, when residents were already paying for that same service through existing property taxes via the Waste Collection department. The concern is that the framing implies residents face a choice about whether to fund trash, when really the choice is about how.</p>
+
+<p>That concern has merit in two specific ways. First, residents were already paying for curbside trash in FY26, just not on a separate bill. Calling the $2.3 million "additional" is technically accurate because it is additional to the reduced FY27 Waste Collection line, but it is not additional to the FY26 total cost of running the service. Second, $1.15 million of the $2.3 million represents money that used to flow through the general fund for trash but has been freed up by the Select Board's restructure for other general fund spending. Voters authorizing the override are both funding trash and preserving general fund capacity for other uses that would otherwise need to be cut.</p>
+
+<p>The counter to that concern is that the new Republic Services contract did add genuine new cost (~$900K&ndash;$1 million) and that cost has to come from somewhere. The carve-out decision is a policy choice about whether to let that cost land in the general fund (reducing the town's ability to fund other things) or keep the general fund capacity for other needs while raising the trash cost separately. Neither direction escapes the underlying math: contracts got more expensive and someone pays.</p>
+
+<h2>What this page does not cover</h2>
+
+<ul>
+  <li>Whether the Select Board publicly debated the carve-out decision before drafting Question 2, or how that debate went if it occurred</li>
+  <li>Whether regional shared services with Salem or other nearby towns was formally considered and rejected, or simply not raised</li>
+  <li>The specific terms of the previous trash contract that the new Republic Services contract replaced</li>
+  <li>Whether the Board of Health fee structure, if imposed, would be subject to Town Meeting review in any form, or is entirely within BoH authority under existing statutes</li>
+</ul>
+
+<p>These are open questions for further research or for town officials to answer directly. The Marblehead Health Department can be reached at (781) 631-0212, and Select Board meetings are open to the public.</p>
+
+<div class="notes">
+  <p><strong>Sources and methodology.</strong> FY26 Waste Collection department budget line items from the <a href="data/budgets/FY26_General_Fund_Budget.xlsx">FY26 General Fund Budget</a> (TOWN BUDGET sheet, rows 495&ndash;561 tagged WASTE). FY27 Waste Collection and NEW Curbside Collection line items from the <a href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf">FY27 Proposed Balanced Budget With No Override</a>, page 3. Question 2 ballot language and the $2,298,575 phased draw schedule from the <a href="https://marbleheadma.gov/wp-content/uploads/2026/02/2026-State-of-the-Town-Presenation-Final.pdf">Town Administrator's April 8, 2026 override presentation</a>. Local reporting: Will Dowd, <a href="https://www.marbleheadindependent.com/kezer-presents-9m-to-15m-tiered-override-plan-and-separate-2-2m-trash-tax-option/">"Kezer, Benjamin present $9M-to-$15M tiered override plan and separate $2.3M trash tax option"</a> (Marblehead Independent, April 8, 2026), <a href="https://www.marbleheadindependent.com/marblehead-officials-map-out-possible-282-trash-fee-if-override-fails/">"Marblehead officials map out possible $262 trash fee if override fails"</a> (Marblehead Independent). Marblehead Current reporting on the Board of Health fee structure: <a href="https://marbleheadcurrent.org/2026/03/25/health-department-estimates-281-for-trash-fee-boh-approves-budgets/">"Health Department estimates $281 for trash fee; BoH approves budgets"</a> (March 25, 2026).</p>
+  <p><strong>Distributional calculation.</strong> Marblehead's total residential assessed value is estimated at approximately $9.9 billion based on the FY26 residential tax rate of $8.56 per $1,000 and the total residential levy of roughly $84.6 million (95.5% of the $88.6 million total tax levy per <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=propertytaxinformation.taxlevies.leviesbyclass">MA DOR Tax Levies by Class FY2026</a>). Adding $2,298,575 to that base gives a rate increase of approximately $0.23 per $1,000 of assessed value, applied to each home's assessment to produce the table above. Median and average single-family assessments ($1,010,000 and $1,291,000 respectively) are from the FY26 tax classification hearing.</p>
+  <p><strong>Peer town data.</strong> Melrose fee: <a href="https://www.cityofmelrose.org/450/Curbside-Collection---Trash-Recycling-Co">City of Melrose Curbside Collection page</a>. Stoneham fee: reporting in <em>Middlesex East / Home News Here</em> on proposed fee increase. Swampscott funding model: <a href="https://www.swampscottma.gov/1295/Trash-Recycling-Information">Swampscott Trash and Recycling Information page</a>. Statewide PAYT adoption: Massachusetts Department of Environmental Protection, <a href="https://www.mass.gov/lists/pay-as-you-throw-paytsave-money-and-reduce-trash-smart">"Pay-As-You-Throw (PAYT) / Save Money and Reduce Trash (SMART)"</a>.</p>
+  <p><strong>Intermunicipal agreement framework.</strong> <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40/Section4A">MGL Chapter 40, Section 4A</a>; DLS, <a href="https://www.mass.gov/info-details/ask-dls-intermunicipal-agreements">"Ask DLS: Intermunicipal Agreements"</a>.</p>
+  <p><strong>Author disclosure.</strong> See <a href="about.html">about this site</a>. The author is a Marblehead homeowner who is genuinely undecided on both override questions.</p>
+</div>
