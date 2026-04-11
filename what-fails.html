@@ -1,91 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5PQG62BJ');</script>
-<!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK1KEJT3KX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZK1KEJT3KX');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
-<title>What's in the no-override budget? - Marblehead Budget Data</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/community-pulse/widget.css">
-<meta property="og:title" content="What's in the no-override budget?">
-<meta property="og:description" content="The line-item changes in the town's FY27 No-Override Balanced Budget: 22 town positions, 14 school positions, the library reduced 43 percent, and what comparable Massachusetts towns did after similar votes.">
-<meta property="og:image" content="https://marbleheaddata.org/favicon.svg">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://marbleheaddata.org/what-fails.html">
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQG62BJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<div class="page">
-  <a class="back" href="./">&larr; marbleheaddata.org</a>
-
-  <h1>What's in the no-override budget?</h1>
+---
+title: "What's in the no-override budget?"
+og_title: "What's in the no-override budget?"
+og_description: The line-item changes in the town's FY27 No-Override Balanced Budget: 22 town positions, 14 school positions, the library reduced 43 percent, and what comparable Massachusetts towns did after similar votes.
+og_url: https://marbleheaddata.org/what-fails.html
+---
+<h1>What's in the no-override budget?</h1>
   <p>The town published a <a href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf">FY27 Proposed Balanced Budget With No Override</a> in April 2026. It balances using $5M in free cash, staffing reductions across town and school departments, and the elimination of the town's OPEB trust contribution. This page lists the specific line-item changes from that document.</p>
 
   <h2>Town-side reductions</h2>
 
   <div class="card">
     <h3>22 full-time town positions removed</h3>
-    <p>18-19 of these positions are currently filled. From approximately 185 general-fund town employees, this represents a roughly 12% reduction in headcount.</p>
+    <div class="headcount-bar">
+      <div class="headcount-bar-track">
+        <div class="headcount-bar-cut" style="width: 11.9%;"></div>
+      </div>
+      <div class="headcount-bar-labels">
+        <span>~163 general-fund town employees remain</span>
+        <span class="headcount-bar-cut-label">22 cut (~12%) &middot; 18&ndash;19 filled</span>
+      </div>
+    </div>
     <p class="source">Source: <a href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf">FY27 Proposed Budget</a>; Marblehead Independent, <a href="https://www.marbleheadindependent.com/marblehead-advances-122-8m-budget-built-on-cuts-defers-override-decisions/">"Marblehead advances $122.8M budget built on cuts"</a></p>
   </div>
 
   <div class="card">
     <h3>Department-by-department changes (FY26 to FY27)</h3>
-    <div class="cut-item">
-      <span class="cut-item-name">Library</span>
-      <span class="cut-item-amount">-$636K (-43%)</span>
+    <div class="cut-list">
+      <div class="cut-row">
+        <div class="cut-row-name">Library</div>
+        <div class="cut-row-bar-wrap"><div class="cut-row-bar" style="width: 100%;"></div></div>
+        <div class="cut-row-dollar">-$636K</div>
+        <div class="cut-row-pct">-43%</div>
+      </div>
+      <div class="cut-row">
+        <div class="cut-row-name">Community Development</div>
+        <div class="cut-row-bar-wrap"><div class="cut-row-bar" style="width: 45.8%;"></div></div>
+        <div class="cut-row-dollar">-$291K</div>
+        <div class="cut-row-pct">-59%</div>
+      </div>
+      <div class="cut-row">
+        <div class="cut-row-name">OPEB Trust contribution</div>
+        <div class="cut-row-bar-wrap"><div class="cut-row-bar" style="width: 39.3%;"></div></div>
+        <div class="cut-row-dollar">-$250K</div>
+        <div class="cut-row-pct">-100%</div>
+      </div>
+      <div class="cut-row">
+        <div class="cut-row-name">Public Buildings</div>
+        <div class="cut-row-bar-wrap"><div class="cut-row-bar" style="width: 17.0%;"></div></div>
+        <div class="cut-row-dollar">-$108K</div>
+        <div class="cut-row-pct">-38%</div>
+      </div>
+      <div class="cut-row">
+        <div class="cut-row-name">Cemetery</div>
+        <div class="cut-row-bar-wrap"><div class="cut-row-bar" style="width: 13.4%;"></div></div>
+        <div class="cut-row-dollar">-$85K</div>
+        <div class="cut-row-pct">-17%</div>
+      </div>
+      <div class="cut-row">
+        <div class="cut-row-name">Town Clerk</div>
+        <div class="cut-row-bar-wrap"><div class="cut-row-bar" style="width: 6.8%;"></div></div>
+        <div class="cut-row-dollar">-$43K</div>
+        <div class="cut-row-pct">-18%</div>
+      </div>
+      <div class="cut-row">
+        <div class="cut-row-name">Council on Aging</div>
+        <div class="cut-row-bar-wrap"><div class="cut-row-bar" style="width: 5.7%;"></div></div>
+        <div class="cut-row-dollar">-$36K</div>
+        <div class="cut-row-pct">-9%</div>
+      </div>
+      <div class="cut-row">
+        <div class="cut-row-name">Recreation &amp; Park</div>
+        <div class="cut-row-bar-wrap"><div class="cut-row-bar" style="width: 5.3%;"></div></div>
+        <div class="cut-row-dollar">-$34K</div>
+        <div class="cut-row-pct">-3%</div>
+      </div>
     </div>
-    <div class="cut-item">
-      <span class="cut-item-name">Community Development</span>
-      <span class="cut-item-amount">-$291K (-59%)</span>
-    </div>
-    <div class="cut-item">
-      <span class="cut-item-name">Public Buildings</span>
-      <span class="cut-item-amount">-$108K (-38%)</span>
-    </div>
-    <div class="cut-item">
-      <span class="cut-item-name">Cemetery</span>
-      <span class="cut-item-amount">-$85K (-17%)</span>
-    </div>
-    <div class="cut-item">
-      <span class="cut-item-name">Town Clerk</span>
-      <span class="cut-item-amount">-$43K (-18%)</span>
-    </div>
-    <div class="cut-item">
-      <span class="cut-item-name">Council on Aging</span>
-      <span class="cut-item-amount">-$36K (-9%)</span>
-    </div>
-    <div class="cut-item">
-      <span class="cut-item-name">Recreation &amp; Park</span>
-      <span class="cut-item-amount">-$34K (-3%)</span>
-    </div>
-    <div class="cut-item">
-      <span class="cut-item-name">OPEB Trust contribution</span>
-      <span class="cut-item-amount">-$250K (-100%)</span>
-    </div>
-    <p class="source">Source: <a href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf">FY27 Proposed Budget</a>, pages 1-4. Dollar amounts are FY26 budget minus FY27 proposed.</p>
+    <p class="source">Source: <a href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf">FY27 Proposed Budget</a>, pages 1-4. Bars are proportional to dollar amount. Dollar amounts are FY26 budget minus FY27 proposed.</p>
   </div>
 
   <p>The library reduction (-43%) would "significantly reduce services in terms of days that the library can be open," per the <a href="https://www.marbleheadindependent.com/marblehead-advances-122-8m-budget-built-on-cuts-defers-override-decisions/">Marblehead Independent</a>. The library was recently renovated with a separate $8.5M debt exclusion approved by voters in 2021.</p>
@@ -139,11 +129,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <p>See the full <a href="data/case_studies">case studies</a> for details and sources. For a broader look at how 21 Massachusetts peer towns compare on residential tax share, new growth, and override history, see <a href="why-not-elsewhere.html">why do some MA towns run overrides and others don't</a>.</p>
 
+  <div class="read-next">
+    <div class="read-next-label">Read next</div>
+    <a class="read-next-link" href="why-not-elsewhere.html">
+      <div class="read-next-title">Why do some MA towns run overrides and others don't? &rarr;</div>
+      <div class="read-next-desc">Structural archetypes by residential tax share and new-growth rate, across 21 peer Massachusetts communities.</div>
+    </a>
+  </div>
+
   <div class="notes">
     <p>All figures on this page are from the <a href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf">FY27 Proposed Budget</a> and reporting by the Marblehead Independent and Marblehead Current. The FY27 budget was built to balance without an override using $5M in free cash, staffing reductions, and elimination of the OPEB trust contribution. These are proposed reductions, not final; the actual changes would be determined by department heads and the School Committee after Town Meeting.</p>
   </div>
-</div>
-
-<script type="module" src="assets/community-pulse/widget.js" data-api-base="https://marblehead-community-pulse.example.workers.dev"></script>
-</body>
-</html>

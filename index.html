@@ -1,51 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5PQG62BJ');</script>
-<!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK1KEJT3KX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZK1KEJT3KX');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B1620" media="(prefers-color-scheme: dark)">
-<title>Marblehead Budget Data</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/community-pulse/widget.css">
-<meta property="og:title" content="Marblehead Budget Data">
-<meta property="og:description" content="Open data and charts about Marblehead, MA municipal finances. Every number is traceable to a primary source.">
-<meta property="og:image" content="https://marbleheaddata.org/favicon.svg">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://marbleheaddata.org/">
-</head>
-<body data-community-pulse="off-sections">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQG62BJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a class="nav-brand" href="./">MHD Budget</a>
-    <a href="https://github.com/agbaber/marblehead">GitHub</a>
-  </div>
-</nav>
-
-<div class="page">
-  <div class="hero">
+---
+layout: home
+community_pulse: off-sections
+og_title: Marblehead Budget Data
+og_description: Open data and charts about Marblehead, MA municipal finances. Every number is traceable to a primary source.
+og_type: website
+og_url: https://marbleheaddata.org/
+---
+<div class="hero">
     <h1>Marblehead Budget Data</h1>
     <p>An open resource for residents evaluating the FY2027 budget override. Every number is traceable to a primary source.</p>
   </div>
@@ -56,6 +17,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2>What is the override?</h2>
       <p>The three-tier structure, what each tier funds, key terms, and history.</p>
       <span class="tag tag-text">Explainer</span>
+    </a>
+
+    <a class="question" href="how-we-got-here.html">
+      <h2>How did we get here?</h2>
+      <p>Seven years of Finance Committee warnings, in their own words. From "pleased to report no override needed" in 2016 to "significant budgetary challenges ahead" in 2025.</p>
+      <span class="tag tag-text">History</span>
     </a>
 
     <a class="question" href="charts/override_calculator.html">
@@ -170,13 +137,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
     </div>
   </div>
-
-  <div class="footer">
-    <p>Built by a Marblehead resident. <a href="about.html">About this site</a>. <a href="https://github.com/agbaber/marblehead">Source on GitHub</a>. Corrections welcome.</p>
-    <p>Last updated April 10, 2026.</p>
-  </div>
-</div>
-
-<script type="module" src="assets/community-pulse/widget.js" data-api-base="https://marblehead-community-pulse.example.workers.dev"></script>
-</body>
-</html>
