@@ -117,14 +117,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 const AVG_ASSESSED = 1291507;
 const STORAGE_KEY = 'mh_override_calc_assessed_value';
 const RATES = {
-  1: { y1:  167.90, y2:  804.93, y3: 1186.68 }, // Tier 1 — $9M  — Restore
-  2: { y1:  361.62, y2: 1132.65, y3: 1587.17 }, // Tier 2 — $12M — Stabilize
-  3: { y1:  555.35, y2: 1369.97, y3: 1985.39 }, // Tier 3 — $15M — Invest
+  1: { y1:  167.90, y2:  804.93, y3: 1186.68 }, // Tier 1, $9M, Restore
+  2: { y1:  361.62, y2: 1132.65, y3: 1587.17 }, // Tier 2, $12M, Stabilize
+  3: { y1:  555.35, y2: 1369.97, y3: 1985.39 }, // Tier 3, $15M, Invest
 };
 const TIER_META = {
-  1: { label: 'Tier 1 ($9M) — Restore',   swatch: 'var(--series-tier-1)' },
-  2: { label: 'Tier 2 ($12M) — Stabilize', swatch: 'var(--series-tier-2)' },
-  3: { label: 'Tier 3 ($15M) — Invest',    swatch: 'var(--series-tier-3)' },
+  1: { label: 'Tier 1 ($9M), Restore',    swatch: 'var(--series-tier-1)' },
+  2: { label: 'Tier 2 ($12M), Stabilize', swatch: 'var(--series-tier-2)' },
+  3: { label: 'Tier 3 ($15M), Invest',    swatch: 'var(--series-tier-3)' },
 };
 
 function annualForYear(assessedValue, tier, year) {
