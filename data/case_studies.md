@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: page
+body_class: doc-page
 title: case studies
 ---
 
