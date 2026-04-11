@@ -8,6 +8,25 @@ title: case studies
 
 ## Melrose (population ~28,000, median home ~$818K)
 
+<div class="key-stats">
+  <div class="key-stat">
+    <div class="key-stat-value">$7.7M</div>
+    <div class="key-stat-label">Failed Jun 2024</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">$13.5M</div>
+    <div class="key-stat-label">Passed Nov 2025</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">+75%</div>
+    <div class="key-stat-label">Larger ask</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">61.4</div>
+    <div class="key-stat-label">FTEs cut between</div>
+  </div>
+</div>
+
 ### Timeline
 - **June 2024:** $7.7M override fails 55-45 (~900 vote margin, 5,150 no / 4,280 yes)
 - **FY25 cuts (July 2024):** 13 school positions, sustainability manager, economic development director, social services coordinator. 5% OT cuts to police/fire/DPW. Salary freeze for 60+ non-union employees. Reduced AP courses, fewer paras, no Chromebook repairs.
@@ -20,12 +39,32 @@ title: case studies
 - **DOR data:** Tax rate spiked from $9.90 (FY25) to $11.47 (FY26), +$1.57 / +16%. Biggest single-year jump in the 24-year dataset.
 - **Per-pupil spending:** Bottom 8% in MA at $18,600/student (FY24).
 
-### Key lesson
-Voted no on $7.7M. Lived through the cuts. Came back and voted yes on $13.5M (75% MORE). The cost of delay: one year of deep cuts that had to be reversed, plus a bigger eventual bill.
+<div class="takeaway">
+  <strong>Key lesson.</strong> Voted no on $7.7M. Lived through the cuts. Came back and voted yes on $13.5M &mdash; <em>75% more</em>. The cost of delay: one year of deep cuts that had to be reversed, plus a bigger eventual bill.
+</div>
 
 ---
 
 ## Stoneham (population ~23,000)
+
+<div class="key-stats">
+  <div class="key-stat">
+    <div class="key-stat-value">$14.6M</div>
+    <div class="key-stat-label">Failed Apr 2025</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">$9.3M</div>
+    <div class="key-stat-label">Passed Dec 2025</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">43</div>
+    <div class="key-stat-label">Votes separating $12.5M loss</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">28</div>
+    <div class="key-stat-label">School vacancies</div>
+  </div>
+</div>
 
 ### Timeline
 - **April 2025:** $14.6M override fails
@@ -36,8 +75,9 @@ Voted no on $7.7M. Lived through the cuts. Came back and voted yes on $13.5M (75
 - **Dec 2025:** Two-tier override. $12.5M fails by 43 VOTES. $9.3M passes by 727 votes.
 - **Result:** Got $9.3M instead of $14.6M originally requested. Service gaps will persist.
 
-### Key lesson
-Even after living through cuts, the larger amount STILL nearly failed. 43 votes. Community was deeply divided. The information campaign (Override Study Committee, weekly public meetings) was critical to getting even the $9.3M across.
+<div class="takeaway">
+  <strong>Key lesson.</strong> Even after living through cuts, the larger amount <em>still</em> nearly failed &mdash; by 43 votes. The community was deeply divided. An active information campaign (Override Study Committee, weekly public meetings) was critical to getting even the $9.3M across.
+</div>
 
 ---
 
@@ -59,14 +99,56 @@ Even after living through cuts, the larger amount STILL nearly failed. 43 votes.
 
 ## Marblehead in Context
 
-| | Marblehead | Melrose | Stoneham |
-|---|---|---|---|
-| Deficit | $8.47M | $7.7M (2024) | $14.6M |
-| Override structure | Three-tier ($9M/$12M/$15M) | Three-tier ($9.3M/$11.9M/$13.5M) | Two-tier ($9.3M/$12.5M) |
-| FY26 residential rate | $8.56 | $11.47 (post-override) | $10.06 |
-| Tier 3 / max post-override rate | ~$10.06 | $11.47 | N/A yet |
-| Previous failed attempt | FY24 (by ~400 votes) | June 2024 (by ~900 votes) | April 2025 |
-| Median home | $1,010,100 | $817,630 | lower |
+<div class="table-wrap">
+  <table class="data">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Marblehead</th>
+        <th>Melrose</th>
+        <th>Stoneham</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Deficit</td>
+        <td>$8.47M</td>
+        <td>$7.7M (2024)</td>
+        <td>$14.6M</td>
+      </tr>
+      <tr>
+        <td>Override structure</td>
+        <td>3-tier $9M / $12M / $15M</td>
+        <td>3-tier $9.3M / $11.9M / $13.5M</td>
+        <td>2-tier $9.3M / $12.5M</td>
+      </tr>
+      <tr>
+        <td>FY26 residential rate</td>
+        <td>$8.56</td>
+        <td>$11.47 (post-override)</td>
+        <td>$10.06</td>
+      </tr>
+      <tr>
+        <td>Tier 3 / max post-override rate</td>
+        <td>~$10.06</td>
+        <td>$11.47</td>
+        <td>N/A yet</td>
+      </tr>
+      <tr>
+        <td>Previous failed attempt</td>
+        <td>FY24 (~400 votes)</td>
+        <td>Jun 2024 (~900 votes)</td>
+        <td>Apr 2025</td>
+      </tr>
+      <tr>
+        <td>Median home</td>
+        <td>$1,010,100</td>
+        <td>$817,630</td>
+        <td>lower</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Even at Tier 3 ($15M), Marblehead's rate ($10.06) would be lower than Melrose's post-override rate ($11.47) and roughly equal to Stoneham's current rate ($10.06). Marblehead has the lowest baseline rate of all four comparison towns and would still have the lowest rate after any tier passes.
 
