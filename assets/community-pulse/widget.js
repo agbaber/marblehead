@@ -176,6 +176,13 @@ function buildWidget(sectionId, sectionTitle, initialReactions, initialStance) {
   });
   root.appendChild(buttons);
 
+  // Meta group: reaction count + secondary action icons. Kept as a single
+  // DOM sibling to the stance buttons so CSS can give a clean two-group
+  // layout (stance on the left, meta on the right) with a wider gap
+  // between the groups than within each group.
+  const meta = document.createElement('div');
+  meta.className = 'cp-widget__meta';
+
   // Reaction count + delta. Hidden until real data arrives; no placeholder text.
   const count = document.createElement('span');
   count.className = 'cp-widget__count';
@@ -191,7 +198,7 @@ function buildWidget(sectionId, sectionTitle, initialReactions, initialStance) {
   }
   count.appendChild(countNum);
   count.appendChild(countDelta);
-  root.appendChild(count);
+  meta.appendChild(count);
 
   // Share button (copy link to clipboard). Icon = two overlapping rectangles.
   const share = document.createElement('button');
@@ -200,7 +207,7 @@ function buildWidget(sectionId, sectionTitle, initialReactions, initialStance) {
   share.dataset.action = 'share';
   share.setAttribute('aria-label', 'Copy link to this section');
   share.innerHTML = '<svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="5.5" width="8.5" height="8.5" rx="1"/><path d="M2 10.5V3a1 1 0 0 1 1-1h7.5"/></svg>';
-  root.appendChild(share);
+  meta.appendChild(share);
 
   // Note toggle. Icon = three horizontal lines of decreasing length.
   const noteToggle = document.createElement('button');
@@ -211,7 +218,9 @@ function buildWidget(sectionId, sectionTitle, initialReactions, initialStance) {
   noteToggle.setAttribute('aria-controls', `${widgetId}-note`);
   noteToggle.setAttribute('aria-label', 'Write a private note');
   noteToggle.innerHTML = '<svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="5" x2="13" y2="5"/><line x1="3" y1="8.5" x2="13" y2="8.5"/><line x1="3" y1="12" x2="10" y2="12"/></svg>';
-  root.appendChild(noteToggle);
+  meta.appendChild(noteToggle);
+
+  root.appendChild(meta);
 
   // Note textarea (hidden initially).
   const note = document.createElement('textarea');

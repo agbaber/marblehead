@@ -25,10 +25,23 @@
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
+  /* Wide horizontal gap between the stance-button group and the meta
+     group so the two groups read as distinct. Smaller row gap for when
+     the widget wraps onto a second line on narrow screens. */
+  gap: 0.5rem 1.25rem;
   flex: 0 0 auto;
   font-size: 0.85rem;
   color: var(--text-muted, #666);
+}
+
+/* Tight cluster of reaction count + share + note-toggle. Lives on the
+   right side of the widget, separated from the stance buttons by the
+   wider .cp-widget gap above. */
+.cp-widget__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 0 0 auto;
 }
 
 @media (max-width: 640px) {
@@ -91,7 +104,6 @@
   display: inline-flex;
   align-items: baseline;
   gap: 0.4rem;
-  margin-left: 0.5rem;
   font-size: 0.82rem;
   color: var(--text-muted, #666);
 }
