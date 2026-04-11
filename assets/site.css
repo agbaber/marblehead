@@ -741,18 +741,19 @@ blockquote.quote::before {
   pointer-events: none;
 }
 blockquote.quote p {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.6;
-  color: var(--text);
+  color: var(--text-muted);
   margin-bottom: 10px;
-  font-style: normal;
-  font-weight: 500;
+  font-style: italic;
+  font-weight: 400;
 }
 blockquote.quote p:last-of-type {
   margin-bottom: 14px;
 }
 blockquote.quote footer {
-  font-size: 11px;
+  font-size: 10px;
+  font-weight: 400;
   color: var(--text-subtle);
   line-height: 1.55;
   margin-top: 12px;
@@ -1308,9 +1309,57 @@ blockquote.quote footer a:hover {
   margin-bottom: 4px;
 }
 .quoted {
-  color: var(--c-navy);
-  font-weight: 600;
+  color: var(--text);
+  font-weight: 700;
 }
+.inner-quote {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--text);
+}
+.tier-list {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 18px;
+}
+.tier-list li {
+  font-size: 14px;
+  color: var(--text-muted);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.45;
+}
+.tier-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  background: var(--c-teal);
+  border-radius: 50%;
+}
+@media (max-width: 600px) {
+  .tier-list { grid-template-columns: 1fr; gap: 6px 0; }
+}
+
+/* ==========================================================================
+   Tier card color variants (match tier-chart segment colors)
+   ========================================================================== */
+
+.card.tier-card--1 { border-left: 4px solid var(--series-tier-1); }
+.card.tier-card--2 { border-left: 4px solid var(--series-tier-2); }
+.card.tier-card--3 { border-left: 4px solid var(--series-tier-3); }
+.card.tier-card--trash {
+  border-left: 4px solid var(--text-subtle);
+  border-left-style: dashed;
+}
+.card.tier-card--1 .tier-label { color: var(--series-tier-1); }
+.card.tier-card--2 .tier-label { color: var(--series-tier-2); }
+.card.tier-card--3 .tier-label { color: var(--series-tier-3); }
 .statute-source {
   display: block;
   margin-top: 14px;
