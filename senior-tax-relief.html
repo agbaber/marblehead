@@ -24,6 +24,103 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Senior Property Tax Relief - Marblehead Budget Data</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/site.css">
+<style>
+  /* Page-scoped: Circuit Breaker formula visual */
+  .formula {
+    background: color-mix(in srgb, var(--c-teal) 7%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c-teal) 22%, var(--border));
+    border-radius: var(--radius-md);
+    padding: 18px 22px;
+    margin: 16px 0 20px;
+    font-variant-numeric: tabular-nums;
+  }
+  .formula-row {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 6px 10px;
+    align-items: baseline;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .formula-row + .formula-row { margin-top: 4px; }
+  .formula-op {
+    font-weight: 700;
+    color: var(--c-teal);
+    text-align: right;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .formula-label { color: var(--text); }
+  .formula-label .formula-hint {
+    display: block;
+    font-size: 12px;
+    color: var(--text-subtle);
+    line-height: 1.4;
+    margin-top: 2px;
+  }
+  .formula-rule {
+    border-top: 1.5px solid color-mix(in srgb, var(--c-teal) 35%, var(--border));
+    margin: 10px 0 8px 38px;
+  }
+  .formula-cap {
+    font-size: 12px;
+    color: var(--text-subtle);
+    margin-top: 8px;
+    padding-left: 38px;
+  }
+  /* Page-scoped: TLDR box */
+  .tldr {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 22px 16px;
+    margin: 0 0 24px;
+    border-top: 3px solid var(--c-navy);
+  }
+  .tldr-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-subtle);
+    margin-bottom: 10px;
+  }
+  .tldr ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .tldr li {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    padding: 6px 0 6px 22px;
+    position: relative;
+    border-top: 1px solid var(--divider);
+  }
+  .tldr li:first-child { border-top: none; padding-top: 2px; }
+  .tldr li:last-child { padding-bottom: 0; }
+  .tldr li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--c-teal);
+  }
+  .tldr li:first-child::before { top: 10px; }
+  .tldr li strong { color: var(--text); }
+  @media (max-width: 600px) {
+    .formula { padding: 14px 16px; }
+    .formula-row { font-size: 14px; }
+    .formula-op { font-size: 16px; }
+    .tldr { padding: 16px 18px 14px; }
+    .tldr li { font-size: 13px; }
+  }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -35,7 +132,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a class="back" href="./">&larr; marbleheaddata.org</a>
 
   <h1>Senior property tax relief</h1>
-  <p>There is a state program that can refund up to <strong>$2,820</strong> of a Marblehead senior's property tax bill, and a local program Marblehead Town Meeting approved last May that would stack on top of it. This page explains both, who qualifies, how to apply, and how each program interacts with the override math.</p>
+  <p>Two programs can reduce what a Marblehead senior pays in property tax. The state Senior Circuit Breaker refunds up to <strong>$2,820</strong> per year and is available today. A local exemption approved by Marblehead Town Meeting in May 2025 would stack on top of it, and is currently pending at the State House. This page explains both programs, who qualifies, how to apply, and how each interacts with the override math.</p>
+
+  <div class="tldr">
+    <p class="tldr-label">TL;DR</p>
+    <ul>
+      <li><strong>Circuit Breaker (state, available now):</strong> Refundable credit up to <strong>$2,820/year</strong> for homeowners 65+ with MA income below $75k (single), $94k (HoH), or $112k (joint), and home assessed at or below $1,298,000. Claimed on Schedule CB with your state tax return.</li>
+      <li><strong>Means-tested exemption (local, pending):</strong> Article 28 / H.4225 stacks on top of the Circuit Breaker for longtime Marblehead seniors. Passed Town Meeting May 2025 with ~93% support. Passed the MA House March 30, 2026. Currently awaiting Senate action.</li>
+      <li><strong>Override twist:</strong> The Circuit Breaker formula is based on the <em>excess</em> of tax over 10% of income, so the credit grows when the tax bill grows. For seniors not yet at the $2,820 cap, the state absorbs part of an override hit automatically.</li>
+      <li><strong>No operating-budget tradeoff:</strong> The local exemption is paid for from the tax overlay, not the operating budget. It does not compete with schools or services.</li>
+      <li><strong>Also available:</strong> Veteran exemptions ($400 to full), senior tax deferral (Clause 41A), low-income senior exemption (Clause 41C), surviving spouse (Clause 17D), and the Council on Aging's Senior Tax Work-Off Program. Marblehead-specific amounts for 41C, 41A, and 17D are pending Assessor's Office confirmation.</li>
+      <li><strong>Deadline:</strong> April 1 for all local exemptions; state tax filing deadline for Circuit Breaker.</li>
+    </ul>
+  </div>
 
   <div class="takeaway takeaway--pos">
     For a qualifying senior, the state Senior Circuit Breaker formula refunds <em>more</em>, not less, as the property tax bill goes up. The override increases the credit for seniors who are not yet at the $2,820 cap.
@@ -75,9 +184,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="card">
     <h3>How the credit is calculated</h3>
-    <p>The credit equals the amount by which your property tax (plus half your water and sewer) exceeds 10% of your Massachusetts income, capped at $2,820.</p>
-    <p><strong>Formula:</strong> credit = (property tax + &frac12; water/sewer) &minus; (10% of MA income), capped at $2,820.</p>
-    <p>For renters, 25% of annual rent is treated as property tax in the same formula.</p>
+    <p>The credit is the portion of your property tax (plus half your water and sewer) that is above 10% of your Massachusetts income, up to $2,820.</p>
+
+    <div class="formula" aria-label="Circuit Breaker formula">
+      <div class="formula-row">
+        <span class="formula-op">&nbsp;</span>
+        <span class="formula-label">Your property tax<span class="formula-hint">Plus half your annual water and sewer bill</span></span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-op">&minus;</span>
+        <span class="formula-label">10% of your Massachusetts income<span class="formula-hint">Includes Social Security, pensions, wages, and interest</span></span>
+      </div>
+      <div class="formula-rule" role="presentation"></div>
+      <div class="formula-row">
+        <span class="formula-op">=</span>
+        <span class="formula-label"><strong>Your Circuit Breaker credit</strong></span>
+      </div>
+      <p class="formula-cap">Capped at $2,820 for TY2025. If the result is zero or negative, no credit.</p>
+    </div>
+
+    <p>Renters qualify too: 25% of annual rent is treated as property tax in the formula.</p>
     <p class="source">Source: <a href="https://www.mass.gov/info-details/massachusetts-senior-circuit-breaker-tax-credit">Mass.gov Senior Circuit Breaker</a></p>
   </div>
 
@@ -103,8 +229,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="source">Tax rate source: <a href="https://marbleheadcurrent.org/2025/12/02/town-lowers-tax-rate-average-bill-still-set-to-increase/">Marblehead Current, "Town lowers tax rate" (Dec 2, 2025)</a>. Water/sewer is a rough average for illustration; your actual bill determines the final credit.</p>
   </div>
 
-  <div class="takeaway">
-    Marblehead's median single-family assessment is roughly $1,010,000, below the $1,298,000 cap. Most owner-occupied single-family homes in town qualify on the home-value side. Waterfront and Peach's Point properties are more likely to exceed the cap and be excluded.
+  <div class="card">
+    <h3>Does your Marblehead home qualify on value?</h3>
+    <div class="cut-item">
+      <span class="cut-item-name">Median single-family assessment (FY26)</span>
+      <span class="cut-item-amount">$1,010,100</span>
+    </div>
+    <div class="cut-item">
+      <span class="cut-item-name">Average single-family assessment (FY26)</span>
+      <span class="cut-item-amount">$1,291,000</span>
+    </div>
+    <div class="cut-item">
+      <span class="cut-item-name">Average single-family assessment (FY25, prior year)<span class="cut-item-note">Relevant for Article 28 eligibility: if H.4225 is enacted, applicants' homes must be at or below the prior year's average.</span></span>
+      <span class="cut-item-amount">$1,217,000</span>
+    </div>
+    <div class="cut-item">
+      <span class="cut-item-name">Circuit Breaker home value cap (TY2025)</span>
+      <span class="cut-item-amount">$1,298,000</span>
+    </div>
+    <p>The median Marblehead single-family home is well under the $1,298,000 Circuit Breaker cap. The FY26 average is just under the cap, meaning well over half of single-family homes qualify on the value test. Waterfront and Peach's Point properties are more likely to exceed the cap and be excluded.</p>
+    <p class="source">Sources: <a href="https://itemlive.com/2025/12/03/marblehead-fy26-valuations-rise/">Itemlive, "Marblehead valuations go high, taxes go low" (Dec 3, 2025)</a>, from the FY26 tax classification hearing.</p>
   </div>
 
   <h2>2. The local exemption Marblehead voted for</h2>
@@ -130,7 +274,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="cut-item-name">Qualifies for the state Senior Circuit Breaker<span class="cut-item-note">Must meet the income and home-value limits from Section 1 above.</span></span>
     </div>
     <div class="cut-item">
-      <span class="cut-item-name">Home assessed value at or below the prior year's Marblehead average single-family assessment</span>
+      <span class="cut-item-name">Home assessed value at or below the prior year's Marblehead average single-family assessment<span class="cut-item-note">For FY26, the relevant prior-year average is $1,217,000 (FY25).</span></span>
     </div>
     <div class="cut-item">
       <span class="cut-item-name">Does not have "excessive assets"<span class="cut-item-note">Definition to be set by the Select Board in regulation if H.4225 becomes law.</span></span>
@@ -228,6 +372,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h3>Clause 17D: surviving spouse, minor child, elderly</h3>
     <p>A smaller exemption available to surviving spouses of any age, minor children with a deceased parent, and elderly homeowners meeting whole-estate limits. Marblehead has adopted Clause 17D; the current dollar amount and whole-estate limit are <strong>awaiting confirmation from the Board of Assessors</strong>.</p>
     <p class="source">State framework: MGL c. 59 s. 5 cl. 17D.</p>
+  </div>
+
+  <div class="card">
+    <h3>Senior Tax Work-Off Program</h3>
+    <p>Marblehead participates in the state Senior Citizen Property Tax Work-Off Program, administered through the <a href="https://marbleheadma.gov/council-aging/pages/property-tax-abatement-program">Marblehead Council on Aging</a>. Qualifying seniors earn a credit against their property tax bill in exchange for volunteer work in town departments such as clerical support, phone coverage, and light office work. Contact the Council on Aging at <strong>781-631-6225</strong> for current slot availability, hourly credit rate, and eligibility requirements.</p>
+    <p class="source">Source: <a href="https://marbleheadma.gov/council-aging/pages/property-tax-abatement-program">Marblehead Council on Aging</a>.</p>
   </div>
 
   <h2>4. The override connection</h2>
