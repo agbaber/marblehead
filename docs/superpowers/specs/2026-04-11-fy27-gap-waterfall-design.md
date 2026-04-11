@@ -142,10 +142,9 @@ Uses existing CSS custom properties from `assets/site.css`. No new color variabl
 
 ### Numeric formatting
 
-- Values ≥ $1,000,000: `$X.XM` with one decimal place (e.g., `+$2.2M`, `−$1.7M`)
-- Values < $1,000,000: `$XXXK` with no decimals (e.g., `+$540K`, `−$460K`)
+- All component bar values: `$X.XXM` with two decimal places (e.g., `+$2.18M`, `−$1.65M`, `−$0.46M`). Two decimals is used uniformly across component bars for visual consistency and precision. Even for sub-million values, two-decimal millions (e.g., `−$0.96M`) avoid the rounding dishonesty of `−$1.0M` (which would round $963K up by $37K).
+- Total label: `−$8.47M` — also two decimals, visually matching the components.
 - Sign always explicit (`+` for positive, `−` for negative with U+2212 minus, not U+002D hyphen, for typographic consistency)
-- Total label: `−$8.47M` with two decimals because it is the headline number
 
 ### Styling approach
 
