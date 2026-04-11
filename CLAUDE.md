@@ -78,6 +78,17 @@ When styling doc-page markdown content, always scope selectors with
 `body.doc-page .page` so bespoke HTML pages that already use `.page` with
 their own `.tier-list`, `.tldr ul`, etc. are not affected.
 
+## Always open a PR after pushing
+
+When you push a branch, always open a pull request for it as the next
+step &ndash; don't wait to be asked. This overrides the default
+"don't create PRs unless asked" behavior for this repo. Use
+`mcp__github__create_pull_request` and report the PR URL back to the
+user so they can find it without hunting.
+
+One exception: if the push was explicitly a fixup onto an existing open
+PR's branch, don't open a second PR.
+
 ## Git: don't push follow-up commits to a merged branch
 
 When a PR is merged, the branch it was on is **done**. Do not push
