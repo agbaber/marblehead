@@ -1,6 +1,15 @@
-# Data Sources
+---
+layout: page
+body_class: doc-page
+title: "Data File Methodology"
+og_title: "Data File Methodology"
+og_description: "Per-CSV methodology notes for Marblehead budget data files: how each number was compiled, why specific data sources were chosen, and the tradeoffs involved."
+og_url: https://marbleheaddata.org/data/SOURCES.html
+---
 
-All data for the Marblehead levy comparison chart. Use this to verify/challenge the numbers.
+# Data File Methodology
+
+Methodology notes for specific data files on marbleheaddata.org. Unlike the [Source Lookup](SOURCE_LOOKUP), which is organized by metric and traces each number to its primary document, this file is organized by CSV and explains *how* each dataset was compiled, *why* specific sources were chosen, and what the tradeoffs are. Use this to verify, challenge, or reproduce the data.
 
 ## `marblehead_levy.csv`: Marblehead property tax levy limit
 
