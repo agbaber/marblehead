@@ -55,6 +55,34 @@ All data for the Marblehead levy comparison chart. Use this to verify/challenge 
 
 **For the chart:** The `total_per_pupil` value is used (matches the headline number cited in state reports).
 
+## `marblehead_prop25_votes.csv`: Marblehead Proposition 2½ ballot history
+
+**Source:** Massachusetts Department of Revenue, Division of Local Services (DLS), Municipal Databank. Two reports combined:
+
+- Operating override and underride votes: https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride (filtered to Marblehead, DOR municipality code 168)
+- Debt exclusion votes: https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes (filtered to Marblehead)
+
+**Coverage:** All Marblehead ballot questions in the DOR record. Earliest vote date: June 19, 1982 (debt exclusion for sewer reconstruction). Latest vote date: June 30, 2025. Data pulled April 11, 2026.
+
+**Row counts:**
+- Operating overrides: 20 questions (6 WIN, 14 LOSS). The DOR operating-override record for Marblehead starts with the FY1991 ballot (vote date June 1, 1990); there are no pre-1990 operating override records.
+- Debt exclusions: 50 questions (49 WIN, 1 LOSS). The single loss is the FY2003 Tucker's Wharf bond (vote date June 24, 2002).
+
+**Schema:**
+- `measure_type`: `Override` (operating override under MGL c. 59 s. 21C(g)) or `Debt Exclusion` (temporary exclusion for specific borrowing under MGL c. 59 s. 21C(k)).
+- `fiscal_year`: Fiscal year of first collection, as assigned by DOR. For debt exclusions in particular, `fiscal_year` often lags `vote_date` by several years because borrowing may not begin immediately.
+- `vote_date`: The date of the ballot vote (ISO format, yyyy-mm-dd).
+- `win_loss`: `WIN` or `LOSS` at the ballot.
+- `yes_votes`, `no_votes`: Raw vote totals.
+- `department`: DOR's department classification. Casing differs between the two source reports (override report uses ALL CAPS, debt exclusion report uses Title Case); preserved as-is from source.
+- `description`: DOR's description of the ballot question. Verbatim, including spelling errors.
+- `amount`: Dollar amount of the override. Populated for operating overrides; blank for debt exclusions (DOR does not report dollar amounts in the debt exclusion table).
+
+**Notes:**
+- The FY2025 "Fix Clerk Error" row (vote date June 30, 2025) has 0 yes votes, 0 no votes, and $0 amount. This is a procedural/corrective record from DOR, not a substantive ballot attempt. Charts and narrative counts should consider whether to include or exclude it.
+- The FY2005 ballot (vote date June 21, 2004) contained six distinct operating override line items: three won (school supplementals, library expenses, waste collection) and three lost (two police items, general operating). The "last successful operating override" commonly cited as "2005" refers to the calendar-year 2005 vote (June 15, 2005) that authorized the $2.73M FY2006 supplemental override. That is DOR's FY2006 record.
+- "Since 1982" is supportable for debt exclusions (earliest DOR vote date 1982-06-19) but NOT for operating overrides (earliest DOR vote date 1990-06-01). Any "since 1982" framing should be scoped to debt exclusions or to "in the DOR ballot record."
+
 ## Chart methodology
 
 All lines normalized to 2000 = 100 (FY2000 for Marblehead levy) for direct visual comparison. Marblehead per-pupil line normalized at its first available year (FY2008) to its value *relative to where the other lines are at FY2008*, so the starting points align visually. Specifically: the per-pupil line is scaled so that its FY2008 value shows where Marblehead per-pupil would be indexed if we assumed it had tracked exactly with CPI from 2000-2008. This is labeled explicitly on the chart to avoid confusion.
