@@ -2220,3 +2220,86 @@ blockquote.quote--mixed p {
   .featured-card { padding: 20px 22px 18px; margin-bottom: 28px; }
   .featured-card-title { font-size: 18px; }
 }
+
+/* ==========================================================================
+   Citations (superscript footnote markers + in-page Sources list)
+   Runtime JS: assets/citations.js walks <sup class="cite" data-href data-source>
+   elements, numbers them, dedupes by href, and builds a Sources section at
+   the end of the main content.
+   ========================================================================== */
+
+sup.cite {
+  font-size: 0.72em;
+  line-height: 0;
+  vertical-align: super;
+  margin-left: 1px;
+}
+sup.cite a {
+  color: var(--c-navy);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+sup.cite a:hover {
+  text-decoration: underline;
+}
+sup.cite a:target {
+  background: color-mix(in srgb, var(--c-teal) 22%, transparent);
+  text-decoration: none;
+}
+
+.sources-list {
+  margin: 56px 0 16px;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--border);
+}
+.sources-list-heading {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: var(--text-subtle);
+  margin: 0 0 14px;
+}
+.sources-list-ol {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  padding-left: 28px;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.sources-list-ol li {
+  margin-bottom: 6px;
+  padding-left: 4px;
+}
+.sources-list-ol li:target {
+  background: color-mix(in srgb, var(--c-teal) 12%, transparent);
+  border-radius: 3px;
+}
+.sources-list-ol li a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.sources-list-ol li a:hover {
+  text-decoration: underline;
+  color: var(--text);
+}
+.sources-list-ol li .sources-backref {
+  margin-left: 6px;
+  color: var(--text-subtle);
+  font-size: 11px;
+  text-decoration: none;
+  padding: 0 3px;
+  border-radius: 2px;
+}
+.sources-list-ol li .sources-backref:hover {
+  color: var(--c-navy);
+  background: color-mix(in srgb, var(--c-navy) 8%, transparent);
+}
+
+@media (max-width: 600px) {
+  .sources-list { margin-top: 40px; }
+  .sources-list-ol { padding-left: 24px; font-size: 11px; }
+}
