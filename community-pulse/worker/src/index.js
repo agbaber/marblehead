@@ -66,6 +66,44 @@ async function handleGet(request, env) {
   return new Response(JSON.stringify(response), { status: 200, headers: corsHeaders(env) });
 }
 
+async function hashIp(ip) {
+  const enc = new TextEncoder().encode(`${ip}:community-pulse-salt`);
+  const buf = await crypto.subtle.digest('SHA-256', enc);
+  return Array.from(new Uint8Array(buf))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
+/** Returns true if this (ip, section) is under the rate limit. Increments the bucket if so. */
+async function checkAndIncrementRateLimit(env, ip, sectionId) {
+  const ipHash = await hashIp(ip || 'unknown');
+  const now = Date.now();
+  const windowStart = Math.floor(now / RATE_LIMIT_WINDOW_MS) * RATE_LIMIT_WINDOW_MS;
+
+  // Lazily clean up old rows for this (ip_hash, section_id).
+  await env.DB.prepare(
+    'DELETE FROM rate_limits WHERE ip_hash = ? AND section_id = ? AND window_start < ?'
+  ).bind(ipHash, sectionId, windowStart).run();
+
+  const existing = await env.DB.prepare(
+    'SELECT count FROM rate_limits WHERE ip_hash = ? AND section_id = ? AND window_start = ?'
+  ).bind(ipHash, sectionId, windowStart).first();
+
+  if (existing && existing.count >= RATE_LIMIT_MAX) {
+    return false;
+  }
+  if (existing) {
+    await env.DB.prepare(
+      'UPDATE rate_limits SET count = count + 1 WHERE ip_hash = ? AND section_id = ? AND window_start = ?'
+    ).bind(ipHash, sectionId, windowStart).run();
+  } else {
+    await env.DB.prepare(
+      'INSERT INTO rate_limits (ip_hash, section_id, window_start, count) VALUES (?, ?, ?, 1)'
+    ).bind(ipHash, sectionId, windowStart).run();
+  }
+  return true;
+}
+
 async function handlePost(request, env) {
   let body;
   try {
@@ -78,14 +116,27 @@ async function handlePost(request, env) {
   }
 
   const sectionId = body.section_id;
-  const now = Date.now();
+  const clientIp = request.headers.get('CF-Connecting-IP') || request.headers.get('X-Forwarded-For') || 'unknown';
+  const allowed = await checkAndIncrementRateLimit(env, clientIp, sectionId);
 
-  // Load existing row if any.
+  const now = Date.now();
   const existing = await env.DB.prepare(
     'SELECT total_count, count_24h, window_24h_start FROM reactions WHERE section_id = ?'
   ).bind(sectionId).first();
 
   let total, count24h, windowStart;
+  if (!allowed) {
+    // Rate-limited: return current counts without incrementing.
+    if (existing) {
+      total = existing.total_count;
+      count24h = existing.count_24h;
+    } else {
+      total = 0;
+      count24h = 0;
+    }
+    return new Response(JSON.stringify({ total, last_24h: count24h }), { status: 200, headers: corsHeaders(env) });
+  }
+
   if (existing) {
     const windowElapsed = (now - existing.window_24h_start) >= TWENTY_FOUR_HOURS_MS;
     total = existing.total_count + 1;
