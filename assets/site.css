@@ -1246,6 +1246,40 @@ blockquote.quote footer a:hover {
   .stat-value span { font-size: 9px; }
 }
 
+/* Diverging variant: bars emanate from a center zero line.
+   Decreases extend left, increases extend right. Used for signed
+   percentage changes where absolute-value bars would be misleading. */
+.stat-compare--diverge .stat-bar {
+  position: relative;
+  overflow: visible;
+}
+.stat-compare--diverge .stat-bar::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  bottom: -3px;
+  width: 1px;
+  background: var(--text-faint);
+  z-index: 1;
+}
+.stat-compare--diverge .stat-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 0;
+}
+.stat-compare--diverge .stat-fill--neg {
+  right: 50%;
+  background: var(--c-navy);
+  border-radius: 3px 0 0 3px;
+}
+.stat-compare--diverge .stat-fill--pos {
+  left: 50%;
+  background: var(--c-teal);
+  border-radius: 0 3px 3px 0;
+}
+
 /* ==========================================================================
    Ballot-timeline strip plot (Marblehead Prop 2.5 ballot history)
    ========================================================================== */
