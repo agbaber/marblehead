@@ -21,10 +21,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 <link rel="icon" href="{{ '/' | relative_url }}favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{{ '/' | relative_url }}assets/site.css">
+{% unless page.community_pulse == "off-sections" %}
 <link rel="stylesheet" href="{{ '/' | relative_url }}assets/community-pulse/widget.css">
+<script type="module" src="{{ '/' | relative_url }}assets/community-pulse/widget.js" data-api-base="https://marblehead-community-pulse.agbaber.workers.dev"></script>
+{% endunless %}
 {% if page.og_title %}<meta property="og:title" content="{{ page.og_title }}">{% endif %}
 {% if page.og_description %}<meta property="og:description" content="{{ page.og_description }}">{% endif %}
 {% if page.og_image %}<meta property="og:image" content="{{ page.og_image }}">{% else %}<meta property="og:image" content="https://marbleheaddata.org/favicon.svg">{% endif %}
 {% if page.og_type %}<meta property="og:type" content="{{ page.og_type }}">{% else %}<meta property="og:type" content="article">{% endif %}
 {% if page.og_url %}<meta property="og:url" content="{{ page.og_url }}">{% endif %}
-<script type="module" src="{{ '/' | relative_url }}assets/community-pulse/widget.js" data-api-base="https://marblehead-community-pulse.agbaber.workers.dev"></script>
