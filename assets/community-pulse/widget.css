@@ -40,7 +40,7 @@
 }
 
 .cp-widget__button:focus-visible {
-  outline: 2px solid var(--accent, #0b74c4);
+  outline: 2px solid var(--c-teal, #2F7D8E);
   outline-offset: 2px;
 }
 
@@ -99,7 +99,7 @@
   padding: 0.4rem;
   font-family: inherit;
   font-size: 0.85rem;
-  color: inherit;
+  color: var(--text, #222);
   background: var(--surface, rgba(0,0,0,0.03));
   border: 1px solid var(--border, rgba(0,0,0,0.1));
   border-radius: 0.35rem;
@@ -137,7 +137,14 @@
     gap: 0.4rem;
   }
   .cp-widget__button {
-    padding: 0.35rem 0.55rem;
+    padding: 0.65rem 0.75rem;
     font-size: 1rem;
+    min-height: 44px;
+  }
+  .cp-widget__share,
+  .cp-widget__privacy,
+  .cp-widget__note-toggle {
+    padding: 0.5rem 0.55rem;
+    min-height: 44px;
   }
 }
