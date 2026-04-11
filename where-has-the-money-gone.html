@@ -24,6 +24,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Where Has Marblehead's Money Gone? - Marblehead Budget Data</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/site.css">
+<style>
+  /* Page-scoped: bidirectional footnote pattern */
+  .footnote-ref {
+    color: var(--link);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  .footnote-ref:hover {
+    text-decoration-style: solid;
+  }
+  ol.footnotes {
+    list-style-type: upper-alpha;
+    padding-left: 24px;
+    margin: 14px 0 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  ol.footnotes li {
+    padding: 4px 0 4px 4px;
+    scroll-margin-top: 16px;
+  }
+  ol.footnotes li:target {
+    background: color-mix(in srgb, var(--c-teal) 8%, transparent);
+    border-radius: 4px;
+  }
+  .footnote-back {
+    display: inline;
+    margin-left: 4px;
+    color: var(--text-subtle);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .footnote-back:hover {
+    color: var(--link);
+    text-decoration: none;
+  }
+  /* Target highlight for back-navigation to a table cell */
+  td:target {
+    background: color-mix(in srgb, var(--c-teal) 10%, transparent);
+  }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -227,14 +271,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <td>$798,000</td>
           <td>$105,000</td>
           <td>-$693,000</td>
-          <td>-87% (see note E)</td>
+          <td id="ref-e1">-87% (<a href="#note-e" class="footnote-ref">note E</a>)</td>
         </tr>
         <tr>
           <td>Insurance Premiums</td>
           <td>$318,000</td>
           <td>$865,000</td>
           <td>+$547,000</td>
-          <td>+172% (see note F)</td>
+          <td id="ref-f1">+172% (<a href="#note-f" class="footnote-ref">note F</a>)</td>
         </tr>
         <tr>
           <td>Library</td>
@@ -248,14 +292,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <td>$1,000</td>
           <td>$494,000</td>
           <td>+$493,000</td>
-          <td>see note A</td>
+          <td id="ref-a1"><a href="#note-a" class="footnote-ref">see note A</a></td>
         </tr>
         <tr>
           <td>Reserve Fund</td>
           <td>$0</td>
           <td>$444,000</td>
           <td>+$444,000</td>
-          <td>see note B</td>
+          <td id="ref-b1"><a href="#note-b" class="footnote-ref">see note B</a></td>
         </tr>
         <tr>
           <td>Rec and Park</td>
@@ -269,7 +313,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <td>$0</td>
           <td>$295,000</td>
           <td>+$295,000</td>
-          <td>see note C</td>
+          <td id="ref-c1"><a href="#note-c" class="footnote-ref">see note C</a></td>
         </tr>
         <tr>
           <td>Select Board</td>
@@ -304,7 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <td>$71,000</td>
           <td>$228,000</td>
           <td>+$157,000</td>
-          <td>+219% (see note F)</td>
+          <td id="ref-f2">+219% (<a href="#note-f" class="footnote-ref">note F</a>)</td>
         </tr>
         <tr>
           <td>Health</td>
@@ -338,21 +382,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <td>Intergovernmental State and County</td>
           <td>$2,706,000</td>
           <td>not directly comparable</td>
-          <td>see note D</td>
-          <td>see note D</td>
+          <td id="ref-d1"><a href="#note-d" class="footnote-ref">see note D</a></td>
+          <td id="ref-d2"><a href="#note-d" class="footnote-ref">see note D</a></td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <p class="source">
-    A. Community Development did not exist as a department in 2015; the closest match was Planning Board Expense at $967. Most of the $493,000 increase is function migration, not net new spending.<br>
-    B. Reserve Fund is a contingency appropriation. FY15 actual was $0 because it transfers to other lines when used.<br>
-    C. Human Resources did not exist as a separate department in 2015; those functions were inside the Select Board office.<br>
-    D. Intergovernmental State and County charges were an explicit line in the FY15 budget ($2,706,000) but are now treated as net deductions from state aid on the cherry-sheet revenue side, so there is no directly comparable FY26 appropriation line.<br>
-    E. Snow and Ice dropped because FY15 was a record snow year that blew past its $100,000 original budget and required supplemental appropriations; FY26 is a more typical baseline, not a cut in plowing.<br>
-    F. The Town Counsel and Insurance Premiums FY26 figures come from the FY26 budget summary, which reports $228,000 and $865,000 respectively. The FY27 Proposed Budget's own FY26 budget column reports different values for these two lines ($115,000 for Town Counsel and $964,554 for Insurance Premiums). The reason for the discrepancies is not publicly documented. Prose that cites these rows should hedge accordingly.
-  </p>
+  <ol class="footnotes">
+    <li id="note-a">Community Development did not exist as a department in 2015; the closest match was Planning Board Expense at $967. Most of the $493,000 increase is function migration, not net new spending. <a href="#ref-a1" class="footnote-back" aria-label="Return to reference">&#8617;</a></li>
+    <li id="note-b">Reserve Fund is a contingency appropriation. FY15 actual was $0 because it transfers to other lines when used. <a href="#ref-b1" class="footnote-back" aria-label="Return to reference">&#8617;</a></li>
+    <li id="note-c">Human Resources did not exist as a separate department in 2015; those functions were inside the Select Board office. <a href="#ref-c1" class="footnote-back" aria-label="Return to reference">&#8617;</a></li>
+    <li id="note-d">Intergovernmental State and County charges were an explicit line in the FY15 budget ($2,706,000) but are now treated as net deductions from state aid on the cherry-sheet revenue side, so there is no directly comparable FY26 appropriation line. <a href="#ref-d1" class="footnote-back" aria-label="Return to first reference">&#8617;<sup>1</sup></a> <a href="#ref-d2" class="footnote-back" aria-label="Return to second reference">&#8617;<sup>2</sup></a></li>
+    <li id="note-e">Snow and Ice dropped because FY15 was a record snow year that blew past its $100,000 original budget and required supplemental appropriations; FY26 is a more typical baseline, not a cut in plowing. <a href="#ref-e1" class="footnote-back" aria-label="Return to reference">&#8617;</a></li>
+    <li id="note-f">The Town Counsel and Insurance Premiums FY26 figures come from the FY26 budget summary, which reports $228,000 and $865,000 respectively. The FY27 Proposed Budget's own FY26 budget column reports different values for these two lines ($115,000 for Town Counsel and $964,554 for Insurance Premiums). The reason for the discrepancies is not publicly documented. Prose that cites these rows should hedge accordingly. <a href="#ref-f1" class="footnote-back" aria-label="Return to first reference">&#8617;<sup>1</sup></a> <a href="#ref-f2" class="footnote-back" aria-label="Return to second reference">&#8617;<sup>2</sup></a></li>
+  </ol>
 
   <!-- Act 2: Who has been checking the books. Filled by Task 7. -->
   <h2>Who has been checking the books</h2>
@@ -432,14 +476,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <p>The record shows two things worth taking seriously. Most of Marblehead's $35.7 million in General Fund spending growth since 2015 went to schools (which kept a smaller student-to-teacher ratio than its peer towns while paying for mandated out-of-district special education placements), to health insurance (set by the state insurance pool, not by the town), and to pensions and debt payments (both on fixed schedules set outside the annual budget). Independent auditors have issued a clean opinion on the books every year, and the state has certified the town's tax rate every year. Separately, the Finance Committee has flagged, in multiple annual reports, that the town has been balancing the operating budget by drawing down leftover surplus from prior years, a pattern the Committee describes as a structural budget challenge.</p>
 
-  <p>What this means for the FY2027 override is a judgment each voter gets to make. The pages below cover what is being asked, what it costs, what is in the no-override budget, and the projected trajectory through FY2030.</p>
+  <p>What this means for the FY2027 override is a judgment each voter gets to make.</p>
 
-  <ul>
-    <li><a href="what-is-the-override.html">What is the override?</a></li>
-    <li><a href="charts/override_calculator.html">What does it cost me?</a></li>
-    <li><a href="what-fails.html">What's in the no-override budget?</a></li>
-    <li><a href="charts/sustainability.html">Will they ask again?</a></li>
-  </ul>
+  <div class="read-next">
+    <div class="read-next-label">Read next</div>
+    <a class="read-next-link" href="what-is-the-override.html">
+      <div class="read-next-title">What is the override? &rarr;</div>
+      <div class="read-next-desc">The three-tier structure, what each tier funds, key terms, and history.</div>
+    </a>
+  </div>
 
   <div class="notes">
     <p>The stacked spending chart and the FY2015 vs FY2026 prose in the first section are built from the town's independent annual financial reports, specifically the "Schedule of Revenues, Expenditures and Changes in Fund Balance, Budget and Actual, General Fund" for fiscal years 2015 through 2024. FY2025 expended actuals and FY2026 approved budget figures come from the FY2027 Proposed Budget published in April 2026. The chart uses budgetary-basis General Fund data throughout, which is the money the Finance Committee builds the annual budget around and Town Meeting votes on. It deliberately excludes grants, school food service and athletics fees, and state on-behalf payments into the teachers pension fund, because the page is trying to show what the town chose to spend out of its own General Fund, not total activity across every fund.</p>
