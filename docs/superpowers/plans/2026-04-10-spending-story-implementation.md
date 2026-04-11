@@ -1048,3 +1048,126 @@ Drawing on the above, Task 5 can write something like (verify wording against th
 - `data/FY26_budget_summary.json` for the FY26 school line-item breakdown
 - `data/override_school_items.csv` for the Tier 1 special education out-of-district tuition restoration
 
+## Task 2 research output
+
+### Scope and method
+
+This section records a verified department-by-department delta table comparing FY2015 actual expended to FY2026 budgeted, sorted by absolute dollar change. It feeds the Act 1 department table in Task 5.
+
+Basis: same as Task 1 research output. FY2015 values are actual budgetary expended from the FY15 ACFR "Schedule of Revenues, Expenditures and Changes in Fund Balance, Budget and Actual, General Fund" on logical pages 76 to 78 (Actual Budgetary Amounts column). FY2026 values are the Town Meeting approved budget as reported in `data/FY26_budget_summary.json` `Town_Key_Items`, which matches the `data/budgets/FY27_Proposed_Budget_No_Override.pdf` FY2026 Budget column for every department cross-checked below. Schools FY2026 is `School_Grand_Total` from the same JSON file. Cost categories already split out in the Task 1 chart (health insurance, pensions, debt service, Medicare reimbursement, Medex, Medicare payroll tax, OPEB transfer) are excluded from this table to avoid double counting with Task 1.
+
+Rounding: dollars shown to the nearest thousand, percent changes to the nearest whole percent. Sorted by absolute dollar change descending. Underlying raw values are recorded in the mapping notes section below for traceability.
+
+### Verified table (FY2015 actual expended vs FY2026 budget)
+
+| Department | FY2015 ($) | FY2026 ($) | Change ($) | Change (%) |
+|---|---:|---:|---:|---:|
+| Schools (total appropriation) | 32,066,000 | 49,120,000 | 17,054,000 | +53 |
+| Fire | 3,309,000 | 5,561,000 | 2,252,000 | +68 |
+| Police | 3,372,000 | 4,987,000 | 1,616,000 | +48 |
+| Waste | 1,826,000 | 2,943,000 | 1,117,000 | +61 |
+| Public Works | 1,305,000 | 2,301,000 | 996,000 | +76 |
+| Finance | 848,000 | 1,689,000 | 841,000 | +99 |
+| Snow and Ice | 798,000 | 105,000 | -693,000 | -87 |
+| Insurance Premiums | 318,000 | 865,000 | 547,000 | +172 |
+| Library | 999,000 | 1,493,000 | 494,000 | +49 |
+| Community Development | 1,000 | 494,000 | 493,000 | see note A |
+| Reserve Fund | 0 | 444,000 | 444,000 | see note B |
+| Rec and Park | 726,000 | 1,037,000 | 311,000 | +43 |
+| HR | 0 | 295,000 | 295,000 | see note C |
+| Select Board | 456,000 | 700,000 | 244,000 | +53 |
+| Inspections | 450,000 | 689,000 | 240,000 | +53 |
+| Cemetery | 313,000 | 495,000 | 182,000 | +58 |
+| Council on Aging | 243,000 | 423,000 | 180,000 | +74 |
+| Town Counsel | 71,000 | 228,000 | 157,000 | +219 |
+| Health | 211,000 | 326,000 | 115,000 | +55 |
+| Public Buildings | 189,000 | 287,000 | 98,000 | +52 |
+| Town Clerk | 171,000 | 245,000 | 74,000 | +43 |
+| Veterans | 94,000 | 149,000 | 55,000 | +58 |
+| Intergovernmental State and County | 2,706,000 | see note D | see note D | see note D |
+
+Sum of rows with computable FY26 values: FY2015 totals 47,767,000 and FY2026 totals 74,878,000. This does not equal Task 1's row sums because this table groups the chart's Everything Else bucket into individual departments, excludes the chart's Health Insurance, Pensions, Debt Service, and small employee benefit lines, and splits Public Works and Facilities into four rows. Schools, Fire, and Police sit in both tables and are numerically identical.
+
+### Notes on rows that need context
+
+**Note A: Community Development.** FY2015 had no Community Development department. The only line that maps is Planning Board Expense at $967 on page 76 of the FY15 ACFR. In FY2026 the department covers planning, conservation, and zoning functions in a combined office created after FY2015. A percent change is arithmetically undefined for practical reading (it would read as about +51,000 percent). The honest statement is "the department did not exist in FY2015; Planning Board alone spent $967."
+
+**Note B: Reserve Fund.** FY2015 Reserve Fund actual expended was $0 because the Reserve Fund is a contingency appropriation that, when used, transfers money to other budget lines. FY2015 original budget was $144,000, of which $124,513 was transferred out during the year and $19,487 lapsed. The $0 actual is what the ACFR shows on page 76. A percent change is arithmetically undefined. FY2026 shows a budgeted $444,000 per JSON and FY27 Proposed Budget line 10.
+
+**Note C: HR.** FY2015 had no separate Human Resources department. HR functions were handled inside the Selectmen office (Selectmen Salaries $334,504 and Expense $116,493 already appear in the Select Board row). A new HR Department line appears in the FY27 Proposed Budget as line 57-58 at $294,927 for FY26 Budget, matching JSON. The percent change is arithmetically undefined. Assigning FY15 HR to zero with a note is cleaner than double counting the Selectmen salaries.
+
+**Note D: Intergovernmental State and County.** FY15 ACFR page 78 reports "Intergovernmental State" at $2,705,864 actual expended, inside the General Fund Total Expenditures of $70,498,077. The FY27 Proposed Budget, the FY26 budget summary JSON, and the 2026 FinCom Report do not report State and County charges as an appropriation line in the FY26 budget because Marblehead now treats those assessments as net deductions from state aid on the cherry-sheet revenue side, rather than as a general fund appropriation. As a result the FY26 Town_Grand_Total of $57,086,093 and the FY26 TOTAL GENERAL FUND ACCOUNTS of $106,206,380 do not include a directly comparable Intergovernmental State figure. Trend context: the FY24 ACFR page 97 (Budget and Actual schedule) reports State and County Charges at $2,651,227 final budget and $1,832,947 actual expended, which is lower than FY15, reflecting Marblehead's rising local revenues and the cherry-sheet offset structure. A future researcher who wants a strict FY26 number should pull it from the DLS cherry-sheet file for FY26 (not in this repo as of April 10, 2026). This row is included as a caution for readers who notice the FY15 ACFR line and wonder where it went.
+
+### FY2015 to FY2026 mapping, with raw values and ACFR citations
+
+All FY15 values are from `data/acfr/FY15_ACFR.pdf`, Schedule of Revenues, Expenditures and Changes in Fund Balance Budget and Actual General Fund, Actual Budgetary Amounts column. Page numbers are the logical page numbers printed on the ACFR pages. All FY26 values are from `data/FY26_budget_summary.json`, `Town_Key_Items` (and `School_Grand_Total` for the Schools row). FY26 values are also cross-checked against `data/budgets/FY27_Proposed_Budget_No_Override.pdf` FY2026 Budget column, which matches every department below exactly except Police (FY27 PDF 4,984,687, JSON 4,987,087, gap 2,400) and Insurance Premiums (FY27 PDF line 222 Other Insurance 964,554, JSON 865,056, gap 99,498). The JSON value is used in the table per Task 2 instructions.
+
+- **Schools (total appropriation).** FY15 Total School 32,066,336 (page 77: Schools 31,675,819 plus Art 10 2014 Equipment 56,659 plus Art 21 2014 Essex North Shore 233,858 plus Art 11 2014 IMPROVE PUBLIC BUILDINGS 100,000). FY26 49,120,287 (JSON `School_Grand_Total`; matches FY27 PDF line 101).
+- **Fire.** FY15 3,309,149 (page 77: Fire Salaries 3,035,009 plus Fire Expense 193,720 plus Alarm Expense 80,420). FY26 5,561,260 (JSON Fire; matches FY27 PDF Fire Department lines 68-69 exactly). Capital articles under Fire in FY15 (Art 10 2014 Equipment 4,949 and Art 11 2014 Improve Public Buildings 28,539) are excluded as non-operating.
+- **Police.** FY15 3,371,506 (page 77: Police Salaries 3,189,619 plus Police Expense 180,919 plus Indemnification 968). FY26 4,987,087 (JSON Police; FY27 PDF Police Department lines 62-63 show 4,984,687 for FY26 Budget, a 2,400 gap reconciled in Task 1 research output to a Police line adjustment). Capital articles under Police in FY15 (Art 11 2013 Equipment 244, Art 12 2013 Improve Public Buildings 57,957, Art 10 2014 Equipment 73,367, Art 11 2014 Improve Public Buildings 21,100) are excluded as non-operating.
+- **Waste.** FY15 1,826,038 (page 77: Waste Collection Salaries 299,354 plus Expense 1,468,475 plus Art 33 2011 Landfill Regulator 44,011 plus Art 33 2007 Disposal and Remediation 154 plus Art 21 2010 Disposal and Remediation 338 plus Art 10 2014 Equipment 13,706). FY26 2,943,402 (JSON Waste; matches FY27 PDF Waste Collection lines 126-128 exactly).
+- **Public Works.** FY15 1,304,986 (page 77: Engineering Salaries 126,127 plus Engineering Expense 6,863 plus Highway Salaries 714,081 plus Highway Expense 89,285 plus Rebuild and Maintain HTTP STS 18,715 plus Drains Salaries 75,330 plus Drains Expense 4,119 plus Tree Salaries 237,661 plus Tree Expense 32,805). FY26 2,301,042 (JSON Public_Works; matches FY27 PDF Public Works Highway Tree Drains lines 112-116 exactly). Excluded from FY15 Public Works for comparability: Street Lighting 128,820 (moved to Other General Government in the FY27 Proposed Budget at 60,000 for FY26 line 118; not in JSON Public_Works), Walls and Fences articles (617 plus 13,443 equals 14,060), Equipment articles (2,419 plus 106,808 equals 109,227), Art 11 2014 Improve Public Buildings 5,334, Drain Construction articles (142,182 plus 172,748 equals 314,930). Excluding these keeps the two years on the same operating basis.
+- **Finance.** FY15 848,086 (page 76: Finance Salaries 587,619 plus Finance Expense 260,467). FY26 1,688,913 (JSON Finance; matches FY27 PDF Finance Department lines 12-13 exactly). Not folded into this row (and not mapped elsewhere in the table): Assessor 301,065 (Assessors Officials 300, Salaries 192,844, Expense 107,531, Local Travel 390) which is a separate FY27 PDF line at 394,221 for FY26; Finance Committee 11,238 (Salaries 8,734, Expense 2,435, Local Travel 69) which is a separate FY27 PDF line at 6,375 for FY26; Parking Tickets 8,999 which is a separate FY27 PDF Parking Clerk line at 8,400 for FY26; Town Audit 43,000 (no corresponding FY27 PDF line visible on pages 1 to 4). These are part of the roughly one million dollar gap between JSON Town_Key_Items sum and JSON Town_Grand_Total.
+- **Snow and Ice.** FY15 797,793 (page 77: Snow Removal actual expended; FY15 was a record snow season with original budget of only 100,000, producing a variance of negative 697,793). FY26 105,000 (JSON Snow_Ice; matches FY27 PDF Snow Removal line 117 exactly). This row is the table's only large negative change. The FY26 budget is a conservative baseline that historically under-budgets and relies on supplemental appropriations or deficit spending authority in heavy winters. Do not read this as Marblehead having cut snow spending; read it as budgeting convention.
+- **Insurance Premiums.** FY15 318,315 (page 78: Property and Liability Insurance, Other Insurance). FY26 865,056 (JSON Insurance_Premiums). FY27 PDF line 222 Other Insurance shows 964,554 for FY26 Budget, a 99,498 gap with JSON. JSON value used per Task 2 instructions; the 99,498 gap may reflect a line item that JSON classified elsewhere.
+- **Library.** FY15 999,188 (page 78: Library Salaries 745,465 plus Library Expense 253,647 plus Local Travel 76). FY26 1,493,292 (JSON Library; matches FY27 PDF Abbot Public Library lines 186-187 exactly). Excluded from FY15 Library for comparability: Art 11 2014 IMPROVE PUBLIC BUILDINGS 700 (capital, non-operating).
+- **Community Development.** FY15 967 (page 76: Planning Board Expense). FY26 494,402 (JSON Community_Development; matches FY27 PDF Comm Dev and Planning Department lines 59-60 exactly). See Note A.
+- **Reserve Fund.** FY15 0 (page 76: Reserve Fund, original budget 144,000, final budget 19,487, actual 0, variance 19,487; the Reserve Fund appropriation transfers to other lines when used). FY26 444,000 (JSON Reserve_Fund; matches FY27 PDF line 10 exactly). See Note B.
+- **Rec and Park.** FY15 726,151 (page 78: Park Salaries 522,892 plus Park Expense 160,670 plus Park Facility Expense 42,589). FY26 1,037,027 (JSON Rec_and_Park; matches FY27 PDF Recreation and Park Department lines 190-191 exactly). Excluded from FY15 Rec and Park for comparability: Memorial and Veterans Day 5,650 (appears as a separate FY27 PDF line 210 at 7,550 for FY26, not inside Rec and Park), Art 10 2014 EQUIPMENT 58,550, Art 11 2014 IMPROVE PUBLIC BUILDINGS 18,570 (capital articles).
+- **HR.** FY15 0 (no separate line on page 76). FY26 294,927 (JSON HR; matches FY27 PDF Human Resources Department lines 57-58 exactly). See Note C.
+- **Select Board.** FY15 456,497 (page 76: Selectmen Officials Expense 5,500 plus Selectmen Salaries 334,504 plus Selectmen Expense 116,493). FY26 700,051 (JSON Select_Board; matches FY27 PDF Select Board lines 2-4 exactly). Not folded into this row: Moderator Officials Expense 100, Art 44 2001 Fort Sewall 2,200, Zoning Board Legal Services 10,032, Out of State Travel 0, Town Reports 3,205. These are small general-government items that sit in the FY15 ACFR's General Government heading but have no corresponding FY26 JSON row.
+- **Inspections.** FY15 449,733 (page 77: Building Commissioner Salaries 434,337 plus Building Commissioner Expense 6,090 plus Local Travel 6,666 plus Sealer of Weights and Measures Expense 240 plus Animal Inspector Salaries 2,400). FY26 689,413 (JSON Inspections; FY27 PDF Building Inspection 687,313 plus Sealer 2,100 plus Animal Inspector 2,400 equals 691,813, a 2,400 gap with JSON).
+- **Cemetery.** FY15 312,994 (page 77: Cemetery Officials Expense 300 plus Cemetery Salaries 290,854 plus Cemetery Expense 21,840). FY26 495,043 (JSON Cemetery; matches FY27 PDF Cemetery Department lines 141-143 exactly). Excluded from FY15 Cemetery for comparability: Art 11 2011 Improve Public Buildings 10,000 and Art 11 2014 Improve Public Buildings 17,323 (capital articles).
+- **Council on Aging.** FY15 243,373 (page 78: Council on Aging Salaries 239,925 plus Council on Aging Expense 3,448). FY26 423,460 (JSON Council_on_Aging; matches FY27 PDF Council on Aging lines 164-165 exactly).
+- **Town Counsel.** FY15 71,494 (page 76: Town Counsel Salaries 2,000 plus Town Counsel Expense 69,494). FY26 228,000 (JSON Town_Counsel). FY27 PDF Town Counsel lines 29-30 show FY26 Budget of 115,000, a 113,000 gap with JSON. JSON value used per Task 2 instructions; the gap may reflect a multi-year litigation reserve that JSON classifies differently.
+- **Health.** FY15 210,971 (page 78: Health Officials Expense 400 plus Health Salaries 135,360 plus Health Expense 11,154 plus Local Travel 57 plus HAWC 4,000 plus Mental Health Contractual Services 60,000). FY26 326,041 (JSON Health; matches FY27 PDF Health Department lines 153-155 exactly). Mental Health Contractual Services 60,000 is included in the FY15 Health row because it sits under Human Services Health in the ACFR and is likely folded into the FY26 Health Department budget. Excluded from FY15 Health for comparability: Art 11 2013 Equipment 87,281 (capital article carry forward).
+- **Public Buildings.** FY15 188,569 (page 76: Public Buildings Salaries 88,151 plus Public Buildings Expense 100,061 plus Local Travel 357). FY26 286,826 (JSON Public_Buildings; matches FY27 PDF Public Buildings Department lines 55-56 exactly). Excluded from FY15 Public Buildings for comparability: Art 10 2014 Equipment 441, Art 13 2012 Improve Public Buildings 12,516, Art 12 2013 Improve Public Buildings 39,240, Art 11 2014 Improve Public Buildings 78,802 (capital articles totaling 130,999).
+- **Town Clerk.** FY15 170,942 (page 76: Town Clerk Salaries 163,720 plus Town Clerk Expense 7,222). FY26 244,733 (JSON Town_Clerk; matches FY27 PDF Town Clerk lines 39-40 exactly). Not folded into this row: Election and Registration 44,460 (Salaries 21,419 plus Expense 23,041), which is a separate FY27 PDF Election and Registration Department line at 71,015 for FY26.
+- **Veterans.** FY15 93,719 (page 78: Veterans Benefits Salaries 60,325 plus Expense 1,213 plus Local Travel 727 plus Benefits 31,454). FY26 148,525 (JSON Veterans; matches FY27 PDF Veterans Benefits lines 175-178 exactly).
+- **Intergovernmental State and County.** FY15 2,705,864 (page 78: Intergovernmental State actual expended; final budget 2,819,837, variance 113,973). FY26 not reported as an appropriation line. See Note D.
+
+### FY2015 residual items not mapped to any FY26 JSON department row
+
+These FY15 lines sit on pages 76 to 78 of the FY15 ACFR and are included in the FY15 Total Expenditures of 70,498,077 but are not mapped to any row in the table above because there is no matching FY26 JSON Town_Key_Items department. Flagging them explicitly so a careful reader can reconcile FY15 ACFR totals to this table.
+
+- Moderator Officials Expense 100 (page 76)
+- Finance Committee 11,238 total (page 76)
+- Assessor 301,065 total (page 76)
+- Parking Tickets 8,999 (page 76)
+- Election and Registration 44,460 total (page 76)
+- Town Reports 3,205 (page 76)
+- Town Audit of Accounts 43,000 (page 76)
+- Art 44 2001 Fort Sewall 2,200 (page 76)
+- Zoning Board Legal Services 10,032 (page 76)
+- Capital articles under General Government Public Buildings 130,999 (page 76)
+- Capital articles under Police 152,668 (page 77: 244 plus 57,957 plus 73,367 plus 21,100)
+- Capital articles under Fire 33,488 (page 77: 4,949 plus 28,539)
+- Capital articles and non-mapped Public Works sub-lines 572,371 (page 77: Street Lighting 128,820, Walls and Fences 14,060, Equipment 109,227, Improvements 5,334, Drain Construction 314,930)
+- Capital article under Library 700 (page 78)
+- Capital articles under Rec and Park 77,120 (page 78: 58,550 plus 18,570)
+- Memorial and Veterans Day 5,650 (page 78, now a separate FY27 PDF line at 7,550)
+- Capital articles under Cemetery 27,323 (page 77: 10,000 plus 17,323)
+- Mental Health non-folded or Health capital article 87,281 (page 78)
+- Energy Reserve 309,146 (page 78: Energy heading)
+- Salary Reserve 60,985 (page 78: Fringe Benefits heading)
+- Intergovernmental State 2,705,864 (page 78, surfaced in Note D)
+- Pension Benefits 2,278,613 (page 78, belongs to Task 1 Pensions category; excluded per Task 2 rules)
+- Debt Services 5,475,855 (page 78, belongs to Task 1 Debt payments category; excluded per Task 2 rules)
+- Fringe Benefits Medicare 542,558, Group Insurance 9,826,265, Group Insurance FY13 20,085 (page 78, belong to Task 1 Health insurance category; excluded per Task 2 rules)
+
+Sum of the table's FY15 values (47,766,807) plus the FY15 residual items above plus the Task 1 excluded categories equals 70,498,077, the FY15 ACFR Total Expenditures.
+
+### Sanity checks performed
+
+1. FY26 spot checks from Task 2 Step 5 all passed: Fire 5,561,260, Police 4,987,087, Library 1,493,292, Public Works 2,301,042, Council on Aging 423,460 match `data/FY26_budget_summary.json` exactly.
+2. FY15 subtotals for each of the ACFR's major headings reconcile to this table's row assignments plus the residual items list: Total General Government 2,291,853, Total Public Safety 7,316,544, Total School 32,066,336, Total Public Works and Facilities 4,841,505, Total Human Services 635,344, Total Culture and Recreation 1,808,809. Each subtotal ties to the FY15 ACFR pages 76 to 78 as Task 1 verified.
+3. Schools row identical to Task 1 Schools column for both years (32,066,336 and 49,120,287). Fire and Police rows sum for FY15 (3,309,149 plus 3,371,506 equals 6,680,655) is lower than Task 1 Public Safety 7,316,544 by exactly 635,889, which reconciles to Inspections 449,733 plus the Police and Fire capital articles 152,668 and 33,488 (sum 635,889). Fire and Police rows sum for FY26 (5,561,260 plus 4,987,087 equals 10,548,347) is lower than Task 1 Public Safety 11,237,760 by 689,413, which is exactly JSON Inspections. Both years reconcile.
+4. Total change from the 22 computable rows: FY15 47,766,807 to FY26 74,877,787, an increase of 27,110,980, which is 38 percent. Schools alone account for 17,053,951 (63 percent of the table's dollar growth), consistent with Task 1's finding that Schools drove roughly 48 percent of the six-category total growth (the denominators differ because this table excludes Health insurance, Pensions, Debt, Medicare reimbursement, and small employee benefits).
+
+### Primary sources
+
+- `data/acfr/FY15_ACFR.pdf` pages 76 to 78, Schedule of Revenues, Expenditures and Changes in Fund Balance Budget and Actual General Fund, Actual Budgetary Amounts column
+- `data/FY26_budget_summary.json`, `Town_Key_Items` and `School_Grand_Total`
+- `data/budgets/FY27_Proposed_Budget_No_Override.pdf` pages 1 to 4, Table of Estimate Appropriations, FY2026 Budget column (cross-check)
+- `data/acfr/FY24_ACFR.pdf` page 97 for the FY24 State and County Charges reference cited in Note D
+
