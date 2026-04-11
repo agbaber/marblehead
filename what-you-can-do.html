@@ -107,6 +107,63 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
     .body-card dl { grid-template-columns: 80px 1fr; font-size: 12px; }
     .tldr { padding: 16px 18px 14px; }
     .tldr li { font-size: 13px; }
+
+    /* Stack the "Who decides what" table into cards on mobile so
+       the 3-column text content doesn't wrap cell-by-cell at 390px.
+       Keeps the normal peer-table rendering on desktop. */
+    table.civic-decide-table { display: block; }
+    table.civic-decide-table thead {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    table.civic-decide-table tbody { display: block; }
+    table.civic-decide-table tbody tr {
+      display: block;
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      padding: 14px 16px 12px;
+      margin-bottom: 10px;
+    }
+    table.civic-decide-table tbody tr:last-child { margin-bottom: 0; }
+    table.civic-decide-table tbody td {
+      display: block;
+      padding: 0;
+      text-align: left;
+      border-bottom: none;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+    table.civic-decide-table tbody td:first-child {
+      font-size: 14px;
+      color: var(--text);
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--divider);
+    }
+    table.civic-decide-table tbody td:nth-child(2),
+    table.civic-decide-table tbody td:nth-child(3) {
+      padding-top: 6px;
+    }
+    table.civic-decide-table tbody td:nth-child(2)::before {
+      content: "Who decides";
+      display: block;
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.6px;
+      color: var(--text-subtle);
+      margin-bottom: 2px;
+    }
+    table.civic-decide-table tbody td:nth-child(3)::before {
+      content: "How residents engage";
+      display: block;
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.6px;
+      color: var(--text-subtle);
+      margin-bottom: 2px;
+    }
   }
 </style>
 
@@ -176,7 +233,7 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
 <h2>Who decides what</h2>
 <p>Most civic decisions in Marblehead are distributed across several bodies, each with different authority. Knowing which body handles which decision is the difference between writing the right email and writing to no one.</p>
 
-<table class="peer-table">
+<table class="peer-table civic-decide-table">
   <thead>
     <tr>
       <th>Decision</th>
