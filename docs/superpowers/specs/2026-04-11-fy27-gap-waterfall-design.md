@@ -47,13 +47,16 @@ At the end of the `<h2 data-stance-section="vote-2026">2026: The vote before us<
 
 No structural change to the page. No modification to existing copy.
 
-### Change 3 — no changes
+### Change 3 — `assets/site.css` (new component styles)
+
+Add a new section to `assets/site.css` with all the waterfall-related styles (`.waterfall`, `.waterfall-row`, `.waterfall-bar--positive`, etc.) plus a mobile media query. This follows the existing pattern on `no-override-budget.html`: all component styles for that page's custom elements (`.cut-row-bar`, `.cut-list`, `.headcount-bar-track`, etc.) live in `assets/site.css` at lines 296-386, not inline on the page. `no-override-budget.html` has no page-level `<style>` block.
+
+### Change 4 — no changes
 
 Explicitly out of scope for this PR:
 - `the-debate.html` — already cites the relevant numbers in Tension 1 prose; adding a chart would break the mirrored `.perspective--for` / `.perspective--against` symmetry
 - `what-is-the-override.html` — Prop 2.5 mechanics page, already long
 - `where-has-the-money-gone.html` — retrospective spending, wrong frame for a prospective one-year reconciliation
-- `assets/site.css` — all new CSS lives inline in the page-level `<style>` block on `no-override-budget.html`, following that page's existing pattern
 
 ## Data
 
@@ -148,12 +151,12 @@ Uses existing CSS custom properties from `assets/site.css`. No new color variabl
 
 - **No inline `style=""` attributes** on any SVG element, per STYLE_GUIDE.md:132
 - **No inline `font-family`, `fill`, `stroke`** on SVG text/lines, per STYLE_GUIDE.md:133
-- All visual properties driven by CSS classes defined in a page-level `<style>` block at the top of `no-override-budget.html`, following the existing pattern on that page (which already has page-level styles for `.cut-row-bar`, `.headcount-bar-track`, etc.)
-- **Bar widths** are driven by `calc()` on a CSS custom property `--value-pct` set via a `style` attribute on the `<rect>` element. This is the one exception to "no inline styles" because the width MUST vary per bar and there is no cleaner way to bind data values to SVG attributes without JavaScript. Precedent: the existing `cut-row-bar` class on the same page uses an inline `style="width: XX%;"` pattern, so this is consistent with the page's existing approach. Flag this for review during implementation in case a cleaner approach is preferred.
+- All visual properties driven by CSS classes defined in a new section at the end of `assets/site.css`. This is the convention used by the existing component styles on `no-override-budget.html` — `.cut-row-bar`, `.cut-list`, `.headcount-bar-track` all live in `site.css` at lines 296-386. There is no page-level `<style>` block on `no-override-budget.html`.
+- **Bar widths** are set via SVG `<rect>` `width` and `x` attributes computed at authoring time from the known values. Because all 10 bars have known constant values (this chart is not data-driven at runtime — it's a static illustration of one specific year's budget math), widths can be hard-coded as SVG attributes rather than driven by inline CSS or JavaScript. This sidesteps the "no inline `style=""`" rule entirely. If values later need to update (e.g., after the town publishes FY28 numbers), the fix is to edit the SVG attributes in the HTML, which is the same workflow as updating any other content on the site.
 
 ### New CSS classes
 
-All scoped to the new `.waterfall` container. Added to the page-level `<style>` block on `no-override-budget.html`:
+All scoped to the new `.waterfall` container. Added to a new section at the end of `assets/site.css`:
 
 ```css
 .waterfall { /* container */ }
@@ -261,6 +264,6 @@ These should be tracked as separate work after this PR merges:
 
 - Does not rebut the Prop 2.5 vs CPI chart circulating on Facebook. That chart is arithmetically correct; Marblehead's levy ceiling CAGR over FY00–FY24 is roughly 4.04% (including the three FY04–FY06 operating overrides) or 3.4% (excluding them), both above headline CPI of 2.53%. The honest response is not to "rebut" the chart but to show the more relevant comparison (levy growth vs specific cost drivers) — and that more relevant comparison turns out to be less dramatic than expected over the long run, which is why it was deferred.
 - Does not add a chart to `the-debate.html`. That page is a mirrored both-sides layout; an asymmetric chart would break the structure.
-- Does not modify `assets/site.css`. All new styles are page-local to `no-override-budget.html`.
+- Does not introduce new styling patterns. New waterfall classes live in `assets/site.css` following the existing component-style convention used by `.cut-row-bar`, `.cut-list`, `.headcount-bar-track`, etc. (all in `site.css` at lines 296-386).
 - Does not introduce new CSS color variables. Uses `--c-sage`, `--c-buoy`, and `--text-subtle`, all already defined.
 - Does not include a text "by the numbers" table alongside the waterfall. A well-labeled waterfall with dollar amounts already serves the audit-the-math audience; the duplication was ruled out during brainstorming.
