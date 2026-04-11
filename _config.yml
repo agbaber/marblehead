@@ -1,3 +1,29 @@
-theme: jekyll-theme-minimal
 title: Marblehead Budget Data
 description: Open data and charts about Marblehead, MA municipal finances
+last_updated: April 11, 2026
+url: https://marbleheaddata.org
+baseurl: ""
+
+plugins: []
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: "index.html"
+    values:
+      layout: home
+  - scope:
+      path: "charts"
+    values:
+      layout: chart
+
+exclude:
+  - README.md
+  - STYLE_GUIDE.md
+  - LICENSE
+  - docs/
+  - data/acfr/
+  - data/budgets/
