@@ -15,21 +15,21 @@ describe('reactions API client', () => {
     global.fetch.mockResolvedValue({
       ok: true,
       json: async () => ({
-        'what-fails.html#staffing-cuts': { total: 47, last_24h: 12 },
-        'what-fails.html#melrose-comparison': { total: 13, last_24h: 2 }
+        'no-override-budget.html#staffing-cuts': { total: 47, last_24h: 12 },
+        'no-override-budget.html#melrose-comparison': { total: 13, last_24h: 2 }
       })
     });
 
     const result = await fetchReactions([
-      'what-fails.html#staffing-cuts',
-      'what-fails.html#melrose-comparison'
+      'no-override-budget.html#staffing-cuts',
+      'no-override-budget.html#melrose-comparison'
     ]);
 
     expect(global.fetch).toHaveBeenCalledTimes(1);
     const call = global.fetch.mock.calls[0];
     expect(call[0]).toMatch(/^https:\/\/pulse\.example\.com\/api\/reactions\?section_ids=/);
-    expect(call[0]).toContain(encodeURIComponent('what-fails.html#staffing-cuts'));
-    expect(result['what-fails.html#staffing-cuts'].total).toBe(47);
+    expect(call[0]).toContain(encodeURIComponent('no-override-budget.html#staffing-cuts'));
+    expect(result['no-override-budget.html#staffing-cuts'].total).toBe(47);
   });
 
   it('fetchReactions returns an empty object on network error', async () => {
@@ -56,13 +56,13 @@ describe('reactions API client', () => {
       json: async () => ({ total: 48, last_24h: 13 })
     });
 
-    const result = await incrementReaction('what-fails.html#staffing-cuts');
+    const result = await incrementReaction('no-override-budget.html#staffing-cuts');
 
     expect(global.fetch).toHaveBeenCalledTimes(1);
     const [url, opts] = global.fetch.mock.calls[0];
     expect(url).toBe('https://pulse.example.com/api/reactions');
     expect(opts.method).toBe('POST');
-    expect(JSON.parse(opts.body)).toEqual({ section_id: 'what-fails.html#staffing-cuts' });
+    expect(JSON.parse(opts.body)).toEqual({ section_id: 'no-override-budget.html#staffing-cuts' });
     expect(result.total).toBe(48);
   });
 

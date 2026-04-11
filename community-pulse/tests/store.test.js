@@ -11,17 +11,17 @@ beforeEach(async () => {
 describe('stance store', () => {
   it('returns null for an unknown section', async () => {
     const db = await openStore();
-    const result = await getStance(db, 'what-fails.html#unknown');
+    const result = await getStance(db, 'no-override-budget.html#unknown');
     expect(result).toBeNull();
   });
 
   it('writes and reads back a stance', async () => {
     const db = await openStore();
-    await setStance(db, 'what-fails.html#staffing-cuts', {
+    await setStance(db, 'no-override-budget.html#staffing-cuts', {
       stance: 'agree',
       note: 'This matches the Fin Com report.'
     });
-    const result = await getStance(db, 'what-fails.html#staffing-cuts');
+    const result = await getStance(db, 'no-override-budget.html#staffing-cuts');
     expect(result.stance).toBe('agree');
     expect(result.note).toBe('This matches the Fin Com report.');
     expect(result.updated_at).toBeGreaterThan(0);

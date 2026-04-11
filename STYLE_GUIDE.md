@@ -15,7 +15,7 @@ One shared stylesheet (`assets/site.css`) with CSS custom properties. All pages 
 | Type | Body class | Max width | Examples |
 |------|-----------|-----------|----------|
 | **Index** | `.page--home` on wrapper | `--chart-max` (880px) | `index.html` |
-| **Explainer** | (none) | `--page-max` (720px) | `what-is-the-override.html`, `what-fails.html` |
+| **Explainer** | (none) | `--page-max` (720px) | `what-is-the-override.html`, `no-override-budget.html` |
 | **Chart** | `chart-page` | `--chart-max` (880px) | All files in `charts/` |
 
 The home page uses the wider `--chart-max` container to accommodate a 2-column question-card grid on desktop (&ge;720px). Below that breakpoint the cards stack single-column. A lone `.question` in a `.question-list` spans both grid columns via `:only-child`, so sections with a single card don't leave an empty right column.
