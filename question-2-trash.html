@@ -55,38 +55,6 @@ og_url: https://marbleheaddata.org/question-2-trash.html
     color: var(--text);
   }
 
-  /* Ballot card (borrow styling from the existing ballot block pattern) */
-  .trash-ballot {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 20px 22px;
-    margin: 18px 0 22px;
-    box-shadow: var(--shadow-sm);
-  }
-  .trash-ballot-label {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--text-subtle);
-    margin-bottom: 6px;
-  }
-  .trash-ballot blockquote {
-    margin: 10px 0 0;
-    padding: 12px 16px;
-    border-left: 3px solid var(--c-teal);
-    background: color-mix(in srgb, var(--c-teal) 4%, var(--surface));
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--text);
-    border-radius: 0 6px 6px 0;
-  }
-  .trash-ballot blockquote em {
-    font-style: italic;
-    color: var(--text-muted);
-  }
-
   /* Distributional analysis grid */
   .dist-table {
     width: 100%;
@@ -373,11 +341,21 @@ og_url: https://marbleheaddata.org/question-2-trash.html
 
 <h2>What is on the ballot</h2>
 
-<div class="trash-ballot">
-  <div class="trash-ballot-label">Question 2, Town of Marblehead, June 9, 2026</div>
-  <blockquote>
-    Shall the Town of Marblehead be allowed to assess an additional $2,298,575 in real estate and personal property taxes for the purposes of operating the curbside trash and recycling for the fiscal year beginning July 1, 2026?
-  </blockquote>
+<div class="ballot">
+  <div class="ballot-header">
+    <div class="ballot-header-sub">Sample Ballot &middot; Town of Marblehead &middot; June 9, 2026</div>
+    <div class="ballot-header-main">Question 2: Curbside Trash Funding</div>
+  </div>
+  <div class="ballot-row">
+    <div class="ballot-q-num">2</div>
+    <div class="ballot-q-main">
+      <div class="ballot-q-text">Shall the Town of Marblehead be allowed to assess an additional <strong>$2,298,575</strong> in real estate and personal property taxes for the purposes of operating the curbside trash and recycling for the fiscal year beginning July 1, 2026? <span class="ballot-q-tier">Trash</span></div>
+      <div class="ballot-choices">
+        <span class="ballot-choice"><span class="ballot-box"></span>Yes</span>
+        <span class="ballot-choice"><span class="ballot-box"></span>No</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <p>The $2,298,575 figure covers the FY27 contract cost plus a 2.5% annual buffer for FY28 and FY29 growth, in a phased draw ($2,186,516 in FY27, +$54,663 in FY28, +$57,396 in FY29). A yes vote authorizes the town to add that amount to the property tax levy beyond the Proposition 2&frac12; cap. A no vote leaves the levy at its existing cap and triggers a Board of Health curbside fee instead.</p>
