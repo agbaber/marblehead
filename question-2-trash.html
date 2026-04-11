@@ -169,6 +169,40 @@ og_url: https://marbleheaddata.org/question-2-trash.html
     color: var(--text);
   }
 
+  /* "This page walks through:" intro list */
+  .page-covers-lead {
+    margin: 18px 0 4px;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  .page-covers {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+  }
+  .page-covers li {
+    padding: 7px 0 7px 22px;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+    color: var(--text);
+    position: relative;
+    border-bottom: 1px solid var(--divider);
+  }
+  .page-covers li:last-child {
+    border-bottom: none;
+  }
+  .page-covers li::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 16px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--c-navy);
+  }
+
   @media (max-width: 600px) {
     .trash-tldr { padding: 16px 18px 18px; }
     .trash-tldr h2 { font-size: 17px; }
@@ -176,14 +210,43 @@ og_url: https://marbleheaddata.org/question-2-trash.html
     .dist-table th, .dist-table td,
     .peer-trash th, .peer-trash td { padding: 9px 5px; }
     .already-decided { padding: 12px 14px; }
+    .page-covers li { font-size: 13px; padding: 6px 0 6px 20px; }
   }
 </style>
 
 <h1>Question 2: trash funding</h1>
 
-<p>On the June 9, 2026 ballot, Marblehead residents will see a second override question, separate from the main FY27 override (Question 1). Question 2 asks voters to approve adding $2,298,575 to the property tax levy for curbside trash and recycling. It is widely described as a choice between a levy increase and a flat household fee, which is accurate as far as it goes. The more complete picture is that the Select Board has already decided to move curbside trash out of the general property tax budget, and Question 2 is only about which funding mechanism replaces it.</p>
+<div class="key-stats">
+  <div class="key-stat">
+    <div class="key-stat-value">$2.30M</div>
+    <div class="key-stat-label">Override (Question 2)</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">$262</div>
+    <div class="key-stat-label">Flat fee alternative</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">$1.14M</div>
+    <div class="key-stat-label">Crossover home value</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">~$1M</div>
+    <div class="key-stat-label">New contract growth</div>
+  </div>
+</div>
 
-<p>This page walks through what Question 2 actually does, what was decided before the ballot question existed, what each outcome means for residents at different home values, how other Massachusetts towns handle curbside trash, and the longer-term options the town has (or has not) explored.</p>
+<p>Marblehead has two override questions on the June 9, 2026 ballot. Question 2, separate from the main FY27 override, asks voters to add $2,298,575 to the property tax levy for curbside trash and recycling. It can pass or fail independently of Question 1.</p>
+
+<p>Question 2 is usually described as a choice between a levy increase and a flat household fee. That is accurate but incomplete. The Select Board already decided to move curbside trash out of the general property tax budget. Question 2 only decides how to replace the funding.</p>
+
+<p class="page-covers-lead">This page walks through:</p>
+<ul class="page-covers">
+  <li>What Question 2 actually decides</li>
+  <li>What was already decided before the ballot</li>
+  <li>What each outcome costs residents at different home values</li>
+  <li>How other Massachusetts towns fund curbside trash</li>
+  <li>Longer-term options Marblehead has, or has not, explored</li>
+</ul>
 
 <div class="trash-tldr">
   <div class="trash-tldr-eyebrow">The short version</div>
