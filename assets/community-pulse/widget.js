@@ -148,6 +148,8 @@ const STANCE_BUTTONS = [
   { key: 'alert',    emoji: '!',  label: 'Alert: something here caught my eye' }
 ];
 
+let widgetCounter = 0;
+
 /**
  * Build the widget DOM for one section and attach it to the given parent
  * element. Returns the widget root element.
@@ -156,6 +158,7 @@ function buildWidget(sectionId, sectionTitle, initialReactions, initialStance) {
   const root = document.createElement('div');
   root.className = 'cp-widget';
   root.dataset.sectionId = sectionId;
+  const widgetId = `cp-widget-${++widgetCounter}`;
 
   // Stance buttons.
   const buttons = document.createElement('div');
@@ -214,13 +217,16 @@ function buildWidget(sectionId, sectionTitle, initialReactions, initialStance) {
   noteToggle.className = 'cp-widget__note-toggle';
   noteToggle.dataset.action = 'toggle-note';
   noteToggle.setAttribute('aria-expanded', 'false');
+  noteToggle.setAttribute('aria-controls', `${widgetId}-note`);
   noteToggle.textContent = 'Note';
   root.appendChild(noteToggle);
 
   // Note textarea (hidden initially).
   const note = document.createElement('textarea');
+  note.id = `${widgetId}-note`;
   note.className = 'cp-widget__note';
   note.placeholder = 'Write a private note. Saved locally in your browser.';
+  note.setAttribute('aria-label', 'Private note, saved locally in your browser');
   note.hidden = true;
   note.rows = 3;
   root.appendChild(note);
@@ -253,7 +259,7 @@ function debounce(fn, ms) {
  * Wire event handlers on a single widget: stance buttons, note toggle and
  * save, share button. Reads and writes the IndexedDB store.
  */
-function wireWidget(root, db, sectionId, sectionUrl, sectionTitle) {
+function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord) {
   const buttons = root.querySelectorAll('.cp-widget__button');
   const noteToggle = root.querySelector('.cp-widget__note-toggle');
   const noteField = root.querySelector('.cp-widget__note');
@@ -261,18 +267,16 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle) {
   const countNum = root.querySelector('.cp-widget__count-num');
   const countDelta = root.querySelector('.cp-widget__delta');
 
-  // Load stored stance and note and reflect into UI.
-  getStance(db, sectionId).then(record => {
-    if (!record) return;
-    buttons.forEach(btn => {
-      btn.setAttribute('aria-pressed', btn.dataset.stance === record.stance ? 'true' : 'false');
-    });
-    if (record.note) {
-      noteField.value = record.note;
-      noteField.hidden = false;
-      noteToggle.setAttribute('aria-expanded', 'true');
-    }
-  });
+  // Track current state in closure to avoid extra IDB reads.
+  let currentStance = initialRecord?.stance ?? null;
+  let currentNote = initialRecord?.note ?? '';
+
+  // Reflect initial note into UI (stance was already reflected by buildWidget's initialStance).
+  if (currentNote) {
+    noteField.value = currentNote;
+    noteField.hidden = false;
+    noteToggle.setAttribute('aria-expanded', 'true');
+  }
 
   // Stance button handler.
   buttons.forEach(btn => {
@@ -285,23 +289,15 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle) {
         b.setAttribute('aria-pressed', b.dataset.stance === newStance ? 'true' : 'false');
       });
       // Persist to IndexedDB.
-      const existing = await getStance(db, sectionId);
-      await setStance(db, sectionId, {
-        stance: newStance,
-        note: existing?.note ?? ''
-      });
-      // Fire reactions increment (directionless). Only increment on activate,
-      // not on deactivate, to match "click any button to count as a reaction."
+      currentStance = newStance;
+      await setStance(db, sectionId, { stance: currentStance, note: currentNote });
+      // Fire reactions increment only on activate.
       if (newStance) {
-        incrementReaction(sectionId).then(result => {
-          if (result) {
-            countNum.textContent = `${result.total} reactions`;
-            if (result.last_24h > 0) {
-              if (!countDelta) return;
-              countDelta.textContent = `+${result.last_24h} today`;
-            }
-          }
-        });
+        const result = await incrementReaction(sectionId);
+        if (result) {
+          countNum.textContent = `${result.total} reactions`;
+          countDelta.textContent = result.last_24h > 0 ? `+${result.last_24h} today` : '';
+        }
       }
     });
   });
@@ -316,11 +312,8 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle) {
 
   // Note field debounced save.
   const saveNote = debounce(async () => {
-    const existing = await getStance(db, sectionId);
-    await setStance(db, sectionId, {
-      stance: existing?.stance ?? null,
-      note: noteField.value
-    });
+    currentNote = noteField.value;
+    await setStance(db, sectionId, { stance: currentStance, note: currentNote });
   }, 1000);
   noteField.addEventListener('input', saveNote);
 
@@ -409,23 +402,28 @@ export async function hydrateWidgets() {
     return;
   }
 
+  // Fetch all existing stances in a single transaction (much faster than per-widget).
+  const allStances = await getAllStances(db);
+  const stanceMap = new Map(allStances.map(s => [s.section_id, s]));
+
   // Build and wire each widget.
   for (const target of collectedTargets) {
     const initialReactions = reactionsMap[target.sectionId];
-    const existing = await getStance(db, target.sectionId);
+    const initialRecord = stanceMap.get(target.sectionId) || null;
     const widget = buildWidget(
       target.sectionId,
       target.title,
       initialReactions,
-      existing?.stance
+      initialRecord?.stance
     );
     target.element.insertAdjacentElement('afterend', widget);
     wireWidget(
       widget,
       db,
       target.sectionId,
-      `${location.origin}/${target.sectionId}`,
-      target.title
+      `${location.origin}${location.pathname}#${target.element.id}`,
+      target.title,
+      initialRecord
     );
   }
 
