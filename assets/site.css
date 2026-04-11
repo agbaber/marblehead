@@ -741,6 +741,10 @@ p a:hover { text-decoration: underline; }
   background: color-mix(in srgb, var(--c-sage) 10%, var(--surface));
   border-left-color: var(--c-sage);
 }
+.takeaway.takeaway--neutral {
+  background: color-mix(in srgb, var(--text-subtle) 8%, var(--surface));
+  border-left-color: var(--text-subtle);
+}
 
 .footnotes {
   background: var(--divider);
