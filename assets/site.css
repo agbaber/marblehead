@@ -731,6 +731,86 @@ table.data tbody tr:last-child td { border-bottom: none; }
 }
 
 /* ==========================================================================
+   Rendered markdown content (Jekyll .md pages)
+   Scoped via <body class="doc-page"> so bespoke HTML pages are unaffected.
+   ========================================================================== */
+
+body.doc-page .page h1 { margin-top: 8px; margin-bottom: 12px; }
+body.doc-page .page h2 {
+  margin-top: 32px; border-top: 1px solid var(--divider); padding-top: 20px;
+}
+body.doc-page .page h2:first-of-type { border-top: none; padding-top: 0; }
+body.doc-page .page h3 { font-size: 16px; margin-top: 20px; margin-bottom: 6px; }
+
+body.doc-page .page ul,
+body.doc-page .page ol {
+  margin: 0 0 16px;
+  padding-left: 22px;
+  color: var(--text-muted);
+}
+body.doc-page .page ul { list-style: disc; }
+body.doc-page .page ol { list-style: decimal; }
+body.doc-page .page li {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 4px 0;
+}
+body.doc-page .page li > p { margin: 0 0 6px; }
+body.doc-page .page li strong { color: var(--text); }
+
+/* Long URLs in source lists should wrap, not overflow */
+body.doc-page .page a { overflow-wrap: anywhere; word-break: break-word; }
+
+/* Inline code */
+body.doc-page .page code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  padding: 1px 6px;
+  background: var(--divider);
+  border-radius: 4px;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+/* Raw markdown tables — make horizontally scrollable on small screens */
+body.doc-page .page table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+body.doc-page .page table th,
+body.doc-page .page table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--divider);
+  text-align: left;
+  vertical-align: top;
+  color: var(--text);
+  white-space: normal;
+}
+body.doc-page .page table th {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-subtle);
+  border-bottom: 2px solid var(--divider);
+}
+
+@media (max-width: 600px) {
+  body.doc-page .page h2 { margin-top: 24px; padding-top: 16px; }
+  body.doc-page .page h3 { font-size: 15px; }
+  body.doc-page .page li { font-size: 14px; }
+  body.doc-page .page table { font-size: 13px; }
+  body.doc-page .page table th,
+  body.doc-page .page table td { padding: 6px 8px; }
+}
+
+/* ==========================================================================
    Chart SVG — reusable classes
    Colors propagate via `color` + `currentColor` for theme compatibility.
    ========================================================================== */
