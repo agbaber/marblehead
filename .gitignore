@@ -4,6 +4,7 @@
 # Claude Code working files
 .claude/
 .playwright-mcp/
+.superpowers/
 .DS_Store
 
 # Local-only data (too large or not public-ready)
