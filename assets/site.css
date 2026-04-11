@@ -62,8 +62,6 @@
   /* Tag colors (category pills) */
   --tag-chart-bg:   #E6F0EE;
   --tag-chart-fg:   #2F6356;
-  --tag-text-bg:    #E3ECF4;
-  --tag-text-fg:    #1B3A57;
   --tag-data-bg:    #F4EBD6;
   --tag-data-fg:    #7A5A15;
 
@@ -111,8 +109,6 @@
 
     --tag-chart-bg: #132B27;
     --tag-chart-fg: #8FC6B7;
-    --tag-text-bg:  #13202E;
-    --tag-text-fg:  #8AB0C4;
     --tag-data-bg:  #2A220F;
     --tag-data-fg:  #E4B363;
 
@@ -599,7 +595,6 @@ p a:hover { text-decoration: underline; }
   align-self: flex-start;
 }
 .tag-charts { background: var(--tag-chart-bg); color: var(--tag-chart-fg); }
-.tag-text   { background: var(--tag-text-bg);  color: var(--tag-text-fg); }
 .tag-data   { background: var(--tag-data-bg);  color: var(--tag-data-fg); }
 
 @media (max-width: 600px) {
@@ -2208,16 +2203,6 @@ blockquote.quote--mixed p {
   color: var(--text-subtle);
   line-height: 1.55;
   margin-bottom: 12px;
-}
-.featured-card .tag {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 3px 9px;
-  border-radius: 100px;
-  letter-spacing: 0.3px;
-  background: var(--tag-text-bg);
-  color: var(--tag-text-fg);
 }
 
 @media (max-width: 600px) {
