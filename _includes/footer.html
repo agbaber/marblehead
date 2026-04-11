@@ -1,4 +1,8 @@
-<div class="footer">
-  <p>Built by a Marblehead resident. <a href="{{ '/' | relative_url }}about.html">About this site</a>. <a href="https://github.com/agbaber/marblehead">Source on GitHub</a>. Corrections welcome.</p>
-  <p>Last updated {{ site.last_updated }}.</p>
-</div>
+<footer class="footer">
+  <nav class="footer-links" aria-label="Site footer">
+    <a href="{{ '/' | relative_url }}about.html">About</a>
+    <a href="https://github.com/agbaber/marblehead">Source</a>
+    <a href="https://github.com/agbaber/marblehead/issues">Report an issue</a>
+  </nav>
+  <p class="footer-meta">Built by a Marblehead resident &middot; Updated {{ site.last_updated }}</p>
+</footer>
