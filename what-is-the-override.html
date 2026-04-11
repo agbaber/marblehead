@@ -54,7 +54,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </blockquote>
 
   <h2>The Three Tiers</h2>
-  <p>The tiers are nested. Tier 2 includes everything in Tier 1. Tier 3 includes everything in Tiers 1 and 2. The highest tier that passes sets the override amount.</p>
+  <p>The tiers are nested. Each higher tier contains everything in the lower tiers, so the highest tier that gets a majority sets the override amount.</p>
+
+  <div class="tier-chart">
+    <div class="tier-chart-row">
+      <div class="tier-chart-label">Tier 1: Restore</div>
+      <div class="tier-chart-track">
+        <div class="tier-chart-fill" style="width: 60%;">
+          <div class="tier-chart-seg tier-chart-seg--1" style="flex: 1;">$9M</div>
+        </div>
+      </div>
+      <div class="tier-chart-total">$9M</div>
+    </div>
+    <div class="tier-chart-row">
+      <div class="tier-chart-label">Tier 2: Stabilize</div>
+      <div class="tier-chart-track">
+        <div class="tier-chart-fill" style="width: 80%;">
+          <div class="tier-chart-seg tier-chart-seg--1" style="flex: 9;">$9M</div>
+          <div class="tier-chart-seg tier-chart-seg--2" style="flex: 3;">+$3M</div>
+        </div>
+      </div>
+      <div class="tier-chart-total">$12M</div>
+    </div>
+    <div class="tier-chart-row">
+      <div class="tier-chart-label">Tier 3: Invest</div>
+      <div class="tier-chart-track">
+        <div class="tier-chart-fill" style="width: 100%;">
+          <div class="tier-chart-seg tier-chart-seg--1" style="flex: 9;">$9M</div>
+          <div class="tier-chart-seg tier-chart-seg--2" style="flex: 3;">+$3M</div>
+          <div class="tier-chart-seg tier-chart-seg--3" style="flex: 3;">+$3M</div>
+        </div>
+      </div>
+      <div class="tier-chart-total">$15M</div>
+    </div>
+  </div>
 
   <div class="card">
     <p class="tier-label">Tier 1: Restore ($9 million)</p>
@@ -155,7 +188,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>Question 2 is independent of Question 1. Either way, residents pay for trash: the override spreads the cost by home value, while the Board of Health's fallback is a flat fee of roughly $262 per household.</p>
 
   <h2>What It Costs</h2>
-  <p>The override phases in over three years (FY27 to FY29). Year 1 costs are modest; the full amount hits in Year 3. See the <a href="charts/override_calculator.html">override cost calculator</a> for year-by-year costs at different home values.</p>
+  <p>The override phases in over three years (FY27 to FY29). Year 1 draws only a fraction of the full amount; the full override is active only in Year 3:</p>
+
+  <div class="phase-chart">
+    <div class="phase-chart-corner"></div>
+    <div class="phase-chart-header">FY27</div>
+    <div class="phase-chart-header">FY28</div>
+    <div class="phase-chart-header">FY29</div>
+
+    <div class="phase-chart-label">Tier 1</div>
+    <div class="phase-chart-cell">
+      <div class="phase-chart-bar-wrap"><div class="phase-chart-bar" style="width: 14%;"></div></div>
+      <div class="phase-chart-amt">$1.3M</div>
+    </div>
+    <div class="phase-chart-cell">
+      <div class="phase-chart-bar-wrap"><div class="phase-chart-bar" style="width: 70%;"></div></div>
+      <div class="phase-chart-amt">$6.3M</div>
+    </div>
+    <div class="phase-chart-cell">
+      <div class="phase-chart-bar-wrap"><div class="phase-chart-bar" style="width: 100%;"></div></div>
+      <div class="phase-chart-amt">$9.0M</div>
+    </div>
+
+    <div class="phase-chart-label">Tier 2</div>
+    <div class="phase-chart-cell">
+      <div class="phase-chart-bar-wrap"><div class="phase-chart-bar" style="width: 23%;"></div></div>
+      <div class="phase-chart-amt">$2.8M</div>
+    </div>
+    <div class="phase-chart-cell">
+      <div class="phase-chart-bar-wrap"><div class="phase-chart-bar" style="width: 73%;"></div></div>
+      <div class="phase-chart-amt">$8.7M</div>
+    </div>
+    <div class="phase-chart-cell">
+      <div class="phase-chart-bar-wrap"><div class="phase-chart-bar" style="width: 100%;"></div></div>
+      <div class="phase-chart-amt">$12.0M</div>
+    </div>
+
+    <div class="phase-chart-label">Tier 3</div>
+    <div class="phase-chart-cell">
+      <div class="phase-chart-bar-wrap"><div class="phase-chart-bar" style="width: 29%;"></div></div>
+      <div class="phase-chart-amt">$4.3M</div>
+    </div>
+    <div class="phase-chart-cell">
+      <div class="phase-chart-bar-wrap"><div class="phase-chart-bar" style="width: 70%;"></div></div>
+      <div class="phase-chart-amt">$10.5M</div>
+    </div>
+    <div class="phase-chart-cell">
+      <div class="phase-chart-bar-wrap"><div class="phase-chart-bar" style="width: 100%;"></div></div>
+      <div class="phase-chart-amt">$15.0M</div>
+    </div>
+
+    <p class="phase-chart-caption">Cumulative override levy active in each fiscal year, by tier. Bar widths show each year's draw as a percentage of that tier's full amount.</p>
+  </div>
+
+  <p>See the <a href="charts/override_calculator.html">override cost calculator</a> for year-by-year costs at different home values.</p>
 
   <h2>History</h2>
   <p>Marblehead's last successful operating override was in FY2005, 21 years ago. Since 1982, voters have rejected 18 of 21 operating override attempts. They are far more willing to fund capital projects:</p>
@@ -195,7 +281,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <footer>Alec Goolsby, Chair, co-signed by Pat Franklin and Cameron Staples, Vice Chairs, Marblehead Finance Committee. Signed transmittal letter, <a href="https://marbleheadma.gov/wp-content/uploads/2025/05/2023-04-28_fincom_report-final.pdf.pdf">2023 Finance Committee Report to the Residents of Marblehead</a> (FY24 budget, May 1, 2023 Annual Town Meeting), pp. 2-3.</footer>
   </blockquote>
 
-  <p>The override <a href="https://marbleheadma.gov/wp-content/uploads/2025/03/town_meeting_minutes_2023__0.pdf">passed Town Meeting 534-230</a> but lost at the June 20, 2023 ballot 2,992-3,399, a margin of about 400 votes. Organized opposition came from residents and one dissenting Select Board member.</p>
+  <p>The override passed <a href="https://marbleheadma.gov/wp-content/uploads/2025/03/town_meeting_minutes_2023__0.pdf">Town Meeting</a> overwhelmingly but was rejected at the ballot six weeks later by about 400 votes.</p>
+
+  <div class="vote-chart">
+    <div class="vote-chart-row">
+      <div class="vote-chart-label">Town Meeting<span>May 1, 2023</span></div>
+      <div class="vote-chart-bar">
+        <div class="vote-chart-yes" style="flex: 534;">534 yes</div>
+        <div class="vote-chart-no" style="flex: 230;">230 no</div>
+      </div>
+    </div>
+    <div class="vote-chart-row">
+      <div class="vote-chart-label">Ballot<span>June 20, 2023</span></div>
+      <div class="vote-chart-bar">
+        <div class="vote-chart-yes" style="flex: 2992;">2,992 yes</div>
+        <div class="vote-chart-no" style="flex: 3399;">3,399 no</div>
+      </div>
+    </div>
+  </div>
+
+  <p>Organized opposition came from residents and one dissenting Select Board member.</p>
 
   <p>Jack Buba, a former Finance Committee member, wrote a signed letter to the Marblehead Current opposing the override months before the vote.</p>
 
