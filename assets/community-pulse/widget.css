@@ -9,10 +9,18 @@
 .cp-section-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 0.75rem 1rem;
   margin-bottom: 0.5rem;
+}
+
+/* Nudge the widget down so it sits just above the heading's baseline
+   rather than vertically centered on the heading's line box. Without
+   this, buttons look like they hover above the heading because the
+   heading's line-height is taller than the button's content box. */
+.cp-section-row > .cp-widget {
+  margin-bottom: 0.35rem;
 }
 
 .cp-section-row > :first-child {
