@@ -420,13 +420,27 @@ export async function hydrateWidgets() {
       initialReactions,
       initialRecord?.stance
     );
-    const parent = target.element.parentNode;
+    const anchor = target.element;
+    const parent = anchor.parentNode;
     if (!parent) continue;
-    const wrapper = document.createElement('div');
-    wrapper.className = 'cp-section-row';
-    parent.insertBefore(wrapper, target.element);
-    wrapper.appendChild(target.element);
-    wrapper.appendChild(widget);
+
+    // Insert the widget at the END of the section (after the reader has
+    // scanned the heading and body), not inline with the heading. The
+    // section boundary is the next h2 or the next element with a
+    // data-stance-section attribute, whichever comes first.
+    let cursor = anchor.nextElementSibling;
+    while (cursor && !cursor.matches('h2, h3, [data-stance-section]')) {
+      cursor = cursor.nextElementSibling;
+    }
+    const endRow = document.createElement('div');
+    endRow.className = 'cp-section-end';
+    endRow.appendChild(widget);
+    if (cursor) {
+      parent.insertBefore(endRow, cursor);
+    } else {
+      parent.appendChild(endRow);
+    }
+
     wireWidget(
       widget,
       db,
