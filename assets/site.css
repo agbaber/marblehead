@@ -531,6 +531,26 @@ p a:hover { text-decoration: underline; }
 .question-list {
   display: flex; flex-direction: column; gap: 12px;
 }
+
+/* Home page breaks out of the narrow reading column and uses a 2-col
+   grid on desktop so the question cards are scannable at a glance
+   instead of stacked vertically. The narrow column is still fine for
+   explainer pages; only .page--home opts in. */
+.page.page--home {
+  max-width: var(--chart-max);
+}
+@media (min-width: 720px) {
+  .page--home .question-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  /* Lone card in a section fills the full row instead of leaving
+     a blank right column. */
+  .page--home .question-list .question:only-child {
+    grid-column: 1 / -1;
+  }
+}
 .question {
   background: var(--surface);
   border-radius: var(--radius-md);
