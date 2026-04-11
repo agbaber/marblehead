@@ -20,6 +20,19 @@ One shared stylesheet (`assets/site.css`) with CSS custom properties. All pages 
 
 The home page uses the wider `--chart-max` container to accommodate a 2-column question-card grid on desktop (&ge;720px). Below that breakpoint the cards stack single-column. A lone `.question` in a `.question-list` spans both grid columns via `:only-child`, so sections with a single card don't leave an empty right column.
 
+### Title casing convention
+
+| Page type | Casing | Example |
+|-----------|--------|---------|
+| **Index** and **Explainer** | Sentence case | "What is the override?", "How did we get here?" |
+| **Chart** | Title Case | "Residential Tax Rates: Four North Shore Towns" |
+
+Sentence case (only the first word and proper nouns capitalized) applies to the home page, explainer pages, the debate page, and homepage card titles. It matches the editorial, voter-facing tone of the prose pages.
+
+Title Case applies to files under `charts/` because chart pages are product-like (dashboards, calculators) where Title Case is conventional. The frontmatter `title` on chart pages may be a shorter label than the `<h1>` (the title becomes the browser tab and social share title; the h1 is the full descriptive headline).
+
+Both the frontmatter `title` and the `<h1>` on a given page must use the same casing. Don't mix.
+
 ## Required `<head>` Elements (Every Page)
 
 ```html
