@@ -1,0 +1,150 @@
+/* Community pulse widget styles.
+   Reuses CSS custom properties from assets/site.css so the widget
+   inherits the site's light and dark themes automatically. */
+
+.cp-widget {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.4rem 0 1.2rem 0;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-muted, #666);
+  border-top: 1px dashed var(--border, rgba(0,0,0,0.1));
+  border-bottom: 1px dashed var(--border, rgba(0,0,0,0.1));
+}
+
+.cp-widget__buttons {
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.cp-widget__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid var(--border, rgba(0,0,0,0.15));
+  border-radius: 0.35rem;
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.cp-widget__button:hover {
+  background: var(--surface, rgba(0,0,0,0.04));
+}
+
+.cp-widget__button:focus-visible {
+  outline: 2px solid var(--c-teal, #2F7D8E);
+  outline-offset: 2px;
+}
+
+.cp-widget__button[aria-pressed="true"] {
+  background: var(--surface, rgba(0,0,0,0.06));
+  border-color: var(--text, #333);
+}
+
+.cp-widget__count {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--text-muted, #666);
+}
+
+.cp-widget__delta {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+.cp-widget__share,
+.cp-widget__privacy {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.4rem;
+  font-size: 0.82rem;
+  color: var(--text-muted, #666);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cp-widget__share:hover,
+.cp-widget__privacy:hover {
+  color: var(--text, #222);
+  text-decoration: underline;
+}
+
+.cp-widget__note-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.4rem;
+  font-size: 0.82rem;
+  color: var(--text-muted, #666);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cp-widget__note {
+  display: block;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.4rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: var(--text, #222);
+  background: var(--surface, rgba(0,0,0,0.03));
+  border: 1px solid var(--border, rgba(0,0,0,0.1));
+  border-radius: 0.35rem;
+  resize: vertical;
+  min-height: 3.5rem;
+}
+
+.cp-widget__note[hidden] {
+  display: none;
+}
+
+.cp-widget__toast {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  color: var(--bg, #fff);
+  background: var(--text, #222);
+  border-radius: 0.35rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.cp-widget__toast--visible {
+  opacity: 0.95;
+}
+
+@media (max-width: 600px) {
+  .cp-widget {
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+  .cp-widget__button {
+    padding: 0.65rem 0.75rem;
+    font-size: 1rem;
+    min-height: 44px;
+  }
+  .cp-widget__share,
+  .cp-widget__privacy,
+  .cp-widget__note-toggle {
+    padding: 0.5rem 0.55rem;
+    min-height: 44px;
+  }
+}

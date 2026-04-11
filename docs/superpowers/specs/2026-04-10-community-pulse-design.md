@@ -53,7 +53,7 @@ A section is the unit a reader can mark, note, share, and see a reaction count f
 
 Sections are created by two mechanisms on every page:
 
-**Automatic: one section per `<h2>` heading.** At build time (via a Jekyll plugin), every `<h2>` element on every content page is assigned an anchor ID derived from its heading text and hydrated with a stance widget. `<h3>` and deeper headings are NOT auto-instrumented, because content pages use h3 for sub-points within an argument, and per-h3 instrumentation produces interrogation-level widget density (over 20 widgets on the longest page).
+**Automatic: one section per `<h2>` heading.** At page load (via the widget's client-side JavaScript), every `<h2>` element on every content page is assigned an anchor ID derived from its heading text and hydrated with a stance widget. `<h3>` and deeper headings are NOT auto-instrumented, because content pages use h3 for sub-points within an argument, and per-h3 instrumentation produces interrogation-level widget density (over 20 widgets on the longest page). Runtime anchor generation was chosen over a Jekyll plugin because the site is deployed through GitHub Pages' default build, which runs in safe mode and does not execute custom plugins; adding a CI pipeline just for this feature would have been disproportionate. Shared links remain stable as long as heading text is stable, which is the same constraint any auto-anchor scheme carries.
 
 **Index page excluded.** `index.html` is not auto-instrumented. Its `<h2>` elements are the question/link cards that navigate to other pages, not content sections worth stance capture.
 
@@ -265,7 +265,7 @@ The entire implementation is small enough that a reader can audit it in 20 minut
 This scope is small enough to ship in a single implementation plan without sub-phasing. A rough breakdown for the writing-plans step:
 
 1. Build the front-end widget (buttons, reactions display, share, notes field) with local IndexedDB storage and no backend wiring. Shippable on its own as a pure reading tool. The reactions counter shows a placeholder "-" until backend wiring lands.
-2. Add Jekyll plugin to auto-generate anchor IDs on every `<h2>` across all content pages (excluding `index.html`). Ensure the `data-stance-section` attribute override works on any element. Curate explicit widgets on any h3 or mid-paragraph claim worth capture.
+2. Ship the widget's runtime anchor-generation logic: it walks every `<h2>` on the current page (excluding pages marked no-pulse), slugifies the heading text into an anchor ID, and injects the widget DOM. The `data-stance-section` attribute override works on any element. Curate explicit widgets on any h3 or mid-paragraph claim worth capture.
 3. Add Open Graph meta tags to every existing page with a one-line description per page.
 4. Build the Cloudflare Worker with the two reactions endpoints and the D1 schema. Deploy.
 5. Wire the front-end widget to the Worker (batch fetch on page load, increment on click).
@@ -306,7 +306,7 @@ None of this infrastructure exists in v1. The v1 data model, API surface, and wi
 
 All implementation-detail questions have been resolved:
 
-1. **Anchor ID generation: Jekyll plugin at build time.** Produces stable URLs for sharing. No runtime anchor generation.
+1. **Anchor ID generation: runtime JavaScript at page load.** Derives anchor IDs by slugifying each h2's heading text. Chosen over a Jekyll plugin because GitHub Pages' default build runs in safe mode and does not execute custom plugins; adding CI for this one feature is disproportionate. Shared links stay stable as long as heading text stays stable (the same constraint any auto-anchor scheme carries).
 2. **Widget placement: inline next to the heading, small and low-contrast.** Visible on arrival, not visually dominant.
 3. **24-hour delta: plus-delta text (e.g., `+12 today`).** No sparkline in v1.
 4. **`/pulse.html` settings page: deferred to v1.1.** Not required to ship the core feature. Readers can access local state via browser devtools in the interim.

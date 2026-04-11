@@ -27,3 +27,5 @@ exclude:
   - docs/
   - data/acfr/
   - data/budgets/
+  - community-pulse/
+  - node_modules/
