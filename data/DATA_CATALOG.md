@@ -84,6 +84,23 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Caveat:** Only 2 data points. This is pension membership, a DIFFERENT population than health insurance membership.
 - **Confidence:** High. Audited actuarial report.
 
+### Total Revenue (10 data points, FY15-FY24)
+- **What it is:** Total governmental fund revenue: Property Taxes + Excise Taxes + Intergovernmental + Charges for Services
+- **Source:** Computed from `revenues_FY15-24.csv` (sum of the four columns), which in turn comes from ACFR Changes in Fund Balances
+- **Caveat:** Excludes "other" revenue categories (licenses/permits, fines, investment income, contributions) to keep the definition consistent across years. FY20-FY21 intergovernmental is inflated by federal COVID aid.
+- **Confidence:** High for the four underlying columns.
+
+### Per Pupil Spending - Total (17 data points, FY08-FY24)
+- **What it is:** Total per-pupil spending (in-district + out-of-district + transportation), one of the standard DESE metrics
+- **Source:** `marblehead_per_pupil.csv` (DESE End-of-Year Report)
+- **Confidence:** High. Official state data.
+
+### Employee Benefits Total (20 data points, FY05-FY24)
+- **What it is:** ACFR "Employee benefits" line from Changes in Fund Balances. Includes group health insurance, pension contributions, OPEB, workers comp, unemployment, Medicare, and other fringe benefits for all town and school employees.
+- **Source:** `employee_benefits_FY05-24.csv`, from ACFRs
+- **Caveat:** Broader than Group_Insurance alone. Overlaps with Group_Insurance and Pension_Expenditure — do NOT sum these three columns.
+- **Confidence:** High. Audited.
+
 ## Key Single-Year Data Points (not in MASTER_DATA.csv)
 
 ### FY26 Budget Detail
