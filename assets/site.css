@@ -199,6 +199,9 @@ nav.site-nav {
   border-bottom: 1px solid var(--border);
   padding: 0 var(--gutter);
   display: flex; justify-content: center;
+  /* Right-edge fade to signal horizontal scroll when links overflow. */
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent 100%);
+          mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent 100%);
 }
 nav.site-nav .nav-inner {
   max-width: var(--chart-max); width: 100%;
@@ -206,8 +209,21 @@ nav.site-nav .nav-inner {
   min-height: 48px;
   overflow-x: auto;
   scrollbar-width: none;
+  /* Leave room on the right so the last link isn't hidden under the fade. */
+  padding-right: 32px;
+  /* Snap the first link's start to the viewport edge on momentum scroll. */
+  scroll-snap-type: x proximity;
 }
+nav.site-nav .nav-inner > a { scroll-snap-align: start; }
 nav.site-nav .nav-inner::-webkit-scrollbar { display: none; }
+/* Disable the fade mask on desktop where all links fit without scrolling. */
+@media (min-width: 800px) {
+  nav.site-nav {
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+  nav.site-nav .nav-inner { padding-right: 0; }
+}
 nav.site-nav .nav-brand {
   font-size: 14px; font-weight: 700; color: var(--text);
   white-space: nowrap; margin-right: 4px;
@@ -475,6 +491,35 @@ p a:hover { text-decoration: underline; }
   .subtitle { font-size: 12px; margin-bottom: 20px; }
 }
 
+/* Desktop hero treatment.
+   On wider viewports, bump the page-title h1 and the key-stats strip so the
+   hero doesn't feel like a mobile view stretched tall. Body prose stays at
+   its narrow --page-max width for readability; only the hero elements grow. */
+@media (min-width: 900px) {
+  .page > h1 {
+    font-size: 32px;
+    letter-spacing: -0.6px;
+    line-height: 1.2;
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+  .page > h1 + p,
+  .page > h1 + .key-stats + p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .page > .hero h1 { font-size: 38px; letter-spacing: -0.8px; }
+  .page > .hero p { font-size: 17px; max-width: 560px; }
+  .page > .hero { margin-bottom: 44px; }
+  .key-stats {
+    padding: 18px 14px;
+    margin: 14px 0 28px;
+  }
+  .key-stat-value { font-size: 22px; }
+  .key-stat-label { font-size: 11px; letter-spacing: 0.9px; }
+  .key-stat { padding: 4px 16px; }
+}
+
 /* ==========================================================================
    Home page — hero + question cards
    ========================================================================== */
@@ -716,6 +761,87 @@ table.data td {
 }
 table.data td:first-child { text-align: left; font-weight: 600; }
 table.data tbody tr:last-child td { border-bottom: none; }
+
+/* Stacked card layout for data tables on narrow viewports.
+   Activated by adding class="data--stack" to the table.
+   Hides the thead, converts each row into a card, and labels each value
+   via CSS content strings. Column labels are hardcoded in nth-child
+   rules so the labels match the table's column order. The current
+   .data--stack usage (department-by-department table on the spending
+   story) uses the column order: Department, FY2015, FY2026, Change ($),
+   Change (%). If another table needs stacking with different columns,
+   give it a different modifier class and add its own label rules. */
+@media (max-width: 600px) {
+  table.data--stack {
+    min-width: 0;
+    display: block;
+  }
+  table.data--stack thead {
+    /* Visually hidden but kept in the accessibility tree. */
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  table.data--stack tbody { display: block; }
+  table.data--stack tbody tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 14px;
+    padding: 14px 14px 12px;
+    margin-bottom: 10px;
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    border-bottom: none;
+  }
+  table.data--stack tbody tr:last-child { margin-bottom: 0; }
+  table.data--stack tbody tr td {
+    display: block;
+    padding: 2px 0;
+    border-bottom: none;
+    font-size: 13px;
+    white-space: normal;
+  }
+  /* Row header: department name, spans full card width, larger, bold. */
+  table.data--stack tbody tr td:first-child {
+    grid-column: 1 / -1;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--divider);
+  }
+  /* Each value gets a label prefix via ::before. */
+  table.data--stack tbody tr td:nth-child(2),
+  table.data--stack tbody tr td:nth-child(3),
+  table.data--stack tbody tr td:nth-child(4),
+  table.data--stack tbody tr td:nth-child(5) {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: right;
+    color: var(--text-mid);
+  }
+  table.data--stack tbody tr td:nth-child(2)::before { content: "FY2015"; }
+  table.data--stack tbody tr td:nth-child(3)::before { content: "FY2026"; }
+  table.data--stack tbody tr td:nth-child(4)::before { content: "Change"; }
+  table.data--stack tbody tr td:nth-child(5)::before { content: "Change %"; }
+  table.data--stack tbody tr td:nth-child(2)::before,
+  table.data--stack tbody tr td:nth-child(3)::before,
+  table.data--stack tbody tr td:nth-child(4)::before,
+  table.data--stack tbody tr td:nth-child(5)::before {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-subtle);
+  }
+  /* Wrapper loses its horizontal scroll since the cards fit normally. */
+  .table-wrap:has(table.data--stack) { overflow-x: visible; }
+}
 
 .swatch {
   display: inline-block; width: 10px; height: 10px;
