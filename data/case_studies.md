@@ -28,16 +28,17 @@ title: case studies
 </div>
 
 ### Timeline
-- **June 2024:** $7.7M override fails 55-45 (~900 vote margin, 5,150 no / 4,280 yes)
-- **FY25 cuts (July 2024):** 13 school positions, sustainability manager, economic development director, social services coordinator. 5% OT cuts to police/fire/DPW. Salary freeze for 60+ non-union employees. Reduced AP courses, fewer paras, no Chromebook repairs.
-- **FY26 cuts (July 2025):** 21 MORE city positions, 30+ MORE school positions. Shared principal between middle and high school. Class sizes proposed up to 32 elementary, K from 17 to 25. Teaching & Learning office closed. Sunday library eliminated. Senior van drivers cut.
-- **Total damage:** $6.3M in cuts, 61.4 FTEs eliminated over two years
-- **Staff exodus:** Teachers leaving for stable/higher-paying districts. "Smallest new teacher orientation in many years" (17 hires). Superintendent noted "We have lost staff members who barely kept their job this year because of the budget and are going somewhere more stable."
-- **Nov 2025:** Three-tier override ($9.3M / $11.9M / $13.5M). ALL THREE passed. Maximum $13.5M passed 6,018-5,052. Largest municipal override in MA in 35+ years.
-- **What $13.5M restores:** 17 school positions, 5 DPW positions, 2 police officers, plus curriculum and road maintenance.
-- **Tax impact:** Average single-family home ($818K) pays $1,374/yr more.
-- **DOR data:** Tax rate spiked from $9.90 (FY25) to $11.47 (FY26), +$1.57 / +16%. Biggest single-year jump in the 24-year dataset.
-- **Per-pupil spending:** Bottom 8% in MA at $18,600/student (FY24).
+- **June 2024:** $7.7M operating override [fails 55-45 on June 18, 2024, approximately 5,150 no to 4,280 yes](https://patch.com/massachusetts/melrose/melrose-override-special-election-results-live-updates) (roughly 900-vote margin).
+- **FY25 cuts (July 2024):** 13 school positions, plus the Sustainability Manager, Economic Development Director, and Social Services Coordinator positions eliminated. 5% cuts to Police, Fire, and DPW overtime budgets. Salary freeze for 60+ non-union city employees. Reduced AP course offerings, fewer paraprofessionals, no Chromebook repairs. ([Yes for Melrose, "Why an Override?"](https://www.yesformelrose.org/why-an-override))
+- **FY26 cuts (July 2025):** An additional $4 million in cuts. On the school side, [31 teacher positions and 4 administrator positions were eliminated, the Teaching and Learning office was effectively closed, and the middle school principal position was merged with the high school](https://themelrosemessenger.org/articles/2025/09/override.html). Class sizes proposed up to 32 in elementary, kindergarten from 17 to 25. Sunday library service eliminated. Senior van drivers cut.
+- **Total damage:** [$6.3 million in cuts and 61.4 FTEs eliminated over the two FY25 and FY26 budgets combined](https://themelrosemessenger.org/articles/2025/09/override.html).
+- **Staff exodus:** Melrose Public Schools held [its smallest new teacher orientation in many years, with only 17 new hires](https://themelrosemessenger.org/articles/2025/08/schools.html). Superintendent Julie Kukenberger: "We have lost staff members who barely kept their job this year because of the budget and are going somewhere more stable. I'm specifically thinking of a few great teachers who just can't afford to ride it out" ([Melrose Messenger, "Back to School Staffing Changes," August 2025](https://themelrosemessenger.org/articles/2025/08/schools.html)).
+- **November 2025:** Three-tier override ($9.3M / $11.9M / $13.5M). [All three tiers passed; the top $13.5M tier won 6,018 to 5,052](https://commonwealthbeacon.org/government/local-government/after-a-prop-2-%C2%BD-defeat-last-year-melrose-passes-13-5-million-override/) (54-46).
+- **Largest in 35+ years.** Commonwealth Beacon: ["The funding level appears to be the largest approved by any Massachusetts community in at least 35 years," surpassing a $12 million override passed by Brookline voters in 2008](https://commonwealthbeacon.org/government/local-government/after-a-prop-2-%C2%BD-defeat-last-year-melrose-passes-13-5-million-override/).
+- **What $13.5M restores:** The override revenue will [fund salaries and benefits for 17 positions in the schools, five positions in public works, and two police officers](https://commonwealthbeacon.org/government/local-government/after-a-prop-2-%C2%BD-defeat-last-year-melrose-passes-13-5-million-override/), plus curriculum and road maintenance.
+- **Tax impact:** For the average single-family home in Melrose, assessed at $817,630, [the annual tax bill increases by $1,374](https://commonwealthbeacon.org/government/local-government/after-a-prop-2-%C2%BD-defeat-last-year-melrose-passes-13-5-million-override/), per city estimates.
+- **DOR data:** Marblehead peer-town data shows the Melrose residential tax rate spiking from $9.90 (FY25) to $11.47 (FY26), a +$1.57 / +16% jump. Source: [MA DOR Tax Rates by Class](https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=PropertyTaxInformation.taxratesbyclass.taxratesbyclass_main). Biggest single-year jump in the 24-year dataset.
+- **Per-pupil spending:** Melrose ranks in the [bottom eight percent of Massachusetts school districts in spending per pupil, at $18,600 per child in FY2024, versus a state average of $21,300](https://commonwealthbeacon.org/government/local-government/after-a-prop-2-%C2%BD-defeat-last-year-melrose-passes-13-5-million-override/) (Commonwealth Beacon citing DESE; primary source: [DESE per-pupil expenditures](https://profiles.doe.mass.edu/statereport/ppx.aspx)).
 
 <div class="takeaway">
   <strong>Key lesson.</strong> Voted no on $7.7M. Lived through the cuts. Came back and voted yes on $13.5M &mdash; <em>75% more</em>. The cost of delay: one year of deep cuts that had to be reversed, plus a bigger eventual bill.
@@ -67,13 +68,13 @@ title: case studies
 </div>
 
 ### Timeline
-- **April 2025:** $14.6M override fails
-- **Summer 2025:** Town raids $1.2M from stabilization (emergency) reserves. Override Study Committee launches weekly public meetings.
-- **Staff exodus:** 28 vacant positions at start of school year. Teachers earn 30% below market. Qualified candidates won't apply. Teachers without a contract since July 2025.
-- **Firefighters:** 8 per shift vs national standard of 16.
-- **Library:** $100K+ cut. Weekend/evening closures. All paid programming eliminated. 4 vacancies unfilled. Risk of losing state accreditation (which would cut off state funding and resource-sharing).
-- **Dec 2025:** Two-tier override. $12.5M fails by 43 VOTES. $9.3M passes by 727 votes.
-- **Result:** Got $9.3M instead of $14.6M originally requested. Service gaps will persist.
+- **April 2025:** $14.6M override [fails April 1, 2025, 3,432 no to 2,909 yes](https://saveourstoneham.org/blog/april-recap/) (523-vote margin, 53.6% to 45.5%; turnout 6,398 of 17,794 registered).
+- **Summer 2025:** Town pulls [$1.2 million from stabilization reserves](https://stonehamcivicledger.substack.com/p/stonehams-free-cash-band-aid-to-its) to close the FY26 gap. Override Study Committee [meets weekly over the summer and votes 7-1 on August 26, 2025 that the town needs an override](https://stonehamcivicledger.substack.com/p/stonehams-override-study-committee-ab3).
+- **Staff exodus:** [28 vacant school positions at the start of the school year; teachers earn up to 30% below market rate](https://saveourstoneham.org/why/); qualified candidates won't apply. Teachers have been [without a contract since July 2025](https://stonehamcivicledger.substack.com/p/collaboration-in-bargaining-an-update).
+- **Firefighters:** Stoneham Fire Department reports [an 8-firefighter minimum staffing level per shift](https://www.stoneham-ma.gov/DocumentCenter/View/11032/Fire-Department-Presentation) (2024 average 8.27 per shift, at minimum 76% of the year). [NFPA 1710](https://www.nfpa.org/codes-and-standards/nfpa-1710-standard-development/1710) calls for 15-17 personnel on first-alarm residential response.
+- **Library:** Finance Committee initially proposed eliminating all library funding; the Town Administrator instead proposed a [roughly 35% cut with weekend and evening closures, elimination of all paid programming, and four unfilled vacancies](https://stonehamlibrary.org/blog/announcements/stoneham-public-library-funding-update/). Loss of state certification would [forfeit approximately $57,000 in FY26 state aid plus reciprocal borrowing privileges across the Minuteman Library Network](https://stonehamcivicledger.substack.com/p/stonehams-public-library-a-fixture).
+- **December 2025:** Two-tier override. [The $12.5M tier failed 3,640 to 3,596 (a 44-vote margin, reported as "43" in some accounts); the $9.3M tier passed 3,997 to 3,271](https://saveourstoneham.org/blog/dec-9-election-results/), a 726-vote margin. See also [Boston Globe, December 9, 2025](https://www.bostonglobe.com/2025/12/09/metro/stoneham-override/).
+- **Result:** Stoneham received $9.3M instead of the $14.6M originally requested. Service gaps will persist.
 
 <div class="takeaway">
   <strong>Key lesson.</strong> Even after living through cuts, the larger amount <em>still</em> nearly failed &mdash; by 43 votes. The community was deeply divided. An active information campaign (Override Study Committee, weekly public meetings) was critical to getting even the $9.3M across.
@@ -81,19 +82,19 @@ title: case studies
 
 ---
 
-## Statewide Pattern (from DOR and news sources)
+## Statewide Pattern
 
-- FY25-FY26 override ballot questions statewide approached $240M, more than the previous seven years combined.
-- 590 communities passed an override within one year of an initial defeat.
-- 100 communities did so within 60 days via special elections.
-- Towns that fail and return typically ask for MORE:
-  - Auburn: $500K failed, $1.3M passed 33 days later (+160%)
-  - Reading: $250K failed, $4.5M passed 42 days later (+1,700%)
-  - Melrose: $7.7M failed, $13.5M passed 17 months later (+75%)
-- Operating override success rate historically: ~60-65% statewide (vs ~81% statewide for debt exclusions)
-- Marblehead's own history (MA DOR primary data, pulled 2026-04-11, see `data/marblehead_prop25_votes.csv`):
-  - Operating overrides: 4 of 13 ballot attempts approved (31% success rate) since 1990, the earliest year in the DOR record. Last success: June 2005 vote, $2.73M supplemental override for the FY2006 budget.
+- **Override surge.** In FY26 alone, [at least 54 Massachusetts municipalities put 74 override or debt-exclusion questions before voters, totaling more than $158 million in proposed new levy capacity](https://marbleheadcurrent.org/2026/03/17/overriding-considerations-tough-choices-prompts-surge-of-override-requests-statewide/) (Marblehead Current citing Mass. Budget and Policy Center). That is the second-largest single-year total since the early 1990s. FY25 added roughly $48 million more.
+- **Fail, then return.** [Analysis of Massachusetts Department of Revenue data](https://saveourstoneham.org/blog/april-recap/) (compiled by Save Our Stoneham) finds that of towns that put a failed override back to voters, 590 passed within one year, and 100 passed within 60 days via special elections. The underlying primary data is [MA DOR Proposition 2½ Override and Underride Votes](https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride).
+- **Towns that fail and return typically ask for more:**
+  - Auburn (2006): $500K failed, $1.3M passed 33 days later (+160%). ([Save Our Stoneham](https://saveourstoneham.org/blog/april-recap/) analysis of DOR data.)
+  - Reading (2003): $250K failed, $4.5M passed 42 days later (+1,700%). Same source.
+  - Melrose (2024-2025): $7.7M failed, $13.5M passed 17 months later (+75%).
+- **Operating override success rate.** The Massachusetts Municipal Association reports recent success rates around [58-60%](https://www.mma.org/communities-see-varying-success-with-overrides-this-spring/), with voters rejecting more than 40% of operating-override questions since the FY23 surge began. Debt exclusions historically pass at roughly 80-85% statewide.
+- **Marblehead's own history** (MA DOR primary data, pulled 2026-04-11, see `data/marblehead_prop25_votes.csv`):
+  - Operating overrides: 4 of 13 ballot attempts approved (31% success rate) since 1990, the earliest year in the DOR record. Last success: June 2005, $2.73M supplemental override for the FY2006 budget.
   - Debt exclusions: 28 of 29 ballot attempts approved (97% success rate) since 1982. The only loss in 43 years was the June 2002 Tucker's Wharf bond by 136 votes.
+  - Source: [MA DOR Proposition 2½ Override and Underride Votes](https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride).
 
 ---
 
@@ -155,11 +156,31 @@ Even at Tier 3 ($15M), Marblehead's rate ($10.06) would be lower than Melrose's 
 ---
 
 ## Sources
-- DOR Tax Rates by Class FY2003-2026 (downloaded April 2026)
-- Marblehead Current, "Overriding Considerations" (March 2026)
-- Commonwealth Beacon, "After a Prop 2.5 defeat, Melrose passes $13.5 million override" (Nov 2025)
-- Melrose Messenger, "Back to School Staffing Changes" (Aug 2025)
-- YesForMelrose.org, "Why an Override?" (2025)
-- SaveOurStoneham.org, election results and blog posts (2025)
-- Boston Globe, "Massachusetts towns face tax override debates" (Nov 2025)
-- Local Headline News, Melrose override coverage (2024-2025)
+
+**Melrose**
+- [Commonwealth Beacon, "After a Prop 2.5 defeat, Melrose passes $13.5 million override," November 2025](https://commonwealthbeacon.org/government/local-government/after-a-prop-2-%C2%BD-defeat-last-year-melrose-passes-13-5-million-override/)
+- [Melrose Messenger, "Back to School Staffing Changes," August 2025](https://themelrosemessenger.org/articles/2025/08/schools.html)
+- [Melrose Messenger, "Override" (September 2025)](https://themelrosemessenger.org/articles/2025/09/override.html)
+- [Melrose Messenger, "Results" (November 2025)](https://themelrosemessenger.org/articles/2025/11/results.html)
+- [Yes for Melrose, "Why an Override?"](https://www.yesformelrose.org/why-an-override)
+- [Patch, "Melrose Override Special Election: Results & Live Updates" (June 2024)](https://patch.com/massachusetts/melrose/melrose-override-special-election-results-live-updates)
+- [DESE per-pupil expenditures](https://profiles.doe.mass.edu/statereport/ppx.aspx)
+
+**Stoneham**
+- [Save Our Stoneham, "April Recap"](https://saveourstoneham.org/blog/april-recap/)
+- [Save Our Stoneham, "Dec 9 Election Results"](https://saveourstoneham.org/blog/dec-9-election-results/)
+- [Save Our Stoneham, "Why Stoneham Needs an Override"](https://saveourstoneham.org/why/)
+- [Stoneham Civic Ledger, "Free Cash Band-Aid to its Budget"](https://stonehamcivicledger.substack.com/p/stonehams-free-cash-band-aid-to-its)
+- [Stoneham Civic Ledger, "Override Study Committee"](https://stonehamcivicledger.substack.com/p/stonehams-override-study-committee-ab3)
+- [Stoneham Civic Ledger, "Stoneham's Public Library, A Fixture"](https://stonehamcivicledger.substack.com/p/stonehams-public-library-a-fixture)
+- [Stoneham Civic Ledger, "Collaboration in Bargaining: An Update"](https://stonehamcivicledger.substack.com/p/collaboration-in-bargaining-an-update)
+- [Stoneham Fire Department, "Why the Override Matters" (town document)](https://www.stoneham-ma.gov/DocumentCenter/View/11032/Fire-Department-Presentation)
+- [Stoneham Public Library, funding update](https://stonehamlibrary.org/blog/announcements/stoneham-public-library-funding-update/)
+- [Boston Globe, Stoneham override coverage, December 9, 2025](https://www.bostonglobe.com/2025/12/09/metro/stoneham-override/)
+
+**Statewide**
+- [Marblehead Current, "Overriding Considerations: Tough choices prompt surge of override requests statewide," March 17, 2026](https://marbleheadcurrent.org/2026/03/17/overriding-considerations-tough-choices-prompts-surge-of-override-requests-statewide/)
+- [Massachusetts Municipal Association, "Communities see varying success with overrides this spring"](https://www.mma.org/communities-see-varying-success-with-overrides-this-spring/)
+- [MA DOR Proposition 2½ Override and Underride Votes](https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride)
+- [MA DOR Tax Rates by Class](https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=PropertyTaxInformation.taxratesbyclass.taxratesbyclass_main)
+- [NFPA 1710, Standard for the Organization and Deployment of Fire Suppression Operations](https://www.nfpa.org/codes-and-standards/nfpa-1710-standard-development/1710)
