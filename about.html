@@ -24,6 +24,78 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>About this site - Marblehead Budget Data</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/site.css">
+<style>
+  /* Page-scoped: About me and meta pills */
+  .profile-intro {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--text);
+    margin: 8px 0 16px;
+  }
+  .profile-intro strong {
+    font-weight: 700;
+  }
+  .profile-disclosure {
+    padding: 14px 18px;
+    background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
+    border-left: 3px solid var(--c-navy);
+    border-radius: 0 10px 10px 0;
+    margin: 0 0 32px;
+  }
+  .profile-disclosure-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-subtle);
+    margin-bottom: 4px;
+  }
+  .profile-disclosure p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .meta-strip {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 12px 0 24px;
+  }
+  .meta-pill {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 7px;
+    padding: 7px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 13px;
+    color: var(--text);
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .meta-pill:hover {
+    background: var(--divider);
+    border-color: var(--text-faint);
+    text-decoration: none;
+  }
+  .meta-pill-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-subtle);
+  }
+  .meta-pill-value {
+    color: var(--text);
+    font-weight: 600;
+  }
+  @media (max-width: 600px) {
+    .profile-intro { font-size: 16px; }
+    .meta-pill { padding: 6px 12px; font-size: 12px; }
+  }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -47,36 +119,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h1>About this site</h1>
 
   <h2>About me</h2>
-  <div class="card">
-    <div class="cut-item">
-      <span class="cut-item-name">Name</span>
-      <span class="cut-item-amount">Andrew Baber</span>
-    </div>
-    <div class="cut-item">
-      <span class="cut-item-name">In Marblehead</span>
-      <span class="cut-item-amount">About 8 years</span>
-    </div>
-    <div class="cut-item">
-      <span class="cut-item-name">Home</span>
-      <span class="cut-item-amount">Owner</span>
-    </div>
-    <div class="cut-item">
-      <span class="cut-item-name">Family</span>
-      <span class="cut-item-amount">Daughter in 1st grade at Glover</span>
-    </div>
-    <div class="cut-item">
-      <span class="cut-item-name">Work</span>
-      <span class="cut-item-amount">Software engineer</span>
-    </div>
-    <div class="cut-item">
-      <span class="cut-item-name">Town roles</span>
-      <span class="cut-item-amount">None</span>
-    </div>
+  <p class="profile-intro">I'm <strong>Andrew Baber</strong>. Software engineer by trade. A Marblehead homeowner since 2017, with my daughter in first grade at Glover.</p>
+  <div class="profile-disclosure">
+    <div class="profile-disclosure-label">Disclosure</div>
+    <p>Not on the Select Board, the Finance Committee, or any other town body. My stake in the override is the same ordinary homeowner-and-parent stake as any other Marblehead resident.</p>
   </div>
 
   <h2>About the site</h2>
   <p>This vote matters. So before voting, I wanted to understand two things: how we got here, and what each possible outcome would actually mean. Is this about cuts we could make, or costs rising faster than revenue? I honestly don't know. The site is where I'm working that out.</p>
-  <p>Open source on <a href="https://github.com/agbaber/marblehead">GitHub</a>. Code licensed under <a href="https://opensource.org/licenses/MIT">MIT</a>; content under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+  <div class="meta-strip">
+    <a class="meta-pill" href="https://github.com/agbaber/marblehead">
+      <span class="meta-pill-label">Source</span>
+      <span class="meta-pill-value">GitHub</span>
+    </a>
+    <a class="meta-pill" href="https://opensource.org/licenses/MIT">
+      <span class="meta-pill-label">Code</span>
+      <span class="meta-pill-value">MIT</span>
+    </a>
+    <a class="meta-pill" href="https://creativecommons.org/licenses/by/4.0/">
+      <span class="meta-pill-label">Content</span>
+      <span class="meta-pill-value">CC BY 4.0</span>
+    </a>
+  </div>
 
   <h2>About AI usage</h2>
   <p>An AI assistant (Claude) handles research, analysis, and the site's digital infrastructure. I regularly remind it to stay as neutral as possible, and I own and operate everything it produces. Every number traces to a primary source, but I don't re-verify each one against the original document myself. Errors are possible. When I find one, or a reader catches one, the page gets updated.</p>
