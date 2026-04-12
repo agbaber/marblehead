@@ -866,19 +866,36 @@ function update() {
     winnerEl.innerHTML = winnerHtml || '&nbsp;';
   }
 
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      steps.forEach(function (s) { s.classList.remove('is-active'); });
-      entry.target.classList.add('is-active');
-      applyStep(entry.target);
-    });
-  }, {
-    rootMargin: '-45% 0px -45% 0px',
-    threshold: 0
-  });
+  // "Sticky step" pattern: each step activates when its top crosses a
+  // trigger line 40% from the top of the viewport and stays active until
+  // the *next* step's top crosses that same line.
+  const triggerRatio = 0.4;
+  let activeIndex = 0;
 
-  steps.forEach(function (s) { observer.observe(s); });
+  function updateActiveStep() {
+    const triggerY = window.innerHeight * triggerRatio;
+    let best = 0;
+    steps.forEach(function (s, i) {
+      const rect = s.getBoundingClientRect();
+      if (rect.top <= triggerY) best = i;
+    });
+    if (best !== activeIndex) {
+      activeIndex = best;
+      steps.forEach(function (s) { s.classList.remove('is-active'); });
+      steps[activeIndex].classList.add('is-active');
+      applyStep(steps[activeIndex]);
+    }
+  }
+
+  // Throttle scroll handler for performance.
+  let ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(function () { updateActiveStep(); ticking = false; });
+      ticking = true;
+    }
+  }, { passive: true });
+  updateActiveStep();
 })();
 </script>
 
