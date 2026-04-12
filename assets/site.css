@@ -1298,6 +1298,287 @@ svg.chart .s-tier-3     { color: var(--series-tier-3); }
 .year-panel.active { display: block; }
 
 /* ==========================================================================
+   Voting Record page
+   ========================================================================== */
+
+/* Glossary (collapsible term definitions) */
+details.glossary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0 14px;
+  margin: 12px 0 20px;
+}
+details.glossary > summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-mid);
+  padding: 10px 0;
+  user-select: none;
+}
+details.glossary > summary::-webkit-details-marker { display: none; }
+details.glossary > summary::before {
+  content: "\25B8";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 10px;
+  transition: transform 0.15s ease;
+}
+details.glossary[open] > summary::before { transform: rotate(90deg); }
+details.glossary .glossary-body { padding: 0 0 12px; }
+details.glossary .glossary-body p { font-size: 13px; margin: 0 0 6px; color: var(--text); }
+details.glossary .glossary-body p:last-child { margin-bottom: 0; }
+
+/* Chart header: title + toggle side by side */
+.chart-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.chart-header h2 { margin: 0; }
+.tabs--compact {
+  display: inline-flex;
+  background: var(--divider);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  margin-bottom: 0;
+}
+.tabs--compact .tab {
+  padding: 5px 10px;
+  font-size: 11px;
+}
+
+/* SVG bar fills (solid = override) */
+.bar-solid-teal  { fill: var(--c-teal); }
+.bar-solid-navy  { fill: var(--c-navy); }
+.bar-solid-sage  { fill: var(--c-sage); }
+.bar-solid-buoy  { fill: var(--c-buoy); }
+.bar-solid-brass { fill: var(--c-brass); }
+.bar-solid-plum  { fill: var(--c-plum); }
+
+/* SVG bar fills (hatched = debt exclusion) */
+.bar-hatch-teal  { fill: url(#hatch-teal); }
+.bar-hatch-navy  { fill: url(#hatch-navy); }
+.bar-hatch-sage  { fill: url(#hatch-sage); }
+.bar-hatch-buoy  { fill: url(#hatch-buoy); }
+.bar-hatch-brass { fill: url(#hatch-brass); }
+.bar-hatch-plum  { fill: url(#hatch-plum); }
+
+/* Hatch pattern elements */
+.hatch-bg-teal  { fill: var(--surface); }
+.hatch-bg-navy  { fill: var(--surface); }
+.hatch-bg-sage  { fill: var(--surface); }
+.hatch-bg-buoy  { fill: var(--surface); }
+.hatch-bg-brass { fill: var(--surface); }
+.hatch-bg-plum  { fill: var(--surface); }
+.hatch-line-teal  { stroke: var(--c-teal); }
+.hatch-line-navy  { stroke: var(--c-navy); }
+.hatch-line-sage  { stroke: var(--c-sage); }
+.hatch-line-buoy  { stroke: var(--c-buoy); }
+.hatch-line-brass { stroke: var(--c-brass); }
+.hatch-line-plum  { stroke: var(--c-plum); }
+
+/* Legend additions for override vs exclusion */
+.legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-bottom: 4px;
+}
+.legend-swatch--solid {
+  background: var(--text-mid);
+}
+.legend-swatch--hatch {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--surface),
+    var(--surface) 1px,
+    var(--text-mid) 1px,
+    var(--text-mid) 2.5px
+  );
+  border: 1px solid var(--text-mid);
+}
+
+/* Year-grouped detail table */
+details.vote-year {
+  border-bottom: 1px solid var(--divider);
+}
+details.vote-year:first-child {
+  border-top: 1px solid var(--divider);
+}
+details.vote-year > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  font-size: 13px;
+  user-select: none;
+}
+details.vote-year > summary::-webkit-details-marker { display: none; }
+details.vote-year > summary::before {
+  content: "\25B8";
+  display: inline-block;
+  font-size: 10px;
+  transition: transform 0.15s ease;
+  flex-shrink: 0;
+}
+details.vote-year[open] > summary::before { transform: rotate(90deg); }
+.vote-year-date {
+  font-weight: 700;
+  color: var(--text);
+  min-width: 100px;
+}
+.vote-year-count {
+  color: var(--text-subtle);
+  font-size: 12px;
+}
+.vote-year-result {
+  color: var(--text-subtle);
+  font-size: 12px;
+}
+.vote-year-amount {
+  color: var(--text-mid);
+  font-weight: 600;
+  font-size: 12px;
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+.vote-year-count::before,
+.vote-year-result::before {
+  content: "\00B7";
+  margin-right: 8px;
+  color: var(--text-faint);
+}
+
+/* Detail table inside each year */
+.vote-detail-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 0 12px;
+}
+.vote-detail {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.vote-detail th {
+  text-align: left;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-subtle);
+  padding: 4px 8px 6px;
+  border-bottom: 1px solid var(--divider);
+  white-space: nowrap;
+}
+.vote-detail td {
+  padding: 6px 8px;
+  color: var(--text);
+  vertical-align: top;
+  border-bottom: 1px solid var(--divider);
+}
+.vote-detail td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.vote-detail td.src {
+  font-size: 11px;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pass/fail pills */
+.vote-pill {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+.vote-pill--pass {
+  background: color-mix(in srgb, var(--c-sage) 15%, transparent);
+  color: var(--c-sage);
+}
+.vote-pill--fail {
+  background: color-mix(in srgb, var(--c-buoy) 15%, transparent);
+  color: var(--c-buoy);
+}
+
+/* Department dots */
+.dept-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+.dept-dot--teal  { background: var(--c-teal); }
+.dept-dot--navy  { background: var(--c-navy); }
+.dept-dot--sage  { background: var(--c-sage); }
+.dept-dot--buoy  { background: var(--c-buoy); }
+.dept-dot--brass { background: var(--c-brass); }
+.dept-dot--plum  { background: var(--c-plum); }
+
+/* Vote note (inline annotation) */
+.vote-note {
+  font-size: 11px;
+  color: var(--text-subtle);
+}
+
+/* Mobile: stack summary fields and convert table to cards */
+@media (max-width: 600px) {
+  details.vote-year > summary {
+    flex-wrap: wrap;
+  }
+  .vote-year-date { min-width: auto; }
+  .vote-year-amount { min-width: 100%; margin-left: 14px; margin-top: 2px; }
+
+  .vote-detail thead { display: none; }
+  .vote-detail,
+  .vote-detail tbody,
+  .vote-detail tr,
+  .vote-detail td {
+    display: block;
+  }
+  .vote-detail tr {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+  .vote-detail td {
+    padding: 2px 0;
+    border-bottom: none;
+  }
+  .vote-detail td::before {
+    content: attr(data-label);
+    display: inline-block;
+    width: 70px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    letter-spacing: 0.3px;
+    font-weight: 600;
+  }
+  .vote-detail td.num { text-align: left; }
+  .vote-detail td.src { max-width: none; }
+
+  .tabs--compact .tab { font-size: 10px; padding: 4px 8px; }
+}
+
+/* ==========================================================================
    Reduced motion
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
