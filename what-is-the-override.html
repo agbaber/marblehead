@@ -140,6 +140,61 @@ og_url: https://marbleheaddata.org/what-is-the-override.html
 
   <p>That reading is arithmetically understandable (9+12+15=36) but the ballot does not work that way. Because the tiers are nested, a yes vote on all three still caps the override at the highest tier that passes, $15 million, not $36 million. If the nested structure tripped up a careful attendee at the meeting where it was first presented, it is likely to confuse voters at the polls.</p>
 
+  <section class="scrolly-nesting" aria-label="How the nested ballot produces an override amount">
+    <div class="scrolly-nesting-sticky">
+      <p class="sn-viz-title">Question 1 ballot outcome</p>
+      <div class="sn-row sn-row--1a" data-row="1a">
+        <span class="sn-row-label">1A</span>
+        <span class="sn-row-name">Invest</span>
+        <span class="sn-row-bar"><span class="sn-row-bar-fill"></span></span>
+        <span class="sn-row-amt">$15M</span>
+      </div>
+      <div class="sn-row sn-row--1b" data-row="1b">
+        <span class="sn-row-label">1B</span>
+        <span class="sn-row-name">Stabilize</span>
+        <span class="sn-row-bar"><span class="sn-row-bar-fill"></span></span>
+        <span class="sn-row-amt">$12M</span>
+      </div>
+      <div class="sn-row sn-row--1c" data-row="1c">
+        <span class="sn-row-label">1C</span>
+        <span class="sn-row-name">Restore</span>
+        <span class="sn-row-bar"><span class="sn-row-bar-fill"></span></span>
+        <span class="sn-row-amt">$9M</span>
+      </div>
+      <div class="sn-divider"></div>
+      <div class="sn-row sn-row--q2" data-row="q2">
+        <span class="sn-row-label">Q2</span>
+        <span class="sn-row-name">Trash</span>
+        <span class="sn-row-bar"><span class="sn-row-bar-fill"></span></span>
+        <span class="sn-row-amt">$2.3M</span>
+      </div>
+      <div class="sn-result" id="sn-result">Scroll down to walk through each outcome.</div>
+    </div>
+
+    <div class="scrolly-nesting-steps">
+      <div class="scrolly-step" data-step="0" data-result="Scroll down to walk through each outcome.">
+        <h3>Four questions, one nested structure</h3>
+        <p>Question 1 has three parts (1A, 1B, 1C). Question 2 stands alone. The three Q1 parts do not add together. The highest one that gets a majority is the override amount.</p>
+      </div>
+      <div class="scrolly-step" data-step="1" data-result="Override: <strong>$9 million</strong> &middot; Restore">
+        <h3>If only 1C passes</h3>
+        <p>A yes on the lowest tier only. The override is $9&nbsp;million. It restores services that were cut from the no-override budget and nothing more.</p>
+      </div>
+      <div class="scrolly-step" data-step="2" data-result="Override: <strong>$12 million</strong> &middot; Stabilize">
+        <h3>If 1C and 1B pass, but not 1A</h3>
+        <p>The middle tier's $12&nbsp;million is everything in the lowest tier plus more maintenance and staffing. It is the higher of the two that passed, so it is the amount. Not $21 million.</p>
+      </div>
+      <div class="scrolly-step" data-step="3" data-result="Override: <strong>$15 million</strong> &middot; Invest">
+        <h3>If all three pass</h3>
+        <p>The top tier wins. $15&nbsp;million, not $36&nbsp;million. The lower tiers are already contained in the top tier's scope, so approving them as well does not add anything on top.</p>
+      </div>
+      <div class="scrolly-step" data-step="4" data-result="Q2 settles trash funding on its own.">
+        <h3>Question 2 is independent</h3>
+        <p>Question 2 sits outside the tier. It passes or fails on its own. If it passes, a $2.3&nbsp;million trash levy is added to whatever Q1 produces. If it fails, the Board of Health implements a flat fee of roughly $262 per household instead.</p>
+      </div>
+    </div>
+  </section>
+
   <h2 data-stance-section="how-youll-vote">How You'll Vote</h2>
   <p>Two ballot questions at the Annual Town Election on June 9, 2026.</p>
 
@@ -507,3 +562,60 @@ og_url: https://marbleheaddata.org/what-is-the-override.html
     <p>Override structure from the <a href="data/2026-04-08_Override_Presentation.pdf">Town Administrator's override presentation</a> (April 8, 2026) and <a href="https://marbleheadcurrent.org/2026/03/25/select-board-backs-tiered-multi-year-override-framework-combining-school-town-requests/">Marblehead Current</a> / <a href="https://www.marbleheadindependent.com/select-board-locks-in-three-tier-override-structure-votes-to-unite-town-and-school-ask/">Marblehead Independent</a> reporting on the March 25, 2026 Select Board meeting. The $8.47M deficit from the <a href="https://marbleheadma.gov/wp-content/uploads/2026/02/2026-State-of-the-Town-Presenation-Final.pdf">2026 State of the Town presentation</a>, page 29. Ballot format from Town Clerk. Statutory references: <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter59/Section21C">MGL c. 59 s. 21C</a> (Prop 2.5), <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIV/Chapter32B/Section19">MGL c. 32B s. 19</a> (PEC).</p>
     <p>Quoted material is cited inline with each quotation. Finance Committee transmittal letters from the 2019, 2022, 2025, and 2026 Annual Town Meeting reports are archived locally in the <code>/data/</code> folder and are primary sources signed by the named FinCom chairs. 2023 override opposition voices are drawn from the Marblehead Current archives (signed letter from Jack Buba, February 18, 2023; and direct quotes from Jim Nye, May 24, 2023, and Sue MacInnis, June 14, 2023). April 8, 2026 Select Board meeting quotes as reported by Will Dowd in the <a href="https://www.marbleheadindependent.com/kezer-presents-9m-to-15m-tiered-override-plan-and-separate-2-2m-trash-tax-option/">Marblehead Independent</a>; the town's own meeting minutes for April 8, 2026 had not been posted at time of publication and are expected at <a href="https://marbleheadma.gov/category/select-board/">marbleheadma.gov/category/select-board/</a>. The 2023 Town Meeting vote record (Article 31 paper ballot, 534-230) is in the <a href="https://marbleheadma.gov/wp-content/uploads/2025/03/town_meeting_minutes_2023__0.pdf">2023 Annual Town Meeting minutes</a>; the June 20, 2023 ballot result (2,992-3,399) is from contemporaneous Marblehead Current coverage. Override history from Marblehead Current, "Overriding Considerations" series.</p>
   </div>
+
+<script>
+(function () {
+  var section = document.querySelector('.scrolly-nesting');
+  if (!section || !('IntersectionObserver' in window)) return;
+
+  var steps = section.querySelectorAll('.scrolly-step');
+  var rows = {
+    '1a': section.querySelector('.sn-row--1a'),
+    '1b': section.querySelector('.sn-row--1b'),
+    '1c': section.querySelector('.sn-row--1c'),
+    'q2': section.querySelector('.sn-row--q2')
+  };
+  var resultEl = section.querySelector('#sn-result');
+
+  // Per step: active rows, nested rows (passed but overridden), out rows (failed).
+  var states = {
+    '0': { active: [],               nested: [],           out: [] },
+    '1': { active: ['1c'],           nested: [],           out: ['1a', '1b'] },
+    '2': { active: ['1b'],           nested: ['1c'],       out: ['1a'] },
+    '3': { active: ['1a'],           nested: ['1b', '1c'], out: [] },
+    '4': { active: ['q2'],           nested: [],           out: [] }
+  };
+
+  function clearRowClasses() {
+    Object.keys(rows).forEach(function (k) {
+      if (!rows[k]) return;
+      rows[k].classList.remove('is-active', 'is-nested', 'is-out');
+    });
+  }
+
+  function applyStep(stepIndex) {
+    var state = states[String(stepIndex)];
+    if (!state) return;
+    clearRowClasses();
+    state.active.forEach(function (k) { if (rows[k]) rows[k].classList.add('is-active'); });
+    state.nested.forEach(function (k) { if (rows[k]) rows[k].classList.add('is-nested'); });
+    state.out.forEach(function (k)    { if (rows[k]) rows[k].classList.add('is-out');    });
+    var step = section.querySelector('.scrolly-step[data-step="' + stepIndex + '"]');
+    if (step && resultEl) resultEl.innerHTML = step.getAttribute('data-result') || '&nbsp;';
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      steps.forEach(function (s) { s.classList.remove('is-active'); });
+      entry.target.classList.add('is-active');
+      applyStep(entry.target.getAttribute('data-step'));
+    });
+  }, {
+    rootMargin: '-45% 0px -45% 0px',
+    threshold: 0
+  });
+
+  steps.forEach(function (s) { observer.observe(s); });
+})();
+</script>

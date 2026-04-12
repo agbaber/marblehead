@@ -1711,6 +1711,158 @@ button.ballot-box[aria-pressed="true"] .ballot-box-x-stroke:nth-child(2) {
 }
 
 /* ==========================================================================
+   Scroll-locked ballot nesting explainer (.scrolly-nesting)
+   Sticky visual that updates as the reader scrolls past text steps.
+   Used on what-is-the-override.html to illustrate which Q1 tier wins
+   for each combination of Yes/No votes.
+   ========================================================================== */
+
+.scrolly-nesting {
+  margin: 28px 0 40px;
+}
+.scrolly-nesting-sticky {
+  position: sticky;
+  top: 60px;
+  z-index: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px 14px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 18px;
+}
+.sn-viz-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-subtle);
+  margin: 0 0 10px;
+}
+.sn-row {
+  display: grid;
+  grid-template-columns: 28px 72px 1fr 48px;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  background: var(--divider);
+  border: 2px solid transparent;
+  opacity: 0.45;
+  transition: opacity 0.45s ease, background 0.45s ease, border-color 0.45s ease, transform 0.45s ease;
+}
+.sn-row.is-active {
+  opacity: 1;
+  border-color: var(--c-navy);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.sn-row.is-nested {
+  opacity: 0.6;
+}
+.sn-row.is-out {
+  opacity: 0.2;
+}
+.sn-row-label {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--c-navy);
+  font-variant-numeric: tabular-nums;
+}
+.sn-row-name {
+  font-size: 12px;
+  color: var(--text-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.sn-row-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.sn-row-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+.sn-row--1a .sn-row-bar-fill { width: 100%; background: var(--series-tier-3); }
+.sn-row--1b .sn-row-bar-fill { width: 80%;  background: var(--series-tier-2); }
+.sn-row--1c .sn-row-bar-fill { width: 60%;  background: var(--series-tier-1); }
+.sn-row--q2 .sn-row-bar-fill { width: 24%;  background: var(--text-subtle); }
+.sn-row-amt {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: right;
+  color: var(--text);
+}
+.sn-divider {
+  height: 1px;
+  background: var(--divider);
+  margin: 8px 0 6px;
+}
+.sn-result {
+  margin-top: 12px;
+  padding: 9px 12px;
+  background: var(--divider);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-mid);
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.35;
+}
+.sn-result strong {
+  color: var(--c-navy);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.scrolly-nesting-steps { margin: 0; }
+.scrolly-step {
+  min-height: 46vh;
+  padding: 18px 20px;
+  margin-bottom: 10px;
+  border-left: 3px solid var(--divider);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.scrolly-step.is-active {
+  border-left-color: var(--c-navy);
+  background: var(--divider);
+}
+.scrolly-step h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+.scrolly-step p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+@media (max-width: 600px) {
+  .scrolly-nesting-sticky { padding: 14px 14px 12px; top: 56px; }
+  .sn-row { grid-template-columns: 24px 60px 1fr 44px; gap: 8px; padding: 6px 8px; }
+  .sn-row-name { font-size: 11px; }
+  .scrolly-step { min-height: 52vh; padding: 16px; }
+  .scrolly-step h3 { font-size: 16px; }
+  .scrolly-step p { font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sn-row,
+  .scrolly-step { transition: none; }
+}
+
+/* ==========================================================================
    Vote split chart (yes/no split bars for ballot/TM counts)
    ========================================================================== */
 
