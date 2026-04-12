@@ -2844,6 +2844,27 @@ blockquote.quote--mixed p {
   background: color-mix(in srgb, var(--c-navy) 12%, transparent);
 }
 
+.tier-more {
+  margin-top: 4px;
+}
+.tier-more > summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--link);
+  padding: 8px 0;
+  border-top: 1px solid var(--divider);
+}
+.tier-more > summary::-webkit-details-marker { display: none; }
+.tier-more > summary::after {
+  content: " \25B8";
+  font-size: 10px;
+}
+.tier-more[open] > summary::after {
+  content: " \25BE";
+}
+
 @media (max-width: 600px) {
   .tier-line { font-size: 13px; }
   .tier-tag { font-size: 9px; }
