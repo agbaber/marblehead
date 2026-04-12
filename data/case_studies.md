@@ -6,6 +6,8 @@ title: case studies
 
 # Override Case Studies: Melrose, Stoneham, and the Statewide Pattern
 
+> **What these case studies show and don't show.** The two detailed case studies below are Massachusetts towns that rejected an operating override and later returned to the ballot. Both returned with a larger ask. This page does not include towns that rejected an override and sustained the resulting budget without returning to the ballot, because the DOR data on fail-and-return patterns (see [Statewide Pattern](#statewide-pattern) below) shows that return-to-ballot is the dominant outcome. If you know of a Massachusetts town that rejected an operating override and did not return within three years, [open an issue](https://github.com/agbaber/marblehead/issues/new?title=Counter-example+town%3A+) so it can be added.
+
 ## Melrose (population ~28,000, median home ~$818K)
 
 <div class="key-stats">
@@ -41,7 +43,7 @@ title: case studies
 - **Per-pupil spending:** Melrose ranks in the [bottom eight percent of Massachusetts school districts in spending per pupil, at $18,600 per child in FY2024, versus a state average of $21,300](https://commonwealthbeacon.org/government/local-government/after-a-prop-2-%C2%BD-defeat-last-year-melrose-passes-13-5-million-override/) (Commonwealth Beacon citing DESE; primary source: [DESE per-pupil expenditures](https://profiles.doe.mass.edu/statereport/ppx.aspx)).
 
 <div class="takeaway">
-  <strong>Key lesson.</strong> Voted no on $7.7M. Lived through the cuts. Came back and voted yes on $13.5M &mdash; <em>75% more</em>. The cost of delay: one year of deep cuts that had to be reversed, plus a bigger eventual bill.
+  <strong>Key lesson.</strong> Melrose rejected $7.7M in June 2024 and passed $13.5M in November 2025, 75% more than the original ask. The intervening 17 months included 61.4 FTE reductions, class sizes proposed up to 32, and the smallest new-teacher orientation in years.
 </div>
 
 ---
