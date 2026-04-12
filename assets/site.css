@@ -1777,12 +1777,14 @@ button.ballot-box[aria-pressed="true"] .ballot-box-x-stroke:nth-child(2) {
   letter-spacing: 0.4px;
 }
 .sn-row-bar {
+  display: block;
   height: 8px;
   background: var(--border);
   border-radius: 4px;
   overflow: hidden;
 }
 .sn-row-bar-fill {
+  display: block;
   height: 100%;
   border-radius: 4px;
 }
@@ -1824,13 +1826,18 @@ button.ballot-box[aria-pressed="true"] .ballot-box-x-stroke:nth-child(2) {
 
 .scrolly-nesting-steps { margin: 0; }
 .scrolly-step {
-  min-height: 46vh;
-  padding: 18px 20px;
-  margin-bottom: 10px;
+  min-height: 38vh;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+.scrolly-step-inner {
+  width: 100%;
+  padding: 14px 18px;
   border-left: 3px solid var(--divider);
   transition: border-color 0.3s ease, background 0.3s ease;
 }
-.scrolly-step.is-active {
+.scrolly-step.is-active .scrolly-step-inner {
   border-left-color: var(--c-navy);
   background: var(--divider);
 }
@@ -1852,14 +1859,15 @@ button.ballot-box[aria-pressed="true"] .ballot-box-x-stroke:nth-child(2) {
   .scrolly-nesting-sticky { padding: 14px 14px 12px; top: 56px; }
   .sn-row { grid-template-columns: 24px 60px 1fr 44px; gap: 8px; padding: 6px 8px; }
   .sn-row-name { font-size: 11px; }
-  .scrolly-step { min-height: 52vh; padding: 16px; }
+  .scrolly-step { min-height: 44vh; }
+  .scrolly-step-inner { padding: 12px 14px; }
   .scrolly-step h3 { font-size: 16px; }
   .scrolly-step p { font-size: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .sn-row,
-  .scrolly-step { transition: none; }
+  .scrolly-step-inner { transition: none; }
 }
 
 /* ==========================================================================
