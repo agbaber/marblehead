@@ -88,6 +88,20 @@
     }
   });
 
+  // --- Analytics ---
+  dives.forEach(function (el) {
+    el.addEventListener('toggle', function () {
+      if (!el.open) return;
+      if (typeof posthog !== 'undefined') {
+        var heading = el.querySelector('summary h2');
+        posthog.capture('deep_dive_expanded', {
+          section: heading ? heading.textContent.trim() : 'unknown',
+          page: window.location.pathname
+        });
+      }
+    });
+  });
+
   // --- Expand all / Collapse all ---
   if (dives.length >= 3) {
     var btn = document.createElement('button');
