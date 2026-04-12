@@ -480,10 +480,10 @@ export async function hydrateWidgets() {
 
     // Insert the widget at the END of the section (after the reader has
     // scanned the heading and body), not inline with the heading. The
-    // section boundary is the next h2 or the next element with a
-    // data-stance-section attribute, whichever comes first.
+    // section boundary is the next h2, a <footer>, or the next element
+    // with a data-stance-section attribute, whichever comes first.
     let cursor = anchor.nextElementSibling;
-    while (cursor && !cursor.matches('h2, h3, [data-stance-section]')) {
+    while (cursor && !cursor.matches('h2, h3, footer, [data-stance-section]')) {
       cursor = cursor.nextElementSibling;
     }
     const endRow = document.createElement('div');
