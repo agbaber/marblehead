@@ -1,71 +1,71 @@
-measure_type,fiscal_year,vote_date,win_loss,yes_votes,no_votes,department,description,amount,source_doc,source_url,source_confidence
-Override,1991,1990-06-01,LOSS,2664,4539,General Government,General Operating Budget,1000000,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,1992,1991-06-17,LOSS,1629,2598,General Government,General Operating Expenseds,575000,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,1992,1991-08-19,LOSS,564,935,General Government,Funding Salaries For Town Clerks Office,15716,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,1992,1991-08-19,LOSS,716,782,Health & Human Services,Funding Meals On Wheels,508,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,1996,1995-06-05,LOSS,2473,2553,School,School Department Salaries,348929,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,1997,1996-06-10,LOSS,2737,3376,School,School Department Expenses,870084,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2001,2000-06-19,LOSS,833,1150,General Government,Improvements At The Old Town House,149000,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2002,2001-06-18,WIN,3016,1482,Public Works & Facilities,Construction Of Sewers And Surface Drains,300000,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2004,2003-06-16,WIN,3936,2350,General Government,Supplemental Budget Expenses,1381017,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2005,2004-06-21,LOSS,2419,2661,Public Safety,Cruiser For Police Dept.-Van For Dog Officer-Front End Loader And Backlhoe For Waste Coll. Dept.,482590,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2005,2004-06-21,WIN,2857,2289,School,Supplemental Expenses For School Department,422246,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2005,2004-06-21,LOSS,2288,2758,Public Safety,Supplemental Expenses Of Police Department,132500,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2005,2004-06-21,WIN,2849,2240,Public Works & Facilities,Supplemental Expenses For Waste Collection,17100,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2005,2004-06-21,LOSS,1639,3384,General Government,General Operating Expenditures,55000,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2005,2004-06-21,WIN,2775,2323,Culture & Recreation,Library Expenses,73051,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2006,2005-06-15,WIN,3869,3456,General Government,Supplemental Expenses Of Several Town Departments,2730167,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2012,2011-06-14,LOSS,2531,3567,General Government,"Final Design, Public Bidding And Construction For Improvements To The Old Town House",667793,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2023,2022-06-21,LOSS,1802,3929,School,School Department Operating Budget,3051093,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2024,2023-06-20,LOSS,2996,3414,General Government,General Government Operating Budget,2472056,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Override,2025,2025-06-30,LOSS,0,0,General Government,Fix Clerk Error,0,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
-Debt Exclusion,1990,1988-06-01,WIN,2322,2167,School,Schools,,,,unsourced
-Debt Exclusion,1991,1990-06-01,WIN,3904,3241,School,Remodel/Repair Mid.Sch Heat System,,,,unsourced
-Debt Exclusion,1993,1990-03-01,WIN,3593,1404,School,Remodel/Repair H Sch Sci Labs,,,,unsourced
-Debt Exclusion,1997,1992-06-01,WIN,2481,1631,School,School Renovations,,,,unsourced
-Debt Exclusion,1998,1996-06-10,WIN,3666,2363,Public Works & Facilities,Surface Drain Construction,900000,"FY04 ACFR p.53, bond schedule match",,secondary
-Debt Exclusion,1999,1995-06-05,WIN,3237,1785,School,Repairs To Schools,,,,unsourced
-Debt Exclusion,2000,1990-03-01,WIN,3468,1526,Culture & Recreation,Remodel/Equip Exsisting Library,,,,unsourced
-Debt Exclusion,2000,1994-06-01,WIN,1058,506,Public Works & Facilities,Surface-Drains Construction,,,,unsourced
-Debt Exclusion,2000,1994-06-01,WIN,993,575,School,School Renovation,,,,unsourced
-Debt Exclusion,2000,1995-06-05,WIN,2946,2064,Public Safety,Repairs To Police And Inspectors Build.,600000,"FY04 ACFR p.53, bond schedule match",,secondary
-Debt Exclusion,2000,1995-06-05,WIN,2994,2032,Health & Human Services,Const. Building For Council On Aging,2400000,"FY04 ACFR p.53, bond schedule match",,secondary
-Debt Exclusion,2000,1995-06-05,WIN,3028,1973,School,Computers For School Department,,,,unsourced
-Debt Exclusion,2000,1995-06-05,WIN,3386,1607,Public Works & Facilities,Surface Storm Drains,650000,"FY04 ACFR p.53, bond schedule match",,secondary
-Debt Exclusion,2000,1996-06-10,WIN,3394,2671,School,Computer Equipment For School Dept.,,,,unsourced
-Debt Exclusion,2000,1996-06-10,WIN,3454,2594,Public Safety,Equipment For Fire Department,450000,"FY04 ACFR p.53, bond schedule match",,secondary
-Debt Exclusion,2000,1996-06-10,WIN,3538,2530,School,Repair-Construct-Equip School Bldgs.,,,,unsourced
-Debt Exclusion,2000,1997-06-09,WIN,1797,1702,School,Remodeling Of Several Town Schools,,,,unsourced
-Debt Exclusion,2000,1998-06-08,WIN,2569,1267,School,Repairs To Several Schools,,,,unsourced
-Debt Exclusion,2000,1998-06-08,WIN,2323,1503,School,Computers And Software For School Dept.,,,,unsourced
-Debt Exclusion,2000,1999-06-14,WIN,4659,2976,School,Const.Equip-Furnish New High School,42115000,"FY04 ACFR p.54, Bond Authorizations",,primary
-Debt Exclusion,2001,1982-06-19,WIN,1373,625,Public Works & Facilities,Reconst Sewers For Drainage Purposes,,,,unsourced
-Debt Exclusion,2002,2000-06-19,WIN,1361,635,Public Works & Facilities,Repairs To Existing Drainage Infrastruction,,,,unsourced
-Debt Exclusion,2002,2001-06-18,WIN,2916,1639,School,Plans For Conversion Of Schools,600000,"FY04 ACFR p.54, Bond Authorizations",,primary
-Debt Exclusion,2003,2001-12-10,WIN,2849,1434,School,"Bonds Issued To Plan, Remodel, Reconstruct Additions To Existing High School And Convert To Middle School",22600000,"FY04 ACFR p.54, Bond Authorizations",,primary
-Debt Exclusion,2003,2002-06-24,LOSS,1049,1185,Culture & Recreation,"Bonds Issued For Remodeling, Reconstruction And Making Repairs To Tucker's Wharf",,,,unsourced
-Debt Exclusion,2005,2004-06-21,WIN,2931,2133,Public Safety,Purchase Fire Pumper Truck,415000,"FY04 ACFR p.8, MD&A",,primary
-Debt Exclusion,2006,2005-06-15,WIN,4384,2778,General Government,Purchase Equipment For Several Town Departments,811500,"FY05 ACFR p.8, MD&A",,primary
-Debt Exclusion,2006,2005-06-15,WIN,4937,2315,General Government,Purchase 3 Certain Parcels Of Land Owned By Robinson Farm Realty Trust,2025000,"FY05 ACFR p.8, MD&A",,primary
-Debt Exclusion,2008,2007-06-25,WIN,1565,1061,Public Works & Facilities,"Construct, Reconstruct Ocean Ave Causewayl",8700000,"FY07 ACFR p.9, MD&A",,primary
-Debt Exclusion,2008,2007-06-25,WIN,1747,864,Public Works & Facilities,"Landfill Cap, Transfer Station, Drop Off",1010000,"FY07 ACFR p.9, MD&A",,primary
-Debt Exclusion,2009,2008-06-17,WIN,2365,1311,School,Feasibility Study For The Glover School Project,395000,"FY08 ACFR p.9, MD&A",,primary
-Debt Exclusion,2009,2008-06-17,WIN,2464,1213,School,Village School Project -Reconstruction,21700000,"FY08 ACFR p.9, MD&A",,primary
-Debt Exclusion,2012,2011-06-14,WIN,3394,2753,School,"Funding The Design, Project Management And Construction Of A New Elementary School",25450000,"FY11 ACFR p.7, MD&A",,primary
-Debt Exclusion,2012,2011-06-14,WIN,3416,2681,Public Works & Facilities,"Funding The Permitting, Public Bidding And Construction Of A Cap For The Encompassing The Old Landfill, Etc",18174578,"FY11 ACFR p.7, MD&A",,primary
-Debt Exclusion,2014,2012-06-21,WIN,1905,1542,Public Safety,Quint Fire Truck,1150000,"FY12 ACFR p.8, MD&A",,primary
-Debt Exclusion,2014,2012-06-21,WIN,1990,1475,General Government,Old Town House Accessibility Project,610168,"FY12 ACFR p.8, MD&A",,primary
-Debt Exclusion,2014,2012-06-21,WIN,2263,1216,General Government,Lead Mills Land Acquisition,1500000,"FY12 ACFR p.8, MD&A",,primary
-Debt Exclusion,2014,2012-06-21,WIN,2394,1067,Public Works & Facilities,Pleasant Street Area Drainage Project,4937687,"FY12 ACFR p.8, MD&A",,primary
-Debt Exclusion,2014,2013-06-25,WIN,3186,2235,Public Works & Facilities,Green Street Remediation,1165000,"FY13 ACFR p.67, Bond Authorizations",,primary
-Debt Exclusion,2014,2013-06-25,WIN,3888,1617,General Government,Abbot Hall Tower Repairs,2465966,"FY13 ACFR p.67, Bond Authorizations",,primary
-Debt Exclusion,2018,2015-06-16,WIN,1934,666,Public Works & Facilities,Bonds To Pay For Repair And Replacement Of Drainage Pipe And Construction Of New Xfer Station,8000000,"FY15 ACFR p.8, MD&A",,primary
-Debt Exclusion,2018,2016-06-14,WIN,2176,875,School,"Bonds For Study, Renovation And Recon Of Elbridge Gerry School",750000,"FY16 ACFR p.8, MD&A",,primary
-Debt Exclusion,2018,2016-06-14,WIN,2403,628,Public Safety,Bonds For A Pumper Truck For The Fire Dept,620000,"FY16 ACFR p.8, MD&A",,primary
-Debt Exclusion,2020,2018-06-21,WIN,1555,326,Public Works & Facilities,Costs Of Constructing And Reconstructing Seawalls And Fences,871894,"FY18 ACFR p.8, MD&A",,primary
-Debt Exclusion,2020,2019-06-18,WIN,3440,1976,School,Bonds For New Gerry School,54844767,"FY19 ACFR p.7, MD&A",,primary
-Debt Exclusion,2020,2019-06-18,WIN,4492,903,General Government,Bonds For Repairs To Fort Sewall,750000,"FY19 ACFR p.7, MD&A",,primary
-Debt Exclusion,2023,2021-06-22,WIN,3021,1346,Culture & Recreation,Renovation Of Abbot Public Library,8500000,"FY21 ACFR p.64, Bond Authorizations",,primary
-Debt Exclusion,2023,2021-06-22,WIN,3418,894,Public Safety,New Fire Pumper Truck,750000,"FY21 ACFR p.64, Bond Authorizations",,primary
-Debt Exclusion,2024,2022-06-21,WIN,3347,2178,General Government,"Roof Replacements, Road & Sidewalk Improvements, Smart Panels, Hvac, Salt Shed, Hs Boiler",10902598,"FY23 ACFR p.60, Bond Authorizations",,primary
-Debt Exclusion,2026,2025-06-10,WIN,4088,1857,General Government,Mary Alley Building Improvement & Hvac,,,,unsourced
+measure_type,fiscal_year,vote_date,win_loss,yes_votes,no_votes,department,description,amount,amount_real,cpi_year,cpi_ratio,source_doc,source_url,source_confidence
+Override,1991,1990-06-01,LOSS,2664,4539,General Government,General Operating Budget,1000000,2400153,1990,2.4002,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,1992,1991-06-17,LOSS,1629,2598,General Government,General Operating Expenseds,575000,1324358,1991,2.3032,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,1992,1991-08-19,LOSS,564,935,General Government,Funding Salaries For Town Clerks Office,15716,36198,1991,2.3032,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,1992,1991-08-19,LOSS,716,782,Health & Human Services,Funding Meals On Wheels,508,1170,1991,2.3032,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,1996,1995-06-05,LOSS,2473,2553,School,School Department Salaries,348929,718235,1995,2.0584,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,1997,1996-06-10,LOSS,2737,3376,School,School Department Expenses,870084,1739613,1996,1.9994,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2001,2000-06-19,LOSS,833,1150,General Government,Improvements At The Old Town House,149000,271436,2000,1.8217,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2002,2001-06-18,WIN,3016,1482,Public Works & Facilities,Construction Of Sewers And Surface Drains,300000,531395,2001,1.7713,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2004,2003-06-16,WIN,3936,2350,General Government,Supplemental Budget Expenses,1381017,2354484,2003,1.7049,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2005,2004-06-21,LOSS,2419,2661,Public Safety,Cruiser For Police Dept.-Van For Dog Officer-Front End Loader And Backlhoe For Waste Coll. Dept.,482590,801421,2004,1.6607,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2005,2004-06-21,WIN,2857,2289,School,Supplemental Expenses For School Department,422246,701210,2004,1.6607,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2005,2004-06-21,LOSS,2288,2758,Public Safety,Supplemental Expenses Of Police Department,132500,220038,2004,1.6607,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2005,2004-06-21,WIN,2849,2240,Public Works & Facilities,Supplemental Expenses For Waste Collection,17100,28397,2004,1.6607,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2005,2004-06-21,LOSS,1639,3384,General Government,General Operating Expenditures,55000,91337,2004,1.6607,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2005,2004-06-21,WIN,2775,2323,Culture & Recreation,Library Expenses,73051,121313,2004,1.6607,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2006,2005-06-15,WIN,3869,3456,General Government,Supplemental Expenses Of Several Town Departments,2730167,4385322,2005,1.6062,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2012,2011-06-14,LOSS,2531,3567,General Government,"Final Design, Public Bidding And Construction For Improvements To The Old Town House",667793,931466,2011,1.3948,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2023,2022-06-21,LOSS,1802,3929,School,School Department Operating Budget,3051093,3269996,2022,1.0717,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2024,2023-06-20,LOSS,2996,3414,General Government,General Government Operating Budget,2472056,2545074,2023,1.0295,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Override,2025,2025-06-30,LOSS,0,0,General Government,Fix Clerk Error,0,,,,MA DOR Proposition 2½ Override/Underride Database,https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride,primary
+Debt Exclusion,1990,1988-06-01,WIN,2322,2167,School,Schools,,,,,,,unsourced
+Debt Exclusion,1991,1990-06-01,WIN,3904,3241,School,Remodel/Repair Mid.Sch Heat System,,,,,,,unsourced
+Debt Exclusion,1993,1990-03-01,WIN,3593,1404,School,Remodel/Repair H Sch Sci Labs,,,,,,,unsourced
+Debt Exclusion,1997,1992-06-01,WIN,2481,1631,School,School Renovations,,,,,,,unsourced
+Debt Exclusion,1998,1996-06-10,WIN,3666,2363,Public Works & Facilities,Surface Drain Construction,900000,1799426,1996,1.9994,"FY04 ACFR p.53, bond schedule match",,secondary
+Debt Exclusion,1999,1995-06-05,WIN,3237,1785,School,Repairs To Schools,,,,,,,unsourced
+Debt Exclusion,2000,1990-03-01,WIN,3468,1526,Culture & Recreation,Remodel/Equip Exsisting Library,,,,,,,unsourced
+Debt Exclusion,2000,1994-06-01,WIN,1058,506,Public Works & Facilities,Surface-Drains Construction,,,,,,,unsourced
+Debt Exclusion,2000,1994-06-01,WIN,993,575,School,School Renovation,,,,,,,unsourced
+Debt Exclusion,2000,1995-06-05,WIN,2946,2064,Public Safety,Repairs To Police And Inspectors Build.,600000,1235039,1995,2.0584,"FY04 ACFR p.53, bond schedule match",,secondary
+Debt Exclusion,2000,1995-06-05,WIN,2994,2032,Health & Human Services,Const. Building For Council On Aging,2400000,4940157,1995,2.0584,"FY04 ACFR p.53, bond schedule match",,secondary
+Debt Exclusion,2000,1995-06-05,WIN,3028,1973,School,Computers For School Department,,,,,,,unsourced
+Debt Exclusion,2000,1995-06-05,WIN,3386,1607,Public Works & Facilities,Surface Storm Drains,650000,1337959,1995,2.0584,"FY04 ACFR p.53, bond schedule match",,secondary
+Debt Exclusion,2000,1996-06-10,WIN,3394,2671,School,Computer Equipment For School Dept.,,,,,,,unsourced
+Debt Exclusion,2000,1996-06-10,WIN,3454,2594,Public Safety,Equipment For Fire Department,450000,899713,1996,1.9994,"FY04 ACFR p.53, bond schedule match",,secondary
+Debt Exclusion,2000,1996-06-10,WIN,3538,2530,School,Repair-Construct-Equip School Bldgs.,,,,,,,unsourced
+Debt Exclusion,2000,1997-06-09,WIN,1797,1702,School,Remodeling Of Several Town Schools,,,,,,,unsourced
+Debt Exclusion,2000,1998-06-08,WIN,2569,1267,School,Repairs To Several Schools,,,,,,,unsourced
+Debt Exclusion,2000,1998-06-08,WIN,2323,1503,School,Computers And Software For School Dept.,,,,,,,unsourced
+Debt Exclusion,2000,1999-06-14,WIN,4659,2976,School,Const.Equip-Furnish New High School,42115000,79300573,1999,1.8830,"FY04 ACFR p.54, Bond Authorizations",,primary
+Debt Exclusion,2001,1982-06-19,WIN,1373,625,Public Works & Facilities,Reconst Sewers For Drainage Purposes,,,,,,,unsourced
+Debt Exclusion,2002,2000-06-19,WIN,1361,635,Public Works & Facilities,Repairs To Existing Drainage Infrastruction,,,,,,,unsourced
+Debt Exclusion,2002,2001-06-18,WIN,2916,1639,School,Plans For Conversion Of Schools,600000,1062789,2001,1.7713,"FY04 ACFR p.54, Bond Authorizations",,primary
+Debt Exclusion,2003,2001-12-10,WIN,2849,1434,School,"Bonds Issued To Plan, Remodel, Reconstruct Additions To Existing High School And Convert To Middle School",22600000,40031733,2001,1.7713,"FY04 ACFR p.54, Bond Authorizations",,primary
+Debt Exclusion,2003,2002-06-24,LOSS,1049,1185,Culture & Recreation,"Bonds Issued For Remodeling, Reconstruction And Making Repairs To Tucker's Wharf",,,,,,,unsourced
+Debt Exclusion,2005,2004-06-21,WIN,2931,2133,Public Safety,Purchase Fire Pumper Truck,415000,689177,2004,1.6607,"FY04 ACFR p.8, MD&A",,primary
+Debt Exclusion,2006,2005-06-15,WIN,4384,2778,General Government,Purchase Equipment For Several Town Departments,811500,1303469,2005,1.6062,"FY05 ACFR p.8, MD&A",,primary
+Debt Exclusion,2006,2005-06-15,WIN,4937,2315,General Government,Purchase 3 Certain Parcels Of Land Owned By Robinson Farm Realty Trust,2025000,3252650,2005,1.6062,"FY05 ACFR p.8, MD&A",,primary
+Debt Exclusion,2008,2007-06-25,WIN,1565,1061,Public Works & Facilities,"Construct, Reconstruct Ocean Ave Causewayl",8700000,13165412,2007,1.5133,"FY07 ACFR p.9, MD&A",,primary
+Debt Exclusion,2008,2007-06-25,WIN,1747,864,Public Works & Facilities,"Landfill Cap, Transfer Station, Drop Off",1010000,1528398,2007,1.5133,"FY07 ACFR p.9, MD&A",,primary
+Debt Exclusion,2009,2008-06-17,WIN,2365,1311,School,Feasibility Study For The Glover School Project,395000,575529,2008,1.4570,"FY08 ACFR p.9, MD&A",,primary
+Debt Exclusion,2009,2008-06-17,WIN,2464,1213,School,Village School Project -Reconstruction,21700000,31617696,2008,1.4570,"FY08 ACFR p.9, MD&A",,primary
+Debt Exclusion,2012,2011-06-14,WIN,3394,2753,School,"Funding The Design, Project Management And Construction Of A New Elementary School",25450000,35498733,2011,1.3948,"FY11 ACFR p.7, MD&A",,primary
+Debt Exclusion,2012,2011-06-14,WIN,3416,2681,Public Works & Facilities,"Funding The Permitting, Public Bidding And Construction Of A Cap For The Encompassing The Old Landfill, Etc",18174578,25350667,2011,1.3948,"FY11 ACFR p.7, MD&A",,primary
+Debt Exclusion,2014,2012-06-21,WIN,1905,1542,Public Safety,Quint Fire Truck,1150000,1571233,2012,1.3663,"FY12 ACFR p.8, MD&A",,primary
+Debt Exclusion,2014,2012-06-21,WIN,1990,1475,General Government,Old Town House Accessibility Project,610168,833666,2012,1.3663,"FY12 ACFR p.8, MD&A",,primary
+Debt Exclusion,2014,2012-06-21,WIN,2263,1216,General Government,Lead Mills Land Acquisition,1500000,2049434,2012,1.3663,"FY12 ACFR p.8, MD&A",,primary
+Debt Exclusion,2014,2012-06-21,WIN,2394,1067,Public Works & Facilities,Pleasant Street Area Drainage Project,4937687,6746308,2012,1.3663,"FY12 ACFR p.8, MD&A",,primary
+Debt Exclusion,2014,2013-06-25,WIN,3186,2235,Public Works & Facilities,Green Street Remediation,1165000,1568500,2013,1.3464,"FY13 ACFR p.67, Bond Authorizations",,primary
+Debt Exclusion,2014,2013-06-25,WIN,3888,1617,General Government,Abbot Hall Tower Repairs,2465966,3320058,2013,1.3464,"FY13 ACFR p.67, Bond Authorizations",,primary
+Debt Exclusion,2018,2015-06-16,WIN,1934,666,Public Works & Facilities,Bonds To Pay For Repair And Replacement Of Drainage Pipe And Construction Of New Xfer Station,8000000,10589030,2015,1.3236,"FY15 ACFR p.8, MD&A",,primary
+Debt Exclusion,2018,2016-06-14,WIN,2176,875,School,"Bonds For Study, Renovation And Recon Of Elbridge Gerry School",750000,980312,2016,1.3071,"FY16 ACFR p.8, MD&A",,primary
+Debt Exclusion,2018,2016-06-14,WIN,2403,628,Public Safety,Bonds For A Pumper Truck For The Fire Dept,620000,810392,2016,1.3071,"FY16 ACFR p.8, MD&A",,primary
+Debt Exclusion,2020,2018-06-21,WIN,1555,326,Public Works & Facilities,Costs Of Constructing And Reconstructing Seawalls And Fences,871894,1089260,2018,1.2493,"FY18 ACFR p.8, MD&A",,primary
+Debt Exclusion,2020,2019-06-18,WIN,3440,1976,School,Bonds For New Gerry School,54844767,67285113,2019,1.2268,"FY19 ACFR p.7, MD&A",,primary
+Debt Exclusion,2020,2019-06-18,WIN,4492,903,General Government,Bonds For Repairs To Fort Sewall,750000,920121,2019,1.2268,"FY19 ACFR p.7, MD&A",,primary
+Debt Exclusion,2023,2021-06-22,WIN,3021,1346,Culture & Recreation,Renovation Of Abbot Public Library,8500000,9839299,2021,1.1576,"FY21 ACFR p.64, Bond Authorizations",,primary
+Debt Exclusion,2023,2021-06-22,WIN,3418,894,Public Safety,New Fire Pumper Truck,750000,868173,2021,1.1576,"FY21 ACFR p.64, Bond Authorizations",,primary
+Debt Exclusion,2024,2022-06-21,WIN,3347,2178,General Government,"Roof Replacements, Road & Sidewalk Improvements, Smart Panels, Hvac, Salt Shed, Hs Boiler",10902598,11684814,2022,1.0717,"FY23 ACFR p.60, Bond Authorizations",,primary
+Debt Exclusion,2026,2025-06-10,WIN,4088,1857,General Government,Mary Alley Building Improvement & Hvac,,,,,,,unsourced
