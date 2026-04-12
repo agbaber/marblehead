@@ -2773,6 +2773,11 @@ blockquote.quote--mixed p {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+.tier-line--offset {
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--divider);
+}
 .tier-line--offset .tier-line-name,
 .tier-line--offset .tier-line-amount { color: var(--text-subtle); }
 .tier-line--school {
@@ -2781,7 +2786,6 @@ blockquote.quote--mixed p {
   border-top: 1px solid var(--divider);
   font-weight: 600;
 }
-.tier-line--school .tier-line-name { color: var(--text); }
 .tier-line--school .tier-line-amount { color: var(--text); }
 
 .tier-tag {
