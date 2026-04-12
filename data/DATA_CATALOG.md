@@ -130,6 +130,12 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Files:** `/tmp/gic_rates/FY19-FY26_rates.xlsx`
 - Full premium tables by plan, individual vs family, full cost vs employee share
 
+### Peer Teacher Compensation (8 towns, FY2024)
+- **File:** `peer_teacher_compensation_FY24.csv`
+- Average teacher salary, FTE count, total teacher salary expenditure, in-district and total per-pupil expenditure, and employer health insurance share for Marblehead, Hingham, Brookline, Wellesley, Winchester, Natick, Melrose, and Stoneham
+- **Source:** DESE Teacher Salaries Report (school year 2023-24, updated Feb 2026) and DESE Per Pupil Expenditure Report (FY2024)
+- **Confidence:** High. Official state data from district end-of-year financial reports.
+
 ## What We Don't Have (identified gaps)
 
 1. **Annual total headcount (not FTE)** - only have FY25: 1,185 (from Marblehead Independent). Public records request filed.
