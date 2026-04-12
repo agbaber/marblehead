@@ -1,0 +1,13 @@
+fiscal_year,operating_free_cash_dollars,source,source_article,notes
+FY16,,,,Not yet extracted
+FY17,6025000,data/2016_FinCom_Report.pdf,Article 28 Available Funds Appropriate to Reduce Tax Rate,Recommendation approved at May 2016 ATM for FY17 budget
+FY18,,,,Not in repo (no 2017 FinCom report on hand)
+FY19,,,,Not in repo (no 2018 FinCom report on hand)
+FY20,,data/2019_FinCom_Report.pdf,Article 21 Available Funds Appropriate to Reduce Tax Rate,FinCom report explicitly says 'Recommendation to be made at Town Meeting' so number is in May 2019 ATM minutes not the report
+FY21,,,,Not in repo (no 2020 FinCom report on hand)
+FY22,8950000,data/2021_FinCom_Report.pdf,Article 30 Available Funds Appropriate to Reduce Tax Rate,Approved May 2021 ATM for FY22 budget
+FY23,10200000,data/2022_FinCom_Report.pdf,Article 29 Available Funds Appropriate to Reduce Tax Rate,Approved May 2022 ATM for FY23 budget. Peak year; FinCom's 'unsustainable' language intensifies.
+FY24,8000000,data/2023_FinCom_Report.pdf,Available Funds Appropriate to Reduce Tax Rate,Approved May 2023 ATM for FY24 budget
+FY25,5500000,data/2025_FinCom_Report.pdf + data/2026_State_of_the_Town.pdf,Article 19 (approved amount),Approved May 2024 ATM for FY25 budget
+FY26,7000000,data/2026_FinCom_Report.pdf + data/2026_State_of_the_Town.pdf,Article 18 (approved amount),Approved May 2025 ATM for FY26 budget
+FY27,5000000,data/2026_State_of_the_Town.pdf,Proposed FY27 budget,"Projected draw in FY27 proposed budget; not yet adopted. Separately, the town may also draw Free Cash for capital/stabilization ($0 projected in FY27)."
