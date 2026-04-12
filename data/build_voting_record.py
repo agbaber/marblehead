@@ -281,20 +281,7 @@ def build_chart(rows):
     # ------------------------------------------------------------------
     parts = []
 
-    # -- 5a. defs: hatch patterns --
-    defs_patterns = []
-    for dept, color_token in DEPT_COLOR.items():
-        pid = f"hatch-{color_token}"
-        defs_patterns.append(
-            f'    <pattern id="{pid}" patternUnits="userSpaceOnUse" '
-            f'width="4" height="4" patternTransform="rotate(45)">\n'
-            f'      <rect width="2" height="4" class="hatch-stripe hatch-stripe--{color_token}"/>\n'
-            f'    </pattern>'
-        )
-
-    parts.append('<defs>')
-    parts.extend(defs_patterns)
-    parts.append('</defs>')
+    # -- 5a. No defs needed: debt exclusion bars use opacity via CSS --
 
     # -- 5b. "Failed" / "Passed" header labels --
     parts.append(
@@ -424,7 +411,7 @@ def build_chart(rows):
         f'votes from {min_yr} to {max_yr}. '
         f'Bars extending right of the center line are passed questions; '
         f'bars extending left are failed. '
-        f'Solid bars are overrides; hatched bars are debt exclusions. '
+        f'Solid bars are overrides; translucent bars are debt exclusions. '
         f'Bar width represents the inflation-adjusted dollar amount.">\n'
         f'{inner}\n'
         f'</svg>'

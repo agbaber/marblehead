@@ -1360,27 +1360,13 @@ details.glossary .glossary-body p:last-child { margin-bottom: 0; }
 .bar-solid-brass { fill: var(--c-brass); }
 .bar-solid-plum  { fill: var(--c-plum); }
 
-/* SVG bar fills (hatched = debt exclusion) */
-.bar-hatch-teal  { fill: url(#hatch-teal); }
-.bar-hatch-navy  { fill: url(#hatch-navy); }
-.bar-hatch-sage  { fill: url(#hatch-sage); }
-.bar-hatch-buoy  { fill: url(#hatch-buoy); }
-.bar-hatch-brass { fill: url(#hatch-brass); }
-.bar-hatch-plum  { fill: url(#hatch-plum); }
-
-/* Hatch pattern elements */
-.hatch-bg-teal  { fill: var(--surface); }
-.hatch-bg-navy  { fill: var(--surface); }
-.hatch-bg-sage  { fill: var(--surface); }
-.hatch-bg-buoy  { fill: var(--surface); }
-.hatch-bg-brass { fill: var(--surface); }
-.hatch-bg-plum  { fill: var(--surface); }
-.hatch-line-teal  { stroke: var(--c-teal); }
-.hatch-line-navy  { stroke: var(--c-navy); }
-.hatch-line-sage  { stroke: var(--c-sage); }
-.hatch-line-buoy  { stroke: var(--c-buoy); }
-.hatch-line-brass { stroke: var(--c-brass); }
-.hatch-line-plum  { stroke: var(--c-plum); }
+/* SVG bar fills (translucent = debt exclusion) */
+.bar-hatch-teal  { fill: var(--c-teal);  opacity: 0.4; }
+.bar-hatch-navy  { fill: var(--c-navy);  opacity: 0.4; }
+.bar-hatch-sage  { fill: var(--c-sage);  opacity: 0.4; }
+.bar-hatch-buoy  { fill: var(--c-buoy);  opacity: 0.4; }
+.bar-hatch-brass { fill: var(--c-brass); opacity: 0.4; }
+.bar-hatch-plum  { fill: var(--c-plum);  opacity: 0.4; }
 
 /* Legend additions for override vs exclusion */
 .legend-row {
@@ -1390,17 +1376,11 @@ details.glossary .glossary-body p:last-child { margin-bottom: 0; }
   margin-bottom: 4px;
 }
 .legend-swatch--solid {
-  background: var(--text-mid);
+  background: var(--text-muted);
 }
 .legend-swatch--hatch {
-  background: repeating-linear-gradient(
-    45deg,
-    var(--surface),
-    var(--surface) 1px,
-    var(--text-mid) 1px,
-    var(--text-mid) 2.5px
-  );
-  border: 1px solid var(--text-mid);
+  background: var(--text-muted);
+  opacity: 0.4;
 }
 
 /* Year-grouped detail table */
@@ -2010,7 +1990,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .ballot-timeline .annotation {
   font-size: 10px;
-  fill: var(--text-mid);
+  fill: var(--text-muted);
 }
 .ballot-timeline .annotation--upcoming {
   fill: var(--c-buoy);
