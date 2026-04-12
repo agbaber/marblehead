@@ -919,7 +919,14 @@ table.data {
   border-collapse: separate;
   border-spacing: 0;
   font-size: 14px;
-  min-width: 420px;
+  min-width: 360px;
+}
+table.data caption {
+  caption-side: bottom;
+  text-align: left;
+  font-size: 11px;
+  color: var(--text-subtle);
+  padding: 6px 0 0;
 }
 table.data th {
   padding: 10px 12px;
