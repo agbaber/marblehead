@@ -1181,6 +1181,9 @@ svg.chart .data-line--thin    { stroke-width: 1.5; }
 svg.chart .data-line--dashed  { stroke-dasharray: 5 4; }
 svg.chart .data-line--dotted  { stroke-dasharray: 2 3; }
 
+svg.chart .data-bar {
+  fill: currentColor;
+}
 svg.chart .data-dot {
   fill: currentColor;
   stroke: none;
