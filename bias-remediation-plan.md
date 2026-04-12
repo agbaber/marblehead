@@ -28,8 +28,8 @@ Remediation actions for every finding in the [April 11, 2026 bias audit](bias-au
 
 **Remediation:**
 
-- **2a. Add a "what the override costs" visualization to the calculator page.** Show cumulative cost over 5 and 10 years for a median-value home at each tier, not just monthly. Include annual totals. Use the same visual language (bars, labeled amounts) as the no-override page.
-- **2b. Add fixed-income context to the calculator.** Note the median household income in Marblehead (from Census ACS data), and show the override cost as a percentage of median income at each tier. Note the number of households below a relevant income threshold. This gives the cost side the same human specificity that the cuts side has.
+- **2a. Add a "what the override costs" visualization to the calculator page.** **Done.** The calculator now includes a "Cumulative cost over time" section showing 5-year and 10-year total additional taxes for each tier, dynamically scaled to the entered home value.
+- **2b. Add fixed-income context to the calculator.** **Done.** An "Income context" section shows the Year 3 annual override cost as a percentage of household income at $50K (roughly 16th percentile), $75K (roughly 28th percentile), and $182,132 (Marblehead median). Source: US Census Bureau, ACS 2020-2024 5-year estimates. 8,289 total households; approximately 16% earn under $50K.
 - **2c. Add a "read next" link from the no-override page to the calculator.** **Done.** "What does the override cost me?" is now the first link in the no-override page's read-next section.
 
 ---
@@ -73,7 +73,7 @@ Remediation actions for every finding in the [April 11, 2026 bias audit](bias-au
 
 **Remediation:**
 
-- **6a. Elevate the spending and alternatives questions on the homepage.** Move "Where has Marblehead's money gone?" and the peer-town structural analysis higher in the homepage card order, so the spending-growth context appears before the override mechanics. The current order is: override, spending, cost drivers, peer comparison. Consider reordering to: spending, cost drivers, the override, peer comparison. This frames the override as one response to a spending situation rather than the central question.
+- **6a. Elevate the spending and alternatives questions on the homepage.** **Done.** Homepage section order is now: Spending, Cost drivers, The override, Peer comparison. The spending-growth context appears before the override mechanics, framing the override as one response to a spending situation. The "start here" flow and featured debate card remain at the top for new visitors.
 - **6b. Add a homepage card for the civic guide.** **Done.** "What can you do?" was repositioned in the override section to appear directly after the no-override budget card, before the case studies card.
 - **6c. Acknowledge the structural framing in the about page or bias audit.** (Done. Finding #6 in the bias audit names this directly.)
 
@@ -90,9 +90,9 @@ Remediation actions for every finding in the [April 11, 2026 bias audit](bias-au
 | 5 | 6b. Add civic guide homepage card | Small (HTML) | Done |
 | 6 | 1c. Add framing note to case studies page | Small (text) | Done |
 | 7 | 3a. Add counter-reading to history page | Medium (new section) | Done |
-| 8 | 6a. Reorder homepage sections | Medium (HTML restructure) | Open |
-| 9 | 2a. Add cumulative cost visualization to calculator | Medium (chart work) | Open |
-| 10 | 2b. Add fixed-income context to calculator | Medium (data + text) | Open |
+| 8 | 6a. Reorder homepage sections | Medium (HTML restructure) | Done |
+| 9 | 2a. Add cumulative cost visualization to calculator | Medium (chart work) | Done |
+| 10 | 2b. Add fixed-income context to calculator | Medium (data + text) | Done |
 | 11 | 4a. Seek on-the-record quotes from override opponents | Large (research) | Open |
 | 12 | 1a. Research and add counter-example towns | Large (research) | Open |
 | 13 | 4b. Strengthen voice-asymmetry disclosure | Small (text, fallback if 4a is insufficient) | Done |
@@ -103,4 +103,6 @@ Remediation actions for every finding in the [April 11, 2026 bias audit](bias-au
 
 This plan was generated on April 11, 2026 alongside the bias audit. Progress is tracked in the [GitHub repository](https://github.com/agbaber/marblehead).
 
-**April 12, 2026:** Items 1b, 1c, 2c, 3a, 3b, 4b, 5a, and 6b completed in [PR #157](https://github.com/agbaber/marblehead/pull/157). The history page takeaway was changed from `takeaway--pos` to `takeaway--neutral` and rewritten to present both readings of the FinCom arc. The "genuinely undecided" claim was replaced with a process commitment on about, debate, and question-2-trash pages. The case studies page received a framing note acknowledging what the studies do and don't show. The no-override page now links to the calculator as its first read-next suggestion. The voice-asymmetry disclosure (4b) was already present on the debate page from its initial build.
+**April 12, 2026 (round 1):** Items 1b, 1c, 2c, 3a, 3b, 4b, 5a, and 6b completed in [PR #157](https://github.com/agbaber/marblehead/pull/157). The history page takeaway was changed from `takeaway--pos` to `takeaway--neutral` and rewritten to present both readings of the FinCom arc. The "genuinely undecided" claim was replaced with a process commitment on about, debate, and question-2-trash pages. The case studies page received a framing note acknowledging what the studies do and don't show. The no-override page now links to the calculator as its first read-next suggestion. The voice-asymmetry disclosure (4b) was already present on the debate page from its initial build.
+
+**April 12, 2026 (round 2):** Items 2a, 2b, and 6a completed. The override calculator now shows cumulative 5-year and 10-year costs and override cost as a percentage of household income at three thresholds (Census ACS 2020-2024). The homepage section order was changed from override-first to spending-first. Two items remain open: 4a (on-the-record opponent quotes, requires Town Meeting transcript research) and 1a (counter-example towns, requires DOR dataset research).

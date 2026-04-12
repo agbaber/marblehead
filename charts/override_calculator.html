@@ -55,6 +55,35 @@ title: "What the Override Costs You"
   .cost-primary .cost-unit { font-size: 12px; }
   .cost-secondary { font-size: 11px; }
 }
+
+.cumul-table {
+  width: 100%; max-width: 600px; margin: 0 auto 28px;
+  border-collapse: collapse; font-variant-numeric: tabular-nums;
+}
+.cumul-table th, .cumul-table td {
+  padding: 10px 12px; text-align: right; font-size: 14px;
+  border-bottom: 1px solid var(--divider);
+}
+.cumul-table th { font-size: 12px; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.4px; font-weight: 600; }
+.cumul-table td:first-child, .cumul-table th:first-child { text-align: left; font-weight: 600; }
+.cumul-table .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+@media (max-width: 520px) {
+  .cumul-table th, .cumul-table td { padding: 8px 6px; font-size: 13px; }
+}
+
+.income-table {
+  width: 100%; max-width: 600px; margin: 0 auto 28px;
+  border-collapse: collapse; font-variant-numeric: tabular-nums;
+}
+.income-table th, .income-table td {
+  padding: 10px 12px; text-align: right; font-size: 14px;
+  border-bottom: 1px solid var(--divider);
+}
+.income-table th { font-size: 12px; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.4px; font-weight: 600; }
+.income-table td:first-child, .income-table th:first-child { text-align: left; font-weight: 600; }
+@media (max-width: 520px) {
+  .income-table th, .income-table td { padding: 8px 6px; font-size: 13px; }
+}
 </style>
 <h1 class="h-center">What the Override Costs You</h1>
   <p class="subtitle h-center">Enter your home's assessed value to see the cost year-by-year for each override tier.</p>
@@ -76,10 +105,20 @@ title: "What the Override Costs You"
   <div class="year-panel" id="year-2"></div>
   <div class="year-panel active" id="year-3"></div>
 
+  <h2 class="h-center">Cumulative cost over time</h2>
+  <p class="subtitle h-center">The override is permanent. These are the total additional taxes you would pay over 5 and 10 years.</p>
+  <div id="cumulative-panel"></div>
+
+  <h2 class="h-center">Income context</h2>
+  <p class="subtitle h-center">Override cost as a share of household income at the median and at lower thresholds.</p>
+  <div id="income-panel"></div>
+
   <div class="footnotes">
     <p><span class="footnote-marker"></span>Exact numbers from the Town Administrator's override presentation (April 8, 2026). Anchored to the average single-family assessed value of $1,291,507 and scaled linearly to your value.</p>
     <p><span class="footnote-marker"></span>Tiers are nested: Tier 2 includes Tier 1, Tier 3 includes Tiers 1 and 2. The highest passing tier sets the amount.</p>
     <p><span class="footnote-marker"></span>Year 2 and Year 3 are cumulative and permanent: each year's figure is your new total ongoing tax bill once that year's draw kicks in, not a one-time increase.</p>
+    <p><span class="footnote-marker"></span>Cumulative totals assume the Year 3 rate continues unchanged. Actual future rates may differ if the town adjusts spending or if a subsequent override passes.</p>
+    <p><span class="footnote-marker"></span>Median household income ($182,132) from US Census Bureau, ACS 2020-2024 5-year estimates for Marblehead town, Essex County, MA. 8,289 households total. Income thresholds shown ($50K, $75K) roughly correspond to the 16th and 28th percentiles of Marblehead's household income distribution.</p>
     <p><span class="footnote-marker"></span>Trash/recycling (Question 2) is not included above. You'll pay for it either way: as a levy increase (~$19/mo on a $1M home) or as a flat fee (~$23/mo per household) if the override fails. See <a href="../question-2-trash.html">Question 2: trash funding</a> for the full personal-cost calculator and context.</p>
   </div>
 
@@ -149,6 +188,53 @@ function saveStored(value) {
   try { localStorage.setItem(STORAGE_KEY, String(value)); } catch (e) {}
 }
 
+// Cumulative cost: Year 1 + Year 2 + (Year 3 * remaining years)
+function cumulativeCost(assessedValue, tier, totalYears) {
+  var y1 = annualForYear(assessedValue, tier, 1);
+  var y2 = annualForYear(assessedValue, tier, 2);
+  var y3 = annualForYear(assessedValue, tier, 3);
+  return y1 + y2 + y3 * (totalYears - 2);
+}
+
+function renderCumulativePanel(assessedValue) {
+  var header = '<tr><th></th><th>5-year total</th><th>10-year total</th></tr>';
+  var rows = [1, 2, 3].map(function(tier) {
+    var meta = TIER_META[tier];
+    var cum5 = cumulativeCost(assessedValue, tier, 5);
+    var cum10 = cumulativeCost(assessedValue, tier, 10);
+    return '<tr>' +
+      '<td><span class="swatch" style="background:' + meta.swatch + ';"></span>' + meta.label + '</td>' +
+      '<td>' + money(cum5) + '</td>' +
+      '<td>' + money(cum10) + '</td>' +
+    '</tr>';
+  }).join('');
+  return '<table class="cumul-table"><thead>' + header + '</thead><tbody>' + rows + '</tbody></table>';
+}
+
+// Income context: show Year 3 annual cost as % of income at three thresholds
+var INCOME_THRESHOLDS = [
+  { label: '$50,000 household', income: 50000, note: 'roughly 16th percentile in Marblehead' },
+  { label: '$75,000 household', income: 75000, note: 'roughly 28th percentile' },
+  { label: '$182,132 (median)', income: 182132, note: 'ACS 2020\u20132024' },
+];
+
+function pct(n) {
+  return (n * 100).toFixed(1) + '%';
+}
+
+function renderIncomePanel(assessedValue) {
+  var header = '<tr><th>Household income</th><th>Tier 1</th><th>Tier 2</th><th>Tier 3</th></tr>';
+  var rows = INCOME_THRESHOLDS.map(function(t) {
+    var cells = [1, 2, 3].map(function(tier) {
+      var annual = annualForYear(assessedValue, tier, 3);
+      return '<td>' + pct(annual / t.income) + '</td>';
+    }).join('');
+    return '<tr><td>' + t.label + '</td>' + cells + '</tr>';
+  }).join('');
+  return '<table class="income-table"><thead>' + header + '</thead><tbody>' + rows + '</tbody></table>' +
+    '<p class="source" style="text-align:center;">Percentage of household income consumed by the Year 3 (full phase-in) annual override cost at your assessed value. Source: US Census Bureau, ACS 2020\u20132024 5-year estimates, Marblehead town. 8,289 total households; approximately 16% earn under $50K and 28% earn under $75K.</p>';
+}
+
 function update() {
   const input = document.getElementById('assessed-value');
   const value = parseAssessed(input.value);
@@ -156,6 +242,8 @@ function update() {
   for (const year of [1, 2, 3]) {
     document.getElementById('year-' + year).innerHTML = renderYearPanel(value, year);
   }
+  document.getElementById('cumulative-panel').innerHTML = renderCumulativePanel(value);
+  document.getElementById('income-panel').innerHTML = renderIncomePanel(value);
 }
 
 const input = document.getElementById('assessed-value');
