@@ -1,0 +1,453 @@
+---
+title: "Inside school staffing"
+og_title: "Inside school staffing"
+og_description: "What 430 school positions actually are, how many are legally mandated, how Marblehead compares to peer towns by role, and what options exist."
+og_url: https://marbleheaddata.org/inside-school-staffing.html
+---
+<style>
+  .mandate-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0 16px; }
+  .mandate-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--text); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .mandate-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); }
+  .mandate-table tr:last-child td { border-bottom: none; font-weight: 600; }
+  .mandate-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.3px; }
+  .mandate-tag--req { background: color-mix(in srgb, var(--c-buoy) 15%, transparent); color: var(--c-buoy); }
+  .mandate-tag--part { background: color-mix(in srgb, var(--c-brass) 15%, transparent); color: var(--c-brass); }
+  .mandate-tag--disc { background: color-mix(in srgb, var(--c-teal) 15%, transparent); color: var(--c-teal); }
+  .peer-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0 16px; }
+  .peer-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--text); font-size: 12px; }
+  .peer-table td { padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  .peer-table td:not(:first-child), .peer-table th:not(:first-child) { text-align: right; }
+  .peer-table tr:last-child td { font-weight: 600; border-bottom: none; }
+  .peer-table .peer-highlight { background: color-mix(in srgb, var(--c-navy) 6%, transparent); }
+  @media (max-width: 600px) {
+    .mandate-table, .peer-table { font-size: 13px; }
+    .mandate-table td, .mandate-table th, .peer-table td, .peer-table th { padding: 6px 6px; }
+  }
+</style>
+<h1>Inside school staffing</h1>
+
+  <div class="key-stats">
+    <div class="key-stat">
+      <div class="key-stat-value">430 FTE</div>
+      <div class="key-stat-label">School staff, SY2025&ndash;26</div>
+    </div>
+    <div class="key-stat">
+      <div class="key-stat-value">5.6</div>
+      <div class="key-stat-label">Students per staff member</div>
+    </div>
+    <div class="key-stat">
+      <div class="key-stat-value">~60&ndash;65%</div>
+      <div class="key-stat-label">Mandate-driven positions</div>
+    </div>
+    <div class="key-stat">
+      <div class="key-stat-value">7.8</div>
+      <div class="key-stat-label">Students per staff, Melrose</div>
+    </div>
+  </div>
+
+  <p>Marblehead's school staffing grew while enrollment fell. The <a href="charts/enrollment_vs_staffing.html">enrollment vs. staffing chart</a> shows the headline numbers. This page goes one level deeper: what those positions actually are, which ones are legally required, how the mix compares to peer towns, and what options exist.</p>
+
+  <nav class="page-toc" aria-label="On this page">
+    <span class="page-toc-label">On this page</span>
+    <a href="#what-the-positions-are">What the positions are</a>
+    <a href="#mandate-vs-discretionary">Mandated vs. discretionary</a>
+    <a href="#peer-comparison">How Marblehead compares to peers</a>
+    <a href="#the-fy23-mystery">The FY23 data jump</a>
+    <a href="#options">What are the options</a>
+  </nav>
+
+  <!-- Section 1: What the positions are -->
+  <h2 id="what-the-positions-are">What the positions are</h2>
+
+  <p>The ACFR reports a single "education FTE" number (537 in FY24). The state Department of Elementary and Secondary Education (DESE) breaks school staff into role categories. For SY2025&ndash;26, DESE reports 430.2 total school staff FTE in Marblehead, distributed as follows:<sup class="cite" data-href="data/dese_peer_staffing_SY2026.csv" data-source="DESE EPIMS (Education Personnel Information Management System), SY2025-26, via E2C Hub Socrata API (educationtocareer.data.mass.gov/resource/j5ue-xkfn.json)"></sup></p>
+
+  <div class="chart-wrapper">
+    <svg class="chart" viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizontal bar chart showing Marblehead school staff by role category. Teachers (core) 169.0 is the largest bar, followed by Tutors/paras 87.6, co-teachers 29.3, office/clerical 27.3, administrators 26.0, teachers (support) 26.4, SPED-related 19.3, counselors 12.0, instructional support 11.1, medical 6.8, instructional coaches 5.5.">
+
+      <!-- Category labels and bars -->
+      <!-- Scale: 0 at x=200, max bar width = 480px for 169 FTE. Factor: 480/169 = 2.84px per FTE -->
+
+      <!-- Teachers (core): 169.0 -->
+      <text class="tick-label" x="195" y="22" text-anchor="end" font-size="12">Teachers (core)</text>
+      <rect class="s-marblehead" x="200" y="12" width="480" height="14" rx="2" fill="currentColor" opacity="0.75"/>
+      <text class="tick-label" x="685" y="23" font-size="11">169.0</text>
+
+      <!-- Paraprofessionals + Tutors combined: 87.6 -->
+      <text class="tick-label" x="195" y="44" text-anchor="end" font-size="12">Paras + tutors</text>
+      <rect class="s-marblehead" x="200" y="34" width="249" height="14" rx="2" fill="currentColor" opacity="0.75"/>
+      <text class="tick-label" x="454" y="45" font-size="11">87.6</text>
+
+      <!-- Co-teachers: 29.3 -->
+      <text class="tick-label" x="195" y="66" text-anchor="end" font-size="12">Co-teachers</text>
+      <rect class="s-marblehead" x="200" y="56" width="83" height="14" rx="2" fill="currentColor" opacity="0.55"/>
+      <text class="tick-label" x="288" y="67" font-size="11">29.3</text>
+
+      <!-- Office/clerical: 27.3 -->
+      <text class="tick-label" x="195" y="88" text-anchor="end" font-size="12">Office/clerical</text>
+      <rect class="s-tier-1" x="200" y="78" width="78" height="14" rx="2" fill="currentColor" opacity="0.65"/>
+      <text class="tick-label" x="283" y="89" font-size="11">27.3</text>
+
+      <!-- Teachers (support content): 26.4 -->
+      <text class="tick-label" x="195" y="110" text-anchor="end" font-size="12">Teachers (support)</text>
+      <rect class="s-marblehead" x="200" y="100" width="75" height="14" rx="2" fill="currentColor" opacity="0.55"/>
+      <text class="tick-label" x="280" y="111" font-size="11">26.4</text>
+
+      <!-- Administrators: 26.0 -->
+      <text class="tick-label" x="195" y="132" text-anchor="end" font-size="12">Administrators</text>
+      <rect class="s-tier-1" x="200" y="122" width="74" height="14" rx="2" fill="currentColor" opacity="0.65"/>
+      <text class="tick-label" x="279" y="133" font-size="11">26.0</text>
+
+      <!-- SPED related staff: 19.3 -->
+      <text class="tick-label" x="195" y="154" text-anchor="end" font-size="12">SPED related staff</text>
+      <rect class="s-buoy" x="200" y="144" width="55" height="14" rx="2" fill="currentColor" opacity="0.65"/>
+      <text class="tick-label" x="260" y="155" font-size="11">19.3</text>
+
+      <!-- School counselors: 12.0 -->
+      <text class="tick-label" x="195" y="176" text-anchor="end" font-size="12">School counselors</text>
+      <rect class="s-tier-1" x="200" y="166" width="34" height="14" rx="2" fill="currentColor" opacity="0.65"/>
+      <text class="tick-label" x="239" y="177" font-size="11">12.0</text>
+
+      <!-- Instructional support + SPED shared: 11.1 -->
+      <text class="tick-label" x="195" y="198" text-anchor="end" font-size="12">Instructional support</text>
+      <rect class="s-tier-1" x="200" y="188" width="32" height="14" rx="2" fill="currentColor" opacity="0.65"/>
+      <text class="tick-label" x="237" y="199" font-size="11">11.1</text>
+
+      <!-- Medical/health: 6.8 -->
+      <text class="tick-label" x="195" y="220" text-anchor="end" font-size="12">Medical/health</text>
+      <rect class="s-buoy" x="200" y="210" width="19" height="14" rx="2" fill="currentColor" opacity="0.65"/>
+      <text class="tick-label" x="224" y="221" font-size="11">6.8</text>
+
+      <!-- Instructional coaches: 5.5 -->
+      <text class="tick-label" x="195" y="242" text-anchor="end" font-size="12">Instructional coaches</text>
+      <rect class="s-tier-1" x="200" y="232" width="16" height="14" rx="2" fill="currentColor" opacity="0.65"/>
+      <text class="tick-label" x="221" y="243" font-size="11">5.5</text>
+    </svg>
+  </div>
+
+  <p class="caption">Marblehead school staff by DESE role category, SY2025&ndash;26. "Paras + tutors" combines 14.1 paraprofessional FTE and 73.5 tutor FTE; see data note below on this classification. "Teachers (support)" includes specialists like reading, math, and ELL teachers. Some categories overlap with SPED mandates.</p>
+
+  <div class="takeaway takeaway--neutral">
+    <p><strong>Data note: Marblehead's "tutor" classification.</strong> Marblehead reports 73.5 "tutor" FTE and only 14.1 "paraprofessional" FTE in DESE. Every peer district does the opposite (Melrose: 121.6 paras, 7.8 tutors). This appears to be a classification difference in how Marblehead codes classroom aides in the state reporting system, not a real staffing difference. The combined para + tutor totals are comparable across districts.</p>
+  </div>
+
+  <!-- Section 2: Mandate vs discretionary -->
+  <h2 id="mandate-vs-discretionary">Which positions are legally mandated?</h2>
+
+  <p>Not all school staff are the same kind of expense. Some positions are required by federal or state law regardless of enrollment. Others are at the district's discretion. The following table classifies the ~58 non-teaching positions added between FY2015 and FY2024 by legal status.</p>
+
+  <table class="mandate-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Est. FTE growth</th>
+        <th>Key law</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SPED paraprofessionals</td>
+        <td><span class="mandate-tag mandate-tag--req">Required</span></td>
+        <td>15&ndash;20</td>
+        <td>IDEA; IEPs; 603 CMR 28.06</td>
+      </tr>
+      <tr>
+        <td>SPED teachers/specialists</td>
+        <td><span class="mandate-tag mandate-tag--req">Required</span></td>
+        <td>10&ndash;15</td>
+        <td>IDEA; 603 CMR 28.00</td>
+      </tr>
+      <tr>
+        <td>Counselors/psychologists</td>
+        <td><span class="mandate-tag mandate-tag--part">Partial</span></td>
+        <td>5&ndash;8</td>
+        <td>IDEA evals mandated; ratios not</td>
+      </tr>
+      <tr>
+        <td>ELL/ESL teachers</td>
+        <td><span class="mandate-tag mandate-tag--req">Required</span></td>
+        <td>2&ndash;4</td>
+        <td>MGL 71A; LOOK Act; Title III</td>
+      </tr>
+      <tr>
+        <td>SPED administration</td>
+        <td><span class="mandate-tag mandate-tag--req">Required</span></td>
+        <td>1&ndash;3</td>
+        <td>603 CMR 28.03</td>
+      </tr>
+      <tr>
+        <td>School nurses</td>
+        <td><span class="mandate-tag mandate-tag--req">Required</span></td>
+        <td>1&ndash;2</td>
+        <td>MGL 71 s.53</td>
+      </tr>
+      <tr>
+        <td>Compliance (Title IX, 504)</td>
+        <td><span class="mandate-tag mandate-tag--req">Required</span></td>
+        <td>0.5&ndash;1</td>
+        <td>Title IX; Section 504</td>
+      </tr>
+      <tr>
+        <td>Technology staff</td>
+        <td><span class="mandate-tag mandate-tag--disc">Discretionary</span></td>
+        <td>2&ndash;4</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Curriculum/instructional coaches</td>
+        <td><span class="mandate-tag mandate-tag--disc">Discretionary</span></td>
+        <td>2&ndash;4</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Other administrators</td>
+        <td><span class="mandate-tag mandate-tag--disc">Discretionary</span></td>
+        <td>3&ndash;5</td>
+        <td>Principal required; rest not</td>
+      </tr>
+      <tr>
+        <td><strong>Total estimated</strong></td>
+        <td></td>
+        <td><strong>~42&ndash;66</strong></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="caption">Estimated contribution of each staff category to the ~58 non-teaching positions added between FY2015 and FY2024. Categories classified by federal and Massachusetts law. "Required" means a specific statute or regulation mandates the position or staffing ratio. "Partial" means some functions are mandated (e.g., IDEA evaluations) but staffing levels are at district discretion. "Discretionary" means no law requires the position.</p>
+
+  <p>The largest driver is special education. Marblehead's high-needs student population grew from 27% to 32% of enrollment between FY2015 and FY2024.<sup class="cite" data-href="https://marbleheadcurrent.org/2026/02/19/guest-column-understanding-trends-in-our-schools-where-weve-come-from-and-the-choices-ahead/" data-source="Guest column in the Marblehead Current, Feb 2026, citing DESE data"></sup> Students with autism increased 34%, and students with neurological or health disabilities increased 48%. Each IEP specifying a 1:1 aide generates a full FTE that the district must provide under IDEA and Massachusetts 603 CMR 28.</p>
+
+  <div class="takeaway takeaway--neutral">
+    <p><strong>Mandated does not mean beyond scrutiny.</strong> IEPs are developed with district participation. The mandate is to deliver the services in the IEP, but the service delivery model (inclusion vs. substantially separate, in-district vs. out-of-district) is a district decision that affects both staffing levels and cost. Massachusetts is a "maximum feasible benefit" state, meaning IEPs here tend to require more services than in states that follow only the federal floor.</p>
+  </div>
+
+  <!-- Section 3: Peer comparison -->
+  <h2 id="peer-comparison">How Marblehead compares to peers</h2>
+
+  <p>The existing <a href="charts/enrollment_vs_staffing.html">enrollment vs. staffing</a> chart compares student-to-teacher ratios across four towns. The DESE EPIMS dataset allows a broader comparison: all staff, broken out by role.<sup class="cite" data-href="data/dese_peer_staffing_SY2026.csv" data-source="DESE EPIMS SY2025-26 via E2C Hub Socrata API"></sup></p>
+
+  <h3>Overall staffing ratios</h3>
+
+  <table class="peer-table">
+    <thead>
+      <tr>
+        <th>District</th>
+        <th>Enrollment</th>
+        <th>Total FTE</th>
+        <th>Students per FTE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="peer-highlight">
+        <td>Marblehead</td>
+        <td>2,389</td>
+        <td>430.2</td>
+        <td>5.6</td>
+      </tr>
+      <tr>
+        <td>Stoneham</td>
+        <td>2,296</td>
+        <td>395.9</td>
+        <td>5.8</td>
+      </tr>
+      <tr>
+        <td>Swampscott</td>
+        <td>2,083</td>
+        <td>316.6</td>
+        <td>6.6</td>
+      </tr>
+      <tr>
+        <td>Melrose</td>
+        <td>3,730</td>
+        <td>480.3</td>
+        <td>7.8</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="caption">Students per total school FTE, SY2025&ndash;26. Lower numbers indicate more staff per student. Marblehead has the most staff-intensive ratio of the four districts.</p>
+
+  <h3>Staffing by role, four towns</h3>
+
+  <div class="chart-wrapper">
+    <svg class="chart" viewBox="0 0 720 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grouped horizontal bar chart comparing Marblehead, Melrose, Swampscott, and Stoneham school staffing per 100 students across role categories.">
+
+      <!-- Title -->
+      <text class="annotation" x="360" y="14" text-anchor="middle" font-size="12" font-weight="600">Staff FTE per 100 students</text>
+
+      <!-- Legend -->
+      <rect class="s-marblehead" x="180" y="24" width="10" height="10" rx="2" fill="currentColor"/>
+      <text class="tick-label" x="194" y="33" font-size="10">Marblehead</text>
+      <rect class="s-melrose" x="270" y="24" width="10" height="10" rx="2" fill="currentColor"/>
+      <text class="tick-label" x="284" y="33" font-size="10">Melrose</text>
+      <rect class="s-swampscott" x="340" y="24" width="10" height="10" rx="2" fill="currentColor"/>
+      <text class="tick-label" x="354" y="33" font-size="10">Swampscott</text>
+      <rect class="s-stoneham" x="425" y="24" width="10" height="10" rx="2" fill="currentColor"/>
+      <text class="tick-label" x="439" y="33" font-size="10">Stoneham</text>
+
+      <!-- Scale: x=160 is 0, max width 520 for value ~8. Factor = 65px per 1.0 -->
+      <!-- Grid lines -->
+      <line class="grid-minor" x1="225" y1="42" x2="225" y2="295"/>
+      <line class="grid-minor" x1="290" y1="42" x2="290" y2="295"/>
+      <line class="grid-minor" x1="355" y1="42" x2="355" y2="295"/>
+      <line class="grid-minor" x1="420" y1="42" x2="420" y2="295"/>
+      <line class="grid-minor" x1="485" y1="42" x2="485" y2="295"/>
+      <line class="grid-minor" x1="550" y1="42" x2="550" y2="295"/>
+      <text class="tick-label" x="160" y="305" text-anchor="middle" font-size="10">0</text>
+      <text class="tick-label" x="225" y="305" text-anchor="middle" font-size="10">1</text>
+      <text class="tick-label" x="290" y="305" text-anchor="middle" font-size="10">2</text>
+      <text class="tick-label" x="355" y="305" text-anchor="middle" font-size="10">3</text>
+      <text class="tick-label" x="420" y="305" text-anchor="middle" font-size="10">4</text>
+      <text class="tick-label" x="485" y="305" text-anchor="middle" font-size="10">5</text>
+      <text class="tick-label" x="550" y="305" text-anchor="middle" font-size="10">6</text>
+
+      <!-- Axis -->
+      <line class="axis-base" x1="160" y1="295" x2="580" y2="295"/>
+
+      <!-- Teachers (core): Mhd 7.07, Mel 6.08, Sw 6.41, St 7.93 -->
+      <text class="tick-label" x="155" y="60" text-anchor="end" font-size="11">Teachers</text>
+      <rect class="s-marblehead"  x="160" y="48"  width="460" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-melrose"     x="160" y="53"  width="395" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-swampscott"  x="160" y="58"  width="417" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-stoneham"    x="160" y="63"  width="515" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+
+      <!-- Paras + tutors: Mhd 3.67, Mel 3.47, Sw 2.92, St 3.08 -->
+      <text class="tick-label" x="155" y="90" text-anchor="end" font-size="11">Paras + tutors</text>
+      <rect class="s-marblehead"  x="160" y="78"  width="238" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-melrose"     x="160" y="83"  width="225" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-swampscott"  x="160" y="88"  width="190" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-stoneham"    x="160" y="93"  width="200" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+
+      <!-- Office/clerical: Mhd 1.14, Mel 0.43, Sw 0.90, St 0.85 -->
+      <text class="tick-label" x="155" y="120" text-anchor="end" font-size="11">Office/clerical</text>
+      <rect class="s-marblehead"  x="160" y="108" width="74" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-melrose"     x="160" y="113" width="28" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-swampscott"  x="160" y="118" width="59" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-stoneham"    x="160" y="123" width="55" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+
+      <!-- Administrators: Mhd 1.09, Mel 0.77, Sw 0.97, St 0.86 -->
+      <text class="tick-label" x="155" y="150" text-anchor="end" font-size="11">Administrators</text>
+      <rect class="s-marblehead"  x="160" y="138" width="71" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-melrose"     x="160" y="143" width="50" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-swampscott"  x="160" y="148" width="63" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-stoneham"    x="160" y="153" width="56" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+
+      <!-- SPED related: Mhd 0.81, Mel 0.55, Sw 0.48, St 2.12 -->
+      <text class="tick-label" x="155" y="180" text-anchor="end" font-size="11">SPED related</text>
+      <rect class="s-marblehead"  x="160" y="168" width="53" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-melrose"     x="160" y="173" width="36" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-swampscott"  x="160" y="178" width="31" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-stoneham"    x="160" y="183" width="138" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+
+      <!-- Counselors: Mhd 0.50, Mel 0.21, Sw 0.27, St 0.30 -->
+      <text class="tick-label" x="155" y="210" text-anchor="end" font-size="11">Counselors</text>
+      <rect class="s-marblehead"  x="160" y="198" width="33" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-melrose"     x="160" y="203" width="14" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-swampscott"  x="160" y="208" width="18" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-stoneham"    x="160" y="213" width="20" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+
+      <!-- Medical: Mhd 0.28, Mel 0.03, Sw 0.19, St 0.35 -->
+      <text class="tick-label" x="155" y="240" text-anchor="end" font-size="11">Medical/health</text>
+      <rect class="s-marblehead"  x="160" y="228" width="18" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-melrose"     x="160" y="233" width="2"  height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-swampscott"  x="160" y="238" width="12" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-stoneham"    x="160" y="243" width="23" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+
+      <!-- Instructional coaches: Mhd 0.23, Mel 0.04, Sw 0.07, St 0.03 -->
+      <text class="tick-label" x="155" y="270" text-anchor="end" font-size="11">Instr. coaches</text>
+      <rect class="s-marblehead"  x="160" y="258" width="15" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-melrose"     x="160" y="263" width="3"  height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-swampscott"  x="160" y="268" width="5"  height="4" rx="1" fill="currentColor" opacity="0.8"/>
+      <rect class="s-stoneham"    x="160" y="273" width="2"  height="4" rx="1" fill="currentColor" opacity="0.8"/>
+
+    </svg>
+  </div>
+
+  <p class="caption">Staff FTE per 100 students by role category, SY2025&ndash;26. Normalizing by enrollment allows comparison across districts of different sizes. Marblehead's paras + tutors are combined (see data note above). Stoneham's SPED related staff is an outlier (2.12 per 100 students vs. 0.48&ndash;0.81 for other towns). Melrose's low medical FTE (0.03) may reflect different reporting rather than fewer nurses.</p>
+
+  <h3>Where Marblehead stands out</h3>
+
+  <p>Compared to the average of three peers, Marblehead runs higher in several non-teaching categories:</p>
+
+  <div class="stat-compare">
+    <div class="stat-row">
+      <div class="stat-label">Counselors per 100 students</div>
+      <div class="stat-bar"><div class="stat-fill stat-fill--pos" style="width: 80%"></div></div>
+      <div class="stat-value">0.50<span>peer avg: 0.26</span></div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Instr. coaches per 100 students</div>
+      <div class="stat-bar"><div class="stat-fill stat-fill--pos" style="width: 75%"></div></div>
+      <div class="stat-value">0.23<span>peer avg: 0.05</span></div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Office/clerical per 100 students</div>
+      <div class="stat-bar"><div class="stat-fill stat-fill--pos" style="width: 55%"></div></div>
+      <div class="stat-value">1.14<span>peer avg: 0.73</span></div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Admin per 100 students</div>
+      <div class="stat-bar"><div class="stat-fill stat-fill--pos" style="width: 40%"></div></div>
+      <div class="stat-value">1.09<span>peer avg: 0.87</span></div>
+    </div>
+  </div>
+
+  <p>These are not all discretionary gaps. Some counselor and medical positions are driven by SPED caseloads. And some peer districts may be understaffed rather than Marblehead being overstaffed. The comparison shows where Marblehead is an outlier, not where it is necessarily wrong.</p>
+
+  <!-- Section 4: The FY23 mystery -->
+  <h2 id="the-fy23-mystery">The FY23 data jump</h2>
+
+  <p>The ACFR shows education FTE jumping from 483 to 537 between FY22 and FY23, an increase of 54 positions in a single year. This jump has been flagged on the <a href="charts/enrollment_vs_staffing.html">enrollment vs. staffing</a> chart as unexplained.</p>
+
+  <p>Three pieces of evidence now suggest the jump is a <strong>counting methodology change</strong>, not 54 actual new hires:</p>
+
+  <ol>
+    <li><strong>DESE teacher FTE barely moved.</strong> DESE reports 250.0 teacher FTE in SY2022&ndash;23 and 245.8 in SY2023&ndash;24. If 54 real positions were added, teacher FTE would have shown more movement.</li>
+    <li><strong>The ACFR and DESE totals diverge sharply.</strong> The ACFR reports 537 education FTE; DESE reports roughly 445 total school staff. The ACFR likely uses a broader definition (possibly including grant-funded, stipend, or seasonal positions that were previously excluded).</li>
+    <li><strong>The number held exactly at 537.0 for two years.</strong> FY23 and FY24 both report 537.0 education FTE in the ACFR, which is unusual for a "real" count and suggests a rounded or methodological figure.</li>
+  </ol>
+
+  <p>The FY25 ACFR, expected in late 2026, will help resolve this. If the number drops significantly, that supports the ESSER theory (temporary positions that expired with federal funding in September 2024). If it holds at ~537, that supports a permanent methodology change.</p>
+
+  <div class="takeaway takeaway--neutral">
+    <p><strong>Meanwhile, DESE data shows staffing declining.</strong> Total DESE school staff fell from ~445 (2023) to 430.2 (SY2025&ndash;26). Licensed teaching positions fell from 263.9 (SY2016&ndash;17) to 215.4 (proposed SY2025&ndash;26), a 19% drop that closely mirrors the 19% enrollment decline. The district has also cut approximately 50 positions over FY25&ndash;FY27 through layoffs, unfilled vacancies, and stipend reductions.<sup class="cite" data-href="https://www.marbleheadindependent.com/concerns-over-staffing-cuts-shape-marblehead-school-budget-hearing/" data-source="Marblehead Independent, 'Concerns over staffing cuts shape budget hearing'"></sup></p>
+  </div>
+
+  <!-- Section 5: Options -->
+  <h2 id="options">What are the options?</h2>
+
+  <p>The decomposition above suggests the discretionary slice of staffing growth is roughly 7&ndash;13 positions. That limits how much can be cut without hitting mandate-driven roles. But other levers exist.</p>
+
+  <h3>Shared services through collaboratives</h3>
+
+  <p>Marblehead is a member of the <strong>Northshore Education Consortium (NEC)</strong>, one of 24 DESE-recognized educational collaboratives in Massachusetts. NEC was founded in 1975 and has 21 member districts including Swampscott. It operates six schools and two transition programs, primarily for special education placements.<sup class="cite" data-href="https://www.nsedu.org/history-mission/" data-source="Northshore Education Consortium, History and Mission"></sup></p>
+
+  <p>However, NEC raised tuitions an average of 9.4% for FY2027, with the highest-tier programs climbing 12%. This unanticipated cost increase forced the district to cut deeper than planned, pushing total FY2027 position reductions from 14.75 to 18.25 FTEs.<sup class="cite" data-href="https://www.marbleheadindependent.com/marbleheads-128m-budget-grows-but-the-squeeze-inside-it-tightens/" data-source="Marblehead Independent, budget reporting"></sup></p>
+
+  <h3>Reducing out-of-district SPED placements</h3>
+
+  <p>Marblehead spends roughly $4.6 million per year on out-of-district special education placements. Massachusetts sends 6.1% of students with disabilities out-of-district, nearly triple the 2.3% national rate. Private placements can cost $75,000&ndash;$150,000+ per student including transportation. Bringing even 2&ndash;3 students back from private placements into collaborative or in-district programs could save $150,000&ndash;$450,000 annually, but only if appropriate programs exist to meet each student's IEP requirements.</p>
+
+  <h3>Shared transportation</h3>
+
+  <p>A February 2026 Inspector General report found that special education transportation costs average $13,825 per student statewide, compared to $1,045 for general education. The report identified educational collaboratives as the "most logical structures" for regional transportation. Pilot programs through LABBB Collaborative and the Southeast Transportation Network saved $54,000&ndash;$92,000, but the Inspector General noted these were "never scaled."<sup class="cite" data-href="https://www.mass.gov/doc/special-education-transportation-study/download" data-source="MA Inspector General, Special Education Transportation Study, Feb 2026"></sup></p>
+
+  <h3>Cooperative purchasing and shared back-office</h3>
+
+  <p>Some collaboratives run purchasing cooperatives for food service, supplies, and fuel. UMass has launched a shared services initiative for HR, payroll, and procurement projected to save $16 million in its first phase. No comparable K-12 model exists in Massachusetts yet, though the state's Efficiency and Regionalization grant program has funded planning studies, including a $100,000 Regional IT grant involving seven North Shore communities (not including Marblehead).</p>
+
+  <h3>What these options share</h3>
+
+  <p>None of these approaches produce savings fast enough to close a structural budget gap in the current fiscal year. They are cost-growth reducers over a 3&ndash;5 year horizon, not substitutes for override revenue or immediate budget cuts. Their value is in bending the cost curve so the same pressure does not build up again.</p>
+
+  <div class="notes">
+    <p><strong>DESE staffing data</strong> from the EPIMS (Education Personnel Information Management System), SY2025&ndash;26, accessed via the E2C Hub Socrata API at <code>educationtocareer.data.mass.gov/resource/j5ue-xkfn.json</code>. Raw data in <code>data/dese_peer_staffing_SY2026.csv</code>. Data is reported as of October 1 of each school year.</p>
+    <p><strong>Mandate classifications</strong> based on IDEA (20 U.S.C. 1400 et seq.), Massachusetts 603 CMR 28.00 (Special Education), 603 CMR 14.00 (English Learners), MGL Chapter 71 Section 53 (school nurses), MGL Chapter 71A (English Language Education), the LOOK Act of 2017, Title IX (34 CFR 106.8), Section 504 (29 U.S.C. 794), and the Student Opportunity Act (Chapter 132 of the Acts of 2019). Estimates of FTE growth by category are approximate, based on statewide trends and publicly available data; the district does not publish position-by-position breakdowns by mandate status.</p>
+    <p><strong>High-needs population data</strong> (27% to 32% growth, autism +34%, neurological +48%) from a February 2026 guest column in the Marblehead Current citing DESE data.</p>
+    <p><strong>ACFR vs. DESE totals differ</strong> because the ACFR "Full-time Equivalent Town Employees by Function" uses a broader definition that may include positions not reported in DESE's EPIMS system (e.g., custodial staff, cafeteria workers, seasonal or grant-funded positions). The two sources should not be directly compared as if they measure the same thing.</p>
+    <p><strong>Shared services information</strong> from the Northshore Education Consortium (nsedu.org), Massachusetts Organization of Educational Collaboratives (moecnet.org), the MA Inspector General Special Education Transportation Study (Feb 2026), and the Efficiency and Regionalization Grant Program (mass.gov). NEC tuition increase from Marblehead Independent budget reporting.</p>
+  </div>
+
+  <a class="btn-link" href="charts/enrollment_vs_staffing.html">Enrollment vs. staffing chart &rarr;</a>
+  <a class="btn-link" href="where-has-the-money-gone.html">Where has the money gone? &rarr;</a>
