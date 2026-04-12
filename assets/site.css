@@ -2927,3 +2927,121 @@ sup.cite a:target {
   .waterfall-label,
   .waterfall-value { font-size: 11px; }
 }
+
+/* ==========================================================================
+   Glossary tooltips (abbr)
+   ========================================================================== */
+
+abbr.g {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--text-faint);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  cursor: help;
+  position: relative;
+}
+abbr.g[title]:hover,
+abbr.g[title]:focus {
+  text-decoration-color: var(--link);
+}
+/* Tooltip on hover/focus — pure CSS, no JS */
+abbr.g::after {
+  content: attr(title);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: var(--bg);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 10;
+}
+abbr.g:hover::after,
+abbr.g:focus::after {
+  opacity: 1;
+}
+/* On mobile, tooltips go below to avoid clipping at top */
+@media (max-width: 600px) {
+  abbr.g::after {
+    bottom: auto;
+    top: calc(100% + 4px);
+    font-size: 11px;
+    max-width: 220px;
+    white-space: normal;
+  }
+}
+
+/* ==========================================================================
+   Start-here reading path (homepage)
+   ========================================================================== */
+
+.start-here {
+  background: color-mix(in srgb, var(--c-teal) 5%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--c-teal) 20%, var(--border));
+  border-radius: var(--radius-md);
+  padding: 20px 22px 18px;
+  margin: 0 0 28px;
+}
+.start-here-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--c-teal);
+  margin-bottom: 6px;
+}
+.start-here p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0 0 12px;
+}
+.start-here-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step;
+}
+.start-here-steps li {
+  counter-increment: step;
+  padding: 8px 0;
+  border-top: 1px solid var(--divider);
+  font-size: 14px;
+}
+.start-here-steps li::before {
+  content: counter(step) ".";
+  font-weight: 700;
+  color: var(--c-teal);
+  margin-right: 8px;
+}
+.start-here-steps a {
+  font-weight: 600;
+}
+.start-here-steps .start-here-desc {
+  color: var(--text-subtle);
+  font-size: 13px;
+  display: block;
+  margin: 2px 0 0 22px;
+}
+
+/* ==========================================================================
+   Page lead-in (plain-English opener for data pages)
+   ========================================================================== */
+
+.page-lead {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0 0 20px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid var(--divider);
+}

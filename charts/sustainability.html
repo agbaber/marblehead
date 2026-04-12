@@ -2,215 +2,264 @@
 title: "General Fund Revenue, Free Cash, and Expenses"
 ---
 <style>
-  .chart-desktop { display: block; }
-  .chart-mobile  { display: none; }
-  @media (max-width: 880px) {
-    .chart-desktop { display: none; }
-    .chart-mobile  { display: block; }
-  }
+  .chart-view { display: none; }
+  .chart-view.active { display: inline; }
+  .legend .legend-tier { display: none; }
+  .legend .legend-tier.active { display: inline-flex; }
+  .view-caption { display: none; }
+  .view-caption.active { display: block; }
 </style>
+<h1 class="h-center">General Fund: revenue vs. expenses</h1>
+  <p class="subtitle h-center">FY15&ndash;FY24 are ACFR actuals. FY25&ndash;FY27 from the January 2026 State of the Town. FY28&ndash;FY30 are illustrative projections. Use the tabs to compare override scenarios.</p>
 
-<h1 class="h-center">General Fund Revenue, Free Cash, and Expenses</h1>
-  <p class="subtitle h-center">Annual general fund revenue (base plus free cash) compared to expenditures, FY15&ndash;FY30. FY15&ndash;FY24 are ACFR actuals. FY25&ndash;FY30 are projected, with FY28&ndash;FY30 showing each override tier under the phased rollout.</p>
+  <div class="tabs">
+    <button class="tab active" data-view="none">No override</button>
+    <button class="tab" data-view="tier1">Tier 1 ($9M)</button>
+    <button class="tab" data-view="tier2">Tier 2 ($12M)</button>
+    <button class="tab" data-view="tier3">Tier 3 ($15M)</button>
+  </div>
 
   <div class="legend">
     <div class="legend-item s-revenue"><span class="legend-swatch"></span><span class="legend-text">Base revenue</span></div>
     <div class="legend-item s-swampscott"><span class="legend-swatch"></span><span class="legend-text">Free cash drawn</span></div>
-    <div class="legend-item s-tier-1"><span class="legend-swatch"></span><span class="legend-text">Tier 1 ($9M)</span></div>
-    <div class="legend-item s-tier-2"><span class="legend-swatch"></span><span class="legend-text">Tier 2 ($12M)</span></div>
-    <div class="legend-item s-tier-3"><span class="legend-swatch"></span><span class="legend-text">Tier 3 ($15M)</span></div>
+    <div class="legend-item s-tier-1 legend-tier" id="legend-t1"><span class="legend-swatch"></span><span class="legend-text">Tier 1 override</span></div>
+    <div class="legend-item s-tier-2 legend-tier" id="legend-t2"><span class="legend-swatch"></span><span class="legend-text">Tier 2 override</span></div>
+    <div class="legend-item s-tier-3 legend-tier" id="legend-t3"><span class="legend-swatch"></span><span class="legend-text">Tier 3 override</span></div>
     <div class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">Total expenditures</span></div>
   </div>
 
-  <!-- ====== DESKTOP: unified FY15-FY30 chart ====== -->
-  <div class="chart-wrapper chart-desktop">
-    <svg class="chart" viewBox="0 0 1050 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wide chart combining the FY15 to FY27 historical arc with FY28 to FY30 override tier comparison. Historical bars show base revenue plus free cash drawn. From FY28 onward, grouped bars compare no override, Tier 1, Tier 2, and Tier 3 phased scenarios. The expense line runs above all bars at FY27 and above the no-override bar through FY30, showing the growing gap.">
-      <!-- Grid: $60M to $140M, 3.5 units/$M -->
-      <line class="axis-base" x1="80" y1="360" x2="920" y2="360"/>
-      <line class="grid-minor" x1="80" y1="290" x2="920" y2="290"/>
-      <line class="grid-minor" x1="80" y1="220" x2="920" y2="220"/>
-      <line class="grid-minor" x1="80" y1="150" x2="920" y2="150"/>
-      <line class="grid-minor" x1="80" y1="80" x2="920" y2="80"/>
+  <div class="chart-wrapper">
+    <svg class="chart" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stacked bar chart from FY15 to FY30 showing general fund base revenue plus free cash compared to an expense line. Tabs switch between no-override and three override tier scenarios.">
 
-      <!-- Y labels -->
-      <text class="tick-label" x="73" y="364" text-anchor="end">$60M</text>
-      <text class="tick-label" x="73" y="294" text-anchor="end">$80M</text>
-      <text class="tick-label" x="73" y="224" text-anchor="end">$100M</text>
-      <text class="tick-label" x="73" y="154" text-anchor="end">$120M</text>
-      <text class="tick-label" x="73" y="84" text-anchor="end">$140M</text>
+      <!-- Grid: $60M at y=380, scale 4px/$1M, up to $140M at y=60 -->
+      <line class="axis-base" x1="70" y1="380" x2="740" y2="380"/>
+      <line class="grid-minor" x1="70" y1="340" x2="740" y2="340"/>
+      <line class="grid-minor" x1="70" y1="300" x2="740" y2="300"/>
+      <line class="grid-minor" x1="70" y1="260" x2="740" y2="260"/>
+      <line class="grid-minor" x1="70" y1="220" x2="740" y2="220"/>
+      <line class="grid-minor" x1="70" y1="180" x2="740" y2="180"/>
+      <line class="grid-minor" x1="70" y1="140" x2="740" y2="140"/>
+      <line class="grid-minor" x1="70" y1="100" x2="740" y2="100"/>
+      <line class="grid-minor" x1="70" y1="60" x2="740" y2="60"/>
 
-      <!-- Dividers -->
-      <line class="annotation-line" x1="430" y1="60" x2="430" y2="360"/>
-      <line class="annotation-line" x1="545" y1="60" x2="545" y2="360"/>
-      <text class="annotation" x="255" y="54" text-anchor="middle">ACFR actuals</text>
-      <text class="annotation" x="488" y="54" text-anchor="middle">projected</text>
-      <text class="annotation" x="740" y="54" text-anchor="middle">override scenarios (phased)</text>
+      <!-- Y-axis ticks and labels -->
+      <line class="tick" x1="66" y1="380" x2="70" y2="380"/>
+      <text class="tick-label" x="63" y="384" text-anchor="end">$60M</text>
+      <line class="tick" x1="66" y1="300" x2="70" y2="300"/>
+      <text class="tick-label" x="63" y="304" text-anchor="end">$80M</text>
+      <line class="tick" x1="66" y1="220" x2="70" y2="220"/>
+      <text class="tick-label" x="63" y="224" text-anchor="end">$100M</text>
+      <line class="tick" x1="66" y1="140" x2="70" y2="140"/>
+      <text class="tick-label" x="63" y="144" text-anchor="end">$120M</text>
+      <line class="tick" x1="66" y1="60" x2="70" y2="60"/>
+      <text class="tick-label" x="63" y="64" text-anchor="end">$140M</text>
 
-      <!-- X labels: historical -->
-      <text class="tick-label tick-label--minor" x="98" y="382" text-anchor="middle">FY15</text>
-      <text class="tick-label tick-label--major" x="203" y="382" text-anchor="middle">FY18</text>
-      <text class="tick-label tick-label--minor" x="308" y="382" text-anchor="middle">FY21</text>
-      <text class="tick-label tick-label--major" x="378" y="382" text-anchor="middle">FY23</text>
-      <text class="tick-label tick-label--major" x="518" y="382" text-anchor="middle">FY27</text>
-      <!-- X labels: grouped -->
-      <text class="tick-label tick-label--major" x="608" y="382" text-anchor="middle">FY28</text>
-      <text class="tick-label tick-label--major" x="728" y="382" text-anchor="middle">FY29</text>
-      <text class="tick-label tick-label--major" x="848" y="382" text-anchor="middle">FY30</text>
+      <!-- X-axis labels. Bars: x = 80 + index*40, width 28, center x+14. -->
+      <text class="tick-label tick-label--minor" x="94" y="398" text-anchor="middle">FY15</text>
+      <text class="tick-label tick-label--minor annotation--hide-sm" x="134" y="398" text-anchor="middle">FY16</text>
+      <text class="tick-label tick-label--minor annotation--hide-sm" x="174" y="398" text-anchor="middle">FY17</text>
+      <text class="tick-label tick-label--major" x="214" y="398" text-anchor="middle">FY18</text>
+      <text class="tick-label tick-label--minor annotation--hide-sm" x="254" y="398" text-anchor="middle">FY19</text>
+      <text class="tick-label tick-label--minor annotation--hide-sm" x="294" y="398" text-anchor="middle">FY20</text>
+      <text class="tick-label tick-label--minor" x="334" y="398" text-anchor="middle">FY21</text>
+      <text class="tick-label tick-label--minor annotation--hide-sm" x="374" y="398" text-anchor="middle">FY22</text>
+      <text class="tick-label tick-label--major" x="414" y="398" text-anchor="middle">FY23</text>
+      <text class="tick-label tick-label--minor annotation--hide-sm" x="454" y="398" text-anchor="middle">FY24</text>
+      <text class="tick-label tick-label--minor annotation--hide-sm" x="494" y="398" text-anchor="middle">FY25</text>
+      <text class="tick-label tick-label--minor annotation--hide-sm" x="534" y="398" text-anchor="middle">FY26</text>
+      <text class="tick-label tick-label--major" x="574" y="398" text-anchor="middle">FY27</text>
+      <text class="tick-label tick-label--minor annotation--hide-sm" x="614" y="398" text-anchor="middle">FY28</text>
+      <text class="tick-label tick-label--major" x="654" y="398" text-anchor="middle">FY29</text>
+      <text class="tick-label tick-label--major" x="694" y="398" text-anchor="middle">FY30</text>
 
-      <!-- Historical single bars FY15-FY27 -->
-      <rect class="data-fill s-revenue" x="85" y="323" width="26" height="37"/>
-      <rect class="data-fill s-revenue" x="120" y="314" width="26" height="46"/>
-      <rect class="data-fill s-revenue" x="155" y="301" width="26" height="59"/>
-      <rect class="data-fill s-revenue" x="190" y="291" width="26" height="69"/>
-      <rect class="data-fill s-swampscott" x="190" y="284" width="26" height="7"/>
-      <rect class="data-fill s-revenue" x="225" y="281" width="26" height="79"/>
-      <rect class="data-fill s-swampscott" x="225" y="279" width="26" height="2"/>
-      <rect class="data-fill s-revenue" x="260" y="273" width="26" height="87"/>
-      <rect class="data-fill s-swampscott" x="260" y="272" width="26" height="1"/>
-      <rect class="data-fill s-revenue" x="295" y="271" width="26" height="89"/>
-      <rect class="data-fill s-swampscott" x="295" y="270" width="26" height="1"/>
-      <rect class="data-fill s-revenue" x="330" y="250" width="26" height="110"/>
-      <rect class="data-fill s-swampscott" x="330" y="242" width="26" height="8"/>
-      <rect class="data-fill s-revenue" x="365" y="237" width="26" height="123"/>
-      <rect class="data-fill s-swampscott" x="365" y="231" width="26" height="6"/>
-      <rect class="data-fill s-revenue" x="400" y="224" width="26" height="136"/>
-      <rect class="data-fill s-swampscott" x="400" y="220" width="26" height="4"/>
-      <!-- FY25-FY26 projected balanced -->
-      <rect class="data-fill s-revenue" x="435" y="221" width="26" height="139" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="435" y="202" width="26" height="19" opacity="0.65"/>
-      <rect class="data-fill s-revenue" x="470" y="201" width="26" height="159" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="470" y="177" width="26" height="24" opacity="0.65"/>
-      <!-- FY27 deficit -->
-      <rect class="data-fill s-revenue" x="505" y="195" width="26" height="165" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="505" y="178" width="26" height="17" opacity="0.65"/>
+      <!-- Actuals/projected divider (between FY24 and FY25) -->
+      <line class="annotation-line" x1="474" y1="48" x2="474" y2="380"/>
+      <text class="annotation annotation--hide-sm" x="270" y="42" text-anchor="middle">ACFR actuals</text>
 
-      <!-- FY28 grouped bars -->
-      <rect class="data-fill s-revenue" x="561" y="169" width="22" height="191" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="561" y="152" width="22" height="17" opacity="0.65"/>
-      <rect class="data-fill s-tier-1" x="585" y="147" width="22" height="213" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="585" y="130" width="22" height="17" opacity="0.65"/>
-      <rect class="data-fill s-tier-2" x="609" y="139" width="22" height="221" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="609" y="121" width="22" height="18" opacity="0.65"/>
-      <rect class="data-fill s-tier-3" x="633" y="132" width="22" height="228" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="633" y="115" width="22" height="17" opacity="0.65"/>
+      <!-- FinCom annotation at FY19 -->
+      <line class="annotation-line" x1="254" y1="55" x2="254" y2="250"/>
+      <text class="annotation annotation--hide-sm" x="254" y="50" text-anchor="middle">FinCom 2019: &ldquo;unsustainable&rdquo;</text>
 
-      <!-- FY29 grouped bars -->
-      <rect class="data-fill s-revenue" x="681" y="160" width="22" height="200" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="681" y="143" width="22" height="17" opacity="0.65"/>
-      <rect class="data-fill s-tier-1" x="705" y="129" width="22" height="231" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="705" y="111" width="22" height="18" opacity="0.65"/>
-      <rect class="data-fill s-tier-2" x="729" y="118" width="22" height="242" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="729" y="101" width="22" height="17" opacity="0.65"/>
-      <rect class="data-fill s-tier-3" x="753" y="108" width="22" height="252" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="753" y="90" width="22" height="18" opacity="0.65"/>
+      <!-- ================================================================
+           BARS: base revenue (sage) + free cash (brass).
+           Shared across all views. Override revenue stacked per view.
+           y = 380 - (value_M - 60) * 4.
+           ================================================================ -->
 
-      <!-- FY30 grouped bars -->
-      <rect class="data-fill s-revenue" x="801" y="151" width="22" height="209" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="801" y="133" width="22" height="18" opacity="0.65"/>
-      <rect class="data-fill s-tier-1" x="825" y="119" width="22" height="241" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="825" y="101" width="22" height="18" opacity="0.65"/>
-      <rect class="data-fill s-tier-2" x="849" y="108" width="22" height="252" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="849" y="90" width="22" height="18" opacity="0.65"/>
-      <rect class="data-fill s-tier-3" x="873" y="97" width="22" height="263" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="873" y="79" width="22" height="18" opacity="0.65"/>
+      <!-- FY15 exp 70.50, rev 71.32 > exp: green bar to expense level -->
+      <rect class="data-fill s-revenue" x="80" y="338" width="28" height="42"/>
+      <!-- FY16 exp 73.20 -->
+      <rect class="data-fill s-revenue" x="120" y="327" width="28" height="53"/>
+      <!-- FY17 exp 76.86 -->
+      <rect class="data-fill s-revenue" x="160" y="313" width="28" height="67"/>
+      <!-- FY18 exp 81.76, rev 79.73 -->
+      <rect class="data-fill s-revenue" x="200" y="301" width="28" height="79"/>
+      <rect class="data-fill s-swampscott" x="200" y="293" width="28" height="8"/>
+      <!-- FY19 exp 83.27, rev 82.54 -->
+      <rect class="data-fill s-revenue" x="240" y="290" width="28" height="90"/>
+      <rect class="data-fill s-swampscott" x="240" y="287" width="28" height="3"/>
+      <!-- FY20 exp 85.21, rev 84.77 -->
+      <rect class="data-fill s-revenue" x="280" y="281" width="28" height="99"/>
+      <rect class="data-fill s-swampscott" x="280" y="279" width="28" height="2"/>
+      <!-- FY21 exp 85.80, rev 85.39 -->
+      <rect class="data-fill s-revenue" x="320" y="278" width="28" height="102"/>
+      <rect class="data-fill s-swampscott" x="320" y="277" width="28" height="1"/>
+      <!-- FY22 exp 93.58, rev 91.45 -->
+      <rect class="data-fill s-revenue" x="360" y="254" width="28" height="126"/>
+      <rect class="data-fill s-swampscott" x="360" y="246" width="28" height="8"/>
+      <!-- FY23 exp 96.83, rev 95.13 -->
+      <rect class="data-fill s-revenue" x="400" y="239" width="28" height="141"/>
+      <rect class="data-fill s-swampscott" x="400" y="233" width="28" height="6"/>
+      <!-- FY24 exp 100.10, rev 98.79 -->
+      <rect class="data-fill s-revenue" x="440" y="225" width="28" height="155"/>
+      <rect class="data-fill s-swampscott" x="440" y="220" width="28" height="5"/>
 
-      <!-- Expense line: solid FY15-FY24, dashed FY25-FY30 -->
+      <!-- FY25 projected: rev 99.60, fc 5.50 -->
+      <rect class="data-fill s-revenue" x="480" y="222" width="28" height="158" opacity="0.65"/>
+      <rect class="data-fill s-swampscott" x="480" y="200" width="28" height="22" opacity="0.65"/>
+      <!-- FY26 projected: rev 105.42, fc 7.00 -->
+      <rect class="data-fill s-revenue" x="520" y="198" width="28" height="182" opacity="0.65"/>
+      <rect class="data-fill s-swampscott" x="520" y="170" width="28" height="28" opacity="0.65"/>
+      <!-- FY27 projected: rev 107.12, fc 5.00 -->
+      <rect class="data-fill s-revenue" x="560" y="191" width="28" height="189" opacity="0.65"/>
+      <rect class="data-fill s-swampscott" x="560" y="171" width="28" height="20" opacity="0.65"/>
+      <!-- FY28 illustrative: rev ~110, fc 5 -->
+      <rect class="data-fill s-revenue" x="600" y="180" width="28" height="200" opacity="0.65"/>
+      <rect class="data-fill s-swampscott" x="600" y="160" width="28" height="20" opacity="0.65"/>
+      <!-- FY29 illustrative: rev ~113, fc 5 -->
+      <rect class="data-fill s-revenue" x="640" y="168" width="28" height="212" opacity="0.65"/>
+      <rect class="data-fill s-swampscott" x="640" y="148" width="28" height="20" opacity="0.65"/>
+      <!-- FY30 illustrative: rev ~116, fc 5 -->
+      <rect class="data-fill s-revenue" x="680" y="156" width="28" height="224" opacity="0.65"/>
+      <rect class="data-fill s-swampscott" x="680" y="136" width="28" height="20" opacity="0.65"/>
+
+      <!-- ================================================================
+           EXPENSE LINE: solid FY15-FY24, dashed FY24-FY30.
+           Same trajectory for all views (expenses don't change with override).
+           ================================================================ -->
       <polyline class="data-line data-line--bold s-neutral"
-                points="98,323 133,314 168,301 203,284 238,279 273,272 308,270 343,242 378,231 413,220"/>
+                points="94,338 134,327 174,313 214,293 254,287 294,279 334,277 374,246 414,233 454,220"/>
       <polyline class="data-line data-line--bold data-line--dashed s-neutral"
-                points="413,220 448,202 483,177 518,148 608,128 728,106 848,83"/>
+                points="454,220 494,200 534,170 574,138 614,114 654,88 694,62"/>
 
-      <!-- Data dots -->
-      <circle class="data-dot s-neutral" cx="98" cy="323" r="2"/>
-      <circle class="data-dot s-neutral" cx="203" cy="284" r="2"/>
-      <circle class="data-dot s-neutral" cx="308" cy="270" r="2"/>
-      <circle class="data-dot s-neutral" cx="413" cy="220" r="2"/>
-      <circle class="data-dot s-neutral" cx="518" cy="148" r="3"/>
-      <circle class="data-dot s-neutral" cx="608" cy="128" r="3"/>
-      <circle class="data-dot s-neutral" cx="728" cy="106" r="3"/>
-      <circle class="data-dot s-neutral" cx="848" cy="83" r="3"/>
+      <circle class="data-dot s-neutral" cx="94" cy="338" r="3"/>
+      <circle class="data-dot s-neutral" cx="134" cy="327" r="3"/>
+      <circle class="data-dot s-neutral" cx="174" cy="313" r="3"/>
+      <circle class="data-dot s-neutral" cx="214" cy="293" r="3"/>
+      <circle class="data-dot s-neutral" cx="254" cy="287" r="3"/>
+      <circle class="data-dot s-neutral" cx="294" cy="279" r="3"/>
+      <circle class="data-dot s-neutral" cx="334" cy="277" r="3"/>
+      <circle class="data-dot s-neutral" cx="374" cy="246" r="3"/>
+      <circle class="data-dot s-neutral" cx="414" cy="233" r="3"/>
+      <circle class="data-dot s-neutral" cx="454" cy="220" r="3"/>
+      <circle class="data-dot s-neutral" cx="494" cy="200" r="3"/>
+      <circle class="data-dot s-neutral" cx="534" cy="170" r="3"/>
+      <circle class="data-dot s-neutral" cx="574" cy="138" r="3"/>
+      <circle class="data-dot s-neutral" cx="614" cy="114" r="3"/>
+      <circle class="data-dot s-neutral" cx="654" cy="88" r="3"/>
+      <circle class="data-dot s-neutral" cx="694" cy="62" r="4"/>
 
-      <!-- Annotations -->
-      <line class="annotation-line" x1="238" y1="100" x2="238" y2="279"/>
-      <text class="annotation" x="238" y="95" text-anchor="middle">FinCom 2019: "unsustainable"</text>
+      <!-- Expense end label -->
+      <text class="end-label s-neutral" x="710" y="58">$140M expenses</text>
 
-      <text class="annotation" x="525" y="166" text-anchor="start">$8.5M gap</text>
+      <!-- ================================================================
+           VIEW: No override
+           Growing structural gap from $8.5M (FY27) to ~$18M (FY30).
+           ================================================================ -->
+      <g id="view-none" class="chart-view active">
+        <text class="annotation annotation--hide-sm" x="607" y="42" text-anchor="middle">projected</text>
+        <text class="annotation annotation--hide-sm" x="590" y="155" text-anchor="start">$8.5M gap</text>
+        <text class="annotation" x="714" y="92" text-anchor="start">$18M</text>
+        <text class="annotation" x="714" y="104" text-anchor="start">gap</text>
+      </g>
 
-      <!-- End labels -->
-      <text class="end-label s-neutral" x="860" y="78">$139M expenses</text>
-      <text class="end-label s-tier-3" x="893" y="76">T3</text>
-      <text class="end-label s-revenue" x="815" y="128">no override</text>
+      <!-- ================================================================
+           VIEW: Tier 1 ($9M override, phased over 3 years)
+           FY27 $1.27M, FY28 $6.30M cumul., FY29+ $9M full.
+           FY30 gap: ~$10M.
+           ================================================================ -->
+      <g id="view-tier1" class="chart-view">
+        <text class="annotation annotation--hide-sm" x="514" y="42" text-anchor="middle">projected</text>
+        <line class="annotation-line" x1="554" y1="48" x2="554" y2="380"/>
+        <text class="annotation annotation--hide-sm" x="647" y="42" text-anchor="middle">with Tier 1 override</text>
+        <rect class="data-fill s-tier-1" x="560" y="166" width="28" height="5" opacity="0.65"/>
+        <rect class="data-fill s-tier-1" x="600" y="135" width="28" height="25" opacity="0.65"/>
+        <rect class="data-fill s-tier-1" x="640" y="112" width="28" height="36" opacity="0.65"/>
+        <rect class="data-fill s-tier-1" x="680" y="100" width="28" height="36" opacity="0.65"/>
+        <text class="annotation" x="714" y="84" text-anchor="start">$10M</text>
+        <text class="annotation" x="714" y="96" text-anchor="start">gap</text>
+      </g>
+
+      <!-- ================================================================
+           VIEW: Tier 2 ($12M override, phased over 3 years)
+           FY27 $2.81M, FY28 $8.71M cumul., FY29+ $12M full.
+           FY30 gap: ~$7M.
+           ================================================================ -->
+      <g id="view-tier2" class="chart-view">
+        <text class="annotation annotation--hide-sm" x="514" y="42" text-anchor="middle">projected</text>
+        <line class="annotation-line" x1="554" y1="48" x2="554" y2="380"/>
+        <text class="annotation annotation--hide-sm" x="647" y="42" text-anchor="middle">with Tier 2 override</text>
+        <rect class="data-fill s-tier-2" x="560" y="160" width="28" height="11" opacity="0.65"/>
+        <rect class="data-fill s-tier-2" x="600" y="125" width="28" height="35" opacity="0.65"/>
+        <rect class="data-fill s-tier-2" x="640" y="100" width="28" height="48" opacity="0.65"/>
+        <rect class="data-fill s-tier-2" x="680" y="88" width="28" height="48" opacity="0.65"/>
+        <text class="annotation" x="714" y="78" text-anchor="start">$7M</text>
+        <text class="annotation" x="714" y="90" text-anchor="start">gap</text>
+      </g>
+
+      <!-- ================================================================
+           VIEW: Tier 3 ($15M override, phased over 3 years)
+           FY27 $4.30M, FY28 $10.54M cumul., FY29+ $15M full.
+           Gap closes in FY29, reopens to ~$4M by FY30.
+           ================================================================ -->
+      <g id="view-tier3" class="chart-view">
+        <text class="annotation annotation--hide-sm" x="514" y="42" text-anchor="middle">projected</text>
+        <line class="annotation-line" x1="554" y1="48" x2="554" y2="380"/>
+        <text class="annotation annotation--hide-sm" x="647" y="42" text-anchor="middle">with Tier 3 override</text>
+        <rect class="data-fill s-tier-3" x="560" y="154" width="28" height="17" opacity="0.65"/>
+        <rect class="data-fill s-tier-3" x="600" y="118" width="28" height="42" opacity="0.65"/>
+        <rect class="data-fill s-tier-3" x="640" y="88" width="28" height="60" opacity="0.65"/>
+        <rect class="data-fill s-tier-3" x="680" y="76" width="28" height="60" opacity="0.65"/>
+        <text class="annotation annotation--hide-sm" x="654" y="80" text-anchor="middle">gap closed</text>
+        <text class="annotation" x="714" y="72" text-anchor="start">$4M</text>
+        <text class="annotation" x="714" y="84" text-anchor="start">gap</text>
+      </g>
+
     </svg>
   </div>
 
-  <!-- ====== MOBILE: historical FY15-FY27 only ====== -->
-  <div class="chart-wrapper chart-mobile">
-    <svg class="chart" viewBox="0 0 780 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stacked bar chart FY15 to FY27 showing base revenue plus free cash drawn, compared to an expense line.">
-      <line class="axis-base" x1="80" y1="360" x2="730" y2="360"/>
-      <line class="grid-minor" x1="80" y1="320" x2="730" y2="320"/>
-      <line class="grid-minor" x1="80" y1="280" x2="730" y2="280"/>
-      <line class="grid-minor" x1="80" y1="240" x2="730" y2="240"/>
-      <line class="grid-minor" x1="80" y1="200" x2="730" y2="200"/>
-      <line class="grid-minor" x1="80" y1="160" x2="730" y2="160"/>
-      <line class="grid-minor" x1="80" y1="120" x2="730" y2="120"/>
-
-      <text class="tick-label" x="73" y="364" text-anchor="end">$60M</text>
-      <text class="tick-label" x="73" y="284" text-anchor="end">$80M</text>
-      <text class="tick-label" x="73" y="204" text-anchor="end">$100M</text>
-      <text class="tick-label" x="73" y="124" text-anchor="end">$120M</text>
-
-      <text class="tick-label tick-label--minor" x="103" y="382" text-anchor="middle">FY15</text>
-      <text class="tick-label tick-label--major" x="238" y="382" text-anchor="middle">FY18</text>
-      <text class="tick-label tick-label--minor" x="373" y="382" text-anchor="middle">FY21</text>
-      <text class="tick-label tick-label--major" x="463" y="382" text-anchor="middle">FY23</text>
-      <text class="tick-label tick-label--major" x="643" y="382" text-anchor="middle">FY27</text>
-
-      <!-- Bars: same as PR #140 -->
-      <rect class="data-fill s-revenue" x="87" y="318" width="32" height="42"/>
-      <rect class="data-fill s-revenue" x="132" y="307" width="32" height="53"/>
-      <rect class="data-fill s-revenue" x="177" y="293" width="32" height="67"/>
-      <rect class="data-fill s-revenue" x="222" y="281" width="32" height="79"/>
-      <rect class="data-fill s-swampscott" x="222" y="273" width="32" height="8"/>
-      <rect class="data-fill s-revenue" x="267" y="270" width="32" height="90"/>
-      <rect class="data-fill s-swampscott" x="267" y="267" width="32" height="3"/>
-      <rect class="data-fill s-revenue" x="312" y="261" width="32" height="99"/>
-      <rect class="data-fill s-swampscott" x="312" y="259" width="32" height="2"/>
-      <rect class="data-fill s-revenue" x="357" y="258" width="32" height="102"/>
-      <rect class="data-fill s-swampscott" x="357" y="257" width="32" height="1"/>
-      <rect class="data-fill s-revenue" x="402" y="234" width="32" height="126"/>
-      <rect class="data-fill s-swampscott" x="402" y="226" width="32" height="8"/>
-      <rect class="data-fill s-revenue" x="447" y="219" width="32" height="141"/>
-      <rect class="data-fill s-swampscott" x="447" y="213" width="32" height="6"/>
-      <rect class="data-fill s-revenue" x="492" y="205" width="32" height="155"/>
-      <rect class="data-fill s-swampscott" x="492" y="200" width="32" height="5"/>
-      <rect class="data-fill s-revenue" x="537" y="202" width="32" height="158" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="537" y="180" width="32" height="22" opacity="0.65"/>
-      <rect class="data-fill s-revenue" x="582" y="178" width="32" height="182" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="582" y="150" width="32" height="28" opacity="0.65"/>
-      <rect class="data-fill s-revenue" x="627" y="171" width="32" height="189" opacity="0.65"/>
-      <rect class="data-fill s-swampscott" x="627" y="151" width="32" height="20" opacity="0.65"/>
-
-      <polyline class="data-line data-line--bold s-neutral" points="103,318 148,307 193,293 238,273 283,267 328,259 373,257 418,226 463,213 508,200"/>
-      <polyline class="data-line data-line--bold data-line--dashed s-neutral" points="508,200 553,180 598,150 643,118"/>
-
-      <circle class="data-dot s-neutral" cx="103" cy="318" r="3"/>
-      <circle class="data-dot s-neutral" cx="238" cy="273" r="3"/>
-      <circle class="data-dot s-neutral" cx="373" cy="257" r="3"/>
-      <circle class="data-dot s-neutral" cx="508" cy="200" r="3"/>
-      <circle class="data-dot s-neutral" cx="643" cy="118" r="4"/>
-
-      <text class="end-label s-neutral" x="660" y="114">$120.6M expenses</text>
-      <text class="annotation" x="660" y="138" text-anchor="start">$8.5M gap</text>
-    </svg>
-    <p class="caption" aria-hidden="true">View on a wider screen to see the FY28&ndash;FY30 override tier comparison.</p>
-  </div>
-
-  <p class="caption">
-    Each historical bar (FY15&ndash;FY24) is sized to actual general fund expenditures. The green portion is base revenue collected and the brass portion is fund balance drawn. From FY15 to FY17 no draw was needed. Starting in FY18 the brass layer appears and grows through FY22. In FY27, the expense line breaks above the bar: even $5M of free cash leaves an $8.5M shortfall. FY28&ndash;FY30 show each override tier under Kezer's phased rollout alongside the no-override scenario. At FY30, only Tier 3 reaches the expense line.
+  <p class="caption view-caption active" id="caption-none">
+    Without override revenue, the gap between projected expenses and available revenue (base plus free cash) grows from $8.5M in FY27 to roughly $18M by FY30. Each bar is base revenue (green) plus free cash appropriated (brass). The expense line shows projected total expenditures. FY28&ndash;FY30 assume 3% annual revenue growth and 5% annual expense growth.
+  </p>
+  <p class="caption view-caption" id="caption-tier1">
+    Tier 1 ($9M) phases in over three years: $1.3M in FY27, $6.3M cumulative by FY28, fully drawn ($9M) by FY29. At full phase-in the override covers $9M of the projected gap, but expenses grow faster than the fixed override amount, leaving roughly $10M uncovered by FY30. Override draw schedule from <a href="/data/override_draws_schedule.csv">override_draws_schedule.csv</a>.
+  </p>
+  <p class="caption view-caption" id="caption-tier2">
+    Tier 2 ($12M) phases in over three years: $2.8M in FY27, $8.7M cumulative by FY28, fully drawn ($12M) by FY29. The gap narrows to roughly $3M in FY29 but reopens to roughly $7M by FY30 as expenses continue to outpace the fixed override levy.
+  </p>
+  <p class="caption view-caption" id="caption-tier3">
+    Tier 3 ($15M) phases in over three years: $4.3M in FY27, $10.5M cumulative by FY28, fully drawn ($15M) by FY29. The gap briefly closes in FY29, but reopens to roughly $4M by FY30 as expenses outpace the fixed override levy.
   </p>
 
   <div class="notes">
     <p>FY15&ndash;FY24: ACFR Schedule of Revenues, Expenditures and Changes in Fund Balance &ndash; Budget and Actual &ndash; General Fund. Persisted in <a href="/data/general_fund_budgetary_FY15-24.csv">data/general_fund_budgetary_FY15-24.csv</a>.</p>
-    <p>FY25&ndash;FY27: Town Administrator's State of the Town presentation (January 2026), adjusted to include excluded debt service (~$11M) for consistency with ACFR totals.</p>
-    <p>FY28&ndash;FY30: expenses projected at 5.4%/yr (Finance Committee blended rate); baseline revenue at 2.5%/yr; override draws per the three-year phase-in schedule on <a href="/what-is-the-override.html">How the override works</a>; from FY30 onward override grows with the levy at 2.5%/yr. Free cash held at $5M/yr projected.</p>
+    <p>FY25&ndash;FY27: Town Administrator's State of the Town presentation (January 2026), adjusted to include excluded debt service for consistency with ACFR totals.</p>
+    <p>FY28&ndash;FY30 are <strong>illustrative projections</strong>, not forecasts. Base revenue grows at 3% annually (Prop 2.5 levy limit plus estimated new growth). Expenses grow at 5% annually (near the FY22&ndash;FY27 average). Free cash held at $5M/yr. Override phase-in uses the draw schedule from the ballot questions (<a href="/data/override_draws_schedule.csv">override_draws_schedule.csv</a>). After full phase-in, the override levy stays flat while expenses continue growing.</p>
   </div>
+
+<script>
+document.querySelectorAll('.tab').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var view = btn.dataset.view;
+    document.querySelectorAll('.tab').forEach(function(b) { b.classList.remove('active'); });
+    document.querySelectorAll('.chart-view').forEach(function(v) { v.classList.remove('active'); });
+    document.querySelectorAll('.view-caption').forEach(function(c) { c.classList.remove('active'); });
+    document.querySelectorAll('.legend-tier').forEach(function(l) { l.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById('view-' + view).classList.add('active');
+    document.getElementById('caption-' + view).classList.add('active');
+    var tierMap = { tier1: 'legend-t1', tier2: 'legend-t2', tier3: 'legend-t3' };
+    if (tierMap[view]) document.getElementById(tierMap[view]).classList.add('active');
+  });
+});
+</script>

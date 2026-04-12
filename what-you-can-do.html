@@ -107,62 +107,64 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
     .tldr { padding: 16px 18px 14px; }
     .tldr li { font-size: 13px; }
 
-    /* Stack the "Who decides what" table into cards on mobile so
-       the 3-column text content doesn't wrap cell-by-cell at 390px.
-       Keeps the normal peer-table rendering on desktop. */
-    table.civic-decide-table { display: block; }
-    table.civic-decide-table thead {
-      position: absolute;
-      width: 1px; height: 1px;
-      padding: 0; margin: -1px; overflow: hidden;
-      clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
-    }
-    table.civic-decide-table tbody { display: block; }
-    table.civic-decide-table tbody tr {
-      display: block;
-      background: var(--surface);
-      border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-sm);
-      padding: 14px 16px 12px;
-      margin-bottom: 10px;
-    }
-    table.civic-decide-table tbody tr:last-child { margin-bottom: 0; }
-    table.civic-decide-table tbody td {
-      display: block;
-      padding: 0;
-      text-align: left;
-      border-bottom: none;
-      font-size: 13px;
-      line-height: 1.5;
-      color: var(--text-muted);
-    }
-    table.civic-decide-table tbody td:first-child {
-      font-size: 14px;
-      color: var(--text);
-      padding-bottom: 6px;
-      margin-bottom: 8px;
-      border-bottom: 1px solid var(--divider);
-    }
-    table.civic-decide-table tbody td:nth-child(2),
-    table.civic-decide-table tbody td:nth-child(3) {
-      padding-top: 6px;
-    }
-    table.civic-decide-table tbody td:nth-child(2)::before {
-      content: "Who decides";
-      display: block;
-      font-size: 10px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.6px;
-      color: var(--text-subtle);
-      margin-bottom: 2px;
-    }
-    table.civic-decide-table tbody td:nth-child(3)::before {
-      content: "How residents engage";
-      display: block;
-      font-size: 10px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.6px;
-      color: var(--text-subtle);
-      margin-bottom: 2px;
-    }
+  }
+
+  /* "Who decides what" cards */
+  .decide-cards {
+    display: grid;
+    gap: 10px;
+    margin: 18px 0 24px;
+  }
+  @media (min-width: 720px) {
+    .decide-cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  .decide-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px 14px;
+  }
+  .decide-card h3 {
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .decide-card-field {
+    margin-bottom: 8px;
+  }
+  .decide-card-field:last-child { margin-bottom: 0; }
+  .decide-card-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-subtle);
+    margin-bottom: 2px;
+  }
+  .decide-card-value {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-mid);
+  }
+
+  /* Town Meeting tips card */
+  .tm-tips dl {
+    margin: 0;
+  }
+  .tm-tips dt {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 12px;
+  }
+  .tm-tips dt:first-of-type { margin-top: 0; }
+  .tm-tips dd {
+    margin: 2px 0 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-muted);
   }
 </style>
 
@@ -232,62 +234,107 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
 <h2>Who decides what</h2>
 <p>Most civic decisions in Marblehead are distributed across several bodies, each with different authority. Knowing which body handles which decision is the difference between writing the right email and writing to no one.</p>
 
-<table class="peer-table civic-decide-table">
-  <thead>
-    <tr>
-      <th>Decision</th>
-      <th>Who decides</th>
-      <th>How residents engage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Annual operating budget</strong></td>
-      <td>Town Administrator drafts &rarr; Select Board reviews &rarr; Finance Committee recommends &rarr; Town Meeting votes</td>
-      <td>Attend Select Board and Finance Committee meetings during the budget cycle; speak and vote at Town Meeting</td>
-    </tr>
-    <tr>
-      <td><strong>Proposition 2&frac12; override or debt exclusion</strong></td>
-      <td>Select Board puts the question on the ballot; Town Meeting approves the budget; voters decide at the ballot</td>
-      <td>Speak and vote at Town Meeting; vote at the ballot</td>
-    </tr>
-    <tr>
-      <td><strong>Operational decisions (hiring, scheduling, procurement)</strong></td>
-      <td>Town Administrator and department heads, with Select Board oversight</td>
-      <td>Contact the Town Administrator or the relevant Select Board member</td>
-    </tr>
-    <tr>
-      <td><strong>School spending priorities</strong> (within the school budget)</td>
-      <td>School Committee</td>
-      <td>Attend School Committee meetings; contact members directly</td>
-    </tr>
-    <tr>
-      <td><strong>Tax classification</strong> (single vs. split residential / commercial rate)</td>
-      <td>Select Board, annually at a public hearing</td>
-      <td>Attend the annual tax classification hearing</td>
-    </tr>
-    <tr>
-      <td><strong>Zoning and land use bylaws</strong></td>
-      <td>Planning Board proposes; Town Meeting votes</td>
-      <td>Attend Planning Board hearings; speak at Town Meeting; petition a warrant article</td>
-    </tr>
-    <tr>
-      <td><strong>Town bylaws and warrant articles</strong></td>
-      <td>Town Meeting votes (some require Attorney General approval)</td>
-      <td>Petition a warrant article with 10 registered-voter signatures for the Annual Town Meeting, or support one</td>
-    </tr>
-    <tr>
-      <td><strong>Licensing</strong> (alcohol, food, entertainment, lodging)</td>
-      <td>Select Board</td>
-      <td>Contact Select Board members directly</td>
-    </tr>
-    <tr>
-      <td><strong>State aid, pension contribution formulas, health insurance (GIC)</strong></td>
-      <td>Massachusetts legislature and state agencies</td>
-      <td>Contact your state senator or state representative</td>
-    </tr>
-  </tbody>
-</table>
+<div class="decide-cards">
+  <div class="decide-card">
+    <h3>Annual operating budget</h3>
+    <div class="decide-card-field">
+      <div class="decide-card-label">Who decides</div>
+      <div class="decide-card-value">Town Administrator drafts &rarr; Select Board reviews &rarr; Finance Committee recommends &rarr; Town Meeting votes</div>
+    </div>
+    <div class="decide-card-field">
+      <div class="decide-card-label">How to engage</div>
+      <div class="decide-card-value">Attend Select Board and Finance Committee meetings during the budget cycle; speak and vote at Town Meeting</div>
+    </div>
+  </div>
+  <div class="decide-card">
+    <h3>Proposition 2&frac12; override or debt exclusion</h3>
+    <div class="decide-card-field">
+      <div class="decide-card-label">Who decides</div>
+      <div class="decide-card-value">Select Board puts the question on the ballot; Town Meeting approves the budget; voters decide at the ballot</div>
+    </div>
+    <div class="decide-card-field">
+      <div class="decide-card-label">How to engage</div>
+      <div class="decide-card-value">Speak and vote at Town Meeting; vote at the ballot</div>
+    </div>
+  </div>
+  <div class="decide-card">
+    <h3>Operational decisions (hiring, scheduling, procurement)</h3>
+    <div class="decide-card-field">
+      <div class="decide-card-label">Who decides</div>
+      <div class="decide-card-value">Town Administrator and department heads, with Select Board oversight</div>
+    </div>
+    <div class="decide-card-field">
+      <div class="decide-card-label">How to engage</div>
+      <div class="decide-card-value">Contact the Town Administrator or the relevant Select Board member</div>
+    </div>
+  </div>
+  <div class="decide-card">
+    <h3>School spending priorities (within the school budget)</h3>
+    <div class="decide-card-field">
+      <div class="decide-card-label">Who decides</div>
+      <div class="decide-card-value">School Committee</div>
+    </div>
+    <div class="decide-card-field">
+      <div class="decide-card-label">How to engage</div>
+      <div class="decide-card-value">Attend School Committee meetings; contact members directly</div>
+    </div>
+  </div>
+  <div class="decide-card">
+    <h3>Tax classification (single vs. split rate)</h3>
+    <div class="decide-card-field">
+      <div class="decide-card-label">Who decides</div>
+      <div class="decide-card-value">Select Board, annually at a public hearing</div>
+    </div>
+    <div class="decide-card-field">
+      <div class="decide-card-label">How to engage</div>
+      <div class="decide-card-value">Attend the annual tax classification hearing</div>
+    </div>
+  </div>
+  <div class="decide-card">
+    <h3>Zoning and land use bylaws</h3>
+    <div class="decide-card-field">
+      <div class="decide-card-label">Who decides</div>
+      <div class="decide-card-value">Planning Board proposes; Town Meeting votes</div>
+    </div>
+    <div class="decide-card-field">
+      <div class="decide-card-label">How to engage</div>
+      <div class="decide-card-value">Attend Planning Board hearings; speak at Town Meeting; petition a warrant article</div>
+    </div>
+  </div>
+  <div class="decide-card">
+    <h3>Town bylaws and warrant articles</h3>
+    <div class="decide-card-field">
+      <div class="decide-card-label">Who decides</div>
+      <div class="decide-card-value">Town Meeting votes (some require Attorney General approval)</div>
+    </div>
+    <div class="decide-card-field">
+      <div class="decide-card-label">How to engage</div>
+      <div class="decide-card-value">Petition a warrant article with 10 registered-voter signatures, or support one</div>
+    </div>
+  </div>
+  <div class="decide-card">
+    <h3>Licensing (alcohol, food, entertainment, lodging)</h3>
+    <div class="decide-card-field">
+      <div class="decide-card-label">Who decides</div>
+      <div class="decide-card-value">Select Board</div>
+    </div>
+    <div class="decide-card-field">
+      <div class="decide-card-label">How to engage</div>
+      <div class="decide-card-value">Contact Select Board members directly</div>
+    </div>
+  </div>
+  <div class="decide-card">
+    <h3>State aid, pensions, health insurance (GIC)</h3>
+    <div class="decide-card-field">
+      <div class="decide-card-label">Who decides</div>
+      <div class="decide-card-value">Massachusetts legislature and state agencies</div>
+    </div>
+    <div class="decide-card-field">
+      <div class="decide-card-label">How to engage</div>
+      <div class="decide-card-value">Contact your state senator or state representative</div>
+    </div>
+  </div>
+</div>
 
 <div class="takeaway takeaway--pos">
   <p><strong>Most meaningful budget decisions run through Town Meeting.</strong> If you care about the overall size of the town's operating budget, the warrant articles, or any structural change to how the town is governed, the lever is Town Meeting. Contacting individual Select Board members is effective for operational questions but does not change the total budget size.</p>
@@ -383,16 +430,22 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
   <p>The Moderator controls who gets recognized to speak: you raise your hand, wait to be called on, state your name and address, and confine your remarks to the motion on the floor. Speakers who wander into unrelated material can be ruled out of order. Budget articles often pass with limited floor debate when the Finance Committee has recommended in favor. Contested articles draw longer discussion. Votes are usually by show of hands; nine or more voters can call for a written ballot.</p>
 </div>
 
-<div class="card">
+<div class="card tm-tips">
   <h3>Practical things to know before you go</h3>
-  <ul>
-    <li>The warrant (the list of articles to be voted on) is published in advance. Pick the articles you actually care about. You do not have to pay attention to the rest.</li>
-    <li>The Finance Committee's annual report explains each article and gives a recommendation on each. It will tell you what you are voting on and why.</li>
-    <li>If you just want to vote, you do not have to speak at all.</li>
-    <li>The auditorium is warm. Bring water.</li>
-    <li>If Town Meeting adjourns before reaching your article, it resumes on a later night. Check the town calendar for the continuation date.</li>
-    <li>If you do speak, keep it short. State your position in your first sentence ("I am in favor of Article X" or "I am opposed to Article X"), address the specific motion on the table, and aim for a minute or less. Longer speeches rarely change votes and often test the Moderator's patience.</li>
-  </ul>
+  <dl>
+    <dt>Read the warrant first</dt>
+    <dd>The warrant (the list of articles to be voted on) is published in advance. Pick the articles you actually care about. You do not have to pay attention to the rest.</dd>
+    <dt>Read the FinCom report</dt>
+    <dd>The Finance Committee's annual report explains each article and gives a recommendation on each. It will tell you what you are voting on and why.</dd>
+    <dt>You do not have to speak</dt>
+    <dd>If you just want to vote, you can sit and raise your hand when the vote is called. No speech required.</dd>
+    <dt>Bring water</dt>
+    <dd>The auditorium is warm, and meetings can run long.</dd>
+    <dt>It may take more than one night</dt>
+    <dd>If Town Meeting adjourns before reaching your article, it resumes on a later night. Check the town calendar for the continuation date.</dd>
+    <dt>If you do speak, keep it short</dt>
+    <dd>State your position in your first sentence ("I am in favor of Article X" or "I am opposed to Article X"), address the specific motion on the table, and aim for a minute or less.</dd>
+  </dl>
 </div>
 
 <p>Town Meeting is the only place residents vote directly on the town budget and on warrant articles. Every registered voter in the room has the same vote as anyone else.</p>
