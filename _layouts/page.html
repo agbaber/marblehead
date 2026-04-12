@@ -9,17 +9,21 @@ layout: default
   {%- comment -%}
   Reading-time label. Word count uses strip_html first so inline <style>
   and <script> blocks don't inflate the count (Jekyll's strip_html drops
-  those blocks AND their content, not just the tags). Chart count is
-  computed on the raw content before stripping, since strip_html would
-  remove the <svg> and <iframe> tokens we're counting.
-  Heuristic: 230 wpm + 30s per chart. Bands: <3min unlabeled, 3–7 "~5 min",
-  8–12 "~10 min", 13+ "deep dive".
+  those blocks AND their content, not just the tags). The replace before
+  strip_html inserts a space after every `>` so adjacent tags like
+  `<p>foo</p><p>bar</p>` don't glue into `foobar` after stripping —
+  without it, pages with dense tag nesting undercount words by ~5% and
+  can land in the wrong reading-time band. Chart count is computed on
+  the raw content before stripping, since strip_html would remove the
+  <svg> and <iframe> tokens we're counting.
+  Heuristic: 230 wpm + 30s per chart. Bands: <3min unlabeled, 3&ndash;7 "~5 min",
+  8&ndash;12 "~10 min", 13+ "deep dive".
   {%- endcomment -%}
   {%- assign _rt_svgs = content | split: "<svg" | size | minus: 1 -%}
   {%- assign _rt_iframe_charts = content | split: 'src="charts/' | size | minus: 1 -%}
   {%- assign _rt_chart_count = _rt_svgs | plus: _rt_iframe_charts -%}
   {%- assign _rt_chart_min = _rt_chart_count | divided_by: 2 -%}
-  {%- assign _rt_words = content | strip_html | number_of_words -%}
+  {%- assign _rt_words = content | replace: '>', '> ' | strip_html | number_of_words -%}
   {%- assign _rt_minutes = _rt_words | divided_by: 230 | plus: _rt_chart_min -%}
   {%- if _rt_minutes >= 13 -%}
     <p class="read-time">Deep dive</p>
