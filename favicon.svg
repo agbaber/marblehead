@@ -1,4 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#111"/>
-  <text x="16" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-weight="700" font-size="20" fill="white">M</text>
+  <rect width="32" height="32" rx="6" fill="#1B3A57"/>
+  <!-- yoke arch -->
+  <path d="M13 8.5Q16 5 19 8.5" fill="none" stroke="#F4F7FA" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- bell -->
+  <circle cx="16" cy="7.5" r="1.5" fill="#B8860B"/>
+  <!-- buoy body -->
+  <path d="M13 9v7h6V9z" fill="#C8553D"/>
+  <!-- stripe -->
+  <rect x="13" y="13" width="6" height="2" fill="#F4F7FA" opacity=".3"/>
+  <!-- float base -->
+  <rect x="10.5" y="16" width="11" height="3.5" rx="1.75" fill="#C8553D"/>
+  <rect x="10.5" y="16" width="11" height="3.5" rx="1.75" fill="none" stroke="#F4F7FA" stroke-width=".6"/>
+  <!-- wave -->
+  <path d="M7 22.5q2.5-1.8 5 0t5 0 5 0" fill="none" stroke="#2F7D8E" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M8 25q2.5-1.5 5 0t5 0 4 0" fill="none" stroke="#2F7D8E" stroke-width=".8" stroke-linecap="round" opacity=".45"/>
 </svg>
