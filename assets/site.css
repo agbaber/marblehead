@@ -919,7 +919,7 @@ table.data {
   border-collapse: separate;
   border-spacing: 0;
   font-size: 14px;
-  min-width: 360px;
+  min-width: 0;
 }
 table.data caption {
   caption-side: bottom;
@@ -929,7 +929,7 @@ table.data caption {
   padding: 6px 0 0;
 }
 table.data th {
-  padding: 10px 12px;
+  padding: 8px 8px;
   font-weight: 600; font-size: 11px;
   color: var(--text-subtle);
   text-transform: uppercase; letter-spacing: 0.5px;
@@ -938,15 +938,15 @@ table.data th {
 }
 table.data th:first-child { text-align: left; }
 table.data td {
-  padding: 12px;
+  padding: 8px;
   text-align: right;
   color: var(--text);
   font-variant-numeric: tabular-nums;
-  font-weight: 600; font-size: 14px;
+  font-weight: 600; font-size: 12px;
   border-bottom: 1px solid var(--divider);
   white-space: nowrap;
 }
-table.data td:first-child { text-align: left; font-weight: 600; }
+table.data td:first-child { text-align: left; font-weight: 600; white-space: normal; }
 table.data tbody tr:last-child td { border-bottom: none; }
 
 /* Stacked card layout for data tables on narrow viewports.
@@ -955,8 +955,8 @@ table.data tbody tr:last-child td { border-bottom: none; }
    via CSS content strings. Column labels are hardcoded in nth-child
    rules so the labels match the table's column order. The current
    .data--stack usage (department-by-department table on the spending
-   story) uses the column order: Department, FY2015, FY2026, Change ($),
-   Change (%). If another table needs stacking with different columns,
+   story) uses the column order: Department, FY 15, FY 26, $ Chg,
+   % Chg. If another table needs stacking with different columns,
    give it a different modifier class and add its own label rules. */
 @media (max-width: 600px) {
   table.data--stack {
@@ -1012,10 +1012,10 @@ table.data tbody tr:last-child td { border-bottom: none; }
     text-align: right;
     color: var(--text-mid);
   }
-  table.data--stack tbody tr td:nth-child(2)::before { content: "FY2015"; }
-  table.data--stack tbody tr td:nth-child(3)::before { content: "FY2026"; }
-  table.data--stack tbody tr td:nth-child(4)::before { content: "Change"; }
-  table.data--stack tbody tr td:nth-child(5)::before { content: "Change %"; }
+  table.data--stack tbody tr td:nth-child(2)::before { content: "FY 15"; }
+  table.data--stack tbody tr td:nth-child(3)::before { content: "FY 26"; }
+  table.data--stack tbody tr td:nth-child(4)::before { content: "$ Chg"; }
+  table.data--stack tbody tr td:nth-child(5)::before { content: "% Chg"; }
   table.data--stack tbody tr td:nth-child(2)::before,
   table.data--stack tbody tr td:nth-child(3)::before,
   table.data--stack tbody tr td:nth-child(4)::before,
