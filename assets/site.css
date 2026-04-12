@@ -287,6 +287,57 @@ nav.site-nav a[aria-current="page"] {
 }
 
 /* ==========================================================================
+   .page-toc - inline table of contents for long reading pages
+   Sits below the lede and lets readers jump to an h2 section. Native anchor
+   links; no JS. Pair with id="..." on each target h2.
+   ========================================================================== */
+
+.page-toc {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  padding: 12px 14px;
+  margin: 18px 0 28px;
+  background: var(--divider);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.page-toc-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-subtle);
+  margin-right: 4px;
+}
+.page-toc a {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--c-navy);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.page-toc a:hover {
+  background: var(--c-navy);
+  color: var(--bg);
+  border-color: var(--c-navy);
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .page-toc { padding: 10px 12px; }
+  .page-toc a { font-size: 12px; padding: 5px 10px; }
+}
+
+/* Clear the sticky site nav when jumping to an h2 via anchor. */
+h2[id] { scroll-margin-top: 68px; }
+
+/* ==========================================================================
    .btn-link - outlined CTA for end-of-section cross-page links
    Used when a trailing "see X for Y" sentence deserves its own line.
    ========================================================================== */
@@ -502,6 +553,34 @@ p a:hover { text-decoration: underline; }
 }
 .notes p { font-size: 12px; margin: 0; color: var(--text-subtle); }
 .notes p + p { margin-top: 4px; }
+
+/* When .notes is a <details> element, hide the default marker and
+   add a caret to the summary so the collapse affordance is obvious. */
+details.notes > summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-mid);
+  padding: 2px 0 8px;
+  user-select: none;
+}
+details.notes > summary::-webkit-details-marker { display: none; }
+details.notes > summary::before {
+  content: "\25B8"; /* right-pointing triangle */
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 10px;
+  transition: transform 0.15s ease;
+}
+details.notes[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.notes[open] > summary {
+  padding-bottom: 12px;
+}
 
 .source {
   font-size: 12px; color: var(--text-faint); margin-top: 8px;
@@ -1849,17 +1928,14 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .sn-result {
   margin-top: 12px;
-  padding: 9px 12px;
+  padding: 11px 14px;
   background: var(--divider);
   border-radius: 6px;
   text-align: center;
   font-size: 13px;
   color: var(--text-mid);
   min-height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 .sn-result strong {
   color: var(--c-navy);
@@ -1869,7 +1945,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 
 .scrolly-nesting-steps { margin: 0; }
 .scrolly-step {
-  min-height: 38vh;
+  min-height: 30vh;
   margin-bottom: 6px;
   display: flex;
   align-items: center;
@@ -1902,7 +1978,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   .scrolly-nesting-sticky { padding: 14px 14px 12px; top: 56px; }
   .sn-row { grid-template-columns: 24px 60px 1fr 44px; gap: 8px; padding: 6px 8px; }
   .sn-row-name { font-size: 11px; }
-  .scrolly-step { min-height: 44vh; }
+  .scrolly-step { min-height: 36vh; }
   .scrolly-step-inner { padding: 12px 14px; }
   .scrolly-step h3 { font-size: 16px; }
   .scrolly-step p { font-size: 14px; }
@@ -1911,6 +1987,169 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 @media (prefers-reduced-motion: reduce) {
   .sn-row,
   .scrolly-step-inner { transition: none; }
+}
+
+/* ==========================================================================
+   Scroll-locked trash-funding distributional explainer (.scrolly-trash)
+   Sticky visual that shows the same $2.3M hitting different home values
+   differently under the two funding options (levy vs flat Board of Health fee).
+   Used on question-2-trash.html.
+   ========================================================================== */
+
+.scrolly-trash {
+  margin: 28px 0 40px;
+}
+.scrolly-trash-sticky {
+  position: sticky;
+  top: 60px;
+  z-index: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px 14px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 18px;
+}
+.st-viz-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-subtle);
+  margin: 0 0 12px;
+}
+.st-scale {
+  position: relative;
+  margin-bottom: 4px;
+}
+.st-scale-track {
+  height: 4px;
+  background: var(--divider);
+  border-radius: 2px;
+}
+.st-scale-marker {
+  position: absolute;
+  top: -5px;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  border-radius: 50%;
+  background: var(--c-navy);
+  border: 2px solid var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+.st-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 10px;
+  color: var(--text-subtle);
+  font-variant-numeric: tabular-nums;
+}
+.st-home-label {
+  margin: 10px 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  min-height: 18px;
+  transition: opacity 0.3s ease;
+}
+.st-compare {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.st-option {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "head amt"
+    "bar bar";
+  gap: 2px 12px;
+  padding: 10px 12px;
+  background: var(--divider);
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  transition: border-color 0.35s ease, background 0.35s ease;
+}
+.st-option-head {
+  grid-area: head;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-mid);
+}
+.st-option-amt {
+  grid-area: amt;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.st-option-bar {
+  grid-area: bar;
+  display: block;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.st-option-bar-fill {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 4px;
+  transition: width 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.st-option--levy .st-option-bar-fill { background: var(--c-teal); }
+.st-option--fee  .st-option-bar-fill { background: var(--c-plum); }
+
+.st-option.is-winner {
+  border-color: var(--c-navy);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.st-option.is-loser {
+  opacity: 0.7;
+}
+
+.st-winner {
+  margin-top: 14px;
+  padding: 11px 14px;
+  background: var(--divider);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-mid);
+  min-height: 36px;
+  line-height: 1.45;
+  transition: background 0.35s ease;
+}
+.st-winner strong {
+  color: var(--c-navy);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.scrolly-trash-steps { margin: 0; }
+
+@media (max-width: 600px) {
+  .scrolly-trash-sticky { padding: 14px 14px 12px; top: 56px; }
+  .st-option { padding: 8px 10px; }
+  .st-option-amt { font-size: 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .st-scale-marker,
+  .st-option,
+  .st-option-bar-fill,
+  .st-winner { transition: none; }
 }
 
 /* ==========================================================================
