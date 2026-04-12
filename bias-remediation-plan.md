@@ -16,7 +16,7 @@ Remediation actions for every finding in the [April 11, 2026 bias audit](bias-au
 
 **Remediation:**
 
-- **1a. Add counter-examples or acknowledge their absence.** Research Massachusetts towns that rejected overrides and sustained the resulting budget without returning to the ballot at a larger amount within three years. If such towns exist, add them as case studies with equal depth. If the research finds that the pattern genuinely runs one direction (failed overrides nearly always return larger), state that finding explicitly and cite the DOR dataset that supports it, so the reader knows the selection is not cherry-picked but representative.
+- **1a. Add counter-examples or acknowledge their absence.** **Done.** Added "Towns that rejected and did not return" section with two counter-examples: Easton (rejected $4.4M in 2016, did not return for 9 years) and Newton (rejected $9.2M in March 2023, has not returned as of April 2026). Both demonstrate that sustained austerity is a real alternative to the fail-and-return pattern. The framing note at the top of the page was updated to reference all three sections.
 - **1b. Remove editorial language from "key lesson" boxes.** ~~Replace "cost of delay" and "bigger eventual bill" with factual summaries.~~ **Done.** The Melrose key-lesson box now reads: "Melrose rejected $7.7M in June 2024 and passed $13.5M in November 2025, 75% more than the original ask. The intervening 17 months included 61.4 FTE reductions, class sizes proposed up to 32, and the smallest new-teacher orientation in years."
 - **1c. Add a framing note at the top of the case studies page.** ~~State what the case studies show and what they do not show.~~ **Done.** A blockquote at the top of the page explains the selection, acknowledges the absence of counter-examples, cites the DOR fail-and-return data, and invites readers to submit counter-example towns via GitHub issue.
 
@@ -51,7 +51,7 @@ Remediation actions for every finding in the [April 11, 2026 bias audit](bias-au
 
 **Remediation:**
 
-- **4a. Actively seek on-the-record quotes from override opponents.** Review Town Meeting transcripts, letters to the editor in the Marblehead Independent/Beacon/Current, and any public statements from the For Marblehead group (the organized opposition). Add named quotes where they strengthen the "against" perspective blocks on the debate page.
+- **4a. Actively seek on-the-record quotes from override opponents.** **Done.** Research found that "For Marblehead" (Matt Hooks, Kate Thompson) is pro-override, not opposition -- the original plan had this backwards. The Matt Hooks quote was removed from the "Against" block on tension 4 and replaced with actual skeptic voices: Nick Ward (structural/economic development alternative) and Albert Jordan (affordability, override size). Susan Tournas (fixed-income impact) was added to tension 5. The voice-asymmetry disclosure was updated to name all six "against" voices now on the page. No organized FY27 anti-override group has publicly formed as of April 2026.
 - **4b. If quotes remain scarce, strengthen the disclosure.** **Done** (present from initial debate page build). The notes section explains the asymmetry: named officials appear more often on the record than resident opponents, and notes that the "against" voices on the page reflect accountability voices inside the process rather than organized opposition outside it.
 
 ---
@@ -93,8 +93,8 @@ Remediation actions for every finding in the [April 11, 2026 bias audit](bias-au
 | 8 | 6a. Reorder homepage sections | Medium (HTML restructure) | Done |
 | 9 | 2a. Add cumulative cost visualization to calculator | Medium (chart work) | Done |
 | 10 | 2b. Add fixed-income context to calculator | Medium (data + text) | Done |
-| 11 | 4a. Seek on-the-record quotes from override opponents | Large (research) | Open |
-| 12 | 1a. Research and add counter-example towns | Large (research) | Open |
+| 11 | 4a. Seek on-the-record quotes from override opponents | Large (research) | Done |
+| 12 | 1a. Research and add counter-example towns | Large (research) | Done |
 | 13 | 4b. Strengthen voice-asymmetry disclosure | Small (text, fallback if 4a is insufficient) | Done |
 
 ---
@@ -105,4 +105,6 @@ This plan was generated on April 11, 2026 alongside the bias audit. Progress is 
 
 **April 12, 2026 (round 1):** Items 1b, 1c, 2c, 3a, 3b, 4b, 5a, and 6b completed in [PR #157](https://github.com/agbaber/marblehead/pull/157). The history page takeaway was changed from `takeaway--pos` to `takeaway--neutral` and rewritten to present both readings of the FinCom arc. The "genuinely undecided" claim was replaced with a process commitment on about, debate, and question-2-trash pages. The case studies page received a framing note acknowledging what the studies do and don't show. The no-override page now links to the calculator as its first read-next suggestion. The voice-asymmetry disclosure (4b) was already present on the debate page from its initial build.
 
-**April 12, 2026 (round 2):** Items 2a, 2b, and 6a completed. The override calculator now shows cumulative 5-year and 10-year costs and override cost as a percentage of household income at three thresholds (Census ACS 2020-2024). The homepage section order was changed from override-first to spending-first. Two items remain open: 4a (on-the-record opponent quotes, requires Town Meeting transcript research) and 1a (counter-example towns, requires DOR dataset research).
+**April 12, 2026 (round 2):** Items 2a, 2b, and 6a completed. The override calculator now shows cumulative 5-year and 10-year costs and override cost as a percentage of household income at three thresholds (Census ACS 2020-2024). The homepage section order was changed from override-first to spending-first.
+
+**April 12, 2026 (round 3):** Items 1a and 4a completed. All 13 remediation items are now done. Counter-example towns (Easton, Newton) were added to the case studies page. The debate page's "against" blocks were corrected: "For Marblehead" (Matt Hooks) was identified as pro-override and removed from the against block; actual skeptic voices (Nick Ward, Albert Jordan, Susan Tournas) were added. The voice-asymmetry disclosure was updated to reflect the expanded set of named against-side voices.

@@ -6,7 +6,7 @@ title: case studies
 
 # Override Case Studies: Melrose, Stoneham, and the Statewide Pattern
 
-> **What these case studies show and don't show.** The two detailed case studies below are Massachusetts towns that rejected an operating override and later returned to the ballot. Both returned with a larger ask. This page does not include towns that rejected an override and sustained the resulting budget without returning to the ballot, because the DOR data on fail-and-return patterns (see [Statewide Pattern](#statewide-pattern) below) shows that return-to-ballot is the dominant outcome. If you know of a Massachusetts town that rejected an operating override and did not return within three years, [open an issue](https://github.com/agbaber/marblehead/issues/new?title=Counter-example+town%3A+) so it can be added.
+> **What these case studies show.** The first two case studies (Melrose and Stoneham) are Massachusetts towns that rejected an operating override and later returned to the ballot with a larger ask. The third section ([towns that rejected and did not return](#rejected-and-did-not-return)) covers the opposite outcome: towns that rejected an override and absorbed the cuts for years without returning to the ballot. Both patterns exist. The [statewide data](#statewide-pattern) shows that return-to-ballot is the more common outcome, but it is not the only one. If you know of additional examples in either direction, [open an issue](https://github.com/agbaber/marblehead/issues/new?title=Case+study+town%3A+).
 
 ## Melrose (population ~28,000, median home ~$818K)
 
@@ -81,6 +81,25 @@ title: case studies
 <div class="takeaway">
   <strong>Key lesson.</strong> Even after living through cuts, the larger amount <em>still</em> nearly failed &mdash; by 43 votes. The community was deeply divided. An active information campaign (Override Study Committee, weekly public meetings) was critical to getting even the $9.3M across.
 </div>
+
+---
+
+## Towns that rejected and did not return {#rejected-and-did-not-return}
+
+Not every failed override leads to a return trip to the ballot. Some towns absorbed the cuts and managed within their levy limits for years. These cases are less covered in local media (sustained austerity is not a single-day news event), but they exist and represent a real alternative path.
+
+### Easton (population ~25,000)
+
+- **2016:** [$4.4M operating override fails](https://patch.com/massachusetts/easton-ma/easton-special-election-45m-tax-override), 3,225 no to 1,945 yes.
+- **Outcome:** Easton did not return to the ballot with another operating override for **nine years**. The town's last approved operating override was in 2006. The 2016 rejection led to a decade of constrained budgets managed within the levy limit.
+- **June 2025:** Easton finally returned with a [$7.3M operating override, which also failed](https://www.yahoo.com/news/7-3m-easton-override-fails-015746254.html), 3,754 no to 2,252 yes. The town then implemented what officials described as the most severe service reductions since the 2008 financial crisis, including the equivalent of 47 school FTEs.
+- **Takeaway:** Easton rejected overrides in both 2016 and 2025 and absorbed the consequences each time. Nine years separated the two attempts.
+
+### Newton (population ~88,000)
+
+- **March 2023:** [$9.2M operating override fails](https://www.wbur.org/news/2023/03/15/newton-tax-override-vote-results), 10,566 no to 9,428 yes. (Voters approved two debt exclusion questions on the same ballot.)
+- **Outcome:** As of April 2026, Newton has not returned with another operating override attempt, more than three years later. Newton Public Schools faced an $8M shortfall in the FY2024 budget and implemented staff and program cuts. The austerity contributed to labor tensions that culminated in a [two-week teachers' strike in winter 2024](https://www.wbur.org/news/2024/02/01/newton-teachers-strike-explainer). The School Committee approved a FY2026 budget with a [$2-3M funding gap](https://www.figcitynews.com/2025/04/next-steps-after-school-committee-approves-nps-budget-with-2-3-million-funding-gap/) rather than returning to the ballot.
+- **Takeaway:** Newton absorbed three years of budget pressure after rejecting a $9.2M override, including a teachers' strike driven partly by fiscal constraints.
 
 ---
 
@@ -179,6 +198,15 @@ Even at Tier 3 ($15M), Marblehead's rate ($10.06) would be lower than Melrose's 
 - [Stoneham Fire Department, "Why the Override Matters" (town document)](https://www.stoneham-ma.gov/DocumentCenter/View/11032/Fire-Department-Presentation)
 - [Stoneham Public Library, funding update](https://stonehamlibrary.org/blog/announcements/stoneham-public-library-funding-update/)
 - [Boston Globe, Stoneham override coverage, December 9, 2025](https://www.bostonglobe.com/2025/12/09/metro/stoneham-override/)
+
+**Easton**
+- [Patch, "Easton Special Election: $4.5M Tax Override" (2016)](https://patch.com/massachusetts/easton-ma/easton-special-election-45m-tax-override)
+- [Yahoo News, "$7.3M Easton override fails by nearly two-to-one margin" (June 2025)](https://www.yahoo.com/news/7-3m-easton-override-fails-015746254.html)
+- [Town of Easton, FY2026 override page](https://www.easton.ma.us/override/)
+
+**Newton**
+- [WBUR, "With tax override defeated, Newton leaders fear student impacts" (March 2023)](https://www.wbur.org/news/2023/03/15/newton-tax-override-vote-results)
+- [Fig City News, "Next steps after School Committee approves NPS budget with $2-3 million funding gap" (April 2025)](https://www.figcitynews.com/2025/04/next-steps-after-school-committee-approves-nps-budget-with-2-3-million-funding-gap/)
 
 **Statewide**
 - [Marblehead Current, "Overriding Considerations: Tough choices prompt surge of override requests statewide," March 17, 2026](https://marbleheadcurrent.org/2026/03/17/overriding-considerations-tough-choices-prompts-surge-of-override-requests-statewide/)
