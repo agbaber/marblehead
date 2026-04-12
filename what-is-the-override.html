@@ -593,6 +593,18 @@ og_url: https://marbleheaddata.org/what-is-the-override.html
   var section = document.querySelector('.scrolly-nesting');
   if (!section || !('IntersectionObserver' in window)) return;
 
+  // Measure the sticky viz panel and set --step-dock-top so step-inner
+  // elements dock right below it.
+  var stickyViz = section.querySelector('.scrolly-nesting-sticky');
+  function setDockTop() {
+    if (!stickyViz) return;
+    var vizTop = parseInt(getComputedStyle(stickyViz).top, 10) || 60;
+    var dockTop = vizTop + stickyViz.offsetHeight + 12;
+    section.style.setProperty('--step-dock-top', dockTop + 'px');
+  }
+  setDockTop();
+  window.addEventListener('resize', setDockTop);
+
   var steps = section.querySelectorAll('.scrolly-step');
   var rows = {
     '1a': section.querySelector('.sn-row--1a'),

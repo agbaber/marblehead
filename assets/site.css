@@ -2231,15 +2231,17 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 
 .scrolly-nesting-steps { margin: 0; }
 .scrolly-step {
-  min-height: 30vh;
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
+  min-height: 70vh;
+  margin-bottom: 0;
 }
+.scrolly-step:last-child { min-height: 40vh; }
 .scrolly-step-inner {
+  position: sticky;
+  top: var(--step-dock-top, 320px);
   width: 100%;
   padding: 14px 18px;
   border-left: 3px solid var(--divider);
+  background: var(--surface);
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 .scrolly-step.is-active .scrolly-step-inner {
@@ -2264,7 +2266,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   .scrolly-nesting-sticky { padding: 14px 14px 12px; top: 56px; }
   .sn-row { grid-template-columns: 24px 60px 1fr 44px; gap: 8px; padding: 6px 8px; }
   .sn-row-name { font-size: 11px; }
-  .scrolly-step { min-height: 36vh; }
+  .scrolly-step { min-height: 60vh; }
   .scrolly-step-inner { padding: 12px 14px; }
   .scrolly-step h3 { font-size: 16px; }
   .scrolly-step p { font-size: 14px; }

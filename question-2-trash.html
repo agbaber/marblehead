@@ -809,6 +809,18 @@ function update() {
   const section = document.querySelector('.scrolly-trash');
   if (!section || !('IntersectionObserver' in window)) return;
 
+  // Measure the sticky viz panel and set --step-dock-top so step-inner
+  // elements dock right below it.
+  const stickyViz = section.querySelector('.scrolly-trash-sticky');
+  function setDockTop() {
+    if (!stickyViz) return;
+    const vizTop = parseInt(getComputedStyle(stickyViz).top, 10) || 60;
+    const dockTop = vizTop + stickyViz.offsetHeight + 12;
+    section.style.setProperty('--step-dock-top', dockTop + 'px');
+  }
+  setDockTop();
+  window.addEventListener('resize', setDockTop);
+
   const MAX_BAR_DOLLARS = 700;
   const steps = section.querySelectorAll('.scrolly-step');
   const marker = document.getElementById('st-marker');
