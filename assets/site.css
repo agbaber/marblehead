@@ -73,8 +73,8 @@
   --radius-lg: 14px;
   --radius-md: 12px;
   --radius-sm: 8px;
-  --page-max:  720px;
-  --chart-max: 880px;
+  --page-max:  760px;
+  --chart-max: 920px;
   --gutter:    16px;
 
   /* Typography */
@@ -138,7 +138,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 17px;
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
