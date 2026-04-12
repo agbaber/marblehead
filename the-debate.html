@@ -76,10 +76,10 @@ community_pulse: off-sections
 
   /* Meta-note: the "these dividing lines aren't all the same kind" callout above the TL;DR */
   .meta-note {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-muted);
-    line-height: 1.65;
-    padding: 14px 18px;
+    line-height: 1.6;
+    padding: 16px 18px 18px;
     margin: 18px 0 22px;
     border-left: 3px solid var(--c-navy);
     background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
@@ -87,15 +87,20 @@ community_pulse: off-sections
   }
   .meta-note p {
     margin: 0;
+    font-size: 13px;
+    color: var(--text-muted);
   }
   .meta-note-list + p {
-    margin-top: 16px;
+    margin-top: 18px;
     padding-top: 14px;
     border-top: 1px solid color-mix(in srgb, var(--c-navy) 18%, transparent);
   }
   .meta-note-list {
-    margin: 14px 0 0;
-    padding: 0;
+    margin: 16px -4px 0;
+    padding: 16px 18px 18px;
+    background: var(--surface);
+    border: 1px solid color-mix(in srgb, var(--c-navy) 16%, transparent);
+    border-radius: 8px;
   }
   .meta-note-list dt {
     font-size: 10px;
@@ -103,16 +108,17 @@ community_pulse: off-sections
     text-transform: uppercase;
     letter-spacing: 1.3px;
     color: var(--c-navy);
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
   .meta-note-list dt:not(:first-of-type) {
-    margin-top: 14px;
+    margin-top: 16px;
   }
   .meta-note-list dd {
     margin: 0;
     color: var(--text);
-    font-size: 14px;
-    line-height: 1.55;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
   }
 
   /* TL;DR section: visually promote the summary above the six dividing lines */
@@ -217,7 +223,9 @@ community_pulse: off-sections
     .perspective { padding: 16px 18px 14px; }
     .perspective p { font-size: 14px; line-height: 1.6; }
     .tension-heading { font-size: 18px; margin-top: 32px; }
-    .meta-note { padding: 12px 14px; font-size: 13px; }
+    .meta-note { padding: 14px 14px 16px; font-size: 12.5px; }
+    .meta-note-list { padding: 14px 14px 16px; }
+    .meta-note-list dd { font-size: 15px; }
     .tldr { padding: 16px 16px 18px; }
     .crux-map {
       grid-template-columns: 1fr;
@@ -271,7 +279,7 @@ community_pulse: off-sections
       <dt>Interpretation</dt>
       <dd>Are budget cuts damage or discipline?</dd>
       <dt>Values</dt>
-      <dd>Is current spending about right, or is there more to cut?</dd>
+      <dd>Is current spending about right, or what easy, good, or clear cuts can we make?</dd>
       <dt>Governance</dt>
       <dd>Do you trust the town to spend more money wisely?</dd>
     </dl>
