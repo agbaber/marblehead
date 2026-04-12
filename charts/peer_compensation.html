@@ -50,19 +50,51 @@ title: "Salary vs. Benefits: How Peer Towns Split the Cost"
   }
   .ppe-header span:nth-child(3) { text-align: right; }
   .ppe-table { max-width: 540px; margin: 24px auto; }
+  .tc-table { max-width: 640px; margin: 24px auto; }
+  .tc-header {
+    display: grid; grid-template-columns: 100px 1fr 100px;
+    gap: 0 10px; padding: 4px 0 8px;
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--c-text-sub, #7D8C99);
+    border-bottom: 2px solid var(--c-border, #D8E1E8);
+  }
+  .tc-header span:nth-child(3) { text-align: right; }
+  .tc-row {
+    display: grid; grid-template-columns: 100px 1fr 100px;
+    align-items: center; gap: 0 10px; padding: 6px 0;
+    font-size: 13px; border-bottom: 1px solid var(--c-divider, #ECF1F5);
+  }
+  .tc-row:last-child { border-bottom: none; }
+  .tc-town { font-weight: 600; text-align: right; font-size: 12px; }
+  .tc-bar-track { height: 28px; background: var(--c-border, #D8E1E8); border-radius: 4px; display: flex; overflow: hidden; }
+  .tc-bar-salary { height: 100%; background: var(--c-text-sub, #7D8C99); }
+  .tc-bar-hc { height: 100%; background: var(--c-text-sub, #7D8C99); opacity: 0.4; }
+  .tc-row.highlight-mhd .tc-town { color: var(--c-navy); }
+  .tc-row.highlight-mhd .tc-bar-salary { background: var(--c-navy); }
+  .tc-row.highlight-mhd .tc-bar-hc { background: var(--c-navy); }
+  .tc-row.highlight-hin .tc-town { color: var(--c-teal); }
+  .tc-row.highlight-hin .tc-bar-salary { background: var(--c-teal); }
+  .tc-row.highlight-hin .tc-bar-hc { background: var(--c-teal); }
+  .tc-total { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
+  .tc-legend { display: flex; gap: 16px; justify-content: center; margin-bottom: 12px; font-size: 12px; color: var(--c-text-mid, #7A8A98); }
+  .tc-swatch { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: middle; margin-right: 4px; }
+  .tc-swatch-salary { background: var(--c-text-sub, #7D8C99); }
+  .tc-swatch-hc { background: var(--c-text-sub, #7D8C99); opacity: 0.4; }
   @media (max-width: 600px) {
     .comp-row { grid-template-columns: 80px 1fr 80px 50px; font-size: 12px; }
     .comp-header { grid-template-columns: 80px 1fr 80px 50px; }
     .ppe-row { grid-template-columns: 80px 1fr 80px; font-size: 12px; }
     .ppe-header { grid-template-columns: 80px 1fr 80px; }
-    .comp-town, .ppe-town { font-size: 11px; }
+    .tc-row { grid-template-columns: 80px 1fr 90px; font-size: 12px; }
+    .tc-header { grid-template-columns: 80px 1fr 90px; }
+    .comp-town, .ppe-town, .tc-town { font-size: 11px; }
   }
 </style>
 
 <h1 class="h-center">Salary vs. Benefits: How Peer Towns Split the Cost</h1>
-<p class="subtitle h-center">Average teacher salary and employer health insurance share for eight Massachusetts towns, FY2024. Source: MA DESE, GIC rate sheets.</p>
+<p class="subtitle h-center">Average teacher salary, employer health insurance, and estimated total compensation for eight Massachusetts towns. Source: MA DESE, GIC rate sheets.</p>
 
-<p>Marblehead pays 83% of employee health insurance premiums. Hingham pays 50%. On a family plan, that difference costs Marblehead roughly $10,000 more per employee per year. So how does Hingham attract teachers while asking them to pay half their own insurance? The short answer: higher salaries.</p>
+<p>Marblehead pays 83% of employee health insurance premiums. Hingham pays 50%. On a family plan at FY26 rates, that difference costs Marblehead roughly $12,700 more per employee per year. So how does Hingham attract teachers while asking them to pay half their own insurance? The short answer: higher salaries.</p>
 
 <h2 class="h-center">Average Teacher Salary</h2>
 
@@ -127,7 +159,73 @@ title: "Salary vs. Benefits: How Peer Towns Split the Cost"
 
 <p>Hingham has the third-highest average teacher salary among these eight towns despite paying the lowest share of health insurance. Marblehead has the third-lowest salary despite paying the highest share. The gap between them is $16,413 per teacher, or 18%.</p>
 
-<p>This suggests the premium split is not free money for either side. Hingham's lower insurance share appears to be offset by higher salaries, negotiated through collective bargaining. From the employee's perspective, a Hingham teacher earning $16,413 more in salary but paying roughly $10,000 more in premiums (on a family plan) is still approximately $6,500 ahead in take-home pay. Higher salary also means a higher pension base, since Massachusetts public employee pensions are calculated on the highest three years of earnings.</p>
+<p>This suggests the premium split is not free money for either side. Hingham's lower insurance share appears to be offset by higher salaries, negotiated through collective bargaining. From the employee's perspective, a Hingham teacher earning $16,413 more in salary but paying roughly $12,700 more in premiums (on a family plan) is still approximately $3,700 ahead in take-home pay, plus a higher pension base.</p>
+
+<h2 class="h-center">Estimated Total Compensation</h2>
+
+<p>What does the full picture look like when you add the employer's health insurance cost to salary? The chart below estimates total compensation for a teacher on the GIC Harvard Pilgrim family plan, applying each town's modal employer share to the FY26 full premium of $38,562.</p>
+
+<div class="tc-table">
+  <div class="tc-legend">
+    <span class="tc-legend-item"><span class="tc-swatch tc-swatch-salary"></span> Salary</span>
+    <span class="tc-legend-item"><span class="tc-swatch tc-swatch-hc"></span> Employer health ins.</span>
+  </div>
+  <div class="tc-header">
+    <span></span>
+    <span></span>
+    <span>Total comp</span>
+  </div>
+  <div class="tc-row">
+    <span class="tc-town">Brookline</span>
+    <span class="tc-bar-track"><div class="tc-bar-salary" style="width:79.3%"></div><div class="tc-bar-hc" style="width:20.7%"></div></span>
+    <span class="tc-total">$154,335</span>
+  </div>
+  <div class="tc-row">
+    <span class="tc-town">Wellesley</span>
+    <span class="tc-bar-track"><div class="tc-bar-salary" style="width:71.2%"></div><div class="tc-bar-hc" style="width:19.5%"></div></span>
+    <span class="tc-total">$139,977</span>
+  </div>
+  <div class="tc-row">
+    <span class="tc-town">Winchester</span>
+    <span class="tc-bar-track"><div class="tc-bar-salary" style="width:67.0%"></div><div class="tc-bar-hc" style="width:18.7%"></div></span>
+    <span class="tc-total">$132,274</span>
+  </div>
+  <div class="tc-row">
+    <span class="tc-town">Natick</span>
+    <span class="tc-bar-track"><div class="tc-bar-salary" style="width:65.2%"></div><div class="tc-bar-hc" style="width:18.7%"></div></span>
+    <span class="tc-total">$129,602</span>
+  </div>
+  <div class="tc-row highlight-hin">
+    <span class="tc-town">Hingham</span>
+    <span class="tc-bar-track"><div class="tc-bar-salary" style="width:69.4%"></div><div class="tc-bar-hc" style="width:12.5%"></div></span>
+    <span class="tc-total">$126,390</span>
+  </div>
+  <div class="tc-row highlight-mhd">
+    <span class="tc-town">Marblehead</span>
+    <span class="tc-bar-track"><div class="tc-bar-salary" style="width:58.8%"></div><div class="tc-bar-hc" style="width:20.7%"></div></span>
+    <span class="tc-total">$122,702</span>
+  </div>
+  <div class="tc-row">
+    <span class="tc-town">Melrose</span>
+    <span class="tc-bar-track"><div class="tc-bar-salary" style="width:55.5%"></div><div class="tc-bar-hc" style="width:20.0%"></div></span>
+    <span class="tc-total">$116,532</span>
+  </div>
+  <div class="tc-row">
+    <span class="tc-town">Stoneham</span>
+    <span class="tc-bar-track"><div class="tc-bar-salary" style="width:52.7%"></div><div class="tc-bar-hc" style="width:20.0%"></div></span>
+    <span class="tc-total">$112,143</span>
+  </div>
+</div>
+
+<p class="caption">Estimated total compensation = average teacher salary (DESE, school year 2023-24) + employer share of GIC Harvard Pilgrim Access America family plan ($38,562 annual full cost, FY26). Employer share percentages from <a href="/data/peer_premium_splits.csv">data/peer_premium_splits.csv</a>. Sorted by estimated total comp, descending. Not every employee enrolls in a family plan; individual plan premiums are roughly one-third of family.</p>
+
+<p>The ranking shifts when employer health costs are included. Hingham drops from third in salary to fifth in total compensation. The gap between Marblehead and Hingham narrows from $16,413 in salary alone to $3,688 in estimated total comp. Marblehead's 83% of $38,562 is $32,006 in employer health cost; Hingham's 50% is $19,281. The $16,413 salary gap is partly offset by a $12,725 difference in employer insurance cost.</p>
+
+<p>Marblehead's and Brookline's health insurance segments are the same width: both towns pay 83% of premiums. The entire $31,633 difference in total comp between them is salary.</p>
+
+<p><strong>What about pension costs?</strong> Higher salary also increases pension obligations. But for teachers specifically, the employer share of pension costs is funded by the Commonwealth through the Massachusetts Teachers' Retirement System (MTRS), not by the town. A town that pays teachers higher salaries does not pay higher pension costs as a result; the state absorbs that increase. Shifting teacher compensation from insurance to salary does not create an offsetting pension cost on the town's budget.</p>
+
+<p>For non-teacher municipal employees (police, fire, DPW), pensions are funded through the local retirement system, and higher salaries do increase the town's annual pension appropriation. The teacher-focused comparison here does not carry the pension cost implication that would apply to a broader municipal workforce analysis.</p>
 
 <h2 class="h-center">But Does It Cost More Overall?</h2>
 
@@ -198,7 +296,8 @@ title: "Salary vs. Benefits: How Peer Towns Split the Cost"
 <p>This comparison uses publicly available DESE data, which covers teachers only. It does not include non-teaching municipal employees (police, fire, DPW), who are also covered under the PEC agreement. A complete picture would require:</p>
 
 <ul>
-  <li>Total municipal payroll per employee (not just teachers) from DOR Schedule A data</li>
+  <li>Total municipal payroll per employee (not just teachers) from DOR Schedule A data, where the pension cost trade-off is a real town expense</li>
+  <li>Actual plan enrollment mix: the total comp estimates above assume a family plan, but employees on individual plans have a much smaller insurance component</li>
   <li>The history of Hingham's PEC agreement: when the 50/50 split was established and what was traded for it</li>
   <li>Hiring and retention data: vacancy rates, time-to-fill, turnover</li>
   <li>Whether Hingham's higher salaries are a direct result of the premium split negotiation or reflect other factors (cost of living, tax base, bargaining history)</li>
@@ -210,8 +309,8 @@ title: "Salary vs. Benefits: How Peer Towns Split the Cost"
   <p><strong>Teacher salary data.</strong> Average teacher salary from DESE School and District Profiles, Teacher Salaries Report for school year 2023-24 (updated February 5, 2026). Salary totals come from end-of-year financial reports submitted to DESE by school districts. Compiled in <a href="/data/peer_teacher_compensation_FY24.csv">data/peer_teacher_compensation_FY24.csv</a>.</p>
   <p><strong>Per-pupil expenditure.</strong> Total expenditure per pupil (all funds) for FY2024, from DESE Per Pupil Expenditure Report. Calculated by dividing a district's operating costs by its average pupil membership (FTEs).</p>
   <p><strong>Health insurance premium splits.</strong> Employer share of health insurance premiums from GIC rate sheets and PEC agreements for FY2026, compiled in <a href="/data/peer_premium_splits.csv">data/peer_premium_splits.csv</a> with source URLs for each town.</p>
-  <p><strong>Total compensation estimate.</strong> The $10,000 premium gap assumes a GIC Harvard Pilgrim HMO family plan at approximately $30,000 annual premium. Not every employee enrolls in a family plan; individual plan premiums are roughly one-third of family. The estimate illustrates the magnitude of the difference, not the exact per-employee cost.</p>
-  <p><strong>Pension calculation.</strong> Massachusetts public employee pensions under M.G.L. c.32 are based on the average of the three highest consecutive years of regular compensation. Higher base salary directly increases the pension benefit.</p>
+  <p><strong>Total compensation estimate.</strong> Estimated total comp = average teacher salary + employer share of the GIC Harvard Pilgrim Access America family plan at $38,562 annual full cost (FY26). The family plan is used as a common benchmark; not every employee enrolls in a family plan, and individual plan premiums are roughly one-third of family. The estimate illustrates relative magnitude across towns, not exact per-employee cost.</p>
+  <p><strong>Teacher pensions (MTRS).</strong> Teacher pensions in Massachusetts are funded by the Commonwealth through the Massachusetts Teachers' Retirement System under M.G.L. c.32. The employer contribution is a state expense, not a town budget line. Higher teacher salaries increase the state's pension obligation, not the town's. For non-teacher municipal employees, pensions are funded through the local retirement system and higher salaries do increase the town's annual pension appropriation.</p>
 </div>
 
 <div class="read-next">
