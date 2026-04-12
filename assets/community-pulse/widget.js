@@ -260,15 +260,17 @@ function buildWidget(sectionId, sectionTitle, sectionUrl, initialReactions, init
 
   root.appendChild(meta);
 
-  // Note textarea (hidden initially).
+  // Note textarea is appended to the section-end container (not the
+  // widget itself) so it can break out into the right margin on desktop.
+  // Store a reference on the root so wireWidget can find it.
   const note = document.createElement('textarea');
   note.id = `${widgetId}-note`;
   note.className = 'cp-widget__note';
-  note.placeholder = 'Write a private note. Saved locally in your browser.';
+  note.placeholder = 'Private note -- saved in your browser, never sent anywhere.';
   note.setAttribute('aria-label', 'Private note, saved locally in your browser');
   note.hidden = true;
   note.rows = 3;
-  root.appendChild(note);
+  root._noteElement = note;
 
   return root;
 }
@@ -301,7 +303,10 @@ function debounce(fn, ms) {
 function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord) {
   const buttons = root.querySelectorAll('.cp-widget__button');
   const noteToggle = root.querySelector('.cp-widget__note-toggle');
-  const noteField = root.querySelector('.cp-widget__note');
+  // Note textarea lives in the parent .cp-section-end, not inside the widget.
+  const noteField = root.parentElement
+    ? root.parentElement.querySelector('.cp-widget__note')
+    : root.querySelector('.cp-widget__note');
   const shareBtn = root.querySelector('.cp-widget__share');
   const countNum = root.querySelector('.cp-widget__count-num');
   const countDelta = root.querySelector('.cp-widget__delta');
@@ -316,6 +321,7 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
     noteField.value = currentNote;
     noteField.hidden = false;
     noteToggle.setAttribute('aria-expanded', 'true');
+    noteToggle.dataset.hasNote = 'true';
   }
 
   /** Persist the current stance, note, and reacted state to IndexedDB. */
@@ -377,6 +383,7 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
   // time the note contains non-empty text.
   const saveNote = debounce(async () => {
     currentNote = noteField.value;
+    noteToggle.dataset.hasNote = currentNote.trim().length > 0 ? 'true' : 'false';
     await persist();
     if (currentNote.trim().length > 0) await ensureCounted();
   }, 1000);
@@ -482,6 +489,11 @@ export async function hydrateWidgets() {
     const endRow = document.createElement('div');
     endRow.className = 'cp-section-end';
     endRow.appendChild(widget);
+    // Append the note textarea to the section-end container (not the
+    // widget) so CSS can position it in the right margin on desktop.
+    if (widget._noteElement) {
+      endRow.appendChild(widget._noteElement);
+    }
     if (cursor) {
       parent.insertBefore(endRow, cursor);
     } else {

@@ -4,10 +4,12 @@
 
 /* Right-aligned end-of-section container. Holds the widget on its own
    row after the last paragraph of the section, so readers see the
-   reaction affordance after they finish reading the claim, not before. */
+   reaction affordance after they finish reading the claim, not before.
+   position:relative anchors the side-note on desktop. */
 .cp-section-end {
   display: flex;
   justify-content: flex-end;
+  position: relative;
   margin: 1rem 0 2rem 0;
 }
 
@@ -37,6 +39,7 @@
 @media (max-width: 640px) {
   .cp-section-end {
     justify-content: flex-start;
+    flex-wrap: wrap;
     margin: 0.75rem 0 1.5rem 0;
   }
   .cp-widget {
@@ -136,21 +139,51 @@
 
 .cp-widget__note {
   display: block;
-  width: 100%;
-  margin-top: 0.4rem;
-  padding: 0.4rem;
+  padding: 0.5rem 0.6rem;
   font-family: inherit;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
   color: var(--text, #222);
   background: var(--surface, rgba(0,0,0,0.03));
   border: 1px solid var(--border, rgba(0,0,0,0.1));
   border-radius: 0.35rem;
   resize: vertical;
-  min-height: 3.5rem;
+  min-height: 4.5rem;
+}
+
+/* Desktop (enough viewport for a side panel): absolutely position
+   the note to the right of the content column. */
+@media (min-width: 960px) {
+  .cp-widget__note {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(calc(100% + 1.25rem));
+    width: 240px;
+  }
+}
+
+/* Tablet / narrow desktop: inline below the widget, full content width */
+@media (max-width: 959px) {
+  .cp-widget__note {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
 
 .cp-widget__note[hidden] {
   display: none;
+}
+
+/* Placeholder styling */
+.cp-widget__note::placeholder {
+  color: var(--text-muted, #888);
+  font-size: 0.8rem;
+}
+
+/* Highlight the note toggle when a note has content */
+.cp-widget__note-toggle[data-has-note="true"] {
+  color: var(--c-teal, #2F7D8E);
 }
 
 .cp-widget__toast {
