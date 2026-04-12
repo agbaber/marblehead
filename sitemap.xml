@@ -1,0 +1,14 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for page in site.pages -%}
+    {%- if page.url contains '/assets/' or page.url contains '/data/' -%}{%- continue -%}{%- endif -%}
+    {%- if page.url == '/sitemap.xml' or page.url == '/robots.txt' -%}{%- continue -%}{%- endif -%}
+    {%- unless page.url contains '.html' or page.url == '/' -%}{%- continue -%}{%- endunless -%}
+  <url>
+    <loc>{{ page.url | absolute_url }}</loc>
+  </url>
+  {%- endfor -%}
+</urlset>
