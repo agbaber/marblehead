@@ -1885,17 +1885,14 @@ button.ballot-box[aria-pressed="true"] .ballot-box-x-stroke:nth-child(2) {
 }
 .sn-result {
   margin-top: 12px;
-  padding: 9px 12px;
+  padding: 11px 14px;
   background: var(--divider);
   border-radius: 6px;
   text-align: center;
   font-size: 13px;
   color: var(--text-mid);
   min-height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 .sn-result strong {
   color: var(--c-navy);
@@ -2081,17 +2078,14 @@ button.ballot-box[aria-pressed="true"] .ballot-box-x-stroke:nth-child(2) {
 
 .st-winner {
   margin-top: 14px;
-  padding: 9px 12px;
+  padding: 11px 14px;
   background: var(--divider);
   border-radius: 6px;
   text-align: center;
   font-size: 13px;
   color: var(--text-mid);
   min-height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.35;
+  line-height: 1.45;
   transition: background 0.35s ease;
 }
 .st-winner strong {
