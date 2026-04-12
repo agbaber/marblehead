@@ -70,6 +70,9 @@
     var heading = document.createElement('h2');
     heading.className = 'sources-list-heading';
     heading.textContent = 'Sources';
+    // Auto-generated footnotes list; not a substantive section, so opt out
+    // of the community pulse widget's auto-h2 hydration.
+    heading.setAttribute('data-stance-section', 'off');
     section.appendChild(heading);
 
     var list = document.createElement('ol');
