@@ -1997,25 +1997,23 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   fill: var(--text-subtle);
 }
 .ballot-timeline .vote-dot {
-  stroke: var(--surface);
   stroke-width: 1.5;
 }
-.ballot-timeline .vote-dot--win {
-  fill: var(--c-sage);
+.ballot-timeline .vote-dot--approved {
+  fill: var(--c-teal);
+  stroke: var(--surface);
 }
-.ballot-timeline .vote-dot--loss {
-  fill: var(--c-buoy);
+.ballot-timeline .vote-dot--rejected {
+  fill: none;
+  stroke: var(--c-buoy);
+  stroke-width: 2;
 }
 .ballot-timeline .annotation {
   font-size: 10px;
   fill: var(--text-mid);
 }
-.ballot-timeline .annotation--buoy {
+.ballot-timeline .annotation--upcoming {
   fill: var(--c-buoy);
-  font-weight: 600;
-}
-.ballot-timeline .annotation--sage {
-  fill: var(--c-sage);
   font-weight: 600;
 }
 .ballot-timeline .future-line {
@@ -2039,8 +2037,8 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   width: 10px; height: 10px; border-radius: 50%;
   display: inline-block;
 }
-.ballot-timeline-legend .sw--win { background: var(--c-sage); }
-.ballot-timeline-legend .sw--loss { background: var(--c-buoy); }
+.ballot-timeline-legend .sw--approved { background: var(--c-teal); }
+.ballot-timeline-legend .sw--rejected { background: none; border: 2px solid var(--c-buoy); box-sizing: border-box; }
 
 @media (max-width: 600px) {
   .ballot-timeline { padding: 14px 12px 10px; }
