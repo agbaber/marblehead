@@ -120,6 +120,21 @@ Use **git worktrees**, not the cherry-pick dance above. Each new piece of
 work gets its own worktree off `main` so there's no risk of accidentally
 pushing onto a merged branch.
 
+## Analytics
+
+The site uses two analytics tools, both loaded in `_includes/head.html`:
+
+- **Cloudflare Web Analytics** &ndash; cookie-free pageview and referrer
+  tracking. Token-based beacon, configured in the Cloudflare dashboard
+  under Web Analytics. No DNS proxy required.
+- **PostHog** &ndash; session replay, user paths, funnels, and event
+  tracking. Ingestion endpoint is `us.i.posthog.com`; dashboard is at
+  `app.posthog.com`. Uses `person_profiles: 'identified_only'` so
+  anonymous visitors stay anonymous.
+
+Both may be blocked by ad blockers or Pi-hole. The PostHog ingestion
+domain is less commonly blocked than its dashboard.
+
 ### PR scope
 
 One PR per logical change. Don't piggyback unrelated fixes (e.g. adding
