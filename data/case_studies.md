@@ -79,7 +79,7 @@ title: case studies
 - **Result:** Stoneham received $9.3M instead of the $14.6M originally requested. Service gaps will persist.
 
 <div class="takeaway">
-  <strong>Key lesson.</strong> Even after living through cuts, the larger amount <em>still</em> nearly failed &mdash; by 43 votes. The community was deeply divided. An active information campaign (Override Study Committee, weekly public meetings) was critical to getting even the $9.3M across.
+  <strong>Key lesson.</strong> Even after living through cuts, the larger amount <em>still</em> nearly failed, by 43 votes. The community was deeply divided. An active information campaign (Override Study Committee, weekly public meetings) was critical to getting even the $9.3M across.
 </div>
 
 ---

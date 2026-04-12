@@ -10,7 +10,7 @@ An open dataset and visualization project tracking Marblehead, Massachusetts mun
 - [`data/MASTER_DATA.csv`](data/MASTER_DATA.csv) -- Every verified time-series data point in one file (FY2001-FY2027)
 - [`data/DATA_CATALOG.md`](data/DATA_CATALOG.md) -- What every field means, where it came from, and what the caveats are
 - [`data/SOURCE_LOOKUP.md`](data/SOURCE_LOOKUP.md) -- Trace any number back to its specific document and page
-- [`data/case_studies.md`](data/case_studies.md) -- What happened in Melrose and Stoneham after failed overrides
+- [`data/case_studies.md`](data/case_studies.md) -- What happened after four MA towns voted no on overrides
 
 ### Charts
 Interactive HTML charts viewable at **[marbleheaddata.org](https://marbleheaddata.org/)** (or open the HTML files directly in a browser):
