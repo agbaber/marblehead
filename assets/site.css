@@ -2776,6 +2776,80 @@ blockquote.quote--mixed p {
 }
 
 /* ==========================================================================
+   Tier line-item detail (override page)
+   ========================================================================== */
+
+.tier-items { margin: 12px 0 4px; }
+
+.tier-group-heading {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-subtle);
+  margin: 16px 0 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--divider);
+}
+.tier-group-heading:first-child {
+  margin-top: 4px;
+  padding-top: 0;
+  border-top: none;
+}
+
+.tier-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 0;
+  font-size: 14px;
+}
+.tier-line-name { color: var(--text); }
+.tier-line-amount {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.tier-line--offset {
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--divider);
+}
+.tier-line--offset .tier-line-name,
+.tier-line--offset .tier-line-amount { color: var(--text-subtle); }
+.tier-line--school {
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--divider);
+  font-weight: 600;
+}
+.tier-line--school .tier-line-amount { color: var(--text); }
+
+.tier-tag {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-right: 4px;
+  vertical-align: 1px;
+}
+.tier-tag--restore {
+  color: var(--c-teal);
+  background: color-mix(in srgb, var(--c-teal) 12%, transparent);
+}
+.tier-tag--new {
+  color: var(--c-navy);
+  background: color-mix(in srgb, var(--c-navy) 12%, transparent);
+}
+
+@media (max-width: 600px) {
+  .tier-line { font-size: 13px; }
+  .tier-tag { font-size: 9px; }
+}
+
+/* ==========================================================================
    Tier card color variants (match tier-chart segment colors)
    ========================================================================== */
 
