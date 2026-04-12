@@ -35,6 +35,15 @@ All data is drawn from publicly available documents:
 - [FY2027 Proposed Budget](https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf)
 - [2026 State of the Town Presentation](https://marbleheadma.gov/wp-content/uploads/2026/02/2026-State-of-the-Town-Presenation-Final.pdf)
 
+## Analytics
+
+The site uses two analytics tools, both added via script tags in `_includes/head.html`:
+
+- **Cloudflare Web Analytics** -- lightweight, cookie-free pageview and referrer tracking. No personal data collected. Configured in the [Cloudflare dashboard](https://dash.cloudflare.com/) under Web Analytics.
+- **PostHog** -- session replay, user paths, funnels, and event tracking. Uses `person_profiles: 'identified_only'` so anonymous visitors stay anonymous. Dashboard at [app.posthog.com](https://app.posthog.com). Ingestion goes to `us.i.posthog.com`.
+
+Both may be blocked by ad blockers or Pi-hole. PostHog's ingestion domain (`us.i.posthog.com`) is less commonly blocked than its dashboard (`app.posthog.com`), so visitor tracking typically works even when the dashboard is hard to reach from filtered networks.
+
 ## Corrections Welcome
 
 If you find an error, please open an issue or submit a pull request. Every number should be traceable to a primary source. If it's not, that's a bug.
