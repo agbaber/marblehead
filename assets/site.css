@@ -808,6 +808,20 @@ details.notes[open] > summary {
   letter-spacing: 0.2px;
 }
 
+.footer-version {
+  font-size: 10px;
+  color: var(--text-faint);
+  margin: 6px 0 0;
+  opacity: 0.6;
+}
+.footer-version a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer-version a:hover {
+  text-decoration: underline;
+}
+
 /* ==========================================================================
    Cards (used on text pages)
    ========================================================================== */
