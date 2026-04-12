@@ -3332,3 +3332,171 @@ abbr.g:focus::after {
   padding: 0 0 16px;
   border-bottom: 1px solid var(--divider);
 }
+
+/* ==========================================================================
+   Deep-dive collapsible sections (progressive disclosure)
+   Pattern 1 ("bordered"): self-contained data blocks (tables, charts)
+   Pattern 2 ("prose"): narrative sections with fade preview
+   ========================================================================== */
+
+.deep-dive {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin: 28px 0;
+  transition: box-shadow 0.2s ease;
+}
+.deep-dive:hover {
+  box-shadow: var(--shadow-sm);
+}
+.deep-dive > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  user-select: none;
+}
+.deep-dive > summary::-webkit-details-marker { display: none; }
+
+/* Circular caret icon */
+.deep-dive > summary::before {
+  content: "\25B8";
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--c-teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--c-teal);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  margin-bottom: 6px;
+}
+.deep-dive[open] > summary::before {
+  transform: rotate(90deg);
+  background: var(--c-teal);
+  color: #fff;
+}
+
+/* Heading inside summary */
+.deep-dive > summary h2 {
+  margin: 0;
+}
+
+/* Teaser line */
+.deep-dive-teaser {
+  font-size: 14px;
+  color: var(--text-subtle);
+  line-height: 1.5;
+  margin: 0;
+}
+.deep-dive[open] .deep-dive-teaser {
+  display: none;
+}
+
+/* Content area */
+.deep-dive > .deep-dive-body {
+  padding: 0 20px 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* --- Pattern 2: prose with fade --- */
+
+.deep-dive--prose {
+  border: none;
+  border-radius: 0;
+  margin: 28px 0;
+  border-bottom: 1px solid var(--divider);
+  padding-bottom: 8px;
+}
+.deep-dive--prose:hover {
+  box-shadow: none;
+}
+.deep-dive--prose > summary {
+  padding: 0 0 12px;
+}
+.deep-dive--prose > summary::before {
+  display: none;
+}
+
+/* Fade preview: show first ~3 lines of content */
+.deep-dive--prose .deep-dive-preview {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-height: 4.8em;
+  overflow: hidden;
+  position: relative;
+  margin: 4px 0 0;
+}
+.deep-dive--prose:not([open]) .deep-dive-preview::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2.5em;
+  background: linear-gradient(transparent, var(--surface));
+}
+.deep-dive--prose[open] .deep-dive-preview {
+  display: none;
+}
+
+/* "Continue reading" link */
+.deep-dive-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--link);
+  font-weight: 600;
+  margin-top: 4px;
+}
+.deep-dive-more .arrow {
+  transition: transform 0.2s ease;
+  font-size: 12px;
+}
+.deep-dive--prose[open] .deep-dive-more {
+  display: none;
+}
+
+/* Prose content area */
+.deep-dive--prose > .deep-dive-body {
+  padding: 0 0 12px;
+  border-top: none;
+}
+
+/* --- Shared: mobile, dark mode, reduced motion, expand-all --- */
+
+@media (max-width: 600px) {
+  .deep-dive > summary { padding: 14px 16px; }
+  .deep-dive > .deep-dive-body { padding: 0 16px 16px; }
+  .deep-dive--prose .deep-dive-preview { font-size: 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deep-dive,
+  .deep-dive > summary::before,
+  .deep-dive-more .arrow {
+    transition: none;
+  }
+}
+
+/* Expand-all toggle link injected by deep-dive.js */
+.deep-dive-expand-all {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--link);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0 16px;
+  font-family: inherit;
+}
+.deep-dive-expand-all:hover {
+  text-decoration: underline;
+}
