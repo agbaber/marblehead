@@ -1,7 +1,10 @@
 // Community pulse widget module.
 // Loaded by each content page as a <script defer> tag.
 // Hydrates every <h2> on the page with a stance widget, unless the page
-// opts out via <body data-community-pulse="off-sections">.
+// opts out via <body data-community-pulse="off-sections"> or the
+// individual <h2> opts out via data-stance-section="off". An <h2> with
+// an explicit data-stance-section="<slug>" uses that slug as a stable
+// override; otherwise the slug is auto-derived from the heading text.
 
 /**
  * Convert a heading text into an anchor ID slug.
@@ -362,23 +365,30 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
 }
 
 /**
- * Walk every element with a data-stance-section attribute and inject a
- * widget next to it. Widgets are opt-in only: authors add the attribute
- * to the specific headings or blocks they want to capture.
+ * Walk every <h2> on the page and inject a widget next to it, unless
+ * the page is opted out via <body data-community-pulse="off-sections">
+ * or the individual <h2> is opted out via data-stance-section="off".
+ * The slug for each section is taken from data-stance-section if
+ * present (acting as a stable override that survives heading edits),
+ * otherwise auto-derived from the heading text via slugify().
  */
 export async function hydrateWidgets() {
-  // Opt-out check (also used as a performance short-circuit via conditional script inclusion in the layout).
+  // Page-level opt-out (also used as a performance short-circuit via conditional script inclusion in the layout).
   if (document.body.dataset.communityPulse === 'off-sections') return;
 
   const pagePath = location.pathname.replace(/^\//, '') || 'index.html';
   const collectedTargets = [];
   const seenSlugs = new Set();
 
-  // Opt-in: elements with an explicit data-stance-section attribute.
-  document.querySelectorAll('[data-stance-section]').forEach(el => {
-    const slug = el.dataset.stanceSection.trim();
+  // Auto-attach: every <h2> unless explicitly opted out at the section level.
+  // Per-h2 slug override: data-stance-section="<slug>" pins a stable slug;
+  // otherwise the slug is auto-derived from the heading text.
+  document.querySelectorAll('h2:not([data-stance-section="off"])').forEach(el => {
+    const explicitSlug = el.dataset.stanceSection?.trim();
+    const slug = explicitSlug || slugify(el.textContent.trim());
     if (!slug) return;
-    // If this slug is already in use on the page, skip (author should pick a unique slug).
+    // If this slug is already in use on the page, skip. Disambiguate by adding
+    // an explicit data-stance-section="<unique-slug>" to one of the colliding h2s.
     if (seenSlugs.has(slug)) return;
     seenSlugs.add(slug);
     if (!el.id) el.id = slug;
