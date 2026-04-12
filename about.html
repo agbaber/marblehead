@@ -64,22 +64,37 @@ og_title: "Who made this?"
   @media (max-width: 600px) {
     .meta-pill { padding: 6px 12px; font-size: 12px; }
   }
-  .audit-snippet-wrap {
-    position: relative;
-    margin: 0 0 24px;
-  }
   .audit-snippet {
+    position: relative;
     font-family: var(--font-mono);
     font-size: 13px;
     line-height: 1.6;
-    padding: 14px 60px 14px 18px;
+    padding: 14px 18px;
     background: color-mix(in srgb, var(--c-navy) 6%, var(--surface));
     border-left: 3px solid var(--c-navy);
     border-radius: 0 10px 10px 0;
     color: var(--text);
     overflow-x: auto;
-    margin: 0;
+    margin: 0 0 24px;
   }
+  .audit-copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 6px;
+    cursor: pointer;
+    color: var(--text-subtle);
+    line-height: 1;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .audit-copy-btn:hover {
+    color: var(--text);
+    border-color: var(--text-faint);
+  }
+  .audit-copy-btn svg { display: block; }
   .audit-snippet code {
     font-family: inherit;
     font-size: inherit;
@@ -95,29 +110,6 @@ og_title: "Who made this?"
     background: var(--divider);
     border-radius: 4px;
   }
-  .audit-copy {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 5px 6px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--text-subtle);
-    cursor: pointer;
-    line-height: 1;
-    transition: background 0.15s, border-color 0.15s, color 0.15s;
-  }
-  .audit-copy:hover {
-    background: var(--divider);
-    border-color: var(--text-faint);
-    color: var(--text);
-  }
-  .audit-copy.is-copied {
-    color: var(--c-navy);
-    border-color: var(--c-navy);
-  }
-  .audit-copy svg { display: block; }
 </style>
 
   <h1>Who made this?</h1>
@@ -134,34 +126,21 @@ og_title: "Who made this?"
 
   <h2 data-stance-section="off">Audit it yourself</h2>
   <p class="audit-note">If you have <code>git</code> and <a href="https://claude.com/claude-code">Claude Code</a> installed, you can check the work from your terminal. The repo's <code>CLAUDE.md</code> and <code>STYLE_GUIDE.md</code> will orient Claude automatically.</p>
-  <div class="audit-snippet-wrap">
-    <pre class="audit-snippet"><code>git clone https://github.com/agbaber/marblehead
+  <pre class="audit-snippet"><button class="audit-copy-btn" aria-label="Copy to clipboard"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M3.5 10.5h-1a1.5 1.5 0 0 1-1.5-1.5v-6a1.5 1.5 0 0 1 1.5-1.5h6a1.5 1.5 0 0 1 1.5 1.5v1"/></svg></button><code>git clone https://github.com/agbaber/marblehead
 cd marblehead
 claude "audit this site. find the bias. follow the money. be skeptical."</code></pre>
-    <button type="button" class="audit-copy" aria-label="Copy to clipboard"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M3.5 10.5h-1a1.5 1.5 0 0 1-1.5-1.5v-6a1.5 1.5 0 0 1 1.5-1.5h6a1.5 1.5 0 0 1 1.5 1.5v1"/></svg></button>
-  </div>
+
   <script>
-  (function () {
-    var btn = document.querySelector('.audit-copy');
-    var target = document.querySelector('.audit-snippet code');
-    if (!btn || !target || !navigator.clipboard) {
-      if (btn) btn.hidden = true;
-      return;
-    }
-    var copyIcon = btn.innerHTML;
-    var checkIcon = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6.5"/></svg>';
-    btn.addEventListener('click', function () {
-      navigator.clipboard.writeText(target.textContent).then(function () {
-        btn.classList.add('is-copied');
-        btn.innerHTML = checkIcon;
-        setTimeout(function () {
-          btn.classList.remove('is-copied');
-          btn.innerHTML = copyIcon;
-        }, 1500);
-      });
-    });
-  })();
+  document.querySelector('.audit-copy-btn').addEventListener('click', function() {
+    var text = this.closest('pre').querySelector('code').textContent;
+    navigator.clipboard.writeText(text);
+    var svg = this.innerHTML;
+    this.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-6.5"/></svg>';
+    var btn = this;
+    setTimeout(function() { btn.innerHTML = svg; }, 1500);
+  });
   </script>
+  <p>The first audit has already been run. Read the <a href="bias-audit.html">full bias audit</a> and the <a href="bias-remediation-plan">remediation plan</a> for every finding.</p>
 
   <h2>Reactions</h2>
   <p>Some sections let you react as you read. Your reactions stay in this browser, and no one else can see which one you picked. The number next to each section is a rough measure of interest, not a poll.</p>

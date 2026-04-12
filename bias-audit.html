@@ -1,0 +1,208 @@
+---
+title: "Bias audit"
+og_title: "Bias audit"
+og_description: An independent AI audit of marbleheaddata.org for bias, selective framing, and editorial tilt. Run on April 11, 2026 using Claude Code against the full codebase.
+og_url: https://marbleheaddata.org/bias-audit.html
+---
+<style>
+  .audit-meta {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    padding: 14px 18px;
+    background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
+    border-left: 3px solid var(--c-navy);
+    border-radius: 0 10px 10px 0;
+    margin: 0 0 28px;
+  }
+  .audit-meta p { margin: 0 0 6px; }
+  .audit-meta p:last-child { margin-bottom: 0; }
+  .finding {
+    padding: 16px 20px;
+    margin: 14px 0;
+    border-radius: 0 10px 10px 0;
+    border-left: 4px solid var(--border);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .finding--pass {
+    border-left-color: var(--c-sage);
+  }
+  .finding--concern {
+    border-left-color: var(--c-brass);
+  }
+  .finding-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin-bottom: 6px;
+  }
+  .finding--pass .finding-label { color: var(--c-sage); }
+  .finding--concern .finding-label { color: var(--c-brass); }
+  .finding h3 { margin-top: 0; }
+  .finding p { font-size: 15px; line-height: 1.65; }
+  .finding p:last-child { margin-bottom: 0; }
+  .finding blockquote {
+    margin: 10px 0;
+    padding: 8px 14px;
+    border-left: 2px solid var(--border);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  .severity {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .severity--low {
+    background: color-mix(in srgb, var(--c-sage) 12%, var(--surface));
+    color: var(--c-sage);
+  }
+  .severity--moderate {
+    background: color-mix(in srgb, var(--c-brass) 12%, var(--surface));
+    color: var(--c-brass);
+  }
+  .severity--structural {
+    background: color-mix(in srgb, var(--c-navy) 10%, var(--surface));
+    color: var(--c-navy);
+  }
+  @media (max-width: 600px) {
+    .finding { padding: 14px 16px; }
+    .finding p { font-size: 14px; }
+  }
+</style>
+
+<h1>Bias audit</h1>
+
+  <div class="audit-meta">
+    <p><strong>Auditor:</strong> Claude Code (claude-opus-4-6), run against the full codebase on April 11, 2026.</p>
+    <p><strong>Scope:</strong> All HTML pages, all CSV/JSON data files, all chart source code, all editorial copy, STYLE_GUIDE.md, README.md, CLAUDE.md, case studies, and the debate page.</p>
+    <p><strong>Method:</strong> Systematic review of time-range selection, axis scaling, annotation choices, caption language, case-study selection, page architecture, and narrative framing. No external data was fetched; the audit is based entirely on what ships in the repository.</p>
+    <p><strong>Prompt used:</strong> <code>claude "audit this site. find the bias. follow the money. be skeptical."</code></p>
+  </div>
+
+  <p>This page is the unedited output of an AI bias audit of this site. The site's author invited it on the <a href="about.html">about page</a>. The remediation plan for every finding is published separately: <a href="bias-remediation-plan">bias remediation plan</a>.</p>
+
+  <h2>Where the bias controls are genuinely strong</h2>
+
+  <div class="finding finding--pass">
+    <div class="finding-label">Pass</div>
+    <h3>Sourcing discipline</h3>
+    <p>Every number checked traces to a named primary document with a page number (ACFRs, DOR reports, PERAC valuations, GIC rate sheets, FinCom transmittal letters). The <a href="data/SOURCE_LOOKUP">SOURCE_LOOKUP</a> and <a href="data/DATA_CATALOG">DATA_CATALOG</a> files are detailed and auditable. This is not a site making up numbers.</p>
+  </div>
+
+  <div class="finding finding--pass">
+    <div class="finding-label">Pass</div>
+    <h3>Time ranges are not cherry-picked</h3>
+    <p>Tax levy data spans FY01 to FY24 (23 years). Health insurance spans FY06 to FY27 (21 years). Enrollment and staffing span FY01 to FY24 (23 years). No suspiciously convenient start dates were found.</p>
+  </div>
+
+  <div class="finding finding--pass">
+    <div class="finding-label">Pass</div>
+    <h3>Chart axes are honest</h3>
+    <p>No truncated Y-axes to exaggerate trends. Indexed charts start at 100 (appropriate). Actual vs. projected data uses solid vs. dashed lines with clear labels.</p>
+  </div>
+
+  <div class="finding finding--pass">
+    <div class="finding-label">Pass</div>
+    <h3>Data caveats are surfaced, not hidden</h3>
+    <p>The FY23 FTE jump (+54 education positions in one year) is flagged as unexplained. The FY24 OPEB member spike is noted as likely a methodology change. Missing GIC rate sheets are disclosed. Derived data is labeled with precision estimates.</p>
+  </div>
+
+  <div class="finding finding--pass">
+    <div class="finding-label">Pass</div>
+    <h3>The debate page is structurally fair</h3>
+    <p>Six dividing lines, each with a "for" and "against" block of roughly equal length and rhetorical quality. The "against" arguments are not strawmen. They cite named officials (Select Board member Moses Grader, FinCom Chair Alec Goolsby, School Committee member Tom Mathers) and link to the same underlying data. The mini-synthesis blocks between each tension are genuinely clarifying, not secretly pro-override.</p>
+  </div>
+
+  <div class="finding finding--pass">
+    <div class="finding-label">Pass</div>
+    <h3>No fabrication, no selective data</h3>
+    <p>Health insurance growing 60% over seven years is real (GIC sets the rates). Enrollment declining 21% while staffing stayed flat is real data from DESE and ACFRs. The $8.47M gap calculation is sourced to the State of the Town presentation and proposed budget and the waterfall chart components add up. Peer-town comparisons are normalized correctly.</p>
+  </div>
+
+  <div class="finding finding--pass">
+    <div class="finding-label">Pass</div>
+    <h3>Follow the money: there is very little to follow</h3>
+    <p>The site costs approximately $108 per year in domain fees plus a Claude AI subscription the author was already paying. No ads, no donations, no PAC, no campaign affiliation. The author's financial interest is as a homeowner (property tax goes up if the override passes) and parent (school services decline if it does not). Both are disclosed on the <a href="about.html">about page</a>. The community-pulse widget counts interest, not opinions. No email capture. No fundraising.</p>
+  </div>
+
+  <h2>Where the bias is</h2>
+
+  <div class="finding finding--concern">
+    <div class="finding-label">Concern</div>
+    <h3>1. The case studies are advocacy wearing a footnote <span class="severity severity--moderate">Moderate</span></h3>
+    <p>The <a href="data/case_studies">case studies page</a> presents Melrose and Stoneham, two towns that rejected overrides, suffered cuts, and then passed <em>larger</em> overrides. The "key lesson" boxes are editorial:</p>
+    <blockquote>Key lesson. Voted no on $7.7M. Lived through the cuts. Came back and voted yes on $13.5M &ndash; 75% more. The cost of delay: one year of deep cuts that had to be reversed, plus a bigger eventual bill.</blockquote>
+    <p>This is not a neutral observation. It is a cautionary tale with a clear moral: "if you vote no, you will end up paying more later." The site does not present case studies of towns that voted no and successfully restructured without a larger override. There may not be many such cases, but the absence is not acknowledged. The selection of comparison towns does argumentative work.</p>
+    <p>The statewide statistics reinforce this: "of towns that put a failed override back to voters, 590 passed within one year." This frames rejection as delay, not as a viable outcome.</p>
+  </div>
+
+  <div class="finding finding--concern">
+    <div class="finding-label">Concern</div>
+    <h3>2. The no-override page is more vivid than the override-cost page <span class="severity severity--moderate">Moderate</span></h3>
+    <p>The <a href="no-override-budget.html">no-override budget page</a> is the most visually detailed page on the site: a headcount bar showing 22 positions cut, a department-by-department waterfall with colored bars, named services (library &minus;43%, Community Development &minus;59%), and a link to case studies of towns that lived through cuts.</p>
+    <p>The override <em>cost</em> to taxpayers is presented on the <a href="charts/override_calculator.html">calculator page</a>, which is functional but clinical: type in your home value, see a monthly dollar amount. There is no equivalent emotional weight. No visualization of what $400 per month means to a median household, no case studies of towns where overrides strained fixed-income residents, no "what $15M in new taxes looks like over 10 years."</p>
+    <p>Both pages are factually accurate. But the asymmetry in vividness &ndash; detailed harm from no-override, abstract cost from yes-override &ndash; creates an emotional tilt toward approval.</p>
+  </div>
+
+  <div class="finding finding--concern">
+    <div class="finding-label">Concern</div>
+    <h3>3. The "how we got here" narrative favors the institutional account <span class="severity severity--low">Low-moderate</span></h3>
+    <p>The <a href="how-we-got-here.html">how we got here</a> page constructs a narrative of responsible governance: FinCom balanced budgets for 16 years, warned about unsustainability starting in 2019, predicted the override in 2022. The page concludes that "the 'board always wants more' skepticism does not fit the record."</p>
+    <p>This is an editorial conclusion presented as historical finding. It forecloses a legitimate counter-reading: that the same boards presided over the spending growth that created the deficit, and their warnings were about a problem of their own making. The debate page does present this counter-argument (tension #5), but the standalone history page does not. It reads as a defense of institutional credibility.</p>
+  </div>
+
+  <div class="finding finding--concern">
+    <div class="finding-label">Concern</div>
+    <h3>4. The "against" side has fewer named advocates <span class="severity severity--low">Low</span></h3>
+    <p>The debate page's notes section acknowledges this directly: "Named officials and school administrators appear more often on the record than resident opponents of the override." The practical effect is that the "for" side is represented by the Town Administrator, Finance Director, Superintendent, and parent advocates with names and quotes, while the "against" side draws more on a single Select Board dissenter and on structural arguments.</p>
+    <p>This is partly a function of who speaks on the record in public meetings. The site acknowledges it. But the resulting asymmetry in human voices matters for how persuasive each side feels.</p>
+  </div>
+
+  <div class="finding finding--concern">
+    <div class="finding-label">Concern</div>
+    <h3>5. The author's "undecided" framing is unverifiable <span class="severity severity--structural">Structural</span></h3>
+    <p>The <a href="about.html">about page</a> states: "The author is a Marblehead homeowner who is genuinely undecided." The site's construction &ndash; 3,000+ pages of primary sources processed, 41 CSVs, 15+ HTML pages, a peer-town structural analysis, a debate page with six tensions &ndash; is an enormous amount of work. The question is whether someone genuinely undecided would build a site this comprehensive, or whether the site is the product of someone who has already decided and is building the case with enough balance to be credible.</p>
+    <p>This cannot be resolved from the code. The "audit it yourself" invitation is itself a rhetorical move: it signals confidence that the audit will come back clean, which it mostly does. That confidence is itself a tell.</p>
+  </div>
+
+  <div class="finding finding--concern">
+    <div class="finding-label">Concern</div>
+    <h3>6. The site's existence is itself pro-override <span class="severity severity--structural">Structural</span></h3>
+    <p>The deepest bias is structural. The site exists because there is a vote. If the default outcome (no override, service cuts) were not on the table, no one would build this site. The homepage question hierarchy starts with "What is the override?" and "What's in the no-override budget?" &ndash; framing the override as the central question and the cuts as the thing that needs explaining.</p>
+    <p>A site framed from the skeptic's perspective might equally lead with "What would the override cost over 10 years?" or "What alternatives to an override exist?" or "How did spending reach this level?" The site does cover these questions, but they are secondary to the override/no-override binary.</p>
+    <p>This is partly inherent to the occasion: any site built for a vote will center the vote. But it is worth naming.</p>
+  </div>
+
+  <h2>Bottom line</h2>
+
+  <p>This is a genuinely high-integrity civic data project with real bias controls that work. The sourcing is verifiable, the data is not fabricated, the debate page is structurally fair, and the editorial rules are followed with discipline.</p>
+
+  <p>The bias that exists is <strong>bias of emphasis</strong>, not bias of fabrication:</p>
+  <ol>
+    <li>Case studies only show towns where "no" led to a bigger "yes" later</li>
+    <li>The cost of rejection is visualized more vividly than the cost of approval</li>
+    <li>The institutional narrative is sympathetic to the boards that created the deficit</li>
+    <li>The "against" side has fewer named human voices</li>
+    <li>The author's neutrality claim is unverifiable</li>
+    <li>The site's architecture inherently centers the override question</li>
+  </ol>
+
+  <p>A skeptical no-override voter would find their arguments represented on the debate page, but would notice that the rest of the site's architecture &ndash; the case studies, the no-override budget detail, the "how we got here" timeline &ndash; builds a stronger gravitational pull toward "yes." The site is neutral <em>on the debate page</em> but slightly pro-override <em>in its architecture</em>.</p>
+
+  <p>Whether that is intentional advocacy or the natural shape of following the data honestly is the question the author is asking you to decide for yourself.</p>
+
+  <p>The remediation plan for every finding on this page is published at <a href="bias-remediation-plan">bias remediation plan</a>.</p>
+
+  <div class="notes">
+    <p><strong>Methodology note.</strong> This audit was run by Claude Code (claude-opus-4-6) against the full repository on April 11, 2026. The AI was given the prompt shown at the top of this page and no other instructions beyond the project's own CLAUDE.md and STYLE_GUIDE.md. The output was written directly to this file by the author without substantive edits to the findings. The AI auditor has its own biases: it tends toward measured, both-sides framing, and it cannot verify claims against external documents not in the repository. A human auditor reviewing the same material might reach different conclusions.</p>
+  </div>
