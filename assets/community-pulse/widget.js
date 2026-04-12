@@ -144,12 +144,32 @@ export async function incrementReaction(sectionId) {
   }
 }
 
+// ---- Section flag link --------------------------------------------------
+
+// GitHub repo for the section flag's pre-filled issue link. Hardcoded
+// to the production deployment because this widget ships only to
+// marbleheaddata.org. The flag is structurally an <a> opening the
+// issue compose page in a new tab; nothing is sent until the reader
+// hits "Submit" on GitHub, so this is opt-in by construction.
+const ISSUE_REPO = 'agbaber/marblehead';
+
+/**
+ * Build a pre-filled GitHub issue URL for flagging a possible error
+ * in a section. The reader sees the body before submitting on GitHub,
+ * so this is fully opt-in and safe to construct client-side.
+ */
+export function buildIssueUrl(sectionTitle, sectionUrl) {
+  const title = `Possible error: ${sectionTitle}`;
+  const body = `**Section:** [${sectionTitle}](${sectionUrl})\n\nDescribe the issue:\n`;
+  const params = new URLSearchParams({ title, body });
+  return `https://github.com/${ISSUE_REPO}/issues/new?${params.toString()}`;
+}
+
 // ---- Widget rendering and hydration -------------------------------------
 
 const STANCE_BUTTONS = [
   { key: 'agree',    glyph: '+', label: 'Agree' },
-  { key: 'disagree', glyph: '−', label: 'Disagree' },
-  { key: 'alert',    glyph: '!', label: 'Alert: something here caught my eye' }
+  { key: 'disagree', glyph: '−', label: 'Disagree' }
 ];
 
 let widgetCounter = 0;
@@ -158,13 +178,16 @@ let widgetCounter = 0;
  * Build the widget DOM for one section and attach it to the given parent
  * element. Returns the widget root element.
  */
-function buildWidget(sectionId, sectionTitle, initialReactions, initialStance) {
+function buildWidget(sectionId, sectionTitle, sectionUrl, initialReactions, initialStance) {
   const root = document.createElement('div');
   root.className = 'cp-widget';
   root.dataset.sectionId = sectionId;
   const widgetId = `cp-widget-${++widgetCounter}`;
 
-  // Stance buttons.
+  // Stance row: two stance buttons (agree, disagree) plus a third element
+  // that is structurally an <a> link, not a button. The flag opens a
+  // pre-filled GitHub issue in a new tab so corrections land in the
+  // issue tracker rather than in a per-stance counter on the worker.
   const buttons = document.createElement('div');
   buttons.className = 'cp-widget__buttons';
   STANCE_BUTTONS.forEach(({ key, glyph, label }) => {
@@ -177,6 +200,18 @@ function buildWidget(sectionId, sectionTitle, initialReactions, initialStance) {
     btn.setAttribute('aria-pressed', initialStance === key ? 'true' : 'false');
     buttons.appendChild(btn);
   });
+
+  // Flag link. Visually identical to a stance button (same class) but
+  // has no aria-pressed state and triggers no IndexedDB write.
+  const flag = document.createElement('a');
+  flag.className = 'cp-widget__button cp-widget__flag';
+  flag.href = buildIssueUrl(sectionTitle, sectionUrl);
+  flag.target = '_blank';
+  flag.rel = 'noopener';
+  flag.setAttribute('aria-label', 'Suggest a correction');
+  flag.textContent = '⚑';
+  buttons.appendChild(flag);
+
   root.appendChild(buttons);
 
   // Meta group: reaction count + secondary action icons. Kept as a single
@@ -424,9 +459,11 @@ export async function hydrateWidgets() {
   for (const target of collectedTargets) {
     const initialReactions = reactionsMap[target.sectionId];
     const initialRecord = stanceMap.get(target.sectionId) || null;
+    const sectionUrl = `${location.origin}${location.pathname}#${target.element.id}`;
     const widget = buildWidget(
       target.sectionId,
       target.title,
+      sectionUrl,
       initialReactions,
       initialRecord?.stance
     );
@@ -455,7 +492,7 @@ export async function hydrateWidgets() {
       widget,
       db,
       target.sectionId,
-      `${location.origin}${location.pathname}#${target.element.id}`,
+      sectionUrl,
       target.title,
       initialRecord
     );
