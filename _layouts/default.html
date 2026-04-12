@@ -4,8 +4,6 @@
 {% include head.html %}
 </head>
 <body{% if page.body_class %} class="{{ page.body_class }}"{% elsif layout.body_class %} class="{{ layout.body_class }}"{% endif %}{% if page.community_pulse == "off-sections" %} data-community-pulse="off-sections"{% endif %}>
-{% include gtm-noscript.html %}
-
 {{ content }}
 
 </body>
