@@ -181,238 +181,223 @@ def build_key_stats(rows):
 
 
 # ---------------------------------------------------------------------------
-# SVG CHART  (horizontal diverging bar chart)
+# SVG CHART  (dot plot / strip plot)
 # ---------------------------------------------------------------------------
 
-# Layout constants
-H_ML   = 55          # left margin (year labels)
-H_MR   = 15          # right margin
-H_MT   = 22          # top margin (for "Failed" / "Passed" labels + grid labels)
-H_MB   = 10          # bottom margin
-H_VB_W = 880         # viewBox width
+# Layout constants for dot plot
+DOT_VB_W = 800
+DOT_VB_H = 260
+DOT_R = 6
 
-ROW_H  = 20          # total height per row (bar + gap)
-BAR_H  = 14          # bar height within row
+# Timeline area
+TL_X_MIN = 110       # left edge of timeline (room for row labels)
+TL_X_MAX = 760       # right edge of timeline
 
-FAIL_MIN_W = 80      # minimum pixel width for the fail (left) side
-MARKER_W   = 3       # thin marker for unsourced amounts
+# Row Y positions
+ROW_OV_Y = 70        # operating overrides center y
+ROW_DE_Y = 160       # debt exclusions center y
+
+# Timeline date range
+TL_YEAR_MIN = 1982
+TL_YEAR_MAX = 2026
+
+
+def _date_to_x(date_str):
+    """Map a vote_date string to an x position on the timeline."""
+    try:
+        d = datetime.strptime(date_str, "%Y-%m-%d")
+        # Convert to fractional year
+        year_frac = d.year + (d.month - 1) / 12 + (d.day - 1) / 365
+    except (ValueError, TypeError):
+        return None
+    t = (year_frac - TL_YEAR_MIN) / (TL_YEAR_MAX - TL_YEAR_MIN)
+    return TL_X_MIN + t * (TL_X_MAX - TL_X_MIN)
+
+
+def _year_to_x(year):
+    """Map a calendar year (or fractional year) to an x position."""
+    t = (year - TL_YEAR_MIN) / (TL_YEAR_MAX - TL_YEAR_MIN)
+    return TL_X_MIN + t * (TL_X_MAX - TL_X_MIN)
 
 
 def build_chart(rows):
-    """Return a complete <svg> string (horizontal diverging bar chart)."""
+    """Return a complete <svg> string (dot plot / strip plot)."""
 
     # ------------------------------------------------------------------
-    # 1. Group rows by calendar year, skip clerk-error rows
+    # 1. Filter to chart rows, skip clerk-error rows
     # ------------------------------------------------------------------
     chart_rows = [r for r in rows if not is_clerk_error(r)]
+    chart_rows = [r for r in chart_rows
+                  if r["measure_type"] in ("Override", "Debt Exclusion")]
 
-    by_year = defaultdict(lambda: {"pass": [], "fail": []})
-    for r in chart_rows:
-        yr = calendar_year(r["vote_date"])
-        if yr is None:
-            continue
-        mtype = r["measure_type"]
-        if mtype not in ("Override", "Debt Exclusion"):
-            continue
-        key = "pass" if r["win_loss"] == "WIN" else "fail"
-        by_year[yr][key].append(r)
-
-    all_years = sorted(by_year.keys())
-    if not all_years:
+    if not chart_rows:
         return "<svg></svg>"
 
-    n_years = len(all_years)
+    # ------------------------------------------------------------------
+    # 2. Compute pass rates for row labels
+    # ------------------------------------------------------------------
+    ov_rows = [r for r in chart_rows if r["measure_type"] == "Override"]
+    de_rows = [r for r in chart_rows if r["measure_type"] == "Debt Exclusion"]
+    ov_pass = sum(1 for r in ov_rows if r["win_loss"] == "WIN")
+    de_pass = sum(1 for r in de_rows if r["win_loss"] == "WIN")
 
     # ------------------------------------------------------------------
-    # 2. Compute per-year totals for pass and fail sides (real dollars)
+    # 3. Group dots by (row, date) for jitter
     # ------------------------------------------------------------------
-    year_pass_total = {}
-    year_fail_total = {}
-    for yr in all_years:
-        year_pass_total[yr] = sum(r["real_val"] or 0 for r in by_year[yr]["pass"])
-        year_fail_total[yr] = sum(r["real_val"] or 0 for r in by_year[yr]["fail"])
-
-    max_pass = max(year_pass_total.values()) if year_pass_total else 1
-    max_fail = max(year_fail_total.values()) if year_fail_total else 1
-    if max_pass == 0:
-        max_pass = 1
-    if max_fail == 0:
-        max_fail = 1
+    ov_by_date = defaultdict(list)
+    de_by_date = defaultdict(list)
+    for r in chart_rows:
+        if r["measure_type"] == "Override":
+            ov_by_date[r["vote_date"]].append(r)
+        else:
+            de_by_date[r["vote_date"]].append(r)
 
     # ------------------------------------------------------------------
-    # 3. Layout geometry
-    # ------------------------------------------------------------------
-    chart_w = H_VB_W - H_ML - H_MR                  # 810
-    # Fail side gets the larger of FAIL_MIN_W or its proportional share
-    proportional_fail = chart_w * (max_fail / (max_pass + max_fail))
-    fail_w = max(FAIL_MIN_W, proportional_fail)
-    pass_w = chart_w - fail_w
-
-    baseline_x = H_ML + fail_w                       # vertical center line
-
-    # Same dollar-per-pixel scale on both sides (use the pass side scale
-    # since it always has more data; the fail side gets the same scale
-    # but is guaranteed at least FAIL_MIN_W pixels of space)
-    px_per_dollar = pass_w / max_pass
-
-    vb_h = H_MT + n_years * ROW_H + H_MB
-    chart_area_h = n_years * ROW_H
-
-    def row_y(idx):
-        """Top y of row idx."""
-        return H_MT + idx * ROW_H
-
-    def bar_y(idx):
-        """Top y of the bar within row idx (centred vertically)."""
-        return row_y(idx) + (ROW_H - BAR_H) / 2
-
-    # ------------------------------------------------------------------
-    # 4. Sort votes within each side
-    #    Overrides first, then debt exclusions; within each type by
-    #    amount descending.
-    # ------------------------------------------------------------------
-    def sort_key(r):
-        type_order = 0 if r["measure_type"] == "Override" else 1
-        amt = r["real_val"] or 0
-        return (type_order, -amt)
-
-    # ------------------------------------------------------------------
-    # 5. Build SVG parts
+    # 4. Build SVG parts
     # ------------------------------------------------------------------
     parts = []
 
-    # -- 5a. No defs needed: debt exclusion bars use opacity via CSS --
+    # -- Row labels --
+    parts.append('<text class="row-label" x="10" y="58">Operating</text>')
+    parts.append('<text class="row-label" x="10" y="71">overrides</text>')
+    parts.append(f'<text class="row-sub" x="10" y="84">{ov_pass} of {len(ov_rows)}</text>')
 
-    # -- 5b. "Failed" / "Passed" header labels --
-    parts.append(
-        f'<text class="tick-label" x="{H_ML + 2}" y="{H_MT - 6}" '
-        f'text-anchor="start" font-size="9">Failed</text>'
-    )
-    parts.append(
-        f'<text class="tick-label" x="{H_VB_W - H_MR - 2}" y="{H_MT - 6}" '
-        f'text-anchor="end" font-size="9">Passed</text>'
-    )
+    parts.append('<text class="row-label" x="10" y="130">Debt</text>')
+    parts.append('<text class="row-label" x="10" y="143">exclusions</text>')
+    parts.append(f'<text class="row-sub" x="10" y="156">{de_pass} of {len(de_rows)}</text>')
 
-    # -- 5c. Vertical dollar grid lines on the pass side --
-    # Choose a nice interval: $20M steps
-    grid_interval = 20_000_000
-    grid_val = grid_interval
-    while grid_val <= max_pass:
-        gx = baseline_x + grid_val * px_per_dollar
-        if gx <= H_VB_W - H_MR:
-            parts.append(
-                f'<line class="grid-minor" x1="{gx:.1f}" y1="{H_MT}" '
-                f'x2="{gx:.1f}" y2="{H_MT + chart_area_h}"/>'
-            )
-            parts.append(
-                f'<text class="tick-label tick-label--minor" '
-                f'x="{gx:.1f}" y="{H_MT - 6}" '
-                f'text-anchor="middle" font-size="8">{fmt_dollars(grid_val)}</text>'
-            )
-        grid_val += grid_interval
-
-    # -- 5d. Vertical baseline --
-    parts.append(
-        f'<line class="axis-base" x1="{baseline_x:.1f}" y1="{H_MT}" '
-        f'x2="{baseline_x:.1f}" y2="{H_MT + chart_area_h}"/>'
-    )
-
-    # -- 5e. Year labels and bar segments --
-    for idx, yr in enumerate(all_years):
-        by = bar_y(idx)
-        label_y = row_y(idx) + ROW_H / 2 + 4   # vertically centred text
-
-        # Year label (2-digit with apostrophe)
-        yr_short = f"'{yr % 100:02d}"
+    # -- Decade grid lines --
+    for decade in [1990, 2000, 2010, 2020]:
+        gx = _year_to_x(decade)
         parts.append(
-            f'<text class="tick-label" x="{H_ML - 4}" y="{label_y:.1f}" '
-            f'text-anchor="end" font-size="9">{yr_short}</text>'
+            f'<line class="grid-line" x1="{gx:.1f}" y1="40" '
+            f'x2="{gx:.1f}" y2="175"/>'
         )
 
-        pass_votes = sorted(by_year[yr]["pass"], key=sort_key)
-        fail_votes = sorted(by_year[yr]["fail"], key=sort_key)
+    # -- Row baselines --
+    parts.append(f'<line class="axis-line" x1="{TL_X_MIN - 50}" y1="85" x2="{TL_X_MAX}" y2="85"/>')
+    parts.append(f'<line class="axis-line" x1="{TL_X_MIN - 50}" y1="175" x2="{TL_X_MAX}" y2="175"/>')
 
-        # --- Pass side (extending RIGHT from baseline) ---
-        cursor_x = baseline_x
-        for r in pass_votes:
-            color = dept_color(r["department"])
-            rv = r["real_val"]
-            av = r["amount_val"]
-            mtype = r["measure_type"]
+    # -- FY2027 upcoming vote indicator --
+    fy27_x = _year_to_x(2026.4)  # June 2026
+    parts.append(
+        f'<line class="future-line" x1="{fy27_x:.0f}" y1="40" '
+        f'x2="{fy27_x:.0f}" y2="175"/>'
+    )
+    parts.append(f'<text class="annotation annotation--upcoming" x="{fy27_x + 3:.0f}" y="52">FY2027</text>')
+    parts.append(f'<text class="annotation annotation--upcoming" x="{fy27_x + 3:.0f}" y="64">vote</text>')
+    parts.append(f'<text class="annotation annotation--upcoming" x="{fy27_x + 3:.0f}" y="76">Jun 9</text>')
 
-            if rv is not None and rv > 0:
-                w = rv * px_per_dollar
-            else:
-                w = MARKER_W
+    # -- Helper to emit dots for a row --
+    def emit_dots(by_date, base_y):
+        """Emit circle elements for all votes in a row, with jitter."""
+        annotation_dots = {}
+        for date_str in sorted(by_date.keys()):
+            group = by_date[date_str]
+            cx = _date_to_x(date_str)
+            if cx is None:
+                continue
 
-            fill_cls = f"bar-solid-{color}" if mtype == "Override" else f"bar-hatch-{color}"
-            dept_attr = r["department"].replace(" ", "_").replace("&", "and")
-            data_type = "override" if mtype == "Override" else "debt-exclusion"
-            result_label = "Passed" if r["win_loss"] == "WIN" else "Failed"
+            n = len(group)
+            for i, r in enumerate(group):
+                # Jitter vertically when multiple votes share a date
+                if n == 1:
+                    cy = base_y
+                else:
+                    offset = (i - (n - 1) / 2) * 8
+                    cy = base_y + offset
 
-            parts.append(
-                f'<rect class="{fill_cls}" '
-                f'x="{cursor_x:.1f}" y="{by:.1f}" '
-                f'width="{w:.1f}" height="{BAR_H}" '
-                f'data-nominal="{int(av) if av else ""}" '
-                f'data-real="{int(rv) if rv else ""}" '
-                f'data-win="1" '
-                f'data-dept="{dept_attr}" '
-                f'data-type="{data_type}" '
-                f'data-year="{yr}">'
-                f'<title>{r["description"]} ({yr}, {result_label}, {fmt_dollars(rv)})</title>'
-                f'</rect>'
-            )
-            cursor_x += w
+                approved = r["win_loss"] == "WIN"
+                cls = "vote-dot vote-dot--approved" if approved else "vote-dot vote-dot--rejected"
+                result_text = "Approved" if approved else "Rejected"
 
-        # --- Fail side (extending LEFT from baseline) ---
-        cursor_x = baseline_x
-        for r in fail_votes:
-            color = dept_color(r["department"])
-            rv = r["real_val"]
-            av = r["amount_val"]
-            mtype = r["measure_type"]
+                # Format data attributes
+                amt = fmt_dollars(r["amount_val"]) if r["amount_val"] else "\u2014"
+                amt_real = fmt_dollars(r["real_val"]) if r["real_val"] else "\u2014"
+                date_label = fmt_month_year(r["vote_date"])
 
-            if rv is not None and rv > 0:
-                w = rv * px_per_dollar
-            else:
-                w = MARKER_W
+                yes = r["yes_votes"]
+                no = r["no_votes"]
+                margin = vote_margin_pct(yes, no)
+                margin_str = (f"+{margin:.1f}%" if margin is not None and margin >= 0
+                              else (f"{margin:.1f}%" if margin is not None else "\u2014"))
 
-            fill_cls = f"bar-solid-{color}" if mtype == "Override" else f"bar-hatch-{color}"
-            dept_attr = r["department"].replace(" ", "_").replace("&", "and")
-            data_type = "override" if mtype == "Override" else "debt-exclusion"
-            result_label = "Passed" if r["win_loss"] == "WIN" else "Failed"
+                mtype = r["measure_type"]
 
-            rect_x = cursor_x - w
-            parts.append(
-                f'<rect class="{fill_cls}" '
-                f'x="{rect_x:.1f}" y="{by:.1f}" '
-                f'width="{w:.1f}" height="{BAR_H}" '
-                f'data-nominal="{int(av) if av else ""}" '
-                f'data-real="{int(rv) if rv else ""}" '
-                f'data-win="0" '
-                f'data-dept="{dept_attr}" '
-                f'data-type="{data_type}" '
-                f'data-year="{yr}">'
-                f'<title>{r["description"]} ({yr}, {result_label}, {fmt_dollars(rv)})</title>'
-                f'</rect>'
-            )
-            cursor_x -= w
+                # Escape HTML entities in description
+                desc = r["description"].replace("&", "&amp;").replace('"', "&quot;")
+
+                parts.append(
+                    f'<circle class="{cls}" '
+                    f'cx="{cx:.1f}" cy="{cy:.1f}" r="{DOT_R}" '
+                    f'data-desc="{desc}" '
+                    f'data-amount="{amt}" '
+                    f'data-amount-real="{amt_real}" '
+                    f'data-result="{result_text}" '
+                    f'data-yes="{yes:,}" '
+                    f'data-no="{no:,}" '
+                    f'data-margin="{margin_str}" '
+                    f'data-date="{date_label}" '
+                    f'data-type="{mtype}"/>'
+                )
+
+                # Track special dots for annotations
+                if (mtype == "Override" and approved
+                        and r["vote_date"] == "2005-06-15"):
+                    annotation_dots["last_override"] = (cx, cy)
+
+                if (mtype == "Debt Exclusion" and not approved
+                        and "Tucker" in r["description"]):
+                    annotation_dots["only_de_rejected"] = (cx, cy)
+
+        return annotation_dots
+
+    # -- Emit override dots --
+    ov_annotations = emit_dots(ov_by_date, ROW_OV_Y)
+
+    # -- Emit debt exclusion dots --
+    de_annotations = emit_dots(de_by_date, ROW_DE_Y)
+
+    # -- Annotations --
+    if "last_override" in ov_annotations:
+        ax, ay = ov_annotations["last_override"]
+        parts.append(
+            f'<line class="grid-line" x1="{ax:.1f}" y1="{ay + DOT_R + 2:.0f}" '
+            f'x2="{ax:.1f}" y2="{ay + 28:.0f}"/>'
+        )
+        parts.append(
+            f'<text class="annotation" x="{ax:.1f}" y="{ay + 42:.0f}" '
+            f'text-anchor="middle">Last approved override</text>'
+        )
+
+    if "only_de_rejected" in de_annotations:
+        ax, ay = de_annotations["only_de_rejected"]
+        parts.append(
+            f'<line class="grid-line" x1="{ax:.1f}" y1="{ay + DOT_R + 2:.0f}" '
+            f'x2="{ax:.1f}" y2="{ay + 28:.0f}"/>'
+        )
+        parts.append(
+            f'<text class="annotation" x="{ax:.1f}" y="{ay + 42:.0f}" '
+            f'text-anchor="middle">Only debt exclusion rejected</text>'
+        )
+
+    # -- X-axis year labels --
+    for yr in [1982, 1990, 2000, 2010, 2020, 2026]:
+        lx = _year_to_x(yr)
+        parts.append(
+            f'<text class="tick-label" x="{lx:.0f}" y="222" '
+            f'text-anchor="middle">{yr}</text>'
+        )
 
     # -- Assemble SVG --
     inner = "\n".join(parts)
-    min_yr = all_years[0]
-    max_yr = all_years[-1]
     svg = (
-        f'<svg class="chart" viewBox="0 0 {H_VB_W} {vb_h}" '
+        f'<svg class="chart" viewBox="0 0 {DOT_VB_W} {DOT_VB_H}" '
         f'xmlns="http://www.w3.org/2000/svg" '
         f'role="img" '
-        f'aria-label="Horizontal diverging bar chart of Marblehead Proposition 2½ '
-        f'votes from {min_yr} to {max_yr}. '
-        f'Bars extending right of the center line are passed questions; '
-        f'bars extending left are failed. '
-        f'Solid bars are overrides; translucent bars are debt exclusions. '
-        f'Bar width represents the inflation-adjusted dollar amount.">\n'
+        f'aria-label="Dot plot timeline of every Marblehead Proposition 2&#189; '
+        f'vote, 1982 to 2026. Operating overrides on top row, debt exclusions '
+        f'on bottom row. Filled dots are approved, hollow dots are rejected.">\n'
         f'{inner}\n'
         f'</svg>'
     )
