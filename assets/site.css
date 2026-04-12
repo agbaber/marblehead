@@ -301,9 +301,9 @@ nav.site-nav a[aria-current="page"] {
   gap: 8px 10px;
   padding: 12px 14px;
   margin: 18px 0 28px;
-  background: var(--divider);
-  border: 1px solid var(--border);
+  background: var(--surface);
   border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 .page-toc-label {
   font-size: 11px;
@@ -316,19 +316,18 @@ nav.site-nav a[aria-current="page"] {
 .page-toc a {
   display: inline-block;
   padding: 6px 12px;
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--divider);
+  border: none;
   border-radius: 999px;
   color: var(--c-navy);
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 .page-toc a:hover {
   background: var(--c-navy);
   color: var(--bg);
-  border-color: var(--c-navy);
   text-decoration: none;
 }
 @media (max-width: 600px) {
