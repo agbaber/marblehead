@@ -64,6 +64,33 @@ og_title: "Who made this?"
   @media (max-width: 600px) {
     .meta-pill { padding: 6px 12px; font-size: 12px; }
   }
+  .audit-snippet {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 14px 18px;
+    background: color-mix(in srgb, var(--c-navy) 6%, var(--surface));
+    border-left: 3px solid var(--c-navy);
+    border-radius: 0 10px 10px 0;
+    color: var(--text);
+    overflow-x: auto;
+    margin: 0 0 24px;
+  }
+  .audit-snippet code {
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    color: inherit;
+    padding: 0;
+    white-space: pre;
+  }
+  .audit-note code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    padding: 1px 6px;
+    background: var(--divider);
+    border-radius: 4px;
+  }
 </style>
 
   <h1>Who made this?</h1>
@@ -77,6 +104,12 @@ og_title: "Who made this?"
 
   <h2 data-stance-section="off">How I use AI</h2>
   <p>An AI assistant (Claude) handles the research, analysis, and digital infrastructure behind this site. Reading 39 primary-source PDFs totaling over 3,000 pages of ACFRs, DLS reports, PERAC valuations, and budget documents and turning them into charts is a good fit for what current AI tools are actually useful for. That said, they can and do make mistakes, and I don't re-verify every number against the original document myself. I try to keep it as neutral as I can. If you catch an error, the "Report an issue" link in the footer of any page opens a new GitHub issue.</p>
+
+  <h2 data-stance-section="off">Audit it yourself</h2>
+  <p class="audit-note">If you have <code>git</code> and <a href="https://claude.com/claude-code">Claude Code</a> installed, you can check the work from your terminal. The repo's <code>CLAUDE.md</code> and <code>STYLE_GUIDE.md</code> will orient Claude automatically.</p>
+  <pre class="audit-snippet"><code>git clone https://github.com/agbaber/marblehead
+cd marblehead
+claude "audit this site. find the bias. follow the money. be skeptical."</code></pre>
 
   <h2>Reactions</h2>
   <p>Some sections let you react as you read. Your reactions stay in this browser, and no one else can see which one you picked. The number next to each section is a rough measure of interest, not a poll.</p>
