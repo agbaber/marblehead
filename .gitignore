@@ -34,3 +34,6 @@ __pycache__/
 community-pulse/node_modules/
 community-pulse/.wrangler/
 community-pulse/dist/
+
+# Jekyll build output (local dev only; site is built by GitHub Pages)
+_site/
