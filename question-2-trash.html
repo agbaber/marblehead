@@ -452,6 +452,10 @@ og_url: https://marbleheaddata.org/question-2-trash.html
   <p class="budget-shift-note">FY26 curbside trash sat inside the $2.94M Waste Collection line, funded by general property tax. FY27 splits this: the smaller Waste Collection line stays in the general fund, while the new Curbside Collection line needs separate funding (a Q2 levy or a Board of Health fee). Total trash spending grew from $2.94M to $3.98M, reflecting the new Republic Services contract. Bar widths scale with dollar amounts.</p>
 </div>
 
+<div class="takeaway takeaway--neutral">
+  The $2.3 million Q2 levy is not new trash spending bolted on top of existing taxes. It replaces funding for trash that used to come from general property taxes. $1.15 million of what was general-fund trash spending is now freed for other general fund uses, regardless of whether Q2 passes or fails.
+</div>
+
 <p>The net effect: $1.15 million of what used to be general-fund trash spending is now available for other general fund needs. The remaining $2.19 million of trash costs needs to be funded through some new mechanism, because it is no longer in the general fund budget. That is where Question 2 (or the Board of Health's fallback fee) comes in.</p>
 
 <h2>What each outcome costs residents, by home value</h2>
@@ -496,6 +500,77 @@ og_url: https://marbleheaddata.org/question-2-trash.html
 
   <p class="q2-calc-delta" id="delta-sentence">At your home value, the flat fee costs $19 less per year than the levy.</p>
 </div>
+
+<section class="scrolly-trash" aria-label="How the two funding options cost different home values">
+  <div class="scrolly-trash-sticky">
+    <p class="st-viz-title">Annual trash cost at this home value</p>
+    <div class="st-scale" aria-hidden="true">
+      <div class="st-scale-track"></div>
+      <div class="st-scale-marker" id="st-marker" style="left: 0%; opacity: 0"></div>
+    </div>
+    <div class="st-scale-labels" aria-hidden="true">
+      <span>$0</span>
+      <span>$1M</span>
+      <span>$2M</span>
+      <span>$3M</span>
+    </div>
+    <p class="st-home-label" id="st-home-label">&nbsp;</p>
+
+    <div class="st-compare">
+      <div class="st-option st-option--levy" id="st-levy">
+        <div class="st-option-head">If Q2 passes (levy)</div>
+        <div class="st-option-amt" id="st-levy-amt">&mdash;</div>
+        <div class="st-option-bar"><div class="st-option-bar-fill" id="st-levy-fill"></div></div>
+      </div>
+      <div class="st-option st-option--fee" id="st-fee">
+        <div class="st-option-head">If Q2 fails (flat fee)</div>
+        <div class="st-option-amt" id="st-fee-amt">$281/yr</div>
+        <div class="st-option-bar"><div class="st-option-bar-fill" id="st-fee-fill"></div></div>
+      </div>
+    </div>
+
+    <div class="st-winner" id="st-winner">Scroll down to walk through the distribution.</div>
+  </div>
+
+  <div class="scrolly-trash-steps">
+    <div class="scrolly-step" data-step="0" data-assessed="0" data-label="" data-levy="0" data-winner="Scroll down to walk through the distribution.">
+      <div class="scrolly-step-inner">
+        <h3>Same total revenue, different distribution</h3>
+        <p>Both options raise approximately the same $2.3&nbsp;million. The levy distributes it by assessed home value. The flat fee charges every household the same amount. Scrolling through four home values shows how the choice lands.</p>
+      </div>
+    </div>
+    <div class="scrolly-step" data-step="1" data-assessed="500000" data-label="A $500,000 home" data-levy="116" data-winner="Levy <strong>$165 cheaper</strong> per year than the flat fee">
+      <div class="scrolly-step-inner">
+        <h3>A $500,000 home</h3>
+        <p>Under the levy, the added property tax is $116 per year. Under the flat fee, $281. At this value the levy is $165 per year cheaper. Roughly the lowest quarter of single-family homes in town are at or below this value.</p>
+      </div>
+    </div>
+    <div class="scrolly-step" data-step="2" data-assessed="1010000" data-label="Median home ($1.01M)" data-levy="235" data-winner="Levy <strong>$46 cheaper</strong> per year than the flat fee">
+      <div class="scrolly-step-inner">
+        <h3>The median home ($1.01M)</h3>
+        <p>The median single-family home in Marblehead is assessed at $1,010,000. Levy: $235/yr. Fee: $281/yr. The typical homeowner pays $46 per year less under the levy. Half the town's single-family homes are below this value, half are above.</p>
+      </div>
+    </div>
+    <div class="scrolly-step" data-step="3" data-assessed="1210000" data-label="Break-even ($1.21M)" data-levy="281" data-winner="Both options cost <strong>$281/yr</strong>">
+      <div class="scrolly-step-inner">
+        <h3>The break-even point ($1.21M)</h3>
+        <p>At approximately $1,210,000 in assessed value, the levy and the flat fee cost the same. Above this line the flat fee is cheaper; below it, the levy is cheaper. The break-even point is about $200,000 above the median single-family home.</p>
+      </div>
+    </div>
+    <div class="scrolly-step" data-step="4" data-assessed="2000000" data-label="A $2 million home" data-levy="465" data-winner="Flat fee <strong>$184 cheaper</strong> per year than the levy">
+      <div class="scrolly-step-inner">
+        <h3>A $2 million home</h3>
+        <p>Levy: $465/yr. Fee: $281/yr. At this value the flat fee is $184 per year cheaper. Roughly the top 10 percent of single-family homes in town are at or above this value.</p>
+      </div>
+    </div>
+    <div class="scrolly-step" data-step="5" data-assessed="3000000" data-label="A $3 million home" data-levy="698" data-winner="Flat fee <strong>$417 cheaper</strong> per year than the levy">
+      <div class="scrolly-step-inner">
+        <h3>A $3 million home</h3>
+        <p>Levy: $698/yr. Fee: $281/yr. A $3&nbsp;million home pays 2.5 times the flat fee under the levy, and less than half the flat fee if its owner lived in a $500,000 home. Whether this progressive distribution is better or worse depends on who you think should bear the cost.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <p>The break-even point, where the two options cost the same, is at roughly $1,210,000 in assessed value. Below that, the levy is cheaper; above it, the flat fee is cheaper. The median single-family home in Marblehead is assessed at $1,010,000, so the typical homeowner pays slightly less under the levy. The average single-family assessment of $1,291,000 is skewed upward by a smaller number of high-value properties, so the average homeowner pays slightly less under the fee.</p>
 
@@ -587,13 +662,14 @@ og_url: https://marbleheaddata.org/question-2-trash.html
 
 <p>These are open questions for further research or for town officials to answer directly. The Marblehead Health Department can be reached at (781) 631-0212, and Select Board meetings are open to the public.</p>
 
-<div class="notes">
+<details class="notes">
+    <summary>Sources and methodology</summary>
   <p><strong>Sources and methodology.</strong> FY26 Waste Collection department budget line items from the <a href="data/budgets/FY26_General_Fund_Budget.xlsx">FY26 General Fund Budget</a> (TOWN BUDGET sheet, rows 495&ndash;561 tagged WASTE). FY27 Waste Collection and NEW Curbside Collection line items from the <a href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf">FY27 Proposed Balanced Budget With No Override</a>, page 3. Question 2 ballot language and the $2,298,575 phased draw schedule from the <a href="https://marbleheadma.gov/wp-content/uploads/2026/02/2026-State-of-the-Town-Presenation-Final.pdf">Town Administrator's April 8, 2026 override presentation</a>. Local reporting: Will Dowd, <a href="https://www.marbleheadindependent.com/kezer-presents-9m-to-15m-tiered-override-plan-and-separate-2-2m-trash-tax-option/">"Kezer, Benjamin present $9M-to-$15M tiered override plan and separate $2.3M trash tax option"</a> (Marblehead Independent, April 8, 2026), <a href="https://www.marbleheadindependent.com/marblehead-officials-map-out-possible-282-trash-fee-if-override-fails/">"Marblehead officials map out possible $262 trash fee if override fails"</a> (Marblehead Independent). Marblehead Current reporting on the Board of Health fee structure: <a href="https://marbleheadcurrent.org/2026/03/25/health-department-estimates-281-for-trash-fee-boh-approves-budgets/">"Health Department estimates $281 for trash fee; BoH approves budgets"</a> (March 25, 2026).</p>
   <p><strong>Distributional calculation.</strong> Marblehead's total residential assessed value is estimated at approximately $9.9 billion based on the FY26 residential tax rate of $8.56 per $1,000 and the total residential levy of roughly $84.6 million (95.5% of the $88.6 million total tax levy per <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=propertytaxinformation.taxlevies.leviesbyclass">MA DOR Tax Levies by Class FY2026</a>). Adding $2,298,575 to that base gives a rate increase of approximately $0.23 per $1,000 of assessed value, applied to each home's assessment to compute the levy cost shown in the calculator above. The $281 flat fee figure is the Health Department's estimate as reported by the Marblehead Current (March 25, 2026); an earlier $262 estimate reported by the Marblehead Independent did not yet account for projected household opt-outs. Median and average single-family assessments ($1,010,000 and $1,291,000 respectively) are from the FY26 tax classification hearing.</p>
   <p><strong>Peer town data.</strong> Melrose fee: <a href="https://www.cityofmelrose.org/450/Curbside-Collection---Trash-Recycling-Co">City of Melrose Curbside Collection page</a>. Stoneham fee: reporting in <em>Middlesex East / Home News Here</em> on proposed fee increase. Swampscott funding model: <a href="https://www.swampscottma.gov/1295/Trash-Recycling-Information">Swampscott Trash and Recycling Information page</a>. Statewide PAYT adoption: Massachusetts Department of Environmental Protection, <a href="https://www.mass.gov/lists/pay-as-you-throw-paytsave-money-and-reduce-trash-smart">"Pay-As-You-Throw (PAYT) / Save Money and Reduce Trash (SMART)"</a>.</p>
   <p><strong>Intermunicipal agreement framework.</strong> <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40/Section4A">MGL Chapter 40, Section 4A</a>; DLS, <a href="https://www.mass.gov/info-details/ask-dls-intermunicipal-agreements">"Ask DLS: Intermunicipal Agreements"</a>.</p>
   <p><strong>Author disclosure.</strong> See <a href="about.html">about this site</a>. The author is a Marblehead homeowner who is genuinely undecided on both override questions.</p>
-</div>
+</details>
 
 <script>
 // Question 2 trash calculator.
@@ -693,6 +769,85 @@ function update() {
     update();
   });
   update();
+})();
+
+// Scrolly-trash: sticky viz driven by IntersectionObserver over step blocks.
+// Max scale on the bar comparison is pinned to the levy cost of the highest
+// home value in the scrolly ($3M / ~$698), so both bars share the same scale.
+(function () {
+  const section = document.querySelector('.scrolly-trash');
+  if (!section || !('IntersectionObserver' in window)) return;
+
+  const MAX_BAR_DOLLARS = 700;
+  const steps = section.querySelectorAll('.scrolly-step');
+  const marker = document.getElementById('st-marker');
+  const homeLabel = document.getElementById('st-home-label');
+  const levyAmtEl = document.getElementById('st-levy-amt');
+  const levyFillEl = document.getElementById('st-levy-fill');
+  const feeAmtEl = document.getElementById('st-fee-amt');
+  const feeFillEl = document.getElementById('st-fee-fill');
+  const levyEl = document.getElementById('st-levy');
+  const feeEl = document.getElementById('st-fee');
+  const winnerEl = document.getElementById('st-winner');
+
+  // Pre-compute the flat fee bar width since it's constant.
+  const feePct = Math.min(100, (FLAT_FEE / MAX_BAR_DOLLARS) * 100);
+  feeFillEl.style.width = feePct + '%';
+
+  function applyStep(step) {
+    const assessed = parseFloat(step.getAttribute('data-assessed')) || 0;
+    const levyDollars = parseFloat(step.getAttribute('data-levy')) || 0;
+    const label = step.getAttribute('data-label') || '';
+    const winnerHtml = step.getAttribute('data-winner') || '';
+
+    // Home-value marker: 0 -> 0%, $3M -> 100%.
+    if (assessed > 0) {
+      marker.style.opacity = '1';
+      marker.style.left = Math.min(100, (assessed / 3000000) * 100) + '%';
+    } else {
+      marker.style.opacity = '0';
+    }
+
+    homeLabel.textContent = label || '\u00A0';
+
+    // Levy card updates.
+    if (levyDollars > 0) {
+      levyAmtEl.textContent = '$' + Math.round(levyDollars) + '/yr';
+      levyFillEl.style.width = Math.min(100, (levyDollars / MAX_BAR_DOLLARS) * 100) + '%';
+    } else {
+      levyAmtEl.innerHTML = '&mdash;';
+      levyFillEl.style.width = '0%';
+    }
+
+    // Winner outlining.
+    levyEl.classList.remove('is-winner', 'is-loser');
+    feeEl.classList.remove('is-winner', 'is-loser');
+    if (levyDollars > 0 && Math.abs(levyDollars - FLAT_FEE) < 10) {
+      // Tie.
+    } else if (levyDollars > 0 && levyDollars < FLAT_FEE) {
+      levyEl.classList.add('is-winner');
+      feeEl.classList.add('is-loser');
+    } else if (levyDollars > FLAT_FEE) {
+      feeEl.classList.add('is-winner');
+      levyEl.classList.add('is-loser');
+    }
+
+    winnerEl.innerHTML = winnerHtml || '&nbsp;';
+  }
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      steps.forEach(function (s) { s.classList.remove('is-active'); });
+      entry.target.classList.add('is-active');
+      applyStep(entry.target);
+    });
+  }, {
+    rootMargin: '-45% 0px -45% 0px',
+    threshold: 0
+  });
+
+  steps.forEach(function (s) { observer.observe(s); });
 })();
 </script>
 
