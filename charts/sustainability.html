@@ -1,101 +1,68 @@
 ---
-title: "Do Override Tiers Close the Gap?"
+title: "How Long Each Override Tier Covers the Gap"
 ---
-<h1 class="h-center">Do Override Tiers Close the Gap?</h1>
-  <p class="subtitle h-center">Total projected revenue (4 scenarios) vs total projected expenses, FY2026&ndash;FY2030. FY26&ndash;FY27 from State of the Town presentation. FY28&ndash;FY30 projected using Finance Committee growth rates.</p>
-
-  <div class="legend">
-    <div class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">Expenses</span></div>
-    <div class="legend-item s-revenue"><span class="legend-swatch"></span><span class="legend-text">Revenue (by override tier)</span></div>
-  </div>
+<h1 class="h-center">How Long Each Override Tier Covers the Gap</h1>
+  <p class="subtitle h-center">Annual FY27&ndash;FY30 budget gap against each tier's maximum levy capacity. The gap grows each year as costs outpace revenue; each tier is a fixed amount.</p>
 
   <div class="chart-wrapper">
-    <svg class="chart" viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart comparing projected total revenue under four override scenarios against projected total expenses, FY26 to FY30.">
+    <svg class="chart" viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chart showing the FY27 to FY30 annual budget gap rising from 8.5 million to 17.9 million dollars, crossing each override tier's maximum capacity ($9M, $12M, and $15M) in successive years.">
       <!-- Grid -->
-      <line class="axis-base" x1="80" y1="280" x2="540" y2="280"/>
-      <line class="grid-minor" x1="80" y1="250" x2="540" y2="250"/>
-      <line class="grid-minor" x1="80" y1="220" x2="540" y2="220"/>
-      <line class="grid-minor" x1="80" y1="190" x2="540" y2="190"/>
-      <line class="grid-minor" x1="80" y1="160" x2="540" y2="160"/>
-      <line class="grid-minor" x1="80" y1="130" x2="540" y2="130"/>
-      <line class="grid-minor" x1="80" y1="100" x2="540" y2="100"/>
-      <line class="grid-minor" x1="80" y1="70" x2="540" y2="70"/>
-      <line class="grid-minor" x1="80" y1="40" x2="540" y2="40"/>
+      <line class="axis-base" x1="80" y1="280" x2="560" y2="280"/>
+      <line class="grid-minor" x1="80" y1="220" x2="560" y2="220"/>
+      <line class="grid-minor" x1="80" y1="160" x2="560" y2="160"/>
+      <line class="grid-minor" x1="80" y1="100" x2="560" y2="100"/>
+      <line class="grid-minor" x1="80" y1="40" x2="560" y2="40"/>
 
       <!-- Y labels -->
-      <line class="tick" x1="76" y1="250" x2="80" y2="250"/>
-      <text class="tick-label" x="73" y="254" text-anchor="end">$100M</text>
-      <line class="tick" x1="76" y1="190" x2="80" y2="190"/>
-      <text class="tick-label" x="73" y="194" text-anchor="end">$110M</text>
-      <line class="tick" x1="76" y1="130" x2="80" y2="130"/>
-      <text class="tick-label" x="73" y="134" text-anchor="end">$120M</text>
-      <line class="tick" x1="76" y1="70" x2="80" y2="70"/>
-      <text class="tick-label" x="73" y="74" text-anchor="end">$130M</text>
+      <line class="tick" x1="76" y1="280" x2="80" y2="280"/>
+      <text class="tick-label" x="73" y="284" text-anchor="end">$0</text>
+      <line class="tick" x1="76" y1="220" x2="80" y2="220"/>
+      <text class="tick-label" x="73" y="224" text-anchor="end">$5M</text>
+      <line class="tick" x1="76" y1="160" x2="80" y2="160"/>
+      <text class="tick-label" x="73" y="164" text-anchor="end">$10M</text>
+      <line class="tick" x1="76" y1="100" x2="80" y2="100"/>
+      <text class="tick-label" x="73" y="104" text-anchor="end">$15M</text>
+      <line class="tick" x1="76" y1="40" x2="80" y2="40"/>
+      <text class="tick-label" x="73" y="44" text-anchor="end">$20M</text>
 
       <!-- X labels -->
-      <text class="tick-label tick-label--major" x="80"  y="302" text-anchor="middle">FY26</text>
-      <text class="tick-label tick-label--major" x="195" y="302" text-anchor="middle">FY27</text>
-      <text class="tick-label tick-label--minor" x="310" y="302" text-anchor="middle">FY28</text>
-      <text class="tick-label tick-label--minor" x="425" y="302" text-anchor="middle">FY29</text>
-      <text class="tick-label tick-label--major" x="540" y="302" text-anchor="middle">FY30</text>
+      <text class="tick-label tick-label--major" x="80"  y="302" text-anchor="middle">FY27</text>
+      <text class="tick-label tick-label--minor" x="240" y="302" text-anchor="middle">FY28</text>
+      <text class="tick-label tick-label--minor" x="400" y="302" text-anchor="middle">FY29</text>
+      <text class="tick-label tick-label--major" x="560" y="302" text-anchor="middle">FY30</text>
 
-      <!-- Verified/projected divider -->
-      <line class="annotation-line" x1="195" y1="35" x2="195" y2="280"/>
-      <text class="annotation annotation--hide-sm" x="138" y="32" text-anchor="middle">verified</text>
-      <text class="annotation annotation--hide-sm" x="368" y="32" text-anchor="middle">projected</text>
+      <!-- Tier reference lines (flat horizontals: each tier's maximum levy capacity) -->
+      <line class="data-line data-line--thin s-tier-1" x1="80" y1="172" x2="560" y2="172"/>
+      <line class="data-line data-line--thin s-tier-2" x1="80" y1="136" x2="560" y2="136"/>
+      <line class="data-line data-line--thin s-tier-3" x1="80" y1="100" x2="560" y2="100"/>
 
-      <!-- Expenses line (verified) -->
-      <polyline class="data-line data-line--bold s-neutral"
-                points="80,230 195,193"/>
-      <!-- Expenses line (projected, dashed) -->
-      <polyline class="data-line data-line--dashed s-neutral"
-                points="195,193 310,158 425,120 540,81"/>
+      <!-- Gap line (FY27 verified, FY28-FY30 projected) -->
+      <polyline class="data-line data-line--bold data-line--dashed s-neutral"
+                points="80,178 240,143 400,106 560,65"/>
 
-      <!-- No override revenue -->
-      <g style="opacity: 0.45">
-        <polyline class="data-line s-revenue" points="80,230 195,244"/>
-        <polyline class="data-line data-line--thin data-line--dashed s-revenue" points="195,244 310,219 425,212 540,197"/>
-      </g>
+      <!-- FY27 verified dot -->
+      <circle class="data-dot s-neutral" cx="80" cy="178" r="4"/>
 
-      <!-- Tier 1 revenue -->
-      <g style="opacity: 0.65">
-        <polyline class="data-line s-revenue" points="80,230 195,236"/>
-        <polyline class="data-line data-line--thin data-line--dashed s-revenue" points="195,236 310,181 425,158 540,143"/>
-      </g>
-
-      <!-- Tier 2 revenue -->
-      <g style="opacity: 0.82">
-        <polyline class="data-line s-revenue" points="80,230 195,227"/>
-        <polyline class="data-line data-line--thin data-line--dashed s-revenue" points="195,227 310,168 425,140 540,125"/>
-      </g>
-
-      <!-- Tier 3 revenue -->
-      <polyline class="data-line s-revenue" points="80,230 195,218"/>
-      <polyline class="data-line data-line--thin data-line--dashed s-revenue" points="195,218 310,155 425,122 540,107"/>
-
-      <!-- End dots -->
-      <circle class="data-dot s-neutral" cx="540" cy="81" r="3"/>
-      <circle class="data-dot s-revenue" cx="540" cy="197" r="3" opacity="0.45"/>
-      <circle class="data-dot s-revenue" cx="540" cy="143" r="3" opacity="0.65"/>
-      <circle class="data-dot s-revenue" cx="540" cy="125" r="3" opacity="0.82"/>
-      <circle class="data-dot s-revenue" cx="540" cy="107" r="3"/>
+      <!-- Crossing markers: where the rising gap exceeds each tier's max -->
+      <circle class="data-dot s-tier-1" cx="107" cy="172" r="4"/>
+      <circle class="data-dot s-tier-2" cx="270" cy="136" r="4"/>
+      <circle class="data-dot s-tier-3" cx="423" cy="100" r="4"/>
 
       <!-- End labels -->
-      <text class="end-label s-neutral" x="548" y="78">$128M expenses</text>
-
-      <text class="end-label s-revenue annotation--hide-sm" x="548" y="200" opacity="0.55">$109M no override</text>
-      <text class="end-label s-revenue annotation--hide-sm" x="548" y="146" opacity="0.75">$118M Tier 1</text>
-      <text class="end-label s-revenue annotation--hide-sm" x="548" y="128" opacity="0.85">$121M Tier 2</text>
-      <text class="end-label s-revenue" x="548" y="110">$124M Tier 3</text>
+      <text class="end-label s-neutral" x="568" y="68">Annual gap $17.9M</text>
+      <text class="end-label s-tier-3" x="568" y="103">Tier 3 max $15M</text>
+      <text class="end-label s-tier-2" x="568" y="139">Tier 2 max $12M</text>
+      <text class="end-label s-tier-1" x="568" y="175">Tier 1 max $9M</text>
     </svg>
   </div>
 
   <p class="caption">
-    All four revenue scenarios start at the same point (FY26 balanced budget, $103.3M). Expenses grow at ~5.4%/yr (blended Finance Committee rate). Revenue differs by override tier. Tier 3 roughly matches expenses through FY29, then a gap reopens by FY30 (~$4M). No tier permanently closes the gap at these growth rates. FY26&ndash;FY27 figures are from the State of the Town presentation. FY28&ndash;FY30 are projections.
+    The annual budget gap (expenses minus recurring revenue) starts at $8.5M in FY27 and grows to an estimated $17.9M by FY30 as expense growth (~5.4%/yr) outpaces revenue growth (~3%/yr). Each override tier is a fixed maximum. Where the rising gap crosses a tier, that is the year the tier stops being large enough on its own: Tier 1 covers FY27; Tier 2 covers FY27 and FY28; Tier 3 covers FY27 through FY29. In FY30, even Tier 3 falls short of the gap by about $3M at these growth rates. FY27 figures are from the State of the Town presentation; FY28&ndash;FY30 are projected.
   </p>
 
   <div class="notes">
-    <p>FY26&ndash;FY27 revenue and expenses from Town Administrator's State of the Town presentation (January 2026). FY27 revenue declines because free cash usage drops from $9M to $5M.</p>
-    <p>FY28&ndash;FY30 expenses projected at 5.4%/yr (blended: HC 9%, pensions 8.5%, salaries 5%, other 3%, weighted by FY26 budget share). Revenue: levy at 3%/yr, other sources declining through FY29 then flat. Override amounts phased in per Kezer presentation.</p>
+    <p>FY27 gap verified from Town Administrator's State of the Town presentation (January 2026): $109.5M expenses minus $101.0M recurring revenue = $8.47M. See <a href="/data/SOURCE_LOOKUP.md">SOURCE_LOOKUP</a>.</p>
+    <p>FY28&ndash;FY30 projected using: expenses at 5.4%/yr (Finance Committee blended rate: healthcare 9%, pensions 8.5%, salaries 5%, other 3%, weighted by FY26 budget share); revenue at 3%/yr from the FY27 base.</p>
+    <p>Each tier is plotted at its full ballot amount ($9M, $12M, $15M) as if fully levied from FY27. In practice, Town Administrator Thatcher Kezer has proposed phasing any approved override in over three years, so the first-year draw is smaller than each tier's maximum. See <a href="/what-is-the-override.html">How the override works</a> for the phase-in schedule.</p>
     <p>These projections become less reliable further out. Actual results will depend on GIC rate decisions, collective bargaining outcomes, state aid, property value changes, and other factors not modeled here.</p>
   </div>
