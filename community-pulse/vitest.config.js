@@ -7,7 +7,7 @@ export default defineWorkersConfig({
         extends: true,
         test: {
           name: 'widget',
-          include: ['tests/slug.test.js', 'tests/store.test.js', 'tests/api.test.js'],
+          include: ['tests/slug.test.js', 'tests/store.test.js', 'tests/api.test.js', 'tests/issue-url.test.js'],
           environment: 'node',
           setupFiles: ['./tests/setup-widget.js']
         }
