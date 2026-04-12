@@ -3624,3 +3624,12 @@ abbr.g:focus::after {
 .deep-dive-expand-all:hover {
   text-decoration: underline;
 }
+
+/* 404 page */
+.four-oh-four-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin: 2rem 0;
+}
