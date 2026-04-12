@@ -808,6 +808,25 @@ details.notes[open] > summary {
   letter-spacing: 0.2px;
 }
 
+.footer-credits {
+  font-size: 10px;
+  color: var(--text-faint);
+  opacity: 0.7;
+  max-width: 44ch;
+  margin: 10px auto 0;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+.footer-credits a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.footer-credits a:hover {
+  color: var(--text);
+}
+
 .footer-version {
   font-size: 10px;
   color: var(--text-faint);
