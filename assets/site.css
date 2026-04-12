@@ -1404,58 +1404,7 @@ blockquote.quote footer a:hover {
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
-.ballot-box {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--text);
-  border-radius: 2px;
-  background: var(--surface);
-  flex-shrink: 0;
-}
-
-/* Interactive sample-ballot boxes: button version with draw-in X */
-button.ballot-box {
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font: inherit;
-  color: inherit;
-}
-button.ballot-box:focus-visible {
-  outline: 2px solid var(--c-buoy);
-  outline-offset: 2px;
-}
-.ballot-box-x {
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-.ballot-box-x-stroke {
-  stroke: var(--text);
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  fill: none;
-  stroke-dasharray: 20;
-  stroke-dashoffset: 20;
-  transition: stroke-dashoffset 150ms ease-out;
-}
-button.ballot-box[aria-pressed="true"] .ballot-box-x-stroke {
-  stroke-dashoffset: 0;
-}
-button.ballot-box[aria-pressed="true"] .ballot-box-x-stroke:nth-child(2) {
-  transition-delay: 150ms;
-}
-@media (prefers-reduced-motion: reduce) {
-  .ballot-box-x-stroke {
-    transition: none;
-  }
-}
-
-/* New fill-in-oval ballot buttons (replaces .ballot-box* X-on-square) */
+/* Fill-in-oval ballot buttons */
 .ballot-oval {
   display: inline-flex;
   align-items: center;
@@ -1522,7 +1471,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   .ballot-q-num { font-size: 16px; min-width: 28px; }
   .ballot-q-text { font-size: 13px; }
   .ballot-choices { gap: 20px; }
-  .ballot-box { width: 16px; height: 16px; }
+  .ballot-oval { width: 20px; height: 13px; }
 }
 
 /* ==========================================================================
