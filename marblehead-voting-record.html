@@ -45,27 +45,8 @@ og_url: https://marbleheaddata.org/marblehead-voting-record.html
 </div>
 
 <div class="chart-wrap">
-<svg class="chart" viewBox="0 0 880 632" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizontal diverging bar chart of Marblehead Proposition 2½ votes from 1982 to 2025. Bars extending right of the center line are passed questions; bars extending left are failed. Solid bars are overrides; hatched bars are debt exclusions. Bar width represents the inflation-adjusted dollar amount.">
-<defs>
-    <pattern id="hatch-teal" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
-      <rect width="2" height="4" class="hatch-stripe hatch-stripe--teal"/>
-    </pattern>
-    <pattern id="hatch-navy" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
-      <rect width="2" height="4" class="hatch-stripe hatch-stripe--navy"/>
-    </pattern>
-    <pattern id="hatch-sage" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
-      <rect width="2" height="4" class="hatch-stripe hatch-stripe--sage"/>
-    </pattern>
-    <pattern id="hatch-buoy" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
-      <rect width="2" height="4" class="hatch-stripe hatch-stripe--buoy"/>
-    </pattern>
-    <pattern id="hatch-brass" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
-      <rect width="2" height="4" class="hatch-stripe hatch-stripe--brass"/>
-    </pattern>
-    <pattern id="hatch-plum" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
-      <rect width="2" height="4" class="hatch-stripe hatch-stripe--plum"/>
-    </pattern>
-</defs>
+<svg class="chart" viewBox="0 0 880 632" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizontal diverging bar chart of Marblehead Proposition 2½ votes from 1982 to 2025. Bars extending right of the center line are passed questions; bars extending left are failed. Solid bars are overrides; translucent bars are debt exclusions. Bar width represents the inflation-adjusted dollar amount.">
+<!-- No defs needed: debt exclusion bars use opacity instead of hatch patterns -->
 <text class="tick-label" x="57" y="16" text-anchor="start" font-size="9">Failed</text>
 <text class="tick-label" x="863" y="16" text-anchor="end" font-size="9">Passed</text>
 <line class="grid-minor" x1="319.1" y1="22" x2="319.1" y2="622"/>
@@ -192,7 +173,7 @@ og_url: https://marbleheaddata.org/marblehead-voting-record.html
   </div>
 </div>
 
-<p class="caption">Each bar segment is one ballot question. Bars extending right of the center line passed; bars extending left failed. Widths show inflation-adjusted (2024 dollar) amounts. Solid bars are operating overrides; hatched bars are debt exclusions. CPI-U adjustment uses Bureau of Labor Statistics annual averages (series CUUR0000SA0), base year 2024.<sup class="cite" data-href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride" data-source="MA DOR, Proposition 2½ Override &amp; Underride Votes (Marblehead)"></sup></p>
+<p class="caption">Each bar segment is one ballot question. Bars extending right of the center line passed; bars extending left failed. Widths show inflation-adjusted (2024 dollar) amounts. Solid bars are operating overrides; translucent bars are debt exclusions. CPI-U adjustment uses Bureau of Labor Statistics annual averages (series CUUR0000SA0), base year 2024.<sup class="cite" data-href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride" data-source="MA DOR, Proposition 2½ Override &amp; Underride Votes (Marblehead)"></sup></p>
 
 <h2>Detail by year</h2>
 <p>Click any year to see the individual ballot questions, vote counts, and sources.</p>
