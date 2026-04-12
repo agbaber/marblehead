@@ -64,17 +64,21 @@ og_title: "Who made this?"
   @media (max-width: 600px) {
     .meta-pill { padding: 6px 12px; font-size: 12px; }
   }
+  .audit-snippet-wrap {
+    position: relative;
+    margin: 0 0 24px;
+  }
   .audit-snippet {
     font-family: var(--font-mono);
     font-size: 13px;
     line-height: 1.6;
-    padding: 14px 18px;
+    padding: 14px 60px 14px 18px;
     background: color-mix(in srgb, var(--c-navy) 6%, var(--surface));
     border-left: 3px solid var(--c-navy);
     border-radius: 0 10px 10px 0;
     color: var(--text);
     overflow-x: auto;
-    margin: 0 0 24px;
+    margin: 0;
   }
   .audit-snippet code {
     font-family: inherit;
@@ -90,6 +94,32 @@ og_title: "Who made this?"
     padding: 1px 6px;
     background: var(--divider);
     border-radius: 4px;
+  }
+  .audit-copy {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 5px 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-subtle);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .audit-copy:hover {
+    background: var(--divider);
+    border-color: var(--text-faint);
+    color: var(--text);
+  }
+  .audit-copy.is-copied {
+    background: color-mix(in srgb, var(--c-navy) 10%, var(--surface));
+    border-color: var(--c-navy);
+    color: var(--c-navy);
   }
 </style>
 
@@ -107,9 +137,32 @@ og_title: "Who made this?"
 
   <h2 data-stance-section="off">Audit it yourself</h2>
   <p class="audit-note">If you have <code>git</code> and <a href="https://claude.com/claude-code">Claude Code</a> installed, you can check the work from your terminal. The repo's <code>CLAUDE.md</code> and <code>STYLE_GUIDE.md</code> will orient Claude automatically.</p>
-  <pre class="audit-snippet"><code>git clone https://github.com/agbaber/marblehead
+  <div class="audit-snippet-wrap">
+    <pre class="audit-snippet"><code>git clone https://github.com/agbaber/marblehead
 cd marblehead
 claude "audit this site. find the bias. follow the money. be skeptical."</code></pre>
+    <button type="button" class="audit-copy" aria-label="Copy the audit command to clipboard">Copy</button>
+  </div>
+  <script>
+  (function () {
+    var btn = document.querySelector('.audit-copy');
+    var target = document.querySelector('.audit-snippet code');
+    if (!btn || !target || !navigator.clipboard) {
+      if (btn) btn.hidden = true;
+      return;
+    }
+    btn.addEventListener('click', function () {
+      navigator.clipboard.writeText(target.textContent).then(function () {
+        btn.classList.add('is-copied');
+        btn.textContent = 'Copied';
+        setTimeout(function () {
+          btn.classList.remove('is-copied');
+          btn.textContent = 'Copy';
+        }, 1500);
+      });
+    });
+  })();
+  </script>
 
   <h2>Reactions</h2>
   <p>Some sections let you react as you read. Your reactions stay in this browser, and no one else can see which one you picked. The number next to each section is a rough measure of interest, not a poll.</p>

@@ -6,6 +6,29 @@ layout: default
 <div class="page">
   <a class="back" href="{{ '/' | relative_url }}">&larr;</a>
 
+  {%- comment -%}
+  Reading-time label. Word count uses strip_html first so inline <style>
+  and <script> blocks don't inflate the count (Jekyll's strip_html drops
+  those blocks AND their content, not just the tags). Chart count is
+  computed on the raw content before stripping, since strip_html would
+  remove the <svg> and <iframe> tokens we're counting.
+  Heuristic: 230 wpm + 30s per chart. Bands: <3min unlabeled, 3–7 "~5 min",
+  8–12 "~10 min", 13+ "deep dive".
+  {%- endcomment -%}
+  {%- assign _rt_svgs = content | split: "<svg" | size | minus: 1 -%}
+  {%- assign _rt_iframe_charts = content | split: 'src="charts/' | size | minus: 1 -%}
+  {%- assign _rt_chart_count = _rt_svgs | plus: _rt_iframe_charts -%}
+  {%- assign _rt_chart_min = _rt_chart_count | divided_by: 2 -%}
+  {%- assign _rt_words = content | strip_html | number_of_words -%}
+  {%- assign _rt_minutes = _rt_words | divided_by: 230 | plus: _rt_chart_min -%}
+  {%- if _rt_minutes >= 13 -%}
+    <p class="read-time">Deep dive</p>
+  {%- elsif _rt_minutes >= 8 -%}
+    <p class="read-time">~10 min read</p>
+  {%- elsif _rt_minutes >= 3 -%}
+    <p class="read-time">~5 min read</p>
+  {%- endif -%}
+
   {{ content }}
 
   {% include footer.html %}
