@@ -101,6 +101,22 @@ Not every failed override leads to a return trip to the ballot. Some towns absor
 - **Outcome:** As of April 2026, Newton has not returned with another operating override attempt, more than three years later. Newton Public Schools faced an $8M shortfall in the FY2024 budget and implemented staff and program cuts. The austerity contributed to labor tensions that culminated in a [two-week teachers' strike in winter 2024](https://www.wbur.org/news/2024/02/01/newton-teachers-strike-explainer). The School Committee approved a FY2026 budget with a [$2-3M funding gap](https://www.figcitynews.com/2025/04/next-steps-after-school-committee-approves-nps-budget-with-2-3-million-funding-gap/) rather than returning to the ballot.
 - **Takeaway:** Newton absorbed three years of budget pressure after rejecting a $9.2M override, including a teachers' strike driven partly by fiscal constraints.
 
+### Structural alternatives towns have used
+
+The cases above focus on what happened after a "no" vote. A separate question is whether structural changes can reduce the need for an override in the first place. Some Massachusetts towns have used these tools to close gaps or extend the runway before an override became necessary.
+
+**Health insurance reform.** The single largest structural lever. Massachusetts's 2011 Municipal Health Insurance Reform Act ([Chapter 69 of the Acts of 2011](https://malegislature.gov/Laws/SessionLaws/Acts/2011/Chapter69)) allowed towns to change plan design (copays, deductibles, tiered networks) through a streamlined bargaining process. In the first year, [127 municipalities negotiated more than $178 million in savings](https://www.mma.org/advocacy/health-savings-for-cities-towns-and-taxpayers/) statewide (Massachusetts Taxpayers Foundation, July 2012). Specific examples:
+
+- **Lynnfield:** In 2003, selectmen changed retiree health coverage despite union opposition, [saving roughly $150,000 per year](https://www.eagletribune.com/how-one-town-cut-costs-improved-benefits/article_a8960972-e234-5529-aae1-a52166597977.html). Town officials said the change "allowed us to fund government" and "avoided an override that year." Over time, retirees found the benefits were as good or better than the prior plan.
+- **Framingham:** Plan design changes under the 2011 reform saved nearly $3 million in year one.
+- In FY2027, [11 municipal entities are joining the GIC](https://www.statehousenews.com/news/healthcare/costs-push-13-municipal-entities-to-join-state-run-health-plan/article_dbe914fd-4342-4edb-90d5-a1bd50f0f57c.html) (the state employee health plan), the largest wave in over a decade, triggered by a 20% premium increase and GLP-1 drug cost pressures.
+
+**Service regionalization.** Towns have consolidated dispatch, public health, and administrative functions to share fixed costs. [SEMRECC](https://www.se-mass911.org/home) (Southeastern MA Regional 911 District) consolidated emergency dispatch for Easton, Foxborough, Mansfield, and Norton into a shared center. A [Federal Reserve Bank of Boston analysis](https://www.bostonfed.org/publications/new-england-public-policy-center-policy-brief/2013/saving-costs-through-regional-consolidation-public-safety-answering-points-in-massachusetts.aspx) estimated that aggressive dispatch consolidation could save 25-60% in operating costs for those functions.
+
+**Malden (population ~66,000): the 44-year case.** Malden never asked voters for an operating override from 1982 through early 2026, one of the longest such streaks among Massachusetts cities. The city restructured pension payments and [switched to the GIC](https://www.cityofmalden.org/faq.aspx?TID=24), projecting $3M in annual health insurance savings. The streak ended March 31, 2026, when Malden's [first-ever override ($5.4M) failed by 124 votes](https://www.bostonglobe.com/2026/04/01/metro/malden-election-results/) (48.5% to 50.7%), with roughly 60 positions now expected to be cut. Malden's history is both the strongest evidence that structural tools can extend a town's runway for decades and a reminder that those tools can eventually run out.
+
+**Honest limits.** These structural changes are real and have generated significant savings. But most are one-time gains (switching to the GIC, consolidating dispatch) that get overwhelmed by ongoing cost growth. No Massachusetts town has been widely cited as a clean success story where an override rejection led to structural reform and long-term fiscal health. The research suggests that structural tools extend the timeline but do not eliminate the underlying math of costs growing faster than the levy limit.
+
 ---
 
 ## Statewide Pattern
@@ -207,6 +223,17 @@ Even at Tier 3 ($15M), Marblehead's rate ($10.06) would be lower than Melrose's 
 **Newton**
 - [WBUR, "With tax override defeated, Newton leaders fear student impacts" (March 2023)](https://www.wbur.org/news/2023/03/15/newton-tax-override-vote-results)
 - [Fig City News, "Next steps after School Committee approves NPS budget with $2-3 million funding gap" (April 2025)](https://www.figcitynews.com/2025/04/next-steps-after-school-committee-approves-nps-budget-with-2-3-million-funding-gap/)
+
+**Structural alternatives**
+- [Eagle Tribune, "How one town cut costs, improved benefits" (Lynnfield health insurance reform)](https://www.eagletribune.com/how-one-town-cut-costs-improved-benefits/article_a8960972-e234-5529-aae1-a52166597977.html)
+- [Massachusetts Taxpayers Foundation / MMA, "Health Savings for Cities, Towns, and Taxpayers" (2012)](https://www.mma.org/advocacy/health-savings-for-cities-towns-and-taxpayers/)
+- [State House News, "Costs push 13 municipal entities to join state-run health plan" (FY2027 GIC wave)](https://www.statehousenews.com/news/healthcare/costs-push-13-municipal-entities-to-join-state-run-health-plan/article_dbe914fd-4342-4edb-90d5-a1bd50f0f57c.html)
+- [Federal Reserve Bank of Boston, "Saving Costs Through Regional Consolidation" (dispatch consolidation analysis)](https://www.bostonfed.org/publications/new-england-public-policy-center-policy-brief/2013/saving-costs-through-regional-consolidation-public-safety-answering-points-in-massachusetts.aspx)
+- [SEMRECC, Southeastern MA Regional 911 District](https://www.se-mass911.org/home)
+- [GBH, "Malden residents head to polls to vote on first-ever tax override" (March 2026)](https://www.wgbh.org/news/local/2026-03-31/malden-residents-head-to-polls-to-vote-on-first-ever-tax-override)
+- [Boston Globe, "Malden election results" (April 2026)](https://www.bostonglobe.com/2026/04/01/metro/malden-election-results/)
+- [City of Malden, Override FAQ](https://www.cityofmalden.org/faq.aspx?TID=24)
+- [Chapter 69 of the Acts of 2011 (Municipal Health Insurance Reform)](https://malegislature.gov/Laws/SessionLaws/Acts/2011/Chapter69)
 
 **Statewide**
 - [Marblehead Current, "Overriding Considerations: Tough choices prompt surge of override requests statewide," March 17, 2026](https://marbleheadcurrent.org/2026/03/17/overriding-considerations-tough-choices-prompts-surge-of-override-requests-statewide/)
