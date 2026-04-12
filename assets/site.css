@@ -3630,6 +3630,9 @@ abbr.g:focus::after {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px 24px;
+  gap: 12px 16px;
   margin: 2rem 0;
+}
+.four-oh-four-links .btn-link {
+  margin: 0;
 }
