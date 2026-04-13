@@ -363,11 +363,11 @@ nav.site-nav a[aria-current="page"] {
 @media (max-width: 799px) {
   .nav-dropdown-menu { display: none !important; }
 }
-/* Mobile dropdown panel (portalled outside .nav-inner by JS) */
+/* Mobile dropdown panel (appended to body by JS, outside all nav CSS) */
 .nav-mobile-panel {
   display: none;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 49px;
   left: var(--gutter);
   right: var(--gutter);
   background: var(--surface);
@@ -833,23 +833,14 @@ details.notes[open] > summary {
 
 .hero { text-align: center; margin-bottom: 36px; }
 .hero-lighthouse {
-  display: block; margin: 0 auto 12px; width: 64px; height: 96px;
-  flex-shrink: 0;
-  opacity: 0.7;
-  background: var(--text-subtle);
-  -webkit-mask: url(lighthouse/lighthouse.svg) center / contain no-repeat;
-          mask: url(lighthouse/lighthouse.svg) center / contain no-repeat;
+  display: block; margin: 0 auto 16px; width: 80px; height: 120px;
+  opacity: 0.75; color: var(--text-subtle);
+}
+@media (min-width: 600px) {
+  .hero-lighthouse { width: 120px; height: 180px; }
 }
 .hero h1 { font-size: 28px; margin-bottom: 10px; }
 .hero p  { font-size: 16px; color: var(--text-subtle); max-width: 520px; margin: 0 auto; }
-@media (min-width: 600px) {
-  .hero {
-    display: flex; align-items: center; justify-content: center;
-    gap: 24px; text-align: left;
-  }
-  .hero-lighthouse { width: 80px; height: 120px; margin: 0; }
-  .hero p { margin: 0; }
-}
 
 .question-list {
   display: flex; flex-direction: column; gap: 12px;

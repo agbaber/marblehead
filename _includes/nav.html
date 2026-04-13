@@ -86,10 +86,11 @@
     var dropdowns = document.querySelectorAll('.nav-dropdown');
     var isMobile = function () { return window.matchMedia('(max-width: 799px)').matches; };
 
-    // Create a mobile panel that lives outside .nav-inner (avoids overflow clipping)
+    // Create a mobile panel on document.body (completely outside nav to avoid
+    // backdrop-filter, mask-image, and overflow clipping)
     var mobilePanel = document.createElement('div');
     mobilePanel.className = 'nav-mobile-panel';
-    nav.appendChild(mobilePanel);
+    document.body.appendChild(mobilePanel);
 
     function closeAll() {
       dropdowns.forEach(function (dd) {
