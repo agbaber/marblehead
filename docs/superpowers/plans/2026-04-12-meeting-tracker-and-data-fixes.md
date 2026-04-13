@@ -9,11 +9,17 @@
 **Tech Stack:** Static HTML (Jekyll), site.css, existing design system from STYLE_GUIDE.md.
 
 **Primary sources for all changes:**
-- School Committee 4/8/26 meeting (YouTube auto-captions, video ID VFf_HUGS1o0) for school FTE and budget detail
-- Select Board 4/8/26 meeting (Vimeo 1181632658) for MOU terms, trash fee confirmation, tier mechanics
+- [School Committee 4/9/26 meeting](https://www.youtube.com/watch?v=VFf_HUGS1o0) (YouTube auto-captions) for school FTE and budget detail
+  - Agenda: https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-09-Marblehead-School-Committee-Agenda.pdf
+  - Transcript: `data/school_committee_2026-04-09_transcript.txt`
+- [Select Board 4/8/26 meeting](https://vimeo.com/1181632658) (Vimeo auto-captions) for MOU terms, trash fee confirmation, tier mechanics
+  - Agenda (amended): https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-08-Select-Board-Agenda-AMENDED.pdf
+  - Transcript: `data/select_board_2026-04-08_transcript.txt`
 - Town Administrator's April 8, 2026 override presentation PDF (`data/2026-04-08_Override_Presentation.pdf`)
 - Marblehead Independent coverage (already cited on existing pages)
 - Marblehead Current, "Health Department estimates $281 for trash fee" (2026-03-25) -- already sourced on question-2-trash.html
+
+**Date note:** The Select Board met April 8 (Wednesday). The School Committee met April 9 (Thursday). Earlier versions of this plan and the transcript filename incorrectly listed both as April 8.
 
 **Source caveat:** Auto-generated captions are NOT primary sources. Any new claim that relies solely on what a speaker said in a meeting video must be flagged with a note like "per [speaker] at the [date] [body] meeting" and should be upgraded to a primary document citation when minutes or budget docs become available.
 
@@ -80,7 +86,7 @@ used the correct figure; these two pages still had the earlier one."
 
 ### Task 2: Update school position count from 14.75 to 18.25 FTE
 
-The School Committee's April 8 meeting revealed that school-side FTE cuts grew from 14.75 to 18.25 after unexpected collaborative tuition increases. This changes:
+The School Committee's April 9 meeting revealed that school-side FTE cuts grew from 14.75 to 18.25 after unexpected collaborative tuition increases. This changes:
 - no-override-budget.html: the school section text and the page lead/og_description
 - index.html: the card description for the no-override page
 
@@ -128,7 +134,7 @@ The superintendent's FY27 school budget now identifies 18.25 <abbr class="g" tit
 
 Append to the existing source paragraph:
 ```
-; School Committee April 8, 2026 meeting for the revised 18.25 FTE figure and filled/vacant breakdown
+; School Committee April 9, 2026 meeting for the revised 18.25 FTE figure and filled/vacant breakdown
 ```
 
 - [ ] **Step 5: Update index.html card at line 155**
@@ -148,7 +154,7 @@ to:
 git add no-override-budget.html index.html
 git commit -m "Update school FTE cuts from 14.75 to 18.25
 
-School Committee 4/8/26 meeting: unexpected collaborative tuition
+School Committee 4/9/26 meeting: unexpected collaborative tuition
 increases pushed school-side FTE eliminations from 14.75 to 18.25
 (9.3 filled, 8.95 vacant)."
 ```
@@ -211,7 +217,7 @@ SB deferred pending school vote."
 
 ### Task 4: Create meeting-tracker.html
 
-A simple page with a running table: date, body, one-line summary, links to relevant topic pages. Not a recap of the meeting. The page should use the standard `layout: page` and the `doc-page` body class for table styling.
+A simple page with a running list of meetings. Each entry has the date, body, recording link, a summary of what changed, and inline links to relevant topic pages. Not a recap. Uses `layout: page` and `doc-page` body class.
 
 **Files:**
 - Create: `meeting-tracker.html`
@@ -227,77 +233,45 @@ body_class: doc-page
 ---
 <h1>Meeting tracker</h1>
 
-<p class="page-lead">A running log of public meetings where override, budget, or related topics were discussed. Each row links to the site page where that information lives. This is not a recap of each meeting; it is a guide to what changed and where to find it.</p>
+<p class="page-lead">A running log of public meetings where override, budget, or related topics were discussed. Each entry links to the recording and to the site pages where that information lives. This is not a recap of each meeting; it is a guide to what changed and where to find it.</p>
 
 <p>Meetings are sourced from public video (Marblehead Community Media YouTube and Vimeo channels) and official agendas. Where auto-generated captions were used, claims are cross-referenced against primary documents before appearing on topic pages.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Body</th>
-      <th>What changed</th>
-      <th>See</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Apr 8</td>
-      <td>Select Board</td>
-      <td>Override tiers presented with draw schedules ($9M/$12M/$15M). Town-side position detail for each tier. Separate $2.3M trash ballot question. MOU framework introduced.</td>
-      <td>
-        <a href="what-is-the-override.html">Override</a>,
-        <a href="what-is-the-override.html#mou-commitments">MOU</a>,
-        <a href="question-2-trash.html">Trash</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Apr 8</td>
-      <td>School Committee</td>
-      <td>School override tiers voted 4-0 ($6.2M/$7.2M/$8.5M). School FTE cuts grew from 14.75 to 18.25. $1.5M special ed prepaid bridge confirmed as one-time. MOU voted 4-0 (subject to numbers). Line-item budget voted 5-0.</td>
-      <td>
-        <a href="what-is-the-override.html">Override</a>,
-        <a href="no-override-budget.html">No-override budget</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<h2>April 9, 2026: School Committee</h2>
 
-<h2>New topics surfaced</h2>
+<p><a href="https://www.youtube.com/watch?v=VFf_HUGS1o0">Recording</a> · <a href="https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-09-Marblehead-School-Committee-Agenda.pdf">Agenda</a></p>
 
-<p>Some meetings surface claims or topics that are not yet verified against primary sources. These are listed here as open research items, not as site content.</p>
+<ul>
+  <li>School override tiers voted 4-0: $6.2M (Tier 1), $7.2M (Tier 2), $8.5M (Tier 3). <a href="what-is-the-override.html">Override page</a></li>
+  <li>School FTE cuts grew from 14.75 to 18.25 after unexpected collaborative tuition increases (9.3 filled, 8.95 vacant). <a href="no-override-budget.html">No-override budget</a></li>
+  <li>$1.5M special ed prepaid tuition bridge confirmed as one-time; eliminates the district's second-largest safety net.</li>
+  <li>MOU (Joint Memorandum of Understanding) voted 4-0, subject to final numbers. <a href="what-is-the-override.html#mou-commitments">MOU section</a></li>
+  <li>FY27 line-item budget voted 5-0.</li>
+</ul>
 
-<table>
-  <thead>
-    <tr>
-      <th>Claim</th>
-      <th>Speaker / meeting</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Marblehead ranks 20th of 351 MA communities in per-capita income</td>
-      <td>Nick Ward, Select Board 4/8</td>
-      <td>Unverified. Checkable via DOR Municipal Databank.</td>
-    </tr>
-    <tr>
-      <td>Essex North Shore Aggie Tech costs: $468K (FY25) to $750K (FY27), driven by lottery enrollment change</td>
-      <td>CFO Benjamin / Select Board members, 4/8</td>
-      <td>Unverified. Checkable via FY25-FY27 budgets and Essex North Shore assessment records.</td>
-    </tr>
-    <tr>
-      <td>Home values and tax bills tracked together until COVID, then diverged</td>
-      <td>Kezer presentation, Select Board 4/8</td>
-      <td>Unverified. Checkable via DOR tax rate and assessor data (partially available in site data already).</td>
-    </tr>
-    <tr>
-      <td>Social hosting law enforcement concerns; DA Paul Tucker event April 14</td>
-      <td>Tom McMahon, School Committee 4/8</td>
-      <td>Not override-related. Noted for completeness.</td>
-    </tr>
-  </tbody>
-</table>
+<h2>April 8, 2026: Select Board</h2>
+
+<p><a href="https://vimeo.com/1181632658">Recording</a> · <a href="https://marbleheadma.gov/wp-content/uploads/2026/04/2026-04-08-Select-Board-Agenda-AMENDED.pdf">Agenda</a></p>
+
+<ul>
+  <li>Override tiers presented with three-year draw schedules: $9M / $12M / $15M. <a href="what-is-the-override.html">Override page</a></li>
+  <li>Town-side position detail for each tier: what is restored, what stays cut. <a href="what-is-the-override.html">Tier line items</a></li>
+  <li>Separate $2.3M trash ballot question (Question 2). <a href="question-2-trash.html">Trash page</a></li>
+  <li>MOU framework introduced: no new override until FY30, annual draw caps, quarterly reporting. <a href="what-is-the-override.html#mou-commitments">MOU section</a></li>
+  <li>Tax impact presented per $1M and average single-family home ($1.291M). <a href="charts/override_calculator.html">Calculator</a></li>
+  <li>Warrant articles reviewed; Article 29 (override authorization) held pending school vote.</li>
+</ul>
+
+<h2>Open research items</h2>
+
+<p>Claims surfaced at meetings that are not yet verified against primary sources. These are listed as open items, not site content.</p>
+
+<ul>
+  <li><strong>Marblehead ranks 20th of 351 MA communities in per-capita income.</strong> Nick Ward, Select Board 4/8. Checkable via DOR Municipal Databank or Census ACS.</li>
+  <li><strong>Essex North Shore Aggie Tech costs: $468K (FY25) to $750K (FY27).</strong> CFO Benjamin, Select Board 4/8. Driven by lottery-based enrollment change. Checkable via FY25-FY27 budget docs.</li>
+  <li><strong>Home values and tax bills tracked together until COVID, then diverged.</strong> Kezer presentation, Select Board 4/8. Checkable via DOR assessor and tax rate data.</li>
+  <li><strong>Social hosting law enforcement.</strong> Tom McMahon, School Committee 4/9. DA Paul Tucker event April 14. Not override-related; noted for completeness.</li>
+</ul>
 ```
 
 - [ ] **Step 2: Commit**
