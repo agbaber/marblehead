@@ -359,20 +359,32 @@ nav.site-nav a[aria-current="page"] {
   .nav-dropdown:hover .nav-dropdown-menu { display: block; }
   .nav-dropdown:hover .nav-caret { transform: rotate(180deg); }
 }
-/* Mobile: when a dropdown is open, disable nav scroll so menus aren't clipped */
-@media (max-width: 799px) {
-  .nav-inner:has(.nav-dropdown.is-open) {
-    overflow-x: visible;
-  }
-  .nav-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: auto;
-    transform: none;
-    min-width: min(280px, calc(100vw - 2 * var(--gutter)));
-    max-width: calc(100vw - 2 * var(--gutter));
-  }
+/* Mobile dropdown panel (portalled outside .nav-inner by JS) */
+.nav-mobile-panel {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: var(--gutter);
+  right: var(--gutter);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,.15);
+  z-index: 200;
+}
+.nav-mobile-panel.is-open { display: block; }
+.nav-mobile-panel a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: var(--text-subtle);
+}
+.nav-mobile-panel a:hover,
+.nav-mobile-panel a:active {
+  color: var(--text);
+  background: color-mix(in srgb, var(--text) 6%, transparent);
+  text-decoration: none;
 }
 
 /* Theme toggle button */

@@ -80,42 +80,54 @@
   </div>
 </nav>
 <script>
-  // Dropdown toggle (tap on mobile, hover handled by CSS on desktop)
+  // Dropdown toggle
   (function () {
+    var nav = document.querySelector('nav.site-nav');
     var dropdowns = document.querySelectorAll('.nav-dropdown');
+    var isMobile = function () { return window.matchMedia('(max-width: 799px)').matches; };
+
+    // Create a mobile panel that lives outside .nav-inner (avoids overflow clipping)
+    var mobilePanel = document.createElement('div');
+    mobilePanel.className = 'nav-mobile-panel';
+    nav.appendChild(mobilePanel);
+
+    function closeAll() {
+      dropdowns.forEach(function (dd) {
+        dd.classList.remove('is-open');
+        dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+      });
+      mobilePanel.classList.remove('is-open');
+      mobilePanel.innerHTML = '';
+    }
+
     dropdowns.forEach(function (dd) {
       var toggle = dd.querySelector('.nav-dropdown-toggle');
       toggle.addEventListener('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         var wasOpen = dd.classList.contains('is-open');
-        // Close all other dropdowns first
-        dropdowns.forEach(function (other) {
-          other.classList.remove('is-open');
-          other.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
-        });
+        closeAll();
         if (!wasOpen) {
           dd.classList.add('is-open');
           toggle.setAttribute('aria-expanded', 'true');
+          if (isMobile()) {
+            // Copy menu links into the portal panel
+            var menu = dd.querySelector('.nav-dropdown-menu');
+            mobilePanel.innerHTML = menu.innerHTML;
+            mobilePanel.classList.add('is-open');
+          }
         }
       });
     });
-    // Close dropdowns when clicking outside
+
     document.addEventListener('click', function (e) {
-      if (!e.target.closest('.nav-dropdown')) {
-        dropdowns.forEach(function (dd) {
-          dd.classList.remove('is-open');
-          dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
-        });
+      if (!e.target.closest('.nav-dropdown') && !e.target.closest('.nav-mobile-panel')) {
+        closeAll();
       }
     });
-    // Close on Escape
+
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        dropdowns.forEach(function (dd) {
-          dd.classList.remove('is-open');
-          dd.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
-        });
-      }
+      if (e.key === 'Escape') closeAll();
     });
   })();
 
