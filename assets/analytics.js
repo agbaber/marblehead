@@ -1,5 +1,6 @@
 // Lightweight PostHog event tracking for marbleheaddata.org.
-// Tracks: TOC clicks, calculator engagement (boolean only), scroll depth.
+// Tracks: TOC clicks, calculator engagement (boolean only), scroll depth,
+// chart tab switches, outbound source link clicks.
 // No personal data or input values are captured.
 (function () {
   if (typeof posthog === 'undefined') return;
@@ -62,4 +63,34 @@
       });
     }
   }, { passive: true });
+
+  // --- Chart tab / view switches ---
+  document.addEventListener('click', function (e) {
+    var tab = e.target.closest('.tab[data-view]');
+    if (!tab) return;
+    posthog.capture('chart_tab_switched', {
+      view: tab.dataset.view,
+      page: page
+    });
+  });
+
+  // --- Outbound source link clicks ---
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href]');
+    if (!link) return;
+    var href = link.href;
+    if (!href) return;
+    try {
+      var url = new URL(href, location.href);
+      if (url.origin === location.origin) return;
+    } catch (_) { return; }
+    // Capture the domain and whether it came from the sources list
+    var inSources = !!link.closest('.sources-list');
+    posthog.capture('outbound_click', {
+      url: href,
+      domain: url.hostname,
+      from_sources: inSources,
+      page: page
+    });
+  });
 })();
