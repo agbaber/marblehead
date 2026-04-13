@@ -351,13 +351,17 @@ nav.site-nav a[aria-current="page"] {
   color: var(--text);
   font-weight: 700;
 }
-/* Open state (tap / JS toggle) */
-.nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+/* Caret rotation on open */
 .nav-dropdown.is-open .nav-caret { transform: rotate(180deg); }
-/* Desktop: also open on hover */
+/* Desktop: show inline menu on hover or tap */
 @media (min-width: 800px) {
+  .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
   .nav-dropdown:hover .nav-dropdown-menu { display: block; }
   .nav-dropdown:hover .nav-caret { transform: rotate(180deg); }
+}
+/* Mobile: always hide inline menus (portal panel used instead) */
+@media (max-width: 799px) {
+  .nav-dropdown-menu { display: none !important; }
 }
 /* Mobile dropdown panel (portalled outside .nav-inner by JS) */
 .nav-mobile-panel {
@@ -378,6 +382,7 @@ nav.site-nav a[aria-current="page"] {
   display: block;
   padding: 10px 16px;
   font-size: 14px;
+  -webkit-text-size-adjust: 100%;
   color: var(--text-subtle);
 }
 .nav-mobile-panel a:hover,
@@ -829,10 +834,7 @@ details.notes[open] > summary {
 .hero { text-align: center; margin-bottom: 36px; }
 .hero-lighthouse {
   display: block; margin: 0 auto 16px; width: 80px; height: 120px;
-  opacity: 0.75;
-  background: var(--text-subtle);
-  -webkit-mask: url(assets/lighthouse/lighthouse.svg) center / contain no-repeat;
-          mask: url(assets/lighthouse/lighthouse.svg) center / contain no-repeat;
+  opacity: 0.75; color: var(--text-subtle);
 }
 @media (min-width: 600px) {
   .hero-lighthouse { width: 120px; height: 180px; }
