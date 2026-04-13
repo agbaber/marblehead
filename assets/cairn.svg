@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72" fill="currentColor" aria-hidden="true">
+  <!-- Bottom stone: widest, anchors the stack -->
+  <ellipse cx="32" cy="62" rx="26" ry="10"/>
+  <!-- Middle stone: narrower, sits on the bottom stone -->
+  <ellipse cx="32" cy="38" rx="18" ry="9"/>
+  <!-- Top stone: smallest, crowns the cairn -->
+  <ellipse cx="32" cy="16" rx="12" ry="8"/>
+</svg>
