@@ -259,6 +259,7 @@ nav.site-nav .nav-inner {
   max-width: var(--chart-max); width: 100%;
   display: flex; align-items: center; gap: 18px;
   min-height: 48px;
+  font-size: 13px; line-height: 1;
   overflow-x: auto;
   scrollbar-width: none;
   /* Leave room on the right so the last link isn't hidden under the fade. */
@@ -298,6 +299,8 @@ nav.site-nav a[aria-current="page"] {
   position: relative;
   flex-shrink: 0;
   scroll-snap-align: start;
+  padding: 12px 0;
+  margin: -12px 0;
 }
 .nav-dropdown-toggle {
   font-family: inherit;
@@ -321,7 +324,7 @@ nav.site-nav a[aria-current="page"] {
 .nav-dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   background: var(--surface);
