@@ -1,44 +1,184 @@
+{%- comment -%}
+Primary site navigation. Five top-level slots (three direct links, two
+dropdown groups) so nothing has to horizontally scroll on desktop.
+Ballot-active / budget-active flags drive the "current section"
+highlight on the dropdown trigger.
+{%- endcomment -%}
+{%- assign ballot_active = false -%}
+{%- if page.url == '/what-is-the-override.html'
+   or page.url == '/no-override-budget.html'
+   or page.url == '/question-2-trash.html'
+   or page.url == '/senior-tax-relief.html'
+   or page.url == '/marblehead-voting-record.html' -%}
+  {%- assign ballot_active = true -%}
+{%- endif -%}
+{%- assign budget_active = false -%}
+{%- if page.url == '/where-has-the-money-gone.html'
+   or page.url == '/how-we-got-here.html'
+   or page.url == '/why-not-elsewhere.html'
+   or page.url == '/meeting-tracker.html' -%}
+  {%- assign budget_active = true -%}
+{%- endif -%}
 <nav class="site-nav">
   <div class="nav-inner">
     <a class="nav-brand" href="{{ '/' | relative_url }}">MHD Data</a>
-    <a href="{{ '/' | relative_url }}the-debate.html"{% if page.url == '/the-debate.html' %} aria-current="page"{% endif %}>Debate</a>
-    <a href="{{ '/' | relative_url }}what-is-the-override.html"{% if page.url == '/what-is-the-override.html' %} aria-current="page"{% endif %}>Override</a>
-    <a href="{{ '/' | relative_url }}question-2-trash.html"{% if page.url == '/question-2-trash.html' %} aria-current="page"{% endif %}>Trash</a>
-    <a href="{{ '/' | relative_url }}how-we-got-here.html"{% if page.url == '/how-we-got-here.html' %} aria-current="page"{% endif %}>History</a>
-    <a href="{{ '/' | relative_url }}marblehead-voting-record.html"{% if page.url == '/marblehead-voting-record.html' %} aria-current="page"{% endif %}>Votes</a>
-    <a href="{{ '/' | relative_url }}where-has-the-money-gone.html"{% if page.url == '/where-has-the-money-gone.html' %} aria-current="page"{% endif %}>Spending</a>
-    <a href="{{ '/' | relative_url }}no-override-budget.html"{% if page.url == '/no-override-budget.html' %} aria-current="page"{% endif %}>No-Override</a>
-    <a href="{{ '/' | relative_url }}why-not-elsewhere.html"{% if page.url == '/why-not-elsewhere.html' %} aria-current="page"{% endif %}>Peer Towns</a>
-    <a href="{{ '/' | relative_url }}senior-tax-relief.html"{% if page.url == '/senior-tax-relief.html' %} aria-current="page"{% endif %}>Senior Relief</a>
-    <a href="{{ '/' | relative_url }}what-you-can-do.html"{% if page.url == '/what-you-can-do.html' %} aria-current="page"{% endif %}>Civic Guide</a>
-    <a href="{{ '/' | relative_url }}meeting-tracker.html"{% if page.url == '/meeting-tracker.html' %} aria-current="page"{% endif %}>Changelog</a>
-    <a href="{{ '/' | relative_url }}about.html"{% if page.url == '/about.html' %} aria-current="page"{% endif %}>About</a>
+
+    <ul class="nav-menu" id="primary-menu">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ '/' | relative_url }}the-debate.html"{% if page.url == '/the-debate.html' %} aria-current="page"{% endif %}>Debate</a>
+      </li>
+
+      <li class="nav-item nav-item--dropdown{% if ballot_active %} is-current{% endif %}">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-ballot"{% if ballot_active %} aria-current="true"{% endif %}>
+          <span>Ballot</span>
+          <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav-submenu" id="submenu-ballot">
+          <li><a class="nav-sublink" href="{{ '/' | relative_url }}what-is-the-override.html"{% if page.url == '/what-is-the-override.html' %} aria-current="page"{% endif %}>What is the override?</a></li>
+          <li><a class="nav-sublink" href="{{ '/' | relative_url }}no-override-budget.html"{% if page.url == '/no-override-budget.html' %} aria-current="page"{% endif %}>No-override budget</a></li>
+          <li><a class="nav-sublink" href="{{ '/' | relative_url }}question-2-trash.html"{% if page.url == '/question-2-trash.html' %} aria-current="page"{% endif %}>Question 2 (trash)</a></li>
+          <li><a class="nav-sublink" href="{{ '/' | relative_url }}senior-tax-relief.html"{% if page.url == '/senior-tax-relief.html' %} aria-current="page"{% endif %}>Senior tax relief</a></li>
+          <li><a class="nav-sublink" href="{{ '/' | relative_url }}marblehead-voting-record.html"{% if page.url == '/marblehead-voting-record.html' %} aria-current="page"{% endif %}>Past voting record</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item nav-item--dropdown{% if budget_active %} is-current{% endif %}">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-budget"{% if budget_active %} aria-current="true"{% endif %}>
+          <span>Budget</span>
+          <svg class="nav-chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav-submenu" id="submenu-budget">
+          <li><a class="nav-sublink" href="{{ '/' | relative_url }}where-has-the-money-gone.html"{% if page.url == '/where-has-the-money-gone.html' %} aria-current="page"{% endif %}>Where the money went</a></li>
+          <li><a class="nav-sublink" href="{{ '/' | relative_url }}how-we-got-here.html"{% if page.url == '/how-we-got-here.html' %} aria-current="page"{% endif %}>How we got here</a></li>
+          <li><a class="nav-sublink" href="{{ '/' | relative_url }}why-not-elsewhere.html"{% if page.url == '/why-not-elsewhere.html' %} aria-current="page"{% endif %}>Peer towns</a></li>
+          <li><a class="nav-sublink" href="{{ '/' | relative_url }}meeting-tracker.html"{% if page.url == '/meeting-tracker.html' %} aria-current="page"{% endif %}>Meeting changelog</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ '/' | relative_url }}what-you-can-do.html"{% if page.url == '/what-you-can-do.html' %} aria-current="page"{% endif %}>Take action</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ '/' | relative_url }}about.html"{% if page.url == '/about.html' %} aria-current="page"{% endif %}>About</a>
+      </li>
+    </ul>
+
     <button class="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
       <svg class="theme-icon theme-icon--sun" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><circle cx="10" cy="10" r="4"/><path d="M10 1v2M10 17v2M1 10h2M17 10h2M3.5 3.5l1.4 1.4M15.1 15.1l1.4 1.4M3.5 16.5l1.4-1.4M15.1 4.9l1.4-1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
       <svg class="theme-icon theme-icon--moon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M17.3 13.4A7.5 7.5 0 016.6 2.7a8 8 0 1010.7 10.7z"/></svg>
+    </button>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">
+      <svg class="nav-toggle-icon nav-toggle-icon--open" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <rect x="3" y="5" width="14" height="2" rx="1"/>
+        <rect x="3" y="9" width="14" height="2" rx="1"/>
+        <rect x="3" y="13" width="14" height="2" rx="1"/>
+      </svg>
+      <svg class="nav-toggle-icon nav-toggle-icon--close" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M5 5l10 10M15 5L5 15"/>
+      </svg>
     </button>
   </div>
 </nav>
 <script>
   (function () {
-    if (!window.matchMedia || !window.matchMedia('(max-width: 799px)').matches) return;
-    var navInner = document.querySelector('nav.site-nav .nav-inner');
-    if (!navInner) return;
-    var current = navInner.querySelector('a[aria-current="page"]');
-    if (!current) return;
-    var target = current.offsetLeft - (navInner.clientWidth - current.offsetWidth) / 2;
-    navInner.scrollLeft = Math.max(0, target);
-  })();
+    var nav = document.querySelector('nav.site-nav');
+    if (!nav) return;
 
-  // Theme toggle
-  (function () {
-    var btn = document.querySelector('.theme-toggle');
-    if (!btn) return;
-    btn.addEventListener('click', function () {
-      var current = document.documentElement.getAttribute('data-theme');
-      var next = current === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
+    var menu = nav.querySelector('.nav-menu');
+    var navToggle = nav.querySelector('.nav-toggle');
+    var dropdowns = nav.querySelectorAll('.nav-item--dropdown');
+    var mobileBp = window.matchMedia('(max-width: 799px)');
+
+    function closeAllDropdowns() {
+      dropdowns.forEach(function (li) {
+        li.removeAttribute('data-open');
+        var btn = li.querySelector('.nav-dropdown-toggle');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    function setMobileMenu(open) {
+      if (!menu || !navToggle) return;
+      if (open) {
+        menu.setAttribute('data-open', 'true');
+        navToggle.setAttribute('aria-expanded', 'true');
+        navToggle.setAttribute('aria-label', 'Close menu');
+      } else {
+        menu.removeAttribute('data-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open menu');
+      }
+    }
+
+    // Mobile drawer: hamburger opens / closes the full panel.
+    if (navToggle && menu) {
+      navToggle.addEventListener('click', function () {
+        var open = menu.getAttribute('data-open') === 'true';
+        setMobileMenu(!open);
+      });
+    }
+
+    // Desktop dropdowns: click/tap toggles. (Hover also works via CSS.)
+    dropdowns.forEach(function (li) {
+      var btn = li.querySelector('.nav-dropdown-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', function (e) {
+        // On mobile the submenu is always rendered expanded inside the
+        // drawer, so the trigger acts only as a section label.
+        if (mobileBp.matches) {
+          e.preventDefault();
+          return;
+        }
+        e.preventDefault();
+        var wasOpen = li.getAttribute('data-open') === 'true';
+        closeAllDropdowns();
+        if (!wasOpen) {
+          li.setAttribute('data-open', 'true');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
     });
+
+    // Click outside closes any open menu.
+    document.addEventListener('click', function (e) {
+      var inNav = e.target.closest('nav.site-nav');
+      if (!mobileBp.matches) {
+        if (!e.target.closest('.nav-item--dropdown')) closeAllDropdowns();
+        return;
+      }
+      if (!inNav && menu && menu.getAttribute('data-open') === 'true') {
+        setMobileMenu(false);
+      }
+    });
+
+    // Escape closes whatever is open.
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      closeAllDropdowns();
+      if (menu && menu.getAttribute('data-open') === 'true') {
+        setMobileMenu(false);
+        if (navToggle) navToggle.focus();
+      }
+    });
+
+    // Reset state when crossing the mobile / desktop breakpoint.
+    var onBpChange = function () {
+      closeAllDropdowns();
+      setMobileMenu(false);
+    };
+    if (mobileBp.addEventListener) mobileBp.addEventListener('change', onBpChange);
+    else if (mobileBp.addListener) mobileBp.addListener(onBpChange);
+
+    // Theme toggle.
+    var themeBtn = nav.querySelector('.theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', function () {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    }
   })();
 </script>
