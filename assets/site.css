@@ -359,15 +359,19 @@ nav.site-nav a[aria-current="page"] {
   .nav-dropdown:hover .nav-dropdown-menu { display: block; }
   .nav-dropdown:hover .nav-caret { transform: rotate(180deg); }
 }
-/* Keep dropdown menus on-screen on mobile */
+/* Mobile: when a dropdown is open, disable nav scroll so menus aren't clipped */
 @media (max-width: 799px) {
+  .nav-inner:has(.nav-dropdown.is-open) {
+    overflow-x: visible;
+  }
   .nav-dropdown-menu {
-    position: fixed;
-    top: 49px;
-    left: var(--gutter);
-    right: var(--gutter);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: auto;
     transform: none;
-    min-width: 0;
+    min-width: min(280px, calc(100vw - 2 * var(--gutter)));
+    max-width: calc(100vw - 2 * var(--gutter));
   }
 }
 
