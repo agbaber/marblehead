@@ -274,18 +274,20 @@ nav.site-nav .nav-inner::-webkit-scrollbar { display: none; }
     -webkit-mask-image: none;
             mask-image: none;
   }
-  nav.site-nav .nav-inner { padding-right: 0; }
+  nav.site-nav .nav-inner { padding-right: 0; overflow-x: visible; }
 }
 nav.site-nav .nav-brand {
   font-size: 14px; font-weight: 700; color: var(--text);
   white-space: nowrap; margin-right: 4px;
   display: inline-flex; align-items: center; gap: 4px;
 }
-nav.site-nav a {
-  font-size: 13px; color: var(--text-subtle);
+nav.site-nav .nav-inner > a,
+nav.site-nav .nav-dropdown-toggle {
+  font-size: 13px; line-height: 1; color: var(--text-subtle);
   white-space: nowrap;
 }
-nav.site-nav a:hover { color: var(--text); text-decoration: none; }
+nav.site-nav .nav-inner > a:hover,
+nav.site-nav .nav-dropdown-toggle:hover { color: var(--text); text-decoration: none; }
 nav.site-nav a[aria-current="page"] {
   color: var(--text);
   font-weight: 700;
@@ -298,10 +300,9 @@ nav.site-nav a[aria-current="page"] {
   scroll-snap-align: start;
 }
 .nav-dropdown-toggle {
-  font: inherit;
+  font-family: inherit;
   font-size: 13px;
-  color: var(--text-subtle);
-  white-space: nowrap;
+  line-height: 1;
   background: none;
   border: none;
   cursor: pointer;
@@ -309,9 +310,7 @@ nav.site-nav a[aria-current="page"] {
   display: inline-flex;
   align-items: center;
   gap: 3px;
-  transition: color 0.2s;
 }
-.nav-dropdown-toggle:hover { color: var(--text); }
 .nav-caret { width: 8px; height: 5px; flex-shrink: 0; transition: transform 0.2s; }
 /* Highlight toggle when a child page is active */
 .nav-dropdown:has(a[aria-current="page"]) .nav-dropdown-toggle {
