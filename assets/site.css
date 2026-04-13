@@ -829,7 +829,10 @@ details.notes[open] > summary {
 .hero { text-align: center; margin-bottom: 36px; }
 .hero-lighthouse {
   display: block; margin: 0 auto 16px; width: 80px; height: 120px;
-  opacity: 0.75; color: var(--text-subtle);
+  opacity: 0.75;
+  background: var(--text-subtle);
+  -webkit-mask: url(assets/lighthouse/lighthouse.svg) center / contain no-repeat;
+          mask: url(assets/lighthouse/lighthouse.svg) center / contain no-repeat;
 }
 @media (min-width: 600px) {
   .hero-lighthouse { width: 120px; height: 180px; }
