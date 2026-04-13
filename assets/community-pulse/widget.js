@@ -353,6 +353,12 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
     }
     countNum.textContent = `${result.total} reactions`;
     countDelta.textContent = result.last_24h > 0 ? `+${result.last_24h} today` : '';
+    if (typeof posthog !== 'undefined') {
+      posthog.capture('pulse_engaged', {
+        section: sectionTitle,
+        page: location.pathname
+      });
+    }
     await persist();
   }
 
