@@ -1,4 +1,8 @@
 <meta charset="utf-8">
+<script>
+  // Default to dark; respect saved preference. Runs before paint to prevent flash.
+  (function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();
+</script>
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e8f616ce3f5948ce91ae0dd6058282a8"}'></script>
 <!-- End Cloudflare Web Analytics -->
