@@ -346,6 +346,7 @@ og_url: https://marbleheaddata.org/explore.html
   <!-- Topic switcher -->
   <nav class="topic-bar" aria-label="Topics">
     <button class="topic-pill active" data-topic="override">Override</button>
+    <button class="topic-pill" data-topic="voteno">Vote no</button>
     <button class="topic-pill" data-topic="library">Library cuts</button>
     <button class="topic-pill" data-topic="trust">Trust</button>
   </nav>
@@ -555,7 +556,197 @@ og_url: https://marbleheaddata.org/explore.html
   </section>
 
   <!-- ═══════════════════════════════════════════════════
-       QUESTION 2: Library cuts (placeholder)
+       QUESTION 2: What happens if we vote no?
+       ═══════════════════════════════════════════════════ -->
+  <section class="question-screen" data-topic="voteno" style="display:none">
+
+    <div class="question-block">
+      <h1>What will happen if we vote no?</h1>
+      <p class="question-context">
+        The town has published a no-override balanced budget. It cuts
+        22 town positions, 18.25 school FTEs, and reduces the library 43%.
+        Residents disagree on what that means in practice.
+      </p>
+    </div>
+
+    <div class="answers">
+      <div class="answer-card" data-answer="a" data-question="voteno">
+        <p class="answer-label">Position A</p>
+        <h2>Services get cut, but the town adjusts</h2>
+        <p class="answer-summary">
+          The no-override budget is painful but balanced. Marblehead has
+          operated without overrides before. Towns adapt.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="b" data-question="voteno">
+        <p class="answer-label">Position B</p>
+        <h2>The cuts trigger losses that are hard to reverse</h2>
+        <p class="answer-summary">
+          Staff leave for higher-paying districts, institutional knowledge
+          is lost, and the next override ends up larger. Other towns
+          learned this the hard way.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="c" data-question="voteno">
+        <p class="answer-label">Position C</p>
+        <h2>Voting no is the only way to force structural reform</h2>
+        <p class="answer-summary">
+          Approving the override removes the pressure to fix the spending
+          patterns that created the deficit. A no vote forces the
+          conversation the town has been avoiding.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence A: town adjusts -->
+    <div class="evidence" data-evidence="voteno-a">
+      <div class="evidence-header">
+        <h3>The case for "the town adjusts"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>The no-override budget is balanced</h4>
+        <p>
+          The town published a line-by-line FY27 Proposed Balanced Budget
+          With No Override. It uses $5M in free cash, staffing reductions,
+          and elimination of the OPEB trust contribution. It is a legal,
+          balanced budget that can operate.
+        </p>
+        <a class="evidence-chart-link" href="no-override-budget.html">
+          No-override budget, line by line
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Marblehead has rejected overrides before</h4>
+        <p>
+          Marblehead voters have approved only 6 of 20 operating overrides
+          since 1988. The town continued to function after each rejection.
+          Debt exclusions, by contrast, pass at 49 of 50.
+        </p>
+        <a class="evidence-chart-link" href="marblehead-voting-record.html">
+          Voting record since 1988
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Some costs that increase regardless</h4>
+        <p>
+          Health insurance (+$1.65M, +11%), pensions (+$463K, +9%), police
+          (+$232K), and fire (+$456K) all grow in the no-override budget.
+          The cuts are concentrated in discretionary areas: library (-43%),
+          community development (-59%), OPEB trust (-100%).
+        </p>
+        <p class="evidence-caveat">
+          Source: FY27 Proposed Budget, pages 1-4.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence B: hard to reverse -->
+    <div class="evidence" data-evidence="voteno-b">
+      <div class="evidence-header">
+        <h3>The case for "hard to reverse"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Melrose rejected, then passed a 75% larger override</h4>
+        <p>
+          Melrose (population ~28,000) rejected a $7.7M override in June
+          2024. The town cut 61.4 FTEs over two years: teachers, library
+          hours, senior van drivers. Elementary class sizes were proposed
+          up to 32 students. Melrose returned to the ballot in November
+          2025 and passed a $13.5M override, 75% larger than the original.
+        </p>
+        <a class="evidence-chart-link" href="data/case_studies">
+          Override case studies
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Stoneham lost staff to higher-paying districts</h4>
+        <p>
+          Stoneham rejected a $14.6M override in April 2025. Staff departed
+          for higher-paying districts, leaving 28 vacant positions at the
+          start of the school year. Teachers earned 30% below market rate.
+          Stoneham passed a $9.3M override in December 2025; the larger
+          $12.5M option failed by 43 votes.
+        </p>
+        <a class="evidence-chart-link" href="data/case_studies">
+          Override case studies
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>School FTE cuts in Marblehead's no-override budget</h4>
+        <p>
+          The superintendent identifies 18.25 FTEs eliminated: roughly 9.3
+          currently filled positions and 8.95 vacant. The school
+          appropriation drops from $49.1M to $47.6M (-3.1%), with the
+          reduction absorbed by the out-of-district special education line
+          using one-time FY26 surplus funds that do not recur.
+        </p>
+        <a class="evidence-chart-link" href="no-override-budget.html">
+          School-side reductions
+        </a>
+      </div>
+    </div>
+
+    <!-- Evidence C: force reform -->
+    <div class="evidence" data-evidence="voteno-c">
+      <div class="evidence-header">
+        <h3>The case for "force structural reform"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>The override does not fix the underlying math</h4>
+        <p>
+          Even Tier 3 ($15M) briefly closes the gap in FY29 but reopens to
+          roughly $4M by FY30 as expenses outpace the fixed override levy.
+          Without structural change, the town will face another override
+          request within a few years.
+        </p>
+        <a class="evidence-chart-link" href="charts/sustainability.html">
+          Sustainability projections
+        </a>
+        <p class="evidence-caveat">
+          FY28-FY30 are illustrative projections (3% revenue growth,
+          5% expense growth), not forecasts.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Reform options exist but have not been pursued</h4>
+        <p>
+          A state DLS Financial Management Review is free, independent,
+          and requested by the Select Board. More detailed department-level
+          budget reporting is a format choice that requires no warrant
+          article. Neither has been implemented.
+        </p>
+        <a class="evidence-chart-link" href="what-you-can-do.html">
+          What you can do
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>The counter-argument: reform and override are not mutually exclusive</h4>
+        <p>
+          Override supporters argue you can vote yes and still demand reform.
+          Override opponents argue that once the money flows, the incentive
+          to reform disappears. This is a judgment call, not a data question.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       QUESTION 3: Library cuts (placeholder)
        ═══════════════════════════════════════════════════ -->
   <section class="question-screen" data-topic="library" style="display:none">
 
@@ -663,16 +854,15 @@ og_url: https://marbleheaddata.org/explore.html
   </section>
 
   <!-- ═══════════════════════════════════════════════════
-       QUESTION 3: Trust (placeholder)
+       QUESTION 4: Trust
        ═══════════════════════════════════════════════════ -->
   <section class="question-screen" data-topic="trust" style="display:none">
 
     <div class="question-block">
       <h1>How do we trust the people making these decisions?</h1>
       <p class="question-context">
-        Elected boards set the budget and propose overrides.
-        Residents want to know who they are, how they got there,
-        and what checks exist.
+        Elected and appointed boards set the budget and propose overrides.
+        Residents disagree on whether the existing oversight is sufficient.
       </p>
     </div>
 
@@ -681,8 +871,9 @@ og_url: https://marbleheaddata.org/explore.html
         <p class="answer-label">Position A</p>
         <h2>The system has real checks and transparency</h2>
         <p class="answer-summary">
-          Elected boards, public meetings, annual audits, state oversight,
-          and Town Meeting vote. The information is available if you look.
+          Elected boards, public meetings, independent audits, state
+          oversight, and Town Meeting vote. The information is there
+          if you look for it.
         </p>
       </div>
 
@@ -690,8 +881,9 @@ og_url: https://marbleheaddata.org/explore.html
         <p class="answer-label">Position B</p>
         <h2>Transparency exists on paper but not in practice</h2>
         <p class="answer-summary">
-          Meetings are poorly attended, budgets are presented as take-it-or-leave-it,
-          and few residents have time to audit 200-page ACFRs.
+          Meetings are poorly attended, budgets are presented as
+          take-it-or-leave-it, and few residents have the time to
+          audit 200-page financial reports.
         </p>
       </div>
 
@@ -699,82 +891,143 @@ og_url: https://marbleheaddata.org/explore.html
         <p class="answer-label">Position C</p>
         <h2>Trust is earned by showing the work, not asking for faith</h2>
         <p class="answer-summary">
-          The question is not whether officials are honest but whether the
-          system makes it easy for residents to verify claims independently.
+          The question is not whether officials are honest but whether
+          the system makes it easy for residents to verify claims
+          independently.
         </p>
       </div>
     </div>
 
+    <!-- Evidence A: real checks -->
     <div class="evidence" data-evidence="trust-a">
       <div class="evidence-header">
         <h3>The case for "real checks exist"</h3>
         <button class="evidence-close">Collapse</button>
       </div>
+
       <div class="evidence-point">
-        <h4>Who makes the decisions</h4>
+        <h4>Who decides what</h4>
         <p>
-          The Board of Selectmen (5 members, elected, 3-year staggered terms)
-          sets the budget. The Finance Committee (appointed, ~12 members)
-          reviews it. The School Committee (5 members, elected) controls
-          the school budget. Town Meeting (open to all registered voters)
-          approves appropriations.
+          The Select Board sets the town budget and handles operations.
+          The Finance Committee reviews and recommends. The School
+          Committee sets priorities within the school budget. Town Meeting
+          (open to all registered voters) approves appropriations. All
+          meetings are hybrid and agendas are posted at least 48 hours
+          ahead on the town calendar.
+        </p>
+        <a class="evidence-chart-link" href="what-you-can-do.html">
+          Who decides what
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Independent audits and state oversight</h4>
+        <p>
+          The town publishes an Annual Comprehensive Financial Report
+          (ACFR) audited by an independent firm. The MA Department of
+          Revenue reviews tax rates and certifies free cash. PERAC
+          audits the pension fund. These are not self-reported numbers.
         </p>
       </div>
+
       <div class="evidence-point">
-        <h4>External oversight</h4>
+        <h4>Voters have rejected overrides before</h4>
         <p>
-          The town publishes an Annual Comprehensive Financial Report (ACFR)
-          audited by an independent firm. The MA Department of Revenue reviews
-          tax rates and certifies free cash. PERAC audits the pension fund.
+          Marblehead has approved only 6 of 20 operating overrides since
+          1988. Debt exclusions pass at 49 of 50. The ballot is a real
+          check: voters have said no repeatedly, and the town adjusted.
         </p>
+        <a class="evidence-chart-link" href="marblehead-voting-record.html">
+          Voting record since 1988
+        </a>
       </div>
     </div>
 
+    <!-- Evidence B: transparency in name only -->
     <div class="evidence" data-evidence="trust-b">
       <div class="evidence-header">
         <h3>The case for "transparency in name only"</h3>
         <button class="evidence-close">Collapse</button>
       </div>
+
       <div class="evidence-point">
         <h4>Participation is very low</h4>
         <p>
-          Town Meeting attendance is typically a small fraction of registered
-          voters. FinCom hearings draw single-digit audiences. Most residents
-          learn about the budget from Facebook, not from primary documents.
+          Town Meeting attendance is typically a small fraction of
+          registered voters. FinCom hearings draw single-digit audiences.
+          Most residents learn about the budget from social media, not
+          from primary documents or public meetings.
         </p>
       </div>
+
       <div class="evidence-point">
-        <h4>Information is available but not accessible</h4>
+        <h4>The information exists but is not accessible</h4>
         <p>
           ACFRs are 200+ pages of GASB-formatted financial statements.
-          Budget presentations compress complex tradeoffs into 30-minute
-          slideshows. The data exists but requires significant effort to
-          interpret.
+          Budget presentations compress complex tradeoffs into
+          30-minute slideshows. The data exists but requires significant
+          time and expertise to interpret. A resident who wants to fact-check
+          a claim about health insurance costs would need to find the right
+          ACFR schedule, adjust for GASB reporting rules, and compare across
+          fiscal years.
         </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Budget detail is limited at the public level</h4>
+        <p>
+          The FY27 Proposed Budget presents the school department as a
+          single line item ($47.6M). The breakdown of where cuts fall
+          within the district comes from the School Committee, not the
+          budget document itself. A state DLS Financial Management Review
+          could provide independent, department-level analysis, but one
+          has not been requested.
+        </p>
+        <a class="evidence-chart-link" href="what-you-can-do.html">
+          Reform options
+        </a>
       </div>
     </div>
 
+    <!-- Evidence C: show the work -->
     <div class="evidence" data-evidence="trust-c">
       <div class="evidence-header">
         <h3>The case for "show the work"</h3>
         <button class="evidence-close">Collapse</button>
       </div>
+
       <div class="evidence-point">
         <h4>Verification over trust</h4>
         <p>
-          The gap is not between honest and dishonest officials. It is between
-          a system that asks residents to trust and one that makes it easy to
-          verify. Open data, traceable numbers, and plain-language explanations
-          reduce the need for trust.
+          The gap is not between honest and dishonest officials. It is
+          between a system that asks residents to trust and one that makes
+          it easy to verify. Open data, traceable numbers, and
+          plain-language explanations reduce the need for trust.
         </p>
       </div>
+
+      <div class="evidence-point">
+        <h4>Two concrete reforms that do not require an override</h4>
+        <p>
+          A state DLS Financial Management Review is free, independent, and
+          requested by the Select Board. More detailed department-level
+          budget reporting is a format choice that requires no warrant
+          article. Neither costs money. Both would make verification easier
+          regardless of the override outcome.
+        </p>
+        <a class="evidence-chart-link" href="what-you-can-do.html">
+          Better oversight options
+        </a>
+      </div>
+
       <div class="evidence-point">
         <h4>This site exists because of that gap</h4>
         <p>
           Every number on marbleheaddata.org traces to a primary source.
           That is not because the officials are lying. It is because
           "trust me" is not a sufficient answer when you are asking
-          voters to approve $8.47M in new taxes.
+          voters to approve $8.47M in new taxes. The budget data should
+          be as easy to check as a bank statement.
         </p>
       </div>
     </div>
