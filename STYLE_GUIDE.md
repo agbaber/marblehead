@@ -124,6 +124,50 @@ All SVGs should have `class="chart"`. Use these classes instead of inline styles
 6. State facts in captions, not conclusions.
 7. Note data gaps honestly with dashed connectors and explicit notes.
 
+## Prose and Links
+
+Rules for the prose layer of the site &ndash; the words readers actually read, not the CSS that frames them.
+
+### Plain language
+
+Write for a resident who has never attended a town meeting or read an ACFR. Assume they know what a tax is and what a school is; do not assume they know what "OPEB", "GASB 68", "free cash", "Proposition 2&frac12;", or "debt exclusion" mean without explanation.
+
+- Prefer short, concrete sentences over bureaucratic phrasing. If a paragraph reads like it was lifted straight out of an ACFR, rewrite it.
+- Define the concept in prose the first time it appears on a page, not in a glossary the reader has to go find.
+- The `.page-lead` class exists for exactly this reason &ndash; a plain-English opener on data-heavy pages. Use it.
+
+Plain language is not dumbing down. It is the minimum bar for a project whose stated goal is to let residents form their own opinions based on facts, not rhetoric.
+
+### Acronyms
+
+First use of a municipal-finance or governance acronym on a page **must** be wrapped in `<abbr class="g" title="...">` with the expansion in the `title` attribute. The `.g` ("glossary") class is already styled in `assets/site.css`: dotted underline, hover/focus tooltip on desktop, long-press tooltip on mobile. No JavaScript required.
+
+```html
+<p>The town's <abbr class="g" title="Other Post-Employment Benefits">OPEB</abbr>
+liability is reported annually in the
+<abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>.</p>
+```
+
+- The tooltip is the *minimum*. On pages where an acronym is central to the topic, expand it in prose on first use as well ("Other Post-Employment Benefits (OPEB)") and still wrap the acronym in `<abbr class="g">` so the tooltip is available on subsequent uses.
+- Everyday acronyms like "US", "MA", or "FY" do not need `<abbr>`. Municipal-finance and governance acronyms (OPEB, ACFR, GIC, PERAC, GASB, FTE, DOR, DLS, DESE, FinCom, DPW) always do.
+
+### Links
+
+Internal and external links have different jobs and live in different places on the page.
+
+- **Internal references to other pages on marbleheaddata.org must be hyperlinks**, not bare text. If the prose mentions the override explainer, the calculator, or a chart page, link it the first time it appears in a given section. Inline `<a href="...">` is correct for internal links; they keep the reader on the site.
+- **External links must be footnoted**, not inlined in the reading flow. Use the existing citations runtime (`assets/citations.js`), which converts `<sup class="cite">` markers into numbered footnotes and auto-generates a "Sources" section at the bottom of the page:
+
+```html
+<p>The FY24 property tax levy was $102.4 million.<sup class="cite"
+  data-href="https://marblehead.org/finance/fy24-acfr.pdf"
+  data-source="FY24 ACFR, page 129, Property Tax Levies and Collections"></sup></p>
+```
+
+The same source cited more than once on a page shares a number; the script handles deduplication and back-links automatically.
+
+Rationale: internal links help readers explore the site; external links take them away from it. Footnoting external sources keeps the reading flow intact and matches the primary-source discipline the README requires (*"every number should be traceable to a primary source"*). Cite aggressively &ndash; just cite in footnotes.
+
 ## What Not To Do
 
 - No em-dashes (use &ndash; for ranges, or rewrite the sentence)
@@ -132,6 +176,10 @@ All SVGs should have `class="chart"`. Use these classes instead of inline styles
 - No inline `style=""` attributes on SVG elements (use CSS classes)
 - No inline `font-family`, `fill`, `stroke` on SVG text/lines (use CSS classes)
 - No data presented without a traceable source
+- No bureaucratic or ACFR-voice prose in site copy; rewrite in plain language
+- No undefined municipal-finance acronyms; first use on a page needs `<abbr class="g" title="...">`
+- No bare-text internal references where a hyperlink to the other page belongs
+- No inline external links in the reading flow; use `<sup class="cite">` footnotes via `assets/citations.js`
 - No standalone CPI/inflation comparisons as the sole or primary benchmark for a
   municipal cost category. CPI may appear when it is one of several benchmarks
   presented alongside more directly relevant yardsticks (enrollment, headcount,
