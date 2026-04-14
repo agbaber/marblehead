@@ -2476,116 +2476,14 @@ og_url: https://marbleheaddata.org/
 
   </section>
 
-  <!-- ═══════════════════════════════════════════════════
-       QUESTION 4: Library cuts (placeholder)
-       ═══════════════════════════════════════════════════ -->
+  <!-- Library cuts question hidden until peer library funding data is available
   <section class="question-screen" data-topic="library">
-
-    <div class="question-block">
-      <h1>Why is the library the one getting cut the most?</h1>
-      <p class="question-context">
-        In the no-override budget, the library loses the most as a share of
-        its current funding. Why?
-      </p>
-    </div>
-
-    <div class="answers">
-      <div class="answer-card" data-answer="a" data-question="library">
-        <p class="answer-label">Position A</p>
-        <h2>It is not the biggest cut; it is just the most visible</h2>
-        <p class="answer-summary">
-          Other departments face proportional reductions, but the library
-          closure is concrete and emotional in a way that a hiring freeze
-          is not.
-        </p>
-      </div>
-
-      <div class="answer-card" data-answer="b" data-question="library">
-        <p class="answer-label">Position B</p>
-        <h2>Contracts protect everything else</h2>
-        <p class="answer-summary">
-          Police, fire, schools, and <abbr class="g" title="Department of Public Works">DPW</abbr> are covered by union contracts
-          and state mandates. The library is one of the few large
-          discretionary line items.
-        </p>
-      </div>
-
-      <div class="answer-card" data-answer="c" data-question="library">
-        <p class="answer-label">Position C</p>
-        <h2>It is a political choice, not a budget inevitability</h2>
-        <p class="answer-summary">
-          Other towns of similar size fund their libraries through
-          overrides and dedicated levies. Marblehead chose not to.
-        </p>
-      </div>
-    </div>
-
-    <div class="evidence" data-evidence="library-a">
-      <div class="evidence-header">
-        <h3>The case for "most visible, not biggest"</h3>
-        <button class="evidence-close">Collapse</button>
-      </div>
-      <div class="evidence-point">
-        <h4>Proportional cuts across departments</h4>
-        <p>
-          The no-override budget cuts <abbr class="g" title="Department of Public Works">DPW</abbr> road maintenance by a comparable
-          percentage, delays vehicle replacements, and freezes open positions
-          town-wide. These are less visible because they happen gradually.
-        </p>
-        <a class="evidence-chart-link" href="no-override-budget.html">
-          No-override scenario
-        </a>
-      </div>
-    </div>
-
-    <div class="evidence" data-evidence="library-b">
-      <div class="evidence-header">
-        <h3>The case for "contracts protect everything else"</h3>
-        <button class="evidence-close">Collapse</button>
-      </div>
-      <div class="evidence-point">
-        <h4>Most of the budget is contractually locked</h4>
-        <p>
-          Union contracts, pension obligations, debt service, and health
-          insurance consume the vast majority of the operating budget.
-          Cutting those requires renegotiation or default, not a budget vote.
-        </p>
-      </div>
-      <div class="evidence-point">
-        <h4>The library is large enough to matter</h4>
-        <p>
-          At roughly $1.1M, the library is one of the largest
-          non-contractual line items. Cutting smaller discretionary items
-          would not produce meaningful savings.
-        </p>
-      </div>
-    </div>
-
-    <div class="evidence" data-evidence="library-c">
-      <div class="evidence-header">
-        <h3>The case for "political choice"</h3>
-        <button class="evidence-close">Collapse</button>
-      </div>
-      <div class="evidence-point">
-        <h4>Peer towns fund libraries differently</h4>
-        <p>
-          Several comparable Massachusetts towns dedicate override funds or
-          special levies to library operations, treating them as essential
-          services rather than discretionary.
-        </p>
-      </div>
-      <div class="evidence-point">
-        <p>
-          This evidence section needs more data. Peer library funding
-          comparisons are not yet in the dataset.
-        </p>
-      </div>
-    </div>
-
+    ...
   </section>
+  -->
 
   <!-- ═══════════════════════════════════════════════════
-       QUESTION 4: Trust
+       QUESTION: Trust
        ═══════════════════════════════════════════════════ -->
   <section class="question-screen" data-topic="trust">
 
@@ -2832,13 +2730,12 @@ og_url: https://marbleheaddata.org/
   /* ── Related questions map ── */
   var relatedMap = {
     override: ['voteno', 'levy', 'trust'],
-    voteno:   ['override', 'library', 'schools'],
+    voteno:   ['override', 'again', 'schools'],
     schools:  ['override', 'mycost', 'voteno'],
     levy:     ['taxrank', 'mycost', 'override'],
     taxrank:  ['levy', 'mycost', 'schools'],
     mycost:   ['levy', 'taxrank', 'override'],
-    library:  ['voteno', 'trust', 'override'],
-    trust:    ['override', 'library', 'voteno']
+    trust:    ['override', 'alternatives', 'voteno']
   };
 
   /* ── Topic order (for progress dots) ── */
