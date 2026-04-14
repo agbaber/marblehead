@@ -834,20 +834,26 @@ details.notes[open] > summary {
 .hero { text-align: center; margin-bottom: 36px; }
 .hero-lighthouse {
   display: block; margin: 0 auto 12px; width: 80px; height: 120px;
-  flex-shrink: 0;
-  opacity: 0.85;
-  background: var(--text-subtle);
-  -webkit-mask: url(lighthouse/lighthouse.svg) center / contain no-repeat;
-          mask: url(lighthouse/lighthouse.svg) center / contain no-repeat;
+  opacity: 0.35;
 }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .hero-lighthouse { filter: invert(1); opacity: 0.5; }
+}
+html[data-theme="dark"] .hero-lighthouse { filter: invert(1); opacity: 0.5; }
 .hero h1 { font-size: 28px; margin-bottom: 10px; }
 .hero p  { font-size: 16px; color: var(--text-subtle); max-width: 520px; margin: 0 auto; }
 @media (min-width: 600px) {
   .hero {
-    display: flex; align-items: center; justify-content: center;
-    gap: 24px; text-align: left;
+    position: relative; text-align: left;
+    padding-left: 120px; min-height: 80px;
+    margin-bottom: 0;
   }
-  .hero-lighthouse { width: 80px; height: 120px; margin: 0; }
+  .hero-lighthouse {
+    position: absolute; left: 0; top: 0;
+    width: 90px; height: 320px; margin: 0;
+    opacity: 0.25;
+  }
+  html[data-theme="dark"] .hero-lighthouse { opacity: 0.35; }
   .hero p { margin: 0; }
 }
 
