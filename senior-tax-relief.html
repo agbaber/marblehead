@@ -346,8 +346,8 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
       </div>
     </div>
 
-    <div class="sr-results" id="sr-results"></div>
     <div class="sr-results sr-override-panel" id="sr-override-results" style="border-top-color: var(--c-navy);"></div>
+    <div class="sr-results" id="sr-results" style="margin-top: 16px;"></div>
     <p class="sr-source">Circuit Breaker: <a href="https://www.mass.gov/technical-information-release/tir-25-7-annual-update-of-real-estate-tax-credit-for-certain-persons-age-65-and-older">MA DOR TIR 25-7</a>, TY2025. Tax rate: $8.60/$1,000 (FY2026). Article 28: <a href="https://marbleheadma.gov/wp-content/uploads/2025/05/2026-Annual-Town-Meeting-Finance-Committee-Annual-Report.pdf">FinCom Report</a>, warrant text. Override rates: Town Administrator presentation, April 8, 2026.</p>
   </div>
 
@@ -858,6 +858,10 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     var art28Amount = 0;
     var art28HomeWarn = art28On && !renter && assessed > ART28_HOME_CAP;
     if (art28Eligible) {
+      // Formula from warrant: (tax + ½ water) - 10% income - CB credit
+      // But subject to per-household cap set by Select Board (unknown).
+      // Town-wide pool is $200k first year. We show the formula amount
+      // but flag it as theoretical.
       art28Amount = Math.max(cbBurden - (income * 0.10) - cbCredit, 0);
     }
 
@@ -897,7 +901,7 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     var base = computeScenario(assessed, income, water, filing, art28On, renter, 0);
 
     // === Top panel: current tax after relief ===
-    var html = '<div class="sr-results-label">Your tax after relief (no override)</div>';
+    var html = '<div class="sr-results-label">Your current tax after relief</div>';
 
     if (!base.incomeOk) {
       html += warn('Your income exceeds the ' + INCOME_LABELS[filing] +
@@ -927,7 +931,8 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
 
     if (art28On && !renter) {
       if (base.art28Eligible && base.art28Amount > 0) {
-        html += line('Article 28 exemption (pending)', '&minus;' + money(base.art28Amount), 'sr-line--credit');
+        html += line('Article 28 exemption (pending, formula max)', '&minus;' + money(base.art28Amount), 'sr-line--credit');
+        html += '<div class="sr-warn" style="color: var(--text-subtle);">Not yet law. Subject to a per-household cap set by the Select Board and a $200,000 town-wide annual pool. Actual exemption may be lower.</div>';
       } else {
         html += line('Article 28 exemption', '$0', '');
       }
@@ -950,41 +955,70 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     }
     elOverrideResults.style.display = '';
 
+    // Check if ANY tier produces absorption
+    var tierData = [1, 2, 3].map(function(tier) {
+      var s = computeScenario(assessed, income, water, filing, art28On, renter, tier);
+      var absorbed = (s.cbCredit - base.cbCredit) + (s.art28Amount - base.art28Amount);
+      var netAdditional = Math.max(s.netTax - base.netTax, 0);
+      return { tier: tier, s: s, absorbed: absorbed, netAdditional: netAdditional };
+    });
+    var anyAbsorption = tierData.some(function(d) { return d.absorbed > 0; });
+
     var ohtml = '<div class="sr-results-label">How each override tier affects you</div>';
 
     if (!base.cbEligible) {
-      ohtml += '<div class="sr-override-note">You do not currently qualify for the Circuit Breaker, so the override adds its full amount to your tax bill.</div>';
+      // Not eligible for CB at all
+      ohtml += '<div class="sr-override-note">You do not currently qualify for the Circuit Breaker, so the override cost is the same as for any homeowner. See the <a href="charts/override_calculator.html">override calculator</a> for the full breakdown.</div>';
+      elOverrideResults.innerHTML = ohtml;
+      return;
     }
+
+    if (!anyAbsorption) {
+      // CB is already capped, no absorption possible
+      ohtml += '<div class="sr-override-note">Your Circuit Breaker credit is already at the $2,820 cap, so the override passes through at full cost, the same as for any homeowner. See the <a href="charts/override_calculator.html">override calculator</a>.</div>';
+      ohtml += '<div class="sr-override-note" style="margin-top:8px;">At a lower assessed value, the credit has room to grow and absorbs part or all of the override. Try a lower value above to see the effect.</div>';
+      elOverrideResults.innerHTML = ohtml;
+      return;
+    }
+
+    // There IS absorption -- show the full comparison
+    // Check if any Art 28 absorption is involved
+    var anyArt28Absorb = tierData.some(function(d) {
+      return (d.s.art28Amount - base.art28Amount) > 0;
+    });
 
     ohtml += '<div class="sr-tier-rows">';
 
-    [1, 2, 3].forEach(function(tier) {
-      var s = computeScenario(assessed, income, water, filing, art28On, renter, tier);
-      var meta = TIER_META[tier];
-
-      var overrideAdd = s.overrideAdd;
-      var absorbed = s.cbCredit - base.cbCredit;
-      var art28Absorbed = s.art28Amount - base.art28Amount;
-      var totalAbsorbed = absorbed + art28Absorbed;
-      var netAdditional = Math.max(s.netTax - base.netTax, 0);
-      var netMonthly = netAdditional / 12;
+    tierData.forEach(function(d) {
+      var meta = TIER_META[d.tier];
+      var overrideAdd = d.s.overrideAdd;
+      var cbAbsorbed = d.s.cbCredit - base.cbCredit;
+      var art28Absorbed = d.s.art28Amount - base.art28Amount;
+      var netMonthly = d.netAdditional / 12;
+      var pctAbsorbed = overrideAdd > 0 ? Math.round((d.absorbed / overrideAdd) * 100) : 0;
 
       ohtml += '<div class="sr-tier-row">';
       ohtml += '<div class="sr-tier-header"><span class="swatch" style="background:' + meta.swatch + ';"></span>' + meta.label + '</div>';
 
       ohtml += '<div class="sr-tier-detail"><span>Override adds to your tax</span><span class="sr-tier-detail-value">+' + money(overrideAdd) + '/yr</span></div>';
 
-      if (totalAbsorbed > 0) {
-        ohtml += '<div class="sr-tier-detail"><span>Relief absorbs</span><span class="sr-tier-detail-value sr-tier-detail-value--credit">&minus;' + money(totalAbsorbed) + '/yr</span></div>';
+      // Show CB and Art 28 absorption separately when both are present
+      if (cbAbsorbed > 0 && art28Absorbed > 0) {
+        ohtml += '<div class="sr-tier-detail"><span>Circuit Breaker absorbs</span><span class="sr-tier-detail-value sr-tier-detail-value--credit">&minus;' + money(cbAbsorbed) + '/yr</span></div>';
+        ohtml += '<div class="sr-tier-detail"><span>Article 28 absorbs</span><span class="sr-tier-detail-value sr-tier-detail-value--credit">&minus;' + money(art28Absorbed) + '/yr</span></div>';
+      } else {
+        var absorbLabel = art28Absorbed > 0 ? 'Article 28 absorbs' : 'Circuit Breaker absorbs';
+        ohtml += '<div class="sr-tier-detail"><span>' + absorbLabel + ' (' + pctAbsorbed + '%)</span><span class="sr-tier-detail-value sr-tier-detail-value--credit">&minus;' + money(d.absorbed) + '/yr</span></div>';
       }
 
       ohtml += '<div class="sr-tier-net"><span class="sr-tier-net-label">Your actual additional cost</span>';
-      ohtml += '<span class="sr-tier-net-value">' + money(netAdditional) + '/yr';
+      ohtml += '<span class="sr-tier-net-value">' + money(d.netAdditional) + '/yr';
       ohtml += '<span class="sr-tier-net-monthly">(' + money(netMonthly) + '/mo)</span>';
       ohtml += '</span></div>';
 
-      if (netAdditional === 0 && overrideAdd > 0) {
-        ohtml += '<div class="sr-zero-note">Fully absorbed by increased Circuit Breaker credit.</div>';
+      if (d.netAdditional === 0 && overrideAdd > 0) {
+        var absorbedBy = art28Absorbed > 0 ? 'relief programs' : 'Circuit Breaker credit';
+        ohtml += '<div class="sr-zero-note">Fully absorbed by increased ' + absorbedBy + '.</div>';
       }
 
       ohtml += '</div>'; // .sr-tier-row
@@ -992,7 +1026,11 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
 
     ohtml += '</div>'; // .sr-tier-rows
 
-    ohtml += '<div class="sr-override-note">Year 3 (full phase-in) figures. The Circuit Breaker credit grows as your tax bill grows, absorbing part or all of the override for qualifying seniors not yet at the $2,820 cap.</div>';
+    var footNote = 'Year 3 (full phase-in) figures. The Circuit Breaker credit grows as your tax bill grows, so qualifying seniors below the $2,820 cap pay less of the override than the headline number suggests.';
+    if (anyArt28Absorb) {
+      footNote += ' Article 28 amounts are formula maximums, subject to a per-household cap and $200,000 town-wide annual pool.';
+    }
+    ohtml += '<div class="sr-override-note">' + footNote + '</div>';
 
     elOverrideResults.innerHTML = ohtml;
   }
