@@ -1359,59 +1359,96 @@ og_url: https://marbleheaddata.org/explore.html
 <script>
 (function () {
   /* ── State ── */
-  const selections = {};   // { questionId: answerId }
-  const composerEl = document.getElementById('composer');
-  const editorEl   = document.getElementById('composerEditor');
-  const toggleBtn  = document.getElementById('composerToggle');
-  let composerMinimized = false;
+  var selections = {};   // { questionId: answerId }
+  var composerEl = document.getElementById('composer');
+  var editorEl   = document.getElementById('composerEditor');
+  var toggleBtn  = document.getElementById('composerToggle');
+  var composerMinimized = false;
+
+  /* ── URL state ── */
+  // URL format: explore.html?q=schools&pos=b
+  // q = topic, pos = selected answer (optional)
+  function readURL() {
+    var params = new URLSearchParams(window.location.search);
+    return {
+      topic: params.get('q') || 'override',
+      pos: params.get('pos') || null
+    };
+  }
+
+  function writeURL(topic, pos) {
+    var params = new URLSearchParams();
+    params.set('q', topic);
+    if (pos) params.set('pos', pos);
+    var url = window.location.pathname + '?' + params.toString();
+    history.replaceState(null, '', url);
+  }
 
   /* ── Topic switching ── */
+  function switchTopic(topic) {
+    document.querySelectorAll('.topic-pill').forEach(function (p) {
+      p.classList.toggle('active', p.dataset.topic === topic);
+    });
+    document.querySelectorAll('.question-screen').forEach(function (s) {
+      s.style.display = s.dataset.topic === topic ? '' : 'none';
+    });
+    // Update URL, preserve pos if same topic has a selection
+    writeURL(topic, selections[topic] || null);
+  }
+
   document.querySelectorAll('.topic-pill').forEach(function (pill) {
     pill.addEventListener('click', function () {
-      var topic = this.dataset.topic;
-      document.querySelectorAll('.topic-pill').forEach(function (p) {
-        p.classList.toggle('active', p.dataset.topic === topic);
-      });
-      document.querySelectorAll('.question-screen').forEach(function (s) {
-        s.style.display = s.dataset.topic === topic ? '' : 'none';
-      });
+      switchTopic(this.dataset.topic);
     });
   });
 
   /* ── Answer selection ── */
+  function selectAnswer(question, answer) {
+    // Update card states
+    document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
+      c.classList.remove('selected');
+      c.classList.toggle('dimmed', c.dataset.answer !== answer);
+      if (c.dataset.answer === answer) c.classList.add('selected');
+    });
+
+    // Toggle evidence panels
+    document.querySelectorAll('.evidence').forEach(function (e) {
+      if (e.dataset.evidence && e.dataset.evidence.startsWith(question + '-')) {
+        if (e.dataset.evidence === question + '-' + answer) {
+          e.classList.add('open');
+        } else {
+          e.classList.remove('open');
+        }
+      }
+    });
+
+    selections[question] = answer;
+    writeURL(question, answer);
+  }
+
+  function deselectAnswer(question) {
+    document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
+      c.classList.remove('selected', 'dimmed');
+    });
+    document.querySelectorAll('.evidence').forEach(function (e) {
+      if (e.dataset.evidence && e.dataset.evidence.startsWith(question + '-')) {
+        e.classList.remove('open');
+      }
+    });
+    delete selections[question];
+    writeURL(question, null);
+  }
+
   document.querySelectorAll('.answer-card').forEach(function (card) {
     card.addEventListener('click', function () {
       var question = this.dataset.question;
       var answer   = this.dataset.answer;
       var wasSelected = this.classList.contains('selected');
 
-      // Update card states
-      document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
-        if (wasSelected) {
-          c.classList.remove('selected', 'dimmed');
-        } else {
-          c.classList.remove('selected');
-          c.classList.toggle('dimmed', c.dataset.answer !== answer);
-          if (c.dataset.answer === answer) c.classList.add('selected');
-        }
-      });
-
-      // Toggle evidence panels
-      document.querySelectorAll('.evidence').forEach(function (e) {
-        if (e.dataset.evidence && e.dataset.evidence.startsWith(question + '-')) {
-          if (!wasSelected && e.dataset.evidence === question + '-' + answer) {
-            e.classList.add('open');
-          } else {
-            e.classList.remove('open');
-          }
-        }
-      });
-
-      // Update composer
       if (wasSelected) {
-        delete selections[question];
+        deselectAnswer(question);
       } else {
-        selections[question] = answer;
+        selectAnswer(question, answer);
         showComposer();
         seedComposer(question, answer);
       }
@@ -1425,9 +1462,6 @@ og_url: https://marbleheaddata.org/explore.html
       panel.classList.remove('open');
     });
   });
-
-  /* ── Switching between dimmed answers ── */
-  // Already handled: clicking a dimmed card re-runs the selection logic
 
   /* ── Composer ── */
   function showComposer() {
@@ -1443,7 +1477,6 @@ og_url: https://marbleheaddata.org/explore.html
     var heading = card.querySelector('h2').textContent;
     var existing = editorEl.value.trim();
 
-    // Build a seed line
     var questionEl = document.querySelector(
       '.question-screen[data-topic="' + question + '"] .question-block h1'
     );
@@ -1451,7 +1484,6 @@ og_url: https://marbleheaddata.org/explore.html
     var seed = qText + '\n  > ' + heading;
 
     if (existing) {
-      // Append if not already there
       if (existing.indexOf(heading) === -1) {
         editorEl.value = existing + '\n\n' + seed;
       }
@@ -1459,7 +1491,6 @@ og_url: https://marbleheaddata.org/explore.html
       editorEl.value = seed;
     }
 
-    // Save to localStorage
     localStorage.setItem('explore-notes', editorEl.value);
   }
 
@@ -1468,7 +1499,7 @@ og_url: https://marbleheaddata.org/explore.html
     localStorage.setItem('explore-notes', editorEl.value);
   });
 
-  // Restore on load
+  // Restore composer notes on load
   var saved = localStorage.getItem('explore-notes');
   if (saved) {
     editorEl.value = saved;
@@ -1501,16 +1532,32 @@ og_url: https://marbleheaddata.org/explore.html
     });
   });
 
+  /* ── Restore state from URL on load ── */
+  var initial = readURL();
+  switchTopic(initial.topic);
+  if (initial.pos) {
+    selectAnswer(initial.topic, initial.pos);
+  }
+
+  // Handle back/forward navigation
+  window.addEventListener('popstate', function () {
+    var state = readURL();
+    switchTopic(state.topic);
+    if (state.pos) {
+      selectAnswer(state.topic, state.pos);
+    }
+  });
+
   /* ── +1 reactions on answer cards ── */
   var API_BASE = 'https://marblehead-community-pulse.agbaber.workers.dev';
   var pagePath = 'explore.html';
 
   // Build section IDs for each answer card
-  var cards = document.querySelectorAll('.answer-card[data-question][data-answer]');
+  var reactCards = document.querySelectorAll('.answer-card[data-question][data-answer]');
   var sectionIds = [];
   var cardMap = {};
 
-  cards.forEach(function (card) {
+  reactCards.forEach(function (card) {
     var id = pagePath + '#' + card.dataset.question + '-' + card.dataset.answer;
     sectionIds.push(id);
     cardMap[id] = card;
@@ -1567,7 +1614,6 @@ og_url: https://marbleheaddata.org/explore.html
       })
       .catch(function () {});
   }
-
 })();
 </script>
 

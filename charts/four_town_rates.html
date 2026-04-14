@@ -150,7 +150,7 @@ title: "Rate and Bill Comparison"
 
   <h2 class="h-center">Tax bill as share of household income</h2>
 
-  <p>The rate controls for property values but not for income. The bill shows what homeowners pay but not how that payment relates to what they earn. Dividing the average tax bill by median household income gives a rough measure of tax burden relative to ability to pay. It is the metric that is hardest to read in two directions.</p>
+  <p>The rate controls for property values but not for income. The bill shows what homeowners pay but not how that payment relates to what they earn. Dividing the average tax bill by median household income gives a rough measure of tax burden relative to ability to pay. It is the metric that is hardest to read in two directions. Two independent sources confirm the income gap: Marblehead ranks 20th of 351 Massachusetts communities in <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income ($115,422), while Swampscott ranks 64th ($76,071), Melrose 85th ($69,170), and Stoneham 115th ($58,058).</p>
 
   <div class="chart-wrapper">
     <svg class="chart" viewBox="0 0 600 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart: tax bill as percentage of median household income. Swampscott 8.5%, Melrose 7.3%, Stoneham 7.1%, Marblehead 6.1% (lowest). With override, Marblehead reaches 6.7-7.1%, still below Swampscott.">
@@ -186,11 +186,11 @@ title: "Rate and Bill Comparison"
       <text class="tick-label" x="240" y="298" text-anchor="middle">Melrose</text>
       <text class="tick-label" x="350" y="298" text-anchor="middle">Stoneham</text>
       <text class="tick-label" x="460" y="298" text-anchor="middle">Marblehead</text>
-      <!-- Income context -->
-      <text class="annotation" x="130" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$134K income</text>
-      <text class="annotation" x="240" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$134K income</text>
-      <text class="annotation" x="350" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$114K income</text>
-      <text class="annotation" x="460" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$182K income</text>
+      <!-- Income context (ACS median HH income / DOR per-capita rank of 351) -->
+      <text class="annotation" x="130" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$134K income / 64th</text>
+      <text class="annotation" x="240" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$134K income / 85th</text>
+      <text class="annotation" x="350" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$114K income / 115th</text>
+      <text class="annotation" x="460" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$182K income / 20th</text>
     </svg>
   </div>
 
@@ -254,7 +254,7 @@ title: "Rate and Bill Comparison"
     <p><strong>FY2028 projections.</strong> Dashed lines project each town's rate and bill assuming 2.5% annual levy growth (Proposition 2&frac12; ceiling) and assessed values held constant at FY2026 levels. Actual rates will differ due to new growth, changes in assessed values, and debt exclusions. These projections are illustrative, not forecasts.</p>
     <p>Melrose FY26 rate and bill reflect a $13.5M override passed November 2025. Stoneham's $9.3M override (passed December 2025) is included in FY28 projections but not in FY26 actuals, since the override applies starting FY2027.</p>
     <p>Marblehead override tiers are estimates: current rate + (override amount / $9.89B assessed value). Tier 1 ($9M) ~$9.46, Tier 2 ($12M) ~$9.76, Tier 3 ($15M) ~$10.06. Corresponding average bill estimates: ~$12,217, ~$12,604, ~$12,991.</p>
-    <p><strong>Income data.</strong> Median household income from US Census Bureau, American Community Survey 2020&ndash;2024 5-year estimates (table B19013), in 2024 inflation-adjusted dollars. Marblehead $182,132 (&plusmn;$27,872), Swampscott $134,386 (&plusmn;$22,662), Melrose $133,953 (&plusmn;$14,410), Stoneham $113,964 (&plusmn;$10,253). Margins of error are 90% confidence intervals. Marblehead's wide margin reflects its smaller household count (~8,300). Marblehead ranks 20th of 351 MA communities in per-capita income (<abbr class="g" title="Department of Revenue">DOR</abbr> Municipal Databank).</p>
+    <p><strong>Income data (two sources).</strong> (1) Median household income from US Census Bureau, American Community Survey 2020&ndash;2024 5-year estimates (table B19013), in 2024 inflation-adjusted dollars. Marblehead $182,132 (&plusmn;$27,872), Swampscott $134,386 (&plusmn;$22,662), Melrose $133,953 (&plusmn;$14,410), Stoneham $113,964 (&plusmn;$10,253). Margins of error are 90% confidence intervals. Marblehead's wide margin reflects its smaller household count (~8,300). (2) <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income (FY2027, from the <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=dor_income_eqv_per_capita">Municipal Databank</a>, all 351 communities): Marblehead $115,422 (20th), Swampscott $76,071, Melrose $69,170, Stoneham $58,058. Full dataset: <a href="data/dor_per_capita_income_FY27.csv">dor_per_capita_income_FY27.csv</a>. The two measures use different methodologies (household vs per-capita, Census vs state formula) but both confirm the same relative ranking: Marblehead's income is materially higher than the other three towns.</p>
     <p><strong>On the income metric.</strong> The "bill as % of income" ratio divides the average single-family tax bill (from <abbr class="g" title="Department of Revenue">DOR</abbr>) by the <abbr class="g" title="American Community Survey">ACS</abbr> median household income. This is an approximation: the average bill describes a typical single-family homeowner, while the median income describes all households including renters. Renters pay property tax indirectly through rent, but the ratio is not a precise match of the same population. The metric is useful for relative comparisons across towns (all four use the same methodology) but should not be read as the exact percentage of a typical homeowner's income going to property tax.</p>
     <p>The rate and bill charts use different start years because the underlying <abbr class="g" title="Department of Revenue">DOR</abbr> reports have different coverage.</p>
   </div>
