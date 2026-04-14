@@ -3747,6 +3747,9 @@ og_url: https://marbleheaddata.org/
         btn.className = 'related-link';
         btn.textContent = topicLabels[rel] || rel;
         btn.addEventListener('click', function () {
+          if (typeof posthog !== 'undefined') {
+            posthog.capture('explore_related_click', { from: topic, to: rel });
+          }
           switchTopic(rel);
           window.scrollTo(0, 0);
         });
@@ -3760,6 +3763,9 @@ og_url: https://marbleheaddata.org/
 
   /* ── Topic switching ── */
   function switchTopic(topic) {
+    if (typeof posthog !== 'undefined') {
+      posthog.capture('explore_topic_opened', { topic: topic });
+    }
     currentTopic = topic;
     stageEl.classList.add('has-topic');
     document.querySelectorAll('.question-screen').forEach(function (s) {
@@ -3818,6 +3824,9 @@ og_url: https://marbleheaddata.org/
       btn.className = 'next-question-btn';
       btn.innerHTML = 'Next question &rarr;';
       btn.addEventListener('click', function () {
+        if (typeof posthog !== 'undefined') {
+          posthog.capture('explore_next_question', { from: topic, to: nextTopic });
+        }
         switchTopic(nextTopic);
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
@@ -3908,6 +3917,9 @@ og_url: https://marbleheaddata.org/
       navigator.clipboard.writeText(url).then(function () {
         shareBtnEl.textContent = 'Link copied';
         setTimeout(function () { shareBtnEl.textContent = 'Share your positions'; }, 2000);
+        if (typeof posthog !== 'undefined') {
+          posthog.capture('explore_positions_shared', { count: pairs.length, source: 'landing' });
+        }
       });
     });
   }
@@ -3916,6 +3928,9 @@ og_url: https://marbleheaddata.org/
 
   // selectAnswer: locks your position (checkmark). Also opens evidence.
   function selectAnswer(question, answer) {
+    if (typeof posthog !== 'undefined') {
+      posthog.capture('explore_answer_selected', { topic: question, answer: answer });
+    }
     // Update checkmark: only the selected card gets .selected
     document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
       c.classList.remove('selected');
@@ -3939,7 +3954,13 @@ og_url: https://marbleheaddata.org/
   }
 
   // viewEvidence: opens one evidence panel, closes others. Does NOT change selection.
+  var _lastEvidence = null;
   function viewEvidence(question, answer) {
+    var evKey = question + '-' + answer;
+    if (evKey !== _lastEvidence && typeof posthog !== 'undefined') {
+      posthog.capture('explore_evidence_viewed', { topic: question, answer: answer });
+    }
+    _lastEvidence = evKey;
     // Remove viewing highlight from all cards (but keep .selected)
     document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
       c.classList.remove('viewing', 'dimmed');
@@ -4202,6 +4223,9 @@ og_url: https://marbleheaddata.org/
   }
 
   function openPanel() {
+    if (typeof posthog !== 'undefined') {
+      posthog.capture('explore_notes_opened', { position_count: getPositionCount() });
+    }
     updateNotesPanel();
     notesPanel.classList.add('open');
     notesPanel.style.transform = ''; // clear any leftover drag offset
@@ -4323,6 +4347,9 @@ og_url: https://marbleheaddata.org/
       var btn = document.getElementById('notesShare');
       btn.textContent = 'Copied link';
       setTimeout(function () { btn.textContent = 'Share'; }, 1500);
+      if (typeof posthog !== 'undefined') {
+        posthog.capture('explore_positions_shared', { count: keys.length, source: 'notes_panel' });
+      }
     });
   });
 
@@ -4354,6 +4381,9 @@ og_url: https://marbleheaddata.org/
   if (positionsParam) {
     isSharedView = true;
     var pairs = positionsParam.split(',');
+    if (typeof posthog !== 'undefined') {
+      posthog.capture('explore_shared_viewed', { position_count: pairs.length });
+    }
     pairs.forEach(function (pair) {
       var parts = pair.split(':');
       if (parts.length === 2) {
@@ -4378,6 +4408,9 @@ og_url: https://marbleheaddata.org/
 
     // "Start fresh" clears shared picks and restores normal landing
     document.getElementById('sharedFresh').addEventListener('click', function () {
+      if (typeof posthog !== 'undefined') {
+        posthog.capture('explore_shared_start_fresh');
+      }
       Object.keys(selections).forEach(function (k) { delete selections[k]; });
       isSharedView = false;
       if (headingEl) headingEl.textContent = 'Weighing the FY2027 override?';

@@ -72,6 +72,16 @@
         siblings[i].setAttribute('aria-pressed', 'false');
       }
       box.setAttribute('aria-pressed', 'true');
+      if (typeof posthog !== 'undefined') {
+        var label = (choice.querySelector('.ballot-choice-label') || {}).textContent || '';
+        var qNum = (row.querySelector('.ballot-q-num') || {}).textContent || '';
+        var question = qNum;
+        posthog.capture('ballot_practiced', {
+          vote: label.trim(),
+          question: question.trim(),
+          page: window.location.pathname
+        });
+      }
     });
   });
 })();

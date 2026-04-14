@@ -157,6 +157,9 @@
       var next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
+      if (typeof posthog !== 'undefined') {
+        posthog.capture('theme_toggled', { theme: next });
+      }
     });
   })();
 </script>
