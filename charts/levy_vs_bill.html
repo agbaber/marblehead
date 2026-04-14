@@ -12,7 +12,31 @@ title: "Tax Levy, Median Bill, and Inflation"
   <div class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">CPI-U (inflation)</span></div>
 </div>
 
-<div class="chart-wrapper">
+<div class="chart-wrapper" data-chart-tooltip>
+  <script type="application/json" class="chart-tooltip-data">
+  {
+    "xLabels": ["FY12","FY13","FY14","FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24"],
+    "xPositions": [70,116,162,208,254,299,345,391,437,483,528,574,620],
+    "valueDecimals": 1,
+    "series": [
+      {
+        "name": "Collected tax levy",
+        "className": "s-revenue",
+        "values": [100.0,102.1,105.8,110.0,114.3,119.2,123.6,126.4,130.1,134.5,142.2,147.4,153.2]
+      },
+      {
+        "name": "Median single-family bill",
+        "className": "s-cost",
+        "values": [100.0,102.0,105.8,110.3,114.5,119.5,123.8,126.8,130.3,135.5,142.8,148.0,154.9]
+      },
+      {
+        "name": "CPI-U",
+        "className": "s-neutral",
+        "values": [100.0,101.5,103.1,103.2,104.5,106.8,109.4,111.4,112.7,118.0,127.5,132.7,136.6]
+      }
+    ]
+  }
+  </script>
   <svg class="chart" viewBox="0 0 840 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart: three indexed growth rates from FY2012 to FY2024, each starting at 100 at FY2012. Marblehead's collected property tax levy reaches 153 by FY2024. The median single-family tax bill reaches 155. CPI-U reaches 137. Levy and bill track each other closely; both grow faster than CPI-U.">
     <line class="axis-base" x1="70" y1="300" x2="620" y2="300"/>
     <line class="grid-minor" x1="70" y1="260" x2="620" y2="260"/>
