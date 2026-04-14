@@ -315,13 +315,22 @@ og_url: https://marbleheaddata.org/the-debate.html
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
-    padding: 10px 16px;
+    padding: 12px 18px;
     margin: 0 0 16px;
     border-radius: var(--radius-md);
-    background: color-mix(in srgb, var(--c-navy) 6%, var(--surface));
-    border: 1px solid var(--border);
-    font-size: 13px;
-    color: var(--text-muted);
+    border-left: 4px solid var(--c-navy);
+    background: color-mix(in srgb, var(--c-navy) 10%, var(--surface));
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .lens-banner--for {
+    border-left-color: var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 10%, var(--surface));
+  }
+  .lens-banner--against {
+    border-left-color: var(--c-brass);
+    background: color-mix(in srgb, var(--c-brass) 10%, var(--surface));
   }
   .lens-banner--visible { display: flex; }
   .lens-banner-text { flex: 1 1 auto; min-width: 180px; }
@@ -329,20 +338,20 @@ og_url: https://marbleheaddata.org/the-debate.html
   .lens-banner-clear,
   .lens-banner-share {
     font-size: 12px;
-    font-weight: 600;
-    padding: 4px 12px;
+    font-weight: 700;
+    padding: 5px 14px;
     border-radius: 14px;
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--text-muted);
     background: var(--surface);
-    color: var(--text-muted);
+    color: var(--text);
     cursor: pointer;
     white-space: nowrap;
   }
   .lens-banner-switch:hover,
   .lens-banner-clear:hover,
   .lens-banner-share:hover {
-    border-color: var(--text-muted);
-    color: var(--text);
+    border-color: var(--text);
+    background: color-mix(in srgb, var(--text) 6%, var(--surface));
   }
 
   .lens-collapsed {
