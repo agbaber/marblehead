@@ -347,6 +347,7 @@ og_url: https://marbleheaddata.org/explore.html
   <nav class="topic-bar" aria-label="Topics">
     <button class="topic-pill active" data-topic="override">Override</button>
     <button class="topic-pill" data-topic="voteno">Vote no</button>
+    <button class="topic-pill" data-topic="schools">Schools</button>
     <button class="topic-pill" data-topic="library">Library cuts</button>
     <button class="topic-pill" data-topic="trust">Trust</button>
   </nav>
@@ -746,7 +747,212 @@ og_url: https://marbleheaddata.org/explore.html
   </section>
 
   <!-- ═══════════════════════════════════════════════════
-       QUESTION 3: Library cuts (placeholder)
+       QUESTION 3: Are our schools overstaffed?
+       ═══════════════════════════════════════════════════ -->
+  <section class="question-screen" data-topic="schools" style="display:none">
+
+    <div class="question-block">
+      <h1>Are our schools overstaffed?</h1>
+      <p class="question-context">
+        Marblehead employs 430 school staff for 2,389 students, a ratio
+        of 5.6 students per staff member. Enrollment fell 21% since
+        its peak, but staffing did not shrink with it.
+      </p>
+    </div>
+
+    <div class="answers">
+      <div class="answer-card" data-answer="a" data-question="schools">
+        <p class="answer-label">Position A</p>
+        <h2>Yes, staffing should have tracked enrollment down</h2>
+        <p class="answer-summary">
+          Enrollment fell 21% but FTEs grew. The student-to-staff ratio
+          is the lowest among peer towns. That gap is a choice, not a
+          mandate.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="b" data-question="schools">
+        <p class="answer-label">Position B</p>
+        <h2>Most of the growth is legally mandated</h2>
+        <p class="answer-summary">
+          Special education, ELL, and compliance requirements drove
+          60-65% of the staffing increase. You cannot cut an IEP-required
+          aide without violating federal law.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="c" data-question="schools">
+        <p class="answer-label">Position C</p>
+        <h2>The mandates are real, but not every position is mandated</h2>
+        <p class="answer-summary">
+          SPED and ELL growth are required. Instructional coaches,
+          additional administrators, and co-teachers are district
+          choices. Both things are true.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence A: overstaffed -->
+    <div class="evidence" data-evidence="schools-a">
+      <div class="evidence-header">
+        <h3>The case for "staffing should have tracked enrollment"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Enrollment fell 21%, staffing grew</h4>
+        <p>
+          Student enrollment peaked at 3,327 (FY14) and declined to
+          2,617 (FY24). Over the same period, education FTEs rose from
+          roughly 480 to 537. Students per education FTE dropped from
+          6.8 (FY07) to 4.9 (FY24).
+        </p>
+        <a class="evidence-chart-link" href="charts/enrollment_vs_staffing.html">
+          Enrollment vs. staffing chart
+        </a>
+        <p class="evidence-caveat">
+          The FY23 jump from 483 to 537 education FTE is unexplained in
+          public records and may reflect ESSER-funded positions or a
+          reporting change.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Marblehead has the most staff per student among peers</h4>
+        <p>
+          DESE data for SY2025-26 shows Marblehead at 5.6 students per
+          total school FTE. Stoneham is at 5.8, Swampscott at 6.6,
+          Melrose at 7.8. If Marblehead staffed at Melrose's ratio, the
+          district would have roughly 307 FTE instead of 430.
+        </p>
+        <a class="evidence-chart-link" href="inside-school-staffing.html">
+          Inside school staffing
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Total compensation compounds the staffing cost</h4>
+        <p>
+          Marblehead pays 83% of GIC health premiums, the highest employer
+          share among peer towns. Estimated total compensation per teacher
+          is $122,702 (salary + employer health insurance), above Melrose
+          ($116,532) and Stoneham ($112,143). More staff at higher per-person
+          cost compounds the budget impact.
+        </p>
+        <a class="evidence-chart-link" href="charts/peer_compensation.html">
+          Peer compensation chart
+        </a>
+        <p class="evidence-caveat">
+          Salary from DESE 2023-24 reports. Total comp estimate uses GIC
+          Harvard Pilgrim family plan at each town's modal employer share.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence B: mandated -->
+    <div class="evidence" data-evidence="schools-b">
+      <div class="evidence-header">
+        <h3>The case for "most growth is legally mandated"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>60-65% of positions are mandate-driven</h4>
+        <p>
+          Federal IDEA and Massachusetts 603 CMR 28 require the district
+          to staff every service written into an IEP. ELL instruction is
+          mandated under MGL 71A and the LOOK Act. Title IX and Section
+          504 compliance coordinators are federally required. These are
+          not optional.
+        </p>
+        <a class="evidence-chart-link" href="inside-school-staffing.html">
+          Mandated vs. discretionary breakdown
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Special education needs grew while enrollment fell</h4>
+        <p>
+          Marblehead's high-needs student population grew from 27% to 32%
+          of enrollment between FY2015 and FY2024. Students with autism
+          increased 34%, and students with neurological or health
+          disabilities increased 48%. Each IEP specifying a 1:1 aide
+          generates a full FTE that the district must provide.
+        </p>
+        <p class="evidence-caveat">
+          SPED percentages from DESE data cited in a Marblehead Current
+          guest column (Feb 2026). Primary DESE enrollment reports are
+          the authoritative source.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Paras and tutors are the second-largest staff category</h4>
+        <p>
+          Marblehead employs 87.6 FTE in the combined paraprofessional
+          and tutor category, most of whom support special education
+          classrooms. This is 3.67 per 100 students, comparable to
+          Melrose (3.47) and Stoneham (3.08).
+        </p>
+        <a class="evidence-chart-link" href="inside-school-staffing.html">
+          Staffing by role, four towns
+        </a>
+      </div>
+    </div>
+
+    <!-- Evidence C: both true -->
+    <div class="evidence" data-evidence="schools-c">
+      <div class="evidence-header">
+        <h3>The case for "mandates are real, but not everything is mandated"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>The discretionary growth is real but smaller than the headline suggests</h4>
+        <p>
+          Of the roughly 58 non-teaching positions added between FY2015
+          and FY2024, an estimated 7-13 FTE are fully discretionary:
+          technology staff, curriculum and instructional coaches, and
+          additional administrators beyond the legally required minimum.
+          The rest are driven by SPED, ELL, counseling, and compliance
+          mandates.
+        </p>
+        <a class="evidence-chart-link" href="inside-school-staffing.html">
+          Mandate vs. discretionary table
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Mandated does not mean beyond scrutiny</h4>
+        <p>
+          IEPs are developed with district participation. The mandate is
+          to deliver the services in the IEP, but the service delivery
+          model (inclusion vs. substantially separate, in-district vs.
+          out-of-district) is a district decision that affects both
+          staffing levels and cost. Massachusetts is a "maximum feasible
+          benefit" state, so IEPs here tend to require more services than
+          in states following only the federal floor.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Office and admin staffing is where Marblehead diverges most</h4>
+        <p>
+          Marblehead has 1.14 office/clerical FTE per 100 students vs.
+          Melrose's 0.43. Administrators are at 1.09 per 100 students vs.
+          Melrose's 0.67. These categories are the largest gap between
+          Marblehead and its peers and are not mandate-driven.
+        </p>
+        <a class="evidence-chart-link" href="inside-school-staffing.html">
+          Staffing by role comparison
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       QUESTION 4: Library cuts (placeholder)
        ═══════════════════════════════════════════════════ -->
   <section class="question-screen" data-topic="library" style="display:none">
 
