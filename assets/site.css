@@ -366,8 +366,7 @@ nav.site-nav a[aria-current="page"] {
 /* Mobile dropdown panel (appended to body by JS, outside all nav CSS) */
 .nav-mobile-panel {
   display: none;
-  position: fixed;
-  top: 49px;
+  position: absolute;
   left: var(--gutter);
   right: var(--gutter);
   background: var(--surface);
