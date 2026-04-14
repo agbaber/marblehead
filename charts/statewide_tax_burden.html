@@ -1,0 +1,471 @@
+---
+title: "Statewide Tax Burden"
+---
+<style>
+  .scatter-tip {
+    position: absolute; pointer-events: none;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px 12px;
+    font-size: 12px; line-height: 1.5; color: var(--text);
+    box-shadow: var(--shadow-sm); white-space: nowrap;
+    opacity: 0; transition: opacity 0.15s;
+    z-index: 10;
+  }
+  .scatter-tip.visible { opacity: 1; }
+  .scatter-tip strong { font-weight: 700; }
+  .scatter-tip .muted { color: var(--text-muted); font-size: 11px; }
+  svg .cd { fill: var(--text-subtle); opacity: 0.3; cursor: pointer; }
+  svg .cd:hover { opacity: 1; r: 4; }
+</style>
+<h1 class="h-center">Tax Bill as Share of Income: All 351 MA Communities</h1>
+  <p class="subtitle h-center">Average single-family tax bill / <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income. Source: MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> FY2026 / FY2027.</p>
+
+  <ul class="tldr">
+    <li><strong>Only 24 of 351 communities</strong> have a lighter tax-to-income ratio than Marblehead (9.6%)</li>
+    <li><strong>Swampscott is at 15.1%</strong>, nearly 60% higher relative burden</li>
+    <li><strong>The statewide median is 14.1%</strong> (Walpole)</li>
+  </ul>
+
+  <div class="legend">
+    <div class="legend-item s-marblehead"><span class="legend-swatch"></span><span class="legend-text">Marblehead</span></div>
+    <div class="legend-item s-swampscott"><span class="legend-swatch"></span><span class="legend-text">Swampscott</span></div>
+    <div class="legend-item s-melrose"><span class="legend-swatch"></span><span class="legend-text">Melrose</span></div>
+    <div class="legend-item s-stoneham"><span class="legend-swatch"></span><span class="legend-text">Stoneham</span></div>
+  </div>
+
+  <div class="chart-wrapper" id="scatter-wrap">
+    <div class="scatter-tip" id="scatter-tip"></div>
+    <svg class="chart" viewBox="0 0 820 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ranked scatter plot of tax bill as percentage of DOR per-capita income for 351 Massachusetts communities. Marblehead is near the far right at 9.6 percent, rank 327 of 351.">
+      <!-- Grid -->
+      <line class="axis-base" x1="80" y1="310" x2="760" y2="310"/>
+      <line class="grid-minor" x1="80" y1="250" x2="760" y2="250"/>
+      <line class="grid-minor" x1="80" y1="190" x2="760" y2="190"/>
+      <line class="grid-minor" x1="80" y1="130" x2="760" y2="130"/>
+      <line class="grid-minor" x1="80" y1="70" x2="760" y2="70"/>
+      <line class="grid-minor" x1="80" y1="10" x2="760" y2="10"/>
+
+      <!-- Y labels -->
+      <text class="tick-label" x="73" y="313" text-anchor="end">0%</text>
+      <text class="tick-label" x="73" y="253" text-anchor="end">10%</text>
+      <text class="tick-label" x="73" y="193" text-anchor="end">20%</text>
+      <text class="tick-label" x="73" y="133" text-anchor="end">30%</text>
+      <text class="tick-label" x="73" y="73" text-anchor="end">40%</text>
+
+      <!-- X annotation -->
+      <text class="annotation" x="80" y="340" text-anchor="start" fill="var(--text-subtle)" font-size="10">Highest burden</text>
+      <text class="annotation" x="760" y="340" text-anchor="end" fill="var(--text-subtle)" font-size="10">Lowest burden</text>
+      <text class="annotation" x="420" y="355" text-anchor="middle" fill="var(--text-subtle)" font-size="10">351 communities, ranked. Hover for details.</text>
+
+      <!-- Median line -->
+      <line x1="420" y1="310" x2="420" y2="225" stroke="var(--divider)" stroke-width="1" stroke-dasharray="4 2"/>
+      <text class="annotation" x="420" y="222" text-anchor="middle" fill="var(--text-subtle)" font-size="9">median 14.1%</text>
+
+      <!-- All 351 communities -->
+      <circle class="cd" cx="80.0" cy="35.8" r="2.5" data-name="Amherst" data-rank="1" data-pct="45.7" data-bill="$9,957" data-income="$21,800"/>
+      <circle class="cd" cx="81.9" cy="72.4" r="2.5" data-name="Tisbury" data-rank="2" data-pct="39.6" data-bill="$12,513" data-income="$31,588"/>
+      <circle class="cd" cx="83.9" cy="113.2" r="2.5" data-name="Heath" data-rank="3" data-pct="32.8" data-bill="$5,067" data-income="$15,471"/>
+      <circle class="cd" cx="85.8" cy="134.2" r="2.5" data-name="Monroe" data-rank="4" data-pct="29.3" data-bill="$1,859" data-income="$6,348"/>
+      <circle class="cd" cx="87.8" cy="136.6" r="2.5" data-name="Goshen" data-rank="5" data-pct="28.9" data-bill="$5,062" data-income="$17,510"/>
+      <circle class="cd" cx="89.7" cy="152.8" r="2.5" data-name="Brookline" data-rank="6" data-pct="26.2" data-bill="$26,237" data-income="$100,201"/>
+      <circle class="cd" cx="91.7" cy="167.2" r="2.5" data-name="Aquinnah" data-rank="7" data-pct="23.8" data-bill="$12,677" data-income="$53,350"/>
+      <circle class="cd" cx="93.6" cy="173.8" r="2.5" data-name="Wendell" data-rank="8" data-pct="22.7" data-bill="$5,565" data-income="$24,472"/>
+      <circle class="cd" cx="95.5" cy="174.4" r="2.5" data-name="Holyoke" data-rank="9" data-pct="22.6" data-bill="$5,319" data-income="$23,575"/>
+      <circle class="cd" cx="97.5" cy="175.0" r="2.5" data-name="Williamstown" data-rank="10" data-pct="22.5" data-bill="$7,996" data-income="$35,464"/>
+      <circle class="cd" cx="99.4" cy="176.2" r="2.5" data-name="Everett" data-rank="11" data-pct="22.3" data-bill="$5,887" data-income="$26,405"/>
+      <circle class="cd" cx="101.4" cy="178.6" r="2.5" data-name="Greenfield" data-rank="12" data-pct="21.9" data-bill="$6,063" data-income="$27,634"/>
+      <circle class="cd" cx="103.3" cy="178.6" r="2.5" data-name="Lynn" data-rank="13" data-pct="21.9" data-bill="$6,031" data-income="$27,523"/>
+      <circle class="cd" cx="105.3" cy="179.2" r="2.5" data-name="West Tisbury" data-rank="14" data-pct="21.8" data-bill="$8,862" data-income="$40,720"/>
+      <circle class="cd" cx="107.2" cy="182.2" r="2.5" data-name="Lancaster" data-rank="15" data-pct="21.3" data-bill="$9,373" data-income="$44,043"/>
+      <circle class="cd" cx="109.1" cy="182.2" r="2.5" data-name="Lowell" data-rank="16" data-pct="21.3" data-bill="$5,844" data-income="$27,486"/>
+      <circle class="cd" cx="111.1" cy="184.0" r="2.5" data-name="Chesterfield" data-rank="17" data-pct="21.0" data-bill="$5,767" data-income="$27,479"/>
+      <circle class="cd" cx="113.0" cy="185.2" r="2.5" data-name="Springfield" data-rank="18" data-pct="20.8" data-bill="$4,254" data-income="$20,404"/>
+      <circle class="cd" cx="115.0" cy="185.8" r="2.5" data-name="Buckland" data-rank="19" data-pct="20.7" data-bill="$5,804" data-income="$28,077"/>
+      <circle class="cd" cx="116.9" cy="185.8" r="2.5" data-name="Worcester" data-rank="20" data-pct="20.7" data-bill="$5,446" data-income="$26,358"/>
+      <circle class="cd" cx="118.9" cy="186.4" r="2.5" data-name="Brockton" data-rank="21" data-pct="20.6" data-bill="$5,591" data-income="$27,098"/>
+      <circle class="cd" cx="120.8" cy="188.2" r="2.5" data-name="Amesbury" data-rank="22" data-pct="20.3" data-bill="$9,868" data-income="$48,641"/>
+      <circle class="cd" cx="122.7" cy="188.8" r="2.5" data-name="Hawley" data-rank="23" data-pct="20.2" data-bill="$4,648" data-income="$23,000"/>
+      <circle class="cd" cx="124.7" cy="188.8" r="2.5" data-name="Oak Bluffs" data-rank="24" data-pct="20.2" data-bill="$6,996" data-income="$34,583"/>
+      <circle class="cd" cx="126.6" cy="188.8" r="2.5" data-name="Williamsburg" data-rank="25" data-pct="20.2" data-bill="$6,968" data-income="$34,490"/>
+      <circle class="cd" cx="128.6" cy="190.0" r="2.5" data-name="New Bedford" data-rank="26" data-pct="20.0" data-bill="$4,653" data-income="$23,310"/>
+      <circle class="cd" cx="130.5" cy="190.0" r="2.5" data-name="Pelham" data-rank="27" data-pct="20.0" data-bill="$9,213" data-income="$46,113"/>
+      <circle class="cd" cx="132.5" cy="190.6" r="2.5" data-name="Fall River" data-rank="28" data-pct="19.9" data-bill="$4,651" data-income="$23,335"/>
+      <circle class="cd" cx="134.4" cy="192.4" r="2.5" data-name="Southbridge" data-rank="29" data-pct="19.6" data-bill="$5,070" data-income="$25,930"/>
+      <circle class="cd" cx="136.3" cy="194.8" r="2.5" data-name="Westborough" data-rank="30" data-pct="19.2" data-bill="$12,900" data-income="$67,279"/>
+      <circle class="cd" cx="138.3" cy="195.4" r="2.5" data-name="Fitchburg" data-rank="31" data-pct="19.1" data-bill="$5,189" data-income="$27,202"/>
+      <circle class="cd" cx="140.2" cy="195.4" r="2.5" data-name="Rockland" data-rank="32" data-pct="19.1" data-bill="$7,603" data-income="$39,777"/>
+      <circle class="cd" cx="142.2" cy="196.6" r="2.5" data-name="Maynard" data-rank="33" data-pct="18.9" data-bill="$10,081" data-income="$53,406"/>
+      <circle class="cd" cx="144.1" cy="197.2" r="2.5" data-name="Orange" data-rank="34" data-pct="18.8" data-bill="$4,910" data-income="$26,055"/>
+      <circle class="cd" cx="146.1" cy="197.8" r="2.5" data-name="Shutesbury" data-rank="35" data-pct="18.7" data-bill="$6,763" data-income="$36,218"/>
+      <circle class="cd" cx="148.0" cy="197.8" r="2.5" data-name="Warren" data-rank="36" data-pct="18.7" data-bill="$4,580" data-income="$24,434"/>
+      <circle class="cd" cx="149.9" cy="198.4" r="2.5" data-name="Gardner" data-rank="37" data-pct="18.6" data-bill="$5,052" data-income="$27,230"/>
+      <circle class="cd" cx="151.9" cy="199.0" r="2.5" data-name="Gloucester" data-rank="38" data-pct="18.5" data-bill="$9,502" data-income="$51,424"/>
+      <circle class="cd" cx="153.8" cy="199.0" r="2.5" data-name="Whately" data-rank="39" data-pct="18.5" data-bill="$5,850" data-income="$31,550"/>
+      <circle class="cd" cx="155.8" cy="199.6" r="2.5" data-name="Carver" data-rank="40" data-pct="18.4" data-bill="$7,448" data-income="$40,588"/>
+      <circle class="cd" cx="157.7" cy="199.6" r="2.5" data-name="Harvard" data-rank="41" data-pct="18.4" data-bill="$14,562" data-income="$79,350"/>
+      <circle class="cd" cx="159.7" cy="199.6" r="2.5" data-name="Lawrence" data-rank="42" data-pct="18.4" data-bill="$4,140" data-income="$22,481"/>
+      <circle class="cd" cx="161.6" cy="200.8" r="2.5" data-name="Shelburne" data-rank="43" data-pct="18.2" data-bill="$5,146" data-income="$28,277"/>
+      <circle class="cd" cx="163.5" cy="201.4" r="2.5" data-name="Boxborough" data-rank="44" data-pct="18.1" data-bill="$14,372" data-income="$79,592"/>
+      <circle class="cd" cx="165.5" cy="201.4" r="2.5" data-name="Randolph" data-rank="45" data-pct="18.1" data-bill="$6,328" data-income="$34,979"/>
+      <circle class="cd" cx="167.4" cy="201.4" r="2.5" data-name="Ware" data-rank="46" data-pct="18.1" data-bill="$5,231" data-income="$28,885"/>
+      <circle class="cd" cx="169.4" cy="201.4" r="2.5" data-name="Warwick" data-rank="47" data-pct="18.1" data-bill="$4,795" data-income="$26,530"/>
+      <circle class="cd" cx="171.3" cy="203.2" r="2.5" data-name="Leominster" data-rank="48" data-pct="17.8" data-bill="$6,489" data-income="$36,535"/>
+      <circle class="cd" cx="173.3" cy="204.4" r="2.5" data-name="Acton" data-rank="49" data-pct="17.6" data-bill="$15,220" data-income="$86,470"/>
+      <circle class="cd" cx="175.2" cy="204.4" r="2.5" data-name="Bridgewater" data-rank="50" data-pct="17.6" data-bill="$7,420" data-income="$42,207"/>
+      <circle class="cd" cx="177.1" cy="204.4" r="2.5" data-name="Chicopee" data-rank="51" data-pct="17.6" data-bill="$4,580" data-income="$26,096"/>
+      <circle class="cd" cx="179.1" cy="204.4" r="2.5" data-name="Middlefield" data-rank="52" data-pct="17.6" data-bill="$4,392" data-income="$24,970"/>
+      <circle class="cd" cx="181.0" cy="204.4" r="2.5" data-name="North Adams" data-rank="53" data-pct="17.6" data-bill="$3,894" data-income="$22,124"/>
+      <circle class="cd" cx="183.0" cy="205.0" r="2.5" data-name="Cambridge" data-rank="54" data-pct="17.5" data-bill="$13,680" data-income="$78,192"/>
+      <circle class="cd" cx="184.9" cy="205.0" r="2.5" data-name="Northampton" data-rank="55" data-pct="17.5" data-bill="$7,801" data-income="$44,647"/>
+      <circle class="cd" cx="186.9" cy="205.0" r="2.5" data-name="Winthrop" data-rank="56" data-pct="17.5" data-bill="$8,293" data-income="$47,434"/>
+      <circle class="cd" cx="188.8" cy="205.6" r="2.5" data-name="Belmont" data-rank="57" data-pct="17.4" data-bill="$19,579" data-income="$112,427"/>
+      <circle class="cd" cx="190.7" cy="205.6" r="2.5" data-name="Hudson" data-rank="58" data-pct="17.4" data-bill="$8,624" data-income="$49,620"/>
+      <circle class="cd" cx="192.7" cy="205.6" r="2.5" data-name="Peru" data-rank="59" data-pct="17.4" data-bill="$4,689" data-income="$26,960"/>
+      <circle class="cd" cx="194.6" cy="205.6" r="2.5" data-name="Salem" data-rank="60" data-pct="17.4" data-bill="$7,285" data-income="$41,885"/>
+      <circle class="cd" cx="196.6" cy="206.2" r="2.5" data-name="Framingham" data-rank="61" data-pct="17.3" data-bill="$8,061" data-income="$46,614"/>
+      <circle class="cd" cx="198.5" cy="206.8" r="2.5" data-name="Gill" data-rank="62" data-pct="17.2" data-bill="$5,029" data-income="$29,193"/>
+      <circle class="cd" cx="200.5" cy="206.8" r="2.5" data-name="Middleborough" data-rank="63" data-pct="17.2" data-bill="$6,994" data-income="$40,662"/>
+      <circle class="cd" cx="202.4" cy="207.4" r="2.5" data-name="Avon" data-rank="64" data-pct="17.1" data-bill="$7,643" data-income="$44,742"/>
+      <circle class="cd" cx="204.3" cy="208.0" r="2.5" data-name="Bolton" data-rank="65" data-pct="17.0" data-bill="$15,643" data-income="$91,886"/>
+      <circle class="cd" cx="206.3" cy="208.0" r="2.5" data-name="Quincy" data-rank="66" data-pct="17.0" data-bill="$8,250" data-income="$48,421"/>
+      <circle class="cd" cx="208.2" cy="208.0" r="2.5" data-name="Taunton" data-rank="67" data-pct="17.0" data-bill="$5,540" data-income="$32,523"/>
+      <circle class="cd" cx="210.2" cy="209.2" r="2.5" data-name="Montague" data-rank="68" data-pct="16.8" data-bill="$4,928" data-income="$29,366"/>
+      <circle class="cd" cx="212.1" cy="209.2" r="2.5" data-name="Plympton" data-rank="69" data-pct="16.8" data-bill="$9,007" data-income="$53,567"/>
+      <circle class="cd" cx="214.1" cy="209.2" r="2.5" data-name="Revere" data-rank="70" data-pct="16.8" data-bill="$5,574" data-income="$33,133"/>
+      <circle class="cd" cx="216.0" cy="209.8" r="2.5" data-name="Blackstone" data-rank="71" data-pct="16.7" data-bill="$6,843" data-income="$40,976"/>
+      <circle class="cd" cx="217.9" cy="209.8" r="2.5" data-name="Sharon" data-rank="72" data-pct="16.7" data-bill="$14,353" data-income="$85,745"/>
+      <circle class="cd" cx="219.9" cy="209.8" r="2.5" data-name="Stoughton" data-rank="73" data-pct="16.7" data-bill="$7,157" data-income="$42,818"/>
+      <circle class="cd" cx="221.8" cy="210.4" r="2.5" data-name="Hopedale" data-rank="74" data-pct="16.6" data-bill="$8,808" data-income="$53,217"/>
+      <circle class="cd" cx="223.8" cy="210.4" r="2.5" data-name="Leverett" data-rank="75" data-pct="16.6" data-bill="$7,852" data-income="$47,345"/>
+      <circle class="cd" cx="225.7" cy="210.4" r="2.5" data-name="Merrimac" data-rank="76" data-pct="16.6" data-bill="$8,778" data-income="$52,905"/>
+      <circle class="cd" cx="227.7" cy="210.4" r="2.5" data-name="West Boylston" data-rank="77" data-pct="16.6" data-bill="$7,621" data-income="$46,024"/>
+      <circle class="cd" cx="229.6" cy="210.4" r="2.5" data-name="Westfield" data-rank="78" data-pct="16.6" data-bill="$5,787" data-income="$34,787"/>
+      <circle class="cd" cx="231.5" cy="211.0" r="2.5" data-name="Millis" data-rank="79" data-pct="16.5" data-bill="$10,230" data-income="$61,956"/>
+      <circle class="cd" cx="233.5" cy="211.0" r="2.5" data-name="Sunderland" data-rank="80" data-pct="16.5" data-bill="$5,947" data-income="$36,047"/>
+      <circle class="cd" cx="235.4" cy="211.0" r="2.5" data-name="Tewksbury" data-rank="81" data-pct="16.5" data-bill="$8,608" data-income="$52,132"/>
+      <circle class="cd" cx="237.4" cy="211.0" r="2.5" data-name="Wenham" data-rank="82" data-pct="16.5" data-bill="$16,164" data-income="$97,669"/>
+      <circle class="cd" cx="239.3" cy="211.6" r="2.5" data-name="East Bridgewater" data-rank="83" data-pct="16.4" data-bill="$7,410" data-income="$45,166"/>
+      <circle class="cd" cx="241.3" cy="211.6" r="2.5" data-name="Groveland" data-rank="84" data-pct="16.4" data-bill="$8,799" data-income="$53,587"/>
+      <circle class="cd" cx="243.2" cy="211.6" r="2.5" data-name="Milford" data-rank="85" data-pct="16.4" data-bill="$6,735" data-income="$40,990"/>
+      <circle class="cd" cx="245.1" cy="211.6" r="2.5" data-name="Pittsfield" data-rank="86" data-pct="16.4" data-bill="$5,518" data-income="$33,558"/>
+      <circle class="cd" cx="247.1" cy="211.6" r="2.5" data-name="Winchendon" data-rank="87" data-pct="16.4" data-bill="$4,720" data-income="$28,782"/>
+      <circle class="cd" cx="249.0" cy="212.2" r="2.5" data-name="Abington" data-rank="88" data-pct="16.3" data-bill="$7,536" data-income="$46,123"/>
+      <circle class="cd" cx="251.0" cy="212.2" r="2.5" data-name="Stow" data-rank="89" data-pct="16.3" data-bill="$14,113" data-income="$86,756"/>
+      <circle class="cd" cx="252.9" cy="212.2" r="2.5" data-name="Tyringham" data-rank="90" data-pct="16.3" data-bill="$4,547" data-income="$27,933"/>
+      <circle class="cd" cx="254.9" cy="212.8" r="2.5" data-name="Georgetown" data-rank="91" data-pct="16.2" data-bill="$10,314" data-income="$63,856"/>
+      <circle class="cd" cx="256.8" cy="212.8" r="2.5" data-name="Paxton" data-rank="92" data-pct="16.2" data-bill="$7,989" data-income="$49,307"/>
+      <circle class="cd" cx="258.7" cy="212.8" r="2.5" data-name="Shirley" data-rank="93" data-pct="16.2" data-bill="$6,490" data-income="$40,056"/>
+      <circle class="cd" cx="260.7" cy="213.4" r="2.5" data-name="Clinton" data-rank="94" data-pct="16.1" data-bill="$6,038" data-income="$37,609"/>
+      <circle class="cd" cx="262.6" cy="213.4" r="2.5" data-name="Halifax" data-rank="95" data-pct="16.1" data-bill="$7,493" data-income="$46,544"/>
+      <circle class="cd" cx="264.6" cy="213.4" r="2.5" data-name="Kingston" data-rank="96" data-pct="16.1" data-bill="$8,714" data-income="$54,094"/>
+      <circle class="cd" cx="266.5" cy="213.4" r="2.5" data-name="Whitman" data-rank="97" data-pct="16.1" data-bill="$6,861" data-income="$42,535"/>
+      <circle class="cd" cx="268.5" cy="214.0" r="2.5" data-name="Haverhill" data-rank="98" data-pct="16.0" data-bill="$5,962" data-income="$37,314"/>
+      <circle class="cd" cx="270.4" cy="214.0" r="2.5" data-name="Ludlow" data-rank="99" data-pct="16.0" data-bill="$5,923" data-income="$37,001"/>
+      <circle class="cd" cx="272.3" cy="214.0" r="2.5" data-name="Wakefield" data-rank="100" data-pct="16.0" data-bill="$9,628" data-income="$60,266"/>
+      <circle class="cd" cx="274.3" cy="214.6" r="2.5" data-name="Hardwick" data-rank="101" data-pct="15.9" data-bill="$4,852" data-income="$30,462"/>
+      <circle class="cd" cx="276.2" cy="214.6" r="2.5" data-name="Norfolk" data-rank="102" data-pct="15.9" data-bill="$11,718" data-income="$73,622"/>
+      <circle class="cd" cx="278.2" cy="214.6" r="2.5" data-name="Palmer" data-rank="103" data-pct="15.9" data-bill="$5,014" data-income="$31,465"/>
+      <circle class="cd" cx="280.1" cy="214.6" r="2.5" data-name="Tyngsborough" data-rank="104" data-pct="15.9" data-bill="$8,340" data-income="$52,345"/>
+      <circle class="cd" cx="282.1" cy="215.2" r="2.5" data-name="Holbrook" data-rank="105" data-pct="15.8" data-bill="$6,468" data-income="$40,811"/>
+      <circle class="cd" cx="284.0" cy="215.2" r="2.5" data-name="Plainfield" data-rank="106" data-pct="15.8" data-bill="$4,801" data-income="$30,320"/>
+      <circle class="cd" cx="285.9" cy="215.8" r="2.5" data-name="New Salem" data-rank="107" data-pct="15.7" data-bill="$4,951" data-income="$31,610"/>
+      <circle class="cd" cx="287.9" cy="215.8" r="2.5" data-name="Plymouth" data-rank="108" data-pct="15.7" data-bill="$7,731" data-income="$49,272"/>
+      <circle class="cd" cx="289.8" cy="215.8" r="2.5" data-name="Webster" data-rank="109" data-pct="15.7" data-bill="$5,474" data-income="$34,788"/>
+      <circle class="cd" cx="291.8" cy="216.4" r="2.5" data-name="Ashby" data-rank="110" data-pct="15.6" data-bill="$6,225" data-income="$39,913"/>
+      <circle class="cd" cx="293.7" cy="216.4" r="2.5" data-name="Gosnold" data-rank="111" data-pct="15.6" data-bill="$3,415" data-income="$21,887"/>
+      <circle class="cd" cx="295.7" cy="216.4" r="2.5" data-name="Methuen" data-rank="112" data-pct="15.6" data-bill="$6,037" data-income="$38,729"/>
+      <circle class="cd" cx="297.6" cy="216.4" r="2.5" data-name="Middleton" data-rank="113" data-pct="15.6" data-bill="$12,219" data-income="$78,211"/>
+      <circle class="cd" cx="299.5" cy="216.4" r="2.5" data-name="Peabody" data-rank="114" data-pct="15.6" data-bill="$6,411" data-income="$41,212"/>
+      <circle class="cd" cx="301.5" cy="217.0" r="2.5" data-name="Beverly" data-rank="115" data-pct="15.5" data-bill="$8,834" data-income="$56,939"/>
+      <circle class="cd" cx="303.4" cy="217.0" r="2.5" data-name="Somerset" data-rank="116" data-pct="15.5" data-bill="$6,278" data-income="$40,386"/>
+      <circle class="cd" cx="305.4" cy="217.6" r="2.5" data-name="Norton" data-rank="117" data-pct="15.4" data-bill="$7,367" data-income="$47,933"/>
+      <circle class="cd" cx="307.3" cy="217.6" r="2.5" data-name="Saugus" data-rank="118" data-pct="15.4" data-bill="$7,126" data-income="$46,142"/>
+      <circle class="cd" cx="309.3" cy="218.8" r="2.5" data-name="Ashfield" data-rank="119" data-pct="15.2" data-bill="$5,518" data-income="$36,404"/>
+      <circle class="cd" cx="311.2" cy="218.8" r="2.5" data-name="Brookfield" data-rank="120" data-pct="15.2" data-bill="$5,409" data-income="$35,587"/>
+      <circle class="cd" cx="313.1" cy="218.8" r="2.5" data-name="Chelsea" data-rank="121" data-pct="15.2" data-bill="$4,214" data-income="$27,806"/>
+      <circle class="cd" cx="315.1" cy="218.8" r="2.5" data-name="East Longmeadow" data-rank="122" data-pct="15.2" data-bill="$8,126" data-income="$53,447"/>
+      <circle class="cd" cx="317.0" cy="218.8" r="2.5" data-name="Essex" data-rank="123" data-pct="15.2" data-bill="$11,957" data-income="$78,483"/>
+      <circle class="cd" cx="319.0" cy="218.8" r="2.5" data-name="Somerville" data-rank="124" data-pct="15.2" data-bill="$9,376" data-income="$61,870"/>
+      <circle class="cd" cx="320.9" cy="219.4" r="2.5" data-name="Great Barrington" data-rank="125" data-pct="15.1" data-bill="$8,444" data-income="$55,904"/>
+      <circle class="cd" cx="324.8" cy="219.4" r="2.5" data-name="Topsfield" data-rank="127" data-pct="15.1" data-bill="$14,483" data-income="$95,770"/>
+      <circle class="cd" cx="326.7" cy="220.0" r="2.5" data-name="Ashburnham" data-rank="128" data-pct="15.0" data-bill="$6,246" data-income="$41,761"/>
+      <circle class="cd" cx="328.7" cy="220.0" r="2.5" data-name="Attleboro" data-rank="129" data-pct="15.0" data-bill="$6,304" data-income="$41,996"/>
+      <circle class="cd" cx="330.6" cy="220.0" r="2.5" data-name="Townsend" data-rank="130" data-pct="15.0" data-bill="$6,459" data-income="$42,958"/>
+      <circle class="cd" cx="332.6" cy="220.6" r="2.5" data-name="Barre" data-rank="131" data-pct="14.9" data-bill="$5,053" data-income="$33,914"/>
+      <circle class="cd" cx="334.5" cy="220.6" r="2.5" data-name="Littleton" data-rank="132" data-pct="14.9" data-bill="$10,800" data-income="$72,357"/>
+      <circle class="cd" cx="336.5" cy="220.6" r="2.5" data-name="Marlborough" data-rank="133" data-pct="14.9" data-bill="$6,441" data-income="$43,158"/>
+      <circle class="cd" cx="338.4" cy="220.6" r="2.5" data-name="Pepperell" data-rank="134" data-pct="14.9" data-bill="$7,578" data-income="$51,009"/>
+      <circle class="cd" cx="340.3" cy="220.6" r="2.5" data-name="Wales" data-rank="135" data-pct="14.9" data-bill="$4,588" data-income="$30,802"/>
+      <circle class="cd" cx="342.3" cy="220.6" r="2.5" data-name="Wilbraham" data-rank="136" data-pct="14.9" data-bill="$8,186" data-income="$54,903"/>
+      <circle class="cd" cx="344.2" cy="221.2" r="2.5" data-name="Bedford" data-rank="137" data-pct="14.8" data-bill="$12,985" data-income="$87,571"/>
+      <circle class="cd" cx="346.2" cy="221.2" r="2.5" data-name="Dalton" data-rank="138" data-pct="14.8" data-bill="$6,011" data-income="$40,563"/>
+      <circle class="cd" cx="348.1" cy="221.2" r="2.5" data-name="Hatfield" data-rank="139" data-pct="14.8" data-bill="$6,735" data-income="$45,539"/>
+      <circle class="cd" cx="350.1" cy="221.2" r="2.5" data-name="Lunenburg" data-rank="140" data-pct="14.8" data-bill="$7,444" data-income="$50,263"/>
+      <circle class="cd" cx="352.0" cy="221.2" r="2.5" data-name="Rowley" data-rank="141" data-pct="14.8" data-bill="$9,235" data-income="$62,574"/>
+      <circle class="cd" cx="353.9" cy="221.2" r="2.5" data-name="South Hadley" data-rank="142" data-pct="14.8" data-bill="$5,639" data-income="$38,042"/>
+      <circle class="cd" cx="355.9" cy="221.8" r="2.5" data-name="Dighton" data-rank="143" data-pct="14.7" data-bill="$6,689" data-income="$45,606"/>
+      <circle class="cd" cx="357.8" cy="221.8" r="2.5" data-name="Lanesborough" data-rank="144" data-pct="14.7" data-bill="$6,135" data-income="$41,749"/>
+      <circle class="cd" cx="359.8" cy="221.8" r="2.5" data-name="Natick" data-rank="145" data-pct="14.7" data-bill="$11,413" data-income="$77,821"/>
+      <circle class="cd" cx="361.7" cy="221.8" r="2.5" data-name="Raynham" data-rank="146" data-pct="14.7" data-bill="$7,283" data-income="$49,678"/>
+      <circle class="cd" cx="363.7" cy="222.4" r="2.5" data-name="Easton" data-rank="147" data-pct="14.6" data-bill="$9,441" data-income="$64,748"/>
+      <circle class="cd" cx="365.6" cy="222.4" r="2.5" data-name="Holliston" data-rank="148" data-pct="14.6" data-bill="$10,566" data-income="$72,144"/>
+      <circle class="cd" cx="367.5" cy="223.0" r="2.5" data-name="Ashland" data-rank="149" data-pct="14.5" data-bill="$9,372" data-income="$64,835"/>
+      <circle class="cd" cx="369.5" cy="223.0" r="2.5" data-name="Billerica" data-rank="150" data-pct="14.5" data-bill="$7,484" data-income="$51,629"/>
+      <circle class="cd" cx="371.4" cy="223.0" r="2.5" data-name="Millbury" data-rank="151" data-pct="14.5" data-bill="$6,540" data-income="$45,239"/>
+      <circle class="cd" cx="373.4" cy="223.0" r="2.5" data-name="Russell" data-rank="152" data-pct="14.5" data-bill="$5,854" data-income="$40,382"/>
+      <circle class="cd" cx="375.3" cy="223.6" r="2.5" data-name="Hampden" data-rank="153" data-pct="14.4" data-bill="$6,963" data-income="$48,405"/>
+      <circle class="cd" cx="377.3" cy="223.6" r="2.5" data-name="Mansfield" data-rank="154" data-pct="14.4" data-bill="$8,968" data-income="$62,350"/>
+      <circle class="cd" cx="379.2" cy="223.6" r="2.5" data-name="Wilmington" data-rank="155" data-pct="14.4" data-bill="$8,661" data-income="$60,329"/>
+      <circle class="cd" cx="381.1" cy="224.2" r="2.5" data-name="Agawam" data-rank="156" data-pct="14.3" data-bill="$5,190" data-income="$36,291"/>
+      <circle class="cd" cx="383.1" cy="224.2" r="2.5" data-name="Arlington" data-rank="157" data-pct="14.3" data-bill="$11,947" data-income="$83,690"/>
+      <circle class="cd" cx="385.0" cy="224.2" r="2.5" data-name="Auburn" data-rank="158" data-pct="14.3" data-bill="$6,307" data-income="$43,964"/>
+      <circle class="cd" cx="387.0" cy="224.2" r="2.5" data-name="Belchertown" data-rank="159" data-pct="14.3" data-bill="$6,622" data-income="$46,265"/>
+      <circle class="cd" cx="388.9" cy="224.2" r="2.5" data-name="Chester" data-rank="160" data-pct="14.3" data-bill="$4,458" data-income="$31,276"/>
+      <circle class="cd" cx="390.9" cy="224.2" r="2.5" data-name="Granby" data-rank="161" data-pct="14.3" data-bill="$6,381" data-income="$44,484"/>
+      <circle class="cd" cx="392.8" cy="224.2" r="2.5" data-name="Hanson" data-rank="162" data-pct="14.3" data-bill="$7,111" data-income="$49,839"/>
+      <circle class="cd" cx="394.7" cy="224.2" r="2.5" data-name="Hopkinton" data-rank="163" data-pct="14.3" data-bill="$14,021" data-income="$98,303"/>
+      <circle class="cd" cx="396.7" cy="224.2" r="2.5" data-name="Salisbury" data-rank="164" data-pct="14.3" data-bill="$6,126" data-income="$42,733"/>
+      <circle class="cd" cx="398.6" cy="224.8" r="2.5" data-name="Adams" data-rank="165" data-pct="14.2" data-bill="$4,138" data-income="$29,153"/>
+      <circle class="cd" cx="400.6" cy="224.8" r="2.5" data-name="Athol" data-rank="166" data-pct="14.2" data-bill="$3,924" data-income="$27,709"/>
+      <circle class="cd" cx="402.5" cy="224.8" r="2.5" data-name="Sturbridge" data-rank="167" data-pct="14.2" data-bill="$7,870" data-income="$55,434"/>
+      <circle class="cd" cx="404.5" cy="224.8" r="2.5" data-name="Uxbridge" data-rank="168" data-pct="14.2" data-bill="$6,814" data-income="$47,913"/>
+      <circle class="cd" cx="406.4" cy="225.4" r="2.5" data-name="Ayer" data-rank="169" data-pct="14.1" data-bill="$6,625" data-income="$46,946"/>
+      <circle class="cd" cx="408.3" cy="225.4" r="2.5" data-name="Eastham" data-rank="170" data-pct="14.1" data-bill="$6,664" data-income="$47,154"/>
+      <circle class="cd" cx="410.3" cy="225.4" r="2.5" data-name="Easthampton" data-rank="171" data-pct="14.1" data-bill="$5,562" data-income="$39,372"/>
+      <circle class="cd" cx="412.2" cy="225.4" r="2.5" data-name="Lexington" data-rank="172" data-pct="14.1" data-bill="$20,394" data-income="$144,186"/>
+      <circle class="cd" cx="416.1" cy="225.4" r="2.5" data-name="Rutland" data-rank="174" data-pct="14.1" data-bill="$6,630" data-income="$46,916"/>
+      <circle class="cd" cx="418.1" cy="225.4" r="2.5" data-name="Seekonk" data-rank="175" data-pct="14.1" data-bill="$6,852" data-income="$48,467"/>
+      <circle class="cd" cx="420.0" cy="225.4" r="2.5" data-name="Walpole" data-rank="176" data-pct="14.1" data-bill="$10,346" data-income="$73,347"/>
+      <circle class="cd" cx="421.9" cy="226.0" r="2.5" data-name="Dunstable" data-rank="177" data-pct="14.0" data-bill="$9,982" data-income="$71,129"/>
+      <circle class="cd" cx="423.9" cy="226.0" r="2.5" data-name="Grafton" data-rank="178" data-pct="14.0" data-bill="$9,086" data-income="$64,906"/>
+      <circle class="cd" cx="425.8" cy="226.0" r="2.5" data-name="Medway" data-rank="179" data-pct="14.0" data-bill="$9,786" data-income="$69,807"/>
+      <circle class="cd" cx="427.8" cy="226.0" r="2.5" data-name="North Reading" data-rank="180" data-pct="14.0" data-bill="$11,495" data-income="$82,388"/>
+      <circle class="cd" cx="429.7" cy="226.0" r="2.5" data-name="Sandwich" data-rank="181" data-pct="14.0" data-bill="$7,818" data-income="$56,002"/>
+      <circle class="cd" cx="431.7" cy="226.6" r="2.5" data-name="Danvers" data-rank="182" data-pct="13.9" data-bill="$7,780" data-income="$55,853"/>
+      <circle class="cd" cx="433.6" cy="226.6" r="2.5" data-name="Foxborough" data-rank="183" data-pct="13.9" data-bill="$9,016" data-income="$64,808"/>
+      <circle class="cd" cx="435.5" cy="226.6" r="2.5" data-name="Millville" data-rank="184" data-pct="13.9" data-bill="$5,762" data-income="$41,356"/>
+      <circle class="cd" cx="437.5" cy="226.6" r="2.5" data-name="Northborough" data-rank="185" data-pct="13.9" data-bill="$10,461" data-income="$75,270"/>
+      <circle class="cd" cx="441.4" cy="227.2" r="2.5" data-name="Braintree" data-rank="187" data-pct="13.8" data-bill="$7,306" data-income="$52,904"/>
+      <circle class="cd" cx="443.3" cy="227.8" r="2.5" data-name="Dedham" data-rank="188" data-pct="13.7" data-bill="$9,974" data-income="$72,590"/>
+      <circle class="cd" cx="445.3" cy="227.8" r="2.5" data-name="Hull" data-rank="189" data-pct="13.7" data-bill="$7,795" data-income="$56,885"/>
+      <circle class="cd" cx="447.2" cy="227.8" r="2.5" data-name="North Andover" data-rank="190" data-pct="13.7" data-bill="$9,531" data-income="$69,633"/>
+      <circle class="cd" cx="449.1" cy="227.8" r="2.5" data-name="West Bridgewater" data-rank="191" data-pct="13.7" data-bill="$7,433" data-income="$54,184"/>
+      <circle class="cd" cx="451.1" cy="227.8" r="2.5" data-name="Weymouth" data-rank="192" data-pct="13.7" data-bill="$6,208" data-income="$45,212"/>
+      <circle class="cd" cx="453.0" cy="228.4" r="2.5" data-name="Berkley" data-rank="193" data-pct="13.6" data-bill="$6,985" data-income="$51,468"/>
+      <circle class="cd" cx="455.0" cy="228.4" r="2.5" data-name="Malden" data-rank="194" data-pct="13.6" data-bill="$4,952" data-income="$36,430"/>
+      <circle class="cd" cx="456.9" cy="228.4" r="2.5" data-name="Monson" data-rank="195" data-pct="13.6" data-bill="$5,265" data-income="$38,786"/>
+      <circle class="cd" cx="458.9" cy="228.4" r="2.5" data-name="North Attleborough" data-rank="196" data-pct="13.6" data-bill="$6,931" data-income="$50,966"/>
+      <circle class="cd" cx="460.8" cy="228.4" r="2.5" data-name="Rockport" data-rank="197" data-pct="13.6" data-bill="$8,548" data-income="$62,753"/>
+      <circle class="cd" cx="462.7" cy="229.0" r="2.5" data-name="Colrain" data-rank="198" data-pct="13.5" data-bill="$4,791" data-income="$35,363"/>
+      <circle class="cd" cx="464.7" cy="229.0" r="2.5" data-name="Sandisfield" data-rank="199" data-pct="13.5" data-bill="$3,489" data-income="$25,908"/>
+      <circle class="cd" cx="466.6" cy="229.0" r="2.5" data-name="Sheffield" data-rank="200" data-pct="13.5" data-bill="$5,809" data-income="$43,068"/>
+      <circle class="cd" cx="468.6" cy="229.0" r="2.5" data-name="West Springfield" data-rank="201" data-pct="13.5" data-bill="$5,041" data-income="$37,351"/>
+      <circle class="cd" cx="470.5" cy="229.0" r="2.5" data-name="Westford" data-rank="202" data-pct="13.5" data-bill="$11,171" data-income="$82,930"/>
+      <circle class="cd" cx="472.5" cy="229.6" r="2.5" data-name="Hanover" data-rank="203" data-pct="13.4" data-bill="$10,149" data-income="$75,870"/>
+      <circle class="cd" cx="474.4" cy="229.6" r="2.5" data-name="Holden" data-rank="204" data-pct="13.4" data-bill="$7,469" data-income="$55,612"/>
+      <circle class="cd" cx="476.3" cy="229.6" r="2.5" data-name="Plainville" data-rank="205" data-pct="13.4" data-bill="$6,958" data-income="$51,750"/>
+      <circle class="cd" cx="478.3" cy="230.2" r="2.5" data-name="Bellingham" data-rank="206" data-pct="13.3" data-bill="$6,073" data-income="$45,801"/>
+      <circle class="cd" cx="480.2" cy="230.2" r="2.5" data-name="Conway" data-rank="207" data-pct="13.3" data-bill="$6,335" data-income="$47,575"/>
+      <circle class="cd" cx="482.2" cy="230.2" r="2.5" data-name="Medford" data-rank="208" data-pct="13.3" data-bill="$7,427" data-income="$55,839"/>
+      <circle class="cd" cx="484.1" cy="230.2" r="2.5" data-name="Mendon" data-rank="209" data-pct="13.3" data-bill="$8,781" data-income="$66,023"/>
+      <circle class="cd" cx="486.1" cy="230.2" r="2.5" data-name="Pembroke" data-rank="210" data-pct="13.3" data-bill="$7,521" data-income="$56,690"/>
+      <circle class="cd" cx="488.0" cy="230.2" r="2.5" data-name="Sudbury" data-rank="211" data-pct="13.3" data-bill="$16,625" data-income="$125,429"/>
+      <circle class="cd" cx="489.9" cy="230.2" r="2.5" data-name="Swansea" data-rank="212" data-pct="13.3" data-bill="$5,623" data-income="$42,390"/>
+      <circle class="cd" cx="491.9" cy="230.2" r="2.5" data-name="Truro" data-rank="213" data-pct="13.3" data-bill="$8,064" data-income="$60,587"/>
+      <circle class="cd" cx="493.8" cy="231.4" r="2.5" data-name="Ipswich" data-rank="214" data-pct="13.1" data-bill="$9,733" data-income="$74,292"/>
+      <circle class="cd" cx="495.8" cy="231.4" r="2.5" data-name="North Brookfield" data-rank="215" data-pct="13.1" data-bill="$4,767" data-income="$36,364"/>
+      <circle class="cd" cx="497.7" cy="231.4" r="2.5" data-name="Oxford" data-rank="216" data-pct="13.1" data-bill="$5,192" data-income="$39,486"/>
+      <circle class="cd" cx="499.7" cy="232.0" r="2.5" data-name="Boylston" data-rank="217" data-pct="13.0" data-bill="$9,379" data-income="$72,411"/>
+      <circle class="cd" cx="501.6" cy="232.0" r="2.5" data-name="Chelmsford" data-rank="218" data-pct="13.0" data-bill="$9,219" data-income="$70,664"/>
+      <circle class="cd" cx="503.5" cy="232.0" r="2.5" data-name="Lincoln" data-rank="219" data-pct="13.0" data-bill="$20,738" data-income="$159,009"/>
+      <circle class="cd" cx="505.5" cy="232.0" r="2.5" data-name="Upton" data-rank="220" data-pct="13.0" data-bill="$8,759" data-income="$67,417"/>
+      <circle class="cd" cx="507.4" cy="232.0" r="2.5" data-name="Westhampton" data-rank="221" data-pct="13.0" data-bill="$7,149" data-income="$55,175"/>
+      <circle class="cd" cx="509.4" cy="232.6" r="2.5" data-name="Andover" data-rank="222" data-pct="12.9" data-bill="$13,176" data-income="$102,125"/>
+      <circle class="cd" cx="511.3" cy="232.6" r="2.5" data-name="Egremont" data-rank="223" data-pct="12.9" data-bill="$5,573" data-income="$43,313"/>
+      <circle class="cd" cx="513.3" cy="232.6" r="2.5" data-name="Franklin" data-rank="224" data-pct="12.9" data-bill="$8,353" data-income="$64,589"/>
+      <circle class="cd" cx="515.2" cy="232.6" r="2.5" data-name="Nahant" data-rank="225" data-pct="12.9" data-bill="$9,654" data-income="$74,827"/>
+      <circle class="cd" cx="517.1" cy="232.6" r="2.5" data-name="Newburyport" data-rank="226" data-pct="12.9" data-bill="$10,249" data-income="$79,681"/>
+      <circle class="cd" cx="519.1" cy="232.6" r="2.5" data-name="Orleans" data-rank="227" data-pct="12.9" data-bill="$8,969" data-income="$69,762"/>
+      <circle class="cd" cx="521.0" cy="232.6" r="2.5" data-name="Southwick" data-rank="228" data-pct="12.9" data-bill="$6,187" data-income="$47,950"/>
+      <circle class="cd" cx="523.0" cy="232.6" r="2.5" data-name="Spencer" data-rank="229" data-pct="12.9" data-bill="$4,671" data-income="$36,226"/>
+      <circle class="cd" cx="524.9" cy="232.6" r="2.5" data-name="Sterling" data-rank="230" data-pct="12.9" data-bill="$7,535" data-income="$58,549"/>
+      <circle class="cd" cx="526.9" cy="232.6" r="2.5" data-name="Washington" data-rank="231" data-pct="12.9" data-bill="$5,204" data-income="$40,278"/>
+      <circle class="cd" cx="528.8" cy="232.6" r="2.5" data-name="Woburn" data-rank="232" data-pct="12.9" data-bill="$6,755" data-income="$52,300"/>
+      <circle class="cd" cx="530.7" cy="233.2" r="2.5" data-name="Berlin" data-rank="233" data-pct="12.8" data-bill="$9,951" data-income="$77,907"/>
+      <circle class="cd" cx="532.7" cy="233.2" r="2.5" data-name="Bernardston" data-rank="234" data-pct="12.8" data-bill="$5,019" data-income="$39,100"/>
+      <circle class="cd" cx="534.6" cy="233.2" r="2.5" data-name="Dracut" data-rank="235" data-pct="12.8" data-bill="$5,737" data-income="$44,670"/>
+      <circle class="cd" cx="536.6" cy="233.2" r="2.5" data-name="Groton" data-rank="236" data-pct="12.8" data-bill="$11,253" data-income="$87,629"/>
+      <circle class="cd" cx="538.5" cy="233.2" r="2.5" data-name="Hamilton" data-rank="237" data-pct="12.8" data-bill="$13,093" data-income="$101,901"/>
+      <circle class="cd" cx="540.5" cy="233.2" r="2.5" data-name="Wareham" data-rank="238" data-pct="12.8" data-bill="$4,087" data-income="$32,017"/>
+      <circle class="cd" cx="542.4" cy="233.2" r="2.5" data-name="Watertown" data-rank="239" data-pct="12.8" data-bill="$8,094" data-income="$63,164"/>
+      <circle class="cd" cx="544.3" cy="233.8" r="2.5" data-name="Charlemont" data-rank="240" data-pct="12.7" data-bill="$4,976" data-income="$39,154"/>
+      <circle class="cd" cx="546.3" cy="233.8" r="2.5" data-name="Douglas" data-rank="241" data-pct="12.7" data-bill="$6,298" data-income="$49,751"/>
+      <circle class="cd" cx="548.2" cy="233.8" r="2.5" data-name="Reading" data-rank="242" data-pct="12.7" data-bill="$10,300" data-income="$81,402"/>
+      <circle class="cd" cx="550.2" cy="233.8" r="2.5" data-name="Templeton" data-rank="243" data-pct="12.7" data-bill="$4,490" data-income="$35,318"/>
+      <circle class="cd" cx="552.1" cy="233.8" r="2.5" data-name="Wellfleet" data-rank="244" data-pct="12.7" data-bill="$7,384" data-income="$58,327"/>
+      <circle class="cd" cx="554.1" cy="233.8" r="2.5" data-name="Winchester" data-rank="245" data-pct="12.7" data-bill="$18,272" data-income="$143,928"/>
+      <circle class="cd" cx="556.0" cy="234.4" r="2.5" data-name="Boxford" data-rank="246" data-pct="12.6" data-bill="$13,673" data-income="$108,467"/>
+      <circle class="cd" cx="557.9" cy="234.4" r="2.5" data-name="Longmeadow" data-rank="247" data-pct="12.6" data-bill="$10,915" data-income="$86,448"/>
+      <circle class="cd" cx="559.9" cy="234.4" r="2.5" data-name="Northbridge" data-rank="248" data-pct="12.6" data-bill="$5,922" data-income="$46,854"/>
+      <circle class="cd" cx="561.8" cy="234.4" r="2.5" data-name="Southampton" data-rank="249" data-pct="12.6" data-bill="$6,413" data-income="$50,794"/>
+      <circle class="cd" cx="563.8" cy="234.4" r="2.5" data-name="Westwood" data-rank="250" data-pct="12.6" data-bill="$16,097" data-income="$127,497"/>
+      <circle class="cd" cx="565.7" cy="235.6" r="2.5" data-name="Blandford" data-rank="251" data-pct="12.4" data-bill="$4,680" data-income="$37,797"/>
+      <circle class="cd" cx="567.7" cy="235.6" r="2.5" data-name="East Brookfield" data-rank="252" data-pct="12.4" data-bill="$5,001" data-income="$40,426"/>
+      <circle class="cd" cx="569.6" cy="235.6" r="2.5" data-name="Medfield" data-rank="253" data-pct="12.4" data-bill="$13,904" data-income="$111,805"/>
+      <circle class="cd" cx="571.5" cy="235.6" r="2.5" data-name="Provincetown" data-rank="254" data-pct="12.4" data-bill="$11,185" data-income="$90,125"/>
+      <circle class="cd" cx="573.5" cy="236.2" r="2.5" data-name="Bourne" data-rank="255" data-pct="12.3" data-bill="$6,075" data-income="$49,345"/>
+      <circle class="cd" cx="575.4" cy="236.2" r="2.5" data-name="Leicester" data-rank="256" data-pct="12.3" data-bill="$5,026" data-income="$40,942"/>
+      <circle class="cd" cx="577.4" cy="236.2" r="2.5" data-name="Petersham" data-rank="257" data-pct="12.3" data-bill="$5,707" data-income="$46,437"/>
+      <circle class="cd" cx="579.3" cy="236.8" r="2.5" data-name="Rochester" data-rank="258" data-pct="12.2" data-bill="$6,745" data-income="$55,216"/>
+      <circle class="cd" cx="581.3" cy="237.4" r="2.5" data-name="Norwood" data-rank="259" data-pct="12.1" data-bill="$7,065" data-income="$58,355"/>
+      <circle class="cd" cx="583.2" cy="238.0" r="2.5" data-name="Acushnet" data-rank="260" data-pct="12.0" data-bill="$5,244" data-income="$43,749"/>
+      <circle class="cd" cx="585.1" cy="238.0" r="2.5" data-name="Concord" data-rank="261" data-pct="12.0" data-bill="$20,517" data-income="$170,977"/>
+      <circle class="cd" cx="587.1" cy="238.0" r="2.5" data-name="Dudley" data-rank="262" data-pct="12.0" data-bill="$4,526" data-income="$37,640"/>
+      <circle class="cd" cx="589.0" cy="238.0" r="2.5" data-name="Needham" data-rank="263" data-pct="12.0" data-bill="$16,690" data-income="$139,002"/>
+      <circle class="cd" cx="591.0" cy="238.6" r="2.5" data-name="Brewster" data-rank="264" data-pct="11.9" data-bill="$6,544" data-income="$55,197"/>
+      <circle class="cd" cx="592.9" cy="238.6" r="2.5" data-name="Brimfield" data-rank="265" data-pct="11.9" data-bill="$5,469" data-income="$46,024"/>
+      <circle class="cd" cx="594.9" cy="238.6" r="2.5" data-name="Freetown" data-rank="266" data-pct="11.9" data-bill="$5,501" data-income="$46,146"/>
+      <circle class="cd" cx="596.8" cy="238.6" r="2.5" data-name="Granville" data-rank="267" data-pct="11.9" data-bill="$5,059" data-income="$42,644"/>
+      <circle class="cd" cx="598.7" cy="238.6" r="2.5" data-name="Hadley" data-rank="268" data-pct="11.9" data-bill="$5,454" data-income="$45,659"/>
+      <circle class="cd" cx="600.7" cy="238.6" r="2.5" data-name="Milton" data-rank="269" data-pct="11.9" data-bill="$12,769" data-income="$107,276"/>
+      <circle class="cd" cx="602.6" cy="238.6" r="2.5" data-name="Montgomery" data-rank="270" data-pct="11.9" data-bill="$4,822" data-income="$40,480"/>
+      <circle class="cd" cx="604.6" cy="238.6" r="2.5" data-name="New Braintree" data-rank="271" data-pct="11.9" data-bill="$5,884" data-income="$49,500"/>
+      <circle class="cd" cx="606.5" cy="238.6" r="2.5" data-name="Shrewsbury" data-rank="272" data-pct="11.9" data-bill="$8,753" data-income="$73,712"/>
+      <circle class="cd" cx="608.5" cy="238.6" r="2.5" data-name="Stockbridge" data-rank="273" data-pct="11.9" data-bill="$6,284" data-income="$52,892"/>
+      <circle class="cd" cx="610.4" cy="239.2" r="2.5" data-name="Carlisle" data-rank="274" data-pct="11.8" data-bill="$17,379" data-income="$147,135"/>
+      <circle class="cd" cx="612.3" cy="239.2" r="2.5" data-name="Deerfield" data-rank="275" data-pct="11.8" data-bill="$6,283" data-income="$53,034"/>
+      <circle class="cd" cx="614.3" cy="239.2" r="2.5" data-name="Huntington" data-rank="276" data-pct="11.8" data-bill="$4,714" data-income="$39,947"/>
+      <circle class="cd" cx="616.2" cy="239.2" r="2.5" data-name="Lynnfield" data-rank="277" data-pct="11.8" data-bill="$12,381" data-income="$104,802"/>
+      <circle class="cd" cx="618.2" cy="239.2" r="2.5" data-name="Northfield" data-rank="278" data-pct="11.8" data-bill="$4,537" data-income="$38,501"/>
+      <circle class="cd" cx="620.1" cy="239.2" r="2.5" data-name="Westminster" data-rank="279" data-pct="11.8" data-bill="$5,992" data-income="$50,728"/>
+      <circle class="cd" cx="622.1" cy="239.8" r="2.5" data-name="Boston" data-rank="280" data-pct="11.7" data-bill="$7,627" data-income="$65,287"/>
+      <circle class="cd" cx="624.0" cy="239.8" r="2.5" data-name="Marion" data-rank="281" data-pct="11.7" data-bill="$8,908" data-income="$76,116"/>
+      <circle class="cd" cx="625.9" cy="239.8" r="2.5" data-name="Wayland" data-rank="282" data-pct="11.7" data-bill="$18,259" data-income="$156,292"/>
+      <circle class="cd" cx="627.9" cy="240.4" r="2.5" data-name="Royalston" data-rank="283" data-pct="11.6" data-bill="$3,507" data-income="$30,277"/>
+      <circle class="cd" cx="629.8" cy="240.4" r="2.5" data-name="West Newbury" data-rank="284" data-pct="11.6" data-bill="$9,893" data-income="$85,332"/>
+      <circle class="cd" cx="631.8" cy="241.0" r="2.5" data-name="Canton" data-rank="285" data-pct="11.5" data-bill="$8,468" data-income="$73,374"/>
+      <circle class="cd" cx="633.7" cy="241.0" r="2.5" data-name="Holland" data-rank="286" data-pct="11.5" data-bill="$4,647" data-income="$40,450"/>
+      <circle class="cd" cx="635.7" cy="241.0" r="2.5" data-name="Lee" data-rank="287" data-pct="11.5" data-bill="$4,813" data-income="$41,675"/>
+      <circle class="cd" cx="637.6" cy="241.0" r="2.5" data-name="Norwell" data-rank="288" data-pct="11.5" data-bill="$13,675" data-income="$119,269"/>
+      <circle class="cd" cx="639.5" cy="241.0" r="2.5" data-name="Rehoboth" data-rank="289" data-pct="11.5" data-bill="$6,623" data-income="$57,761"/>
+      <circle class="cd" cx="641.5" cy="241.6" r="2.5" data-name="Duxbury" data-rank="290" data-pct="11.4" data-bill="$12,963" data-income="$113,703"/>
+      <circle class="cd" cx="643.4" cy="241.6" r="2.5" data-name="Wrentham" data-rank="291" data-pct="11.4" data-bill="$8,307" data-income="$73,106"/>
+      <circle class="cd" cx="645.4" cy="242.2" r="2.5" data-name="Fairhaven" data-rank="292" data-pct="11.3" data-bill="$4,374" data-income="$38,858"/>
+      <circle class="cd" cx="647.3" cy="242.2" r="2.5" data-name="Hubbardston" data-rank="293" data-pct="11.3" data-bill="$4,947" data-income="$43,818"/>
+      <circle class="cd" cx="649.3" cy="242.2" r="2.5" data-name="Marshfield" data-rank="294" data-pct="11.3" data-bill="$7,731" data-income="$68,318"/>
+      <circle class="cd" cx="651.2" cy="242.2" r="2.5" data-name="Mashpee" data-rank="295" data-pct="11.3" data-bill="$6,346" data-income="$56,318"/>
+      <circle class="cd" cx="653.1" cy="242.2" r="2.5" data-name="Princeton" data-rank="296" data-pct="11.3" data-bill="$8,050" data-income="$71,066"/>
+      <circle class="cd" cx="655.1" cy="242.2" r="2.5" data-name="Savoy" data-rank="297" data-pct="11.3" data-bill="$3,995" data-income="$35,295"/>
+      <circle class="cd" cx="657.0" cy="242.2" r="2.5" data-name="Yarmouth" data-rank="298" data-pct="11.3" data-bill="$4,949" data-income="$43,768"/>
+      <circle class="cd" cx="659.0" cy="242.8" r="2.5" data-name="Dartmouth" data-rank="299" data-pct="11.2" data-bill="$5,276" data-income="$47,163"/>
+      <circle class="cd" cx="660.9" cy="242.8" r="2.5" data-name="Lakeville" data-rank="300" data-pct="11.2" data-bill="$6,097" data-income="$54,553"/>
+      <circle class="cd" cx="662.9" cy="242.8" r="2.5" data-name="Southborough" data-rank="301" data-pct="11.2" data-bill="$14,230" data-income="$127,127"/>
+      <circle class="cd" cx="664.8" cy="243.4" r="2.5" data-name="Monterey" data-rank="302" data-pct="11.1" data-bill="$5,815" data-income="$52,418"/>
+      <circle class="cd" cx="666.7" cy="243.4" r="2.5" data-name="New Marlborough" data-rank="303" data-pct="11.1" data-bill="$5,050" data-income="$45,527"/>
+      <circle class="cd" cx="668.7" cy="243.4" r="2.5" data-name="Scituate" data-rank="304" data-pct="11.1" data-bill="$10,191" data-income="$92,061"/>
+      <circle class="cd" cx="670.6" cy="243.4" r="2.5" data-name="West Stockbridge" data-rank="305" data-pct="11.1" data-bill="$6,943" data-income="$62,534"/>
+      <circle class="cd" cx="672.6" cy="244.0" r="2.5" data-name="Richmond" data-rank="306" data-pct="11.0" data-bill="$6,630" data-income="$60,195"/>
+      <circle class="cd" cx="674.5" cy="244.6" r="2.5" data-name="Charlton" data-rank="307" data-pct="10.9" data-bill="$5,345" data-income="$49,247"/>
+      <circle class="cd" cx="676.5" cy="244.6" r="2.5" data-name="Cohasset" data-rank="308" data-pct="10.9" data-bill="$16,814" data-income="$154,676"/>
+      <circle class="cd" cx="678.4" cy="244.6" r="2.5" data-name="Harwich" data-rank="309" data-pct="10.9" data-bill="$5,872" data-income="$54,010"/>
+      <circle class="cd" cx="680.3" cy="244.6" r="2.5" data-name="Nantucket" data-rank="310" data-pct="10.9" data-bill="$9,904" data-income="$90,622"/>
+      <circle class="cd" cx="682.3" cy="245.2" r="2.5" data-name="Alford" data-rank="311" data-pct="10.8" data-bill="$5,191" data-income="$48,215"/>
+      <circle class="cd" cx="684.2" cy="245.2" r="2.5" data-name="Oakham" data-rank="312" data-pct="10.8" data-bill="$4,888" data-income="$45,354"/>
+      <circle class="cd" cx="686.2" cy="245.8" r="2.5" data-name="Phillipston" data-rank="313" data-pct="10.7" data-bill="$4,724" data-income="$44,156"/>
+      <circle class="cd" cx="688.1" cy="246.4" r="2.5" data-name="Barnstable" data-rank="314" data-pct="10.6" data-bill="$5,599" data-income="$52,832"/>
+      <circle class="cd" cx="690.1" cy="246.4" r="2.5" data-name="Sutton" data-rank="315" data-pct="10.6" data-bill="$7,247" data-income="$68,076"/>
+      <circle class="cd" cx="692.0" cy="247.0" r="2.5" data-name="Burlington" data-rank="316" data-pct="10.5" data-bill="$7,128" data-income="$68,206"/>
+      <circle class="cd" cx="693.9" cy="247.0" r="2.5" data-name="Waltham" data-rank="317" data-pct="10.5" data-bill="$5,189" data-income="$49,410"/>
+      <circle class="cd" cx="695.9" cy="247.0" r="2.5" data-name="Worthington" data-rank="318" data-pct="10.5" data-bill="$5,327" data-income="$50,738"/>
+      <circle class="cd" cx="697.8" cy="248.2" r="2.5" data-name="Clarksburg" data-rank="319" data-pct="10.3" data-bill="$3,295" data-income="$32,061"/>
+      <circle class="cd" cx="699.8" cy="248.2" r="2.5" data-name="Mattapoisett" data-rank="320" data-pct="10.3" data-bill="$8,244" data-income="$80,037"/>
+      <circle class="cd" cx="701.7" cy="248.8" r="2.5" data-name="Newton" data-rank="321" data-pct="10.2" data-bill="$17,077" data-income="$167,243"/>
+      <circle class="cd" cx="703.7" cy="249.4" r="2.5" data-name="Falmouth" data-rank="322" data-pct="10.1" data-bill="$5,881" data-income="$58,210"/>
+      <circle class="cd" cx="705.6" cy="250.6" r="2.5" data-name="West Brookfield" data-rank="323" data-pct="9.9" data-bill="$4,446" data-income="$44,918"/>
+      <circle class="cd" cx="707.5" cy="251.8" r="2.5" data-name="Wellesley" data-rank="324" data-pct="9.7" data-bill="$20,551" data-income="$212,430"/>
+      <circle class="cd" cx="709.5" cy="252.4" r="2.5" data-name="Becket" data-rank="325" data-pct="9.6" data-bill="$3,670" data-income="$38,186"/>
+      <circle class="cd" cx="711.4" cy="252.4" r="2.5" data-name="Hingham" data-rank="326" data-pct="9.6" data-bill="$14,313" data-income="$148,511"/>
+      <circle class="cd" cx="715.3" cy="253.0" r="2.5" data-name="Hinsdale" data-rank="328" data-pct="9.5" data-bill="$4,375" data-income="$46,235"/>
+      <circle class="cd" cx="717.3" cy="253.0" r="2.5" data-name="Manchester By The Sea" data-rank="329" data-pct="9.5" data-bill="$16,371" data-income="$171,950"/>
+      <circle class="cd" cx="719.2" cy="254.2" r="2.5" data-name="Erving" data-rank="330" data-pct="9.3" data-bill="$2,772" data-income="$29,783"/>
+      <circle class="cd" cx="721.1" cy="254.2" r="2.5" data-name="Tolland" data-rank="331" data-pct="9.3" data-bill="$3,196" data-income="$34,310"/>
+      <circle class="cd" cx="723.1" cy="254.8" r="2.5" data-name="Cheshire" data-rank="332" data-pct="9.2" data-bill="$3,586" data-income="$38,898"/>
+      <circle class="cd" cx="725.0" cy="255.4" r="2.5" data-name="New Ashford" data-rank="333" data-pct="9.1" data-bill="$2,795" data-income="$30,799"/>
+      <circle class="cd" cx="727.0" cy="256.0" r="2.5" data-name="Chilmark" data-rank="334" data-pct="9.0" data-bill="$8,024" data-income="$88,995"/>
+      <circle class="cd" cx="728.9" cy="256.0" r="2.5" data-name="Westport" data-rank="335" data-pct="9.0" data-bill="$4,931" data-income="$54,579"/>
+      <circle class="cd" cx="730.9" cy="259.0" r="2.5" data-name="Edgartown" data-rank="336" data-pct="8.5" data-bill="$6,721" data-income="$79,087"/>
+      <circle class="cd" cx="732.8" cy="259.0" r="2.5" data-name="Newbury" data-rank="337" data-pct="8.5" data-bill="$7,201" data-income="$85,166"/>
+      <circle class="cd" cx="734.7" cy="260.2" r="2.5" data-name="Florida" data-rank="338" data-pct="8.3" data-bill="$2,006" data-income="$24,215"/>
+      <circle class="cd" cx="736.7" cy="262.6" r="2.5" data-name="Leyden" data-rank="339" data-pct="7.9" data-bill="$5,127" data-income="$64,633"/>
+      <circle class="cd" cx="738.6" cy="263.2" r="2.5" data-name="Dennis" data-rank="340" data-pct="7.8" data-bill="$3,873" data-income="$49,780"/>
+      <circle class="cd" cx="740.6" cy="263.8" r="2.5" data-name="Weston" data-rank="341" data-pct="7.7" data-bill="$26,313" data-income="$340,262"/>
+      <circle class="cd" cx="742.5" cy="266.8" r="2.5" data-name="Dover" data-rank="342" data-pct="7.2" data-bill="$19,088" data-income="$264,727"/>
+      <circle class="cd" cx="744.5" cy="268.6" r="2.5" data-name="Chatham" data-rank="343" data-pct="6.9" data-bill="$6,381" data-income="$92,760"/>
+      <circle class="cd" cx="746.4" cy="268.6" r="2.5" data-name="Windsor" data-rank="344" data-pct="6.9" data-bill="$2,846" data-income="$40,977"/>
+      <circle class="cd" cx="748.3" cy="269.2" r="2.5" data-name="Otis" data-rank="345" data-pct="6.8" data-bill="$3,365" data-income="$49,442"/>
+      <circle class="cd" cx="750.3" cy="272.2" r="2.5" data-name="Lenox" data-rank="346" data-pct="6.3" data-bill="$6,621" data-income="$104,878"/>
+      <circle class="cd" cx="752.2" cy="274.0" r="2.5" data-name="Cummington" data-rank="347" data-pct="6.0" data-bill="$4,575" data-income="$76,231"/>
+      <circle class="cd" cx="754.2" cy="275.8" r="2.5" data-name="Sherborn" data-rank="348" data-pct="5.7" data-bill="$20,018" data-income="$352,250"/>
+      <circle class="cd" cx="756.1" cy="278.8" r="2.5" data-name="Mount Washington" data-rank="349" data-pct="5.2" data-bill="$3,720" data-income="$71,739"/>
+      <circle class="cd" cx="758.1" cy="281.2" r="2.5" data-name="Rowe" data-rank="350" data-pct="4.8" data-bill="$1,661" data-income="$34,659"/>
+      <circle class="cd" cx="760.0" cy="286.6" r="2.5" data-name="Hancock" data-rank="351" data-pct="3.9" data-bill="$835" data-income="$21,588"/>
+      <!-- Highlighted towns -->
+      <circle class="data-dot s-swampscott" cx="322.9" cy="219.4" r="5" data-name="Swampscott" data-rank="126" data-pct="15.1" data-bill="$11,478" data-income="$76,071"/>
+      <circle class="data-dot s-melrose" cx="414.2" cy="225.4" r="5" data-name="Melrose" data-rank="173" data-pct="14.1" data-bill="$9,787" data-income="$69,170"/>
+      <circle class="data-dot s-stoneham" cx="439.4" cy="226.6" r="5" data-name="Stoneham" data-rank="186" data-pct="13.9" data-bill="$8,059" data-income="$58,058"/>
+      <circle class="data-dot s-marblehead" cx="713.4" cy="252.4" r="6" data-name="Marblehead" data-rank="327" data-pct="9.6" data-bill="$11,055" data-income="$115,422"/>
+
+      <!-- Labels -->
+      <text class="end-label s-swampscott" x="322.9" y="207" text-anchor="middle">Swampscott 15.1%</text>
+      <text class="end-label s-melrose" x="414.2" y="215" text-anchor="middle">Melrose 14.1%</text>
+      <text class="end-label s-stoneham" x="439.4" y="240" text-anchor="middle">Stoneham 13.9%</text>
+      <text class="end-label s-marblehead" x="713.4" y="244" text-anchor="middle">Marblehead 9.6%</text>
+    </svg>
+  </div>
+
+  <p class="caption">Each dot is one Massachusetts community, ranked from highest tax-to-income ratio (left) to lowest (right). Marblehead sits near the far right. The metric divides the <abbr class="g" title="Department of Revenue">DOR</abbr> average single-family tax bill (FY2026) by <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income (FY2027). <a href="/data/tax_bill_as_pct_of_income_351.csv">Full dataset (CSV)</a>.</p>
+
+  <details class="notes">
+    <summary>Sources and methodology</summary>
+    <p>Average single-family tax bill: MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr>, FY2026. Per-capita income: <abbr class="g" title="Department of Revenue">DOR</abbr> Municipal Databank, FY2027. The ratio uses per-capita income (not median household income) because it is available for all communities from one source. This is a different denominator than the four-town comparison on the <a href="four_town_rates.html">Rate and Bill</a> page (which uses <abbr class="g" title="American Community Survey">ACS</abbr> median household income). Both confirm the same relative ranking.</p>
+  </details>
+
+  <script>
+  (function(){
+    var wrap = document.getElementById('scatter-wrap');
+    var tip = document.getElementById('scatter-tip');
+    if (!wrap || !tip) return;
+    wrap.addEventListener('mouseover', function(e){
+      var c = e.target.closest('[data-name]');
+      if (!c) { tip.classList.remove('visible'); return; }
+      tip.innerHTML = '<strong>' + c.dataset.name + '</strong><br>' +
+        c.dataset.pct + '% of income (rank ' + c.dataset.rank + ' of 351)<br>' +
+        '<span class="muted">Bill: ' + c.dataset.bill + ' &middot; Income: ' + c.dataset.income + '</span>';
+      tip.classList.add('visible');
+      var r = wrap.getBoundingClientRect();
+      var cr = c.getBoundingClientRect();
+      var tx = cr.left - r.left + cr.width/2 - tip.offsetWidth/2;
+      var ty = cr.top - r.top - tip.offsetHeight - 8;
+      if (tx < 0) tx = 0;
+      if (tx + tip.offsetWidth > r.width) tx = r.width - tip.offsetWidth;
+      if (ty < 0) ty = cr.bottom - r.top + 8;
+      tip.style.left = tx + 'px';
+      tip.style.top = ty + 'px';
+    });
+    wrap.addEventListener('mouseout', function(e){
+      if (!e.relatedTarget || !e.relatedTarget.closest('[data-name]'))
+        tip.classList.remove('visible');
+    });
+  })();
+  </script>
+
+  <div class="read-next">
+    <div class="read-next-label">Read next</div>
+    <a class="read-next-link" href="four_town_rates.html">
+      <div class="read-next-title">Rate and bill: four North Shore towns &rarr;</div>
+      <div class="read-next-desc">Tax rates, average bills, and bill-to-income ratios for Marblehead, Swampscott, Melrose, and Stoneham, with FY2028 projections.</div>
+    </a>
+    <a class="read-next-link" href="/why-not-elsewhere.html">
+      <div class="read-next-title">Why do some towns run overrides? &rarr;</div>
+      <div class="read-next-desc">Residential share, new growth, and override history for 21 peer towns.</div>
+    </a>
+  </div>
