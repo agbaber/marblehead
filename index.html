@@ -695,6 +695,21 @@ og_url: https://marbleheaddata.org/
     font-size: 12px;
   }
 
+  /* ── Notes panel backdrop (mobile only) ── */
+  .notes-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(15,42,61,0.28);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+  .notes-backdrop.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   /* ── Notes panel (expanded) ── */
   .notes-panel {
     position: fixed;
@@ -712,8 +727,32 @@ og_url: https://marbleheaddata.org/
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
+    overscroll-behavior: contain;
   }
   .notes-panel.open { transform: translateY(0); }
+  /* While the finger is dragging, disable the ease so the sheet tracks touch. */
+  .notes-panel.dragging { transition: none; }
+
+  /* Drag grip (mobile only). Tap target for swipe-to-dismiss. */
+  .notes-panel-grip {
+    display: none;
+    width: 100%;
+    padding: 8px 0 4px;
+    background: none;
+    border: 0;
+    cursor: grab;
+    touch-action: none;
+  }
+  .notes-panel-grip::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: 0 auto;
+    border-radius: 2px;
+    background: var(--border);
+  }
+  .notes-panel-grip:active { cursor: grabbing; }
 
   .notes-panel-header {
     display: flex;
@@ -766,6 +805,48 @@ og_url: https://marbleheaddata.org/
     padding-bottom: 0;
     border-bottom: none;
   }
+  /* Clickable header: jumps back to the question. */
+  .notes-entry-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 8px 10px;
+    margin: -8px -10px 0;
+    background: none;
+    border: 0;
+    border-radius: var(--radius-sm);
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .notes-entry-head:hover,
+  .notes-entry-head:focus-visible {
+    background: var(--bg);
+    outline: none;
+  }
+  .notes-entry-head-text {
+    display: block;
+    flex: 1;
+    min-width: 0;
+  }
+  .notes-entry-head-text .notes-entry-topic,
+  .notes-entry-head-text .notes-entry-position {
+    display: block;
+  }
+  .notes-entry-chevron {
+    flex-shrink: 0;
+    margin-top: 4px;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--text-faint);
+    transition: transform 0.15s, color 0.15s;
+  }
+  .notes-entry-head:hover .notes-entry-chevron,
+  .notes-entry-head:focus-visible .notes-entry-chevron {
+    color: var(--c-teal);
+    transform: translateX(2px);
+  }
   .notes-entry-topic {
     font-size: 10px;
     font-weight: 700;
@@ -778,13 +859,43 @@ og_url: https://marbleheaddata.org/
     font-size: 14px;
     font-weight: 600;
     color: var(--text);
-    margin-bottom: 6px;
+    margin-bottom: 0;
     line-height: 1.35;
   }
+  .notes-entry-note {
+    margin-top: 8px;
+  }
+  .notes-entry-note-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+  .notes-entry-note-toggle:hover { color: var(--c-teal); }
+  .notes-entry-note-toggle::before {
+    content: "+";
+    display: inline-block;
+    width: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-faint);
+  }
+  .notes-entry-note-toggle[aria-expanded="true"]::before { content: "−"; }
+  .notes-entry-note-toggle[data-has-note="true"] { color: var(--c-teal); }
+  .notes-entry-note-body {
+    margin-top: 6px;
+  }
+  .notes-entry-note-body[hidden] { display: none; }
   .notes-entry-textarea {
     width: 100%;
-    min-height: 40px;
-    max-height: 100px;
+    min-height: 52px;
+    max-height: 140px;
     padding: 8px 10px;
     font-family: var(--font-sans);
     font-size: 13px;
@@ -800,6 +911,12 @@ og_url: https://marbleheaddata.org/
     border-color: var(--c-teal);
   }
   .notes-entry-textarea::placeholder {
+    color: var(--text-faint);
+  }
+  .notes-entry-note-privacy {
+    margin: 4px 2px 0;
+    font-size: 11px;
+    line-height: 1.4;
     color: var(--text-faint);
   }
 
@@ -829,9 +946,18 @@ og_url: https://marbleheaddata.org/
   }
 
   @media (max-width: 599px) {
-    .notes-panel { width: 100vw; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+    .notes-panel {
+      width: 100vw;
+      max-height: 82vh;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+    .notes-panel-grip { display: block; }
+    .notes-panel-header { padding-top: 4px; }
     .notes-pill { bottom: 16px; right: 16px; }
   }
+
+  /* Scroll lock while the notes panel is the modal in focus (mobile). */
+  body.notes-panel-locked { overflow: hidden; }
 
   /* ── "You'll vote on this twice" procedural strip (landing only) ── */
   .votes-strip {
@@ -3476,10 +3602,14 @@ og_url: https://marbleheaddata.org/
   My positions <span class="notes-pill-count" id="notesPillCount">0</span>
 </button>
 
+<!-- ── Notes panel backdrop (mobile tap-outside-to-close) ── -->
+<div class="notes-backdrop" id="notesBackdrop" hidden></div>
+
 <!-- ── Notes panel ── -->
-<div class="notes-panel" id="notesPanel">
+<div class="notes-panel" id="notesPanel" role="dialog" aria-modal="true" aria-labelledby="notesPanelTitle">
+  <button class="notes-panel-grip" id="notesGrip" type="button" aria-label="Close my positions"></button>
   <div class="notes-panel-header">
-    <span class="notes-panel-title">My positions</span>
+    <span class="notes-panel-title" id="notesPanelTitle">My positions</span>
     <div class="notes-panel-actions">
       <button class="notes-panel-btn" id="notesShare">Share</button>
       <button class="notes-panel-btn" id="notesClose">Close</button>
@@ -3498,6 +3628,8 @@ og_url: https://marbleheaddata.org/
   var notesPanel = document.getElementById('notesPanel');
   var notesPanelBody = document.getElementById('notesPanelBody');
   var notesPillCount = document.getElementById('notesPillCount');
+  var notesBackdrop = document.getElementById('notesBackdrop');
+  var notesGrip = document.getElementById('notesGrip');
   var panelOpen = false;
 
   /* ── Inject checkmarks and hint labels ── */
@@ -3921,14 +4053,17 @@ og_url: https://marbleheaddata.org/
   }
 
   function updateNotesPanel() {
+    notesPanelBody.innerHTML = '';
     var keys = Object.keys(selections);
     if (!keys.length) {
-      notesPanelBody.innerHTML = '<p class="notes-empty">Pick positions on the questions above</p>';
+      var empty = document.createElement('p');
+      empty.className = 'notes-empty';
+      empty.textContent = 'Pick positions on the questions above';
+      notesPanelBody.appendChild(empty);
       return;
     }
 
     var notes = loadNotes();
-    var html = '';
     keys.forEach(function (topic) {
       var answer = selections[topic];
       var card = document.querySelector(
@@ -3943,19 +4078,100 @@ og_url: https://marbleheaddata.org/
       var noteKey = topic + '-' + answer;
       var noteVal = notes[noteKey] || '';
 
-      html += '<div class="notes-entry">';
-      html += '<div class="notes-entry-topic">' + qText + '</div>';
-      html += '<div class="notes-entry-position">' + heading + '</div>';
-      html += '<textarea class="notes-entry-textarea" data-note-key="' + noteKey + '" data-topic="' + topic + '" data-answer="' + answer + '" placeholder="Add your notes...">' + noteVal.replace(/</g, '&lt;') + '</textarea>';
-      html += '</div>';
-    });
-    notesPanelBody.innerHTML = html;
+      var entry = document.createElement('div');
+      entry.className = 'notes-entry';
 
-    // Bind textarea events
-    notesPanelBody.querySelectorAll('.notes-entry-textarea').forEach(function (ta) {
-      ta.addEventListener('input', function () {
-        saveNote(this.dataset.topic, this.dataset.answer, this.value);
+      // Clickable head: jumps back to this question.
+      var head = document.createElement('button');
+      head.type = 'button';
+      head.className = 'notes-entry-head';
+      head.setAttribute('aria-label', 'Revisit question: ' + qText);
+
+      var headText = document.createElement('span');
+      headText.className = 'notes-entry-head-text';
+
+      var topicEl = document.createElement('span');
+      topicEl.className = 'notes-entry-topic';
+      topicEl.textContent = qText;
+      headText.appendChild(topicEl);
+
+      var posEl = document.createElement('span');
+      posEl.className = 'notes-entry-position';
+      posEl.textContent = heading;
+      headText.appendChild(posEl);
+
+      head.appendChild(headText);
+
+      var chev = document.createElement('span');
+      chev.className = 'notes-entry-chevron';
+      chev.setAttribute('aria-hidden', 'true');
+      chev.textContent = '\u203A'; // single right-pointing angle quotation
+      head.appendChild(chev);
+
+      head.addEventListener('click', function () {
+        closePanel();
+        switchTopic(topic);
+        window.scrollTo(0, 0);
       });
+
+      entry.appendChild(head);
+
+      // Collapsible note section.
+      var noteWrap = document.createElement('div');
+      noteWrap.className = 'notes-entry-note';
+
+      var toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'notes-entry-note-toggle';
+      var hasNote = noteVal.trim().length > 0;
+      toggle.setAttribute('aria-expanded', hasNote ? 'true' : 'false');
+      if (hasNote) toggle.dataset.hasNote = 'true';
+      toggle.textContent = hasNote ? 'Your note' : 'Add a note';
+      noteWrap.appendChild(toggle);
+
+      var noteBody = document.createElement('div');
+      noteBody.className = 'notes-entry-note-body';
+      if (!hasNote) noteBody.hidden = true;
+
+      var textarea = document.createElement('textarea');
+      textarea.className = 'notes-entry-textarea';
+      textarea.rows = 3;
+      textarea.placeholder = 'Why did you pick this? What would change your mind?';
+      textarea.value = noteVal;
+      noteBody.appendChild(textarea);
+
+      var privacy = document.createElement('p');
+      privacy.className = 'notes-entry-note-privacy';
+      privacy.textContent = 'Saved in your browser. Never sent anywhere, not even when you share your positions.';
+      noteBody.appendChild(privacy);
+
+      noteWrap.appendChild(noteBody);
+      entry.appendChild(noteWrap);
+
+      toggle.addEventListener('click', function () {
+        var isOpen = !noteBody.hidden;
+        noteBody.hidden = isOpen;
+        toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        if (!isOpen) textarea.focus();
+      });
+
+      // Debounced save (1s) to match the community-pulse note cadence.
+      var saveTimer = null;
+      textarea.addEventListener('input', function () {
+        if (saveTimer) clearTimeout(saveTimer);
+        saveTimer = setTimeout(function () {
+          saveNote(topic, answer, textarea.value);
+          var filled = textarea.value.trim().length > 0;
+          if (filled) {
+            toggle.dataset.hasNote = 'true';
+          } else {
+            delete toggle.dataset.hasNote;
+          }
+          toggle.textContent = filled ? 'Your note' : 'Add a note';
+        }, 1000);
+      });
+
+      notesPanelBody.appendChild(entry);
     });
   }
 
@@ -3981,16 +4197,38 @@ og_url: https://marbleheaddata.org/
     });
   }
 
+  function isMobileViewport() {
+    return window.innerWidth <= 599;
+  }
+
   function openPanel() {
     updateNotesPanel();
     notesPanel.classList.add('open');
+    notesPanel.style.transform = ''; // clear any leftover drag offset
     notesPill.classList.remove('visible');
     panelOpen = true;
+    if (notesBackdrop) {
+      notesBackdrop.hidden = false;
+      // requestAnimationFrame so the browser applies hidden-false before we fade in
+      requestAnimationFrame(function () { notesBackdrop.classList.add('visible'); });
+    }
+    if (isMobileViewport()) {
+      document.body.classList.add('notes-panel-locked');
+    }
   }
 
   function closePanel() {
     notesPanel.classList.remove('open');
+    notesPanel.style.transform = '';
     panelOpen = false;
+    if (notesBackdrop) {
+      notesBackdrop.classList.remove('visible');
+      // Wait for the fade-out before hiding so clicks don't bleed through
+      setTimeout(function () {
+        if (!panelOpen) notesBackdrop.hidden = true;
+      }, 250);
+    }
+    document.body.classList.remove('notes-panel-locked');
     if (getPositionCount() > 0) {
       notesPill.classList.add('visible');
     }
@@ -4001,6 +4239,70 @@ og_url: https://marbleheaddata.org/
 
   // Close button
   document.getElementById('notesClose').addEventListener('click', closePanel);
+
+  // Tap-outside to close (backdrop)
+  if (notesBackdrop) {
+    notesBackdrop.addEventListener('click', closePanel);
+  }
+
+  // Escape to close
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && panelOpen) closePanel();
+  });
+
+  // Swipe-to-dismiss: drag the grip at the top of the sheet to pull it down.
+  (function () {
+    if (!notesGrip) return;
+    var dragStartY = null;
+    var dragCurrentY = 0;
+    var dragStartTime = 0;
+    var panelHeight = 0;
+    var dragMoved = false;
+    var DISMISS_FRACTION = 0.30;   // dismiss if dragged > 30% of panel height
+    var DISMISS_VELOCITY = 0.5;    // or if release velocity > 0.5 px/ms
+
+    function onStart(e) {
+      var point = e.touches ? e.touches[0] : e;
+      dragStartY = point.clientY;
+      dragCurrentY = dragStartY;
+      dragStartTime = Date.now();
+      dragMoved = false;
+      panelHeight = notesPanel.offsetHeight || 1;
+      notesPanel.classList.add('dragging');
+    }
+    function onMove(e) {
+      if (dragStartY == null) return;
+      var point = e.touches ? e.touches[0] : e;
+      dragCurrentY = point.clientY;
+      var delta = Math.max(0, dragCurrentY - dragStartY);
+      if (delta > 2) dragMoved = true;
+      notesPanel.style.transform = 'translateY(' + delta + 'px)';
+      if (e.cancelable && delta > 0) e.preventDefault();
+    }
+    function onEnd() {
+      if (dragStartY == null) return;
+      var delta = Math.max(0, dragCurrentY - dragStartY);
+      var elapsed = Math.max(1, Date.now() - dragStartTime);
+      var velocity = delta / elapsed;
+      notesPanel.classList.remove('dragging');
+      var shouldClose = delta > panelHeight * DISMISS_FRACTION || velocity > DISMISS_VELOCITY;
+      dragStartY = null;
+      if (shouldClose) {
+        closePanel();
+      } else {
+        notesPanel.style.transform = '';
+      }
+    }
+
+    notesGrip.addEventListener('touchstart', onStart, { passive: true });
+    notesGrip.addEventListener('touchmove', onMove, { passive: false });
+    notesGrip.addEventListener('touchend', onEnd);
+    notesGrip.addEventListener('touchcancel', onEnd);
+    // Plain-click fallback (keyboard, non-touch): tap the grip to close.
+    notesGrip.addEventListener('click', function () {
+      if (!dragMoved) closePanel();
+    });
+  })();
 
   // Share button
   document.getElementById('notesShare').addEventListener('click', function () {
