@@ -90,6 +90,45 @@ og_url: https://marbleheaddata.org/
     border-color: var(--c-navy);
     box-shadow: var(--shadow-sm);
   }
+  .explore-question-card.has-pick {
+    border-color: var(--c-teal);
+  }
+  .explore-card-pick {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--c-teal);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  /* Share strip on landing */
+  .explore-share-strip {
+    display: none;
+    text-align: center;
+    padding: 16px 0 0;
+  }
+  .explore-share-strip.visible { display: block; }
+  .explore-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--c-navy);
+    background: var(--surface);
+    border: 1.5px solid var(--c-navy);
+    border-radius: 20px;
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .explore-share-btn:hover {
+    background: var(--c-navy);
+    color: #fff;
+  }
+
   /* Hide landing once a topic is active */
   .explore-stage.has-topic .explore-landing { display: none; }
   /* Hide topic bar and question screens in landing state */
@@ -580,6 +619,9 @@ og_url: https://marbleheaddata.org/
     </div>
     <div class="explore-question-list" id="questionList">
       <!-- JS builds these from the actual question h1s -->
+    </div>
+    <div class="explore-share-strip" id="shareStrip">
+      <button type="button" class="explore-share-btn" id="shareBtn">Share your positions</button>
     </div>
     <div class="explore-trust">
       Every claim cites a primary source. Every dollar traces to a town document.<br>
@@ -2261,6 +2303,7 @@ og_url: https://marbleheaddata.org/
     document.querySelectorAll('.question-screen').forEach(function (s) {
       s.style.display = 'none';
     });
+    updateLandingCards();
     writeURL(null, null);
   }
 
@@ -2282,6 +2325,9 @@ og_url: https://marbleheaddata.org/
 
   /* ── Build landing question cards from actual h1s ── */
   var listEl = document.getElementById('questionList');
+  var shareStripEl = document.getElementById('shareStrip');
+  var landingCards = {};  // topic -> card element
+
   document.querySelectorAll('.question-screen').forEach(function (screen) {
     var topic = screen.dataset.topic;
     var h1 = screen.querySelector('.question-block h1');
@@ -2290,12 +2336,62 @@ og_url: https://marbleheaddata.org/
     btn.type = 'button';
     btn.className = 'explore-question-card';
     btn.dataset.topic = topic;
-    btn.textContent = h1.textContent;
+
+    var titleSpan = document.createElement('span');
+    titleSpan.textContent = h1.textContent;
+    btn.appendChild(titleSpan);
+
+    var pickSpan = document.createElement('span');
+    pickSpan.className = 'explore-card-pick';
+    btn.appendChild(pickSpan);
+
     btn.addEventListener('click', function () {
       switchTopic(topic);
     });
     listEl.appendChild(btn);
+    landingCards[topic] = { el: btn, pick: pickSpan };
   });
+
+  /* Update landing cards to reflect current selections */
+  function updateLandingCards() {
+    var hasAny = false;
+    Object.keys(landingCards).forEach(function (topic) {
+      var card = landingCards[topic];
+      var answer = selections[topic];
+      if (answer) {
+        hasAny = true;
+        var answerCard = document.querySelector(
+          '.answer-card[data-question="' + topic + '"][data-answer="' + answer + '"] h2'
+        );
+        card.pick.textContent = answerCard ? answerCard.textContent : '';
+        card.el.classList.add('has-pick');
+      } else {
+        card.pick.textContent = '';
+        card.el.classList.remove('has-pick');
+      }
+    });
+    // Show share button if any selections
+    if (shareStripEl) {
+      shareStripEl.classList.toggle('visible', hasAny);
+    }
+  }
+
+  /* ── Share button ── */
+  var shareBtnEl = document.getElementById('shareBtn');
+  if (shareBtnEl) {
+    shareBtnEl.addEventListener('click', function () {
+      var pairs = [];
+      Object.keys(selections).forEach(function (topic) {
+        pairs.push(topic + ':' + selections[topic]);
+      });
+      if (!pairs.length) return;
+      var url = window.location.origin + window.location.pathname + '?positions=' + pairs.join(',');
+      navigator.clipboard.writeText(url).then(function () {
+        shareBtnEl.textContent = 'Link copied';
+        setTimeout(function () { shareBtnEl.textContent = 'Share your positions'; }, 2000);
+      });
+    });
+  }
 
   /* ── Answer selection ── */
   function selectAnswer(question, answer) {
@@ -2550,19 +2646,15 @@ og_url: https://marbleheaddata.org/
   var positionsParam = new URLSearchParams(window.location.search).get('positions');
   if (positionsParam) {
     var pairs = positionsParam.split(',');
-    var firstTopic = null;
     pairs.forEach(function (pair) {
       var parts = pair.split(':');
       if (parts.length === 2) {
-        if (!firstTopic) firstTopic = parts[0];
         selections[parts[0]] = parts[1];
       }
     });
     persistSelections();
-    if (firstTopic) switchTopic(initial.topic || firstTopic);
-    Object.keys(selections).forEach(function (t) {
-      selectAnswer(t, selections[t]);
-    });
+    // Show landing with positions visible (not a single topic)
+    showLanding();
     updateNotesPill();
   } else if (initial.topic) {
     switchTopic(initial.topic);
