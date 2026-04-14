@@ -108,7 +108,63 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
     <div class="legend-item s-everything"><span class="legend-swatch"></span><span class="legend-text">Everything else</span></div>
   </div>
 
-  <div class="chart-wrapper">
+  <div class="chart-wrapper" data-chart-tooltip>
+    <script type="application/json" class="chart-tooltip-data">
+    {
+      "xLabels": ["FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26"],
+      "xPositions": [60,120,180,240,300,360,420,480,540,600,660,720],
+      "plotTop": 40,
+      "plotBottom": 280,
+      "projectedFromIndex": 10,
+      "valuePrefix": "$",
+      "valueSuffix": "M",
+      "valueDecimals": 1,
+      "series": [
+        {
+          "name": "Schools",
+          "className": "s-marblehead",
+          "yPositions": [210.0,207.4,203.6,198.3,195.6,192.2,191.7,187.0,184.5,179.3,179.0,172.8],
+          "values": [32.08,33.27,35.02,37.45,38.68,40.24,40.47,42.63,43.77,46.15,46.29,49.13]
+        },
+        {
+          "name": "Health insurance",
+          "className": "s-melrose",
+          "yPositions": [187.4,183.5,179.1,172.7,169.8,166.0,164.8,159.2,156.1,151.2,150.6,139.9],
+          "values": [10.36,10.95,11.23,11.73,11.82,12.01,12.33,12.74,13.02,12.88,13.02,15.08]
+        },
+        {
+          "name": "Public safety",
+          "className": "s-tier-1",
+          "yPositions": [171.4,167.1,162.5,154.9,151.3,147.5,145.5,137.8,133.8,126.5,126.9,115.4],
+          "values": [7.33,7.52,7.61,8.16,8.48,8.48,8.85,9.81,10.22,11.32,10.86,11.23]
+        },
+        {
+          "name": "Debt payments",
+          "className": "s-swampscott",
+          "yPositions": [159.5,154.1,147.6,139.3,136.7,132.3,129.1,117.2,111.8,102.5,102.8,95.0],
+          "values": [5.45,5.96,6.83,7.15,6.69,6.97,7.52,9.44,10.08,11.00,11.05,9.35]
+        },
+        {
+          "name": "Pensions",
+          "className": "s-stoneham",
+          "yPositions": [154.5,148.7,141.9,133.0,129.9,125.1,121.4,108.9,102.7,92.6,92.1,83.3],
+          "values": [2.29,2.48,2.61,2.89,3.12,3.30,3.53,3.80,4.17,4.54,4.90,5.36]
+        },
+        {
+          "name": "Everything else",
+          "className": "s-everything",
+          "yPositions": [126.2,120.3,112.3,101.6,98.3,94.1,92.8,75.8,68.7,56.9,60.8,48.3],
+          "values": [12.97,13.02,13.57,14.39,14.48,14.21,13.11,15.17,15.58,16.36,14.35,16.04]
+        },
+        {
+          "name": "Total",
+          "className": "s-neutral",
+          "yPositions": [null,null,null,null,null,null,null,null,null,null,null,null],
+          "values": [70.49,73.20,76.86,81.77,83.28,85.20,85.80,93.59,96.85,102.25,100.47,106.20]
+        }
+      ]
+    }
+    </script>
     <svg class="chart chart--stacked" viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stacked area chart of Marblehead general fund spending by category from FY2015 to FY2026, showing schools, health insurance, public safety, debt payments, pensions, and everything else. Total rises from 70.5 million in FY2015 to 106.2 million in FY2026. Schools is the largest layer throughout. FY2025 is expended and FY2026 is budget; the rest are audited actuals.">
       <!--
         X axis: x = 60 + (FY - 2015) * 60, so FY15 = 60, FY26 = 720.
