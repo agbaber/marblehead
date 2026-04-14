@@ -112,9 +112,11 @@
           dd.classList.add('is-open');
           toggle.setAttribute('aria-expanded', 'true');
           if (isMobile()) {
-            // Copy menu links into the portal panel
             var menu = dd.querySelector('.nav-dropdown-menu');
             mobilePanel.innerHTML = menu.innerHTML;
+            // Position below the nav bar
+            var navRect = nav.getBoundingClientRect();
+            mobilePanel.style.top = (navRect.bottom + window.scrollY) + 'px';
             mobilePanel.classList.add('is-open');
           }
         }
