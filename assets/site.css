@@ -3703,14 +3703,21 @@ abbr.g:focus::after {
   margin: 2px 0 0 22px;
 }
 .start-here-quick {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid var(--divider);
-}
-.start-here-quick a {
+  display: inline-block;
+  font-size: 13px;
   font-weight: 600;
+  color: var(--text-subtle);
+  text-decoration: none;
+  margin-top: 14px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  transition: background 0.15s, color 0.15s;
+}
+.start-here-quick:hover {
+  background: color-mix(in srgb, var(--link) 8%, var(--surface));
+  color: var(--link);
+  border-color: var(--link);
 }
 
 /* ==========================================================================
