@@ -39,28 +39,61 @@ og_url: https://marbleheaddata.org/
   .explore-stage > * { position: relative; z-index: 1; }
 
 
-  /* ── Landing hero (first visit) ── */
-  .explore-hero {
-    text-align: center;
-    padding: 48px 0 40px;
+  /* ── Landing (first visit / "back to all") ── */
+  .explore-landing {
+    display: none;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 0 40px;
   }
-  .explore-hero h1 {
-    font-size: 32px;
+  .explore-stage:not(.has-topic) .explore-landing { display: block; }
+  .explore-landing-head {
+    text-align: center;
+    padding: 40px 0 28px;
+  }
+  .explore-landing-head h1 {
+    font-size: 28px;
     font-weight: 700;
     letter-spacing: -0.3px;
     color: var(--text);
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     line-height: 1.25;
   }
-  .explore-hero p {
+  .explore-landing-head p {
     font-size: 15px;
     color: var(--text-muted);
     line-height: 1.55;
-    max-width: 480px;
-    margin: 0 auto;
+    margin: 0;
   }
-  /* Hide hero once a topic has been picked (JS adds .has-topic) */
-  .explore-stage.has-topic .explore-hero { display: none; }
+  .explore-question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .explore-question-card {
+    display: block;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: left;
+    font: inherit;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.1px;
+  }
+  .explore-question-card:hover {
+    border-color: var(--c-navy);
+    box-shadow: var(--shadow-sm);
+  }
+  /* Hide landing once a topic is active */
+  .explore-stage.has-topic .explore-landing { display: none; }
+  /* Hide topic bar and question screens in landing state */
+  .explore-stage:not(.has-topic) .topic-bar { display: none; }
   /* Hide all question screens by default; JS shows the active one */
   .question-screen { display: none; }
   /* ── Topic switcher ── */
@@ -72,18 +105,6 @@ og_url: https://marbleheaddata.org/
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding-bottom: 4px;
-  }
-  /* Landing state: center the pills and make them bigger */
-  .explore-stage:not(.has-topic) .topic-bar {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 0;
-    padding-top: 8px;
-  }
-  .explore-stage:not(.has-topic) .topic-pill {
-    padding: 10px 20px;
-    font-size: 14px;
   }
   .topic-bar::-webkit-scrollbar { display: none; }
   .topic-pill {
@@ -137,7 +158,7 @@ og_url: https://marbleheaddata.org/
   /* ── Landing trust signal ── */
   .explore-trust {
     text-align: center;
-    margin-top: 32px;
+    margin-top: 28px;
     font-size: 12px;
     color: var(--text-subtle);
     line-height: 1.5;
@@ -147,7 +168,6 @@ og_url: https://marbleheaddata.org/
     text-decoration: underline;
     text-underline-offset: 2px;
   }
-  .explore-stage.has-topic .explore-trust { display: none; }
 
   /* ── Question ── */
   .question-block {
@@ -531,7 +551,8 @@ og_url: https://marbleheaddata.org/
 
   /* ── Responsive ── */
   @media (min-width: 600px) {
-    .explore-hero h1 { font-size: 38px; }
+    .explore-landing-head h1 { font-size: 34px; }
+    .explore-question-card { font-size: 17px; padding: 18px 24px; }
     .question-block h1 { font-size: 32px; }
     .answers {
       flex-direction: row;
@@ -541,8 +562,9 @@ og_url: https://marbleheaddata.org/
 
   @media (max-width: 599px) {
     .explore-stage { padding-top: 20px; }
-    .explore-hero { padding: 32px 0 24px; }
-    .explore-hero h1 { font-size: 26px; }
+    .explore-landing-head { padding: 24px 0 20px; }
+    .explore-landing-head h1 { font-size: 24px; }
+    .explore-question-card { font-size: 15px; padding: 14px 16px; }
     .question-block h1 { font-size: 22px; }
     .answer-card { padding: 14px 16px; }
   }
@@ -550,13 +572,22 @@ og_url: https://marbleheaddata.org/
 
 <div class="explore-stage">
 
-  <!-- Landing hero (hidden after first topic pick) -->
-  <div class="explore-hero">
-    <h1>What's on your mind?</h1>
-    <p>Pick a question. See the strongest case for each answer. Make your own call.</p>
+  <!-- Landing (shown until a topic is picked; JS populates question cards) -->
+  <div class="explore-landing">
+    <div class="explore-landing-head">
+      <h1>Weighing the FY2027 override?</h1>
+      <p>Pick the question on your mind. See the strongest case for each answer. Make your own call.</p>
+    </div>
+    <div class="explore-question-list" id="questionList">
+      <!-- JS builds these from the actual question h1s -->
+    </div>
+    <div class="explore-trust">
+      Every claim cites a primary source. Every dollar traces to a town document.<br>
+      <a href="about.html">About this project</a>
+    </div>
   </div>
 
-  <!-- Topic switcher -->
+  <!-- Topic switcher (visible once inside a question) -->
   <nav class="topic-bar" aria-label="Topics">
     <button class="topic-pill" data-topic="override">Override</button>
     <button class="topic-pill" data-topic="voteno">Vote no</button>
@@ -567,12 +598,6 @@ og_url: https://marbleheaddata.org/
     <button class="topic-pill" data-topic="library">Library cuts</button>
     <button class="topic-pill" data-topic="trust">Trust</button>
   </nav>
-
-  <!-- Trust signal (landing state only) -->
-  <div class="explore-trust">
-    Every claim cites a primary source. Every dollar traces to a town document.<br>
-    <a href="about.html">About this project</a>
-  </div>
 
   <!-- ═══════════════════════════════════════════════════
        QUESTION 1: Override necessary vs. wasteful spending
@@ -2254,6 +2279,23 @@ og_url: https://marbleheaddata.org/
       window.scrollTo(0, 0);
     });
   }
+
+  /* ── Build landing question cards from actual h1s ── */
+  var listEl = document.getElementById('questionList');
+  document.querySelectorAll('.question-screen').forEach(function (screen) {
+    var topic = screen.dataset.topic;
+    var h1 = screen.querySelector('.question-block h1');
+    if (!h1 || !listEl) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'explore-question-card';
+    btn.dataset.topic = topic;
+    btn.textContent = h1.textContent;
+    btn.addEventListener('click', function () {
+      switchTopic(topic);
+    });
+    listEl.appendChild(btn);
+  });
 
   /* ── Answer selection ── */
   function selectAnswer(question, answer) {
