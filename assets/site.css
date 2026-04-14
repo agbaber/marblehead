@@ -832,30 +832,26 @@ details.notes[open] > summary {
    ========================================================================== */
 
 .hero { text-align: center; margin-bottom: 36px; }
-.hero-lighthouse {
-  display: block; margin: 0 auto 12px; width: 80px; height: 120px;
-  opacity: 0.35;
-}
-@media (prefers-color-scheme: dark) {
-  html:not([data-theme="light"]) .hero-lighthouse { filter: invert(1); opacity: 0.5; }
-}
-html[data-theme="dark"] .hero-lighthouse { filter: invert(1); opacity: 0.5; }
 .hero h1 { font-size: 28px; margin-bottom: 10px; }
 .hero p  { font-size: 16px; color: var(--text-subtle); max-width: 520px; margin: 0 auto; }
-@media (min-width: 600px) {
-  .hero {
-    position: relative; text-align: left;
-    padding-left: 120px; min-height: 80px;
-    margin-bottom: 0;
-  }
-  .hero-lighthouse {
-    position: absolute; left: 0; top: 0;
-    width: 90px; height: 320px; margin: 0;
-    opacity: 0.25;
-  }
-  html[data-theme="dark"] .hero-lighthouse { opacity: 0.35; }
-  .hero p { margin: 0; }
+
+/* Lighthouse watermark behind homepage content */
+.page.page--home { position: relative; }
+.page.page--home::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 280px; height: 420px;
+  background: url(lighthouse/lighthouse.svg) center / contain no-repeat;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
 }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .page.page--home::before { filter: invert(1); opacity: 0.08; }
+}
+html[data-theme="dark"] .page.page--home::before { filter: invert(1); opacity: 0.08; }
+.page.page--home > * { position: relative; z-index: 1; }
 
 .question-list {
   display: flex; flex-direction: column; gap: 12px;
