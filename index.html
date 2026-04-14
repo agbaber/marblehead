@@ -131,40 +131,132 @@ og_url: https://marbleheaddata.org/
 
   /* Hide landing once a topic is active */
   .explore-stage.has-topic .explore-landing { display: none; }
-  /* Hide topic bar and question screens in landing state */
-  .explore-stage:not(.has-topic) .topic-bar { display: none; }
+  /* Hide question header in landing state */
+  .explore-stage:not(.has-topic) .question-nav { display: none; }
   /* Hide all question screens by default; JS shows the active one */
   .question-screen { display: none; }
-  /* ── Topic switcher ── */
-  .topic-bar {
+
+  /* ── Question nav (replaces pill bar) ── */
+  .question-nav {
     display: flex;
-    gap: 8px;
-    margin-bottom: 28px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-bottom: 4px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--divider);
   }
-  .topic-bar::-webkit-scrollbar { display: none; }
-  .topic-pill {
-    flex-shrink: 0;
-    padding: 6px 14px;
-    font-size: 12px;
+  .question-nav-back {
+    font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.3px;
-    border-radius: 20px;
-    border: 1.5px solid var(--border);
-    background: var(--surface);
     color: var(--text-muted);
+    text-decoration: none;
     cursor: pointer;
-    transition: all 0.15s ease;
+    background: none;
+    border: none;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0;
     white-space: nowrap;
   }
-  .topic-pill:hover { border-color: var(--c-navy); color: var(--text); }
-  .topic-pill.active {
+  .question-nav-back:hover { color: var(--text); }
+  .question-nav-progress {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  .progress-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    transition: all 0.15s;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+  }
+  .progress-dot:hover { background: var(--text-muted); }
+  .progress-dot.active {
     background: var(--c-navy);
+    transform: scale(1.25);
+  }
+  .progress-dot.picked {
+    background: var(--c-teal);
+  }
+  .progress-dot.active.picked {
+    background: var(--c-navy);
+  }
+
+  /* ── Your position banner ── */
+  .your-position {
+    display: none;
+    background: var(--surface);
+    border: 1px solid var(--c-teal);
+    border-left: 3px solid var(--c-teal);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--text-muted);
+  }
+  .your-position.visible { display: block; }
+  .your-position strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .your-position-change {
+    color: var(--c-teal);
+    font-weight: 600;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font: inherit;
+    font-size: inherit;
+    padding: 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ── Related questions ── */
+  .related-questions {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid var(--divider);
+    margin-top: 24px;
+  }
+  .related-questions.visible { display: block; }
+  .related-questions-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-faint);
+    margin-bottom: 8px;
+  }
+  .related-questions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .related-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .related-link:hover {
     border-color: var(--c-navy);
-    color: #fff;
+    color: var(--text);
   }
 
   /* ── Explore footer links (below questions) ── */
@@ -606,6 +698,8 @@ og_url: https://marbleheaddata.org/
     .explore-question-card { font-size: 15px; padding: 14px 16px; }
     .question-block h1 { font-size: 22px; }
     .answer-card { padding: 14px 16px; }
+    .question-nav { gap: 8px; }
+    .related-link { font-size: 12px; padding: 4px 10px; }
   }
 </style>
 
@@ -623,25 +717,21 @@ og_url: https://marbleheaddata.org/
     <div class="explore-share-strip" id="shareStrip">
       <button type="button" class="explore-share-btn" id="shareBtn">Share your positions</button>
     </div>
-    <div class="explore-trust">
-      Every claim cites a primary source. Every dollar traces to a town document.<br>
-      <a href="about.html">About this project</a>
+  </div>
+
+  <!-- Question nav (visible once inside a question) -->
+  <div class="question-nav" id="questionNav">
+    <button type="button" class="question-nav-back" id="navBack">&larr; All questions</button>
+    <div class="question-nav-progress" id="progressDots">
+      <!-- JS builds dots from question screens -->
     </div>
   </div>
 
-  <!-- Topic switcher (visible once inside a question) -->
-  <nav class="topic-bar" aria-label="Topics">
-    <button class="topic-pill" data-topic="override">Override</button>
-    <button class="topic-pill" data-topic="voteno">Vote no</button>
-    <button class="topic-pill" data-topic="levy">2.5% cap</button>
-    <button class="topic-pill" data-topic="taxrank">Tax rank</button>
-    <button class="topic-pill" data-topic="mycost">My cost</button>
-    <button class="topic-pill" data-topic="schools">Schools</button>
-    <button class="topic-pill" data-topic="again">Again?</button>
-    <button class="topic-pill" data-topic="alternatives">Alternatives</button>
-    <button class="topic-pill" data-topic="library">Library cuts</button>
-    <button class="topic-pill" data-topic="trust">Trust</button>
-  </nav>
+  <!-- Your position banner (JS shows when you have a pick for current topic) -->
+  <div class="your-position" id="yourPosition">
+    Your view: <strong id="yourPositionText"></strong>
+    <button type="button" class="your-position-change" id="yourPositionChange">change</button>
+  </div>
 
   <!-- ═══════════════════════════════════════════════════
        QUESTION 1: Override necessary vs. wasteful spending
@@ -2472,10 +2562,14 @@ og_url: https://marbleheaddata.org/
 
   </section>
 
+  <!-- Related questions (JS populates based on current topic) -->
+  <div class="related-questions" id="relatedQuestions">
+    <div class="related-questions-label">Related questions</div>
+    <div class="related-questions-list" id="relatedList"></div>
+  </div>
+
   <!-- Meta links (visible when a topic is active) -->
   <div class="explore-meta">
-    <button type="button" class="explore-meta-btn" id="startOver">Back to all questions</button>
-    &middot;
     <a href="browse.html">Browse all pages</a>
   </div>
 
@@ -2525,10 +2619,44 @@ og_url: https://marbleheaddata.org/
   });
 
   var stageEl = document.querySelector('.explore-stage');
+  var currentTopic = null;
+
+  /* ── Related questions map ── */
+  var relatedMap = {
+    override: ['voteno', 'levy', 'trust'],
+    voteno:   ['override', 'library', 'schools'],
+    schools:  ['override', 'mycost', 'voteno'],
+    levy:     ['taxrank', 'mycost', 'override'],
+    taxrank:  ['levy', 'mycost', 'schools'],
+    mycost:   ['levy', 'taxrank', 'override'],
+    library:  ['voteno', 'trust', 'override'],
+    trust:    ['override', 'library', 'voteno']
+  };
+
+  /* ── Topic order (for progress dots) ── */
+  var topicOrder = [];
+  var topicLabels = {};
+  document.querySelectorAll('.question-screen').forEach(function (s) {
+    topicOrder.push(s.dataset.topic);
+    var h1 = s.querySelector('.question-block h1');
+    if (h1) topicLabels[s.dataset.topic] = h1.textContent;
+  });
+
+  /* ── Build progress dots ── */
+  var dotsEl = document.getElementById('progressDots');
+  topicOrder.forEach(function (topic) {
+    var dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'progress-dot';
+    dot.dataset.topic = topic;
+    dot.title = topicLabels[topic] || topic;
+    dot.addEventListener('click', function () {
+      switchTopic(topic);
+    });
+    dotsEl.appendChild(dot);
+  });
 
   /* ── URL state ── */
-  // URL format: ?q=schools&pos=b
-  // q = topic, pos = selected answer (optional)
   function readURL() {
     var params = new URLSearchParams(window.location.search);
     return {
@@ -2545,29 +2673,69 @@ og_url: https://marbleheaddata.org/
     var params = new URLSearchParams();
     params.set('q', topic);
     if (pos) params.set('pos', pos);
-    var url = window.location.pathname + '?' + params.toString();
-    history.replaceState(null, '', url);
+    history.replaceState(null, '', window.location.pathname + '?' + params.toString());
+  }
+
+  /* ── Update question header elements ── */
+  function updateQuestionHeader(topic) {
+    // Progress dots
+    dotsEl.querySelectorAll('.progress-dot').forEach(function (dot) {
+      dot.classList.toggle('active', dot.dataset.topic === topic);
+      dot.classList.toggle('picked', !!selections[dot.dataset.topic] && dot.dataset.topic !== topic);
+    });
+
+    // Your position banner
+    var posEl = document.getElementById('yourPosition');
+    var posText = document.getElementById('yourPositionText');
+    var answer = selections[topic];
+    if (answer) {
+      var h2 = document.querySelector(
+        '.answer-card[data-question="' + topic + '"][data-answer="' + answer + '"] h2'
+      );
+      posText.textContent = h2 ? h2.textContent : '';
+      posEl.classList.add('visible');
+    } else {
+      posEl.classList.remove('visible');
+    }
+
+    // Related questions
+    var relEl = document.getElementById('relatedQuestions');
+    var relList = document.getElementById('relatedList');
+    var related = relatedMap[topic] || [];
+    relList.innerHTML = '';
+    if (related.length) {
+      related.forEach(function (rel) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'related-link';
+        btn.textContent = topicLabels[rel] || rel;
+        btn.addEventListener('click', function () {
+          switchTopic(rel);
+          window.scrollTo(0, 0);
+        });
+        relList.appendChild(btn);
+      });
+      relEl.classList.add('visible');
+    } else {
+      relEl.classList.remove('visible');
+    }
   }
 
   /* ── Topic switching ── */
   function switchTopic(topic) {
+    currentTopic = topic;
     stageEl.classList.add('has-topic');
-    document.querySelectorAll('.topic-pill').forEach(function (p) {
-      p.classList.toggle('active', p.dataset.topic === topic);
-    });
     document.querySelectorAll('.question-screen').forEach(function (s) {
       s.style.display = s.dataset.topic === topic ? 'block' : 'none';
     });
-    // Update URL, preserve pos if same topic has a selection
+    updateQuestionHeader(topic);
     writeURL(topic, selections[topic] || null);
   }
 
   /* Show landing state (no topic selected) */
   function showLanding() {
+    currentTopic = null;
     stageEl.classList.remove('has-topic');
-    document.querySelectorAll('.topic-pill').forEach(function (p) {
-      p.classList.remove('active');
-    });
     document.querySelectorAll('.question-screen').forEach(function (s) {
       s.style.display = 'none';
     });
@@ -2575,20 +2743,19 @@ og_url: https://marbleheaddata.org/
     writeURL(null, null);
   }
 
-  document.querySelectorAll('.topic-pill').forEach(function (pill) {
-    pill.addEventListener('click', function () {
-      switchTopic(this.dataset.topic);
-    });
+  /* ── Nav back button ── */
+  document.getElementById('navBack').addEventListener('click', function () {
+    showLanding();
+    window.scrollTo(0, 0);
   });
 
-  /* ── Start over ── */
-  var startOverBtn = document.getElementById('startOver');
-  if (startOverBtn) {
-    startOverBtn.addEventListener('click', function () {
-      showLanding();
-      window.scrollTo(0, 0);
-    });
-  }
+  /* ── Position change button ── */
+  document.getElementById('yourPositionChange').addEventListener('click', function () {
+    if (currentTopic && selections[currentTopic]) {
+      deselectAnswer(currentTopic);
+      updateQuestionHeader(currentTopic);
+    }
+  });
 
   /* ── Build landing question cards from actual h1s ── */
   var listEl = document.getElementById('questionList');
@@ -2683,6 +2850,7 @@ og_url: https://marbleheaddata.org/
     selections[question] = answer;
     writeURL(question, answer);
     persistSelections();
+    updateQuestionHeader(question);
 
     // Hide prompt
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
@@ -2702,6 +2870,7 @@ og_url: https://marbleheaddata.org/
     delete selections[question];
     writeURL(question, null);
     persistSelections();
+    updateQuestionHeader(question);
 
     // Show prompt again
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
