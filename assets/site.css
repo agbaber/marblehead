@@ -280,8 +280,9 @@ nav.site-nav .nav-inner::-webkit-scrollbar { display: none; }
 nav.site-nav .nav-brand {
   font-size: 14px; font-weight: 700; color: var(--text);
   white-space: nowrap; margin-right: 4px;
-  display: inline-flex; align-items: center; gap: 4px;
+  display: inline-flex; align-items: center; gap: 6px;
 }
+.nav-logo { width: 20px; height: 20px; border-radius: 4px; }
 nav.site-nav .nav-inner > a,
 nav.site-nav .nav-dropdown-toggle {
   font-size: 13px; line-height: 1; color: var(--text-subtle);
