@@ -26,6 +26,16 @@
   color: var(--text-muted, #666);
 }
 
+/* Inline variant: widget nested inside a .mini-synthesis block on the
+   debate page. Centered to match the synthesis text, with a subtle top
+   border to separate from the prose. */
+.cp-section-end--inline {
+  justify-content: center;
+  margin: 12px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid color-mix(in srgb, var(--text-muted, #666) 15%, transparent);
+}
+
 /* Tight cluster of reaction count + share + note-toggle. Lives on the
    right side of the widget, separated from the stance buttons by the
    wider .cp-widget gap above. */

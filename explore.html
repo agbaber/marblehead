@@ -106,6 +106,42 @@ og_url: https://marbleheaddata.org/explore.html
     opacity: 0.8;
   }
 
+  /* +1 reaction button inside answer cards */
+  .answer-react {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 3px 10px 3px 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+    z-index: 1;
+  }
+  .answer-react:hover {
+    border-color: var(--text-muted);
+    color: var(--text);
+  }
+  .answer-react.voted {
+    border-color: var(--c-teal);
+    color: var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 8%, var(--surface));
+  }
+  .answer-react-glyph {
+    font-size: 14px;
+    line-height: 1;
+  }
+  .answer-react-count {
+    font-variant-numeric: tabular-nums;
+  }
+
   .answer-label {
     font-size: 10px;
     font-weight: 700;
@@ -1512,6 +1548,72 @@ og_url: https://marbleheaddata.org/explore.html
     }
   });
 
+  /* ── +1 reactions on answer cards ── */
+  var API_BASE = 'https://marblehead-community-pulse.agbaber.workers.dev';
+  var pagePath = 'explore.html';
+
+  // Build section IDs for each answer card
+  var reactCards = document.querySelectorAll('.answer-card[data-question][data-answer]');
+  var sectionIds = [];
+  var cardMap = {};
+
+  reactCards.forEach(function (card) {
+    var id = pagePath + '#' + card.dataset.question + '-' + card.dataset.answer;
+    sectionIds.push(id);
+    cardMap[id] = card;
+
+    // Inject the +1 button
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'answer-react';
+    btn.innerHTML = '<span class="answer-react-glyph">+</span><span class="answer-react-count"></span>';
+    btn.dataset.sectionId = id;
+
+    // Check if already voted
+    if (localStorage.getItem('explore-voted-' + id)) {
+      btn.classList.add('voted');
+      btn.querySelector('.answer-react-glyph').textContent = '\u2713';
+    }
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation(); // Don't trigger card selection
+      if (localStorage.getItem('explore-voted-' + id)) return;
+      localStorage.setItem('explore-voted-' + id, '1');
+      btn.classList.add('voted');
+      btn.querySelector('.answer-react-glyph').textContent = '\u2713';
+
+      // Increment via API
+      fetch(API_BASE + '/api/reactions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ section_id: id })
+      })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          if (data) btn.querySelector('.answer-react-count').textContent = data.total;
+        })
+        .catch(function () {});
+    });
+
+    card.appendChild(btn);
+  });
+
+  // Fetch initial counts
+  if (sectionIds.length) {
+    fetch(API_BASE + '/api/reactions?section_ids=' + sectionIds.map(encodeURIComponent).join(','))
+      .then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (data) {
+        Object.keys(data).forEach(function (id) {
+          var card = cardMap[id];
+          if (!card) return;
+          var btn = card.querySelector('.answer-react');
+          if (btn && data[id].total > 0) {
+            btn.querySelector('.answer-react-count').textContent = data[id].total;
+          }
+        });
+      })
+      .catch(function () {});
+  }
 })();
 </script>
 

@@ -484,26 +484,41 @@ export async function hydrateWidgets() {
     const parent = anchor.parentNode;
     if (!parent) continue;
 
-    // Insert the widget at the END of the section (after the reader has
-    // scanned the heading and body), not inline with the heading. The
-    // section boundary is the next h2, a <footer>, or the next element
-    // with a data-stance-section attribute, whichever comes first.
+    // Insert the widget at the end of the section. If a .mini-synthesis
+    // block exists between this h2 and the next, nest the widget inside
+    // it (the reader is already pausing there to reflect). Otherwise,
+    // insert a standalone cp-section-end div before the next h2.
     let cursor = anchor.nextElementSibling;
+    let synthesis = null;
     while (cursor && !cursor.matches('h2, h3, footer, [data-stance-section]')) {
+      if (!synthesis && cursor.classList.contains('mini-synthesis')) {
+        synthesis = cursor;
+      }
       cursor = cursor.nextElementSibling;
     }
-    const endRow = document.createElement('div');
-    endRow.className = 'cp-section-end';
-    endRow.appendChild(widget);
-    // Append the note textarea to the section-end container (not the
-    // widget) so CSS can position it in the right margin on desktop.
-    if (widget._noteElement) {
-      endRow.appendChild(widget._noteElement);
-    }
-    if (cursor) {
-      parent.insertBefore(endRow, cursor);
+
+    if (synthesis) {
+      // Nest inside the mini-synthesis block
+      const endRow = document.createElement('div');
+      endRow.className = 'cp-section-end cp-section-end--inline';
+      endRow.appendChild(widget);
+      if (widget._noteElement) {
+        endRow.appendChild(widget._noteElement);
+      }
+      synthesis.appendChild(endRow);
     } else {
-      parent.appendChild(endRow);
+      // Fallback: standalone block before the next section
+      const endRow = document.createElement('div');
+      endRow.className = 'cp-section-end';
+      endRow.appendChild(widget);
+      if (widget._noteElement) {
+        endRow.appendChild(widget._noteElement);
+      }
+      if (cursor) {
+        parent.insertBefore(endRow, cursor);
+      } else {
+        parent.appendChild(endRow);
+      }
     }
 
     wireWidget(
