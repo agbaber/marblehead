@@ -836,11 +836,11 @@ details.notes[open] > summary {
 .hero p  { font-size: 16px; color: var(--text-subtle); max-width: 520px; margin: 0 auto; }
 
 /* Lighthouse watermark behind homepage content */
-.page.page--home { position: relative; }
+.page.page--home { position: relative; overflow: hidden; }
 .page.page--home::before {
   content: "";
   position: absolute;
-  top: -40px; right: -60px;
+  top: -40px; right: -200px;
   width: 520px; height: 780px;
   background: url(lighthouse/lighthouse.svg) center / contain no-repeat;
   opacity: 0.05;
