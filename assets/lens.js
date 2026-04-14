@@ -114,14 +114,13 @@
       btn.classList.toggle('lens-btn--active', val === lens);
     });
 
-    // Show/hide banner
+    // Show/hide banner with lens-specific color
+    banner.classList.remove('lens-banner--visible', 'lens-banner--for', 'lens-banner--against');
     if (lens) {
-      banner.classList.add('lens-banner--visible');
+      banner.classList.add('lens-banner--visible', 'lens-banner--' + lens);
       banner.querySelector('.lens-banner-text').textContent =
         'Reading through the "' + LABELS[lens].toLowerCase() + '" lens. ' +
         'Collapsed blocks are one click away.';
-    } else {
-      banner.classList.remove('lens-banner--visible');
     }
 
     // Hide meta-note (four-question framing) when a lens is active
