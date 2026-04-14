@@ -78,6 +78,20 @@ When styling doc-page markdown content, always scope selectors with
 `body.doc-page .page` so bespoke HTML pages that already use `.page` with
 their own `.tier-list`, `.tldr ul`, etc. are not affected.
 
+## Don't read your own branch name back as user intent
+
+You (Claude) usually pick the branch name for a new task, often before the
+user has said anything beyond a question. That means the branch name
+reflects *your* early interpretation, not the user's stated request. Don't
+then turn around mid-conversation and cite the branch name as evidence of
+what the user wants ("the branch is called `claude/add-ballot-info-XXXX`
+so I assume you want a ballot info page added"). The user didn't name it;
+you did. If you're unsure what the user wants, ask them directly, or act
+on the words they actually said in the conversation.
+
+Branch names are scratch paper for where commits will land. They are not
+a user requirements document.
+
 ## Always open a PR after pushing
 
 When you push a branch, always open a pull request for it as the next
