@@ -28,7 +28,26 @@ title: "General Fund Revenue, Free Cash, and Expenses"
     <div class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">Total expenditures</span></div>
   </div>
 
-  <div class="chart-wrapper">
+  <div class="chart-wrapper" data-chart-tooltip>
+    <script type="application/json" class="chart-tooltip-data">
+    {
+      "xLabels": ["FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26","FY27","FY28","FY29","FY30"],
+      "xPositions": [94,134,174,214,254,294,334,374,414,454,494,534,574,614,654,694],
+      "plotTop": 48,
+      "plotBottom": 380,
+      "projectedFromIndex": 10,
+      "series": [
+        {
+          "name": "Total expenditures",
+          "className": "s-neutral",
+          "valuePrefix": "$",
+          "valueSuffix": "M",
+          "valueDecimals": 1,
+          "values": [70.5,73.2,76.9,81.8,83.3,85.2,85.8,93.6,96.8,100.1,105.0,112.5,120.5,126.5,133.0,139.5]
+        }
+      ]
+    }
+    </script>
     <svg class="chart" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stacked bar chart from FY15 to FY30 showing general fund base revenue plus free cash compared to an expense line. Tabs switch between no-override and three override tier scenarios.">
 
       <!-- Grid: $60M at y=380, scale 4px/$1M, up to $140M at y=60 -->
