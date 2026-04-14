@@ -3416,15 +3416,29 @@ og_url: https://marbleheaddata.org/
     };
   }
 
-  function writeURL(topic, pos) {
+  // When true, writeURL is a no-op. Used during initial load and popstate
+  // handling so that restoring state from the URL doesn't itself create
+  // new history entries.
+  var suppressURLWrite = false;
+
+  function writeURL(topic, pos, replace) {
+    if (suppressURLWrite) return;
+    var newUrl;
     if (!topic) {
-      history.replaceState(null, '', window.location.pathname);
-      return;
+      newUrl = window.location.pathname;
+    } else {
+      var params = new URLSearchParams();
+      params.set('q', topic);
+      if (pos) params.set('pos', pos);
+      newUrl = window.location.pathname + '?' + params.toString();
     }
-    var params = new URLSearchParams();
-    params.set('q', topic);
-    if (pos) params.set('pos', pos);
-    history.replaceState(null, '', window.location.pathname + '?' + params.toString());
+    // No-op if the URL isn't actually changing -- avoids duplicate entries.
+    if (newUrl === window.location.pathname + window.location.search) return;
+    if (replace) {
+      history.replaceState(null, '', newUrl);
+    } else {
+      history.pushState(null, '', newUrl);
+    }
   }
 
   /* ── Update question header elements ── */
@@ -3623,7 +3637,9 @@ og_url: https://marbleheaddata.org/
     });
 
     selections[question] = answer;
-    writeURL(question, answer);
+    // Selecting an answer is an in-place state change on the current topic,
+    // so replace the current history entry rather than pushing a new one.
+    writeURL(question, answer, true);
     persistSelections();
     updateQuestionHeader(question);
 
@@ -3668,7 +3684,7 @@ og_url: https://marbleheaddata.org/
       }
     });
     delete selections[question];
-    writeURL(question, null);
+    writeURL(question, null, true);
     persistSelections();
     updateQuestionHeader(question);
 
@@ -3922,20 +3938,29 @@ og_url: https://marbleheaddata.org/
       updateNotesPanel();
     });
   } else if (initial.topic) {
+    // Restoring from URL: don't create a second history entry for what
+    // the browser is already showing.
+    suppressURLWrite = true;
     switchTopic(initial.topic);
     if (initial.pos) {
       selectAnswer(initial.topic, initial.pos);
     }
+    suppressURLWrite = false;
     updateNotesPill();
   } else {
     // Always show landing -- positions are visible on the cards
+    suppressURLWrite = true;
     showLanding();
+    suppressURLWrite = false;
     updateNotesPill();
   }
 
   // Handle back/forward navigation
   window.addEventListener('popstate', function () {
     var state = readURL();
+    // The browser already moved the history pointer; just sync the UI
+    // without touching history again.
+    suppressURLWrite = true;
     if (state.topic) {
       switchTopic(state.topic);
       if (state.pos) {
@@ -3944,6 +3969,7 @@ og_url: https://marbleheaddata.org/
     } else {
       showLanding();
     }
+    suppressURLWrite = false;
   });
 
 })();
