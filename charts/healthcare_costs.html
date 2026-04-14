@@ -90,7 +90,30 @@ og_url: https://marbleheaddata.org/charts/healthcare_costs.html
 
   <p>The flat total line hides a composition shift underneath it. <a href="enrollment_vs_staffing.html">Education <abbr class="g" title="Full-Time Equivalent">FTE</abbr> grew from 466 to 537</a> (+15%) over the same period, while non-education departments (police, fire, <abbr class="g" title="Department of Public Works">DPW</abbr>, library, administration) shrank from 188 to 169 <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (&minus;10%). Schools added staff; the rest of town government cut. For insurance costs, what matters is the total number of employees on plans, and that number barely moved. But a reader who knows schools have been hiring will reasonably question a flat-line chart that does not show where the offsetting cuts came from.</p>
 
-  <div class="chart-wrapper">
+  <div class="chart-wrapper" data-chart-tooltip>
+    <script type="application/json" class="chart-tooltip-data">
+    {
+      "xLabels": ["FY06","FY07","FY08","FY09","FY10","FY11","FY12","FY13","FY14","FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26","FY27"],
+      "xPositions": [70,97,124,151,178,205,232,260,287,314,341,368,395,422,449,476,503,530,557,584,611,640],
+      "projectedFromIndex": 20,
+      "series": [
+        {
+          "name": "Health insurance",
+          "className": "s-cost",
+          "valuePrefix": "$",
+          "valueSuffix": "M",
+          "valueDecimals": 2,
+          "values": [7.96,8.50,9.33,10.72,10.06,10.52,11.74,10.82,11.58,12.11,12.66,13.06,13.12,13.48,null,13.81,14.48,15.24,13.92,13.70,15.10,16.75]
+        },
+        {
+          "name": "Employees (FTE)",
+          "className": "s-neutral",
+          "valueDecimals": 0,
+          "values": [655,667,673,680,682,683,675,686,687,687,675,676,691,671,668,667,669,709,706,null,null,null]
+        }
+      ]
+    }
+    </script>
     <svg class="chart" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two-panel chart. Top: health insurance spending FY06-FY27. Bottom: full-time equivalent employees FY06-FY24. Spending roughly doubled while FTE stayed near 700.">
       <line class="axis-base" x1="70" y1="180" x2="640" y2="180"/>
 

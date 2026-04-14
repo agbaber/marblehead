@@ -92,13 +92,22 @@
     return null;
   }
 
-  // Format a raw value using chart-level prefix/suffix/decimals.
-  function formatValue(raw, cfg) {
+  // Format a raw value. Per-series prefix/suffix/decimals override the
+  // chart-level defaults; otherwise fall back to cfg's values.
+  function formatValue(raw, cfg, series) {
     if (raw === null || raw === undefined) return '\u2014'; // em dash placeholder
     var num = Number(raw);
     if (!isFinite(num)) return String(raw);
+    var prefix = (series && series.valuePrefix !== undefined)
+      ? series.valuePrefix
+      : (cfg.valuePrefix || '');
+    var suffix = (series && series.valueSuffix !== undefined)
+      ? series.valueSuffix
+      : (cfg.valueSuffix || '');
     var decimals;
-    if (typeof cfg.valueDecimals === 'number') {
+    if (series && typeof series.valueDecimals === 'number') {
+      decimals = series.valueDecimals;
+    } else if (typeof cfg.valueDecimals === 'number') {
       decimals = cfg.valueDecimals;
     } else {
       // Auto: 0 if integer-looking, else 1
@@ -108,7 +117,7 @@
       minimumFractionDigits: decimals,
       maximumFractionDigits: decimals
     });
-    return (cfg.valuePrefix || '') + s + (cfg.valueSuffix || '');
+    return prefix + s + suffix;
   }
 
   function initChart(wrap) {
@@ -133,7 +142,10 @@
         name: s.name,
         className: s.className || 's-neutral',
         values: s.values || [],
-        yPositions: yPositions || []
+        yPositions: yPositions || [],
+        valuePrefix: s.valuePrefix,
+        valueSuffix: s.valueSuffix,
+        valueDecimals: s.valueDecimals
       };
     });
 
@@ -157,28 +169,47 @@
       return dot;
     });
 
-    // Figure out the vertical extent of the plot area. Use the first
-    // .axis-base line for the bottom; use the smallest y among all
-    // harvested series points for the top. Fall back to viewBox.
+    // Figure out the vertical extent of the crosshair line. Explicit
+    // plotTop / plotBottom in the JSON wins (needed for multi-panel
+    // charts where there's more than one .axis-base). Otherwise:
+    //   - bottomY = the LAST .axis-base y1 (covers multi-panel charts
+    //     where the full plot area runs from the top panel to the
+    //     bottom panel's baseline)
+    //   - topY   = the smallest y among harvested series points, minus
+    //     a small margin, clamped to the viewBox.
     var vb = svg.viewBox.baseVal;
-    var topY = vb ? vb.y + 4 : 0;
-    var bottomY;
-    var axisBase = svg.querySelector('.axis-base');
-    if (axisBase && axisBase.getAttribute('y1') !== null) {
-      bottomY = parseFloat(axisBase.getAttribute('y1'));
-    } else if (vb) {
-      bottomY = vb.y + vb.height - 20;
+    var topY, bottomY;
+    if (typeof cfg.plotTop === 'number') {
+      topY = cfg.plotTop;
     } else {
-      bottomY = 300;
+      topY = vb ? vb.y + 4 : 0;
     }
-    // Expand topY to cover series highs if available.
-    var dataTop = Infinity;
-    series.forEach(function (s) {
-      s.yPositions.forEach(function (y) {
-        if (y !== null && y !== undefined && y < dataTop) dataTop = y;
+    if (typeof cfg.plotBottom === 'number') {
+      bottomY = cfg.plotBottom;
+    } else {
+      var axisBases = svg.querySelectorAll('.axis-base');
+      var lastBase = null;
+      for (var bi = 0; bi < axisBases.length; bi++) {
+        if (axisBases[bi].getAttribute('y1') !== null) lastBase = axisBases[bi];
+      }
+      if (lastBase) {
+        bottomY = parseFloat(lastBase.getAttribute('y1'));
+      } else if (vb) {
+        bottomY = vb.y + vb.height - 20;
+      } else {
+        bottomY = 300;
+      }
+    }
+    if (typeof cfg.plotTop !== 'number') {
+      // Expand topY to cover series highs if available.
+      var dataTop = Infinity;
+      series.forEach(function (s) {
+        s.yPositions.forEach(function (y) {
+          if (y !== null && y !== undefined && y < dataTop) dataTop = y;
+        });
       });
-    });
-    if (isFinite(dataTop)) topY = Math.max(topY, dataTop - 6);
+      if (isFinite(dataTop)) topY = Math.max(topY, dataTop - 6);
+    }
 
     // Tooltip HTML div (absolutely positioned relative to wrapper).
     var tip = document.createElement('div');
@@ -254,7 +285,7 @@
         html += '<div class="chart-tooltip-row ' + escapeHtml(s.className) + '">' +
           '<span class="chart-tooltip-swatch"></span>' +
           '<span class="chart-tooltip-label">' + escapeHtml(s.name) + '</span>' +
-          '<span class="chart-tooltip-value">' + escapeHtml(formatValue(v, cfg)) + '</span>' +
+          '<span class="chart-tooltip-value">' + escapeHtml(formatValue(v, cfg, s)) + '</span>' +
           '</div>';
       });
       tip.innerHTML = html;
