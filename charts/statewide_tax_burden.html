@@ -60,7 +60,7 @@ title: "Statewide Tax Burden"
       <!-- X annotations -->
       <text class="annotation" x="80" y="340" text-anchor="start" fill="var(--text-subtle)" font-size="10">Highest burden</text>
       <text class="annotation" x="748" y="340" text-anchor="end" fill="var(--text-subtle)" font-size="10">Lowest burden</text>
-      <text class="annotation" x="414" y="355" text-anchor="middle" fill="var(--text-subtle)" font-size="10">351 communities, ranked. Hover any bar for details.</text>
+      <text class="annotation" x="414" y="355" text-anchor="middle" fill="var(--text-subtle)" font-size="10">351 communities, ranked. Hover or tap any bar for details.</text>
 
       <!-- All 351 communities -->
       <rect class="bar-bg" x="80.0" y="35.8" width="1.7" height="274.2" data-name="Amherst" data-rank="1" data-pct="45.7" data-bill="$9,957" data-income="$21,800"/>
@@ -452,11 +452,17 @@ title: "Statewide Tax Burden"
     }
 
     var last = null;
-    wrap.addEventListener('mousemove', function(e){
-      var mx = svgX(e.clientX);
+
+    function hideTip() {
+      tip.classList.remove('visible');
+      last = null;
+    }
+
+    function showNear(clientX) {
+      var mx = svgX(clientX);
       /* Outside the bar region */
       if (mx < barInfo[0].cx - 2 || mx > barInfo[barInfo.length-1].cx + 2) {
-        tip.classList.remove('visible'); last = null; return;
+        hideTip(); return;
       }
       /* Find nearest bar */
       var best = barInfo[0], bestD = Math.abs(mx - best.cx);
@@ -480,9 +486,15 @@ title: "Statewide Tax Burden"
       if (ty < 0) ty = cr.bottom - r.top + 8;
       tip.style.left = tx + 'px';
       tip.style.top = ty + 'px';
-    });
-    wrap.addEventListener('mouseleave', function(){
-      tip.classList.remove('visible'); last = null;
+    }
+
+    wrap.addEventListener('mousemove', function(e){ showNear(e.clientX); });
+    wrap.addEventListener('mouseleave', hideTip);
+    /* Tap support: touch devices don't get mouseleave, so we also
+       wire up click on the wrap and dismiss on any click outside. */
+    wrap.addEventListener('click', function(e){ showNear(e.clientX); });
+    document.addEventListener('click', function(e){
+      if (!wrap.contains(e.target)) hideTip();
     });
   })();
   </script>
