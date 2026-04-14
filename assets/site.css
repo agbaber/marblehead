@@ -282,12 +282,7 @@ nav.site-nav .nav-brand {
   white-space: nowrap; margin-right: 4px;
   display: inline-flex; align-items: center; gap: 6px;
 }
-.nav-logo {
-  display: inline-block; width: 16px; height: 24px;
-  background: currentColor;
-  -webkit-mask: url(lighthouse/lighthouse.svg) center / contain no-repeat;
-          mask: url(lighthouse/lighthouse.svg) center / contain no-repeat;
-}
+.nav-logo { width: 22px; height: 22px; border-radius: 5px; }
 nav.site-nav .nav-inner > a,
 nav.site-nav .nav-dropdown-toggle {
   font-size: 13px; line-height: 1; color: var(--text-subtle);
