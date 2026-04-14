@@ -36,14 +36,47 @@ title: "General Fund Revenue, Free Cash, and Expenses"
       "plotTop": 48,
       "plotBottom": 380,
       "projectedFromIndex": 10,
+      "valuePrefix": "$",
+      "valueSuffix": "M",
+      "valueDecimals": 2,
       "series": [
+        {
+          "name": "Base revenue",
+          "className": "s-revenue",
+          "yPositions": [338,327,313,301,290,281,278,254,239,225,222,198,191,180,168,156],
+          "values": [71.32,74.06,77.06,79.73,82.54,84.77,85.39,91.45,95.13,98.79,99.60,105.42,107.12,110.00,113.00,116.00]
+        },
+        {
+          "name": "Free cash drawn",
+          "className": "s-swampscott",
+          "yPositions": [null,null,null,293,287,279,277,246,233,220,200,170,171,160,148,136],
+          "values": [null,null,null,2.03,0.73,0.44,0.41,2.13,1.70,1.31,5.50,7.00,5.00,5.00,5.00,5.00]
+        },
+        {
+          "name": "Tier 1 override",
+          "className": "s-tier-1",
+          "visibleWhen": "#view-tier1.active",
+          "yPositions": [null,null,null,null,null,null,null,null,null,null,null,null,166,135,112,100],
+          "values": [null,null,null,null,null,null,null,null,null,null,null,null,1.27,6.30,9.00,9.00]
+        },
+        {
+          "name": "Tier 2 override",
+          "className": "s-tier-2",
+          "visibleWhen": "#view-tier2.active",
+          "yPositions": [null,null,null,null,null,null,null,null,null,null,null,null,160,125,100,88],
+          "values": [null,null,null,null,null,null,null,null,null,null,null,null,2.81,8.71,12.00,12.00]
+        },
+        {
+          "name": "Tier 3 override",
+          "className": "s-tier-3",
+          "visibleWhen": "#view-tier3.active",
+          "yPositions": [null,null,null,null,null,null,null,null,null,null,null,null,154,118,88,76],
+          "values": [null,null,null,null,null,null,null,null,null,null,null,null,4.30,10.54,15.00,15.00]
+        },
         {
           "name": "Total expenditures",
           "className": "s-neutral",
-          "valuePrefix": "$",
-          "valueSuffix": "M",
-          "valueDecimals": 1,
-          "values": [70.5,73.2,76.9,81.8,83.3,85.2,85.8,93.6,96.8,100.1,105.0,112.5,120.5,126.5,133.0,139.5]
+          "values": [70.50,73.20,76.86,81.76,83.27,85.21,85.80,93.58,96.83,100.10,105.00,112.50,120.50,126.50,133.00,139.50]
         }
       ]
     }

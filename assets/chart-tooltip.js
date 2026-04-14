@@ -18,9 +18,18 @@
           "name":      "Total tax levy",
           "className": "s-revenue",          // color class for swatch
           "values":    [50.1, 51.6, ..., null],
-          "yPositions":[246,242, ...]        // optional per-year SVG y; if
+          "yPositions":[246,242, ...],       // optional per-year SVG y; if
                                              // omitted, we auto-detect from
                                              // polylines in the SVG
+          "valuePrefix": "$",                // optional, per-series override
+          "valueSuffix": "M",                // optional, per-series override
+          "valueDecimals": 2,                // optional, per-series override
+          "visibleWhen": "#view-tier1.active"// optional, CSS selector. The
+                                             // series is only rendered when
+                                             // the selector currently matches
+                                             // something in the document.
+                                             // Used by tabbed charts to show
+                                             // different series per view.
         },
         ...
       ]
@@ -145,7 +154,8 @@
         yPositions: yPositions || [],
         valuePrefix: s.valuePrefix,
         valueSuffix: s.valueSuffix,
-        valueDecimals: s.valueDecimals
+        valueDecimals: s.valueDecimals,
+        visibleWhen: s.visibleWhen
       };
     });
 
@@ -258,11 +268,22 @@
       hoverLine.setAttribute('y2', bottomY);
       hoverLine.classList.add('visible');
 
+      // Resolve per-series visibility. A series with `visibleWhen` set
+      // to a CSS selector is only shown if that selector currently
+      // matches something in the document. This lets tabbed charts
+      // (e.g. sustainability.html) show override tiers only for the
+      // active tab without any other runtime plumbing.
+      var visibleFlags = series.map(function (s) {
+        if (!s.visibleWhen) return true;
+        try { return !!document.querySelector(s.visibleWhen); }
+        catch (e) { return true; }
+      });
+
       // Position dots on the snapped x at each series' y.
       series.forEach(function (s, k) {
         var y = s.yPositions[idx];
         var v = s.values[idx];
-        if (y === null || y === undefined || v === null || v === undefined) {
+        if (!visibleFlags[k] || y === null || y === undefined || v === null || v === undefined) {
           dots[k].classList.remove('visible');
           return;
         }
@@ -279,9 +300,10 @@
         html += '<span class="chart-tooltip-projected">projected</span>';
       }
       html += '</div>';
-      series.forEach(function (s) {
+      series.forEach(function (s, k) {
         var v = s.values[idx];
         if (v === null || v === undefined) return;
+        if (!visibleFlags[k]) return;
         html += '<div class="chart-tooltip-row ' + escapeHtml(s.className) + '">' +
           '<span class="chart-tooltip-swatch"></span>' +
           '<span class="chart-tooltip-label">' + escapeHtml(s.name) + '</span>' +
