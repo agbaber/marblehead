@@ -75,6 +75,7 @@ og_url: https://marbleheaddata.org/
   }
   .explore-question-card {
     display: block;
+    position: relative;
     background: var(--surface);
     border: 1.5px solid var(--border);
     border-radius: var(--radius-md);
@@ -95,14 +96,43 @@ og_url: https://marbleheaddata.org/
   }
   .explore-question-card.has-pick {
     border-color: var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 7%, var(--surface));
+  }
+  .explore-question-card.has-pick::after {
+    content: "\2713";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--c-teal);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--bg);
   }
   .explore-card-pick {
     display: block;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--c-teal);
-    margin-top: 4px;
+    margin-top: 6px;
     line-height: 1.4;
+  }
+  .explore-question-card.has-pick .explore-card-pick::before {
+    content: "Your view";
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+    margin-bottom: 2px;
   }
 
   /* Share strip on landing */
@@ -160,9 +190,8 @@ og_url: https://marbleheaddata.org/
     padding: 4px 0 0;
   }
   .explore-shared-fresh:hover { text-decoration: underline; }
-  .shared-mode .explore-card-pick::before {
-    content: "Their view: ";
-    font-weight: 600;
+  .shared-mode .explore-question-card.has-pick .explore-card-pick::before {
+    content: "Their view";
   }
 
   /* Hide landing once a topic is active */
