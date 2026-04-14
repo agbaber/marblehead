@@ -338,48 +338,86 @@ og_url: https://marbleheaddata.org/
     margin-top: 10px;
   }
 
-  /* ── Composer (pinned bottom) ── */
-  .composer {
+  /* ── Notes pill (bottom-right) ── */
+  .notes-pill {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--c-navy);
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .notes-pill.visible { display: inline-flex; }
+  .notes-pill:hover { transform: scale(1.05); }
+  .notes-pill.pulse {
+    animation: pill-pulse 0.4s ease;
+  }
+  @keyframes pill-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+  .notes-pill-count {
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+    padding: 1px 7px;
+    font-size: 12px;
+  }
+
+  /* ── Notes panel (expanded) ── */
+  .notes-panel {
     position: fixed;
     bottom: 0;
-    left: 0;
     right: 0;
+    width: 380px;
+    max-width: 100vw;
+    max-height: 70vh;
+    z-index: 101;
     background: var(--surface);
-    border-top: 1px solid var(--border);
-    box-shadow: 0 -4px 20px rgba(15,42,61,0.08);
-    z-index: 100;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    box-shadow: 0 -8px 40px rgba(15,42,61,0.12);
     transform: translateY(100%);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
   }
-  .composer.visible { transform: translateY(0); }
+  .notes-panel.open { transform: translateY(0); }
 
-  .composer-inner {
-    max-width: var(--chart-max);
-    margin: 0 auto;
-    padding: 14px var(--gutter);
-  }
-
-  .composer-header {
+  .notes-panel-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 8px;
+    padding: 14px 18px 10px;
+    border-bottom: 1px solid var(--divider);
+    flex-shrink: 0;
   }
-  .composer-label {
-    font-size: 11px;
+  .notes-panel-title {
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     color: var(--text-subtle);
   }
-  .composer-actions {
+  .notes-panel-actions {
     display: flex;
     gap: 8px;
   }
-  .composer-btn {
+  .notes-panel-btn {
     font-size: 12px;
     font-weight: 600;
-    padding: 5px 12px;
+    padding: 4px 10px;
     border-radius: 6px;
     border: 1px solid var(--border);
     background: var(--surface);
@@ -387,53 +425,92 @@ og_url: https://marbleheaddata.org/
     cursor: pointer;
     transition: all 0.15s;
   }
-  .composer-btn:hover {
+  .notes-panel-btn:hover {
     border-color: var(--c-navy);
     color: var(--text);
   }
-  .composer-btn--copy {
-    background: var(--c-navy);
-    border-color: var(--c-navy);
-    color: #fff;
-  }
-  .composer-btn--copy:hover { opacity: 0.9; }
 
-  .composer-editor {
-    width: 100%;
-    min-height: 56px;
-    max-height: 140px;
-    padding: 10px 12px;
-    font-family: var(--font-sans);
+  .notes-panel-body {
+    overflow-y: auto;
+    padding: 12px 18px 18px;
+    flex: 1;
+  }
+
+  .notes-entry {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .notes-entry:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .notes-entry-topic {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-faint);
+    margin-bottom: 2px;
+  }
+  .notes-entry-position {
     font-size: 14px;
-    line-height: 1.55;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+    line-height: 1.35;
+  }
+  .notes-entry-textarea {
+    width: 100%;
+    min-height: 40px;
+    max-height: 100px;
+    padding: 8px 10px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    line-height: 1.5;
     color: var(--text);
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     resize: vertical;
     outline: none;
-    transition: border-color 0.15s;
   }
-  .composer-editor:focus {
+  .notes-entry-textarea:focus {
     border-color: var(--c-teal);
   }
-  .composer-editor::placeholder {
+  .notes-entry-textarea::placeholder {
     color: var(--text-faint);
   }
 
-  .composer-toggle {
-    position: absolute;
-    top: -32px;
-    right: var(--gutter);
+  .notes-empty {
+    font-size: 13px;
+    color: var(--text-faint);
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  /* Note indicator on answer cards */
+  .answer-note-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     font-size: 11px;
-    font-weight: 600;
-    color: var(--text-subtle);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-bottom: none;
-    border-radius: 6px 6px 0 0;
-    padding: 6px 12px;
-    cursor: pointer;
+    color: var(--c-teal);
+    margin-top: 8px;
+  }
+  .answer-note-badge::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: var(--c-teal);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 3h12v8H5l-3 3V3z'/%3E%3C/svg%3E") center/contain no-repeat;
+  }
+
+  @media (max-width: 599px) {
+    .notes-panel { width: 100vw; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+    .notes-pill { bottom: 16px; right: 16px; }
   }
 
   /* ── Responsive ── */
@@ -444,7 +521,6 @@ og_url: https://marbleheaddata.org/
       flex-direction: row;
     }
     .answer-card { flex: 1; }
-    .composer-editor { min-height: 44px; }
   }
 
   @media (max-width: 599px) {
@@ -2051,22 +2127,22 @@ og_url: https://marbleheaddata.org/
 
 </div>
 
-<!-- ── Composer ── -->
-<div class="composer" id="composer">
-  <button class="composer-toggle" id="composerToggle">Your notes</button>
-  <div class="composer-inner">
-    <div class="composer-header">
-      <span class="composer-label">Your take</span>
-      <div class="composer-actions">
-        <button class="composer-btn" id="composerClear">Clear</button>
-        <button class="composer-btn composer-btn--copy" id="composerCopy">Copy</button>
-      </div>
+<!-- ── Notes pill ── -->
+<button class="notes-pill" id="notesPill">
+  My positions <span class="notes-pill-count" id="notesPillCount">0</span>
+</button>
+
+<!-- ── Notes panel ── -->
+<div class="notes-panel" id="notesPanel">
+  <div class="notes-panel-header">
+    <span class="notes-panel-title">My positions</span>
+    <div class="notes-panel-actions">
+      <button class="notes-panel-btn" id="notesShare">Share</button>
+      <button class="notes-panel-btn" id="notesClose">Close</button>
     </div>
-    <textarea
-      class="composer-editor"
-      id="composerEditor"
-      placeholder="Pick a position above to start, or just type your own thoughts..."
-    ></textarea>
+  </div>
+  <div class="notes-panel-body" id="notesPanelBody">
+    <p class="notes-empty">Pick positions on the questions above</p>
   </div>
 </div>
 
@@ -2074,10 +2150,11 @@ og_url: https://marbleheaddata.org/
 (function () {
   /* ── State ── */
   var selections = {};   // { questionId: answerId }
-  var composerEl = document.getElementById('composer');
-  var editorEl   = document.getElementById('composerEditor');
-  var toggleBtn  = document.getElementById('composerToggle');
-  var composerMinimized = false;
+  var notesPill = document.getElementById('notesPill');
+  var notesPanel = document.getElementById('notesPanel');
+  var notesPanelBody = document.getElementById('notesPanelBody');
+  var notesPillCount = document.getElementById('notesPillCount');
+  var panelOpen = false;
 
   /* ── Inject hint labels and prompts ── */
   document.querySelectorAll('.answer-card').forEach(function (card) {
@@ -2184,6 +2261,7 @@ og_url: https://marbleheaddata.org/
 
     selections[question] = answer;
     writeURL(question, answer);
+    persistSelections();
 
     // Hide prompt
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
@@ -2202,6 +2280,7 @@ og_url: https://marbleheaddata.org/
     });
     delete selections[question];
     writeURL(question, null);
+    persistSelections();
 
     // Show prompt again
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
@@ -2217,10 +2296,13 @@ og_url: https://marbleheaddata.org/
 
       if (wasSelected) {
         deselectAnswer(question);
+        updateNotesPill();
+        updateNotesPanel();
+        updateCardBadges();
       } else {
         selectAnswer(question, answer);
-        showComposer();
-        seedComposer(question, answer);
+        updateNotesPill();
+        updateNotesPanel();
       }
     });
   });
@@ -2233,90 +2315,209 @@ og_url: https://marbleheaddata.org/
     });
   });
 
-  /* ── Composer ── */
-  function showComposer() {
-    composerEl.classList.add('visible');
-    composerMinimized = false;
+  /* ── Notes system ── */
+  var NOTES_KEY = 'explore-position-notes'; // { "override-a": "my note", ... }
+
+  function loadNotes() {
+    try {
+      return JSON.parse(localStorage.getItem(NOTES_KEY)) || {};
+    } catch (e) { return {}; }
   }
 
-  function seedComposer(question, answer) {
-    var card = document.querySelector(
-      '.answer-card[data-question="' + question + '"][data-answer="' + answer + '"]'
-    );
-    if (!card) return;
-    var heading = card.querySelector('h2').textContent;
-    var existing = editorEl.value.trim();
+  function saveNote(topic, answer, text) {
+    var notes = loadNotes();
+    var key = topic + '-' + answer;
+    if (text.trim()) {
+      notes[key] = text;
+    } else {
+      delete notes[key];
+    }
+    localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
+    updateCardBadges();
+  }
 
-    var questionEl = document.querySelector(
-      '.question-screen[data-topic="' + question + '"] .question-block h1'
-    );
-    var qText = questionEl ? questionEl.textContent.trim() : question;
-    var seed = qText + '\n  > ' + heading;
+  function getNote(topic, answer) {
+    var notes = loadNotes();
+    return notes[topic + '-' + answer] || '';
+  }
 
-    if (existing) {
-      if (existing.indexOf(heading) === -1) {
-        editorEl.value = existing + '\n\n' + seed;
+  function getPositionCount() {
+    return Object.keys(selections).length;
+  }
+
+  function updateNotesPill() {
+    var count = getPositionCount();
+    notesPillCount.textContent = count;
+    if (count > 0) {
+      notesPill.classList.add('visible');
+      // Pulse animation
+      notesPill.classList.remove('pulse');
+      void notesPill.offsetWidth; // reflow
+      notesPill.classList.add('pulse');
+    } else {
+      notesPill.classList.remove('visible');
+      if (panelOpen) closePanel();
+    }
+  }
+
+  function updateNotesPanel() {
+    var keys = Object.keys(selections);
+    if (!keys.length) {
+      notesPanelBody.innerHTML = '<p class="notes-empty">Pick positions on the questions above</p>';
+      return;
+    }
+
+    var notes = loadNotes();
+    var html = '';
+    keys.forEach(function (topic) {
+      var answer = selections[topic];
+      var card = document.querySelector(
+        '.answer-card[data-question="' + topic + '"][data-answer="' + answer + '"]'
+      );
+      if (!card) return;
+      var heading = card.querySelector('h2').textContent;
+      var questionEl = document.querySelector(
+        '.question-screen[data-topic="' + topic + '"] .question-block h1'
+      );
+      var qText = questionEl ? questionEl.textContent.trim() : topic;
+      var noteKey = topic + '-' + answer;
+      var noteVal = notes[noteKey] || '';
+
+      html += '<div class="notes-entry">';
+      html += '<div class="notes-entry-topic">' + qText + '</div>';
+      html += '<div class="notes-entry-position">' + heading + '</div>';
+      html += '<textarea class="notes-entry-textarea" data-note-key="' + noteKey + '" data-topic="' + topic + '" data-answer="' + answer + '" placeholder="Add your notes...">' + noteVal.replace(/</g, '&lt;') + '</textarea>';
+      html += '</div>';
+    });
+    notesPanelBody.innerHTML = html;
+
+    // Bind textarea events
+    notesPanelBody.querySelectorAll('.notes-entry-textarea').forEach(function (ta) {
+      ta.addEventListener('input', function () {
+        saveNote(this.dataset.topic, this.dataset.answer, this.value);
+      });
+    });
+  }
+
+  function updateCardBadges() {
+    var notes = loadNotes();
+    // Remove all existing badges
+    document.querySelectorAll('.answer-note-badge').forEach(function (b) { b.remove(); });
+    // Add badges where notes exist
+    Object.keys(notes).forEach(function (key) {
+      if (!notes[key].trim()) return;
+      var parts = key.split('-');
+      var answer = parts.pop();
+      var topic = parts.join('-');
+      var card = document.querySelector(
+        '.answer-card[data-question="' + topic + '"][data-answer="' + answer + '"]'
+      );
+      if (card && !card.querySelector('.answer-note-badge')) {
+        var badge = document.createElement('span');
+        badge.className = 'answer-note-badge';
+        badge.textContent = 'Notes';
+        card.appendChild(badge);
       }
-    } else {
-      editorEl.value = seed;
-    }
-
-    localStorage.setItem('explore-notes', editorEl.value);
+    });
   }
 
-  // Persist edits
-  editorEl.addEventListener('input', function () {
-    localStorage.setItem('explore-notes', editorEl.value);
-  });
-
-  // Restore composer notes on load
-  var saved = localStorage.getItem('explore-notes');
-  if (saved) {
-    editorEl.value = saved;
-    showComposer();
+  function openPanel() {
+    updateNotesPanel();
+    notesPanel.classList.add('open');
+    notesPill.classList.remove('visible');
+    panelOpen = true;
   }
 
-  // Toggle
-  toggleBtn.addEventListener('click', function () {
-    composerMinimized = !composerMinimized;
-    if (composerMinimized) {
-      composerEl.classList.remove('visible');
-    } else {
-      composerEl.classList.add('visible');
+  function closePanel() {
+    notesPanel.classList.remove('open');
+    panelOpen = false;
+    if (getPositionCount() > 0) {
+      notesPill.classList.add('visible');
     }
-  });
+  }
 
-  // Clear
-  document.getElementById('composerClear').addEventListener('click', function () {
-    editorEl.value = '';
-    localStorage.removeItem('explore-notes');
-  });
+  // Pill click
+  notesPill.addEventListener('click', openPanel);
 
-  // Copy
-  document.getElementById('composerCopy').addEventListener('click', function () {
-    editorEl.select();
-    navigator.clipboard.writeText(editorEl.value).then(function () {
-      var btn = document.getElementById('composerCopy');
-      btn.textContent = 'Copied';
-      setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+  // Close button
+  document.getElementById('notesClose').addEventListener('click', closePanel);
+
+  // Share button
+  document.getElementById('notesShare').addEventListener('click', function () {
+    var params = new URLSearchParams();
+    var keys = Object.keys(selections);
+    keys.forEach(function (topic, i) {
+      if (i === 0) {
+        params.set('q', topic);
+        params.set('pos', selections[topic]);
+      }
+      // Encode all positions in a compact param
+    });
+    // Build a multi-position share format: ?positions=override:a,schools:c,trust:b
+    var posStr = keys.map(function (t) { return t + ':' + selections[t]; }).join(',');
+    params.set('positions', posStr);
+    var url = window.location.origin + window.location.pathname + '?' + params.toString();
+    navigator.clipboard.writeText(url).then(function () {
+      var btn = document.getElementById('notesShare');
+      btn.textContent = 'Copied link';
+      setTimeout(function () { btn.textContent = 'Share'; }, 1500);
     });
   });
 
+  // Restore notes badges on load
+  updateCardBadges();
+
+  // Restore selections from localStorage
+  var savedSelections = null;
+  try { savedSelections = JSON.parse(localStorage.getItem('explore-selections')); } catch (e) {}
+  if (savedSelections) {
+    Object.keys(savedSelections).forEach(function (topic) {
+      selections[topic] = savedSelections[topic];
+    });
+    updateNotesPill();
+  }
+
+  // Persist selections
+  function persistSelections() {
+    localStorage.setItem('explore-selections', JSON.stringify(selections));
+  }
+
   /* ── Restore state on load ── */
-  // Priority: URL params > localStorage > landing state
+  // Priority: URL positions param > URL q param > localStorage > landing
   var initial = readURL();
   var savedTopic = null;
   try { savedTopic = localStorage.getItem(TOPIC_KEY); } catch (e) {}
 
-  if (initial.topic) {
+  // Check for shared positions URL: ?positions=override:a,schools:c
+  var positionsParam = new URLSearchParams(window.location.search).get('positions');
+  if (positionsParam) {
+    var pairs = positionsParam.split(',');
+    var firstTopic = null;
+    pairs.forEach(function (pair) {
+      var parts = pair.split(':');
+      if (parts.length === 2) {
+        if (!firstTopic) firstTopic = parts[0];
+        selections[parts[0]] = parts[1];
+      }
+    });
+    persistSelections();
+    if (firstTopic) switchTopic(initial.topic || firstTopic);
+    Object.keys(selections).forEach(function (t) {
+      selectAnswer(t, selections[t]);
+    });
+    updateNotesPill();
+  } else if (initial.topic) {
     switchTopic(initial.topic);
     if (initial.pos) {
       selectAnswer(initial.topic, initial.pos);
     }
+    updateNotesPill();
   } else if (savedTopic) {
     switchTopic(savedTopic);
+    updateNotesPill();
   } else {
     showLanding();
+    updateNotesPill();
   }
 
   // Handle back/forward navigation
