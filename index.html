@@ -189,34 +189,39 @@ og_url: https://marbleheaddata.org/
   }
 
   /* ── Your position banner ── */
-  .your-position {
+  .your-position { display: none; }
+
+  /* ── Next question button ── */
+  .next-question {
     display: none;
-    background: var(--surface);
-    border: 1px solid var(--c-teal);
-    border-left: 3px solid var(--c-teal);
-    border-radius: var(--radius-sm);
-    padding: 10px 14px;
-    margin-bottom: 20px;
-    font-size: 13px;
-    line-height: 1.45;
-    color: var(--text-muted);
+    margin: 24px 0 12px;
+    text-align: center;
   }
-  .your-position.visible { display: block; }
-  .your-position strong {
-    color: var(--text);
+  .next-question.visible { display: block; }
+  .next-question-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    font-family: var(--font-sans);
+    font-size: 14px;
     font-weight: 600;
-  }
-  .your-position-change {
-    color: var(--c-teal);
-    font-weight: 600;
-    cursor: pointer;
-    background: none;
+    color: #fff;
+    background: var(--c-navy);
     border: none;
-    font: inherit;
-    font-size: inherit;
-    padding: 0;
-    text-decoration: underline;
-    text-underline-offset: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+    box-shadow: var(--shadow-sm);
+  }
+  .next-question-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .next-question-label {
+    font-size: 11px;
+    color: var(--text-faint);
+    margin-top: 6px;
   }
 
   /* ── Related questions ── */
@@ -2684,20 +2689,6 @@ og_url: https://marbleheaddata.org/
       dot.classList.toggle('picked', !!selections[dot.dataset.topic] && dot.dataset.topic !== topic);
     });
 
-    // Your position banner
-    var posEl = document.getElementById('yourPosition');
-    var posText = document.getElementById('yourPositionText');
-    var answer = selections[topic];
-    if (answer) {
-      var h2 = document.querySelector(
-        '.answer-card[data-question="' + topic + '"][data-answer="' + answer + '"] h2'
-      );
-      posText.textContent = h2 ? h2.textContent : '';
-      posEl.classList.add('visible');
-    } else {
-      posEl.classList.remove('visible');
-    }
-
     // Related questions
     var relEl = document.getElementById('relatedQuestions');
     var relList = document.getElementById('relatedList');
@@ -2749,12 +2740,44 @@ og_url: https://marbleheaddata.org/
     window.scrollTo(0, 0);
   });
 
-  /* ── Position change button ── */
-  document.getElementById('yourPositionChange').addEventListener('click', function () {
-    if (currentTopic && selections[currentTopic]) {
-      deselectAnswer(currentTopic);
-      updateQuestionHeader(currentTopic);
+  /* ── Inject "Next question" buttons ── */
+  document.querySelectorAll('.question-screen').forEach(function (screen) {
+    var topic = screen.dataset.topic;
+    var idx = topicOrder.indexOf(topic);
+    var nextTopic = idx < topicOrder.length - 1 ? topicOrder[idx + 1] : null;
+
+    var wrap = document.createElement('div');
+    wrap.className = 'next-question';
+    wrap.dataset.topic = topic;
+
+    if (nextTopic) {
+      var nextLabel = topicLabels[nextTopic] || nextTopic;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'next-question-btn';
+      btn.innerHTML = 'Next question &rarr;';
+      btn.addEventListener('click', function () {
+        switchTopic(nextTopic);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      wrap.appendChild(btn);
+      var label = document.createElement('p');
+      label.className = 'next-question-label';
+      label.textContent = nextLabel;
+      wrap.appendChild(label);
+    } else {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'next-question-btn';
+      btn.innerHTML = 'Back to all questions';
+      btn.addEventListener('click', function () {
+        showLanding();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      wrap.appendChild(btn);
     }
+
+    screen.appendChild(wrap);
   });
 
   /* ── Build landing question cards from actual h1s ── */
@@ -2852,10 +2875,12 @@ og_url: https://marbleheaddata.org/
     persistSelections();
     updateQuestionHeader(question);
 
-    // Hide prompt
+    // Hide prompt, show next button
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
     var prompt = screen && screen.querySelector('.answers + .answers-prompt');
     if (prompt) prompt.classList.add('hidden');
+    var nextBtn = screen && screen.querySelector('.next-question');
+    if (nextBtn) nextBtn.classList.add('visible');
   }
 
   function deselectAnswer(question) {
