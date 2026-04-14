@@ -804,6 +804,85 @@ og_url: https://marbleheaddata.org/
     .notes-pill { bottom: 16px; right: 16px; }
   }
 
+  /* ── "You'll vote on this twice" procedural strip (landing only) ── */
+  .votes-strip {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-left: 3px solid var(--c-teal);
+    border-radius: var(--radius-md);
+    padding: 14px 18px 12px;
+    margin: 0 0 20px;
+  }
+  .votes-strip-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: var(--c-teal);
+    margin: 0 0 10px;
+  }
+  .votes-strip-steps {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .votes-strip-step {
+    flex: 1;
+    min-width: 0;
+  }
+  .votes-strip-step-when {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-subtle);
+    margin-bottom: 2px;
+  }
+  .votes-strip-step-what {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.35;
+    margin-bottom: 4px;
+  }
+  .votes-strip-step-desc {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .votes-strip-arrow {
+    font-size: 18px;
+    color: var(--text-subtle);
+    align-self: center;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .votes-strip-note {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 10px 0 0;
+  }
+  .votes-strip-link {
+    font-weight: 600;
+    color: var(--c-teal);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .votes-strip-link:hover { text-decoration: underline; }
+  @media (max-width: 540px) {
+    .votes-strip-steps {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .votes-strip-arrow {
+      transform: rotate(90deg);
+      align-self: flex-start;
+      margin-left: 2px;
+    }
+  }
+
   /* ── Responsive ── */
   @media (min-width: 600px) {
     .explore-landing-head h1 { font-size: 34px; }
@@ -835,6 +914,26 @@ og_url: https://marbleheaddata.org/
       <h1>Weighing the FY2027 override?</h1>
       <p>Pick the question on your mind. See the strongest case for each answer. Make your own call.</p>
     </div>
+
+    <!-- Procedural strip: explains the two-step voting process. Both votes have to pass. -->
+    <div class="votes-strip">
+      <p class="votes-strip-label">You'll vote on this twice</p>
+      <div class="votes-strip-steps">
+        <div class="votes-strip-step">
+          <div class="votes-strip-step-when">Mon, May 4</div>
+          <div class="votes-strip-step-what">Annual Town Meeting</div>
+          <p class="votes-strip-step-desc">Residents vote yes or no on sending the override to the ballot as three tiers, ceiling $15M.</p>
+        </div>
+        <div class="votes-strip-arrow" aria-hidden="true">&rarr;</div>
+        <div class="votes-strip-step">
+          <div class="votes-strip-step-when">Tue, Jun 9</div>
+          <div class="votes-strip-step-what">Annual Town Election</div>
+          <p class="votes-strip-step-desc">Voters pick the tier at the ballot. The highest tier with a majority sets the amount.</p>
+        </div>
+      </div>
+      <p class="votes-strip-note">Both votes have to pass for any tier to take effect. <a class="votes-strip-link" href="what-you-can-do.html#your-two-votes">How the two votes work together &rarr;</a></p>
+    </div>
+
     <div class="explore-shared-banner" id="sharedBanner">
       Tap any question to see the evidence behind their pick.
       <br><button type="button" class="explore-shared-fresh" id="sharedFresh">Start fresh with your own answers</button>
