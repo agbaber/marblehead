@@ -2230,7 +2230,6 @@ og_url: https://marbleheaddata.org/
   });
 
   var stageEl = document.querySelector('.explore-stage');
-  var TOPIC_KEY = 'explore-topic';
 
   /* ── URL state ── */
   // URL format: ?q=schools&pos=b
@@ -2264,8 +2263,6 @@ og_url: https://marbleheaddata.org/
     document.querySelectorAll('.question-screen').forEach(function (s) {
       s.style.display = s.dataset.topic === topic ? 'block' : 'none';
     });
-    // Remember for next visit
-    try { localStorage.setItem(TOPIC_KEY, topic); } catch (e) {}
     // Update URL, preserve pos if same topic has a selection
     writeURL(topic, selections[topic] || null);
   }
@@ -2293,7 +2290,6 @@ og_url: https://marbleheaddata.org/
   var startOverBtn = document.getElementById('startOver');
   if (startOverBtn) {
     startOverBtn.addEventListener('click', function () {
-      try { localStorage.removeItem(TOPIC_KEY); } catch (e) {}
       showLanding();
       window.scrollTo(0, 0);
     });
@@ -2615,8 +2611,6 @@ og_url: https://marbleheaddata.org/
   /* ── Restore state on load ── */
   // Priority: URL positions param > URL q param > localStorage > landing
   var initial = readURL();
-  var savedTopic = null;
-  try { savedTopic = localStorage.getItem(TOPIC_KEY); } catch (e) {}
 
   // Check for shared positions URL: ?positions=override:a,schools:c
   var positionsParam = new URLSearchParams(window.location.search).get('positions');
@@ -2638,10 +2632,8 @@ og_url: https://marbleheaddata.org/
       selectAnswer(initial.topic, initial.pos);
     }
     updateNotesPill();
-  } else if (savedTopic) {
-    switchTopic(savedTopic);
-    updateNotesPill();
   } else {
+    // Always show landing -- positions are visible on the cards
     showLanding();
     updateNotesPill();
   }
