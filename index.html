@@ -1250,6 +1250,26 @@ og_url: https://marbleheaddata.org/
     letter-spacing: 0.6px;
     color: var(--text-subtle);
     margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .votes-strip-countdown {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: none;
+    color: var(--c-navy);
+    background: color-mix(in srgb, var(--c-navy) 10%, transparent);
+    border-radius: 3px;
+    padding: 1px 5px;
+    white-space: nowrap;
+  }
+  .votes-strip-countdown.past {
+    color: var(--text-subtle);
+    background: color-mix(in srgb, var(--text-subtle) 10%, transparent);
   }
   .votes-strip-step-what {
     font-size: 14px;
@@ -1563,13 +1583,13 @@ og_url: https://marbleheaddata.org/
       <p class="votes-strip-label">Two votes decide the override</p>
       <div class="votes-strip-steps">
         <div class="votes-strip-step">
-          <div class="votes-strip-step-when">Mon, May 4</div>
+          <div class="votes-strip-step-when">Mon, May 4 <span class="votes-strip-countdown" data-date="2026-05-04"></span></div>
           <div class="votes-strip-step-what">Annual Town Meeting</div>
           <p class="votes-strip-step-desc">Residents vote yes or no on sending the override to the ballot as three tiers, ceiling $15M. A no ends the override here.</p>
         </div>
         <div class="votes-strip-arrow" aria-hidden="true">&rarr;</div>
         <div class="votes-strip-step">
-          <div class="votes-strip-step-when">Tue, Jun 9</div>
+          <div class="votes-strip-step-when">Tue, Jun 9 <span class="votes-strip-countdown" data-date="2026-06-09"></span></div>
           <div class="votes-strip-step-what">Annual Town Election</div>
           <p class="votes-strip-step-desc">If Town Meeting sends it forward, voters pick the tier at the ballot. The highest tier with a majority sets the amount.</p>
         </div>
@@ -6262,6 +6282,28 @@ og_url: https://marbleheaddata.org/
   fetchAllCounts(topicOrder);
   updateStatsStrip();
 
+})();
+</script>
+
+<script>
+(function () {
+  var spans = document.querySelectorAll('.votes-strip-countdown[data-date]');
+  var now = new Date();
+  now.setHours(0, 0, 0, 0);
+  spans.forEach(function (el) {
+    var target = new Date(el.getAttribute('data-date') + 'T00:00:00');
+    var diff = Math.ceil((target - now) / 86400000);
+    if (diff > 1) {
+      el.textContent = diff + ' days away';
+    } else if (diff === 1) {
+      el.textContent = 'tomorrow';
+    } else if (diff === 0) {
+      el.textContent = 'today';
+    } else {
+      el.textContent = 'complete';
+      el.classList.add('past');
+    }
+  });
 })();
 </script>
 
