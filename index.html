@@ -3402,6 +3402,7 @@ og_url: https://marbleheaddata.org/
     dot.title = topicLabels[topic] || topic;
     dot.addEventListener('click', function () {
       switchTopic(topic);
+      window.scrollTo(0, 0);
     });
     dotsEl.appendChild(dot);
   });
