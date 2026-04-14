@@ -132,6 +132,39 @@ og_url: https://marbleheaddata.org/
     color: #fff;
   }
 
+  /* Shared-positions view */
+  .explore-shared-banner {
+    display: none;
+    text-align: center;
+    padding: 12px 20px;
+    margin: 0 0 12px;
+    background: var(--surface);
+    border: 1.5px solid var(--c-teal);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .explore-shared-banner.visible { display: block; }
+  .explore-shared-fresh {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--c-teal);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0 0;
+  }
+  .explore-shared-fresh:hover { text-decoration: underline; }
+  .shared-mode .explore-card-pick::before {
+    content: "Their view: ";
+    font-weight: 600;
+  }
+
   /* Hide landing once a topic is active */
   .explore-stage.has-topic .explore-landing { display: none; }
   /* Hide question header in landing state */
@@ -739,6 +772,10 @@ og_url: https://marbleheaddata.org/
     <div class="explore-landing-head">
       <h1>Weighing the FY2027 override?</h1>
       <p>Pick the question on your mind. See the strongest case for each answer. Make your own call.</p>
+    </div>
+    <div class="explore-shared-banner" id="sharedBanner">
+      Tap any question to see the evidence behind their pick.
+      <br><button type="button" class="explore-shared-fresh" id="sharedFresh">Start fresh with your own answers</button>
     </div>
     <div class="explore-question-list" id="questionList">
       <!-- JS builds these from the actual question h1s -->
@@ -2805,6 +2842,21 @@ og_url: https://marbleheaddata.org/
     });
     updateQuestionHeader(topic);
     writeURL(topic, selections[topic] || null);
+
+    // Restore visual state if this topic already has a selection
+    var pick = selections[topic];
+    if (pick) {
+      document.querySelectorAll('.answer-card[data-question="' + topic + '"]').forEach(function (c) {
+        c.classList.remove('selected');
+        if (c.dataset.answer === pick) c.classList.add('selected');
+      });
+      viewEvidence(topic, pick);
+      var screen = document.querySelector('.question-screen[data-topic="' + topic + '"]');
+      var prompt = screen && screen.querySelector('.answers + .answers-prompt');
+      if (prompt) prompt.classList.add('hidden');
+      var nextBtn = screen && screen.querySelector('.next-question');
+      if (nextBtn) nextBtn.classList.add('visible');
+    }
   }
 
   /* Show landing state (no topic selected) */
@@ -3200,7 +3252,9 @@ og_url: https://marbleheaddata.org/
 
   // Check for shared positions URL: ?positions=override:a,schools:c
   var positionsParam = new URLSearchParams(window.location.search).get('positions');
+  var isSharedView = false;
   if (positionsParam) {
+    isSharedView = true;
     var pairs = positionsParam.split(',');
     pairs.forEach(function (pair) {
       var parts = pair.split(':');
@@ -3208,10 +3262,39 @@ og_url: https://marbleheaddata.org/
         selections[parts[0]] = parts[1];
       }
     });
-    persistSelections();
-    // Show landing with positions visible (not a single topic)
+    // Don't persist: these are someone else's picks, not the viewer's
     showLanding();
     updateNotesPill();
+
+    // Swap heading and show shared banner
+    var headingEl = document.querySelector('.explore-landing-head h1');
+    var subEl = document.querySelector('.explore-landing-head p');
+    if (headingEl) headingEl.textContent = 'Someone shared their positions';
+    if (subEl) subEl.textContent = 'See how they answered, then explore the questions yourself.';
+    var sharedBanner = document.getElementById('sharedBanner');
+    if (sharedBanner) sharedBanner.classList.add('visible');
+    document.querySelector('.explore-landing').classList.add('shared-mode');
+
+    // Hide "Share your positions" button in shared view
+    if (shareStripEl) shareStripEl.style.display = 'none';
+
+    // "Start fresh" clears shared picks and restores normal landing
+    document.getElementById('sharedFresh').addEventListener('click', function () {
+      Object.keys(selections).forEach(function (k) { delete selections[k]; });
+      isSharedView = false;
+      if (headingEl) headingEl.textContent = 'Weighing the FY2027 override?';
+      if (subEl) subEl.textContent = 'Pick the question on your mind. See the strongest case for each answer. Make your own call.';
+      sharedBanner.classList.remove('visible');
+      document.querySelector('.explore-landing').classList.remove('shared-mode');
+      if (shareStripEl) shareStripEl.style.display = '';
+      // Clear positions param from URL
+      var cleanUrl = new URL(window.location);
+      cleanUrl.searchParams.delete('positions');
+      history.replaceState(null, '', cleanUrl);
+      showLanding();
+      updateNotesPill();
+      updateNotesPanel();
+    });
   } else if (initial.topic) {
     switchTopic(initial.topic);
     if (initial.pos) {
