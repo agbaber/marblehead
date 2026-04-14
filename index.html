@@ -567,6 +567,68 @@ og_url: https://marbleheaddata.org/
     margin-top: 10px;
   }
 
+  /* ── Counter-argument (collapsed steelman of the opposing view) ── */
+  .counter-argument {
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid var(--divider);
+  }
+  .counter-argument > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    padding: 2px 0;
+  }
+  .counter-argument > summary::-webkit-details-marker { display: none; }
+  .counter-argument > summary::marker { content: ''; }
+  .counter-argument > summary::before {
+    content: "+";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--text-subtle);
+    border-radius: 50%;
+    color: var(--text-subtle);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .counter-argument[open] > summary::before {
+    content: "\2212";
+  }
+  .counter-argument-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+  }
+  .counter-argument-teaser {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .counter-argument[open] .counter-argument-teaser { display: none; }
+  .counter-argument-body {
+    padding: 12px 0 0 30px;
+  }
+  .counter-argument-body p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0 0 8px;
+  }
+  .counter-argument-body p:last-child { margin-bottom: 0; }
+  @media (max-width: 600px) {
+    .counter-argument-body { padding-left: 0; }
+  }
+
   /* ── Notes pill (bottom-right) ── */
   .notes-pill {
     position: fixed;
@@ -933,6 +995,24 @@ og_url: https://marbleheaddata.org/
           development, and other smaller departments.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            The cost drivers called "external" are mostly contract and
+            policy choices the town made over time: the 83% premium
+            split, the staffing composition, the pace of hiring. "Locked
+            in" is accurate for the FY27 budget cycle but not for a
+            five-year planning horizon. Treating a 12-week crunch as
+            evidence of inevitability skips the question of why longer
+            levers weren't pulled earlier.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence B -->
@@ -975,6 +1055,25 @@ og_url: https://marbleheaddata.org/
           independent scrutiny, but one hasn't been requested.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position A would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Even aggressive cuts don't close an $8.47M gap. The FY27
+            no-override budget already removes 22 town positions, 14
+            school positions, zeros out the <abbr class="g" title="Other Post-Employment Benefits">OPEB</abbr>
+            trust, and takes the library to 43% of its prior funding.
+            Without new revenue, the projected gap still grows to about
+            $18M by FY30. "Waste" may exist, but not in an amount that
+            can actually substitute for the override on the FY27
+            timeline.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence C -->
@@ -1054,6 +1153,23 @@ og_url: https://marbleheaddata.org/
           5% expense growth), not forecasts.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Positions A and B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            "Both things can be true" names a compromise but not a
+            mechanism. If part of the deficit really is avoidable,
+            approving the override without binding reform risks
+            repeating the pattern that created it: approve, relax,
+            return. The position accepts the arithmetic without
+            answering what would make the next budget look different.
+          </p>
+        </div>
+      </details>
     </div>
 
   </section>
@@ -1144,6 +1260,25 @@ og_url: https://marbleheaddata.org/
           Source: FY27 Proposed Budget, pages 1-4.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Adjustment isn't costless. Melrose and Stoneham both
+            adjusted after failed overrides and came back 18 months
+            later with larger ones (Melrose +75%) after losing staff
+            to higher-paying districts and rebuilding programs.
+            "Kept running" is technically true, but the version that
+            kept running had already shed what residents valued, and
+            the corrections needed a bigger override to begin
+            reversing.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence B: hard to reverse -->
@@ -1189,6 +1324,25 @@ og_url: https://marbleheaddata.org/
           School-side reductions
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position A would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Losses are hard to reverse only if they actually happen.
+            Marblehead has rejected 14 of 20 operating overrides since
+            1988 and kept running each time. Treating Melrose and
+            Stoneham as the default outcome presumes the same labor
+            market, the same residents staying put, and the same
+            political dynamics, when at least some rejections
+            historically have produced the cost-discipline their
+            supporters hoped for.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence C: force reform -->
@@ -1266,6 +1420,26 @@ og_url: https://marbleheaddata.org/
           This is a judgment call, not a data question.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Saying no creates pressure, but pressure doesn't pick a
+            direction. Nothing in a rejected override compels the
+            Select Board, <abbr class="g" title="Finance Committee">FinCom</abbr>,
+            or School Committee to pursue the specific changes critics
+            name, such as premium-split reform, a
+            <abbr class="g" title="Division of Local Services">DLS</abbr>
+            review, or detailed reporting. The same pressure produces
+            service cuts just as easily as it produces reform, and the
+            cuts are automatic while the reform is optional.
+          </p>
+        </div>
+      </details>
     </div>
 
   </section>
@@ -1386,6 +1560,25 @@ og_url: https://marbleheaddata.org/
           Peer compensation chart
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Not every staff position scales with total enrollment.
+            Special education, <abbr class="g" title="English Language Learner">ELL</abbr>,
+            and mandated compliance roles are driven by student need,
+            not by headcount, and they account for about 60-65% of the
+            added positions. A ratio comparison that treats all
+            <abbr class="g" title="Full-Time Equivalents">FTEs</abbr>
+            as interchangeable obscures what those staff actually do
+            and which positions the district can legally reduce.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence B: mandated -->
@@ -1462,6 +1655,25 @@ og_url: https://marbleheaddata.org/
           Staffing by role, four towns
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position A would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            "Mandated" names a legal floor, not every staffing choice.
+            Office and administrative headcount per 100 students is
+            roughly double Melrose's, and that's not a category
+            special education explains. How a district delivers
+            mandated services (in-classroom vs. separate, in-district
+            vs. out-of-district) is also a choice that drives cost,
+            and it sits inside the "required" column without being
+            strictly dictated by it.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence C: both true -->
@@ -1505,6 +1717,25 @@ og_url: https://marbleheaddata.org/
           Staffing by role comparison
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Positions A and B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            If the discretionary share is 7-13 positions, that's a
+            small slice of the overall staffing footprint. Fixing
+            only the non-mandated piece still leaves most of the
+            headcount and cost structure untouched, so the position
+            may understate how much of the remaining growth is also a
+            district choice made inside the "required" category, such
+            as service-delivery models or out-of-district placement
+            rates.
+          </p>
+        </div>
+      </details>
     </div>
 
   </section>
@@ -1599,6 +1830,23 @@ og_url: https://marbleheaddata.org/
           levy increase. Everything else has to come from cuts.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Towns with similar external cost pressures manage without
+            annual overrides. What varies isn't the presence of the
+            costs, it's the local choices about premium splits,
+            staffing composition, and total compensation that
+            determine how much of the 2.5% is already spoken for. The
+            cap exposes those choices; it doesn't create them.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence B: cap is the check -->
@@ -1642,6 +1890,25 @@ og_url: https://marbleheaddata.org/
           Full levy, bill, and inflation chart
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position A would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            The cap constrains revenue, not spending. When revenue
+            can't meet contractual obligations the town cannot
+            unilaterally change (pensions, <abbr class="g" title="Group Insurance Commission">GIC</abbr>
+            premiums, debt service), the cap forces cuts to services
+            residents use rather than restraining the cost drivers
+            that caused the squeeze. Inflation-beating growth in the
+            bill reflects what's happening above the cap, not
+            evidence the cap is loose.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence C: math is real but reform needed -->
@@ -1691,6 +1958,26 @@ og_url: https://marbleheaddata.org/
           Full sustainability projections
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Positions A and B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            The compromise position names both truths but doesn't
+            answer the timing question: can reform happen fast enough
+            to matter for FY27? Benefits reform takes contract
+            cycles, state aid reform takes years, and zoning changes
+            take longer still. If the deficit is now and reform is
+            slow, "both" tends to resolve in practice as "override
+            now, reform eventually" &ndash; which is the outcome
+            Position A says is required and Position B says repeats
+            the pattern.
+          </p>
+        </div>
+      </details>
     </div>
 
   </section>
@@ -1794,6 +2081,24 @@ og_url: https://marbleheaddata.org/
           Marblehead vs. Swampscott comparison
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            The rate is lowest partly because assessed values are
+            highest. A $750K house gets the rate comparison, but the
+            median Marblehead house isn't $750K &ndash; it's roughly
+            $1,010,100. What a homeowner writes on the check each
+            year is the bill, not the rate, and the median bill is
+            $8,677, already higher than Swampscott in absolute
+            dollars.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence B: bill is high -->
@@ -1826,6 +2131,24 @@ og_url: https://marbleheaddata.org/
           Bill as share of income
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Positions A and C would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Higher bills reflect higher home values, not heavier
+            taxation. Per-capita levy puts Marblehead within $63 of
+            Swampscott and roughly $1,000 above Melrose and Stoneham,
+            which suggests the burden per resident is closer to peer
+            towns than the median bill alone implies. And the bill
+            as a share of median income remains below Swampscott's
+            even at full Tier 3.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence C: per-capita -->
@@ -1856,6 +2179,25 @@ og_url: https://marbleheaddata.org/
           property values, higher service expectations, or both.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Per-capita levy averages across residents, which smooths
+            over how the burden actually lands on individual
+            households. What a retiree on a fixed income pays is the
+            bill on their specific home, not a per-capita figure. A
+            household whose home has appreciated past their salary
+            years feels the median bill, not the average. Which
+            metric is "fairest" depends on whose perspective is being
+            asked.
+          </p>
+        </div>
+      </details>
     </div>
 
   </section>
@@ -1946,6 +2288,23 @@ og_url: https://marbleheaddata.org/
           Phase-in: Year 1 is partial, Year 3 is full draw.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            The monthly framing understates the total cost. $165/mo
+            is $1,985/year, and because an override permanently
+            raises the levy ceiling, that's roughly $19,850 over ten
+            years at the average home value (and growing at 2.5%/yr
+            thereafter). "Monthly" is a reading lens, not a
+            description of the underlying commitment.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence B: compounds -->
@@ -1974,6 +2333,24 @@ og_url: https://marbleheaddata.org/
           Calculator with cumulative totals
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position C would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Ten-year totals cut both ways. Over the same window, the
+            no-override scenario also compounds: departing staff,
+            lost programs, the library at 43% of prior funding, and
+            the historical pattern in peer towns of a larger override
+            following a rejected one (Melrose +75%). A cost
+            projection that tallies taxes without tallying services
+            shows only one column of the ledger.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence C: compare to what you lose -->
@@ -2007,6 +2384,24 @@ og_url: https://marbleheaddata.org/
           Override case studies
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Comparing the tax cost to the published cuts only frames
+            the choice for voters who accept the current FY26
+            spending baseline as the appropriate floor. Residents
+            who believe the budget had room for discipline see the
+            no-override cut list as an opening bid, not the only
+            alternative. "Your cost vs. what you lose" hides that
+            assumption inside the framing.
+          </p>
+        </div>
+      </details>
     </div>
 
   </section>
@@ -2088,6 +2483,25 @@ og_url: https://marbleheaddata.org/
           How we got here
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            "Sized to last" assumes cost growth stays within
+            <abbr class="g" title="Finance Committee">FinCom</abbr>'s
+            projections. Health insurance premiums rose 11% for FY27
+            alone, well above the 5%/year assumption in the
+            sustainability chart. Even Tier 3 only closes the gap
+            briefly in the published projection before reopening by
+            FY30, so the multi-year cushion may be thinner than the
+            tier framing suggests.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence B: math says yes -->
@@ -2148,6 +2562,25 @@ og_url: https://marbleheaddata.org/
           Override case studies
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Positions A and C would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            The projections assume 5% expense growth and 3% revenue
+            growth. Those are illustrative inputs, not forecasts. If
+            healthcare inflation moderates, if benefits get
+            renegotiated at the next contract, or if new growth
+            picks up, the gap reopens later or smaller. The
+            arithmetic is real, but the inputs aren't fixed, and
+            "the math says we will" treats a projection as a
+            certainty.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence C: depends on reform -->
@@ -2179,6 +2612,27 @@ og_url: https://marbleheaddata.org/
           Reform options
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Treating reform as the intervening variable assumes the
+            political prerequisites exist. Premium-split
+            renegotiation requires both sides of collective
+            bargaining to agree. A
+            <abbr class="g" title="Division of Local Services">DLS</abbr>
+            review has to be requested. Budget-format changes need
+            someone inside the process to prioritize them. Betting on
+            reform after an override is betting that politics does
+            something it hasn't yet, which is exactly what Position B
+            says cannot be counted on.
+          </p>
+        </div>
+      </details>
     </div>
 
   </section>
@@ -2267,6 +2721,26 @@ og_url: https://marbleheaddata.org/
           takes years.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            "Nothing works in 12 weeks" is accurate for this budget
+            cycle &ndash; and that window is itself a choice. The
+            FY27 deadline was known years ago: the Finance Committee
+            flagged the structural risk starting in 2019 and named
+            FY26/27/28 as the projected deficit years in its 2025
+            transmittal. Treating the current calendar as the only
+            frame implicitly forgives years of not pursuing the
+            longer-horizon levers that could have closed part of the
+            gap by now.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence B: alternatives exist -->
@@ -2312,6 +2786,24 @@ og_url: https://marbleheaddata.org/
           residential overrides.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position A would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Each alternative named takes years to produce savings
+            and none of them close FY27's $8.47M by June. "Chosen
+            not to pursue" reads as motive, but the actual
+            constraint is collective bargaining cycles, zoning
+            processes, and state-level reform, all of which move on
+            their own schedule regardless of intent. Slow isn't the
+            same as avoided.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence C: both timelines -->
@@ -2345,6 +2837,24 @@ og_url: https://marbleheaddata.org/
           Pick your goal
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            This position frames the override as compatible with
+            reform, but compatibility depends on the town actually
+            doing the slower work after the immediate pressure
+            lifts. The named mechanism ("make reform an explicit
+            condition") has no binding enforcement and relies on
+            voter follow-through that historically tends to fade
+            once the next budget is balanced.
+          </p>
+        </div>
+      </details>
     </div>
 
   </section>
@@ -2422,6 +2932,24 @@ og_url: https://marbleheaddata.org/
           set annually by the Board of Health.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Scaling to home value is progressive, but the levy is
+            permanent and the fee is set annually. If contract costs
+            fall, change, or get renegotiated, a fee can be adjusted
+            or dropped; the raised levy ceiling stays in place
+            regardless. Asking who pays for the same service is only
+            one axis of "fair"; how reversible the commitment is, is
+            another.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence B: fee is fairer -->
@@ -2458,6 +2986,24 @@ og_url: https://marbleheaddata.org/
           dropped if costs change.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position A would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            "Same service, same price" treats a flat fee as neutral,
+            but a fixed $281 falls harder on lower-value households
+            as a share of home value and as a share of income. On a
+            $500K home, $281 is about 0.056% of value; on a $2M home
+            it's 0.014%. Whether that's fair depends on whether you
+            measure fairness by the service received or by capacity
+            to pay.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence C: follow the money -->
@@ -2499,6 +3045,25 @@ og_url: https://marbleheaddata.org/
           way.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Positions A and B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            The carve-out frees $1.15M regardless of how Question 2
+            resolves, so the accountability concern is separate from
+            the ballot choice. Framing the vote around "what
+            happened to the money" risks conflating two decisions:
+            how trash is funded going forward (Question 2), and how
+            the freed capacity gets used (future budgets). A voter
+            can be skeptical of the second without that changing
+            the math on the first.
+          </p>
+        </div>
+      </details>
     </div>
 
   </section>
@@ -2597,6 +3162,26 @@ og_url: https://marbleheaddata.org/
           Voting record since 1988
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            A check only works if someone uses it. Town Meeting and
+            <abbr class="g" title="Finance Committee">FinCom</abbr>
+            hearings draw a small fraction of registered voters, and
+            most residents encounter the budget through a 30-minute
+            slideshow rather than the
+            <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>.
+            The mechanisms exist on paper; whether they function as
+            oversight when attendance is this thin is a separate
+            question.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence B: transparency in name only -->
@@ -2637,6 +3222,27 @@ og_url: https://marbleheaddata.org/
           Reform options
         </a>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Position A would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            Low attendance is a pattern, not proof the information
+            isn't available. The
+            <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>,
+            the FY27 budget, the
+            <abbr class="g" title="Finance Committee">FinCom</abbr>
+            reports, and the DOR filings are public, and residents
+            who want to fact-check a claim can. "Hard to use" isn't
+            the same as "not transparent" &ndash; it's a usability
+            problem, and usability can be improved without a ballot
+            vote.
+          </p>
+        </div>
+      </details>
     </div>
 
     <!-- Evidence C: show the work -->
@@ -2676,6 +3282,24 @@ og_url: https://marbleheaddata.org/
           you're voting on $8.47M in new taxes.
         </p>
       </div>
+
+      <details class="counter-argument">
+        <summary>
+          <span class="counter-argument-label">Counter-argument</span>
+          <span class="counter-argument-teaser">Positions A and B would push back</span>
+        </summary>
+        <div class="counter-argument-body">
+          <p>
+            "Show the work" is a good standard but doesn't resolve
+            the underlying disagreement. Even a site that traces
+            every number to a primary source can't settle whether
+            past patterns justify extending credit to the town's
+            spending decisions going forward. That's a values
+            judgment about risk tolerance and past performance, not
+            a question more documentation can answer.
+          </p>
+        </div>
+      </details>
     </div>
 
   </section>
