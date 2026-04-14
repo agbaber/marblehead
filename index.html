@@ -24,16 +24,16 @@ og_url: https://marbleheaddata.org/
   }
   .explore-stage::before {
     content: "";
-    position: absolute;
-    top: 40px; right: -360px;
-    width: 520px; height: 780px;
+    position: fixed;
+    bottom: -150px; right: 0;
+    width: 840px; height: 1260px;
     background: url(assets/lighthouse/lighthouse.svg) center / contain no-repeat;
     opacity: 0.05;
     pointer-events: none;
     z-index: 0;
   }
   @media (max-width: 600px) {
-    .explore-stage::before { right: -200px; top: 60px; }
+    .explore-stage::before { right: -380px; }
   }
   html[data-theme="dark"] .explore-stage::before { filter: invert(1); opacity: 0.07; }
   @media (prefers-color-scheme: dark) {
