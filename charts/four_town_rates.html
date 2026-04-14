@@ -14,6 +14,16 @@ title: "Rate and Bill Comparison"
     margin: 0 0 4px 0; padding: 0;
     font-size: 13px; line-height: 1.55; color: var(--text-muted);
   }
+  details.notes { margin: 20px 0; }
+  details.notes summary {
+    font-size: 13px; font-weight: 600; color: var(--text-muted);
+    cursor: pointer; padding: 8px 0;
+  }
+  details.notes[open] summary { margin-bottom: 8px; }
+  details.notes p {
+    font-size: 12px; line-height: 1.6; color: var(--text-subtle);
+    margin: 0 0 10px;
+  }
 </style>
 <h1 class="h-center">Rate and Bill: Four North Shore Towns</h1>
   <p class="subtitle h-center">Marblehead, Swampscott, Melrose, and Stoneham, FY2003&ndash;FY2026, with FY2028 projections.</p>
@@ -21,7 +31,7 @@ title: "Rate and Bill Comparison"
   <ul class="tldr">
     <li><strong>Lowest tax rate</strong> of the four towns, because home values are high</li>
     <li><strong>Second-highest average bill</strong>, for the same reason</li>
-    <li><strong>Lowest tax burden relative to income</strong> (20th wealthiest of 351 MA communities)</li>
+    <li><strong>Lowest tax burden relative to income</strong>: only 24 of 350 MA communities have a lighter ratio</li>
   </ul>
 
   <h2 class="h-center">Tax rate, per $1,000 assessed value</h2>
@@ -200,15 +210,15 @@ title: "Rate and Bill Comparison"
       <text class="tick-label" x="240" y="298" text-anchor="middle">Melrose</text>
       <text class="tick-label" x="350" y="298" text-anchor="middle">Stoneham</text>
       <text class="tick-label" x="460" y="298" text-anchor="middle">Marblehead</text>
-      <!-- Income context (ACS median HH income / DOR per-capita rank of 351) -->
-      <text class="annotation" x="130" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$134K income / 64th</text>
-      <text class="annotation" x="240" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$134K income / 85th</text>
-      <text class="annotation" x="350" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$114K income / 115th</text>
-      <text class="annotation" x="460" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$182K income / 20th</text>
+      <!-- Income context -->
+      <text class="annotation" x="130" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$134K income</text>
+      <text class="annotation" x="240" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$134K income</text>
+      <text class="annotation" x="350" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$114K income</text>
+      <text class="annotation" x="460" y="312" text-anchor="middle" fill="var(--text-subtle)" font-size="9">$182K income</text>
     </svg>
   </div>
 
-  <p class="caption">Even at full Tier 3, Marblehead's tax-to-income ratio (7.1%) stays well below Swampscott's current 8.5%. Rankings are <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income out of 351 MA communities. Income: <abbr class="g" title="American Community Survey">ACS</abbr> 2020&ndash;2024 median household (&plusmn;$28K for Marblehead).</p>
+  <p class="caption">Even at full Tier 3, Marblehead's tax-to-income ratio (7.1%) stays well below Swampscott's current 8.5%. Statewide, only 24 of 350 Massachusetts communities have a lighter tax-to-income ratio than Marblehead. Income: <abbr class="g" title="American Community Survey">ACS</abbr> 2020&ndash;2024 median household (&plusmn;$28K for Marblehead). <a href="data/tax_bill_as_pct_of_income_351.csv">Full 350-community dataset</a>.</p>
 
   <h2 class="h-center">Reading the data</h2>
 
