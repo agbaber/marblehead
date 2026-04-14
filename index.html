@@ -350,11 +350,44 @@ og_url: https://marbleheaddata.org/
     border-color: var(--c-teal);
     box-shadow: 0 0 0 1px var(--c-teal), var(--shadow-md);
   }
+  .answer-card.viewing {
+    border-color: var(--c-navy);
+    box-shadow: var(--shadow-sm);
+  }
   .answer-card.dimmed {
     opacity: 0.5;
   }
   .answer-card.dimmed:hover {
     opacity: 0.8;
+  }
+
+  /* Checkmark button on cards */
+  .answer-check {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: transparent;
+    transition: all 0.15s;
+    z-index: 1;
+  }
+  .answer-check:hover {
+    border-color: var(--c-teal);
+    color: var(--c-teal);
+  }
+  .answer-card.selected .answer-check {
+    border-color: var(--c-teal);
+    background: var(--c-teal);
+    color: #fff;
   }
 
   /* Hint on answer cards */
@@ -2763,8 +2796,23 @@ og_url: https://marbleheaddata.org/
   var notesPillCount = document.getElementById('notesPillCount');
   var panelOpen = false;
 
-  /* ── Inject hint labels and prompts ── */
+  /* ── Inject checkmarks and hint labels ── */
   document.querySelectorAll('.answer-card').forEach(function (card) {
+    var check = document.createElement('button');
+    check.type = 'button';
+    check.className = 'answer-check';
+    check.innerHTML = '\u2713';
+    check.title = 'Make this my view';
+    check.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var q = card.dataset.question;
+      var a = card.dataset.answer;
+      selectAnswer(q, a);
+      updateNotesPill();
+      updateNotesPanel();
+    });
+    card.appendChild(check);
+
     var hint = document.createElement('span');
     hint.className = 'answer-hint';
     hint.textContent = 'See the data \u2192';
@@ -3004,13 +3052,40 @@ og_url: https://marbleheaddata.org/
     });
   }
 
-  /* ── Answer selection ── */
+  /* ── Answer selection (lock) vs. viewing (browse) ── */
+
+  // selectAnswer: locks your position (checkmark). Also opens evidence.
   function selectAnswer(question, answer) {
-    // Update card states
+    // Update checkmark: only the selected card gets .selected
     document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
       c.classList.remove('selected');
-      c.classList.toggle('dimmed', c.dataset.answer !== answer);
       if (c.dataset.answer === answer) c.classList.add('selected');
+    });
+
+    selections[question] = answer;
+    writeURL(question, answer);
+    persistSelections();
+    updateQuestionHeader(question);
+
+    // Also view this answer's evidence
+    viewEvidence(question, answer);
+
+    // Hide prompt, show next button
+    var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
+    var prompt = screen && screen.querySelector('.answers + .answers-prompt');
+    if (prompt) prompt.classList.add('hidden');
+    var nextBtn = screen && screen.querySelector('.next-question');
+    if (nextBtn) nextBtn.classList.add('visible');
+  }
+
+  // viewEvidence: opens one evidence panel, closes others. Does NOT change selection.
+  function viewEvidence(question, answer) {
+    // Remove viewing highlight from all cards (but keep .selected)
+    document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
+      c.classList.remove('viewing', 'dimmed');
+      if (c.dataset.answer === answer && !c.classList.contains('selected')) {
+        c.classList.add('viewing');
+      }
     });
 
     // Toggle evidence panels
@@ -3023,23 +3098,11 @@ og_url: https://marbleheaddata.org/
         }
       }
     });
-
-    selections[question] = answer;
-    writeURL(question, answer);
-    persistSelections();
-    updateQuestionHeader(question);
-
-    // Hide prompt, show next button
-    var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
-    var prompt = screen && screen.querySelector('.answers + .answers-prompt');
-    if (prompt) prompt.classList.add('hidden');
-    var nextBtn = screen && screen.querySelector('.next-question');
-    if (nextBtn) nextBtn.classList.add('visible');
   }
 
   function deselectAnswer(question) {
     document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
-      c.classList.remove('selected', 'dimmed');
+      c.classList.remove('selected', 'dimmed', 'viewing');
     });
     document.querySelectorAll('.evidence').forEach(function (e) {
       if (e.dataset.evidence && e.dataset.evidence.startsWith(question + '-')) {
@@ -3051,27 +3114,29 @@ og_url: https://marbleheaddata.org/
     persistSelections();
     updateQuestionHeader(question);
 
-    // Show prompt again
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
     var prompt = screen && screen.querySelector('.answers + .answers-prompt');
     if (prompt) prompt.classList.remove('hidden');
   }
 
+  // Card body click: first time selects, after that just browses evidence
   document.querySelectorAll('.answer-card').forEach(function (card) {
-    card.addEventListener('click', function () {
+    card.addEventListener('click', function (e) {
+      // Don't fire if they clicked the checkmark (handled separately)
+      if (e.target.closest('.answer-check')) return;
+
       var question = this.dataset.question;
       var answer   = this.dataset.answer;
-      var wasSelected = this.classList.contains('selected');
+      var hasSelection = !!selections[question];
 
-      if (wasSelected) {
-        deselectAnswer(question);
-        updateNotesPill();
-        updateNotesPanel();
-        updateCardBadges();
-      } else {
+      if (!hasSelection) {
+        // First pick: select AND view
         selectAnswer(question, answer);
         updateNotesPill();
         updateNotesPanel();
+      } else {
+        // Already have a pick: just browse this evidence
+        viewEvidence(question, answer);
       }
     });
   });
