@@ -1,0 +1,231 @@
+---
+title: "The 60-second version"
+og_title: "The 60-second version"
+og_description: The Marblehead FY27 override in under a minute. Three tiers, one trash question, what it costs, and when you vote.
+og_url: https://marbleheaddata.org/super-summary.html
+---
+<style>
+  .ss-header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .ss-header h1 {
+    margin-bottom: 6px;
+  }
+  .ss-header p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .ss-block {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    margin: 16px 0;
+    box-shadow: var(--shadow-sm);
+  }
+  .ss-block h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+    margin: 0 0 12px;
+  }
+  .ss-block p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 10px;
+  }
+  .ss-block p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ss-tiers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ss-tier {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+  }
+  .ss-tier-name {
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .ss-tier-amt {
+    font-weight: 700;
+    font-size: 18px;
+    font-variant-numeric: tabular-nums;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+  .ss-tier-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    flex: 1;
+    min-width: 0;
+  }
+  .ss-tier--1 { border-left: 4px solid var(--series-tier-1); }
+  .ss-tier--2 { border-left: 4px solid var(--series-tier-2); }
+  .ss-tier--3 { border-left: 4px solid var(--series-tier-3); }
+
+  .ss-cost-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+  .ss-cost-item {
+    padding: 10px 6px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+  }
+  .ss-cost-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-subtle);
+    margin-bottom: 4px;
+  }
+  .ss-cost-value {
+    font-size: 20px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+  }
+  .ss-cost-unit {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-subtle);
+  }
+
+  .ss-vote-date {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    padding: 8px 0;
+  }
+
+  .ss-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .ss-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--link);
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.15s;
+  }
+  .ss-links a:hover {
+    background: color-mix(in srgb, var(--link) 8%, var(--bg));
+  }
+  .ss-links a::after {
+    content: "\2192";
+    color: var(--text-faint);
+    font-size: 16px;
+  }
+
+  .ss-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 480px) {
+    .ss-tier { flex-wrap: wrap; gap: 4px 10px; }
+    .ss-tier-desc { flex-basis: 100%; order: 3; padding-left: 0; }
+    .ss-cost-grid { grid-template-columns: 1fr; }
+    .ss-cost-value { font-size: 18px; }
+  }
+</style>
+
+<div class="ss-header">
+  <h1>The 60-second version</h1>
+  <p>Everything below links to the full explanation if you want more.</p>
+</div>
+
+<div class="ss-block">
+  <h2>What's happening</h2>
+  <p>Marblehead's recurring expenses exceed recurring revenue by <strong>$8.47 million</strong> in FY27. The town has been patching the gap with one-time money for years. That's run out.</p>
+  <p>Voters will decide on a <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter59/Section21C">Prop 2.5</a> override to permanently raise property taxes. The last approved override was in 2005.</p>
+</div>
+
+<div class="ss-block">
+  <h2>The ballot</h2>
+  <p><strong>Question 1</strong> has three nested tiers. The highest tier that gets a majority wins. They are not additive.</p>
+  <div class="ss-tiers">
+    <div class="ss-tier ss-tier--1">
+      <span class="ss-tier-name">Tier 1</span>
+      <span class="ss-tier-desc">Restore: undo the cuts</span>
+      <span class="ss-tier-amt">$9M</span>
+    </div>
+    <div class="ss-tier ss-tier--2">
+      <span class="ss-tier-name">Tier 2</span>
+      <span class="ss-tier-desc">Stabilize: add positions, reduce reliance on free cash</span>
+      <span class="ss-tier-amt">$12M</span>
+    </div>
+    <div class="ss-tier ss-tier--3">
+      <span class="ss-tier-name">Tier 3</span>
+      <span class="ss-tier-desc">Invest: everything in 1 and 2, plus capital</span>
+      <span class="ss-tier-amt">$15M</span>
+    </div>
+  </div>
+  <p style="margin-top: 14px;"><strong>Question 2</strong> is separate: a <strong>$2.3M</strong> override to fund curbside trash through the tax levy. If it fails, the Board of Health imposes a flat fee (~$281/household) instead.</p>
+</div>
+
+<div class="ss-block">
+  <h2>What it costs at the average home ($1.29M)</h2>
+  <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">Monthly cost at full phase-in (Year 3). <a href="charts/override_calculator.html">Enter your home value.</a></p>
+  <div class="ss-cost-grid">
+    <div class="ss-cost-item">
+      <div class="ss-cost-label">Tier 1</div>
+      <div class="ss-cost-value">$99<span class="ss-cost-unit">/mo</span></div>
+    </div>
+    <div class="ss-cost-item">
+      <div class="ss-cost-label">Tier 2</div>
+      <div class="ss-cost-value">$132<span class="ss-cost-unit">/mo</span></div>
+    </div>
+    <div class="ss-cost-item">
+      <div class="ss-cost-label">Tier 3</div>
+      <div class="ss-cost-value">$165<span class="ss-cost-unit">/mo</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="ss-block">
+  <h2>When</h2>
+  <div class="ss-vote-date">June 9, 2026</div>
+  <p style="text-align: center;">Annual Town Election ballot. Requires a majority on each question.</p>
+</div>
+
+<div class="ss-block">
+  <h2>Go deeper</h2>
+  <div class="ss-links">
+    <a href="what-is-the-override.html">Full override breakdown</a>
+    <a href="no-override-budget.html">What happens if it fails</a>
+    <a href="the-debate.html">Both sides of the debate</a>
+    <a href="question-2-trash.html">Question 2: trash</a>
+    <a href="charts/override_calculator.html">Cost calculator for your home</a>
+  </div>
+</div>
+
+<p class="ss-note">Sources: Town Administrator's <a href="https://marbleheadma.gov/wp-content/uploads/2026/02/2026-State-of-the-Town-Presenation-Final.pdf">2026 State of the Town</a> (deficit); <a href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-08_Override_Presentation.pdf">April 8, 2026 override presentation</a> (tiers, costs, phase-in).</p>

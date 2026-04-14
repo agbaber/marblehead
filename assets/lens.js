@@ -1,7 +1,8 @@
 // Lens mode: lets readers filter the debate page to foreground one side's case.
 // Reads ?lens=for or ?lens=against from the URL. Contra perspectives collapse
-// into a clickable summary; the full text is one click away. The tldr box,
-// crux-map, and mini-synthesis blocks stay unfiltered.
+// into a clickable summary; the full text is one click away. The crux-map and
+// mini-synthesis blocks stay unfiltered. The meta-note (four-question framing)
+// hides when a lens is active since the reader has already picked a side.
 //
 // Progressive enhancement: without this script, both sides show in full.
 (function () {
@@ -123,13 +124,15 @@
       banner.classList.remove('lens-banner--visible');
     }
 
-    // Walk every perspective block NOT inside .tldr
+    // Hide meta-note (four-question framing) when a lens is active
+    if (metaNote) {
+      metaNote.style.display = lens ? 'none' : '';
+    }
+
+    // Walk every perspective block (including inside .tldr)
     var contraClass = lens ? 'perspective--' + VALID[lens] : null;
 
     perspectives.forEach(function (el) {
-      // Skip perspectives inside tldr
-      if (el.closest('.tldr')) return;
-
       var isContra = contraClass && el.classList.contains(contraClass);
 
       if (!lens || !isContra) {
@@ -183,9 +186,44 @@
     metaNote.parentNode.insertBefore(banner, metaNote);
   }
 
+  // --- Highlight and scroll to hash target ---
+  function highlightHash() {
+    var hash = window.location.hash;
+    if (!hash) return;
+    var target = document.querySelector(hash);
+    if (!target) return;
+
+    // Scroll into view
+    requestAnimationFrame(function () {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Add highlight pulse (CSS animation removes itself)
+    target.classList.add('lens-highlight');
+    target.addEventListener('animationend', function handler() {
+      target.removeEventListener('animationend', handler);
+      target.classList.remove('lens-highlight');
+    });
+  }
+
+  // Update share button to include hash
+  function updateShareUrl() {
+    var url = new URL(window.location);
+    return url.href;
+  }
+
+  // --- Init ---
   // Apply initial lens from URL
   var initial = getLens();
   applyLens(initial);
+
+  // Highlight hash target after lens is applied
+  if (initial) {
+    highlightHash();
+  }
+
+  // Re-highlight on hash change
+  window.addEventListener('hashchange', highlightHash);
 
   // Analytics (boolean only, no stance value)
   if (initial && typeof posthog !== 'undefined') {
