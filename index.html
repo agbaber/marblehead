@@ -3564,6 +3564,7 @@ og_url: https://marbleheaddata.org/
 
     btn.addEventListener('click', function () {
       switchTopic(topic);
+      window.scrollTo(0, 0);
     });
     listEl.appendChild(btn);
     landingCards[topic] = { el: btn, pick: pickSpan };
