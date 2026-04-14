@@ -122,6 +122,12 @@ Extracted into:
 
 Each year's draw stays on the levy permanently; Year 3 is the ongoing annual cost.
 
+## Household Income Distribution (ACS 2020&ndash;2024, table B19001)
+- Source: US Census Bureau, ACS 2020&ndash;2024 5-year estimates, table B19001, Marblehead town, Essex County, MA (FIPS 25-009-38400)
+- API endpoint: `https://api.census.gov/data/2024/acs/acs5?get=NAME,B19001_001E,...,B19001_017E&for=county%20subdivision:38400&in=state:25%20county:009`
+- Raw JSON saved: `data/acs_b19001_marblehead_2024.json`
+- B19001_001E = total households (8,289). Brackets _002E through _017E cover &lt;$10K up to $200K+. Percentiles on the override calculator are derived from cumulative bracket sums divided by _001E.
+
 ## Marblehead Independent & Current Articles (referenced across site)
 - ["Marblehead advances $122.8M budget built on cuts, defers override decisions"](https://www.marbleheadindependent.com/marblehead-advances-122-8m-budget-built-on-cuts-defers-override-decisions/) (Marblehead Independent)
 - ["Concerns over staffing cuts shape Marblehead school budget hearing"](https://www.marbleheadindependent.com/concerns-over-staffing-cuts-shape-marblehead-school-budget-hearing/) (Marblehead Independent)

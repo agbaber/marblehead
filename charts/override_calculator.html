@@ -84,6 +84,13 @@ title: "What the Override Costs You"
 @media (max-width: 520px) {
   .income-table th, .income-table td { padding: 8px 6px; font-size: 13px; }
 }
+.income-pctile { font-weight: 400; font-size: 12px; color: var(--text-subtle); }
+.income-note-row td {
+  text-align: left; font-weight: 400; font-size: 12px;
+  color: var(--text-subtle); padding-top: 2px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--divider);
+}
+.income-note-row td a { color: var(--link); }
 </style>
 <h1 class="h-center">What the Override Costs You</h1>
   <p class="subtitle h-center">Enter your home's assessed value to see the cost year-by-year for each override tier.</p>
@@ -110,7 +117,7 @@ title: "What the Override Costs You"
   <div id="cumulative-panel"></div>
 
   <h2 class="h-center">Income context</h2>
-  <p class="subtitle h-center">Override cost as a share of household income at the median and at lower thresholds.</p>
+  <p class="subtitle h-center">Override cost as a share of household income across the distribution.</p>
   <div id="income-panel"></div>
 
   <div class="footnotes">
@@ -118,7 +125,7 @@ title: "What the Override Costs You"
     <p><span class="footnote-marker"></span>Tiers are nested: Tier 2 includes Tier 1, Tier 3 includes Tiers 1 and 2. The highest passing tier sets the amount.</p>
     <p><span class="footnote-marker"></span>Year 2 and Year 3 are cumulative and permanent: each year's figure is your new total ongoing tax bill once that year's draw kicks in, not a one-time increase.</p>
     <p><span class="footnote-marker"></span>Cumulative totals assume the Year 3 rate continues unchanged. Actual future rates may differ if the town adjusts spending or if a subsequent override passes.</p>
-    <p><span class="footnote-marker"></span>Median household income ($182,132) from US Census Bureau, ACS 2020-2024 5-year estimates for Marblehead town, Essex County, MA. 8,289 households total. Income thresholds shown ($50K, $75K) roughly correspond to the 16th and 28th percentiles of Marblehead's household income distribution.</p>
+    <p><span class="footnote-marker"></span>Median household income ($182,132) from US Census Bureau, ACS 2020&ndash;2024 5-year estimates, table B19001, for Marblehead town, Essex County, MA (FIPS 25-009-38400). 8,289 households total. Percentile positions derived from cumulative B19001 bracket counts divided by B19001_001E (total): under $50K = 16% (B19001_002E through _010E), under $75K = 23% (through _012E), under $125K = 36% (through _014E). The $200K+ bracket (B19001_017E) contains 47% of households; $250K and $400K thresholds both fall within that bracket. Raw data saved in data/acs_b19001_marblehead_2024.json.</p>
     <p><span class="footnote-marker"></span>Trash/recycling (Question 2) is not included above. You'll pay for it either way: as a levy increase (~$19/mo on a $1M home) or as a flat fee (~$23/mo per household) if the override fails. See <a href="../question-2-trash.html">Question 2: trash funding</a> for the full personal-cost calculator and context.</p>
   </div>
 
@@ -227,11 +234,16 @@ function renderCumulativePanel(assessedValue) {
   return '<table class="cumul-table"><thead>' + header + '</thead><tbody>' + rows + '</tbody></table>';
 }
 
-// Income context: show Year 3 annual cost as % of income at three thresholds
+// Income context: show Year 3 annual cost as % of income at several thresholds.
+// Percentiles from ACS 2020-2024 table B19001, Marblehead town (FIPS 25-009-38400).
+// 8,289 total households. Cumulative shares computed from bracket counts / B19001_001E.
 var INCOME_THRESHOLDS = [
-  { label: '$50,000 household', income: 50000, note: 'roughly 16th percentile in Marblehead' },
-  { label: '$75,000 household', income: 75000, note: 'roughly 28th percentile' },
-  { label: '$182,132 (median)', income: 182132, note: 'ACS 2020\u20132024' },
+  { label: '$50,000 household',  income:  50000, note: 'roughly 16th percentile', relief: true },
+  { label: '$75,000 household',  income:  75000, note: 'roughly 23rd percentile', relief: true },
+  { label: '$125,000 household', income: 125000, note: 'roughly 36th percentile', relief: false },
+  { label: '$182,132 (median)',  income: 182132, note: '50th percentile',         relief: false },
+  { label: '$250,000 household', income: 250000, note: 'top 47% ($200K+ bracket)', relief: false },
+  { label: '$400,000 household', income: 400000, note: 'top 47% ($200K+ bracket)', relief: false },
 ];
 
 function pct(n) {
@@ -245,10 +257,14 @@ function renderIncomePanel(assessedValue) {
       var annual = annualForYear(assessedValue, tier, 3);
       return '<td>' + pct(annual / t.income) + '</td>';
     }).join('');
-    return '<tr><td>' + t.label + '</td>' + cells + '</tr>';
+    var row = '<tr><td>' + t.label + '<br><span class="income-pctile">' + t.note + '</span></td>' + cells + '</tr>';
+    if (t.income === 75000) {
+      row += '<tr class="income-note-row"><td colspan="4">Seniors under $75K may qualify for <a href="../senior-tax-relief.html">Circuit Breaker relief</a></td></tr>';
+    }
+    return row;
   }).join('');
   return '<table class="income-table"><thead>' + header + '</thead><tbody>' + rows + '</tbody></table>' +
-    '<p class="source" style="text-align:center;">Percentage of household income consumed by the Year 3 (full phase-in) annual override cost at your assessed value. Source: US Census Bureau, ACS 2020\u20132024 5-year estimates, Marblehead town. 8,289 total households; approximately 16% earn under $50K and 28% earn under $75K.</p>';
+    '<p class="source" style="text-align:center;">Percentage of household income consumed by the Year 3 (full phase-in) annual override cost at your assessed value. Source: US Census Bureau, ACS 2020\u20132024 5-year estimates, table B19001, Marblehead town. 8,289 total households. Percentiles from cumulative bracket counts: 16% under $50K, 23% under $75K, 36% under $125K. The $200K+ bracket contains 47% of households.</p>';
 }
 
 function update() {
