@@ -840,17 +840,17 @@ details.notes[open] > summary {
 .page.page--home::before {
   content: "";
   position: absolute;
-  top: 0; left: 50%; transform: translateX(-50%);
-  width: 280px; height: 420px;
+  top: -20px; right: -40px;
+  width: 320px; height: 480px;
   background: url(lighthouse/lighthouse.svg) center / contain no-repeat;
-  opacity: 0.06;
+  opacity: 0.05;
   pointer-events: none;
   z-index: 0;
 }
 @media (prefers-color-scheme: dark) {
-  html:not([data-theme="light"]) .page.page--home::before { filter: invert(1); opacity: 0.08; }
+  html:not([data-theme="light"]) .page.page--home::before { filter: invert(1); opacity: 0.07; }
 }
-html[data-theme="dark"] .page.page--home::before { filter: invert(1); opacity: 0.08; }
+html[data-theme="dark"] .page.page--home::before { filter: invert(1); opacity: 0.07; }
 .page.page--home > * { position: relative; z-index: 1; }
 
 .question-list {
