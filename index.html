@@ -412,18 +412,6 @@ og_url: https://marbleheaddata.org/
     display: none;
   }
 
-  /* Prompt below answer cards */
-  .answers-prompt {
-    text-align: center;
-    font-size: 13px;
-    color: var(--text-faint);
-    margin: -12px 0 20px;
-    transition: opacity 0.3s;
-  }
-  .answers-prompt.hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
 
   .answer-label {
     font-size: 10px;
@@ -2719,12 +2707,6 @@ og_url: https://marbleheaddata.org/
     hint.textContent = 'See the data \u2192';
     card.appendChild(hint);
   });
-  document.querySelectorAll('.answers').forEach(function (answers) {
-    var prompt = document.createElement('p');
-    prompt.className = 'answers-prompt';
-    prompt.textContent = 'Pick the one closest to your view to see the evidence';
-    answers.after(prompt);
-  });
 
   var stageEl = document.querySelector('.explore-stage');
   var currentTopic = null;
@@ -2972,8 +2954,6 @@ og_url: https://marbleheaddata.org/
 
     // Hide prompt, show next button
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
-    var prompt = screen && screen.querySelector('.answers + .answers-prompt');
-    if (prompt) prompt.classList.add('hidden');
     var nextBtn = screen && screen.querySelector('.next-question');
     if (nextBtn) nextBtn.classList.add('visible');
   }
@@ -3015,8 +2995,6 @@ og_url: https://marbleheaddata.org/
     updateQuestionHeader(question);
 
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
-    var prompt = screen && screen.querySelector('.answers + .answers-prompt');
-    if (prompt) prompt.classList.remove('hidden');
   }
 
   // Card body click: first time selects, after that just browses evidence
