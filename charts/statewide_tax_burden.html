@@ -29,7 +29,7 @@ title: "Statewide Tax Burden"
   <ul class="tldr">
     <li><strong>Only 24 of 351 communities</strong> have a lighter tax-to-income ratio than Marblehead (9.6%)</li>
     <li><strong>Swampscott is at 15.1%</strong>, nearly 60% higher relative burden</li>
-    <li><strong>The statewide median is 14.1%</strong> (Walpole)</li>
+    <li><strong>The statewide median is 14.1%</strong></li>
   </ul>
 
   <div class="legend">
@@ -61,10 +61,6 @@ title: "Statewide Tax Burden"
       <text class="annotation" x="80" y="340" text-anchor="start" fill="var(--text-subtle)" font-size="10">Highest burden</text>
       <text class="annotation" x="748" y="340" text-anchor="end" fill="var(--text-subtle)" font-size="10">Lowest burden</text>
       <text class="annotation" x="414" y="355" text-anchor="middle" fill="var(--text-subtle)" font-size="10">351 communities, ranked. Hover any bar for details.</text>
-
-      <!-- Median line -->
-      <line x1="412.5" y1="310" x2="412.5" y2="225" stroke="var(--divider)" stroke-width="1" stroke-dasharray="4 2"/>
-      <text class="annotation" x="412.5" y="222" text-anchor="middle" fill="var(--text-subtle)" font-size="9">median 14.1%</text>
 
       <!-- All 351 communities -->
       <rect class="bar-bg" x="80.0" y="35.8" width="1.7" height="274.2" data-name="Amherst" data-rank="1" data-pct="45.7" data-bill="$9,957" data-income="$21,800"/>
@@ -438,9 +434,39 @@ title: "Statewide Tax Burden"
     var wrap = document.getElementById('scatter-wrap');
     var tip = document.getElementById('scatter-tip');
     if (!wrap || !tip) return;
-    wrap.addEventListener('mouseover', function(e){
-      var c = e.target.closest('[data-name]');
-      if (!c) { tip.classList.remove('visible'); return; }
+    var svg = wrap.querySelector('svg');
+    var bars = Array.from(svg.querySelectorAll('[data-name]'));
+    if (!bars.length) return;
+
+    /* Pre-compute each bar's centre-x in SVG coords */
+    var barInfo = bars.map(function(b){
+      var x = parseFloat(b.getAttribute('x'));
+      var w = parseFloat(b.getAttribute('width'));
+      return { el: b, cx: x + w / 2 };
+    });
+
+    function svgX(clientX) {
+      var pt = svg.createSVGPoint();
+      pt.x = clientX; pt.y = 0;
+      return pt.matrixTransform(svg.getScreenCTM().inverse()).x;
+    }
+
+    var last = null;
+    wrap.addEventListener('mousemove', function(e){
+      var mx = svgX(e.clientX);
+      /* Outside the bar region */
+      if (mx < barInfo[0].cx - 2 || mx > barInfo[barInfo.length-1].cx + 2) {
+        tip.classList.remove('visible'); last = null; return;
+      }
+      /* Find nearest bar */
+      var best = barInfo[0], bestD = Math.abs(mx - best.cx);
+      for (var i = 1; i < barInfo.length; i++) {
+        var d = Math.abs(mx - barInfo[i].cx);
+        if (d < bestD) { best = barInfo[i]; bestD = d; }
+      }
+      var c = best.el;
+      if (c === last) return;
+      last = c;
       tip.innerHTML = '<strong>' + c.dataset.name + '</strong><br>' +
         c.dataset.pct + '% of income (rank ' + c.dataset.rank + ' of 351)<br>' +
         '<span class="muted">Bill: ' + c.dataset.bill + ' &middot; Income: ' + c.dataset.income + '</span>';
@@ -455,9 +481,8 @@ title: "Statewide Tax Burden"
       tip.style.left = tx + 'px';
       tip.style.top = ty + 'px';
     });
-    wrap.addEventListener('mouseout', function(e){
-      if (!e.relatedTarget || !e.relatedTarget.closest('[data-name]'))
-        tip.classList.remove('visible');
+    wrap.addEventListener('mouseleave', function(){
+      tip.classList.remove('visible'); last = null;
     });
   })();
   </script>
