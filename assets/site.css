@@ -3654,70 +3654,33 @@ abbr.g:focus::after {
    Start-here reading path (homepage)
    ========================================================================== */
 
-.start-here {
+.start-here-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   background: color-mix(in srgb, var(--c-teal) 5%, var(--surface));
   border: 1px solid color-mix(in srgb, var(--c-teal) 20%, var(--border));
   border-radius: var(--radius-md);
-  padding: 20px 22px 18px;
+  padding: 14px 20px;
   margin: 0 0 28px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
 }
-.start-here-eyebrow {
+.start-here-link:hover {
+  background: color-mix(in srgb, var(--c-teal) 10%, var(--surface));
+  border-color: var(--c-teal);
+}
+.start-here-link-eyebrow {
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.4px;
   color: var(--c-teal);
-  margin-bottom: 6px;
 }
-.start-here p {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.55;
-  margin: 0 0 12px;
-}
-.start-here-steps {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  counter-reset: step;
-}
-.start-here-steps li {
-  counter-increment: step;
-  padding: 8px 0;
-  border-top: 1px solid var(--divider);
-  font-size: 14px;
-}
-.start-here-steps li::before {
-  content: counter(step) ".";
-  font-weight: 700;
-  color: var(--c-teal);
-  margin-right: 8px;
-}
-.start-here-steps a {
+.start-here-link-title {
+  font-size: 15px;
   font-weight: 600;
-}
-.start-here-steps .start-here-desc {
-  color: var(--text-subtle);
-  font-size: 13px;
-  display: block;
-  margin: 2px 0 0 22px;
-}
-.start-here-quick {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-subtle);
-  text-decoration: none;
-  margin-top: 14px;
-  padding: 6px 14px;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  transition: background 0.15s, color 0.15s;
-}
-.start-here-quick:hover {
-  background: color-mix(in srgb, var(--link) 8%, var(--surface));
-  color: var(--link);
-  border-color: var(--link);
+  color: var(--text);
 }
 
 /* ==========================================================================
