@@ -3109,6 +3109,11 @@ blockquote.quote--mixed p {
   color: var(--c-teal);
   background: color-mix(in srgb, var(--c-teal) 12%, transparent);
 }
+.tier-tag--restore-plus {
+  color: var(--c-teal);
+  background: color-mix(in srgb, var(--c-teal) 6%, transparent);
+  border: 1px dashed color-mix(in srgb, var(--c-teal) 35%, transparent);
+}
 .tier-tag--new {
   color: var(--c-navy);
   background: color-mix(in srgb, var(--c-navy) 12%, transparent);
