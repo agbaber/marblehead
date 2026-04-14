@@ -21,17 +21,19 @@ og_url: https://marbleheaddata.org/
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
   }
   .explore-stage::before {
     content: "";
     position: absolute;
-    top: -40px; right: -200px;
+    top: 40px; right: -360px;
     width: 520px; height: 780px;
     background: url(assets/lighthouse/lighthouse.svg) center / contain no-repeat;
     opacity: 0.05;
     pointer-events: none;
     z-index: 0;
+  }
+  @media (max-width: 600px) {
+    .explore-stage::before { right: -200px; top: 60px; }
   }
   html[data-theme="dark"] .explore-stage::before { filter: invert(1); opacity: 0.07; }
   @media (prefers-color-scheme: dark) {
