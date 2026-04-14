@@ -423,6 +423,9 @@ og_url: https://marbleheaddata.org/explore.html
   <nav class="topic-bar" aria-label="Topics">
     <button class="topic-pill active" data-topic="override">Override</button>
     <button class="topic-pill" data-topic="voteno">Vote no</button>
+    <button class="topic-pill" data-topic="levy">2.5% cap</button>
+    <button class="topic-pill" data-topic="taxrank">Tax rank</button>
+    <button class="topic-pill" data-topic="mycost">My cost</button>
     <button class="topic-pill" data-topic="schools">Schools</button>
     <button class="topic-pill" data-topic="library">Library cuts</button>
     <button class="topic-pill" data-topic="trust">Trust</button>
@@ -1180,6 +1183,483 @@ og_url: https://marbleheaddata.org/explore.html
         </p>
         <a class="evidence-chart-link" href="inside-school-staffing.html#peer-comparison">
           Staffing by role comparison
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       QUESTION: Why don't annual 2.5% tax increases keep up?
+       ═══════════════════════════════════════════════════ -->
+  <section class="question-screen" data-topic="levy" style="display:none">
+
+    <div class="question-block">
+      <h1>Why don't annual 2.5% tax increases keep up?</h1>
+      <p class="question-context">
+        Prop 2&frac12; caps the levy increase at 2.5% per year. But health
+        insurance, pensions, and contracted salaries grow faster. Where
+        does the gap come from?
+      </p>
+    </div>
+
+    <div class="answers">
+      <div class="answer-card" data-answer="a" data-question="levy">
+        <p class="answer-label">Position A</p>
+        <h2>The cap was never designed for the cost structure towns face today</h2>
+        <p class="answer-summary">
+          Health insurance grows 7-11% per year. Pensions grow 9%. A 2.5%
+          revenue cap cannot keep up with costs the town does not control.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="b" data-question="levy">
+        <p class="answer-label">Position B</p>
+        <h2>The cap is the only check on spending growth</h2>
+        <p class="answer-summary">
+          Without the cap, spending would grow unchecked. The pressure it
+          creates is the point: it forces the town to prioritize.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="c" data-question="levy">
+        <p class="answer-label">Position C</p>
+        <h2>The math is real, but so is the need for reform</h2>
+        <p class="answer-summary">
+          The structural gap is not the town's fault. But closing it with
+          overrides alone, without fixing cost drivers, is not sustainable.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence A: cap can't keep up -->
+    <div class="evidence" data-evidence="levy-a">
+      <div class="evidence-header">
+        <h3>The case for "the cap can't keep up"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Health insurance and levy growth, indexed</h4>
+
+        <div class="chart-wrapper">
+          <svg class="chart" viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tax levy growth vs health insurance growth, FY06 to FY27, both indexed to 100.">
+            <line class="axis-base" x1="60" y1="200" x2="620" y2="200"/>
+            <text class="tick-label" x="53" y="204" text-anchor="end">100</text>
+            <text class="tick-label" x="53" y="136" text-anchor="end">150</text>
+            <text class="tick-label" x="53" y="68" text-anchor="end">200</text>
+            <line class="grid-minor" x1="60" y1="132" x2="620" y2="132"/>
+            <line class="grid-minor" x1="60" y1="64" x2="620" y2="64"/>
+            <text class="tick-label tick-label--major" x="60" y="224" text-anchor="middle">FY06</text>
+            <text class="tick-label tick-label--major" x="340" y="224" text-anchor="middle">FY16</text>
+            <text class="tick-label tick-label--major" x="620" y="224" text-anchor="middle">FY27</text>
+            <polyline class="data-line s-revenue" points="60,200 87,197 113,193 140,189 167,183 193,179 220,172 247,169 273,163 300,156 327,149 353,142 380,135 407,130 433,124 460,118 487,106 513,98 540,88 567,82 593,74 620,66"/>
+            <polyline class="data-line s-neutral" points="60,200 87,191 113,178 140,157 167,168 193,160 220,141 247,156 273,144 300,135 327,127 353,120 380,119 407,113 460,108 487,97 513,85 540,104 567,108 593,86 620,60"/>
+            <text class="end-label s-neutral" x="628" y="57">+110% health ins.</text>
+            <text class="end-label s-revenue" x="628" y="74">+103% levy</text>
+          </svg>
+        </div>
+
+        <p class="caption">
+          Both indexed to FY06 = 100. Health insurance spending more than
+          doubled. The levy grew at a similar total rate, but the levy funds
+          everything, not just insurance. As insurance takes a larger share,
+          less is left for services.
+        </p>
+        <a class="evidence-chart-link" href="charts/healthcare_costs.html">
+          Full healthcare cost chart
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>FY27 cost drivers the town does not control</h4>
+        <p>
+          <abbr class="g" title="Group Insurance Commission">GIC</abbr> health insurance: +$1.65M (+11%). Contributory retirement:
+          +$463K (+9%). These two items alone consume more than the entire
+          2.5% levy increase. Everything else has to come from cuts or
+          reserves.
+        </p>
+        <p class="evidence-caveat">
+          Source: FY27 Proposed Budget, pages 1-4.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence B: cap is the check -->
+    <div class="evidence" data-evidence="levy-b">
+      <div class="evidence-header">
+        <h3>The case for "the cap is the check"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Levy and bill have still outpaced inflation</h4>
+
+        <div class="chart-wrapper">
+          <svg class="chart" viewBox="0 0 740 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tax levy, median bill, and CPI-U indexed FY12 to FY24.">
+            <line class="axis-base" x1="70" y1="220" x2="620" y2="220"/>
+            <line class="grid-minor" x1="70" y1="180" x2="620" y2="180"/>
+            <line class="grid-minor" x1="70" y1="140" x2="620" y2="140"/>
+            <line class="grid-minor" x1="70" y1="100" x2="620" y2="100"/>
+            <text class="tick-label" x="60" y="224" text-anchor="end">100</text>
+            <text class="tick-label" x="60" y="184" text-anchor="end">110</text>
+            <text class="tick-label" x="60" y="144" text-anchor="end">120</text>
+            <text class="tick-label" x="60" y="104" text-anchor="end">130</text>
+            <text class="tick-label tick-label--major" x="70" y="242" text-anchor="middle">FY12</text>
+            <text class="tick-label tick-label--major" x="345" y="242" text-anchor="middle">FY18</text>
+            <text class="tick-label tick-label--major" x="620" y="242" text-anchor="middle">FY24</text>
+            <polyline class="data-line data-line--thin s-neutral" points="70,220 116,217 162,214 208,213 254,211 299,207 345,201 391,197 437,193 483,184 528,167 574,160 620,152"/>
+            <polyline class="data-line data-line--bold s-revenue" points="70,220 116,216 162,209 208,200 254,191 299,183 345,175 391,170 437,164 483,155 528,141 574,134 620,124"/>
+            <polyline class="data-line data-line--bold s-cost" points="70,220 116,216 162,209 208,199 254,190 299,182 345,174 391,169 437,163 483,153 528,139 574,132 620,120"/>
+            <text class="end-label s-cost" x="630" y="120">+55% bill</text>
+            <text class="end-label s-revenue" x="630" y="132">+53% levy</text>
+            <text class="end-label s-neutral" x="630" y="152">+37% CPI</text>
+          </svg>
+        </div>
+
+        <p class="caption">
+          The levy grew 53% from FY12 to FY24 while CPI-U grew 37%.
+          Property taxes have been rising faster than general inflation.
+          Without the 2.5% cap, spending growth would face fewer constraints.
+        </p>
+        <a class="evidence-chart-link" href="charts/levy_vs_bill.html">
+          Full levy, bill, and inflation chart
+        </a>
+      </div>
+    </div>
+
+    <!-- Evidence C: math is real but reform needed -->
+    <div class="evidence" data-evidence="levy-c">
+      <div class="evidence-header">
+        <h3>The case for "the math is real, but so is reform"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>The gap reopens after every override</h4>
+
+        <div class="chart-wrapper">
+          <svg class="chart" viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Revenue vs expenses FY24-FY30, gap growing.">
+            <line class="axis-base" x1="60" y1="200" x2="500" y2="200"/>
+            <line class="grid-minor" x1="60" y1="160" x2="500" y2="160"/>
+            <line class="grid-minor" x1="60" y1="120" x2="500" y2="120"/>
+            <line class="grid-minor" x1="60" y1="80" x2="500" y2="80"/>
+            <text class="tick-label" x="53" y="204" text-anchor="end">$80M</text>
+            <text class="tick-label" x="53" y="164" text-anchor="end">$100M</text>
+            <text class="tick-label" x="53" y="124" text-anchor="end">$120M</text>
+            <text class="tick-label" x="53" y="84" text-anchor="end">$140M</text>
+            <text class="tick-label tick-label--major" x="94" y="220" text-anchor="middle">FY24</text>
+            <text class="tick-label tick-label--major" x="234" y="220" text-anchor="middle">FY27</text>
+            <text class="tick-label tick-label--major" x="444" y="220" text-anchor="middle">FY30</text>
+            <rect class="data-fill s-revenue" x="80" y="123" width="28" height="77"/>
+            <rect class="data-fill s-revenue" x="150" y="112" width="28" height="88" opacity="0.65"/>
+            <rect class="data-fill s-revenue" x="220" y="103" width="28" height="97" opacity="0.65"/>
+            <rect class="data-fill s-revenue" x="290" y="94" width="28" height="106" opacity="0.65"/>
+            <rect class="data-fill s-revenue" x="360" y="86" width="28" height="114" opacity="0.65"/>
+            <rect class="data-fill s-revenue" x="430" y="78" width="28" height="122" opacity="0.65"/>
+            <polyline class="data-line data-line--bold s-neutral" points="94,120 164,105 234,72 304,52 374,32 444,12"/>
+            <circle class="data-dot s-neutral" cx="94" cy="120" r="3"/>
+            <circle class="data-dot s-neutral" cx="444" cy="12" r="4"/>
+            <text class="annotation" x="460" y="18">expenses</text>
+            <text class="annotation" x="460" y="82">revenue</text>
+          </svg>
+        </div>
+
+        <p class="caption">
+          An override closes the gap once. But as long as costs grow at
+          5% and revenue grows at 2.5%, the gap reopens. Structural
+          reforms to the cost drivers (insurance negotiation, staffing
+          model, pension funding) are what change the slope.
+        </p>
+        <a class="evidence-chart-link" href="charts/sustainability.html">
+          Full sustainability projections
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       QUESTION: How does Marblehead's tax burden compare?
+       ═══════════════════════════════════════════════════ -->
+  <section class="question-screen" data-topic="taxrank" style="display:none">
+
+    <div class="question-block">
+      <h1>How does Marblehead's tax burden compare to similar towns?</h1>
+      <p class="question-context">
+        Marblehead has the lowest tax rate of four comparable North Shore
+        towns. But high home values mean a high median bill. Which
+        number matters more?
+      </p>
+    </div>
+
+    <div class="answers">
+      <div class="answer-card" data-answer="a" data-question="taxrank">
+        <p class="answer-label">Position A</p>
+        <h2>The rate is what matters, and ours is the lowest</h2>
+        <p class="answer-summary">
+          At $8.59 per $1,000, Marblehead's tax rate is lower than
+          Swampscott ($12.00), Melrose ($11.41), and Stoneham ($11.10).
+          Even at Tier 3, the rate stays lowest.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="b" data-question="taxrank">
+        <p class="answer-label">Position B</p>
+        <h2>The bill is what you pay, and ours is high</h2>
+        <p class="answer-summary">
+          The median Marblehead tax bill is ~$8,677. That is more than
+          Swampscott ($7,549) in absolute dollars because our homes are
+          worth more.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="c" data-question="taxrank">
+        <p class="answer-label">Position C</p>
+        <h2>Per-capita levy is the fairest comparison</h2>
+        <p class="answer-summary">
+          Total tax collected per resident: Swampscott $4,207, Marblehead
+          $4,144, Melrose $3,416, Stoneham $3,117. Marblehead is in line
+          with its closest peer.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence A: rate is lowest -->
+    <div class="evidence" data-evidence="taxrank-a">
+      <div class="evidence-header">
+        <h3>The case for "our rate is the lowest"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>FY26 residential tax rates, four towns</h4>
+        <p>
+          Marblehead: $8.59. Stoneham: $11.10. Melrose: $11.41.
+          Swampscott: $12.00. Even at full Tier 3 ($15M override),
+          Marblehead's projected rate of $10.06 would still be the
+          lowest of the four.
+        </p>
+        <a class="evidence-chart-link" href="charts/four_town_rates.html">
+          Four-town rate comparison
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Same home, lower tax</h4>
+        <p>
+          A $750,000 home in Marblehead pays $6,443/year in property tax.
+          The same-value home in Swampscott pays $9,000. Marblehead's
+          rate delivers a $2,557 annual savings on the same assessed value.
+        </p>
+        <a class="evidence-chart-link" href="charts/tax_comparison.html">
+          Marblehead vs. Swampscott comparison
+        </a>
+      </div>
+    </div>
+
+    <!-- Evidence B: bill is high -->
+    <div class="evidence" data-evidence="taxrank-b">
+      <div class="evidence-header">
+        <h3>The case for "the bill is what you pay"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Median assessed values drive the bill</h4>
+        <p>
+          Marblehead's median single-family assessed value is $1,010,100.
+          Swampscott's is ~$643,000. Even with a much lower rate,
+          Marblehead's median bill ($8,677) exceeds Swampscott's ($7,549)
+          by $1,128.
+        </p>
+        <a class="evidence-chart-link" href="charts/tax_comparison.html">
+          Marblehead vs. Swampscott comparison
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Bill as a share of income</h4>
+        <p>
+          Marblehead's median tax bill is 6.1% of median household income.
+          At full Tier 3 that rises to 7.1%, still below Swampscott's
+          8.5%. But for households below the median income, the burden
+          is proportionally higher.
+        </p>
+        <a class="evidence-chart-link" href="charts/four_town_rates.html">
+          Bill as share of income
+        </a>
+      </div>
+    </div>
+
+    <!-- Evidence C: per-capita -->
+    <div class="evidence" data-evidence="taxrank-c">
+      <div class="evidence-header">
+        <h3>The case for "per-capita levy is fairest"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Total tax collected per resident (FY26)</h4>
+        <p>
+          Swampscott: $4,207. Marblehead: $4,144. Melrose: $3,416.
+          Stoneham: $3,117. This metric controls for differences in home
+          values and tax rates by asking: how much total revenue does
+          the town collect per person?
+        </p>
+        <a class="evidence-chart-link" href="charts/per_capita_levy.html">
+          Per-capita levy chart
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Marblehead and Swampscott are close; both are above Melrose and Stoneham</h4>
+        <p>
+          The $63 gap between Marblehead and Swampscott per-capita is
+          small. Both collect roughly $1,000 more per person than Melrose
+          or Stoneham. This reflects higher service expectations, higher
+          property wealth, or both.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       QUESTION: How will this affect my taxes?
+       ═══════════════════════════════════════════════════ -->
+  <section class="question-screen" data-topic="mycost" style="display:none">
+
+    <div class="question-block">
+      <h1>How will this affect my taxes?</h1>
+      <p class="question-context">
+        The override has three tiers. Each adds a different amount to
+        your annual tax bill based on your home's assessed value.
+      </p>
+    </div>
+
+    <div class="answers">
+      <div class="answer-card" data-answer="a" data-question="mycost">
+        <p class="answer-label">Position A</p>
+        <h2>At the average home value, Tier 3 adds ~$166/month at full phase-in</h2>
+        <p class="answer-summary">
+          The average assessed value in Marblehead is $1,291,507.
+          Tier 1 adds $99/mo, Tier 2 adds $132/mo, Tier 3 adds $165/mo
+          at full phase-in (Year 3).
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="b" data-question="mycost">
+        <p class="answer-label">Position B</p>
+        <h2>It compounds: $20K-$24K over ten years</h2>
+        <p class="answer-summary">
+          An override permanently raises the levy. Tier 3 at the average
+          home costs roughly $1,985/year every year going forward, not
+          just for three years.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="c" data-question="mycost">
+        <p class="answer-label">Position C</p>
+        <h2>Compare it to what you lose without it</h2>
+        <p class="answer-summary">
+          The no-override budget cuts 22 town positions, 18.25 school
+          <abbr class="g" title="Full-Time Equivalents">FTEs</abbr>,
+          and the library 43%. The cost of the override is real, but so
+          is the cost of not having one.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence A: monthly cost -->
+    <div class="evidence" data-evidence="mycost-a">
+      <div class="evidence-header">
+        <h3>The numbers at the average home value ($1,291,507)</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Annual cost at full phase-in (Year 3)</h4>
+        <p>
+          Tier 1 (Restore, $9M): $1,187/year ($99/month).<br/>
+          Tier 2 (Stabilize, $12M): $1,587/year ($132/month).<br/>
+          Tier 3 (Invest, $15M): $1,985/year ($165/month).
+        </p>
+        <p>
+          Tiers are nested: Tier 2 includes Tier 1, Tier 3 includes
+          both. Your cost scales linearly with your assessed value.
+        </p>
+        <a class="evidence-chart-link" href="charts/override_calculator.html">
+          Calculate your exact cost
+        </a>
+        <p class="evidence-caveat">
+          Source: Town Administrator presentation, April 8, 2026.
+          Phase-in: Year 1 is partial, Year 3 is full draw.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence B: compounds -->
+    <div class="evidence" data-evidence="mycost-b">
+      <div class="evidence-header">
+        <h3>The case for "it compounds over time"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>An override is permanent</h4>
+        <p>
+          Unlike a debt exclusion (which expires when the bond is paid
+          off), an operating override permanently raises the levy ceiling.
+          The added tax capacity stays in the base forever. At the average
+          home, Tier 3 costs roughly $1,985/year, every year.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Cumulative cost over time</h4>
+        <p>
+          At the average home value, Tier 3 costs roughly $8,400 over
+          the first 5 years (including the phase-in ramp) and roughly
+          $19,850 over 10 years. Tier 1 is roughly $5,000 over 5 years
+          and $11,870 over 10.
+        </p>
+        <a class="evidence-chart-link" href="charts/override_calculator.html">
+          Calculator with cumulative totals
+        </a>
+      </div>
+    </div>
+
+    <!-- Evidence C: compare to what you lose -->
+    <div class="evidence" data-evidence="mycost-c">
+      <div class="evidence-header">
+        <h3>The case for "compare it to what you lose"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>The no-override budget cuts are specific</h4>
+        <p>
+          Library reduced 43% (-$636K). Community development cut 59%
+          (-$291K). <abbr class="g" title="Other Post-Employment Benefits">OPEB</abbr> trust eliminated (-$250K). 22 town positions
+          and 18.25 school <abbr class="g" title="Full-Time Equivalents">FTEs</abbr> removed. These are not hypothetical;
+          they are in the published FY27 Proposed Budget.
+        </p>
+        <a class="evidence-chart-link" href="no-override-budget.html#town-side-reductions">
+          No-override budget, line by line
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Other towns that voted no came back with larger overrides</h4>
+        <p>
+          Melrose rejected $7.7M in June 2024, then passed $13.5M
+          (+75%) in November 2025. Stoneham rejected $14.6M in April
+          2025, then passed $9.3M in December 2025 after losing staff
+          to higher-paying districts.
+        </p>
+        <a class="evidence-chart-link" href="data/case_studies">
+          Override case studies
         </a>
       </div>
     </div>
