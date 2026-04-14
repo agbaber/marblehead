@@ -149,6 +149,63 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
     color: var(--text-mid);
   }
 
+  /* "Your two votes" step cards */
+  .vote-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 14px 0 20px;
+  }
+  .vote-step {
+    display: flex;
+    gap: 16px;
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 22px 16px;
+    border-left: 3px solid var(--c-teal);
+  }
+  .vote-step-num {
+    flex: 0 0 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--c-teal);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+  .vote-step-body { flex: 1; min-width: 0; }
+  .vote-step-date {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--c-teal);
+    margin-bottom: 4px;
+  }
+  .vote-step-body h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 8px;
+    line-height: 1.35;
+  }
+  .vote-step-body p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0 0 8px;
+  }
+  .vote-step-body p:last-child { margin-bottom: 0; }
+  @media (max-width: 600px) {
+    .vote-step { padding: 16px 18px 14px; gap: 12px; }
+    .vote-step-num { flex: 0 0 28px; height: 28px; font-size: 14px; }
+  }
+
   /* Town Meeting tips card */
   .tm-tips dl {
     margin: 0;
@@ -170,14 +227,14 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
 
 <h1>What can you do?</h1>
 
-<p>The ballot has four possible outcomes: one of three override tiers passes, or no override. Structural reforms that could affect future budgets are real, but they are slow, and none of them change what is on this year's ballot. Everything below is about influencing what comes next.</p>
+<p>This year's override needs to pass <strong>two separate votes</strong>: one at Annual Town Meeting on May 4, and one at the ballot on June 9. Both have to pass for any tier to take effect. The first section below walks through those two votes. Structural reforms that could affect future budgets are real, but they are slow, and none of them change what is on this year's ballot. Everything else is about influencing what comes next.</p>
 
-<p>Still deciding on this year's ballot? See <a href="what-is-the-override.html">what is the override</a> and <a href="no-override-budget.html">what is in the no-override budget</a>.</p>
+<p>Still deciding how to vote? See <a href="what-is-the-override.html">what is the override</a> and <a href="no-override-budget.html">what is in the no-override budget</a>.</p>
 
 <div class="tldr">
   <p class="tldr-label">The short version</p>
   <ul>
-    <li><strong>Your vote this June</strong> picks one of four outcomes: Tier 1 at $9M, Tier 2 at $12M, Tier 3 at $15M, or no override. Everything else on this page is about what comes next.</li>
+    <li><strong>You'll vote twice.</strong> Annual Town Meeting on May 4 authorizes the ballot question. The June 9 ballot picks the tier. Both have to pass. See <a href="#your-two-votes">your two votes</a> below.</li>
     <li><strong>Town Meeting is the lever</strong> for the overall size of the town budget. The Select Board handles operations and policy. The Finance Committee reviews and recommends. The School Committee sets priorities within the school budget.</li>
     <li><strong>Two reform ideas with precedent elsewhere:</strong> a state <abbr class="g" title="Division of Local Services">DLS</abbr> Financial Management Review (free, independent, requested by the Select Board) and more detailed department-level budget reporting (a format choice, no warrant article needed).</li>
     <li><strong>Every body listed below is public.</strong> Meetings are hybrid. Agendas are posted on the <a href="https://marbleheadma.gov/">town calendar</a> at least 48 hours ahead.</li>
@@ -186,6 +243,7 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
 
 <nav class="page-toc" aria-label="On this page">
   <span class="page-toc-label">On this page</span>
+  <a href="#your-two-votes">Your two votes</a>
   <a href="#pick-your-goal">Pick your goal</a>
   <a href="#better-oversight">Better oversight</a>
   <a href="#who-decides-what">Who decides what</a>
@@ -193,6 +251,35 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
   <a href="#town-meeting">Town Meeting</a>
   <a href="#petitioning-an-article">Petitioning an article</a>
 </nav>
+
+<h2 id="your-two-votes">Your two votes</h2>
+<p>The override on this year's warrant goes through two separate votes in sequence. The first is at Annual Town Meeting, where residents authorize the Select Board to put the override on the June ballot. The second is at the ballot, where voters pick the tier. If either vote fails, the override does not take effect.</p>
+
+<div class="vote-steps">
+  <div class="vote-step">
+    <div class="vote-step-num">1</div>
+    <div class="vote-step-body">
+      <div class="vote-step-date">Monday, May 4, 2026 &middot; Annual Town Meeting</div>
+      <h3>Residents authorize the ballot question</h3>
+      <p>Town Meeting votes on the FY27 override warrant article. Town Meeting does not pick between the three tiers; that choice happens at the ballot. Town Meeting's role is to authorize the override question to go to the ballot at all. The Select Board explained it this way at their April 8, 2026 meeting: "If you pass town meeting, you're authorizing the select board to put it on the ballot."<sup class="cite" data-href="data/select_board_2026-04-08_transcript.txt" data-source="Select Board meeting, April 8, 2026 (transcript): &quot;At town meeting, you're not voting on the three. You will be voting for those three in the ballot... if you pass town meeting, you're authorizing the select board to put it on the ballot&quot;"></sup></p>
+      <p>Any registered Marblehead voter can attend, speak on the warrant article, and vote. See <a href="#town-meeting">what to expect at Town Meeting</a> for the logistics. If Town Meeting rejects the override article, nothing goes to the ballot and the <a href="no-override-budget.html">no-override budget</a> takes effect. If Town Meeting approves it, the override moves to step 2.</p>
+    </div>
+  </div>
+
+  <div class="vote-step">
+    <div class="vote-step-num">2</div>
+    <div class="vote-step-body">
+      <div class="vote-step-date">Tuesday, June 9, 2026 &middot; Annual Town Election</div>
+      <h3>Voters pick the tier at the ballot</h3>
+      <p>All registered Marblehead voters can vote at their precinct polling place. The ballot has three tier questions (<strong>1A: $15M "Invest"</strong>, <strong>1B: $12M "Stabilize"</strong>, <strong>1C: $9M "Restore"</strong>), and you may vote yes on more than one. The highest tier with a majority yes sets the override amount. If none of the three get a majority, no override takes effect.<sup class="cite" data-href="https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-25-Override-Presentation.pdf" data-source="Town Administrator's March 25, 2026 override presentation, sample ballot language for three tiers"></sup></p>
+      <p>See the <a href="what-is-the-override.html#how-youll-vote">sample ballot walkthrough</a> on the what-is-the-override page, and the <a href="charts/override_calculator.html">override cost calculator</a> for what each tier costs at different home values.</p>
+    </div>
+  </div>
+</div>
+
+<div class="takeaway takeaway--neutral">
+  <p><strong>Clearing one bar does not mean the override passes.</strong> The 2023 precedent shows how the two votes can split: a $2.5M override <a href="https://marbleheadma.gov/wp-content/uploads/2025/03/town_meeting_minutes_2023__0.pdf">passed Town Meeting 534 to 230</a>, then was rejected at the ballot six weeks later 2,992 to 3,399.<sup class="cite" data-href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride" data-source="MA DOR, Proposition 2½ Override &amp; Underride Votes (Marblehead): June 2023 General Government override $2.5M, Yes 2,992 / No 3,399"></sup> The override did not take effect, and the FY24 budget was delivered as a reduced-services version instead. See <a href="how-we-got-here.html">how we got here</a> for the full arc.</p>
+</div>
 
 <h2 id="pick-your-goal">Pick the goal that matches your view</h2>
 <p>Four reader stances, four different next actions. If you recognize your view here, the matching card tells you the concrete lever.</p>
