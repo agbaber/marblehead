@@ -145,28 +145,123 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     .tldr { padding: 16px 18px 14px; }
     .tldr li { font-size: 13px; }
   }
+  /* Page-scoped: Senior calculator */
+  .sr-calc { max-width: 520px; margin: 0 auto 36px; }
+  .calc-input { margin: 0 auto 22px; max-width: 420px; text-align: center; }
+  .calc-input label {
+    display: block; font-size: 12px; color: var(--text-subtle);
+    text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px;
+  }
+  .calc-input input {
+    width: 100%; padding: 10px 14px; font-size: 18px; font-weight: 600;
+    color: var(--text); background: var(--surface);
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm); text-align: center;
+    font-variant-numeric: tabular-nums; font-family: var(--font-sans);
+    box-sizing: border-box;
+  }
+  .calc-input input:focus {
+    outline: none; border-color: var(--link);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--link) 22%, transparent);
+  }
+  .calc-input .hint { display: block; font-size: 12px; color: var(--text-subtle); margin-top: 8px; }
+  .calc-input .hint a { color: var(--link); }
+  .calc-input .hint-default { display: block; font-size: 11px; color: var(--text-faint); margin-top: 3px; }
+  .sr-input-row {
+    display: flex; gap: 16px; max-width: 420px; margin: 0 auto 22px;
+  }
+  .sr-input-row .calc-input { flex: 1; min-width: 0; margin-bottom: 0; }
+  .sr-toggles {
+    display: flex; flex-wrap: wrap; gap: 16px;
+    max-width: 420px; margin: 0 auto 16px;
+  }
+  .sr-toggle-group { flex: 1; min-width: 140px; }
+  .sr-toggle-group label {
+    display: block; font-size: 11px; color: var(--text-subtle);
+    text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px;
+    text-align: center;
+  }
+  .sr-toggle-group .tabs { margin-bottom: 0; }
+  .sr-toggle-group .tabs--disabled {
+    pointer-events: none; opacity: 0.35;
+  }
+  .sr-toggle-note {
+    display: block; font-size: 11px; color: var(--text-subtle);
+    font-style: italic; text-align: center; margin-top: 4px;
+  }
+  .sr-results {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 20px 22px 18px;
+    margin-top: 24px;
+    border-top: 3px solid var(--c-teal);
+  }
+  .sr-results-label {
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--text-subtle); margin-bottom: 14px;
+  }
+  .sr-line {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--divider);
+    font-size: 14px; color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .sr-line:last-child { border-bottom: none; }
+  .sr-line-label { color: var(--text-muted); }
+  .sr-line-value { font-weight: 600; text-align: right; white-space: nowrap; }
+  .sr-line--indent .sr-line-label { padding-left: 16px; font-size: 13px; }
+  .sr-line--credit .sr-line-value { color: var(--c-teal); }
+  .sr-line--total {
+    border-bottom: none; padding-top: 12px; margin-top: 4px;
+    border-top: 2px solid var(--divider);
+  }
+  .sr-line--total .sr-line-label { font-weight: 700; color: var(--text); }
+  .sr-line--total .sr-line-value { font-size: 20px; font-weight: 700; }
+  .sr-line--monthly .sr-line-value { font-size: 14px; font-weight: 600; color: var(--text-muted); }
+  .sr-line--monthly { border-top: none; padding-top: 2px; }
+  .sr-warn {
+    font-size: 12px; color: var(--c-buoy); margin: 4px 0 2px;
+    line-height: 1.4;
+  }
+  .sr-override-note {
+    font-size: 12px; color: var(--text-subtle); text-align: center;
+    margin-top: 12px; line-height: 1.5;
+  }
+  .sr-source {
+    font-size: 11px; color: var(--text-faint); margin-top: 16px;
+    line-height: 1.5; text-align: center;
+  }
+  @media (max-width: 520px) {
+    .sr-input-row { flex-direction: column; gap: 0; }
+    .sr-input-row .calc-input { margin-bottom: 22px; }
+    .sr-toggles { flex-direction: column; }
+    .sr-results { padding: 16px 16px 14px; }
+    .sr-line { font-size: 13px; }
+    .sr-line--total .sr-line-value { font-size: 18px; }
+  }
 </style>
 <h1>What relief can seniors claim?</h1>
   <p>Two programs can reduce what a Marblehead senior pays in property tax. The state Senior Circuit Breaker refunds up to <strong>$2,820</strong> per year and is available today.<sup class="cite" data-href="https://www.mass.gov/technical-information-release/tir-25-7-annual-update-of-real-estate-tax-credit-for-certain-persons-age-65-and-older" data-source="MA DOR TIR 25-7, annual update of the Senior Circuit Breaker credit cap for TY2025"></sup> A local exemption approved by Marblehead Town Meeting in May 2025 (Article 28, now H.4225) would stack on top of it; the bill passed the Massachusetts House on March 30, 2026 and is awaiting Senate action.<sup class="cite" data-href="https://malegislature.gov/Bills/194/H4225" data-source="MA House Bill H.4225 (means-tested senior property tax exemption for Marblehead), bill history page"></sup> This page explains both programs, who qualifies, how to apply, and how each interacts with the override math.</p>
 
   <div class="sr-calc" id="calculator">
-    <div class="sr-inputs">
-      <div class="sr-input">
-        <label for="sr-assessed" id="sr-assessed-label">Your assessed value</label>
-        <input id="sr-assessed" type="text" inputmode="numeric" value="$1,291,000" autocomplete="off">
-        <span class="hint">Don't know it? <a href="https://epay.cityhallsystems.com/selection" target="_blank" rel="noopener">Look it up on the town's tax portal</a>.</span>
-        <span class="hint-default">Defaults to the town average single-family value.</span>
+    <div class="calc-input">
+      <label for="sr-assessed" id="sr-assessed-label">Your assessed value</label>
+      <input id="sr-assessed" type="text" inputmode="numeric" value="$1,291,000" autocomplete="off">
+      <span class="hint">Don't know it? <a href="https://epay.cityhallsystems.com/selection" target="_blank" rel="noopener">Look it up on the town's tax portal</a>.</span>
+      <span class="hint-default">Defaults to the town average single-family value.</span>
+    </div>
+    <div class="sr-input-row">
+      <div class="calc-input">
+        <label for="sr-income">MA income</label>
+        <input id="sr-income" type="text" inputmode="numeric" value="$60,000" autocomplete="off">
+        <span class="hint-default">Includes Social Security, pensions, wages, interest.</span>
       </div>
-      <div class="sr-row">
-        <div class="sr-input">
-          <label for="sr-income">MA income</label>
-          <input id="sr-income" type="text" inputmode="numeric" value="$60,000" autocomplete="off">
-          <span class="hint-default">Includes Social Security, pensions, wages, interest.</span>
-        </div>
-        <div class="sr-input">
-          <label for="sr-water">Annual water/sewer</label>
-          <input id="sr-water" type="text" inputmode="numeric" value="$1,500" autocomplete="off">
-        </div>
+      <div class="calc-input">
+        <label for="sr-water">Annual water/sewer</label>
+        <input id="sr-water" type="text" inputmode="numeric" value="$1,500" autocomplete="off">
       </div>
     </div>
 
