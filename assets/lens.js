@@ -186,9 +186,44 @@
     metaNote.parentNode.insertBefore(banner, metaNote);
   }
 
+  // --- Highlight and scroll to hash target ---
+  function highlightHash() {
+    var hash = window.location.hash;
+    if (!hash) return;
+    var target = document.querySelector(hash);
+    if (!target) return;
+
+    // Scroll into view
+    requestAnimationFrame(function () {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Add highlight pulse (CSS animation removes itself)
+    target.classList.add('lens-highlight');
+    target.addEventListener('animationend', function handler() {
+      target.removeEventListener('animationend', handler);
+      target.classList.remove('lens-highlight');
+    });
+  }
+
+  // Update share button to include hash
+  function updateShareUrl() {
+    var url = new URL(window.location);
+    return url.href;
+  }
+
+  // --- Init ---
   // Apply initial lens from URL
   var initial = getLens();
   applyLens(initial);
+
+  // Highlight hash target after lens is applied
+  if (initial) {
+    highlightHash();
+  }
+
+  // Re-highlight on hash change
+  window.addEventListener('hashchange', highlightHash);
 
   // Analytics (boolean only, no stance value)
   if (initial && typeof posthog !== 'undefined') {

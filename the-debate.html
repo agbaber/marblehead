@@ -376,6 +376,18 @@ community_pulse: off-sections
   .lens-collapsed-hint { font-size: 11px; opacity: 0.6; }
   .lens-collapsed[open] .lens-collapsed-summary { border-radius: 0 10px 0 0; }
 
+  /* Highlight pulse for hash-targeted sections */
+  @keyframes lens-pulse {
+    0%   { background: color-mix(in srgb, var(--c-navy) 18%, transparent); }
+    100% { background: transparent; }
+  }
+  .lens-highlight {
+    animation: lens-pulse 1.5s ease-out;
+    border-radius: 6px;
+    padding-left: 6px;
+    margin-left: -6px;
+  }
+
   @media (max-width: 600px) {
     .lens-picker { gap: 6px; }
     .lens-btn { padding: 5px 10px; font-size: 11px; }
