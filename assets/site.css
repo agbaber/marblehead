@@ -840,16 +840,16 @@ details.notes[open] > summary {
 .page.page--home { position: relative; }
 .page.page--home::before {
   content: "";
-  position: absolute;
-  top: 40px; right: -360px;
-  width: 520px; height: 780px;
+  position: fixed;
+  bottom: -150px; right: 0;
+  width: 840px; height: 1260px;
   background: url(lighthouse/lighthouse.svg) center / contain no-repeat;
   opacity: 0.05;
   pointer-events: none;
   z-index: 0;
 }
 @media (max-width: 600px) {
-  .page.page--home::before { right: -200px; top: 60px; }
+  .page.page--home::before { right: -380px; }
 }
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) .page.page--home::before { filter: invert(1); opacity: 0.07; }
