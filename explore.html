@@ -145,14 +145,16 @@ og_url: https://marbleheaddata.org/explore.html
     right: 14px;
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    font-size: 12px;
+    gap: 4px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--text-muted);
-    background: none;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 3px 10px 3px 8px;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 4px 10px;
+    min-width: 44px;
+    justify-content: center;
     cursor: pointer;
     transition: all 0.15s;
     z-index: 1;
@@ -160,18 +162,23 @@ og_url: https://marbleheaddata.org/explore.html
   .answer-react:hover {
     border-color: var(--text-muted);
     color: var(--text);
+    background: color-mix(in srgb, var(--text) 4%, var(--surface));
   }
   .answer-react.voted {
     border-color: var(--c-teal);
     color: var(--c-teal);
     background: color-mix(in srgb, var(--c-teal) 8%, var(--surface));
   }
+  .answer-react.voted:hover {
+    background: color-mix(in srgb, var(--c-teal) 14%, var(--surface));
+  }
   .answer-react-glyph {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1;
   }
   .answer-react-count {
     font-variant-numeric: tabular-nums;
+    font-size: 12px;
   }
 
   .answer-label {
@@ -1622,33 +1629,46 @@ og_url: https://marbleheaddata.org/explore.html
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'answer-react';
-    btn.innerHTML = '<span class="answer-react-glyph">+</span><span class="answer-react-count"></span>';
+    btn.innerHTML = '<span class="answer-react-glyph">+1</span><span class="answer-react-count">0</span>';
     btn.dataset.sectionId = id;
 
     // Check if already voted
-    if (localStorage.getItem('explore-voted-' + id)) {
+    var isVoted = !!localStorage.getItem('explore-voted-' + id);
+    if (isVoted) {
       btn.classList.add('voted');
       btn.querySelector('.answer-react-glyph').textContent = '\u2713';
     }
 
     btn.addEventListener('click', function (e) {
       e.stopPropagation(); // Don't trigger card selection
-      if (localStorage.getItem('explore-voted-' + id)) return;
-      localStorage.setItem('explore-voted-' + id, '1');
-      btn.classList.add('voted');
-      btn.querySelector('.answer-react-glyph').textContent = '\u2713';
+      var currentlyVoted = !!localStorage.getItem('explore-voted-' + id);
 
-      // Increment via API
-      fetch(API_BASE + '/api/reactions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ section_id: id })
-      })
-        .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (data) {
-          if (data) btn.querySelector('.answer-react-count').textContent = data.total;
+      if (currentlyVoted) {
+        // Unvote
+        localStorage.removeItem('explore-voted-' + id);
+        btn.classList.remove('voted');
+        btn.querySelector('.answer-react-glyph').textContent = '+1';
+        var countEl = btn.querySelector('.answer-react-count');
+        var cur = parseInt(countEl.textContent) || 0;
+        countEl.textContent = Math.max(0, cur - 1);
+      } else {
+        // Vote
+        localStorage.setItem('explore-voted-' + id, '1');
+        btn.classList.add('voted');
+        btn.querySelector('.answer-react-glyph').textContent = '\u2713';
+
+        // Increment via API
+        fetch(API_BASE + '/api/reactions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ section_id: id })
         })
-        .catch(function () {});
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (data) {
+            if (data) btn.querySelector('.answer-react-count').textContent = data.total;
+          })
+          .catch(function () {});
+      }
     });
 
     card.appendChild(btn);
@@ -1663,8 +1683,8 @@ og_url: https://marbleheaddata.org/explore.html
           var card = cardMap[id];
           if (!card) return;
           var btn = card.querySelector('.answer-react');
-          if (btn && data[id].total > 0) {
-            btn.querySelector('.answer-react-count').textContent = data[id].total;
+          if (btn) {
+            btn.querySelector('.answer-react-count').textContent = data[id].total || 0;
           }
         });
       })
