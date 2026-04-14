@@ -230,6 +230,61 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     font-size: 12px; color: var(--text-subtle); text-align: center;
     margin-top: 12px; line-height: 1.5;
   }
+  .sr-override-panel {
+    margin-top: 20px;
+  }
+  .sr-override-panel .sr-results-label { margin-bottom: 10px; }
+  .sr-tier-rows { display: flex; flex-direction: column; }
+  .sr-tier-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+  .sr-tier-row:last-child { border-bottom: none; }
+  .sr-tier-header {
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 600; font-size: 15px; color: var(--text);
+    grid-column: 1 / -1;
+  }
+  .sr-tier-header .swatch {
+    display: inline-block; width: 10px; height: 10px;
+    border-radius: 3px;
+  }
+  .sr-tier-detail {
+    display: flex; justify-content: space-between; align-items: baseline;
+    grid-column: 1 / -1;
+    font-size: 13px; color: var(--text-muted);
+    padding: 2px 0 2px 18px;
+    font-variant-numeric: tabular-nums;
+  }
+  .sr-tier-detail-value { font-weight: 600; white-space: nowrap; }
+  .sr-tier-detail-value--credit { color: var(--c-teal); }
+  .sr-tier-net {
+    display: flex; justify-content: space-between; align-items: baseline;
+    grid-column: 1 / -1;
+    padding: 6px 0 0 18px;
+    font-size: 14px;
+  }
+  .sr-tier-net-label { font-weight: 600; color: var(--text); }
+  .sr-tier-net-value {
+    font-size: 18px; font-weight: 700; color: var(--text);
+    font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+  .sr-tier-net-monthly {
+    font-size: 12px; font-weight: 500; color: var(--text-subtle);
+    margin-left: 4px;
+  }
+  .sr-zero-note {
+    font-size: 12px; color: var(--c-teal); font-style: italic;
+    grid-column: 1 / -1; padding-left: 18px; margin-top: 2px;
+  }
+  @media (max-width: 520px) {
+    .sr-tier-header { font-size: 14px; }
+    .sr-tier-detail { font-size: 12px; }
+    .sr-tier-net-value { font-size: 16px; }
+  }
   .sr-source {
     font-size: 11px; color: var(--text-faint); margin-top: 16px;
     line-height: 1.5; text-align: center;
@@ -275,17 +330,6 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
         </div>
       </div>
       <div class="sr-toggle-group">
-        <label>Override tier</label>
-        <div class="tabs" id="sr-override-tabs">
-          <button class="tab active" data-tier="0">None</button>
-          <button class="tab" data-tier="1">Tier 1</button>
-          <button class="tab" data-tier="2">Tier 2</button>
-          <button class="tab" data-tier="3">Tier 3</button>
-        </div>
-      </div>
-    </div>
-    <div class="sr-toggles">
-      <div class="sr-toggle-group">
         <label>Article 28 (H.4225)</label>
         <div class="tabs" id="sr-art28-tabs">
           <button class="tab active" data-art28="0">Off</button>
@@ -303,6 +347,7 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     </div>
 
     <div class="sr-results" id="sr-results"></div>
+    <div class="sr-results sr-override-panel" id="sr-override-results" style="border-top-color: var(--c-navy);"></div>
     <p class="sr-source">Circuit Breaker: <a href="https://www.mass.gov/technical-information-release/tir-25-7-annual-update-of-real-estate-tax-credit-for-certain-persons-age-65-and-older">MA DOR TIR 25-7</a>, TY2025. Tax rate: $8.60/$1,000 (FY2026). Article 28: <a href="https://marbleheadma.gov/wp-content/uploads/2025/05/2026-Annual-Town-Meeting-Finance-Committee-Annual-Report.pdf">FinCom Report</a>, warrant text. Override rates: Town Administrator presentation, April 8, 2026.</p>
   </div>
 
@@ -686,10 +731,15 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
   // Year 3 (full phase-in) override cost at average assessed value
   var OVERRIDE_RATES = { 0: 0, 1: 1186.68, 2: 1587.17, 3: 1985.39 };
 
+  var TIER_META = {
+    1: { label: 'Tier 1 ($9M), Restore',   swatch: 'var(--series-tier-1)' },
+    2: { label: 'Tier 2 ($12M), Stabilize', swatch: 'var(--series-tier-2)' },
+    3: { label: 'Tier 3 ($15M), Invest',    swatch: 'var(--series-tier-3)' },
+  };
+
   // === State ===
   var state = {
     filing: 'single',
-    tier: 0,
     art28: false,
     renter: false
   };
@@ -700,8 +750,8 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
   var elIncome = document.getElementById('sr-income');
   var elWater = document.getElementById('sr-water');
   var elResults = document.getElementById('sr-results');
+  var elOverrideResults = document.getElementById('sr-override-results');
   var elArt28Note = document.getElementById('sr-art28-note');
-  var elOverrideTabs = document.getElementById('sr-override-tabs');
   var elArt28Tabs = document.getElementById('sr-art28-tabs');
 
   // === Helpers ===
@@ -742,7 +792,6 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
   }
 
   wireTabs('sr-filing-tabs', 'filing', function(v) { state.filing = v; update(); });
-  wireTabs('sr-override-tabs', 'tier', function(v) { state.tier = parseInt(v, 10); update(); });
   wireTabs('sr-art28-tabs', 'art28', function(v) {
     state.art28 = v === '1';
     elArt28Note.style.display = state.art28 ? 'block' : 'none';
@@ -751,17 +800,10 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
   wireTabs('sr-renter-tabs', 'renter', function(v) {
     state.renter = v === '1';
     elAssessedLabel.textContent = state.renter ? 'Your annual rent' : 'Your assessed value';
-    // Disable override + Art 28 for renters
-    elOverrideTabs.classList.toggle('tabs--disabled', state.renter);
     elArt28Tabs.classList.toggle('tabs--disabled', state.renter);
     if (state.renter) {
-      state.tier = 0;
       state.art28 = false;
       elArt28Note.style.display = 'none';
-      // Reset those tabs visually
-      elOverrideTabs.querySelectorAll('.tab').forEach(function(b, i) {
-        b.classList.toggle('active', i === 0);
-      });
       elArt28Tabs.querySelectorAll('.tab').forEach(function(b, i) {
         b.classList.toggle('active', i === 0);
       });
@@ -781,41 +823,29 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
   });
 
   // === Core computation ===
-  function compute() {
-    var assessed = parseNum(elAssessed.value);
-    var income = parseNum(elIncome.value);
-    var water = parseNum(elWater.value);
-    var filing = state.filing;
-    var tier = state.tier;
-    var art28On = state.art28;
-    var renter = state.renter;
-
+  function computeScenario(assessed, income, water, filing, art28On, renter, tier) {
     // Property tax
     var baseTax;
     if (renter) {
-      baseTax = assessed * 0.25; // 25% of rent treated as property tax
+      baseTax = assessed * 0.25;
     } else {
       baseTax = assessed * TAX_RATE / 1000;
     }
 
-    // Override addition (homeowners only)
     var overrideAdd = 0;
     if (!renter && tier > 0 && assessed > 0) {
       overrideAdd = OVERRIDE_RATES[tier] * (assessed / AVG_ASSESSED);
     }
     var totalTax = baseTax + overrideAdd;
 
-    // CB tax burden (tax + half water/sewer)
     var halfWater = water * 0.5;
     var cbBurden = totalTax + halfWater;
 
-    // Eligibility
     var incomeLimit = INCOME_LIMITS[filing];
     var incomeOk = income <= incomeLimit;
     var homeOk = renter || assessed <= CB_HOME_CAP;
     var cbEligible = incomeOk && homeOk;
 
-    // Circuit Breaker credit
     var excess = cbBurden - (income * 0.10);
     var cbCredit = 0;
     var cbCapped = false;
@@ -824,33 +854,16 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
       cbCapped = excess > CB_CAP;
     }
 
-    // Article 28 exemption
     var art28Eligible = art28On && !renter && cbEligible && assessed <= ART28_HOME_CAP;
     var art28Amount = 0;
     var art28HomeWarn = art28On && !renter && assessed > ART28_HOME_CAP;
     if (art28Eligible) {
-      // Residual after CB: same formula minus CB credit
       art28Amount = Math.max(cbBurden - (income * 0.10) - cbCredit, 0);
     }
 
-    // Override absorption insight
-    var overrideAbsorbed = 0;
-    if (!renter && tier > 0 && cbEligible) {
-      // Compute CB credit without override to find the difference
-      var baseBurden = baseTax + halfWater;
-      var baseExcess = baseBurden - (income * 0.10);
-      var baseCbCredit = 0;
-      if (baseExcess > 0) baseCbCredit = Math.min(baseExcess, CB_CAP);
-      overrideAbsorbed = cbCredit - baseCbCredit;
-    }
-
-    // Net
     var netTax = totalTax - cbCredit - art28Amount;
-    var monthly = netTax / 12;
 
     return {
-      assessed: assessed, income: income, water: water,
-      renter: renter, filing: filing, tier: tier, art28On: art28On,
       baseTax: baseTax, overrideAdd: overrideAdd, totalTax: totalTax,
       halfWater: halfWater, cbBurden: cbBurden,
       incomeOk: incomeOk, homeOk: homeOk, cbEligible: cbEligible,
@@ -858,8 +871,7 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
       excess: excess, cbCredit: cbCredit, cbCapped: cbCapped,
       art28Eligible: art28Eligible, art28Amount: art28Amount,
       art28HomeWarn: art28HomeWarn,
-      overrideAbsorbed: overrideAbsorbed,
-      netTax: netTax, monthly: monthly
+      netTax: netTax
     };
   }
 
@@ -873,78 +885,120 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     return '<div class="sr-warn">' + msg + '</div>';
   }
 
-  function render(r) {
-    var html = '<div class="sr-results-label">Your estimated relief</div>';
+  function render() {
+    var assessed = parseNum(elAssessed.value);
+    var income = parseNum(elIncome.value);
+    var water = parseNum(elWater.value);
+    var filing = state.filing;
+    var art28On = state.art28;
+    var renter = state.renter;
 
-    // Warnings
-    if (!r.incomeOk) {
-      html += warn('Your income exceeds the ' + INCOME_LABELS[r.filing] +
-        ' Circuit Breaker limit of ' + money(r.incomeLimit) + '.');
+    // Base scenario (no override)
+    var base = computeScenario(assessed, income, water, filing, art28On, renter, 0);
+
+    // === Top panel: current tax after relief ===
+    var html = '<div class="sr-results-label">Your tax after relief (no override)</div>';
+
+    if (!base.incomeOk) {
+      html += warn('Your income exceeds the ' + INCOME_LABELS[filing] +
+        ' Circuit Breaker limit of ' + money(base.incomeLimit) + '.');
     }
-    if (!r.renter && !r.homeOk) {
+    if (!renter && !base.homeOk) {
       html += warn('Your assessed value exceeds the $1,298,000 Circuit Breaker cap.');
     }
-    if (r.art28HomeWarn && r.homeOk) {
+    if (base.art28HomeWarn && base.homeOk) {
       html += warn('Your assessed value exceeds the $1,217,000 prior-year average for Article 28 eligibility. Circuit Breaker still applies.');
     }
 
-    // Tax line
-    if (r.renter) {
-      html += line('25% of rent (treated as property tax)', money(r.baseTax), '');
+    if (renter) {
+      html += line('25% of rent (treated as property tax)', money(base.baseTax), '');
     } else {
-      html += line('Property tax', money(r.baseTax), '');
+      html += line('Property tax', money(base.baseTax), '');
     }
+    html += line('+ half water/sewer', '+' + money(base.halfWater), 'sr-line--indent');
+    html += line('Tax burden for Circuit Breaker', money(base.cbBurden), '');
 
-    // Override
-    if (r.overrideAdd > 0) {
-      html += line('Override addition (Tier ' + r.tier + ', Year 3)', '+' + money(r.overrideAdd), 'sr-line--indent');
-    }
-
-    // Water/sewer
-    html += line('+ half water/sewer', '+' + money(r.halfWater), 'sr-line--indent');
-    html += line('Tax burden for Circuit Breaker', money(r.cbBurden), '');
-
-    // CB credit
-    if (r.cbEligible) {
-      html += line('Circuit Breaker credit' + (r.cbCapped ? ' (capped)' : ''),
-        '&minus;' + money(r.cbCredit), 'sr-line--credit');
+    if (base.cbEligible) {
+      html += line('Circuit Breaker credit' + (base.cbCapped ? ' (capped)' : ''),
+        '&minus;' + money(base.cbCredit), 'sr-line--credit');
     } else {
       html += line('Circuit Breaker credit', '$0', '');
     }
 
-    // Art 28
-    if (r.art28On && !r.renter) {
-      if (r.art28Eligible && r.art28Amount > 0) {
-        html += line('Article 28 exemption (pending)', '&minus;' + money(r.art28Amount), 'sr-line--credit');
-      } else if (r.art28Eligible) {
-        html += line('Article 28 exemption (pending)', '$0', '');
+    if (art28On && !renter) {
+      if (base.art28Eligible && base.art28Amount > 0) {
+        html += line('Article 28 exemption (pending)', '&minus;' + money(base.art28Amount), 'sr-line--credit');
       } else {
         html += line('Article 28 exemption', '$0', '');
       }
     }
 
-    // Override absorption note
-    if (r.overrideAbsorbed > 0) {
-      html += '<div class="sr-override-note">The override adds ' + money(r.overrideAdd) +
-        ' to your tax, but ' + money(r.overrideAbsorbed) +
-        ' of that is absorbed by a larger Circuit Breaker credit.</div>';
-    }
+    html += line('Net annual tax after relief', money(Math.max(base.netTax, 0)), 'sr-line--total');
+    html += line('Monthly equivalent', money(Math.max(base.netTax, 0) / 12) + '/mo', 'sr-line--monthly');
 
-    // Totals
-    html += line('Net annual tax after relief', money(Math.max(r.netTax, 0)), 'sr-line--total');
-    html += line('Monthly equivalent', money(Math.max(r.netTax, 0) / 12) + '/mo', 'sr-line--monthly');
-
-    // Total relief
-    var totalRelief = r.cbCredit + r.art28Amount;
+    var totalRelief = base.cbCredit + base.art28Amount;
     if (totalRelief > 0) {
       html += line('Total annual relief', money(totalRelief) + '/yr', 'sr-line--credit');
     }
 
     elResults.innerHTML = html;
+
+    // === Override comparison panel ===
+    if (renter) {
+      elOverrideResults.style.display = 'none';
+      return;
+    }
+    elOverrideResults.style.display = '';
+
+    var ohtml = '<div class="sr-results-label">How each override tier affects you</div>';
+
+    if (!base.cbEligible) {
+      ohtml += '<div class="sr-override-note">You do not currently qualify for the Circuit Breaker, so the override adds its full amount to your tax bill.</div>';
+    }
+
+    ohtml += '<div class="sr-tier-rows">';
+
+    [1, 2, 3].forEach(function(tier) {
+      var s = computeScenario(assessed, income, water, filing, art28On, renter, tier);
+      var meta = TIER_META[tier];
+
+      var overrideAdd = s.overrideAdd;
+      var absorbed = s.cbCredit - base.cbCredit;
+      var art28Absorbed = s.art28Amount - base.art28Amount;
+      var totalAbsorbed = absorbed + art28Absorbed;
+      var netAdditional = Math.max(s.netTax - base.netTax, 0);
+      var netMonthly = netAdditional / 12;
+
+      ohtml += '<div class="sr-tier-row">';
+      ohtml += '<div class="sr-tier-header"><span class="swatch" style="background:' + meta.swatch + ';"></span>' + meta.label + '</div>';
+
+      ohtml += '<div class="sr-tier-detail"><span>Override adds to your tax</span><span class="sr-tier-detail-value">+' + money(overrideAdd) + '/yr</span></div>';
+
+      if (totalAbsorbed > 0) {
+        ohtml += '<div class="sr-tier-detail"><span>Relief absorbs</span><span class="sr-tier-detail-value sr-tier-detail-value--credit">&minus;' + money(totalAbsorbed) + '/yr</span></div>';
+      }
+
+      ohtml += '<div class="sr-tier-net"><span class="sr-tier-net-label">Your actual additional cost</span>';
+      ohtml += '<span class="sr-tier-net-value">' + money(netAdditional) + '/yr';
+      ohtml += '<span class="sr-tier-net-monthly">(' + money(netMonthly) + '/mo)</span>';
+      ohtml += '</span></div>';
+
+      if (netAdditional === 0 && overrideAdd > 0) {
+        ohtml += '<div class="sr-zero-note">Fully absorbed by increased Circuit Breaker credit.</div>';
+      }
+
+      ohtml += '</div>'; // .sr-tier-row
+    });
+
+    ohtml += '</div>'; // .sr-tier-rows
+
+    ohtml += '<div class="sr-override-note">Year 3 (full phase-in) figures. The Circuit Breaker credit grows as your tax bill grows, absorbing part or all of the override for qualifying seniors not yet at the $2,820 cap.</div>';
+
+    elOverrideResults.innerHTML = ohtml;
   }
 
   function update() {
-    render(compute());
+    render();
   }
 
   // === Init ===
