@@ -12,7 +12,21 @@ title: "Enrollment vs. Staffing"
   <p class="subtitle h-center">Marblehead Public Schools, FY2001&ndash;FY2024. From audited Annual Comprehensive Financial Reports.</p>
 
   <p class="chart-label">Student enrollment</p>
-  <div class="chart-wrapper">
+  <div class="chart-wrapper" data-chart-tooltip>
+    <script type="application/json" class="chart-tooltip-data">
+    {
+      "xLabels": ["FY01","FY02","FY03","FY04","FY05","FY06","FY07","FY08","FY09","FY10","FY11","FY12","FY13","FY14","FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24"],
+      "xPositions": [70,93,117,140,164,187,211,234,258,281,305,328,352,375,399,422,446,469,493,516,540,563,587,610],
+      "valueDecimals": 0,
+      "series": [
+        {
+          "name": "Student enrollment",
+          "className": "s-neutral",
+          "values": [2792,2875,2970,3003,3067,3133,3242,3212,3262,3232,3206,3172,3269,3327,3245,3208,3264,3185,3051,2963,2703,2602,2622,2617]
+        }
+      ]
+    }
+    </script>
     <svg class="chart" viewBox="0 0 740 185" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart showing Marblehead student enrollment from FY2001 to FY2024, peaking at 3,327 in FY2014 and declining to 2,617.">
       <!-- Baseline -->
       <line class="axis-base" x1="70" y1="170" x2="610" y2="170"/>
@@ -35,7 +49,21 @@ title: "Enrollment vs. Staffing"
   </div>
 
   <p class="chart-label">Education full-time equivalent employees</p>
-  <div class="chart-wrapper">
+  <div class="chart-wrapper" data-chart-tooltip>
+    <script type="application/json" class="chart-tooltip-data">
+    {
+      "xLabels": ["FY01","FY02","FY03","FY04","FY05","FY06","FY07","FY08","FY09","FY10","FY11","FY12","FY13","FY14","FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24"],
+      "xPositions": [70,93,117,140,164,187,211,234,258,281,305,328,352,375,399,422,446,469,493,516,540,563,587,610],
+      "valueDecimals": 0,
+      "series": [
+        {
+          "name": "Education FTE",
+          "className": "s-marblehead",
+          "values": [400,414,424,426,448,466,475,480,488,488,488,480,490,492,490,489,493,504,484,480,484,483,537,537]
+        }
+      ]
+    }
+    </script>
     <svg class="chart" viewBox="0 0 740 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart showing Marblehead education FTE from FY2001 to FY2024, rising from 400 to 537.">
       <!-- Baseline -->
       <line class="axis-base" x1="70" y1="140" x2="610" y2="140"/>
@@ -81,7 +109,36 @@ title: "Enrollment vs. Staffing"
     <span class="legend-item s-stoneham"><span class="legend-swatch"></span><span class="legend-text">Stoneham</span></span>
   </div>
 
-  <div class="chart-wrapper">
+  <div class="chart-wrapper" data-chart-tooltip>
+    <script type="application/json" class="chart-tooltip-data">
+    {
+      "xLabels": ["FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24"],
+      "xPositions": [70,130,190,250,310,370,430,490,550,610],
+      "valueDecimals": 1,
+      "series": [
+        {
+          "name": "Marblehead",
+          "className": "s-marblehead",
+          "values": [12.6,12.2,11.9,11.9,11.8,11.5,10.5,10.3,10.5,10.7]
+        },
+        {
+          "name": "Swampscott",
+          "className": "s-swampscott",
+          "values": [12.3,12.0,11.5,11.6,12.0,12.0,11.5,10.8,10.7,11.1]
+        },
+        {
+          "name": "Melrose",
+          "className": "s-melrose",
+          "values": [14.5,14.4,14.5,14.6,14.7,14.5,13.3,14.0,14.6,13.7]
+        },
+        {
+          "name": "Stoneham",
+          "className": "s-stoneham",
+          "values": [12.4,12.6,12.7,12.4,12.3,12.0,10.9,11.4,11.4,10.8]
+        }
+      ]
+    }
+    </script>
     <svg class="chart" viewBox="0 0 740 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart comparing students per teacher FTE for Marblehead, Swampscott, Melrose, and Stoneham from FY2015 to FY2024. All four towns show declining ratios. Marblehead drops from 12.6 to 10.7, the steepest decline. Melrose remains highest at 13.7 in FY24.">
       <!-- Baseline -->
       <line class="axis-base" x1="70" y1="160" x2="610" y2="160"/>

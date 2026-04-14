@@ -43,7 +43,37 @@ title: "Rate and Bill Comparison"
     <div class="legend-item s-stoneham"><span class="legend-swatch"></span><span class="legend-text">Stoneham</span></div>
   </div>
 
-  <div class="chart-wrapper">
+  <div class="chart-wrapper" data-chart-tooltip>
+    <script type="application/json" class="chart-tooltip-data">
+    {
+      "xLabels": ["FY03","FY04","FY05","FY06","FY07","FY08","FY09","FY10","FY11","FY12","FY13","FY14","FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26"],
+      "xPositions": [55,83,111,138,166,194,222,250,277,305,333,361,389,416,444,472,500,528,555,583,611,639,667,694],
+      "valuePrefix": "$",
+      "valueDecimals": 2,
+      "series": [
+        {
+          "name": "Marblehead",
+          "className": "s-marblehead",
+          "values": [8.42,8.48,8.26,8.43,7.76,8.34,8.99,9.57,10.21,10.52,10.85,11.09,11.08,11.10,11.01,11.02,10.74,10.39,10.42,10.52,10.00,8.96,9.05,8.56]
+        },
+        {
+          "name": "Swampscott",
+          "className": "s-swampscott",
+          "values": [13.50,12.10,11.30,12.20,12.85,13.65,14.35,16.50,16.60,18.00,18.85,18.70,17.15,17.35,17.45,16.00,15.20,14.30,13.80,12.85,11.75,11.50,11.45,12.00]
+        },
+        {
+          "name": "Melrose",
+          "className": "s-melrose",
+          "values": [12.25,11.50,9.75,9.65,9.85,10.45,11.35,12.05,12.45,12.75,13.05,13.30,12.95,12.35,11.80,11.35,10.80,11.05,10.95,10.55,10.40,9.95,9.90,11.45]
+        },
+        {
+          "name": "Stoneham",
+          "className": "s-stoneham",
+          "values": [11.70,12.15,10.45,9.65,9.75,10.20,10.90,11.50,12.20,12.60,13.05,13.50,12.95,12.70,12.40,11.70,11.20,10.80,10.80,10.40,11.10,10.60,10.25,10.05]
+        }
+      ]
+    }
+    </script>
     <svg class="chart" viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart: residential tax rates for Marblehead, Swampscott, Melrose, and Stoneham, FY2003 to FY2026, with FY2028 projections for all four towns.">
       <!-- Grid -->
       <line class="axis-base" x1="55" y1="310" x2="750" y2="310"/>
@@ -114,7 +144,37 @@ title: "Rate and Bill Comparison"
 
   <h2 class="h-center">Average single-family tax bill</h2>
 
-  <div class="chart-wrapper">
+  <div class="chart-wrapper" data-chart-tooltip>
+    <script type="application/json" class="chart-tooltip-data">
+    {
+      "xLabels": ["FY06","FY07","FY08","FY09","FY10","FY11","FY12","FY13","FY14","FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26"],
+      "xPositions": [60,87,114,141,168,195,222,249,276,303,330,357,384,411,438,465,492,519,546,573,600],
+      "valuePrefix": "$",
+      "valueDecimals": 0,
+      "series": [
+        {
+          "name": "Marblehead",
+          "className": "s-marblehead",
+          "values": [5800,5900,6100,6250,6550,6650,6950,7100,7350,7700,7950,8300,8600,8850,9100,9400,9950,10300,10800,11050,11055]
+        },
+        {
+          "name": "Swampscott",
+          "className": "s-swampscott",
+          "values": [6400,6900,7300,7550,7850,7900,8350,8550,8600,8950,9050,9200,9100,9000,9000,9000,9100,9650,10300,10650,11478]
+        },
+        {
+          "name": "Melrose",
+          "className": "s-melrose",
+          "values": [4100,4250,4400,4550,4750,4950,5100,5200,5350,5550,5750,5900,6100,6250,7050,7200,7400,7650,7850,8100,9800]
+        },
+        {
+          "name": "Stoneham",
+          "className": "s-stoneham",
+          "values": [4050,4200,4300,4450,4600,4700,4900,5000,5300,5400,5500,5700,5850,6000,6100,6250,6350,7300,7500,7800,8050]
+        }
+      ]
+    }
+    </script>
     <svg class="chart" viewBox="0 -20 840 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart showing average single-family tax bills for four North Shore towns, FY2006 to FY2028.">
       <!-- Grid -->
       <line class="axis-base" x1="60" y1="280" x2="654" y2="280"/>

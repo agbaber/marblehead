@@ -1378,6 +1378,92 @@ body.doc-page .page table:not(.data) th {
    ========================================================================== */
 
 .chart-wrapper { margin: 8px 0 16px; }
+.chart-wrapper[data-chart-tooltip] { position: relative; }
+.chart-wrapper[data-chart-tooltip] svg.chart { cursor: crosshair; }
+.chart-wrapper[data-chart-tooltip] svg.chart .chart-tooltip-hover-line {
+  stroke: var(--text-subtle);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s;
+}
+.chart-wrapper[data-chart-tooltip] svg.chart .chart-tooltip-hover-line.visible {
+  opacity: 0.55;
+}
+.chart-wrapper[data-chart-tooltip] svg.chart .chart-tooltip-dot {
+  fill: currentColor;
+  stroke: var(--surface);
+  stroke-width: 1.75;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s;
+}
+.chart-wrapper[data-chart-tooltip] svg.chart .chart-tooltip-dot.visible {
+  opacity: 1;
+}
+.chart-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.12s;
+  z-index: 10;
+  max-width: calc(100% - 16px);
+}
+.chart-tooltip.visible { opacity: 1; }
+.chart-tooltip-year {
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.chart-tooltip-year .chart-tooltip-projected {
+  font-weight: 500;
+  color: var(--text-subtle);
+  font-size: 11px;
+  margin-left: 4px;
+}
+.chart-tooltip-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.chart-tooltip-row .chart-tooltip-swatch {
+  display: inline-block;
+  width: 10px; height: 3px;
+  border-radius: 2px;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.chart-tooltip-row .chart-tooltip-label {
+  color: var(--text-muted);
+  margin-right: auto;
+}
+.chart-tooltip-row .chart-tooltip-value {
+  color: var(--text);
+  font-weight: 600;
+}
+.chart-tooltip-row.s-marblehead { color: var(--series-marblehead); }
+.chart-tooltip-row.s-swampscott { color: var(--series-swampscott); }
+.chart-tooltip-row.s-melrose    { color: var(--series-melrose); }
+.chart-tooltip-row.s-stoneham   { color: var(--series-stoneham); }
+.chart-tooltip-row.s-revenue    { color: var(--series-revenue); }
+.chart-tooltip-row.s-cost       { color: var(--series-cost); }
+.chart-tooltip-row.s-neutral    { color: var(--series-neutral); }
+.chart-tooltip-row.s-everything { color: var(--series-everything); }
+.chart-tooltip-row.s-tier-1     { color: var(--series-tier-1); }
+.chart-tooltip-row.s-tier-2     { color: var(--series-tier-2); }
+.chart-tooltip-row.s-tier-3     { color: var(--series-tier-3); }
 svg.chart {
   width: 100%; height: auto; display: block;
   font-family: var(--font-sans);
