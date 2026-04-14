@@ -106,6 +106,38 @@ og_url: https://marbleheaddata.org/explore.html
     opacity: 0.8;
   }
 
+  /* Hint on answer cards */
+  .answer-hint {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-faint);
+    margin-top: 10px;
+    transition: opacity 0.2s;
+  }
+  .answer-card:hover .answer-hint {
+    color: var(--c-teal);
+  }
+  .answer-card.selected .answer-hint,
+  .answer-card.dimmed .answer-hint {
+    display: none;
+  }
+
+  /* Prompt below answer cards */
+  .answers-prompt {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-faint);
+    margin: -12px 0 20px;
+    transition: opacity 0.3s;
+  }
+  .answers-prompt.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
   /* +1 reaction button inside answer cards */
   .answer-react {
     position: absolute;
@@ -653,7 +685,7 @@ og_url: https://marbleheaddata.org/explore.html
           and elimination of the <abbr class="g" title="Other Post-Employment Benefits">OPEB</abbr> trust contribution. It is a legal,
           balanced budget that can operate.
         </p>
-        <a class="evidence-chart-link" href="no-override-budget.html">
+        <a class="evidence-chart-link" href="no-override-budget.html#town-side-reductions">
           No-override budget, line by line
         </a>
       </div>
@@ -728,7 +760,7 @@ og_url: https://marbleheaddata.org/explore.html
           reduction absorbed by the out-of-district special education line
           using one-time FY26 surplus funds that do not recur.
         </p>
-        <a class="evidence-chart-link" href="no-override-budget.html">
+        <a class="evidence-chart-link" href="no-override-budget.html#school-side-reductions">
           School-side reductions
         </a>
       </div>
@@ -889,7 +921,7 @@ og_url: https://marbleheaddata.org/explore.html
           Melrose at 7.8. If Marblehead staffed at Melrose's ratio, the
           district would have roughly 307 FTE instead of 430.
         </p>
-        <a class="evidence-chart-link" href="inside-school-staffing.html">
+        <a class="evidence-chart-link" href="inside-school-staffing.html#what-the-positions-are">
           Inside school staffing
         </a>
       </div>
@@ -929,7 +961,7 @@ og_url: https://marbleheaddata.org/explore.html
           504 compliance coordinators are federally required. These are
           not optional.
         </p>
-        <a class="evidence-chart-link" href="inside-school-staffing.html">
+        <a class="evidence-chart-link" href="inside-school-staffing.html#mandate-vs-discretionary">
           Mandated vs. discretionary breakdown
         </a>
       </div>
@@ -989,7 +1021,7 @@ og_url: https://marbleheaddata.org/explore.html
           classrooms. This is 3.67 per 100 students, comparable to
           Melrose (3.47) and Stoneham (3.08).
         </p>
-        <a class="evidence-chart-link" href="inside-school-staffing.html">
+        <a class="evidence-chart-link" href="inside-school-staffing.html#peer-comparison">
           Staffing by role, four towns
         </a>
       </div>
@@ -1012,7 +1044,7 @@ og_url: https://marbleheaddata.org/explore.html
           The rest are driven by <abbr class="g" title="Special Education">SPED</abbr>, <abbr class="g" title="English Language Learner">ELL</abbr>, counseling, and compliance
           mandates.
         </p>
-        <a class="evidence-chart-link" href="inside-school-staffing.html">
+        <a class="evidence-chart-link" href="inside-school-staffing.html#mandate-vs-discretionary">
           Mandate vs. discretionary table
         </a>
       </div>
@@ -1038,7 +1070,7 @@ og_url: https://marbleheaddata.org/explore.html
           Melrose's 0.67. These categories are the largest gap between
           Marblehead and its peers and are not mandate-driven.
         </p>
-        <a class="evidence-chart-link" href="inside-school-staffing.html">
+        <a class="evidence-chart-link" href="inside-school-staffing.html#peer-comparison">
           Staffing by role comparison
         </a>
       </div>
@@ -1216,7 +1248,7 @@ og_url: https://marbleheaddata.org/explore.html
           meetings are hybrid and agendas are posted at least 48 hours
           ahead on the town calendar.
         </p>
-        <a class="evidence-chart-link" href="what-you-can-do.html">
+        <a class="evidence-chart-link" href="what-you-can-do.html#who-decides-what">
           Who decides what
         </a>
       </div>
@@ -1284,7 +1316,7 @@ og_url: https://marbleheaddata.org/explore.html
           could provide independent, department-level analysis, but one
           has not been requested.
         </p>
-        <a class="evidence-chart-link" href="what-you-can-do.html">
+        <a class="evidence-chart-link" href="what-you-can-do.html#better-oversight">
           Reform options
         </a>
       </div>
@@ -1316,7 +1348,7 @@ og_url: https://marbleheaddata.org/explore.html
           article. Neither costs money. Both would make verification easier
           regardless of the override outcome.
         </p>
-        <a class="evidence-chart-link" href="what-you-can-do.html">
+        <a class="evidence-chart-link" href="what-you-can-do.html#better-oversight">
           Better oversight options
         </a>
       </div>
@@ -1364,6 +1396,20 @@ og_url: https://marbleheaddata.org/explore.html
   var editorEl   = document.getElementById('composerEditor');
   var toggleBtn  = document.getElementById('composerToggle');
   var composerMinimized = false;
+
+  /* ── Inject hint labels and prompts ── */
+  document.querySelectorAll('.answer-card').forEach(function (card) {
+    var hint = document.createElement('span');
+    hint.className = 'answer-hint';
+    hint.textContent = 'See the data \u2192';
+    card.appendChild(hint);
+  });
+  document.querySelectorAll('.answers').forEach(function (answers) {
+    var prompt = document.createElement('p');
+    prompt.className = 'answers-prompt';
+    prompt.textContent = 'Pick the one closest to your view to see the evidence';
+    answers.after(prompt);
+  });
 
   /* ── URL state ── */
   // URL format: explore.html?q=schools&pos=b
@@ -1424,6 +1470,11 @@ og_url: https://marbleheaddata.org/explore.html
 
     selections[question] = answer;
     writeURL(question, answer);
+
+    // Hide prompt
+    var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
+    var prompt = screen && screen.querySelector('.answers + .answers-prompt');
+    if (prompt) prompt.classList.add('hidden');
   }
 
   function deselectAnswer(question) {
@@ -1437,6 +1488,11 @@ og_url: https://marbleheaddata.org/explore.html
     });
     delete selections[question];
     writeURL(question, null);
+
+    // Show prompt again
+    var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
+    var prompt = screen && screen.querySelector('.answers + .answers-prompt');
+    if (prompt) prompt.classList.remove('hidden');
   }
 
   document.querySelectorAll('.answer-card').forEach(function (card) {
