@@ -1434,14 +1434,36 @@ og_url: https://marbleheaddata.org/explore.html
 
       <div class="evidence-point">
         <h4>FY26 residential tax rates, four towns</h4>
-        <p>
-          Marblehead: $8.59. Stoneham: $11.10. Melrose: $11.41.
-          Swampscott: $12.00. Even at full Tier 3 ($15M override),
-          Marblehead's projected rate of $10.06 would still be the
-          lowest of the four.
+
+        <div class="chart-wrapper">
+          <svg class="chart" viewBox="0 0 560 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizontal bar chart: FY26 tax rates for four towns. Marblehead $8.59, Stoneham $11.10, Melrose $11.41, Swampscott $12.00.">
+            <text class="tick-label" x="120" y="28" text-anchor="end">Swampscott</text>
+            <rect class="data-bar s-swampscott" x="125" y="16" width="360" height="18" rx="2"/>
+            <text class="value-label" x="492" y="30">$12.00</text>
+
+            <text class="tick-label" x="120" y="60" text-anchor="end">Melrose</text>
+            <rect class="data-bar s-melrose" x="125" y="48" width="342" height="18" rx="2"/>
+            <text class="value-label" x="474" y="62">$11.41</text>
+
+            <text class="tick-label" x="120" y="92" text-anchor="end">Stoneham</text>
+            <rect class="data-bar s-stoneham" x="125" y="80" width="333" height="18" rx="2"/>
+            <text class="value-label" x="465" y="94">$11.10</text>
+
+            <text class="tick-label" x="120" y="124" text-anchor="end" font-weight="700">Marblehead</text>
+            <rect class="data-bar s-marblehead" x="125" y="112" width="258" height="18" rx="2"/>
+            <text class="value-label" x="390" y="126" font-weight="700">$8.59</text>
+
+            <text class="annotation" x="125" y="152">per $1,000 assessed value</text>
+          </svg>
+        </div>
+
+        <p class="caption">
+          Marblehead's rate is 28% lower than Swampscott's. Even at full
+          Tier 3 ($15M override), Marblehead's projected FY28 rate of
+          $10.06 would still be the lowest of the four.
         </p>
         <a class="evidence-chart-link" href="charts/four_town_rates.html">
-          Four-town rate comparison
+          Full four-town rate comparison
         </a>
       </div>
 
@@ -1580,12 +1602,26 @@ og_url: https://marbleheaddata.org/explore.html
 
       <div class="evidence-point">
         <h4>Annual cost at full phase-in (Year 3)</h4>
-        <p>
-          Tier 1 (Restore, $9M): $1,187/year ($99/month).<br/>
-          Tier 2 (Stabilize, $12M): $1,587/year ($132/month).<br/>
-          Tier 3 (Invest, $15M): $1,985/year ($165/month).
-        </p>
-        <p>
+
+        <div class="chart-wrapper">
+          <svg class="chart" viewBox="0 0 560 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Horizontal bar chart: annual override cost at average home value. Tier 1 $1,187, Tier 2 $1,587, Tier 3 $1,985.">
+            <text class="tick-label" x="130" y="28" text-anchor="end">Tier 1 (Restore)</text>
+            <rect class="data-bar s-tier-1" x="135" y="14" width="179" height="20" rx="2"/>
+            <text class="value-label" x="320" y="30">$1,187/yr ($99/mo)</text>
+
+            <text class="tick-label" x="130" y="64" text-anchor="end">Tier 2 (Stabilize)</text>
+            <rect class="data-bar s-tier-2" x="135" y="50" width="239" height="20" rx="2"/>
+            <text class="value-label" x="380" y="66">$1,587/yr ($132/mo)</text>
+
+            <text class="tick-label" x="130" y="100" text-anchor="end">Tier 3 (Invest)</text>
+            <rect class="data-bar s-tier-3" x="135" y="86" width="300" height="20" rx="2"/>
+            <text class="value-label" x="441" y="102">$1,985/yr ($165/mo)</text>
+
+            <text class="annotation" x="135" y="132">at the average assessed value of $1,291,507</text>
+          </svg>
+        </div>
+
+        <p class="caption">
           Tiers are nested: Tier 2 includes Tier 1, Tier 3 includes
           both. Your cost scales linearly with your assessed value.
         </p>
