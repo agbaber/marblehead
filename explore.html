@@ -1,0 +1,1206 @@
+---
+title: "Explore the override"
+body_class: explore-page
+community_pulse: off-sections
+og_title: "Explore the override"
+og_description: Pick the question that's on your mind, see the strongest case for each answer, and build your own take.
+og_url: https://marbleheaddata.org/explore.html
+---
+{% include nav.html %}
+
+<style>
+  /* ── Layout ── */
+  body.explore-page { background: var(--bg); }
+
+  .explore-stage {
+    max-width: var(--chart-max);
+    margin: 0 auto;
+    padding: 32px var(--gutter) 160px;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── Topic switcher ── */
+  .topic-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 28px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .topic-bar::-webkit-scrollbar { display: none; }
+  .topic-pill {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+  }
+  .topic-pill:hover { border-color: var(--c-navy); color: var(--text); }
+  .topic-pill.active {
+    background: var(--c-navy);
+    border-color: var(--c-navy);
+    color: #fff;
+  }
+
+  /* ── Question ── */
+  .question-block {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .question-block h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--text);
+    margin: 0 0 8px;
+    line-height: 1.3;
+  }
+  .question-block .question-context {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* ── Answer cards ── */
+  .answers {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .answer-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  .answer-card:hover {
+    border-color: var(--c-navy);
+    box-shadow: var(--shadow-sm);
+  }
+  .answer-card.selected {
+    border-color: var(--c-teal);
+    box-shadow: 0 0 0 1px var(--c-teal), var(--shadow-md);
+  }
+  .answer-card.dimmed {
+    opacity: 0.5;
+  }
+  .answer-card.dimmed:hover {
+    opacity: 0.8;
+  }
+
+  .answer-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 6px;
+  }
+  .answer-card[data-answer="a"] .answer-label { color: var(--c-teal); }
+  .answer-card[data-answer="b"] .answer-label { color: var(--c-brass); }
+  .answer-card[data-answer="c"] .answer-label { color: var(--c-navy); }
+
+  .answer-card h2 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 4px;
+    line-height: 1.35;
+  }
+  .answer-card .answer-summary {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* ── Evidence panel ── */
+  .evidence {
+    display: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px 22px;
+    margin-bottom: 24px;
+    animation: evidence-in 0.25s ease;
+  }
+  .evidence.open { display: block; }
+
+  @keyframes evidence-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .evidence-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .evidence-header h3 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+    margin: 0;
+  }
+  .evidence-close {
+    font-size: 12px;
+    color: var(--text-subtle);
+    cursor: pointer;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 10px;
+    transition: all 0.15s;
+  }
+  .evidence-close:hover {
+    border-color: var(--c-navy);
+    color: var(--text);
+  }
+
+  .evidence-point {
+    margin-bottom: 18px;
+  }
+  .evidence-point:last-child { margin-bottom: 0; }
+
+  .evidence-point h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 6px;
+  }
+  .evidence-point p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0 0 8px;
+  }
+  .evidence-point p:last-child { margin-bottom: 0; }
+
+  .evidence-chart-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--link);
+    text-decoration: none;
+    padding: 4px 0;
+  }
+  .evidence-chart-link:hover { text-decoration: underline; }
+  .evidence-chart-link::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: var(--link);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='10' width='3' height='5' rx='0.5'/%3E%3Crect x='6' y='6' width='3' height='9' rx='0.5'/%3E%3Crect x='11' y='2' width='3' height='13' rx='0.5'/%3E%3C/svg%3E") center/contain no-repeat;
+  }
+
+  .evidence-caveat {
+    font-size: 12px;
+    color: var(--text-subtle);
+    font-style: italic;
+    border-left: 2px solid var(--divider);
+    padding-left: 12px;
+    margin-top: 10px;
+  }
+
+  /* ── Composer (pinned bottom) ── */
+  .composer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -4px 20px rgba(15,42,61,0.08);
+    z-index: 100;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  .composer.visible { transform: translateY(0); }
+
+  .composer-inner {
+    max-width: var(--chart-max);
+    margin: 0 auto;
+    padding: 14px var(--gutter);
+  }
+
+  .composer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .composer-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+  }
+  .composer-actions {
+    display: flex;
+    gap: 8px;
+  }
+  .composer-btn {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .composer-btn:hover {
+    border-color: var(--c-navy);
+    color: var(--text);
+  }
+  .composer-btn--copy {
+    background: var(--c-navy);
+    border-color: var(--c-navy);
+    color: #fff;
+  }
+  .composer-btn--copy:hover { opacity: 0.9; }
+
+  .composer-editor {
+    width: 100%;
+    min-height: 56px;
+    max-height: 140px;
+    padding: 10px 12px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .composer-editor:focus {
+    border-color: var(--c-teal);
+  }
+  .composer-editor::placeholder {
+    color: var(--text-faint);
+  }
+
+  .composer-toggle {
+    position: absolute;
+    top: -32px;
+    right: var(--gutter);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-subtle);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+
+  /* ── Responsive ── */
+  @media (min-width: 600px) {
+    .question-block h1 { font-size: 32px; }
+    .answers {
+      flex-direction: row;
+    }
+    .answer-card { flex: 1; }
+    .composer-editor { min-height: 44px; }
+  }
+
+  @media (max-width: 599px) {
+    .explore-stage { padding-top: 20px; }
+    .question-block h1 { font-size: 22px; }
+    .answer-card { padding: 14px 16px; }
+  }
+</style>
+
+<div class="explore-stage">
+
+  <!-- Topic switcher -->
+  <nav class="topic-bar" aria-label="Topics">
+    <button class="topic-pill active" data-topic="override">Override</button>
+    <button class="topic-pill" data-topic="voteno">Vote no</button>
+    <button class="topic-pill" data-topic="library">Library cuts</button>
+    <button class="topic-pill" data-topic="trust">Trust</button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════
+       QUESTION 1: Override necessary vs. wasteful spending
+       ═══════════════════════════════════════════════════ -->
+  <section class="question-screen" data-topic="override">
+
+    <div class="question-block">
+      <h1>Is this override necessary, or the result of wasteful spending?</h1>
+      <p class="question-context">
+        The proposed $8.47M override would be the largest in Marblehead's history.
+        Residents disagree on whether the deficit was inevitable or avoidable.
+      </p>
+    </div>
+
+    <div class="answers">
+
+      <!-- Answer A -->
+      <div class="answer-card" data-answer="a" data-question="override">
+        <p class="answer-label">Position A</p>
+        <h2>Years of underfunding made this inevitable</h2>
+        <p class="answer-summary">
+          Costs grew faster than revenue for over a decade. Health insurance,
+          pensions, and contractual obligations left almost no room to cut.
+        </p>
+      </div>
+
+      <!-- Answer B -->
+      <div class="answer-card" data-answer="b" data-question="override">
+        <p class="answer-label">Position B</p>
+        <h2>There is real waste they could cut first</h2>
+        <p class="answer-summary">
+          Staffing held steady while enrollment fell 21%, total compensation
+          exceeds peer towns, and the budget process lacks the scrutiny
+          residents deserve.
+        </p>
+      </div>
+
+      <!-- Answer C -->
+      <div class="answer-card" data-answer="c" data-question="override">
+        <p class="answer-label">Position C</p>
+        <h2>Both are true, but the gap is too large to close with cuts alone</h2>
+        <p class="answer-summary">
+          Some spending was avoidable. But even aggressive cuts would not
+          close an $8.47M deficit without service losses most residents
+          would not accept.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Evidence A -->
+    <div class="evidence" data-evidence="override-a">
+      <div class="evidence-header">
+        <h3>The case for "underfunding made this inevitable"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Health insurance grew 2.5x faster than revenue</h4>
+        <p>
+          Town health insurance spending rose from $8.6M in FY14 to $15.1M in
+          FY25. GIC premiums are set at the state level; the town cannot
+          negotiate rates directly, though it can bargain over the
+          employer/employee premium split.
+        </p>
+        <a class="evidence-chart-link" href="charts/healthcare_costs.html">
+          Healthcare cost chart
+        </a>
+        <p class="evidence-caveat">
+          FY25 figure is from the FY25 adopted budget, not the ACFR (not yet published).
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Levy growth has been nearly flat in real terms</h4>
+        <p>
+          Prop 2&frac12; limits annual levy growth to 2.5%. Inflation averaged
+          3.4% over the same period. In real dollars, Marblehead's tax capacity
+          has been shrinking.
+        </p>
+        <a class="evidence-chart-link" href="charts/levy_vs_bill.html">
+          Levy, bill, and inflation chart
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Contractual obligations account for most of the budget</h4>
+        <p>
+          The largest line items -- schools, police, fire, DPW, pensions,
+          debt service, and health insurance -- are governed by union
+          contracts, state mandates, or fixed obligations. What remains
+          for discretionary spending is a small share of the total, which
+          is why the no-override budget cuts fall disproportionately on
+          the library, community development, and similar departments.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence B -->
+    <div class="evidence" data-evidence="override-b">
+      <div class="evidence-header">
+        <h3>The case for "there is real waste"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Staffing held steady while enrollment fell 21%</h4>
+        <p>
+          School enrollment peaked at 3,327 (FY14) and declined 21% to
+          2,617 (FY24), but total school FTEs have not declined
+          proportionally. Critics argue administrative and non-classroom
+          positions absorbed the savings from smaller class sizes.
+        </p>
+        <a class="evidence-chart-link" href="charts/enrollment_vs_staffing.html">
+          Enrollment vs. staffing chart
+        </a>
+        <p class="evidence-caveat">
+          The FY23 jump from 483 to 537 education FTE is unexplained in
+          public records and may reflect ESSER-funded positions or a
+          reporting change. This inflates the trend line.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Total compensation is high, driven by the insurance split</h4>
+        <p>
+          Average teacher salary in Marblehead ($90,696) is actually lower
+          than in Melrose ($85,682) or Stoneham ($81,293). But Marblehead
+          pays 83% of GIC health premiums, the highest employer share
+          among peer towns. When you add employer health insurance to
+          salary, Marblehead's estimated total compensation ($122,702)
+          exceeds Melrose ($116,532) and Stoneham ($112,143).
+        </p>
+        <a class="evidence-chart-link" href="charts/peer_compensation.html">
+          Peer compensation chart
+        </a>
+        <p class="evidence-caveat">
+          Salary from DESE 2023-24 reports. Total compensation estimate
+          uses the GIC Harvard Pilgrim family plan at each town's modal
+          employer share.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Budget process lacks independent scrutiny</h4>
+        <p>
+          FinCom reviews proposed budgets but does not conduct zero-based
+          reviews. Some residents argue line-item audits would surface
+          cuts the current process misses.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence C -->
+    <div class="evidence" data-evidence="override-c">
+      <div class="evidence-header">
+        <h3>The case for "both, but the gap is real"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Even aggressive cuts would not close the gap</h4>
+        <p>
+          The no-override budget cuts the library 43% (-$636K), eliminates
+          the OPEB trust contribution, and cuts 22 town positions and
+          18.25 school FTEs. Even with those cuts, without an override
+          the gap between projected expenses and revenue grows to roughly
+          $18M by FY30.
+        </p>
+        <a class="evidence-chart-link" href="no-override-budget.html">
+          No-override scenario
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Some spending was avoidable, and saying so is not anti-town</h4>
+        <p>
+          Acknowledging that compensation grew faster than peer towns, or
+          that FTE reductions lagged enrollment, does not invalidate the
+          override. It means the override fixes a deficit that was partly
+          structural and partly the result of choices.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>The sustainability question remains either way</h4>
+        <p>
+          An override closes the current gap but does not change the
+          underlying math: costs will continue to outpace 2.5% levy
+          growth. Even Tier 3 ($15M) briefly closes the gap in FY29
+          but reopens to roughly $4M by FY30 as expenses outpace the
+          fixed override levy.
+        </p>
+        <a class="evidence-chart-link" href="charts/sustainability.html">
+          Sustainability projections
+        </a>
+        <p class="evidence-caveat">
+          FY28-FY30 are illustrative projections (3% revenue growth,
+          5% expense growth), not forecasts.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       QUESTION 2: What happens if we vote no?
+       ═══════════════════════════════════════════════════ -->
+  <section class="question-screen" data-topic="voteno" style="display:none">
+
+    <div class="question-block">
+      <h1>What will happen if we vote no?</h1>
+      <p class="question-context">
+        The town has published a no-override balanced budget. It cuts
+        22 town positions, 18.25 school FTEs, and reduces the library 43%.
+        Residents disagree on what that means in practice.
+      </p>
+    </div>
+
+    <div class="answers">
+      <div class="answer-card" data-answer="a" data-question="voteno">
+        <p class="answer-label">Position A</p>
+        <h2>Services get cut, but the town adjusts</h2>
+        <p class="answer-summary">
+          The no-override budget is painful but balanced. Marblehead has
+          operated without overrides before. Towns adapt.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="b" data-question="voteno">
+        <p class="answer-label">Position B</p>
+        <h2>The cuts trigger losses that are hard to reverse</h2>
+        <p class="answer-summary">
+          Staff leave for higher-paying districts, institutional knowledge
+          is lost, and the next override ends up larger. Other towns
+          learned this the hard way.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="c" data-question="voteno">
+        <p class="answer-label">Position C</p>
+        <h2>Voting no is the only way to force structural reform</h2>
+        <p class="answer-summary">
+          Approving the override removes the pressure to fix the spending
+          patterns that created the deficit. A no vote forces the
+          conversation the town has been avoiding.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence A: town adjusts -->
+    <div class="evidence" data-evidence="voteno-a">
+      <div class="evidence-header">
+        <h3>The case for "the town adjusts"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>The no-override budget is balanced</h4>
+        <p>
+          The town published a line-by-line FY27 Proposed Balanced Budget
+          With No Override. It uses $5M in free cash, staffing reductions,
+          and elimination of the OPEB trust contribution. It is a legal,
+          balanced budget that can operate.
+        </p>
+        <a class="evidence-chart-link" href="no-override-budget.html">
+          No-override budget, line by line
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Marblehead has rejected overrides before</h4>
+        <p>
+          Marblehead voters have approved only 6 of 20 operating overrides
+          since 1988. The town continued to function after each rejection.
+          Debt exclusions, by contrast, pass at 49 of 50.
+        </p>
+        <a class="evidence-chart-link" href="marblehead-voting-record.html">
+          Voting record since 1988
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Some costs that increase regardless</h4>
+        <p>
+          Health insurance (+$1.65M, +11%), pensions (+$463K, +9%), police
+          (+$232K), and fire (+$456K) all grow in the no-override budget.
+          The cuts are concentrated in discretionary areas: library (-43%),
+          community development (-59%), OPEB trust (-100%).
+        </p>
+        <p class="evidence-caveat">
+          Source: FY27 Proposed Budget, pages 1-4.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence B: hard to reverse -->
+    <div class="evidence" data-evidence="voteno-b">
+      <div class="evidence-header">
+        <h3>The case for "hard to reverse"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Melrose rejected, then passed a 75% larger override</h4>
+        <p>
+          Melrose (population ~28,000) rejected a $7.7M override in June
+          2024. The town cut 61.4 FTEs over two years: teachers, library
+          hours, senior van drivers. Elementary class sizes were proposed
+          up to 32 students. Melrose returned to the ballot in November
+          2025 and passed a $13.5M override, 75% larger than the original.
+        </p>
+        <a class="evidence-chart-link" href="data/case_studies">
+          Override case studies
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Stoneham lost staff to higher-paying districts</h4>
+        <p>
+          Stoneham rejected a $14.6M override in April 2025. Staff departed
+          for higher-paying districts, leaving 28 vacant positions at the
+          start of the school year. Teachers earned 30% below market rate.
+          Stoneham passed a $9.3M override in December 2025; the larger
+          $12.5M option failed by 43 votes.
+        </p>
+        <a class="evidence-chart-link" href="data/case_studies">
+          Override case studies
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>School FTE cuts in Marblehead's no-override budget</h4>
+        <p>
+          The superintendent identifies 18.25 FTEs eliminated: roughly 9.3
+          currently filled positions and 8.95 vacant. The school
+          appropriation drops from $49.1M to $47.6M (-3.1%), with the
+          reduction absorbed by the out-of-district special education line
+          using one-time FY26 surplus funds that do not recur.
+        </p>
+        <a class="evidence-chart-link" href="no-override-budget.html">
+          School-side reductions
+        </a>
+      </div>
+    </div>
+
+    <!-- Evidence C: force reform -->
+    <div class="evidence" data-evidence="voteno-c">
+      <div class="evidence-header">
+        <h3>The case for "force structural reform"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>The override does not fix the underlying math</h4>
+        <p>
+          Even Tier 3 ($15M) briefly closes the gap in FY29 but reopens to
+          roughly $4M by FY30 as expenses outpace the fixed override levy.
+          Without structural change, the town will face another override
+          request within a few years.
+        </p>
+        <a class="evidence-chart-link" href="charts/sustainability.html">
+          Sustainability projections
+        </a>
+        <p class="evidence-caveat">
+          FY28-FY30 are illustrative projections (3% revenue growth,
+          5% expense growth), not forecasts.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Reform options exist but have not been pursued</h4>
+        <p>
+          A state DLS Financial Management Review is free, independent,
+          and requested by the Select Board. More detailed department-level
+          budget reporting is a format choice that requires no warrant
+          article. Neither has been implemented.
+        </p>
+        <a class="evidence-chart-link" href="what-you-can-do.html">
+          What you can do
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>The counter-argument: reform and override are not mutually exclusive</h4>
+        <p>
+          Override supporters argue you can vote yes and still demand reform.
+          Override opponents argue that once the money flows, the incentive
+          to reform disappears. This is a judgment call, not a data question.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       QUESTION 3: Library cuts (placeholder)
+       ═══════════════════════════════════════════════════ -->
+  <section class="question-screen" data-topic="library" style="display:none">
+
+    <div class="question-block">
+      <h1>Why is the library the one getting cut the most?</h1>
+      <p class="question-context">
+        In the no-override budget, the library loses the most as a share of
+        its current funding. Residents want to know why.
+      </p>
+    </div>
+
+    <div class="answers">
+      <div class="answer-card" data-answer="a" data-question="library">
+        <p class="answer-label">Position A</p>
+        <h2>It is not the biggest cut; it is just the most visible</h2>
+        <p class="answer-summary">
+          Other departments face proportional reductions, but the library
+          closure is concrete and emotional in a way that a hiring freeze
+          is not.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="b" data-question="library">
+        <p class="answer-label">Position B</p>
+        <h2>Contracts protect everything else</h2>
+        <p class="answer-summary">
+          Police, fire, schools, and DPW are covered by union contracts
+          and state mandates. The library is one of the few large
+          discretionary line items.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="c" data-question="library">
+        <p class="answer-label">Position C</p>
+        <h2>It is a political choice, not a budget inevitability</h2>
+        <p class="answer-summary">
+          Other towns of similar size fund their libraries through
+          overrides and dedicated levies. Marblehead chose not to.
+        </p>
+      </div>
+    </div>
+
+    <div class="evidence" data-evidence="library-a">
+      <div class="evidence-header">
+        <h3>The case for "most visible, not biggest"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+      <div class="evidence-point">
+        <h4>Proportional cuts across departments</h4>
+        <p>
+          The no-override budget cuts DPW road maintenance by a comparable
+          percentage, delays vehicle replacements, and freezes open positions
+          town-wide. These are less visible because they happen gradually.
+        </p>
+        <a class="evidence-chart-link" href="no-override-budget.html">
+          No-override scenario
+        </a>
+      </div>
+    </div>
+
+    <div class="evidence" data-evidence="library-b">
+      <div class="evidence-header">
+        <h3>The case for "contracts protect everything else"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+      <div class="evidence-point">
+        <h4>Most of the budget is contractually locked</h4>
+        <p>
+          Union contracts, pension obligations, debt service, and health
+          insurance consume the vast majority of the operating budget.
+          Cutting those requires renegotiation or default, not a budget vote.
+        </p>
+      </div>
+      <div class="evidence-point">
+        <h4>The library is large enough to matter</h4>
+        <p>
+          At roughly $1.1M, the library is one of the largest
+          non-contractual line items. Cutting smaller discretionary items
+          would not produce meaningful savings.
+        </p>
+      </div>
+    </div>
+
+    <div class="evidence" data-evidence="library-c">
+      <div class="evidence-header">
+        <h3>The case for "political choice"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+      <div class="evidence-point">
+        <h4>Peer towns fund libraries differently</h4>
+        <p>
+          Several comparable Massachusetts towns dedicate override funds or
+          special levies to library operations, treating them as essential
+          services rather than discretionary.
+        </p>
+      </div>
+      <div class="evidence-point">
+        <p>
+          This evidence section needs more data. Peer library funding
+          comparisons are not yet in the dataset.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       QUESTION 4: Trust
+       ═══════════════════════════════════════════════════ -->
+  <section class="question-screen" data-topic="trust" style="display:none">
+
+    <div class="question-block">
+      <h1>How do we trust the people making these decisions?</h1>
+      <p class="question-context">
+        Elected and appointed boards set the budget and propose overrides.
+        Residents disagree on whether the existing oversight is sufficient.
+      </p>
+    </div>
+
+    <div class="answers">
+      <div class="answer-card" data-answer="a" data-question="trust">
+        <p class="answer-label">Position A</p>
+        <h2>The system has real checks and transparency</h2>
+        <p class="answer-summary">
+          Elected boards, public meetings, independent audits, state
+          oversight, and Town Meeting vote. The information is there
+          if you look for it.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="b" data-question="trust">
+        <p class="answer-label">Position B</p>
+        <h2>Transparency exists on paper but not in practice</h2>
+        <p class="answer-summary">
+          Meetings are poorly attended, budgets are presented as
+          take-it-or-leave-it, and few residents have the time to
+          audit 200-page financial reports.
+        </p>
+      </div>
+
+      <div class="answer-card" data-answer="c" data-question="trust">
+        <p class="answer-label">Position C</p>
+        <h2>Trust is earned by showing the work, not asking for faith</h2>
+        <p class="answer-summary">
+          The question is not whether officials are honest but whether
+          the system makes it easy for residents to verify claims
+          independently.
+        </p>
+      </div>
+    </div>
+
+    <!-- Evidence A: real checks -->
+    <div class="evidence" data-evidence="trust-a">
+      <div class="evidence-header">
+        <h3>The case for "real checks exist"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Who decides what</h4>
+        <p>
+          The Select Board sets the town budget and handles operations.
+          The Finance Committee reviews and recommends. The School
+          Committee sets priorities within the school budget. Town Meeting
+          (open to all registered voters) approves appropriations. All
+          meetings are hybrid and agendas are posted at least 48 hours
+          ahead on the town calendar.
+        </p>
+        <a class="evidence-chart-link" href="what-you-can-do.html">
+          Who decides what
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Independent audits and state oversight</h4>
+        <p>
+          The town publishes an Annual Comprehensive Financial Report
+          (ACFR) audited by an independent firm. The MA Department of
+          Revenue reviews tax rates and certifies free cash. PERAC
+          audits the pension fund. These are not self-reported numbers.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Voters have rejected overrides before</h4>
+        <p>
+          Marblehead has approved only 6 of 20 operating overrides since
+          1988. Debt exclusions pass at 49 of 50. The ballot is a real
+          check: voters have said no repeatedly, and the town adjusted.
+        </p>
+        <a class="evidence-chart-link" href="marblehead-voting-record.html">
+          Voting record since 1988
+        </a>
+      </div>
+    </div>
+
+    <!-- Evidence B: transparency in name only -->
+    <div class="evidence" data-evidence="trust-b">
+      <div class="evidence-header">
+        <h3>The case for "transparency in name only"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Participation is very low</h4>
+        <p>
+          Town Meeting attendance is typically a small fraction of
+          registered voters. FinCom hearings draw single-digit audiences.
+          Most residents learn about the budget from social media, not
+          from primary documents or public meetings.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>The information exists but is not accessible</h4>
+        <p>
+          ACFRs are 200+ pages of GASB-formatted financial statements.
+          Budget presentations compress complex tradeoffs into
+          30-minute slideshows. The data exists but requires significant
+          time and expertise to interpret. A resident who wants to fact-check
+          a claim about health insurance costs would need to find the right
+          ACFR schedule, adjust for GASB reporting rules, and compare across
+          fiscal years.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Budget detail is limited at the public level</h4>
+        <p>
+          The FY27 Proposed Budget presents the school department as a
+          single line item ($47.6M). The breakdown of where cuts fall
+          within the district comes from the School Committee, not the
+          budget document itself. A state DLS Financial Management Review
+          could provide independent, department-level analysis, but one
+          has not been requested.
+        </p>
+        <a class="evidence-chart-link" href="what-you-can-do.html">
+          Reform options
+        </a>
+      </div>
+    </div>
+
+    <!-- Evidence C: show the work -->
+    <div class="evidence" data-evidence="trust-c">
+      <div class="evidence-header">
+        <h3>The case for "show the work"</h3>
+        <button class="evidence-close">Collapse</button>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Verification over trust</h4>
+        <p>
+          The gap is not between honest and dishonest officials. It is
+          between a system that asks residents to trust and one that makes
+          it easy to verify. Open data, traceable numbers, and
+          plain-language explanations reduce the need for trust.
+        </p>
+      </div>
+
+      <div class="evidence-point">
+        <h4>Two concrete reforms that do not require an override</h4>
+        <p>
+          A state DLS Financial Management Review is free, independent, and
+          requested by the Select Board. More detailed department-level
+          budget reporting is a format choice that requires no warrant
+          article. Neither costs money. Both would make verification easier
+          regardless of the override outcome.
+        </p>
+        <a class="evidence-chart-link" href="what-you-can-do.html">
+          Better oversight options
+        </a>
+      </div>
+
+      <div class="evidence-point">
+        <h4>This site exists because of that gap</h4>
+        <p>
+          Every number on marbleheaddata.org traces to a primary source.
+          That is not because the officials are lying. It is because
+          "trust me" is not a sufficient answer when you are asking
+          voters to approve $8.47M in new taxes. The budget data should
+          be as easy to check as a bank statement.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+
+<!-- ── Composer ── -->
+<div class="composer" id="composer">
+  <button class="composer-toggle" id="composerToggle">Your notes</button>
+  <div class="composer-inner">
+    <div class="composer-header">
+      <span class="composer-label">Your take</span>
+      <div class="composer-actions">
+        <button class="composer-btn" id="composerClear">Clear</button>
+        <button class="composer-btn composer-btn--copy" id="composerCopy">Copy</button>
+      </div>
+    </div>
+    <textarea
+      class="composer-editor"
+      id="composerEditor"
+      placeholder="Pick a position above to start, or just type your own thoughts..."
+    ></textarea>
+  </div>
+</div>
+
+<script>
+(function () {
+  /* ── State ── */
+  const selections = {};   // { questionId: answerId }
+  const composerEl = document.getElementById('composer');
+  const editorEl   = document.getElementById('composerEditor');
+  const toggleBtn  = document.getElementById('composerToggle');
+  let composerMinimized = false;
+
+  /* ── Topic switching ── */
+  document.querySelectorAll('.topic-pill').forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      var topic = this.dataset.topic;
+      document.querySelectorAll('.topic-pill').forEach(function (p) {
+        p.classList.toggle('active', p.dataset.topic === topic);
+      });
+      document.querySelectorAll('.question-screen').forEach(function (s) {
+        s.style.display = s.dataset.topic === topic ? '' : 'none';
+      });
+    });
+  });
+
+  /* ── Answer selection ── */
+  document.querySelectorAll('.answer-card').forEach(function (card) {
+    card.addEventListener('click', function () {
+      var question = this.dataset.question;
+      var answer   = this.dataset.answer;
+      var wasSelected = this.classList.contains('selected');
+
+      // Update card states
+      document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
+        if (wasSelected) {
+          c.classList.remove('selected', 'dimmed');
+        } else {
+          c.classList.remove('selected');
+          c.classList.toggle('dimmed', c.dataset.answer !== answer);
+          if (c.dataset.answer === answer) c.classList.add('selected');
+        }
+      });
+
+      // Toggle evidence panels
+      document.querySelectorAll('.evidence').forEach(function (e) {
+        if (e.dataset.evidence && e.dataset.evidence.startsWith(question + '-')) {
+          if (!wasSelected && e.dataset.evidence === question + '-' + answer) {
+            e.classList.add('open');
+          } else {
+            e.classList.remove('open');
+          }
+        }
+      });
+
+      // Update composer
+      if (wasSelected) {
+        delete selections[question];
+      } else {
+        selections[question] = answer;
+        showComposer();
+        seedComposer(question, answer);
+      }
+    });
+  });
+
+  /* ── Evidence collapse buttons ── */
+  document.querySelectorAll('.evidence-close').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = this.closest('.evidence');
+      panel.classList.remove('open');
+    });
+  });
+
+  /* ── Switching between dimmed answers ── */
+  // Already handled: clicking a dimmed card re-runs the selection logic
+
+  /* ── Composer ── */
+  function showComposer() {
+    composerEl.classList.add('visible');
+    composerMinimized = false;
+  }
+
+  function seedComposer(question, answer) {
+    var card = document.querySelector(
+      '.answer-card[data-question="' + question + '"][data-answer="' + answer + '"]'
+    );
+    if (!card) return;
+    var heading = card.querySelector('h2').textContent;
+    var existing = editorEl.value.trim();
+
+    // Build a seed line
+    var questionEl = document.querySelector(
+      '.question-screen[data-topic="' + question + '"] .question-block h1'
+    );
+    var qText = questionEl ? questionEl.textContent.trim() : question;
+    var seed = qText + '\n  > ' + heading;
+
+    if (existing) {
+      // Append if not already there
+      if (existing.indexOf(heading) === -1) {
+        editorEl.value = existing + '\n\n' + seed;
+      }
+    } else {
+      editorEl.value = seed;
+    }
+
+    // Save to localStorage
+    localStorage.setItem('explore-notes', editorEl.value);
+  }
+
+  // Persist edits
+  editorEl.addEventListener('input', function () {
+    localStorage.setItem('explore-notes', editorEl.value);
+  });
+
+  // Restore on load
+  var saved = localStorage.getItem('explore-notes');
+  if (saved) {
+    editorEl.value = saved;
+    showComposer();
+  }
+
+  // Toggle
+  toggleBtn.addEventListener('click', function () {
+    composerMinimized = !composerMinimized;
+    if (composerMinimized) {
+      composerEl.classList.remove('visible');
+    } else {
+      composerEl.classList.add('visible');
+    }
+  });
+
+  // Clear
+  document.getElementById('composerClear').addEventListener('click', function () {
+    editorEl.value = '';
+    localStorage.removeItem('explore-notes');
+  });
+
+  // Copy
+  document.getElementById('composerCopy').addEventListener('click', function () {
+    editorEl.select();
+    navigator.clipboard.writeText(editorEl.value).then(function () {
+      var btn = document.getElementById('composerCopy');
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+    });
+  });
+
+})();
+</script>
+
+{% include footer.html %}
