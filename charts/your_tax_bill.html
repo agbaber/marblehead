@@ -47,7 +47,7 @@ title: "Where Your Tax Dollars Go"
   .sk-node-override-t3 { fill: var(--series-tier-3); }
 
   .sk-node-schools    { fill: var(--c-navy); }
-  .sk-node-healthcare { fill: var(--c-buoy); }
+  .sk-node-healthcare { fill: color-mix(in srgb, var(--c-plum) 65%, var(--c-buoy)); }
   .sk-node-safety     { fill: var(--c-teal); }
   .sk-node-debt       { fill: var(--c-plum); }
   .sk-node-pensions   { fill: var(--c-brass); }
@@ -62,11 +62,11 @@ title: "Where Your Tax Dollars Go"
     opacity: 0.18;
   }
   .sk-ribbon-base:hover { opacity: 0.32; }
-  .sk-ribbon-override { opacity: 0.4; }
-  .sk-ribbon-override:hover { opacity: 0.6; }
-  .sk-ribbon-override.tier-t1 { fill: var(--series-tier-1); }
-  .sk-ribbon-override.tier-t2 { fill: var(--series-tier-2); }
-  .sk-ribbon-override.tier-t3 { fill: var(--series-tier-3); }
+  .sk-ribbon-override {
+    fill: var(--c-sage);
+    opacity: 0.35;
+  }
+  .sk-ribbon-override:hover { opacity: 0.5; }
 
   /* Focused state */
   .sankey-wrap.has-focus .sk-ribbon { opacity: 0; pointer-events: none; }
