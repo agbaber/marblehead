@@ -165,15 +165,17 @@ og_url: https://marbleheaddata.org/
     margin-top: 3px;
   }
 
-  /* Perspectives count */
+  /* Decided count (social proof) */
   .explore-card-meta {
     grid-column: 2;
     font-size: 12px;
     font-weight: 600;
     color: var(--text-subtle);
     margin-top: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
+  }
+  .explore-card-decided {
+    color: var(--c-teal);
   }
 
   /* Pick display */
@@ -204,27 +206,36 @@ og_url: https://marbleheaddata.org/
   .explore-share-strip {
     display: none;
     text-align: center;
-    padding: 16px 0 0;
+    padding: 20px 0 4px;
   }
   .explore-share-strip.visible { display: block; }
   .explore-share-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     font: inherit;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--c-navy);
-    background: var(--surface);
-    border: 1.5px solid var(--c-navy);
-    border-radius: 20px;
-    padding: 7px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--c-navy);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
     cursor: pointer;
     transition: all 0.15s ease;
+    box-shadow: var(--shadow-sm);
   }
   .explore-share-btn:hover {
-    background: var(--c-navy);
-    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .explore-share-btn::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'%3E%3Cpath d='M13.5 1a1.5 1.5 0 1 0-.7 2.84L10.08 8.6a1.5 1.5 0 1 0 .01 2.81l2.72 4.75A1.5 1.5 0 1 0 14.2 15l-2.72-4.76a1.5 1.5 0 0 0-.01-2.81L14.2 2.66A1.5 1.5 0 0 0 13.5 1zM2.5 6a1.5 1.5 0 1 0 .7 2.84l2.72 4.75a1.5 1.5 0 1 0 1.38-1.16L4.58 7.67A1.5 1.5 0 0 0 2.5 6z'/%3E%3C/svg%3E") center/contain no-repeat;
   }
 
   /* Shared-positions view */
@@ -1100,6 +1111,100 @@ og_url: https://marbleheaddata.org/
     }
   }
 
+  /* ── Personal stats strip ── */
+  .explore-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px 16px;
+    margin: 0 0 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+  .explore-stats-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+  }
+  .explore-stats-num {
+    font-weight: 700;
+    color: var(--c-teal);
+    font-size: 14px;
+  }
+  .explore-stats-progress {
+    flex: 1;
+    max-width: 80px;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .explore-stats-bar {
+    height: 100%;
+    background: var(--c-teal);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+
+  /* ── First-time tutorial banner ── */
+  .explore-tutorial {
+    display: none;
+    padding: 14px 18px;
+    margin: -8px 0 16px;
+    background: color-mix(in srgb, var(--c-navy) 6%, var(--surface));
+    border: 1.5px solid var(--c-navy);
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text);
+    animation: evidence-in 0.3s ease;
+  }
+  .explore-tutorial.visible { display: block; }
+  .explore-tutorial-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin: 0 0 8px;
+  }
+  .explore-tutorial ul {
+    margin: 0 0 10px;
+    padding-left: 18px;
+  }
+  .explore-tutorial li {
+    margin-bottom: 4px;
+    color: var(--text-muted);
+  }
+  .explore-tutorial-dismiss {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 14px;
+    border: 1.5px solid var(--c-navy);
+    background: var(--c-navy);
+    color: #fff;
+    cursor: pointer;
+  }
+  .explore-tutorial-dismiss:hover {
+    background: color-mix(in srgb, var(--c-navy) 85%, black);
+  }
+
+  /* ── Browsing hint (persistent after first pick) ── */
+  .explore-browse-hint {
+    display: none;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: -8px 0 16px;
+    font-style: italic;
+  }
+  .explore-browse-hint.visible { display: block; }
+
   /* ── Responsive ── */
   @media (min-width: 600px) {
     .explore-landing-head h1 { font-size: 34px; }
@@ -1125,6 +1230,9 @@ og_url: https://marbleheaddata.org/
     .answer-card { padding: 14px 16px; }
     .question-nav { gap: 8px; }
     .related-link { font-size: 12px; padding: 4px 10px; }
+    .explore-stats { gap: 10px; flex-wrap: wrap; font-size: 11px; padding: 8px 12px; }
+    .explore-stats-num { font-size: 13px; }
+    .explore-tutorial { font-size: 12px; padding: 12px 14px; }
   }
 </style>
 
@@ -1156,6 +1264,14 @@ og_url: https://marbleheaddata.org/
       <p class="votes-strip-note">Either vote can end the override. <a class="votes-strip-link" href="what-you-can-do.html#your-two-votes">How the two votes work together &rarr;</a></p>
     </div>
 
+    <!-- Personal stats strip -->
+    <div class="explore-stats" id="exploreStats" style="display:none">
+      <span class="explore-stats-item"><span class="explore-stats-num" id="statDecided">0</span>/<span id="statTotal">0</span> decided</span>
+      <span class="explore-stats-progress"><span class="explore-stats-bar" id="statBar" style="width:0%"></span></span>
+      <span class="explore-stats-item"><span class="explore-stats-num" id="statVisits">0</span> visits</span>
+      <span class="explore-stats-item"><span class="explore-stats-num" id="statShares">0</span> shared</span>
+    </div>
+
     <div class="explore-shared-banner" id="sharedBanner">
       Tap any question to see the evidence behind their pick.
       <br><button type="button" class="explore-shared-fresh" id="sharedFresh">Start fresh with your own answers</button>
@@ -1175,6 +1291,20 @@ og_url: https://marbleheaddata.org/
       <!-- JS builds dots from question screens -->
     </div>
   </div>
+
+  <!-- First-time tutorial (shown once on first pick) -->
+  <div class="explore-tutorial" id="exploreTutorial">
+    <p class="explore-tutorial-title">You just made your first pick</p>
+    <ul>
+      <li>Your picks are <strong>private</strong>, saved only in your browser</li>
+      <li>Tap any other answer to <strong>read their evidence</strong> without changing your pick</li>
+      <li>Use the <strong>checkmark</strong> to switch your pick to a different answer</li>
+    </ul>
+    <button type="button" class="explore-tutorial-dismiss" id="tutorialDismiss">Got it</button>
+  </div>
+
+  <!-- Browse vs. switch hint (persistent after tutorial) -->
+  <p class="explore-browse-hint" id="browseHint">Tap any answer to read their case. Use the checkmark to switch your pick.</p>
 
   <!-- Your position banner (JS shows when you have a pick for current topic) -->
   <div class="your-position" id="yourPosition">
@@ -3699,6 +3829,135 @@ og_url: https://marbleheaddata.org/
   var notesPanelBody = document.getElementById('notesPanelBody');
   var notesPillCount = document.getElementById('notesPillCount');
   var notesBackdrop = document.getElementById('notesBackdrop');
+
+  /* ── Reactions API (for "N decided" social proof) ── */
+  var API_BASE = 'https://marblehead-community-pulse.agbaber.workers.dev';
+  var decidedCounts = {};   // { topic: number }
+  var decidedCounted = {};  // { topic: true } -- already counted for this browser
+
+  // Load which topics this browser already counted
+  try { decidedCounted = JSON.parse(localStorage.getItem('explore-decided-counted')) || {}; } catch (e) {}
+
+  function fetchDecidedCounts(topics) {
+    var ids = topics.map(function (t) { return encodeURIComponent('index.html#q-' + t); });
+    fetch(API_BASE + '/api/reactions?section_ids=' + ids.join(','))
+      .then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (data) {
+        topics.forEach(function (t) {
+          var key = 'index.html#q-' + t;
+          decidedCounts[t] = data[key] ? data[key].total : 0;
+        });
+        updateDecidedDisplay();
+      })
+      .catch(function () {});
+  }
+
+  function incrementDecided(topic) {
+    if (decidedCounted[topic]) return;
+    decidedCounted[topic] = true;
+    localStorage.setItem('explore-decided-counted', JSON.stringify(decidedCounted));
+    var sectionId = 'index.html#q-' + topic;
+    fetch(API_BASE + '/api/reactions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ section_id: sectionId })
+    })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (data) {
+          decidedCounts[topic] = data.total;
+          updateDecidedDisplay();
+        }
+      })
+      .catch(function () {
+        // Revert so it can retry next time
+        delete decidedCounted[topic];
+        localStorage.setItem('explore-decided-counted', JSON.stringify(decidedCounted));
+      });
+  }
+
+  function updateDecidedDisplay() {
+    Object.keys(landingCards).forEach(function (topic) {
+      var card = landingCards[topic];
+      if (!card || !card.meta) return;
+      var count = decidedCounts[topic] || 0;
+      if (count > 0) {
+        card.meta.innerHTML = '<span class="explore-card-decided">' + count + '</span> decided';
+      }
+    });
+  }
+
+  /* ── Visit + share tracking ── */
+  var VISITS_KEY = 'explore-visits';
+  var SHARES_KEY = 'explore-shares';
+
+  function getVisits() {
+    return parseInt(localStorage.getItem(VISITS_KEY), 10) || 0;
+  }
+  function getShares() {
+    return parseInt(localStorage.getItem(SHARES_KEY), 10) || 0;
+  }
+  function incrementVisits() {
+    var v = getVisits() + 1;
+    localStorage.setItem(VISITS_KEY, v);
+    return v;
+  }
+  function incrementShares() {
+    var s = getShares() + 1;
+    localStorage.setItem(SHARES_KEY, s);
+    return s;
+  }
+
+  // Increment visit count on load
+  var currentVisits = incrementVisits();
+
+  function updateStatsStrip() {
+    var statsEl = document.getElementById('exploreStats');
+    var decidedCount = Object.keys(selections).length;
+    var totalCount = topicOrder.length;
+    var visits = getVisits();
+    var shares = getShares();
+
+    document.getElementById('statDecided').textContent = decidedCount;
+    document.getElementById('statTotal').textContent = totalCount;
+    document.getElementById('statVisits').textContent = visits;
+    document.getElementById('statShares').textContent = shares;
+    var pct = totalCount > 0 ? Math.round((decidedCount / totalCount) * 100) : 0;
+    document.getElementById('statBar').style.width = pct + '%';
+
+    // Show the strip once we have at least 1 visit (always after first load)
+    statsEl.style.display = '';
+  }
+
+  /* ── First-time tutorial ── */
+  var TUTORIAL_KEY = 'explore-tutorial-seen';
+  var tutorialSeen = localStorage.getItem(TUTORIAL_KEY) === '1';
+  var tutorialEl = document.getElementById('exploreTutorial');
+  var browseHintEl = document.getElementById('browseHint');
+
+  function showTutorial() {
+    if (tutorialSeen) return;
+    tutorialEl.classList.add('visible');
+  }
+
+  function dismissTutorial() {
+    tutorialSeen = true;
+    localStorage.setItem(TUTORIAL_KEY, '1');
+    tutorialEl.classList.remove('visible');
+    // Show persistent browse hint after tutorial
+    browseHintEl.classList.add('visible');
+  }
+
+  document.getElementById('tutorialDismiss').addEventListener('click', dismissTutorial);
+
+  // Show browse hint on subsequent visits if tutorial was already seen
+  function updateBrowseHint(topic) {
+    if (tutorialSeen && selections[topic]) {
+      browseHintEl.classList.add('visible');
+    } else {
+      browseHintEl.classList.remove('visible');
+    }
+  }
   var notesGrip = document.getElementById('notesGrip');
   var panelOpen = false;
 
@@ -3858,6 +4117,7 @@ og_url: https://marbleheaddata.org/
       var nextBtn = screen && screen.querySelector('.next-question');
       if (nextBtn) nextBtn.classList.add('visible');
     }
+    updateBrowseHint(topic);
   }
 
   /* Show landing state (no topic selected) */
@@ -3868,6 +4128,8 @@ og_url: https://marbleheaddata.org/
       s.style.display = 'none';
     });
     updateLandingCards();
+    updateStatsStrip();
+    browseHintEl.classList.remove('visible');
     writeURL(null, null);
   }
 
@@ -3971,11 +4233,10 @@ og_url: https://marbleheaddata.org/
       btn.appendChild(ctxSpan);
     }
 
-    /* Perspectives count */
-    var answerCount = screen.querySelectorAll('.answer-card').length;
+    /* Decided count (social proof, populated by API) */
     var metaSpan = document.createElement('span');
     metaSpan.className = 'explore-card-meta';
-    metaSpan.textContent = answerCount + ' perspectives';
+    metaSpan.textContent = '';
     btn.appendChild(metaSpan);
 
     /* Pick display */
@@ -3994,7 +4255,7 @@ og_url: https://marbleheaddata.org/
       window.scrollTo(0, 0);
     });
     listEl.appendChild(btn);
-    landingCards[topic] = { el: btn, pick: pickSpan, pickLabel: pickLabel, pickText: pickText };
+    landingCards[topic] = { el: btn, pick: pickSpan, pickLabel: pickLabel, pickText: pickText, meta: metaSpan };
   });
 
   /* Update landing cards to reflect current selections */
@@ -4039,6 +4300,8 @@ og_url: https://marbleheaddata.org/
       navigator.clipboard.writeText(url).then(function () {
         shareBtnEl.textContent = 'Link copied';
         setTimeout(function () { shareBtnEl.textContent = 'Share your positions'; }, 2000);
+        incrementShares();
+        updateStatsStrip();
         if (typeof posthog !== 'undefined') {
           posthog.capture('explore_positions_shared', { count: pairs.length, source: 'landing' });
         }
@@ -4068,6 +4331,18 @@ og_url: https://marbleheaddata.org/
 
     // Also view this answer's evidence
     viewEvidence(question, answer);
+
+    // Social proof: increment decided count for this question
+    incrementDecided(question);
+
+    // First-time tutorial
+    if (!tutorialSeen) showTutorial();
+
+    // Show browse hint (after tutorial is seen)
+    updateBrowseHint(question);
+
+    // Update stats strip
+    updateStatsStrip();
 
     // Hide prompt, show next button
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
@@ -4469,6 +4744,8 @@ og_url: https://marbleheaddata.org/
       var btn = document.getElementById('notesShare');
       btn.textContent = 'Copied link';
       setTimeout(function () { btn.textContent = 'Share'; }, 1500);
+      incrementShares();
+      updateStatsStrip();
       if (typeof posthog !== 'undefined') {
         posthog.capture('explore_positions_shared', { count: keys.length, source: 'notes_panel' });
       }
@@ -4582,6 +4859,10 @@ og_url: https://marbleheaddata.org/
     }
     suppressURLWrite = false;
   });
+
+  // ── Init: fetch decided counts and show stats ──
+  fetchDecidedCounts(topicOrder);
+  updateStatsStrip();
 
 })();
 </script>
