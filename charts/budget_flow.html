@@ -584,23 +584,15 @@ title: "Where the Money Goes"
       /* Base node rect */
       svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
 
-      /* Colored band at bottom of node showing cut/restoration proportion */
-      if (n.cut > 0) {
-        var cutH = Math.max((n.cut / n.value) * n.h, 2);
-        var restoredH = n.restored > 0 ? Math.max((n.restored / n.value) * n.h, 2) : 0;
-        var bandY = n.y + n.h - cutH;
-
-        if (n.stillCut > 0) {
-          /* Red band for the full cut */
-          svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + cutH + '" rx="0"/>';
-          if (restoredH > 0) {
-            /* Green band overlaid on top portion of the red (restored part) */
-            svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + restoredH + '" rx="0"/>';
-          }
-        } else {
-          /* Fully restored: green band */
-          svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + cutH + '" rx="0"/>';
-        }
+      /* Green band at TOP: total override addition (grows with each tier).
+         Red band at BOTTOM: remaining unrestored cuts. */
+      if (n.add > 0) {
+        var addH = Math.max((n.add / n.value) * n.h, 2);
+        svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + addH + '" rx="0"/>';
+      }
+      if (n.stillCut > 0) {
+        var stillH = Math.max((n.stillCut / n.value) * n.h, 2);
+        svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + (n.y + n.h - stillH) + '" width="' + nodeW + '" height="' + stillH + '" rx="0"/>';
       }
 
       var ly = n.y + n.h / 2;
