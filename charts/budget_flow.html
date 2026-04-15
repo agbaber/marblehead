@@ -2,147 +2,100 @@
 title: "Where the Money Goes"
 ---
 <style>
-  .flow-intro { margin-bottom: 6px; }
-  .flow-intro h1 { text-align: center; }
-  .flow-fy { text-align: center; font-size: 13px; color: var(--text-muted); margin: 0 0 16px; }
-
-  /* ── Budget bars ── */
-  .budget-bars { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-  .budget-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    min-height: 32px;
+  .sankey-intro h1 { text-align: center; }
+  .sankey-fy {
+    text-align: center; font-size: 13px;
+    color: var(--text-muted); margin: 0 0 16px;
   }
-  .budget-row-label {
-    width: 130px;
-    flex-shrink: 0;
+
+  /* ── Sankey container ── */
+  .sankey-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+  }
+  .sankey-wrap svg { display: block; width: 100%; height: auto; }
+
+  /* Node rects */
+  .sk-node { stroke: none; }
+  .sk-node-levy       { fill: var(--c-navy); }
+  .sk-node-stateAid   { fill: var(--c-teal); }
+  .sk-node-freeCash   { fill: var(--c-brass); }
+  .sk-node-local      { fill: var(--c-sage); }
+  .sk-node-other      { fill: var(--text-subtle); }
+  .sk-node-override-t1 { fill: var(--series-tier-1); }
+  .sk-node-override-t2 { fill: var(--series-tier-2); }
+  .sk-node-override-t3 { fill: var(--series-tier-3); }
+
+  .sk-node-schools    { fill: var(--c-navy); }
+  .sk-node-healthcare { fill: var(--c-buoy); }
+  .sk-node-safety     { fill: var(--c-teal); }
+  .sk-node-debt       { fill: var(--c-plum); }
+  .sk-node-pensions   { fill: var(--c-brass); }
+  .sk-node-pw         { fill: var(--c-sage); }
+  .sk-node-library    { fill: color-mix(in srgb, var(--c-teal) 60%, var(--c-sage)); }
+  .sk-node-gov        { fill: var(--text-subtle); }
+
+  /* Ribbons */
+  .sk-ribbon { stroke: none; pointer-events: all; }
+  .sk-ribbon-base {
+    fill: var(--text-subtle);
+    opacity: 0.07;
+  }
+  .sk-ribbon-base:hover { opacity: 0.18; }
+  .sk-ribbon-override {
+    opacity: 0.4;
+  }
+  .sk-ribbon-override:hover { opacity: 0.6; }
+  .sk-ribbon-override.tier-t1 { fill: var(--series-tier-1); }
+  .sk-ribbon-override.tier-t2 { fill: var(--series-tier-2); }
+  .sk-ribbon-override.tier-t3 { fill: var(--series-tier-3); }
+
+  /* Labels */
+  .sk-label {
+    font-size: 11px;
+    font-weight: 600;
+    fill: var(--text);
+  }
+  .sk-label-value {
+    font-size: 10px;
+    font-weight: 700;
+    fill: var(--text-muted);
+  }
+  .sk-label-override {
+    font-weight: 700;
+  }
+  .sk-label-override.tier-t1 { fill: var(--series-tier-1); }
+  .sk-label-override.tier-t2 { fill: var(--series-tier-2); }
+  .sk-label-override.tier-t3 { fill: var(--series-tier-3); }
+
+  /* Column headers */
+  .sk-col-header {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    fill: var(--text-subtle);
+  }
+
+  /* Tooltip */
+  .sk-tooltip {
+    display: none;
+    position: fixed;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 10px;
     font-size: 12px;
     font-weight: 600;
     color: var(--text);
-    text-align: right;
-    line-height: 1.3;
-  }
-  .budget-row-track {
-    flex: 1;
-    height: 32px;
-    background: var(--divider);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-  }
-  .budget-row-fill {
-    height: 100%;
-    transition: width 0.4s ease;
-    position: relative;
-  }
-  .budget-row-fill-override {
-    height: 100%;
-    transition: width 0.4s ease;
-    position: relative;
-    background-image: repeating-linear-gradient(
-      -45deg,
-      transparent, transparent 3px,
-      rgba(255,255,255,0.25) 3px,
-      rgba(255,255,255,0.25) 6px
-    );
-  }
-  .budget-row-value {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--text);
-    white-space: nowrap;
-    margin-left: 8px;
-    align-self: center;
-    flex-shrink: 0;
-    min-width: 55px;
-  }
-  .budget-row-pct {
-    font-weight: 400;
-    color: var(--text-subtle);
-  }
-  .budget-row-delta {
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--c-teal);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    pointer-events: none;
+    z-index: 100;
     white-space: nowrap;
   }
-
-  /* Colors for each category */
-  .cat-schools .budget-row-fill { background: var(--c-navy); }
-  .cat-healthcare .budget-row-fill { background: var(--c-buoy); }
-  .cat-safety .budget-row-fill { background: var(--c-teal); }
-  .cat-debt .budget-row-fill { background: var(--c-plum); }
-  .cat-pensions .budget-row-fill { background: var(--c-brass); }
-  .cat-pw .budget-row-fill { background: var(--c-sage); }
-  .cat-library .budget-row-fill { background: color-mix(in srgb, var(--c-teal) 60%, var(--c-sage)); }
-  .cat-gov .budget-row-fill { background: var(--text-subtle); }
-
-  .cat-schools .budget-row-fill-override { background-color: var(--c-navy); }
-  .cat-healthcare .budget-row-fill-override { background-color: var(--c-buoy); }
-  .cat-safety .budget-row-fill-override { background-color: var(--c-teal); }
-  .cat-debt .budget-row-fill-override { background-color: var(--c-plum); }
-  .cat-pensions .budget-row-fill-override { background-color: var(--c-brass); }
-  .cat-pw .budget-row-fill-override { background-color: var(--c-sage); }
-  .cat-library .budget-row-fill-override { background-color: color-mix(in srgb, var(--c-teal) 60%, var(--c-sage)); }
-  .cat-gov .budget-row-fill-override { background-color: var(--text-subtle); }
-
-  /* Total row */
-  .budget-total {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 10px 0 0;
-    border-top: 1.5px solid var(--divider);
-    margin-top: 6px;
-  }
-  .budget-total-label {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text);
-  }
-  .budget-total-value {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-  }
-  .budget-total-delta {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--c-teal);
-    margin-left: 8px;
-  }
-
-  /* ── Revenue summary (compact) ── */
-  .revenue-summary {
-    margin-bottom: 20px;
-    padding: 14px 18px 12px;
-    background: var(--surface);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius-md);
-  }
-  .revenue-summary-title {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.1px;
-    color: var(--text-subtle);
-    margin: 0 0 8px;
-  }
-  .revenue-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    line-height: 1.8;
-    color: var(--text-muted);
-  }
-  .revenue-row strong { color: var(--text); font-weight: 600; }
-  .revenue-row .rev-delta {
-    color: var(--c-teal);
-    font-weight: 700;
-    font-size: 11px;
-  }
+  .sk-tooltip.visible { display: block; }
 
   /* ── Override detail panel ── */
   .override-detail {
@@ -189,22 +142,17 @@ title: "Where the Money Goes"
     font-weight: 600;
     color: var(--text);
   }
-  .override-detail-list .od-offset {
-    color: var(--c-buoy);
-  }
 
-  /* ── Responsive ── */
   @media (max-width: 600px) {
-    .budget-row-label { width: 90px; font-size: 11px; }
-    .budget-row-value { font-size: 10px; min-width: 45px; }
-    .budget-row-track { height: 26px; }
-    .budget-row-delta { font-size: 9px; }
+    .sk-label { font-size: 9px; }
+    .sk-label-value { font-size: 8px; }
+    .sk-col-header { font-size: 8px; }
   }
 </style>
 
-<div class="flow-intro">
+<div class="sankey-intro">
   <h1>Where the Money Goes</h1>
-  <p class="flow-fy">FY26 general fund budget: spending by category. Toggle override tiers to see what each restores.</p>
+  <p class="sankey-fy">FY26 general fund: revenue sources flow to spending categories. Toggle tiers to see where override money is earmarked.</p>
 </div>
 
 <div class="tabs">
@@ -214,29 +162,21 @@ title: "Where the Money Goes"
   <button class="tab" data-tier="t3">Tier 3 ($15M)</button>
 </div>
 
-<div class="budget-bars" id="budgetBars">
-  <!-- JS builds these -->
-</div>
-
-<div class="budget-total" id="budgetTotal"></div>
+<div class="sankey-wrap" id="sankeyWrap"></div>
+<div class="sk-tooltip" id="skTooltip"></div>
 
 <div class="override-detail" id="overrideDetail">
   <p class="override-detail-title" id="overrideDetailTitle"></p>
   <ul class="override-detail-list" id="overrideDetailList"></ul>
 </div>
 
-<div class="revenue-summary" id="revenueSummary">
-  <p class="revenue-summary-title">Where it comes from</p>
-  <div id="revenueRows"></div>
-</div>
-
 <p class="caption" id="captionText">
-  Schools account for 46% of the general fund. Healthcare, pensions, and debt service together make up another 29%. These fixed obligations leave limited room for discretionary spending on services like public works, libraries, and general government.
+  All general fund revenue pools into a single fund and is appropriated to departments at Town Meeting. The ribbons show proportional allocation, not earmarking. Override revenue (when active) is allocated to specific restorations shown as colored flows.
 </p>
 
 <div class="notes">
   <p>Town department totals from the FY26 Proposed Budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1234/FY26-Budget" data-source="FY26 Proposed Budget, Town of Marblehead"></sup> School total from FY26 School Committee approved budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1235/FY26-School-Budget" data-source="FY26 School Committee Approved Budget"></sup> Override line items from the Town Administrator's April 8, 2026 override presentation.<sup class="cite" data-href="https://vimeo.com/1181632658" data-source="Select Board meeting, April 8 2026 (Vimeo 1181632658), Town Administrator override presentation"></sup></p>
-  <p>Healthcare grouping includes health insurance transfer ($11.8M), Medex ($2.5M), insurance premiums ($0.9M), Medicare reimbursement ($0.7M), and Medicare tax ($0.3M). "General government" is the sum of all remaining town departments not shown separately. Revenue projections from the January 2026 State of the Town presentation.</p>
+  <p>Healthcare grouping includes health insurance transfer ($11.8M), Medex ($2.5M), insurance premiums ($0.9M), Medicare reimbursement ($0.7M), and Medicare tax ($0.3M). "General government" is the sum of all remaining town departments not shown separately. Revenue projections from the January 2026 State of the Town presentation. General fund revenue does not have line-item earmarking; proportional ribbons are illustrative.</p>
 </div>
 
 <div class="read-next">
@@ -257,32 +197,34 @@ title: "Where the Money Goes"
 
 <script>
 (function () {
-  /* ── Data ── */
+  /* ══════════════════════════════════════════════════════
+     DATA
+     ══════════════════════════════════════════════════════ */
   var BASE = 106206380;
 
-  var categories = [
-    { id: 'schools',    label: 'Schools',              base: 49120287, css: 'cat-schools' },
-    { id: 'healthcare', label: 'Healthcare & Insurance', base: 16238963, css: 'cat-healthcare' },
-    { id: 'safety',     label: 'Public Safety',         base: 11237760, css: 'cat-safety' },
-    { id: 'debt',       label: 'Debt Service',          base: 9314141,  css: 'cat-debt' },
-    { id: 'pensions',   label: 'Pensions & OPEB',       base: 5630625,  css: 'cat-pensions' },
-    { id: 'pw',         label: 'Public Works & Waste',   base: 5244444,  css: 'cat-pw' },
-    { id: 'library',    label: 'Library & Recreation',   base: 2530319,  css: 'cat-library' },
-    { id: 'gov',        label: 'General Government',     base: 6889841,  css: 'cat-gov' }
+  var revSources = [
+    { id: 'levy',     label: 'Property Tax',   value: 75652398 },
+    { id: 'stateAid', label: 'State Aid',       value: 8959532 },
+    { id: 'freeCash', label: 'Free Cash',       value: 9000000 },
+    { id: 'local',    label: 'Local Receipts',  value: 8881283 },
+    { id: 'other',    label: 'Other Sources',   value: 3713167 }
   ];
 
-  /* Override additions by category and tier (FY27 draw, town side only).
-     Schools: $0 restored in FY27 for any tier. */
+  var spendCats = [
+    { id: 'schools',    label: 'Schools',               base: 49120287 },
+    { id: 'healthcare', label: 'Healthcare & Insurance', base: 16238963 },
+    { id: 'safety',     label: 'Public Safety',          base: 11237760 },
+    { id: 'debt',       label: 'Debt Service',           base: 9314141 },
+    { id: 'pensions',   label: 'Pensions & OPEB',        base: 5630625 },
+    { id: 'pw',         label: 'Public Works & Waste',    base: 5244444 },
+    { id: 'gov',        label: 'General Government',      base: 6889841 },
+    { id: 'library',    label: 'Library & Recreation',    base: 2530319 }
+  ];
+
   var overrides = {
     t1: {
       total: 1269564,
-      safety:  119982,
-      pw:      259286,
-      library: 356183,
-      gov:     423625,
-      healthcare: 76171,
-      pensions: 444433,
-      offset: -410116,
+      cats: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433 },
       items: [
         ['Restore SRO, police equipment, inspections', 119982],
         ['Restore DPW staffing, hot top, cemetery', 259286],
@@ -296,13 +238,7 @@ title: "Where the Money Goes"
     },
     t2: {
       total: 2805236,
-      safety:  333464,
-      pw:      329286,
-      library: 823941,
-      gov:    1430302,
-      healthcare: 136171,
-      pensions: 444433,
-      offset: -692361,
+      cats: { safety: 333464, pw: 329286, library: 823941, gov: 1430302, healthcare: 136171, pensions: 444433 },
       items: [
         ['Tier 1 restorations plus:', 0],
         ['Increase police and fire staffing', 213482],
@@ -317,14 +253,7 @@ title: "Where the Money Goes"
     },
     t3: {
       total: 4296718,
-      safety:  694946,
-      pw:      329286,
-      library: 823941,
-      gov:    1500302,
-      healthcare: 196171,
-      pensions: 444433,
-      capital: 1000000,
-      offset: -692361,
+      cats: { safety: 694946, pw: 329286, library: 823941, gov: 1500302, healthcare: 196171, pensions: 444433, capital: 1000000 },
       items: [
         ['Tier 2 restorations plus:', 0],
         ['Further increase fire staffing (3 positions)', 296000],
@@ -336,124 +265,235 @@ title: "Where the Money Goes"
     }
   };
 
-  var revenue = {
-    levy: 75652398,
-    stateAid: 8959532,
-    freeCash: 9000000,
-    localReceipts: 8881283,
-    other: 3713167
-  };
+  var tierLabels = { t1: 'Tier 1 ($1.3M FY27)', t2: 'Tier 2 ($2.8M FY27)', t3: 'Tier 3 ($4.3M FY27)' };
+  var tierShort  = { t1: 'Tier 1', t2: 'Tier 2', t3: 'Tier 3' };
 
-  /* FY27 override draws */
-  var tierDraws = { t1: 1269564, t2: 2805236, t3: 4296718 };
-
-  /* ── Rendering ── */
-  var barsEl = document.getElementById('budgetBars');
-  var totalEl = document.getElementById('budgetTotal');
-  var detailEl = document.getElementById('overrideDetail');
-  var detailTitle = document.getElementById('overrideDetailTitle');
-  var detailList = document.getElementById('overrideDetailList');
-  var revenueEl = document.getElementById('revenueRows');
-  var captionEl = document.getElementById('captionText');
-
-  var tierLabels = { t1: 'Tier 1', t2: 'Tier 2', t3: 'Tier 3' };
-
+  /* ══════════════════════════════════════════════════════
+     HELPERS
+     ══════════════════════════════════════════════════════ */
   function fmt(n) {
     if (Math.abs(n) >= 1000000) return '$' + (n / 1000000).toFixed(1) + 'M';
     if (Math.abs(n) >= 1000) return (n < 0 ? '-' : '') + '$' + (Math.abs(n) / 1000).toFixed(0) + 'K';
     return '$' + n.toLocaleString();
   }
 
-  function pct(n, total) {
-    return Math.round(n / total * 100);
+  function ribbon(x1, y1, h1, x2, y2, h2) {
+    /* Cubic bezier ribbon between two vertical spans */
+    var cx = (x1 + x2) / 2;
+    return 'M' + x1 + ',' + y1 +
+           'C' + cx + ',' + y1 + ' ' + cx + ',' + y2 + ' ' + x2 + ',' + y2 +
+           'L' + x2 + ',' + (y2 + h2) +
+           'C' + cx + ',' + (y2 + h2) + ' ' + cx + ',' + (y1 + h1) + ' ' + x1 + ',' + (y1 + h1) +
+           'Z';
   }
+
+  /* ══════════════════════════════════════════════════════
+     RENDER
+     ══════════════════════════════════════════════════════ */
+  var wrap = document.getElementById('sankeyWrap');
+  var tooltip = document.getElementById('skTooltip');
+  var detailEl = document.getElementById('overrideDetail');
+  var detailTitle = document.getElementById('overrideDetailTitle');
+  var detailList = document.getElementById('overrideDetailList');
+  var captionEl = document.getElementById('captionText');
 
   function render(tier) {
     var ov = tier !== 'none' ? overrides[tier] : null;
-    var overrideTotal = ov ? ov.total : 0;
-    var grandTotal = BASE + overrideTotal;
-    var maxVal = categories[0].base + (ov ? (ov.schools || 0) : 0); // schools is always biggest
+    var ovTotal = ov ? ov.total : 0;
 
-    /* Build bars */
-    var html = '';
-    categories.forEach(function (cat) {
-      var add = ov ? (ov[cat.id] || 0) : 0;
-      /* Capital is a new category for Tier 3, fold into gov for simplicity */
-      if (cat.id === 'gov' && ov && ov.capital) add += ov.capital;
-      var total = cat.base + add;
-      var basePct = (cat.base / grandTotal * 100).toFixed(1);
-      var addPct = (add / grandTotal * 100).toFixed(1);
-
-      html += '<div class="budget-row ' + cat.css + '">';
-      html += '<div class="budget-row-label">' + cat.label + '</div>';
-      html += '<div class="budget-row-track">';
-      html += '<div class="budget-row-fill" style="width:' + basePct + '%"></div>';
-      if (add > 0) {
-        html += '<div class="budget-row-fill-override" style="width:' + addPct + '%"></div>';
-      }
-      html += '</div>';
-      html += '<div class="budget-row-value">' + fmt(total);
-      html += ' <span class="budget-row-pct">(' + pct(total, grandTotal) + '%)</span>';
-      if (add > 0) html += ' <span class="budget-row-delta">+' + fmt(add) + '</span>';
-      html += '</div>';
-      html += '</div>';
+    /* ── Build left nodes ── */
+    var leftNodes = revSources.map(function (s) {
+      return { id: s.id, label: s.label, value: s.value, type: 'rev' };
     });
-    barsEl.innerHTML = html;
-
-    /* Total row */
-    totalEl.innerHTML = '<span class="budget-total-label">Total general fund</span>' +
-      '<span class="budget-total-value">' + fmt(grandTotal) +
-      (overrideTotal > 0 ? '<span class="budget-total-delta">+' + fmt(overrideTotal) + ' override</span>' : '') +
-      '</span>';
-
-    /* Override detail panel */
     if (ov) {
-      detailEl.classList.add('visible');
-      detailTitle.textContent = tierLabels[tier] + ' override: FY27 additions ($' +
-        (ov.total / 1000000).toFixed(1) + 'M first-year draw)';
-      var listHtml = '';
-      ov.items.forEach(function (item) {
-        var label = item[0];
-        var amt = item[1];
-        if (amt === 0) {
-          listHtml += '<li style="font-weight:600;color:var(--text)">' + label + '</li>';
-        } else if (amt < 0) {
-          listHtml += '<li class="od-offset"><span>' + label + '</span><span class="od-amt" style="color:var(--c-buoy)">' + fmt(amt) + '</span></li>';
-        } else {
-          listHtml += '<li><span>' + label + '</span><span class="od-amt">' + fmt(amt) + '</span></li>';
+      leftNodes.push({ id: 'override', label: tierLabels[tier], value: ov.total, type: 'override' });
+    }
+
+    /* ── Build right nodes ── */
+    var rightNodes = spendCats.map(function (c) {
+      var add = 0;
+      if (ov) {
+        add = ov.cats[c.id] || 0;
+        if (c.id === 'gov' && ov.cats.capital) add += ov.cats.capital;
+      }
+      return { id: c.id, label: c.label, value: c.base + add, base: c.base, add: add };
+    });
+
+    /* ── Layout ── */
+    var W = 880, H = 520;
+    var nodeW = 14;
+    var padTop = 32, padBot = 20;
+    var gapL = 5, gapR = 4;
+    var lx = 140, rx = W - 140;
+
+    var leftTotal = leftNodes.reduce(function (s, n) { return s + n.value; }, 0);
+    var rightTotal = rightNodes.reduce(function (s, n) { return s + n.value; }, 0);
+    var maxTotal = Math.max(leftTotal, rightTotal);
+
+    var availH = H - padTop - padBot;
+    var leftGaps = (leftNodes.length - 1) * gapL;
+    var rightGaps = (rightNodes.length - 1) * gapR;
+    var maxGaps = Math.max(leftGaps, rightGaps);
+    var scale = (availH - maxGaps) / maxTotal;
+
+    /* Position left */
+    var y = padTop;
+    leftNodes.forEach(function (n) {
+      n.h = Math.max(n.value * scale, 2);
+      n.y = y;
+      n.x = lx;
+      n.outOff = 0;
+      y += n.h + gapL;
+    });
+
+    /* Position right -- center vertically */
+    var rightH = rightNodes.reduce(function (s, n) { return s + Math.max(n.value * scale, 2); }, 0) + rightGaps;
+    var rightY0 = padTop + (availH - rightH) / 2;
+    y = rightY0;
+    rightNodes.forEach(function (n) {
+      n.h = Math.max(n.value * scale, 2);
+      n.y = y;
+      n.x = rx;
+      n.inOff = 0;
+      y += n.h + gapR;
+    });
+
+    /* ── Build flows ── */
+    var flows = [];
+
+    /* General fund: each source to each category, proportional */
+    var gfSources = leftNodes.filter(function (n) { return n.type === 'rev'; });
+    gfSources.forEach(function (src) {
+      rightNodes.forEach(function (cat) {
+        var flowVal = src.value * cat.base / BASE;
+        flows.push({ src: src, tgt: cat, value: flowVal, type: 'base',
+                     label: src.label + ' \u2192 ' + cat.label });
+      });
+    });
+
+    /* Override flows */
+    if (ov) {
+      var ovNode = leftNodes.find(function (n) { return n.id === 'override'; });
+      var grossAdds = rightNodes.reduce(function (s, n) { return s + n.add; }, 0);
+      rightNodes.forEach(function (cat) {
+        if (cat.add > 0) {
+          var flowVal = cat.add * ov.total / grossAdds;
+          flows.push({ src: ovNode, tgt: cat, value: flowVal, type: 'override',
+                       label: tierShort[tier] + ' \u2192 ' + cat.label });
         }
       });
-      listHtml += '<li class="od-subtotal"><span>Net FY27 draw</span><span class="od-amt">' + fmt(ov.total) + '</span></li>';
-      detailList.innerHTML = listHtml;
+    }
+
+    /* Sort flows: base flows by target y then source y, override flows last */
+    flows.sort(function (a, b) {
+      if (a.type !== b.type) return a.type === 'base' ? -1 : 1;
+      if (a.src !== b.src) return a.src.y - b.src.y;
+      return a.tgt.y - b.tgt.y;
+    });
+
+    /* Assign ribbon positions within each node */
+    flows.forEach(function (f) {
+      f.ribbonH = Math.max(f.value * scale, 0.5);
+      f.sy = f.src.y + f.src.outOff;
+      f.src.outOff += f.ribbonH;
+      f.ty = f.tgt.y + f.tgt.inOff;
+      f.tgt.inOff += f.ribbonH;
+    });
+
+    /* ── Build SVG ── */
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg"' +
+              ' role="img" aria-label="Sankey diagram showing FY26 general fund revenue flowing to spending categories' +
+              (tier !== 'none' ? ', with ' + tierShort[tier] + ' override flows highlighted' : '') + '">';
+
+    /* Column headers */
+    svg += '<text class="sk-col-header" x="' + (lx + nodeW / 2) + '" y="' + (padTop - 14) + '" text-anchor="middle">Revenue</text>';
+    svg += '<text class="sk-col-header" x="' + (rx + nodeW / 2) + '" y="' + (padTop - 14) + '" text-anchor="middle">Spending</text>';
+
+    /* Ribbons (draw base first, override on top) */
+    flows.forEach(function (f) {
+      var cls = 'sk-ribbon sk-ribbon-' + f.type;
+      if (f.type === 'override') cls += ' tier-' + tier;
+      svg += '<path class="' + cls + '"' +
+             ' d="' + ribbon(f.src.x + nodeW, f.sy, f.ribbonH, f.tgt.x, f.ty, f.ribbonH) + '"' +
+             ' data-tip="' + f.label + ': ' + fmt(f.value) + '"/>';
+    });
+
+    /* Left nodes */
+    leftNodes.forEach(function (n) {
+      var cls = 'sk-node ';
+      if (n.type === 'override') cls += 'sk-node-override-' + tier;
+      else cls += 'sk-node-' + n.id;
+      svg += '<rect class="' + cls + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2"/>';
+
+      /* Label left of node */
+      var ly = n.y + n.h / 2;
+      var labelCls = n.type === 'override' ? 'sk-label sk-label-override tier-' + tier : 'sk-label';
+      svg += '<text class="' + labelCls + '" x="' + (n.x - 6) + '" y="' + (ly - 1) + '" text-anchor="end" dominant-baseline="auto">' + n.label + '</text>';
+      svg += '<text class="sk-label-value" x="' + (n.x - 6) + '" y="' + (ly + 11) + '" text-anchor="end" dominant-baseline="auto">' + fmt(n.value) + '</text>';
+    });
+
+    /* Right nodes */
+    rightNodes.forEach(function (n) {
+      svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2"/>';
+
+      var ly = n.y + n.h / 2;
+      svg += '<text class="sk-label" x="' + (n.x + nodeW + 6) + '" y="' + (ly - 1) + '" dominant-baseline="auto">' + n.label + '</text>';
+      var valStr = fmt(n.value);
+      if (n.add > 0) valStr += ' (+' + fmt(n.add) + ')';
+      svg += '<text class="sk-label-value" x="' + (n.x + nodeW + 6) + '" y="' + (ly + 11) + '" dominant-baseline="auto">' + valStr + '</text>';
+    });
+
+    svg += '</svg>';
+    wrap.innerHTML = svg;
+
+    /* ── Tooltip wiring ── */
+    wrap.querySelectorAll('[data-tip]').forEach(function (el) {
+      el.addEventListener('mouseenter', function (e) {
+        tooltip.textContent = el.getAttribute('data-tip');
+        tooltip.classList.add('visible');
+      });
+      el.addEventListener('mousemove', function (e) {
+        tooltip.style.left = (e.clientX + 12) + 'px';
+        tooltip.style.top = (e.clientY - 10) + 'px';
+      });
+      el.addEventListener('mouseleave', function () {
+        tooltip.classList.remove('visible');
+      });
+    });
+
+    /* ── Override detail panel ── */
+    if (ov) {
+      detailEl.classList.add('visible');
+      detailTitle.textContent = tierShort[tier] + ' override: FY27 additions (' + fmt(ov.total) + ' first-year draw)';
+      var html = '';
+      ov.items.forEach(function (item) {
+        var label = item[0], amt = item[1];
+        if (amt === 0) {
+          html += '<li style="font-weight:600;color:var(--text)">' + label + '</li>';
+        } else if (amt < 0) {
+          html += '<li><span>' + label + '</span><span class="od-amt" style="color:var(--c-buoy)">' + fmt(amt) + '</span></li>';
+        } else {
+          html += '<li><span>' + label + '</span><span class="od-amt">' + fmt(amt) + '</span></li>';
+        }
+      });
+      html += '<li class="od-subtotal"><span>Net FY27 draw</span><span class="od-amt">' + fmt(ov.total) + '</span></li>';
+      detailList.innerHTML = html;
     } else {
       detailEl.classList.remove('visible');
     }
 
-    /* Revenue summary */
-    var revHtml = '';
-    revHtml += '<div class="revenue-row"><span>Property tax levy</span><strong>' + fmt(revenue.levy) + '</strong></div>';
-    revHtml += '<div class="revenue-row"><span>State aid</span><strong>' + fmt(revenue.stateAid) + '</strong></div>';
-    revHtml += '<div class="revenue-row"><span>Free cash</span><strong>' + fmt(revenue.freeCash) + '</strong></div>';
-    revHtml += '<div class="revenue-row"><span>Local receipts</span><strong>' + fmt(revenue.localReceipts) + '</strong></div>';
-    revHtml += '<div class="revenue-row"><span>Other sources</span><strong>' + fmt(revenue.other) + '</strong></div>';
-    if (tier !== 'none') {
-      revHtml += '<div class="revenue-row"><span>Override draw (FY27)</span><strong>' +
-        fmt(tierDraws[tier]) + '</strong> <span class="rev-delta">new</span></div>';
-    }
-    revenueEl.innerHTML = revHtml;
-
-    /* Caption */
+    /* ── Caption ── */
     if (tier === 'none') {
-      captionEl.textContent = 'Schools account for 46% of the general fund. Healthcare, pensions, and debt service together make up another 29%. These fixed obligations leave limited room for discretionary spending on services like public works, libraries, and general government.';
+      captionEl.textContent = 'All general fund revenue pools into a single fund and is appropriated to departments at Town Meeting. The gray ribbons show proportional allocation, not earmarking. Schools account for 46% of spending; healthcare, pensions, and debt service together account for another 29%.';
     } else {
-      var draw = tierDraws[tier];
-      captionEl.textContent = tierLabels[tier] + ' draws ' + fmt(draw) +
-        ' in its first year (FY27), rising to full phase-in by FY29. The hatched segments show where override money is allocated. ' +
-        'Schools receive no direct override funding in FY27; school restorations begin in FY28.';
+      captionEl.textContent = tierShort[tier] + ' draws ' + fmt(ov.total) +
+        ' in its first year (FY27), rising to full phase-in by FY29. The colored flows show where override money is specifically allocated. Schools receive no direct override funding in FY27; school restorations begin in FY28.';
     }
   }
 
-  /* ── Tab switching ── */
+  /* ══════════════════════════════════════════════════════
+     TAB SWITCHING
+     ══════════════════════════════════════════════════════ */
   document.querySelectorAll('.tab').forEach(function (btn) {
     btn.addEventListener('click', function () {
       document.querySelectorAll('.tab').forEach(function (b) { b.classList.remove('active'); });
@@ -462,7 +502,6 @@ title: "Where the Money Goes"
     });
   });
 
-  /* Initial render */
   render('none');
 })();
 </script>
