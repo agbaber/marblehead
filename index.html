@@ -538,6 +538,57 @@ og_url: https://marbleheaddata.org/
     margin: 0;
   }
 
+  /* ── Pick distribution bar ── */
+  .pick-distribution {
+    margin: 10px 0 18px;
+    animation: evidence-in 0.25s ease;
+  }
+  .pick-dist-bar {
+    display: flex;
+    height: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: var(--border);
+  }
+  .pick-dist-seg {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    min-width: 0;
+    transition: width 0.4s ease-out;
+  }
+  .pick-dist-a { background: var(--c-teal); }
+  .pick-dist-b { background: var(--c-brass); }
+  .pick-dist-c { background: var(--c-navy); }
+  .pick-dist-legend {
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+  }
+  .pick-dist-key {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+  }
+  .pick-dist-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .pick-dist-dot-a { background: var(--c-teal); }
+  .pick-dist-dot-b { background: var(--c-brass); }
+  .pick-dist-dot-c { background: var(--c-navy); }
+  .pick-dist-total {
+    margin-left: auto;
+    font-weight: 400;
+  }
+
   /* ── Evidence panel ── */
   .evidence {
     display: none;
@@ -4338,21 +4389,31 @@ og_url: https://marbleheaddata.org/
   function sectionId(prefix, topic) { return 'index.html#' + prefix + '-' + topic; }
 
   // Batch-fetch all counts for all topics in one request
+  var ANSWER_KEYS = ['a', 'b', 'c'];
   function fetchAllCounts(topics) {
     var ids = [];
     topics.forEach(function (t) {
       ids.push(encodeURIComponent(sectionId('q', t)));
       ids.push(encodeURIComponent(sectionId('v', t)));
       ids.push(encodeURIComponent(sectionId('s', t)));
+      // Answer-level counts for distribution bars
+      ANSWER_KEYS.forEach(function (ak) {
+        ids.push(encodeURIComponent(sectionId('a', t + '-' + ak)));
+      });
     });
     fetch(API_BASE + '/api/reactions?section_ids=' + ids.join(','))
       .then(function (r) { return r.ok ? r.json() : {}; })
       .then(function (data) {
         topics.forEach(function (t) {
+          var picks = {};
+          ANSWER_KEYS.forEach(function (ak) {
+            picks[ak] = (data[sectionId('a', t + '-' + ak)] || {}).total || 0;
+          });
           socialCounts[t] = {
             decided: (data[sectionId('q', t)] || {}).total || 0,
             views:   (data[sectionId('v', t)] || {}).total || 0,
-            shares:  (data[sectionId('s', t)] || {}).total || 0
+            shares:  (data[sectionId('s', t)] || {}).total || 0,
+            picks:   picks
           };
         });
         updateSocialDisplays();
@@ -4408,6 +4469,10 @@ og_url: https://marbleheaddata.org/
   function updateSocialDisplays() {
     // Question-screen bars
     updateQuestionSocialBar(currentTopic);
+    // Refresh pick distribution if this topic already has a selection
+    if (currentTopic && selections[currentTopic]) {
+      showPickDistribution(currentTopic);
+    }
   }
 
   // Update the social proof bar on the active question screen
@@ -4422,6 +4487,44 @@ og_url: https://marbleheaddata.org/
     if (decidedEl) decidedEl.textContent = c.decided || 0;
     if (viewsEl) viewsEl.textContent = c.views || 0;
     if (sharesEl) sharesEl.textContent = c.shares || 0;
+  }
+
+  // Show answer distribution bar below the answers container for a topic
+  function showPickDistribution(topic) {
+    var screen = document.querySelector('.question-screen[data-topic="' + topic + '"]');
+    if (!screen) return;
+    var answersEl = screen.querySelector('.answers');
+    if (!answersEl) return;
+
+    var counts = (socialCounts[topic] || {}).picks || {};
+    var total = (counts.a || 0) + (counts.b || 0) + (counts.c || 0);
+    if (total === 0) return; // No data yet
+
+    // Find or create the distribution bar
+    var bar = screen.querySelector('.pick-distribution');
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.className = 'pick-distribution';
+      answersEl.parentNode.insertBefore(bar, answersEl.nextSibling);
+    }
+
+    function pctOf(n) { return total > 0 ? Math.round((n / total) * 100) : 0; }
+    var pA = pctOf(counts.a || 0);
+    var pB = pctOf(counts.b || 0);
+    var pC = 100 - pA - pB; // Avoid rounding drift
+
+    bar.innerHTML =
+      '<div class="pick-dist-bar">' +
+        '<div class="pick-dist-seg pick-dist-a" style="width:' + pA + '%">' + (pA >= 8 ? pA + '%' : '') + '</div>' +
+        '<div class="pick-dist-seg pick-dist-b" style="width:' + pB + '%">' + (pB >= 8 ? pB + '%' : '') + '</div>' +
+        '<div class="pick-dist-seg pick-dist-c" style="width:' + pC + '%">' + (pC >= 8 ? pC + '%' : '') + '</div>' +
+      '</div>' +
+      '<div class="pick-dist-legend">' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-a"></span>A ' + pA + '%</span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-b"></span>B ' + pB + '%</span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-c"></span>C ' + pC + '%</span>' +
+        '<span class="pick-dist-total">' + total + ' picked</span>' +
+      '</div>';
   }
 
   // Personal counters (localStorage)
@@ -4696,6 +4799,8 @@ og_url: https://marbleheaddata.org/
       if (prompt) prompt.classList.add('hidden');
       var nextBtn = screen && screen.querySelector('.next-question');
       if (nextBtn) nextBtn.classList.add('visible');
+      // Show pick distribution if already decided
+      showPickDistribution(topic);
     }
     updateBrowseHint(topic);
   }
@@ -4959,8 +5064,12 @@ og_url: https://marbleheaddata.org/
     // Also view this answer's evidence
     viewEvidence(question, answer);
 
-    // Social proof: increment decided count for this question
-    incrementDecided(question);
+    // Social proof: increment decided + answer-pick counts
+    incrementSocial('q', question);
+    incrementSocial('a', question + '-' + answer);
+
+    // Show answer distribution now that the user has picked
+    showPickDistribution(question);
 
     // First-time tutorial
     if (!tutorialSeen) showTutorial();
