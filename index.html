@@ -5364,6 +5364,26 @@ og_url: https://marbleheaddata.org/
   /* ── Answer selection (lock) vs. viewing (browse) ── */
 
   // selectAnswer: locks your position (checkmark). Also opens evidence.
+  // Place or move a vote via the server. Server is authoritative about
+  // what the user previously picked, so vote changes are safe.
+  function submitVote(topic, answer) {
+    fetch(API_BASE + '/api/votes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ topic: topic, answer: answer })
+    })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (data && data.picks) {
+          if (!socialCounts[topic]) socialCounts[topic] = { decided: 0, views: 0, shares: 0 };
+          socialCounts[topic].picks = data.picks;
+          showPickDistribution(topic);
+          updateSocialDisplays();
+        }
+      })
+      .catch(function () {});
+  }
+
   function selectAnswer(question, answer) {
     if (typeof posthog !== 'undefined') {
       posthog.capture('explore_answer_selected', { topic: question, answer: answer });
@@ -5384,9 +5404,9 @@ og_url: https://marbleheaddata.org/
     // Also view this answer's evidence
     viewEvidence(question, answer);
 
-    // Social proof: increment decided + answer-pick counts
+    // Social proof: increment decided count + submit vote to server
     incrementSocial('q', question);
-    incrementSocial('a', question + '-' + answer);
+    submitVote(question, answer);
 
     // Show answer distribution now that the user has picked
     showPickDistribution(question);
