@@ -55,9 +55,9 @@
   --series-neutral:    var(--c-text);
   --series-everything: #93A4B0; /* light slate, for catch-all "everything else" categories */
 
-  --series-tier-1: var(--c-teal);
-  --series-tier-2: var(--c-navy);
-  --series-tier-3: var(--c-buoy);
+  --series-tier-1: #6BB8C9;
+  --series-tier-2: var(--c-teal);
+  --series-tier-3: #133E4A;
 
   /* Tag colors (category pills) */
   --tag-chart-bg:   #E6F0EE;
@@ -100,6 +100,9 @@
     --c-brass: #E4B363;
     --c-sage:  #9DBC7A;
     --c-plum:  #B08AB4;
+
+    --series-tier-1: #8ED4E6;
+    --series-tier-3: #2A6475;
 
     --series-everything: #5B6B78;
 
@@ -165,6 +168,8 @@ html[data-theme="dark"] {
   --c-brass: #E4B363;
   --c-sage:  #9DBC7A;
   --c-plum:  #B08AB4;
+  --series-tier-1: #8ED4E6;
+  --series-tier-3: #2A6475;
   --series-everything: #5B6B78;
   --chart-grid-major: #24323F;
   --chart-grid-minor: #1B2834;
