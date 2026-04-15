@@ -1269,17 +1269,28 @@ og_url: https://marbleheaddata.org/
   /* ── Question social proof bar ── */
   .question-social {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    padding: 8px 16px;
+    flex-direction: column;
+    gap: 0;
     margin: -12px 0 20px;
-    font-size: 12px;
-    color: var(--text-muted);
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
+    overflow: hidden;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .question-social-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 16px;
+    flex-wrap: wrap;
+  }
+  .question-social-row + .question-social-row {
+    border-top: 1px solid var(--divider);
+    padding: 6px 16px;
+    font-size: 11px;
+    color: var(--text-subtle);
   }
   .question-social-stat {
     display: inline-flex;
@@ -1290,6 +1301,13 @@ og_url: https://marbleheaddata.org/
   .question-social-num {
     font-weight: 700;
     color: var(--c-teal);
+  }
+  .question-social-label {
+    font-weight: 600;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.5px;
   }
   .question-social-share {
     display: inline-flex;
@@ -1312,7 +1330,8 @@ og_url: https://marbleheaddata.org/
     box-shadow: var(--shadow-sm);
   }
   @media (max-width: 599px) {
-    .question-social { gap: 10px; font-size: 11px; padding: 6px 12px; }
+    .question-social-row { gap: 10px; padding: 6px 12px; }
+    .question-social-row + .question-social-row { font-size: 10px; }
     .question-social-share { font-size: 11px; padding: 5px 12px; }
   }
 
@@ -4500,12 +4519,25 @@ og_url: https://marbleheaddata.org/
     var bar = document.getElementById('qsocial-' + topic);
     if (!bar) return;
     var c = socialCounts[topic] || {};
+    // Community row
     var decidedEl = bar.querySelector('.qsocial-decided');
     var viewsEl = bar.querySelector('.qsocial-views');
     var sharesEl = bar.querySelector('.qsocial-shares');
     if (decidedEl) decidedEl.textContent = c.decided || 0;
     if (viewsEl) viewsEl.textContent = c.views || 0;
     if (sharesEl) sharesEl.textContent = c.shares || 0;
+    // Your row
+    var yourDecided = bar.querySelector('.qsocial-your-decided');
+    var yourViews = bar.querySelector('.qsocial-your-views');
+    if (yourDecided) {
+      yourDecided.textContent = selections[topic] ? 'Decided' : 'Undecided';
+      yourDecided.style.color = selections[topic] ? 'var(--c-teal)' : '';
+      yourDecided.style.fontWeight = selections[topic] ? '700' : '';
+    }
+    if (yourViews) {
+      var viewedThis = counted['v-' + topic] ? 'Viewed' : '';
+      yourViews.textContent = viewedThis;
+    }
   }
 
   // Show answer distribution bar below the answers container for a topic
@@ -4902,14 +4934,22 @@ og_url: https://marbleheaddata.org/
     bar.id = 'qsocial-' + topic;
 
     bar.innerHTML =
-      '<span class="question-social-stat"><span class="question-social-num qsocial-decided">0</span> decided</span>' +
-      '<span class="question-social-stat"><span class="question-social-num qsocial-views">0</span> views</span>' +
-      '<span class="question-social-stat"><span class="question-social-num qsocial-shares">0</span> shares</span>';
+      '<div class="question-social-row">' +
+        '<span class="question-social-label">Community</span>' +
+        '<span class="question-social-stat"><span class="question-social-num qsocial-decided">0</span> decided</span>' +
+        '<span class="question-social-stat"><span class="question-social-num qsocial-views">0</span> views</span>' +
+        '<span class="question-social-stat"><span class="question-social-num qsocial-shares">0</span> shares</span>' +
+      '</div>' +
+      '<div class="question-social-row">' +
+        '<span class="question-social-label">You</span>' +
+        '<span class="question-social-stat qsocial-your-decided"></span>' +
+        '<span class="question-social-stat qsocial-your-views"></span>' +
+      '</div>';
 
     var shareBtn = document.createElement('button');
     shareBtn.type = 'button';
     shareBtn.className = 'question-social-share';
-    shareBtn.textContent = 'Share this question';
+    shareBtn.textContent = 'Share';
     shareBtn.addEventListener('click', function () {
       var pick = selections[topic] || null;
       var params = new URLSearchParams();
@@ -4917,17 +4957,20 @@ og_url: https://marbleheaddata.org/
       if (pick) params.set('pos', pick);
       var url = window.location.origin + window.location.pathname + '?' + params.toString();
       navigator.clipboard.writeText(url).then(function () {
-        shareBtn.textContent = 'Link copied';
-        setTimeout(function () { shareBtn.textContent = 'Share this question'; }, 2000);
+        shareBtn.textContent = 'Copied';
+        setTimeout(function () { shareBtn.textContent = 'Share'; }, 2000);
         bumpYourShares();
         incrementShareCount(topic);
         updateStatsStrip();
+        updateQuestionSocialBar(topic);
         if (typeof posthog !== 'undefined') {
           posthog.capture('explore_question_shared', { topic: topic, has_pick: !!pick });
         }
       });
     });
-    bar.appendChild(shareBtn);
+    // Append share button to the "You" row
+    var yourRow = bar.querySelector('.question-social-row + .question-social-row');
+    if (yourRow) yourRow.appendChild(shareBtn);
 
     // Insert bar between question-block and answers
     screen.insertBefore(bar, answersEl);
