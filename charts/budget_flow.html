@@ -350,12 +350,15 @@ title: "Where the Money Goes"
     var rest = tier !== 'none' ? restorations[tier] : null;
 
     /* ── Build left nodes ── */
-    var leftNodes = revSources.map(function (s) {
-      return { id: s.id, label: s.label, value: s.value, type: 'rev' };
-    });
+    /* Override goes first (top), above Property Tax, since it IS
+       additional property tax levy. */
+    var leftNodes = [];
     if (ov) {
       leftNodes.push({ id: 'override', label: tierLabels[tier], value: ov.total, type: 'override' });
     }
+    revSources.forEach(function (s) {
+      leftNodes.push({ id: s.id, label: s.label, value: s.value, type: 'rev' });
+    });
 
     /* ── Build right nodes ── */
     var rightNodes = spendCats.map(function (c) {
