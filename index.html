@@ -141,16 +141,22 @@ og_url: https://marbleheaddata.org/
   .explore-card-dist-bar .cd-c { background: var(--c-buoy); }
   .explore-card-dist-legend {
     display: flex;
-    gap: 8px;
-    margin-top: 4px;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    margin-top: 5px;
     font-size: 0.5625rem;
     color: var(--text-muted);
     font-weight: 600;
+    font-variant-numeric: tabular-nums;
   }
   .explore-card-dist-legend span {
     display: flex;
     align-items: center;
     gap: 3px;
+  }
+  .explore-card-dist-legend .cd-count {
+    font-weight: 400;
+    color: var(--text-subtle);
   }
   .explore-card-dist-legend .cd-dot {
     width: 5px;
@@ -161,7 +167,7 @@ og_url: https://marbleheaddata.org/
   .explore-card-dist-legend .cd-total {
     margin-left: auto;
     color: var(--text-subtle);
-    font-weight: 500;
+    font-weight: 400;
   }
   .cd-dot-a { background: var(--c-teal); }
   .cd-dot-b { background: var(--c-brass); }
@@ -663,16 +669,22 @@ og_url: https://marbleheaddata.org/
   .pick-dist-c { background: var(--c-buoy); }
   .pick-dist-legend {
     display: flex;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 4px 14px;
     margin-top: 6px;
     font-size: 0.6875rem;
     color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
   }
   .pick-dist-key {
     display: flex;
     align-items: center;
     gap: 4px;
     font-weight: 600;
+  }
+  .pick-dist-count {
+    font-weight: 400;
+    color: var(--text-subtle);
   }
   .pick-dist-dot {
     width: 8px;
@@ -4762,9 +4774,9 @@ og_url: https://marbleheaddata.org/
         '<div class="pick-dist-seg pick-dist-c" style="width:' + pC + '%">' + (pC >= 8 ? pC + '%' : '') + '</div>' +
       '</div>' +
       '<div class="pick-dist-legend">' +
-        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-a"></span>A ' + pA + '% (' + (counts.a || 0) + ')</span>' +
-        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-b"></span>B ' + pB + '% (' + (counts.b || 0) + ')</span>' +
-        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-c"></span>C ' + pC + '% (' + (counts.c || 0) + ')</span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-a"></span>A ' + pA + '% <span class="pick-dist-count">(' + (counts.a || 0) + ')</span></span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-b"></span>B ' + pB + '% <span class="pick-dist-count">(' + (counts.b || 0) + ')</span></span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-c"></span>C ' + pC + '% <span class="pick-dist-count">(' + (counts.c || 0) + ')</span></span>' +
         '<span class="pick-dist-total">' + total + ' picked</span>' +
       '</div>';
   }
@@ -5197,7 +5209,7 @@ og_url: https://marbleheaddata.org/
   /* Lucide-based icons, 24x24 viewBox */
   var topicIcons = {
     override:     '<circle cx="12" cy="12" r="10"/><line x1="12" y1="6" x2="12" y2="18"/><path d="M15.5 9.5a3 3 0 0 0-3-2h-1a3 3 0 0 0 0 6h1a3 3 0 0 1 0 6h-1a3 3 0 0 1-3-2"/>',  /* coin with $ */
-    voteno:       '<ellipse cx="12" cy="12" rx="9" ry="9"/>',                     /* empty ballot oval */
+    voteno:       '<ellipse cx="12" cy="6" rx="7" ry="3.5"/><ellipse cx="12" cy="13" rx="7" ry="3.5"/><ellipse cx="12" cy="20" rx="7" ry="3.5"/>', /* three ballot ovals */
     schools:      '<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/>', /* graduation cap */
     levy:         '<path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 5-7"/>',          /* trending up */
     taxrank:      '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/>',  /* map pin */
@@ -5300,9 +5312,9 @@ og_url: https://marbleheaddata.org/
               '<span class="cd-c" style="width:' + pC + '%"></span>' +
             '</div>' +
             '<div class="explore-card-dist-legend">' +
-              '<span><span class="cd-dot cd-dot-a"></span>A ' + pA + '% (' + (picks.a || 0) + ')</span>' +
-              '<span><span class="cd-dot cd-dot-b"></span>B ' + pB + '% (' + (picks.b || 0) + ')</span>' +
-              '<span><span class="cd-dot cd-dot-c"></span>C ' + pC + '% (' + (picks.c || 0) + ')</span>' +
+              '<span><span class="cd-dot cd-dot-a"></span>A ' + pA + '% <span class="cd-count">(' + (picks.a || 0) + ')</span></span>' +
+              '<span><span class="cd-dot cd-dot-b"></span>B ' + pB + '% <span class="cd-count">(' + (picks.b || 0) + ')</span></span>' +
+              '<span><span class="cd-dot cd-dot-c"></span>C ' + pC + '% <span class="cd-count">(' + (picks.c || 0) + ')</span></span>' +
               '<span class="cd-total">' + total + ' picked</span>' +
             '</div>';
         }
