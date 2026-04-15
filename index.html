@@ -5002,9 +5002,11 @@ og_url: https://marbleheaddata.org/
     statsEl.style.display = '';
   }
 
-  // Reset button: clears all local data (selections, notes, counters, tutorial)
+  // Reset button: clears all local data (selections, notes, counters, tutorial).
+  // Notes UI is currently hidden (#405) but the underlying data is still
+  // cleared here in case it comes back.
   document.getElementById('statsReset').addEventListener('click', function () {
-    if (!confirm('Erase all your picks and notes? Nothing about you is stored anywhere except your browser.')) return;
+    if (!confirm('Erase all your picks? Nothing about you is stored anywhere except your browser.')) return;
     // Clear selections
     Object.keys(selections).forEach(function (k) { delete selections[k]; });
     persistSelections();
