@@ -2252,6 +2252,178 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 
 /* ==========================================================================
+   Ballot picks: submit button + aggregate results
+   ========================================================================== */
+
+.ballot-submit-row {
+  text-align: center;
+  margin: 18px 0 10px;
+}
+.ballot-submit-row[hidden] { display: none; }
+.ballot-submit {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--c-navy);
+  color: var(--bg);
+  border: 1.5px solid var(--c-navy);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+}
+.ballot-submit:hover {
+  background: var(--c-teal);
+  border-color: var(--c-teal);
+}
+.ballot-submit:focus-visible {
+  outline: 2px solid var(--c-buoy);
+  outline-offset: 2px;
+}
+.ballot-submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.ballot-submit-note {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Results panel */
+.ballot-results {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  padding: 20px;
+  margin: 18px 0 10px;
+}
+.ballot-results-heading {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--text);
+}
+.ballot-results-count {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-left: 6px;
+}
+
+/* Per-question bar rows */
+.ballot-results-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.ballot-results-q {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+.ballot-results-q-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+.ballot-results-bar {
+  display: flex;
+  height: 22px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--border);
+}
+.ballot-results-bar-yes {
+  background: var(--c-navy);
+  color: var(--bg);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 22px;
+  padding: 0 6px;
+  white-space: nowrap;
+  min-width: 0;
+  transition: width 0.4s ease-out;
+}
+.ballot-results-bar-no {
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 22px;
+  padding: 0 6px;
+  white-space: nowrap;
+  text-align: right;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Highest tier section */
+.ballot-results-tier {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.ballot-results-tier-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+.ballot-results-tier-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ballot-results-tier-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 40px;
+  align-items: center;
+  gap: 8px;
+}
+.ballot-results-tier-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+.ballot-results-tier-fill {
+  height: 18px;
+  border-radius: 3px;
+  min-width: 2px;
+  transition: width 0.4s ease-out;
+}
+.ballot-results-tier-fill[data-tier="1A"] { background: var(--series-tier-1); }
+.ballot-results-tier-fill[data-tier="1B"] { background: var(--series-tier-2); }
+.ballot-results-tier-fill[data-tier="1C"] { background: var(--series-tier-3); }
+.ballot-results-tier-fill[data-tier="none"] { background: var(--border); }
+.ballot-results-tier-pct {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.ballot-results-disclaimer {
+  margin: 14px 0 0;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+  .ballot-results { padding: 14px; }
+  .ballot-results-q { grid-template-columns: 100px 1fr; gap: 6px; }
+  .ballot-results-q-label { font-size: 11px; }
+  .ballot-results-tier-row { grid-template-columns: 90px 1fr 36px; }
+  .ballot-results-tier-label { font-size: 11px; }
+  .ballot-submit { font-size: 14px; padding: 10px 18px; }
+}
+
+/* ==========================================================================
    Inline comparison bars (simple stats visualization)
    ========================================================================== */
 
