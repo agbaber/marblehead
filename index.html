@@ -687,92 +687,96 @@ og_url: https://marbleheaddata.org/
     font-size: 11px;
   }
 
-  /* ── Pick distribution ── */
-  /* One row per answer so readers can scan each option independently
-     instead of trying to eyeball slices of a single stacked bar -- the
-     stacked version collapses to a single color when one answer
-     dominates, which was unreadable. */
+  /* ── Pick distribution bar ── */
   .pick-distribution {
-    margin: 12px 0 18px;
+    margin: 10px 0 18px;
     animation: evidence-in 0.25s ease;
   }
-  .pick-dist-header {
+  .pick-dist-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 8px;
-    font-size: 0.6875rem;
-    color: var(--text-muted);
-  }
-  .pick-dist-title {
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-  .pick-dist-total {
-    font-variant-numeric: tabular-nums;
-    color: var(--text-subtle);
-    font-weight: 400;
-  }
-  .pick-dist-rows {
-    display: grid;
-    gap: 5px;
-  }
-  .pick-dist-row {
-    display: grid;
-    grid-template-columns: 64px 1fr 40px 32px;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    font-variant-numeric: tabular-nums;
-  }
-  .pick-dist-row-label {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 600;
-  }
-  .pick-dist-row-track {
-    height: 10px;
-    background: var(--border);
-    border-radius: 2px;
+    height: 20px;
+    border-radius: 3px;
     overflow: hidden;
-    min-width: 0;
+    background: var(--border);
   }
-  .pick-dist-row-fill {
-    height: 100%;
+  .pick-dist-seg {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    min-width: 0;
     transition: width 0.4s ease-out;
   }
-  .pick-dist-row-fill.pick-dist-a { background: var(--c-teal); }
-  .pick-dist-row-fill.pick-dist-b { background: var(--c-brass); }
-  .pick-dist-row-fill.pick-dist-c { background: var(--c-buoy); }
-  .pick-dist-row-fill.pick-dist-u { background: var(--text-faint); }
+  .pick-dist-a { background: var(--c-teal); }
+  .pick-dist-b { background: var(--c-brass); }
+  .pick-dist-c { background: var(--c-buoy); }
+  .pick-dist-u { background: var(--text-faint); }
+  /* Legend: one cell per answer in a 4-column grid so each category
+     reads as its own chunk. The old single-line layout ran the dot,
+     letter, percentage, and count together at the same weight, which
+     made it hard to tell which number belonged to which answer.
+     Percentage is the primary number (bold), count is a subdued
+     caption in parens. Drops to two columns on very narrow viewports. */
+  .pick-dist-legend {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 14px;
+    row-gap: 6px;
+    margin-top: 10px;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (max-width: 480px) {
+    .pick-dist-legend { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  .pick-dist-key {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    min-width: 0;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
   .pick-dist-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     flex-shrink: 0;
+    align-self: center;
   }
   .pick-dist-dot-a { background: var(--c-teal); }
   .pick-dist-dot-b { background: var(--c-brass); }
   .pick-dist-dot-c { background: var(--c-buoy); }
   .pick-dist-dot-u { background: var(--text-faint); }
-  .pick-dist-row-pct {
-    text-align: right;
+  .pick-dist-key-label {
     font-weight: 600;
+    color: var(--text-muted);
+    flex-shrink: 0;
   }
-  .pick-dist-row-count {
+  .pick-dist-key-pct {
+    font-weight: 700;
+    color: var(--text);
+    margin-left: auto;
+  }
+  .pick-dist-key-count {
+    font-size: 0.6875rem;
+    font-weight: 400;
+    color: var(--text-subtle);
+    flex-shrink: 0;
+  }
+  .pick-dist-total {
+    margin-top: 8px;
     text-align: right;
+    font-size: 0.6875rem;
     color: var(--text-subtle);
     font-weight: 400;
+    font-variant-numeric: tabular-nums;
   }
-  /* "X readers changed their pick after reading" line, shown under
-     the distribution rows when the move-vote counter is non-zero. */
+  /* "X readers changed their pick after reading the evidence" line,
+     shown under the legend when the move-vote counter is non-zero. */
   .pick-dist-moves {
-    margin-top: 10px;
-    padding-top: 8px;
-    border-top: 1px solid var(--border);
+    margin-top: 2px;
+    text-align: right;
     font-size: 0.6875rem;
     color: var(--text-subtle);
     font-variant-numeric: tabular-nums;
@@ -5486,11 +5490,11 @@ og_url: https://marbleheaddata.org/
     }
   }
 
-  // Show answer distribution below the answers container for a topic.
-  // One row per answer (A, B, C, plus "Not sure" for 'u') so each option
-  // can be scanned independently. If anyone has reconsidered after
-  // reading, append a "X readers changed their pick" line under the
-  // rows.
+  // Show answer distribution bar below the answers container for a topic.
+  // Four segments: A, B, C, plus "Not sure yet" ('u'). The legend below
+  // renders each answer in its own grid cell so the numbers are easier
+  // to scan than a single run-on line. If anyone has reconsidered after
+  // reading, append a "X changed their pick" line under the legend.
   function showPickDistribution(topic) {
     var screen = document.querySelector('.question-screen[data-topic="' + topic + '"]');
     if (!screen) return;
@@ -5503,7 +5507,7 @@ og_url: https://marbleheaddata.org/
     var total = cA + cB + cC + cU;
     if (total === 0) return; // No data yet
 
-    // Find or create the distribution container
+    // Find or create the distribution bar
     var bar = screen.querySelector('.pick-distribution');
     if (!bar) {
       bar = document.createElement('div');
@@ -5518,23 +5522,19 @@ og_url: https://marbleheaddata.org/
     var pU = 100 - pA - pB - pC; // Absorb rounding drift on the muted segment
     if (pU < 0) pU = 0;
 
-    function row(key, rowLabel, pct, count) {
+    function legendKey(key, keyLabel, pct, count) {
       return (
-        '<div class="pick-dist-row">' +
-          '<span class="pick-dist-row-label">' +
-            '<span class="pick-dist-dot pick-dist-dot-' + key + '"></span>' + rowLabel +
-          '</span>' +
-          '<div class="pick-dist-row-track">' +
-            '<div class="pick-dist-row-fill pick-dist-' + key + '" style="width:' + pct + '%"></div>' +
-          '</div>' +
-          '<span class="pick-dist-row-pct">' + pct + '%</span>' +
-          '<span class="pick-dist-row-count">' + count + '</span>' +
-        '</div>'
+        '<span class="pick-dist-key">' +
+          '<span class="pick-dist-dot pick-dist-dot-' + key + '"></span>' +
+          '<span class="pick-dist-key-label">' + keyLabel + '</span>' +
+          '<span class="pick-dist-key-pct">' + pct + '%</span>' +
+          '<span class="pick-dist-key-count">(' + count + ')</span>' +
+        '</span>'
       );
     }
 
-    var movesHtml = '';
     var moves = topicState.moves || 0;
+    var movesHtml = '';
     if (moves > 0) {
       var moverLabel = (moves === 1) ? 'reader' : 'readers';
       movesHtml =
@@ -5544,18 +5544,20 @@ og_url: https://marbleheaddata.org/
         '</div>';
     }
 
-    var pickedLabel = (total === 1) ? '1 picked' : total + ' picked';
     bar.innerHTML =
-      '<div class="pick-dist-header">' +
-        '<span class="pick-dist-title">How readers answered</span>' +
-        '<span class="pick-dist-total">' + pickedLabel + '</span>' +
+      '<div class="pick-dist-bar">' +
+        '<div class="pick-dist-seg pick-dist-a" style="width:' + pA + '%">' + (pA >= 8 ? pA + '%' : '') + '</div>' +
+        '<div class="pick-dist-seg pick-dist-b" style="width:' + pB + '%">' + (pB >= 8 ? pB + '%' : '') + '</div>' +
+        '<div class="pick-dist-seg pick-dist-c" style="width:' + pC + '%">' + (pC >= 8 ? pC + '%' : '') + '</div>' +
+        '<div class="pick-dist-seg pick-dist-u" style="width:' + pU + '%">' + (pU >= 8 ? pU + '%' : '') + '</div>' +
       '</div>' +
-      '<div class="pick-dist-rows">' +
-        row('a', 'A', pA, cA) +
-        row('b', 'B', pB, cB) +
-        row('c', 'C', pC, cC) +
-        row('u', 'Not sure', pU, cU) +
+      '<div class="pick-dist-legend">' +
+        legendKey('a', 'A', pA, cA) +
+        legendKey('b', 'B', pB, cB) +
+        legendKey('c', 'C', pC, cC) +
+        legendKey('u', 'Not sure', pU, cU) +
       '</div>' +
+      '<div class="pick-dist-total">' + total + ' picked</div>' +
       movesHtml;
   }
 
