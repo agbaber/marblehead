@@ -6,6 +6,7 @@ compatibility_date = "2026-04-01"
 binding = "DB"
 database_name = "community-pulse"
 database_id = "e6c6e7ad-b93e-4d80-aeea-58e50e4ba43e"
+migrations_dir = "schema"
 
 [vars]
 ALLOWED_ORIGIN = "https://marbleheaddata.org"
