@@ -50,11 +50,14 @@ title: "Where the Money Goes"
   .sk-ribbon-override.tier-t2 { fill: var(--series-tier-2); }
   .sk-ribbon-override.tier-t3 { fill: var(--series-tier-3); }
 
-  /* Focused state: dim unrelated ribbons */
-  .sankey-wrap.has-focus .sk-ribbon-base { opacity: 0.02; }
-  .sankey-wrap.has-focus .sk-ribbon-override { opacity: 0.1; }
-  .sankey-wrap.has-focus .sk-ribbon-base.sk-focus { opacity: 0.18; }
-  .sankey-wrap.has-focus .sk-ribbon-override.sk-focus { opacity: 0.55; }
+  /* Focused state: hide unrelated ribbons entirely */
+  .sankey-wrap.has-focus .sk-ribbon { opacity: 0; pointer-events: none; }
+  .sankey-wrap.has-focus .sk-ribbon.sk-focus.sk-ribbon-base { opacity: 0.2; pointer-events: all; }
+  .sankey-wrap.has-focus .sk-ribbon.sk-focus.sk-ribbon-override { opacity: 0.55; pointer-events: all; }
+  .sankey-wrap.has-focus .sk-node { opacity: 0.25; }
+  .sankey-wrap.has-focus .sk-node.sk-node-focus { opacity: 1; }
+  .sankey-wrap.has-focus .sk-label-dim { opacity: 0.3; }
+  .sankey-wrap.has-focus .sk-label-focus { opacity: 1; }
 
   /* Labels */
   .sk-label {
@@ -358,13 +361,11 @@ title: "Where the Money Goes"
     });
 
     /* ── Layout ── */
-    var W = 880, H = 540;
+    var W = 880, H = 620;
     var nodeW = 14;
     var padTop = 32, padBot = 20;
-    var gapL = 5, gapR = 4;
+    var gapL = 5, gapR = 14;
     var lx = 140, rx = W - 175;
-    var deltaBarX = rx + nodeW + 4;
-    var deltaBarW = 6;
 
     var leftTotal = leftNodes.reduce(function (s, n) { return s + n.value; }, 0);
     var rightTotal = rightNodes.reduce(function (s, n) { return s + n.value; }, 0);
@@ -462,45 +463,39 @@ title: "Where the Money Goes"
 
       var ly = n.y + n.h / 2;
       var labelCls = n.type === 'override' ? 'sk-label sk-label-override tier-' + tier : 'sk-label';
-      svg += '<text class="' + labelCls + '" x="' + (n.x - 6) + '" y="' + (ly - 1) + '" text-anchor="end" dominant-baseline="auto" data-node="' + n.id + '">' + n.label + '</text>';
-      svg += '<text class="sk-label-value" x="' + (n.x - 6) + '" y="' + (ly + 11) + '" text-anchor="end" dominant-baseline="auto">' + fmt(n.value) + '</text>';
+      svg += '<text class="' + labelCls + '" x="' + (n.x - 6) + '" y="' + (ly - 1) + '" text-anchor="end" dominant-baseline="auto" data-node="' + n.id + '" data-label-for="' + n.id + '">' + n.label + '</text>';
+      svg += '<text class="sk-label-value" x="' + (n.x - 6) + '" y="' + (ly + 11) + '" text-anchor="end" dominant-baseline="auto" data-label-for="' + n.id + '">' + fmt(n.value) + '</text>';
     });
 
-    /* Right nodes + delta indicators */
-    /* Find max cut for scaling delta bars */
-    var maxCut = 0;
-    rightNodes.forEach(function (n) { if (n.cut > maxCut) maxCut = n.cut; });
-    var deltaScale = maxCut > 0 ? 30 / maxCut : 0; /* max 30px wide */
-
+    /* Right nodes + colored bands at bottom for cuts/restorations */
     rightNodes.forEach(function (n) {
+      /* Base node rect */
       svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
+
+      /* Colored band at bottom of node showing cut/restoration proportion */
+      if (n.cut > 0) {
+        var cutH = Math.max((n.cut / n.value) * n.h, 2);
+        var restoredH = n.restored > 0 ? Math.max((n.restored / n.value) * n.h, 2) : 0;
+        var bandY = n.y + n.h - cutH;
+
+        if (n.stillCut > 0) {
+          /* Red band for the full cut */
+          svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + cutH + '" rx="0"/>';
+          if (restoredH > 0) {
+            /* Green band overlaid on top portion of the red (restored part) */
+            svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + restoredH + '" rx="0"/>';
+          }
+        } else {
+          /* Fully restored: green band */
+          svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + cutH + '" rx="0"/>';
+        }
+      }
 
       var ly = n.y + n.h / 2;
       var labelX = rx + nodeW + 6;
 
-      /* Delta bars (to the right of node, before labels) */
-      if (n.cut > 0) {
-        var cutW = Math.max(n.cut * deltaScale, 2);
-        var gainW = n.restored * deltaScale;
-        var barY = n.y + n.h / 2 - 4;
-
-        if (n.stillCut > 0) {
-          /* Red bar for remaining cut */
-          var stillW = Math.max(n.stillCut * deltaScale, 2);
-          svg += '<rect class="sk-delta-cut" x="' + labelX + '" y="' + barY + '" width="' + stillW + '" height="3.5" rx="1"/>';
-          if (gainW > 0) {
-            /* Green bar stacked below for restored portion */
-            svg += '<rect class="sk-delta-gain" x="' + labelX + '" y="' + (barY + 4.5) + '" width="' + gainW + '" height="3.5" rx="1"/>';
-          }
-        } else {
-          /* Fully restored: green bar only */
-          svg += '<rect class="sk-delta-gain" x="' + labelX + '" y="' + barY + '" width="' + gainW + '" height="3.5" rx="1"/>';
-        }
-        labelX += Math.max(cutW, gainW) + 5;
-      }
-
       /* Labels */
-      svg += '<text class="sk-label" x="' + labelX + '" y="' + (ly - 1) + '" dominant-baseline="auto" data-node="' + n.id + '">' + n.label + '</text>';
+      svg += '<text class="sk-label" x="' + labelX + '" y="' + (ly - 1) + '" dominant-baseline="auto" data-node="' + n.id + '" data-label-for="' + n.id + '">' + n.label + '</text>';
 
       /* Value + delta text */
       var valStr = fmt(n.value);
@@ -513,15 +508,14 @@ title: "Where the Money Goes"
         deltaStr = ' fully restored';
       }
       if (n.add > 0 && n.restored === 0) {
-        /* Pure new spending (not a restoration) */
         valStr += ' (+' + fmt(n.add) + ' new)';
       }
 
-      svg += '<text class="sk-label-value" x="' + labelX + '" y="' + (ly + 11) + '" dominant-baseline="auto">' + valStr + '</text>';
+      svg += '<text class="sk-label-value" x="' + labelX + '" y="' + (ly + 11) + '" dominant-baseline="auto" data-label-for="' + n.id + '">' + valStr + '</text>';
 
       if (deltaStr) {
         var deltaCls = n.stillCut > 0 ? 'sk-delta-label sk-delta-label-cut' : 'sk-delta-label sk-delta-label-gain';
-        svg += '<text class="' + deltaCls + '" x="' + labelX + '" y="' + (ly + 21) + '" dominant-baseline="auto">' + deltaStr + '</text>';
+        svg += '<text class="' + deltaCls + '" x="' + labelX + '" y="' + (ly + 21) + '" dominant-baseline="auto" data-label-for="' + n.id + '">' + deltaStr + '</text>';
       }
     });
 
@@ -549,21 +543,48 @@ title: "Where the Money Goes"
       el.addEventListener('click', function () {
         var nodeId = el.getAttribute('data-node');
         if (focusedNode === nodeId) {
-          /* Deselect */
+          /* Deselect: clear all focus classes */
           focusedNode = null;
           wrap.classList.remove('has-focus');
-          wrap.querySelectorAll('.sk-ribbon').forEach(function (r) { r.classList.remove('sk-focus'); });
+          wrap.querySelectorAll('.sk-focus, .sk-node-focus, .sk-label-focus, .sk-label-dim').forEach(function (e) {
+            e.classList.remove('sk-focus', 'sk-node-focus', 'sk-label-focus', 'sk-label-dim');
+          });
         } else {
-          /* Select */
+          /* Select: show only connected ribbons and nodes */
           focusedNode = nodeId;
           wrap.classList.add('has-focus');
+
+          /* Find connected node IDs */
+          var connected = {};
+          connected[nodeId] = true;
           wrap.querySelectorAll('.sk-ribbon').forEach(function (r) {
             var src = r.getAttribute('data-src');
             var tgt = r.getAttribute('data-tgt');
             if (src === nodeId || tgt === nodeId) {
               r.classList.add('sk-focus');
+              connected[src] = true;
+              connected[tgt] = true;
             } else {
               r.classList.remove('sk-focus');
+            }
+          });
+
+          /* Highlight connected nodes, dim others */
+          wrap.querySelectorAll('.sk-node').forEach(function (n) {
+            var nid = n.getAttribute('data-node');
+            if (nid && connected[nid]) n.classList.add('sk-node-focus');
+            else n.classList.remove('sk-node-focus');
+          });
+
+          /* Highlight connected labels, dim others */
+          wrap.querySelectorAll('[data-label-for]').forEach(function (lbl) {
+            var lid = lbl.getAttribute('data-label-for');
+            if (connected[lid]) {
+              lbl.classList.add('sk-label-focus');
+              lbl.classList.remove('sk-label-dim');
+            } else {
+              lbl.classList.add('sk-label-dim');
+              lbl.classList.remove('sk-label-focus');
             }
           });
         }
