@@ -1194,6 +1194,56 @@ og_url: https://marbleheaddata.org/
     background: color-mix(in srgb, var(--c-navy) 85%, black);
   }
 
+  /* ── Question social proof bar ── */
+  .question-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    margin: -12px 0 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+  .question-social-stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+  .question-social-num {
+    font-weight: 700;
+    color: var(--c-teal);
+  }
+  .question-social-share {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--c-navy);
+    border: none;
+    border-radius: 16px;
+    padding: 5px 14px;
+    cursor: pointer;
+    transition: all 0.15s;
+    margin-left: auto;
+  }
+  .question-social-share:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-sm);
+  }
+  @media (max-width: 599px) {
+    .question-social { gap: 10px; font-size: 11px; padding: 6px 12px; }
+    .question-social-share { font-size: 11px; padding: 5px 12px; }
+  }
+
   /* ── Browsing hint (persistent after first pick) ── */
   .explore-browse-hint {
     display: none;
@@ -1264,12 +1314,12 @@ og_url: https://marbleheaddata.org/
       <p class="votes-strip-note">Either vote can end the override. <a class="votes-strip-link" href="what-you-can-do.html#your-two-votes">How the two votes work together &rarr;</a></p>
     </div>
 
-    <!-- Personal stats strip -->
+    <!-- Stats strip: your progress + community totals -->
     <div class="explore-stats" id="exploreStats" style="display:none">
       <span class="explore-stats-item"><span class="explore-stats-num" id="statDecided">0</span>/<span id="statTotal">0</span> decided</span>
       <span class="explore-stats-progress"><span class="explore-stats-bar" id="statBar" style="width:0%"></span></span>
-      <span class="explore-stats-item"><span class="explore-stats-num" id="statVisits">0</span> views</span>
-      <span class="explore-stats-item"><span class="explore-stats-num" id="statShares">0</span> shares</span>
+      <span class="explore-stats-item">You: <span class="explore-stats-num" id="statYourViews">0</span> views, <span class="explore-stats-num" id="statYourShares">0</span> shares</span>
+      <span class="explore-stats-item">All: <span class="explore-stats-num" id="statAllViews">0</span> views, <span class="explore-stats-num" id="statAllShares">0</span> shares</span>
     </div>
 
     <div class="explore-shared-banner" id="sharedBanner">
@@ -4055,102 +4105,151 @@ og_url: https://marbleheaddata.org/
   var notesPillCount = document.getElementById('notesPillCount');
   var notesBackdrop = document.getElementById('notesBackdrop');
 
-  /* ── Reactions API (for "N decided" social proof) ── */
+  /* ── Reactions API (server-side social proof for all users) ── */
   var API_BASE = 'https://marblehead-community-pulse.agbaber.workers.dev';
-  var decidedCounts = {};   // { topic: number }
-  var decidedCounted = {};  // { topic: true } -- already counted for this browser
 
-  // Load which topics this browser already counted
-  try { decidedCounted = JSON.parse(localStorage.getItem('explore-decided-counted')) || {}; } catch (e) {}
+  // Per-topic counts from server: { topic: { decided, views, shares } }
+  var socialCounts = {};
 
-  function fetchDecidedCounts(topics) {
-    var ids = topics.map(function (t) { return encodeURIComponent('index.html#q-' + t); });
+  // Which actions this browser already counted (prevents double-counting)
+  var counted = {};
+  try { counted = JSON.parse(localStorage.getItem('explore-counted')) || {}; } catch (e) {}
+  function saveCounted() { localStorage.setItem('explore-counted', JSON.stringify(counted)); }
+
+  // Section ID conventions: q- = decided, v- = viewed, s- = shared
+  function sectionId(prefix, topic) { return 'index.html#' + prefix + '-' + topic; }
+
+  // Batch-fetch all counts for all topics in one request
+  function fetchAllCounts(topics) {
+    var ids = [];
+    topics.forEach(function (t) {
+      ids.push(encodeURIComponent(sectionId('q', t)));
+      ids.push(encodeURIComponent(sectionId('v', t)));
+      ids.push(encodeURIComponent(sectionId('s', t)));
+    });
     fetch(API_BASE + '/api/reactions?section_ids=' + ids.join(','))
       .then(function (r) { return r.ok ? r.json() : {}; })
       .then(function (data) {
         topics.forEach(function (t) {
-          var key = 'index.html#q-' + t;
-          decidedCounts[t] = data[key] ? data[key].total : 0;
+          socialCounts[t] = {
+            decided: (data[sectionId('q', t)] || {}).total || 0,
+            views:   (data[sectionId('v', t)] || {}).total || 0,
+            shares:  (data[sectionId('s', t)] || {}).total || 0
+          };
         });
-        updateDecidedDisplay();
+        updateSocialDisplays();
       })
       .catch(function () {});
   }
 
-  function incrementDecided(topic) {
-    if (decidedCounted[topic]) return;
-    decidedCounted[topic] = true;
-    localStorage.setItem('explore-decided-counted', JSON.stringify(decidedCounted));
-    var sectionId = 'index.html#q-' + topic;
+  // Increment a server counter (once per browser per action per topic)
+  function incrementSocial(prefix, topic) {
+    var key = prefix + '-' + topic;
+    if (counted[key]) return;
+    counted[key] = true;
+    saveCounted();
+    var sid = sectionId(prefix, topic);
     fetch(API_BASE + '/api/reactions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ section_id: sectionId })
+      body: JSON.stringify({ section_id: sid })
     })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) {
-        if (data) {
-          decidedCounts[topic] = data.total;
-          updateDecidedDisplay();
+        if (data && socialCounts[topic]) {
+          var field = prefix === 'q' ? 'decided' : prefix === 'v' ? 'views' : 'shares';
+          socialCounts[topic][field] = data.total;
+          updateSocialDisplays();
         }
       })
       .catch(function () {
-        // Revert so it can retry next time
-        delete decidedCounted[topic];
-        localStorage.setItem('explore-decided-counted', JSON.stringify(decidedCounted));
+        delete counted[key];
+        saveCounted();
       });
   }
 
-  function updateDecidedDisplay() {
+  // Increment share counter (cumulative, not once-per-browser)
+  function incrementShareCount(topic) {
+    var sid = sectionId('s', topic);
+    fetch(API_BASE + '/api/reactions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ section_id: sid })
+    })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (data && socialCounts[topic]) {
+          socialCounts[topic].shares = data.total;
+          updateSocialDisplays();
+        }
+      })
+      .catch(function () {});
+  }
+
+  // Update all social proof displays (landing cards + question bars)
+  function updateSocialDisplays() {
+    // Landing cards: show decided count
     Object.keys(landingCards).forEach(function (topic) {
       var card = landingCards[topic];
       if (!card || !card.meta) return;
-      var count = decidedCounts[topic] || 0;
-      if (count > 0) {
-        card.meta.innerHTML = '<span class="explore-card-decided">' + count + '</span> decided';
-      }
+      var c = socialCounts[topic] || {};
+      var parts = [];
+      if (c.decided) parts.push('<span class="explore-card-decided">' + c.decided + '</span> decided');
+      if (c.views) parts.push(c.views + ' views');
+      if (c.shares) parts.push(c.shares + ' shares');
+      if (parts.length) card.meta.innerHTML = parts.join(' &middot; ');
     });
+    // Question-screen bars
+    updateQuestionSocialBar(currentTopic);
   }
 
-  /* ── Visit + share tracking ── */
-  var VISITS_KEY = 'explore-visits';
-  var SHARES_KEY = 'explore-shares';
-
-  function getVisits() {
-    return parseInt(localStorage.getItem(VISITS_KEY), 10) || 0;
-  }
-  function getShares() {
-    return parseInt(localStorage.getItem(SHARES_KEY), 10) || 0;
-  }
-  function incrementVisits() {
-    var v = getVisits() + 1;
-    localStorage.setItem(VISITS_KEY, v);
-    return v;
-  }
-  function incrementShares() {
-    var s = getShares() + 1;
-    localStorage.setItem(SHARES_KEY, s);
-    return s;
+  // Update the social proof bar on the active question screen
+  function updateQuestionSocialBar(topic) {
+    if (!topic) return;
+    var bar = document.getElementById('qsocial-' + topic);
+    if (!bar) return;
+    var c = socialCounts[topic] || {};
+    var decidedEl = bar.querySelector('.qsocial-decided');
+    var viewsEl = bar.querySelector('.qsocial-views');
+    var sharesEl = bar.querySelector('.qsocial-shares');
+    if (decidedEl) decidedEl.textContent = c.decided || 0;
+    if (viewsEl) viewsEl.textContent = c.views || 0;
+    if (sharesEl) sharesEl.textContent = c.shares || 0;
   }
 
-  // Increment visit count on load
-  var currentVisits = incrementVisits();
+  // Personal counters (localStorage)
+  var VIEWS_KEY = 'explore-your-views';
+  var SHARES_KEY = 'explore-your-shares';
+  function getYourViews() { return parseInt(localStorage.getItem(VIEWS_KEY), 10) || 0; }
+  function getYourShares() { return parseInt(localStorage.getItem(SHARES_KEY), 10) || 0; }
+  function bumpYourViews() { var v = getYourViews() + 1; localStorage.setItem(VIEWS_KEY, v); return v; }
+  function bumpYourShares() { var v = getYourShares() + 1; localStorage.setItem(SHARES_KEY, v); return v; }
+
+  // Increment personal view count on page load
+  bumpYourViews();
 
   function updateStatsStrip() {
     var statsEl = document.getElementById('exploreStats');
     var decidedCount = topicOrder.filter(function (t) { return !!selections[t]; }).length;
     var totalCount = topicOrder.length;
-    var visits = getVisits();
-    var shares = getShares();
+
+    // Sum server-side totals across all topics
+    var allViews = 0, allShares = 0;
+    topicOrder.forEach(function (t) {
+      var c = socialCounts[t] || {};
+      allViews += c.views || 0;
+      allShares += c.shares || 0;
+    });
 
     document.getElementById('statDecided').textContent = decidedCount;
     document.getElementById('statTotal').textContent = totalCount;
-    document.getElementById('statVisits').textContent = visits;
-    document.getElementById('statShares').textContent = shares;
+    document.getElementById('statYourViews').textContent = getYourViews();
+    document.getElementById('statYourShares').textContent = getYourShares();
+    document.getElementById('statAllViews').textContent = allViews;
+    document.getElementById('statAllShares').textContent = allShares;
     var pct = totalCount > 0 ? Math.round((decidedCount / totalCount) * 100) : 0;
     document.getElementById('statBar').style.width = pct + '%';
 
-    // Show the strip once we have at least 1 visit (always after first load)
     statsEl.style.display = '';
   }
 
@@ -4322,6 +4421,10 @@ og_url: https://marbleheaddata.org/
     }
     currentTopic = topic;
     stageEl.classList.add('has-topic');
+
+    // Server-side view increment (once per topic per browser)
+    incrementSocial('v', topic);
+    updateQuestionSocialBar(topic);
     document.querySelectorAll('.question-screen').forEach(function (s) {
       s.style.display = s.dataset.topic === topic ? 'block' : 'none';
     });
@@ -4405,6 +4508,48 @@ og_url: https://marbleheaddata.org/
     }
 
     screen.appendChild(wrap);
+  });
+
+  /* ── Inject social proof bar + share button into each question screen ── */
+  document.querySelectorAll('.question-screen').forEach(function (screen) {
+    var topic = screen.dataset.topic;
+    var answersEl = screen.querySelector('.answers');
+    if (!answersEl) return;
+
+    var bar = document.createElement('div');
+    bar.className = 'question-social';
+    bar.id = 'qsocial-' + topic;
+
+    bar.innerHTML =
+      '<span class="question-social-stat"><span class="question-social-num qsocial-decided">0</span> decided</span>' +
+      '<span class="question-social-stat"><span class="question-social-num qsocial-views">0</span> views</span>' +
+      '<span class="question-social-stat"><span class="question-social-num qsocial-shares">0</span> shares</span>';
+
+    var shareBtn = document.createElement('button');
+    shareBtn.type = 'button';
+    shareBtn.className = 'question-social-share';
+    shareBtn.textContent = 'Share this question';
+    shareBtn.addEventListener('click', function () {
+      var pick = selections[topic] || null;
+      var params = new URLSearchParams();
+      params.set('q', topic);
+      if (pick) params.set('pos', pick);
+      var url = window.location.origin + window.location.pathname + '?' + params.toString();
+      navigator.clipboard.writeText(url).then(function () {
+        shareBtn.textContent = 'Link copied';
+        setTimeout(function () { shareBtn.textContent = 'Share this question'; }, 2000);
+        bumpYourShares();
+        incrementShareCount(topic);
+        updateStatsStrip();
+        if (typeof posthog !== 'undefined') {
+          posthog.capture('explore_question_shared', { topic: topic, has_pick: !!pick });
+        }
+      });
+    });
+    bar.appendChild(shareBtn);
+
+    // Insert bar between question-block and answers
+    screen.insertBefore(bar, answersEl);
   });
 
   /* ── Topic icons (inline SVG paths) ── */
@@ -4537,7 +4682,9 @@ og_url: https://marbleheaddata.org/
       navigator.clipboard.writeText(url).then(function () {
         shareBtnEl.textContent = 'Link copied';
         setTimeout(function () { shareBtnEl.textContent = 'Share your positions'; }, 2000);
-        incrementShares();
+        bumpYourShares();
+        // Increment server-side share count for each shared topic
+        Object.keys(selections).forEach(function (t) { incrementShareCount(t); });
         updateStatsStrip();
         if (typeof posthog !== 'undefined') {
           posthog.capture('explore_positions_shared', { count: pairs.length, source: 'landing' });
@@ -4981,7 +5128,8 @@ og_url: https://marbleheaddata.org/
       var btn = document.getElementById('notesShare');
       btn.textContent = 'Copied link';
       setTimeout(function () { btn.textContent = 'Share'; }, 1500);
-      incrementShares();
+      bumpYourShares();
+      Object.keys(selections).forEach(function (t) { incrementShareCount(t); });
       updateStatsStrip();
       if (typeof posthog !== 'undefined') {
         posthog.capture('explore_positions_shared', { count: keys.length, source: 'notes_panel' });
@@ -5098,7 +5246,7 @@ og_url: https://marbleheaddata.org/
   });
 
   // ── Init: fetch decided counts and show stats ──
-  fetchDecidedCounts(topicOrder);
+  fetchAllCounts(topicOrder);
   updateStatsStrip();
 
 })();
