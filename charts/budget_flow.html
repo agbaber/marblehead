@@ -50,14 +50,9 @@ title: "Where the Money Goes"
   .sk-ribbon-override.tier-t2 { fill: var(--series-tier-2); }
   .sk-ribbon-override.tier-t3 { fill: var(--series-tier-3); }
 
-  /* Focused state: hide unrelated ribbons entirely */
-  .sankey-wrap.has-focus .sk-ribbon { opacity: 0; pointer-events: none; }
-  .sankey-wrap.has-focus .sk-ribbon.sk-focus.sk-ribbon-base { opacity: 0.2; pointer-events: all; }
-  .sankey-wrap.has-focus .sk-ribbon.sk-focus.sk-ribbon-override { opacity: 0.55; pointer-events: all; }
-  .sankey-wrap.has-focus .sk-node { opacity: 0.25; }
-  .sankey-wrap.has-focus .sk-node.sk-node-focus { opacity: 1; }
-  .sankey-wrap.has-focus .sk-label-dim { opacity: 0.3; }
-  .sankey-wrap.has-focus .sk-label-focus { opacity: 1; }
+  /* When focused, base ribbons are more visible since fewer are shown */
+  .sankey-wrap.is-focused .sk-ribbon-base { opacity: 0.15; }
+  .sankey-wrap.is-focused .sk-ribbon-base:hover { opacity: 0.3; }
 
   /* Labels */
   .sk-label {
@@ -332,9 +327,11 @@ title: "Where the Money Goes"
   var detailList = document.getElementById('overrideDetailList');
   var captionEl = document.getElementById('captionText');
   var focusedNode = null;
+  var currentTier = 'none';
 
-  function render(tier) {
-    focusedNode = null;
+  function render(tier, focusId) {
+    currentTier = tier;
+    focusedNode = focusId || null;
     var ov = tier !== 'none' ? overrides[tier] : null;
     var rest = tier !== 'none' ? restorations[tier] : null;
 
@@ -360,6 +357,10 @@ title: "Where the Money Goes"
                cut: cut, restored: restored, stillCut: Math.max(stillCut, 0) };
     });
 
+    /* ── Determine which side is focused ── */
+    var focusRight = focusId && rightNodes.some(function (n) { return n.id === focusId; });
+    var focusLeft = focusId && leftNodes.some(function (n) { return n.id === focusId; });
+
     /* ── Layout ── */
     var W = 880, H = 620;
     var nodeW = 14;
@@ -377,34 +378,98 @@ title: "Where the Money Goes"
     var maxGaps = Math.max(leftGaps, rightGaps);
     var scale = (availH - maxGaps) / maxTotal;
 
-    /* Position left */
-    var y = padTop;
-    leftNodes.forEach(function (n) {
-      n.h = Math.max(n.value * scale, 2);
-      n.y = y;
-      n.x = lx;
-      n.outOff = 0;
-      y += n.h + gapL;
-    });
+    /* When a node is focused, it expands to fill the column.
+       Nodes on the OTHER side keep normal layout (for ribbon targets). */
+    if (focusRight) {
+      /* Focused right node fills available height */
+      rightNodes.forEach(function (n) {
+        if (n.id === focusId) {
+          n.h = availH;
+          n.y = padTop;
+          n.x = rx;
+          n.inOff = 0;
+          n.visible = true;
+        } else {
+          n.h = 0;
+          n.y = 0;
+          n.x = rx;
+          n.inOff = 0;
+          n.visible = false;
+        }
+      });
+      /* Left side: normal layout */
+      var y = padTop;
+      leftNodes.forEach(function (n) {
+        n.h = Math.max(n.value * scale, 2);
+        n.y = y;
+        n.x = lx;
+        n.outOff = 0;
+        n.visible = true;
+        y += n.h + gapL;
+      });
+    } else if (focusLeft) {
+      /* Focused left node fills available height */
+      leftNodes.forEach(function (n) {
+        if (n.id === focusId) {
+          n.h = availH;
+          n.y = padTop;
+          n.x = lx;
+          n.outOff = 0;
+          n.visible = true;
+        } else {
+          n.h = 0;
+          n.y = 0;
+          n.x = lx;
+          n.outOff = 0;
+          n.visible = false;
+        }
+      });
+      /* Right side: normal layout */
+      var rightH2 = rightNodes.reduce(function (s, n) { return s + Math.max(n.value * scale, 2); }, 0) + rightGaps;
+      var rightY2 = padTop + (availH - rightH2) / 2;
+      y = rightY2;
+      rightNodes.forEach(function (n) {
+        n.h = Math.max(n.value * scale, 2);
+        n.y = y;
+        n.x = rx;
+        n.inOff = 0;
+        n.visible = true;
+        y += n.h + gapR;
+      });
+    } else {
+      /* Normal layout: no focus */
+      var y = padTop;
+      leftNodes.forEach(function (n) {
+        n.h = Math.max(n.value * scale, 2);
+        n.y = y;
+        n.x = lx;
+        n.outOff = 0;
+        n.visible = true;
+        y += n.h + gapL;
+      });
+      var rightH2 = rightNodes.reduce(function (s, n) { return s + Math.max(n.value * scale, 2); }, 0) + rightGaps;
+      var rightY2 = padTop + (availH - rightH2) / 2;
+      y = rightY2;
+      rightNodes.forEach(function (n) {
+        n.h = Math.max(n.value * scale, 2);
+        n.y = y;
+        n.x = rx;
+        n.inOff = 0;
+        n.visible = true;
+        y += n.h + gapR;
+      });
+    }
 
-    /* Position right -- center vertically */
-    var rightH = rightNodes.reduce(function (s, n) { return s + Math.max(n.value * scale, 2); }, 0) + rightGaps;
-    var rightY0 = padTop + (availH - rightH) / 2;
-    y = rightY0;
-    rightNodes.forEach(function (n) {
-      n.h = Math.max(n.value * scale, 2);
-      n.y = y;
-      n.x = rx;
-      n.inOff = 0;
-      y += n.h + gapR;
-    });
-
-    /* ── Build flows ── */
+    /* ── Build flows (only connected to focused node if focused) ── */
     var flows = [];
     var gfSources = leftNodes.filter(function (n) { return n.type === 'rev'; });
     gfSources.forEach(function (src) {
       rightNodes.forEach(function (cat) {
+        if (focusId && src.id !== focusId && cat.id !== focusId) return;
+        if (!src.visible || !cat.visible) return;
         var flowVal = src.value * cat.base / BASE;
+        /* When a right node is focused, rescale flows to fill its expanded height */
+        if (focusRight) flowVal = src.value;
         flows.push({ src: src, tgt: cat, value: flowVal, type: 'base',
                      label: src.label + ' \u2192 ' + cat.label });
       });
@@ -415,7 +480,10 @@ title: "Where the Money Goes"
       var grossAdds = rightNodes.reduce(function (s, n) { return s + n.add; }, 0);
       rightNodes.forEach(function (cat) {
         if (cat.add > 0) {
+          if (focusId && ovNode.id !== focusId && cat.id !== focusId) return;
+          if (!ovNode.visible || !cat.visible) return;
           var flowVal = cat.add * ov.total / grossAdds;
+          if (focusRight) flowVal = ovNode.value;
           flows.push({ src: ovNode, tgt: cat, value: flowVal, type: 'override',
                        label: tierShort[tier] + ' \u2192 ' + cat.label });
         }
@@ -428,8 +496,21 @@ title: "Where the Money Goes"
       return a.tgt.y - b.tgt.y;
     });
 
+    /* When focused, compute ribbon heights to fill the expanded node.
+       The expanded side's ribbons must sum to availH. */
+    var focusedTotalFlow = 0;
+    if (focusId) {
+      flows.forEach(function (f) { focusedTotalFlow += f.value; });
+    }
+
     flows.forEach(function (f) {
-      f.ribbonH = Math.max(f.value * scale, 0.5);
+      if (focusId && focusedTotalFlow > 0) {
+        /* Scale ribbons to fill the expanded node */
+        var expandedScale = availH / focusedTotalFlow;
+        f.ribbonH = Math.max(f.value * expandedScale, 0.5);
+      } else {
+        f.ribbonH = Math.max(f.value * scale, 0.5);
+      }
       f.sy = f.src.y + f.src.outOff;
       f.src.outOff += f.ribbonH;
       f.ty = f.tgt.y + f.tgt.inOff;
@@ -456,6 +537,7 @@ title: "Where the Money Goes"
 
     /* Left nodes */
     leftNodes.forEach(function (n) {
+      if (!n.visible) return;
       var cls = 'sk-node ';
       if (n.type === 'override') cls += 'sk-node-override-' + tier;
       else cls += 'sk-node-' + n.id;
@@ -469,6 +551,7 @@ title: "Where the Money Goes"
 
     /* Right nodes + colored bands at bottom for cuts/restorations */
     rightNodes.forEach(function (n) {
+      if (!n.visible) return;
       /* Base node rect */
       svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
 
@@ -521,7 +604,8 @@ title: "Where the Money Goes"
 
     svg += '</svg>';
     wrap.innerHTML = svg;
-    wrap.classList.remove('has-focus');
+    if (focusId) wrap.classList.add('is-focused');
+    else wrap.classList.remove('is-focused');
 
     /* ── Tooltip wiring ── */
     wrap.querySelectorAll('[data-tip]').forEach(function (el) {
@@ -538,55 +622,14 @@ title: "Where the Money Goes"
       });
     });
 
-    /* ── Click-to-focus wiring ── */
+    /* ── Click-to-focus: re-render with expanded node ── */
     wrap.querySelectorAll('[data-node]').forEach(function (el) {
       el.addEventListener('click', function () {
         var nodeId = el.getAttribute('data-node');
         if (focusedNode === nodeId) {
-          /* Deselect: clear all focus classes */
-          focusedNode = null;
-          wrap.classList.remove('has-focus');
-          wrap.querySelectorAll('.sk-focus, .sk-node-focus, .sk-label-focus, .sk-label-dim').forEach(function (e) {
-            e.classList.remove('sk-focus', 'sk-node-focus', 'sk-label-focus', 'sk-label-dim');
-          });
+          render(currentTier, null);
         } else {
-          /* Select: show only connected ribbons and nodes */
-          focusedNode = nodeId;
-          wrap.classList.add('has-focus');
-
-          /* Find connected node IDs */
-          var connected = {};
-          connected[nodeId] = true;
-          wrap.querySelectorAll('.sk-ribbon').forEach(function (r) {
-            var src = r.getAttribute('data-src');
-            var tgt = r.getAttribute('data-tgt');
-            if (src === nodeId || tgt === nodeId) {
-              r.classList.add('sk-focus');
-              connected[src] = true;
-              connected[tgt] = true;
-            } else {
-              r.classList.remove('sk-focus');
-            }
-          });
-
-          /* Highlight connected nodes, dim others */
-          wrap.querySelectorAll('.sk-node').forEach(function (n) {
-            var nid = n.getAttribute('data-node');
-            if (nid && connected[nid]) n.classList.add('sk-node-focus');
-            else n.classList.remove('sk-node-focus');
-          });
-
-          /* Highlight connected labels, dim others */
-          wrap.querySelectorAll('[data-label-for]').forEach(function (lbl) {
-            var lid = lbl.getAttribute('data-label-for');
-            if (connected[lid]) {
-              lbl.classList.add('sk-label-focus');
-              lbl.classList.remove('sk-label-dim');
-            } else {
-              lbl.classList.add('sk-label-dim');
-              lbl.classList.remove('sk-label-focus');
-            }
-          });
+          render(currentTier, nodeId);
         }
       });
     });
@@ -638,10 +681,10 @@ title: "Where the Money Goes"
     btn.addEventListener('click', function () {
       document.querySelectorAll('.tab').forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      render(btn.dataset.tier);
+      render(btn.dataset.tier, null);
     });
   });
 
-  render('none');
+  render('none', null);
 })();
 </script>
