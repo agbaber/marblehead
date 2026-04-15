@@ -1110,16 +1110,20 @@ og_url: https://marbleheaddata.org/
   }
   .explore-stats-progress {
     flex: 1;
-    height: 6px;
-    background: var(--border);
-    border-radius: 3px;
+    height: 8px;
+    background: color-mix(in srgb, var(--text-muted) 20%, transparent);
+    border-radius: 4px;
     overflow: hidden;
+    min-width: 60px;
   }
   .explore-stats-bar {
+    display: block;
     height: 100%;
+    min-width: 8px;
     background: var(--c-teal);
-    border-radius: 3px;
+    border-radius: 4px;
     transition: width 0.4s ease;
+    box-shadow: 0 0 6px color-mix(in srgb, var(--c-teal) 40%, transparent);
   }
   .explore-stats-msg {
     font-size: 12px;
@@ -4475,7 +4479,7 @@ og_url: https://marbleheaddata.org/
 
   // Reset button: clears all local data (selections, notes, counters, tutorial)
   document.getElementById('statsReset').addEventListener('click', function () {
-    if (!confirm('Clear all your picks, notes, and stats? This only affects your browser.')) return;
+    if (!confirm('Erase all your picks and notes? Nothing about you is stored on our server.')) return;
     // Clear selections
     Object.keys(selections).forEach(function (k) { delete selections[k]; });
     persistSelections();
