@@ -1114,42 +1114,94 @@ og_url: https://marbleheaddata.org/
   /* ── Personal stats strip ── */
   .explore-stats {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    padding: 10px 16px;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
     margin: 0 0 16px;
-    font-size: 12px;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  /* Row 1: progress */
+  .explore-stats-progress-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+  .explore-stats-decided {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--c-teal);
+    letter-spacing: -0.5px;
+    line-height: 1;
+  }
+  .explore-stats-decided small {
+    font-size: 13px;
     font-weight: 600;
     color: var(--text-muted);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-  }
-  .explore-stats-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    white-space: nowrap;
-  }
-  .explore-stats-num {
-    font-weight: 700;
-    color: var(--c-teal);
-    font-size: 14px;
+    letter-spacing: 0;
   }
   .explore-stats-progress {
     flex: 1;
-    max-width: 80px;
-    height: 4px;
+    height: 6px;
     background: var(--border);
-    border-radius: 2px;
+    border-radius: 3px;
     overflow: hidden;
   }
   .explore-stats-bar {
     height: 100%;
     background: var(--c-teal);
-    border-radius: 2px;
-    transition: width 0.3s ease;
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+  .explore-stats-msg {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .explore-stats-msg--complete {
+    color: var(--c-teal);
+  }
+  /* Row 2: engagement + reset */
+  .explore-stats-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 16px;
+    border-top: 1px solid var(--divider);
+    font-size: 11px;
+    color: var(--text-subtle);
+  }
+  .explore-stats-detail-left {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .explore-stats-detail span {
+    white-space: nowrap;
+  }
+  .explore-stats-detail strong {
+    font-weight: 700;
+    color: var(--text-muted);
+  }
+  .explore-stats-reset {
+    font: inherit;
+    font-size: 11px;
+    color: var(--text-faint);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    white-space: nowrap;
+  }
+  .explore-stats-reset:hover {
+    color: var(--text-muted);
   }
 
   /* ── First-time tutorial banner ── */
@@ -1280,8 +1332,11 @@ og_url: https://marbleheaddata.org/
     .answer-card { padding: 14px 16px; }
     .question-nav { gap: 8px; }
     .related-link { font-size: 12px; padding: 4px 10px; }
-    .explore-stats { gap: 10px; flex-wrap: wrap; font-size: 11px; padding: 8px 12px; }
-    .explore-stats-num { font-size: 13px; }
+    .explore-stats-progress-row { padding: 10px 12px; gap: 8px; }
+    .explore-stats-decided { font-size: 18px; }
+    .explore-stats-decided small { font-size: 12px; }
+    .explore-stats-detail { padding: 6px 12px; gap: 8px; font-size: 10px; }
+    .explore-stats-detail-left { gap: 10px; }
     .explore-tutorial { font-size: 12px; padding: 12px 14px; }
   }
 </style>
@@ -1314,12 +1369,20 @@ og_url: https://marbleheaddata.org/
       <p class="votes-strip-note">Either vote can end the override. <a class="votes-strip-link" href="what-you-can-do.html#your-two-votes">How the two votes work together &rarr;</a></p>
     </div>
 
-    <!-- Stats strip: your progress + community totals -->
+    <!-- Stats strip: progress + engagement + reset -->
     <div class="explore-stats" id="exploreStats" style="display:none">
-      <span class="explore-stats-item"><span class="explore-stats-num" id="statDecided">0</span>/<span id="statTotal">0</span> decided</span>
-      <span class="explore-stats-progress"><span class="explore-stats-bar" id="statBar" style="width:0%"></span></span>
-      <span class="explore-stats-item">You: <span class="explore-stats-num" id="statYourViews">0</span> views, <span class="explore-stats-num" id="statYourShares">0</span> shares</span>
-      <span class="explore-stats-item">All: <span class="explore-stats-num" id="statAllViews">0</span> views, <span class="explore-stats-num" id="statAllShares">0</span> shares</span>
+      <div class="explore-stats-progress-row">
+        <span class="explore-stats-decided"><span id="statDecided">0</span><small> / <span id="statTotal">0</span> decided</small></span>
+        <span class="explore-stats-progress"><span class="explore-stats-bar" id="statBar" style="width:0%"></span></span>
+        <span class="explore-stats-msg" id="statMsg"></span>
+      </div>
+      <div class="explore-stats-detail">
+        <div class="explore-stats-detail-left">
+          <span>You: <strong id="statYourViews">0</strong> views, <strong id="statYourShares">0</strong> shares</span>
+          <span>Community: <strong id="statAllViews">0</strong> views, <strong id="statAllShares">0</strong> shares</span>
+        </div>
+        <button type="button" class="explore-stats-reset" id="statsReset">Reset my data</button>
+      </div>
     </div>
 
     <div class="explore-shared-banner" id="sharedBanner">
@@ -4250,8 +4313,53 @@ og_url: https://marbleheaddata.org/
     var pct = totalCount > 0 ? Math.round((decidedCount / totalCount) * 100) : 0;
     document.getElementById('statBar').style.width = pct + '%';
 
+    // Progress message
+    var msgEl = document.getElementById('statMsg');
+    if (decidedCount === 0) {
+      msgEl.textContent = 'Pick your first answer';
+      msgEl.className = 'explore-stats-msg';
+    } else if (decidedCount < totalCount) {
+      msgEl.textContent = (totalCount - decidedCount) + ' to go';
+      msgEl.className = 'explore-stats-msg';
+    } else {
+      msgEl.textContent = 'All done';
+      msgEl.className = 'explore-stats-msg explore-stats-msg--complete';
+    }
+
     statsEl.style.display = '';
   }
+
+  // Reset button: clears all local data (selections, notes, counters, tutorial)
+  document.getElementById('statsReset').addEventListener('click', function () {
+    if (!confirm('Clear all your picks, notes, and stats? This only affects your browser.')) return;
+    // Clear selections
+    Object.keys(selections).forEach(function (k) { delete selections[k]; });
+    persistSelections();
+    // Clear notes
+    localStorage.removeItem('explore-position-notes');
+    // Clear personal counters
+    localStorage.removeItem(VIEWS_KEY);
+    localStorage.removeItem(SHARES_KEY);
+    // Clear decided-counted flags
+    localStorage.removeItem('explore-counted');
+    counted = {};
+    // Clear tutorial flag so it shows again
+    localStorage.removeItem(TUTORIAL_KEY);
+    tutorialSeen = false;
+    // Update UI
+    document.querySelectorAll('.answer-card').forEach(function (c) {
+      c.classList.remove('selected', 'viewing', 'dimmed');
+    });
+    document.querySelectorAll('.evidence').forEach(function (e) {
+      e.classList.remove('open');
+    });
+    document.querySelectorAll('.answer-note-badge').forEach(function (b) { b.remove(); });
+    showLanding();
+    updateNotesPill();
+    updateNotesPanel();
+    updateStatsStrip();
+    window.scrollTo(0, 0);
+  });
 
   /* ── First-time tutorial ── */
   var TUTORIAL_KEY = 'explore-tutorial-seen';
