@@ -1,0 +1,468 @@
+---
+title: "Where the Money Goes"
+---
+<style>
+  .flow-intro { margin-bottom: 6px; }
+  .flow-intro h1 { text-align: center; }
+  .flow-fy { text-align: center; font-size: 13px; color: var(--text-muted); margin: 0 0 16px; }
+
+  /* ── Budget bars ── */
+  .budget-bars { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+  .budget-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 32px;
+  }
+  .budget-row-label {
+    width: 130px;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    text-align: right;
+    line-height: 1.3;
+  }
+  .budget-row-track {
+    flex: 1;
+    height: 32px;
+    background: var(--divider);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+  }
+  .budget-row-fill {
+    height: 100%;
+    transition: width 0.4s ease;
+    position: relative;
+  }
+  .budget-row-fill-override {
+    height: 100%;
+    transition: width 0.4s ease;
+    position: relative;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent, transparent 3px,
+      rgba(255,255,255,0.25) 3px,
+      rgba(255,255,255,0.25) 6px
+    );
+  }
+  .budget-row-value {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+    margin-left: 8px;
+    align-self: center;
+    flex-shrink: 0;
+    min-width: 55px;
+  }
+  .budget-row-pct {
+    font-weight: 400;
+    color: var(--text-subtle);
+  }
+  .budget-row-delta {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--c-teal);
+    white-space: nowrap;
+  }
+
+  /* Colors for each category */
+  .cat-schools .budget-row-fill { background: var(--c-navy); }
+  .cat-healthcare .budget-row-fill { background: var(--c-buoy); }
+  .cat-safety .budget-row-fill { background: var(--c-teal); }
+  .cat-debt .budget-row-fill { background: var(--c-plum); }
+  .cat-pensions .budget-row-fill { background: var(--c-brass); }
+  .cat-pw .budget-row-fill { background: var(--c-sage); }
+  .cat-library .budget-row-fill { background: color-mix(in srgb, var(--c-teal) 60%, var(--c-sage)); }
+  .cat-gov .budget-row-fill { background: var(--text-subtle); }
+
+  .cat-schools .budget-row-fill-override { background-color: var(--c-navy); }
+  .cat-healthcare .budget-row-fill-override { background-color: var(--c-buoy); }
+  .cat-safety .budget-row-fill-override { background-color: var(--c-teal); }
+  .cat-debt .budget-row-fill-override { background-color: var(--c-plum); }
+  .cat-pensions .budget-row-fill-override { background-color: var(--c-brass); }
+  .cat-pw .budget-row-fill-override { background-color: var(--c-sage); }
+  .cat-library .budget-row-fill-override { background-color: color-mix(in srgb, var(--c-teal) 60%, var(--c-sage)); }
+  .cat-gov .budget-row-fill-override { background-color: var(--text-subtle); }
+
+  /* Total row */
+  .budget-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0 0;
+    border-top: 1.5px solid var(--divider);
+    margin-top: 6px;
+  }
+  .budget-total-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .budget-total-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .budget-total-delta {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--c-teal);
+    margin-left: 8px;
+  }
+
+  /* ── Revenue summary (compact) ── */
+  .revenue-summary {
+    margin-bottom: 20px;
+    padding: 14px 18px 12px;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+  .revenue-summary-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: var(--text-subtle);
+    margin: 0 0 8px;
+  }
+  .revenue-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+  .revenue-row strong { color: var(--text); font-weight: 600; }
+  .revenue-row .rev-delta {
+    color: var(--c-teal);
+    font-weight: 700;
+    font-size: 11px;
+  }
+
+  /* ── Override detail panel ── */
+  .override-detail {
+    display: none;
+    margin: 0 0 20px;
+    padding: 14px 18px;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-left: 3px solid var(--c-teal);
+    border-radius: var(--radius-md);
+  }
+  .override-detail.visible { display: block; }
+  .override-detail-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: var(--c-teal);
+    margin: 0 0 8px;
+  }
+  .override-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .override-detail-list li {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    padding: 2px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .override-detail-list li .od-amt {
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .override-detail-list .od-subtotal {
+    border-top: 1px solid var(--divider);
+    margin-top: 4px;
+    padding-top: 6px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .override-detail-list .od-offset {
+    color: var(--c-buoy);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .budget-row-label { width: 90px; font-size: 11px; }
+    .budget-row-value { font-size: 10px; min-width: 45px; }
+    .budget-row-track { height: 26px; }
+    .budget-row-delta { font-size: 9px; }
+  }
+</style>
+
+<div class="flow-intro">
+  <h1>Where the Money Goes</h1>
+  <p class="flow-fy">FY26 general fund budget: spending by category. Toggle override tiers to see what each restores.</p>
+</div>
+
+<div class="tabs">
+  <button class="tab active" data-tier="none">No override</button>
+  <button class="tab" data-tier="t1">Tier 1 ($9M)</button>
+  <button class="tab" data-tier="t2">Tier 2 ($12M)</button>
+  <button class="tab" data-tier="t3">Tier 3 ($15M)</button>
+</div>
+
+<div class="budget-bars" id="budgetBars">
+  <!-- JS builds these -->
+</div>
+
+<div class="budget-total" id="budgetTotal"></div>
+
+<div class="override-detail" id="overrideDetail">
+  <p class="override-detail-title" id="overrideDetailTitle"></p>
+  <ul class="override-detail-list" id="overrideDetailList"></ul>
+</div>
+
+<div class="revenue-summary" id="revenueSummary">
+  <p class="revenue-summary-title">Where it comes from</p>
+  <div id="revenueRows"></div>
+</div>
+
+<p class="caption" id="captionText">
+  Schools account for 46% of the general fund. Healthcare, pensions, and debt service together make up another 29%. These fixed obligations leave limited room for discretionary spending on services like public works, libraries, and general government.
+</p>
+
+<div class="notes">
+  <p>Town department totals from the FY26 Proposed Budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1234/FY26-Budget" data-source="FY26 Proposed Budget, Town of Marblehead"></sup> School total from FY26 School Committee approved budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1235/FY26-School-Budget" data-source="FY26 School Committee Approved Budget"></sup> Override line items from the Town Administrator's April 8, 2026 override presentation.<sup class="cite" data-href="https://vimeo.com/1181632658" data-source="Select Board meeting, April 8 2026 (Vimeo 1181632658), Town Administrator override presentation"></sup></p>
+  <p>Healthcare grouping includes health insurance transfer ($11.8M), Medex ($2.5M), insurance premiums ($0.9M), Medicare reimbursement ($0.7M), and Medicare tax ($0.3M). "General government" is the sum of all remaining town departments not shown separately. Revenue projections from the January 2026 State of the Town presentation.</p>
+</div>
+
+<div class="read-next">
+  <div class="read-next-label">Read next</div>
+  <a class="read-next-link" href="override_calculator.html">
+    <div class="read-next-title">What does the override cost me? &rarr;</div>
+    <div class="read-next-desc">Monthly cost by home value for each tier, at full phase-in.</div>
+  </a>
+  <a class="read-next-link" href="sustainability.html">
+    <div class="read-next-title">Revenue vs. expenses over time &rarr;</div>
+    <div class="read-next-desc">Ten years of actuals and three years of projections, with the same override tier toggle.</div>
+  </a>
+  <a class="read-next-link" href="../where-has-the-money-gone.html">
+    <div class="read-next-title">Where has the money gone? &rarr;</div>
+    <div class="read-next-desc">A ten-year stacked area chart of how the general fund has been spent.</div>
+  </a>
+</div>
+
+<script>
+(function () {
+  /* ── Data ── */
+  var BASE = 106206380;
+
+  var categories = [
+    { id: 'schools',    label: 'Schools',              base: 49120287, css: 'cat-schools' },
+    { id: 'healthcare', label: 'Healthcare & Insurance', base: 16238963, css: 'cat-healthcare' },
+    { id: 'safety',     label: 'Public Safety',         base: 11237760, css: 'cat-safety' },
+    { id: 'debt',       label: 'Debt Service',          base: 9314141,  css: 'cat-debt' },
+    { id: 'pensions',   label: 'Pensions & OPEB',       base: 5630625,  css: 'cat-pensions' },
+    { id: 'pw',         label: 'Public Works & Waste',   base: 5244444,  css: 'cat-pw' },
+    { id: 'library',    label: 'Library & Recreation',   base: 2530319,  css: 'cat-library' },
+    { id: 'gov',        label: 'General Government',     base: 6889841,  css: 'cat-gov' }
+  ];
+
+  /* Override additions by category and tier (FY27 draw, town side only).
+     Schools: $0 restored in FY27 for any tier. */
+  var overrides = {
+    t1: {
+      total: 1269564,
+      safety:  119982,
+      pw:      259286,
+      library: 356183,
+      gov:     423625,
+      healthcare: 76171,
+      pensions: 444433,
+      offset: -410116,
+      items: [
+        ['Restore SRO, police equipment, inspections', 119982],
+        ['Restore DPW staffing, hot top, cemetery', 259286],
+        ['Restore library staffing for accreditation', 311183],
+        ['Restore rec groundskeeper', 45000],
+        ['Restore finance, HR, planning, public buildings', 423625],
+        ['Restore Council on Aging staffing', 76171],
+        ['Restore OPEB, stabilization, workers comp', 444433],
+        ['Offset: reduced unemployment costs', -410116]
+      ]
+    },
+    t2: {
+      total: 2805236,
+      safety:  333464,
+      pw:      329286,
+      library: 823941,
+      gov:    1430302,
+      healthcare: 136171,
+      pensions: 444433,
+      offset: -692361,
+      items: [
+        ['Tier 1 restorations plus:', 0],
+        ['Increase police and fire staffing', 213482],
+        ['Add DPW GIS position', 70000],
+        ['Restore full library staffing and materials', 467758],
+        ['Add recreation staffing and maintenance', 42000],
+        ['Add IT director, budget analyst, grant writer', 220000],
+        ['Restore planning, Town Clerk, public buildings maintenance', 816302],
+        ['Add COA social worker and maintenance', 60000],
+        ['Offset: reduced unemployment costs', -692361]
+      ]
+    },
+    t3: {
+      total: 4296718,
+      safety:  694946,
+      pw:      329286,
+      library: 823941,
+      gov:    1500302,
+      healthcare: 196171,
+      pensions: 444433,
+      capital: 1000000,
+      offset: -692361,
+      items: [
+        ['Tier 2 restorations plus:', 0],
+        ['Further increase fire staffing (3 positions)', 296000],
+        ['Add mental health counseling (Health Dept)', 60000],
+        ['Add grant writer (Community Development)', 70000],
+        ['Recurring capital: leases, equipment, buildings', 1000000],
+        ['Offset: reduced unemployment costs', -692361]
+      ]
+    }
+  };
+
+  var revenue = {
+    levy: 75652398,
+    stateAid: 8959532,
+    freeCash: 9000000,
+    localReceipts: 8881283,
+    other: 3713167
+  };
+
+  /* FY27 override draws */
+  var tierDraws = { t1: 1269564, t2: 2805236, t3: 4296718 };
+
+  /* ── Rendering ── */
+  var barsEl = document.getElementById('budgetBars');
+  var totalEl = document.getElementById('budgetTotal');
+  var detailEl = document.getElementById('overrideDetail');
+  var detailTitle = document.getElementById('overrideDetailTitle');
+  var detailList = document.getElementById('overrideDetailList');
+  var revenueEl = document.getElementById('revenueRows');
+  var captionEl = document.getElementById('captionText');
+
+  var tierLabels = { t1: 'Tier 1', t2: 'Tier 2', t3: 'Tier 3' };
+
+  function fmt(n) {
+    if (Math.abs(n) >= 1000000) return '$' + (n / 1000000).toFixed(1) + 'M';
+    if (Math.abs(n) >= 1000) return (n < 0 ? '-' : '') + '$' + (Math.abs(n) / 1000).toFixed(0) + 'K';
+    return '$' + n.toLocaleString();
+  }
+
+  function pct(n, total) {
+    return Math.round(n / total * 100);
+  }
+
+  function render(tier) {
+    var ov = tier !== 'none' ? overrides[tier] : null;
+    var overrideTotal = ov ? ov.total : 0;
+    var grandTotal = BASE + overrideTotal;
+    var maxVal = categories[0].base + (ov ? (ov.schools || 0) : 0); // schools is always biggest
+
+    /* Build bars */
+    var html = '';
+    categories.forEach(function (cat) {
+      var add = ov ? (ov[cat.id] || 0) : 0;
+      /* Capital is a new category for Tier 3, fold into gov for simplicity */
+      if (cat.id === 'gov' && ov && ov.capital) add += ov.capital;
+      var total = cat.base + add;
+      var basePct = (cat.base / grandTotal * 100).toFixed(1);
+      var addPct = (add / grandTotal * 100).toFixed(1);
+
+      html += '<div class="budget-row ' + cat.css + '">';
+      html += '<div class="budget-row-label">' + cat.label + '</div>';
+      html += '<div class="budget-row-track">';
+      html += '<div class="budget-row-fill" style="width:' + basePct + '%"></div>';
+      if (add > 0) {
+        html += '<div class="budget-row-fill-override" style="width:' + addPct + '%"></div>';
+      }
+      html += '</div>';
+      html += '<div class="budget-row-value">' + fmt(total);
+      html += ' <span class="budget-row-pct">(' + pct(total, grandTotal) + '%)</span>';
+      if (add > 0) html += ' <span class="budget-row-delta">+' + fmt(add) + '</span>';
+      html += '</div>';
+      html += '</div>';
+    });
+    barsEl.innerHTML = html;
+
+    /* Total row */
+    totalEl.innerHTML = '<span class="budget-total-label">Total general fund</span>' +
+      '<span class="budget-total-value">' + fmt(grandTotal) +
+      (overrideTotal > 0 ? '<span class="budget-total-delta">+' + fmt(overrideTotal) + ' override</span>' : '') +
+      '</span>';
+
+    /* Override detail panel */
+    if (ov) {
+      detailEl.classList.add('visible');
+      detailTitle.textContent = tierLabels[tier] + ' override: FY27 additions ($' +
+        (ov.total / 1000000).toFixed(1) + 'M first-year draw)';
+      var listHtml = '';
+      ov.items.forEach(function (item) {
+        var label = item[0];
+        var amt = item[1];
+        if (amt === 0) {
+          listHtml += '<li style="font-weight:600;color:var(--text)">' + label + '</li>';
+        } else if (amt < 0) {
+          listHtml += '<li class="od-offset"><span>' + label + '</span><span class="od-amt" style="color:var(--c-buoy)">' + fmt(amt) + '</span></li>';
+        } else {
+          listHtml += '<li><span>' + label + '</span><span class="od-amt">' + fmt(amt) + '</span></li>';
+        }
+      });
+      listHtml += '<li class="od-subtotal"><span>Net FY27 draw</span><span class="od-amt">' + fmt(ov.total) + '</span></li>';
+      detailList.innerHTML = listHtml;
+    } else {
+      detailEl.classList.remove('visible');
+    }
+
+    /* Revenue summary */
+    var revHtml = '';
+    revHtml += '<div class="revenue-row"><span>Property tax levy</span><strong>' + fmt(revenue.levy) + '</strong></div>';
+    revHtml += '<div class="revenue-row"><span>State aid</span><strong>' + fmt(revenue.stateAid) + '</strong></div>';
+    revHtml += '<div class="revenue-row"><span>Free cash</span><strong>' + fmt(revenue.freeCash) + '</strong></div>';
+    revHtml += '<div class="revenue-row"><span>Local receipts</span><strong>' + fmt(revenue.localReceipts) + '</strong></div>';
+    revHtml += '<div class="revenue-row"><span>Other sources</span><strong>' + fmt(revenue.other) + '</strong></div>';
+    if (tier !== 'none') {
+      revHtml += '<div class="revenue-row"><span>Override draw (FY27)</span><strong>' +
+        fmt(tierDraws[tier]) + '</strong> <span class="rev-delta">new</span></div>';
+    }
+    revenueEl.innerHTML = revHtml;
+
+    /* Caption */
+    if (tier === 'none') {
+      captionEl.textContent = 'Schools account for 46% of the general fund. Healthcare, pensions, and debt service together make up another 29%. These fixed obligations leave limited room for discretionary spending on services like public works, libraries, and general government.';
+    } else {
+      var draw = tierDraws[tier];
+      captionEl.textContent = tierLabels[tier] + ' draws ' + fmt(draw) +
+        ' in its first year (FY27), rising to full phase-in by FY29. The hatched segments show where override money is allocated. ' +
+        'Schools receive no direct override funding in FY27; school restorations begin in FY28.';
+    }
+  }
+
+  /* ── Tab switching ── */
+  document.querySelectorAll('.tab').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.tab').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      render(btn.dataset.tier);
+    });
+  });
+
+  /* Initial render */
+  render('none');
+})();
+</script>
