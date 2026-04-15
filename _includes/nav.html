@@ -21,6 +21,7 @@
       <button class="nav-dropdown-toggle" aria-expanded="false">Budget <svg class="nav-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="nav-dropdown-menu">
         <a href="{{ '/' | relative_url }}where-has-the-money-gone.html"{% if page.url == '/where-has-the-money-gone.html' %} aria-current="page"{% endif %}>Where the money went</a>
+        <a href="{{ '/' | relative_url }}charts/budget_flow.html"{% if page.url == '/charts/budget_flow.html' %} aria-current="page"{% endif %}>Budget flow (interactive)</a>
       </div>
     </div>
 
@@ -53,16 +54,14 @@
     <div class="nav-dropdown">
       <button class="nav-dropdown-toggle" aria-expanded="false">Peer Towns <svg class="nav-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="nav-dropdown-menu">
-        <a href="{{ '/' | relative_url }}charts/four_town_rates.html"{% if page.url == '/charts/four_town_rates.html' %} aria-current="page"{% endif %}>Four-town tax rates</a>
-        <a href="{{ '/' | relative_url }}charts/per_capita_levy.html"{% if page.url == '/charts/per_capita_levy.html' %} aria-current="page"{% endif %}>Per-capita levy</a>
-        <a href="{{ '/' | relative_url }}charts/tax_comparison.html"{% if page.url == '/charts/tax_comparison.html' %} aria-current="page"{% endif %}>Marblehead vs. Swampscott</a>
+        <a href="{{ '/' | relative_url }}charts/four_town_rates.html"{% if page.url == '/charts/four_town_rates.html' or page.url == '/charts/per_capita_levy.html' or page.url == '/charts/tax_comparison.html' %} aria-current="page"{% endif %}>Four-town tax rates</a>
         <a href="{{ '/' | relative_url }}charts/rate_value_schools.html"{% if page.url == '/charts/rate_value_schools.html' %} aria-current="page"{% endif %}>Rate, value, and schools</a>
         <a href="{{ '/' | relative_url }}why-not-elsewhere.html"{% if page.url == '/why-not-elsewhere.html' %} aria-current="page"{% endif %}>Why not elsewhere?</a>
         <a href="{{ '/' | relative_url }}data/case_studies.html"{% if page.url == '/data/case_studies.html' %} aria-current="page"{% endif %}>Case studies</a>
       </div>
     </div>
 
-    <a href="{{ '/' | relative_url }}what-you-can-do.html"{% if page.url == '/what-you-can-do.html' %} aria-current="page"{% endif %}>Civic</a>
+    <a href="{{ '/' | relative_url }}what-you-can-do.html"{% if page.url == '/what-you-can-do.html' %} aria-current="page"{% endif %}>Get involved</a>
 
     <div class="nav-dropdown">
       <button class="nav-dropdown-toggle" aria-expanded="false">Data <svg class="nav-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
