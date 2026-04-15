@@ -194,7 +194,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -260,7 +260,7 @@ nav.site-nav .nav-inner {
   max-width: var(--chart-max); width: 100%;
   display: flex; align-items: center; gap: 18px;
   min-height: 48px;
-  font-size: 13px; line-height: 1;
+  font-size: 0.8125rem; line-height: 1;
   overflow-x: auto;
   scrollbar-width: none;
   /* Leave room on the right so the last link isn't hidden under the fade. */
@@ -279,14 +279,14 @@ nav.site-nav .nav-inner::-webkit-scrollbar { display: none; }
   nav.site-nav .nav-inner { padding-right: 0; overflow-x: visible; }
 }
 nav.site-nav .nav-brand {
-  font-size: 14px; font-weight: 700; color: var(--text);
+  font-size: 0.875rem; font-weight: 700; color: var(--text);
   white-space: nowrap; margin-right: 4px;
   display: inline-flex; align-items: center; gap: 6px;
 }
 .nav-logo { width: 22px; height: 22px; border-radius: 5px; }
 nav.site-nav .nav-inner > a,
 nav.site-nav .nav-dropdown-toggle {
-  font-size: 13px; line-height: 1; color: var(--text-subtle);
+  font-size: 0.8125rem; line-height: 1; color: var(--text-subtle);
   white-space: nowrap;
 }
 nav.site-nav .nav-inner > a:hover,
@@ -306,7 +306,7 @@ nav.site-nav a[aria-current="page"] {
 }
 .nav-dropdown-toggle {
   font-family: inherit;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1;
   background: none;
   border: none;
@@ -340,7 +340,7 @@ nav.site-nav a[aria-current="page"] {
 .nav-dropdown-menu a {
   display: block;
   padding: 8px 16px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--text-subtle);
   white-space: nowrap;
 }
@@ -382,7 +382,7 @@ nav.site-nav a[aria-current="page"] {
 .nav-mobile-panel a {
   display: block;
   padding: 10px 16px;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-text-size-adjust: 100%;
   color: var(--text-subtle);
 }
@@ -463,7 +463,7 @@ html[data-theme="light"] .theme-icon--moon { display: block; }
   border-top: 1px solid var(--divider);
 }
 .read-next-label {
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -488,21 +488,21 @@ html[data-theme="light"] .theme-icon--moon { display: block; }
   text-decoration: none;
 }
 .read-next-title {
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 6px;
   line-height: 1.3;
 }
 .read-next-desc {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--text-subtle);
   line-height: 1.55;
 }
 
 @media (max-width: 600px) {
   .read-next-link { padding: 16px 18px 14px; }
-  .read-next-title { font-size: 16px; }
+  .read-next-title { font-size: 1.0rem; }
 }
 
 /* ==========================================================================
@@ -523,7 +523,7 @@ html[data-theme="light"] .theme-icon--moon { display: block; }
   box-shadow: var(--shadow-sm);
 }
 .page-toc-label {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -537,7 +537,7 @@ html[data-theme="light"] .theme-icon--moon { display: block; }
   border: none;
   border-radius: 999px;
   color: var(--c-navy);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.15s ease, color 0.15s ease;
@@ -549,7 +549,7 @@ html[data-theme="light"] .theme-icon--moon { display: block; }
 }
 @media (max-width: 600px) {
   .page-toc { padding: 10px 12px; }
-  .page-toc a { font-size: 12px; padding: 5px 10px; }
+  .page-toc a { font-size: 0.75rem; padding: 5px 10px; }
 }
 
 /* Clear the sticky site nav when jumping to an h2 via anchor. */
@@ -569,7 +569,7 @@ h2[id] { scroll-margin-top: 68px; }
   color: var(--c-navy);
   border: 1.5px solid var(--c-navy);
   border-radius: var(--radius-sm);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.35;
   text-decoration: none;
@@ -616,7 +616,7 @@ h2[id] { scroll-margin-top: 68px; }
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--text-subtle);
   gap: 12px;
 }
@@ -628,7 +628,7 @@ h2[id] { scroll-margin-top: 68px; }
 
 @media (max-width: 600px) {
   .headcount-bar-track { height: 30px; }
-  .headcount-bar-labels { font-size: 11px; }
+  .headcount-bar-labels { font-size: 0.6875rem; }
 }
 
 /* ==========================================================================
@@ -648,7 +648,7 @@ h2[id] { scroll-margin-top: 68px; }
 }
 .cut-row:last-child { border-bottom: none; }
 .cut-row-name {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--text);
   line-height: 1.35;
 }
@@ -664,7 +664,7 @@ h2[id] { scroll-margin-top: 68px; }
   border-radius: 2px;
 }
 .cut-row-dollar {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   color: var(--text);
@@ -672,7 +672,7 @@ h2[id] { scroll-margin-top: 68px; }
   white-space: nowrap;
 }
 .cut-row-pct {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-variant-numeric: tabular-nums;
   color: var(--text-subtle);
   text-align: right;
@@ -684,9 +684,9 @@ h2[id] { scroll-margin-top: 68px; }
     grid-template-columns: 104px 1fr 58px 44px;
     gap: 8px;
   }
-  .cut-row-name { font-size: 12px; }
-  .cut-row-dollar { font-size: 13px; }
-  .cut-row-pct { font-size: 11px; }
+  .cut-row-name { font-size: 0.75rem; }
+  .cut-row-dollar { font-size: 0.8125rem; }
+  .cut-row-pct { font-size: 0.6875rem; }
 }
 
 /* ==========================================================================
@@ -731,45 +731,45 @@ h2[id] { scroll-margin-top: 68px; }
    ========================================================================== */
 
 h1 {
-  font-size: 22px; font-weight: 700; color: var(--text);
+  font-size: 1.375rem; font-weight: 700; color: var(--text);
   letter-spacing: -0.3px; line-height: 1.25; margin-bottom: 6px;
 }
 h2 {
-  font-size: 18px; font-weight: 700; color: var(--text);
+  font-size: 1.125rem; font-weight: 700; color: var(--text);
   margin: 28px 0 10px; line-height: 1.3;
 }
 h3 {
-  font-size: 15px; font-weight: 700; color: var(--text);
+  font-size: 0.9375rem; font-weight: 700; color: var(--text);
   margin-bottom: 6px; line-height: 1.35;
 }
 
 .h-center { text-align: center; }
 
 .subtitle {
-  font-size: 13px; color: var(--text-subtle);
+  font-size: 0.8125rem; color: var(--text-subtle);
   line-height: 1.5; margin-bottom: 24px;
 }
 .subtitle.h-center { margin-left: auto; margin-right: auto; max-width: 560px; }
 
 p {
-  font-size: 16px; color: var(--text-muted);
+  font-size: 1.0rem; color: var(--text-muted);
   line-height: 1.65; margin-bottom: 14px;
 }
 p a { color: var(--link); }
 p a:hover { text-decoration: underline; }
 
 .caption {
-  font-size: 13px; color: var(--text-muted);
+  font-size: 0.8125rem; color: var(--text-muted);
   line-height: 1.6; margin: 16px 0 20px;
 }
 
 .notes {
-  font-size: 12px; color: var(--text-subtle);
+  font-size: 0.75rem; color: var(--text-subtle);
   line-height: 1.6;
   border-top: 1px solid var(--divider);
   padding-top: 14px; margin-top: 20px;
 }
-.notes p { font-size: 12px; margin: 0; color: var(--text-subtle); }
+.notes p { font-size: 0.75rem; margin: 0; color: var(--text-subtle); }
 .notes p + p { margin-top: 4px; }
 
 /* When .notes is a <details> element, hide the default marker and
@@ -777,7 +777,7 @@ p a:hover { text-decoration: underline; }
 details.notes > summary {
   cursor: pointer;
   list-style: none;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -790,7 +790,7 @@ details.notes > summary::before {
   content: "\25B8"; /* right-pointing triangle */
   display: inline-block;
   margin-right: 6px;
-  font-size: 10px;
+  font-size: 0.625rem;
   transition: transform 0.15s ease;
 }
 details.notes[open] > summary::before {
@@ -801,11 +801,11 @@ details.notes[open] > summary {
 }
 
 .source {
-  font-size: 12px; color: var(--text-faint); margin-top: 8px;
+  font-size: 0.75rem; color: var(--text-faint); margin-top: 8px;
 }
 
 .back {
-  font-size: 12px; font-weight: 500; color: var(--text-subtle);
+  font-size: 0.75rem; font-weight: 500; color: var(--text-subtle);
   display: inline-flex; align-items: center; gap: 5px;
   margin-bottom: 16px;
   min-height: 32px; padding: 6px 14px;
@@ -820,7 +820,7 @@ details.notes[open] > summary {
   margin: 0 0 10px;
   padding: 0;
   text-align: right;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.4px;
@@ -828,10 +828,10 @@ details.notes[open] > summary {
 }
 
 @media (max-width: 600px) {
-  h1 { font-size: 20px; }
-  h2 { font-size: 17px; margin-top: 24px; }
-  p  { font-size: 15px; }
-  .subtitle { font-size: 12px; margin-bottom: 20px; }
+  h1 { font-size: 1.25rem; }
+  h2 { font-size: 1.0625rem; margin-top: 24px; }
+  p  { font-size: 0.9375rem; }
+  .subtitle { font-size: 0.75rem; margin-bottom: 20px; }
 }
 
 /* Desktop hero treatment.
@@ -840,7 +840,7 @@ details.notes[open] > summary {
    its narrow --page-max width for readability; only the hero elements grow. */
 @media (min-width: 900px) {
   .page > h1 {
-    font-size: 32px;
+    font-size: 2.0rem;
     letter-spacing: -0.6px;
     line-height: 1.2;
     margin-top: 12px;
@@ -848,18 +848,18 @@ details.notes[open] > summary {
   }
   .page > h1 + p,
   .page > h1 + .key-stats + p {
-    font-size: 16px;
+    font-size: 1.0rem;
     line-height: 1.65;
   }
-  .page > .hero h1 { font-size: 38px; letter-spacing: -0.8px; }
-  .page > .hero p { font-size: 17px; max-width: 560px; }
+  .page > .hero h1 { font-size: 2.375rem; letter-spacing: -0.8px; }
+  .page > .hero p { font-size: 1.0625rem; max-width: 560px; }
   .page > .hero { margin-bottom: 44px; }
   .key-stats {
     padding: 18px 14px;
     margin: 14px 0 28px;
   }
-  .key-stat-value { font-size: 22px; }
-  .key-stat-label { font-size: 11px; letter-spacing: 0.9px; }
+  .key-stat-value { font-size: 1.375rem; }
+  .key-stat-label { font-size: 0.6875rem; letter-spacing: 0.9px; }
   .key-stat { padding: 4px 16px; }
 }
 
@@ -868,8 +868,8 @@ details.notes[open] > summary {
    ========================================================================== */
 
 .hero { text-align: center; margin-bottom: 36px; }
-.hero h1 { font-size: 28px; margin-bottom: 10px; }
-.hero p  { font-size: 16px; color: var(--text-subtle); max-width: 520px; margin: 0 auto; }
+.hero h1 { font-size: 1.75rem; margin-bottom: 10px; }
+.hero p  { font-size: 1.0rem; color: var(--text-subtle); max-width: 520px; margin: 0 auto; }
 
 /* Lighthouse watermark behind homepage content */
 .page.page--home { position: relative; }
@@ -940,15 +940,15 @@ html[data-theme="dark"] .page.page--home::before { filter: invert(1); opacity: 0
   text-decoration: none;
 }
 .question h2 {
-  font-size: 17px; font-weight: 600; color: var(--text);
+  font-size: 1.0625rem; font-weight: 600; color: var(--text);
   margin: 0 0 4px; line-height: 1.35;
 }
 .question p {
-  font-size: 14px; color: var(--text-subtle); margin: 0;
+  font-size: 0.875rem; color: var(--text-subtle); margin: 0;
   line-height: 1.5;
 }
 .question .tag {
-  display: inline-block; font-size: 10px; font-weight: 700;
+  display: inline-block; font-size: 0.625rem; font-weight: 700;
   padding: 3px 9px; border-radius: 100px;
   letter-spacing: 0.3px;
   /* Push to bottom of the flex column, stay at the left edge. On
@@ -1013,16 +1013,16 @@ html[data-theme="light"] .question:hover .spark-bg { opacity: 0.14; }
 
 @media (max-width: 600px) {
   .hero { margin-bottom: 28px; }
-  .hero h1 { font-size: 24px; }
-  .hero p  { font-size: 15px; }
+  .hero h1 { font-size: 1.5rem; }
+  .hero p  { font-size: 0.9375rem; }
   .question { padding: 18px 20px; }
-  .question h2 { font-size: 16px; }
+  .question h2 { font-size: 1.0rem; }
 }
 
 /* Data section */
 .data-section { margin-top: 44px; }
 .data-section h2 {
-  font-size: 12px; font-weight: 700; color: var(--text-subtle);
+  font-size: 0.75rem; font-weight: 700; color: var(--text-subtle);
   text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px;
 }
 .data-links { display: flex; flex-direction: column; gap: 8px; }
@@ -1044,10 +1044,10 @@ html[data-theme="light"] .question:hover .spark-bg { opacity: 0.14; }
   transform: translateY(-1px);
   text-decoration: none;
 }
-.data-link-title { font-size: 14px; font-weight: 600; color: var(--text); }
-.data-link-desc  { font-size: 12px; color: var(--text-subtle); margin-top: 2px; }
+.data-link-title { font-size: 0.875rem; font-weight: 600; color: var(--text); }
+.data-link-desc  { font-size: 0.75rem; color: var(--text-subtle); margin-top: 2px; }
 .data-link-badge {
-  font-size: 10px; color: var(--text-subtle); font-family: var(--font-mono);
+  font-size: 0.625rem; color: var(--text-subtle); font-family: var(--font-mono);
   background: var(--divider); padding: 3px 8px; border-radius: 4px;
   flex-shrink: 0;
 }
@@ -1057,7 +1057,7 @@ html[data-theme="light"] .question:hover .spark-bg { opacity: 0.14; }
   padding: 32px 20px 28px;
   margin-top: 48px;
   border-top: 1px solid var(--divider);
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--text-faint);
 }
 .footer-links {
@@ -1074,7 +1074,7 @@ html[data-theme="light"] .question:hover .spark-bg { opacity: 0.14; }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 100px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-muted);
   text-decoration: none;
@@ -1087,14 +1087,14 @@ html[data-theme="light"] .question:hover .spark-bg { opacity: 0.14; }
   text-decoration: none;
 }
 .footer-meta {
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--text-faint);
   margin: 0;
   letter-spacing: 0.2px;
 }
 
 .footer-version {
-  font-size: 10px;
+  font-size: 0.625rem;
   color: var(--text-faint);
   margin: 6px 0 0;
   opacity: 0.6;
@@ -1119,11 +1119,11 @@ html[data-theme="light"] .question:hover .spark-bg { opacity: 0.14; }
   margin: 16px 0;
 }
 .card h3 { margin-bottom: 8px; }
-.card p  { font-size: 14px; margin-bottom: 8px; color: var(--text-muted); }
+.card p  { font-size: 0.875rem; margin-bottom: 8px; color: var(--text-muted); }
 .card p:last-child { margin-bottom: 0; }
 
 .tier-label {
-  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: 1px; color: var(--text-subtle); margin-bottom: 6px;
 }
 
@@ -1134,25 +1134,25 @@ html[data-theme="light"] .question:hover .spark-bg { opacity: 0.14; }
   padding: 14px 18px;
   margin: 8px 0;
 }
-.term p { font-size: 14px; margin: 0; color: var(--text-muted); }
+.term p { font-size: 0.875rem; margin: 0; color: var(--text-muted); }
 .term strong { color: var(--text); }
 
 .cut-item {
   display: flex; justify-content: space-between; gap: 12px;
   padding: 10px 0;
   border-bottom: 1px solid var(--divider);
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .cut-item:last-child { border-bottom: none; }
 .cut-item-name   { color: var(--text); }
 .cut-item-amount { color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .cut-item-note {
-  display: block; font-size: 11px; color: var(--text-subtle);
+  display: block; font-size: 0.6875rem; color: var(--text-subtle);
   font-weight: 400; margin-top: 2px; line-height: 1.4;
 }
 
 .section-label {
-  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: 1.5px; color: var(--text-subtle);
   margin: 24px 0 12px;
 }
@@ -1163,7 +1163,7 @@ html[data-theme="light"] .question:hover .spark-bg { opacity: 0.14; }
   border-radius: 0 10px 10px 0;
   padding: 14px 18px;
   margin: 0 0 24px;
-  font-size: 14px; color: var(--text-muted); line-height: 1.6;
+  font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;
 }
 .takeaway.takeaway--pos {
   background: color-mix(in srgb, var(--c-sage) 10%, var(--surface));
@@ -1180,7 +1180,7 @@ html[data-theme="light"] .question:hover .spark-bg { opacity: 0.14; }
   padding: 14px 18px;
 }
 .footnotes p {
-  font-size: 12px; color: var(--text-subtle); line-height: 1.6; margin: 0;
+  font-size: 0.75rem; color: var(--text-subtle); line-height: 1.6; margin: 0;
 }
 .footnotes p + p { margin-top: 4px; }
 .footnote-marker {
@@ -1203,19 +1203,19 @@ table.data {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   min-width: 0;
 }
 table.data caption {
   caption-side: bottom;
   text-align: left;
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--text-subtle);
   padding: 6px 0 0;
 }
 table.data th {
   padding: 8px 8px;
-  font-weight: 600; font-size: 11px;
+  font-weight: 600; font-size: 0.6875rem;
   color: var(--text-subtle);
   text-transform: uppercase; letter-spacing: 0.5px;
   border-bottom: 2px solid var(--divider);
@@ -1227,7 +1227,7 @@ table.data td {
   text-align: right;
   color: var(--text);
   font-variant-numeric: tabular-nums;
-  font-weight: 600; font-size: 12px;
+  font-weight: 600; font-size: 0.75rem;
   border-bottom: 1px solid var(--divider);
   white-space: nowrap;
 }
@@ -1272,13 +1272,13 @@ table.data tbody tr:last-child td { border-bottom: none; }
     display: block;
     padding: 2px 0;
     border-bottom: none;
-    font-size: 13px;
+    font-size: 0.8125rem;
     white-space: normal;
   }
   /* Row header: department name, spans full card width, larger, bold. */
   table.data--stack tbody tr td:first-child {
     grid-column: 1 / -1;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 700;
     color: var(--text);
     margin-bottom: 4px;
@@ -1305,7 +1305,7 @@ table.data tbody tr:last-child td { border-bottom: none; }
   table.data--stack tbody tr td:nth-child(3)::before,
   table.data--stack tbody tr td:nth-child(4)::before,
   table.data--stack tbody tr td:nth-child(5)::before {
-    font-size: 10px;
+    font-size: 0.625rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.6px;
@@ -1328,7 +1328,7 @@ table.data tbody tr:last-child td { border-bottom: none; }
 
 body.doc-page .page h1 { margin-top: 8px; margin-bottom: 12px; }
 body.doc-page .page h2 { margin-top: 32px; }
-body.doc-page .page h3 { font-size: 16px; margin-top: 20px; margin-bottom: 6px; }
+body.doc-page .page h3 { font-size: 1.0rem; margin-top: 20px; margin-bottom: 6px; }
 
 /* Horizontal rules between sections */
 body.doc-page .page hr {
@@ -1346,7 +1346,7 @@ body.doc-page .page ol {
 body.doc-page .page ul { list-style: disc; }
 body.doc-page .page ol { list-style: decimal; }
 body.doc-page .page li {
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.6;
   margin: 4px 0;
 }
@@ -1377,7 +1377,7 @@ body.doc-page .page table:not(.data) {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin: 0 0 20px;
 }
 body.doc-page .page table:not(.data) th,
@@ -1391,7 +1391,7 @@ body.doc-page .page table:not(.data) td {
 }
 body.doc-page .page table:not(.data) th {
   font-weight: 700;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.4px;
   color: var(--text-subtle);
@@ -1400,9 +1400,9 @@ body.doc-page .page table:not(.data) th {
 
 @media (max-width: 600px) {
   body.doc-page .page h2 { margin-top: 24px; }
-  body.doc-page .page h3 { font-size: 15px; }
-  body.doc-page .page li { font-size: 14px; }
-  body.doc-page .page table:not(.data) { font-size: 13px; }
+  body.doc-page .page h3 { font-size: 0.9375rem; }
+  body.doc-page .page li { font-size: 0.875rem; }
+  body.doc-page .page table:not(.data) { font-size: 0.8125rem; }
   body.doc-page .page table:not(.data) th,
   body.doc-page .page table:not(.data) td { padding: 6px 8px; }
 }
@@ -1444,7 +1444,7 @@ body.doc-page .page table:not(.data) th {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 8px 12px;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   color: var(--text);
   box-shadow: var(--shadow-sm);
@@ -1463,7 +1463,7 @@ body.doc-page .page table:not(.data) th {
 .chart-tooltip-year .chart-tooltip-projected {
   font-weight: 500;
   color: var(--text-subtle);
-  font-size: 11px;
+  font-size: 0.6875rem;
   margin-left: 4px;
 }
 .chart-tooltip-row {
@@ -1516,16 +1516,16 @@ svg.chart .axis-base  { stroke: var(--chart-grid-major); stroke-width: 1; fill: 
 svg.chart .tick       { stroke: var(--chart-grid-major); stroke-width: 1; fill: none; }
 
 svg.chart .tick-label {
-  font-size: 11px;
+  font-size: 0.6875rem;
   fill: var(--chart-axis);
   font-variant-numeric: tabular-nums;
 }
 svg.chart .tick-label--major {
-  font-size: 11px; font-weight: 600; fill: var(--text-muted);
+  font-size: 0.6875rem; font-weight: 600; fill: var(--text-muted);
 }
 
 svg.chart .annotation {
-  font-size: 10px; fill: var(--chart-annotation);
+  font-size: 0.625rem; fill: var(--chart-annotation);
 }
 svg.chart .annotation-line {
   stroke: var(--chart-annotation); stroke-width: 0.75;
@@ -1533,10 +1533,10 @@ svg.chart .annotation-line {
 }
 
 svg.chart .value-label {
-  font-size: 11px; font-weight: 600; fill: var(--text);
+  font-size: 0.6875rem; font-weight: 600; fill: var(--text);
 }
 svg.chart .end-label {
-  font-size: 11px; font-weight: 600; fill: currentColor;
+  font-size: 0.6875rem; font-weight: 600; fill: currentColor;
 }
 
 /* Data marks — stroke comes from currentColor so series class drives it */
@@ -1600,8 +1600,8 @@ svg.chart .s-tier-3     { color: var(--series-tier-3); }
   svg.chart .tick-label,
   svg.chart .tick-label--major,
   svg.chart .end-label,
-  svg.chart .value-label { font-size: 12px; }
-  svg.chart .annotation  { font-size: 11px; }
+  svg.chart .value-label { font-size: 0.75rem; }
+  svg.chart .annotation  { font-size: 0.6875rem; }
   svg.chart .data-line   { stroke-width: 2.5; }
   svg.chart .data-line--thin { stroke-width: 1.75; }
 
@@ -1619,7 +1619,7 @@ svg.chart .s-tier-3     { color: var(--series-tier-3); }
   justify-content: center;
   gap: 10px 18px;
   margin: 0 0 20px;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .legend-item {
   display: inline-flex; align-items: center; gap: 6px;
@@ -1649,7 +1649,7 @@ svg.chart .s-tier-3     { color: var(--series-tier-3); }
    ========================================================================== */
 
 .calc-year-label {
-  font-size: 13px; font-weight: 700;
+  font-size: 0.8125rem; font-weight: 700;
   color: var(--text-muted); margin-bottom: 8px;
 }
 .calc-year-label span { font-weight: 400; color: var(--text-subtle); }
@@ -1668,7 +1668,7 @@ svg.chart .s-tier-3     { color: var(--series-tier-3); }
 .tab {
   flex: 1;
   padding: 8px 8px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-subtle);
   background: none;
@@ -1706,7 +1706,7 @@ details.glossary {
 details.glossary > summary {
   cursor: pointer;
   list-style: none;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-mid);
   padding: 10px 0;
@@ -1717,12 +1717,12 @@ details.glossary > summary::before {
   content: "\25B8";
   display: inline-block;
   margin-right: 6px;
-  font-size: 10px;
+  font-size: 0.625rem;
   transition: transform 0.15s ease;
 }
 details.glossary[open] > summary::before { transform: rotate(90deg); }
 details.glossary .glossary-body { padding: 0 0 12px; }
-details.glossary .glossary-body p { font-size: 13px; margin: 0 0 6px; color: var(--text); }
+details.glossary .glossary-body p { font-size: 0.8125rem; margin: 0 0 6px; color: var(--text); }
 details.glossary .glossary-body p:last-child { margin-bottom: 0; }
 
 /* Chart header: title + toggle side by side */
@@ -1744,7 +1744,7 @@ details.glossary .glossary-body p:last-child { margin-bottom: 0; }
 }
 .tabs--compact .tab {
   padding: 5px 10px;
-  font-size: 11px;
+  font-size: 0.6875rem;
 }
 
 /* SVG bar fills (solid = override) */
@@ -1792,14 +1792,14 @@ details.vote-year > summary {
   align-items: center;
   gap: 8px;
   padding: 10px 0;
-  font-size: 13px;
+  font-size: 0.8125rem;
   user-select: none;
 }
 details.vote-year > summary::-webkit-details-marker { display: none; }
 details.vote-year > summary::before {
   content: "\25B8";
   display: inline-block;
-  font-size: 10px;
+  font-size: 0.625rem;
   transition: transform 0.15s ease;
   flex-shrink: 0;
 }
@@ -1811,16 +1811,16 @@ details.vote-year[open] > summary::before { transform: rotate(90deg); }
 }
 .vote-year-count {
   color: var(--text-subtle);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .vote-year-result {
   color: var(--text-subtle);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .vote-year-amount {
   color: var(--text-mid);
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   margin-left: auto;
   font-variant-numeric: tabular-nums;
 }
@@ -1840,12 +1840,12 @@ details.vote-year[open] > summary::before { transform: rotate(90deg); }
 .vote-detail {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.4;
 }
 .vote-detail th {
   text-align: left;
-  font-size: 10px;
+  font-size: 0.625rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--text-subtle);
@@ -1865,7 +1865,7 @@ details.vote-year[open] > summary::before { transform: rotate(90deg); }
   white-space: nowrap;
 }
 .vote-detail td.src {
-  font-size: 11px;
+  font-size: 0.6875rem;
   max-width: 160px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1876,7 +1876,7 @@ details.vote-year[open] > summary::before { transform: rotate(90deg); }
   display: inline-block;
   padding: 1px 7px;
   border-radius: 3px;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.3px;
@@ -1909,7 +1909,7 @@ details.vote-year[open] > summary::before { transform: rotate(90deg); }
 
 /* Vote note (inline annotation) */
 .vote-note {
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--text-subtle);
 }
 
@@ -1940,7 +1940,7 @@ details.vote-year[open] > summary::before { transform: rotate(90deg); }
     content: attr(data-label);
     display: inline-block;
     width: 70px;
-    font-size: 10px;
+    font-size: 0.625rem;
     text-transform: uppercase;
     color: var(--text-subtle);
     letter-spacing: 0.3px;
@@ -1949,7 +1949,7 @@ details.vote-year[open] > summary::before { transform: rotate(90deg); }
   .vote-detail td.num { text-align: left; }
   .vote-detail td.src { max-width: none; }
 
-  .tabs--compact .tab { font-size: 10px; padding: 4px 8px; }
+  .tabs--compact .tab { font-size: 0.625rem; padding: 4px 8px; }
 }
 
 /* Vote dot tooltip */
@@ -1964,7 +1964,7 @@ details.vote-year[open] > summary::before { transform: rotate(90deg); }
   padding: 8px 12px;
   max-width: 280px;
   pointer-events: none;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.4;
 }
 .vote-tooltip-title {
@@ -1974,18 +1974,18 @@ details.vote-year[open] > summary::before { transform: rotate(90deg); }
 }
 .vote-tooltip-meta {
   color: var(--text-subtle);
-  font-size: 11px;
+  font-size: 0.6875rem;
   margin-bottom: 4px;
 }
 .vote-tooltip-votes {
   color: var(--text-muted);
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-variant-numeric: tabular-nums;
 }
 
 /* Ballot timeline link */
 .ballot-timeline-link {
-  font-size: 12px;
+  font-size: 0.75rem;
   margin-top: 8px;
 }
 
@@ -2015,14 +2015,14 @@ blockquote.quote::before {
   left: 14px;
   top: -2px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 72px;
+  font-size: 4.5rem;
   line-height: 1;
   color: var(--c-teal);
   opacity: 0.32;
   pointer-events: none;
 }
 blockquote.quote p {
-  font-size: 16px;
+  font-size: 1.0rem;
   line-height: 1.6;
   color: var(--text-muted);
   margin-bottom: 10px;
@@ -2033,7 +2033,7 @@ blockquote.quote p:last-of-type {
   margin-bottom: 14px;
 }
 blockquote.quote footer {
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 400;
   color: var(--text-subtle);
   line-height: 1.55;
@@ -2057,12 +2057,12 @@ blockquote.quote footer a:hover {
     margin: 22px 0;
   }
   blockquote.quote::before {
-    font-size: 56px;
+    font-size: 3.5rem;
     left: 12px;
     top: -2px;
   }
-  blockquote.quote p { font-size: 16px; }
-  blockquote.quote footer { font-size: 11px; }
+  blockquote.quote p { font-size: 1.0rem; }
+  blockquote.quote footer { font-size: 0.6875rem; }
 }
 
 /* ==========================================================================
@@ -2084,7 +2084,7 @@ blockquote.quote footer a:hover {
   padding: 12px 20px 13px;
 }
 .ballot-header-sub {
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -2092,7 +2092,7 @@ blockquote.quote footer a:hover {
   margin-bottom: 4px;
 }
 .ballot-header-main {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.4px;
 }
@@ -2104,7 +2104,7 @@ blockquote.quote footer a:hover {
 }
 .ballot-instructions p {
   margin: 0;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   color: var(--text-muted);
 }
@@ -2135,7 +2135,7 @@ blockquote.quote footer a:hover {
 }
 .ballot-row:first-of-type { border-top: none; }
 .ballot-q-num {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 800;
   color: var(--text);
   flex-shrink: 0;
@@ -2148,7 +2148,7 @@ blockquote.quote footer a:hover {
   min-width: 0;
 }
 .ballot-q-text {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--text);
   line-height: 1.55;
   margin-bottom: 12px;
@@ -2159,7 +2159,7 @@ blockquote.quote footer a:hover {
 }
 .ballot-q-tier {
   display: inline-block;
-  font-size: 10px;
+  font-size: 0.625rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   color: var(--text-subtle);
@@ -2175,7 +2175,7 @@ blockquote.quote footer a:hover {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--text);
   letter-spacing: 1.2px;
@@ -2227,7 +2227,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   inset: 0;
   display: grid;
   place-items: center;
-  font-size: 72px;
+  font-size: 4.5rem;
   font-weight: 900;
   letter-spacing: 10px;
   color: rgba(11, 22, 32, 0.05);
@@ -2242,11 +2242,11 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 
 @media (max-width: 600px) {
   .ballot-header { padding: 10px 14px 11px; }
-  .ballot-header-main { font-size: 13px; }
-  .ballot-instructions { padding: 9px 14px; font-size: 11px; }
+  .ballot-header-main { font-size: 0.8125rem; }
+  .ballot-instructions { padding: 9px 14px; font-size: 0.6875rem; }
   .ballot-row { padding: 14px 14px; gap: 12px; }
-  .ballot-q-num { font-size: 16px; min-width: 28px; }
-  .ballot-q-text { font-size: 13px; }
+  .ballot-q-num { font-size: 1.0rem; min-width: 28px; }
+  .ballot-q-text { font-size: 0.8125rem; }
   .ballot-choices { gap: 20px; }
   .ballot-oval { width: 20px; height: 13px; }
 }
@@ -2267,7 +2267,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   color: var(--bg);
   border: 1.5px solid var(--c-navy);
   border-radius: var(--radius-sm);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.35;
   cursor: pointer;
@@ -2288,7 +2288,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .ballot-submit-note {
   margin: 8px 0 0;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 
@@ -2301,14 +2301,14 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   margin: 18px 0 10px;
 }
 .ballot-results-heading {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
   margin: 0 0 16px;
   color: var(--text);
 }
 .ballot-results-count {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--text-muted);
   margin-left: 6px;
 }
@@ -2327,7 +2327,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   gap: 10px;
 }
 .ballot-results-q-label {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text);
   white-space: nowrap;
@@ -2342,7 +2342,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 .ballot-results-bar-yes {
   background: var(--c-navy);
   color: var(--bg);
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 600;
   line-height: 22px;
   padding: 0 6px;
@@ -2353,7 +2353,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 .ballot-results-bar-no {
   background: transparent;
   color: var(--text-muted);
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 600;
   line-height: 22px;
   padding: 0 6px;
@@ -2369,7 +2369,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   padding-top: 16px;
 }
 .ballot-results-tier-title {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 700;
   color: var(--text);
   margin: 0 0 10px;
@@ -2386,7 +2386,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   gap: 8px;
 }
 .ballot-results-tier-label {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text);
   white-space: nowrap;
@@ -2402,7 +2402,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 .ballot-results-tier-fill[data-tier="1C"] { background: var(--series-tier-3); }
 .ballot-results-tier-fill[data-tier="none"] { background: var(--border); }
 .ballot-results-tier-pct {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 600;
   color: var(--text-muted);
   text-align: right;
@@ -2410,17 +2410,17 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 
 .ballot-results-disclaimer {
   margin: 14px 0 0;
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--text-muted);
 }
 
 @media (max-width: 600px) {
   .ballot-results { padding: 14px; }
   .ballot-results-q { grid-template-columns: 100px 1fr; gap: 6px; }
-  .ballot-results-q-label { font-size: 11px; }
+  .ballot-results-q-label { font-size: 0.6875rem; }
   .ballot-results-tier-row { grid-template-columns: 90px 1fr 36px; }
-  .ballot-results-tier-label { font-size: 11px; }
-  .ballot-submit { font-size: 14px; padding: 10px 18px; }
+  .ballot-results-tier-label { font-size: 0.6875rem; }
+  .ballot-submit { font-size: 0.875rem; padding: 10px 18px; }
 }
 
 /* ==========================================================================
@@ -2440,7 +2440,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   gap: 14px;
 }
 .stat-label {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text);
   line-height: 1.3;
@@ -2457,7 +2457,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   border-radius: 3px;
 }
 .stat-value {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--text);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
@@ -2466,7 +2466,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .stat-value span {
   display: block;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 500;
   color: var(--text-subtle);
   margin-top: 2px;
@@ -2474,7 +2474,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .stat-caption {
   grid-column: 1 / -1;
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--text-subtle);
   margin-top: 4px;
   margin-bottom: 0;
@@ -2487,9 +2487,9 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
     grid-template-columns: 108px 1fr 76px;
     gap: 10px;
   }
-  .stat-label { font-size: 11px; }
-  .stat-value { font-size: 13px; }
-  .stat-value span { font-size: 9px; }
+  .stat-label { font-size: 0.6875rem; }
+  .stat-value { font-size: 0.8125rem; }
+  .stat-value span { font-size: 0.5625rem; }
 }
 
 /* Diverging variant: bars emanate from a center zero line.
@@ -2538,7 +2538,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   padding: 18px 18px 14px;
 }
 .ballot-timeline h3 {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.1px;
@@ -2546,7 +2546,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   margin: 0 0 6px;
 }
 .ballot-timeline .ballot-timeline-intro {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--text-subtle);
   margin: 0 0 10px;
   line-height: 1.5;
@@ -2557,14 +2557,14 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   display: block;
 }
 .ballot-timeline .row-label {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   fill: var(--text);
 }
 .ballot-timeline .row-sub {
-  font-size: 10px;
+  font-size: 0.625rem;
   fill: var(--text-subtle);
 }
 .ballot-timeline .axis-line {
@@ -2577,7 +2577,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   stroke-dasharray: 2 3;
 }
 .ballot-timeline .tick-label {
-  font-size: 10px;
+  font-size: 0.625rem;
   fill: var(--text-subtle);
 }
 .ballot-timeline .vote-dot {
@@ -2593,7 +2593,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   stroke-width: 2;
 }
 .ballot-timeline .annotation {
-  font-size: 10px;
+  font-size: 0.625rem;
   fill: var(--text-muted);
 }
 .ballot-timeline .annotation--upcoming {
@@ -2613,7 +2613,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid var(--divider);
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--text-subtle);
 }
 .ballot-timeline-legend .li { display: inline-flex; align-items: center; gap: 6px; }
@@ -2626,8 +2626,8 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 
 @media (max-width: 600px) {
   .ballot-timeline { padding: 14px 12px 10px; }
-  .ballot-timeline .row-label { font-size: 10px; }
-  .ballot-timeline .annotation { font-size: 9px; }
+  .ballot-timeline .row-label { font-size: 0.625rem; }
+  .ballot-timeline .annotation { font-size: 0.5625rem; }
 }
 
 /* ==========================================================================
@@ -2647,7 +2647,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   gap: 14px;
 }
 .tier-chart-label {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -2672,7 +2672,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.3px;
@@ -2682,7 +2682,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 .tier-chart-seg--2 { background: var(--series-tier-2); }
 .tier-chart-seg--3 { background: var(--series-tier-3); }
 .tier-chart-total {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   color: var(--text);
   font-variant-numeric: tabular-nums;
@@ -2694,10 +2694,10 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
     grid-template-columns: 84px 1fr 46px;
     gap: 10px;
   }
-  .tier-chart-label { font-size: 10px; letter-spacing: 0.3px; }
+  .tier-chart-label { font-size: 0.625rem; letter-spacing: 0.3px; }
   .tier-chart-track { height: 26px; }
-  .tier-chart-seg { font-size: 10px; }
-  .tier-chart-total { font-size: 13px; }
+  .tier-chart-seg { font-size: 0.625rem; }
+  .tier-chart-total { font-size: 0.8125rem; }
 }
 
 /* ==========================================================================
@@ -2722,7 +2722,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   margin-bottom: 18px;
 }
 .sn-viz-title {
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2756,12 +2756,12 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .sn-row-label {
   font-weight: 700;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--c-navy);
   font-variant-numeric: tabular-nums;
 }
 .sn-row-name {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--text-mid);
   text-transform: uppercase;
   letter-spacing: 0.4px;
@@ -2785,7 +2785,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 .sn-row-amt {
   font-variant-numeric: tabular-nums;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-align: right;
   color: var(--text);
 }
@@ -2800,14 +2800,14 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   background: var(--divider);
   border-radius: 6px;
   text-align: center;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--text-mid);
   min-height: 36px;
   line-height: 1.45;
 }
 .sn-result strong {
   color: var(--c-navy);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-variant-numeric: tabular-nums;
 }
 
@@ -2832,14 +2832,14 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .scrolly-step h3 {
   margin: 0 0 6px;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 700;
   color: var(--text);
   line-height: 1.3;
 }
 .scrolly-step p {
   margin: 0;
-  font-size: 15px;
+  font-size: 0.9375rem;
   color: var(--text-mid);
   line-height: 1.55;
 }
@@ -2847,11 +2847,11 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 @media (max-width: 600px) {
   .scrolly-nesting-sticky { padding: 14px 14px 12px; top: 56px; }
   .sn-row { grid-template-columns: 24px 60px 1fr 44px; gap: 8px; padding: 6px 8px; }
-  .sn-row-name { font-size: 11px; }
+  .sn-row-name { font-size: 0.6875rem; }
   .scrolly-step { min-height: 60vh; }
   .scrolly-step-inner { padding: 12px 14px; }
-  .scrolly-step h3 { font-size: 16px; }
-  .scrolly-step p { font-size: 14px; }
+  .scrolly-step h3 { font-size: 1.0rem; }
+  .scrolly-step p { font-size: 0.875rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2881,7 +2881,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   margin-bottom: 18px;
 }
 .st-viz-title {
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2913,13 +2913,13 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
-  font-size: 10px;
+  font-size: 0.625rem;
   color: var(--text-subtle);
   font-variant-numeric: tabular-nums;
 }
 .st-home-label {
   margin: 10px 0 12px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 700;
   color: var(--text);
   text-align: center;
@@ -2947,7 +2947,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .st-option-head {
   grid-area: head;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.4px;
@@ -2955,7 +2955,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .st-option-amt {
   grid-area: amt;
-  font-size: 16px;
+  font-size: 1.0rem;
   font-weight: 700;
   color: var(--text);
   font-variant-numeric: tabular-nums;
@@ -2995,7 +2995,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   background: var(--divider);
   border-radius: 6px;
   text-align: center;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--text-mid);
   min-height: 36px;
   line-height: 1.45;
@@ -3003,7 +3003,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .st-winner strong {
   color: var(--c-navy);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-variant-numeric: tabular-nums;
 }
 
@@ -3012,7 +3012,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 @media (max-width: 600px) {
   .scrolly-trash-sticky { padding: 14px 14px 12px; top: 56px; }
   .st-option { padding: 8px 10px; }
-  .st-option-amt { font-size: 15px; }
+  .st-option-amt { font-size: 0.9375rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3039,7 +3039,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   gap: 14px;
 }
 .vote-chart-label {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -3048,7 +3048,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .vote-chart-label span {
   display: block;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 500;
   text-transform: none;
   letter-spacing: 0;
@@ -3068,7 +3068,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -3082,11 +3082,11 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
     grid-template-columns: 92px 1fr;
     gap: 10px;
   }
-  .vote-chart-label { font-size: 10px; letter-spacing: 0.3px; }
-  .vote-chart-label span { font-size: 9px; }
+  .vote-chart-label { font-size: 0.625rem; letter-spacing: 0.3px; }
+  .vote-chart-label span { font-size: 0.5625rem; }
   .vote-chart-bar { height: 24px; }
   .vote-chart-yes,
-  .vote-chart-no { font-size: 10px; }
+  .vote-chart-no { font-size: 0.625rem; }
 }
 
 /* ==========================================================================
@@ -3101,7 +3101,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   align-items: center;
 }
 .phase-chart-header {
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -3113,7 +3113,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   content: "";
 }
 .phase-chart-label {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -3136,7 +3136,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   border-radius: 2px;
 }
 .phase-chart-amt {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   color: var(--text);
   font-variant-numeric: tabular-nums;
@@ -3145,7 +3145,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .phase-chart-caption {
   grid-column: 1 / -1;
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--text-subtle);
   font-style: italic;
   line-height: 1.5;
@@ -3157,10 +3157,10 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
     grid-template-columns: 62px 1fr 1fr 1fr;
     gap: 8px 8px;
   }
-  .phase-chart-header { font-size: 9px; letter-spacing: 0.8px; }
-  .phase-chart-label { font-size: 10px; letter-spacing: 0.3px; }
+  .phase-chart-header { font-size: 0.5625rem; letter-spacing: 0.8px; }
+  .phase-chart-label { font-size: 0.625rem; letter-spacing: 0.3px; }
   .phase-chart-bar-wrap { height: 12px; }
-  .phase-chart-amt { font-size: 10px; }
+  .phase-chart-amt { font-size: 0.625rem; }
 }
 
 /* ==========================================================================
@@ -3187,7 +3187,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   border-left: 1px solid var(--divider);
 }
 .key-stat-value {
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 700;
   color: var(--text);
   font-variant-numeric: tabular-nums;
@@ -3195,7 +3195,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   white-space: nowrap;
 }
 .key-stat-label {
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -3219,8 +3219,8 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   .key-stat:nth-child(even) {
     border-left: 1px solid var(--divider);
   }
-  .key-stat-value { font-size: 16px; }
-  .key-stat-label { font-size: 9px; letter-spacing: 0.5px; }
+  .key-stat-value { font-size: 1.0rem; }
+  .key-stat-label { font-size: 0.5625rem; letter-spacing: 0.5px; }
 }
 
 /* ==========================================================================
@@ -3238,7 +3238,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .statute-header {
   font-family: var(--font-sans);
-  font-size: 9px;
+  font-size: 0.5625rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -3251,7 +3251,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   display: block;
   margin-top: 4px;
   font-family: "Century Schoolbook", "New Century Schoolbook", "Noto Serif", "Iowan Old Style", Georgia, "Times New Roman", serif;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 400;
   font-style: italic;
   text-transform: none;
@@ -3260,7 +3260,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .statute p {
   font-family: "Century Schoolbook", "New Century Schoolbook", "Noto Serif", "Iowan Old Style", Georgia, "Times New Roman", serif;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.6;
   color: var(--text-subtle);
   text-align: justify;
@@ -3278,7 +3278,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .statute-plain {
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 400;
   font-style: normal;
   color: var(--text);
@@ -3293,7 +3293,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 .statute-plain::before {
   content: "In plain English";
   font-weight: 700;
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 1.8px;
   text-transform: uppercase;
   color: var(--c-teal);
@@ -3322,7 +3322,7 @@ blockquote.quote--mixed p {
   gap: 6px 18px;
 }
 .tier-list li {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--text-muted);
   padding-left: 14px;
   position: relative;
@@ -3349,7 +3349,7 @@ blockquote.quote--mixed p {
 .tier-items { margin: 12px 0 4px; }
 
 .tier-group-heading {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -3369,7 +3369,7 @@ blockquote.quote--mixed p {
   justify-content: space-between;
   gap: 12px;
   padding: 7px 0;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .tier-line-name { color: var(--text); }
 .tier-line-amount {
@@ -3393,7 +3393,7 @@ blockquote.quote--mixed p {
 .tier-line--school .tier-line-amount { color: var(--text); }
 
 .tier-tag {
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.3px;
@@ -3422,7 +3422,7 @@ blockquote.quote--mixed p {
 .tier-more > summary {
   cursor: pointer;
   list-style: none;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--link);
   padding: 8px 0;
@@ -3431,15 +3431,15 @@ blockquote.quote--mixed p {
 .tier-more > summary::-webkit-details-marker { display: none; }
 .tier-more > summary::after {
   content: " \25B8";
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 .tier-more[open] > summary::after {
   content: " \25BE";
 }
 
 @media (max-width: 600px) {
-  .tier-line { font-size: 13px; }
-  .tier-tag { font-size: 9px; }
+  .tier-line { font-size: 0.8125rem; }
+  .tier-tag { font-size: 0.5625rem; }
 }
 
 /* ==========================================================================
@@ -3462,7 +3462,7 @@ blockquote.quote--mixed p {
   padding-top: 10px;
   border-top: 1px solid var(--divider);
   font-family: var(--font-sans);
-  font-size: 10px;
+  font-size: 0.625rem;
   font-style: normal;
   color: var(--text-subtle);
   letter-spacing: 0.3px;
@@ -3470,7 +3470,7 @@ blockquote.quote--mixed p {
 
 @media (max-width: 600px) {
   .statute { padding: 16px 18px 14px 22px; }
-  .statute p { font-size: 13px; }
+  .statute p { font-size: 0.8125rem; }
 }
 
 /* ==========================================================================
@@ -3483,7 +3483,7 @@ blockquote.quote--mixed p {
   margin: 38px 0 22px;
 }
 .year-label {
-  font-size: 34px;
+  font-size: 2.125rem;
   font-weight: 800;
   color: var(--c-teal);
   letter-spacing: -0.8px;
@@ -3493,7 +3493,7 @@ blockquote.quote--mixed p {
 }
 
 @media (max-width: 600px) {
-  .year-label { font-size: 28px; margin-bottom: 12px; }
+  .year-label { font-size: 1.75rem; margin-bottom: 12px; }
   .year-line { margin: 30px 0 16px; }
 }
 
@@ -3512,7 +3512,7 @@ blockquote.quote--mixed p {
   color: var(--surface);
   border: 1px solid var(--text);
   border-radius: 100px;
-  font-size: 13px; font-weight: 600;
+  font-size: 0.8125rem; font-weight: 600;
   text-decoration: none;
   transition: opacity 0.15s, transform 0.15s;
 }
@@ -3525,7 +3525,7 @@ blockquote.quote--mixed p {
 .button-ghost:hover { color: var(--text); border-color: var(--text-faint); }
 
 .master-note {
-  font-size: 12px; color: var(--text-subtle);
+  font-size: 0.75rem; color: var(--text-subtle);
   border-left: 2px solid var(--divider);
   padding: 6px 0 6px 12px;
   margin: 16px 0 20px;
@@ -3556,7 +3556,7 @@ blockquote.quote--mixed p {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-variant-numeric: tabular-nums;
   font-family: var(--font-mono);
 }
@@ -3569,7 +3569,7 @@ blockquote.quote--mixed p {
   font-weight: 600;
   color: var(--text);
   white-space: nowrap;
-  font-size: 11px;
+  font-size: 0.6875rem;
   letter-spacing: 0.2px;
   text-transform: uppercase;
 }
@@ -3612,18 +3612,18 @@ blockquote.quote--mixed p {
   gap: 8px;
 }
 .metric-head h3 {
-  font-size: 14px; font-weight: 700; color: var(--text);
+  font-size: 0.875rem; font-weight: 700; color: var(--text);
   margin: 0;
 }
 .metric-count {
-  font-size: 10px; color: var(--text-faint);
+  font-size: 0.625rem; color: var(--text-faint);
   font-family: var(--font-mono);
   background: var(--divider);
   padding: 2px 6px; border-radius: 4px;
   flex-shrink: 0;
 }
 .metric-desc {
-  font-size: 11px; color: var(--text-subtle);
+  font-size: 0.6875rem; color: var(--text-subtle);
   margin: 2px 14px 10px 0;
 }
 .year-strip {
@@ -3644,12 +3644,12 @@ blockquote.quote--mixed p {
   scroll-snap-align: start;
 }
 .yv .y {
-  font-size: 10px; color: var(--text-faint);
+  font-size: 0.625rem; color: var(--text-faint);
   font-family: var(--font-mono);
   letter-spacing: 0.3px;
 }
 .yv .v {
-  font-size: 12px; font-weight: 600; color: var(--text);
+  font-size: 0.75rem; font-weight: 600; color: var(--text);
   font-variant-numeric: tabular-nums;
   font-family: var(--font-mono);
   margin-top: 2px;
@@ -3687,7 +3687,7 @@ blockquote.quote--mixed p {
   text-decoration: none;
 }
 .featured-card-eyebrow {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.4px;
@@ -3695,14 +3695,14 @@ blockquote.quote--mixed p {
   margin-bottom: 8px;
 }
 .featured-card-title {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text);
   line-height: 1.3;
   margin-bottom: 6px;
 }
 .featured-card-desc {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--text-subtle);
   line-height: 1.55;
   margin-bottom: 12px;
@@ -3710,7 +3710,7 @@ blockquote.quote--mixed p {
 
 @media (max-width: 600px) {
   .featured-card { padding: 20px 22px 18px; margin-bottom: 28px; }
-  .featured-card-title { font-size: 18px; }
+  .featured-card-title { font-size: 1.125rem; }
 }
 
 /* ==========================================================================
@@ -3749,7 +3749,7 @@ sup.cite a:target {
   border-top: 1px solid var(--border);
 }
 .sources-list-heading {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.3px;
@@ -3757,7 +3757,7 @@ sup.cite a:target {
   margin: 0 0 14px;
 }
 .sources-list-ol {
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.65;
   color: var(--text-muted);
   padding-left: 28px;
@@ -3785,7 +3785,7 @@ sup.cite a:target {
 .sources-list-ol li .sources-backref {
   margin-left: 6px;
   color: var(--text-subtle);
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-decoration: none;
   padding: 0 3px;
   border-radius: 2px;
@@ -3797,7 +3797,7 @@ sup.cite a:target {
 
 @media (max-width: 600px) {
   .sources-list { margin-top: 40px; }
-  .sources-list-ol { padding-left: 24px; font-size: 11px; }
+  .sources-list-ol { padding-left: 24px; font-size: 0.6875rem; }
 }
 
 /* ==========================================================================
@@ -3822,14 +3822,14 @@ sup.cite a:target {
 
 .waterfall-label {
   fill: var(--text);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-family: inherit;
   text-anchor: end;
 }
 
 .waterfall-value {
   fill: var(--text-muted);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-family: inherit;
   text-anchor: start;
   font-variant-numeric: tabular-nums;
@@ -3869,21 +3869,21 @@ sup.cite a:target {
 }
 
 .waterfall-caption {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--text-muted);
   line-height: 1.6;
   margin: 12px 0 6px;
 }
 
 .waterfall-source {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--text-subtle);
   line-height: 1.55;
   margin: 6px 0;
 }
 
 .waterfall-footnote {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--text-muted);
   line-height: 1.55;
   background: var(--divider);
@@ -3894,7 +3894,7 @@ sup.cite a:target {
 
 @media (max-width: 600px) {
   .waterfall-label,
-  .waterfall-value { font-size: 11px; }
+  .waterfall-value { font-size: 0.6875rem; }
 }
 
 /* ==========================================================================
@@ -3923,7 +3923,7 @@ abbr.g::after {
   transform: translateX(-50%);
   background: var(--text);
   color: var(--bg);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.4;
   padding: 5px 10px;
@@ -3943,7 +3943,7 @@ abbr.g:focus::after {
   abbr.g::after {
     bottom: auto;
     top: calc(100% + 4px);
-    font-size: 11px;
+    font-size: 0.6875rem;
     max-width: 220px;
     white-space: normal;
   }
@@ -3954,7 +3954,7 @@ abbr.g:focus::after {
    ========================================================================== */
 
 .page-lead {
-  font-size: 16px;
+  font-size: 1.0rem;
   line-height: 1.65;
   color: var(--text);
   margin: 0 0 20px;
@@ -3999,7 +3999,7 @@ abbr.g:focus::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--c-teal);
   transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
   margin-bottom: 6px;
@@ -4017,7 +4017,7 @@ abbr.g:focus::after {
 
 /* Teaser line */
 .deep-dive-teaser {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--text-subtle);
   line-height: 1.5;
   margin: 0;
@@ -4053,7 +4053,7 @@ abbr.g:focus::after {
 
 /* Fade preview: show first ~3 lines of content */
 .deep-dive--prose .deep-dive-preview {
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: var(--text-muted);
   line-height: 1.65;
   max-height: 4.8em;
@@ -4079,14 +4079,14 @@ abbr.g:focus::after {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--link);
   font-weight: 600;
   margin-top: 4px;
 }
 .deep-dive-more .arrow {
   transition: transform 0.2s ease;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .deep-dive--prose[open] .deep-dive-more {
   display: none;
@@ -4103,7 +4103,7 @@ abbr.g:focus::after {
 @media (max-width: 600px) {
   .deep-dive > summary { padding: 14px 16px; }
   .deep-dive > .deep-dive-body { padding: 0 16px 16px; }
-  .deep-dive--prose .deep-dive-preview { font-size: 15px; }
+  .deep-dive--prose .deep-dive-preview { font-size: 0.9375rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4116,7 +4116,7 @@ abbr.g:focus::after {
 
 /* Expand-all toggle link injected by deep-dive.js */
 .deep-dive-expand-all {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--link);
   cursor: pointer;
