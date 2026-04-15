@@ -95,26 +95,28 @@ og_url: https://marbleheaddata.org/
   }
   .explore-question-card.has-pick {
     border-color: var(--c-teal);
-    background: color-mix(in srgb, var(--c-teal) 7%, var(--surface));
   }
-  .explore-question-card.has-pick::after {
-    content: "\2713";
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: var(--c-teal);
-    color: #fff;
+
+  /* ── Mini position indicators (bottom of each card) ── */
+  .explore-card-positions {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 700;
-    box-shadow: var(--shadow-sm);
-    border: 2px solid var(--bg);
+    gap: 5px;
+    margin-top: 12px;
+    grid-column: 1 / -1;
   }
+  .explore-mini-pos {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--border);
+    transition: all 0.2s ease;
+  }
+  .explore-question-card.has-pick .explore-mini-pos {
+    background: color-mix(in srgb, var(--border) 60%, transparent);
+  }
+  .explore-mini-pos.picked[data-pos="a"] { background: var(--c-teal); box-shadow: 0 0 6px color-mix(in srgb, var(--c-teal) 40%, transparent); }
+  .explore-mini-pos.picked[data-pos="b"] { background: var(--c-brass); box-shadow: 0 0 6px color-mix(in srgb, var(--c-brass) 40%, transparent); }
+  .explore-mini-pos.picked[data-pos="c"] { background: var(--c-navy); box-shadow: 0 0 6px color-mix(in srgb, var(--c-navy) 40%, transparent); }
 
   /* Icon */
   .explore-card-icon {
@@ -163,43 +165,6 @@ og_url: https://marbleheaddata.org/
     color: var(--text-muted);
     line-height: 1.45;
     margin-top: 3px;
-  }
-
-  /* Decided count (social proof) */
-  .explore-card-meta {
-    grid-column: 2;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-subtle);
-    margin-top: 6px;
-    letter-spacing: 0.3px;
-  }
-  .explore-card-decided {
-    color: var(--c-teal);
-  }
-
-  /* Pick display */
-  .explore-card-pick {
-    display: none;
-    grid-column: 2;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--c-teal);
-    margin-top: 8px;
-    line-height: 1.4;
-    padding-top: 8px;
-    border-top: 1px solid color-mix(in srgb, var(--c-teal) 20%, transparent);
-  }
-  .explore-question-card.has-pick .explore-card-pick { display: block; }
-  .explore-question-card.has-pick .explore-card-meta { display: none; }
-  .explore-card-pick-label {
-    display: block;
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-subtle);
-    margin-bottom: 2px;
   }
 
   /* Share strip on landing */
@@ -4186,19 +4151,8 @@ og_url: https://marbleheaddata.org/
       .catch(function () {});
   }
 
-  // Update all social proof displays (landing cards + question bars)
+  // Update all social proof displays (question bars only; landing cards use position pips)
   function updateSocialDisplays() {
-    // Landing cards: show decided count
-    Object.keys(landingCards).forEach(function (topic) {
-      var card = landingCards[topic];
-      if (!card || !card.meta) return;
-      var c = socialCounts[topic] || {};
-      var parts = [];
-      if (c.decided) parts.push('<span class="explore-card-decided">' + c.decided + '</span> decided');
-      if (c.views) parts.push(c.views + ' views');
-      if (c.shares) parts.push(c.shares + ' shares');
-      if (parts.length) card.meta.innerHTML = parts.join(' &middot; ');
-    });
     // Question-screen bars
     updateQuestionSocialBar(currentTopic);
   }
@@ -4571,7 +4525,7 @@ og_url: https://marbleheaddata.org/
   /* ── Build landing question cards from actual h1s ── */
   var listEl = document.getElementById('questionList');
   var shareStripEl = document.getElementById('shareStrip');
-  var landingCards = {};  // topic -> { el, pick, pickLabel, pickText }
+  var landingCards = {};  // topic -> { el, pips }
 
   document.querySelectorAll('.question-screen').forEach(function (screen) {
     var topic = screen.dataset.topic;
@@ -4605,51 +4559,42 @@ og_url: https://marbleheaddata.org/
       btn.appendChild(ctxSpan);
     }
 
-    /* Decided count (social proof, populated by API) */
-    var metaSpan = document.createElement('span');
-    metaSpan.className = 'explore-card-meta';
-    metaSpan.textContent = '';
-    btn.appendChild(metaSpan);
-
-    /* Pick display */
-    var pickSpan = document.createElement('span');
-    pickSpan.className = 'explore-card-pick';
-    var pickLabel = document.createElement('span');
-    pickLabel.className = 'explore-card-pick-label';
-    pickLabel.textContent = 'Your view';
-    pickSpan.appendChild(pickLabel);
-    var pickText = document.createElement('span');
-    pickSpan.appendChild(pickText);
-    btn.appendChild(pickSpan);
+    /* Mini position indicators (3 bars: a, b, c) */
+    var posRow = document.createElement('div');
+    posRow.className = 'explore-card-positions';
+    var pips = {};
+    ['a', 'b', 'c'].forEach(function (pos) {
+      var pip = document.createElement('div');
+      pip.className = 'explore-mini-pos';
+      pip.dataset.pos = pos;
+      posRow.appendChild(pip);
+      pips[pos] = pip;
+    });
+    btn.appendChild(posRow);
 
     btn.addEventListener('click', function () {
       switchTopic(topic);
       window.scrollTo(0, 0);
     });
     listEl.appendChild(btn);
-    landingCards[topic] = { el: btn, pick: pickSpan, pickLabel: pickLabel, pickText: pickText, meta: metaSpan };
+    landingCards[topic] = { el: btn, pips: pips };
   });
 
   /* Update landing cards to reflect current selections */
   function updateLandingCards() {
     var hasAny = false;
-    var landingEl = document.querySelector('.explore-landing');
-    var isShared = landingEl && landingEl.classList.contains('shared-mode');
-    var labelText = isShared ? 'Their view' : 'Your view';
     Object.keys(landingCards).forEach(function (topic) {
       var card = landingCards[topic];
       var answer = selections[topic];
+      // Reset all pips
+      ['a', 'b', 'c'].forEach(function (pos) {
+        card.pips[pos].classList.remove('picked');
+      });
       if (answer) {
         hasAny = true;
-        var answerEl = document.querySelector(
-          '.answer-card[data-question="' + topic + '"][data-answer="' + answer + '"]'
-        );
-        var h2 = answerEl ? answerEl.querySelector('h2') : null;
-        card.pickText.textContent = h2 ? h2.textContent : '';
-        card.pickLabel.textContent = labelText;
+        card.pips[answer].classList.add('picked');
         card.el.classList.add('has-pick');
       } else {
-        card.pickText.textContent = '';
         card.el.classList.remove('has-pick');
       }
     });
