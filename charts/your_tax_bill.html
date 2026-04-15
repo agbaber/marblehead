@@ -58,18 +58,10 @@ title: "Where Your Tax Dollars Go"
   /* Ribbons */
   .sk-ribbon { stroke: none; pointer-events: all; transition: opacity 0.2s; }
   .sk-ribbon-base {
-    fill: var(--text-subtle);
+    fill: var(--c-sage);
     opacity: 0.18;
   }
   .sk-ribbon-base:hover { opacity: 0.32; }
-  .sk-ribbon-base.sk-cat-schools    { fill: var(--c-navy); }
-  .sk-ribbon-base.sk-cat-healthcare { fill: var(--c-buoy); }
-  .sk-ribbon-base.sk-cat-safety     { fill: var(--c-teal); }
-  .sk-ribbon-base.sk-cat-debt       { fill: var(--c-plum); }
-  .sk-ribbon-base.sk-cat-pensions   { fill: var(--c-brass); }
-  .sk-ribbon-base.sk-cat-pw         { fill: var(--c-sage); }
-  .sk-ribbon-base.sk-cat-library    { fill: color-mix(in srgb, var(--c-teal) 60%, var(--c-sage)); }
-  .sk-ribbon-base.sk-cat-gov        { fill: var(--text-subtle); }
   .sk-ribbon-override { opacity: 0.4; }
   .sk-ribbon-override:hover { opacity: 0.6; }
   .sk-ribbon-override.tier-t1 { fill: var(--series-tier-1); }
@@ -541,7 +533,7 @@ title: "Where Your Tax Dollars Go"
     flows.forEach(function (f) {
       var cls = 'sk-ribbon sk-ribbon-' + f.type;
       if (f.type === 'override') cls += ' tier-' + tier;
-      if (f.type === 'base' && f.color) cls += ' sk-cat-' + f.color;
+      /* All base ribbons use sage -- single source node, uniform color */
       svg += '<path class="' + cls + '"' +
              ' data-src="' + f.src.id + '" data-tgt="' + f.tgt.id + '"' +
              ' d="' + ribbon(f.src.x + nodeW, f.sy, f.ribbonH, f.tgt.x, f.ty, f.ribbonH) + '"' +
@@ -576,15 +568,17 @@ title: "Where Your Tax Dollars Go"
       svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
 
       /* Green band at BOTTOM: override additions (where override ribbons connect).
-         Red band above green: remaining unrestored cuts. */
+         Red band above green: remaining unrestored cuts.
+         All ratios use personal amounts (not town-wide). */
+      var personalStillCut = Math.max(n.personalCut - n.personalRestored, 0);
       var bandBottom = n.y + n.h;
       if (n.ovShare > 0) {
         var addH = Math.max((n.ovShare / n.value) * n.h, 2);
         svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + (bandBottom - addH) + '" width="' + nodeW + '" height="' + addH + '" rx="0"/>';
         bandBottom -= addH;
       }
-      if (n.stillCut > 0) {
-        var stillH = Math.max((n.stillCut / n.value) * n.h, 2);
+      if (personalStillCut > 0) {
+        var stillH = Math.max((personalStillCut / n.value) * n.h, 2);
         svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + (bandBottom - stillH) + '" width="' + nodeW + '" height="' + stillH + '" rx="0"/>';
       }
 
@@ -596,21 +590,21 @@ title: "Where Your Tax Dollars Go"
       /* Value + delta */
       var valStr = fmtWhole(Math.round(n.value));
       var deltaStr = '';
-      if (n.stillCut > 0 && n.restored > 0) {
-        deltaStr = ' \u2212' + fmtWhole(Math.round(n.personalCut - n.personalRestored)) + ' cut';
-      } else if (n.stillCut > 0) {
+      if (personalStillCut > 0 && n.personalRestored > 0) {
+        deltaStr = ' \u2212' + fmtWhole(Math.round(personalStillCut)) + ' cut';
+      } else if (personalStillCut > 0) {
         deltaStr = ' \u2212' + fmtWhole(Math.round(n.personalCut)) + ' cut';
-      } else if (n.restored > 0) {
+      } else if (n.personalRestored > 0) {
         deltaStr = ' fully restored';
       }
-      if (n.ovShare > 0 && n.restored === 0) {
+      if (n.ovShare > 0 && n.personalRestored === 0) {
         valStr += ' (+' + fmtWhole(Math.round(n.ovShare)) + ' new)';
       }
 
       svg += '<text class="sk-label-value" x="' + labelX + '" y="' + (ly + 11) + '" dominant-baseline="auto" data-label-for="' + n.id + '">' + valStr + '</text>';
 
       if (deltaStr) {
-        var deltaCls = n.stillCut > 0 ? 'sk-delta-label sk-delta-label-cut' : 'sk-delta-label sk-delta-label-gain';
+        var deltaCls = personalStillCut > 0 ? 'sk-delta-label sk-delta-label-cut' : 'sk-delta-label sk-delta-label-gain';
         svg += '<text class="' + deltaCls + '" x="' + labelX + '" y="' + (ly + 21) + '" dominant-baseline="auto" data-label-for="' + n.id + '">' + deltaStr + '</text>';
       }
     });
