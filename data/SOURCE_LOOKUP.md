@@ -96,6 +96,18 @@ Document links below point at the [primary source archive](archive), a GitHub re
 - [2026 State of the Town](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026_State_of_the_Town.pdf), page 29
 - Revenue $101,024,029 minus Expenses $109,495,852 = -$8,471,823
 
+## Bond Rating (AAA affirmed, outlook to negative, April 10, 2026)
+- [S&amp;P Global Ratings letter to Finance Director Aleesha Benjamin, April 10, 2026](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-10_SP_Rating_Letter.pdf), reference number 40447311
+- Series 2015 General Obligation Municipal Purpose Loan Bonds, due 08/01/2035
+- Archived PDF contains the rating-action letter only. The supporting rationale (research update with reserve ratios, debt figures, and downgrade triggers) is referenced as an enclosure but is not included in the publicly distributed letter. Secondary coverage: Marblehead Independent, ["S&amp;P affirms Marblehead's AAA bond rating, shifts outlook to negative"](https://www.marbleheadindependent.com/s-p-affirms-marbleheads-aaa-bond-rating-shifts-outlook-to-negative/). That article paraphrases the rationale as citing a "~$7.7 million" FY27 structural deficit, which predates the $8,471,823 figure presented at the January 28, 2026 State of the Town; use the Town Administrator figure for site-wide deficit references.
+
+## 2026 Annual Town Meeting Warrant (May 4, 2026)
+- [2026 Annual Town Meeting Warrant](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026_Annual_Town_Meeting_Warrant.pdf), posted February 26, 2026, signed by Town Administrator Thatcher Kezer
+- Article 28: School Department Supplemental Appropriation, contingent on Proposition 2&frac12; ballot question
+- Article 29: Supplemental Appropriation and Expenses of Several Departments, contingent on Proposition 2&frac12; ballot question
+- Both override-contingent appropriations are written as "a sum of money" in the warrant; tier-specific amounts are set by motion on the floor.
+- Article 30 rescinds $1,619,627 of unused borrowing authority from the 2019 Gerry Elementary School authorization.
+
 ## Revenue and Expense Projections
 - [2026 State of the Town](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026_State_of_the_Town.pdf), pages 13-29
 - FY25 actual, FY26 projected, FY27 projected with line-by-line detail
