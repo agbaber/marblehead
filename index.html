@@ -5624,6 +5624,10 @@ og_url: https://marbleheaddata.org/
 
   function showTutorial() {
     if (tutorialSeen) return;
+    // Mark as seen immediately on display, not only on "Got it" click.
+    // Otherwise users who ignore the box keep seeing it on every later pick.
+    tutorialSeen = true;
+    localStorage.setItem(TUTORIAL_KEY, '1');
     tutorialEl.classList.add('visible');
   }
 
@@ -5637,9 +5641,11 @@ og_url: https://marbleheaddata.org/
 
   document.getElementById('tutorialDismiss').addEventListener('click', dismissTutorial);
 
-  // Show browse hint on subsequent visits if tutorial was already seen
+  // Show browse hint on subsequent visits if tutorial was already seen.
+  // Suppress it while the tutorial box itself is still on screen -- the
+  // tutorial already contains the same hint, so showing both is redundant.
   function updateBrowseHint(topic) {
-    if (tutorialSeen && selections[topic]) {
+    if (tutorialSeen && selections[topic] && !tutorialEl.classList.contains('visible')) {
       browseHintEl.classList.add('visible');
     } else {
       browseHintEl.classList.remove('visible');
@@ -6186,6 +6192,10 @@ og_url: https://marbleheaddata.org/
     if (typeof posthog !== 'undefined') {
       posthog.capture('explore_answer_selected', { topic: question, answer: answer });
     }
+    // Capture pre-pick state so we can tell if this is the user's very first
+    // pick. Anything else ("you already have picks, you're just making another")
+    // should not trigger the first-pick tutorial.
+    var wasFirstPick = Object.keys(selections).length === 0;
     // Update checkmark: only the selected card gets .selected
     document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
       c.classList.remove('selected');
@@ -6213,8 +6223,8 @@ og_url: https://marbleheaddata.org/
     // Show answer distribution now that the user has picked
     showPickDistribution(question);
 
-    // First-time tutorial
-    if (!tutorialSeen) showTutorial();
+    // First-time tutorial -- only on the user's actual first-ever pick
+    if (wasFirstPick && !tutorialSeen) showTutorial();
 
     // Show browse hint (after tutorial is seen)
     updateBrowseHint(question);
