@@ -1,5 +1,5 @@
 ---
-title: "Where the Money Goes"
+title: "Where Your Tax Dollars Go"
 ---
 <style>
   .sankey-intro h1 { text-align: center; }
@@ -7,6 +7,27 @@ title: "Where the Money Goes"
     text-align: center; font-size: 13px;
     color: var(--text-muted); margin: 0 0 16px;
   }
+
+  /* ── Input ── */
+  .calc-input { margin: 0 auto 22px; max-width: 420px; text-align: center; }
+  .calc-input label {
+    display: block; font-size: 12px; color: var(--text-subtle);
+    text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px;
+  }
+  .calc-input input {
+    width: 100%; padding: 10px 14px; font-size: 18px; font-weight: 600;
+    color: var(--text); background: var(--surface);
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm); text-align: center;
+    font-variant-numeric: tabular-nums; font-family: var(--font-sans);
+  }
+  .calc-input input:focus {
+    outline: none; border-color: var(--link);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--link) 22%, transparent);
+  }
+  .calc-input .hint { display: block; font-size: 12px; color: var(--text-subtle); margin-top: 8px; }
+  .calc-input .hint a { color: var(--link); }
+  .calc-input .hint-default { display: block; font-size: 11px; color: var(--text-faint); margin-top: 3px; }
 
   /* ── Sankey container ── */
   .sankey-wrap {
@@ -19,11 +40,8 @@ title: "Where the Money Goes"
 
   /* Node rects */
   .sk-node { stroke: none; cursor: pointer; }
-  .sk-node-levy       { fill: var(--c-navy); }
-  .sk-node-stateAid   { fill: var(--c-teal); }
-  .sk-node-freeCash   { fill: var(--c-brass); }
-  .sk-node-local      { fill: var(--c-sage); }
-  .sk-node-other      { fill: var(--text-subtle); }
+  .sk-node-tax        { fill: var(--c-navy); }
+  .sk-node-override   { fill: var(--c-teal); }
   .sk-node-override-t1 { fill: var(--series-tier-1); }
   .sk-node-override-t2 { fill: var(--series-tier-2); }
   .sk-node-override-t3 { fill: var(--series-tier-3); }
@@ -41,18 +59,31 @@ title: "Where the Money Goes"
   .sk-ribbon { stroke: none; pointer-events: all; transition: opacity 0.2s; }
   .sk-ribbon-base {
     fill: var(--text-subtle);
-    opacity: 0.07;
+    opacity: 0.18;
   }
-  .sk-ribbon-base:hover { opacity: 0.18; }
+  .sk-ribbon-base:hover { opacity: 0.32; }
+  .sk-ribbon-base.sk-cat-schools    { fill: var(--c-navy); }
+  .sk-ribbon-base.sk-cat-healthcare { fill: var(--c-buoy); }
+  .sk-ribbon-base.sk-cat-safety     { fill: var(--c-teal); }
+  .sk-ribbon-base.sk-cat-debt       { fill: var(--c-plum); }
+  .sk-ribbon-base.sk-cat-pensions   { fill: var(--c-brass); }
+  .sk-ribbon-base.sk-cat-pw         { fill: var(--c-sage); }
+  .sk-ribbon-base.sk-cat-library    { fill: color-mix(in srgb, var(--c-teal) 60%, var(--c-sage)); }
+  .sk-ribbon-base.sk-cat-gov        { fill: var(--text-subtle); }
   .sk-ribbon-override { opacity: 0.4; }
   .sk-ribbon-override:hover { opacity: 0.6; }
   .sk-ribbon-override.tier-t1 { fill: var(--series-tier-1); }
   .sk-ribbon-override.tier-t2 { fill: var(--series-tier-2); }
   .sk-ribbon-override.tier-t3 { fill: var(--series-tier-3); }
 
-  /* When focused, base ribbons are more visible since fewer are shown */
-  .sankey-wrap.is-focused .sk-ribbon-base { opacity: 0.15; }
-  .sankey-wrap.is-focused .sk-ribbon-base:hover { opacity: 0.3; }
+  /* Focused state */
+  .sankey-wrap.has-focus .sk-ribbon { opacity: 0; pointer-events: none; }
+  .sankey-wrap.has-focus .sk-ribbon.sk-focus.sk-ribbon-base { opacity: 0.3; pointer-events: all; }
+  .sankey-wrap.has-focus .sk-ribbon.sk-focus.sk-ribbon-override { opacity: 0.55; pointer-events: all; }
+  .sankey-wrap.has-focus .sk-node { opacity: 0.25; }
+  .sankey-wrap.has-focus .sk-node.sk-node-focus { opacity: 1; }
+  .sankey-wrap.has-focus .sk-label-dim { opacity: 0.3; }
+  .sankey-wrap.has-focus .sk-label-focus { opacity: 1; }
 
   /* Labels */
   .sk-label {
@@ -71,7 +102,7 @@ title: "Where the Money Goes"
   .sk-label-override.tier-t2 { fill: var(--series-tier-2); }
   .sk-label-override.tier-t3 { fill: var(--series-tier-3); }
 
-  /* Delta indicators (cuts & restorations) */
+  /* Delta indicators */
   .sk-delta-cut  { fill: var(--c-buoy); }
   .sk-delta-gain { fill: var(--c-sage); }
   .sk-delta-label {
@@ -153,6 +184,7 @@ title: "Where the Money Goes"
     font-weight: 600;
     color: var(--text);
   }
+  .od-amt-neg { color: var(--c-buoy); }
 
   @media (max-width: 600px) {
     .sk-label { font-size: 9px; }
@@ -163,8 +195,15 @@ title: "Where the Money Goes"
 </style>
 
 <div class="sankey-intro">
-  <h1>Where the Money Goes</h1>
-  <p class="sankey-fy">FY26 general fund: revenue sources flow to spending categories. Toggle tiers to see cuts and restorations. Click any node to isolate its flows.</p>
+  <h1>Where Your Tax Dollars Go</h1>
+  <p class="sankey-fy">Enter your home value to see how your FY26 property tax bill flows to town and school spending. Toggle tiers to see your override cost and what it funds.</p>
+</div>
+
+<div class="calc-input">
+  <label for="assessed-value">Your assessed value</label>
+  <input id="assessed-value" type="text" inputmode="numeric" value="$1,291,507" autocomplete="off">
+  <span class="hint">Don't know it? <a href="https://epay.cityhallsystems.com/selection" target="_blank" rel="noopener">Look it up on the town's tax portal</a>.</span>
+  <span class="hint-default">Defaults to the town's average single-family value.</span>
 </div>
 
 <div class="tabs">
@@ -185,23 +224,19 @@ title: "Where the Money Goes"
 <p class="caption" id="captionText"></p>
 
 <div class="notes">
-  <p>Town department totals from the FY26 Proposed Budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1234/FY26-Budget" data-source="FY26 Proposed Budget, Town of Marblehead"></sup> School total from FY26 School Committee approved budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1235/FY26-School-Budget" data-source="FY26 School Committee Approved Budget"></sup> Override line items and no-override cuts from the Town Administrator's April 8, 2026 override presentation.<sup class="cite" data-href="https://vimeo.com/1181632658" data-source="Select Board meeting, April 8 2026 (Vimeo 1181632658), Town Administrator override presentation"></sup> No-override school reduction from the FY27 Proposed Balanced Budget.<sup class="cite" data-href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf" data-source="FY27 Proposed Budget, page 2, Item 101"></sup></p>
-  <p>Healthcare grouping includes health insurance transfer ($11.8M), Medex ($2.5M), insurance premiums ($0.9M), Medicare reimbursement ($0.7M), and Medicare tax ($0.3M). "General government" is the sum of all remaining town departments not shown separately. General fund revenue does not have line-item earmarking; proportional ribbons are illustrative. Red indicators show FY27 no-override cuts; green shows restorations at the selected tier.</p>
+  <p>Your tax bill is calculated at the FY26 residential rate of $8.59 per $1,000 of assessed value.<sup class="cite" data-href="https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=PropertyTaxInformation.taxratesbyclass.taxratesbyclass_main" data-source="MA DOR Division of Local Services, Tax Rates by Class, FY2026, Marblehead"></sup> Spending shares are proportional: the general fund has no line-item earmarking, so each dollar of property tax is allocated across categories in the same ratio as the overall FY26 budget.</p>
+  <p>Town department totals from the FY26 Proposed Budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1234/FY26-Budget" data-source="FY26 Proposed Budget, Town of Marblehead"></sup> School total from the FY26 School Committee approved budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1235/FY26-School-Budget" data-source="FY26 School Committee Approved Budget"></sup> Override line items and no-override cuts from the Town Administrator's April 8, 2026 override presentation.<sup class="cite" data-href="https://vimeo.com/1181632658" data-source="Select Board meeting, April 8 2026 (Vimeo 1181632658), Town Administrator override presentation"></sup> Override cost-per-household scaled from average single-family assessed value of $1,291,507 using the same method as the <a href="override_calculator.html">override cost calculator</a>.</p>
 </div>
 
 <div class="read-next">
   <div class="read-next-label">Read next</div>
-  <a class="read-next-link" href="your_tax_bill.html">
-    <div class="read-next-title">Where your tax dollars go &rarr;</div>
-    <div class="read-next-desc">Enter your home value and see exactly how your tax bill splits across schools, public safety, and six other categories.</div>
+  <a class="read-next-link" href="budget_flow.html">
+    <div class="read-next-title">Where the money goes: full budget &rarr;</div>
+    <div class="read-next-desc">All five revenue sources flowing to eight spending categories, with override tier toggle.</div>
   </a>
-  <a class="read-next-link" href="sustainability.html">
-    <div class="read-next-title">Revenue vs. expenses over time &rarr;</div>
-    <div class="read-next-desc">Ten years of actuals and three years of projections, with the same override tier toggle.</div>
-  </a>
-  <a class="read-next-link" href="../no-override-budget.html">
-    <div class="read-next-title">What's in the no-override budget? &rarr;</div>
-    <div class="read-next-desc">The specific cuts if the override fails: 22 town positions, 18 school FTEs, the library reduced 43%.</div>
+  <a class="read-next-link" href="override_calculator.html">
+    <div class="read-next-title">What does the override cost me? &rarr;</div>
+    <div class="read-next-desc">Monthly cost by home value for each tier, year by year to full phase-in.</div>
   </a>
 </div>
 
@@ -210,15 +245,10 @@ title: "Where the Money Goes"
   /* ══════════════════════════════════════════════════════
      DATA
      ══════════════════════════════════════════════════════ */
-  var BASE = 106206380;
-
-  var revSources = [
-    { id: 'levy',     label: 'Property Tax',   value: 75652398 },
-    { id: 'stateAid', label: 'State Aid',       value: 8959532 },
-    { id: 'freeCash', label: 'Free Cash',       value: 9000000 },
-    { id: 'local',    label: 'Local Receipts',  value: 8881283 },
-    { id: 'other',    label: 'Other Sources',   value: 3713167 }
-  ];
+  var TAX_RATE = 8.59;           // per $1,000, FY26 residential
+  var TOTAL_BUDGET = 106206380;  // FY26 general fund
+  var AVG_ASSESSED = 1291507;
+  var STORAGE_KEY = 'mh_override_calc_assessed_value';
 
   var spendCats = [
     { id: 'schools',    label: 'Schools',               base: 49120287 },
@@ -231,31 +261,28 @@ title: "Where the Money Goes"
     { id: 'library',    label: 'Library & Recreation',    base: 2530319 }
   ];
 
-  /* No-override cuts by spending category (derived from "Restore" items
-     in override_town_line_items.csv at their maximum tier values).
-     Schools: $1.5M special ed bridge from FY27 Proposed Budget. */
+  /* No-override cuts */
   var cuts = {
-    schools:    1500000,
-    safety:     119982,
-    pw:         259286,
-    library:    743563,
-    gov:        660302,
-    healthcare: 76171,
-    pensions:   444433
+    schools: 1500000, safety: 119982, pw: 259286,
+    library: 743563, gov: 660302, healthcare: 76171, pensions: 444433
   };
 
-  /* How much of each cut is restored at each tier (FY27 only).
-     Derived from "Restore" line items in the CSV. */
+  /* Restorations per tier */
   var restorations = {
     t1: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433, schools: 0 },
     t2: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 0 },
     t3: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 0 }
   };
 
-  var overrides = {
+  /* Override annual cost on avg home (Year 1 / FY27) and detail items */
+  var overrideRates = {
+    t1: { annual: 167.90 },
+    t2: { annual: 361.62 },
+    t3: { annual: 555.35 }
+  };
+
+  var overrideItems = {
     t1: {
-      total: 1269564,
-      cats: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433 },
       items: [
         ['Restore SRO, police equipment, inspections', 119982],
         ['Restore DPW staffing, hot top, cemetery', 259286],
@@ -265,11 +292,11 @@ title: "Where the Money Goes"
         ['Restore Council on Aging staffing', 76171],
         ['Restore OPEB, stabilization, workers comp', 444433],
         ['Offset: reduced unemployment costs', -410116]
-      ]
+      ],
+      total: 1269564,
+      cats: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433 }
     },
     t2: {
-      total: 2805236,
-      cats: { safety: 333464, pw: 329286, library: 823941, gov: 1430302, healthcare: 136171, pensions: 444433 },
       items: [
         ['Tier 1 restorations plus:', 0],
         ['Increase police and fire staffing', 213482],
@@ -280,11 +307,11 @@ title: "Where the Money Goes"
         ['Restore planning, Town Clerk, public buildings maintenance', 816302],
         ['Add COA social worker and maintenance', 60000],
         ['Offset: reduced unemployment costs', -692361]
-      ]
+      ],
+      total: 2805236,
+      cats: { safety: 333464, pw: 329286, library: 823941, gov: 1430302, healthcare: 136171, pensions: 444433 }
     },
     t3: {
-      total: 4296718,
-      cats: { safety: 694946, pw: 329286, library: 823941, gov: 1500302, healthcare: 196171, pensions: 444433, capital: 1000000 },
       items: [
         ['Tier 2 restorations plus:', 0],
         ['Further increase fire staffing (3 positions)', 296000],
@@ -292,20 +319,25 @@ title: "Where the Money Goes"
         ['Add grant writer (Community Development)', 70000],
         ['Recurring capital: leases, equipment, buildings', 1000000],
         ['Offset: reduced unemployment costs', -692361]
-      ]
+      ],
+      total: 4296718,
+      cats: { safety: 694946, pw: 329286, library: 823941, gov: 1500302, healthcare: 196171, pensions: 444433, capital: 1000000 }
     }
   };
 
-  var tierLabels = { t1: 'Tier 1 ($1.3M FY27)', t2: 'Tier 2 ($2.8M FY27)', t3: 'Tier 3 ($4.3M FY27)' };
+  var tierLabels = { t1: 'Tier 1 ($9M)', t2: 'Tier 2 ($12M)', t3: 'Tier 3 ($15M)' };
   var tierShort  = { t1: 'Tier 1', t2: 'Tier 2', t3: 'Tier 3' };
 
   /* ══════════════════════════════════════════════════════
      HELPERS
      ══════════════════════════════════════════════════════ */
   function fmt(n) {
-    if (Math.abs(n) >= 1000000) return '$' + (n / 1000000).toFixed(1) + 'M';
-    if (Math.abs(n) >= 1000) return (n < 0 ? '-' : '') + '$' + (Math.abs(n) / 1000).toFixed(0) + 'K';
-    return '$' + n.toLocaleString();
+    if (Math.abs(n) >= 100000) return (n < 0 ? '-' : '') + '$' + (Math.abs(n) / 1000).toFixed(0) + 'K';
+    return (n < 0 ? '-' : '') + '$' + Math.abs(Math.round(n)).toLocaleString('en-US');
+  }
+
+  function fmtWhole(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
   }
 
   function ribbon(x1, y1, h1, x2, y2, h2) {
@@ -315,6 +347,27 @@ title: "Where the Money Goes"
            'L' + x2 + ',' + (y2 + h2) +
            'C' + cx + ',' + (y2 + h2) + ' ' + cx + ',' + (y1 + h1) + ' ' + x1 + ',' + (y1 + h1) +
            'Z';
+  }
+
+  function parseAssessed(raw) {
+    var n = parseFloat(String(raw).replace(/[^0-9.]/g, ''));
+    return isFinite(n) && n > 0 ? n : AVG_ASSESSED;
+  }
+
+  function formatInput(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function loadStored() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      var n = parseFloat(raw);
+      return isFinite(n) && n > 0 ? n : null;
+    } catch (e) { return null; }
+  }
+
+  function saveStored(value) {
+    try { localStorage.setItem(STORAGE_KEY, String(value)); } catch (e) {}
   }
 
   /* ══════════════════════════════════════════════════════
@@ -327,46 +380,65 @@ title: "Where the Money Goes"
   var detailList = document.getElementById('overrideDetailList');
   var captionEl = document.getElementById('captionText');
   var focusedNode = null;
-  var currentTier = 'none';
 
-  function render(tier, focusId) {
-    currentTier = tier;
-    focusedNode = focusId || null;
-    var ov = tier !== 'none' ? overrides[tier] : null;
+  function render(tier, assessed) {
+    focusedNode = null;
+    var taxBill = assessed * TAX_RATE / 1000;
+    var ov = tier !== 'none' ? overrideItems[tier] : null;
     var rest = tier !== 'none' ? restorations[tier] : null;
 
+    /* Override cost for this home */
+    var overrideCost = 0;
+    if (tier !== 'none') {
+      overrideCost = overrideRates[tier].annual * (assessed / AVG_ASSESSED);
+    }
+
     /* ── Build left nodes ── */
-    var leftNodes = revSources.map(function (s) {
-      return { id: s.id, label: s.label, value: s.value, type: 'rev' };
-    });
-    if (ov) {
-      leftNodes.push({ id: 'override', label: tierLabels[tier], value: ov.total, type: 'override' });
+    var leftNodes = [
+      { id: 'tax', label: 'Your Tax Bill', value: taxBill, type: 'tax' }
+    ];
+    if (tier !== 'none') {
+      leftNodes.push({
+        id: 'override', label: tierShort[tier] + ' cost',
+        value: overrideCost, type: 'override'
+      });
     }
 
     /* ── Build right nodes ── */
     var rightNodes = spendCats.map(function (c) {
-      var add = 0;
+      var share = taxBill * (c.base / TOTAL_BUDGET);
+      var ovShare = 0;
       if (ov) {
-        add = ov.cats[c.id] || 0;
-        if (c.id === 'gov' && ov.cats.capital) add += ov.cats.capital;
+        var catAdd = ov.cats[c.id] || 0;
+        if (c.id === 'gov' && ov.cats.capital) catAdd += ov.cats.capital;
+        var grossAdds = 0;
+        spendCats.forEach(function (sc) {
+          var a = ov.cats[sc.id] || 0;
+          if (sc.id === 'gov' && ov.cats.capital) a += ov.cats.capital;
+          grossAdds += a;
+        });
+        if (grossAdds > 0) ovShare = overrideCost * (catAdd / grossAdds);
       }
       var cut = cuts[c.id] || 0;
       var restored = rest ? (rest[c.id] || 0) : 0;
       var stillCut = cut - restored;
-      return { id: c.id, label: c.label, value: c.base + add, base: c.base, add: add,
-               cut: cut, restored: restored, stillCut: Math.max(stillCut, 0) };
+      /* Scale cuts to personal amounts */
+      var personalCut = taxBill * (cut / TOTAL_BUDGET);
+      var personalRestored = taxBill * (restored / TOTAL_BUDGET);
+      return {
+        id: c.id, label: c.label,
+        value: share + ovShare, baseShare: share, ovShare: ovShare,
+        cut: cut, restored: restored, stillCut: Math.max(stillCut, 0),
+        personalCut: personalCut, personalRestored: personalRestored
+      };
     });
 
-    /* ── Determine which side is focused ── */
-    var focusRight = focusId && rightNodes.some(function (n) { return n.id === focusId; });
-    var focusLeft = focusId && leftNodes.some(function (n) { return n.id === focusId; });
-
     /* ── Layout ── */
-    var W = 880, H = 620;
+    var W = 880, H = 540;
     var nodeW = 14;
     var padTop = 32, padBot = 20;
-    var gapL = 5, gapR = 14;
-    var lx = 140, rx = W - 175;
+    var gapL = 12, gapR = 14;
+    var lx = 160, rx = W - 195;
 
     var leftTotal = leftNodes.reduce(function (s, n) { return s + n.value; }, 0);
     var rightTotal = rightNodes.reduce(function (s, n) { return s + n.value; }, 0);
@@ -378,139 +450,62 @@ title: "Where the Money Goes"
     var maxGaps = Math.max(leftGaps, rightGaps);
     var scale = (availH - maxGaps) / maxTotal;
 
-    /* When a node is focused, it expands to fill the column.
-       Nodes on the OTHER side keep normal layout (for ribbon targets). */
-    if (focusRight) {
-      /* Focused right node fills available height */
-      rightNodes.forEach(function (n) {
-        if (n.id === focusId) {
-          n.h = availH;
-          n.y = padTop;
-          n.x = rx;
-          n.inOff = 0;
-          n.visible = true;
-        } else {
-          n.h = 0;
-          n.y = 0;
-          n.x = rx;
-          n.inOff = 0;
-          n.visible = false;
-        }
-      });
-      /* Left side: normal layout */
-      var y = padTop;
-      leftNodes.forEach(function (n) {
-        n.h = Math.max(n.value * scale, 2);
-        n.y = y;
-        n.x = lx;
-        n.outOff = 0;
-        n.visible = true;
-        y += n.h + gapL;
-      });
-    } else if (focusLeft) {
-      /* Focused left node fills available height */
-      leftNodes.forEach(function (n) {
-        if (n.id === focusId) {
-          n.h = availH;
-          n.y = padTop;
-          n.x = lx;
-          n.outOff = 0;
-          n.visible = true;
-        } else {
-          n.h = 0;
-          n.y = 0;
-          n.x = lx;
-          n.outOff = 0;
-          n.visible = false;
-        }
-      });
-      /* Right side: normal layout */
-      var rightH2 = rightNodes.reduce(function (s, n) { return s + Math.max(n.value * scale, 2); }, 0) + rightGaps;
-      var rightY2 = padTop + (availH - rightH2) / 2;
-      y = rightY2;
-      rightNodes.forEach(function (n) {
-        n.h = Math.max(n.value * scale, 2);
-        n.y = y;
-        n.x = rx;
-        n.inOff = 0;
-        n.visible = true;
-        y += n.h + gapR;
-      });
-    } else {
-      /* Normal layout: no focus */
-      var y = padTop;
-      leftNodes.forEach(function (n) {
-        n.h = Math.max(n.value * scale, 2);
-        n.y = y;
-        n.x = lx;
-        n.outOff = 0;
-        n.visible = true;
-        y += n.h + gapL;
-      });
-      var rightH2 = rightNodes.reduce(function (s, n) { return s + Math.max(n.value * scale, 2); }, 0) + rightGaps;
-      var rightY2 = padTop + (availH - rightH2) / 2;
-      y = rightY2;
-      rightNodes.forEach(function (n) {
-        n.h = Math.max(n.value * scale, 2);
-        n.y = y;
-        n.x = rx;
-        n.inOff = 0;
-        n.visible = true;
-        y += n.h + gapR;
-      });
-    }
+    /* Position left */
+    var y = padTop;
+    leftNodes.forEach(function (n) {
+      n.h = Math.max(n.value * scale, 4);
+      n.y = y;
+      n.x = lx;
+      n.outOff = 0;
+      y += n.h + gapL;
+    });
 
-    /* ── Build flows (only connected to focused node if focused) ── */
+    /* Position right -- center vertically */
+    var rightH = rightNodes.reduce(function (s, n) { return s + Math.max(n.value * scale, 4); }, 0) + rightGaps;
+    var rightY0 = padTop + (availH - rightH) / 2;
+    y = rightY0;
+    rightNodes.forEach(function (n) {
+      n.h = Math.max(n.value * scale, 4);
+      n.y = y;
+      n.x = rx;
+      n.inOff = 0;
+      y += n.h + gapR;
+    });
+
+    /* ── Build flows ── */
     var flows = [];
-    var gfSources = leftNodes.filter(function (n) { return n.type === 'rev'; });
-    gfSources.forEach(function (src) {
-      rightNodes.forEach(function (cat) {
-        if (focusId && src.id !== focusId && cat.id !== focusId) return;
-        if (!src.visible || !cat.visible) return;
-        var flowVal = src.value * cat.base / BASE;
-        /* When a right node is focused, rescale flows to fill its expanded height */
-        if (focusRight) flowVal = src.value;
-        flows.push({ src: src, tgt: cat, value: flowVal, type: 'base',
-                     label: src.label + ' \u2192 ' + cat.label });
+    var taxNode = leftNodes[0];
+
+    /* Base flows: tax bill -> each category */
+    rightNodes.forEach(function (cat) {
+      flows.push({
+        src: taxNode, tgt: cat, value: cat.baseShare, type: 'base',
+        label: 'Your tax bill \u2192 ' + cat.label,
+        color: cat.id
       });
     });
 
-    if (ov) {
-      var ovNode = leftNodes.find(function (n) { return n.id === 'override'; });
-      var grossAdds = rightNodes.reduce(function (s, n) { return s + n.add; }, 0);
+    /* Override flows */
+    if (tier !== 'none') {
+      var ovNode = leftNodes[1];
       rightNodes.forEach(function (cat) {
-        if (cat.add > 0) {
-          if (focusId && ovNode.id !== focusId && cat.id !== focusId) return;
-          if (!ovNode.visible || !cat.visible) return;
-          var flowVal = cat.add * ov.total / grossAdds;
-          if (focusRight) flowVal = ovNode.value;
-          flows.push({ src: ovNode, tgt: cat, value: flowVal, type: 'override',
-                       label: tierShort[tier] + ' \u2192 ' + cat.label });
+        if (cat.ovShare > 0) {
+          flows.push({
+            src: ovNode, tgt: cat, value: cat.ovShare, type: 'override',
+            label: tierShort[tier] + ' \u2192 ' + cat.label,
+            color: null
+          });
         }
       });
     }
 
     flows.sort(function (a, b) {
       if (a.type !== b.type) return a.type === 'base' ? -1 : 1;
-      if (a.src !== b.src) return a.src.y - b.src.y;
       return a.tgt.y - b.tgt.y;
     });
 
-    /* When focused, compute ribbon heights to fill the expanded node.
-       The expanded side's ribbons must sum to availH. */
-    var focusedTotalFlow = 0;
-    if (focusId) {
-      flows.forEach(function (f) { focusedTotalFlow += f.value; });
-    }
-
     flows.forEach(function (f) {
-      if (focusId && focusedTotalFlow > 0) {
-        /* Scale ribbons to fill the expanded node */
-        var expandedScale = availH / focusedTotalFlow;
-        f.ribbonH = Math.max(f.value * expandedScale, 0.5);
-      } else {
-        f.ribbonH = Math.max(f.value * scale, 0.5);
-      }
+      f.ribbonH = Math.max(f.value * scale, 0.5);
       f.sy = f.src.y + f.src.outOff;
       f.src.outOff += f.ribbonH;
       f.ty = f.tgt.y + f.tgt.inOff;
@@ -519,25 +514,25 @@ title: "Where the Money Goes"
 
     /* ── Build SVG ── */
     var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg"' +
-              ' role="img" aria-label="Sankey diagram showing FY26 general fund flows with budget cuts and override restorations">';
+              ' role="img" aria-label="Sankey diagram showing where your property tax bill goes across town spending categories">';
 
     /* Column headers */
-    svg += '<text class="sk-col-header" x="' + (lx + nodeW / 2) + '" y="' + (padTop - 14) + '" text-anchor="middle">Revenue</text>';
+    svg += '<text class="sk-col-header" x="' + (lx + nodeW / 2) + '" y="' + (padTop - 14) + '" text-anchor="middle">Your Payment</text>';
     svg += '<text class="sk-col-header" x="' + (rx + nodeW / 2) + '" y="' + (padTop - 14) + '" text-anchor="middle">Spending</text>';
 
-    /* Ribbons */
+    /* Ribbons -- base ribbons colored by spending category */
     flows.forEach(function (f) {
       var cls = 'sk-ribbon sk-ribbon-' + f.type;
       if (f.type === 'override') cls += ' tier-' + tier;
+      if (f.type === 'base' && f.color) cls += ' sk-cat-' + f.color;
       svg += '<path class="' + cls + '"' +
              ' data-src="' + f.src.id + '" data-tgt="' + f.tgt.id + '"' +
              ' d="' + ribbon(f.src.x + nodeW, f.sy, f.ribbonH, f.tgt.x, f.ty, f.ribbonH) + '"' +
-             ' data-tip="' + f.label + ': ' + fmt(f.value) + '"/>';
+             ' data-tip="' + f.label + ': ' + fmtWhole(f.value) + '"/>';
     });
 
     /* Left nodes */
     leftNodes.forEach(function (n) {
-      if (!n.visible) return;
       var cls = 'sk-node ';
       if (n.type === 'override') cls += 'sk-node-override-' + tier;
       else cls += 'sk-node-' + n.id;
@@ -546,30 +541,27 @@ title: "Where the Money Goes"
       var ly = n.y + n.h / 2;
       var labelCls = n.type === 'override' ? 'sk-label sk-label-override tier-' + tier : 'sk-label';
       svg += '<text class="' + labelCls + '" x="' + (n.x - 6) + '" y="' + (ly - 1) + '" text-anchor="end" dominant-baseline="auto" data-node="' + n.id + '" data-label-for="' + n.id + '">' + n.label + '</text>';
-      svg += '<text class="sk-label-value" x="' + (n.x - 6) + '" y="' + (ly + 11) + '" text-anchor="end" dominant-baseline="auto" data-label-for="' + n.id + '">' + fmt(n.value) + '</text>';
+      svg += '<text class="sk-label-value" x="' + (n.x - 6) + '" y="' + (ly + 11) + '" text-anchor="end" dominant-baseline="auto" data-label-for="' + n.id + '">' + fmtWhole(n.value) + '</text>';
     });
 
-    /* Right nodes + colored bands at bottom for cuts/restorations */
+    /* Right nodes + cut/restoration bands */
     rightNodes.forEach(function (n) {
-      if (!n.visible) return;
-      /* Base node rect */
       svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
 
-      /* Colored band at bottom of node showing cut/restoration proportion */
+      /* Cut/restoration bands */
       if (n.cut > 0) {
-        var cutH = Math.max((n.cut / n.value) * n.h, 2);
-        var restoredH = n.restored > 0 ? Math.max((n.restored / n.value) * n.h, 2) : 0;
+        var cutFrac = n.personalCut / n.value;
+        var cutH = Math.max(cutFrac * n.h, 2);
+        var restoredFrac = n.personalRestored / n.value;
+        var restoredH = n.restored > 0 ? Math.max(restoredFrac * n.h, 2) : 0;
         var bandY = n.y + n.h - cutH;
 
         if (n.stillCut > 0) {
-          /* Red band for the full cut */
           svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + cutH + '" rx="0"/>';
           if (restoredH > 0) {
-            /* Green band overlaid on top portion of the red (restored part) */
             svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + restoredH + '" rx="0"/>';
           }
         } else {
-          /* Fully restored: green band */
           svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + cutH + '" rx="0"/>';
         }
       }
@@ -577,21 +569,20 @@ title: "Where the Money Goes"
       var ly = n.y + n.h / 2;
       var labelX = rx + nodeW + 6;
 
-      /* Labels */
       svg += '<text class="sk-label" x="' + labelX + '" y="' + (ly - 1) + '" dominant-baseline="auto" data-node="' + n.id + '" data-label-for="' + n.id + '">' + n.label + '</text>';
 
-      /* Value + delta text */
-      var valStr = fmt(n.value);
+      /* Value + delta */
+      var valStr = fmtWhole(Math.round(n.value));
       var deltaStr = '';
       if (n.stillCut > 0 && n.restored > 0) {
-        deltaStr = ' \u2212' + fmt(n.stillCut) + ' cut, +' + fmt(n.restored) + ' restored';
+        deltaStr = ' \u2212' + fmtWhole(Math.round(n.personalCut - n.personalRestored)) + ' at risk';
       } else if (n.stillCut > 0) {
-        deltaStr = ' \u2212' + fmt(n.cut) + ' cut';
+        deltaStr = ' \u2212' + fmtWhole(Math.round(n.personalCut)) + ' at risk';
       } else if (n.restored > 0) {
         deltaStr = ' fully restored';
       }
-      if (n.add > 0 && n.restored === 0) {
-        valStr += ' (+' + fmt(n.add) + ' new)';
+      if (n.ovShare > 0 && n.restored === 0) {
+        valStr += ' (+' + fmtWhole(Math.round(n.ovShare)) + ' new)';
       }
 
       svg += '<text class="sk-label-value" x="' + labelX + '" y="' + (ly + 11) + '" dominant-baseline="auto" data-label-for="' + n.id + '">' + valStr + '</text>';
@@ -604,8 +595,7 @@ title: "Where the Money Goes"
 
     svg += '</svg>';
     wrap.innerHTML = svg;
-    if (focusId) wrap.classList.add('is-focused');
-    else wrap.classList.remove('is-focused');
+    wrap.classList.remove('has-focus');
 
     /* ── Tooltip wiring ── */
     wrap.querySelectorAll('[data-tip]').forEach(function (el) {
@@ -622,14 +612,47 @@ title: "Where the Money Goes"
       });
     });
 
-    /* ── Click-to-focus: re-render with expanded node ── */
+    /* ── Click-to-focus wiring ── */
     wrap.querySelectorAll('[data-node]').forEach(function (el) {
       el.addEventListener('click', function () {
         var nodeId = el.getAttribute('data-node');
         if (focusedNode === nodeId) {
-          render(currentTier, null);
+          focusedNode = null;
+          wrap.classList.remove('has-focus');
+          wrap.querySelectorAll('.sk-focus, .sk-node-focus, .sk-label-focus, .sk-label-dim').forEach(function (e) {
+            e.classList.remove('sk-focus', 'sk-node-focus', 'sk-label-focus', 'sk-label-dim');
+          });
         } else {
-          render(currentTier, nodeId);
+          focusedNode = nodeId;
+          wrap.classList.add('has-focus');
+          var connected = {};
+          connected[nodeId] = true;
+          wrap.querySelectorAll('.sk-ribbon').forEach(function (r) {
+            var src = r.getAttribute('data-src');
+            var tgt = r.getAttribute('data-tgt');
+            if (src === nodeId || tgt === nodeId) {
+              r.classList.add('sk-focus');
+              connected[src] = true;
+              connected[tgt] = true;
+            } else {
+              r.classList.remove('sk-focus');
+            }
+          });
+          wrap.querySelectorAll('.sk-node').forEach(function (n) {
+            var nid = n.getAttribute('data-node');
+            if (nid && connected[nid]) n.classList.add('sk-node-focus');
+            else n.classList.remove('sk-node-focus');
+          });
+          wrap.querySelectorAll('[data-label-for]').forEach(function (lbl) {
+            var lid = lbl.getAttribute('data-label-for');
+            if (connected[lid]) {
+              lbl.classList.add('sk-label-focus');
+              lbl.classList.remove('sk-label-dim');
+            } else {
+              lbl.classList.add('sk-label-dim');
+              lbl.classList.remove('sk-label-focus');
+            }
+          });
         }
       });
     });
@@ -637,19 +660,21 @@ title: "Where the Money Goes"
     /* ── Override detail panel ── */
     if (ov) {
       detailEl.classList.add('visible');
-      detailTitle.textContent = tierShort[tier] + ' override: FY27 additions (' + fmt(ov.total) + ' first-year draw)';
+      detailTitle.textContent = tierShort[tier] + ' override: your Year 1 cost is ' + fmtWhole(Math.round(overrideCost)) + ' (' + fmtWhole(Math.round(overrideCost / 12)) + '/mo)';
       var html = '';
       ov.items.forEach(function (item) {
         var label = item[0], amt = item[1];
+        /* Scale town-wide amounts to this homeowner's share */
+        var personal = amt * (overrideCost / ov.total);
         if (amt === 0) {
-          html += '<li style="font-weight:600;color:var(--text)">' + label + '</li>';
+          html += '<li class="od-subtotal">' + label + '</li>';
         } else if (amt < 0) {
-          html += '<li><span>' + label + '</span><span class="od-amt" style="color:var(--c-buoy)">' + fmt(amt) + '</span></li>';
+          html += '<li><span>' + label + '</span><span class="od-amt od-amt-neg">' + fmtWhole(Math.round(personal)) + '</span></li>';
         } else {
-          html += '<li><span>' + label + '</span><span class="od-amt">' + fmt(amt) + '</span></li>';
+          html += '<li><span>' + label + '</span><span class="od-amt">' + fmtWhole(Math.round(personal)) + '</span></li>';
         }
       });
-      html += '<li class="od-subtotal"><span>Net FY27 draw</span><span class="od-amt">' + fmt(ov.total) + '</span></li>';
+      html += '<li class="od-subtotal"><span>Your Year 1 override cost</span><span class="od-amt">' + fmtWhole(Math.round(overrideCost)) + '</span></li>';
       detailList.innerHTML = html;
     } else {
       detailEl.classList.remove('visible');
@@ -658,33 +683,49 @@ title: "Where the Money Goes"
     /* ── Caption ── */
     var totalCuts = 0;
     var totalRestored = 0;
-    rightNodes.forEach(function (n) { totalCuts += n.cut; totalRestored += n.restored; });
+    rightNodes.forEach(function (n) { totalCuts += n.personalCut; totalRestored += n.personalRestored; });
     if (tier === 'none') {
-      captionEl.textContent = 'Without an override, the FY27 budget cuts ' + fmt(totalCuts) +
-        ' across seven departments. The library loses 43% of its budget, community development loses 59%, and schools absorb a $1.5M special education reduction. Red bars show the size of each cut. Click any node to isolate its flows.';
+      captionEl.textContent = 'Your ' + fmtWhole(Math.round(taxBill)) + ' tax bill funds ' + fmtWhole(Math.round(rightNodes[0].baseShare)) + ' for schools, ' + fmtWhole(Math.round(rightNodes[1].baseShare)) + ' for healthcare, and the rest across six other categories. Without an override, ' + fmtWhole(Math.round(totalCuts)) + ' of your taxes would fund services facing FY27 cuts. Click any category to isolate its flow.';
     } else {
       var stillTotal = totalCuts - totalRestored;
-      if (stillTotal > 0) {
-        captionEl.textContent = tierShort[tier] + ' restores ' + fmt(totalRestored) + ' of the ' +
-          fmt(totalCuts) + ' in no-override cuts (' + fmt(stillTotal) + ' remains unrestored, primarily the $1.5M school special education bridge which begins in FY28). Green bars show restored amounts; red shows remaining cuts.';
+      if (stillTotal > 100) {
+        captionEl.textContent = tierShort[tier] + ' adds ' + fmtWhole(Math.round(overrideCost)) + ' to your annual bill and restores ' + fmtWhole(Math.round(totalRestored)) + ' of the ' + fmtWhole(Math.round(totalCuts)) + ' in services facing cuts. ' + fmtWhole(Math.round(stillTotal)) + ' remains unrestored (primarily the $1.5M school special education bridge beginning in FY28).';
       } else {
-        captionEl.textContent = tierShort[tier] + ' restores all ' + fmt(totalCuts) +
-          ' in no-override cuts and adds new capacity. Green bars show restored amounts.';
+        captionEl.textContent = tierShort[tier] + ' adds ' + fmtWhole(Math.round(overrideCost)) + ' to your annual bill and restores all services facing cuts, plus adds new capacity.';
       }
     }
   }
 
   /* ══════════════════════════════════════════════════════
-     TAB SWITCHING
+     WIRING
      ══════════════════════════════════════════════════════ */
+  var currentTier = 'none';
+  var inputEl = document.getElementById('assessed-value');
+
+  var stored = loadStored();
+  if (stored !== null) inputEl.value = formatInput(stored);
+
+  function update() {
+    var assessed = parseAssessed(inputEl.value);
+    saveStored(assessed);
+    render(currentTier, assessed);
+  }
+
+  inputEl.addEventListener('input', update);
+  inputEl.addEventListener('blur', function () {
+    inputEl.value = formatInput(parseAssessed(inputEl.value));
+    update();
+  });
+
   document.querySelectorAll('.tab').forEach(function (btn) {
     btn.addEventListener('click', function () {
       document.querySelectorAll('.tab').forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      render(btn.dataset.tier, null);
+      currentTier = btn.dataset.tier;
+      update();
     });
   });
 
-  render('none', null);
+  update();
 })();
 </script>
