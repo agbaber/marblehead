@@ -3093,6 +3093,12 @@ og_url: https://marbleheaddata.org/
           for Tier 3. The smaller permanent levy increase gives the town
           time to pursue reforms before asking for more.
         </p>
+        <a class="evidence-chart-link" href="charts/override_calculator.html">
+          Calculate your cost at each tier
+        </a>
+        <a class="evidence-chart-link" href="no-override-budget.html">
+          What gets cut without an override
+        </a>
       </div>
 
       <details class="counter-argument">
@@ -3128,6 +3134,9 @@ og_url: https://marbleheaddata.org/
         </p>
         <a class="evidence-chart-link" href="how-we-got-here.html">
           How we got here
+        </a>
+        <a class="evidence-chart-link" href="charts/sustainability.html">
+          Revenue vs. expenses forecast
         </a>
       </div>
 
@@ -3178,6 +3187,9 @@ og_url: https://marbleheaddata.org/
           implemented, any override amount will be absorbed by the same
           cost drivers.
         </p>
+        <a class="evidence-chart-link" href="charts/healthcare_costs.html">
+          Health insurance cost trends
+        </a>
       </div>
 
       <div class="evidence-point">
@@ -3188,6 +3200,9 @@ og_url: https://marbleheaddata.org/
           forces the conversation about which services the town can
           actually afford at its current tax base.
         </p>
+        <a class="evidence-chart-link" href="what-you-can-do.html#better-oversight">
+          Ways to push for reform
+        </a>
       </div>
 
       <details class="counter-argument">
@@ -4661,10 +4676,8 @@ og_url: https://marbleheaddata.org/
     });
     card.appendChild(check);
 
-    var hint = document.createElement('span');
-    hint.className = 'answer-hint';
-    hint.textContent = 'Pick this answer \u2192';
-    card.appendChild(hint);
+    // Hint removed: first tap already picks + opens evidence,
+    // and after a pick the hint was hidden anyway.
   });
 
   var stageEl = document.querySelector('.explore-stage');
@@ -4677,7 +4690,8 @@ og_url: https://marbleheaddata.org/
     schools:  ['override', 'mycost', 'voteno'],
     levy:     ['taxrank', 'mycost', 'override'],
     taxrank:  ['levy', 'mycost', 'schools'],
-    mycost:   ['levy', 'taxrank', 'override'],
+    mycost:   ['size', 'levy', 'taxrank'],
+    size:     ['mycost', 'again', 'override'],
     trust:    ['override', 'alternatives', 'voteno']
   };
 
