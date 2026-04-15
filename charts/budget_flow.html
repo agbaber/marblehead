@@ -65,11 +65,17 @@ title: "Where the Money Goes"
     opacity: 0.45;
   }
   .sk-ribbon-override:hover { opacity: 0.65; }
+  .sk-ribbon-cut {
+    fill: url(#pat-cut);
+    opacity: 0.55;
+  }
+  .sk-ribbon-cut:hover { opacity: 0.8; }
 
   /* When focused, fewer ribbons shown so boost visibility */
   .sankey-wrap.is-focused .sk-ribbon-base { opacity: 0.15; }
   .sankey-wrap.is-focused .sk-ribbon-base:hover { opacity: 0.3; }
   .sankey-wrap.is-focused .sk-ribbon-override { opacity: 0.6; }
+  .sankey-wrap.is-focused .sk-ribbon-cut { opacity: 0.7; }
 
   /* Labels */
   .sk-label {
@@ -366,18 +372,7 @@ title: "Where the Money Goes"
     var ov = tier !== 'none' ? overrides[tier] : null;
     var rest = tier !== 'none' ? restorations[tier] : null;
 
-    /* ── Build left nodes ── */
-    /* Override goes first (top), above Property Tax, since it IS
-       additional property tax levy. */
-    var leftNodes = [];
-    if (ov) {
-      leftNodes.push({ id: 'override', label: tierLabels[tier], value: ov.total, type: 'override' });
-    }
-    revSources.forEach(function (s) {
-      leftNodes.push({ id: s.id, label: s.label, value: s.value, type: 'rev' });
-    });
-
-    /* ── Build right nodes ── */
+    /* ── Build right nodes first (needed to compute grossAdds for left sizing) ── */
     var rightNodes = spendCats.map(function (c) {
       var add = 0;
       if (ov) {
@@ -391,6 +386,46 @@ title: "Where the Money Goes"
                cut: cut, restored: restored, stillCut: Math.max(stillCut, 0) };
     });
 
+    /* Sum of override line items per category. Note this can differ from
+       ov.total because the source CSV includes an "Offset (reduced unemployment)"
+       line that's subtracted from ov.total but NOT assigned to any category.
+       We size the left override node by grossAdds (not ov.total) so the
+       ribbons, the left node, and the right green bands all visually balance. */
+    var grossAdds = ov ? rightNodes.reduce(function (s, n) { return s + n.add; }, 0) : 0;
+
+    /* Sum of unrestored cuts — used to render the left-side shortfall band
+       on Property Tax in no-override mode. */
+    var totalStillCut = rightNodes.reduce(function (s, n) { return s + n.stillCut; }, 0);
+
+    /* ── Build left nodes ── */
+    /* Override goes first (top), above Property Tax, since it IS
+       additional property tax levy. The override node is sized by grossAdds
+       so its height matches the sum of outgoing ribbons and the right-side
+       green bands. The label still displays ov.total (the net override raised). */
+    var leftNodes = [];
+    if (ov) {
+      leftNodes.push({
+        id: 'override',
+        label: tierLabels[tier],
+        value: grossAdds,
+        displayValue: ov.total,
+        type: 'override'
+      });
+    }
+    revSources.forEach(function (s) {
+      var n = { id: s.id, label: s.label, value: s.value, type: 'rev' };
+      /* Attach the unrestored-cut shortfall to Property Tax so the cut has
+         a visible source on the left. The levy node is visually extended by
+         the shortfall (sized via sizeValue), with a red band drawn in the
+         extension and red ribbons flowing from it to each cut category. */
+      if (s.id === 'levy' && totalStillCut > 0) {
+        n.sizeValue = s.value + totalStillCut;
+        n.displayValue = s.value;
+        n.shortfall = totalStillCut;
+      }
+      leftNodes.push(n);
+    });
+
     /* ── Determine which side is focused ── */
     var focusRight = focusId && rightNodes.some(function (n) { return n.id === focusId; });
     var focusLeft = focusId && leftNodes.some(function (n) { return n.id === focusId; });
@@ -402,7 +437,11 @@ title: "Where the Money Goes"
     var gapL = 5, gapR = 14;
     var lx = 140, rx = W - 175;
 
-    var leftTotal = leftNodes.reduce(function (s, n) { return s + n.value; }, 0);
+    /* Some left nodes (override, Property Tax when there are cuts) are
+       sized by a different value than their label — use sizeValue when set. */
+    function nodeSize(n) { return n.sizeValue != null ? n.sizeValue : n.value; }
+
+    var leftTotal = leftNodes.reduce(function (s, n) { return s + nodeSize(n); }, 0);
     var rightTotal = rightNodes.reduce(function (s, n) { return s + n.value; }, 0);
     var maxTotal = Math.max(leftTotal, rightTotal);
 
@@ -434,7 +473,7 @@ title: "Where the Money Goes"
       /* Left side: normal layout */
       var y = padTop;
       leftNodes.forEach(function (n) {
-        n.h = Math.max(n.value * scale, 2);
+        n.h = Math.max(nodeSize(n) * scale, 2);
         n.y = y;
         n.x = lx;
         n.outOff = 0;
@@ -442,10 +481,23 @@ title: "Where the Money Goes"
         y += n.h + gapL;
       });
     } else if (focusLeft) {
-      /* Focused left node fills available height */
+      /* When focused on a revenue source (not override), keep the override
+         node visible so its green ribbons still flow across — otherwise the
+         drill-in hides the override entirely, which is confusing. */
+      var keepOverrideVisible = ov && focusId !== 'override';
+      var ovH = keepOverrideVisible ? Math.max(grossAdds * scale, 2) : 0;
+      var focusedTopY = padTop + (keepOverrideVisible ? ovH + gapL : 0);
+      var focusedH = availH - (keepOverrideVisible ? ovH + gapL : 0);
+
       leftNodes.forEach(function (n) {
         if (n.id === focusId) {
-          n.h = availH;
+          n.h = focusedH;
+          n.y = focusedTopY;
+          n.x = lx;
+          n.outOff = 0;
+          n.visible = true;
+        } else if (keepOverrideVisible && n.type === 'override') {
+          n.h = ovH;
           n.y = padTop;
           n.x = lx;
           n.outOff = 0;
@@ -474,7 +526,7 @@ title: "Where the Money Goes"
       /* Normal layout: no focus */
       var y = padTop;
       leftNodes.forEach(function (n) {
-        n.h = Math.max(n.value * scale, 2);
+        n.h = Math.max(nodeSize(n) * scale, 2);
         n.y = y;
         n.x = lx;
         n.outOff = 0;
@@ -511,12 +563,16 @@ title: "Where the Money Goes"
 
     if (ov) {
       var ovNode = leftNodes.find(function (n) { return n.id === 'override'; });
-      var grossAdds = rightNodes.reduce(function (s, n) { return s + n.add; }, 0);
+      /* Allow override flows through the filter when the focused node is
+         a left revenue source — the override is a separate source and
+         should remain visible so users can see the green flow context
+         while drilled into any revenue stream. */
+      var focusIsRevSource = focusLeft && focusId !== 'override';
       rightNodes.forEach(function (cat) {
         if (cat.add > 0) {
-          if (focusId && ovNode.id !== focusId && cat.id !== focusId) return;
+          if (focusId && !focusIsRevSource && ovNode.id !== focusId && cat.id !== focusId) return;
           if (!ovNode.visible || !cat.visible) return;
-          var flowVal = cat.add * ov.total / grossAdds;
+          var flowVal = cat.add;
           if (focusRight) flowVal = ovNode.value;
           flows.push({ src: ovNode, tgt: cat, value: flowVal, type: 'override',
                        label: tierShort[tier] + ' \u2192 ' + cat.label });
@@ -524,31 +580,105 @@ title: "Where the Money Goes"
       });
     }
 
+    /* Cut ribbons: visually tie each category's unrestored cut back to
+       Property Tax, since the cut exists because property tax growth is
+       capped. Only rendered in the unfocused view — in focus mode the node
+       sizes change and the cut band geometry would drift out of alignment. */
+    if (totalStillCut > 0 && !focusId) {
+      var levyNode = leftNodes.find(function (n) { return n.id === 'levy'; });
+      if (levyNode && levyNode.visible) {
+        rightNodes.forEach(function (cat) {
+          if (cat.stillCut <= 0) return;
+          if (!cat.visible) return;
+          flows.push({
+            src: levyNode,
+            tgt: cat,
+            value: cat.stillCut,
+            type: 'cut',
+            label: 'Property Tax shortfall \u2192 ' + cat.label + ' cut'
+          });
+        });
+      }
+    }
+
     flows.sort(function (a, b) {
-      if (a.type !== b.type) return a.type === 'base' ? -1 : 1;
+      var order = { base: 0, override: 1, cut: 2 };
+      if (a.type !== b.type) return order[a.type] - order[b.type];
       if (a.src !== b.src) return a.src.y - b.src.y;
       return a.tgt.y - b.tgt.y;
     });
 
     /* When focused, compute ribbon heights to fill the expanded node.
-       The expanded side's ribbons must sum to availH. */
+       When focused on a revenue source with override visible, override
+       ribbons stay at normal scale (they flow from the normal-sized override
+       node, not the expanded focused node). Only the focused node's flows
+       get rescaled, and they fill the focused node's height, not availH. */
+    var keepOvInFocus = focusLeft && focusId !== 'override' && ov;
+    var focusedNodeObj = focusId
+      ? (leftNodes.find(function (n) { return n.id === focusId; }) ||
+         rightNodes.find(function (n) { return n.id === focusId; }))
+      : null;
+    var focusFillH = focusedNodeObj ? focusedNodeObj.h : 0;
+
+    function isExpandedFlow(f) {
+      if (!focusId) return false;
+      if (keepOvInFocus && f.type === 'override') return false;
+      return f.src.id === focusId || f.tgt.id === focusId;
+    }
+
     var focusedTotalFlow = 0;
     if (focusId) {
-      flows.forEach(function (f) { focusedTotalFlow += f.value; });
+      flows.forEach(function (f) {
+        if (isExpandedFlow(f)) focusedTotalFlow += f.value;
+      });
     }
 
     flows.forEach(function (f) {
-      if (focusId && focusedTotalFlow > 0) {
-        /* Scale ribbons to fill the expanded node */
-        var expandedScale = availH / focusedTotalFlow;
+      if (f.type === 'cut') {
+        /* Cut ribbons: normal scale, anchored to the shortfall region at
+           the bottom of the levy node and to the red band at the bottom of
+           each target category. Source/target geometry uses the same
+           `value * scale` formula as the bands themselves so both ends stay
+           aligned with the hatched red indicators. */
+        f.ribbonH = Math.max(f.value * scale, 0.5);
+        var srcShortfallH = Math.max((f.src.shortfall || 0) * scale, 0.5);
+        var srcShortfallTop = f.src.y + f.src.h - srcShortfallH;
+        f.sy = srcShortfallTop + (f.src.cutOutOff || 0);
+        f.src.cutOutOff = (f.src.cutOutOff || 0) + f.ribbonH;
+
+        /* Target red band sits above the green band (if any) at the bottom
+           of the category. Mirror the geometry used when the band is drawn. */
+        var tgtBottom = f.tgt.y + f.tgt.h;
+        if (f.tgt.add > 0) {
+          tgtBottom -= Math.max(f.tgt.add * scale, 0.5);
+        }
+        var stillH = Math.max(f.tgt.stillCut * scale, 0.5);
+        var tgtCutTop = tgtBottom - stillH;
+        f.ty = tgtCutTop + (f.tgt.cutInOff || 0);
+        f.tgt.cutInOff = (f.tgt.cutInOff || 0) + f.ribbonH;
+        return;
+      }
+      if (isExpandedFlow(f) && focusedTotalFlow > 0) {
+        /* Scale ribbons to fill the expanded focused node */
+        var expandedScale = focusFillH / focusedTotalFlow;
         f.ribbonH = Math.max(f.value * expandedScale, 0.5);
       } else {
         f.ribbonH = Math.max(f.value * scale, 0.5);
       }
       f.sy = f.src.y + f.src.outOff;
       f.src.outOff += f.ribbonH;
-      f.ty = f.tgt.y + f.tgt.inOff;
-      f.tgt.inOff += f.ribbonH;
+      /* When override ribbons are at normal scale alongside an expanded
+         focused rev source, anchor them to the green band at the bottom of
+         each category — otherwise they'd stack below the oversized base
+         ribbons and land outside the target node. */
+      if (keepOvInFocus && f.type === 'override') {
+        var greenBandTop = f.tgt.y + f.tgt.h - Math.max(f.tgt.add * scale, 0.5);
+        f.ty = greenBandTop + (f.tgt.overrideInOff || 0);
+        f.tgt.overrideInOff = (f.tgt.overrideInOff || 0) + f.ribbonH;
+      } else {
+        f.ty = f.tgt.y + f.tgt.inOff;
+        f.tgt.inOff += f.ribbonH;
+      }
     });
 
     /* ── Build SVG ── */
@@ -589,10 +719,20 @@ title: "Where the Money Goes"
       else cls += 'sk-node-' + n.id;
       svg += '<rect class="' + cls + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
 
+      /* Red shortfall band on Property Tax: the portion of levy that would
+         be needed to avoid the cuts. Sized by the same `value * scale`
+         formula as the right-side cut bands so the two ends of the cut
+         ribbons stay aligned. */
+      if (n.shortfall > 0) {
+        var shortH = Math.max(n.shortfall * scale, 0.5);
+        svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + (n.y + n.h - shortH) + '" width="' + nodeW + '" height="' + shortH + '" rx="0"/>';
+      }
+
       var ly = n.y + n.h / 2;
       var labelCls = n.type === 'override' ? 'sk-label sk-label-override tier-' + tier : 'sk-label';
       svg += '<text class="' + labelCls + '" x="' + (n.x - 6) + '" y="' + (ly - 1) + '" text-anchor="end" dominant-baseline="auto" data-node="' + n.id + '" data-label-for="' + n.id + '">' + n.label + '</text>';
-      svg += '<text class="sk-label-value" x="' + (n.x - 6) + '" y="' + (ly + 11) + '" text-anchor="end" dominant-baseline="auto" data-label-for="' + n.id + '">' + fmt(n.value) + '</text>';
+      var valDisplay = (n.displayValue != null) ? n.displayValue : n.value;
+      svg += '<text class="sk-label-value" x="' + (n.x - 6) + '" y="' + (ly + 11) + '" text-anchor="end" dominant-baseline="auto" data-label-for="' + n.id + '">' + fmt(valDisplay) + '</text>';
     });
 
     /* Right nodes + colored bands at bottom for cuts/restorations */
@@ -603,15 +743,19 @@ title: "Where the Money Goes"
 
       /* Green band at BOTTOM: override additions (grows with each tier),
          aligning with where override ribbons connect into the node.
-         Red band above green: remaining unrestored cuts. */
+         Red band above green: remaining unrestored cuts. Band heights use
+         the same `value * scale` formula as ribbons (min 0.5 px) so the
+         incoming ribbons and bands always line up; they previously diverged
+         because the min-clamp differed. */
       var bandBottom = n.y + n.h;
+      var addH = 0, stillH = 0;
       if (n.add > 0) {
-        var addH = Math.max((n.add / n.value) * n.h, 2);
+        addH = Math.max(n.add * scale, 0.5);
         svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + (bandBottom - addH) + '" width="' + nodeW + '" height="' + addH + '" rx="0"/>';
         bandBottom -= addH;
       }
       if (n.stillCut > 0) {
-        var stillH = Math.max((n.stillCut / n.value) * n.h, 2);
+        stillH = Math.max(n.stillCut * scale, 0.5);
         svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + (bandBottom - stillH) + '" width="' + nodeW + '" height="' + stillH + '" rx="0"/>';
       }
 
@@ -702,7 +846,7 @@ title: "Where the Money Goes"
     rightNodes.forEach(function (n) { totalCuts += n.cut; totalRestored += n.restored; });
     if (tier === 'none') {
       captionEl.textContent = 'Without an override, the FY27 budget cuts ' + fmt(totalCuts) +
-        ' across seven departments. The library loses 43% of its budget, community development loses 59%, and schools absorb a $1.5M special education reduction. Hatched red bars show the size of each cut.';
+        ' across seven departments. The library loses 43% of its budget, community development loses 59%, and schools absorb a $1.5M special education reduction. Red hatched ribbons show the shortfall flowing from Property Tax to each affected category.';
     } else {
       var schoolAdd = 0;
       rightNodes.forEach(function (n) { if (n.id === 'schools') schoolAdd = n.add; });
