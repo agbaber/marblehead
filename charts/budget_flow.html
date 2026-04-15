@@ -363,8 +363,6 @@ title: "Where the Money Goes"
     var padTop = 32, padBot = 20;
     var gapL = 5, gapR = 4;
     var lx = 140, rx = W - 175;
-    var deltaBarX = rx + nodeW + 4;
-    var deltaBarW = 6;
 
     var leftTotal = leftNodes.reduce(function (s, n) { return s + n.value; }, 0);
     var rightTotal = rightNodes.reduce(function (s, n) { return s + n.value; }, 0);
@@ -466,38 +464,32 @@ title: "Where the Money Goes"
       svg += '<text class="sk-label-value" x="' + (n.x - 6) + '" y="' + (ly + 11) + '" text-anchor="end" dominant-baseline="auto">' + fmt(n.value) + '</text>';
     });
 
-    /* Right nodes + delta indicators */
-    /* Find max cut for scaling delta bars */
-    var maxCut = 0;
-    rightNodes.forEach(function (n) { if (n.cut > maxCut) maxCut = n.cut; });
-    var deltaScale = maxCut > 0 ? 30 / maxCut : 0; /* max 30px wide */
-
+    /* Right nodes + colored bands at bottom for cuts/restorations */
     rightNodes.forEach(function (n) {
+      /* Base node rect */
       svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
+
+      /* Colored band at bottom of node showing cut/restoration proportion */
+      if (n.cut > 0) {
+        var cutH = Math.max((n.cut / n.value) * n.h, 2);
+        var restoredH = n.restored > 0 ? Math.max((n.restored / n.value) * n.h, 2) : 0;
+        var bandY = n.y + n.h - cutH;
+
+        if (n.stillCut > 0) {
+          /* Red band for the full cut */
+          svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + cutH + '" rx="0"/>';
+          if (restoredH > 0) {
+            /* Green band overlaid on top portion of the red (restored part) */
+            svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + restoredH + '" rx="0"/>';
+          }
+        } else {
+          /* Fully restored: green band */
+          svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + cutH + '" rx="0"/>';
+        }
+      }
 
       var ly = n.y + n.h / 2;
       var labelX = rx + nodeW + 6;
-
-      /* Delta bars (to the right of node, before labels) */
-      if (n.cut > 0) {
-        var cutW = Math.max(n.cut * deltaScale, 2);
-        var gainW = n.restored * deltaScale;
-        var barY = n.y + n.h / 2 - 4;
-
-        if (n.stillCut > 0) {
-          /* Red bar for remaining cut */
-          var stillW = Math.max(n.stillCut * deltaScale, 2);
-          svg += '<rect class="sk-delta-cut" x="' + labelX + '" y="' + barY + '" width="' + stillW + '" height="3.5" rx="1"/>';
-          if (gainW > 0) {
-            /* Green bar stacked below for restored portion */
-            svg += '<rect class="sk-delta-gain" x="' + labelX + '" y="' + (barY + 4.5) + '" width="' + gainW + '" height="3.5" rx="1"/>';
-          }
-        } else {
-          /* Fully restored: green bar only */
-          svg += '<rect class="sk-delta-gain" x="' + labelX + '" y="' + barY + '" width="' + gainW + '" height="3.5" rx="1"/>';
-        }
-        labelX += Math.max(cutW, gainW) + 5;
-      }
 
       /* Labels */
       svg += '<text class="sk-label" x="' + labelX + '" y="' + (ly - 1) + '" dominant-baseline="auto" data-node="' + n.id + '">' + n.label + '</text>';
@@ -513,7 +505,6 @@ title: "Where the Money Goes"
         deltaStr = ' fully restored';
       }
       if (n.add > 0 && n.restored === 0) {
-        /* Pure new spending (not a restoration) */
         valStr += ' (+' + fmt(n.add) + ' new)';
       }
 
