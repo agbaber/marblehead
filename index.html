@@ -4556,6 +4556,8 @@ og_url: https://marbleheaddata.org/
     if (currentTopic && selections[currentTopic]) {
       showPickDistribution(currentTopic);
     }
+    // Refresh the stats strip so community totals reflect server data
+    updateStatsStrip();
   }
 
   // Update the social proof bar on the active question screen
