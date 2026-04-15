@@ -5144,8 +5144,9 @@ og_url: https://marbleheaddata.org/
     // Show browse hint (after tutorial is seen)
     updateBrowseHint(question);
 
-    // Update stats strip
+    // Update stats strip and question social bar
     updateStatsStrip();
+    updateQuestionSocialBar(question);
 
     // Hide prompt, show next button
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
