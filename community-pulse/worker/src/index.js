@@ -9,7 +9,9 @@
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 const RATE_LIMIT_MAX = 5; // per section per window per ip
 const TWENTY_FOUR_HOURS_MS = 24 * 60 * 60 * 1000;
-const VALID_ANSWERS = ['a', 'b', 'c'];
+// 'a','b','c' are the real positions; 'u' is "not sure yet", a first-class
+// choice so readers can unlock evidence without being forced to guess.
+const VALID_ANSWERS = ['a', 'b', 'c', 'u'];
 
 export default {
   async fetch(request, env) {
@@ -151,7 +153,14 @@ function answerSectionId(topic, answer) {
   return 'index.html#a-' + topic + '-' + answer;
 }
 
-/** Fetch current pick counts for all three answers on a topic. */
+/** Build the "mind-change" section ID for a topic.
+ *  Incremented once every time a voter moves from one answer to another,
+ *  so the client can display "X reconsidered after reading the evidence". */
+function moveCounterSectionId(topic) {
+  return 'index.html#m-' + topic;
+}
+
+/** Fetch current pick counts for every valid answer on a topic. */
 async function getPickCounts(env, topic) {
   const ids = VALID_ANSWERS.map(a => answerSectionId(topic, a));
   const placeholders = ids.map(() => '?').join(',');
@@ -165,6 +174,14 @@ async function getPickCounts(env, topic) {
     picks[a] = map.get(answerSectionId(topic, a)) || 0;
   });
   return picks;
+}
+
+/** Current mind-change count for a topic (0 if never moved). */
+async function getMoveCount(env, topic) {
+  const row = await env.DB.prepare(
+    'SELECT total_count FROM reactions WHERE section_id = ?'
+  ).bind(moveCounterSectionId(topic)).first();
+  return row ? row.total_count : 0;
 }
 
 async function handlePost(request, env) {
@@ -250,7 +267,8 @@ async function handleVotePost(request, env) {
   if (!allowed) {
     // Rate-limited: return current counts without changing anything.
     const picks = await getPickCounts(env, topic);
-    return new Response(JSON.stringify({ picks, your_vote: answer }), { status: 200, headers: corsHeaders(env) });
+    const moves = await getMoveCount(env, topic);
+    return new Response(JSON.stringify({ picks, moves, your_vote: answer }), { status: 200, headers: corsHeaders(env) });
   }
 
   const ipHash = await hashIp(clientIp);
@@ -265,12 +283,15 @@ async function handleVotePost(request, env) {
     if (existing.answer === answer) {
       // Already voted this way -- no-op
       const picks = await getPickCounts(env, topic);
-      return new Response(JSON.stringify({ picks, your_vote: answer }), { status: 200, headers: corsHeaders(env) });
+      const moves = await getMoveCount(env, topic);
+      return new Response(JSON.stringify({ picks, moves, your_vote: answer }), { status: 200, headers: corsHeaders(env) });
     }
 
-    // Move vote: decrement old, increment new, update record
+    // Move vote: decrement old, increment new, update record,
+    // and log the reconsideration so the client can surface the rate.
     await decrementReaction(env, answerSectionId(topic, existing.answer), now);
     await incrementReaction(env, answerSectionId(topic, answer), now);
+    await incrementReaction(env, moveCounterSectionId(topic), now);
     await env.DB.prepare(
       'UPDATE votes SET answer = ?, voted_at = ? WHERE ip_hash = ? AND topic = ?'
     ).bind(answer, now, ipHash, topic).run();
@@ -283,7 +304,8 @@ async function handleVotePost(request, env) {
   }
 
   const picks = await getPickCounts(env, topic);
-  return new Response(JSON.stringify({ picks, your_vote: answer }), { status: 200, headers: corsHeaders(env) });
+  const moves = await getMoveCount(env, topic);
+  return new Response(JSON.stringify({ picks, moves, your_vote: answer }), { status: 200, headers: corsHeaders(env) });
 }
 
 function corsHeaders(env) {

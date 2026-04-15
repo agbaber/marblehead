@@ -117,6 +117,7 @@ og_url: https://marbleheaddata.org/
   .explore-mini-pos.picked[data-pos="a"] { background: var(--c-teal); box-shadow: 0 0 6px color-mix(in srgb, var(--c-teal) 40%, transparent); }
   .explore-mini-pos.picked[data-pos="b"] { background: var(--c-brass); box-shadow: 0 0 6px color-mix(in srgb, var(--c-brass) 40%, transparent); }
   .explore-mini-pos.picked[data-pos="c"] { background: var(--c-buoy); box-shadow: 0 0 6px color-mix(in srgb, var(--c-buoy) 40%, transparent); }
+  .explore-mini-pos.picked[data-pos="u"] { background: var(--text-faint); box-shadow: 0 0 6px color-mix(in srgb, var(--text-faint) 40%, transparent); }
 
   /* Community split bar on landing cards (visible only after picking) */
   .explore-card-dist {
@@ -139,6 +140,7 @@ og_url: https://marbleheaddata.org/
   .explore-card-dist-bar .cd-a { background: var(--c-teal); }
   .explore-card-dist-bar .cd-b { background: var(--c-brass); }
   .explore-card-dist-bar .cd-c { background: var(--c-buoy); }
+  .explore-card-dist-bar .cd-u { background: var(--text-faint); }
   .explore-card-dist-legend {
     display: flex;
     flex-wrap: wrap;
@@ -172,6 +174,7 @@ og_url: https://marbleheaddata.org/
   .cd-dot-a { background: var(--c-teal); }
   .cd-dot-b { background: var(--c-brass); }
   .cd-dot-c { background: var(--c-buoy); }
+  .cd-dot-u { background: var(--text-faint); }
 
   /* Icon */
   .explore-card-icon {
@@ -643,6 +646,57 @@ og_url: https://marbleheaddata.org/
     margin: 0;
   }
 
+  /* ── "Not sure yet" option: a real fourth choice, not a bypass. ──
+     Sits inside .answers as the last child, full width even on desktop
+     where the other three cards are row-aligned. Visually subtler so it
+     reads as "still thinking" rather than a competing position. */
+  .answer-card.answer-card-unsure {
+    flex: 0 0 100%;
+    padding: 12px 16px;
+    background: color-mix(in srgb, var(--border) 30%, transparent);
+    border: 1px dashed var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .answer-card.answer-card-unsure:hover {
+    border-color: var(--text-muted);
+    border-style: solid;
+    box-shadow: none;
+  }
+  .answer-card.answer-card-unsure .answer-unsure-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  .answer-card.answer-card-unsure .answer-unsure-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.1px;
+  }
+  .answer-card.answer-card-unsure .answer-unsure-sub {
+    font-size: 12px;
+    color: var(--text-subtle);
+    line-height: 1.4;
+  }
+  .answer-card.answer-card-unsure.selected {
+    border-style: solid;
+    border-color: var(--text-muted);
+    box-shadow: 0 0 0 1px var(--text-muted);
+    background: var(--surface);
+  }
+  .answer-card.answer-card-unsure.selected .answer-unsure-label { color: var(--text); }
+  .answer-card.answer-card-unsure.viewing {
+    border-color: var(--text-muted);
+    box-shadow: none;
+  }
+  /* Checkmark is still wired up, but a round badge on this compact card
+     looks out of place. Hide it; clicking the body casts the vote. */
+  .answer-card.answer-card-unsure .answer-check { display: none; }
+
   /* ── Pick distribution bar ── */
   .pick-distribution {
     margin: 10px 0 18px;
@@ -667,6 +721,7 @@ og_url: https://marbleheaddata.org/
   .pick-dist-a { background: var(--c-teal); }
   .pick-dist-b { background: var(--c-brass); }
   .pick-dist-c { background: var(--c-buoy); }
+  .pick-dist-u { background: var(--text-faint); }
   .pick-dist-legend {
     display: flex;
     flex-wrap: wrap;
@@ -695,9 +750,39 @@ og_url: https://marbleheaddata.org/
   .pick-dist-dot-a { background: var(--c-teal); }
   .pick-dist-dot-b { background: var(--c-brass); }
   .pick-dist-dot-c { background: var(--c-buoy); }
+  .pick-dist-dot-u { background: var(--text-faint); }
   .pick-dist-total {
     margin-left: auto;
     font-weight: 400;
+  }
+  /* "X reconsidered after reading the evidence" line, shown under
+     the distribution bar when the move-vote counter is non-zero. */
+  .pick-dist-moves {
+    margin-top: 6px;
+    font-size: 0.6875rem;
+    color: var(--text-subtle);
+    font-variant-numeric: tabular-nums;
+  }
+  .pick-dist-moves strong {
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  /* Lighter variant of the evidence panel for the "Not sure yet" state. */
+  .evidence.evidence-unsure {
+    background: transparent;
+    border-style: dashed;
+    padding: 16px 18px;
+  }
+  .evidence.evidence-unsure .evidence-header h3 {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  .evidence.evidence-unsure p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
   }
 
   /* ── Evidence panel ── */
@@ -4544,6 +4629,85 @@ og_url: https://marbleheaddata.org/
   var notesPillCount = document.getElementById('notesPillCount');
   var notesBackdrop = document.getElementById('notesBackdrop');
 
+  /* ── Reorder question-screens: concrete/factual first, interpretive last.
+     The HTML source order (override, voteno, schools, ...) front-loads the
+     two most identity-activating questions. That primes a partisan read
+     before the reader has any concrete numbers in hand, which runs against
+     the project's "form their own opinions based on facts" stance. Show
+     the tax-math and comparison questions first and save the interpretive
+     ones for the end.
+
+     Every downstream piece (topicOrder, progress dots, landing-card order,
+     next-question buttons, stats strip) derives from DOM order, so moving
+     the section elements is enough. */
+  (function reorderQuestions() {
+    var preferredOrder = [
+      'mycost',       // How will this affect my taxes?
+      'taxrank',      // How does Marblehead's tax burden compare?
+      'levy',         // Why don't 2.5% increases keep up?
+      'size',         // Does the size of the override matter?
+      'schools',      // Why did staffing grow while enrollment fell?
+      'trash',        // Why is trash collection on the ballot?
+      'library',      // Why would the library be the heaviest cut?
+      'alternatives', // What else could we do instead?
+      'again',        // Will we be back here in 5 years?
+      'voteno',       // What happens if we vote no?
+      'override',     // Is the override necessary, or wasteful spending?
+      'trust'         // How do we trust the decision-makers?
+    ];
+    var parent = document.querySelector('.explore-stage');
+    if (!parent) return;
+    var allScreens = parent.querySelectorAll('.question-screen');
+    if (!allScreens.length) return;
+    var screensByTopic = {};
+    allScreens.forEach(function (s) { screensByTopic[s.dataset.topic] = s; });
+    // Anchor: whatever comes right after the last question-screen today.
+    // Re-inserting every screen before the same anchor rebuilds the group
+    // in preferredOrder without disturbing unrelated siblings.
+    var anchor = allScreens[allScreens.length - 1].nextSibling;
+    preferredOrder.forEach(function (topic) {
+      var el = screensByTopic[topic];
+      if (el) parent.insertBefore(el, anchor);
+    });
+  })();
+
+  /* ── Inject "Not sure yet" as a first-class fourth option for every
+     question. Clicking it submits a real vote ('u'), which means a later
+     switch to a concrete answer goes through the move-vote endpoint and
+     counts as a genuine reconsideration, not noise from a forced pick. */
+  (function injectUnsureAnswer() {
+    document.querySelectorAll('.question-screen').forEach(function (screen) {
+      var topic = screen.dataset.topic;
+      var answersEl = screen.querySelector('.answers');
+      if (!answersEl || answersEl.querySelector('[data-answer="u"]')) return;
+
+      var card = document.createElement('div');
+      card.className = 'answer-card answer-card-unsure';
+      card.dataset.answer = 'u';
+      card.dataset.question = topic;
+      card.innerHTML =
+        '<span class="answer-unsure-body">' +
+          '<span class="answer-unsure-label">Not sure yet</span>' +
+          '<span class="answer-unsure-sub">Let me read the cases first</span>' +
+        '</span>';
+      answersEl.appendChild(card);
+
+      // Lightweight evidence panel so clicking "Not sure yet" lands
+      // somewhere rather than opening an empty area. Intentionally
+      // short: it points the reader at the three real cases above.
+      var ev = document.createElement('div');
+      ev.className = 'evidence evidence-unsure';
+      ev.dataset.evidence = topic + '-u';
+      ev.innerHTML =
+        '<div class="evidence-header">' +
+          '<h3>Take your time</h3>' +
+          '<button class="evidence-close" type="button">Collapse</button>' +
+        '</div>' +
+        '<p>Tap any answer above to read the case for it. When something clicks, use the checkmark on that card to lock your pick.</p>';
+      screen.appendChild(ev);
+    });
+  })();
+
   /* ── Reactions API (server-side social proof for all users) ── */
   var API_BASE = 'https://marblehead-community-pulse.agbaber.workers.dev';
 
@@ -4565,11 +4729,13 @@ og_url: https://marbleheaddata.org/
     return (Date.now() - v) < VIEW_COOLDOWN_MS;
   }
 
-  // Section ID conventions: q- = decided, v- = viewed, s- = shared
+  // Section ID conventions: q- = decided, v- = viewed, s- = shared,
+  //                          a- = answer pick, m- = move (reconsideration)
   function sectionId(prefix, topic) { return 'index.html#' + prefix + '-' + topic; }
 
-  // Batch-fetch all counts for all topics in one request
-  var ANSWER_KEYS = ['a', 'b', 'c'];
+  // Batch-fetch all counts for all topics in one request.
+  // 'u' is the "Not sure yet" answer, a real first-class option.
+  var ANSWER_KEYS = ['a', 'b', 'c', 'u'];
   var PAGE_SHARE_SECTION = 'index.html#s-positions';
   var pageShareCount = 0; // server total for position-level shares
   function fetchAllCounts(topics) {
@@ -4578,6 +4744,7 @@ og_url: https://marbleheaddata.org/
       ids.push(encodeURIComponent(sectionId('q', t)));
       ids.push(encodeURIComponent(sectionId('v', t)));
       ids.push(encodeURIComponent(sectionId('s', t)));
+      ids.push(encodeURIComponent(sectionId('m', t))); // reconsideration count
       // Answer-level counts for distribution bars
       ANSWER_KEYS.forEach(function (ak) {
         ids.push(encodeURIComponent(sectionId('a', t + '-' + ak)));
@@ -4596,12 +4763,14 @@ og_url: https://marbleheaddata.org/
           var serverViews   = (data[sectionId('v', t)] || {}).total || 0;
           var serverShares  = (data[sectionId('s', t)] || {}).total || 0;
           var serverDecided = (data[sectionId('q', t)] || {}).total || 0;
+          var serverMoves   = (data[sectionId('m', t)] || {}).total || 0;
           // Use the higher of server vs optimistic to avoid flash-down
           var prev = socialCounts[t] || {};
           socialCounts[t] = {
             decided: Math.max(serverDecided, prev.decided || 0),
             views:   Math.max(serverViews, prev.views || 0),
             shares:  Math.max(serverShares, prev.shares || 0),
+            moves:   Math.max(serverMoves, prev.moves || 0),
             picks:   picks
           };
         });
@@ -4744,15 +4913,20 @@ og_url: https://marbleheaddata.org/
     }
   }
 
-  // Show answer distribution bar below the answers container for a topic
+  // Show answer distribution bar below the answers container for a topic.
+  // Four segments: A, B, C, plus "Not sure yet" ('u'). If anyone has
+  // reconsidered after reading, append a "X changed their pick" line
+  // under the legend.
   function showPickDistribution(topic) {
     var screen = document.querySelector('.question-screen[data-topic="' + topic + '"]');
     if (!screen) return;
     var answersEl = screen.querySelector('.answers');
     if (!answersEl) return;
 
-    var counts = (socialCounts[topic] || {}).picks || {};
-    var total = (counts.a || 0) + (counts.b || 0) + (counts.c || 0);
+    var topicState = socialCounts[topic] || {};
+    var counts = topicState.picks || {};
+    var cA = counts.a || 0, cB = counts.b || 0, cC = counts.c || 0, cU = counts.u || 0;
+    var total = cA + cB + cC + cU;
     if (total === 0) return; // No data yet
 
     // Find or create the distribution bar
@@ -4764,22 +4938,38 @@ og_url: https://marbleheaddata.org/
     }
 
     function pctOf(n) { return total > 0 ? Math.round((n / total) * 100) : 0; }
-    var pA = pctOf(counts.a || 0);
-    var pB = pctOf(counts.b || 0);
-    var pC = 100 - pA - pB; // Avoid rounding drift
+    var pA = pctOf(cA);
+    var pB = pctOf(cB);
+    var pC = pctOf(cC);
+    var pU = 100 - pA - pB - pC; // Absorb rounding drift on the muted segment
+    if (pU < 0) pU = 0;
+
+    var moves = topicState.moves || 0;
+    var movesHtml = '';
+    if (moves > 0) {
+      var label = (moves === 1) ? 'reader' : 'readers';
+      movesHtml =
+        '<div class="pick-dist-moves">' +
+          '<strong>' + moves + '</strong> ' + label +
+          ' changed their pick after reading the evidence' +
+        '</div>';
+    }
 
     bar.innerHTML =
       '<div class="pick-dist-bar">' +
         '<div class="pick-dist-seg pick-dist-a" style="width:' + pA + '%">' + (pA >= 8 ? pA + '%' : '') + '</div>' +
         '<div class="pick-dist-seg pick-dist-b" style="width:' + pB + '%">' + (pB >= 8 ? pB + '%' : '') + '</div>' +
         '<div class="pick-dist-seg pick-dist-c" style="width:' + pC + '%">' + (pC >= 8 ? pC + '%' : '') + '</div>' +
+        '<div class="pick-dist-seg pick-dist-u" style="width:' + pU + '%">' + (pU >= 8 ? pU + '%' : '') + '</div>' +
       '</div>' +
       '<div class="pick-dist-legend">' +
-        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-a"></span>A ' + pA + '% <span class="pick-dist-count">(' + (counts.a || 0) + ')</span></span>' +
-        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-b"></span>B ' + pB + '% <span class="pick-dist-count">(' + (counts.b || 0) + ')</span></span>' +
-        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-c"></span>C ' + pC + '% <span class="pick-dist-count">(' + (counts.c || 0) + ')</span></span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-a"></span>A ' + pA + '% <span class="pick-dist-count">(' + cA + ')</span></span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-b"></span>B ' + pB + '% <span class="pick-dist-count">(' + cB + ')</span></span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-c"></span>C ' + pC + '% <span class="pick-dist-count">(' + cC + ')</span></span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-u"></span>Not sure ' + pU + '% <span class="pick-dist-count">(' + cU + ')</span></span>' +
         '<span class="pick-dist-total">' + total + ' picked</span>' +
-      '</div>';
+      '</div>' +
+      movesHtml;
   }
 
   // Personal counters (localStorage) -- per-topic + totals
@@ -5260,11 +5450,13 @@ og_url: https://marbleheaddata.org/
       btn.appendChild(ctxSpan);
     }
 
-    /* Mini position indicators (3 bars: a, b, c) */
+    /* Mini position indicators (a, b, c, u). The 'u' pip is the
+       muted "Not sure yet" state -- lights up when the reader's
+       own pick is unsure for this topic. */
     var posRow = document.createElement('div');
     posRow.className = 'explore-card-positions';
     var pips = {};
-    ['a', 'b', 'c'].forEach(function (pos) {
+    ['a', 'b', 'c', 'u'].forEach(function (pos) {
       var pip = document.createElement('div');
       pip.className = 'explore-mini-pos';
       pip.dataset.pos = pos;
@@ -5293,30 +5485,37 @@ og_url: https://marbleheaddata.org/
       var card = landingCards[topic];
       var answer = selections[topic];
       // Reset all pips
-      ['a', 'b', 'c'].forEach(function (pos) {
-        card.pips[pos].classList.remove('picked');
+      ['a', 'b', 'c', 'u'].forEach(function (pos) {
+        if (card.pips[pos]) card.pips[pos].classList.remove('picked');
       });
       if (answer) {
         hasAny = true;
-        card.pips[answer].classList.add('picked');
+        if (card.pips[answer]) card.pips[answer].classList.add('picked');
         card.el.classList.add('has-pick');
-        // Populate community split bar from server counts
+        // Populate community split bar from server counts. 'u' is a
+        // real fourth segment; the muted pip keeps it from competing
+        // visually with the three real positions.
         var picks = (socialCounts[topic] || {}).picks || {};
-        var total = (picks.a || 0) + (picks.b || 0) + (picks.c || 0);
+        var cA = picks.a || 0, cB = picks.b || 0, cC = picks.c || 0, cU = picks.u || 0;
+        var total = cA + cB + cC + cU;
         if (total > 0 && card.dist) {
-          var pA = Math.round(((picks.a || 0) / total) * 100);
-          var pB = Math.round(((picks.b || 0) / total) * 100);
-          var pC = 100 - pA - pB;
+          var pA = Math.round((cA / total) * 100);
+          var pB = Math.round((cB / total) * 100);
+          var pC = Math.round((cC / total) * 100);
+          var pU = 100 - pA - pB - pC;
+          if (pU < 0) pU = 0;
           card.dist.innerHTML =
             '<div class="explore-card-dist-bar">' +
               '<span class="cd-a" style="width:' + pA + '%"></span>' +
               '<span class="cd-b" style="width:' + pB + '%"></span>' +
               '<span class="cd-c" style="width:' + pC + '%"></span>' +
+              '<span class="cd-u" style="width:' + pU + '%"></span>' +
             '</div>' +
             '<div class="explore-card-dist-legend">' +
-              '<span><span class="cd-dot cd-dot-a"></span>A ' + pA + '% <span class="cd-count">(' + (picks.a || 0) + ')</span></span>' +
-              '<span><span class="cd-dot cd-dot-b"></span>B ' + pB + '% <span class="cd-count">(' + (picks.b || 0) + ')</span></span>' +
-              '<span><span class="cd-dot cd-dot-c"></span>C ' + pC + '% <span class="cd-count">(' + (picks.c || 0) + ')</span></span>' +
+              '<span><span class="cd-dot cd-dot-a"></span>A ' + pA + '% <span class="cd-count">(' + cA + ')</span></span>' +
+              '<span><span class="cd-dot cd-dot-b"></span>B ' + pB + '% <span class="cd-count">(' + cB + ')</span></span>' +
+              '<span><span class="cd-dot cd-dot-c"></span>C ' + pC + '% <span class="cd-count">(' + cC + ')</span></span>' +
+              '<span><span class="cd-dot cd-dot-u"></span>? ' + pU + '% <span class="cd-count">(' + cU + ')</span></span>' +
               '<span class="cd-total">' + total + ' picked</span>' +
             '</div>';
         }
@@ -5379,7 +5578,10 @@ og_url: https://marbleheaddata.org/
 
   // selectAnswer: locks your position (checkmark). Also opens evidence.
   // Place or move a vote via the server. Server is authoritative about
-  // what the user previously picked, so vote changes are safe.
+  // what the user previously picked, so vote changes are safe. The
+  // response also carries a "moves" count -- the number of times anyone
+  // has changed their pick on this topic -- so the reconsideration line
+  // under the distribution bar refreshes immediately after a switch.
   function submitVote(topic, answer) {
     fetch(API_BASE + '/api/votes', {
       method: 'POST',
@@ -5389,8 +5591,11 @@ og_url: https://marbleheaddata.org/
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) {
         if (data && data.picks) {
-          if (!socialCounts[topic]) socialCounts[topic] = { decided: 0, views: 0, shares: 0 };
+          if (!socialCounts[topic]) socialCounts[topic] = { decided: 0, views: 0, shares: 0, moves: 0 };
           socialCounts[topic].picks = data.picks;
+          if (typeof data.moves === 'number') {
+            socialCounts[topic].moves = data.moves;
+          }
           showPickDistribution(topic);
           updateSocialDisplays();
         }
@@ -5486,7 +5691,10 @@ og_url: https://marbleheaddata.org/
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
   }
 
-  // Card body click: first time selects, after that just browses evidence
+  // Card body click: first time selects, after that just browses evidence.
+  // Exception: clicking "Not sure yet" always casts (or re-casts) the vote,
+  // because it's labeled as an explicit reconsideration and there's no
+  // checkmark on that card.
   document.querySelectorAll('.answer-card').forEach(function (card) {
     card.addEventListener('click', function (e) {
       // Don't fire if they clicked the checkmark (handled separately)
@@ -5495,14 +5703,20 @@ og_url: https://marbleheaddata.org/
       var question = this.dataset.question;
       var answer   = this.dataset.answer;
       var hasSelection = !!selections[question];
+      var isUnsureCard = (answer === 'u');
 
-      if (!hasSelection) {
-        // First pick: select AND view
-        selectAnswer(question, answer);
-        updateNotesPill();
-        updateNotesPanel();
+      if (!hasSelection || isUnsureCard) {
+        // First pick, or explicit "back to unsure" click.
+        if (selections[question] === answer) {
+          // Already on this answer: just reopen the panel, no re-vote.
+          viewEvidence(question, answer);
+        } else {
+          selectAnswer(question, answer);
+          updateNotesPill();
+          updateNotesPanel();
+        }
       } else {
-        // Already have a pick: just browse this evidence
+        // Already have a pick on a/b/c: just browse this evidence
         viewEvidence(question, answer);
       }
     });
