@@ -196,7 +196,7 @@ title: "Where Your Tax Dollars Go"
 
 <div class="sankey-intro">
   <h1>Where Your Tax Dollars Go</h1>
-  <p class="sankey-fy">Enter your home value to see how your FY26 property tax bill flows to town and school spending. Toggle tiers to see your override cost and what it funds.</p>
+  <p class="sankey-fy">Enter your home value to see how your FY26 property tax bill flows to town and school spending. Override tiers show the full annual amount at phase-in (FY29). Click any node to isolate its flows.</p>
 </div>
 
 <div class="calc-input">
@@ -225,7 +225,7 @@ title: "Where Your Tax Dollars Go"
 
 <div class="notes">
   <p>Your tax bill is calculated at the FY26 residential rate of $8.59 per $1,000 of assessed value.<sup class="cite" data-href="https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=PropertyTaxInformation.taxratesbyclass.taxratesbyclass_main" data-source="MA DOR Division of Local Services, Tax Rates by Class, FY2026, Marblehead"></sup> Spending shares are proportional: the general fund has no line-item earmarking, so each dollar of property tax is allocated across categories in the same ratio as the overall FY26 budget.</p>
-  <p>Town department totals from the FY26 Proposed Budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1234/FY26-Budget" data-source="FY26 Proposed Budget, Town of Marblehead"></sup> School total from the FY26 School Committee approved budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1235/FY26-School-Budget" data-source="FY26 School Committee Approved Budget"></sup> Override line items and no-override cuts from the Town Administrator's April 8, 2026 override presentation.<sup class="cite" data-href="https://vimeo.com/1181632658" data-source="Select Board meeting, April 8 2026 (Vimeo 1181632658), Town Administrator override presentation"></sup> Override cost-per-household scaled from average single-family assessed value of $1,291,507 using the same method as the <a href="override_calculator.html">override cost calculator</a>.</p>
+  <p>Town department totals from the FY26 Proposed Budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1234/FY26-Budget" data-source="FY26 Proposed Budget, Town of Marblehead"></sup> School total from the FY26 School Committee approved budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1235/FY26-School-Budget" data-source="FY26 School Committee Approved Budget"></sup> Override line items and no-override cuts from the Town Administrator's April 8, 2026 override presentation.<sup class="cite" data-href="https://vimeo.com/1181632658" data-source="Select Board meeting, April 8 2026 (Vimeo 1181632658), Town Administrator override presentation"></sup> Override amounts show the full annual commitment at phase-in (FY29). The override phases in over three years: town-side items begin in FY27, school items (special ed, kindergarten fee, technology) begin in FY28. The school share shown is the total override minus identified town-side line items; it includes COLA/step salary increases, the amounts of which are set through collective bargaining. Override cost-per-household scaled from average single-family assessed value of $1,291,507 using the same method as the <a href="override_calculator.html">override cost calculator</a>.</p>
 </div>
 
 <div class="read-next">
@@ -267,61 +267,75 @@ title: "Where Your Tax Dollars Go"
     library: 743563, gov: 660302, healthcare: 76171, pensions: 444433
   };
 
-  /* Restorations per tier */
+  /* Restorations per tier at FULL PHASE-IN (FY29).
+     All town-side cuts restored at Tier 1+. School $1.5M special ed
+     restored at Tier 1+ starting FY28. */
   var restorations = {
-    t1: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433, schools: 0 },
-    t2: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 0 },
-    t3: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 0 }
+    t1: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433, schools: 1500000 },
+    t2: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 1500000 },
+    t3: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 1500000 }
   };
 
-  /* Override annual cost on avg home (Year 1 / FY27) and detail items */
+  /* Override annual cost on avg home at FULL PHASE-IN (Year 3 / FY29) */
   var overrideRates = {
-    t1: { annual: 167.90 },
-    t2: { annual: 361.62 },
-    t3: { annual: 555.35 }
+    t1: { annual: 1186.68 },
+    t2: { annual: 1587.17 },
+    t3: { annual: 1985.39 }
   };
 
+  /* Override additions at FULL PHASE-IN (FY29 steady state).
+     Source: override_draws_schedule.csv (full draw by FY29). */
   var overrideItems = {
     t1: {
       items: [
-        ['Restore SRO, police equipment, inspections', 119982],
-        ['Restore DPW staffing, hot top, cemetery', 259286],
-        ['Restore library staffing for accreditation', 311183],
-        ['Restore rec groundskeeper', 45000],
-        ['Restore finance, HR, planning, public buildings', 423625],
-        ['Restore Council on Aging staffing', 76171],
-        ['Restore OPEB, stabilization, workers comp', 444433],
-        ['Offset: reduced unemployment costs', -410116]
+        ['Town: restore SRO, police equipment, inspections', 119982],
+        ['Town: restore DPW staffing, hot top, cemetery', 259286],
+        ['Town: restore library staffing for accreditation', 356183],
+        ['Town: restore finance, HR, planning, public buildings', 423625],
+        ['Town: restore Council on Aging staffing', 76171],
+        ['Town: restore OPEB, stabilization, workers comp', 444433],
+        ['Town: offset (reduced unemployment)', -410116],
+        ['Schools: restore special ed tuition ($1.5M/yr)', 1500000],
+        ['Schools: restore revolving fund positions', 209374],
+        ['Schools: COLA/step increases and other', 6021062]
       ],
-      total: 1269564,
-      cats: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433 }
+      total: 9000000,
+      cats: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433, schools: 7730436 }
     },
     t2: {
       items: [
-        ['Tier 1 restorations plus:', 0],
-        ['Increase police and fire staffing', 213482],
-        ['Add DPW GIS position', 70000],
-        ['Restore full library staffing and materials', 467758],
-        ['Add recreation staffing and maintenance', 42000],
-        ['Add IT director, budget analyst, grant writer', 220000],
-        ['Restore planning, Town Clerk, public buildings maintenance', 816302],
-        ['Add COA social worker and maintenance', 60000],
-        ['Offset: reduced unemployment costs', -692361]
+        ['Town: all Tier 1 restorations', 1269564],
+        ['Town: increase police and fire staffing', 213482],
+        ['Town: add DPW GIS, rec staffing, maintenance', 112000],
+        ['Town: restore full library staffing and materials', 467758],
+        ['Town: add IT director, budget analyst, planning, buildings', 1436302],
+        ['Town: add COA social worker and maintenance', 60000],
+        ['Town: offset (reduced unemployment)', -692361],
+        ['Schools: restore special ed tuition ($1.5M/yr)', 1500000],
+        ['Schools: remove Full Day Kindergarten fee', 710711],
+        ['Schools: technology leases', 150000],
+        ['Schools: revolving fund, COLA/step, other', 6834053]
       ],
-      total: 2805236,
-      cats: { safety: 333464, pw: 329286, library: 823941, gov: 1430302, healthcare: 136171, pensions: 444433 }
+      total: 12000000,
+      cats: { safety: 333464, pw: 329286, library: 823941, gov: 1430302, healthcare: 136171, pensions: 444433, schools: 9194764 }
     },
     t3: {
       items: [
-        ['Tier 2 restorations plus:', 0],
-        ['Further increase fire staffing (3 positions)', 296000],
-        ['Add mental health counseling (Health Dept)', 60000],
-        ['Add grant writer (Community Development)', 70000],
-        ['Recurring capital: leases, equipment, buildings', 1000000],
-        ['Offset: reduced unemployment costs', -692361]
+        ['Town: all Tier 2 restorations + new', 2805236],
+        ['Town: further increase fire staffing (3 positions)', 296000],
+        ['Town: add mental health counseling, grant writer', 130000],
+        ['Town: recurring capital (leases, equipment, buildings)', 1000000],
+        ['Town: offset (reduced unemployment)', -692361],
+        ['Schools: restore special ed tuition ($1.5M/yr)', 1500000],
+        ['Schools: remove Full Day Kindergarten fee', 710711],
+        ['Schools: technology leases', 150000],
+        ['Schools: curriculum development', 100000],
+        ['Schools: special ed program (ages 18-22)', 500000],
+        ['Schools: capital maintenance', 500000],
+        ['Schools: revolving fund, COLA/step, other', 6693571]
       ],
-      total: 4296718,
-      cats: { safety: 694946, pw: 329286, library: 823941, gov: 1500302, healthcare: 196171, pensions: 444433, capital: 1000000 }
+      total: 15000000,
+      cats: { safety: 694946, pw: 329286, library: 823941, gov: 1500302, healthcare: 196171, pensions: 444433, capital: 1000000, schools: 10703282 }
     }
   };
 
@@ -394,15 +408,17 @@ title: "Where Your Tax Dollars Go"
     }
 
     /* ── Build left nodes ── */
-    var leftNodes = [
-      { id: 'tax', label: 'Your Tax Bill', value: taxBill, type: 'tax' }
-    ];
+    /* Override goes first (top), since it IS additional property tax levy */
+    var leftNodes = [];
     if (tier !== 'none') {
       leftNodes.push({
         id: 'override', label: tierShort[tier] + ' cost',
         value: overrideCost, type: 'override'
       });
     }
+    leftNodes.push(
+      { id: 'tax', label: 'Your Tax Bill', value: taxBill, type: 'tax' }
+    );
 
     /* ── Build right nodes ── */
     var rightNodes = spendCats.map(function (c) {
@@ -474,7 +490,7 @@ title: "Where Your Tax Dollars Go"
 
     /* ── Build flows ── */
     var flows = [];
-    var taxNode = leftNodes[0];
+    var taxNode = leftNodes.find(function (n) { return n.id === 'tax'; });
 
     /* Base flows: tax bill -> each category */
     rightNodes.forEach(function (cat) {
@@ -487,7 +503,7 @@ title: "Where Your Tax Dollars Go"
 
     /* Override flows */
     if (tier !== 'none') {
-      var ovNode = leftNodes[1];
+      var ovNode = leftNodes.find(function (n) { return n.id === 'override'; });
       rightNodes.forEach(function (cat) {
         if (cat.ovShare > 0) {
           flows.push({
@@ -548,22 +564,15 @@ title: "Where Your Tax Dollars Go"
     rightNodes.forEach(function (n) {
       svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
 
-      /* Cut/restoration bands */
-      if (n.cut > 0) {
-        var cutFrac = n.personalCut / n.value;
-        var cutH = Math.max(cutFrac * n.h, 2);
-        var restoredFrac = n.personalRestored / n.value;
-        var restoredH = n.restored > 0 ? Math.max(restoredFrac * n.h, 2) : 0;
-        var bandY = n.y + n.h - cutH;
-
-        if (n.stillCut > 0) {
-          svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + cutH + '" rx="0"/>';
-          if (restoredH > 0) {
-            svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + restoredH + '" rx="0"/>';
-          }
-        } else {
-          svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + bandY + '" width="' + nodeW + '" height="' + cutH + '" rx="0"/>';
-        }
+      /* Green band at TOP: total override addition (grows with each tier).
+         Red band at BOTTOM: remaining unrestored cuts. */
+      if (n.ovShare > 0) {
+        var addH = Math.max((n.ovShare / n.value) * n.h, 2);
+        svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + addH + '" rx="0"/>';
+      }
+      if (n.stillCut > 0) {
+        var stillH = Math.max((n.stillCut / n.value) * n.h, 2);
+        svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + (n.y + n.h - stillH) + '" width="' + nodeW + '" height="' + stillH + '" rx="0"/>';
       }
 
       var ly = n.y + n.h / 2;
@@ -660,7 +669,7 @@ title: "Where Your Tax Dollars Go"
     /* ── Override detail panel ── */
     if (ov) {
       detailEl.classList.add('visible');
-      detailTitle.textContent = tierShort[tier] + ' override: your Year 1 cost is ' + fmtWhole(Math.round(overrideCost)) + ' (' + fmtWhole(Math.round(overrideCost / 12)) + '/mo)';
+      detailTitle.textContent = tierShort[tier] + ' override: your annual cost at full phase-in is ' + fmtWhole(Math.round(overrideCost)) + ' (' + fmtWhole(Math.round(overrideCost / 12)) + '/mo)';
       var html = '';
       ov.items.forEach(function (item) {
         var label = item[0], amt = item[1];
@@ -674,7 +683,7 @@ title: "Where Your Tax Dollars Go"
           html += '<li><span>' + label + '</span><span class="od-amt">' + fmtWhole(Math.round(personal)) + '</span></li>';
         }
       });
-      html += '<li class="od-subtotal"><span>Your Year 1 override cost</span><span class="od-amt">' + fmtWhole(Math.round(overrideCost)) + '</span></li>';
+      html += '<li class="od-subtotal"><span>Your annual cost at full phase-in</span><span class="od-amt">' + fmtWhole(Math.round(overrideCost)) + '</span></li>';
       detailList.innerHTML = html;
     } else {
       detailEl.classList.remove('visible');
@@ -685,14 +694,11 @@ title: "Where Your Tax Dollars Go"
     var totalRestored = 0;
     rightNodes.forEach(function (n) { totalCuts += n.personalCut; totalRestored += n.personalRestored; });
     if (tier === 'none') {
-      captionEl.textContent = 'Your ' + fmtWhole(Math.round(taxBill)) + ' tax bill funds ' + fmtWhole(Math.round(rightNodes[0].baseShare)) + ' for schools, ' + fmtWhole(Math.round(rightNodes[1].baseShare)) + ' for healthcare, and the rest across six other categories. Without an override, ' + fmtWhole(Math.round(totalCuts)) + ' of your taxes would fund services facing FY27 cuts. Click any category to isolate its flow.';
+      captionEl.textContent = 'Your ' + fmtWhole(Math.round(taxBill)) + ' tax bill funds ' + fmtWhole(Math.round(rightNodes[0].baseShare)) + ' for schools, ' + fmtWhole(Math.round(rightNodes[1].baseShare)) + ' for healthcare, and the rest across six other categories. Without an override, ' + fmtWhole(Math.round(totalCuts)) + ' of your taxes would fund services facing FY27 cuts.';
     } else {
-      var stillTotal = totalCuts - totalRestored;
-      if (stillTotal > 100) {
-        captionEl.textContent = tierShort[tier] + ' adds ' + fmtWhole(Math.round(overrideCost)) + ' to your annual bill and restores ' + fmtWhole(Math.round(totalRestored)) + ' of the ' + fmtWhole(Math.round(totalCuts)) + ' in services facing cuts. ' + fmtWhole(Math.round(stillTotal)) + ' remains unrestored (primarily the $1.5M school special education bridge beginning in FY28).';
-      } else {
-        captionEl.textContent = tierShort[tier] + ' adds ' + fmtWhole(Math.round(overrideCost)) + ' to your annual bill and restores all services facing cuts, plus adds new capacity.';
-      }
+      var schoolAdd = 0;
+      rightNodes.forEach(function (n) { if (n.id === 'schools') schoolAdd = n.ovShare; });
+      captionEl.textContent = tierShort[tier] + ' adds ' + fmtWhole(Math.round(overrideCost)) + '/year to your bill at full phase-in and restores all no-override cuts. Schools receive ' + fmtWhole(Math.round(schoolAdd)) + ' (' + Math.round(schoolAdd / overrideCost * 100) + '% of your override cost). The override phases in over three years (FY27-FY29); amounts shown are the annual steady state.';
     }
   }
 
