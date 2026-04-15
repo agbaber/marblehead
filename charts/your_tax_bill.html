@@ -450,42 +450,43 @@ title: "Where Your Tax Dollars Go"
     });
 
     /* ── Layout ── */
-    var W = 880, H = 540;
+    var W = 880, H = 620;
     var nodeW = 14;
     var padTop = 32, padBot = 20;
-    var gapL = 12, gapR = 14;
-    var lx = 160, rx = W - 195;
+    var gapL = 12, gapR = 18;
+    var lx = 140, rx = W - 175;
 
-    var leftTotal = leftNodes.reduce(function (s, n) { return s + n.value; }, 0);
+    /* Scale off the RIGHT side (8 nodes with gaps) since it drives height.
+       Left side (1-2 nodes) always fits. */
     var rightTotal = rightNodes.reduce(function (s, n) { return s + n.value; }, 0);
-    var maxTotal = Math.max(leftTotal, rightTotal);
-
     var availH = H - padTop - padBot;
-    var leftGaps = (leftNodes.length - 1) * gapL;
     var rightGaps = (rightNodes.length - 1) * gapR;
-    var maxGaps = Math.max(leftGaps, rightGaps);
-    var scale = (availH - maxGaps) / maxTotal;
+    var scale = (availH - rightGaps) / rightTotal;
 
-    /* Position left */
+    /* Position right first (anchor) */
     var y = padTop;
-    leftNodes.forEach(function (n) {
-      n.h = Math.max(n.value * scale, 4);
-      n.y = y;
-      n.x = lx;
-      n.outOff = 0;
-      y += n.h + gapL;
-    });
-
-    /* Position right -- center vertically */
-    var rightH = rightNodes.reduce(function (s, n) { return s + Math.max(n.value * scale, 4); }, 0) + rightGaps;
-    var rightY0 = padTop + (availH - rightH) / 2;
-    y = rightY0;
     rightNodes.forEach(function (n) {
       n.h = Math.max(n.value * scale, 4);
       n.y = y;
       n.x = rx;
       n.inOff = 0;
       y += n.h + gapR;
+    });
+
+    /* Position left -- center vertically against right column */
+    var leftTotal = leftNodes.reduce(function (s, n) { return s + n.value; }, 0);
+    var leftGaps = (leftNodes.length - 1) * gapL;
+    var leftH = leftTotal * scale + leftGaps;
+    var leftY0 = padTop + (availH - rightGaps - leftH + rightGaps) / 2;
+    /* Clamp so left doesn't start above padTop */
+    if (leftY0 < padTop) leftY0 = padTop;
+    y = leftY0;
+    leftNodes.forEach(function (n) {
+      n.h = Math.max(n.value * scale, 4);
+      n.y = y;
+      n.x = lx;
+      n.outOff = 0;
+      y += n.h + gapL;
     });
 
     /* ── Build flows ── */
@@ -560,22 +561,34 @@ title: "Where Your Tax Dollars Go"
       svg += '<text class="sk-label-value" x="' + (n.x - 6) + '" y="' + (ly + 11) + '" text-anchor="end" dominant-baseline="auto" data-label-for="' + n.id + '">' + fmtWhole(n.value) + '</text>';
     });
 
+    /* Compute label Y positions with minimum spacing to prevent overlap.
+       Each label block needs ~30px (name + value + optional delta). */
+    var minLabelGap = 30;
+    var labelYs = rightNodes.map(function (n) { return n.y + n.h / 2; });
+    for (var li = 1; li < labelYs.length; li++) {
+      if (labelYs[li] - labelYs[li - 1] < minLabelGap) {
+        labelYs[li] = labelYs[li - 1] + minLabelGap;
+      }
+    }
+
     /* Right nodes + cut/restoration bands */
-    rightNodes.forEach(function (n) {
+    rightNodes.forEach(function (n, ni) {
       svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
 
-      /* Green band at TOP: total override addition (grows with each tier).
-         Red band at BOTTOM: remaining unrestored cuts. */
+      /* Green band at BOTTOM: override additions (where override ribbons connect).
+         Red band above green: remaining unrestored cuts. */
+      var bandBottom = n.y + n.h;
       if (n.ovShare > 0) {
         var addH = Math.max((n.ovShare / n.value) * n.h, 2);
-        svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + addH + '" rx="0"/>';
+        svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + (bandBottom - addH) + '" width="' + nodeW + '" height="' + addH + '" rx="0"/>';
+        bandBottom -= addH;
       }
       if (n.stillCut > 0) {
         var stillH = Math.max((n.stillCut / n.value) * n.h, 2);
-        svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + (n.y + n.h - stillH) + '" width="' + nodeW + '" height="' + stillH + '" rx="0"/>';
+        svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + (bandBottom - stillH) + '" width="' + nodeW + '" height="' + stillH + '" rx="0"/>';
       }
 
-      var ly = n.y + n.h / 2;
+      var ly = labelYs[ni];
       var labelX = rx + nodeW + 6;
 
       svg += '<text class="sk-label" x="' + labelX + '" y="' + (ly - 1) + '" dominant-baseline="auto" data-node="' + n.id + '" data-label-for="' + n.id + '">' + n.label + '</text>';
@@ -584,9 +597,9 @@ title: "Where Your Tax Dollars Go"
       var valStr = fmtWhole(Math.round(n.value));
       var deltaStr = '';
       if (n.stillCut > 0 && n.restored > 0) {
-        deltaStr = ' \u2212' + fmtWhole(Math.round(n.personalCut - n.personalRestored)) + ' at risk';
+        deltaStr = ' \u2212' + fmtWhole(Math.round(n.personalCut - n.personalRestored)) + ' cut';
       } else if (n.stillCut > 0) {
-        deltaStr = ' \u2212' + fmtWhole(Math.round(n.personalCut)) + ' at risk';
+        deltaStr = ' \u2212' + fmtWhole(Math.round(n.personalCut)) + ' cut';
       } else if (n.restored > 0) {
         deltaStr = ' fully restored';
       }
