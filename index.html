@@ -4455,6 +4455,8 @@ og_url: https://marbleheaddata.org/
 
   // Batch-fetch all counts for all topics in one request
   var ANSWER_KEYS = ['a', 'b', 'c'];
+  var PAGE_SHARE_SECTION = 'index.html#s-positions';
+  var pageShareCount = 0; // server total for position-level shares
   function fetchAllCounts(topics) {
     var ids = [];
     topics.forEach(function (t) {
@@ -4466,6 +4468,8 @@ og_url: https://marbleheaddata.org/
         ids.push(encodeURIComponent(sectionId('a', t + '-' + ak)));
       });
     });
+    // Also fetch the page-level position share count
+    ids.push(encodeURIComponent(PAGE_SHARE_SECTION));
     fetch(API_BASE + '/api/reactions?section_ids=' + ids.join(','))
       .then(function (r) { return r.ok ? r.json() : {}; })
       .then(function (data) {
@@ -4481,6 +4485,7 @@ og_url: https://marbleheaddata.org/
             picks:   picks
           };
         });
+        pageShareCount = (data[PAGE_SHARE_SECTION] || {}).total || 0;
         updateSocialDisplays();
       })
       .catch(function () {});
@@ -4518,6 +4523,25 @@ og_url: https://marbleheaddata.org/
         socialCounts[topic][field]--;
         delete counted[key];
         saveCounted();
+        updateSocialDisplays();
+      });
+  }
+
+  // Increment page-level share counter (one POST per "Copy link to positions" click)
+  function incrementPageShare() {
+    pageShareCount++;
+    updateSocialDisplays();
+    fetch(API_BASE + '/api/reactions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ section_id: PAGE_SHARE_SECTION })
+    })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (data) { pageShareCount = data.total; updateSocialDisplays(); }
+      })
+      .catch(function () {
+        pageShareCount--;
         updateSocialDisplays();
       });
   }
@@ -4634,14 +4658,18 @@ og_url: https://marbleheaddata.org/
   }
 
   // Personal counters (localStorage) -- per-topic + totals
-  var VIEWS_KEY = 'explore-your-views';
   var SHARES_KEY = 'explore-your-shares';
   var TOPIC_VIEWS_KEY = 'explore-topic-views';    // { topic: count }
   var TOPIC_SHARES_KEY = 'explore-topic-shares';  // { topic: count }
 
-  function getYourViews() { return parseInt(localStorage.getItem(VIEWS_KEY), 10) || 0; }
+  function getYourViews() {
+    var tv = getTopicViews();
+    var sum = 0;
+    for (var k in tv) { if (tv.hasOwnProperty(k)) sum += tv[k]; }
+    return sum;
+  }
   function getYourShares() { return parseInt(localStorage.getItem(SHARES_KEY), 10) || 0; }
-  function bumpYourViews() { var v = getYourViews() + 1; localStorage.setItem(VIEWS_KEY, v); return v; }
+  // bumpYourViews removed -- personal views are now derived from topic view sum
   function bumpYourShares() { var v = getYourShares() + 1; localStorage.setItem(SHARES_KEY, v); return v; }
 
   function getTopicViews() { try { return JSON.parse(localStorage.getItem(TOPIC_VIEWS_KEY)) || {}; } catch (e) { return {}; } }
@@ -4659,16 +4687,15 @@ og_url: https://marbleheaddata.org/
     return ts[topic];
   }
 
-  // Increment personal page-level view count on load
-  bumpYourViews();
+  // Personal view count is now derived from topic views (incremented in switchTopic)
 
   function updateStatsStrip() {
     var statsEl = document.getElementById('exploreStats');
     var decidedCount = topicOrder.filter(function (t) { return !!selections[t]; }).length;
     var totalCount = topicOrder.length;
 
-    // Sum server-side totals across all topics
-    var allViews = 0, allShares = 0;
+    // Sum server-side totals across all topics + page-level shares
+    var allViews = 0, allShares = pageShareCount;
     topicOrder.forEach(function (t) {
       var c = socialCounts[t] || {};
       allViews += c.views || 0;
@@ -4709,7 +4736,6 @@ og_url: https://marbleheaddata.org/
     // Clear notes
     localStorage.removeItem('explore-position-notes');
     // Clear personal counters
-    localStorage.removeItem(VIEWS_KEY);
     localStorage.removeItem(SHARES_KEY);
     localStorage.removeItem(TOPIC_VIEWS_KEY);
     localStorage.removeItem(TOPIC_SHARES_KEY);
@@ -5188,7 +5214,7 @@ og_url: https://marbleheaddata.org/
           });
         }, 2000);
         bumpYourShares();
-        Object.keys(selections).forEach(function (t) { incrementShareCount(t); });
+        incrementPageShare();
         updateStatsStrip();
         if (typeof posthog !== 'undefined') {
           posthog.capture('explore_positions_shared', { count: pairs.length, source: 'landing' });
@@ -5638,7 +5664,7 @@ og_url: https://marbleheaddata.org/
       btn.textContent = 'Copied link';
       setTimeout(function () { btn.textContent = 'Share'; }, 1500);
       bumpYourShares();
-      Object.keys(selections).forEach(function (t) { incrementShareCount(t); });
+      incrementPageShare();
       updateStatsStrip();
       if (typeof posthog !== 'undefined') {
         posthog.capture('explore_positions_shared', { count: keys.length, source: 'notes_panel' });
