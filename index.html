@@ -5550,6 +5550,32 @@ og_url: https://marbleheaddata.org/
 
   // Personal view count is now derived from topic views (incremented in switchTopic)
 
+  // Count-up animation for the community totals on initial server response.
+  // Runs once per page load (the first time real server data arrives); later
+  // updates from single-user increments just set textContent directly so a
+  // share of 97 -> 98 doesn't trigger a visible animation.
+  var statsCommunityAnimated = false;
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function animateStatCount(el, from, to, duration) {
+    if (!el) return;
+    if (prefersReducedMotion || from === to) { el.textContent = to; return; }
+    var start = null;
+    var diff = to - from;
+    function step(ts) {
+      if (start === null) start = ts;
+      var t = Math.min(1, (ts - start) / duration);
+      // Ease-out cubic: fast at first, slows as it finishes
+      var eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(from + diff * eased);
+      if (t < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = to;
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
   function updateStatsStrip() {
     var statsEl = document.getElementById('exploreStats');
     var decidedCount = topicOrder.filter(function (t) { return !!selections[t]; }).length;
@@ -5567,8 +5593,17 @@ og_url: https://marbleheaddata.org/
     document.getElementById('statTotal').textContent = totalCount;
     document.getElementById('statYourViews').textContent = getYourViews();
     document.getElementById('statYourShares').textContent = getYourShares();
-    document.getElementById('statAllViews').textContent = allViews;
-    document.getElementById('statAllShares').textContent = allShares;
+    var allViewsEl = document.getElementById('statAllViews');
+    var allSharesEl = document.getElementById('statAllShares');
+    if (!statsCommunityAnimated && (allViews > 0 || allShares > 0)) {
+      // First time real server totals arrive: count up from zero.
+      animateStatCount(allViewsEl, 0, allViews, 1200);
+      animateStatCount(allSharesEl, 0, allShares, 1200);
+      statsCommunityAnimated = true;
+    } else {
+      allViewsEl.textContent = allViews;
+      allSharesEl.textContent = allShares;
+    }
     var pct = totalCount > 0 ? Math.round((decidedCount / totalCount) * 100) : 0;
     document.getElementById('statBar').style.width = pct + '%';
 
