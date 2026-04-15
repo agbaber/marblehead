@@ -3,6 +3,22 @@ title: "Where Your Tax Dollars Go"
 ---
 <style>
   .sankey-intro h1 { text-align: center; }
+  .sankey-sibling {
+    text-align: center; font-size: 13px;
+    margin: -8px 0 20px;
+  }
+  .sankey-sibling a {
+    display: inline-block;
+    padding: 8px 14px;
+    background: color-mix(in srgb, var(--c-teal) 8%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c-teal) 30%, var(--border));
+    border-radius: var(--radius-sm);
+    color: var(--link);
+    text-decoration: none;
+  }
+  .sankey-sibling a:hover {
+    background: color-mix(in srgb, var(--c-teal) 14%, var(--surface));
+  }
   .sankey-fy {
     text-align: center; font-size: 13px;
     color: var(--text-muted); margin: 0 0 16px;
@@ -189,6 +205,7 @@ title: "Where Your Tax Dollars Go"
 <div class="sankey-intro">
   <h1>Where Your Tax Dollars Go</h1>
   <p class="sankey-fy">Enter your home value to see how your FY26 property tax bill flows to town and school spending. Override tiers show the full annual amount at phase-in (FY29). Click any node to isolate its flows.</p>
+  <p class="sankey-sibling"><a href="budget_flow.html">Want the whole-town flow without the household filter? Try <strong>Where the money goes</strong> &rarr;</a></p>
 </div>
 
 <div class="calc-input">

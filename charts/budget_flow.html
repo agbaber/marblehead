@@ -7,6 +7,22 @@ title: "Where the Money Goes"
     text-align: center; font-size: 13px;
     color: var(--text-muted); margin: 0 0 16px;
   }
+  .sankey-sibling {
+    text-align: center; font-size: 13px;
+    margin: -8px 0 20px;
+  }
+  .sankey-sibling a {
+    display: inline-block;
+    padding: 8px 14px;
+    background: color-mix(in srgb, var(--c-teal) 8%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c-teal) 30%, var(--border));
+    border-radius: var(--radius-sm);
+    color: var(--link);
+    text-decoration: none;
+  }
+  .sankey-sibling a:hover {
+    background: color-mix(in srgb, var(--c-teal) 14%, var(--surface));
+  }
 
   /* ── Sankey container ── */
   .sankey-wrap {
@@ -164,6 +180,7 @@ title: "Where the Money Goes"
 <div class="sankey-intro">
   <h1>Where the Money Goes</h1>
   <p class="sankey-fy">FY26 general fund: revenue sources flow to spending categories. Override tiers show the full annual amount at phase-in (FY29). Click any node to isolate its flows.</p>
+  <p class="sankey-sibling"><a href="your_tax_bill.html">Want the same flow scaled to your household? Try <strong>Where your tax dollars go</strong> &rarr;</a></p>
 </div>
 
 <div class="tabs">
