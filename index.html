@@ -4465,6 +4465,13 @@ og_url: https://marbleheaddata.org/
     if (counted[key]) return;
     counted[key] = true;
     saveCounted();
+
+    // Optimistically bump the local count so the UI updates immediately
+    if (!socialCounts[topic]) socialCounts[topic] = { decided: 0, views: 0, shares: 0 };
+    var field = prefix === 'q' ? 'decided' : prefix === 'v' ? 'views' : 'shares';
+    socialCounts[topic][field]++;
+    updateSocialDisplays();
+
     var sid = sectionId(prefix, topic);
     fetch(API_BASE + '/api/reactions', {
       method: 'POST',
@@ -4474,20 +4481,27 @@ og_url: https://marbleheaddata.org/
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) {
         if (data) {
-          if (!socialCounts[topic]) socialCounts[topic] = { decided: 0, views: 0, shares: 0 };
-          var field = prefix === 'q' ? 'decided' : prefix === 'v' ? 'views' : 'shares';
+          // Server response is authoritative; correct the optimistic value
           socialCounts[topic][field] = data.total;
           updateSocialDisplays();
         }
       })
       .catch(function () {
+        // Revert optimistic bump and counted flag
+        socialCounts[topic][field]--;
         delete counted[key];
         saveCounted();
+        updateSocialDisplays();
       });
   }
 
   // Increment share counter (cumulative, not once-per-browser)
   function incrementShareCount(topic) {
+    // Optimistic bump
+    if (!socialCounts[topic]) socialCounts[topic] = { decided: 0, views: 0, shares: 0 };
+    socialCounts[topic].shares++;
+    updateSocialDisplays();
+
     var sid = sectionId('s', topic);
     fetch(API_BASE + '/api/reactions', {
       method: 'POST',
@@ -4497,12 +4511,14 @@ og_url: https://marbleheaddata.org/
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) {
         if (data) {
-          if (!socialCounts[topic]) socialCounts[topic] = { decided: 0, views: 0, shares: 0 };
           socialCounts[topic].shares = data.total;
           updateSocialDisplays();
         }
       })
-      .catch(function () {});
+      .catch(function () {
+        socialCounts[topic].shares--;
+        updateSocialDisplays();
+      });
   }
 
   // Update all social proof displays (question bars only; landing cards use position pips)
