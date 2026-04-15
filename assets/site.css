@@ -419,6 +419,41 @@ html[data-theme="light"] .theme-icon--moon { display: block; }
 }
 
 /* ==========================================================================
+   Lighthouse beam (one-shot sweep on dark-mode entry)
+   A soft glow centered on the lighthouse lamp position, starts wide
+   (beam in profile) and compresses (beam rotating toward viewer).
+   Fired via JS -- a .beam-light div is appended to body, animated,
+   then removed.
+   ========================================================================== */
+
+.beam-light {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 80vw;
+  height: 10px;
+  background: radial-gradient(
+    ellipse 35% 50% at 50% 50%,
+    rgba(255,232,170,0.9) 0%,
+    rgba(255,232,170,0.2) 40%,
+    rgba(255,232,170,0.04) 70%,
+    transparent 100%
+  );
+  filter: blur(5px);
+  opacity: 0;
+}
+.beam-light.sweeping {
+  animation: beam-rotate 4s ease-in-out forwards;
+}
+@keyframes beam-rotate {
+  0%   { opacity: 0;    transform: scaleX(1) scaleY(1); }
+  15%  { opacity: 0.70; }
+  60%  { opacity: 0.70; transform: scaleX(0.3) scaleY(2.5); }
+  100% { opacity: 0;    transform: scaleX(0.15) scaleY(3); }
+}
+
+/* ==========================================================================
    Read next CTA block (end-of-post continuation link)
    ========================================================================== */
 
