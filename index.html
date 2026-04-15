@@ -1268,8 +1268,8 @@ og_url: https://marbleheaddata.org/
     <div class="explore-stats" id="exploreStats" style="display:none">
       <span class="explore-stats-item"><span class="explore-stats-num" id="statDecided">0</span>/<span id="statTotal">0</span> decided</span>
       <span class="explore-stats-progress"><span class="explore-stats-bar" id="statBar" style="width:0%"></span></span>
-      <span class="explore-stats-item"><span class="explore-stats-num" id="statVisits">0</span> visits</span>
-      <span class="explore-stats-item"><span class="explore-stats-num" id="statShares">0</span> shared</span>
+      <span class="explore-stats-item"><span class="explore-stats-num" id="statVisits">0</span> views</span>
+      <span class="explore-stats-item"><span class="explore-stats-num" id="statShares">0</span> shares</span>
     </div>
 
     <div class="explore-shared-banner" id="sharedBanner">
@@ -4138,7 +4138,7 @@ og_url: https://marbleheaddata.org/
 
   function updateStatsStrip() {
     var statsEl = document.getElementById('exploreStats');
-    var decidedCount = Object.keys(selections).length;
+    var decidedCount = topicOrder.filter(function (t) { return !!selections[t]; }).length;
     var totalCount = topicOrder.length;
     var visits = getVisits();
     var shares = getShares();
