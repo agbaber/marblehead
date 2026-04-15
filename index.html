@@ -4532,10 +4532,20 @@ og_url: https://marbleheaddata.org/
   // Per-topic counts from server: { topic: { decided, views, shares } }
   var socialCounts = {};
 
-  // Which actions this browser already counted (prevents double-counting)
+  // Which actions this browser already counted (prevents double-counting).
+  // Values are timestamps; views expire after VIEW_COOLDOWN_MS so returning
+  // visitors are counted again. Decided/answer counts stay permanent (true).
+  var VIEW_COOLDOWN_MS = 30 * 60 * 1000; // 30 minutes
   var counted = {};
   try { counted = JSON.parse(localStorage.getItem('explore-counted')) || {}; } catch (e) {}
   function saveCounted() { localStorage.setItem('explore-counted', JSON.stringify(counted)); }
+  function isCounted(key) {
+    var v = counted[key];
+    if (!v) return false;
+    if (v === true) return true; // legacy boolean (decided/answer -- permanent)
+    // Timestamp: check if still within cooldown
+    return (Date.now() - v) < VIEW_COOLDOWN_MS;
+  }
 
   // Section ID conventions: q- = decided, v- = viewed, s- = shared
   function sectionId(prefix, topic) { return 'index.html#' + prefix + '-' + topic; }
@@ -4565,10 +4575,15 @@ og_url: https://marbleheaddata.org/
           ANSWER_KEYS.forEach(function (ak) {
             picks[ak] = (data[sectionId('a', t + '-' + ak)] || {}).total || 0;
           });
+          var serverViews   = (data[sectionId('v', t)] || {}).total || 0;
+          var serverShares  = (data[sectionId('s', t)] || {}).total || 0;
+          var serverDecided = (data[sectionId('q', t)] || {}).total || 0;
+          // Use the higher of server vs optimistic to avoid flash-down
+          var prev = socialCounts[t] || {};
           socialCounts[t] = {
-            decided: (data[sectionId('q', t)] || {}).total || 0,
-            views:   (data[sectionId('v', t)] || {}).total || 0,
-            shares:  (data[sectionId('s', t)] || {}).total || 0,
+            decided: Math.max(serverDecided, prev.decided || 0),
+            views:   Math.max(serverViews, prev.views || 0),
+            shares:  Math.max(serverShares, prev.shares || 0),
             picks:   picks
           };
         });
@@ -4578,11 +4593,13 @@ og_url: https://marbleheaddata.org/
       .catch(function () {});
   }
 
-  // Increment a server counter (once per browser per action per topic)
+  // Increment a server counter (once per cooldown window per action per topic).
+  // Returns true if the increment fired, false if deduped.
   function incrementSocial(prefix, topic) {
     var key = prefix + '-' + topic;
-    if (counted[key]) return;
-    counted[key] = true;
+    if (isCounted(key)) return false;
+    // Views use a timestamp so they expire; decided/answer are permanent
+    counted[key] = (prefix === 'v') ? Date.now() : true;
     saveCounted();
 
     // Optimistically bump the local count so the UI updates immediately
@@ -4612,6 +4629,7 @@ og_url: https://marbleheaddata.org/
         saveCounted();
         updateSocialDisplays();
       });
+    return true;
   }
 
   // Increment page-level share counter (one POST per "Copy link to positions" click)
@@ -5017,9 +5035,10 @@ og_url: https://marbleheaddata.org/
     currentTopic = topic;
     stageEl.classList.add('has-topic');
 
-    // Server-side view increment (once per topic per browser) + personal counter
-    incrementSocial('v', topic);
-    bumpTopicView(topic);
+    // Server-side view increment + personal counter (only when server counted)
+    if (incrementSocial('v', topic)) {
+      bumpTopicView(topic);
+    }
     updateQuestionSocialBar(topic);
     document.querySelectorAll('.question-screen').forEach(function (s) {
       s.style.display = s.dataset.topic === topic ? 'block' : 'none';
