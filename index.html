@@ -297,7 +297,7 @@ og_url: https://marbleheaddata.org/
   /* ── Next question button ── */
   .next-question {
     display: none;
-    margin: 24px 0 12px;
+    margin: 14px 0 4px;
     text-align: center;
   }
   .next-question.visible { display: block; }
@@ -4868,7 +4868,13 @@ og_url: https://marbleheaddata.org/
       wrap.appendChild(btn);
     }
 
-    screen.appendChild(wrap);
+    // Insert right after .answers so it sits above the pick distribution bar
+    var answersEl = screen.querySelector('.answers');
+    if (answersEl) {
+      answersEl.parentNode.insertBefore(wrap, answersEl.nextSibling);
+    } else {
+      screen.appendChild(wrap);
+    }
   });
 
   /* ── Inject social proof bar + share button into each question screen ── */
