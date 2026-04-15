@@ -5064,6 +5064,7 @@ og_url: https://marbleheaddata.org/
     document.querySelectorAll('.answer-card').forEach(function (c) {
       c.classList.remove('selected', 'viewing', 'dimmed');
     });
+    updateAnswerCheckTitles();
     document.querySelectorAll('.evidence').forEach(function (e) {
       e.classList.remove('open');
     });
@@ -5118,7 +5119,11 @@ og_url: https://marbleheaddata.org/
       e.stopPropagation();
       var q = card.dataset.question;
       var a = card.dataset.answer;
-      selectAnswer(q, a);
+      if (card.classList.contains('selected')) {
+        deselectAnswer(q);
+      } else {
+        selectAnswer(q, a);
+      }
       updateNotesPill();
       updateNotesPanel();
     });
@@ -5261,6 +5266,7 @@ og_url: https://marbleheaddata.org/
         c.classList.remove('selected');
         if (c.dataset.answer === pick) c.classList.add('selected');
       });
+      updateAnswerCheckTitles();
       viewEvidence(topic, pick);
       var screen = document.querySelector('.question-screen[data-topic="' + topic + '"]');
       var prompt = screen && screen.querySelector('.answers + .answers-prompt');
@@ -5612,6 +5618,7 @@ og_url: https://marbleheaddata.org/
       c.classList.remove('selected');
       if (c.dataset.answer === answer) c.classList.add('selected');
     });
+    updateAnswerCheckTitles();
 
     selections[question] = answer;
     // Selecting an answer is an in-place state change on the current topic,
@@ -5674,7 +5681,22 @@ og_url: https://marbleheaddata.org/
     });
   }
 
+  // Keep each checkmark's tooltip in sync with whether that card is
+  // currently the user's pick. Called after any selection state change.
+  function updateAnswerCheckTitles() {
+    document.querySelectorAll('.answer-card').forEach(function (card) {
+      var check = card.querySelector('.answer-check');
+      if (!check) return;
+      check.title = card.classList.contains('selected')
+        ? 'Clear this view'
+        : 'Make this my view';
+    });
+  }
+
   function deselectAnswer(question) {
+    if (typeof posthog !== 'undefined') {
+      posthog.capture('explore_answer_deselected', { topic: question });
+    }
     document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
       c.classList.remove('selected', 'dimmed', 'viewing');
     });
@@ -5687,8 +5709,16 @@ og_url: https://marbleheaddata.org/
     writeURL(question, null, true);
     persistSelections();
     updateQuestionHeader(question);
+    updateAnswerCheckTitles();
 
+    // Hide the "next question" button until they pick again
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
+    var nextBtn = screen && screen.querySelector('.next-question');
+    if (nextBtn) nextBtn.classList.remove('visible');
+
+    updateBrowseHint(question);
+    updateStatsStrip();
+    updateQuestionSocialBar(question);
   }
 
   // Card body click: first time selects, after that just browses evidence.
