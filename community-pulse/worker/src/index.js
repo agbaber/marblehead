@@ -53,15 +53,22 @@ async function handleGet(request, env) {
     return new Response('{}', { status: 200, headers: corsHeaders(env) });
   }
 
-  // Build a single SQL query with a parameterized IN clause.
-  const placeholders = sectionIds.map(() => '?').join(',');
-  const stmt = env.DB.prepare(
-    `SELECT section_id, total_count, count_24h FROM reactions WHERE section_id IN (${placeholders})`
-  ).bind(...sectionIds);
-  const { results } = await stmt.all();
+  // D1 rejects prepared statements with more than 100 bound parameters, so
+  // split the IN-clause query into chunks.
+  const CHUNK = 90;
+  const found = new Map();
+  for (let i = 0; i < sectionIds.length; i += CHUNK) {
+    const chunk = sectionIds.slice(i, i + CHUNK);
+    const placeholders = chunk.map(() => '?').join(',');
+    const { results } = await env.DB.prepare(
+      `SELECT section_id, total_count, count_24h FROM reactions WHERE section_id IN (${placeholders})`
+    ).bind(...chunk).all();
+    for (const r of results) {
+      found.set(r.section_id, { total: r.total_count, last_24h: r.count_24h });
+    }
+  }
 
   // Assemble response with zeros for unknown sections.
-  const found = new Map(results.map(r => [r.section_id, { total: r.total_count, last_24h: r.count_24h }]));
   const response = {};
   for (const id of sectionIds) {
     response[id] = found.get(id) || { total: 0, last_24h: 0 };
