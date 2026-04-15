@@ -158,6 +158,11 @@ og_url: https://marbleheaddata.org/
     border-radius: 50%;
     flex-shrink: 0;
   }
+  .explore-card-dist-legend .cd-total {
+    margin-left: auto;
+    color: var(--text-subtle);
+    font-weight: 500;
+  }
   .cd-dot-a { background: var(--c-teal); }
   .cd-dot-b { background: var(--c-brass); }
   .cd-dot-c { background: var(--c-buoy); }
@@ -4757,9 +4762,9 @@ og_url: https://marbleheaddata.org/
         '<div class="pick-dist-seg pick-dist-c" style="width:' + pC + '%">' + (pC >= 8 ? pC + '%' : '') + '</div>' +
       '</div>' +
       '<div class="pick-dist-legend">' +
-        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-a"></span>A ' + pA + '%</span>' +
-        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-b"></span>B ' + pB + '%</span>' +
-        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-c"></span>C ' + pC + '%</span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-a"></span>A ' + pA + '% (' + (counts.a || 0) + ')</span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-b"></span>B ' + pB + '% (' + (counts.b || 0) + ')</span>' +
+        '<span class="pick-dist-key"><span class="pick-dist-dot pick-dist-dot-c"></span>C ' + pC + '% (' + (counts.c || 0) + ')</span>' +
         '<span class="pick-dist-total">' + total + ' picked</span>' +
       '</div>';
   }
@@ -5295,9 +5300,10 @@ og_url: https://marbleheaddata.org/
               '<span class="cd-c" style="width:' + pC + '%"></span>' +
             '</div>' +
             '<div class="explore-card-dist-legend">' +
-              '<span><span class="cd-dot cd-dot-a"></span>A ' + pA + '%</span>' +
-              '<span><span class="cd-dot cd-dot-b"></span>B ' + pB + '%</span>' +
-              '<span><span class="cd-dot cd-dot-c"></span>C ' + pC + '%</span>' +
+              '<span><span class="cd-dot cd-dot-a"></span>A ' + pA + '% (' + (picks.a || 0) + ')</span>' +
+              '<span><span class="cd-dot cd-dot-b"></span>B ' + pB + '% (' + (picks.b || 0) + ')</span>' +
+              '<span><span class="cd-dot cd-dot-c"></span>C ' + pC + '% (' + (picks.c || 0) + ')</span>' +
+              '<span class="cd-total">' + total + ' picked</span>' +
             '</div>';
         }
       } else {
