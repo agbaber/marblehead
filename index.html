@@ -553,9 +553,18 @@ og_url: https://marbleheaddata.org/
     transition: all 0.2s ease;
     position: relative;
   }
-  .answer-card:hover {
-    border-color: var(--c-navy);
-    box-shadow: var(--shadow-sm);
+  /* :hover styles are gated on (hover: hover) so touch devices don't get
+     stuck in a pseudo-selected state from a stray scroll-start tap. The
+     hover look is visually identical to .viewing, which on iOS would
+     persist until another element was tapped. */
+  @media (hover: hover) {
+    .answer-card:hover {
+      border-color: var(--c-navy);
+      box-shadow: var(--shadow-sm);
+    }
+    .answer-card.dimmed:hover {
+      opacity: 0.8;
+    }
   }
   .answer-card.selected {
     border-color: var(--c-teal);
@@ -567,9 +576,6 @@ og_url: https://marbleheaddata.org/
   }
   .answer-card.dimmed {
     opacity: 0.5;
-  }
-  .answer-card.dimmed:hover {
-    opacity: 0.8;
   }
 
   /* Checkmark button on cards */
@@ -591,9 +597,11 @@ og_url: https://marbleheaddata.org/
     transition: all 0.15s;
     z-index: 1;
   }
-  .answer-check:hover {
-    border-color: var(--c-teal);
-    color: var(--c-teal);
+  @media (hover: hover) {
+    .answer-check:hover {
+      border-color: var(--c-teal);
+      color: var(--c-teal);
+    }
   }
   .answer-card.selected .answer-check {
     border-color: var(--c-teal);
@@ -612,8 +620,10 @@ og_url: https://marbleheaddata.org/
     margin-top: 10px;
     transition: opacity 0.2s;
   }
-  .answer-card:hover .answer-hint {
-    color: var(--c-teal);
+  @media (hover: hover) {
+    .answer-card:hover .answer-hint {
+      color: var(--c-teal);
+    }
   }
   .answer-card.selected .answer-hint,
   .answer-card.dimmed .answer-hint {
@@ -5682,10 +5692,55 @@ og_url: https://marbleheaddata.org/
   }
 
   // Card body click: first time selects, after that just browses evidence.
+  //
+  // Touch guard: on mobile, a finger touch that turns into a scroll (or a
+  // tap-to-stop during iOS momentum scroll) can still fire a synthetic
+  // click, which would apply .viewing / .selected to a card the user
+  // didn't mean to pick. We ignore clicks where (a) the finger moved past
+  // the tap slop, (b) the document scrolled between touchstart and click,
+  // or (c) the page was actively scrolling in the moment before the click
+  // (tap-to-stop-momentum case, where scrollY at touchstart and click are
+  // the same because the tap halted the scroll).
+  var TAP_SLOP_PX = 10;
+  var _lastScrollAt = 0;
+  window.addEventListener('scroll', function () {
+    _lastScrollAt = Date.now();
+  }, { passive: true });
   document.querySelectorAll('.answer-card').forEach(function (card) {
+    var tStartX = 0, tStartY = 0, tStartScrollY = 0, tStartAt = 0, tMoved = false;
+    card.addEventListener('touchstart', function (e) {
+      tStartAt = Date.now();
+      if (!e.touches || e.touches.length !== 1) { tMoved = true; return; }
+      tStartX = e.touches[0].clientX;
+      tStartY = e.touches[0].clientY;
+      tStartScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+      // If a scroll event fired very recently, the page is mid-momentum
+      // and this touch is likely a stop-scroll gesture, not a tap.
+      tMoved = (tStartAt - _lastScrollAt) < 150;
+    }, { passive: true });
+    card.addEventListener('touchmove', function (e) {
+      if (tMoved || !e.touches || e.touches.length !== 1) return;
+      var dx = Math.abs(e.touches[0].clientX - tStartX);
+      var dy = Math.abs(e.touches[0].clientY - tStartY);
+      if (dx > TAP_SLOP_PX || dy > TAP_SLOP_PX) tMoved = true;
+    }, { passive: true });
     card.addEventListener('click', function (e) {
       // Don't fire if they clicked the checkmark (handled separately)
       if (e.target.closest('.answer-check')) return;
+
+      // Only apply touch-scroll guards when this click actually followed
+      // a recent touchstart. On desktop (mouse clicks) tStartAt stays 0,
+      // so the guards are skipped and scroll position is irrelevant.
+      if (tStartAt && (Date.now() - tStartAt) < 1000) {
+        var nowScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+        if (tMoved || Math.abs(nowScrollY - tStartScrollY) > TAP_SLOP_PX) {
+          tMoved = false;
+          tStartAt = 0;
+          return;
+        }
+      }
+      tMoved = false;
+      tStartAt = 0;
 
       var question = this.dataset.question;
       var answer   = this.dataset.answer;
