@@ -2,17 +2,16 @@
   <div class="nav-inner">
     <a class="nav-brand" href="{{ '/' | relative_url }}"><img class="nav-logo" src="{{ '/' | relative_url }}favicon.svg" alt="" width="22" height="22"> MHD Data</a>
 
-    <a href="{{ '/' | relative_url }}the-debate.html"{% if page.url == '/the-debate.html' %} aria-current="page"{% endif %}>Debate</a>
-
     <div class="nav-dropdown">
       <button class="nav-dropdown-toggle" aria-expanded="false">Vote <svg class="nav-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="nav-dropdown-menu">
         <a href="{{ '/' | relative_url }}what-is-the-override.html"{% if page.url == '/what-is-the-override.html' %} aria-current="page"{% endif %}>What is the override?</a>
+        <a href="{{ '/' | relative_url }}whats-on-the-ballot.html"{% if page.url == '/whats-on-the-ballot.html' %} aria-current="page"{% endif %}>What's on the ballot?</a>
         <a href="{{ '/' | relative_url }}question-2-trash.html"{% if page.url == '/question-2-trash.html' %} aria-current="page"{% endif %}>Trash: levy or fee?</a>
-        <a href="{{ '/' | relative_url }}whats-on-the-ballot.html"{% if page.url == '/whats-on-the-ballot.html' %} aria-current="page"{% endif %}>What else is on the ballot?</a>
         <a href="{{ '/' | relative_url }}how-we-got-here.html"{% if page.url == '/how-we-got-here.html' %} aria-current="page"{% endif %}>How we got here</a>
         <a href="{{ '/' | relative_url }}marblehead-voting-record.html"{% if page.url == '/marblehead-voting-record.html' %} aria-current="page"{% endif %}>Voting record</a>
         <a href="{{ '/' | relative_url }}no-override-budget.html"{% if page.url == '/no-override-budget.html' %} aria-current="page"{% endif %}>No-override budget</a>
+        <a href="{{ '/' | relative_url }}the-debate.html"{% if page.url == '/the-debate.html' %} aria-current="page"{% endif %}>Both sides of the debate</a>
         <a href="{{ '/' | relative_url }}charts/sustainability.html"{% if page.url == '/charts/sustainability.html' %} aria-current="page"{% endif %}>Sustainability</a>
       </div>
     </div>
