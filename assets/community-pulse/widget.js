@@ -1,10 +1,10 @@
 // Community pulse widget module.
 // Loaded by each content page as a <script defer> tag.
-// Hydrates every <h2> on the page with a stance widget, unless the page
-// opts out via <body data-community-pulse="off-sections"> or the
-// individual <h2> opts out via data-stance-section="off". An <h2> with
-// an explicit data-stance-section="<slug>" uses that slug as a stable
-// override; otherwise the slug is auto-derived from the heading text.
+// Hydrates every <h2> on the page with a bookmark/reference widget,
+// unless the page opts out via <body data-community-pulse="off-sections">
+// or the individual <h2> opts out via data-stance-section="off". An <h2>
+// with an explicit data-stance-section="<slug>" uses that slug as a
+// stable override; otherwise the slug is auto-derived from the heading text.
 
 /**
  * Convert a heading text into an anchor ID slug.
@@ -51,13 +51,13 @@ export function getStance(db, sectionId) {
 }
 
 /** Upsert a stance record. Stamps updated_at. */
-export function setStance(db, sectionId, { stance, note, reacted }) {
+export function setStance(db, sectionId, { bookmarked, note, reacted }) {
   return new Promise((resolve, reject) => {
     const tx = db.transaction(STORE_NAME, 'readwrite');
     const store = tx.objectStore(STORE_NAME);
     const record = {
       section_id: sectionId,
-      stance: stance ?? null,
+      bookmarked: bookmarked === true,
       note: note ?? '',
       reacted: reacted === true,
       updated_at: Date.now()
@@ -167,61 +167,47 @@ export function buildIssueUrl(sectionTitle, sectionUrl) {
 
 // ---- Widget rendering and hydration -------------------------------------
 
-const STANCE_BUTTONS = [
-  { key: 'agree',    glyph: '+', label: 'Agree' },
-  { key: 'disagree', glyph: '−', label: 'Disagree' }
-];
-
 let widgetCounter = 0;
 
 /**
- * Build the widget DOM for one section and attach it to the given parent
- * element. Returns the widget root element.
+ * Build the widget DOM for one section. Returns the widget root element.
+ * The widget offers: bookmark star, flag link, share button, note toggle.
  */
-function buildWidget(sectionId, sectionTitle, sectionUrl, initialReactions, initialStance) {
+function buildWidget(sectionId, sectionTitle, sectionUrl, initialReactions, initialBookmarked) {
   const root = document.createElement('div');
   root.className = 'cp-widget';
   root.dataset.sectionId = sectionId;
   const widgetId = `cp-widget-${++widgetCounter}`;
 
-  // Stance row: two stance buttons (agree, disagree) plus a third element
-  // that is structurally an <a> link, not a button. The flag opens a
-  // pre-filled GitHub issue in a new tab so corrections land in the
-  // issue tracker rather than in a per-stance counter on the worker.
+  // Action buttons: bookmark star + flag link.
   const buttons = document.createElement('div');
   buttons.className = 'cp-widget__buttons';
-  STANCE_BUTTONS.forEach(({ key, glyph, label }) => {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'cp-widget__button';
-    btn.dataset.stance = key;
-    btn.setAttribute('aria-label', label);
-    btn.textContent = glyph;
-    btn.setAttribute('aria-pressed', initialStance === key ? 'true' : 'false');
-    buttons.appendChild(btn);
-  });
 
-  // Flag link. Visually identical to a stance button (same class) but
-  // has no aria-pressed state and triggers no IndexedDB write.
+  // Bookmark / star button.
+  const star = document.createElement('button');
+  star.type = 'button';
+  star.className = 'cp-widget__button cp-widget__star';
+  star.setAttribute('aria-label', 'Bookmark this section');
+  star.setAttribute('aria-pressed', initialBookmarked ? 'true' : 'false');
+  star.innerHTML = '<svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" aria-hidden="true"><polygon points="8,2 10,6.5 15,7 11.2,10.3 12.4,15 8,12.5 3.6,15 4.8,10.3 1,7 6,6.5"/></svg>';
+  buttons.appendChild(star);
+
+  // Flag link -- opens a pre-filled GitHub issue in a new tab.
   const flag = document.createElement('a');
   flag.className = 'cp-widget__button cp-widget__flag';
   flag.href = buildIssueUrl(sectionTitle, sectionUrl);
   flag.target = '_blank';
   flag.rel = 'noopener';
   flag.setAttribute('aria-label', 'Suggest a correction');
-  flag.textContent = '⚑';
+  flag.textContent = '\u2691';
   buttons.appendChild(flag);
 
   root.appendChild(buttons);
 
-  // Meta group: reaction count + secondary action icons. Kept as a single
-  // DOM sibling to the stance buttons so CSS can give a clean two-group
-  // layout (stance on the left, meta on the right) with a wider gap
-  // between the groups than within each group.
+  // Meta group: reaction count + share + note toggle.
   const meta = document.createElement('div');
   meta.className = 'cp-widget__meta';
 
-  // Reaction count + delta. Hidden until real data arrives; no placeholder text.
   const count = document.createElement('span');
   count.className = 'cp-widget__count';
   const countNum = document.createElement('span');
@@ -229,7 +215,7 @@ function buildWidget(sectionId, sectionTitle, sectionUrl, initialReactions, init
   const countDelta = document.createElement('span');
   countDelta.className = 'cp-widget__delta';
   if (initialReactions) {
-    countNum.textContent = `${initialReactions.total} reactions`;
+    countNum.textContent = `${initialReactions.total} saved`;
     if (initialReactions.last_24h > 0) {
       countDelta.textContent = `+${initialReactions.last_24h} today`;
     }
@@ -238,7 +224,7 @@ function buildWidget(sectionId, sectionTitle, sectionUrl, initialReactions, init
   count.appendChild(countDelta);
   meta.appendChild(count);
 
-  // Share button (copy link to clipboard). Icon = two overlapping rectangles.
+  // Share button (copy link to clipboard).
   const share = document.createElement('button');
   share.type = 'button';
   share.className = 'cp-widget__share';
@@ -247,7 +233,7 @@ function buildWidget(sectionId, sectionTitle, sectionUrl, initialReactions, init
   share.innerHTML = '<svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="5.5" width="8.5" height="8.5" rx="1"/><path d="M2 10.5V3a1 1 0 0 1 1-1h7.5"/></svg>';
   meta.appendChild(share);
 
-  // Note toggle. Icon = three horizontal lines of decreasing length.
+  // Note toggle.
   const noteToggle = document.createElement('button');
   noteToggle.type = 'button';
   noteToggle.className = 'cp-widget__note-toggle';
@@ -260,9 +246,7 @@ function buildWidget(sectionId, sectionTitle, sectionUrl, initialReactions, init
 
   root.appendChild(meta);
 
-  // Note textarea is appended to the section-end container (not the
-  // widget itself) so it can break out into the right margin on desktop.
-  // Store a reference on the root so wireWidget can find it.
+  // Note textarea.
   const note = document.createElement('textarea');
   note.id = `${widgetId}-note`;
   note.className = 'cp-widget__note';
@@ -301,9 +285,8 @@ function debounce(fn, ms) {
  * save, share button. Reads and writes the IndexedDB store.
  */
 function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord) {
-  const buttons = root.querySelectorAll('.cp-widget__button');
+  const starBtn = root.querySelector('.cp-widget__star');
   const noteToggle = root.querySelector('.cp-widget__note-toggle');
-  // Note textarea lives in the parent .cp-section-end, not inside the widget.
   const noteField = root.parentElement
     ? root.parentElement.querySelector('.cp-widget__note')
     : root.querySelector('.cp-widget__note');
@@ -311,12 +294,10 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
   const countNum = root.querySelector('.cp-widget__count-num');
   const countDelta = root.querySelector('.cp-widget__delta');
 
-  // Track current state in closure to avoid extra IDB reads.
-  let currentStance = initialRecord?.stance ?? null;
+  let currentBookmarked = initialRecord?.bookmarked === true;
   let currentNote = initialRecord?.note ?? '';
   let currentReacted = initialRecord?.reacted === true;
 
-  // Reflect initial note into UI (stance was already reflected by buildWidget's initialStance).
   if (currentNote) {
     noteField.value = currentNote;
     noteField.hidden = false;
@@ -324,9 +305,8 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
     noteToggle.dataset.hasNote = 'true';
   }
 
-  /** Persist the current stance, note, and reacted state to IndexedDB. */
   const persist = () => setStance(db, sectionId, {
-    stance: currentStance,
+    bookmarked: currentBookmarked,
     note: currentNote,
     reacted: currentReacted
   });
@@ -334,14 +314,7 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
   /**
    * If this user has not yet been counted for this section, fire one
    * reactions increment and mark them counted. Subsequent calls are no-ops
-   * until the user clears their browser data. Any meaningful interaction
-   * (stance activate, note content, share click) routes through this helper.
-   *
-   * The currentReacted flag is set synchronously before awaiting the
-   * network call, so a second caller that lands between the await and the
-   * server's response sees the flag already set and skips. If the network
-   * call fails, the flag is reverted so a retry can happen on the next
-   * interaction.
+   * until the user clears their browser data.
    */
   async function ensureCounted() {
     if (currentReacted) return;
@@ -351,10 +324,10 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
       currentReacted = false;
       return;
     }
-    countNum.textContent = `${result.total} reactions`;
+    countNum.textContent = `${result.total} saved`;
     countDelta.textContent = result.last_24h > 0 ? `+${result.last_24h} today` : '';
     if (typeof posthog !== 'undefined') {
-      posthog.capture('pulse_engaged', {
+      posthog.capture('pulse_bookmarked', {
         section: sectionTitle,
         page: location.pathname
       });
@@ -362,19 +335,15 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
     await persist();
   }
 
-  // Stance button handler.
-  buttons.forEach(btn => {
-    btn.addEventListener('click', async () => {
-      const stanceKey = btn.dataset.stance;
-      const currentlyPressed = btn.getAttribute('aria-pressed') === 'true';
-      const newStance = currentlyPressed ? null : stanceKey;
-      buttons.forEach(b => {
-        b.setAttribute('aria-pressed', b.dataset.stance === newStance ? 'true' : 'false');
-      });
-      currentStance = newStance;
-      await persist();
-      if (newStance) await ensureCounted();
-    });
+  // Bookmark star toggle.
+  starBtn.addEventListener('click', async () => {
+    currentBookmarked = !currentBookmarked;
+    starBtn.setAttribute('aria-pressed', currentBookmarked ? 'true' : 'false');
+    await persist();
+    if (currentBookmarked) {
+      showToast('Bookmarked');
+      await ensureCounted();
+    }
   });
 
   // Note toggle.
@@ -385,8 +354,7 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
     if (!isOpen) noteField.focus();
   });
 
-  // Note field debounced save. Counts as a reaction only once, the first
-  // time the note contains non-empty text.
+  // Note field debounced save.
   const saveNote = debounce(async () => {
     currentNote = noteField.value;
     noteToggle.dataset.hasNote = currentNote.trim().length > 0 ? 'true' : 'false';
@@ -395,7 +363,7 @@ function wireWidget(root, db, sectionId, sectionUrl, sectionTitle, initialRecord
   }, 1000);
   noteField.addEventListener('input', saveNote);
 
-  // Share button: always copy the section link to the clipboard. Counts as a reaction once.
+  // Share button.
   shareBtn.addEventListener('click', async () => {
     if (navigator.clipboard) {
       try {
@@ -478,7 +446,7 @@ export async function hydrateWidgets() {
       target.title,
       sectionUrl,
       initialReactions,
-      initialRecord?.stance
+      initialRecord?.bookmarked
     );
     const anchor = target.element;
     const parent = anchor.parentNode;

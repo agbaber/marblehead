@@ -1,4 +1,4 @@
-/* Community pulse widget styles.
+/* Community pulse widget styles (bookmark / reference actions).
    Reuses CSS custom properties from assets/site.css so the widget
    inherits the site's light and dark themes automatically. */
 
@@ -91,10 +91,14 @@
   outline-offset: 2px;
 }
 
-.cp-widget__button[aria-pressed="true"] {
+/* Filled star when bookmarked */
+.cp-widget__star[aria-pressed="true"] {
   background: var(--surface, rgba(0,0,0,0.06));
   border-color: var(--text, #333);
   color: var(--text, #222);
+}
+.cp-widget__star[aria-pressed="true"] svg {
+  fill: currentColor;
 }
 
 .cp-widget__count-num:empty,
