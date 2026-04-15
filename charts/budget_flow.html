@@ -18,7 +18,7 @@ title: "Where the Money Goes"
   .sankey-wrap svg { display: block; width: 100%; height: auto; }
 
   /* Node rects */
-  .sk-node { stroke: none; }
+  .sk-node { stroke: none; cursor: pointer; }
   .sk-node-levy       { fill: var(--c-navy); }
   .sk-node-stateAid   { fill: var(--c-teal); }
   .sk-node-freeCash   { fill: var(--c-brass); }
@@ -38,37 +38,50 @@ title: "Where the Money Goes"
   .sk-node-gov        { fill: var(--text-subtle); }
 
   /* Ribbons */
-  .sk-ribbon { stroke: none; pointer-events: all; }
+  .sk-ribbon { stroke: none; pointer-events: all; transition: opacity 0.2s; }
   .sk-ribbon-base {
     fill: var(--text-subtle);
     opacity: 0.07;
   }
   .sk-ribbon-base:hover { opacity: 0.18; }
-  .sk-ribbon-override {
-    opacity: 0.4;
-  }
+  .sk-ribbon-override { opacity: 0.4; }
   .sk-ribbon-override:hover { opacity: 0.6; }
   .sk-ribbon-override.tier-t1 { fill: var(--series-tier-1); }
   .sk-ribbon-override.tier-t2 { fill: var(--series-tier-2); }
   .sk-ribbon-override.tier-t3 { fill: var(--series-tier-3); }
+
+  /* Focused state: dim unrelated ribbons */
+  .sankey-wrap.has-focus .sk-ribbon-base { opacity: 0.02; }
+  .sankey-wrap.has-focus .sk-ribbon-override { opacity: 0.1; }
+  .sankey-wrap.has-focus .sk-ribbon-base.sk-focus { opacity: 0.18; }
+  .sankey-wrap.has-focus .sk-ribbon-override.sk-focus { opacity: 0.55; }
 
   /* Labels */
   .sk-label {
     font-size: 11px;
     font-weight: 600;
     fill: var(--text);
+    cursor: pointer;
   }
   .sk-label-value {
     font-size: 10px;
     font-weight: 700;
     fill: var(--text-muted);
   }
-  .sk-label-override {
-    font-weight: 700;
-  }
+  .sk-label-override { font-weight: 700; }
   .sk-label-override.tier-t1 { fill: var(--series-tier-1); }
   .sk-label-override.tier-t2 { fill: var(--series-tier-2); }
   .sk-label-override.tier-t3 { fill: var(--series-tier-3); }
+
+  /* Delta indicators (cuts & restorations) */
+  .sk-delta-cut  { fill: var(--c-buoy); }
+  .sk-delta-gain { fill: var(--c-sage); }
+  .sk-delta-label {
+    font-size: 9px;
+    font-weight: 700;
+  }
+  .sk-delta-label-cut  { fill: var(--c-buoy); }
+  .sk-delta-label-gain { fill: var(--c-sage); }
 
   /* Column headers */
   .sk-col-header {
@@ -147,12 +160,13 @@ title: "Where the Money Goes"
     .sk-label { font-size: 9px; }
     .sk-label-value { font-size: 8px; }
     .sk-col-header { font-size: 8px; }
+    .sk-delta-label { font-size: 7px; }
   }
 </style>
 
 <div class="sankey-intro">
   <h1>Where the Money Goes</h1>
-  <p class="sankey-fy">FY26 general fund: revenue sources flow to spending categories. Toggle tiers to see where override money is earmarked.</p>
+  <p class="sankey-fy">FY26 general fund: revenue sources flow to spending categories. Toggle tiers to see cuts and restorations. Click any node to isolate its flows.</p>
 </div>
 
 <div class="tabs">
@@ -170,13 +184,11 @@ title: "Where the Money Goes"
   <ul class="override-detail-list" id="overrideDetailList"></ul>
 </div>
 
-<p class="caption" id="captionText">
-  All general fund revenue pools into a single fund and is appropriated to departments at Town Meeting. The ribbons show proportional allocation, not earmarking. Override revenue (when active) is allocated to specific restorations shown as colored flows.
-</p>
+<p class="caption" id="captionText"></p>
 
 <div class="notes">
-  <p>Town department totals from the FY26 Proposed Budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1234/FY26-Budget" data-source="FY26 Proposed Budget, Town of Marblehead"></sup> School total from FY26 School Committee approved budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1235/FY26-School-Budget" data-source="FY26 School Committee Approved Budget"></sup> Override line items from the Town Administrator's April 8, 2026 override presentation.<sup class="cite" data-href="https://vimeo.com/1181632658" data-source="Select Board meeting, April 8 2026 (Vimeo 1181632658), Town Administrator override presentation"></sup></p>
-  <p>Healthcare grouping includes health insurance transfer ($11.8M), Medex ($2.5M), insurance premiums ($0.9M), Medicare reimbursement ($0.7M), and Medicare tax ($0.3M). "General government" is the sum of all remaining town departments not shown separately. Revenue projections from the January 2026 State of the Town presentation. General fund revenue does not have line-item earmarking; proportional ribbons are illustrative.</p>
+  <p>Town department totals from the FY26 Proposed Budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1234/FY26-Budget" data-source="FY26 Proposed Budget, Town of Marblehead"></sup> School total from FY26 School Committee approved budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1235/FY26-School-Budget" data-source="FY26 School Committee Approved Budget"></sup> Override line items and no-override cuts from the Town Administrator's April 8, 2026 override presentation.<sup class="cite" data-href="https://vimeo.com/1181632658" data-source="Select Board meeting, April 8 2026 (Vimeo 1181632658), Town Administrator override presentation"></sup> No-override school reduction from the FY27 Proposed Balanced Budget.<sup class="cite" data-href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf" data-source="FY27 Proposed Budget, page 2, Item 101"></sup></p>
+  <p>Healthcare grouping includes health insurance transfer ($11.8M), Medex ($2.5M), insurance premiums ($0.9M), Medicare reimbursement ($0.7M), and Medicare tax ($0.3M). "General government" is the sum of all remaining town departments not shown separately. General fund revenue does not have line-item earmarking; proportional ribbons are illustrative. Red indicators show FY27 no-override cuts; green shows restorations at the selected tier.</p>
 </div>
 
 <div class="read-next">
@@ -189,9 +201,9 @@ title: "Where the Money Goes"
     <div class="read-next-title">Revenue vs. expenses over time &rarr;</div>
     <div class="read-next-desc">Ten years of actuals and three years of projections, with the same override tier toggle.</div>
   </a>
-  <a class="read-next-link" href="../where-has-the-money-gone.html">
-    <div class="read-next-title">Where has the money gone? &rarr;</div>
-    <div class="read-next-desc">A ten-year stacked area chart of how the general fund has been spent.</div>
+  <a class="read-next-link" href="../no-override-budget.html">
+    <div class="read-next-title">What's in the no-override budget? &rarr;</div>
+    <div class="read-next-desc">The specific cuts if the override fails: 22 town positions, 18 school FTEs, the library reduced 43%.</div>
   </a>
 </div>
 
@@ -220,6 +232,27 @@ title: "Where the Money Goes"
     { id: 'gov',        label: 'General Government',      base: 6889841 },
     { id: 'library',    label: 'Library & Recreation',    base: 2530319 }
   ];
+
+  /* No-override cuts by spending category (derived from "Restore" items
+     in override_town_line_items.csv at their maximum tier values).
+     Schools: $1.5M special ed bridge from FY27 Proposed Budget. */
+  var cuts = {
+    schools:    1500000,
+    safety:     119982,
+    pw:         259286,
+    library:    743563,
+    gov:        660302,
+    healthcare: 76171,
+    pensions:   444433
+  };
+
+  /* How much of each cut is restored at each tier (FY27 only).
+     Derived from "Restore" line items in the CSV. */
+  var restorations = {
+    t1: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433, schools: 0 },
+    t2: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 0 },
+    t3: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 0 }
+  };
 
   var overrides = {
     t1: {
@@ -278,7 +311,6 @@ title: "Where the Money Goes"
   }
 
   function ribbon(x1, y1, h1, x2, y2, h2) {
-    /* Cubic bezier ribbon between two vertical spans */
     var cx = (x1 + x2) / 2;
     return 'M' + x1 + ',' + y1 +
            'C' + cx + ',' + y1 + ' ' + cx + ',' + y2 + ' ' + x2 + ',' + y2 +
@@ -296,10 +328,12 @@ title: "Where the Money Goes"
   var detailTitle = document.getElementById('overrideDetailTitle');
   var detailList = document.getElementById('overrideDetailList');
   var captionEl = document.getElementById('captionText');
+  var focusedNode = null;
 
   function render(tier) {
+    focusedNode = null;
     var ov = tier !== 'none' ? overrides[tier] : null;
-    var ovTotal = ov ? ov.total : 0;
+    var rest = tier !== 'none' ? restorations[tier] : null;
 
     /* ── Build left nodes ── */
     var leftNodes = revSources.map(function (s) {
@@ -316,15 +350,21 @@ title: "Where the Money Goes"
         add = ov.cats[c.id] || 0;
         if (c.id === 'gov' && ov.cats.capital) add += ov.cats.capital;
       }
-      return { id: c.id, label: c.label, value: c.base + add, base: c.base, add: add };
+      var cut = cuts[c.id] || 0;
+      var restored = rest ? (rest[c.id] || 0) : 0;
+      var stillCut = cut - restored;
+      return { id: c.id, label: c.label, value: c.base + add, base: c.base, add: add,
+               cut: cut, restored: restored, stillCut: Math.max(stillCut, 0) };
     });
 
     /* ── Layout ── */
-    var W = 880, H = 520;
+    var W = 880, H = 540;
     var nodeW = 14;
     var padTop = 32, padBot = 20;
     var gapL = 5, gapR = 4;
-    var lx = 140, rx = W - 140;
+    var lx = 140, rx = W - 175;
+    var deltaBarX = rx + nodeW + 4;
+    var deltaBarW = 6;
 
     var leftTotal = leftNodes.reduce(function (s, n) { return s + n.value; }, 0);
     var rightTotal = rightNodes.reduce(function (s, n) { return s + n.value; }, 0);
@@ -360,8 +400,6 @@ title: "Where the Money Goes"
 
     /* ── Build flows ── */
     var flows = [];
-
-    /* General fund: each source to each category, proportional */
     var gfSources = leftNodes.filter(function (n) { return n.type === 'rev'; });
     gfSources.forEach(function (src) {
       rightNodes.forEach(function (cat) {
@@ -371,7 +409,6 @@ title: "Where the Money Goes"
       });
     });
 
-    /* Override flows */
     if (ov) {
       var ovNode = leftNodes.find(function (n) { return n.id === 'override'; });
       var grossAdds = rightNodes.reduce(function (s, n) { return s + n.add; }, 0);
@@ -384,14 +421,12 @@ title: "Where the Money Goes"
       });
     }
 
-    /* Sort flows: base flows by target y then source y, override flows last */
     flows.sort(function (a, b) {
       if (a.type !== b.type) return a.type === 'base' ? -1 : 1;
       if (a.src !== b.src) return a.src.y - b.src.y;
       return a.tgt.y - b.tgt.y;
     });
 
-    /* Assign ribbon positions within each node */
     flows.forEach(function (f) {
       f.ribbonH = Math.max(f.value * scale, 0.5);
       f.sy = f.src.y + f.src.outOff;
@@ -402,18 +437,18 @@ title: "Where the Money Goes"
 
     /* ── Build SVG ── */
     var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg"' +
-              ' role="img" aria-label="Sankey diagram showing FY26 general fund revenue flowing to spending categories' +
-              (tier !== 'none' ? ', with ' + tierShort[tier] + ' override flows highlighted' : '') + '">';
+              ' role="img" aria-label="Sankey diagram showing FY26 general fund flows with budget cuts and override restorations">';
 
     /* Column headers */
     svg += '<text class="sk-col-header" x="' + (lx + nodeW / 2) + '" y="' + (padTop - 14) + '" text-anchor="middle">Revenue</text>';
     svg += '<text class="sk-col-header" x="' + (rx + nodeW / 2) + '" y="' + (padTop - 14) + '" text-anchor="middle">Spending</text>';
 
-    /* Ribbons (draw base first, override on top) */
+    /* Ribbons */
     flows.forEach(function (f) {
       var cls = 'sk-ribbon sk-ribbon-' + f.type;
       if (f.type === 'override') cls += ' tier-' + tier;
       svg += '<path class="' + cls + '"' +
+             ' data-src="' + f.src.id + '" data-tgt="' + f.tgt.id + '"' +
              ' d="' + ribbon(f.src.x + nodeW, f.sy, f.ribbonH, f.tgt.x, f.ty, f.ribbonH) + '"' +
              ' data-tip="' + f.label + ': ' + fmt(f.value) + '"/>';
     });
@@ -423,32 +458,80 @@ title: "Where the Money Goes"
       var cls = 'sk-node ';
       if (n.type === 'override') cls += 'sk-node-override-' + tier;
       else cls += 'sk-node-' + n.id;
-      svg += '<rect class="' + cls + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2"/>';
+      svg += '<rect class="' + cls + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
 
-      /* Label left of node */
       var ly = n.y + n.h / 2;
       var labelCls = n.type === 'override' ? 'sk-label sk-label-override tier-' + tier : 'sk-label';
-      svg += '<text class="' + labelCls + '" x="' + (n.x - 6) + '" y="' + (ly - 1) + '" text-anchor="end" dominant-baseline="auto">' + n.label + '</text>';
+      svg += '<text class="' + labelCls + '" x="' + (n.x - 6) + '" y="' + (ly - 1) + '" text-anchor="end" dominant-baseline="auto" data-node="' + n.id + '">' + n.label + '</text>';
       svg += '<text class="sk-label-value" x="' + (n.x - 6) + '" y="' + (ly + 11) + '" text-anchor="end" dominant-baseline="auto">' + fmt(n.value) + '</text>';
     });
 
-    /* Right nodes */
+    /* Right nodes + delta indicators */
+    /* Find max cut for scaling delta bars */
+    var maxCut = 0;
+    rightNodes.forEach(function (n) { if (n.cut > maxCut) maxCut = n.cut; });
+    var deltaScale = maxCut > 0 ? 30 / maxCut : 0; /* max 30px wide */
+
     rightNodes.forEach(function (n) {
-      svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2"/>';
+      svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
 
       var ly = n.y + n.h / 2;
-      svg += '<text class="sk-label" x="' + (n.x + nodeW + 6) + '" y="' + (ly - 1) + '" dominant-baseline="auto">' + n.label + '</text>';
+      var labelX = rx + nodeW + 6;
+
+      /* Delta bars (to the right of node, before labels) */
+      if (n.cut > 0) {
+        var cutW = Math.max(n.cut * deltaScale, 2);
+        var gainW = n.restored * deltaScale;
+        var barY = n.y + n.h / 2 - 4;
+
+        if (n.stillCut > 0) {
+          /* Red bar for remaining cut */
+          var stillW = Math.max(n.stillCut * deltaScale, 2);
+          svg += '<rect class="sk-delta-cut" x="' + labelX + '" y="' + barY + '" width="' + stillW + '" height="3.5" rx="1"/>';
+          if (gainW > 0) {
+            /* Green bar stacked below for restored portion */
+            svg += '<rect class="sk-delta-gain" x="' + labelX + '" y="' + (barY + 4.5) + '" width="' + gainW + '" height="3.5" rx="1"/>';
+          }
+        } else {
+          /* Fully restored: green bar only */
+          svg += '<rect class="sk-delta-gain" x="' + labelX + '" y="' + barY + '" width="' + gainW + '" height="3.5" rx="1"/>';
+        }
+        labelX += Math.max(cutW, gainW) + 5;
+      }
+
+      /* Labels */
+      svg += '<text class="sk-label" x="' + labelX + '" y="' + (ly - 1) + '" dominant-baseline="auto" data-node="' + n.id + '">' + n.label + '</text>';
+
+      /* Value + delta text */
       var valStr = fmt(n.value);
-      if (n.add > 0) valStr += ' (+' + fmt(n.add) + ')';
-      svg += '<text class="sk-label-value" x="' + (n.x + nodeW + 6) + '" y="' + (ly + 11) + '" dominant-baseline="auto">' + valStr + '</text>';
+      var deltaStr = '';
+      if (n.stillCut > 0 && n.restored > 0) {
+        deltaStr = ' \u2212' + fmt(n.stillCut) + ' cut, +' + fmt(n.restored) + ' restored';
+      } else if (n.stillCut > 0) {
+        deltaStr = ' \u2212' + fmt(n.cut) + ' cut';
+      } else if (n.restored > 0) {
+        deltaStr = ' fully restored';
+      }
+      if (n.add > 0 && n.restored === 0) {
+        /* Pure new spending (not a restoration) */
+        valStr += ' (+' + fmt(n.add) + ' new)';
+      }
+
+      svg += '<text class="sk-label-value" x="' + labelX + '" y="' + (ly + 11) + '" dominant-baseline="auto">' + valStr + '</text>';
+
+      if (deltaStr) {
+        var deltaCls = n.stillCut > 0 ? 'sk-delta-label sk-delta-label-cut' : 'sk-delta-label sk-delta-label-gain';
+        svg += '<text class="' + deltaCls + '" x="' + labelX + '" y="' + (ly + 21) + '" dominant-baseline="auto">' + deltaStr + '</text>';
+      }
     });
 
     svg += '</svg>';
     wrap.innerHTML = svg;
+    wrap.classList.remove('has-focus');
 
     /* ── Tooltip wiring ── */
     wrap.querySelectorAll('[data-tip]').forEach(function (el) {
-      el.addEventListener('mouseenter', function (e) {
+      el.addEventListener('mouseenter', function () {
         tooltip.textContent = el.getAttribute('data-tip');
         tooltip.classList.add('visible');
       });
@@ -458,6 +541,32 @@ title: "Where the Money Goes"
       });
       el.addEventListener('mouseleave', function () {
         tooltip.classList.remove('visible');
+      });
+    });
+
+    /* ── Click-to-focus wiring ── */
+    wrap.querySelectorAll('[data-node]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var nodeId = el.getAttribute('data-node');
+        if (focusedNode === nodeId) {
+          /* Deselect */
+          focusedNode = null;
+          wrap.classList.remove('has-focus');
+          wrap.querySelectorAll('.sk-ribbon').forEach(function (r) { r.classList.remove('sk-focus'); });
+        } else {
+          /* Select */
+          focusedNode = nodeId;
+          wrap.classList.add('has-focus');
+          wrap.querySelectorAll('.sk-ribbon').forEach(function (r) {
+            var src = r.getAttribute('data-src');
+            var tgt = r.getAttribute('data-tgt');
+            if (src === nodeId || tgt === nodeId) {
+              r.classList.add('sk-focus');
+            } else {
+              r.classList.remove('sk-focus');
+            }
+          });
+        }
       });
     });
 
@@ -483,11 +592,21 @@ title: "Where the Money Goes"
     }
 
     /* ── Caption ── */
+    var totalCuts = 0;
+    var totalRestored = 0;
+    rightNodes.forEach(function (n) { totalCuts += n.cut; totalRestored += n.restored; });
     if (tier === 'none') {
-      captionEl.textContent = 'All general fund revenue pools into a single fund and is appropriated to departments at Town Meeting. The gray ribbons show proportional allocation, not earmarking. Schools account for 46% of spending; healthcare, pensions, and debt service together account for another 29%.';
+      captionEl.textContent = 'Without an override, the FY27 budget cuts ' + fmt(totalCuts) +
+        ' across seven departments. The library loses 43% of its budget, community development loses 59%, and schools absorb a $1.5M special education reduction. Red bars show the size of each cut. Click any node to isolate its flows.';
     } else {
-      captionEl.textContent = tierShort[tier] + ' draws ' + fmt(ov.total) +
-        ' in its first year (FY27), rising to full phase-in by FY29. The colored flows show where override money is specifically allocated. Schools receive no direct override funding in FY27; school restorations begin in FY28.';
+      var stillTotal = totalCuts - totalRestored;
+      if (stillTotal > 0) {
+        captionEl.textContent = tierShort[tier] + ' restores ' + fmt(totalRestored) + ' of the ' +
+          fmt(totalCuts) + ' in no-override cuts (' + fmt(stillTotal) + ' remains unrestored, primarily the $1.5M school special education bridge which begins in FY28). Green bars show restored amounts; red shows remaining cuts.';
+      } else {
+        captionEl.textContent = tierShort[tier] + ' restores all ' + fmt(totalCuts) +
+          ' in no-override cuts and adds new capacity. Green bars show restored amounts.';
+      }
     }
   }
 
