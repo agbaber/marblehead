@@ -4025,6 +4025,16 @@ og_url: https://marbleheaddata.org/
     if (shareStripEl) {
       shareStripEl.classList.toggle('visible', hasAny);
     }
+    // Sort unanswered questions to the top
+    if (hasAny && listEl) {
+      var cards = Array.prototype.slice.call(listEl.children);
+      cards.sort(function (a, b) {
+        var aAnswered = a.classList.contains('has-pick') ? 1 : 0;
+        var bAnswered = b.classList.contains('has-pick') ? 1 : 0;
+        return aAnswered - bAnswered;
+      });
+      cards.forEach(function (c) { listEl.appendChild(c); });
+    }
   }
 
   /* ── Share button ── */
