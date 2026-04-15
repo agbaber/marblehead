@@ -163,7 +163,7 @@ title: "Where the Money Goes"
 
 <div class="sankey-intro">
   <h1>Where the Money Goes</h1>
-  <p class="sankey-fy">FY26 general fund: revenue sources flow to spending categories. Toggle tiers to see cuts and restorations. Click any node to isolate its flows.</p>
+  <p class="sankey-fy">FY26 general fund: revenue sources flow to spending categories. Override tiers show the full annual amount at phase-in (FY29). Click any node to isolate its flows.</p>
 </div>
 
 <div class="tabs">
@@ -185,7 +185,7 @@ title: "Where the Money Goes"
 
 <div class="notes">
   <p>Town department totals from the FY26 Proposed Budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1234/FY26-Budget" data-source="FY26 Proposed Budget, Town of Marblehead"></sup> School total from FY26 School Committee approved budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1235/FY26-School-Budget" data-source="FY26 School Committee Approved Budget"></sup> Override line items and no-override cuts from the Town Administrator's April 8, 2026 override presentation.<sup class="cite" data-href="https://vimeo.com/1181632658" data-source="Select Board meeting, April 8 2026 (Vimeo 1181632658), Town Administrator override presentation"></sup> No-override school reduction from the FY27 Proposed Balanced Budget.<sup class="cite" data-href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf" data-source="FY27 Proposed Budget, page 2, Item 101"></sup></p>
-  <p>Healthcare grouping includes health insurance transfer ($11.8M), Medex ($2.5M), insurance premiums ($0.9M), Medicare reimbursement ($0.7M), and Medicare tax ($0.3M). "General government" is the sum of all remaining town departments not shown separately. General fund revenue does not have line-item earmarking; proportional ribbons are illustrative. Red indicators show FY27 no-override cuts; green shows restorations at the selected tier.</p>
+  <p>Healthcare grouping includes health insurance transfer ($11.8M), Medex ($2.5M), insurance premiums ($0.9M), Medicare reimbursement ($0.7M), and Medicare tax ($0.3M). "General government" is the sum of all remaining town departments not shown separately. General fund revenue does not have line-item earmarking; proportional ribbons are illustrative. Override amounts show the full annual commitment at phase-in (FY29). The override phases in over three years: town-side items begin in FY27, school items (special ed, kindergarten fee, technology) begin in FY28. The school share shown is the total override minus identified town-side line items; it includes COLA/step salary increases, the amounts of which are set through collective bargaining.</p>
 </div>
 
 <div class="read-next">
@@ -243,59 +243,74 @@ title: "Where the Money Goes"
     pensions:   444433
   };
 
-  /* How much of each cut is restored at each tier (FY27 only).
-     Derived from "Restore" line items in the CSV. */
+  /* How much of each cut is restored at each tier at FULL PHASE-IN (FY29).
+     All town-side cuts are restored at Tier 1+. School $1.5M special ed
+     is restored at Tier 1+ starting FY28. */
   var restorations = {
-    t1: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433, schools: 0 },
-    t2: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 0 },
-    t3: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 0 }
+    t1: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433, schools: 1500000 },
+    t2: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 1500000 },
+    t3: { safety: 119982, pw: 259286, library: 743563, gov: 660302, healthcare: 76171, pensions: 444433, schools: 1500000 }
   };
 
+  /* Override additions at FULL PHASE-IN (FY29 steady state).
+     Total = full override amount. Town side = same line items (annual).
+     School side = total minus town side.
+     Source: override_draws_schedule.csv (full draw by FY29). */
   var overrides = {
     t1: {
-      total: 1269564,
-      cats: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433 },
+      total: 9000000,
+      cats: { safety: 119982, pw: 259286, library: 356183, gov: 423625, healthcare: 76171, pensions: 444433, schools: 7730436 },
       items: [
-        ['Restore SRO, police equipment, inspections', 119982],
-        ['Restore DPW staffing, hot top, cemetery', 259286],
-        ['Restore library staffing for accreditation', 311183],
-        ['Restore rec groundskeeper', 45000],
-        ['Restore finance, HR, planning, public buildings', 423625],
-        ['Restore Council on Aging staffing', 76171],
-        ['Restore OPEB, stabilization, workers comp', 444433],
-        ['Offset: reduced unemployment costs', -410116]
+        ['Town: restore SRO, police equipment, inspections', 119982],
+        ['Town: restore DPW staffing, hot top, cemetery', 259286],
+        ['Town: restore library staffing for accreditation', 356183],
+        ['Town: restore finance, HR, planning, public buildings', 423625],
+        ['Town: restore Council on Aging staffing', 76171],
+        ['Town: restore OPEB, stabilization, workers comp', 444433],
+        ['Town: offset (reduced unemployment)', -410116],
+        ['Schools: restore special ed tuition ($1.5M/yr)', 1500000],
+        ['Schools: restore revolving fund positions', 209374],
+        ['Schools: COLA/step increases and other', 6021062]
       ]
     },
     t2: {
-      total: 2805236,
-      cats: { safety: 333464, pw: 329286, library: 823941, gov: 1430302, healthcare: 136171, pensions: 444433 },
+      total: 12000000,
+      cats: { safety: 333464, pw: 329286, library: 823941, gov: 1430302, healthcare: 136171, pensions: 444433, schools: 9194764 },
       items: [
-        ['Tier 1 restorations plus:', 0],
-        ['Increase police and fire staffing', 213482],
-        ['Add DPW GIS position', 70000],
-        ['Restore full library staffing and materials', 467758],
-        ['Add recreation staffing and maintenance', 42000],
-        ['Add IT director, budget analyst, grant writer', 220000],
-        ['Restore planning, Town Clerk, public buildings maintenance', 816302],
-        ['Add COA social worker and maintenance', 60000],
-        ['Offset: reduced unemployment costs', -692361]
+        ['Town: all Tier 1 restorations', 1269564],
+        ['Town: increase police and fire staffing', 213482],
+        ['Town: add DPW GIS, rec staffing, maintenance', 112000],
+        ['Town: restore full library staffing and materials', 467758],
+        ['Town: add IT director, budget analyst, planning, buildings', 1436302],
+        ['Town: add COA social worker and maintenance', 60000],
+        ['Town: offset (reduced unemployment)', -692361],
+        ['Schools: restore special ed tuition ($1.5M/yr)', 1500000],
+        ['Schools: remove Full Day Kindergarten fee', 710711],
+        ['Schools: technology leases', 150000],
+        ['Schools: revolving fund, COLA/step, other', 6834053]
       ]
     },
     t3: {
-      total: 4296718,
-      cats: { safety: 694946, pw: 329286, library: 823941, gov: 1500302, healthcare: 196171, pensions: 444433, capital: 1000000 },
+      total: 15000000,
+      cats: { safety: 694946, pw: 329286, library: 823941, gov: 1500302, healthcare: 196171, pensions: 444433, capital: 1000000, schools: 10703282 },
       items: [
-        ['Tier 2 restorations plus:', 0],
-        ['Further increase fire staffing (3 positions)', 296000],
-        ['Add mental health counseling (Health Dept)', 60000],
-        ['Add grant writer (Community Development)', 70000],
-        ['Recurring capital: leases, equipment, buildings', 1000000],
-        ['Offset: reduced unemployment costs', -692361]
+        ['Town: all Tier 2 restorations + new', 2805236],
+        ['Town: further increase fire staffing (3 positions)', 296000],
+        ['Town: add mental health counseling, grant writer', 130000],
+        ['Town: recurring capital (leases, equipment, buildings)', 1000000],
+        ['Town: offset (reduced unemployment)', -692361],
+        ['Schools: restore special ed tuition ($1.5M/yr)', 1500000],
+        ['Schools: remove Full Day Kindergarten fee', 710711],
+        ['Schools: technology leases', 150000],
+        ['Schools: curriculum development', 100000],
+        ['Schools: special ed program (ages 18-22)', 500000],
+        ['Schools: capital maintenance', 500000],
+        ['Schools: revolving fund, COLA/step, other', 6693571]
       ]
     }
   };
 
-  var tierLabels = { t1: 'Tier 1 ($1.3M FY27)', t2: 'Tier 2 ($2.8M FY27)', t3: 'Tier 3 ($4.3M FY27)' };
+  var tierLabels = { t1: 'Tier 1 ($9M)', t2: 'Tier 2 ($12M)', t3: 'Tier 3 ($15M)' };
   var tierShort  = { t1: 'Tier 1', t2: 'Tier 2', t3: 'Tier 3' };
 
   /* ══════════════════════════════════════════════════════
@@ -672,16 +687,12 @@ title: "Where the Money Goes"
     rightNodes.forEach(function (n) { totalCuts += n.cut; totalRestored += n.restored; });
     if (tier === 'none') {
       captionEl.textContent = 'Without an override, the FY27 budget cuts ' + fmt(totalCuts) +
-        ' across seven departments. The library loses 43% of its budget, community development loses 59%, and schools absorb a $1.5M special education reduction. Red bars show the size of each cut. Click any node to isolate its flows.';
+        ' across seven departments. The library loses 43% of its budget, community development loses 59%, and schools absorb a $1.5M special education reduction. Hatched red bars show the size of each cut.';
     } else {
-      var stillTotal = totalCuts - totalRestored;
-      if (stillTotal > 0) {
-        captionEl.textContent = tierShort[tier] + ' restores ' + fmt(totalRestored) + ' of the ' +
-          fmt(totalCuts) + ' in no-override cuts (' + fmt(stillTotal) + ' remains unrestored, primarily the $1.5M school special education bridge which begins in FY28). Green bars show restored amounts; red shows remaining cuts.';
-      } else {
-        captionEl.textContent = tierShort[tier] + ' restores all ' + fmt(totalCuts) +
-          ' in no-override cuts and adds new capacity. Green bars show restored amounts.';
-      }
+      var schoolAdd = 0;
+      rightNodes.forEach(function (n) { if (n.id === 'schools') schoolAdd = n.add; });
+      captionEl.textContent = tierShort[tier] + ' (' + fmt(ov.total) + '/year at full phase-in) restores all no-override cuts and adds new capacity. Schools receive ' + fmt(schoolAdd) +
+        ' (' + Math.round(schoolAdd / ov.total * 100) + '% of the override). The override phases in over three years (FY27-FY29); amounts shown are the annual steady state.';
     }
   }
 
