@@ -5117,14 +5117,18 @@ og_url: https://marbleheaddata.org/
 
   /* ── Related questions map ── */
   var relatedMap = {
-    override: ['voteno', 'levy', 'trust'],
-    voteno:   ['override', 'again', 'schools'],
-    schools:  ['override', 'mycost', 'voteno'],
-    levy:     ['taxrank', 'mycost', 'override'],
-    taxrank:  ['levy', 'mycost', 'schools'],
-    mycost:   ['size', 'levy', 'taxrank'],
-    size:     ['mycost', 'again', 'override'],
-    trust:    ['override', 'alternatives', 'voteno']
+    override:     ['voteno', 'levy', 'trust'],
+    voteno:       ['override', 'again', 'schools'],
+    schools:      ['override', 'mycost', 'voteno'],
+    levy:         ['taxrank', 'mycost', 'override'],
+    taxrank:      ['levy', 'mycost', 'schools'],
+    mycost:       ['size', 'levy', 'taxrank'],
+    size:         ['mycost', 'again', 'override'],
+    again:        ['size', 'override', 'voteno'],
+    alternatives: ['override', 'levy', 'trust'],
+    trash:        ['mycost', 'voteno', 'taxrank'],
+    library:      ['voteno', 'override', 'mycost'],
+    trust:        ['override', 'alternatives', 'voteno']
   };
 
   /* ── Topic order (for progress dots) ── */
