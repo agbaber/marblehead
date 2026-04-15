@@ -118,6 +118,50 @@ og_url: https://marbleheaddata.org/
   .explore-mini-pos.picked[data-pos="b"] { background: var(--c-brass); box-shadow: 0 0 6px color-mix(in srgb, var(--c-brass) 40%, transparent); }
   .explore-mini-pos.picked[data-pos="c"] { background: var(--c-buoy); box-shadow: 0 0 6px color-mix(in srgb, var(--c-buoy) 40%, transparent); }
 
+  /* Community split bar on landing cards (visible only after picking) */
+  .explore-card-dist {
+    display: none;
+    grid-column: 1 / -1;
+    margin-top: 6px;
+  }
+  .explore-question-card.has-pick .explore-card-dist { display: block; }
+  .explore-card-dist-bar {
+    display: flex;
+    height: 4px;
+    border-radius: 2px;
+    overflow: hidden;
+    background: var(--border);
+  }
+  .explore-card-dist-bar span {
+    min-width: 0;
+    transition: width 0.4s ease-out;
+  }
+  .explore-card-dist-bar .cd-a { background: var(--c-teal); }
+  .explore-card-dist-bar .cd-b { background: var(--c-brass); }
+  .explore-card-dist-bar .cd-c { background: var(--c-buoy); }
+  .explore-card-dist-legend {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+    font-size: 0.5625rem;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  .explore-card-dist-legend span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .explore-card-dist-legend .cd-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .cd-dot-a { background: var(--c-teal); }
+  .cd-dot-b { background: var(--c-brass); }
+  .cd-dot-c { background: var(--c-buoy); }
+
   /* Icon */
   .explore-card-icon {
     grid-column: 1;
@@ -4556,6 +4600,8 @@ og_url: https://marbleheaddata.org/
     if (currentTopic && selections[currentTopic]) {
       showPickDistribution(currentTopic);
     }
+    // Refresh landing card distribution bars
+    updateLandingCards();
   }
 
   // Update the social proof bar on the active question screen
@@ -5118,12 +5164,17 @@ og_url: https://marbleheaddata.org/
     });
     btn.appendChild(posRow);
 
+    /* Community split bar (populated later from socialCounts) */
+    var distEl = document.createElement('div');
+    distEl.className = 'explore-card-dist';
+    btn.appendChild(distEl);
+
     btn.addEventListener('click', function () {
       switchTopic(topic);
       window.scrollTo(0, 0);
     });
     listEl.appendChild(btn);
-    landingCards[topic] = { el: btn, pips: pips };
+    landingCards[topic] = { el: btn, pips: pips, dist: distEl };
   });
 
   /* Update landing cards to reflect current selections */
@@ -5140,8 +5191,28 @@ og_url: https://marbleheaddata.org/
         hasAny = true;
         card.pips[answer].classList.add('picked');
         card.el.classList.add('has-pick');
+        // Populate community split bar from server counts
+        var picks = (socialCounts[topic] || {}).picks || {};
+        var total = (picks.a || 0) + (picks.b || 0) + (picks.c || 0);
+        if (total > 0 && card.dist) {
+          var pA = Math.round(((picks.a || 0) / total) * 100);
+          var pB = Math.round(((picks.b || 0) / total) * 100);
+          var pC = 100 - pA - pB;
+          card.dist.innerHTML =
+            '<div class="explore-card-dist-bar">' +
+              '<span class="cd-a" style="width:' + pA + '%"></span>' +
+              '<span class="cd-b" style="width:' + pB + '%"></span>' +
+              '<span class="cd-c" style="width:' + pC + '%"></span>' +
+            '</div>' +
+            '<div class="explore-card-dist-legend">' +
+              '<span><span class="cd-dot cd-dot-a"></span>A ' + pA + '%</span>' +
+              '<span><span class="cd-dot cd-dot-b"></span>B ' + pB + '%</span>' +
+              '<span><span class="cd-dot cd-dot-c"></span>C ' + pC + '%</span>' +
+            '</div>';
+        }
       } else {
         card.el.classList.remove('has-pick');
+        if (card.dist) card.dist.innerHTML = '';
       }
     });
     // Show share buttons if any selections
