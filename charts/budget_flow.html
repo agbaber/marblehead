@@ -24,9 +24,9 @@ title: "Where the Money Goes"
   .sk-node-freeCash   { fill: var(--c-brass); }
   .sk-node-local      { fill: var(--c-sage); }
   .sk-node-other      { fill: var(--text-subtle); }
-  .sk-node-override-t1 { fill: var(--series-tier-1); }
-  .sk-node-override-t2 { fill: var(--series-tier-2); }
-  .sk-node-override-t3 { fill: var(--series-tier-3); }
+  .sk-node-override-t1,
+  .sk-node-override-t2,
+  .sk-node-override-t3 { fill: #3A9A5B; }
 
   .sk-node-schools    { fill: var(--c-navy); }
   .sk-node-healthcare { fill: var(--c-buoy); }
@@ -44,15 +44,16 @@ title: "Where the Money Goes"
     opacity: 0.07;
   }
   .sk-ribbon-base:hover { opacity: 0.18; }
-  .sk-ribbon-override { opacity: 0.4; }
-  .sk-ribbon-override:hover { opacity: 0.6; }
-  .sk-ribbon-override.tier-t1 { fill: var(--series-tier-1); }
-  .sk-ribbon-override.tier-t2 { fill: var(--series-tier-2); }
-  .sk-ribbon-override.tier-t3 { fill: var(--series-tier-3); }
+  .sk-ribbon-override {
+    fill: #3A9A5B;
+    opacity: 0.45;
+  }
+  .sk-ribbon-override:hover { opacity: 0.65; }
 
-  /* When focused, base ribbons are more visible since fewer are shown */
+  /* When focused, fewer ribbons shown so boost visibility */
   .sankey-wrap.is-focused .sk-ribbon-base { opacity: 0.15; }
   .sankey-wrap.is-focused .sk-ribbon-base:hover { opacity: 0.3; }
+  .sankey-wrap.is-focused .sk-ribbon-override { opacity: 0.6; }
 
   /* Labels */
   .sk-label {
@@ -66,20 +67,18 @@ title: "Where the Money Goes"
     font-weight: 700;
     fill: var(--text-muted);
   }
-  .sk-label-override { font-weight: 700; }
-  .sk-label-override.tier-t1 { fill: var(--series-tier-1); }
-  .sk-label-override.tier-t2 { fill: var(--series-tier-2); }
-  .sk-label-override.tier-t3 { fill: var(--series-tier-3); }
+  .sk-label-override { font-weight: 700; fill: #3A9A5B; }
 
-  /* Delta indicators (cuts & restorations) */
-  .sk-delta-cut  { fill: var(--c-buoy); }
-  .sk-delta-gain { fill: var(--c-sage); }
+  /* Delta indicators -- use SVG patterns so they're visually distinct
+     from node fills (Healthcare shares --c-buoy, the old cut color) */
+  .sk-delta-cut  { fill: url(#pat-cut); }
+  .sk-delta-gain { fill: url(#pat-gain); }
   .sk-delta-label {
     font-size: 9px;
     font-weight: 700;
   }
-  .sk-delta-label-cut  { fill: var(--c-buoy); }
-  .sk-delta-label-gain { fill: var(--c-sage); }
+  .sk-delta-label-cut  { fill: #D94040; }
+  .sk-delta-label-gain { fill: #3A9A5B; }
 
   /* Column headers */
   .sk-col-header {
@@ -520,6 +519,18 @@ title: "Where the Money Goes"
     /* ── Build SVG ── */
     var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg"' +
               ' role="img" aria-label="Sankey diagram showing FY26 general fund flows with budget cuts and override restorations">';
+
+    /* SVG pattern definitions for cut/gain bands */
+    svg += '<defs>';
+    svg += '<pattern id="pat-cut" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">';
+    svg += '<rect width="6" height="6" fill="#D94040"/>';
+    svg += '<line x1="0" y1="0" x2="0" y2="6" stroke="rgba(0,0,0,0.3)" stroke-width="2"/>';
+    svg += '</pattern>';
+    svg += '<pattern id="pat-gain" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">';
+    svg += '<rect width="6" height="6" fill="#3A9A5B"/>';
+    svg += '<line x1="0" y1="0" x2="0" y2="6" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>';
+    svg += '</pattern>';
+    svg += '</defs>';
 
     /* Column headers */
     svg += '<text class="sk-col-header" x="' + (lx + nodeW / 2) + '" y="' + (padTop - 14) + '" text-anchor="middle">Revenue</text>';
