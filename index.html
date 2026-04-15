@@ -5412,14 +5412,23 @@ og_url: https://marbleheaddata.org/
     titleSpan.textContent = h1.textContent;
     btn.appendChild(titleSpan);
 
-    /* Context subtitle */
+    /* Context subtitle. When the reader has picked an answer for this
+       topic, this slot recaps their choice instead of re-explaining
+       the question. We stash the original elaboration text and the
+       per-answer headings so updateLandingCards() can swap between
+       them without re-querying the DOM. */
     var ctxP = screen.querySelector('.question-context');
-    if (ctxP) {
-      var ctxSpan = document.createElement('span');
-      ctxSpan.className = 'explore-card-context';
-      ctxSpan.textContent = ctxP.textContent.trim();
-      btn.appendChild(ctxSpan);
-    }
+    var ctxText = ctxP ? ctxP.textContent.trim() : '';
+    var answerHeadings = {};
+    ['a', 'b', 'c'].forEach(function (pos) {
+      var ac = screen.querySelector('.answer-card[data-answer="' + pos + '"]');
+      var h2 = ac ? ac.querySelector('h2') : null;
+      if (h2) answerHeadings[pos] = h2.textContent.trim();
+    });
+    var ctxSpan = document.createElement('span');
+    ctxSpan.className = 'explore-card-context';
+    ctxSpan.textContent = ctxText;
+    btn.appendChild(ctxSpan);
 
     /* Mini position indicators (a, b, c, u). The 'u' pip is the
        muted "Not sure yet" state -- lights up when the reader's
@@ -5446,7 +5455,14 @@ og_url: https://marbleheaddata.org/
       window.scrollTo(0, 0);
     });
     listEl.appendChild(btn);
-    landingCards[topic] = { el: btn, pips: pips, dist: distEl };
+    landingCards[topic] = {
+      el: btn,
+      pips: pips,
+      dist: distEl,
+      ctxSpan: ctxSpan,
+      ctxText: ctxText,
+      answerHeadings: answerHeadings
+    };
   });
 
   /* Update landing cards to reflect current selections */
@@ -5463,6 +5479,14 @@ og_url: https://marbleheaddata.org/
         hasAny = true;
         if (card.pips[answer]) card.pips[answer].classList.add('picked');
         card.el.classList.add('has-pick');
+        // Recap the reader's pick in the subheader slot. For 'u'
+        // (Not sure yet) there's no answer heading to show, so keep
+        // the original question elaboration -- the muted pip already
+        // signals the unsure state.
+        if (card.ctxSpan) {
+          var recap = card.answerHeadings[answer];
+          card.ctxSpan.textContent = recap || card.ctxText;
+        }
         // Populate community split bar from server counts. 'u' is a
         // real fourth segment; the muted pip keeps it from competing
         // visually with the three real positions.
@@ -5493,6 +5517,7 @@ og_url: https://marbleheaddata.org/
       } else {
         card.el.classList.remove('has-pick');
         if (card.dist) card.dist.innerHTML = '';
+        if (card.ctxSpan) card.ctxSpan.textContent = card.ctxText;
       }
     });
     // Show share buttons if any selections
