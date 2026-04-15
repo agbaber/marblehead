@@ -5168,6 +5168,13 @@ og_url: https://marbleheaddata.org/
     if (typeof posthog !== 'undefined') {
       posthog.capture('explore_shared_viewed', { position_count: pairs.length });
     }
+
+    // Save the viewer's own selections so we can restore them later.
+    var savedOwnSelections = {};
+    Object.keys(selections).forEach(function (k) { savedOwnSelections[k] = selections[k]; });
+
+    // Temporarily overwrite selections with the shared picks for display.
+    Object.keys(selections).forEach(function (k) { delete selections[k]; });
     pairs.forEach(function (pair) {
       var parts = pair.split(':');
       if (parts.length === 2) {
@@ -5190,12 +5197,14 @@ og_url: https://marbleheaddata.org/
     // Hide "Share your positions" button in shared view
     if (shareStripEl) shareStripEl.style.display = 'none';
 
-    // "Start fresh" clears shared picks and restores normal landing
+    // "Start fresh" restores the viewer's own picks (not blank)
     document.getElementById('sharedFresh').addEventListener('click', function () {
       if (typeof posthog !== 'undefined') {
         posthog.capture('explore_shared_start_fresh');
       }
+      // Restore viewer's own selections
       Object.keys(selections).forEach(function (k) { delete selections[k]; });
+      Object.keys(savedOwnSelections).forEach(function (k) { selections[k] = savedOwnSelections[k]; });
       isSharedView = false;
       if (headingEl) headingEl.textContent = 'Do we need an override?';
       if (subEl) subEl.textContent = 'Each question shows the strongest case for every answer. Pick the one you agree with. Your picks build into a set of positions you can review or share.';
