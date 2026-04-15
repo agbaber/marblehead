@@ -148,10 +148,41 @@
     navInner.scrollLeft = Math.max(0, target);
   })();
 
-  // Theme toggle
+  // Theme toggle + lighthouse beam sweep
   (function () {
     var btn = document.querySelector('.theme-toggle');
     if (!btn) return;
+
+    // Lighthouse lamp position: 50% x, 17.5% y of the watermark SVG.
+    // Watermark CSS: bottom: -150px; right: 0; height: 1260px; width: 840px.
+    function getLampPos() {
+      var h = 1260, w = 840, r = 0, b = -150;
+      var elBottomY = window.innerHeight - b;
+      var elTopY = elBottomY - h;
+      var elRightX = window.innerWidth - r;
+      var elLeftX = elRightX - w;
+      return { x: elLeftX + w * 0.50, y: elTopY + h * 0.175 };
+    }
+
+    var beamEl = null;
+    function fireBeam() {
+      if (beamEl && beamEl.parentNode) beamEl.parentNode.removeChild(beamEl);
+      var pos = getLampPos();
+      beamEl = document.createElement('div');
+      beamEl.className = 'beam-light';
+      beamEl.style.left = pos.x + 'px';
+      beamEl.style.top = pos.y + 'px';
+      beamEl.style.marginLeft = '-40vw';
+      beamEl.style.marginTop = '-5px';
+      document.body.appendChild(beamEl);
+      void beamEl.offsetWidth;
+      beamEl.classList.add('sweeping');
+      beamEl.addEventListener('animationend', function () {
+        if (beamEl && beamEl.parentNode) beamEl.parentNode.removeChild(beamEl);
+        beamEl = null;
+      });
+    }
+
     btn.addEventListener('click', function () {
       var current = document.documentElement.getAttribute('data-theme');
       var next = current === 'dark' ? 'light' : 'dark';
@@ -160,6 +191,7 @@
       if (typeof posthog !== 'undefined') {
         posthog.capture('theme_toggled', { theme: next });
       }
+      if (next === 'dark') fireBeam();
     });
   })();
 </script>
