@@ -79,7 +79,7 @@ Do not reintroduce `Explainer`, `History`, `Analysis`, `Guide`, `Read`, or any o
 | `--c-surface` | #FFFFFF | Card/container background |
 | `--c-navy` | #1B3A57 | Marblehead, primary accent |
 | `--c-buoy` | #C8553D | Melrose, costs, warnings |
-| `--c-teal` | #2F7D8E | Links, Tier 1 |
+| `--c-teal` | #2F7D8E | Links, Tier 2 |
 | `--c-brass` | #B8860B | Swampscott |
 | `--c-sage` | #5B7553 | Revenue, positive |
 | `--c-plum` | #6C4A6E | Stoneham |
@@ -93,6 +93,9 @@ Do not reintroduce `Explainer`, `History`, `Analysis`, `Guide`, `Read`, or any o
 | `--series-stoneham` | plum | Stoneham data |
 | `--series-revenue` | sage | Revenue/levy lines |
 | `--series-cost` | buoy | Cost/expense lines |
+| `--series-tier-1` | #6BB8C9 | Override Tier 1 (light teal) |
+| `--series-tier-2` | teal | Override Tier 2 |
+| `--series-tier-3` | #133E4A | Override Tier 3 (dark teal) |
 | `--series-neutral` | text | Single-series charts |
 
 ## SVG Chart Classes
