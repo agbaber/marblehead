@@ -701,7 +701,7 @@ title: "Where the Money Goes"
     btn.addEventListener('click', function () {
       document.querySelectorAll('.tab').forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      render(btn.dataset.tier, null);
+      render(btn.dataset.tier, focusedNode);
     });
   });
 
