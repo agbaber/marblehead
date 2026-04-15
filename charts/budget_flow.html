@@ -584,15 +584,18 @@ title: "Where the Money Goes"
       /* Base node rect */
       svg += '<rect class="sk-node sk-node-' + n.id + '" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + n.h + '" rx="2" data-node="' + n.id + '"/>';
 
-      /* Green band at TOP: total override addition (grows with each tier).
-         Red band at BOTTOM: remaining unrestored cuts. */
+      /* Green band at BOTTOM: override additions (grows with each tier),
+         aligning with where override ribbons connect into the node.
+         Red band above green: remaining unrestored cuts. */
+      var bandBottom = n.y + n.h;
       if (n.add > 0) {
         var addH = Math.max((n.add / n.value) * n.h, 2);
-        svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + n.y + '" width="' + nodeW + '" height="' + addH + '" rx="0"/>';
+        svg += '<rect class="sk-delta-gain" x="' + n.x + '" y="' + (bandBottom - addH) + '" width="' + nodeW + '" height="' + addH + '" rx="0"/>';
+        bandBottom -= addH;
       }
       if (n.stillCut > 0) {
         var stillH = Math.max((n.stillCut / n.value) * n.h, 2);
-        svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + (n.y + n.h - stillH) + '" width="' + nodeW + '" height="' + stillH + '" rx="0"/>';
+        svg += '<rect class="sk-delta-cut" x="' + n.x + '" y="' + (bandBottom - stillH) + '" width="' + nodeW + '" height="' + stillH + '" rx="0"/>';
       }
 
       var ly = n.y + n.h / 2;
