@@ -78,6 +78,7 @@
   --gutter:    16px;
 
   /* Typography */
+  --font-heading: "Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
@@ -730,6 +731,7 @@ h2[id] { scroll-margin-top: 68px; }
    Typography
    ========================================================================== */
 
+h1, h2, h3 { font-family: var(--font-heading); }
 h1 {
   font-size: 1.375rem; font-weight: 700; color: var(--text);
   letter-spacing: -0.3px; line-height: 1.25; margin-bottom: 6px;
