@@ -51,16 +51,22 @@ jobs:
           gem install 'jekyll:3.10.0' kramdown-parser-gfm
           jekyll build
 
-      # Idempotent: creates the Pages project on first run, no-ops after.
-      # The API returns 200 on create and a 4xx with errorcode 8000007 when
-      # the project already exists. We treat "exists" as success and fail
-      # loudly on anything else so token/account issues surface here, not
-      # deep inside wrangler.
+      # Idempotent: GET first to see if the project exists, POST to create
+      # it if not. This avoids guessing which error code CF returns when a
+      # project already exists (the code has shifted across API versions).
       - name: Ensure Pages project exists
         env:
           CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CF_TOKEN: ${{ secrets.CLOUDFLARE_API_KEY }}
         run: |
+          status=$(curl -sS -o /tmp/cf-get.json -w "%{http_code}" \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/pages/projects/marbleheaddata-preview" \
+            -H "Authorization: Bearer ${CF_TOKEN}")
+          if [ "$status" = "200" ]; then
+            echo "Project already exists."
+            exit 0
+          fi
+          echo "Project not found (HTTP $status). Creating..."
           body=$(curl -sS -X POST \
             "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/pages/projects" \
             -H "Authorization: Bearer ${CF_TOKEN}" \
@@ -68,13 +74,11 @@ jobs:
             --data '{"name":"marbleheaddata-preview","production_branch":"main"}')
           echo "$body"
           success=$(echo "$body" | jq -r '.success')
-          exists=$(echo "$body" | jq -r '.errors // [] | map(select(.code == 8000007)) | length')
-          if [ "$success" = "true" ] || [ "$exists" != "0" ]; then
-            echo "Project ready."
-          else
+          if [ "$success" != "true" ]; then
             echo "Project create failed."
             exit 1
           fi
+          echo "Project created."
 
       - name: Deploy to Cloudflare Pages
         id: deploy
