@@ -5,18 +5,18 @@ name: PR Preview
 # the change in a browser without pulling the branch locally.
 #
 # Setup (one-time, outside this workflow):
-#   1. In the Cloudflare dashboard, create a Pages project named
-#      "marbleheaddata-preview" (Direct Upload, no Git integration).
-#   2. Create an API token with "Cloudflare Pages - Edit" permission.
-#   3. Add two repo secrets:
-#        CLOUDFLARE_API_KEY     - the scoped API token from step 2
+#   1. Create an API token with "Cloudflare Pages - Edit" permission.
+#   2. Add two repo secrets:
+#        CLOUDFLARE_API_KEY     - the scoped API token from step 1
 #                                 (named API_KEY for historical reasons;
 #                                 the value is a scoped token, not the
 #                                 legacy Global API Key)
 #        CLOUDFLARE_ACCOUNT_ID  - your Cloudflare account ID
 #
-# With those secrets in place, every PR gets a preview URL posted as
-# a sticky comment on the PR. New pushes update the same comment.
+# The workflow creates the "marbleheaddata-preview" Pages project via
+# the Cloudflare API on first run; no dashboard click-through needed.
+# Every PR gets a preview URL posted as a sticky comment, updated
+# in place on each new push.
 
 on:
   pull_request:
@@ -50,6 +50,31 @@ jobs:
         run: |
           gem install 'jekyll:3.10.0' kramdown-parser-gfm
           jekyll build
+
+      # Idempotent: creates the Pages project on first run, no-ops after.
+      # The API returns 200 on create and a 4xx with errorcode 8000007 when
+      # the project already exists. We treat "exists" as success and fail
+      # loudly on anything else so token/account issues surface here, not
+      # deep inside wrangler.
+      - name: Ensure Pages project exists
+        env:
+          CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_KEY }}
+        run: |
+          body=$(curl -sS -X POST \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/pages/projects" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data '{"name":"marbleheaddata-preview","production_branch":"main"}')
+          echo "$body"
+          success=$(echo "$body" | jq -r '.success')
+          exists=$(echo "$body" | jq -r '.errors // [] | map(select(.code == 8000007)) | length')
+          if [ "$success" = "true" ] || [ "$exists" != "0" ]; then
+            echo "Project ready."
+          else
+            echo "Project create failed."
+            exit 1
+          fi
 
       - name: Deploy to Cloudflare Pages
         id: deploy
