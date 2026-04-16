@@ -1766,6 +1766,18 @@
     line-height: 1.4;
   }
   .wyl-topic-pick--u { font-style: italic; }
+  /* Evidence excerpt: spans both columns of the grid as a third row,
+     so the answer heading stays clean on the right and the substance
+     reads as a quote underneath. */
+  .wyl-topic-detail {
+    grid-column: 1 / -1;
+    margin-top: 6px;
+    padding-left: 10px;
+    border-left: 2px solid var(--c-border);
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--c-text-mid);
+  }
   .wyl-open {
     margin-top: 16px;
     padding-top: 12px;
@@ -1882,6 +1894,7 @@
     .wyl-title { font-size: 18px; }
     .wyl-topic-link { grid-template-columns: 1fr; gap: 2px; padding: 8px; }
     .wyl-topic-pick { text-align: left; }
+    .wyl-topic-detail { padding-left: 8px; font-size: 12.5px; }
   }
 
   @media (max-width: 599px) {

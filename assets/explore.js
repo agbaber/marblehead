@@ -1163,6 +1163,32 @@
     trust:        'Trusting the decision-makers'
   };
 
+  // Pull the first substantive sentence out of an evidence panel so the
+  // synthesis recap shows real content, not just the answer-card heading.
+  // Caches per topic+answer since evidence content is static at load time.
+  var _evidenceExcerptCache = {};
+  function getEvidenceExcerpt(topic, answer) {
+    var key = topic + '-' + answer;
+    if (key in _evidenceExcerptCache) return _evidenceExcerptCache[key];
+    var panel = document.querySelector('.evidence[data-evidence="' + key + '"]');
+    if (!panel) { _evidenceExcerptCache[key] = null; return null; }
+    // Prefer .caption (the chart caption is usually the punchiest line);
+    // fall back to the first paragraph of the first evidence-point;
+    // fall back again to any direct paragraph in the panel.
+    var src = panel.querySelector('.caption')
+      || panel.querySelector('.evidence-point p')
+      || panel.querySelector('p');
+    if (!src) { _evidenceExcerptCache[key] = null; return null; }
+    var text = (src.textContent || '').replace(/\s+/g, ' ').trim();
+    if (text.length < 40) { _evidenceExcerptCache[key] = null; return null; }
+    // First sentence: stop at the first ". " or "? " (common end-of-sentence
+    // boundary that doesn't trip on "FY24." or "$1.5M").
+    var match = text.match(/^[^.?!]*[.?!](?=\s|$)/);
+    var excerpt = match ? match[0].trim() : text.slice(0, 180).trim() + '\u2026';
+    _evidenceExcerptCache[key] = excerpt;
+    return excerpt;
+  }
+
   function updateSynthesis() {
     var panel = document.getElementById('whereYouLanded');
     if (!panel) return;
@@ -1247,6 +1273,19 @@
             pick.textContent = heading || ('Picked ' + ans.toUpperCase());
           }
           btn.appendChild(pick);
+
+          // Evidence excerpt: a real sentence from the picked answer's
+          // evidence panel so the recap carries substance, not just a
+          // label. Skipped for "Not sure yet" since there's no evidence.
+          if (ans !== 'u') {
+            var excerpt = getEvidenceExcerpt(topic, ans);
+            if (excerpt) {
+              var detail = document.createElement('span');
+              detail.className = 'wyl-topic-detail';
+              detail.textContent = excerpt;
+              btn.appendChild(detail);
+            }
+          }
 
           li.appendChild(btn);
           ul.appendChild(li);
