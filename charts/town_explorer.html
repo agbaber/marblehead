@@ -608,7 +608,7 @@ scripts: [citations]
     });
   }
   // Columns where high = notable (default descending)
-  var DESC_DEFAULT = { p: true, ipc: true, epc: true, ng: true };
+  var DESC_DEFAULT = { p: true, ipc: true, epc: true, ng: true, rpct: true };
   function applySort(col) {
     if (sortCol === col) { sortAsc = !sortAsc; }
     else { sortCol = col; sortAsc = !DESC_DEFAULT[col]; }
