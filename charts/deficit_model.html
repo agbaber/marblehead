@@ -218,6 +218,17 @@ title: "Deficit Dynamics Model"
     font-family: inherit;
     font-weight: 600;
   }
+  .dm-svg .dm-constrained-line {
+    fill: none;
+    stroke: var(--c-buoy);
+    stroke-width: 1.5;
+    stroke-dasharray: 3 3;
+    opacity: 0.5;
+  }
+  .dm-svg .dm-cuts-fill {
+    fill: var(--c-buoy);
+    opacity: 0.08;
+  }
   .dm-svg .dm-end-label-rev {
     fill: var(--c-sage);
   }
@@ -311,10 +322,13 @@ title: "Deficit Dynamics Model"
   <path id="dm-exp-proj" class="dm-exp-line dm-line-proj"></path>
   <circle id="dm-crossover-dot" class="dm-crossover-dot dm-hidden" r="4"></circle>
   <text id="dm-crossover-label" class="dm-crossover-label dm-hidden"></text>
+  <g id="dm-cuts-fill"></g>
+  <path id="dm-constrained" class="dm-constrained-line dm-hidden"></path>
   <rect id="dm-override-band" class="dm-override-band dm-hidden"></rect>
   <text id="dm-override-label" class="dm-override-label dm-hidden" text-anchor="middle"></text>
   <text id="dm-end-rev" class="dm-end-label dm-end-label-rev"></text>
   <text id="dm-end-exp" class="dm-end-label dm-end-label-exp"></text>
+  <text id="dm-end-constrained" class="dm-end-label dm-end-label-exp dm-hidden"></text>
   <g id="dm-legend"></g>
 </svg>
 
@@ -628,7 +642,20 @@ title: "Deficit Dynamics Model"
       rev.push(r);
       exp.push(e);
     }
-    return { rev: rev, exp: exp, override: ovr };
+
+    // Constrained expense line: what happens if there's no override
+    // and the town must balance its budget (expenses capped at revenue)
+    var constrained = histExp.slice();
+    var cr = histRev[lastHistIdx];
+    var ce = histExp[lastHistIdx] - positionCuts * costPerPosition - hc.net;
+    for (var i = histCount; i < nYears; i++) {
+      cr = cr * (1 + revG);
+      ce = ce * (1 + expG);
+      // No override revenue for constrained line
+      constrained.push(Math.min(ce, cr));
+    }
+
+    return { rev: rev, exp: exp, constrained: constrained, override: ovr };
   }
 
   // === Compute tier chart data (with exact CSV draws) ===
@@ -825,6 +852,32 @@ title: "Deficit Dynamics Model"
       xScale, mT, plotH, data.override
     );
 
+    // Constrained expense line (what gets spent if no override)
+    var constrained = data.constrained;
+    var constrainedEl = document.getElementById('dm-constrained');
+    var endConstrainedEl = document.getElementById('dm-end-constrained');
+    var cutsFillG = document.getElementById('dm-cuts-fill');
+    cutsFillG.innerHTML = '';
+
+    // Show constrained line when there's an override and ratchet is on
+    // (this is when the gap between "wants" and "can afford" matters)
+    var showConstrained = data.override > 0 && ratchetEl.checked;
+    if (showConstrained) {
+      constrainedEl.setAttribute('d', buildPath(constrained, lastHistIdx, nYears - 1, xScale, yScale));
+      constrainedEl.classList.remove('dm-hidden');
+
+      // Fill between expense line and constrained line (the "cost of not overriding" = services that get cut)
+      var cutFill = buildSurplusPath(exp, constrained, lastHistIdx, nYears - 1, xScale, yScale);
+      if (cutFill) {
+        var cfPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        cfPath.setAttribute('d', cutFill);
+        cfPath.setAttribute('class', 'dm-cuts-fill');
+        cutsFillG.appendChild(cfPath);
+      }
+    } else {
+      constrainedEl.classList.add('dm-hidden');
+    }
+
     // End labels
     var li = nYears - 1;
     var endRev = document.getElementById('dm-end-rev');
@@ -838,6 +891,21 @@ title: "Deficit Dynamics Model"
     endExp.setAttribute('text-anchor', 'start');
     endExp.textContent = fmtEnd(exp[li]);
 
+    // Constrained end label
+    if (showConstrained) {
+      var cEndY = yScale(constrained[li]) + 4;
+      // Avoid overlapping with revenue end label
+      var revEndY = yScale(rev[li]) + 4;
+      if (Math.abs(cEndY - revEndY) < 12) cEndY = revEndY + 12;
+      endConstrainedEl.setAttribute('x', xScale(li) + 6);
+      endConstrainedEl.setAttribute('y', cEndY);
+      endConstrainedEl.setAttribute('text-anchor', 'start');
+      endConstrainedEl.textContent = fmtEnd(constrained[li]) + ' (if cut)';
+      endConstrainedEl.classList.remove('dm-hidden');
+    } else {
+      endConstrainedEl.classList.add('dm-hidden');
+    }
+
     // Readout
     var gap = exp[li] - rev[li];
     if (gap > 0.05) {
@@ -849,6 +917,17 @@ title: "Deficit Dynamics Model"
     } else {
       gapEl.textContent = taxMode ? '$0/yr' : '$0.0M';
       gapLabelEl.textContent = 'balanced';
+    }
+    // Show forced cuts readout when constrained line is visible
+    if (showConstrained) {
+      var forcedCuts = exp[li] - constrained[li];
+      if (forcedCuts > 0.05) {
+        gapHintEl.textContent = 'Without the override, ' + fmtM(forcedCuts) + ' in services would need to be cut at FY' + endYear + ' to balance the budget. The dashed line shows spending if constrained to revenue.';
+      } else {
+        gapHintEl.textContent = 'Move the sliders, or click a preset below the chart, to see how it changes.';
+      }
+    } else {
+      gapHintEl.textContent = 'Move the sliders, or click a preset below the chart, to see how it changes.';
     }
   }
 
