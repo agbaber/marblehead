@@ -689,7 +689,8 @@ scripts: [citations]
     sortExplainer.innerHTML = COL_EXPLAINERS[sortCol] || '';
   }
   // Columns where high = notable (default descending)
-  var DESC_DEFAULT = { p: true, ipc: true, epc: true, ng: true, rpct: true, ahv: true, ovr: true, yso: true };
+  // Everything defaults ascending: bars climb left to right, low values first.
+  var DESC_DEFAULT = {};
   function applySort(col) {
     if (sortCol === col) { sortAsc = !sortAsc; }
     else { sortCol = col; sortAsc = !DESC_DEFAULT[col]; }
