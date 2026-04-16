@@ -326,14 +326,15 @@ title: "Deficit Dynamics Model"
       <input type="checkbox" id="dm-ratchet">
       <div>
         <label for="dm-ratchet" class="dm-toggle-label">Ratchet: expense line jumps with the override</label>
-        <div class="dm-hint">If on, passing the override also bumps the expense line by the same amount. This models the theory that governments spend whatever they take in.</div>
+        <div class="dm-hint">If on, passing the override also bumps the expense line by the same amount. This models the pattern where available revenue sets the spending ceiling: new revenue gets allocated to deferred needs, and the structural gap reopens.</div>
       </div>
     </div>
   </div>
   <div class="dm-presets">
-    <button type="button" data-preset="baseline">Baseline (no override)</button>
-    <button type="button" data-preset="no-ratchet">Override, no ratchet</button>
-    <button type="button" data-preset="ratchet">Override with ratchet</button>
+    <button type="button" data-preset="baseline">No override</button>
+    <button type="button" data-preset="tier1">Tier 1 ($9M)</button>
+    <button type="button" data-preset="tier2">Tier 2 ($12M)</button>
+    <button type="button" data-preset="tier3">Tier 3 ($15M)</button>
   </div>
 </div>
 
@@ -371,7 +372,7 @@ title: "Deficit Dynamics Model"
 
 <p>The right side of the chart projects both lines forward from the FY24 actuals. The sliders control the annual growth rates. At the historical averages (revenue 3.7%, expenses 4.0%), the gap widens steadily. An override shifts the revenue line up over three years (FY27 to FY29); whether that closes the gap depends on whether expenses ratchet up with it or hold their prior slope.</p>
 
-<p>The "ratchet" theory says that when the revenue line jumps from an override, the expense line jumps right along with it, because officials adapt spending to the new ceiling. If that's true, the gap never closes. Toggle the ratchet on to see that scenario.</p>
+<p>The "ratchet" pattern: when the revenue line jumps from an override, the expense line jumps right along with it, because the new revenue gets allocated to deferred needs (restoring cut positions, catching up on maintenance, funding programs that were on hold). If that happens, the gap reopens. Toggle the ratchet on to see that scenario.</p>
 
 <p>The alternative: the two slopes are set by different forces. Revenue is capped by <abbr class="g" title="Proposition 2&frac12;, the Massachusetts law limiting annual property tax levy increases to 2.5% plus new growth">Prop 2&frac12;</abbr>. Expenses are driven by health insurance rates, pension assessments, and contractual wages. In that model, an override can close the gap for a period, and it reopens only if the expense slope stays steeper than the revenue slope.</p>
 
@@ -495,34 +496,34 @@ title: "Deficit Dynamics Model"
     var rv = parseFloat(revGrowthEl.value);
     var ev = parseFloat(expGrowthEl.value);
 
-    // Revenue hints
+    // Revenue hints: what has to be true for this growth rate
     if (rv < 1.5) {
-      revHintEl.textContent = 'Well below Prop 2\u00BD. Would require declining assessed values or negative new growth.';
+      revHintEl.textContent = 'Assessed values would need to decline or new construction would need to stop. Marblehead has not seen sub-1.5% levy growth in the ACFR period.';
     } else if (rv < 2.5) {
-      revHintEl.textContent = 'Prop 2\u00BD only, minimal new growth from development.';
+      revHintEl.textContent = 'Prop 2\u00BD ceiling only, with essentially zero new growth. Would mean no significant new construction or development adding to the tax base.';
     } else if (rv < 3.2) {
-      revHintEl.textContent = 'Modest new growth. Below Marblehead\u2019s FY15 to FY24 average of 3.7%.';
+      revHintEl.textContent = 'Below Marblehead\u2019s FY15 to FY24 average of 3.7%. Assumes new growth from construction and development slows from recent levels.';
     } else if (rv < 4.2) {
-      revHintEl.textContent = 'Near Marblehead\u2019s FY15 to FY24 average of 3.7%. Typical Prop 2\u00BD plus new growth.';
+      revHintEl.textContent = 'Near Marblehead\u2019s FY15 to FY24 average (3.7%). Prop 2\u00BD plus typical new growth from residential construction and development.';
     } else if (rv < 5.0) {
-      revHintEl.textContent = 'Above historical average. Would need significant new development revenue.';
+      revHintEl.textContent = 'Above historical average. Would require a surge in new development (e.g., Highlands 40B or other large projects) adding unusually high new growth.';
     } else {
-      revHintEl.textContent = 'Well above historical. Rarely achieved without an override or major development.';
+      revHintEl.textContent = 'Marblehead has not sustained 5%+ levy growth. Would require major new development well beyond historical norms, or an override (which is modeled separately).';
     }
 
-    // Expense hints
+    // Expense hints: which specific cost drivers have to move
     if (ev < 2.0) {
-      expHintEl.textContent = 'Near-zero real growth. Would require freezing wages, cutting positions, or health insurance costs declining.';
+      expHintEl.textContent = 'GIC health premiums alone grew 7\u20139% recently. Holding total growth below 2% would require cutting positions, freezing wages, and GIC premiums falling. No recent year has been this low.';
     } else if (ev < 3.0) {
-      expHintEl.textContent = 'Well below historical (4.0%). Assumes significant cost containment on health insurance and wages.';
+      expHintEl.textContent = 'Health insurance (~15% of budget) has been growing 7\u20139%. To hold total growth at ' + ev.toFixed(1) + '%, GIC increases would need to drop to ~3%, or the town would need to offset with position cuts or wage freezes on union contracts.';
     } else if (ev < 3.5) {
-      expHintEl.textContent = 'Below historical. Requires holding GIC rate increases and wage growth below recent trends.';
+      expHintEl.textContent = 'Below the 4.0% historical average. Would require GIC premium growth to moderate (from ~8% to ~4\u20135%) while holding wage increases to current COLA levels (~2\u20133%). Pension assessments are set by PERAC and cannot be reduced locally.';
     } else if (ev < 4.5) {
-      expHintEl.textContent = 'Near Marblehead\u2019s FY15 to FY24 average of 4.0%. No change in cost trajectory.';
+      expHintEl.textContent = 'Near the FY15 to FY24 average of 4.0%. Health insurance continues at recent GIC rates (~7\u20139%), wages follow union contracts (~2\u20133% COLAs), and PERAC pension assessments follow their set schedule.';
     } else if (ev < 5.5) {
-      expHintEl.textContent = 'Above historical. Consistent with years when GIC premiums or pension assessments spiked.';
+      expHintEl.textContent = 'Above historical average. Consistent with years when GIC premiums spiked (FY22\u201323) or a PERAC revaluation landed. One major cost driver accelerating beyond trend.';
     } else {
-      expHintEl.textContent = 'Sharp acceleration. Would require multiple simultaneous cost drivers (health insurance, pensions, wages).';
+      expHintEl.textContent = 'Would require multiple simultaneous spikes: a large GIC rate increase, a PERAC revaluation, and/or a new contractual obligation. FY22 hit 5.3% from a GIC + post-COVID staffing rebound.';
     }
   }
 
@@ -1002,20 +1003,13 @@ title: "Deficit Dynamics Model"
     btn.addEventListener('click', function() {
       var p = btn.dataset.preset;
       if (p === 'baseline') {
-        revGrowthEl.value = 3.5;
-        expGrowthEl.value = 4.0;
         overrideEl.value = 0;
-        ratchetEl.checked = false;
-      } else if (p === 'no-ratchet') {
-        revGrowthEl.value = 3.5;
-        expGrowthEl.value = 4.0;
-        overrideEl.value = 10;
-        ratchetEl.checked = false;
-      } else if (p === 'ratchet') {
-        revGrowthEl.value = 3.5;
-        expGrowthEl.value = 4.0;
-        overrideEl.value = 10;
-        ratchetEl.checked = true;
+      } else if (p === 'tier1') {
+        overrideEl.value = 9;
+      } else if (p === 'tier2') {
+        overrideEl.value = 12;
+      } else if (p === 'tier3') {
+        overrideEl.value = 15;
       }
       onChange();
     });
