@@ -284,7 +284,8 @@ title: "Deficit Dynamics Model"
   body.dm-embed .page > .subtitle,
   body.dm-embed .dm-controls-wrap,
   body.dm-embed .dm-tier-section,
-  body.dm-embed .dm-prose-section {
+  body.dm-embed .dm-prose-section,
+  body.dm-embed .dm-recross {
     display: none;
   }
   body.dm-embed .dm-embed-link {
@@ -418,17 +419,157 @@ title: "Deficit Dynamics Model"
     flex: 1;
     border-top: 1px solid var(--divider);
   }
+
+  /* Structured legend / chart key */
+  .dm-key {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin: 14px 0 4px;
+    padding: 10px 14px;
+    background: var(--c-fog);
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .dm-key-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .dm-key-swatch {
+    flex: 0 0 28px;
+    height: 14px;
+    margin-top: 3px;
+    border-radius: 2px;
+  }
+  .dm-key-swatch-rev {
+    background: var(--c-sage);
+    height: 3px;
+    margin-top: 8px;
+  }
+  .dm-key-swatch-exp {
+    background: var(--c-buoy);
+    height: 3px;
+    margin-top: 8px;
+  }
+  .dm-key-swatch-gap {
+    background: var(--c-buoy);
+    opacity: 0.18;
+    height: 14px;
+  }
+  .dm-key-text strong {
+    color: var(--text);
+  }
+  .dm-key-text {
+    color: var(--text-muted);
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Scenario cards: title + one-line preview */
+  .dm-scenarios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+  }
+  @media (max-width: 600px) {
+    .dm-scenarios { grid-template-columns: 1fr; }
+  }
+  .dm-scenario-card {
+    text-align: left;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.35;
+  }
+  .dm-scenario-card:hover {
+    background: var(--c-fog);
+    border-color: var(--c-navy);
+  }
+  .dm-scenario-card .dm-scenario-title {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .dm-scenario-card .dm-scenario-desc {
+    display: block;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .dm-scenario-group-label {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 14px 0 4px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  /* Why-recross explainer */
+  .dm-recross {
+    margin: 14px 0;
+    padding: 12px 14px;
+    border-left: 3px solid var(--c-teal);
+    background: var(--c-fog);
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text);
+  }
+  .dm-recross strong { color: var(--text); }
+
+  /* Tighter mobile presentation */
+  @media (max-width: 600px) {
+    .dm-tier-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .dm-tier-buttons button {
+      width: 100%;
+      padding: 10px 8px;
+      font-size: 13px;
+    }
+    .dm-readout strong { font-size: 19px; }
+    .dm-tax-row {
+      flex-wrap: wrap;
+    }
+    .dm-tax-btn { width: 100%; }
+    .dm-tax-row .dm-hint { font-size: 11px; }
+    .dm-key { font-size: 12px; padding: 10px 12px; }
+  }
 </style>
 
 <h1 class="h-center">Deficit Dynamics: The Lines Already Crossed</h1>
-<p class="subtitle h-center">The left side is Marblehead's actual budget history from ACFRs. The right side projects forward at the growth rates you choose. The gap between the lines is what free cash and reserves have been covering since FY18.</p>
+<p class="subtitle h-center">The left side is Marblehead&rsquo;s actual general fund history from <abbr class="g" title="Annual Comprehensive Financial Reports">ACFRs</abbr>. The right side projects forward at the growth rates you choose. The gap between the lines is what free cash and reserves have been covering since FY18.</p>
 
 <div class="dm-tax-row">
   <button type="button" class="dm-tax-btn" id="dm-tax-btn">Show as annual tax bill per average home</button>
   <span class="dm-hint" id="dm-tax-hint">Based on average single-family assessed value of $1,291,507</span>
 </div>
 
-<p class="dm-hint" style="margin-bottom: 12px;">Green line = what the town collects. Orange line = what it spends. The shaded area is the gap that free cash, cuts, or an override has to close.</p>
+<div class="dm-key" aria-label="Chart key">
+  <div class="dm-key-row">
+    <span class="dm-key-swatch dm-key-swatch-rev"></span>
+    <span class="dm-key-text"><strong>Revenue</strong> &ndash; everything the town takes in: property taxes, state aid, local fees, investment income.</span>
+  </div>
+  <div class="dm-key-row">
+    <span class="dm-key-swatch dm-key-swatch-exp"></span>
+    <span class="dm-key-text"><strong>Expenses</strong> &ndash; total general fund spending: schools, public safety, DPW, health insurance, pensions, debt service.</span>
+  </div>
+  <div class="dm-key-row">
+    <span class="dm-key-swatch dm-key-swatch-gap"></span>
+    <span class="dm-key-text"><strong>Shaded gap</strong> &ndash; the deficit free cash, cuts, or an override has to close.</span>
+  </div>
+</div>
 
 <div class="dm-readout">
   <div class="dm-readout-line">Projected FY40 gap: <strong id="dm-gap">$12.6M</strong> <span id="dm-gap-label">annual deficit</span>.</div>
@@ -477,19 +618,56 @@ title: "Deficit Dynamics Model"
   <button type="button" data-preset="tier3">Tier 3 ($15M)</button>
 </div>
 
-<div class="dm-presets" style="margin-top: 8px;">
-  <span class="dm-hint" style="margin: 0; align-self: center;">Try a scenario:</span>
-  <button type="button" class="dm-stance-btn" data-stance="bridge">"The override buys time"</button>
-  <button type="button" class="dm-stance-btn" data-stance="skeptic">"It all gets spent immediately"</button>
-  <button type="button" class="dm-stance-btn" data-stance="cut">"Just cut spending"</button>
-  <button type="button" class="dm-stance-btn" data-stance="healthcare">"Shift healthcare costs"</button>
+<span class="dm-scenario-group-label">Try a scenario</span>
+<div class="dm-scenarios">
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="bridge">
+    <span class="dm-scenario-title">Override buys time</span>
+    <span class="dm-scenario-desc">$15M, spent gradually over 5 years. Closes the gap, then reopens.</span>
+  </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="skeptic">
+    <span class="dm-scenario-title">Override spent immediately</span>
+    <span class="dm-scenario-desc">$15M absorbed in year one. The skeptic&rsquo;s view: gap barely narrows.</span>
+  </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="cut">
+    <span class="dm-scenario-title">Cut 50 positions</span>
+    <span class="dm-scenario-desc">~$5M/yr saved. Slope unchanged; gap reopens on the same schedule.</span>
+  </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="healthcare">
+    <span class="dm-scenario-title">Healthcare share to 50%</span>
+    <span class="dm-scenario-desc">Match Hingham. ~$2.2M/yr net after wage offset and pension impact.</span>
+  </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="cost-slows">
+    <span class="dm-scenario-title">Cost growth slows to 3%</span>
+    <span class="dm-scenario-desc">If GIC moderates and contracts stay restrained, lines run roughly parallel.</span>
+  </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="new-growth">
+    <span class="dm-scenario-title">More new development</span>
+    <span class="dm-scenario-desc">Revenue growth at 4.5% from sustained construction and new growth.</span>
+  </button>
 </div>
-<div class="dm-story-divider">What if we combine levers?</div>
-<div class="dm-presets">
-  <button type="button" class="dm-stance-btn" data-stance="override-plus-hc">"Override + healthcare reform"</button>
-  <button type="button" class="dm-stance-btn" data-stance="override-plus-cuts">"Override + modest cuts"</button>
-  <button type="button" class="dm-stance-btn" data-stance="kitchen-sink">"Pull every lever"</button>
-  <button type="button" class="dm-stance-btn" data-stance="no-override-reform">"No override, just reform"</button>
+
+<span class="dm-scenario-group-label">Combine levers</span>
+<div class="dm-scenarios">
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="override-plus-hc">
+    <span class="dm-scenario-title">Override + healthcare reform</span>
+    <span class="dm-scenario-desc">$15M override plus 65% employer share. Layered relief.</span>
+  </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="override-plus-cuts">
+    <span class="dm-scenario-title">Override + modest cuts</span>
+    <span class="dm-scenario-desc">$12M override plus 20 position cuts.</span>
+  </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="kitchen-sink">
+    <span class="dm-scenario-title">Pull every lever</span>
+    <span class="dm-scenario-desc">$15M, healthcare reform, position cuts, fast spending ramp.</span>
+  </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="no-override-reform">
+    <span class="dm-scenario-title">No override, just reform</span>
+    <span class="dm-scenario-desc">30 positions cut plus 65% healthcare share. No new revenue.</span>
+  </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="permanent-close">
+    <span class="dm-scenario-title">Permanently close the gap</span>
+    <span class="dm-scenario-desc">Slower expense growth + healthcare reform + override. Lines stay apart.</span>
+  </button>
 </div>
 <div class="dm-readout" id="dm-stance-readout" style="display: none; margin-top: 8px;">
   <div class="dm-readout-line" id="dm-stance-explainer"></div>
@@ -512,14 +690,14 @@ title: "Deficit Dynamics Model"
     <div class="dm-hint" id="dm-cuts-hint">~$100K/yr each (salary + benefits). Shifts the expense line down but does not change its slope.</div>
   </div>
   <div class="dm-control" style="grid-column: 1 / -1;">
-    <span class="dm-control-label">Override spending timeline: <span class="dm-value" id="dm-ratchet-val">5 years</span></span>
-    <input type="range" id="dm-ratchet" min="0" max="10" step="1" value="5">
+    <span class="dm-control-label">How fast does override money get spent? <span class="dm-value" id="dm-ratchet-val">5-year ramp</span></span>
+    <input type="range" id="dm-ratchet" min="1" max="10" step="1" value="5">
     <div class="dm-range-labels">
-      <span>Never spent (unrealistic)</span>
-      <span>Immediate</span>
-      <span>Gradual (10 yr ramp)</span>
+      <span>Immediate (year 1)</span>
+      <span>5 years</span>
+      <span>Slow (10-year ramp)</span>
     </div>
-    <div class="dm-hint" id="dm-ratchet-hint">How quickly does override money get allocated to deferred needs? At 5 years, positions are filled and programs restored gradually, then the gap reopens. At 0, the money sits unspent (unrealistic best case). At 1, it is all committed in year one.</div>
+    <div class="dm-hint" id="dm-ratchet-hint">At 5 years (the default), override money is allocated to positions, programs, and deferred maintenance gradually. At 1, it is all committed in the year it arrives (the skeptic&rsquo;s view). Slow ramps stretch the headroom but mean deferred needs stay deferred longer.</div>
   </div>
 </div>
 
@@ -550,6 +728,16 @@ title: "Deficit Dynamics Model"
 </details>
 
 <a class="dm-embed-link" id="dm-embed-link" href="deficit_model.html">Explore the full interactive model &rarr;</a>
+
+<div class="dm-recross">
+<strong>Do the lines have to re-cross?</strong> Only if expenses grow faster than revenue. At the FY15&ndash;FY24 averages (revenue 3.7%, expenses 4.0%), they always re-cross eventually because the gap compounds. To keep the lines apart for good, one of these has to hold:
+<ul style="margin: 8px 0 0 18px; padding: 0;">
+  <li>Expense growth comes down to revenue growth (e.g. healthcare premiums moderate, contracts hold to <abbr class="g" title="Cost-of-Living Adjustment">COLA</abbr>). Try the &ldquo;Cost growth slows to 3%&rdquo; scenario.</li>
+  <li>Revenue growth rises (more new construction, larger state aid). Try the &ldquo;More new development&rdquo; scenario.</li>
+  <li>A one-time structural reduction (healthcare share shift, position eliminations) shifts the expense line down by enough to absorb the cumulative gap. Try the combo scenarios.</li>
+</ul>
+An override on its own buys time. It does not change the slope of either line.
+</div>
 
 <div class="dm-tier-section">
 <h2>How long does each tier last?</h2>
@@ -601,7 +789,7 @@ title: "Deficit Dynamics Model"
 
 <p>The right side of the chart projects both lines forward from the FY24 actuals. The sliders control the annual growth rates. At the historical averages (revenue 3.7%, expenses 4.0%), the gap widens steadily. An override shifts the revenue line up over three years (FY27 to FY29).</p>
 
-<p>The "override spending timeline" slider controls how quickly override revenue gets allocated to deferred needs. At 5 years (the default), spending gradually ramps up as positions are filled, programs restored, and deferred maintenance addressed. The gap shrinks when the override hits, then slowly reopens as spending catches up to the new revenue ceiling. At 0, none of the override is spent (unrealistic best case). At 1, all of it is committed in year one. The revenue line (capped by <abbr class="g" title="Proposition 2&frac12;, the Massachusetts law limiting annual property tax levy increases to 2.5% plus new growth">Prop 2&frac12;</abbr>) still grows slower than the expense line (driven by health insurance, pensions, and contractual wages), so the gap eventually reopens regardless.</p>
+<p>The &ldquo;how fast does override money get spent?&rdquo; slider controls how quickly new revenue gets allocated to deferred needs. At 5 years (the default), spending ramps up gradually as positions are filled, programs restored, and deferred maintenance addressed. The gap shrinks when the override hits, then slowly reopens as spending catches up to the new revenue ceiling. At 1, all of it is committed in year one (the skeptic&rsquo;s view). At 10, it stretches over a decade. As long as the revenue line (capped by <abbr class="g" title="Proposition 2&frac12;, the Massachusetts law limiting annual property tax levy increases to 2.5% plus new growth">Prop 2&frac12;</abbr>) grows slower than the expense line (driven by health insurance, pensions, and contractual wages), the gap eventually reopens regardless.</p>
 
 <details class="notes">
   <summary>Notes and methodology</summary>
@@ -609,7 +797,7 @@ title: "Deficit Dynamics Model"
   <p>Free cash draw history is from <a href="../data/free_cash_operating_history.csv">free_cash_operating_history.csv</a>, sourced from FinCom Annual Reports and ATM warrant articles.<sup class="cite" data-href="../data/free_cash_operating_history.csv" data-source="FinCom Annual Reports, ATM warrant articles"></sup></p>
   <p>The override phase-in schedule (FY27 to FY29) and tax bill conversion ($132.36 per $1M) are from the town's <a href="../data/override_tax_impact_asf.csv">override tax impact data</a> for an average single-family home assessed at $1,291,507.<sup class="cite" data-href="../data/override_tax_impact_asf.csv" data-source="Override tax impact schedule, average single-family assessed value $1,291,507"></sup></p>
   <p>Projections use constant annual compounding, which is a simplification. Real budgets have lumpy cost spikes (<abbr class="g" title="Group Insurance Commission">GIC</abbr> rate jumps, <abbr class="g" title="Public Employee Retirement Administration Commission">PERAC</abbr> revaluations) and uneven revenue growth.</p>
-  <p>The "override spending timeline" slider controls how many years it takes for override revenue to be allocated as new spending. At N years, each override draw is spread as equal annual expense bumps over N years. At 0, none of the override is spent. At 1, it is absorbed in the year of the draw. Default is 5 years, reflecting the gradual process of filling positions, restoring programs, and addressing deferred maintenance.</p>
+  <p>The &ldquo;how fast does override money get spent?&rdquo; slider controls how many years it takes for override revenue to be allocated as new spending. At N years, each override draw is spread as equal annual expense bumps over N years. At 1, it is absorbed in the year of the draw. Default is 5 years, reflecting the gradual process of filling positions, restoring programs, and addressing deferred maintenance.</p>
 </details>
 </div>
 
@@ -1073,9 +1261,9 @@ title: "Deficit Dynamics Model"
     var cutsFillG = document.getElementById('dm-cuts-fill');
     cutsFillG.innerHTML = '';
 
-    // Show constrained line when there's an override and ratchet is on
+    // Show constrained line when there is an override
     // (this is when the gap between "wants" and "can afford" matters)
-    var showConstrained = data.override > 0 && parseInt(ratchetEl.value) > 0;
+    var showConstrained = data.override > 0;
     if (showConstrained) {
       constrainedEl.setAttribute('d', buildPath(constrained, lastHistIdx, nYears - 1, xScale, yScale));
       constrainedEl.classList.remove('dm-hidden');
@@ -1351,7 +1539,7 @@ title: "Deficit Dynamics Model"
     expGrowthVal.textContent = parseFloat(expGrowthEl.value).toFixed(1) + '%';
     overrideVal.textContent = fmtOverride(parseFloat(overrideEl.value));
     var ry = parseInt(ratchetEl.value);
-    ratchetValEl.textContent = ry === 0 ? 'never spent' : ry === 1 ? 'year 1 (immediate)' : ry + ' year ramp';
+    ratchetValEl.textContent = ry === 1 ? 'immediate (year 1)' : ry + '-year ramp';
     cutsValEl.textContent = positionCuts;
     // Update cuts hint with savings amount
     var savings = positionCuts * costPerPosition;
@@ -1368,16 +1556,14 @@ title: "Deficit Dynamics Model"
 
     // Update ratchet hint based on position
     var ratchetHintEl = document.getElementById('dm-ratchet-hint');
-    if (ry === 0) {
-      ratchetHintEl.textContent = 'Override revenue is collected but never allocated to new spending. This is the theoretical best case for gap closure but unrealistic: the override funds specific items (positions, programs, trash) that will be spent.';
-    } else if (ry === 1) {
-      ratchetHintEl.textContent = 'All override money is committed to new spending in the year it arrives. The expense line jumps up with the revenue line, so the gap barely narrows. This is the skeptic\'s view: "they\'ll just spend it all immediately."';
+    if (ry === 1) {
+      ratchetHintEl.textContent = 'All override money is committed to new spending in the year it arrives. The expense line jumps up with revenue, so the gap barely narrows. This is the skeptic\u2019s view: "they\u2019ll just spend it all immediately."';
     } else if (ry <= 3) {
-      ratchetHintEl.textContent = 'Override money is allocated quickly (' + ry + ' years). Positions are filled and programs restored on a fast timeline. The gap closes briefly, then reopens as spending catches up to the new revenue ceiling.';
+      ratchetHintEl.textContent = 'Override money is allocated quickly (' + ry + ' years). Positions are filled and programs restored on a fast timeline. The gap closes briefly, then reopens as spending catches up.';
     } else if (ry <= 6) {
       ratchetHintEl.textContent = 'Override money is phased into spending over ' + ry + ' years as positions are filled, programs restored, and deferred maintenance addressed. The gap narrows for several years before expenses catch up.';
     } else {
-      ratchetHintEl.textContent = 'Override money is allocated slowly over ' + ry + ' years. New positions and programs are added cautiously. This extends the period before expenses fully absorb the new revenue, but may mean deferred needs stay deferred longer.';
+      ratchetHintEl.textContent = 'Override money is allocated slowly over ' + ry + ' years. New positions and programs are added cautiously. This stretches the headroom but means deferred needs stay deferred longer.';
     }
 
     // Build dynamic scenario readout from current state
@@ -1392,18 +1578,26 @@ title: "Deficit Dynamics Model"
     var ry = parseInt(ratchetEl.value);
     var newShare = parseInt(hcShareEl.value);
     var hc = computeHcSavings();
+    var rv = parseFloat(revGrowthEl.value);
+    var ev = parseFloat(expGrowthEl.value);
 
     if (ovr > 0) {
-      var absorption = ry === 0 ? 'not spent (unrealistic)' : ry === 1 ? 'absorbed immediately' : 'absorbed over ' + ry + ' years';
-      parts.push('<strong>' + fmtOverride(ovr) + '</strong> override phased in FY27\u201329. Spending ' + absorption + '.');
+      var absorption = ry === 1 ? 'absorbed immediately' : 'absorbed over ' + ry + ' years';
+      parts.push('<strong>' + fmtOverride(ovr) + '</strong> override phased in FY27\u201329, spending ' + absorption + '.');
     }
     if (positionCuts > 0) {
       var savings = positionCuts * costPerPosition;
       var pct = (savings / histExp[lastHistIdx] * 100).toFixed(1);
-      parts.push('<strong>' + positionCuts + ' positions</strong> cut = ' + fmtOverride(savings) + '/yr savings (' + pct + '% of budget). Slope unchanged.');
+      parts.push('<strong>' + positionCuts + ' positions</strong> cut = ' + fmtOverride(savings) + '/yr savings (' + pct + '% of budget).');
     }
     if (newShare < 83) {
       parts.push('Healthcare shift to <strong>' + newShare + '%</strong> employer: ' + fmtOverride(hc.gross) + ' gross \u2212 ' + fmtOverride(hc.wageIncrease) + ' wages \u2212 ' + fmtOverride(hc.pensionIncrease) + ' pension = <strong>' + fmtOverride(hc.net) + '</strong> net.');
+    }
+    if (Math.abs(rv - 3.5) > 0.05 || Math.abs(ev - 4.0) > 0.05) {
+      parts.push('Growth assumption: <strong>revenue ' + rv.toFixed(1) + '%</strong>, <strong>expenses ' + ev.toFixed(1) + '%</strong>.');
+    }
+    if (ev <= rv) {
+      parts.push('Because expense growth is at or below revenue growth, the lines do not re-cross under these assumptions.');
     }
 
     if (parts.length > 0) {
@@ -1492,6 +1686,10 @@ title: "Deficit Dynamics Model"
         positionCuts = 50;
       } else if (s === 'healthcare') {
         hcShareEl.value = 50;
+      } else if (s === 'cost-slows') {
+        expGrowthEl.value = 3.0;
+      } else if (s === 'new-growth') {
+        revGrowthEl.value = 4.5;
       } else if (s === 'override-plus-hc') {
         overrideEl.value = 15;
         hcShareEl.value = 65;
@@ -1509,6 +1707,12 @@ title: "Deficit Dynamics Model"
         positionCuts = 30;
         hcShareEl.value = 65;
         wageOffsetEl.value = 50;
+      } else if (s === 'permanent-close') {
+        overrideEl.value = 12;
+        expGrowthEl.value = 3.2;
+        hcShareEl.value = 65;
+        wageOffsetEl.value = 50;
+        positionCuts = 10;
       }
       onChange();
     });
@@ -1710,6 +1914,16 @@ title: "Deficit Dynamics Model"
       positionCuts = 30;
       hcShareEl.value = 65;
       wageOffsetEl.value = 50;
+    } else if (urlStance === 'cost-slows') {
+      expGrowthEl.value = 3.0;
+    } else if (urlStance === 'new-growth') {
+      revGrowthEl.value = 4.5;
+    } else if (urlStance === 'permanent-close') {
+      overrideEl.value = 12;
+      expGrowthEl.value = 3.2;
+      hcShareEl.value = 65;
+      wageOffsetEl.value = 50;
+      positionCuts = 10;
     }
   }
 
@@ -1722,7 +1936,10 @@ title: "Deficit Dynamics Model"
     else if (t === 0) overrideEl.value = 0;
   }
   if (params.has('override')) overrideEl.value = parseFloat(params.get('override'));
-  if (params.has('absorption')) ratchetEl.value = parseInt(params.get('absorption'));
+  if (params.has('absorption')) {
+    var a = parseInt(params.get('absorption'));
+    if (!isNaN(a)) ratchetEl.value = Math.max(1, Math.min(10, a));
+  }
   if (params.has('cuts')) positionCuts = parseInt(params.get('cuts'));
   if (params.has('revgrowth')) revGrowthEl.value = parseFloat(params.get('revgrowth'));
   if (params.has('expgrowth')) expGrowthEl.value = parseFloat(params.get('expgrowth'));
