@@ -5464,6 +5464,16 @@ og_url: https://marbleheaddata.org/
       if (nextBtn) nextBtn.classList.add('visible');
       // Show pick distribution if already decided
       showPickDistribution(topic);
+    } else {
+      // No pick yet: auto-open a random answer's evidence so the user
+      // lands on data instead of a blank state with just card summaries.
+      var cards = document.querySelectorAll(
+        '.answer-card[data-question="' + topic + '"]:not(.answer-card-unsure)'
+      );
+      if (cards.length) {
+        var rand = cards[Math.floor(Math.random() * cards.length)];
+        viewEvidence(topic, rand.dataset.answer);
+      }
     }
     updateBrowseHint(topic);
   }
