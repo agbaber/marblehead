@@ -38,6 +38,20 @@ In practice:
 - Caveats on volatile data (FY23 FTE jump, FY13 OPEB spike, GASB pension
   volatility) must be surfaced where the number appears, not hidden.
 
+## No meta-narration
+
+Don't write sentences that describe what the page is about to do. Just do
+it. "This page explains why, maps the actual overlap, and sizes the
+realistic savings" is three clauses that say nothing a reader couldn't
+learn by scrolling down. Cut the tour-guide voice entirely:
+
+- **Kill:** "This page shows...", "This section covers...", "Below you'll
+  find...", "The following table classifies...", "Here we walk through..."
+- **Replace with:** the actual claim, finding, or context that earns the
+  sentence's existence. If removing the sentence loses nothing, remove it.
+- **Test:** read the sentence back. If it would still be true about a
+  *blank* page with the same title, it's filler.
+
 ## Every number must trace to a primary source
 
 From README: *"Every number should be traceable to a primary source. If
@@ -133,6 +147,31 @@ If the branch is stale, start fresh instead of reusing it.
 Use **git worktrees**, not the cherry-pick dance above. Each new piece of
 work gets its own worktree off `main` so there's no risk of accidentally
 pushing onto a merged branch.
+
+### Never rewrite a file you haven't freshly read from your branch
+
+Before editing a large file (especially `index.html`), **always read
+its current contents from the branch you're working on**. Do not rely
+on a version you read earlier in the conversation or from a different
+branch. Full-file writes from a stale context silently revert other
+people's merged work.
+
+Concretely:
+
+- **Targeted edits only.** Use find-and-replace or line-range edits,
+  never write the entire file from memory. If you can't express your
+  change as a surgical edit, re-read the file first.
+- **Check your diff before committing.** Run `git diff --stat` and
+  look at the line counts. If your change is supposed to add 50 lines
+  but the diff shows 800 deletions, something is wrong -- you likely
+  overwrote content that was already there.
+- **Especially on iOS / web sessions** where the tool writes whole
+  files: the session may have loaded an old copy of the file hours
+  earlier. Always re-fetch before writing.
+
+This rule exists because commit `cbaaed6` (Apr 16 2026) did a
+full-file rewrite of `index.html` from a stale base and silently
+reverted four previously-merged PRs (#410, #413, #416, #420).
 
 ### PR scope
 

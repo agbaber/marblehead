@@ -1,0 +1,290 @@
+---
+title: Branches
+body_class: branches-page
+community_pulse: off-sections
+og_title: Verification Branches - Marblehead Budget Data
+og_description: "See how verified Marblehead residents are organized into neighborhood branches."
+og_url: https://marbleheaddata.org/branches.html
+---
+
+<style>
+body.branches-page .page { max-width: var(--page-max, 760px); margin: 0 auto; padding: 0 var(--gutter, 16px); }
+body.branches-page .branch-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+body.branches-page .branch-card {
+  background: var(--surface, #f8f8f8);
+  border-radius: var(--radius-lg, 12px);
+  padding: 1.2rem 1.5rem;
+  margin: 0.75rem 0;
+}
+body.branches-page .branch-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+body.branches-page .branch-name {
+  font-family: var(--font-heading, 'Libre Franklin', sans-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--c-text, #1a1a1a);
+}
+body.branches-page .branch-size {
+  font-size: 0.85rem;
+  color: var(--c-text-muted, #666);
+}
+body.branches-page .branch-naming {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--c-text-faint, rgba(0,0,0,0.1));
+}
+body.branches-page .branch-naming h3 {
+  font-size: 0.85rem;
+  color: var(--c-text-muted, #666);
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+body.branches-page .name-proposals { list-style: none; padding: 0; margin: 0; }
+body.branches-page .name-proposal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+}
+body.branches-page .name-votes {
+  font-size: 0.8rem;
+  color: var(--c-text-muted, #666);
+  min-width: 2.5rem;
+}
+body.branches-page .name-vote-btn {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--c-text-faint, #ccc);
+  border-radius: var(--radius-sm, 4px);
+  background: transparent;
+  color: var(--c-text, #1a1a1a);
+  cursor: pointer;
+}
+body.branches-page .name-vote-btn:hover { background: var(--surface, rgba(0,0,0,0.04)); }
+body.branches-page .name-vote-btn.active {
+  background: var(--c-teal, #2a9d8f);
+  color: #fff;
+  border-color: var(--c-teal, #2a9d8f);
+}
+body.branches-page .propose-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+body.branches-page .propose-input {
+  flex: 1;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--c-text-faint, #ccc);
+  border-radius: var(--radius-sm, 4px);
+  background: var(--bg, #fff);
+  color: var(--c-text, #1a1a1a);
+}
+body.branches-page .btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md, 8px);
+  cursor: pointer;
+}
+body.branches-page .btn-sm {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+}
+body.branches-page .btn-primary { background: var(--c-navy, #1b3a5c); color: #fff; }
+body.branches-page .btn-secondary {
+  background: var(--surface, #f0f0f0);
+  color: var(--c-text, #1a1a1a);
+  border: 1px solid var(--c-text-faint, #ccc);
+}
+body.branches-page .summary-bar {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  color: var(--c-text-muted, #666);
+}
+body.branches-page .summary-num {
+  font-weight: 700;
+  color: var(--c-text, #1a1a1a);
+}
+body.branches-page .empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--c-text-muted, #666);
+}
+body.branches-page .hidden { display: none; }
+</style>
+
+<div class="page">
+
+<h1>Verification Branches</h1>
+<p>Each branch is a cluster of verified Marblehead residents connected through the neighbor invitation network. Each branch gets a random Marblehead Revolutionary War name when it's created.</p>
+
+<div class="summary-bar" id="summary">
+  <span><span class="summary-num" id="total-residents">--</span> verified residents</span>
+  <span><span class="summary-num" id="total-branches">--</span> branches</span>
+</div>
+
+<div id="branch-list-container">
+  <p id="loading-msg">Loading branches...</p>
+</div>
+
+<div id="empty-state" class="empty-state hidden">
+  <p>No branches yet. Be the first to <a href="/verify.html">get verified</a>.</p>
+</div>
+
+</div><!-- .page -->
+
+<script type="module">
+const API = (location.hostname === 'localhost')
+  ? 'http://localhost:8787'
+  : 'https://marblehead-community-pulse.agbaber.workers.dev';
+
+let jwt = sessionStorage.getItem('verify_jwt') || null;
+let myProfile = null;
+let branchNamesData = {}; // { branch_root: [{ name, votes, proposed_at }] }
+
+function headers() {
+  const h = { 'Content-Type': 'application/json' };
+  if (jwt) h['Authorization'] = `Bearer ${jwt}`;
+  return h;
+}
+
+async function api(method, path, body) {
+  const opts = { method, headers: headers() };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch(`${API}${path}`, opts);
+  return res.json();
+}
+
+function show(id) { document.getElementById(id).classList.remove('hidden'); }
+function hide(id) { document.getElementById(id).classList.add('hidden'); }
+
+async function init() {
+  // Check auth.
+  if (jwt) {
+    try {
+      myProfile = await api('GET', '/api/verify/me');
+      if (!myProfile || !myProfile.identity_hash) myProfile = null;
+    } catch { myProfile = null; }
+  }
+
+  // Fetch branches (public).
+  let data;
+  try {
+    data = await api('GET', '/api/verify/branches');
+  } catch {
+    document.getElementById('loading-msg').textContent = 'Failed to load branches.';
+    return;
+  }
+
+  const branches = data.branches || [];
+
+  if (branches.length === 0) {
+    hide('loading-msg');
+    show('empty-state');
+    document.getElementById('total-residents').textContent = '0';
+    document.getElementById('total-branches').textContent = '0';
+    return;
+  }
+
+  const totalResidents = branches.reduce((sum, b) => sum + b.size, 0);
+  document.getElementById('total-residents').textContent = totalResidents;
+  document.getElementById('total-branches').textContent = branches.length;
+
+  // Sort by size descending.
+  branches.sort((a, b) => b.size - a.size);
+
+  const container = document.getElementById('branch-list-container');
+  container.innerHTML = '';
+
+  const list = document.createElement('ul');
+  list.className = 'branch-list';
+
+  for (const branch of branches) {
+    const li = document.createElement('li');
+    li.className = 'branch-card';
+    li.dataset.root = branch.branch_root;
+
+    const header = document.createElement('div');
+    header.className = 'branch-header';
+
+    const nameEl = document.createElement('span');
+    nameEl.className = 'branch-name';
+    nameEl.textContent = branch.name || '(unnamed)';
+
+    const sizeEl = document.createElement('span');
+    sizeEl.className = 'branch-size';
+    sizeEl.textContent = `${branch.size} resident${branch.size !== 1 ? 's' : ''}`;
+
+    header.appendChild(nameEl);
+    header.appendChild(sizeEl);
+    li.appendChild(header);
+
+    if (myProfile && myProfile.branch_root === branch.branch_root) {
+      const badge = document.createElement('span');
+      badge.style.cssText = 'font-size:.8rem;color:var(--c-teal,#2a9d8f);margin-left:.5rem';
+      badge.textContent = '(your branch)';
+      header.appendChild(badge);
+
+      // Rename vote dropdown.
+      const renameDiv = document.createElement('div');
+      renameDiv.className = 'branch-naming';
+      renameDiv.innerHTML = `<div style="font-size:.85rem;color:var(--c-text-muted,#666);font-weight:600;margin-bottom:.5rem">Vote to rename</div>
+        <div style="display:flex;gap:.5rem;align-items:center">
+          <select id="rename-select" style="flex:1;padding:.4rem .6rem;font-size:.9rem;border:1px solid var(--c-text-faint,#ccc);border-radius:var(--radius-sm,4px);background:var(--bg,#fff);color:var(--c-text,#1a1a1a)"><option value="">Loading names...</option></select>
+          <button class="btn btn-sm btn-primary" id="btn-rename">Vote</button>
+        </div>
+        <div id="rename-status" style="font-size:.85rem;margin-top:.4rem"></div>`;
+      li.appendChild(renameDiv);
+      loadAvailableNames();
+    }
+
+    list.appendChild(li);
+  }
+
+  container.appendChild(list);
+}
+
+async function loadAvailableNames() {
+  try {
+    const data = await api('GET', '/api/verify/branch-name/available');
+    const sel = document.getElementById('rename-select');
+    if (!sel) return;
+    sel.innerHTML = '';
+    const current = document.createElement('option');
+    current.value = '';
+    current.textContent = 'Keep: ' + (data.current_name || '(unnamed)');
+    sel.appendChild(current);
+    for (const n of (data.available || [])) {
+      const opt = document.createElement('option');
+      opt.value = n;
+      opt.textContent = n;
+      sel.appendChild(opt);
+    }
+    document.getElementById('btn-rename').addEventListener('click', async function() {
+      const name = sel.value;
+      if (!name) { document.getElementById('rename-status').textContent = 'Select a new name first.'; return; }
+      const r = await api('POST', '/api/verify/branch-name/vote', { name });
+      if (r.ok) {
+        let msg = 'Voted for ' + name + '. ' + r.votes_for + '/' + r.majority_needed + ' needed.';
+        if (r.current_name === name) msg += ' Name changed!';
+        document.getElementById('rename-status').textContent = msg;
+      } else {
+        document.getElementById('rename-status').textContent = r.error || 'Vote failed.';
+      }
+    });
+  } catch (e) { console.error(e); }
+}
+
+init();
+</script>

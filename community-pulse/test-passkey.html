@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neighbor Verification — Test</title>
+  <style>
+    body { font-family: system-ui; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+    button { padding: 0.5rem 1rem; margin: 0.5rem 0; font-size: 1rem; cursor: pointer; display: block; }
+    pre { background: #f5f5f5; padding: 1rem; overflow-x: auto; font-size: 0.85rem; white-space: pre-wrap; }
+    .ok { color: green; } .err { color: red; }
+    input { padding: 0.4rem; font-size: 1rem; width: 100%; box-sizing: border-box; margin: 0.3rem 0; }
+    h2 { margin-top: 2rem; border-top: 1px solid #ddd; padding-top: 1rem; }
+    .jwt-display { font-size: 0.7rem; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <h1>Neighbor Verification Test</h1>
+
+  <h2>1. Register (genesis invite)</h2>
+  <input id="reg-name" placeholder="Name" value="Andrew Baber">
+  <input id="reg-address" placeholder="Street address" value="16 Mystic Road">
+  <input id="reg-token" placeholder="Invite token" value="genesis-andrew-baber">
+  <button onclick="register()">Register + Create Passkey</button>
+  <pre id="reg-result">—</pre>
+
+  <h2>2. Authenticate</h2>
+  <button onclick="authenticate()">Sign in with Passkey</button>
+  <pre id="auth-result">—</pre>
+
+  <h2>3. Create an invite</h2>
+  <input id="inv-name" placeholder="Neighbor's name">
+  <input id="inv-address" placeholder="Neighbor's address">
+  <button onclick="createInvite()">Create Invite</button>
+  <pre id="inv-result">—</pre>
+
+  <h2>4. Cast a verified vote</h2>
+  <input id="vote-topic" placeholder="Topic" value="override">
+  <select id="vote-answer">
+    <option value="a">A</option>
+    <option value="b">B</option>
+    <option value="c">C</option>
+    <option value="u">Not sure</option>
+  </select>
+  <button onclick="castVote()">Vote</button>
+  <pre id="vote-result">—</pre>
+
+  <h2>5. View branches</h2>
+  <button onclick="viewBranches()">Get Branches (public)</button>
+  <pre id="branch-result">—</pre>
+
+  <h2>6. My profile</h2>
+  <button onclick="getMe()">Get /me</button>
+  <pre id="me-result">—</pre>
+
+<script type="module">
+  import { client } from 'https://cdn.jsdelivr.net/npm/@passwordless-id/webauthn@2.3.5/dist/esm/index.js';
+
+  const API = 'http://localhost:8787';
+  let jwt = sessionStorage.getItem('verify_jwt') || null;
+
+  function headers() {
+    const h = { 'Content-Type': 'application/json' };
+    if (jwt) h['Authorization'] = `Bearer ${jwt}`;
+    return h;
+  }
+
+  async function computeHash(name, address) {
+    const normalized = name.toLowerCase().trim() + ':' + address.toLowerCase().trim() + ':marblehead-verify-salt';
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(normalized));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  window.register = async function() {
+    const el = document.getElementById('reg-result');
+    try {
+      const name = document.getElementById('reg-name').value;
+      const address = document.getElementById('reg-address').value;
+      const invite_token = document.getElementById('reg-token').value;
+      const identity_hash = await computeHash(name, address);
+
+      el.textContent = `Hash: ${identity_hash}\nRegistering...`;
+
+      // Step 1: Register with the server (two-sided handshake).
+      const regRes = await fetch(`${API}/api/verify/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ identity_hash, invite_token }),
+      });
+      const regData = await regRes.json();
+      if (!regData.ok) { el.textContent = JSON.stringify(regData, null, 2); el.className = 'err'; return; }
+
+      el.textContent = `Registered! Recovery key: ${regData.recovery_key}\nCreating passkey...`;
+
+      // Step 2: Create passkey using the challenge from registration.
+      // The browser challenge is the data portion (before the dot in the signed challenge).
+      const browserChallenge = regData.challenge.split('.')[0];
+      const registration = await client.register({
+        user: identity_hash,
+        challenge: browserChallenge,
+      });
+
+      el.textContent += '\nPasskey created. Verifying...';
+
+      // Step 3: Complete passkey registration on server.
+      const pkRes = await fetch(`${API}/api/verify/passkey/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ registration, challenge: regData.challenge, identity_hash }),
+      });
+      const pkData = await pkRes.json();
+
+      if (pkData.token) {
+        jwt = pkData.token;
+        sessionStorage.setItem('verify_jwt', jwt);
+      }
+
+      el.textContent = JSON.stringify({
+        ...pkData,
+        recovery_key: regData.recovery_key,
+        branch_root: regData.branch_root,
+      }, null, 2);
+      el.className = pkData.ok ? 'ok' : 'err';
+    } catch (err) {
+      el.textContent = `Error: ${err.message}`;
+      el.className = 'err';
+    }
+  };
+
+  window.authenticate = async function() {
+    const el = document.getElementById('auth-result');
+    try {
+      el.textContent = 'Requesting challenge...';
+
+      const challengeRes = await fetch(`${API}/api/verify/passkey/auth-challenge`, { method: 'POST' });
+      const { challenge, credentialIds } = await challengeRes.json();
+
+      el.textContent = `Got challenge. ${credentialIds.length} credential(s). Authenticating...`;
+
+      const browserChallenge = challenge.split('.')[0];
+      const authentication = await client.authenticate({
+        challenge: browserChallenge,
+        allowCredentials: credentialIds,
+      });
+
+      el.textContent = 'Verifying on server...';
+
+      const verifyRes = await fetch(`${API}/api/verify/passkey/auth`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ authentication, challenge }),
+      });
+      const result = await verifyRes.json();
+
+      if (result.token) {
+        jwt = result.token;
+        sessionStorage.setItem('verify_jwt', jwt);
+      }
+
+      el.textContent = JSON.stringify(result, null, 2);
+      el.className = result.ok ? 'ok' : 'err';
+    } catch (err) {
+      el.textContent = `Error: ${err.message}`;
+      el.className = 'err';
+    }
+  };
+
+  window.createInvite = async function() {
+    const el = document.getElementById('inv-result');
+    if (!jwt) { el.textContent = 'Not authenticated'; el.className = 'err'; return; }
+    try {
+      const name = document.getElementById('inv-name').value;
+      const address = document.getElementById('inv-address').value;
+      const recipient_hash = await computeHash(name, address);
+
+      const res = await fetch(`${API}/api/verify/invite`, {
+        method: 'POST',
+        headers: headers(),
+        body: JSON.stringify({ recipient_hash }),
+      });
+      const data = await res.json();
+      el.textContent = JSON.stringify(data, null, 2);
+      el.className = data.ok ? 'ok' : 'err';
+    } catch (err) {
+      el.textContent = `Error: ${err.message}`;
+      el.className = 'err';
+    }
+  };
+
+  window.castVote = async function() {
+    const el = document.getElementById('vote-result');
+    if (!jwt) { el.textContent = 'Not authenticated'; el.className = 'err'; return; }
+    try {
+      const topic = document.getElementById('vote-topic').value;
+      const answer = document.getElementById('vote-answer').value;
+
+      const res = await fetch(`${API}/api/verify/vote`, {
+        method: 'POST',
+        headers: headers(),
+        body: JSON.stringify({ topic, answer }),
+      });
+      const data = await res.json();
+      el.textContent = JSON.stringify(data, null, 2);
+      el.className = data.ok ? 'ok' : 'err';
+    } catch (err) {
+      el.textContent = `Error: ${err.message}`;
+      el.className = 'err';
+    }
+  };
+
+  window.viewBranches = async function() {
+    const el = document.getElementById('branch-result');
+    try {
+      const res = await fetch(`${API}/api/verify/branches`);
+      const data = await res.json();
+      el.textContent = JSON.stringify(data, null, 2);
+      el.className = 'ok';
+    } catch (err) {
+      el.textContent = `Error: ${err.message}`;
+      el.className = 'err';
+    }
+  };
+
+  window.getMe = async function() {
+    const el = document.getElementById('me-result');
+    if (!jwt) { el.textContent = 'Not authenticated'; el.className = 'err'; return; }
+    try {
+      const res = await fetch(`${API}/api/verify/me`, { headers: headers() });
+      const data = await res.json();
+      el.textContent = JSON.stringify(data, null, 2);
+      el.className = data.identity_hash ? 'ok' : 'err';
+    } catch (err) {
+      el.textContent = `Error: ${err.message}`;
+      el.className = 'err';
+    }
+  };
+</script>
+</body>
+</html>
