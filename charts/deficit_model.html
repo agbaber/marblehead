@@ -293,6 +293,49 @@ title: "Deficit Dynamics Model"
   .dm-controls-summary:hover {
     color: var(--c-navy);
   }
+  .dm-tier-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 16px 0 8px;
+  }
+  .dm-tier-buttons button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .dm-tier-buttons button:hover {
+    border-color: var(--c-navy);
+  }
+  .dm-tier-buttons button.dm-tier-active {
+    background: var(--c-navy);
+    color: #fff;
+    border-color: var(--c-navy);
+  }
+  .dm-slider-label-rev::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background: var(--c-sage);
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .dm-slider-label-exp::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background: var(--c-buoy);
+    margin-right: 6px;
+    vertical-align: middle;
+  }
 </style>
 
 <h1 class="h-center">Deficit Dynamics: The Lines Already Crossed</h1>
@@ -332,11 +375,17 @@ title: "Deficit Dynamics Model"
   <g id="dm-legend"></g>
 </svg>
 
+<div class="dm-tier-buttons">
+  <button type="button" data-preset="baseline">No override</button>
+  <button type="button" data-preset="tier1">Tier 1 ($9M)</button>
+  <button type="button" data-preset="tier2">Tier 2 ($12M)</button>
+  <button type="button" data-preset="tier3">Tier 3 ($15M)</button>
+</div>
+
 <div class="dm-controls">
-  <div class="dm-control">
+  <div class="dm-control" style="grid-column: 1 / -1;">
     <span class="dm-control-label">Override (FY27 to FY29): <span class="dm-value" id="dm-override-val">$0.0M</span></span>
     <input type="range" id="dm-override" min="0" max="15" step="0.5" value="0">
-    <div class="dm-hint">Phases in over three years per the town's proposed draw schedule.</div>
   </div>
   <div class="dm-control" style="grid-column: 1 / -1;">
     <span class="dm-control-label">Position cuts: <span class="dm-value" id="dm-cuts-val">0</span></span>
@@ -347,36 +396,29 @@ title: "Deficit Dynamics Model"
       <button type="button" class="dm-cuts-btn" data-cuts="50">+50</button>
       <button type="button" class="dm-cuts-btn" data-cuts="100">+100</button>
     </div>
-    <div class="dm-hint" id="dm-cuts-hint">Each position costs ~$100K/yr (salary + benefits). Cutting positions shifts the expense line down but does not change its slope. GIC, PERAC, and union contracts still grow at the same rate on the remaining staff.</div>
-  </div>
-  <div class="dm-presets">
-    <button type="button" data-preset="baseline">No override</button>
-    <button type="button" data-preset="tier1">Tier 1 ($9M)</button>
-    <button type="button" data-preset="tier2">Tier 2 ($12M)</button>
-    <button type="button" data-preset="tier3">Tier 3 ($15M)</button>
+    <div class="dm-hint" id="dm-cuts-hint">~$100K/yr each (salary + benefits). Shifts the expense line down but does not change its slope.</div>
   </div>
 </div>
 
 <details class="dm-controls-wrap" open>
-<summary class="dm-controls-summary">Growth rates, healthcare shift, and other settings</summary>
+<summary class="dm-controls-summary">Assumptions</summary>
 <div class="dm-controls">
   <div class="dm-control">
-    <span class="dm-control-label">Revenue growth: <span class="dm-value" id="dm-rev-growth-val">3.5%</span></span>
+    <span class="dm-control-label"><span class="dm-slider-label-rev">Revenue growth</span>: <span class="dm-value" id="dm-rev-growth-val">3.5%</span></span>
     <input type="range" id="dm-rev-growth" min="0" max="6" step="0.1" value="3.5">
     <div class="dm-hint" id="dm-rev-hint">Near Marblehead's FY15 to FY24 average of 3.7%. Typical Prop 2&frac12; plus new growth.</div>
   </div>
   <div class="dm-control">
-    <span class="dm-control-label">Expense growth: <span class="dm-value" id="dm-exp-growth-val">4.0%</span></span>
+    <span class="dm-control-label"><span class="dm-slider-label-exp">Expense growth</span>: <span class="dm-value" id="dm-exp-growth-val">4.0%</span></span>
     <input type="range" id="dm-exp-growth" min="0" max="6" step="0.1" value="4.0">
     <div class="dm-hint" id="dm-exp-hint">FY15 to FY24 actual average. No change in trajectory.</div>
   </div>
-  <div class="dm-control">
-    <span class="dm-control-label">&nbsp;</span>
+  <div class="dm-control" style="grid-column: 1 / -1;">
     <div class="dm-toggle-row">
       <input type="checkbox" id="dm-ratchet" checked>
       <div>
         <label for="dm-ratchet" class="dm-toggle-label">Override revenue is spent (default)</label>
-        <div class="dm-hint">The override funds specific items (positions, programs, trash). This means the expense line rises with the revenue line, because the money is being spent on what it was approved for. Turn off to see the scenario where override revenue is collected but not spent.</div>
+        <div class="dm-hint">The override funds specific items (positions, programs, trash). Turn off to see the scenario where override revenue is collected but not spent.</div>
       </div>
     </div>
   </div>
@@ -388,7 +430,7 @@ title: "Deficit Dynamics Model"
   <div class="dm-control">
     <span class="dm-control-label">Wage offset: <span class="dm-value" id="dm-wage-offset-val">50%</span></span>
     <input type="range" id="dm-wage-offset" min="0" max="100" step="5" value="50">
-    <div class="dm-hint" id="dm-wage-hint">How much of the premium savings employees negotiate back as higher wages. At 50%, half the savings return as salary increases.</div>
+    <div class="dm-hint" id="dm-wage-hint">How much of the premium savings employees negotiate back as higher wages.</div>
   </div>
   <div class="dm-control" style="grid-column: 1 / -1;">
     <div class="dm-readout" id="dm-hc-readout" style="display: none;">
@@ -1160,6 +1202,7 @@ title: "Deficit Dynamics Model"
   function onChange() {
     updateLabels();
     updateHints();
+    updateTierActive();
     renderMain();
     renderTiers();
   }
@@ -1185,7 +1228,19 @@ title: "Deficit Dynamics Model"
     onChange();
   });
 
-  document.querySelectorAll('.dm-presets button').forEach(function(btn) {
+  var tierBtns = document.querySelectorAll('.dm-tier-buttons button');
+  function updateTierActive() {
+    var val = parseFloat(overrideEl.value);
+    tierBtns.forEach(function(b) {
+      var p = b.dataset.preset;
+      var match = (p === 'baseline' && val === 0) ||
+                  (p === 'tier1' && val === 9) ||
+                  (p === 'tier2' && val === 12) ||
+                  (p === 'tier3' && val === 15);
+      b.classList.toggle('dm-tier-active', match);
+    });
+  }
+  tierBtns.forEach(function(btn) {
     btn.addEventListener('click', function() {
       var p = btn.dataset.preset;
       if (p === 'baseline') {
