@@ -279,6 +279,23 @@ title: "Deficit Dynamics Model"
   .dm-hidden {
     display: none;
   }
+  /* Embed mode: hide chrome, keep interactive controls */
+  body.dm-embed .page > h1,
+  body.dm-embed .page > .subtitle,
+  body.dm-embed .dm-controls-wrap,
+  body.dm-embed .dm-tier-section,
+  body.dm-embed .dm-prose-section {
+    display: none;
+  }
+  body.dm-embed .dm-embed-link {
+    display: block;
+    text-align: center;
+    margin: 12px 0 0;
+    font-size: 13px;
+  }
+  .dm-embed-link {
+    display: none;
+  }
   .dm-controls-wrap {
     margin: 20px 0 8px;
   }
@@ -444,6 +461,9 @@ title: "Deficit Dynamics Model"
 </div>
 </details>
 
+<a class="dm-embed-link" id="dm-embed-link" href="deficit_model.html">Explore the full interactive model &rarr;</a>
+
+<div class="dm-tier-section">
 <h2>How long does each tier last?</h2>
 <p>The three ballot questions ask voters to choose among $9M, $12M, or $15M. Each tier uses the same growth rates and spending absorption rate from the controls above. The question each line answers: how many years before expenses catch the boosted revenue line again?</p>
 
@@ -472,7 +492,9 @@ title: "Deficit Dynamics Model"
   <text id="dt-end-t3" class="dm-end-label dm-end-label-t3"></text>
   <g id="dt-legend"></g>
 </svg>
+</div>
 
+<div class="dm-prose-section">
 <h2>What this shows</h2>
 <p>The two lines crossed in FY18. Since then, Marblehead's general fund expenditures have exceeded its budgetary revenues every year. The gap has been bridged by drawing down free cash, which peaked at $10.2M in FY23 before the <abbr class="g" title="Finance Committee">FinCom</abbr> flagged the reliance as unsustainable.</p>
 
@@ -488,6 +510,7 @@ title: "Deficit Dynamics Model"
   <p>Projections use constant annual compounding, which is a simplification. Real budgets have lumpy cost spikes (<abbr class="g" title="Group Insurance Commission">GIC</abbr> rate jumps, <abbr class="g" title="Public Employee Retirement Administration Commission">PERAC</abbr> revaluations) and uneven revenue growth.</p>
   <p>The "spending absorption" slider controls how many years it takes for override revenue to be allocated as new spending. At N years, each override draw is spread as equal annual expense bumps over N years. At 0, none of the override is spent. At 1, it is absorbed in the year of the draw. Default is 5 years, reflecting the gradual process of filling positions, restoring programs, and addressing deferred maintenance.</p>
 </details>
+</div>
 
 <script>
 (function() {
@@ -1348,8 +1371,58 @@ title: "Deficit Dynamics Model"
     });
   });
 
+  // === URL parameter support (for embeds and direct links) ===
+  var params = new URLSearchParams(window.location.search);
+
+  // Embed mode
+  if (params.get('embed') === '1') {
+    document.body.classList.add('dm-embed');
+    // Build full-model URL preserving current params minus embed
+    var fullParams = new URLSearchParams(params);
+    fullParams.delete('embed');
+    var fullUrl = 'deficit_model.html' + (fullParams.toString() ? '?' + fullParams.toString() : '');
+    document.getElementById('dm-embed-link').href = fullUrl;
+  }
+
+  // Apply stance preset from URL
+  var urlStance = params.get('stance');
+  if (urlStance) {
+    if (urlStance === 'bridge') {
+      overrideEl.value = 15;
+    } else if (urlStance === 'skeptic') {
+      overrideEl.value = 15;
+      ratchetEl.value = 1;
+    } else if (urlStance === 'cut') {
+      positionCuts = 50;
+    } else if (urlStance === 'healthcare') {
+      hcShareEl.value = 50;
+    }
+  }
+
+  // Apply individual params (override stance defaults)
+  if (params.has('tier')) {
+    var t = parseInt(params.get('tier'));
+    if (t === 1) overrideEl.value = 9;
+    else if (t === 2) overrideEl.value = 12;
+    else if (t === 3) overrideEl.value = 15;
+    else if (t === 0) overrideEl.value = 0;
+  }
+  if (params.has('override')) overrideEl.value = parseFloat(params.get('override'));
+  if (params.has('absorption')) ratchetEl.value = parseInt(params.get('absorption'));
+  if (params.has('cuts')) positionCuts = parseInt(params.get('cuts'));
+  if (params.has('revgrowth')) revGrowthEl.value = parseFloat(params.get('revgrowth'));
+  if (params.has('expgrowth')) expGrowthEl.value = parseFloat(params.get('expgrowth'));
+  if (params.has('hcshare')) hcShareEl.value = parseInt(params.get('hcshare'));
+  if (params.has('wageoffset')) wageOffsetEl.value = parseInt(params.get('wageoffset'));
+  if (params.get('tax') === '1') {
+    taxMode = true;
+    taxBtn.textContent = 'Show as town budget ($M)';
+    taxBtn.classList.add('dm-active');
+  }
+
   updateLabels();
   updateHints();
+  updateTierActive();
   renderMain();
   renderTiers();
 })();
