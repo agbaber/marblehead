@@ -11,7 +11,7 @@
  */
 import { chromium } from 'playwright';
 
-const SITE = 'https://marbleheaddata.org';
+const SITE = process.env.SITE || 'https://marbleheaddata.org';
 
 let passed = 0;
 let failed = 0;
