@@ -5420,8 +5420,7 @@ og_url: https://marbleheaddata.org/
 
   /* ── Nav back button ── */
   document.getElementById('navBack').addEventListener('click', function () {
-    showLanding();
-    window.scrollTo(0, 0);
+    history.back();
   });
 
   /* ── Inject "Next question" buttons ── */
