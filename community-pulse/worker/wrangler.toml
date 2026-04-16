@@ -11,5 +11,21 @@ migrations_dir = "schema"
 [vars]
 ALLOWED_ORIGIN = "https://marbleheaddata.org"
 
-# Dev-only fallback binding for local development. Real deployment
-# uses the D1 binding above, populated by `wrangler d1 create`.
+[dev]
+port = 8787
+
+# ── Staging environment ──────────────────────────────────
+# Deploy: npx wrangler deploy --env staging
+# URL: https://marblehead-community-pulse-staging.<account>.workers.dev
+[env.staging]
+name = "marblehead-community-pulse-staging"
+
+[[env.staging.d1_databases]]
+binding = "DB"
+database_name = "community-pulse-staging"
+database_id = "bf73e7fc-d8c2-42aa-96f6-133c3059b14c"
+migrations_dir = "schema"
+
+[env.staging.vars]
+ALLOWED_ORIGIN = "*"
+JWT_SECRET = "staging-secret-not-for-production"
