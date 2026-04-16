@@ -552,7 +552,7 @@ title: "Deficit Dynamics Model"
 
   // === Main chart layout ===
   var svgW = 880, svgH = 460;
-  var mL = 70, mR = 55, mT = 28, mB = 60;
+  var mL = 70, mR = 100, mT = 28, mB = 60;
   var plotW = svgW - mL - mR;
   var plotH = svgH - mT - mB;
 
@@ -563,7 +563,7 @@ title: "Deficit Dynamics Model"
 
   // === Tier chart layout ===
   var tsvgW = 880, tsvgH = 400;
-  var tmL = 70, tmR = 55, tmT = 28, tmB = 50;
+  var tmL = 70, tmR = 100, tmT = 28, tmB = 50;
   var tPlotW = tsvgW - tmL - tmR;
   var tPlotH = tsvgH - tmT - tmB;
 
@@ -929,17 +929,21 @@ title: "Deficit Dynamics Model"
     lblR.setAttribute('text-anchor', 'start');
     lblR.textContent = '\u2192 Projected';
 
-    // Crossover annotation at FY18
-    var crossIdx = 3;
+    // Crossover annotation: interpolate exact crossing between FY17 (idx 2) and FY18 (idx 3)
     var crossDot = document.getElementById('dm-crossover-dot');
     var crossLabel = document.getElementById('dm-crossover-label');
-    if (exp[crossIdx] > rev[crossIdx]) {
-      var cx = xScale(crossIdx);
-      var cy = yScale((rev[crossIdx] + exp[crossIdx]) / 2);
+    if (rev.length > 3 && exp[3] > rev[3] && rev[2] >= exp[2]) {
+      // Linear interpolation to find exact crossing point
+      var gap2 = rev[2] - exp[2]; // positive (rev above)
+      var gap3 = exp[3] - rev[3]; // positive (exp above)
+      var t = gap2 / (gap2 + gap3); // fraction between idx 2 and 3
+      var crossVal = rev[2] + t * (rev[3] - rev[2]);
+      var cx = xScale(2 + t);
+      var cy = yScale(crossVal);
       crossDot.setAttribute('cx', cx); crossDot.setAttribute('cy', cy);
       crossDot.classList.remove('dm-hidden');
       crossLabel.setAttribute('x', cx);
-      crossLabel.setAttribute('y', yScale(exp[crossIdx]) - 10);
+      crossLabel.setAttribute('y', cy - 16);
       crossLabel.setAttribute('text-anchor', 'middle');
       crossLabel.textContent = 'FY18: lines cross';
       crossLabel.classList.remove('dm-hidden');
