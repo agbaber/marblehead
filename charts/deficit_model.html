@@ -318,8 +318,6 @@ title: "Deficit Dynamics Model"
   <g id="dm-legend"></g>
 </svg>
 
-<details class="dm-controls-wrap" open>
-<summary class="dm-controls-summary">Controls</summary>
 <div class="dm-controls">
   <div class="dm-control">
     <span class="dm-control-label">Revenue growth: <span class="dm-value" id="dm-rev-growth-val">3.5%</span></span>
@@ -346,6 +344,17 @@ title: "Deficit Dynamics Model"
       </div>
     </div>
   </div>
+  <div class="dm-presets">
+    <button type="button" data-preset="baseline">No override</button>
+    <button type="button" data-preset="tier1">Tier 1 ($9M)</button>
+    <button type="button" data-preset="tier2">Tier 2 ($12M)</button>
+    <button type="button" data-preset="tier3">Tier 3 ($15M)</button>
+  </div>
+</div>
+
+<details class="dm-controls-wrap">
+<summary class="dm-controls-summary">What if we also cut positions or shift healthcare costs?</summary>
+<div class="dm-controls">
   <div class="dm-control" style="grid-column: 1 / -1;">
     <span class="dm-control-label">Position cuts: <span class="dm-value" id="dm-cuts-val">0</span></span>
     <div class="dm-presets" style="margin-top: 0;">
@@ -371,12 +380,6 @@ title: "Deficit Dynamics Model"
     <div class="dm-readout" id="dm-hc-readout" style="display: none;">
       <div class="dm-readout-line" id="dm-hc-summary"></div>
     </div>
-  </div>
-  <div class="dm-presets">
-    <button type="button" data-preset="baseline">No override</button>
-    <button type="button" data-preset="tier1">Tier 1 ($9M)</button>
-    <button type="button" data-preset="tier2">Tier 2 ($12M)</button>
-    <button type="button" data-preset="tier3">Tier 3 ($15M)</button>
   </div>
 </div>
 </details>
