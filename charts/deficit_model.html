@@ -416,13 +416,9 @@ title: "Deficit Dynamics Model"
     <div class="dm-hint" id="dm-exp-hint">FY15 to FY24 actual average. No change in trajectory.</div>
   </div>
   <div class="dm-control" style="grid-column: 1 / -1;">
-    <div class="dm-toggle-row">
-      <input type="checkbox" id="dm-ratchet" checked>
-      <div>
-        <label for="dm-ratchet" class="dm-toggle-label">Override revenue is spent (default)</label>
-        <div class="dm-hint">The override funds specific items (positions, programs, trash). Turn off to see the scenario where override revenue is collected but not spent.</div>
-      </div>
-    </div>
+    <span class="dm-control-label">Spending absorption: <span class="dm-value" id="dm-ratchet-val">5 years</span></span>
+    <input type="range" id="dm-ratchet" min="0" max="10" step="1" value="5">
+    <div class="dm-hint" id="dm-ratchet-hint">Override revenue gets allocated to deferred needs over time. At 5 years, spending gradually absorbs the new revenue, then the gap reopens. At 0, the money is never spent (unrealistic). At 1, it is absorbed immediately.</div>
   </div>
   <div class="dm-control">
     <span class="dm-control-label">Healthcare employer share: <span class="dm-value" id="dm-hc-share-val">83%</span></span>
@@ -476,9 +472,7 @@ title: "Deficit Dynamics Model"
 
 <p>The right side of the chart projects both lines forward from the FY24 actuals. The sliders control the annual growth rates. At the historical averages (revenue 3.7%, expenses 4.0%), the gap widens steadily. An override shifts the revenue line up over three years (FY27 to FY29).</p>
 
-<p>By default, the chart assumes override revenue is spent, because it is: each tier has a specific line-item budget (school positions, public safety staffing, trash collection). When the revenue line steps up, the expense line steps up with it. That means the override buys time but does not permanently close the gap, because the underlying slopes have not changed. The expense line (driven by health insurance, pensions, and contractual wages) still grows faster than the revenue line (capped by <abbr class="g" title="Proposition 2&frac12;, the Massachusetts law limiting annual property tax levy increases to 2.5% plus new growth">Prop 2&frac12;</abbr>).</p>
-
-<p>You can turn off "Override revenue is spent" to see what would happen if override revenue were collected but not spent. In that scenario, the full override amount goes to closing the gap, and the expense slope stays unchanged. This is unrealistic for the proposed override, but it illustrates the maximum possible gap closure from new revenue alone.</p>
+<p>The "spending absorption" slider controls how quickly override revenue gets allocated to deferred needs. At 5 years (the default), spending gradually ramps up as positions are filled, programs restored, and deferred maintenance addressed. The gap shrinks when the override hits, then slowly reopens as spending catches up to the new revenue ceiling. At 0, none of the override is spent (unrealistic). At 1, all of it is absorbed immediately. The revenue line (capped by <abbr class="g" title="Proposition 2&frac12;, the Massachusetts law limiting annual property tax levy increases to 2.5% plus new growth">Prop 2&frac12;</abbr>) still grows slower than the expense line (driven by health insurance, pensions, and contractual wages), so the gap eventually reopens regardless.</p>
 
 <details class="notes">
   <summary>Notes and methodology</summary>
@@ -486,7 +480,7 @@ title: "Deficit Dynamics Model"
   <p>Free cash draw history is from <a href="../data/free_cash_operating_history.csv">free_cash_operating_history.csv</a>, sourced from FinCom Annual Reports and ATM warrant articles.<sup class="cite" data-href="../data/free_cash_operating_history.csv" data-source="FinCom Annual Reports, ATM warrant articles"></sup></p>
   <p>The override phase-in schedule (FY27 to FY29) and tax bill conversion ($132.36 per $1M) are from the town's <a href="../data/override_tax_impact_asf.csv">override tax impact data</a> for an average single-family home assessed at $1,291,507.<sup class="cite" data-href="../data/override_tax_impact_asf.csv" data-source="Override tax impact schedule, average single-family assessed value $1,291,507"></sup></p>
   <p>Projections use constant annual compounding, which is a simplification. Real budgets have lumpy cost spikes (<abbr class="g" title="Group Insurance Commission">GIC</abbr> rate jumps, <abbr class="g" title="Public Employee Retirement Administration Commission">PERAC</abbr> revaluations) and uneven revenue growth.</p>
-  <p>The "Override revenue is spent" toggle (on by default) bumps the expense line by the override draw at each phase-in step, then resumes the prior expense growth slope. This reflects the fact that each override tier has earmarked spending. Turning it off shows the maximum gap closure, as if all new revenue went to reserves.</p>
+  <p>The "spending absorption" slider controls how many years it takes for override revenue to be allocated as new spending. At N years, each override draw is spread as equal annual expense bumps over N years. At 0, none of the override is spent. At 1, it is absorbed in the year of the draw. Default is 5 years, reflecting the gradual process of filling positions, restoring programs, and addressing deferred maintenance.</p>
 </details>
 
 <script>
@@ -557,6 +551,7 @@ title: "Deficit Dynamics Model"
   var expGrowthEl = document.getElementById('dm-exp-growth');
   var overrideEl = document.getElementById('dm-override');
   var ratchetEl = document.getElementById('dm-ratchet');
+  var ratchetValEl = document.getElementById('dm-ratchet-val');
   var revGrowthVal = document.getElementById('dm-rev-growth-val');
   var expGrowthVal = document.getElementById('dm-exp-growth-val');
   var overrideVal = document.getElementById('dm-override-val');
@@ -662,10 +657,14 @@ title: "Deficit Dynamics Model"
     var revG = parseFloat(revGrowthEl.value) / 100;
     var expG = parseFloat(expGrowthEl.value) / 100;
     var ovr = parseFloat(overrideEl.value);
-    var ratchet = ratchetEl.checked;
+    var ratchetYears = parseInt(ratchetEl.value);
 
     var rev = histRev.slice();
     var exp = histExp.slice();
+
+    // Track pending ratchet absorptions: each draw creates a stream
+    // of annual expense bumps spread over ratchetYears
+    var pendingBumps = []; // array of { startIdx, annualAmount }
 
     var r = rev[lastHistIdx];
     var hc = computeHcSavings();
@@ -679,8 +678,19 @@ title: "Deficit Dynamics Model"
           if (i === phaseYears[p]) {
             var draw = ovr * phaseRatios[p];
             r += draw;
-            if (ratchet) e += draw;
+            // Schedule gradual expense absorption
+            if (ratchetYears > 0) {
+              pendingBumps.push({ startIdx: i, annualAmount: draw / ratchetYears });
+            }
           }
+        }
+      }
+      // Apply accumulated ratchet bumps
+      for (var b = 0; b < pendingBumps.length; b++) {
+        var bump = pendingBumps[b];
+        var yearsSinceStart = i - bump.startIdx;
+        if (yearsSinceStart >= 0 && yearsSinceStart < ratchetYears) {
+          e += bump.annualAmount;
         }
       }
       rev.push(r);
@@ -905,7 +915,7 @@ title: "Deficit Dynamics Model"
 
     // Show constrained line when there's an override and ratchet is on
     // (this is when the gap between "wants" and "can afford" matters)
-    var showConstrained = data.override > 0 && ratchetEl.checked;
+    var showConstrained = data.override > 0 && parseInt(ratchetEl.value) > 0;
     if (showConstrained) {
       constrainedEl.setAttribute('d', buildPath(constrained, lastHistIdx, nYears - 1, xScale, yScale));
       constrainedEl.classList.remove('dm-hidden');
@@ -1175,6 +1185,8 @@ title: "Deficit Dynamics Model"
     revGrowthVal.textContent = parseFloat(revGrowthEl.value).toFixed(1) + '%';
     expGrowthVal.textContent = parseFloat(expGrowthEl.value).toFixed(1) + '%';
     overrideVal.textContent = fmtOverride(parseFloat(overrideEl.value));
+    var ry = parseInt(ratchetEl.value);
+    ratchetValEl.textContent = ry === 0 ? 'never' : ry === 1 ? 'immediate' : ry + ' years';
     cutsValEl.textContent = positionCuts;
     // Update cuts hint with savings amount
     var savings = positionCuts * costPerPosition;
@@ -1209,10 +1221,9 @@ title: "Deficit Dynamics Model"
     renderTiers();
   }
 
-  [revGrowthEl, expGrowthEl, overrideEl, hcShareEl, wageOffsetEl].forEach(function(el) {
+  [revGrowthEl, expGrowthEl, overrideEl, ratchetEl, hcShareEl, wageOffsetEl].forEach(function(el) {
     el.addEventListener('input', onChange);
   });
-  ratchetEl.addEventListener('change', onChange);
 
   // Position cuts buttons
   document.querySelectorAll('.dm-cuts-btn').forEach(function(btn) {
