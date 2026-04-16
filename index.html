@@ -11,118 +11,9 @@ og_url: https://marbleheaddata.org/
 
 <div class="explore-stage">
 
-  <!-- Landing (shown until a topic is picked; JS populates question cards) -->
-  <div class="explore-landing">
-    <div class="explore-landing-head">
-      <h1>Do we need an override?</h1>
-      <p>Each question shows the strongest case for every answer. Pick the one you agree with. Your picks build into a set of positions you can review or share.</p>
-    </div>
+  {% include explore-landing.html %}
 
-    <!-- Procedural strip: explains the two-step voting process. Either vote can end the override. -->
-    <div class="votes-strip">
-      <p class="votes-strip-label">Two votes decide the override</p>
-      <div class="votes-strip-steps">
-        <div class="votes-strip-step">
-          <div class="votes-strip-step-when">Mon, May 4 <span class="votes-strip-countdown" data-date="2026-05-04"></span></div>
-          <div class="votes-strip-step-what">Annual Town Meeting</div>
-          <p class="votes-strip-step-desc">Residents vote yes or no on sending the override to the ballot as three tiers, ceiling $15M. A no ends the override here.</p>
-        </div>
-        <div class="votes-strip-arrow" aria-hidden="true">&rarr;</div>
-        <div class="votes-strip-step">
-          <div class="votes-strip-step-when">Tue, Jun 9 <span class="votes-strip-countdown" data-date="2026-06-09"></span></div>
-          <div class="votes-strip-step-what">Annual Town Election</div>
-          <p class="votes-strip-step-desc">If Town Meeting sends it forward, voters pick the tier at the ballot. The highest tier with a majority sets the amount.</p>
-        </div>
-      </div>
-      <p class="votes-strip-note">Either vote can end the override. <a class="votes-strip-link" href="what-you-can-do.html#your-two-votes">How the two votes work together &rarr;</a></p>
-    </div>
-
-    <!-- Stats strip: progress + engagement + reset -->
-    <div class="explore-stats" id="exploreStats" style="display:none">
-      <div class="explore-stats-progress-row">
-        <span class="explore-stats-decided"><span id="statDecided">0</span><small> / <span id="statTotal">0</span> decided</small></span>
-        <span class="explore-stats-progress"><span class="explore-stats-bar" id="statBar" style="width:0%"></span></span>
-        <span class="explore-stats-msg" id="statMsg"></span>
-      </div>
-      <div class="explore-stats-detail">
-        <div class="explore-stats-detail-left">
-          <span>You: <strong id="statYourViews">0</strong> views, <strong id="statYourShares">0</strong> shares</span>
-          <span>Community: <strong id="statAllViews">0</strong> views, <strong id="statAllShares">0</strong> shares</span>
-        </div>
-        <div class="explore-stats-detail-right">
-          <span class="explore-share-inline" id="shareTop" style="display:none">
-            <button type="button" class="explore-copy-link explore-copy-link--inline" data-copy-positions>
-              <svg class="icon-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-              <svg class="icon-copied" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-              <span>Share</span>
-            </button>
-            <span class="explore-stats-sep"></span>
-          </span>
-          <button type="button" class="explore-stats-reset" id="statsReset">Delete my data</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="explore-shared-banner" id="sharedBanner">
-      Tap any question to see the evidence behind their pick.
-      <br><button type="button" class="explore-shared-fresh" id="sharedFresh">Start fresh with your own answers</button>
-    </div>
-    <div class="explore-question-list" id="questionList">
-      <!-- JS builds these from the actual question h1s -->
-    </div>
-
-    <div class="explore-tools">
-      <p class="explore-tools-label">Run the numbers yourself</p>
-      <div class="explore-tools-row">
-        <a class="explore-tool-card" href="charts/deficit_model.html">
-          <svg class="explore-tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          <span class="explore-tool-title">Deficit Model</span>
-          <span class="explore-tool-desc">Set growth rates, toggle tiers, see when the gap reopens</span>
-        </a>
-        <a class="explore-tool-card" href="charts/town_explorer.html">
-          <svg class="explore-tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <span class="explore-tool-title">Town Explorer</span>
-          <span class="explore-tool-desc">Filter, sort, and compare all 351 MA communities</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="explore-share-strip" id="shareStrip">
-      <button type="button" class="explore-copy-link" data-copy-positions>
-        <svg class="icon-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-        <svg class="icon-copied" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-        <span>Copy link to your positions</span>
-      </button>
-    </div>
-  </div>
-
-  <!-- Question nav (visible once inside a question) -->
-  <div class="question-nav" id="questionNav">
-    <button type="button" class="question-nav-back" id="navBack">&larr; All questions</button>
-    <div class="question-nav-progress" id="progressDots">
-      <!-- JS builds dots from question screens -->
-    </div>
-  </div>
-
-  <!-- First-time tutorial (shown once on first pick) -->
-  <div class="explore-tutorial" id="exploreTutorial">
-    <p class="explore-tutorial-title">You just made your first pick</p>
-    <ul>
-      <li>Your picks are <strong>private</strong>, saved only in your browser</li>
-      <li>Tap any other answer to <strong>read their evidence</strong> without changing your pick</li>
-      <li>Use the <strong>checkmark</strong> to switch your pick to a different answer</li>
-    </ul>
-    <button type="button" class="explore-tutorial-dismiss" id="tutorialDismiss">Got it</button>
-  </div>
-
-  <!-- Browse vs. switch hint (persistent after tutorial) -->
-  <p class="explore-browse-hint" id="browseHint">Tap any answer to read their case. Use the checkmark to switch your pick.</p>
-
-  <!-- Your position banner (JS shows when you have a pick for current topic) -->
-  <div class="your-position" id="yourPosition">
-    Your view: <strong id="yourPositionText"></strong>
-    <button type="button" class="your-position-change" id="yourPositionChange">change</button>
-  </div>
+  {% include explore-question-nav.html %}
 
   <!-- ═══════════════════════════════════════════════════
        QUESTION 1: Override necessary vs. wasteful spending
@@ -3688,28 +3579,7 @@ og_url: https://marbleheaddata.org/
 
 </div>
 
-<!-- ── Notes pill ── -->
-<button class="notes-pill" id="notesPill">
-  My positions <span class="notes-pill-count" id="notesPillCount">0</span>
-</button>
-
-<!-- ── Notes panel backdrop (mobile tap-outside-to-close) ── -->
-<div class="notes-backdrop" id="notesBackdrop" hidden></div>
-
-<!-- ── Notes panel ── -->
-<div class="notes-panel" id="notesPanel" role="dialog" aria-modal="true" aria-labelledby="notesPanelTitle">
-  <button class="notes-panel-grip" id="notesGrip" type="button" aria-label="Close my positions"></button>
-  <div class="notes-panel-header">
-    <span class="notes-panel-title" id="notesPanelTitle">My positions</span>
-    <div class="notes-panel-actions">
-      <button class="notes-panel-btn" id="notesShare">Share</button>
-      <button class="notes-panel-btn" id="notesClose">Close</button>
-    </div>
-  </div>
-  <div class="notes-panel-body" id="notesPanelBody">
-    <p class="notes-empty">Pick positions on the questions above</p>
-  </div>
-</div>
+{% include explore-notes.html %}
 
 <script src="{{ '/' | relative_url }}assets/explore.js"></script>
 

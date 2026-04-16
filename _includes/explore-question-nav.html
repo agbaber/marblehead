@@ -1,0 +1,27 @@
+  <!-- Question nav (visible once inside a question) -->
+  <div class="question-nav" id="questionNav">
+    <button type="button" class="question-nav-back" id="navBack">&larr; All questions</button>
+    <div class="question-nav-progress" id="progressDots">
+      <!-- JS builds dots from question screens -->
+    </div>
+  </div>
+
+  <!-- First-time tutorial (shown once on first pick) -->
+  <div class="explore-tutorial" id="exploreTutorial">
+    <p class="explore-tutorial-title">You just made your first pick</p>
+    <ul>
+      <li>Your picks are <strong>private</strong>, saved only in your browser</li>
+      <li>Tap any other answer to <strong>read their evidence</strong> without changing your pick</li>
+      <li>Use the <strong>checkmark</strong> to switch your pick to a different answer</li>
+    </ul>
+    <button type="button" class="explore-tutorial-dismiss" id="tutorialDismiss">Got it</button>
+  </div>
+
+  <!-- Browse vs. switch hint (persistent after tutorial) -->
+  <p class="explore-browse-hint" id="browseHint">Tap any answer to read their case. Use the checkmark to switch your pick.</p>
+
+  <!-- Your position banner (JS shows when you have a pick for current topic) -->
+  <div class="your-position" id="yourPosition">
+    Your view: <strong id="yourPositionText"></strong>
+    <button type="button" class="your-position-change" id="yourPositionChange">change</button>
+  </div>

@@ -1,0 +1,22 @@
+<!-- ── Notes pill ── -->
+<button class="notes-pill" id="notesPill">
+  My positions <span class="notes-pill-count" id="notesPillCount">0</span>
+</button>
+
+<!-- ── Notes panel backdrop (mobile tap-outside-to-close) ── -->
+<div class="notes-backdrop" id="notesBackdrop" hidden></div>
+
+<!-- ── Notes panel ── -->
+<div class="notes-panel" id="notesPanel" role="dialog" aria-modal="true" aria-labelledby="notesPanelTitle">
+  <button class="notes-panel-grip" id="notesGrip" type="button" aria-label="Close my positions"></button>
+  <div class="notes-panel-header">
+    <span class="notes-panel-title" id="notesPanelTitle">My positions</span>
+    <div class="notes-panel-actions">
+      <button class="notes-panel-btn" id="notesShare">Share</button>
+      <button class="notes-panel-btn" id="notesClose">Close</button>
+    </div>
+  </div>
+  <div class="notes-panel-body" id="notesPanelBody">
+    <p class="notes-empty">Pick positions on the questions above</p>
+  </div>
+</div>
