@@ -822,15 +822,10 @@
       // Show pick distribution if already decided
       showPickDistribution(topic);
     } else {
-      // No pick yet: auto-open a random answer's evidence so the user
-      // lands on data instead of a blank state with just card summaries.
-      var cards = document.querySelectorAll(
-        '.answer-card[data-question="' + topic + '"]'
-      );
-      if (cards.length) {
-        var rand = cards[Math.floor(Math.random() * cards.length)];
-        viewEvidence(topic, rand.dataset.answer);
-      }
+      // No pick yet: leave all evidence panels closed so the reader
+      // chooses what to expand. Auto-opening a random answer's
+      // evidence reads as the site endorsing that answer, which
+      // violates the "let the reader form their own opinion" stance.
     }
     updateBrowseHint(topic);
   }
@@ -848,9 +843,13 @@
     writeURL(null, null);
   }
 
-  /* ── Nav back button ── */
+  /* ── Nav back button ──
+     "All questions" must always return to the landing/list view.
+     history.back() picked the previous URL entry, which after a few
+     question switches lands on a different question, not the list. */
   document.getElementById('navBack').addEventListener('click', function () {
-    history.back();
+    showLanding();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   /* ── Inject "Next question" buttons ── */
