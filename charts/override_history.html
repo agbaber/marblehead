@@ -1,0 +1,356 @@
+---
+title: "Override Vote History"
+scripts: [citations]
+---
+<style>
+  .oh-stem-pass { stroke: var(--c-navy); stroke-width: 2; }
+  .oh-stem-fail { stroke: var(--text-muted); stroke-width: 1.5; opacity: 0.5; }
+  .oh-dot-pass { fill: var(--c-navy); }
+  .oh-dot-fail { fill: var(--text-muted); opacity: 0.5; }
+  .oh-axis-base { stroke: var(--divider); stroke-width: 1; }
+  .oh-label {
+    font-size: 9px;
+    fill: var(--text-muted);
+    font-family: inherit;
+  }
+  .oh-callout {
+    font-size: 9px;
+    fill: var(--c-navy);
+    font-family: inherit;
+    font-weight: 600;
+  }
+  .oh-callout-fail {
+    font-size: 9px;
+    fill: var(--text-muted);
+    font-family: inherit;
+    font-weight: 600;
+  }
+  .oh-tick {
+    font-size: 10px;
+    fill: var(--text-muted);
+    font-family: inherit;
+  }
+  .oh-grid { stroke: var(--divider); stroke-width: 1; stroke-dasharray: 2 3; }
+  .oh-peer-bg-mh { fill: var(--c-navy); opacity: 0.04; }
+  .oh-peer-label {
+    font-size: 10px;
+    fill: var(--text);
+    font-family: inherit;
+  }
+  .oh-peer-label-mh {
+    font-size: 10px;
+    fill: var(--c-navy);
+    font-family: inherit;
+    font-weight: 700;
+  }
+  .oh-peer-dot-pass { fill: var(--c-navy); }
+  .oh-peer-dot-fail { fill: none; stroke: var(--text-muted); stroke-width: 1.5; opacity: 0.6; }
+  .oh-legend {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 8px 0 4px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .oh-legend-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+  .oh-legend-dot-pass { background: var(--c-navy); }
+  .oh-legend-dot-fail { background: transparent; border: 2px solid var(--text-muted); opacity: 0.6; }
+  .oh-svg { display: block; width: 100%; height: auto; max-width: 880px; margin: 0 auto; }
+  .oh-peer-wrap { margin: 0 -16px; }
+  @media (max-width: 600px) {
+    .oh-peer-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .oh-peer-wrap svg { min-width: 700px; }
+  }
+  details.notes { margin: 20px 0; }
+  details.notes summary {
+    font-size: 13px; font-weight: 600; color: var(--text-muted);
+    cursor: pointer; padding: 8px 0;
+  }
+  details.notes[open] summary { margin-bottom: 8px; }
+  details.notes p {
+    font-size: 12px; line-height: 1.6; color: var(--text-subtle);
+    margin: 0 0 10px;
+  }
+</style>
+
+<h1 class="h-center">Override Vote History</h1>
+<p class="subtitle h-center">Marblehead and 13 peer towns, FY1990 to FY2027. Every Prop 2&frac12; operating override ballot question from the DOR Municipal Databank.</p>
+
+<ul class="tldr">
+  <li><strong>19 override votes</strong> in Marblehead since 1991; 6 passed, 13 did not</li>
+  <li><strong>Last significant operating override:</strong> FY2006, $2.73M (passed 3,869 to 3,456)</li>
+  <li>Peer towns like Arlington, Brookline, Needham, and Wellesley have passed overrides more recently and more frequently</li>
+</ul>
+
+<h2>Marblehead: 35 years of override votes</h2>
+<p class="oh-hint" style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Height = vote margin. Circle size = dollar amount. Stems above the line passed; below did not.</p>
+
+<div class="oh-legend">
+  <span><span class="oh-legend-dot oh-legend-dot-pass"></span> Passed</span>
+  <span><span class="oh-legend-dot oh-legend-dot-fail"></span> Did not pass</span>
+</div>
+
+<svg class="oh-svg" id="oh-mh-chart" viewBox="0 0 880 340" role="img" aria-label="Marblehead override vote history, FY1991 to FY2024">
+  <g id="oh-mh-grid"></g>
+  <g id="oh-mh-stems"></g>
+  <g id="oh-mh-callouts"></g>
+</svg>
+
+<h2>Peer towns: who overrides, and how often?</h2>
+<p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Each dot is a ballot question. Filled = passed, hollow = did not pass. Towns sorted by most recent win.</p>
+
+<div class="oh-legend">
+  <span><span class="oh-legend-dot oh-legend-dot-pass"></span> Passed</span>
+  <span><span class="oh-legend-dot oh-legend-dot-fail"></span> Did not pass</span>
+</div>
+
+<div class="oh-peer-wrap">
+<svg class="oh-svg" id="oh-peer-chart" viewBox="0 0 880 520" role="img" aria-label="Override vote history for 14 peer towns, FY1990 to FY2027">
+  <g id="oh-peer-grid"></g>
+  <g id="oh-peer-rows"></g>
+</svg>
+</div>
+
+<details class="notes">
+  <summary>Notes and sources</summary>
+  <p>Override vote data from the Massachusetts Department of Revenue, Division of Local Services Municipal Databank.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Debt Exclusion votes"></sup> The peer set matches the 14 towns tracked in peer_override_history.csv: Arlington, Brookline, Cohasset, Framingham, Hingham, Lexington, Marblehead, Melrose, Natick, Needham, Stoneham, Swampscott, Wellesley, Winchester.</p>
+  <p>One Marblehead row (FY2025, "Fix Clerk Error", 0 votes, $0) is excluded as a clerical correction, not an actual ballot question.</p>
+  <p>Vote margins are calculated as yes votes minus no votes. Some fiscal years had multiple ballot questions (e.g. Marblehead FY2005 had six questions, Needham FY1997 had ten). Each question is shown as a separate dot.</p>
+</details>
+
+<script>
+(function() {
+  // === Marblehead votes (from peer_override_history.csv, excluding FY2025 clerk error) ===
+  var mhVotes = [
+    {fy:1991, win:false, yes:2664, no:4539, amt:1000000, desc:"General Operating Budget"},
+    {fy:1992, win:false, yes:716, no:782, amt:508, desc:"Meals On Wheels"},
+    {fy:1992, win:false, yes:564, no:935, amt:15716, desc:"Town Clerk Salaries"},
+    {fy:1992, win:false, yes:1629, no:2598, amt:575000, desc:"General Operating"},
+    {fy:1996, win:false, yes:2473, no:2553, amt:348929, desc:"School Salaries"},
+    {fy:1997, win:false, yes:2737, no:3376, amt:870084, desc:"School Expenses"},
+    {fy:2001, win:false, yes:833, no:1150, amt:149000, desc:"Old Town House"},
+    {fy:2002, win:true, yes:3016, no:1482, amt:300000, desc:"Sewers"},
+    {fy:2004, win:true, yes:3936, no:2350, amt:1381017, desc:"Supplemental Budget"},
+    {fy:2005, win:false, yes:2419, no:2661, amt:482590, desc:"Police/Equipment"},
+    {fy:2005, win:true, yes:2857, no:2289, amt:422246, desc:"School"},
+    {fy:2005, win:false, yes:2288, no:2758, amt:132500, desc:"Police Supplemental"},
+    {fy:2005, win:true, yes:2775, no:2323, amt:73051, desc:"Library"},
+    {fy:2005, win:false, yes:1639, no:3384, amt:55000, desc:"General Operating"},
+    {fy:2005, win:true, yes:2849, no:2240, amt:17100, desc:"Waste Collection"},
+    {fy:2006, win:true, yes:3869, no:3456, amt:2730167, desc:"Town Departments"},
+    {fy:2012, win:false, yes:2531, no:3567, amt:667793, desc:"Old Town House"},
+    {fy:2023, win:false, yes:1802, no:3929, amt:3051093, desc:"School Operating"},
+    {fy:2024, win:false, yes:2996, no:3414, amt:2472056, desc:"General Operating"}
+  ];
+
+  // === All peer votes (from peer_override_history.csv) ===
+  var peerVotes = [
+    {t:"Arlington",fy:1990,w:0},{t:"Arlington",fy:1991,w:1},{t:"Arlington",fy:2006,w:1},{t:"Arlington",fy:2012,w:1},{t:"Arlington",fy:2020,w:1},{t:"Arlington",fy:2025,w:1},{t:"Arlington",fy:2027,w:1},
+    {t:"Brookline",fy:1995,w:1},{t:"Brookline",fy:2009,w:1},{t:"Brookline",fy:2016,w:1},{t:"Brookline",fy:2019,w:1},{t:"Brookline",fy:2024,w:1},
+    {t:"Cohasset",fy:1990,w:0},{t:"Cohasset",fy:1990,w:0},{t:"Cohasset",fy:1990,w:1},{t:"Cohasset",fy:1990,w:0},{t:"Cohasset",fy:1991,w:0},{t:"Cohasset",fy:1992,w:1},{t:"Cohasset",fy:1992,w:0},{t:"Cohasset",fy:1992,w:0},{t:"Cohasset",fy:1992,w:0},{t:"Cohasset",fy:1992,w:0},{t:"Cohasset",fy:1992,w:0},{t:"Cohasset",fy:1992,w:1},{t:"Cohasset",fy:1993,w:1},{t:"Cohasset",fy:1993,w:1},{t:"Cohasset",fy:1996,w:1},{t:"Cohasset",fy:2000,w:0},{t:"Cohasset",fy:2000,w:0},{t:"Cohasset",fy:2000,w:1},{t:"Cohasset",fy:2002,w:1},{t:"Cohasset",fy:2004,w:1},{t:"Cohasset",fy:2005,w:1},
+    {t:"Framingham",fy:1991,w:1},{t:"Framingham",fy:1991,w:0},{t:"Framingham",fy:1991,w:0},{t:"Framingham",fy:1991,w:0},{t:"Framingham",fy:1991,w:0},{t:"Framingham",fy:1991,w:1},{t:"Framingham",fy:1992,w:0},{t:"Framingham",fy:1992,w:0},{t:"Framingham",fy:1992,w:1},{t:"Framingham",fy:2003,w:1},
+    {t:"Hingham",fy:1990,w:0},{t:"Hingham",fy:1990,w:0},{t:"Hingham",fy:1991,w:1},{t:"Hingham",fy:1992,w:0},{t:"Hingham",fy:1992,w:0},{t:"Hingham",fy:1994,w:1},{t:"Hingham",fy:2005,w:1},{t:"Hingham",fy:2010,w:1},{t:"Hingham",fy:2024,w:1},
+    {t:"Lexington",fy:1991,w:1},{t:"Lexington",fy:1993,w:1},{t:"Lexington",fy:1996,w:1},{t:"Lexington",fy:1996,w:1},{t:"Lexington",fy:1996,w:1},{t:"Lexington",fy:1996,w:1},{t:"Lexington",fy:2001,w:1},{t:"Lexington",fy:2004,w:0},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2007,w:1},{t:"Lexington",fy:2007,w:1},{t:"Lexington",fy:2007,w:0},{t:"Lexington",fy:2007,w:0},{t:"Lexington",fy:2008,w:1},
+    {t:"Marblehead",fy:1991,w:0},{t:"Marblehead",fy:1992,w:0},{t:"Marblehead",fy:1992,w:0},{t:"Marblehead",fy:1992,w:0},{t:"Marblehead",fy:1996,w:0},{t:"Marblehead",fy:1997,w:0},{t:"Marblehead",fy:2001,w:0},{t:"Marblehead",fy:2002,w:1},{t:"Marblehead",fy:2004,w:1},{t:"Marblehead",fy:2005,w:0},{t:"Marblehead",fy:2005,w:1},{t:"Marblehead",fy:2005,w:0},{t:"Marblehead",fy:2005,w:1},{t:"Marblehead",fy:2005,w:0},{t:"Marblehead",fy:2005,w:1},{t:"Marblehead",fy:2006,w:1},{t:"Marblehead",fy:2012,w:0},{t:"Marblehead",fy:2023,w:0},{t:"Marblehead",fy:2024,w:0},
+    {t:"Melrose",fy:1991,w:0},{t:"Melrose",fy:1991,w:0},{t:"Melrose",fy:1991,w:0},{t:"Melrose",fy:1991,w:0},{t:"Melrose",fy:1991,w:0},{t:"Melrose",fy:1993,w:1},{t:"Melrose",fy:2003,w:0},{t:"Melrose",fy:2016,w:0},{t:"Melrose",fy:2020,w:1},{t:"Melrose",fy:2025,w:0},{t:"Melrose",fy:2026,w:1},
+    {t:"Natick",fy:1991,w:0},{t:"Natick",fy:1992,w:0},{t:"Natick",fy:2001,w:1},{t:"Natick",fy:2009,w:1},{t:"Natick",fy:2026,w:1},
+    {t:"Needham",fy:1990,w:0},{t:"Needham",fy:1991,w:0},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1997,w:0},{t:"Needham",fy:1997,w:0},{t:"Needham",fy:1997,w:0},{t:"Needham",fy:1997,w:0},{t:"Needham",fy:1997,w:0},{t:"Needham",fy:1997,w:1},{t:"Needham",fy:1997,w:1},{t:"Needham",fy:1997,w:1},{t:"Needham",fy:1997,w:1},{t:"Needham",fy:1997,w:1},{t:"Needham",fy:1998,w:0},{t:"Needham",fy:2003,w:0},{t:"Needham",fy:2003,w:0},{t:"Needham",fy:2003,w:0},{t:"Needham",fy:2004,w:1},{t:"Needham",fy:2004,w:1},{t:"Needham",fy:2007,w:1},{t:"Needham",fy:2007,w:0},{t:"Needham",fy:2008,w:1},{t:"Needham",fy:2010,w:1},{t:"Needham",fy:2015,w:1},
+    {t:"Stoneham",fy:1991,w:0},{t:"Stoneham",fy:1991,w:0},{t:"Stoneham",fy:1993,w:0},{t:"Stoneham",fy:1993,w:0},{t:"Stoneham",fy:1993,w:0},{t:"Stoneham",fy:2008,w:0},{t:"Stoneham",fy:2012,w:0},{t:"Stoneham",fy:2026,w:0},{t:"Stoneham",fy:2027,w:0},{t:"Stoneham",fy:2027,w:1},
+    {t:"Swampscott",fy:1991,w:1},{t:"Swampscott",fy:2002,w:1},{t:"Swampscott",fy:2006,w:0},{t:"Swampscott",fy:2006,w:0},{t:"Swampscott",fy:2006,w:1},{t:"Swampscott",fy:2006,w:0},{t:"Swampscott",fy:2006,w:0},{t:"Swampscott",fy:2006,w:1},{t:"Swampscott",fy:2006,w:1},{t:"Swampscott",fy:2006,w:1},{t:"Swampscott",fy:2006,w:0},{t:"Swampscott",fy:2006,w:1},{t:"Swampscott",fy:2006,w:0},
+    {t:"Wellesley",fy:1990,w:0},{t:"Wellesley",fy:1990,w:0},{t:"Wellesley",fy:1990,w:0},{t:"Wellesley",fy:1990,w:0},{t:"Wellesley",fy:1991,w:0},{t:"Wellesley",fy:1991,w:0},{t:"Wellesley",fy:1991,w:0},{t:"Wellesley",fy:1991,w:1},{t:"Wellesley",fy:1991,w:1},{t:"Wellesley",fy:1992,w:1},{t:"Wellesley",fy:1992,w:1},{t:"Wellesley",fy:2001,w:1},{t:"Wellesley",fy:2002,w:1},{t:"Wellesley",fy:2003,w:1},{t:"Wellesley",fy:2004,w:1},{t:"Wellesley",fy:2005,w:0},{t:"Wellesley",fy:2006,w:0},{t:"Wellesley",fy:2006,w:1},{t:"Wellesley",fy:2007,w:0},{t:"Wellesley",fy:2007,w:0},{t:"Wellesley",fy:2007,w:1},{t:"Wellesley",fy:2015,w:1},
+    {t:"Winchester",fy:1992,w:0},{t:"Winchester",fy:1992,w:0},{t:"Winchester",fy:1992,w:0},{t:"Winchester",fy:1992,w:0},{t:"Winchester",fy:1992,w:0},{t:"Winchester",fy:2003,w:1},{t:"Winchester",fy:2006,w:0},{t:"Winchester",fy:2008,w:1},{t:"Winchester",fy:2012,w:0},{t:"Winchester",fy:2020,w:1},{t:"Winchester",fy:2024,w:1}
+  ];
+
+  // =============================================
+  // MARBLEHEAD STEM CHART
+  // =============================================
+  var mW = 880, mH = 340;
+  var mmL = 50, mmR = 20, mmT = 30, mmB = 40;
+  var mPW = mW - mmL - mmR;
+  var mPH = mH - mmT - mmB;
+  var mBaseline = mmT + mPH * 0.45; // 45% from top = where y=0 sits
+
+  var fyMin = 1990, fyMax = 2025;
+  function mxScale(fy) { return mmL + ((fy - fyMin) / (fyMax - fyMin)) * mPW; }
+
+  // Find max margin for scaling
+  var maxMargin = 0;
+  for (var i = 0; i < mhVotes.length; i++) {
+    var m = Math.abs(mhVotes[i].yes - mhVotes[i].no);
+    if (m > maxMargin) maxMargin = m;
+  }
+  // Scale: margin maps to pixel height
+  var maxStemH = mPH * 0.42;
+  function marginToH(margin) { return (margin / maxMargin) * maxStemH; }
+
+  // Amount to radius (log scale, clamped)
+  function amtToR(amt) {
+    if (amt <= 0) return 3;
+    var minAmt = 500, maxAmt = 3100000;
+    var t = (Math.log(Math.max(amt, minAmt)) - Math.log(minAmt)) / (Math.log(maxAmt) - Math.log(minAmt));
+    return 3 + t * 7;
+  }
+
+  // Handle multiple votes in same FY: offset horizontally
+  var fyGroups = {};
+  for (var i = 0; i < mhVotes.length; i++) {
+    var fy = mhVotes[i].fy;
+    if (!fyGroups[fy]) fyGroups[fy] = [];
+    fyGroups[fy].push(i);
+  }
+  var offsets = {};
+  for (var fy in fyGroups) {
+    var group = fyGroups[fy];
+    var spread = Math.min(group.length - 1, 5) * 6;
+    for (var j = 0; j < group.length; j++) {
+      offsets[group[j]] = -spread / 2 + j * 6;
+    }
+  }
+
+  // Build grid
+  var gridHtml = '';
+  // X-axis ticks every 5 years
+  for (var yr = 1990; yr <= 2025; yr += 5) {
+    var x = mxScale(yr);
+    gridHtml += '<line class="oh-grid" x1="' + x + '" y1="' + mmT + '" x2="' + x + '" y2="' + (mmT + mPH) + '"/>';
+    gridHtml += '<text class="oh-tick" x="' + x + '" y="' + (mmT + mPH + 16) + '" text-anchor="middle">FY' + (yr % 100 < 10 ? '0' : '') + (yr % 100) + '</text>';
+  }
+  // Baseline
+  gridHtml += '<line class="oh-axis-base" x1="' + mmL + '" y1="' + mBaseline + '" x2="' + (mmL + mPW) + '" y2="' + mBaseline + '"/>';
+  gridHtml += '<text class="oh-label" x="' + (mmL - 6) + '" y="' + (mBaseline - 6) + '" text-anchor="end">Passed</text>';
+  gridHtml += '<text class="oh-label" x="' + (mmL - 6) + '" y="' + (mBaseline + 14) + '" text-anchor="end">Did not</text>';
+  document.getElementById('oh-mh-grid').innerHTML = gridHtml;
+
+  // Build stems
+  var stemsHtml = '';
+  for (var i = 0; i < mhVotes.length; i++) {
+    var v = mhVotes[i];
+    var margin = Math.abs(v.yes - v.no);
+    var h = marginToH(margin);
+    var x = mxScale(v.fy) + (offsets[i] || 0);
+    var r = amtToR(v.amt);
+    var cls = v.win ? 'pass' : 'fail';
+    var y1 = mBaseline;
+    var y2 = v.win ? mBaseline - h : mBaseline + h;
+
+    stemsHtml += '<line class="oh-stem-' + cls + '" x1="' + x + '" y1="' + y1 + '" x2="' + x + '" y2="' + y2 + '"/>';
+    stemsHtml += '<circle class="oh-dot-' + cls + '" cx="' + x + '" cy="' + y2 + '" r="' + r.toFixed(1) + '"/>';
+  }
+  document.getElementById('oh-mh-stems').innerHTML = stemsHtml;
+
+  // Callouts
+  var calloutsHtml = '';
+  // FY2006: the big win
+  var fy06x = mxScale(2006);
+  var fy06v = mhVotes[15]; // FY2006 entry
+  var fy06margin = fy06v.yes - fy06v.no;
+  var fy06y = mBaseline - marginToH(fy06margin) - amtToR(fy06v.amt) - 4;
+  calloutsHtml += '<text class="oh-callout" x="' + fy06x + '" y="' + fy06y + '" text-anchor="middle">FY06: $2.73M</text>';
+  calloutsHtml += '<text class="oh-callout" x="' + fy06x + '" y="' + (fy06y - 11) + '" text-anchor="middle">Last operating override</text>';
+
+  // FY2023/24 losses
+  var fy23x = mxScale(2023);
+  var fy23v = mhVotes[17];
+  var fy23margin = fy23v.no - fy23v.yes;
+  var fy23y = mBaseline + marginToH(fy23margin) + amtToR(fy23v.amt) + 14;
+  calloutsHtml += '<text class="oh-callout-fail" x="' + ((fy23x + mxScale(2024)) / 2) + '" y="' + fy23y + '" text-anchor="middle">FY23, FY24: did not pass</text>';
+
+  document.getElementById('oh-mh-callouts').innerHTML = calloutsHtml;
+
+  // =============================================
+  // PEER TOWN DOT PLOT
+  // =============================================
+  var pW = 880, pH = 520;
+  var pmL = 100, pmR = 20, pmT = 10, pmB = 40;
+  var pPW = pW - pmL - pmR;
+  var pPH = pH - pmT - pmB;
+
+  var pFyMin = 1989, pFyMax = 2028;
+  function pxScale(fy) { return pmL + ((fy - pFyMin) / (pFyMax - pFyMin)) * pPW; }
+
+  // Get unique towns and sort by most recent win (descending)
+  var townWins = {};
+  var townSet = {};
+  for (var i = 0; i < peerVotes.length; i++) {
+    var v = peerVotes[i];
+    townSet[v.t] = true;
+    if (v.w) {
+      if (!townWins[v.t] || v.fy > townWins[v.t]) townWins[v.t] = v.fy;
+    }
+  }
+  var towns = Object.keys(townSet);
+  towns.sort(function(a, b) {
+    var wa = townWins[a] || 0;
+    var wb = townWins[b] || 0;
+    if (wb !== wa) return wb - wa;
+    return a < b ? -1 : 1;
+  });
+
+  var rowH = pPH / towns.length;
+
+  // Build peer grid
+  var pGridHtml = '';
+  // X ticks every 5 years
+  for (var yr = 1990; yr <= 2025; yr += 5) {
+    var x = pxScale(yr);
+    pGridHtml += '<line class="oh-grid" x1="' + x + '" y1="' + pmT + '" x2="' + x + '" y2="' + (pmT + pPH) + '"/>';
+    pGridHtml += '<text class="oh-tick" x="' + x + '" y="' + (pmT + pPH + 16) + '" text-anchor="middle">FY' + (yr % 100 < 10 ? '0' : '') + (yr % 100) + '</text>';
+  }
+  document.getElementById('oh-peer-grid').innerHTML = pGridHtml;
+
+  // Build rows
+  var rowsHtml = '';
+  for (var ti = 0; ti < towns.length; ti++) {
+    var town = towns[ti];
+    var cy = pmT + ti * rowH + rowH / 2;
+    var isMh = town === 'Marblehead';
+
+    // Highlight Marblehead row
+    if (isMh) {
+      rowsHtml += '<rect class="oh-peer-bg-mh" x="' + pmL + '" y="' + (cy - rowH / 2) + '" width="' + pPW + '" height="' + rowH + '"/>';
+    }
+
+    // Row divider
+    if (ti > 0) {
+      rowsHtml += '<line stroke="var(--divider)" stroke-width="0.5" x1="' + pmL + '" y1="' + (cy - rowH / 2) + '" x2="' + (pmL + pPW) + '" y2="' + (cy - rowH / 2) + '"/>';
+    }
+
+    // Town label
+    var labelCls = isMh ? 'oh-peer-label-mh' : 'oh-peer-label';
+    rowsHtml += '<text class="' + labelCls + '" x="' + (pmL - 6) + '" y="' + (cy + 4) + '" text-anchor="end">' + town + '</text>';
+
+    // Collect votes for this town and handle same-FY clustering
+    var townVotes = [];
+    for (var j = 0; j < peerVotes.length; j++) {
+      if (peerVotes[j].t === town) townVotes.push(peerVotes[j]);
+    }
+    var tvFyGroups = {};
+    for (var j = 0; j < townVotes.length; j++) {
+      var fy = townVotes[j].fy;
+      if (!tvFyGroups[fy]) tvFyGroups[fy] = [];
+      tvFyGroups[fy].push(townVotes[j]);
+    }
+
+    for (var fy in tvFyGroups) {
+      var group = tvFyGroups[fy];
+      var spread = (group.length - 1) * 5;
+      for (var k = 0; k < group.length; k++) {
+        var gv = group[k];
+        var dx = -spread / 2 + k * 5;
+        var dotX = pxScale(gv.fy) + dx;
+        var dotCls = gv.w ? 'oh-peer-dot-pass' : 'oh-peer-dot-fail';
+        rowsHtml += '<circle class="' + dotCls + '" cx="' + dotX.toFixed(1) + '" cy="' + cy + '" r="4"/>';
+      }
+    }
+  }
+  document.getElementById('oh-peer-rows').innerHTML = rowsHtml;
+})();
+</script>
