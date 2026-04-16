@@ -84,7 +84,7 @@
       requestAnimationFrame(function () {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
-      history.pushState(null, '', hash);
+      history.replaceState(null, '', hash);
     }
   });
 
