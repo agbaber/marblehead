@@ -6712,14 +6712,17 @@ og_url: https://marbleheaddata.org/
       }
     });
 
-    // Scroll so the user sees the evidence they just revealed.
-    // Only scroll if the panel top is below the viewport bottom,
-    // so we don't yank users away from content already visible.
-    if (openedPanel) {
+    // Scroll the tapped card to the top of the viewport so the user
+    // sees their pick confirmed, with evidence visible below it.
+    // Only scroll if the card isn't already near the top.
+    var tappedCard = document.querySelector(
+      '.answer-card[data-question="' + question + '"][data-answer="' + answer + '"]'
+    );
+    if (tappedCard) {
       setTimeout(function () {
-        var rect = openedPanel.getBoundingClientRect();
-        if (rect.top > window.innerHeight - 80) {
-          openedPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var rect = tappedCard.getBoundingClientRect();
+        if (rect.top < 0 || rect.top > window.innerHeight * 0.4) {
+          tappedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 120);
     }
