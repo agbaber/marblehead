@@ -34,13 +34,10 @@ scripts: [citations]
     text-align: right;
   }
   .filter-row input:focus {
-    outline: none;
-    border-color: var(--c-teal);
+    outline: none; border-color: var(--c-teal);
     box-shadow: 0 0 0 2px color-mix(in srgb, var(--c-teal) 20%, transparent);
   }
-  .filter-row .sep {
-    font-size: 11px; color: var(--text-subtle); flex-shrink: 0;
-  }
+  .filter-row .sep { font-size: 11px; color: var(--text-subtle); flex-shrink: 0; }
 
   .filter-actions {
     display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
@@ -56,8 +53,7 @@ scripts: [citations]
   .preset-btn.active { background: var(--c-navy); color: #fff; }
   .reset-btn {
     font-size: 12px; color: var(--text-subtle); background: none;
-    border: none; cursor: pointer; text-decoration: underline;
-    padding: 6px 8px;
+    border: none; cursor: pointer; text-decoration: underline; padding: 6px 8px;
   }
   .reset-btn:hover { color: var(--text); }
   .filter-count {
@@ -65,7 +61,14 @@ scripts: [citations]
     font-variant-numeric: tabular-nums;
   }
 
-  /* Table wrapper for horizontal scroll on mobile */
+  /* Rank summary */
+  .rank-summary {
+    font-size: 13px; color: var(--text-muted); margin: -8px 0 12px;
+    font-variant-numeric: tabular-nums;
+  }
+  .rank-summary strong { color: var(--c-navy); font-weight: 700; }
+
+  /* Table */
   .table-wrap {
     overflow-x: auto; -webkit-overflow-scrolling: touch;
     border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
@@ -74,13 +77,13 @@ scripts: [citations]
   table.explorer {
     width: 100%; border-collapse: collapse;
     font-size: 13px; font-variant-numeric: tabular-nums;
-    min-width: 640px;
+    min-width: 900px;
   }
   table.explorer thead { position: sticky; top: 0; z-index: 2; }
   table.explorer th {
     font-size: 10px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.6px; color: var(--text-subtle);
-    text-align: right; padding: 10px 8px;
+    letter-spacing: 0.5px; color: var(--text-subtle);
+    text-align: right; padding: 10px 6px;
     border-bottom: 2px solid var(--border);
     background: var(--surface); cursor: pointer;
     white-space: nowrap; user-select: none;
@@ -90,12 +93,10 @@ scripts: [citations]
     background: var(--surface); z-index: 3;
   }
   table.explorer th:hover { color: var(--text); }
-  table.explorer th .sort-arrow {
-    font-size: 9px; margin-left: 2px; opacity: 0.3;
-  }
-  table.explorer th.sorted .sort-arrow { opacity: 1; color: var(--c-teal); }
+  table.explorer th .sa { font-size: 9px; margin-left: 2px; opacity: 0.3; }
+  table.explorer th.sorted .sa { opacity: 1; color: var(--c-teal); }
   table.explorer td {
-    padding: 8px 8px; border-bottom: 1px solid var(--divider);
+    padding: 7px 6px; border-bottom: 1px solid var(--divider);
     color: var(--text-muted); text-align: right;
   }
   table.explorer td:first-child {
@@ -105,14 +106,13 @@ scripts: [citations]
   }
   table.explorer tr:last-child td { border-bottom: none; }
 
-  /* Marblehead row (in-list) */
+  /* Marblehead in-list */
   table.explorer tr.mh td {
     background: color-mix(in srgb, var(--series-marblehead) 6%, var(--surface));
     color: var(--c-navy); font-weight: 600;
   }
   table.explorer tr.mh td:first-child {
-    font-weight: 700;
-    border-left: 3px solid var(--series-marblehead);
+    font-weight: 700; border-left: 3px solid var(--series-marblehead);
     background: color-mix(in srgb, var(--series-marblehead) 6%, var(--surface));
   }
   /* Pinned reference row */
@@ -126,40 +126,26 @@ scripts: [citations]
   }
   .mh-ref-label { font-size: 9px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.5px; color: var(--text-subtle); margin-left: 6px; }
-  /* Pinned Marblehead separator */
   table.explorer tr.mh-divider td {
     border-bottom: 2px solid var(--border); padding: 0; height: 0;
   }
 
-  /* Rank summary */
-  .rank-summary {
-    font-size: 13px; color: var(--text-muted); margin: -8px 0 12px;
-    font-variant-numeric: tabular-nums;
-  }
-  .rank-summary strong { color: var(--c-navy); font-weight: 700; }
-
-  /* Empty state */
-  .no-results {
-    text-align: center; padding: 40px 20px;
-    color: var(--text-subtle); font-size: 14px;
-  }
+  .no-results { text-align: center; padding: 40px 20px; color: var(--text-subtle); font-size: 14px; }
 
   @media (max-width: 600px) {
     .filter-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .filter-count { margin-left: 0; width: 100%; text-align: center; margin-top: 4px; }
-    table.explorer { font-size: 12px; }
-    table.explorer th { font-size: 9px; padding: 8px 5px; }
-    table.explorer td { padding: 7px 5px; }
+    table.explorer { font-size: 11px; }
+    table.explorer th { font-size: 8px; padding: 8px 4px; letter-spacing: 0.2px; }
+    table.explorer td { padding: 6px 4px; }
   }
-  @media (max-width: 400px) {
-    .filter-grid { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 400px) { .filter-grid { grid-template-columns: 1fr; } }
 </style>
 
 <h1 class="h-center">Town Explorer: All 351 Massachusetts Communities</h1>
-<p class="subtitle h-center">Population, income, property wealth, and tax burden for every MA municipality. Source: MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> FY2026/FY2027.</p>
+<p class="subtitle h-center">Population, income, tax burden, and fiscal structure for every MA municipality. Source: MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> FY2026/FY2027.</p>
 
-<p class="explorer-lead">Instead of a curated peer set, this page shows all 351 municipalities. Use the filters to define your own comparison group. Marblehead appears in its sorted position (highlighted) and as a pinned reference row at the top. Default filters exclude very small towns (population under 5,000), very large cities (over 100,000), and island/resort communities with extreme property values.</p>
+<p class="explorer-lead">Instead of a curated peer set, this page shows all 351 municipalities. Use the filters to define your own comparison group. Marblehead appears in its sorted position (highlighted) and as a pinned reference row at the top. Default filters exclude very small towns, very large cities, and island/resort communities.</p>
 
 <div class="filter-bar" id="filter-bar">
   <h3>Filters</h3>
@@ -167,33 +153,33 @@ scripts: [citations]
     <div class="filter-group">
       <label>Population</label>
       <div class="filter-row">
-        <input type="text" inputmode="numeric" id="f-pop-min" value="5,000" aria-label="Minimum population">
+        <input type="text" inputmode="numeric" id="f-pop-min" value="5,000" aria-label="Min population">
         <span class="sep">to</span>
-        <input type="text" inputmode="numeric" id="f-pop-max" value="100,000" aria-label="Maximum population">
+        <input type="text" inputmode="numeric" id="f-pop-max" value="100,000" aria-label="Max population">
       </div>
     </div>
     <div class="filter-group">
       <label><abbr class="g" title="Department of Revenue">DOR</abbr> Income / Capita</label>
       <div class="filter-row">
-        <input type="text" inputmode="numeric" id="f-inc-min" value="" placeholder="any" aria-label="Minimum income per capita">
+        <input type="text" inputmode="numeric" id="f-inc-min" value="" placeholder="any" aria-label="Min income per capita">
         <span class="sep">to</span>
-        <input type="text" inputmode="numeric" id="f-inc-max" value="" placeholder="any" aria-label="Maximum income per capita">
+        <input type="text" inputmode="numeric" id="f-inc-max" value="" placeholder="any" aria-label="Max income per capita">
       </div>
     </div>
     <div class="filter-group">
       <label><abbr class="g" title="Equalized Valuation">EQV</abbr> / Capita (property wealth)</label>
       <div class="filter-row">
-        <input type="text" inputmode="numeric" id="f-eqv-min" value="" placeholder="any" aria-label="Minimum EQV per capita">
+        <input type="text" inputmode="numeric" id="f-eqv-min" value="" placeholder="any" aria-label="Min EQV per capita">
         <span class="sep">to</span>
-        <input type="text" inputmode="numeric" id="f-eqv-max" value="1,000,000" aria-label="Maximum EQV per capita">
+        <input type="text" inputmode="numeric" id="f-eqv-max" value="1,000,000" aria-label="Max EQV per capita">
       </div>
     </div>
     <div class="filter-group">
       <label>Avg Tax Bill</label>
       <div class="filter-row">
-        <input type="text" inputmode="numeric" id="f-bill-min" value="" placeholder="any" aria-label="Minimum tax bill">
+        <input type="text" inputmode="numeric" id="f-bill-min" value="" placeholder="any" aria-label="Min tax bill">
         <span class="sep">to</span>
-        <input type="text" inputmode="numeric" id="f-bill-max" value="" placeholder="any" aria-label="Maximum tax bill">
+        <input type="text" inputmode="numeric" id="f-bill-max" value="" placeholder="any" aria-label="Max tax bill">
       </div>
     </div>
   </div>
@@ -210,13 +196,16 @@ scripts: [citations]
   <table class="explorer" id="explorer-table">
     <thead>
       <tr>
-        <th data-col="n" data-dir="asc">Municipality <span class="sort-arrow"></span></th>
-        <th data-col="rank" title="Rank within current filtered set">#</th>
-        <th data-col="p" data-dir="asc">Pop <span class="sort-arrow"></span></th>
-        <th data-col="ipc" data-dir="asc" title="DOR per-capita income">Income/Cap <span class="sort-arrow"></span></th>
-        <th data-col="bill" data-dir="asc" title="Average single-family tax bill">Avg Bill <span class="sort-arrow"></span></th>
-        <th data-col="bpi" data-dir="asc" class="sorted" title="Average tax bill as percentage of DOR per-capita income">Bill/Income <span class="sort-arrow">&#9650;</span></th>
-        <th data-col="epc" data-dir="asc" title="Equalized valuation per capita (property wealth)">Prop Value/Cap <span class="sort-arrow"></span></th>
+        <th data-col="n">Municipality <span class="sa"></span></th>
+        <th data-col="rank" title="Rank within filtered set">#</th>
+        <th data-col="p" title="Population">Pop <span class="sa"></span></th>
+        <th data-col="ipc" title="DOR per-capita income">Income/Cap <span class="sa"></span></th>
+        <th data-col="bill" title="Average single-family tax bill">Avg Bill <span class="sa"></span></th>
+        <th data-col="bpi" title="Tax bill as % of DOR income" class="sorted">Bill/Inc <span class="sa">&#9650;</span></th>
+        <th data-col="rate" title="Residential property tax rate per $1,000">Tax Rate <span class="sa"></span></th>
+        <th data-col="rpct" title="Residential share of total property tax levy">Res % <span class="sa"></span></th>
+        <th data-col="lpc" title="Total tax levy divided by population">Levy/Cap <span class="sa"></span></th>
+        <th data-col="ng" title="New construction growth as % of total levy">New Growth <span class="sa"></span></th>
       </tr>
     </thead>
     <tbody id="explorer-body"></tbody>
@@ -225,34 +214,30 @@ scripts: [citations]
 
 <details class="notes" style="margin-top: 20px;">
   <summary>Sources and methodology</summary>
-  <p><strong>Sources.</strong> Population, <abbr class="g" title="Department of Revenue">DOR</abbr> Income, and <abbr class="g" title="Equalized Valuation">EQV</abbr>: <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=dor_income_eqv_per_capita">MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr>, DOR Income and EQV Per Capita FY2027</a> (pulled April 15, 2026). Average single-family tax bill: <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> FY2026. Bill as % of income: average SF tax bill divided by <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income.</p>
-  <p><strong>Data files.</strong> Raw CSVs: <a href="../data/dor_income_eqv_pop_FY27.csv">income, EQV, and population</a>, <a href="../data/tax_bill_as_pct_of_income_351.csv">tax bill as % of income</a>.</p>
-  <p><strong>Default filters.</strong> Population 5,000 to 100,000 excludes hamlets too small for meaningful comparison and large cities with fundamentally different fiscal structures. <abbr class="g" title="Equalized Valuation">EQV</abbr>/capita capped at $1,000,000 excludes island and resort communities (Nantucket, Chilmark, Edgartown, Provincetown, etc.) where seasonal property inflates per-capita valuations beyond relevance for year-round suburban comparison.</p>
-  <p><strong>"Similar to Marblehead" preset.</strong> Population 10,000 to 35,000, <abbr class="g" title="Department of Revenue">DOR</abbr> income per capita $60,000 to $175,000, <abbr class="g" title="Equalized Valuation">EQV</abbr> per capita $250,000 to $700,000. These thresholds are a convenience starting point. Adjust them to explore different peer definitions.</p>
-  <p><strong>What is <abbr class="g" title="Equalized Valuation">EQV</abbr>?</strong> Equalized Valuation is the <abbr class="g" title="Department of Revenue">DOR</abbr>'s estimate of the full market value of all taxable property in a municipality, adjusted to a uniform standard across the state. It allows apples-to-apples comparison of property wealth between towns that assess at different ratios or on different revaluation cycles.</p>
-  <p><strong>What is <abbr class="g" title="Department of Revenue">DOR</abbr> Income?</strong> <abbr class="g" title="Department of Revenue">DOR</abbr> Income is the total personal income of residents as estimated by the <abbr class="g" title="Department of Revenue">DOR</abbr> for Cherry Sheet aid distribution. It is not the same as Census median household income or per-capita personal income from the Bureau of Economic Analysis. It is the standard income metric used in Massachusetts municipal finance formulas.</p>
+  <p><strong>Sources.</strong> Population, <abbr class="g" title="Department of Revenue">DOR</abbr> Income, and <abbr class="g" title="Equalized Valuation">EQV</abbr>: <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=dor_income_eqv_per_capita">MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr>, DOR Income and EQV Per Capita FY2027</a> (pulled April 15, 2026). Tax levies, rates, new growth, and levy capacity: <a href="https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=Community_Comparison_Report">MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> Community Comparison Report FY2026</a>. Average single-family tax bill: <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> FY2026.</p>
+  <p><strong>Data files.</strong> Comprehensive CSV: <a href="../data/dor_all_351_FY26.csv">dor_all_351_FY26.csv</a>.</p>
+  <p><strong>Default filters.</strong> Population 5,000 to 100,000 excludes hamlets and large cities. <abbr class="g" title="Equalized Valuation">EQV</abbr>/capita capped at $1,000,000 excludes island and resort communities where seasonal property inflates per-capita valuations.</p>
+  <p><strong>"Similar to Marblehead" preset.</strong> Population 10,000 to 35,000, <abbr class="g" title="Department of Revenue">DOR</abbr> income per capita $60,000 to $175,000, <abbr class="g" title="Equalized Valuation">EQV</abbr> per capita $250,000 to $700,000. Adjust to explore different peer definitions.</p>
+  <p><strong>Column definitions.</strong> <em>Income/Cap</em>: <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income, used in Cherry Sheet aid formulas. <em>Bill/Inc</em>: average single-family tax bill divided by <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income. <em>Tax Rate</em>: residential property tax rate per $1,000 of assessed value. <em>Res %</em>: share of total property tax levy paid by residential property owners. <em>Levy/Cap</em>: total property tax levy divided by population. <em>New Growth</em>: revenue from new construction as a percentage of total levy, outside Proposition 2&frac12;'s 2.5% cap.</p>
+  <p><strong>What is <abbr class="g" title="Equalized Valuation">EQV</abbr>?</strong> The <abbr class="g" title="Department of Revenue">DOR</abbr>'s estimate of the full market value of all taxable property in a municipality, adjusted to a uniform standard across the state for apples-to-apples comparison.</p>
 </details>
 
 <script>
 (function () {
   'use strict';
 
-  var DATA = [{"n":"Abington","p":17090,"ipc":46123,"epc":191838,"bill":7536,"bpi":16.3},{"n":"Acton","p":24539,"ipc":86470,"epc":278538,"bill":15220,"bpi":17.6},{"n":"Acushnet","p":10700,"ipc":43749,"epc":184882,"bill":5244,"bpi":12.0},{"n":"Adams","p":7992,"ipc":29153,"epc":98831,"bill":4138,"bpi":14.2},{"n":"Agawam","p":28749,"ipc":36291,"epc":152694,"bill":5190,"bpi":14.3},{"n":"Alford","p":483,"ipc":48215,"epc":803195,"bill":5191,"bpi":10.8},{"n":"Amesbury","p":17617,"ipc":48641,"epc":223185,"bill":9868,"bpi":20.3},{"n":"Amherst","p":40989,"ipc":21800,"epc":89503,"bill":9957,"bpi":45.7},{"n":"Andover","p":36927,"ipc":102125,"epc":352603,"bill":13176,"bpi":12.9},{"n":"Aquinnah","p":451,"ipc":53350,"epc":2187141,"bill":12677,"bpi":23.8},{"n":"Arlington","p":47112,"ipc":83690,"epc":337342,"bill":11947,"bpi":14.3},{"n":"Ashburnham","p":6522,"ipc":41761,"epc":175796,"bill":6246,"bpi":15.0},{"n":"Ashby","p":3270,"ipc":39913,"epc":166946,"bill":6225,"bpi":15.6},{"n":"Ashfield","p":1685,"ipc":36404,"epc":237767,"bill":5518,"bpi":15.2},{"n":"Ashland","p":19391,"ipc":64835,"epc":236070,"bill":9372,"bpi":14.5},{"n":"Athol","p":12105,"ipc":27709,"epc":116185,"bill":3924,"bpi":14.2},{"n":"Attleboro","p":47085,"ipc":41996,"epc":160316,"bill":6304,"bpi":15.0},{"n":"Auburn","p":17323,"ipc":43964,"epc":191195,"bill":6307,"bpi":14.3},{"n":"Avon","p":4801,"ipc":44742,"epc":258259,"bill":7643,"bpi":17.1},{"n":"Ayer","p":9010,"ipc":46946,"epc":212082,"bill":6625,"bpi":14.1},{"n":"Barnstable","p":49831,"ipc":52832,"epc":527697,"bill":5599,"bpi":10.6},{"n":"Barre","p":5631,"ipc":33914,"epc":139075,"bill":5053,"bpi":14.9},{"n":"Becket","p":1922,"ipc":38186,"epc":391019,"bill":3670,"bpi":9.6},{"n":"Bedford","p":14955,"ipc":87571,"epc":379474,"bill":12985,"bpi":14.8},{"n":"Belchertown","p":15372,"ipc":46265,"epc":154464,"bill":6622,"bpi":14.3},{"n":"Bellingham","p":17998,"ipc":45801,"epc":226491,"bill":6073,"bpi":13.3},{"n":"Belmont","p":27442,"ipc":112427,"epc":437049,"bill":19579,"bpi":17.4},{"n":"Berkley","p":6892,"ipc":51468,"epc":194745,"bill":6985,"bpi":13.6},{"n":"Berlin","p":3479,"ipc":77907,"epc":303755,"bill":9951,"bpi":12.8},{"n":"Bernardston","p":2109,"ipc":39100,"epc":159318,"bill":5019,"bpi":12.8},{"n":"Beverly","p":43223,"ipc":56939,"epc":249288,"bill":8834,"bpi":15.5},{"n":"Billerica","p":42978,"ipc":51629,"epc":261494,"bill":7484,"bpi":14.5},{"n":"Blackstone","p":9374,"ipc":40976,"epc":158520,"bill":6843,"bpi":16.7},{"n":"Blandford","p":1209,"ipc":37797,"epc":255680,"bill":4680,"bpi":12.4},{"n":"Bolton","p":5809,"ipc":91886,"epc":295354,"bill":15643,"bpi":17.0},{"n":"Boston","p":673458,"ipc":65287,"epc":358986,"bill":7627,"bpi":11.7},{"n":"Bourne","p":20508,"ipc":49345,"epc":390936,"bill":6075,"bpi":12.3},{"n":"Boxborough","p":5565,"ipc":79592,"epc":314985,"bill":14372,"bpi":18.1},{"n":"Boxford","p":8334,"ipc":108467,"epc":346512,"bill":13673,"bpi":12.6},{"n":"Boylston","p":5064,"ipc":72411,"epc":276910,"bill":9379,"bpi":13.0},{"n":"Braintree","p":39134,"ipc":52904,"epc":264230,"bill":7306,"bpi":13.8},{"n":"Brewster","p":10447,"ipc":55197,"epc":684860,"bill":6544,"bpi":11.9},{"n":"Bridgewater","p":29167,"ipc":42207,"epc":181691,"bill":7420,"bpi":17.6},{"n":"Brimfield","p":3733,"ipc":46024,"epc":169741,"bill":5469,"bpi":11.9},{"n":"Brockton","p":105788,"ipc":27098,"epc":126449,"bill":5591,"bpi":20.6},{"n":"Brookfield","p":3500,"ipc":35587,"epc":128634,"bill":5409,"bpi":15.2},{"n":"Brookline","p":63925,"ipc":100201,"epc":528253,"bill":26237,"bpi":26.2},{"n":"Buckland","p":1818,"ipc":28077,"epc":165889,"bill":5804,"bpi":20.7},{"n":"Burlington","p":26977,"ipc":68206,"epc":382846,"bill":7128,"bpi":10.5},{"n":"Cambridge","p":121186,"ipc":78192,"epc":704531,"bill":13680,"bpi":17.5},{"n":"Canton","p":25163,"ipc":73374,"epc":328543,"bill":8468,"bpi":11.5},{"n":"Carlisle","p":5317,"ipc":147135,"epc":470858,"bill":17379,"bpi":11.8},{"n":"Carver","p":11817,"ipc":40588,"epc":186979,"bill":7448,"bpi":18.4},{"n":"Charlemont","p":1179,"ipc":39154,"epc":164448,"bill":4976,"bpi":12.7},{"n":"Charlton","p":13606,"ipc":49247,"epc":226370,"bill":5345,"bpi":10.9},{"n":"Chatham","p":6711,"ipc":92760,"epc":1886309,"bill":6381,"bpi":6.9},{"n":"Chelmsford","p":36953,"ipc":70664,"epc":250855,"bill":9219,"bpi":13.0},{"n":"Chelsea","p":40245,"ipc":27806,"epc":157740,"bill":4214,"bpi":15.2},{"n":"Cheshire","p":3190,"ipc":38898,"epc":140422,"bill":3586,"bpi":9.2},{"n":"Chester","p":1221,"ipc":31276,"epc":144804,"bill":4458,"bpi":14.3},{"n":"Chesterfield","p":1174,"ipc":27479,"epc":219480,"bill":5767,"bpi":21.0},{"n":"Chicopee","p":55381,"ipc":26096,"epc":105121,"bill":4580,"bpi":17.6},{"n":"Chilmark","p":1249,"ipc":88995,"epc":4712016,"bill":8024,"bpi":9.0},{"n":"Clarksburg","p":1637,"ipc":32061,"epc":98786,"bill":3295,"bpi":10.3},{"n":"Clinton","p":15740,"ipc":37609,"epc":149712,"bill":6038,"bpi":16.1},{"n":"Cohasset","p":8532,"ipc":154676,"epc":496041,"bill":16814,"bpi":10.9},{"n":"Colrain","p":1643,"ipc":35363,"epc":137760,"bill":4791,"bpi":13.5},{"n":"Concord","p":18092,"ipc":170977,"epc":553048,"bill":20517,"bpi":12.0},{"n":"Conway","p":1754,"ipc":47575,"epc":206092,"bill":6335,"bpi":13.3},{"n":"Cummington","p":819,"ipc":76231,"epc":214923,"bill":4575,"bpi":6.0},{"n":"Dalton","p":6198,"ipc":40563,"epc":152932,"bill":6011,"bpi":14.8},{"n":"Danvers","p":28590,"ipc":55853,"epc":269905,"bill":7780,"bpi":13.9},{"n":"Dartmouth","p":34139,"ipc":47163,"epc":249460,"bill":5276,"bpi":11.2},{"n":"Dedham","p":25485,"ipc":72590,"epc":312261,"bill":9974,"bpi":13.7},{"n":"Deerfield","p":5177,"ipc":53034,"epc":207221,"bill":6283,"bpi":11.8},{"n":"Dennis","p":14862,"ipc":49780,"epc":879201,"bill":3873,"bpi":7.8},{"n":"Dighton","p":8275,"ipc":45606,"epc":187938,"bill":6689,"bpi":14.7},{"n":"Douglas","p":9452,"ipc":49751,"epc":184652,"bill":6298,"bpi":12.7},{"n":"Dover","p":6057,"ipc":264727,"epc":595230,"bill":19088,"bpi":7.2},{"n":"Dracut","p":32972,"ipc":44670,"epc":180863,"bill":5737,"bpi":12.8},{"n":"Dudley","p":11984,"ipc":37640,"epc":139543,"bill":4526,"bpi":12.0},{"n":"Dunstable","p":3500,"ipc":71129,"epc":245939,"bill":9982,"bpi":14.0},{"n":"Duxbury","p":16377,"ipc":113703,"epc":456388,"bill":12963,"bpi":11.4},{"n":"East Bridgewater","p":14519,"ipc":45166,"epc":188414,"bill":7410,"bpi":16.4},{"n":"East Brookfield","p":2237,"ipc":40426,"epc":174865,"bill":5001,"bpi":12.4},{"n":"East Longmeadow","p":16515,"ipc":53447,"epc":173237,"bill":8126,"bpi":15.2},{"n":"Eastham","p":5824,"ipc":47154,"epc":901075,"bill":6664,"bpi":14.1},{"n":"Easthampton","p":16020,"ipc":39372,"epc":154312,"bill":5562,"bpi":14.1},{"n":"Easton","p":25568,"ipc":64748,"epc":212746,"bill":9441,"bpi":14.6},{"n":"Edgartown","p":5328,"ipc":79087,"epc":2805720,"bill":6721,"bpi":8.5},{"n":"Egremont","p":1375,"ipc":43313,"epc":633579,"bill":5573,"bpi":12.9},{"n":"Erving","p":1661,"ipc":29783,"epc":534971,"bill":2772,"bpi":9.3},{"n":"Essex","p":3760,"ipc":78483,"epc":368553,"bill":11957,"bpi":15.2},{"n":"Everett","p":51825,"ipc":26405,"epc":204127,"bill":5887,"bpi":22.3},{"n":"Fairhaven","p":16005,"ipc":38858,"epc":218656,"bill":4374,"bpi":11.3},{"n":"Fall River","p":94689,"ipc":23335,"epc":107776,"bill":4651,"bpi":19.9},{"n":"Falmouth","p":33227,"ipc":58210,"epc":647263,"bill":5881,"bpi":10.1},{"n":"Fitchburg","p":42145,"ipc":27202,"epc":115102,"bill":5189,"bpi":19.1},{"n":"Florida","p":673,"ipc":24215,"epc":302320,"bill":2006,"bpi":8.3},{"n":"Foxborough","p":18791,"ipc":64808,"epc":241474,"bill":9016,"bpi":13.9},{"n":"Framingham","p":73361,"ipc":46614,"epc":209780,"bill":8061,"bpi":17.3},{"n":"Franklin","p":33742,"ipc":64589,"epc":253048,"bill":8353,"bpi":12.9},{"n":"Freetown","p":9380,"ipc":46146,"epc":246148,"bill":5501,"bpi":11.9},{"n":"Gardner","p":21381,"ipc":27230,"epc":108774,"bill":5052,"bpi":18.6},{"n":"Georgetown","p":8558,"ipc":63856,"epc":235052,"bill":10314,"bpi":16.2},{"n":"Gill","p":1553,"ipc":29193,"epc":140951,"bill":5029,"bpi":17.2},{"n":"Gloucester","p":30491,"ipc":51424,"epc":368307,"bill":9502,"bpi":18.5},{"n":"Goshen","p":942,"ipc":17510,"epc":233775,"bill":5062,"bpi":28.9},{"n":"Gosnold","p":62,"ipc":21887,"epc":3828681,"bill":3415,"bpi":15.6},{"n":"Grafton","p":20352,"ipc":64906,"epc":203370,"bill":9086,"bpi":14.0},{"n":"Granby","p":6064,"ipc":44484,"epc":170912,"bill":6381,"bpi":14.3},{"n":"Granville","p":1540,"ipc":42644,"epc":194633,"bill":5059,"bpi":11.9},{"n":"Great Barrington","p":7245,"ipc":55904,"epc":303968,"bill":8444,"bpi":15.1},{"n":"Greenfield","p":17633,"ipc":27634,"epc":126257,"bill":6063,"bpi":21.9},{"n":"Groton","p":11580,"ipc":87629,"epc":251682,"bill":11253,"bpi":12.8},{"n":"Groveland","p":6849,"ipc":53587,"epc":223389,"bill":8799,"bpi":16.4},{"n":"Hadley","p":5284,"ipc":45659,"epc":266080,"bill":5454,"bpi":11.9},{"n":"Halifax","p":7786,"ipc":46544,"epc":192582,"bill":7493,"bpi":16.1},{"n":"Hamilton","p":7670,"ipc":101901,"epc":307318,"bill":13093,"bpi":12.8},{"n":"Hampden","p":4964,"ipc":48405,"epc":184184,"bill":6963,"bpi":14.4},{"n":"Hancock","p":740,"ipc":21588,"epc":544830,"bill":835,"bpi":3.9},{"n":"Hanover","p":14887,"ipc":75870,"epc":297875,"bill":10149,"bpi":13.4},{"n":"Hanson","p":10719,"ipc":49839,"epc":197541,"bill":7111,"bpi":14.3},{"n":"Hardwick","p":2722,"ipc":30462,"epc":143687,"bill":4852,"bpi":15.9},{"n":"Harvard","p":7004,"ipc":79350,"epc":274261,"bill":14562,"bpi":18.4},{"n":"Harwich","p":13620,"ipc":54010,"epc":756864,"bill":5872,"bpi":10.9},{"n":"Hatfield","p":3321,"ipc":45539,"epc":229591,"bill":6735,"bpi":14.8},{"n":"Haverhill","p":68291,"ipc":37314,"epc":166355,"bill":5962,"bpi":16.0},{"n":"Hawley","p":352,"ipc":23000,"epc":185837,"bill":4648,"bpi":20.2},{"n":"Heath","p":717,"ipc":15471,"epc":175513,"bill":5067,"bpi":32.8},{"n":"Hingham","p":24414,"ipc":148511,"epc":433421,"bill":14313,"bpi":9.6},{"n":"Hinsdale","p":1890,"ipc":46235,"epc":263080,"bill":4375,"bpi":9.5},{"n":"Holbrook","p":11475,"ipc":40811,"epc":183020,"bill":6468,"bpi":15.8},{"n":"Holden","p":20326,"ipc":55612,"epc":187505,"bill":7469,"bpi":13.4},{"n":"Holland","p":2581,"ipc":40450,"epc":198343,"bill":4647,"bpi":11.5},{"n":"Holliston","p":15347,"ipc":72144,"epc":259860,"bill":10566,"bpi":14.6},{"n":"Holyoke","p":37838,"ipc":23575,"epc":76003,"bill":5319,"bpi":22.6},{"n":"Hopedale","p":6063,"ipc":53217,"epc":190565,"bill":8808,"bpi":16.6},{"n":"Hopkinton","p":19971,"ipc":98303,"epc":338789,"bill":14021,"bpi":14.3},{"n":"Hubbardston","p":4433,"ipc":43818,"epc":177178,"bill":4947,"bpi":11.3},{"n":"Hudson","p":20364,"ipc":49620,"epc":210492,"bill":8624,"bpi":17.4},{"n":"Hull","p":10278,"ipc":56885,"epc":326525,"bill":7795,"bpi":13.7},{"n":"Huntington","p":2071,"ipc":39947,"epc":147233,"bill":4714,"bpi":11.8},{"n":"Ipswich","p":14110,"ipc":74292,"epc":343304,"bill":9733,"bpi":13.1},{"n":"Kingston","p":14462,"ipc":54094,"epc":237798,"bill":8714,"bpi":16.1},{"n":"Lakeville","p":12262,"ipc":54553,"epc":247009,"bill":6097,"bpi":11.2},{"n":"Lancaster","p":8993,"ipc":44043,"epc":166510,"bill":9373,"bpi":21.3},{"n":"Lanesborough","p":3004,"ipc":41749,"epc":201204,"bill":6135,"bpi":14.7},{"n":"Lawrence","p":89332,"ipc":22481,"epc":93138,"bill":4140,"bpi":18.4},{"n":"Lee","p":5682,"ipc":41675,"epc":255093,"bill":4813,"bpi":11.5},{"n":"Leicester","p":11224,"ipc":40942,"epc":156499,"bill":5026,"bpi":12.3},{"n":"Lenox","p":5072,"ipc":104878,"epc":378812,"bill":6621,"bpi":6.3},{"n":"Leominster","p":44209,"ipc":36535,"epc":144619,"bill":6489,"bpi":17.8},{"n":"Leverett","p":1863,"ipc":47345,"epc":226048,"bill":7852,"bpi":16.6},{"n":"Lexington","p":34743,"ipc":144186,"epc":538599,"bill":20394,"bpi":14.1},{"n":"Leyden","p":735,"ipc":64633,"epc":169572,"bill":5127,"bpi":7.9},{"n":"Lincoln","p":6996,"ipc":159009,"epc":436541,"bill":20738,"bpi":13.0},{"n":"Littleton","p":10495,"ipc":72357,"epc":304990,"bill":10800,"bpi":14.9},{"n":"Longmeadow","p":15712,"ipc":86448,"epc":196784,"bill":10915,"bpi":12.6},{"n":"Lowell","p":120418,"ipc":27486,"epc":114353,"bill":5844,"bpi":21.3},{"n":"Ludlow","p":21118,"ipc":37001,"epc":144329,"bill":5923,"bpi":16.0},{"n":"Lunenburg","p":12007,"ipc":50263,"epc":197808,"bill":7444,"bpi":14.8},{"n":"Lynn","p":103489,"ipc":27523,"epc":144134,"bill":6031,"bpi":21.9},{"n":"Lynnfield","p":13230,"ipc":104802,"epc":384877,"bill":12381,"bpi":11.8},{"n":"Malden","p":66693,"ipc":36430,"epc":166966,"bill":4952,"bpi":13.6},{"n":"Manchester By The Sea","p":5467,"ipc":171950,"epc":658166,"bill":16371,"bpi":9.5},{"n":"Mansfield","p":24077,"ipc":62350,"epc":240794,"bill":8968,"bpi":14.4},{"n":"Marblehead","p":20576,"ipc":115422,"epc":461879,"bill":11055,"bpi":9.6},{"n":"Marion","p":5341,"ipc":76116,"epc":496779,"bill":8908,"bpi":11.7},{"n":"Marlborough","p":42169,"ipc":43158,"epc":216581,"bill":6441,"bpi":14.9},{"n":"Marshfield","p":26043,"ipc":68318,"epc":320638,"bill":7731,"bpi":11.3},{"n":"Mashpee","p":15482,"ipc":56318,"epc":648028,"bill":6346,"bpi":11.3},{"n":"Mattapoisett","p":6763,"ipc":80037,"epc":419023,"bill":8244,"bpi":10.3},{"n":"Maynard","p":10820,"ipc":53406,"epc":205791,"bill":10081,"bpi":18.9},{"n":"Medfield","p":13334,"ipc":111805,"epc":307851,"bill":13904,"bpi":12.4},{"n":"Medford","p":59898,"ipc":55839,"epc":274847,"bill":7427,"bpi":13.3},{"n":"Medway","p":13836,"ipc":69807,"epc":262969,"bill":9786,"bpi":14.0},{"n":"Melrose","p":29938,"ipc":69170,"epc":272136,"bill":9787,"bpi":14.1},{"n":"Mendon","p":6441,"ipc":66023,"epc":243469,"bill":8781,"bpi":13.3},{"n":"Merrimac","p":6810,"ipc":52905,"epc":209993,"bill":8778,"bpi":16.6},{"n":"Methuen","p":54272,"ipc":38729,"epc":177033,"bill":6037,"bpi":15.6},{"n":"Middleborough","p":24847,"ipc":40662,"epc":177922,"bill":6994,"bpi":17.2},{"n":"Middlefield","p":397,"ipc":24970,"epc":213046,"bill":4392,"bpi":17.6},{"n":"Middleton","p":9959,"ipc":78211,"epc":342756,"bill":12219,"bpi":15.6},{"n":"Milford","p":30640,"ipc":40990,"epc":184322,"bill":6735,"bpi":16.4},{"n":"Millbury","p":14173,"ipc":45239,"epc":194882,"bill":6540,"bpi":14.5},{"n":"Millis","p":9338,"ipc":61956,"epc":238817,"bill":10230,"bpi":16.5},{"n":"Millville","p":3187,"ipc":41356,"epc":149419,"bill":5762,"bpi":13.9},{"n":"Milton","p":28811,"ipc":107276,"epc":323553,"bill":12769,"bpi":11.9},{"n":"Monroe","p":115,"ipc":6348,"epc":296420,"bill":1859,"bpi":29.3},{"n":"Monson","p":8164,"ipc":38786,"epc":143024,"bill":5265,"bpi":13.6},{"n":"Montague","p":8437,"ipc":29366,"epc":151724,"bill":4928,"bpi":16.8},{"n":"Monterey","p":1085,"ipc":52418,"epc":664113,"bill":5815,"bpi":11.1},{"n":"Montgomery","p":837,"ipc":40480,"epc":189789,"bill":4822,"bpi":11.9},{"n":"Mount Washington","p":157,"ipc":71739,"epc":769334,"bill":3720,"bpi":5.2},{"n":"Nahant","p":3338,"ipc":74827,"epc":438840,"bill":9654,"bpi":12.9},{"n":"Nantucket","p":14670,"ipc":90622,"epc":2774410,"bill":9904,"bpi":10.9},{"n":"Natick","p":37316,"ipc":77821,"epc":338770,"bill":11413,"bpi":14.7},{"n":"Needham","p":32931,"ipc":139002,"epc":433511,"bill":16690,"bpi":12.0},{"n":"New Ashford","p":249,"ipc":30799,"epc":238126,"bill":2795,"bpi":9.1},{"n":"New Bedford","p":101318,"ipc":23310,"epc":109855,"bill":4653,"bpi":20.0},{"n":"New Braintree","p":1010,"ipc":49500,"epc":178788,"bill":5884,"bpi":11.9},{"n":"New Marlborough","p":1503,"ipc":45527,"epc":548280,"bill":5050,"bpi":11.1},{"n":"New Salem","p":1023,"ipc":31610,"epc":173523,"bill":4951,"bpi":15.7},{"n":"Newbury","p":6880,"ipc":85166,"epc":406831,"bill":7201,"bpi":8.5},{"n":"Newburyport","p":19163,"ipc":79681,"epc":386683,"bill":10249,"bpi":12.9},{"n":"Newton","p":90700,"ipc":167243,"epc":491284,"bill":17077,"bpi":10.2},{"n":"Norfolk","p":11962,"ipc":73622,"epc":238099,"bill":11718,"bpi":15.9},{"n":"North Adams","p":12492,"ipc":22124,"epc":83513,"bill":3894,"bpi":17.6},{"n":"North Andover","p":32135,"ipc":69633,"epc":269027,"bill":9531,"bpi":13.7},{"n":"North Attleborough","p":31210,"ipc":50966,"epc":194982,"bill":6931,"bpi":13.6},{"n":"North Brookfield","p":4797,"ipc":36364,"epc":140722,"bill":4767,"bpi":13.1},{"n":"North Reading","p":16379,"ipc":82388,"epc":305464,"bill":11495,"bpi":14.0},{"n":"Northampton","p":31315,"ipc":44647,"epc":171092,"bill":7801,"bpi":17.5},{"n":"Northborough","p":15867,"ipc":75270,"epc":286197,"bill":10461,"bpi":13.9},{"n":"Northbridge","p":16719,"ipc":46854,"epc":165382,"bill":5922,"bpi":12.6},{"n":"Northfield","p":2880,"ipc":38501,"epc":239578,"bill":4537,"bpi":11.8},{"n":"Norton","p":19392,"ipc":47933,"epc":202329,"bill":7367,"bpi":15.4},{"n":"Norwell","p":11477,"ipc":119269,"epc":373505,"bill":13675,"bpi":11.5},{"n":"Norwood","p":31764,"ipc":58355,"epc":259552,"bill":7065,"bpi":12.1},{"n":"Oak Bluffs","p":5407,"ipc":34583,"epc":1190132,"bill":6996,"bpi":20.2},{"n":"Oakham","p":1914,"ipc":45354,"epc":176910,"bill":4888,"bpi":10.8},{"n":"Orange","p":7583,"ipc":26055,"epc":115584,"bill":4910,"bpi":18.8},{"n":"Orleans","p":6485,"ipc":69762,"epc":1036342,"bill":8969,"bpi":12.9},{"n":"Otis","p":1619,"ipc":49442,"epc":545243,"bill":3365,"bpi":6.8},{"n":"Oxford","p":13503,"ipc":39486,"epc":167597,"bill":5192,"bpi":13.1},{"n":"Palmer","p":12388,"ipc":31465,"epc":113999,"bill":5014,"bpi":15.9},{"n":"Paxton","p":5043,"ipc":49307,"epc":166101,"bill":7989,"bpi":16.2},{"n":"Peabody","p":55418,"ipc":41212,"epc":216744,"bill":6411,"bpi":15.6},{"n":"Pelham","p":1343,"ipc":46113,"epc":197210,"bill":9213,"bpi":20.0},{"n":"Pembroke","p":18428,"ipc":56690,"epc":235707,"bill":7521,"bpi":13.3},{"n":"Pepperell","p":11877,"ipc":51009,"epc":178034,"bill":7578,"bpi":14.9},{"n":"Peru","p":798,"ipc":26960,"epc":167137,"bill":4689,"bpi":17.4},{"n":"Petersham","p":1246,"ipc":46437,"epc":204547,"bill":5707,"bpi":12.3},{"n":"Phillipston","p":1759,"ipc":44156,"epc":201565,"bill":4724,"bpi":10.7},{"n":"Pittsfield","p":43121,"ipc":33558,"epc":120398,"bill":5518,"bpi":16.4},{"n":"Plainfield","p":649,"ipc":30320,"epc":195198,"bill":4801,"bpi":15.8},{"n":"Plainville","p":10067,"ipc":51750,"epc":242275,"bill":6958,"bpi":13.4},{"n":"Plymouth","p":66663,"ipc":49272,"epc":273527,"bill":7731,"bpi":15.7},{"n":"Plympton","p":2964,"ipc":53567,"epc":265185,"bill":9007,"bpi":16.8},{"n":"Princeton","p":3597,"ipc":71066,"epc":226144,"bill":8050,"bpi":11.3},{"n":"Provincetown","p":3729,"ipc":90125,"epc":1565857,"bill":11185,"bpi":12.4},{"n":"Quincy","p":103434,"ipc":48421,"epc":235479,"bill":8250,"bpi":17.0},{"n":"Randolph","p":35114,"ipc":34979,"epc":177494,"bill":6328,"bpi":18.1},{"n":"Raynham","p":15861,"ipc":49678,"epc":213099,"bill":7283,"bpi":14.7},{"n":"Reading","p":26041,"ipc":81402,"epc":306533,"bill":10300,"bpi":12.7},{"n":"Rehoboth","p":13537,"ipc":57761,"epc":217627,"bill":6623,"bpi":11.5},{"n":"Revere","p":60702,"ipc":33133,"epc":198019,"bill":5574,"bpi":16.8},{"n":"Richmond","p":1405,"ipc":60195,"epc":469146,"bill":6630,"bpi":11.0},{"n":"Rochester","p":5936,"ipc":55216,"epc":267863,"bill":6745,"bpi":12.2},{"n":"Rockland","p":17708,"ipc":39777,"epc":195738,"bill":7603,"bpi":19.1},{"n":"Rockport","p":7091,"ipc":62753,"epc":487008,"bill":8548,"bpi":13.6},{"n":"Rowe","p":419,"ipc":34659,"epc":1236307,"bill":1661,"bpi":4.8},{"n":"Rowley","p":6334,"ipc":62574,"epc":287466,"bill":9235,"bpi":14.8},{"n":"Royalston","p":1291,"ipc":30277,"epc":190316,"bill":3507,"bpi":11.6},{"n":"Russell","p":1640,"ipc":40382,"epc":146560,"bill":5854,"bpi":14.5},{"n":"Rutland","p":9637,"ipc":46916,"epc":161009,"bill":6630,"bpi":14.1},{"n":"Salem","p":45677,"ipc":41885,"epc":205239,"bill":7285,"bpi":17.4},{"n":"Salisbury","p":9415,"ipc":42733,"epc":290038,"bill":6126,"bpi":14.3},{"n":"Sandisfield","p":984,"ipc":25908,"epc":350842,"bill":3489,"bpi":13.5},{"n":"Sandwich","p":20507,"ipc":56002,"epc":369618,"bill":7818,"bpi":14.0},{"n":"Saugus","p":29029,"ipc":46142,"epc":256714,"bill":7126,"bpi":15.4},{"n":"Savoy","p":655,"ipc":35295,"epc":152080,"bill":3995,"bpi":11.3},{"n":"Scituate","p":19598,"ipc":92061,"epc":424255,"bill":10191,"bpi":11.1},{"n":"Seekonk","p":15912,"ipc":48467,"epc":222418,"bill":6852,"bpi":14.1},{"n":"Sharon","p":18762,"ipc":85745,"epc":282934,"bill":14353,"bpi":16.7},{"n":"Sheffield","p":3324,"ipc":43068,"epc":287431,"bill":5809,"bpi":13.5},{"n":"Shelburne","p":1874,"ipc":28277,"epc":189813,"bill":5146,"bpi":18.2},{"n":"Sherborn","p":4485,"ipc":352250,"epc":421076,"bill":20018,"bpi":5.7},{"n":"Shirley","p":7042,"ipc":40056,"epc":153924,"bill":6490,"bpi":16.2},{"n":"Shrewsbury","p":39620,"ipc":73712,"epc":231110,"bill":8753,"bpi":11.9},{"n":"Shutesbury","p":1717,"ipc":36218,"epc":189539,"bill":6763,"bpi":18.7},{"n":"Somerset","p":18375,"ipc":40386,"epc":192236,"bill":6278,"bpi":15.5},{"n":"Somerville","p":82149,"ipc":61870,"epc":325821,"bill":9376,"bpi":15.2},{"n":"South Hadley","p":18031,"ipc":38042,"epc":133132,"bill":5639,"bpi":14.8},{"n":"Southampton","p":6181,"ipc":50794,"epc":182880,"bill":6413,"bpi":12.6},{"n":"Southborough","p":10569,"ipc":127127,"epc":359839,"bill":14230,"bpi":11.2},{"n":"Southbridge","p":18106,"ipc":25930,"epc":97550,"bill":5070,"bpi":19.6},{"n":"Southwick","p":9277,"ipc":47950,"epc":170009,"bill":6187,"bpi":12.9},{"n":"Spencer","p":12090,"ipc":36226,"epc":145315,"bill":4671,"bpi":12.9},{"n":"Springfield","p":154888,"ipc":20404,"epc":88691,"bill":4254,"bpi":20.8},{"n":"Sterling","p":8310,"ipc":58549,"epc":221943,"bill":7535,"bpi":12.9},{"n":"Stockbridge","p":1986,"ipc":52892,"epc":660022,"bill":6284,"bpi":11.9},{"n":"Stoneham","p":24550,"ipc":58058,"epc":250782,"bill":8059,"bpi":13.9},{"n":"Stoughton","p":29457,"ipc":42818,"epc":213313,"bill":7157,"bpi":16.7},{"n":"Stow","p":7335,"ipc":86756,"epc":286885,"bill":14113,"bpi":16.3},{"n":"Sturbridge","p":10097,"ipc":55434,"epc":193868,"bill":7870,"bpi":14.2},{"n":"Sudbury","p":19805,"ipc":125429,"epc":383932,"bill":16625,"bpi":13.3},{"n":"Sunderland","p":3628,"ipc":36047,"epc":178850,"bill":5947,"bpi":16.5},{"n":"Sutton","p":9599,"ipc":68076,"epc":251764,"bill":7247,"bpi":10.6},{"n":"Swampscott","p":15658,"ipc":76071,"epc":316902,"bill":11478,"bpi":15.1},{"n":"Swansea","p":17537,"ipc":42390,"epc":205437,"bill":5623,"bpi":13.3},{"n":"Taunton","p":61936,"ipc":32523,"epc":155407,"bill":5540,"bpi":17.0},{"n":"Templeton","p":8387,"ipc":35318,"epc":137999,"bill":4490,"bpi":12.7},{"n":"Tewksbury","p":31796,"ipc":52132,"epc":242202,"bill":8608,"bpi":16.5},{"n":"Tisbury","p":4927,"ipc":31588,"epc":1085947,"bill":12513,"bpi":39.6},{"n":"Tolland","p":474,"ipc":34310,"epc":551902,"bill":3196,"bpi":9.3},{"n":"Topsfield","p":6620,"ipc":95770,"epc":317918,"bill":14483,"bpi":15.1},{"n":"Townsend","p":9220,"ipc":42958,"epc":162584,"bill":6459,"bpi":15.0},{"n":"Truro","p":2484,"ipc":60587,"epc":1634638,"bill":8064,"bpi":13.3},{"n":"Tyngsborough","p":12779,"ipc":52345,"epc":224466,"bill":8340,"bpi":15.9},{"n":"Tyringham","p":419,"ipc":27933,"epc":593629,"bill":4547,"bpi":16.3},{"n":"Upton","p":8475,"ipc":67417,"epc":230950,"bill":8759,"bpi":13.0},{"n":"Uxbridge","p":14703,"ipc":47913,"epc":224284,"bill":6814,"bpi":14.2},{"n":"Wakefield","p":29216,"ipc":60266,"epc":266323,"bill":9628,"bpi":16.0},{"n":"Wales","p":1828,"ipc":30802,"epc":149819,"bill":4588,"bpi":14.9},{"n":"Walpole","p":26391,"ipc":73347,"epc":280098,"bill":10346,"bpi":14.1},{"n":"Waltham","p":65849,"ipc":49410,"epc":309997,"bill":5189,"bpi":10.5},{"n":"Ware","p":10142,"ipc":28885,"epc":112242,"bill":5231,"bpi":18.1},{"n":"Wareham","p":23526,"ipc":32017,"epc":253043,"bill":4087,"bpi":12.8},{"n":"Warren","p":5086,"ipc":24434,"epc":121045,"bill":4580,"bpi":18.7},{"n":"Warwick","p":774,"ipc":26530,"epc":163835,"bill":4795,"bpi":18.1},{"n":"Washington","p":497,"ipc":40278,"epc":232365,"bill":5204,"bpi":12.9},{"n":"Watertown","p":35985,"ipc":63164,"epc":365242,"bill":8094,"bpi":12.8},{"n":"Wayland","p":14054,"ipc":156292,"epc":410061,"bill":18259,"bpi":11.7},{"n":"Webster","p":17817,"ipc":34788,"epc":153644,"bill":5474,"bpi":15.7},{"n":"Wellesley","p":31242,"ipc":212430,"epc":576575,"bill":20551,"bpi":9.7},{"n":"Wellfleet","p":3645,"ipc":58327,"epc":1171126,"bill":7384,"bpi":12.7},{"n":"Wendell","p":916,"ipc":24472,"epc":149644,"bill":5565,"bpi":22.7},{"n":"Wenham","p":4945,"ipc":97669,"epc":280553,"bill":16164,"bpi":16.5},{"n":"West Boylston","p":7938,"ipc":46024,"epc":198139,"bill":7621,"bpi":16.6},{"n":"West Bridgewater","p":7771,"ipc":54184,"epc":231985,"bill":7433,"bpi":13.7},{"n":"West Brookfield","p":3917,"ipc":44918,"epc":165392,"bill":4446,"bpi":9.9},{"n":"West Newbury","p":4680,"ipc":85332,"epc":331018,"bill":9893,"bpi":11.6},{"n":"West Springfield","p":29028,"ipc":37351,"epc":137094,"bill":5041,"bpi":13.5},{"n":"West Stockbridge","p":1323,"ipc":62534,"epc":495994,"bill":6943,"bpi":11.1},{"n":"West Tisbury","p":3637,"ipc":40720,"epc":1361020,"bill":8862,"bpi":21.8},{"n":"Westborough","p":22643,"ipc":67279,"epc":282781,"bill":12900,"bpi":19.2},{"n":"Westfield","p":40403,"ipc":34787,"epc":124569,"bill":5787,"bpi":16.6},{"n":"Westford","p":25024,"ipc":82930,"epc":285743,"bill":11171,"bpi":13.5},{"n":"Westhampton","p":1629,"ipc":55175,"epc":178486,"bill":7149,"bpi":13.0},{"n":"Westminster","p":8509,"ipc":50728,"epc":206330,"bill":5992,"bpi":11.8},{"n":"Weston","p":11827,"ipc":340262,"epc":755621,"bill":26313,"bpi":7.7},{"n":"Westport","p":16705,"ipc":54579,"epc":312127,"bill":4931,"bpi":9.0},{"n":"Westwood","p":16533,"ipc":127497,"epc":440536,"bill":16097,"bpi":12.6},{"n":"Weymouth","p":60159,"ipc":45212,"epc":222981,"bill":6208,"bpi":13.7},{"n":"Whately","p":1626,"ipc":31550,"epc":231314,"bill":5850,"bpi":18.5},{"n":"Whitman","p":15459,"ipc":42535,"epc":173768,"bill":6861,"bpi":16.1},{"n":"Wilbraham","p":14663,"ipc":54903,"epc":175052,"bill":8186,"bpi":14.9},{"n":"Williamsburg","p":2475,"ipc":34490,"epc":172751,"bill":6968,"bpi":20.2},{"n":"Williamstown","p":9189,"ipc":35464,"epc":155127,"bill":7996,"bpi":22.5},{"n":"Wilmington","p":23802,"ipc":60329,"epc":317890,"bill":8661,"bpi":14.4},{"n":"Winchendon","p":10587,"ipc":28782,"epc":120359,"bill":4720,"bpi":16.4},{"n":"Winchester","p":23953,"ipc":143928,"epc":485718,"bill":18272,"bpi":12.7},{"n":"Windsor","p":817,"ipc":40977,"epc":208776,"bill":2846,"bpi":6.9},{"n":"Winthrop","p":18739,"ipc":47434,"epc":206705,"bill":8293,"bpi":17.5},{"n":"Woburn","p":43895,"ipc":52300,"epc":283560,"bill":6755,"bpi":12.9},{"n":"Worcester","p":211286,"ipc":26358,"epc":113653,"bill":5446,"bpi":20.7},{"n":"Worthington","p":1181,"ipc":50738,"epc":231612,"bill":5327,"bpi":10.5},{"n":"Wrentham","p":12516,"ipc":73106,"epc":280753,"bill":8307,"bpi":11.4},{"n":"Yarmouth","p":25208,"ipc":43768,"epc":430964,"bill":4949,"bpi":11.3}];
+  var DATA = [{"n":"Abington","p":17090,"ipc":46123,"epc":191838,"bill":7536,"bpi":16.3,"rate":13.06,"rpct":90.28,"lpc":2511,"ng":0.43},{"n":"Acton","p":24539,"ipc":86470,"epc":278538,"bill":15220,"bpi":17.6,"rate":17.15,"rpct":89.94,"lpc":4685,"ng":0.92},{"n":"Acushnet","p":10700,"ipc":43749,"epc":184882,"bill":5244,"bpi":12.0,"rate":10.79,"rpct":85.24,"lpc":2129,"ng":0.84},{"n":"Adams","p":7992,"ipc":29153,"epc":98831,"bill":4138,"bpi":14.2,"rate":17.01,"rpct":79.8,"lpc":1828,"ng":0.67},{"n":"Agawam","p":28749,"ipc":36291,"epc":152694,"bill":5190,"bpi":14.3,"rate":14.64,"rpct":66.15,"lpc":2622,"ng":1.99},{"n":"Alford","p":483,"ipc":48215,"epc":803195,"bill":5191,"bpi":10.8,"rate":4.95,"rpct":97.77,"lpc":3858,"ng":1.08},{"n":"Amesbury","p":17617,"ipc":48641,"epc":223185,"bill":9868,"bpi":20.3,"rate":15.3,"rpct":88.47,"lpc":3374,"ng":1.13},{"n":"Amherst","p":40989,"ipc":21800,"epc":89503,"bill":9957,"bpi":45.7,"rate":17.95,"rpct":88.45,"lpc":1654,"ng":1.83},{"n":"Andover","p":36927,"ipc":102125,"epc":352603,"bill":13176,"bpi":12.9,"rate":12.49,"rpct":70.54,"lpc":5195,"ng":1.18},{"n":"Aquinnah","p":451,"ipc":53350,"epc":2187141,"bill":12677,"bpi":23.8,"rate":6.76,"rpct":98.09,"lpc":14537,"ng":0.63},{"n":"Arlington","p":47112,"ipc":83690,"epc":337342,"bill":11947,"bpi":14.3,"rate":10.77,"rpct":94.73,"lpc":3528,"ng":0.86},{"n":"Ashburnham","p":6522,"ipc":41761,"epc":175796,"bill":6246,"bpi":15.0,"rate":14.87,"rpct":96.78,"lpc":2627,"ng":1.31},{"n":"Ashby","p":3270,"ipc":39913,"epc":166946,"bill":6225,"bpi":15.6,"rate":15.23,"rpct":94.42,"lpc":2472,"ng":0.65},{"n":"Ashfield","p":1685,"ipc":36404,"epc":237767,"bill":5518,"bpi":15.2,"rate":13.46,"rpct":82.39,"lpc":3222,"ng":5.47},{"n":"Ashland","p":19391,"ipc":64835,"epc":236070,"bill":9372,"bpi":14.5,"rate":12.77,"rpct":91.6,"lpc":3009,"ng":0.56},{"n":"Athol","p":12105,"ipc":27709,"epc":116185,"bill":3924,"bpi":14.2,"rate":12.71,"rpct":88.06,"lpc":1479,"ng":1.18},{"n":"Attleboro","p":47085,"ipc":41996,"epc":160316,"bill":6304,"bpi":15.0,"rate":12.55,"rpct":80.61,"lpc":2123,"ng":1.48},{"n":"Auburn","p":17323,"ipc":43964,"epc":191195,"bill":6307,"bpi":14.3,"rate":14.29,"rpct":73.48,"lpc":2831,"ng":1.68},{"n":"Avon","p":4801,"ipc":44742,"epc":258259,"bill":7643,"bpi":17.1,"rate":13.34,"rpct":43.2,"lpc":4969,"ng":1.17},{"n":"Ayer","p":9010,"ipc":46946,"epc":212082,"bill":6625,"bpi":14.1,"rate":11.96,"rpct":53.34,"lpc":3363,"ng":3.48},{"n":"Barnstable","p":49831,"ipc":52832,"epc":527697,"bill":5599,"bpi":10.6,"rate":6.94,"rpct":89.54,"lpc":3033,"ng":1.14},{"n":"Barre","p":5631,"ipc":33914,"epc":139075,"bill":5053,"bpi":14.9,"rate":13.59,"rpct":89.82,"lpc":1852,"ng":1.19},{"n":"Becket","p":1922,"ipc":38186,"epc":391019,"bill":3670,"bpi":9.6,"rate":8.76,"rpct":90.95,"lpc":3477,"ng":0.49},{"n":"Bedford","p":14955,"ipc":87571,"epc":379474,"bill":12985,"bpi":14.8,"rate":12.04,"rpct":59.86,"lpc":5779,"ng":2.85},{"n":"Belchertown","p":15372,"ipc":46265,"epc":154464,"bill":6622,"bpi":14.3,"rate":14.51,"rpct":93.54,"lpc":2251,"ng":1.03},{"n":"Bellingham","p":17998,"ipc":45801,"epc":226491,"bill":6073,"bpi":13.3,"rate":12.56,"rpct":62.97,"lpc":3224,"ng":3.41},{"n":"Belmont","p":27442,"ipc":112427,"epc":437049,"bill":19579,"bpi":17.4,"rate":11.39,"rpct":94.64,"lpc":4829,"ng":0.71},{"n":"Berkley","p":6892,"ipc":51468,"epc":194745,"bill":6985,"bpi":13.6,"rate":12.01,"rpct":95.4,"lpc":2372,"ng":0.98},{"n":"Berlin","p":3479,"ipc":77907,"epc":303755,"bill":9951,"bpi":12.8,"rate":14.19,"rpct":79.17,"lpc":4345,"ng":1.48},{"n":"Bernardston","p":2109,"ipc":39100,"epc":159318,"bill":5019,"bpi":12.8,"rate":14.27,"rpct":82.39,"lpc":2417,"ng":3.78},{"n":"Beverly","p":43223,"ipc":56939,"epc":249288,"bill":8834,"bpi":15.5,"rate":10.99,"rpct":78.87,"lpc":3004,"ng":1.18},{"n":"Billerica","p":42978,"ipc":51629,"epc":261494,"bill":7484,"bpi":14.5,"rate":11.37,"rpct":61.35,"lpc":3766,"ng":1.84},{"n":"Blackstone","p":9374,"ipc":40976,"epc":158520,"bill":6843,"bpi":16.7,"rate":15.1,"rpct":78.97,"lpc":2535,"ng":2.54},{"n":"Blandford","p":1209,"ipc":37797,"epc":255680,"bill":4680,"bpi":12.4,"rate":11.71,"rpct":72.0,"lpc":2994,"ng":0.38},{"n":"Bolton","p":5809,"ipc":91886,"epc":295354,"bill":15643,"bpi":17.0,"rate":16.62,"rpct":95.09,"lpc":4745,"ng":0.43},{"n":"Boston","p":673458,"ipc":65287,"epc":358986,"bill":7627,"bpi":11.7,"rate":11.58,"rpct":44.07,"lpc":4986,"ng":2.69},{"n":"Bourne","p":20508,"ipc":49345,"epc":390936,"bill":6075,"bpi":12.3,"rate":7.81,"rpct":89.37,"lpc":3034,"ng":0.83},{"n":"Boxborough","p":5565,"ipc":79592,"epc":314985,"bill":14372,"bpi":18.1,"rate":15.14,"rpct":82.13,"lpc":4829,"ng":1.43},{"n":"Boxford","p":8334,"ipc":108467,"epc":346512,"bill":13673,"bpi":12.6,"rate":13.45,"rpct":97.52,"lpc":4418,"ng":1.48},{"n":"Boylston","p":5064,"ipc":72411,"epc":276910,"bill":9379,"bpi":13.0,"rate":13.83,"rpct":84.04,"lpc":3843,"ng":1.73},{"n":"Braintree","p":39134,"ipc":52904,"epc":264230,"bill":7306,"bpi":13.8,"rate":9.98,"rpct":66.62,"lpc":3155,"ng":0.86},{"n":"Brewster","p":10447,"ipc":55197,"epc":684860,"bill":6544,"bpi":11.9,"rate":6.88,"rpct":95.19,"lpc":4577,"ng":0.86},{"n":"Bridgewater","p":29167,"ipc":42207,"epc":181691,"bill":7420,"bpi":17.6,"rate":11.83,"rpct":85.1,"lpc":2087,"ng":1.58},{"n":"Brimfield","p":3733,"ipc":46024,"epc":169741,"bill":5469,"bpi":11.9,"rate":14.14,"rpct":89.08,"lpc":2469,"ng":1.41},{"n":"Brockton","p":105788,"ipc":27098,"epc":126449,"bill":5591,"bpi":20.6,"rate":12.11,"rpct":75.12,"lpc":1698,"ng":1.17},{"n":"Brookfield","p":3500,"ipc":35587,"epc":128634,"bill":5409,"bpi":15.2,"rate":15.48,"rpct":92.46,"lpc":1935,"ng":1.51},{"n":"Brookline","p":63925,"ipc":100201,"epc":528253,"bill":26237,"bpi":26.2,"rate":9.87,"rpct":83.89,"lpc":4890,"ng":1.02},{"n":"Buckland","p":1818,"ipc":28077,"epc":165889,"bill":5804,"bpi":20.7,"rate":16.94,"rpct":85.13,"lpc":2846,"ng":1.34},{"n":"Burlington","p":26977,"ipc":68206,"epc":382846,"bill":7128,"bpi":10.5,"rate":8.66,"rpct":37.4,"lpc":5478,"ng":2.49},{"n":"Cambridge","p":121186,"ipc":78192,"epc":704531,"bill":13680,"bpi":17.5,"rate":6.35,"rpct":33.81,"lpc":5185,"ng":3.85},{"n":"Canton","p":25163,"ipc":73374,"epc":328543,"bill":8468,"bpi":11.5,"rate":9.89,"rpct":60.47,"lpc":3935,"ng":1.51},{"n":"Carlisle","p":5317,"ipc":147135,"epc":470858,"bill":17379,"bpi":11.8,"rate":13.18,"rpct":98.16,"lpc":5960,"ng":1.01},{"n":"Carver","p":11817,"ipc":40588,"epc":186979,"bill":7448,"bpi":18.4,"rate":13.87,"rpct":75.92,"lpc":2888,"ng":2.85},{"n":"Charlemont","p":1179,"ipc":39154,"epc":164448,"bill":4976,"bpi":12.7,"rate":18.3,"rpct":80.6,"lpc":3010,"ng":5.76},{"n":"Charlton","p":13606,"ipc":49247,"epc":226370,"bill":5345,"bpi":10.9,"rate":11.13,"rpct":71.36,"lpc":2581,"ng":7.14},{"n":"Chatham","p":6711,"ipc":92760,"epc":1886309,"bill":6381,"bpi":6.9,"rate":3.47,"rpct":94.49,"lpc":6381,"ng":0.86},{"n":"Chelmsford","p":36953,"ipc":70664,"epc":250855,"bill":9219,"bpi":13.0,"rate":13.9,"rpct":82.43,"lpc":3371,"ng":1.21},{"n":"Chelsea","p":40245,"ipc":27806,"epc":157740,"bill":4214,"bpi":15.2,"rate":11.51,"rpct":51.21,"lpc":2102,"ng":2.29},{"n":"Cheshire","p":3190,"ipc":38898,"epc":140422,"bill":3586,"bpi":9.2,"rate":11.13,"rpct":91.07,"lpc":1568,"ng":0.86},{"n":"Chester","p":1221,"ipc":31276,"epc":144804,"bill":4458,"bpi":14.3,"rate":18.06,"rpct":92.07,"lpc":2579,"ng":0.69},{"n":"Chesterfield","p":1174,"ipc":27479,"epc":219480,"bill":5767,"bpi":21.0,"rate":15.52,"rpct":94.75,"lpc":3284,"ng":0.99},{"n":"Chicopee","p":55381,"ipc":26096,"epc":105121,"bill":4580,"bpi":17.6,"rate":15.16,"rpct":65.12,"lpc":1952,"ng":0.76},{"n":"Chilmark","p":1249,"ipc":88995,"epc":4712016,"bill":8024,"bpi":9.0,"rate":2.25,"rpct":98.04,"lpc":10469,"ng":0.86},{"n":"Clarksburg","p":1637,"ipc":32061,"epc":98786,"bill":3295,"bpi":10.3,"rate":13.58,"rpct":95.71,"lpc":1388,"ng":0.13},{"n":"Clinton","p":15740,"ipc":37609,"epc":149712,"bill":6038,"bpi":16.1,"rate":13.3,"rpct":76.2,"lpc":2130,"ng":1.31},{"n":"Cohasset","p":8532,"ipc":154676,"epc":496041,"bill":16814,"bpi":10.9,"rate":11.58,"rpct":93.91,"lpc":5814,"ng":1.52},{"n":"Colrain","p":1643,"ipc":35363,"epc":137760,"bill":4791,"bpi":13.5,"rate":18.26,"rpct":84.17,"lpc":2539,"ng":0.65},{"n":"Concord","p":18092,"ipc":170977,"epc":553048,"bill":20517,"bpi":12.0,"rate":13.26,"rpct":93.2,"lpc":6431,"ng":1.1},{"n":"Conway","p":1754,"ipc":47575,"epc":206092,"bill":6335,"bpi":13.3,"rate":14.44,"rpct":82.02,"lpc":3387,"ng":5.1},{"n":"Cummington","p":819,"ipc":76231,"epc":214923,"bill":4575,"bpi":6.0,"rate":12.76,"rpct":87.77,"lpc":2805,"ng":0.68},{"n":"Dalton","p":6198,"ipc":40563,"epc":152932,"bill":6011,"bpi":14.8,"rate":16.47,"rpct":85.95,"lpc":2549,"ng":0.3},{"n":"Danvers","p":28590,"ipc":55853,"epc":269905,"bill":7780,"bpi":13.9,"rate":10.99,"rpct":68.48,"lpc":3348,"ng":0.8},{"n":"Dartmouth","p":34139,"ipc":47163,"epc":249460,"bill":5276,"bpi":11.2,"rate":8.26,"rpct":76.05,"lpc":2297,"ng":1.5},{"n":"Dedham","p":25485,"ipc":72590,"epc":312261,"bill":9974,"bpi":13.7,"rate":12.62,"rpct":69.71,"lpc":4526,"ng":1.17},{"n":"Deerfield","p":5177,"ipc":53034,"epc":207221,"bill":6283,"bpi":11.8,"rate":13.25,"rpct":75.51,"lpc":2809,"ng":1.87},{"n":"Dennis","p":14862,"ipc":49780,"epc":879201,"bill":3873,"bpi":7.8,"rate":4.33,"rpct":94.54,"lpc":3691,"ng":0.42},{"n":"Dighton","p":8275,"ipc":45606,"epc":187938,"bill":6689,"bpi":14.7,"rate":12.56,"rpct":78.84,"lpc":2780,"ng":1.72},{"n":"Douglas","p":9452,"ipc":49751,"epc":184652,"bill":6298,"bpi":12.7,"rate":13.17,"rpct":85.31,"lpc":2557,"ng":9.16},{"n":"Dover","p":6057,"ipc":264727,"epc":595230,"bill":19088,"bpi":7.2,"rate":11.27,"rpct":97.08,"lpc":6664,"ng":1.0},{"n":"Dracut","p":32972,"ipc":44670,"epc":180863,"bill":5737,"bpi":12.8,"rate":10.12,"rpct":92.24,"lpc":1823,"ng":0.48},{"n":"Dudley","p":11984,"ipc":37640,"epc":139543,"bill":4526,"bpi":12.0,"rate":10.57,"rpct":93.48,"lpc":1490,"ng":1.36},{"n":"Dunstable","p":3500,"ipc":71129,"epc":245939,"bill":9982,"bpi":14.0,"rate":13.75,"rpct":95.28,"lpc":3382,"ng":1.25},{"n":"Duxbury","p":16377,"ipc":113703,"epc":456388,"bill":12963,"bpi":11.4,"rate":10.14,"rpct":96.5,"lpc":4497,"ng":0.87},{"n":"East Bridgewater","p":14519,"ipc":45166,"epc":188414,"bill":7410,"bpi":16.4,"rate":13.67,"rpct":87.84,"lpc":2559,"ng":2.12},{"n":"East Brookfield","p":2237,"ipc":40426,"epc":174865,"bill":5001,"bpi":12.4,"rate":12.84,"rpct":88.65,"lpc":2274,"ng":1.44},{"n":"East Longmeadow","p":16515,"ipc":53447,"epc":173237,"bill":8126,"bpi":15.2,"rate":18.48,"rpct":83.62,"lpc":3185,"ng":1.05},{"n":"Eastham","p":5824,"ipc":47154,"epc":901075,"bill":6664,"bpi":14.1,"rate":7.71,"rpct":97.0,"lpc":6626,"ng":0.75},{"n":"Easthampton","p":16020,"ipc":39372,"epc":154312,"bill":5562,"bpi":14.1,"rate":13.67,"rpct":88.01,"lpc":2088,"ng":1.31},{"n":"Easton","p":25568,"ipc":64748,"epc":212746,"bill":9441,"bpi":14.6,"rate":12.48,"rpct":87.0,"lpc":2875,"ng":2.05},{"n":"Edgartown","p":5328,"ipc":79087,"epc":2805720,"bill":6721,"bpi":8.5,"rate":2.65,"rpct":93.23,"lpc":7178,"ng":1.77},{"n":"Egremont","p":1375,"ipc":43313,"epc":633579,"bill":5573,"bpi":12.9,"rate":6.26,"rpct":95.35,"lpc":3854,"ng":0.64},{"n":"Erving","p":1661,"ipc":29783,"epc":534971,"bill":2772,"bpi":9.3,"rate":9.31,"rpct":13.11,"lpc":7677,"ng":0.25},{"n":"Essex","p":3760,"ipc":78483,"epc":368553,"bill":11957,"bpi":15.2,"rate":12.99,"rpct":91.08,"lpc":4618,"ng":0.88},{"n":"Everett","p":51825,"ipc":26405,"epc":204127,"bill":5887,"bpi":22.3,"rate":11.39,"rpct":58.38,"lpc":2263,"ng":3.66},{"n":"Fairhaven","p":16005,"ipc":38858,"epc":218656,"bill":4374,"bpi":11.3,"rate":9.32,"rpct":76.23,"lpc":2202,"ng":1.38},{"n":"Fall River","p":94689,"ipc":23335,"epc":107776,"bill":4651,"bpi":19.9,"rate":11.45,"rpct":69.38,"lpc":1505,"ng":2.54},{"n":"Falmouth","p":33227,"ipc":58210,"epc":647263,"bill":5881,"bpi":10.1,"rate":5.87,"rpct":93.17,"lpc":3884,"ng":0.8},{"n":"Fitchburg","p":42145,"ipc":27202,"epc":115102,"bill":5189,"bpi":19.1,"rate":13.51,"rpct":81.47,"lpc":1628,"ng":2.39},{"n":"Florida","p":673,"ipc":24215,"epc":302320,"bill":2006,"bpi":8.3,"rate":7.77,"rpct":22.06,"lpc":4593,"ng":5.48},{"n":"Foxborough","p":18791,"ipc":64808,"epc":241474,"bill":9016,"bpi":13.9,"rate":13.22,"rpct":74.68,"lpc":3387,"ng":2.72},{"n":"Framingham","p":73361,"ipc":46614,"epc":209780,"bill":8061,"bpi":17.3,"rate":11.94,"rpct":66.75,"lpc":3065,"ng":1.07},{"n":"Franklin","p":33742,"ipc":64589,"epc":253048,"bill":8353,"bpi":12.9,"rate":11.62,"rpct":81.03,"lpc":2897,"ng":1.2},{"n":"Freetown","p":9380,"ipc":46146,"epc":246148,"bill":5501,"bpi":11.9,"rate":9.91,"rpct":63.41,"lpc":3017,"ng":2.94},{"n":"Gardner","p":21381,"ipc":27230,"epc":108774,"bill":5052,"bpi":18.6,"rate":14.36,"rpct":83.82,"lpc":1586,"ng":0.83},{"n":"Georgetown","p":8558,"ipc":63856,"epc":235052,"bill":10314,"bpi":16.2,"rate":11.06,"rpct":91.45,"lpc":2923,"ng":1.02},{"n":"Gill","p":1553,"ipc":29193,"epc":140951,"bill":5029,"bpi":17.2,"rate":14.66,"rpct":80.34,"lpc":2178,"ng":0.95},{"n":"Gloucester","p":30491,"ipc":51424,"epc":368307,"bill":9502,"bpi":18.5,"rate":9.72,"rpct":91.33,"lpc":3468,"ng":1.3},{"n":"Goshen","p":942,"ipc":17510,"epc":233775,"bill":5062,"bpi":28.9,"rate":13.99,"rpct":93.5,"lpc":3409,"ng":1.23},{"n":"Gosnold","p":62,"ipc":21887,"epc":3828681,"bill":3415,"bpi":15.6,"rate":3.17,"rpct":95.31,"lpc":13744,"ng":1.7},{"n":"Grafton","p":20352,"ipc":64906,"epc":203370,"bill":9086,"bpi":14.0,"rate":13.94,"rpct":91.19,"lpc":2886,"ng":2.16},{"n":"Granby","p":6064,"ipc":44484,"epc":170912,"bill":6381,"bpi":14.3,"rate":15.37,"rpct":89.93,"lpc":2662,"ng":1.14},{"n":"Granville","p":1540,"ipc":42644,"epc":194633,"bill":5059,"bpi":11.9,"rate":13.64,"rpct":82.52,"lpc":2556,"ng":0.75},{"n":"Great Barrington","p":7245,"ipc":55904,"epc":303968,"bill":8444,"bpi":15.1,"rate":13.79,"rpct":83.08,"lpc":4142,"ng":0.97},{"n":"Greenfield","p":17633,"ipc":27634,"epc":126257,"bill":6063,"bpi":21.9,"rate":19.56,"rpct":75.01,"lpc":2396,"ng":1.52},{"n":"Groton","p":11580,"ipc":87629,"epc":251682,"bill":11253,"bpi":12.8,"rate":15.25,"rpct":95.39,"lpc":3700,"ng":0.89},{"n":"Groveland","p":6849,"ipc":53587,"epc":223389,"bill":8799,"bpi":16.4,"rate":12.69,"rpct":92.84,"lpc":3026,"ng":0.89},{"n":"Hadley","p":5284,"ipc":45659,"epc":266080,"bill":5454,"bpi":11.9,"rate":11.63,"rpct":68.79,"lpc":2900,"ng":1.9},{"n":"Halifax","p":7786,"ipc":46544,"epc":192582,"bill":7493,"bpi":16.1,"rate":14.27,"rpct":91.21,"lpc":2645,"ng":0.72},{"n":"Hamilton","p":7670,"ipc":101901,"epc":307318,"bill":13093,"bpi":12.8,"rate":15.65,"rpct":95.91,"lpc":4678,"ng":0.44},{"n":"Hampden","p":4964,"ipc":48405,"epc":184184,"bill":6963,"bpi":14.4,"rate":15.09,"rpct":84.97,"lpc":2972,"ng":3.19},{"n":"Hancock","p":740,"ipc":21588,"epc":544830,"bill":835,"bpi":3.9,"rate":2.69,"rpct":60.17,"lpc":1582,"ng":1.04},{"n":"Hanover","p":14887,"ipc":75870,"epc":297875,"bill":10149,"bpi":13.4,"rate":12.35,"rpct":82.19,"lpc":3724,"ng":0.95},{"n":"Hanson","p":10719,"ipc":49839,"epc":197541,"bill":7111,"bpi":14.3,"rate":13.38,"rpct":92.67,"lpc":2605,"ng":1.41},{"n":"Hardwick","p":2722,"ipc":30462,"epc":143687,"bill":4852,"bpi":15.9,"rate":13.15,"rpct":91.28,"lpc":1793,"ng":0.89},{"n":"Harvard","p":7004,"ipc":79350,"epc":274261,"bill":14562,"bpi":18.4,"rate":15.65,"rpct":95.97,"lpc":4051,"ng":0.72},{"n":"Harwich","p":13620,"ipc":54010,"epc":756864,"bill":5872,"bpi":10.9,"rate":5.91,"rpct":93.64,"lpc":4413,"ng":0.85},{"n":"Hatfield","p":3321,"ipc":45539,"epc":229591,"bill":6735,"bpi":14.8,"rate":13.84,"rpct":77.89,"lpc":3241,"ng":0.62},{"n":"Haverhill","p":68291,"ipc":37314,"epc":166355,"bill":5962,"bpi":16.0,"rate":10.71,"rpct":79.91,"lpc":1952,"ng":1.48},{"n":"Hawley","p":352,"ipc":23000,"epc":185837,"bill":4648,"bpi":20.2,"rate":16.35,"rpct":88.8,"lpc":2929,"ng":1.2},{"n":"Heath","p":717,"ipc":15471,"epc":175513,"bill":5067,"bpi":32.8,"rate":18.81,"rpct":89.1,"lpc":3324,"ng":1.22},{"n":"Hingham","p":24414,"ipc":148511,"epc":433421,"bill":14313,"bpi":9.6,"rate":10.69,"rpct":90.24,"lpc":4683,"ng":0.84},{"n":"Hinsdale","p":1890,"ipc":46235,"epc":263080,"bill":4375,"bpi":9.5,"rate":11.15,"rpct":78.47,"lpc":2837,"ng":1.15},{"n":"Holbrook","p":11475,"ipc":40811,"epc":183020,"bill":6468,"bpi":15.8,"rate":13.18,"rpct":76.9,"lpc":2736,"ng":1.79},{"n":"Holden","p":20326,"ipc":55612,"epc":187505,"bill":7469,"bpi":13.4,"rate":13.86,"rpct":95.77,"lpc":2604,"ng":1.34},{"n":"Holland","p":2581,"ipc":40450,"epc":198343,"bill":4647,"bpi":11.5,"rate":12.98,"rpct":96.29,"lpc":2645,"ng":0.79},{"n":"Holliston","p":15347,"ipc":72144,"epc":259860,"bill":10566,"bpi":14.6,"rate":14.65,"rpct":88.73,"lpc":3850,"ng":0.59},{"n":"Holyoke","p":37838,"ipc":23575,"epc":76003,"bill":5319,"bpi":22.6,"rate":17.46,"rpct":62.09,"lpc":1768,"ng":2.11},{"n":"Hopedale","p":6063,"ipc":53217,"epc":190565,"bill":8808,"bpi":16.6,"rate":16.61,"rpct":76.43,"lpc":3558,"ng":7.08},{"n":"Hopkinton","p":19971,"ipc":98303,"epc":338789,"bill":14021,"bpi":14.3,"rate":14.18,"rpct":83.05,"lpc":4786,"ng":1.81},{"n":"Hubbardston","p":4433,"ipc":43818,"epc":177178,"bill":4947,"bpi":11.3,"rate":11.68,"rpct":93.21,"lpc":1995,"ng":1.52},{"n":"Hudson","p":20364,"ipc":49620,"epc":210492,"bill":8624,"bpi":17.4,"rate":13.88,"rpct":78.68,"lpc":3279,"ng":0.81},{"n":"Hull","p":10278,"ipc":56885,"epc":326525,"bill":7795,"bpi":13.7,"rate":11.2,"rpct":96.15,"lpc":3668,"ng":1.74},{"n":"Huntington","p":2071,"ipc":39947,"epc":147233,"bill":4714,"bpi":11.8,"rate":15.4,"rpct":93.28,"lpc":2256,"ng":1.27},{"n":"Ipswich","p":14110,"ipc":74292,"epc":343304,"bill":9733,"bpi":13.1,"rate":11.15,"rpct":90.19,"lpc":3725,"ng":0.95},{"n":"Kingston","p":14462,"ipc":54094,"epc":237798,"bill":8714,"bpi":16.1,"rate":12.97,"rpct":86.88,"lpc":3062,"ng":1.73},{"n":"Lakeville","p":12262,"ipc":54553,"epc":247009,"bill":6097,"bpi":11.2,"rate":10.35,"rpct":88.29,"lpc":2456,"ng":0.84},{"n":"Lancaster","p":8993,"ipc":44043,"epc":166510,"bill":9373,"bpi":21.3,"rate":16.16,"rpct":87.83,"lpc":2656,"ng":1.16},{"n":"Lanesborough","p":3004,"ipc":41749,"epc":201204,"bill":6135,"bpi":14.7,"rate":16.73,"rpct":83.68,"lpc":3297,"ng":0.8},{"n":"Lawrence","p":89332,"ipc":22481,"epc":93138,"bill":4140,"bpi":18.4,"rate":8.8,"rpct":68.68,"lpc":989,"ng":1.61},{"n":"Lee","p":5682,"ipc":41675,"epc":255093,"bill":4813,"bpi":11.5,"rate":11.25,"rpct":70.59,"lpc":2828,"ng":2.31},{"n":"Leicester","p":11224,"ipc":40942,"epc":156499,"bill":5026,"bpi":12.3,"rate":11.77,"rpct":87.28,"lpc":1848,"ng":1.66},{"n":"Lenox","p":5072,"ipc":104878,"epc":378812,"bill":6621,"bpi":6.3,"rate":9.05,"rpct":73.52,"lpc":3748,"ng":1.05},{"n":"Leominster","p":44209,"ipc":36535,"epc":144619,"bill":6489,"bpi":17.8,"rate":14.03,"rpct":82.27,"lpc":2055,"ng":1.09},{"n":"Leverett","p":1863,"ipc":47345,"epc":226048,"bill":7852,"bpi":16.6,"rate":15.18,"rpct":88.35,"lpc":3451,"ng":0.45},{"n":"Lexington","p":34743,"ipc":144186,"epc":538599,"bill":20394,"bpi":14.1,"rate":12.23,"rpct":76.24,"lpc":7377,"ng":2.64},{"n":"Leyden","p":735,"ipc":64633,"epc":169572,"bill":5127,"bpi":7.9,"rate":15.28,"rpct":94.41,"lpc":2502,"ng":0.81},{"n":"Lincoln","p":6996,"ipc":159009,"epc":436541,"bill":20738,"bpi":13.0,"rate":12.81,"rpct":94.45,"lpc":5533,"ng":0.48},{"n":"Littleton","p":10495,"ipc":72357,"epc":304990,"bill":10800,"bpi":14.9,"rate":14.86,"rpct":69.39,"lpc":4980,"ng":2.41},{"n":"Longmeadow","p":15712,"ipc":86448,"epc":196784,"bill":10915,"bpi":12.6,"rate":21.12,"rpct":93.22,"lpc":4081,"ng":0.64},{"n":"Lowell","p":120418,"ipc":27486,"epc":114353,"bill":5844,"bpi":21.3,"rate":11.48,"rpct":79.08,"lpc":1485,"ng":1.61},{"n":"Ludlow","p":21118,"ipc":37001,"epc":144329,"bill":5923,"bpi":16.0,"rate":17.35,"rpct":81.15,"lpc":2534,"ng":0.97},{"n":"Lunenburg","p":12007,"ipc":50263,"epc":197808,"bill":7444,"bpi":14.8,"rate":14.36,"rpct":91.54,"lpc":2823,"ng":1.56},{"n":"Lynn","p":103489,"ipc":27523,"epc":144134,"bill":6031,"bpi":21.9,"rate":10.36,"rpct":81.79,"lpc":1624,"ng":1.7},{"n":"Lynnfield","p":13230,"ipc":104802,"epc":384877,"bill":12381,"bpi":11.8,"rate":10.56,"rpct":81.53,"lpc":4305,"ng":0.8},{"n":"Malden","p":66693,"ipc":36430,"epc":166966,"bill":4952,"bpi":13.6,"rate":11.32,"rpct":81.11,"lpc":1695,"ng":0.94},{"n":"Manchester By The Sea","p":5467,"ipc":171950,"epc":658166,"bill":16371,"bpi":9.5,"rate":9.15,"rpct":94.13,"lpc":6063,"ng":0.72},{"n":"Mansfield","p":24077,"ipc":62350,"epc":240794,"bill":8968,"bpi":14.4,"rate":13.17,"rpct":72.78,"lpc":3353,"ng":1.09},{"n":"Marblehead","p":20576,"ipc":115422,"epc":461879,"bill":11055,"bpi":9.6,"rate":9.05,"rpct":95.5,"lpc":4101,"ng":0.38},{"n":"Marion","p":5341,"ipc":76116,"epc":496779,"bill":8908,"bpi":11.7,"rate":9.32,"rpct":94.03,"lpc":4460,"ng":0.94},{"n":"Marlborough","p":42169,"ipc":43158,"epc":216581,"bill":6441,"bpi":14.9,"rate":9.86,"rpct":62.51,"lpc":2538,"ng":2.29},{"n":"Marshfield","p":26043,"ipc":68318,"epc":320638,"bill":7731,"bpi":11.3,"rate":9.9,"rpct":93.75,"lpc":3200,"ng":0.84},{"n":"Mashpee","p":15482,"ipc":56318,"epc":648028,"bill":6346,"bpi":11.3,"rate":6.42,"rpct":93.06,"lpc":3927,"ng":1.03},{"n":"Mattapoisett","p":6763,"ipc":80037,"epc":419023,"bill":8244,"bpi":10.3,"rate":10.76,"rpct":94.03,"lpc":4339,"ng":1.34},{"n":"Maynard","p":10820,"ipc":53406,"epc":205791,"bill":10081,"bpi":18.9,"rate":17.83,"rpct":87.75,"lpc":3796,"ng":1.24},{"n":"Medfield","p":13334,"ipc":111805,"epc":307851,"bill":13904,"bpi":12.4,"rate":13.8,"rpct":94.87,"lpc":4231,"ng":0.93},{"n":"Medford","p":59898,"ipc":55839,"epc":274847,"bill":7427,"bpi":13.3,"rate":8.8,"rpct":80.68,"lpc":2563,"ng":1.65},{"n":"Medway","p":13836,"ipc":69807,"epc":262969,"bill":9786,"bpi":14.0,"rate":14.25,"rpct":79.8,"lpc":3701,"ng":1.55},{"n":"Melrose","p":29938,"ipc":69170,"epc":272136,"bill":9787,"bpi":14.1,"rate":9.9,"rpct":91.37,"lpc":2657,"ng":0.97},{"n":"Mendon","p":6441,"ipc":66023,"epc":243469,"bill":8781,"bpi":13.3,"rate":13.39,"rpct":89.65,"lpc":3207,"ng":1.53},{"n":"Merrimac","p":6810,"ipc":52905,"epc":209993,"bill":8778,"bpi":16.6,"rate":13.25,"rpct":96.27,"lpc":2770,"ng":0.95},{"n":"Methuen","p":54272,"ipc":38729,"epc":177033,"bill":6037,"bpi":15.6,"rate":10.58,"rpct":79.6,"lpc":2078,"ng":1.2},{"n":"Middleborough","p":24847,"ipc":40662,"epc":177922,"bill":6994,"bpi":17.2,"rate":13.41,"rpct":84.3,"lpc":2377,"ng":1.36},{"n":"Middlefield","p":397,"ipc":24970,"epc":213046,"bill":4392,"bpi":17.6,"rate":18.24,"rpct":90.22,"lpc":3920,"ng":1.37},{"n":"Middleton","p":9959,"ipc":78211,"epc":342756,"bill":12219,"bpi":15.6,"rate":11.89,"rpct":83.96,"lpc":3921,"ng":0.99},{"n":"Milford","p":30640,"ipc":40990,"epc":184322,"bill":6735,"bpi":16.4,"rate":12.8,"rpct":71.02,"lpc":2753,"ng":1.71},{"n":"Millbury","p":14173,"ipc":45239,"epc":194882,"bill":6540,"bpi":14.5,"rate":13.39,"rpct":82.6,"lpc":2661,"ng":2.05},{"n":"Millis","p":9338,"ipc":61956,"epc":238817,"bill":10230,"bpi":16.5,"rate":16.4,"rpct":92.41,"lpc":3748,"ng":2.73},{"n":"Millville","p":3187,"ipc":41356,"epc":149419,"bill":5762,"bpi":13.9,"rate":13.19,"rpct":93.35,"lpc":1888,"ng":0.44},{"n":"Milton","p":28811,"ipc":107276,"epc":323553,"bill":12769,"bpi":11.9,"rate":11.09,"rpct":93.48,"lpc":3538,"ng":1.27},{"n":"Monroe","p":115,"ipc":6348,"epc":296420,"bill":1859,"bpi":29.3,"rate":8.99,"rpct":28.38,"lpc":4903,"ng":0.24},{"n":"Monson","p":8164,"ipc":38786,"epc":143024,"bill":5265,"bpi":13.6,"rate":14.87,"rpct":91.85,"lpc":2137,"ng":0.75},{"n":"Montague","p":8437,"ipc":29366,"epc":151724,"bill":4928,"bpi":16.8,"rate":15.21,"rpct":58.85,"lpc":2664,"ng":0.99},{"n":"Monterey","p":1085,"ipc":52418,"epc":664113,"bill":5815,"bpi":11.1,"rate":6.44,"rpct":96.29,"lpc":4287,"ng":2.63},{"n":"Montgomery","p":837,"ipc":40480,"epc":189789,"bill":4822,"bpi":11.9,"rate":11.34,"rpct":93.77,"lpc":2248,"ng":0.83},{"n":"Mount Washington","p":157,"ipc":71739,"epc":769334,"bill":3720,"bpi":5.2,"rate":6.08,"rpct":96.97,"lpc":4691,"ng":3.03},{"n":"Nahant","p":3338,"ipc":74827,"epc":438840,"bill":9654,"bpi":12.9,"rate":9.15,"rpct":96.21,"lpc":3874,"ng":0.58},{"n":"Nantucket","p":14670,"ipc":90622,"epc":2774410,"bill":9904,"bpi":10.9,"rate":3.28,"rpct":88.75,"lpc":8669,"ng":1.76},{"n":"Natick","p":37316,"ipc":77821,"epc":338770,"bill":11413,"bpi":14.7,"rate":11.96,"rpct":82.94,"lpc":3899,"ng":1.16},{"n":"Needham","p":32931,"ipc":139002,"epc":433511,"bill":16690,"bpi":12.0,"rate":10.6,"rpct":77.13,"lpc":5843,"ng":3.04},{"n":"New Ashford","p":249,"ipc":30799,"epc":238126,"bill":2795,"bpi":9.1,"rate":5.66,"rpct":86.35,"lpc":1478,"ng":1.43},{"n":"New Bedford","p":101318,"ipc":23310,"epc":109855,"bill":4653,"bpi":20.0,"rate":11.31,"rpct":71.53,"lpc":1532,"ng":2.34},{"n":"New Braintree","p":1010,"ipc":49500,"epc":178788,"bill":5884,"bpi":11.9,"rate":14.86,"rpct":90.77,"lpc":2601,"ng":1.56},{"n":"New Marlborough","p":1503,"ipc":45527,"epc":548280,"bill":5050,"bpi":11.1,"rate":6.94,"rpct":95.24,"lpc":3947,"ng":1.24},{"n":"New Salem","p":1023,"ipc":31610,"epc":173523,"bill":4951,"bpi":15.7,"rate":13.58,"rpct":90.97,"lpc":2561,"ng":0.58},{"n":"Newbury","p":6880,"ipc":85166,"epc":406831,"bill":7201,"bpi":8.5,"rate":7.45,"rpct":95.74,"lpc":3003,"ng":0.97},{"n":"Newburyport","p":19163,"ipc":79681,"epc":386683,"bill":10249,"bpi":12.9,"rate":9.58,"rpct":90.09,"lpc":3718,"ng":1.05},{"n":"Newton","p":90700,"ipc":167243,"epc":491284,"bill":17077,"bpi":10.2,"rate":9.8,"rpct":85.88,"lpc":4862,"ng":1.35},{"n":"Norfolk","p":11962,"ipc":73622,"epc":238099,"bill":11718,"bpi":15.9,"rate":15.97,"rpct":93.27,"lpc":3626,"ng":1.33},{"n":"North Adams","p":12492,"ipc":22124,"epc":83513,"bill":3894,"bpi":17.6,"rate":16.71,"rpct":64.57,"lpc":1797,"ng":1.92},{"n":"North Andover","p":32135,"ipc":69633,"epc":269027,"bill":9531,"bpi":13.7,"rate":11.26,"rpct":79.1,"lpc":3092,"ng":5.33},{"n":"North Attleborough","p":31210,"ipc":50966,"epc":194982,"bill":6931,"bpi":13.6,"rate":11.79,"rpct":82.0,"lpc":2310,"ng":0.59},{"n":"North Brookfield","p":4797,"ipc":36364,"epc":140722,"bill":4767,"bpi":13.1,"rate":14.17,"rpct":87.84,"lpc":1954,"ng":1.06},{"n":"North Reading","p":16379,"ipc":82388,"epc":305464,"bill":11495,"bpi":14.0,"rate":13.06,"rpct":88.43,"lpc":3959,"ng":2.43},{"n":"Northampton","p":31315,"ipc":44647,"epc":171092,"bill":7801,"bpi":17.5,"rate":13.93,"rpct":83.77,"lpc":2504,"ng":1.27},{"n":"Northborough","p":15867,"ipc":75270,"epc":286197,"bill":10461,"bpi":13.9,"rate":14.25,"rpct":72.97,"lpc":4057,"ng":0.81},{"n":"Northbridge","p":16719,"ipc":46854,"epc":165382,"bill":5922,"bpi":12.6,"rate":11.79,"rpct":87.95,"lpc":1967,"ng":0.98},{"n":"Northfield","p":2880,"ipc":38501,"epc":239578,"bill":4537,"bpi":11.8,"rate":13.84,"rpct":60.72,"lpc":3308,"ng":1.34},{"n":"Norton","p":19392,"ipc":47933,"epc":202329,"bill":7367,"bpi":15.4,"rate":12.97,"rpct":79.21,"lpc":2668,"ng":3.1},{"n":"Norwell","p":11477,"ipc":119269,"epc":373505,"bill":13675,"bpi":11.5,"rate":13.07,"rpct":88.24,"lpc":4830,"ng":0.64},{"n":"Norwood","p":31764,"ipc":58355,"epc":259552,"bill":7065,"bpi":12.1,"rate":10.52,"rpct":57.51,"lpc":3393,"ng":1.0},{"n":"Oak Bluffs","p":5407,"ipc":34583,"epc":1190132,"bill":6996,"bpi":20.2,"rate":5.05,"rpct":94.67,"lpc":5695,"ng":0.69},{"n":"Oakham","p":1914,"ipc":45354,"epc":176910,"bill":4888,"bpi":10.8,"rate":11.55,"rpct":92.96,"lpc":1981,"ng":0.43},{"n":"Orange","p":7583,"ipc":26055,"epc":115584,"bill":4910,"bpi":18.8,"rate":16.45,"rpct":82.62,"lpc":2013,"ng":0.92},{"n":"Orleans","p":6485,"ipc":69762,"epc":1036342,"bill":8969,"bpi":12.9,"rate":6.24,"rpct":93.51,"lpc":6478,"ng":0.92},{"n":"Otis","p":1619,"ipc":49442,"epc":545243,"bill":3365,"bpi":6.8,"rate":6.46,"rpct":94.15,"lpc":3761,"ng":0.56},{"n":"Oxford","p":13503,"ipc":39486,"epc":167597,"bill":5192,"bpi":13.1,"rate":12.67,"rpct":81.15,"lpc":2188,"ng":0.92},{"n":"Palmer","p":12388,"ipc":31465,"epc":113999,"bill":5014,"bpi":15.9,"rate":16.48,"rpct":85.51,"lpc":1959,"ng":2.44},{"n":"Paxton","p":5043,"ipc":49307,"epc":166101,"bill":7989,"bpi":16.2,"rate":14.74,"rpct":96.59,"lpc":2523,"ng":0.6},{"n":"Peabody","p":55418,"ipc":41212,"epc":216744,"bill":6411,"bpi":15.6,"rate":9.26,"rpct":71.16,"lpc":2355,"ng":0.85},{"n":"Pelham","p":1343,"ipc":46113,"epc":197210,"bill":9213,"bpi":20.0,"rate":16.97,"rpct":92.79,"lpc":3560,"ng":0.76},{"n":"Pembroke","p":18428,"ipc":56690,"epc":235707,"bill":7521,"bpi":13.3,"rate":12.02,"rpct":88.67,"lpc":2783,"ng":0.87},{"n":"Pepperell","p":11877,"ipc":51009,"epc":178034,"bill":7578,"bpi":14.9,"rate":14.63,"rpct":94.85,"lpc":2574,"ng":0.94},{"n":"Peru","p":798,"ipc":26960,"epc":167137,"bill":4689,"bpi":17.4,"rate":15.95,"rpct":86.3,"lpc":2708,"ng":2.7},{"n":"Petersham","p":1246,"ipc":46437,"epc":204547,"bill":5707,"bpi":12.3,"rate":14.49,"rpct":89.51,"lpc":2925,"ng":1.49},{"n":"Phillipston","p":1759,"ipc":44156,"epc":201565,"bill":4724,"bpi":10.7,"rate":11.27,"rpct":94.86,"lpc":2423,"ng":1.58},{"n":"Pittsfield","p":43121,"ipc":33558,"epc":120398,"bill":5518,"bpi":16.4,"rate":17.94,"rpct":67.21,"lpc":2651,"ng":1.64},{"n":"Plainfield","p":649,"ipc":30320,"epc":195198,"bill":4801,"bpi":15.8,"rate":18.48,"rpct":65.68,"lpc":4261,"ng":9.62},{"n":"Plainville","p":10067,"ipc":51750,"epc":242275,"bill":6958,"bpi":13.4,"rate":11.56,"rpct":58.74,"lpc":3218,"ng":1.52},{"n":"Plymouth","p":66663,"ipc":49272,"epc":273527,"bill":7731,"bpi":15.7,"rate":12.69,"rpct":85.92,"lpc":3461,"ng":1.74},{"n":"Plympton","p":2964,"ipc":53567,"epc":265185,"bill":9007,"bpi":16.8,"rate":15.89,"rpct":75.08,"lpc":4029,"ng":1.07},{"n":"Princeton","p":3597,"ipc":71066,"epc":226144,"bill":8050,"bpi":11.3,"rate":14.53,"rpct":96.73,"lpc":3190,"ng":1.49},{"n":"Provincetown","p":3729,"ipc":90125,"epc":1565857,"bill":11185,"bpi":12.4,"rate":5.6,"rpct":86.26,"lpc":7916,"ng":0.65},{"n":"Quincy","p":103434,"ipc":48421,"epc":235479,"bill":8250,"bpi":17.0,"rate":11.53,"rpct":75.32,"lpc":3019,"ng":2.3},{"n":"Randolph","p":35114,"ipc":34979,"epc":177494,"bill":6328,"bpi":18.1,"rate":11.61,"rpct":80.42,"lpc":2193,"ng":0.99},{"n":"Raynham","p":15861,"ipc":49678,"epc":213099,"bill":7283,"bpi":14.7,"rate":12.1,"rpct":74.32,"lpc":2771,"ng":0.82},{"n":"Reading","p":26041,"ipc":81402,"epc":306533,"bill":10300,"bpi":12.7,"rate":11.39,"rpct":93.01,"lpc":3433,"ng":0.77},{"n":"Rehoboth","p":13537,"ipc":57761,"epc":217627,"bill":6623,"bpi":11.5,"rate":11.15,"rpct":91.01,"lpc":2462,"ng":2.71},{"n":"Revere","p":60702,"ipc":33133,"epc":198019,"bill":5574,"bpi":16.8,"rate":9.07,"rpct":75.74,"lpc":1981,"ng":3.11},{"n":"Richmond","p":1405,"ipc":60195,"epc":469146,"bill":6630,"bpi":11.0,"rate":9.88,"rpct":93.75,"lpc":4584,"ng":0.76},{"n":"Rochester","p":5936,"ipc":55216,"epc":267863,"bill":6745,"bpi":12.2,"rate":10.82,"rpct":86.08,"lpc":2877,"ng":2.39},{"n":"Rockland","p":17708,"ipc":39777,"epc":195738,"bill":7603,"bpi":19.1,"rate":13.67,"rpct":80.42,"lpc":2659,"ng":0.72},{"n":"Rockport","p":7091,"ipc":62753,"epc":487008,"bill":8548,"bpi":13.6,"rate":8.76,"rpct":95.21,"lpc":4124,"ng":0.23},{"n":"Rowe","p":419,"ipc":34659,"epc":1236307,"bill":1661,"bpi":4.8,"rate":5.14,"rpct":7.0,"lpc":12198,"ng":8.9},{"n":"Rowley","p":6334,"ipc":62574,"epc":287466,"bill":9235,"bpi":14.8,"rate":11.77,"rpct":87.3,"lpc":3304,"ng":0.81},{"n":"Royalston","p":1291,"ipc":30277,"epc":190316,"bill":3507,"bpi":11.6,"rate":9.62,"rpct":92.48,"lpc":1750,"ng":2.13},{"n":"Russell","p":1640,"ipc":40382,"epc":146560,"bill":5854,"bpi":14.5,"rate":18.3,"rpct":85.5,"lpc":2574,"ng":0.39},{"n":"Rutland","p":9637,"ipc":46916,"epc":161009,"bill":6630,"bpi":14.1,"rate":14.24,"rpct":94.95,"lpc":2330,"ng":2.23},{"n":"Salem","p":45677,"ipc":41885,"epc":205239,"bill":7285,"bpi":17.4,"rate":11.34,"rpct":72.36,"lpc":2673,"ng":1.0},{"n":"Salisbury","p":9415,"ipc":42733,"epc":290038,"bill":6126,"bpi":14.3,"rate":10.08,"rpct":85.24,"lpc":2937,"ng":1.33},{"n":"Sandisfield","p":984,"ipc":25908,"epc":350842,"bill":3489,"bpi":13.5,"rate":9.02,"rpct":80.81,"lpc":3459,"ng":0.44},{"n":"Sandwich","p":20507,"ipc":56002,"epc":369618,"bill":7818,"bpi":14.0,"rate":10.57,"rpct":89.15,"lpc":3840,"ng":0.9},{"n":"Saugus","p":29029,"ipc":46142,"epc":256714,"bill":7126,"bpi":15.4,"rate":10.68,"rpct":71.01,"lpc":3100,"ng":0.64},{"n":"Savoy","p":655,"ipc":35295,"epc":152080,"bill":3995,"bpi":11.3,"rate":16.62,"rpct":92.75,"lpc":2348,"ng":1.01},{"n":"Scituate","p":19598,"ipc":92061,"epc":424255,"bill":10191,"bpi":11.1,"rate":9.99,"rpct":96.43,"lpc":4198,"ng":1.0},{"n":"Seekonk","p":15912,"ipc":48467,"epc":222418,"bill":6852,"bpi":14.1,"rate":12.35,"rpct":66.37,"lpc":3391,"ng":1.27},{"n":"Sharon","p":18762,"ipc":85745,"epc":282934,"bill":14353,"bpi":16.7,"rate":17.48,"rpct":92.85,"lpc":4701,"ng":0.58},{"n":"Sheffield","p":3324,"ipc":43068,"epc":287431,"bill":5809,"bpi":13.5,"rate":12.11,"rpct":86.36,"lpc":3261,"ng":0.9},{"n":"Shelburne","p":1874,"ipc":28277,"epc":189813,"bill":5146,"bpi":18.2,"rate":12.84,"rpct":73.7,"lpc":2554,"ng":2.88},{"n":"Sherborn","p":4485,"ipc":352250,"epc":421076,"bill":20018,"bpi":5.7,"rate":16.58,"rpct":95.23,"lpc":6949,"ng":0.78},{"n":"Shirley","p":7042,"ipc":40056,"epc":153924,"bill":6490,"bpi":16.2,"rate":12.97,"rpct":90.06,"lpc":1985,"ng":0.66},{"n":"Shrewsbury","p":39620,"ipc":73712,"epc":231110,"bill":8753,"bpi":11.9,"rate":12.04,"rpct":89.15,"lpc":2824,"ng":1.24},{"n":"Shutesbury","p":1717,"ipc":36218,"epc":189539,"bill":6763,"bpi":18.7,"rate":15.83,"rpct":93.51,"lpc":3313,"ng":2.13},{"n":"Somerset","p":18375,"ipc":40386,"epc":192236,"bill":6278,"bpi":15.5,"rate":13.3,"rpct":74.86,"lpc":2909,"ng":1.04},{"n":"Somerville","p":82149,"ipc":61870,"epc":325821,"bill":9376,"bpi":15.2,"rate":10.91,"rpct":66.66,"lpc":3225,"ng":5.34},{"n":"South Hadley","p":18031,"ipc":38042,"epc":133132,"bill":5639,"bpi":14.8,"rate":13.98,"rpct":91.69,"lpc":1898,"ng":0.57},{"n":"Southampton","p":6181,"ipc":50794,"epc":182880,"bill":6413,"bpi":12.6,"rate":14.17,"rpct":93.45,"lpc":2500,"ng":1.34},{"n":"Southborough","p":10569,"ipc":127127,"epc":359839,"bill":14230,"bpi":11.2,"rate":13.81,"rpct":84.11,"lpc":4950,"ng":1.17},{"n":"Southbridge","p":18106,"ipc":25930,"epc":97550,"bill":5070,"bpi":19.6,"rate":14.66,"rpct":82.21,"lpc":1513,"ng":0.93},{"n":"Southwick","p":9277,"ipc":47950,"epc":170009,"bill":6187,"bpi":12.9,"rate":15.57,"rpct":88.79,"lpc":2668,"ng":0.6},{"n":"Spencer","p":12090,"ipc":36226,"epc":145315,"bill":4671,"bpi":12.9,"rate":11.74,"rpct":88.94,"lpc":1717,"ng":0.88},{"n":"Springfield","p":154888,"ipc":20404,"epc":88691,"bill":4254,"bpi":20.8,"rate":15.68,"rpct":60.18,"lpc":1757,"ng":2.32},{"n":"Sterling","p":8310,"ipc":58549,"epc":221943,"bill":7535,"bpi":12.9,"rate":12.88,"rpct":88.96,"lpc":2839,"ng":0.96},{"n":"Stockbridge","p":1986,"ipc":52892,"epc":660022,"bill":6284,"bpi":11.9,"rate":7.09,"rpct":90.77,"lpc":4830,"ng":0.81},{"n":"Stoneham","p":24550,"ipc":58058,"epc":250782,"bill":8059,"bpi":13.9,"rate":10.23,"rpct":83.64,"lpc":2760,"ng":1.1},{"n":"Stoughton","p":29457,"ipc":42818,"epc":213313,"bill":7157,"bpi":16.7,"rate":12.38,"rpct":70.99,"lpc":2967,"ng":1.95},{"n":"Stow","p":7335,"ipc":86756,"epc":286885,"bill":14113,"bpi":16.3,"rate":17.42,"rpct":94.55,"lpc":4743,"ng":1.09},{"n":"Sturbridge","p":10097,"ipc":55434,"epc":193868,"bill":7870,"bpi":14.2,"rate":15.93,"rpct":84.89,"lpc":3225,"ng":1.09},{"n":"Sudbury","p":19805,"ipc":125429,"epc":383932,"bill":16625,"bpi":13.3,"rate":14.64,"rpct":90.37,"lpc":5536,"ng":0.76},{"n":"Sunderland","p":3628,"ipc":36047,"epc":178850,"bill":5947,"bpi":16.5,"rate":13.02,"rpct":90.11,"lpc":2100,"ng":0.66},{"n":"Sutton","p":9599,"ipc":68076,"epc":251764,"bill":7247,"bpi":10.6,"rate":12.02,"rpct":85.56,"lpc":3122,"ng":1.63},{"n":"Swampscott","p":15658,"ipc":76071,"epc":316902,"bill":11478,"bpi":15.1,"rate":11.47,"rpct":88.61,"lpc":3729,"ng":0.69},{"n":"Swansea","p":17537,"ipc":42390,"epc":205437,"bill":5623,"bpi":13.3,"rate":10.98,"rpct":82.56,"lpc":2408,"ng":1.2},{"n":"Taunton","p":61936,"ipc":32523,"epc":155407,"bill":5540,"bpi":17.0,"rate":10.94,"rpct":63.93,"lpc":2215,"ng":1.92},{"n":"Templeton","p":8387,"ipc":35318,"epc":137999,"bill":4490,"bpi":12.7,"rate":12.12,"rpct":92.06,"lpc":1680,"ng":1.62},{"n":"Tewksbury","p":31796,"ipc":52132,"epc":242202,"bill":8608,"bpi":16.5,"rate":13.22,"rpct":74.24,"lpc":3588,"ng":1.92},{"n":"Tisbury","p":4927,"ipc":31588,"epc":1085947,"bill":12513,"bpi":39.6,"rate":7.57,"rpct":91.33,"lpc":7374,"ng":0.89},{"n":"Tolland","p":474,"ipc":34310,"epc":551902,"bill":3196,"bpi":9.3,"rate":7.47,"rpct":85.98,"lpc":4205,"ng":1.45},{"n":"Topsfield","p":6620,"ipc":95770,"epc":317918,"bill":14483,"bpi":15.1,"rate":14.99,"rpct":93.32,"lpc":4659,"ng":0.72},{"n":"Townsend","p":9220,"ipc":42958,"epc":162584,"bill":6459,"bpi":15.0,"rate":14.52,"rpct":92.59,"lpc":2351,"ng":0.78},{"n":"Truro","p":2484,"ipc":60587,"epc":1634638,"bill":8064,"bpi":13.3,"rate":6.18,"rpct":95.48,"lpc":8836,"ng":0.92},{"n":"Tyngsborough","p":12779,"ipc":52345,"epc":224466,"bill":8340,"bpi":15.9,"rate":12.34,"rpct":88.41,"lpc":2693,"ng":1.33},{"n":"Tyringham","p":419,"ipc":27933,"epc":593629,"bill":4547,"bpi":16.3,"rate":6.12,"rpct":92.36,"lpc":3681,"ng":1.34},{"n":"Upton","p":8475,"ipc":67417,"epc":230950,"bill":8759,"bpi":13.0,"rate":13.15,"rpct":95.15,"lpc":3007,"ng":0.75},{"n":"Uxbridge","p":14703,"ipc":47913,"epc":224284,"bill":6814,"bpi":14.2,"rate":13.11,"rpct":75.1,"lpc":2920,"ng":2.56},{"n":"Wakefield","p":29216,"ipc":60266,"epc":266323,"bill":9628,"bpi":16.0,"rate":11.35,"rpct":80.69,"lpc":3253,"ng":1.16},{"n":"Wales","p":1828,"ipc":30802,"epc":149819,"bill":4588,"bpi":14.9,"rate":14.42,"rpct":92.59,"lpc":2159,"ng":0.93},{"n":"Walpole","p":26391,"ipc":73347,"epc":280098,"bill":10346,"bpi":14.1,"rate":12.83,"rpct":85.38,"lpc":3616,"ng":0.81},{"n":"Waltham","p":65849,"ipc":49410,"epc":309997,"bill":5189,"bpi":10.5,"rate":9.82,"rpct":38.67,"lpc":3706,"ng":2.89},{"n":"Ware","p":10142,"ipc":28885,"epc":112242,"bill":5231,"bpi":18.1,"rate":15.06,"rpct":85.44,"lpc":1778,"ng":0.43},{"n":"Wareham","p":23526,"ipc":32017,"epc":253043,"bill":4087,"bpi":12.8,"rate":8.55,"rpct":85.0,"lpc":2227,"ng":1.17},{"n":"Warren","p":5086,"ipc":24434,"epc":121045,"bill":4580,"bpi":18.7,"rate":14.81,"rpct":86.97,"lpc":1683,"ng":1.04},{"n":"Warwick","p":774,"ipc":26530,"epc":163835,"bill":4795,"bpi":18.1,"rate":17.78,"rpct":93.71,"lpc":2752,"ng":0.78},{"n":"Washington","p":497,"ipc":40278,"epc":232365,"bill":5204,"bpi":12.9,"rate":14.16,"rpct":94.41,"lpc":3450,"ng":0.68},{"n":"Watertown","p":35985,"ipc":63164,"epc":365242,"bill":8094,"bpi":12.8,"rate":11.68,"rpct":50.02,"lpc":4684,"ng":3.73},{"n":"Wayland","p":14054,"ipc":156292,"epc":410061,"bill":18259,"bpi":11.7,"rate":15.63,"rpct":95.8,"lpc":6354,"ng":0.62},{"n":"Webster","p":17817,"ipc":34788,"epc":153644,"bill":5474,"bpi":15.7,"rate":11.88,"rpct":85.6,"lpc":1812,"ng":1.38},{"n":"Wellesley","p":31242,"ipc":212430,"epc":576575,"bill":20551,"bpi":9.7,"rate":10.28,"rpct":89.42,"lpc":5769,"ng":1.47},{"n":"Wellfleet","p":3645,"ipc":58327,"epc":1171126,"bill":7384,"bpi":12.7,"rate":7.11,"rpct":96.27,"lpc":7642,"ng":0.28},{"n":"Wendell","p":916,"ipc":24472,"epc":149644,"bill":5565,"bpi":22.7,"rate":20.95,"rpct":82.55,"lpc":3420,"ng":0.4},{"n":"Wenham","p":4945,"ipc":97669,"epc":280553,"bill":16164,"bpi":16.5,"rate":15.54,"rpct":97.62,"lpc":4326,"ng":1.22},{"n":"West Boylston","p":7938,"ipc":46024,"epc":198139,"bill":7621,"bpi":16.6,"rate":13.87,"rpct":83.47,"lpc":2790,"ng":0.44},{"n":"West Bridgewater","p":7771,"ipc":54184,"epc":231985,"bill":7433,"bpi":13.7,"rate":13.67,"rpct":57.79,"lpc":4043,"ng":4.82},{"n":"West Brookfield","p":3917,"ipc":44918,"epc":165392,"bill":4446,"bpi":9.9,"rate":10.78,"rpct":89.84,"lpc":1817,"ng":0.83},{"n":"West Newbury","p":4680,"ipc":85332,"epc":331018,"bill":9893,"bpi":11.6,"rate":10.8,"rpct":97.45,"lpc":3528,"ng":0.73},{"n":"West Springfield","p":29028,"ipc":37351,"epc":137094,"bill":5041,"bpi":13.5,"rate":14.87,"rpct":54.81,"lpc":2602,"ng":2.27},{"n":"West Stockbridge","p":1323,"ipc":62534,"epc":495994,"bill":6943,"bpi":11.1,"rate":9.62,"rpct":93.61,"lpc":4594,"ng":0.74},{"n":"West Tisbury","p":3637,"ipc":40720,"epc":1361020,"bill":8862,"bpi":21.8,"rate":4.53,"rpct":95.69,"lpc":5870,"ng":1.04},{"n":"Westborough","p":22643,"ipc":67279,"epc":282781,"bill":12900,"bpi":19.2,"rate":16.29,"rpct":70.35,"lpc":4456,"ng":3.08},{"n":"Westfield","p":40403,"ipc":34787,"epc":124569,"bill":5787,"bpi":16.6,"rate":15.18,"rpct":70.53,"lpc":2188,"ng":1.11},{"n":"Westford","p":25024,"ipc":82930,"epc":285743,"bill":11171,"bpi":13.5,"rate":13.47,"rpct":90.36,"lpc":3825,"ng":0.71},{"n":"Westhampton","p":1629,"ipc":55175,"epc":178486,"bill":7149,"bpi":13.0,"rate":20.79,"rpct":94.08,"lpc":3532,"ng":1.56},{"n":"Westminster","p":8509,"ipc":50728,"epc":206330,"bill":5992,"bpi":11.8,"rate":12.3,"rpct":89.08,"lpc":2464,"ng":0.81},{"n":"Weston","p":11827,"ipc":340262,"epc":755621,"bill":26313,"bpi":7.7,"rate":11.1,"rpct":95.87,"lpc":8161,"ng":1.32},{"n":"Westport","p":16705,"ipc":54579,"epc":312127,"bill":4931,"bpi":9.0,"rate":7.45,"rpct":92.13,"lpc":2370,"ng":1.86},{"n":"Westwood","p":16533,"ipc":127497,"epc":440536,"bill":16097,"bpi":12.6,"rate":12.8,"rpct":78.21,"lpc":6043,"ng":0.93},{"n":"Weymouth","p":60159,"ipc":45212,"epc":222981,"bill":6208,"bpi":13.7,"rate":10.1,"rpct":80.89,"lpc":2356,"ng":1.56},{"n":"Whately","p":1626,"ipc":31550,"epc":231314,"bill":5850,"bpi":18.5,"rate":13.34,"rpct":77.75,"lpc":3146,"ng":2.47},{"n":"Whitman","p":15459,"ipc":42535,"epc":173768,"bill":6861,"bpi":16.1,"rate":13.12,"rpct":89.63,"lpc":2258,"ng":0.5},{"n":"Wilbraham","p":14663,"ipc":54903,"epc":175052,"bill":8186,"bpi":14.9,"rate":17.88,"rpct":89.16,"lpc":3228,"ng":1.16},{"n":"Williamsburg","p":2475,"ipc":34490,"epc":172751,"bill":6968,"bpi":20.2,"rate":18.97,"rpct":89.33,"lpc":3108,"ng":0.57},{"n":"Williamstown","p":9189,"ipc":35464,"epc":155127,"bill":7996,"bpi":22.5,"rate":13.8,"rpct":89.94,"lpc":2243,"ng":1.29},{"n":"Wilmington","p":23802,"ipc":60329,"epc":317890,"bill":8661,"bpi":14.4,"rate":11.45,"rpct":56.05,"lpc":4672,"ng":4.14},{"n":"Winchendon","p":10587,"ipc":28782,"epc":120359,"bill":4720,"bpi":16.4,"rate":11.75,"rpct":91.03,"lpc":1413,"ng":0.89},{"n":"Winchester","p":23953,"ipc":143928,"epc":485718,"bill":18272,"bpi":12.7,"rate":11.09,"rpct":95.87,"lpc":5251,"ng":0.84},{"n":"Windsor","p":817,"ipc":40977,"epc":208776,"bill":2846,"bpi":6.9,"rate":11.34,"rpct":85.71,"lpc":2346,"ng":1.77},{"n":"Winthrop","p":18739,"ipc":47434,"epc":206705,"bill":8293,"bpi":17.5,"rate":10.32,"rpct":93.91,"lpc":2099,"ng":1.04},{"n":"Woburn","p":43895,"ipc":52300,"epc":283560,"bill":6755,"bpi":12.9,"rate":8.54,"rpct":53.94,"lpc":3168,"ng":3.94},{"n":"Worcester","p":211286,"ipc":26358,"epc":113653,"bill":5446,"bpi":20.7,"rate":13.19,"rpct":63.36,"lpc":1893,"ng":2.43},{"n":"Worthington","p":1181,"ipc":50738,"epc":231612,"bill":5327,"bpi":10.5,"rate":13.79,"rpct":92.27,"lpc":3170,"ng":1.57},{"n":"Wrentham","p":12516,"ipc":73106,"epc":280753,"bill":8307,"bpi":11.4,"rate":11.59,"rpct":76.58,"lpc":3532,"ng":1.3},{"n":"Yarmouth","p":25208,"ipc":43768,"epc":430964,"bill":4949,"bpi":11.3,"rate":7.08,"rpct":92.72,"lpc":3103,"ng":0.43}];
 
-  // --- Defaults ---
   var DEFAULTS = { popMin: 5000, popMax: 100000, incMin: '', incMax: '', eqvMin: '', eqvMax: 1000000, billMin: '', billMax: '' };
   var SIMILAR = { popMin: 10000, popMax: 35000, incMin: 60000, incMax: 175000, eqvMin: 250000, eqvMax: 700000, billMin: '', billMax: '' };
+  var COL_LABELS = { n:'name', p:'population', ipc:'income/capita', bill:'avg tax bill', bpi:'bill/income', rate:'tax rate', rpct:'residential share', lpc:'levy/capita', ng:'new growth', epc:'property value/capita' };
+  var NCOLS = 10;
 
-  // --- DOM refs ---
   var inputs = {
-    popMin: document.getElementById('f-pop-min'),
-    popMax: document.getElementById('f-pop-max'),
-    incMin: document.getElementById('f-inc-min'),
-    incMax: document.getElementById('f-inc-max'),
-    eqvMin: document.getElementById('f-eqv-min'),
-    eqvMax: document.getElementById('f-eqv-max'),
-    billMin: document.getElementById('f-bill-min'),
-    billMax: document.getElementById('f-bill-max')
+    popMin: document.getElementById('f-pop-min'), popMax: document.getElementById('f-pop-max'),
+    incMin: document.getElementById('f-inc-min'), incMax: document.getElementById('f-inc-max'),
+    eqvMin: document.getElementById('f-eqv-min'), eqvMax: document.getElementById('f-eqv-max'),
+    billMin: document.getElementById('f-bill-min'), billMax: document.getElementById('f-bill-max')
   };
   var tbody = document.getElementById('explorer-body');
   var countEl = document.getElementById('filter-count');
@@ -261,47 +246,31 @@ scripts: [citations]
   var resetBtn = document.getElementById('reset-filters');
   var headers = document.querySelectorAll('#explorer-table th[data-col]');
 
-  var COL_LABELS = { n: 'name', p: 'population', ipc: 'DOR income/capita', bill: 'avg tax bill', bpi: 'bill/income ratio', epc: 'property value/capita' };
+  var sortCol = 'bpi', sortAsc = true;
 
-  // --- Sort state ---
-  var sortCol = 'bpi';
-  var sortAsc = true;
+  function fN(n) { return n.toLocaleString('en-US'); }
+  function f$(n) { return '$' + n.toLocaleString('en-US'); }
+  function fP(n) { return n.toFixed(1) + '%'; }
+  function fP2(n) { return n.toFixed(2) + '%'; }
 
-  // --- Format helpers ---
-  function fmtNum(n) { return n.toLocaleString('en-US'); }
-  function fmtDollar(n) { return '$' + n.toLocaleString('en-US'); }
-  function fmtPct(n) { return n.toFixed(1) + '%'; }
-
-  // --- Input parsing: strip commas, $, %, whitespace ---
   function parseInput(el) {
     var raw = el.value.replace(/[$,%\s]/g, '').replace(/,/g, '');
     if (raw === '') return null;
     var v = parseFloat(raw);
     return isNaN(v) ? null : v;
   }
-
   function setInput(el, val) {
-    if (val === '' || val === null || val === undefined) {
-      el.value = '';
-    } else {
-      el.value = fmtNum(val);
-    }
+    el.value = (val === '' || val === null || val === undefined) ? '' : fN(val);
   }
 
-  // --- Filtering ---
   function getFilters() {
     return {
-      popMin: parseInput(inputs.popMin),
-      popMax: parseInput(inputs.popMax),
-      incMin: parseInput(inputs.incMin),
-      incMax: parseInput(inputs.incMax),
-      eqvMin: parseInput(inputs.eqvMin),
-      eqvMax: parseInput(inputs.eqvMax),
-      billMin: parseInput(inputs.billMin),
-      billMax: parseInput(inputs.billMax)
+      popMin: parseInput(inputs.popMin), popMax: parseInput(inputs.popMax),
+      incMin: parseInput(inputs.incMin), incMax: parseInput(inputs.incMax),
+      eqvMin: parseInput(inputs.eqvMin), eqvMax: parseInput(inputs.eqvMax),
+      billMin: parseInput(inputs.billMin), billMax: parseInput(inputs.billMax)
     };
   }
-
   function passes(t, f) {
     if (f.popMin !== null && t.p < f.popMin) return false;
     if (f.popMax !== null && t.p > f.popMax) return false;
@@ -313,19 +282,12 @@ scripts: [citations]
     if (f.billMax !== null && t.bill > f.billMax) return false;
     return true;
   }
-
-  // --- Sorting ---
   function compare(a, b) {
     var va = a[sortCol], vb = b[sortCol];
-    if (typeof va === 'string') {
-      va = va.toLowerCase(); vb = vb.toLowerCase();
-    }
-    if (va < vb) return sortAsc ? -1 : 1;
-    if (va > vb) return sortAsc ? 1 : -1;
-    return 0;
+    if (typeof va === 'string') { va = va.toLowerCase(); vb = vb.toLowerCase(); }
+    return va < vb ? (sortAsc ? -1 : 1) : va > vb ? (sortAsc ? 1 : -1) : 0;
   }
 
-  // --- Render ---
   function render() {
     var f = getFilters();
     var filtered = DATA.filter(function (t) { return passes(t, f); });
@@ -333,123 +295,89 @@ scripts: [citations]
 
     var mhd = DATA.filter(function (t) { return t.n === 'Marblehead'; })[0];
     var mhdInList = filtered.some(function (t) { return t.n === 'Marblehead'; });
-
-    // Find Marblehead's rank in the filtered+sorted list
     var mhdRank = -1;
     for (var r = 0; r < filtered.length; r++) {
       if (filtered[r].n === 'Marblehead') { mhdRank = r + 1; break; }
     }
 
-    var html = '';
-    // Pinned reference row (dimmed)
-    html += renderRow(mhd, 'ref', '');
-    html += '<tr class="mh-divider"><td colspan="7"></td></tr>';
-
-    // Full sorted list (Marblehead appears in its natural position)
+    var html = renderRow(mhd, 'ref', '');
+    html += '<tr class="mh-divider"><td colspan="' + NCOLS + '"></td></tr>';
     for (var i = 0; i < filtered.length; i++) {
-      var isMh = filtered[i].n === 'Marblehead';
-      html += renderRow(filtered[i], isMh ? 'mh' : '', i + 1);
+      html += renderRow(filtered[i], filtered[i].n === 'Marblehead' ? 'mh' : '', i + 1);
     }
-
-    if (filtered.length === 0) {
-      html += '<tr><td colspan="7" class="no-results">No communities match these filters. Try widening the ranges.</td></tr>';
+    if (!filtered.length) {
+      html += '<tr><td colspan="' + NCOLS + '" class="no-results">No communities match. Try widening the ranges.</td></tr>';
     }
 
     tbody.innerHTML = html;
     countEl.textContent = 'Showing ' + filtered.length + ' of 351';
 
-    // Rank summary
     if (mhdInList && mhdRank > 0) {
       var dir = sortAsc ? 'lowest' : 'highest';
       if (sortCol === 'n') dir = '';
+      if (sortCol === 'rpct' && sortAsc) dir = 'lowest';
       rankEl.innerHTML = 'Marblehead ranks <strong>#' + mhdRank + ' of ' + filtered.length + '</strong>' +
         (dir ? ' by ' + dir + ' ' + COL_LABELS[sortCol] : ' alphabetically');
     } else {
       rankEl.innerHTML = 'Marblehead is outside current filters';
     }
 
-    // Update preset button active state
     var cf = getFilters();
-    var isSimilar = cf.popMin === SIMILAR.popMin && cf.popMax === SIMILAR.popMax &&
-                    cf.incMin === SIMILAR.incMin && cf.incMax === SIMILAR.incMax &&
-                    cf.eqvMin === SIMILAR.eqvMin && cf.eqvMax === SIMILAR.eqvMax;
-    presetBtn.classList.toggle('active', isSimilar);
+    presetBtn.classList.toggle('active',
+      cf.popMin === SIMILAR.popMin && cf.popMax === SIMILAR.popMax &&
+      cf.incMin === SIMILAR.incMin && cf.incMax === SIMILAR.incMax &&
+      cf.eqvMin === SIMILAR.eqvMin && cf.eqvMax === SIMILAR.eqvMax);
   }
 
   function renderRow(t, mode, rank) {
     var cls = mode === 'mh' ? ' class="mh"' : mode === 'ref' ? ' class="mh-ref"' : '';
-    var nameExtra = mode === 'ref' ? '<span class="mh-ref-label">ref</span>' : '';
-    var rankCell = rank ? fmtNum(rank) : '';
+    var extra = mode === 'ref' ? '<span class="mh-ref-label">ref</span>' : '';
     return '<tr' + cls + '>' +
-      '<td>' + t.n + nameExtra + '</td>' +
-      '<td>' + rankCell + '</td>' +
-      '<td>' + fmtNum(t.p) + '</td>' +
-      '<td>' + fmtDollar(t.ipc) + '</td>' +
-      '<td>' + fmtDollar(t.bill) + '</td>' +
-      '<td>' + fmtPct(t.bpi) + '</td>' +
-      '<td>' + fmtDollar(t.epc) + '</td>' +
+      '<td>' + t.n + extra + '</td>' +
+      '<td>' + (rank || '') + '</td>' +
+      '<td>' + fN(t.p) + '</td>' +
+      '<td>' + f$(t.ipc) + '</td>' +
+      '<td>' + f$(t.bill) + '</td>' +
+      '<td>' + fP(t.bpi) + '</td>' +
+      '<td>' + t.rate.toFixed(2) + '</td>' +
+      '<td>' + fP(t.rpct) + '</td>' +
+      '<td>' + f$(t.lpc) + '</td>' +
+      '<td>' + fP2(t.ng) + '</td>' +
       '</tr>';
   }
 
-  // --- Sort header clicks ---
   headers.forEach(function (th) {
     th.addEventListener('click', function () {
       var col = th.getAttribute('data-col');
-      if (sortCol === col) {
-        sortAsc = !sortAsc;
-      } else {
-        sortCol = col;
-        sortAsc = (col === 'n') ? true : true; // ascending for all
-      }
-      // Update header arrows
-      headers.forEach(function (h) {
-        h.classList.remove('sorted');
-        h.querySelector('.sort-arrow').textContent = '';
-      });
+      if (col === 'rank') return;
+      if (sortCol === col) { sortAsc = !sortAsc; }
+      else { sortCol = col; sortAsc = true; }
+      headers.forEach(function (h) { h.classList.remove('sorted'); h.querySelector('.sa').textContent = ''; });
       th.classList.add('sorted');
-      th.querySelector('.sort-arrow').textContent = sortAsc ? '\u25B2' : '\u25BC';
+      th.querySelector('.sa').textContent = sortAsc ? '\u25B2' : '\u25BC';
       render();
     });
   });
 
-  // --- Filter input events ---
   Object.keys(inputs).forEach(function (key) {
     inputs[key].addEventListener('input', function () { render(); });
-    // Format on blur
     inputs[key].addEventListener('blur', function () {
       var v = parseInput(inputs[key]);
-      if (v !== null) { inputs[key].value = fmtNum(v); }
+      if (v !== null) inputs[key].value = fN(v);
     });
   });
 
-  // --- Preset: Similar to Marblehead ---
   presetBtn.addEventListener('click', function () {
     var cf = getFilters();
     var isSimilar = cf.popMin === SIMILAR.popMin && cf.popMax === SIMILAR.popMax &&
-                    cf.incMin === SIMILAR.incMin && cf.incMax === SIMILAR.incMax &&
-                    cf.eqvMin === SIMILAR.eqvMin && cf.eqvMax === SIMILAR.eqvMax;
-    if (isSimilar) {
-      // Toggle off: reset to defaults
-      applyPreset(DEFAULTS);
-    } else {
-      applyPreset(SIMILAR);
-    }
+      cf.incMin === SIMILAR.incMin && cf.incMax === SIMILAR.incMax &&
+      cf.eqvMin === SIMILAR.eqvMin && cf.eqvMax === SIMILAR.eqvMax;
+    applyPreset(isSimilar ? DEFAULTS : SIMILAR);
     render();
   });
+  resetBtn.addEventListener('click', function () { applyPreset(DEFAULTS); render(); });
+  function applyPreset(p) { Object.keys(p).forEach(function (k) { setInput(inputs[k], p[k]); }); }
 
-  // --- Reset ---
-  resetBtn.addEventListener('click', function () {
-    applyPreset(DEFAULTS);
-    render();
-  });
-
-  function applyPreset(preset) {
-    Object.keys(preset).forEach(function (key) {
-      setInput(inputs[key], preset[key]);
-    });
-  }
-
-  // --- Init ---
   render();
 })();
 </script>
