@@ -428,6 +428,11 @@ title: "Deficit Dynamics Model"
     </div>
     <div class="dm-hint" id="dm-cuts-hint">~$100K/yr each (salary + benefits). Shifts the expense line down but does not change its slope.</div>
   </div>
+  <div class="dm-control" style="grid-column: 1 / -1;">
+    <span class="dm-control-label">Spending absorption: <span class="dm-value" id="dm-ratchet-val">5 years</span></span>
+    <input type="range" id="dm-ratchet" min="0" max="10" step="1" value="5">
+    <div class="dm-hint" id="dm-ratchet-hint">How fast override revenue gets allocated to deferred needs. Drag to see the difference.</div>
+  </div>
 </div>
 
 <details class="dm-controls-wrap" open>
@@ -442,11 +447,6 @@ title: "Deficit Dynamics Model"
     <span class="dm-control-label"><span class="dm-slider-label-exp">Expense growth</span>: <span class="dm-value" id="dm-exp-growth-val">4.0%</span></span>
     <input type="range" id="dm-exp-growth" min="0" max="6" step="0.1" value="4.0">
     <div class="dm-hint" id="dm-exp-hint">FY15 to FY24 actual average. No change in trajectory.</div>
-  </div>
-  <div class="dm-control" style="grid-column: 1 / -1;">
-    <span class="dm-control-label">Spending absorption: <span class="dm-value" id="dm-ratchet-val">5 years</span></span>
-    <input type="range" id="dm-ratchet" min="0" max="10" step="1" value="5">
-    <div class="dm-hint" id="dm-ratchet-hint">Override revenue gets allocated to deferred needs over time. At 5 years, spending gradually absorbs the new revenue, then the gap reopens. At 0, the money is never spent (unrealistic). At 1, it is absorbed immediately.</div>
   </div>
   <div class="dm-control">
     <span class="dm-control-label">Healthcare employer share: <span class="dm-value" id="dm-hc-share-val">83%</span></span>
