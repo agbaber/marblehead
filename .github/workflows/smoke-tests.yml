@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  smoke:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
