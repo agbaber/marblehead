@@ -180,6 +180,9 @@ Rationale: internal links help readers explore the site; external links take the
 - No inline `font-family`, `fill`, `stroke` on SVG text/lines (use CSS classes)
 - No data presented without a traceable source
 - No bureaucratic or ACFR-voice prose in site copy; rewrite in plain language
+- No meta-narration ("This page explains...", "This section covers...", "Below
+  you'll find..."). Lead with the claim or finding, not a description of what the
+  page is about to do. If removing the sentence loses nothing, remove it.
 - No undefined municipal-finance acronyms; first use on a page needs `<abbr class="g" title="...">`
 - No bare-text internal references where a hyperlink to the other page belongs
 - No inline external links in the reading flow; use `<sup class="cite">` footnotes via `assets/citations.js`
