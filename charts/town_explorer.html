@@ -61,6 +61,29 @@ scripts: [citations]
     font-variant-numeric: tabular-nums;
   }
 
+  /* Lever context notes */
+  .lever-note {
+    font-size: 10px; color: var(--text-subtle); margin-top: 3px;
+    line-height: 1.4;
+  }
+
+  /* Tier toggle */
+  .tier-bar {
+    display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+    margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--divider);
+  }
+  .tier-label { font-size: 11px; font-weight: 600; color: var(--text-subtle); margin-right: 4px; }
+  .tier-btn {
+    font-size: 11px; font-weight: 500; padding: 4px 10px;
+    border: 1px solid var(--border); border-radius: 14px;
+    background: transparent; color: var(--text-muted); cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .tier-btn:hover { border-color: var(--c-teal); color: var(--c-teal); }
+  .tier-btn.active { background: var(--c-teal); color: #fff; border-color: var(--c-teal); }
+  .tier-from { font-size: 11px; color: var(--text-subtle); margin-left: 6px; font-variant-numeric: tabular-nums; }
+  .tier-from strong { color: var(--text-muted); font-weight: 600; }
+
   /* Cohort selector */
   .cohort-bar {
     display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
@@ -212,6 +235,7 @@ scripts: [citations]
         <span class="sep">to</span>
         <input type="text" inputmode="numeric" id="f-pop-max" value="100,000" aria-label="Max population">
       </div>
+      <div class="lever-note">Marblehead: 20,576. Built-out peninsula; changes slowly.</div>
     </div>
     <div class="filter-group">
       <label><abbr class="g" title="Department of Revenue">DOR</abbr> Income / Capita</label>
@@ -220,6 +244,7 @@ scripts: [citations]
         <span class="sep">to</span>
         <input type="text" inputmode="numeric" id="f-inc-max" value="" placeholder="any" aria-label="Max income per capita">
       </div>
+      <div class="lever-note">Marblehead: $115,422. Resident income; changes with demographics, not policy.</div>
     </div>
     <div class="filter-group">
       <label><abbr class="g" title="Equalized Valuation">EQV</abbr> / Capita (property wealth)</label>
@@ -228,6 +253,7 @@ scripts: [citations]
         <span class="sep">to</span>
         <input type="text" inputmode="numeric" id="f-eqv-max" value="1,000,000" aria-label="Max EQV per capita">
       </div>
+      <div class="lever-note">Marblehead: $461,879. Moves with real estate market and new construction.</div>
     </div>
     <div class="filter-group">
       <label>Avg Tax Bill</label>
@@ -236,6 +262,7 @@ scripts: [citations]
         <span class="sep">to</span>
         <input type="text" inputmode="numeric" id="f-bill-max" value="" placeholder="any" aria-label="Max tax bill">
       </div>
+      <div class="lever-note">Marblehead: $11,055. Rate ($9.05) times home value. An override changes this.</div>
     </div>
   </div>
   <div class="filter-actions">
@@ -251,6 +278,14 @@ scripts: [citations]
     <button type="button" class="cohort-btn" data-cohort="burden">Tax burden</button>
     <button type="button" class="cohort-btn" data-cohort="structural">Structure</button>
     <button type="button" class="cohort-btn cohort-clear" data-cohort="">Clear cohort</button>
+  </div>
+  <div class="tier-bar">
+    <span class="tier-label">Override tier:</span>
+    <button type="button" class="tier-btn" data-tier="0">Current</button>
+    <button type="button" class="tier-btn" data-tier="1">Tier 1 ($9M)</button>
+    <button type="button" class="tier-btn" data-tier="2">Tier 2 ($12M)</button>
+    <button type="button" class="tier-btn" data-tier="3">Tier 3 ($15M)</button>
+    <span class="tier-from" id="tier-from"></span>
   </div>
 </div>
 
@@ -317,6 +352,15 @@ scripts: [citations]
     structural: 'Closest by fiscal structure (95.5% homeowner share, 0.38% new construction)'
   };
   var activeCohort = '';
+  // Override tiers: current values and projected at each tier
+  var MHD_BASE = { rate: 9.05, bill: 11055, bpi: 9.6, lpc: 4101 };
+  var TIERS = {
+    0: { label: 'Current', rate: 9.05, bill: 11055 },
+    1: { label: 'Tier 1 ($9M)', rate: 9.46, bill: 12217 },
+    2: { label: 'Tier 2 ($12M)', rate: 9.76, bill: 12604 },
+    3: { label: 'Tier 3 ($15M)', rate: 10.06, bill: 12991 }
+  };
+  var activeTier = 0;
   var NCOLS = 10;
 
   var inputs = {
@@ -390,7 +434,21 @@ scripts: [citations]
     }
     filtered.sort(compare);
 
-    var mhd = DATA.filter(function (t) { return t.n === 'Marblehead'; })[0];
+    var mhdOrig = DATA.filter(function (t) { return t.n === 'Marblehead'; })[0];
+    // Apply tier projection to Marblehead
+    var tier = TIERS[activeTier];
+    var mhd = Object.assign({}, mhdOrig);
+    if (activeTier > 0) {
+      mhd.rate = tier.rate;
+      mhd.bill = tier.bill;
+      mhd.bpi = Math.round(tier.bill / mhd.ipc * 1000) / 10;
+      mhd.lpc = Math.round((MHD_BASE.lpc / MHD_BASE.bill) * tier.bill);
+    }
+    // Replace Marblehead in filtered with tier-adjusted version
+    filtered = filtered.map(function (t) { return t.n === 'Marblehead' ? mhd : t; });
+    // Re-sort after adjustment
+    filtered.sort(compare);
+
     var mhdInList = filtered.some(function (t) { return t.n === 'Marblehead'; });
     var mhdRank = -1;
     for (var r = 0; r < filtered.length; r++) {
@@ -426,6 +484,19 @@ scripts: [citations]
       cf.eqvMin === SIMILAR.eqvMin && cf.eqvMax === SIMILAR.eqvMax);
 
     renderBars(filtered);
+
+    // Update tier display
+    var tierFrom = document.getElementById('tier-from');
+    if (activeTier > 0) {
+      tierFrom.innerHTML = 'Rate: <strong>$' + MHD_BASE.rate.toFixed(2) + ' &rarr; $' + tier.rate.toFixed(2) + '</strong> · ' +
+        'Bill: <strong>$' + fN(MHD_BASE.bill) + ' &rarr; $' + fN(tier.bill) + '</strong> · ' +
+        'Bill/income: <strong>' + MHD_BASE.bpi.toFixed(1) + '% &rarr; ' + mhd.bpi.toFixed(1) + '%</strong>';
+    } else {
+      tierFrom.textContent = '';
+    }
+    document.querySelectorAll('.tier-btn').forEach(function (b) {
+      b.classList.toggle('active', parseInt(b.getAttribute('data-tier')) === activeTier);
+    });
   }
 
   function fmtVal(col, v) {
@@ -544,6 +615,14 @@ scripts: [citations]
       }
       render();
       updateCohortBtns();
+    });
+  });
+
+  // Tier buttons
+  document.querySelectorAll('.tier-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeTier = parseInt(btn.getAttribute('data-tier'));
+      render();
     });
   });
 
