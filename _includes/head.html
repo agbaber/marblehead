@@ -27,6 +27,7 @@
 <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 <link rel="icon" href="{{ '/' | relative_url }}favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{{ '/' | relative_url }}assets/site.css">
+{% if page.body_class == "explore-page" %}<link rel="stylesheet" href="{{ '/' | relative_url }}assets/explore.css">{% endif %}
 <script defer src="{{ '/' | relative_url }}assets/analytics.js"></script>
 {% if page.scripts contains "citations" %}<script defer src="{{ '/' | relative_url }}assets/citations.js"></script>
 {% endif %}{% if page.scripts contains "ballot" %}<script defer src="{{ '/' | relative_url }}assets/ballot.js"></script>
