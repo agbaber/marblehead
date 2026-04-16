@@ -127,7 +127,7 @@ body.branches-page .hidden { display: none; }
 <div class="page">
 
 <h1>Verification Branches</h1>
-<p>Each branch is a cluster of verified Marblehead residents connected through the neighbor invitation network. Branch names are chosen by members. <a href="/verify.html">Get verified</a> or <a href="/verify.html">sign in</a> to name your branch.</p>
+<p>Each branch is a cluster of verified Marblehead residents connected through the neighbor invitation network. Each branch gets a random Marblehead Revolutionary War name when it's created.</p>
 
 <div class="summary-bar" id="summary">
   <span><span class="summary-num" id="total-residents">--</span> verified residents</span>
@@ -230,20 +230,23 @@ async function init() {
     header.appendChild(sizeEl);
     li.appendChild(header);
 
-    // If authenticated and this is my branch, show naming UI.
     if (myProfile && myProfile.branch_root === branch.branch_root) {
-      const naming = document.createElement('div');
-      naming.className = 'branch-naming';
-      naming.innerHTML = `<h3>Name your branch</h3>
-        <div class="name-proposals-list" id="proposals-${branch.branch_root}"></div>
-        <div class="propose-row">
-          <input class="propose-input" id="propose-input-${branch.branch_root}" placeholder="Propose a name (max 30 chars)" maxlength="30">
-          <button class="btn btn-sm btn-primary" onclick="proposeName('${branch.branch_root}')">Propose</button>
-        </div>`;
-      li.appendChild(naming);
+      const badge = document.createElement('span');
+      badge.style.cssText = 'font-size:.8rem;color:var(--c-teal,#2a9d8f);margin-left:.5rem';
+      badge.textContent = '(your branch)';
+      header.appendChild(badge);
 
-      // Load existing proposals.
-      loadProposals(branch.branch_root);
+      // Rename vote dropdown.
+      const renameDiv = document.createElement('div');
+      renameDiv.className = 'branch-naming';
+      renameDiv.innerHTML = `<div style="font-size:.85rem;color:var(--c-text-muted,#666);font-weight:600;margin-bottom:.5rem">Vote to rename</div>
+        <div style="display:flex;gap:.5rem;align-items:center">
+          <select id="rename-select" style="flex:1;padding:.4rem .6rem;font-size:.9rem;border:1px solid var(--c-text-faint,#ccc);border-radius:var(--radius-sm,4px);background:var(--bg,#fff);color:var(--c-text,#1a1a1a)"><option value="">Loading names...</option></select>
+          <button class="btn btn-sm btn-primary" id="btn-rename">Vote</button>
+        </div>
+        <div id="rename-status" style="font-size:.85rem;margin-top:.4rem"></div>`;
+      li.appendChild(renameDiv);
+      loadAvailableNames();
     }
 
     list.appendChild(li);
@@ -252,34 +255,36 @@ async function init() {
   container.appendChild(list);
 }
 
-async function loadProposals(branchRoot) {
-  // We don't have a dedicated proposals endpoint yet.
-  // For now, the branch name in the listing tells us the winning name.
-  // The naming UI is functional via propose + vote endpoints.
-  // Show a placeholder until we add a proposals list endpoint.
-  const el = document.getElementById(`proposals-${branchRoot}`);
-  if (!el) return;
-  el.innerHTML = '<p style="font-size:0.85rem;color:var(--c-text-muted)">Propose a name below. Most-voted name wins.</p>';
-}
-
-window.proposeName = async function(branchRoot) {
-  const input = document.getElementById(`propose-input-${branchRoot}`);
-  const name = input.value.trim();
-  if (!name || name.length > 30) return;
-
+async function loadAvailableNames() {
   try {
-    const res = await api('POST', '/api/verify/branch-name/propose', { name });
-    if (res.ok) {
-      // Also vote for it.
-      await api('POST', '/api/verify/branch-name/vote', { name });
-      input.value = '';
-      // Refresh the page to show the new name.
-      location.reload();
+    const data = await api('GET', '/api/verify/branch-name/available');
+    const sel = document.getElementById('rename-select');
+    if (!sel) return;
+    sel.innerHTML = '';
+    const current = document.createElement('option');
+    current.value = '';
+    current.textContent = 'Keep: ' + (data.current_name || '(unnamed)');
+    sel.appendChild(current);
+    for (const n of (data.available || [])) {
+      const opt = document.createElement('option');
+      opt.value = n;
+      opt.textContent = n;
+      sel.appendChild(opt);
     }
-  } catch (err) {
-    console.error('Propose failed:', err);
-  }
-};
+    document.getElementById('btn-rename').addEventListener('click', async function() {
+      const name = sel.value;
+      if (!name) { document.getElementById('rename-status').textContent = 'Select a new name first.'; return; }
+      const r = await api('POST', '/api/verify/branch-name/vote', { name });
+      if (r.ok) {
+        let msg = 'Voted for ' + name + '. ' + r.votes_for + '/' + r.majority_needed + ' needed.';
+        if (r.current_name === name) msg += ' Name changed!';
+        document.getElementById('rename-status').textContent = msg;
+      } else {
+        document.getElementById('rename-status').textContent = r.error || 'Vote failed.';
+      }
+    });
+  } catch (e) { console.error(e); }
+}
 
 init();
 </script>
