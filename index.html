@@ -2320,7 +2320,7 @@ og_url: https://marbleheaddata.org/
       </div>
 
       <div class="evidence-point">
-        <h4>Enrollment fell 21%, ACFR staffing rose 9.6%</h4>
+        <h4>Enrollment fell 21%; the town's own count shows staffing up 9.6%</h4>
 
         <div class="chart-wrapper">
           <svg class="chart" viewBox="0 0 740 185" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Student enrollment FY2001 to FY2024, peaking at 3,327 in FY2014 and declining to 2,617.">
@@ -2381,14 +2381,28 @@ og_url: https://marbleheaddata.org/
         </summary>
         <div class="counter-argument-body">
           <p>
-            Not every staff position scales with total enrollment.
-            Special education, <abbr class="g" title="English Language Learner">ELL</abbr>,
+            The town's <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>
+            is one of three staffing measures, and it is the only one that
+            shows growth. State education data
+            (<abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr>)
+            shows total educator
+            <abbr class="g" title="Full-Time Equivalent">FTE</abbr> down 13.9%
+            and classroom teacher
+            <abbr class="g" title="Full-Time Equivalent">FTE</abbr> down 4.3%
+            over the same period. The
+            <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>
+            is also affected by a
+            <a href="inside-school-staffing.html#the-fy23-mystery">FY23 data
+            discontinuity</a>. Beyond the measurement question, not every
+            staff position scales with total enrollment. Special education,
+            <abbr class="g" title="English Language Learner">ELL</abbr>,
             and mandated compliance roles are driven by student need,
-            not by headcount, and they account for about 60-65% of the
-            added positions. A ratio comparison that treats all
+            not by headcount. A ratio comparison that treats all
             <abbr class="g" title="Full-Time Equivalents">FTEs</abbr>
             as interchangeable obscures what those staff actually do
             and which positions the district can legally reduce.
+            <a href="charts/enrollment_vs_staffing.html">See all three
+            measures</a>.
           </p>
         </div>
       </details>
@@ -2416,32 +2430,42 @@ og_url: https://marbleheaddata.org/
       </div>
 
       <div class="evidence-point">
-        <h4>Special education needs grew while enrollment fell</h4>
+        <h4>Special education teachers rose as gen-ed teachers fell</h4>
 
         <div class="chart-wrapper">
-          <svg class="chart" viewBox="0 0 740 185" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Student enrollment FY2001 to FY2024, peaking at 3,327 in FY2014 and declining to 2,617.">
-            <line class="axis-base" x1="70" y1="170" x2="610" y2="170"/>
-            <line class="tick" x1="66" y1="156" x2="70" y2="156"/>
-            <text class="tick-label" x="63" y="160" text-anchor="end">2,500</text>
-            <line class="tick" x1="66" y1="86" x2="70" y2="86"/>
-            <text class="tick-label" x="63" y="90" text-anchor="end">3,000</text>
-            <polyline class="data-line s-neutral" points="70,115 93,104 117,90 140,86 164,77 187,67 211,52 234,56 258,49 281,54 305,57 328,62 352,48 375,40 399,52 422,57 446,49 469,60 493,79 516,91 540,128 563,142 587,139 610,140"/>
-            <text class="end-label s-neutral" x="616" y="136">2,617</text>
-            <text class="annotation" x="375" y="34" text-anchor="middle">peak: 3,327</text>
-            <text class="tick-label tick-label--major" x="70" y="184" text-anchor="middle">FY01</text>
-            <text class="tick-label tick-label--major" x="352" y="184" text-anchor="middle">FY13</text>
-            <text class="tick-label tick-label--major" x="610" y="184" text-anchor="middle">FY24</text>
+          <svg class="chart" viewBox="0 0 740 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gen-ed teacher FTE declining from 210 to 185 while SPED teacher FTE rises from 45 to 57, FY15 to FY24.">
+            <line class="axis-base" x1="70" y1="130" x2="610" y2="130"/>
+            <!-- Y ticks: scale 0-250, 130px range, factor=0.52 -->
+            <line class="tick" x1="66" y1="104" x2="70" y2="104"/>
+            <text class="tick-label" x="63" y="108" text-anchor="end">50</text>
+            <line class="tick" x1="66" y1="52" x2="70" y2="52"/>
+            <text class="tick-label" x="63" y="56" text-anchor="end">150</text>
+            <!-- Gen ed: 210.1,215.3,216.4,210.4,222.2,231.4,223.7,209.6,193.5,184.5 -->
+            <!-- y = 130 - v*0.52 -->
+            <polyline class="data-line s-neutral"
+                      points="70,21 130,18 190,17 250,21 310,14 370,10 430,14 490,21 550,29 610,34"/>
+            <text class="end-label s-neutral" x="616" y="30">184.5</text>
+            <!-- SPED: 44.6,43.6,45.5,47.2,31.0,22.9,28.6,41.3,51.8,56.7 -->
+            <polyline class="data-line s-marblehead"
+                      points="70,107 130,107 190,106 250,105 310,114 370,118 430,115 490,109 550,103 610,100"/>
+            <text class="end-label s-marblehead" x="616" y="96">56.7</text>
+            <text class="tick-label tick-label--major" x="70"  y="148" text-anchor="middle">FY15</text>
+            <text class="tick-label tick-label--minor" x="310" y="148" text-anchor="middle">FY19</text>
+            <text class="tick-label tick-label--major" x="610" y="148" text-anchor="middle">FY24</text>
           </svg>
         </div>
+        <div class="legend">
+          <span class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">Gen-ed teachers</span></span>
+          <span class="legend-item s-marblehead"><span class="legend-swatch"></span><span class="legend-text">SPED teachers</span></span>
+        </div>
         <p class="caption">
-          Same enrollment decline, different reading: fewer students, but
-          higher needs. High-needs students grew from 27% to 32% of
-          enrollment. Each student with an <abbr class="g" title="Individualized Education Program">IEP</abbr> requiring a 1:1
-          aide adds a full position the district must fill. DESE data
-          shows special education teacher FTE rose 27% (44.6 to 56.7)
-          while general education teachers fell 12% (210.1 to 184.5)
-          over FY15 to FY24. <a href="charts/enrollment_vs_staffing.html">See
-          the breakdown</a>.
+          High-needs students grew from 27% to 32% of enrollment.
+          <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> data shows special education teacher
+          <abbr class="g" title="Full-Time Equivalent">FTE</abbr> rose 27% (44.6 to 56.7) while general education
+          teachers fell 12% (210.1 to 184.5) over FY15 to FY24. Each
+          student with an <abbr class="g" title="Individualized Education Program">IEP</abbr> requiring a 1:1 aide adds a full
+          position the district must fill.
+          <a href="charts/enrollment_vs_staffing.html">See the full breakdown</a>.
         </p>
       </div>
 
