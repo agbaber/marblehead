@@ -268,6 +268,20 @@ title: "Deficit Dynamics Model"
   .dm-hidden {
     display: none;
   }
+  .dm-controls-wrap {
+    margin: 20px 0 8px;
+  }
+  .dm-controls-summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text);
+    padding: 8px 0;
+    user-select: none;
+  }
+  .dm-controls-summary:hover {
+    color: var(--c-navy);
+  }
 </style>
 
 <h1 class="h-center">Deficit Dynamics: The Lines Already Crossed</h1>
@@ -304,6 +318,8 @@ title: "Deficit Dynamics Model"
   <g id="dm-legend"></g>
 </svg>
 
+<details class="dm-controls-wrap" open>
+<summary class="dm-controls-summary">Controls</summary>
 <div class="dm-controls">
   <div class="dm-control">
     <span class="dm-control-label">Revenue growth: <span class="dm-value" id="dm-rev-growth-val">3.5%</span></span>
@@ -333,11 +349,11 @@ title: "Deficit Dynamics Model"
   <div class="dm-control" style="grid-column: 1 / -1;">
     <span class="dm-control-label">Position cuts: <span class="dm-value" id="dm-cuts-val">0</span></span>
     <div class="dm-presets" style="margin-top: 0;">
-      <button type="button" class="dm-cuts-btn" data-cuts="0">None</button>
-      <button type="button" class="dm-cuts-btn" data-cuts="1">Cut 1</button>
-      <button type="button" class="dm-cuts-btn" data-cuts="10">Cut 10</button>
-      <button type="button" class="dm-cuts-btn" data-cuts="50">Cut 50</button>
-      <button type="button" class="dm-cuts-btn" data-cuts="100">Cut 100</button>
+      <button type="button" class="dm-cuts-btn" data-cuts="0">Reset</button>
+      <button type="button" class="dm-cuts-btn" data-cuts="1">+1</button>
+      <button type="button" class="dm-cuts-btn" data-cuts="10">+10</button>
+      <button type="button" class="dm-cuts-btn" data-cuts="50">+50</button>
+      <button type="button" class="dm-cuts-btn" data-cuts="100">+100</button>
     </div>
     <div class="dm-hint" id="dm-cuts-hint">Each position costs ~$100K/yr (salary + benefits). Cutting positions shifts the expense line down but does not change its slope. GIC, PERAC, and union contracts still grow at the same rate on the remaining staff.</div>
   </div>
@@ -363,6 +379,7 @@ title: "Deficit Dynamics Model"
     <button type="button" data-preset="tier3">Tier 3 ($15M)</button>
   </div>
 </div>
+</details>
 
 <h2>How long does each tier last?</h2>
 <p>The three ballot questions ask voters to choose among $9M, $12M, or $15M. Below, the same growth rates from the sliders above are applied to all three tiers simultaneously, without ratchet. Each tier phases in over FY27 to FY29 per the town's proposed draw schedule. The question each line answers: how many years before expenses catch the boosted revenue line again?</p>
@@ -1073,7 +1090,8 @@ title: "Deficit Dynamics Model"
   // Position cuts buttons
   document.querySelectorAll('.dm-cuts-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
-      positionCuts = parseInt(btn.dataset.cuts);
+      var v = parseInt(btn.dataset.cuts);
+      positionCuts = v === 0 ? 0 : positionCuts + v;
       onChange();
     });
   });
