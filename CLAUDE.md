@@ -38,6 +38,20 @@ In practice:
 - Caveats on volatile data (FY23 FTE jump, FY13 OPEB spike, GASB pension
   volatility) must be surfaced where the number appears, not hidden.
 
+## No meta-narration
+
+Don't write sentences that describe what the page is about to do. Just do
+it. "This page explains why, maps the actual overlap, and sizes the
+realistic savings" is three clauses that say nothing a reader couldn't
+learn by scrolling down. Cut the tour-guide voice entirely:
+
+- **Kill:** "This page shows...", "This section covers...", "Below you'll
+  find...", "The following table classifies...", "Here we walk through..."
+- **Replace with:** the actual claim, finding, or context that earns the
+  sentence's existence. If removing the sentence loses nothing, remove it.
+- **Test:** read the sentence back. If it would still be true about a
+  *blank* page with the same title, it's filler.
+
 ## Every number must trace to a primary source
 
 From README: *"Every number should be traceable to a primary source. If
