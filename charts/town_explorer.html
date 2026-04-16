@@ -68,6 +68,41 @@ scripts: [citations]
   }
   .rank-summary strong { color: var(--c-navy); font-weight: 700; }
 
+  /* Bar chart */
+  .bar-chart-wrap {
+    background: var(--surface); border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm); padding: 14px 16px 10px;
+    margin: 0 0 16px; position: relative;
+  }
+  .bar-chart-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--text-subtle); margin-bottom: 10px;
+  }
+  .bar-chart {
+    display: flex; align-items: flex-end; gap: 1px;
+    height: 120px; position: relative;
+  }
+  .bar-chart .bar {
+    flex: 1; min-width: 1px; background: var(--text-subtle); opacity: 0.25;
+    border-radius: 1px 1px 0 0; cursor: pointer; transition: opacity 0.1s;
+    position: relative;
+  }
+  .bar-chart .bar:hover { opacity: 0.6; }
+  .bar-chart .bar.bar-mh {
+    background: var(--series-marblehead); opacity: 0.85;
+  }
+  .bar-chart .bar.bar-mh:hover { opacity: 1; }
+  .bar-tip {
+    position: absolute; pointer-events: none;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 6px 10px;
+    font-size: 12px; line-height: 1.4; color: var(--text);
+    box-shadow: var(--shadow-sm); white-space: nowrap;
+    opacity: 0; transition: opacity 0.15s; z-index: 10;
+  }
+  .bar-tip.visible { opacity: 1; }
+  .bar-tip strong { font-weight: 700; }
+
   /* Table */
   .table-wrap {
     overflow-x: auto; -webkit-overflow-scrolling: touch;
@@ -192,20 +227,26 @@ scripts: [citations]
 
 <p class="rank-summary" id="rank-summary"></p>
 
+<div class="bar-chart-wrap" id="bar-chart-wrap">
+  <div class="bar-chart-label" id="bar-chart-label"></div>
+  <div class="bar-chart" id="bar-chart"></div>
+  <div class="bar-tip" id="bar-tip"></div>
+</div>
+
 <div class="table-wrap">
   <table class="explorer" id="explorer-table">
     <thead>
       <tr>
-        <th data-col="n">Municipality <span class="sa"></span></th>
+        <th data-col="n">Town <span class="sa"></span></th>
         <th title="Rank within filtered set">#</th>
-        <th data-col="p" title="Population">Pop <span class="sa"></span></th>
-        <th data-col="ipc" title="DOR per-capita income">Income/Cap <span class="sa"></span></th>
-        <th data-col="bill" title="Average single-family tax bill">Avg Bill <span class="sa"></span></th>
-        <th data-col="bpi" title="Tax bill as % of DOR income" class="sorted">Bill/Inc <span class="sa">&#9650;</span></th>
-        <th data-col="rate" title="Residential property tax rate per $1,000">Tax Rate <span class="sa"></span></th>
-        <th data-col="rpct" title="Residential share of total property tax levy">Res % <span class="sa"></span></th>
-        <th data-col="lpc" title="Total tax levy divided by population">Levy/Cap <span class="sa"></span></th>
-        <th data-col="ng" title="New construction growth as % of total levy">New Growth <span class="sa"></span></th>
+        <th data-col="p">Population <span class="sa"></span></th>
+        <th data-col="ipc" title="Total resident income / population, estimated by DOR for state aid formulas">Income per person <span class="sa"></span></th>
+        <th data-col="bill" title="Average single-family property tax bill, FY2026">Avg tax bill <span class="sa"></span></th>
+        <th data-col="bpi" title="Average tax bill divided by per-person income: how much of income goes to property tax" class="sorted">Bill % of income <span class="sa">&#9650;</span></th>
+        <th data-col="rate" title="Dollars of tax per $1,000 of assessed home value">Tax rate <span class="sa"></span></th>
+        <th data-col="rpct" title="What share of the town's total property tax comes from homeowners vs. commercial/industrial">Homeowner share <span class="sa"></span></th>
+        <th data-col="lpc" title="Total property tax collected divided by population">Tax per person <span class="sa"></span></th>
+        <th data-col="ng" title="Revenue from new construction as % of total levy: how much the tax base grows without a vote">New construction <span class="sa"></span></th>
       </tr>
     </thead>
     <tbody id="explorer-body"></tbody>
@@ -230,7 +271,7 @@ scripts: [citations]
 
   var DEFAULTS = { popMin: 5000, popMax: 100000, incMin: '', incMax: '', eqvMin: '', eqvMax: 1000000, billMin: '', billMax: '' };
   var SIMILAR = { popMin: 10000, popMax: 35000, incMin: 60000, incMax: 175000, eqvMin: 250000, eqvMax: 700000, billMin: '', billMax: '' };
-  var COL_LABELS = { n:'name', p:'population', ipc:'income/capita', bill:'avg tax bill', bpi:'bill/income', rate:'tax rate', rpct:'residential share', lpc:'levy/capita', ng:'new growth', epc:'property value/capita' };
+  var COL_LABELS = { n:'name', p:'population', ipc:'income per person', bill:'avg tax bill', bpi:'bill as % of income', rate:'tax rate', rpct:'homeowner share', lpc:'tax per person', ng:'new construction growth' };
   var NCOLS = 10;
 
   var inputs = {
@@ -245,6 +286,9 @@ scripts: [citations]
   var presetBtn = document.getElementById('preset-similar');
   var resetBtn = document.getElementById('reset-filters');
   var headers = document.querySelectorAll('#explorer-table th[data-col]');
+  var barChart = document.getElementById('bar-chart');
+  var barLabel = document.getElementById('bar-chart-label');
+  var barTip = document.getElementById('bar-tip');
 
   var sortCol = 'bpi', sortAsc = true;
 
@@ -327,6 +371,55 @@ scripts: [citations]
       cf.popMin === SIMILAR.popMin && cf.popMax === SIMILAR.popMax &&
       cf.incMin === SIMILAR.incMin && cf.incMax === SIMILAR.incMax &&
       cf.eqvMin === SIMILAR.eqvMin && cf.eqvMax === SIMILAR.eqvMax);
+
+    renderBars(filtered);
+  }
+
+  function fmtVal(col, v) {
+    if (col === 'bpi' || col === 'rpct') return v.toFixed(1) + '%';
+    if (col === 'ng') return v.toFixed(2) + '%';
+    if (col === 'rate') return v.toFixed(2);
+    if (col === 'bill' || col === 'ipc' || col === 'lpc') return '$' + v.toLocaleString('en-US');
+    return v.toLocaleString('en-US');
+  }
+
+  function renderBars(filtered) {
+    if (sortCol === 'n' || !filtered.length) {
+      barChart.innerHTML = '';
+      barLabel.textContent = '';
+      return;
+    }
+    barLabel.textContent = COL_LABELS[sortCol] + ' (sorted ' + (sortAsc ? 'low to high' : 'high to low') + ')';
+    var vals = filtered.map(function (t) { return t[sortCol]; });
+    var maxVal = Math.max.apply(null, vals);
+    if (maxVal <= 0) maxVal = 1;
+
+    var barsHtml = '';
+    for (var i = 0; i < filtered.length; i++) {
+      var t = filtered[i];
+      var h = Math.max(2, Math.round((t[sortCol] / maxVal) * 110));
+      var cls = t.n === 'Marblehead' ? 'bar bar-mh' : 'bar';
+      barsHtml += '<div class="' + cls + '" style="height:' + h + 'px" data-idx="' + i + '"></div>';
+    }
+    barChart.innerHTML = barsHtml;
+
+    // Tooltip
+    barChart.addEventListener('mouseover', function (e) {
+      var bar = e.target.closest('.bar');
+      if (!bar) return;
+      var idx = parseInt(bar.getAttribute('data-idx'));
+      var t = filtered[idx];
+      if (!t) return;
+      barTip.innerHTML = '<strong>' + t.n + '</strong><br>' + COL_LABELS[sortCol] + ': ' + fmtVal(sortCol, t[sortCol]);
+      barTip.classList.add('visible');
+      var rect = bar.getBoundingClientRect();
+      var wrap = barChart.parentElement.getBoundingClientRect();
+      barTip.style.left = Math.min(rect.left - wrap.left, wrap.width - 180) + 'px';
+      barTip.style.top = (rect.top - wrap.top - 40) + 'px';
+    });
+    barChart.addEventListener('mouseout', function (e) {
+      if (!e.target.closest('.bar')) barTip.classList.remove('visible');
+    });
   }
 
   function renderRow(t, mode, rank) {
