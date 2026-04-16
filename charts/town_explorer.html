@@ -61,6 +61,26 @@ scripts: [citations]
     font-variant-numeric: tabular-nums;
   }
 
+  /* Cohort selector */
+  .cohort-bar {
+    display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+    margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--divider);
+  }
+  .cohort-label {
+    font-size: 11px; font-weight: 600; color: var(--text-subtle);
+    margin-right: 4px;
+  }
+  .cohort-btn {
+    font-size: 11px; font-weight: 500; padding: 4px 10px;
+    border: 1px solid var(--border); border-radius: 14px;
+    background: transparent; color: var(--text-muted); cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .cohort-btn:hover { border-color: var(--c-teal); color: var(--c-teal); }
+  .cohort-btn.active { background: var(--c-teal); color: #fff; border-color: var(--c-teal); }
+  .cohort-clear { border-style: dashed; }
+  .cohort-clear.active { display: none; }
+
   /* Rank summary */
   .rank-summary {
     font-size: 13px; color: var(--text-muted); margin: -8px 0 12px;
@@ -219,9 +239,18 @@ scripts: [citations]
     </div>
   </div>
   <div class="filter-actions">
-    <button type="button" class="preset-btn" id="preset-similar">Similar to Marblehead</button>
+    <button type="button" class="preset-btn" id="preset-similar">Similar (45 towns)</button>
     <button type="button" class="reset-btn" id="reset-filters">Reset to defaults</button>
     <span class="filter-count" id="filter-count"></span>
+  </div>
+  <div class="cohort-bar">
+    <span class="cohort-label">Nearest 10 by:</span>
+    <button type="button" class="cohort-btn" data-cohort="overall">Overall match</button>
+    <button type="button" class="cohort-btn" data-cohort="income">Income</button>
+    <button type="button" class="cohort-btn" data-cohort="property">Property wealth</button>
+    <button type="button" class="cohort-btn" data-cohort="burden">Tax burden</button>
+    <button type="button" class="cohort-btn" data-cohort="structural">Structure</button>
+    <button type="button" class="cohort-btn cohort-clear" data-cohort="">Clear cohort</button>
   </div>
 </div>
 
@@ -261,6 +290,7 @@ scripts: [citations]
   <p><strong>"Similar to Marblehead" preset.</strong> Population 10,000 to 35,000, <abbr class="g" title="Department of Revenue">DOR</abbr> income per capita $60,000 to $175,000, <abbr class="g" title="Equalized Valuation">EQV</abbr> per capita $250,000 to $700,000. Adjust to explore different peer definitions.</p>
   <p><strong>Column definitions.</strong> <em>Income/Cap</em>: <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income, used in Cherry Sheet aid formulas. <em>Bill/Inc</em>: average single-family tax bill divided by <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income. <em>Tax Rate</em>: residential property tax rate per $1,000 of assessed value. <em>Res %</em>: share of total property tax levy paid by residential property owners. <em>Levy/Cap</em>: total property tax levy divided by population. <em>New Growth</em>: revenue from new construction as a percentage of total levy, outside Proposition 2&frac12;'s 2.5% cap.</p>
   <p><strong>What is <abbr class="g" title="Equalized Valuation">EQV</abbr>?</strong> The <abbr class="g" title="Department of Revenue">DOR</abbr>'s estimate of the full market value of all taxable property in a municipality, adjusted to a uniform standard across the state for apples-to-apples comparison.</p>
+  <p><strong>Cohort methodology.</strong> Each "Nearest 10" cohort finds the 10 towns mathematically closest to Marblehead on the named dimension(s), excluding towns under 1,000 population and island/resort communities (EQV/capita over $1M). "Overall match" uses normalized Euclidean distance across income, property wealth, tax burden, homeowner share, new construction, and population (population weighted at 0.5x). "Structure" combines homeowner share and new construction growth. The cohorts are fixed snapshots of the FY2026/FY2027 data, not dynamically recalculated.</p>
 </details>
 
 <script>
@@ -272,6 +302,21 @@ scripts: [citations]
   var DEFAULTS = { popMin: 5000, popMax: 100000, incMin: '', incMax: '', eqvMin: '', eqvMax: 1000000, billMin: '', billMax: '' };
   var SIMILAR = { popMin: 10000, popMax: 35000, incMin: 60000, incMax: 175000, eqvMin: 250000, eqvMax: 700000, billMin: '', billMax: '' };
   var COL_LABELS = { n:'name', p:'population', ipc:'income per person', bill:'avg tax bill', bpi:'bill as % of income', rate:'tax rate', rpct:'homeowner share', lpc:'tax per person', ng:'new construction growth' };
+  var COHORTS = {
+    overall: ["Duxbury","Scituate","Norwell","Hingham","Newbury","Carlisle","Winchester","Wayland","Marion","Mattapoisett"],
+    income: ["Duxbury","Belmont","Medfield","Norwell","Boxford","Milton","Sudbury","Lenox","Lynnfield","Southborough"],
+    property: ["Duxbury","Richmond","Carlisle","Westwood","Nahant","Winchester","Belmont","Rockport","Lincoln","Needham"],
+    burden: ["Becket","Hingham","Hinsdale","Manchester By The Sea","Wellesley","Erving","West Brookfield","Cheshire","Falmouth","Newton"],
+    structural: ["Bolton","Hamilton","Dennis","Lincoln","Rockport","Millville","Nahant","Otis","Oakham","Paxton"]
+  };
+  var COHORT_LABELS = {
+    overall: 'Overall closest match (income, property, burden, structure, population)',
+    income: 'Closest by DOR income per person ($115,422)',
+    property: 'Closest by property wealth per person ($461,879 EQV/cap)',
+    burden: 'Closest by tax burden (9.6% of income)',
+    structural: 'Closest by fiscal structure (95.5% homeowner share, 0.38% new construction)'
+  };
+  var activeCohort = '';
   var NCOLS = 10;
 
   var inputs = {
@@ -334,7 +379,15 @@ scripts: [citations]
 
   function render() {
     var f = getFilters();
-    var filtered = DATA.filter(function (t) { return passes(t, f); });
+    var filtered;
+    if (activeCohort && COHORTS[activeCohort]) {
+      var names = COHORTS[activeCohort];
+      filtered = DATA.filter(function (t) {
+        return t.n === 'Marblehead' || names.indexOf(t.n) !== -1;
+      });
+    } else {
+      filtered = DATA.filter(function (t) { return passes(t, f); });
+    }
     filtered.sort(compare);
 
     var mhd = DATA.filter(function (t) { return t.n === 'Marblehead'; })[0];
@@ -468,8 +521,31 @@ scripts: [citations]
     applyPreset(isSimilar ? DEFAULTS : SIMILAR);
     render();
   });
-  resetBtn.addEventListener('click', function () { applyPreset(DEFAULTS); render(); });
+  resetBtn.addEventListener('click', function () { activeCohort = ''; applyPreset(DEFAULTS); render(); updateCohortBtns(); });
   function applyPreset(p) { Object.keys(p).forEach(function (k) { setInput(inputs[k], p[k]); }); }
+
+  // Cohort buttons
+  var cohortBtns = document.querySelectorAll('.cohort-btn');
+  function updateCohortBtns() {
+    cohortBtns.forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-cohort') === activeCohort);
+    });
+    barLabel.textContent = activeCohort
+      ? COHORT_LABELS[activeCohort]
+      : (sortCol !== 'n' ? COL_LABELS[sortCol] + ' (sorted ' + (sortAsc ? 'low to high' : 'high to low') + ')' : '');
+  }
+  cohortBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var c = btn.getAttribute('data-cohort');
+      if (activeCohort === c || c === '') {
+        activeCohort = '';
+      } else {
+        activeCohort = c;
+      }
+      render();
+      updateCohortBtns();
+    });
+  });
 
   render();
 })();
