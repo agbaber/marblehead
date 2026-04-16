@@ -7,11 +7,11 @@ Project notes for Claude Code / Claude iOS app sessions on
 
 Before making any content or design change, read:
 
-- **[STYLE_GUIDE.md](STYLE_GUIDE.md)** &ndash; the design system (palette,
+- **[STYLE_GUIDE.md](STYLE_GUIDE.md)** -- the design system (palette,
   typography, page types, SVG chart classes, chart principles) and a
   "What Not To Do" list. Excluded from the Jekyll build, so these rules
   don't appear on the site but are authoritative.
-- **[README.md](README.md)** &ndash; project purpose, data inventory, and
+- **[README.md](README.md)** -- project purpose, data inventory, and
   editorial stance.
 
 If you touch CSS, charts, or page copy without reading STYLE_GUIDE first,
@@ -92,90 +92,71 @@ When styling doc-page markdown content, always scope selectors with
 `body.doc-page .page` so bespoke HTML pages that already use `.page` with
 their own `.tier-list`, `.tldr ul`, etc. are not affected.
 
-## Don't read your own branch name back as user intent
+## Parallel-session safety
 
-You (Claude) usually pick the branch name for a new task, often before the
-user has said anything beyond a question. That means the branch name
-reflects *your* early interpretation, not the user's stated request. Don't
-then turn around mid-conversation and cite the branch name as evidence of
-what the user wants ("the branch is called `claude/add-ballot-info-XXXX`
-so I assume you want a ballot info page added"). The user didn't name it;
-you did. If you're unsure what the user wants, ask them directly, or act
-on the words they actually said in the conversation.
+Multiple Claude sessions edit this repo concurrently. Every session must
+assume another session is modifying the same files right now. One
+principle: **never trust your in-memory copy of a file.**
 
-Branch names are scratch paper for where commits will land. They are not
-a user requirements document.
+- **Targeted edits only.** Use find-and-replace or line-range edits,
+  never write an entire file from memory. If you can't express your
+  change as a surgical edit, re-read the file first.
+- **Re-read before writing.** Before editing a large file (especially
+  `index.html`), always read its current contents from the branch you're
+  working on. Do not rely on a version you read earlier in the
+  conversation or from a different branch.
+- **Check your diff before committing.** Run `git diff --stat` and look
+  at the line counts. If your change is supposed to add 50 lines but the
+  diff shows 800 deletions, you likely overwrote content from another
+  session.
+- **iOS / web sessions** write whole files. The session may have loaded
+  an old copy hours earlier. Always re-fetch before writing.
 
-## Always open a PR after pushing
+This rule exists because commit `cbaaed6` (Apr 16 2026) did a full-file
+rewrite of `index.html` from a stale base and silently reverted four
+previously-merged PRs (#410, #413, #416, #420).
 
-When you push a branch, always open a pull request for it as the next
-step &ndash; don't wait to be asked. This overrides the default
-"don't create PRs unless asked" behavior for this repo. Use
-`mcp__github__create_pull_request` and report the PR URL back to the
-user so they can find it without hunting.
+## Git workflow
 
-One exception: if the push was explicitly a fixup onto an existing open
-PR's branch, don't open a second PR.
+### Always work from fresh main
 
-## Git: don't push follow-up commits to a merged branch
-
-When a PR is merged, the branch it was on is **done**. Do not push
-additional commits to it &ndash; they end up orphaned (not in any open PR,
-parented on a pre-merge commit).
-
-### How to detect a stale branch before pushing
+Each piece of work gets its own branch off `origin/main`. On a local PC,
+use **git worktrees** (not checkout). On iOS / web, use:
 
 ```bash
 git fetch origin main
-git log origin/main..HEAD       # if empty, every commit is already merged
-git merge-base HEAD origin/main # if this equals origin/main HEAD, branch is stale
+git checkout -b <new-branch> origin/main
+# make changes
+git push -u origin <new-branch>
 ```
 
-If the branch is stale, start fresh instead of reusing it.
+### Don't push to merged branches
 
-### Flow on the iOS app / web (no worktrees)
+When a PR is merged, the branch is **done**. Do not push follow-up
+commits to it -- they end up orphaned. Check before pushing:
 
-1. `git fetch origin main`
-2. `git checkout -b <new-branch> origin/main`
-3. Make the changes (or `git cherry-pick <commit>` if the commit already
-   exists on a stale branch)
-4. `git push -u origin <new-branch>`
-5. Open a new PR with `mcp__github__create_pull_request`
+```bash
+git fetch origin main
+git log origin/main..HEAD       # if empty, branch is stale
+```
 
-### Flow on a local PC
+If stale, start a fresh branch instead.
 
-Use **git worktrees**, not the cherry-pick dance above. Each new piece of
-work gets its own worktree off `main` so there's no risk of accidentally
-pushing onto a merged branch.
+### Always open a PR after pushing
 
-### Never rewrite a file you haven't freshly read from your branch
+Open a pull request immediately after pushing -- don't wait to be asked.
+Report the PR URL back to the user. One exception: fixup pushes onto an
+existing open PR's branch.
 
-Before editing a large file (especially `index.html`), **always read
-its current contents from the branch you're working on**. Do not rely
-on a version you read earlier in the conversation or from a different
-branch. Full-file writes from a stale context silently revert other
-people's merged work.
+### Keep PRs small
 
-Concretely:
+One PR per logical change. Don't piggyback unrelated fixes onto a
+feature PR. CI will fail if a PR touches more than 5 files or 500 lines.
+Add `[large]` to the PR title to override for intentional large changes.
 
-- **Targeted edits only.** Use find-and-replace or line-range edits,
-  never write the entire file from memory. If you can't express your
-  change as a surgical edit, re-read the file first.
-- **Check your diff before committing.** Run `git diff --stat` and
-  look at the line counts. If your change is supposed to add 50 lines
-  but the diff shows 800 deletions, something is wrong -- you likely
-  overwrote content that was already there.
-- **Especially on iOS / web sessions** where the tool writes whole
-  files: the session may have loaded an old copy of the file hours
-  earlier. Always re-fetch before writing.
+### Don't read your own branch name back as user intent
 
-This rule exists because commit `cbaaed6` (Apr 16 2026) did a
-full-file rewrite of `index.html` from a stale base and silently
-reverted four previously-merged PRs (#410, #413, #416, #420).
-
-### PR scope
-
-One PR per logical change. Don't piggyback unrelated fixes (e.g. adding
-`CLAUDE.md`) onto an open feature PR. If you discover an unrelated issue
-mid-task, start a fresh branch off `main` for it rather than mixing it
-into the current PR.
+You (Claude) usually pick the branch name before the user has said
+anything beyond a question. The branch name reflects your early
+interpretation, not the user's stated request. If you're unsure what
+the user wants, ask them directly.
