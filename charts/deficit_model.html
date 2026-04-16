@@ -391,7 +391,9 @@ title: "Deficit Dynamics Model"
   <button type="button" class="dm-stance-btn" data-stance="cut">"Just cut spending"</button>
   <button type="button" class="dm-stance-btn" data-stance="healthcare">"Shift healthcare costs"</button>
 </div>
-<div class="dm-hint" id="dm-stance-explainer" style="margin-top: 4px;"></div>
+<div class="dm-readout" id="dm-stance-readout" style="display: none; margin-top: 8px;">
+  <div class="dm-readout-line" id="dm-stance-explainer"></div>
+</div>
 
 <div class="dm-controls">
   <div class="dm-control" style="grid-column: 1 / -1;">
@@ -438,11 +440,6 @@ title: "Deficit Dynamics Model"
     <span class="dm-control-label">Wage offset: <span class="dm-value" id="dm-wage-offset-val">50%</span></span>
     <input type="range" id="dm-wage-offset" min="0" max="100" step="5" value="50">
     <div class="dm-hint" id="dm-wage-hint">How much of the premium savings employees negotiate back as higher wages.</div>
-  </div>
-  <div class="dm-control" style="grid-column: 1 / -1;">
-    <div class="dm-readout" id="dm-hc-readout" style="display: none;">
-      <div class="dm-readout-line" id="dm-hc-summary"></div>
-    </div>
   </div>
 </div>
 </details>
@@ -576,8 +573,6 @@ title: "Deficit Dynamics Model"
   var hcShareVal = document.getElementById('dm-hc-share-val');
   var wageOffsetEl = document.getElementById('dm-wage-offset');
   var wageOffsetVal = document.getElementById('dm-wage-offset-val');
-  var hcReadout = document.getElementById('dm-hc-readout');
-  var hcSummary = document.getElementById('dm-hc-summary');
 
   // === Formatting ===
   function fmtM(v) {
@@ -1235,16 +1230,38 @@ title: "Deficit Dynamics Model"
     var newShare = parseInt(hcShareEl.value);
     hcShareVal.textContent = newShare + '%';
     wageOffsetVal.textContent = parseInt(wageOffsetEl.value) + '%';
+
+    // Build dynamic scenario readout from current state
+    updateScenarioReadout();
+  }
+
+  function updateScenarioReadout() {
+    var stanceReadout = document.getElementById('dm-stance-readout');
+    var stanceEl = document.getElementById('dm-stance-explainer');
+    var parts = [];
+    var ovr = parseFloat(overrideEl.value);
+    var ry = parseInt(ratchetEl.value);
+    var newShare = parseInt(hcShareEl.value);
     var hc = computeHcSavings();
+
+    if (ovr > 0) {
+      var absorption = ry === 0 ? 'not spent (unrealistic)' : ry === 1 ? 'absorbed immediately' : 'absorbed over ' + ry + ' years';
+      parts.push('<strong>' + fmtOverride(ovr) + '</strong> override phased in FY27\u201329. Spending ' + absorption + '.');
+    }
+    if (positionCuts > 0) {
+      var savings = positionCuts * costPerPosition;
+      var pct = (savings / histExp[lastHistIdx] * 100).toFixed(1);
+      parts.push('<strong>' + positionCuts + ' positions</strong> cut = ' + fmtOverride(savings) + '/yr savings (' + pct + '% of budget). Slope unchanged.');
+    }
     if (newShare < 83) {
-      hcReadout.style.display = '';
-      hcSummary.innerHTML = 'Shifting from 83% to ' + newShare + '% employer share: '
-        + '<strong>' + fmtOverride(hc.gross) + '</strong> gross savings'
-        + ' \u2212 ' + fmtOverride(hc.wageIncrease) + ' wage offset'
-        + ' \u2212 ' + fmtOverride(hc.pensionIncrease) + ' pension impact'
-        + ' = <strong>' + fmtOverride(hc.net) + '</strong> net expense reduction.';
+      parts.push('Healthcare shift to <strong>' + newShare + '%</strong> employer: ' + fmtOverride(hc.gross) + ' gross \u2212 ' + fmtOverride(hc.wageIncrease) + ' wages \u2212 ' + fmtOverride(hc.pensionIncrease) + ' pension = <strong>' + fmtOverride(hc.net) + '</strong> net.');
+    }
+
+    if (parts.length > 0) {
+      stanceEl.innerHTML = parts.join(' ');
+      stanceReadout.style.display = '';
     } else {
-      hcReadout.style.display = 'none';
+      stanceReadout.style.display = 'none';
     }
   }
 
@@ -1305,13 +1322,6 @@ title: "Deficit Dynamics Model"
   });
 
   // Stance scenario buttons
-  var stanceExplainer = document.getElementById('dm-stance-explainer');
-  var stanceExplainers = {
-    bridge: 'Tier 3 ($15M) override with spending absorbed over 5 years. Revenue jumps, then expenses gradually catch up as positions are filled and programs restored. The gap shrinks for several years before reopening.',
-    skeptic: 'Tier 3 ($15M) override with spending absorbed in 1 year. All new revenue is allocated immediately to deferred needs. The gap barely changes because both lines jump together.',
-    cut: '50 positions eliminated (~$5M/yr savings). The expense line shifts down, but GIC, PERAC, and union contracts still drive the same growth rate on the remaining staff. The gap reopens on the same schedule.',
-    healthcare: 'Healthcare employer share shifted from 83% to 50% (Hingham\u2019s rate). Gross savings of ~$5M, but at 50% wage offset, employees negotiate back ~$2.5M as higher salaries, plus ~$0.25M in pension costs. Net savings: ~$2.2M.'
-  };
   document.querySelectorAll('.dm-stance-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var s = btn.dataset.stance;
@@ -1334,7 +1344,6 @@ title: "Deficit Dynamics Model"
       } else if (s === 'healthcare') {
         hcShareEl.value = 50;
       }
-      stanceExplainer.textContent = stanceExplainers[s] || '';
       onChange();
     });
   });
