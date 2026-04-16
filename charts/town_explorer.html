@@ -607,9 +607,11 @@ scripts: [citations]
       b.classList.toggle('active', b.getAttribute('data-sort') === sortCol);
     });
   }
+  // Columns where high = notable (default descending)
+  var DESC_DEFAULT = { p: true, ipc: true, epc: true, ng: true };
   function applySort(col) {
     if (sortCol === col) { sortAsc = !sortAsc; }
-    else { sortCol = col; sortAsc = true; }
+    else { sortCol = col; sortAsc = !DESC_DEFAULT[col]; }
     headers.forEach(function (h) { h.classList.remove('sorted'); h.querySelector('.sa').textContent = ''; });
     // Sync column header highlight
     headers.forEach(function (h) {
