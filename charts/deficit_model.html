@@ -62,7 +62,7 @@ title: "Deficit Dynamics Model"
     flex-wrap: wrap;
     margin-top: 4px;
   }
-  .dm-presets button {
+  .dm-presets button, .dm-tax-btn {
     padding: 6px 12px;
     border-radius: 6px;
     border: 1px solid var(--border);
@@ -72,9 +72,20 @@ title: "Deficit Dynamics Model"
     cursor: pointer;
     font-family: inherit;
   }
-  .dm-presets button:hover {
+  .dm-presets button:hover, .dm-tax-btn:hover {
     background: var(--c-fog);
     border-color: var(--c-navy);
+  }
+  .dm-tax-btn.dm-active {
+    background: var(--c-navy);
+    color: #fff;
+    border-color: var(--c-navy);
+  }
+  .dm-tax-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
   }
   .dm-readout {
     margin: 20px 0;
@@ -92,6 +103,21 @@ title: "Deficit Dynamics Model"
     color: var(--c-navy);
     font-weight: 700;
   }
+  .dm-tier-readout {
+    margin: 16px 0;
+    padding: 14px 18px;
+    background: var(--c-fog);
+    border-left: 3px solid var(--c-teal);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .dm-tier-readout strong {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+  }
+  .dm-tier-1-color { color: var(--series-tier-1); }
+  .dm-tier-2-color { color: var(--series-tier-2); }
+  .dm-tier-3-color { color: var(--series-tier-3); }
   .dm-svg {
     display: block;
     width: 100%;
@@ -111,6 +137,36 @@ title: "Deficit Dynamics Model"
   }
   .dm-svg .dm-line-proj {
     stroke-dasharray: 6 4;
+  }
+  .dm-svg .dm-tier-1-line {
+    fill: none;
+    stroke: var(--series-tier-1);
+    stroke-width: 2.5;
+    stroke-dasharray: 6 4;
+  }
+  .dm-svg .dm-tier-2-line {
+    fill: none;
+    stroke: var(--series-tier-2);
+    stroke-width: 2.5;
+    stroke-dasharray: 6 4;
+  }
+  .dm-svg .dm-tier-3-line {
+    fill: none;
+    stroke: var(--series-tier-3);
+    stroke-width: 2.5;
+    stroke-dasharray: 6 4;
+  }
+  .dm-svg .dm-tier-1-fill {
+    fill: var(--series-tier-1);
+    opacity: 0.10;
+  }
+  .dm-svg .dm-tier-2-fill {
+    fill: var(--series-tier-2);
+    opacity: 0.08;
+  }
+  .dm-svg .dm-tier-3-fill {
+    fill: var(--series-tier-3);
+    opacity: 0.06;
   }
   .dm-svg .dm-deficit-fill {
     fill: var(--c-buoy);
@@ -169,6 +225,15 @@ title: "Deficit Dynamics Model"
   .dm-svg .dm-end-label-exp {
     fill: var(--c-buoy);
   }
+  .dm-svg .dm-end-label-t1 {
+    fill: var(--series-tier-1);
+  }
+  .dm-svg .dm-end-label-t2 {
+    fill: var(--series-tier-2);
+  }
+  .dm-svg .dm-end-label-t3 {
+    fill: var(--series-tier-3);
+  }
   .dm-svg .dm-legend-bg {
     fill: var(--surface);
     stroke: var(--border);
@@ -181,13 +246,34 @@ title: "Deficit Dynamics Model"
     stroke: var(--c-buoy);
     stroke-width: 2.5;
   }
-  .dm-svg .dm-legend-swatch-dash {
+  .dm-svg .dm-legend-swatch-t1 {
+    stroke: var(--series-tier-1);
+    stroke-width: 2.5;
+    stroke-dasharray: 6 4;
+  }
+  .dm-svg .dm-legend-swatch-t2 {
+    stroke: var(--series-tier-2);
+    stroke-width: 2.5;
+    stroke-dasharray: 6 4;
+  }
+  .dm-svg .dm-legend-swatch-t3 {
+    stroke: var(--series-tier-3);
+    stroke-width: 2.5;
     stroke-dasharray: 6 4;
   }
   .dm-svg .dm-legend-text {
     font-size: 11px;
     fill: var(--text);
     font-family: inherit;
+  }
+  .dm-svg .dm-legend-swatch-solid {
+    stroke: var(--text-muted);
+    stroke-width: 2.5;
+  }
+  .dm-svg .dm-legend-swatch-dash {
+    stroke: var(--text-muted);
+    stroke-width: 2.5;
+    stroke-dasharray: 6 4;
   }
   .dm-hidden {
     display: none;
@@ -196,6 +282,11 @@ title: "Deficit Dynamics Model"
 
 <h1 class="h-center">Deficit Dynamics: The Lines Already Crossed</h1>
 <p class="subtitle h-center">The left side is Marblehead's actual budget history from ACFRs. The right side projects forward at the growth rates you choose. The gap between the lines is what free cash and reserves have been covering since FY18.</p>
+
+<div class="dm-tax-row">
+  <button type="button" class="dm-tax-btn" id="dm-tax-btn">Show as annual tax bill per average home</button>
+  <span class="dm-hint" id="dm-tax-hint">Based on average single-family assessed value of $1,291,507</span>
+</div>
 
 <div class="dm-readout">
   <div class="dm-readout-line">Projected FY40 gap: <strong id="dm-gap">$12.6M</strong> <span id="dm-gap-label">annual deficit</span>.</div>
@@ -237,7 +328,7 @@ title: "Deficit Dynamics Model"
   <div class="dm-control">
     <span class="dm-control-label">Override at FY28: <span class="dm-value" id="dm-override-val">$0.0M</span></span>
     <input type="range" id="dm-override" min="0" max="15" step="0.5" value="0">
-    <div class="dm-hint">A one-time step up in the revenue line.</div>
+    <div class="dm-hint">A one-time step up in the revenue line. The ballot options are $9M, $12M, or $15M.</div>
   </div>
   <div class="dm-control">
     <span class="dm-control-label">&nbsp;</span>
@@ -253,9 +344,38 @@ title: "Deficit Dynamics Model"
     <button type="button" data-preset="baseline">Baseline (no override)</button>
     <button type="button" data-preset="no-ratchet">Override, no ratchet</button>
     <button type="button" data-preset="ratchet">Override with ratchet</button>
-    <button type="button" data-preset="matched">Matched slopes (3.5/3.5)</button>
+    <button type="button" data-preset="balanced">Balanced budget (3.5/3.5)</button>
   </div>
 </div>
+
+<h2>How long does each tier last?</h2>
+<p>The three ballot questions ask voters to choose among $9M, $12M, or $15M. Below, the same growth rates from the sliders above are applied to all three tiers simultaneously, without ratchet. The question each line answers: how many years before expenses catch the boosted revenue line again?</p>
+
+<div class="dm-tier-readout" id="dm-tier-readout">
+  <div><strong class="dm-tier-1-color">Tier 1 ($9M):</strong> <span id="dm-tier1-text">buys until FY33 (5 years)</span></div>
+  <div><strong class="dm-tier-2-color">Tier 2 ($12M):</strong> <span id="dm-tier2-text">buys until FY35 (7 years)</span></div>
+  <div><strong class="dm-tier-3-color">Tier 3 ($15M):</strong> <span id="dm-tier3-text">buys until FY37 (9 years)</span></div>
+</div>
+
+<svg class="dm-svg" viewBox="0 0 720 340" role="img" aria-labelledby="dm-tier-title dm-tier-desc">
+  <title id="dm-tier-title">Three override tiers compared against expenses, FY24 to FY40</title>
+  <desc id="dm-tier-desc">Four lines: expenses and three revenue scenarios (Tier 1 at $9M, Tier 2 at $12M, Tier 3 at $15M), each showing when the override headroom runs out.</desc>
+  <g id="dt-grid"></g>
+  <g id="dt-fills"></g>
+  <path id="dt-exp" class="dm-exp-line dm-line-proj"></path>
+  <path id="dt-rev-base" class="dm-rev-line dm-line-proj"></path>
+  <path id="dt-tier1" class="dm-tier-1-line"></path>
+  <path id="dt-tier2" class="dm-tier-2-line"></path>
+  <path id="dt-tier3" class="dm-tier-3-line"></path>
+  <line id="dt-override-marker" class="dm-override-marker dm-hidden"></line>
+  <text id="dt-override-label" class="dm-override-label dm-hidden" text-anchor="middle">Override</text>
+  <text id="dt-end-exp" class="dm-end-label dm-end-label-exp"></text>
+  <text id="dt-end-base" class="dm-end-label dm-end-label-rev"></text>
+  <text id="dt-end-t1" class="dm-end-label dm-end-label-t1"></text>
+  <text id="dt-end-t2" class="dm-end-label dm-end-label-t2"></text>
+  <text id="dt-end-t3" class="dm-end-label dm-end-label-t3"></text>
+  <g id="dt-legend"></g>
+</svg>
 
 <h2>What this shows</h2>
 <p>The two lines crossed in FY18. Since then, Marblehead's general fund expenditures have exceeded its budgetary revenues every year. The gap has been bridged by drawing down free cash, which peaked at $10.2M in FY23 before the <abbr class="g" title="Finance Committee">FinCom</abbr> flagged the reliance as unsustainable.</p>
@@ -270,37 +390,62 @@ title: "Deficit Dynamics Model"
   <summary>Notes and methodology</summary>
   <p>Historical revenue and expenditure figures (FY15 to FY24) are from the General Fund Budgetary Comparison schedules in each year's <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>. These are budgetary-basis numbers, not GAAP. The data file is <a href="../data/general_fund_budgetary_FY15-24.csv">general_fund_budgetary_FY15-24.csv</a>.<sup class="cite" data-href="../data/general_fund_budgetary_FY15-24.csv" data-source="ACFRs FY15 through FY24, General Fund Budgetary Comparison schedules"></sup></p>
   <p>Free cash draw history is from <a href="../data/free_cash_operating_history.csv">free_cash_operating_history.csv</a>, sourced from FinCom Annual Reports and ATM warrant articles.<sup class="cite" data-href="../data/free_cash_operating_history.csv" data-source="FinCom Annual Reports, ATM warrant articles"></sup></p>
+  <p>The tax bill conversion uses $132.36 per $1M of override, derived from the town's <a href="../data/override_tax_impact_asf.csv">override tax impact data</a> for an average single-family home assessed at $1,291,507.<sup class="cite" data-href="../data/override_tax_impact_asf.csv" data-source="Override tax impact schedule, average single-family assessed value $1,291,507"></sup></p>
   <p>Projections use constant annual compounding, which is a simplification. Real budgets have lumpy cost spikes (<abbr class="g" title="Group Insurance Commission">GIC</abbr> rate jumps, <abbr class="g" title="Public Employee Retirement Administration Commission">PERAC</abbr> revaluations) and uneven revenue growth.</p>
   <p>The "ratchet" toggle models the behavioral adaptation theory as "expense line immediately jumps by the full override amount and then resumes its prior slope." A more sophisticated version would model the expense slope itself changing post-override.</p>
 </details>
 
 <script>
 (function() {
-  // Historical data from general_fund_budgetary_FY15-24.csv (in $M)
+  // === Historical data from general_fund_budgetary_FY15-24.csv (in $M) ===
   var histRev = [71.32, 74.06, 77.06, 79.73, 82.54, 84.77, 85.39, 91.45, 95.13, 98.79];
   var histExp = [70.50, 73.20, 76.86, 81.76, 83.27, 85.21, 85.80, 93.58, 96.83, 100.10];
 
-  var startYear = 15; // FY15
-  var endYear = 40;   // FY40
+  // Override tiers on the ballot
+  var tierAmounts = [9, 12, 15];
+  var tierLabels = ['Tier 1', 'Tier 2', 'Tier 3'];
+
+  // Tax bill conversion: $/yr per $1M, from override_tax_impact_asf.csv
+  // $15M override = $1,985.39/yr at full phase-in for avg home ($1,291,507)
+  var taxFactor = 1985.39 / 15;  // 132.36
+
+  var startYear = 15;
+  var endYear = 40;
   var nYears = endYear - startYear + 1; // 26
-  var histCount = histRev.length; // 10 (FY15-FY24)
+  var histCount = histRev.length; // 10
   var lastHistIdx = histCount - 1; // 9 = FY24
   var overrideYearIdx = 13; // FY28
 
-  var svgW = 720;
-  var svgH = 400;
-  var marginL = 60;
-  var marginR = 50;
-  var marginT = 24;
-  var marginB = 60;
-  var plotW = svgW - marginL - marginR;
-  var plotH = svgH - marginT - marginB;
+  var taxMode = false;
 
-  function xScale(i) { return marginL + (i / (nYears - 1)) * plotW; }
+  // === Main chart layout ===
+  var svgW = 720, svgH = 400;
+  var mL = 70, mR = 55, mT = 24, mB = 60;
+  var plotW = svgW - mL - mR;
+  var plotH = svgH - mT - mB;
+
+  function xScale(i) { return mL + (i / (nYears - 1)) * plotW; }
 
   var yMin, yMax;
-  function yScale(v) { return marginT + (1 - (v - yMin) / (yMax - yMin)) * plotH; }
+  function yScale(v) { return mT + (1 - (v - yMin) / (yMax - yMin)) * plotH; }
 
+  // === Tier chart layout ===
+  var tsvgW = 720, tsvgH = 340;
+  var tmL = 70, tmR = 55, tmT = 24, tmB = 50;
+  var tPlotW = tsvgW - tmL - tmR;
+  var tPlotH = tsvgH - tmT - tmB;
+
+  // Tier chart shows FY24-FY40 (indices lastHistIdx..nYears-1 in main arrays)
+  var tIdx0 = lastHistIdx;
+  var tIdxN = nYears - 1;
+  var tCount = tIdxN - tIdx0 + 1; // 17
+
+  function txScale(i) { return tmL + ((i - tIdx0) / (tIdxN - tIdx0)) * tPlotW; }
+
+  var tyMin, tyMax;
+  function tyScale(v) { return tmT + (1 - (v - tyMin) / (tyMax - tyMin)) * tPlotH; }
+
+  // === DOM refs ===
   var revGrowthEl = document.getElementById('dm-rev-growth');
   var expGrowthEl = document.getElementById('dm-exp-growth');
   var overrideEl = document.getElementById('dm-override');
@@ -310,7 +455,55 @@ title: "Deficit Dynamics Model"
   var overrideVal = document.getElementById('dm-override-val');
   var gapEl = document.getElementById('dm-gap');
   var gapLabelEl = document.getElementById('dm-gap-label');
+  var taxBtn = document.getElementById('dm-tax-btn');
+  var taxHint = document.getElementById('dm-tax-hint');
 
+  // === Formatting ===
+  function fmtM(v) {
+    if (taxMode) {
+      var d = Math.round(v * taxFactor);
+      return '$' + d.toLocaleString() + '/yr';
+    }
+    return '$' + v.toFixed(1) + 'M';
+  }
+
+  function fmtAxis(v) {
+    if (taxMode) {
+      var d = Math.round(v * taxFactor);
+      if (d >= 10000) return '$' + (d / 1000).toFixed(0) + 'K';
+      return '$' + d.toLocaleString();
+    }
+    return '$' + v + 'M';
+  }
+
+  function fmtEnd(v) {
+    if (taxMode) {
+      var d = Math.round(v * taxFactor);
+      return '$' + d.toLocaleString();
+    }
+    return '$' + v.toFixed(0) + 'M';
+  }
+
+  function fmtOverride(v) {
+    if (taxMode) {
+      var d = Math.round(v * taxFactor);
+      return '$' + d.toLocaleString() + '/yr';
+    }
+    return '$' + v.toFixed(1) + 'M';
+  }
+
+  // === Nice tick step ===
+  function niceStep(range) {
+    var rough = range / 5;
+    var mag = Math.pow(10, Math.floor(Math.log10(rough)));
+    var res = rough / mag;
+    if (res <= 1.5) return mag;
+    if (res <= 3.5) return 2 * mag;
+    if (res <= 7.5) return 5 * mag;
+    return 10 * mag;
+  }
+
+  // === Compute main chart data ===
   function compute() {
     var revG = parseFloat(revGrowthEl.value) / 100;
     var expG = parseFloat(expGrowthEl.value) / 100;
@@ -320,7 +513,6 @@ title: "Deficit Dynamics Model"
     var rev = histRev.slice();
     var exp = histExp.slice();
 
-    // Project from FY24 actuals
     var r = rev[lastHistIdx];
     var e = exp[lastHistIdx];
     for (var i = histCount; i < nYears; i++) {
@@ -336,29 +528,61 @@ title: "Deficit Dynamics Model"
     return { rev: rev, exp: exp, override: ovr };
   }
 
-  function computeYRange(rev, exp) {
-    var allVals = rev.concat(exp);
-    var lo = Math.min.apply(null, allVals);
-    var hi = Math.max.apply(null, allVals);
-    var pad = (hi - lo) * 0.12;
-    // Round to nice numbers
-    yMin = Math.floor((lo - pad) / 10) * 10;
-    yMax = Math.ceil((hi + pad) / 10) * 10;
-    if (yMax - yMin < 40) yMax = yMin + 40;
+  // === Compute tier chart data ===
+  function computeTiers() {
+    var revG = parseFloat(revGrowthEl.value) / 100;
+    var expG = parseFloat(expGrowthEl.value) / 100;
+
+    // Baseline (no override)
+    var baseRev = histRev.slice();
+    var exp = histExp.slice();
+    var r = baseRev[lastHistIdx];
+    var e = exp[lastHistIdx];
+    for (var i = histCount; i < nYears; i++) {
+      r = r * (1 + revG);
+      e = e * (1 + expG);
+      baseRev.push(r);
+      exp.push(e);
+    }
+
+    // Three tier revenue lines
+    var tierRevs = [];
+    for (var t = 0; t < tierAmounts.length; t++) {
+      var tr = histRev.slice();
+      var rv = tr[lastHistIdx];
+      for (var i = histCount; i < nYears; i++) {
+        rv = rv * (1 + revG);
+        if (i === overrideYearIdx) rv += tierAmounts[t];
+        tr.push(rv);
+      }
+      tierRevs.push(tr);
+    }
+
+    return { baseRev: baseRev, exp: exp, tierRevs: tierRevs };
   }
 
-  function buildLinePath(values, fromIdx, toIdx) {
+  // === Find when expenses catch the tier revenue line ===
+  function findRunout(tierRev, exp) {
+    // After override at FY28, find first year where exp >= tierRev
+    for (var i = overrideYearIdx + 1; i < nYears; i++) {
+      if (exp[i] >= tierRev[i]) return startYear + i;
+    }
+    return null; // doesn't cross within FY40
+  }
+
+  // === Path builders ===
+  function buildPath(values, fromIdx, toIdx, xFn, yFn) {
     var d = '';
     for (var i = fromIdx; i <= toIdx; i++) {
-      d += (i === fromIdx ? 'M' : 'L') + xScale(i).toFixed(1) + ',' + yScale(values[i]).toFixed(1) + ' ';
+      d += (i === fromIdx ? 'M' : 'L') + xFn(i).toFixed(1) + ',' + yFn(values[i]).toFixed(1) + ' ';
     }
     return d;
   }
 
-  function buildDeficitPath(rev, exp) {
+  function buildDeficitPath(rev, exp, fromIdx, toIdx, xFn, yFn) {
     var segments = [];
     var current = null;
-    for (var i = 0; i < rev.length; i++) {
+    for (var i = fromIdx; i <= toIdx; i++) {
       if (exp[i] > rev[i]) {
         if (!current) current = [];
         current.push(i);
@@ -372,38 +596,76 @@ title: "Deficit Dynamics Model"
     for (var s = 0; s < segments.length; s++) {
       var pts = segments[s];
       if (pts.length === 0) continue;
-      d += 'M' + xScale(pts[0]).toFixed(1) + ',' + yScale(exp[pts[0]]).toFixed(1) + ' ';
+      d += 'M' + xFn(pts[0]).toFixed(1) + ',' + yFn(exp[pts[0]]).toFixed(1) + ' ';
       for (var i = 1; i < pts.length; i++) {
-        d += 'L' + xScale(pts[i]).toFixed(1) + ',' + yScale(exp[pts[i]]).toFixed(1) + ' ';
+        d += 'L' + xFn(pts[i]).toFixed(1) + ',' + yFn(exp[pts[i]]).toFixed(1) + ' ';
       }
       for (var i = pts.length - 1; i >= 0; i--) {
-        d += 'L' + xScale(pts[i]).toFixed(1) + ',' + yScale(rev[pts[i]]).toFixed(1) + ' ';
+        d += 'L' + xFn(pts[i]).toFixed(1) + ',' + yFn(rev[pts[i]]).toFixed(1) + ' ';
       }
       d += 'Z ';
     }
     return d;
   }
 
-  function render() {
+  // Build a surplus fill between tier rev (above) and exp (below)
+  function buildSurplusPath(tierRev, exp, fromIdx, toIdx, xFn, yFn) {
+    var segments = [];
+    var current = null;
+    for (var i = fromIdx; i <= toIdx; i++) {
+      if (tierRev[i] > exp[i]) {
+        if (!current) current = [];
+        current.push(i);
+      } else {
+        if (current) { segments.push(current); current = null; }
+      }
+    }
+    if (current) segments.push(current);
+
+    var d = '';
+    for (var s = 0; s < segments.length; s++) {
+      var pts = segments[s];
+      if (pts.length === 0) continue;
+      d += 'M' + xFn(pts[0]).toFixed(1) + ',' + yFn(tierRev[pts[0]]).toFixed(1) + ' ';
+      for (var i = 1; i < pts.length; i++) {
+        d += 'L' + xFn(pts[i]).toFixed(1) + ',' + yFn(tierRev[pts[i]]).toFixed(1) + ' ';
+      }
+      for (var i = pts.length - 1; i >= 0; i--) {
+        d += 'L' + xFn(pts[i]).toFixed(1) + ',' + yFn(exp[pts[i]]).toFixed(1) + ' ';
+      }
+      d += 'Z ';
+    }
+    return d;
+  }
+
+  function computeYRange(rev, exp) {
+    var allVals = rev.concat(exp);
+    var lo = Math.min.apply(null, allVals);
+    var hi = Math.max.apply(null, allVals);
+    var pad = (hi - lo) * 0.12;
+    yMin = Math.floor((lo - pad) / 10) * 10;
+    yMax = Math.ceil((hi + pad) / 10) * 10;
+    if (yMax - yMin < 40) yMax = yMin + 40;
+  }
+
+  // === Render main chart ===
+  function renderMain() {
     var data = compute();
     var rev = data.rev;
     var exp = data.exp;
 
     computeYRange(rev, exp);
-    drawGrid();
+    drawMainGrid();
 
-    // Historical lines (solid): FY15-FY24
-    document.getElementById('dm-rev-hist').setAttribute('d', buildLinePath(rev, 0, lastHistIdx));
-    document.getElementById('dm-exp-hist').setAttribute('d', buildLinePath(exp, 0, lastHistIdx));
+    document.getElementById('dm-rev-hist').setAttribute('d', buildPath(rev, 0, lastHistIdx, xScale, yScale));
+    document.getElementById('dm-exp-hist').setAttribute('d', buildPath(exp, 0, lastHistIdx, xScale, yScale));
+    document.getElementById('dm-rev-proj').setAttribute('d', buildPath(rev, lastHistIdx, nYears - 1, xScale, yScale));
+    document.getElementById('dm-exp-proj').setAttribute('d', buildPath(exp, lastHistIdx, nYears - 1, xScale, yScale));
 
-    // Projected lines (dashed): FY24-FY40 (overlap at FY24 for continuity)
-    document.getElementById('dm-rev-proj').setAttribute('d', buildLinePath(rev, lastHistIdx, nYears - 1));
-    document.getElementById('dm-exp-proj').setAttribute('d', buildLinePath(exp, lastHistIdx, nYears - 1));
-
-    // Deficit fill across all years
+    // Deficit fill
     var fillG = document.getElementById('dm-deficit-fill');
     fillG.innerHTML = '';
-    var fillD = buildDeficitPath(rev, exp);
+    var fillD = buildDeficitPath(rev, exp, 0, nYears - 1, xScale, yScale);
     if (fillD) {
       var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       path.setAttribute('d', fillD);
@@ -411,21 +673,17 @@ title: "Deficit Dynamics Model"
       fillG.appendChild(path);
     }
 
-    // Actual/projected boundary line
+    // Boundary
     var bx = xScale(lastHistIdx);
-    var bndLine = document.getElementById('dm-boundary');
-    bndLine.setAttribute('x1', bx);
-    bndLine.setAttribute('x2', bx);
-    bndLine.setAttribute('y1', marginT);
-    bndLine.setAttribute('y2', marginT + plotH);
+    var bnd = document.getElementById('dm-boundary');
+    bnd.setAttribute('x1', bx); bnd.setAttribute('x2', bx);
+    bnd.setAttribute('y1', mT); bnd.setAttribute('y2', mT + plotH);
     var lblL = document.getElementById('dm-boundary-label-l');
-    lblL.setAttribute('x', bx - 6);
-    lblL.setAttribute('y', marginT + plotH + 30);
+    lblL.setAttribute('x', bx - 6); lblL.setAttribute('y', mT + plotH + 30);
     lblL.setAttribute('text-anchor', 'end');
     lblL.textContent = 'Actual \u2190';
     var lblR = document.getElementById('dm-boundary-label-r');
-    lblR.setAttribute('x', bx + 6);
-    lblR.setAttribute('y', marginT + plotH + 30);
+    lblR.setAttribute('x', bx + 6); lblR.setAttribute('y', mT + plotH + 30);
     lblR.setAttribute('text-anchor', 'start');
     lblR.textContent = '\u2192 Projected';
 
@@ -433,12 +691,10 @@ title: "Deficit Dynamics Model"
     var crossIdx = 3;
     var crossDot = document.getElementById('dm-crossover-dot');
     var crossLabel = document.getElementById('dm-crossover-label');
-    // Only show if FY18 is indeed a crossover (expenses > revenue)
     if (exp[crossIdx] > rev[crossIdx]) {
       var cx = xScale(crossIdx);
       var cy = yScale((rev[crossIdx] + exp[crossIdx]) / 2);
-      crossDot.setAttribute('cx', cx);
-      crossDot.setAttribute('cy', cy);
+      crossDot.setAttribute('cx', cx); crossDot.setAttribute('cy', cy);
       crossDot.classList.remove('dm-hidden');
       crossLabel.setAttribute('x', cx);
       crossLabel.setAttribute('y', yScale(exp[crossIdx]) - 10);
@@ -455,98 +711,269 @@ title: "Deficit Dynamics Model"
     var markerLabel = document.getElementById('dm-override-label');
     if (data.override > 0) {
       var mx = xScale(overrideYearIdx);
-      marker.setAttribute('x1', mx);
-      marker.setAttribute('x2', mx);
-      marker.setAttribute('y1', marginT);
-      marker.setAttribute('y2', marginT + plotH);
+      marker.setAttribute('x1', mx); marker.setAttribute('x2', mx);
+      marker.setAttribute('y1', mT); marker.setAttribute('y2', mT + plotH);
       marker.classList.remove('dm-hidden');
-      markerLabel.setAttribute('x', mx);
-      markerLabel.setAttribute('y', marginT - 4);
+      markerLabel.setAttribute('x', mx); markerLabel.setAttribute('y', mT - 4);
       markerLabel.classList.remove('dm-hidden');
     } else {
       marker.classList.add('dm-hidden');
       markerLabel.classList.add('dm-hidden');
     }
 
-    // End labels at FY40
-    var lastIdx = nYears - 1;
+    // End labels
+    var li = nYears - 1;
     var endRev = document.getElementById('dm-end-rev');
-    endRev.setAttribute('x', xScale(lastIdx) + 6);
-    endRev.setAttribute('y', yScale(rev[lastIdx]) + 4);
+    endRev.setAttribute('x', xScale(li) + 6);
+    endRev.setAttribute('y', yScale(rev[li]) + 4);
     endRev.setAttribute('text-anchor', 'start');
-    endRev.textContent = '$' + rev[lastIdx].toFixed(0) + 'M';
+    endRev.textContent = fmtEnd(rev[li]);
     var endExp = document.getElementById('dm-end-exp');
-    endExp.setAttribute('x', xScale(lastIdx) + 6);
-    endExp.setAttribute('y', yScale(exp[lastIdx]) + 4);
+    endExp.setAttribute('x', xScale(li) + 6);
+    endExp.setAttribute('y', yScale(exp[li]) + 4);
     endExp.setAttribute('text-anchor', 'start');
-    endExp.textContent = '$' + exp[lastIdx].toFixed(0) + 'M';
+    endExp.textContent = fmtEnd(exp[li]);
 
     // Readout
-    var gap = exp[lastIdx] - rev[lastIdx];
+    var gap = exp[li] - rev[li];
     if (gap > 0.05) {
-      gapEl.textContent = '$' + gap.toFixed(1) + 'M';
+      gapEl.textContent = fmtM(gap);
       gapLabelEl.textContent = 'annual deficit';
     } else if (gap < -0.05) {
-      gapEl.textContent = '$' + Math.abs(gap).toFixed(1) + 'M';
+      gapEl.textContent = fmtM(Math.abs(gap));
       gapLabelEl.textContent = 'annual surplus';
     } else {
-      gapEl.textContent = '$0.0M';
+      gapEl.textContent = taxMode ? '$0/yr' : '$0.0M';
       gapLabelEl.textContent = 'balanced';
     }
   }
 
-  function drawGrid() {
+  function drawMainGrid() {
     var grid = '';
-    // X-axis: label every 5 years, grid every 5 years
     for (var yr = startYear; yr <= endYear; yr++) {
       var i = yr - startYear;
-      if (yr % 5 === 0) {
+      if (yr % 5 === 0 || yr === startYear || yr === endYear) {
         var x = xScale(i);
-        grid += '<line class="dm-grid-line" x1="' + x + '" y1="' + marginT + '" x2="' + x + '" y2="' + (marginT + plotH) + '"></line>';
-        grid += '<text class="dm-axis-label" x="' + x + '" y="' + (marginT + plotH + 16) + '" text-anchor="middle">FY' + yr + '</text>';
+        grid += '<line class="dm-grid-line" x1="' + x + '" y1="' + mT + '" x2="' + x + '" y2="' + (mT + plotH) + '"></line>';
+        grid += '<text class="dm-axis-label" x="' + x + '" y="' + (mT + plotH + 16) + '" text-anchor="middle">FY' + yr + '</text>';
       }
     }
-    // Also label FY15 and FY40 if not already
-    var firstX = xScale(0);
-    grid += '<text class="dm-axis-label" x="' + firstX + '" y="' + (marginT + plotH + 16) + '" text-anchor="middle">FY' + startYear + '</text>';
-    var lastX = xScale(nYears - 1);
-    grid += '<text class="dm-axis-label" x="' + lastX + '" y="' + (marginT + plotH + 16) + '" text-anchor="middle">FY' + endYear + '</text>';
 
-    // Y-axis: compute nice step
+    // Y-axis ticks
     var range = yMax - yMin;
-    var step = range <= 80 ? 10 : range <= 160 ? 20 : 40;
-    for (var v = yMin; v <= yMax; v += step) {
-      var y = yScale(v);
-      grid += '<line class="dm-grid-line" x1="' + marginL + '" y1="' + y + '" x2="' + (marginL + plotW) + '" y2="' + y + '"></line>';
-      grid += '<text class="dm-axis-label" x="' + (marginL - 8) + '" y="' + (y + 4) + '" text-anchor="end">$' + v + 'M</text>';
+    if (taxMode) {
+      var taxLo = yMin * taxFactor;
+      var taxHi = yMax * taxFactor;
+      var tStep = niceStep(taxHi - taxLo);
+      for (var tv = Math.ceil(taxLo / tStep) * tStep; tv <= taxHi; tv += tStep) {
+        var mVal = tv / taxFactor;
+        var y = yScale(mVal);
+        grid += '<line class="dm-grid-line" x1="' + mL + '" y1="' + y + '" x2="' + (mL + plotW) + '" y2="' + y + '"></line>';
+        var label = tv >= 10000 ? '$' + (tv / 1000).toFixed(0) + 'K' : '$' + tv.toLocaleString();
+        grid += '<text class="dm-axis-label" x="' + (mL - 8) + '" y="' + (y + 4) + '" text-anchor="end">' + label + '</text>';
+      }
+    } else {
+      var step = range <= 80 ? 10 : range <= 160 ? 20 : 40;
+      for (var v = yMin; v <= yMax; v += step) {
+        var y = yScale(v);
+        grid += '<line class="dm-grid-line" x1="' + mL + '" y1="' + y + '" x2="' + (mL + plotW) + '" y2="' + y + '"></line>';
+        grid += '<text class="dm-axis-label" x="' + (mL - 8) + '" y="' + (y + 4) + '" text-anchor="end">$' + v + 'M</text>';
+      }
     }
     document.getElementById('dm-grid').innerHTML = grid;
 
     // Legend
-    var lx = marginL + 10;
-    var ly = marginT + 10;
+    var lx = mL + 10, ly = mT + 10;
     var legend = '<g transform="translate(' + lx + ',' + ly + ')">'
       + '<rect class="dm-legend-bg" width="180" height="60" rx="4"></rect>'
       + '<line class="dm-legend-swatch-rev" x1="12" y1="14" x2="32" y2="14"></line>'
       + '<text class="dm-legend-text" x="38" y="17">Revenue</text>'
       + '<line class="dm-legend-swatch-exp" x1="12" y1="30" x2="32" y2="30"></line>'
       + '<text class="dm-legend-text" x="38" y="33">Expenses</text>'
-      + '<line class="dm-grid-line" x1="12" y1="46" x2="22" y2="46" style="stroke-dasharray:none;stroke-width:2.5;stroke:var(--text-muted)"></line>'
-      + '<line class="dm-grid-line" x1="22" y1="46" x2="32" y2="46" style="stroke-dasharray:6 4;stroke-width:2.5;stroke:var(--text-muted)"></line>'
+      + '<line class="dm-legend-swatch-solid" x1="12" y1="46" x2="22" y2="46"></line>'
+      + '<line class="dm-legend-swatch-dash" x1="22" y1="46" x2="32" y2="46"></line>'
       + '<text class="dm-legend-text" x="38" y="49">Solid = actual, dashed = projected</text>'
       + '</g>';
     document.getElementById('dm-legend').innerHTML = legend;
   }
 
+  // === Render tier chart ===
+  function renderTiers() {
+    var td = computeTiers();
+    var exp = td.exp;
+    var baseRev = td.baseRev;
+    var tierRevs = td.tierRevs;
+
+    // Compute y range from all tier + exp values in the FY24-FY40 window
+    var allVals = [];
+    for (var i = tIdx0; i <= tIdxN; i++) {
+      allVals.push(exp[i], baseRev[i]);
+      for (var t = 0; t < tierRevs.length; t++) allVals.push(tierRevs[t][i]);
+    }
+    var lo = Math.min.apply(null, allVals);
+    var hi = Math.max.apply(null, allVals);
+    var pad = (hi - lo) * 0.12;
+    tyMin = Math.floor((lo - pad) / 10) * 10;
+    tyMax = Math.ceil((hi + pad) / 10) * 10;
+    if (tyMax - tyMin < 40) tyMax = tyMin + 40;
+
+    drawTierGrid();
+
+    // Draw lines
+    document.getElementById('dt-exp').setAttribute('d', buildPath(exp, tIdx0, tIdxN, txScale, tyScale));
+    document.getElementById('dt-rev-base').setAttribute('d', buildPath(baseRev, tIdx0, tIdxN, txScale, tyScale));
+
+    var tierPathIds = ['dt-tier1', 'dt-tier2', 'dt-tier3'];
+    var tierFillClasses = ['dm-tier-1-fill', 'dm-tier-2-fill', 'dm-tier-3-fill'];
+    for (var t = 0; t < tierRevs.length; t++) {
+      document.getElementById(tierPathIds[t]).setAttribute('d', buildPath(tierRevs[t], tIdx0, tIdxN, txScale, tyScale));
+    }
+
+    // Surplus fills (tier revenue above expenses)
+    var fillG = document.getElementById('dt-fills');
+    fillG.innerHTML = '';
+    for (var t = tierRevs.length - 1; t >= 0; t--) {
+      var sp = buildSurplusPath(tierRevs[t], exp, tIdx0, tIdxN, txScale, tyScale);
+      if (sp) {
+        var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', sp);
+        path.setAttribute('class', tierFillClasses[t]);
+        fillG.appendChild(path);
+      }
+    }
+    // Also show deficit fill where baseline rev < exp (to show the problem)
+    var dfp = buildDeficitPath(baseRev, exp, tIdx0, tIdxN, txScale, tyScale);
+    if (dfp) {
+      var dp = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      dp.setAttribute('d', dfp);
+      dp.setAttribute('class', 'dm-deficit-fill');
+      fillG.appendChild(dp);
+    }
+
+    // Override marker at FY28
+    var tMarker = document.getElementById('dt-override-marker');
+    var tMarkerLabel = document.getElementById('dt-override-label');
+    var tmx = txScale(overrideYearIdx);
+    tMarker.setAttribute('x1', tmx); tMarker.setAttribute('x2', tmx);
+    tMarker.setAttribute('y1', tmT); tMarker.setAttribute('y2', tmT + tPlotH);
+    tMarker.classList.remove('dm-hidden');
+    tMarkerLabel.setAttribute('x', tmx); tMarkerLabel.setAttribute('y', tmT - 4);
+    tMarkerLabel.classList.remove('dm-hidden');
+
+    // End labels
+    var endIds = ['dt-end-exp', 'dt-end-base', 'dt-end-t1', 'dt-end-t2', 'dt-end-t3'];
+    var endVals = [exp[tIdxN], baseRev[tIdxN], tierRevs[0][tIdxN], tierRevs[1][tIdxN], tierRevs[2][tIdxN]];
+    // Sort by value to stagger labels that are close together
+    var endItems = endIds.map(function(id, j) { return { id: id, val: endVals[j] }; });
+    endItems.sort(function(a, b) { return b.val - a.val; });
+    var lastY = -999;
+    for (var j = 0; j < endItems.length; j++) {
+      var el = document.getElementById(endItems[j].id);
+      var rawY = tyScale(endItems[j].val) + 4;
+      if (Math.abs(rawY - lastY) < 12) rawY = lastY + 12;
+      el.setAttribute('x', txScale(tIdxN) + 6);
+      el.setAttribute('y', rawY);
+      el.setAttribute('text-anchor', 'start');
+      el.textContent = fmtEnd(endItems[j].val);
+      lastY = rawY;
+    }
+
+    // Tier readout: "buys until FY__"
+    var tierTextEls = ['dm-tier1-text', 'dm-tier2-text', 'dm-tier3-text'];
+    for (var t = 0; t < tierRevs.length; t++) {
+      var runout = findRunout(tierRevs[t], exp);
+      var el = document.getElementById(tierTextEls[t]);
+      var tierCost = taxMode ? ' (' + fmtOverride(tierAmounts[t]) + ')' : '';
+      if (runout !== null) {
+        var yrsFromOverride = runout - (startYear + overrideYearIdx);
+        el.textContent = 'buys until FY' + runout + ' (' + yrsFromOverride + ' years)' + tierCost;
+      } else {
+        var yrsToEnd = endYear - (startYear + overrideYearIdx);
+        el.textContent = 'lasts beyond FY' + endYear + ' (' + yrsToEnd + '+ years)' + tierCost;
+      }
+    }
+
+    // Update tier readout labels with tax amounts
+    if (taxMode) {
+      for (var t = 0; t < tierAmounts.length; t++) {
+        var labelEl = document.querySelector('.dm-tier-readout div:nth-child(' + (t + 1) + ') strong');
+        if (labelEl) labelEl.textContent = tierLabels[t] + ' (' + fmtOverride(tierAmounts[t]) + '):';
+      }
+    } else {
+      for (var t = 0; t < tierAmounts.length; t++) {
+        var labelEl = document.querySelector('.dm-tier-readout div:nth-child(' + (t + 1) + ') strong');
+        if (labelEl) labelEl.textContent = tierLabels[t] + ' ($' + tierAmounts[t] + 'M):';
+      }
+    }
+  }
+
+  function drawTierGrid() {
+    var grid = '';
+    for (var yr = 25; yr <= endYear; yr++) {
+      var i = yr - startYear + startYear; // index in main array
+      // Actually: main array index for FYxx = xx - startYear
+      var mi = yr - startYear;
+      if (yr % 5 === 0 || yr === 24 || yr === endYear) {
+        var x = txScale(mi);
+        grid += '<line class="dm-grid-line" x1="' + x + '" y1="' + tmT + '" x2="' + x + '" y2="' + (tmT + tPlotH) + '"></line>';
+        grid += '<text class="dm-axis-label" x="' + x + '" y="' + (tmT + tPlotH + 16) + '" text-anchor="middle">FY' + yr + '</text>';
+      }
+    }
+    // Always label FY24 start
+    var fx24 = txScale(tIdx0);
+    grid += '<line class="dm-grid-line" x1="' + fx24 + '" y1="' + tmT + '" x2="' + fx24 + '" y2="' + (tmT + tPlotH) + '"></line>';
+    grid += '<text class="dm-axis-label" x="' + fx24 + '" y="' + (tmT + tPlotH + 16) + '" text-anchor="middle">FY24</text>';
+
+    // Y-axis
+    if (taxMode) {
+      var taxLo = tyMin * taxFactor;
+      var taxHi = tyMax * taxFactor;
+      var tStep = niceStep(taxHi - taxLo);
+      for (var tv = Math.ceil(taxLo / tStep) * tStep; tv <= taxHi; tv += tStep) {
+        var mVal = tv / taxFactor;
+        var y = tyScale(mVal);
+        grid += '<line class="dm-grid-line" x1="' + tmL + '" y1="' + y + '" x2="' + (tmL + tPlotW) + '" y2="' + y + '"></line>';
+        var label = tv >= 10000 ? '$' + (tv / 1000).toFixed(0) + 'K' : '$' + tv.toLocaleString();
+        grid += '<text class="dm-axis-label" x="' + (tmL - 8) + '" y="' + (y + 4) + '" text-anchor="end">' + label + '</text>';
+      }
+    } else {
+      var range = tyMax - tyMin;
+      var step = range <= 80 ? 10 : range <= 160 ? 20 : 40;
+      for (var v = tyMin; v <= tyMax; v += step) {
+        var y = tyScale(v);
+        grid += '<line class="dm-grid-line" x1="' + tmL + '" y1="' + y + '" x2="' + (tmL + tPlotW) + '" y2="' + y + '"></line>';
+        grid += '<text class="dm-axis-label" x="' + (tmL - 8) + '" y="' + (y + 4) + '" text-anchor="end">$' + v + 'M</text>';
+      }
+    }
+    document.getElementById('dt-grid').innerHTML = grid;
+
+    // Legend
+    var lx = tmL + 10, ly = tmT + 10;
+    var legend = '<g transform="translate(' + lx + ',' + ly + ')">'
+      + '<rect class="dm-legend-bg" width="200" height="76" rx="4"></rect>'
+      + '<line class="dm-legend-swatch-exp" x1="12" y1="14" x2="32" y2="14"></line>'
+      + '<text class="dm-legend-text" x="38" y="17">Expenses</text>'
+      + '<line class="dm-legend-swatch-t1" x1="12" y1="30" x2="32" y2="30"></line>'
+      + '<text class="dm-legend-text" x="38" y="33">Tier 1 ($9M)</text>'
+      + '<line class="dm-legend-swatch-t2" x1="12" y1="46" x2="32" y2="46"></line>'
+      + '<text class="dm-legend-text" x="38" y="49">Tier 2 ($12M)</text>'
+      + '<line class="dm-legend-swatch-t3" x1="12" y1="62" x2="32" y2="62"></line>'
+      + '<text class="dm-legend-text" x="38" y="65">Tier 3 ($15M)</text>'
+      + '</g>';
+    document.getElementById('dt-legend').innerHTML = legend;
+  }
+
+  // === Controls ===
   function updateLabels() {
     revGrowthVal.textContent = parseFloat(revGrowthEl.value).toFixed(1) + '%';
     expGrowthVal.textContent = parseFloat(expGrowthEl.value).toFixed(1) + '%';
-    overrideVal.textContent = '$' + parseFloat(overrideEl.value).toFixed(1) + 'M';
+    overrideVal.textContent = fmtOverride(parseFloat(overrideEl.value));
   }
 
   function onChange() {
     updateLabels();
-    render();
+    renderMain();
+    renderTiers();
   }
 
   [revGrowthEl, expGrowthEl, overrideEl].forEach(function(el) {
@@ -554,6 +981,16 @@ title: "Deficit Dynamics Model"
   });
   ratchetEl.addEventListener('change', onChange);
 
+  // Tax toggle
+  taxBtn.addEventListener('click', function() {
+    taxMode = !taxMode;
+    taxBtn.textContent = taxMode ? 'Show as town budget ($M)' : 'Show as annual tax bill per average home';
+    taxBtn.classList.toggle('dm-active', taxMode);
+    taxHint.style.display = taxMode ? '' : '';
+    onChange();
+  });
+
+  // Presets
   document.querySelectorAll('.dm-presets button').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var p = btn.dataset.preset;
@@ -572,7 +1009,7 @@ title: "Deficit Dynamics Model"
         expGrowthEl.value = 4.0;
         overrideEl.value = 10;
         ratchetEl.checked = true;
-      } else if (p === 'matched') {
+      } else if (p === 'balanced') {
         revGrowthEl.value = 3.5;
         expGrowthEl.value = 3.5;
         overrideEl.value = 0;
@@ -582,7 +1019,9 @@ title: "Deficit Dynamics Model"
     });
   });
 
+  // Initial render
   updateLabels();
-  render();
+  renderMain();
+  renderTiers();
 })();
 </script>
