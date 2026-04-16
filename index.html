@@ -225,6 +225,65 @@ og_url: https://marbleheaddata.org/
     margin-top: 3px;
   }
 
+  /* ── Tools row on landing ── */
+  .explore-tools {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--divider);
+  }
+  .explore-tools-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+    margin: 0 0 10px;
+    text-align: center;
+  }
+  .explore-tools-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .explore-tool-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    padding: 16px 14px;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .explore-tool-card:hover {
+    border-color: var(--c-teal);
+    box-shadow: var(--shadow-sm);
+  }
+  .explore-tool-icon {
+    width: 22px;
+    height: 22px;
+    color: var(--c-teal);
+    flex-shrink: 0;
+  }
+  .explore-tool-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .explore-tool-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+  @media (max-width: 400px) {
+    .explore-tools-row { grid-template-columns: 1fr; }
+  }
+
   /* Share strip on landing */
   .explore-share-strip {
     display: none;
@@ -1640,6 +1699,23 @@ og_url: https://marbleheaddata.org/
     <div class="explore-question-list" id="questionList">
       <!-- JS builds these from the actual question h1s -->
     </div>
+
+    <div class="explore-tools">
+      <p class="explore-tools-label">Run the numbers yourself</p>
+      <div class="explore-tools-row">
+        <a class="explore-tool-card" href="charts/deficit_model.html">
+          <svg class="explore-tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span class="explore-tool-title">Deficit Model</span>
+          <span class="explore-tool-desc">Set growth rates, toggle tiers, see when the gap reopens</span>
+        </a>
+        <a class="explore-tool-card" href="charts/town_explorer.html">
+          <svg class="explore-tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span class="explore-tool-title">Town Explorer</span>
+          <span class="explore-tool-desc">Filter, sort, and compare all 351 MA communities</span>
+        </a>
+      </div>
+    </div>
+
     <div class="explore-share-strip" id="shareStrip">
       <button type="button" class="explore-copy-link" data-copy-positions>
         <svg class="icon-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
