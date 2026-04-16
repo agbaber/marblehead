@@ -784,14 +784,11 @@ title: "Deficit Dynamics Model"
     // Legend
     var lx = mL + 10, ly = mT + 10;
     var legend = '<g transform="translate(' + lx + ',' + ly + ')">'
-      + '<rect class="dm-legend-bg" width="180" height="60" rx="4"></rect>'
-      + '<line class="dm-legend-swatch-rev" x1="12" y1="14" x2="32" y2="14"></line>'
-      + '<text class="dm-legend-text" x="38" y="17">Revenue</text>'
-      + '<line class="dm-legend-swatch-exp" x1="12" y1="30" x2="32" y2="30"></line>'
-      + '<text class="dm-legend-text" x="38" y="33">Expenses</text>'
-      + '<line class="dm-legend-swatch-solid" x1="12" y1="46" x2="22" y2="46"></line>'
-      + '<line class="dm-legend-swatch-dash" x1="22" y1="46" x2="32" y2="46"></line>'
-      + '<text class="dm-legend-text" x="38" y="49">Solid = actual, dashed = projected</text>'
+      + '<rect class="dm-legend-bg" width="110" height="40" rx="4"></rect>'
+      + '<line class="dm-legend-swatch-rev" x1="10" y1="14" x2="28" y2="14"></line>'
+      + '<text class="dm-legend-text" x="34" y="17">Revenue</text>'
+      + '<line class="dm-legend-swatch-exp" x1="10" y1="28" x2="28" y2="28"></line>'
+      + '<text class="dm-legend-text" x="34" y="31">Expenses</text>'
       + '</g>';
     document.getElementById('dm-legend').innerHTML = legend;
   }
@@ -949,15 +946,15 @@ title: "Deficit Dynamics Model"
     // Legend
     var lx = tmL + 10, ly = tmT + 10;
     var legend = '<g transform="translate(' + lx + ',' + ly + ')">'
-      + '<rect class="dm-legend-bg" width="200" height="76" rx="4"></rect>'
-      + '<line class="dm-legend-swatch-exp" x1="12" y1="14" x2="32" y2="14"></line>'
-      + '<text class="dm-legend-text" x="38" y="17">Expenses</text>'
-      + '<line class="dm-legend-swatch-t1" x1="12" y1="30" x2="32" y2="30"></line>'
-      + '<text class="dm-legend-text" x="38" y="33">Tier 1 ($9M)</text>'
-      + '<line class="dm-legend-swatch-t2" x1="12" y1="46" x2="32" y2="46"></line>'
-      + '<text class="dm-legend-text" x="38" y="49">Tier 2 ($12M)</text>'
-      + '<line class="dm-legend-swatch-t3" x1="12" y1="62" x2="32" y2="62"></line>'
-      + '<text class="dm-legend-text" x="38" y="65">Tier 3 ($15M)</text>'
+      + '<rect class="dm-legend-bg" width="130" height="68" rx="4"></rect>'
+      + '<line class="dm-legend-swatch-exp" x1="10" y1="14" x2="28" y2="14"></line>'
+      + '<text class="dm-legend-text" x="34" y="17">Expenses</text>'
+      + '<line class="dm-legend-swatch-t1" x1="10" y1="28" x2="28" y2="28"></line>'
+      + '<text class="dm-legend-text" x="34" y="31">Tier 1 ($9M)</text>'
+      + '<line class="dm-legend-swatch-t2" x1="10" y1="42" x2="28" y2="42"></line>'
+      + '<text class="dm-legend-text" x="34" y="45">Tier 2 ($12M)</text>'
+      + '<line class="dm-legend-swatch-t3" x1="10" y1="56" x2="28" y2="56"></line>'
+      + '<text class="dm-legend-text" x="34" y="59">Tier 3 ($15M)</text>'
       + '</g>';
     document.getElementById('dt-legend').innerHTML = legend;
   }
