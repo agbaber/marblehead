@@ -1,0 +1,536 @@
+---
+title: Verify
+body_class: verify-page
+community_pulse: off-sections
+og_title: Verified Residents - Marblehead Budget Data
+og_description: "Join the neighbor verification network. Verified Marblehead residents can cast deduplicated votes on ballot questions."
+og_url: https://marbleheaddata.org/verify.html
+scripts:
+---
+
+<style>
+body.verify-page .page { max-width: var(--page-max, 760px); margin: 0 auto; padding: 0 var(--gutter, 16px); }
+body.verify-page .verify-section { margin: 2rem 0; }
+body.verify-page .verify-card {
+  background: var(--surface, #f8f8f8);
+  border-radius: var(--radius-lg, 12px);
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+body.verify-page input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--c-text-faint, #ccc);
+  border-radius: var(--radius-sm, 4px);
+  margin: 0.4rem 0;
+  box-sizing: border-box;
+  background: var(--bg, #fff);
+  color: var(--c-text, #1a1a1a);
+}
+body.verify-page .btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md, 8px);
+  cursor: pointer;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+body.verify-page .btn-primary {
+  background: var(--c-navy, #1b3a5c);
+  color: #fff;
+}
+body.verify-page .btn-secondary {
+  background: var(--surface, #f0f0f0);
+  color: var(--c-text, #1a1a1a);
+  border: 1px solid var(--c-text-faint, #ccc);
+}
+body.verify-page .status { padding: 1rem; border-radius: var(--radius-sm, 4px); margin: 1rem 0; font-size: 0.9rem; }
+body.verify-page .status-ok { background: #e8f5e9; color: #2e7d32; }
+body.verify-page .status-err { background: #fce4ec; color: #c62828; }
+body.verify-page .status-info { background: #e3f2fd; color: #1565c0; }
+body.verify-page .recovery-key {
+  font-family: var(--font-mono, monospace);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 1rem;
+  background: #fff3e0;
+  border: 2px dashed #e65100;
+  border-radius: var(--radius-sm, 4px);
+  text-align: center;
+  margin: 1rem 0;
+  color: #bf360c;
+}
+body.verify-page .invite-link {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85rem;
+  word-break: break-all;
+  padding: 0.8rem;
+  background: var(--surface, #f5f5f5);
+  border-radius: var(--radius-sm, 4px);
+  margin: 0.5rem 0;
+}
+body.verify-page .invite-item { margin: 1rem 0; padding: 1rem; background: var(--surface); border-radius: var(--radius-sm, 4px); }
+body.verify-page .hidden { display: none; }
+body.verify-page .branch-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.85rem;
+  background: var(--c-teal, #2a9d8f);
+  color: #fff;
+  border-radius: var(--radius-sm, 4px);
+}
+</style>
+
+<div class="page">
+
+<!-- ── State: Loading ── -->
+<div id="state-loading">
+  <h1>Verify</h1>
+  <p>Loading...</p>
+</div>
+
+<!-- ── State: No invite, not authenticated ── -->
+<div id="state-landing" class="hidden">
+  <h1>Verified Residents</h1>
+  <p>The neighbor verification network lets Marblehead residents cast deduplicated, verified votes on ballot questions and site sections. Each verified resident was personally invited by someone who already verified.</p>
+
+  <div class="verify-card">
+    <h2>Know someone who's verified?</h2>
+    <p>Ask them for an invite link. They enter your name and address when creating the invite, and you enter the same info when redeeming it. Both sides have to match.</p>
+  </div>
+
+  <div class="verify-card">
+    <h2>Want to start a new branch?</h2>
+    <p>If nobody in your neighborhood is verified yet, you can request a seed invite to start your own branch.</p>
+    <a class="btn btn-secondary" href="https://github.com/agbaber/marblehead/issues/new?template=branch-request.md&title=Branch+request">Request a branch invite</a>
+    <p class="notes">Requests are vetted against the Marblehead assessor database and voter rolls. This usually takes a day or two.</p>
+  </div>
+</div>
+
+<!-- ── State: Invite redemption ── -->
+<div id="state-invite" class="hidden">
+  <h1>You've been invited</h1>
+  <p>Someone invited you to join the Marblehead neighbor verification network. Enter your name and street address exactly as your inviter knows them.</p>
+
+  <div class="verify-card">
+    <label for="reg-name"><strong>Your name</strong></label>
+    <input type="text" id="reg-name" placeholder="First and last name" autocomplete="name">
+
+    <label for="reg-address"><strong>Your street address</strong></label>
+    <input type="text" id="reg-address" placeholder="e.g. 16 Mystic Road" autocomplete="street-address">
+
+    <button class="btn btn-primary" id="btn-register">Verify and create passkey</button>
+  </div>
+
+  <div id="reg-status" class="hidden"></div>
+</div>
+
+<!-- ── State: Registration complete (show recovery key) ── -->
+<div id="state-registered" class="hidden">
+  <h1>You're verified</h1>
+
+  <div class="status status-ok" id="reg-success-msg"></div>
+
+  <div class="verify-card">
+    <h2>Save your recovery key</h2>
+    <p>Write this down or screenshot it. If you lose access to all your devices, this key lets you re-register your passkey.</p>
+    <div class="recovery-key" id="recovery-key-display"></div>
+    <p class="notes">This key is shown once. It cannot be retrieved later.</p>
+  </div>
+
+  <button class="btn btn-primary" id="btn-go-dashboard">Continue to dashboard</button>
+</div>
+
+<!-- ── State: Authenticated dashboard ── -->
+<div id="state-dashboard" class="hidden">
+  <h1>Verified Resident</h1>
+
+  <div class="verify-card" id="profile-card">
+    <p><strong>Branch:</strong> <span id="dash-branch-name">—</span> <span class="branch-badge" id="dash-branch-size"></span> <a href="/branches.html" style="font-size:0.85rem;margin-left:0.5rem">All branches</a></p>
+    <p><strong>Invites remaining:</strong> <span id="dash-invites">—</span></p>
+  </div>
+
+  <!-- Invite a neighbor -->
+  <div class="verify-section">
+    <h2>Invite a neighbor</h2>
+    <p>Enter their name and address. They'll need to enter the same info to redeem the invite.</p>
+
+    <label for="inv-name"><strong>Neighbor's name</strong></label>
+    <input type="text" id="inv-name" placeholder="First and last name">
+
+    <label for="inv-address"><strong>Neighbor's address</strong></label>
+    <input type="text" id="inv-address" placeholder="e.g. 45 Ocean Ave">
+
+    <button class="btn btn-primary" id="btn-invite">Create invite</button>
+    <div id="inv-status" class="hidden"></div>
+  </div>
+
+  <!-- Pending invites -->
+  <div class="verify-section hidden" id="pending-section">
+    <h2>Pending invites</h2>
+    <div id="pending-list"></div>
+  </div>
+
+  <!-- Add device -->
+  <div class="verify-section">
+    <h2>Add another device</h2>
+    <p>Register a passkey on this device so you can authenticate here too.</p>
+    <button class="btn btn-secondary" id="btn-add-device">Add this device</button>
+    <div id="device-status" class="hidden"></div>
+  </div>
+
+  <!-- Sign out -->
+  <div class="verify-section">
+    <button class="btn btn-secondary" id="btn-signout">Sign out</button>
+  </div>
+</div>
+
+</div><!-- .page -->
+
+<script type="module">
+import { client } from 'https://cdn.jsdelivr.net/npm/@passwordless-id/webauthn@2.3.5/dist/esm/index.js';
+
+const API = (location.hostname === 'localhost')
+  ? 'http://localhost:8787'
+  : 'https://marblehead-community-pulse.agbaber.workers.dev';
+
+let jwt = sessionStorage.getItem('verify_jwt') || null;
+let currentProfile = null;
+
+// ── Helpers ─────────────────────────────────────────────
+
+function show(id) { document.getElementById(id).classList.remove('hidden'); }
+function hide(id) { document.getElementById(id).classList.add('hidden'); }
+
+function showStatus(elId, msg, type) {
+  const el = document.getElementById(elId);
+  el.className = `status status-${type}`;
+  el.textContent = msg;
+  show(elId);
+}
+
+function headers() {
+  const h = { 'Content-Type': 'application/json' };
+  if (jwt) h['Authorization'] = `Bearer ${jwt}`;
+  return h;
+}
+
+async function computeHash(name, address) {
+  const input = name.toLowerCase().trim() + ':' + address.toLowerCase().trim() + ':marblehead-verify-salt';
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(input));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function api(method, path, body) {
+  const opts = { method, headers: headers() };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch(`${API}${path}`, opts);
+  return res.json();
+}
+
+// ── Init ────────────────────────────────────────────────
+
+async function init() {
+  const hash = window.location.hash;
+  const inviteToken = hash.startsWith('#invite=') ? hash.slice(8) : null;
+
+  if (inviteToken) {
+    // Invite redemption flow.
+    hide('state-loading');
+    show('state-invite');
+    document.getElementById('btn-register').dataset.token = inviteToken;
+    return;
+  }
+
+  if (jwt) {
+    // Try to load profile.
+    try {
+      const profile = await api('GET', '/api/verify/me');
+      if (profile.identity_hash) {
+        currentProfile = profile;
+        showDashboard(profile);
+        return;
+      }
+    } catch {}
+    // JWT expired or invalid.
+    jwt = null;
+    sessionStorage.removeItem('verify_jwt');
+  }
+
+  // Not authenticated, no invite. Show landing.
+  hide('state-loading');
+  show('state-landing');
+}
+
+// ── Registration ────────────────────────────────────────
+
+document.getElementById('btn-register').addEventListener('click', async () => {
+  const name = document.getElementById('reg-name').value.trim();
+  const address = document.getElementById('reg-address').value.trim();
+  const token = document.getElementById('btn-register').dataset.token;
+
+  if (!name || !address) {
+    showStatus('reg-status', 'Please enter your name and address.', 'err');
+    return;
+  }
+
+  try {
+    showStatus('reg-status', 'Verifying invite...', 'info');
+    const identity_hash = await computeHash(name, address);
+
+    // Step 1: Register (two-sided handshake).
+    const reg = await api('POST', '/api/verify/register', { identity_hash, invite_token: token });
+    if (!reg.ok) {
+      showStatus('reg-status', reg.error || 'Registration failed.', 'err');
+      return;
+    }
+
+    showStatus('reg-status', 'Creating passkey...', 'info');
+
+    // Step 2: Create passkey.
+    const browserChallenge = reg.challenge.split('.')[0];
+    const registration = await client.register({
+      user: identity_hash,
+      challenge: browserChallenge,
+    });
+
+    showStatus('reg-status', 'Completing registration...', 'info');
+
+    // Step 3: Complete passkey registration.
+    const pk = await api('POST', '/api/verify/passkey/register', {
+      registration, challenge: reg.challenge, identity_hash,
+    });
+
+    if (!pk.ok) {
+      showStatus('reg-status', pk.error || 'Passkey registration failed.', 'err');
+      return;
+    }
+
+    // Save JWT.
+    jwt = pk.token;
+    sessionStorage.setItem('verify_jwt', jwt);
+
+    // Show success + recovery key.
+    hide('state-invite');
+    hide('reg-status');
+    show('state-registered');
+    document.getElementById('recovery-key-display').textContent = reg.recovery_key;
+    document.getElementById('reg-success-msg').textContent =
+      `Welcome! You're now a verified Marblehead resident. Branch: ${reg.branch_root ? reg.branch_root.slice(0, 8) + '...' : 'root'}`;
+
+  } catch (err) {
+    showStatus('reg-status', `Error: ${err.message}`, 'err');
+  }
+});
+
+// ── Dashboard ───────────────────────────────────────────
+
+document.getElementById('btn-go-dashboard').addEventListener('click', async () => {
+  const profile = await api('GET', '/api/verify/me');
+  if (profile.identity_hash) {
+    currentProfile = profile;
+    showDashboard(profile);
+  }
+});
+
+function showDashboard(profile) {
+  hide('state-loading');
+  hide('state-landing');
+  hide('state-invite');
+  hide('state-registered');
+  show('state-dashboard');
+
+  document.getElementById('dash-branch-name').textContent = profile.branch_name || '(unnamed)';
+  document.getElementById('dash-branch-size').textContent = `${profile.branch_size} resident${profile.branch_size !== 1 ? 's' : ''}`;
+  document.getElementById('dash-invites').textContent = profile.invites_remaining;
+
+  // Pending invites.
+  const list = document.getElementById('pending-list');
+  list.innerHTML = '';
+  if (profile.pending_invites && profile.pending_invites.length > 0) {
+    show('pending-section');
+    for (const inv of profile.pending_invites) {
+      const div = document.createElement('div');
+      div.className = 'invite-item';
+      div.innerHTML = `<div class="invite-link">${inv.invite_url}</div>
+        <button class="btn btn-secondary" onclick="shareInvite('${inv.invite_url}')">Share</button>`;
+      list.appendChild(div);
+    }
+  }
+}
+
+// ── Create invite ───────────────────────────────────────
+
+document.getElementById('btn-invite').addEventListener('click', async () => {
+  const name = document.getElementById('inv-name').value.trim();
+  const address = document.getElementById('inv-address').value.trim();
+
+  if (!name || !address) {
+    showStatus('inv-status', 'Enter your neighbor\'s name and address.', 'err');
+    return;
+  }
+
+  try {
+    showStatus('inv-status', 'Creating invite...', 'info');
+    const recipient_hash = await computeHash(name, address);
+    const data = await api('POST', '/api/verify/invite', { recipient_hash });
+
+    if (!data.ok) {
+      showStatus('inv-status', data.error || 'Failed to create invite.', 'err');
+      return;
+    }
+
+    // Always show the link + copy button. Share sheet is a bonus on top.
+    showInviteLink(data.invite_url);
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Marblehead Verification Invite',
+          text: "I'm a verified Marblehead resident on marbleheaddata.org \u2014 here's your invite to join",
+          url: data.invite_url,
+        });
+      } catch {}
+    }
+
+    // Clear fields, refresh profile.
+    document.getElementById('inv-name').value = '';
+    document.getElementById('inv-address').value = '';
+    const profile = await api('GET', '/api/verify/me');
+    if (profile.identity_hash) showDashboard(profile);
+
+  } catch (err) {
+    showStatus('inv-status', `Error: ${err.message}`, 'err');
+  }
+});
+
+function showInviteLink(url) {
+  const el = document.getElementById('inv-status');
+  el.className = 'status status-ok';
+  el.innerHTML = `Invite created! Share this link with your neighbor:<div class="invite-link" style="margin-top:0.5rem">${url}</div>
+    <button class="btn btn-secondary" style="margin-top:0.5rem" onclick="copyText('${url}')">Copy link</button>`;
+  show('inv-status');
+}
+
+// ── Add device ──────────────────────────────────────────
+
+document.getElementById('btn-add-device').addEventListener('click', async () => {
+  try {
+    showStatus('device-status', 'Requesting challenge...', 'info');
+
+    // Get a fresh challenge.
+    const challengeData = await api('POST', '/api/verify/passkey/auth-challenge');
+    const browserChallenge = challengeData.challenge.split('.')[0];
+
+    showStatus('device-status', 'Creating passkey for this device...', 'info');
+
+    const registration = await client.register({
+      user: currentProfile.identity_hash,
+      challenge: browserChallenge,
+    });
+
+    const data = await api('POST', '/api/verify/passkey/add-device', {
+      registration, challenge: challengeData.challenge,
+    });
+
+    if (data.ok) {
+      showStatus('device-status', 'Passkey added for this device.', 'ok');
+    } else {
+      showStatus('device-status', data.error || 'Failed to add device.', 'err');
+    }
+  } catch (err) {
+    showStatus('device-status', `Error: ${err.message}`, 'err');
+  }
+});
+
+// ── Authentication (return visit) ───────────────────────
+
+window.signIn = async function() {
+  try {
+    const challengeData = await api('POST', '/api/verify/passkey/auth-challenge');
+    const browserChallenge = challengeData.challenge.split('.')[0];
+
+    const authentication = await client.authenticate({
+      challenge: browserChallenge,
+      allowCredentials: challengeData.credentialIds,
+    });
+
+    const result = await api('POST', '/api/verify/passkey/auth', {
+      authentication, challenge: challengeData.challenge,
+    });
+
+    if (result.ok && result.token) {
+      jwt = result.token;
+      sessionStorage.setItem('verify_jwt', jwt);
+      const profile = await api('GET', '/api/verify/me');
+      if (profile.identity_hash) {
+        currentProfile = profile;
+        showDashboard(profile);
+      }
+    }
+  } catch (err) {
+    console.error('Auth failed:', err);
+  }
+};
+
+// ── Sign out ────────────────────────────────────────────
+
+document.getElementById('btn-signout').addEventListener('click', () => {
+  jwt = null;
+  currentProfile = null;
+  sessionStorage.removeItem('verify_jwt');
+  hide('state-dashboard');
+  hide('state-registered');
+  hide('state-invite');
+  hide('state-loading');
+  show('state-landing');
+  // Clear any status messages.
+  ['reg-status', 'inv-status', 'device-status'].forEach(id => hide(id));
+});
+
+// ── Utilities ───────────────────────────────────────────
+
+window.shareInvite = async function(url) {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: 'Marblehead Verification Invite',
+        text: "I'm a verified Marblehead resident on marbleheaddata.org \u2014 here's your invite to join",
+        url,
+      });
+    } catch {}
+  } else {
+    copyText(url);
+  }
+};
+
+window.copyText = function(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    // Brief feedback.
+    const el = document.activeElement;
+    if (el && el.tagName === 'BUTTON') {
+      const orig = el.textContent;
+      el.textContent = 'Copied!';
+      setTimeout(() => { el.textContent = orig; }, 1500);
+    }
+  });
+};
+
+// Add sign-in button to the landing page.
+const landing = document.getElementById('state-landing');
+if (landing) {
+  const signInCard = document.createElement('div');
+  signInCard.className = 'verify-card';
+  signInCard.innerHTML = `<h2>Already verified?</h2>
+    <p>Sign in with your passkey.</p>
+    <button class="btn btn-primary" onclick="signIn()">Sign in</button>`;
+  landing.appendChild(signInCard);
+}
+
+// Boot.
+init();
+</script>

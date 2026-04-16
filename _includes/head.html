@@ -37,6 +37,7 @@
 {% unless page.community_pulse == "off-sections" %}
 <link rel="stylesheet" href="{{ '/' | relative_url }}assets/community-pulse/widget.css">
 <script type="module" src="{{ '/' | relative_url }}assets/community-pulse/widget.js" data-api-base="https://marblehead-community-pulse.agbaber.workers.dev"></script>
+<script defer src="{{ '/' | relative_url }}assets/community-pulse/verified.js"></script>
 {% endunless %}
 {% assign _og_title = page.og_title | default: page.title | default: site.title %}
 {% assign _og_desc  = page.og_description | default: site.description %}
