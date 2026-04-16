@@ -139,19 +139,20 @@ scripts: [citations]
     letter-spacing: 0.8px; color: var(--text-subtle); margin-bottom: 10px;
   }
   .bar-chart {
-    display: flex; align-items: flex-end; gap: 0;
+    display: flex; align-items: flex-end; gap: 1px;
     height: 140px; position: relative;
     overflow: hidden;
   }
   .bar-chart .bar {
-    flex: 1; min-width: 0; background: var(--text-subtle); opacity: 0.25;
+    flex: 1; max-width: 4px; min-width: 1px;
+    background: var(--text-subtle); opacity: 0.25;
+    border-radius: 1px 1px 0 0;
     cursor: pointer; transition: opacity 0.1s;
-    position: relative;
   }
   .bar-chart .bar:hover { opacity: 0.6; }
   .bar-chart .bar.bar-mh {
     background: var(--series-marblehead); opacity: 0.85;
-    min-width: 3px; flex: 2;
+    min-width: 3px; max-width: 6px; flex: 2;
   }
   .bar-chart .bar.bar-mh:hover { opacity: 1; }
   .bar-tip {
@@ -235,7 +236,8 @@ scripts: [citations]
     .sort-bar { gap: 5px; }
     .sort-bar-label { font-size: 12px; width: 100%; margin-bottom: 2px; }
     .sort-btn { font-size: 11px; padding: 5px 10px; }
-    .bar-chart { height: 100px; }
+    .bar-chart { height: 100px; gap: 0; }
+    .bar-chart .bar { max-width: none; min-width: 0; border-radius: 0; }
     table.explorer { font-size: 11px; }
     table.explorer th { font-size: 8px; padding: 8px 4px; letter-spacing: 0.2px; }
     table.explorer td { padding: 6px 4px; }
