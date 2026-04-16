@@ -83,12 +83,17 @@ async function handleGet(request, env) {
     return new Response('{}', { status: 200, headers: corsHeaders(env) });
   }
 
-  // Build a single SQL query with a parameterized IN clause.
-  const placeholders = sectionIds.map(() => '?').join(',');
-  const stmt = env.DB.prepare(
-    `SELECT section_id, total_count, count_24h FROM reactions WHERE section_id IN (${placeholders})`
-  ).bind(...sectionIds);
-  const { results } = await stmt.all();
+  // Batch queries in chunks of 80 to stay under D1's bind parameter limit.
+  const BATCH = 80;
+  let results = [];
+  for (let i = 0; i < sectionIds.length; i += BATCH) {
+    const chunk = sectionIds.slice(i, i + BATCH);
+    const placeholders = chunk.map(() => '?').join(',');
+    const { results: rows } = await env.DB.prepare(
+      `SELECT section_id, total_count, count_24h FROM reactions WHERE section_id IN (${placeholders})`
+    ).bind(...chunk).all();
+    results = results.concat(rows);
+  }
 
   // Assemble response with zeros for unknown sections.
   const found = new Map(results.map(r => [r.section_id, { total: r.total_count, last_24h: r.count_24h }]));
@@ -359,7 +364,7 @@ async function proxyHomepage(workerOrigin) {
 </style>`;
     const verifiedJS = `<script>
 (function(){
-  var jwt=sessionStorage.getItem('verify_jwt');if(!jwt)return;
+  var jwt=localStorage.getItem('verify_jwt');if(!jwt)return;
   var API='${workerOrigin}';
   var profile=null,cache={};
   function hdr(){return{'Content-Type':'application/json','Authorization':'Bearer '+jwt}}
