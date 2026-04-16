@@ -341,6 +341,21 @@ title: "Deficit Dynamics Model"
     </div>
     <div class="dm-hint" id="dm-cuts-hint">Each position costs ~$100K/yr (salary + benefits). Cutting positions shifts the expense line down but does not change its slope. GIC, PERAC, and union contracts still grow at the same rate on the remaining staff.</div>
   </div>
+  <div class="dm-control">
+    <span class="dm-control-label">Healthcare employer share: <span class="dm-value" id="dm-hc-share-val">83%</span></span>
+    <input type="range" id="dm-hc-share" min="50" max="83" step="1" value="83">
+    <div class="dm-hint" id="dm-hc-hint">Marblehead pays 83% of GIC premiums. Hingham pays 50%. Drag to model a shift.</div>
+  </div>
+  <div class="dm-control">
+    <span class="dm-control-label">Wage offset: <span class="dm-value" id="dm-wage-offset-val">50%</span></span>
+    <input type="range" id="dm-wage-offset" min="0" max="100" step="5" value="50">
+    <div class="dm-hint" id="dm-wage-hint">How much of the premium savings employees negotiate back as higher wages. At 50%, half the savings return as salary increases.</div>
+  </div>
+  <div class="dm-control" style="grid-column: 1 / -1;">
+    <div class="dm-readout" id="dm-hc-readout" style="display: none;">
+      <div class="dm-readout-line" id="dm-hc-summary"></div>
+    </div>
+  </div>
   <div class="dm-presets">
     <button type="button" data-preset="baseline">No override</button>
     <button type="button" data-preset="tier1">Tier 1 ($9M)</button>
@@ -418,6 +433,11 @@ title: "Deficit Dynamics Model"
   // Tax bill conversion: $/yr per $1M, from override_tax_impact_asf.csv
   var taxFactor = 1985.39 / 15;  // 132.36
 
+  // Healthcare cost shift data
+  var totalHealthIns = 15.1;  // $15.1M FY26 total GIC cost
+  var currentHcShare = 0.83;  // 83% employer share
+  var pensionCostRate = 0.10; // ~10% marginal pension cost on new wages
+
   var startYear = 15;
   var endYear = 40;
   var nYears = endYear - startYear + 1; // 26
@@ -470,6 +490,12 @@ title: "Deficit Dynamics Model"
   var expHintEl = document.getElementById('dm-exp-hint');
   var cutsValEl = document.getElementById('dm-cuts-val');
   var cutsHintEl = document.getElementById('dm-cuts-hint');
+  var hcShareEl = document.getElementById('dm-hc-share');
+  var hcShareVal = document.getElementById('dm-hc-share-val');
+  var wageOffsetEl = document.getElementById('dm-wage-offset');
+  var wageOffsetVal = document.getElementById('dm-wage-offset-val');
+  var hcReadout = document.getElementById('dm-hc-readout');
+  var hcSummary = document.getElementById('dm-hc-summary');
 
   // === Formatting ===
   function fmtM(v) {
@@ -542,6 +568,17 @@ title: "Deficit Dynamics Model"
     }
   }
 
+  // === Healthcare cost shift ===
+  function computeHcSavings() {
+    var newShare = parseInt(hcShareEl.value) / 100;
+    var wageOff = parseInt(wageOffsetEl.value) / 100;
+    var gross = totalHealthIns * (currentHcShare - newShare);
+    var wageInc = gross * wageOff;
+    var pensionInc = wageInc * pensionCostRate;
+    var net = gross - wageInc - pensionInc;
+    return { gross: gross, wageIncrease: wageInc, pensionIncrease: pensionInc, net: net };
+  }
+
   // === Compute main chart data (with phased override) ===
   function compute() {
     var revG = parseFloat(revGrowthEl.value) / 100;
@@ -553,7 +590,8 @@ title: "Deficit Dynamics Model"
     var exp = histExp.slice();
 
     var r = rev[lastHistIdx];
-    var e = exp[lastHistIdx] - positionCuts * costPerPosition;
+    var hc = computeHcSavings();
+    var e = exp[lastHistIdx] - positionCuts * costPerPosition - hc.net;
     for (var i = histCount; i < nYears; i++) {
       r = r * (1 + revG);
       e = e * (1 + expG);
@@ -581,7 +619,8 @@ title: "Deficit Dynamics Model"
     var baseRev = histRev.slice();
     var exp = histExp.slice();
     var r = baseRev[lastHistIdx];
-    var e = exp[lastHistIdx] - positionCuts * costPerPosition;
+    var hc = computeHcSavings();
+    var e = exp[lastHistIdx] - positionCuts * costPerPosition - hc.net;
     for (var i = histCount; i < nYears; i++) {
       r = r * (1 + revG);
       e = e * (1 + expG);
@@ -1002,6 +1041,21 @@ title: "Deficit Dynamics Model"
       var pct = (savings / histExp[lastHistIdx] * 100).toFixed(1);
       cutsHintEl.textContent = positionCuts + ' position' + (positionCuts === 1 ? '' : 's') + ' = ' + fmtOverride(savings) + ' annual savings (' + pct + '% of the FY24 expense base). The expense line shifts down but keeps the same slope. The gap reopens on the same schedule.';
     }
+    // Healthcare shift labels
+    var newShare = parseInt(hcShareEl.value);
+    hcShareVal.textContent = newShare + '%';
+    wageOffsetVal.textContent = parseInt(wageOffsetEl.value) + '%';
+    var hc = computeHcSavings();
+    if (newShare < 83) {
+      hcReadout.style.display = '';
+      hcSummary.innerHTML = 'Shifting from 83% to ' + newShare + '% employer share: '
+        + '<strong>' + fmtOverride(hc.gross) + '</strong> gross savings'
+        + ' \u2212 ' + fmtOverride(hc.wageIncrease) + ' wage offset'
+        + ' \u2212 ' + fmtOverride(hc.pensionIncrease) + ' pension impact'
+        + ' = <strong>' + fmtOverride(hc.net) + '</strong> net expense reduction.';
+    } else {
+      hcReadout.style.display = 'none';
+    }
   }
 
   function onChange() {
@@ -1011,7 +1065,7 @@ title: "Deficit Dynamics Model"
     renderTiers();
   }
 
-  [revGrowthEl, expGrowthEl, overrideEl].forEach(function(el) {
+  [revGrowthEl, expGrowthEl, overrideEl, hcShareEl, wageOffsetEl].forEach(function(el) {
     el.addEventListener('input', onChange);
   });
   ratchetEl.addEventListener('change', onChange);
