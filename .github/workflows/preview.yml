@@ -9,7 +9,10 @@ name: PR Preview
 #      "marbleheaddata-preview" (Direct Upload, no Git integration).
 #   2. Create an API token with "Cloudflare Pages - Edit" permission.
 #   3. Add two repo secrets:
-#        CLOUDFLARE_API_TOKEN   - the token from step 2
+#        CLOUDFLARE_API_KEY     - the scoped API token from step 2
+#                                 (named API_KEY for historical reasons;
+#                                 the value is a scoped token, not the
+#                                 legacy Global API Key)
 #        CLOUDFLARE_ACCOUNT_ID  - your Cloudflare account ID
 #
 # With those secrets in place, every PR gets a preview URL posted as
@@ -52,7 +55,7 @@ jobs:
         id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_KEY }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           # --branch uses the PR branch name so Cloudflare gives each
           # branch a stable alias URL (e.g. claude-review-debate-flow).
