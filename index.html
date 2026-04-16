@@ -1571,6 +1571,42 @@ og_url: https://marbleheaddata.org/
   }
   .answers-prompt.hidden { display: none; }
 
+  /* ── Evidence action buttons (resonates / not for me) ── */
+  .evidence-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--divider);
+  }
+  .evidence-action {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.15s;
+    text-align: center;
+  }
+  .evidence-action--yes {
+    background: var(--c-teal);
+    color: #fff;
+    border: 1.5px solid var(--c-teal);
+  }
+  .evidence-action--yes:hover {
+    filter: brightness(1.1);
+  }
+  .evidence-action--no {
+    background: var(--surface);
+    color: var(--text-muted);
+    border: 1.5px solid var(--border);
+  }
+  .evidence-action--no:hover {
+    border-color: var(--text-muted);
+    color: var(--text);
+  }
+
   /* ── Browsing hint (persistent after first pick) ── */
   .explore-browse-hint {
     display: none;
@@ -4763,7 +4799,7 @@ og_url: https://marbleheaddata.org/
       if (!answersEl) return;
       var prompt = document.createElement('p');
       prompt.className = 'answers-prompt';
-      prompt.textContent = 'Pick the view closest to yours to see the data and what other readers chose';
+      prompt.textContent = 'Tap any answer to read the case for it';
       answersEl.parentNode.insertBefore(prompt, answersEl.nextSibling);
     });
   })();
@@ -5428,6 +5464,16 @@ og_url: https://marbleheaddata.org/
       if (nextBtn) nextBtn.classList.add('visible');
       // Show pick distribution if already decided
       showPickDistribution(topic);
+    } else {
+      // No pick yet: auto-open a random answer's evidence so the user
+      // lands on data instead of a blank state with just card summaries.
+      var cards = document.querySelectorAll(
+        '.answer-card[data-question="' + topic + '"]:not(.answer-card-unsure)'
+      );
+      if (cards.length) {
+        var rand = cards[Math.floor(Math.random() * cards.length)];
+        viewEvidence(topic, rand.dataset.answer);
+      }
     }
     updateBrowseHint(topic);
   }
@@ -5889,10 +5935,10 @@ og_url: https://marbleheaddata.org/
     updateQuestionSocialBar(question);
   }
 
-  // Card body click: first time selects, after that just browses evidence.
-  // Exception: clicking "Not sure yet" always casts (or re-casts) the vote,
-  // because it's labeled as an explicit reconsideration and there's no
-  // checkmark on that card.
+  // Card body click: always opens evidence for browsing. Picking is done
+  // via the "This resonates" button inside the evidence panel or the
+  // checkmark shortcut. "Not sure yet" is the one exception -- it still
+  // selects directly since its evidence panel is just a placeholder.
   document.querySelectorAll('.answer-card').forEach(function (card) {
     card.addEventListener('click', function (e) {
       // Don't fire if they clicked the checkmark (handled separately)
@@ -5900,21 +5946,18 @@ og_url: https://marbleheaddata.org/
 
       var question = this.dataset.question;
       var answer   = this.dataset.answer;
-      var hasSelection = !!selections[question];
       var isUnsureCard = (answer === 'u');
 
-      if (!hasSelection || isUnsureCard) {
-        // First pick, or explicit "back to unsure" click.
-        if (selections[question] === answer) {
-          // Already on this answer: just reopen the panel, no re-vote.
-          viewEvidence(question, answer);
-        } else {
+      if (isUnsureCard) {
+        if (selections[question] !== answer) {
           selectAnswer(question, answer);
           updateNotesPill();
           updateNotesPanel();
+        } else {
+          viewEvidence(question, answer);
         }
       } else {
-        // Already have a pick on a/b/c: just browse this evidence
+        // Always browse -- let the evidence buttons handle commitment
         viewEvidence(question, answer);
       }
     });
@@ -5926,6 +5969,47 @@ og_url: https://marbleheaddata.org/
       var panel = this.closest('.evidence');
       panel.classList.remove('open');
     });
+  });
+
+  /* ── Inject "This resonates" / "Not for me" action buttons ── */
+  document.querySelectorAll('.evidence').forEach(function (panel) {
+    // Skip the "Not sure yet" placeholder panels
+    if (panel.classList.contains('evidence-unsure')) return;
+    var ev = panel.dataset.evidence; // e.g. "override-a"
+    if (!ev) return;
+    var parts = ev.split('-');
+    var answer = parts.pop();
+    var question = parts.join('-');
+
+    var actions = document.createElement('div');
+    actions.className = 'evidence-actions';
+
+    var yesBtn = document.createElement('button');
+    yesBtn.type = 'button';
+    yesBtn.className = 'evidence-action evidence-action--yes';
+    yesBtn.textContent = 'This resonates';
+    yesBtn.addEventListener('click', function () {
+      selectAnswer(question, answer);
+      updateNotesPill();
+      updateNotesPanel();
+    });
+
+    var noBtn = document.createElement('button');
+    noBtn.type = 'button';
+    noBtn.className = 'evidence-action evidence-action--no';
+    noBtn.textContent = 'Not for me';
+    noBtn.addEventListener('click', function () {
+      panel.classList.remove('open');
+      // Scroll back to the question so they can try another answer
+      var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
+      if (screen) {
+        screen.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
+    actions.appendChild(yesBtn);
+    actions.appendChild(noBtn);
+    panel.appendChild(actions);
   });
 
   /* ── Notes system ── */
