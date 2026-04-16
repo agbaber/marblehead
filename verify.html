@@ -282,7 +282,7 @@ async function init() {
     hide('state-loading');
     show('state-invite');
     document.getElementById('btn-register').dataset.token = tok;
-    if (hintNum) document.getElementById('reg-num').value = hintNum;
+    if (hintNum) { const numEl = document.getElementById('reg-num'); numEl.value = hintNum; numEl.readOnly = true; numEl.style.opacity = '.7'; }
     if (hintInitial) { document.getElementById('reg-name').value = hintInitial; document.getElementById('reg-name').placeholder = hintInitial + '...'; }
     return;
   }
