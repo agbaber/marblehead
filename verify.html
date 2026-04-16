@@ -563,7 +563,7 @@ window.signIn = async function() {
       if (btn) { btn.disabled = false; btn.textContent = 'Sign in'; }
       alert('No verified residents found yet.'); return;
     }
-    const auth = await client.authenticate({ challenge: c.challenge.split('.')[0], allowCredentials: c.credentialIds });
+    const auth = await client.authenticate({ challenge: c.challenge.split('.')[0] });
     const r = await api('POST', '/api/verify/passkey/auth', { authentication: auth, challenge: c.challenge });
     if (r.ok && r.token) {
       jwt = r.token; localStorage.setItem('verify_jwt', jwt);
