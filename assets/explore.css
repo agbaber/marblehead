@@ -1680,6 +1680,210 @@
     .answer-card { flex: 1; }
   }
 
+  /* ─── "Where you landed" synthesis panel ─────────────────────────── */
+  /* Shown inside .explore-landing once the reader has picked >= 3
+     answers. Pure readback: themed list of picked answers, still-open
+     list, vote-date reminder. Neutral styling on purpose -- no
+     yes/no color cues. */
+  .where-you-landed {
+    margin: 24px 0 8px;
+    padding: 20px 22px;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .where-you-landed[hidden] { display: none; }
+  .wyl-head { margin-bottom: 16px; }
+  .wyl-title {
+    margin: 0 0 6px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--c-text);
+  }
+  .wyl-sub {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: var(--c-text-mid);
+    line-height: 1.5;
+  }
+  .wyl-progress {
+    margin: 0;
+    font-size: 13px;
+    color: var(--c-text-mid);
+    font-variant-numeric: tabular-nums;
+  }
+  .wyl-themes { display: flex; flex-direction: column; gap: 14px; }
+  .wyl-theme { padding-top: 12px; border-top: 1px dashed var(--c-border); }
+  .wyl-theme:first-child { border-top: 0; padding-top: 0; }
+  .wyl-theme-title {
+    margin: 0 0 8px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--c-text-mid);
+  }
+  .wyl-theme-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .wyl-theme-item { margin: 0; }
+  .wyl-topic-link {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px 14px;
+    align-items: baseline;
+    width: 100%;
+    padding: 8px 10px;
+    margin: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    text-align: left;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+  .wyl-topic-link:hover,
+  .wyl-topic-link:focus-visible {
+    background: var(--c-fog);
+    outline: none;
+  }
+  .wyl-topic-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--c-text);
+  }
+  .wyl-topic-pick {
+    font-size: 13px;
+    color: var(--c-text-mid);
+    text-align: right;
+    line-height: 1.4;
+  }
+  .wyl-topic-pick--u { font-style: italic; }
+  .wyl-open {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--c-border);
+  }
+  .wyl-open[hidden] { display: none; }
+  .wyl-open-title {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--c-text);
+  }
+  .wyl-open-sub {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: var(--c-text-mid);
+  }
+  .wyl-open-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 8px;
+  }
+  .wyl-topic-link--open {
+    display: inline-flex;
+    padding: 6px 10px;
+    background: var(--c-fog);
+    border: 1px solid var(--c-border);
+    font-size: 13px;
+    color: var(--c-text);
+    width: auto;
+  }
+  .wyl-topic-link--open:hover,
+  .wyl-topic-link--open:focus-visible {
+    background: var(--c-surface);
+    border-color: var(--c-text-mid);
+  }
+  .wyl-next {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: var(--c-fog);
+    border-radius: 8px;
+  }
+  .wyl-next-title {
+    margin: 0 0 4px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--c-text-mid);
+  }
+  .wyl-next-body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--c-text);
+  }
+  .wyl-next-body a { color: var(--c-teal); }
+  .wyl-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .wyl-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--c-border);
+    background: var(--c-surface);
+    color: var(--c-text);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .wyl-action:hover,
+  .wyl-action:focus-visible {
+    background: var(--c-fog);
+    outline: none;
+  }
+  .wyl-action--primary {
+    background: var(--c-navy);
+    color: #fff;
+    border-color: var(--c-navy);
+  }
+  .wyl-action--primary:hover,
+  .wyl-action--primary:focus-visible {
+    background: var(--c-teal);
+    border-color: var(--c-teal);
+  }
+  .wyl-action--primary .icon-copied,
+  .wyl-action--primary.copied .icon-link { display: none; }
+  .wyl-action--primary .icon-link,
+  .wyl-action--primary.copied .icon-copied { display: inline-block; }
+  .wyl-action--primary svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .wyl-action--ghost { background: transparent; }
+
+  .explore-landing.shared-mode .wyl-action--ghost { display: none; }
+
+  @media (max-width: 599px) {
+    .where-you-landed { padding: 16px 14px; }
+    .wyl-title { font-size: 18px; }
+    .wyl-topic-link { grid-template-columns: 1fr; gap: 2px; padding: 8px; }
+    .wyl-topic-pick { text-align: left; }
+  }
+
   @media (max-width: 599px) {
     .explore-stage { padding-top: 20px; }
     .explore-landing-head { padding: 24px 0 20px; }

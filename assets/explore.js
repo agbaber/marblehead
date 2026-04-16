@@ -1129,7 +1129,172 @@
       });
       cards.forEach(function (c) { listEl.appendChild(c); });
     }
+    updateSynthesis();
   }
+
+  /* ── "Where you landed" synthesis panel ──
+     Reads back the reader's picks grouped by theme once they've made
+     enough of them (>= WYL_THRESHOLD). Pure readback: no scoring, no
+     implied "yes/no" label, no advocacy. Still-open questions are
+     surfaced at the bottom so a partial flow has a clear nudge. */
+  var WYL_THRESHOLD = 3;
+  var WYL_THEMES = [
+    { key: 'money',          label: 'Money and taxes',                   topics: ['mycost', 'seniors', 'taxrank', 'levy'] },
+    { key: 'structure',      label: 'Why the gap exists',                topics: ['moneygone', 'size'] },
+    { key: 'services',       label: 'Services on the table',             topics: ['schools', 'trash', 'library'] },
+    { key: 'futures',        label: 'Paths not taken, and what comes next', topics: ['alternatives', 'again'] },
+    { key: 'interpretation', label: 'Reading the choice',                topics: ['voteno', 'override', 'trust'] }
+  ];
+  // Short, scannable titles for the recap. The full h1 on each question
+  // screen is a sentence; these are the nouns that sentence is about.
+  var WYL_TOPIC_LABELS = {
+    mycost:       'How it affects my taxes',
+    seniors:      'Seniors and fixed-income',
+    taxrank:      'Where Marblehead ranks',
+    levy:         'Why 2.5% runs short',
+    moneygone:    'Where the money has gone',
+    size:         'Does the size matter',
+    schools:      'Staffing vs. enrollment',
+    trash:        'Trash on the ballot',
+    library:      'The library cut',
+    alternatives: 'Alternatives to an override',
+    again:        'Will we be back here',
+    voteno:       'If the override fails',
+    override:     'Necessary or wasteful',
+    trust:        'Trusting the decision-makers'
+  };
+
+  function updateSynthesis() {
+    var panel = document.getElementById('whereYouLanded');
+    if (!panel) return;
+
+    var decided = topicOrder.filter(function (t) { return !!selections[t]; });
+    var total = topicOrder.length;
+    if (decided.length < WYL_THRESHOLD) {
+      panel.hidden = true;
+      return;
+    }
+    panel.hidden = false;
+
+    // Shared-mode copy swap. In shared view the panel reads back someone
+    // else's picks, so "you" becomes "they" and the clear-picks button
+    // has no meaning.
+    var titleEl = document.getElementById('wylTitle');
+    var subEl = document.getElementById('wylSub');
+    var clearBtn = document.getElementById('wylStartOver');
+    if (isSharedView) {
+      if (titleEl) titleEl.textContent = 'Where they landed';
+      if (subEl) subEl.textContent = 'A plain readback of the positions in the link you followed. Use Start fresh at the top to pick your own.';
+      if (clearBtn) clearBtn.hidden = true;
+    } else {
+      if (titleEl) titleEl.textContent = 'Where you landed';
+      if (subEl) subEl.textContent = 'A plain readback of the positions you picked. Nothing here is scored and nothing is telling you how to vote. Questions you haven\u2019t answered yet are listed at the bottom.';
+      if (clearBtn) clearBtn.hidden = false;
+    }
+
+    var progressEl = document.getElementById('wylProgress');
+    if (progressEl) {
+      var remaining = total - decided.length;
+      progressEl.textContent = remaining === 0
+        ? 'All ' + total + ' questions answered.'
+        : decided.length + ' of ' + total + ' questions answered. ' + remaining + ' still open below.';
+    }
+
+    var themesEl = document.getElementById('wylThemes');
+    if (themesEl) {
+      themesEl.innerHTML = '';
+      WYL_THEMES.forEach(function (theme) {
+        var answeredInTheme = theme.topics.filter(function (t) { return !!selections[t]; });
+        if (answeredInTheme.length === 0) return;
+
+        var group = document.createElement('div');
+        group.className = 'wyl-theme';
+        group.dataset.theme = theme.key;
+
+        var h = document.createElement('h3');
+        h.className = 'wyl-theme-title';
+        h.textContent = theme.label;
+        group.appendChild(h);
+
+        var ul = document.createElement('ul');
+        ul.className = 'wyl-theme-list';
+        answeredInTheme.forEach(function (topic) {
+          var li = document.createElement('li');
+          li.className = 'wyl-theme-item';
+          var ans = selections[topic];
+
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'wyl-topic-link';
+          btn.dataset.topic = topic;
+          btn.addEventListener('click', function () {
+            switchTopic(topic);
+            window.scrollTo(0, 0);
+          });
+
+          var label = document.createElement('span');
+          label.className = 'wyl-topic-label';
+          label.textContent = WYL_TOPIC_LABELS[topic] || topic;
+          btn.appendChild(label);
+
+          var pick = document.createElement('span');
+          pick.className = 'wyl-topic-pick wyl-topic-pick--' + ans;
+          if (ans === 'u') {
+            pick.textContent = 'Not sure yet';
+          } else {
+            var heading = landingCards[topic]
+              && landingCards[topic].answerHeadings
+              && landingCards[topic].answerHeadings[ans];
+            pick.textContent = heading || ('Picked ' + ans.toUpperCase());
+          }
+          btn.appendChild(pick);
+
+          li.appendChild(btn);
+          ul.appendChild(li);
+        });
+        group.appendChild(ul);
+        themesEl.appendChild(group);
+      });
+    }
+
+    var openEl = document.getElementById('wylOpen');
+    var openListEl = document.getElementById('wylOpenList');
+    var unanswered = topicOrder.filter(function (t) { return !selections[t]; });
+    if (openEl && openListEl) {
+      if (unanswered.length === 0) {
+        openEl.hidden = true;
+      } else {
+        openEl.hidden = false;
+        openListEl.innerHTML = '';
+        unanswered.forEach(function (topic) {
+          var li = document.createElement('li');
+          li.className = 'wyl-open-item';
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'wyl-topic-link wyl-topic-link--open';
+          btn.dataset.topic = topic;
+          btn.textContent = WYL_TOPIC_LABELS[topic] || topic;
+          btn.addEventListener('click', function () {
+            switchTopic(topic);
+            window.scrollTo(0, 0);
+          });
+          li.appendChild(btn);
+          openListEl.appendChild(li);
+        });
+      }
+    }
+  }
+
+  // "Clear my picks" button in the synthesis panel reuses the same
+  // confirm + reset path as the Delete-my-data control in the stats
+  // strip, so there's only one place that knows how to wipe local state.
+  (function wireSynthesisActions() {
+    var clearBtn = document.getElementById('wylStartOver');
+    var resetBtn = document.getElementById('statsReset');
+    if (clearBtn && resetBtn) {
+      clearBtn.addEventListener('click', function () { resetBtn.click(); });
+    }
+  })();
 
   /* ── Copy-link buttons (top + bottom) ── */
   var shareTopEl = document.getElementById('shareTop');
