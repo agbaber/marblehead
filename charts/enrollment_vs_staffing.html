@@ -8,19 +8,8 @@ scripts: [chart-tooltip]
     letter-spacing: 1px; margin-bottom: 8px; padding-left: 2px;
     color: var(--text-subtle);
   }
-.measure-heading {
-    font-size: 14px; font-weight: 700; margin: 0 0 2px 0;
-    color: var(--text);
-  }
-.measure-detail {
-    font-size: 13px; margin: 0 0 8px 0;
-    color: var(--text-subtle);
-  }
-.measure-change {
-    font-weight: 700;
-  }
-.measure-change--up { color: var(--c-buoy); }
-.measure-change--down { color: var(--c-navy); }
+#staffing-legend .legend-item { cursor: pointer; }
+#staffing-legend .legend-item--off { opacity: 0.3; }
 </style>
 <h1 class="h-center">School Enrollment and Education Staffing</h1>
   <p class="subtitle h-center">Marblehead Public Schools. From <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>s and <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> (Massachusetts Department of Elementary and Secondary Education).</p>
@@ -67,50 +56,15 @@ scripts: [chart-tooltip]
   </p>
 
   <h2>Three measures of staffing</h2>
-  <p>How much has school staffing changed? The answer depends on which count you use. Two state-reported measures show a decline. One town-reported measure shows an increase. All three are charted below for FY15 to FY24, the period where all sources overlap.</p>
+  <p>How much has school staffing changed? The answer depends on which count you use. All three measures are indexed to FY15 = 100 so they can be compared on the same scale. Click a legend item to toggle it.</p>
 
-  <!-- Measure 1: ACFR Education FTE -->
-  <p class="measure-heading">1. <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> "education <abbr class="g" title="Full-Time Equivalent">FTE</abbr>" (all town education employees)</p>
-  <p class="measure-detail">From the town's annual financial reports. Counts all staff the town categorizes under "education." The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> does not break out which positions are included, but it is a broader definition than what <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> tracks. <span class="measure-change measure-change--up">FY15: 490 &rarr; FY24: 537 (+9.6%)</span></p>
-  <div class="chart-wrapper" data-chart-tooltip>
-    <script type="application/json" class="chart-tooltip-data">
-    {
-      "xLabels": ["FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24"],
-      "xPositions": [70,130,190,250,310,370,430,490,550,610],
-      "valueDecimals": 0,
-      "series": [
-        {
-          "name": "ACFR education FTE",
-          "className": "s-neutral",
-          "values": [490,489,493,504,484,480,484,483,537,537]
-        }
-      ]
-    }
-    </script>
-    <svg class="chart" viewBox="0 0 740 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ACFR education FTE FY15 to FY24, rising from 490 to 537 with a sharp jump between FY22 and FY23.">
-      <line class="axis-base" x1="70" y1="140" x2="610" y2="140"/>
-      <line class="tick" x1="66" y1="133" x2="70" y2="133"/>
-      <text class="tick-label" x="63" y="137" text-anchor="end">475</text>
-      <line class="tick" x1="66" y1="99" x2="70" y2="99"/>
-      <text class="tick-label" x="63" y="103" text-anchor="end">500</text>
-      <line class="tick" x1="66" y1="64" x2="70" y2="64"/>
-      <text class="tick-label" x="63" y="68" text-anchor="end">525</text>
-      <line class="tick" x1="66" y1="30" x2="70" y2="30"/>
-      <text class="tick-label" x="63" y="34" text-anchor="end">550</text>
-      <polyline class="data-line s-neutral"
-                points="70,113 130,114 190,108 250,93 310,121 370,126 430,121 490,122 550,48 610,48"/>
-      <text class="end-label s-neutral" x="616" y="44">537</text>
-      <text class="annotation annotation--hide-sm" x="570" y="38" text-anchor="middle" font-size="11">FY23 jump</text>
-      <text class="tick-label tick-label--major" x="70"  y="160" text-anchor="middle">FY15</text>
-      <text class="tick-label tick-label--minor" x="250" y="160" text-anchor="middle">FY18</text>
-      <text class="tick-label tick-label--major" x="430" y="160" text-anchor="middle">FY21</text>
-      <text class="tick-label tick-label--major" x="610" y="160" text-anchor="middle">FY24</text>
-    </svg>
+  <div class="legend" id="staffing-legend">
+    <span class="legend-item s-neutral" data-series="enrollment"><span class="legend-swatch"></span><span class="legend-text">Enrollment</span></span>
+    <span class="legend-item s-stoneham" data-series="acfr"><span class="legend-swatch"></span><span class="legend-text"><abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> education <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span></span>
+    <span class="legend-item s-marblehead" data-series="dese-total"><span class="legend-swatch"></span><span class="legend-text"><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span></span>
+    <span class="legend-item s-swampscott" data-series="dese-teacher"><span class="legend-swatch"></span><span class="legend-text"><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span></span>
   </div>
 
-  <!-- Measure 2: DESE Total Educator FTE -->
-  <p class="measure-heading">2. <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (school-reported staff)</p>
-  <p class="measure-detail">From the state Department of Elementary and Secondary Education. Includes teachers, co-teachers, paraprofessionals, counselors, psychologists, administrators, and office staff reported by the schools. Does not include all staff the <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> counts. <span class="measure-change measure-change--down">FY15: 501.8 &rarr; FY24: 431.8 (&minus;13.9%)</span></p>
   <div class="chart-wrapper" data-chart-tooltip>
     <script type="application/json" class="chart-tooltip-data">
     {
@@ -118,73 +72,110 @@ scripts: [chart-tooltip]
       "xPositions": [70,130,190,250,310,370,430,490,550,610],
       "valueDecimals": 1,
       "series": [
+        {
+          "name": "Enrollment",
+          "className": "s-neutral",
+          "values": [100.0,98.9,100.6,98.2,94.0,91.3,83.3,80.2,80.8,80.6]
+        },
+        {
+          "name": "ACFR education FTE",
+          "className": "s-stoneham",
+          "values": [100.0,99.8,100.6,102.9,98.8,98.0,98.8,98.6,109.6,109.6]
+        },
         {
           "name": "DESE total educator FTE",
           "className": "s-marblehead",
-          "values": [501.8,494.9,510.2,504.2,483.9,480.3,466.3,449.7,445.4,431.8]
-        }
-      ]
-    }
-    </script>
-    <svg class="chart" viewBox="0 0 740 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DESE total educator FTE FY15 to FY24, declining from 501.8 to 431.8.">
-      <line class="axis-base" x1="70" y1="140" x2="610" y2="140"/>
-      <line class="tick" x1="66" y1="107" x2="70" y2="107"/>
-      <text class="tick-label" x="63" y="111" text-anchor="end">450</text>
-      <line class="tick" x1="66" y1="52" x2="70" y2="52"/>
-      <text class="tick-label" x="63" y="56" text-anchor="end">500</text>
-      <polyline class="data-line s-marblehead"
-                points="70,50 130,58 190,41 250,47 310,70 370,74 430,89 490,107 550,112 610,127"/>
-      <text class="end-label s-marblehead" x="616" y="123">431.8</text>
-      <text class="tick-label tick-label--major" x="70"  y="160" text-anchor="middle">FY15</text>
-      <text class="tick-label tick-label--minor" x="250" y="160" text-anchor="middle">FY18</text>
-      <text class="tick-label tick-label--major" x="430" y="160" text-anchor="middle">FY21</text>
-      <text class="tick-label tick-label--major" x="610" y="160" text-anchor="middle">FY24</text>
-    </svg>
-  </div>
-
-  <!-- Measure 3: DESE Teacher FTE -->
-  <p class="measure-heading">3. <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> classroom teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr></p>
-  <p class="measure-detail">From <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr>. Counts only licensed teachers (general education, special education, and English learner). The narrowest of the three measures. <span class="measure-change measure-change--down">FY15: 256.8 &rarr; FY24: 245.7 (&minus;4.3%)</span></p>
-  <div class="chart-wrapper" data-chart-tooltip>
-    <script type="application/json" class="chart-tooltip-data">
-    {
-      "xLabels": ["FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24"],
-      "xPositions": [70,130,190,250,310,370,430,490,550,610],
-      "valueDecimals": 1,
-      "series": [
+          "values": [100.0,98.6,101.7,100.5,96.4,95.7,92.9,89.6,88.8,86.1]
+        },
         {
           "name": "DESE teacher FTE",
-          "className": "s-marblehead",
-          "values": [256.8,261.5,263.9,261.0,257.6,257.2,256.7,251.6,250.0,245.7]
+          "className": "s-swampscott",
+          "values": [100.0,101.8,102.8,101.6,100.3,100.2,100.0,98.0,97.4,95.7]
         }
       ]
     }
     </script>
-    <svg class="chart" viewBox="0 0 740 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DESE classroom teacher FTE FY15 to FY24, declining from 256.8 to 245.7.">
-      <line class="axis-base" x1="70" y1="140" x2="610" y2="140"/>
-      <line class="tick" x1="66" y1="122" x2="70" y2="122"/>
-      <text class="tick-label" x="63" y="126" text-anchor="end">245</text>
-      <line class="tick" x1="66" y1="103" x2="70" y2="103"/>
-      <text class="tick-label" x="63" y="107" text-anchor="end">250</text>
-      <line class="tick" x1="66" y1="85" x2="70" y2="85"/>
-      <text class="tick-label" x="63" y="89" text-anchor="end">255</text>
-      <line class="tick" x1="66" y1="67" x2="70" y2="67"/>
-      <text class="tick-label" x="63" y="71" text-anchor="end">260</text>
-      <line class="tick" x1="66" y1="48" x2="70" y2="48"/>
-      <text class="tick-label" x="63" y="52" text-anchor="end">265</text>
-      <polyline class="data-line s-marblehead"
-                points="70,78 130,61 190,52 250,63 310,76 370,77 430,79 490,98 550,103 610,119"/>
-      <text class="end-label s-marblehead" x="616" y="115">245.7</text>
-      <text class="tick-label tick-label--major" x="70"  y="160" text-anchor="middle">FY15</text>
-      <text class="tick-label tick-label--minor" x="250" y="160" text-anchor="middle">FY18</text>
-      <text class="tick-label tick-label--major" x="430" y="160" text-anchor="middle">FY21</text>
-      <text class="tick-label tick-label--major" x="610" y="160" text-anchor="middle">FY24</text>
+    <svg class="chart" viewBox="0 0 740 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Indexed chart comparing four measures from FY15 to FY24. Enrollment falls to 80.6. ACFR education FTE rises to 109.6 after a FY23 jump. DESE total educator FTE falls to 86.1. DESE teacher FTE falls to 95.7. All indexed to FY15 = 100.">
+      <!-- Baseline -->
+      <line class="axis-base" x1="70" y1="180" x2="610" y2="180"/>
+
+      <!-- 100 reference line -->
+      <line class="grid-major" x1="70" y1="86" x2="610" y2="86"/>
+      <line class="grid-minor" x1="70" y1="49" x2="610" y2="49"/>
+      <line class="grid-minor" x1="70" y1="124" x2="610" y2="124"/>
+      <line class="grid-minor" x1="70" y1="161" x2="610" y2="161"/>
+
+      <!-- Y tick labels -->
+      <text class="tick-label" x="63" y="165" text-anchor="end">80</text>
+      <text class="tick-label" x="63" y="128" text-anchor="end">90</text>
+      <text class="tick-label" x="63" y="90" text-anchor="end">100</text>
+      <text class="tick-label" x="63" y="53" text-anchor="end">110</text>
+
+      <!-- Enrollment (dashed) -->
+      <polyline class="data-line data-line--dashed s-neutral" data-series="enrollment"
+                points="70,86 130,90 190,84 250,93 310,109 370,119 430,149 490,161 550,158 610,159"/>
+      <text class="end-label s-neutral" x="616" y="155" data-series="enrollment">80.6</text>
+
+      <!-- ACFR education FTE -->
+      <polyline class="data-line s-stoneham" data-series="acfr"
+                points="70,86 130,87 190,84 250,75 310,91 370,94 430,91 490,92 550,50 610,50"/>
+      <text class="end-label s-stoneham" x="616" y="46" data-series="acfr">109.6</text>
+
+      <!-- DESE total educator FTE -->
+      <polyline class="data-line s-marblehead" data-series="dese-total"
+                points="70,86 130,92 190,80 250,84 310,100 370,102 430,113 490,125 550,128 610,138"/>
+      <text class="end-label s-marblehead" x="616" y="134" data-series="dese-total">86.1</text>
+
+      <!-- DESE teacher FTE -->
+      <polyline class="data-line s-swampscott" data-series="dese-teacher"
+                points="70,86 130,80 190,76 250,80 310,85 370,86 430,86 490,94 550,96 610,102"/>
+      <text class="end-label s-swampscott" x="616" y="106" data-series="dese-teacher">95.7</text>
+
+      <!-- FY15 = 100 annotation -->
+      <text class="annotation annotation--hide-sm" x="55" y="82" text-anchor="end" font-size="10">FY15 = 100</text>
+
+      <!-- X labels -->
+      <text class="tick-label tick-label--major" x="70"  y="200" text-anchor="middle">FY15</text>
+      <text class="tick-label tick-label--minor" x="250" y="200" text-anchor="middle">FY18</text>
+      <text class="tick-label tick-label--major" x="430" y="200" text-anchor="middle">FY21</text>
+      <text class="tick-label tick-label--major" x="610" y="200" text-anchor="middle">FY24</text>
     </svg>
   </div>
 
+  <script>
+  // Legend toggle: click a legend item to show/hide its series.
+  (function () {
+    var legend = document.getElementById('staffing-legend');
+    if (!legend) return;
+    legend.addEventListener('click', function (e) {
+      var item = e.target.closest('[data-series]');
+      if (!item) return;
+      var key = item.getAttribute('data-series');
+      var els = document.querySelectorAll('[data-series="' + key + '"]');
+      var hiding = !item.classList.contains('legend-item--off');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i] === item) {
+          els[i].classList.toggle('legend-item--off', hiding);
+        } else {
+          els[i].style.display = hiding ? 'none' : '';
+        }
+      }
+    });
+  })();
+  </script>
+
   <p class="caption">
-    Over the same FY15&ndash;FY24 period, enrollment fell 19% (3,245 to 2,617). The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> measure (chart 1) shows staffing up 9.6%. The two <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> measures (charts 2 and 3) show staffing down 13.9% and 4.3% respectively. The divergence is explained below.
+    All four measures indexed to FY15 = 100. Over FY15&ndash;FY24, enrollment fell 19%. The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> (town financial reports) shows education staffing up 9.6%, but this is the only measure that rises and is driven by a <a href="../inside-school-staffing.html#the-fy23-mystery">FY23 data discontinuity</a>. The two <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> measures (state education data) show declines: total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr> down 13.9%, classroom teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> down 4.3%.
   </p>
+
+  <details>
+    <summary>What each measure counts</summary>
+    <ul>
+      <li><strong><abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> education <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (490 &rarr; 537): From the town's annual financial reports. Counts all staff the town categorizes under "education," a broader definition than what the state tracks.</li>
+      <li><strong><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (501.8 &rarr; 431.8): From the state. Includes teachers, co-teachers, paraprofessionals, counselors, psychologists, administrators, and office staff reported by the schools.</li>
+      <li><strong><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (256.8 &rarr; 245.7): From the state. Only licensed classroom teachers (general education, special education, and English learner).</li>
+    </ul>
+  </details>
 
   <h3>Why the measures disagree</h3>
   <p>The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> and <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> totals were similar in FY15 (490 vs. 502) but diverged sharply by FY24 (537 vs. 432). The main driver is a single event:</p>
