@@ -111,6 +111,24 @@ scripts: [citations]
   }
   .rank-summary strong { color: var(--c-navy); font-weight: 700; }
 
+  /* Sort-by bar */
+  .sort-bar {
+    display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+    margin: 0 0 12px;
+  }
+  .sort-bar-label {
+    font-size: 13px; font-weight: 700; color: var(--text);
+    margin-right: 4px;
+  }
+  .sort-btn {
+    font-size: 12px; font-weight: 500; padding: 6px 14px;
+    border: 1px solid var(--border); border-radius: 20px;
+    background: transparent; color: var(--text-muted); cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .sort-btn:hover { border-color: var(--c-navy); color: var(--c-navy); }
+  .sort-btn.active { background: var(--c-navy); color: #fff; border-color: var(--c-navy); }
+
   /* Bar chart */
   .bar-chart-wrap {
     background: var(--surface); border-radius: var(--radius-md);
@@ -290,6 +308,16 @@ scripts: [citations]
 </div>
 
 <p class="rank-summary" id="rank-summary"></p>
+
+<div class="sort-bar">
+  <span class="sort-bar-label">Compare by:</span>
+  <button type="button" class="sort-btn" data-sort="rate">Tax rate</button>
+  <button type="button" class="sort-btn" data-sort="bill">Tax bill</button>
+  <button type="button" class="sort-btn active" data-sort="bpi">Bill / income</button>
+  <button type="button" class="sort-btn" data-sort="rpct">Homeowner share</button>
+  <button type="button" class="sort-btn" data-sort="lpc">Tax per person</button>
+  <button type="button" class="sort-btn" data-sort="ng">New construction</button>
+</div>
 
 <div class="bar-chart-wrap" id="bar-chart-wrap">
   <div class="bar-chart-label" id="bar-chart-label"></div>
@@ -572,16 +600,38 @@ scripts: [citations]
       '</tr>';
   }
 
+  // Sort buttons (primary control)
+  var sortBtns = document.querySelectorAll('.sort-btn');
+  function updateSortBtns() {
+    sortBtns.forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-sort') === sortCol);
+    });
+  }
+  function applySort(col) {
+    if (sortCol === col) { sortAsc = !sortAsc; }
+    else { sortCol = col; sortAsc = true; }
+    headers.forEach(function (h) { h.classList.remove('sorted'); h.querySelector('.sa').textContent = ''; });
+    // Sync column header highlight
+    headers.forEach(function (h) {
+      if (h.getAttribute('data-col') === col) {
+        h.classList.add('sorted');
+        h.querySelector('.sa').textContent = sortAsc ? '\u25B2' : '\u25BC';
+      }
+    });
+    updateSortBtns();
+    render();
+  }
+  sortBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applySort(btn.getAttribute('data-sort'));
+    });
+  });
+
   headers.forEach(function (th) {
     th.addEventListener('click', function () {
       var col = th.getAttribute('data-col');
       if (col === 'rank') return;
-      if (sortCol === col) { sortAsc = !sortAsc; }
-      else { sortCol = col; sortAsc = true; }
-      headers.forEach(function (h) { h.classList.remove('sorted'); h.querySelector('.sa').textContent = ''; });
-      th.classList.add('sorted');
-      th.querySelector('.sa').textContent = sortAsc ? '\u25B2' : '\u25BC';
-      render();
+      applySort(col);
     });
   });
 
