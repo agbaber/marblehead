@@ -1,0 +1,35 @@
+name: PR Size Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  size-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check PR size
+        run: |
+          FILES=$(git diff --name-only origin/main...HEAD | wc -l | tr -d ' ')
+          ADDS=$(git diff origin/main...HEAD --numstat | awk '{s+=$1} END {print s+0}')
+          DELS=$(git diff origin/main...HEAD --numstat | awk '{s+=$2} END {print s+0}')
+          LINES=$((ADDS + DELS))
+          echo "Files changed: $FILES"
+          echo "Lines changed: $LINES ($ADDS added, $DELS deleted)"
+          TITLE="${{ github.event.pull_request.title }}"
+          if echo "$TITLE" | grep -q '\[large\]'; then
+            echo "PR marked [large], skipping size check"
+            exit 0
+          fi
+          if [ "$FILES" -gt 5 ]; then
+            echo "::error::PR touches $FILES files (limit: 5). Add [large] to PR title to override."
+            exit 1
+          fi
+          if [ "$LINES" -gt 500 ]; then
+            echo "::error::PR changes $LINES lines (limit: 500). Add [large] to PR title to override."
+            exit 1
+          fi
