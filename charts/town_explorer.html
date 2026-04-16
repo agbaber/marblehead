@@ -105,7 +105,7 @@ scripts: [citations]
   }
   table.explorer tr:last-child td { border-bottom: none; }
 
-  /* Marblehead row */
+  /* Marblehead row (in-list) */
   table.explorer tr.mh td {
     background: color-mix(in srgb, var(--series-marblehead) 6%, var(--surface));
     color: var(--c-navy); font-weight: 600;
@@ -115,10 +115,28 @@ scripts: [citations]
     border-left: 3px solid var(--series-marblehead);
     background: color-mix(in srgb, var(--series-marblehead) 6%, var(--surface));
   }
+  /* Pinned reference row */
+  table.explorer tr.mh-ref td {
+    background: color-mix(in srgb, var(--series-marblehead) 4%, var(--surface));
+    color: var(--text-muted); font-weight: 500; font-size: 12px;
+  }
+  table.explorer tr.mh-ref td:first-child {
+    border-left: 3px solid color-mix(in srgb, var(--series-marblehead) 40%, transparent);
+    background: color-mix(in srgb, var(--series-marblehead) 4%, var(--surface));
+  }
+  .mh-ref-label { font-size: 9px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; color: var(--text-subtle); margin-left: 6px; }
   /* Pinned Marblehead separator */
   table.explorer tr.mh-divider td {
     border-bottom: 2px solid var(--border); padding: 0; height: 0;
   }
+
+  /* Rank summary */
+  .rank-summary {
+    font-size: 13px; color: var(--text-muted); margin: -8px 0 12px;
+    font-variant-numeric: tabular-nums;
+  }
+  .rank-summary strong { color: var(--c-navy); font-weight: 700; }
 
   /* Empty state */
   .no-results {
@@ -141,7 +159,7 @@ scripts: [citations]
 <h1 class="h-center">Town Explorer: All 351 Massachusetts Communities</h1>
 <p class="subtitle h-center">Population, income, property wealth, and tax burden for every MA municipality. Source: MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> FY2026/FY2027.</p>
 
-<p class="explorer-lead">Instead of a curated peer set, this page shows all 351 municipalities. Use the filters to define your own comparison group. Marblehead is pinned at the top for reference. Default filters exclude very small towns (population under 5,000), very large cities (over 100,000), and island/resort communities with extreme property values.</p>
+<p class="explorer-lead">Instead of a curated peer set, this page shows all 351 municipalities. Use the filters to define your own comparison group. Marblehead appears in its sorted position (highlighted) and as a pinned reference row at the top. Default filters exclude very small towns (population under 5,000), very large cities (over 100,000), and island/resort communities with extreme property values.</p>
 
 <div class="filter-bar" id="filter-bar">
   <h3>Filters</h3>
@@ -155,7 +173,7 @@ scripts: [citations]
       </div>
     </div>
     <div class="filter-group">
-      <label>DOR Income / Capita</label>
+      <label><abbr class="g" title="Department of Revenue">DOR</abbr> Income / Capita</label>
       <div class="filter-row">
         <input type="text" inputmode="numeric" id="f-inc-min" value="" placeholder="any" aria-label="Minimum income per capita">
         <span class="sep">to</span>
@@ -163,7 +181,7 @@ scripts: [citations]
       </div>
     </div>
     <div class="filter-group">
-      <label>EQV / Capita</label>
+      <label><abbr class="g" title="Equalized Valuation">EQV</abbr> / Capita (property wealth)</label>
       <div class="filter-row">
         <input type="text" inputmode="numeric" id="f-eqv-min" value="" placeholder="any" aria-label="Minimum EQV per capita">
         <span class="sep">to</span>
@@ -171,7 +189,7 @@ scripts: [citations]
       </div>
     </div>
     <div class="filter-group">
-      <label>Avg SF Tax Bill</label>
+      <label>Avg Tax Bill</label>
       <div class="filter-row">
         <input type="text" inputmode="numeric" id="f-bill-min" value="" placeholder="any" aria-label="Minimum tax bill">
         <span class="sep">to</span>
@@ -186,16 +204,19 @@ scripts: [citations]
   </div>
 </div>
 
+<p class="rank-summary" id="rank-summary"></p>
+
 <div class="table-wrap">
   <table class="explorer" id="explorer-table">
     <thead>
       <tr>
         <th data-col="n" data-dir="asc">Municipality <span class="sort-arrow"></span></th>
+        <th data-col="rank" title="Rank within current filtered set">#</th>
         <th data-col="p" data-dir="asc">Pop <span class="sort-arrow"></span></th>
-        <th data-col="ipc" data-dir="asc">Income/Cap <span class="sort-arrow"></span></th>
-        <th data-col="bill" data-dir="asc">Avg SF Bill <span class="sort-arrow"></span></th>
-        <th data-col="bpi" data-dir="asc" class="sorted">Bill/Income <span class="sort-arrow">&#9650;</span></th>
-        <th data-col="epc" data-dir="asc">EQV/Cap <span class="sort-arrow"></span></th>
+        <th data-col="ipc" data-dir="asc" title="DOR per-capita income">Income/Cap <span class="sort-arrow"></span></th>
+        <th data-col="bill" data-dir="asc" title="Average single-family tax bill">Avg Bill <span class="sort-arrow"></span></th>
+        <th data-col="bpi" data-dir="asc" class="sorted" title="Average tax bill as percentage of DOR per-capita income">Bill/Income <span class="sort-arrow">&#9650;</span></th>
+        <th data-col="epc" data-dir="asc" title="Equalized valuation per capita (property wealth)">Prop Value/Cap <span class="sort-arrow"></span></th>
       </tr>
     </thead>
     <tbody id="explorer-body"></tbody>
@@ -235,9 +256,12 @@ scripts: [citations]
   };
   var tbody = document.getElementById('explorer-body');
   var countEl = document.getElementById('filter-count');
+  var rankEl = document.getElementById('rank-summary');
   var presetBtn = document.getElementById('preset-similar');
   var resetBtn = document.getElementById('reset-filters');
   var headers = document.querySelectorAll('#explorer-table th[data-col]');
+
+  var COL_LABELS = { n: 'name', p: 'population', ipc: 'DOR income/capita', bill: 'avg tax bill', bpi: 'bill/income ratio', epc: 'property value/capita' };
 
   // --- Sort state ---
   var sortCol = 'bpi';
@@ -307,28 +331,42 @@ scripts: [citations]
     var filtered = DATA.filter(function (t) { return passes(t, f); });
     filtered.sort(compare);
 
-    // Always include Marblehead even if filtered out
     var mhd = DATA.filter(function (t) { return t.n === 'Marblehead'; })[0];
     var mhdInList = filtered.some(function (t) { return t.n === 'Marblehead'; });
 
-    var html = '';
-    // Pinned Marblehead row
-    html += renderRow(mhd, true);
-    html += '<tr class="mh-divider"><td colspan="6"></td></tr>';
-
-    var count = 0;
-    for (var i = 0; i < filtered.length; i++) {
-      if (filtered[i].n === 'Marblehead') continue; // already pinned
-      html += renderRow(filtered[i], false);
-      count++;
+    // Find Marblehead's rank in the filtered+sorted list
+    var mhdRank = -1;
+    for (var r = 0; r < filtered.length; r++) {
+      if (filtered[r].n === 'Marblehead') { mhdRank = r + 1; break; }
     }
 
-    if (count === 0) {
-      html += '<tr><td colspan="6" class="no-results">No communities match these filters. Try widening the ranges.</td></tr>';
+    var html = '';
+    // Pinned reference row (dimmed)
+    html += renderRow(mhd, 'ref', '');
+    html += '<tr class="mh-divider"><td colspan="7"></td></tr>';
+
+    // Full sorted list (Marblehead appears in its natural position)
+    for (var i = 0; i < filtered.length; i++) {
+      var isMh = filtered[i].n === 'Marblehead';
+      html += renderRow(filtered[i], isMh ? 'mh' : '', i + 1);
+    }
+
+    if (filtered.length === 0) {
+      html += '<tr><td colspan="7" class="no-results">No communities match these filters. Try widening the ranges.</td></tr>';
     }
 
     tbody.innerHTML = html;
-    countEl.textContent = 'Showing ' + (mhdInList ? count + 1 : count + ' + Marblehead') + ' of 351';
+    countEl.textContent = 'Showing ' + filtered.length + ' of 351';
+
+    // Rank summary
+    if (mhdInList && mhdRank > 0) {
+      var dir = sortAsc ? 'lowest' : 'highest';
+      if (sortCol === 'n') dir = '';
+      rankEl.innerHTML = 'Marblehead ranks <strong>#' + mhdRank + ' of ' + filtered.length + '</strong>' +
+        (dir ? ' by ' + dir + ' ' + COL_LABELS[sortCol] : ' alphabetically');
+    } else {
+      rankEl.innerHTML = 'Marblehead is outside current filters';
+    }
 
     // Update preset button active state
     var cf = getFilters();
@@ -338,10 +376,13 @@ scripts: [citations]
     presetBtn.classList.toggle('active', isSimilar);
   }
 
-  function renderRow(t, isMh) {
-    var cls = isMh ? ' class="mh"' : '';
+  function renderRow(t, mode, rank) {
+    var cls = mode === 'mh' ? ' class="mh"' : mode === 'ref' ? ' class="mh-ref"' : '';
+    var nameExtra = mode === 'ref' ? '<span class="mh-ref-label">ref</span>' : '';
+    var rankCell = rank ? fmtNum(rank) : '';
     return '<tr' + cls + '>' +
-      '<td>' + t.n + '</td>' +
+      '<td>' + t.n + nameExtra + '</td>' +
+      '<td>' + rankCell + '</td>' +
       '<td>' + fmtNum(t.p) + '</td>' +
       '<td>' + fmtDollar(t.ipc) + '</td>' +
       '<td>' + fmtDollar(t.bill) + '</td>' +
