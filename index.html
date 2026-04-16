@@ -1556,6 +1556,21 @@ og_url: https://marbleheaddata.org/
     .question-social-share { font-size: 11px; padding: 5px 12px; }
   }
 
+  /* ── Pick prompt (shown below answers until first pick) ── */
+  .answers-prompt {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: -8px 0 20px;
+    padding: 10px 16px;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--c-teal) 5%, transparent);
+    line-height: 1.5;
+    animation: evidence-in 0.3s ease;
+  }
+  .answers-prompt.hidden { display: none; }
+
   /* ── Browsing hint (persistent after first pick) ── */
   .explore-browse-hint {
     display: none;
@@ -4741,6 +4756,18 @@ og_url: https://marbleheaddata.org/
     });
   })();
 
+  /* ── Inject pick prompt below each question's answers ── */
+  (function injectPickPrompt() {
+    document.querySelectorAll('.question-screen').forEach(function (screen) {
+      var answersEl = screen.querySelector('.answers');
+      if (!answersEl) return;
+      var prompt = document.createElement('p');
+      prompt.className = 'answers-prompt';
+      prompt.textContent = 'Pick the view closest to yours to see the data and what other readers chose';
+      answersEl.parentNode.insertBefore(prompt, answersEl.nextSibling);
+    });
+  })();
+
   /* ── Reactions API (server-side social proof for all users) ── */
   var API_BASE = 'https://marblehead-community-pulse.agbaber.workers.dev';
 
@@ -5395,7 +5422,7 @@ og_url: https://marbleheaddata.org/
       updateAnswerCheckTitles();
       viewEvidence(topic, pick);
       var screen = document.querySelector('.question-screen[data-topic="' + topic + '"]');
-      var prompt = screen && screen.querySelector('.answers + .answers-prompt');
+      var prompt = screen && screen.querySelector('.answers-prompt');
       if (prompt) prompt.classList.add('hidden');
       var nextBtn = screen && screen.querySelector('.next-question');
       if (nextBtn) nextBtn.classList.add('visible');
@@ -5775,6 +5802,8 @@ og_url: https://marbleheaddata.org/
 
     // Hide prompt, show next button
     var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
+    var prompt = screen && screen.querySelector('.answers-prompt');
+    if (prompt) prompt.classList.add('hidden');
     var nextBtn = screen && screen.querySelector('.next-question');
     if (nextBtn) nextBtn.classList.add('visible');
   }
@@ -5796,15 +5825,29 @@ og_url: https://marbleheaddata.org/
     });
 
     // Toggle evidence panels
+    var openedPanel = null;
     document.querySelectorAll('.evidence').forEach(function (e) {
       if (e.dataset.evidence && e.dataset.evidence.startsWith(question + '-')) {
         if (e.dataset.evidence === question + '-' + answer) {
           e.classList.add('open');
+          openedPanel = e;
         } else {
           e.classList.remove('open');
         }
       }
     });
+
+    // Scroll so the user sees the evidence they just revealed.
+    // Only scroll if the panel top is below the viewport bottom,
+    // so we don't yank users away from content already visible.
+    if (openedPanel) {
+      setTimeout(function () {
+        var rect = openedPanel.getBoundingClientRect();
+        if (rect.top > window.innerHeight - 80) {
+          openedPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 120);
+    }
   }
 
   // Keep each checkmark's tooltip in sync with whether that card is
