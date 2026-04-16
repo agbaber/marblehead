@@ -391,6 +391,7 @@ title: "Deficit Dynamics Model"
   <button type="button" class="dm-stance-btn" data-stance="cut">"Just cut spending"</button>
   <button type="button" class="dm-stance-btn" data-stance="healthcare">"Shift healthcare costs"</button>
 </div>
+<div class="dm-hint" id="dm-stance-explainer" style="margin-top: 4px;"></div>
 
 <div class="dm-controls">
   <div class="dm-control" style="grid-column: 1 / -1;">
@@ -447,7 +448,7 @@ title: "Deficit Dynamics Model"
 </details>
 
 <h2>How long does each tier last?</h2>
-<p>The three ballot questions ask voters to choose among $9M, $12M, or $15M. Below, the same growth rates from the sliders above are applied to all three tiers simultaneously, without ratchet. Each tier phases in over FY27 to FY29 per the town's proposed draw schedule. The question each line answers: how many years before expenses catch the boosted revenue line again?</p>
+<p>The three ballot questions ask voters to choose among $9M, $12M, or $15M. Each tier uses the same growth rates and spending absorption rate from the controls above. The question each line answers: how many years before expenses catch the boosted revenue line again?</p>
 
 <div class="dm-tier-readout" id="dm-tier-readout">
   <div><strong class="dm-tier-1-color">Tier 1 ($9M):</strong> <span id="dm-tier1-text">buys until FY33 (5 years)</span></div>
@@ -724,35 +725,57 @@ title: "Deficit Dynamics Model"
   function computeTiers() {
     var revG = parseFloat(revGrowthEl.value) / 100;
     var expG = parseFloat(expGrowthEl.value) / 100;
+    var ratchetYears = parseInt(ratchetEl.value);
 
     var baseRev = histRev.slice();
-    var exp = histExp.slice();
+    var baseExp = histExp.slice();
     var r = baseRev[lastHistIdx];
     var hc = computeHcSavings();
-    var e = exp[lastHistIdx] - positionCuts * costPerPosition - hc.net;
+    var e0 = histExp[lastHistIdx] - positionCuts * costPerPosition - hc.net;
+    var e = e0;
     for (var i = histCount; i < nYears; i++) {
       r = r * (1 + revG);
       e = e * (1 + expG);
       baseRev.push(r);
-      exp.push(e);
+      baseExp.push(e);
     }
 
     var tierRevs = [];
+    var tierExps = [];
     for (var t = 0; t < tierAmounts.length; t++) {
       var tr = histRev.slice();
+      var te = histExp.slice();
       var rv = tr[lastHistIdx];
+      var ev = e0;
+      var pendingBumps = [];
       for (var i = histCount; i < nYears; i++) {
         rv = rv * (1 + revG);
+        ev = ev * (1 + expG);
         // Apply exact draws from CSV at each phase year
         for (var p = 0; p < phaseYears.length; p++) {
-          if (i === phaseYears[p]) rv += tierDraws[t][p];
+          if (i === phaseYears[p]) {
+            rv += tierDraws[t][p];
+            if (ratchetYears > 0) {
+              pendingBumps.push({ startIdx: i, annualAmount: tierDraws[t][p] / ratchetYears });
+            }
+          }
+        }
+        // Apply accumulated ratchet bumps
+        for (var b = 0; b < pendingBumps.length; b++) {
+          var bump = pendingBumps[b];
+          var yearsSinceStart = i - bump.startIdx;
+          if (yearsSinceStart >= 0 && yearsSinceStart < ratchetYears) {
+            ev += bump.annualAmount;
+          }
         }
         tr.push(rv);
+        te.push(ev);
       }
       tierRevs.push(tr);
+      tierExps.push(te);
     }
 
-    return { baseRev: baseRev, exp: exp, tierRevs: tierRevs };
+    return { baseRev: baseRev, baseExp: baseExp, tierRevs: tierRevs, tierExps: tierExps };
   }
 
   // Find when expenses catch the tier revenue line (after full phase-in)
@@ -1039,14 +1062,18 @@ title: "Deficit Dynamics Model"
   // === Render tier chart ===
   function renderTiers() {
     var td = computeTiers();
-    var exp = td.exp;
+    var baseExp = td.baseExp;
     var baseRev = td.baseRev;
     var tierRevs = td.tierRevs;
+    var tierExps = td.tierExps;
 
     var allVals = [];
     for (var i = tIdx0; i <= tIdxN; i++) {
-      allVals.push(exp[i], baseRev[i]);
-      for (var t = 0; t < tierRevs.length; t++) allVals.push(tierRevs[t][i]);
+      allVals.push(baseExp[i], baseRev[i]);
+      for (var t = 0; t < tierRevs.length; t++) {
+        allVals.push(tierRevs[t][i]);
+        allVals.push(tierExps[t][i]);
+      }
     }
     var lo = Math.min.apply(null, allVals);
     var hi = Math.max.apply(null, allVals);
@@ -1057,7 +1084,7 @@ title: "Deficit Dynamics Model"
 
     drawTierGrid();
 
-    document.getElementById('dt-exp').setAttribute('d', buildPath(exp, tIdx0, tIdxN, txScale, tyScale));
+    document.getElementById('dt-exp').setAttribute('d', buildPath(baseExp, tIdx0, tIdxN, txScale, tyScale));
     document.getElementById('dt-rev-base').setAttribute('d', buildPath(baseRev, tIdx0, tIdxN, txScale, tyScale));
 
     var tierPathIds = ['dt-tier1', 'dt-tier2', 'dt-tier3'];
@@ -1069,7 +1096,7 @@ title: "Deficit Dynamics Model"
     var fillG = document.getElementById('dt-fills');
     fillG.innerHTML = '';
     for (var t = tierRevs.length - 1; t >= 0; t--) {
-      var sp = buildSurplusPath(tierRevs[t], exp, tIdx0, tIdxN, txScale, tyScale);
+      var sp = buildSurplusPath(tierRevs[t], tierExps[t], tIdx0, tIdxN, txScale, tyScale);
       if (sp) {
         var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         path.setAttribute('d', sp);
@@ -1077,7 +1104,7 @@ title: "Deficit Dynamics Model"
         fillG.appendChild(path);
       }
     }
-    var dfp = buildDeficitPath(baseRev, exp, tIdx0, tIdxN, txScale, tyScale);
+    var dfp = buildDeficitPath(baseRev, baseExp, tIdx0, tIdxN, txScale, tyScale);
     if (dfp) {
       var dp = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       dp.setAttribute('d', dfp);
@@ -1094,7 +1121,7 @@ title: "Deficit Dynamics Model"
 
     // End labels
     var endIds = ['dt-end-exp', 'dt-end-base', 'dt-end-t1', 'dt-end-t2', 'dt-end-t3'];
-    var endVals = [exp[tIdxN], baseRev[tIdxN], tierRevs[0][tIdxN], tierRevs[1][tIdxN], tierRevs[2][tIdxN]];
+    var endVals = [baseExp[tIdxN], baseRev[tIdxN], tierRevs[0][tIdxN], tierRevs[1][tIdxN], tierRevs[2][tIdxN]];
     var endItems = endIds.map(function(id, j) { return { id: id, val: endVals[j] }; });
     endItems.sort(function(a, b) { return b.val - a.val; });
     var lastY = -999;
@@ -1112,7 +1139,7 @@ title: "Deficit Dynamics Model"
     // Tier readout
     var tierTextEls = ['dm-tier1-text', 'dm-tier2-text', 'dm-tier3-text'];
     for (var t = 0; t < tierRevs.length; t++) {
-      var runout = findRunout(tierRevs[t], exp);
+      var runout = findRunout(tierRevs[t], tierExps[t]);
       var el = document.getElementById(tierTextEls[t]);
       var tierCost = taxMode ? ' (' + fmtOverride(tierAmounts[t]) + ')' : '';
       if (runout !== null) {
@@ -1278,6 +1305,13 @@ title: "Deficit Dynamics Model"
   });
 
   // Stance scenario buttons
+  var stanceExplainer = document.getElementById('dm-stance-explainer');
+  var stanceExplainers = {
+    bridge: 'Tier 3 ($15M) override with spending absorbed over 5 years. Revenue jumps, then expenses gradually catch up as positions are filled and programs restored. The gap shrinks for several years before reopening.',
+    skeptic: 'Tier 3 ($15M) override with spending absorbed in 1 year. All new revenue is allocated immediately to deferred needs. The gap barely changes because both lines jump together.',
+    cut: '50 positions eliminated (~$5M/yr savings). The expense line shifts down, but GIC, PERAC, and union contracts still drive the same growth rate on the remaining staff. The gap reopens on the same schedule.',
+    healthcare: 'Healthcare employer share shifted from 83% to 50% (Hingham\u2019s rate). Gross savings of ~$5M, but at 50% wage offset, employees negotiate back ~$2.5M as higher salaries, plus ~$0.25M in pension costs. Net savings: ~$2.2M.'
+  };
   document.querySelectorAll('.dm-stance-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var s = btn.dataset.stance;
@@ -1291,19 +1325,16 @@ title: "Deficit Dynamics Model"
       wageOffsetEl.value = 50;
 
       if (s === 'bridge') {
-        // "The override buys time" - Tier 3, 5yr absorption
         overrideEl.value = 15;
       } else if (s === 'skeptic') {
-        // "It all gets spent immediately" - Tier 3, instant absorption
         overrideEl.value = 15;
         ratchetEl.value = 1;
       } else if (s === 'cut') {
-        // "Just cut spending" - no override, 50 position cuts
         positionCuts = 50;
       } else if (s === 'healthcare') {
-        // "Shift healthcare costs" - no override, 50% employer share
         hcShareEl.value = 50;
       }
+      stanceExplainer.textContent = stanceExplainers[s] || '';
       onChange();
     });
   });
