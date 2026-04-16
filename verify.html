@@ -230,7 +230,7 @@ import { client } from 'https://cdn.jsdelivr.net/npm/@passwordless-id/webauthn@2
 
 const API = 'https://marblehead-community-pulse.agbaber.workers.dev';
 
-let jwt = sessionStorage.getItem('verify_jwt') || null;
+let jwt = localStorage.getItem('verify_jwt') || null;
 let currentProfile = null;
 
 function show(id) { document.getElementById(id).classList.remove('hidden'); }
@@ -297,7 +297,7 @@ async function init() {
       }
     } catch {}
     jwt = null;
-    sessionStorage.removeItem('verify_jwt');
+    localStorage.removeItem('verify_jwt');
   }
 
   hide('state-loading');
@@ -373,7 +373,7 @@ async function finishPasskey() {
     }
 
     jwt = pk.token;
-    sessionStorage.setItem('verify_jwt', jwt);
+    localStorage.setItem('verify_jwt', jwt);
     pendingReg = null;
 
     if (history.replaceState) history.replaceState(null, '', location.pathname);
@@ -535,7 +535,7 @@ window.signIn = async function() {
     const r = await api('POST', '/api/verify/passkey/auth', { authentication: auth, challenge: c.challenge });
     if (r.ok && r.token) {
       jwt = r.token;
-      sessionStorage.setItem('verify_jwt', jwt);
+      localStorage.setItem('verify_jwt', jwt);
       const profile = await api('GET', '/api/verify/me');
       if (profile.identity_hash) { currentProfile = profile; showDashboard(profile); }
     }
@@ -550,7 +550,7 @@ window.signIn = async function() {
 document.getElementById('btn-signout').addEventListener('click', () => {
   jwt = null;
   currentProfile = null;
-  sessionStorage.removeItem('verify_jwt');
+  localStorage.removeItem('verify_jwt');
   hide('state-dashboard');
   hide('state-registered');
   hide('state-invite');

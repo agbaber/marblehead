@@ -28,7 +28,7 @@ async function verifyApi(method, path, body) {
  * Called once after widget.js has hydrated the page.
  */
 async function initVerifiedTallies() {
-  verifyJwt = sessionStorage.getItem('verify_jwt');
+  verifyJwt = localStorage.getItem('verify_jwt');
   if (!verifyJwt) return;
 
   // Validate JWT by fetching profile.
@@ -36,7 +36,7 @@ async function initVerifiedTallies() {
     verifyProfile = await verifyApi('GET', '/api/verify/me');
     if (!verifyProfile || !verifyProfile.identity_hash) {
       verifyJwt = null;
-      sessionStorage.removeItem('verify_jwt');
+      localStorage.removeItem('verify_jwt');
       return;
     }
   } catch {
