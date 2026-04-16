@@ -335,7 +335,7 @@ document.getElementById('btn-register').addEventListener('click', async () => {
     }
 
     // Store for passkey step and show the passkey button.
-    pendingReg = { id: identity_hash, reg, invite_token: token };
+    pendingReg = { id: identity_hash, reg, invite_token: token, displayName: name };
     const el = document.getElementById('reg-status');
     el.className = 'status status-ok';
     el.innerHTML = 'Confirmed! Now save a passkey so you can sign in later.<br><button class="btn btn-primary" id="btn-passkey" style="margin-top:.75rem">Save passkey (Touch ID / Face ID)</button>';
@@ -353,7 +353,7 @@ async function finishPasskey() {
   const { id, reg, invite_token } = pendingReg;
   try {
     const browserChallenge = reg.challenge.split('.')[0];
-    const registration = await client.register({ user: id, challenge: browserChallenge });
+    const registration = await client.register({ user: 'Marblehead Verified Resident', challenge: browserChallenge });
 
     showStatus('reg-status', 'Completing registration...', 'info');
 
@@ -503,7 +503,7 @@ document.getElementById('btn-add-device').addEventListener('click', async () => 
     const browserChallenge = challengeData.challenge.split('.')[0];
 
     showStatus('device-status', 'Creating passkey for this device...', 'info');
-    const registration = await client.register({ user: currentProfile.identity_hash, challenge: browserChallenge });
+    const registration = await client.register({ user: 'Marblehead Verified Resident', challenge: browserChallenge });
 
     const data = await api('POST', '/api/verify/passkey/add-device', { registration, challenge: challengeData.challenge });
     showStatus('device-status', data.ok ? 'Passkey added for this device.' : (data.error || 'Failed.'), data.ok ? 'ok' : 'err');
