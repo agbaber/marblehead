@@ -283,7 +283,7 @@ async function init() {
     show('state-invite');
     document.getElementById('btn-register').dataset.token = tok;
     if (hintNum) { const numEl = document.getElementById('reg-num'); numEl.value = hintNum; numEl.readOnly = true; numEl.style.opacity = '.7'; }
-    if (hintInitial) { document.getElementById('reg-name').value = hintInitial; document.getElementById('reg-name').placeholder = hintInitial + '...'; }
+    if (hintInitial) { document.getElementById('reg-name').placeholder = 'Starts with ' + hintInitial + '...'; document.getElementById('btn-register').dataset.initial = hintInitial; }
     return;
   }
 
@@ -315,6 +315,12 @@ document.getElementById('btn-register').addEventListener('click', async () => {
 
   if (!name || !address) {
     showStatus('reg-status', 'Please enter your name and address.', 'err');
+    return;
+  }
+
+  const expectedInitial = document.getElementById('btn-register').dataset.initial;
+  if (expectedInitial && name.charAt(0).toUpperCase() !== expectedInitial.toUpperCase()) {
+    showStatus('reg-status', `Name should start with "${expectedInitial}".`, 'err');
     return;
   }
 
