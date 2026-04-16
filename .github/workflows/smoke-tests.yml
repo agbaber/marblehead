@@ -24,7 +24,7 @@ jobs:
           gem install 'jekyll:3.10.0' kramdown-parser-gfm
           jekyll build
 
-      - run: npm ci
+      - run: npm install
       - run: npx playwright install --with-deps chromium
 
       - name: Start local server
