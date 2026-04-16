@@ -122,7 +122,7 @@ title: "Deficit Dynamics Model"
     display: block;
     width: 100%;
     height: auto;
-    max-width: 720px;
+    max-width: 880px;
     margin: 0 auto;
   }
   .dm-svg .dm-rev-line {
@@ -293,7 +293,7 @@ title: "Deficit Dynamics Model"
   <div class="dm-hint" id="dm-gap-hint">Move the sliders, or click a preset below the chart, to see how it changes.</div>
 </div>
 
-<svg class="dm-svg" viewBox="0 0 720 400" role="img" aria-labelledby="dm-title dm-desc">
+<svg class="dm-svg" viewBox="0 0 880 460" role="img" aria-labelledby="dm-title dm-desc">
   <title id="dm-title">Revenue and expense lines, FY15 actual through FY40 projected</title>
   <desc id="dm-desc">Two lines showing actual revenue and expenses from FY15 to FY24, then projected forward to FY40. A shaded region highlights the deficit where expenses exceed revenue, which began in FY18.</desc>
   <g id="dm-grid"></g>
@@ -357,7 +357,7 @@ title: "Deficit Dynamics Model"
   <div><strong class="dm-tier-3-color">Tier 3 ($15M):</strong> <span id="dm-tier3-text">buys until FY37 (9 years)</span></div>
 </div>
 
-<svg class="dm-svg" viewBox="0 0 720 340" role="img" aria-labelledby="dm-tier-title dm-tier-desc">
+<svg class="dm-svg" viewBox="0 0 880 400" role="img" aria-labelledby="dm-tier-title dm-tier-desc">
   <title id="dm-tier-title">Three override tiers compared against expenses, FY24 to FY40</title>
   <desc id="dm-tier-desc">Four lines: expenses and three revenue scenarios (Tier 1 at $9M, Tier 2 at $12M, Tier 3 at $15M), each showing when the override headroom runs out.</desc>
   <g id="dt-grid"></g>
@@ -419,8 +419,8 @@ title: "Deficit Dynamics Model"
   var taxMode = false;
 
   // === Main chart layout ===
-  var svgW = 720, svgH = 400;
-  var mL = 70, mR = 55, mT = 24, mB = 60;
+  var svgW = 880, svgH = 460;
+  var mL = 70, mR = 55, mT = 28, mB = 60;
   var plotW = svgW - mL - mR;
   var plotH = svgH - mT - mB;
 
@@ -430,8 +430,8 @@ title: "Deficit Dynamics Model"
   function yScale(v) { return mT + (1 - (v - yMin) / (yMax - yMin)) * plotH; }
 
   // === Tier chart layout ===
-  var tsvgW = 720, tsvgH = 340;
-  var tmL = 70, tmR = 55, tmT = 24, tmB = 50;
+  var tsvgW = 880, tsvgH = 400;
+  var tmL = 70, tmR = 55, tmT = 28, tmB = 50;
   var tPlotW = tsvgW - tmL - tmR;
   var tPlotH = tsvgH - tmT - tmB;
 
