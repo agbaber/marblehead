@@ -1702,7 +1702,7 @@
     color: var(--c-text);
   }
   .wyl-sub {
-    margin: 0 0 8px;
+    margin: 0 0 4px;
     font-size: 14px;
     color: var(--c-text-mid);
     line-height: 1.5;
@@ -1710,11 +1710,11 @@
   .wyl-progress {
     margin: 0;
     font-size: 13px;
-    color: var(--c-text-mid);
+    color: var(--c-text-sub);
     font-variant-numeric: tabular-nums;
   }
-  .wyl-themes { display: flex; flex-direction: column; gap: 14px; }
-  .wyl-theme { padding-top: 12px; border-top: 1px dashed var(--c-border); }
+  .wyl-themes { display: flex; flex-direction: column; gap: 22px; }
+  .wyl-theme { padding-top: 18px; border-top: 1px solid var(--c-border); }
   .wyl-theme:first-child { border-top: 0; padding-top: 0; }
   .wyl-theme-title {
     margin: 0 0 8px;
@@ -1736,10 +1736,10 @@
   .wyl-topic-link {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 10px 14px;
+    gap: 6px 12px;
     align-items: baseline;
     width: 100%;
-    padding: 8px 10px;
+    padding: 10px 10px;
     margin: 0;
     background: transparent;
     border: 0;
@@ -1748,36 +1748,42 @@
     font: inherit;
     color: inherit;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.12s ease;
   }
-  .wyl-topic-link:hover,
+  .wyl-topic-link:hover { background: var(--c-fog); }
   .wyl-topic-link:focus-visible {
     background: var(--c-fog);
-    outline: none;
+    outline: 2px solid var(--c-teal);
+    outline-offset: -2px;
   }
+  .wyl-topic-link:active { background: var(--c-divider); }
   .wyl-topic-label {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     color: var(--c-text);
+    line-height: 1.3;
   }
-  .wyl-topic-pick {
-    font-size: 13px;
-    color: var(--c-text-mid);
-    text-align: right;
-    line-height: 1.4;
+  .wyl-topic-chev {
+    color: var(--c-text-faint);
+    font-size: 18px;
+    line-height: 1;
+    transition: color 0.12s ease, transform 0.12s ease;
   }
-  .wyl-topic-pick--u { font-style: italic; }
-  /* Evidence excerpt: spans both columns of the grid as a third row,
-     so the answer heading stays clean on the right and the substance
-     reads as a quote underneath. */
+  .wyl-topic-link:hover .wyl-topic-chev,
+  .wyl-topic-link:focus-visible .wyl-topic-chev {
+    color: var(--c-teal);
+    transform: translateX(2px);
+  }
+  /* Body copy spans both columns as the second grid row. */
   .wyl-topic-detail {
     grid-column: 1 / -1;
-    margin-top: 6px;
-    padding-left: 10px;
-    border-left: 2px solid var(--c-border);
-    font-size: 13px;
-    line-height: 1.5;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 1.55;
     color: var(--c-text-mid);
   }
+  .wyl-topic-detail--unsure { font-style: italic; color: var(--c-text-sub); }
   .wyl-open {
     margin-top: 16px;
     padding-top: 12px;
@@ -1892,9 +1898,8 @@
   @media (max-width: 599px) {
     .where-you-landed { padding: 16px 14px; }
     .wyl-title { font-size: 18px; }
-    .wyl-topic-link { grid-template-columns: 1fr; gap: 2px; padding: 8px; }
-    .wyl-topic-pick { text-align: left; }
-    .wyl-topic-detail { padding-left: 8px; font-size: 12.5px; }
+    .wyl-topic-label { font-size: 14.5px; }
+    .wyl-topic-detail { font-size: 13.5px; }
   }
 
   @media (max-width: 599px) {

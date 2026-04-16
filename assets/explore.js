@@ -1201,11 +1201,11 @@
     var clearBtn = document.getElementById('wylStartOver');
     if (isSharedView) {
       if (titleEl) titleEl.textContent = 'Where they landed';
-      if (subEl) subEl.textContent = 'A plain readback of the positions in the link you followed. Use Start fresh at the top to pick your own.';
+      if (subEl) subEl.textContent = 'The positions in the link you followed. Tap Start fresh at the top to pick your own.';
       if (clearBtn) clearBtn.hidden = true;
     } else {
       if (titleEl) titleEl.textContent = 'Where you landed';
-      if (subEl) subEl.textContent = 'A plain readback of the positions you picked. Nothing here is scored and nothing is telling you how to vote. Questions you haven\u2019t answered yet are listed at the bottom.';
+      if (subEl) subEl.textContent = 'Your picks so far, grouped by theme.';
       if (clearBtn) clearBtn.hidden = false;
     }
 
@@ -1254,30 +1254,29 @@
           label.textContent = WYL_TOPIC_LABELS[topic] || topic;
           btn.appendChild(label);
 
-          var pick = document.createElement('span');
-          pick.className = 'wyl-topic-pick wyl-topic-pick--' + ans;
-          if (ans === 'u') {
-            pick.textContent = 'Not sure yet';
-          } else {
-            var heading = landingCards[topic]
-              && landingCards[topic].answerHeadings
-              && landingCards[topic].answerHeadings[ans];
-            pick.textContent = heading || ('Picked ' + ans.toUpperCase());
-          }
-          btn.appendChild(pick);
+          var chev = document.createElement('span');
+          chev.className = 'wyl-topic-chev';
+          chev.setAttribute('aria-hidden', 'true');
+          chev.textContent = '\u203A'; // single right-pointing angle quote
+          btn.appendChild(chev);
 
-          // The case the reader actually picked from -- the answer-card's
-          // own summary copy. This is the most direct "why I picked this"
-          // recall on revisit. Skipped for "Not sure yet."
-          if (ans !== 'u') {
+          // Body copy beneath the label. For a pick, it's the case the
+          // reader actually picked from (answer-card summary). For "Not
+          // sure yet" it's an explicit acknowledgement.
+          var detail = document.createElement('span');
+          detail.className = 'wyl-topic-detail';
+          if (ans === 'u') {
+            detail.classList.add('wyl-topic-detail--unsure');
+            detail.textContent = 'Marked not sure yet.';
+          } else {
             var summary = getAnswerSummary(topic, ans);
-            if (summary) {
-              var detail = document.createElement('span');
-              detail.className = 'wyl-topic-detail';
-              detail.textContent = summary;
-              btn.appendChild(detail);
-            }
+            detail.textContent = summary
+              || (landingCards[topic]
+                  && landingCards[topic].answerHeadings
+                  && landingCards[topic].answerHeadings[ans])
+              || ('Picked ' + ans.toUpperCase());
           }
+          btn.appendChild(detail);
 
           li.appendChild(btn);
           ul.appendChild(li);
