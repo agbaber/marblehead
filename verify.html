@@ -17,84 +17,74 @@ body.verify-page .verify-card {
   padding: 1.5rem;
   margin: 1rem 0;
 }
-body.verify-page input[type="text"] {
-  display: block;
-  width: 100%;
-  padding: 0.6rem 0.8rem;
-  font-size: 1rem;
-  border: 1px solid var(--c-text-faint, #ccc);
-  border-radius: var(--radius-sm, 4px);
-  margin: 0.4rem 0;
-  box-sizing: border-box;
-  background: var(--bg, #fff);
-  color: var(--c-text, #1a1a1a);
+body.verify-page label { display: block; margin-top: .75rem; margin-bottom: .25rem; }
+body.verify-page input[type="text"],
+body.verify-page input[type="search"] {
+  display: block; width: 100%; padding: .6rem .8rem; font-size: 1rem;
+  border: 1px solid var(--c-text-faint, #ccc); border-radius: var(--radius-sm, 4px);
+  margin: .4rem 0; box-sizing: border-box; background: var(--bg, #fff);
+  color: var(--c-text, #1a1a1a); -webkit-appearance: none; appearance: none;
 }
 body.verify-page .btn {
-  display: inline-block;
-  padding: 0.7rem 1.4rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: var(--radius-md, 8px);
-  cursor: pointer;
-  margin: 0.5rem 0.5rem 0.5rem 0;
+  display: inline-block; padding: .7rem 1.4rem; font-size: 1rem; font-weight: 600;
+  border: none; border-radius: var(--radius-md, 8px); cursor: pointer;
+  margin: .5rem .5rem .5rem 0;
 }
-body.verify-page .btn-primary {
-  background: var(--c-navy, #1b3a5c);
-  color: #fff;
-}
+body.verify-page .btn:hover { filter: brightness(1.1); }
+body.verify-page .btn:focus-visible { outline: 2px solid var(--c-teal, #2a9d8f); outline-offset: 2px; }
+body.verify-page .btn:disabled { opacity: .5; cursor: not-allowed; }
+body.verify-page input:focus-visible { outline: 2px solid var(--c-teal, #2a9d8f); outline-offset: 1px; }
+body.verify-page .btn-primary { background: var(--c-navy, #1b3a5c); color: #fff; }
 body.verify-page .btn-secondary {
-  background: var(--surface, #f0f0f0);
-  color: var(--c-text, #1a1a1a);
+  background: var(--surface, #f0f0f0); color: var(--c-text, #1a1a1a);
   border: 1px solid var(--c-text-faint, #ccc);
 }
-body.verify-page .status { padding: 1rem; border-radius: var(--radius-sm, 4px); margin: 1rem 0; font-size: 0.9rem; }
-body.verify-page .status-ok { background: #e8f5e9; color: #2e7d32; }
-body.verify-page .status-err { background: #fce4ec; color: #c62828; }
-body.verify-page .status-info { background: #e3f2fd; color: #1565c0; }
+body.verify-page .status { padding: 1rem; border-radius: var(--radius-sm, 4px); margin: 1rem 0; font-size: .9rem; }
+body.verify-page .status-ok { background: color-mix(in srgb, var(--c-teal, #2a9d8f) 15%, var(--bg, #fff)); color: var(--c-teal, #2a9d8f); }
+body.verify-page .status-err { background: color-mix(in srgb, #c62828 15%, var(--bg, #fff)); color: #e57373; }
+body.verify-page .status-info { background: color-mix(in srgb, var(--c-navy, #1b3a5c) 15%, var(--bg, #fff)); color: var(--c-link, #5ba3d9); }
 body.verify-page .recovery-key {
-  font-family: var(--font-mono, monospace);
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  padding: 1rem;
-  background: #fff3e0;
-  border: 2px dashed #e65100;
-  border-radius: var(--radius-sm, 4px);
-  text-align: center;
-  margin: 1rem 0;
-  color: #bf360c;
+  font-family: var(--font-mono, monospace); font-size: 1.1rem; font-weight: 700;
+  letter-spacing: .05em; padding: 1rem;
+  background: color-mix(in srgb, var(--c-brass, #d4a843) 15%, var(--bg, #fff));
+  border: 2px dashed var(--c-brass, #d4a843); border-radius: var(--radius-sm, 4px);
+  text-align: center; margin: 1rem 0; color: var(--c-brass, #d4a843);
 }
 body.verify-page .invite-link {
-  font-family: var(--font-mono, monospace);
-  font-size: 0.85rem;
-  word-break: break-all;
-  padding: 0.8rem;
-  background: var(--surface, #f5f5f5);
-  border-radius: var(--radius-sm, 4px);
-  margin: 0.5rem 0;
+  font-family: var(--font-mono, monospace); font-size: .85rem; word-break: break-all;
+  padding: .8rem; background: var(--surface, #f5f5f5); border-radius: var(--radius-sm, 4px);
+  margin: .5rem 0;
 }
 body.verify-page .invite-item { margin: 1rem 0; padding: 1rem; background: var(--surface); border-radius: var(--radius-sm, 4px); }
 body.verify-page .hidden { display: none; }
 body.verify-page .branch-badge {
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  font-size: 0.85rem;
-  background: var(--c-teal, #2a9d8f);
-  color: #fff;
-  border-radius: var(--radius-sm, 4px);
+  display: inline-block; padding: .2rem .6rem; font-size: .85rem;
+  background: var(--c-teal, #2a9d8f); color: #fff; border-radius: var(--radius-sm, 4px);
 }
+body.verify-page .invitees-list { margin: .5rem 0; }
+body.verify-page .invitee-row { display: flex; align-items: center; gap: .75rem; padding: .4rem 0; font-size: .9rem; }
+body.verify-page .invitee-downstream { font-size: .8rem; color: var(--c-text-muted, #666); }
+.addr-row { display: flex; gap: .5rem; align-items: flex-start; }
+.addr-num { width: 4.5rem; flex: 0 0 4.5rem; }
+.addr-num input { width: 100%; box-sizing: border-box; }
+.addr-street-wrap { flex: 1 1 auto; position: relative; min-width: 0; }
+.addr-street-wrap input { width: 100%; box-sizing: border-box; }
+.ta-list { position: absolute; top: 100%; left: 0; right: 0; max-height: 200px; overflow-y: auto;
+  background: var(--bg, #fff); border: 1px solid var(--c-text-faint, #ccc); border-top: none;
+  border-radius: 0 0 var(--radius-sm, 4px) var(--radius-sm, 4px); z-index: 100;
+  display: none; margin: 0; padding: 0; list-style: none; }
+.ta-list.open { display: block; }
+.ta-item { padding: .4rem .8rem; cursor: pointer; font-size: .9rem; color: var(--c-text, #1a1a1a); }
+.ta-item:hover, .ta-item.active { background: var(--surface, #f0f0f0); }
 </style>
 
 <div class="page">
 
-<!-- ── State: Loading ── -->
 <div id="state-loading">
   <h1>Verify</h1>
   <p>Loading...</p>
 </div>
 
-<!-- ── State: No invite, not authenticated ── -->
 <div id="state-landing" class="hidden">
   <h1>Verified Residents</h1>
   <p>The neighbor verification network lets Marblehead residents cast deduplicated, verified votes on ballot questions and site sections. Each verified resident was personally invited by someone who already verified.</p>
@@ -108,75 +98,78 @@ body.verify-page .branch-badge {
     <h2>Want to start a new branch?</h2>
     <p>If nobody in your neighborhood is verified yet, you can request a seed invite to start your own branch.</p>
     <a class="btn btn-secondary" href="https://github.com/agbaber/marblehead/issues/new?template=branch-request.md&title=Branch+request">Request a branch invite</a>
-    <p class="notes">Requests are vetted against the Marblehead assessor database and voter rolls. This usually takes a day or two.</p>
+    <p class="notes">Requests are vetted against the Marblehead assessor database and voter rolls.</p>
   </div>
 </div>
 
-<!-- ── State: Invite redemption ── -->
 <div id="state-invite" class="hidden">
   <h1>You've been invited</h1>
   <p>Someone invited you to join the Marblehead neighbor verification network. Enter your name and street address exactly as your inviter knows them.</p>
 
   <div class="verify-card">
     <label for="reg-name"><strong>Your name</strong></label>
-    <input type="text" id="reg-name" placeholder="First and last name" autocomplete="name">
+    <input type="search" id="reg-name" placeholder="First and last name" autocomplete="off" data-1p-ignore data-lpignore="true">
 
-    <label for="reg-address"><strong>Your street address</strong></label>
-    <input type="text" id="reg-address" placeholder="e.g. 16 Mystic Road" autocomplete="street-address">
+    <label><strong>Your street address</strong></label>
+    <div class="addr-row">
+      <div class="addr-num"><input type="search" id="reg-num" placeholder="#" autocomplete="off" data-1p-ignore data-lpignore="true"></div>
+      <div class="addr-street-wrap">
+        <input type="search" id="reg-street" placeholder="Street name" autocomplete="off" data-1p-ignore data-lpignore="true">
+        <ul class="ta-list" id="reg-street-ta"></ul>
+      </div>
+    </div>
 
-    <button class="btn btn-primary" id="btn-register">Verify and create passkey</button>
+    <button class="btn btn-primary" id="btn-register">Verify my identity</button>
   </div>
 
   <div id="reg-status" class="hidden"></div>
 </div>
 
-<!-- ── State: Registration complete (show recovery key) ── -->
 <div id="state-registered" class="hidden">
   <h1>You're verified</h1>
-
   <div class="status status-ok" id="reg-success-msg"></div>
-
   <div class="verify-card">
-    <h2>Save your recovery key</h2>
-    <p>Write this down or screenshot it. If you lose access to all your devices, this key lets you re-register your passkey.</p>
+    <h2>Your backup code</h2>
+    <p>This is your spare key. Screenshot it or write it down. If you ever lose access to your devices, this code lets you get back in.</p>
     <div class="recovery-key" id="recovery-key-display"></div>
-    <p class="notes">This key is shown once. It cannot be retrieved later.</p>
+    <p class="notes">Shown once. Save it now.</p>
   </div>
-
   <button class="btn btn-primary" id="btn-go-dashboard">Continue to dashboard</button>
 </div>
 
-<!-- ── State: Authenticated dashboard ── -->
 <div id="state-dashboard" class="hidden">
   <h1>Verified Resident</h1>
 
   <div class="verify-card" id="profile-card">
-    <p><strong>Branch:</strong> <span id="dash-branch-name">—</span> <span class="branch-badge" id="dash-branch-size"></span> <a href="/branches.html" style="font-size:0.85rem;margin-left:0.5rem">All branches</a></p>
-    <p><strong>Invites remaining:</strong> <span id="dash-invites">—</span></p>
+    <p><strong>Branch:</strong> <span id="dash-branch-name">&mdash;</span> <span class="branch-badge" id="dash-branch-size"></span> <a href="/branches.html" style="font-size:.85rem;margin-left:.5rem">All branches</a></p>
+    <p><strong>Invites remaining:</strong> <span id="dash-invites">&mdash;</span></p>
   </div>
 
-  <!-- Invite a neighbor -->
+  <div class="verify-section hidden" id="invitees-section">
+    <h2>Your invites</h2>
+    <div id="invitees-list" class="invitees-list"></div>
+  </div>
+
   <div class="verify-section">
     <h2>Invite a neighbor</h2>
     <p>Enter their name and address. They'll need to enter the same info to redeem the invite.</p>
 
     <label for="inv-name"><strong>Neighbor's name</strong></label>
-    <input type="text" id="inv-name" placeholder="First and last name">
+    <input type="search" id="inv-name" placeholder="First and last name" autocomplete="off" data-1p-ignore data-lpignore="true">
 
-    <label for="inv-address"><strong>Neighbor's address</strong></label>
-    <input type="text" id="inv-address" placeholder="e.g. 45 Ocean Ave">
+    <label><strong>Neighbor's address</strong></label>
+    <div class="addr-row">
+      <div class="addr-num"><input type="search" id="inv-num" placeholder="#" autocomplete="off" data-1p-ignore data-lpignore="true"></div>
+      <div class="addr-street-wrap">
+        <input type="search" id="inv-street" placeholder="Street name" autocomplete="off" data-1p-ignore data-lpignore="true">
+        <ul class="ta-list" id="inv-street-ta"></ul>
+      </div>
+    </div>
 
     <button class="btn btn-primary" id="btn-invite">Create invite</button>
     <div id="inv-status" class="hidden"></div>
   </div>
 
-  <!-- Pending invites -->
-  <div class="verify-section hidden" id="pending-section">
-    <h2>Pending invites</h2>
-    <div id="pending-list"></div>
-  </div>
-
-  <!-- Add device -->
   <div class="verify-section">
     <h2>Add another device</h2>
     <p>Register a passkey on this device so you can authenticate here too.</p>
@@ -184,25 +177,61 @@ body.verify-page .branch-badge {
     <div id="device-status" class="hidden"></div>
   </div>
 
-  <!-- Sign out -->
   <div class="verify-section">
     <button class="btn btn-secondary" id="btn-signout">Sign out</button>
   </div>
 </div>
 
-</div><!-- .page -->
+</div>
+
+<script>
+// Typeahead for Marblehead street names.
+(function(){
+  var streets = null;
+  var API_BASE = 'https://marblehead-community-pulse.agbaber.workers.dev';
+  function loadStreets(cb) {
+    if (streets) return cb(streets);
+    fetch(API_BASE + '/api/streets').then(function(r){ return r.json(); }).then(function(s){ streets = s; cb(s); }).catch(function(){ cb([]); });
+  }
+  window.initTypeahead = function(inputId, listId) {
+    var input = document.getElementById(inputId);
+    var list = document.getElementById(listId);
+    if (!input || !list) return;
+    var items = [], activeIdx = -1;
+    input.addEventListener('input', function() {
+      var v = input.value.trim().toLowerCase();
+      if (v.length < 1) { list.classList.remove('open'); return; }
+      loadStreets(function(ss) {
+        var matches = ss.filter(function(s){ return s.toLowerCase().indexOf(v) === 0; }).slice(0, 10);
+        list.innerHTML = ''; items = []; activeIdx = -1;
+        matches.forEach(function(m) {
+          var li = document.createElement('li'); li.className = 'ta-item'; li.textContent = m;
+          li.addEventListener('mousedown', function(e){ e.preventDefault(); input.value = m; list.classList.remove('open'); });
+          list.appendChild(li); items.push(li);
+        });
+        list.classList.toggle('open', matches.length > 0);
+      });
+    });
+    input.addEventListener('keydown', function(e) {
+      if (!list.classList.contains('open')) return;
+      if (e.key === 'ArrowDown') { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, items.length - 1); upd(); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); upd(); }
+      else if (e.key === 'Enter' && activeIdx >= 0) { e.preventDefault(); input.value = items[activeIdx].textContent; list.classList.remove('open'); }
+      else if (e.key === 'Escape') { list.classList.remove('open'); }
+    });
+    input.addEventListener('blur', function(){ setTimeout(function(){ list.classList.remove('open'); }, 150); });
+    function upd() { items.forEach(function(li, i){ li.classList.toggle('active', i === activeIdx); }); }
+  };
+})();
+</script>
 
 <script type="module">
 import { client } from 'https://cdn.jsdelivr.net/npm/@passwordless-id/webauthn@2.3.5/dist/esm/index.js';
 
-const API = (location.hostname === 'localhost')
-  ? 'http://localhost:8787'
-  : 'https://marblehead-community-pulse.agbaber.workers.dev';
+const API = 'https://marblehead-community-pulse.agbaber.workers.dev';
 
 let jwt = sessionStorage.getItem('verify_jwt') || null;
 let currentProfile = null;
-
-// ── Helpers ─────────────────────────────────────────────
 
 function show(id) { document.getElementById(id).classList.remove('hidden'); }
 function hide(id) { document.getElementById(id).classList.add('hidden'); }
@@ -236,19 +265,29 @@ async function api(method, path, body) {
 // ── Init ────────────────────────────────────────────────
 
 async function init() {
-  const hash = window.location.hash;
-  const inviteToken = hash.startsWith('#invite=') ? hash.slice(8) : null;
+  const h = window.location.hash;
+  // Parse hash: #invite=TOKEN&n=16&i=A
+  let tok = null, hintNum = '', hintInitial = '';
+  if (h.startsWith('#invite=')) {
+    const parts = h.slice(1).split('&');
+    for (const p of parts) {
+      const kv = p.split('=');
+      if (kv[0] === 'invite') tok = decodeURIComponent(kv[1]);
+      else if (kv[0] === 'n') hintNum = decodeURIComponent(kv[1]);
+      else if (kv[0] === 'i') hintInitial = decodeURIComponent(kv[1]);
+    }
+  }
 
-  if (inviteToken) {
-    // Invite redemption flow.
+  if (tok) {
     hide('state-loading');
     show('state-invite');
-    document.getElementById('btn-register').dataset.token = inviteToken;
+    document.getElementById('btn-register').dataset.token = tok;
+    if (hintNum) document.getElementById('reg-num').value = hintNum;
+    if (hintInitial) { document.getElementById('reg-name').value = hintInitial; document.getElementById('reg-name').placeholder = hintInitial + '...'; }
     return;
   }
 
   if (jwt) {
-    // Try to load profile.
     try {
       const profile = await api('GET', '/api/verify/me');
       if (profile.identity_hash) {
@@ -257,21 +296,21 @@ async function init() {
         return;
       }
     } catch {}
-    // JWT expired or invalid.
     jwt = null;
     sessionStorage.removeItem('verify_jwt');
   }
 
-  // Not authenticated, no invite. Show landing.
   hide('state-loading');
   show('state-landing');
 }
 
-// ── Registration ────────────────────────────────────────
+// ── Registration (two-step: verify identity, then create passkey) ──
+
+let pendingReg = null;
 
 document.getElementById('btn-register').addEventListener('click', async () => {
   const name = document.getElementById('reg-name').value.trim();
-  const address = document.getElementById('reg-address').value.trim();
+  const address = (document.getElementById('reg-num').value.trim() + ' ' + document.getElementById('reg-street').value.trim()).trim();
   const token = document.getElementById('btn-register').dataset.token;
 
   if (!name || !address) {
@@ -279,31 +318,47 @@ document.getElementById('btn-register').addEventListener('click', async () => {
     return;
   }
 
+  const regBtn = document.getElementById('btn-register');
+  regBtn.disabled = true;
+  regBtn.textContent = 'Verifying...';
+
   try {
-    showStatus('reg-status', 'Verifying invite...', 'info');
+    showStatus('reg-status', 'Checking your invite...', 'info');
     const identity_hash = await computeHash(name, address);
 
-    // Step 1: Register (two-sided handshake).
     const reg = await api('POST', '/api/verify/register', { identity_hash, invite_token: token });
     if (!reg.ok) {
       showStatus('reg-status', reg.error || 'Registration failed.', 'err');
+      regBtn.disabled = false;
+      regBtn.textContent = 'Verify my identity';
       return;
     }
 
-    showStatus('reg-status', 'Creating passkey...', 'info');
+    // Store for passkey step and show the passkey button.
+    pendingReg = { id: identity_hash, reg, invite_token: token };
+    const el = document.getElementById('reg-status');
+    el.className = 'status status-ok';
+    el.innerHTML = 'Confirmed! Now save a passkey so you can sign in later.<br><button class="btn btn-primary" id="btn-passkey" style="margin-top:.75rem">Save passkey (Touch ID / Face ID)</button>';
+    show('reg-status');
+    document.getElementById('btn-passkey').addEventListener('click', finishPasskey);
+  } catch (err) {
+    showStatus('reg-status', `Error: ${err.message}`, 'err');
+    regBtn.disabled = false;
+    regBtn.textContent = 'Verify my identity';
+  }
+});
 
-    // Step 2: Create passkey.
+async function finishPasskey() {
+  if (!pendingReg) return;
+  const { id, reg, invite_token } = pendingReg;
+  try {
     const browserChallenge = reg.challenge.split('.')[0];
-    const registration = await client.register({
-      user: identity_hash,
-      challenge: browserChallenge,
-    });
+    const registration = await client.register({ user: id, challenge: browserChallenge });
 
     showStatus('reg-status', 'Completing registration...', 'info');
 
-    // Step 3: Complete passkey registration.
     const pk = await api('POST', '/api/verify/passkey/register', {
-      registration, challenge: reg.challenge, identity_hash,
+      registration, challenge: reg.challenge, identity_hash: id, invite_token
     });
 
     if (!pk.ok) {
@@ -311,22 +366,20 @@ document.getElementById('btn-register').addEventListener('click', async () => {
       return;
     }
 
-    // Save JWT.
     jwt = pk.token;
     sessionStorage.setItem('verify_jwt', jwt);
+    pendingReg = null;
 
-    // Show success + recovery key.
+    if (history.replaceState) history.replaceState(null, '', location.pathname);
     hide('state-invite');
     hide('reg-status');
     show('state-registered');
-    document.getElementById('recovery-key-display').textContent = reg.recovery_key;
-    document.getElementById('reg-success-msg').textContent =
-      `Welcome! You're now a verified Marblehead resident. Branch: ${reg.branch_root ? reg.branch_root.slice(0, 8) + '...' : 'root'}`;
-
+    document.getElementById('recovery-key-display').textContent = pk.recovery_key;
+    document.getElementById('reg-success-msg').textContent = 'Welcome! You are now a verified Marblehead resident.';
   } catch (err) {
     showStatus('reg-status', `Error: ${err.message}`, 'err');
   }
-});
+}
 
 // ── Dashboard ───────────────────────────────────────────
 
@@ -349,17 +402,28 @@ function showDashboard(profile) {
   document.getElementById('dash-branch-size').textContent = `${profile.branch_size} resident${profile.branch_size !== 1 ? 's' : ''}`;
   document.getElementById('dash-invites').textContent = profile.invites_remaining;
 
-  // Pending invites.
-  const list = document.getElementById('pending-list');
-  list.innerHTML = '';
-  if (profile.pending_invites && profile.pending_invites.length > 0) {
-    show('pending-section');
-    for (const inv of profile.pending_invites) {
-      const div = document.createElement('div');
-      div.className = 'invite-item';
-      div.innerHTML = `<div class="invite-link">${inv.invite_url}</div>
-        <button class="btn btn-secondary" onclick="shareInvite('${inv.invite_url}')">Share</button>`;
-      list.appendChild(div);
+  // Show merged invite list (pending + joined).
+  const invList = document.getElementById('invitees-list');
+  invList.innerHTML = '';
+  if (profile.invites && profile.invites.length > 0) {
+    show('invitees-section');
+    for (const inv of profile.invites) {
+      const row = document.createElement('div');
+      row.className = 'invitee-row';
+      const name = inv.label || 'Someone';
+      if (inv.status === 'joined') {
+        const growth = inv.downstream > 0 ? ` and invited ${inv.downstream} more` : '';
+        row.innerHTML = `<span style="color:var(--c-teal,#2a9d8f)">&#10003;</span> <span>${name}</span><span class="invitee-downstream"> joined${growth}</span>`;
+      } else {
+        row.innerHTML = `<span style="color:var(--c-brass,#d4a843)">&#9203;</span> <span>${name}</span><span class="invitee-downstream"> pending</span>`;
+        const sb = document.createElement('button');
+        sb.className = 'btn btn-secondary';
+        sb.style.cssText = 'padding:.2rem .6rem;font-size:.75rem;margin-left:.5rem';
+        sb.textContent = 'Resend';
+        sb.addEventListener('click', () => shareInvite(inv.invite_url));
+        row.appendChild(sb);
+      }
+      invList.appendChild(row);
     }
   }
 }
@@ -368,41 +432,50 @@ function showDashboard(profile) {
 
 document.getElementById('btn-invite').addEventListener('click', async () => {
   const name = document.getElementById('inv-name').value.trim();
-  const address = document.getElementById('inv-address').value.trim();
+  const address = (document.getElementById('inv-num').value.trim() + ' ' + document.getElementById('inv-street').value.trim()).trim();
 
   if (!name || !address) {
-    showStatus('inv-status', 'Enter your neighbor\'s name and address.', 'err');
+    showStatus('inv-status', 'Enter your neighbor\u2019s name and address.', 'err');
     return;
   }
 
   try {
     showStatus('inv-status', 'Creating invite...', 'info');
+
+    // Build display label: "J. Smith" style.
+    const parts = name.split(/\s+/);
+    const label = parts.length > 1 ? parts[0].charAt(0) + '. ' + parts[parts.length - 1] : name;
+
     const recipient_hash = await computeHash(name, address);
-    const data = await api('POST', '/api/verify/invite', { recipient_hash });
+    const data = await api('POST', '/api/verify/invite', { recipient_hash, recipient_label: label });
 
     if (!data.ok) {
       showStatus('inv-status', data.error || 'Failed to create invite.', 'err');
       return;
     }
 
-    // Always show the link + copy button. Share sheet is a bonus on top.
-    showInviteLink(data.invite_url);
+    // Append hints to the invite URL.
+    const num = document.getElementById('inv-num').value.trim();
+    const initial = name.charAt(0).toUpperCase();
+    const hintUrl = data.invite_url + '&n=' + encodeURIComponent(num) + '&i=' + encodeURIComponent(initial);
+
+    // Always show the link + copy button. Share sheet is a bonus.
+    showInviteLink(hintUrl);
     if (navigator.share) {
       try {
         await navigator.share({
           title: 'Marblehead Verification Invite',
           text: "I'm a verified Marblehead resident on marbleheaddata.org \u2014 here's your invite to join",
-          url: data.invite_url,
+          url: hintUrl,
         });
       } catch {}
     }
 
-    // Clear fields, refresh profile.
     document.getElementById('inv-name').value = '';
-    document.getElementById('inv-address').value = '';
+    document.getElementById('inv-num').value = '';
+    document.getElementById('inv-street').value = '';
     const profile = await api('GET', '/api/verify/me');
     if (profile.identity_hash) showDashboard(profile);
-
   } catch (err) {
     showStatus('inv-status', `Error: ${err.message}`, 'err');
   }
@@ -411,8 +484,13 @@ document.getElementById('btn-invite').addEventListener('click', async () => {
 function showInviteLink(url) {
   const el = document.getElementById('inv-status');
   el.className = 'status status-ok';
-  el.innerHTML = `Invite created! Share this link with your neighbor:<div class="invite-link" style="margin-top:0.5rem">${url}</div>
-    <button class="btn btn-secondary" style="margin-top:0.5rem" onclick="copyText('${url}')">Copy link</button>`;
+  el.innerHTML = `Invite created!<div class="invite-link" style="margin-top:.5rem">${url}</div>`;
+  const cb = document.createElement('button');
+  cb.className = 'btn btn-secondary';
+  cb.style.marginTop = '.5rem';
+  cb.textContent = 'Copy link';
+  cb.addEventListener('click', () => copyText(url));
+  el.appendChild(cb);
   show('inv-status');
 }
 
@@ -421,59 +499,43 @@ function showInviteLink(url) {
 document.getElementById('btn-add-device').addEventListener('click', async () => {
   try {
     showStatus('device-status', 'Requesting challenge...', 'info');
-
-    // Get a fresh challenge.
     const challengeData = await api('POST', '/api/verify/passkey/auth-challenge');
     const browserChallenge = challengeData.challenge.split('.')[0];
 
     showStatus('device-status', 'Creating passkey for this device...', 'info');
+    const registration = await client.register({ user: currentProfile.identity_hash, challenge: browserChallenge });
 
-    const registration = await client.register({
-      user: currentProfile.identity_hash,
-      challenge: browserChallenge,
-    });
-
-    const data = await api('POST', '/api/verify/passkey/add-device', {
-      registration, challenge: challengeData.challenge,
-    });
-
-    if (data.ok) {
-      showStatus('device-status', 'Passkey added for this device.', 'ok');
-    } else {
-      showStatus('device-status', data.error || 'Failed to add device.', 'err');
-    }
+    const data = await api('POST', '/api/verify/passkey/add-device', { registration, challenge: challengeData.challenge });
+    showStatus('device-status', data.ok ? 'Passkey added for this device.' : (data.error || 'Failed.'), data.ok ? 'ok' : 'err');
   } catch (err) {
     showStatus('device-status', `Error: ${err.message}`, 'err');
   }
 });
 
-// ── Authentication (return visit) ───────────────────────
+// ── Authentication ──────────────────────────────────────
 
 window.signIn = async function() {
+  const signInBtn = document.querySelector('[onclick="signIn()"]');
+  if (signInBtn) { signInBtn.disabled = true; signInBtn.textContent = 'Signing in...'; }
   try {
-    const challengeData = await api('POST', '/api/verify/passkey/auth-challenge');
-    const browserChallenge = challengeData.challenge.split('.')[0];
-
-    const authentication = await client.authenticate({
-      challenge: browserChallenge,
-      allowCredentials: challengeData.credentialIds,
-    });
-
-    const result = await api('POST', '/api/verify/passkey/auth', {
-      authentication, challenge: challengeData.challenge,
-    });
-
-    if (result.ok && result.token) {
-      jwt = result.token;
+    const c = await api('POST', '/api/verify/passkey/auth-challenge');
+    const browserChallenge = c.challenge.split('.')[0];
+    if (!c.credentialIds || c.credentialIds.length === 0) {
+      if (signInBtn) { signInBtn.disabled = false; signInBtn.textContent = 'Sign in'; }
+      alert('No verified residents found yet. Get an invite link to register.');
+      return;
+    }
+    const auth = await client.authenticate({ challenge: browserChallenge, allowCredentials: c.credentialIds });
+    const r = await api('POST', '/api/verify/passkey/auth', { authentication: auth, challenge: c.challenge });
+    if (r.ok && r.token) {
+      jwt = r.token;
       sessionStorage.setItem('verify_jwt', jwt);
       const profile = await api('GET', '/api/verify/me');
-      if (profile.identity_hash) {
-        currentProfile = profile;
-        showDashboard(profile);
-      }
+      if (profile.identity_hash) { currentProfile = profile; showDashboard(profile); }
     }
   } catch (err) {
-    console.error('Auth failed:', err);
+    if (signInBtn) { signInBtn.disabled = false; signInBtn.textContent = 'Sign in'; }
+    if (err.name !== 'NotAllowedError') console.error('Auth failed:', err);
   }
 };
 
@@ -488,7 +550,6 @@ document.getElementById('btn-signout').addEventListener('click', () => {
   hide('state-invite');
   hide('state-loading');
   show('state-landing');
-  // Clear any status messages.
   ['reg-status', 'inv-status', 'device-status'].forEach(id => hide(id));
 });
 
@@ -496,13 +557,7 @@ document.getElementById('btn-signout').addEventListener('click', () => {
 
 window.shareInvite = async function(url) {
   if (navigator.share) {
-    try {
-      await navigator.share({
-        title: 'Marblehead Verification Invite',
-        text: "I'm a verified Marblehead resident on marbleheaddata.org \u2014 here's your invite to join",
-        url,
-      });
-    } catch {}
+    try { await navigator.share({ title: 'Marblehead Verification Invite', text: "Here's your invite", url }); } catch {}
   } else {
     copyText(url);
   }
@@ -510,7 +565,6 @@ window.shareInvite = async function(url) {
 
 window.copyText = function(text) {
   navigator.clipboard.writeText(text).then(() => {
-    // Brief feedback.
     const el = document.activeElement;
     if (el && el.tagName === 'BUTTON') {
       const orig = el.textContent;
@@ -523,14 +577,14 @@ window.copyText = function(text) {
 // Add sign-in button to the landing page.
 const landing = document.getElementById('state-landing');
 if (landing) {
-  const signInCard = document.createElement('div');
-  signInCard.className = 'verify-card';
-  signInCard.innerHTML = `<h2>Already verified?</h2>
-    <p>Sign in with your passkey.</p>
-    <button class="btn btn-primary" onclick="signIn()">Sign in</button>`;
-  landing.appendChild(signInCard);
+  const c = document.createElement('div');
+  c.className = 'verify-card';
+  c.innerHTML = '<h2>Already verified?</h2><p>Sign in with your passkey (Touch ID, Face ID, or device PIN).</p><button class="btn btn-primary" onclick="signIn()">Sign in</button>';
+  landing.appendChild(c);
 }
 
-// Boot.
+// Init typeaheads and boot.
+initTypeahead('reg-street', 'reg-street-ta');
+initTypeahead('inv-street', 'inv-street-ta');
 init();
 </script>
