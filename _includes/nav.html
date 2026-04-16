@@ -64,6 +64,16 @@
     <a href="{{ '/' | relative_url }}what-you-can-do.html"{% if page.url == '/what-you-can-do.html' %} aria-current="page"{% endif %}>Get involved</a>
 
     <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle" aria-expanded="false">Tools <svg class="nav-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-dropdown-menu">
+        <a href="{{ '/' | relative_url }}charts/deficit_model.html"{% if page.url == '/charts/deficit_model.html' %} aria-current="page"{% endif %}>Deficit model</a>
+        <a href="{{ '/' | relative_url }}charts/town_explorer.html"{% if page.url == '/charts/town_explorer.html' %} aria-current="page"{% endif %}>Town explorer</a>
+        <a href="{{ '/' | relative_url }}charts/override_calculator.html"{% if page.url == '/charts/override_calculator.html' %} aria-current="page"{% endif %}>Override calculator</a>
+        <a href="{{ '/' | relative_url }}senior-tax-relief.html"{% if page.url == '/senior-tax-relief.html' %} aria-current="page"{% endif %}>Senior tax relief</a>
+      </div>
+    </div>
+
+    <div class="nav-dropdown">
       <button class="nav-dropdown-toggle" aria-expanded="false">Data <svg class="nav-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="nav-dropdown-menu">
         <a href="{{ '/' | relative_url }}data/master-data.html"{% if page.url == '/data/master-data.html' %} aria-current="page"{% endif %}>Annual rollup (FY01-FY27)</a>
