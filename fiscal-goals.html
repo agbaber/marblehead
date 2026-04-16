@@ -1,0 +1,241 @@
+---
+title: "Fiscal goals tracker"
+scripts: [citations]
+og_title: "Fiscal goals tracker"
+og_description: "Three measurable milestones for Marblehead's structural budget gap: identify savings, shift the crossover, get to parallel."
+og_url: https://marbleheaddata.org/fiscal-goals.html
+---
+<style>
+  .milestone { border-left: 4px solid var(--c-divider); padding: 16px 0 16px 20px; margin: 24px 0; }
+  .milestone-num { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--c-text-muted); margin-bottom: 4px; }
+  .milestone h3 { margin: 0 0 8px; }
+  .milestone p { margin: 4px 0; }
+
+  .trajectory-box { background: var(--c-surface); border-radius: var(--radius-md); padding: 20px; margin: 20px 0; box-shadow: var(--shadow-sm); }
+  .trajectory-row { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--c-divider); }
+  .trajectory-row:last-child { border-bottom: none; }
+  .trajectory-label { font-size: 0.875rem; color: var(--c-text-muted); }
+  .trajectory-value { font-size: 1.125rem; font-weight: 700; color: var(--c-text); }
+
+  .scenario-tool { background: var(--c-surface); border-radius: var(--radius-md); padding: 20px; margin: 24px 0; box-shadow: var(--shadow-sm); }
+  .scenario-tool h3 { margin-top: 0; }
+  .slider-row { display: flex; align-items: center; gap: 12px; margin: 12px 0; flex-wrap: wrap; }
+  .slider-row label { font-size: 0.875rem; color: var(--c-text-muted); min-width: 140px; }
+  .slider-row input[type="range"] { flex: 1; min-width: 120px; }
+  .slider-row .slider-val { font-weight: 700; min-width: 48px; text-align: right; }
+  .scenario-results { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--c-divider); }
+  .scenario-results p { margin: 6px 0; font-size: 0.9375rem; }
+  .scenario-results .result-highlight { font-weight: 700; }
+
+  .identified-list { list-style: none; padding: 0; margin: 16px 0; }
+  .identified-list li { padding: 10px 0; border-bottom: 1px solid var(--c-divider); display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .identified-list li:last-child { border-bottom: none; }
+  .identified-item { font-size: 0.9375rem; }
+  .identified-amount { font-weight: 700; white-space: nowrap; font-size: 0.9375rem; }
+  .identified-status { font-size: 0.75rem; color: var(--c-text-muted); }
+</style>
+
+<h1>Fiscal goals tracker</h1>
+
+<p class="page-lead">Marblehead's expenses grow at roughly 5% per year. Revenue grows at roughly 3%. That 2-percentage-point gap compounds into a structural deficit that widens every year. Three measurable milestones define what progress looks like, regardless of whether an override passes.</p>
+
+<nav class="page-toc" aria-label="On this page">
+  <span class="page-toc-label">On this page</span>
+  <a href="#where-we-are">Where we are</a>
+  <a href="#milestone-1">Milestone 1: Identify</a>
+  <a href="#milestone-2">Milestone 2: Shift the crossover</a>
+  <a href="#milestone-3">Milestone 3: Get to parallel</a>
+  <a href="#model-it">Model it yourself</a>
+</nav>
+
+<h2 id="where-we-are">Where we are</h2>
+
+<div class="trajectory-box">
+  <div class="trajectory-row">
+    <span class="trajectory-label">FY27 projected revenue (with free cash)</span>
+    <span class="trajectory-value">$101.0M</span>
+  </div>
+  <div class="trajectory-row">
+    <span class="trajectory-label">FY27 projected expenses</span>
+    <span class="trajectory-value">$120.6M</span>
+  </div>
+  <div class="trajectory-row">
+    <span class="trajectory-label">Structural gap</span>
+    <span class="trajectory-value">$8.47M</span>
+  </div>
+  <div class="trajectory-row">
+    <span class="trajectory-label">Revenue growth rate (Prop 2.5 + new growth)</span>
+    <span class="trajectory-value">~3%/yr</span>
+  </div>
+  <div class="trajectory-row">
+    <span class="trajectory-label">Expense growth rate (FY22&ndash;FY27 avg)</span>
+    <span class="trajectory-value">~5%/yr</span>
+  </div>
+  <div class="trajectory-row">
+    <span class="trajectory-label">Gap growth if unchanged</span>
+    <span class="trajectory-value">~$2&ndash;3M/yr wider</span>
+  </div>
+</div>
+
+<p class="caption">Revenue and expense projections from the Town Administrator's January 2026 State of the Town presentation. Growth rate assumptions match those used on the <a href="/charts/sustainability.html">sustainability chart</a>.<sup class="cite" data-href="https://marbleheadma.gov/wp-content/uploads/2026/01/State-of-the-Town-2026.pdf" data-source="State of the Town 2026, Thatcher Kezer, January 28, 2026"></sup></p>
+
+<h2 id="milestone-1">Milestone 1: Identify savings or efficiencies</h2>
+
+<div class="milestone">
+  <div class="milestone-num">Milestone 1</div>
+  <h3>Name and size specific changes to the expense trajectory</h3>
+  <p>Before anything can shift, proposals have to exist. Have town leaders, FinCom, or department heads identified concrete line items&mdash;staff consolidation, contract renegotiation, service restructuring, shared services&mdash;and estimated how much each one saves annually?</p>
+  <p>This milestone is met when proposals are <strong>named, sized, and sourced</strong>&mdash;not when they're enacted.</p>
+</div>
+
+<h3>What's been identified so far</h3>
+
+<p>The town has not yet published a formal efficiency review or line-item savings proposals beyond the <a href="/no-override-budget.html">no-override balanced budget</a>, which achieves balance through position cuts rather than structural efficiencies. If proposals emerge from FinCom, Select Board, or departmental reviews, they'll be tracked here.</p>
+
+<!--
+  As proposals are identified, add them as list items:
+  <ul class="identified-list">
+    <li>
+      <span class="identified-item">GIC plan design change (higher deductible tier)</span>
+      <span class="identified-amount">~$800K/yr</span>
+    </li>
+    <li>
+      <span class="identified-item">Regional dispatch consolidation</span>
+      <span class="identified-amount">~$200K/yr</span>
+    </li>
+  </ul>
+-->
+
+<h2 id="milestone-2">Milestone 2: Shift the crossover</h2>
+
+<div class="milestone">
+  <div class="milestone-num">Milestone 2</div>
+  <h3>Achieve enough savings to push the gap trajectory out</h3>
+  <p>Each dollar of recurring annual savings shifts the point where the gap becomes unmanageable. Under current projections (5% expense growth, 3% revenue growth), the gap widens by roughly $2&ndash;3M per year. Enacted efficiencies that reduce expense growth slow that widening.</p>
+  <p>This milestone is met when enacted changes <strong>measurably reduce the annual gap growth rate</strong>&mdash;visible in subsequent budget documents as a flatter expense trajectory.</p>
+</div>
+
+<div class="card">
+  <h3>How savings translate to trajectory shifts</h3>
+  <p>$1M in recurring annual savings doesn't just reduce expenses by $1M once. If it comes from reducing the <em>growth rate</em> of a cost category (e.g., shifting health plan design to slow premium growth), the benefit compounds. If it's a one-time cut (e.g., eliminating a position), it shifts the expense line down but doesn't change the slope.</p>
+  <ul>
+    <li><strong>One-time cut:</strong> reduces the gap by a fixed amount every year (the line shifts down, but the slope stays at 5%)</li>
+    <li><strong>Growth-rate reduction:</strong> reduces the gap by an increasing amount each year (the slope itself changes)</li>
+  </ul>
+  <p>Both matter, but getting to Milestone 3 requires the second kind.</p>
+</div>
+
+<h2 id="milestone-3">Milestone 3: Get to parallel</h2>
+
+<div class="milestone">
+  <div class="milestone-num">Milestone 3</div>
+  <h3>Revenue and expense growth rates converge</h3>
+  <p>When expenses grow at the same rate as revenue (~3%), the structural gap stops widening. It doesn't close the existing gap&mdash;that requires either an override, one-time cuts, or a period where expenses grow <em>slower</em> than revenue. But parallel growth means the problem stops getting worse.</p>
+  <p>This milestone is met when <strong>actual expense growth over a rolling 3-year period matches or falls below revenue growth</strong>.</p>
+</div>
+
+<div class="card">
+  <h3>What parallel looks like</h3>
+  <p>Revenue grows at ~3% due to Prop 2.5 limits. At 5% expense growth, the gap widens every year. At 4%, it still widens but more slowly. At 3%, the gap holds steady&mdash;whatever the current deficit is, it stays there instead of growing. Below 3%, the gap actually shrinks over time.</p>
+  <p>The two biggest drivers of the growth rate gap are health insurance premiums (growing 8&ndash;15% annually) and pension obligations (contractually set). Together they account for roughly half of the 2-percentage-point spread between revenue and expense growth.<sup class="cite" data-href="/charts/healthcare_costs.html" data-source="MHD Data, Why does health insurance keep rising?"></sup></p>
+</div>
+
+
+<h2 id="model-it">Model it yourself</h2>
+
+<div class="scenario-tool">
+  <h3>What if expense growth slowed?</h3>
+  <p>Drag the slider to see how different expense growth rates affect the structural gap over five years, starting from the FY27 baseline.</p>
+
+  <div class="slider-row">
+    <label for="expense-rate">Expense growth rate:</label>
+    <input type="range" id="expense-rate" min="1" max="7" step="0.25" value="5">
+    <span class="slider-val" id="expense-rate-val">5.0%</span>
+  </div>
+
+  <div class="scenario-results" id="scenario-results">
+    <!-- filled by JS -->
+  </div>
+</div>
+
+<p class="caption">Revenue held at 3% annual growth plus $5M free cash, matching the <a href="/charts/sustainability.html">sustainability chart</a> assumptions. Expense growth is whatever you set above. This is an illustrative model, not a forecast.</p>
+
+<div class="read-next">
+  <div class="read-next-label">Read next</div>
+  <a class="read-next-link" href="/charts/sustainability.html">
+    <div class="read-next-title">Revenue vs. expenses &rarr;</div>
+    <div class="read-next-desc">The full FY15&ndash;FY30 chart with override scenario tabs.</div>
+  </a>
+  <a class="read-next-link" href="/no-override-budget.html">
+    <div class="read-next-title">No-override budget &rarr;</div>
+    <div class="read-next-desc">The specific line-item cuts if the override fails.</div>
+  </a>
+  <a class="read-next-link" href="/where-has-the-money-gone.html">
+    <div class="read-next-title">Where has the money gone? &rarr;</div>
+    <div class="read-next-desc">Ten years of levy spending, line by line.</div>
+  </a>
+</div>
+
+<script>
+(function () {
+  var baseRevenue = 101.0;   // FY27 $M (including free cash)
+  var baseExpense = 120.5;   // FY27 $M
+  var revenueRate = 0.03;
+  var freeCash = 5.0;
+  var baseRevenueNoFC = baseRevenue - freeCash; // levy + other revenue
+
+  var slider = document.getElementById('expense-rate');
+  var valDisplay = document.getElementById('expense-rate-val');
+  var resultsDiv = document.getElementById('scenario-results');
+
+  function fmt(n) { return '$' + n.toFixed(1) + 'M'; }
+
+  function update() {
+    var expRate = parseFloat(slider.value) / 100;
+    valDisplay.textContent = slider.value + '%';
+
+    var years = ['FY27', 'FY28', 'FY29', 'FY30', 'FY31', 'FY32'];
+    var rev = [baseRevenue];
+    var exp = [baseExpense];
+
+    for (var i = 1; i < 6; i++) {
+      var r = baseRevenueNoFC * Math.pow(1 + revenueRate, i) + freeCash;
+      var e = baseExpense * Math.pow(1 + expRate, i);
+      rev.push(r);
+      exp.push(e);
+    }
+
+    var rows = '<table style="width:100%; border-collapse:collapse; font-size:0.875rem;">';
+    rows += '<tr><th style="text-align:left; padding:6px 8px; border-bottom:2px solid var(--c-divider);">Year</th>';
+    rows += '<th style="text-align:right; padding:6px 8px; border-bottom:2px solid var(--c-divider);">Revenue</th>';
+    rows += '<th style="text-align:right; padding:6px 8px; border-bottom:2px solid var(--c-divider);">Expenses</th>';
+    rows += '<th style="text-align:right; padding:6px 8px; border-bottom:2px solid var(--c-divider);">Gap</th></tr>';
+
+    for (var j = 0; j < 6; j++) {
+      var gap = exp[j] - rev[j];
+      rows += '<tr>';
+      rows += '<td style="padding:6px 8px; border-bottom:1px solid var(--c-divider);">' + years[j] + '</td>';
+      rows += '<td style="text-align:right; padding:6px 8px; border-bottom:1px solid var(--c-divider);">' + fmt(rev[j]) + '</td>';
+      rows += '<td style="text-align:right; padding:6px 8px; border-bottom:1px solid var(--c-divider);">' + fmt(exp[j]) + '</td>';
+      rows += '<td style="text-align:right; padding:6px 8px; border-bottom:1px solid var(--c-divider); font-weight:700;">' + fmt(gap) + '</td>';
+      rows += '</tr>';
+    }
+    rows += '</table>';
+
+    var gapFY27 = exp[0] - rev[0];
+    var gapFY32 = exp[5] - rev[5];
+    var direction = gapFY32 > gapFY27 + 0.5 ? 'widening' : gapFY32 < gapFY27 - 0.5 ? 'narrowing' : 'roughly stable';
+
+    rows += '<p style="margin-top:12px;">At <strong>' + slider.value + '%</strong> expense growth, the gap goes from <strong>' + fmt(gapFY27) + '</strong> in FY27 to <strong>' + fmt(gapFY32) + '</strong> by FY32&mdash;<strong>' + direction + '</strong>.</p>';
+
+    if (expRate <= revenueRate) {
+      rows += '<p>Expense growth at or below revenue growth: <strong>Milestone 3 achieved</strong>&mdash;the gap stops widening.</p>';
+    }
+
+    resultsDiv.innerHTML = rows;
+  }
+
+  slider.addEventListener('input', update);
+  update();
+})();
+</script>
