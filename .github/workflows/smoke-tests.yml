@@ -21,7 +21,7 @@ jobs:
 
       - name: Build site with Jekyll
         run: |
-          gem install jekyll -v 3.10.0
+          gem install jekyll -v 3.10.0 kramdown-parser-gfm
           jekyll build
 
       - run: npm ci
