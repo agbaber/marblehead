@@ -319,6 +319,11 @@ title: "Deficit Dynamics Model"
 </svg>
 
 <div class="dm-controls">
+  <div class="dm-control">
+    <span class="dm-control-label">Override (FY27 to FY29): <span class="dm-value" id="dm-override-val">$0.0M</span></span>
+    <input type="range" id="dm-override" min="0" max="15" step="0.5" value="0">
+    <div class="dm-hint">Phases in over three years per the town's proposed draw schedule.</div>
+  </div>
   <div class="dm-control" style="grid-column: 1 / -1;">
     <span class="dm-control-label">Position cuts: <span class="dm-value" id="dm-cuts-val">0</span></span>
     <div class="dm-presets" style="margin-top: 0;">
@@ -338,7 +343,7 @@ title: "Deficit Dynamics Model"
   </div>
 </div>
 
-<details class="dm-controls-wrap">
+<details class="dm-controls-wrap" open>
 <summary class="dm-controls-summary">Growth rates, healthcare shift, and other settings</summary>
 <div class="dm-controls">
   <div class="dm-control">
@@ -350,11 +355,6 @@ title: "Deficit Dynamics Model"
     <span class="dm-control-label">Expense growth: <span class="dm-value" id="dm-exp-growth-val">4.0%</span></span>
     <input type="range" id="dm-exp-growth" min="0" max="6" step="0.1" value="4.0">
     <div class="dm-hint" id="dm-exp-hint">FY15 to FY24 actual average. No change in trajectory.</div>
-  </div>
-  <div class="dm-control">
-    <span class="dm-control-label">Override (FY27 to FY29): <span class="dm-value" id="dm-override-val">$0.0M</span></span>
-    <input type="range" id="dm-override" min="0" max="15" step="0.5" value="0">
-    <div class="dm-hint">Phases in over three years per the town's proposed draw schedule. The ballot options are $9M, $12M, or $15M.</div>
   </div>
   <div class="dm-control">
     <span class="dm-control-label">&nbsp;</span>
