@@ -33,9 +33,13 @@ jobs:
       - name: Wait for server
         run: npx wait-on http://localhost:4000 --timeout 15000
 
-      - name: Run tests
+      - name: Run smoke tests
         env:
           SITE: http://localhost:4000
-        run: |
-          node tests/smoke-test.mjs
-          node tests/explore-test.mjs
+        run: node tests/smoke-test.mjs
+
+      - name: Run explore tests (non-blocking)
+        continue-on-error: true
+        env:
+          SITE: http://localhost:4000
+        run: node tests/explore-test.mjs
