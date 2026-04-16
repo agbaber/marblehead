@@ -715,56 +715,36 @@ og_url: https://marbleheaddata.org/
     margin: 0;
   }
 
-  /* ── "Not sure yet" option: a real fourth choice, not a bypass. ──
-     Sits inside .answers as the last child, full width even on desktop
-     where the other three cards are row-aligned. Visually subtler so it
-     reads as "still thinking" rather than a competing position. */
-  .answer-card.answer-card-unsure {
-    flex: 0 0 100%;
-    padding: 12px 16px;
-    background: color-mix(in srgb, var(--border) 30%, transparent);
-    border: 1px dashed var(--border);
-    display: flex;
+  /* ── "Not sure yet" pill below the answer cards ── */
+  .unsure-btn {
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
+    margin-top: 4px;
+    padding: 7px 16px;
+    background: transparent;
+    border: 1px dashed var(--border);
+    border-radius: 999px;
     cursor: pointer;
-  }
-  .answer-card.answer-card-unsure:hover {
-    border-color: var(--text-muted);
-    border-style: solid;
-    box-shadow: none;
-  }
-  .answer-card.answer-card-unsure .answer-unsure-body {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    min-width: 0;
-  }
-  .answer-card.answer-card-unsure .answer-unsure-label {
-    font-size: 14px;
-    font-weight: 600;
+    font-family: inherit;
+    font-size: 13px;
     color: var(--text-muted);
-    letter-spacing: 0.1px;
+    transition: border-color 0.15s, color 0.15s;
   }
-  .answer-card.answer-card-unsure .answer-unsure-sub {
-    font-size: 12px;
-    color: var(--text-subtle);
-    line-height: 1.4;
+  .unsure-btn:hover {
+    border-color: var(--text-muted);
+    border-style: solid;
+    color: var(--text);
   }
-  .answer-card.answer-card-unsure.selected {
+  .unsure-btn.selected {
     border-style: solid;
     border-color: var(--text-muted);
-    box-shadow: 0 0 0 1px var(--text-muted);
-    background: var(--surface);
+    color: var(--text);
   }
-  .answer-card.answer-card-unsure.selected .answer-unsure-label { color: var(--text); }
-  .answer-card.answer-card-unsure.viewing {
-    border-color: var(--text-muted);
-    box-shadow: none;
+  .unsure-btn.selected::before {
+    content: '\2713';
+    font-size: 11px;
   }
-  /* Checkmark is still wired up, but a round badge on this compact card
-     looks out of place. Hide it; clicking the body casts the vote. */
-  .answer-card.answer-card-unsure .answer-check { display: none; }
 
   /* ── Pick distribution bar ── */
   .pick-distribution {
@@ -868,23 +848,6 @@ og_url: https://marbleheaddata.org/
   .pick-dist-bar-verified .pick-dist-seg {
     font-size: 0;
     line-height: 14px;
-  }
-  /* Lighter variant of the evidence panel for the "Not sure yet" state. */
-  .evidence.evidence-unsure {
-    background: transparent;
-    border-style: dashed;
-    padding: 16px 18px;
-  }
-  .evidence.evidence-unsure .evidence-header h3 {
-    font-size: 14px;
-    color: var(--text-muted);
-    font-weight: 600;
-  }
-  .evidence.evidence-unsure p {
-    margin: 0;
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.55;
   }
 
   /* ── Evidence panel ── */
@@ -5507,40 +5470,28 @@ og_url: https://marbleheaddata.org/
     });
   })();
 
-  /* ── Inject "Not sure yet" as a first-class fourth option for every
-     question. Clicking it submits a real vote ('u'), which means a later
-     switch to a concrete answer goes through the move-vote endpoint and
-     counts as a genuine reconsideration, not noise from a forced pick. */
-  (function injectUnsureAnswer() {
+  /* ── Inject "Not sure yet" button below the answer cards ── */
+  (function injectUnsureButton() {
     document.querySelectorAll('.question-screen').forEach(function (screen) {
       var topic = screen.dataset.topic;
       var answersEl = screen.querySelector('.answers');
-      if (!answersEl || answersEl.querySelector('[data-answer="u"]')) return;
+      if (!answersEl) return;
 
-      var card = document.createElement('div');
-      card.className = 'answer-card answer-card-unsure';
-      card.dataset.answer = 'u';
-      card.dataset.question = topic;
-      card.innerHTML =
-        '<span class="answer-unsure-body">' +
-          '<span class="answer-unsure-label">Not sure yet</span>' +
-          '<span class="answer-unsure-sub">Let me read the cases first</span>' +
-        '</span>';
-      answersEl.appendChild(card);
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'unsure-btn';
+      btn.dataset.answer = 'u';
+      btn.dataset.question = topic;
+      btn.textContent = 'Not sure yet';
+      answersEl.parentNode.insertBefore(btn, answersEl.nextSibling);
 
-      // Lightweight evidence panel so clicking "Not sure yet" lands
-      // somewhere rather than opening an empty area. Intentionally
-      // short: it points the reader at the three real cases above.
-      var ev = document.createElement('div');
-      ev.className = 'evidence evidence-unsure';
-      ev.dataset.evidence = topic + '-u';
-      ev.innerHTML =
-        '<div class="evidence-header">' +
-          '<h3>Take your time</h3>' +
-          '<button class="evidence-close" type="button">Collapse</button>' +
-        '</div>' +
-        '<p>Tap any answer above to read the case for it. When something clicks, use the checkmark on that card to lock your pick.</p>';
-      screen.appendChild(ev);
+      btn.addEventListener('click', function () {
+        var q = btn.dataset.question;
+        if (selections[q] === 'u') return; // already unsure
+        selectAnswer(q, 'u');
+        updateNotesPill();
+        updateNotesPanel();
+      });
     });
   })();
 
@@ -6040,6 +5991,9 @@ og_url: https://marbleheaddata.org/
     document.querySelectorAll('.answer-card').forEach(function (c) {
       c.classList.remove('selected', 'viewing', 'dimmed');
     });
+    document.querySelectorAll('.unsure-btn').forEach(function (b) {
+      b.classList.remove('selected');
+    });
     updateAnswerCheckTitles();
     document.querySelectorAll('.evidence').forEach(function (e) {
       e.classList.remove('open');
@@ -6155,6 +6109,7 @@ og_url: https://marbleheaddata.org/
     dot.title = topicLabels[topic] || topic;
     dot.addEventListener('click', function () {
       switchTopic(topic);
+      window.scrollTo(0, 0);
     });
     dotsEl.appendChild(dot);
   });
@@ -6217,6 +6172,7 @@ og_url: https://marbleheaddata.org/
             posthog.capture('explore_related_click', { from: topic, to: rel });
           }
           switchTopic(rel);
+          window.scrollTo(0, 0);
         });
         relList.appendChild(btn);
       });
@@ -6233,10 +6189,6 @@ og_url: https://marbleheaddata.org/
     }
     currentTopic = topic;
     stageEl.classList.add('has-topic');
-
-    // Scroll to top immediately; viewEvidence will then smooth-scroll
-    // to the relevant card after a 120ms delay if needed.
-    window.scrollTo(0, 0);
 
     // Server-side view increment + personal counter (only when server counted)
     if (incrementSocial('v', topic)) {
@@ -6256,6 +6208,8 @@ og_url: https://marbleheaddata.org/
         c.classList.remove('selected');
         if (c.dataset.answer === pick) c.classList.add('selected');
       });
+      var unsureBtn = document.querySelector('.unsure-btn[data-question="' + topic + '"]');
+      if (unsureBtn) unsureBtn.classList.toggle('selected', pick === 'u');
       updateAnswerCheckTitles();
       viewEvidence(topic, pick);
       var screen = document.querySelector('.question-screen[data-topic="' + topic + '"]');
@@ -6269,7 +6223,7 @@ og_url: https://marbleheaddata.org/
       // No pick yet: auto-open a random answer's evidence so the user
       // lands on data instead of a blank state with just card summaries.
       var cards = document.querySelectorAll(
-        '.answer-card[data-question="' + topic + '"]:not(.answer-card-unsure)'
+        '.answer-card[data-question="' + topic + '"]'
       );
       if (cards.length) {
         var rand = cards[Math.floor(Math.random() * cards.length)];
@@ -6318,6 +6272,7 @@ og_url: https://marbleheaddata.org/
           posthog.capture('explore_next_question', { from: topic, to: nextTopic });
         }
         switchTopic(nextTopic);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
       wrap.appendChild(btn);
       var label = document.createElement('p');
@@ -6487,6 +6442,7 @@ og_url: https://marbleheaddata.org/
 
     btn.addEventListener('click', function () {
       switchTopic(topic);
+      window.scrollTo(0, 0);
     });
     listEl.appendChild(btn);
     landingCards[topic] = {
@@ -6646,6 +6602,9 @@ og_url: https://marbleheaddata.org/
       c.classList.remove('selected');
       if (c.dataset.answer === answer) c.classList.add('selected');
     });
+    // Update unsure button state
+    var unsureBtn = document.querySelector('.unsure-btn[data-question="' + question + '"]');
+    if (unsureBtn) unsureBtn.classList.toggle('selected', answer === 'u');
     updateAnswerCheckTitles();
 
     selections[question] = answer;
@@ -6747,6 +6706,8 @@ og_url: https://marbleheaddata.org/
     document.querySelectorAll('.answer-card[data-question="' + question + '"]').forEach(function (c) {
       c.classList.remove('selected', 'dimmed', 'viewing');
     });
+    var unsureBtn = document.querySelector('.unsure-btn[data-question="' + question + '"]');
+    if (unsureBtn) unsureBtn.classList.remove('selected');
     document.querySelectorAll('.evidence').forEach(function (e) {
       if (e.dataset.evidence && e.dataset.evidence.startsWith(question + '-')) {
         e.classList.remove('open');
@@ -6824,20 +6785,9 @@ og_url: https://marbleheaddata.org/
 
       var question = this.dataset.question;
       var answer   = this.dataset.answer;
-      var isUnsureCard = (answer === 'u');
 
-      if (isUnsureCard) {
-        if (selections[question] !== answer) {
-          selectAnswer(question, answer);
-          updateNotesPill();
-          updateNotesPanel();
-        } else {
-          viewEvidence(question, answer);
-        }
-      } else {
-        // Always browse -- let the evidence buttons handle commitment
-        viewEvidence(question, answer);
-      }
+      // Always browse -- let the evidence buttons handle commitment
+      viewEvidence(question, answer);
     });
   });
 
@@ -6851,8 +6801,6 @@ og_url: https://marbleheaddata.org/
 
   /* ── Inject "This resonates" / "Not for me" action buttons ── */
   document.querySelectorAll('.evidence').forEach(function (panel) {
-    // Skip the "Not sure yet" placeholder panels
-    if (panel.classList.contains('evidence-unsure')) return;
     var ev = panel.dataset.evidence; // e.g. "override-a"
     if (!ev) return;
     var parts = ev.split('-');
@@ -6994,6 +6942,7 @@ og_url: https://marbleheaddata.org/
       head.addEventListener('click', function () {
         closePanel();
         switchTopic(topic);
+        window.scrollTo(0, 0);
       });
 
       entry.appendChild(head);
