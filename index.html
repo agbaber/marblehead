@@ -6155,7 +6155,6 @@ og_url: https://marbleheaddata.org/
     dot.title = topicLabels[topic] || topic;
     dot.addEventListener('click', function () {
       switchTopic(topic);
-      window.scrollTo(0, 0);
     });
     dotsEl.appendChild(dot);
   });
@@ -6218,7 +6217,6 @@ og_url: https://marbleheaddata.org/
             posthog.capture('explore_related_click', { from: topic, to: rel });
           }
           switchTopic(rel);
-          window.scrollTo(0, 0);
         });
         relList.appendChild(btn);
       });
@@ -6235,6 +6233,10 @@ og_url: https://marbleheaddata.org/
     }
     currentTopic = topic;
     stageEl.classList.add('has-topic');
+
+    // Scroll to top immediately; viewEvidence will then smooth-scroll
+    // to the relevant card after a 120ms delay if needed.
+    window.scrollTo(0, 0);
 
     // Server-side view increment + personal counter (only when server counted)
     if (incrementSocial('v', topic)) {
@@ -6316,7 +6318,6 @@ og_url: https://marbleheaddata.org/
           posthog.capture('explore_next_question', { from: topic, to: nextTopic });
         }
         switchTopic(nextTopic);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
       wrap.appendChild(btn);
       var label = document.createElement('p');
@@ -6486,7 +6487,6 @@ og_url: https://marbleheaddata.org/
 
     btn.addEventListener('click', function () {
       switchTopic(topic);
-      window.scrollTo(0, 0);
     });
     listEl.appendChild(btn);
     landingCards[topic] = {
@@ -6994,7 +6994,6 @@ og_url: https://marbleheaddata.org/
       head.addEventListener('click', function () {
         closePanel();
         switchTopic(topic);
-        window.scrollTo(0, 0);
       });
 
       entry.appendChild(head);
