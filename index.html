@@ -5786,6 +5786,27 @@ og_url: https://marbleheaddata.org/
   if (_verifyJwt) {
     setInterval(scanForVerifiedBars, 500);
     setTimeout(scanForVerifiedBars, 200);
+    // Sync existing picks as verified votes (one-time on load).
+    syncExistingPicks();
+  }
+
+  function syncExistingPicks() {
+    var synced = localStorage.getItem('verify_synced');
+    if (synced) return; // Already synced this session.
+    var topics = Object.keys(selections);
+    if (topics.length === 0) return;
+    var hdr = { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + _verifyJwt };
+    var done = 0;
+    topics.forEach(function (topic) {
+      if (!selections[topic]) return;
+      fetch(API_BASE + '/api/verify/vote', {
+        method: 'POST', headers: hdr,
+        body: JSON.stringify({ topic: topic, answer: selections[topic] })
+      }).then(function () {
+        done++;
+        if (done >= topics.length) localStorage.setItem('verify_synced', '1');
+      }).catch(function () {});
+    });
   }
 
   function scanForVerifiedBars() {
