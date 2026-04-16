@@ -353,6 +353,71 @@ title: "Deficit Dynamics Model"
     margin-right: 6px;
     vertical-align: middle;
   }
+  .dm-range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 1px;
+    line-height: 1.2;
+  }
+  .dm-svg .dm-hover-line {
+    stroke: var(--text-muted);
+    stroke-width: 1;
+    stroke-dasharray: 3 2;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  .dm-svg .dm-hover-overlay {
+    fill: transparent;
+    cursor: crosshair;
+  }
+  .dm-svg .dm-tooltip-bg {
+    fill: var(--surface);
+    stroke: var(--border);
+    rx: 4;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.12));
+  }
+  .dm-svg .dm-tooltip-text {
+    font-size: 11px;
+    fill: var(--text);
+    font-family: inherit;
+  }
+  .dm-svg .dm-tooltip-text-rev {
+    fill: var(--c-sage);
+    font-weight: 600;
+  }
+  .dm-svg .dm-tooltip-text-exp {
+    fill: var(--c-buoy);
+    font-weight: 600;
+  }
+  .dm-svg .dm-tooltip-text-gap {
+    fill: var(--c-navy);
+    font-weight: 700;
+  }
+  .dm-svg .dm-hover-dot {
+    r: 4;
+    pointer-events: none;
+  }
+  .dm-svg .dm-hover-dot-rev {
+    fill: var(--c-sage);
+  }
+  .dm-svg .dm-hover-dot-exp {
+    fill: var(--c-buoy);
+  }
+  .dm-story-divider {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .dm-story-divider::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid var(--divider);
+  }
 </style>
 
 <h1 class="h-center">Deficit Dynamics: The Lines Already Crossed</h1>
@@ -392,6 +457,17 @@ title: "Deficit Dynamics Model"
   <text id="dm-end-exp" class="dm-end-label dm-end-label-exp"></text>
   <text id="dm-end-constrained" class="dm-end-label dm-end-label-exp dm-hidden"></text>
   <g id="dm-legend"></g>
+  <g id="dm-hover-g" class="dm-hidden">
+    <line id="dm-hover-line" class="dm-hover-line"></line>
+    <circle id="dm-hover-dot-rev" class="dm-hover-dot dm-hover-dot-rev"></circle>
+    <circle id="dm-hover-dot-exp" class="dm-hover-dot dm-hover-dot-exp"></circle>
+    <rect id="dm-tooltip-bg" class="dm-tooltip-bg"></rect>
+    <text id="dm-tooltip-year" class="dm-tooltip-text" text-anchor="start"></text>
+    <text id="dm-tooltip-rev" class="dm-tooltip-text dm-tooltip-text-rev" text-anchor="start"></text>
+    <text id="dm-tooltip-exp" class="dm-tooltip-text dm-tooltip-text-exp" text-anchor="start"></text>
+    <text id="dm-tooltip-gap" class="dm-tooltip-text dm-tooltip-text-gap" text-anchor="start"></text>
+  </g>
+  <rect id="dm-hover-overlay" class="dm-hover-overlay" x="0" y="0" width="880" height="460"></rect>
 </svg>
 
 <div class="dm-tier-buttons">
@@ -407,6 +483,13 @@ title: "Deficit Dynamics Model"
   <button type="button" class="dm-stance-btn" data-stance="skeptic">"It all gets spent immediately"</button>
   <button type="button" class="dm-stance-btn" data-stance="cut">"Just cut spending"</button>
   <button type="button" class="dm-stance-btn" data-stance="healthcare">"Shift healthcare costs"</button>
+</div>
+<div class="dm-story-divider">What if we combine levers?</div>
+<div class="dm-presets">
+  <button type="button" class="dm-stance-btn" data-stance="override-plus-hc">"Override + healthcare reform"</button>
+  <button type="button" class="dm-stance-btn" data-stance="override-plus-cuts">"Override + modest cuts"</button>
+  <button type="button" class="dm-stance-btn" data-stance="kitchen-sink">"Pull every lever"</button>
+  <button type="button" class="dm-stance-btn" data-stance="no-override-reform">"No override, just reform"</button>
 </div>
 <div class="dm-readout" id="dm-stance-readout" style="display: none; margin-top: 8px;">
   <div class="dm-readout-line" id="dm-stance-explainer"></div>
@@ -429,9 +512,14 @@ title: "Deficit Dynamics Model"
     <div class="dm-hint" id="dm-cuts-hint">~$100K/yr each (salary + benefits). Shifts the expense line down but does not change its slope.</div>
   </div>
   <div class="dm-control" style="grid-column: 1 / -1;">
-    <span class="dm-control-label">Spending absorption: <span class="dm-value" id="dm-ratchet-val">5 years</span></span>
+    <span class="dm-control-label">Override spending timeline: <span class="dm-value" id="dm-ratchet-val">5 years</span></span>
     <input type="range" id="dm-ratchet" min="0" max="10" step="1" value="5">
-    <div class="dm-hint" id="dm-ratchet-hint">How fast override revenue gets allocated to deferred needs. Drag to see the difference.</div>
+    <div class="dm-range-labels">
+      <span>Never spent (unrealistic)</span>
+      <span>Immediate</span>
+      <span>Gradual (10 yr ramp)</span>
+    </div>
+    <div class="dm-hint" id="dm-ratchet-hint">How quickly does override money get allocated to deferred needs? At 5 years, positions are filled and programs restored gradually, then the gap reopens. At 0, the money sits unspent (unrealistic best case). At 1, it is all committed in year one.</div>
   </div>
 </div>
 
@@ -465,7 +553,7 @@ title: "Deficit Dynamics Model"
 
 <div class="dm-tier-section">
 <h2>How long does each tier last?</h2>
-<p>The three ballot questions ask voters to choose among $9M, $12M, or $15M. Each tier uses the same growth rates and spending absorption rate from the controls above. The question each line answers: how many years before expenses catch the boosted revenue line again?</p>
+<p>The three ballot questions ask voters to choose among $9M, $12M, or $15M. Each tier uses the same growth rates and override spending timeline from the controls above. The question each line answers: how many years before expenses catch the boosted revenue line again?</p>
 
 <div class="dm-tier-readout" id="dm-tier-readout">
   <div><strong class="dm-tier-1-color">Tier 1 ($9M):</strong> <span id="dm-tier1-text">buys until FY33 (5 years)</span></div>
@@ -491,6 +579,19 @@ title: "Deficit Dynamics Model"
   <text id="dt-end-t2" class="dm-end-label dm-end-label-t2"></text>
   <text id="dt-end-t3" class="dm-end-label dm-end-label-t3"></text>
   <g id="dt-legend"></g>
+  <g id="dt-hover-g" class="dm-hidden">
+    <line id="dt-hover-line" class="dm-hover-line"></line>
+    <circle id="dt-hover-dot-exp" class="dm-hover-dot dm-hover-dot-exp"></circle>
+    <circle id="dt-hover-dot-rev" class="dm-hover-dot dm-hover-dot-rev"></circle>
+    <rect id="dt-tooltip-bg" class="dm-tooltip-bg"></rect>
+    <text id="dt-tooltip-year" class="dm-tooltip-text" text-anchor="start"></text>
+    <text id="dt-tooltip-exp" class="dm-tooltip-text dm-tooltip-text-exp" text-anchor="start"></text>
+    <text id="dt-tooltip-rev" class="dm-tooltip-text" text-anchor="start"></text>
+    <text id="dt-tooltip-t1" class="dm-tooltip-text" text-anchor="start"></text>
+    <text id="dt-tooltip-t2" class="dm-tooltip-text" text-anchor="start"></text>
+    <text id="dt-tooltip-t3" class="dm-tooltip-text" text-anchor="start"></text>
+  </g>
+  <rect id="dt-hover-overlay" class="dm-hover-overlay" x="0" y="0" width="880" height="400"></rect>
 </svg>
 </div>
 
@@ -500,7 +601,7 @@ title: "Deficit Dynamics Model"
 
 <p>The right side of the chart projects both lines forward from the FY24 actuals. The sliders control the annual growth rates. At the historical averages (revenue 3.7%, expenses 4.0%), the gap widens steadily. An override shifts the revenue line up over three years (FY27 to FY29).</p>
 
-<p>The "spending absorption" slider controls how quickly override revenue gets allocated to deferred needs. At 5 years (the default), spending gradually ramps up as positions are filled, programs restored, and deferred maintenance addressed. The gap shrinks when the override hits, then slowly reopens as spending catches up to the new revenue ceiling. At 0, none of the override is spent (unrealistic). At 1, all of it is absorbed immediately. The revenue line (capped by <abbr class="g" title="Proposition 2&frac12;, the Massachusetts law limiting annual property tax levy increases to 2.5% plus new growth">Prop 2&frac12;</abbr>) still grows slower than the expense line (driven by health insurance, pensions, and contractual wages), so the gap eventually reopens regardless.</p>
+<p>The "override spending timeline" slider controls how quickly override revenue gets allocated to deferred needs. At 5 years (the default), spending gradually ramps up as positions are filled, programs restored, and deferred maintenance addressed. The gap shrinks when the override hits, then slowly reopens as spending catches up to the new revenue ceiling. At 0, none of the override is spent (unrealistic best case). At 1, all of it is committed in year one. The revenue line (capped by <abbr class="g" title="Proposition 2&frac12;, the Massachusetts law limiting annual property tax levy increases to 2.5% plus new growth">Prop 2&frac12;</abbr>) still grows slower than the expense line (driven by health insurance, pensions, and contractual wages), so the gap eventually reopens regardless.</p>
 
 <details class="notes">
   <summary>Notes and methodology</summary>
@@ -508,7 +609,7 @@ title: "Deficit Dynamics Model"
   <p>Free cash draw history is from <a href="../data/free_cash_operating_history.csv">free_cash_operating_history.csv</a>, sourced from FinCom Annual Reports and ATM warrant articles.<sup class="cite" data-href="../data/free_cash_operating_history.csv" data-source="FinCom Annual Reports, ATM warrant articles"></sup></p>
   <p>The override phase-in schedule (FY27 to FY29) and tax bill conversion ($132.36 per $1M) are from the town's <a href="../data/override_tax_impact_asf.csv">override tax impact data</a> for an average single-family home assessed at $1,291,507.<sup class="cite" data-href="../data/override_tax_impact_asf.csv" data-source="Override tax impact schedule, average single-family assessed value $1,291,507"></sup></p>
   <p>Projections use constant annual compounding, which is a simplification. Real budgets have lumpy cost spikes (<abbr class="g" title="Group Insurance Commission">GIC</abbr> rate jumps, <abbr class="g" title="Public Employee Retirement Administration Commission">PERAC</abbr> revaluations) and uneven revenue growth.</p>
-  <p>The "spending absorption" slider controls how many years it takes for override revenue to be allocated as new spending. At N years, each override draw is spread as equal annual expense bumps over N years. At 0, none of the override is spent. At 1, it is absorbed in the year of the draw. Default is 5 years, reflecting the gradual process of filling positions, restoring programs, and addressing deferred maintenance.</p>
+  <p>The "override spending timeline" slider controls how many years it takes for override revenue to be allocated as new spending. At N years, each override draw is spread as equal annual expense bumps over N years. At 0, none of the override is spent. At 1, it is absorbed in the year of the draw. Default is 5 years, reflecting the gradual process of filling positions, restoring programs, and addressing deferred maintenance.</p>
 </details>
 </div>
 
@@ -550,6 +651,10 @@ title: "Deficit Dynamics Model"
   var positionCuts = 0;
   var costPerPosition = 0.1; // $100K in $M
 
+  // Cached chart data for hover tooltips
+  var lastMainData = null;
+  var lastTierData = null;
+
   // === Main chart layout ===
   var svgW = 880, svgH = 460;
   var mL = 70, mR = 100, mT = 28, mB = 60;
@@ -586,6 +691,7 @@ title: "Deficit Dynamics Model"
   var overrideVal = document.getElementById('dm-override-val');
   var gapEl = document.getElementById('dm-gap');
   var gapLabelEl = document.getElementById('dm-gap-label');
+  var gapHintEl = document.getElementById('dm-gap-hint');
   var taxBtn = document.getElementById('dm-tax-btn');
   var taxHint = document.getElementById('dm-tax-hint');
   var revHintEl = document.getElementById('dm-rev-hint');
@@ -894,6 +1000,7 @@ title: "Deficit Dynamics Model"
   // === Render main chart ===
   function renderMain() {
     var data = compute();
+    lastMainData = data;
     var rev = data.rev;
     var exp = data.exp;
 
@@ -1084,6 +1191,7 @@ title: "Deficit Dynamics Model"
   // === Render tier chart ===
   function renderTiers() {
     var td = computeTiers();
+    lastTierData = td;
     var baseExp = td.baseExp;
     var baseRev = td.baseRev;
     var tierRevs = td.tierRevs;
@@ -1243,7 +1351,7 @@ title: "Deficit Dynamics Model"
     expGrowthVal.textContent = parseFloat(expGrowthEl.value).toFixed(1) + '%';
     overrideVal.textContent = fmtOverride(parseFloat(overrideEl.value));
     var ry = parseInt(ratchetEl.value);
-    ratchetValEl.textContent = ry === 0 ? 'never' : ry === 1 ? 'immediate' : ry + ' years';
+    ratchetValEl.textContent = ry === 0 ? 'never spent' : ry === 1 ? 'year 1 (immediate)' : ry + ' year ramp';
     cutsValEl.textContent = positionCuts;
     // Update cuts hint with savings amount
     var savings = positionCuts * costPerPosition;
@@ -1257,6 +1365,20 @@ title: "Deficit Dynamics Model"
     var newShare = parseInt(hcShareEl.value);
     hcShareVal.textContent = newShare + '%';
     wageOffsetVal.textContent = parseInt(wageOffsetEl.value) + '%';
+
+    // Update ratchet hint based on position
+    var ratchetHintEl = document.getElementById('dm-ratchet-hint');
+    if (ry === 0) {
+      ratchetHintEl.textContent = 'Override revenue is collected but never allocated to new spending. This is the theoretical best case for gap closure but unrealistic: the override funds specific items (positions, programs, trash) that will be spent.';
+    } else if (ry === 1) {
+      ratchetHintEl.textContent = 'All override money is committed to new spending in the year it arrives. The expense line jumps up with the revenue line, so the gap barely narrows. This is the skeptic\'s view: "they\'ll just spend it all immediately."';
+    } else if (ry <= 3) {
+      ratchetHintEl.textContent = 'Override money is allocated quickly (' + ry + ' years). Positions are filled and programs restored on a fast timeline. The gap closes briefly, then reopens as spending catches up to the new revenue ceiling.';
+    } else if (ry <= 6) {
+      ratchetHintEl.textContent = 'Override money is phased into spending over ' + ry + ' years as positions are filled, programs restored, and deferred maintenance addressed. The gap narrows for several years before expenses catch up.';
+    } else {
+      ratchetHintEl.textContent = 'Override money is allocated slowly over ' + ry + ' years. New positions and programs are added cautiously. This extends the period before expenses fully absorb the new revenue, but may mean deferred needs stay deferred longer.';
+    }
 
     // Build dynamic scenario readout from current state
     updateScenarioReadout();
@@ -1370,10 +1492,181 @@ title: "Deficit Dynamics Model"
         positionCuts = 50;
       } else if (s === 'healthcare') {
         hcShareEl.value = 50;
+      } else if (s === 'override-plus-hc') {
+        overrideEl.value = 15;
+        hcShareEl.value = 65;
+        wageOffsetEl.value = 50;
+      } else if (s === 'override-plus-cuts') {
+        overrideEl.value = 12;
+        positionCuts = 20;
+      } else if (s === 'kitchen-sink') {
+        overrideEl.value = 15;
+        hcShareEl.value = 65;
+        wageOffsetEl.value = 50;
+        positionCuts = 10;
+        ratchetEl.value = 3;
+      } else if (s === 'no-override-reform') {
+        positionCuts = 30;
+        hcShareEl.value = 65;
+        wageOffsetEl.value = 50;
       }
       onChange();
     });
   });
+
+  // === Hover tooltips for main chart ===
+  (function() {
+    var svg = document.querySelector('.dm-svg');
+    var overlay = document.getElementById('dm-hover-overlay');
+    var hoverG = document.getElementById('dm-hover-g');
+    var hoverLine = document.getElementById('dm-hover-line');
+    var dotRev = document.getElementById('dm-hover-dot-rev');
+    var dotExp = document.getElementById('dm-hover-dot-exp');
+    var ttBg = document.getElementById('dm-tooltip-bg');
+    var ttYear = document.getElementById('dm-tooltip-year');
+    var ttRev = document.getElementById('dm-tooltip-rev');
+    var ttExp = document.getElementById('dm-tooltip-exp');
+    var ttGap = document.getElementById('dm-tooltip-gap');
+
+    function svgX(evt) {
+      var pt = svg.createSVGPoint();
+      pt.x = evt.clientX;
+      pt.y = evt.clientY;
+      return pt.matrixTransform(svg.getScreenCTM().inverse()).x;
+    }
+
+    overlay.addEventListener('mousemove', function(evt) {
+      if (!lastMainData) return;
+      var mx = svgX(evt);
+      // Find nearest year index
+      var rawI = (mx - mL) / plotW * (nYears - 1);
+      var i = Math.round(Math.max(0, Math.min(nYears - 1, rawI)));
+      var rev = lastMainData.rev;
+      var exp = lastMainData.exp;
+      var x = xScale(i);
+      var yr = startYear + i;
+
+      hoverG.classList.remove('dm-hidden');
+      hoverLine.setAttribute('x1', x);
+      hoverLine.setAttribute('x2', x);
+      hoverLine.setAttribute('y1', mT);
+      hoverLine.setAttribute('y2', mT + plotH);
+
+      dotRev.setAttribute('cx', x);
+      dotRev.setAttribute('cy', yScale(rev[i]));
+      dotExp.setAttribute('cx', x);
+      dotExp.setAttribute('cy', yScale(exp[i]));
+
+      var gap = exp[i] - rev[i];
+      var gapLabel = gap > 0.05 ? fmtM(gap) + ' deficit' : gap < -0.05 ? fmtM(Math.abs(gap)) + ' surplus' : 'balanced';
+      var isActual = i <= lastHistIdx;
+
+      ttYear.textContent = 'FY' + yr + (isActual ? ' (actual)' : ' (projected)');
+      ttRev.textContent = 'Revenue: ' + fmtM(rev[i]);
+      ttExp.textContent = 'Expenses: ' + fmtM(exp[i]);
+      ttGap.textContent = 'Gap: ' + gapLabel;
+
+      // Position tooltip
+      var ttW = 170, ttH = 68, ttPad = 10;
+      var ttX = x + 12;
+      var ttY = mT + 20;
+      // Flip to left side if near right edge
+      if (ttX + ttW > svgW - mR) ttX = x - ttW - 12;
+      ttBg.setAttribute('x', ttX);
+      ttBg.setAttribute('y', ttY);
+      ttBg.setAttribute('width', ttW);
+      ttBg.setAttribute('height', ttH);
+      ttYear.setAttribute('x', ttX + ttPad);
+      ttYear.setAttribute('y', ttY + 15);
+      ttRev.setAttribute('x', ttX + ttPad);
+      ttRev.setAttribute('y', ttY + 29);
+      ttExp.setAttribute('x', ttX + ttPad);
+      ttExp.setAttribute('y', ttY + 43);
+      ttGap.setAttribute('x', ttX + ttPad);
+      ttGap.setAttribute('y', ttY + 58);
+    });
+
+    overlay.addEventListener('mouseleave', function() {
+      hoverG.classList.add('dm-hidden');
+    });
+  })();
+
+  // === Hover tooltips for tier chart ===
+  (function() {
+    var svg = document.querySelectorAll('.dm-svg')[1];
+    var overlay = document.getElementById('dt-hover-overlay');
+    var hoverG = document.getElementById('dt-hover-g');
+    var hoverLine = document.getElementById('dt-hover-line');
+    var dotExp = document.getElementById('dt-hover-dot-exp');
+    var dotRev = document.getElementById('dt-hover-dot-rev');
+    var ttBg = document.getElementById('dt-tooltip-bg');
+    var ttYear = document.getElementById('dt-tooltip-year');
+    var ttExp = document.getElementById('dt-tooltip-exp');
+    var ttRevEl = document.getElementById('dt-tooltip-rev');
+    var ttT1 = document.getElementById('dt-tooltip-t1');
+    var ttT2 = document.getElementById('dt-tooltip-t2');
+    var ttT3 = document.getElementById('dt-tooltip-t3');
+
+    function svgX(evt) {
+      var pt = svg.createSVGPoint();
+      pt.x = evt.clientX;
+      pt.y = evt.clientY;
+      return pt.matrixTransform(svg.getScreenCTM().inverse()).x;
+    }
+
+    overlay.addEventListener('mousemove', function(evt) {
+      if (!lastTierData) return;
+      var mx = svgX(evt);
+      var rawI = tIdx0 + (mx - tmL) / tPlotW * (tIdxN - tIdx0);
+      var i = Math.round(Math.max(tIdx0, Math.min(tIdxN, rawI)));
+      var x = txScale(i);
+      var yr = startYear + i;
+      var td = lastTierData;
+
+      hoverG.classList.remove('dm-hidden');
+      hoverLine.setAttribute('x1', x);
+      hoverLine.setAttribute('x2', x);
+      hoverLine.setAttribute('y1', tmT);
+      hoverLine.setAttribute('y2', tmT + tPlotH);
+
+      dotExp.setAttribute('cx', x);
+      dotExp.setAttribute('cy', tyScale(td.baseExp[i]));
+      dotRev.setAttribute('cx', x);
+      dotRev.setAttribute('cy', tyScale(td.baseRev[i]));
+
+      ttYear.textContent = 'FY' + yr;
+      ttExp.textContent = 'Expenses: ' + fmtM(td.baseExp[i]);
+      ttRevEl.textContent = 'Base rev: ' + fmtM(td.baseRev[i]);
+      ttT1.textContent = 'Tier 1: ' + fmtM(td.tierRevs[0][i]);
+      ttT2.textContent = 'Tier 2: ' + fmtM(td.tierRevs[1][i]);
+      ttT3.textContent = 'Tier 3: ' + fmtM(td.tierRevs[2][i]);
+
+      var ttW = 160, ttH = 90, ttPad = 10;
+      var ttX = x + 12;
+      var ttY = tmT + 10;
+      if (ttX + ttW > tsvgW - tmR) ttX = x - ttW - 12;
+      ttBg.setAttribute('x', ttX);
+      ttBg.setAttribute('y', ttY);
+      ttBg.setAttribute('width', ttW);
+      ttBg.setAttribute('height', ttH);
+      ttYear.setAttribute('x', ttX + ttPad);
+      ttYear.setAttribute('y', ttY + 14);
+      ttExp.setAttribute('x', ttX + ttPad);
+      ttExp.setAttribute('y', ttY + 28);
+      ttRevEl.setAttribute('x', ttX + ttPad);
+      ttRevEl.setAttribute('y', ttY + 42);
+      ttT1.setAttribute('x', ttX + ttPad);
+      ttT1.setAttribute('y', ttY + 56);
+      ttT2.setAttribute('x', ttX + ttPad);
+      ttT2.setAttribute('y', ttY + 70);
+      ttT3.setAttribute('x', ttX + ttPad);
+      ttT3.setAttribute('y', ttY + 84);
+    });
+
+    overlay.addEventListener('mouseleave', function() {
+      hoverG.classList.add('dm-hidden');
+    });
+  })();
 
   // === URL parameter support (for embeds and direct links) ===
   var params = new URLSearchParams(window.location.search);
@@ -1400,6 +1693,23 @@ title: "Deficit Dynamics Model"
       positionCuts = 50;
     } else if (urlStance === 'healthcare') {
       hcShareEl.value = 50;
+    } else if (urlStance === 'override-plus-hc') {
+      overrideEl.value = 15;
+      hcShareEl.value = 65;
+      wageOffsetEl.value = 50;
+    } else if (urlStance === 'override-plus-cuts') {
+      overrideEl.value = 12;
+      positionCuts = 20;
+    } else if (urlStance === 'kitchen-sink') {
+      overrideEl.value = 15;
+      hcShareEl.value = 65;
+      wageOffsetEl.value = 50;
+      positionCuts = 10;
+      ratchetEl.value = 3;
+    } else if (urlStance === 'no-override-reform') {
+      positionCuts = 30;
+      hcShareEl.value = 65;
+      wageOffsetEl.value = 50;
     }
   }
 
