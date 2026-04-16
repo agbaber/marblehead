@@ -468,11 +468,20 @@ scripts: [citations]
     countEl.textContent = 'Showing ' + filtered.length + ' of 351';
 
     if (mhdInList && mhdRank > 0) {
-      var dir = sortAsc ? 'lowest' : 'highest';
-      if (sortCol === 'n') dir = '';
-      if (sortCol === 'rpct' && sortAsc) dir = 'lowest';
-      rankEl.innerHTML = 'Marblehead ranks <strong>#' + mhdRank + ' of ' + filtered.length + '</strong>' +
-        (dir ? ' by ' + dir + ' ' + COL_LABELS[sortCol] : ' alphabetically');
+      var label = COL_LABELS[sortCol] || sortCol;
+      var position = '';
+      if (sortCol === 'n') {
+        position = ' alphabetically';
+      } else if (mhdRank === 1) {
+        position = ' (' + (sortAsc ? 'lowest' : 'highest') + ' ' + label + ')';
+      } else if (mhdRank === filtered.length) {
+        position = ' (' + (sortAsc ? 'highest' : 'lowest') + ' ' + label + ')';
+      } else {
+        // Show where in the list: "3rd lowest" or "3rd highest" depending on sort
+        position = ' when sorted by ' + label + ' (' + (sortAsc ? 'low to high' : 'high to low') + ')';
+      }
+      var tierNote = activeTier > 0 ? ' <em>at ' + TIERS[activeTier].label + '</em>' : '';
+      rankEl.innerHTML = 'Marblehead' + tierNote + ' ranks <strong>#' + mhdRank + ' of ' + filtered.length + '</strong>' + position;
     } else {
       rankEl.innerHTML = 'Marblehead is outside current filters';
     }
