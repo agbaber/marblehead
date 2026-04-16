@@ -344,7 +344,6 @@ title: "Deficit Dynamics Model"
     <button type="button" data-preset="baseline">Baseline (no override)</button>
     <button type="button" data-preset="no-ratchet">Override, no ratchet</button>
     <button type="button" data-preset="ratchet">Override with ratchet</button>
-    <button type="button" data-preset="balanced">Balanced budget (3.5/3.5)</button>
   </div>
 </div>
 
@@ -1009,11 +1008,6 @@ title: "Deficit Dynamics Model"
         expGrowthEl.value = 4.0;
         overrideEl.value = 10;
         ratchetEl.checked = true;
-      } else if (p === 'balanced') {
-        revGrowthEl.value = 3.5;
-        expGrowthEl.value = 3.5;
-        overrideEl.value = 0;
-        ratchetEl.checked = false;
       }
       onChange();
     });
