@@ -330,6 +330,17 @@ title: "Deficit Dynamics Model"
       </div>
     </div>
   </div>
+  <div class="dm-control" style="grid-column: 1 / -1;">
+    <span class="dm-control-label">Position cuts: <span class="dm-value" id="dm-cuts-val">0</span></span>
+    <div class="dm-presets" style="margin-top: 0;">
+      <button type="button" class="dm-cuts-btn" data-cuts="0">None</button>
+      <button type="button" class="dm-cuts-btn" data-cuts="1">Cut 1</button>
+      <button type="button" class="dm-cuts-btn" data-cuts="10">Cut 10</button>
+      <button type="button" class="dm-cuts-btn" data-cuts="50">Cut 50</button>
+      <button type="button" class="dm-cuts-btn" data-cuts="100">Cut 100</button>
+    </div>
+    <div class="dm-hint" id="dm-cuts-hint">Each position costs ~$100K/yr (salary + benefits). Cutting positions shifts the expense line down but does not change its slope. GIC, PERAC, and union contracts still grow at the same rate on the remaining staff.</div>
+  </div>
   <div class="dm-presets">
     <button type="button" data-preset="baseline">No override</button>
     <button type="button" data-preset="tier1">Tier 1 ($9M)</button>
@@ -415,6 +426,8 @@ title: "Deficit Dynamics Model"
   var lastPhaseIdx = 14; // FY29
 
   var taxMode = false;
+  var positionCuts = 0;
+  var costPerPosition = 0.1; // $100K in $M
 
   // === Main chart layout ===
   var svgW = 880, svgH = 460;
@@ -455,6 +468,8 @@ title: "Deficit Dynamics Model"
   var taxHint = document.getElementById('dm-tax-hint');
   var revHintEl = document.getElementById('dm-rev-hint');
   var expHintEl = document.getElementById('dm-exp-hint');
+  var cutsValEl = document.getElementById('dm-cuts-val');
+  var cutsHintEl = document.getElementById('dm-cuts-hint');
 
   // === Formatting ===
   function fmtM(v) {
@@ -538,7 +553,7 @@ title: "Deficit Dynamics Model"
     var exp = histExp.slice();
 
     var r = rev[lastHistIdx];
-    var e = exp[lastHistIdx];
+    var e = exp[lastHistIdx] - positionCuts * costPerPosition;
     for (var i = histCount; i < nYears; i++) {
       r = r * (1 + revG);
       e = e * (1 + expG);
@@ -566,7 +581,7 @@ title: "Deficit Dynamics Model"
     var baseRev = histRev.slice();
     var exp = histExp.slice();
     var r = baseRev[lastHistIdx];
-    var e = exp[lastHistIdx];
+    var e = exp[lastHistIdx] - positionCuts * costPerPosition;
     for (var i = histCount; i < nYears; i++) {
       r = r * (1 + revG);
       e = e * (1 + expG);
@@ -978,6 +993,15 @@ title: "Deficit Dynamics Model"
     revGrowthVal.textContent = parseFloat(revGrowthEl.value).toFixed(1) + '%';
     expGrowthVal.textContent = parseFloat(expGrowthEl.value).toFixed(1) + '%';
     overrideVal.textContent = fmtOverride(parseFloat(overrideEl.value));
+    cutsValEl.textContent = positionCuts;
+    // Update cuts hint with savings amount
+    var savings = positionCuts * costPerPosition;
+    if (positionCuts === 0) {
+      cutsHintEl.textContent = 'Each position costs ~$100K/yr (salary + benefits). Cutting positions shifts the expense line down but does not change its slope. GIC, PERAC, and union contracts still grow at the same rate on the remaining staff.';
+    } else {
+      var pct = (savings / histExp[lastHistIdx] * 100).toFixed(1);
+      cutsHintEl.textContent = positionCuts + ' position' + (positionCuts === 1 ? '' : 's') + ' = ' + fmtOverride(savings) + ' annual savings (' + pct + '% of the FY24 expense base). The expense line shifts down but keeps the same slope. The gap reopens on the same schedule.';
+    }
   }
 
   function onChange() {
@@ -991,6 +1015,14 @@ title: "Deficit Dynamics Model"
     el.addEventListener('input', onChange);
   });
   ratchetEl.addEventListener('change', onChange);
+
+  // Position cuts buttons
+  document.querySelectorAll('.dm-cuts-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      positionCuts = parseInt(btn.dataset.cuts);
+      onChange();
+    });
+  });
 
   taxBtn.addEventListener('click', function() {
     taxMode = !taxMode;
