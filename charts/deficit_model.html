@@ -323,10 +323,10 @@ title: "Deficit Dynamics Model"
   <div class="dm-control">
     <span class="dm-control-label">&nbsp;</span>
     <div class="dm-toggle-row">
-      <input type="checkbox" id="dm-ratchet">
+      <input type="checkbox" id="dm-ratchet" checked>
       <div>
-        <label for="dm-ratchet" class="dm-toggle-label">Ratchet: expense line jumps with the override</label>
-        <div class="dm-hint">If on, passing the override also bumps the expense line by the same amount. This models the pattern where available revenue sets the spending ceiling: new revenue gets allocated to deferred needs, and the structural gap reopens.</div>
+        <label for="dm-ratchet" class="dm-toggle-label">Override revenue is spent (default)</label>
+        <div class="dm-hint">The override funds specific items (positions, programs, trash). This means the expense line rises with the revenue line, because the money is being spent on what it was approved for. Turn off to see the scenario where override revenue is collected but not spent.</div>
       </div>
     </div>
   </div>
@@ -370,11 +370,11 @@ title: "Deficit Dynamics Model"
 <h2>What this shows</h2>
 <p>The two lines crossed in FY18. Since then, Marblehead's general fund expenditures have exceeded its budgetary revenues every year. The gap has been bridged by drawing down free cash, which peaked at $10.2M in FY23 before the <abbr class="g" title="Finance Committee">FinCom</abbr> flagged the reliance as unsustainable.</p>
 
-<p>The right side of the chart projects both lines forward from the FY24 actuals. The sliders control the annual growth rates. At the historical averages (revenue 3.7%, expenses 4.0%), the gap widens steadily. An override shifts the revenue line up over three years (FY27 to FY29); whether that closes the gap depends on whether expenses ratchet up with it or hold their prior slope.</p>
+<p>The right side of the chart projects both lines forward from the FY24 actuals. The sliders control the annual growth rates. At the historical averages (revenue 3.7%, expenses 4.0%), the gap widens steadily. An override shifts the revenue line up over three years (FY27 to FY29).</p>
 
-<p>The "ratchet" pattern: when the revenue line jumps from an override, the expense line jumps right along with it, because the new revenue gets allocated to deferred needs (restoring cut positions, catching up on maintenance, funding programs that were on hold). If that happens, the gap reopens. Toggle the ratchet on to see that scenario.</p>
+<p>By default, the chart assumes override revenue is spent, because it is: each tier has a specific line-item budget (school positions, public safety staffing, trash collection). When the revenue line steps up, the expense line steps up with it. That means the override buys time but does not permanently close the gap, because the underlying slopes have not changed. The expense line (driven by health insurance, pensions, and contractual wages) still grows faster than the revenue line (capped by <abbr class="g" title="Proposition 2&frac12;, the Massachusetts law limiting annual property tax levy increases to 2.5% plus new growth">Prop 2&frac12;</abbr>).</p>
 
-<p>The alternative: the two slopes are set by different forces. Revenue is capped by <abbr class="g" title="Proposition 2&frac12;, the Massachusetts law limiting annual property tax levy increases to 2.5% plus new growth">Prop 2&frac12;</abbr>. Expenses are driven by health insurance rates, pension assessments, and contractual wages. In that model, an override can close the gap for a period, and it reopens only if the expense slope stays steeper than the revenue slope.</p>
+<p>You can turn off "Override revenue is spent" to see what would happen if override revenue were collected but not spent. In that scenario, the full override amount goes to closing the gap, and the expense slope stays unchanged. This is unrealistic for the proposed override, but it illustrates the maximum possible gap closure from new revenue alone.</p>
 
 <details class="notes">
   <summary>Notes and methodology</summary>
@@ -382,7 +382,7 @@ title: "Deficit Dynamics Model"
   <p>Free cash draw history is from <a href="../data/free_cash_operating_history.csv">free_cash_operating_history.csv</a>, sourced from FinCom Annual Reports and ATM warrant articles.<sup class="cite" data-href="../data/free_cash_operating_history.csv" data-source="FinCom Annual Reports, ATM warrant articles"></sup></p>
   <p>The override phase-in schedule (FY27 to FY29) and tax bill conversion ($132.36 per $1M) are from the town's <a href="../data/override_tax_impact_asf.csv">override tax impact data</a> for an average single-family home assessed at $1,291,507.<sup class="cite" data-href="../data/override_tax_impact_asf.csv" data-source="Override tax impact schedule, average single-family assessed value $1,291,507"></sup></p>
   <p>Projections use constant annual compounding, which is a simplification. Real budgets have lumpy cost spikes (<abbr class="g" title="Group Insurance Commission">GIC</abbr> rate jumps, <abbr class="g" title="Public Employee Retirement Administration Commission">PERAC</abbr> revaluations) and uneven revenue growth.</p>
-  <p>The "ratchet" toggle models the behavioral adaptation theory as "expense line immediately jumps by the override amount at each phase-in step and then resumes its prior slope."</p>
+  <p>The "Override revenue is spent" toggle (on by default) bumps the expense line by the override draw at each phase-in step, then resumes the prior expense growth slope. This reflects the fact that each override tier has earmarked spending. Turning it off shows the maximum gap closure, as if all new revenue went to reserves.</p>
 </details>
 
 <script>
