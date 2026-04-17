@@ -1,0 +1,191 @@
+name: Lint
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  secrets:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install gitleaks
+        run: |
+          set -euo pipefail
+          VERSION=8.18.4
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${VERSION}/gitleaks_${VERSION}_linux_x64.tar.gz" \
+            | tar -xz gitleaks
+          sudo mv gitleaks /usr/local/bin/gitleaks
+
+      - name: Run gitleaks (full repo scan)
+        run: |
+          gitleaks detect \
+            --source . \
+            --no-banner \
+            --redact \
+            --verbose
+
+  content:
+    name: Content guardrails
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Diff-based guardrails on site-facing HTML and markdown
+        run: |
+          set -euo pipefail
+
+          BASE_REF="${{ github.event.pull_request.base.ref }}"
+          git fetch --quiet origin "$BASE_REF"
+
+          # Restrict to site-facing HTML/markdown. Exclusions match the
+          # Jekyll exclude list in _config.yml, plus .github so this
+          # workflow file never trips its own checks.
+          PATHSPEC=(
+            '*.html'
+            '*.md'
+            ':!README.md'
+            ':!STYLE_GUIDE.md'
+            ':!CLAUDE.md'
+            ':!docs'
+            ':!community-pulse'
+            ':!.github'
+          )
+
+          added=$(git diff "origin/$BASE_REF"...HEAD -- "${PATHSPEC[@]}" \
+                  | grep '^+' | grep -v '^+++' || true)
+
+          if [ -z "$added" ]; then
+            echo "No site-facing content changes in this PR."
+            exit 0
+          fi
+
+          fail=0
+
+          # ---------- Em-dashes ----------
+          # STYLE_GUIDE: no em-dashes in site copy. Use &ndash; or "to"/"through".
+          # Existing violations in master-data.html, case_studies.md, etc. are
+          # grandfathered because the check only inspects added lines.
+          em_dash=$(printf '%s\n' "$added" | grep -nE '—|&mdash;|&#8212;' || true)
+          if [ -n "$em_dash" ]; then
+            echo "::error title=Em-dash introduced::STYLE_GUIDE forbids em-dashes in site copy. Use &ndash; or rephrase."
+            printf '%s\n' "$em_dash"
+            fail=1
+          fi
+
+          # ---------- Editorial language ----------
+          # CLAUDE.md editorial-stance rule: no "shocking", "outrageous",
+          # "crisis", "skyrocketing" in site prose. If you are quoting a
+          # source, put the word inside the quoted text and attribute it.
+          editorial=$(printf '%s\n' "$added" | grep -nEi 'shocking|outrageous|crisis|skyrocketing' || true)
+          if [ -n "$editorial" ]; then
+            echo "::error title=Editorial language introduced::CLAUDE.md forbids shocking/outrageous/crisis/skyrocketing in site prose. Rephrase, or move the word inside an attributed quote."
+            printf '%s\n' "$editorial"
+            fail=1
+          fi
+
+          # ---------- Citation-source guardrail ----------
+          # Primary source documents should link to source-archive-v1 on the
+          # release, not to the town's mutable WordPress uploads path. See
+          # data/archive.md for the canonical file list.
+          marblehead=$(printf '%s\n' "$added" | grep -nE 'marbleheadma\.gov/wp-content/uploads/' || true)
+          if [ -n "$marblehead" ]; then
+            echo "::error title=New marbleheadma.gov upload URL::Use the source-archive-v1 release URLs (see data/archive.md) so citations survive upstream WordPress churn."
+            printf '%s\n' "$marblehead"
+            fail=1
+          fi
+
+          # ---------- Unwrapped municipal-finance acronyms ----------
+          # STYLE_GUIDE: first use of a governance or municipal-finance
+          # acronym on a page must be wrapped in <abbr class="g" title="...">.
+          # The blocklist is the acronyms actively wrapped elsewhere on the
+          # site (from grep of existing <abbr> usage), so this isn't a
+          # generic all-caps hunter that trips on USA, LLC, YES/NO, etc.
+          # Lines that already contain an <abbr> or a citation marker are
+          # treated as good-faith wraps and pass.
+          ACRONYM_LIST='ACFR|FTE|DOR|DESE|GIC|DLS|MGL|OPEB|PERAC|IEP|IDEA|ACS|MBTA|DPW|SPED|HVAC|EPIMS|ELL|ESSER|CPI|TIR|GASB|SRO|HEO|GIS|COA|GFOA|SJC|FinCom'
+          unwrapped_acronyms=$(printf '%s\n' "$added" \
+            | grep -nE "\\b(${ACRONYM_LIST})s?\\b" \
+            | grep -vE '<abbr|<sup class="cite"|data-source=|data-href=' \
+            || true)
+          if [ -n "$unwrapped_acronyms" ]; then
+            echo "::error title=Unwrapped acronym::STYLE_GUIDE requires first use of governance / municipal-finance acronyms to be wrapped in <abbr class=\"g\" title=\"...\">. Same-line <abbr> passes."
+            printf '%s\n' "$unwrapped_acronyms"
+            fail=1
+          fi
+
+          # ---------- Citation data-source non-empty ----------
+          # Every <sup class="cite"> must carry a non-empty data-source
+          # attribute. assets/citations.js reads it at runtime to build the
+          # auto-injected <h2>Sources</h2> list; a missing or empty
+          # data-source silently drops the source from the rendered page.
+          missing_source=$(printf '%s\n' "$added" \
+            | grep -nE '<sup class="cite"' \
+            | grep -vE 'data-source="[^"]+"' \
+            || true)
+          if [ -n "$missing_source" ]; then
+            echo "::error title=Citation missing data-source::<sup class=\"cite\"> must include a non-empty data-source attribute (assets/citations.js reads it to render the Sources list)."
+            printf '%s\n' "$missing_source"
+            fail=1
+          fi
+
+          # ---------- Internal link resolution ----------
+          # href="page.html" (or /page.html, charts/page.html) must resolve
+          # to an existing file at repo root. External URLs, mailto/tel/js,
+          # and relative-up links (../) are skipped - the first two aren't
+          # ours to validate, the third depends on the referring page's
+          # directory which isn't known to a repo-root check.
+          internal_links=$(printf '%s\n' "$added" \
+            | grep -oE 'href="[^"#?]+\.html[^"]*"' \
+            | sed 's/href="//; s/"$//' \
+            | sort -u \
+            || true)
+          for link in $internal_links; do
+            path=$(printf '%s' "$link" | sed 's/[#?].*$//')
+            case "$path" in
+              http://*|https://*|//*|mailto:*|tel:*|javascript:*) continue ;;
+              *../*|..*) continue ;;
+            esac
+            relative=$(printf '%s' "$path" | sed 's|^/||')
+            [ -z "$relative" ] && continue
+            if [ ! -f "$relative" ]; then
+              echo "::error title=Broken internal link::file not found: $link (checked $relative)"
+              fail=1
+            fi
+          done
+
+          # ---------- Anchor fragment resolution ----------
+          # href="page.html#frag" must find id="frag" or name="frag" in the
+          # target page. Same-page anchors (href="#frag") are skipped - the
+          # host page isn't necessarily in the diff, so we can't verify.
+          anchor_refs=$(printf '%s\n' "$added" \
+            | grep -oE 'href="[^"]+#[^"]+"' \
+            | sed 's/href="//; s/"$//' \
+            | sort -u \
+            || true)
+          for ref in $anchor_refs; do
+            file=$(printf '%s' "$ref" | sed 's/#.*$//')
+            frag=$(printf '%s' "$ref" | sed 's/^[^#]*#//')
+            [ -z "$file" ] && continue
+            case "$file" in
+              http://*|https://*|//*) continue ;;
+              *../*|..*) continue ;;
+            esac
+            relative=$(printf '%s' "$file" | sed 's|^/||')
+            [ -f "$relative" ] || continue
+            if ! grep -qE "(id|name)=\"${frag}\"" "$relative"; then
+              echo "::error title=Broken anchor::#${frag} not found in ${file}"
+              fail=1
+            fi
+          done
+
+          exit $fail

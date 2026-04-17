@@ -1,0 +1,18 @@
+title = "Marblehead Data gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Client-side tokens and patterns that are public by design"
+
+regexes = [
+  # Cloudflare Web Analytics beacon tokens ship in every page's client HTML
+  # to enable visitor analytics. They are scoped to the site and not secret.
+  '''data-cf-beacon='\{"token":\s*"[a-f0-9]{32}"\}''',
+]
+
+paths = [
+  # Jekyll layout includes that embed client-side analytics tokens
+  '''_includes/head\.html''',
+]
