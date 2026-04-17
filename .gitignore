@@ -30,8 +30,8 @@ charts/drafts/
 __pycache__/
 /tmp/
 
-# community-pulse dev subproject build artifacts
-community-pulse/node_modules/
+# Node modules (root scraper tooling, community-pulse, etc.)
+node_modules/
 community-pulse/.wrangler/
 community-pulse/dist/
 
