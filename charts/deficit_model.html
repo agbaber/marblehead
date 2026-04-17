@@ -469,6 +469,16 @@ title: "Deficit Dynamics Model"
     opacity: 0.18;
     height: 14px;
   }
+  .dm-key-swatch-constrained {
+    background: repeating-linear-gradient(
+      to right,
+      var(--c-buoy) 0 3px,
+      transparent 3px 6px
+    );
+    height: 3px;
+    margin-top: 8px;
+    opacity: 0.6;
+  }
   .dm-key-text strong {
     color: var(--text);
   }
@@ -579,6 +589,10 @@ title: "Deficit Dynamics Model"
   <div class="dm-key-row">
     <span class="dm-key-swatch dm-key-swatch-gap"></span>
     <span class="dm-key-text"><strong>Shaded gap</strong> &ndash; the deficit free cash, cuts, or an override has to close.</span>
+  </div>
+  <div class="dm-key-row">
+    <span class="dm-key-swatch dm-key-swatch-constrained"></span>
+    <span class="dm-key-text"><strong>Expenses if override fails</strong> &ndash; only appears when an override is modeled. Shows what the town could spend without it: expenses capped at revenue. The space between this line and the full expense line is what the override is funding.</span>
   </div>
 </div>
 
@@ -1321,7 +1335,7 @@ An override on its own buys time. It does not change the slope of either line.
       endConstrainedEl.setAttribute('x', xScale(li) + 6);
       endConstrainedEl.setAttribute('y', cEndY);
       endConstrainedEl.setAttribute('text-anchor', 'start');
-      endConstrainedEl.textContent = fmtEnd(constrained[li]) + ' (if cut)';
+      endConstrainedEl.textContent = fmtEnd(constrained[li]) + ' (if override fails)';
       endConstrainedEl.classList.remove('dm-hidden');
     } else {
       endConstrainedEl.classList.add('dm-hidden');
