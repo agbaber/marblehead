@@ -840,6 +840,10 @@ title: "Deficit Dynamics Model"
     <span class="dm-scenario-title">Permanently close the gap</span>
     <span class="dm-scenario-desc">Slower expense growth + healthcare reform + override. Lines stay apart.</span>
   </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="bend-curve">
+    <span class="dm-scenario-title">Bend the cost curve (3 to 5 years)</span>
+    <span class="dm-scenario-desc">Structural reforms (collaboratives, in-district SPED, shared services) phased over 3 to 5 years.</span>
+  </button>
 </div>
 
 <div class="dm-controls">
@@ -1783,7 +1787,8 @@ An override on its own buys time. It does not change the slope of either line.
     'commercial-only': 'Commercial redevelopment at the top of Marblehead\u2019s realistic range adds roughly $500K to $1M per year in recurring capacity. This scenario uses the middle of that range (+0.5pp on revenue growth). The existing gap from FY24 onward does not close because new growth compounds forward but does not retroactively close old deficits. Residential growth is excluded because new housing adds service demand too.',
     'override-plus-hc':'Stacks two politically hard lifts: an operating override vote plus union concessions on health insurance. Both are plausible individually; combining them depends on winning a vote and a bargaining round.',
     'no-override-reform':'No new revenue; 30 position cuts plus healthcare concessions carry the full load. 30 positions is more than double the site\u2019s 7 to 13 discretionary estimate (see inside-school-staffing.html#options), so the cuts reach mandate-adjacent roles or non-school departments. The hardest path politically: the largest non-override concessions with nothing offered in return.',
-    'permanent-close': 'The 0.8pp drop in expense growth (4.0% to 3.2%) is doing roughly 38% of the work; the override, cuts, and healthcare reform contribute the rest. Requires healthcare premium moderation outside the town\u2019s control plus sustained wage restraint not achieved in the last 20 years.'
+    'permanent-close': 'The 0.8pp drop in expense growth (4.0% to 3.2%) is doing roughly 38% of the work; the override, cuts, and healthcare reform contribute the rest. Requires healthcare premium moderation outside the town\u2019s control plus sustained wage restraint not achieved in the last 20 years.',
+    'bend-curve': 'Matches the site\u2019s framing of these reforms as cost-curve benders, not immediate substitutes for override revenue (see inside-school-staffing.html#options). Realistic impact from collaborative expansion, bringing out-of-district SPED placements back in, and shared back-office sums to roughly 0.3 to 0.5 percentage points off expense growth, but not until FY30 at the earliest. The compound-rate projection in this model applies the reduction uniformly, so the near-term years look more optimistic than reality.'
   };
 
   function updateScenarioReadout() {
@@ -1959,6 +1964,8 @@ An override on its own buys time. It does not change the slope of either line.
         hcShareEl.value = 65;
         wageOffsetEl.value = 50;
         positionCuts = 10;
+      } else if (s === 'bend-curve') {
+        expGrowthEl.value = 3.7;
       }
       onChange();
       if (chartScrollTarget) {
@@ -2431,6 +2438,8 @@ An override on its own buys time. It does not change the slope of either line.
       hcShareEl.value = 65;
       wageOffsetEl.value = 50;
       positionCuts = 10;
+    } else if (urlStance === 'bend-curve') {
+      expGrowthEl.value = 3.7;
     }
     if (stanceNotes[urlStance]) {
       currentStance = urlStance;
