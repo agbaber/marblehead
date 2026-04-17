@@ -2039,6 +2039,15 @@ An override on its own buys time. It does not change the slope of either line.
       computeYRange(newData.rev, newData.exp);
       drawMainGrid();
 
+      // Re-draw the historical paths using the new yScale so they don't
+      // snap from old-yScale coords to new-yScale coords at tween end.
+      document.getElementById('dm-rev-hist').setAttribute(
+        'd', buildPath(newData.rev, 0, lastHistIdx, xScale, yScale)
+      );
+      document.getElementById('dm-exp-hist').setAttribute(
+        'd', buildPath(newData.exp, 0, lastHistIdx, xScale, yScale)
+      );
+
       var tweenConstrained = oldData.override > 0 && newData.override > 0;
       if (!tweenConstrained) constrainedLineEl.classList.add('dm-hidden');
 
@@ -2084,7 +2093,7 @@ An override on its own buys time. It does not change the slope of either line.
       captionEl.textContent = steps[idx].caption;
       prevBtn.disabled = idx === 0;
       nextBtn.textContent = idx === steps.length - 1 ? 'Finish' : 'Next \u2192';
-      tweenChartToStep(steps[idx].setup, scrollPanelIntoView);
+      tweenChartToStep(steps[idx].setup);
     }
 
     function startTour() {
@@ -2093,6 +2102,9 @@ An override on its own buys time. It does not change the slope of either line.
       panel.hidden = false;
       startBtn.setAttribute('aria-expanded', 'true');
       renderStep();
+      // One-time scroll on start so the panel is in view; subsequent
+      // steps do not scroll.
+      scrollPanelIntoView();
     }
 
     function exitTour() {
