@@ -136,6 +136,18 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Source:** DESE Teacher Salaries Report (school year 2023-24, updated Feb 2026) and DESE Per Pupil Expenditure Report (FY2024)
 - **Confidence:** High. Official state data from district end-of-year financial reports.
 
+### FY26 Vendor Payments (YTD snapshot)
+- **File:** `open_finance_vendor_payments_FY26_snapshot_2026-04-17.csv`
+- 1,965 vendors paid by the Town in FY26 through 2026-04-17, with cumulative dollars each. Ranges from $15.94M (Commonwealth of MA) down to $0.00 (vendors set up in the ledger but unpaid so far this year). Full total $84,709,576.43 matches the Open Finance dashboard headline. Top 5 vendors = 55% of spend; top 100 = 90.4%.
+- **Source:** Town of Marblehead Open Finance portal (Tyler/Socrata), `townofmarblehead-ma-oe.spending.socrata.com/api/chart_data.json?child_entity=vendor&year=2026`. Fed from the Town's MUNIS ledger and updated at the end of each business day.
+- **Caveats:**
+  - Unaudited running totals, not ACFR figures. For historical or audited numbers, use the ACFRs instead.
+  - Spans tax-funded and enterprise-fund spending together. Berkshire Wind Power ($11.80M, rank 2) is Municipal Light Department purchased power, self-funded by ratepayers, not the tax levy. Do not cite it as a tax-supported cost.
+  - "Commonwealth of MA" ($15.94M, rank 1) aggregates unrelated state charges (MBTA assessment, charter school tuition, state retirement, etc.). The Cherry Sheet / FY27 Proposed Budget breaks these out line by line.
+  - Only FY26 is available in the spending portal; earlier fiscal years return zero. For multi-year vendor trends, this file is insufficient.
+  - Snapshot captured 2026-04-17 (FY26 Q3). A later snapshot would include year-end payments and reclassifications.
+- **Confidence:** High for vendor identities and dollar amounts at the snapshot instant. Low for year-end interpretation (8-10 weeks of FY26 still to post).
+
 ## What We Don't Have (identified gaps)
 
 1. **Annual total headcount (not FTE)** - only have FY25: 1,185 (from Marblehead Independent). Public records request filed.
