@@ -1966,18 +1966,18 @@ An override on its own buys time. It does not change the slope of either line.
 
     var steps = [
       {
-        caption: 'Where we are. Expenses have pulled ahead of revenue since FY18; the projected FY40 gap is about $12M per year. Free cash has been covering the difference.',
+        caption: 'The starting point. Expenses have pulled ahead of revenue since FY18; the projected FY40 gap is about $12M per year. Free cash has been covering the difference.',
         setup: function() { resetToDefaults(); }
       },
       {
-        caption: 'Why the gap widens. If expense growth matched revenue (3.5%/yr), the lines would run parallel and the gap would stop widening. The baseline assumption is 4%/yr, mostly pensions and healthcare. See how the expense line flattens when we drop it to 3.5%.',
+        caption: 'The growth-rate gap. If expense growth matched revenue (3.5%/yr), the lines would run parallel and the gap would stop widening. The baseline assumption is 4%/yr, mostly pensions and healthcare. See how the expense line flattens when we drop it to 3.5%.',
         setup: function() {
           resetToDefaults();
           expGrowthEl.value = 3.5;
         }
       },
       {
-        caption: 'What an override does. Tier 2 ($12M) raises the levy ceiling permanently. Revenue jumps above expenses starting FY27, giving the town a few years of breathing room (green above red). The slopes are unchanged, so expenses catch up and the gap reopens on the same schedule.',
+        caption: 'Adding an override. Tier 2 ($12M) raises the levy ceiling permanently. Revenue jumps above expenses starting FY27, giving the town a few years of breathing room (green above red). The slopes are unchanged, so expenses catch up and the gap reopens on the same schedule.',
         setup: function() {
           resetToDefaults();
           overrideEl.value = 12;
