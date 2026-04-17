@@ -7,7 +7,7 @@ description: "Massachusetts case law on when a municipal 'fee' is legally a tax,
 
 # Case law: fee vs. tax under Proposition 2½
 
-*Relevant to [Question 2 on the June 9, 2026 ballot](../question-2-trash.html). If voters reject the levy increase, the Board of Health's fallback is a flat $281 per household "fee." Whether that fee survives a court challenge depends on the case law below.*
+*Relevant to [Question 2 on the June 9, 2026 ballot](../question-2-trash.html). If voters reject the levy increase, the Board of Health's fallback is a flat $281 per household "fee." Massachusetts law has a specific test, set by the Supreme Judicial Court in **Emerson College v. City of Boston** (1984), for whether a charge labeled a fee is legally a fee or actually a tax. "Emerson" is shorthand for that case throughout this page.*
 
 **Not legal advice.** Research note for residents. Every claim cites the primary opinion.
 
