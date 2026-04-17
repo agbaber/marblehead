@@ -93,6 +93,94 @@ title: "Deficit Dynamics Model"
     background: var(--c-fog);
     border-left: 3px solid var(--c-navy);
   }
+  .dm-walkthrough-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+  }
+  .dm-walkthrough-btn {
+    font: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 18px;
+    border: 1px solid var(--c-navy);
+    background: var(--c-navy);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .dm-walkthrough-btn:hover,
+  .dm-walkthrough-btn:focus-visible {
+    background: #1a2d4a;
+  }
+  .dm-tour-panel {
+    margin: 16px 0;
+    padding: 16px 20px;
+    background: var(--c-fog);
+    border: 2px solid var(--c-navy);
+    border-radius: 4px;
+  }
+  .dm-tour-panel[hidden] {
+    display: none;
+  }
+  .dm-tour-step-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .dm-tour-step-indicator {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-navy);
+    font-weight: 700;
+  }
+  .dm-tour-caption {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .dm-tour-controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .dm-tour-nav-btn, .dm-tour-exit {
+    font: inherit;
+    font-size: 13px;
+    padding: 8px 14px;
+    border: 1px solid var(--c-navy);
+    background: #fff;
+    color: var(--c-navy);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .dm-tour-nav-btn:hover, .dm-tour-exit:hover,
+  .dm-tour-nav-btn:focus-visible, .dm-tour-exit:focus-visible {
+    background: var(--c-fog);
+  }
+  .dm-tour-nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .dm-tour-nav-next {
+    background: var(--c-navy);
+    color: #fff;
+  }
+  .dm-tour-nav-next:hover,
+  .dm-tour-nav-next:focus-visible {
+    background: #1a2d4a;
+  }
+  .dm-tour-exit {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
   .dm-readout-line {
     font-size: 14px;
     color: var(--text);
@@ -566,11 +654,36 @@ title: "Deficit Dynamics Model"
     .dm-tax-btn { width: 100%; }
     .dm-tax-row .dm-hint { font-size: 11px; }
     .dm-key { font-size: 12px; padding: 10px 12px; }
+    .dm-walkthrough-row { gap: 8px; }
+    .dm-walkthrough-btn { width: 100%; }
+    .dm-walkthrough-row .dm-hint { font-size: 11px; }
+    .dm-tour-controls { gap: 6px; }
+    .dm-tour-nav-btn { flex: 1 1 45%; text-align: center; }
+    .dm-tour-caption { font-size: 14px; }
   }
 </style>
 
 <h1 class="h-center">Deficit Dynamics: The Lines Already Crossed</h1>
 <p class="subtitle h-center">The left side is Marblehead&rsquo;s actual general fund history from <abbr class="g" title="Annual Comprehensive Financial Reports">ACFRs</abbr>. The right side projects forward at the growth rates you choose. The gap between the lines is what free cash and reserves have been covering since FY18.</p>
+
+<div class="dm-walkthrough-row">
+  <button type="button" class="dm-walkthrough-btn" id="dm-walkthrough-start">
+    Show me how this works
+  </button>
+  <span class="dm-hint">A 6-step tour of the chart. You control the pace.</span>
+</div>
+
+<div class="dm-tour-panel" id="dm-tour-panel" hidden aria-live="polite" aria-label="Guided tour">
+  <div class="dm-tour-step-row">
+    <span class="dm-tour-step-indicator">Step <span id="dm-tour-index">1</span> of <span id="dm-tour-total">6</span></span>
+    <button type="button" class="dm-tour-exit" id="dm-tour-exit">Exit tour</button>
+  </div>
+  <div class="dm-tour-caption" id="dm-tour-caption"></div>
+  <div class="dm-tour-controls">
+    <button type="button" class="dm-tour-nav-btn" id="dm-tour-prev">&larr; Back</button>
+    <button type="button" class="dm-tour-nav-btn dm-tour-nav-next" id="dm-tour-next">Next &rarr;</button>
+  </div>
+</div>
 
 <div class="dm-tax-row">
   <button type="button" class="dm-tax-btn" id="dm-tax-btn">Show as annual tax bill per average home</button>
@@ -1794,6 +1907,124 @@ An override on its own buys time. It does not change the slope of either line.
       }
     });
   });
+
+  // === Guided tour ("Show me how this works") ===
+  (function() {
+    var startBtn = document.getElementById('dm-walkthrough-start');
+    var panel = document.getElementById('dm-tour-panel');
+    var captionEl = document.getElementById('dm-tour-caption');
+    var indexEl = document.getElementById('dm-tour-index');
+    var totalEl = document.getElementById('dm-tour-total');
+    var prevBtn = document.getElementById('dm-tour-prev');
+    var nextBtn = document.getElementById('dm-tour-next');
+    var exitBtn = document.getElementById('dm-tour-exit');
+
+    function resetToDefaults() {
+      revGrowthEl.value = 3.5;
+      expGrowthEl.value = 4.0;
+      overrideEl.value = 0;
+      ratchetEl.value = 5;
+      positionCuts = 0;
+      hcShareEl.value = 83;
+      wageOffsetEl.value = 50;
+      currentStance = null;
+    }
+
+    var steps = [
+      {
+        caption: 'Where we are. Marblehead\u2019s expenses have been pulling ahead of revenue since FY18. At current growth rates the projected FY40 gap is about $12M per year. Free cash has been covering the difference.',
+        setup: function() { resetToDefaults(); }
+      },
+      {
+        caption: 'Why the gap keeps widening. Revenue grows about 3.5%/yr (Prop 2\u00bd plus new growth). Expenses have grown closer to 4%/yr, mostly pensions and healthcare. The slope difference is the whole story.',
+        setup: function() { resetToDefaults(); }
+      },
+      {
+        caption: 'What an override does. Picking Tier 2 ($12M) raises the levy ceiling permanently. Revenue jumps in FY27. But the slopes of both lines are unchanged, so the gap reopens on the same schedule.',
+        setup: function() {
+          resetToDefaults();
+          overrideEl.value = 12;
+        }
+      },
+      {
+        caption: 'What the dashed line means. With an override modeled, the chart also shows \u201cExpenses if override fails\u201d: spending forced to match revenue. The space between the full expense line and the dashed line is the services the override is funding.',
+        setup: function() {
+          resetToDefaults();
+          overrideEl.value = 12;
+        }
+      },
+      {
+        caption: 'The realistic alternative. \u201cHold the line\u201d sets expense growth to 3.5%, matching revenue growth. That\u2019s what the town actually ran FY18 to FY24. Requires contract discipline and flat healthcare enrollment. No new money.',
+        setup: function() {
+          resetToDefaults();
+          expGrowthEl.value = 3.5;
+          currentStance = 'hold-line';
+        }
+      },
+      {
+        caption: 'Your turn. Try any scenario below. Each shows its assumptions, how realistic it is, and what\u2019s doing the work.',
+        setup: function() { resetToDefaults(); }
+      }
+    ];
+
+    totalEl.textContent = steps.length;
+    var idx = 0;
+    var active = false;
+
+    function renderStep() {
+      indexEl.textContent = idx + 1;
+      captionEl.textContent = steps[idx].caption;
+      prevBtn.disabled = idx === 0;
+      nextBtn.textContent = idx === steps.length - 1 ? 'Finish' : 'Next \u2192';
+      steps[idx].setup();
+      onChange();
+    }
+
+    function startTour() {
+      active = true;
+      idx = 0;
+      panel.hidden = false;
+      startBtn.setAttribute('aria-expanded', 'true');
+      renderStep();
+      panel.scrollIntoView({
+        behavior: reducedMotion && reducedMotion.matches ? 'auto' : 'smooth',
+        block: 'start'
+      });
+    }
+
+    function exitTour() {
+      active = false;
+      panel.hidden = true;
+      startBtn.setAttribute('aria-expanded', 'false');
+      resetToDefaults();
+      onChange();
+      startBtn.focus();
+    }
+
+    function advance(delta) {
+      var next = idx + delta;
+      if (next < 0) return;
+      if (next >= steps.length) {
+        exitTour();
+        return;
+      }
+      idx = next;
+      renderStep();
+    }
+
+    startBtn.addEventListener('click', startTour);
+    prevBtn.addEventListener('click', function() { advance(-1); });
+    nextBtn.addEventListener('click', function() { advance(1); });
+    exitBtn.addEventListener('click', exitTour);
+
+    // Keyboard: arrow left/right while tour is active and focus is within panel
+    panel.addEventListener('keydown', function(e) {
+      if (!active) return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); advance(1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); advance(-1); }
+      else if (e.key === 'Escape') { e.preventDefault(); exitTour(); }
+    });
+  })();
 
   // === Hover tooltips for main chart ===
   (function() {
