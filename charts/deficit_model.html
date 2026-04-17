@@ -844,6 +844,10 @@ title: "Deficit Dynamics Model"
     <span class="dm-scenario-title">Bend the cost curve (3 to 5 years)</span>
     <span class="dm-scenario-desc">Structural reforms (collaboratives, in-district SPED, shared services) phased over 3 to 5 years.</span>
   </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="composite-cuts">
+    <span class="dm-scenario-title">No override, no growth, just cuts</span>
+    <span class="dm-scenario-desc">Both levers off the table. Cuts absorb the full FY27 gap.</span>
+  </button>
 </div>
 
 <div class="dm-controls">
@@ -1788,7 +1792,8 @@ An override on its own buys time. It does not change the slope of either line.
     'override-plus-hc':'Stacks two politically hard lifts: an operating override vote plus union concessions on health insurance. Both are plausible individually; combining them depends on winning a vote and a bargaining round.',
     'no-override-reform':'No new revenue; 30 position cuts plus healthcare concessions carry the full load. 30 positions is more than double the site\u2019s 7 to 13 discretionary estimate (see inside-school-staffing.html#options), so the cuts reach mandate-adjacent roles or non-school departments. The hardest path politically: the largest non-override concessions with nothing offered in return.',
     'permanent-close': 'The 0.8pp drop in expense growth (4.0% to 3.2%) is doing roughly 38% of the work; the override, cuts, and healthcare reform contribute the rest. Requires healthcare premium moderation outside the town\u2019s control plus sustained wage restraint not achieved in the last 20 years.',
-    'bend-curve': 'Matches the site\u2019s framing of these reforms as cost-curve benders, not immediate substitutes for override revenue (see inside-school-staffing.html#options). Realistic impact from collaborative expansion, bringing out-of-district SPED placements back in, and shared back-office sums to roughly 0.3 to 0.5 percentage points off expense growth, but not until FY30 at the earliest. The compound-rate projection in this model applies the reduction uniformly, so the near-term years look more optimistic than reality.'
+    'bend-curve': 'Matches the site\u2019s framing of these reforms as cost-curve benders, not immediate substitutes for override revenue (see inside-school-staffing.html#options). Realistic impact from collaborative expansion, bringing out-of-district SPED placements back in, and shared back-office sums to roughly 0.3 to 0.5 percentage points off expense growth, but not until FY30 at the earliest. The compound-rate projection in this model applies the reduction uniformly, so the near-term years look more optimistic than reality.',
+    'composite-cuts': 'Reflects the no-3A, no-override, yes-cuts composite position. Closing the $8.47M FY27 gap at roughly $100K per position implies on the order of 85 positions. Only 7 to 13 can come from the site\u2019s discretionary slice of school staffing (see inside-school-staffing.html#options); the remainder requires mandate relief, non-school department reductions, or both. Shows the magnitude, not which commitments to unwind.'
   };
 
   function updateScenarioReadout() {
@@ -1966,6 +1971,8 @@ An override on its own buys time. It does not change the slope of either line.
         positionCuts = 10;
       } else if (s === 'bend-curve') {
         expGrowthEl.value = 3.7;
+      } else if (s === 'composite-cuts') {
+        positionCuts = 85;
       }
       onChange();
       if (chartScrollTarget) {
@@ -2440,6 +2447,8 @@ An override on its own buys time. It does not change the slope of either line.
       positionCuts = 10;
     } else if (urlStance === 'bend-curve') {
       expGrowthEl.value = 3.7;
+    } else if (urlStance === 'composite-cuts') {
+      positionCuts = 85;
     }
     if (stanceNotes[urlStance]) {
       currentStance = urlStance;
