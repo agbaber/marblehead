@@ -1204,7 +1204,20 @@
         if (!q || !a) return;
         switchTopic(q);
         viewEvidence(q, a);
-        window.scrollTo(0, 0);
+        /* Smooth-scroll to the evidence panel so the "case" the visitor
+           asked to read is immediately in view. Wait one frame so the
+           question-screen has laid out (switchTopic flips display:none
+           to block, and scrollIntoView needs the new element rect).
+           scrollIntoView honors prefers-reduced-motion in modern
+           browsers, so no extra check needed. */
+        var ev = document.querySelector('.evidence[data-evidence="' + q + '-' + a + '"]');
+        if (ev) {
+          requestAnimationFrame(function () {
+            ev.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        } else {
+          window.scrollTo(0, 0);
+        }
       });
     });
     featuredEl.appendChild(answersClone);
