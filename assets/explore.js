@@ -1629,7 +1629,14 @@
     noBtn.className = 'evidence-action evidence-action--no';
     noBtn.textContent = 'Not for me';
     noBtn.addEventListener('click', function () {
-      panel.classList.remove('open');
+      // If this answer is currently the user's pick, "Not for me" should
+      // also clear it, not just hide the evidence. Server tally is left
+      // alone (matches the checkmark-to-unpick flow).
+      if (selections[question] === answer) {
+        deselectAnswer(question);
+      } else {
+        panel.classList.remove('open');
+      }
       // Scroll back to the question so they can try another answer
       var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
       if (screen) {
