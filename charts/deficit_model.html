@@ -1502,7 +1502,14 @@ An override on its own buys time. It does not change the slope of either line.
     }
   }
 
+  var _lastGridYMin = null, _lastGridYMax = null, _lastGridTaxMode = null;
   function drawMainGrid() {
+    if (yMin === _lastGridYMin && yMax === _lastGridYMax && taxMode === _lastGridTaxMode) {
+      return;
+    }
+    _lastGridYMin = yMin;
+    _lastGridYMax = yMax;
+    _lastGridTaxMode = taxMode;
     var grid = '';
     for (var yr = startYear; yr <= endYear; yr++) {
       var i = yr - startYear;
