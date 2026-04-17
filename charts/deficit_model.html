@@ -328,6 +328,27 @@ title: "Deficit Dynamics Model"
     fill: var(--c-buoy);
     opacity: 0.08;
   }
+  .dm-svg.dm-tweening .dm-end-label,
+  .dm-svg.dm-tweening .dm-crossover-dot,
+  .dm-svg.dm-tweening .dm-crossover-label,
+  .dm-svg.dm-tweening .dm-boundary-label,
+  .dm-svg.dm-tweening .dm-override-label,
+  .dm-svg.dm-tweening .dm-override-band,
+  .dm-svg.dm-tweening #dm-deficit-fill,
+  .dm-svg.dm-tweening #dm-cuts-fill {
+    opacity: 0;
+    transition: opacity 150ms ease;
+  }
+  .dm-svg .dm-end-label,
+  .dm-svg .dm-crossover-dot,
+  .dm-svg .dm-crossover-label,
+  .dm-svg .dm-boundary-label,
+  .dm-svg .dm-override-label,
+  .dm-svg .dm-override-band,
+  .dm-svg #dm-deficit-fill,
+  .dm-svg #dm-cuts-fill {
+    transition: opacity 150ms ease;
+  }
   .dm-svg .dm-end-label-rev {
     fill: var(--c-sage);
   }
@@ -1984,14 +2005,76 @@ An override on its own buys time. It does not change the slope of either line.
       });
     }
 
+    var svgEl = document.querySelector('.dm-svg');
+    var revProjEl = document.getElementById('dm-rev-proj');
+    var expProjEl = document.getElementById('dm-exp-proj');
+    var constrainedLineEl = document.getElementById('dm-constrained');
+    var activeTweenId = 0;
+
+    function tweenChartToStep(stepSetup, onDone) {
+      activeTweenId++;
+      var tweenId = activeTweenId;
+
+      var oldData = lastMainData;
+      stepSetup();
+      var newData = compute();
+
+      if (!oldData || (reducedMotion && reducedMotion.matches)) {
+        onChange();
+        if (onDone) onDone();
+        return;
+      }
+
+      // Expand y-range to fit both old and new data so lines stay on-chart mid-tween
+      computeYRange(oldData.rev.concat(newData.rev), oldData.exp.concat(newData.exp));
+      drawMainGrid();
+
+      var tweenConstrained = oldData.override > 0 && newData.override > 0;
+      if (!tweenConstrained) constrainedLineEl.classList.add('dm-hidden');
+
+      svgEl.classList.add('dm-tweening');
+
+      var duration = 600;
+      var start = performance.now();
+      function frame(now) {
+        if (tweenId !== activeTweenId) return; // cancelled by a newer tween
+        var t = Math.min(1, (now - start) / duration);
+        var eased = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+        var rev = [];
+        var exp = [];
+        var constr = [];
+        for (var i = 0; i < newData.rev.length; i++) {
+          rev[i] = oldData.rev[i] + (newData.rev[i] - oldData.rev[i]) * eased;
+          exp[i] = oldData.exp[i] + (newData.exp[i] - oldData.exp[i]) * eased;
+          if (tweenConstrained) {
+            constr[i] = oldData.constrained[i] + (newData.constrained[i] - oldData.constrained[i]) * eased;
+          }
+        }
+
+        revProjEl.setAttribute('d', buildPath(rev, lastHistIdx, nYears - 1, xScale, yScale));
+        expProjEl.setAttribute('d', buildPath(exp, lastHistIdx, nYears - 1, xScale, yScale));
+        if (tweenConstrained) {
+          constrainedLineEl.setAttribute('d', buildPath(constr, lastHistIdx, nYears - 1, xScale, yScale));
+        }
+
+        if (t < 1) {
+          requestAnimationFrame(frame);
+        } else {
+          svgEl.classList.remove('dm-tweening');
+          onChange();
+          if (onDone) onDone();
+        }
+      }
+      requestAnimationFrame(frame);
+    }
+
     function renderStep() {
       indexEl.textContent = idx + 1;
       captionEl.textContent = steps[idx].caption;
       prevBtn.disabled = idx === 0;
       nextBtn.textContent = idx === steps.length - 1 ? 'Finish' : 'Next \u2192';
-      steps[idx].setup();
-      onChange();
-      scrollPanelIntoView();
+      tweenChartToStep(steps[idx].setup, scrollPanelIntoView);
     }
 
     function startTour() {
