@@ -908,7 +908,7 @@ title: "Deficit Dynamics Model"
   <div class="dm-control" style="grid-column: 1 / -1;">
     <span class="dm-control-label">FY27 one-time step ($M): <span class="dm-value" id="dm-fy27-step-val">$0.0M</span></span>
     <input type="number" id="dm-fy27-step" min="-5" max="5" step="0.1" value="0" class="dm-fy27-step-input">
-    <div class="dm-hint" id="dm-fy27-step-hint">Use this if you believe FY27 has a one-time cost deviation outside the compound-rate trend (for example, the observed healthcare bump). Default is 0, meaning the compound rate captures everything.</div>
+    <div class="dm-hint" id="dm-fy27-step-hint">A one-time shock added to projected FY27 expenses, not propagated into FY28+. Observed FY27 healthcare cliff: about +$1.1M (the &ldquo;One-time healthcare spike&rdquo; scenario below uses this). Default 0 means the compound rate captures everything. Negative values model a one-time underrun.</div>
   </div>
 </div>
 </details>
