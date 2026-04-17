@@ -13,7 +13,7 @@ description: "Massachusetts case law on when a municipal 'fee' is legally a tax,
 
 ## Bottom line
 
-- **The $281 flat fee is structurally vulnerable to an Emerson challenge.** The weakest link is Prong 2 (voluntariness): a mandatory flat per-household charge fails unless the transfer-station sticker program is a real opt-out.
+- **The $281 flat fee (the no-vote outcome on Q2) is structurally vulnerable to an Emerson challenge.** The weakest link is Prong 2 (voluntariness): a mandatory flat per-household charge fails unless the transfer-station sticker program is a real opt-out.
 - **Structure determines survival.** An enterprise fund under G.L. c. 44, § 53F½ cleanly satisfies Emerson. A Board of Health regulatory charge under c. 111 is the most exposed structure.
 - **Massachusetts courts have struck down a municipal trash fee before.** Springfield, February 17, 2007. Grounds are not in the public record, but the precedent that a flat municipal trash fee can lose in court is established.
 
@@ -29,7 +29,7 @@ A valid fee must pass all three. Failing any one recharacterizes the charge as a
 
 Source: [Emerson College v. City of Boston](https://law.justia.com/cases/massachusetts/supreme-court/1984/391-mass-415-2.html), 391 Mass. 415, 424-25 (1984).
 
-## Does the Marblehead $281 fee pass?
+## Does the Marblehead $281 fee (a no vote) pass?
 
 | Prong | Likely outcome | Why |
 |---|---|---|
