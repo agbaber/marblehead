@@ -20,20 +20,21 @@
      the section elements is enough. */
   (function reorderQuestions() {
     var preferredOrder = [
-      'mycost',       // How will this affect my taxes?
-      'seniors',      // How does this affect seniors and fixed-income households?
+      'mycost',       // What would the override cost my household?
+      'servicelevel', // What level of service do I want from Marblehead?
+      'seniors',      // How does this affect seniors?
       'taxrank',      // How does Marblehead's tax burden compare?
-      'levy',         // Why don't 2.5% increases keep up?
+      'levy',         // How can town income keep up with cost growth?
       'moneygone',    // What explains the budget growth?
-      'size',         // Does the size of the override matter?
-      'schools',      // Why did staffing grow while enrollment fell?
-      'trash',        // Why is trash collection on the ballot?
-      'library',      // Why would the library be the heaviest cut?
-      'alternatives', // What else could we do instead?
-      'again',        // Will we be back here in 5 years?
-      'voteno',       // What happens if we vote no?
-      'override',     // Is the override necessary, or wasteful spending?
-      'trust'         // How do we trust the decision-makers?
+      'size',         // What does each tier get us?
+      'schools',      // Did school staffing grow while enrollment fell?
+      'trash',        // Should we pay for trash through property taxes or a flat fee?
+      'library',      // Why does the library take the heaviest cut?
+      'alternatives', // Do any of the town's levers have enough impact?
+      'again',        // How soon would we come back for another override?
+      'voteno',       // What will happen if we vote no?
+      'override',     // Does an override buy time, and for what?
+      'trust'         // Should I trust the town with more revenue?
     ];
     var parent = document.querySelector('.explore-stage');
     if (!parent) return;
@@ -1128,7 +1129,208 @@
       });
       cards.forEach(function (c) { listEl.appendChild(c); });
     }
+    updateSynthesis();
   }
+
+  /* ── "Where you landed" synthesis panel ──
+     Reads back the reader's picks grouped by theme once they've made
+     enough of them (>= WYL_THRESHOLD). Pure readback: no scoring, no
+     implied "yes/no" label, no advocacy. Still-open questions are
+     surfaced at the bottom so a partial flow has a clear nudge. */
+  var WYL_THRESHOLD = 3;
+  var WYL_THEMES = [
+    { key: 'preference',     label: 'What I want from the town',          topics: ['servicelevel', 'mycost', 'seniors'] },
+    { key: 'money',          label: 'Money and taxes',                    topics: ['taxrank', 'levy'] },
+    { key: 'structure',      label: 'Why the gap exists',                 topics: ['moneygone', 'size'] },
+    { key: 'services',       label: 'Services on the table',              topics: ['schools', 'trash', 'library'] },
+    { key: 'futures',        label: 'Paths not taken, and what comes next', topics: ['alternatives', 'again'] },
+    { key: 'interpretation', label: 'Reading the choice',                 topics: ['voteno', 'override', 'trust'] }
+  ];
+  // Short, scannable titles for the recap. The full h1 on each question
+  // screen is a sentence; these are the nouns that sentence is about.
+  var WYL_TOPIC_LABELS = {
+    mycost:       'What the override would cost',
+    servicelevel: 'Service level I want',
+    seniors:      'Impact on seniors',
+    taxrank:      'Where Marblehead ranks',
+    levy:         'Income vs. cost growth',
+    moneygone:    'What drove budget growth',
+    size:         'What each tier gets us',
+    schools:      'Staffing vs. enrollment',
+    trash:        'Property tax vs. flat fee',
+    library:      'Heaviest cut without an override',
+    alternatives: 'Do the levers scale',
+    again:        'How soon we come back',
+    voteno:       'If the override fails',
+    override:     'What an override buys',
+    trust:        'Trusting the decision-makers'
+  };
+
+  // Pull the answer-card's own summary text -- the actual case the reader
+  // read when they picked. This is the right "why" for revisit.
+  var _answerSummaryCache = {};
+  function getAnswerSummary(topic, answer) {
+    var key = topic + '-' + answer;
+    if (key in _answerSummaryCache) return _answerSummaryCache[key];
+    var card = document.querySelector(
+      '.answer-card[data-question="' + topic + '"][data-answer="' + answer + '"]'
+    );
+    var summary = card && card.querySelector('.answer-summary');
+    if (!summary) { _answerSummaryCache[key] = null; return null; }
+    var text = (summary.textContent || '').replace(/\s+/g, ' ').trim();
+    _answerSummaryCache[key] = text || null;
+    return _answerSummaryCache[key];
+  }
+
+  function updateSynthesis() {
+    var panel = document.getElementById('whereYouLanded');
+    if (!panel) return;
+
+    var decided = topicOrder.filter(function (t) { return !!selections[t]; });
+    var total = topicOrder.length;
+    if (decided.length < WYL_THRESHOLD) {
+      panel.hidden = true;
+      return;
+    }
+    panel.hidden = false;
+
+    var titleEl = document.getElementById('wylTitle');
+    var subEl = document.getElementById('wylSub');
+    var clearBtn = document.getElementById('wylStartOver');
+    if (isSharedView) {
+      if (titleEl) titleEl.textContent = 'Where they landed';
+      if (subEl) subEl.textContent = 'The positions in the link you followed. Tap Start fresh at the top to pick your own.';
+      if (clearBtn) clearBtn.hidden = true;
+    } else {
+      if (titleEl) titleEl.textContent = 'Where you landed';
+      if (subEl) subEl.textContent = 'Your picks so far, grouped by theme.';
+      if (clearBtn) clearBtn.hidden = false;
+    }
+
+    var progressEl = document.getElementById('wylProgress');
+    if (progressEl) {
+      var remaining = total - decided.length;
+      progressEl.textContent = remaining === 0
+        ? 'All ' + total + ' questions answered.'
+        : decided.length + ' of ' + total + ' questions answered. ' + remaining + ' still open below.';
+    }
+
+    var themesEl = document.getElementById('wylThemes');
+    if (themesEl) {
+      themesEl.innerHTML = '';
+      WYL_THEMES.forEach(function (theme) {
+        var answeredInTheme = theme.topics.filter(function (t) { return !!selections[t]; });
+        if (answeredInTheme.length === 0) return;
+
+        var group = document.createElement('div');
+        group.className = 'wyl-theme';
+        group.dataset.theme = theme.key;
+
+        var h = document.createElement('h3');
+        h.className = 'wyl-theme-title';
+        h.textContent = theme.label;
+        group.appendChild(h);
+
+        var ul = document.createElement('ul');
+        ul.className = 'wyl-theme-list';
+        answeredInTheme.forEach(function (topic) {
+          var li = document.createElement('li');
+          li.className = 'wyl-theme-item';
+          var ans = selections[topic];
+
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'wyl-topic-link';
+          btn.dataset.topic = topic;
+          btn.addEventListener('click', function () {
+            switchTopic(topic);
+            window.scrollTo(0, 0);
+          });
+
+          var label = document.createElement('span');
+          label.className = 'wyl-topic-label';
+          label.textContent = WYL_TOPIC_LABELS[topic] || topic;
+          btn.appendChild(label);
+
+          var chev = document.createElement('span');
+          chev.className = 'wyl-topic-chev';
+          chev.setAttribute('aria-hidden', 'true');
+          chev.textContent = '\u203A';
+          btn.appendChild(chev);
+
+          var detail = document.createElement('span');
+          detail.className = 'wyl-topic-detail';
+          if (ans === 'u') {
+            detail.classList.add('wyl-topic-detail--unsure');
+            detail.textContent = 'Marked not sure yet.';
+          } else {
+            var summary = getAnswerSummary(topic, ans);
+            detail.textContent = summary
+              || (landingCards[topic]
+                  && landingCards[topic].answerHeadings
+                  && landingCards[topic].answerHeadings[ans])
+              || ('Picked ' + ans.toUpperCase());
+          }
+          btn.appendChild(detail);
+
+          li.appendChild(btn);
+          ul.appendChild(li);
+        });
+        group.appendChild(ul);
+        themesEl.appendChild(group);
+      });
+    }
+
+    var openEl = document.getElementById('wylOpen');
+    var openListEl = document.getElementById('wylOpenList');
+    var unanswered = topicOrder.filter(function (t) { return !selections[t]; });
+    if (openEl && openListEl) {
+      if (unanswered.length === 0) {
+        openEl.hidden = true;
+      } else {
+        openEl.hidden = false;
+        openListEl.innerHTML = '';
+        unanswered.forEach(function (topic) {
+          var li = document.createElement('li');
+          li.className = 'wyl-open-item';
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'wyl-topic-link wyl-topic-link--open';
+          btn.dataset.topic = topic;
+          btn.textContent = WYL_TOPIC_LABELS[topic] || topic;
+          btn.addEventListener('click', function () {
+            switchTopic(topic);
+            window.scrollTo(0, 0);
+          });
+          li.appendChild(btn);
+          openListEl.appendChild(li);
+        });
+      }
+    }
+  }
+
+  // "Clear my picks" in the synthesis panel reuses the existing Delete-my-data
+  // confirm + reset path, keeping one place that wipes local state.
+  (function wireSynthesisActions() {
+    var clearBtn = document.getElementById('wylStartOver');
+    var resetBtn = document.getElementById('statsReset');
+    if (clearBtn && resetBtn) {
+      clearBtn.addEventListener('click', function () { resetBtn.click(); });
+    }
+  })();
+
+  // Cross-links in evidence blocks use <a href="#" data-topic="slug">; intercept
+  // and route through switchTopic so the reader jumps to the related question
+  // without a page reload.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-topic]');
+    if (!a) return;
+    var topic = a.getAttribute('data-topic');
+    if (!topic) return;
+    e.preventDefault();
+    switchTopic(topic);
+    window.scrollTo(0, 0);
+  });
 
   /* ── Copy-link buttons (top + bottom) ── */
   var shareTopEl = document.getElementById('shareTop');
@@ -1770,19 +1972,57 @@
   // Restore notes badges on load
   updateCardBadges();
 
-  // Restore selections from localStorage
+  // Restore selections from localStorage. The 45-card rewrite changed card
+  // semantics (not just copy) on most questions, so selections saved under
+  // a prior version would silently misrepresent the reader's position.
+  // Bumping SELECTIONS_VERSION wipes stale picks and posts a one-time notice.
+  var SELECTIONS_VERSION = '2026-04-rewrite';
+  var VERSION_KEY = 'explore-selections-version';
+  var savedVersion = null;
+  try { savedVersion = localStorage.getItem(VERSION_KEY); } catch (e) {}
   var savedSelections = null;
-  try { savedSelections = JSON.parse(localStorage.getItem('explore-selections')); } catch (e) {}
+  if (savedVersion === SELECTIONS_VERSION) {
+    try { savedSelections = JSON.parse(localStorage.getItem('explore-selections')); } catch (e) {}
+  } else {
+    // Stale or missing version: drop prior picks. If the reader had any,
+    // surface a one-time banner so they know to revisit.
+    var hadPriorPicks = false;
+    try {
+      var prior = JSON.parse(localStorage.getItem('explore-selections'));
+      hadPriorPicks = prior && Object.keys(prior).length > 0;
+    } catch (e) {}
+    try {
+      localStorage.removeItem('explore-selections');
+      localStorage.setItem(VERSION_KEY, SELECTIONS_VERSION);
+    } catch (e) {}
+    if (hadPriorPicks) {
+      try { sessionStorage.setItem('explore-reset-notice', '1'); } catch (e) {}
+    }
+  }
   if (savedSelections) {
     Object.keys(savedSelections).forEach(function (topic) {
       selections[topic] = savedSelections[topic];
     });
     updateNotesPill();
   }
+  // Surface the one-time reset notice on the landing page.
+  (function showResetNoticeIfAny() {
+    var show = false;
+    try { show = sessionStorage.getItem('explore-reset-notice') === '1'; } catch (e) {}
+    if (!show) return;
+    try { sessionStorage.removeItem('explore-reset-notice'); } catch (e) {}
+    var head = document.querySelector('.explore-landing-head');
+    if (!head) return;
+    var notice = document.createElement('p');
+    notice.className = 'explore-reset-notice';
+    notice.textContent = 'Questions were updated. Please revisit to record your stances.';
+    head.appendChild(notice);
+  })();
 
   // Persist selections
   function persistSelections() {
     localStorage.setItem('explore-selections', JSON.stringify(selections));
+    try { localStorage.setItem(VERSION_KEY, SELECTIONS_VERSION); } catch (e) {}
   }
 
   /* ── Restore state on load ── */

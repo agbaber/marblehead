@@ -1,0 +1,37 @@
+<!-- "Where you landed" synthesis panel.
+     Hidden until the reader has picked enough answers. JS populates the
+     themed recap, the still-open list, and the shared-view copy swap. -->
+<section class="where-you-landed" id="whereYouLanded" aria-live="polite" hidden>
+  <div class="wyl-head">
+    <h2 class="wyl-title" id="wylTitle">Where you landed</h2>
+    <p class="wyl-sub" id="wylSub">Your picks so far, grouped by theme.</p>
+    <p class="wyl-progress" id="wylProgress"></p>
+  </div>
+
+  <div class="wyl-themes" id="wylThemes"></div>
+
+  <div class="wyl-open" id="wylOpen" hidden>
+    <h3 class="wyl-open-title">Still open</h3>
+    <p class="wyl-open-sub">Questions you haven't decided yet.</p>
+    <ul class="wyl-open-list" id="wylOpenList"></ul>
+  </div>
+
+  <div class="wyl-next">
+    <h3 class="wyl-next-title">Your two votes</h3>
+    <p class="wyl-next-body">
+      <strong>Mon, May 4</strong> &ndash; Annual Town Meeting.
+      <strong>Tue, Jun 9</strong> &ndash; Annual Town Election.
+      Either vote can end the override.
+      <a href="what-you-can-do.html#your-two-votes">How the two votes work together &rarr;</a>
+    </p>
+  </div>
+
+  <div class="wyl-actions">
+    <button type="button" class="wyl-action wyl-action--primary" data-copy-positions>
+      <svg class="icon-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      <svg class="icon-copied" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+      <span>Copy link to your positions</span>
+    </button>
+    <button type="button" class="wyl-action wyl-action--ghost" id="wylStartOver">Clear my picks</button>
+  </div>
+</section>
