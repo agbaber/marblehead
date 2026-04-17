@@ -7,7 +7,7 @@ description: "Massachusetts case law on when a municipal 'fee' is legally a tax,
 
 # Case law: fee vs. tax under Proposition 2½
 
-*Relevant to [Question 2 on the June 9, 2026 ballot](../question-2-trash.html). If voters reject the levy increase, the Board of Health's fallback is a flat $281 per household "fee." Massachusetts law has a specific test, set by the Supreme Judicial Court (the state's highest court, abbreviated SJC) in **Emerson College v. City of Boston** (1984), for whether a charge labeled a fee is legally a fee or actually a tax. "Emerson" is shorthand for that case throughout this page.*
+*Relevant to [Question 2 on the June 9, 2026 ballot](../question-2-trash.html). If voters reject the levy increase, the Board of Health's fallback is a flat $281 per household "fee." Massachusetts law has a specific test, set by the Supreme Judicial Court (the state's highest court, abbreviated SJC) in [**Emerson College v. City of Boston**](https://law.justia.com/cases/massachusetts/supreme-court/1984/391-mass-415-2.html) (1984), for whether a charge labeled a fee is legally a fee or actually a tax. "Emerson" is shorthand for that case throughout this page.*
 
 **Not legal advice.** Research note for residents. Every claim cites the primary opinion.
 
@@ -15,7 +15,7 @@ description: "Massachusetts case law on when a municipal 'fee' is legally a tax,
 
 - **The $281 flat fee (the no-vote outcome on Q2) is structurally vulnerable to an Emerson-style court challenge.** The weakest link is the requirement that a fee be voluntary: a mandatory flat per-household charge fails this unless the transfer-station sticker program lets a household opt out of curbside pickup entirely.
 - **Structure determines survival.** A trash fee funneled through a dedicated municipal fund that can only pay for trash services (state law calls this an "enterprise fund") would cleanly pass the test. A flat charge imposed directly by the Board of Health under its general health-regulation authority is the most exposed structure.
-- **Massachusetts courts have struck down a municipal trash fee before.** Springfield, February 17, 2007. Grounds are not in the public record, but the precedent that a flat municipal trash fee can lose in court is established.
+- **Massachusetts courts have struck down a municipal trash fee before.** [Springfield, February 17, 2007](https://www.springfield-ma.gov/dpw/trashfee1/i-thought-the-trash-fee-was-invalidated-by-the-court). Grounds are not in the public record, but the precedent that a flat municipal trash fee can lose in court is established.
 
 ## The three-prong Emerson test
 
@@ -47,7 +47,7 @@ Emerson College sued because a "fee" reaches property-tax-exempt property; a lev
 
 | Potential plaintiff class | Why they would sue | Scale |
 |---|---|---|
-| **Individual residents whose homes are property-tax-exempt under state law**: disabled veterans, legally blind residents, qualifying low-income elderly, and surviving spouses. (Massachusetts statute G.L. c. 59 § 5 lists the specific clauses, e.g., Clause 22E for 100%-disabled vets, Clause 41C for qualifying elderly.) | Pay zero or reduced property-tax levy; would pay the full $281 fee | Unknown. See [Issue #591 Q5](https://github.com/agbaber/marblehead/issues/591). Count available from the state Department of Revenue and the town assessor. |
+| **Individual residents whose homes are property-tax-exempt under state law**: disabled veterans, legally blind residents, qualifying low-income elderly, and surviving spouses. (Massachusetts statute [G.L. c. 59 § 5](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter59/Section5) lists the specific clauses, e.g., Clause 22E for 100%-disabled vets, Clause 41C for qualifying elderly.) | Pay zero or reduced property-tax levy; would pay the full $281 fee | Unknown. See [Issue #591 Q5](https://github.com/agbaber/marblehead/issues/591). Count available from the state Department of Revenue and the town assessor. |
 | **Residential property owned by charities or religious organizations**: parish houses, rectories, nonprofit-owned affordable housing, Housing Trust properties | Literal Emerson-plaintiff type; strongest institutional standing | Narrow. Requires cross-referencing the assessor's exemption list with the Department of Public Works curbside pickup route. |
 | **Senior tax relief recipients**: the Circuit Breaker (a state income-tax credit for seniors whose property tax exceeds a share of their income), local senior property-tax exemptions, and H.4225 (a pending state bill that would add a means-tested senior exemption) | A flat fee routes around protections the Legislature has built for seniors | Overlaps with the first row. |
 
@@ -70,9 +70,9 @@ The pattern: **Prong 1 and Prong 3 do most of the work.** Prong 2 is often stipu
 
 ## Detail: Emerson College v. Boston (1984)
 
-**Citation.** 391 Mass. 415, 462 N.E.2d 1098. SJC, Suffolk. Decided March 14, 1984. Opinion by Abrams J. (unanimous: Hennessey C.J., Abrams, Lynch, O'Connor JJ.).
+**Citation.** [391 Mass. 415](https://law.justia.com/cases/massachusetts/supreme-court/1984/391-mass-415-2.html), 462 N.E.2d 1098. SJC, Suffolk. Decided March 14, 1984. Opinion by Abrams J. (unanimous: Hennessey C.J., Abrams, Lynch, O'Connor JJ.).
 
-**Facts.** St. 1982 c. 190 § 30 authorized Boston to impose an "Augmented Fire Services Availability" (AFSA) charge on owners of buildings whose firefighting needs exceeded 3,500 gallons per minute. About 2,000 buildings (2 percent of Boston's stock) qualified. The charge funded 8.5 of 56.5 fire companies, about 13 percent of the Boston fire department's FY1983 budget. Emerson College, a property-tax-exempt institution under G.L. c. 59 § 5, was billed $12,029 on three buildings and sued.
+**Facts.** St. 1982 c. 190 § 30 authorized Boston to impose an "Augmented Fire Services Availability" (AFSA) charge on owners of buildings whose firefighting needs exceeded 3,500 gallons per minute. About 2,000 buildings (2 percent of Boston's stock) qualified. The charge funded 8.5 of 56.5 fire companies, about 13 percent of the Boston fire department's FY1983 budget. Emerson College, a property-tax-exempt institution under [G.L. c. 59 § 5](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter59/Section5), was billed $12,029 on three buildings and sued.
 
 **Holding.** Statute and ordinance struck down. The AFSA was "a chimera, bearing features of both a fee and a tax, but not valid in either form."
 
@@ -84,9 +84,9 @@ The pattern: **Prong 1 and Prong 3 do most of the work.** Prong 2 is often stipu
 
 ## Detail: Denver Street LLC v. Saugus (2011)
 
-**Citation.** 78 Mass. App. Ct. 526. Appeals Court. Decided January 6, 2011.
+**Citation.** [78 Mass. App. Ct. 526](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/78/78massappct526.html). Appeals Court. Decided January 6, 2011.
 
-**Facts.** Saugus imposed an "inflow and infiltration reduction contribution" on developers seeking sewer connections, claiming authority under G.L. c. 40 § 22F (the Massachusetts statute letting cities and towns charge fees for specific services). Four developer plaintiffs paid $670,460 under protest and sued.
+**Facts.** Saugus imposed an "inflow and infiltration reduction contribution" on developers seeking sewer connections, claiming authority under [G.L. c. 40 § 22F](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40/Section22F) (the Massachusetts statute letting cities and towns charge fees for specific services). Four developer plaintiffs paid $670,460 under protest and sued.
 
 **Holding.** Charge struck down as an unlawful tax. Saugus ordered to refund $670,460 plus 12 percent annual interest: approximately $1.1 million by judgment date.
 
@@ -98,7 +98,7 @@ The pattern: **Prong 1 and Prong 3 do most of the work.** Prong 2 is often stipu
 
 ## Detail: Berry v. Danvers (1993)
 
-**Citation.** 34 Mass. App. Ct. 507. Appeals Court.
+**Citation.** [34 Mass. App. Ct. 507](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/34/34massappct507.html). Appeals Court.
 
 **Facts.** Danvers shifted its sewer connection fee from a flat per-connection charge to $4 per gallon of daily sewage discharge, after experiencing overflows that flooded yards and streams with raw sewage.
 
@@ -108,7 +108,7 @@ The pattern: **Prong 1 and Prong 3 do most of the work.** Prong 2 is often stipu
 
 ## Detail: Silva v. Attleboro (2008)
 
-**Citation.** 454 Mass. 165. SJC.
+**Citation.** [454 Mass. 165](https://law.justia.com/cases/massachusetts/supreme-court/volumes/454/454mass165.html). SJC.
 
 **Facts.** Boards of health in several cities charged fees to issue burial permits.
 
@@ -145,7 +145,7 @@ Tracked on [GitHub Issue #591](https://github.com/agbaber/marblehead/issues/591)
 1. Which specific statute does the Board of Health vote cite as authority for the $281 fee?
 2. Is the fee genuinely avoidable by using the transfer station sticker program, or is it charged to every residential property regardless of use?
 3. Are the fee revenues legally segregated to the Republic Services contract, or do they flow to the general fund?
-4. Is the fee structure an enterprise fund under G.L. c. 44 § 53F½, or a Board of Health regulatory charge under c. 111?
+4. Is the fee structure an enterprise fund under [G.L. c. 44 § 53F½](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section53F1~2), or a Board of Health regulatory charge under [c. 111](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXVI/Chapter111)?
 5. How many Marblehead properties hold c. 59 § 5 exemptions by clause, and how many receive curbside pickup?
 6. *Partially answered above.* The Springfield 2007 docket would confirm whether Emerson was the basis for that invalidation.
 
@@ -167,6 +167,6 @@ Tracked on [GitHub Issue #591](https://github.com/agbaber/marblehead/issues/591)
 - St. 1982 c. 190 § 30 (Emerson authorizing statute)
 - City of Boston Code, Title 14 § 459, as amended Feb. 24, 1983 (Emerson ordinance)
 - G.L. c. 59 § 5 (property-tax exemption clauses): [malegislature.gov](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter59/Section5)
-- G.L. c. 44 § 53F½ (enterprise fund statute)
-- G.L. c. 111 (Board of Health authority)
-- G.L. c. 40 § 22F (municipal service fees general authority)
+- [G.L. c. 44 § 53F½](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section53F1~2) (enterprise fund statute)
+- [G.L. c. 111](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXVI/Chapter111) (Board of Health authority)
+- [G.L. c. 40 § 22F](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40/Section22F) (municipal service fees general authority)
