@@ -961,6 +961,7 @@
   /* Lucide-based icons, 24x24 viewBox */
   var topicIcons = {
     override:     '<circle cx="12" cy="12" r="10"/><line x1="12" y1="6" x2="12" y2="18"/><path d="M15.5 9.5a3 3 0 0 0-3-2h-1a3 3 0 0 0 0 6h1a3 3 0 0 1 0 6h-1a3 3 0 0 1-3-2"/>',  /* coin with $ */
+    servicelevel: '<line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/><circle cx="9" cy="7" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="7" cy="17" r="2"/>', /* three sliders with handles */
     voteno:       '<ellipse cx="12" cy="6" rx="7" ry="3.5"/><ellipse cx="12" cy="13" rx="7" ry="3.5"/><ellipse cx="12" cy="20" rx="7" ry="3.5"/>', /* three ballot ovals */
     schools:      '<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/>', /* graduation cap */
     levy:         '<path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 5-7"/>',          /* trending up */
