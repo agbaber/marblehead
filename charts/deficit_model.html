@@ -1934,29 +1934,33 @@ An override on its own buys time. It does not change the slope of either line.
 
     var steps = [
       {
-        caption: 'Where we are. Marblehead\u2019s expenses have been pulling ahead of revenue since FY18. At current growth rates the projected FY40 gap is about $12M per year. Free cash has been covering the difference.',
+        caption: 'Where we are. Expenses have pulled ahead of revenue since FY18; the projected FY40 gap is about $12M per year. Free cash has been covering the difference.',
         setup: function() { resetToDefaults(); }
       },
       {
-        caption: 'Why the gap keeps widening. Revenue grows about 3.5%/yr (Prop 2\u00bd plus new growth). Expenses have grown closer to 4%/yr, mostly pensions and healthcare. The slope difference is the whole story.',
-        setup: function() { resetToDefaults(); }
+        caption: 'Why the gap widens. If expense growth matched revenue (3.5%/yr), the lines would run parallel \u2014 no growing gap. The baseline assumption is 4%/yr, mostly pensions and healthcare. Watch the expense line flatten as we drop it to 3.5%.',
+        setup: function() {
+          resetToDefaults();
+          expGrowthEl.value = 3.5;
+        }
       },
       {
-        caption: 'What an override does. Picking Tier 2 ($12M) raises the levy ceiling permanently. Revenue jumps in FY27. But the slopes of both lines are unchanged, so the gap reopens on the same schedule.',
+        caption: 'What an override does. Tier 2 ($12M) raises the levy ceiling permanently and revenue jumps in FY27. Both slopes stay the same, so the gap reopens on the same schedule.',
         setup: function() {
           resetToDefaults();
           overrideEl.value = 12;
         }
       },
       {
-        caption: 'What the dashed line means. With an override modeled, the chart also shows \u201cExpenses if override fails\u201d: spending forced to match revenue. The space between the full expense line and the dashed line is the services the override is funding.',
+        caption: 'The dashed line. With an override modeled, it shows what the town could spend without one \u2014 expenses capped at revenue. Adding 10 position cuts here lowers the full expense line; the space between the two is the services the override is funding.',
         setup: function() {
           resetToDefaults();
           overrideEl.value = 12;
+          positionCuts = 10;
         }
       },
       {
-        caption: 'The realistic alternative. \u201cHold the line\u201d sets expense growth to 3.5%, matching revenue growth. That\u2019s what the town actually ran FY18 to FY24. Requires contract discipline and flat healthcare enrollment. No new money.',
+        caption: 'The realistic alternative. \u201cHold the line\u201d matches expense growth to revenue at 3.5% \u2014 what Marblehead actually ran FY18 to FY24. No override, no position cuts; the ask is contract discipline and flat healthcare enrollment.',
         setup: function() {
           resetToDefaults();
           expGrowthEl.value = 3.5;
