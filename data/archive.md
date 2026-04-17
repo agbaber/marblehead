@@ -58,6 +58,7 @@ Annual reports from the Marblehead Finance Committee, transmitted ahead of each 
 
 - [2026 State of the Town](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026_State_of_the_Town.pdf) &ndash; Town Administrator's January 2026 presentation with revenue and expense projections and the FY27 deficit framing.
 - [April 8, 2026 Override Presentation](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-08_Override_Presentation.pdf) &ndash; town slide deck on the three-tier override and Question 2.
+- [April 15, 2026 Override Presentation (FINAL)](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-15_Override_Presentation_FINAL.pdf) &ndash; Select Board's final voter-facing deck. Adds per-household tax impact at median ($998,600) and average ($1,291,507) values, a home-value-to-cost lookup table, the MOU terms between Select Board, School Committee, and FinCom, and a "no override" service loss summary. Does not cover Question 2 (trash).
 - [Financial Policies (2023)](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/Financial_Policies_2023.pdf) &ndash; adopted town financial policies.
 - [FY22 Management Letter](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY22_Management_Letter.pdf) &ndash; audit management letter to the Select Board.
 - [FY23 Management Letter](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY23_Management_Letter.pdf)
