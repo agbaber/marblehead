@@ -11,8 +11,8 @@ title: case studies
   .case-chart .case-tick { font-size: 10px; fill: var(--text-muted); font-family: inherit; }
   .case-chart .case-rev { stroke: var(--series-revenue); stroke-width: 1.8; fill: none; }
   .case-chart .case-exp { stroke: var(--series-cost); stroke-width: 1.8; fill: none; }
-  .case-chart .case-vote-win { stroke: var(--c-navy); stroke-width: 2; }
-  .case-chart .case-vote-loss { stroke: var(--text-muted); stroke-width: 1.5; stroke-dasharray: 2 2; opacity: 0.7; }
+  .case-chart .case-vote-win { stroke: var(--c-navy); stroke-width: 1.5; opacity: 0.45; }
+  .case-chart .case-vote-loss { stroke: var(--text-muted); stroke-width: 1; stroke-dasharray: 3 3; opacity: 0.45; }
   .case-chart-caption {
     font-size: 12px;
     color: var(--text-muted);
@@ -91,11 +91,11 @@ title: case studies
 <line class="case-grid" x1="54.0" x2="698.0" y1="63.2" y2="63.2" />
 <line class="case-grid" x1="54.0" x2="698.0" y1="37.0" y2="37.0" />
 <line class="case-axis" x1="54.0" x2="698.0" y1="226.0" y2="226.0" />
-<line class="case-vote-loss" x1="80.8" x2="80.8" y1="6" y2="22"><title>FY2003: 1 override question, failed, $5.30M total</title></line>
-<line class="case-vote-loss" x1="429.7" x2="429.7" y1="6" y2="22"><title>FY2016: 1 override question, failed, $2.25M total</title></line>
-<line class="case-vote-win" x1="537.0" x2="537.0" y1="6" y2="22"><title>FY2020: 1 override question, passed, $5.18M total</title></line>
-<line class="case-vote-loss" x1="671.2" x2="671.2" y1="6" y2="22"><title>FY2025: 1 override question, failed, $7.70M total</title></line>
-<line class="case-vote-win" x1="698.0" x2="698.0" y1="6" y2="22"><title>FY2026: 1 override question, passed, $13.50M total</title></line>
+<line class="case-vote-loss" x1="80.8" x2="80.8" y1="6" y2="226"><title>FY2003: 1 override question, failed, $5.30M total</title></line>
+<line class="case-vote-loss" x1="429.7" x2="429.7" y1="6" y2="226"><title>FY2016: 1 override question, failed, $2.25M total</title></line>
+<line class="case-vote-win" x1="537.0" x2="537.0" y1="6" y2="226"><title>FY2020: 1 override question, passed, $5.18M total</title></line>
+<line class="case-vote-loss" x1="671.2" x2="671.2" y1="6" y2="226"><title>FY2025: 1 override question, failed, $7.70M total</title></line>
+<line class="case-vote-win" x1="698.0" x2="698.0" y1="6" y2="226"><title>FY2026: 1 override question, passed, $13.50M total</title></line>
 <polyline class="case-exp" points="54.0,218.4 80.8,213.4 107.7,216.4 134.5,209.9 161.3,208.1 188.2,190.7 215.0,171.3 241.8,165.4 268.7,178.5 295.5,172.5 322.3,151.5 349.2,162.7 376.0,155.7 402.8,147.0 429.7,145.3 456.5,133.8 483.3,129.8 510.2,123.5 537.0,89.9 563.8,101.9 590.7,92.5 617.5,77.5 644.3,59.6 671.2,48.3" />
 <polyline class="case-rev" points="54.0,219.4 80.8,216.1 107.7,215.4 134.5,210.1 161.3,204.7 188.2,193.4 215.0,178.8 241.8,171.5 268.7,172.8 295.5,169.6 322.3,148.9 349.2,157.3 376.0,149.9 402.8,145.5 429.7,136.7 456.5,130.4 483.3,124.4 510.2,114.6 537.0,77.3 563.8,90.1 590.7,79.0 617.5,85.6 644.3,69.0 671.2,45.3" />
 <text class="case-tick" x="49.0" y="223.1" text-anchor="end">$50M</text>
@@ -171,11 +171,11 @@ title: case studies
 <line class="case-grid" x1="54.0" x2="698.0" y1="95.0" y2="95.0" />
 <line class="case-grid" x1="54.0" x2="698.0" y1="60.6" y2="60.6" />
 <line class="case-axis" x1="54.0" x2="698.0" y1="226.0" y2="226.0" />
-<line class="case-vote-loss" x1="208.6" x2="208.6" y1="6" y2="22"><title>FY2008: 1 override question, failed, $3.00M total</title></line>
-<line class="case-vote-loss" x1="311.6" x2="311.6" y1="6" y2="22"><title>FY2012: 1 override question, failed, $1.90M total</title></line>
-<line class="case-vote-loss" x1="672.2" x2="672.2" y1="6" y2="22"><title>FY2026: 1 override question, failed, $14.60M total</title></line>
-<line class="case-vote-loss" x1="695.8" x2="695.8" y1="6" y2="22"><title>FY2027: failed tier, $12.50M</title></line>
-<line class="case-vote-win" x1="700.2" x2="700.2" y1="6" y2="22"><title>FY2027: passed tier, $9.30M</title></line>
+<line class="case-vote-loss" x1="208.6" x2="208.6" y1="6" y2="226"><title>FY2008: 1 override question, failed, $3.00M total</title></line>
+<line class="case-vote-loss" x1="311.6" x2="311.6" y1="6" y2="226"><title>FY2012: 1 override question, failed, $1.90M total</title></line>
+<line class="case-vote-loss" x1="672.2" x2="672.2" y1="6" y2="226"><title>FY2026: 1 override question, failed, $14.60M total</title></line>
+<line class="case-vote-loss" x1="695.8" x2="695.8" y1="6" y2="226"><title>FY2027: failed tier, $12.50M</title></line>
+<line class="case-vote-win" x1="700.2" x2="700.2" y1="6" y2="226"><title>FY2027: passed tier, $9.30M</title></line>
 <polyline class="case-exp" points="54.0,218.0 79.8,212.1 105.5,206.0 131.3,206.8 157.0,201.0 182.8,195.7 208.6,187.8 234.3,187.7 260.1,189.4 285.8,183.8 311.6,166.1 337.4,177.4 363.1,166.6 388.9,165.6 414.6,159.2 440.4,152.7 466.2,144.5 491.9,134.6 517.7,130.1 543.4,128.3 569.2,116.6 595.0,84.4 620.7,71.4 646.5,54.7" />
 <polyline class="case-rev" points="54.0,218.4 79.8,207.1 105.5,209.6 131.3,207.0 157.0,200.3 182.8,191.8 208.6,185.3 234.3,186.7 260.1,189.8 285.8,186.2 311.6,163.2 337.4,174.8 363.1,163.7 388.9,162.5 414.6,153.1 440.4,144.1 466.2,138.4 491.9,130.2 517.7,123.3 543.4,117.3 569.2,106.8 595.0,73.0 620.7,51.3 646.5,46.2" />
 <text class="case-tick" x="49.0" y="201.0" text-anchor="end">$50M</text>
@@ -279,18 +279,18 @@ The cases above focus on what happened after a "no" vote. A separate question is
 <line class="case-grid" x1="54.0" x2="698.0" y1="78.3" y2="78.3" />
 <line class="case-grid" x1="54.0" x2="698.0" y1="47.2" y2="47.2" />
 <line class="case-axis" x1="54.0" x2="698.0" y1="226.0" y2="226.0" />
-<line class="case-vote-win" x1="54.0" x2="54.0" y1="6" y2="22"><title>FY2002: 1 override question, passed, $0.30M total</title></line>
-<line class="case-vote-win" x1="110.0" x2="110.0" y1="6" y2="22"><title>FY2004: 1 override question, passed, $1.38M total</title></line>
-<line class="case-vote-loss" x1="126.8" x2="126.8" y1="6" y2="22"><title>FY2005 question 1: failed</title></line>
-<line class="case-vote-win" x1="131.2" x2="131.2" y1="6" y2="22"><title>FY2005 question 2: passed</title></line>
-<line class="case-vote-loss" x1="135.8" x2="135.8" y1="6" y2="22"><title>FY2005 question 3: failed</title></line>
-<line class="case-vote-win" x1="140.2" x2="140.2" y1="6" y2="22"><title>FY2005 question 4: passed</title></line>
-<line class="case-vote-loss" x1="144.8" x2="144.8" y1="6" y2="22"><title>FY2005 question 5: failed</title></line>
-<line class="case-vote-win" x1="149.2" x2="149.2" y1="6" y2="22"><title>FY2005 question 6: passed</title></line>
-<line class="case-vote-win" x1="166.0" x2="166.0" y1="6" y2="22"><title>FY2006: 1 override question, passed, $2.73M total</title></line>
-<line class="case-vote-loss" x1="334.0" x2="334.0" y1="6" y2="22"><title>FY2012: 1 override question, failed, $0.67M total</title></line>
-<line class="case-vote-loss" x1="642.0" x2="642.0" y1="6" y2="22"><title>FY2023: 1 override question, failed, $3.05M total</title></line>
-<line class="case-vote-loss" x1="670.0" x2="670.0" y1="6" y2="22"><title>FY2024: 1 override question, failed, $2.47M total</title></line>
+<line class="case-vote-win" x1="54.0" x2="54.0" y1="6" y2="226"><title>FY2002: 1 override question, passed, $0.30M total</title></line>
+<line class="case-vote-win" x1="110.0" x2="110.0" y1="6" y2="226"><title>FY2004: 1 override question, passed, $1.38M total</title></line>
+<line class="case-vote-loss" x1="126.8" x2="126.8" y1="6" y2="226"><title>FY2005 question 1: failed</title></line>
+<line class="case-vote-win" x1="131.2" x2="131.2" y1="6" y2="226"><title>FY2005 question 2: passed</title></line>
+<line class="case-vote-loss" x1="135.8" x2="135.8" y1="6" y2="226"><title>FY2005 question 3: failed</title></line>
+<line class="case-vote-win" x1="140.2" x2="140.2" y1="6" y2="226"><title>FY2005 question 4: passed</title></line>
+<line class="case-vote-loss" x1="144.8" x2="144.8" y1="6" y2="226"><title>FY2005 question 5: failed</title></line>
+<line class="case-vote-win" x1="149.2" x2="149.2" y1="6" y2="226"><title>FY2005 question 6: passed</title></line>
+<line class="case-vote-win" x1="166.0" x2="166.0" y1="6" y2="226"><title>FY2006: 1 override question, passed, $2.73M total</title></line>
+<line class="case-vote-loss" x1="334.0" x2="334.0" y1="6" y2="226"><title>FY2012: 1 override question, failed, $0.67M total</title></line>
+<line class="case-vote-loss" x1="642.0" x2="642.0" y1="6" y2="226"><title>FY2023: 1 override question, failed, $3.05M total</title></line>
+<line class="case-vote-loss" x1="670.0" x2="670.0" y1="6" y2="226"><title>FY2024: 1 override question, failed, $2.47M total</title></line>
 <polyline class="case-exp" points="54.0,197.4 82.0,195.3 110.0,182.6 138.0,174.4 166.0,159.6 194.0,171.6 222.0,172.5 250.0,170.3 278.0,165.8 306.0,160.4 334.0,157.5 362.0,154.3 390.0,148.2 418.0,139.6 446.0,131.9 474.0,120.3 502.0,107.4 530.0,98.0 558.0,94.7 586.0,89.9 614.0,58.1 642.0,57.8 670.0,45.6" />
 <polyline class="case-rev" points="54.0,214.7 82.0,219.0 110.0,211.8 138.0,201.4 166.0,183.2 194.0,179.0 222.0,173.1 250.0,170.7 278.0,164.0 306.0,160.2 334.0,153.0 362.0,150.0 390.0,139.6 418.0,132.5 446.0,124.2 474.0,114.5 502.0,106.8 530.0,98.2 558.0,91.2 586.0,88.6 614.0,56.9 642.0,58.6 670.0,47.9" />
 <text class="case-tick" x="49.0" y="205.7" text-anchor="end">$50M</text>
