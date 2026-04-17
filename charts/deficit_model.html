@@ -31,6 +31,11 @@ title: "Deficit Dynamics Model"
     width: 100%;
     accent-color: var(--c-navy);
   }
+  .dm-fy27-step-input {
+    width: 100px;
+    font: inherit;
+    padding: 4px 8px;
+  }
   .dm-value {
     font-variant-numeric: tabular-nums;
     font-weight: 700;
@@ -880,6 +885,11 @@ title: "Deficit Dynamics Model"
     <input type="range" id="dm-wage-offset" min="0" max="100" step="5" value="50">
     <div class="dm-hint" id="dm-wage-hint">How much of the premium savings employees negotiate back as higher wages.</div>
   </div>
+  <div class="dm-control" style="grid-column: 1 / -1;">
+    <span class="dm-control-label">FY27 one-time step ($M): <span class="dm-value" id="dm-fy27-step-val">$0.0M</span></span>
+    <input type="number" id="dm-fy27-step" min="-5" max="5" step="0.1" value="0" class="dm-fy27-step-input">
+    <div class="dm-hint" id="dm-fy27-step-hint">Use this if you believe FY27 has a one-time cost deviation outside the compound-rate trend (for example, the observed healthcare bump). Default is 0, meaning the compound rate captures everything.</div>
+  </div>
 </div>
 </details>
 
@@ -1046,6 +1056,8 @@ An override on its own buys time. It does not change the slope of either line.
   var hcShareVal = document.getElementById('dm-hc-share-val');
   var wageOffsetEl = document.getElementById('dm-wage-offset');
   var wageOffsetVal = document.getElementById('dm-wage-offset-val');
+  var fy27StepEl = document.getElementById('dm-fy27-step');
+  var fy27StepValEl = document.getElementById('dm-fy27-step-val');
 
   // === Formatting ===
   function fmtM(v) {
@@ -1135,6 +1147,7 @@ An override on its own buys time. It does not change the slope of either line.
     var expG = parseFloat(expGrowthEl.value) / 100;
     var ovr = parseFloat(overrideEl.value);
     var ratchetYears = parseInt(ratchetEl.value);
+    var fy27Step = parseFloat(fy27StepEl.value) || 0;
 
     var rev = histRev.slice();
     var exp = histExp.slice();
@@ -1170,8 +1183,14 @@ An override on its own buys time. It does not change the slope of either line.
           e += bump.annualAmount;
         }
       }
+      // FY27 one-time step: add to reported value but do not propagate
+      // into the forward compounding state.
+      var reportedE = e;
+      if (i === phaseYears[0] && fy27Step !== 0) {
+        reportedE = e + fy27Step;
+      }
       rev.push(r);
-      exp.push(e);
+      exp.push(reportedE);
     }
 
     // Constrained expense line: what happens if there's no override
@@ -1201,11 +1220,16 @@ An override on its own buys time. It does not change the slope of either line.
     var hc = computeHcSavings();
     var e0 = histExp[lastHistIdx] - positionCuts * costPerPosition - hc.net;
     var e = e0;
+    var fy27Step = parseFloat(fy27StepEl.value) || 0;
     for (var i = histCount; i < nYears; i++) {
       r = r * (1 + revG);
       e = e * (1 + expG);
       baseRev.push(r);
-      baseExp.push(e);
+      var reportedE = e;
+      if (i === phaseYears[0] && fy27Step !== 0) {
+        reportedE = e + fy27Step;
+      }
+      baseExp.push(reportedE);
     }
 
     var tierRevs = [];
@@ -1775,6 +1799,11 @@ An override on its own buys time. It does not change the slope of either line.
     if (newShare < 83) {
       parts.push('Healthcare shift to <strong>' + newShare + '%</strong> employer saves <strong>' + fmtOverride(hc.gross) + '/yr</strong> in premiums. Contracts typically return part of that to employees as wage increases (<strong>' + fmtOverride(hc.wageIncrease) + '</strong>), which then raises pension costs (<strong>' + fmtOverride(hc.pensionIncrease) + '</strong>). Net savings: <strong>' + fmtOverride(hc.net) + '/yr</strong>.');
     }
+    var fy27Step = parseFloat(fy27StepEl.value) || 0;
+    if (Math.abs(fy27Step) > 0.01) {
+      var stepSign = fy27Step >= 0 ? '+' : '-';
+      parts.push('FY27 one-time step: <strong>' + stepSign + '$' + Math.abs(fy27Step).toFixed(1) + 'M</strong>, not propagated into the forward trend.');
+    }
     if (Math.abs(rv - 3.5) > 0.05 || Math.abs(ev - 4.0) > 0.05) {
       parts.push('Growth set to <strong>revenue ' + rv.toFixed(1) + '%/yr</strong>, <strong>expenses ' + ev.toFixed(1) + '%/yr</strong> (defaults: 3.5% / 4.0%).');
     }
@@ -1815,6 +1844,14 @@ An override on its own buys time. It does not change the slope of either line.
       currentStance = null;
       onChange();
     });
+  });
+
+  fy27StepEl.addEventListener('input', function() {
+    var v = parseFloat(fy27StepEl.value) || 0;
+    var sign = v >= 0 ? '$' : '-$';
+    fy27StepValEl.textContent = sign + Math.abs(v).toFixed(1) + 'M';
+    currentStance = null;
+    onChange();
   });
 
   // Position cuts buttons
@@ -1878,6 +1915,8 @@ An override on its own buys time. It does not change the slope of either line.
       positionCuts = 0;
       hcShareEl.value = 83;
       wageOffsetEl.value = 50;
+      fy27StepEl.value = 0;
+      fy27StepValEl.textContent = '$0.0M';
 
       if (s === 'bridge') {
         overrideEl.value = 15;
@@ -1934,6 +1973,8 @@ An override on its own buys time. It does not change the slope of either line.
       positionCuts = 0;
       hcShareEl.value = 83;
       wageOffsetEl.value = 50;
+      fy27StepEl.value = 0;
+      fy27StepValEl.textContent = '$0.0M';
       currentStance = null;
     }
 
