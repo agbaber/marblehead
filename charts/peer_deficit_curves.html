@@ -1,9 +1,20 @@
 ---
-title: "The Override Ratchet Across Peer Towns"
+title: "Override Contribution and Underlying Revenue"
 scripts: [citations]
 ---
 <style>
   .pdc-wrap { margin: 14px 0 6px; }
+  .pdc-panel-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 22px 0 2px;
+  }
+  .pdc-panel-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 0 0 6px;
+  }
   .pdc-svg {
     display: block;
     width: 100%;
@@ -124,7 +135,7 @@ scripts: [citations]
   }
 
   .pdc-readings {
-    margin: 16px 0 4px;
+    margin: 20px 0 4px;
     border-top: 1px solid var(--divider);
     padding-top: 10px;
     font-size: 13px;
@@ -160,10 +171,10 @@ scripts: [citations]
   }
 </style>
 
-<h1 class="h-center">The Override Ratchet Across Peer Towns</h1>
-<p class="subtitle h-center">Permanent levy authority added through passed Proposition 2&frac12; operating overrides, FY2002 to FY2025. Measured as a percent of each town's FY2002 tax levy.</p>
+<h1 class="h-center">Override Contribution and Underlying Revenue</h1>
+<p class="subtitle h-center">Two views of the same FY2002&ndash;FY2025 window. The top panel isolates what each peer town has added to its permanent levy base through passed Proposition 2&frac12; operating overrides. The bottom panel strips those overrides out and shows how each town's underlying revenue grew from its FY2002 base.</p>
 
-<p class="page-lead">Every passed operating override permanently raises a town's levy ceiling by the overridden amount, and that amount then compounds at 2.5% per year for every year afterward. This chart tracks each town's cumulative override-added levy authority, rebased to its own FY2002 property tax levy so towns of different sizes are directly comparable. A flat line at zero means the town has not passed an operating override since FY2002. A line that steps up shows both when wins happened and how much permanent levy authority each win added.</p>
+<p class="page-lead">The question these two panels together answer: is the difference between Marblehead's revenue trajectory and its peers' revenue trajectories driven by override ballot activity, or is it baked into the underlying revenue base? If peer lines in the bottom panel converge with Marblehead's, the divergence is about overrides. If peer lines stay above Marblehead's, peers are outpacing on fundamentals too (new growth, state aid, local receipts, economic revaluation) and overrides are only part of the story.</p>
 
 <div class="pdc-legend" aria-hidden="true">
   <span><span class="pdc-legend-swatch pdc-legend-swatch--mh"></span>Marblehead</span>
@@ -174,18 +185,27 @@ scripts: [citations]
 <div class="pdc-town-picker" id="pdc-chips" aria-label="Select a peer town to highlight"></div>
 
 <div class="pdc-wrap">
-  <svg class="pdc-svg" id="pdc-chart" viewBox="0 0 880 420" role="img" aria-label="Cumulative override-added levy authority, as percent of FY2002 tax levy, for 15 Massachusetts towns, FY2002 to FY2025."></svg>
+  <p class="pdc-panel-title">Panel A. Override-added levy authority</p>
+  <p class="pdc-panel-sub">Cumulative permanent levy authority added through passed operating overrides, compounded at 2.5% per year from the win date. Expressed as a percent of each town's FY2002 property tax levy.</p>
+  <svg class="pdc-svg" id="pdc-chart-overrides" viewBox="0 0 880 360" role="img" aria-label="Cumulative override-added levy authority, as percent of FY2002 tax levy, for 15 Massachusetts towns, FY2002 to FY2025."></svg>
+</div>
+
+<div class="pdc-wrap">
+  <p class="pdc-panel-title">Panel B. Non-override revenue growth</p>
+  <p class="pdc-panel-sub">Actual general fund revenue minus the override authority from Panel A, indexed so FY2002 equals zero. If peer lines converge toward Marblehead's, divergence is explained by overrides; if they stay above, peers are outpacing on fundamentals.</p>
+  <svg class="pdc-svg" id="pdc-chart-underlying" viewBox="0 0 880 360" role="img" aria-label="Non-override revenue growth from FY2002 base, 15 Massachusetts towns, FY2002 to FY2025."></svg>
 </div>
 
 <div class="pdc-readings" id="pdc-readings" aria-live="polite"></div>
 
 <details class="notes">
   <summary>Notes, methodology, sources</summary>
-  <p><strong>What this measures.</strong> For each passed operating override, the chart tracks the dollar amount voted onto the permanent levy base, then compounds that amount at 2.5% per year forward through FY2025 (the Proposition 2&frac12; growth cap). The running total of these amounts is divided by the town's FY2002 tax levy from DLS Schedule A to produce a percent of base. This isolates how much additional permanent taxing authority each town has obtained through the override ballot process, holding other revenue sources aside.</p>
-  <p><strong>What this does not measure.</strong> Actual tax levy, which depends on new-growth additions, unused levy capacity decisions, and debt-exclusion overrides that are not part of the permanent base. Operating expenditures or service levels. Whether a town needed the override or used the money well. Those are separate questions outside this chart.</p>
-  <p><strong>Per-town base.</strong> FY2002 tax levy values used as the normalizer come from the "Taxes" column of the DLS Schedule A Revenue view for each town. For a frame of reference, Marblehead's FY2002 tax levy was $36.2 million; Needham's was $54.0 million; Lexington's was $74.0 million.</p>
-  <p><strong>Overrides counted.</strong> Only ballot questions of vote-type "Override" that passed ("WIN") with fiscal year between FY2002 and FY2025 inclusive. Debt exclusions, capital exclusions, and stabilization transfers are not counted; only overrides that add permanent base authority. Ballot questions that failed are not counted. A town with several small overrides at the same ballot (Marblehead FY2005, Lexington FY2005, Needham FY1997) is the sum of those individual wins.</p>
-  <p><strong>Source.</strong> Massachusetts Division of Local Services, Proposition 2&frac12; Override and Debt Exclusion databank, accessed FY2026.<sup class="cite" data-href="https://dlsgateway.dor.state.ma.us/DLSReports/BudgetReports" data-source="MA DOR DLS Proposition 2 1/2 Override and Debt Exclusion databank, retrieved FY2026"></sup> FY2002 tax levy values from MA DLS Schedule A General Fund.<sup class="cite" data-href="https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=ScheduleA.GenFund_MAIN" data-source="MA DOR DLS Schedule A General Fund, FY2002 filings"></sup></p>
+  <p><strong>Panel A calculation.</strong> For each passed operating override, the dollar amount voted onto the permanent levy base is carried forward at 2.5% per year through FY2025 (the Proposition 2&frac12; growth cap). The running total is divided by the town's FY2002 tax levy from DLS Schedule A. Only ballot questions of vote-type "Override" that passed ("WIN") with fiscal year between FY2002 and FY2025 inclusive. Debt exclusions, capital exclusions, and stabilization transfers are not counted.</p>
+  <p><strong>Panel B calculation.</strong> For each town and year, actual total general fund revenue (DLS Schedule A, Revenues view, "Total Revenues" column) minus the cumulative override authority computed in Panel A. The result is divided by the town's FY2002 total general fund revenue to express growth as a percent of FY2002. A peer town whose Panel B line matches Marblehead's had the same underlying revenue growth as Marblehead, and the divergence visible in raw revenue comparisons comes entirely from overrides.</p>
+  <p><strong>Why subtract override authority, not every dollar of levy growth.</strong> The override amount is the specific addition to permanent levy authority from voter action. Normal levy growth (2.5% plus new growth plus state aid and local receipts) is part of the underlying trajectory we want to compare. Subtracting just the override authority isolates voter-driven levy additions from organic revenue growth.</p>
+  <p><strong>What this does not measure.</strong> Actual tax levy, which depends on unused levy capacity decisions and debt-exclusion overrides that do not add to the permanent base. Operating expenditures or service levels. Whether a town needed the override or used the money well. Those are separate questions.</p>
+  <p><strong>Data gap.</strong> Marblehead's FY2025 DLS Schedule A has not yet been filed, so Marblehead's Panel B line stops at FY2024. All other peer towns extend through FY2025.</p>
+  <p><strong>Source.</strong> Massachusetts Division of Local Services, Proposition 2&frac12; Override and Debt Exclusion databank, accessed FY2026.<sup class="cite" data-href="https://dlsgateway.dor.state.ma.us/DLSReports/BudgetReports" data-source="MA DOR DLS Proposition 2 1/2 Override and Debt Exclusion databank, retrieved FY2026"></sup> FY2002 tax levy and total revenue values from MA DLS Schedule A General Fund.<sup class="cite" data-href="https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=ScheduleA.GenFund_MAIN" data-source="MA DOR DLS Schedule A General Fund, FY2002 through FY2025 filings"></sup></p>
 </details>
 
 <script>
@@ -229,18 +249,28 @@ scripts: [citations]
     return isNaN(n) ? NaN : n;
   }
 
-  function extractBaseLevies(revRows) {
+  function extractFromRev(revRows) {
+    // Build { town -> { baseLevy, baseTotal, byYear: {year: total} } }
     var header = revRows[0].map(function(h) { return h.toLowerCase(); });
     var iT = header.indexOf('municipality');
     var iFY = header.indexOf('fiscal_year');
     var iTax = header.indexOf('taxes');
+    var iTotal = header.indexOf('total_revenues');
     var out = {};
     for (var i = 1; i < revRows.length; i++) {
       var r = revRows[i];
       if (!r[iT]) continue;
-      if (parseInt(r[iFY], 10) !== BASE_YEAR) continue;
-      var v = toNum(r[iTax]);
-      if (isFinite(v) && v > 0) out[r[iT]] = v;
+      var fy = parseInt(r[iFY], 10);
+      var tax = toNum(r[iTax]);
+      var total = toNum(r[iTotal]);
+      if (!out[r[iT]]) out[r[iT]] = { baseLevy: null, baseTotal: null, byYear: {} };
+      // Skip zero-rows (DOR not-filed sentinel)
+      if (tax <= 0 && total <= 0) continue;
+      if (fy === BASE_YEAR) {
+        if (isFinite(tax) && tax > 0) out[r[iT]].baseLevy = tax;
+        if (isFinite(total) && total > 0) out[r[iT]].baseTotal = total;
+      }
+      if (isFinite(total) && total > 0) out[r[iT]].byYear[fy] = total;
     }
     return out;
   }
@@ -267,14 +297,12 @@ scripts: [citations]
     return out;
   }
 
-  function buildSeries(winsByTown, baseLeviesByTown) {
-    // For each town, for each year FY2002..FY2025, cumulative override-added
-    // authority (in dollars) is the sum over all prior wins of
-    // amount * (1 + GROWTH_RATE) ^ (year - win.fy).
+  function buildOverrideSeries(winsByTown, revByTown) {
+    // cumulative override-added authority, $ and % of FY2002 tax levy
     var out = {};
     TOWNS.forEach(function(town) {
       var wins = winsByTown[town] || [];
-      var base = baseLeviesByTown[town];
+      var base = revByTown[town] && revByTown[town].baseLevy;
       if (!base) return;
       var series = [];
       for (var y = BASE_YEAR; y <= END_YEAR; y++) {
@@ -290,29 +318,59 @@ scripts: [citations]
     return out;
   }
 
-  function renderChart(svg, seriesByTown, winsByTown, state) {
+  function buildUnderlyingSeries(revByTown, overrideSeriesByTown) {
+    // For each town and year with actual revenue data, compute
+    // (actual_total - cumulative_override_authority) as % growth above FY2002 base.
+    var out = {};
+    TOWNS.forEach(function(town) {
+      var info = revByTown[town];
+      if (!info || !info.baseTotal) return;
+      var ovSeries = overrideSeriesByTown[town] || [];
+      var ovByYear = {};
+      ovSeries.forEach(function(p) { ovByYear[p.fy] = p.dollars; });
+      var series = [];
+      for (var y = BASE_YEAR; y <= END_YEAR; y++) {
+        var actual = info.byYear[y];
+        if (!isFinite(actual) || actual <= 0) continue;
+        var adjusted = actual - (ovByYear[y] || 0);
+        var pct = (adjusted / info.baseTotal - 1) * 100;
+        series.push({ fy: y, adjusted: adjusted, pct: pct });
+      }
+      out[town] = series;
+    });
+    return out;
+  }
+
+  function renderChart(svg, seriesByTown, winsByTown, opts, state) {
     while (svg.firstChild) svg.removeChild(svg.firstChild);
     var svgNS = 'http://www.w3.org/2000/svg';
 
-    var W = 880, H = 420;
-    var mL = 46, mR = 90, mT = 16, mB = 30;
+    var W = 880, H = 360;
+    var mL = 48, mR = 96, mT = 14, mB = 28;
     var pw = W - mL - mR, ph = H - mT - mB;
 
-    // Find y range across towns
-    var yMax = 0;
+    var yMin = 0, yMax = 0;
     TOWNS.forEach(function(town) {
       var s = seriesByTown[town];
       if (!s) return;
-      s.forEach(function(p) { if (p.pct > yMax) yMax = p.pct; });
+      s.forEach(function(p) {
+        if (p.pct > yMax) yMax = p.pct;
+        if (p.pct < yMin) yMin = p.pct;
+      });
     });
-    yMax = Math.max(yMax * 1.08, 5);
+    // Pad the range
+    var span = yMax - yMin;
+    yMax = yMax + Math.max(span * 0.06, 2);
+    if (yMin < 0) yMin = yMin - Math.max(span * 0.04, 1);
 
     function X(fy) { return mL + (fy - BASE_YEAR) / (END_YEAR - BASE_YEAR) * pw; }
-    function Y(pct) { return mT + (1 - pct / yMax) * ph; }
+    function Y(pct) { return mT + (1 - (pct - yMin) / (yMax - yMin)) * ph; }
 
     // Y gridlines
-    var step = yMax > 60 ? 20 : (yMax > 20 ? 10 : 5);
-    for (var yv = 0; yv <= yMax; yv += step) {
+    var range = yMax - yMin;
+    var step = range > 80 ? 20 : (range > 30 ? 10 : 5);
+    var yStart = Math.ceil(yMin / step) * step;
+    for (var yv = yStart; yv <= yMax; yv += step) {
       var gl = document.createElementNS(svgNS, 'line');
       gl.setAttribute('class', yv === 0 ? 'pdc-zero' : 'pdc-grid');
       gl.setAttribute('x1', mL); gl.setAttribute('x2', W - mR);
@@ -323,7 +381,7 @@ scripts: [citations]
       lbl.setAttribute('x', mL - 4);
       lbl.setAttribute('y', Y(yv) + 3);
       lbl.setAttribute('text-anchor', 'end');
-      lbl.textContent = '+' + yv + '%';
+      lbl.textContent = (yv > 0 ? '+' : '') + yv + '%';
       svg.appendChild(lbl);
     }
 
@@ -341,17 +399,15 @@ scripts: [citations]
     var xAxis = document.createElementNS(svgNS, 'line');
     xAxis.setAttribute('class', 'pdc-axis');
     xAxis.setAttribute('x1', mL); xAxis.setAttribute('x2', W - mR);
-    xAxis.setAttribute('y1', mT + ph); xAxis.setAttribute('y2', mT + ph);
+    xAxis.setAttribute('y1', Y(Math.max(yMin, 0))); xAxis.setAttribute('y2', Y(Math.max(yMin, 0)));
     svg.appendChild(xAxis);
 
-    // Labels will get stacked so they don't overlap.
     var endLabels = [];
 
-    // Draw peer towns first (non-Marblehead) so Marblehead sits on top.
     TOWNS.forEach(function(town) {
       if (town === 'Marblehead') return;
       var s = seriesByTown[town];
-      if (!s) return;
+      if (!s || s.length < 2) return;
       var wins = winsByTown[town] || [];
 
       var g = document.createElementNS(svgNS, 'g');
@@ -364,33 +420,34 @@ scripts: [citations]
       var pts = s.map(function(p) { return X(p.fy) + ',' + Y(p.pct); }).join(' ');
       var poly = document.createElementNS(svgNS, 'polyline');
       var lineCls = 'pdc-peer';
-      if (wins.length === 0) lineCls += ' is-zero';
+      if (opts.zeroFlag && wins.length === 0) lineCls += ' is-zero';
       if (town === state.selected) lineCls += ' is-selected';
       if (town === state.hover) lineCls += ' is-hover';
       poly.setAttribute('class', lineCls);
       poly.setAttribute('points', pts);
       g.appendChild(poly);
 
-      wins.forEach(function(w) {
-        var p = s.find(function(pt) { return pt.fy === w.fy; });
-        if (!p) return;
-        var c = document.createElementNS(svgNS, 'circle');
-        c.setAttribute('class', 'pdc-override');
-        c.setAttribute('cx', X(w.fy));
-        c.setAttribute('cy', Y(p.pct));
-        c.setAttribute('r', '3');
-        g.appendChild(c);
-      });
+      if (opts.showOverrides) {
+        wins.forEach(function(w) {
+          var p = s.find(function(pt) { return pt.fy === w.fy; });
+          if (!p) return;
+          var c = document.createElementNS(svgNS, 'circle');
+          c.setAttribute('class', 'pdc-override');
+          c.setAttribute('cx', X(w.fy));
+          c.setAttribute('cy', Y(p.pct));
+          c.setAttribute('r', '3');
+          g.appendChild(c);
+        });
+      }
 
       svg.appendChild(g);
 
       var last = s[s.length - 1];
-      endLabels.push({ town: town, x: X(last.fy), y: Y(last.pct), selected: town === state.selected, hover: town === state.hover, zero: wins.length === 0 });
+      endLabels.push({ town: town, x: X(last.fy), y: Y(last.pct), selected: town === state.selected, hover: town === state.hover });
     });
 
-    // Marblehead on top
     var mhSeries = seriesByTown['Marblehead'];
-    if (mhSeries) {
+    if (mhSeries && mhSeries.length >= 2) {
       var mhGroup = document.createElementNS(svgNS, 'g');
       mhGroup.setAttribute('class', 'pdc-town-group is-mh');
       mhGroup.setAttribute('data-town', 'Marblehead');
@@ -400,23 +457,24 @@ scripts: [citations]
       mhLine.setAttribute('points', mhPts);
       mhGroup.appendChild(mhLine);
 
-      (winsByTown['Marblehead'] || []).forEach(function(w) {
-        var p = mhSeries.find(function(pt) { return pt.fy === w.fy; });
-        if (!p) return;
-        var c = document.createElementNS(svgNS, 'circle');
-        c.setAttribute('class', 'pdc-override');
-        c.setAttribute('cx', X(w.fy));
-        c.setAttribute('cy', Y(p.pct));
-        c.setAttribute('r', '3.5');
-        mhGroup.appendChild(c);
-      });
+      if (opts.showOverrides) {
+        (winsByTown['Marblehead'] || []).forEach(function(w) {
+          var p = mhSeries.find(function(pt) { return pt.fy === w.fy; });
+          if (!p) return;
+          var c = document.createElementNS(svgNS, 'circle');
+          c.setAttribute('class', 'pdc-override');
+          c.setAttribute('cx', X(w.fy));
+          c.setAttribute('cy', Y(p.pct));
+          c.setAttribute('r', '3.5');
+          mhGroup.appendChild(c);
+        });
+      }
 
       svg.appendChild(mhGroup);
       var mhLast = mhSeries[mhSeries.length - 1];
       endLabels.push({ town: 'Marblehead', x: X(mhLast.fy), y: Y(mhLast.pct), mh: true });
     }
 
-    // Stack end labels so they do not overlap
     endLabels.sort(function(a, b) { return a.y - b.y; });
     var minSpacing = 11;
     for (var i = 1; i < endLabels.length; i++) {
@@ -470,7 +528,12 @@ scripts: [citations]
     return '$' + Math.round(n).toLocaleString();
   }
 
-  function renderReadings(container, winsByTown, baseLevies, seriesByTown, state) {
+  function cagr(first, last, years) {
+    if (!first || !last || !years) return NaN;
+    return (Math.pow(last / first, 1 / years) - 1) * 100;
+  }
+
+  function renderReadings(container, winsByTown, revByTown, overrideSeriesByTown, underlyingSeriesByTown, state) {
     container.innerHTML = '';
     var title = document.createElement('h3');
     title.textContent = 'Readings';
@@ -484,9 +547,9 @@ scripts: [citations]
 
     focus.forEach(function(town) {
       var wins = winsByTown[town] || [];
-      var base = baseLevies[town];
-      var series = seriesByTown[town] || [];
-      var last = series[series.length - 1];
+      var info = revByTown[town];
+      var overrideSeries = overrideSeriesByTown[town] || [];
+      var underlying = underlyingSeriesByTown[town] || [];
 
       var facts = [];
       facts.push('Operating override wins FY2002-FY2025: <strong>' + wins.length + '</strong>');
@@ -495,16 +558,28 @@ scripts: [citations]
         var rawTotal = wins.reduce(function(sum, w) { return sum + w.amount; }, 0);
         facts.push('Sum of override amounts as voted: <strong>' + fmtDollars(rawTotal) + '</strong>');
         var lastWin = wins[wins.length - 1];
-        facts.push('Most recent win: <strong>FY' + lastWin.fy + '</strong> (' + fmtDollars(lastWin.amount) + ')');
-        var yearsSince = END_YEAR - lastWin.fy;
-        facts.push('Years since last win: <strong>' + yearsSince + '</strong>');
+        facts.push('Most recent win: <strong>FY' + lastWin.fy + '</strong> (' + fmtDollars(lastWin.amount) + ', ' + (END_YEAR - lastWin.fy) + ' years ago)');
       } else {
         facts.push('<strong>No operating override wins</strong> in this window');
       }
 
-      if (base && last) {
-        facts.push('Cumulative added authority, FY2025 (at 2.5%/yr compounding): <strong>' + fmtDollars(last.dollars) + '</strong>');
-        facts.push('As percent of FY2002 tax levy (' + fmtDollars(base) + '): <strong>' + (last.pct >= 0 ? '+' : '') + last.pct.toFixed(1) + '%</strong>');
+      if (info && info.baseLevy && overrideSeries.length) {
+        var last = overrideSeries[overrideSeries.length - 1];
+        facts.push('Override-added authority by FY2025: <strong>' + fmtDollars(last.dollars) + '</strong> (+' + last.pct.toFixed(1) + '% of FY2002 levy)');
+      }
+
+      if (underlying.length >= 2) {
+        var u0 = underlying[0], u1 = underlying[underlying.length - 1];
+        facts.push('Non-override revenue growth FY' + u0.fy + '-FY' + u1.fy + ': <strong>+' + u1.pct.toFixed(1) + '%</strong> (' + cagr(u0.adjusted, u1.adjusted, u1.fy - u0.fy).toFixed(2) + '% per year)');
+      }
+
+      if (info && info.baseTotal && info.byYear) {
+        var years = Object.keys(info.byYear).map(Number).sort();
+        if (years.length >= 2) {
+          var firstY = years[0], lastY = years[years.length - 1];
+          var rawC = cagr(info.byYear[firstY], info.byYear[lastY], lastY - firstY);
+          facts.push('Actual revenue growth FY' + firstY + '-FY' + lastY + ': <strong>' + rawC.toFixed(2) + '% per year</strong>');
+        }
       }
 
       var div = document.createElement('div');
@@ -527,16 +602,19 @@ scripts: [citations]
 
   var state = { selected: null, hover: null };
   var winsByTown = {};
-  var baseLevies = {};
-  var seriesByTown = {};
-  var chartSvg = document.getElementById('pdc-chart');
+  var revByTown = {};
+  var overrideSeriesByTown = {};
+  var underlyingSeriesByTown = {};
+  var overridesSvg = document.getElementById('pdc-chart-overrides');
+  var underlyingSvg = document.getElementById('pdc-chart-underlying');
   var chipsEl = document.getElementById('pdc-chips');
   var readingsEl = document.getElementById('pdc-readings');
 
   function renderAll() {
-    renderChart(chartSvg, seriesByTown, winsByTown, state);
+    renderChart(overridesSvg, overrideSeriesByTown, winsByTown, { showOverrides: true, zeroFlag: true }, state);
+    renderChart(underlyingSvg, underlyingSeriesByTown, winsByTown, { showOverrides: false, zeroFlag: false }, state);
     renderChips(chipsEl, winsByTown, state);
-    renderReadings(readingsEl, winsByTown, baseLevies, seriesByTown, state);
+    renderReadings(readingsEl, winsByTown, revByTown, overrideSeriesByTown, underlyingSeriesByTown, state);
   }
 
   Promise.all([
@@ -545,28 +623,31 @@ scripts: [citations]
   ]).then(function(results) {
     var revRows = parseCSV(results[0]);
     var ovRows = parseCSV(results[1]);
-    baseLevies = extractBaseLevies(revRows);
+    revByTown = extractFromRev(revRows);
     winsByTown = extractWins(ovRows);
-    seriesByTown = buildSeries(winsByTown, baseLevies);
+    overrideSeriesByTown = buildOverrideSeries(winsByTown, revByTown);
+    underlyingSeriesByTown = buildUnderlyingSeries(revByTown, overrideSeriesByTown);
     renderAll();
 
-    chartSvg.addEventListener('mousemove', function(e) {
-      var target = e.target.closest('[data-town]');
-      var town = target ? target.getAttribute('data-town') : null;
-      if (town !== state.hover) { state.hover = town; renderAll(); }
-    });
-    chartSvg.addEventListener('mouseleave', function() {
-      if (state.hover) { state.hover = null; renderAll(); }
-    });
-    chartSvg.addEventListener('click', function(e) {
-      var target = e.target.closest('[data-town]');
-      if (!target) return;
-      var town = target.getAttribute('data-town');
-      state.selected = (state.selected === town) ? null : town;
-      renderAll();
+    [overridesSvg, underlyingSvg].forEach(function(svg) {
+      svg.addEventListener('mousemove', function(e) {
+        var target = e.target.closest('[data-town]');
+        var town = target ? target.getAttribute('data-town') : null;
+        if (town !== state.hover) { state.hover = town; renderAll(); }
+      });
+      svg.addEventListener('mouseleave', function() {
+        if (state.hover) { state.hover = null; renderAll(); }
+      });
+      svg.addEventListener('click', function(e) {
+        var target = e.target.closest('[data-town]');
+        if (!target) return;
+        var town = target.getAttribute('data-town');
+        state.selected = (state.selected === town) ? null : town;
+        renderAll();
+      });
     });
   }).catch(function(err) {
-    chartSvg.innerHTML = '<text x="20" y="30" class="pdc-tick">Data failed to load: ' + err.message + '</text>';
+    overridesSvg.innerHTML = '<text x="20" y="30" class="pdc-tick">Data failed to load: ' + err.message + '</text>';
   });
 })();
 </script>
