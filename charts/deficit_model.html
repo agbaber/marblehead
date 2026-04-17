@@ -800,8 +800,8 @@ title: "Deficit Dynamics Model"
     <span class="dm-scenario-desc">$15M absorbed in year one. The skeptic&rsquo;s view: gap barely narrows.</span>
   </button>
   <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="cut">
-    <span class="dm-scenario-title">Cut 50 positions</span>
-    <span class="dm-scenario-desc">~$5M/yr saved. Slope unchanged; gap reopens on the same schedule.</span>
+    <span class="dm-scenario-title">Current pace of cuts</span>
+    <span class="dm-scenario-desc">About 50 positions over FY25 to FY27, roughly matching what the town has already done. Slope unchanged; gap keeps widening.</span>
   </button>
   <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="healthcare">
     <span class="dm-scenario-title">Healthcare share to 50%</span>
@@ -809,7 +809,7 @@ title: "Deficit Dynamics Model"
   </button>
   <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="hold-line">
     <span class="dm-scenario-title">Hold the line</span>
-    <span class="dm-scenario-desc">Expense growth matches revenue at 3.5%. Contracts at COLA, enrollment flat, no new programs.</span>
+    <span class="dm-scenario-desc">Expense growth drops to revenue growth (3.5%). Contracts at COLA, no new programs.</span>
   </button>
 </div>
 
@@ -821,7 +821,7 @@ title: "Deficit Dynamics Model"
   </button>
   <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="no-override-reform">
     <span class="dm-scenario-title">No override, just reform</span>
-    <span class="dm-scenario-desc">30 positions cut plus 65% healthcare share. No new revenue.</span>
+    <span class="dm-scenario-desc">65% healthcare share plus 30 positions cut. No new revenue.</span>
   </button>
   <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="permanent-close">
     <span class="dm-scenario-title">Permanently close the gap</span>
@@ -1744,11 +1744,11 @@ An override on its own buys time. It does not change the slope of either line.
   var stanceNotes = {
     'bridge': 'Buys roughly 5 years of headroom, then the gap reopens on the same slope. Politically hard: Marblehead voters have rejected every operating override attempt since 2006 (2011, 2022, 2023, 2025 all failed).',
     'skeptic': 'Same $15M, but spent in year one rather than stretched. Consistent with historical behavior, where new levy authority tends to be absorbed by the next contract cycle.',
-    'cut': 'Direct payroll reduction of roughly 10% of the town workforce. Lowers the level but does not flatten the slope. Service impact would be visible across every department.',
+    'cut': 'Roughly matches the FY25 to FY27 reductions already in place through layoffs, unfilled vacancies, and stipend reductions. Lowers the level but does not flatten the slope. The site\u2019s staffing analysis identifies 7 to 13 positions as the discretionary slice; further reductions reach mandate-adjacent roles or non-school departments (see inside-school-staffing.html#options).',
     'healthcare': 'Saves $2.2M/yr net after wage offsets and pension flow-through. Requires union concessions on a long-standing benefit. Hingham runs at 50% but reached that position through years of bargaining.',
     'hold-line': 'The closest scenario to what Marblehead already ran FY18 to FY24 (expenses 3.43%, revenue 3.64%). Stops the gap from widening but does not close the existing deficit, which still draws from free cash or reserves each year. Requires contracts to settle at COLA, healthcare enrollment to stay flat, and pensions to grow no faster than their recent CAGR. A GASB pension revaluation or a heavy SPED year breaks the assumption.',
     'override-plus-hc':'Stacks two politically hard lifts: an operating override vote plus union concessions on health insurance. Both are plausible individually; combining them depends on winning a vote and a bargaining round.',
-    'no-override-reform':'No new revenue; 30 position cuts plus healthcare concessions carry the full load. The hardest path politically: the largest non-override concessions with nothing offered in return.',
+    'no-override-reform':'No new revenue; 30 position cuts plus healthcare concessions carry the full load. 30 positions is more than double the site\u2019s 7 to 13 discretionary estimate (see inside-school-staffing.html#options), so the cuts reach mandate-adjacent roles or non-school departments. The hardest path politically: the largest non-override concessions with nothing offered in return.',
     'permanent-close': 'The 0.8pp drop in expense growth (4.0% to 3.2%) is doing roughly 38% of the work; the override, cuts, and healthcare reform contribute the rest. Requires healthcare premium moderation outside the town\u2019s control plus sustained wage restraint not achieved in the last 20 years.'
   };
 
