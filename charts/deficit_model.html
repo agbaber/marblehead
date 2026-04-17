@@ -2062,6 +2062,17 @@ An override on its own buys time. It does not change the slope of either line.
       var tweenConstrained = oldData.override > 0 && newData.override > 0;
       if (!tweenConstrained) constrainedLineEl.classList.add('dm-hidden');
 
+      // Paint the t=0 frame synchronously: old projection values rendered
+      // with the new yScale. Without this, the grid and hist paths update
+      // to new positions while the projection paths still reflect the
+      // previous yScale until the first RAF frame fires, which reads as
+      // a snap.
+      revProjEl.setAttribute('d', buildPath(oldData.rev, lastHistIdx, nYears - 1, xScale, yScale));
+      expProjEl.setAttribute('d', buildPath(oldData.exp, lastHistIdx, nYears - 1, xScale, yScale));
+      if (tweenConstrained) {
+        constrainedLineEl.setAttribute('d', buildPath(oldData.constrained, lastHistIdx, nYears - 1, xScale, yScale));
+      }
+
       svgEl.classList.add('dm-tweening');
 
       var duration = 600;
