@@ -141,6 +141,26 @@ Write for a resident who has never attended a town meeting or read an ACFR. Assu
 
 Plain language is not dumbing down. It is the minimum bar for a project whose stated goal is to let residents form their own opinions based on facts, not rhetoric.
 
+### Case names, statutes, programs, and legal-test shorthand
+
+The same rule that governs acronyms governs proper-noun shorthand. The reader does not know what any of these mean on first encounter:
+
+- **Case names.** "Emerson College v. City of Boston", "Berry v. Danvers"
+- **Statute citations.** "G.L. c. 44 &sect; 53F&frac12;", "c. 59 &sect; 5", "Chapter 111"
+- **Program names.** "Circuit Breaker", "Chapter 70", "Clause 41C"
+- **Bill and docket numbers.** "H.4225", "S.2123"
+- **Legal-test shorthand.** "the three-prong test", "an Emerson challenge", "Prong 2", "the Dillon rule"
+
+Treat "Emerson says..." as exactly as opaque as "OPEB says..." &ndash; the reader has no idea what either means without context. On first use:
+
+1. Give the full name or citation, not the shorthand alone.
+2. Add a one-sentence plain-English gloss of what it is: *"the 1984 Supreme Judicial Court case that set the fee-vs-tax test"*, *"the state statute governing property-tax exemptions"*, *"the state program that caps property tax as a share of income for qualifying seniors"*.
+3. Only after that introduction, use the shorthand freely.
+
+If the shorthand appears in the first scannable block of a page (a TL;DR, a key-stat callout, a bottom-line bullet, a table header), the gloss must either appear above it or be threaded into the block itself. A reader who jumps straight to the scannable top must not hit an undefined proper noun.
+
+Test: read the page top-down assuming you have never heard any of these terms before. If you hit a word you would have to Google, the page has a bug.
+
 ### Acronyms
 
 First use of a municipal-finance or governance acronym on a page **must** be wrapped in `<abbr class="g" title="...">` with the expansion in the `title` attribute. The `.g` ("glossary") class is already styled in `assets/site.css`: dotted underline, hover/focus tooltip on desktop, long-press tooltip on mobile. No JavaScript required.
@@ -184,6 +204,7 @@ Rationale: internal links help readers explore the site; external links take the
   you'll find..."). Lead with the claim or finding, not a description of what the
   page is about to do. If removing the sentence loses nothing, remove it.
 - No undefined municipal-finance acronyms; first use on a page needs `<abbr class="g" title="...">`
+- No case names, statute citations, program names, bill numbers, or legal-test shorthand used as referents before a plain-English gloss introduces what they are
 - No bare-text internal references where a hyperlink to the other page belongs
 - No inline external links in the reading flow; use `<sup class="cite">` footnotes via `assets/citations.js`
 - No standalone CPI/inflation comparisons as the sole or primary benchmark for a
