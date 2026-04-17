@@ -118,19 +118,34 @@ Document links below point at the [primary source archive](archive), a GitHub re
 
 ## Override Tier Amounts and Tax Impact
 - Primary: [Town Administrator's Override Presentation, April 8, 2026](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-08_Override_Presentation.pdf)
+- Updated: [Select Board Override Presentation (FINAL), April 15, 2026](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-15_Override_Presentation_FINAL.pdf) &ndash; adds median-home tax impact, home-value-to-cost table, MOU terms, and explicit service-loss-without-override summary.
 - Summary: Marblehead Independent, ["Kezer presents $9M-to-$15M tiered override plan"](https://www.marbleheadindependent.com/kezer-presents-9m-to-15m-tiered-override-plan-and-separate-2-2m-trash-tax-option/)
 
 Extracted into:
 - `data/override_town_line_items.csv` has every town-side item funded at each tier (slide 6)
 - `data/override_school_items.csv` has school-side items by tier and fiscal year (slides 7-9)
 - `data/override_draws_schedule.csv` has the year-by-year draw schedule per tier (slides 10-12)
-- `data/override_tax_impact_asf.csv` has the annual and monthly tax impact on the average single-family home ($1,291,507) per tier per year (slides 13-15)
-- `data/override_trash_schedule.csv` has the Question 2 trash and recycling draw breakdown (slide 20)
+- `data/override_tax_impact_asf.csv` has the annual and monthly tax impact on the average single-family home ($1,291,507) per tier per year (April 8 slides 13-15)
+- `data/override_tax_impact_median.csv` has the phase-in schedule on the **median** single-family home ($998,600) per tier per year (April 15 FINAL slide 7)
+- `data/override_tax_impact_by_home_value.csv` has the steady-state (fully-phased) annual tax increase by home value from $500K to $1.5M, plus tier 3 monthly cost (April 15 FINAL slide 9)
+- `data/override_trash_schedule.csv` has the Question 2 trash and recycling draw breakdown (April 8 slide 20; April 15 FINAL deck drops Question 2)
 
-**Cumulative annual tax increase on avg single-family home ($1,291,507):**
+**Cumulative annual tax increase on avg single-family home ($1,291,507), April 8 draws:**
 - Tier 1 ($9M): FY27 +$167.90, FY28 +$804.93, FY29 +$1,186.68 (full phase-in)
 - Tier 2 ($12M): FY27 +$361.62, FY28 +$1,132.65, FY29 +$1,587.17
 - Tier 3 ($15M): FY27 +$555.35, FY28 +$1,369.97, FY29 +$1,985.39
+
+**Cumulative annual tax increase on median home ($998,600), April 15 FINAL:**
+- Tier 1 ($9M): Year 1 +$130, Year 2 +$663, Year 3 +$919
+- Tier 2 ($12M): Year 1 +$280, Year 2 +$956, Year 3 +$1,230
+- Tier 3 ($15M): Year 1 +$430, Year 2 +$1,150, Year 3 +$1,538
+
+Note: the April 15 deck's Y2 figures for the avg home ($168 / $857 / $1,188) differ slightly from the April 8 values in `override_tax_impact_asf.csv` (+$52 gap in Year 2). The cumulative end-of-Year-3 totals agree within rounding, so the difference is a phase-in-schedule revision, not a change in the override size. `override_tax_impact_median.csv` reflects the April 15 schedule; the avg-home CSV has not been updated to reflect the revised phase-in.
+
+**Steady-state tax rate per $1,000 assessed value (derived from April 15 slide 9):**
+- Tier 1: $0.90/$1,000 &nbsp; Tier 2: $1.20/$1,000 &nbsp; Tier 3: $1.50/$1,000
+
+(The deck's footnote "Rate: $0.10 per $1,000" does not match its own table; the rates above are back-computed from the $500K row: $450/$500K = $0.90/$1,000, etc. and verified against the AVG and MEDIAN rows.)
 
 Each year's draw stays on the levy permanently; Year 3 is the ongoing annual cost.
 

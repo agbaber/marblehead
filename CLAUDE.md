@@ -117,6 +117,42 @@ user so they can find it without hunting.
 One exception: if the push was explicitly a fixup onto an existing open
 PR's branch, don't open a second PR.
 
+## Prefer auto-merge when asked to merge
+
+Auto-merge is enabled on this repo. When the user asks you to merge a PR,
+default to `gh pr merge <n> --auto --squash --delete-branch`. GitHub will
+then hold the merge until checks pass and the branch is up to date with
+main, rebasing automatically if another PR lands ahead of yours.
+
+Why this matters: branch protection requires up-to-date branches and
+passing "smoke" + "preview" checks. Without `--auto`, you end up in a
+rebase-push-wait-retry loop every time main moves while you wait for
+checks (which takes ~2 minutes). With `--auto`, fire-and-forget works.
+
+Still check `mergeStateStatus == CLEAN` before passing `--delete-branch`
+to avoid the orphaning issue documented below; `--auto` respects that
+check and only deletes on successful merge.
+
+## Post the preview URL when asking for a live review
+
+Every PR gets a Cloudflare Pages preview deploy (see
+`.github/workflows/preview.yml`), and the workflow posts a sticky
+comment with `header: preview-url` containing a **Branch URL** (stable
+across pushes) and a **This commit** URL (pinned to the current SHA).
+
+Whenever you ask the user to look at a change in the live PR &ndash;
+e.g. "can you eyeball this before merging?", "does this look right?",
+"ready for review" &ndash; include the full preview URL in your message,
+not just the PR link. Fetch it from the sticky preview comment (find
+the comment whose body starts with `### Preview` and pull the
+`**Branch URL:**` value). Prefer the Branch URL for ongoing review
+since it follows new pushes; use the commit URL only when pinning to a
+specific SHA matters.
+
+If the preview comment isn't there yet (workflow still running or
+failed), say so rather than sending a bare PR link and making the user
+hunt for it.
+
 ## Git: don't push follow-up commits to a merged branch
 
 When a PR is merged, the branch it was on is **done**. Do not push
