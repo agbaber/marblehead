@@ -117,6 +117,22 @@ user so they can find it without hunting.
 One exception: if the push was explicitly a fixup onto an existing open
 PR's branch, don't open a second PR.
 
+## Prefer auto-merge when asked to merge
+
+Auto-merge is enabled on this repo. When the user asks you to merge a PR,
+default to `gh pr merge <n> --auto --squash --delete-branch`. GitHub will
+then hold the merge until checks pass and the branch is up to date with
+main, rebasing automatically if another PR lands ahead of yours.
+
+Why this matters: branch protection requires up-to-date branches and
+passing "smoke" + "preview" checks. Without `--auto`, you end up in a
+rebase-push-wait-retry loop every time main moves while you wait for
+checks (which takes ~2 minutes). With `--auto`, fire-and-forget works.
+
+Still check `mergeStateStatus == CLEAN` before passing `--delete-branch`
+to avoid the orphaning issue documented below; `--auto` respects that
+check and only deletes on successful merge.
+
 ## Post the preview URL when asking for a live review
 
 Every PR gets a Cloudflare Pages preview deploy (see
