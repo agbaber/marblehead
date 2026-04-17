@@ -104,4 +104,88 @@ jobs:
             fail=1
           fi
 
+          # ---------- Unwrapped municipal-finance acronyms ----------
+          # STYLE_GUIDE: first use of a governance or municipal-finance
+          # acronym on a page must be wrapped in <abbr class="g" title="...">.
+          # The blocklist is the acronyms actively wrapped elsewhere on the
+          # site (from grep of existing <abbr> usage), so this isn't a
+          # generic all-caps hunter that trips on USA, LLC, YES/NO, etc.
+          # Lines that already contain an <abbr> or a citation marker are
+          # treated as good-faith wraps and pass.
+          ACRONYM_LIST='ACFR|FTE|DOR|DESE|GIC|DLS|MGL|OPEB|PERAC|IEP|IDEA|ACS|MBTA|DPW|SPED|HVAC|EPIMS|ELL|ESSER|CPI|TIR|GASB|SRO|HEO|GIS|COA|GFOA|SJC|FinCom'
+          unwrapped_acronyms=$(printf '%s\n' "$added" \
+            | grep -nE "\\b(${ACRONYM_LIST})s?\\b" \
+            | grep -vE '<abbr|<sup class="cite"|data-source=|data-href=' \
+            || true)
+          if [ -n "$unwrapped_acronyms" ]; then
+            echo "::error title=Unwrapped acronym::STYLE_GUIDE requires first use of governance / municipal-finance acronyms to be wrapped in <abbr class=\"g\" title=\"...\">. Same-line <abbr> passes."
+            printf '%s\n' "$unwrapped_acronyms"
+            fail=1
+          fi
+
+          # ---------- Citation data-source non-empty ----------
+          # Every <sup class="cite"> must carry a non-empty data-source
+          # attribute. assets/citations.js reads it at runtime to build the
+          # auto-injected <h2>Sources</h2> list; a missing or empty
+          # data-source silently drops the source from the rendered page.
+          missing_source=$(printf '%s\n' "$added" \
+            | grep -nE '<sup class="cite"' \
+            | grep -vE 'data-source="[^"]+"' \
+            || true)
+          if [ -n "$missing_source" ]; then
+            echo "::error title=Citation missing data-source::<sup class=\"cite\"> must include a non-empty data-source attribute (assets/citations.js reads it to render the Sources list)."
+            printf '%s\n' "$missing_source"
+            fail=1
+          fi
+
+          # ---------- Internal link resolution ----------
+          # href="page.html" (or /page.html, charts/page.html) must resolve
+          # to an existing file at repo root. External URLs, mailto/tel/js,
+          # and relative-up links (../) are skipped - the first two aren't
+          # ours to validate, the third depends on the referring page's
+          # directory which isn't known to a repo-root check.
+          internal_links=$(printf '%s\n' "$added" \
+            | grep -oE 'href="[^"#?]+\.html[^"]*"' \
+            | sed 's/href="//; s/"$//' \
+            | sort -u \
+            || true)
+          for link in $internal_links; do
+            path=$(printf '%s' "$link" | sed 's/[#?].*$//')
+            case "$path" in
+              http://*|https://*|//*|mailto:*|tel:*|javascript:*) continue ;;
+              *../*|..*) continue ;;
+            esac
+            relative=$(printf '%s' "$path" | sed 's|^/||')
+            [ -z "$relative" ] && continue
+            if [ ! -f "$relative" ]; then
+              echo "::error title=Broken internal link::file not found: $link (checked $relative)"
+              fail=1
+            fi
+          done
+
+          # ---------- Anchor fragment resolution ----------
+          # href="page.html#frag" must find id="frag" or name="frag" in the
+          # target page. Same-page anchors (href="#frag") are skipped - the
+          # host page isn't necessarily in the diff, so we can't verify.
+          anchor_refs=$(printf '%s\n' "$added" \
+            | grep -oE 'href="[^"]+#[^"]+"' \
+            | sed 's/href="//; s/"$//' \
+            | sort -u \
+            || true)
+          for ref in $anchor_refs; do
+            file=$(printf '%s' "$ref" | sed 's/#.*$//')
+            frag=$(printf '%s' "$ref" | sed 's/^[^#]*#//')
+            [ -z "$file" ] && continue
+            case "$file" in
+              http://*|https://*|//*) continue ;;
+              *../*|..*) continue ;;
+            esac
+            relative=$(printf '%s' "$file" | sed 's|^/||')
+            [ -f "$relative" ] || continue
+            if ! grep -qE "(id|name)=\"${frag}\"" "$relative"; then
+              echo "::error title=Broken anchor::#${frag} not found in ${file}"
+              fail=1
+            fi
+          done
+
           exit $fail
