@@ -7,14 +7,14 @@ description: "Massachusetts case law on when a municipal 'fee' is legally a tax,
 
 # Case law: fee vs. tax under Proposition 2½
 
-*Relevant to [Question 2 on the June 9, 2026 ballot](../question-2-trash.html). If voters reject the levy increase, the Board of Health's fallback is a flat $281 per household "fee." Massachusetts law has a specific test, set by the Supreme Judicial Court in **Emerson College v. City of Boston** (1984), for whether a charge labeled a fee is legally a fee or actually a tax. "Emerson" is shorthand for that case throughout this page.*
+*Relevant to [Question 2 on the June 9, 2026 ballot](../question-2-trash.html). If voters reject the levy increase, the Board of Health's fallback is a flat $281 per household "fee." Massachusetts law has a specific test, set by the Supreme Judicial Court (the state's highest court, abbreviated SJC) in **Emerson College v. City of Boston** (1984), for whether a charge labeled a fee is legally a fee or actually a tax. "Emerson" is shorthand for that case throughout this page.*
 
 **Not legal advice.** Research note for residents. Every claim cites the primary opinion.
 
 ## Bottom line
 
-- **The $281 flat fee (the no-vote outcome on Q2) is structurally vulnerable to an Emerson challenge.** The weakest link is Prong 2 (voluntariness): a mandatory flat per-household charge fails unless the transfer-station sticker program is a real opt-out.
-- **Structure determines survival.** An enterprise fund under G.L. c. 44, § 53F½ cleanly satisfies Emerson. A Board of Health regulatory charge under c. 111 is the most exposed structure.
+- **The $281 flat fee (the no-vote outcome on Q2) is structurally vulnerable to an Emerson-style court challenge.** The weakest link is the requirement that a fee be voluntary: a mandatory flat per-household charge fails this unless the transfer-station sticker program lets a household opt out of curbside pickup entirely.
+- **Structure determines survival.** A trash fee funneled through a dedicated municipal fund that can only pay for trash services (state law calls this an "enterprise fund") would cleanly pass the test. A flat charge imposed directly by the Board of Health under its general health-regulation authority is the most exposed structure.
 - **Massachusetts courts have struck down a municipal trash fee before.** Springfield, February 17, 2007. Grounds are not in the public record, but the precedent that a flat municipal trash fee can lose in court is established.
 
 ## The three-prong Emerson test
@@ -35,9 +35,9 @@ Source: [Emerson College v. City of Boston](https://law.justia.com/cases/massach
 |---|---|---|
 | 1. Particularized benefit | **Probably passes** | Curbside pickup is address-specific, more particularized than the fire protection in Emerson. Countervailing: public-health benefits (pests, odor, disease vectors) extend beyond the payer. |
 | 2. Voluntary | **Weakest link** | A flat mandatory charge fails this. Survives only if the transfer-station sticker program is a real opt-out that a paying household can choose. |
-| 3. Cost recovery | **Depends on structure** | Revenue must flow only to the Republic Services contract and admin. General-fund sweep kills it (the exact AFSA flaw). An enterprise fund under c. 44 § 53F½ cleanly satisfies. |
+| 3. Cost recovery | **Depends on structure** | Revenue must flow only to the contract with the town's private trash hauler (Republic Services) and related admin. If it sweeps into the general town budget, the fee fails (the exact flaw that doomed the Boston fire-fee in Emerson). An enterprise fund (a dedicated municipal fund for a single service) cleanly satisfies. |
 
-**Cleanest surviving structure:** pay-as-you-throw (PAYT) or an enterprise fund under G.L. c. 44, § 53F½. Explicit opt-out via non-use, priced per unit of service, revenue statutorily segregated.
+**Cleanest surviving structure:** pay-as-you-throw (PAYT, where households pay per bag or per pickup), or an enterprise fund (a dedicated municipal fund whose revenue can only be spent on one service, authorized by state statute). Explicit opt-out via non-use, priced per unit of service, revenue legally segregated.
 
 **Most vulnerable structure:** a flat mandatory per-household charge with revenue sweeping to the general fund.
 
@@ -47,9 +47,9 @@ Emerson College sued because a "fee" reaches property-tax-exempt property; a lev
 
 | Potential plaintiff class | Why they would sue | Scale |
 |---|---|---|
-| **Individual c. 59 § 5 exempt residents**: disabled veterans (Clause 22E full, 22A-D partial), legally blind (37A), qualifying low-income elderly (41A, 41C, 41D), surviving spouses (17D, 17E) | Pay zero or reduced levy; would pay full $281 | Unknown. See [Issue #591 Q5](https://github.com/agbaber/marblehead/issues/591). Count available from DOR Municipal Databank and assessor Form MAR-1. |
-| **Charity or religious residential property**: parish houses, rectories, nonprofit-owned affordable housing, Housing Trust properties (c. 59 § 5 Clauses 3, 10, 11) | Literal Emerson plaintiff type; strongest institutional standing | Narrow. Requires cross-referencing the assessor's exemption list with the DPW curbside pickup route. |
-| **Senior tax relief recipients**: Circuit Breaker, Clause 41 variants, pending H.4225 means-tested exemption | Flat fee routes around protections the Legislature established for seniors | Overlaps with the first class. |
+| **Individual residents whose homes are property-tax-exempt under state law**: disabled veterans, legally blind residents, qualifying low-income elderly, and surviving spouses. (Massachusetts statute G.L. c. 59 § 5 lists the specific clauses, e.g., Clause 22E for 100%-disabled vets, Clause 41C for qualifying elderly.) | Pay zero or reduced property-tax levy; would pay the full $281 fee | Unknown. See [Issue #591 Q5](https://github.com/agbaber/marblehead/issues/591). Count available from the state Department of Revenue and the town assessor. |
+| **Residential property owned by charities or religious organizations**: parish houses, rectories, nonprofit-owned affordable housing, Housing Trust properties | Literal Emerson-plaintiff type; strongest institutional standing | Narrow. Requires cross-referencing the assessor's exemption list with the Department of Public Works curbside pickup route. |
+| **Senior tax relief recipients**: the Circuit Breaker (a state income-tax credit for seniors whose property tax exceeds a share of their income), local senior property-tax exemptions, and H.4225 (a pending state bill that would add a means-tested senior exemption) | A flat fee routes around protections the Legislature has built for seniors | Overlaps with the first row. |
 
 ## Precedent at a glance
 
@@ -58,7 +58,7 @@ Massachusetts decisions applying the Emerson three-prong test to municipal charg
 | Case | Year | Charge at issue | Prongs failed | Outcome |
 |---|---|---|---|---|
 | [**Emerson College v. Boston**](https://law.justia.com/cases/massachusetts/supreme-court/1984/391-mass-415-2.html) | 1984 | Fire services availability fee | 1, 2, 3 | **Struck down.** Controlling SJC case. |
-| [**Denver Street LLC v. Saugus**](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/78/78massappct526.html) | 2011 | Sewer I/I fee under c. 40 § 22F | 1, 3 | **Struck down.** $1.1M refunded with interest. |
+| [**Denver Street LLC v. Saugus**](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/78/78massappct526.html) | 2011 | Sewer water-infiltration charge on new developers | 1, 3 | **Struck down.** $1.1M refunded with interest. |
 | **Berry v. Danvers** | 1993 | Sewer connection fee | 1 | **Struck down.** |
 | **Greater Franklin Developers v. Franklin** | 2000 | School impact fees on developers | 1 | **Struck down.** |
 | [**Silva v. Attleboro**](https://law.justia.com/cases/massachusetts/supreme-court/volumes/454/454mass165.html) | 2008 | Board of Health burial permit fee | none | **Upheld** as valid regulatory fee. |
@@ -86,7 +86,7 @@ The pattern: **Prong 1 and Prong 3 do most of the work.** Prong 2 is often stipu
 
 **Citation.** 78 Mass. App. Ct. 526. Appeals Court. Decided January 6, 2011.
 
-**Facts.** Saugus imposed an "inflow and infiltration reduction contribution" on developers seeking sewer connections, claiming authority under G.L. c. 40 § 22F. Four developer plaintiffs paid $670,460 under protest and sued.
+**Facts.** Saugus imposed an "inflow and infiltration reduction contribution" on developers seeking sewer connections, claiming authority under G.L. c. 40 § 22F (the Massachusetts statute letting cities and towns charge fees for specific services). Four developer plaintiffs paid $670,460 under protest and sued.
 
 **Holding.** Charge struck down as an unlawful tax. Saugus ordered to refund $670,460 plus 12 percent annual interest: approximately $1.1 million by judgment date.
 
