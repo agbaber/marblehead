@@ -705,7 +705,7 @@
 
   /* ── "Not sure yet" pill directly under the answer cards ── */
   .unsure-row {
-    margin: 14px 0 4px;
+    margin: 16px 0 20px;
     text-align: center;
   }
   .unsure-btn {
