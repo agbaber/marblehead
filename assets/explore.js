@@ -1186,8 +1186,14 @@
     /* Clone the three answer cards. The clones keep data-question /
        data-answer attributes but are NOT reachable by the global
        answer-card handlers (those bound at load against the original
-       elements). Wire dedicated click handlers that record the pick and
-       navigate into the real question-screen so the evidence opens. */
+       elements). Wire dedicated click handlers that navigate into the
+       real question-screen and open the evidence panel for the chosen
+       answer WITHOUT committing a pick -- on the rest of the site,
+       tapping an answer card browses (see line ~1672) and the check
+       button commits. The prompt under these cards says "Tap any
+       answer to read the case for it", so the featured block needs to
+       browse too. Commitment then happens via the check button or the
+       "This resonates" action on the question-screen. */
     var answersClone = answers.cloneNode(true);
     answersClone.classList.add('featured-answers');
     answersClone.querySelectorAll('.answer-check').forEach(function (c) { c.remove(); });
@@ -1197,7 +1203,7 @@
         var a = card.dataset.answer;
         if (!q || !a) return;
         switchTopic(q);
-        selectAnswer(q, a);
+        viewEvidence(q, a);
         window.scrollTo(0, 0);
       });
     });
