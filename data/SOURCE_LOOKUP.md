@@ -118,6 +118,7 @@ Document links below point at the [primary source archive](archive), a GitHub re
 
 ## Override Tier Amounts and Tax Impact
 - Primary: [Town Administrator's Override Presentation, April 8, 2026](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-08_Override_Presentation.pdf)
+- Updated: [Select Board Override Presentation (FINAL), April 15, 2026](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-15_Override_Presentation_FINAL.pdf) &ndash; adds median-home tax impact, home-value-to-cost table, MOU terms, and explicit service-loss-without-override summary.
 - Summary: Marblehead Independent, ["Kezer presents $9M-to-$15M tiered override plan"](https://www.marbleheadindependent.com/kezer-presents-9m-to-15m-tiered-override-plan-and-separate-2-2m-trash-tax-option/)
 
 Extracted into:

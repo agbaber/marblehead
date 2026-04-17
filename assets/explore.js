@@ -1726,6 +1726,14 @@
       selectAnswer(question, answer);
       updateNotesPill();
       updateNotesPanel();
+      // Scroll back to the question so the reader can see the selected
+      // state on the answer card, the Next question button, and (on a
+      // first pick) the tutorial -- all of which live above the evidence
+      // panel and would otherwise be off-screen. Mirrors "Not for me".
+      var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
+      if (screen) {
+        screen.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
 
     var noBtn = document.createElement('button');
