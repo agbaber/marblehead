@@ -56,6 +56,52 @@
     line-height: 1.55;
     margin: 0;
   }
+
+  /* ── Featured question (first-visit onboarding) ──
+     Q1 cloned inline with answers visible. Shown only when the visitor
+     has zero picks; JS toggles .visible. Sits between the hero and the
+     votes-strip so the first action is obvious above the fold. */
+  .featured-question {
+    display: none;
+    margin: 0 0 32px;
+    padding: 20px 20px 16px;
+    border: 1.5px solid var(--c-teal);
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--c-teal) 4%, var(--surface));
+  }
+  .featured-question.visible { display: block; }
+  .featured-question-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--c-teal);
+    margin: 0 0 10px;
+  }
+  .featured-question .question-block h1 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text);
+    margin: 0 0 8px;
+  }
+  .featured-question .question-context {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0 0 16px;
+  }
+  .featured-question .featured-answers {
+    margin-bottom: 8px;
+  }
+  .featured-answers-prompt {
+    margin: 0;
+  }
+  /* Scroll-margin so smooth-scrolling to an evidence panel (from the
+     featured-question tap handler) clears the sticky site nav. Matches
+     the h2[id] { scroll-margin-top: 68px } rule in site.css. */
+  .evidence { scroll-margin-top: 68px; }
+
   .explore-question-list {
     display: flex;
     flex-direction: column;
@@ -1699,4 +1745,271 @@
     .explore-stats-detail { padding: 6px 12px; gap: 8px; font-size: 10px; }
     .explore-stats-detail-left { gap: 10px; }
     .explore-tutorial { font-size: 12px; padding: 12px 14px; }
+  }
+
+  /* ─── Story-filter caption on question-block ──────────────────────
+     Neutral italic note that names the framing choice the strongest
+     evidence chart is making (time range, peers, metric). Written as
+     context, not disclaimer. */
+  .question-block .story-filter {
+    margin: 10px 0 0;
+    padding: 10px 14px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--c-text-mid);
+    background: var(--c-fog);
+    border-left: 3px solid var(--c-border);
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+  }
+
+  /* ─── Evidence-block cross-link to a related question ──────────── */
+  .evidence-cross-link {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--c-border);
+  }
+  .evidence-cross-link p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--c-text-mid);
+  }
+  .evidence-cross-link a {
+    color: var(--c-teal);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  /* ─── One-time reset notice on the landing head ────────────────── */
+  .explore-reset-notice {
+    margin: 12px 0 0;
+    padding: 10px 14px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--c-text);
+    background: var(--c-fog);
+    border: 1px solid var(--c-border);
+    border-radius: 6px;
+  }
+
+  /* ─── "Where you landed" synthesis panel ──────────────────────────
+     Shown inside .explore-landing once the reader has picked >= 3
+     answers. Pure readback: themed list of picked answers, still-open
+     list, vote-date reminder. Neutral styling on purpose -- no
+     yes/no color cues. */
+  .where-you-landed {
+    margin: 24px 0 8px;
+    padding: 20px 22px;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .where-you-landed[hidden] { display: none; }
+  .wyl-head { margin-bottom: 16px; }
+  .wyl-title {
+    margin: 0 0 6px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--c-text);
+  }
+  .wyl-sub {
+    margin: 0 0 4px;
+    font-size: 14px;
+    color: var(--c-text-mid);
+    line-height: 1.5;
+  }
+  .wyl-progress {
+    margin: 0;
+    font-size: 13px;
+    color: var(--c-text-sub);
+    font-variant-numeric: tabular-nums;
+  }
+  .wyl-themes { display: flex; flex-direction: column; gap: 22px; }
+  .wyl-theme { padding-top: 18px; border-top: 1px solid var(--c-border); }
+  .wyl-theme:first-child { border-top: 0; padding-top: 0; }
+  .wyl-theme-title {
+    margin: 0 0 8px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--c-text-mid);
+  }
+  .wyl-theme-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .wyl-theme-item { margin: 0; }
+  .wyl-topic-link {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px 12px;
+    align-items: baseline;
+    width: 100%;
+    padding: 10px 10px;
+    margin: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    text-align: left;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.12s ease;
+  }
+  .wyl-topic-link:hover { background: var(--c-fog); }
+  .wyl-topic-link:focus-visible {
+    background: var(--c-fog);
+    outline: 2px solid var(--c-teal);
+    outline-offset: -2px;
+  }
+  .wyl-topic-link:active { background: var(--c-divider); }
+  .wyl-topic-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--c-text);
+    line-height: 1.3;
+  }
+  .wyl-topic-chev {
+    color: var(--c-text-faint);
+    font-size: 18px;
+    line-height: 1;
+    transition: color 0.12s ease, transform 0.12s ease;
+  }
+  .wyl-topic-link:hover .wyl-topic-chev,
+  .wyl-topic-link:focus-visible .wyl-topic-chev {
+    color: var(--c-teal);
+    transform: translateX(2px);
+  }
+  .wyl-topic-detail {
+    grid-column: 1 / -1;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--c-text-mid);
+  }
+  .wyl-topic-detail--unsure { font-style: italic; color: var(--c-text-sub); }
+  .wyl-open {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--c-border);
+  }
+  .wyl-open[hidden] { display: none; }
+  .wyl-open-title {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--c-text);
+  }
+  .wyl-open-sub {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: var(--c-text-mid);
+  }
+  .wyl-open-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 8px;
+  }
+  .wyl-topic-link--open {
+    display: inline-flex;
+    padding: 6px 10px;
+    background: var(--c-fog);
+    border: 1px solid var(--c-border);
+    font-size: 13px;
+    color: var(--c-text);
+    width: auto;
+  }
+  .wyl-topic-link--open:hover,
+  .wyl-topic-link--open:focus-visible {
+    background: var(--c-surface);
+    border-color: var(--c-text-mid);
+  }
+  .wyl-next {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: var(--c-fog);
+    border-radius: 8px;
+  }
+  .wyl-next-title {
+    margin: 0 0 4px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--c-text-mid);
+  }
+  .wyl-next-body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--c-text);
+  }
+  .wyl-next-body a { color: var(--c-teal); }
+  .wyl-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .wyl-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--c-border);
+    background: var(--c-surface);
+    color: var(--c-text);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .wyl-action:hover,
+  .wyl-action:focus-visible {
+    background: var(--c-fog);
+    outline: none;
+  }
+  .wyl-action--primary {
+    background: var(--c-navy);
+    color: #fff;
+    border-color: var(--c-navy);
+  }
+  .wyl-action--primary:hover,
+  .wyl-action--primary:focus-visible {
+    background: var(--c-teal);
+    border-color: var(--c-teal);
+  }
+  .wyl-action--primary .icon-copied,
+  .wyl-action--primary.copied .icon-link { display: none; }
+  .wyl-action--primary .icon-link,
+  .wyl-action--primary.copied .icon-copied { display: inline-block; }
+  .wyl-action--primary svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .wyl-action--ghost { background: transparent; }
+
+  .explore-landing.shared-mode .wyl-action--ghost { display: none; }
+
+  @media (max-width: 599px) {
+    .where-you-landed { padding: 16px 14px; }
+    .wyl-title { font-size: 18px; }
+    .wyl-topic-label { font-size: 14.5px; }
+    .wyl-topic-detail { font-size: 13.5px; }
   }

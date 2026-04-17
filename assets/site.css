@@ -1360,8 +1360,13 @@ body.doc-page .page li {
 body.doc-page .page li > p { margin: 0 0 6px; }
 body.doc-page .page li strong { color: var(--text); }
 
-/* Long URLs in source lists should wrap, not overflow */
-body.doc-page .page a { overflow-wrap: anywhere; word-break: break-word; }
+/* Long URLs in source lists should wrap, not overflow.
+   Excludes links inside table cells: `overflow-wrap: anywhere` tells the
+   browser the min-content width is a single character, which collapses
+   narrow table columns into character-per-line wrapping. */
+body.doc-page .page :not(td):not(th) > a,
+body.doc-page .page li a,
+body.doc-page .page p a { overflow-wrap: anywhere; word-break: break-word; }
 
 /* Inline code */
 body.doc-page .page code {
