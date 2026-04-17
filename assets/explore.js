@@ -52,31 +52,6 @@
     });
   })();
 
-  /* ── Inject "Not sure yet" button below the answer cards ── */
-  (function injectUnsureButton() {
-    document.querySelectorAll('.question-screen').forEach(function (screen) {
-      var topic = screen.dataset.topic;
-      var answersEl = screen.querySelector('.answers');
-      if (!answersEl) return;
-
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'unsure-btn';
-      btn.dataset.answer = 'u';
-      btn.dataset.question = topic;
-      btn.textContent = 'Not sure yet';
-      answersEl.parentNode.insertBefore(btn, answersEl.nextSibling);
-
-      btn.addEventListener('click', function () {
-        var q = btn.dataset.question;
-        if (selections[q] === 'u') return; // already unsure
-        selectAnswer(q, 'u');
-        updateNotesPill();
-        updateNotesPanel();
-      });
-    });
-  })();
-
   /* ── Inject pick prompt below each question's answers ── */
   (function injectPickPrompt() {
     document.querySelectorAll('.question-screen').forEach(function (screen) {
@@ -901,6 +876,38 @@
       screen.appendChild(wrap);
     }
   });
+
+  /* ── Inject "Not sure yet" button directly under the answer cards ──
+     Runs after the next-question injection so it ends up as the element
+     immediately after .answers (centered, above the Next question CTA). */
+  (function injectUnsureButton() {
+    document.querySelectorAll('.question-screen').forEach(function (screen) {
+      var topic = screen.dataset.topic;
+      var answersEl = screen.querySelector('.answers');
+      if (!answersEl) return;
+
+      var row = document.createElement('div');
+      row.className = 'unsure-row';
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'unsure-btn';
+      btn.dataset.answer = 'u';
+      btn.dataset.question = topic;
+      btn.textContent = 'Not sure yet';
+      row.appendChild(btn);
+
+      answersEl.parentNode.insertBefore(row, answersEl.nextSibling);
+
+      btn.addEventListener('click', function () {
+        var q = btn.dataset.question;
+        if (selections[q] === 'u') return; // already unsure
+        selectAnswer(q, 'u');
+        updateNotesPill();
+        updateNotesPanel();
+      });
+    });
+  })();
 
   /* ── Inject social proof bar + share button into each question screen ── */
   document.querySelectorAll('.question-screen').forEach(function (screen) {
