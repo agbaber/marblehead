@@ -1756,7 +1756,7 @@ An override on its own buys time. It does not change the slope of either line.
     'skeptic': 'Same $15M, but spent in year one rather than stretched. Consistent with historical behavior, where new levy authority tends to be absorbed by the next contract cycle.',
     'cut': 'Direct payroll reduction of roughly 10% of the town workforce. Lowers the level but does not flatten the slope. Service impact would be visible across every department.',
     'healthcare': 'Saves $2.2M/yr net after wage offsets and pension flow-through. Requires union concessions on a long-standing benefit. Hingham runs at 50% but reached that position through years of bargaining.',
-    'hold-line': 'The closest scenario to what Marblehead already ran FY18 to FY24 (expenses 3.43%, revenue 3.64%). Requires contracts to settle at COLA, healthcare enrollment to stay flat, and pensions to grow no faster than their recent CAGR. A GASB pension revaluation or a heavy SPED year breaks the assumption.',
+    'hold-line': 'The closest scenario to what Marblehead already ran FY18 to FY24 (expenses 3.43%, revenue 3.64%). Stops the gap from widening but does not close the existing deficit, which still draws from free cash or reserves each year. Requires contracts to settle at COLA, healthcare enrollment to stay flat, and pensions to grow no faster than their recent CAGR. A GASB pension revaluation or a heavy SPED year breaks the assumption.',
     'cost-slows': 'A stronger version of "Hold the line": 1.0pp off expense growth rather than 0.5pp. Requires GIC premium growth to moderate (state-controlled) and contracts to settle meaningfully below COLA. Not sustained in the last 20 years.',
     'new-growth': 'Revenue growth at 4.5% depends on sustained construction and new growth. Marblehead averaged about 1.3pp of new growth FY15 to FY24; pushing to 2pp+ is bounded by zoning and build-out.',
     'override-plus-hc': 'Stacks two politically hard lifts: an operating override vote plus union concessions on health insurance. Both are plausible individually; combining them depends on winning a vote and a bargaining round.',
@@ -1970,7 +1970,7 @@ An override on its own buys time. It does not change the slope of either line.
         setup: function() { resetToDefaults(); }
       },
       {
-        caption: 'Why the gap widens. If expense growth matched revenue (3.5%/yr), the lines would run parallel \u2014 no growing gap. The baseline assumption is 4%/yr, mostly pensions and healthcare. Watch the expense line flatten as we drop it to 3.5%.',
+        caption: 'Why the gap widens. If expense growth matched revenue (3.5%/yr), the lines would run parallel and the gap would stop widening. The baseline assumption is 4%/yr, mostly pensions and healthcare. Watch the expense line flatten as we drop it to 3.5%.',
         setup: function() {
           resetToDefaults();
           expGrowthEl.value = 3.5;
@@ -1984,7 +1984,7 @@ An override on its own buys time. It does not change the slope of either line.
         }
       },
       {
-        caption: 'The dashed line. With an override modeled, it shows what the town could spend without one \u2014 expenses capped at revenue. Adding 10 position cuts here lowers the full expense line; the space between the two is the services the override is funding.',
+        caption: 'The dashed line. With an override modeled, it shows what the town could spend without one: expenses capped at revenue. Adding 10 position cuts here lowers the full expense line; the space between the two is the services the override is funding.',
         setup: function() {
           resetToDefaults();
           overrideEl.value = 12;
@@ -1992,7 +1992,7 @@ An override on its own buys time. It does not change the slope of either line.
         }
       },
       {
-        caption: 'The realistic alternative. \u201cHold the line\u201d matches expense growth to revenue at 3.5% \u2014 what Marblehead actually ran FY18 to FY24. No override, no position cuts; the ask is contract discipline and flat healthcare enrollment.',
+        caption: 'The realistic alternative. \u201cHold the line\u201d matches expense growth to revenue at 3.5%, which is what Marblehead actually ran FY18 to FY24. The lines run parallel so the gap stops widening, but the existing deficit stays and free cash or reserves still have to cover it each year. The ask is contract discipline and flat healthcare enrollment. No override, no position cuts, no new revenue.',
         setup: function() {
           resetToDefaults();
           expGrowthEl.value = 3.5;
@@ -2000,7 +2000,7 @@ An override on its own buys time. It does not change the slope of either line.
         }
       },
       {
-        caption: 'Your turn. Try any scenario below. Each shows its assumptions, how realistic it is, and what\u2019s doing the work.',
+        caption: 'Your turn. Pick any scenario below to see how different levers shape the chart. Each one lists its assumptions, how realistic it is, and what is doing the work. There is no single answer; the point is to see how the tradeoffs compare.',
         setup: function() { resetToDefaults(); }
       }
     ];
