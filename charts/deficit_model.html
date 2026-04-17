@@ -654,6 +654,10 @@ title: "Deficit Dynamics Model"
     <span class="dm-scenario-title">Healthcare share to 50%</span>
     <span class="dm-scenario-desc">Match Hingham. ~$2.2M/yr net after wage offset and pension impact.</span>
   </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="hold-line">
+    <span class="dm-scenario-title">Hold the line</span>
+    <span class="dm-scenario-desc">Expense growth matches revenue at 3.5%. Contracts at COLA, enrollment flat, no new programs.</span>
+  </button>
   <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="cost-slows">
     <span class="dm-scenario-title">Cost growth slows to 3%</span>
     <span class="dm-scenario-desc">If GIC moderates and contracts stay restrained, lines run roughly parallel.</span>
@@ -1591,7 +1595,8 @@ An override on its own buys time. It does not change the slope of either line.
     'skeptic': 'Same $15M, but spent in year one rather than stretched. Consistent with historical behavior, where new levy authority tends to be absorbed by the next contract cycle.',
     'cut': 'Direct payroll reduction of roughly 10% of the town workforce. Lowers the level but does not flatten the slope. Service impact would be visible across every department.',
     'healthcare': 'Saves $2.2M/yr net after wage offsets and pension flow-through. Requires union concessions on a long-standing benefit. Hingham runs at 50% but reached that position through years of bargaining.',
-    'cost-slows': 'The only lever here that flattens the slope. Requires GIC premium growth to moderate (state-controlled) and contracts to settle at COLA-only. Neither has been sustained in the last 20 years.',
+    'hold-line': 'The closest scenario to what Marblehead already ran FY18 to FY24 (expenses 3.43%, revenue 3.64%). Requires contracts to settle at COLA, healthcare enrollment to stay flat, and pensions to grow no faster than their recent CAGR. A GASB pension revaluation or a heavy SPED year breaks the assumption.',
+    'cost-slows': 'A stronger version of "Hold the line": 1.0pp off expense growth rather than 0.5pp. Requires GIC premium growth to moderate (state-controlled) and contracts to settle meaningfully below COLA. Not sustained in the last 20 years.',
     'new-growth': 'Revenue growth at 4.5% depends on sustained construction and new growth. Marblehead averaged about 1.3pp of new growth FY15 to FY24; pushing to 2pp+ is bounded by zoning and build-out.',
     'override-plus-hc': 'Stacks two politically hard lifts: an operating override vote plus union concessions on health insurance. Both are plausible individually; combining them depends on winning a vote and a bargaining round.',
     'override-plus-cuts': 'Override paired with visible service reductions. Voters may read the cuts as evidence the override is needed; opponents may read them as proof the town can absorb cuts.',
@@ -1736,6 +1741,8 @@ An override on its own buys time. It does not change the slope of either line.
         positionCuts = 50;
       } else if (s === 'healthcare') {
         hcShareEl.value = 50;
+      } else if (s === 'hold-line') {
+        expGrowthEl.value = 3.5;
       } else if (s === 'cost-slows') {
         expGrowthEl.value = 3.0;
       } else if (s === 'new-growth') {
@@ -1970,6 +1977,8 @@ An override on its own buys time. It does not change the slope of either line.
       positionCuts = 30;
       hcShareEl.value = 65;
       wageOffsetEl.value = 50;
+    } else if (urlStance === 'hold-line') {
+      expGrowthEl.value = 3.5;
     } else if (urlStance === 'cost-slows') {
       expGrowthEl.value = 3.0;
     } else if (urlStance === 'new-growth') {
