@@ -571,7 +571,7 @@ title: "Deficit Dynamics Model"
   </div>
 </div>
 
-<div class="dm-readout">
+<div class="dm-readout" id="dm-chart-scroll-target">
   <div class="dm-readout-line">Projected FY40 gap: <strong id="dm-gap">$12.6M</strong> <span id="dm-gap-label">annual deficit</span>.</div>
   <div class="dm-hint" id="dm-gap-hint">Pick a tier or drag the sliders below the chart to see how it changes.</div>
 </div>
@@ -1665,6 +1665,8 @@ An override on its own buys time. It does not change the slope of either line.
   });
 
   // Stance scenario buttons
+  var chartScrollTarget = document.getElementById('dm-chart-scroll-target');
+  var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
   document.querySelectorAll('.dm-stance-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var s = btn.dataset.stance;
@@ -1715,6 +1717,12 @@ An override on its own buys time. It does not change the slope of either line.
         positionCuts = 10;
       }
       onChange();
+      if (chartScrollTarget) {
+        chartScrollTarget.scrollIntoView({
+          behavior: reducedMotion && reducedMotion.matches ? 'auto' : 'smooth',
+          block: 'start'
+        });
+      }
     });
   });
 
