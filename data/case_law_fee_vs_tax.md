@@ -15,7 +15,7 @@ description: "Massachusetts case law on when a municipal 'fee' is legally a tax,
 
 - **The $281 flat fee (the no-vote outcome on Q2) is structurally vulnerable to an Emerson-style court challenge.** The weakest link is the requirement that a fee be voluntary: a mandatory flat per-household charge fails this unless the transfer-station sticker program lets a household opt out of curbside pickup entirely.
 - **Structure determines survival.** A trash fee funneled through a dedicated municipal fund that can only pay for trash services (state law calls this an "enterprise fund") would cleanly pass the test. A flat charge imposed directly by the Board of Health under its general health-regulation authority is the most exposed structure.
-- **Massachusetts courts have struck down a municipal trash fee before.** [Springfield, February 17, 2007](https://www.springfield-ma.gov/dpw/trashfee1/i-thought-the-trash-fee-was-invalidated-by-the-court). Grounds are not in the public record, but the precedent that a flat municipal trash fee can lose in court is established.
+- **Massachusetts courts have struck down a flat municipal trash fee before.** Springfield, [*Coakley-Rivera v. City of Springfield*, Hampden Superior Court No. 06-1010](https://www.springfield-ma.gov/cos/fileadmin/clerk/Finance_Control_Board_Minutes_and_Executive_Orders_2004-2006_reduced.pdf), preliminary injunction November 20, 2006. The city rebuilt the fee with an enterprise fund, an explicit opt-out, and per-container pricing, and the revised fee survived. That three-step fix is exactly the Emerson-test remediation playbook for Marblehead.
 
 ## The three-prong Emerson test
 
@@ -62,7 +62,7 @@ Massachusetts decisions applying the Emerson three-prong test to municipal charg
 | **Berry v. Danvers** | 1993 | Sewer connection fee | 1 | **Struck down.** |
 | **Greater Franklin Developers v. Franklin** | 2000 | School impact fees on developers | 1 | **Struck down.** |
 | [**Silva v. Attleboro**](https://law.justia.com/cases/massachusetts/supreme-court/volumes/454/454mass165.html) | 2008 | Board of Health burial permit fee | none | **Upheld** as valid regulatory fee. |
-| **Springfield, MA trash fee** | 2007 | Flat municipal trash fee | Not in public record | **Struck down.** Trial-court order Feb 17, 2007. Settled. |
+| [**Coakley-Rivera v. Springfield**](https://www.springfield-ma.gov/cos/fileadmin/clerk/Finance_Control_Board_Minutes_and_Executive_Orders_2004-2006_reduced.pdf) | 2006 | Flat municipal trash fee (general fund) | 1, 2, 3 implied | **Preliminary injunction Nov 20, 2006.** City later restructured into an enterprise fund with opt-out and per-container pricing; revised fee upheld. |
 
 The pattern: **Prong 1 and Prong 3 do most of the work.** Prong 2 is often stipulated or easy to satisfy. A flat mandatory per-household fee is the scenario where Prong 2 actually bites.
 
@@ -116,20 +116,32 @@ The pattern: **Prong 1 and Prong 3 do most of the work.** Prong 2 is often stipu
 
 **Why it matters for Marblehead.** The closest example of a Board of Health fee surviving Emerson. The cost-calibration reasoning is directly applicable to Prong 3 analysis of the trash fee: if the $281 tracks actual curbside service cost and the revenue is segregated, the Silva pattern supports the fee.
 
-## Detail: Springfield, MA trash fee (2007)
+## Detail: Coakley-Rivera v. Springfield (Hampden Superior Court, 2006-07)
 
 The clearest Massachusetts precedent for a municipal trash fee being struck down is a trial-court order, not a reported appellate opinion.
 
-**What the City publicly acknowledges** ([Springfield DPW FAQ](https://www.springfield-ma.gov/dpw/trashfee1/i-thought-the-trash-fee-was-invalidated-by-the-court)):
+**Citation.** *Cheryl Coakley-Rivera et al. v. City of Springfield, et al.*, Hampden County Superior Court Case No. 06-1010. Preliminary injunction issued November 20, 2006. Additional court order dated February 17, 2007 required the City to stop collection for FY2007. Confirmed in the [Springfield Finance Control Board minutes and executive orders, 2004-2006](https://www.springfield-ma.gov/cos/fileadmin/clerk/Finance_Control_Board_Minutes_and_Executive_Orders_2004-2006_reduced.pdf) (see the FCB's own recital: *"the Finance Control Board acknowledges that a preliminary Injunction issued on November 20, 2006 by the Hampden County Superior Court in Case No. 06-1010, Cheryl Coakley-Rivera et al v. City of Springfield, et al, currently prevents the City from collecting $2,625,000 in estimated Trash Fee revenue..."*).
 
-- Springfield imposed a municipal trash fee in FY2007.
-- A court order dated **February 17, 2007** required the City to stop collection for FY2007.
-- Residents who had paid were entitled to refunds or credits.
-- A settlement followed. The court approved a new fee program for FY2008, effective July 1, 2007, established by Executive Order of the Springfield Finance Control Board, operating through at least June 30, 2016.
+**Plaintiff context.** Cheryl Coakley-Rivera was at the time a sitting Massachusetts state representative for the Tenth Hampden district (Springfield). She simultaneously pursued legislative repeal of the fee at the State House. This was a politically high-profile suit by a local elected official against a state-appointed Finance Control Board's fee.
 
-**Unknowns.** The City's public FAQ does not identify the case name, the legal grounds, or the structural difference between the invalidated FY2007 fee and the approved FY2008 fee. The Hampden Superior Court docket would need to be pulled to determine whether Emerson factored into the ruling.
+**The invalidated FY2007 fee.** A flat trash fee established by Springfield Finance Control Board Executive Order 8-11-04, targeted to raise $2,625,000 in FY07. The FCB minutes describe it as a general charge to cover solid waste collection costs, deposited into the general fund rather than segregated.
 
-**Takeaway for Marblehead.** Not that flat household trash fees always fail, but that a Massachusetts court has in fact ordered a municipality to stop collecting one, and that the structural details of how the fee is imposed and where the money goes matter enough to trigger litigation the municipality lost.
+**How Springfield rebuilt the fee to survive on retry (the FY2008 program).** After the injunction, Springfield did not abandon the fee. It restructured it and the court approved the revised program. The restructuring (documented in [Executive Order #12-18-11 in the same FCB minutes PDF](https://www.springfield-ma.gov/cos/fileadmin/clerk/Finance_Control_Board_Minutes_and_Executive_Orders_2004-2006_reduced.pdf)) reads like a point-by-point Emerson remediation:
+
+- **Prong 1 fix (police-power framing):** *"Solid Waste collection and disposal services is in accordance with the government's police power."*
+- **Prong 2 fix (explicit opt-out):** *"Owners may choose to use the City's Services by paying the Trash Fee, or may choose not to use the Services and avoid the Trash Fee. Owners who choose not to use the City Service shall be responsible for returning the City-provided container."*
+- **Prong 3 fix (enterprise fund segregation):** *"Trash Fees collected pursuant to this order shall be deposited in the Solid Waste Enterprise Fund, pursuant to Mass. Gen. Laws ch. 44, section 53F½"* and *"ch. 44 § 28C."*
+- **Per-container (volume-based) pricing instead of flat-per-household:** *"the Trash Fee shall be charged for each City-provided container used by a Customer."*
+
+The initial fee was $90 per container per year.
+
+**Takeaway for Marblehead.** The Springfield episode is the clearest real-world precedent that:
+
+1. A Massachusetts court will issue a preliminary injunction against a flat municipal trash fee deposited into the general fund and mandatory on every household.
+2. The three structural fixes that let the same municipality's fee survive on retry are exactly the three Emerson prongs: police-power framing, genuine opt-out, and enterprise-fund segregation.
+3. Per-container pricing rather than flat-per-household strengthens the case.
+
+If Question 2 fails and the Board of Health's fallback is a flat $281 per household fee deposited into the general fund without an enforceable opt-out, Marblehead would be in the FY2007-Springfield posture, not the FY2008-Springfield posture.
 
 ## Other cases, briefly
 
@@ -147,7 +159,7 @@ Tracked on [GitHub Issue #591](https://github.com/agbaber/marblehead/issues/591)
 3. Are the fee revenues legally segregated to the Republic Services contract, or do they flow to the general fund?
 4. Is the fee structure an enterprise fund under [G.L. c. 44 § 53F½](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section53F1~2), or a Board of Health regulatory charge under [c. 111](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXVI/Chapter111)?
 5. How many Marblehead properties hold c. 59 § 5 exemptions by clause, and how many receive curbside pickup?
-6. *Partially answered above.* The Springfield 2007 docket would confirm whether Emerson was the basis for that invalidation.
+6. *Answered.* The Springfield case is *Coakley-Rivera v. City of Springfield*, Hampden Superior Court No. 06-1010. The exact legal reasoning in the preliminary injunction is not in the public FCB minutes, but the three structural fixes the city made on retry (enterprise fund segregation, explicit opt-out, per-container pricing) line up with the three Emerson prongs, making Emerson the strongly-implied basis.
 
 ## Sources
 
@@ -161,6 +173,7 @@ Tracked on [GitHub Issue #591](https://github.com/agbaber/marblehead/issues/591)
 
 - Boston Globe, ["Appeals court orders Saugus to refund sewer-connection fees"](http://archive.boston.com/news/local/articles/2011/01/23/appeals_court_orders_saugus_to_refund_sewer_connection_fees/) (January 23, 2011)
 - Springfield DPW, ["I thought the trash fee was invalidated by the court"](https://www.springfield-ma.gov/dpw/trashfee1/i-thought-the-trash-fee-was-invalidated-by-the-court)
+- Springfield Finance Control Board, [minutes and executive orders 2004-2006 (PDF)](https://www.springfield-ma.gov/cos/fileadmin/clerk/Finance_Control_Board_Minutes_and_Executive_Orders_2004-2006_reduced.pdf). Names Coakley-Rivera v. City of Springfield, Case No. 06-1010, and documents the FY2008 restructured fee (Executive Order #12-18-11) verbatim.
 
 **Statutes and ordinances**
 
