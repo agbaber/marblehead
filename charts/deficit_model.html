@@ -1592,22 +1592,22 @@ An override on its own buys time. It does not change the slope of either line.
     var ev = parseFloat(expGrowthEl.value);
 
     if (ovr > 0) {
-      var absorption = ry === 1 ? 'absorbed immediately' : 'absorbed over ' + ry + ' years';
-      parts.push('<strong>' + fmtOverride(ovr) + '</strong> override phased in FY27\u201329, spending ' + absorption + '.');
+      var absorption = ry === 1 ? 'spent in year one' : 'spent over ' + ry + ' years of new hires, contracts, and programs';
+      parts.push('<strong>' + fmtOverride(ovr) + '</strong> override phased in FY27\u201329, ' + absorption + '.');
     }
     if (positionCuts > 0) {
       var savings = positionCuts * costPerPosition;
       var pct = (savings / histExp[lastHistIdx] * 100).toFixed(1);
-      parts.push('<strong>' + positionCuts + ' positions</strong> cut = ' + fmtOverride(savings) + '/yr savings (' + pct + '% of budget).');
+      parts.push('<strong>' + positionCuts + ' positions</strong> cut at roughly $100K/yr each (wages plus benefits) = <strong>' + fmtOverride(savings) + '/yr</strong>, about ' + pct + '% of the budget.');
     }
     if (newShare < 83) {
-      parts.push('Healthcare shift to <strong>' + newShare + '%</strong> employer: ' + fmtOverride(hc.gross) + ' gross \u2212 ' + fmtOverride(hc.wageIncrease) + ' wages \u2212 ' + fmtOverride(hc.pensionIncrease) + ' pension = <strong>' + fmtOverride(hc.net) + '</strong> net.');
+      parts.push('Healthcare shift to <strong>' + newShare + '%</strong> employer saves <strong>' + fmtOverride(hc.gross) + '/yr</strong> in premiums. Contracts typically return part of that to employees as wage increases (<strong>' + fmtOverride(hc.wageIncrease) + '</strong>), which then raises pension costs (<strong>' + fmtOverride(hc.pensionIncrease) + '</strong>). Net savings: <strong>' + fmtOverride(hc.net) + '/yr</strong>.');
     }
     if (Math.abs(rv - 3.5) > 0.05 || Math.abs(ev - 4.0) > 0.05) {
-      parts.push('Growth assumption: <strong>revenue ' + rv.toFixed(1) + '%</strong>, <strong>expenses ' + ev.toFixed(1) + '%</strong>.');
+      parts.push('Growth set to <strong>revenue ' + rv.toFixed(1) + '%/yr</strong>, <strong>expenses ' + ev.toFixed(1) + '%/yr</strong> (defaults: 3.5% / 4.0%).');
     }
     if (ev <= rv) {
-      parts.push('Because expense growth is at or below revenue growth, the lines do not re-cross under these assumptions.');
+      parts.push('At these growth rates, expenses rise no faster than revenue, so the lines do not re-cross.');
     }
 
     if (parts.length > 0) {
