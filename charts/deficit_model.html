@@ -165,14 +165,14 @@ title: "Deficit Dynamics Model"
     font-size: 13px;
     padding: 8px 14px;
     border: 1px solid var(--c-navy);
-    background: #fff;
+    background: transparent;
     color: var(--c-navy);
     border-radius: 4px;
     cursor: pointer;
   }
   .dm-tour-nav-btn:hover, .dm-tour-exit:hover,
   .dm-tour-nav-btn:focus-visible, .dm-tour-exit:focus-visible {
-    background: var(--c-fog);
+    background: color-mix(in srgb, var(--c-navy) 12%, transparent);
   }
   .dm-tour-nav-btn:disabled {
     opacity: 0.4;
@@ -180,11 +180,11 @@ title: "Deficit Dynamics Model"
   }
   .dm-tour-nav-next {
     background: var(--c-navy);
-    color: #fff;
+    color: var(--bg);
   }
   .dm-tour-nav-next:hover,
   .dm-tour-nav-next:focus-visible {
-    background: #1a2d4a;
+    background: color-mix(in srgb, var(--c-navy) 85%, var(--text));
   }
   .dm-tour-exit {
     font-size: 11px;
@@ -917,7 +917,7 @@ An override on its own buys time. It does not change the slope of either line.
 
   // === Main chart layout ===
   var svgW = 880, svgH = 460;
-  var mL = 70, mR = 100, mT = 28, mB = 60;
+  var mL = 70, mR = 170, mT = 28, mB = 60;
   var plotW = svgW - mL - mR;
   var plotH = svgH - mT - mB;
 
