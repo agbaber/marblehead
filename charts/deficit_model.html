@@ -657,9 +657,11 @@ title: "Deficit Dynamics Model"
     .dm-walkthrough-row { gap: 8px; }
     .dm-walkthrough-btn { width: 100%; }
     .dm-walkthrough-row .dm-hint { font-size: 11px; }
+    .dm-tour-panel { padding: 10px 12px; margin: 8px 0; }
+    .dm-tour-step-row { margin-bottom: 4px; }
+    .dm-tour-caption { font-size: 13px; margin-bottom: 8px; line-height: 1.4; }
     .dm-tour-controls { gap: 6px; }
-    .dm-tour-nav-btn { flex: 1 1 45%; text-align: center; }
-    .dm-tour-caption { font-size: 14px; }
+    .dm-tour-nav-btn { flex: 1 1 45%; text-align: center; padding: 8px 10px; }
   }
 </style>
 
@@ -671,18 +673,6 @@ title: "Deficit Dynamics Model"
     Show me how this works
   </button>
   <span class="dm-hint">A 6-step tour of the chart. You control the pace.</span>
-</div>
-
-<div class="dm-tour-panel" id="dm-tour-panel" hidden aria-live="polite" aria-label="Guided tour">
-  <div class="dm-tour-step-row">
-    <span class="dm-tour-step-indicator">Step <span id="dm-tour-index">1</span> of <span id="dm-tour-total">6</span></span>
-    <button type="button" class="dm-tour-exit" id="dm-tour-exit">Exit tour</button>
-  </div>
-  <div class="dm-tour-caption" id="dm-tour-caption"></div>
-  <div class="dm-tour-controls">
-    <button type="button" class="dm-tour-nav-btn" id="dm-tour-prev">&larr; Back</button>
-    <button type="button" class="dm-tour-nav-btn dm-tour-nav-next" id="dm-tour-next">Next &rarr;</button>
-  </div>
 </div>
 
 <div class="dm-tax-row">
@@ -755,6 +745,18 @@ title: "Deficit Dynamics Model"
   </g>
   <rect id="dm-hover-overlay" class="dm-hover-overlay" x="0" y="0" width="880" height="460"></rect>
 </svg>
+
+<div class="dm-tour-panel" id="dm-tour-panel" hidden aria-live="polite" aria-label="Guided tour">
+  <div class="dm-tour-step-row">
+    <span class="dm-tour-step-indicator">Step <span id="dm-tour-index">1</span> of <span id="dm-tour-total">6</span></span>
+    <button type="button" class="dm-tour-exit" id="dm-tour-exit">Exit tour</button>
+  </div>
+  <div class="dm-tour-caption" id="dm-tour-caption"></div>
+  <div class="dm-tour-controls">
+    <button type="button" class="dm-tour-nav-btn" id="dm-tour-prev">&larr; Back</button>
+    <button type="button" class="dm-tour-nav-btn dm-tour-nav-next" id="dm-tour-next">Next &rarr;</button>
+  </div>
+</div>
 
 <div class="dm-tier-buttons">
   <button type="button" data-preset="baseline">No override</button>
@@ -1971,6 +1973,13 @@ An override on its own buys time. It does not change the slope of either line.
     var idx = 0;
     var active = false;
 
+    function scrollPanelIntoView() {
+      panel.scrollIntoView({
+        behavior: reducedMotion && reducedMotion.matches ? 'auto' : 'smooth',
+        block: 'end'
+      });
+    }
+
     function renderStep() {
       indexEl.textContent = idx + 1;
       captionEl.textContent = steps[idx].caption;
@@ -1978,6 +1987,7 @@ An override on its own buys time. It does not change the slope of either line.
       nextBtn.textContent = idx === steps.length - 1 ? 'Finish' : 'Next \u2192';
       steps[idx].setup();
       onChange();
+      scrollPanelIntoView();
     }
 
     function startTour() {
@@ -1986,10 +1996,6 @@ An override on its own buys time. It does not change the slope of either line.
       panel.hidden = false;
       startBtn.setAttribute('aria-expanded', 'true');
       renderStep();
-      panel.scrollIntoView({
-        behavior: reducedMotion && reducedMotion.matches ? 'auto' : 'smooth',
-        block: 'start'
-      });
     }
 
     function exitTour() {
