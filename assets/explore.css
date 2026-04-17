@@ -97,6 +97,10 @@
   .featured-answers-prompt {
     margin: 0;
   }
+  /* Scroll-margin so smooth-scrolling to an evidence panel (from the
+     featured-question tap handler) clears the sticky site nav. Matches
+     the h2[id] { scroll-margin-top: 68px } rule in site.css. */
+  .evidence { scroll-margin-top: 68px; }
 
   .explore-question-list {
     display: flex;
