@@ -1,0 +1,107 @@
+name: Lint
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  secrets:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install gitleaks
+        run: |
+          set -euo pipefail
+          VERSION=8.18.4
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${VERSION}/gitleaks_${VERSION}_linux_x64.tar.gz" \
+            | tar -xz gitleaks
+          sudo mv gitleaks /usr/local/bin/gitleaks
+
+      - name: Run gitleaks (full repo scan)
+        run: |
+          gitleaks detect \
+            --source . \
+            --no-banner \
+            --redact \
+            --verbose
+
+  content:
+    name: Content guardrails
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Diff-based guardrails on site-facing HTML and markdown
+        run: |
+          set -euo pipefail
+
+          BASE_REF="${{ github.event.pull_request.base.ref }}"
+          git fetch --quiet origin "$BASE_REF"
+
+          # Restrict to site-facing HTML/markdown. Exclusions match the
+          # Jekyll exclude list in _config.yml, plus .github so this
+          # workflow file never trips its own checks.
+          PATHSPEC=(
+            '*.html'
+            '*.md'
+            ':!README.md'
+            ':!STYLE_GUIDE.md'
+            ':!CLAUDE.md'
+            ':!docs'
+            ':!community-pulse'
+            ':!.github'
+          )
+
+          added=$(git diff "origin/$BASE_REF"...HEAD -- "${PATHSPEC[@]}" \
+                  | grep '^+' | grep -v '^+++' || true)
+
+          if [ -z "$added" ]; then
+            echo "No site-facing content changes in this PR."
+            exit 0
+          fi
+
+          fail=0
+
+          # ---------- Em-dashes ----------
+          # STYLE_GUIDE: no em-dashes in site copy. Use &ndash; or "to"/"through".
+          # Existing violations in master-data.html, case_studies.md, etc. are
+          # grandfathered because the check only inspects added lines.
+          em_dash=$(printf '%s\n' "$added" | grep -nE '—|&mdash;|&#8212;' || true)
+          if [ -n "$em_dash" ]; then
+            echo "::error title=Em-dash introduced::STYLE_GUIDE forbids em-dashes in site copy. Use &ndash; or rephrase."
+            printf '%s\n' "$em_dash"
+            fail=1
+          fi
+
+          # ---------- Editorial language ----------
+          # CLAUDE.md editorial-stance rule: no "shocking", "outrageous",
+          # "crisis", "skyrocketing" in site prose. If you are quoting a
+          # source, put the word inside the quoted text and attribute it.
+          editorial=$(printf '%s\n' "$added" | grep -nEi 'shocking|outrageous|crisis|skyrocketing' || true)
+          if [ -n "$editorial" ]; then
+            echo "::error title=Editorial language introduced::CLAUDE.md forbids shocking/outrageous/crisis/skyrocketing in site prose. Rephrase, or move the word inside an attributed quote."
+            printf '%s\n' "$editorial"
+            fail=1
+          fi
+
+          # ---------- Citation-source guardrail ----------
+          # Primary source documents should link to source-archive-v1 on the
+          # release, not to the town's mutable WordPress uploads path. See
+          # data/archive.md for the canonical file list.
+          marblehead=$(printf '%s\n' "$added" | grep -nE 'marbleheadma\.gov/wp-content/uploads/' || true)
+          if [ -n "$marblehead" ]; then
+            echo "::error title=New marbleheadma.gov upload URL::Use the source-archive-v1 release URLs (see data/archive.md) so citations survive upstream WordPress churn."
+            printf '%s\n' "$marblehead"
+            fail=1
+          fi
+
+          exit $fail
