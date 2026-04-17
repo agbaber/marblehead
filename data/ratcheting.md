@@ -88,22 +88,24 @@ The clean post-cluster window is FY07 through FY27 (21 years with no successful 
   <polyline class="data-line data-line--bold s-cost" points="370,199.3 395,193.5 420,191.3 445,183.3 470,176.8 495,169.2 520,162.4 545,161.4 570,161.7"/>
   <text x="575" y="158" class="end-label s-cost">Education (actual)</text>
 
-  <polyline class="data-line data-line--dashed s-cost" points="195,224.9 220,222.5 245,220.0 270,217.5 295,215.0 320,212.3 345,209.7 370,206.9 395,204.1 420,201.2 445,198.2 470,195.2 495,192.0 520,188.8 545,185.6 570,182.2"/>
-  <text x="575" y="186" class="end-label s-cost">Education (if post-FY06 had been 2.5%/yr)</text>
+  <polyline class="data-line data-line--dashed s-cost" points="195,224.9 220,221.3 245,217.6 270,213.7 295,210.1 320,205.8 345,201.9 370,197.5 395,193.3 420,189.4 445,185.1 470,180.5 495,176.1 520,171.7 545,167.3 570,162.8"/>
+  <text x="575" y="170" class="end-label s-cost">Education (if post-FY06 tracked levy-limit growth)</text>
 </svg>
 <figcaption>
-Solid lines are actuals through FY21 (chart stops before the FY22-FY24 <abbr class="g" title="Governmental Accounting Standards Board">GASB</abbr> reclassification anomalies). Levy limit extends through FY27. Dashed line is a ratcheting-only counterfactual: education expenditure compounded from the FY06 level at 2.5% per year, which is what spending would look like if the override had stepped up the baseline and then growth had stayed at the statutory cap. Sources: <a href="https://github.com/agbaber/marblehead/blob/main/data/marblehead_levy.csv">marblehead_levy.csv</a> for levy limit; <a href="https://github.com/agbaber/marblehead/blob/main/data/master_financial_data_FY01-24.csv">master_financial_data_FY01-24.csv</a> for education expenditure, traced to ACFR "Changes in Fund Balances" school-operations rows.
+Solid lines are actuals through FY21 (chart stops before the FY22-FY24 <abbr class="g" title="Governmental Accounting Standards Board">GASB</abbr> reclassification anomalies). Levy limit extends through FY27. The dashed line is a ratcheting-only counterfactual: education expenditure compounded from the FY06 level at the year-by-year actual growth rate of Marblehead's levy limit (about 3.41% per year on average post-FY06, capturing both the 2.5% statutory cap and certified new growth). This is what spending would look like if the override had stepped up the baseline and then growth had tracked the revenue ceiling. Sources: <a href="https://github.com/agbaber/marblehead/blob/main/data/marblehead_levy.csv">marblehead_levy.csv</a> for levy limit; <a href="https://github.com/agbaber/marblehead/blob/main/data/master_financial_data_FY01-24.csv">master_financial_data_FY01-24.csv</a> for education expenditure, traced to ACFR "Changes in Fund Balances" school-operations rows.
 </figcaption>
 </figure>
 
 Two patterns are visible in the post-cluster window (FY07 onward):
 
-- **Growth rates did reset.** The post-cluster levy-limit slope is about 3.25% per year, which matches the 2.5% statutory cap plus roughly 0.7% certified new growth.<sup class="cite"
+- **Growth rates did reset.** The post-cluster levy-limit slope is about 3.45% per year on an FY07 through FY19 window, which matches the 2.5% statutory cap plus roughly 0.9% certified new growth.<sup class="cite"
   data-href="https://github.com/agbaber/marblehead/blob/main/why-not-elsewhere.html"
-  data-source="Marblehead 5-year average new growth FY22-FY26 = 0.54%, sourced from MA DOR DLS (why-not-elsewhere.html)"></sup> That is the structural default for a built-out residential municipality and would have been the trajectory regardless of FY02-FY06 override outcomes.
-- **The expense slope stayed above the revenue slope.** Education-expenditure growth of about 4.0% per year in the clean FY07 through FY19 window continues to run roughly 0.75 percentage points per year above the levy-limit slope. The actual line runs meaningfully above the dashed counterfactual. A pure ratchet would not predict that divergence; the divergence is what cost-driver growth looks like.
+  data-source="Marblehead 5-year average new growth FY22-FY26 = 0.54%, sourced from MA DOR DLS (why-not-elsewhere.html). The FY07-FY19 average is slightly higher."></sup> That is the structural default for a built-out residential municipality and would have been the trajectory regardless of FY02-FY06 override outcomes.
+- **The expense slope ran above the revenue slope.** Education-expenditure growth was about 3.98% per year over the same FY07 through FY19 window, roughly 0.5 percentage points per year above the levy-limit slope. The actual education line runs above the dashed counterfactual through the mid-window (the biggest visible gap is around FY18 through FY20), then converges by FY21 because of a COVID-era plateau in school expenditure.
 
-The visual test: if ratcheting were the driver, the solid actual-education line would track close to the dashed counterfactual after FY06. It does not. The gap between solid and dashed is the portion of post-FY06 growth that ratcheting-only cannot explain.
+Half a percentage point per year sounds small, and on a single-year view it is. But compounded for 20 years on a $41M FY07 base, a 0.5 pp/yr slope differential produces an $8 million gap by FY27, which is approximately the size of the town's currently-projected structural deficit. The slope mismatch is how a seemingly-stable budget ends up structurally out of balance over a generation.
+
+The visual test: if ratcheting were the sole mechanism, the solid actual-education line would closely track the dashed counterfactual throughout the post-FY06 window. It tracks the counterfactual slope direction, but runs persistently above it through FY19 by a few million dollars. That visible gap is the portion of post-FY06 growth that ratcheting-only cannot explain; cost-driver growth is the rest.
 
 ## What the record supports
 
@@ -149,6 +151,6 @@ Marblehead's total property tax levy as reported in ACFR "Property Tax Levies an
 ## Caveats
 
 - **Education-expenditure reclassifications:** FY12 and FY22 through FY24 education expenditure has large year-over-year swings driven by GASB accounting reclassifications, not by service-level changes. The FY07 through FY19 window is used as the clean trend and the chart stops at FY21 for that reason.
-- **Counterfactual is a 2.5% projection, not a re-run of history.** The dashed line compounds FY06 education expenditure at the statutory cap rate. It does not recover the certified new-growth component, which would add roughly 0.5 to 0.7 percentage points per year. A fuller counterfactual would sit slightly above the dashed line; the qualitative finding (actual runs above counterfactual) is robust to that adjustment.
+- **Counterfactual uses actual levy-limit growth, not a re-run of history.** The dashed line compounds FY06 education expenditure at Marblehead's actual year-by-year levy-limit growth rate, which captures both the 2.5% statutory cap and certified new growth (roughly 0.9% per year on average post-FY06). This is a stronger benchmark than a flat 2.5% projection; the persistent gap between solid actual and dashed counterfactual through FY19 is what remains unexplained by the ratcheting mechanism alone.
 - **Education is one category.** The chart uses education because it is the largest single category and the longest clean series. General-fund total expenditure shows the same qualitative pattern (post-FY06 growth faster than the levy limit) but is harder to plot cleanly because the GASB reclassification swings hit the total too.
 - **The values question is separate.** Whether the mechanically-ratcheted portion of the levy ceiling represents services residents value or a baseline that should have been reduced at some point is a question the data does not answer. Residents will reach different conclusions on it.
