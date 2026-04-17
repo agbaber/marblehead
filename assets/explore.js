@@ -1135,12 +1135,20 @@
   }
 
   /* ── Featured question (first-visit onboarding) ──
-     When the visitor has zero picks, clone the first preferred question
-     (mycost) into the landing's #featuredQuestion slot with its answers
-     visible and tappable. The goal is a clear first action above the
-     fold: a new visitor sees "pick one of three" before they see the
-     two-votes strip or stats row. Hidden the moment any pick exists. */
-  var FEATURED_TOPIC = 'mycost';
+     When the visitor has zero picks, clone the featured topic into the
+     landing's #featuredQuestion slot with its answers visible and
+     tappable. The goal is a clear first action above the fold: a new
+     visitor sees "pick one of three" before they see the two-votes
+     strip or stats row. Hidden the moment any pick exists.
+
+     Featured is servicelevel, not the first list-order question
+     (mycost). mycost's three answers are framings of the same cost
+     (monthly vs. 10-year vs. share of income), which reads as
+     confusing when the onboarding promise is "three positions, pick
+     the one you agree with." servicelevel's three answers are genuinely
+     different positions (cut / maintain / expand) and teach the
+     mechanic cleanly. */
+  var FEATURED_TOPIC = 'servicelevel';
   var featuredEl = document.getElementById('featuredQuestion');
   var featuredBuilt = false;
 
