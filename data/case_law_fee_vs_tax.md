@@ -7,114 +7,166 @@ description: "Massachusetts case law on when a municipal 'fee' is legally a tax,
 
 # Case law: fee vs. tax under Proposition 2½
 
-This page collects Massachusetts case law that governs when a municipal charge labeled a "fee" is legally treated as a tax. It is directly relevant to [Question 2 on the June 9, 2026 ballot](../question-2-trash.html), because if voters reject the levy increase, the Board of Health's fallback is a flat $281 per household "fee." Whether that fee can legally survive a court challenge depends on the case law summarized here.
+*Relevant to [Question 2 on the June 9, 2026 ballot](../question-2-trash.html). If voters reject the levy increase, the Board of Health's fallback is a flat $281 per household "fee." Whether that fee survives a court challenge depends on the case law below.*
 
-This is not legal advice. It is a research note for residents who want to understand what is and is not settled in Massachusetts municipal finance law. Every claim below cites the primary opinion.
+**Not legal advice.** Research note for residents. Every claim cites the primary opinion.
 
-## The controlling case: Emerson College v. City of Boston (1984)
+## Bottom line
 
-**Citation.** Emerson College v. City of Boston, 391 Mass. 415, 462 N.E.2d 1098 (1984). Supreme Judicial Court of Massachusetts, Suffolk. Argued November 8, 1983; decided March 14, 1984. Opinion by Justice Abrams (unanimous; Hennessey C.J., Abrams, Lynch, O'Connor JJ.). No dissent.
+- **The $281 flat fee is structurally vulnerable to an Emerson challenge.** The weakest link is Prong 2 (voluntariness): a mandatory flat per-household charge fails unless the transfer-station sticker program is a real opt-out.
+- **Structure determines survival.** An enterprise fund under G.L. c. 44, § 53F½ cleanly satisfies Emerson. A Board of Health regulatory charge under c. 111 is the most exposed structure.
+- **Massachusetts courts have struck down a municipal trash fee before.** Springfield, February 17, 2007. Grounds are not in the public record, but the precedent that a flat municipal trash fee can lose in court is established.
 
-**Facts.** In 1982, the Massachusetts Legislature authorized the city of Boston to impose an "Augmented Fire Services Availability" (AFSA) charge on owners of buildings whose firefighting needs exceeded 3,500 gallons per minute. About 2,000 buildings (roughly 2 percent of Boston's stock) qualified. The charge funded 8.5 of Boston's 56.5 fire companies, covering about 13 percent of the Boston Fire Department's fiscal 1983 budget. Emerson College, a property-tax-exempt educational institution under G.L. c. 59, § 5, was billed $12,029 on three buildings and sued for declaratory judgment, arguing the charge was a disguised property tax from which it was exempt.
+## The three-prong Emerson test
 
-**Holding.** The SJC affirmed the Superior Court judgment invalidating both the authorizing statute and the implementing ordinance. The court concluded that the AFSA charge was "a chimera, bearing features of both a fee and a tax, but not valid in either form."
+A valid fee must pass all three. Failing any one recharacterizes the charge as a tax.
 
-**The three-prong test.** The opinion established the test that has controlled Massachusetts fee-versus-tax analysis ever since. A valid fee is one that meets all three of these conditions (391 Mass. 415, 424-25):
+| # | Test | How a fee passes |
+|---|---|---|
+| 1 | **Particularized benefit** | Service benefits the payer in a way not shared by other members of society |
+| 2 | **Voluntary** | Payer can avoid the charge by not using the service |
+| 3 | **Cost recovery** | Revenue compensates the municipality for expenses, not to raise general revenue |
 
-1. It is "charged in exchange for a particular governmental service which benefits the party paying the fee" in a manner "not shared by other members of society." (Citing National Cable Television Ass'n v. United States, 415 U.S. 336, 341 (1974).)
-2. It is "paid by choice, in that the party paying the fee has the option of not utilizing the governmental service and thereby avoiding the charge." (Citing Vanceburg v. FERC, 571 F.2d 630, 644 n.48 (D.C. Cir. 1977).)
-3. It is "collected not to raise revenues but to compensate the governmental entity providing the services for its expenses."
+Source: [Emerson College v. City of Boston](https://law.justia.com/cases/massachusetts/supreme-court/1984/391-mass-415-2.html), 391 Mass. 415, 424-25 (1984).
 
-Failing any one of the three prongs is enough to recharacterize the charge as a tax. The AFSA failed all three:
+## Does the Marblehead $281 fee pass?
 
-- **Prong 1.** Fire protection benefits the public broadly, not just the paying owner. In a dense city, "the prevention of damage to buildings by fire is an object which affects the interest of all the inhabitants" (quoting Fisher v. Boston, 104 Mass. 87, 93 (1870)).
-- **Prong 2.** Owners could not opt out of AFSA. Compelled use is inconsistent with fee character.
-- **Prong 3.** The statute directed AFSA revenues to general "police and fire services," not solely to the 8.5 AFSA fire companies. Earmarking to a broader fund is "of weight in indicating that the charge is a tax" (quoting P. Nichols, Taxation in Massachusetts 7 (3d ed. 1938)).
+| Prong | Likely outcome | Why |
+|---|---|---|
+| 1. Particularized benefit | **Probably passes** | Curbside pickup is address-specific, more particularized than the fire protection in Emerson. Countervailing: public-health benefits (pests, odor, disease vectors) extend beyond the payer. |
+| 2. Voluntary | **Weakest link** | A flat mandatory charge fails this. Survives only if the transfer-station sticker program is a real opt-out that a paying household can choose. |
+| 3. Cost recovery | **Depends on structure** | Revenue must flow only to the Republic Services contract and admin. General-fund sweep kills it (the exact AFSA flaw). An enterprise fund under c. 44 § 53F½ cleanly satisfies. |
 
-**Why legislative labeling does not control.** The court explained that "the nature of a monetary exaction must be determined by its operation rather than its specially descriptive phrase" (quoting Thomson Elec. Welding Co. v. Commonwealth, 275 Mass. 426, 429 (1931)). Calling a charge a "fee" in the authorizing statute does not make it one. The city had also argued the AFSA was a valid excise tax on the "privilege" of receiving augmented fire protection; the court rejected that too, because excises require voluntariness and owners could not reject AFSA.
+**Cleanest surviving structure:** pay-as-you-throw (PAYT) or an enterprise fund under G.L. c. 44, § 53F½. Explicit opt-out via non-use, priced per unit of service, revenue statutorily segregated.
 
-## Application to the Question 2 trash fallback fee
+**Most vulnerable structure:** a flat mandatory per-household charge with revenue sweeping to the general fund.
 
-If Question 2 fails on June 9, 2026, the Board of Health has said it will impose a flat $281 per household curbside trash fee. Whether that charge survives Emerson scrutiny depends entirely on how it is structured.
+## Who could sue in Marblehead
 
-**Prong 1 (particularized benefit).** Likely survives. Curbside trash pickup is physically delivered to a specific address, which is more clearly particularized than the city-wide fire protection at issue in Emerson. However, solid-waste collection has a secondary public-health benefit (pest control, odor, disease vector management) that benefits the town broadly. In a dense town, the same logic that killed Prong 1 for fire protection could apply to trash.
+Emerson College sued because a "fee" reaches property-tax-exempt property; a levy does not. The same gap exists here for three groups.
 
-**Prong 2 (voluntary).** The weakest link. A flat mandatory $281 per household with no opt-out is structurally the same as AFSA and would likely fail Prong 2. The narrow save is the transfer station sticker program: if a household can legitimately refuse curbside service, haul its own trash to the transfer station, and pay no $281, that makes the fee genuinely voluntary in the Emerson sense. If the $281 applies to every residential property regardless of whether the household uses the curbside service, Prong 2 fails.
+| Potential plaintiff class | Why they would sue | Scale |
+|---|---|---|
+| **Individual c. 59 § 5 exempt residents**: disabled veterans (Clause 22E full, 22A-D partial), legally blind (37A), qualifying low-income elderly (41A, 41C, 41D), surviving spouses (17D, 17E) | Pay zero or reduced levy; would pay full $281 | Unknown. See [Issue #591 Q5](https://github.com/agbaber/marblehead/issues/591). Count available from DOR Municipal Databank and assessor Form MAR-1. |
+| **Charity or religious residential property**: parish houses, rectories, nonprofit-owned affordable housing, Housing Trust properties (c. 59 § 5 Clauses 3, 10, 11) | Literal Emerson plaintiff type; strongest institutional standing | Narrow. Requires cross-referencing the assessor's exemption list with the DPW curbside pickup route. |
+| **Senior tax relief recipients**: Circuit Breaker, Clause 41 variants, pending H.4225 means-tested exemption | Flat fee routes around protections the Legislature established for seniors | Overlaps with the first class. |
 
-**Prong 3 (cost recovery).** Depends on structure. Revenue from the fee must flow only to the Republic Services curbside contract and directly related administrative costs. If it lands in the general fund or funds anything beyond curbside collection, the Emerson footnote on AFSA's "police and fire services" earmark applies directly and the fee fails Prong 3. An enterprise fund under G.L. c. 44, § 53F½ cleanly satisfies this prong because enterprise revenues are statutorily segregated.
+## Precedent at a glance
 
-**The cleanest legal structure.** A pay-as-you-throw (PAYT) or enterprise-fund solid-waste fee is the most robust against Emerson challenge: it is clearly voluntary (you control what you throw away), clearly cost-recovery (priced per unit of service), and clearly particularized (the service is delivered to you individually). A flat mandatory fee on every household is the most Emerson-vulnerable structure.
+Massachusetts decisions applying the Emerson three-prong test to municipal charges.
 
-## The plaintiff class in Marblehead
+| Case | Year | Charge at issue | Prongs failed | Outcome |
+|---|---|---|---|---|
+| [**Emerson College v. Boston**](https://law.justia.com/cases/massachusetts/supreme-court/1984/391-mass-415-2.html) | 1984 | Fire services availability fee | 1, 2, 3 | **Struck down.** Controlling SJC case. |
+| [**Denver Street LLC v. Saugus**](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/78/78massappct526.html) | 2011 | Sewer I/I fee under c. 40 § 22F | 1, 3 | **Struck down.** $1.1M refunded with interest. |
+| **Berry v. Danvers** | 1993 | Sewer connection fee | 1 | **Struck down.** |
+| **Greater Franklin Developers v. Franklin** | 2000 | School impact fees on developers | 1 | **Struck down.** |
+| [**Silva v. Attleboro**](https://law.justia.com/cases/massachusetts/supreme-court/volumes/454/454mass165.html) | 2008 | Board of Health burial permit fee | none | **Upheld** as valid regulatory fee. |
+| **Springfield, MA trash fee** | 2007 | Flat municipal trash fee | Not in public record | **Struck down.** Trial-court order Feb 17, 2007. Settled. |
 
-Emerson College sued because a "fee" could be levied on its property-tax-exempt buildings, while a property tax could not. The same structural gap exists in Marblehead if a flat fee is imposed. Three groups are candidates:
+The pattern: **Prong 1 and Prong 3 do most of the work.** Prong 2 is often stipulated or easy to satisfy. A flat mandatory per-household fee is the scenario where Prong 2 actually bites.
 
-1. **Individual property-tax-exempt residents** under G.L. c. 59, § 5: Clause 22E (100% disabled veterans, full exemption), Clauses 22 through 22D (partial veteran exemptions), Clause 37A (legally blind), Clauses 41A, 41C, and 41D (qualifying low-income elderly), and Clauses 17D and 17E (surviving spouses, minor children of deceased). These residents pay zero or reduced property tax on their homes but would pay the full $281 flat fee. This is the direct analog to the Emerson College posture, applied to individuals.
-2. **Residential property owned by charitable or religious organizations** (c. 59, § 5, Clauses 3, 10, 11) that receives residential-style curbside pickup: parish houses, rectories, nonprofit-owned affordable housing, any Housing Trust properties. This is the narrowest institutional class but has the strongest institutional standing as the literal Emerson plaintiff type.
-3. **Senior tax relief recipients** who are currently protected from property-tax growth through Circuit Breaker, Clause 41 variants, and the pending means-tested exemption under H.4225. A flat fee routes around the policy framework that treats senior cost burden as a policy concern.
+---
 
-The specific count of Marblehead properties in category 1 is available from the Department of Revenue Municipal Databank and the town assessor's Form MAR-1. Category 2 requires cross-referencing the assessor's exemption list with the Department of Public Works curbside pickup route.
+## Detail: Emerson College v. Boston (1984)
 
-## Related Massachusetts fee-vs-tax cases
+**Citation.** 391 Mass. 415, 462 N.E.2d 1098. SJC, Suffolk. Decided March 14, 1984. Opinion by Abrams J. (unanimous: Hennessey C.J., Abrams, Lynch, O'Connor JJ.).
 
-Subsequent cases show how courts apply the Emerson three-prong test to charges for municipal utility-type services. The pattern is clear: Prong 1 (particularized benefit) and Prong 3 (cost recovery) do most of the work. Prong 2 (voluntary) is often stipulated or easy to satisfy.
+**Facts.** St. 1982 c. 190 § 30 authorized Boston to impose an "Augmented Fire Services Availability" (AFSA) charge on owners of buildings whose firefighting needs exceeded 3,500 gallons per minute. About 2,000 buildings (2 percent of Boston's stock) qualified. The charge funded 8.5 of 56.5 fire companies, about 13 percent of the Boston fire department's FY1983 budget. Emerson College, a property-tax-exempt institution under G.L. c. 59 § 5, was billed $12,029 on three buildings and sued.
 
-**Silva v. City of Attleboro**, 454 Mass. 165 (2008). Charges assessed by boards of health for the issuance of burial permits were upheld as valid regulatory fees. The SJC found that the amounts charged were reasonably proportional to the costs of administering the permit process, and that the record showed the charges were collected for compensation rather than general revenue. This is the closest analog to a Board of Health fee surviving Emerson, and the cost-calibration reasoning is directly relevant to Prong 3 analysis of the Marblehead trash fee.
+**Holding.** Statute and ordinance struck down. The AFSA was "a chimera, bearing features of both a fee and a tax, but not valid in either form."
 
-**Denver Street LLC v. Town of Saugus**, 78 Mass. App. Ct. 526 (2011). Saugus imposed an "inflow and infiltration reduction contribution" on developers seeking sewer connections, claiming authority under G.L. c. 40, § 22F. The Appeals Court held the charge was an illegal tax, not a fee, and ordered the town to refund $670,460 plus 12 percent annual interest (roughly $1.1 million by judgment date). The court found:
+- **Prong 1 failed.** Fire suppression benefits the public broadly: "the prevention of damage to buildings by fire is an object which affects the interest of all the inhabitants" (Fisher v. Boston, 104 Mass. 87, 93 (1870)).
+- **Prong 2 failed.** Owners could not opt out of receiving fire protection.
+- **Prong 3 failed.** Revenue was directed to general "police and fire services," not solely to the 8.5 AFSA fire companies.
 
-- **Prong 1 failed:** Sewer I/I repairs benefited all town inhabitants and downstream communities, not just the new sewer users being charged. "The prevention of damage to buildings by fire is an object which affects the interest of all the inhabitants" (quoting Emerson) applied by analogy to sewer overflow prevention.
-- **Prong 2 was stipulated:** The parties agreed developers could choose not to develop and thus avoid the charge.
-- **Prong 3 failed:** The charges were not reasonably related to the cost of services from which the new users alone derived a benefit.
+**Why labels don't save charges.** "The nature of a monetary exaction must be determined by its operation rather than its specially descriptive phrase" (Thomson Elec. Welding Co. v. Commonwealth, 275 Mass. 426, 429 (1931)). Calling something a fee does not make it one.
 
-This case is directly on point for the Marblehead trash fee because G.L. c. 40, § 22F is one of the candidate statutory authorities for a Board of Health fee. Denver Street shows that c. 40, § 22F does not insulate a charge from Emerson scrutiny if the service benefits the community broadly.
+## Detail: Denver Street LLC v. Saugus (2011)
 
-**Berry v. Town of Danvers**, 34 Mass. App. Ct. 507 (1993). Danvers changed its sewer connection fee from a flat per-connection charge to a volume-based charge of four dollars per gallon of daily sewage discharge. The Appeals Court invalidated the fee as a tax because the sewer repair it funded benefited existing users (whose yards flooded with raw sewage during overflows) along with the new connections being charged. This is the precedent Denver Street relied on and it establishes that municipal utility-type charges fail Prong 1 when the underlying service has broad public-health benefits. Solid waste collection has analogous public-health characteristics (pest control, disease vector management, odor).
+**Citation.** 78 Mass. App. Ct. 526. Appeals Court. Decided January 6, 2011.
 
-**Greater Franklin Developers Ass'n v. Franklin**, 49 Mass. App. Ct. 500 (2000). School impact fees on developers were invalidated as taxes because the benefit of new school facilities accrued to children attending the schools and through them to the community, not in a manner particularized to the fee-paying developers. Prong 1 failure.
+**Facts.** Saugus imposed an "inflow and infiltration reduction contribution" on developers seeking sewer connections, claiming authority under G.L. c. 40 § 22F. Four developer plaintiffs paid $670,460 under protest and sued.
 
-**Nuclear Metals, Inc. v. Low-Level Radioactive Waste Management Bd.**, 421 Mass. 196 (1995). Fees assessed on radioactive waste generators. Cited in later cases for the Prong 2 analysis of what counts as voluntary.
+**Holding.** Charge struck down as an unlawful tax. Saugus ordered to refund $670,460 plus 12 percent annual interest: approximately $1.1 million by judgment date.
 
-**Associated Indus. of Mass., Inc. v. Commissioner of Revenue**, 378 Mass. 657 (1979). Cited in Emerson for the principle that legislative characterization of a charge as a fee gets judicial respect but is not controlling.
+- **Prong 1 failed.** Sewer repair benefits all residents and downstream communities, not just new connections. Berry v. Danvers reasoning transferred directly.
+- **Prong 2 stipulated satisfied.** Developers could choose not to develop and thus avoid the charge.
+- **Prong 3 failed.** Charges were not reasonably related to the cost of services from which the new users alone derived a benefit.
 
-**Opinion of the Justices**, 250 Mass. 591 (1924). Distinguishes user fees (proprietor rights) from regulatory fees (police power) from taxes. Pre-Emerson foundation still cited by the SJC.
+**Why it matters for Marblehead.** G.L. c. 40 § 22F is one of the candidate statutes that could authorize a Board of Health trash fee. Denver Street shows that c. 40 § 22F does not insulate a charge from Emerson scrutiny when the underlying service has community-wide benefits.
 
-## Real-world precedent: Springfield, MA (2007)
+## Detail: Berry v. Danvers (1993)
 
-The clearest Massachusetts precedent for a municipal trash fee being struck down comes from Springfield, not a reported appellate opinion. The facts, as the [City of Springfield Department of Public Works publicly acknowledges](https://www.springfield-ma.gov/dpw/trashfee1/i-thought-the-trash-fee-was-invalidated-by-the-court):
+**Citation.** 34 Mass. App. Ct. 507. Appeals Court.
 
-- Springfield imposed a municipal trash fee in Fiscal Year 2007.
-- A court order dated February 17, 2007, required the City to stop collecting the fee for FY07.
+**Facts.** Danvers shifted its sewer connection fee from a flat per-connection charge to $4 per gallon of daily sewage discharge, after experiencing overflows that flooded yards and streams with raw sewage.
+
+**Holding.** Fee invalidated as a tax. Prong 1 failed because the sewer repair benefited existing users (whose yards flooded during overflows) alongside new connections.
+
+**Why it matters for Marblehead.** Solid waste collection has analogous broad public-health benefits (pest control, odor, disease vectors). The Berry logic transfers directly: a municipal charge for a service whose benefits spill over to the general public fails Prong 1 regardless of how cleanly the charge is calibrated to the individual payer.
+
+## Detail: Silva v. Attleboro (2008)
+
+**Citation.** 454 Mass. 165. SJC.
+
+**Facts.** Boards of health in several cities charged fees to issue burial permits.
+
+**Holding.** Fees upheld as valid regulatory fees. Charges were reasonably proportional to the administrative cost of the permit process and collected for cost recovery, not general revenue.
+
+**Why it matters for Marblehead.** The closest example of a Board of Health fee surviving Emerson. The cost-calibration reasoning is directly applicable to Prong 3 analysis of the trash fee: if the $281 tracks actual curbside service cost and the revenue is segregated, the Silva pattern supports the fee.
+
+## Detail: Springfield, MA trash fee (2007)
+
+The clearest Massachusetts precedent for a municipal trash fee being struck down is a trial-court order, not a reported appellate opinion.
+
+**What the City publicly acknowledges** ([Springfield DPW FAQ](https://www.springfield-ma.gov/dpw/trashfee1/i-thought-the-trash-fee-was-invalidated-by-the-court)):
+
+- Springfield imposed a municipal trash fee in FY2007.
+- A court order dated **February 17, 2007** required the City to stop collection for FY2007.
 - Residents who had paid were entitled to refunds or credits.
-- A settlement followed. The court approved a new trash fee program for FY08, effective July 1, 2007, established by Executive Order of the Springfield Finance Control Board, and specified it would operate through at least June 30, 2016.
+- A settlement followed. The court approved a new fee program for FY2008, effective July 1, 2007, established by Executive Order of the Springfield Finance Control Board, operating through at least June 30, 2016.
 
-The City's published FAQ does not identify the case name or the legal grounds for the original invalidation. The structural change between the invalidated FY07 fee and the approved FY08 fee is also not stated on the City website. Locating the Hampden Superior Court docket and the settlement order would be necessary to determine whether Emerson factored into the ruling.
+**Unknowns.** The City's public FAQ does not identify the case name, the legal grounds, or the structural difference between the invalidated FY2007 fee and the approved FY2008 fee. The Hampden Superior Court docket would need to be pulled to determine whether Emerson factored into the ruling.
 
-The takeaway for Marblehead is not that flat household trash fees always fail, but that Massachusetts courts have in fact ordered a municipality to stop collecting one, and that the structural details of how the fee was imposed and where the money went mattered enough to trigger litigation that the City lost.
+**Takeaway for Marblehead.** Not that flat household trash fees always fail, but that a Massachusetts court has in fact ordered a municipality to stop collecting one, and that the structural details of how the fee is imposed and where the money goes matter enough to trigger litigation the municipality lost.
 
-## Sources
+## Other cases, briefly
 
-- Emerson College v. City of Boston opinion (SJC, March 14, 1984): [Justia](https://law.justia.com/cases/massachusetts/supreme-court/1984/391-mass-415-2.html).
-- Denver Street LLC v. Town of Saugus opinion (Appeals Court, January 6, 2011): [Justia](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/78/78massappct526.html).
-- Silva v. City of Attleboro opinion (SJC, 2009): [Justia](https://law.justia.com/cases/massachusetts/supreme-court/volumes/454/454mass165.html).
-- Boston Globe coverage of the Denver Street refund order: ["Appeals court orders Saugus to refund sewer-connection fees"](http://archive.boston.com/news/local/articles/2011/01/23/appeals_court_orders_saugus_to_refund_sewer_connection_fees/) (January 23, 2011).
-- City of Springfield DPW FAQ on the 2007 trash fee invalidation: ["I thought the trash fee was invalidated by the court"](https://www.springfield-ma.gov/dpw/trashfee1/i-thought-the-trash-fee-was-invalidated-by-the-court).
-- Statute at issue in Emerson: St. 1982, c. 190, § 30.
-- Boston implementing ordinance: City of Boston Code, Ordinances, Title 14, § 459 (as amended February 24, 1983).
-- Property-tax exemption clauses: Massachusetts General Laws Chapter 59, Section 5. Full text at [malegislature.gov](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter59/Section5).
-- Enterprise fund statute: Massachusetts General Laws Chapter 44, Section 53F½.
-- Board of Health authority: Massachusetts General Laws Chapter 111.
-- Municipal service fees general authority: Massachusetts General Laws Chapter 40, Section 22F.
+- **Greater Franklin Developers Ass'n v. Franklin**, 49 Mass. App. Ct. 500 (2000). School impact fees on developers invalidated on Prong 1.
+- **Nuclear Metals v. Low-Level Radioactive Waste Management Bd.**, 421 Mass. 196 (1995). Cited in later cases for Prong 2 analysis.
+- **Associated Indus. v. Commissioner of Revenue**, 378 Mass. 657 (1979). Cited in Emerson for the principle that legislative label gets respect but is not controlling.
+- **Opinion of the Justices**, 250 Mass. 591 (1924). Distinguishes user fees, regulatory fees, and taxes. Pre-Emerson foundation still cited.
 
-## Open research questions on the Marblehead trash fee
+## Open research questions
 
-The following questions are open and would meaningfully change the fee-vs-tax analysis above. They are tracked as a GitHub issue on this project.
+Tracked on [GitHub Issue #591](https://github.com/agbaber/marblehead/issues/591). Answers would materially change the analysis above.
 
 1. Which specific statute does the Board of Health vote cite as authority for the $281 fee?
 2. Is the fee genuinely avoidable by using the transfer station sticker program, or is it charged to every residential property regardless of use?
 3. Are the fee revenues legally segregated to the Republic Services contract, or do they flow to the general fund?
-4. Is the fee structure an enterprise fund under G.L. c. 44, § 53F½, or a Board of Health regulatory charge under c. 111?
-5. How many Marblehead properties currently hold c. 59, § 5 exemptions by clause, and how many of those receive curbside pickup?
-6. *Partially answered by the Springfield, MA section above.* Springfield's FY07 trash fee was ordered halted on February 17, 2007; the case name and invalidation grounds are not in the public FAQ. Digging into the Hampden Superior Court docket would let the page state whether Emerson was the basis.
+4. Is the fee structure an enterprise fund under G.L. c. 44 § 53F½, or a Board of Health regulatory charge under c. 111?
+5. How many Marblehead properties hold c. 59 § 5 exemptions by clause, and how many receive curbside pickup?
+6. *Partially answered above.* The Springfield 2007 docket would confirm whether Emerson was the basis for that invalidation.
 
-These questions are not rhetorical. Their answers determine whether the fallback fee is legally durable or an Emerson target.
+## Sources
+
+**Primary opinions**
+
+- Emerson College v. Boston (SJC, March 14, 1984): [Justia](https://law.justia.com/cases/massachusetts/supreme-court/1984/391-mass-415-2.html)
+- Denver Street LLC v. Saugus (App. Ct., January 6, 2011): [Justia](https://law.justia.com/cases/massachusetts/court-of-appeals/volumes/78/78massappct526.html)
+- Silva v. Attleboro (SJC, 2008): [Justia](https://law.justia.com/cases/massachusetts/supreme-court/volumes/454/454mass165.html)
+
+**Secondary coverage**
+
+- Boston Globe, ["Appeals court orders Saugus to refund sewer-connection fees"](http://archive.boston.com/news/local/articles/2011/01/23/appeals_court_orders_saugus_to_refund_sewer_connection_fees/) (January 23, 2011)
+- Springfield DPW, ["I thought the trash fee was invalidated by the court"](https://www.springfield-ma.gov/dpw/trashfee1/i-thought-the-trash-fee-was-invalidated-by-the-court)
+
+**Statutes and ordinances**
+
+- St. 1982 c. 190 § 30 (Emerson authorizing statute)
+- City of Boston Code, Title 14 § 459, as amended Feb. 24, 1983 (Emerson ordinance)
+- G.L. c. 59 § 5 (property-tax exemption clauses): [malegislature.gov](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter59/Section5)
+- G.L. c. 44 § 53F½ (enterprise fund statute)
+- G.L. c. 111 (Board of Health authority)
+- G.L. c. 40 § 22F (municipal service fees general authority)
