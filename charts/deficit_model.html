@@ -1976,7 +1976,7 @@ An override on its own buys time. It does not change the slope of either line.
     function scrollPanelIntoView() {
       panel.scrollIntoView({
         behavior: reducedMotion && reducedMotion.matches ? 'auto' : 'smooth',
-        block: 'end'
+        block: 'nearest'
       });
     }
 
