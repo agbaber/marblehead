@@ -5,6 +5,11 @@
       <p>Each question shows the strongest case for every answer. Pick the one you agree with. Your picks build into a set of positions you can review or share.</p>
     </div>
 
+    <!-- First-visit onboarding: Q1 expanded inline so the first action is visible
+         without scrolling. JS (renderFeaturedQuestion) populates this when the
+         visitor has zero picks and leaves it empty otherwise. -->
+    <div class="featured-question" id="featuredQuestion"></div>
+
     <!-- Procedural strip: explains the two-step voting process. Either vote can end the override. -->
     <div class="votes-strip">
       <p class="votes-strip-label">Two votes decide the override</p>

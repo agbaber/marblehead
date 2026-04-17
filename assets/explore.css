@@ -56,6 +56,48 @@
     line-height: 1.55;
     margin: 0;
   }
+
+  /* ── Featured question (first-visit onboarding) ──
+     Q1 cloned inline with answers visible. Shown only when the visitor
+     has zero picks; JS toggles .visible. Sits between the hero and the
+     votes-strip so the first action is obvious above the fold. */
+  .featured-question {
+    display: none;
+    margin: 0 0 32px;
+    padding: 20px 20px 16px;
+    border: 1.5px solid var(--c-teal);
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--c-teal) 4%, var(--surface));
+  }
+  .featured-question.visible { display: block; }
+  .featured-question-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--c-teal);
+    margin: 0 0 10px;
+  }
+  .featured-question .question-block h1 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text);
+    margin: 0 0 8px;
+  }
+  .featured-question .question-context {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0 0 16px;
+  }
+  .featured-question .featured-answers {
+    margin-bottom: 8px;
+  }
+  .featured-answers-prompt {
+    margin: 0;
+  }
+
   .explore-question-list {
     display: flex;
     flex-direction: column;
