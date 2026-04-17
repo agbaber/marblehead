@@ -353,3 +353,75 @@ and may need iteration against the live preview.
   (Approach 3). Future enhancement covering stance-based grouping,
   additional new controls (cuts ramp timing, structural reform start
   year), and tour restructure.
+
+## Verified numbers
+
+Research performed 2026-04-17. Primary sources consulted:
+`data/FY27_Proposed_Budget_No_Override.txt` (Table of Estimate
+Appropriations, Line 221 Group Insurance) and
+`data/state_of_town_financials.json` (sourced to State of the Town
+presentation, Jan 28 2026, Thatcher Kezer).
+
+### Number 1: fy27Step (one-time healthcare step above normalized growth)
+
+**Source:** `data/FY27_Proposed_Budget_No_Override.txt`, Line 221 Group
+Insurance (FY27 Proposed Budget document, also recorded in
+`data/group_insurance_FY06-27.csv` row FY2027, cited to FY27 Proposed
+Budget).
+
+Raw budget figures:
+- FY26 Group Insurance budget: $15,100,893
+- FY27 Group Insurance proposed: $16,754,748
+- Actual YoY increase: $1,653,855 (+10.95%)
+
+Derivation using g_norm = 3.8%:
+
+```
+fy27_normalized = 15,100,893 * 1.038 = 15,674,727
+fy27Step = 16,754,748 - 15,674,727 = 1,080,021
+```
+
+**Verified fy27Step: $1.080M**
+
+Memory notes estimated ~$1.09M using +$1.66M absolute and the formula
+above. The actual absolute increase is $1,653,855 (not $1.66M), which
+gives $1.080M (not $1.09M). The discrepancy is rounding in the memory
+note's "$1.66M" approximation. The correct figure from primary source is
+**$1.080M**; use this in code.
+
+### Number 2: FY27 total general fund deficit
+
+**Source:** `data/state_of_town_financials.json`, field `FY27_deficit`:
+8471823. JSON records its source as "State of the Town Presentation, Jan
+28 2026, Thatcher Kezer."
+
+Cross-checks:
+- April 8 Select Board transcript (`data/select_board_2026-04-08_transcript.txt`)
+  contains the MOU draft language: "facing a $7.7 million budget deficit
+  for fiscal year '27." The same transcript also references the TA
+  explaining that figure came down from a higher number after accounting
+  for school reductions and the new trash carve-out.
+- The April 15 FINAL override presentation
+  (`data/2026-04-15_Override_Presentation_FINAL.txt`) does not state an
+  explicit dollar gap; it frames the override as a three-tier $9M/$12M/$15M
+  choice without restating the underlying structural deficit.
+- The waterfall plan at `docs/superpowers/plans/2026-04-11-fy27-gap-waterfall-implementation.md`
+  uses $8,471,823 and cites the State of the Town presentation (Jan 28
+  2026) as its primary source, consistent with the JSON.
+
+**On the $7.7M vs $8.47M discrepancy:** The April 8 MOU draft language
+references $7.7M, which is an intermediate figure the TA described as the
+pre-adjustment gap. The $8.47M in `state_of_town_financials.json` comes
+from the earlier Jan 28 State of the Town and represents the full
+structural operating gap (revenue down ~$2.3M, expenses up ~$6.2M). These
+are reconcilable: the $8.47M is the structural gap; the $7.7M referenced
+in April 8 appears to be the gap after accounting for school-side
+adjustments already made in the FY27 balanced budget proposal. The
+April 15 FINAL deck does not resolve the discrepancy directly.
+
+**Decision:** Use $8,471,823 ($8.47M) for scenario E's `positionCuts`
+calculation, consistent with `state_of_town_financials.json` and the Jan
+28 2026 primary source. At $100K per position, that is 85 positions. Add
+an inline code comment citing the source.
+
+**Verified FY27 gap: $8.47M ($8,471,823)**
