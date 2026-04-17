@@ -43,3 +43,4 @@ _site/
 
 # Local PDF cache for minutes corpus (committed text files only)
 data/minutes/**/*.pdf
+data/.pass*_batch_state.json

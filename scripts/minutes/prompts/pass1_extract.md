@@ -32,6 +32,7 @@ A departmental budget vote with no recorded deliberation ("X appeared before the
 - `capital_facilities_debt`: capital plan, facilities, debt service
 - `solid_waste`: trash funding model
 - `staffing_fte_bargaining`: FTE structural decisions, collective bargaining cost items
+- `governance_organizational`: intra-town department restructuring, elected-vs-appointed position changes, board/commission consolidations, bylaw amendments with fiscal impact
 - `other_candidate`: escape hatch; set `topic_other_label` when used
 
 ## Schema (JSON array)
