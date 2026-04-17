@@ -126,6 +126,10 @@ title: "Deficit Dynamics Model"
   .dm-tour-panel[hidden] {
     display: none;
   }
+  body.dm-tour-active #dm-chart-scroll-target,
+  body.dm-tour-active #dm-stance-readout {
+    display: none;
+  }
   .dm-tour-step-row {
     display: flex;
     justify-content: space-between;
@@ -2100,6 +2104,7 @@ An override on its own buys time. It does not change the slope of either line.
       active = true;
       idx = 0;
       panel.hidden = false;
+      document.body.classList.add('dm-tour-active');
       startBtn.setAttribute('aria-expanded', 'true');
       renderStep();
       // One-time scroll on start so the panel is in view; subsequent
@@ -2110,6 +2115,7 @@ An override on its own buys time. It does not change the slope of either line.
     function exitTour() {
       active = false;
       panel.hidden = true;
+      document.body.classList.remove('dm-tour-active');
       startBtn.setAttribute('aria-expanded', 'false');
       resetToDefaults();
       onChange();
