@@ -1984,6 +1984,14 @@ An override on its own buys time. It does not change the slope of either line.
         }
       },
       {
+        caption: 'How fast the new money gets spent on new elective costs. Same $12M override, but absorbed in year one instead of spread over five years. The town spends it right away on new hires, contracts, and programs, so revenue and expenses stay close together. How quickly override money ratchets into new spending is the heart of the debate: if it is absorbed fast, the override does little beyond raising the levy ceiling.',
+        setup: function() {
+          resetToDefaults();
+          overrideEl.value = 12;
+          ratchetEl.value = 1;
+        }
+      },
+      {
         caption: 'The dashed line. With an override modeled, it shows what the town could spend without one: expenses capped at revenue. Adding 10 position cuts here lowers the full expense line; the space between the two is the services the override is funding.',
         setup: function() {
           resetToDefaults();
