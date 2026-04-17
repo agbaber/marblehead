@@ -117,6 +117,26 @@ user so they can find it without hunting.
 One exception: if the push was explicitly a fixup onto an existing open
 PR's branch, don't open a second PR.
 
+## Post the preview URL when asking for a live review
+
+Every PR gets a Cloudflare Pages preview deploy (see
+`.github/workflows/preview.yml`), and the workflow posts a sticky
+comment with `header: preview-url` containing a **Branch URL** (stable
+across pushes) and a **This commit** URL (pinned to the current SHA).
+
+Whenever you ask the user to look at a change in the live PR &ndash;
+e.g. "can you eyeball this before merging?", "does this look right?",
+"ready for review" &ndash; include the full preview URL in your message,
+not just the PR link. Fetch it from the sticky preview comment (find
+the comment whose body starts with `### Preview` and pull the
+`**Branch URL:**` value). Prefer the Branch URL for ongoing review
+since it follows new pushes; use the commit URL only when pinning to a
+specific SHA matters.
+
+If the preview comment isn't there yet (workflow still running or
+failed), say so rather than sending a bare PR link and making the user
+hunt for it.
+
 ## Git: don't push follow-up commits to a merged branch
 
 When a PR is merged, the branch it was on is **done**. Do not push
