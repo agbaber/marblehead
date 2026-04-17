@@ -848,6 +848,10 @@ title: "Deficit Dynamics Model"
     <span class="dm-scenario-title">No override, no growth, just cuts</span>
     <span class="dm-scenario-desc">Both levers off the table. Cuts absorb the full FY27 gap.</span>
   </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="forced-equilibrium">
+    <span class="dm-scenario-title">Cuts to match the trend</span>
+    <span class="dm-scenario-desc">Ongoing cuts each year that keep expenses growing at revenue&rsquo;s rate.</span>
+  </button>
 </div>
 
 <div class="dm-controls">
@@ -1019,6 +1023,7 @@ An override on its own buys time. It does not change the slope of either line.
 
   var taxMode = false;
   var positionCuts = 0;
+  var forcedEquilibriumActive = false;
   var costPerPosition = 0.1; // $100K in $M
 
   // Cached chart data for hover tooltips
@@ -1199,6 +1204,13 @@ An override on its own buys time. It does not change the slope of either line.
           e += bump.annualAmount;
         }
       }
+      // Forced-equilibrium cuts: subtract (expG - revG) x current expense
+      // each projected year so the effective expense growth matches
+      // revenue. Modifies e in place so the next iteration compounds from
+      // the reduced value, reflecting ongoing cuts.
+      if (forcedEquilibriumActive && expG > revG) {
+        e -= (expG - revG) * e;
+      }
       // FY27 one-time step: add to reported value but do not propagate
       // into the forward compounding state.
       var reportedE = e;
@@ -1240,6 +1252,9 @@ An override on its own buys time. It does not change the slope of either line.
     for (var i = histCount; i < nYears; i++) {
       r = r * (1 + revG);
       e = e * (1 + expG);
+      if (forcedEquilibriumActive && expG > revG) {
+        e -= (expG - revG) * e;
+      }
       baseRev.push(r);
       var reportedE = e;
       if (i === phaseYears[0] && fy27Step !== 0) {
@@ -1793,7 +1808,8 @@ An override on its own buys time. It does not change the slope of either line.
     'no-override-reform':'No new revenue; 30 position cuts plus healthcare concessions carry the full load. 30 positions is more than double the site\u2019s 7 to 13 discretionary estimate (see inside-school-staffing.html#options), so the cuts reach mandate-adjacent roles or non-school departments. The hardest path politically: the largest non-override concessions with nothing offered in return.',
     'permanent-close': 'The 0.8pp drop in expense growth (4.0% to 3.2%) is doing roughly 38% of the work; the override, cuts, and healthcare reform contribute the rest. Requires healthcare premium moderation outside the town\u2019s control plus sustained wage restraint not achieved in the last 20 years.',
     'bend-curve': 'Matches the site\u2019s framing of these reforms as cost-curve benders, not immediate substitutes for override revenue (see inside-school-staffing.html#options). Realistic impact from collaborative expansion, bringing out-of-district SPED placements back in, and shared back-office sums to roughly 0.3 to 0.5 percentage points off expense growth, but not until FY30 at the earliest. The compound-rate projection in this model applies the reduction uniformly, so the near-term years look more optimistic than reality.',
-    'composite-cuts': 'Reflects the no-3A, no-override, yes-cuts composite position. Closing the $8.47M FY27 gap at roughly $100K per position implies on the order of 85 positions. Only 7 to 13 can come from the site\u2019s discretionary slice of school staffing (see inside-school-staffing.html#options); the remainder requires mandate relief, non-school department reductions, or both. Shows the magnitude, not which commitments to unwind.'
+    'composite-cuts': 'Reflects the no-3A, no-override, yes-cuts composite position. Closing the $8.47M FY27 gap at roughly $100K per position implies on the order of 85 positions. Only 7 to 13 can come from the site\u2019s discretionary slice of school staffing (see inside-school-staffing.html#options); the remainder requires mandate relief, non-school department reductions, or both. Shows the magnitude, not which commitments to unwind.',
+    'forced-equilibrium': 'Requires ongoing annual cuts to keep expenses growing at revenue\u2019s rate. At the default rate gap (0.5pp), the scale is roughly half a percent of the budget per year, compounding forward. Only 7 to 13 school positions are documented as discretionary per the site\u2019s staffing analysis (inside-school-staffing.html#options); town-wide discretionary capacity has not yet been quantified. See github.com/agbaber/marblehead/issues/595 for the pending town-wide analysis.'
   };
 
   function updateScenarioReadout() {
@@ -1823,6 +1839,10 @@ An override on its own buys time. It does not change the slope of either line.
     if (Math.abs(fy27Step) > 0.01) {
       var stepSign = fy27Step >= 0 ? '+' : '-';
       parts.push('FY27 one-time step: <strong>' + stepSign + '$' + Math.abs(fy27Step).toFixed(1) + 'M</strong>, not propagated into the forward trend.');
+    }
+    if (forcedEquilibriumActive && ev > rv) {
+      var gap = (ev - rv).toFixed(1);
+      parts.push('<strong>Compound cuts</strong> applied each year equal to the expense-to-revenue gap (about ' + gap + '% of the budget annually), so the expense line stays parallel to revenue rather than running at the underlying ' + ev.toFixed(1) + '% rate.');
     }
     if (Math.abs(rv - 3.5) > 0.05 || Math.abs(ev - 4.0) > 0.05) {
       parts.push('Growth set to <strong>revenue ' + rv.toFixed(1) + '%/yr</strong>, <strong>expenses ' + ev.toFixed(1) + '%/yr</strong> (defaults: 3.5% / 4.0%).');
@@ -1862,6 +1882,7 @@ An override on its own buys time. It does not change the slope of either line.
   [revGrowthEl, expGrowthEl, overrideEl, ratchetEl, hcShareEl, wageOffsetEl].forEach(function(el) {
     el.addEventListener('input', function() {
       currentStance = null;
+      forcedEquilibriumActive = false;
       onChange();
     });
   });
@@ -1871,6 +1892,7 @@ An override on its own buys time. It does not change the slope of either line.
     var sign = v >= 0 ? '$' : '-$';
     fy27StepValEl.textContent = sign + Math.abs(v).toFixed(1) + 'M';
     currentStance = null;
+    forcedEquilibriumActive = false;
     onChange();
   });
 
@@ -1937,6 +1959,7 @@ An override on its own buys time. It does not change the slope of either line.
       wageOffsetEl.value = 50;
       fy27StepEl.value = 0;
       fy27StepValEl.textContent = '$0.0M';
+      forcedEquilibriumActive = false;
 
       if (s === 'bridge') {
         overrideEl.value = 15;
@@ -1973,6 +1996,8 @@ An override on its own buys time. It does not change the slope of either line.
         expGrowthEl.value = 3.7;
       } else if (s === 'composite-cuts') {
         positionCuts = 85;
+      } else if (s === 'forced-equilibrium') {
+        forcedEquilibriumActive = true;
       }
       onChange();
       if (chartScrollTarget) {
@@ -2005,6 +2030,7 @@ An override on its own buys time. It does not change the slope of either line.
       wageOffsetEl.value = 50;
       fy27StepEl.value = 0;
       fy27StepValEl.textContent = '$0.0M';
+      forcedEquilibriumActive = false;
       currentStance = null;
     }
 
@@ -2449,6 +2475,8 @@ An override on its own buys time. It does not change the slope of either line.
       expGrowthEl.value = 3.7;
     } else if (urlStance === 'composite-cuts') {
       positionCuts = 85;
+    } else if (urlStance === 'forced-equilibrium') {
+      forcedEquilibriumActive = true;
     }
     if (stanceNotes[urlStance]) {
       currentStance = urlStance;
