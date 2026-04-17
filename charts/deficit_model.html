@@ -1327,7 +1327,14 @@ An override on its own buys time. It does not change the slope of either line.
     return d;
   }
 
+  var _tourYRangeActive = false;
+  var _tourYMin = null, _tourYMax = null;
   function computeYRange(rev, exp) {
+    if (_tourYRangeActive) {
+      yMin = _tourYMin;
+      yMax = _tourYMax;
+      return;
+    }
     var allVals = rev.concat(exp);
     var lo = Math.min.apply(null, allVals);
     var hi = Math.max.apply(null, allVals);
@@ -2118,12 +2125,46 @@ An override on its own buys time. It does not change the slope of either line.
       tweenChartToStep(steps[idx].setup);
     }
 
+    function computeTourYRange() {
+      // Save all state so running each step's setup doesn't leak.
+      var saved = {
+        rev: revGrowthEl.value, exp: expGrowthEl.value,
+        over: overrideEl.value, ratch: ratchetEl.value,
+        cuts: positionCuts, hc: hcShareEl.value,
+        wage: wageOffsetEl.value, stance: currentStance
+      };
+      var allRev = [], allExp = [];
+      for (var s = 0; s < steps.length; s++) {
+        steps[s].setup();
+        var data = compute();
+        allRev = allRev.concat(data.rev);
+        allExp = allExp.concat(data.exp);
+      }
+      // Restore previous state.
+      revGrowthEl.value = saved.rev;
+      expGrowthEl.value = saved.exp;
+      overrideEl.value = saved.over;
+      ratchetEl.value = saved.ratch;
+      positionCuts = saved.cuts;
+      hcShareEl.value = saved.hc;
+      wageOffsetEl.value = saved.wage;
+      currentStance = saved.stance;
+
+      // Compute union y-range spanning every step's projection.
+      _tourYRangeActive = false;
+      computeYRange(allRev, allExp);
+      _tourYMin = yMin;
+      _tourYMax = yMax;
+    }
+
     function startTour() {
       active = true;
       idx = 0;
       panel.hidden = false;
       document.body.classList.add('dm-tour-active');
       startBtn.setAttribute('aria-expanded', 'true');
+      computeTourYRange();
+      _tourYRangeActive = true;
       renderStep();
       // One-time scroll on start so the panel is in view; subsequent
       // steps do not scroll.
@@ -2135,6 +2176,7 @@ An override on its own buys time. It does not change the slope of either line.
       panel.hidden = true;
       document.body.classList.remove('dm-tour-active');
       startBtn.setAttribute('aria-expanded', 'false');
+      _tourYRangeActive = false;
       resetToDefaults();
       onChange();
       startBtn.focus();
