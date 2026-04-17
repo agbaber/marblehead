@@ -2025,8 +2025,11 @@ An override on its own buys time. It does not change the slope of either line.
         return;
       }
 
-      // Expand y-range to fit both old and new data so lines stay on-chart mid-tween
-      computeYRange(oldData.rev.concat(newData.rev), oldData.exp.concat(newData.exp));
+      // Pre-set y-range to the NEW data so the final onChange() doesn't
+      // rescale the grid and cause a visual flash. Old values may briefly
+      // extend past the plot area at t=0 but the padding in computeYRange
+      // absorbs most of it.
+      computeYRange(newData.rev, newData.exp);
       drawMainGrid();
 
       var tweenConstrained = oldData.override > 0 && newData.override > 0;
