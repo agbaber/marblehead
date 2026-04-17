@@ -150,15 +150,15 @@ title: "What the Override Costs You"
   </div>
 
 <script>
-// Anchor: Town Administrator's override presentation, April 8, 2026.
-// Each number is the annual tax increase (dollars) on a home assessed at
-// the town average single-family value, with that year's draws fully phased in.
+// Anchor: Select Board override presentation (FINAL), April 15, 2026, slide 8.
+// Each number is the cumulative annual tax increase (dollars) on a home
+// assessed at the town average single-family value, at end of each phase-in year.
 const AVG_ASSESSED = 1291507;
 const STORAGE_KEY = 'mh_override_calc_assessed_value';
 const RATES = {
-  1: { y1:  167.90, y2:  804.93, y3: 1186.68 }, // Tier 1, $9M, Partial Restore
-  2: { y1:  361.62, y2: 1132.65, y3: 1587.17 }, // Tier 2, $12M, Build
-  3: { y1:  555.35, y2: 1369.97, y3: 1985.39 }, // Tier 3, $15M, Invest
+  1: { y1: 168, y2:  857, y3: 1188 }, // Tier 1, $9M, Partial Restore
+  2: { y1: 362, y2: 1237, y3: 1590 }, // Tier 2, $12M, Build
+  3: { y1: 556, y2: 1487, y3: 1989 }, // Tier 3, $15M, Invest
 };
 const TIER_META = {
   1: { label: 'Tier 1 ($9M), Partial Restore', swatch: 'var(--series-tier-1)' },

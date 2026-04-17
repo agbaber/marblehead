@@ -1,7 +1,16 @@
 {
+  "name": "marblehead-scripts",
+  "version": "0.0.0",
   "private": true,
+  "type": "module",
+  "scripts": {
+    "test:minutes": "node --test scripts/minutes/lib/*.test.mjs"
+  },
   "dependencies": {
-    "playwright": "^1.59.1"
+    "playwright": "^1.59.1",
+    "csv-parse": "^5.6.0",
+    "csv-stringify": "^6.5.2",
+    "p-limit": "^6.2.0"
   },
   "devDependencies": {
     "serve": "^14.0.0",
