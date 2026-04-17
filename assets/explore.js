@@ -1130,7 +1130,104 @@
       });
       cards.forEach(function (c) { listEl.appendChild(c); });
     }
+    renderFeaturedQuestion();
     updateSynthesis();
+  }
+
+  /* ── Featured question (first-visit onboarding) ──
+     When the visitor has zero picks, clone the featured topic into the
+     landing's #featuredQuestion slot with its answers visible and
+     tappable. The goal is a clear first action above the fold: a new
+     visitor sees "pick one of three" before they see the two-votes
+     strip or stats row. Hidden the moment any pick exists.
+
+     Featured is servicelevel, not the first list-order question
+     (mycost). mycost's three answers are framings of the same cost
+     (monthly vs. 10-year vs. share of income), which reads as
+     confusing when the onboarding promise is "three positions, pick
+     the one you agree with." servicelevel's three answers are genuinely
+     different positions (cut / maintain / expand) and teach the
+     mechanic cleanly. */
+  var FEATURED_TOPIC = 'servicelevel';
+  var featuredEl = document.getElementById('featuredQuestion');
+  var featuredBuilt = false;
+
+  function renderFeaturedQuestion() {
+    if (!featuredEl) return;
+    var hasAnyPick = Object.keys(selections).length > 0;
+    if (hasAnyPick || isSharedView) {
+      featuredEl.classList.remove('visible');
+      return;
+    }
+    if (!featuredBuilt) buildFeaturedQuestion();
+    featuredEl.classList.add('visible');
+  }
+
+  function buildFeaturedQuestion() {
+    var screen = document.querySelector('.question-screen[data-topic="' + FEATURED_TOPIC + '"]');
+    if (!screen) return;
+    var qBlock = screen.querySelector('.question-block');
+    var answers = screen.querySelector('.answers');
+    if (!qBlock || !answers) return;
+
+    var label = document.createElement('p');
+    label.className = 'featured-question-label';
+    label.textContent = 'Start here';
+    featuredEl.appendChild(label);
+
+    /* Clone the question block (h1 + context). Drop .story-filter --
+       it's methodology copy that belongs next to the chart, not in the
+       onboarding preview. */
+    var qClone = qBlock.cloneNode(true);
+    var storyFilter = qClone.querySelector('.story-filter');
+    if (storyFilter) storyFilter.remove();
+    featuredEl.appendChild(qClone);
+
+    /* Clone the three answer cards. The clones keep data-question /
+       data-answer attributes but are NOT reachable by the global
+       answer-card handlers (those bound at load against the original
+       elements). Wire dedicated click handlers that navigate into the
+       real question-screen and open the evidence panel for the chosen
+       answer WITHOUT committing a pick -- on the rest of the site,
+       tapping an answer card browses (see line ~1672) and the check
+       button commits. The prompt under these cards says "Tap any
+       answer to read the case for it", so the featured block needs to
+       browse too. Commitment then happens via the check button or the
+       "This resonates" action on the question-screen. */
+    var answersClone = answers.cloneNode(true);
+    answersClone.classList.add('featured-answers');
+    answersClone.querySelectorAll('.answer-check').forEach(function (c) { c.remove(); });
+    answersClone.querySelectorAll('.answer-card').forEach(function (card) {
+      card.addEventListener('click', function () {
+        var q = card.dataset.question;
+        var a = card.dataset.answer;
+        if (!q || !a) return;
+        switchTopic(q);
+        viewEvidence(q, a);
+        /* Smooth-scroll to the evidence panel so the "case" the visitor
+           asked to read is immediately in view. Wait one frame so the
+           question-screen has laid out (switchTopic flips display:none
+           to block, and scrollIntoView needs the new element rect).
+           scrollIntoView honors prefers-reduced-motion in modern
+           browsers, so no extra check needed. */
+        var ev = document.querySelector('.evidence[data-evidence="' + q + '-' + a + '"]');
+        if (ev) {
+          requestAnimationFrame(function () {
+            ev.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        } else {
+          window.scrollTo(0, 0);
+        }
+      });
+    });
+    featuredEl.appendChild(answersClone);
+
+    var prompt = document.createElement('p');
+    prompt.className = 'answers-prompt featured-answers-prompt';
+    prompt.textContent = 'Tap any answer to read the case for it';
+    featuredEl.appendChild(prompt);
+
+    featuredBuilt = true;
   }
 
   /* ── "Where you landed" synthesis panel ──
