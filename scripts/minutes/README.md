@@ -4,7 +4,7 @@ Builds and maintains a local corpus of Marblehead meeting minutes PDFs and
 extracted text files, starting from FY19 (July 2018).
 
 The pipeline runs in four stages: discover, download, extract, verify.
-Each stage is idempotent -- re-running it skips already-completed rows.
+Each stage is idempotent: re-running it skips already-completed rows.
 
 ## What the pipeline produces
 
@@ -168,17 +168,17 @@ Node 20 or later is required.
 `verify_corpus.mjs` asserts six invariants. All must pass before Phase 1
 is considered complete:
 
-1. **Required fields non-empty** -- `body`, `meeting_date`, `source_url`,
+1. **Required fields non-empty:** `body`, `meeting_date`, `source_url`,
    and `status` are present on every row.
-2. **Downloaded rows have files on disk** -- rows with `status: downloaded`
+2. **Downloaded rows have files on disk:** rows with `status: downloaded`
    must have both `local_pdf` and `local_txt` present at the recorded paths.
-3. **Missing rows have notes** -- rows with `status: missing` must have a
+3. **Missing rows have notes:** rows with `status: missing` must have a
    non-empty `notes` field explaining the failure.
-4. **No duplicate keys** -- each `(body, meeting_date)` pair appears at most
+4. **No duplicate keys:** each `(body, meeting_date)` pair appears at most
    once.
-5. **Dates in range** -- all `meeting_date` values are on or after
+5. **Dates in range:** all `meeting_date` values are on or after
    `2018-07-01` (start of FY19).
-6. **Whitelist on body and status** -- `body` must be one of
+6. **Whitelist on body and status:** `body` must be one of
    `select_board`, `school_committee`, `fincom`; `status` must be one of
    `downloaded`, `missing`, `restricted`, `not_published`.
 
@@ -188,7 +188,7 @@ Current corpus totals (as of 2026-04-16):
 |---|---|
 | select_board | 234 |
 | school_committee | 203 |
-| fincom | 0 (site gap -- see below) |
+| fincom | 0 (site gap; see below) |
 
 ## Known coverage gaps
 

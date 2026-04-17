@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readManifest, appendOrUpdate } from './lib/manifest.mjs';
+import { readManifest, writeManifest } from './lib/manifest.mjs';
 import { writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import pLimit from 'p-limit';
@@ -42,18 +42,31 @@ async function main() {
 
   const limit = pLimit(CONCURRENCY);
   let done = 0;
-  await Promise.all(pending.map(row => limit(async () => {
+  const updates = await Promise.all(pending.map(row => limit(async () => {
     const updated = await downloadOne(row);
-    appendOrUpdate(MANIFEST_PATH, updated);
     done++;
     if (done % 10 === 0 || done === pending.length) {
       console.log(`  ${done}/${pending.length}`);
     }
+    return updated;
   })));
 
-  const after = readManifest(MANIFEST_PATH);
-  const downloaded = after.filter(r => r.status === 'downloaded').length;
-  const missing = after.filter(r => r.status === 'missing').length;
+  // Batch write: read current manifest, merge updates, write once
+  const allRows = readManifest(MANIFEST_PATH);
+  const keyIdx = new Map(allRows.map((r, i) => [`${r.body}:${r.meeting_date}`, i]));
+  for (const u of updates) {
+    const k = `${u.body}:${u.meeting_date}`;
+    if (keyIdx.has(k)) {
+      allRows[keyIdx.get(k)] = { ...allRows[keyIdx.get(k)], ...u };
+    } else {
+      allRows.push(u);
+      keyIdx.set(k, allRows.length - 1);
+    }
+  }
+  writeManifest(MANIFEST_PATH, allRows);
+
+  const downloaded = allRows.filter(r => r.status === 'downloaded').length;
+  const missing = allRows.filter(r => r.status === 'missing').length;
   console.log(`Final: ${downloaded} downloaded, ${missing} missing`);
 }
 

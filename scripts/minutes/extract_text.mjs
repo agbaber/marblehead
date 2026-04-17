@@ -69,7 +69,11 @@ function extractOne(row) {
 
 async function main() {
   const rows = readManifest(MANIFEST_PATH);
-  const todo = rows.filter(r => r.status === 'downloaded' && !r.local_txt);
+  const todo = rows.filter(r => {
+    if (r.status !== 'downloaded') return false;
+    if (!r.local_txt) return true;
+    return !existsSync(resolve(r.local_txt));
+  });
   console.log(`Extracting text for ${todo.length} of ${rows.length} manifest rows`);
 
   let i = 0;
