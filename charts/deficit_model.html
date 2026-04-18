@@ -165,14 +165,14 @@ title: "Deficit Dynamics Model"
     font-size: 13px;
     padding: 8px 14px;
     border: 1px solid var(--c-navy);
-    background: #fff;
+    background: transparent;
     color: var(--c-navy);
     border-radius: 4px;
     cursor: pointer;
   }
   .dm-tour-nav-btn:hover, .dm-tour-exit:hover,
   .dm-tour-nav-btn:focus-visible, .dm-tour-exit:focus-visible {
-    background: var(--c-fog);
+    background: color-mix(in srgb, var(--c-navy) 12%, transparent);
   }
   .dm-tour-nav-btn:disabled {
     opacity: 0.4;
@@ -180,11 +180,11 @@ title: "Deficit Dynamics Model"
   }
   .dm-tour-nav-next {
     background: var(--c-navy);
-    color: #fff;
+    color: var(--bg);
   }
   .dm-tour-nav-next:hover,
   .dm-tour-nav-next:focus-visible {
-    background: #1a2d4a;
+    background: color-mix(in srgb, var(--c-navy) 85%, var(--text));
   }
   .dm-tour-exit {
     font-size: 11px;
@@ -211,21 +211,6 @@ title: "Deficit Dynamics Model"
     color: var(--c-navy);
     font-weight: 700;
   }
-  .dm-tier-readout {
-    margin: 16px 0;
-    padding: 14px 18px;
-    background: var(--c-fog);
-    border-left: 3px solid var(--c-teal);
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  .dm-tier-readout strong {
-    font-variant-numeric: tabular-nums;
-    font-weight: 700;
-  }
-  .dm-tier-1-color { color: var(--series-tier-1); }
-  .dm-tier-2-color { color: var(--series-tier-2); }
-  .dm-tier-3-color { color: var(--series-tier-3); }
   .dm-svg {
     display: block;
     width: 100%;
@@ -245,36 +230,6 @@ title: "Deficit Dynamics Model"
   }
   .dm-svg .dm-line-proj {
     stroke-dasharray: 6 4;
-  }
-  .dm-svg .dm-tier-1-line {
-    fill: none;
-    stroke: var(--series-tier-1);
-    stroke-width: 2.5;
-    stroke-dasharray: 6 4;
-  }
-  .dm-svg .dm-tier-2-line {
-    fill: none;
-    stroke: var(--series-tier-2);
-    stroke-width: 2.5;
-    stroke-dasharray: 6 4;
-  }
-  .dm-svg .dm-tier-3-line {
-    fill: none;
-    stroke: var(--series-tier-3);
-    stroke-width: 2.5;
-    stroke-dasharray: 6 4;
-  }
-  .dm-svg .dm-tier-1-fill {
-    fill: var(--series-tier-1);
-    opacity: 0.10;
-  }
-  .dm-svg .dm-tier-2-fill {
-    fill: var(--series-tier-2);
-    opacity: 0.08;
-  }
-  .dm-svg .dm-tier-3-fill {
-    fill: var(--series-tier-3);
-    opacity: 0.06;
   }
   .dm-svg .dm-deficit-fill {
     fill: var(--c-buoy);
@@ -364,15 +319,6 @@ title: "Deficit Dynamics Model"
   .dm-svg .dm-end-label-exp {
     fill: var(--c-buoy);
   }
-  .dm-svg .dm-end-label-t1 {
-    fill: var(--series-tier-1);
-  }
-  .dm-svg .dm-end-label-t2 {
-    fill: var(--series-tier-2);
-  }
-  .dm-svg .dm-end-label-t3 {
-    fill: var(--series-tier-3);
-  }
   .dm-svg .dm-legend-bg {
     fill: var(--surface);
     stroke: var(--border);
@@ -384,21 +330,6 @@ title: "Deficit Dynamics Model"
   .dm-svg .dm-legend-swatch-exp {
     stroke: var(--c-buoy);
     stroke-width: 2.5;
-  }
-  .dm-svg .dm-legend-swatch-t1 {
-    stroke: var(--series-tier-1);
-    stroke-width: 2.5;
-    stroke-dasharray: 6 4;
-  }
-  .dm-svg .dm-legend-swatch-t2 {
-    stroke: var(--series-tier-2);
-    stroke-width: 2.5;
-    stroke-dasharray: 6 4;
-  }
-  .dm-svg .dm-legend-swatch-t3 {
-    stroke: var(--series-tier-3);
-    stroke-width: 2.5;
-    stroke-dasharray: 6 4;
   }
   .dm-svg .dm-legend-text {
     font-size: 11px;
@@ -412,7 +343,6 @@ title: "Deficit Dynamics Model"
   body.dm-embed .page > h1,
   body.dm-embed .page > .subtitle,
   body.dm-embed .dm-controls-wrap,
-  body.dm-embed .dm-tier-section,
   body.dm-embed .dm-prose-section,
   body.dm-embed .dm-recross {
     display: none;
@@ -925,50 +855,6 @@ title: "Deficit Dynamics Model"
 An override on its own buys time. It does not change the slope of either line.
 </div>
 
-<div class="dm-tier-section">
-<h2>How long does each tier last?</h2>
-<p>The three ballot questions ask voters to choose among $9M, $12M, or $15M. Each tier uses the same growth rates and override spending timeline from the controls above. The question each line answers: how many years before expenses catch the boosted revenue line again?</p>
-
-<div class="dm-tier-readout" id="dm-tier-readout">
-  <div><strong class="dm-tier-1-color">Tier 1 ($9M):</strong> <span id="dm-tier1-text">buys until FY33 (5 years)</span></div>
-  <div><strong class="dm-tier-2-color">Tier 2 ($12M):</strong> <span id="dm-tier2-text">buys until FY35 (7 years)</span></div>
-  <div><strong class="dm-tier-3-color">Tier 3 ($15M):</strong> <span id="dm-tier3-text">buys until FY37 (9 years)</span></div>
-</div>
-
-<svg class="dm-svg" viewBox="0 0 880 400" role="img" aria-labelledby="dm-tier-title dm-tier-desc">
-  <title id="dm-tier-title">Three override tiers compared against expenses, FY24 to FY40</title>
-  <desc id="dm-tier-desc">Four lines: expenses and three revenue scenarios (Tier 1 at $9M, Tier 2 at $12M, Tier 3 at $15M), each showing when the override headroom runs out.</desc>
-  <g id="dt-grid"></g>
-  <g id="dt-fills"></g>
-  <path id="dt-exp" class="dm-exp-line dm-line-proj"></path>
-  <path id="dt-rev-base" class="dm-rev-line dm-line-proj"></path>
-  <path id="dt-tier1" class="dm-tier-1-line"></path>
-  <path id="dt-tier2" class="dm-tier-2-line"></path>
-  <path id="dt-tier3" class="dm-tier-3-line"></path>
-  <rect id="dt-override-band" class="dm-override-band dm-hidden"></rect>
-  <text id="dt-override-label" class="dm-override-label dm-hidden" text-anchor="middle"></text>
-  <text id="dt-end-exp" class="dm-end-label dm-end-label-exp"></text>
-  <text id="dt-end-base" class="dm-end-label dm-end-label-rev"></text>
-  <text id="dt-end-t1" class="dm-end-label dm-end-label-t1"></text>
-  <text id="dt-end-t2" class="dm-end-label dm-end-label-t2"></text>
-  <text id="dt-end-t3" class="dm-end-label dm-end-label-t3"></text>
-  <g id="dt-legend"></g>
-  <g id="dt-hover-g" class="dm-hidden">
-    <line id="dt-hover-line" class="dm-hover-line"></line>
-    <circle id="dt-hover-dot-exp" class="dm-hover-dot dm-hover-dot-exp"></circle>
-    <circle id="dt-hover-dot-rev" class="dm-hover-dot dm-hover-dot-rev"></circle>
-    <rect id="dt-tooltip-bg" class="dm-tooltip-bg"></rect>
-    <text id="dt-tooltip-year" class="dm-tooltip-text" text-anchor="start"></text>
-    <text id="dt-tooltip-exp" class="dm-tooltip-text dm-tooltip-text-exp" text-anchor="start"></text>
-    <text id="dt-tooltip-rev" class="dm-tooltip-text" text-anchor="start"></text>
-    <text id="dt-tooltip-t1" class="dm-tooltip-text" text-anchor="start"></text>
-    <text id="dt-tooltip-t2" class="dm-tooltip-text" text-anchor="start"></text>
-    <text id="dt-tooltip-t3" class="dm-tooltip-text" text-anchor="start"></text>
-  </g>
-  <rect id="dt-hover-overlay" class="dm-hover-overlay" x="0" y="0" width="880" height="400"></rect>
-</svg>
-</div>
-
 <div class="dm-prose-section">
 <h2>What this shows</h2>
 <p>The two lines crossed in FY18. Since then, Marblehead's general fund expenditures have exceeded its budgetary revenues every year. The gap has been bridged by drawing down free cash, which peaked at $10.2M in FY23 before the <abbr class="g" title="Finance Committee">FinCom</abbr> flagged the reliance as unsustainable.</p>
@@ -1028,11 +914,10 @@ An override on its own buys time. It does not change the slope of either line.
 
   // Cached chart data for hover tooltips
   var lastMainData = null;
-  var lastTierData = null;
 
   // === Main chart layout ===
   var svgW = 880, svgH = 460;
-  var mL = 70, mR = 100, mT = 28, mB = 60;
+  var mL = 70, mR = 170, mT = 28, mB = 60;
   var plotW = svgW - mL - mR;
   var plotH = svgH - mT - mB;
 
@@ -1040,20 +925,6 @@ An override on its own buys time. It does not change the slope of either line.
 
   var yMin, yMax;
   function yScale(v) { return mT + (1 - (v - yMin) / (yMax - yMin)) * plotH; }
-
-  // === Tier chart layout ===
-  var tsvgW = 880, tsvgH = 400;
-  var tmL = 70, tmR = 100, tmT = 28, tmB = 50;
-  var tPlotW = tsvgW - tmL - tmR;
-  var tPlotH = tsvgH - tmT - tmB;
-
-  var tIdx0 = lastHistIdx;
-  var tIdxN = nYears - 1;
-
-  function txScale(i) { return tmL + ((i - tIdx0) / (tIdxN - tIdx0)) * tPlotW; }
-
-  var tyMin, tyMax;
-  function tyScale(v) { return tmT + (1 - (v - tyMin) / (tyMax - tyMin)) * tPlotH; }
 
   // === DOM refs ===
   var revGrowthEl = document.getElementById('dm-rev-growth');
@@ -1234,79 +1105,6 @@ An override on its own buys time. It does not change the slope of either line.
     }
 
     return { rev: rev, exp: exp, constrained: constrained, override: ovr };
-  }
-
-  // === Compute tier chart data (with exact CSV draws) ===
-  function computeTiers() {
-    var revG = parseFloat(revGrowthEl.value) / 100;
-    var expG = parseFloat(expGrowthEl.value) / 100;
-    var ratchetYears = parseInt(ratchetEl.value);
-
-    var baseRev = histRev.slice();
-    var baseExp = histExp.slice();
-    var r = baseRev[lastHistIdx];
-    var hc = computeHcSavings();
-    var e0 = histExp[lastHistIdx] - positionCuts * costPerPosition - hc.net;
-    var e = e0;
-    var fy27Step = parseFloat(fy27StepEl.value) || 0;
-    for (var i = histCount; i < nYears; i++) {
-      r = r * (1 + revG);
-      e = e * (1 + expG);
-      if (forcedEquilibriumActive && expG > revG) {
-        e -= (expG - revG) * e;
-      }
-      baseRev.push(r);
-      var reportedE = e;
-      if (i === phaseYears[0] && fy27Step !== 0) {
-        reportedE = e + fy27Step;
-      }
-      baseExp.push(reportedE);
-    }
-
-    var tierRevs = [];
-    var tierExps = [];
-    for (var t = 0; t < tierAmounts.length; t++) {
-      var tr = histRev.slice();
-      var te = histExp.slice();
-      var rv = tr[lastHistIdx];
-      var ev = e0;
-      var pendingBumps = [];
-      for (var i = histCount; i < nYears; i++) {
-        rv = rv * (1 + revG);
-        ev = ev * (1 + expG);
-        // Apply exact draws from CSV at each phase year
-        for (var p = 0; p < phaseYears.length; p++) {
-          if (i === phaseYears[p]) {
-            rv += tierDraws[t][p];
-            if (ratchetYears > 0) {
-              pendingBumps.push({ startIdx: i, annualAmount: tierDraws[t][p] / ratchetYears });
-            }
-          }
-        }
-        // Apply accumulated ratchet bumps
-        for (var b = 0; b < pendingBumps.length; b++) {
-          var bump = pendingBumps[b];
-          var yearsSinceStart = i - bump.startIdx;
-          if (yearsSinceStart >= 0 && yearsSinceStart < ratchetYears) {
-            ev += bump.annualAmount;
-          }
-        }
-        tr.push(rv);
-        te.push(ev);
-      }
-      tierRevs.push(tr);
-      tierExps.push(te);
-    }
-
-    return { baseRev: baseRev, baseExp: baseExp, tierRevs: tierRevs, tierExps: tierExps };
-  }
-
-  // Find when expenses catch the tier revenue line (after full phase-in)
-  function findRunout(tierRev, exp) {
-    for (var i = lastPhaseIdx + 1; i < nYears; i++) {
-      if (exp[i] >= tierRev[i]) return startYear + i;
-    }
-    return null;
   }
 
   // === Path builders ===
@@ -1601,163 +1399,6 @@ An override on its own buys time. It does not change the slope of either line.
     document.getElementById('dm-legend').innerHTML = legend;
   }
 
-  // === Render tier chart ===
-  function renderTiers() {
-    var td = computeTiers();
-    lastTierData = td;
-    var baseExp = td.baseExp;
-    var baseRev = td.baseRev;
-    var tierRevs = td.tierRevs;
-    var tierExps = td.tierExps;
-
-    var allVals = [];
-    for (var i = tIdx0; i <= tIdxN; i++) {
-      allVals.push(baseExp[i], baseRev[i]);
-      for (var t = 0; t < tierRevs.length; t++) {
-        allVals.push(tierRevs[t][i]);
-        allVals.push(tierExps[t][i]);
-      }
-    }
-    var lo = Math.min.apply(null, allVals);
-    var hi = Math.max.apply(null, allVals);
-    var pad = (hi - lo) * 0.12;
-    tyMin = Math.floor((lo - pad) / 10) * 10;
-    tyMax = Math.ceil((hi + pad) / 10) * 10;
-    if (tyMax - tyMin < 40) tyMax = tyMin + 40;
-
-    drawTierGrid();
-
-    document.getElementById('dt-exp').setAttribute('d', buildPath(baseExp, tIdx0, tIdxN, txScale, tyScale));
-    document.getElementById('dt-rev-base').setAttribute('d', buildPath(baseRev, tIdx0, tIdxN, txScale, tyScale));
-
-    var tierPathIds = ['dt-tier1', 'dt-tier2', 'dt-tier3'];
-    var tierFillClasses = ['dm-tier-1-fill', 'dm-tier-2-fill', 'dm-tier-3-fill'];
-    for (var t = 0; t < tierRevs.length; t++) {
-      document.getElementById(tierPathIds[t]).setAttribute('d', buildPath(tierRevs[t], tIdx0, tIdxN, txScale, tyScale));
-    }
-
-    var fillG = document.getElementById('dt-fills');
-    fillG.innerHTML = '';
-    for (var t = tierRevs.length - 1; t >= 0; t--) {
-      var sp = buildSurplusPath(tierRevs[t], tierExps[t], tIdx0, tIdxN, txScale, tyScale);
-      if (sp) {
-        var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        path.setAttribute('d', sp);
-        path.setAttribute('class', tierFillClasses[t]);
-        fillG.appendChild(path);
-      }
-    }
-    var dfp = buildDeficitPath(baseRev, baseExp, tIdx0, tIdxN, txScale, tyScale);
-    if (dfp) {
-      var dp = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      dp.setAttribute('d', dfp);
-      dp.setAttribute('class', 'dm-deficit-fill');
-      fillG.appendChild(dp);
-    }
-
-    // Phase-in band
-    renderBand(
-      document.getElementById('dt-override-band'),
-      document.getElementById('dt-override-label'),
-      txScale, tmT, tPlotH, 1  // always show in tier chart
-    );
-
-    // End labels
-    var endIds = ['dt-end-exp', 'dt-end-base', 'dt-end-t1', 'dt-end-t2', 'dt-end-t3'];
-    var endVals = [baseExp[tIdxN], baseRev[tIdxN], tierRevs[0][tIdxN], tierRevs[1][tIdxN], tierRevs[2][tIdxN]];
-    var endItems = endIds.map(function(id, j) { return { id: id, val: endVals[j] }; });
-    endItems.sort(function(a, b) { return b.val - a.val; });
-    var lastY = -999;
-    for (var j = 0; j < endItems.length; j++) {
-      var el = document.getElementById(endItems[j].id);
-      var rawY = tyScale(endItems[j].val) + 4;
-      if (Math.abs(rawY - lastY) < 12) rawY = lastY + 12;
-      el.setAttribute('x', txScale(tIdxN) + 6);
-      el.setAttribute('y', rawY);
-      el.setAttribute('text-anchor', 'start');
-      el.textContent = fmtEnd(endItems[j].val);
-      lastY = rawY;
-    }
-
-    // Tier readout
-    var tierTextEls = ['dm-tier1-text', 'dm-tier2-text', 'dm-tier3-text'];
-    for (var t = 0; t < tierRevs.length; t++) {
-      var runout = findRunout(tierRevs[t], tierExps[t]);
-      var el = document.getElementById(tierTextEls[t]);
-      var tierCost = taxMode ? ' (' + fmtOverride(tierAmounts[t]) + ')' : '';
-      if (runout !== null) {
-        var yrsFromPhaseEnd = runout - (startYear + lastPhaseIdx);
-        el.textContent = 'buys until FY' + runout + ' (' + yrsFromPhaseEnd + ' years after full phase-in)' + tierCost;
-      } else {
-        var yrsToEnd = endYear - (startYear + lastPhaseIdx);
-        el.textContent = 'lasts beyond FY' + endYear + ' (' + yrsToEnd + '+ years after full phase-in)' + tierCost;
-      }
-    }
-
-    if (taxMode) {
-      for (var t = 0; t < tierAmounts.length; t++) {
-        var labelEl = document.querySelector('.dm-tier-readout div:nth-child(' + (t + 1) + ') strong');
-        if (labelEl) labelEl.textContent = tierLabels[t] + ' (' + fmtOverride(tierAmounts[t]) + '):';
-      }
-    } else {
-      for (var t = 0; t < tierAmounts.length; t++) {
-        var labelEl = document.querySelector('.dm-tier-readout div:nth-child(' + (t + 1) + ') strong');
-        if (labelEl) labelEl.textContent = tierLabels[t] + ' ($' + tierAmounts[t] + 'M):';
-      }
-    }
-  }
-
-  function drawTierGrid() {
-    var grid = '';
-    for (var yr = 25; yr <= endYear; yr++) {
-      var mi = yr - startYear;
-      if (yr % 5 === 0 || yr === endYear) {
-        var x = txScale(mi);
-        grid += '<line class="dm-grid-line" x1="' + x + '" y1="' + tmT + '" x2="' + x + '" y2="' + (tmT + tPlotH) + '"></line>';
-        grid += '<text class="dm-axis-label" x="' + x + '" y="' + (tmT + tPlotH + 16) + '" text-anchor="middle">FY' + yr + '</text>';
-      }
-    }
-    var fx24 = txScale(tIdx0);
-    grid += '<line class="dm-grid-line" x1="' + fx24 + '" y1="' + tmT + '" x2="' + fx24 + '" y2="' + (tmT + tPlotH) + '"></line>';
-    grid += '<text class="dm-axis-label" x="' + fx24 + '" y="' + (tmT + tPlotH + 16) + '" text-anchor="middle">FY24</text>';
-
-    if (taxMode) {
-      var taxLo = tyMin * taxFactor;
-      var taxHi = tyMax * taxFactor;
-      var tStep = niceStep(taxHi - taxLo);
-      for (var tv = Math.ceil(taxLo / tStep) * tStep; tv <= taxHi; tv += tStep) {
-        var mVal = tv / taxFactor;
-        var y = tyScale(mVal);
-        grid += '<line class="dm-grid-line" x1="' + tmL + '" y1="' + y + '" x2="' + (tmL + tPlotW) + '" y2="' + y + '"></line>';
-        var label = tv >= 10000 ? '$' + (tv / 1000).toFixed(0) + 'K' : '$' + tv.toLocaleString();
-        grid += '<text class="dm-axis-label" x="' + (tmL - 8) + '" y="' + (y + 4) + '" text-anchor="end">' + label + '</text>';
-      }
-    } else {
-      var range = tyMax - tyMin;
-      var step = range <= 80 ? 10 : range <= 160 ? 20 : 40;
-      for (var v = tyMin; v <= tyMax; v += step) {
-        var y = tyScale(v);
-        grid += '<line class="dm-grid-line" x1="' + tmL + '" y1="' + y + '" x2="' + (tmL + tPlotW) + '" y2="' + y + '"></line>';
-        grid += '<text class="dm-axis-label" x="' + (tmL - 8) + '" y="' + (y + 4) + '" text-anchor="end">$' + v + 'M</text>';
-      }
-    }
-    document.getElementById('dt-grid').innerHTML = grid;
-
-    var lx = tmL + 10, ly = tmT + 10;
-    var legend = '<g transform="translate(' + lx + ',' + ly + ')">'
-      + '<rect class="dm-legend-bg" width="130" height="68" rx="4"></rect>'
-      + '<line class="dm-legend-swatch-exp" x1="10" y1="14" x2="28" y2="14"></line>'
-      + '<text class="dm-legend-text" x="34" y="17">Expenses</text>'
-      + '<line class="dm-legend-swatch-t1" x1="10" y1="28" x2="28" y2="28"></line>'
-      + '<text class="dm-legend-text" x="34" y="31">Tier 1 ($9M)</text>'
-      + '<line class="dm-legend-swatch-t2" x1="10" y1="42" x2="28" y2="42"></line>'
-      + '<text class="dm-legend-text" x="34" y="45">Tier 2 ($12M)</text>'
-      + '<line class="dm-legend-swatch-t3" x1="10" y1="56" x2="28" y2="56"></line>'
-      + '<text class="dm-legend-text" x="34" y="59">Tier 3 ($15M)</text>'
-      + '</g>';
-    document.getElementById('dt-legend').innerHTML = legend;
-  }
-
   // === Controls ===
   function updateLabels() {
     revGrowthVal.textContent = parseFloat(revGrowthEl.value).toFixed(1) + '%';
@@ -1876,7 +1517,6 @@ An override on its own buys time. It does not change the slope of either line.
     updateHints();
     updateTierActive();
     renderMain();
-    renderTiers();
   }
 
   [revGrowthEl, expGrowthEl, overrideEl, ratchetEl, hcShareEl, wageOffsetEl].forEach(function(el) {
@@ -2047,7 +1687,7 @@ An override on its own buys time. It does not change the slope of either line.
         }
       },
       {
-        caption: 'Adding an override. Tier 2 ($12M) raises the levy ceiling permanently. Revenue jumps above expenses starting FY27, giving the town a few years of breathing room (green above red). Click Back and Next to compare: the line angles do not change, so expenses keep growing at the same rate and catch up on the same schedule.',
+        caption: 'Adding an override. Tier 2 ($12M) raises the levy ceiling permanently. Revenue jumps above expenses starting FY27, giving the town a few years of breathing room (green above red). Try the override slider at $15M (Tier 3) for a larger wedge. Click Back and Next to compare: the line angles do not change, so expenses keep growing at the same rate and catch up on the same schedule.',
         setup: function() {
           resetToDefaults();
           overrideEl.value = 12;
@@ -2347,83 +1987,6 @@ An override on its own buys time. It does not change the slope of either line.
     });
   })();
 
-  // === Hover tooltips for tier chart ===
-  (function() {
-    var svg = document.querySelectorAll('.dm-svg')[1];
-    var overlay = document.getElementById('dt-hover-overlay');
-    var hoverG = document.getElementById('dt-hover-g');
-    var hoverLine = document.getElementById('dt-hover-line');
-    var dotExp = document.getElementById('dt-hover-dot-exp');
-    var dotRev = document.getElementById('dt-hover-dot-rev');
-    var ttBg = document.getElementById('dt-tooltip-bg');
-    var ttYear = document.getElementById('dt-tooltip-year');
-    var ttExp = document.getElementById('dt-tooltip-exp');
-    var ttRevEl = document.getElementById('dt-tooltip-rev');
-    var ttT1 = document.getElementById('dt-tooltip-t1');
-    var ttT2 = document.getElementById('dt-tooltip-t2');
-    var ttT3 = document.getElementById('dt-tooltip-t3');
-
-    function svgX(evt) {
-      var pt = svg.createSVGPoint();
-      pt.x = evt.clientX;
-      pt.y = evt.clientY;
-      return pt.matrixTransform(svg.getScreenCTM().inverse()).x;
-    }
-
-    overlay.addEventListener('mousemove', function(evt) {
-      if (!lastTierData) return;
-      var mx = svgX(evt);
-      var rawI = tIdx0 + (mx - tmL) / tPlotW * (tIdxN - tIdx0);
-      var i = Math.round(Math.max(tIdx0, Math.min(tIdxN, rawI)));
-      var x = txScale(i);
-      var yr = startYear + i;
-      var td = lastTierData;
-
-      hoverG.classList.remove('dm-hidden');
-      hoverLine.setAttribute('x1', x);
-      hoverLine.setAttribute('x2', x);
-      hoverLine.setAttribute('y1', tmT);
-      hoverLine.setAttribute('y2', tmT + tPlotH);
-
-      dotExp.setAttribute('cx', x);
-      dotExp.setAttribute('cy', tyScale(td.baseExp[i]));
-      dotRev.setAttribute('cx', x);
-      dotRev.setAttribute('cy', tyScale(td.baseRev[i]));
-
-      ttYear.textContent = 'FY' + yr;
-      ttExp.textContent = 'Expenses: ' + fmtM(td.baseExp[i]);
-      ttRevEl.textContent = 'Base rev: ' + fmtM(td.baseRev[i]);
-      ttT1.textContent = 'Tier 1: ' + fmtM(td.tierRevs[0][i]);
-      ttT2.textContent = 'Tier 2: ' + fmtM(td.tierRevs[1][i]);
-      ttT3.textContent = 'Tier 3: ' + fmtM(td.tierRevs[2][i]);
-
-      var ttW = 160, ttH = 90, ttPad = 10;
-      var ttX = x + 12;
-      var ttY = tmT + 10;
-      if (ttX + ttW > tsvgW - tmR) ttX = x - ttW - 12;
-      ttBg.setAttribute('x', ttX);
-      ttBg.setAttribute('y', ttY);
-      ttBg.setAttribute('width', ttW);
-      ttBg.setAttribute('height', ttH);
-      ttYear.setAttribute('x', ttX + ttPad);
-      ttYear.setAttribute('y', ttY + 14);
-      ttExp.setAttribute('x', ttX + ttPad);
-      ttExp.setAttribute('y', ttY + 28);
-      ttRevEl.setAttribute('x', ttX + ttPad);
-      ttRevEl.setAttribute('y', ttY + 42);
-      ttT1.setAttribute('x', ttX + ttPad);
-      ttT1.setAttribute('y', ttY + 56);
-      ttT2.setAttribute('x', ttX + ttPad);
-      ttT2.setAttribute('y', ttY + 70);
-      ttT3.setAttribute('x', ttX + ttPad);
-      ttT3.setAttribute('y', ttY + 84);
-    });
-
-    overlay.addEventListener('mouseleave', function() {
-      hoverG.classList.add('dm-hidden');
-    });
-  })();
-
   // === URL parameter support (for embeds and direct links) ===
   var params = new URLSearchParams(window.location.search);
 
@@ -2511,6 +2074,5 @@ An override on its own buys time. It does not change the slope of either line.
   updateHints();
   updateTierActive();
   renderMain();
-  renderTiers();
 })();
 </script>
