@@ -66,7 +66,6 @@ jobs:
             ':!.github'
             ':!data/is-the-board-trying.md'
             ':!data/what-have-we-tried.md'
-            ':!data/minutes_catalog*.md'
           )
 
           added=$(git diff "origin/$BASE_REF"...HEAD -- "${PATHSPEC[@]}" \
