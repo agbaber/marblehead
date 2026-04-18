@@ -50,7 +50,11 @@ jobs:
 
           # Restrict to site-facing HTML/markdown. Exclusions match the
           # Jekyll exclude list in _config.yml, plus .github so this
-          # workflow file never trips its own checks.
+          # workflow file never trips its own checks. Minutes catalog
+          # narrative drafts are dense topic-to-meeting cross-references
+          # where inline <abbr> on every OPEB/GIC/DPW would make the doc
+          # unreadable; they're `sitemap: false` opt-in review pages, not
+          # site-facing prose.
           PATHSPEC=(
             '*.html'
             '*.md'
@@ -60,6 +64,9 @@ jobs:
             ':!docs'
             ':!community-pulse'
             ':!.github'
+            ':!data/is-the-board-trying.md'
+            ':!data/what-have-we-tried.md'
+            ':!data/minutes_catalog*.md'
           )
 
           added=$(git diff "origin/$BASE_REF"...HEAD -- "${PATHSPEC[@]}" \
