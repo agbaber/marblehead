@@ -158,8 +158,15 @@ jobs:
             relative=$(printf '%s' "$path" | sed 's|^/||')
             [ -z "$relative" ] && continue
             if [ ! -f "$relative" ]; then
-              echo "::error title=Broken internal link::file not found: $link (checked $relative)"
-              fail=1
+              # Jekyll renders data/FOO.md to data/FOO.html at build time,
+              # so an href to the .html URL is correct even when only the
+              # .md source exists in the repo. Fall back to the markdown
+              # source before declaring the link broken.
+              md_fallback="${relative%.html}.md"
+              if [ "$md_fallback" = "$relative" ] || [ ! -f "$md_fallback" ]; then
+                echo "::error title=Broken internal link::file not found: $link (checked $relative)"
+                fail=1
+              fi
             fi
           done
 
