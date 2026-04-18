@@ -22,6 +22,11 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     branches: [main]
+  # Declared so the merge queue treats this workflow's checks as reported.
+  # The preview job itself is skipped on merge_group (see `if:` below) since
+  # deploying a preview for a queued merge commit is not useful; GitHub
+  # counts the skipped job as success for required-status purposes.
+  merge_group:
 
 # A single deploy per PR; a new push cancels an in-flight run so the
 # comment always reflects the latest commit.
@@ -31,6 +36,7 @@ concurrency:
 
 jobs:
   preview:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     # Needed so the "post preview URL" step can comment on the PR.
