@@ -1,3 +1,15 @@
+---
+title: "What have we tried?"
+og_title: "What has Marblehead tried to address systemic fiscal issues, and what came of it?"
+og_description: "A catalog of specific attempts by the Select Board and School Committee, FY19 to present, each cited to primary source minutes. DRAFT, not yet linked from site navigation."
+body_class: doc-page
+sitemap: false
+---
+
+<h1>What have we tried?</h1>
+
+<p class="page-lead"><em>DRAFT. Generated from 331 primary-source catalog entries drawn from Select Board and School Committee minutes, FY19 to present. Companion page: <a href="is-the-board-trying.html">Is the board trying?</a></em></p>
+
 Marblehead's public bodies have, over roughly seven fiscal years, produced a large and varied record of attempts to address the town's underlying fiscal pressures. The catalog spans structural deficit and reserves planning; Proposition 2½ overrides and debt exclusions; capital facilities and school building projects; staffing, FTE, and collective bargaining actions; special education cost drivers; revenue diversification through home rule petitions, fees, and new taxes; governance and organizational restructuring; and more limited work on regionalization, solid waste, and pensions/OPEB. The attempts range from formal votes and warrant articles to studies, working groups, and informal proposals, with outcomes varying from unanimous adoption to failed motions and indefinite deferrals. Most entries come from the Select Board and the School Committee; the Finance Committee appears largely through joint sessions and liaison reports.
 
 ## Structural deficit and reserves

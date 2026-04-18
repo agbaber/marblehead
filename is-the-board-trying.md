@@ -1,4 +1,16 @@
-The catalog contains 215 entries spanning Select Board and School Committee meetings from January 2019 through February 2026, covering fiscal topics from structural deficit planning to collective bargaining. The record shows frequent, often substantive engagement on budget mechanics, capital facilities, and special education costs, with importance ratings concentrated at 3 (policy-adjacent) and 4 (substantive), and a smaller set of landmark 5-rated actions tied to the Bell School debt exclusion and the FY23 budget crisis. Attempt types include formal votes, warrant articles, studies, proposals, and working groups; most proposals were discussed without a vote, while debt exclusions and collective bargaining MOAs were more frequently voted. The two bodies address overlapping fiscal pressures from different operational positions, with School Committee entries dominating special education and staffing topics and Select Board entries dominating town-wide revenue and governance items.
+---
+title: "Is the board trying?"
+og_title: "Is Marblehead's Select Board and School Committee substantively engaging with systemic fiscal issues?"
+og_description: "A primary-source catalog of board attempts to address systemic fiscal issues, FY19 to present. Neutral evidence, not advocacy. DRAFT, not yet linked from site navigation."
+body_class: doc-page
+sitemap: false
+---
+
+<h1>Is the board trying?</h1>
+
+<p class="page-lead"><em>DRAFT. Generated from 331 primary-source catalog entries drawn from Select Board and School Committee minutes, FY19 to present. Companion page: <a href="what-have-we-tried.html">What have we tried?</a></em></p>
+
+The catalog contains 331 entries spanning Select Board and School Committee meetings from January 2019 through February 2026, covering fiscal topics from structural deficit planning to collective bargaining. The record shows frequent, often substantive engagement on budget mechanics, capital facilities, and special education costs, with importance ratings concentrated at 3 (policy-adjacent) and 4 (substantive), and a smaller set of landmark 5-rated actions tied to the Bell School debt exclusion and the FY23 budget crisis. Attempt types include formal votes, warrant articles, studies, proposals, and working groups; most proposals were discussed without a vote, while debt exclusions and collective bargaining MOAs were more frequently voted. The two bodies address overlapping fiscal pressures from different operational positions, with School Committee entries dominating special education and staffing topics and Select Board entries dominating town-wide revenue and governance items.
 
 ## By topic
 
