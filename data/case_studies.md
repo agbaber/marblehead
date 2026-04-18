@@ -216,11 +216,85 @@ Not every failed override leads to a return trip to the ballot. Some towns absor
 - **June 2025:** Easton finally returned with a [$7.3M operating override, which also failed](https://www.yahoo.com/news/7-3m-easton-override-fails-015746254.html), 3,754 no to 2,252 yes. The town then implemented what officials described as the most severe service reductions since the 2008 financial crisis, including the equivalent of 47 school FTEs.
 - **Takeaway:** Easton rejected overrides in both 2016 and 2025 and absorbed the consequences each time. Nine years separated the two attempts.
 
+<div class="case-chart-legend">
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--rev"></span>Total revenues</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--exp"></span>Total expenditures</span>
+  <span><span class="case-chart-legend-tick case-chart-legend-tick--loss"></span>Override failed</span>
+</div>
+
+<svg class="case-chart" id="case-chart-easton" viewBox="0 0 720 260" role="img" aria-label="Easton general fund revenue and expenditure, FY2002 to FY2025, with override ballot results marked at top.">
+<line class="case-grid" x1="54.0" x2="698.0" y1="222.8" y2="222.8" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="193.2" y2="193.2" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="163.7" y2="163.7" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="134.1" y2="134.1" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="104.5" y2="104.5" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="74.9" y2="74.9" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="45.3" y2="45.3" />
+<line class="case-axis" x1="54.0" x2="698.0" y1="226.0" y2="226.0" />
+<line class="case-vote-loss" x1="474.0" x2="474.0" y1="6" y2="226.0"><title>FY2017: 1 override question, failed, $4.40M total</title></line>
+<polyline class="case-exp" points="54.0,219.9 82.0,215.2 110.0,212.5 138.0,204.8 166.0,197.9 194.0,185.2 222.0,168.0 250.0,166.4 278.0,165.3 306.0,155.9 334.0,156.0 362.0,148.8 390.0,139.8 418.0,131.1 446.0,128.2 474.0,121.5 502.0,113.6 530.0,110.1 558.0,105.8 586.0,104.6 614.0,88.6 642.0,70.5 670.0,56.7 698.0,47.0" />
+<polyline class="case-rev" points="54.0,218.7 82.0,216.0 110.0,206.6 138.0,204.0 166.0,193.2 194.0,179.2 222.0,170.3 250.0,166.5 278.0,161.6 306.0,155.2 334.0,151.9 362.0,148.3 390.0,140.9 418.0,129.2 446.0,123.5 474.0,117.8 502.0,111.6 530.0,110.1 558.0,103.2 586.0,92.4 614.0,81.6 642.0,67.5 670.0,57.0 698.0,44.8" />
+<text class="case-tick" x="49.0" y="225.8" text-anchor="end">$40M</text>
+<text class="case-tick" x="49.0" y="196.2" text-anchor="end">$50M</text>
+<text class="case-tick" x="49.0" y="166.7" text-anchor="end">$60M</text>
+<text class="case-tick" x="49.0" y="137.1" text-anchor="end">$70M</text>
+<text class="case-tick" x="49.0" y="107.5" text-anchor="end">$80M</text>
+<text class="case-tick" x="49.0" y="77.9" text-anchor="end">$90M</text>
+<text class="case-tick" x="49.0" y="48.3" text-anchor="end">$100M</text>
+<text class="case-tick" x="54.0" y="248.0" text-anchor="middle">FY'02</text>
+<text class="case-tick" x="166.0" y="248.0" text-anchor="middle">FY'06</text>
+<text class="case-tick" x="278.0" y="248.0" text-anchor="middle">FY'10</text>
+<text class="case-tick" x="390.0" y="248.0" text-anchor="middle">FY'14</text>
+<text class="case-tick" x="502.0" y="248.0" text-anchor="middle">FY'18</text>
+<text class="case-tick" x="614.0" y="248.0" text-anchor="middle">FY'22</text>
+<text class="case-tick" x="698.0" y="248.0" text-anchor="middle">FY'25</text>
+</svg>
+
+<p class="case-chart-caption">Easton general fund, FY2002 through FY2025 (DOR DLS Schedule A). Revenues and expenditures stayed within roughly $2M of each other for the entire period despite the FY2017 $4.4M override loss marked on the chart. The June 2025 FY2026 $7.3M override loss is described above and falls beyond the data window. Easton's pattern is balanced operation absent override-added authority, with the post-FY2025 service cuts (47 school FTEs) yet to appear in Schedule A.</p>
+
 ### Newton (population ~88,000)
 
 - **March 2023:** [$9.2M operating override fails](https://www.wbur.org/news/2023/03/15/newton-tax-override-vote-results), 10,566 no to 9,428 yes. (Voters approved two debt exclusion questions on the same ballot.)
 - **Outcome:** As of April 2026, Newton has not returned with another operating override attempt, more than three years later. Newton Public Schools faced an $8M shortfall in the FY2024 budget and implemented staff and program cuts. The austerity contributed to labor tensions that culminated in a [two-week teachers' strike in winter 2024](https://www.wbur.org/news/2024/02/01/newton-teachers-strike-explainer). The School Committee approved a FY2026 budget with a [$2-3M funding gap](https://www.figcitynews.com/2025/04/next-steps-after-school-committee-approves-nps-budget-with-2-3-million-funding-gap/) rather than returning to the ballot.
 - **Takeaway:** Newton absorbed three years of budget pressure after rejecting a $9.2M override, including a teachers' strike driven partly by fiscal constraints.
+
+<div class="case-chart-legend">
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--rev"></span>Total revenues</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--exp"></span>Total expenditures</span>
+  <span><span class="case-chart-legend-tick case-chart-legend-tick--loss"></span>Override failed</span>
+</div>
+
+<svg class="case-chart" id="case-chart-newton" viewBox="0 0 720 260" role="img" aria-label="Newton general fund revenue and expenditure, FY2002 to FY2025, with override ballot results marked at top.">
+<line class="case-grid" x1="54.0" x2="698.0" y1="224.7" y2="224.7" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="198.8" y2="198.8" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="172.8" y2="172.8" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="146.8" y2="146.8" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="120.8" y2="120.8" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="94.8" y2="94.8" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="68.9" y2="68.9" />
+<line class="case-grid" x1="54.0" x2="698.0" y1="42.9" y2="42.9" />
+<line class="case-axis" x1="54.0" x2="698.0" y1="226.0" y2="226.0" />
+<line class="case-vote-loss" x1="670.0" x2="670.0" y1="6" y2="226.0"><title>FY2024: 1 override question, failed, $9.20M total</title></line>
+<polyline class="case-exp" points="54.0,208.8 82.0,197.9 110.0,193.9 138.0,201.7 166.0,181.5 194.0,198.6 222.0,185.6 250.0,174.8 278.0,172.9 306.0,167.9 334.0,172.5 362.0,166.5 390.0,155.6 418.0,146.9 446.0,141.0 474.0,132.4 502.0,116.8 530.0,111.2 558.0,106.4 586.0,101.4 614.0,85.2 642.0,77.9 670.0,66.1 698.0,53.4" />
+<polyline class="case-rev" points="54.0,220.6 82.0,210.0 110.0,208.0 138.0,203.5 166.0,198.2 194.0,191.8 222.0,185.4 250.0,181.4 278.0,177.4 306.0,175.3 334.0,170.8 362.0,162.8 390.0,151.7 418.0,144.3 446.0,133.5 474.0,126.5 502.0,118.2 530.0,108.1 558.0,102.2 586.0,96.2 614.0,72.3 642.0,68.5 670.0,55.2 698.0,44.2" />
+<text class="case-tick" x="49.0" y="227.7" text-anchor="end">$200M</text>
+<text class="case-tick" x="49.0" y="201.8" text-anchor="end">$250M</text>
+<text class="case-tick" x="49.0" y="175.8" text-anchor="end">$300M</text>
+<text class="case-tick" x="49.0" y="149.8" text-anchor="end">$350M</text>
+<text class="case-tick" x="49.0" y="123.8" text-anchor="end">$400M</text>
+<text class="case-tick" x="49.0" y="97.8" text-anchor="end">$450M</text>
+<text class="case-tick" x="49.0" y="71.9" text-anchor="end">$500M</text>
+<text class="case-tick" x="49.0" y="45.9" text-anchor="end">$550M</text>
+<text class="case-tick" x="54.0" y="248.0" text-anchor="middle">FY'02</text>
+<text class="case-tick" x="166.0" y="248.0" text-anchor="middle">FY'06</text>
+<text class="case-tick" x="278.0" y="248.0" text-anchor="middle">FY'10</text>
+<text class="case-tick" x="390.0" y="248.0" text-anchor="middle">FY'14</text>
+<text class="case-tick" x="502.0" y="248.0" text-anchor="middle">FY'18</text>
+<text class="case-tick" x="614.0" y="248.0" text-anchor="middle">FY'22</text>
+<text class="case-tick" x="698.0" y="248.0" text-anchor="middle">FY'25</text>
+</svg>
+
+<p class="case-chart-caption">Newton general fund, FY2002 through FY2025 (DOR DLS Schedule A). The FY2024 override loss is marked. Newton has run general fund surpluses every year since FY2019 and was running a $21M surplus in FY2024 when the override question went to the ballot, which is one reason the failed override has not driven Newton back to the ballot. The pre-FY2010 expenditure spikes likely reflect UMAS reclassification of intergovernmental transfers rather than operating losses.</p>
 
 ### Structural alternatives towns have used
 

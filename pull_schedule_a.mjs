@@ -4,8 +4,8 @@ import { writeFileSync, readFileSync, existsSync, mkdirSync, appendFileSync } fr
 const URL = 'https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=ScheduleA.GenFund_MAIN';
 
 const TOWNS = new Set([
-  'Arlington', 'Brookline', 'Cohasset', 'Duxbury', 'Framingham', 'Hingham',
-  'Lexington', 'Marblehead', 'Melrose', 'Natick', 'Needham',
+  'Arlington', 'Brookline', 'Cohasset', 'Duxbury', 'Easton', 'Framingham', 'Hingham',
+  'Lexington', 'Marblehead', 'Melrose', 'Natick', 'Needham', 'Newton',
   'Stoneham', 'Swampscott', 'Wellesley', 'Winchester'
 ]);
 
