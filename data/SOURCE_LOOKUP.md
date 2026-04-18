@@ -155,6 +155,20 @@ Each year's draw stays on the levy permanently; Year 3 is the ongoing annual cos
 - Raw JSON saved: `data/acs_b19001_marblehead_2024.json`
 - B19001_001E = total households (8,289). Brackets _002E through _017E cover &lt;$10K up to $200K+. Percentiles on the override calculator are derived from cumulative bracket sums divided by _001E.
 
+## Peer Town General Fund Revenues and Expenditures, FY2002&ndash;FY2025
+
+Two CSVs pulled from the Massachusetts Department of Revenue Division of Local Services (DLS) Schedule A General Fund reports:
+
+- `data/peer_schedule_a_revenues.csv` &ndash; 15 peer towns (Arlington, Brookline, Cohasset, Duxbury, Framingham, Hingham, Lexington, Marblehead, Melrose, Natick, Needham, Stoneham, Swampscott, Wellesley, Winchester) &times; FY2002&ndash;FY2025. Columns: dor_code, municipality, fiscal_year, taxes, service_charges, licenses_permits, federal_revenue, state_revenue, other_govt_revenue, special_assessments, fines, miscellaneous, other_financing, transfers, total_revenues.
+- `data/peer_schedule_a_expenditures.csv` &ndash; same 15 towns and years. Columns: dor_code, municipality, fiscal_year, then DLS expenditure categories (general government, public safety, education, public works, human services, culture and recreation, debt service, intergovernmental, fixed costs, etc.) and total_expenditures.
+- `data/peer_gf_rev_exp_summary.csv` &ndash; derived summary with just municipality, fiscal_year, total_revenues, total_expenditures.
+
+Upstream URL (no year parameter needed; the form lets you select year and municipality checkboxes): [DLS Schedule A General Fund](https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=ScheduleA.GenFund_MAIN).
+
+Scraper: `pull_schedule_a.mjs` in the repo root. It uses Playwright to submit the form for each year and paginate through all 351 Massachusetts municipalities, filtering to the 15 peer towns on save.
+
+DLS's definition of General Fund scope follows the [Uniform Massachusetts Accounting System (UMAS)](https://www.mass.gov/service-details/uniform-municipal-accounting-system-umas). Schedule A totals reflect the government-wide general fund and do not match ACFR governmental-fund totals one-to-one (different fund groupings, different reporting period boundaries). Use these CSVs for cross-town comparison; use ACFRs for single-town historical detail.
+
 ## Marblehead Independent & Current Articles (referenced across site)
 - ["Marblehead advances $122.8M budget built on cuts, defers override decisions"](https://www.marbleheadindependent.com/marblehead-advances-122-8m-budget-built-on-cuts-defers-override-decisions/) (Marblehead Independent)
 - ["Concerns over staffing cuts shape Marblehead school budget hearing"](https://www.marbleheadindependent.com/concerns-over-staffing-cuts-shape-marblehead-school-budget-hearing/) (Marblehead Independent)
