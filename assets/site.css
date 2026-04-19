@@ -517,6 +517,26 @@ html[data-theme="light"] .theme-icon--moon { display: block; }
    links; no JS. Pair with id="..." on each target h2.
    ========================================================================== */
 
+.stats-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding: 10px 14px;
+  margin: 12px 0 6px;
+  background: color-mix(in srgb, var(--c-buoy) 6%, var(--surface));
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  color: var(--text-subtle);
+}
+.stats-strip .stat {
+  white-space: nowrap;
+}
+.stats-strip strong {
+  color: var(--c-navy);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
 .page-toc {
   display: flex;
   flex-wrap: wrap;

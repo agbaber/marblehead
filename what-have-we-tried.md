@@ -10,6 +10,59 @@ sitemap: false
 
 <p class="page-lead"><em>DRAFT. Generated from 331 primary-source catalog entries drawn from Select Board and School Committee minutes, FY19 to present. Companion page: <a href="is-the-board-trying.html">Is the board trying?</a></em></p>
 
+<div class="stats-strip">
+  <span class="stat"><strong>331</strong> attempts catalogued</span>
+  <span class="stat"><strong>11</strong> topics</span>
+  <span class="stat"><strong>7</strong> landmark moments</span>
+  <span class="stat"><strong>FY19 to FY26</strong></span>
+</div>
+
+<nav class="page-toc" aria-label="On this page">
+  <span class="page-toc-label">On this page</span>
+  <a href="#landmark-moments">Landmark moments</a>
+  <a href="#structural-deficit-and-reserves">Structural deficit</a>
+  <a href="#overrides-and-debt-exclusions-proposition-2">Overrides &amp; debt exclusions</a>
+  <a href="#capital-facilities-and-debt">Capital facilities</a>
+  <a href="#staffing-and-collective-bargaining">Staffing &amp; bargaining</a>
+  <a href="#special-education-and-out-of-district-costs">Special education</a>
+  <a href="#revenue-diversification">Revenue</a>
+  <a href="#governance-and-organizational-change">Governance</a>
+  <a href="#regionalization-and-shared-services">Regionalization</a>
+  <a href="#low-coverage-topics">Low-coverage topics</a>
+</nav>
+
+## Landmark moments
+
+The seven attempts rated highest in the catalog, chronological. Each links to its primary-source minutes entry.
+
+<div class="takeaway takeaway--neutral" id="entry-select_board_2019-01-17_seq-003">
+  <strong>Select Board, January 17, 2019.</strong> Engaged Powers and Sullivan to audit the practice of holding FY18 special education bills and paying them in FY19. Outcome: audit completed confirming the practice; new double-check procedure put in place in the Finance Director's office.
+</div>
+
+<div class="takeaway takeaway--neutral" id="entry-school_committee_2019-01-24_seq-002">
+  <strong>School Committee, January 24, 2019.</strong> Approved a warrant article asking Town Meeting to fund design and construction of a new PK-3 elementary school at 40 Baldwin Road (the Bell School site). Outcome: motion approved 5-0.
+</div>
+
+<div class="takeaway takeaway--neutral" id="entry-select_board_2019-03-18_seq-001">
+  <strong>Select Board, March 18, 2019.</strong> Voted unanimously to enter the Massachusetts School Building Authority Project Scope and Budget Agreement for the replacement of the Gerry, Coffin, and Upper and Lower Bell Schools with a new PK-3 facility. Outcome: Chair authorized to execute on behalf of the Board.
+</div>
+
+<div class="takeaway takeaway--neutral" id="entry-select_board_2019-05-13_seq-001">
+  <strong>Select Board, May 13, 2019.</strong> Called a Special Town Meeting and Special Election for June 18 and placed on the ballot a Proposition 2½ debt exclusion for bonds funding the new Bell School. Outcome: motion approved unanimously; question placed on the Special Election ballot.
+</div>
+
+<div class="takeaway takeaway--neutral" id="entry-school_committee_2022-04-07_seq-002">
+  <strong>School Committee, April 7, 2022.</strong> Approved an FY23 operating budget of $47,033,366 requiring an operating budget override, including base roll-forward, contractual obligations, and about $800,000 in out-of-district tuition. Outcome: passed 5-0 by roll call vote.
+</div>
+
+<div class="takeaway takeaway--neutral" id="entry-school_committee_2023-03-21_seq-002">
+  <strong>School Committee, March 21, 2023.</strong> Presented a Reduced Services budget option that would eliminate 33 positions and reduce or reallocate 4 additional positions, alongside a Level Services override-contingent option. Outcome: presented for public comment; no vote at this meeting.
+</div>
+
+<div class="takeaway takeaway--neutral" id="entry-school_committee_2023-07-21_seq-001">
+  <strong>School Committee, July 21, 2023.</strong> Authorized counsel to negotiate a separation agreement with the Superintendent under Section 12.2 of his contract, with direction to offer up to the full early-termination amount while attempting to negotiate savings. Outcome: motion passed 3-1.
+</div>
+
 Marblehead's public bodies have, over roughly seven fiscal years, produced a large and varied record of attempts to address the town's underlying fiscal pressures. The catalog spans structural deficit and reserves planning; Proposition 2½ overrides and debt exclusions; capital facilities and school building projects; staffing, <abbr class="g" title="Full-Time Equivalent">FTE</abbr>, and collective bargaining actions; special education cost drivers; revenue diversification through home rule petitions, fees, and new taxes; governance and organizational restructuring; and more limited work on regionalization, solid waste, and pensions/<abbr class="g" title="Other Post-Employment Benefits">OPEB</abbr>. The attempts range from formal votes and warrant articles to studies, working groups, and informal proposals, with outcomes varying from unanimous adoption to failed motions and indefinite deferrals. Most entries come from the Select Board and the School Committee; the Finance Committee appears largely through joint sessions and liaison reports.
 
 ## Structural deficit and reserves
