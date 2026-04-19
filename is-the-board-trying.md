@@ -25,7 +25,20 @@ sitemap: false
   <a href="#what-the-data-does-not-show">What the data does not show</a>
 </nav>
 
-The record contains 331 entries spanning Select Board and School Committee meetings from January 2019 through February 2026, covering fiscal topics from structural deficit planning to collective bargaining. The record shows frequent, often substantive engagement on budget mechanics, capital facilities, and special education costs, including landmark moments tied to the Bell School debt exclusion and the FY23 override cycle. Attempt types include formal votes, warrant articles, studies, proposals, and working groups; most proposals were discussed without a vote, while debt exclusions and collective bargaining MOAs were more frequently voted. The two bodies address overlapping fiscal pressures from different operational positions, with School Committee entries dominating special education and staffing topics and Select Board entries dominating town-wide revenue and governance items.
+<div class="takeaway takeaway--neutral">
+  <strong>Short answer: yes, with qualifications.</strong> From FY19 through FY26, the Select Board and School Committee engaged with structural fiscal issues in about 330 distinct moments, including 84 formal votes and 25 warrant article actions. Engagement was mostly <em>reactive</em> to named pressures (special-education cost spikes, bargaining windows, state grant-eligibility changes) rather than <em>proactive</em> policy design. Revenue-side reform is thin (23 attempts, mostly small fee tweaks or one-off home rule petitions). Healthcare and pensions, both named in meetings as major cost drivers, show only three discrete policy attempts combined. Finance Committee minutes were requested but are not yet available, so FinCom deliberations do not appear directly.
+</div>
+
+### Key findings at a glance
+
+- **Substantive engagement is the norm, not the exception.** In the 174 meetings where fiscal topics were on the agenda, 331 distinct attempts were identified.
+- **Reactive over proactive.** Most attempts respond to an immediate pressure (a shortfall, a contract deadline, a ballot window). Few initiate new policy.
+- **Capital and structural deficit dominate.** Capital facilities (71 entries) and structural deficit and reserves (88) together account for nearly half of the record.
+- **Revenue-side reform is limited.** 23 revenue-diversification entries, concentrated in small fees, a senior tax exemption home rule petition, and cannabis host agreements.
+- **Healthcare and pension policy is near-absent in minutes.** 0 healthcare entries and 3 pension or OPEB entries across seven fiscal years. The cost drivers are named but discrete policy moments are not.
+- **Finance Committee is a coverage gap.** A public records request for FinCom minutes is pending with the Town Clerk's office; when received, the record will be updated.
+
+The rest of this page drills into the record by topic, by era, and by body, and ends with what the data does <em>not</em> show. The companion page, <a href="what-have-we-tried.html">What have we tried?</a>, lists the attempts grouped by policy area.
 
 ## By topic
 

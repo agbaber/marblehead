@@ -528,6 +528,29 @@ html[data-theme="light"] .theme-icon--moon { display: block; }
   font-size: 0.8125rem;
   color: var(--text-subtle);
 }
+
+/* Compact summary grid used at the top of long catalog-style pages to
+   preview what each topic contains. Two columns on desktop, one on mobile. */
+.topic-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+  margin: 12px 0 24px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.topic-summary-grid > div {
+  padding: 10px 14px;
+  background: var(--surface);
+  border-left: 3px solid var(--c-border);
+  border-radius: 0 6px 6px 0;
+}
+@media (max-width: 640px) {
+  .topic-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .stats-strip .stat {
   white-space: nowrap;
 }

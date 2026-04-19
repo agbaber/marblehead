@@ -31,8 +31,27 @@ sitemap: false
   <a href="#low-coverage-topics">Low-coverage topics</a>
 </nav>
 
+<div class="takeaway takeaway--neutral">
+  <strong>In one paragraph:</strong> Over seven fiscal years, Marblehead's boards have tried mostly four kinds of things: <strong>cut spending at the margin</strong> (unfilled position eliminations, zero-based budgeting pilots, FY24 and FY27 budget reductions), <strong>place debt exclusions on the ballot</strong> for major capital projects (Bell School 2019, Fire pumper 2021, Abbot Library 2021, Mary A. Alley 2025, MHS roof 2025), <strong>commission studies and audits</strong> (Powers and Sullivan special education audit 2019, CliftonLarsonAllen Finance Department assessment 2024, Academic Discovery special education review 2024, outside override specialist 2024), and <strong>restructure governance and organization</strong> (Assessing Department under CFO, Community Development consolidation, Charter Committee, Finance Department restructuring). They have tried relatively little on the <em>revenue</em> side beyond a senior tax exemption home rule petition, a cannabis host agreement, and routine fee adjustments. They have tried almost nothing visible in the meeting record on <strong>healthcare plan design</strong> or <strong>pension funding policy</strong>, though both are named as major cost drivers.
+</div>
+
+### What the record covers
+
+<div class="topic-summary-grid">
+  <div><strong>Structural deficit and reserves</strong> (88 entries): forecasts, multi-year scenarios, free-cash policy, dual-budget preparation</div>
+  <div><strong>Capital facilities and debt</strong> (71): school building projects, roof and HVAC, Mary A. Alley Building, ambulance truck</div>
+  <div><strong>Overrides and debt exclusions</strong> (37): ballot placements, warrant articles, placeholder override votes</div>
+  <div><strong>Staffing and collective bargaining</strong> (32): MEA and Police and DPW MOAs, FTE reductions, classification reform</div>
+  <div><strong>Special education</strong> (26): audits, out-of-district tuition, program reviews, circuit-breaker corrections</div>
+  <div><strong>Revenue diversification</strong> (23): senior tax exemption, cannabis host agreement, user fees, meals tax discussion</div>
+  <div><strong>Governance and organizational change</strong> (22): department consolidation, elected-to-appointed transitions, Charter Committee</div>
+  <div><strong>Regionalization and shared services</strong> (6): joint ambulance, DPW and Water and Sewer consolidation</div>
+  <div><strong>Healthcare, pensions/OPEB, solid waste</strong> (5 combined): largely absent from the minutes record despite being cited as major cost drivers</div>
+</div>
+
 ## Landmark moments
-Seven moments where a board took direct action with lasting consequences, in chronological order. Each callout quotes the meeting's own record.
+
+The seven highest-consequence moments in the record, chronological. Each callout quotes the meeting's own language.
 
 <div class="takeaway takeaway--neutral" id="entry-select_board_2019-01-17_seq-003">
   <strong>Select Board, January 17, 2019.</strong> Engaged Powers and Sullivan to audit the practice of holding FY18 special education bills and paying them in FY19. Outcome: audit completed confirming the practice; new double-check procedure put in place in the Finance Director's office.
