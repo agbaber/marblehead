@@ -117,21 +117,29 @@ user so they can find it without hunting.
 One exception: if the push was explicitly a fixup onto an existing open
 PR's branch, don't open a second PR.
 
-## Prefer auto-merge when asked to merge
+## Default to manual merge; only use --auto when explicitly asked
 
-Auto-merge is enabled on this repo. When the user asks you to merge a PR,
-default to `gh pr merge <n> --auto --squash --delete-branch`. GitHub will
-then hold the merge until checks pass and the branch is up to date with
-main, rebasing automatically if another PR lands ahead of yours.
+When the user asks you to merge a PR, default to a plain
+`gh pr merge <n> --squash --delete-branch` (or the equivalent MCP
+`merge_pull_request` call). **Do not** enable auto-merge unless the user
+specifically says "auto-merge it" or "fire-and-forget it."
 
-Why this matters: branch protection requires up-to-date branches and
-passing "smoke" + "preview" checks. Without `--auto`, you end up in a
-rebase-push-wait-retry loop every time main moves while you wait for
-checks (which takes ~2 minutes). With `--auto`, fire-and-forget works.
+Why: auto-merge fires the moment required checks pass, which can be
+seconds after CI starts. Any commit pushed to the branch after that
+moment ends up orphaned, parented on a pre-merge SHA. PR #621 hit this
+exact bug on 2026-04-18: a follow-up commit landed milliseconds after
+auto-merge fired and had to be cherry-picked into a recovery PR (#622).
 
-Still check `mergeStateStatus == CLEAN` before passing `--delete-branch`
-to avoid the orphaning issue documented below; `--auto` respects that
-check and only deletes on successful merge.
+This default is safer now that "Require branches to be up to date" is
+**off** in branch protection: a manual merge no longer triggers a
+rebase loop, so `--auto` is no longer needed to avoid the
+push-wait-retry dance. Use it only when you genuinely want
+fire-and-forget (e.g. you're closing the session and a long CI run is
+in flight).
+
+When you do use `--auto`, still check `mergeStateStatus == CLEAN`
+before passing `--delete-branch` to avoid the orphaning issue
+documented below.
 
 ## Post the preview URL when asking for a live review
 
