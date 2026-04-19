@@ -14,6 +14,10 @@ title: case studies
   .case-chart .case-gap-deficit { fill: var(--series-cost); opacity: 0.18; }
   .case-chart .case-vote-win { stroke: var(--c-navy); stroke-width: 1.5; opacity: 0.45; }
   .case-chart .case-vote-loss { stroke: var(--text-muted); stroke-width: 1; stroke-dasharray: 3 3; opacity: 0.45; }
+  .case-chart .fc-line { stroke: var(--c-buoy); stroke-width: 2.2; fill: none; }
+  .case-chart .fc-area { fill: var(--c-buoy); opacity: 0.18; }
+  .case-chart .fc-dot { fill: var(--c-buoy); stroke: var(--c-surface); stroke-width: 1.2; }
+  .case-chart .fc-point-label { font-size: 10px; fill: var(--c-buoy); font-family: inherit; font-weight: 600; }
   .case-chart-caption {
     font-size: 12px;
     color: var(--text-muted);
@@ -336,6 +340,55 @@ The cases above focus on what happened after a "no" vote. A separate question is
 </svg>
 
 <p class="case-chart-caption">Marblehead general fund, FY2002 through FY2024 (DOR DLS Schedule A; FY2025 not yet filed). Expenditures exceeded revenues by $5M to $9M per year FY2002 through FY2006. Six override questions passed in that cluster (FY2002 sewers, FY2004 supplemental budget, FY2005 school, library, waste collection, and FY2006 operating) added $4.92M of permanent levy authority. The gap closed within three years and the town ran roughly balanced for eleven years. From FY2018 through FY2024 the gap reopened and three operating overrides (FY2012, FY2023, FY2024) failed at the ballot.</p>
+
+### How Marblehead has been bridging the gap: free cash appropriated to the budget
+
+The gap chart above shows revenues and expenditures tracking closely in recent years, but it does not show *how* that appearance of balance has been maintained. One of the main bridges has been free cash: the certified unreserved fund balance from the prior fiscal year, appropriated into the next year's operating budget to keep the books balanced.
+
+<svg class="case-chart" viewBox="0 0 720 260" role="img" aria-label="Marblehead free cash appropriated each fiscal year, FY2015 to FY2024">
+<line class="case-grid" x1="58.0" x2="698.0" y1="226.0" y2="226.0" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="191.6" y2="191.6" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="157.1" y2="157.1" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="122.7" y2="122.7" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="88.2" y2="88.2" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="53.8" y2="53.8" />
+<polygon class="fc-area" points="58.0,140.1 129.1,132.5 200.2,111.6 271.3,94.0 342.4,82.9 413.6,78.3 484.7,102.0 555.8,74.6 626.9,50.3 698.0,88.2 698.0,226.0 58.0,226.0" />
+<polyline class="fc-line" points="58.0,140.1 129.1,132.5 200.2,111.6 271.3,94.0 342.4,82.9 413.6,78.3 484.7,102.0 555.8,74.6 626.9,50.3 698.0,88.2" />
+<circle cx="58.0" cy="140.1" r="3" class="fc-dot" />
+<text class="fc-point-label" x="58.0" y="134.1" text-anchor="middle">$5.0M</text>
+<circle cx="129.1" cy="132.5" r="3" class="fc-dot" />
+<text class="fc-point-label" x="129.1" y="126.5" text-anchor="middle">$5.4M</text>
+<circle cx="200.2" cy="111.6" r="3" class="fc-dot" />
+<text class="fc-point-label" x="200.2" y="105.6" text-anchor="middle">$6.6M</text>
+<circle cx="271.3" cy="94.0" r="3" class="fc-dot" />
+<text class="fc-point-label" x="271.3" y="88.0" text-anchor="middle">$7.7M</text>
+<circle cx="342.4" cy="82.9" r="3" class="fc-dot" />
+<text class="fc-point-label" x="342.4" y="76.9" text-anchor="middle">$8.3M</text>
+<circle cx="413.6" cy="78.3" r="3" class="fc-dot" />
+<text class="fc-point-label" x="413.6" y="72.3" text-anchor="middle">$8.6M</text>
+<circle cx="484.7" cy="102.0" r="3" class="fc-dot" />
+<text class="fc-point-label" x="484.7" y="96.0" text-anchor="middle">$7.2M</text>
+<circle cx="555.8" cy="74.6" r="3" class="fc-dot" />
+<text class="fc-point-label" x="555.8" y="68.6" text-anchor="middle">$8.8M</text>
+<circle cx="626.9" cy="50.3" r="3" class="fc-dot" />
+<text class="fc-point-label" x="626.9" y="44.3" text-anchor="middle">$10.2M</text>
+<circle cx="698.0" cy="88.2" r="3" class="fc-dot" />
+<text class="fc-point-label" x="698.0" y="82.2" text-anchor="middle">$8.0M</text>
+<text class="case-tick" x="53.0" y="229.0" text-anchor="end">$0M</text>
+<text class="case-tick" x="53.0" y="194.6" text-anchor="end">$2M</text>
+<text class="case-tick" x="53.0" y="160.1" text-anchor="end">$4M</text>
+<text class="case-tick" x="53.0" y="125.7" text-anchor="end">$6M</text>
+<text class="case-tick" x="53.0" y="91.2" text-anchor="end">$8M</text>
+<text class="case-tick" x="53.0" y="56.8" text-anchor="end">$10M</text>
+<text class="case-tick" x="58.0" y="248.0" text-anchor="middle">FY15</text>
+<text class="case-tick" x="200.2" y="248.0" text-anchor="middle">FY17</text>
+<text class="case-tick" x="342.4" y="248.0" text-anchor="middle">FY19</text>
+<text class="case-tick" x="484.7" y="248.0" text-anchor="middle">FY21</text>
+<text class="case-tick" x="626.9" y="248.0" text-anchor="middle">FY23</text>
+<text class="case-tick" x="698.0" y="248.0" text-anchor="middle">FY24</text>
+</svg>
+
+<p class="case-chart-caption">Free cash appropriated each fiscal year, as captured in the original budget schedule of each year's Marblehead ACFR. The draw has roughly doubled from $5.0M in FY2015 to a peak $10.2M in FY2023. The 2019 FinCom report was the first to describe this reliance as "not sustainable." Free cash is an annual certification based on the prior year's unused revenue plus year-end balances; it is not a standing reserve the town can count on in future years.</p>
 
 ### Comparison table
 
