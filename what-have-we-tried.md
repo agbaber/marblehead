@@ -137,7 +137,7 @@ Notable attempts:
 
 > "Out-of-district special education costs total $6.362 million: $5.125 million tuition for ~50 students (10% of total budget) plus $1.237 million transportation\n   • Net local impact: $3.562 million tuition and under $1 million transportation after\n   circuit breaker and IDEA fund offsets"  ([school_committee 2025-10-17](#entry-school_committee_2025-10-17_seq-001))
 
-Special education attempts combine in-year crisis management (mid-year transfers, accounting corrections) with longer-run structural tools: audits, reserve fund planning, program consolidation, and plans to internalize services previously outsourced.
+Special education attempts combine in-year budget management (mid-year transfers, accounting corrections) with longer-run structural tools: audits, reserve fund planning, program consolidation, and plans to internalize services previously outsourced.
 
 ## Revenue diversification
 
