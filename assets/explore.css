@@ -1764,22 +1764,6 @@
     .explore-tutorial { font-size: 12px; padding: 12px 14px; }
   }
 
-  /* ─── Story-filter caption on question-block ──────────────────────
-     Neutral italic note that names the framing choice the strongest
-     evidence chart is making (time range, peers, metric). Written as
-     context, not disclaimer. */
-  .question-block .story-filter {
-    margin: 10px 0 0;
-    padding: 10px 14px;
-    font-size: 13.5px;
-    line-height: 1.5;
-    color: var(--c-text-mid);
-    background: var(--c-fog);
-    border-left: 3px solid var(--c-border);
-    border-radius: 0 6px 6px 0;
-    font-style: italic;
-  }
-
   /* ─── Evidence-block cross-link to a related question ──────────── */
   .evidence-cross-link {
     margin-top: 14px;

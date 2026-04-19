@@ -1182,12 +1182,7 @@
     label.textContent = 'Start here';
     featuredEl.appendChild(label);
 
-    /* Clone the question block (h1 + context). Drop .story-filter --
-       it's methodology copy that belongs next to the chart, not in the
-       onboarding preview. */
     var qClone = qBlock.cloneNode(true);
-    var storyFilter = qClone.querySelector('.story-filter');
-    if (storyFilter) storyFilter.remove();
     featuredEl.appendChild(qClone);
 
     /* Clone the three answer cards. The clones keep data-question /
