@@ -529,6 +529,38 @@ html[data-theme="light"] .theme-icon--moon { display: block; }
   color: var(--text-subtle);
 }
 
+/* Collapsible block holding the full list of cited meeting attempts inside a
+   topic section. Summary sits inline; click expands to show the full bullet
+   list. Keeps the reading page compact without losing reference depth. */
+body.doc-page .page details.attempts {
+  margin: 8px 0 24px;
+  border-left: 2px solid var(--c-border);
+  padding: 0 0 0 14px;
+}
+body.doc-page .page details.attempts > summary {
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--c-navy);
+  padding: 6px 0;
+  list-style: none;
+}
+body.doc-page .page details.attempts > summary::-webkit-details-marker {
+  display: none;
+}
+body.doc-page .page details.attempts > summary::before {
+  content: "▸ ";
+  display: inline-block;
+  width: 1em;
+  transition: transform 0.15s ease;
+}
+body.doc-page .page details.attempts[open] > summary::before {
+  transform: rotate(90deg);
+}
+body.doc-page .page details.attempts > ul {
+  margin-top: 10px;
+}
+
 /* Compact summary grid used at the top of long catalog-style pages to
    preview what each topic contains. Two columns on desktop, one on mobile. */
 .topic-summary-grid {
