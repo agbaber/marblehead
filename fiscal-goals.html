@@ -84,8 +84,8 @@ og_url: https://marbleheaddata.org/fiscal-goals.html
 <div class="milestone">
   <div class="milestone-num">Milestone 1</div>
   <h3>Name and size specific changes to the expense trajectory</h3>
-  <p>Before anything can shift, proposals have to exist. Have town leaders, FinCom, or department heads identified concrete line items&mdash;staff consolidation, contract renegotiation, service restructuring, shared services&mdash;and estimated how much each one saves annually?</p>
-  <p>This milestone is met when proposals are <strong>named, sized, and sourced</strong>&mdash;not when they're enacted.</p>
+  <p>Before anything can shift, proposals have to exist. Have town leaders, FinCom, or department heads identified concrete line items (staff consolidation, contract renegotiation, service restructuring, shared services) and estimated how much each one saves annually?</p>
+  <p>This milestone is met when proposals are <strong>named, sized, and sourced</strong>, not when they're enacted.</p>
 </div>
 
 <h3>What's been identified so far</h3>
@@ -112,7 +112,7 @@ og_url: https://marbleheaddata.org/fiscal-goals.html
   <div class="milestone-num">Milestone 2</div>
   <h3>Achieve enough savings to push the gap trajectory out</h3>
   <p>Each dollar of recurring annual savings shifts the point where the gap becomes unmanageable. Under current projections (5% expense growth, 3% revenue growth), the gap widens by roughly $2&ndash;3M per year. Enacted efficiencies that reduce expense growth slow that widening.</p>
-  <p>This milestone is met when enacted changes <strong>measurably reduce the annual gap growth rate</strong>&mdash;visible in subsequent budget documents as a flatter expense trajectory.</p>
+  <p>This milestone is met when enacted changes <strong>measurably reduce the annual gap growth rate</strong>, visible in subsequent budget documents as a flatter expense trajectory.</p>
 </div>
 
 <div class="card">
@@ -130,13 +130,13 @@ og_url: https://marbleheaddata.org/fiscal-goals.html
 <div class="milestone">
   <div class="milestone-num">Milestone 3</div>
   <h3>Revenue and expense growth rates converge</h3>
-  <p>When expenses grow at the same rate as revenue (~3%), the structural gap stops widening. It doesn't close the existing gap&mdash;that requires either an override, one-time cuts, or a period where expenses grow <em>slower</em> than revenue. But parallel growth means the problem stops getting worse.</p>
+  <p>When expenses grow at the same rate as revenue (~3%), the structural gap stops widening. It doesn't close the existing gap; that requires either an override, one-time cuts, or a period where expenses grow <em>slower</em> than revenue. But parallel growth means the problem stops getting worse.</p>
   <p>This milestone is met when <strong>actual expense growth over a rolling 3-year period matches or falls below revenue growth</strong>.</p>
 </div>
 
 <div class="card">
   <h3>What parallel looks like</h3>
-  <p>Revenue grows at ~3% due to Prop 2.5 limits. At 5% expense growth, the gap widens every year. At 4%, it still widens but more slowly. At 3%, the gap holds steady&mdash;whatever the current deficit is, it stays there instead of growing. Below 3%, the gap actually shrinks over time.</p>
+  <p>Revenue grows at ~3% due to Prop 2.5 limits. At 5% expense growth, the gap widens every year. At 4%, it still widens but more slowly. At 3%, the gap holds steady: whatever the current deficit is, it stays there instead of growing. Below 3%, the gap actually shrinks over time.</p>
   <p>The two biggest drivers of the growth rate gap are health insurance premiums (growing 8&ndash;15% annually) and pension obligations (contractually set). Together they account for roughly half of the 2-percentage-point spread between revenue and expense growth.<sup class="cite" data-href="/charts/healthcare_costs.html" data-source="MHD Data, Why does health insurance keep rising?"></sup></p>
 </div>
 
@@ -226,10 +226,10 @@ og_url: https://marbleheaddata.org/fiscal-goals.html
     var gapFY32 = exp[5] - rev[5];
     var direction = gapFY32 > gapFY27 + 0.5 ? 'widening' : gapFY32 < gapFY27 - 0.5 ? 'narrowing' : 'roughly stable';
 
-    rows += '<p style="margin-top:12px;">At <strong>' + slider.value + '%</strong> expense growth, the gap goes from <strong>' + fmt(gapFY27) + '</strong> in FY27 to <strong>' + fmt(gapFY32) + '</strong> by FY32&mdash;<strong>' + direction + '</strong>.</p>';
+    rows += '<p style="margin-top:12px;">At <strong>' + slider.value + '%</strong> expense growth, the gap goes from <strong>' + fmt(gapFY27) + '</strong> in FY27 to <strong>' + fmt(gapFY32) + '</strong> by FY32, <strong>' + direction + '</strong>.</p>';
 
     if (expRate <= revenueRate) {
-      rows += '<p>Expense growth at or below revenue growth: <strong>Milestone 3 achieved</strong>&mdash;the gap stops widening.</p>';
+      rows += '<p>Expense growth at or below revenue growth: <strong>Milestone 3 achieved</strong>. The gap stops widening.</p>';
     }
 
     resultsDiv.innerHTML = rows;
