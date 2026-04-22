@@ -15,7 +15,7 @@
     position: fixed;
     bottom: -150px; right: 0;
     width: 840px; height: 1260px;
-    background: url(assets/lighthouse/lighthouse.svg) center / contain no-repeat;
+    background: url(lighthouse/lighthouse.svg) center / contain no-repeat;
     opacity: 0.05;
     pointer-events: none;
     z-index: 0;
