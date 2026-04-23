@@ -517,6 +517,81 @@ html[data-theme="light"] .theme-icon--moon { display: block; }
    links; no JS. Pair with id="..." on each target h2.
    ========================================================================== */
 
+.stats-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding: 10px 14px;
+  margin: 12px 0 6px;
+  background: color-mix(in srgb, var(--c-buoy) 6%, var(--surface));
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  color: var(--text-subtle);
+}
+
+/* Collapsible block holding the full list of cited meeting attempts inside a
+   topic section. Summary sits inline; click expands to show the full bullet
+   list. Keeps the reading page compact without losing reference depth. */
+body.doc-page .page details.attempts {
+  margin: 8px 0 24px;
+  border-left: 2px solid var(--c-border);
+  padding: 0 0 0 14px;
+}
+body.doc-page .page details.attempts > summary {
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--c-navy);
+  padding: 6px 0;
+  list-style: none;
+}
+body.doc-page .page details.attempts > summary::-webkit-details-marker {
+  display: none;
+}
+body.doc-page .page details.attempts > summary::before {
+  content: "▸ ";
+  display: inline-block;
+  width: 1em;
+  transition: transform 0.15s ease;
+}
+body.doc-page .page details.attempts[open] > summary::before {
+  transform: rotate(90deg);
+}
+body.doc-page .page details.attempts > ul {
+  margin-top: 10px;
+}
+
+/* Compact summary grid used at the top of long catalog-style pages to
+   preview what each topic contains. Two columns on desktop, one on mobile. */
+.topic-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+  margin: 12px 0 24px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.topic-summary-grid > div {
+  padding: 10px 14px;
+  background: var(--surface);
+  border-left: 3px solid var(--c-border);
+  border-radius: 0 6px 6px 0;
+}
+@media (max-width: 640px) {
+  .topic-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stats-strip .stat {
+  white-space: nowrap;
+}
+.stats-strip strong {
+  color: var(--c-navy);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
 .page-toc {
   display: flex;
   flex-wrap: wrap;
