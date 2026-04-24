@@ -946,11 +946,13 @@ og_url: https://marbleheaddata.org/
     margin-top: 10px;
   }
 
-  /* ── Counter-argument (collapsed steelman of the opposing view) ── */
+  /* ── Counter-argument (steelman of the opposing view, preview-fade) ── */
   .counter-argument {
     margin-top: 22px;
-    padding-top: 16px;
-    border-top: 1px solid var(--divider);
+    padding: 14px 16px 16px;
+    border-radius: var(--radius-md);
+    background: var(--c-sand, #f5f0e8);
+    border-left: 3px solid var(--c-slate, #6b7b8d);
   }
   .counter-argument > summary {
     list-style: none;
@@ -959,7 +961,7 @@ og_url: https://marbleheaddata.org/
     align-items: center;
     gap: 10px;
     user-select: none;
-    padding: 2px 0;
+    padding: 0;
   }
   .counter-argument > summary::-webkit-details-marker { display: none; }
   .counter-argument > summary::marker { content: ''; }
@@ -989,13 +991,33 @@ og_url: https://marbleheaddata.org/
     color: var(--text-subtle);
   }
   .counter-argument-teaser {
-    font-size: 13px;
-    color: var(--text-muted);
-    font-style: italic;
+    display: none;
   }
-  .counter-argument[open] .counter-argument-teaser { display: none; }
+  /* Preview: show body text with a fade when collapsed */
   .counter-argument-body {
-    padding: 12px 0 0 30px;
+    padding: 10px 0 0 30px;
+    position: relative;
+    max-height: 3.6em;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+  .counter-argument-body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2.4em;
+    background: linear-gradient(to bottom, transparent, var(--c-sand, #f5f0e8));
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+  .counter-argument[open] .counter-argument-body {
+    max-height: 800px;
+    overflow: visible;
+  }
+  .counter-argument[open] .counter-argument-body::after {
+    opacity: 0;
   }
   .counter-argument-body p {
     font-size: 14px;
@@ -1652,12 +1674,13 @@ og_url: https://marbleheaddata.org/
     text-align: center;
   }
   .evidence-action--yes {
-    background: var(--c-teal);
-    color: #fff;
+    background: var(--surface);
+    color: var(--c-teal);
     border: 1.5px solid var(--c-teal);
   }
   .evidence-action--yes:hover {
-    filter: brightness(1.1);
+    background: var(--c-teal);
+    color: #fff;
   }
   .evidence-action--no {
     background: var(--surface);
@@ -6799,7 +6822,7 @@ og_url: https://marbleheaddata.org/
     });
   });
 
-  /* ── Inject "This resonates" / "Not for me" action buttons ── */
+  /* ── Inject "This resonates" / "Try another" action buttons ── */
   document.querySelectorAll('.evidence').forEach(function (panel) {
     var ev = panel.dataset.evidence; // e.g. "override-a"
     if (!ev) return;
@@ -6823,7 +6846,7 @@ og_url: https://marbleheaddata.org/
     var noBtn = document.createElement('button');
     noBtn.type = 'button';
     noBtn.className = 'evidence-action evidence-action--no';
-    noBtn.textContent = 'Not for me';
+    noBtn.textContent = 'Try another';
     noBtn.addEventListener('click', function () {
       panel.classList.remove('open');
       // Scroll back to the question so they can try another answer
