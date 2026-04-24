@@ -2275,4 +2275,106 @@
   fetchAllCounts(topicOrder);
   updateStatsStrip();
 
+  // ── Mini override calculator (only on questions where cost context helps) ──
+  (function miniCalc() {
+    var AVG = 1291507;
+    var KEY = 'mh_override_calc_assessed_value';
+    // Year-3 (full phase-in) annual cost at average assessed value.
+    // Source: Town Administrator presentation, April 8, 2026.
+    var R = { 1: 1188, 2: 1590, 3: 1989 };
+    var LABELS = { 1: '$9M', 2: '$12M', 3: '$15M' };
+
+    // Only inject on questions where override cost is relevant context
+    var OVERRIDE_TOPICS = ['override', 'mycost', 'size', 'levy'];
+    // Trash and seniors get a contextual link instead (they have their own calculators)
+    var LINK_ONLY = {
+      trash:   { href: 'question-2-trash.html#cost-by-home-value', text: 'Trash levy vs. fee calculator' },
+      seniors: { href: 'senior-tax-relief.html',                   text: 'Senior relief calculator' }
+    };
+
+    function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+    function parse(raw) {
+      var n = parseFloat(String(raw).replace(/[^0-9.]/g, ''));
+      return (n > 0 && isFinite(n)) ? n : AVG;
+    }
+    function load() {
+      try { var n = parseFloat(localStorage.getItem(KEY)); return (n > 0 && isFinite(n)) ? n : null; }
+      catch (e) { return null; }
+    }
+    function save(v) { try { localStorage.setItem(KEY, String(v)); } catch (e) {} }
+
+    var calcs = [];
+
+    document.querySelectorAll('.question-screen').forEach(function (screen) {
+      var topic = screen.getAttribute('data-topic');
+
+      // Link-only topics: just add a contextual chart link
+      if (LINK_ONLY[topic]) {
+        var link = document.createElement('a');
+        link.className = 'evidence-chart-link';
+        link.href = LINK_ONLY[topic].href;
+        link.textContent = LINK_ONLY[topic].text;
+        link.style.marginTop = '18px';
+        screen.appendChild(link);
+        return;
+      }
+
+      // Skip topics where a calculator is irrelevant
+      if (OVERRIDE_TOPICS.indexOf(topic) === -1) return;
+
+      var el = document.createElement('div');
+      el.className = 'mini-calc';
+      el.innerHTML =
+        '<div class="mini-calc-header">' +
+          '<span class="mini-calc-title">What this costs your household</span>' +
+          '<div class="mini-calc-input">' +
+            '<label>Home value</label>' +
+            '<input type="text" inputmode="numeric" autocomplete="off">' +
+          '</div>' +
+        '</div>' +
+        '<div class="mini-calc-tiers">' +
+          '<div class="mini-calc-tier" data-t="1"><div class="mini-calc-tier-label">Tier 1 ' + LABELS[1] + '</div><div class="mini-calc-tier-cost"><span class="mc-mo"></span><span class="mini-calc-tier-unit">/mo</span></div><div class="mini-calc-tier-annual"><span class="mc-yr"></span>/yr</div></div>' +
+          '<div class="mini-calc-tier" data-t="2"><div class="mini-calc-tier-label">Tier 2 ' + LABELS[2] + '</div><div class="mini-calc-tier-cost"><span class="mc-mo"></span><span class="mini-calc-tier-unit">/mo</span></div><div class="mini-calc-tier-annual"><span class="mc-yr"></span>/yr</div></div>' +
+          '<div class="mini-calc-tier" data-t="3"><div class="mini-calc-tier-label">Tier 3 ' + LABELS[3] + '</div><div class="mini-calc-tier-cost"><span class="mc-mo"></span><span class="mini-calc-tier-unit">/mo</span></div><div class="mini-calc-tier-annual"><span class="mc-yr"></span>/yr</div></div>' +
+        '</div>' +
+        '<a class="mini-calc-link" href="charts/override_calculator.html">Full calculator with phase-in and income context &rarr;</a>';
+
+      screen.appendChild(el);
+      calcs.push(el);
+    });
+
+    function updateAll(assessed) {
+      calcs.forEach(function (el) {
+        [1, 2, 3].forEach(function (t) {
+          var annual = R[t] * (assessed / AVG);
+          var tier = el.querySelector('[data-t="' + t + '"]');
+          tier.querySelector('.mc-mo').textContent = fmt(annual / 12);
+          tier.querySelector('.mc-yr').textContent = fmt(annual);
+        });
+      });
+    }
+
+    var inputs = calcs.map(function (el) { return el.querySelector('input'); });
+    var stored = load();
+    var initial = stored || AVG;
+
+    inputs.forEach(function (inp) {
+      inp.value = '$' + Math.round(initial).toLocaleString('en-US');
+      inp.addEventListener('input', function () {
+        var v = parse(inp.value);
+        save(v);
+        inputs.forEach(function (other) {
+          if (other !== inp) other.value = '$' + Math.round(v).toLocaleString('en-US');
+        });
+        updateAll(v);
+      });
+      inp.addEventListener('blur', function () {
+        var v = parse(inp.value);
+        inp.value = '$' + Math.round(v).toLocaleString('en-US');
+      });
+    });
+
+    updateAll(initial);
+  })();
+
 })();
