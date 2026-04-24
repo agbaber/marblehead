@@ -1,0 +1,417 @@
+---
+title: "Overrides Over Time in Massachusetts"
+scripts: [citations]
+---
+<style>
+  .so-bar-pass { fill: var(--c-navy); }
+  .so-bar-fail { fill: var(--text-subtle); opacity: 0.35; }
+  .so-rate-line { fill: none; stroke: var(--c-teal); stroke-width: 2.5; }
+  .so-rate-dot { fill: var(--c-teal); }
+  .so-rate-area { fill: var(--c-teal); opacity: 0.08; }
+  .so-amt-line { fill: none; stroke: var(--c-brass); stroke-width: 2; }
+  .so-amt-dot { fill: var(--c-brass); }
+  .so-label { font-size: 10px; fill: var(--text-muted); font-family: inherit; }
+  .so-value { font-size: 9px; fill: var(--text-muted); font-family: inherit; }
+  .so-callout { font-size: 10px; font-family: inherit; font-weight: 600; }
+  .so-legend {
+    display: flex; gap: 16px; justify-content: center;
+    margin: 8px 0 4px; font-size: 12px; color: var(--text-muted);
+  }
+  .so-legend-swatch {
+    display: inline-block; width: 12px; height: 12px;
+    border-radius: 2px; vertical-align: middle; margin-right: 4px;
+  }
+  .so-legend-swatch--pass { background: var(--c-navy); }
+  .so-legend-swatch--fail { background: var(--text-subtle); opacity: 0.35; }
+  .so-legend-swatch--rate { background: var(--c-teal); }
+  .so-legend-swatch--amt { background: var(--c-brass); }
+  .so-svg { display: block; width: 100%; height: auto; max-width: 880px; margin: 0 auto; }
+  .so-mh { fill: var(--c-buoy); opacity: 0.9; }
+  .so-mh-label { font-size: 9px; fill: var(--c-buoy); font-family: inherit; font-weight: 600; }
+  .so-divider { margin: 32px 0 24px; border: none; border-top: 1px solid var(--divider); }
+  details.notes { margin: 20px 0; }
+  details.notes summary {
+    font-size: 13px; font-weight: 600; color: var(--text-muted);
+    cursor: pointer; padding: 8px 0;
+  }
+  details.notes[open] summary { margin-bottom: 8px; }
+  details.notes p {
+    font-size: 12px; line-height: 1.6; color: var(--text-subtle);
+    margin: 0 0 10px;
+  }
+  @media (max-width: 600px) {
+    .so-value { font-size: 8px; }
+    .so-label { font-size: 9px; }
+  }
+</style>
+
+<h1 class="h-center">Overrides Over Time in Massachusetts</h1>
+<p class="subtitle h-center">Every <abbr class="g" title="Proposition 2&frac12;">Prop 2&frac12;</abbr> operating override ballot question across all 305 municipalities, FY1990 to FY2027. Source: MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> Municipal Databank.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Underride Votes, all municipalities, all years"></sup></p>
+
+<ul class="tldr">
+  <li><strong>4,640 override ballot questions</strong> across 305 towns since 1990; 2,268 passed (48.9%)</li>
+  <li><strong>The early '90s were a flood:</strong> 400-600 questions per year, pass rates as low as 25%</li>
+  <li><strong>Pass rates climbed through the 2000s-2020s</strong>, peaking above 80% in FY2019 and FY2022-23</li>
+  <li><strong>FY2025-26 marks a new surge</strong> in override volume as cost pressures outpace the 2.5% levy cap statewide</li>
+</ul>
+
+<h2>Override ballot questions per year</h2>
+<p class="so-hint" style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Each bar is one fiscal year. Dark = passed, light = did not pass.</p>
+
+<div class="so-legend">
+  <span><span class="so-legend-swatch so-legend-swatch--pass"></span> Passed</span>
+  <span><span class="so-legend-swatch so-legend-swatch--fail"></span> Did not pass</span>
+</div>
+
+<svg class="so-svg chart" id="so-volume" viewBox="0 0 880 300" role="img" aria-label="Stacked bar chart of override ballot questions per year in Massachusetts, FY1990 to FY2027">
+  <g id="so-vol-grid"></g>
+  <g id="so-vol-bars"></g>
+  <g id="so-vol-labels"></g>
+</svg>
+
+<hr class="so-divider">
+
+<h2>Statewide pass rate</h2>
+<p class="so-hint" style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Percentage of override ballot questions that passed in each fiscal year.</p>
+
+<div class="so-legend">
+  <span><span class="so-legend-swatch so-legend-swatch--rate"></span> Pass rate</span>
+</div>
+
+<svg class="so-svg chart" id="so-rate" viewBox="0 0 880 260" role="img" aria-label="Line chart of statewide override pass rate by fiscal year, FY1990 to FY2027">
+  <g id="so-rate-grid"></g>
+  <g id="so-rate-area-g"></g>
+  <g id="so-rate-line-g"></g>
+  <g id="so-rate-dots"></g>
+  <g id="so-rate-labels"></g>
+</svg>
+
+<hr class="so-divider">
+
+<h2>Median override amount per year</h2>
+<p class="so-hint" style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Median dollar amount requested on each ballot question (nominal dollars).</p>
+
+<div class="so-legend">
+  <span><span class="so-legend-swatch so-legend-swatch--amt"></span> Median amount</span>
+</div>
+
+<svg class="so-svg chart" id="so-amt" viewBox="0 0 880 260" role="img" aria-label="Line chart of median override ballot question amount by fiscal year, FY1990 to FY2027">
+  <g id="so-amt-grid"></g>
+  <g id="so-amt-line-g"></g>
+  <g id="so-amt-dots"></g>
+  <g id="so-amt-labels"></g>
+</svg>
+
+<details class="notes">
+  <summary>Notes and sources</summary>
+  <p>Override vote data from the Massachusetts Department of Revenue, Division of Local Services Municipal Databank, Proposition 2&frac12; Override/Underride Database.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Underride Votes" data-href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride"></sup> Dataset includes 4,640 operating override ballot questions (underrides excluded) across 305 municipalities from FY1990 to FY2027.</p>
+  <p>Each ballot question counts as one vote, regardless of dollar size. A single town election can have multiple ballot questions (e.g. Needham FY1997 had ten separate override questions).</p>
+  <p>FY2027 data is partial as of April 2026. One Marblehead row (FY2025, "Fix Clerk Error", $0) is excluded as a clerical correction.</p>
+  <p>"Pass rate" is the number of questions that passed divided by total questions in that fiscal year. It does not weight by dollar amount or population.</p>
+  <p>Median amount is the median of all ballot question amounts in a given fiscal year, in nominal (not inflation-adjusted) dollars.</p>
+</details>
+
+<script>
+(function() {
+  // === DATA: aggregated from statewide_overrides.csv ===
+  var DATA = [
+    {fy:1990,win:176,loss:264,median:58366},
+    {fy:1991,win:169,loss:437,median:70457},
+    {fy:1992,win:141,loss:420,median:49800},
+    {fy:1993,win:109,loss:178,median:30000},
+    {fy:1994,win:102,loss:197,median:20000},
+    {fy:1995,win:72,loss:102,median:35000},
+    {fy:1996,win:54,loss:114,median:32000},
+    {fy:1997,win:29,loss:66,median:66431},
+    {fy:1998,win:39,loss:49,median:30000},
+    {fy:1999,win:34,loss:15,median:83774},
+    {fy:2000,win:27,loss:29,median:118953},
+    {fy:2001,win:50,loss:29,median:92158},
+    {fy:2002,win:54,loss:20,median:262768},
+    {fy:2003,win:55,loss:37,median:243818},
+    {fy:2004,win:79,loss:81,median:182364},
+    {fy:2005,win:81,loss:79,median:95624},
+    {fy:2006,win:91,loss:78,median:154002},
+    {fy:2007,win:52,loss:89,median:203397},
+    {fy:2008,win:48,loss:54,median:165000},
+    {fy:2009,win:60,loss:81,median:158208},
+    {fy:2010,win:33,loss:28,median:115500},
+    {fy:2011,win:26,loss:31,median:175000},
+    {fy:2012,win:21,loss:29,median:272450},
+    {fy:2013,win:19,loss:23,median:235766},
+    {fy:2014,win:14,loss:13,median:230000},
+    {fy:2015,win:21,loss:13,median:410722},
+    {fy:2016,win:21,loss:20,median:300000},
+    {fy:2017,win:14,loss:12,median:300000},
+    {fy:2018,win:12,loss:8,median:475656},
+    {fy:2019,win:36,loss:8,median:325000},
+    {fy:2020,win:22,loss:7,median:420000},
+    {fy:2021,win:12,loss:9,median:361640},
+    {fy:2022,win:19,loss:3,median:168080},
+    {fy:2023,win:18,loss:4,median:231958},
+    {fy:2024,win:46,loss:16,median:450000},
+    {fy:2025,win:23,loss:29,median:1000000},
+    {fy:2026,win:36,loss:38,median:891075},
+    {fy:2027,win:8,loss:7,median:1900000}
+  ];
+
+  var W = 880, mL = 60, mR = 20;
+  var pW = W - mL - mR;
+  var barW = Math.floor(pW / DATA.length) - 2;
+
+  // =============================================
+  // CHART 1: VOLUME (stacked bars)
+  // =============================================
+  (function() {
+    var H = 300, mT = 20, mB = 40;
+    var pH = H - mT - mB;
+    var maxVotes = 0;
+    DATA.forEach(function(d) { maxVotes = Math.max(maxVotes, d.win + d.loss); });
+    maxVotes = Math.ceil(maxVotes / 100) * 100; // round up to nearest 100
+
+    var gridG = document.getElementById("so-vol-grid");
+    var barsG = document.getElementById("so-vol-bars");
+    var labelsG = document.getElementById("so-vol-labels");
+
+    function yScale(v) { return mT + pH * (1 - v / maxVotes); }
+
+    // Grid lines
+    var gridSteps = [0, 100, 200, 300, 400, 500, 600];
+    gridSteps.forEach(function(v) {
+      if (v > maxVotes) return;
+      var y = yScale(v);
+      var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", mL); line.setAttribute("x2", W - mR);
+      line.setAttribute("y1", y); line.setAttribute("y2", y);
+      line.setAttribute("class", v === 0 ? "axis-base" : "grid-minor");
+      gridG.appendChild(line);
+
+      var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      label.setAttribute("x", mL - 6); label.setAttribute("y", y + 3);
+      label.setAttribute("text-anchor", "end");
+      label.setAttribute("class", "so-label");
+      label.textContent = v;
+      gridG.appendChild(label);
+    });
+
+    // Bars
+    DATA.forEach(function(d, i) {
+      var x = mL + i * (barW + 2);
+      var total = d.win + d.loss;
+      var hTotal = pH * total / maxVotes;
+      var hWin = pH * d.win / maxVotes;
+
+      // Fail bar (top portion)
+      var failRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      failRect.setAttribute("x", x); failRect.setAttribute("width", barW);
+      failRect.setAttribute("y", yScale(total));
+      failRect.setAttribute("height", pH * d.loss / maxVotes);
+      failRect.setAttribute("class", "so-bar-fail");
+      barsG.appendChild(failRect);
+
+      // Win bar (bottom portion)
+      var winRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      winRect.setAttribute("x", x); winRect.setAttribute("width", barW);
+      winRect.setAttribute("y", yScale(d.win));
+      winRect.setAttribute("height", hWin);
+      winRect.setAttribute("class", "so-bar-pass");
+      barsG.appendChild(winRect);
+
+      // Year labels (every 5 years + last)
+      if ((d.fy % 5 === 0) || i === DATA.length - 1) {
+        var yl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        yl.setAttribute("x", x + barW / 2);
+        yl.setAttribute("y", H - mB + 16);
+        yl.setAttribute("text-anchor", "middle");
+        yl.setAttribute("class", "so-label");
+        yl.textContent = d.fy;
+        labelsG.appendChild(yl);
+      }
+    });
+  })();
+
+  // =============================================
+  // CHART 2: PASS RATE (line)
+  // =============================================
+  (function() {
+    var H = 260, mT = 20, mB = 40;
+    var pH = H - mT - mB;
+
+    var gridG = document.getElementById("so-rate-grid");
+    var areaG = document.getElementById("so-rate-area-g");
+    var lineG = document.getElementById("so-rate-line-g");
+    var dotsG = document.getElementById("so-rate-dots");
+    var labelsG = document.getElementById("so-rate-labels");
+
+    function yScale(pct) { return mT + pH * (1 - pct / 100); }
+    function xScale(i) { return mL + i * (barW + 2) + barW / 2; }
+
+    // Grid
+    [0, 25, 50, 75, 100].forEach(function(v) {
+      var y = yScale(v);
+      var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", mL); line.setAttribute("x2", W - mR);
+      line.setAttribute("y1", y); line.setAttribute("y2", y);
+      line.setAttribute("class", v === 0 ? "axis-base" : "grid-minor");
+      gridG.appendChild(line);
+
+      var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      label.setAttribute("x", mL - 6); label.setAttribute("y", y + 3);
+      label.setAttribute("text-anchor", "end");
+      label.setAttribute("class", "so-label");
+      label.textContent = v + "%";
+      gridG.appendChild(label);
+    });
+
+    // 50% reference line highlight
+    var ref = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    ref.setAttribute("x1", mL); ref.setAttribute("x2", W - mR);
+    ref.setAttribute("y1", yScale(50)); ref.setAttribute("y2", yScale(50));
+    ref.setAttribute("class", "grid-major");
+    gridG.appendChild(ref);
+
+    // Compute rates
+    var rates = DATA.map(function(d) {
+      return d.win / (d.win + d.loss) * 100;
+    });
+
+    // Area fill
+    var areaPoints = "";
+    rates.forEach(function(r, i) {
+      areaPoints += xScale(i) + "," + yScale(r) + " ";
+    });
+    areaPoints += xScale(rates.length - 1) + "," + yScale(0) + " ";
+    areaPoints += xScale(0) + "," + yScale(0);
+    var area = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+    area.setAttribute("points", areaPoints);
+    area.setAttribute("class", "so-rate-area");
+    areaG.appendChild(area);
+
+    // Line
+    var linePoints = rates.map(function(r, i) {
+      return xScale(i) + "," + yScale(r);
+    }).join(" ");
+    var polyline = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+    polyline.setAttribute("points", linePoints);
+    polyline.setAttribute("class", "so-rate-line");
+    lineG.appendChild(polyline);
+
+    // Dots + labels at notable points
+    var notable = {1991: true, 1999: true, 2002: true, 2007: true, 2019: true, 2022: true, 2025: true, 2027: true};
+    rates.forEach(function(r, i) {
+      var d = DATA[i];
+      var cx = xScale(i), cy = yScale(r);
+
+      var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      dot.setAttribute("cx", cx); dot.setAttribute("cy", cy);
+      dot.setAttribute("r", notable[d.fy] ? 4 : 2.5);
+      dot.setAttribute("class", "so-rate-dot");
+      dotsG.appendChild(dot);
+
+      if (notable[d.fy]) {
+        var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("x", cx);
+        label.setAttribute("y", cy - 8);
+        label.setAttribute("text-anchor", "middle");
+        label.setAttribute("class", "so-callout");
+        label.setAttribute("fill", "var(--c-teal)");
+        label.textContent = Math.round(r) + "%";
+        labelsG.appendChild(label);
+      }
+
+      // Year labels
+      if ((d.fy % 5 === 0) || i === DATA.length - 1) {
+        var yl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        yl.setAttribute("x", cx);
+        yl.setAttribute("y", H - mB + 16);
+        yl.setAttribute("text-anchor", "middle");
+        yl.setAttribute("class", "so-label");
+        yl.textContent = d.fy;
+        labelsG.appendChild(yl);
+      }
+    });
+  })();
+
+  // =============================================
+  // CHART 3: MEDIAN AMOUNT (line)
+  // =============================================
+  (function() {
+    var H = 260, mT = 20, mB = 40;
+    var pH = H - mT - mB;
+    var maxAmt = 0;
+    DATA.forEach(function(d) { maxAmt = Math.max(maxAmt, d.median); });
+    maxAmt = Math.ceil(maxAmt / 500000) * 500000;
+
+    var gridG = document.getElementById("so-amt-grid");
+    var lineG = document.getElementById("so-amt-line-g");
+    var dotsG = document.getElementById("so-amt-dots");
+    var labelsG = document.getElementById("so-amt-labels");
+
+    function yScale(v) { return mT + pH * (1 - v / maxAmt); }
+    function xScale(i) { return mL + i * (barW + 2) + barW / 2; }
+
+    // Grid
+    for (var v = 0; v <= maxAmt; v += 500000) {
+      var y = yScale(v);
+      var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", mL); line.setAttribute("x2", W - mR);
+      line.setAttribute("y1", y); line.setAttribute("y2", y);
+      line.setAttribute("class", v === 0 ? "axis-base" : "grid-minor");
+      gridG.appendChild(line);
+
+      var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      label.setAttribute("x", mL - 6); label.setAttribute("y", y + 3);
+      label.setAttribute("text-anchor", "end");
+      label.setAttribute("class", "so-label");
+      label.textContent = v === 0 ? "$0" : "$" + (v / 1000000).toFixed(1) + "M";
+      gridG.appendChild(label);
+    }
+
+    // Line
+    var linePoints = DATA.map(function(d, i) {
+      return xScale(i) + "," + yScale(d.median);
+    }).join(" ");
+    var polyline = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+    polyline.setAttribute("points", linePoints);
+    polyline.setAttribute("class", "so-amt-line");
+    lineG.appendChild(polyline);
+
+    // Dots + labels
+    var notable = {1991: true, 2002: true, 2015: true, 2024: true, 2027: true};
+    DATA.forEach(function(d, i) {
+      var cx = xScale(i), cy = yScale(d.median);
+
+      var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      dot.setAttribute("cx", cx); dot.setAttribute("cy", cy);
+      dot.setAttribute("r", notable[d.fy] ? 4 : 2.5);
+      dot.setAttribute("class", "so-amt-dot");
+      dotsG.appendChild(dot);
+
+      if (notable[d.fy]) {
+        var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("x", cx);
+        label.setAttribute("y", cy - 8);
+        label.setAttribute("text-anchor", "middle");
+        label.setAttribute("class", "so-callout");
+        label.setAttribute("fill", "var(--c-brass)");
+        var txt = d.median >= 1000000
+          ? "$" + (d.median / 1000000).toFixed(1) + "M"
+          : "$" + Math.round(d.median / 1000) + "K";
+        label.textContent = txt;
+        labelsG.appendChild(label);
+      }
+
+      // Year labels
+      if ((d.fy % 5 === 0) || i === DATA.length - 1) {
+        var yl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        yl.setAttribute("x", cx);
+        yl.setAttribute("y", H - mB + 16);
+        yl.setAttribute("text-anchor", "middle");
+        yl.setAttribute("class", "so-label");
+        yl.textContent = d.fy;
+        labelsG.appendChild(yl);
+      }
+    });
+  })();
+})();
+</script>
