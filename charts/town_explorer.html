@@ -81,6 +81,10 @@ scripts: [citations]
     display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
     margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--divider);
   }
+  .cohort-bar--top {
+    margin: 0 0 16px; padding: 0; border-top: none;
+    justify-content: center;
+  }
   .cohort-label {
     font-size: 11px; font-weight: 600; color: var(--text-subtle);
     margin-right: 4px;
@@ -254,7 +258,16 @@ scripts: [citations]
 <h1 class="h-center">Town Explorer: All 351 Massachusetts Communities</h1>
 <p class="subtitle h-center">Population, income, tax burden, and fiscal structure for every MA municipality. Source: MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> FY2026/FY2027.</p>
 
-<p class="explorer-lead">Where does Marblehead rank? Filter, sort, and compare any combination of Massachusetts communities. Marblehead is highlighted in its sorted position and pinned at the top for reference. Try a cohort preset below the filters to jump to towns with similar demographics.</p>
+<p class="explorer-lead">Where does Marblehead rank? Filter, sort, and compare any combination of Massachusetts communities. Marblehead is highlighted in its sorted position and pinned at the top for reference.</p>
+
+<div class="cohort-bar cohort-bar--top" id="cohort-bar-top">
+  <span class="cohort-label">Try a cohort:</span>
+  <button type="button" class="cohort-btn" data-cohort="overall">Similar overall</button>
+  <button type="button" class="cohort-btn" data-cohort="income">Similar income</button>
+  <button type="button" class="cohort-btn" data-cohort="property">Similar property</button>
+  <button type="button" class="cohort-btn" data-cohort="burden">Similar burden</button>
+  <button type="button" class="cohort-btn" data-cohort="structural">Similar structure</button>
+</div>
 
 <div class="filter-bar" id="filter-bar">
   <h3>Filters</h3>
@@ -326,14 +339,6 @@ scripts: [citations]
   <div class="filter-actions">
     <button type="button" class="reset-btn" id="reset-filters">Reset to defaults</button>
     <span class="filter-count" id="filter-count"></span>
-  </div>
-  <div class="cohort-bar">
-    <span class="cohort-label">Try a cohort:</span>
-    <button type="button" class="cohort-btn" data-cohort="overall">Similar overall</button>
-    <button type="button" class="cohort-btn" data-cohort="income">Similar income</button>
-    <button type="button" class="cohort-btn" data-cohort="property">Similar property</button>
-    <button type="button" class="cohort-btn" data-cohort="burden">Similar burden</button>
-    <button type="button" class="cohort-btn" data-cohort="structural">Similar structure</button>
   </div>
   <div class="tier-bar">
     <span class="tier-label">Override tier:</span>
