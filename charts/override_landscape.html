@@ -268,25 +268,23 @@ scripts: [citations]
     propLabel.textContent = "Marblehead proposed: $8.47M";
     labelsG.appendChild(propLabel);
 
-    // Collision detection for labels
-    var placed = [];
-    function wouldOverlap(x, y, w, h) {
-      for (var i = 0; i < placed.length; i++) {
-        var p = placed[i];
-        if (x < p.x + p.w && x + w > p.x && y < p.y + p.h && y + h > p.y) return true;
-      }
-      return false;
-    }
-
-    // Only label notable dots (near MH range, very large, or Marblehead itself)
-    function shouldLabel(v) {
-      if (v.mh) return true;
-      // Near Marblehead's proposed amount ($7M-10M)
-      if (v.a >= 7000000 && v.a <= 10000000) return true;
-      // Very large
-      if (v.a >= 12000000) return true;
-      return false;
-    }
+    // Whitelist: only label Marblehead + hand-picked comparables
+    // that won't collide. Everything else is tooltip-only.
+    var LABEL_SET = {
+      // Marblehead actuals (always labeled)
+      "Marblehead|2023": {anchor:"start", dx:10, dy:3},
+      "Marblehead|2024": {anchor:"start", dx:10, dy:3},
+      // Key comparables near $8.47M
+      "Braintree|2025": {anchor:"start", dx:8, dy:-6},
+      "Milton|2026": {anchor:"start", dx:8, dy:3},
+      "Belmont|2025": {anchor:"start", dx:8, dy:12},
+      // Bookend wins
+      "Arlington|2027": {anchor:"start", dx:8, dy:3},
+      "Brookline|2024": {anchor:"start", dx:8, dy:3},
+      "Winchester|2020": {anchor:"start", dx:8, dy:3},
+      // Bookend losses
+      "Stoneham|2026": {anchor:"end", dx:-8, dy:3},
+    };
 
     // Jitter: offset dots that share the same FY to avoid overlap
     var byFy = {};
@@ -359,43 +357,17 @@ scripts: [citations]
       dotsG.appendChild(dot);
       dotEls.push({el: dot, v: v, cx: cx, cy: cy});
 
-      // Labels for notable dots
-      if (shouldLabel(v)) {
-        var labelX = cx + r + 4;
-        var labelY = cy + 3;
-        var labelW = 80;
-        var labelH = 12;
-
-        // Try right side first, then left
-        if (wouldOverlap(labelX, labelY - labelH, labelW, labelH)) {
-          labelX = cx - r - 4;
-          var anchor = "end";
-          if (!wouldOverlap(labelX - labelW, labelY - labelH, labelW, labelH)) {
-            placed.push({x: labelX - labelW, y: labelY - labelH, w: labelW, h: labelH});
-          } else {
-            // Try above
-            labelX = cx + r + 4;
-            labelY = cy - r - 2;
-            anchor = "start";
-            placed.push({x: labelX, y: labelY - labelH, w: labelW, h: labelH});
-          }
-          var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-          label.setAttribute("x", labelX);
-          label.setAttribute("y", labelY);
-          label.setAttribute("text-anchor", anchor || "end");
-          label.setAttribute("class", v.mh ? "ol-label-mh" : "ol-label");
-          label.textContent = v.t;
-          labelsG.appendChild(label);
-        } else {
-          placed.push({x: labelX, y: labelY - labelH, w: labelW, h: labelH});
-          var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-          label.setAttribute("x", labelX);
-          label.setAttribute("y", labelY);
-          label.setAttribute("text-anchor", "start");
-          label.setAttribute("class", v.mh ? "ol-label-mh" : "ol-label");
-          label.textContent = v.t;
-          labelsG.appendChild(label);
-        }
+      // Label only whitelisted dots
+      var key = v.t + "|" + v.fy;
+      var lp = LABEL_SET[key];
+      if (lp) {
+        var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("x", cx + lp.dx);
+        label.setAttribute("y", cy + lp.dy);
+        label.setAttribute("text-anchor", lp.anchor);
+        label.setAttribute("class", v.mh ? "ol-label-mh" : "ol-label");
+        label.textContent = v.t;
+        labelsG.appendChild(label);
       }
     });
 
