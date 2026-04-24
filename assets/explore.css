@@ -1131,7 +1131,7 @@
     line-height: 1;
     flex-shrink: 0;
   }
-  .counter-argument[open] > summary::before {
+  .counter-argument:not(.ca-collapsed) > summary::before {
     content: "\2212";
   }
   .counter-argument-label {
@@ -1144,22 +1144,18 @@
   .counter-argument-teaser {
     display: none;
   }
-  /* Override native <details> hiding so the preview fade works.
-     Without [open], browsers hide non-<summary> children via
-     content-visibility or display:none on the internal slot. */
-  .counter-argument:not([open]) > .counter-argument-body {
-    display: block !important;
-    content-visibility: visible !important;
-  }
-  /* Preview: show body text with a fade when collapsed */
+  /* Preview-fade: JS adds [open] + .ca-collapsed on load so the body
+     is rendered by the browser but clipped with a gradient. Clicking
+     the summary toggles .ca-collapsed via JS. */
   .counter-argument-body {
     padding: 10px 0 0 30px;
     position: relative;
+  }
+  .ca-collapsed .counter-argument-body {
     max-height: 3.6em;
     overflow: hidden;
-    transition: max-height 0.25s ease;
   }
-  .counter-argument-body::after {
+  .ca-collapsed .counter-argument-body::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1168,14 +1164,6 @@
     height: 2.4em;
     background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--text-subtle) 8%, var(--surface)));
     pointer-events: none;
-    transition: opacity 0.25s ease;
-  }
-  .counter-argument[open] .counter-argument-body {
-    max-height: 800px;
-    overflow: visible;
-  }
-  .counter-argument[open] .counter-argument-body::after {
-    opacity: 0;
   }
   .counter-argument-body p {
     font-size: 14px;

@@ -1706,6 +1706,19 @@
     });
   });
 
+  /* ── Counter-argument preview-fade: open all <details> so the body
+       is rendered, but add .ca-collapsed to clip with a gradient.
+       Clicking the summary toggles the class instead of the native
+       open/close (which we suppress via preventDefault). ── */
+  document.querySelectorAll('.counter-argument').forEach(function (det) {
+    det.setAttribute('open', '');
+    det.classList.add('ca-collapsed');
+    det.querySelector('summary').addEventListener('click', function (e) {
+      e.preventDefault();
+      det.classList.toggle('ca-collapsed');
+    });
+  });
+
   /* ── Inject "This resonates" / "Try another" action buttons ── */
   document.querySelectorAll('.evidence').forEach(function (panel) {
     var ev = panel.dataset.evidence; // e.g. "override-a"
