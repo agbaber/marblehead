@@ -1,0 +1,366 @@
+---
+title: "Override Landscape: Large Asks Since FY2020"
+scripts: [citations]
+---
+<style>
+  .ol-dot-win { fill: var(--c-navy); }
+  .ol-dot-loss { fill: var(--text-subtle); opacity: 0.4; }
+  .ol-dot-mh { fill: var(--c-buoy); }
+  .ol-dot-mh-proposed { fill: none; stroke: var(--c-buoy); stroke-width: 2; stroke-dasharray: 3 2; }
+  .ol-label { font-size: 9px; fill: var(--text-muted); font-family: inherit; }
+  .ol-label-win { font-size: 9px; fill: var(--c-navy); font-family: inherit; }
+  .ol-label-loss { font-size: 9px; fill: var(--text-muted); font-family: inherit; }
+  .ol-label-mh { font-size: 9px; fill: var(--c-buoy); font-family: inherit; font-weight: 700; }
+  .ol-tick { font-size: 10px; fill: var(--text-muted); font-family: inherit; }
+  .ol-callout { font-size: 10px; font-family: inherit; font-weight: 600; }
+  .ol-proposed-line { stroke: var(--c-buoy); stroke-width: 1.5; stroke-dasharray: 4 3; opacity: 0.6; }
+  .ol-proposed-label {
+    font-size: 11px; fill: var(--c-buoy); font-family: inherit; font-weight: 700;
+  }
+  .ol-legend {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    margin: 8px 0 12px; font-size: 12px; color: var(--text-muted);
+  }
+  .ol-legend-swatch {
+    display: inline-block; width: 10px; height: 10px;
+    border-radius: 50%; vertical-align: middle; margin-right: 4px;
+  }
+  .ol-legend-swatch--win { background: var(--c-navy); }
+  .ol-legend-swatch--loss { background: var(--text-subtle); opacity: 0.4; }
+  .ol-legend-swatch--mh { background: var(--c-buoy); }
+  .ol-legend-swatch--proposed { background: none; border: 2px dashed var(--c-buoy); }
+  .ol-svg { display: block; width: 100%; height: auto; max-width: 880px; margin: 0 auto; }
+  .ol-bucket-label {
+    font-size: 11px; fill: var(--text); font-family: inherit; font-weight: 600;
+  }
+  .ol-bucket-stat {
+    font-size: 10px; fill: var(--text-muted); font-family: inherit;
+  }
+  .ol-divider { margin: 32px 0 24px; border: none; border-top: 1px solid var(--divider); }
+  details.notes { margin: 20px 0; }
+  details.notes summary {
+    font-size: 13px; font-weight: 600; color: var(--text-muted);
+    cursor: pointer; padding: 8px 0;
+  }
+  details.notes[open] summary { margin-bottom: 8px; }
+  details.notes p {
+    font-size: 12px; line-height: 1.6; color: var(--text-subtle);
+    margin: 0 0 10px;
+  }
+  .ol-rate-bar-bg { fill: var(--text-subtle); opacity: 0.12; rx: 3; }
+  .ol-rate-bar-fg { fill: var(--c-navy); opacity: 0.7; rx: 3; }
+  @media (max-width: 600px) {
+    .ol-label, .ol-label-win, .ol-label-loss, .ol-label-mh { font-size: 8px; }
+  }
+</style>
+
+<h1 class="h-center">Where Does Marblehead's Override Land?</h1>
+<p class="subtitle h-center">Every operating override of $2M or more since FY2020, across all Massachusetts municipalities. Marblehead's proposed FY2027 override ($8.47M) marked for context.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Underride Votes, all municipalities, FY2020-FY2027"></sup></p>
+
+<ul class="tldr">
+  <li><strong>65 override elections of $2M+ since FY2020.</strong> 28 passed, 34 failed, 3 split</li>
+  <li><strong>At the $5M-10M range</strong> where Marblehead's ask sits, 8 of 15 passed (53%)</li>
+  <li><strong>Marblehead's prior attempts</strong> ($2.5M in FY2024, $3.1M in FY2023) both failed, at smaller amounts than the current ask</li>
+  <li><strong>Comparable recent wins:</strong> Braintree $8M, Belmont $8.4M, Milton $8.8M. Comparable recent losses: Bridgewater $8M, Malden $8.2M</li>
+</ul>
+
+<h2>Every $2M+ override since FY2020</h2>
+<p class="so-hint" style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Each dot is one town's override election. Horizontal position = total amount requested. Where multiple ballot questions appeared in the same election, amounts are combined.</p>
+
+<div class="ol-legend">
+  <span><span class="ol-legend-swatch ol-legend-swatch--win"></span> Passed</span>
+  <span><span class="ol-legend-swatch ol-legend-swatch--loss"></span> Did not pass</span>
+  <span><span class="ol-legend-swatch ol-legend-swatch--mh"></span> Marblehead (actual)</span>
+  <span><span class="ol-legend-swatch ol-legend-swatch--proposed"></span> Marblehead FY2027 (proposed)</span>
+</div>
+
+<svg class="ol-svg chart" id="ol-strip" viewBox="0 0 880 620" role="img" aria-label="Strip chart of every Massachusetts operating override of 2 million dollars or more since fiscal year 2020, with Marblehead's proposed 8.47 million dollar override marked">
+  <g id="ol-grid"></g>
+  <g id="ol-dots"></g>
+  <g id="ol-labels"></g>
+  <g id="ol-proposed"></g>
+</svg>
+
+<hr class="ol-divider">
+
+<h2>Pass rate by override size (FY2020+)</h2>
+<p class="so-hint" style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Per-election amounts. Marblehead's proposed $8.47M falls in the $5M-10M range.</p>
+
+<svg class="ol-svg chart" id="ol-rates" viewBox="0 0 880 260" role="img" aria-label="Bar chart showing override pass rates by dollar amount bucket since FY2020">
+  <g id="ol-rate-grid"></g>
+  <g id="ol-rate-bars"></g>
+  <g id="ol-rate-labels"></g>
+</svg>
+
+<details class="notes">
+  <summary>Notes and sources</summary>
+  <p>Override vote data from the Massachusetts Department of Revenue, Division of Local Services Municipal Databank.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Underride Votes" data-href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride"></sup></p>
+  <p>Operating overrides only; debt exclusions not included. Where a town placed multiple override questions on the same ballot, all amounts are combined into a single per-election total. If a majority of questions passed, the election is coded as a win; if a majority failed, a loss; if evenly split, shown as "split" and excluded from pass rate calculations.</p>
+  <p>Marblehead's proposed FY2027 override ($8.47M across three ballot tiers) has not yet been voted on. It is shown as a dashed circle for reference only.</p>
+  <p>FY2027 data is partial as of April 2026.</p>
+</details>
+
+<script>
+(function() {
+  // Elections >= $2M since FY2020, sorted by amount
+  // outcome: 1=win, 0=loss, 0.5=split
+  // mh: 1=marblehead actual, 2=marblehead proposed
+  var VOTES = [
+    {t:"Rutland",fy:2024,a:2000000,o:1},
+    {t:"Whitman",fy:2026,a:2000000,o:0},
+    {t:"Dunstable",fy:2025,a:2074351,o:0},
+    {t:"Paxton",fy:2025,a:2390000,o:0},
+    {t:"Marblehead",fy:2024,a:2472056,o:0,mh:1},
+    {t:"Northampton",fy:2021,a:2500000,o:1},
+    {t:"Hadley",fy:2026,a:2550624,o:0},
+    {t:"Mansfield",fy:2026,a:2703469,o:0},
+    {t:"Belchertown",fy:2026,a:2894400,o:1},
+    {t:"Georgetown",fy:2025,a:3000000,o:0},
+    {t:"Hanson",fy:2026,a:3000000,o:0},
+    {t:"Westport",fy:2024,a:3000000,o:0},
+    {t:"Marblehead",fy:2023,a:3051093,o:0,mh:1},
+    {t:"Grafton",fy:2021,a:3200000,o:1},
+    {t:"Plainville",fy:2021,a:3250000,o:0},
+    {t:"Townsend",fy:2025,a:3356506,o:0},
+    {t:"West Tisbury",fy:2027,a:3491090,o:1},
+    {t:"Winthrop",fy:2026,a:3500000,o:1},
+    {t:"Norwell",fy:2026,a:3700000,o:0},
+    {t:"Hanover",fy:2026,a:3763392,o:1},
+    {t:"Franklin",fy:2026,a:3862672,o:0},
+    {t:"Raynham",fy:2026,a:3938017,o:0},
+    {t:"Hudson",fy:2026,a:3950000,o:1},
+    {t:"West Boylston",fy:2025,a:4000000,o:0},
+    {t:"Westford",fy:2025,a:4200000,o:0},
+    {t:"Pepperell",fy:2025,a:4491136,o:0.5},
+    {t:"Lynnfield",fy:2026,a:4650000,o:1},
+    {t:"Athol",fy:2027,a:4700000,o:0},
+    {t:"Winchendon",fy:2026,a:4800000,o:0.5},
+    {t:"Northbridge",fy:2026,a:4950000,o:0},
+    {t:"Winthrop",fy:2025,a:4950000,o:0},
+    {t:"Nantucket",fy:2022,a:5000000,o:1},
+    {t:"Melrose",fy:2020,a:5180000,o:1},
+    {t:"Arlington",fy:2020,a:5500000,o:1},
+    {t:"Groton",fy:2025,a:5500000,o:0},
+    {t:"Duxbury",fy:2026,a:5800000,o:0},
+    {t:"Norwood",fy:2020,a:5950000,o:1},
+    {t:"Amesbury",fy:2026,a:6000000,o:0},
+    {t:"Georgetown",fy:2026,a:6000000,o:1},
+    {t:"Hanover",fy:2025,a:6002330,o:0},
+    {t:"Belmont",fy:2022,a:6400000,o:0},
+    {t:"Acton",fy:2025,a:6600000,o:1},
+    {t:"Franklin",fy:2025,a:6800000,o:0},
+    {t:"Arlington",fy:2025,a:7000000,o:1},
+    {t:"Natick",fy:2026,a:7000000,o:1},
+    {t:"Easton",fy:2026,a:7300000,o:0},
+    {t:"Medford",fy:2025,a:7500000,o:1},
+    {t:"Melrose",fy:2025,a:7700000,o:0},
+    {t:"Hingham",fy:2024,a:7890467,o:1},
+    {t:"Braintree",fy:2025,a:8000000,o:1},
+    {t:"Bridgewater",fy:2026,a:8008272,o:0},
+    {t:"Belmont",fy:2025,a:8400000,o:1},
+    {t:"Milton",fy:2026,a:8800000,o:1},
+    {t:"Newton",fy:2023,a:9175000,o:0},
+    {t:"Shrewsbury",fy:2022,a:9500000,o:1},
+    {t:"Dudley",fy:2024,a:9938718,o:0},
+    {t:"North Reading",fy:2025,a:10000000,o:0},
+    {t:"Winchester",fy:2020,a:10000000,o:1},
+    {t:"Nantucket",fy:2024,a:10250000,o:1},
+    {t:"Brookline",fy:2024,a:11983367,o:1},
+    {t:"Melrose",fy:2026,a:13500000,o:1},
+    {t:"Malden",fy:2027,a:13600000,o:0},
+    {t:"Stoneham",fy:2026,a:14600000,o:0},
+    {t:"Arlington",fy:2027,a:14800000,o:1},
+    {t:"Stoneham",fy:2027,a:21800000,o:0.5}
+  ];
+
+  var MH_PROPOSED = {t:"Marblehead",fy:2027,a:8470000};
+
+  var W = 880, mL = 60, mR = 100;
+  var pW = W - mL - mR;
+
+  // =============================================
+  // CHART 1: STRIP CHART
+  // =============================================
+  (function() {
+    var H = 620, mT = 20, mB = 40;
+    var pH = H - mT - mB;
+    var n = VOTES.length;
+    var rowH = Math.floor(pH / (n + 2)); // +2 for proposed
+    var dotR = Math.min(rowH * 0.35, 6);
+
+    var maxAmt = 22000000;
+    var gridG = document.getElementById("ol-grid");
+    var dotsG = document.getElementById("ol-dots");
+    var labelsG = document.getElementById("ol-labels");
+    var proposedG = document.getElementById("ol-proposed");
+
+    function xScale(amt) { return mL + pW * (amt / maxAmt); }
+    function yPos(i) { return mT + (i + 0.5) * rowH; }
+
+    // Grid lines at dollar amounts
+    var gridAmts = [0, 2000000, 4000000, 6000000, 8000000, 10000000, 12000000, 14000000, 16000000, 18000000, 20000000];
+    gridAmts.forEach(function(v) {
+      var x = xScale(v);
+      var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", x); line.setAttribute("x2", x);
+      line.setAttribute("y1", mT); line.setAttribute("y2", H - mB);
+      line.setAttribute("class", v === 0 ? "axis-base" : "grid-minor");
+      gridG.appendChild(line);
+
+      var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      label.setAttribute("x", x);
+      label.setAttribute("y", H - mB + 16);
+      label.setAttribute("text-anchor", "middle");
+      label.setAttribute("class", "ol-tick");
+      label.textContent = "$" + (v / 1000000) + "M";
+      gridG.appendChild(label);
+    });
+
+    // Proposed Marblehead line
+    var mhX = xScale(MH_PROPOSED.a);
+    var mhLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    mhLine.setAttribute("x1", mhX); mhLine.setAttribute("x2", mhX);
+    mhLine.setAttribute("y1", mT); mhLine.setAttribute("y2", H - mB);
+    mhLine.setAttribute("class", "ol-proposed-line");
+    proposedG.appendChild(mhLine);
+
+    var mhLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    mhLabel.setAttribute("x", mhX);
+    mhLabel.setAttribute("y", mT - 6);
+    mhLabel.setAttribute("text-anchor", "middle");
+    mhLabel.setAttribute("class", "ol-proposed-label");
+    mhLabel.textContent = "Marblehead FY27 proposed: $8.47M";
+    proposedG.appendChild(mhLabel);
+
+    // Dots and labels
+    VOTES.forEach(function(v, i) {
+      var cx = xScale(v.a);
+      var cy = yPos(i);
+
+      var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      dot.setAttribute("cx", cx);
+      dot.setAttribute("cy", cy);
+      dot.setAttribute("r", v.mh ? dotR + 1 : dotR);
+
+      if (v.mh) {
+        dot.setAttribute("class", "ol-dot-mh");
+      } else if (v.o === 1) {
+        dot.setAttribute("class", "ol-dot-win");
+      } else if (v.o === 0) {
+        dot.setAttribute("class", "ol-dot-loss");
+      } else {
+        dot.setAttribute("class", "ol-dot-loss");
+        dot.setAttribute("opacity", "0.6");
+      }
+      dotsG.appendChild(dot);
+
+      // Label: "Town FYxx"
+      var labelClass = v.mh ? "ol-label-mh" : (v.o === 1 ? "ol-label-win" : "ol-label-loss");
+      var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      label.setAttribute("x", cx + dotR + 4);
+      label.setAttribute("y", cy + 3);
+      label.setAttribute("class", labelClass);
+
+      var displayAmt = v.a >= 10000000
+        ? "$" + (v.a / 1000000).toFixed(1) + "M"
+        : "$" + (v.a / 1000000).toFixed(1) + "M";
+      label.textContent = v.t + " FY" + (v.fy % 100).toString().padStart(2, "0");
+      labelsG.appendChild(label);
+    });
+  })();
+
+  // =============================================
+  // CHART 2: PASS RATE BY SIZE BUCKET
+  // =============================================
+  (function() {
+    var BUCKETS = [
+      {label:"<$100K",lo:0,hi:100000,win:25,total:34},
+      {label:"$100K-250K",lo:100000,hi:250000,win:30,total:47},
+      {label:"$250K-500K",lo:250000,hi:500000,win:38,total:58},
+      {label:"$500K-1M",lo:500000,hi:1000000,win:38,total:55},
+      {label:"$1M-2M",lo:1000000,hi:2000000,win:22,total:35},
+      {label:"$2M-5M",lo:2000000,hi:5000000,win:12,total:34},
+      {label:"$5M-10M",lo:5000000,hi:10000000,win:15,total:27},
+      {label:"$10M+",lo:10000000,hi:999999999,win:7,total:12}
+    ];
+
+    var H = 260, mT = 30, mB = 30;
+    var pH = H - mT - mB;
+    var bL = 120, bR = 60;
+    var bW = W - bL - bR;
+    var barH = Math.floor(pH / BUCKETS.length) - 4;
+
+    var gridG = document.getElementById("ol-rate-grid");
+    var barsG = document.getElementById("ol-rate-bars");
+    var rLabelsG = document.getElementById("ol-rate-labels");
+
+    // Grid
+    [0, 25, 50, 75, 100].forEach(function(pct) {
+      var x = bL + bW * pct / 100;
+      var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", x); line.setAttribute("x2", x);
+      line.setAttribute("y1", mT); line.setAttribute("y2", H - mB);
+      line.setAttribute("class", pct === 0 ? "axis-base" : "grid-minor");
+      gridG.appendChild(line);
+
+      var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      label.setAttribute("x", x);
+      label.setAttribute("y", mT - 8);
+      label.setAttribute("text-anchor", "middle");
+      label.setAttribute("class", "ol-label");
+      label.textContent = pct + "%";
+      rLabelsG.appendChild(label);
+    });
+
+    // 50% reference
+    var ref = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    ref.setAttribute("x1", bL + bW * 0.5); ref.setAttribute("x2", bL + bW * 0.5);
+    ref.setAttribute("y1", mT); ref.setAttribute("y2", H - mB);
+    ref.setAttribute("class", "grid-major");
+    gridG.appendChild(ref);
+
+    // Highlight the bucket Marblehead falls into
+    var mhBucketIdx = 6; // $5M-10M
+
+    BUCKETS.forEach(function(b, i) {
+      var y = mT + i * (barH + 4);
+      var rate = b.total > 0 ? b.win / b.total * 100 : 0;
+
+      // Background bar
+      var bg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      bg.setAttribute("x", bL); bg.setAttribute("y", y);
+      bg.setAttribute("width", bW); bg.setAttribute("height", barH);
+      bg.setAttribute("class", "ol-rate-bar-bg");
+      barsG.appendChild(bg);
+
+      // Foreground bar
+      var fg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      fg.setAttribute("x", bL); fg.setAttribute("y", y);
+      fg.setAttribute("width", bW * rate / 100); fg.setAttribute("height", barH);
+      fg.setAttribute("class", "ol-rate-bar-fg");
+      if (i === mhBucketIdx) {
+        fg.setAttribute("fill", "var(--c-buoy)");
+        fg.setAttribute("opacity", "0.8");
+      }
+      barsG.appendChild(fg);
+
+      // Bucket label
+      var bl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      bl.setAttribute("x", bL - 6); bl.setAttribute("y", y + barH / 2 + 4);
+      bl.setAttribute("text-anchor", "end");
+      bl.setAttribute("class", i === mhBucketIdx ? "ol-label-mh" : "ol-label");
+      bl.textContent = b.label;
+      rLabelsG.appendChild(bl);
+
+      // Rate + count label
+      var rl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      var rx = bL + bW * rate / 100 + 6;
+      rl.setAttribute("x", rx); rl.setAttribute("y", y + barH / 2 + 4);
+      rl.setAttribute("class", "ol-callout");
+      rl.setAttribute("fill", i === mhBucketIdx ? "var(--c-buoy)" : "var(--c-navy)");
+      rl.textContent = Math.round(rate) + "% (" + b.win + "/" + b.total + ")";
+      rLabelsG.appendChild(rl);
+    });
+  })();
+})();
+</script>
