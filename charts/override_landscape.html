@@ -4,18 +4,17 @@ scripts: [citations]
 ---
 <style>
   .ol-dot-win { fill: var(--c-navy); }
-  .ol-dot-loss { fill: var(--text-subtle); opacity: 0.4; }
+  .ol-dot-loss { fill: none; stroke: var(--text-muted); stroke-width: 2; }
   .ol-dot-mh { fill: var(--c-buoy); }
-  .ol-dot-mh-proposed { fill: none; stroke: var(--c-buoy); stroke-width: 2; stroke-dasharray: 3 2; }
+  .ol-dot-proposed { fill: none; stroke: var(--c-buoy); stroke-width: 2; stroke-dasharray: 3 2; }
   .ol-label { font-size: 9px; fill: var(--text-muted); font-family: inherit; }
-  .ol-label-win { font-size: 9px; fill: var(--c-navy); font-family: inherit; }
-  .ol-label-loss { font-size: 9px; fill: var(--text-muted); font-family: inherit; }
-  .ol-label-mh { font-size: 9px; fill: var(--c-buoy); font-family: inherit; font-weight: 700; }
+  .ol-label-mh { font-size: 10px; fill: var(--c-buoy); font-family: inherit; font-weight: 700; }
   .ol-tick { font-size: 10px; fill: var(--text-muted); font-family: inherit; }
   .ol-callout { font-size: 10px; font-family: inherit; font-weight: 600; }
-  .ol-proposed-line { stroke: var(--c-buoy); stroke-width: 1.5; stroke-dasharray: 4 3; opacity: 0.6; }
-  .ol-proposed-label {
-    font-size: 11px; fill: var(--c-buoy); font-family: inherit; font-weight: 700;
+  .ol-zone { opacity: 0.04; }
+  .ol-zone-label {
+    font-size: 10px; fill: var(--text-muted); font-family: inherit;
+    font-weight: 600; opacity: 0.6;
   }
   .ol-legend {
     display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
@@ -26,17 +25,23 @@ scripts: [citations]
     border-radius: 50%; vertical-align: middle; margin-right: 4px;
   }
   .ol-legend-swatch--win { background: var(--c-navy); }
-  .ol-legend-swatch--loss { background: var(--text-subtle); opacity: 0.4; }
+  .ol-legend-swatch--loss { background: none; border: 2px solid var(--text-muted); }
   .ol-legend-swatch--mh { background: var(--c-buoy); }
   .ol-legend-swatch--proposed { background: none; border: 2px dashed var(--c-buoy); }
   .ol-svg { display: block; width: 100%; height: auto; max-width: 880px; margin: 0 auto; }
-  .ol-bucket-label {
-    font-size: 11px; fill: var(--text); font-family: inherit; font-weight: 600;
-  }
-  .ol-bucket-stat {
-    font-size: 10px; fill: var(--text-muted); font-family: inherit;
-  }
   .ol-divider { margin: 32px 0 24px; border: none; border-top: 1px solid var(--divider); }
+  .ol-rate-bar-bg { fill: var(--text-subtle); opacity: 0.12; }
+  .ol-rate-bar-fg { fill: var(--c-navy); opacity: 0.7; }
+  .ol-tip {
+    position: absolute; pointer-events: none;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px 12px;
+    font-size: 12px; line-height: 1.5; color: var(--text);
+    box-shadow: var(--shadow-sm); white-space: nowrap;
+    opacity: 0; transition: opacity 0.15s;
+    z-index: 10;
+  }
+  .ol-tip.visible { opacity: 1; }
   details.notes { margin: 20px 0; }
   details.notes summary {
     font-size: 13px; font-weight: 600; color: var(--text-muted);
@@ -47,25 +52,24 @@ scripts: [citations]
     font-size: 12px; line-height: 1.6; color: var(--text-subtle);
     margin: 0 0 10px;
   }
-  .ol-rate-bar-bg { fill: var(--text-subtle); opacity: 0.12; rx: 3; }
-  .ol-rate-bar-fg { fill: var(--c-navy); opacity: 0.7; rx: 3; }
   @media (max-width: 600px) {
-    .ol-label, .ol-label-win, .ol-label-loss, .ol-label-mh { font-size: 8px; }
+    .ol-label, .ol-label-mh { font-size: 8px; }
   }
 </style>
 
 <h1 class="h-center">Where Does Marblehead's Override Land?</h1>
-<p class="subtitle h-center">Every operating override of $2M or more since FY2020, across all Massachusetts municipalities. Marblehead's proposed FY2027 override ($8.47M) marked for context.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Underride Votes, all municipalities, FY2020-FY2027"></sup></p>
+<p class="subtitle h-center">Every operating override of $2M or more since FY2020, plotted by amount and fiscal year. Marblehead's proposed FY2027 override ($8.47M) marked for context.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Underride Votes, all municipalities, FY2020-FY2027"></sup></p>
 
 <ul class="tldr">
+  <li><strong>Operating overrides only.</strong> Debt exclusions (capital projects, school buildings) not included</li>
   <li><strong>65 override elections of $2M+ since FY2020.</strong> 28 passed, 34 failed, 3 split</li>
   <li><strong>At the $5M-10M range</strong> where Marblehead's ask sits, 8 of 15 passed (53%)</li>
-  <li><strong>Marblehead's prior attempts</strong> ($2.5M in FY2024, $3.1M in FY2023) both failed, at smaller amounts than the current ask</li>
-  <li><strong>Comparable recent wins:</strong> Braintree $8M, Belmont $8.4M, Milton $8.8M. Comparable recent losses: Bridgewater $8M, Malden $8.2M</li>
+  <li><strong>Marblehead's prior attempts</strong> ($2.5M in FY2024, $3.1M in FY2023) both failed at smaller amounts</li>
+  <li><strong>Comparable recent wins:</strong> Braintree $8M, Belmont $8.4M, Milton $8.8M. Comparable losses: Bridgewater $8M, Malden $8.2M</li>
 </ul>
 
 <h2>Every $2M+ override since FY2020</h2>
-<p class="so-hint" style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Each dot is one town's override election. Horizontal position = total amount requested. Where multiple ballot questions appeared in the same election, amounts are combined.</p>
+<p class="so-hint" style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Each dot is one town's override election. Horizontal position = amount requested; vertical position = fiscal year. Hover or tap for details.</p>
 
 <div class="ol-legend">
   <span><span class="ol-legend-swatch ol-legend-swatch--win"></span> Passed</span>
@@ -74,12 +78,15 @@ scripts: [citations]
   <span><span class="ol-legend-swatch ol-legend-swatch--proposed"></span> Marblehead FY2027 (proposed)</span>
 </div>
 
-<svg class="ol-svg chart" id="ol-strip" viewBox="0 0 880 620" role="img" aria-label="Strip chart of every Massachusetts operating override of 2 million dollars or more since fiscal year 2020, with Marblehead's proposed 8.47 million dollar override marked">
+<div style="position:relative;" id="ol-wrap">
+<div class="ol-tip" id="ol-tip"></div>
+<svg class="ol-svg chart" id="ol-scatter" viewBox="0 0 880 420" role="img" aria-label="Scatter plot of every Massachusetts operating override of 2 million dollars or more since fiscal year 2020, with amount on the horizontal axis and fiscal year on the vertical axis">
   <g id="ol-grid"></g>
+  <g id="ol-zones"></g>
   <g id="ol-dots"></g>
   <g id="ol-labels"></g>
-  <g id="ol-proposed"></g>
 </svg>
+</div>
 
 <hr class="ol-divider">
 
@@ -97,14 +104,14 @@ scripts: [citations]
   <p>Override vote data from the Massachusetts Department of Revenue, Division of Local Services Municipal Databank.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Underride Votes" data-href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride"></sup></p>
   <p>Operating overrides only; debt exclusions not included. Where a town placed multiple override questions on the same ballot, all amounts are combined into a single per-election total. If a majority of questions passed, the election is coded as a win; if a majority failed, a loss; if evenly split, shown as "split" and excluded from pass rate calculations.</p>
   <p>Marblehead's proposed FY2027 override ($8.47M across three ballot tiers) has not yet been voted on. It is shown as a dashed circle for reference only.</p>
+  <p>Stoneham FY2027 ($21.8M combined across two votes, one passed at $9.3M) is off the chart's x-axis and noted in the tooltip data but not plotted.</p>
   <p>FY2027 data is partial as of April 2026.</p>
 </details>
 
 <script>
 (function() {
   // Elections >= $2M since FY2020, sorted by amount
-  // outcome: 1=win, 0=loss, 0.5=split
-  // mh: 1=marblehead actual, 2=marblehead proposed
+  // o: 1=win, 0=loss, 0.5=split; mh: 1=actual
   var VOTES = [
     {t:"Rutland",fy:2024,a:2000000,o:1},
     {t:"Whitman",fy:2026,a:2000000,o:0},
@@ -169,37 +176,35 @@ scripts: [citations]
     {t:"Melrose",fy:2026,a:13500000,o:1},
     {t:"Malden",fy:2027,a:13600000,o:0},
     {t:"Stoneham",fy:2026,a:14600000,o:0},
-    {t:"Arlington",fy:2027,a:14800000,o:1},
-    {t:"Stoneham",fy:2027,a:21800000,o:0.5}
+    {t:"Arlington",fy:2027,a:14800000,o:1}
+    // Stoneham FY2027 ($21.8M) omitted as outlier
   ];
 
   var MH_PROPOSED = {t:"Marblehead",fy:2027,a:8470000};
 
-  var W = 880, mL = 60, mR = 100;
+  var W = 880;
+  var mL = 60, mR = 30, mT = 30, mB = 40;
   var pW = W - mL - mR;
+  var maxAmt = 15500000;
+  var fyMin = 2019.5, fyMax = 2027.5;
 
   // =============================================
-  // CHART 1: STRIP CHART
+  // CHART 1: SCATTER
   // =============================================
   (function() {
-    var H = 620, mT = 20, mB = 40;
+    var H = 420;
     var pH = H - mT - mB;
-    var n = VOTES.length;
-    var rowH = Math.floor(pH / (n + 2)); // +2 for proposed
-    var dotR = Math.min(rowH * 0.35, 6);
 
-    var maxAmt = 22000000;
     var gridG = document.getElementById("ol-grid");
+    var zonesG = document.getElementById("ol-zones");
     var dotsG = document.getElementById("ol-dots");
     var labelsG = document.getElementById("ol-labels");
-    var proposedG = document.getElementById("ol-proposed");
 
-    function xScale(amt) { return mL + pW * (amt / maxAmt); }
-    function yPos(i) { return mT + (i + 0.5) * rowH; }
+    function xScale(amt) { return mL + pW * Math.min(amt, maxAmt) / maxAmt; }
+    function yScale(fy) { return mT + pH * (1 - (fy - fyMin) / (fyMax - fyMin)); }
 
-    // Grid lines at dollar amounts
-    var gridAmts = [0, 2000000, 4000000, 6000000, 8000000, 10000000, 12000000, 14000000, 16000000, 18000000, 20000000];
-    gridAmts.forEach(function(v) {
+    // X grid (dollar amounts)
+    for (var v = 0; v <= maxAmt; v += 2000000) {
       var x = xScale(v);
       var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
       line.setAttribute("x1", x); line.setAttribute("x2", x);
@@ -214,58 +219,215 @@ scripts: [citations]
       label.setAttribute("class", "ol-tick");
       label.textContent = "$" + (v / 1000000) + "M";
       gridG.appendChild(label);
+    }
+
+    // Y grid (fiscal years)
+    for (var fy = 2020; fy <= 2027; fy++) {
+      var y = yScale(fy);
+      var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", mL); line.setAttribute("x2", W - mR);
+      line.setAttribute("y1", y); line.setAttribute("y2", y);
+      line.setAttribute("class", "grid-minor");
+      gridG.appendChild(line);
+
+      var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      label.setAttribute("x", mL - 8);
+      label.setAttribute("y", y + 4);
+      label.setAttribute("text-anchor", "end");
+      label.setAttribute("class", "ol-tick");
+      label.textContent = "FY" + fy;
+      gridG.appendChild(label);
+    }
+
+    // Marblehead's proposed amount: vertical band
+    var mhX = xScale(MH_PROPOSED.a);
+    var bandW = 30;
+    var band = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    band.setAttribute("x", mhX - bandW / 2);
+    band.setAttribute("y", mT);
+    band.setAttribute("width", bandW);
+    band.setAttribute("height", pH);
+    band.setAttribute("fill", "var(--c-buoy)");
+    band.setAttribute("class", "ol-zone");
+    zonesG.appendChild(band);
+
+    // Proposed dot
+    var propDot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    propDot.setAttribute("cx", mhX);
+    propDot.setAttribute("cy", yScale(MH_PROPOSED.fy));
+    propDot.setAttribute("r", 8);
+    propDot.setAttribute("class", "ol-dot-proposed");
+    dotsG.appendChild(propDot);
+
+    var propLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    propLabel.setAttribute("x", mhX);
+    propLabel.setAttribute("y", mT - 10);
+    propLabel.setAttribute("text-anchor", "middle");
+    propLabel.setAttribute("class", "ol-label-mh");
+    propLabel.setAttribute("font-size", "11px");
+    propLabel.textContent = "Marblehead proposed: $8.47M";
+    labelsG.appendChild(propLabel);
+
+    // Collision detection for labels
+    var placed = [];
+    function wouldOverlap(x, y, w, h) {
+      for (var i = 0; i < placed.length; i++) {
+        var p = placed[i];
+        if (x < p.x + p.w && x + w > p.x && y < p.y + p.h && y + h > p.y) return true;
+      }
+      return false;
+    }
+
+    // Only label notable dots (near MH range, very large, or Marblehead itself)
+    function shouldLabel(v) {
+      if (v.mh) return true;
+      // Near Marblehead's proposed amount ($7M-10M)
+      if (v.a >= 7000000 && v.a <= 10000000) return true;
+      // Very large
+      if (v.a >= 12000000) return true;
+      return false;
+    }
+
+    // Jitter: offset dots that share the same FY to avoid overlap
+    var byFy = {};
+    VOTES.forEach(function(v) {
+      if (!byFy[v.fy]) byFy[v.fy] = [];
+      byFy[v.fy].push(v);
     });
 
-    // Proposed Marblehead line
-    var mhX = xScale(MH_PROPOSED.a);
-    var mhLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
-    mhLine.setAttribute("x1", mhX); mhLine.setAttribute("x2", mhX);
-    mhLine.setAttribute("y1", mT); mhLine.setAttribute("y2", H - mB);
-    mhLine.setAttribute("class", "ol-proposed-line");
-    proposedG.appendChild(mhLine);
+    // Sort within each FY by amount for consistent jitter
+    Object.keys(byFy).forEach(function(fy) {
+      byFy[fy].sort(function(a, b) { return a.a - b.a; });
+    });
 
-    var mhLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    mhLabel.setAttribute("x", mhX);
-    mhLabel.setAttribute("y", mT - 6);
-    mhLabel.setAttribute("text-anchor", "middle");
-    mhLabel.setAttribute("class", "ol-proposed-label");
-    mhLabel.textContent = "Marblehead FY27 proposed: $8.47M";
-    proposedG.appendChild(mhLabel);
+    // Assign jitter offsets
+    var jitterMap = new Map();
+    Object.keys(byFy).forEach(function(fy) {
+      var items = byFy[fy];
+      // Group nearby amounts (within 500K) to detect clusters
+      var clusters = [];
+      var cur = [items[0]];
+      for (var i = 1; i < items.length; i++) {
+        if (items[i].a - cur[cur.length - 1].a < 800000) {
+          cur.push(items[i]);
+        } else {
+          clusters.push(cur);
+          cur = [items[i]];
+        }
+      }
+      clusters.push(cur);
 
-    // Dots and labels
-    VOTES.forEach(function(v, i) {
+      clusters.forEach(function(cluster) {
+        if (cluster.length === 1) {
+          jitterMap.set(cluster[0], 0);
+        } else {
+          var spread = Math.min(cluster.length * 6, pH / 16);
+          cluster.forEach(function(v, j) {
+            var offset = (j - (cluster.length - 1) / 2) * (spread / cluster.length);
+            jitterMap.set(v, offset);
+          });
+        }
+      });
+    });
+
+    // Draw dots
+    var dotEls = [];
+    VOTES.forEach(function(v) {
       var cx = xScale(v.a);
-      var cy = yPos(i);
+      var jitter = jitterMap.get(v) || 0;
+      var cy = yScale(v.fy) + jitter;
+      var r = v.mh ? 7 : (v.a >= 7000000 ? 5.5 : 4.5);
 
       var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
       dot.setAttribute("cx", cx);
       dot.setAttribute("cy", cy);
-      dot.setAttribute("r", v.mh ? dotR + 1 : dotR);
+      dot.setAttribute("r", r);
 
       if (v.mh) {
         dot.setAttribute("class", "ol-dot-mh");
       } else if (v.o === 1) {
         dot.setAttribute("class", "ol-dot-win");
-      } else if (v.o === 0) {
-        dot.setAttribute("class", "ol-dot-loss");
       } else {
         dot.setAttribute("class", "ol-dot-loss");
-        dot.setAttribute("opacity", "0.6");
       }
+
+      dot.setAttribute("data-town", v.t);
+      dot.setAttribute("data-fy", v.fy);
+      dot.setAttribute("data-amt", v.a);
+      dot.setAttribute("data-outcome", v.o === 1 ? "Passed" : (v.o === 0 ? "Did not pass" : "Split"));
+      dot.style.cursor = "pointer";
       dotsG.appendChild(dot);
+      dotEls.push({el: dot, v: v, cx: cx, cy: cy});
 
-      // Label: "Town FYxx"
-      var labelClass = v.mh ? "ol-label-mh" : (v.o === 1 ? "ol-label-win" : "ol-label-loss");
-      var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-      label.setAttribute("x", cx + dotR + 4);
-      label.setAttribute("y", cy + 3);
-      label.setAttribute("class", labelClass);
+      // Labels for notable dots
+      if (shouldLabel(v)) {
+        var labelX = cx + r + 4;
+        var labelY = cy + 3;
+        var labelW = 80;
+        var labelH = 12;
 
-      var displayAmt = v.a >= 10000000
-        ? "$" + (v.a / 1000000).toFixed(1) + "M"
-        : "$" + (v.a / 1000000).toFixed(1) + "M";
-      label.textContent = v.t + " FY" + (v.fy % 100).toString().padStart(2, "0");
-      labelsG.appendChild(label);
+        // Try right side first, then left
+        if (wouldOverlap(labelX, labelY - labelH, labelW, labelH)) {
+          labelX = cx - r - 4;
+          var anchor = "end";
+          if (!wouldOverlap(labelX - labelW, labelY - labelH, labelW, labelH)) {
+            placed.push({x: labelX - labelW, y: labelY - labelH, w: labelW, h: labelH});
+          } else {
+            // Try above
+            labelX = cx + r + 4;
+            labelY = cy - r - 2;
+            anchor = "start";
+            placed.push({x: labelX, y: labelY - labelH, w: labelW, h: labelH});
+          }
+          var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          label.setAttribute("x", labelX);
+          label.setAttribute("y", labelY);
+          label.setAttribute("text-anchor", anchor || "end");
+          label.setAttribute("class", v.mh ? "ol-label-mh" : "ol-label");
+          label.textContent = v.t;
+          labelsG.appendChild(label);
+        } else {
+          placed.push({x: labelX, y: labelY - labelH, w: labelW, h: labelH});
+          var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+          label.setAttribute("x", labelX);
+          label.setAttribute("y", labelY);
+          label.setAttribute("text-anchor", "start");
+          label.setAttribute("class", v.mh ? "ol-label-mh" : "ol-label");
+          label.textContent = v.t;
+          labelsG.appendChild(label);
+        }
+      }
+    });
+
+    // Tooltip
+    var tip = document.getElementById("ol-tip");
+    var wrap = document.getElementById("ol-wrap");
+
+    dotEls.forEach(function(d) {
+      function showTip(e) {
+        var v = d.v;
+        var amt = "$" + (v.a >= 1000000
+          ? (v.a / 1000000).toFixed(1) + "M"
+          : Math.round(v.a / 1000) + "K");
+        tip.innerHTML = "<strong>" + v.t + "</strong> FY" + v.fy +
+          "<br>" + amt + " &mdash; " + d.el.getAttribute("data-outcome");
+        tip.classList.add("visible");
+
+        var rect = wrap.getBoundingClientRect();
+        var svgRect = document.getElementById("ol-scatter").getBoundingClientRect();
+        var dotX = (d.cx / 880) * svgRect.width;
+        var dotY = (d.cy / 420) * svgRect.height;
+
+        tip.style.left = (dotX + svgRect.left - rect.left + 12) + "px";
+        tip.style.top = (dotY + svgRect.top - rect.top - 10) + "px";
+      }
+      function hideTip() { tip.classList.remove("visible"); }
+      d.el.addEventListener("mouseenter", showTip);
+      d.el.addEventListener("mouseleave", hideTip);
+      d.el.addEventListener("touchstart", function(e) {
+        e.preventDefault(); showTip(e);
+        setTimeout(hideTip, 2500);
+      }, {passive: false});
     });
   })();
 
@@ -274,38 +436,38 @@ scripts: [citations]
   // =============================================
   (function() {
     var BUCKETS = [
-      {label:"<$100K",lo:0,hi:100000,win:25,total:34},
-      {label:"$100K-250K",lo:100000,hi:250000,win:30,total:47},
-      {label:"$250K-500K",lo:250000,hi:500000,win:38,total:58},
-      {label:"$500K-1M",lo:500000,hi:1000000,win:38,total:55},
-      {label:"$1M-2M",lo:1000000,hi:2000000,win:22,total:35},
-      {label:"$2M-5M",lo:2000000,hi:5000000,win:12,total:34},
-      {label:"$5M-10M",lo:5000000,hi:10000000,win:15,total:27},
-      {label:"$10M+",lo:10000000,hi:999999999,win:7,total:12}
+      {label:"<$100K",win:25,total:34},
+      {label:"$100-250K",win:30,total:47},
+      {label:"$250-500K",win:38,total:58},
+      {label:"$500K-1M",win:38,total:55},
+      {label:"$1-2M",win:22,total:35},
+      {label:"$2-5M",win:12,total:34},
+      {label:"$5-10M",win:15,total:27},
+      {label:"$10M+",win:7,total:12}
     ];
 
-    var H = 260, mT = 30, mB = 30;
-    var pH = H - mT - mB;
-    var bL = 120, bR = 60;
+    var H = 260, rT = 30, rB = 30;
+    var rH = H - rT - rB;
+    var bL = 100, bR = 80;
     var bW = W - bL - bR;
-    var barH = Math.floor(pH / BUCKETS.length) - 4;
+    var barH = Math.floor(rH / BUCKETS.length) - 4;
 
     var gridG = document.getElementById("ol-rate-grid");
     var barsG = document.getElementById("ol-rate-bars");
     var rLabelsG = document.getElementById("ol-rate-labels");
+    var mhBucketIdx = 6;
 
-    // Grid
     [0, 25, 50, 75, 100].forEach(function(pct) {
       var x = bL + bW * pct / 100;
       var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
       line.setAttribute("x1", x); line.setAttribute("x2", x);
-      line.setAttribute("y1", mT); line.setAttribute("y2", H - mB);
+      line.setAttribute("y1", rT); line.setAttribute("y2", H - rB);
       line.setAttribute("class", pct === 0 ? "axis-base" : "grid-minor");
       gridG.appendChild(line);
 
       var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
       label.setAttribute("x", x);
-      label.setAttribute("y", mT - 8);
+      label.setAttribute("y", rT - 8);
       label.setAttribute("text-anchor", "middle");
       label.setAttribute("class", "ol-label");
       label.textContent = pct + "%";
@@ -315,28 +477,25 @@ scripts: [citations]
     // 50% reference
     var ref = document.createElementNS("http://www.w3.org/2000/svg", "line");
     ref.setAttribute("x1", bL + bW * 0.5); ref.setAttribute("x2", bL + bW * 0.5);
-    ref.setAttribute("y1", mT); ref.setAttribute("y2", H - mB);
+    ref.setAttribute("y1", rT); ref.setAttribute("y2", H - rB);
     ref.setAttribute("class", "grid-major");
     gridG.appendChild(ref);
 
-    // Highlight the bucket Marblehead falls into
-    var mhBucketIdx = 6; // $5M-10M
-
     BUCKETS.forEach(function(b, i) {
-      var y = mT + i * (barH + 4);
+      var y = rT + i * (barH + 4);
       var rate = b.total > 0 ? b.win / b.total * 100 : 0;
 
-      // Background bar
       var bg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
       bg.setAttribute("x", bL); bg.setAttribute("y", y);
       bg.setAttribute("width", bW); bg.setAttribute("height", barH);
+      bg.setAttribute("rx", 3);
       bg.setAttribute("class", "ol-rate-bar-bg");
       barsG.appendChild(bg);
 
-      // Foreground bar
       var fg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
       fg.setAttribute("x", bL); fg.setAttribute("y", y);
       fg.setAttribute("width", bW * rate / 100); fg.setAttribute("height", barH);
+      fg.setAttribute("rx", 3);
       fg.setAttribute("class", "ol-rate-bar-fg");
       if (i === mhBucketIdx) {
         fg.setAttribute("fill", "var(--c-buoy)");
@@ -344,7 +503,6 @@ scripts: [citations]
       }
       barsG.appendChild(fg);
 
-      // Bucket label
       var bl = document.createElementNS("http://www.w3.org/2000/svg", "text");
       bl.setAttribute("x", bL - 6); bl.setAttribute("y", y + barH / 2 + 4);
       bl.setAttribute("text-anchor", "end");
@@ -352,10 +510,9 @@ scripts: [citations]
       bl.textContent = b.label;
       rLabelsG.appendChild(bl);
 
-      // Rate + count label
       var rl = document.createElementNS("http://www.w3.org/2000/svg", "text");
-      var rx = bL + bW * rate / 100 + 6;
-      rl.setAttribute("x", rx); rl.setAttribute("y", y + barH / 2 + 4);
+      rl.setAttribute("x", bL + bW * rate / 100 + 6);
+      rl.setAttribute("y", y + barH / 2 + 4);
       rl.setAttribute("class", "ol-callout");
       rl.setAttribute("fill", i === mhBucketIdx ? "var(--c-buoy)" : "var(--c-navy)");
       rl.textContent = Math.round(rate) + "% (" + b.win + "/" + b.total + ")";
