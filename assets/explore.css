@@ -533,114 +533,188 @@
   }
   .explore-shared-fresh:hover { text-decoration: underline; }
 
-  /* ── Ballot widget (compact row inside stats strip) ── */
-  .ballot-widget {
-    display: none;
-    border-top: 1px solid var(--border);
-    padding: 8px 16px 10px;
+  /* ── Ballot card (locked teaser → unlocked ballot) ── */
+  .ballot-card {
+    margin: 16px 0;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color 0.3s ease;
   }
-  .ballot-widget.visible { display: block; }
-  .ballot-widget-header {
+
+  /* Locked teaser state */
+  .ballot-card-locked {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 6px;
+    gap: 14px;
+    padding: 16px 20px;
+    cursor: default;
   }
-  .ballot-widget-label {
-    font-size: 10px;
+  .ballot-card.locked .ballot-card-locked { display: flex; }
+  .ballot-card:not(.locked) .ballot-card-locked { display: none; }
+  .ballot-card-lock-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--c-teal) 12%, var(--surface));
+    color: var(--c-teal);
+  }
+  .ballot-card-lock-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .ballot-card-lock-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .ballot-card-lock-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .ballot-card-lock-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* Unlocked body */
+  .ballot-card-body {
+    display: none;
+    padding: 18px 20px 20px;
+  }
+  .ballot-card:not(.locked) .ballot-card-body { display: block; }
+  .ballot-card:not(.locked) {
+    border-color: var(--c-teal);
+  }
+  .ballot-card-title {
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text-subtle);
+    margin: 0 0 4px;
   }
-  .ballot-widget-lock {
-    font-size: 10px;
+  .ballot-card-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0 0 14px;
+    line-height: 1.45;
+  }
+  .ballot-card-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ballot-card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--border) 25%, transparent);
+    transition: background 0.15s ease;
+  }
+  .ballot-card-row.has-vote {
+    background: color-mix(in srgb, var(--c-teal) 6%, var(--surface));
+  }
+  .ballot-card-row-info {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .ballot-card-row-q {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--text-subtle);
+  }
+  .ballot-card-row-amt {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .ballot-card-row-tier {
+    font-size: 11px;
     color: var(--text-muted);
   }
-  .ballot-widget-grid {
+  .ballot-card-choices {
     display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .ballot-widget.locked .ballot-widget-grid {
-    opacity: 0.35;
-    pointer-events: none;
-  }
-  .ballot-widget-item {
-    display: flex;
-    align-items: center;
     gap: 4px;
   }
-  .ballot-widget-q {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--text-subtle);
-    white-space: nowrap;
-  }
-  .ballot-widget-amt {
-    font-weight: 600;
-    color: var(--text-muted);
-  }
-  .ballot-widget-choices {
-    display: flex;
-    gap: 2px;
-  }
-  .ballot-widget-btn {
+  .ballot-card-btn {
     font: inherit;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
-    padding: 3px 8px;
-    border-radius: 10px;
+    padding: 5px 16px;
+    border-radius: 14px;
     border: 1.5px solid var(--border);
     background: var(--surface);
     color: var(--text-muted);
     cursor: pointer;
     transition: all 0.12s ease;
-    line-height: 1;
   }
-  .ballot-widget-btn:hover {
+  .ballot-card-btn:hover {
     border-color: var(--text-subtle);
+    color: var(--text);
   }
-  .ballot-widget-btn.voted {
+  .ballot-card-btn.voted {
     background: var(--c-teal);
     border-color: var(--c-teal);
     color: #fff;
   }
-  .ballot-widget-btn[data-vote="no"].voted {
+  .ballot-card-btn[data-vote="no"].voted {
     background: var(--c-brass);
     border-color: var(--c-brass);
     color: #fff;
   }
-  .ballot-widget-go {
+  .ballot-card-nudge {
+    margin: 8px 0 0;
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--c-brass);
+    background: color-mix(in srgb, var(--c-brass) 8%, var(--surface));
+    border-left: 3px solid var(--c-brass);
+    border-radius: 0 6px 6px 0;
+    display: none;
+  }
+  .ballot-card-nudge.visible { display: block; }
+  .ballot-card-submit {
+    display: none;
+    margin: 14px auto 0;
     font: inherit;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 12px;
+    padding: 9px 24px;
+    border-radius: 20px;
     border: none;
     background: var(--c-teal);
     color: #fff;
     cursor: pointer;
-    margin-left: auto;
     transition: all 0.12s ease;
-    display: none;
   }
-  .ballot-widget-go:hover { filter: brightness(1.1); }
-  .ballot-widget.all-voted .ballot-widget-go { display: block; }
-  .ballot-widget.submitted .ballot-widget-go { display: none; }
-  .ballot-widget-nudge {
-    padding: 4px 0 0;
-    font-size: 10px;
-    line-height: 1.45;
-    color: var(--c-brass);
+  .ballot-card-submit:hover { filter: brightness(1.1); }
+  .ballot-card.all-voted .ballot-card-submit { display: block; }
+  .ballot-card-done {
     display: none;
+    text-align: center;
+    font-size: 13px;
+    color: var(--c-teal);
+    font-weight: 600;
+    margin-top: 12px;
   }
-  .ballot-widget-nudge.visible { display: block; }
+  .ballot-card.submitted .ballot-card-submit { display: none; }
+  .ballot-card.submitted .ballot-card-done { display: block; }
   @media (max-width: 480px) {
-    .ballot-widget { padding: 6px 12px 8px; }
-    .ballot-widget-grid { flex-wrap: wrap; gap: 6px; }
-    .ballot-widget-item { gap: 3px; }
-    .ballot-widget-btn { padding: 3px 6px; font-size: 9px; }
+    .ballot-card-locked { padding: 14px 16px; gap: 12px; }
+    .ballot-card-body { padding: 14px 16px 16px; }
+    .ballot-card-row { flex-wrap: wrap; gap: 6px; padding: 8px 10px; }
+    .ballot-card-choices { width: 100%; justify-content: flex-end; }
   }
 
   /* ── Cross-tab comparison bar (shown per question after ballot submitted) ── */

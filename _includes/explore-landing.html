@@ -53,45 +53,6 @@
           <button type="button" class="explore-stats-reset" id="statsReset">Delete my data</button>
         </div>
       </div>
-      <!-- Ballot row: appears after all questions answered -->
-      <div class="ballot-widget" id="ballotWidget">
-        <div class="ballot-widget-header">
-          <span class="ballot-widget-label">Your ballot</span>
-          <span class="ballot-widget-lock" id="ballotLockMsg"></span>
-        </div>
-        <div class="ballot-widget-grid">
-          <div class="ballot-widget-item" data-ballot="q1a">
-            <span class="ballot-widget-q">1A <span class="ballot-widget-amt">$15M</span></span>
-            <div class="ballot-widget-choices">
-              <button type="button" class="ballot-widget-btn" data-vote="yes">Y</button>
-              <button type="button" class="ballot-widget-btn" data-vote="no">N</button>
-            </div>
-          </div>
-          <div class="ballot-widget-item" data-ballot="q1b">
-            <span class="ballot-widget-q">1B <span class="ballot-widget-amt">$12M</span></span>
-            <div class="ballot-widget-choices">
-              <button type="button" class="ballot-widget-btn" data-vote="yes">Y</button>
-              <button type="button" class="ballot-widget-btn" data-vote="no">N</button>
-            </div>
-          </div>
-          <div class="ballot-widget-item" data-ballot="q1c">
-            <span class="ballot-widget-q">1C <span class="ballot-widget-amt">$9M</span></span>
-            <div class="ballot-widget-choices">
-              <button type="button" class="ballot-widget-btn" data-vote="yes">Y</button>
-              <button type="button" class="ballot-widget-btn" data-vote="no">N</button>
-            </div>
-          </div>
-          <div class="ballot-widget-item" data-ballot="trash">
-            <span class="ballot-widget-q">Q2 <span class="ballot-widget-amt">Trash</span></span>
-            <div class="ballot-widget-choices">
-              <button type="button" class="ballot-widget-btn" data-vote="yes">Y</button>
-              <button type="button" class="ballot-widget-btn" data-vote="no">N</button>
-            </div>
-          </div>
-          <button type="button" class="ballot-widget-go" id="ballotSubmit">Compare</button>
-        </div>
-        <div class="ballot-widget-nudge" id="ballotNudge"></div>
-      </div>
     </div>
 
     <div class="explore-shared-banner" id="sharedBanner">
@@ -100,6 +61,72 @@
     </div>
     <div class="explore-question-list" id="questionList">
       <!-- JS builds these from the actual question h1s -->
+    </div>
+
+    <!-- Ballot card: locked teaser that expands when all questions answered -->
+    <div class="ballot-card locked" id="ballotWidget">
+      <div class="ballot-card-locked" id="ballotLocked">
+        <div class="ballot-card-lock-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div class="ballot-card-lock-text">
+          <span class="ballot-card-lock-title">Practice your ballot</span>
+          <span class="ballot-card-lock-sub" id="ballotLockMsg">Answer all 15 questions to unlock</span>
+        </div>
+      </div>
+      <div class="ballot-card-body" id="ballotBody">
+        <p class="ballot-card-title">Your ballot &middot; June 9, 2026</p>
+        <p class="ballot-card-sub">Mark each question, then see how others who voted the same way answered above.</p>
+        <div class="ballot-card-rows">
+          <div class="ballot-card-row" data-ballot="q1a">
+            <div class="ballot-card-row-info">
+              <span class="ballot-card-row-q">1A</span>
+              <span class="ballot-card-row-amt">$15M</span>
+              <span class="ballot-card-row-tier">Invest</span>
+            </div>
+            <div class="ballot-card-choices">
+              <button type="button" class="ballot-card-btn" data-vote="yes">Yes</button>
+              <button type="button" class="ballot-card-btn" data-vote="no">No</button>
+            </div>
+          </div>
+          <div class="ballot-card-row" data-ballot="q1b">
+            <div class="ballot-card-row-info">
+              <span class="ballot-card-row-q">1B</span>
+              <span class="ballot-card-row-amt">$12M</span>
+              <span class="ballot-card-row-tier">Stabilize</span>
+            </div>
+            <div class="ballot-card-choices">
+              <button type="button" class="ballot-card-btn" data-vote="yes">Yes</button>
+              <button type="button" class="ballot-card-btn" data-vote="no">No</button>
+            </div>
+          </div>
+          <div class="ballot-card-row" data-ballot="q1c">
+            <div class="ballot-card-row-info">
+              <span class="ballot-card-row-q">1C</span>
+              <span class="ballot-card-row-amt">$9M</span>
+              <span class="ballot-card-row-tier">Restore</span>
+            </div>
+            <div class="ballot-card-choices">
+              <button type="button" class="ballot-card-btn" data-vote="yes">Yes</button>
+              <button type="button" class="ballot-card-btn" data-vote="no">No</button>
+            </div>
+          </div>
+          <div class="ballot-card-row" data-ballot="trash">
+            <div class="ballot-card-row-info">
+              <span class="ballot-card-row-q">Q2</span>
+              <span class="ballot-card-row-amt">$2.3M</span>
+              <span class="ballot-card-row-tier">Trash</span>
+            </div>
+            <div class="ballot-card-choices">
+              <button type="button" class="ballot-card-btn" data-vote="yes">Yes</button>
+              <button type="button" class="ballot-card-btn" data-vote="no">No</button>
+            </div>
+          </div>
+        </div>
+        <div class="ballot-card-nudge" id="ballotNudge"></div>
+        <button type="button" class="ballot-card-submit" id="ballotSubmit">See how your picks compare</button>
+        <div class="ballot-card-done" id="ballotDone">Comparisons unlocked on each question</div>
+      </div>
     </div>
 
     {% include explore-synthesis.html %}

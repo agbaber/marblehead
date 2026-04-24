@@ -2241,17 +2241,16 @@
     suppressURLWrite = false;
   });
 
-  // ── Ballot widget: compact row inside stats strip ──
+  // ── Ballot card: locked teaser → unlocked ballot ──
 
   var ballotWidget = document.getElementById('ballotWidget');
   var ballotNudge = document.getElementById('ballotNudge');
   var ballotLockMsg = document.getElementById('ballotLockMsg');
   var ballotSubmitBtn = document.getElementById('ballotSubmit');
-  var ballotVotes = {}; // { q1a: 'yes'|'no', q1b: ..., q1c: ..., trash: ... }
+  var ballotVotes = {};
   var ballotSubmitted = false;
   var BALLOT_KEYS = ['q1a', 'q1b', 'q1c', 'trash'];
 
-  // Restore persisted ballot state
   try {
     var saved = JSON.parse(localStorage.getItem('explore-ballot') || '{}');
     if (saved && typeof saved === 'object') ballotVotes = saved;
@@ -2271,17 +2270,14 @@
   function updateBallotLock() {
     if (!ballotWidget) return;
     var answered = allQuestionsAnswered();
-    // Show once user has at least 1 pick
-    var hasPicks = topicOrder.some(function (t) { return !!selections[t]; });
-    ballotWidget.classList.toggle('visible', hasPicks);
     ballotWidget.classList.toggle('locked', !answered);
 
     if (ballotLockMsg) {
+      var remaining = topicOrder.filter(function (t) { return !selections[t]; }).length;
       if (answered) {
-        ballotLockMsg.textContent = '';
+        ballotLockMsg.textContent = 'Unlocked';
       } else {
-        var remaining = topicOrder.filter(function (t) { return !selections[t]; }).length;
-        ballotLockMsg.textContent = remaining + ' to go';
+        ballotLockMsg.textContent = remaining + ' question' + (remaining === 1 ? '' : 's') + ' to go';
       }
     }
   }
@@ -2294,20 +2290,17 @@
     if (!ballotWidget) return;
     updateBallotLock();
 
-    // Restore button states from ballotVotes
-    document.querySelectorAll('.ballot-widget-item').forEach(function (item) {
-      var key = item.dataset.ballot;
+    document.querySelectorAll('.ballot-card-row').forEach(function (row) {
+      var key = row.dataset.ballot;
       var vote = ballotVotes[key];
-      item.querySelectorAll('.ballot-widget-btn').forEach(function (btn) {
+      row.classList.toggle('has-vote', !!vote);
+      row.querySelectorAll('.ballot-card-btn').forEach(function (btn) {
         btn.classList.toggle('voted', btn.dataset.vote === vote);
       });
     });
 
-    // Show/hide submit button
     ballotWidget.classList.toggle('all-voted', allBallotVoted() && !ballotSubmitted);
     ballotWidget.classList.toggle('submitted', ballotSubmitted);
-
-    // Cascade nudge
     checkCascadeNudge();
   }
 
@@ -2319,9 +2312,9 @@
 
     var nudgeMsg = '';
     if (yes1a && (no1b || no1c)) {
-      nudgeMsg = 'Tip: Yes on $15M but No below? If $15M fails, lower tiers are your fallback.';
+      nudgeMsg = 'The highest passing tier wins. If $15M falls short, voting Yes on $12M and $9M keeps them as a fallback.';
     } else if (yes1b && no1c) {
-      nudgeMsg = 'Tip: Yes on $12M but No on $9M? $9M is your fallback if $12M fails.';
+      nudgeMsg = 'If $12M doesn\'t pass, voting Yes on $9M keeps it as a fallback.';
     }
 
     if (nudgeMsg) {
@@ -2332,17 +2325,16 @@
     }
   }
 
-  // Click handler for ballot Yes/No buttons
   if (ballotWidget) {
     ballotWidget.addEventListener('click', function (e) {
       if (ballotSubmitted) return;
-      var btn = e.target.closest('.ballot-widget-btn');
+      var btn = e.target.closest('.ballot-card-btn');
       if (!btn) return;
-      var item = btn.closest('.ballot-widget-item');
-      if (!item) return;
+      var row = btn.closest('.ballot-card-row');
+      if (!row) return;
       if (ballotWidget.classList.contains('locked')) return;
 
-      var key = item.dataset.ballot;
+      var key = row.dataset.ballot;
       var vote = btn.dataset.vote;
 
       if (ballotVotes[key] === vote) {
@@ -2359,7 +2351,6 @@
     });
   }
 
-  // Submit handler
   if (ballotSubmitBtn) {
     ballotSubmitBtn.addEventListener('click', function () {
       if (!allBallotVoted()) return;
