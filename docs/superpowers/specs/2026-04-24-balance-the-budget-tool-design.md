@@ -30,15 +30,24 @@ anti-override readers should both feel it played fair.
 ### In scope for v1
 
 - Single-year view (FY27).
-- Three tier targets ($9M / $12M / $15M), user-selectable, default Tier 1.
+- Three tier targets at **FY27 draw amounts** from
+  `data/override_draws_schedule.csv`: **Tier 1 = $1,269,564; Tier 2 =
+  $2,805,236; Tier 3 = $4,296,718**. User-selectable, default Tier 1.
+  The headline 3-year totals ($9M / $12M / $15M) appear as context in
+  copy only, not as the target to close. Rationale: the override
+  line items in `override_town_line_items.csv` are FY27 slices; summing
+  all Tier 1 items gives $1,269,564, matching the Tier 1 FY27 draw. Using
+  the 3-year headline as the target would make it impossible to close
+  the gap even by cutting every listed item, because most tier dollars
+  phase in FY28-FY29. The tool explicitly states this framing in the
+  preamble.
 - Discrete checkboxes for every item in `data/override_town_line_items.csv`
   (each item is the "Restore" or "Increase" line the town has already
   itemized).
 - Scalar text input for the school top-line cut (default $1,500,000), with
   preset buttons ("Match Tier 1" / "Match Tier 2" / "Match Tier 3") that map
   to the school items in `data/override_school_items.csv`.
-- Scalar text input for road paving (hot top) dollar amount (default $0 cut
-  from FY26, town-proposed cut is $60,000).
+<!-- Road paving scalar removed; it is a regular checkbox. -->
 - Consequences panel listing state-law / regulatory consequences triggered by
   the current plan. Updates live.
 - Success state when the plan closes the selected tier gap: side-by-side
@@ -70,24 +79,27 @@ anti-override readers should both feel it played fair.
 - New page at `balance-the-budget.html`.
 - H1: "Balance the FY27 budget without the override."
 - Preamble, 3-4 sentences, neutral tone per `STYLE_GUIDE.md`. Communicates
-  the target (close a $9M / $12M / $15M gap), the rule (no override means no
-  new levy revenue), and the mechanic (choose cuts from a specified list).
-  Must not editorialize about whether cuts are good or bad. Must not
-  meta-narrate (no "This page lets you...", "This tool helps you..." per
-  `CLAUDE.md`). Example acceptable opening: "Closing the FY27 deficit
-  without a Proposition 2½ override means cutting an amount equivalent to
-  what each override tier would restore. The Town Administrator's proposed
-  FY27 no-override budget is one such plan. Use the checklist below to
-  build your own." Final copy to be reviewed against STYLE_GUIDE and
+  the target (close the FY27 gap for the selected tier), the rule (no
+  override means no new levy revenue), the multi-year context (the
+  headline tier total is spread over three years; FY27 is the first-year
+  slice), and the mechanic (choose cuts from a specified list). Must not
+  editorialize about whether cuts are good or bad. Must not meta-narrate
+  (no "This page lets you...", "This tool helps you..." per
+  `CLAUDE.md`). Final copy to be reviewed against STYLE_GUIDE and
   CLAUDE.md at implementation time.
 
 ### Page layout (top to bottom)
 
 1. **Preamble** (plain text, no callout box).
 
-2. **Tier selector.** Three buttons: "Tier 1: $9M gap", "Tier 2: $12M gap",
-   "Tier 3: $15M gap". Default Tier 1. Switching tier prompts confirmation if
-   any cuts are selected (prevents accidental plan loss).
+2. **Tier selector.** Three buttons with the FY27 target as the main
+   number and the 3-year total as context:
+   - "Tier 1 — FY27 gap: $1.27M (of $9M total over 3 years)"
+   - "Tier 2 — FY27 gap: $2.81M (of $12M total over 3 years)"
+   - "Tier 3 — FY27 gap: $4.30M (of $15M total over 3 years)"
+
+   Default Tier 1. Switching tier prompts confirmation if any cuts are
+   selected (prevents accidental plan loss).
 
 3. **Running status bar**, sticky on scroll. Three values:
    - Target (e.g. "$9,000,000")
@@ -115,19 +127,27 @@ anti-override readers should both feel it played fair.
    for checkbox and flag columns. Do not introduce new color semantics.
 
 5. **School section**. Top of section is a text input:
-   - Label: "Your proposed school cut: $"
+   - Label: "Your FY27 school cut: $"
    - Default value: 1,500,000 (the town's proposed FY27 cut)
-   - Below the input: three preset buttons that set the value to the
-     school-side allocation for each tier. For Tier 1 this is $0 restore in
-     FY27 (leaves the $1.5M cut in place); for Tier 2 and Tier 3 we pull the
-     total school-side restoration from `override_school_items.csv`. FY28
-     and FY29 numbers in that file are not reachable in a single-year tool,
-     so the Tier 2/Tier 3 buttons show FY27-year restoration only and the
-     spec notes this limitation in the methodology link.
+   - Context note beneath the input: "No override tier restores school
+     funding in FY27 (see `override_school_items.csv`). The $1.5M cut
+     happens at every tier this year; tier restorations begin in FY28.
+     Change this number to model cutting schools more or less than the
+     town proposed."
+   - The school cut number contributes to the running total as
+     `(user_school_cut - 0)` — i.e., whatever the user enters is the
+     savings the user is proposing, because the baseline (FY26 service
+     level) would have been $1.5M higher than the no-override FY27
+     budget. Default $1,500,000 matches the town's choice exactly.
+   - Preset buttons: "Match town ($1.5M)", "Cut more ($2.5M)", "Cut less
+     ($500K)", "Don't cut ($0)". These are editorial presets to show the
+     tradeoff space; user can type any value.
 
-6. **Road paving (hot top) scalar input.** Label: "Road paving cut
-   (current year)". Default value: 0. Town-proposed cut is $60,000. Presented
-   inside Public Works section, not as a separate panel.
+6. (Intentionally removed.) Earlier drafts included a road paving
+   scalar. Dropped: the town's no-override budget cuts paving by exactly
+   $60,000 at every tier, represented by the "Restore Department of
+   Public Works Hot Top Cuts" checkbox. No scalar needed; it is a
+   regular discrete item.
 
 7. **Consequences panel.** Right-hand sidebar on desktop
    (`position: sticky`). Collapsible accordion below the checklist on mobile.
