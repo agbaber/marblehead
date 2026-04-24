@@ -178,7 +178,8 @@ scripts: [citations]
 
   /* Table */
   .table-wrap {
-    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    overflow: auto; -webkit-overflow-scrolling: touch;
+    max-height: calc(100vh - 80px);
     border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
     background: var(--surface);
   }
@@ -338,6 +339,7 @@ scripts: [citations]
   </div>
   <div class="filter-actions">
     <button type="button" class="reset-btn" id="reset-filters">Reset to defaults</button>
+    <button type="button" class="reset-btn" id="show-all">Show all 351</button>
     <span class="filter-count" id="filter-count"></span>
   </div>
   <div class="tier-bar">
@@ -409,7 +411,7 @@ scripts: [citations]
   <summary>Sources and methodology</summary>
   <p><strong>Sources.</strong> Population, <abbr class="g" title="Department of Revenue">DOR</abbr> Income, and <abbr class="g" title="Equalized Valuation">EQV</abbr>: <a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=dor_income_eqv_per_capita">MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr>, DOR Income and EQV Per Capita FY2027</a> (pulled April 15, 2026). Tax levies, rates, new growth, and levy capacity: <a href="https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=Community_Comparison_Report">MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> Community Comparison Report FY2026</a>. Average single-family tax bill: <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> FY2026.</p>
   <p><strong>Data files.</strong> Comprehensive CSV: <a href="../data/dor_all_351_FY26.csv">dor_all_351_FY26.csv</a>.</p>
-  <p><strong>Default filters.</strong> Population 5,000 to 100,000 excludes hamlets and large cities. <abbr class="g" title="Equalized Valuation">EQV</abbr>/capita capped at $1,000,000 excludes island and resort communities where seasonal property inflates per-capita valuations.</p>
+  <p><strong>Default filters.</strong> Population 5,000 to 100,000 excludes hamlets and large cities (Boston, Worcester, Springfield, Lowell, Cambridge). <abbr class="g" title="Equalized Valuation">EQV</abbr>/capita capped at $1,000,000 excludes island and resort communities where seasonal property inflates per-capita valuations. Use <em>Show all 351</em> to clear both caps.</p>
   <p><strong>Column definitions.</strong> <em>Income/Cap</em>: <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income, used in Cherry Sheet aid formulas. <em>Bill/Inc</em>: average single-family tax bill divided by <abbr class="g" title="Department of Revenue">DOR</abbr> per-capita income. <em>Tax Rate</em>: residential property tax rate per $1,000 of assessed value. <em>Res %</em>: share of total property tax levy paid by residential property owners. <em>Levy/Cap</em>: total property tax levy divided by population. <em>New Growth</em>: revenue from new construction as a percentage of total levy, outside Proposition 2&frac12;'s 2.5% cap. <em>People/sq mi</em>: population divided by land area (Census TIGER 2020). <em>Levy/sq mi</em>: total property tax collected divided by land area.</p>
   <p><strong>What is <abbr class="g" title="Equalized Valuation">EQV</abbr>?</strong> The <abbr class="g" title="Department of Revenue">DOR</abbr>'s estimate of the full market value of all taxable property in a municipality, adjusted to a uniform standard across the state for apples-to-apples comparison.</p>
   <p><strong>Presets.</strong> Each preset button sets the filter ranges to values centered on Marblehead. "Similar overall" narrows population, income, property wealth, homeowner share, and new construction simultaneously. "Similar structure" focuses on homeowner share (90%+) and new construction (under 1%). The filters are always visible, so you can see exactly what ranges are active and adjust them. No hardcoded town lists.</p>
@@ -751,6 +753,9 @@ scripts: [citations]
   });
 
   resetBtn.addEventListener('click', function () { activeCohort = ''; activeTier = 0; applyPreset(DEFAULTS); render(); updateCohortBtns(); updateUrl(); });
+  var showAllBtn = document.getElementById('show-all');
+  var SHOW_ALL = { popMin: '', popMax: '', incMin: '', incMax: '', eqvMin: '', eqvMax: '', billMin: '', billMax: '', bpiMin: '', bpiMax: '', rpctMin: '', rpctMax: '', ngMin: '', ngMax: '' };
+  showAllBtn.addEventListener('click', function () { activeCohort = ''; activeTier = 0; applyPreset(SHOW_ALL); render(); updateCohortBtns(); updateUrl(); });
   function applyPreset(p) { Object.keys(p).forEach(function (k) { setInput(inputs[k], p[k]); }); }
 
   // Cohort preset buttons: set filters, not hardcoded lists
