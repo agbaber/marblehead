@@ -2245,13 +2245,20 @@
   fetchAllCounts(topicOrder);
   updateStatsStrip();
 
-  // ── Mini override calculator (injected into every question screen) ──
+  // ── Mini override calculator (only on questions where cost context helps) ──
   (function miniCalc() {
     var AVG = 1291507;
     var KEY = 'mh_override_calc_assessed_value';
-    // Year-1 cost per tier at average assessed value (from April 8 presentation)
     var R = { 1: 168, 2: 362, 3: 556 };
     var LABELS = { 1: '$9M', 2: '$12M', 3: '$15M' };
+
+    // Only inject on questions where override cost is relevant context
+    var OVERRIDE_TOPICS = ['override', 'mycost', 'size', 'levy', 'taxrank', 'again', 'voteno'];
+    // Trash and seniors get a contextual link instead (they have their own calculators)
+    var LINK_ONLY = {
+      trash:   { href: 'question-2-trash.html#cost-by-home-value', text: 'Trash levy vs. fee calculator' },
+      seniors: { href: 'senior-tax-relief.html',                   text: 'Senior relief calculator' }
+    };
 
     function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
     function parse(raw) {
@@ -2267,6 +2274,22 @@
     var calcs = [];
 
     document.querySelectorAll('.question-screen').forEach(function (screen) {
+      var topic = screen.getAttribute('data-topic');
+
+      // Link-only topics: just add a contextual chart link
+      if (LINK_ONLY[topic]) {
+        var link = document.createElement('a');
+        link.className = 'evidence-chart-link';
+        link.href = LINK_ONLY[topic].href;
+        link.textContent = LINK_ONLY[topic].text;
+        link.style.marginTop = '18px';
+        screen.appendChild(link);
+        return;
+      }
+
+      // Skip topics where a calculator is irrelevant
+      if (OVERRIDE_TOPICS.indexOf(topic) === -1) return;
+
       var el = document.createElement('div');
       el.className = 'mini-calc';
       el.innerHTML =
@@ -2284,7 +2307,6 @@
         '</div>' +
         '<a class="mini-calc-link" href="charts/override_calculator.html">Full calculator with phase-in and income context &rarr;</a>';
 
-      // Insert before the last </section> child (after all evidence blocks)
       screen.appendChild(el);
       calcs.push(el);
     });
@@ -2300,7 +2322,6 @@
       });
     }
 
-    // Sync all inputs
     var inputs = calcs.map(function (el) { return el.querySelector('input'); });
     var stored = load();
     var initial = stored || AVG;
@@ -2310,7 +2331,6 @@
       inp.addEventListener('input', function () {
         var v = parse(inp.value);
         save(v);
-        // Sync other inputs
         inputs.forEach(function (other) {
           if (other !== inp) other.value = '$' + Math.round(v).toLocaleString('en-US');
         });
