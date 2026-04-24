@@ -1144,6 +1144,13 @@
   .counter-argument-teaser {
     display: none;
   }
+  /* Override native <details> hiding so the preview fade works.
+     Without [open], browsers hide non-<summary> children via
+     content-visibility or display:none on the internal slot. */
+  .counter-argument:not([open]) > .counter-argument-body {
+    display: block !important;
+    content-visibility: visible !important;
+  }
   /* Preview: show body text with a fade when collapsed */
   .counter-argument-body {
     padding: 10px 0 0 30px;
