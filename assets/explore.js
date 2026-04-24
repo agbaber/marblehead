@@ -2245,7 +2245,7 @@
 
   var ballotWidget = document.getElementById('ballotWidget');
   var ballotNudge = document.getElementById('ballotNudge');
-  var ballotLockMsg = document.getElementById('ballotLockMsg');
+  var ballotLockMsg = document.getElementById('ballotLockText');
   var ballotSubmitBtn = document.getElementById('ballotSubmit');
   var ballotVotes = {};
   var ballotSubmitted = false;
@@ -2273,12 +2273,7 @@
     ballotWidget.classList.toggle('locked', !answered);
 
     if (ballotLockMsg) {
-      var remaining = topicOrder.filter(function (t) { return !selections[t]; }).length;
-      if (answered) {
-        ballotLockMsg.textContent = 'Unlocked';
-      } else {
-        ballotLockMsg.textContent = remaining + ' question' + (remaining === 1 ? '' : 's') + ' to go';
-      }
+      ballotLockMsg.textContent = answered ? '' : 'Answer all questions to unlock';
     }
   }
 
