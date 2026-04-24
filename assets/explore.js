@@ -2253,7 +2253,7 @@
     var LABELS = { 1: '$9M', 2: '$12M', 3: '$15M' };
 
     // Only inject on questions where override cost is relevant context
-    var OVERRIDE_TOPICS = ['override', 'mycost', 'size', 'levy', 'taxrank', 'again', 'voteno'];
+    var OVERRIDE_TOPICS = ['override', 'mycost', 'size', 'levy', 'taxrank', 'voteno'];
     // Trash and seniors get a contextual link instead (they have their own calculators)
     var LINK_ONLY = {
       trash:   { href: 'question-2-trash.html#cost-by-home-value', text: 'Trash levy vs. fee calculator' },
