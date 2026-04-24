@@ -60,6 +60,14 @@ Goal: resolve the "to verify during implementation" items from the spec before w
 
 The spec flags this as the highest-risk accuracy question. If Community Development didn't exist as a 4-person department in FY18, the "Community Development 4 → 1" row is misleading and must be reframed or removed.
 
+**Verification outcome (2026-04-24): row removed.** Evidence:
+- `data/savings_measures_compiled.md` line 96 lists "Community Development & Planning Department (created FY26)" under Section 4 "New Capacity (Investments in Efficiency)," with FY26 budget $494,402 (salaries $456,696 + expense $37,706). The compiled record treats this as net new capacity, not a continuation of an FY18 department.
+- `data/2026-04-15_Override_Presentation_FINAL.txt` line 154 explicitly states the department "Lost 2 employees (planner & sustainability) FY26" relative to its FY26 staffing of four.
+- `data/select_board_2026-04-08_transcript.txt` describes the FY27 cuts (Director, Grant Coordinator, Sustainability/Conservation Agent) within the context of a department that previously had 4 staff in FY26.
+- No primary source in this worktree documents an FY18 four-person planning office.
+
+The trajectory over FY18-FY27 is 0 to 4 (FY26) to 1 (FY27), a net *gain* of 1 position relative to FY18. Showing "4 to 1" in a "positions lost" chart misrepresented the history. The spec, chart structure, and Task 7 HTML snippets have been updated to remove the row. The FY26-FY27 reduction will be surfaced in the caption block as a separate fact.
+
 **Files:**
 - Read: `data/savings_measures_compiled.md`
 - Read: FinCom Annual Reports in `data/` directory (PDFs), if available
@@ -120,6 +128,8 @@ git commit -m "Plan: confirm Community Development FY18 baseline stands"
 - Read: FinCom Annual Reports in `data/` (if present)
 - Update (if found): spec and this plan
 
+**Verification outcome (2026-04-24): no change, "~31" stands.** No FinCom Annual Report PDFs are present in `data/` in this worktree. The closest primary-source signal is `data/fte_employees_FY15-24.csv`, which shows the ACFR functional category Public_Works at 36.51 FTE in FY18 declining to 31.0 FTE in FY24. That is consistent with the "30+ workers down to 19" testimony but is not a department-line headcount. Spec retains "~31" with the existing footnote disclosing the approximation.
+
 - [ ] **Step 1: Search data directory for FY18 FinCom report and DPW line item**
 
 ```bash
@@ -145,6 +155,8 @@ If no update, proceed to next task without commit.
 **Files:**
 - Read: FinCom Annual Reports in `data/`
 - Update (if found): spec
+
+**Verification outcome (2026-04-24): no change, Fire stays a callout.** Both `data/select_board_2026-04-08_transcript.txt` and `data/2026-04-15_Override_Presentation_FINAL.txt` describe Fire as "currently down 1 full shift" without any FY18 baseline headcount. Override-tier descriptions add 2 firefighters in tier 2 and 4 firefighters in tier 3 to "combat overtime" but do not state how many FTEs the department had in FY18. No basis for an integer FY18-to-FY27 delta.
 
 - [ ] **Step 1: Search for Fire Department authorized strength**
 
@@ -366,25 +378,26 @@ git commit -m "charts/positions-lost: Engineering row (template for subsequent r
 
 ---
 
-### Task 7: Add DPW, Community Development, and Police rows
+### Task 7: Add DPW and Police rows
 
-These three rows use the same pattern as Engineering. Dot counts:
+These two rows use the same pattern as Engineering. Dot counts:
 - DPW: 19 filled + 12 empty = 31 total dots (FY18 ~31, FY27 19). Note: starting count is an approximation per spec.
-- Community Development: 1 filled + 3 empty = 4 total. (If Task 1 resolved to remove/reframe this row, adapt accordingly.)
 - Police (sworn): 30 filled + 2 empty = 32 total.
 
+(Community Development row was removed during spec verification on 2026-04-24; see Task 1 verification outcome.)
+
 **Files:**
-- Modify: `charts/positions-lost.html` (add three rows inside `.pl-chart-wrapper`, ordered by absolute loss descending after Engineering)
+- Modify: `charts/positions-lost.html` (add rows inside `.pl-chart-wrapper`, ordered by absolute loss descending after Engineering)
 
-**Row order within the chart (by absolute FTEs lost, descending):** DPW (~12), Community Development (3), Police (2), Engineering (2).
+**Row order within the chart (by absolute FTEs lost, descending):** DPW (~12), Police (2), Engineering (2).
 
-So the final row order in HTML is: DPW, Community Development, Police, Engineering, Fire (callout, next task), All other, Town total.
+So the final row order in HTML is: DPW, Police, Engineering, Fire (callout, next task), All other, Town total.
 
 Restructure accordingly: remove the Engineering row from its current position (inserted first in Task 6) and insert DPW-first.
 
-- [ ] **Step 1: Restructure so DPW is first, Community Development second, Police third, Engineering fourth**
+- [ ] **Step 1: Restructure so DPW is first, Police second, Engineering third**
 
-Inside the `.pl-chart-wrapper` div, replace the single Engineering row with these four rows in order. Complete HTML:
+Inside the `.pl-chart-wrapper` div, replace the single Engineering row with these three rows in order. Complete HTML:
 
 ```html
   <div class="pl-row">
@@ -396,18 +409,6 @@ Inside the `.pl-chart-wrapper` div, replace the single Engineering row with thes
         <span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span>
       </div>
       <p class="pl-row-note">Lost over multiple years: heavy equipment operator, working foreman, general laborer.<sup class="cite" data-href="https://www.marbleheadindependent.com/select-board-confronts-the-limits-of-marbleheads-tax-cap/" data-source="Marblehead Independent: Noonan on DPW staffing reduction from 30+ to 19"></sup></p>
-    </div>
-  </div>
-
-  <div class="pl-row">
-    <div class="pl-row-label">Community Development
-      <span class="pl-row-delta">FY18 4 &rarr; FY27 1</span>
-    </div>
-    <div class="pl-row-content">
-      <div class="pl-dots">
-        <span class="pl-dot pl-dot-filled"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span><span class="pl-dot pl-dot-empty"></span>
-      </div>
-      <p class="pl-row-note">Director role eliminated in FY27 budget; reduced from a four-person office to one vacant planner plus a clerk.<sup class="cite" data-href="https://www.marbleheadindependent.com/cuts-across-departments-shape-select-boards-56-6m-budget/" data-source="Marblehead Independent: Community Development cuts in FY27 Select Board budget"></sup></p>
     </div>
   </div>
 
@@ -445,7 +446,7 @@ awk '/pl-row-label">DPW/,/<\/div>\s*<\/div>/' charts/positions-lost.html | grep 
 # Expected: 12
 ```
 
-Repeat for Police (30 filled, 2 empty), Community Development (1 filled, 3 empty), Engineering (0 filled, 2 empty). If any count is off, fix the HTML.
+Repeat for Police (30 filled, 2 empty), Engineering (0 filled, 2 empty). If any count is off, fix the HTML.
 
 - [ ] **Step 3: STYLE_GUIDE scan**
 
@@ -459,7 +460,7 @@ Expected: empty.
 
 ```bash
 git add charts/positions-lost.html
-git commit -m "charts/positions-lost: DPW, Community Development, Police, Engineering rows"
+git commit -m "charts/positions-lost: DPW, Police, Engineering rows"
 ```
 
 ---
@@ -495,7 +496,11 @@ git commit -m "charts/positions-lost: Fire callout row"
 
 All-other is a derived residual. Town total anchors the chart. Both use the same dot pattern but at larger volumes. For readability on mobile, use per-row dot size overrides or accept that these rows will wrap to multiple visual lines.
 
-For the "All other" row, dots (~130 filled, 0 empty approximately) would be overwhelming. Use a compressed representation: one row of dots sized smaller, or a textual "~130 filled, ~0 eliminated" summary. Use the compressed dot approach for consistency: 130 small dots in a wrap is visually OK on desktop and acceptable on mobile.
+For the "All other" row, dot counts are:
+- FY18 residual: 199 total minus (~31 DPW + 32 Police + 2 Engineering) = ~134 filled
+- FY27 residual: 190 total minus (19 DPW + 30 Police + 0 Engineering) = ~139 filled
+
+Implied net change is +5 in unnamed departments, which is consistent with the documented FY24 hire of an HR director, the FY26 creation of Community Development & Planning, and the FY26 hire of a procurement director, partly offset by attrition elsewhere. Render as ~134 filled dots in a single row (no empty dots, since the net is positive). The +5 gain is acknowledged in the row caption rather than drawn as an extra group of filled dots, to keep the visual focus on the loss rows above.
 
 **Files:**
 - Modify: `charts/positions-lost.html` (append after Fire row)
@@ -507,25 +512,24 @@ Since 130 dots would be tedious to hand-author, and the row communicates "many f
 ```html
   <div class="pl-row">
     <div class="pl-row-label">All other departments (est.)
-      <span class="pl-row-delta">FY18 ~130 &rarr; FY27 ~130</span>
+      <span class="pl-row-delta">FY18 ~134 &rarr; FY27 ~139</span>
     </div>
     <div class="pl-row-content">
       <div class="pl-dots" aria-hidden="true">
-        <!-- 130 filled dots, no eliminations. Rendered as a block for visual weight. -->
-        <!-- If you need a literal count, render 130 dots; otherwise a compact bar conveys "no change". -->
+        <!-- 134 filled dots, no eliminations drawn. Net +5 from named additions noted in caption. -->
       </div>
-      <p class="pl-row-note">All other municipal departments combined; net change approximately zero. Derived as the residual of 199 minus the named-department starting counts above. Not an audited per-department figure.</p>
+      <p class="pl-row-note">All other municipal departments combined. Derived as the residual of 199 (FY18) and 190 (FY27) minus the named-department counts above; implied net gain of about 5 positions, consistent with the FY24 HR director hire, the FY26 creation of Community Development &amp; Planning (4 new positions, of which 2 were lost the same year and 2 more in FY27), and the FY26 procurement director hire, partly offset by attrition elsewhere. Not an audited per-department figure.</p>
     </div>
   </div>
 ```
 
 Note on implementation: the comment `<!-- 130 filled dots -->` is a placeholder. The engineer has two options:
 
-**Option A (literal):** Generate 130 `<span class="pl-dot pl-dot-filled"></span>` elements. Bash one-liner:
+**Option A (literal):** Generate 134 `<span class="pl-dot pl-dot-filled"></span>` elements. Bash one-liner:
 
 ```bash
 # Preview the string first, then paste it into the HTML between the pl-dots div tags.
-printf '<span class="pl-dot pl-dot-filled"></span>%.0s' {1..130}
+printf '<span class="pl-dot pl-dot-filled"></span>%.0s' {1..134}
 echo
 ```
 
@@ -535,19 +539,18 @@ echo
 <div class="pl-dots-summary" style="height: 12px; background: var(--text); width: 100%; opacity: 0.8;" aria-hidden="true"></div>
 ```
 
-**Decision:** Use Option A (literal 130 dots) for visual consistency with the other rows. The "1 dot = 1 position" invariant is preserved. If the rendered result looks overwhelming on the preview (Task 13), revisit and switch to Option B, but only if a reviewer agrees.
+**Decision:** Use Option A (literal 134 dots) for visual consistency with the other rows. The "1 dot = 1 position" invariant is preserved. If the rendered result looks overwhelming on the preview (Task 13), revisit and switch to Option B, but only if a reviewer agrees.
 
 Important: Option B uses `style="..."` which the STYLE_GUIDE bans. If Option B is chosen, move the styling into the scoped CSS block added in Task 5.
 
-- [ ] **Step 2: Generate and insert the 130 filled dots**
+- [ ] **Step 2: Generate and insert the 134 filled dots**
 
 ```bash
-printf '<span class="pl-dot pl-dot-filled"></span>%.0s' {1..130} > /tmp/all_other_dots.txt
+printf '<span class="pl-dot pl-dot-filled"></span>%.0s' {1..134} > /tmp/all_other_dots.txt
 # Then copy the contents of /tmp/all_other_dots.txt into the HTML at the placeholder location.
 # Or use sed:
-sed -i '' '/<!-- 130 filled dots/r /tmp/all_other_dots.txt' charts/positions-lost.html
-sed -i '' '/<!-- 130 filled dots/d' charts/positions-lost.html
-sed -i '' '/<!-- If you need/d' charts/positions-lost.html
+sed -i '' '/<!-- 134 filled dots/r /tmp/all_other_dots.txt' charts/positions-lost.html
+sed -i '' '/<!-- 134 filled dots/d' charts/positions-lost.html
 ```
 
 After running, visually verify the file: open `charts/positions-lost.html` and check that the "All other" row has the 130 filled dots inline (no visible comment placeholders remaining).
@@ -587,9 +590,9 @@ sed -i '' '/<!-- 190 filled + 9 empty/d' charts/positions-lost.html
 
 ```bash
 grep -o "pl-dot-filled" charts/positions-lost.html | wc -l
-# Expected: 19 (DPW) + 1 (CD) + 30 (Police) + 0 (Engr) + 130 (All other) + 190 (Total) = 370
+# Expected: 19 (DPW) + 30 (Police) + 0 (Engr) + 134 (All other) + 190 (Total) = 373
 grep -o "pl-dot-empty" charts/positions-lost.html | wc -l
-# Expected: 12 (DPW) + 3 (CD) + 2 (Police) + 2 (Engr) + 0 (All other) + 9 (Total) = 28
+# Expected: 12 (DPW) + 2 (Police) + 2 (Engr) + 0 (All other) + 9 (Total) = 25
 ```
 
 If either total is off, hunt down the discrepancy. Off-by-one errors in the big rows are likely.
@@ -627,8 +630,8 @@ git commit -m "charts/positions-lost: all-other and town-total rows"
 <div class="notes">
   <p><strong>About the school side.</strong> The school workforce also declined over the same period. DESE data shows Marblehead teacher FTE fell from 261.0 in FY18 to 224.8 in FY26, a drop of 36 teachers. But K-12 enrollment also fell by a comparable percentage (from 3,096 in FY18 to roughly 2,500 in FY26). Students-per-teacher was essentially unchanged. This chart does not show the school side because the staffing story there is different in kind: positions declined roughly in proportion to enrollment, rather than while the population served stayed constant. For the school staffing and enrollment picture, see <a href="enrollment_vs_staffing.html">School enrollment vs. staffing over time</a>.</p>
   <p><strong>On the DPW starting count.</strong> The FY18 DPW headcount is quoted as "30+ workers" by Select Board member Erin Noonan in late-2025 testimony. The chart uses ~31 as a plausible round figure but the exact FY18 audited headcount was not located in the primary sources available at publication. If a precise figure surfaces, the row will be updated.</p>
-  <p><strong>On "all other departments."</strong> The ~130 starting figure is derived as the residual: 199 total minus the named-department starting counts. It is not an audited per-department figure.</p>
-  <p><strong>On Community Development.</strong> Community Development as a distinct, separately budgeted department was created in FY26. The "4 &rarr; 1" figures refer to the staff count within that department at its creation (FY26) versus after the FY27 cuts. Some of those four staff previously worked in other units (Planning Board support, conservation, etc.). The chart shows a net reduction in dedicated planning/community-development FTE over the FY18-FY27 window.</p>
+  <p><strong>On "all other departments."</strong> The ~134 (FY18) and ~139 (FY27) figures are derived as the residual: town total minus the named-department counts. The implied net gain of about 5 in unnamed departments is consistent with the documented hiring of an HR director in FY24, the FY26 creation of a four-person Community Development &amp; Planning department, and the FY26 procurement director hire, partly offset by attrition elsewhere. Not an audited per-department figure.</p>
+  <p><strong>On Community Development &amp; Planning.</strong> This department is intentionally not drawn as its own row. It was created in FY26 with four staff (Director, Sustainability Coordinator, Grant Coordinator, Assistant Planner). The April 2026 override presentation states that two of those four positions were lost in FY26 itself, and the FY27 budget eliminates the Director and Grant Coordinator. The trajectory over the FY18-FY27 window is therefore 0 to 4 (FY26) to 1 (FY27), a net gain of one position relative to FY18. Showing it as "4 to 1" inside a "positions lost" chart would have misrepresented that history. The FY26-FY27 reduction is real, and the staff effectively rolled into and out of the department line within a two-year span.</p>
 </div>
 
 <p class="source"><strong>Sources.</strong> Town total ("199 to approximately 190") from Town Administrator Thatcher Kezer, March 2026 budget hearings, as reported by <a href="https://www.marbleheadindependent.com/marblehead-advances-122-8m-budget-built-on-cuts-defers-override-decisions/">Marblehead Independent</a>. DPW and Police reductions from Select Board member Erin Noonan, late 2025, as reported by <a href="https://www.marbleheadindependent.com/select-board-confronts-the-limits-of-marbleheads-tax-cap/">Marblehead Independent</a>. Engineering Department elimination from the <a href="data/2026_FinCom_Report.pdf">2026 FinCom Annual Report</a>, Table of Estimated Appropriations. Community Development and Fire testimony from <a href="https://www.marbleheadindependent.com/cuts-across-departments-shape-select-boards-56-6m-budget/">Marblehead Independent</a>, March 2026. Compiled in <a href="data/savings_measures_compiled.md">savings_measures_compiled.md</a>.</p>

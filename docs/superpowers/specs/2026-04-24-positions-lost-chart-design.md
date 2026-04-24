@@ -8,7 +8,7 @@
 
 Add a standalone chart visualizing the town-side positions Marblehead has lost between FY18 and FY27 while holding the tax levy roughly flat. The thesis: absent an override, the town has already been cutting services, specifically, municipal staff positions, just to keep the budget balanced. The existing `what-has-the-town-done.html` page documents these cuts in prose, tables, and bullets. It has no visualization. A reader skimming the page has no way to see the cuts at a glance.
 
-**Single claim the chart makes:** "Between FY18 and FY27, Marblehead's town government lost 9 positions net. The losses concentrated in four departments: DPW, Community Development, Police, and Engineering (eliminated entirely). Every outlined circle is a job that used to exist and doesn't anymore."
+**Single claim the chart makes:** "Between FY18 and FY27, Marblehead's town government lost 9 positions net. The named losses concentrated in three departments: DPW, Police, and Engineering (eliminated entirely). Every outlined circle is a job that used to exist and doesn't anymore."
 
 The chart is scoped to town-side only. School-side staffing is larger in absolute terms (~36 teachers lost FY18-FY26) but declined roughly in proportion to enrollment, which makes for a different story that can't be told cleanly in the same visual. The chart will link to the existing `charts/enrollment_vs_staffing.html` for the school-side picture.
 
@@ -31,12 +31,13 @@ Sorted by positions lost descending. Numbers drawn from FinCom reports, Select B
 | Department | FY18 | FY27 | Lost | Provenance |
 |---|---:|---:|---:|---|
 | DPW | ~31 | 19 | ~12 | Noonan quote: "30+ workers down to 19." Approximate starting count. |
-| Community Development | 4 | 1 | 3 | Director eliminated FY27; reduced to one vacant planner + clerk. Source: March 2026 budget hearing. |
 | Police (sworn) | 32 | 30 | 2 | Noonan, FY24-FY26. SRO pulled back to patrol; 1 FT officer defunded over five years of level-funding. |
 | Engineering Dept | 2 | 0 | 2 | FY26 FinCom Report, budget zeroed (-$210,559). Functions absorbed into DPW. |
 | Fire | n/a | n/a | "several" | Testimony only; not quantified. 1 vacancy unfilled >1 year, forcing 96-hour shifts. |
-| All other (est.) | ~130 | ~130 | ~0 | Derived: 199 town total minus named-department starting counts. |
+| All other (est.) | ~134 | ~139 | net +5 | Derived: 199 total minus named-department FY18 counts; 190 total minus named-department FY27 counts. |
 | **Town total** | **~199** | **~190** | **~9** | Kezer, March 2026 budget hearing. |
+
+Community Development & Planning is intentionally not on this chart. The department was created in FY26 with four staff (Director, Sustainability Coordinator, Grant Coordinator, Assistant Planner). The April 2026 override presentation explicitly notes the department "Lost 2 employees (planner & sustainability) FY26," and the FY27 budget further eliminates the Director and Grant Coordinator. The trajectory over the FY18-FY27 window is therefore 0 to 4 (FY26) to 1 (FY27), a *net gain* of one position relative to FY18. Treating it as "4 to 1" inside a "positions lost" chart misrepresents that history. The FY26-FY27 reduction is real and is documented in the chart's caption block, but the row is not drawn. Sources: 2026 FinCom Annual Report (Community Development & Planning created FY26, $494,402); April 8 2026 Select Board meeting transcript; April 15 2026 Override Presentation deck.
 
 ### Honesty calls baked into the design
 
@@ -44,7 +45,7 @@ Sorted by positions lost descending. Numbers drawn from FinCom reports, Select B
 
 2. **Fire Department is a callout, not dots.** The record says "several firefighter positions defunded" without a count. Drawing a specific number of outlined dots would invent precision. Fire gets a labeled note row (no dots) alongside the other rows.
 
-3. **"All other ~130 → ~130" is derived, not sourced.** It's the residual: 199 town total minus the named departments' starting counts. The chart should label this row explicitly as "all other departments (estimated)" to avoid implying audited precision.
+3. **"All other" is derived, not sourced.** It's the residual: town total minus the named departments' counts. FY18 residual is ~134 (199 minus ~31 DPW, 32 Police, 2 Engineering); FY27 residual is ~139 (190 minus 19 DPW, 30 Police, 0 Engineering). The implied net +5 in unnamed departments is consistent with the documented FY24 hire of an HR director, the FY26 creation of Community Development & Planning, and the FY26 hire of a procurement director, partially offset by attrition elsewhere. The chart should label this row explicitly as "all other departments (estimated)" to avoid implying audited precision.
 
 4. **The ~190 ending total is Kezer's phrase "approximately 190."** The chart will show ~190 in the total row, not 190 exact, to preserve the quoted approximation.
 
@@ -80,10 +81,6 @@ DPW                 31 → 19
   ●●●●●●●●●●●●●●●●●●● ○○○○○○○○○○○○
   Lost: heavy equipment operator, working foreman, general laborer
 
-Community Dev       4 → 1
-  ● ○○○
-  Director role eliminated FY27; reduced to one vacant planner + clerk
-
 Police (sworn)      32 → 30
   ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●● ○○
   SRO reassigned to patrol; one FT officer defunded over five years
@@ -96,9 +93,11 @@ Fire                (several defunded)
   Several positions defunded through level-funding; one vacancy unfilled
   over a year, forcing 96-hour shifts
 
-All other (est.)    ~130 → ~130
+All other (est.)    ~134 → ~139
   ●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●● ... (compressed row)
-  All other municipal departments combined; net change approximately zero
+  All other municipal departments combined; net +5 from named additions
+  (HR director FY24, Community Development & Planning FY26, procurement
+  director) partly offset by attrition elsewhere.
 
 ────────────────────────────────
 
@@ -182,10 +181,14 @@ Standard OG tags in frontmatter, matching the pattern of existing chart pages. `
 
 ### To verify during implementation
 
-1. **DPW FY18 exact headcount.** Search FinCom Annual Reports FY18-FY20 for a Table of Estimated Appropriations DPW line-item with position count. If found, update from "~31" to the audited figure.
+1. **DPW FY18 exact headcount.** Search FinCom Annual Reports FY18-FY20 for a Table of Estimated Appropriations DPW line-item with position count. If found, update from "~31" to the audited figure. *Verification status (2026-04-24):* primary FinCom PDFs not present in repo; ACFR functional category Public_Works was 36.51 (FY18) declining to 31 (FY24), consistent with but not equal to the "30+" testimony. Spec retains "~31" with the existing footnote.
 2. **Police "FY18" baseline.** The testimony says "reduced from 32 to 30 over two years" implying FY24-FY26 is the window, not FY18-FY27. Verify: was Police sworn headcount also 32 in FY18? If so, the chart is consistent. If FY18 was different, the chart window needs to be clarified in the caption or the Police row adjusted.
-3. **Fire count, if possible.** Search 2024-2026 FinCom Reports for Fire Department authorized strength; compare to FY18 to quantify "several" if feasible. If not, Fire stays as a callout.
-4. **"All other" residual.** The ~130 figure should be verified against a FinCom report with full department-level headcount. If the real residual differs materially, disclose.
+3. **Fire count, if possible.** Search 2024-2026 FinCom Reports for Fire Department authorized strength; compare to FY18 to quantify "several" if feasible. If not, Fire stays as a callout. *Verification status (2026-04-24):* April 8 2026 Select Board transcript and April 15 2026 Override Presentation both describe Fire as "down 1 full shift" without a per-FY headcount. Fire stays a callout.
+4. **"All other" residual.** The ~134 / ~139 figure should be verified against a FinCom report with full department-level headcount. If the real residual differs materially, disclose.
+
+### Resolved during spec verification
+
+5. **Community Development & Planning row removed (resolved 2026-04-24).** The department was created in FY26, not present in FY18. The April 15 2026 Override Presentation explicitly states the department "Lost 2 employees (planner & sustainability) FY26"; the FY27 cuts further eliminate Director and Grant Coordinator. The trajectory is 0 to 4 to 1 over FY18-FY27, a *net gain* of 1 position. Showing "4 to 1" in a "positions lost" chart was a misread of the source. Row removed from chart; FY26-FY27 reduction documented in caption block.
 
 ### Deferred to future iterations
 
@@ -197,7 +200,7 @@ Standard OG tags in frontmatter, matching the pattern of existing chart pages. `
 
 - "The town employee total was 199 in 2018 and 190 in 2026 but the starting date is selective, what about 2015 or 2010?" Fair pushback. Mitigation: caption explicitly states FY18 baseline is from Kezer's March 2026 public statement, not chosen by the site. If an earlier baseline becomes available and tells a different story, we revisit.
 - "Engineering Dept functions were absorbed by DPW, not eliminated." The chart should make this clear, the row sentence already says "absorbed into DPW." The positions are nonetheless gone (budget zeroed); this is disclosed, not hidden.
-- "Community Development was a new department (created FY26), you can't count the FY27 reduction as a cut if the dept didn't exist before." Verify the FY18 baseline: was there a planning office with 4 staff in FY18, or did those 4 positions arrive with the FY26 department creation? If the latter, the row needs reframing or removal. This is the single highest-risk accuracy question in the chart.
+- "Community Development was a new department (created FY26), you can't count the FY27 reduction as a cut if the dept didn't exist before." Resolved during spec verification: the row is not on the chart. The FY26-FY27 reduction is documented in the caption block as a separate fact, with the trajectory shown honestly (0 to 4 to 1 over FY18-FY27, net +1).
 
 ## Acceptance criteria
 
@@ -209,4 +212,4 @@ The chart is ready to ship when:
 4. The chart works without JavaScript.
 5. The parent page (`what-has-the-town-done.html`) has a link to the chart in the `#staffing` section.
 6. The school-side pointer paragraph and link to `charts/enrollment_vs_staffing.html` is present under the chart.
-7. The Community Development FY18 baseline question (from "Potential pushback") is resolved one way or the other: either the row stays with confirmed FY18 headcount, or it is reframed/removed.
+7. The Community Development FY18 baseline question (from "Potential pushback") is resolved: the row is removed and the FY26-FY27 reduction is disclosed in the caption block as a separate fact (resolved during spec verification, 2026-04-24).
