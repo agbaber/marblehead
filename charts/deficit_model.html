@@ -633,7 +633,8 @@ title: "Deficit Dynamics Model"
 </style>
 
 <h1 class="h-center">Deficit Dynamics: The Lines Already Crossed</h1>
-<p class="subtitle h-center">The left side is Marblehead&rsquo;s actual general fund history from <abbr class="g" title="Annual Comprehensive Financial Reports">ACFRs</abbr>. The right side projects forward at the growth rates you choose. The gap between the lines is what free cash and reserves have been covering since FY18.</p>
+<p class="subtitle h-center">Marblehead has spent more than it collected every year since FY18. Free cash covered the gap, peaking at $10.2M in FY23 before <abbr class="g" title="Finance Committee">FinCom</abbr> flagged the draw as unsustainable.</p>
+<p class="dm-hint" style="text-align: center; margin: -4px 0 12px;">Left side: actual <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> data. Right side: projections at the growth rates you choose. Drag the sliders or pick a scenario to see what closes the gap and for how long.</p>
 
 <div class="dm-walkthrough-row">
   <button type="button" class="dm-walkthrough-btn" id="dm-walkthrough-start">
@@ -845,7 +846,7 @@ title: "Deficit Dynamics Model"
   <div class="dm-control" style="grid-column: 1 / -1;">
     <span class="dm-control-label">FY27 one-time step ($M): <span class="dm-value" id="dm-fy27-step-val">$0.0M</span></span>
     <input type="number" id="dm-fy27-step" min="-5" max="5" step="0.1" value="0" class="dm-fy27-step-input">
-    <div class="dm-hint" id="dm-fy27-step-hint">A one-time shock added to projected FY27 expenses, not propagated into FY28+. Observed FY27 healthcare cliff: about +$1.1M (the &ldquo;One-time healthcare spike&rdquo; scenario below uses this). Default 0 means the compound rate captures everything. Negative values model a one-time underrun.</div>
+    <div class="dm-hint" id="dm-fy27-step-hint">Adds a one-time cost (or savings) to FY27 only. Example: <abbr class="g" title="Group Insurance Commission">GIC</abbr> premiums jumped about $1.1M in FY27. Set to 0 if the annual growth rate already accounts for it.</div>
   </div>
 </div>
 </details>
@@ -863,12 +864,8 @@ An override on its own buys time. It does not change the slope of either line.
 </div>
 
 <div class="dm-prose-section">
-<h2>What this shows</h2>
-<p>The two lines crossed in FY18. Since then, Marblehead's general fund expenditures have exceeded its budgetary revenues every year. The gap has been bridged by drawing down free cash, which peaked at $10.2M in FY23 before the <abbr class="g" title="Finance Committee">FinCom</abbr> flagged the reliance as unsustainable.</p>
-
-<p>The right side of the chart projects both lines forward from the FY24 actuals. The sliders control the annual growth rates. At the historical averages (revenue 3.7%, expenses 4.0%), the gap widens steadily. An override shifts the revenue line up over three years (FY27 to FY29).</p>
-
-<p>The &ldquo;how fast does override money get spent?&rdquo; slider controls how quickly new revenue gets allocated to deferred needs. At 5 years (the default), spending ramps up gradually as positions are filled, programs restored, and deferred maintenance addressed. The gap shrinks when the override hits, then slowly reopens as spending catches up to the new revenue ceiling. At 1, all of it is committed in year one (the skeptic&rsquo;s view). At 10, it stretches over a decade. As long as the revenue line (capped by <abbr class="g" title="Proposition 2&frac12;, the Massachusetts law limiting annual property tax levy increases to 2.5% plus new growth">Prop 2&frac12;</abbr>) grows slower than the expense line (driven by health insurance, pensions, and contractual wages), the gap eventually reopens regardless.</p>
+<h2>Key takeaway</h2>
+<p>As long as expenses (driven by health insurance, pensions, and contractual wages) grow faster than revenue (capped by <abbr class="g" title="Proposition 2&frac12;, the Massachusetts law limiting annual property tax levy increases to 2.5% plus new growth">Prop 2&frac12;</abbr>), the gap reopens after any override. The question is not whether it closes, but how long the breathing room lasts and what the town does with it.</p>
 
 <details class="notes">
   <summary>Notes and methodology</summary>
