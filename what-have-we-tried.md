@@ -216,3 +216,5 @@ The limited volume in these topics may reflect that attempts in these areas were
 ## Closing
 
 The catalog describes a wide range of attempts across multiple years and policy areas, with substantial concentration in structural deficit planning, capital facilities, staffing, special education, and overrides. For a companion view focused on deliberative posture and follow-through rather than topical inventory, see the companion page "Is the board trying?". Readers may follow any catalog entry's anchor link above to review the underlying meeting record.
+
+<script src="/assets/catalog.js" defer></script>

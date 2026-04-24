@@ -73,3 +73,5 @@ Minutes vary in completeness. Some entries reflect votes without recorded delibe
 ## Closing
 
 Readers seeking the texture of specific attempts, including the proposals that were tabled, the motions that failed, and the warrant articles that were placeholders, should consult the linked entries directly. A companion page, "What have we tried?", organizes these attempts by topic and outcome and is the recommended next step for readers building a timeline or comparing proposals across years. The catalog is a starting point for public inquiry, not a conclusion about it.
+
+<script src="/assets/catalog.js" defer></script>
