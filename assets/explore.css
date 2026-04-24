@@ -533,114 +533,70 @@
   }
   .explore-shared-fresh:hover { text-decoration: underline; }
 
-  /* ── Ballot widget (locked until all questions answered) ── */
+  /* ── Ballot widget (compact row inside stats strip) ── */
   .ballot-widget {
-    margin-top: 24px;
-    padding: 20px;
-    background: var(--surface);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius-md);
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s ease;
+    display: none;
+    border-top: 1px solid var(--border);
+    padding: 8px 16px 10px;
   }
-  .ballot-widget.unlocked {
-    border-color: var(--c-teal);
+  .ballot-widget.visible { display: block; }
+  .ballot-widget-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
   }
   .ballot-widget-label {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text-subtle);
-    margin: 0 0 12px;
-    text-align: center;
   }
-  .ballot-widget-lock-overlay {
-    position: absolute;
-    inset: 0;
-    background: color-mix(in srgb, var(--surface) 80%, transparent);
-    backdrop-filter: blur(3px);
+  .ballot-widget-lock {
+    font-size: 10px;
+    color: var(--text-muted);
+  }
+  .ballot-widget-grid {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    z-index: 2;
     gap: 8px;
-    transition: opacity 0.3s ease;
   }
-  .ballot-widget.unlocked .ballot-widget-lock-overlay {
-    opacity: 0;
+  .ballot-widget.locked .ballot-widget-grid {
+    opacity: 0.35;
     pointer-events: none;
   }
-  .ballot-widget-lock-icon {
-    font-size: 24px;
-    opacity: 0.5;
-  }
-  .ballot-widget-lock-msg {
-    font-size: 13px;
-    color: var(--text-muted);
-    text-align: center;
-    line-height: 1.5;
-    max-width: 260px;
-  }
-  .ballot-widget-lock-msg strong {
-    color: var(--text);
-  }
-  .ballot-widget-rows {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .ballot-widget-row {
+  .ballot-widget-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
-    border-radius: 8px;
-    background: color-mix(in srgb, var(--border) 30%, transparent);
-    transition: background 0.15s ease;
-  }
-  .ballot-widget-row.has-vote {
-    background: color-mix(in srgb, var(--c-teal) 6%, var(--surface));
+    gap: 4px;
   }
   .ballot-widget-q {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     color: var(--text-subtle);
-    min-width: 28px;
-    flex-shrink: 0;
+    white-space: nowrap;
   }
-  .ballot-widget-desc {
-    flex: 1;
-    min-width: 0;
-  }
-  .ballot-widget-amount {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text);
-  }
-  .ballot-widget-tier {
-    font-size: 11px;
+  .ballot-widget-amt {
+    font-weight: 600;
     color: var(--text-muted);
-    display: block;
   }
   .ballot-widget-choices {
     display: flex;
-    gap: 4px;
-    flex-shrink: 0;
+    gap: 2px;
   }
   .ballot-widget-btn {
     font: inherit;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
-    padding: 6px 14px;
-    border-radius: 16px;
+    padding: 3px 8px;
+    border-radius: 10px;
     border: 1.5px solid var(--border);
     background: var(--surface);
     color: var(--text-muted);
     cursor: pointer;
-    transition: all 0.15s ease;
+    transition: all 0.12s ease;
+    line-height: 1;
   }
   .ballot-widget-btn:hover {
     border-color: var(--text-subtle);
@@ -655,50 +611,37 @@
     border-color: var(--c-brass);
     color: #fff;
   }
-  .ballot-widget-nudge {
-    margin: 10px 0 0;
-    padding: 10px 14px;
-    font-size: 12px;
-    line-height: 1.55;
-    color: var(--c-brass);
-    background: color-mix(in srgb, var(--c-brass) 8%, var(--surface));
-    border-left: 3px solid var(--c-brass);
-    border-radius: 0 8px 8px 0;
-    display: none;
-  }
-  .ballot-widget-nudge.visible {
-    display: block;
-  }
-  .ballot-widget-submit {
-    display: none;
-    margin: 14px auto 0;
+  .ballot-widget-go {
     font: inherit;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 700;
-    padding: 10px 28px;
-    border-radius: 20px;
+    padding: 4px 12px;
+    border-radius: 12px;
     border: none;
     background: var(--c-teal);
     color: #fff;
     cursor: pointer;
-    transition: all 0.15s ease;
-  }
-  .ballot-widget-submit:hover {
-    filter: brightness(1.1);
-  }
-  .ballot-widget.all-voted .ballot-widget-submit {
-    display: block;
-  }
-  .ballot-widget-submitted {
+    margin-left: auto;
+    transition: all 0.12s ease;
     display: none;
-    text-align: center;
-    font-size: 13px;
-    color: var(--c-teal);
-    font-weight: 600;
-    margin-top: 12px;
   }
-  .ballot-widget.submitted .ballot-widget-submit { display: none; }
-  .ballot-widget.submitted .ballot-widget-submitted { display: block; }
+  .ballot-widget-go:hover { filter: brightness(1.1); }
+  .ballot-widget.all-voted .ballot-widget-go { display: block; }
+  .ballot-widget.submitted .ballot-widget-go { display: none; }
+  .ballot-widget-nudge {
+    padding: 4px 0 0;
+    font-size: 10px;
+    line-height: 1.45;
+    color: var(--c-brass);
+    display: none;
+  }
+  .ballot-widget-nudge.visible { display: block; }
+  @media (max-width: 480px) {
+    .ballot-widget { padding: 6px 12px 8px; }
+    .ballot-widget-grid { flex-wrap: wrap; gap: 6px; }
+    .ballot-widget-item { gap: 3px; }
+    .ballot-widget-btn { padding: 3px 6px; font-size: 9px; }
+  }
 
   /* ── Cross-tab comparison bar (shown per question after ballot submitted) ── */
   .crosstab-bar {
@@ -758,11 +701,6 @@
   .ct-dot-b { background: var(--c-brass); }
   .ct-dot-c { background: var(--c-buoy); }
   .ct-dot-u { background: var(--text-faint); }
-  @media (max-width: 480px) {
-    .ballot-widget { padding: 14px; }
-    .ballot-widget-row { flex-wrap: wrap; gap: 6px; }
-    .ballot-widget-choices { width: 100%; justify-content: flex-end; }
-  }
 
   /* Hide landing once a topic is active */
   .explore-stage.has-topic .explore-landing { display: none; }

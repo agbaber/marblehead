@@ -2241,10 +2241,11 @@
     suppressURLWrite = false;
   });
 
-  // ── Ballot widget: lock/unlock, cascade nudge, submit, cross-tabs ──
+  // ── Ballot widget: compact row inside stats strip ──
 
   var ballotWidget = document.getElementById('ballotWidget');
   var ballotNudge = document.getElementById('ballotNudge');
+  var ballotLockMsg = document.getElementById('ballotLockMsg');
   var ballotSubmitBtn = document.getElementById('ballotSubmit');
   var ballotVotes = {}; // { q1a: 'yes'|'no', q1b: ..., q1c: ..., trash: ... }
   var ballotSubmitted = false;
@@ -2269,13 +2270,19 @@
 
   function updateBallotLock() {
     if (!ballotWidget) return;
-    if (allQuestionsAnswered()) {
-      ballotWidget.classList.add('unlocked');
-    } else {
-      ballotWidget.classList.remove('unlocked');
-      var remaining = topicOrder.filter(function (t) { return !selections[t]; }).length;
-      var msg = document.querySelector('#ballotLock .ballot-widget-lock-msg');
-      if (msg) msg.innerHTML = '<strong>' + remaining + ' question' + (remaining === 1 ? '' : 's') + ' left</strong> to unlock your practice ballot.';
+    var answered = allQuestionsAnswered();
+    // Show once user has at least 1 pick
+    var hasPicks = topicOrder.some(function (t) { return !!selections[t]; });
+    ballotWidget.classList.toggle('visible', hasPicks);
+    ballotWidget.classList.toggle('locked', !answered);
+
+    if (ballotLockMsg) {
+      if (answered) {
+        ballotLockMsg.textContent = '';
+      } else {
+        var remaining = topicOrder.filter(function (t) { return !selections[t]; }).length;
+        ballotLockMsg.textContent = remaining + ' to go';
+      }
     }
   }
 
@@ -2288,11 +2295,10 @@
     updateBallotLock();
 
     // Restore button states from ballotVotes
-    document.querySelectorAll('.ballot-widget-row').forEach(function (row) {
-      var key = row.dataset.ballot;
+    document.querySelectorAll('.ballot-widget-item').forEach(function (item) {
+      var key = item.dataset.ballot;
       var vote = ballotVotes[key];
-      row.classList.toggle('has-vote', !!vote);
-      row.querySelectorAll('.ballot-widget-btn').forEach(function (btn) {
+      item.querySelectorAll('.ballot-widget-btn').forEach(function (btn) {
         btn.classList.toggle('voted', btn.dataset.vote === vote);
       });
     });
@@ -2306,7 +2312,6 @@
   }
 
   function checkCascadeNudge() {
-    // Find gaps: voted Yes on a higher tier but No on a lower one
     var yes1a = ballotVotes.q1a === 'yes';
     var yes1b = ballotVotes.q1b === 'yes';
     var no1b = ballotVotes.q1b === 'no';
@@ -2314,9 +2319,9 @@
 
     var nudgeMsg = '';
     if (yes1a && (no1b || no1c)) {
-      nudgeMsg = 'You voted Yes on $15M but No on a lower tier. The highest passing tier wins. If $15M falls short, voting Yes on $12M and $9M keeps them as a fallback.';
+      nudgeMsg = 'Tip: Yes on $15M but No below? If $15M fails, lower tiers are your fallback.';
     } else if (yes1b && no1c) {
-      nudgeMsg = 'You voted Yes on $12M but No on $9M. If $12M doesn\'t pass, voting Yes on $9M keeps it as a fallback.';
+      nudgeMsg = 'Tip: Yes on $12M but No on $9M? $9M is your fallback if $12M fails.';
     }
 
     if (nudgeMsg) {
@@ -2333,14 +2338,13 @@
       if (ballotSubmitted) return;
       var btn = e.target.closest('.ballot-widget-btn');
       if (!btn) return;
-      var row = btn.closest('.ballot-widget-row');
-      if (!row) return;
-      if (!ballotWidget.classList.contains('unlocked')) return;
+      var item = btn.closest('.ballot-widget-item');
+      if (!item) return;
+      if (ballotWidget.classList.contains('locked')) return;
 
-      var key = row.dataset.ballot;
+      var key = item.dataset.ballot;
       var vote = btn.dataset.vote;
 
-      // Toggle: clicking the same vote again clears it
       if (ballotVotes[key] === vote) {
         delete ballotVotes[key];
       } else {
@@ -2363,19 +2367,15 @@
       localStorage.setItem('explore-ballot-submitted', '1');
       updateBallotUI();
 
-      // POST stance to server
       fetch(API_BASE + '/api/ballot-stance', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          q1a: ballotVotes.q1a,
-          q1b: ballotVotes.q1b,
-          q1c: ballotVotes.q1c,
-          trash: ballotVotes.trash
+          q1a: ballotVotes.q1a, q1b: ballotVotes.q1b,
+          q1c: ballotVotes.q1c, trash: ballotVotes.trash
         })
       }).catch(function () {});
 
-      // Fetch and show cross-tabs for all answered topics
       fetchAllCrosstabs();
 
       if (typeof posthog !== 'undefined') {
