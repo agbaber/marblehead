@@ -261,7 +261,7 @@
 
   /* ── Tools row on landing ── */
   .explore-tools {
-    margin-top: 20px;
+    margin: 20px 0;
     padding-top: 16px;
     border-top: 1px solid var(--divider);
   }
