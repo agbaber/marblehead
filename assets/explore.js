@@ -1576,15 +1576,19 @@
 
     // Scroll the tapped card to the top of the viewport so the user
     // sees their pick confirmed, with evidence visible below it.
-    // Only scroll if the card isn't already near the top.
-    var tappedCard = document.querySelector(
-      '.answer-card[data-question="' + question + '"][data-answer="' + answer + '"]'
-    );
-    if (tappedCard) {
+    // If the first-pick tutorial just appeared, scroll to that instead
+    // so the user actually sees it rather than it being off-screen above.
+    // Only scroll if the target isn't already near the top.
+    var scrollTarget = (tutorialEl && tutorialEl.classList.contains('visible'))
+      ? tutorialEl
+      : document.querySelector(
+          '.answer-card[data-question="' + question + '"][data-answer="' + answer + '"]'
+        );
+    if (scrollTarget) {
       setTimeout(function () {
-        var rect = tappedCard.getBoundingClientRect();
+        var rect = scrollTarget.getBoundingClientRect();
         if (rect.top < 0 || rect.top > window.innerHeight * 0.4) {
-          tappedCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 120);
     }
