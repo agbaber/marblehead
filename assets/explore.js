@@ -2249,7 +2249,9 @@
   (function miniCalc() {
     var AVG = 1291507;
     var KEY = 'mh_override_calc_assessed_value';
-    var R = { 1: 168, 2: 362, 3: 556 };
+    // Year-3 (full phase-in) annual cost at average assessed value.
+    // Source: Town Administrator presentation, April 8, 2026.
+    var R = { 1: 1188, 2: 1590, 3: 1989 };
     var LABELS = { 1: '$9M', 2: '$12M', 3: '$15M' };
 
     // Only inject on questions where override cost is relevant context
@@ -2294,7 +2296,7 @@
       el.className = 'mini-calc';
       el.innerHTML =
         '<div class="mini-calc-header">' +
-          '<span class="mini-calc-title">What this costs your household (Year 1)</span>' +
+          '<span class="mini-calc-title">What this costs your household</span>' +
           '<div class="mini-calc-input">' +
             '<label>Home value</label>' +
             '<input type="text" inputmode="numeric" autocomplete="off">' +
