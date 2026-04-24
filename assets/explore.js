@@ -1719,7 +1719,20 @@
     });
   });
 
-  /* ── Inject "This resonates" / "Not for me" action buttons ── */
+  /* ── Counter-argument preview-fade: open all <details> so the body
+       is rendered, but add .ca-collapsed to clip with a gradient.
+       Clicking the summary toggles the class instead of the native
+       open/close (which we suppress via preventDefault). ── */
+  document.querySelectorAll('.counter-argument').forEach(function (det) {
+    det.setAttribute('open', '');
+    det.classList.add('ca-collapsed');
+    det.querySelector('summary').addEventListener('click', function (e) {
+      e.preventDefault();
+      det.classList.toggle('ca-collapsed');
+    });
+  });
+
+  /* ── Inject "This resonates" / "Try another" action buttons ── */
   document.querySelectorAll('.evidence').forEach(function (panel) {
     var ev = panel.dataset.evidence; // e.g. "override-a"
     if (!ev) return;
@@ -1741,7 +1754,7 @@
       // Scroll back to the question so the reader can see the selected
       // state on the answer card, the Next question button, and (on a
       // first pick) the tutorial -- all of which live above the evidence
-      // panel and would otherwise be off-screen. Mirrors "Not for me".
+      // panel and would otherwise be off-screen. Mirrors "Try another".
       var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
       if (screen) {
         screen.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1751,9 +1764,9 @@
     var noBtn = document.createElement('button');
     noBtn.type = 'button';
     noBtn.className = 'evidence-action evidence-action--no';
-    noBtn.textContent = 'Not for me';
+    noBtn.textContent = 'Try another';
     noBtn.addEventListener('click', function () {
-      // If this answer is currently the user's pick, "Not for me" should
+      // If this answer is currently the user's pick, "Try another" should
       // also clear it, not just hide the evidence. Server tally is left
       // alone (matches the checkmark-to-unpick flow).
       if (selections[question] === answer) {

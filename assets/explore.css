@@ -1108,11 +1108,13 @@
     margin-top: 10px;
   }
 
-  /* ── Counter-argument (collapsed steelman of the opposing view) ── */
+  /* ── Counter-argument (steelman of the opposing view, preview-fade) ── */
   .counter-argument {
     margin-top: 22px;
-    padding-top: 16px;
-    border-top: 1px solid var(--divider);
+    padding: 14px 16px 16px;
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--text-subtle) 8%, var(--surface));
+    border-left: 3px solid var(--border);
   }
   .counter-argument > summary {
     list-style: none;
@@ -1121,7 +1123,7 @@
     align-items: center;
     gap: 10px;
     user-select: none;
-    padding: 2px 0;
+    padding: 0;
   }
   .counter-argument > summary::-webkit-details-marker { display: none; }
   .counter-argument > summary::marker { content: ''; }
@@ -1140,7 +1142,7 @@
     line-height: 1;
     flex-shrink: 0;
   }
-  .counter-argument[open] > summary::before {
+  .counter-argument:not(.ca-collapsed) > summary::before {
     content: "\2212";
   }
   .counter-argument-label {
@@ -1151,13 +1153,28 @@
     color: var(--text-subtle);
   }
   .counter-argument-teaser {
-    font-size: 13px;
-    color: var(--text-muted);
-    font-style: italic;
+    display: none;
   }
-  .counter-argument[open] .counter-argument-teaser { display: none; }
+  /* Preview-fade: JS adds [open] + .ca-collapsed on load so the body
+     is rendered by the browser but clipped with a gradient. Clicking
+     the summary toggles .ca-collapsed via JS. */
   .counter-argument-body {
-    padding: 12px 0 0 30px;
+    padding: 10px 0 0 30px;
+    position: relative;
+  }
+  .ca-collapsed .counter-argument-body {
+    max-height: 3.6em;
+    overflow: hidden;
+  }
+  .ca-collapsed .counter-argument-body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2.4em;
+    background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--text-subtle) 8%, var(--surface)));
+    pointer-events: none;
   }
   .counter-argument-body p {
     font-size: 14px;
@@ -1832,12 +1849,13 @@
     text-align: center;
   }
   .evidence-action--yes {
-    background: var(--c-teal);
-    color: #fff;
+    background: var(--surface);
+    color: var(--c-teal);
     border: 1.5px solid var(--c-teal);
   }
   .evidence-action--yes:hover {
-    filter: brightness(1.1);
+    background: var(--c-teal);
+    color: #fff;
   }
   .evidence-action--no {
     background: var(--surface);
