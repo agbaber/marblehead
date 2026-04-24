@@ -14,7 +14,7 @@ Markdown text only. NO preface, NO postface. Target length: 2500 to 4000 words.
 2. **Topic sections.** One per topic with 3 or more catalog entries. Each section:
    - Title (human-readable topic name, e.g. "Structural deficit and reserves").
    - 2 to 4 sentences of context for the topic.
-   - A list of notable attempts, oldest to newest. For each: date + body as `[body YYYY-MM-DD](#entry-{entry_id})`, attempt_type, one-sentence what_was_tried, outcome. Do not emit any importance marker or rating in the output; importance is used upstream for promotion only.
+   - A list of notable attempts, oldest to newest. For each: date + body as `[body YYYY-MM-DD](#entry-{entry_id})`, one-sentence what_was_tried, outcome. When attempt_type is `vote` or `warrant article`, wrap the type in a pill immediately after the link and omit the trailing comma, like `- [link] <span class="tag tag-action">Vote</span> Board voted...` or `- [link] <span class="tag tag-action">Warrant article</span> Board placed on the ballot...`. For all other attempt_types (`proposal`, `study`, `discussion`, `working_group`), keep the inline prose form: `- [link]: attempt_type, what was tried...`. Do not emit any importance marker or rating in the output; importance is used upstream for promotion only.
    - At least one verbatim evidence_quote in blockquote form per section.
    - 1 to 2 sentences summarizing the pattern of attempts (scope, frequency, outcomes). Describe; do not evaluate.
 3. **Low-coverage topics.** Single section listing topics with 0 to 2 entries (healthcare_gic, pensions_opeb, solid_waste, etc.). Note that absence may reflect either absence of attempts or the FinCom minutes gap.
