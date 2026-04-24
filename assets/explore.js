@@ -531,14 +531,27 @@
     var pct = totalCount > 0 ? Math.round((decidedCount / totalCount) * 100) : 0;
     document.getElementById('statBar').style.width = pct + '%';
 
-    // Progress message
+    // Progress message + next button
     var msgEl = document.getElementById('statMsg');
     if (decidedCount === 0) {
       msgEl.textContent = 'Pick your first answer';
       msgEl.className = 'explore-stats-msg';
     } else if (decidedCount < totalCount) {
-      msgEl.textContent = (totalCount - decidedCount) + ' to go';
+      msgEl.textContent = '';
       msgEl.className = 'explore-stats-msg';
+      var remaining = totalCount - decidedCount;
+      var label = document.createTextNode(remaining + ' to go ');
+      var nextBtn = document.createElement('button');
+      nextBtn.type = 'button';
+      nextBtn.className = 'explore-stats-next';
+      nextBtn.textContent = 'Next \u2192';
+      nextBtn.title = 'Jump to next unanswered question';
+      nextBtn.addEventListener('click', function () {
+        var next = topicOrder.filter(function (t) { return !selections[t]; })[0];
+        if (next) switchTopic(next);
+      });
+      msgEl.appendChild(label);
+      msgEl.appendChild(nextBtn);
     } else {
       msgEl.textContent = '';
       msgEl.className = 'explore-stats-msg explore-stats-msg--complete';
