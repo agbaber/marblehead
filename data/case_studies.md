@@ -6,13 +6,22 @@ title: case studies
 
 <style>
   .case-chart { display: block; width: 100%; height: auto; max-width: 720px; margin: 10px auto 6px; }
-  .case-chart .case-axis { stroke: var(--divider); stroke-width: 1; }
   .case-chart .case-grid { stroke: var(--divider); stroke-width: 0.5; stroke-dasharray: 2 3; }
+  .case-chart .case-gap-zero { stroke: var(--text-muted); stroke-width: 1.2; }
   .case-chart .case-tick { font-size: 10px; fill: var(--text-muted); font-family: inherit; }
-  .case-chart .case-rev { stroke: var(--series-revenue); stroke-width: 1.8; fill: none; }
-  .case-chart .case-exp { stroke: var(--series-cost); stroke-width: 1.8; fill: none; }
+  .case-chart .case-gap-line { stroke: var(--c-navy); stroke-width: 2; fill: none; }
+  .case-chart .case-gap-surplus { fill: var(--series-revenue); opacity: 0.18; }
+  .case-chart .case-gap-deficit { fill: var(--series-cost); opacity: 0.18; }
   .case-chart .case-vote-win { stroke: var(--c-navy); stroke-width: 1.5; opacity: 0.45; }
   .case-chart .case-vote-loss { stroke: var(--text-muted); stroke-width: 1; stroke-dasharray: 3 3; opacity: 0.45; }
+  .case-chart .fc-certified { stroke: var(--c-navy); stroke-width: 2; fill: none; }
+  .case-chart .fc-appropriated { stroke: var(--c-buoy); stroke-width: 2; fill: none; }
+  .case-chart .fc-runway { fill: var(--c-navy); opacity: 0.12; }
+  .case-chart .fc-certified-dot { fill: var(--c-navy); }
+  .case-chart .fc-appropriated-dot { fill: var(--c-buoy); }
+  .case-chart .fc-end-label { font-size: 11px; font-family: inherit; font-weight: 600; }
+  .case-chart .fc-end-label--cert { fill: var(--c-navy); }
+  .case-chart .fc-end-label--app { fill: var(--c-buoy); }
   .case-chart-caption {
     font-size: 12px;
     color: var(--text-muted);
@@ -45,8 +54,8 @@ title: case studies
     vertical-align: middle;
     margin-right: 4px;
   }
-  .case-chart-legend-swatch--rev { background: var(--series-revenue); }
-  .case-chart-legend-swatch--exp { background: var(--series-cost); }
+  .case-chart-legend-swatch--surplus { background: var(--series-revenue); opacity: 0.5; height: 8px; }
+  .case-chart-legend-swatch--deficit { background: var(--series-cost); opacity: 0.5; height: 8px; }
 </style>
 
 # Override Case Studies: Melrose, Stoneham, and the Statewide Pattern
@@ -75,43 +84,31 @@ title: case studies
 </div>
 
 <div class="case-chart-legend">
-  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--rev"></span>Total revenues</span>
-  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--exp"></span>Total expenditures</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--surplus"></span>Surplus (revenue above expenditure)</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--deficit"></span>Deficit (expenditure above revenue)</span>
   <span><span class="case-chart-legend-tick case-chart-legend-tick--win"></span>Override passed</span>
   <span><span class="case-chart-legend-tick case-chart-legend-tick--loss"></span>Override failed</span>
 </div>
 
-<svg class="case-chart" id="case-chart-melrose" viewBox="0 0 720 260" role="img" aria-label="Melrose general fund revenue and expenditure, FY2002 to FY2025, with override ballot results marked at top.">
-<line class="case-grid" x1="54.0" x2="698.0" y1="220.1" y2="220.1" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="193.9" y2="193.9" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="167.8" y2="167.8" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="141.6" y2="141.6" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="115.5" y2="115.5" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="89.3" y2="89.3" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="63.2" y2="63.2" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="37.0" y2="37.0" />
-<line class="case-axis" x1="54.0" x2="698.0" y1="226.0" y2="226.0" />
-<line class="case-vote-loss" x1="82.0" x2="82.0" y1="6" y2="226.0"><title>FY2003: 1 override question, failed, $5.30M total</title></line>
-<line class="case-vote-loss" x1="446.0" x2="446.0" y1="6" y2="226.0"><title>FY2016: 1 override question, failed, $2.25M total</title></line>
-<line class="case-vote-win" x1="558.0" x2="558.0" y1="6" y2="226.0"><title>FY2020: 1 override question, passed, $5.18M total</title></line>
-<line class="case-vote-loss" x1="698.0" x2="698.0" y1="6" y2="226.0"><title>FY2025: 1 override question, failed, $7.70M total</title></line>
-<polyline class="case-exp" points="54.0,218.4 82.0,213.4 110.0,216.4 138.0,209.9 166.0,208.1 194.0,190.7 222.0,171.3 250.0,165.4 278.0,178.5 306.0,172.5 334.0,151.5 362.0,162.7 390.0,155.7 418.0,147.0 446.0,145.3 474.0,133.8 502.0,129.8 530.0,123.5 558.0,89.9 586.0,101.9 614.0,92.5 642.0,77.5 670.0,59.6 698.0,48.3" />
-<polyline class="case-rev" points="54.0,219.4 82.0,216.1 110.0,215.4 138.0,210.1 166.0,204.7 194.0,193.4 222.0,178.8 250.0,171.5 278.0,172.8 306.0,169.6 334.0,148.9 362.0,157.3 390.0,149.9 418.0,145.5 446.0,136.7 474.0,130.4 502.0,124.4 530.0,114.6 558.0,77.3 586.0,90.1 614.0,79.0 642.0,85.6 670.0,69.0 698.0,45.3" />
-<text class="case-tick" x="49.0" y="223.1" text-anchor="end">$50M</text>
-<text class="case-tick" x="49.0" y="196.9" text-anchor="end">$60M</text>
-<text class="case-tick" x="49.0" y="170.8" text-anchor="end">$70M</text>
-<text class="case-tick" x="49.0" y="144.6" text-anchor="end">$80M</text>
-<text class="case-tick" x="49.0" y="118.5" text-anchor="end">$90M</text>
-<text class="case-tick" x="49.0" y="92.3" text-anchor="end">$100M</text>
-<text class="case-tick" x="49.0" y="66.2" text-anchor="end">$110M</text>
-<text class="case-tick" x="49.0" y="40.0" text-anchor="end">$120M</text>
-<text class="case-tick" x="54.0" y="248.0" text-anchor="middle">FY'02</text>
-<text class="case-tick" x="166.0" y="248.0" text-anchor="middle">FY'06</text>
-<text class="case-tick" x="278.0" y="248.0" text-anchor="middle">FY'10</text>
-<text class="case-tick" x="390.0" y="248.0" text-anchor="middle">FY'14</text>
-<text class="case-tick" x="502.0" y="248.0" text-anchor="middle">FY'18</text>
-<text class="case-tick" x="614.0" y="248.0" text-anchor="middle">FY'22</text>
-<text class="case-tick" x="698.0" y="248.0" text-anchor="middle">FY'25</text>
+<svg class="case-chart" id="case-chart-melrose" viewBox="0 0 720 220" role="img" aria-label="Melrose general fund surplus or deficit (revenue minus expenditure), FY2002 to FY2025, override ballot events marked.">
+<line class="case-gap-zero" x1="58.0" x2="698.0" y1="114.6" y2="114.6" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="33.3" y2="33.3" />
+<line class="case-vote-loss" x1="85.8" x2="85.8" y1="6" y2="190.0"><title>FY2003 override failed: $5.30M</title></line>
+<line class="case-vote-loss" x1="447.6" x2="447.6" y1="6" y2="190.0"><title>FY2016 override failed: $2.25M</title></line>
+<line class="case-vote-win" x1="558.9" x2="558.9" y1="6" y2="190.0"><title>FY2020 override passed: $5.18M</title></line>
+<line class="case-vote-loss" x1="698.0" x2="698.0" y1="6" y2="190.0"><title>FY2025 override failed: $7.70M</title></line>
+<path class="case-gap-surplus" d="M 105.9,114.6 L 113.7,108.1 L 136.3,114.6 L 143.3,114.6 L 169.3,93.6 L 184.7,114.6 L 267.2,114.6 L 280.6,79.1 L 308.4,96.7 L 336.3,98.4 L 364.1,81.6 L 391.9,78.7 L 419.7,105.3 L 447.6,60.7 L 475.4,93.5 L 503.2,81.2 L 531.0,59.5 L 558.9,36.6 L 586.7,41.7 L 614.5,31.0 L 631.9,114.6 L 691.2,114.6 L 698.0,95.7 L 698.0,114.6 Z" />
+<path class="case-gap-deficit" d="M 58.0,114.6 L 58.0,121.2 L 85.8,131.1 L 105.9,114.6 L 136.3,114.6 L 141.5,116.0 L 143.3,114.6 L 184.7,114.6 L 197.1,131.5 L 225.0,161.4 L 252.8,153.0 L 267.2,114.6 L 631.9,114.6 L 642.3,164.8 L 670.2,173.0 L 691.2,114.6 Z" />
+<polyline class="case-gap-line" points="58.0,121.2 85.8,131.1 113.7,108.1 141.5,116.0 169.3,93.6 197.1,131.5 225.0,161.4 252.8,153.0 280.6,79.1 308.4,96.7 336.3,98.4 364.1,81.6 391.9,78.7 419.7,105.3 447.6,60.7 475.4,93.5 503.2,81.2 531.0,59.5 558.9,36.6 586.7,41.7 614.5,31.0 642.3,164.8 670.2,173.0 698.0,95.7" />
+<text class="case-tick" x="53.0" y="117.6" text-anchor="end">$0M</text>
+<text class="case-tick" x="53.0" y="36.3" text-anchor="end">+$5M</text>
+<text class="case-tick" x="58.0" y="210.0" text-anchor="middle">FY'02</text>
+<text class="case-tick" x="169.3" y="210.0" text-anchor="middle">FY'06</text>
+<text class="case-tick" x="280.6" y="210.0" text-anchor="middle">FY'10</text>
+<text class="case-tick" x="391.9" y="210.0" text-anchor="middle">FY'14</text>
+<text class="case-tick" x="503.2" y="210.0" text-anchor="middle">FY'18</text>
+<text class="case-tick" x="614.5" y="210.0" text-anchor="middle">FY'22</text>
+<text class="case-tick" x="698.0" y="210.0" text-anchor="middle">FY'25</text>
 </svg>
 
 <p class="case-chart-caption">Melrose general fund, FY2002 through FY2025 (DOR DLS Schedule A). The FY2020 win added $5.18M of permanent levy authority. The FY2025 loss came as expenditures were again pulling ahead of revenues. The November 2025 FY2026 follow-up override ($13.5M, passed) is described in the timeline below; FY2026 Schedule A has not yet been filed so it does not appear on the chart.</p>
@@ -157,35 +154,29 @@ title: case studies
 </div>
 
 <div class="case-chart-legend">
-  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--rev"></span>Total revenues</span>
-  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--exp"></span>Total expenditures</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--surplus"></span>Surplus (revenue above expenditure)</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--deficit"></span>Deficit (expenditure above revenue)</span>
   <span><span class="case-chart-legend-tick case-chart-legend-tick--win"></span>Override passed</span>
   <span><span class="case-chart-legend-tick case-chart-legend-tick--loss"></span>Override failed</span>
 </div>
 
-<svg class="case-chart" id="case-chart-stoneham" viewBox="0 0 720 260" role="img" aria-label="Stoneham general fund revenue and expenditure, FY2002 to FY2025, with override ballot results marked at top.">
-<line class="case-grid" x1="54.0" x2="698.0" y1="198.0" y2="198.0" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="163.7" y2="163.7" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="129.3" y2="129.3" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="95.0" y2="95.0" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="60.6" y2="60.6" />
-<line class="case-axis" x1="54.0" x2="698.0" y1="226.0" y2="226.0" />
-<line class="case-vote-loss" x1="222.0" x2="222.0" y1="6" y2="226.0"><title>FY2008: 1 override question, failed, $3.00M total</title></line>
-<line class="case-vote-loss" x1="334.0" x2="334.0" y1="6" y2="226.0"><title>FY2012: 1 override question, failed, $1.90M total</title></line>
-<polyline class="case-exp" points="54.0,218.0 82.0,212.1 110.0,206.0 138.0,206.8 166.0,201.0 194.0,195.7 222.0,187.8 250.0,187.7 278.0,189.4 306.0,183.8 334.0,166.1 362.0,177.4 390.0,166.6 418.0,165.6 446.0,159.2 474.0,152.7 502.0,144.5 530.0,134.6 558.0,130.1 586.0,128.3 614.0,116.6 642.0,84.4 670.0,71.4 698.0,54.7" />
-<polyline class="case-rev" points="54.0,218.4 82.0,207.1 110.0,209.6 138.0,207.0 166.0,200.3 194.0,191.8 222.0,185.3 250.0,186.7 278.0,189.8 306.0,186.2 334.0,163.2 362.0,174.8 390.0,163.7 418.0,162.5 446.0,153.1 474.0,144.1 502.0,138.4 530.0,130.2 558.0,123.3 586.0,117.3 614.0,106.8 642.0,73.0 670.0,51.3 698.0,46.2" />
-<text class="case-tick" x="49.0" y="201.0" text-anchor="end">$50M</text>
-<text class="case-tick" x="49.0" y="166.7" text-anchor="end">$60M</text>
-<text class="case-tick" x="49.0" y="132.3" text-anchor="end">$70M</text>
-<text class="case-tick" x="49.0" y="98.0" text-anchor="end">$80M</text>
-<text class="case-tick" x="49.0" y="63.6" text-anchor="end">$90M</text>
-<text class="case-tick" x="54.0" y="248.0" text-anchor="middle">FY'02</text>
-<text class="case-tick" x="166.0" y="248.0" text-anchor="middle">FY'06</text>
-<text class="case-tick" x="278.0" y="248.0" text-anchor="middle">FY'10</text>
-<text class="case-tick" x="390.0" y="248.0" text-anchor="middle">FY'14</text>
-<text class="case-tick" x="502.0" y="248.0" text-anchor="middle">FY'18</text>
-<text class="case-tick" x="614.0" y="248.0" text-anchor="middle">FY'22</text>
-<text class="case-tick" x="698.0" y="248.0" text-anchor="middle">FY'25</text>
+<svg class="case-chart" id="case-chart-stoneham" viewBox="0 0 720 220" role="img" aria-label="Stoneham general fund surplus or deficit (revenue minus expenditure), FY2002 to FY2025, override ballot events marked.">
+<line class="case-gap-zero" x1="58.0" x2="698.0" y1="149.6" y2="149.6" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="50.9" y2="50.9" />
+<line class="case-vote-loss" x1="225.0" x2="225.0" y1="6" y2="190.0"><title>FY2008 override failed: $3.00M</title></line>
+<line class="case-vote-loss" x1="336.3" x2="336.3" y1="6" y2="190.0"><title>FY2012 override failed: $1.90M</title></line>
+<path class="case-gap-surplus" d="M 60.0,149.6 L 85.8,120.7 L 102.1,149.6 L 146.3,149.6 L 169.3,145.4 L 197.1,127.4 L 225.0,135.3 L 252.8,143.6 L 272.9,149.6 L 320.8,149.6 L 336.3,132.9 L 364.1,134.7 L 391.9,133.1 L 419.7,131.8 L 447.6,114.5 L 475.4,100.3 L 503.2,114.9 L 531.0,124.3 L 558.9,110.5 L 586.7,86.3 L 614.5,93.3 L 642.3,83.9 L 670.2,33.7 L 698.0,100.8 L 698.0,149.6 Z" />
+<path class="case-gap-deficit" d="M 58.0,149.6 L 58.0,151.9 L 60.0,149.6 L 102.1,149.6 L 113.7,170.3 L 141.5,150.5 L 146.3,149.6 L 272.9,149.6 L 280.6,151.9 L 308.4,163.0 L 320.8,149.6 Z" />
+<polyline class="case-gap-line" points="58.0,151.9 85.8,120.7 113.7,170.3 141.5,150.5 169.3,145.4 197.1,127.4 225.0,135.3 252.8,143.6 280.6,151.9 308.4,163.0 336.3,132.9 364.1,134.7 391.9,133.1 419.7,131.8 447.6,114.5 475.4,100.3 503.2,114.9 531.0,124.3 558.9,110.5 586.7,86.3 614.5,93.3 642.3,83.9 670.2,33.7 698.0,100.8" />
+<text class="case-tick" x="53.0" y="152.6" text-anchor="end">$0M</text>
+<text class="case-tick" x="53.0" y="53.9" text-anchor="end">+$5M</text>
+<text class="case-tick" x="58.0" y="210.0" text-anchor="middle">FY'02</text>
+<text class="case-tick" x="169.3" y="210.0" text-anchor="middle">FY'06</text>
+<text class="case-tick" x="280.6" y="210.0" text-anchor="middle">FY'10</text>
+<text class="case-tick" x="391.9" y="210.0" text-anchor="middle">FY'14</text>
+<text class="case-tick" x="503.2" y="210.0" text-anchor="middle">FY'18</text>
+<text class="case-tick" x="614.5" y="210.0" text-anchor="middle">FY'22</text>
+<text class="case-tick" x="698.0" y="210.0" text-anchor="middle">FY'25</text>
 </svg>
 
 <p class="case-chart-caption">Stoneham general fund, FY2002 through FY2025 (DOR DLS Schedule A). Revenues and expenditures tracked within roughly $1M of each other for 20 years. Two operating overrides failed in that window (FY2008 $3.0M, FY2012 $1.9M). The gap began widening in FY2023 and escalated into the April 2025 FY2026 $14.6M override (failed) and the December 2025 FY2027 two-tier vote ($12.5M failed, $9.3M passed); those three votes are described in the timeline below and do not appear on the chart because DLS Schedule A has not yet been filed for FY2026 or FY2027. How Stoneham maintained near-balance without override-added authority for two decades is worth separate study; see <a href="https://github.com/agbaber/marblehead/issues/602">issue #602</a>.</p>
@@ -217,37 +208,27 @@ Not every failed override leads to a return trip to the ballot. Some towns absor
 - **Takeaway:** Easton rejected overrides in both 2016 and 2025 and absorbed the consequences each time. Nine years separated the two attempts.
 
 <div class="case-chart-legend">
-  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--rev"></span>Total revenues</span>
-  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--exp"></span>Total expenditures</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--surplus"></span>Surplus (revenue above expenditure)</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--deficit"></span>Deficit (expenditure above revenue)</span>
   <span><span class="case-chart-legend-tick case-chart-legend-tick--loss"></span>Override failed</span>
 </div>
 
-<svg class="case-chart" id="case-chart-easton" viewBox="0 0 720 260" role="img" aria-label="Easton general fund revenue and expenditure, FY2002 to FY2025, with override ballot results marked at top.">
-<line class="case-grid" x1="54.0" x2="698.0" y1="222.8" y2="222.8" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="193.2" y2="193.2" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="163.7" y2="163.7" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="134.1" y2="134.1" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="104.5" y2="104.5" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="74.9" y2="74.9" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="45.3" y2="45.3" />
-<line class="case-axis" x1="54.0" x2="698.0" y1="226.0" y2="226.0" />
-<line class="case-vote-loss" x1="474.0" x2="474.0" y1="6" y2="226.0"><title>FY2017: 1 override question, failed, $4.40M total</title></line>
-<polyline class="case-exp" points="54.0,219.9 82.0,215.2 110.0,212.5 138.0,204.8 166.0,197.9 194.0,185.2 222.0,168.0 250.0,166.4 278.0,165.3 306.0,155.9 334.0,156.0 362.0,148.8 390.0,139.8 418.0,131.1 446.0,128.2 474.0,121.5 502.0,113.6 530.0,110.1 558.0,105.8 586.0,104.6 614.0,88.6 642.0,70.5 670.0,56.7 698.0,47.0" />
-<polyline class="case-rev" points="54.0,218.7 82.0,216.0 110.0,206.6 138.0,204.0 166.0,193.2 194.0,179.2 222.0,170.3 250.0,166.5 278.0,161.6 306.0,155.2 334.0,151.9 362.0,148.3 390.0,140.9 418.0,129.2 446.0,123.5 474.0,117.8 502.0,111.6 530.0,110.1 558.0,103.2 586.0,92.4 614.0,81.6 642.0,67.5 670.0,57.0 698.0,44.8" />
-<text class="case-tick" x="49.0" y="225.8" text-anchor="end">$40M</text>
-<text class="case-tick" x="49.0" y="196.2" text-anchor="end">$50M</text>
-<text class="case-tick" x="49.0" y="166.7" text-anchor="end">$60M</text>
-<text class="case-tick" x="49.0" y="137.1" text-anchor="end">$70M</text>
-<text class="case-tick" x="49.0" y="107.5" text-anchor="end">$80M</text>
-<text class="case-tick" x="49.0" y="77.9" text-anchor="end">$90M</text>
-<text class="case-tick" x="49.0" y="48.3" text-anchor="end">$100M</text>
-<text class="case-tick" x="54.0" y="248.0" text-anchor="middle">FY'02</text>
-<text class="case-tick" x="166.0" y="248.0" text-anchor="middle">FY'06</text>
-<text class="case-tick" x="278.0" y="248.0" text-anchor="middle">FY'10</text>
-<text class="case-tick" x="390.0" y="248.0" text-anchor="middle">FY'14</text>
-<text class="case-tick" x="502.0" y="248.0" text-anchor="middle">FY'18</text>
-<text class="case-tick" x="614.0" y="248.0" text-anchor="middle">FY'22</text>
-<text class="case-tick" x="698.0" y="248.0" text-anchor="middle">FY'25</text>
+<svg class="case-chart" id="case-chart-easton" viewBox="0 0 720 220" role="img" aria-label="Easton general fund surplus or deficit (revenue minus expenditure), FY2002 to FY2025, override ballot events marked.">
+<line class="case-gap-zero" x1="58.0" x2="698.0" y1="144.4" y2="144.4" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="17.1" y2="17.1" />
+<line class="case-vote-loss" x1="475.4" x2="475.4" y1="6" y2="190.0"><title>FY2017 override failed: $4.40M</title></line>
+<path class="case-gap-surplus" d="M 58.0,144.4 L 58.0,134.1 L 74.7,144.4 L 89.2,144.4 L 113.7,93.9 L 141.5,137.2 L 169.3,103.9 L 197.1,92.2 L 217.2,144.4 L 254.0,144.4 L 280.6,112.4 L 308.4,138.2 L 336.3,109.3 L 364.1,139.2 L 373.7,144.4 L 402.2,144.4 L 419.7,127.9 L 447.6,103.9 L 475.4,112.4 L 503.2,127.6 L 529.9,144.4 L 531.9,144.4 L 558.9,122.0 L 586.7,39.5 L 614.5,83.7 L 642.3,118.2 L 667.9,144.4 L 673.2,144.4 L 698.0,125.4 L 698.0,144.4 Z" />
+<path class="case-gap-deficit" d="M 74.7,144.4 L 85.8,151.2 L 89.2,144.4 L 217.2,144.4 L 225.0,164.5 L 252.8,145.8 L 254.0,144.4 L 373.7,144.4 L 391.9,154.0 L 402.2,144.4 L 529.9,144.4 L 531.0,145.1 L 531.9,144.4 L 667.9,144.4 L 670.2,146.7 L 673.2,144.4 Z" />
+<polyline class="case-gap-line" points="58.0,134.1 85.8,151.2 113.7,93.9 141.5,137.2 169.3,103.9 197.1,92.2 225.0,164.5 252.8,145.8 280.6,112.4 308.4,138.2 336.3,109.3 364.1,139.2 391.9,154.0 419.7,127.9 447.6,103.9 475.4,112.4 503.2,127.6 531.0,145.1 558.9,122.0 586.7,39.5 614.5,83.7 642.3,118.2 670.2,146.7 698.0,125.4" />
+<text class="case-tick" x="53.0" y="147.4" text-anchor="end">$0M</text>
+<text class="case-tick" x="53.0" y="20.1" text-anchor="end">+$5M</text>
+<text class="case-tick" x="58.0" y="210.0" text-anchor="middle">FY'02</text>
+<text class="case-tick" x="169.3" y="210.0" text-anchor="middle">FY'06</text>
+<text class="case-tick" x="280.6" y="210.0" text-anchor="middle">FY'10</text>
+<text class="case-tick" x="391.9" y="210.0" text-anchor="middle">FY'14</text>
+<text class="case-tick" x="503.2" y="210.0" text-anchor="middle">FY'18</text>
+<text class="case-tick" x="614.5" y="210.0" text-anchor="middle">FY'22</text>
+<text class="case-tick" x="698.0" y="210.0" text-anchor="middle">FY'25</text>
 </svg>
 
 <p class="case-chart-caption">Easton general fund, FY2002 through FY2025 (DOR DLS Schedule A). Revenues and expenditures stayed within roughly $2M of each other for the entire period despite the FY2017 $4.4M override loss marked on the chart. The June 2025 FY2026 $7.3M override loss is described above and falls beyond the data window. Easton's pattern is balanced operation absent override-added authority, with the post-FY2025 service cuts (47 school FTEs) yet to appear in Schedule A.</p>
@@ -259,39 +240,29 @@ Not every failed override leads to a return trip to the ballot. Some towns absor
 - **Takeaway:** Newton absorbed three years of budget pressure after rejecting a $9.2M override, including a teachers' strike driven partly by fiscal constraints.
 
 <div class="case-chart-legend">
-  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--rev"></span>Total revenues</span>
-  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--exp"></span>Total expenditures</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--surplus"></span>Surplus (revenue above expenditure)</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--deficit"></span>Deficit (expenditure above revenue)</span>
   <span><span class="case-chart-legend-tick case-chart-legend-tick--loss"></span>Override failed</span>
 </div>
 
-<svg class="case-chart" id="case-chart-newton" viewBox="0 0 720 260" role="img" aria-label="Newton general fund revenue and expenditure, FY2002 to FY2025, with override ballot results marked at top.">
-<line class="case-grid" x1="54.0" x2="698.0" y1="224.7" y2="224.7" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="198.8" y2="198.8" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="172.8" y2="172.8" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="146.8" y2="146.8" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="120.8" y2="120.8" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="94.8" y2="94.8" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="68.9" y2="68.9" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="42.9" y2="42.9" />
-<line class="case-axis" x1="54.0" x2="698.0" y1="226.0" y2="226.0" />
-<line class="case-vote-loss" x1="670.0" x2="670.0" y1="6" y2="226.0"><title>FY2024: 1 override question, failed, $9.20M total</title></line>
-<polyline class="case-exp" points="54.0,208.8 82.0,197.9 110.0,193.9 138.0,201.7 166.0,181.5 194.0,198.6 222.0,185.6 250.0,174.8 278.0,172.9 306.0,167.9 334.0,172.5 362.0,166.5 390.0,155.6 418.0,146.9 446.0,141.0 474.0,132.4 502.0,116.8 530.0,111.2 558.0,106.4 586.0,101.4 614.0,85.2 642.0,77.9 670.0,66.1 698.0,53.4" />
-<polyline class="case-rev" points="54.0,220.6 82.0,210.0 110.0,208.0 138.0,203.5 166.0,198.2 194.0,191.8 222.0,185.4 250.0,181.4 278.0,177.4 306.0,175.3 334.0,170.8 362.0,162.8 390.0,151.7 418.0,144.3 446.0,133.5 474.0,126.5 502.0,118.2 530.0,108.1 558.0,102.2 586.0,96.2 614.0,72.3 642.0,68.5 670.0,55.2 698.0,44.2" />
-<text class="case-tick" x="49.0" y="227.7" text-anchor="end">$200M</text>
-<text class="case-tick" x="49.0" y="201.8" text-anchor="end">$250M</text>
-<text class="case-tick" x="49.0" y="175.8" text-anchor="end">$300M</text>
-<text class="case-tick" x="49.0" y="149.8" text-anchor="end">$350M</text>
-<text class="case-tick" x="49.0" y="123.8" text-anchor="end">$400M</text>
-<text class="case-tick" x="49.0" y="97.8" text-anchor="end">$450M</text>
-<text class="case-tick" x="49.0" y="71.9" text-anchor="end">$500M</text>
-<text class="case-tick" x="49.0" y="45.9" text-anchor="end">$550M</text>
-<text class="case-tick" x="54.0" y="248.0" text-anchor="middle">FY'02</text>
-<text class="case-tick" x="166.0" y="248.0" text-anchor="middle">FY'06</text>
-<text class="case-tick" x="278.0" y="248.0" text-anchor="middle">FY'10</text>
-<text class="case-tick" x="390.0" y="248.0" text-anchor="middle">FY'14</text>
-<text class="case-tick" x="502.0" y="248.0" text-anchor="middle">FY'18</text>
-<text class="case-tick" x="614.0" y="248.0" text-anchor="middle">FY'22</text>
-<text class="case-tick" x="698.0" y="248.0" text-anchor="middle">FY'25</text>
+<svg class="case-chart" id="case-chart-newton" viewBox="0 0 720 220" role="img" aria-label="Newton general fund surplus or deficit (revenue minus expenditure), FY2002 to FY2025, override ballot events marked.">
+<line class="case-grid" x1="58.0" x2="698.0" y1="142.6" y2="142.6" />
+<line class="case-gap-zero" x1="58.0" x2="698.0" y1="93.0" y2="93.0" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="43.3" y2="43.3" />
+<line class="case-vote-loss" x1="670.2" x2="670.2" y1="6" y2="190.0"><title>FY2024 override failed: $9.20M</title></line>
+<path class="case-gap-surplus" d="M 189.1,93.0 L 197.1,60.4 L 225.0,91.8 L 225.9,93.0 L 331.0,93.0 L 336.3,84.8 L 364.1,75.0 L 391.9,73.9 L 419.7,80.3 L 447.6,56.7 L 475.4,65.0 L 497.7,93.0 L 512.0,93.0 L 531.0,78.1 L 558.9,73.1 L 586.7,68.6 L 614.5,31.0 L 642.3,47.8 L 670.2,40.9 L 698.0,49.2 L 698.0,93.0 Z" />
+<path class="case-gap-deficit" d="M 58.0,93.0 L 58.0,149.3 L 85.8,150.4 L 113.7,160.2 L 141.5,101.7 L 169.3,173.0 L 189.1,93.0 L 225.9,93.0 L 252.8,124.6 L 280.6,114.2 L 308.4,128.2 L 331.0,93.0 L 497.7,93.0 L 503.2,99.8 L 512.0,93.0 Z" />
+<polyline class="case-gap-line" points="58.0,149.3 85.8,150.4 113.7,160.2 141.5,101.7 169.3,173.0 197.1,60.4 225.0,91.8 252.8,124.6 280.6,114.2 308.4,128.2 336.3,84.8 364.1,75.0 391.9,73.9 419.7,80.3 447.6,56.7 475.4,65.0 503.2,99.8 531.0,78.1 558.9,73.1 586.7,68.6 614.5,31.0 642.3,47.8 670.2,40.9 698.0,49.2" />
+<text class="case-tick" x="53.0" y="145.6" text-anchor="end">$-20M</text>
+<text class="case-tick" x="53.0" y="96.0" text-anchor="end">$0M</text>
+<text class="case-tick" x="53.0" y="46.3" text-anchor="end">+$20M</text>
+<text class="case-tick" x="58.0" y="210.0" text-anchor="middle">FY'02</text>
+<text class="case-tick" x="169.3" y="210.0" text-anchor="middle">FY'06</text>
+<text class="case-tick" x="280.6" y="210.0" text-anchor="middle">FY'10</text>
+<text class="case-tick" x="391.9" y="210.0" text-anchor="middle">FY'14</text>
+<text class="case-tick" x="503.2" y="210.0" text-anchor="middle">FY'18</text>
+<text class="case-tick" x="614.5" y="210.0" text-anchor="middle">FY'22</text>
+<text class="case-tick" x="698.0" y="210.0" text-anchor="middle">FY'25</text>
 </svg>
 
 <p class="case-chart-caption">Newton general fund, FY2002 through FY2025 (DOR DLS Schedule A). The FY2024 override loss is marked. Newton has run general fund surpluses every year since FY2019 and was running a $21M surplus in FY2024 when the override question went to the ballot, which is one reason the failed override has not driven Newton back to the ballot. The pre-FY2010 expenditure spikes likely reflect UMAS reclassification of intergovernmental transfers rather than operating losses.</p>
@@ -335,50 +306,111 @@ The cases above focus on what happened after a "no" vote. A separate question is
 ### What happened the last time Marblehead passed an override
 
 <div class="case-chart-legend">
-  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--rev"></span>Total revenues</span>
-  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--exp"></span>Total expenditures</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--surplus"></span>Surplus (revenue above expenditure)</span>
+  <span><span class="case-chart-legend-swatch case-chart-legend-swatch--deficit"></span>Deficit (expenditure above revenue)</span>
   <span><span class="case-chart-legend-tick case-chart-legend-tick--win"></span>Override passed</span>
   <span><span class="case-chart-legend-tick case-chart-legend-tick--loss"></span>Override failed</span>
 </div>
 
-<svg class="case-chart" id="case-chart-marblehead" viewBox="0 0 720 260" role="img" aria-label="Marblehead general fund revenue and expenditure, FY2002 to FY2024, with override ballot results marked at top.">
-<line class="case-grid" x1="54.0" x2="698.0" y1="202.7" y2="202.7" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="171.6" y2="171.6" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="140.5" y2="140.5" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="109.4" y2="109.4" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="78.3" y2="78.3" />
-<line class="case-grid" x1="54.0" x2="698.0" y1="47.2" y2="47.2" />
-<line class="case-axis" x1="54.0" x2="698.0" y1="226.0" y2="226.0" />
-<line class="case-vote-win" x1="54.0" x2="54.0" y1="6" y2="226.0"><title>FY2002: 1 override question, passed, $0.30M total</title></line>
-<line class="case-vote-win" x1="112.5" x2="112.5" y1="6" y2="226.0"><title>FY2004: 1 override question, passed, $1.38M total</title></line>
-<line class="case-vote-loss" x1="130.6" x2="130.6" y1="6" y2="226.0"><title>FY2005: 6 override questions, 3W/3L, $1.18M total</title></line>
-<line class="case-vote-win" x1="135.1" x2="135.1" y1="6" y2="226.0"><title>FY2005: 6 override questions, 3W/3L, $1.18M total</title></line>
-<line class="case-vote-loss" x1="139.6" x2="139.6" y1="6" y2="226.0"><title>FY2005: 6 override questions, 3W/3L, $1.18M total</title></line>
-<line class="case-vote-win" x1="144.1" x2="144.1" y1="6" y2="226.0"><title>FY2005: 6 override questions, 3W/3L, $1.18M total</title></line>
-<line class="case-vote-loss" x1="148.6" x2="148.6" y1="6" y2="226.0"><title>FY2005: 6 override questions, 3W/3L, $1.18M total</title></line>
-<line class="case-vote-win" x1="153.1" x2="153.1" y1="6" y2="226.0"><title>FY2005: 6 override questions, 3W/3L, $1.18M total</title></line>
-<line class="case-vote-win" x1="171.1" x2="171.1" y1="6" y2="226.0"><title>FY2006: 1 override question, passed, $2.73M total</title></line>
-<line class="case-vote-loss" x1="346.7" x2="346.7" y1="6" y2="226.0"><title>FY2012: 1 override question, failed, $0.67M total</title></line>
-<line class="case-vote-loss" x1="668.7" x2="668.7" y1="6" y2="226.0"><title>FY2023: 1 override question, failed, $3.05M total</title></line>
-<line class="case-vote-loss" x1="698.0" x2="698.0" y1="6" y2="226.0"><title>FY2024: 1 override question, failed, $2.47M total</title></line>
-<polyline class="case-exp" points="54.0,197.4 83.3,195.3 112.5,182.6 141.8,174.4 171.1,159.6 200.4,171.6 229.6,172.5 258.9,170.3 288.2,165.8 317.5,160.4 346.7,157.5 376.0,154.3 405.3,148.2 434.5,139.6 463.8,131.9 493.1,120.3 522.4,107.4 551.6,98.0 580.9,94.7 610.2,89.9 639.5,58.1 668.7,57.8 698.0,45.6" />
-<polyline class="case-rev" points="54.0,214.7 83.3,219.0 112.5,211.8 141.8,201.4 171.1,183.2 200.4,179.0 229.6,173.1 258.9,170.7 288.2,164.0 317.5,160.2 346.7,153.0 376.0,150.0 405.3,139.6 434.5,132.5 463.8,124.2 493.1,114.5 522.4,106.8 551.6,98.2 580.9,91.2 610.2,88.6 639.5,56.9 668.7,58.6 698.0,47.9" />
-<text class="case-tick" x="49.0" y="205.7" text-anchor="end">$50M</text>
-<text class="case-tick" x="49.0" y="174.6" text-anchor="end">$60M</text>
-<text class="case-tick" x="49.0" y="143.5" text-anchor="end">$70M</text>
-<text class="case-tick" x="49.0" y="112.4" text-anchor="end">$80M</text>
-<text class="case-tick" x="49.0" y="81.3" text-anchor="end">$90M</text>
-<text class="case-tick" x="49.0" y="50.2" text-anchor="end">$100M</text>
-<text class="case-tick" x="54.0" y="248.0" text-anchor="middle">FY'02</text>
-<text class="case-tick" x="171.1" y="248.0" text-anchor="middle">FY'06</text>
-<text class="case-tick" x="288.2" y="248.0" text-anchor="middle">FY'10</text>
-<text class="case-tick" x="405.3" y="248.0" text-anchor="middle">FY'14</text>
-<text class="case-tick" x="522.4" y="248.0" text-anchor="middle">FY'18</text>
-<text class="case-tick" x="639.5" y="248.0" text-anchor="middle">FY'22</text>
-<text class="case-tick" x="698.0" y="248.0" text-anchor="middle">FY'24</text>
+<svg class="case-chart" id="case-chart-marblehead" viewBox="0 0 720 220" role="img" aria-label="Marblehead general fund surplus or deficit (revenue minus expenditure), FY2002 to FY2024, override ballot events marked.">
+<line class="case-grid" x1="58.0" x2="698.0" y1="180.1" y2="180.1" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="121.7" y2="121.7" />
+<line class="case-gap-zero" x1="58.0" x2="698.0" y1="63.3" y2="63.3" />
+<line class="case-vote-win" x1="58.0" x2="58.0" y1="6" y2="190.0"><title>FY2002 override passed: $0.30M</title></line>
+<line class="case-vote-win" x1="116.2" x2="116.2" y1="6" y2="190.0"><title>FY2004 override passed: $1.38M</title></line>
+<line class="case-vote-loss" x1="134.0" x2="134.0" y1="6" y2="190.0"><title>FY2005 override failed: $0.48M</title></line>
+<line class="case-vote-win" x1="138.5" x2="138.5" y1="6" y2="190.0"><title>FY2005 override passed: $0.42M</title></line>
+<line class="case-vote-loss" x1="143.0" x2="143.0" y1="6" y2="190.0"><title>FY2005 override failed: $0.13M</title></line>
+<line class="case-vote-win" x1="147.5" x2="147.5" y1="6" y2="190.0"><title>FY2005 override passed: $0.07M</title></line>
+<line class="case-vote-loss" x1="152.0" x2="152.0" y1="6" y2="190.0"><title>FY2005 override failed: $0.06M</title></line>
+<line class="case-vote-win" x1="156.5" x2="156.5" y1="6" y2="190.0"><title>FY2005 override passed: $0.02M</title></line>
+<line class="case-vote-win" x1="174.4" x2="174.4" y1="6" y2="190.0"><title>FY2006 override passed: $2.73M</title></line>
+<line class="case-vote-loss" x1="348.9" x2="348.9" y1="6" y2="190.0"><title>FY2012 override failed: $0.67M</title></line>
+<line class="case-vote-loss" x1="668.9" x2="668.9" y1="6" y2="190.0"><title>FY2023 override failed: $3.05M</title></line>
+<line class="case-vote-loss" x1="698.0" x2="698.0" y1="6" y2="190.0"><title>FY2024 override failed: $2.47M</title></line>
+<path class="case-gap-surplus" d="M 266.6,63.3 L 290.7,56.7 L 319.8,62.7 L 348.9,46.4 L 378.0,47.3 L 407.1,31.0 L 436.2,36.5 L 465.3,34.4 L 494.4,41.4 L 523.5,61.1 L 545.3,63.3 L 554.1,63.3 L 581.6,50.5 L 610.7,58.4 L 639.8,58.9 L 657.7,63.3 Z" />
+<path class="case-gap-deficit" d="M 58.0,63.3 L 58.0,128.1 L 87.1,152.6 L 116.2,173.0 L 145.3,164.7 L 174.4,152.0 L 203.5,91.2 L 232.5,65.9 L 261.6,64.7 L 266.6,63.3 L 545.3,63.3 L 552.5,64.1 L 554.1,63.3 L 657.7,63.3 L 668.9,66.1 L 698.0,72.0 L 698.0,63.3 Z" />
+<polyline class="case-gap-line" points="58.0,128.1 87.1,152.6 116.2,173.0 145.3,164.7 174.4,152.0 203.5,91.2 232.5,65.9 261.6,64.7 290.7,56.7 319.8,62.7 348.9,46.4 378.0,47.3 407.1,31.0 436.2,36.5 465.3,34.4 494.4,41.4 523.5,61.1 552.5,64.1 581.6,50.5 610.7,58.4 639.8,58.9 668.9,66.1 698.0,72.0" />
+<text class="case-tick" x="53.0" y="183.1" text-anchor="end">$-10M</text>
+<text class="case-tick" x="53.0" y="124.7" text-anchor="end">$-5M</text>
+<text class="case-tick" x="53.0" y="66.3" text-anchor="end">$0M</text>
+<text class="case-tick" x="58.0" y="210.0" text-anchor="middle">FY'02</text>
+<text class="case-tick" x="174.4" y="210.0" text-anchor="middle">FY'06</text>
+<text class="case-tick" x="290.7" y="210.0" text-anchor="middle">FY'10</text>
+<text class="case-tick" x="407.1" y="210.0" text-anchor="middle">FY'14</text>
+<text class="case-tick" x="523.5" y="210.0" text-anchor="middle">FY'18</text>
+<text class="case-tick" x="639.8" y="210.0" text-anchor="middle">FY'22</text>
+<text class="case-tick" x="698.0" y="210.0" text-anchor="middle">FY'24</text>
 </svg>
 
 <p class="case-chart-caption">Marblehead general fund, FY2002 through FY2024 (DOR DLS Schedule A; FY2025 not yet filed). Expenditures exceeded revenues by $5M to $9M per year FY2002 through FY2006. Six override questions passed in that cluster (FY2002 sewers, FY2004 supplemental budget, FY2005 school, library, waste collection, and FY2006 operating) added $4.92M of permanent levy authority. The gap closed within three years and the town ran roughly balanced for eleven years. From FY2018 through FY2024 the gap reopened and three operating overrides (FY2012, FY2023, FY2024) failed at the ballot.</p>
+
+### How Marblehead has been bridging the gap: free cash
+
+The gap chart above shows revenues and expenditures tracking closely in recent years, but it does not show *how* that appearance of balance has been maintained. One of the main bridges has been free cash: the certified unreserved fund balance from the prior fiscal year, appropriated into the next year's operating budget to keep the books balanced.
+
+<svg class="case-chart" viewBox="0 0 720 280" role="img" aria-label="Marblehead free cash certified versus appropriated, FY2004 to FY2024">
+<line class="case-grid" x1="58.0" x2="698.0" y1="242.0" y2="242.0" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="213.6" y2="213.6" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="185.1" y2="185.1" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="156.7" y2="156.7" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="128.2" y2="128.2" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="99.8" y2="99.8" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="71.3" y2="71.3" />
+<line class="case-grid" x1="58.0" x2="698.0" y1="42.9" y2="42.9" />
+<path class="fc-runway" d="M 410.0,130.2 L 442.0,92.3 L 474.0,66.7 L 506.0,55.8 L 538.0,50.9 L 570.0,61.7 L 602.0,96.3 L 634.0,78.0 L 666.0,88.8 L 698.0,112.8 L 698.0,128.2 L 666.0,96.9 L 634.0,116.9 L 602.0,139.6 L 570.0,120.0 L 538.0,123.8 L 506.0,132.9 L 474.0,147.5 L 442.0,164.8 L 410.0,171.0 Z" />
+<polyline class="fc-certified" points="58.0,211.5 90.0,213.2 122.0,231.8 154.0,213.8 186.0,207.3 218.0,200.4 250.0,184.7 282.0,181.3 314.0,176.6 346.0,158.1 378.0,162.2 410.0,130.2 442.0,92.3 474.0,66.7 506.0,55.8 538.0,50.9 570.0,61.7 602.0,96.3 634.0,78.0 666.0,88.8 698.0,112.8" />
+<polyline class="fc-appropriated" points="410.0,171.0 442.0,164.8 474.0,147.5 506.0,132.9 538.0,123.8 570.0,120.0 602.0,139.6 634.0,116.9 666.0,96.9 698.0,128.2" />
+<circle cx="58.0" cy="211.5" r="2.5" class="fc-certified-dot" />
+<circle cx="90.0" cy="213.2" r="2.5" class="fc-certified-dot" />
+<circle cx="122.0" cy="231.8" r="2.5" class="fc-certified-dot" />
+<circle cx="154.0" cy="213.8" r="2.5" class="fc-certified-dot" />
+<circle cx="186.0" cy="207.3" r="2.5" class="fc-certified-dot" />
+<circle cx="218.0" cy="200.4" r="2.5" class="fc-certified-dot" />
+<circle cx="250.0" cy="184.7" r="2.5" class="fc-certified-dot" />
+<circle cx="282.0" cy="181.3" r="2.5" class="fc-certified-dot" />
+<circle cx="314.0" cy="176.6" r="2.5" class="fc-certified-dot" />
+<circle cx="346.0" cy="158.1" r="2.5" class="fc-certified-dot" />
+<circle cx="378.0" cy="162.2" r="2.5" class="fc-certified-dot" />
+<circle cx="410.0" cy="130.2" r="2.5" class="fc-certified-dot" />
+<circle cx="442.0" cy="92.3" r="2.5" class="fc-certified-dot" />
+<circle cx="474.0" cy="66.7" r="2.5" class="fc-certified-dot" />
+<circle cx="506.0" cy="55.8" r="2.5" class="fc-certified-dot" />
+<circle cx="538.0" cy="50.9" r="2.5" class="fc-certified-dot" />
+<circle cx="570.0" cy="61.7" r="2.5" class="fc-certified-dot" />
+<circle cx="602.0" cy="96.3" r="2.5" class="fc-certified-dot" />
+<circle cx="634.0" cy="78.0" r="2.5" class="fc-certified-dot" />
+<circle cx="666.0" cy="88.8" r="2.5" class="fc-certified-dot" />
+<circle cx="698.0" cy="112.8" r="2.5" class="fc-certified-dot" />
+<circle cx="410.0" cy="171.0" r="2.5" class="fc-appropriated-dot" />
+<circle cx="442.0" cy="164.8" r="2.5" class="fc-appropriated-dot" />
+<circle cx="474.0" cy="147.5" r="2.5" class="fc-appropriated-dot" />
+<circle cx="506.0" cy="132.9" r="2.5" class="fc-appropriated-dot" />
+<circle cx="538.0" cy="123.8" r="2.5" class="fc-appropriated-dot" />
+<circle cx="570.0" cy="120.0" r="2.5" class="fc-appropriated-dot" />
+<circle cx="602.0" cy="139.6" r="2.5" class="fc-appropriated-dot" />
+<circle cx="634.0" cy="116.9" r="2.5" class="fc-appropriated-dot" />
+<circle cx="666.0" cy="96.9" r="2.5" class="fc-appropriated-dot" />
+<circle cx="698.0" cy="128.2" r="2.5" class="fc-appropriated-dot" />
+<text class="fc-end-label fc-end-label--cert" x="703.0" y="108.8">Certified</text>
+<text class="fc-end-label fc-end-label--app" x="703.0" y="138.2">Appropriated</text>
+<text class="case-tick" x="53.0" y="245.0" text-anchor="end">$0M</text>
+<text class="case-tick" x="53.0" y="216.6" text-anchor="end">$2M</text>
+<text class="case-tick" x="53.0" y="188.1" text-anchor="end">$4M</text>
+<text class="case-tick" x="53.0" y="159.7" text-anchor="end">$6M</text>
+<text class="case-tick" x="53.0" y="131.2" text-anchor="end">$8M</text>
+<text class="case-tick" x="53.0" y="102.8" text-anchor="end">$10M</text>
+<text class="case-tick" x="53.0" y="74.3" text-anchor="end">$12M</text>
+<text class="case-tick" x="53.0" y="45.9" text-anchor="end">$14M</text>
+<text class="case-tick" x="58.0" y="266.0" text-anchor="middle">FY04</text>
+<text class="case-tick" x="186.0" y="266.0" text-anchor="middle">FY08</text>
+<text class="case-tick" x="314.0" y="266.0" text-anchor="middle">FY12</text>
+<text class="case-tick" x="442.0" y="266.0" text-anchor="middle">FY16</text>
+<text class="case-tick" x="570.0" y="266.0" text-anchor="middle">FY20</text>
+<text class="case-tick" x="698.0" y="266.0" text-anchor="middle">FY24</text>
+</svg>
+
+<p class="case-chart-caption">Two free-cash series for Marblehead. Navy: certified free cash available at the start of each fiscal year, from the DOR DLS Gateway Certified Free Cash report. Buoy: free cash appropriated into that year's operating budget, from Marblehead ACFRs. The gap between the lines is the certified cushion that was not spent that year. The certified pool grew from $2.1M (FY2004) to a peak of $13.4M (FY2019), then declined to $9.1M by FY2024. The appropriated draw rose from $5.0M (FY2015) to $10.2M (FY2023). By FY2024 the two lines were within about $1M of each other: the certified pool is being drawn down faster than it is being replenished.</p>
 
 ### Comparison table
 
