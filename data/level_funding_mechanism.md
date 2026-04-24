@@ -107,19 +107,84 @@ It is:
 This is more boring than "healthcare crisis," but it is what the data
 supports.
 
-## Open questions to investigate
+## Question 5 explored: where the +$20M of GF growth actually went
 
-These are the threads worth pulling next:
+Decomposed from the polygon-encoded data on `where-has-the-money-gone.html`,
+calibrated against the prose (which states FY15-FY26 totals matching the
+decoded values within +/-$0.05M). FY18 vs. FY24:
+
+| Category | FY18 ($M) | FY24 ($M) | Δ ($M) | % of GF growth | Growth rate |
+|---|---:|---:|---:|---:|---:|
+| Schools | 37.45 | 46.16 | +8.71 | 42.5% | +23.3% |
+| Debt payments | 7.15 | 11.00 | +3.85 | 18.8% | **+53.8%** |
+| Public Safety | 8.16 | 11.32 | +3.16 | 15.4% | **+38.8%** |
+| Everything else | 14.39 | 16.37 | +1.97 | 9.6% | +13.7% |
+| Pensions (budgetary) | 2.89 | 4.54 | +1.65 | 8.1% | **+57.1%** |
+| Health insurance | 11.74 | 12.88 | +1.15 | 5.6% | +9.8% |
+| **TOTAL** | **81.78** | **102.27** | **+20.49** | **100%** | **+25.1%** |
+
+**CPI growth FY18-FY24:** +24.9% (6-yr CAGR 3.78%/yr).
+
+### What this tells us
+
+- **Total GF growth (+25.1%) almost exactly matched CPI (+24.9%).** In
+  real-dollar terms the general fund was *flat per dollar of inflation*.
+  All "growth" was just keeping up with the cost of doing the same
+  things.
+
+- **Three categories outpaced CPI:** Debt payments (+53.8%), Pensions on
+  the budgetary line (+57.1%), and Public Safety (+38.8%). Debt growth
+  reflects voter-approved capital exclusions (Bell School, Mary Alley
+  Building, MHS roof/HVAC), not operating-budget pressure. Pension
+  budgetary line is small in absolute terms ($1.65M Δ). Public Safety
+  growth is mostly Police and Fire wages with collective bargaining
+  COLAs.
+
+- **Schools (the largest absolute mover, +$8.71M) grew slightly *below*
+  CPI** at +23.3% — even while enrollment dropped ~16%. This means
+  per-pupil real spending modestly increased. Schools were not held
+  flat; but they did not run away either.
+
+- **The squeeze concentrates in "Everything else"** (+13.7% over 6
+  years vs CPI +24.9%) — DPW, library, Council on Aging, general
+  government, state and county charges, public works support, etc.
+  Real-dollar decline of about 9 percentage points over the window.
+  This bucket is where the documented attrition (Engineering eliminated,
+  DPW lost 12, etc.) actually lives.
+
+### Methodology notes
+
+- "Health insurance" in the decoded chart is $11.74M FY18, lower than
+  the FinCom-reported group insurance budget of $13.12M FY18. The
+  chart appears to use a tighter definition (perhaps employee health
+  premiums only, excluding self-insurance trust contributions or OPEB
+  pay-as-you-go). For a published chart we would need to reconcile
+  with the FinCom line. The directional finding (HC growing slower
+  than CPI) holds under either definition.
+- "Pensions (budgetary)" is $2.89M FY18, far below the $11.83M PERAC
+  assessment in `pension_expenditure_FY15-24.csv`. The chart's
+  "budgetary basis" likely shows only the General Fund operating
+  appropriation for pension-related items (employer share, COLA
+  funding, OPEB pay-go) and excludes the actuarial Essex Regional
+  contribution which may be carried as a separate fund.
+- All decoded numbers carry +/-$0.05M precision per the source CSV's
+  notes column. Re-extract from ACFR General Fund schedules for any
+  published claim.
+
+## Other open questions to investigate
 
 1. **Department-level operating budget growth FY18-FY27.** Without
-   benefits and pensions baked in, did operating department budgets
-   actually stay flat in nominal terms? Need DPW, Fire, Police,
-   Engineering, Library, etc. line-by-line from FinCom Annual Reports.
+   benefits and pensions baked in, did the "Everything else" bucket's
+   sub-departments (DPW, library, COA, general government) actually
+   stay flat in nominal terms? Need line-by-line from FinCom Annual
+   Reports for FY18-FY26.
 
 2. **Wage growth from collective bargaining.** COLAs in MOAs/MOUs run
    2-3.5%/yr. With ~190 town employees on payroll, that's $300k-$500k
-   per year of structural cost growth on a flat top-line. Where did
-   that come from in the budget?
+   per year of structural cost growth on a flat top-line. The Public
+   Safety +38.8% growth strongly suggests wages are doing most of the
+   work in that bucket; need to confirm with department-level salary
+   detail.
 
 3. **The FY27 cliff decomposition.** What does the $8.47M FY27 deficit
    actually consist of? How much is healthcare jump, how much is the
@@ -130,11 +195,9 @@ These are the threads worth pulling next:
    the same pattern (HC and pensions sub-CPI, operations squeezed by
    inflation)? Or is Marblehead structurally different?
 
-5. **What grew above CPI in the budget?** Total general fund grew from
-   $81.8M to $102.3M (+25% over 6 years, ~3.8%/yr) — that's right at
-   CPI. Where did the +$20M go if not HC and pensions? Possibilities:
-   schools (+$12M-ish?), debt service from exclusions (Bell, Mary
-   Alley, MHS roof), one-time ARPA, growing local receipts.
+5. **Reconcile the "Health insurance" and "Pensions" chart numbers
+   with FinCom assessment numbers.** Resolves the methodology note
+   above and would let us publish a clean version of this analysis.
 
 ## Sources used in this analysis
 
