@@ -545,6 +545,7 @@
       nextBtn.type = 'button';
       nextBtn.className = 'explore-stats-next';
       nextBtn.textContent = 'Next \u2192';
+      nextBtn.title = 'Jump to next unanswered question';
       nextBtn.addEventListener('click', function () {
         var next = topicOrder.filter(function (t) { return !selections[t]; })[0];
         if (next) switchTopic(next);
