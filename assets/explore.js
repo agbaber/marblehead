@@ -2245,4 +2245,84 @@
   fetchAllCounts(topicOrder);
   updateStatsStrip();
 
+  // ── Mini override calculator (injected into every question screen) ──
+  (function miniCalc() {
+    var AVG = 1291507;
+    var KEY = 'mh_override_calc_assessed_value';
+    // Year-1 cost per tier at average assessed value (from April 8 presentation)
+    var R = { 1: 168, 2: 362, 3: 556 };
+    var LABELS = { 1: '$9M', 2: '$12M', 3: '$15M' };
+
+    function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+    function parse(raw) {
+      var n = parseFloat(String(raw).replace(/[^0-9.]/g, ''));
+      return (n > 0 && isFinite(n)) ? n : AVG;
+    }
+    function load() {
+      try { var n = parseFloat(localStorage.getItem(KEY)); return (n > 0 && isFinite(n)) ? n : null; }
+      catch (e) { return null; }
+    }
+    function save(v) { try { localStorage.setItem(KEY, String(v)); } catch (e) {} }
+
+    var calcs = [];
+
+    document.querySelectorAll('.question-screen').forEach(function (screen) {
+      var el = document.createElement('div');
+      el.className = 'mini-calc';
+      el.innerHTML =
+        '<div class="mini-calc-header">' +
+          '<span class="mini-calc-title">What this costs your household (Year 1)</span>' +
+          '<div class="mini-calc-input">' +
+            '<label>Home value</label>' +
+            '<input type="text" inputmode="numeric" autocomplete="off">' +
+          '</div>' +
+        '</div>' +
+        '<div class="mini-calc-tiers">' +
+          '<div class="mini-calc-tier" data-t="1"><div class="mini-calc-tier-label">Tier 1 ' + LABELS[1] + '</div><div class="mini-calc-tier-cost"><span class="mc-mo"></span><span class="mini-calc-tier-unit">/mo</span></div><div class="mini-calc-tier-annual"><span class="mc-yr"></span>/yr</div></div>' +
+          '<div class="mini-calc-tier" data-t="2"><div class="mini-calc-tier-label">Tier 2 ' + LABELS[2] + '</div><div class="mini-calc-tier-cost"><span class="mc-mo"></span><span class="mini-calc-tier-unit">/mo</span></div><div class="mini-calc-tier-annual"><span class="mc-yr"></span>/yr</div></div>' +
+          '<div class="mini-calc-tier" data-t="3"><div class="mini-calc-tier-label">Tier 3 ' + LABELS[3] + '</div><div class="mini-calc-tier-cost"><span class="mc-mo"></span><span class="mini-calc-tier-unit">/mo</span></div><div class="mini-calc-tier-annual"><span class="mc-yr"></span>/yr</div></div>' +
+        '</div>' +
+        '<a class="mini-calc-link" href="charts/override_calculator.html">Full calculator with phase-in and income context &rarr;</a>';
+
+      // Insert before the last </section> child (after all evidence blocks)
+      screen.appendChild(el);
+      calcs.push(el);
+    });
+
+    function updateAll(assessed) {
+      calcs.forEach(function (el) {
+        [1, 2, 3].forEach(function (t) {
+          var annual = R[t] * (assessed / AVG);
+          var tier = el.querySelector('[data-t="' + t + '"]');
+          tier.querySelector('.mc-mo').textContent = fmt(annual / 12);
+          tier.querySelector('.mc-yr').textContent = fmt(annual);
+        });
+      });
+    }
+
+    // Sync all inputs
+    var inputs = calcs.map(function (el) { return el.querySelector('input'); });
+    var stored = load();
+    var initial = stored || AVG;
+
+    inputs.forEach(function (inp) {
+      inp.value = '$' + Math.round(initial).toLocaleString('en-US');
+      inp.addEventListener('input', function () {
+        var v = parse(inp.value);
+        save(v);
+        // Sync other inputs
+        inputs.forEach(function (other) {
+          if (other !== inp) other.value = '$' + Math.round(v).toLocaleString('en-US');
+        });
+        updateAll(v);
+      });
+      inp.addEventListener('blur', function () {
+        var v = parse(inp.value);
+        inp.value = '$' + Math.round(v).toLocaleString('en-US');
+      });
+    });
+
+    updateAll(initial);
+  })();
+
 })();

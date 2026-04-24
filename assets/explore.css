@@ -1032,6 +1032,111 @@
   .evidence-point li:last-child { margin-bottom: 0; }
   .evidence-point li strong { color: var(--text); }
 
+  /* ── Mini override calculator (injected into every question) ── */
+  .mini-calc {
+    background: color-mix(in srgb, var(--c-navy) 5%, var(--surface));
+    border: 1px solid var(--divider);
+    border-radius: 12px;
+    padding: 14px 18px 16px;
+    margin: 24px 0 8px;
+  }
+  .mini-calc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .mini-calc-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+  }
+  .mini-calc-input {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mini-calc-input label {
+    font-size: 11px;
+    color: var(--text-subtle);
+    white-space: nowrap;
+  }
+  .mini-calc-input input {
+    width: 130px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-variant-numeric: tabular-nums;
+    font-family: var(--font-sans);
+  }
+  .mini-calc-input input:focus {
+    outline: none;
+    border-color: var(--link);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--link) 20%, transparent);
+  }
+  .mini-calc-tiers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .mini-calc-tier {
+    text-align: center;
+    padding: 8px 6px;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--divider);
+  }
+  .mini-calc-tier-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-subtle);
+    margin-bottom: 4px;
+  }
+  .mini-calc-tier-cost {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+  .mini-calc-tier-unit {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-subtle);
+  }
+  .mini-calc-tier-annual {
+    font-size: 11px;
+    color: var(--text-subtle);
+    font-variant-numeric: tabular-nums;
+    margin-top: 2px;
+  }
+  .mini-calc-link {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: var(--link);
+    margin-top: 10px;
+  }
+  @media (max-width: 600px) {
+    .mini-calc { padding: 12px 14px 14px; }
+    .mini-calc-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .mini-calc-tiers { grid-template-columns: 1fr; gap: 6px; }
+    .mini-calc-tier { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; text-align: left; }
+    .mini-calc-tier-label { margin-bottom: 0; }
+    .mini-calc-tier-cost { font-size: 16px; }
+  }
+
   .evidence-caveat {
     font-size: 12px;
     color: var(--text-subtle);
