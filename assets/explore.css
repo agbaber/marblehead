@@ -261,7 +261,7 @@
 
   /* ── Tools row on landing ── */
   .explore-tools {
-    margin-top: 20px;
+    margin: 20px 0;
     padding-top: 16px;
     border-top: 1px solid var(--divider);
   }
@@ -316,6 +316,17 @@
   }
   @media (max-width: 400px) {
     .explore-tools-row { grid-template-columns: 1fr; }
+  }
+  .explore-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+    text-align: center;
+    margin: 0 0 10px;
+    padding-top: 16px;
+    border-top: 1px solid var(--divider);
   }
 
   /* ── Recent meetings ── */
@@ -1618,6 +1629,24 @@
   }
   .explore-stats-msg--complete {
     color: var(--c-teal);
+  }
+  .explore-stats-next {
+    font: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--c-teal);
+    background: none;
+    border: 1px solid var(--c-teal);
+    border-radius: 12px;
+    padding: 2px 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .explore-stats-next:hover {
+    background: var(--c-teal);
+    color: #fff;
   }
   /* Row 2: engagement + reset */
   .explore-stats-detail {
