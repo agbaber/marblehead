@@ -1,18 +1,46 @@
-name: Smoke Tests
+name: Site Tests
 
 on:
   pull_request:
     branches: [main]
+  merge_group:
 
 jobs:
   smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm ci
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Build site with Jekyll
+        run: |
+          gem install 'jekyll:3.10.0' kramdown-parser-gfm
+          jekyll build
+
+      - run: npm install
       - run: npx playwright install --with-deps chromium
-      - run: node tests/smoke-test.mjs
+
+      - name: Start local server
+        run: npx serve _site -p 4000 &
+
+      - name: Wait for server
+        run: npx wait-on http://localhost:4000 --timeout 15000
+
+      - name: Run smoke tests
+        env:
+          SITE: http://localhost:4000
+        run: node tests/smoke-test.mjs
+
+      - name: Run explore tests (non-blocking)
+        continue-on-error: true
+        env:
+          SITE: http://localhost:4000
+        run: node tests/explore-test.mjs

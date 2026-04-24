@@ -1,0 +1,108 @@
+name: PR Preview
+
+# Build the Jekyll site for each pull request and deploy it to a
+# Cloudflare Pages preview URL so reviewers (and the author) can see
+# the change in a browser without pulling the branch locally.
+#
+# Setup (one-time, outside this workflow):
+#   1. Create an API token with "Cloudflare Pages - Edit" permission.
+#   2. Add two repo secrets:
+#        CLOUDFLARE_API_KEY     - the scoped API token from step 1
+#                                 (named API_KEY for historical reasons;
+#                                 the value is a scoped token, not the
+#                                 legacy Global API Key)
+#        CLOUDFLARE_ACCOUNT_ID  - your Cloudflare account ID
+#
+# The workflow creates the "marbleheaddata-preview" Pages project via
+# the Cloudflare API on first run; no dashboard click-through needed.
+# Every PR gets a preview URL posted as a sticky comment, updated
+# in place on each new push.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+  # Declared so the merge queue treats this workflow's checks as reported.
+  # The preview job itself is skipped on merge_group (see `if:` below) since
+  # deploying a preview for a queued merge commit is not useful; GitHub
+  # counts the skipped job as success for required-status purposes.
+  merge_group:
+
+# A single deploy per PR; a new push cancels an in-flight run so the
+# comment always reflects the latest commit.
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # Needed so the "post preview URL" step can comment on the PR.
+    permissions:
+      contents: read
+      pull-requests: write
+      deployments: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Build site with Jekyll
+        run: |
+          gem install 'jekyll:3.10.0' kramdown-parser-gfm
+          jekyll build
+
+      # Idempotent: GET first to see if the project exists, POST to create
+      # it if not. This avoids guessing which error code CF returns when a
+      # project already exists (the code has shifted across API versions).
+      - name: Ensure Pages project exists
+        env:
+          CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_KEY }}
+        run: |
+          status=$(curl -sS -o /tmp/cf-get.json -w "%{http_code}" \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/pages/projects/marbleheaddata-preview" \
+            -H "Authorization: Bearer ${CF_TOKEN}")
+          if [ "$status" = "200" ]; then
+            echo "Project already exists."
+            exit 0
+          fi
+          echo "Project not found (HTTP $status). Creating..."
+          body=$(curl -sS -X POST \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/pages/projects" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data '{"name":"marbleheaddata-preview","production_branch":"main"}')
+          echo "$body"
+          success=$(echo "$body" | jq -r '.success')
+          if [ "$success" != "true" ]; then
+            echo "Project create failed."
+            exit 1
+          fi
+          echo "Project created."
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_KEY }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # --branch uses the PR branch name so Cloudflare gives each
+          # branch a stable alias URL (e.g. claude-review-debate-flow).
+          command: pages deploy _site --project-name=marbleheaddata-preview --branch=${{ github.head_ref }} --commit-dirty=true
+
+      - name: Post preview URL to PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: preview-url
+          message: |
+            ### Preview
+            **Branch URL:** ${{ steps.deploy.outputs.pages-deployment-alias-url }}
+            **This commit:** ${{ steps.deploy.outputs.deployment-url }}
+
+            Updated for commit ${{ github.event.pull_request.head.sha }}.
