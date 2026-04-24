@@ -2273,7 +2273,8 @@
     ballotWidget.classList.toggle('locked', !answered);
 
     if (ballotLockMsg) {
-      ballotLockMsg.textContent = answered ? '' : 'Answer all questions to unlock';
+      var linkEl = document.getElementById('ballotLockLink');
+      if (linkEl) linkEl.textContent = answered ? '' : 'Answer all questions to unlock';
     }
   }
 
@@ -2319,6 +2320,18 @@
       ballotNudge.classList.remove('visible');
     }
   }
+
+  // Jump to the first unanswered question (or first question if none answered)
+  function goToNextUnanswered(e) {
+    e.preventDefault();
+    var next = topicOrder.find(function (t) { return !selections[t]; }) || topicOrder[0];
+    switchTopic(next);
+    window.scrollTo(0, 0);
+  }
+  var ballotLockLink = document.getElementById('ballotLockLink');
+  var ballotCta = document.getElementById('ballotCta');
+  if (ballotLockLink) ballotLockLink.addEventListener('click', goToNextUnanswered);
+  if (ballotCta) ballotCta.addEventListener('click', goToNextUnanswered);
 
   if (ballotWidget) {
     ballotWidget.addEventListener('click', function (e) {
