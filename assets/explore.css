@@ -1547,7 +1547,6 @@
   .explore-stats-next:hover {
     background: var(--c-teal);
     color: #fff;
-    border-color: var(--c-teal);
   }
   /* Row 2: engagement + reset */
   .explore-stats-detail {
