@@ -317,6 +317,17 @@
   @media (max-width: 400px) {
     .explore-tools-row { grid-template-columns: 1fr; }
   }
+  .explore-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+    text-align: center;
+    margin: 20px 0 10px;
+    padding-top: 16px;
+    border-top: 1px solid var(--divider);
+  }
 
   /* Share strip on landing */
   .explore-share-strip {
