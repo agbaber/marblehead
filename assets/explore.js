@@ -544,6 +544,15 @@
       msgEl.className = 'explore-stats-msg explore-stats-msg--complete';
     }
 
+    // Hide the detail row (views/shares) when everything is zero -- avoids a
+    // wall of zeros for first-time visitors.
+    var detailEl = statsEl.querySelector('.explore-stats-detail');
+    if (detailEl) {
+      var yourViews = getYourViews(), yourShares = getYourShares();
+      var hasActivity = yourViews > 0 || yourShares > 0 || allViews > 0 || allShares > 0;
+      detailEl.style.display = hasActivity ? '' : 'none';
+    }
+
     statsEl.style.display = '';
   }
 

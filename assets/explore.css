@@ -271,21 +271,18 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text-subtle);
-    margin: 0 0 10px;
-    text-align: center;
+    margin: 0 0 8px;
   }
   .explore-tools-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 8px;
   }
   .explore-tool-card {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 6px;
-    padding: 16px 14px;
+    gap: 8px;
+    padding: 8px 14px;
     background: var(--surface);
     border: 1.5px solid var(--border);
     border-radius: var(--radius-md);
@@ -293,29 +290,36 @@
     transition: all 0.15s ease;
     text-decoration: none;
     color: var(--text);
+    flex: 1 1 auto;
+    min-width: 0;
   }
   .explore-tool-card:hover {
     border-color: var(--c-teal);
     box-shadow: var(--shadow-sm);
   }
   .explore-tool-icon {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     color: var(--c-teal);
     flex-shrink: 0;
   }
+  .explore-tool-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
   .explore-tool-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     color: var(--text);
   }
   .explore-tool-desc {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text-muted);
-    line-height: 1.4;
+    line-height: 1.3;
   }
   @media (max-width: 400px) {
-    .explore-tools-row { grid-template-columns: 1fr; }
+    .explore-tools-row { flex-direction: column; }
   }
 
   /* Share strip on landing */
