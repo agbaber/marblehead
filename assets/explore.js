@@ -1706,7 +1706,7 @@
     });
   });
 
-  /* ── Inject "This resonates" / "Not for me" action buttons ── */
+  /* ── Inject "This resonates" / "Try another" action buttons ── */
   document.querySelectorAll('.evidence').forEach(function (panel) {
     var ev = panel.dataset.evidence; // e.g. "override-a"
     if (!ev) return;
@@ -1728,7 +1728,7 @@
       // Scroll back to the question so the reader can see the selected
       // state on the answer card, the Next question button, and (on a
       // first pick) the tutorial -- all of which live above the evidence
-      // panel and would otherwise be off-screen. Mirrors "Not for me".
+      // panel and would otherwise be off-screen. Mirrors "Try another".
       var screen = document.querySelector('.question-screen[data-topic="' + question + '"]');
       if (screen) {
         screen.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1738,9 +1738,9 @@
     var noBtn = document.createElement('button');
     noBtn.type = 'button';
     noBtn.className = 'evidence-action evidence-action--no';
-    noBtn.textContent = 'Not for me';
+    noBtn.textContent = 'Try another';
     noBtn.addEventListener('click', function () {
-      // If this answer is currently the user's pick, "Not for me" should
+      // If this answer is currently the user's pick, "Try another" should
       // also clear it, not just hide the evidence. Server tally is left
       // alone (matches the checkmark-to-unpick flow).
       if (selections[question] === answer) {
