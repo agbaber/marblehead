@@ -43,6 +43,14 @@ export async function handleRequest(request, env) {
     if (request.method === 'POST') return handleVotePost(request, env);
   }
 
+  if (url.pathname === '/api/ballot-stance') {
+    if (request.method === 'POST') return handleBallotStance(request, env);
+  }
+
+  if (url.pathname === '/api/ballot-crosstabs') {
+    if (request.method === 'GET') return handleBallotCrosstabs(request, env);
+  }
+
   // Neighbor verification network endpoints.
   if (url.pathname.startsWith('/api/verify/')) {
     const verifyResponse = await handleVerify(request, env, url);
@@ -341,6 +349,97 @@ async function handleVotePost(request, env) {
   const picks = await getPickCounts(env, topic);
   const moves = await getMoveCount(env, topic);
   return new Response(JSON.stringify({ picks, moves, your_vote: answer }), { status: 200, headers: corsHeaders(env) });
+}
+
+const VALID_BALLOT = ['yes', 'no'];
+
+/**
+ * POST /api/ballot-stance -- store user's 4 ballot votes.
+ * Body: { q1a: "yes", q1b: "yes", q1c: "yes", trash: "no" }
+ */
+async function handleBallotStance(request, env) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return new Response(JSON.stringify({ error: 'invalid body' }), { status: 400, headers: corsHeaders(env) });
+  }
+
+  const { q1a, q1b, q1c, trash } = body || {};
+  if (!VALID_BALLOT.includes(q1a) || !VALID_BALLOT.includes(q1b) ||
+      !VALID_BALLOT.includes(q1c) || !VALID_BALLOT.includes(trash)) {
+    return new Response(JSON.stringify({ error: 'each field must be "yes" or "no"' }), { status: 400, headers: corsHeaders(env) });
+  }
+
+  const clientIp = request.headers.get('CF-Connecting-IP') || request.headers.get('X-Forwarded-For') || 'unknown';
+  const ipHash = await hashIp(clientIp);
+  const now = Date.now();
+
+  await env.DB.prepare(
+    `INSERT INTO ballot_stances (ip_hash, q1a, q1b, q1c, trash, updated_at)
+     VALUES (?, ?, ?, ?, ?, ?)
+     ON CONFLICT(ip_hash) DO UPDATE SET q1a=?, q1b=?, q1c=?, trash=?, updated_at=?`
+  ).bind(ipHash, q1a, q1b, q1c, trash, now, q1a, q1b, q1c, trash, now).run();
+
+  return new Response(JSON.stringify({ ok: true, stance: { q1a, q1b, q1c, trash } }), {
+    status: 200, headers: corsHeaders(env)
+  });
+}
+
+/**
+ * Classify a ballot stance row into its override group.
+ * Highest tier voted Yes on determines the group.
+ */
+function classifyStance(row) {
+  if (row.q1a === 'yes') return 'yes15';
+  if (row.q1b === 'yes') return 'yes12';
+  if (row.q1c === 'yes') return 'yes9';
+  return 'no';
+}
+
+/**
+ * GET /api/ballot-crosstabs?topic=override
+ * Returns pick distributions for each stance group + trash group.
+ */
+async function handleBallotCrosstabs(request, env) {
+  const url = new URL(request.url);
+  const topic = url.searchParams.get('topic');
+  if (!topic) {
+    return new Response(JSON.stringify({ error: 'missing topic' }), { status: 400, headers: corsHeaders(env) });
+  }
+
+  // Join ballot_stances with votes to get each voter's stance + pick for this topic.
+  const { results } = await env.DB.prepare(
+    `SELECT b.q1a, b.q1b, b.q1c, b.trash, v.answer
+     FROM ballot_stances b
+     INNER JOIN votes v ON b.ip_hash = v.ip_hash
+     WHERE v.topic = ?`
+  ).bind(topic).all();
+
+  // Build distributions per override group and per trash stance.
+  const groups = { no: {}, yes9: {}, yes12: {}, yes15: {} };
+  const trashGroups = { yes: {}, no: {} };
+  VALID_ANSWERS.forEach(function (a) {
+    groups.no[a] = 0; groups.yes9[a] = 0; groups.yes12[a] = 0; groups.yes15[a] = 0;
+    trashGroups.yes[a] = 0; trashGroups.no[a] = 0;
+  });
+
+  for (const row of results) {
+    const g = classifyStance(row);
+    if (groups[g] && VALID_ANSWERS.includes(row.answer)) {
+      groups[g][row.answer]++;
+    }
+    const tg = row.trash === 'yes' ? 'yes' : 'no';
+    if (VALID_ANSWERS.includes(row.answer)) {
+      trashGroups[tg][row.answer]++;
+    }
+  }
+
+  return new Response(JSON.stringify({
+    override: groups,
+    trash: trashGroups,
+    total_voters: results.length
+  }), { status: 200, headers: corsHeaders(env) });
 }
 
 /** Proxy the production homepage, rewriting API_BASE to point at this worker. */

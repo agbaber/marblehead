@@ -65,6 +65,64 @@
 
     {% include explore-synthesis.html %}
 
+    <!-- Ballot widget: locked until all questions answered -->
+    <div class="ballot-widget" id="ballotWidget">
+      <div class="ballot-widget-lock-overlay" id="ballotLock">
+        <span class="ballot-widget-lock-icon" aria-hidden="true">&#x1F512;</span>
+        <span class="ballot-widget-lock-msg"><strong>Answer all questions</strong> to unlock your practice ballot and see how your picks compare to others who voted the same way.</span>
+      </div>
+      <p class="ballot-widget-label">Your ballot &middot; June 9, 2026</p>
+      <div class="ballot-widget-rows">
+        <div class="ballot-widget-row" data-ballot="q1a">
+          <span class="ballot-widget-q">1A</span>
+          <div class="ballot-widget-desc">
+            <span class="ballot-widget-amount">$15M</span>
+            <span class="ballot-widget-tier">Invest</span>
+          </div>
+          <div class="ballot-widget-choices">
+            <button type="button" class="ballot-widget-btn" data-vote="yes">Yes</button>
+            <button type="button" class="ballot-widget-btn" data-vote="no">No</button>
+          </div>
+        </div>
+        <div class="ballot-widget-row" data-ballot="q1b">
+          <span class="ballot-widget-q">1B</span>
+          <div class="ballot-widget-desc">
+            <span class="ballot-widget-amount">$12M</span>
+            <span class="ballot-widget-tier">Stabilize</span>
+          </div>
+          <div class="ballot-widget-choices">
+            <button type="button" class="ballot-widget-btn" data-vote="yes">Yes</button>
+            <button type="button" class="ballot-widget-btn" data-vote="no">No</button>
+          </div>
+        </div>
+        <div class="ballot-widget-row" data-ballot="q1c">
+          <span class="ballot-widget-q">1C</span>
+          <div class="ballot-widget-desc">
+            <span class="ballot-widget-amount">$9M</span>
+            <span class="ballot-widget-tier">Restore</span>
+          </div>
+          <div class="ballot-widget-choices">
+            <button type="button" class="ballot-widget-btn" data-vote="yes">Yes</button>
+            <button type="button" class="ballot-widget-btn" data-vote="no">No</button>
+          </div>
+        </div>
+        <div class="ballot-widget-row" data-ballot="trash">
+          <span class="ballot-widget-q">2</span>
+          <div class="ballot-widget-desc">
+            <span class="ballot-widget-amount">$2.3M</span>
+            <span class="ballot-widget-tier">Curbside Trash</span>
+          </div>
+          <div class="ballot-widget-choices">
+            <button type="button" class="ballot-widget-btn" data-vote="yes">Yes</button>
+            <button type="button" class="ballot-widget-btn" data-vote="no">No</button>
+          </div>
+        </div>
+      </div>
+      <div class="ballot-widget-nudge" id="ballotNudge"></div>
+      <button type="button" class="ballot-widget-submit" id="ballotSubmit">See how your picks compare</button>
+      <div class="ballot-widget-submitted" id="ballotSubmitted">Comparison unlocked on each question above</div>
+    </div>
+
     <div class="explore-tools">
       <p class="explore-tools-label">Run the numbers yourself</p>
       <div class="explore-tools-row">

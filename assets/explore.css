@@ -533,6 +533,237 @@
   }
   .explore-shared-fresh:hover { text-decoration: underline; }
 
+  /* ── Ballot widget (locked until all questions answered) ── */
+  .ballot-widget {
+    margin-top: 24px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+  }
+  .ballot-widget.unlocked {
+    border-color: var(--c-teal);
+  }
+  .ballot-widget-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-subtle);
+    margin: 0 0 12px;
+    text-align: center;
+  }
+  .ballot-widget-lock-overlay {
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--surface) 80%, transparent);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    gap: 8px;
+    transition: opacity 0.3s ease;
+  }
+  .ballot-widget.unlocked .ballot-widget-lock-overlay {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .ballot-widget-lock-icon {
+    font-size: 24px;
+    opacity: 0.5;
+  }
+  .ballot-widget-lock-msg {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.5;
+    max-width: 260px;
+  }
+  .ballot-widget-lock-msg strong {
+    color: var(--text);
+  }
+  .ballot-widget-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .ballot-widget-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--border) 30%, transparent);
+    transition: background 0.15s ease;
+  }
+  .ballot-widget-row.has-vote {
+    background: color-mix(in srgb, var(--c-teal) 6%, var(--surface));
+  }
+  .ballot-widget-q {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-subtle);
+    min-width: 28px;
+    flex-shrink: 0;
+  }
+  .ballot-widget-desc {
+    flex: 1;
+    min-width: 0;
+  }
+  .ballot-widget-amount {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .ballot-widget-tier {
+    font-size: 11px;
+    color: var(--text-muted);
+    display: block;
+  }
+  .ballot-widget-choices {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  .ballot-widget-btn {
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 16px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .ballot-widget-btn:hover {
+    border-color: var(--text-subtle);
+  }
+  .ballot-widget-btn.voted {
+    background: var(--c-teal);
+    border-color: var(--c-teal);
+    color: #fff;
+  }
+  .ballot-widget-btn[data-vote="no"].voted {
+    background: var(--c-brass);
+    border-color: var(--c-brass);
+    color: #fff;
+  }
+  .ballot-widget-nudge {
+    margin: 10px 0 0;
+    padding: 10px 14px;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--c-brass);
+    background: color-mix(in srgb, var(--c-brass) 8%, var(--surface));
+    border-left: 3px solid var(--c-brass);
+    border-radius: 0 8px 8px 0;
+    display: none;
+  }
+  .ballot-widget-nudge.visible {
+    display: block;
+  }
+  .ballot-widget-submit {
+    display: none;
+    margin: 14px auto 0;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 28px;
+    border-radius: 20px;
+    border: none;
+    background: var(--c-teal);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .ballot-widget-submit:hover {
+    filter: brightness(1.1);
+  }
+  .ballot-widget.all-voted .ballot-widget-submit {
+    display: block;
+  }
+  .ballot-widget-submitted {
+    display: none;
+    text-align: center;
+    font-size: 13px;
+    color: var(--c-teal);
+    font-weight: 600;
+    margin-top: 12px;
+  }
+  .ballot-widget.submitted .ballot-widget-submit { display: none; }
+  .ballot-widget.submitted .ballot-widget-submitted { display: block; }
+
+  /* ── Cross-tab comparison bar (shown per question after ballot submitted) ── */
+  .crosstab-bar {
+    margin: 10px 0 0;
+    padding: 10px 14px;
+    background: color-mix(in srgb, var(--c-navy) 5%, var(--surface));
+    border-radius: 8px;
+    display: none;
+  }
+  .crosstab-bar.visible { display: block; }
+  .crosstab-bar-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-subtle);
+    margin-bottom: 6px;
+  }
+  .crosstab-bar-track {
+    height: 16px;
+    border-radius: 3px;
+    display: flex;
+    overflow: hidden;
+    background: var(--border);
+  }
+  .crosstab-bar-seg {
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .crosstab-bar-seg.ct-a { background: var(--c-teal); }
+  .crosstab-bar-seg.ct-b { background: var(--c-brass); }
+  .crosstab-bar-seg.ct-c { background: var(--c-buoy); }
+  .crosstab-bar-seg.ct-u { background: var(--text-faint); }
+  .crosstab-bar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .crosstab-bar-legend span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .crosstab-bar-legend .ct-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .ct-dot-a { background: var(--c-teal); }
+  .ct-dot-b { background: var(--c-brass); }
+  .ct-dot-c { background: var(--c-buoy); }
+  .ct-dot-u { background: var(--text-faint); }
+  @media (max-width: 480px) {
+    .ballot-widget { padding: 14px; }
+    .ballot-widget-row { flex-wrap: wrap; gap: 6px; }
+    .ballot-widget-choices { width: 100%; justify-content: flex-end; }
+  }
+
   /* Hide landing once a topic is active */
   .explore-stage.has-topic .explore-landing { display: none; }
   /* Hide question header in landing state */

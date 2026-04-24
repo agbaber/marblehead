@@ -2241,6 +2241,286 @@
     suppressURLWrite = false;
   });
 
+  // ── Ballot widget: lock/unlock, cascade nudge, submit, cross-tabs ──
+
+  var ballotWidget = document.getElementById('ballotWidget');
+  var ballotNudge = document.getElementById('ballotNudge');
+  var ballotSubmitBtn = document.getElementById('ballotSubmit');
+  var ballotVotes = {}; // { q1a: 'yes'|'no', q1b: ..., q1c: ..., trash: ... }
+  var ballotSubmitted = false;
+  var BALLOT_KEYS = ['q1a', 'q1b', 'q1c', 'trash'];
+
+  // Restore persisted ballot state
+  try {
+    var saved = JSON.parse(localStorage.getItem('explore-ballot') || '{}');
+    if (saved && typeof saved === 'object') ballotVotes = saved;
+  } catch (e) {}
+  try {
+    ballotSubmitted = localStorage.getItem('explore-ballot-submitted') === '1';
+  } catch (e) {}
+
+  function persistBallot() {
+    localStorage.setItem('explore-ballot', JSON.stringify(ballotVotes));
+  }
+
+  function allQuestionsAnswered() {
+    return topicOrder.every(function (t) { return !!selections[t]; });
+  }
+
+  function updateBallotLock() {
+    if (!ballotWidget) return;
+    if (allQuestionsAnswered()) {
+      ballotWidget.classList.add('unlocked');
+    } else {
+      ballotWidget.classList.remove('unlocked');
+      var remaining = topicOrder.filter(function (t) { return !selections[t]; }).length;
+      var msg = document.querySelector('#ballotLock .ballot-widget-lock-msg');
+      if (msg) msg.innerHTML = '<strong>' + remaining + ' question' + (remaining === 1 ? '' : 's') + ' left</strong> to unlock your practice ballot.';
+    }
+  }
+
+  function allBallotVoted() {
+    return BALLOT_KEYS.every(function (k) { return ballotVotes[k] === 'yes' || ballotVotes[k] === 'no'; });
+  }
+
+  function updateBallotUI() {
+    if (!ballotWidget) return;
+    updateBallotLock();
+
+    // Restore button states from ballotVotes
+    document.querySelectorAll('.ballot-widget-row').forEach(function (row) {
+      var key = row.dataset.ballot;
+      var vote = ballotVotes[key];
+      row.classList.toggle('has-vote', !!vote);
+      row.querySelectorAll('.ballot-widget-btn').forEach(function (btn) {
+        btn.classList.toggle('voted', btn.dataset.vote === vote);
+      });
+    });
+
+    // Show/hide submit button
+    ballotWidget.classList.toggle('all-voted', allBallotVoted() && !ballotSubmitted);
+    ballotWidget.classList.toggle('submitted', ballotSubmitted);
+
+    // Cascade nudge
+    checkCascadeNudge();
+  }
+
+  function checkCascadeNudge() {
+    // Find gaps: voted Yes on a higher tier but No on a lower one
+    var yes1a = ballotVotes.q1a === 'yes';
+    var yes1b = ballotVotes.q1b === 'yes';
+    var no1b = ballotVotes.q1b === 'no';
+    var no1c = ballotVotes.q1c === 'no';
+
+    var nudgeMsg = '';
+    if (yes1a && (no1b || no1c)) {
+      nudgeMsg = 'You voted Yes on $15M but No on a lower tier. The highest passing tier wins. If $15M falls short, voting Yes on $12M and $9M keeps them as a fallback.';
+    } else if (yes1b && no1c) {
+      nudgeMsg = 'You voted Yes on $12M but No on $9M. If $12M doesn\'t pass, voting Yes on $9M keeps it as a fallback.';
+    }
+
+    if (nudgeMsg) {
+      ballotNudge.textContent = nudgeMsg;
+      ballotNudge.classList.add('visible');
+    } else {
+      ballotNudge.classList.remove('visible');
+    }
+  }
+
+  // Click handler for ballot Yes/No buttons
+  if (ballotWidget) {
+    ballotWidget.addEventListener('click', function (e) {
+      if (ballotSubmitted) return;
+      var btn = e.target.closest('.ballot-widget-btn');
+      if (!btn) return;
+      var row = btn.closest('.ballot-widget-row');
+      if (!row) return;
+      if (!ballotWidget.classList.contains('unlocked')) return;
+
+      var key = row.dataset.ballot;
+      var vote = btn.dataset.vote;
+
+      // Toggle: clicking the same vote again clears it
+      if (ballotVotes[key] === vote) {
+        delete ballotVotes[key];
+      } else {
+        ballotVotes[key] = vote;
+      }
+      persistBallot();
+      updateBallotUI();
+
+      if (typeof posthog !== 'undefined') {
+        posthog.capture('ballot_widget_vote', { question: key, vote: vote });
+      }
+    });
+  }
+
+  // Submit handler
+  if (ballotSubmitBtn) {
+    ballotSubmitBtn.addEventListener('click', function () {
+      if (!allBallotVoted()) return;
+      ballotSubmitted = true;
+      localStorage.setItem('explore-ballot-submitted', '1');
+      updateBallotUI();
+
+      // POST stance to server
+      fetch(API_BASE + '/api/ballot-stance', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          q1a: ballotVotes.q1a,
+          q1b: ballotVotes.q1b,
+          q1c: ballotVotes.q1c,
+          trash: ballotVotes.trash
+        })
+      }).catch(function () {});
+
+      // Fetch and show cross-tabs for all answered topics
+      fetchAllCrosstabs();
+
+      if (typeof posthog !== 'undefined') {
+        posthog.capture('ballot_submitted', {
+          q1a: ballotVotes.q1a, q1b: ballotVotes.q1b,
+          q1c: ballotVotes.q1c, trash: ballotVotes.trash
+        });
+      }
+    });
+  }
+
+  // Classify ballot stance into a group
+  function getBallotGroup() {
+    if (ballotVotes.q1a === 'yes') return 'yes15';
+    if (ballotVotes.q1b === 'yes') return 'yes12';
+    if (ballotVotes.q1c === 'yes') return 'yes9';
+    return 'no';
+  }
+
+  function getTrashGroup() {
+    return ballotVotes.trash === 'yes' ? 'yes' : 'no';
+  }
+
+  var GROUP_LABELS = {
+    no: 'No override',
+    yes9: 'Yes $9M',
+    yes12: 'Yes $12M',
+    yes15: 'Yes $15M'
+  };
+
+  function fetchAllCrosstabs() {
+    topicOrder.forEach(function (topic) {
+      fetchCrosstab(topic);
+    });
+  }
+
+  function fetchCrosstab(topic) {
+    fetch(API_BASE + '/api/ballot-crosstabs?topic=' + encodeURIComponent(topic))
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (data) renderCrosstab(topic, data);
+      })
+      .catch(function () {});
+  }
+
+  function renderCrosstab(topic, data) {
+    var screen = document.querySelector('.question-screen[data-topic="' + topic + '"]');
+    if (!screen) return;
+
+    // Determine which group to show based on the topic
+    var isTrashed = (topic === 'trash');
+    var group, groupLabel, picks;
+
+    if (isTrashed) {
+      var tg = getTrashGroup();
+      groupLabel = 'Trash ' + (tg === 'yes' ? 'Yes' : 'No') + ' voters';
+      picks = data.trash[tg];
+    } else {
+      group = getBallotGroup();
+      groupLabel = GROUP_LABELS[group] + ' voters';
+      picks = data.override[group];
+    }
+
+    if (!picks) return;
+    var total = (picks.a || 0) + (picks.b || 0) + (picks.c || 0) + (picks.u || 0);
+    if (total === 0) return;
+
+    // Find or create the crosstab bar
+    var distEl = screen.querySelector('.pick-distribution');
+    var ctBar = screen.querySelector('.crosstab-bar');
+    if (!ctBar) {
+      ctBar = document.createElement('div');
+      ctBar.className = 'crosstab-bar';
+      var insertAfter = distEl || screen.querySelector('.answers');
+      if (insertAfter) insertAfter.after(ctBar);
+      else screen.appendChild(ctBar);
+    }
+
+    function pct(n) { return total > 0 ? Math.round(n / total * 100) : 0; }
+    var pA = pct(picks.a), pB = pct(picks.b), pC = pct(picks.c);
+    var pU = 100 - pA - pB - pC; if (pU < 0) pU = 0;
+
+    // Highlight which answer is the user's pick
+    var userPick = selections[topic];
+    var matchPct = userPick && picks[userPick] ? pct(picks[userPick]) : null;
+
+    var labelText = groupLabel;
+    if (matchPct !== null) {
+      labelText += ' \u00b7 ' + matchPct + '% picked the same as you';
+    }
+
+    // Get answer labels from cards
+    var answerLabels = {};
+    screen.querySelectorAll('.answer-card').forEach(function (c) {
+      var h2 = c.querySelector('h2');
+      if (h2) answerLabels[c.dataset.answer] = h2.textContent;
+    });
+
+    ctBar.innerHTML =
+      '<div class="crosstab-bar-label">' + labelText + '</div>' +
+      '<div class="crosstab-bar-track">' +
+        '<div class="crosstab-bar-seg ct-a" style="width:' + pA + '%">' + (pA >= 12 ? pA + '%' : '') + '</div>' +
+        '<div class="crosstab-bar-seg ct-b" style="width:' + pB + '%">' + (pB >= 12 ? pB + '%' : '') + '</div>' +
+        '<div class="crosstab-bar-seg ct-c" style="width:' + pC + '%">' + (pC >= 12 ? pC + '%' : '') + '</div>' +
+        '<div class="crosstab-bar-seg ct-u" style="width:' + pU + '%">' + (pU >= 12 ? pU + '%' : '') + '</div>' +
+      '</div>' +
+      '<div class="crosstab-bar-legend">' +
+        (picks.a > 0 ? '<span><span class="ct-dot ct-dot-a"></span>' + (answerLabels.a || 'A') + ' ' + pA + '%</span>' : '') +
+        (picks.b > 0 ? '<span><span class="ct-dot ct-dot-b"></span>' + (answerLabels.b || 'B') + ' ' + pB + '%</span>' : '') +
+        (picks.c > 0 ? '<span><span class="ct-dot ct-dot-c"></span>' + (answerLabels.c || 'C') + ' ' + pC + '%</span>' : '') +
+        (picks.u > 0 ? '<span><span class="ct-dot ct-dot-u"></span>Not sure ' + pU + '%</span>' : '') +
+      '</div>';
+    ctBar.classList.add('visible');
+  }
+
+  // Hook into selectAnswer to update ballot lock state
+  var _origSelectAnswer = selectAnswer;
+  selectAnswer = function (question, answer) {
+    _origSelectAnswer(question, answer);
+    updateBallotLock();
+  };
+
+  // Hook into deselect too
+  var _origDeselectAnswer = deselectAnswer;
+  deselectAnswer = function (question) {
+    _origDeselectAnswer(question);
+    updateBallotLock();
+  };
+
+  // On load: restore ballot UI, and if already submitted fetch cross-tabs
+  updateBallotUI();
+  if (ballotSubmitted) {
+    fetchAllCrosstabs();
+  }
+
+  // Clean up ballot on stats reset
+  document.getElementById('statsReset').addEventListener('click', function () {
+    ballotVotes = {};
+    ballotSubmitted = false;
+    localStorage.removeItem('explore-ballot');
+    localStorage.removeItem('explore-ballot-submitted');
+    document.querySelectorAll('.crosstab-bar').forEach(function (el) { el.remove(); });
+    updateBallotUI();
+  });
+
   // ── Init: fetch decided counts and show stats ──
   fetchAllCounts(topicOrder);
   updateStatsStrip();
