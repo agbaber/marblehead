@@ -1,0 +1,78 @@
+---
+layout: home
+title: "Landing sketch"
+community_pulse: off-sections
+sitemap: false
+og_title: "Marblehead Budget Data"
+og_description: Sketch of a four-path landing page for marbleheaddata.org.
+og_type: website
+---
+<style>
+  /* Pair the for/against router cards visually: matching chrome so readers
+     read them as a linked pair, using the same teal (for) / brass (against)
+     encoding the-debate.html already uses. Neutral semantic colors, not
+     green/red. */
+  .question--for {
+    border-left: 4px solid var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 4%, var(--surface));
+  }
+  .question--against {
+    border-left: 4px solid var(--c-brass);
+    background: color-mix(in srgb, var(--c-brass) 4%, var(--surface));
+  }
+  .stance-label {
+    font-size: 0.625rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.4px; color: var(--text-subtle);
+    margin: 0 0 4px;
+  }
+  .question--for .stance-label  { color: var(--c-teal); }
+  .question--against .stance-label { color: var(--c-brass); }
+
+  /* Keep consistent 12px spacing between consecutive router sub-lists,
+     matching the flex gap inside a .question-list. */
+  .question-list + .question-list { margin-top: 12px; }
+</style>
+
+<div class="hero">
+  <h1>Do we need an override?</h1>
+  <p>Two override ballot questions, May 4 and June 9. Every number on this site is traceable to a primary source.</p>
+</div>
+
+<div class="question-list">
+  <a class="question" href="{{ '/' | relative_url }}?ref=router">
+    <h2>I'm undecided and want to learn</h2>
+    <p>Walk the main questions with the strongest case on each side. Your picks build into a set of positions you can review or share.</p>
+  </a>
+</div>
+
+<div class="question-list">
+  <a class="question question--for" href="{{ '/' | relative_url }}the-debate.html?lens=for&amp;ref=router">
+    <p class="stance-label">For the override</p>
+    <h2>I want to understand the case for</h2>
+    <p>The six dividing lines, each with the strongest version of the yes argument and the no response beside it.</p>
+  </a>
+  <a class="question question--against" href="{{ '/' | relative_url }}the-debate.html?lens=against&amp;ref=router">
+    <p class="stance-label">Against the override</p>
+    <h2>I want to understand the case against</h2>
+    <p>The same six dividing lines, read from the other direction: the strongest no argument and the yes response beside it.</p>
+  </a>
+</div>
+
+<div class="question-list">
+  <a class="question" href="{{ '/' | relative_url }}browse.html?ref=router#data-and-tools">
+    <h2>I'm just here for the data and tools</h2>
+    <p>Deficit model, town explorer, override calculator, the chart library, and the source lookup behind every number.</p>
+  </a>
+</div>
+
+<p class="section-label">Quick links</p>
+<div class="question-list">
+  <a class="question" href="{{ '/' | relative_url }}super-summary.html?ref=router">
+    <h2>The whole override in 60 seconds</h2>
+    <p>The deficit, the three ballot tiers, what it costs at your home value, and when you vote. One short page.</p>
+  </a>
+  <a class="question" href="{{ '/' | relative_url }}whats-on-the-ballot.html?ref=router">
+    <h2>What's on the ballot</h2>
+    <p>Both override questions, tier by tier, with the exact ballot language.</p>
+  </a>
+</div>
