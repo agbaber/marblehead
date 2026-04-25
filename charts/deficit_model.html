@@ -693,8 +693,6 @@ title: "Deficit Dynamics Model"
 <div class="dm-readout" id="dm-stance-readout" style="display: none; margin-top: 8px;">
   <div class="dm-readout-line dm-stance-readout-label">Scenario modeled</div>
   <div class="dm-readout-line" id="dm-stance-explainer"></div>
-  <div class="dm-readout-line dm-stance-readout-label dm-stance-realism-label-row" id="dm-stance-compare-label" style="display: none;">vs baseline</div>
-  <div class="dm-readout-line" id="dm-stance-compare" style="display: none;"></div>
   <div class="dm-readout-line dm-stance-readout-label dm-stance-realism-label-row" id="dm-stance-realism-label" style="display: none;">Realism</div>
   <div class="dm-readout-line" id="dm-stance-realism" style="display: none;"></div>
 </div>
@@ -1573,6 +1571,21 @@ An override on its own buys time. It does not change the slope of either line.
       parts.push('At these growth rates, expenses rise no faster than revenue, so the lines do not re-cross.');
     }
 
+    if (currentStance && currentStance !== 'bridge') {
+      var baselineOver = stanceOverride[currentStance] || 0;
+      var baselineGap = computeBaselineFy40Gap(baselineOver);
+      var liveData = compute();
+      var liveGap = liveData.exp[nYears - 1] - liveData.rev[nYears - 1];
+      var delta = baselineGap - liveGap;
+      var deltaAbs = Math.abs(delta);
+      if (deltaAbs >= 0.05) {
+        var compareLabel = tierLabelForOverride(baselineOver);
+        if (baselineOver > 0) compareLabel = compareLabel + ' alone';
+        var direction = delta > 0 ? 'smaller' : 'larger';
+        parts.push('vs <strong>' + compareLabel + '</strong>: <strong>$' + deltaAbs.toFixed(1) + 'M</strong> ' + direction + ' FY40 gap.');
+      }
+    }
+
     var realismLabel = document.getElementById('dm-stance-realism-label');
     var realismEl = document.getElementById('dm-stance-realism');
     var note = currentStance && stanceNotes[currentStance];
@@ -1583,31 +1596,6 @@ An override on its own buys time. It does not change the slope of either line.
     } else {
       realismLabel.style.display = 'none';
       realismEl.style.display = 'none';
-    }
-
-    var compareLabel = document.getElementById('dm-stance-compare-label');
-    var compareEl = document.getElementById('dm-stance-compare');
-    if (currentStance && currentStance !== 'bridge') {
-      var baselineOver = stanceOverride[currentStance] || 0;
-      var baselineGap = computeBaselineFy40Gap(baselineOver);
-      var liveData = compute();
-      var liveGap = liveData.exp[nYears - 1] - liveData.rev[nYears - 1];
-      var delta = baselineGap - liveGap;
-      var deltaAbs = Math.abs(delta);
-      if (deltaAbs >= 0.05) {
-        var label = tierLabelForOverride(baselineOver);
-        if (baselineOver > 0) label = label + ' alone';
-        var direction = delta > 0 ? 'smaller' : 'larger';
-        compareEl.innerHTML = 'vs <strong>' + label + '</strong>: <strong>$' + deltaAbs.toFixed(1) + 'M</strong> ' + direction + ' FY40 gap.';
-        compareLabel.style.display = '';
-        compareEl.style.display = '';
-      } else {
-        compareLabel.style.display = 'none';
-        compareEl.style.display = 'none';
-      }
-    } else {
-      compareLabel.style.display = 'none';
-      compareEl.style.display = 'none';
     }
 
     if (parts.length > 0 || note) {
