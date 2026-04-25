@@ -63,7 +63,14 @@
      votes-strip so the first action is obvious above the fold. */
   .featured-question {
     display: none;
-    margin: 0 0 32px;
+    /* Break out of .explore-landing's 640px cap so the three answer cards
+       share the same width as the in-question screens (~856px on desktop).
+       Without this, the featured cards squeeze to ~190px each and the
+       layout visibly shifts when the visitor dives in. break-out is half
+       the difference between the stage content width and the landing cap,
+       clamped to 0 on viewports narrower than the cap. */
+    --break-out: max(0px, (min(100vw, var(--chart-max)) - 2 * var(--gutter) - 640px) / 2);
+    margin: 0 calc(var(--break-out) * -1) 32px;
     padding: 20px 20px 16px;
     border: 1.5px solid var(--c-teal);
     border-radius: var(--radius-md);
@@ -91,13 +98,7 @@
     line-height: 1.55;
     margin: 0 0 16px;
   }
-  /* Featured cards stay stacked on every viewport. The .explore-landing
-     caps at 640px, so the desktop flex-row in `.answers` (min-width:600px)
-     squeezes three cards into ~190px each — too narrow for the 17px h2,
-     and uneven content lengths leave the shortest card with empty space
-     from flex-stretch. Stacking gives each card the full width. */
   .featured-question .featured-answers {
-    flex-direction: column;
     margin-bottom: 20px;
   }
   .featured-answers-prompt {
