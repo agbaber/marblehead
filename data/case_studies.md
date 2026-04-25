@@ -415,7 +415,7 @@ The gap chart above shows revenues and expenditures tracking closely in recent y
 
 <p class="case-chart-legend"><span><span class="case-chart-legend-swatch case-chart-legend-swatch--used"></span>Appropriated into the operating budget</span><span><span class="case-chart-legend-swatch case-chart-legend-swatch--cushion"></span>Cushion left at the start of the next year</span></p>
 
-<p class="case-chart-caption">Marblehead certified free cash by fiscal year, FY2015 through FY2024. Each bar is the certified pool available at the start of that year (DOR DLS Gateway Certified Free Cash report), split into the portion appropriated into that year's operating budget (Marblehead ACFRs) and the cushion left over. The labeled value above each bar is the cushion. The cushion peaked at $5.69M in FY2017, declined to $0.57M by FY2023, and stood at $1.08M in FY2024.</p>
+<p class="case-chart-caption">Marblehead certified free cash by fiscal year, FY2015 through FY2024. Each bar is the certified pool available at the start of that year (<abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> Gateway Certified Free Cash report), split into the portion appropriated into that year's operating budget (Marblehead <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>s) and the cushion left over. The labeled value above each bar is the cushion. The cushion peaked at $5.69M in FY2017, declined to $0.57M by FY2023, and stood at $1.08M in FY2024.</p>
 
 ### Comparison table
 
