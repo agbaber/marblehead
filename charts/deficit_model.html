@@ -693,6 +693,8 @@ title: "Deficit Dynamics Model"
 <div class="dm-readout" id="dm-stance-readout" style="display: none; margin-top: 8px;">
   <div class="dm-readout-line dm-stance-readout-label">Scenario modeled</div>
   <div class="dm-readout-line" id="dm-stance-explainer"></div>
+  <div class="dm-readout-line dm-stance-readout-label dm-stance-realism-label-row" id="dm-stance-compare-label" style="display: none;">vs baseline</div>
+  <div class="dm-readout-line" id="dm-stance-compare" style="display: none;"></div>
   <div class="dm-readout-line dm-stance-readout-label dm-stance-realism-label-row" id="dm-stance-realism-label" style="display: none;">Realism</div>
   <div class="dm-readout-line" id="dm-stance-realism" style="display: none;"></div>
 </div>
@@ -1469,6 +1471,53 @@ An override on its own buys time. It does not change the slope of either line.
   }
 
   var currentStance = null;
+  // Override amount baked into each scenario's defaults. Used to pick the
+  // "vs Tier X alone" comparison baseline shown in the readout.
+  var stanceOverride = {
+    'bridge': 15,
+    'skeptic': 15,
+    'override-plus-hc': 15,
+    'permanent-close': 12
+  };
+  function tierLabelForOverride(v) {
+    if (v === 15) return 'Tier 3';
+    if (v === 12) return 'Tier 2';
+    if (v === 9) return 'Tier 1';
+    return 'No override';
+  }
+  // Run compute() with all modifiers reset to defaults except the override
+  // value. Returns the FY40 gap (exp - rev) for that baseline. State is
+  // saved and restored so the live chart isn't disturbed.
+  function computeBaselineFy40Gap(overrideValue) {
+    var saved = {
+      rev: revGrowthEl.value, exp: expGrowthEl.value,
+      over: overrideEl.value, ratch: ratchetEl.value,
+      cuts: positionCuts, hc: hcShareEl.value,
+      wage: wageOffsetEl.value, fy27: fy27StepEl.value,
+      forced: forcedEquilibriumActive
+    };
+    revGrowthEl.value = 3.5;
+    expGrowthEl.value = 4.0;
+    overrideEl.value = overrideValue;
+    ratchetEl.value = 5;
+    positionCuts = 0;
+    hcShareEl.value = 83;
+    wageOffsetEl.value = 50;
+    fy27StepEl.value = 0;
+    forcedEquilibriumActive = false;
+    var data = compute();
+    var gap = data.exp[nYears - 1] - data.rev[nYears - 1];
+    revGrowthEl.value = saved.rev;
+    expGrowthEl.value = saved.exp;
+    overrideEl.value = saved.over;
+    ratchetEl.value = saved.ratch;
+    positionCuts = saved.cuts;
+    hcShareEl.value = saved.hc;
+    wageOffsetEl.value = saved.wage;
+    fy27StepEl.value = saved.fy27;
+    forcedEquilibriumActive = saved.forced;
+    return gap;
+  }
   var stanceNotes = {
     'bridge': 'Buys roughly 5 years of headroom, then the gap reopens on the same slope. Politically hard: Marblehead voters have rejected every operating override attempt since 2006 (2011, 2022, 2023, 2025 all failed).',
     'skeptic': 'Same $15M, but spent in year one rather than stretched. Consistent with historical behavior, where new levy authority tends to be absorbed by the next contract cycle.',
@@ -1536,6 +1585,31 @@ An override on its own buys time. It does not change the slope of either line.
       realismEl.style.display = 'none';
     }
 
+    var compareLabel = document.getElementById('dm-stance-compare-label');
+    var compareEl = document.getElementById('dm-stance-compare');
+    if (currentStance && currentStance !== 'bridge') {
+      var baselineOver = stanceOverride[currentStance] || 0;
+      var baselineGap = computeBaselineFy40Gap(baselineOver);
+      var liveData = compute();
+      var liveGap = liveData.exp[nYears - 1] - liveData.rev[nYears - 1];
+      var delta = baselineGap - liveGap;
+      var deltaAbs = Math.abs(delta);
+      if (deltaAbs >= 0.05) {
+        var label = tierLabelForOverride(baselineOver);
+        if (baselineOver > 0) label = label + ' alone';
+        var direction = delta > 0 ? 'smaller' : 'larger';
+        compareEl.innerHTML = 'vs <strong>' + label + '</strong>: <strong>$' + deltaAbs.toFixed(1) + 'M</strong> ' + direction + ' FY40 gap.';
+        compareLabel.style.display = '';
+        compareEl.style.display = '';
+      } else {
+        compareLabel.style.display = 'none';
+        compareEl.style.display = 'none';
+      }
+    } else {
+      compareLabel.style.display = 'none';
+      compareEl.style.display = 'none';
+    }
+
     if (parts.length > 0 || note) {
       stanceEl.innerHTML = parts.map(function(p) {
         return '<div class="dm-readout-clause">' + p + '</div>';
@@ -1590,12 +1664,15 @@ An override on its own buys time. It does not change the slope of either line.
   var tierBtns = document.querySelectorAll('.dm-tier-buttons button');
   function updateTierActive() {
     var val = parseFloat(overrideEl.value);
+    var scenarioActive = !!(currentStance && stanceNotes[currentStance]);
     tierBtns.forEach(function(b) {
       var p = b.dataset.preset;
-      var match = (p === 'baseline' && val === 0) ||
-                  (p === 'tier1' && val === 9) ||
-                  (p === 'tier2' && val === 12) ||
-                  (p === 'tier3' && val === 15);
+      var match = !scenarioActive && (
+        (p === 'baseline' && val === 0) ||
+        (p === 'tier1' && val === 9) ||
+        (p === 'tier2' && val === 12) ||
+        (p === 'tier3' && val === 15)
+      );
       b.classList.toggle('dm-tier-active', match);
     });
   }
