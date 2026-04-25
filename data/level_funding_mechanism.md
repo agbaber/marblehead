@@ -138,7 +138,7 @@ decoded values within +/-$0.05M). FY18 vs. FY24:
   Building, <abbr class="g" title="Marblehead High School">MHS</abbr> roof/<abbr class="g" title="Heating, Ventilation, and Air Conditioning">HVAC</abbr>), not operating-budget pressure. Pension
   budgetary line is small in absolute terms ($1.65M Δ). Public Safety
   growth is mostly Police and Fire wages with collective bargaining
-  COLAs.
+  <abbr class="g" title="Cost of Living Adjustment">COLA</abbr>s.
 
 - **Schools (the largest absolute mover, +$8.71M) grew slightly *below*
   CPI** at +23.3%, even while enrollment dropped ~16%. This means
@@ -179,7 +179,7 @@ decoded values within +/-$0.05M). FY18 vs. FY24:
    stay flat in nominal terms? Need line-by-line from FinCom Annual
    Reports for FY18-FY26.
 
-2. **Wage growth from collective bargaining.** COLAs in MOAs/MOUs run
+2. **Wage growth from collective bargaining.** COLAs in <abbr class="g" title="Memorandum of Agreement">MOA</abbr>s/<abbr class="g" title="Memorandum of Understanding">MOU</abbr>s run
    2-3.5%/yr. With ~190 town employees on payroll, that's $300k-$500k
    per year of structural cost growth on a flat top-line. The Public
    Safety +38.8% growth strongly suggests wages are doing most of the
