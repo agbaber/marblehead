@@ -48,6 +48,44 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
   td:target {
     background: color-mix(in srgb, var(--c-teal) 10%, transparent);
   }
+  /* FY26 share-of-spending stacked bar. Reuses the six series-color
+     tokens from the area chart above so the same category maps to
+     the same color. */
+  .share-bar {
+    display: flex;
+    width: 100%;
+    height: 56px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 16px 0 12px;
+    font-variant-numeric: tabular-nums;
+  }
+  .share-bar-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .share-bar-seg.s-marblehead { background: var(--series-marblehead); }
+  .share-bar-seg.s-melrose    { background: var(--series-melrose); }
+  .share-bar-seg.s-tier-1     { background: var(--series-tier-1); color: #0F2A3D; }
+  .share-bar-seg.s-swampscott { background: var(--series-swampscott); }
+  .share-bar-seg.s-stoneham   { background: var(--series-stoneham); }
+  .share-bar-seg.s-everything { background: var(--series-everything); color: #0F2A3D; }
+  @media (prefers-color-scheme: dark) {
+    .share-bar-seg.s-everything { color: #E6ECF1; }
+  }
+  html[data-theme="light"] .share-bar-seg.s-everything { color: #0F2A3D; }
+  html[data-theme="dark"]  .share-bar-seg.s-everything { color: #E6ECF1; }
+  .share-bar-legend { margin: 8px 0 4px; }
+  @media (max-width: 600px) {
+    .share-bar { height: 44px; }
+    .share-bar-seg { font-size: 0.8125rem; }
+  }
 </style>
 <h1>Where has Marblehead's money gone?</h1>
 
@@ -270,6 +308,29 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
   </div>
 
   <p>Schools drove nearly half of the $35.7 million in growth, adding $17.0 million (a 53 percent increase). Health insurance added $4.7 million (45 percent). Public safety added $3.9 million (54 percent). Debt payments added $3.8 million (70 percent). Pensions, measured on a budgetary basis, added $3.1 million (136 percent). The remaining $3.1 million came from "everything else", the catch-all bucket that includes public works, the library, the Council on Aging, state and county charges, and every other general fund line.</p>
+
+  <h3>Share of FY26 spending</h3>
+  <p>Of every dollar Marblehead's General Fund spent in FY26, about 46 cents went to schools. Health insurance was 14 cents, public safety 11, debt payments 9, and pensions 5. The remaining 15 cents covered "everything else": public works, the library, the Council on Aging, state and county charges, and every other line.</p>
+
+  <div class="share-bar" role="img" aria-label="Stacked bar showing the share of Marblehead's FY26 General Fund spending of 106.2 million dollars by category. Schools 46 percent, health insurance 14 percent, public safety 11 percent, debt payments 9 percent, pensions 5 percent, everything else 15 percent.">
+    <div class="share-bar-seg s-marblehead" style="width: 46.3%"><span>46%</span></div>
+    <div class="share-bar-seg s-melrose"    style="width: 14.2%"><span>14%</span></div>
+    <div class="share-bar-seg s-tier-1"     style="width: 10.6%"><span>11%</span></div>
+    <div class="share-bar-seg s-swampscott" style="width: 8.8%"><span>9%</span></div>
+    <div class="share-bar-seg s-stoneham"   style="width: 5.0%"><span>5%</span></div>
+    <div class="share-bar-seg s-everything" style="width: 15.1%"><span>15%</span></div>
+  </div>
+
+  <div class="legend share-bar-legend">
+    <div class="legend-item s-marblehead"><span class="legend-swatch"></span><span class="legend-text">Schools $49.1M</span></div>
+    <div class="legend-item s-melrose"><span class="legend-swatch"></span><span class="legend-text">Health insurance $15.1M</span></div>
+    <div class="legend-item s-tier-1"><span class="legend-swatch"></span><span class="legend-text">Public safety $11.2M</span></div>
+    <div class="legend-item s-swampscott"><span class="legend-swatch"></span><span class="legend-text">Debt payments $9.4M</span></div>
+    <div class="legend-item s-stoneham"><span class="legend-swatch"></span><span class="legend-text">Pensions $5.4M</span></div>
+    <div class="legend-item s-everything"><span class="legend-swatch"></span><span class="legend-text">Everything else $16.0M</span></div>
+  </div>
+
+  <p class="source">FY26 General Fund of $106.2 million, same six categories and budgetary basis as the chart above. Source: FY27 Proposed Budget, FY26 Budget column.</p>
 
   <p>Schools is the biggest dollar pull, so it is worth unpacking. From 2015 to 2024, the most recent year with closed-book actuals, the schools line grew from $32.1 million to $46.2 million in nominal dollars. After inflation (the consumer price index rose about 31 percent over the same window), the picture changes:<sup class="cite" data-href="data/cpi_us.csv" data-source="BLS Consumer Price Index for All Urban Consumers, U.S. City Average, annual averages (CUUR0000SA0); schools line from Marblehead ACFR schedules"></sup></p>
 
