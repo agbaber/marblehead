@@ -91,8 +91,14 @@
     line-height: 1.55;
     margin: 0 0 16px;
   }
+  /* Featured cards stay stacked on every viewport. The .explore-landing
+     caps at 640px, so the desktop flex-row in `.answers` (min-width:600px)
+     squeezes three cards into ~190px each — too narrow for the 17px h2,
+     and uneven content lengths leave the shortest card with empty space
+     from flex-stretch. Stacking gives each card the full width. */
   .featured-question .featured-answers {
-    margin-bottom: 8px;
+    flex-direction: column;
+    margin-bottom: 20px;
   }
   .featured-answers-prompt {
     margin: 0;
