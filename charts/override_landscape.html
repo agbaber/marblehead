@@ -72,12 +72,12 @@ scripts: [citations]
 <ul class="tldr">
   <li><strong>Operating overrides only.</strong> Debt exclusions (capital projects, school buildings) not included</li>
   <li><strong>65 override elections of $2M+ since FY2020.</strong> 28 passed, 34 failed, 3 split</li>
-  <li><strong>At the $5M-10M range</strong> where Marblehead's ask sits, 8 of 15 passed (53%)</li>
+  <li><strong>Marblehead's three nested tiers</strong> are $9M, $12M, and $15M. Tier 1 falls in the $5M-10M range (53% pass rate); Tiers 2 and 3 fall in $10M+ (58%)</li>
   <li><strong>Marblehead's prior attempts</strong> ($2.5M in FY2024, $3.1M in FY2023) both failed at smaller amounts</li>
 </ul>
 
 <h2>Pass rate by override size (FY2020+)</h2>
-<p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Per-election amounts (all ballot questions from one town in one year combined). The <span style="color: var(--c-buoy); font-weight: 600;">$5M-10M</span> bucket is where Marblehead's proposed $8.47M falls.</p>
+<p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Per-election amounts (all ballot questions from one town in one year combined). Marblehead Tier 1 ($9M) falls in the <span style="color: var(--c-buoy); font-weight: 600;">$5M-10M</span> bucket; Tiers 2 and 3 ($12M, $15M) fall in <span style="color: var(--c-buoy); font-weight: 600;">$10M+</span>.</p>
 
 <svg class="ol-svg chart" id="ol-rates" viewBox="0 0 880 260" role="img" aria-label="Bar chart showing override pass rates by dollar amount bucket since FY2020">
   <g id="ol-rate-grid"></g>
@@ -87,22 +87,30 @@ scripts: [citations]
 
 <hr class="ol-divider">
 
-<h2>Closest comparables to Marblehead's $8.47M</h2>
-<p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Every override between $6M and $11M since FY2020, sorted by amount. Marblehead's proposed FY2027 ask shown for reference.</p>
+<h2>Closest comparables to Marblehead's three tiers</h2>
+<p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Every override between $6M and $16M since FY2020, sorted by amount descending. Marblehead's three nested ballot tiers shown for reference.</p>
 
 <table class="ol-comps">
   <thead>
     <tr><th>Town</th><th>FY</th><th>Amount</th><th>Result</th></tr>
   </thead>
   <tbody>
+    <tr class="mh-row"><td>Marblehead Tier 3</td><td>2027</td><td class="amt">$15.0M</td><td><span class="outcome-proposed">Proposed</span></td></tr>
+    <tr><td>Arlington</td><td>2027</td><td class="amt">$14.8M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Stoneham</td><td>2026</td><td class="amt">$14.6M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Melrose</td><td>2026</td><td class="amt">$13.5M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Malden</td><td>2027</td><td class="amt">$13.6M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr class="mh-row"><td>Marblehead Tier 2</td><td>2027</td><td class="amt">$12.0M</td><td><span class="outcome-proposed">Proposed</span></td></tr>
+    <tr><td>Brookline</td><td>2024</td><td class="amt">$12.0M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Nantucket</td><td>2024</td><td class="amt">$10.3M</td><td><span class="outcome-win">Passed</span></td></tr>
     <tr><td>Winchester</td><td>2020</td><td class="amt">$10.0M</td><td><span class="outcome-win">Passed</span></td></tr>
     <tr><td>North Reading</td><td>2025</td><td class="amt">$10.0M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
     <tr><td>Dudley</td><td>2024</td><td class="amt">$9.9M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
     <tr><td>Shrewsbury</td><td>2022</td><td class="amt">$9.5M</td><td><span class="outcome-win">Passed</span></td></tr>
     <tr><td>Newton</td><td>2023</td><td class="amt">$9.2M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr class="mh-row"><td>Marblehead Tier 1</td><td>2027</td><td class="amt">$9.0M</td><td><span class="outcome-proposed">Proposed</span></td></tr>
     <tr><td>Milton</td><td>2026</td><td class="amt">$8.8M</td><td><span class="outcome-win">Passed</span></td></tr>
     <tr><td>Belmont</td><td>2025</td><td class="amt">$8.4M</td><td><span class="outcome-win">Passed</span></td></tr>
-    <tr class="mh-row"><td>Marblehead</td><td>2027</td><td class="amt">$8.47M</td><td><span class="outcome-proposed">Proposed</span></td></tr>
     <tr><td>Bridgewater</td><td>2026</td><td class="amt">$8.0M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
     <tr><td>Braintree</td><td>2025</td><td class="amt">$8.0M</td><td><span class="outcome-win">Passed</span></td></tr>
     <tr><td>Hingham</td><td>2024</td><td class="amt">$7.9M</td><td><span class="outcome-win">Passed</span></td></tr>
@@ -124,8 +132,8 @@ scripts: [citations]
   <summary>Notes and sources</summary>
   <p>Override vote data from the Massachusetts Department of Revenue, Division of Local Services Municipal Databank.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Underride Votes" data-href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride"></sup></p>
   <p>Operating overrides only; debt exclusions not included. Where a town placed multiple override questions on the same ballot, all amounts are combined into a single per-election total. If a majority of questions passed, the election is coded as a win; if a majority failed, a loss.</p>
-  <p>Marblehead's proposed FY2027 override ($8.47M across three ballot tiers) has not yet been voted on.</p>
-  <p>The comparable range ($6M-$11M) includes 22 elections: 10 passed, 10 failed, plus Marblehead's pending vote and one borderline result. A coin flip at this size.</p>
+  <p>Marblehead's proposed FY2027 override uses three nested ballot tiers: Tier 1 ($9M), Tier 2 ($12M), and Tier 3 ($15M). The highest tier that gets a majority sets the override amount. None have been voted on yet.</p>
+  <p>The comparable range ($6M-$16M) includes 27 elections since FY2020. All amounts shown are the ballot question amounts, not the deficit that motivated the override.</p>
   <p>FY2027 data is partial as of April 2026.</p>
 </details>
 
