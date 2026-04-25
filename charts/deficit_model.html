@@ -377,6 +377,43 @@ title: "Deficit Dynamics Model"
   .dm-controls-summary:hover {
     color: var(--c-navy);
   }
+  .dm-advanced-controls {
+    margin: 16px 0;
+  }
+  .dm-advanced-summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--c-navy);
+    padding: 10px 14px;
+    user-select: none;
+    list-style: none;
+    background: var(--c-fog);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .dm-advanced-summary::-webkit-details-marker { display: none; }
+  .dm-advanced-summary::before {
+    content: '+';
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .dm-advanced-controls[open] > .dm-advanced-summary::before {
+    content: '\2212';
+  }
+  .dm-advanced-summary:hover,
+  .dm-advanced-summary:focus-visible {
+    border-color: var(--c-navy);
+  }
+  .dm-advanced-summary-hint {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+  body.dm-embed .dm-advanced-summary { display: none; }
   .dm-tier-buttons {
     display: flex;
     gap: 8px;
@@ -732,6 +769,8 @@ title: "Deficit Dynamics Model"
   <button type="button" data-preset="tier3">Tier 3 ($15M)</button>
 </div>
 
+<details class="dm-advanced-controls" id="dm-advanced">
+<summary class="dm-advanced-summary">Show all scenarios and controls <span class="dm-advanced-summary-hint">(13 scenarios, sliders, assumptions)</span></summary>
 <span class="dm-scenario-group-label">Try a scenario</span>
 <div class="dm-scenarios">
   <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="bridge">
@@ -849,6 +888,7 @@ title: "Deficit Dynamics Model"
     <div class="dm-hint" id="dm-fy27-step-hint">Adds a one-time cost (or savings) to FY27 only. Example: <abbr class="g" title="Group Insurance Commission">GIC</abbr> premiums jumped about $1.1M in FY27. Set to 0 if the annual growth rate already accounts for it.</div>
   </div>
 </div>
+</details>
 </details>
 
 <a class="dm-embed-link" id="dm-embed-link" href="deficit_model.html">Explore the full interactive model &rarr;</a>
@@ -2075,6 +2115,27 @@ An override on its own buys time. It does not change the slope of either line.
     taxBtn.textContent = 'Show as town budget ($M)';
     taxBtn.classList.add('dm-active');
   }
+
+  // Advanced-controls disclosure: persist open state, honor explicit URL flags,
+  // open in embed and stance-preset modes, auto-open when the tour starts.
+  (function() {
+    var details = document.getElementById('dm-advanced');
+    if (!details) return;
+    var STORAGE_KEY = 'dm-advanced-open';
+    var forced = params.get('advanced') === '1' ||
+                 params.get('embed') === '1' ||
+                 !!params.get('stance');
+    var stored = false;
+    try { stored = localStorage.getItem(STORAGE_KEY) === '1'; } catch (e) {}
+    if (forced || stored) details.open = true;
+    details.addEventListener('toggle', function() {
+      try { localStorage.setItem(STORAGE_KEY, details.open ? '1' : '0'); } catch (e) {}
+    });
+    var startBtn = document.getElementById('dm-walkthrough-start');
+    if (startBtn) {
+      startBtn.addEventListener('click', function() { details.open = true; });
+    }
+  })();
 
   updateLabels();
   updateHints();
