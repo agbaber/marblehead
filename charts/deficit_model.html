@@ -86,13 +86,11 @@ title: "Deficit Dynamics Model"
     color: #fff;
     border-color: var(--c-navy);
   }
-  .dm-tax-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
+  .dm-tax-btn-inline {
+    margin-left: 8px;
+    padding: 2px 8px;
+    font-size: 11px;
+    vertical-align: 2px;
   }
   .dm-readout {
     margin: 20px 0;
@@ -641,11 +639,12 @@ title: "Deficit Dynamics Model"
       font-size: 13px;
     }
     .dm-readout strong { font-size: 19px; }
-    .dm-tax-row {
-      flex-wrap: wrap;
+    .dm-tax-btn-inline {
+      display: inline-block;
+      margin-left: 0;
+      margin-top: 4px;
+      vertical-align: baseline;
     }
-    .dm-tax-btn { width: 100%; }
-    .dm-tax-row .dm-hint { font-size: 11px; }
     .dm-key { font-size: 12px; padding: 10px 12px; }
     .dm-walkthrough-row { gap: 8px; }
     .dm-walkthrough-btn { width: 100%; }
@@ -660,17 +659,12 @@ title: "Deficit Dynamics Model"
 
 <h1 class="h-center">Deficit Dynamics: The Lines Already Crossed</h1>
 <p class="subtitle h-center">Marblehead has spent more than it collected every year since FY18. Free cash covered the gap, peaking at $10.2M in FY23 before <abbr class="g" title="Finance Committee">FinCom</abbr> flagged the draw as unsustainable.</p>
-<p class="dm-hint" style="text-align: center; margin: -4px 0 12px;">Left side: actual <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> data. Right side: projections at the growth rates you choose. Drag the sliders or pick a scenario to see what closes the gap and for how long.</p>
+<p class="dm-hint" style="text-align: center; margin: -4px 0 12px;">Left side: actual <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> data. Right side: projections. Pick a tier or scenario to see what closes the gap and for how long.</p>
 
 <div class="dm-walkthrough-row">
   <button type="button" class="dm-walkthrough-btn" id="dm-walkthrough-start">
     Show me how this works
   </button>
-</div>
-
-<div class="dm-tax-row">
-  <button type="button" class="dm-tax-btn" id="dm-tax-btn">Show as annual tax bill per average home</button>
-  <span class="dm-hint" id="dm-tax-hint">Based on average single-family assessed value of $1,291,507</span>
 </div>
 
 <div class="dm-key" aria-label="Chart key">
@@ -693,8 +687,8 @@ title: "Deficit Dynamics Model"
 </div>
 
 <div class="dm-readout" id="dm-chart-scroll-target">
-  <div class="dm-readout-line">Projected FY40 gap: <strong id="dm-gap">$12.6M</strong> <span id="dm-gap-label">annual deficit</span>.</div>
-  <div class="dm-hint" id="dm-gap-hint">Pick a tier or drag the sliders below the chart to see how it changes.</div>
+  <div class="dm-readout-line">Projected FY40 gap: <strong id="dm-gap">$12.6M</strong> <span id="dm-gap-label">annual deficit</span>. <button type="button" class="dm-tax-btn dm-tax-btn-inline" id="dm-tax-btn" title="Based on average single-family assessed value of $1,291,507">Show as tax bill</button></div>
+  <div class="dm-hint" id="dm-gap-hint">Pick a tier or scenario below to see how it changes.</div>
 </div>
 
 <div class="dm-readout" id="dm-stance-readout" style="display: none; margin-top: 8px;">
@@ -979,7 +973,6 @@ An override on its own buys time. It does not change the slope of either line.
   var gapLabelEl = document.getElementById('dm-gap-label');
   var gapHintEl = document.getElementById('dm-gap-hint');
   var taxBtn = document.getElementById('dm-tax-btn');
-  var taxHint = document.getElementById('dm-tax-hint');
   var revHintEl = document.getElementById('dm-rev-hint');
   var expHintEl = document.getElementById('dm-exp-hint');
   var cutsValEl = document.getElementById('dm-cuts-val');
@@ -1382,10 +1375,10 @@ An override on its own buys time. It does not change the slope of either line.
       if (forcedCuts > 0.05) {
         gapHintEl.textContent = 'Without the override, ' + fmtM(forcedCuts) + ' in services would need to be cut at FY' + endYear + ' to balance the budget. The dashed line shows spending if constrained to revenue.';
       } else {
-        gapHintEl.textContent = 'Move the sliders, or click a preset below the chart, to see how it changes.';
+        gapHintEl.textContent = 'Pick a tier or scenario below to see how it changes.';
       }
     } else {
-      gapHintEl.textContent = 'Move the sliders, or click a preset below the chart, to see how it changes.';
+      gapHintEl.textContent = 'Pick a tier or scenario below to see how it changes.';
     }
   }
 
@@ -1590,7 +1583,7 @@ An override on its own buys time. It does not change the slope of either line.
 
   taxBtn.addEventListener('click', function() {
     taxMode = !taxMode;
-    taxBtn.textContent = taxMode ? 'Show as town budget ($M)' : 'Show as annual tax bill per average home';
+    taxBtn.textContent = taxMode ? 'Show as $M' : 'Show as tax bill';
     taxBtn.classList.toggle('dm-active', taxMode);
     onChange();
   });
@@ -2108,7 +2101,7 @@ An override on its own buys time. It does not change the slope of either line.
   if (params.has('wageoffset')) wageOffsetEl.value = parseInt(params.get('wageoffset'));
   if (params.get('tax') === '1') {
     taxMode = true;
-    taxBtn.textContent = 'Show as town budget ($M)';
+    taxBtn.textContent = 'Show as $M';
     taxBtn.classList.add('dm-active');
   }
 
