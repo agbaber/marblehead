@@ -1102,7 +1102,7 @@
   /* ── Nugget: highlighted number + short context ── */
   .evidence-nugget {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
     background: color-mix(in srgb, var(--c-navy) 6%, var(--surface));
     border: 1px solid var(--divider);
