@@ -9,7 +9,9 @@ scripts: [citations]
   .so-rate-dot { fill: var(--c-teal); }
   .so-rate-area { fill: var(--c-teal); opacity: 0.08; }
   .so-amt-line { fill: none; stroke: var(--c-brass); stroke-width: 2; }
+  .so-amt-line--election { fill: none; stroke: var(--c-navy); stroke-width: 2.5; }
   .so-amt-dot { fill: var(--c-brass); }
+  .so-amt-dot--election { fill: var(--c-navy); }
   .so-label { font-size: 10px; fill: var(--text-muted); font-family: inherit; }
   .so-value { font-size: 9px; fill: var(--text-muted); font-family: inherit; }
   .so-callout { font-size: 10px; font-family: inherit; font-weight: 600; }
@@ -25,6 +27,7 @@ scripts: [citations]
   .so-legend-swatch--fail { background: var(--text-subtle); opacity: 0.35; }
   .so-legend-swatch--rate { background: var(--c-teal); }
   .so-legend-swatch--amt { background: var(--c-brass); }
+  .so-legend-swatch--amt-e { background: var(--c-navy); }
   .so-svg { display: block; width: 100%; height: auto; max-width: 880px; margin: 0 auto; }
   .so-mh { fill: var(--c-buoy); opacity: 0.9; }
   .so-mh-label { font-size: 9px; fill: var(--c-buoy); font-family: inherit; font-weight: 600; }
@@ -49,10 +52,12 @@ scripts: [citations]
 <p class="subtitle h-center">Every <abbr class="g" title="Proposition 2&frac12;">Prop 2&frac12;</abbr> operating override ballot question across all 305 municipalities, FY1990 to FY2027. Source: MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> Municipal Databank.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Underride Votes, all municipalities, all years"></sup></p>
 
 <ul class="tldr">
+  <li><strong>Operating overrides only.</strong> Debt exclusions (capital projects, school buildings) and underrides are not included. These are the permanent levy increases that fund day-to-day town and school budgets</li>
   <li><strong>4,640 override ballot questions</strong> across 305 towns since 1990; 2,268 passed (48.9%)</li>
   <li><strong>The early '90s were a flood:</strong> 400-600 questions per year, pass rates as low as 25%</li>
   <li><strong>Pass rates climbed through the 2000s-2020s</strong>, peaking above 80% in FY2019 and FY2022-23</li>
   <li><strong>FY2025-26 marks a new surge</strong> in override volume as cost pressures outpace the 2.5% levy cap statewide</li>
+  <li><strong>Median override amount</strong> per election: $443K in FY1990, $1.7M in FY2026. Many early overrides were split into 10-30 ballot questions; the per-question and per-election lines converge as towns shifted to bundled votes</li>
 </ul>
 
 <h2>Override ballot questions per year</h2>
@@ -89,13 +94,14 @@ scripts: [citations]
 <hr class="so-divider">
 
 <h2>Median override amount per year</h2>
-<p class="so-hint" style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Median dollar amount requested on each ballot question (nominal dollars).</p>
+<p class="so-hint" style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Many towns split one override into multiple ballot questions (Chatham FY1990 had 31). The per-election line combines all questions from one town in one year; the per-question line shows each ballot item individually. The two converge in recent years as towns shift toward bundled questions.</p>
 
 <div class="so-legend">
-  <span><span class="so-legend-swatch so-legend-swatch--amt"></span> Median amount</span>
+  <span><span class="so-legend-swatch so-legend-swatch--amt-e"></span> Per election (combined)</span>
+  <span><span class="so-legend-swatch so-legend-swatch--amt"></span> Per ballot question</span>
 </div>
 
-<svg class="so-svg chart" id="so-amt" viewBox="0 0 880 260" role="img" aria-label="Line chart of median override ballot question amount by fiscal year, FY1990 to FY2027">
+<svg class="so-svg chart" id="so-amt" viewBox="0 0 880 280" role="img" aria-label="Line chart of median override amount by fiscal year, FY1990 to FY2027, showing both per-question and per-election medians">
   <g id="so-amt-grid"></g>
   <g id="so-amt-line-g"></g>
   <g id="so-amt-dots"></g>
@@ -108,51 +114,51 @@ scripts: [citations]
   <p>Each ballot question counts as one vote, regardless of dollar size. A single town election can have multiple ballot questions (e.g. Needham FY1997 had ten separate override questions).</p>
   <p>FY2027 data is partial as of April 2026. One Marblehead row (FY2025, "Fix Clerk Error", $0) is excluded as a clerical correction.</p>
   <p>"Pass rate" is the number of questions that passed divided by total questions in that fiscal year. It does not weight by dollar amount or population.</p>
-  <p>Median amount is the median of all ballot question amounts in a given fiscal year, in nominal (not inflation-adjusted) dollars.</p>
+  <p>"Per ballot question" median is the median of all individual ballot question amounts in a given fiscal year. "Per election" median aggregates all questions from the same town in the same fiscal year into a single combined amount before computing the median. The gap between the two lines reflects how many towns split overrides into multiple line-item questions rather than one bundled vote. In nominal (not inflation-adjusted) dollars.</p>
 </details>
 
 <script>
 (function() {
   // === DATA: aggregated from statewide_overrides.csv ===
   var DATA = [
-    {fy:1990,win:176,loss:264,median:58366},
-    {fy:1991,win:169,loss:437,median:70457},
-    {fy:1992,win:141,loss:420,median:49800},
-    {fy:1993,win:109,loss:178,median:30000},
-    {fy:1994,win:102,loss:197,median:20000},
-    {fy:1995,win:72,loss:102,median:35000},
-    {fy:1996,win:54,loss:114,median:32000},
-    {fy:1997,win:29,loss:66,median:66431},
-    {fy:1998,win:39,loss:49,median:30000},
-    {fy:1999,win:34,loss:15,median:83774},
-    {fy:2000,win:27,loss:29,median:118953},
-    {fy:2001,win:50,loss:29,median:92158},
-    {fy:2002,win:54,loss:20,median:262768},
-    {fy:2003,win:55,loss:37,median:243818},
-    {fy:2004,win:79,loss:81,median:182364},
-    {fy:2005,win:81,loss:79,median:95624},
-    {fy:2006,win:91,loss:78,median:154002},
-    {fy:2007,win:52,loss:89,median:203397},
-    {fy:2008,win:48,loss:54,median:165000},
-    {fy:2009,win:60,loss:81,median:158208},
-    {fy:2010,win:33,loss:28,median:115500},
-    {fy:2011,win:26,loss:31,median:175000},
-    {fy:2012,win:21,loss:29,median:272450},
-    {fy:2013,win:19,loss:23,median:235766},
-    {fy:2014,win:14,loss:13,median:230000},
-    {fy:2015,win:21,loss:13,median:410722},
-    {fy:2016,win:21,loss:20,median:300000},
-    {fy:2017,win:14,loss:12,median:300000},
-    {fy:2018,win:12,loss:8,median:475656},
-    {fy:2019,win:36,loss:8,median:325000},
-    {fy:2020,win:22,loss:7,median:420000},
-    {fy:2021,win:12,loss:9,median:361640},
-    {fy:2022,win:19,loss:3,median:168080},
-    {fy:2023,win:18,loss:4,median:231958},
-    {fy:2024,win:46,loss:16,median:450000},
-    {fy:2025,win:23,loss:29,median:1000000},
-    {fy:2026,win:36,loss:38,median:891075},
-    {fy:2027,win:8,loss:7,median:1900000}
+    {fy:1990,win:176,loss:264,medianQ:58366,medianE:443000},
+    {fy:1991,win:169,loss:437,medianQ:70457,medianE:550000},
+    {fy:1992,win:141,loss:420,medianQ:49800,medianE:405347},
+    {fy:1993,win:109,loss:178,medianQ:30000,medianE:200000},
+    {fy:1994,win:102,loss:197,medianQ:20000,medianE:149130},
+    {fy:1995,win:72,loss:102,medianQ:35000,medianE:195163},
+    {fy:1996,win:54,loss:114,medianQ:32000,medianE:200000},
+    {fy:1997,win:29,loss:66,medianQ:66431,medianE:255710},
+    {fy:1998,win:39,loss:49,medianQ:30000,medianE:223537},
+    {fy:1999,win:34,loss:15,medianQ:83774,medianE:224469},
+    {fy:2000,win:27,loss:29,medianQ:118953,medianE:285883},
+    {fy:2001,win:50,loss:29,medianQ:92158,medianE:378464},
+    {fy:2002,win:54,loss:20,medianQ:262768,medianE:489697},
+    {fy:2003,win:55,loss:37,medianQ:243818,medianE:487370},
+    {fy:2004,win:79,loss:81,medianQ:187844,medianE:800000},
+    {fy:2005,win:81,loss:79,medianQ:95624,medianE:508557},
+    {fy:2006,win:91,loss:78,medianQ:154002,medianE:600000},
+    {fy:2007,win:52,loss:89,medianQ:204019,medianE:631167},
+    {fy:2008,win:48,loss:54,medianQ:165000,medianE:550700},
+    {fy:2009,win:60,loss:81,medianQ:158208,medianE:414910},
+    {fy:2010,win:33,loss:28,medianQ:115500,medianE:263331},
+    {fy:2011,win:26,loss:31,medianQ:175000,medianE:656491},
+    {fy:2012,win:21,loss:29,medianQ:272450,medianE:484361},
+    {fy:2013,win:19,loss:23,medianQ:235766,medianE:366800},
+    {fy:2014,win:14,loss:13,medianQ:230000,medianE:455926},
+    {fy:2015,win:21,loss:13,medianQ:410722,medianE:514115},
+    {fy:2016,win:21,loss:20,medianQ:300000,medianE:582800},
+    {fy:2017,win:14,loss:12,medianQ:300000,medianE:344583},
+    {fy:2018,win:12,loss:8,medianQ:475656,medianE:532640},
+    {fy:2019,win:36,loss:8,medianQ:325000,medianE:546767},
+    {fy:2020,win:22,loss:7,medianQ:430000,medianE:450000},
+    {fy:2021,win:12,loss:9,medianQ:361640,medianE:1075158},
+    {fy:2022,win:19,loss:3,medianQ:168080,medianE:777336},
+    {fy:2023,win:18,loss:4,medianQ:231958,medianE:750000},
+    {fy:2024,win:46,loss:16,medianQ:450000,medianE:1058476},
+    {fy:2025,win:23,loss:29,medianQ:1000000,medianE:1320000},
+    {fy:2026,win:36,loss:38,medianQ:891075,medianE:1680100},
+    {fy:2027,win:8,loss:7,medianQ:1900000,medianE:1900000}
   ];
 
   var W = 880, mL = 60, mR = 20;
@@ -333,13 +339,13 @@ scripts: [citations]
   })();
 
   // =============================================
-  // CHART 3: MEDIAN AMOUNT (line)
+  // CHART 3: MEDIAN AMOUNT (two lines)
   // =============================================
   (function() {
-    var H = 260, mT = 20, mB = 40;
+    var H = 280, mT = 20, mB = 40;
     var pH = H - mT - mB;
     var maxAmt = 0;
-    DATA.forEach(function(d) { maxAmt = Math.max(maxAmt, d.median); });
+    DATA.forEach(function(d) { maxAmt = Math.max(maxAmt, d.medianE, d.medianQ); });
     maxAmt = Math.ceil(maxAmt / 500000) * 500000;
 
     var gridG = document.getElementById("so-amt-grid");
@@ -349,6 +355,10 @@ scripts: [citations]
 
     function yScale(v) { return mT + pH * (1 - v / maxAmt); }
     function xScale(i) { return mL + i * (barW + 2) + barW / 2; }
+    function fmtAmt(v) {
+      return v >= 1000000 ? "$" + (v / 1000000).toFixed(1) + "M"
+                          : "$" + Math.round(v / 1000) + "K";
+    }
 
     // Grid
     for (var v = 0; v <= maxAmt; v += 500000) {
@@ -367,38 +377,66 @@ scripts: [citations]
       gridG.appendChild(label);
     }
 
-    // Line
-    var linePoints = DATA.map(function(d, i) {
-      return xScale(i) + "," + yScale(d.median);
+    // Per-election line (navy, bold, drawn first so per-question overlays)
+    var eLinePoints = DATA.map(function(d, i) {
+      return xScale(i) + "," + yScale(d.medianE);
     }).join(" ");
-    var polyline = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
-    polyline.setAttribute("points", linePoints);
-    polyline.setAttribute("class", "so-amt-line");
-    lineG.appendChild(polyline);
+    var ePoly = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+    ePoly.setAttribute("points", eLinePoints);
+    ePoly.setAttribute("class", "so-amt-line--election");
+    lineG.appendChild(ePoly);
 
-    // Dots + labels
-    var notable = {1991: true, 2002: true, 2015: true, 2024: true, 2027: true};
+    // Per-question line (brass, thinner)
+    var qLinePoints = DATA.map(function(d, i) {
+      return xScale(i) + "," + yScale(d.medianQ);
+    }).join(" ");
+    var qPoly = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+    qPoly.setAttribute("points", qLinePoints);
+    qPoly.setAttribute("class", "so-amt-line");
+    lineG.appendChild(qPoly);
+
+    // Dots and labels
+    var notableE = {1991: true, 2004: true, 2024: true, 2027: true};
+    var notableQ = {1991: true, 1994: true, 2025: true};
     DATA.forEach(function(d, i) {
-      var cx = xScale(i), cy = yScale(d.median);
+      var cx = xScale(i);
 
-      var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-      dot.setAttribute("cx", cx); dot.setAttribute("cy", cy);
-      dot.setAttribute("r", notable[d.fy] ? 4 : 2.5);
-      dot.setAttribute("class", "so-amt-dot");
-      dotsG.appendChild(dot);
+      // Per-election dots
+      var cyE = yScale(d.medianE);
+      var dotE = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      dotE.setAttribute("cx", cx); dotE.setAttribute("cy", cyE);
+      dotE.setAttribute("r", notableE[d.fy] ? 4 : 2.5);
+      dotE.setAttribute("class", "so-amt-dot--election");
+      dotsG.appendChild(dotE);
 
-      if (notable[d.fy]) {
-        var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        label.setAttribute("x", cx);
-        label.setAttribute("y", cy - 8);
-        label.setAttribute("text-anchor", "middle");
-        label.setAttribute("class", "so-callout");
-        label.setAttribute("fill", "var(--c-brass)");
-        var txt = d.median >= 1000000
-          ? "$" + (d.median / 1000000).toFixed(1) + "M"
-          : "$" + Math.round(d.median / 1000) + "K";
-        label.textContent = txt;
-        labelsG.appendChild(label);
+      if (notableE[d.fy]) {
+        var lbl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        lbl.setAttribute("x", cx);
+        lbl.setAttribute("y", cyE - 8);
+        lbl.setAttribute("text-anchor", "middle");
+        lbl.setAttribute("class", "so-callout");
+        lbl.setAttribute("fill", "var(--c-navy)");
+        lbl.textContent = fmtAmt(d.medianE);
+        labelsG.appendChild(lbl);
+      }
+
+      // Per-question dots
+      var cyQ = yScale(d.medianQ);
+      var dotQ = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      dotQ.setAttribute("cx", cx); dotQ.setAttribute("cy", cyQ);
+      dotQ.setAttribute("r", notableQ[d.fy] ? 4 : 2);
+      dotQ.setAttribute("class", "so-amt-dot");
+      dotsG.appendChild(dotQ);
+
+      if (notableQ[d.fy]) {
+        var lbl2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        lbl2.setAttribute("x", cx);
+        lbl2.setAttribute("y", cyQ + 14);
+        lbl2.setAttribute("text-anchor", "middle");
+        lbl2.setAttribute("class", "so-callout");
+        lbl2.setAttribute("fill", "var(--c-brass)");
+        lbl2.textContent = fmtAmt(d.medianQ);
+        labelsG.appendChild(lbl2);
       }
 
       // Year labels
@@ -412,6 +450,23 @@ scripts: [citations]
         labelsG.appendChild(yl);
       }
     });
+
+    // End labels (direct label at last data point)
+    var last = DATA[DATA.length - 1];
+    var lastX = xScale(DATA.length - 1);
+    var endE = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    endE.setAttribute("x", lastX + 8); endE.setAttribute("y", yScale(last.medianE) + 4);
+    endE.setAttribute("class", "so-label"); endE.setAttribute("fill", "var(--c-navy)");
+    endE.setAttribute("font-weight", "600");
+    endE.textContent = "per election";
+    labelsG.appendChild(endE);
+
+    var endQ = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    endQ.setAttribute("x", lastX + 8); endQ.setAttribute("y", yScale(last.medianQ) + 16);
+    endQ.setAttribute("class", "so-label"); endQ.setAttribute("fill", "var(--c-brass)");
+    endQ.setAttribute("font-weight", "600");
+    endQ.textContent = "per question";
+    labelsG.appendChild(endQ);
   })();
 })();
 </script>

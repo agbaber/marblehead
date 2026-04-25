@@ -1,0 +1,258 @@
+---
+title: "Override Landscape: Large Asks Since FY2020"
+scripts: [citations]
+---
+<style>
+  .ol-label { font-size: 10px; fill: var(--text-muted); font-family: inherit; }
+  .ol-tick { font-size: 10px; fill: var(--text-muted); font-family: inherit; }
+  .ol-callout { font-size: 10px; font-family: inherit; font-weight: 600; }
+  .ol-legend {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    margin: 8px 0 12px; font-size: 12px; color: var(--text-muted);
+  }
+  .ol-legend-swatch {
+    display: inline-block; width: 10px; height: 10px;
+    border-radius: 50%; vertical-align: middle; margin-right: 4px;
+  }
+  .ol-legend-swatch--mh { background: var(--c-buoy); }
+  .ol-svg { display: block; width: 100%; height: auto; max-width: 880px; margin: 0 auto; }
+  .ol-divider { margin: 32px 0 24px; border: none; border-top: 1px solid var(--divider); }
+  .ol-rate-bar-bg { fill: var(--text-subtle); opacity: 0.12; }
+  .ol-rate-bar-fg { fill: var(--c-navy); opacity: 0.7; }
+  .ol-comps {
+    max-width: 680px; margin: 0 auto;
+    border-collapse: collapse; width: 100%;
+    font-size: 14px;
+  }
+  .ol-comps th {
+    text-align: left; font-weight: 600; font-size: 12px;
+    color: var(--text-muted); border-bottom: 2px solid var(--divider);
+    padding: 6px 12px 6px 0;
+  }
+  .ol-comps td {
+    padding: 8px 12px 8px 0; border-bottom: 1px solid var(--divider);
+    vertical-align: middle;
+  }
+  .ol-comps tr.mh-row td {
+    color: var(--c-buoy); font-weight: 700;
+    border-bottom: 2px solid var(--c-buoy);
+    border-top: 2px solid var(--c-buoy);
+  }
+  .ol-comps .outcome-win {
+    display: inline-block; padding: 2px 8px; border-radius: 3px;
+    background: var(--c-navy); color: var(--c-fog); font-size: 11px;
+    font-weight: 600;
+  }
+  .ol-comps .outcome-loss {
+    display: inline-block; padding: 2px 8px; border-radius: 3px;
+    border: 1.5px solid var(--text-muted); color: var(--text-muted);
+    font-size: 11px; font-weight: 600;
+  }
+  .ol-comps .outcome-proposed {
+    display: inline-block; padding: 2px 8px; border-radius: 3px;
+    border: 1.5px dashed var(--c-buoy); color: var(--c-buoy);
+    font-size: 11px; font-weight: 600;
+  }
+  .ol-comps .amt { font-variant-numeric: tabular-nums; }
+  details.notes { margin: 20px 0; }
+  details.notes summary {
+    font-size: 13px; font-weight: 600; color: var(--text-muted);
+    cursor: pointer; padding: 8px 0;
+  }
+  details.notes[open] summary { margin-bottom: 8px; }
+  details.notes p {
+    font-size: 12px; line-height: 1.6; color: var(--text-subtle);
+    margin: 0 0 10px;
+  }
+</style>
+
+<h1 class="h-center">Where Does Marblehead's Override Land?</h1>
+<p class="subtitle h-center">Every operating override of $6M or more across all Massachusetts municipalities, FY1990 to FY2027.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Underride Votes, all municipalities, all years"></sup></p>
+
+<ul class="tldr">
+  <li><strong>Operating overrides only.</strong> Debt exclusions (capital projects, school buildings) not included</li>
+  <li><strong>55 override elections of $6M+ since 1990.</strong> Marblehead's three nested tiers ($9M, $12M, $15M) are all in this range</li>
+  <li><strong>Tier 3 at $15M</strong> would be the 4th largest override ever attempted and the 2nd largest to pass (behind Arlington's $14.8M in FY2027)</li>
+  <li><strong>Marblehead's prior attempts</strong> ($2.5M in FY2024, $3.1M in FY2023) both failed at smaller amounts</li>
+</ul>
+
+<h2>Pass rate by override size (FY2020+)</h2>
+<p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Per-election amounts (all ballot questions from one town in one year combined). Marblehead Tier 1 ($9M) falls in the <span style="color: var(--c-buoy); font-weight: 600;">$5M-10M</span> bucket; Tiers 2 and 3 ($12M, $15M) fall in <span style="color: var(--c-buoy); font-weight: 600;">$10M+</span>.</p>
+
+<svg class="ol-svg chart" id="ol-rates" viewBox="0 0 880 260" role="img" aria-label="Bar chart showing override pass rates by dollar amount bucket since FY2020">
+  <g id="ol-rate-grid"></g>
+  <g id="ol-rate-bars"></g>
+  <g id="ol-rate-labels"></g>
+</svg>
+
+<hr class="ol-divider">
+
+<h2>Every $6M+ override ever attempted in Massachusetts</h2>
+<p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">All time, FY1990 to FY2027. Sorted by amount descending. Marblehead's three nested ballot tiers shown for reference.</p>
+
+<table class="ol-comps">
+  <thead>
+    <tr><th>Town</th><th>FY</th><th>Amount</th><th>Result</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Stoneham</td><td>2027</td><td class="amt">$21.8M</td><td><span class="outcome-loss">Split ($9.3M passed, $12.5M failed)</span></td></tr>
+    <tr><td>Randolph</td><td>2007</td><td class="amt">$21.8M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Needham</td><td>2003</td><td class="amt">$17.3M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr class="mh-row"><td>Marblehead Tier 3</td><td>2027</td><td class="amt">$15.0M</td><td><span class="outcome-proposed">Proposed</span></td></tr>
+    <tr><td>Arlington</td><td>2027</td><td class="amt">$14.8M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Stoneham</td><td>2026</td><td class="amt">$14.6M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Holyoke</td><td>1992</td><td class="amt">$14.3M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Malden</td><td>2027</td><td class="amt">$13.6M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Melrose</td><td>2026</td><td class="amt">$13.5M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Springfield</td><td>1991</td><td class="amt">$12.6M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr class="mh-row"><td>Marblehead Tier 2</td><td>2027</td><td class="amt">$12.0M</td><td><span class="outcome-proposed">Proposed</span></td></tr>
+    <tr><td>Brookline</td><td>2024</td><td class="amt">$12.0M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Newton</td><td>2003</td><td class="amt">$11.5M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Winthrop</td><td>2000</td><td class="amt">$10.5M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Nantucket</td><td>2024</td><td class="amt">$10.3M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Winchester</td><td>2020</td><td class="amt">$10.0M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Springfield</td><td>1990</td><td class="amt">$10.0M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>North Reading</td><td>2025</td><td class="amt">$10.0M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Dudley</td><td>2024</td><td class="amt">$9.9M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Shrewsbury</td><td>2022</td><td class="amt">$9.5M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Newton</td><td>2023</td><td class="amt">$9.2M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr class="mh-row"><td>Marblehead Tier 1</td><td>2027</td><td class="amt">$9.0M</td><td><span class="outcome-proposed">Proposed</span></td></tr>
+    <tr><td>Milton</td><td>2026</td><td class="amt">$8.8M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Dartmouth</td><td>2008</td><td class="amt">$8.5M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Belmont</td><td>2025</td><td class="amt">$8.4M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Newton</td><td>2014</td><td class="amt">$8.4M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Worcester</td><td>1992</td><td class="amt">$8.2M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Bridgewater</td><td>2026</td><td class="amt">$8.0M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Braintree</td><td>2025</td><td class="amt">$8.0M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Hingham</td><td>2024</td><td class="amt">$7.9M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Melrose</td><td>2025</td><td class="amt">$7.7M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Brookline</td><td>2016</td><td class="amt">$7.7M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Easton</td><td>2019</td><td class="amt">$7.6M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Reading</td><td>2017</td><td class="amt">$7.5M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Medford</td><td>2025</td><td class="amt">$7.5M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Easton</td><td>2026</td><td class="amt">$7.3M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Lawrence</td><td>1991</td><td class="amt">$7.3M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Barnstable</td><td>2005</td><td class="amt">$7.2M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Framingham</td><td>2003</td><td class="amt">$7.2M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Revere</td><td>1992</td><td class="amt">$7.1M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Natick</td><td>2026</td><td class="amt">$7.0M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Arlington</td><td>2025</td><td class="amt">$7.0M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Franklin</td><td>2025</td><td class="amt">$6.8M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>North Andover</td><td>1992</td><td class="amt">$6.7M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Acton</td><td>2025</td><td class="amt">$6.6M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Brookline</td><td>2019</td><td class="amt">$6.6M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Weymouth</td><td>2016</td><td class="amt">$6.5M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>N. Attleborough</td><td>2019</td><td class="amt">$6.5M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Arlington</td><td>2012</td><td class="amt">$6.5M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Belmont</td><td>2022</td><td class="amt">$6.4M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Brookline</td><td>2009</td><td class="amt">$6.2M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Wellesley</td><td>2006</td><td class="amt">$6.1M</td><td><span class="outcome-loss">Split</span></td></tr>
+    <tr><td>Randolph</td><td>2009</td><td class="amt">$6.1M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Hanover</td><td>2025</td><td class="amt">$6.0M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Marshfield</td><td>2008</td><td class="amt">$6.0M</td><td><span class="outcome-loss">Split</span></td></tr>
+    <tr><td>Holyoke</td><td>1990</td><td class="amt">$6.0M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+    <tr><td>Georgetown</td><td>2026</td><td class="amt">$6.0M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Arlington</td><td>2006</td><td class="amt">$6.0M</td><td><span class="outcome-win">Passed</span></td></tr>
+    <tr><td>Amesbury</td><td>2026</td><td class="amt">$6.0M</td><td><span class="outcome-loss">Did not pass</span></td></tr>
+  </tbody>
+</table>
+
+<details class="notes">
+  <summary>Notes and sources</summary>
+  <p>Override vote data from the Massachusetts Department of Revenue, Division of Local Services Municipal Databank.<sup class="cite" data-source="MA DOR DLS Municipal Databank, Proposition 2&frac12; Override and Underride Votes" data-href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride"></sup></p>
+  <p>Operating overrides only; debt exclusions not included. Where a town placed multiple override questions on the same ballot, all amounts are combined into a single per-election total. If a majority of questions passed, the election is coded as a win; if a majority failed, a loss.</p>
+  <p>Marblehead's proposed FY2027 override uses three nested ballot tiers: Tier 1 ($9M), Tier 2 ($12M), and Tier 3 ($15M). The highest tier that gets a majority sets the override amount. None have been voted on yet.</p>
+  <p>The table includes every override of $6M or more, all time (FY1990 to FY2027). All amounts shown are the ballot question amounts (nominal dollars), not the deficit that motivated the override.</p>
+  <p>FY2027 data is partial as of April 2026.</p>
+</details>
+
+<script>
+(function() {
+  var W = 880;
+
+  var BUCKETS = [
+    {label:"<$100K",win:25,total:34},
+    {label:"$100-250K",win:30,total:47},
+    {label:"$250-500K",win:38,total:58},
+    {label:"$500K-1M",win:38,total:55},
+    {label:"$1-2M",win:22,total:35},
+    {label:"$2-5M",win:12,total:34},
+    {label:"$5-10M",win:15,total:27},
+    {label:"$10M+",win:7,total:12}
+  ];
+
+  var H = 260, mT = 30, mB = 30;
+  var rH = H - mT - mB;
+  var bL = 100, bR = 80;
+  var bW = W - bL - bR;
+  var barH = Math.floor(rH / BUCKETS.length) - 4;
+  var mhBucketIdx = 6;
+
+  var gridG = document.getElementById("ol-rate-grid");
+  var barsG = document.getElementById("ol-rate-bars");
+  var labelsG = document.getElementById("ol-rate-labels");
+
+  [0, 25, 50, 75, 100].forEach(function(pct) {
+    var x = bL + bW * pct / 100;
+    var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", x); line.setAttribute("x2", x);
+    line.setAttribute("y1", mT); line.setAttribute("y2", H - mB);
+    line.setAttribute("class", pct === 0 ? "axis-base" : "grid-minor");
+    gridG.appendChild(line);
+
+    var label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    label.setAttribute("x", x);
+    label.setAttribute("y", mT - 8);
+    label.setAttribute("text-anchor", "middle");
+    label.setAttribute("class", "ol-label");
+    label.textContent = pct + "%";
+    labelsG.appendChild(label);
+  });
+
+  // 50% reference
+  var ref = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  ref.setAttribute("x1", bL + bW * 0.5); ref.setAttribute("x2", bL + bW * 0.5);
+  ref.setAttribute("y1", mT); ref.setAttribute("y2", H - mB);
+  ref.setAttribute("class", "grid-major");
+  gridG.appendChild(ref);
+
+  BUCKETS.forEach(function(b, i) {
+    var y = mT + i * (barH + 4);
+    var rate = b.total > 0 ? b.win / b.total * 100 : 0;
+
+    var bg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    bg.setAttribute("x", bL); bg.setAttribute("y", y);
+    bg.setAttribute("width", bW); bg.setAttribute("height", barH);
+    bg.setAttribute("rx", 3);
+    bg.setAttribute("class", "ol-rate-bar-bg");
+    barsG.appendChild(bg);
+
+    var fg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    fg.setAttribute("x", bL); fg.setAttribute("y", y);
+    fg.setAttribute("width", bW * rate / 100); fg.setAttribute("height", barH);
+    fg.setAttribute("rx", 3);
+    fg.setAttribute("class", "ol-rate-bar-fg");
+    if (i === mhBucketIdx) {
+      fg.setAttribute("fill", "var(--c-buoy)");
+      fg.setAttribute("opacity", "0.8");
+    }
+    barsG.appendChild(fg);
+
+    var bl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    bl.setAttribute("x", bL - 6); bl.setAttribute("y", y + barH / 2 + 4);
+    bl.setAttribute("text-anchor", "end");
+    bl.setAttribute("class", i === mhBucketIdx ? "ol-callout" : "ol-label");
+    if (i === mhBucketIdx) bl.setAttribute("fill", "var(--c-buoy)");
+    bl.textContent = b.label;
+    labelsG.appendChild(bl);
+
+    var rl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    rl.setAttribute("x", bL + bW * rate / 100 + 6);
+    rl.setAttribute("y", y + barH / 2 + 4);
+    rl.setAttribute("class", "ol-callout");
+    rl.setAttribute("fill", i === mhBucketIdx ? "var(--c-buoy)" : "var(--c-navy)");
+    rl.textContent = Math.round(rate) + "% (" + b.win + "/" + b.total + ")";
+    labelsG.appendChild(rl);
+  });
+})();
+</script>
