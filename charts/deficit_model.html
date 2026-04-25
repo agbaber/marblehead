@@ -769,14 +769,7 @@ title: "Deficit Dynamics Model"
   <button type="button" data-preset="tier3">Tier 3 ($15M)</button>
 </div>
 
-<details class="dm-advanced-controls" id="dm-advanced">
-<summary class="dm-advanced-summary">Show all scenarios and controls <span class="dm-advanced-summary-hint">(13 scenarios, sliders, assumptions)</span></summary>
-<span class="dm-scenario-group-label">Try a scenario</span>
 <div class="dm-scenarios">
-  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="bridge">
-    <span class="dm-scenario-title">Override buys time</span>
-    <span class="dm-scenario-desc">$15M, spent gradually over 5 years. Closes the gap, then reopens.</span>
-  </button>
   <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="skeptic">
     <span class="dm-scenario-title">Override spent immediately</span>
     <span class="dm-scenario-desc">$15M absorbed in year one. The skeptic&rsquo;s view: gap barely narrows.</span>
@@ -785,17 +778,27 @@ title: "Deficit Dynamics Model"
     <span class="dm-scenario-title">No override, just cuts</span>
     <span class="dm-scenario-desc">About 85 positions, sized to absorb the full FY27 gap. Slope unchanged.</span>
   </button>
-  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="cut">
-    <span class="dm-scenario-title">Current pace of cuts</span>
-    <span class="dm-scenario-desc">About 50 positions over FY25 to FY27, roughly matching what the town has already done. Slope unchanged; gap keeps widening.</span>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="hold-line">
+    <span class="dm-scenario-title">Hold the line</span>
+    <span class="dm-scenario-desc">Expense growth drops to revenue growth (3.5%). Contracts at COLA, no new programs.</span>
   </button>
   <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="healthcare">
     <span class="dm-scenario-title">Healthcare share to 50%</span>
     <span class="dm-scenario-desc">Match Hingham. ~$2.2M/yr net after wage offset and pension impact.</span>
   </button>
-  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="hold-line">
-    <span class="dm-scenario-title">Hold the line</span>
-    <span class="dm-scenario-desc">Expense growth drops to revenue growth (3.5%). Contracts at COLA, no new programs.</span>
+</div>
+
+<details class="dm-advanced-controls" id="dm-advanced">
+<summary class="dm-advanced-summary">Show more scenarios and controls <span class="dm-advanced-summary-hint">(9 more scenarios, sliders, assumptions)</span></summary>
+<span class="dm-scenario-group-label">More scenarios</span>
+<div class="dm-scenarios">
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="bridge">
+    <span class="dm-scenario-title">Override buys time</span>
+    <span class="dm-scenario-desc">$15M, spent gradually over 5 years. Closes the gap, then reopens.</span>
+  </button>
+  <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="cut">
+    <span class="dm-scenario-title">Current pace of cuts</span>
+    <span class="dm-scenario-desc">About 50 positions over FY25 to FY27, roughly matching what the town has already done. Slope unchanged; gap keeps widening.</span>
   </button>
   <button type="button" class="dm-scenario-card dm-stance-btn" data-stance="hc-cliff">
     <span class="dm-scenario-title">One-time healthcare spike</span>
