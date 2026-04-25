@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-24
 **Status:** Experiment retrospective
-**Working artifacts:** `data/level_funding_mechanism.md`, PR #653
+**Working artifacts:** `docs/analysis/2026-04-24-level-funding-mechanism.md`, PR #658
 **Outcome:** No chart shipped. One analytical finding worth keeping.
 
 ## What we set out to do
@@ -135,7 +135,7 @@ Two sentences. Honest. Specific. Argues with itself rather than offering a sloga
 
 ## Working artifacts
 
-- `data/level_funding_mechanism.md` (this branch): the analytical memo with the math
+- `docs/analysis/2026-04-24-level-funding-mechanism.md` (this branch): the analytical memo with the math
 - `charts/positions-lost.html` (this branch): the failed dots chart, kept for reference
 - `docs/superpowers/specs/2026-04-24-positions-lost-chart-design.md`: original spec
 - `docs/superpowers/plans/2026-04-24-positions-lost-chart.md`: the implementation plan

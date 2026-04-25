@@ -1,9 +1,3 @@
----
-title: "What Actually Squeezed Marblehead's Operating Budget, FY18-FY27"
-body_class: doc-page
-sitemap: false
----
-
 # What actually squeezed Marblehead's operating budget, FY18 to FY27
 
 *Working analysis. Not a public page. Compiled 2026-04-24 while attempting
