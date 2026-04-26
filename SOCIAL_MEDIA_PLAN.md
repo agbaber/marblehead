@@ -61,7 +61,7 @@ anything opinion-adjacent.
 ### Weeks 4-5: Substantive pages (May 19 - May 30)
 
 - Where has the money gone
-- How we got here (FinCom warning arc)
+- How we got here (<abbr class="g" title="Finance Committee">FinCom</abbr> warning arc)
 - The debate (both sides steelmanned)
 - Senior tax relief
 - What is the override
@@ -104,6 +104,6 @@ it lets people make comparisons that support their arguments. Frame it as
 ## Tone rules
 
 - No opinion on how people should vote
-- No "shocking" or editorial framing
+- No editorial language or loaded adjectives
 - Match the site voice: factual, sourced, neutral
 - Third-party coverage (Marblehead Current) does the credibility work
