@@ -534,8 +534,18 @@
     // Progress message + next button
     var msgEl = document.getElementById('statMsg');
     if (decidedCount === 0) {
-      msgEl.textContent = 'Pick your first answer';
+      msgEl.textContent = '';
       msgEl.className = 'explore-stats-msg';
+      var startBtn = document.createElement('button');
+      startBtn.type = 'button';
+      startBtn.className = 'explore-stats-next';
+      startBtn.textContent = 'Pick your first answer ↑';
+      startBtn.title = 'Jump to the first answer';
+      startBtn.addEventListener('click', function () {
+        var featured = document.getElementById('featuredQuestion');
+        if (featured) featured.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      msgEl.appendChild(startBtn);
     } else if (decidedCount < totalCount) {
       msgEl.textContent = '';
       msgEl.className = 'explore-stats-msg';
