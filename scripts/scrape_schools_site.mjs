@@ -287,19 +287,19 @@ async function processRow(row) {
 const CATEGORY_META = {
   'contracts': {
     title: 'Union contracts',
-    blurb: 'Collective bargaining agreements (Unit A teachers, paraprofessionals, instructional assistants, custodians, tutors, perm subs, operational support) plus the GIC public-employee health agreement.',
+    blurb: 'Collective bargaining agreements (Unit A teachers, paraprofessionals, instructional assistants, custodians, tutors, perm subs, operational support) plus the <abbr class="g" title="Group Insurance Commission">GIC</abbr> public-employee health agreement.',
   },
   'superintendent': {
     title: 'Superintendent',
-    blurb: 'Robidoux contract, evaluation report, and 2025–2027 goals (4).',
+    blurb: 'Robidoux contract, evaluation report, and 2025&ndash;2027 goals (4).',
   },
   'sc-goals': {
-    title: 'School Committee 2025–2026 goals',
+    title: 'School Committee 2025&ndash;2026 goals',
     blurb: 'The committee\'s own annual goals (separate from the superintendent\'s goals).',
   },
   'strategic-plan': {
     title: 'Strategic plan',
-    blurb: 'Planning for Success 2021–2026.',
+    blurb: 'Planning for Success 2021&ndash;2026.',
   },
   'capital-facilities': {
     title: 'Capital facilities plan',
@@ -314,7 +314,7 @@ const CATEGORY_META = {
     blurb: 'School Committee\'s package proposals and proposed salary grids during the 2024 negotiations.',
   },
   'sc-meetings-fy26': {
-    title: 'School Committee meetings — FY26',
+    title: 'School Committee meetings, FY26',
     blurb: 'Agenda packets, minutes, and subcommittee minutes for July 2025 onward. Includes the FY27 Superintendent\'s Proposed Budget packet (2.5.2026 meeting).',
   },
 };
@@ -343,7 +343,7 @@ function writeIndex(manifest) {
   lines.push('body_class: doc-page');
   lines.push('---');
   lines.push('');
-  lines.push('# Marblehead Public Schools — Document Index');
+  lines.push('# Marblehead Public Schools: Document Index');
   lines.push('');
   lines.push('Index of public documents downloaded from');
   lines.push('[marbleheadschools.org](https://www.marbleheadschools.org/) and converted to plain');
@@ -356,7 +356,7 @@ function writeIndex(manifest) {
   lines.push('## Citation discipline');
   lines.push('');
   lines.push('Every text extract maps to a source URL in [`manifest.json`](manifest.json). When');
-  lines.push('citing a number, include the source URL and document date — OCR\'d text in');
+  lines.push('citing a number, include the source URL and document date. OCR\'d text in');
   lines.push('particular has artifacts and is **not authoritative**; the original PDF is. To');
   lines.push('verify a quote, refetch the source URL and read the original.');
   lines.push('');
@@ -380,8 +380,8 @@ function writeIndex(manifest) {
     lines.push('| Date | Title | Source PDF | Local text | Method |');
     lines.push('|------|-------|------------|------------|--------|');
     for (const e of entries) {
-      const date = e.doc_date || '—';
-      const localTxt = e.local_text ? `[txt](${e.local_text.replace('data/schools/', '')})` : '—';
+      const date = e.doc_date || 'n/a';
+      const localTxt = e.local_text ? `[txt](${e.local_text.replace('data/schools/', '')})` : 'n/a';
       const method = e.extract_method === 'ocr' ? 'OCR' : 'native';
       lines.push(`| ${date} | ${e.title} | [pdf](${e.source_url}) | ${localTxt} | ${method} |`);
     }

@@ -3,7 +3,7 @@ title: Schools Site Document Index
 body_class: doc-page
 ---
 
-# Marblehead Public Schools — Document Index
+# Marblehead Public Schools: Document Index
 
 Index of public documents downloaded from
 [marbleheadschools.org](https://www.marbleheadschools.org/) and converted to plain
@@ -16,7 +16,7 @@ extracts and this index are. The scraper at
 ## Citation discipline
 
 Every text extract maps to a source URL in [`manifest.json`](manifest.json). When
-citing a number, include the source URL and document date — OCR'd text in
+citing a number, include the source URL and document date. OCR'd text in
 particular has artifacts and is **not authoritative**; the original PDF is. To
 verify a quote, refetch the source URL and read the original.
 
@@ -31,7 +31,7 @@ with the MEA's contemporaneous statements or framed explicitly as the SC's posit
 
 ### Union contracts (21)
 
-Collective bargaining agreements (Unit A teachers, paraprofessionals, instructional assistants, custodians, tutors, perm subs, operational support) plus the GIC public-employee health agreement.
+Collective bargaining agreements (Unit A teachers, paraprofessionals, instructional assistants, custodians, tutors, perm subs, operational support) plus the <abbr class="g" title="Group Insurance Commission">GIC</abbr> public-employee health agreement.
 
 | Date | Title | Source PDF | Local text | Method |
 |------|-------|------------|------------|--------|
@@ -59,7 +59,7 @@ Collective bargaining agreements (Unit A teachers, paraprofessionals, instructio
 
 ### Superintendent (6)
 
-Robidoux contract, evaluation report, and 2025–2027 goals (4).
+Robidoux contract, evaluation report, and 2025&ndash;2027 goals (4).
 
 | Date | Title | Source PDF | Local text | Method |
 |------|-------|------------|------------|--------|
@@ -67,10 +67,10 @@ Robidoux contract, evaluation report, and 2025–2027 goals (4).
 | 2025-2027 | Goal 2 District Improvement 2025-2027 | [pdf](https://resources.finalsite.net/images/v1763739431/marbleheadschoolsorg/hjm5jcrbypsn4jfistao/DistrictImprovementGoal25-27.pdf) | [txt](superintendent/goal-2-district-improvement-2025-2027.txt) | native |
 | 2025-2027 | Goal 3 District Improvement 2025-2027 | [pdf](https://resources.finalsite.net/images/v1763739582/marbleheadschoolsorg/drckr7np4pf4lcvd43dv/3DistrictImprovementGoal25-27.pdf) | [txt](superintendent/goal-3-district-improvement-2025-2027.txt) | native |
 | 2025-2027 | Goal 4 Student Learning 2025-2027 | [pdf](https://resources.finalsite.net/images/v1763739625/marbleheadschoolsorg/gitlwiohrjtgkbpqec4c/4StudentLearningGoal25-27.pdf) | [txt](superintendent/goal-4-student-learning-2025-2027.txt) | native |
-| — | John Robidoux Contract | [pdf](https://resources.finalsite.net/images/v1762954488/marbleheadschoolsorg/cfyhrywuk9as7jp9rder/JohnRobidouxContract.pdf) | [txt](superintendent/john-robidoux-contract.txt) | OCR |
-| — | Superintendent Evaluation Report | [pdf](https://resources.finalsite.net/images/v1762954713/marbleheadschoolsorg/qfgg1d2hlhdg6gbjrsxo/SuperintendentEval.pdf) | [txt](superintendent/superintendent-evaluation-report.txt) | native |
+| n/a | John Robidoux Contract | [pdf](https://resources.finalsite.net/images/v1762954488/marbleheadschoolsorg/cfyhrywuk9as7jp9rder/JohnRobidouxContract.pdf) | [txt](superintendent/john-robidoux-contract.txt) | OCR |
+| n/a | Superintendent Evaluation Report | [pdf](https://resources.finalsite.net/images/v1762954713/marbleheadschoolsorg/qfgg1d2hlhdg6gbjrsxo/SuperintendentEval.pdf) | [txt](superintendent/superintendent-evaluation-report.txt) | native |
 
-### School Committee 2025–2026 goals (4)
+### School Committee 2025&ndash;2026 goals (4)
 
 The committee's own annual goals (separate from the superintendent's goals).
 
@@ -83,7 +83,7 @@ The committee's own annual goals (separate from the superintendent's goals).
 
 ### Strategic plan (1)
 
-Planning for Success 2021–2026.
+Planning for Success 2021&ndash;2026.
 
 | Date | Title | Source PDF | Local text | Method |
 |------|-------|------------|------------|--------|
@@ -95,7 +95,7 @@ District capital plan.
 
 | Date | Title | Source PDF | Local text | Method |
 |------|-------|------------|------------|--------|
-| — | Capital Facilities Plan | [pdf](https://resources.finalsite.net/images/v1741690835/marbleheadschoolsorg/apdgujai29xc5kwrlxsu/capital_facilities_plan.pdf) | [txt](capital-facilities/capital-facilities-plan.txt) | native |
+| n/a | Capital Facilities Plan | [pdf](https://resources.finalsite.net/images/v1741690835/marbleheadschoolsorg/apdgujai29xc5kwrlxsu/capital_facilities_plan.pdf) | [txt](capital-facilities/capital-facilities-plan.txt) | native |
 
 ### Negotiations archive (2024 contract dispute, ONE-SIDED) (26)
 
@@ -139,7 +139,7 @@ School Committee's package proposals and proposed salary grids during the 2024 n
 | 2024-11-24 | Unit A Salary Grid SC Offer Version 2 | [pdf](https://resources.finalsite.net/images/v1741690444/marbleheadschoolsorg/rpe1onmfrmkpetivfm2p/112424_Version_2_SC_offer_with_UNIT_A_Changes.pdf) | [txt](sc-proposals/unit-a-salary-grid-sc-offer-version-2.txt) | native |
 | 2024 | 1-Year Successor Contract Proposal | [pdf](https://resources.finalsite.net/images/v1741690448/marbleheadschoolsorg/gugak05tbrztxwplxdps/1-year_Successor_Contract.pdf) | [txt](sc-proposals/1-year-successor-contract-proposal.txt) | native |
 
-### School Committee meetings — FY26 (64)
+### School Committee meetings, FY26 (64)
 
 Agenda packets, minutes, and subcommittee minutes for July 2025 onward. Includes the FY27 Superintendent's Proposed Budget packet (2.5.2026 meeting).
 
