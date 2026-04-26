@@ -33,6 +33,65 @@ og_url: https://marbleheaddata.org/after-the-no-vote.html
   .tldr-list li:first-child::before { top: 12px; }
   .tldr-list li strong,
   .tldr-list li em { color: var(--text); }
+
+  /* Page-scoped: 2-column "key: value" grid for structured threat lists.
+     Replaces bullet lists where the content is already shaped like a table. */
+  .threat-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 10px 18px;
+    margin: 10px 0 12px;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+  .threat-grid dt {
+    font-weight: 600;
+    color: var(--text);
+    padding: 6px 0;
+    border-top: 1px solid var(--divider);
+  }
+  .threat-grid dd {
+    margin: 0;
+    color: var(--text-muted);
+    padding: 6px 0;
+    border-top: 1px solid var(--divider);
+  }
+  .threat-grid dt:first-of-type,
+  .threat-grid dd:first-of-type { border-top: none; padding-top: 2px; }
+  @media (max-width: 600px) {
+    .threat-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .threat-grid dt { padding-bottom: 0; }
+    .threat-grid dd { border-top: none; padding-top: 0; padding-bottom: 10px; }
+    .threat-grid dt:not(:first-of-type) { border-top: 1px solid var(--divider); padding-top: 10px; }
+  }
+
+  /* Page-scoped: compact short-item list inside a card. Lighter than
+     .tldr-list (no dividers); intentional teal dot, indented to clear
+     the card padding. Use for short, parallel bullet items. */
+  .scan-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 12px;
+  }
+  .scan-list li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    line-height: 1.5;
+  }
+  .scan-list li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 13px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--c-teal);
+    opacity: 0.7;
+  }
 </style>
 <h1>After the no-vote: did Marblehead find the money?</h1>
 
@@ -102,26 +161,36 @@ og_url: https://marbleheaddata.org/after-the-no-vote.html
 
   <div class="card">
     <h3>School side: 33 positions plus programs</h3>
-    <ul>
-      <li><strong>High School:</strong> freshman coaches, paraprofessionals, freshman sports</li>
-      <li><strong>Veterans Middle:</strong> librarian, world-language and Latin teacher</li>
-      <li><strong>Village:</strong> physical education teacher, music teacher, two classroom teachers</li>
-      <li><strong>Brown:</strong> special education teacher, tutor, lunch and recess paraprofessionals</li>
-      <li><strong>Glover:</strong> front office clerk, lunch and recess paraprofessionals, reading tutor</li>
-      <li><strong>District-wide:</strong> tech support, custodian, <abbr class="g" title="Human Resources">HR</abbr> director, payroll coordinator</li>
-    </ul>
+    <dl class="threat-grid">
+      <dt>High School</dt>
+      <dd>Freshman coaches, paraprofessionals, freshman sports</dd>
+      <dt>Veterans Middle</dt>
+      <dd>Librarian, world-language and Latin teacher</dd>
+      <dt>Village</dt>
+      <dd>Physical education teacher, music teacher, two classroom teachers</dd>
+      <dt>Brown</dt>
+      <dd>Special education teacher, tutor, lunch and recess paraprofessionals</dd>
+      <dt>Glover</dt>
+      <dd>Front office clerk, lunch and recess paraprofessionals, reading tutor</dd>
+      <dt>District-wide</dt>
+      <dd>Tech support, custodian, <abbr class="g" title="Human Resources">HR</abbr> director, payroll coordinator</dd>
+    </dl>
     <p>Reduced-services budget total: $44,782,273. Level-services would have been $45,971,790.<sup class="cite" data-href="https://www.itemlive.com/2023/03/22/in-marblehead-33-school-jobs-could-be-cut/" data-source="Item Live, &quot;In Marblehead: 33 school jobs could be cut&quot; (March 22, 2023): itemized list of threatened school positions. Reduced and level-services budget figures: Marblehead School Committee minutes, March 21, 2023."></sup></p>
     <p>Superintendent Buckey on the paraprofessional cuts in particular: "Elimination of paraprofessionals... to have to eliminate that position is gut wrenching."<sup class="cite" data-href="https://www.itemlive.com/2023/03/22/in-marblehead-33-school-jobs-could-be-cut/" data-source="Item Live, &quot;In Marblehead: 33 school jobs could be cut&quot; (March 22, 2023): Buckey quote on paraprofessional eliminations."></sup></p>
   </div>
 
   <div class="card">
     <h3>Town side: 6 positions plus facility maintenance</h3>
-    <ul>
-      <li>3 fire positions</li>
-      <li>2 police positions</li>
-      <li>1 <abbr class="g" title="Department of Public Works">DPW</abbr> position</li>
-      <li>Reduced facility maintenance</li>
-    </ul>
+    <dl class="threat-grid">
+      <dt>Fire</dt>
+      <dd>3 positions</dd>
+      <dt>Police</dt>
+      <dd>2 positions</dd>
+      <dt><abbr class="g" title="Department of Public Works">DPW</abbr></dt>
+      <dd>1 position</dd>
+      <dt>Facilities</dt>
+      <dd>Reduced maintenance budget</dd>
+    </dl>
     <p>The most important pre-vote framing on the town side came from Kezer himself, who said publicly that the override was needed to avoid "eliminating positions in public safety and town departments that are mostly currently vacant."<sup class="cite" data-href="https://patch.com/massachusetts/marblehead/marblehead-2-5-million-tax-override-wins-town-meeting-support" data-source="Patch, &quot;Marblehead $2.5 Million Tax Override Wins Town Meeting Support&quot; (May 2, 2023): Kezer pre-vote statement that town-side cuts target positions &quot;mostly currently vacant.&quot;"></sup> That single sentence does most of the work in answering the "scare tactics" question for the town side: the threatened municipal cuts were honest about their own caveat.</p>
   </div>
 
@@ -207,7 +276,7 @@ og_url: https://marbleheaddata.org/after-the-no-vote.html
 
   <p>The "find the money" play in 2023 worked because Marblehead started with $10.2M of free cash in the operating budget, an active superintendent who could be parted with, identified staff who could leave on their own, and untapped local-option taxes. None of those four conditions hold for FY27.</p>
 
-  <ul>
+  <ul class="tldr-list">
     <li><strong>Free cash is much smaller.</strong> The FY27 proposed draw is $5M, half the FY23 peak, and even that draw assumes a Free Cash certification roughly in the $7M range. Above-trend interest income and one-time receipts that propped up the FY26 draw are not projected to repeat.</li>
     <li><strong>The Superintendent line has already been turned over.</strong> Cresta's interim role and the subsequent permanent hire mean the one-time savings from a separation are not on the table for FY27. The district is also at a point in the contract cycle where step increases and contractual <abbr class="g" title="Cost of Living Adjustment">COLA</abbr>s are pulling the school appropriation up, not down.</li>
     <li><strong>Voluntary attrition this time means losing teachers Marblehead wants to keep.</strong> The 2023 wave was concentrated on positions the district had identified as cuttable. The FY27 no-override budget reduces 18.25 school <abbr class="g" title="Full-Time Equivalent positions">FTE</abbr>s, of which roughly 9.3 are filled and 8.95 are vacant; resignations among the 9.3 filled positions are not a windfall, they are a hiring problem in a tight regional teacher market.<sup class="cite" data-href="no-override-budget.html" data-source="Marblehead 2026 site, &quot;What's in the no-override budget?&quot;: 18.25 school FTE figure, 9.3 filled and 8.95 vacant breakdown."></sup></li>
@@ -259,7 +328,7 @@ og_url: https://marbleheaddata.org/after-the-no-vote.html
 
   <p>The "they'll find the money" objection is not a strawman. It was empirically correct in Marblehead twice in a row, and it has been correct in some peer towns for a few years at a time.</p>
 
-  <ul>
+  <ul class="tldr-list">
     <li><strong>No catastrophic service collapse followed either Marblehead vote.</strong> Schools opened, fire trucks rolled, police patrolled. Skeptics who said "the sky won't fall" were right about the immediate horizon.</li>
     <li><strong>Most named municipal positions in 2023 were already vacant.</strong> Kezer admitted this on the record before the vote. After defeat, those vacancies stayed vacant.</li>
     <li><strong>Belmont 2021 is the cleanest evidence that "find the money" can buy real time.</strong> A no-vote camp who said the cuts wouldn't materialize was literally correct for about three years, because of an unrepeatable federal cash injection.</li>
