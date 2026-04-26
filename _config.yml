@@ -32,3 +32,6 @@ exclude:
   - data/budgets/
   - community-pulse/
   - node_modules/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock

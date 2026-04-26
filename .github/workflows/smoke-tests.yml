@@ -19,11 +19,10 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
+          bundler-cache: true
 
       - name: Build site with Jekyll
-        run: |
-          gem install 'jekyll:3.10.0' kramdown-parser-gfm
-          jekyll build
+        run: bundle exec jekyll build
 
       - run: npm install
       - run: npx playwright install --with-deps chromium
