@@ -60,6 +60,7 @@ anything opinion-adjacent.
 
 ### Weeks 4-5: Substantive pages (May 19 - May 30)
 
+- Prop 2&frac12; history (storybook: 1980 to 2026)
 - Where has the money gone
 - How we got here (<abbr class="g" title="Finance Committee">FinCom</abbr> warning arc)
 - The debate (both sides steelmanned)
@@ -107,3 +108,23 @@ it lets people make comparisons that support their arguments. Frame it as
 - No editorial language or loaded adjectives
 - Match the site voice: factual, sourced, neutral
 - Third-party coverage (Marblehead Current) does the credibility work
+
+## Drafts
+
+### Prop 2&frac12; history (target slot: weeks 4-5, ideally lead-off Mon May 19)
+
+- **Page:** [prop25-story.html](prop25-story.html)
+- **Screenshot:** top key-stats strip (1980 / 2005 / 4 of 13 / 28 of 29). Crop to include the page title and lead paragraph if it fits.
+- **Hook:** the 1980-to-2026 arc. Marblehead is voting again on whether to exceed a cap that a Marblehead resident helped create.
+
+**Post text:**
+
+> 1980: Massachusetts voters pass Proposition 2&frac12;, the law that caps how fast a town's property tax can grow. The statewide campaign is led by Barbara Anderson, a Marblehead resident.
+>
+> 2026: Marblehead is again voting on whether to exceed that cap.
+>
+> A short walkthrough of how the town has voted on its own overrides since 1990. Six no's in the 1990s. A yes era from 2001 to 2005. A sixteen-year stretch when the Finance Committee didn't ask. The most recent operating override failed in 2023 by about 400 votes.
+>
+> Across the full record: voters approved 28 of 29 debt exclusions for buildings, but only 4 of 13 operating overrides.
+>
+> https://marbleheaddata.org/prop25-story.html
