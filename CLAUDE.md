@@ -20,6 +20,24 @@ em-dashes in site copy, no inline `style=""` on SVG elements, no
 standalone CPI/inflation comparisons as the sole benchmark for a
 municipal cost category, no green/red value judgments on comparisons.)
 
+## Local dev
+
+One-time setup on a fresh clone: `bundle install`, then `npm install`.
+Then:
+
+- `npm run dev` &ndash; `bundle exec jekyll serve --port 4000`, live rebuild.
+- `npm run test:local` &ndash; builds, serves `_site/`, runs Playwright smoke
+  (`tests/smoke-test.mjs`), tears down. 52 pass / 0 fail expected.
+
+The Gemfile pins `jekyll 3.10.0` and `kramdown-parser-gfm` to match
+GitHub Pages prod, so local output equals what visitors see. Both CI
+workflows (`smoke-tests.yml`, `preview.yml`) use the same Gemfile via
+`bundle exec jekyll build`.
+
+For changes you want a second pair of eyes on (or to view from
+another device), keep using the Cloudflare PR preview URL &ndash; local
+is for fast iteration, preview is for review.
+
 ## Editorial stance
 
 From README: *"This is not an advocacy project. The goal is to make the
