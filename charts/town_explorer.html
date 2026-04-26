@@ -19,12 +19,14 @@ scripts: [citations]
     padding: 2px 0;
   }
   .filter-details > summary::-webkit-details-marker { display: none; }
-  .filter-details > summary::before {
-    content: '\25B8'; font-size: 10px; color: var(--text-subtle);
-    transition: transform 0.15s; display: inline-block;
+  .filter-icon {
+    width: 13px; height: 13px; flex-shrink: 0;
+    color: var(--text-subtle); transition: color 0.15s;
   }
-  .filter-details[open] > summary::before { transform: rotate(90deg); }
+  .filter-details[open] > summary .filter-icon { color: var(--c-teal); }
   .filter-details > summary:hover { color: var(--text); }
+  .filter-details > summary:hover .filter-icon { color: var(--text); }
+  .filter-details[open] > summary:hover .filter-icon { color: var(--c-teal); }
   .filter-details > summary:focus { outline: none; }
   .filter-details > summary:focus-visible {
     outline: 2px solid var(--c-teal); outline-offset: 2px; border-radius: var(--radius-sm);
@@ -291,7 +293,7 @@ scripts: [citations]
 
 <div class="filter-bar" id="filter-bar">
   <details class="filter-details" id="filter-details">
-  <summary class="filter-summary"><span class="filter-summary-label">Filters</span><span class="filter-summary-status" id="filter-summary-status"></span></summary>
+  <summary class="filter-summary"><svg class="filter-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 5h14a1 1 0 0 1 .8 1.6L14 14v5a1 1 0 0 1-1.45.9l-2-1A1 1 0 0 1 10 18v-4L4.2 6.6A1 1 0 0 1 5 5z"/></svg><span class="filter-summary-label">Filters</span><span class="filter-summary-status" id="filter-summary-status"></span></summary>
   <div class="filter-grid">
     <div class="filter-group">
       <label>Population</label>
