@@ -1713,12 +1713,6 @@
     font-size: 12px;
     line-height: 1.4;
     color: var(--text-subtle);
-    margin: 0 0 6px;
-  }
-  .votes-strip-step-desc {
-    font-size: 12px;
-    line-height: 1.5;
-    color: var(--text-muted);
     margin: 0;
   }
   .votes-strip-arrow {
