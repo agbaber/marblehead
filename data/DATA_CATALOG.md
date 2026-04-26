@@ -29,8 +29,8 @@ All data compiled April 2026 from primary public sources. Every number is either
 ### Total FTE (24 data points, FY01-FY24)
 - **What it is:** Full-time equivalent employees across all town departments. Part-time employees counted as fractions (e.g., 20 hrs/wk = 0.5 FTE).
 - **Source:** ACFR Statistical Section, "Full-time Equivalent Town Employees by Function"
-- **Caveat:** FY23 jumped +40 FTE (669 to 709), almost entirely in education. Cause unconfirmed (possibly ESSER-funded positions or methodology change). FY22 ACFR used decimals, FY23 switched to round numbers.
-- **Confidence:** High for trend. FY23 jump is suspicious.
+- **Caveat:** FY23 jumped +40.5 total town <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (668.50 to 709.00); education gained +54.31, other functions dropped. Not real hiring: General Fund salaries grew 2.6% the same year, nowhere near what 54 new positions would have cost. The FY23 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> also rounded its values and restructured the schedule. Likely a reporting change involving funding-source recategorization (Circuit Breaker spending tripled FY22 to FY23). Specific methodology pending Town Accountant confirmation. Full breakdown at `inside-school-staffing.html#the-fy23-mystery`.
+- **Confidence:** High for trend; high that FY23 jump is not real hiring. Specific reporting change pending Town Accountant confirmation.
 
 ### Education FTE (24 data points, FY01-FY24)
 - **What it is:** Education department FTE only (teachers, paraprofessionals, administrators, custodial, all school staff)
