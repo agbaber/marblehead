@@ -2388,3 +2388,23 @@
   })();
 
 })();
+
+(function () {
+  var spans = document.querySelectorAll('.votes-strip-countdown[data-date]');
+  var now = new Date();
+  now.setHours(0, 0, 0, 0);
+  spans.forEach(function (el) {
+    var target = new Date(el.getAttribute('data-date') + 'T00:00:00');
+    var diff = Math.ceil((target - now) / 86400000);
+    if (diff > 1) {
+      el.textContent = diff + ' days away';
+    } else if (diff === 1) {
+      el.textContent = 'tomorrow';
+    } else if (diff === 0) {
+      el.textContent = 'today';
+    } else {
+      el.textContent = 'complete';
+      el.classList.add('past');
+    }
+  });
+})();
