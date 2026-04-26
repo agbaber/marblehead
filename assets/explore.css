@@ -1709,6 +1709,12 @@
     line-height: 1.35;
     margin-bottom: 4px;
   }
+  .votes-strip-step-where {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--text-subtle);
+    margin: 0 0 6px;
+  }
   .votes-strip-step-desc {
     font-size: 12px;
     line-height: 1.5;
