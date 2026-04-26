@@ -1727,6 +1727,7 @@
     line-height: 1.5;
     color: var(--text-muted);
     margin: 10px 0 0;
+    text-align: center;
   }
   .votes-strip-link {
     font-weight: 600;
