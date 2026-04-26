@@ -296,6 +296,21 @@ title: "Deficit Dynamics Model"
     stroke-dasharray: 3 3;
     opacity: 0.5;
   }
+  .dm-svg .dm-exp-baseline-line {
+    fill: none;
+    stroke: var(--c-buoy);
+    stroke-width: 1.5;
+    stroke-dasharray: 1 4;
+    opacity: 0.4;
+  }
+  .dm-svg .dm-end-label-baseline {
+    fill: var(--c-buoy);
+    opacity: 0.6;
+    font-weight: 400;
+    font-style: italic;
+  }
+  body.dm-tour-active .dm-exp-baseline-line,
+  body.dm-tour-active .dm-end-label-baseline { display: none; }
   .dm-svg .dm-cuts-fill {
     fill: var(--c-buoy);
     opacity: 0.08;
@@ -700,6 +715,7 @@ title: "Deficit Dynamics Model"
   <text id="dm-boundary-label-r" class="dm-boundary-label"></text>
   <path id="dm-rev-hist" class="dm-rev-line"></path>
   <path id="dm-exp-hist" class="dm-exp-line"></path>
+  <path id="dm-exp-baseline" class="dm-exp-baseline-line dm-hidden"></path>
   <path id="dm-rev-proj" class="dm-rev-line dm-line-proj"></path>
   <path id="dm-exp-proj" class="dm-exp-line dm-line-proj"></path>
   <circle id="dm-crossover-dot" class="dm-crossover-dot dm-hidden" r="4"></circle>
@@ -711,6 +727,7 @@ title: "Deficit Dynamics Model"
   <text id="dm-end-rev" class="dm-end-label dm-end-label-rev"></text>
   <text id="dm-end-exp" class="dm-end-label dm-end-label-exp"></text>
   <text id="dm-end-constrained" class="dm-end-label dm-end-label-exp dm-hidden"></text>
+  <text id="dm-end-baseline" class="dm-end-label dm-end-label-baseline dm-hidden"></text>
   <g id="dm-legend"></g>
   <g id="dm-hover-g" class="dm-hidden">
     <line id="dm-hover-line" class="dm-hover-line"></line>
@@ -1240,7 +1257,17 @@ An override on its own buys time. It does not change the slope of either line.
     var rev = data.rev;
     var exp = data.exp;
 
-    computeYRange(rev, exp);
+    // Compute the matching-tier baseline once so we can include its expense
+    // values in the y-range (the ghost line can sit higher than the live
+    // expense line, e.g. when a scenario reduces growth) and reuse the
+    // result later when drawing the ghost line itself.
+    var baselineRender = null;
+    if (currentStance && currentStance !== 'bridge') {
+      var baselineRenderOver = stanceOverride[currentStance] || 0;
+      baselineRender = computeBaselineData(baselineRenderOver);
+    }
+
+    computeYRange(rev, baselineRender ? exp.concat(baselineRender.exp) : exp);
     drawMainGrid();
 
     document.getElementById('dm-rev-hist').setAttribute('d', buildPath(rev, 0, lastHistIdx, xScale, yScale));
@@ -1326,6 +1353,33 @@ An override on its own buys time. It does not change the slope of either line.
       }
     } else {
       constrainedEl.classList.add('dm-hidden');
+    }
+
+    // Ghost line: matching tier baseline expense projection, shown alongside
+    // the live expense line when a scenario is active so the wedge between
+    // them is visible directly on the chart.
+    var baselineEl = document.getElementById('dm-exp-baseline');
+    var endBaselineEl = document.getElementById('dm-end-baseline');
+    if (baselineRender) {
+      var bLastIdx = nYears - 1;
+      baselineEl.setAttribute('d', buildPath(baselineRender.exp, lastHistIdx, bLastIdx, xScale, yScale));
+      baselineEl.classList.remove('dm-hidden');
+      var bLabel = baselineRenderOver > 0
+        ? tierLabelForOverride(baselineRenderOver) + ' alone'
+        : 'No-override baseline';
+      var bEndY = yScale(baselineRender.exp[bLastIdx]) + 4;
+      var bExpEndY = yScale(exp[bLastIdx]) + 4;
+      if (Math.abs(bEndY - bExpEndY) < 12) {
+        bEndY = bExpEndY + (baselineRender.exp[bLastIdx] > exp[bLastIdx] ? 12 : -12);
+      }
+      endBaselineEl.setAttribute('x', xScale(bLastIdx) + 6);
+      endBaselineEl.setAttribute('y', bEndY);
+      endBaselineEl.setAttribute('text-anchor', 'start');
+      endBaselineEl.textContent = bLabel;
+      endBaselineEl.classList.remove('dm-hidden');
+    } else {
+      baselineEl.classList.add('dm-hidden');
+      endBaselineEl.classList.add('dm-hidden');
     }
 
     // End labels
@@ -1484,9 +1538,9 @@ An override on its own buys time. It does not change the slope of either line.
     return 'No override';
   }
   // Run compute() with all modifiers reset to defaults except the override
-  // value. Returns the FY40 gap (exp - rev) for that baseline. State is
-  // saved and restored so the live chart isn't disturbed.
-  function computeBaselineFy40Gap(overrideValue) {
+  // value. Returns the full result (rev/exp arrays etc.) for that baseline.
+  // State is saved and restored so the live chart isn't disturbed.
+  function computeBaselineData(overrideValue) {
     var saved = {
       rev: revGrowthEl.value, exp: expGrowthEl.value,
       over: overrideEl.value, ratch: ratchetEl.value,
@@ -1504,7 +1558,6 @@ An override on its own buys time. It does not change the slope of either line.
     fy27StepEl.value = 0;
     forcedEquilibriumActive = false;
     var data = compute();
-    var gap = data.exp[nYears - 1] - data.rev[nYears - 1];
     revGrowthEl.value = saved.rev;
     expGrowthEl.value = saved.exp;
     overrideEl.value = saved.over;
@@ -1514,7 +1567,7 @@ An override on its own buys time. It does not change the slope of either line.
     wageOffsetEl.value = saved.wage;
     fy27StepEl.value = saved.fy27;
     forcedEquilibriumActive = saved.forced;
-    return gap;
+    return data;
   }
   var stanceNotes = {
     'bridge': 'Buys roughly 5 years of headroom, then the gap reopens on the same slope. Politically hard: Marblehead voters have rejected every operating override attempt since 2006 (2011, 2022, 2023, 2025 all failed).',
@@ -1573,7 +1626,8 @@ An override on its own buys time. It does not change the slope of either line.
 
     if (currentStance && currentStance !== 'bridge') {
       var baselineOver = stanceOverride[currentStance] || 0;
-      var baselineGap = computeBaselineFy40Gap(baselineOver);
+      var baselineData = computeBaselineData(baselineOver);
+      var baselineGap = baselineData.exp[nYears - 1] - baselineData.rev[nYears - 1];
       var liveData = compute();
       var liveGap = liveData.exp[nYears - 1] - liveData.rev[nYears - 1];
       var delta = baselineGap - liveGap;
