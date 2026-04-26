@@ -25,6 +25,7 @@ defaults:
 exclude:
   - README.md
   - STYLE_GUIDE.md
+  - SOCIAL_MEDIA_PLAN.md
   - LICENSE
   - docs/
   - data/acfr/
