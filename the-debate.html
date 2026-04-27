@@ -169,7 +169,18 @@ og_url: https://marbleheaddata.org/the-debate.html
     .closing-statement { padding: 14px 16px; font-size: 14px; }
   }
 
-  /* Crux map: side-by-side summary grid at the bottom */
+  /* Sticky TOC on desktop so reader can jump between dividing lines without
+     scrolling back to the top of the page. Scoped to this page so the global
+     .page-toc on shorter pages stays inline. */
+  @media (min-width: 720px) {
+    .page-toc {
+      position: sticky;
+      top: 60px;
+      z-index: 5;
+    }
+  }
+
+  /* Crux map: side-by-side summary grid */
   .crux-map {
     display: grid;
     grid-template-columns: 150px 1fr 1fr;
@@ -439,14 +450,47 @@ og_url: https://marbleheaddata.org/the-debate.html
 
   <nav class="page-toc" aria-label="On this page">
     <span class="page-toc-label">On this page</span>
+    <a href="#side-by-side">Cruxes side-by-side</a>
     <a href="#tension-1">1. Cost pressure</a>
     <a href="#tension-2">2. Reductions</a>
     <a href="#tension-3">3. One-time or annual?</a>
     <a href="#tension-4">4. Alternatives</a>
     <a href="#tension-5">5. Trust</a>
     <a href="#tension-6">6. School staffing</a>
-    <a href="#side-by-side">Side by side</a>
   </nav>
+
+  <h2 class="tension-heading" id="side-by-side">The six dividing lines, side by side</h2>
+  <p>Each side's crux compressed to a phrase. The full case for each is below.</p>
+
+  <div class="crux-map">
+    <div class="crux-map-header crux-map-header--tension">Dividing line</div>
+    <div class="crux-map-header crux-map-header--for">For the override reads it as</div>
+    <div class="crux-map-header crux-map-header--against">Against the override reads it as</div>
+
+    <div class="crux-map-label">1. Cost source</div>
+    <div class="crux-map-cell crux-map-cell--for">External drivers outside the town's near-term control (<abbr class="g" title="Group Insurance Commission">GIC</abbr> premiums, pension schedules, debt, state aid decline)</div>
+    <div class="crux-map-cell crux-map-cell--against">Local policy choices the town can renegotiate over time</div>
+
+    <div class="crux-map-label">2. Damage or discipline</div>
+    <div class="crux-map-cell crux-map-cell--for">Services residents use; the reductions cause real harm</div>
+    <div class="crux-map-cell crux-map-cell--against">Correction to years of accumulated above-baseline growth</div>
+
+    <div class="crux-map-label">3. Reset or annual ask</div>
+    <div class="crux-map-cell crux-map-cell--for">Multi-year structural correction; <abbr class="g" title="Finance Committee">FinCom</abbr> forecasts support it</div>
+    <div class="crux-map-cell crux-map-cell--against">Delay; cost drivers continue and the next ask arrives</div>
+
+    <div class="crux-map-label">4. Alternatives</div>
+    <div class="crux-map-cell crux-map-cell--for">Don't exist at the 12-week FY27 horizon</div>
+    <div class="crux-map-cell crux-map-cell--against">Exist at the 5-year horizon; haven't been seriously tried</div>
+
+    <div class="crux-map-label">5. Trust</div>
+    <div class="crux-map-cell crux-map-cell--for">16 years of documented <abbr class="g" title="Finance Committee">FinCom</abbr> warnings; transparent process</div>
+    <div class="crux-map-cell crux-map-cell--against">Past behavior is not sufficient evidence of future change</div>
+
+    <div class="crux-map-label">6. School staffing</div>
+    <div class="crux-map-cell crux-map-cell--for">Teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> tracked enrollment; growth is in mandate-driven support roles</div>
+    <div class="crux-map-cell crux-map-cell--against">Long-run total headcount diverged from the student base; override funds it unexamined</div>
+  </div>
 
   <h2 class="tension-heading" id="tension-1">1. Where does the cost pressure come from?</h2>
   <p class="tension-framing">Both sides agree costs are rising faster than revenue. They disagree on whether the town chose those costs or they happened to it.</p>
@@ -559,40 +603,7 @@ og_url: https://marbleheaddata.org/the-debate.html
     <p><strong>Where they actually disagree:</strong> which headcount measure frames the question. Three counts are now charted on the <a href="charts/enrollment_vs_staffing.html">enrollment vs. staffing</a> page: the town's <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> education <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (up 9.6% from FY15 to FY24), <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (down 13.9%), and <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> classroom teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (down 4.3%). The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> is the broadest count and is most affected by a FY23 data discontinuity. <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> tracks school-reported staff directly and shows a decline. Any single "staffing has changed by X%" figure in the broader debate depends on which of the three counts is being used. Beyond the data, the question is values: at what student-to-adult ratio does Marblehead want to run its schools, and whose job is it to answer. For a role-by-role breakdown of what those positions are and which are legally mandated, see <a href="inside-school-staffing.html">Inside school staffing</a>.</p>
   </div>
 
-  <h2 class="tension-heading" id="side-by-side">The cruxes, side by side</h2>
-  <p>The six dividing lines above are not about different facts. Both sides read the same facts: the same FY27 deficit, the same health insurance trajectory, the same Finance Committee letters, the same no-override budget, the same enrollment charts. They reach different conclusions because they apply different frames. Each one's crux, compressed into a phrase:</p>
-
-  <div class="crux-map">
-    <div class="crux-map-header crux-map-header--tension">Dividing line</div>
-    <div class="crux-map-header crux-map-header--for">For the override reads it as</div>
-    <div class="crux-map-header crux-map-header--against">Against the override reads it as</div>
-
-    <div class="crux-map-label">1. Cost source</div>
-    <div class="crux-map-cell crux-map-cell--for">External drivers outside the town's near-term control (<abbr class="g" title="Group Insurance Commission">GIC</abbr> premiums, pension schedules, debt, state aid decline)</div>
-    <div class="crux-map-cell crux-map-cell--against">Local policy choices the town can renegotiate over time</div>
-
-    <div class="crux-map-label">2. Damage or discipline</div>
-    <div class="crux-map-cell crux-map-cell--for">Services residents use; the reductions cause real harm</div>
-    <div class="crux-map-cell crux-map-cell--against">Correction to years of accumulated above-baseline growth</div>
-
-    <div class="crux-map-label">3. Reset or annual ask</div>
-    <div class="crux-map-cell crux-map-cell--for">Multi-year structural correction; <abbr class="g" title="Finance Committee">FinCom</abbr> forecasts support it</div>
-    <div class="crux-map-cell crux-map-cell--against">Delay; cost drivers continue and the next ask arrives</div>
-
-    <div class="crux-map-label">4. Alternatives</div>
-    <div class="crux-map-cell crux-map-cell--for">Don't exist at the 12-week FY27 horizon</div>
-    <div class="crux-map-cell crux-map-cell--against">Exist at the 5-year horizon; haven't been seriously tried</div>
-
-    <div class="crux-map-label">5. Trust</div>
-    <div class="crux-map-cell crux-map-cell--for">16 years of documented <abbr class="g" title="Finance Committee">FinCom</abbr> warnings; transparent process</div>
-    <div class="crux-map-cell crux-map-cell--against">Past behavior is not sufficient evidence of future change</div>
-
-    <div class="crux-map-label">6. School staffing</div>
-    <div class="crux-map-cell crux-map-cell--for">Teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> tracked enrollment; growth is in mandate-driven support roles</div>
-    <div class="crux-map-cell crux-map-cell--against">Long-run total headcount diverged from the student base; override funds it unexamined</div>
-  </div>
-
-  <p class="closing-statement">Both readings are honest. The choice between them depends on how you weight external pressure versus local discretion, documented warnings versus the absence of attempted reform, and whether past <abbr class="g" title="Finance Committee">FinCom</abbr> discipline is sufficient evidence of future spending discipline. Nothing on this site resolves those weightings for you. They are values questions dressed in budget numbers.</p>
+  <p class="closing-statement">Both readings are honest. Both sides read the same facts and reach different conclusions because they apply different frames. The choice between them depends on how you weight external pressure versus local discretion, documented warnings versus the absence of attempted reform, and whether past <abbr class="g" title="Finance Committee">FinCom</abbr> discipline is sufficient evidence of future spending discipline. Nothing on this site resolves those weightings for you. They are values questions dressed in budget numbers.</p>
 
   <div class="meta-note">
     <p><strong>What happened elsewhere.</strong> Two Massachusetts towns recently voted down overrides and faced the consequences described above. <a href="data/case_studies">Melrose rejected a $7.7M override in 2024 and passed a $13.5M override the following year. Stoneham rejected $14.6M and later passed $9.3M.</a> Both cases are documented with primary sources.</p>
