@@ -298,6 +298,36 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     .sr-line { font-size: 13px; }
     .sr-line--total .sr-line-value { font-size: 18px; }
   }
+  /* Page-scoped: residential exemption section bullet list */
+  .deep-dive-body .card ul.card-list {
+    font-size: 0.875rem; color: var(--text-muted);
+    padding-left: 22px; margin: 10px 0 12px;
+    line-height: 1.55;
+  }
+  .deep-dive-body .card ul.card-list li { margin-bottom: 9px; }
+  .deep-dive-body .card ul.card-list li:last-child { margin-bottom: 0; }
+  .deep-dive-body .card ul.card-list li strong { color: var(--text); }
+  /* Page-scoped: residential exemption projection table */
+  table.data-table {
+    width: 100%; border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+    margin: 12px 0 8px;
+  }
+  table.data-table th {
+    text-align: right; padding: 8px 10px; font-size: 13px;
+    color: var(--text-subtle); font-weight: 600;
+    border-bottom: 2px solid var(--border);
+  }
+  table.data-table th:first-child { text-align: left; }
+  table.data-table td {
+    padding: 8px 10px; font-size: 14px; text-align: right;
+    border-bottom: 1px solid var(--divider); color: var(--text);
+  }
+  table.data-table td:first-child { text-align: left; font-weight: 600; }
+  table.data-table tr:last-child td { border-bottom: none; }
+  @media (max-width: 520px) {
+    table.data-table th, table.data-table td { padding: 6px 4px; font-size: 12px; }
+  }
 </style>
 <h1>What relief can seniors claim?</h1>
   <p>Two programs can reduce what a Marblehead senior pays in property tax. The state Senior Circuit Breaker refunds up to <strong>$2,820</strong> per year and is available today.<sup class="cite" data-href="https://www.mass.gov/technical-information-release/tir-25-7-annual-update-of-real-estate-tax-credit-for-certain-persons-age-65-and-older" data-source="MA DOR TIR 25-7, annual update of the Senior Circuit Breaker credit cap for TY2025"></sup> A local exemption approved by Marblehead Town Meeting in May 2025 (Article 28, now H.4225) would stack on top of it; the bill passed the Massachusetts House on March 30, 2026 and is awaiting Senate action.<sup class="cite" data-href="https://malegislature.gov/Bills/194/H4225" data-source="MA House Bill H.4225 (means-tested senior property tax exemption for Marblehead), bill history page"></sup></p>
@@ -376,6 +406,7 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     <a href="#circuit-breaker">Circuit Breaker</a>
     <a href="#local-exemption">Local exemption (Article 28)</a>
     <a href="#other-exemptions">Other exemptions</a>
+    <a href="#residential-exemption">Residential exemption</a>
     <a href="#override-connection">Override connection</a>
     <a href="#how-to-apply">How to apply</a>
   </nav>
@@ -683,7 +714,67 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     </div>
   </details>
 
-  <h2 data-stance-section="override-connection" id="override-connection">4. The override connection</h2>
+  <details class="deep-dive">
+    <summary>
+      <h2 data-stance-section="residential-exemption" id="residential-exemption">4. Tools used elsewhere: the residential exemption</h2>
+      <p class="deep-dive-teaser">Sixteen MA municipalities shift property tax onto higher-value and non-owner-occupied homes via a flat exemption. Lexington studied it for a year and unanimously rejected it. What it would do here.</p>
+    </summary>
+    <div class="deep-dive-body">
+  <p>The Massachusetts <strong>residential exemption</strong> (<abbr class="g" title="Massachusetts General Laws">MGL</abbr> Chapter 59 Section 5C) lets a Select Board exempt up to 35% of the average residential parcel value from owner-occupied homes. Total town revenue is unchanged. The lost value is recovered by raising the residential tax rate on everyone, which lands disproportionately on higher-value owner-occupied homes and on every non-owner-occupied parcel (rentals, seasonals, undeveloped lots, group homes, child-care centers).</p>
+  <p>It is not age-based and not income-based. It belongs on this page because it is sometimes pitched as a way to help long-time residents in modest homes stay put, the same goal as the senior tools above. Whether it actually does that is a separate question.</p>
+
+  <div class="card">
+    <h3>How the math works</h3>
+    <p>The Select Board picks a percentage from 0% to 35% each year. That percentage times the average residential parcel value gives a flat dollar amount subtracted from every verified owner-occupied home before the tax rate is applied. The residential rate is then raised so the total residential levy stays the same. Owner-occupied homes below a "breakeven" assessed value pay less. Owner-occupied homes above breakeven pay more. Every non-owner-occupied parcel pays more, regardless of value.</p>
+  </div>
+
+  <div class="card">
+    <h3>Who has adopted it</h3>
+    <p>Sixteen of 351 Massachusetts municipalities use the residential exemption. Two patterns dominate: dense urban cores with large rental stock, and vacation towns with many seasonal homes. No comparable residential suburb has adopted it.</p>
+    <p><strong>Cities (urban cores with large rental share):</strong> Boston 35%, Somerville 35%, Waltham 35%, Cambridge 30%, Chelsea 30%, Malden 30%, Everett 25%, Watertown 23%, Brookline 21%.</p>
+    <p><strong>Vacation towns (large seasonal/non-resident share):</strong> Nantucket 25%, Provincetown 25%, Barnstable 20%, Truro 20%, Wellfleet 20%, Tisbury 18%, Somerset 10%.</p>
+    <p class="source">Source: <a href="https://www.lexingtonma.gov/DocumentCenter/View/2056/2019-Residential-Exemption-Committee-Report-PDF">Lexington Residential Exemption Policy Study Committee Report, April 2019</a>, table on page 72 (FY2019 data). Recent percentages may have shifted; Boston, Somerville, and Cambridge have continued to adjust theirs annually. The set of adopting municipalities has not changed materially.<sup class="cite" data-href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=analysis.resexemptioncalc" data-source="MA DLS Residential Exemption Calculator (DLS Gateway), the canonical state tool for projecting adoption impact"></sup></p>
+  </div>
+
+  <div class="card">
+    <h3>What it would do for Marblehead</h3>
+    <p>Estimate based on FY26 figures: $9.89 billion total assessed value, 95.55% residential, $80.85M residential levy, $8.59 tax rate, roughly 7,200 residential parcels.<sup class="cite" data-href="https://www.marbleheadindependent.com/median-tax-bill-to-rise-84-in-fy2026-despite-rate-falling-46-cents-to-8-59/" data-source="Marblehead Independent, FY26 tax classification hearing coverage: $9.89B total assessed, $8.59 rate, ~95% residential, median single-family $1.195M"></sup> The number of <em>owner-occupied</em> residential parcels is not published by the Marblehead Assessor. The table below uses 86% owner-occupied as a placeholder, drawn from Lexington's FY19 figure (~9,265 of ~10,800 residential parcels). The shape of the result is not sensitive to the exact share, but the dollar amounts will move when the Marblehead Assessor confirms the count.</p>
+    <table class="data-table">
+      <thead>
+        <tr><th scope="col">Exemption %</th><th scope="col">Per-parcel exemption</th><th scope="col">New residential rate</th><th scope="col">Rate increase</th><th scope="col">Owner-occupied breakeven</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>10%</td><td>$131,000</td><td>$9.36</td><td>+9.0%</td><td>$1.59M</td></tr>
+        <tr><td>20%</td><td>$262,000</td><td>$10.33</td><td>+20.3%</td><td>$1.56M</td></tr>
+        <tr><td>35% (max)</td><td>$459,000</td><td>$12.24</td><td>+42.5%</td><td>$1.54M</td></tr>
+      </tbody>
+    </table>
+    <p>At a 20% exemption: an owner-occupied median single-family ($1,195,000) saves about $630/year. An owner-occupied $1.5M home is roughly neutral. An owner-occupied $2M home pays about $770 more. A non-owner-occupied $1.195M home pays about $2,080 more.</p>
+    <p class="source">Inputs and full per-percentage table at <a href="data/residential_exemption_research/marblehead_fy26_projection.csv"><code>data/residential_exemption_research/marblehead_fy26_projection.csv</code></a>. The owner-occupied count is the open data gap.</p>
+  </div>
+
+  <div class="card">
+    <h3>Why Lexington studied it for a year and said no</h3>
+    <p>In 2018-2019 the Lexington Select Board's Residential Exemption Policy Study Committee did the only formal town-level analysis we have located on whether a residential suburb should adopt §5C. The committee's <strong>unanimous</strong> recommendation: do not adopt. Their reasons:<sup class="cite" data-href="https://www.lexingtonma.gov/DocumentCenter/View/2056/2019-Residential-Exemption-Committee-Report-PDF" data-source="Lexington Residential Exemption Policy Study Committee, &quot;An Examination of Residential Property Tax Exemptions for the Town of Lexington, Massachusetts&quot; (April 2019), V1.0. Committee: Andersen (chair), Blier, Bothwell Allen, Cloth, Cutler, Whelan, Zhao. Recommendation 1: Do not adopt the Massachusetts Residential Exemption."></sup></p>
+    <ul class="card-list">
+      <li><strong>It misses the people you'd want to help.</strong> The committee surveyed 7% of Lexington adults. Housing stress spans renters and owners, low-value and high-value homes, all ages. Income predicted housing stress better than home value did. A blunt owner-occupied exemption hits a poorly-targeted slice.</li>
+      <li><strong>About 28% of the tax shift gets undone</strong> by housing market price adjustments. Suffolk economist Jonathan Haughton's equilibrium model showed lower-value homes appreciate (because the lower tax bill makes them more affordable, bidding up the price) while higher-value homes depreciate. Future buyers see no net benefit. Current owners get a single-generation windfall.</li>
+      <li><strong>It can reduce the state Senior Circuit Breaker for moderate-income seniors.</strong> The Circuit Breaker formula pays the excess of property tax over 10% of income. Lower the property tax via a residential exemption, and the Circuit Breaker rebate shrinks dollar-for-dollar. The committee modeled 447 Lexington households where local exemption money would partially offset lost state credit.</li>
+      <li><strong>It pushes rents up.</strong> Apartment buildings are non-owner-occupied, so they absorb a 20%+ rate increase. Owners have an incentive to convert to condominiums to capture the per-unit exemption. Brokers told the committee any tax increase on rentals passes through to renters.</li>
+      <li><strong>It hurts non-residential uses classified as residential.</strong> Group living facilities, for-profit child care, undeveloped lots, and homes held in some types of trusts all face the higher rate without benefiting from the exemption.</li>
+      <li><strong>Verification is administratively heavy.</strong> Lexington estimated 10,800+ parcels would need owner-occupancy affidavits, plus annual review of trusts and life estates.</li>
+    </ul>
+    <p>The committee's chosen alternative was a <strong>means-tested exemption</strong>, exactly what Marblehead voted for in Article 28 (H.4225). The Lexington analysis is essentially a long-form argument for the path Marblehead is already on.</p>
+  </div>
+
+  <div class="card">
+    <h3>Why this is on the senior page</h3>
+    <p>Because residents asking "why don't we shift the burden onto bigger houses?" are usually trying to solve the same problem as residents asking "how do we keep long-time seniors in their homes?" The residential exemption is a real legal tool that does the first thing. It is not, on the evidence Lexington compiled, a good fit for the second. The means-tested H.4225 path is the closer match.</p>
+  </div>
+    </div>
+  </details>
+
+  <h2 data-stance-section="override-connection" id="override-connection">5. The override connection</h2>
   <p>For a qualifying Marblehead senior, the combination of the state Circuit Breaker ($2,820 max) and, if H.4225 is enacted, the local Article 28 exemption (Select Board-set cap, first-year funded at $200,000 town-wide from the overlay) can exceed $4,000 per year in combined relief for households at the lower end of the income range. For a household receiving the full state credit and a modest local exemption, that is more than the roughly $1,500 per year an operating override is projected to add to a median bill.</p>
 
   <p>Two points worth holding in mind when reading the override debate:</p>
@@ -699,7 +790,7 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
     <p>The local exemption, if enacted, is paid for out of the town's tax overlay, the same pool that funds abatements and normal statutory exemptions. It does not reduce the amount available for schools, public safety, or other services. The tradeoff people sometimes assume (more senior relief means fewer services) does not apply here.</p>
   </div>
 
-  <h2 id="how-to-apply">5. How to actually get this</h2>
+  <h2 id="how-to-apply">6. How to actually get this</h2>
 
   <div class="card">
     <h3>Circuit Breaker</h3>
