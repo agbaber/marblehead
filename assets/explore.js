@@ -1007,12 +1007,56 @@
     moneygone:    '<path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>' /* pie chart */
   };
 
-  /* ── Build landing question cards from actual h1s ── */
+  /* ── Build landing question cards from actual h1s ──
+     Grouped by theme so the home-page card list reads as a navigational
+     hub, not a flat FAQ. Topics not listed in any section fall through
+     to a final "More questions" group so a forgotten topic is still
+     reachable rather than silently dropped. */
   var listEl = document.getElementById('questionList');
   var shareStripEl = document.getElementById('shareStrip');
   var landingCards = {};  // topic -> { el, pips }
 
+  var landingSections = [
+    {
+      label: 'Should we override?',
+      topics: ['override', 'servicelevel', 'voteno', 'alternatives', 'library', 'trust']
+    },
+    {
+      label: 'Why we\u2019re here',
+      topics: ['moneygone', 'schools', 'levy', 'taxrank']
+    },
+    {
+      label: 'What it costs you',
+      topics: ['size', 'mycost', 'seniors', 'again']
+    },
+    {
+      label: 'Question 2 on the ballot',
+      topics: ['trash']
+    }
+  ];
+
+  /* Index the question screens by topic so we can render them in
+     section order rather than DOM order. */
+  var screensByTopic = {};
   document.querySelectorAll('.question-screen').forEach(function (screen) {
+    if (screen.dataset.topic) screensByTopic[screen.dataset.topic] = screen;
+  });
+
+  /* Compute the iteration list: each entry is either a section header
+     placeholder or a question screen. Catch any orphan topics (defined
+     in the DOM but not in landingSections) under a final fallback. */
+  var assignedTopics = {};
+  landingSections.forEach(function (sec) {
+    sec.topics.forEach(function (t) { assignedTopics[t] = true; });
+  });
+  var orphans = Object.keys(screensByTopic).filter(function (t) {
+    return !assignedTopics[t];
+  });
+  if (orphans.length) {
+    landingSections.push({ label: 'More questions', topics: orphans });
+  }
+
+  function renderQuestionCard(screen) {
     var topic = screen.dataset.topic;
     var h1 = screen.querySelector('.question-block h1');
     if (!h1 || !listEl) return;
@@ -1086,7 +1130,22 @@
       ctxText: ctxText,
       answerHeadings: answerHeadings
     };
-  });
+  }
+
+  if (listEl) {
+    landingSections.forEach(function (sec) {
+      var hasAny = sec.topics.some(function (t) { return screensByTopic[t]; });
+      if (!hasAny) return;
+      var label = document.createElement('p');
+      label.className = 'explore-section-label';
+      label.textContent = sec.label;
+      listEl.appendChild(label);
+      sec.topics.forEach(function (t) {
+        var screen = screensByTopic[t];
+        if (screen) renderQuestionCard(screen);
+      });
+    });
+  }
 
   /* Update landing cards to reflect current selections */
   function updateLandingCards() {
