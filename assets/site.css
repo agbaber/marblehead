@@ -1146,6 +1146,35 @@ html[data-theme="light"] .question:hover .spark-bg { opacity: 0.14; }
 .card p  { font-size: 0.875rem; margin-bottom: 8px; color: var(--text-muted); }
 .card p:last-child { margin-bottom: 0; }
 
+/* Bullet/numbered lists inside cards. Match .card p font size and color so
+   list items visually align with the surrounding card prose, and leave
+   enough bottom margin that a following <p> doesn't crash into the list.
+   Bespoke list components (tier-list, tldr ul, etc.) have their own
+   list-style:none rules and are unaffected because they don't render as
+   plain ul children of .card. */
+.card > ul,
+.card > ol,
+.card > details > ul,
+.card > details > ol {
+  margin: 0 0 12px;
+  padding-left: 2.25em;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+.card > ul { list-style: disc; }
+.card > ol { list-style: decimal; }
+.card > ul > li,
+.card > ol > li,
+.card > details > ul > li,
+.card > details > ol > li {
+  line-height: 1.6;
+  margin: 4px 0;
+}
+.card > ul > li strong,
+.card > ol > li strong { color: var(--text); }
+.card > ul:last-child,
+.card > ol:last-child { margin-bottom: 0; }
+
 .tier-label {
   font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: 1px; color: var(--text-subtle); margin-bottom: 6px;
