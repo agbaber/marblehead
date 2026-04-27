@@ -766,6 +766,21 @@ h3 {
 }
 .subtitle.h-center { margin-left: auto; margin-right: auto; max-width: 560px; }
 
+/* TL;DR bullet list used on chart pages (e.g. charts/statewide_overrides.html).
+   Default <ul> renders larger and brighter than the chart hint paragraphs,
+   visually dominating the section. This matches the muted card-paragraph
+   aesthetic. Scoped to ul.tldr so the existing div.tldr blocks on
+   the-debate, what-you-can-do, and senior-tax-relief are not affected. */
+ul.tldr {
+  font-size: 0.875rem; color: var(--text-muted);
+  line-height: 1.55; list-style: disc;
+  max-width: 720px; margin: 16px auto 24px;
+  padding-left: 22px;
+}
+ul.tldr li { margin-bottom: 9px; }
+ul.tldr li:last-child { margin-bottom: 0; }
+ul.tldr li strong { color: var(--text); }
+
 p {
   font-size: 1.0rem; color: var(--text-muted);
   line-height: 1.65; margin-bottom: 14px;
