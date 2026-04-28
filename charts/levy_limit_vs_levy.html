@@ -1,0 +1,118 @@
+---
+title: "Levy Limit vs. Total Levy"
+---
+<h1 class="h-center">Marblehead Levy Limit vs. Total Tax Levy, FY2001&ndash;FY2026</h1>
+<p class="subtitle h-center">The Prop 2&frac12; ceiling and what was actually collected, drawn as step functions because both are set once per fiscal year. Source: MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr>.</p>
+
+<p>Each year, Massachusetts towns operate within a Prop 2&frac12; <strong>levy limit</strong>: the maximum the base property tax levy can be in that year. The limit grows automatically by 2.5% on the prior year's <em>limit</em> (not on what was actually collected), plus new growth, plus any voter-approved overrides. On top of the limit, debt exclusions add temporary capacity for specific bond payments. The actual levy is what residents pay through their tax bills.</p>
+
+<div class="legend">
+  <div class="legend-item s-marblehead"><span class="legend-swatch"></span><span class="legend-text">Total tax levy (collected)</span></div>
+  <div class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">Prop 2&frac12; levy limit</span></div>
+</div>
+
+<div class="chart-wrapper">
+  <svg class="chart" viewBox="0 0 840 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Step chart: two stepped lines showing Marblehead's Prop 2.5 levy limit (lower) and total tax levy (upper) from FY2001 to FY2026. The levy limit grew from $28.6M to $75.7M. Total levy grew from $30.2M to $84.6M. The gap between them is voter-approved debt exclusions, mostly school and library bonds. The gap widens after FY2009 as new debt exclusions stack up.">
+    <line class="axis-base" x1="70" y1="280" x2="800" y2="280"/>
+    <line class="grid-minor" x1="70" y1="226.7" x2="800" y2="226.7"/>
+    <line class="grid-minor" x1="70" y1="173.3" x2="800" y2="173.3"/>
+    <line class="grid-minor" x1="70" y1="120"   x2="800" y2="120"/>
+    <line class="grid-minor" x1="70" y1="66.7"  x2="800" y2="66.7"/>
+
+    <text class="tick-label" x="62" y="283"   text-anchor="end">$0M</text>
+    <text class="tick-label" x="62" y="229.7" text-anchor="end">$20M</text>
+    <text class="tick-label" x="62" y="176.3" text-anchor="end">$40M</text>
+    <text class="tick-label" x="62" y="123"   text-anchor="end">$60M</text>
+    <text class="tick-label" x="62" y="69.7"  text-anchor="end">$80M</text>
+
+    <text class="tick-label tick-label--major" x="70"    y="298" text-anchor="middle">FY01</text>
+    <text class="tick-label tick-label--minor" x="182.3" y="298" text-anchor="middle">FY05</text>
+    <text class="tick-label tick-label--minor" x="322.7" y="298" text-anchor="middle">FY10</text>
+    <text class="tick-label tick-label--minor" x="463.1" y="298" text-anchor="middle">FY15</text>
+    <text class="tick-label tick-label--minor" x="603.5" y="298" text-anchor="middle">FY20</text>
+    <text class="tick-label tick-label--major" x="771.9" y="298" text-anchor="middle">FY26</text>
+
+    <!-- Gap fill: between total levy (upper) and levy limit (lower) = debt exclusions -->
+    <polygon class="data-area" fill="currentColor" fill-opacity="0.10" stroke="none"
+             points="70.0,199.4 98.1,199.4 98.1,190.9 126.2,190.9 126.2,188.0 154.2,188.0 154.2,179.0 182.3,179.0 182.3,173.7 210.4,173.7 210.4,162.1 238.5,162.1 238.5,159.1 266.5,159.1 266.5,155.3 294.6,155.3 294.6,151.7 322.7,151.7 322.7,146.0 350.8,146.0 350.8,143.0 378.8,143.0 378.8,136.9 406.9,136.9 406.9,133.9 435.0,133.9 435.0,128.6 463.1,128.6 463.1,122.6 491.2,122.6 491.2,116.4 519.2,116.4 519.2,109.5 547.3,109.5 547.3,103.2 575.4,103.2 575.4,99.1 603.5,99.1 603.5,93.8 631.5,93.8 631.5,87.6 659.6,87.6 659.6,76.6 687.7,76.6 687.7,69.1 715.8,69.1 715.8,60.9 743.8,60.9 743.8,55.0 771.9,55.0 771.9,54.4 800.0,54.4 800.0,78.3 771.9,78.3 771.9,83.9 743.8,83.9 743.8,89.6 715.8,89.6 715.8,95.4 687.7,95.4 687.7,101.1 659.6,101.1 659.6,106.3 631.5,106.3 631.5,111.4 603.5,111.4 603.5,116.3 575.4,116.3 575.4,121.1 547.3,121.1 547.3,125.9 519.2,125.9 519.2,131.0 491.2,131.0 491.2,135.7 463.1,135.7 463.1,140.1 435.0,140.1 435.0,144.7 406.9,144.7 406.9,149.5 378.8,149.5 378.8,153.9 350.8,153.9 350.8,158.6 322.7,158.6 322.7,162.6 294.6,162.6 294.6,166.9 266.5,166.9 266.5,171.0 238.5,171.0 238.5,174.9 210.4,174.9 210.4,186.2 182.3,186.2 182.3,191.0 154.2,191.0 154.2,197.5 126.2,197.5 126.2,200.4 98.1,200.4 98.1,203.8 70.0,203.8"/>
+
+    <!-- Levy limit: lower stepped line -->
+    <polyline class="data-line data-line--bold s-neutral" stroke-dasharray="6 4"
+              points="70.0,203.8 98.1,203.8 98.1,200.4 126.2,200.4 126.2,197.5 154.2,197.5 154.2,191.0 182.3,191.0 182.3,186.2 210.4,186.2 210.4,174.9 238.5,174.9 238.5,171.0 266.5,171.0 266.5,166.9 294.6,166.9 294.6,162.6 322.7,162.6 322.7,158.6 350.8,158.6 350.8,153.9 378.8,153.9 378.8,149.5 406.9,149.5 406.9,144.7 435.0,144.7 435.0,140.1 463.1,140.1 463.1,135.7 491.2,135.7 491.2,131.0 519.2,131.0 519.2,125.9 547.3,125.9 547.3,121.1 575.4,121.1 575.4,116.3 603.5,116.3 603.5,111.4 631.5,111.4 631.5,106.3 659.6,106.3 659.6,101.1 687.7,101.1 687.7,95.4 715.8,95.4 715.8,89.6 743.8,89.6 743.8,83.9 771.9,83.9 771.9,78.3 800.0,78.3"/>
+
+    <!-- Total tax levy: upper stepped line -->
+    <polyline class="data-line data-line--bold s-marblehead"
+              points="70.0,199.4 98.1,199.4 98.1,190.9 126.2,190.9 126.2,188.0 154.2,188.0 154.2,179.0 182.3,179.0 182.3,173.7 210.4,173.7 210.4,162.1 238.5,162.1 238.5,159.1 266.5,159.1 266.5,155.3 294.6,155.3 294.6,151.7 322.7,151.7 322.7,146.0 350.8,146.0 350.8,143.0 378.8,143.0 378.8,136.9 406.9,136.9 406.9,133.9 435.0,133.9 435.0,128.6 463.1,128.6 463.1,122.6 491.2,122.6 491.2,116.4 519.2,116.4 519.2,109.5 547.3,109.5 547.3,103.2 575.4,103.2 575.4,99.1 603.5,99.1 603.5,93.8 631.5,93.8 631.5,87.6 659.6,87.6 659.6,76.6 687.7,76.6 687.7,69.1 715.8,69.1 715.8,60.9 743.8,60.9 743.8,55.0 771.9,55.0 771.9,54.4 800.0,54.4"/>
+
+    <!-- End-of-line value labels at FY26 -->
+    <text class="value-label s-marblehead" x="803" y="56"  text-anchor="start">$84.6M</text>
+    <text class="value-label s-neutral"    x="803" y="80"  text-anchor="start">$75.7M</text>
+
+    <!-- Annotation: gap = debt exclusions, with leader line -->
+    <text class="annotation" x="540" y="30"  text-anchor="middle">Gap = debt exclusions</text>
+    <text class="annotation" x="540" y="44"  text-anchor="middle">(school and library bonds)</text>
+    <line class="anno-line" x1="540" y1="50" x2="600" y2="92" stroke="currentColor" stroke-width="0.75" stroke-opacity="0.4"/>
+
+    <!-- Annotation: FY02-FY06 override jumps -->
+    <text class="annotation" x="160" y="138" text-anchor="middle">FY02&ndash;FY06 operating</text>
+    <text class="annotation" x="160" y="150" text-anchor="middle">overrides (+$4.9M)</text>
+    <line class="anno-line" x1="195" y1="156" x2="220" y2="180" stroke="currentColor" stroke-width="0.75" stroke-opacity="0.4"/>
+  </svg>
+</div>
+
+<p class="caption">The lower (dashed) line is the Prop 2&frac12; <strong>levy limit</strong> &mdash; the maximum base levy the town is authorized to raise. The upper (solid) line is the <strong>total tax levy</strong> actually collected, including debt exclusions for specific bond payments. The visible gap between the two is debt exclusions (~$11M in FY26), <em>not</em> unused capacity. Marblehead has consistently levied at its full base limit in every year shown.</p>
+
+<div class="takeaway takeaway--neutral">
+  <strong>Excess levy capacity in Marblehead has been essentially zero for 25+ years.</strong> When the town has had levy authority, it has used it. The proposed FY27 override phase-in &mdash; where the town would <em>not</em> levy up to its new ceiling for two years &mdash; would be a departure from this pattern.
+</div>
+
+<h2>What's actually growing here</h2>
+
+<p>Two compounding lines, each governed by different rules:</p>
+
+<ul>
+  <li><strong>Levy limit</strong> (lower line): grows ~2.5% per year automatically, plus new growth from new construction (typically $200K&ndash;$500K per year for Marblehead). The visible jumps in FY02, FY04, FY05, and FY06 are voter-approved operating overrides totaling about $4.9M of permanent levy authority added to the base. No general operating override has passed since FY2006.</li>
+  <li><strong>Total levy</strong> (upper line): the limit plus debt exclusions assessed in each year. Debt exclusions are voter-approved bonds (Glover School, Bell School, Brown School, the new Magnet School, the library expansion, and several earlier capital projects) that sit <em>on top of</em> the levy limit. They expire when the bond is paid off, so the gap is not permanent &mdash; it changes as new bonds are voted in and old ones retire.</li>
+</ul>
+
+<h2>Why this distinction matters for the override</h2>
+
+<p>The question came up directly in conversations with town officials: when an override raises the levy limit, does the next year's 2.5% growth apply to the <em>limit</em> (the legal authorization) or to the <em>actual levy</em> (what was collected)? The MA Division of Local Services is unambiguous on this:</p>
+
+<blockquote>
+  <p>"It is important to note that a community's levy limit is based on the previous year's levy limit and not on the previous year's actual levy."</p>
+  <p>&mdash; <em>Levy Limits: A Primer on Proposition 2&frac12;</em>, MA Division of Local Services</p>
+</blockquote>
+
+<p>And on overrides specifically:</p>
+
+<blockquote>
+  <p>"The override results in a permanent increase in the levy limit of a community, which as part of the levy limit base, increases at the rate of 2.5 percent each year."</p>
+</blockquote>
+
+<p>So if the FY27 override passes at $15M, the full $15M is added to the levy <em>limit</em> on day one. Even though the town plans to phase in the actual collection over three years (only $4.3M in FY27, $10.5M in FY28, full $15M in FY29), the 2.5% statutory growth compounds on the <em>full new ceiling</em> each year regardless of how much is actually levied. The unused portion during the phase-in becomes "excess levy capacity" the town could tap in any future year without needing another override.</p>
+
+<p>This is the rare case in Marblehead's recent history where actual levy and levy limit would meaningfully diverge.</p>
+
+<div class="notes">
+  <p><strong>Sources.</strong> Levy limit values FY00&ndash;FY27 from MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> "Municipal Levy Limit" reports for Marblehead (municipality code 168), retrieved from the DLS Gateway. Compiled in <a href="../data/marblehead_levy.csv">data/marblehead_levy.csv</a>. Total tax levy values FY01&ndash;FY24 from Marblehead <abbr class="g" title="Annual Comprehensive Financial Reports">ACFRs</abbr>, compiled in <a href="../data/tax_levy_FY01-24.csv">data/tax_levy_FY01-24.csv</a>. FY25 and FY26 total levy from MA DOR DLS "Tax Levies by Class" report, in <a href="../data/peer_tax_levies_by_class_FY22-26.csv">data/peer_tax_levies_by_class_FY22-26.csv</a>.</p>
+  <p><strong>On debt exclusions vs. excess capacity.</strong> "Excess levy capacity" technically refers to the amount by which the <em>maximum allowable levy</em> (the levy limit plus debt exclusions plus capital outlay exclusions) exceeds the actual levy. Because Marblehead levies at the cap including assessed debt exclusions, this number is essentially zero. The chart's lower line shows only the Prop 2&frac12; <em>base</em> levy limit; the gap to the total levy is the assessed debt exclusion amount, not excess capacity. A small residual difference (typically less than $100K) may exist in some years between maximum allowable levy and actual levy due to rounding or rate-setting timing, but it is not material at the chart's scale.</p>
+  <p><strong>Step rendering.</strong> Both lines are drawn as step functions because the levy limit and the actual levy are each set once per fiscal year and held constant within that year. A smooth line would imply continuous growth, but the legal mechanism is discrete: the prior year's limit is multiplied by 1.025, new growth and overrides are added, and the new ceiling is set for the entire upcoming fiscal year.</p>
+  <p><strong>Statewide context.</strong> Marblehead's behavior is typical: the median MA community has excess levy capacity of about 0.5% of its levy limit. Statewide aggregate excess capacity is concentrated in the top 20 communities, which together hold 75% of all unused capacity. Source: MA DLS, <em>Trends in Excess Levy Capacity</em> (FY25 data).</p>
+</div>
+
+<div class="read-next">
+  <div class="read-next-label">Read next</div>
+  <a class="read-next-link" href="../what-is-the-override.html#what-it-costs">
+    <div class="read-next-title">How the override phases in &rarr;</div>
+    <div class="read-next-desc">FY27/28/29 levy schedule for the three tiers, and what the full $15M ceiling looks like once the phase-in completes.</div>
+  </a>
+  <a class="read-next-link" href="override_history.html">
+    <div class="read-next-title">Override history &rarr;</div>
+    <div class="read-next-desc">Marblehead's full Prop 2&frac12; ballot record since 1990: 4 of 13 operating overrides passed, 28 of 29 debt exclusions passed.</div>
+  </a>
+  <a class="read-next-link" href="levy_vs_bill.html">
+    <div class="read-next-title">Levy, median bill, and inflation &rarr;</div>
+    <div class="read-next-desc">Three indexed growth rates over twelve years. The levy and median bill tracked closely; both grew faster than CPI.</div>
+  </a>
+</div>
