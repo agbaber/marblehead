@@ -152,9 +152,12 @@ jobs:
           # and relative-up links (../) are skipped - the first two aren't
           # ours to validate, the third depends on the referring page's
           # directory which isn't known to a repo-root check.
+          # Skip hrefs containing Liquid blocks ({{ ... }} or {% ... %});
+          # those resolve at build time and can't be validated statically.
           internal_links=$(printf '%s\n' "$added" \
             | grep -oE 'href="[^"#?]+\.html[^"]*"' \
             | sed 's/href="//; s/"$//' \
+            | grep -vE '\{\{|\{%' \
             | sort -u \
             || true)
           for link in $internal_links; do
@@ -185,6 +188,7 @@ jobs:
           anchor_refs=$(printf '%s\n' "$added" \
             | grep -oE 'href="[^"]+#[^"]+"' \
             | sed 's/href="//; s/"$//' \
+            | grep -vE '\{\{|\{%' \
             | sort -u \
             || true)
           for ref in $anchor_refs; do
