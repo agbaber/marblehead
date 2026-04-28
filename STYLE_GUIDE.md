@@ -206,6 +206,13 @@ Rationale: internal links help readers explore the site; external links take the
 - No undefined municipal-finance acronyms; first use on a page needs `<abbr class="g" title="...">`
 - No case names, statute citations, program names, bill numbers, or legal-test shorthand used as referents before a plain-English gloss introduces what they are
 - No bare-text internal references where a hyperlink to the other page belongs
+- No bare `<ul>` or `<ol>` on chart pages. The global `* { padding: 0 }` reset
+  in `assets/site.css` zeroes default list padding, so `list-style: outside`
+  bullets render in (or beyond) the `.container`'s left padding. Use
+  `<ul class="tldr">` for muted bullet lists in chart explainers, or
+  `body_class: doc-page` for markdown doc pages. There is also a safety-net
+  rule for un-classed lists inside `.container`, but the `tldr` styling is
+  what matches the muted card-paragraph aesthetic.
 - No inline external links in the reading flow; use `<sup class="cite">` footnotes via `assets/citations.js`
 - No standalone CPI/inflation comparisons as the sole or primary benchmark for a
   municipal cost category. CPI may appear when it is one of several benchmarks
