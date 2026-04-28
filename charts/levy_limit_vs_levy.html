@@ -25,11 +25,20 @@ scripts: [chart-tooltip]
         "className": "s-marblehead",
         "values": [28.6,29.9,30.9,33.4,35.2,39.4,40.9,42.4,44.0,45.5,47.3,48.9,50.7,52.5,54.1,55.9,57.8,59.6,61.4,63.2,65.1,67.1,69.2,71.4,73.5,75.7,77.5],
         "yPositions": [203.8,200.4,197.5,191.0,186.2,174.9,171.0,166.9,162.6,158.6,153.9,149.5,144.7,140.1,135.7,131.0,125.9,121.1,116.3,111.4,106.3,101.1,95.4,89.6,83.9,78.3,73.2]
+      },
+      {
+        "name": "Cap utilization",
+        "className": "s-marblehead",
+        "valuePrefix": "",
+        "valueSuffix": "%",
+        "valueDecimals": 2,
+        "values": [null,null,null,null,null,null,99.99,100.00,99.99,99.99,99.99,99.99,99.93,99.95,100.00,99.98,99.94,99.99,99.98,99.93,99.95,99.95,99.96,99.93,99.94,99.73,null],
+        "yPositions": [null,null,null,null,null,null,340.1,340.0,340.1,340.1,340.1,340.1,340.4,340.3,340.0,340.1,340.3,340.1,340.1,340.4,340.3,340.3,340.2,340.4,340.3,341.4,null]
       }
     ]
   }
   </script>
-  <svg class="chart" viewBox="0 0 840 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Step chart: Marblehead's Prop 2.5 levy limit from FY2001 to FY2027. The limit grew from $28.6M in FY2001 to a projected $77.5M in FY2027. Visible step jumps in FY2002, FY2004, FY2005, and FY2006 reflect voter-approved operating overrides totaling about $4.9M.">
+  <svg class="chart" viewBox="0 0 840 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two-panel step chart: top panel shows Marblehead's Prop 2.5 levy limit from FY2001 to FY2027 growing from $28.6M to $77.5M with override jumps in FY2002, FY2004, FY2005, FY2006. Bottom panel shows the percent of maximum allowable levy actually collected each year, FY2007 to FY2026, hovering between 99.73% and 100% — visually flat at the cap.">
     <line class="axis-base" x1="70" y1="280" x2="800" y2="280"/>
     <line class="grid-minor" x1="70" y1="226.7" x2="800" y2="226.7"/>
     <line class="grid-minor" x1="70" y1="173.3" x2="800" y2="173.3"/>
@@ -72,6 +81,29 @@ scripts: [chart-tooltip]
     <text class="annotation" x="490" y="100" text-anchor="middle">~3%/yr autopilot</text>
     <text class="annotation" x="490" y="112" text-anchor="middle">(2.5% statutory + new growth)</text>
     <line class="anno-line" x1="490" y1="118" x2="490" y2="135" stroke="currentColor" stroke-width="0.75" stroke-opacity="0.4"/>
+
+    <!-- ===== UTILIZATION PANEL ===== -->
+    <text class="util-panel-title" x="70" y="318" font-size="11" fill="var(--text-muted)" font-weight="600">% of maximum allowable levy actually collected</text>
+
+    <line class="axis-base" x1="70" y1="420" x2="800" y2="420"/>
+    <line class="grid-minor" x1="70" y1="393.3" x2="800" y2="393.3"/>
+    <line class="grid-minor" x1="70" y1="366.7" x2="800" y2="366.7"/>
+    <line class="grid-minor" x1="70" y1="340" x2="800" y2="340"/>
+
+    <text class="tick-label" x="62" y="423" text-anchor="end">85%</text>
+    <text class="tick-label" x="62" y="396.3" text-anchor="end">90%</text>
+    <text class="tick-label" x="62" y="369.7" text-anchor="end">95%</text>
+    <text class="tick-label" x="62" y="343" text-anchor="end">100%</text>
+
+    <text class="tick-label tick-label--minor" x="245.7" y="438" text-anchor="middle">FY07</text>
+    <text class="tick-label tick-label--minor" x="448.5" y="438" text-anchor="middle">FY15</text>
+    <text class="tick-label tick-label--minor" x="759.4" y="438" text-anchor="middle">FY26</text>
+
+    <!-- Util line: hugs 100% across FY07-FY26, gentle dip at FY26 to 99.73% -->
+    <polyline class="data-line data-line--bold s-marblehead"
+              points="232.2,340.1 259.3,340.1 259.3,340.0 286.3,340.0 286.3,340.1 313.3,340.1 313.3,340.1 340.4,340.1 340.4,340.1 367.4,340.1 367.4,340.1 394.4,340.1 394.4,340.4 421.5,340.4 421.5,340.3 448.5,340.3 448.5,340.0 475.6,340.0 475.6,340.1 502.6,340.1 502.6,340.3 529.6,340.3 529.6,340.1 556.7,340.1 556.7,340.1 583.7,340.1 583.7,340.4 610.7,340.4 610.7,340.3 637.8,340.3 637.8,340.3 664.8,340.3 664.8,340.2 691.9,340.2 691.9,340.4 718.9,340.4 718.9,340.3 745.9,340.3 745.9,341.4 773.0,341.4"/>
+
+    <text class="annotation" x="500" y="402" text-anchor="middle">Pegged at the cap for 20 years &ndash; max excess ever was 0.27% (FY26)</text>
   </svg>
 </div>
 
