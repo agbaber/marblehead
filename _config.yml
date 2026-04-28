@@ -7,7 +7,7 @@ baseurl: ""
 
 # Cloudflare Turnstile site key (public; paired with the
 # TURNSTILE_SECRET secret on the Pages project). Used by feedback.html.
-turnstile_site_key: ""
+turnstile_site_key: "0x4AAAAAADEi6Ymsaf-lEIvW"
 
 plugins: []
 
