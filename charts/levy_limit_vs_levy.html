@@ -1,5 +1,6 @@
 ---
 title: "Marblehead Levy Limit Over Time"
+scripts: [chart-tooltip]
 ---
 <h1 class="h-center">Marblehead Prop 2&frac12; Levy Limit, FY2001&ndash;FY2035</h1>
 <p class="subtitle h-center">Historical levy limit through FY2027, with projected paths under each override tier through FY2035. Source: MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr>.</p>
@@ -14,7 +15,49 @@ title: "Marblehead Levy Limit Over Time"
   <div class="legend-item s-tier-3"><span class="legend-swatch"></span><span class="legend-text">Tier 3: $15M (Invest)</span></div>
 </div>
 
-<div class="chart-wrapper">
+<div class="chart-wrapper" data-chart-tooltip>
+  <script type="application/json" class="chart-tooltip-data">
+  {
+    "xLabels": ["FY01","FY02","FY03","FY04","FY05","FY06","FY07","FY08","FY09","FY10","FY11","FY12","FY13","FY14","FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26","FY27","FY28","FY29","FY30","FY31","FY32","FY33","FY34","FY35"],
+    "xPositions": [80.4,101.3,122.1,143.0,163.9,184.7,205.6,226.4,247.3,268.1,289.0,309.9,330.7,351.6,372.4,393.3,414.1,435.0,455.9,476.7,497.6,518.4,539.3,560.1,581.0,601.9,622.7,643.6,664.4,685.3,706.1,727.0,747.9,768.7,789.6],
+    "valuePrefix": "$",
+    "valueSuffix": "M",
+    "valueDecimals": 1,
+    "projectedFromIndex": 27,
+    "series": [
+      {
+        "name": "Levy limit (history)",
+        "className": "s-marblehead",
+        "values": [28.6,29.9,30.9,33.4,35.2,39.4,40.9,42.4,44.0,45.5,47.3,48.9,50.7,52.5,54.1,55.9,57.8,59.6,61.4,63.2,65.1,67.1,69.2,71.4,73.5,75.7,77.5,null,null,null,null,null,null,null,null],
+        "yPositions": [222.8,220.3,218.1,213.3,209.7,201.2,198.2,195.2,192.0,189.0,185.4,182.1,178.5,175.1,171.8,168.2,164.4,160.8,157.2,153.5,149.8,145.8,141.6,137.2,132.9,128.7,124.9,null,null,null,null,null,null,null,null]
+      },
+      {
+        "name": "No override (2.5%/yr)",
+        "className": "s-neutral",
+        "values": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,77.5,79.5,81.5,83.5,85.6,87.7,89.9,92.2,94.5],
+        "yPositions": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,124.9,121.0,117.1,113.0,108.8,104.5,100.1,95.6,91.0]
+      },
+      {
+        "name": "Tier 1 ($9M)",
+        "className": "s-tier-1",
+        "values": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,86.5,88.7,90.9,93.2,95.5,97.9,100.4,102.9,105.4],
+        "yPositions": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,106.9,102.6,98.2,93.6,88.9,84.2,79.3,74.3,69.1]
+      },
+      {
+        "name": "Tier 2 ($12M)",
+        "className": "s-tier-2",
+        "values": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,89.5,91.8,94.1,96.4,98.8,101.3,103.8,106.4,109.1],
+        "yPositions": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,100.9,96.4,91.8,87.1,82.3,77.4,72.3,67.1,61.8]
+      },
+      {
+        "name": "Tier 3 ($15M)",
+        "className": "s-tier-3",
+        "values": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,92.5,94.9,97.2,99.7,102.2,104.7,107.3,110.0,112.8],
+        "yPositions": [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,94.9,90.3,85.5,80.7,75.7,70.6,65.4,60.0,54.5]
+      }
+    ]
+  }
+  </script>
   <svg class="chart" viewBox="0 0 840 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Step chart: Marblehead's Prop 2.5 levy limit, FY2001 through FY2027 historical, with projected paths through FY2035 under no-override baseline (rises to $94.5M), Tier 1 $9M override (rises to $105.4M), Tier 2 $12M (rises to $109.1M), and Tier 3 $15M (rises to $112.8M). Override jumps in FY2002 and FY2004 to FY2006 are highlighted with circle markers.">
     <line class="axis-base" x1="70" y1="280" x2="800" y2="280"/>
     <line class="grid-minor" x1="70" y1="240" x2="800" y2="240"/>

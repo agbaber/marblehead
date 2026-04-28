@@ -52,3 +52,6 @@ data/.pass*_batch_state.json
 
 # Local PDF cache for schools-site scrape (committed text files only)
 data/schools/_pdfs/
+
+# Scraper intermediates (per-year XLSX downloads, regenerable from scraper)
+scripts/dls_scrape/downloads/
