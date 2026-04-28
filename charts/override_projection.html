@@ -1,0 +1,170 @@
+---
+title: "Override Projection: Levy Limit FY27-FY35"
+scripts: [chart-tooltip]
+---
+<h1 class="h-center">Marblehead Levy Limit Projection, FY2027&ndash;FY2035</h1>
+<p class="subtitle h-center">Where the Prop 2&frac12; ceiling lands under each override outcome, and how the gap between scenarios compounds. Source: MA <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr>.</p>
+
+<p>Each tier of the June 9, 2026 ballot adds a different amount to the legal levy ceiling. The ceiling jumps in FY27 (full override amount, regardless of phase-in) then compounds at 2.5%/year automatically. Eight years out, the gap between tiers is the original step plus eight years of compounding on top.</p>
+
+<div class="legend">
+  <div class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">No override (2.5%/yr baseline)</span></div>
+  <div class="legend-item s-tier-1"><span class="legend-swatch"></span><span class="legend-text">Tier 1: $9M (Restore)</span></div>
+  <div class="legend-item s-tier-2"><span class="legend-swatch"></span><span class="legend-text">Tier 2: $12M (Build)</span></div>
+  <div class="legend-item s-tier-3"><span class="legend-swatch"></span><span class="legend-text">Tier 3: $15M (Invest)</span></div>
+</div>
+
+<div class="chart-wrapper" data-chart-tooltip>
+  <script type="application/json" class="chart-tooltip-data">
+  {
+    "xLabels": ["FY27","FY28","FY29","FY30","FY31","FY32","FY33","FY34","FY35"],
+    "xPositions": [110.6,191.7,272.8,353.9,435.0,516.1,597.2,678.3,759.4],
+    "valuePrefix": "$",
+    "valueSuffix": "M",
+    "valueDecimals": 1,
+    "projectedFromIndex": 1,
+    "series": [
+      {
+        "name": "No override (2.5%/yr)",
+        "className": "s-neutral",
+        "values": [77.5,79.5,81.5,83.5,85.6,87.7,89.9,92.2,94.5],
+        "yPositions": [239.8,229.4,218.8,208.0,196.8,185.4,173.7,161.7,149.4]
+      },
+      {
+        "name": "Tier 1 ($9M)",
+        "className": "s-tier-1",
+        "values": [86.5,88.7,90.9,93.2,95.5,97.9,100.4,102.9,105.4],
+        "yPositions": [191.8,180.2,168.4,156.3,143.9,131.1,118.1,104.7,91.0]
+      },
+      {
+        "name": "Tier 2 ($12M)",
+        "className": "s-tier-2",
+        "values": [89.5,91.8,94.1,96.4,98.8,101.3,103.8,106.4,109.1],
+        "yPositions": [175.8,163.8,151.6,139.0,126.2,113.0,99.5,85.7,71.5]
+      },
+      {
+        "name": "Tier 3 ($15M)",
+        "className": "s-tier-3",
+        "values": [92.5,94.9,97.2,99.7,102.2,104.7,107.3,110.0,112.8],
+        "yPositions": [159.8,147.4,134.8,121.8,108.5,94.9,80.9,66.6,52.0]
+      }
+    ]
+  }
+  </script>
+  <svg class="chart" viewBox="0 0 840 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Step chart: Marblehead's Prop 2.5 levy limit projected from FY2027 to FY2035 under four scenarios. No-override baseline rises from $77.5M to $94.5M. Tier 1 $9M override rises to $105.4M. Tier 2 $12M to $109.1M. Tier 3 $15M to $112.8M.">
+    <line class="axis-base" x1="70" y1="280" x2="800" y2="280"/>
+    <line class="grid-minor" x1="70" y1="226.7" x2="800" y2="226.7"/>
+    <line class="grid-minor" x1="70" y1="173.3" x2="800" y2="173.3"/>
+    <line class="grid-minor" x1="70" y1="120"   x2="800" y2="120"/>
+    <line class="grid-minor" x1="70" y1="66.7"  x2="800" y2="66.7"/>
+
+    <text class="tick-label" x="62" y="283"   text-anchor="end">$70M</text>
+    <text class="tick-label" x="62" y="229.7" text-anchor="end">$80M</text>
+    <text class="tick-label" x="62" y="176.3" text-anchor="end">$90M</text>
+    <text class="tick-label" x="62" y="123"   text-anchor="end">$100M</text>
+    <text class="tick-label" x="62" y="69.7"  text-anchor="end">$110M</text>
+
+    <text class="tick-label tick-label--major" x="70"    y="298" text-anchor="middle">FY27</text>
+    <text class="tick-label tick-label--minor" x="151.1" y="298" text-anchor="middle">FY28</text>
+    <text class="tick-label tick-label--minor" x="232.2" y="298" text-anchor="middle">FY29</text>
+    <text class="tick-label tick-label--minor" x="313.3" y="298" text-anchor="middle">FY30</text>
+    <text class="tick-label tick-label--minor" x="394.4" y="298" text-anchor="middle">FY31</text>
+    <text class="tick-label tick-label--minor" x="475.6" y="298" text-anchor="middle">FY32</text>
+    <text class="tick-label tick-label--minor" x="556.7" y="298" text-anchor="middle">FY33</text>
+    <text class="tick-label tick-label--minor" x="637.8" y="298" text-anchor="middle">FY34</text>
+    <text class="tick-label tick-label--major" x="718.9" y="298" text-anchor="middle">FY35</text>
+
+    <!-- Phase-in shaded band: FY27, FY28, FY29 -->
+    <rect x="70" y="40" width="243.3" height="240" fill="currentColor" fill-opacity="0.05" stroke="none"/>
+    <text class="annotation" x="191.7" y="34" text-anchor="middle">Tier 3 phase-in window</text>
+
+    <!-- No override (baseline) -->
+    <polyline class="data-line data-line--thin s-neutral" stroke-dasharray="4 3"
+              points="70.0,239.8 151.1,239.8 151.1,229.4 232.2,229.4 232.2,218.8 313.3,218.8 313.3,208.0 394.4,208.0 394.4,196.8 475.6,196.8 475.6,185.4 556.7,185.4 556.7,173.7 637.8,173.7 637.8,161.7 718.9,161.7 718.9,149.4 800.0,149.4"/>
+
+    <!-- Tier 1 ($9M) -->
+    <polyline class="data-line data-line--bold s-tier-1"
+              points="70.0,239.8 70.0,191.8 151.1,191.8 151.1,180.2 232.2,180.2 232.2,168.4 313.3,168.4 313.3,156.3 394.4,156.3 394.4,143.9 475.6,143.9 475.6,131.1 556.7,131.1 556.7,118.1 637.8,118.1 637.8,104.7 718.9,104.7 718.9,91.0 800.0,91.0"/>
+
+    <!-- Tier 2 ($12M) -->
+    <polyline class="data-line data-line--bold s-tier-2"
+              points="70.0,239.8 70.0,175.8 151.1,175.8 151.1,163.8 232.2,163.8 232.2,151.6 313.3,151.6 313.3,139.0 394.4,139.0 394.4,126.2 475.6,126.2 475.6,113.0 556.7,113.0 556.7,99.5 637.8,99.5 637.8,85.7 718.9,85.7 718.9,71.5 800.0,71.5"/>
+
+    <!-- Tier 3 ($15M) -->
+    <polyline class="data-line data-line--bold s-tier-3"
+              points="70.0,239.8 70.0,159.8 151.1,159.8 151.1,147.4 232.2,147.4 232.2,134.8 313.3,134.8 313.3,121.8 394.4,121.8 394.4,108.5 475.6,108.5 475.6,94.9 556.7,94.9 556.7,80.9 637.8,80.9 637.8,66.6 718.9,66.6 718.9,52.0 800.0,52.0"/>
+
+    <!-- Start label at FY27 base -->
+    <text class="value-label s-neutral" x="65" y="243" text-anchor="end">$77.5M</text>
+
+    <!-- End-of-FY35 value labels with leader lines -->
+    <line x1="800" y1="52.0"  x2="803" y2="50" stroke="currentColor" stroke-width="0.6" stroke-opacity="0.4" class="s-tier-3"/>
+    <line x1="800" y1="71.5"  x2="803" y2="65" stroke="currentColor" stroke-width="0.6" stroke-opacity="0.4" class="s-tier-2"/>
+    <line x1="800" y1="91.0"  x2="803" y2="80" stroke="currentColor" stroke-width="0.6" stroke-opacity="0.4" class="s-tier-1"/>
+    <line x1="800" y1="149.4" x2="803" y2="155" stroke="currentColor" stroke-width="0.6" stroke-opacity="0.4" class="s-neutral"/>
+    <text class="value-label s-tier-3"  x="805" y="50"  text-anchor="start">$113M</text>
+    <text class="value-label s-tier-2"  x="805" y="65"  text-anchor="start">$109M</text>
+    <text class="value-label s-tier-1"  x="805" y="80"  text-anchor="start">$105M</text>
+    <text class="value-label s-neutral" x="805" y="158" text-anchor="start">$94M</text>
+  </svg>
+</div>
+
+<p class="caption">Each tier branch starts with the full override step at FY2027, then compounds at 2.5%/year through FY2035. The shaded band over FY27&ndash;FY29 marks the planned phase-in window: even though the legal cap jumps the full amount in FY27, the town would only collect $4.3M, $10.5M, and $15M of Tier 3 in those three years respectively. By FY35, Tier 3 sits about $18.3M above the no-override baseline &ndash; the original $15M plus eight years of compound growth.</p>
+
+<div class="takeaway takeaway--neutral">
+  The override is a permanent shift to the levy ceiling, not a one-time charge. The fan widens because the override amount compounds at 2.5%/year forever; it doesn't converge back.
+</div>
+
+<h2>What "phase-in" means here</h2>
+
+<p>The chart projects the legal <strong>levy limit</strong>, not the actual amount collected. Per <abbr class="g" title="Division of Local Services">DLS</abbr>, the full override amount is added to the limit on day one of FY27. The town's planned phase-in only affects how much of that authority is actually levied in the first three years:</p>
+
+<table class="data-table">
+  <thead>
+    <tr><th>Year</th><th>Tier 1 levied</th><th>Tier 2 levied</th><th>Tier 3 levied</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>FY27</td><td>$1.3M (14%)</td><td>$2.8M (23%)</td><td>$4.3M (29%)</td></tr>
+    <tr><td>FY28</td><td>$6.3M (70%)</td><td>$8.7M (73%)</td><td>$10.5M (70%)</td></tr>
+    <tr><td>FY29</td><td>$9.0M (100%)</td><td>$12.0M (100%)</td><td>$15.0M (100%)</td></tr>
+    <tr><td>FY30+</td><td colspan="3">Steady-state at full draw, growing 2.5%/yr</td></tr>
+  </tbody>
+</table>
+
+<p>The unused authority during phase-in becomes "excess levy capacity" the town could tap any future year without another override. This would be a departure from Marblehead's historical pattern: in 20 years of <abbr class="g" title="Division of Local Services">DLS</abbr> data (FY07&ndash;FY26), the town has never had more than 0.27% of its cap unused. Statewide, only ~22% of <abbr class="g" title="Massachusetts">MA</abbr> towns leave 5%+ unused in a typical year, and they're either tiny rural communities whose limit has grown past their service needs or commercial-heavy cities choosing not to push business taxes higher.</p>
+
+<h2>Why all four lines diverge rather than converge</h2>
+
+<p>The override doesn't expire. The MA Division of Local Services primer:</p>
+
+<blockquote>
+  <p>"The override results in a permanent increase in the levy limit of a community, which as part of the levy limit base, increases at the rate of 2.5 percent each year."</p>
+  <p>&ndash; <em>Levy Limits: A Primer on Proposition 2&frac12;</em></p>
+</blockquote>
+
+<p>So once a tier wins, that amount sits permanently in the base. Each year the limit grows 2.5% on the prior year's <em>limit</em> (not on what the town actually collected), so the override portion compounds alongside the base. Eight years on, Tier 3 is not just $15M higher than no-override &ndash; it's about $18.3M higher, because that initial $15M has been earning 2.5%/yr.</p>
+
+<p>One thing the chart deliberately leaves out: <strong>the override only changes the ceiling, not the spending</strong>. Town Meeting still appropriates the actual budget each year. So while the override permanently expands what the town <em>could</em> levy, residents and Town Meeting retain annual control over what is actually collected and spent within that ceiling. The ceiling is the rigid one; Town Meeting is the flexible one.</p>
+
+<div class="notes">
+  <p><strong>Phase-in source.</strong> Tier-by-tier phase-in dollar amounts from the April 15, 2026 Select Board override presentation, also reflected on <a href="/what-is-the-override.html#what-it-costs">what-is-the-override.html</a>.</p>
+  <p><strong>Projection methodology.</strong> The 2.5%/yr compounding rate is the statutory minimum under Prop 2&frac12;. New growth (typically $200K&ndash;$500K per year for Marblehead) is excluded from projections because future new growth is not a known quantity. Including it would raise all four lines by roughly the same percentage, so the relative spread between tiers and baseline is unchanged.</p>
+  <p><strong>FY35 endpoint values.</strong> No override: $94.5M. Tier 1: $105.4M. Tier 2: $109.1M. Tier 3: $112.8M. The "$94M / $105M / $109M / $113M" rounding on the chart preserves the spread but loses the cents.</p>
+  <p><strong>Source.</strong> FY27 starting levy limit ($77,543,708) from MA <abbr class="g" title="Division of Local Services">DLS</abbr> Marblehead Levy Limit report, in <a href="/data/marblehead_levy.csv">data/marblehead_levy.csv</a>. Override tier amounts and phase-in schedule from the town's April 15, 2026 override presentation.</p>
+</div>
+
+<div class="read-next">
+  <div class="read-next-label">Read next</div>
+  <a class="read-next-link" href="/charts/levy_limit_vs_levy.html">
+    <div class="read-next-title">Levy limit history &rarr;</div>
+    <div class="read-next-desc">FY2001&ndash;FY2027 history of the levy limit, with the FY02&ndash;FY06 override cluster marked.</div>
+  </a>
+  <a class="read-next-link" href="/charts/deficit_model.html">
+    <div class="read-next-title">Deficit dynamics model &rarr;</div>
+    <div class="read-next-desc">Revenue vs. expenses trajectory under each override scenario, with adjustable assumptions for cost growth and how fast override money gets spent.</div>
+  </a>
+  <a class="read-next-link" href="/charts/override_calculator.html">
+    <div class="read-next-title">What does the override cost me? &rarr;</div>
+    <div class="read-next-desc">Calculator showing the property-tax impact at the median, average, and your home value for each tier.</div>
+  </a>
+</div>
