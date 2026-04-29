@@ -1209,15 +1209,30 @@
     if (shareTopEl) {
       shareTopEl.style.display = hasAny ? '' : 'none';
     }
-    // Sort unanswered questions to the top
+    // Within each section, sort unanswered to the top of that section.
+    // Sorting across the whole list would strand the section labels (no
+    // has-pick class) above ALL answered cards, leaving them stacked at
+    // the top describing nothing.
     if (hasAny && listEl) {
-      var cards = Array.prototype.slice.call(listEl.children);
-      cards.sort(function (a, b) {
-        var aAnswered = a.classList.contains('has-pick') ? 1 : 0;
-        var bAnswered = b.classList.contains('has-pick') ? 1 : 0;
-        return aAnswered - bAnswered;
+      var groups = [];
+      var current = null;
+      Array.prototype.slice.call(listEl.children).forEach(function (child) {
+        if (child.classList.contains('explore-section-label')) {
+          current = { label: child, cards: [] };
+          groups.push(current);
+        } else if (current) {
+          current.cards.push(child);
+        }
       });
-      cards.forEach(function (c) { listEl.appendChild(c); });
+      groups.forEach(function (g) {
+        g.cards.sort(function (a, b) {
+          var aAnswered = a.classList.contains('has-pick') ? 1 : 0;
+          var bAnswered = b.classList.contains('has-pick') ? 1 : 0;
+          return aAnswered - bAnswered;
+        });
+        listEl.appendChild(g.label);
+        g.cards.forEach(function (c) { listEl.appendChild(c); });
+      });
     }
     renderFeaturedQuestion();
     updateSynthesis();
