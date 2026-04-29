@@ -323,6 +323,101 @@
 
   document.addEventListener('bb:statechange', renderConsequences);
 
+  // ── Success state ──
+  const successSection = document.querySelector('.bb-success');
+
+  function townPlanCutsForTier() {
+    // The town's no-override plan = every restoration the override would
+    // fund at this tier is being cut, plus the $1.5M schools cut. We
+    // model that as "all discrete items at this tier are checked".
+    const townChecked = new Set();
+    let townTotal = 0;
+    for (const item of itemsData) {
+      if (item.type === 'discrete') {
+        const amount = item.amounts[`tier_${state.tier}`];
+        if (amount > 0) {
+          townChecked.add(item.id);
+          townTotal += amount;
+        }
+      }
+    }
+    townTotal += SCHOOLS_DEFAULT;
+    return { townChecked, townTotal };
+  }
+
+  function sumAmounts(ids) {
+    let total = 0;
+    const byId = new Map(itemsData.filter(i => i.type === 'discrete').map(i => [i.id, i]));
+    for (const id of ids) {
+      const item = byId.get(id);
+      if (!item) continue;
+      total += item.amounts[`tier_${state.tier}`];
+    }
+    return total;
+  }
+
+  function renderSuccess() {
+    if (!successSection) return;
+    const target = TIER_TARGETS[state.tier];
+    const cuts = window.__bbState.getCuts();
+    if (cuts < target) {
+      successSection.hidden = true;
+      successSection.innerHTML = '';
+      return;
+    }
+
+    const { townChecked, townTotal } = townPlanCutsForTier();
+    const userChecked = state.checkedIds;
+
+    const overlapIds = Array.from(userChecked).filter(id => townChecked.has(id));
+    const userCutTownDidnt = Array.from(userChecked).filter(id => !townChecked.has(id));
+    const userKeptTownCut = Array.from(townChecked).filter(id => !userChecked.has(id));
+
+    const schoolsDelta = state.schoolsCut - SCHOOLS_DEFAULT;
+    const schoolsDeltaText = schoolsDelta === 0
+      ? ''
+      : ` (${schoolsDelta > 0 ? '+' : ''}${formatUSD(schoolsDelta)} vs town)`;
+
+    successSection.hidden = false;
+    successSection.innerHTML = `
+      <h2>Your plan closes the Tier ${state.tier} FY27 gap.</h2>
+      <div class="bb-success-comparison">
+        <table>
+          <thead>
+            <tr><th></th><th>Your plan</th><th>Town's no-override plan</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Total cuts</th>
+              <td>${formatUSD(cuts)}</td>
+              <td>${formatUSD(townTotal)}</td>
+            </tr>
+            <tr>
+              <th scope="row">Schools cut</th>
+              <td>${formatUSD(state.schoolsCut)}${schoolsDeltaText}</td>
+              <td>${formatUSD(SCHOOLS_DEFAULT)}</td>
+            </tr>
+            <tr>
+              <th scope="row">Item cuts shared with town</th>
+              <td colspan="2">${overlapIds.length} items (${formatUSD(sumAmounts(overlapIds))})</td>
+            </tr>
+            <tr>
+              <th scope="row">Items you cut, town protected</th>
+              <td colspan="2">${userCutTownDidnt.length === 0 ? 'None' : userCutTownDidnt.length + ' items'}</td>
+            </tr>
+            <tr>
+              <th scope="row">Items you kept, town cut</th>
+              <td colspan="2">${userKeptTownCut.length === 0 ? 'None' : userKeptTownCut.length + ' items (' + formatUSD(sumAmounts(userKeptTownCut)) + ')'}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="bb-success-note">These are the legal, regulatory, and policy consequences of the plan above, not a judgment about whether the plan is good policy.</p>
+    `;
+  }
+
+  document.addEventListener('bb:statechange', renderSuccess);
+
   loadData().then(() => {
     renderChecklist();
     initTierSelector();
