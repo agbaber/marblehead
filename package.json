@@ -6,6 +6,8 @@
   "scripts": {
     "test:minutes": "node --test scripts/minutes/lib/*.test.mjs",
     "dev": "bundle exec jekyll serve --port 4000",
+    "build": "bundle exec jekyll build && npx pagefind --site _site",
+    "preview:search": "npm run build && npx serve _site -p 4001",
     "smoke:local": "SITE=http://localhost:4000 node tests/smoke-test.mjs",
     "test:local": "node scripts/test-local.mjs"
   },
@@ -17,6 +19,7 @@
     "playwright": "^1.59.1"
   },
   "devDependencies": {
+    "pagefind": "^1.4.0",
     "serve": "^14.0.0",
     "wait-on": "^7.0.0"
   }
