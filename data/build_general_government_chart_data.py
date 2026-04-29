@@ -59,12 +59,23 @@ def read_population():
 
 
 def read_cpi():
-    """Calendar-year CPI-U All Urban Consumers, US average."""
+    """Calendar-year CPI-U All Urban Consumers, US average.
+
+    Massachusetts fiscal years run July-June, so FY2002 = July 2001 to
+    June 2002. We map each fiscal year to the calendar-year CPI sharing
+    the same year number (e.g. cpi[2002] for FY2002). Within ~2% of a
+    midpoint average; the simpler mapping makes the chart caption honest.
+    """
     cpi = {}
     with (DATA / "cpi_us.csv").open() as f:
         for row in csv.DictReader(f):
             cpi[int(row["year"])] = float(row["cpi_u"])
     return cpi
+
+
+def to_points(x_positions, values, vmin, vmax):
+    """SVG polyline `points` attribute string for a series."""
+    return " ".join(f"{x},{y_for(v, vmin, vmax)}" for x, v in zip(x_positions, values))
 
 
 def linspace(start, end, n):
@@ -106,9 +117,6 @@ def main():
     v1_axis_min = (int(v1_min) // 25) * 25
     v1_axis_max = ((int(v1_max) // 25) + 1) * 25
 
-    def to_points(values, vmin, vmax):
-        return " ".join(f"{x},{y_for(v, vmin, vmax)}" for x, v in zip(x_positions, values))
-
     view1 = {
         "x_labels": [f"FY{fy % 100:02d}" for fy in years],
         "x_positions": x_positions,
@@ -117,13 +125,13 @@ def main():
         "series": [
             {"name": "Marblehead general government", "className": "s-emphasis",
              "values": mh_gg_idx,
-             "points": to_points(mh_gg_idx, v1_axis_min, v1_axis_max)},
+             "points": to_points(x_positions, mh_gg_idx, v1_axis_min, v1_axis_max)},
             {"name": "Marblehead total expenditures", "className": "s-revenue",
              "values": mh_total_idx,
-             "points": to_points(mh_total_idx, v1_axis_min, v1_axis_max)},
+             "points": to_points(x_positions, mh_total_idx, v1_axis_min, v1_axis_max)},
             {"name": "CPI-U (US, all items)", "className": "s-neutral",
              "values": cpi_idx,
-             "points": to_points(cpi_idx, v1_axis_min, v1_axis_max)},
+             "points": to_points(x_positions, cpi_idx, v1_axis_min, v1_axis_max)},
         ],
     }
 
@@ -137,6 +145,8 @@ def main():
         real_pc.append(round(real_dollars / pop, 0))
 
     v2_axis_min = (int(min(real_pc)) // 25) * 25
+    # +2 (not the +1 used for view1) to leave headroom above the data line
+    # for the dashed mean-reference annotation rendered on the chart.
     v2_axis_max = ((int(max(real_pc)) // 25) + 2) * 25
     mean_v2 = round(sum(real_pc) / len(real_pc), 0)
 
@@ -148,8 +158,7 @@ def main():
         "mean_value": mean_v2,
         "mean_y": y_for(mean_v2, v2_axis_min, v2_axis_max),
         "values": real_pc,
-        "points": " ".join(f"{x},{y_for(v, v2_axis_min, v2_axis_max)}"
-                           for x, v in zip(x_positions, real_pc)),
+        "points": to_points(x_positions, real_pc, v2_axis_min, v2_axis_max),
     }
 
     # ── View 3: peer comparison FY24 ─────────────────────────────────────
@@ -163,6 +172,9 @@ def main():
             "gg_pct_total": round(sched[(town, 2024)]["gg"] / sched[(town, 2024)]["total"] * 100, 2),
         })
     rows.sort(key=lambda r: r["gg_pc"])
+    # Rank is 1-indexed from the ascending-sorted list, so rank 1 = lowest
+    # GG per capita. If Marblehead's rank changes after a data refresh, a
+    # higher number means Marblehead has moved upward in spending.
     marblehead_rank = next(i for i, r in enumerate(rows, start=1) if r["town"] == "Marblehead")
     view3 = {
         "rows": rows,
