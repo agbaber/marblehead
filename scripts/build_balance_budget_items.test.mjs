@@ -57,3 +57,44 @@ test('consequence ids are strings referencing the consequences file', () => {
     }
   }
 });
+
+test('consequences file parses and each entry has required fields', () => {
+  const raw = readFileSync('data/balance_budget_consequences.json', 'utf-8');
+  const consequences = JSON.parse(raw);
+
+  const requiredIds = [
+    'sro_eliminated',
+    'mblc_decertification',
+    'mblc_mer_violation',
+    'nss_floor_violation',
+    'opeb_skipped',
+    'stabilization_skipped',
+    'workers_comp_underfunded'
+  ];
+
+  for (const id of requiredIds) {
+    assert.ok(consequences[id], `missing required consequence: ${id}`);
+    assert.ok(consequences[id].name, `${id} missing name`);
+    assert.ok(consequences[id].authority, `${id} missing authority`);
+    assert.ok(consequences[id].effect, `${id} missing effect`);
+    assert.ok(Array.isArray(consequences[id].links), `${id} missing links array`);
+  }
+});
+
+test('every consequence id referenced by an item exists in consequences file', () => {
+  const items = JSON.parse(readFileSync('data/balance_budget_items.json', 'utf-8'));
+  const consequences = JSON.parse(readFileSync('data/balance_budget_consequences.json', 'utf-8'));
+
+  const referenced = new Set();
+  for (const item of items) {
+    if (item.type === 'discrete') {
+      for (const cid of item.consequences || []) referenced.add(cid);
+    } else if (item.type === 'scalar') {
+      for (const c of item.consequences || []) referenced.add(c.id);
+    }
+  }
+
+  for (const cid of referenced) {
+    assert.ok(consequences[cid], `item references undefined consequence: ${cid}`);
+  }
+});

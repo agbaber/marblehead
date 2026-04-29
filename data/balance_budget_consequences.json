@@ -1,0 +1,59 @@
+{
+  "sro_eliminated": {
+    "name": "School Resource Officer eliminated",
+    "authority": "Town of Marblehead / Marblehead Police Department",
+    "effect": "The School Resource Officer (SRO) position at Marblehead schools is eliminated. Not a state-law violation; a local policy choice with implications for school safety planning, after-hours school event coverage, and the police-school coordination the SRO role provides.",
+    "links": []
+  },
+  "mblc_decertification": {
+    "name": "Library loses MBLC state certification",
+    "authority": "605 CMR 4.00; M.G.L. c. 78 ss 19A, 19B",
+    "effect": "Abbot Public Library is decertified by the Massachusetts Board of Library Commissioners (MBLC) for failing to meet the Municipal Appropriation Requirement (MAR) staffing floor. Effects: NOBLE reciprocal borrowing suspended (residents cannot borrow from other Massachusetts libraries; other NOBLE libraries can refuse to lend to Marblehead); state aid to public libraries withheld; federal LSTA pass-through grants unavailable. The MBLC waiver process is discretionary and is not a planning tool.",
+    "links": [
+      { "label": "605 CMR 4.00 (MBLC regulations)", "url": "https://www.mass.gov/regulations/605-CMR-400-the-massachusetts-board-of-library-commissioners" },
+      { "label": "M.G.L. c. 78", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXII/Chapter78" }
+    ]
+  },
+  "mblc_mer_violation": {
+    "name": "Library materials budget below Materials Expenditure Requirement",
+    "authority": "605 CMR 4.01(7)",
+    "effect": "Abbot Public Library's materials expenditure falls below the state Materials Expenditure Requirement (MER), a separate MBLC floor from MAR. MER is a percentage-of-budget requirement for physical and digital collection spending. MER violation is an independent trigger for MBLC decertification.",
+    "links": [
+      { "label": "605 CMR 4.00 (MBLC regulations)", "url": "https://www.mass.gov/regulations/605-CMR-400-the-massachusetts-board-of-library-commissioners" }
+    ]
+  },
+  "nss_floor_violation": {
+    "name": "School budget below Net School Spending floor",
+    "authority": "M.G.L. c. 70; Chapter 12 of the Acts of 2010 (Achievement Gap Act)",
+    "effect": "District spending falls below the Net School Spending (NSS) floor set by DESE under Chapter 70. Immediate consequence: DESE intervention, which may include escalating oversight, restricted access to certain grants, and in sustained cases Level 5 designation with a state-appointed receiver (as happened with Lawrence in 2011, Holyoke in 2015, and Southbridge in 2016). The receiver assumes full managerial authority over the district.",
+    "links": [
+      { "label": "Chapter 70 overview (DESE)", "url": "https://www.doe.mass.edu/finance/chapter70/" },
+      { "label": "Chapter 12 of Acts of 2010", "url": "https://malegislature.gov/Laws/SessionLaws/Acts/2010/Chapter12" }
+    ]
+  },
+  "opeb_skipped": {
+    "name": "OPEB trust contribution skipped",
+    "authority": "GASB 74/75; M.G.L. c. 32B s 20",
+    "effect": "Town skips the annual contribution to the Other Post-Employment Benefits trust. Not a state-mandated payment, but a GASB disclosure item and a rating agency signal. Sustained underfunding raises the unfunded OPEB liability reported in the ACFR and can affect the town's bond rating, which drives future borrowing costs.",
+    "links": [
+      { "label": "M.G.L. c. 32B s 20", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIV/Chapter32B/Section20" }
+    ]
+  },
+  "stabilization_skipped": {
+    "name": "Stabilization fund transfer skipped",
+    "authority": "M.G.L. c. 40 s 5B",
+    "effect": "Town skips the transfer to the Stabilization Fund, reducing the buffer available for unanticipated expenses and revenue shortfalls. Not a mandate violation. Rating agencies (Moody's, S&P) use reserve levels as a key input for municipal credit ratings; a depleted stabilization fund pressures the town's rating and can raise future borrowing costs.",
+    "links": [
+      { "label": "M.G.L. c. 40 s 5B", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40/Section5B" }
+    ]
+  },
+  "workers_comp_underfunded": {
+    "name": "Workers Compensation / Section 111F transfer reduced",
+    "authority": "M.G.L. c. 152; M.G.L. c. 41 s 111F",
+    "effect": "Town reduces funding for its Workers Compensation reserves and Section 111F (injured-on-duty police and fire benefits). Funding these obligations is statutorily required (c. 152 for general workers comp, c. 41 s 111F for public safety). Underfunding creates immediate liability exposure; claims still must be paid, and if reserves are insufficient the town must appropriate additional funds mid-year or face default on benefit payments.",
+    "links": [
+      { "label": "M.G.L. c. 152", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter152" },
+      { "label": "M.G.L. c. 41 s 111F", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section111F" }
+    ]
+  }
+}
