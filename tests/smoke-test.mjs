@@ -138,6 +138,31 @@ async function testPickCommit(page) {
   }
 }
 
+async function testGeneralGovernmentChart(page) {
+  console.log('\n── General Government Over Time chart ──');
+  await page.goto(SITE + '/charts/general_government_over_time.html', { waitUntil: 'domcontentloaded' });
+  const h1 = await page.$('h1');
+  const h1Text = h1 ? (await h1.textContent()).trim() : '';
+  /general government/i.test(h1Text)
+    ? ok(`H1 reads: ${h1Text}`)
+    : fail('GG chart H1', `unexpected H1: ${h1Text}`);
+
+  const h2Count = (await page.$$('h2')).length;
+  h2Count >= 3
+    ? ok(`${h2Count} H2 sections`)
+    : fail('GG chart H2 count', `expected >= 3, got ${h2Count}`);
+
+  const charts = (await page.$$('svg.chart')).length;
+  charts >= 3
+    ? ok(`${charts} SVG charts`)
+    : fail('GG chart SVG count', `expected >= 3, got ${charts}`);
+
+  const bars = (await page.$$('svg.chart rect.data-bar')).length;
+  bars === 9
+    ? ok(`${bars} peer bars`)
+    : fail('GG peer bar count', `expected 9, got ${bars}`);
+}
+
 async function testStatsStrip(page) {
   console.log('\n── Stats strip ──');
   // Navigate to landing to see stats
@@ -165,6 +190,7 @@ async function testStatsStrip(page) {
     await testQuestionScreens(page1);
     await testUnsureButtons(page1);
     await testNavLinks(page1);
+    await testGeneralGovernmentChart(page1);
     await ctx1.close();
 
     // Interactive tests (fresh context so localStorage is clean)
