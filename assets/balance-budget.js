@@ -238,6 +238,91 @@
 
   document.addEventListener('bb:statechange', updateStatusBar);
 
+  // ── Consequences panel ──
+  const consequencesList = document.querySelector('.bb-consequences-list');
+  const consequencesCount = document.querySelector('[data-bind="consequence-count"]');
+
+  function triggeredConsequences() {
+    const triggered = new Set();
+    if (!itemsData) return [];
+
+    for (const item of itemsData) {
+      if (item.type === 'discrete') {
+        // Each discrete checkbox represents a cut the user is making.
+        // Consequences fire when the cut is made (item IS checked).
+        if (state.checkedIds.has(item.id) && item.consequences) {
+          for (const cid of item.consequences) triggered.add(cid);
+        }
+      } else if (item.type === 'scalar') {
+        if (item.id === 'schools_cut' && item.consequences) {
+          for (const c of item.consequences) {
+            if (typeof c === 'object' && c.threshold_gt !== undefined && state.schoolsCut > c.threshold_gt) {
+              triggered.add(c.id);
+            }
+          }
+        }
+      }
+    }
+
+    return Array.from(triggered);
+  }
+
+  function renderConsequences() {
+    if (!consequencesList) return;
+    const triggered = triggeredConsequences();
+    if (consequencesCount) consequencesCount.textContent = String(triggered.length);
+    consequencesList.innerHTML = '';
+
+    if (triggered.length === 0) {
+      const empty = document.createElement('p');
+      empty.className = 'bb-consequence-empty';
+      empty.textContent = 'No mandate or rating-agency consequences triggered by the current plan.';
+      consequencesList.appendChild(empty);
+      return;
+    }
+
+    for (const cid of triggered) {
+      const cons = consequencesData && consequencesData[cid];
+      if (!cons) continue;
+
+      const card = document.createElement('div');
+      card.className = 'bb-consequence-card';
+
+      const h = document.createElement('h4');
+      h.textContent = cons.name;
+      card.appendChild(h);
+
+      const authority = document.createElement('p');
+      authority.className = 'bb-cc-authority';
+      authority.textContent = cons.authority;
+      card.appendChild(authority);
+
+      const effect = document.createElement('p');
+      effect.className = 'bb-cc-effect';
+      effect.textContent = cons.effect;
+      card.appendChild(effect);
+
+      if (cons.links && cons.links.length) {
+        const links = document.createElement('p');
+        links.className = 'bb-cc-links';
+        cons.links.forEach((l, i) => {
+          const a = document.createElement('a');
+          a.href = l.url;
+          a.textContent = l.label;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          links.appendChild(a);
+          if (i < cons.links.length - 1) links.appendChild(document.createTextNode(' \u00b7 '));
+        });
+        card.appendChild(links);
+      }
+
+      consequencesList.appendChild(card);
+    }
+  }
+
+  document.addEventListener('bb:statechange', renderConsequences);
+
   loadData().then(() => {
     renderChecklist();
     initTierSelector();
