@@ -169,6 +169,8 @@ Scraper: `pull_schedule_a.mjs` in the repo root. It uses Playwright to submit th
 
 DLS's definition of General Fund scope follows the [Uniform Massachusetts Accounting System (UMAS)](https://www.mass.gov/service-details/uniform-municipal-accounting-system-umas). Schedule A totals reflect the government-wide general fund and do not match ACFR governmental-fund totals one-to-one (different fund groupings, different reporting period boundaries). Use these CSVs for cross-town comparison; use ACFRs for single-town historical detail.
 
+Note on the `general_government` category: Schedule A's `general_government` is a state-standardized definition that lets all 351 Massachusetts municipalities be compared on the same line. It does not always match a town's internal budget grouping. For Marblehead in FY27, the local "general government" category in the town budget (~$6.89M) is roughly twice the Schedule A value (~$3.31M FY24) because some functions Marblehead groups under general government locally (notably facilities and shared services) are categorized elsewhere by Schedule A. Used by `charts/general_government_over_time.html`.
+
 ## Marblehead Independent & Current Articles (referenced across site)
 - ["Marblehead advances $122.8M budget built on cuts, defers override decisions"](https://www.marbleheadindependent.com/marblehead-advances-122-8m-budget-built-on-cuts-defers-override-decisions/) (Marblehead Independent)
 - ["Concerns over staffing cuts shape Marblehead school budget hearing"](https://www.marbleheadindependent.com/concerns-over-staffing-cuts-shape-marblehead-school-budget-hearing/) (Marblehead Independent)
