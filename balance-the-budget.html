@@ -1,0 +1,74 @@
+---
+title: "Balance the FY27 budget"
+scripts: [citations, deep-dive, balance-budget]
+og_title: "Balance the FY27 budget without the override"
+og_description: "Build your own FY27 cut plan against a selectable override tier target. See which state-law consequences your plan triggers, and how it compares to the Town Administrator's proposed no-override cuts."
+og_url: https://marbleheaddata.org/balance-the-budget.html
+---
+<h1>Balance the FY27 budget without the override</h1>
+
+<section class="bb-preamble">
+  <p>Each override tier adds permanent levy capacity over three years. The first-year slice (what the town actually draws in FY27) is shown as each tier's target below. Pick a tier, check the cuts you would make from that tier's restoration list, and see what falls out.</p>
+
+  <p>Revenue is fixed to the no-override levy (Proposition 2&frac12; plus new growth). No fee toggles, no meals-tax toggles. The question is narrow on purpose: <em>what, specifically, would you cut?</em></p>
+</section>
+
+<section class="bb-tier-selector" aria-label="Select override tier">
+  <button type="button" class="bb-tier-btn" data-tier="1" aria-pressed="true">
+    <span class="bb-tier-label">Tier 1</span>
+    <span class="bb-tier-target">FY27 gap: $1.27M</span>
+    <span class="bb-tier-context">($9M total over 3 years)</span>
+  </button>
+  <button type="button" class="bb-tier-btn" data-tier="2" aria-pressed="false">
+    <span class="bb-tier-label">Tier 2</span>
+    <span class="bb-tier-target">FY27 gap: $2.81M</span>
+    <span class="bb-tier-context">($12M total over 3 years)</span>
+  </button>
+  <button type="button" class="bb-tier-btn" data-tier="3" aria-pressed="false">
+    <span class="bb-tier-label">Tier 3</span>
+    <span class="bb-tier-target">FY27 gap: $4.30M</span>
+    <span class="bb-tier-context">($15M total over 3 years)</span>
+  </button>
+</section>
+
+<section class="bb-status-bar" aria-live="polite">
+  <div class="bb-status-target">
+    <span class="bb-status-label">Target</span>
+    <span class="bb-status-value" data-bind="target">$1,269,564</span>
+  </div>
+  <div class="bb-status-cuts">
+    <span class="bb-status-label">Your cuts</span>
+    <span class="bb-status-value" data-bind="cuts">$0</span>
+  </div>
+  <div class="bb-status-gap">
+    <span class="bb-status-label">Gap remaining</span>
+    <span class="bb-status-value" data-bind="gap">$1,269,564</span>
+  </div>
+</section>
+
+<div class="bb-layout">
+  <section class="bb-checklist" aria-label="Cuts checklist">
+    <!-- Populated by balance-budget.js -->
+  </section>
+
+  <aside class="bb-consequences" aria-label="Consequences panel">
+    <h2 class="bb-consequences-title">
+      <span data-bind="consequence-count">0</span> consequences triggered
+    </h2>
+    <div class="bb-consequences-list">
+      <!-- Populated by balance-budget.js -->
+    </div>
+  </aside>
+</div>
+
+<section class="bb-success" hidden aria-live="polite">
+  <!-- Populated by balance-budget.js when gap <= 0 -->
+</section>
+
+<footer class="bb-footer">
+  <button type="button" class="bb-reset">Reset plan</button>
+  <nav class="bb-crosslinks">
+    <a href="/no-override-budget.html">See what the town proposed instead &rarr;</a>
+    <a href="/what-is-the-override.html">See what each tier would restore &rarr;</a>
+  </nav>
+</footer>
