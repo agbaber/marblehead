@@ -847,8 +847,13 @@ details.notes[open] > summary {
 }
 
 .source {
-  font-size: 0.75rem; color: var(--text-faint); margin-top: 8px;
+  font-size: 0.75rem; color: var(--text-faint);
+  margin-top: 8px; margin-bottom: 14px;
 }
+/* Source attribution following a bulleted/numbered list — tighten the gap to
+   the list above (lists currently sit at margin: 0 from the global reset) and
+   keep the breathing room before the next subsection heading. */
+ul + .source, ol + .source { margin-top: 4px; }
 
 .back {
   font-size: 0.75rem; font-weight: 500; color: var(--text-subtle);
