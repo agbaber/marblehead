@@ -94,9 +94,9 @@ export function buildItems(csvText) {
       { label: "Don't cut ($0)", value: 0 }
     ],
     consequences: [
-      { threshold_gt: 2500000, id: 'nss_floor_violation' }
+      { threshold_gt: 21894870, id: 'nss_floor_violation' }
     ],
-    source_description: 'FY27 Proposed Budget No Override: schools line cut $1,500,000 from $49,120,287 (FY26) to $47,620,287 (FY27).'
+    source_description: 'FY27 Proposed Budget No Override: schools line cut $1,500,000 from $49,120,287 (FY26) to $47,620,287 (FY27). NSS-floor threshold derived from DESE FY27 Chapter 70 district summary: Required Local Contribution $27,225,417; safe cut from FY26 baseline = $49,120,287 - $27,225,417 = $21,894,870.'
   });
 
   return items;

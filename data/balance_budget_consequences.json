@@ -25,9 +25,9 @@
   "nss_floor_violation": {
     "name": "School budget below Net School Spending floor",
     "authority": "M.G.L. c. 70; Chapter 12 of the Acts of 2010 (Achievement Gap Act)",
-    "effect": "District spending falls below the Net School Spending (NSS) floor set by DESE under Chapter 70. Immediate consequence: DESE intervention, which may include escalating oversight, restricted access to certain grants, and in sustained cases Level 5 designation with a state-appointed receiver (as happened with Lawrence in 2011, Holyoke in 2015, and Southbridge in 2016). The receiver assumes full managerial authority over the district.",
+    "effect": "District spending falls below the Net School Spending (NSS) floor set by DESE under Chapter 70. Marblehead's FY27 required NSS is $34,411,771 (per DESE FY27 preliminary Chapter 70 district summary), with a required local contribution of $27,225,417. Cuts large enough to push the town's school appropriation below that local-contribution share trigger NSS noncompliance. Consequence: DESE intervention, which may include escalating oversight, restricted access to certain grants, and in sustained cases Level 5 designation with a state-appointed receiver (as happened with Lawrence in 2011, Holyoke in 2015, and Southbridge in 2016). The receiver assumes full managerial authority over the district.",
     "links": [
-      { "label": "Chapter 70 overview (DESE)", "url": "https://www.doe.mass.edu/finance/chapter70/" },
+      { "label": "FY27 Chapter 70 preliminary (DESE)", "url": "https://www.doe.mass.edu/finance/chapter70/fy2027/preliminary.html" },
       { "label": "Chapter 12 of Acts of 2010", "url": "https://malegislature.gov/Laws/SessionLaws/Acts/2010/Chapter12" }
     ]
   },
