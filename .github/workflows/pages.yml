@@ -1,0 +1,66 @@
+name: Deploy to GitHub Pages
+
+# Replaces GitHub Pages' default Jekyll-only auto-build so we can run
+# Pagefind on the built _site/ before publishing. Without this, the
+# search index files under /pagefind/ are missing on prod and the
+# search modal shows an "index not built" hint to real visitors.
+#
+# One-time setup required (cannot be done in workflow):
+#   Repo Settings → Pages → Build and deployment → Source =
+#   "GitHub Actions". Otherwise actions/deploy-pages errors with
+#   "Get Pages site failed".
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Only one prod deploy at a time; cancel a stale in-flight run if a
+# newer commit lands on main.
+concurrency:
+  group: pages-prod
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/configure-pages@v5
+
+      - name: Build site with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Build Pagefind search index
+        run: npx -y pagefind@1.4.0 --site _site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

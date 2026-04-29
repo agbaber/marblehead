@@ -57,7 +57,7 @@
       if (!modal.dataset.errShown) {
         modal.dataset.errShown = '1';
         var note = document.createElement('p');
-        note.textContent = 'Search index not built. Run `npm run preview:search` locally, or wait for the PR preview.';
+        note.textContent = 'Search is temporarily unavailable. Use the navigation links above to find what you need.';
         note.style.cssText = 'padding:12px;color:var(--text-subtle);font-size:0.875rem;';
         modal.querySelector('#search').appendChild(note);
       }
