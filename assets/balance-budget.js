@@ -217,6 +217,27 @@
     getConsequences: () => consequencesData
   };
 
+  // ── Status bar ──
+  const statusBar = document.querySelector('.bb-status-bar');
+  const elTarget = document.querySelector('[data-bind="target"]');
+  const elCuts = document.querySelector('[data-bind="cuts"]');
+  const elGap = document.querySelector('[data-bind="gap"]');
+
+  function updateStatusBar() {
+    if (!statusBar) return;
+    const target = TIER_TARGETS[state.tier];
+    const cuts = window.__bbState.getCuts();
+    const gap = target - cuts;
+
+    if (elTarget) elTarget.textContent = formatUSD(target);
+    if (elCuts) elCuts.textContent = formatUSD(cuts);
+    if (elGap) elGap.textContent = gap >= 0 ? formatUSD(gap) : formatUSD(-gap) + ' over target';
+
+    statusBar.classList.toggle('bb-balanced', gap <= 0);
+  }
+
+  document.addEventListener('bb:statechange', updateStatusBar);
+
   loadData().then(() => {
     renderChecklist();
     initTierSelector();
