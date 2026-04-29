@@ -782,20 +782,28 @@ ul.tldr li:last-child { margin-bottom: 0; }
 ul.tldr li strong { color: var(--text); }
 
 /* Safety net: the global `* { padding: 0 }` reset zeroes default <ul>/<ol>
-   padding, so a bare <ul> inside a chart .container renders bullets in the
-   container's left padding (or outside it). Restore an indent for any
-   un-classed list inside .container so bullets stay inside the surface.
-   Bespoke list classes (.tldr, .tier-list, .question-list, etc.) override
-   this with their own padding rules. */
+   padding, so a bare <ul> renders its bullet markers outside the content
+   box — in the surrounding gutter, left of where the headings and prose
+   start. Restore a working indent for any un-classed list inside .container
+   (chart pages) or .page (long-form reading pages) so markers sit inside
+   the text column. Bespoke list classes (.tldr, .tier-list, .question-list,
+   etc.) carry their own padding and are excluded by :not([class]). */
 .container > ul:not([class]),
 .container > ol:not([class]),
 .container > details > ul:not([class]),
-.container > details > ol:not([class]) {
+.container > details > ol:not([class]),
+.page > ul:not([class]),
+.page > ol:not([class]),
+.page > details > ul:not([class]),
+.page > details > ol:not([class]) {
   padding-left: 22px;
   list-style: disc;
+  margin-bottom: 14px;
 }
 .container > ol:not([class]),
-.container > details > ol:not([class]) { list-style: decimal; }
+.container > details > ol:not([class]),
+.page > ol:not([class]),
+.page > details > ol:not([class]) { list-style: decimal; }
 
 p {
   font-size: 1.0rem; color: var(--text-muted);
