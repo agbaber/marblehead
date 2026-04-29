@@ -416,9 +416,59 @@ nav.site-nav a[aria-current="page"] {
   border-radius: 6px;
   display: flex; align-items: center; justify-content: center;
   transition: color 0.2s;
-  margin-left: auto;
 }
 .theme-toggle:hover { color: var(--text); }
+
+/* Site search trigger button (sits to the left of the theme toggle) */
+.search-toggle {
+  flex-shrink: 0;
+  background: none; border: none; cursor: pointer;
+  color: var(--text-subtle);
+  padding: 6px;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  transition: color 0.2s;
+  margin-left: auto;
+}
+.search-toggle:hover { color: var(--text); }
+.search-icon { width: 16px; height: 16px; }
+
+/* Search modal */
+.search-modal {
+  width: min(640px, 92vw);
+  max-height: 80vh;
+  margin: auto;
+  padding: 24px 20px 20px;
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.45);
+  position: relative;
+}
+.search-modal::backdrop {
+  background: rgba(8, 16, 28, 0.55);
+  backdrop-filter: blur(4px);
+}
+.search-modal-close {
+  position: absolute; top: 6px; right: 10px;
+  background: none; border: none; cursor: pointer;
+  color: var(--text-subtle); font-size: 1.5rem; line-height: 1;
+  padding: 4px 8px;
+}
+.search-modal-close:hover { color: var(--text); }
+/* Pagefind UI palette to match the site (CSS custom props it exposes) */
+.search-modal #search {
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--text);
+  --pagefind-ui-background: var(--bg);
+  --pagefind-ui-border: color-mix(in srgb, var(--text) 12%, transparent);
+  --pagefind-ui-tag: color-mix(in srgb, var(--text) 8%, transparent);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-font: inherit;
+  --pagefind-ui-scale: 0.9;
+}
 .theme-icon { width: 16px; height: 16px; }
 /* Show moon in dark, sun in light */
 html[data-theme="dark"] .theme-icon--moon,
@@ -782,28 +832,20 @@ ul.tldr li:last-child { margin-bottom: 0; }
 ul.tldr li strong { color: var(--text); }
 
 /* Safety net: the global `* { padding: 0 }` reset zeroes default <ul>/<ol>
-   padding, so a bare <ul> renders its bullet markers outside the content
-   box — in the surrounding gutter, left of where the headings and prose
-   start. Restore a working indent for any un-classed list inside .container
-   (chart pages) or .page (long-form reading pages) so markers sit inside
-   the text column. Bespoke list classes (.tldr, .tier-list, .question-list,
-   etc.) carry their own padding and are excluded by :not([class]). */
+   padding, so a bare <ul> inside a chart .container renders bullets in the
+   container's left padding (or outside it). Restore an indent for any
+   un-classed list inside .container so bullets stay inside the surface.
+   Bespoke list classes (.tldr, .tier-list, .question-list, etc.) override
+   this with their own padding rules. */
 .container > ul:not([class]),
 .container > ol:not([class]),
 .container > details > ul:not([class]),
-.container > details > ol:not([class]),
-.page > ul:not([class]),
-.page > ol:not([class]),
-.page > details > ul:not([class]),
-.page > details > ol:not([class]) {
+.container > details > ol:not([class]) {
   padding-left: 22px;
   list-style: disc;
-  margin-bottom: 14px;
 }
 .container > ol:not([class]),
-.container > details > ol:not([class]),
-.page > ol:not([class]),
-.page > details > ol:not([class]) { list-style: decimal; }
+.container > details > ol:not([class]) { list-style: decimal; }
 
 p {
   font-size: 1.0rem; color: var(--text-muted);
@@ -855,13 +897,8 @@ details.notes[open] > summary {
 }
 
 .source {
-  font-size: 0.75rem; color: var(--text-faint);
-  margin-top: 8px; margin-bottom: 14px;
+  font-size: 0.75rem; color: var(--text-faint); margin-top: 8px;
 }
-/* Source attribution following a bulleted/numbered list — tighten the gap to
-   the list above (lists currently sit at margin: 0 from the global reset) and
-   keep the breathing room before the next subsection heading. */
-ul + .source, ol + .source { margin-top: 4px; }
 
 .back {
   font-size: 0.75rem; font-weight: 500; color: var(--text-subtle);
