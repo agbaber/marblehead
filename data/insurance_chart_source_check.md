@@ -1,53 +1,58 @@
 ---
 layout: page
 body_class: doc-page
-title: "Health Insurance Chart Source Check"
-description: "Working note tracing two competing health-insurance time-series back to their primary sources."
+title: "Insurance Chart Source Check"
+description: "Source-trace of the 'Marblehead Annual Insurance Costs' chart published in the April 2026 opinion piece."
 ---
 
-# Health insurance chart: source check
+# Insurance chart: source check
 
-This note traces the source of two health-insurance time-series for Marblehead from FY2006 onward, where one line is from this site (`marbleheaddata.org`, labeled "MHDData") and the other was provided alongside it. The two lines disagree both in level and in shape, so the question is which one is answering "how much has Marblehead spent on health insurance" using a definition that holds across 22 years.
+The opinion piece "Why Marblehead Should Reject the Override," published in the Marblehead Independent in April 2026, includes a chart titled **"Marblehead Annual Insurance Costs."** The chart shows three things:
 
-This is a working note. It is not part of the published site analysis.
+1. A flat **red line at $18 million** running from FY2006 through FY2026, captioned "$18 million still in budget every year."
+2. A **blue line** labeled "Marblehead insurance costs" that starts at $18M in FY2006, drops sharply to about $11.8M by FY2007 and to about $9.4M by FY2009, then rises slowly back to about $13.6M by FY2026.
+3. A highlighted annotation reading **"$146 Million Saved and Spent &ndash; The difference between the Red line and the Blue line over these years amounts to a total huge savings."**
+
+This note traces what each line actually represents and tests the cumulative-savings calculation against Marblehead's audited financial reports. It is a working note, not part of the published site analysis.
 
 ## TL;DR
 
-- The orange line ("MHDData") plots Marblehead's annual **Group Insurance budget line**, pulled per-year from each year's ACFR budget schedule, the Finance Committee Reports of 2016, 2019, 2022, and 2025, and the FY27 Proposed Budget. Same definition every year.
-- The blue line is from the **Massachusetts DOR DLS Schedule A** export for Marblehead (DOR municipality code 168), specifically a slice of the "Fixed Costs" rollup &mdash; *not* the town's Group Insurance budget line on its own.
-- The blue line's FY24 value, **$12,152,022, exactly matches our FY24 ACFR Group Insurance line**. Its FY06 value of $18,043,023 is more than **double** Marblehead's audited FY06 Group Insurance of $7.96M. The FY06 number is bundling other categories that aren't health insurance premiums.
-- **Marblehead joined the Group Insurance Commission (GIC) effective July 1, 2012 (FY2013)** per the PEC-GIC MOA in `data/schools/contracts/public-employee-committee-health-agreement.txt`. The blue line's "FY07 cliff" predates that GIC join by **five years**, so it cannot be a GIC-transition effect. The actual GIC join effect on the audited Group Insurance line was a modest one-year dip from $11.74M (FY12) to $10.82M (FY13), about &minus;7.8%, recouped within two years &mdash; nothing like a $6M plunge.
-- So the chart's FY06 anchor and its FY07 cliff are both artifacts of how the underlying DLS column was constructed and reorganized over the period, not measurements of how Marblehead's health insurance has actually moved.
+- The blue line is from the **Massachusetts Department of Revenue's DLS Schedule A** export for Marblehead (DOR municipality code 168), specifically the "Fixed Costs minus pensions" rollup. It is **not** the town's group health insurance line on its own.
+- Marblehead's **audited group health insurance** for FY2006, taken from the FY06 Annual Comprehensive Financial Report, is **$7,964,196** &mdash; less than half the chart's $18M baseline. The audited line climbs smoothly from $7.96M in FY06 to $13.92M in FY24, with no FY07 cliff.
+- **Marblehead joined the Group Insurance Commission effective July 1, 2012 (FY2013)**, not FY2007. The blue line's $7M drop from FY06 to FY09 predates the actual GIC transition by five to seven years. The audited line shows the real GIC join effect: a one-time 7.8 percent dip from $11.74M to $10.82M, fully recouped by FY15.
+- The "$146 Million Saved and Spent" calculation is the cumulative difference between the flat $18M red line and the blue Schedule A line over 21 years. It depends on three premises that the audited record does not support: that $18M was Marblehead's FY06 health insurance cost, that the blue line's drop was a real budget reduction, and that the drop was caused by joining the GIC. None of those holds up against the ACFRs.
 
-## How we identified the blue line's source
+## What the blue line actually plots
 
-Three giveaways from the spreadsheet that backs the blue line:
+Three giveaways from a spreadsheet that backs the blue line, sent privately for context:
 
 1. **The header format** &mdash; `DOR Code | Municipality | year | year | ...` &mdash; is the standard export shape from the [DLS Schedule A General Fund report](https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=ScheduleA.GenFund_MAIN) on the Massachusetts DOR Municipal Databank. Marblehead is municipality code 168.
-2. **The 2025 column is zero.** Schedule A FY2025 has not been filed yet, which produces an empty cell on every Marblehead Schedule A export. The site's case-studies page already notes this elsewhere.
-3. **The shape &mdash; climb to FY06, plunge in FY07, slow rise after &mdash; matches the DOR Schedule A "Fixed Costs" column for Marblehead exactly.** Compare to `data/peer_schedule_a_expenditures.csv` in this repo:
+2. **The 2025 column is zero** in the source data. Schedule A FY25 has not been filed yet, which produces an empty cell on every Marblehead Schedule A export.
+3. **The shape &mdash; climb to FY06, plunge in FY07, slow rise after &mdash; matches the DOR Schedule A "Fixed Costs" column for Marblehead exactly.** Compare the chart's blue line to `data/peer_schedule_a_expenditures.csv` in this repo:
 
-| FY   | Schedule A Fixed Costs | Blue line     |
-|------|-----------------------:|--------------:|
-| 2005 |             17,473,815 |    15,208,944 |
-| **2006** |         **20,423,702** | **18,043,023** |
-| **2007** |         **14,404,346** | **11,798,901** |
-| 2008 |             14,051,616 |    11,558,645 |
-| 2009 |             12,746,799 |     9,425,951 |
-| 2024 |             18,519,860 |    12,152,022 |
-| 2025 |                      0 |             0 |
+| FY   | Schedule A Fixed Costs | Chart's blue line |
+|------|-----------------------:|------------------:|
+| 2005 |             17,473,815 |        15,208,944 |
+| **2006** |         **20,423,702** |    **18,043,023** |
+| **2007** |         **14,404,346** |    **11,798,901** |
+| 2008 |             14,051,616 |        11,558,645 |
+| 2009 |             12,746,799 |         9,425,951 |
+| 2024 |             18,519,860 |        12,152,022 |
+| 2025 |                      0 |                 0 |
 
-The blue line runs roughly $2M to $6M lower than total Schedule A Fixed Costs each year &mdash; consistent with the blue series being "Fixed Costs minus pension contributions," that is, the insurance + retiree-benefits + workers-comp + OPEB pay-go bundle within Fixed Costs, but not the standalone Group Health line.
+The blue line runs roughly $2M to $6M lower than total Schedule A Fixed Costs each year, consistent with the chart's blue series being "Fixed Costs minus pension contributions." That is, it bundles health insurance with retiree health pay-go, workers compensation, life insurance, and Medicare employer share, but excludes pensions. It is not the standalone group health insurance line.
+
+The blue line's FY24 value of $12,152,022 happens to equal Marblehead's audited FY24 Group Insurance line exactly. But its FY06 value of $18,043,023 is more than double the audited FY06 Group Insurance line. So the contents of that single column were narrower in FY24 than in FY06, which is why the chart appears to "save" so much money.
 
 ## The pre-GIC trajectory
 
-The most direct way to test whether the blue line is plotting Marblehead's health insurance is to mark the actual GIC join date and see what each line does across that boundary.
+The cleanest way to test whether the blue line is plotting health insurance is to mark Marblehead's actual GIC join date and see how each line behaves across that boundary.
 
-Marblehead joined the Group Insurance Commission effective **July 1, 2012 (start of FY2013)**, per the PEC-GIC MOA committed at `data/schools/contracts/public-employee-committee-health-agreement.txt`:
+Marblehead joined the Group Insurance Commission effective **July 1, 2012 (start of FY2013)**, per the PEC-GIC Memorandum of Agreement at `data/schools/contracts/public-employee-committee-health-agreement.txt`:
 
 > WHEREAS, the Board of Selectmen of the Town of Marblehead voted on January 31, 2012 to accept M.G.L. c. 32B, &sect;19 ("Section 19"), for the purpose of transferring the Town's health insurance subscribers to the Commonwealth of Massachusetts Group Insurance Commission ...
 
-The audited pre-GIC Group Insurance trajectory, from each year's ACFR budget schedule (`data/group_insurance_FY06-27.csv`):
+The audited Group Insurance trajectory across that boundary, taken from each year's ACFR budget schedule (`data/group_insurance_FY06-27.csv`):
 
 | FY   | Group Insurance | Status              |
 |------|---------------:|---------------------|
@@ -66,27 +71,38 @@ Three things to note:
 
 1. The audited line climbs smoothly through the pre-GIC period, $7.96M to $11.74M. There is no FY07 cliff in the actual budget data.
 2. The actual GIC join effect is the FY12 to FY13 dip: about &minus;$0.92M, or &minus;7.8%, fully recouped within two years.
-3. The blue line's "$18M to $11.8M" plunge happens at FY07, **five years before Marblehead joined the GIC**. Whatever drove the blue line's drop, it was not the GIC transition.
+3. The chart's "$18M to $9M" plunge spans FY06 to FY09, **three to seven years before Marblehead joined the GIC**. Whatever drove the chart's drop, it was not the GIC transition.
 
-This pre-GIC test is the cleanest evidence that the two lines are plotting different things. Across a real, dated municipal-finance event &mdash; the GIC transition &mdash; the audited Group Insurance line moves the way you would expect (modest savings, recouped quickly), while the blue line moves nowhere in particular.
+## The "$146 Million Saved and Spent" calculation
 
-## Why the FY06 column on the blue line is roughly $10M higher than audited Group Insurance
+The annotation on the chart claims that the cumulative difference between the flat $18M red line and the blue line "amounts to a total huge savings." The math approximately works out: 21 years (FY06 through FY26) at a flat $18M is $378M; the blue line averages roughly $11M per year over that same window, totaling about $231M; the difference is about $147M, close to the chart's "$146 million" figure.
 
-The blue line's FY24 number ($12,152,022) is exactly Marblehead's audited Group Insurance for FY24. The FY06 number ($18,043,023) is more than double the audited Group Insurance for FY06 ($7,964,196 per the FY06 ACFR). So the *contents of that single column changed* between FY06 and FY24. Two well-documented factors explain most of the change:
+That calculation depends on three premises. Each fails against the audited record:
 
-1. **GASB Statement 45 (Other Postemployment Benefits)** required municipalities to begin recognizing retiree health (OPEB) as a distinct accounting category. The effective dates were phased by entity size, with the same phase as GASB Statement 34: Phase 1 (annual revenues over $100M) for fiscal years beginning after December 15, 2006 (FY2008), Phase 2 (revenues $10M&ndash;$100M) for FYs beginning after December 15, 2007 (FY2009), and Phase 3 (under $10M) for FYs beginning after December 15, 2008 (FY2010). Marblehead, with FY06 total general fund expenditures of $63.9M, was a Phase 2 entity, so GASB 45 took full effect for Marblehead in **FY2009**. Sources: [GASB Statement 45 Summary](https://gasb.org/page/pronouncement?pageId=/standards-and-guidance/pronouncements/summary-statement-no-45.html) (primary), and [GASB Statement 45 and Its Impact on Your Financial Statements](https://www.nhmunicipal.org/town-city-article/gasb-statement-45-and-its-impact-your-financial-statements) from the New Hampshire Municipal Association (more accessible explainer). Before GASB 45 took effect for Marblehead, retiree health pay-go was generally reported alongside active-employee Group Insurance under "Fixed Costs." After it took effect, retiree health moved into separate OPEB reporting.
-2. **MA DOR DLS Schedule A taxonomy revisions.** DLS has updated the Schedule A account structure and category definitions multiple times since UMAS was first adopted under [G.L. c. 44, &sect; 38](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section38). The current Schedule A guidelines and reference material from the DLS Bureau of Accounts is published at [mass.gov/doc/schedule-a-guidelines-and-reference-material](https://www.mass.gov/doc/schedule-a-guidelines-and-reference-material/download) (PDF). Historical revisions to the line-item structure are not all individually documented online. The site's own `data/case_studies.md` page notes that the pre-FY2010 expenditure spikes visible across many Massachusetts municipalities likely reflect these reclassifications rather than real operating differences.
+1. **That $18M was Marblehead's FY06 health insurance cost.** The audited group health insurance line for FY06 is $7,964,196 per the FY06 ACFR. The $18M figure comes from the Schedule A Fixed Costs minus pensions rollup, which bundles other categories.
+2. **That the FY06-to-FY09 drop was a real budget reduction.** It does not appear in the audited data. The audited Group Insurance line *grows* from $7.96M in FY06 to $10.72M in FY09. The drop in the blue line reflects items being moved out of the Schedule A "Fixed Costs" bundle, primarily as Massachusetts municipalities phased in GASB Statement 45 reporting for retiree health benefits (effective FY09 for Marblehead, a Phase 2 entity by revenue size).
+3. **That the drop was caused by joining the GIC.** The GIC transition was effective July 1, 2012, five years after the chart's drop begins. The actual audited effect of the GIC transition was a one-time 7.8 percent dip, recouped within two years, on a base of roughly $11.7M. Replacing that with a flat $18M-versus-actual difference inflates the apparent savings by an order of magnitude.
 
-The combination of (1) and (2) is enough to explain why the FY06 column on the blue line bundles items that the FY24 column no longer bundles. The exact composition of the FY06 spike isn't recoverable from the export format alone, but two facts are recoverable:
+If you redo the calculation using the audited group insurance line and a hypothetical "FY06 baseline held flat" of $7.96M:
 
-- Marblehead's FY06 ACFR shows audited Group Insurance of **$7.96M**, not $18M. ([source: `data/group_insurance_FY06-27.csv`, citation "FY06 ACFR budget schedule"])
-- Marblehead's Schedule A FY06 Fixed Costs total is **$20.4M**, of which only $7.96M was Group Insurance. The other $12.5M was a mix of pension contributions, retiree health pay-go, workers comp, life insurance, Medicare employer share, and other fixed-cost items. By FY24, the same Schedule A line for Group Insurance is reported separately at $12.15M and matches the ACFR exactly.
+- 21 years &times; $7.96M flat = $167M hypothetical
+- Sum of audited group insurance, FY06 through FY27 budgeted = roughly $245M
+- The audited line is **$78M *higher* than a flat FY06 baseline**, not $146M lower.
 
-By starting the chart at FY2006, the blue line uses a pre-GASB-45 baseline that bundles roughly $10M of non-health-insurance categories into the same column. That makes the FY06-to-FY24 trajectory look nearly flat or even declining ($18M to $12M). The trajectory is an artifact of changing column contents, not a measurement of how Marblehead's health insurance cost has actually moved over those 18 years.
+The chart is built on a baseline that overstates FY06 group insurance by more than 2x and a "savings" event that did not happen on the date or scale shown. The "$146M saved" claim does not survive a comparison to the town's own audits.
 
-## What the orange line actually shows
+## Two well-documented reasons the FY06 column on Schedule A is broader than today's
 
-`data/group_insurance_FY06-27.csv` in this repo. Pulled per-year from primary documents:
+Two factors explain why the FY06 entry on the Schedule A Fixed Costs minus pensions line is roughly $10M higher than today's audited group health insurance:
+
+1. **GASB Statement 45 (Other Postemployment Benefits)** required municipalities to begin recognizing retiree health (OPEB) as a distinct accounting category. Effective dates were phased by entity size: Phase 1 (annual revenues over $100M) for fiscal years beginning after December 15, 2006 (FY2008); Phase 2 (revenues $10M to $100M) for FYs beginning after December 15, 2007 (FY2009); Phase 3 (under $10M) for FYs beginning after December 15, 2008 (FY2010). Marblehead, with FY06 total general fund expenditures of $63.9M, was a Phase 2 entity, so GASB 45 took full effect for Marblehead in **FY2009**. Sources: [GASB Statement 45 Summary](https://gasb.org/page/pronouncement?pageId=/standards-and-guidance/pronouncements/summary-statement-no-45.html) (primary), and [GASB Statement 45 and Its Impact on Your Financial Statements](https://www.nhmunicipal.org/town-city-article/gasb-statement-45-and-its-impact-your-financial-statements) (more accessible explainer). Before GASB 45 took effect, retiree health pay-go was generally reported alongside active-employee Group Insurance under "Fixed Costs." After it took effect, retiree health moved into separate OPEB reporting.
+2. **MA DOR DLS Schedule A taxonomy revisions.** DLS has updated the Schedule A account structure and category definitions multiple times since UMAS was first adopted under [G.L. c. 44, &sect; 38](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section38). The current Schedule A guidelines and reference material from the DLS Bureau of Accounts is published at [mass.gov/doc/schedule-a-guidelines-and-reference-material](https://www.mass.gov/doc/schedule-a-guidelines-and-reference-material/download) (PDF). Historical revisions to the line-item structure are not all individually documented online.
+
+The combination of (1) and (2) explains why a single Schedule A column running from FY06 through FY24 does not contain the same items in the same proportions across the entire period. In FY06 it bundles health insurance with retiree-health pay-go and other employee benefits; by FY24, retiree health is reported separately under OPEB, and the column is essentially the standalone Group Insurance line.
+
+## What the audited record shows
+
+The orange-labeled "MHDData" series referenced in some private versions of the chart comes from `data/group_insurance_FY06-27.csv`, pulled per-year from primary documents:
 
 - FY06 to FY13 from each year's ACFR budget schedule
 - FY14 to FY16 from the 2016 Finance Committee Report
@@ -95,11 +111,6 @@ By starting the chart at FY2006, the blue line uses a pre-GASB-45 baseline that 
 - FY24 to FY25 from the 2025 Finance Committee Report
 - FY26 to FY27 from the FY27 Proposed Budget
 
-Same line item every year &mdash; the Group Insurance appropriation in the General Fund budget. From FY07's $8.5M to FY27's budgeted $16.75M, the line roughly doubles over 20 years, which is consistent with the published premium increases and active-employee headcount across that period.
+Same line item every year &mdash; the Group Insurance appropriation in the General Fund budget. From $7.96M in FY06 to $16.75M budgeted for FY27, roughly a 2.1&times; increase or about 3.7 percent per year compounded.
 
-## What question does each line answer?
-
-- **Orange (this site)** answers: *How much has Marblehead's Group Insurance appropriation &mdash; the line that funds active-employee and retiree health premiums &mdash; grown each year?* One definition, every year, traceable to the audited or proposed budget document for that fiscal year. Goes from $7.96M in FY06 to $16.75M budgeted for FY27 (about a 2.1&times; increase, or ~3.7% per year compounded).
-- **Blue (Schedule A)** answers: *How much did Marblehead report under the DLS Schedule A "Fixed Costs minus pensions" rollup each year?* That number is real and the report is a primary source, but the contents of that rollup have changed over time as Massachusetts municipalities phased in GASB Statement 45 OPEB reporting and as DLS revised the Schedule A account taxonomy. So FY06 and FY24 on this line aren't measuring the same thing &mdash; FY06 bundles health insurance with retiree health pay-go and other employee benefits; FY24 is essentially the standalone Group Insurance line.
-
-Both numbers are real. They tell different stories because they are different things. Comparing the FY06 and FY24 endpoints on the blue line is comparing a broader bundle in 2006 to a narrower bundle in 2024, which is what produces the apparent flat-to-declining trajectory. And the FY07 cliff on the blue line cannot be a "GIC effect" &mdash; Marblehead joined the GIC five years later, in FY2013, and the actual GIC effect on the audited Group Insurance line was less than $1M.
+That is the most defensible answer to the question "how much has Marblehead's group health insurance bill grown over time?" because it uses one definition, applied consistently, across every year, traceable to the town's own annual financial reports.
