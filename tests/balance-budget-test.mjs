@@ -119,7 +119,7 @@ async function run() {
     await page.click('.bb-reset');
     await page.waitForTimeout(150);
     const checkedAfterReset = await page.$$eval('.bb-item-row input[type="checkbox"]:checked', els => els.length);
-    checkedAfterReset === rows.length ? ok('Reset re-checks all items (town\'s plan)') : fail('Reset count', `${checkedAfterReset}/${rows.length}`);
+    checkedAfterReset === expectedChecked ? ok(`Reset returns to town's plan (${checkedAfterReset}/${rows.length} checked; creative levers off)`) : fail('Reset count', `${checkedAfterReset}/${rows.length}, expected ${expectedChecked}`);
     const planReset = await page.textContent('[data-bind="cuts"]');
     planReset && planReset.includes('4,889,079') ? ok('Reset returns plan to $4,889,079') : fail('Reset plan', `got "${planReset}"`);
     const statusReset = await page.textContent('[data-bind="status"]');
