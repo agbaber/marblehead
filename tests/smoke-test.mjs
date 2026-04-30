@@ -184,9 +184,9 @@ async function testMarbleheadCorpLoads(page) {
     : fail('Marblehead Corp Risk Factors', `expected 10, got ${riskFactors.length}`);
 
   const notes = await page.$$('.corp-notes ol li');
-  notes.length === 31
-    ? ok('Notes section renders 31 footnotes')
-    : fail('Marblehead Corp Notes', `expected 31, got ${notes.length}`);
+  notes.length === 32
+    ? ok('Notes section renders 32 footnotes')
+    : fail('Marblehead Corp Notes', `expected 32, got ${notes.length}`);
 }
 
 async function testStatsStrip(page) {
