@@ -15,6 +15,79 @@ The opinion piece "Why Marblehead Should Reject the Override," published in the 
 
 This note traces what each line actually represents and tests the cumulative-savings calculation against Marblehead's audited financial reports. It is a working note, not part of the published site analysis.
 
+## Side by side
+
+Plotted on the same axis: the chart's blue line (Massachusetts DOR Schedule A "Fixed Costs minus pensions" rollup, FY06 through FY24) against Marblehead's audited group insurance budget line (each year's ACFR budget schedule plus subsequent FinCom Reports and the FY27 Proposed Budget).
+
+<div class="chart-wrapper" data-chart-tooltip>
+  <script type="application/json" class="chart-tooltip-data">
+  {
+    "xLabels": ["FY06","FY07","FY08","FY09","FY10","FY11","FY12","FY13","FY14","FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25","FY26","FY27"],
+    "xPositions": [70,98,125,153,181,209,236,264,292,320,347,375,403,430,458,486,514,541,569,597,625,652],
+    "series": [
+      {
+        "name": "Schedule A: Fixed Costs minus pensions (chart's blue line)",
+        "className": "s-cost",
+        "valuePrefix": "$",
+        "valueSuffix": "M",
+        "valueDecimals": 2,
+        "values": [18.04,11.80,11.56,9.43,9.68,9.87,10.44,9.22,9.52,9.28,9.74,9.94,10.39,10.45,10.68,11.24,11.44,11.68,12.15,null,null,null]
+      },
+      {
+        "name": "Audited group insurance budget (ACFR / FinCom)",
+        "className": "s-neutral",
+        "valuePrefix": "$",
+        "valueSuffix": "M",
+        "valueDecimals": 2,
+        "values": [7.96,8.50,9.33,10.72,10.06,10.52,11.74,10.82,11.58,12.11,12.66,13.06,13.12,13.48,null,13.81,14.48,15.24,13.92,13.70,15.10,16.75]
+      }
+    ]
+  }
+  </script>
+  <svg class="chart" viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart comparing two health insurance time-series for Marblehead, FY2006 to FY2027. The Schedule A 'Fixed Costs minus pensions' series starts at 18 million dollars in FY06, drops to 11.8 million by FY07 and to 9.4 million by FY09, and rises slowly to 12.2 million by FY24. The audited group insurance series starts at 7.96 million in FY06 and climbs steadily to 16.75 million budgeted for FY27. The two lines cross around FY11 to FY12 and diverge in opposite directions thereafter.">
+
+    <line class="axis-base" x1="70" y1="320" x2="680" y2="320"/>
+
+    <line class="tick" x1="66" y1="320" x2="70" y2="320"/>
+    <text class="tick-label" x="63" y="324" text-anchor="end">$0</text>
+    <line class="tick" x1="66" y1="250" x2="70" y2="250"/>
+    <text class="tick-label" x="63" y="254" text-anchor="end">$5M</text>
+    <line class="tick" x1="66" y1="180" x2="70" y2="180"/>
+    <text class="tick-label" x="63" y="184" text-anchor="end">$10M</text>
+    <line class="tick" x1="66" y1="110" x2="70" y2="110"/>
+    <text class="tick-label" x="63" y="114" text-anchor="end">$15M</text>
+    <line class="tick" x1="66" y1="40"  x2="70" y2="40"/>
+    <text class="tick-label" x="63" y="44"  text-anchor="end">$20M</text>
+
+    <text class="tick-label tick-label--major" x="70"  y="342" text-anchor="middle">FY06</text>
+    <text class="tick-label tick-label--minor" x="153" y="342" text-anchor="middle">FY09</text>
+    <text class="tick-label tick-label--major" x="236" y="342" text-anchor="middle">FY12</text>
+    <text class="tick-label tick-label--minor" x="320" y="342" text-anchor="middle">FY15</text>
+    <text class="tick-label tick-label--minor" x="403" y="342" text-anchor="middle">FY18</text>
+    <text class="tick-label tick-label--minor" x="486" y="342" text-anchor="middle">FY21</text>
+    <text class="tick-label tick-label--major" x="569" y="342" text-anchor="middle">FY24</text>
+    <text class="tick-label tick-label--major" x="652" y="342" text-anchor="middle">FY27</text>
+
+    <line class="annotation-line" x1="264" y1="40" x2="264" y2="320"/>
+    <text class="annotation annotation--hide-sm" x="268" y="48">Joined GIC (state plan) FY13</text>
+
+    <polyline class="data-line s-cost"
+              points="70,67 98,155 125,158 153,188 181,184 209,182 236,174 264,191 292,187 320,190 347,184 375,181 403,175 430,174 458,171 486,163 514,160 541,157 569,150"/>
+    <text class="end-label s-cost" x="575" y="148">Schedule A FCMP</text>
+
+    <polyline class="data-line s-neutral"
+              points="70,209 98,201 125,189 153,170 181,179 209,173 236,156 264,169 292,158 320,151 347,143 375,137 403,136 430,131"/>
+    <polyline class="data-line s-neutral"
+              points="486,127 514,117 541,107 569,125 597,128 625,109 652,86"/>
+    <text class="end-label s-neutral" x="658" y="84">Audited group insurance</text>
+
+  </svg>
+</div>
+
+<p class="caption">Both lines are sourced. The blue series is what the published chart plots; the audited series is from each year's ACFR budget schedule, the FinCom Reports of 2016, 2019, 2022, 2025, and the FY27 Proposed Budget. The audited line has a gap at FY20 because the data is not in the FinCom Reports for that period; the FY20 ACFR Budget and Actual schedule shows $11.98M actual expended for context. The Schedule A series ends at FY24 because Schedule A has not been filed for FY25 yet. Marblehead joined the state Group Insurance Commission effective July 1, 2012, marked at FY13.</p>
+
+The two lines start $10M apart in FY06, cross around FY11, and end with the audited line $4.6M higher than the Schedule A line by FY24. The chart's "$146M saved" annotation describes the area between a flat $18M baseline and the blue line. None of that area is recoverable from the audited group insurance series, which has no FY07 cliff and no $18M starting point.
+
 ## TL;DR
 
 - The blue line is from the **Massachusetts Department of Revenue's DLS Schedule A** export for Marblehead (DOR municipality code 168), specifically the "Fixed Costs minus pensions" rollup. It is **not** the town's group health insurance line on its own.
