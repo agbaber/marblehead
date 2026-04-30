@@ -1,20 +1,24 @@
 /*
  * Balance the Budget tool runtime (balance-the-budget.html).
  *
- * Loads data/balance_budget_items.json and
- * data/balance_budget_consequences.json, renders a per-category
- * checklist of discrete and scalar levers, and exposes window.__bbState
- * for the status bar, consequences engine, and success state.
+ * Loads items, consequences, and impacts. Renders a per-category
+ * checklist with discrete cut/transfer items and scalar lever inputs
+ * (insurance share, one-time funds). Schools is presented as fixed
+ * context in the HTML, not a user-editable scalar.
  *
- * Tier 0 ("No override") is the default: target is the full FY27
- * override-equivalent gap ($4.30M), and the user closes it via cuts,
- * deferrals, share shifts, or one-time funds.
+ * Pedagogical model: the user starts at "No override" with every
+ * department cut and skipped transfer pre-checked - that is the
+ * town's no-override plan. Status reads "Balanced." Clicking a tier
+ * does not change which items are checked; it changes the target
+ * (cuts the user must make). The plan now exceeds target by the
+ * override's first-year gross fill. The user un-checks items totaling
+ * that fill to land back at Balanced - that is the user choosing
+ * which cuts the override should restore.
  *
- * Markup contract: section.bb-checklist is populated with
- * section.bb-category > div.bb-item-row for each item. section.bb-tier-
- * selector carries four buttons with data-tier="0|1|2|3".
- *
- * Pages without section.bb-checklist are early-returned.
+ * Targets and override fills are computed from items data:
+ *   total_gross  = sum of tier_3 amounts across all discrete items
+ *   fill[tier]   = sum of tier_<tier> amounts (0 for No override)
+ *   target[tier] = total_gross - fill[tier]
  */
 
 (function () {
@@ -23,7 +27,6 @@
   const checklist = document.querySelector('.bb-checklist');
   if (!checklist) return;
 
-  const TIER_TARGETS = { 0: 4296718, 1: 1269564, 2: 2805236, 3: 4296718 };
   const DEFAULT_TIER = 0;
 
   const state = {
@@ -35,6 +38,8 @@
   let itemsData = null;
   let consequencesData = null;
   let impactsData = null;
+  let TOTAL_GROSS = 0;
+  const TIER_FILLS = { 0: 0, 1: 0, 2: 0, 3: 0 };
 
   function formatUSD(n) {
     if (n === 0) return '$0';
@@ -45,6 +50,10 @@
 
   function tierKey() {
     return state.tier === 0 ? 'tier_3' : `tier_${state.tier}`;
+  }
+
+  function targetForTier(tier) {
+    return TOTAL_GROSS - TIER_FILLS[tier];
   }
 
   function scalarDefault(item) {
@@ -58,10 +67,31 @@
     return v * per;
   }
 
-  function initScalarDefaults() {
+  function computeTotals() {
+    TOTAL_GROSS = 0;
+    TIER_FILLS[0] = 0;
+    TIER_FILLS[1] = 0;
+    TIER_FILLS[2] = 0;
+    TIER_FILLS[3] = 0;
     if (!itemsData) return;
     for (const item of itemsData) {
-      if (item.type === 'scalar') {
+      if (item.type !== 'discrete' || !item.amounts) continue;
+      TIER_FILLS[1] += item.amounts.tier_1 || 0;
+      TIER_FILLS[2] += item.amounts.tier_2 || 0;
+      TIER_FILLS[3] += item.amounts.tier_3 || 0;
+    }
+    TOTAL_GROSS = TIER_FILLS[3];
+  }
+
+  function initDefaults() {
+    if (!itemsData) return;
+    state.checkedIds = new Set();
+    state.scalars = {};
+    for (const item of itemsData) {
+      if (item.type === 'discrete') {
+        const amount = (item.amounts && (item.amounts.tier_3 || 0)) || 0;
+        if (amount > 0) state.checkedIds.add(item.id);
+      } else if (item.type === 'scalar') {
         state.scalars[item.id] = scalarDefault(item);
       }
     }
@@ -249,35 +279,17 @@
     }
   }
 
-  function isPlanDirty() {
-    if (state.checkedIds.size > 0) return true;
-    if (!itemsData) return false;
-    for (const item of itemsData) {
-      if (item.type === 'scalar' && state.scalars[item.id] !== scalarDefault(item)) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  function resetPlan() {
-    state.checkedIds.clear();
-    initScalarDefaults();
-  }
-
   function initTierSelector() {
     const btns = document.querySelectorAll('.bb-tier-btn');
     btns.forEach(btn => {
       btn.addEventListener('click', () => {
         const newTier = Number(btn.dataset.tier);
         if (newTier === state.tier) return;
-
-        if (isPlanDirty()) {
-          const ok = window.confirm('Switching scenario will reset your plan. Continue?');
-          if (!ok) return;
-        }
         state.tier = newTier;
-        resetPlan();
+        // Tier change does not reset the user's plan - it only changes
+        // the target. That is the whole pedagogical move: at Tier 1
+        // the user keeps the town's plan checked and sees "over by
+        // $1.68M" until they uncheck the items the override would fund.
         btns.forEach(b => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
         renderChecklist();
         document.dispatchEvent(new CustomEvent('bb:statechange'));
@@ -289,7 +301,7 @@
     const reset = document.querySelector('.bb-reset');
     if (!reset) return;
     reset.addEventListener('click', () => {
-      resetPlan();
+      initDefaults();
       renderChecklist();
       document.dispatchEvent(new CustomEvent('bb:statechange'));
     });
@@ -297,7 +309,7 @@
 
   window.__bbState = {
     getTier: () => state.tier,
-    getTarget: () => TIER_TARGETS[state.tier],
+    getTarget: () => targetForTier(state.tier),
     getCuts: () => {
       let total = 0;
       if (!itemsData) return 0;
@@ -320,19 +332,49 @@
   const statusBar = document.querySelector('.bb-status-bar');
   const elTarget = document.querySelector('[data-bind="target"]');
   const elCuts = document.querySelector('[data-bind="cuts"]');
-  const elGap = document.querySelector('[data-bind="gap"]');
+  const elStatus = document.querySelector('[data-bind="status"]');
+  const elMessage = document.querySelector('[data-bind="status-message"]');
+
+  function statusMessage(target, plan, gap) {
+    if (state.tier === 0 && plan === target && Math.abs(gap) < 1) {
+      return "This matches the town's no-override plan exactly.";
+    }
+    if (Math.abs(gap) < 1) {
+      const tierLabel = state.tier === 0 ? 'No override' : `Tier ${state.tier}`;
+      return `Balanced for ${tierLabel}: your plan plus the override revenue closes the FY27 department gap.`;
+    }
+    if (gap < 0) {
+      // plan > target: user has over-cut; override revenue available
+      const overBy = -gap;
+      const tierLabel = state.tier === 0 ? '' : ` Tier ${state.tier}`;
+      return `Plan exceeds target by ${formatUSD(overBy)}.${state.tier === 0 ? '' : ` That is roughly the override's first-year gross fill — uncheck items totaling ${formatUSD(overBy)} to use it.`}`;
+    }
+    // plan < target: short
+    return `Plan falls short by ${formatUSD(gap)}. Add cuts (re-check items) or savings (insurance share, one-time funds) to close the gap.`;
+  }
 
   function updateStatusBar() {
     if (!statusBar) return;
-    const target = TIER_TARGETS[state.tier];
+    const target = targetForTier(state.tier);
     const cuts = window.__bbState.getCuts();
     const gap = target - cuts;
 
     if (elTarget) elTarget.textContent = formatUSD(target);
     if (elCuts) elCuts.textContent = formatUSD(cuts);
-    if (elGap) elGap.textContent = gap >= 0 ? formatUSD(gap) : formatUSD(-gap) + ' over';
+    if (elStatus) {
+      let label;
+      if (Math.abs(gap) < 1) label = 'Balanced';
+      else if (gap < 0) label = 'Over by ' + formatUSD(-gap);
+      else label = 'Short by ' + formatUSD(gap);
+      elStatus.textContent = label;
+      elStatus.classList.toggle('is-balanced', Math.abs(gap) < 1);
+      elStatus.classList.toggle('is-over', gap < -0.5);
+      elStatus.classList.toggle('is-short', gap > 0.5);
+    }
 
-    statusBar.classList.toggle('bb-balanced', gap <= 0);
+    if (elMessage) elMessage.textContent = statusMessage(target, cuts, gap);
+
+    statusBar.classList.toggle('bb-balanced', Math.abs(gap) < 1);
   }
 
   document.addEventListener('bb:statechange', updateStatusBar);
@@ -374,7 +416,7 @@
     if (triggered.length === 0) {
       const empty = document.createElement('p');
       empty.className = 'bb-consequence-empty';
-      empty.textContent = 'No mandate, contract, or rating-agency consequences triggered by the current plan.';
+      empty.textContent = 'No legal, contract, or rating-agency triggers in your current plan.';
       consequencesList.appendChild(empty);
       return;
     }
@@ -421,60 +463,9 @@
 
   document.addEventListener('bb:statechange', renderConsequences);
 
-  // ── Success state ──
-  const successSection = document.querySelector('.bb-success');
-
-  function renderSuccess() {
-    if (!successSection) return;
-    const target = TIER_TARGETS[state.tier];
-    const cuts = window.__bbState.getCuts();
-    if (cuts < target) {
-      successSection.hidden = true;
-      successSection.innerHTML = '';
-      return;
-    }
-
-    const itemsByCategory = groupByCategory(itemsData);
-    const categoryRows = [];
-    for (const [category, items] of itemsByCategory) {
-      let categoryTotal = 0;
-      for (const item of items) {
-        if (item.type === 'discrete' && state.checkedIds.has(item.id)) {
-          categoryTotal += item.amounts[tierKey()] || 0;
-        } else if (item.type === 'scalar') {
-          categoryTotal += scalarSavings(item);
-        }
-      }
-      if (categoryTotal > 0) {
-        categoryRows.push({ category, total: categoryTotal });
-      }
-    }
-
-    const rowsHtml = categoryRows.map(r =>
-      `<tr><th scope="row">${r.category}</th><td>${formatUSD(r.total)}</td></tr>`
-    ).join('');
-
-    const tierLabel = state.tier === 0 ? 'no-override' : `Tier ${state.tier}`;
-    successSection.hidden = false;
-    successSection.innerHTML = `
-      <h2>Your plan closes the ${tierLabel} FY27 gap.</h2>
-      <p class="bb-success-summary">Plan total: <strong>${formatUSD(cuts)}</strong> against a ${formatUSD(target)} target.</p>
-      <div class="bb-success-comparison">
-        <table>
-          <thead>
-            <tr><th scope="col">Lever category</th><th scope="col">Your plan</th></tr>
-          </thead>
-          <tbody>${rowsHtml}</tbody>
-        </table>
-      </div>
-      <p class="bb-success-note">The consequences panel above lists the legal, regulatory, contractual, and rating-agency implications of every lever in this plan. Closing the gap on paper is not the same as closing it without trade-offs.</p>
-    `;
-  }
-
-  document.addEventListener('bb:statechange', renderSuccess);
-
   loadData().then(() => {
-    initScalarDefaults();
+    computeTotals();
+    initDefaults();
     renderChecklist();
     initTierSelector();
     initResetButton();

@@ -2,78 +2,85 @@
 title: "Balance the FY27 budget"
 scripts: [citations, deep-dive, balance-budget]
 og_title: "Balance the FY27 budget without the override"
-og_description: "Build your own FY27 plan: pick cuts, shift insurance share, draw on reserves, or pass an override tier. See which state-law and rating-agency consequences your plan triggers, and how it compares to the town's no-override cuts."
+og_description: "Start with the town's actual no-override plan, then see what each override tier would let you restore. Insurance share and one-time-funds levers included; every cut shows its operational service impact."
 og_url: https://marbleheaddata.org/balance-the-budget.html
 ---
 <h1>Balance the FY27 budget</h1>
 
 <section class="bb-preamble">
-  <p>Pick a starting point: <strong>no override</strong> (close the full FY27 gap with cuts, lever changes, or one-time funds), or <strong>Tier 1, 2, or 3</strong> (the override fills part of the gap and you fill the rest). The target updates to show the dollars you still need to find.</p>
+  <p>Marblehead's FY27 budget proposal cuts $1.5M from schools and $4.89M from departments and transfers. An override (Tier 1, 2, or 3), if voters approve, raises levy capacity to fund part or all of the department side. Schools cuts and restorations are not affected by override outcome in FY27 (tier restorations for schools begin FY28).</p>
 
-  <p>Levers below include service cuts, deferred transfers, an employee/town health-insurance share shift, and one-time funds. Each lever lists its math and any state-law, rating-agency, or contract consequences it triggers.</p>
+  <p>Every department cut and skipped transfer below starts <strong>pre-checked</strong> &mdash; that's the town's no-override plan. Click a tier to see how much override revenue would let you restore. Uncheck items to use that revenue, or use the insurance and one-time-funds levers to test alternatives.</p>
 </section>
 
-<section class="bb-tier-selector" aria-label="Select starting scenario">
+<aside class="bb-fixed-note" aria-label="Schools fixed context">
+  <h2>Schools (fixed for FY27)</h2>
+  <p><strong>$1.5M cut from schools at every tier this year.</strong> The override does not restore school funding until FY28; the FY27 schools line is $47.6M either way. DESE's FY27 Net School Spending floor for Marblehead is $34.4M, so the cut is well above the legal floor. This page focuses on the department side, where the override does affect FY27.</p>
+</aside>
+
+<section class="bb-tier-selector" aria-label="Select scenario">
   <button type="button" class="bb-tier-btn" data-tier="0" aria-pressed="true">
     <span class="bb-tier-label">No override</span>
-    <span class="bb-tier-target">FY27 gap: $4.30M</span>
-    <span class="bb-tier-context">close the full FY27 gap yourself</span>
+    <span class="bb-tier-target">Cuts to make: $4.89M</span>
+    <span class="bb-tier-context">No override revenue this year</span>
   </button>
   <button type="button" class="bb-tier-btn" data-tier="1" aria-pressed="false">
     <span class="bb-tier-label">Tier 1</span>
-    <span class="bb-tier-target">FY27 gap: $1.27M</span>
-    <span class="bb-tier-context">$9M total over 3 years</span>
+    <span class="bb-tier-target">Cuts to make: $3.21M</span>
+    <span class="bb-tier-context">Override pays $1.68M ($9M total over 3 years)</span>
   </button>
   <button type="button" class="bb-tier-btn" data-tier="2" aria-pressed="false">
     <span class="bb-tier-label">Tier 2</span>
-    <span class="bb-tier-target">FY27 gap: $2.81M</span>
-    <span class="bb-tier-context">$12M total over 3 years</span>
+    <span class="bb-tier-target">Cuts to make: $1.49M</span>
+    <span class="bb-tier-context">Override pays $3.40M ($12M total over 3 years)</span>
   </button>
   <button type="button" class="bb-tier-btn" data-tier="3" aria-pressed="false">
     <span class="bb-tier-label">Tier 3</span>
-    <span class="bb-tier-target">FY27 gap: $4.30M</span>
-    <span class="bb-tier-context">$15M total over 3 years</span>
+    <span class="bb-tier-target">Cuts to make: $0</span>
+    <span class="bb-tier-context">Override pays $4.89M ($15M total over 3 years)</span>
   </button>
 </section>
 
 <section class="bb-status-bar" aria-live="polite">
   <div class="bb-status-target">
-    <span class="bb-status-label">Target</span>
-    <span class="bb-status-value" data-bind="target">$4,296,718</span>
+    <span class="bb-status-label">Target (cuts to make)</span>
+    <span class="bb-status-value" data-bind="target">$4,889,079</span>
   </div>
   <div class="bb-status-cuts">
     <span class="bb-status-label">Your plan</span>
-    <span class="bb-status-value" data-bind="cuts">$0</span>
+    <span class="bb-status-value" data-bind="cuts">$4,889,079</span>
   </div>
   <div class="bb-status-gap">
-    <span class="bb-status-label">Gap remaining</span>
-    <span class="bb-status-value" data-bind="gap">$4,296,718</span>
+    <span class="bb-status-label">Status</span>
+    <span class="bb-status-value bb-status-badge" data-bind="status">Balanced</span>
   </div>
 </section>
 
+<p class="bb-status-message" data-bind="status-message">This matches the town's no-override plan exactly.</p>
+
 <div class="bb-layout">
-  <section class="bb-checklist" aria-label="Levers checklist">
+  <section class="bb-checklist" aria-label="Cuts and levers checklist">
     <!-- Populated by balance-budget.js -->
   </section>
 
-  <aside class="bb-consequences" aria-label="Consequences panel">
+  <aside class="bb-consequences" aria-label="Legal, contract, or rating consequences">
     <h2 class="bb-consequences-title">
-      <span data-bind="consequence-count">0</span> consequences triggered
+      Legal, contract, or rating consequences
+      <span class="bb-consequences-count">(<span data-bind="consequence-count">0</span>)</span>
     </h2>
+    <p class="bb-consequences-sub">Triggered by items in your current plan. The operational service impact of each item appears under it in the checklist.</p>
     <div class="bb-consequences-list">
       <!-- Populated by balance-budget.js -->
     </div>
   </aside>
 </div>
 
-<section class="bb-success" hidden aria-live="polite">
-  <!-- Populated by balance-budget.js when gap <= 0 -->
-</section>
-
 <footer class="bb-footer">
-  <button type="button" class="bb-reset">Reset plan</button>
+  <button type="button" class="bb-reset">Reset to town's plan</button>
   <nav class="bb-crosslinks">
     <a href="/no-override-budget.html">See what the town proposed instead &rarr;</a>
     <a href="/what-is-the-override.html">See what each tier would restore &rarr;</a>
   </nav>
 </footer>
+
+<p class="bb-footnote">Item dollar amounts are gross (the line-item cost the override would fund). The published &ldquo;FY27 first-year override draws&rdquo; ($1.27M / $2.81M / $4.30M) are net of an unemployment offset on cut positions, roughly $0.4M per tier smaller. The tool uses gross consistently to keep item math and tier math in the same units.</p>

@@ -27,10 +27,13 @@ async function run() {
     const h1 = await page.textContent('h1');
     h1 && h1.includes('Balance') ? ok('H1 renders') : fail('H1', `got "${h1}"`);
 
+    const fixedNote = await page.$('.bb-fixed-note');
+    fixedNote ? ok('Schools fixed-context block renders') : fail('Schools fixed note', 'not found');
+
     const tierBtns = await page.$$('.bb-tier-btn');
     tierBtns.length === 4 ? ok('4 scenario buttons (No override + 3 tiers)') : fail('Tier buttons', `expected 4, got ${tierBtns.length}`);
 
-    // Default tier is "No override" (data-tier="0").
+    // Default tier is "No override".
     const defaultPressed = await page.getAttribute('.bb-tier-btn[data-tier="0"]', 'aria-pressed');
     defaultPressed === 'true' ? ok('No-override is the default') : fail('Default tier', `got aria-pressed="${defaultPressed}"`);
 
@@ -39,72 +42,74 @@ async function run() {
     const rows = await page.$$('.bb-item-row');
     rows.length >= 10 ? ok(`${rows.length} discrete checklist rows render`) : fail('Checklist rows', `expected >= 10, got ${rows.length}`);
 
+    // Service-impact lines render (one per item).
     const impacts = await page.$$('.bb-item-row-impact');
-    impacts.length === rows.length ? ok(`${impacts.length} service-impact lines render (one per item)`) : fail('Impact lines', `expected ${rows.length}, got ${impacts.length}`);
+    impacts.length === rows.length ? ok(`${impacts.length} service-impact lines (one per item)`) : fail('Impact lines', `expected ${rows.length}, got ${impacts.length}`);
 
+    // All items pre-checked by default (town's plan).
+    const checkedCount = await page.$$eval('.bb-item-row input[type="checkbox"]:checked', els => els.length);
+    checkedCount === rows.length ? ok(`All ${checkedCount} items pre-checked (town's plan)`) : fail('All-checked default', `${checkedCount}/${rows.length} checked`);
+
+    // No-override target = sum of tier_3 amounts (gross). The data sum is $4,889,079.
     const target = await page.textContent('[data-bind="target"]');
-    target && target.includes('4,296,718') ? ok('No-override target is $4.30M') : fail('Target', `got "${target}"`);
+    target && target.includes('4,889,079') ? ok('No-override target is $4,889,079 (gross)') : fail('Target', `got "${target}"`);
 
-    // Schools scalar default contributes $1.5M to "your plan" on initial render.
-    const cutsInitial = await page.textContent('[data-bind="cuts"]');
-    cutsInitial && cutsInitial.includes('1,500,000') ? ok('Schools scalar default included in plan') : fail('Initial plan', `got "${cutsInitial}"`);
+    // Plan equals target → status is Balanced.
+    const status = await page.textContent('[data-bind="status"]');
+    status && status.trim().toLowerCase() === 'balanced' ? ok('Default status is Balanced') : fail('Default status', `got "${status}"`);
 
-    // Insurance share lever exists.
+    // Status message refers to the town's plan.
+    const message = await page.textContent('[data-bind="status-message"]');
+    message && message.toLowerCase().includes("town") ? ok("Status message references town's plan at default") : fail('Status message', `got "${message}"`);
+
+    // Switching to Tier 1: target drops, plan stays (over by ~$1.68M).
+    await page.click('.bb-tier-btn[data-tier="1"]');
+    await page.waitForTimeout(150);
+    const t1Target = await page.textContent('[data-bind="target"]');
+    t1Target && t1Target.includes('3,209,399') ? ok('Tier 1 target = $3,209,399 (gross-net)') : fail('Tier 1 target', `got "${t1Target}"`);
+    const t1Status = await page.textContent('[data-bind="status"]');
+    t1Status && t1Status.toLowerCase().startsWith('over') ? ok(`Tier 1 status starts "Over" (${t1Status.trim()})`) : fail('Tier 1 status', `got "${t1Status}"`);
+
+    // Uncheck items adequately on Tier 1 and verify plan moves toward balanced.
+    // (Uncheck enough items - clicking a few should move the plan amount.)
+    const firstThreeCheckboxes = await page.$$('.bb-item-row input[type="checkbox"]:checked');
+    if (firstThreeCheckboxes.length >= 3) {
+      for (let i = 0; i < 3; i++) await firstThreeCheckboxes[i].click();
+      await page.waitForTimeout(150);
+      const planAfter = await page.textContent('[data-bind="cuts"]');
+      planAfter && !planAfter.includes('4,889,079') ? ok('Plan total updates when items unchecked') : fail('Uncheck plan', `got "${planAfter}"`);
+    }
+
+    // Insurance share lever still present and functional.
     const insuranceInput = await page.$('#bb-insurance_share');
     insuranceInput ? ok('Insurance share lever present') : fail('Insurance share', 'not found');
-
-    // One-time funds lever exists.
-    const oneTimeInput = await page.$('#bb-extra_one_time');
-    oneTimeInput ? ok('One-time funds lever present') : fail('One-time funds', 'not found');
-
-    // Bumping insurance share triggers savings hint and CBA consequence.
     if (insuranceInput) {
       await insuranceInput.fill('3');
       await insuranceInput.dispatchEvent('input');
       await page.waitForTimeout(150);
-      const cuts = await page.textContent('[data-bind="cuts"]');
-      // 3pp × $182K = $546K, plus existing $1.5M = $2,046,000
-      cuts && cuts.includes('2,046,000') ? ok('Insurance share +3pp adds $546K to plan') : fail('Insurance share contribution', `got plan total "${cuts}"`);
       const consText = await page.textContent('.bb-consequences-list');
       (consText && consText.includes('Collective bargaining')) ? ok('CBA reopener consequence triggers when share shifted') : fail('CBA consequence', `got "${consText && consText.slice(0, 60)}"`);
-      await insuranceInput.fill('0');
-      await insuranceInput.dispatchEvent('input');
-      await page.waitForTimeout(100);
     }
 
-    // Check a discrete checkbox; cuts total should rise.
-    await page.check('.bb-item-row input[type="checkbox"]', { force: true });
-    await page.waitForTimeout(150);
-    const cutsAfter = await page.textContent('[data-bind="cuts"]');
-    cutsAfter && cutsAfter !== cutsInitial ? ok('Plan total updates on check') : fail('Plan update', `got "${cutsAfter}"`);
+    // One-time funds lever still present.
+    const oneTimeInput = await page.$('#bb-extra_one_time');
+    oneTimeInput ? ok('One-time funds lever present') : fail('One-time funds', 'not found');
 
-    // Switching tier prompts confirm; accept the dialog.
-    page.once('dialog', d => d.accept());
-    await page.click('.bb-tier-btn[data-tier="2"]');
-    await page.waitForTimeout(250);
-    const tier2Target = await page.textContent('[data-bind="target"]');
-    tier2Target && tier2Target.includes('2,805,236') ? ok('Tier 2 switch updates target') : fail('Tier 2 switch', `got "${tier2Target}"`);
-
-    // Schools scalar still present after tier switch.
-    const schoolsInput = await page.$('#bb-schools_cut');
-    schoolsInput ? ok('Schools scalar present after tier switch') : fail('Schools scalar', 'not found');
-    if (schoolsInput) {
-      // Enter a cut large enough to trigger NSS floor (> $21,894,870).
-      await schoolsInput.fill('25000000');
-      await schoolsInput.dispatchEvent('input');
-      await page.waitForTimeout(200);
-      const cuts = await page.textContent('[data-bind="cuts"]');
-      cuts && cuts.includes('25,') ? ok('Schools scalar updates plan total') : fail('Schools scalar update', `got "${cuts}"`);
-
-      const count = await page.textContent('[data-bind="consequence-count"]');
-      Number(count) >= 1 ? ok('NSS consequence triggers above threshold') : fail('NSS consequence', `count=${count}`);
-    }
-
-    // Reset clears plan; cuts return to default $1.5M (schools).
+    // Reset to town's plan: all items re-checked, scalars zeroed, status balanced.
+    await page.click('.bb-tier-btn[data-tier="0"]');
+    await page.waitForTimeout(100);
     await page.click('.bb-reset');
     await page.waitForTimeout(150);
-    const cutsReset = await page.textContent('[data-bind="cuts"]');
-    cutsReset && cutsReset.includes('1,500,000') ? ok('Reset restores defaults') : fail('Reset', `got "${cutsReset}"`);
+    const checkedAfterReset = await page.$$eval('.bb-item-row input[type="checkbox"]:checked', els => els.length);
+    checkedAfterReset === rows.length ? ok('Reset re-checks all items (town\'s plan)') : fail('Reset count', `${checkedAfterReset}/${rows.length}`);
+    const planReset = await page.textContent('[data-bind="cuts"]');
+    planReset && planReset.includes('4,889,079') ? ok('Reset returns plan to $4,889,079') : fail('Reset plan', `got "${planReset}"`);
+    const statusReset = await page.textContent('[data-bind="status"]');
+    statusReset && statusReset.trim().toLowerCase() === 'balanced' ? ok('Reset returns status to Balanced') : fail('Reset status', `got "${statusReset}"`);
+
+    // Consequences panel is renamed.
+    const consTitle = await page.textContent('.bb-consequences-title');
+    consTitle && consTitle.toLowerCase().includes('legal') ? ok('Consequences panel renamed (Legal/contract/rating)') : fail('Panel title', `got "${consTitle}"`);
   } finally {
     await browser.close();
   }

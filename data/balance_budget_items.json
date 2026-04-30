@@ -502,42 +502,6 @@
     "source_description": "Recurring Capital funding Leases Equipment and Buildings Articles"
   },
   {
-    "id": "schools_cut",
-    "category": "Schools",
-    "department": "Schools",
-    "description": "Your FY27 school cut",
-    "type": "scalar",
-    "unit": "dollars",
-    "savings_per_unit": 1,
-    "default": 1500000,
-    "presets": [
-      {
-        "label": "Match town ($1.5M)",
-        "value": 1500000
-      },
-      {
-        "label": "Cut more ($2.5M)",
-        "value": 2500000
-      },
-      {
-        "label": "Cut less ($500K)",
-        "value": 500000
-      },
-      {
-        "label": "Don't cut ($0)",
-        "value": 0
-      }
-    ],
-    "note": "No override tier restores school funding in FY27. The $1.5M cut happens at every tier this year; tier restorations begin in FY28. Change this number to model cutting schools more or less than the town proposed.",
-    "consequences": [
-      {
-        "threshold_gt": 21894870,
-        "id": "nss_floor_violation"
-      }
-    ],
-    "source_description": "FY27 Proposed Budget No Override: schools line cut $1,500,000 from $49,120,287 (FY26) to $47,620,287 (FY27). NSS-floor threshold derived from DESE FY27 Chapter 70 district summary: Required Local Contribution $27,225,417; safe cut from FY26 baseline = $49,120,287 - $27,225,417 = $21,894,870."
-  },
-  {
     "id": "insurance_share",
     "category": "Health insurance",
     "department": "Town-wide",
