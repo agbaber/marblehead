@@ -1,4 +1,6 @@
 {
+  "creative_local_meals_tax": "0.75% surcharge added to restaurant meals; collected by DOR and remitted to the town. No spending change. Estimated $250K/year for Marblehead (range $200K-$400K depending on actual restaurant receipts).",
+  "creative_payt_trash": "Residents pay per official trash bag at the curb (~$1-$2 each); recycling stays free. Typical 15-30% waste reduction shifts cost to per-use, lowering the town's hauler bill. Estimated $400K savings/year (range $300K-$700K against the $2.3M trash budget).",
   "public_safety_restore_police_department_school_resource_offi": "Eliminates the dedicated officer assigned to MHS; school-event coverage and police-school coordination handled by patrol instead.",
   "public_safety_increase_police_department_staffing": "Police staffing stays at FY26 level; no added patrol, detective, or supervisor capacity.",
   "public_safety_restore_police_department_equipment_cut": "Slower replacement of vests, radios, IT gear, and vehicle equipment; aging items stay in service longer.",

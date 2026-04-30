@@ -40,15 +40,33 @@ async function run() {
     // Wait for data fetch + initial render.
     await page.waitForSelector('.bb-item-row', { timeout: 5000 });
     const rows = await page.$$('.bb-item-row');
-    rows.length >= 10 ? ok(`${rows.length} discrete checklist rows render`) : fail('Checklist rows', `expected >= 10, got ${rows.length}`);
+    rows.length === 37 ? ok(`${rows.length} discrete checklist rows render (35 town items + 2 creative levers)`) : fail('Checklist rows', `expected 37, got ${rows.length}`);
 
     // Service-impact lines render (one per item).
     const impacts = await page.$$('.bb-item-row-impact');
     impacts.length === rows.length ? ok(`${impacts.length} service-impact lines (one per item)`) : fail('Impact lines', `expected ${rows.length}, got ${impacts.length}`);
 
-    // All items pre-checked by default (town's plan).
+    // Items in town's plan pre-checked, creative levers (not in plan) unchecked.
     const checkedCount = await page.$$eval('.bb-item-row input[type="checkbox"]:checked', els => els.length);
-    checkedCount === rows.length ? ok(`All ${checkedCount} items pre-checked (town's plan)`) : fail('All-checked default', `${checkedCount}/${rows.length} checked`);
+    const expectedChecked = rows.length - 2;  // 2 creative items (meals tax, PAYT) start unchecked
+    checkedCount === expectedChecked ? ok(`${checkedCount}/${rows.length} town's-plan items pre-checked (2 creative levers unchecked by design)`) : fail('Pre-check default', `expected ${expectedChecked}, got ${checkedCount}`);
+
+    // Creative levers present
+    const mealsTax = await page.$('#bb-creative_local_meals_tax');
+    mealsTax ? ok('Local meals tax lever present') : fail('Meals tax', 'not found');
+    const payt = await page.$('#bb-creative_payt_trash');
+    payt ? ok('PAYT lever present') : fail('PAYT', 'not found');
+
+    // Effort badges render on every row
+    const effortBadges = await page.$$('.bb-item-row-effort');
+    effortBadges.length >= rows.length ? ok(`${effortBadges.length} effort badges render`) : fail('Effort badges', `expected at least ${rows.length}, got ${effortBadges.length}`);
+
+    // Effort levels present (low / medium / high distribution)
+    const efforts = await page.$$eval('.bb-item-row-effort', els => els.map(e => Array.from(e.classList).find(c => c.startsWith('effort-'))));
+    const hasLow = efforts.some(c => c === 'effort-low');
+    const hasMedium = efforts.some(c => c === 'effort-medium');
+    const hasHigh = efforts.some(c => c === 'effort-high');
+    (hasLow && hasMedium && hasHigh) ? ok('All three effort levels (low/medium/high) appear') : fail('Effort levels', `low=${hasLow} medium=${hasMedium} high=${hasHigh}`);
 
     // No-override target = sum of tier_3 amounts (gross). The data sum is $4,889,079.
     const target = await page.textContent('[data-bind="target"]');
@@ -68,7 +86,7 @@ async function run() {
     const t1Target = await page.textContent('[data-bind="target"]');
     t1Target && t1Target.includes('3,209,399') ? ok('Tier 1 target = $3,209,399 (gross-net)') : fail('Tier 1 target', `got "${t1Target}"`);
     const t1Status = await page.textContent('[data-bind="status"]');
-    t1Status && t1Status.toLowerCase().startsWith('over') ? ok(`Tier 1 status starts "Over" (${t1Status.trim()})`) : fail('Tier 1 status', `got "${t1Status}"`);
+    t1Status && t1Status.toLowerCase().startsWith('surplus') ? ok(`Tier 1 status starts "Surplus" (${t1Status.trim()})`) : fail('Tier 1 status', `got "${t1Status}"`);
 
     // Uncheck items adequately on Tier 1 and verify plan moves toward balanced.
     // (Uncheck enough items - clicking a few should move the plan amount.)

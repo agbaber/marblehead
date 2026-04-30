@@ -76,8 +76,12 @@
     TIER_FILLS[2] = 0;
     TIER_FILLS[3] = 0;
     if (!itemsData) return;
+    // Only items in the town's no-override plan contribute to TOTAL_GROSS
+    // and tier fills. Creative levers (meals tax, PAYT) are NOT part of
+    // the gap definition - they reduce the gap when the user adopts them.
     for (const item of itemsData) {
       if (item.type !== 'discrete' || !item.amounts) continue;
+      if (item.in_town_plan === false) continue;
       TIER_FILLS[1] += item.amounts.tier_1 || 0;
       TIER_FILLS[2] += item.amounts.tier_2 || 0;
       TIER_FILLS[3] += item.amounts.tier_3 || 0;
@@ -91,8 +95,12 @@
     state.scalars = {};
     for (const item of itemsData) {
       if (item.type === 'discrete') {
+        // Town's plan = items with in_town_plan === true (or unset, default
+        // true). Creative levers (in_town_plan === false) start unchecked
+        // because the town hasn't adopted them.
+        const inPlan = item.in_town_plan !== false;
         const amount = (item.amounts && (item.amounts.tier_3 || 0)) || 0;
-        if (amount > 0) state.checkedIds.add(item.id);
+        if (amount > 0 && inPlan) state.checkedIds.add(item.id);
       } else if (item.type === 'scalar') {
         state.scalars[item.id] = scalarDefault(item);
       }
@@ -161,11 +169,20 @@
       textWrap.appendChild(impactEl);
     }
 
+    const meta = document.createElement('div');
+    meta.className = 'bb-item-row-meta';
     const dollar = document.createElement('span');
     dollar.className = 'bb-item-row-dollar';
     dollar.textContent = formatUSD(amount);
+    meta.appendChild(dollar);
+    if (item.effort) {
+      const effort = document.createElement('span');
+      effort.className = 'bb-item-row-effort effort-' + item.effort;
+      effort.textContent = item.effort.charAt(0).toUpperCase() + item.effort.slice(1) + ' effort';
+      meta.appendChild(effort);
+    }
 
-    row.append(checkbox, textWrap, dollar);
+    row.append(checkbox, textWrap, meta);
     return row;
   }
 
@@ -179,6 +196,12 @@
     labelText.htmlFor = 'bb-' + item.id;
     labelText.textContent = item.description;
     labelWrap.appendChild(labelText);
+    if (item.effort) {
+      const effort = document.createElement('span');
+      effort.className = 'bb-item-row-effort effort-' + item.effort;
+      effort.textContent = item.effort.charAt(0).toUpperCase() + item.effort.slice(1) + ' effort';
+      labelWrap.appendChild(effort);
+    }
 
     const inputWrap = document.createElement('div');
     inputWrap.className = 'bb-scalar-input';
@@ -338,21 +361,26 @@
   const elMessage = document.querySelector('[data-bind="status-message"]');
 
   function statusMessage(target, plan, gap) {
-    if (state.tier === 0 && plan === target && Math.abs(gap) < 1) {
-      return "This matches the town's no-override plan exactly.";
+    // gap = target - plan. negative gap = surplus (plan > target).
+    if (state.tier === 0 && Math.abs(gap) < 1) {
+      const allDefault = state.checkedIds.size > 0 && Object.values(state.scalars).every(v => !v);
+      if (allDefault) return "This matches the town's no-override plan exactly.";
+      return "Balanced. Your plan totals exactly the FY27 department gap.";
     }
     if (Math.abs(gap) < 1) {
       const tierLabel = state.tier === 0 ? 'No override' : `Tier ${state.tier}`;
-      return `Balanced for ${tierLabel}: your plan plus the override revenue closes the FY27 department gap.`;
+      return `Balanced for ${tierLabel}. Your plan plus the override revenue closes the FY27 department gap.`;
     }
     if (gap < 0) {
-      // plan > target: user has over-cut; override revenue available
-      const overBy = -gap;
-      const tierLabel = state.tier === 0 ? '' : ` Tier ${state.tier}`;
-      return `Plan exceeds target by ${formatUSD(overBy)}.${state.tier === 0 ? '' : ` That is roughly the override's first-year gross fill — uncheck items totaling ${formatUSD(overBy)} to use it.`}`;
+      // plan > target: surplus
+      const surplus = -gap;
+      if (state.tier === 0) {
+        return `Surplus of ${formatUSD(surplus)}. You've created more savings than the no-override gap requires (likely from creative levers). You could uncheck cuts totaling ${formatUSD(surplus)} and still close the FY27 gap.`;
+      }
+      return `Surplus of ${formatUSD(surplus)}. The Tier ${state.tier} override pays for cuts you still have checked. Uncheck cuts (or reduce levers) totaling ${formatUSD(surplus)} to use the override revenue.`;
     }
-    // plan < target: short
-    return `Plan falls short by ${formatUSD(gap)}. Add cuts (re-check items) or savings (insurance share, one-time funds) to close the gap.`;
+    // plan < target: gap
+    return `Gap of ${formatUSD(gap)} to close. Add cuts (re-check items), creative levers (meals tax, PAYT), or savings (insurance share, one-time funds).`;
   }
 
   function updateStatusBar() {
@@ -366,11 +394,11 @@
     if (elStatus) {
       let label;
       if (Math.abs(gap) < 1) label = 'Balanced';
-      else if (gap < 0) label = 'Over by ' + formatUSD(-gap);
-      else label = 'Short by ' + formatUSD(gap);
+      else if (gap < 0) label = 'Surplus ' + formatUSD(-gap);
+      else label = 'Gap ' + formatUSD(gap);
       elStatus.textContent = label;
       elStatus.classList.toggle('is-balanced', Math.abs(gap) < 1);
-      elStatus.classList.toggle('is-over', gap < -0.5);
+      elStatus.classList.toggle('is-surplus', gap < -0.5);
       elStatus.classList.toggle('is-short', gap > 0.5);
     }
 

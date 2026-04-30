@@ -65,6 +65,23 @@
       { "label": "M.G.L. c. 150E (public-employee bargaining)", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter150E" }
     ]
   },
+  "meals_tax_adoption": {
+    "name": "Local meals tax adoption (Town Meeting vote)",
+    "authority": "M.G.L. c. 64L; town meeting bylaw + DOR notification",
+    "effect": "The 0.75% local meals tax must be adopted by Town Meeting. About 250 of Massachusetts' 351 cities and towns have adopted it; some have failed multiple votes. The tax applies to restaurant and takeout receipts and is collected by DOR alongside the state's 6.25% meals tax. Local restaurants oppose it as a competitive disadvantage when neighboring towns also haven't adopted (Marblehead's neighbors vary). Revenue depends on actual restaurant base and seasonality; a published Marblehead-specific estimate would require pulling DOR receipts data for comparable towns.",
+    "links": [
+      { "label": "M.G.L. c. 64L", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter64L" },
+      { "label": "DOR Local Option Taxes", "url": "https://www.mass.gov/local-options-adopted-by-cities-and-towns" }
+    ]
+  },
+  "payt_adoption": {
+    "name": "Pay-As-You-Throw adoption (Town Meeting vote and program rollout)",
+    "authority": "Town Meeting bylaw; Mass DEP guidance; municipal solid-waste contracting",
+    "effect": "PAYT charges residents per official trash bag (typically $1-$2 each), keeping recycling free. EPA and Mass DEP data show 15-30% trash-volume reductions in adopting communities, lowering hauler-fee costs. Implementation requires: a Town Meeting bylaw, RFP for cart/bag distribution, public communication, and resolving equity concerns (large families, disability accommodations). PAYT votes have failed in multiple MA towns; Marblehead has discussed it but not adopted. Once enacted, savings ramp over the first 1-2 years.",
+    "links": [
+      { "label": "Mass DEP Pay-As-You-Throw", "url": "https://www.mass.gov/info-details/pay-as-you-throw-payt-overview" }
+    ]
+  },
   "nonrecurring_widens_fy28_gap": {
     "name": "Nonrecurring funds widen next year's gap",
     "authority": "DLS best-practice guidance; Moody's / S&P credit criteria",
