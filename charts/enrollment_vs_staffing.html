@@ -30,7 +30,7 @@ scripts: [chart-tooltip]
       ]
     }
     </script>
-    <svg class="chart" viewBox="0 0 740 185" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart showing Marblehead student enrollment from FY2001 to FY2024, peaking at 3,327 in FY2014 and declining to 2,617.">
+    <svg class="chart" viewBox="0 0 740 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart showing Marblehead student enrollment from FY2001 to FY2024, peaking at 3,327 in FY2014 and declining to 2,617.">
       <!-- Baseline -->
       <line class="axis-base" x1="70" y1="170" x2="610" y2="170"/>
 
@@ -48,6 +48,13 @@ scripts: [chart-tooltip]
       <text class="end-label s-neutral" x="616" y="136">2,617</text>
       <!-- Peak label -->
       <text class="annotation" x="375" y="34" text-anchor="middle">peak: 3,327</text>
+
+      <!-- X labels -->
+      <text class="tick-label tick-label--major" x="70"  y="190" text-anchor="middle">FY01</text>
+      <text class="tick-label tick-label--minor" x="281" y="190" text-anchor="middle">FY10</text>
+      <text class="tick-label tick-label--minor" x="399" y="190" text-anchor="middle">FY15</text>
+      <text class="tick-label tick-label--minor" x="516" y="190" text-anchor="middle">FY20</text>
+      <text class="tick-label tick-label--major" x="610" y="190" text-anchor="middle">FY24</text>
     </svg>
   </div>
 
@@ -111,15 +118,16 @@ scripts: [chart-tooltip]
       <text class="tick-label" x="63" y="90" text-anchor="end">100</text>
       <text class="tick-label" x="63" y="53" text-anchor="end">110</text>
 
-      <!-- Enrollment (dashed) -->
-      <polyline class="data-line data-line--dashed s-neutral" data-series="enrollment"
+      <!-- Enrollment -->
+      <polyline class="data-line s-neutral" data-series="enrollment"
                 points="70,86 130,90 190,84 250,93 310,109 370,119 430,149 490,161 550,158 610,159"/>
       <text class="end-label s-neutral" x="616" y="155" data-series="enrollment">80.6</text>
 
-      <!-- ACFR education FTE -->
-      <polyline class="data-line s-stoneham" data-series="acfr"
+      <!-- Town financial report's education line, dashed (flagged as reporting error) -->
+      <polyline class="data-line data-line--dashed s-stoneham" data-series="acfr"
                 points="70,86 130,87 190,84 250,75 310,91 370,94 430,91 490,92 550,50 610,50"/>
       <text class="end-label s-stoneham" x="616" y="46" data-series="acfr">109.6</text>
+      <text class="annotation" x="540" y="42" text-anchor="middle" data-series="acfr">FY23 reporting error</text>
 
       <!-- DESE total educator FTE -->
       <polyline class="data-line s-marblehead" data-series="dese-total"
