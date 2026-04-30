@@ -500,16 +500,16 @@ Use the values from the lookup doc (Task 0, Step 3). Append after the `</section
       <span class="kpi-label">FY24 Revenue<sup class="fn">7</sup></span>
     </div>
     <div class="kpi">
-      <span class="kpi-value">Aa1</span>
-      <span class="kpi-label">Bond Rating (Moody's)<sup class="fn">8</sup></span>
+      <span class="kpi-value">AAA</span>
+      <span class="kpi-label">Bond Rating (S&amp;P, neg.)<sup class="fn">8</sup></span>
     </div>
     <div class="kpi">
       <span class="kpi-value">[LEVY_UTIL]%</span>
       <span class="kpi-label">Levy Ceiling Utilization (FY26)<sup class="fn">9</sup></span>
     </div>
     <div class="kpi">
-      <span class="kpi-value">[STABILIZATION]</span>
-      <span class="kpi-label">Stabilization Fund<sup class="fn">10</sup></span>
+      <span class="kpi-value">[FREE_CASH]</span>
+      <span class="kpi-label">Reserves (Free Cash, FY26)<sup class="fn">10</sup></span>
     </div>
   </div>
 </section>
@@ -521,8 +521,10 @@ Format conventions:
 - Population: `5-digit count` (no commas if four digits, comma at thousands).
 - FTE: one decimal place, e.g. `706.0`.
 - Revenue: `$NNN.NM` style (`$94.2M`) so the cell isn't crowded.
-- Levy utilization: integer percent, e.g. `87%`.
-- Stabilization: `$N.NM` style.
+- Levy utilization: one decimal place, e.g. `36.2%`.
+- Reserves (Free Cash): `$N.NM` style, e.g. `$9.5M`.
+
+Per the Task 0 lookup doc, the bond rating is **AAA (S&P), outlook negative** (not Aa1/Moody's, which was a spec error caught during Task 0). The reserves cell labels Free Cash explicitly because Marblehead's Stabilization Fund operating-budget line is $0; the footnote captures this nuance.
 
 - [ ] **Step 2: Build and visually inspect**
 
@@ -688,13 +690,11 @@ Append:
 </section>
 ```
 
-For the Industry Comparables paragraph, write one to two sentences in this register, no commentary on whether the gap is large or small:
+Per Task 0 lock-in: a single comparable (Eastern Bankshares); L.L. Bean was DROPPED. Write the paragraph in this register, two sentences, no commentary on whether the gap is large or small:
 
-> "By comparison, [Eastern Bankshares Inc., a publicly traded financial-services company headquartered in Boston,] disclosed total compensation of [$X.XX million] for its Chief Executive Officer in [YEAR] (DEF 14A proxy statement filed [DATE]).[<sup class="fn">25</sup>] [Optional second comparable in same register.]"
+> "By comparison, Eastern Bankshares, Inc. (NASDAQ: EBC), a publicly traded financial-services company headquartered in Boston, disclosed total compensation of $1,291,168 for its Chief Executive Officer Denis K. Sheahan for the fiscal year ended December 31, 2024 (Summary Compensation Table, 2024 DEF 14A proxy statement).<sup class="fn">25</sup> Mr. Sheahan was appointed to the Chief Executive Officer position in July 2024; the figure above reflects a partial year in that role."
 
-If both comparables are unavailable per Task 0, replace the paragraph with a single sentence: "Comparable executive-compensation data for area private employers is not consistently disclosed in public filings." Drop the footnote.
-
-Replace bracketed tokens with values from the lookup doc.
+The two-sentence form preserves the partial-year caveat without footnoting twice. Use the values verbatim — they are locked in by Task 0.
 
 - [ ] **Step 3: Build and visually inspect**
 
@@ -729,9 +729,9 @@ Append a Notes section listing every footnote referenced on the page (1 through 
     <li id="fn-5"><strong>5.</strong> Population: [VALUE], from [American Community Survey 5-year estimates table B01003 / DOR FY27 income/equalized-pop dataset].</li>
     <li id="fn-6"><strong>6.</strong> FY24 total full-time equivalent employees: [VALUE]. FY24 ACFR p.[N], "Full-time Equivalent Town Employees by Function."</li>
     <li id="fn-7"><strong>7.</strong> FY24 general fund total revenue: [VALUE]. FY24 ACFR p.[N], "Statement of Revenues, Expenditures, and Changes in Fund Balances — General Fund."</li>
-    <li id="fn-8"><strong>8.</strong> Moody's Investors Service general-obligation rating, most recent: Aa1. FY24 ACFR — Bond Rating disclosure section.</li>
-    <li id="fn-9"><strong>9.</strong> FY26 levy as a percentage of FY26 levy ceiling: [VALUE]%. Source: MA DOR Division of Local Services, FY26 Tax Recap (data/dor_all_351_FY26.csv, Marblehead row).</li>
-    <li id="fn-10"><strong>10.</strong> Stabilization fund balance, most recent: [VALUE]. Source: [FY24 ACFR p.N or DLS Free Cash certification].</li>
+    <li id="fn-8"><strong>8.</strong> S&amp;P Global Ratings general-obligation rating: AAA, outlook negative as of April 10, 2026. Source: <a href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-10_SP_Rating_Letter.pdf">S&amp;P rating letter to the Finance Director, April 10, 2026</a>.</li>
+    <li id="fn-9"><strong>9.</strong> FY26 levy as a percentage of FY26 levy ceiling: [VALUE]%. Computed: levy &divide; (2.5% &times; full and fair cash value). Source: MA DOR Division of Local Services, FY26 Tax Recap (`data/dor_all_351_FY26.csv`, Marblehead row).</li>
+    <li id="fn-10"><strong>10.</strong> Certified Free Cash, FY26: [VALUE]. Source: MA DOR Division of Local Services Free Cash certification (`data/dor_all_351_FY26.csv`, Marblehead row, free_cash column). The Town's Stabilization Fund operating-budget line is $0 in FY25, FY26, and FY27 (FY27 proposed budget, line 229); Free Cash is the closest publicly-reported reserve indicator.</li>
     <li id="fn-11"><strong>11.</strong> FY26 budgeted spend by category: data/FY26_budget_summary.json; original document is the FY26 budget book, available in the Company's primary-source archive.</li>
     <li id="fn-12"><strong>12.</strong> M.G.L. c. 59, §21C, "Proposition 2½," enacted by initiative petition in 1980; the levy ceiling and levy limit are computed annually by the Department of Revenue.</li>
     <li id="fn-13"><strong>13.</strong> M.G.L. c. 71, §1 (school committees and superintendents) and §5 (right to attend public schools); Individuals with Disabilities Education Act, 20 U.S.C. §1400 et seq.</li>
@@ -746,7 +746,7 @@ Append a Notes section listing every footnote referenced on the page (1 through 
     <li id="fn-22"><strong>22.</strong> Annual Comprehensive Financial Report, fiscal year ended June 30, 2024, available at the primary-source archive: <a href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf">FY24 ACFR</a>.</li>
     <li id="fn-23"><strong>23.</strong> See note 2.</li>
     <li id="fn-24"><strong>24.</strong> Town Administrator base salary, FY26: [VALUE]. Source: FY26 budget book, General Government section, p.[N].</li>
-    <li id="fn-25"><strong>25.</strong> [Eastern Bankshares Inc. DEF 14A proxy statement, filed [DATE]; cited Total Compensation figure for [NAME], Chief Executive Officer.]<br><em>or</em> "Comparable executive-compensation data for area private employers is not consistently disclosed in public filings." [Drop this note if comparables paragraph was dropped.]</li>
+    <li id="fn-25"><strong>25.</strong> Eastern Bankshares, Inc. (NASDAQ: EBC), 2024 DEF 14A proxy statement, Summary Compensation Table; figure reflects partial year as Chief Executive Officer (Mr. Sheahan was appointed in July 2024).</li>
   </ol>
 </section>
 ```
