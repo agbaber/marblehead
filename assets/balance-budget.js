@@ -48,9 +48,11 @@
     return sign + '$' + abs.toLocaleString('en-US');
   }
 
-  function tierKey() {
-    return state.tier === 0 ? 'tier_3' : `tier_${state.tier}`;
-  }
+  // Items are always shown at their gross (tier_3) cost regardless
+  // of which scenario is selected. The dollar magnitude of a cut is
+  // what it is; the only thing that varies by tier is the target the
+  // user must hit (= total minus override fill).
+  const ITEM_AMOUNT_KEY = 'tier_3';
 
   function targetForTier(tier) {
     return TOTAL_GROSS - TIER_FILLS[tier];
@@ -118,7 +120,7 @@
   }
 
   function renderDiscreteRow(item) {
-    const amount = item.amounts[tierKey()];
+    const amount = item.amounts[ITEM_AMOUNT_KEY];
     if (amount <= 0) return null;
 
     const row = document.createElement('div');
@@ -315,7 +317,7 @@
       if (!itemsData) return 0;
       for (const item of itemsData) {
         if (item.type === 'discrete' && state.checkedIds.has(item.id)) {
-          total += item.amounts[tierKey()] || 0;
+          total += item.amounts[ITEM_AMOUNT_KEY] || 0;
         } else if (item.type === 'scalar') {
           total += scalarSavings(item);
         }
