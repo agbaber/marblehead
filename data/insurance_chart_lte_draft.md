@@ -35,7 +35,7 @@ Andrew Baber
 
 ## Drafting notes (not part of the letter)
 
-- Word count: approximately 370. Marblehead Independent's typical letter-to-the-editor limit is around 400 words.
+- Word count: approximately 410. Marblehead Independent's typical letter-to-the-editor limit is around 400 words; if they enforce that strictly, the easiest cuts are the introductory framing sentence and the closing paragraph about the 83/17 split (this letter focuses on data, not policy).
+- The companion source-trace at [/data/insurance_chart_source_check](/data/insurance_chart_source_check) includes a side-by-side chart of the published series against the audited group insurance line. If a permanent home for the source-trace is wanted, it can be merged into the live site under a neutral title and the letter can link to it directly instead of saying "available on request."
 - Did not engage Buba's policy alternatives (consolidate finance and HR, outsource the transfer station, privatize landscaping). Those are preferences, not data claims, and engaging them pulls the letter toward advocacy.
-- Did not push back on the 83 percent versus 76 percent contribution-share comparison. That one is worth a separate letter if I write one, because the wage-offset trade-off (lower employer share is generally exchanged for higher salaries in collective bargaining) is a real economic point but a longer one to make.
-- Did not include the URL for the source-trace page. The trace currently lives at a Cloudflare Pages preview that will not be permanent. If a permanent home is wanted, the source-trace can be merged into the live site under a neutral title.
+- Did not push back on the 83 percent versus 76 percent contribution-share comparison. That is worth a separate letter if it gets written; the wage-offset trade-off (a lower employer share is generally exchanged for higher salaries in collective bargaining) is a real economic point but a longer one to make.
