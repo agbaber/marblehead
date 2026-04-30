@@ -163,6 +163,32 @@ async function testGeneralGovernmentChart(page) {
     : fail('GG peer bar count', `expected 9, got ${bars}`);
 }
 
+async function testMarbleheadCorpLoads(page) {
+  console.log('\n── Marblehead Corp ──');
+  const response = await page.goto(SITE + '/marblehead-corp.html', { waitUntil: 'domcontentloaded' });
+  if (!response || !response.ok()) {
+    fail('Marblehead Corp', `HTTP ${response ? response.status() : 'no response'}`);
+    return;
+  }
+  ok('Marblehead Corp returns 200');
+
+  const cover = await page.$('.corp-cover .corp-name');
+  const coverText = cover ? (await cover.textContent()).trim() : '';
+  /MARBLEHEAD CORP/.test(coverText)
+    ? ok('Cover renders MARBLEHEAD CORP')
+    : fail('Marblehead Corp cover', `.corp-name missing or wrong text: "${coverText}"`);
+
+  const riskFactors = await page.$$('.risk-factor');
+  riskFactors.length === 10
+    ? ok('Item 1A renders 10 Risk Factors')
+    : fail('Marblehead Corp Risk Factors', `expected 10, got ${riskFactors.length}`);
+
+  const notes = await page.$$('.corp-notes ol li');
+  notes.length === 25
+    ? ok('Notes section renders 25 footnotes')
+    : fail('Marblehead Corp Notes', `expected 25, got ${notes.length}`);
+}
+
 async function testStatsStrip(page) {
   console.log('\n── Stats strip ──');
   // Navigate to landing to see stats
@@ -191,6 +217,7 @@ async function testStatsStrip(page) {
     await testUnsureButtons(page1);
     await testNavLinks(page1);
     await testGeneralGovernmentChart(page1);
+    await testMarbleheadCorpLoads(page1);
     await ctx1.close();
 
     // Interactive tests (fresh context so localStorage is clean)
