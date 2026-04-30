@@ -1,0 +1,93 @@
+{
+  "sro_eliminated": {
+    "name": "School Resource Officer eliminated",
+    "authority": "Town of Marblehead / Marblehead Police Department",
+    "effect": "The School Resource Officer (SRO) position at Marblehead schools is eliminated. Not a state-law violation; a local policy choice with implications for school safety planning, after-hours school event coverage, and the police-school coordination the SRO role provides.",
+    "links": []
+  },
+  "mblc_decertification": {
+    "name": "Library loses MBLC state certification",
+    "authority": "605 CMR 4.00; M.G.L. c. 78 ss 19A, 19B",
+    "effect": "Abbot Public Library is decertified by the Massachusetts Board of Library Commissioners (MBLC) for failing to meet the Municipal Appropriation Requirement (MAR) staffing floor. Effects: NOBLE reciprocal borrowing suspended (residents cannot borrow from other Massachusetts libraries; other NOBLE libraries can refuse to lend to Marblehead); state aid to public libraries withheld; federal LSTA pass-through grants unavailable. The MBLC waiver process is discretionary and is not a planning tool.",
+    "links": [
+      { "label": "605 CMR 4.00 (MBLC regulations)", "url": "https://www.mass.gov/regulations/605-CMR-400-the-massachusetts-board-of-library-commissioners" },
+      { "label": "M.G.L. c. 78", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXII/Chapter78" }
+    ]
+  },
+  "mblc_mer_violation": {
+    "name": "Library materials budget below Materials Expenditure Requirement",
+    "authority": "605 CMR 4.01(7)",
+    "effect": "Abbot Public Library's materials expenditure falls below the state Materials Expenditure Requirement (MER), a separate MBLC floor from MAR. MER is a percentage-of-budget requirement for physical and digital collection spending. MER violation is an independent trigger for MBLC decertification.",
+    "links": [
+      { "label": "605 CMR 4.00 (MBLC regulations)", "url": "https://www.mass.gov/regulations/605-CMR-400-the-massachusetts-board-of-library-commissioners" }
+    ]
+  },
+  "nss_floor_violation": {
+    "name": "School budget below Net School Spending floor",
+    "authority": "M.G.L. c. 70; Chapter 12 of the Acts of 2010 (Achievement Gap Act)",
+    "effect": "District spending falls below the Net School Spending (NSS) floor set by DESE under Chapter 70. Marblehead's FY27 required NSS is $34,411,771 (per DESE FY27 preliminary Chapter 70 district summary), with a required local contribution of $27,225,417. Cuts large enough to push the town's school appropriation below that local-contribution share trigger NSS noncompliance. Consequence: DESE intervention, which may include escalating oversight, restricted access to certain grants, and in sustained cases Level 5 designation with a state-appointed receiver (as happened with Lawrence in 2011, Holyoke in 2015, and Southbridge in 2016). The receiver assumes full managerial authority over the district.",
+    "links": [
+      { "label": "FY27 Chapter 70 preliminary (DESE)", "url": "https://www.doe.mass.edu/finance/chapter70/fy2027/preliminary.html" },
+      { "label": "Chapter 12 of Acts of 2010", "url": "https://malegislature.gov/Laws/SessionLaws/Acts/2010/Chapter12" }
+    ]
+  },
+  "opeb_skipped": {
+    "name": "OPEB trust contribution skipped",
+    "authority": "GASB 74/75; M.G.L. c. 32B s 20",
+    "effect": "Town skips the annual contribution to the Other Post-Employment Benefits trust. Not a state-mandated payment, but a GASB disclosure item and a rating agency signal. Sustained underfunding raises the unfunded OPEB liability reported in the ACFR and can affect the town's bond rating, which drives future borrowing costs.",
+    "links": [
+      { "label": "M.G.L. c. 32B s 20", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIV/Chapter32B/Section20" }
+    ]
+  },
+  "stabilization_skipped": {
+    "name": "Stabilization fund transfer skipped",
+    "authority": "M.G.L. c. 40 s 5B",
+    "effect": "Town skips the transfer to the Stabilization Fund, reducing the buffer available for unanticipated expenses and revenue shortfalls. Not a mandate violation. Rating agencies (Moody's, S&P) use reserve levels as a key input for municipal credit ratings; a depleted stabilization fund pressures the town's rating and can raise future borrowing costs.",
+    "links": [
+      { "label": "M.G.L. c. 40 s 5B", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter40/Section5B" }
+    ]
+  },
+  "workers_comp_underfunded": {
+    "name": "Workers Compensation / Section 111F transfer reduced",
+    "authority": "M.G.L. c. 152; M.G.L. c. 41 s 111F",
+    "effect": "Town reduces funding for its Workers Compensation reserves and Section 111F (injured-on-duty police and fire benefits). Funding these obligations is statutorily required (c. 152 for general workers comp, c. 41 s 111F for public safety). Underfunding creates immediate liability exposure; claims still must be paid, and if reserves are insufficient the town must appropriate additional funds mid-year or face default on benefit payments.",
+    "links": [
+      { "label": "M.G.L. c. 152", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter152" },
+      { "label": "M.G.L. c. 41 s 111F", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section111F" }
+    ]
+  },
+  "cba_reopener_required": {
+    "name": "Collective bargaining reopener required",
+    "authority": "M.G.L. c. 32B; M.G.L. c. 150E (collective bargaining)",
+    "effect": "Health-insurance premium share is set in collective bargaining agreements. Lowering the town's share before contract expiration requires reopening the CBA with each affected union (teachers, public works, police, fire, town hall, etc.). Unions typically trade share concessions for offsetting wage increases (Hingham's move to 80/20 was paired with a roughly $16K bump to teacher base salary). Beyond the wage trade, employees' out-of-pocket premium costs rise; recruitment and retention can suffer in hard-to-fill roles where total compensation is the deciding factor. Headline per-point savings on this slider do not reflect those trade-offs.",
+    "links": [
+      { "label": "M.G.L. c. 32B (municipal health insurance)", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIV/Chapter32B" },
+      { "label": "M.G.L. c. 150E (public-employee bargaining)", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter150E" }
+    ]
+  },
+  "meals_tax_adoption": {
+    "name": "Local meals tax adoption (Town Meeting vote)",
+    "authority": "M.G.L. c. 64L; town meeting bylaw + DOR notification",
+    "effect": "The 0.75% local meals tax must be adopted by Town Meeting. About 250 of Massachusetts' 351 cities and towns have adopted it; some have failed multiple votes. The tax applies to restaurant and takeout receipts and is collected by DOR alongside the state's 6.25% meals tax. Local restaurants oppose it as a competitive disadvantage when neighboring towns also haven't adopted (Marblehead's neighbors vary). Revenue depends on actual restaurant base and seasonality; a published Marblehead-specific estimate would require pulling DOR receipts data for comparable towns.",
+    "links": [
+      { "label": "M.G.L. c. 64L", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter64L" },
+      { "label": "DOR Local Option Taxes", "url": "https://www.mass.gov/local-options-adopted-by-cities-and-towns" }
+    ]
+  },
+  "payt_adoption": {
+    "name": "Pay-As-You-Throw adoption (Town Meeting vote and program rollout)",
+    "authority": "Town Meeting bylaw; Mass DEP guidance; municipal solid-waste contracting",
+    "effect": "PAYT charges residents per official trash bag (typically $1-$2 each), keeping recycling free. EPA and Mass DEP data show 15-30% trash-volume reductions in adopting communities, lowering hauler-fee costs. Implementation requires: a Town Meeting bylaw, RFP for cart/bag distribution, public communication, and resolving equity concerns (large families, disability accommodations). PAYT votes have failed in multiple MA towns; Marblehead has discussed it but not adopted. Once enacted, savings ramp over the first 1-2 years.",
+    "links": [
+      { "label": "Mass DEP Pay-As-You-Throw", "url": "https://www.mass.gov/info-details/pay-as-you-throw-payt-overview" }
+    ]
+  },
+  "nonrecurring_widens_fy28_gap": {
+    "name": "Nonrecurring funds widen next year's gap",
+    "authority": "DLS best-practice guidance; Moody's / S&P credit criteria",
+    "effect": "One-time funds (free cash, stabilization, reserves) used to cover recurring expenses produce a structural deficit that grows each year the practice continues. Massachusetts Department of Local Services and the rating agencies treat sustained reliance on nonrecurring revenue as a credit-negative signal. Each dollar drawn here widens the FY28 starting gap by the same amount.",
+    "links": [
+      { "label": "DLS Best Practices", "url": "https://www.mass.gov/lists/dls-best-practices" }
+    ]
+  }
+}

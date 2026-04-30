@@ -1,0 +1,682 @@
+[
+  {
+    "id": "creative_local_meals_tax",
+    "category": "Revenue and creative levers",
+    "department": "Town-wide",
+    "description": "Adopt local meals tax (0.75% surcharge)",
+    "amounts": {
+      "tier_1": 250000,
+      "tier_2": 250000,
+      "tier_3": 250000
+    },
+    "type": "discrete",
+    "in_town_plan": false,
+    "effort": "medium",
+    "consequences": [
+      "meals_tax_adoption"
+    ],
+    "source_description": "MA M.G.L. c. 64L allows municipalities to adopt a 0.75% local meals tax; revenues collected by DOR and remitted to the town. Marblehead has not adopted it. Estimate $200K-$400K/year for towns of similar size and restaurant base; midpoint $250K shown. Requires a Town Meeting vote and DOR notification."
+  },
+  {
+    "id": "creative_payt_trash",
+    "category": "Revenue and creative levers",
+    "department": "Public Works",
+    "description": "Adopt Pay-As-You-Throw (PAYT) trash program",
+    "amounts": {
+      "tier_1": 400000,
+      "tier_2": 400000,
+      "tier_3": 400000
+    },
+    "type": "discrete",
+    "in_town_plan": false,
+    "effort": "medium",
+    "consequences": [
+      "payt_adoption"
+    ],
+    "source_description": "PAYT (Pay-As-You-Throw) shifts trash disposal cost partly to per-bag fees. EPA and Mass DEP studies show 15-30% waste reduction in adopting communities. Marblehead's FY26 trash budget is roughly $2.3M; estimated savings $300K-$700K with $400K midpoint shown. Requires Town Meeting vote, RFP for hauler/cart distribution, and public communication."
+  },
+  {
+    "id": "insurance_share",
+    "category": "Health insurance",
+    "department": "Town-wide",
+    "description": "Shift health insurance share toward employees (currently 83% town / 17% employee)",
+    "type": "scalar",
+    "unit": "percentage_points",
+    "savings_per_unit": 182000,
+    "default": 0,
+    "min": 0,
+    "max": 8,
+    "step": 1,
+    "presets": [
+      {
+        "label": "No change (83/17)",
+        "value": 0
+      },
+      {
+        "label": "80/20 (Hingham)",
+        "value": 3
+      },
+      {
+        "label": "75/25",
+        "value": 8
+      }
+    ],
+    "note": "Each percentage point shifted to employees saves the town roughly $182K/year, derived from the FY26 employee-benefit appropriation ($15.1M at the current 83% share implies a total premium of about $18.2M; 1pp = ~$182K). Real-world downsides: shifting share requires reopening the collective bargaining agreement; unions historically trade share for wages (Hingham's 80/20 was paired with a $16K teacher-base raise, materially reducing net town savings); employees' out-of-pocket premium costs rise; recruitment and retention can suffer for hard-to-fill roles where total compensation is the deciding factor.",
+    "consequences": [
+      {
+        "threshold_gt": 0,
+        "id": "cba_reopener_required"
+      }
+    ],
+    "source_description": "FY26 employee benefits ~$15.1M (per memorialized FinCom briefing). Current employer share 83% per town HR. Implied total premium $15.1M / 0.83 = $18.2M; per-percentage-point shift = ~$182K.",
+    "effort": "high"
+  },
+  {
+    "id": "extra_one_time",
+    "category": "One-time funds",
+    "department": "Town-wide",
+    "description": "Use additional one-time funds (free cash, reserves) above the town's plan",
+    "type": "scalar",
+    "unit": "dollars",
+    "savings_per_unit": 1,
+    "default": 0,
+    "min": 0,
+    "max": 2000000,
+    "step": 50000,
+    "presets": [
+      {
+        "label": "$0",
+        "value": 0
+      },
+      {
+        "label": "$500K",
+        "value": 500000
+      },
+      {
+        "label": "$1M",
+        "value": 1000000
+      }
+    ],
+    "note": "The town's no-override plan already draws on free cash. Real-world downsides: this is nonrecurring revenue against a recurring cost (every dollar here widens FY28's starting gap by the same amount); free-cash and stabilization balances drop, which both rating agencies and DLS treat as a credit-negative signal; the town has less room to absorb a surprise expense (storm, lawsuit, capital failure) without a special appropriation.",
+    "consequences": [
+      {
+        "threshold_gt": 0,
+        "id": "nonrecurring_widens_fy28_gap"
+      }
+    ],
+    "source_description": "FY27 Proposed Budget No Override identifies one-time funding sources used by the town. Additional draws above that baseline are at the user's discretion and are flagged as nonrecurring.",
+    "effort": "low"
+  },
+  {
+    "id": "other_general_government_restore_town_portion_of_opeb_transf",
+    "category": "Deferrals and transfers",
+    "department": "Other General Government",
+    "description": "Skip OPEB trust transfer",
+    "amounts": {
+      "tier_1": 96771,
+      "tier_2": 96771,
+      "tier_3": 96771
+    },
+    "type": "discrete",
+    "consequences": [
+      "opeb_skipped"
+    ],
+    "source_description": "Restore Town Portion of OPEB Transfer",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "other_general_government_restore_stabilization_transfer",
+    "category": "Deferrals and transfers",
+    "department": "Other General Government",
+    "description": "Skip Stabilization Fund transfer",
+    "amounts": {
+      "tier_1": 250000,
+      "tier_2": 250000,
+      "tier_3": 250000
+    },
+    "type": "discrete",
+    "consequences": [
+      "stabilization_skipped"
+    ],
+    "source_description": "Restore Stabilization Transfer",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "other_general_government_restore_workers_comp_and_section_11",
+    "category": "Deferrals and transfers",
+    "department": "Other General Government",
+    "description": "Reduce Workers Comp / Section 111F transfer",
+    "amounts": {
+      "tier_1": 97662,
+      "tier_2": 97662,
+      "tier_3": 97662
+    },
+    "type": "discrete",
+    "consequences": [
+      "workers_comp_underfunded"
+    ],
+    "source_description": "Restore Workers Comp and Section 111F Transfer",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "public_safety_restore_police_department_school_resource_offi",
+    "category": "Public Safety",
+    "department": "Public Safety",
+    "description": "Cut: Police Department School Resource Officer",
+    "amounts": {
+      "tier_1": 65482,
+      "tier_2": 65482,
+      "tier_3": 65482
+    },
+    "type": "discrete",
+    "consequences": [
+      "sro_eliminated"
+    ],
+    "source_description": "Restore Police Department School Resource Officer Cut",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "public_safety_increase_police_department_staffing",
+    "category": "Public Safety",
+    "department": "Public Safety",
+    "description": "Skip: Police Department Staffing increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 65482,
+      "tier_3": 130964
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Police Department Staffing",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "public_safety_restore_police_department_equipment_cut",
+    "category": "Public Safety",
+    "department": "Public Safety",
+    "description": "Cut: Police Department Equipment",
+    "amounts": {
+      "tier_1": 2000,
+      "tier_2": 2000,
+      "tier_3": 2000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Police Department Equipment Cut",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "public_safety_increase_fire_department_staffing",
+    "category": "Public Safety",
+    "department": "Public Safety",
+    "description": "Skip: Fire Department Staffing increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 148000,
+      "tier_3": 444000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Fire Department Staffing",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "public_safety_restore_inspections_other_technical_subscripti",
+    "category": "Public Safety",
+    "department": "Public Safety",
+    "description": "Cut: Inspections Other Technical Subscriptions & Maintenance",
+    "amounts": {
+      "tier_1": 52500,
+      "tier_2": 52500,
+      "tier_3": 52500
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Inspections Other Technical Subscriptions & Maintenance Cuts",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "public_works_restore_department_of_public_works_staffing_cut",
+    "category": "Public Works",
+    "department": "Public Works",
+    "description": "Cut: Department of Public Works Staffing",
+    "amounts": {
+      "tier_1": 140594,
+      "tier_2": 140594,
+      "tier_3": 140594
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Department of Public Works Staffing Cuts",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "public_works_restore_department_of_public_works_hot_top_cuts",
+    "category": "Public Works",
+    "department": "Public Works",
+    "description": "Cut: Department of Public Works Hot Top",
+    "amounts": {
+      "tier_1": 60000,
+      "tier_2": 60000,
+      "tier_3": 60000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Department of Public Works Hot Top Cuts",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "public_works_increase_department_of_public_works_staffing_gi",
+    "category": "Public Works",
+    "department": "Public Works",
+    "description": "Skip: Department of Public Works Staffing GIS position increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 70000,
+      "tier_3": 70000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Department of Public Works Staffing GIS position",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "public_works_restore_cemetery_laborer_cut",
+    "category": "Public Works",
+    "department": "Public Works",
+    "description": "Cut: Cemetery Laborer",
+    "amounts": {
+      "tier_1": 58692,
+      "tier_2": 58692,
+      "tier_3": 58692
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Cemetery Laborer Cut",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "recreation_library_parks_restore_abbot_library_staffing_cuts",
+    "category": "Recreation Library Parks",
+    "department": "Recreation Library Parks",
+    "description": "Cut: Abbot Library Staffing cuts for accreditation",
+    "amounts": {
+      "tier_1": 311183,
+      "tier_2": 311183,
+      "tier_3": 311183
+    },
+    "type": "discrete",
+    "consequences": [
+      "mblc_decertification"
+    ],
+    "source_description": "Restore Abbot Library Staffing cuts for accreditation",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "recreation_library_parks_restore_abbot_library_staffing_cuts",
+    "category": "Recreation Library Parks",
+    "department": "Recreation Library Parks",
+    "description": "Cut: Abbot Library Staffing",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 218980,
+      "tier_3": 218980
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Abbot Library Staffing Cuts",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "recreation_library_parks_restore_abbot_library_materials",
+    "category": "Recreation Library Parks",
+    "department": "Recreation Library Parks",
+    "description": "Cut: Abbot Library Materials",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 168400,
+      "tier_3": 168400
+    },
+    "type": "discrete",
+    "consequences": [
+      "mblc_mer_violation"
+    ],
+    "source_description": "Restore Abbot Library Materials",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "recreation_library_parks_increase_abbot_library_staffing_1_p",
+    "category": "Recreation Library Parks",
+    "department": "Recreation Library Parks",
+    "description": "Skip: Abbot Library Staffing 1 PT Custodian and 1 PT Assistant increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 38378,
+      "tier_3": 38378
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Abbot Library Staffing 1 PT Custodian and 1 PT Assistant",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "recreation_library_parks_restore_recreation_and_parks_ground",
+    "category": "Recreation Library Parks",
+    "department": "Recreation Library Parks",
+    "description": "Cut: Recreation and Parks Groundskeeper Staffing",
+    "amounts": {
+      "tier_1": 45000,
+      "tier_2": 45000,
+      "tier_3": 45000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Recreation and Parks Groundskeeper Staffing Cut",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "recreation_library_parks_increase_recreation_and_parks_staff",
+    "category": "Recreation Library Parks",
+    "department": "Recreation Library Parks",
+    "description": "Skip: Recreation and Parks Staffing 1 PT Senior Clerk increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 27000,
+      "tier_3": 27000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Recreation and Parks Staffing 1 PT Senior Clerk",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "recreation_library_parks_increase_recreation_and_parks_maint",
+    "category": "Recreation Library Parks",
+    "department": "Recreation Library Parks",
+    "description": "Skip: Recreation and Parks Maintenance increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 15000,
+      "tier_3": 15000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Recreation and Parks Maintenance",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "general_government_restore_finance_staffing_cut",
+    "category": "General Government",
+    "department": "General Government",
+    "description": "Cut: Finance Staffing",
+    "amounts": {
+      "tier_1": 68287,
+      "tier_2": 68287,
+      "tier_3": 68287
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Finance Staffing Cut",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "general_government_restore_finance_technology_and_training_c",
+    "category": "General Government",
+    "department": "General Government",
+    "description": "Cut: Finance Technology and Training",
+    "amounts": {
+      "tier_1": 58361,
+      "tier_2": 58361,
+      "tier_3": 58361
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Finance Technology and Training Cut",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "general_government_restore_finance_committee_reserve_fund_cu",
+    "category": "General Government",
+    "department": "General Government",
+    "description": "Cut: Finance Committee Reserve Fund",
+    "amounts": {
+      "tier_1": 26000,
+      "tier_2": 26000,
+      "tier_3": 26000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Finance Committee Reserve Fund Cut",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "general_government_increase_finance_staffing_it_director",
+    "category": "General Government",
+    "department": "General Government",
+    "description": "Skip: Finance Staffing - IT Director increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 150000,
+      "tier_3": 150000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Finance Staffing - IT Director",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "general_government_increase_finance_staffing_budget_analyst",
+    "category": "General Government",
+    "department": "General Government",
+    "description": "Skip: Finance Staffing - Budget Analyst increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 70000,
+      "tier_3": 70000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Finance Staffing - Budget Analyst",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "general_government_restore_hr_other_technical_advertising_su",
+    "category": "General Government",
+    "department": "General Government",
+    "description": "Cut: HR Other Technical Advertising Subscriptions",
+    "amounts": {
+      "tier_1": 11000,
+      "tier_2": 11000,
+      "tier_3": 11000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore HR Other Technical Advertising Subscriptions Cuts",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "general_government_restore_community_development_and_plannin",
+    "category": "General Government",
+    "department": "General Government",
+    "description": "Cut: Community Development and Planning Staffing",
+    "amounts": {
+      "tier_1": 137423,
+      "tier_2": 307975,
+      "tier_3": 307975
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Community Development and Planning Staffing Cut",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "general_government_increase_community_development_staffing_g",
+    "category": "General Government",
+    "department": "General Government",
+    "description": "Skip: Community Development Staffing - Grant Writer increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 0,
+      "tier_3": 70000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Community Development Staffing - Grant Writer",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "general_government_restore_town_clerk_special_clerk_staffing",
+    "category": "General Government",
+    "department": "General Government",
+    "description": "Cut: Town Clerk Special Clerk Staffing",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 66125,
+      "tier_3": 66125
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Town Clerk Special Clerk Staffing Cut",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "general_government_restore_public_buildings_custodians_staff",
+    "category": "General Government",
+    "department": "General Government",
+    "description": "Cut: Public Buildings Custodians Staffing",
+    "amounts": {
+      "tier_1": 122554,
+      "tier_2": 122554,
+      "tier_3": 122554
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Public Buildings Custodians Staffing Cuts",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "general_government_increase_public_buildings_maintenance",
+    "category": "General Government",
+    "department": "General Government",
+    "description": "Skip: Public Buildings Maintenance increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 450000,
+      "tier_3": 450000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Public Buildings Maintenance",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "health_and_human_services_restore_council_on_aging_staffing_",
+    "category": "Health and Human Services",
+    "department": "Health and Human Services",
+    "description": "Cut: Council on Aging Staffing",
+    "amounts": {
+      "tier_1": 76171,
+      "tier_2": 76171,
+      "tier_3": 76171
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Restore Council on Aging Staffing Cuts",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "health_and_human_services_increase_council_on_aging_staffing",
+    "category": "Health and Human Services",
+    "department": "Health and Human Services",
+    "description": "Skip: Council on Aging Staffing - PT Social Worker increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 45000,
+      "tier_3": 45000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Council on Aging Staffing - PT Social Worker",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "health_and_human_services_increase_council_on_aging_maintena",
+    "category": "Health and Human Services",
+    "department": "Health and Human Services",
+    "description": "Skip: Council on Aging Maintenance increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 15000,
+      "tier_3": 15000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Council on Aging Maintenance",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "health_and_human_services_increase_health_department_for_men",
+    "category": "Health and Human Services",
+    "department": "Health and Human Services",
+    "description": "Skip: Health Department for Mental Health Psychological Counseling increase",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 0,
+      "tier_3": 60000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Increase Health Department for Mental Health Psychological Counseling",
+    "effort": "low",
+    "in_town_plan": true
+  },
+  {
+    "id": "recurring_capital_recurring_capital_funding_leases_equipment",
+    "category": "Recurring Capital",
+    "department": "Recurring Capital",
+    "description": "Skip: Recurring Capital funding Leases Equipment and Buildings Articles",
+    "amounts": {
+      "tier_1": 0,
+      "tier_2": 0,
+      "tier_3": 1000000
+    },
+    "type": "discrete",
+    "consequences": [],
+    "source_description": "Recurring Capital funding Leases Equipment and Buildings Articles",
+    "effort": "low",
+    "in_town_plan": true
+  }
+]
