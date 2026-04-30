@@ -4333,6 +4333,17 @@ body.corp-page .corp-doc .note-caption {
   margin-top: 4px;
 }
 
+body.corp-page .corp-doc .properties-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0 24px;
+}
+
+body.corp-page .corp-doc .properties-list li {
+  margin: 0 0 0.7em;
+  text-align: left;
+}
+
 @media (max-width: 600px) {
   body.corp-page .corp-doc .kpi-strip {
     grid-template-columns: repeat(2, 1fr);
