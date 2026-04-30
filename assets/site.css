@@ -4327,6 +4327,12 @@ body.corp-page .corp-doc .signature {
   color: var(--text-muted);
 }
 
+body.corp-page .corp-doc .note-caption {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
 @media (max-width: 600px) {
   body.corp-page .corp-doc .kpi-strip {
     grid-template-columns: repeat(2, 1fr);
