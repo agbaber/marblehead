@@ -4146,3 +4146,196 @@ abbr.g:focus::after {
 .four-oh-four-links .btn-link {
   margin: 0;
 }
+
+/* ==========================================================================
+   Marblehead Corp page — scoped to body.corp-page only.
+   Berkshire-Hathaway-spartan financial-document register.
+   ========================================================================== */
+
+body.corp-page .corp-doc {
+  max-width: 720px;
+  margin: 32px auto 80px;
+  padding: 0 var(--gutter);
+  font-family: Georgia, "Times New Roman", "Liberation Serif", serif;
+  color: var(--text);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+body.corp-page .corp-doc p {
+  margin: 0 0 1em;
+  text-align: justify;
+  hyphens: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+body.corp-page .corp-doc h2.item-header {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0 8px;
+  margin: 24px 0 18px;
+}
+
+body.corp-page .corp-doc .item-header em {
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+body.corp-page .corp-doc .corp-cover {
+  text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 40px 0;
+  margin: 40px 0 56px;
+}
+
+body.corp-page .corp-doc .corp-cover .corp-name {
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+body.corp-page .corp-doc .corp-cover .corp-doc-type {
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 18px;
+}
+
+body.corp-page .corp-doc .corp-cover .corp-meta {
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin: 4px 0;
+}
+
+body.corp-page .corp-doc .kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+body.corp-page .corp-doc .kpi-strip .kpi {
+  background: var(--surface);
+  padding: 16px 12px;
+  text-align: center;
+}
+
+body.corp-page .corp-doc .kpi-strip .kpi-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  display: block;
+}
+
+body.corp-page .corp-doc .kpi-strip .kpi-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+  display: block;
+}
+
+body.corp-page .corp-doc table.corp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+  font-size: 0.94rem;
+  font-variant-numeric: tabular-nums;
+}
+
+body.corp-page .corp-doc table.corp-table th,
+body.corp-page .corp-doc table.corp-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--divider);
+  text-align: left;
+}
+
+body.corp-page .corp-doc table.corp-table th {
+  font-weight: 700;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+body.corp-page .corp-doc table.corp-table td.num,
+body.corp-page .corp-doc table.corp-table th.num {
+  text-align: right;
+  font-feature-settings: "tnum";
+}
+
+body.corp-page .corp-doc .risk-factor {
+  margin: 0 0 1em;
+  text-align: justify;
+}
+
+body.corp-page .corp-doc sup.fn {
+  font-size: 0.7em;
+  vertical-align: super;
+  line-height: 0;
+  margin-left: 1px;
+}
+
+body.corp-page .corp-doc .corp-notes {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+body.corp-page .corp-doc .corp-notes ol {
+  padding-left: 1.5em;
+  margin: 0;
+}
+
+body.corp-page .corp-doc .corp-notes ol li {
+  margin: 0 0 0.5em;
+  text-align: left;
+}
+
+body.corp-page .corp-doc .forward-looking {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--divider);
+}
+
+body.corp-page .corp-doc .signature {
+  margin-top: 24px;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+  body.corp-page .corp-doc .kpi-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body.corp-page .corp-doc {
+    font-size: 1rem;
+  }
+  body.corp-page .corp-doc p {
+    text-align: left;
+    hyphens: none;
+  }
+}
