@@ -178,15 +178,15 @@ async function testMarbleheadCorpLoads(page) {
     ? ok('Cover renders MARBLEHEAD CORP')
     : fail('Marblehead Corp cover', `.corp-name missing or wrong text: "${coverText}"`);
 
-  const riskFactors = await page.$$('.risk-factor');
+  const riskFactors = await page.$$('.risk-factors .risk-factor');
   riskFactors.length === 10
     ? ok('Item 1A renders 10 Risk Factors')
     : fail('Marblehead Corp Risk Factors', `expected 10, got ${riskFactors.length}`);
 
   const notes = await page.$$('.corp-notes ol li');
-  notes.length === 25
-    ? ok('Notes section renders 25 footnotes')
-    : fail('Marblehead Corp Notes', `expected 25, got ${notes.length}`);
+  notes.length === 31
+    ? ok('Notes section renders 31 footnotes')
+    : fail('Marblehead Corp Notes', `expected 31, got ${notes.length}`);
 }
 
 async function testStatsStrip(page) {
