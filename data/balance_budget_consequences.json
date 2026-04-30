@@ -59,7 +59,7 @@
   "cba_reopener_required": {
     "name": "Collective bargaining reopener required",
     "authority": "M.G.L. c. 32B; M.G.L. c. 150E (collective bargaining)",
-    "effect": "Health-insurance premium share is set in collective bargaining agreements. Lowering the town's share before contract expiration requires reopening the CBA with each affected union (teachers, public works, police, fire, town hall, etc.). Unions typically trade share concessions for offsetting wage increases. Hingham's move to 80/20 was paired with a roughly $16K bump to teacher base salary, materially reducing the town's net savings. Headline per-point savings on this slider do not reflect those wage trades.",
+    "effect": "Health-insurance premium share is set in collective bargaining agreements. Lowering the town's share before contract expiration requires reopening the CBA with each affected union (teachers, public works, police, fire, town hall, etc.). Unions typically trade share concessions for offsetting wage increases (Hingham's move to 80/20 was paired with a roughly $16K bump to teacher base salary). Beyond the wage trade, employees' out-of-pocket premium costs rise; recruitment and retention can suffer in hard-to-fill roles where total compensation is the deciding factor. Headline per-point savings on this slider do not reflect those trade-offs.",
     "links": [
       { "label": "M.G.L. c. 32B (municipal health insurance)", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIV/Chapter32B" },
       { "label": "M.G.L. c. 150E (public-employee bargaining)", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter150E" }

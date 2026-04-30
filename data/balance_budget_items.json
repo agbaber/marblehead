@@ -563,7 +563,7 @@
         "value": 8
       }
     ],
-    "note": "Each percentage point shifted to employees saves the town roughly $182K/year, derived from the FY26 employee-benefit appropriation ($15.1M at the current 83% share implies a total premium of about $18.2M; 1pp = ~$182K). Shifting share usually requires reopening the collective bargaining agreement. Hingham's 80/20 split was paired with a $16K bump to teacher base salary; the net town savings can be substantially less than the headline figure.",
+    "note": "Each percentage point shifted to employees saves the town roughly $182K/year, derived from the FY26 employee-benefit appropriation ($15.1M at the current 83% share implies a total premium of about $18.2M; 1pp = ~$182K). Real-world downsides: shifting share requires reopening the collective bargaining agreement; unions historically trade share for wages (Hingham's 80/20 was paired with a $16K teacher-base raise, materially reducing net town savings); employees' out-of-pocket premium costs rise; recruitment and retention can suffer for hard-to-fill roles where total compensation is the deciding factor.",
     "consequences": [
       {
         "threshold_gt": 0,
@@ -598,7 +598,7 @@
         "value": 1000000
       }
     ],
-    "note": "The town's no-override plan already draws on free cash. Using more is nonrecurring revenue against a recurring cost; every dollar here widens next year's gap by the same amount and pressures bond ratings.",
+    "note": "The town's no-override plan already draws on free cash. Real-world downsides: this is nonrecurring revenue against a recurring cost (every dollar here widens FY28's starting gap by the same amount); free-cash and stabilization balances drop, which both rating agencies and DLS treat as a credit-negative signal; the town has less room to absorb a surprise expense (storm, lawsuit, capital failure) without a special appropriation.",
     "consequences": [
       {
         "threshold_gt": 0,

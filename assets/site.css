@@ -4157,25 +4157,42 @@ abbr.g:focus::after {
 .bb-item-row {
   display: grid;
   grid-template-columns: 22px 1fr auto;
-  gap: 10px;
-  align-items: baseline;
-  padding: 8px 0;
+  gap: 12px;
+  align-items: start;
+  padding: 10px 0;
   border-top: 1px dashed var(--border);
 }
 .bb-item-row:first-of-type { border-top: none; }
 .bb-item-row input[type="checkbox"] {
-  margin: 2px 0 0;
+  margin: 4px 0 0;
   cursor: pointer;
   width: 18px;
   height: 18px;
 }
+.bb-item-row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
 .bb-item-row-name {
-  line-height: 1.45;
+  line-height: 1.4;
   cursor: pointer;
+  font-weight: 500;
+}
+.bb-item-row-impact {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+.bb-item-row-dollar {
+  margin-top: 2px;
 }
 @media (max-width: 600px) {
-  .bb-item-row { font-size: 14.5px; }
+  .bb-item-row { font-size: 14.5px; gap: 10px; }
   .bb-item-row-dollar { font-size: 14px; }
+  .bb-item-row-impact { font-size: 12px; }
 }
 .bb-item-row-flag {
   display: inline-block;

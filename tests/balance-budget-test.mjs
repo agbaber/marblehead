@@ -39,6 +39,9 @@ async function run() {
     const rows = await page.$$('.bb-item-row');
     rows.length >= 10 ? ok(`${rows.length} discrete checklist rows render`) : fail('Checklist rows', `expected >= 10, got ${rows.length}`);
 
+    const impacts = await page.$$('.bb-item-row-impact');
+    impacts.length === rows.length ? ok(`${impacts.length} service-impact lines render (one per item)`) : fail('Impact lines', `expected ${rows.length}, got ${impacts.length}`);
+
     const target = await page.textContent('[data-bind="target"]');
     target && target.includes('4,296,718') ? ok('No-override target is $4.30M') : fail('Target', `got "${target}"`);
 

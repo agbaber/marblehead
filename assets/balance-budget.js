@@ -34,6 +34,7 @@
 
   let itemsData = null;
   let consequencesData = null;
+  let impactsData = null;
 
   function formatUSD(n) {
     if (n === 0) return '$0';
@@ -67,12 +68,14 @@
   }
 
   async function loadData() {
-    const [itemsRes, consRes] = await Promise.all([
+    const [itemsRes, consRes, impactsRes] = await Promise.all([
       fetch('/data/balance_budget_items.json'),
-      fetch('/data/balance_budget_consequences.json')
+      fetch('/data/balance_budget_consequences.json'),
+      fetch('/data/balance_budget_impacts.json')
     ]);
     itemsData = await itemsRes.json();
     consequencesData = await consRes.json();
+    impactsData = await impactsRes.json();
   }
 
   function groupByCategory(items) {
@@ -102,6 +105,9 @@
       document.dispatchEvent(new CustomEvent('bb:statechange'));
     });
 
+    const textWrap = document.createElement('div');
+    textWrap.className = 'bb-item-row-text';
+
     const nameLabel = document.createElement('label');
     nameLabel.className = 'bb-item-row-name';
     nameLabel.htmlFor = 'bb-' + item.id;
@@ -109,16 +115,25 @@
     if (item.consequences && item.consequences.length > 0) {
       const flag = document.createElement('span');
       flag.className = 'bb-item-row-flag';
-      flag.title = 'Triggers a state-law or policy consequence';
+      flag.title = 'Triggers a state-law, contract, or rating-agency consequence';
       flag.setAttribute('aria-hidden', 'true');
       nameLabel.appendChild(flag);
+    }
+    textWrap.appendChild(nameLabel);
+
+    const impact = impactsData && impactsData[item.id];
+    if (impact) {
+      const impactEl = document.createElement('p');
+      impactEl.className = 'bb-item-row-impact';
+      impactEl.textContent = impact;
+      textWrap.appendChild(impactEl);
     }
 
     const dollar = document.createElement('span');
     dollar.className = 'bb-item-row-dollar';
     dollar.textContent = formatUSD(amount);
 
-    row.append(checkbox, nameLabel, dollar);
+    row.append(checkbox, textWrap, dollar);
     return row;
   }
 
