@@ -2,52 +2,57 @@
 title: "Balance the FY27 budget"
 scripts: [citations, deep-dive, balance-budget]
 og_title: "Balance the FY27 budget without the override"
-og_description: "Build your own FY27 cut plan against a selectable override tier target. See which state-law consequences your plan triggers, and how it compares to the Town Administrator's proposed no-override cuts."
+og_description: "Build your own FY27 plan: pick cuts, shift insurance share, draw on reserves, or pass an override tier. See which state-law and rating-agency consequences your plan triggers, and how it compares to the town's no-override cuts."
 og_url: https://marbleheaddata.org/balance-the-budget.html
 ---
-<h1>Balance the FY27 budget without the override</h1>
+<h1>Balance the FY27 budget</h1>
 
 <section class="bb-preamble">
-  <p>Each override tier adds permanent levy capacity over three years. The first-year slice (what the town actually draws in FY27) is shown as each tier's target below. Pick a tier, check the cuts you would make from that tier's restoration list, and see what falls out.</p>
+  <p>Pick a starting point: <strong>no override</strong> (close the full FY27 gap with cuts, lever changes, or one-time funds), or <strong>Tier 1, 2, or 3</strong> (the override fills part of the gap and you fill the rest). The target updates to show the dollars you still need to find.</p>
 
-  <p>Revenue is fixed to the no-override levy (Proposition 2&frac12; plus new growth). No fee toggles, no meals-tax toggles. The question is narrow on purpose: <em>what, specifically, would you cut?</em></p>
+  <p>Levers below include service cuts, deferred transfers, an employee/town health-insurance share shift, and one-time funds. Each lever lists its math and any state-law, rating-agency, or contract consequences it triggers.</p>
 </section>
 
-<section class="bb-tier-selector" aria-label="Select override tier">
-  <button type="button" class="bb-tier-btn" data-tier="1" aria-pressed="true">
+<section class="bb-tier-selector" aria-label="Select starting scenario">
+  <button type="button" class="bb-tier-btn" data-tier="0" aria-pressed="true">
+    <span class="bb-tier-label">No override</span>
+    <span class="bb-tier-target">FY27 gap: $4.30M</span>
+    <span class="bb-tier-context">close the full FY27 gap yourself</span>
+  </button>
+  <button type="button" class="bb-tier-btn" data-tier="1" aria-pressed="false">
     <span class="bb-tier-label">Tier 1</span>
     <span class="bb-tier-target">FY27 gap: $1.27M</span>
-    <span class="bb-tier-context">($9M total over 3 years)</span>
+    <span class="bb-tier-context">$9M total over 3 years</span>
   </button>
   <button type="button" class="bb-tier-btn" data-tier="2" aria-pressed="false">
     <span class="bb-tier-label">Tier 2</span>
     <span class="bb-tier-target">FY27 gap: $2.81M</span>
-    <span class="bb-tier-context">($12M total over 3 years)</span>
+    <span class="bb-tier-context">$12M total over 3 years</span>
   </button>
   <button type="button" class="bb-tier-btn" data-tier="3" aria-pressed="false">
     <span class="bb-tier-label">Tier 3</span>
     <span class="bb-tier-target">FY27 gap: $4.30M</span>
-    <span class="bb-tier-context">($15M total over 3 years)</span>
+    <span class="bb-tier-context">$15M total over 3 years</span>
   </button>
 </section>
 
 <section class="bb-status-bar" aria-live="polite">
   <div class="bb-status-target">
     <span class="bb-status-label">Target</span>
-    <span class="bb-status-value" data-bind="target">$1,269,564</span>
+    <span class="bb-status-value" data-bind="target">$4,296,718</span>
   </div>
   <div class="bb-status-cuts">
-    <span class="bb-status-label">Your cuts</span>
+    <span class="bb-status-label">Your plan</span>
     <span class="bb-status-value" data-bind="cuts">$0</span>
   </div>
   <div class="bb-status-gap">
     <span class="bb-status-label">Gap remaining</span>
-    <span class="bb-status-value" data-bind="gap">$1,269,564</span>
+    <span class="bb-status-value" data-bind="gap">$4,296,718</span>
   </div>
 </section>
 
 <div class="bb-layout">
-  <section class="bb-checklist" aria-label="Cuts checklist">
+  <section class="bb-checklist" aria-label="Levers checklist">
     <!-- Populated by balance-budget.js -->
   </section>
 

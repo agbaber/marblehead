@@ -55,5 +55,22 @@
       { "label": "M.G.L. c. 152", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter152" },
       { "label": "M.G.L. c. 41 s 111F", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section111F" }
     ]
+  },
+  "cba_reopener_required": {
+    "name": "Collective bargaining reopener required",
+    "authority": "M.G.L. c. 32B; M.G.L. c. 150E (collective bargaining)",
+    "effect": "Health-insurance premium share is set in collective bargaining agreements. Lowering the town's share before contract expiration requires reopening the CBA with each affected union (teachers, public works, police, fire, town hall, etc.). Unions typically trade share concessions for offsetting wage increases. Hingham's move to 80/20 was paired with a roughly $16K bump to teacher base salary, materially reducing the town's net savings. Headline per-point savings on this slider do not reflect those wage trades.",
+    "links": [
+      { "label": "M.G.L. c. 32B (municipal health insurance)", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIV/Chapter32B" },
+      { "label": "M.G.L. c. 150E (public-employee bargaining)", "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter150E" }
+    ]
+  },
+  "nonrecurring_widens_fy28_gap": {
+    "name": "Nonrecurring funds widen next year's gap",
+    "authority": "DLS best-practice guidance; Moody's / S&P credit criteria",
+    "effect": "One-time funds (free cash, stabilization, reserves) used to cover recurring expenses produce a structural deficit that grows each year the practice continues. Massachusetts Department of Local Services and the rating agencies treat sustained reliance on nonrecurring revenue as a credit-negative signal. Each dollar drawn here widens the FY28 starting gap by the same amount.",
+    "links": [
+      { "label": "DLS Best Practices", "url": "https://www.mass.gov/lists/dls-best-practices" }
+    ]
   }
 }

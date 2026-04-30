@@ -441,9 +441,9 @@
   },
   {
     "id": "other_general_government_restore_town_portion_of_opeb_transf",
-    "category": "Other General Government",
+    "category": "Deferrals and transfers",
     "department": "Other General Government",
-    "description": "Cut: Town Portion of OPEB Transfer",
+    "description": "Skip OPEB trust transfer",
     "amounts": {
       "tier_1": 96771,
       "tier_2": 96771,
@@ -457,9 +457,9 @@
   },
   {
     "id": "other_general_government_restore_stabilization_transfer",
-    "category": "Other General Government",
+    "category": "Deferrals and transfers",
     "department": "Other General Government",
-    "description": "Cut: Stabilization Transfer",
+    "description": "Skip Stabilization Fund transfer",
     "amounts": {
       "tier_1": 250000,
       "tier_2": 250000,
@@ -473,9 +473,9 @@
   },
   {
     "id": "other_general_government_restore_workers_comp_and_section_11",
-    "category": "Other General Government",
+    "category": "Deferrals and transfers",
     "department": "Other General Government",
-    "description": "Cut: Workers Comp and Section 111F Transfer",
+    "description": "Reduce Workers Comp / Section 111F transfer",
     "amounts": {
       "tier_1": 97662,
       "tier_2": 97662,
@@ -507,6 +507,8 @@
     "department": "Schools",
     "description": "Your FY27 school cut",
     "type": "scalar",
+    "unit": "dollars",
+    "savings_per_unit": 1,
     "default": 1500000,
     "presets": [
       {
@@ -526,6 +528,7 @@
         "value": 0
       }
     ],
+    "note": "No override tier restores school funding in FY27. The $1.5M cut happens at every tier this year; tier restorations begin in FY28. Change this number to model cutting schools more or less than the town proposed.",
     "consequences": [
       {
         "threshold_gt": 21894870,
@@ -533,5 +536,75 @@
       }
     ],
     "source_description": "FY27 Proposed Budget No Override: schools line cut $1,500,000 from $49,120,287 (FY26) to $47,620,287 (FY27). NSS-floor threshold derived from DESE FY27 Chapter 70 district summary: Required Local Contribution $27,225,417; safe cut from FY26 baseline = $49,120,287 - $27,225,417 = $21,894,870."
+  },
+  {
+    "id": "insurance_share",
+    "category": "Health insurance",
+    "department": "Town-wide",
+    "description": "Shift health insurance share toward employees (currently 83% town / 17% employee)",
+    "type": "scalar",
+    "unit": "percentage_points",
+    "savings_per_unit": 182000,
+    "default": 0,
+    "min": 0,
+    "max": 8,
+    "step": 1,
+    "presets": [
+      {
+        "label": "No change (83/17)",
+        "value": 0
+      },
+      {
+        "label": "80/20 (Hingham)",
+        "value": 3
+      },
+      {
+        "label": "75/25",
+        "value": 8
+      }
+    ],
+    "note": "Each percentage point shifted to employees saves the town roughly $182K/year, derived from the FY26 employee-benefit appropriation ($15.1M at the current 83% share implies a total premium of about $18.2M; 1pp = ~$182K). Shifting share usually requires reopening the collective bargaining agreement. Hingham's 80/20 split was paired with a $16K bump to teacher base salary; the net town savings can be substantially less than the headline figure.",
+    "consequences": [
+      {
+        "threshold_gt": 0,
+        "id": "cba_reopener_required"
+      }
+    ],
+    "source_description": "FY26 employee benefits ~$15.1M (per memorialized FinCom briefing). Current employer share 83% per town HR. Implied total premium $15.1M / 0.83 = $18.2M; per-percentage-point shift = ~$182K."
+  },
+  {
+    "id": "extra_one_time",
+    "category": "One-time funds",
+    "department": "Town-wide",
+    "description": "Use additional one-time funds (free cash, reserves) above the town's plan",
+    "type": "scalar",
+    "unit": "dollars",
+    "savings_per_unit": 1,
+    "default": 0,
+    "min": 0,
+    "max": 2000000,
+    "step": 50000,
+    "presets": [
+      {
+        "label": "$0",
+        "value": 0
+      },
+      {
+        "label": "$500K",
+        "value": 500000
+      },
+      {
+        "label": "$1M",
+        "value": 1000000
+      }
+    ],
+    "note": "The town's no-override plan already draws on free cash. Using more is nonrecurring revenue against a recurring cost; every dollar here widens next year's gap by the same amount and pressures bond ratings.",
+    "consequences": [
+      {
+        "threshold_gt": 0,
+        "id": "nonrecurring_widens_fy28_gap"
+      }
+    ],
+    "source_description": "FY27 Proposed Budget No Override identifies one-time funding sources used by the town. Additional draws above that baseline are at the user's discretion and are flagged as nonrecurring."
   }
 ]

@@ -28,25 +28,52 @@ async function run() {
     h1 && h1.includes('Balance') ? ok('H1 renders') : fail('H1', `got "${h1}"`);
 
     const tierBtns = await page.$$('.bb-tier-btn');
-    tierBtns.length === 3 ? ok('3 tier buttons') : fail('Tier buttons', `expected 3, got ${tierBtns.length}`);
+    tierBtns.length === 4 ? ok('4 scenario buttons (No override + 3 tiers)') : fail('Tier buttons', `expected 4, got ${tierBtns.length}`);
+
+    // Default tier is "No override" (data-tier="0").
+    const defaultPressed = await page.getAttribute('.bb-tier-btn[data-tier="0"]', 'aria-pressed');
+    defaultPressed === 'true' ? ok('No-override is the default') : fail('Default tier', `got aria-pressed="${defaultPressed}"`);
 
     // Wait for data fetch + initial render.
     await page.waitForSelector('.bb-item-row', { timeout: 5000 });
     const rows = await page.$$('.bb-item-row');
-    rows.length >= 10 ? ok(`${rows.length} checklist rows render`) : fail('Checklist rows', `expected >= 10, got ${rows.length}`);
+    rows.length >= 10 ? ok(`${rows.length} discrete checklist rows render`) : fail('Checklist rows', `expected >= 10, got ${rows.length}`);
 
     const target = await page.textContent('[data-bind="target"]');
-    target && target.includes('1,269,564') ? ok('Tier 1 target shown') : fail('Target', `got "${target}"`);
+    target && target.includes('4,296,718') ? ok('No-override target is $4.30M') : fail('Target', `got "${target}"`);
 
-    // Schools scalar default contributes $1.5M to cuts on initial render.
+    // Schools scalar default contributes $1.5M to "your plan" on initial render.
     const cutsInitial = await page.textContent('[data-bind="cuts"]');
-    cutsInitial && cutsInitial.includes('1,500,000') ? ok('Schools scalar default included in cuts') : fail('Initial cuts', `got "${cutsInitial}"`);
+    cutsInitial && cutsInitial.includes('1,500,000') ? ok('Schools scalar default included in plan') : fail('Initial plan', `got "${cutsInitial}"`);
 
-    // Check a checkbox; cuts total should rise.
+    // Insurance share lever exists.
+    const insuranceInput = await page.$('#bb-insurance_share');
+    insuranceInput ? ok('Insurance share lever present') : fail('Insurance share', 'not found');
+
+    // One-time funds lever exists.
+    const oneTimeInput = await page.$('#bb-extra_one_time');
+    oneTimeInput ? ok('One-time funds lever present') : fail('One-time funds', 'not found');
+
+    // Bumping insurance share triggers savings hint and CBA consequence.
+    if (insuranceInput) {
+      await insuranceInput.fill('3');
+      await insuranceInput.dispatchEvent('input');
+      await page.waitForTimeout(150);
+      const cuts = await page.textContent('[data-bind="cuts"]');
+      // 3pp × $182K = $546K, plus existing $1.5M = $2,046,000
+      cuts && cuts.includes('2,046,000') ? ok('Insurance share +3pp adds $546K to plan') : fail('Insurance share contribution', `got plan total "${cuts}"`);
+      const consText = await page.textContent('.bb-consequences-list');
+      (consText && consText.includes('Collective bargaining')) ? ok('CBA reopener consequence triggers when share shifted') : fail('CBA consequence', `got "${consText && consText.slice(0, 60)}"`);
+      await insuranceInput.fill('0');
+      await insuranceInput.dispatchEvent('input');
+      await page.waitForTimeout(100);
+    }
+
+    // Check a discrete checkbox; cuts total should rise.
     await page.check('.bb-item-row input[type="checkbox"]', { force: true });
     await page.waitForTimeout(150);
     const cutsAfter = await page.textContent('[data-bind="cuts"]');
-    cutsAfter && cutsAfter !== cutsInitial ? ok('Cuts total updates on check') : fail('Cuts update', `got "${cutsAfter}"`);
+    cutsAfter && cutsAfter !== cutsInitial ? ok('Plan total updates on check') : fail('Plan update', `got "${cutsAfter}"`);
 
     // Switching tier prompts confirm; accept the dialog.
     page.once('dialog', d => d.accept());
@@ -55,22 +82,22 @@ async function run() {
     const tier2Target = await page.textContent('[data-bind="target"]');
     tier2Target && tier2Target.includes('2,805,236') ? ok('Tier 2 switch updates target') : fail('Tier 2 switch', `got "${tier2Target}"`);
 
-    // Schools scalar input present and editable.
+    // Schools scalar still present after tier switch.
     const schoolsInput = await page.$('#bb-schools_cut');
-    schoolsInput ? ok('Schools scalar present') : fail('Schools scalar', 'not found');
+    schoolsInput ? ok('Schools scalar present after tier switch') : fail('Schools scalar', 'not found');
     if (schoolsInput) {
       // Enter a cut large enough to trigger NSS floor (> $21,894,870).
       await schoolsInput.fill('25000000');
       await schoolsInput.dispatchEvent('input');
       await page.waitForTimeout(200);
       const cuts = await page.textContent('[data-bind="cuts"]');
-      cuts && cuts.includes('25,') ? ok('Schools scalar updates cuts total') : fail('Schools scalar update', `got "${cuts}"`);
+      cuts && cuts.includes('25,') ? ok('Schools scalar updates plan total') : fail('Schools scalar update', `got "${cuts}"`);
 
       const count = await page.textContent('[data-bind="consequence-count"]');
       Number(count) >= 1 ? ok('NSS consequence triggers above threshold') : fail('NSS consequence', `count=${count}`);
     }
 
-    // Reset clears plan; cuts return to default $1.5M.
+    // Reset clears plan; cuts return to default $1.5M (schools).
     await page.click('.bb-reset');
     await page.waitForTimeout(150);
     const cutsReset = await page.textContent('[data-bind="cuts"]');

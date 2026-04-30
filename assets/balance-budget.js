@@ -3,12 +3,16 @@
  *
  * Loads data/balance_budget_items.json and
  * data/balance_budget_consequences.json, renders a per-category
- * checklist with per-tier dollar amounts, and exposes window.__bbState
+ * checklist of discrete and scalar levers, and exposes window.__bbState
  * for the status bar, consequences engine, and success state.
+ *
+ * Tier 0 ("No override") is the default: target is the full FY27
+ * override-equivalent gap ($4.30M), and the user closes it via cuts,
+ * deferrals, share shifts, or one-time funds.
  *
  * Markup contract: section.bb-checklist is populated with
  * section.bb-category > div.bb-item-row for each item. section.bb-tier-
- * selector carries three buttons with data-tier="1|2|3".
+ * selector carries four buttons with data-tier="0|1|2|3".
  *
  * Pages without section.bb-checklist are early-returned.
  */
@@ -19,13 +23,13 @@
   const checklist = document.querySelector('.bb-checklist');
   if (!checklist) return;
 
-  const TIER_TARGETS = { 1: 1269564, 2: 2805236, 3: 4296718 };
-  const SCHOOLS_DEFAULT = 1500000;
+  const TIER_TARGETS = { 0: 4296718, 1: 1269564, 2: 2805236, 3: 4296718 };
+  const DEFAULT_TIER = 0;
 
   const state = {
-    tier: 1,
+    tier: DEFAULT_TIER,
     checkedIds: new Set(),
-    schoolsCut: SCHOOLS_DEFAULT
+    scalars: {}
   };
 
   let itemsData = null;
@@ -36,6 +40,30 @@
     const sign = n < 0 ? '-' : '';
     const abs = Math.abs(n);
     return sign + '$' + abs.toLocaleString('en-US');
+  }
+
+  function tierKey() {
+    return state.tier === 0 ? 'tier_3' : `tier_${state.tier}`;
+  }
+
+  function scalarDefault(item) {
+    return typeof item.default === 'number' ? item.default : 0;
+  }
+
+  function scalarSavings(item) {
+    const v = state.scalars[item.id];
+    if (typeof v !== 'number' || isNaN(v)) return 0;
+    const per = typeof item.savings_per_unit === 'number' ? item.savings_per_unit : 1;
+    return v * per;
+  }
+
+  function initScalarDefaults() {
+    if (!itemsData) return;
+    for (const item of itemsData) {
+      if (item.type === 'scalar') {
+        state.scalars[item.id] = scalarDefault(item);
+      }
+    }
   }
 
   async function loadData() {
@@ -57,7 +85,7 @@
   }
 
   function renderDiscreteRow(item) {
-    const amount = item.amounts[`tier_${state.tier}`];
+    const amount = item.amounts[tierKey()];
     if (amount <= 0) return null;
 
     const row = document.createElement('div');
@@ -82,6 +110,7 @@
       const flag = document.createElement('span');
       flag.className = 'bb-item-row-flag';
       flag.title = 'Triggers a state-law or policy consequence';
+      flag.setAttribute('aria-hidden', 'true');
       nameLabel.appendChild(flag);
     }
 
@@ -97,26 +126,54 @@
     const row = document.createElement('div');
     row.className = 'bb-scalar-row';
 
-    const label = document.createElement('label');
-    label.textContent = item.description + ': $';
-    label.htmlFor = 'bb-' + item.id;
+    const labelWrap = document.createElement('div');
+    labelWrap.className = 'bb-scalar-label';
+    const labelText = document.createElement('label');
+    labelText.htmlFor = 'bb-' + item.id;
+    labelText.textContent = item.description;
+    labelWrap.appendChild(labelText);
+
+    const inputWrap = document.createElement('div');
+    inputWrap.className = 'bb-scalar-input';
+
+    const isPct = item.unit === 'percentage_points';
+    const prefix = isPct ? '+' : '$';
+    const suffix = isPct ? ' pp' : '';
+
+    const prefixSpan = document.createElement('span');
+    prefixSpan.className = 'bb-scalar-affix';
+    prefixSpan.textContent = prefix;
 
     const input = document.createElement('input');
     input.id = 'bb-' + item.id;
     input.type = 'number';
-    input.min = '0';
-    input.step = '10000';
-    input.value = String(state.schoolsCut);
+    if (typeof item.min === 'number') input.min = String(item.min);
+    if (typeof item.max === 'number') input.max = String(item.max);
+    input.step = String(item.step != null ? item.step : (isPct ? 1 : 10000));
+    input.value = String(state.scalars[item.id] != null ? state.scalars[item.id] : scalarDefault(item));
     input.addEventListener('input', () => {
       const v = Number(input.value);
-      state.schoolsCut = isNaN(v) ? 0 : v;
+      state.scalars[item.id] = isNaN(v) ? 0 : v;
+      updateLiveSavingsHint(item, savingsHint);
       document.dispatchEvent(new CustomEvent('bb:statechange'));
     });
 
-    row.append(label, input);
+    inputWrap.append(prefixSpan, input);
+    if (suffix) {
+      const suffixSpan = document.createElement('span');
+      suffixSpan.className = 'bb-scalar-affix';
+      suffixSpan.textContent = suffix;
+      inputWrap.appendChild(suffixSpan);
+    }
+
+    const savingsHint = document.createElement('span');
+    savingsHint.className = 'bb-scalar-savings';
+    updateLiveSavingsHint(item, savingsHint);
+
+    row.append(labelWrap, inputWrap, savingsHint);
 
     if (item.presets && item.presets.length) {
-      const presetsWrap = document.createElement('span');
+      const presetsWrap = document.createElement('div');
       presetsWrap.className = 'bb-scalar-presets';
       for (const p of item.presets) {
         const btn = document.createElement('button');
@@ -125,7 +182,8 @@
         btn.textContent = p.label;
         btn.addEventListener('click', () => {
           input.value = String(p.value);
-          state.schoolsCut = p.value;
+          state.scalars[item.id] = p.value;
+          updateLiveSavingsHint(item, savingsHint);
           document.dispatchEvent(new CustomEvent('bb:statechange'));
         });
         presetsWrap.appendChild(btn);
@@ -133,12 +191,24 @@
       row.appendChild(presetsWrap);
     }
 
-    const note = document.createElement('p');
-    note.className = 'bb-scalar-note';
-    note.textContent = "No override tier restores school funding in FY27. The $1.5M cut happens at every tier this year; tier restorations begin in FY28. Change this number to model cutting schools more or less than the town proposed.";
-    row.appendChild(note);
+    if (item.note) {
+      const note = document.createElement('p');
+      note.className = 'bb-scalar-note';
+      note.textContent = item.note;
+      row.appendChild(note);
+    }
 
     return row;
+  }
+
+  function updateLiveSavingsHint(item, span) {
+    if (!span) return;
+    const v = state.scalars[item.id];
+    if (item.savings_per_unit && item.savings_per_unit !== 1 && v) {
+      span.textContent = '≈ ' + formatUSD(v * item.savings_per_unit);
+    } else {
+      span.textContent = '';
+    }
   }
 
   function renderChecklist() {
@@ -164,6 +234,22 @@
     }
   }
 
+  function isPlanDirty() {
+    if (state.checkedIds.size > 0) return true;
+    if (!itemsData) return false;
+    for (const item of itemsData) {
+      if (item.type === 'scalar' && state.scalars[item.id] !== scalarDefault(item)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function resetPlan() {
+    state.checkedIds.clear();
+    initScalarDefaults();
+  }
+
   function initTierSelector() {
     const btns = document.querySelectorAll('.bb-tier-btn');
     btns.forEach(btn => {
@@ -171,14 +257,12 @@
         const newTier = Number(btn.dataset.tier);
         if (newTier === state.tier) return;
 
-        const dirty = state.checkedIds.size > 0 || state.schoolsCut !== SCHOOLS_DEFAULT;
-        if (dirty) {
-          const ok = window.confirm('Switching tier will reset your plan. Continue?');
+        if (isPlanDirty()) {
+          const ok = window.confirm('Switching scenario will reset your plan. Continue?');
           if (!ok) return;
         }
         state.tier = newTier;
-        state.checkedIds.clear();
-        state.schoolsCut = SCHOOLS_DEFAULT;
+        resetPlan();
         btns.forEach(b => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
         renderChecklist();
         document.dispatchEvent(new CustomEvent('bb:statechange'));
@@ -190,8 +274,7 @@
     const reset = document.querySelector('.bb-reset');
     if (!reset) return;
     reset.addEventListener('click', () => {
-      state.checkedIds.clear();
-      state.schoolsCut = SCHOOLS_DEFAULT;
+      resetPlan();
       renderChecklist();
       document.dispatchEvent(new CustomEvent('bb:statechange'));
     });
@@ -205,14 +288,15 @@
       if (!itemsData) return 0;
       for (const item of itemsData) {
         if (item.type === 'discrete' && state.checkedIds.has(item.id)) {
-          total += item.amounts[`tier_${state.tier}`];
+          total += item.amounts[tierKey()] || 0;
+        } else if (item.type === 'scalar') {
+          total += scalarSavings(item);
         }
       }
-      total += state.schoolsCut;
       return total;
     },
     getCheckedIds: () => new Set(state.checkedIds),
-    getSchoolsCut: () => state.schoolsCut,
+    getScalar: id => state.scalars[id],
     getItems: () => itemsData,
     getConsequences: () => consequencesData
   };
@@ -231,7 +315,7 @@
 
     if (elTarget) elTarget.textContent = formatUSD(target);
     if (elCuts) elCuts.textContent = formatUSD(cuts);
-    if (elGap) elGap.textContent = gap >= 0 ? formatUSD(gap) : formatUSD(-gap) + ' over target';
+    if (elGap) elGap.textContent = gap >= 0 ? formatUSD(gap) : formatUSD(-gap) + ' over';
 
     statusBar.classList.toggle('bb-balanced', gap <= 0);
   }
@@ -248,17 +332,16 @@
 
     for (const item of itemsData) {
       if (item.type === 'discrete') {
-        // Each discrete checkbox represents a cut the user is making.
-        // Consequences fire when the cut is made (item IS checked).
         if (state.checkedIds.has(item.id) && item.consequences) {
           for (const cid of item.consequences) triggered.add(cid);
         }
-      } else if (item.type === 'scalar') {
-        if (item.id === 'schools_cut' && item.consequences) {
-          for (const c of item.consequences) {
-            if (typeof c === 'object' && c.threshold_gt !== undefined && state.schoolsCut > c.threshold_gt) {
-              triggered.add(c.id);
-            }
+      } else if (item.type === 'scalar' && item.consequences) {
+        const v = state.scalars[item.id] || 0;
+        for (const c of item.consequences) {
+          if (typeof c === 'object' && c.threshold_gt !== undefined && v > c.threshold_gt) {
+            triggered.add(c.id);
+          } else if (typeof c === 'string') {
+            if (v > 0) triggered.add(c);
           }
         }
       }
@@ -276,7 +359,7 @@
     if (triggered.length === 0) {
       const empty = document.createElement('p');
       empty.className = 'bb-consequence-empty';
-      empty.textContent = 'No mandate or rating-agency consequences triggered by the current plan.';
+      empty.textContent = 'No mandate, contract, or rating-agency consequences triggered by the current plan.';
       consequencesList.appendChild(empty);
       return;
     }
@@ -312,7 +395,7 @@
           a.target = '_blank';
           a.rel = 'noopener';
           links.appendChild(a);
-          if (i < cons.links.length - 1) links.appendChild(document.createTextNode(' \u00b7 '));
+          if (i < cons.links.length - 1) links.appendChild(document.createTextNode(' · '));
         });
         card.appendChild(links);
       }
@@ -326,36 +409,6 @@
   // ── Success state ──
   const successSection = document.querySelector('.bb-success');
 
-  function townPlanCutsForTier() {
-    // The town's no-override plan = every restoration the override would
-    // fund at this tier is being cut, plus the $1.5M schools cut. We
-    // model that as "all discrete items at this tier are checked".
-    const townChecked = new Set();
-    let townTotal = 0;
-    for (const item of itemsData) {
-      if (item.type === 'discrete') {
-        const amount = item.amounts[`tier_${state.tier}`];
-        if (amount > 0) {
-          townChecked.add(item.id);
-          townTotal += amount;
-        }
-      }
-    }
-    townTotal += SCHOOLS_DEFAULT;
-    return { townChecked, townTotal };
-  }
-
-  function sumAmounts(ids) {
-    let total = 0;
-    const byId = new Map(itemsData.filter(i => i.type === 'discrete').map(i => [i.id, i]));
-    for (const id of ids) {
-      const item = byId.get(id);
-      if (!item) continue;
-      total += item.amounts[`tier_${state.tier}`];
-    }
-    return total;
-  }
-
   function renderSuccess() {
     if (!successSection) return;
     const target = TIER_TARGETS[state.tier];
@@ -366,59 +419,47 @@
       return;
     }
 
-    const { townChecked, townTotal } = townPlanCutsForTier();
-    const userChecked = state.checkedIds;
+    const itemsByCategory = groupByCategory(itemsData);
+    const categoryRows = [];
+    for (const [category, items] of itemsByCategory) {
+      let categoryTotal = 0;
+      for (const item of items) {
+        if (item.type === 'discrete' && state.checkedIds.has(item.id)) {
+          categoryTotal += item.amounts[tierKey()] || 0;
+        } else if (item.type === 'scalar') {
+          categoryTotal += scalarSavings(item);
+        }
+      }
+      if (categoryTotal > 0) {
+        categoryRows.push({ category, total: categoryTotal });
+      }
+    }
 
-    const overlapIds = Array.from(userChecked).filter(id => townChecked.has(id));
-    const userCutTownDidnt = Array.from(userChecked).filter(id => !townChecked.has(id));
-    const userKeptTownCut = Array.from(townChecked).filter(id => !userChecked.has(id));
+    const rowsHtml = categoryRows.map(r =>
+      `<tr><th scope="row">${r.category}</th><td>${formatUSD(r.total)}</td></tr>`
+    ).join('');
 
-    const schoolsDelta = state.schoolsCut - SCHOOLS_DEFAULT;
-    const schoolsDeltaText = schoolsDelta === 0
-      ? ''
-      : ` (${schoolsDelta > 0 ? '+' : ''}${formatUSD(schoolsDelta)} vs town)`;
-
+    const tierLabel = state.tier === 0 ? 'no-override' : `Tier ${state.tier}`;
     successSection.hidden = false;
     successSection.innerHTML = `
-      <h2>Your plan closes the Tier ${state.tier} FY27 gap.</h2>
+      <h2>Your plan closes the ${tierLabel} FY27 gap.</h2>
+      <p class="bb-success-summary">Plan total: <strong>${formatUSD(cuts)}</strong> against a ${formatUSD(target)} target.</p>
       <div class="bb-success-comparison">
         <table>
           <thead>
-            <tr><th></th><th>Your plan</th><th>Town's no-override plan</th></tr>
+            <tr><th scope="col">Lever category</th><th scope="col">Your plan</th></tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Total cuts</th>
-              <td>${formatUSD(cuts)}</td>
-              <td>${formatUSD(townTotal)}</td>
-            </tr>
-            <tr>
-              <th scope="row">Schools cut</th>
-              <td>${formatUSD(state.schoolsCut)}${schoolsDeltaText}</td>
-              <td>${formatUSD(SCHOOLS_DEFAULT)}</td>
-            </tr>
-            <tr>
-              <th scope="row">Item cuts shared with town</th>
-              <td colspan="2">${overlapIds.length} items (${formatUSD(sumAmounts(overlapIds))})</td>
-            </tr>
-            <tr>
-              <th scope="row">Items you cut, town protected</th>
-              <td colspan="2">${userCutTownDidnt.length === 0 ? 'None' : userCutTownDidnt.length + ' items'}</td>
-            </tr>
-            <tr>
-              <th scope="row">Items you kept, town cut</th>
-              <td colspan="2">${userKeptTownCut.length === 0 ? 'None' : userKeptTownCut.length + ' items (' + formatUSD(sumAmounts(userKeptTownCut)) + ')'}</td>
-            </tr>
-          </tbody>
+          <tbody>${rowsHtml}</tbody>
         </table>
       </div>
-      <p class="bb-success-note">These are the legal, regulatory, and policy consequences of the plan above, not a judgment about whether the plan is good policy.</p>
+      <p class="bb-success-note">The consequences panel above lists the legal, regulatory, contractual, and rating-agency implications of every lever in this plan. Closing the gap on paper is not the same as closing it without trade-offs.</p>
     `;
   }
 
   document.addEventListener('bb:statechange', renderSuccess);
 
   loadData().then(() => {
+    initScalarDefaults();
     renderChecklist();
     initTierSelector();
     initResetButton();
