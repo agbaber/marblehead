@@ -204,7 +204,8 @@ body {
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: hidden; /* fallback for browsers without overflow: clip (pre-2022 Safari, etc.) */
+  overflow-x: clip;   /* avoids creating a scroll container, which would break position: sticky on descendants (e.g. balance-the-budget status bar) */
 }
 
 /* Paper texture + warm gradient on background */
