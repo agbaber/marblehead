@@ -39,60 +39,57 @@ Working from `docs/superpowers/specs/2026-05-01-school-age-vs-enrollment-design.
 
 ---
 
-### Task 1: DESE Selected Populations discovery
+### Task 1: DESE Selected Populations discovery — RESOLVED
 
-The spec flags this as a risk: I do not have direct verification that DESE publishes a clean machine-readable METCO time series for Marblehead going back to FY10. This task is short and resolves that risk before touching code that depends on the answer. **Do not skip.**
+This task was completed inline before subagent dispatch. Findings:
 
-**Files:** none created. Output is a written finding the next task uses.
+**Path chosen: A (Socrata).** Two MA DESE Socrata datasets used together:
 
-- [ ] **Step 1: Inspect the DESE district profile pages**
+1. **`t8td-gens` — "Enrollment: Grade, Race/Ethnicity, Gender, and Selected Populations"**
+   - Endpoint: `https://educationtocareer.data.mass.gov/resource/t8td-gens.json`
+   - Coverage: SY 1994 through SY 2026 (latest published).
+   - Fields used: `sy`, `dist_code`, `dist_name`, `org_type`, `total_cnt`.
+   - Filter for district-level rows: `org_type=District`.
+   - **Used for the total_enrollment cross-check only**, not directly plotted.
 
-Open in a browser (or `curl` the HTML):
-- `https://profiles.doe.mass.edu/profiles/general.aspx?orgcode=01710000&orgtypecode=5` (Marblehead district profile, current year)
-- `https://profiles.doe.mass.edu/statereport/selectedpopulations.aspx?orgcode=01710000&orgtypecode=5` (Selected Populations report)
+2. **`8xyg-59b2` — "Reasons for Student Enrollment by Town (Receiving)"**
+   - Endpoint: `https://educationtocareer.data.mass.gov/resource/8xyg-59b2.json`
+   - Coverage: SY 2014 through SY 2026 (13 years for Marblehead).
+   - Fields used: `sy`, `dist_code`, `enr_reason`, `town_name`, `enr_cnt`.
+   - This is the row-per-(reason × town) breakdown; aggregate to get district totals.
 
-Confirm three things:
+**Marblehead district code: `01680000`** (NOT `01710000` — that is Marshfield. The plan's earlier placeholder was wrong; corrected throughout).
 
-1. Does Selected Populations contain a row labeled "Non-Resident" or "METCO"? Take note of the exact label and whether METCO is its own line vs. part of "Non-Resident."
-2. Is there a year selector? What range of years is available?
-3. Does the page expose a "Download as CSV/Excel" link?
+**`sy` field semantics:** the academic-year-ending year. `sy=2024` means school year 2023-24, which is what Marblehead reports as FY24. The fetch script can treat `sy` as `fy_end_year` directly.
 
-- [ ] **Step 2: Look for a bulk multi-year data file**
+**Categorization logic:**
 
-DESE publishes some data via:
-- `https://www.doe.mass.edu/infoservices/reports/enroll/` — annual enrollment reports.
-- `educationtocareer.data.mass.gov` — Socrata API (used elsewhere in the repo, e.g. for DESE total educator FTE).
+For each (Marblehead district, school year) row in `8xyg-59b2`:
+- If `town_name == "Marblehead"`: count toward `mps_resident_enrollment` (regardless of enr_reason — this includes Resident/Member, parent-paid Tuitioned-In where the family lives in Marblehead, and Foreign Exchange students hosted by Marblehead families).
+- Elif `enr_reason == "METCO"`: count toward `metco`.
+- Else: count toward `other_nonresident` (school-choice tuitioned-in, in-state district agreements, etc., from non-Marblehead towns).
 
-Search Socrata for "selected populations" or "non-resident enrollment" datasets:
+`total_enrollment = mps_resident + metco + other_nonresident` and must match `t8td-gens` `total_cnt` for the same district + sy within ±1.
 
-```
-curl -s "https://educationtocareer.data.mass.gov/api/catalog/v1?q=non-resident&limit=10" | python3 -m json.tool | head -80
-curl -s "https://educationtocareer.data.mass.gov/api/catalog/v1?q=selected+populations&limit=10" | python3 -m json.tool | head -80
-```
+**FY24 ground truth (SY 2024) for Marblehead district `01680000`:**
 
-Record any dataset that includes per-district METCO counts by year.
+| Field | Count |
+|---|---|
+| total_enrollment | 2,617 |
+| mps_resident | 2,531 |
+| metco | 51 |
+| other_nonresident | 35 |
 
-- [ ] **Step 3: Pick a fetch path**
+This matches the existing chart's hard-coded FY24 value of 2,617 exactly.
 
-Decide one of:
-- **Path A (preferred): Socrata bulk dataset** — if a per-district, per-year METCO/non-resident dataset exists, use it. Note the resource ID (e.g., `j5ue-xkfn`).
-- **Path B: per-year district profile scrape** — if not, plan to iterate `https://profiles.doe.mass.edu/statereport/selectedpopulations.aspx?orgcode=01710000&orgtypecode=5&fycode=YYYY` for each fiscal year, parsing the HTML table.
-- **Path C: hand-compiled CSV** — if scraping is too brittle (e.g., schema changes mid-window), copy the 15 values manually from the per-year reports into the CSV. Slow but works.
+**Chart x-axis revision:** Original spec called for 2010-2024. Given:
+- ACS 5-year estimates are available for end-years 2010-2023.
+- DESE resident/METCO split is available for SY 2014-2026 (FY14-FY26).
+- DESE total enrollment is available for FY94+, but the resident split starts at FY14.
 
-Document the chosen path and any resource IDs / URL patterns in the next task's docstring.
+**Updated x-axis: 2014-2026 (13 years).** All three series have full coverage on this window with no gaps. School-age line uses ACS end-years 2014-2023 (10 points), with the line not extending to 2024-2026 (latest ACS not yet released; flag in caption). MPS resident and METCO lines use SY 2014-2026 (13 points).
 
-- [ ] **Step 4: Sanity-check FY24 METCO ground truth**
-
-Whatever path, find one trusted FY24 (SY 2023-24) METCO count for Marblehead. Possibilities:
-- DESE district profile "Selected Populations" shows it directly.
-- The `data/school_committee_2026-04-09_transcript.txt` and FY27 budget materials in `data/schools/` may quote the number.
-- METCO Inc.'s own annual report.
-
-Record the number. The fetch script's FY24 row must equal it within 1.
-
-- [ ] **Step 5: Commit nothing yet**
-
-This task produces only knowledge, no files.
+The existing FY01-FY24 chart above this new section provides the longer-arc enrollment context, so cropping the new section to FY14-FY26 loses no information on the page.
 
 ---
 
