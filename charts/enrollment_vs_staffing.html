@@ -4,10 +4,14 @@ scripts: [chart-tooltip]
 ---
 <style>
 .chart-label {
-    font-size: 12px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 1px; margin-bottom: 8px; padding-left: 2px;
-    color: var(--text-subtle);
-  }
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; margin: 28px 0 8px; padding-left: 2px;
+  color: var(--text-subtle);
+}
+.page h3 { margin-top: 28px; }
+.page h2 + p { margin-bottom: 18px; }
+.page .caption + .legend { margin-top: 4px; }
+.page .legend + .chart-wrapper { margin-top: 0; }
 #staffing-legend .legend-item { cursor: pointer; }
 #staffing-legend .legend-item--off { opacity: 0.3; }
 </style>
@@ -176,14 +180,13 @@ scripts: [chart-tooltip]
     FY15&ndash;FY24, all series indexed to FY15 = 100. Enrollment fell 19%. Of the three staffing measures, both <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> (state) measures decline (total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr> &minus;13.9%, classroom teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> &minus;4.3%). The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> (town) rises 9.6%, but its FY23 jump is a <a href="../inside-school-staffing.html#the-fy23-mystery">reporting error</a> flagged below.
   </p>
 
-  <details>
-    <summary>What each measure counts</summary>
-    <ul>
-      <li><strong><abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> education <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (490 &rarr; 537): From the town's annual financial reports. Counts all staff the town categorizes under "education," a broader definition than what the state tracks.</li>
-      <li><strong><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (501.8 &rarr; 431.8): From the state. Includes teachers, co-teachers, paraprofessionals, counselors, psychologists, administrators, and office staff reported by the schools.</li>
-      <li><strong><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (256.8 &rarr; 245.7): From the state. Only licensed classroom teachers (general education, special education, and English learner).</li>
-    </ul>
-  </details>
+  <h3>What each measure counts</h3>
+  <ul class="tldr">
+    <li><strong><abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> education <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (town financial report, 490 &rarr; 537): every education employee the town pays, on a broader definition than the state uses. Captures the total cost footprint.</li>
+    <li><strong><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (state, 501.8 &rarr; 431.8): teachers, paraprofessionals, counselors, psychologists, administrators, and office staff in school buildings.</li>
+    <li><strong><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (state, 256.8 &rarr; 245.7): only licensed classroom teachers (general education, special education, English learner).</li>
+  </ul>
+  <p>The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> and <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> totals should not be compared as if they measure the same thing. Use whichever fits the question: the <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> for cost footprint, the <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total for school-side staffing, the <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> teacher count for classroom instruction.</p>
 
   <h3>The FY23 ACFR jump is a reporting error</h3>
   <p>Between FY22 and FY23 the <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>'s education FTE jumped from 483 to 537, then held at exactly 537.0 for two years. Over the same window <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> shows a small <em>decline</em> (450 to 445). Asked about the discrepancy in 2026, the town's school finance office and <abbr class="g" title="Chief Financial Officer">CFO</abbr> attributed it to a reporting error by prior administrations, not 54 new hires. Strip the jump out and all three measures point the same direction. <a href="../inside-school-staffing.html#the-fy23-mystery">More on the discrepancy</a>.</p>
@@ -341,7 +344,6 @@ scripts: [chart-tooltip]
   </p>
 
   <div class="notes">
-    <p><strong>Which measure should I use?</strong> It depends on the question. The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> number captures the total cost footprint (every education employee the town pays, on a broader definition than the state uses). The <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total captures school-side staffing (people working in school buildings). The <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> teacher count captures classroom instruction specifically. The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> and <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> totals should not be directly compared as if they measure the same thing.</p>
     <p>Enrollment from <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> "Demographic and Economic Statistics" tables. May include or exclude charter school students depending on year.</p>
     <p><abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> education <abbr class="g" title="Full-Time Equivalent">FTE</abbr> from "Full-time Equivalent Town Employees by Function," education row. <abbr class="g" title="Full-Time Equivalent">FTE</abbr> counts part-time employees as fractions.</p>
     <p><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr> from the Education Personnel Information Management System (<abbr class="g" title="Education Personnel Information Management System">EPIMS</abbr>), accessed via the E2C Hub Socrata API at <code>educationtocareer.data.mass.gov/resource/j5ue-xkfn.json</code>. Raw data in <code>data/dese_total_educator_fte.csv</code>.</p>
