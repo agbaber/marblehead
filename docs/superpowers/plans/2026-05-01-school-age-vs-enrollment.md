@@ -134,7 +134,10 @@ import urllib.parse
 import urllib.request
 
 OUT_PATH = "data/acs_school_age_marblehead.csv"
-END_YEARS = list(range(2010, 2024))  # 2010..2023 inclusive
+# End-years 2014..2023 inclusive — aligns with the chart's 2014-2026 axis.
+# Earlier ACS vintages (2010-2013) exist but are not plotted; if you want them
+# for future use, extend this range. Each year is one Census API call.
+END_YEARS = list(range(2014, 2024))
 STATE = "25"
 COUNTY = "009"
 COUSUB = "38400"
@@ -231,7 +234,7 @@ chmod +x scripts/fetch_acs_school_age.py
 python3 scripts/fetch_acs_school_age.py
 ```
 
-Expected output: 14 lines like `  2010: 5-17 = 3168 (MOE +/- 184)` followed by `Wrote data/acs_school_age_marblehead.csv (14 rows)`. If a year fails (e.g., 2010 is sometimes geometry-borked), the script logs the error and skips it; that's acceptable — a missing year shows as a gap in the chart line.
+Expected output: 10 lines like `  2014: 5-17 = 3120 (MOE +/- 180)` followed by `Wrote data/acs_school_age_marblehead.csv (10 rows)`. If a year fails, the script logs the error and skips it; a missing year shows as a gap in the chart line.
 
 - [ ] **Step 3: Spot-check the latest year against data.census.gov**
 
@@ -262,23 +265,35 @@ ages 5-9, 10-14, and 15-17, with propagated margins of error."
 
 The script's exact body depends on the path chosen in Task 1. The structure below is for **Path A (Socrata)**. If Task 1 settled on Path B (HTML scrape) or Path C (hand-compiled), adapt the steps accordingly — the output CSV columns and the spot-check are the same.
 
-- [ ] **Step 1: Write the script (Socrata path)**
-
-Replace `<RESOURCE_ID>` with the dataset ID found in Task 1.
+- [ ] **Step 1: Write the script**
 
 ```python
 #!/usr/bin/env python3
-"""Fetch DESE Selected Populations / Enrollment for Marblehead.
+"""Fetch DESE enrollment-by-reason breakdown for Marblehead.
 
-Pulls per-school-year total enrollment, METCO non-resident, and other
-non-resident counts for the Marblehead district. Computes MPS resident
-enrollment as total - METCO - other.
+Pulls per-school-year row counts from DESE's "Reasons for Student Enrollment
+by Town (Receiving)" Socrata dataset, aggregates the (enr_reason, town_name)
+rows into three buckets, and cross-checks the resulting total against the
+"Enrollment: Grade, Race/Ethnicity, Gender, and Selected Populations" dataset.
 
 Output: data/dese_metco_nonresident.csv
-Source: <fill in URL pattern from Task 1>
+Sources:
+  - https://educationtocareer.data.mass.gov/resource/8xyg-59b2.json
+    (Reasons for Enrollment by Town - Receiving, SY 2014+)
+  - https://educationtocareer.data.mass.gov/resource/t8td-gens.json
+    (Enrollment Selected Populations - district totals, SY 1994+)
 
-DESE district code for Marblehead: 01710000.
-Years targeted: SY 2009-10 through SY 2023-24.
+DESE district code for Marblehead: 01680000.
+The `sy` field is the academic-year-ending year (sy=2024 means SY 2023-24,
+which Marblehead reports as FY24).
+
+Categorization (per enr_reason × town_name row):
+  - town_name == "Marblehead"    -> mps_resident
+  - enr_reason == "METCO"         -> metco
+  - else                          -> other_nonresident
+
+Total_enrollment = mps_resident + metco + other_nonresident, and must
+match `t8td-gens` total_cnt for the same district + sy within +/-1.
 """
 import csv
 import json
@@ -288,19 +303,12 @@ import urllib.parse
 import urllib.request
 
 OUT_PATH = "data/dese_metco_nonresident.csv"
-DISTRICT_CODE = "01710000"
-SCHOOL_YEARS = [
-    "2009-10", "2010-11", "2011-12", "2012-13", "2013-14",
-    "2014-15", "2015-16", "2016-17", "2017-18", "2018-19",
-    "2019-20", "2020-21", "2021-22", "2022-23", "2023-24",
-]
+DISTRICT_CODE = "01680000"
+SCHOOL_YEARS = [str(y) for y in range(2014, 2027)]  # 2014..2026 inclusive
 
-# Replace with the resource ID found in Task 1, e.g. "abcd-1234"
-SOCRATA_RESOURCE = "<RESOURCE_ID>"
-SOCRATA_BASE = (
-    f"https://educationtocareer.data.mass.gov/resource/"
-    f"{SOCRATA_RESOURCE}.json"
-)
+REASONS_RESOURCE = "8xyg-59b2"
+TOTALS_RESOURCE = "t8td-gens"
+SOCRATA_BASE = "https://educationtocareer.data.mass.gov/resource"
 
 HEADERS = [
     "school_year",
@@ -313,72 +321,81 @@ HEADERS = [
 ]
 
 
-def fetch_district_year(school_year: str) -> dict | None:
-    """Return one row from Socrata for Marblehead, given school year, or None."""
-    # Field names depend on the dataset; common patterns include
-    # `district_code`, `school_year`, `total`, `metco`, `non_resident`, etc.
-    # Inspect with: curl 'https://.../<RESOURCE>.json?$limit=1' | jq .
-    params = {
-        "$where": (
-            f"district_code='{DISTRICT_CODE}' AND school_year='{school_year}'"
-        ),
-        "$limit": "5",
-    }
-    url = f"{SOCRATA_BASE}?{urllib.parse.urlencode(params)}"
+def fetch_json(url: str):
     with urllib.request.urlopen(url, timeout=30) as resp:
-        rows = json.loads(resp.read().decode())
-    return rows[0] if rows else None
+        return json.loads(resp.read().decode())
 
 
-def parse_row(school_year: str, raw: dict) -> list:
-    """Map the Socrata row to our CSV columns. Fill in field names from Task 1."""
-    total = int(raw.get("total_enrollment") or raw.get("total") or 0)
-    metco = int(raw.get("metco") or raw.get("metco_students") or 0)
-    other = int(
-        raw.get("other_non_resident")
-        or raw.get("school_choice")
-        or 0
-    )
-    nonresident = metco + other
-    resident = total - nonresident
-    return [
-        school_year,
-        "Marblehead",
-        total,
-        metco,
-        other,
-        nonresident,
-        resident,
-    ]
+def fetch_reasons(sy: str):
+    params = {"dist_code": DISTRICT_CODE, "sy": sy, "$limit": "200"}
+    url = f"{SOCRATA_BASE}/{REASONS_RESOURCE}.json?{urllib.parse.urlencode(params)}"
+    return fetch_json(url)
+
+
+def fetch_district_total(sy: str):
+    params = {"dist_code": DISTRICT_CODE, "sy": sy, "org_type": "District"}
+    url = f"{SOCRATA_BASE}/{TOTALS_RESOURCE}.json?{urllib.parse.urlencode(params)}"
+    rows = fetch_json(url)
+    if not rows:
+        return None
+    return int(rows[0]["total_cnt"])
+
+
+def aggregate(rows: list) -> dict:
+    """Bucket rows into resident / metco / other_nonresident."""
+    resident = metco = other = 0
+    for r in rows:
+        cnt = int(r["enr_cnt"])
+        if r["town_name"] == "Marblehead":
+            resident += cnt
+        elif r["enr_reason"] == "METCO":
+            metco += cnt
+        else:
+            other += cnt
+    return {"resident": resident, "metco": metco, "other": other}
+
+
+def school_year_label(sy: str) -> str:
+    """sy=2024 -> '2023-24'."""
+    end = int(sy)
+    return f"{end - 1}-{str(end)[-2:]}"
 
 
 def main():
-    if SOCRATA_RESOURCE == "<RESOURCE_ID>":
-        print(
-            "ERROR: SOCRATA_RESOURCE is still a placeholder. "
-            "Fill in the resource ID from Task 1.",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-
-    rows = []
+    out_rows = []
     for sy in SCHOOL_YEARS:
         try:
-            raw = fetch_district_year(sy)
-            if raw is None:
-                print(f"  {sy}: no row found", file=sys.stderr)
+            raw = fetch_reasons(sy)
+            if not raw:
+                print(f"  SY {sy}: no rows in 8xyg-59b2", file=sys.stderr)
                 continue
-            row = parse_row(sy, raw)
+            agg = aggregate(raw)
+            total_check = fetch_district_total(sy)
+            total = agg["resident"] + agg["metco"] + agg["other"]
+            if total_check is not None and abs(total - total_check) > 1:
+                print(
+                    f"  SY {sy}: WARN total mismatch reasons={total} "
+                    f"vs t8td-gens={total_check}",
+                    file=sys.stderr,
+                )
             print(
-                f"  {sy}: total={row[2]} metco={row[3]} "
-                f"other={row[4]} resident={row[6]}",
+                f"  SY {sy}: total={total} resident={agg['resident']} "
+                f"metco={agg['metco']} other={agg['other']}",
                 flush=True,
             )
-            rows.append(row)
+            out_rows.append([
+                school_year_label(sy),
+                "Marblehead",
+                total,
+                agg["metco"],
+                agg["other"],
+                agg["metco"] + agg["other"],
+                agg["resident"],
+            ])
         except Exception as e:
-            print(f"  {sy}: FAILED ({e})", file=sys.stderr)
+            print(f"  SY {sy}: FAILED ({e})", file=sys.stderr)
 
-    if not rows:
+    if not out_rows:
         print("No rows fetched, refusing to write empty CSV.", file=sys.stderr)
         sys.exit(1)
 
@@ -386,35 +403,27 @@ def main():
     with open(OUT_PATH, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(HEADERS)
-        for r in rows:
+        for r in out_rows:
             w.writerow(r)
-    print(f"\nWrote {OUT_PATH} ({len(rows)} rows)")
+    print(f"\nWrote {OUT_PATH} ({len(out_rows)} rows)")
 
 
 if __name__ == "__main__":
     main()
 ```
 
-- [ ] **Step 2: Inspect one row of the Socrata dataset before running the full script**
-
-```bash
-curl -s "https://educationtocareer.data.mass.gov/resource/<RESOURCE_ID>.json?\$limit=1" | python3 -m json.tool
-```
-
-Look at the actual field names returned. Update `parse_row` if they differ from `total_enrollment`, `metco`, etc.
-
-- [ ] **Step 3: Run the script**
+- [ ] **Step 2: Run the script**
 
 ```bash
 chmod +x scripts/fetch_dese_selected_populations.py
 python3 scripts/fetch_dese_selected_populations.py
 ```
 
-Expected: 15 lines like `  2023-24: total=2617 metco=23 other=2 resident=2592` and a final `Wrote data/dese_metco_nonresident.csv (15 rows)`. Some early years may legitimately be missing — that's fine.
+Expected: 13 lines covering SY 2014..2026, ending with `Wrote data/dese_metco_nonresident.csv (13 rows)`. The SY 2024 line should read approximately `total=2617 resident=2531 metco=51 other=35`.
 
-- [ ] **Step 4: Verify the FY24 cross-check against the existing chart**
+- [ ] **Step 3: Verify the FY24 cross-check**
 
-The existing chart hard-codes `enrollment_FY24 = 2617` (line 28 of `charts/enrollment_vs_staffing.html`, value at index 23 of the values array). Confirm:
+The existing chart hard-codes the FY24 enrollment value `2617`. The new CSV's SY 2023-24 row must match exactly:
 
 ```bash
 python3 -c "
@@ -423,25 +432,26 @@ with open('data/dese_metco_nonresident.csv') as f:
     rows = list(csv.DictReader(f))
 sy24 = next(r for r in rows if r['school_year'] == '2023-24')
 total = int(sy24['total_enrollment'])
-print(f'CSV total for SY 2023-24: {total}')
-print(f'Existing chart FY24:       2617')
-print(f'Match: {total == 2617}')
+metco = int(sy24['metco'])
+resident = int(sy24['mps_resident_enrollment'])
+print(f'SY 2023-24: total={total} resident={resident} metco={metco}')
+print(f'Expected:   total=2617 resident=2531 metco=51')
+print(f'Match: total={total == 2617} resident={resident == 2531} metco={metco == 51}')
 "
 ```
 
-If not 2617 ±1, investigate. The DESE total enrollment number may differ slightly from the ACFR demographics number used in the existing chart (different snapshot date), but they should be within a handful of students. If they differ by more than 5, document the difference in the caption rather than ignoring it.
+All three should match. If not, investigate before continuing.
 
-Also verify Task 1's hand-confirmed FY24 METCO ground truth against `metco` in the SY 2023-24 row.
-
-- [ ] **Step 5: Commit**
+- [ ] **Step 4: Commit**
 
 ```bash
 git add scripts/fetch_dese_selected_populations.py data/dese_metco_nonresident.csv
-git commit -m "Add DESE Selected Populations fetch for Marblehead METCO/resident split
+git commit -m "Add DESE enrollment-by-reason fetch for Marblehead
 
-15 years of total enrollment, METCO non-resident, and other non-resident
-counts for the Marblehead district. Resident enrollment is total minus
-non-resident."
+13 years (SY 2014 through SY 2026) of total enrollment, METCO
+non-residents, and other non-residents for the Marblehead district.
+Resident enrollment is the count of MPS-enrolled students whose
+town of residence is Marblehead."
 ```
 
 ---
@@ -468,7 +478,7 @@ with open('data/acs_school_age_marblehead.csv') as f:
 dese = {}
 with open('data/dese_metco_nonresident.csv') as f:
     for r in csv.DictReader(f):
-        # SY 2023-24 -> end year 2024 (FY24)
+        # school_year '2023-24' -> end year 2024 (FY24)
         end_year = int(r['school_year'].split('-')[0]) + 1
         dese[end_year] = {
             'total': int(r['total_enrollment']),
@@ -476,8 +486,8 @@ with open('data/dese_metco_nonresident.csv') as f:
             'resident': int(r['mps_resident_enrollment']),
         }
 
-# X-axis: 2010..2024 (15 points). For ACS, label = end-year. For DESE, label = FY (= end of SY).
-years = list(range(2010, 2025))
+# X-axis: 2014..2026 (13 points). ACS only goes to 2023; missing years show as None.
+years = list(range(2014, 2027))
 print(f"{'year':<6}{'school_age':>12}{'mps_total':>12}{'metco':>8}{'mps_res':>10}")
 for y in years:
     a = acs.get(y, '-')
@@ -486,7 +496,7 @@ for y in years:
 EOF
 ```
 
-Inspect the output. Confirm the three series make sense (school-age in the 2,500-3,500 range, MPS resident slightly lower, METCO under ~50).
+Inspect the output. Confirm the three series make sense (school-age in the 2,500-3,500 range, MPS resident slightly lower, METCO ~30-80).
 
 - [ ] **Step 2: Compute SVG points**
 
@@ -513,7 +523,7 @@ with open('data/dese_metco_nonresident.csv') as f:
 
 # Chart geometry: viewBox 740x200, plot area x=70..610, y=30..170.
 # Same conventions as the FY15-FY24 staffing chart on this page.
-years = list(range(2010, 2025))
+years = list(range(2014, 2027))
 x_left, x_right = 70, 610
 y_top, y_bot = 30, 170
 
@@ -603,7 +613,7 @@ Insert this HTML immediately before `<div class="read-next">`. Replace the four 
   <div class="chart-wrapper" data-chart-tooltip>
     <script type="application/json" class="chart-tooltip-data">
     {
-      "xLabels": ["2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+      "xLabels": ["2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
       "xPositions": XXX_X_POSITIONS,
       "valueDecimals": 0,
       "series": [
@@ -654,12 +664,11 @@ Insert this HTML immediately before `<div class="read-next">`. Replace the four 
                 points="XXX_METCO_POINTS"/>
       <text class="end-label s-stoneham" x="616" y="XXX_METCO_END_Y">XXX_METCO_END_VAL</text>
 
-      <!-- X labels -->
-      <text class="tick-label tick-label--major" x="70"  y="190" text-anchor="middle">2010</text>
-      <text class="tick-label tick-label--minor" x="225" y="190" text-anchor="middle">2014</text>
-      <text class="tick-label tick-label--minor" x="380" y="190" text-anchor="middle">2018</text>
-      <text class="tick-label tick-label--minor" x="535" y="190" text-anchor="middle">2022</text>
-      <text class="tick-label tick-label--major" x="610" y="190" text-anchor="middle">2024</text>
+      <!-- X labels (13-year window 2014-2026, x positions computed in Task 4) -->
+      <text class="tick-label tick-label--major" x="70"  y="190" text-anchor="middle">2014</text>
+      <text class="tick-label tick-label--minor" x="250" y="190" text-anchor="middle">2018</text>
+      <text class="tick-label tick-label--minor" x="430" y="190" text-anchor="middle">2022</text>
+      <text class="tick-label tick-label--major" x="610" y="190" text-anchor="middle">2026</text>
     </svg>
   </div>
 
