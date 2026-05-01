@@ -6,7 +6,425 @@ og_description: "A short narrative primer on the FY27 Marblehead override and a 
 og_url: https://marbleheaddata.org/override-primer.html
 ---
 <style>
-  /* CSS goes here — added in Task 2 */
+  /* ============================================================
+     OVERRIDE PRIMER - page-scoped styles
+     All selectors prefixed with .primer to prevent leakage.
+     All colors via var(--c-*) so dark mode works.
+     ============================================================ */
+
+  .primer {
+    --primer-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --primer-rule: var(--divider);
+    --primer-rule-strong: var(--border);
+  }
+
+  /* ---------- HERO ---------- */
+  .primer-hero {
+    padding: 48px 0 36px;
+    border-bottom: 1px solid var(--primer-rule);
+    margin-bottom: 0;
+  }
+  .primer-hero-eyebrow {
+    font-family: var(--primer-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--c-buoy);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .primer-hero-eyebrow::after {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background: var(--c-buoy);
+    opacity: 0.4;
+  }
+  .primer-hero h1 {
+    font-size: clamp(32px, 5.5vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin: 0 0 18px;
+  }
+  .primer-hero-lead {
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    max-width: 620px;
+    margin: 0 0 32px;
+  }
+  .primer-hero-meta {
+    display: flex;
+    gap: 36px;
+    padding-top: 20px;
+    border-top: 1px solid var(--primer-rule);
+    flex-wrap: wrap;
+  }
+  .primer-hero-meta-item { display: flex; flex-direction: column; gap: 4px; }
+  .primer-hero-meta-label {
+    font-family: var(--primer-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+  .primer-hero-meta-value {
+    font-family: var(--primer-mono);
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  /* ---------- TOC ---------- */
+  .primer-toc {
+    padding: 36px 0 12px;
+    border-bottom: 1px solid var(--primer-rule);
+  }
+  .primer-toc-label {
+    font-family: var(--primer-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--c-buoy);
+    margin-bottom: 18px;
+  }
+  .primer-toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .primer-toc-list li {
+    border-top: 1px solid var(--primer-rule);
+  }
+  .primer-toc-list li:last-child {
+    border-bottom: 1px solid var(--primer-rule);
+  }
+  .primer-toc-list a {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 20px;
+    padding: 16px 0;
+    color: var(--text);
+    text-decoration: none;
+    align-items: baseline;
+    font-size: 17px;
+    transition: color 0.15s ease, padding-left 0.15s ease;
+  }
+  .primer-toc-list a:hover {
+    color: var(--c-buoy);
+    padding-left: 8px;
+  }
+  .primer-toc-num {
+    font-family: var(--primer-mono);
+    font-size: 13px;
+    color: var(--c-navy);
+    letter-spacing: 0.04em;
+  }
+
+  /* ---------- CHAPTERS ---------- */
+  .primer-chapter {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--primer-rule);
+    scroll-margin-top: 80px;
+  }
+  .primer-chapter--alt {
+    background: color-mix(in srgb, var(--c-navy) 2%, transparent);
+  }
+  .primer-chapter-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .primer-chapter-marker { align-self: start; }
+  .primer-chapter-num {
+    font-family: var(--primer-mono);
+    font-size: 36px;
+    color: var(--c-navy);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .primer-chapter-tag {
+    font-family: var(--primer-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    padding-top: 8px;
+    border-top: 1px solid var(--primer-rule-strong);
+    width: fit-content;
+  }
+  .primer-chapter-title {
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1.1;
+    color: var(--text);
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+  }
+  .primer-chapter-lead {
+    font-size: 18px;
+    line-height: 1.45;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0;
+  }
+  .primer-chapter-body p {
+    margin-bottom: 16px;
+    color: var(--text);
+    max-width: 620px;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .primer-chapter-body p strong { color: var(--text); font-weight: 600; }
+
+  @media (min-width: 880px) {
+    .primer-chapter-header {
+      grid-template-columns: 180px 1fr;
+      gap: 48px;
+    }
+    .primer-chapter-marker {
+      position: sticky;
+      top: 80px;
+    }
+    .primer-chapter-body { padding-left: calc(180px + 48px); }
+  }
+
+  /* ---------- CALLOUTS ---------- */
+  .primer-question {
+    font-family: var(--primer-mono);
+    font-size: 13px;
+    color: var(--c-buoy);
+    margin: 0 0 24px;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid var(--c-buoy);
+    max-width: 620px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .primer-key {
+    background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
+    border-left: 3px solid var(--c-navy);
+    padding: 18px 22px;
+    margin: 24px 0;
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.55;
+    max-width: 620px;
+    border-radius: 0 8px 8px 0;
+  }
+  .primer-key strong { color: var(--c-navy); }
+  .primer-define {
+    border-top: 2px solid var(--c-buoy);
+    padding: 16px 0 18px;
+    margin: 24px 0;
+    max-width: 620px;
+  }
+  .primer-define-term {
+    font-family: var(--primer-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-buoy);
+    margin-bottom: 8px;
+  }
+  .primer-define-text {
+    font-size: 17px;
+    line-height: 1.45;
+    color: var(--text);
+    font-weight: 500;
+  }
+  .primer-big-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 22px 0;
+    margin: 22px 0;
+    border-top: 1px solid var(--primer-rule);
+    border-bottom: 1px solid var(--primer-rule);
+    max-width: 620px;
+  }
+  .primer-big-stat-num {
+    font-family: var(--primer-mono);
+    font-size: 42px;
+    line-height: 1;
+    color: var(--c-navy);
+    flex-shrink: 0;
+  }
+  .primer-big-stat-text {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  /* ---------- BOTH SIDES (mirrors the-debate.html .perspective) ---------- */
+  .primer-bothsides {
+    padding: 56px 0 32px;
+    border-bottom: 1px solid var(--primer-rule);
+  }
+  .primer-bothsides h2 {
+    font-size: clamp(22px, 3vw, 28px);
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+  .primer-bothsides-framing {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-style: italic;
+    max-width: 620px;
+    margin: 0 0 24px;
+  }
+  .primer-bothsides-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 860px;
+  }
+  @media (max-width: 720px) {
+    .primer-bothsides-grid { grid-template-columns: 1fr; }
+  }
+  .primer .perspective {
+    border-radius: 0 10px 10px 0;
+    padding: 18px 22px 16px;
+    margin: 0;
+    background: var(--surface);
+    border-left: 4px solid var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+  .primer .perspective--for {
+    border-left-color: var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 5%, var(--surface));
+  }
+  .primer .perspective--against {
+    border-left-color: var(--c-brass);
+    background: color-mix(in srgb, var(--c-brass) 5%, var(--surface));
+  }
+  .primer .perspective-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--text-subtle);
+    margin-bottom: 10px;
+  }
+  .primer .perspective p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--text);
+    margin: 0 0 10px;
+  }
+  .primer .perspective p:last-child { margin-bottom: 0; }
+  .primer-bothsides-cta {
+    margin: 22px 0 0;
+    text-align: center;
+    font-family: var(--primer-mono);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+  .primer-bothsides-cta a {
+    color: var(--c-navy);
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--c-navy) 35%, transparent);
+    padding-bottom: 1px;
+  }
+  .primer-bothsides-cta a:hover {
+    color: var(--c-buoy);
+    border-bottom-color: var(--c-buoy);
+  }
+
+  /* ---------- TL;DR ---------- */
+  .primer-tldr {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--primer-rule);
+  }
+  .primer-tldr-card {
+    background: color-mix(in srgb, var(--c-navy) 3%, var(--surface));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 22px 26px 26px;
+    max-width: 720px;
+  }
+  .primer-tldr-eyebrow {
+    font-family: var(--primer-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--c-buoy);
+    margin-bottom: 6px;
+  }
+  .primer-tldr h2 {
+    font-size: 22px;
+    margin: 0 0 16px;
+    color: var(--text);
+  }
+  .primer-tldr dl { margin: 0; }
+  .primer-tldr dt {
+    font-family: var(--primer-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--c-navy);
+    margin-top: 14px;
+    margin-bottom: 4px;
+  }
+  .primer-tldr dt:first-of-type { margin-top: 0; }
+  .primer-tldr dd {
+    margin: 0;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* ---------- GO DEEPER ---------- */
+  .primer-godeeper {
+    padding: 48px 0 64px;
+  }
+  .primer-godeeper-label {
+    font-family: var(--primer-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--c-buoy);
+    margin-bottom: 18px;
+  }
+  .primer-godeeper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+  }
+  .primer-godeeper-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px 18px 18px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .primer-godeeper-card:hover {
+    border-color: var(--c-buoy);
+    transform: translateY(-1px);
+  }
+  .primer-godeeper-card-title {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .primer-godeeper-card-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width: 880px) {
+    .primer-hero { padding: 32px 0 24px; }
+    .primer-chapter { padding: 40px 0; }
+    .primer-chapter-num { font-size: 28px; }
+    .primer-chapter-marker { position: relative; top: 0; margin-bottom: 4px; }
+  }
 </style>
 
 <div class="primer">
