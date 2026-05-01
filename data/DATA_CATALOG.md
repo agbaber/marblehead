@@ -29,8 +29,8 @@ All data compiled April 2026 from primary public sources. Every number is either
 ### Total FTE (24 data points, FY01-FY24)
 - **What it is:** Full-time equivalent employees across all town departments. Part-time employees counted as fractions (e.g., 20 hrs/wk = 0.5 FTE).
 - **Source:** ACFR Statistical Section, "Full-time Equivalent Town Employees by Function"
-- **Caveat:** FY23 jumped +40.5 total town <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (668.50 to 709.00); education gained +54.31, other functions dropped. Not real hiring: General Fund salaries grew 2.6% the same year, nowhere near what 54 new positions would have cost. The FY23 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> also rounded its values and restructured the schedule. Likely a reporting change involving funding-source recategorization (Circuit Breaker spending tripled FY22 to FY23). Specific methodology pending Town Accountant confirmation. Full breakdown at `inside-school-staffing.html#the-fy23-mystery`.
-- **Confidence:** High for trend; high that FY23 jump is not real hiring. Specific reporting change pending Town Accountant confirmation.
+- **Caveat:** FY23 jumped +40.5 total town <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (668.50 to 709.00); education gained +54.31, other functions dropped. Not real hiring: General Fund salaries grew 2.6% the same year, nowhere near what 54 new positions would have cost. The FY23 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> also rounded its values and restructured the schedule. The Town's payroll roster (released via PRR April 2026, see `town_employee_headcount_FY08-26.csv`) shows school-side headcount went from 705 in FY22 to 699 in FY23, a decline of 6 &ndash; ruling out actual hiring as the source of the +54.31 jump. Likely a reporting change involving funding-source recategorization (Circuit Breaker spending tripled FY22 to FY23). Full breakdown at `inside-school-staffing.html#the-fy23-mystery`.
+- **Confidence:** High for trend; high that FY23 jump is a reporting change, not real hiring.
 
 ### Education FTE (24 data points, FY01-FY24)
 - **What it is:** Education department FTE only (teachers, paraprofessionals, administrators, custodial, all school staff)
@@ -148,36 +148,46 @@ All data compiled April 2026 from primary public sources. Every number is either
   - Snapshot captured 2026-04-17 (FY26 Q3). A later snapshot would include year-end payments and reclassifications.
 - **Confidence:** High for vendor identities and dollar amounts at the snapshot instant. Low for year-end interpretation (8-10 weeks of FY26 still to post).
 
-### School-Age Population (10 data points, ACS end-years 2014-2023)
-- **What it is:** Marblehead-resident kids ages 5-17, sum of male and female counts for ages 5-9, 10-14, 15-17 from ACS Table B01001.
-- **Source:** US Census ACS 5-year estimates, table B01001, Marblehead town (county subdivision 38400).
+### Town Payroll Headcount by Department (19 fiscal years, FY08-FY26)
+- **What it is:** Annual headcount of every paid Town employee, by department, from the Town's payroll system. One row per employee (any pay frequency: annual, weekly, on-call, seasonal). Dept-level subtotals labeled "Number of Employees".
+- **Source:** Public records request response, April 28, 2026 (<abbr class="g" title="Records Access Officer">RAO</abbr> Kyle A. Wiley). Raw file: `employee_count_FY2008-2026.xls`. Long-form <abbr class="g" title="Comma-Separated Values">CSV</abbr>: `town_employee_headcount_FY08-26.csv`. Schools/Town summary: `town_employee_headcount_summary_FY08-26.csv`.
+- **Caveat:** Headcount, not <abbr class="g" title="Full-Time Equivalent">FTE</abbr>. A 0.1 FTE substitute counts as 1 employee. Year-over-year deltas are reliable because methodology is consistent. Use <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> FTE (with FY23 caveat) when an FTE-weighted figure is needed.
+- **Confidence:** High. Direct payroll-system extract.
+
+### <abbr class="g" title="Group Insurance Commission">GIC</abbr> Monthly Invoice History (13 fiscal years, FY14-FY26)
+- **What it is:** Every monthly Group Insurance Commission invoice paid by the Town, with enrollment counts (active, retired, retiree dental, survivor, <abbr class="g" title="Consolidated Omnibus Budget Reconciliation Act">COBRA</abbr>) and dollar costs by category. FY26 partial (11 months).
+- **Source:** Public records request response, April 28, 2026. Raw file: `gic_invoices_FY2014-2026.xlsx`. Monthly <abbr class="g" title="Comma-Separated Values">CSV</abbr>: `gic_monthly_invoices_FY14-26.csv`. Per-FY rollup: `gic_invoices_summary_FY14-26.csv`.
+- **Caveat:** Total Amount Due is the full premium charged by <abbr class="g" title="Group Insurance Commission">GIC</abbr> (employer + employee share), not just the Town's own appropriation. Do not compare directly to the "Group Insurance" budget line, which is a different figure (Town's own share).
+- **Confidence:** High. Direct invoice ledger.
+
+### School-Age Population (10 data points, <abbr class="g" title="American Community Survey">ACS</abbr> end-years 2014-2023)
+- **What it is:** Marblehead-resident kids ages 5-17, sum of male and female counts for ages 5-9, 10-14, 15-17 from <abbr class="g" title="American Community Survey">ACS</abbr> Table B01001.
+- **Source:** US Census <abbr class="g" title="American Community Survey">ACS</abbr> 5-year estimates, table B01001, Marblehead town (county subdivision 38400).
 - **File:** `acs_school_age_marblehead.csv`
 - **Fetch script:** `scripts/fetch_acs_school_age.py`
-- **Caveat:** Margin of error roughly &plusmn;400 on the 5-17 total; read trends, not exact counts. ACS includes 5-year-olds not yet enrolled in kindergarten, so this count runs higher than DESE school-attending counts.
+- **Caveat:** Margin of error roughly &plusmn;400 on the 5-17 total; read trends, not exact counts. <abbr class="g" title="American Community Survey">ACS</abbr> includes 5-year-olds not yet enrolled in kindergarten, so this count runs higher than <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> school-attending counts.
 - **Confidence:** Medium. Survey-based estimate.
 
-### DESE Enrollment by Reason (13 data points, SY 2014-2026)
-- **What it is:** Marblehead district enrollment broken down by enrollment reason (Resident/Member, METCO, Tuitioned-In variants, Foreign Exchange) crossed with town of residence.
-- **Source:** MA DESE Socrata dataset `8xyg-59b2`, "Reasons for Student Enrollment by Town (Receiving)". Filtered to `dist_code=01680000`.
+### <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> Enrollment by Reason (13 data points, SY 2014-2026)
+- **What it is:** Marblehead district enrollment broken down by enrollment reason (Resident/Member, <abbr class="g" title="Metropolitan Council for Educational Opportunity">METCO</abbr>, Tuitioned-In variants, Foreign Exchange) crossed with town of residence.
+- **Source:** <abbr class="g" title="Massachusetts">MA</abbr> <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> Socrata dataset `8xyg-59b2`, "Reasons for Student Enrollment by Town (Receiving)". Filtered to `dist_code=01680000`.
 - **File:** `dese_metco_nonresident.csv`
 - **Fetch script:** `scripts/fetch_dese_selected_populations.py`
-- **Categorization:** MPS resident = sum of rows with `town_name=Marblehead`. METCO = sum of rows with `enr_reason=METCO`. Other non-resident = remainder.
+- **Categorization:** <abbr class="g" title="Marblehead Public Schools">MPS</abbr> resident = sum of rows with `town_name=Marblehead`. <abbr class="g" title="Metropolitan Council for Educational Opportunity">METCO</abbr> = sum of rows with `enr_reason=METCO`. Other non-resident = remainder.
 - **Cross-check:** SY 2023-24 total matches the existing chart's hard-coded FY24 enrollment of 2,617 exactly.
 - **Confidence:** High. Direct enumeration.
 
-### DESE School-Attending Children (40 data points, SY 1985-2025)
+### <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> School-Attending Children (40 data points, SY 1985-2025)
 - **What it is:** Where Marblehead-resident kids actually attend school: local public, regional academic, vocational, collaboratives, charter, out-of-district public, homeschool, in-state private, out-of-state private.
-- **Source:** MA DESE Socrata dataset `rdxw-mfv3`, "School Attending Children". Filtered to `town=Marblehead`.
+- **Source:** <abbr class="g" title="Massachusetts">MA</abbr> <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> Socrata dataset `rdxw-mfv3`, "School Attending Children". Filtered to `town=Marblehead`.
 - **File:** `dese_school_attending_marblehead.csv`
 - **Fetch script:** `scripts/fetch_dese_school_attending_children.py`
-- **Caveats:** SY 2020 missing from source. SY 2007 and SY 2008 have anomalous `total_cnt` values; for non-MPS calculations, sum the individual non-`loc_pub` category counts rather than subtracting from `total_cnt`.
+- **Caveats:** SY 2020 missing from source. SY 2007 and SY 2008 have anomalous `total_cnt` values; for non-<abbr class="g" title="Marblehead Public Schools">MPS</abbr> calculations, sum the individual non-`loc_pub` category counts rather than subtracting from `total_cnt`.
 - **Confidence:** High for individual category counts.
 
 ## What We Don't Have (identified gaps)
 
-1. **Annual total headcount (not FTE)** - only have FY25: 1,185 (from Marblehead Independent). Public records request filed.
-2. **Annual GIC enrollment by Marblehead** - only 8 OPEB data points. Public records request filed.
-3. **GIC premium rates FY12-FY18** - not publicly available online.
-4. **Claims breakdown by category** - what's driving the 119% loss ratio. Would need GIC or Hill Group consultant data.
-5. **Peer town staffing comparisons** - need Melrose/Swampscott/Stoneham FTE data to validate "too many employees" claim.
-6. **Grade-level enrollment breakdown from DESE** - district totals are now in `dese_metco_nonresident.csv` and `dese_school_attending_marblehead.csv`, but per-grade counts are not yet pulled (available in DESE Socrata dataset `t8td-gens`).
+1. **<abbr class="g" title="Group Insurance Commission">GIC</abbr> premium rates FY12-FY18** - not publicly available online.
+2. **Claims breakdown by category** - what's driving the 119% loss ratio. Would need <abbr class="g" title="Group Insurance Commission">GIC</abbr> or Hill Group consultant data.
+3. **Peer town staffing comparisons** - need Melrose/Swampscott/Stoneham <abbr class="g" title="Full-Time Equivalent">FTE</abbr> data to validate "too many employees" claim.
+4. **Grade-level enrollment breakdown from <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr>** - district totals are now in `dese_metco_nonresident.csv` and `dese_school_attending_marblehead.csv`, but per-grade counts are not yet pulled (available in <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> Socrata dataset `t8td-gens`).

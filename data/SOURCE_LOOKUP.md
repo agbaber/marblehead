@@ -149,6 +149,27 @@ Note: the April 15 deck's Y2 figures for the avg home ($168 / $857 / $1,188) dif
 
 Each year's draw stays on the levy permanently; Year 3 is the ongoing annual cost.
 
+## Town Payroll Headcount and <abbr class="g" title="Group Insurance Commission">GIC</abbr> Invoice History (<abbr class="g" title="Public Records Request">PRR</abbr>, April 2026)
+
+Two datasets released by the Town's Records Access Officer in response to a public records request dated April 10, 2026 (response letter dated April 28, 2026, signed by <abbr class="g" title="Records Access Officer">RAO</abbr> Kyle A. Wiley).
+
+- `data/employee_count_FY2008-2026.xls` &ndash; Town payroll "Employee Earnings History" report, one sheet per fiscal year FY2008&ndash;FY2026. Each row is one employee with department number, name, title, and pay frequency. Each sheet ends with department subtotals titled "Number of Employees".
+- `data/gic_invoices_FY2014-2026.xlsx` &ndash; <abbr class="g" title="Group Insurance Commission">GIC</abbr> monthly invoice ledger, one sheet per fiscal year FY2014&ndash;FY2026 (FY26 partial through 11 months). Columns: month, invoice date, headcount by enrollment category (active, retired, retiree dental, survivor, <abbr class="g" title="Consolidated Omnibus Budget Reconciliation Act">COBRA</abbr>), dollar cost by category, full premium, admin fee, roster adjustments, and total amount due.
+- `data/baber_2026-04-10_PRR_response.docx` &ndash; the cover letter.
+
+Derived for charts and <abbr class="g" title="Comma-Separated Values">CSV</abbr>s on the site:
+
+- `data/town_employee_headcount_FY08-26.csv` &ndash; long-form: FY, Department, Headcount.
+- `data/town_employee_headcount_summary_FY08-26.csv` &ndash; FY × Schools / Town / Total. School-side rows include the five schools, ADMIN &amp; SYSTEMWIDE (dept 301, district admin and substitutes), SCH CUST/MAINT &amp; TRANSP (dept 303), SCHOOL REVOLVING FUND, and SCHOOL GRANTS.
+- `data/gic_monthly_invoices_FY14-26.csv` &ndash; one row per monthly invoice with all fields.
+- `data/gic_invoices_summary_FY14-26.csv` &ndash; per-FY rollup: average enrollment by category and total dollars by category.
+
+Caveats:
+- Headcount, not <abbr class="g" title="Full-Time Equivalent">FTE</abbr>. Counts every paid employee regardless of frequency (annual, weekly, on-call, seasonal). A 0.5 FTE position counts as 1 here. Year-over-year deltas are still useful because the methodology is consistent across years.
+- The schools/town split treats dept 301 ADMIN &amp; SYSTEMWIDE as schools (verified by sampling: titles include SUPERINTENDENT, ASST SUPERINTENDENT, ATHLETIC DIRECTOR, district teachers and substitutes; dept #s 301/303/304+ are all school accounts).
+- FY26 <abbr class="g" title="Group Insurance Commission">GIC</abbr> sheet covers 11 months only (July 2025 through May 2026 invoice dates).
+- <abbr class="g" title="Group Insurance Commission">GIC</abbr> invoice totals are the full premium (employer + employee share). This is not the same number as the Town's "Group Insurance" budget line, which represents the Town's own appropriation. Compare with care.
+
 ## Household Income Distribution (ACS 2020&ndash;2024, table B19001)
 - Source: US Census Bureau, ACS 2020&ndash;2024 5-year estimates, table B19001, Marblehead town, Essex County, MA (FIPS 25-009-38400)
 - API endpoint: `https://api.census.gov/data/2024/acs/acs5?get=NAME,B19001_001E,...,B19001_017E&for=county%20subdivision:38400&in=state:25%20county:009`
