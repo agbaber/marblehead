@@ -20,9 +20,26 @@ og_url: https://marbleheaddata.org/inside-school-staffing.html
   .peer-table td:not(:first-child), .peer-table th:not(:first-child) { text-align: right; }
   .peer-table tr:last-child td { font-weight: 600; border-bottom: none; }
   .peer-table .peer-highlight { background: color-mix(in srgb, var(--c-navy) 6%, transparent); }
+  .role-history { margin: 8px 0 16px; }
+  .role-history-toggles { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 12px; }
+  .role-history-toggles button {
+    font: inherit; font-size: 13px; padding: 5px 12px;
+    background: transparent; border: 1px solid var(--border);
+    color: var(--text); border-radius: 16px; cursor: pointer;
+    line-height: 1.2;
+  }
+  .role-history-toggles button:hover { background: color-mix(in srgb, var(--c-navy) 8%, transparent); }
+  .role-history-toggles button.active {
+    background: var(--c-navy); color: var(--bg, white); border-color: var(--c-navy);
+  }
+  .role-history-toggles button:focus-visible {
+    outline: 2px solid var(--c-navy); outline-offset: 2px;
+  }
+  .role-history-connector { stroke: currentColor; stroke-width: 0.6; opacity: 0.4; }
   @media (max-width: 600px) {
     .mandate-table, .peer-table { font-size: 13px; }
     .mandate-table td, .mandate-table th, .peer-table td, .peer-table th { padding: 6px 6px; }
+    .role-history-toggles button { font-size: 12px; padding: 4px 9px; }
   }
 </style>
 <h1>Inside school staffing</h1>
@@ -133,6 +150,230 @@ og_url: https://marbleheaddata.org/inside-school-staffing.html
   <div class="takeaway takeaway--neutral">
     <p><strong>Data note: Marblehead's "tutor" classification.</strong> Marblehead reports 73.5 "tutor" <abbr class="g" title="Full-Time Equivalent">FTE</abbr> and only 14.1 "paraprofessional" <abbr class="g" title="Full-Time Equivalent">FTE</abbr> in <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr>. Every peer district does the opposite (Melrose: 121.6 paras, 7.8 tutors). This appears to be a classification difference in how Marblehead codes classroom aides in the state reporting system, not a real staffing difference. The combined para + tutor totals are comparable across districts.</p>
   </div>
+
+  <h3 id="role-history">How role categories have changed over time</h3>
+
+  <p>The snapshot above is a single year. Toggle between roles below to see how each category has changed in Marblehead since SY2008, alongside Melrose, Swampscott, and Stoneham.<sup class="cite" data-href="data/dese_role_staffing_history.csv" data-source="DESE EPIMS via E2C Hub Socrata API (educationtocareer.data.mass.gov/resource/j5ue-xkfn.json), SY2008 through SY2026"></sup></p>
+
+  <div class="role-history">
+    <div class="role-history-toggles" role="tablist" aria-label="Choose a staff role">
+      <button type="button" data-role="Tutors" class="active" aria-pressed="true">Tutors</button>
+      <button type="button" data-role="Paraprofessionals" aria-pressed="false">Paras</button>
+      <button type="button" data-role="Co-teachers" aria-pressed="false">Co-teachers</button>
+      <button type="button" data-role="Special ed related" aria-pressed="false"><abbr class="g" title="Special Education">SPED</abbr> related</button>
+      <button type="button" data-role="School counselors" aria-pressed="false">Counselors</button>
+      <button type="button" data-role="Administrators" aria-pressed="false">Admins</button>
+      <button type="button" data-role="Teachers (core)" aria-pressed="false">Teachers</button>
+    </div>
+
+    <div class="chart-wrapper">
+      <svg class="chart" id="role-history-svg" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="role-history-title role-history-desc">
+        <title id="role-history-title">Marblehead and peer staffing levels by role category, school years 2008 through 2026.</title>
+        <desc id="role-history-desc">Line chart with one line per district. Use the toggle buttons above to switch the role being shown. Source data linked in the caption.</desc>
+
+        <!-- Legend -->
+        <g id="rh-legend">
+          <text class="annotation" x="60" y="20" font-size="12" font-weight="600" id="rh-title">Tutors</text>
+          <rect class="s-marblehead" x="240" y="11" width="10" height="10" rx="2" fill="currentColor"/>
+          <text class="tick-label" x="254" y="20" font-size="10">Marblehead</text>
+          <rect class="s-melrose" x="324" y="11" width="10" height="10" rx="2" fill="currentColor"/>
+          <text class="tick-label" x="338" y="20" font-size="10">Melrose</text>
+          <rect class="s-swampscott" x="392" y="11" width="10" height="10" rx="2" fill="currentColor"/>
+          <text class="tick-label" x="406" y="20" font-size="10">Swampscott</text>
+          <rect class="s-stoneham" x="478" y="11" width="10" height="10" rx="2" fill="currentColor"/>
+          <text class="tick-label" x="492" y="20" font-size="10">Stoneham</text>
+        </g>
+
+        <!-- Y grid + ticks (built by JS) -->
+        <g id="rh-grid"></g>
+        <g id="rh-yticks"></g>
+
+        <!-- X baseline -->
+        <line class="axis-base" x1="60" y1="300" x2="640" y2="300"/>
+
+        <!-- X tick labels -->
+        <g id="rh-xticks">
+          <text class="tick-label" x="60"     y="318" text-anchor="middle" font-size="10">2008</text>
+          <text class="tick-label" x="156.67" y="318" text-anchor="middle" font-size="10">2011</text>
+          <text class="tick-label" x="253.33" y="318" text-anchor="middle" font-size="10">2014</text>
+          <text class="tick-label" x="350"    y="318" text-anchor="middle" font-size="10">2017</text>
+          <text class="tick-label" x="446.67" y="318" text-anchor="middle" font-size="10">2020</text>
+          <text class="tick-label" x="543.33" y="318" text-anchor="middle" font-size="10">2023</text>
+          <text class="tick-label" x="640"    y="318" text-anchor="middle" font-size="10">2026</text>
+          <text class="tick-label" x="350"    y="338" text-anchor="middle" font-size="10">School year ending</text>
+        </g>
+
+        <!-- Lines + end labels (built by JS) -->
+        <g id="rh-lines"></g>
+        <g id="rh-endlabels"></g>
+      </svg>
+    </div>
+
+    <p class="caption" id="rh-caption">FTE for the selected role across four districts, SY2008 through SY2026. <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> <abbr class="g" title="Education Personnel Information Management System">EPIMS</abbr> data. Marblehead is emphasized; peers are shown for comparison. Underlying CSV is linked above.</p>
+  </div>
+
+  <script type="application/json" id="role-history-data">
+{"years":[2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],"series":{"Tutors":{"Marblehead":[2.5,40.9,63.9,65.8,59.2,57.4,67.5,68.6,63.4,68.5,65.0,58.4,58.3,60.0,60.1,57.6,18.3,31.5,73.5],"Melrose":[0.0,0.0,2.0,4.3,1.0,4.3,5.0,2.4,4.0,5.2,3.4,5.0,4.0,4.1,5.9,8.9,9.0,9.6,7.8],"Swampscott":[3.0,2.8,5.0,6.3,16.5,19.1,26.1,36.7,26.1,13.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"Stoneham":[0.0,0.0,0.0,0.0,0.5,4.2,5.1,4.1,4.1,4.1,1.3,1.2,1.6,0.8,1.0,0.0,0.0,0.3,1.0]},"Paraprofessionals":{"Marblehead":[104.7,81.0,63.9,57.1,53.5,52.2,63.2,62.2,51.4,54.0,48.7,43.2,42.2,31.2,21.0,18.5,52.0,43.4,14.1],"Melrose":[81.6,96.5,85.5,94.0,103.3,98.2,103.8,104.7,98.7,93.5,104.2,105.5,111.2,100.4,121.6,119.1,113.7,108.8,121.6],"Swampscott":[59.0,54.2,54.0,50.1,45.5,47.1,48.7,47.3,44.3,65.1,77.7,78.2,84.2,67.2,69.0,66.1,71.7,65.7,60.7],"Stoneham":[56.8,57.2,58.7,60.1,56.9,55.7,57.1,52.3,52.3,52.9,51.3,59.6,66.9,56.6,66.0,58.9,64.6,67.8,69.8]},"Co-teachers":{"Marblehead":[0.0,0.0,0.0,0.0,2.0,2.0,11.9,8.8,15.0,27.2,39.4,33.5,22.5,2.7,19.2,24.6,27.7,24.6,29.3],"Melrose":[0.0,0.0,0.0,60.3,1.0,4.8,1.7,0.4,0.0,0.0,0.0,0.0,0.0,11.9,43.2,9.4,5.0,4.0,15.6],"Swampscott":[0.0,0.0,0.0,3.0,0.0,5.8,8.5,3.4,9.4,15.0,25.5,4.6,21.9,25.3,26.7,28.0,14.3,27.0,35.6],"Stoneham":[0.0,0.0,0.0,0.0,0.0,2.0,1.0,1.0,1.0,0.0,0.7,1.5,5.3,2.6,8.8,11.4,17.0,10.7,11.0]},"Special ed related":{"Marblehead":[12.1,16.6,16.3,17.9,16.4,16.7,18.5,16.5,18.8,24.0,21.8,19.3,20.8,24.8,18.8,20.2,17.6,20.1,19.3],"Melrose":[11.9,14.8,14.8,16.2,18.7,18.4,20.4,15.2,14.6,14.8,15.6,15.8,17.2,15.2,18.8,19.8,18.4,18.4,20.5],"Swampscott":[6.0,4.6,4.4,5.0,5.0,5.0,5.0,7.0,7.0,9.0,9.0,7.0,6.8,5.0,6.5,8.5,8.0,10.7,9.9],"Stoneham":[10.1,9.2,12.1,12.1,14.8,18.1,16.0,15.4,20.0,22.4,23.7,27.4,28.8,29.0,30.8,36.2,42.5,52.8,48.6]},"School counselors":{"Marblehead":[10.5,11.3,10.8,11.0,11.0,10.8,10.0,12.0,11.0,11.0,11.0,11.0,11.0,13.0,14.0,15.0,13.0,12.0,12.0],"Melrose":[6.8,6.0,7.0,5.0,7.2,7.0,7.4,7.0,7.0,7.0,7.0,7.0,9.0,9.0,8.0,8.0,8.0,7.0,8.0],"Swampscott":[6.0,6.0,6.0,5.0,5.0,5.6,5.0,5.0,4.0,5.0,5.0,5.0,5.0,5.0,5.8,6.0,6.2,5.8,5.7],"Stoneham":[7.2,8.2,7.0,7.4,7.4,8.0,6.0,6.0,7.0,7.0,6.0,6.0,6.0,6.0,6.0,6.0,7.0,6.9,6.9]},"Administrators":{"Marblehead":[20.0,21.0,23.0,19.5,21.5,22.5,22.1,24.3,25.2,27.0,26.0,26.0,25.0,23.5,21.4,22.0,26.0,25.0,26.0],"Melrose":[28.3,28.5,27.3,25.1,23.1,23.1,21.4,27.8,28.6,25.9,26.6,27.6,32.1,31.4,34.0,33.5,37.5,32.3,28.8],"Swampscott":[14.0,16.0,15.0,16.0,16.4,16.6,17.0,14.6,15.6,14.2,19.0,20.2,20.8,19.8,22.4,22.4,22.1,21.9,20.1],"Stoneham":[17.6,16.4,18.6,18.7,18.0,17.4,16.4,20.2,19.8,20.1,19.6,21.8,22.2,19.9,20.8,20.5,21.4,21.4,19.7]},"Teachers (core)":{"Marblehead":[193.8,205.4,204.9,197.4,191.7,194.0,193.4,208.7,203.4,189.3,175.9,193.5,201.8,216.5,200.6,181.5,215.0,175.2,169.0],"Melrose":[237.5,236.8,237.9,187.8,217.2,224.9,221.8,217.5,220.0,217.6,226.6,227.7,227.0,221.6,204.6,224.6,234.2,232.4,226.9],"Swampscott":[152.4,155.5,156.1,149.6,152.8,154.2,147.0,150.9,157.7,159.9,143.1,154.0,146.0,143.8,143.2,138.5,143.5,135.3,133.4],"Stoneham":[170.4,164.3,174.9,159.7,156.0,154.5,153.4,159.0,163.3,164.8,162.8,165.0,166.4,169.8,172.6,171.6,179.6,181.8,182.2]}}}
+  </script>
+
+  <script>
+    (function () {
+      var svgNS = "http://www.w3.org/2000/svg";
+      var raw = document.getElementById("role-history-data");
+      if (!raw) return;
+      var data = JSON.parse(raw.textContent);
+      var years = data.years;
+      var districts = ["Marblehead", "Melrose", "Swampscott", "Stoneham"];
+      var classFor = {
+        "Marblehead": "s-marblehead",
+        "Melrose": "s-melrose",
+        "Swampscott": "s-swampscott",
+        "Stoneham": "s-stoneham"
+      };
+      var xLeft = 60, xRight = 640, yTop = 36, yBot = 300;
+
+      function xScale(i) { return xLeft + (i * (xRight - xLeft)) / (years.length - 1); }
+
+      function niceMax(v) {
+        var steps = [5, 10, 15, 20, 25, 30, 50, 75, 100, 125, 150, 200, 250, 300];
+        for (var i = 0; i < steps.length; i++) if (v <= steps[i]) return steps[i];
+        return Math.ceil(v / 50) * 50;
+      }
+
+      function clear(node) { while (node.firstChild) node.removeChild(node.firstChild); }
+
+      function render(role) {
+        var titleEl = document.getElementById("rh-title");
+        if (titleEl) titleEl.textContent = role;
+
+        var series = data.series[role];
+        var maxV = 0;
+        districts.forEach(function (d) {
+          (series[d] || []).forEach(function (v) { if (v != null && v > maxV) maxV = v; });
+        });
+        var yMax = niceMax(maxV * 1.05 || 5);
+        function yScale(v) { return yBot - (v / yMax) * (yBot - yTop); }
+
+        // Y grid + ticks
+        var grid = document.getElementById("rh-grid");
+        var yticks = document.getElementById("rh-yticks");
+        clear(grid); clear(yticks);
+        var nTicks = 4;
+        for (var i = 0; i <= nTicks; i++) {
+          var v = (yMax * i) / nTicks;
+          var y = yScale(v);
+          var line = document.createElementNS(svgNS, "line");
+          line.setAttribute("class", "grid-minor");
+          line.setAttribute("x1", xLeft); line.setAttribute("x2", xRight);
+          line.setAttribute("y1", y); line.setAttribute("y2", y);
+          grid.appendChild(line);
+
+          var t = document.createElementNS(svgNS, "text");
+          t.setAttribute("class", "tick-label");
+          t.setAttribute("x", xLeft - 6);
+          t.setAttribute("y", y + 3);
+          t.setAttribute("text-anchor", "end");
+          t.setAttribute("font-size", "10");
+          t.textContent = (yMax >= 50) ? Math.round(v) : v.toFixed(0);
+          yticks.appendChild(t);
+        }
+
+        // Lines
+        var lines = document.getElementById("rh-lines");
+        var endG = document.getElementById("rh-endlabels");
+        clear(lines); clear(endG);
+        var endpoints = [];
+
+        districts.forEach(function (dist) {
+          var vals = series[dist];
+          if (!vals) return;
+          var d = "";
+          var lastWasNull = true;
+          vals.forEach(function (v, i) {
+            if (v == null) { lastWasNull = true; return; }
+            d += (lastWasNull ? "M " : " L ") + xScale(i).toFixed(1) + " " + yScale(v).toFixed(1);
+            lastWasNull = false;
+          });
+          if (!d) return;
+          var path = document.createElementNS(svgNS, "path");
+          path.setAttribute("class", classFor[dist]);
+          path.setAttribute("d", d);
+          path.setAttribute("fill", "none");
+          path.setAttribute("stroke", "currentColor");
+          path.setAttribute("stroke-width", dist === "Marblehead" ? "2.5" : "1.6");
+          path.setAttribute("stroke-linejoin", "round");
+          path.setAttribute("opacity", dist === "Marblehead" ? "1" : "0.7");
+          lines.appendChild(path);
+
+          // End point for label
+          var lastIdx = vals.length - 1;
+          while (lastIdx >= 0 && vals[lastIdx] == null) lastIdx--;
+          if (lastIdx >= 0) {
+            endpoints.push({
+              dist: dist,
+              cls: classFor[dist],
+              y: yScale(vals[lastIdx]),
+              x: xScale(lastIdx),
+              value: vals[lastIdx],
+              isMHD: dist === "Marblehead"
+            });
+          }
+        });
+
+        // Anti-collision: sort by y, push down to maintain min gap
+        endpoints.sort(function (a, b) { return a.y - b.y; });
+        var minGap = 12;
+        for (var j = 0; j < endpoints.length; j++) {
+          if (j === 0) endpoints[j].labelY = endpoints[j].y;
+          else endpoints[j].labelY = Math.max(endpoints[j].y, endpoints[j - 1].labelY + minGap);
+        }
+
+        endpoints.forEach(function (ep) {
+          if (Math.abs(ep.labelY - ep.y) > 2) {
+            var conn = document.createElementNS(svgNS, "line");
+            conn.setAttribute("class", ep.cls + " role-history-connector");
+            conn.setAttribute("x1", ep.x);
+            conn.setAttribute("y1", ep.y);
+            conn.setAttribute("x2", xRight + 4);
+            conn.setAttribute("y2", ep.labelY);
+            conn.setAttribute("stroke", "currentColor");
+            endG.appendChild(conn);
+          }
+          var dot = document.createElementNS(svgNS, "circle");
+          dot.setAttribute("class", ep.cls);
+          dot.setAttribute("cx", ep.x); dot.setAttribute("cy", ep.y);
+          dot.setAttribute("r", ep.isMHD ? "3" : "2.2");
+          dot.setAttribute("fill", "currentColor");
+          endG.appendChild(dot);
+
+          var t = document.createElementNS(svgNS, "text");
+          t.setAttribute("class", ep.cls);
+          t.setAttribute("x", xRight + 8);
+          t.setAttribute("y", ep.labelY + 3);
+          t.setAttribute("font-size", "10");
+          t.setAttribute("font-weight", ep.isMHD ? "600" : "500");
+          t.setAttribute("fill", "currentColor");
+          t.textContent = ep.dist.slice(0, 3) + " " + ep.value.toFixed(ep.value < 10 ? 1 : 0);
+          endG.appendChild(t);
+        });
+      }
+
+      var buttons = document.querySelectorAll(".role-history-toggles button");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          buttons.forEach(function (b) {
+            b.classList.remove("active");
+            b.setAttribute("aria-pressed", "false");
+          });
+          btn.classList.add("active");
+          btn.setAttribute("aria-pressed", "true");
+          render(btn.dataset.role);
+        });
+      });
+
+      render("Tutors");
+    })();
+  </script>
 
   <!-- Section 2: Mandate vs discretionary -->
   <details class="deep-dive">
