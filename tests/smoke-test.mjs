@@ -138,6 +138,28 @@ async function testPickCommit(page) {
   }
 }
 
+async function testSchoolAgeVsEnrollment(page) {
+  console.log('\n── School-age vs MPS enrollment section ──');
+  await page.goto(SITE + '/charts/enrollment_vs_staffing/', { waitUntil: 'domcontentloaded' });
+
+  const heading = await page.$('h2#school-age-vs-enrollment');
+  heading
+    ? ok('Section <h2 id="school-age-vs-enrollment"> present')
+    : fail('School-age section', 'expected <h2 id="school-age-vs-enrollment"> not found');
+
+  // Page started with 4 SVG charts; new section adds 2 (headline 3-line, long-arc 2-line) = 6.
+  const charts = (await page.$$('svg.chart')).length;
+  charts >= 6
+    ? ok(`${charts} SVG charts on enrollment_vs_staffing`)
+    : fail('Enrollment chart count', `expected >= 6, got ${charts}`);
+
+  // Decomposition table should be present with at least 8 data rows.
+  const tableRows = await page.$$('section table.data tbody tr, table.data tbody tr');
+  tableRows.length >= 8
+    ? ok(`${tableRows.length} rows in decomposition table`)
+    : fail('Decomposition table', `expected >= 8 rows, got ${tableRows.length}`);
+}
+
 async function testGeneralGovernmentChart(page) {
   console.log('\n── General Government Over Time chart ──');
   await page.goto(SITE + '/charts/general_government_over_time.html', { waitUntil: 'domcontentloaded' });
@@ -191,6 +213,7 @@ async function testStatsStrip(page) {
     await testUnsureButtons(page1);
     await testNavLinks(page1);
     await testGeneralGovernmentChart(page1);
+    await testSchoolAgeVsEnrollment(page1);
     await ctx1.close();
 
     // Interactive tests (fresh context so localStorage is clean)

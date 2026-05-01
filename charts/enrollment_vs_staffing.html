@@ -14,6 +14,71 @@ scripts: [chart-tooltip]
 .page .legend + .chart-wrapper { margin-top: 0; }
 #staffing-legend .legend-item { cursor: pointer; }
 #staffing-legend .legend-item--off { opacity: 0.3; }
+
+/* Stacked-card layout for the school-attending decomposition table on
+   narrow viewports. The site-wide .data--stack modifier hardcodes a
+   5-column schema; this table has 3 columns so we use data-label
+   attributes instead of nth-child label rules. */
+@media (max-width: 600px) {
+  table.data--stack-attending {
+    min-width: 0;
+    display: block;
+  }
+  table.data--stack-attending thead {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  table.data--stack-attending tbody { display: block; }
+  table.data--stack-attending tbody tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 14px;
+    padding: 12px 14px 10px;
+    margin-bottom: 10px;
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    border-bottom: none;
+  }
+  table.data--stack-attending tbody tr:last-child { margin-bottom: 0; }
+  table.data--stack-attending tbody tr td {
+    display: block;
+    padding: 2px 0;
+    border-bottom: none;
+    font-size: 0.8125rem;
+    white-space: normal;
+  }
+  /* First column (category): full width, larger, bold. */
+  table.data--stack-attending tbody tr td:first-child {
+    grid-column: 1 / -1;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--divider);
+  }
+  /* Each value gets its column label from data-label. */
+  table.data--stack-attending tbody tr td[data-label] {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: right;
+    color: var(--text-mid);
+  }
+  table.data--stack-attending tbody tr td[data-label]::before {
+    content: attr(data-label);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-subtle);
+  }
+  .table-wrap:has(table.data--stack-attending) { overflow-x: visible; }
+}
 </style>
 <h1 class="h-center">School Enrollment and Education Staffing</h1>
   <p class="subtitle h-center">Marblehead Public Schools. From <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>s and <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> (Massachusetts Department of Elementary and Secondary Education).</p>
@@ -349,6 +414,222 @@ scripts: [chart-tooltip]
     <p><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr> from the Education Personnel Information Management System (<abbr class="g" title="Education Personnel Information Management System">EPIMS</abbr>), accessed via the E2C Hub Socrata API at <code>educationtocareer.data.mass.gov/resource/j5ue-xkfn.json</code>. Raw data in <code>data/dese_total_educator_fte.csv</code>.</p>
     <p><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> by program area from <code>educationtocareer.data.mass.gov/resource/vd2f-ib9q.json</code>. Raw data in <code>data/dese_teacher_fte_by_program.csv</code>. Peer-town teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> and enrollment data in <code>data/dese_peer_teachers_enrollment.csv</code>.</p>
     <p>The declining-enrollment / flat-staffing pattern is common across Massachusetts and is partly driven by special education mandates (<abbr class="g" title="Individualized Education Program">IEP</abbr>-required staffing), out-of-district placements ($4.6M in FY26 school budget), and federal requirements that do not scale with enrollment.</p>
+  </div>
+
+  <h2 id="school-age-vs-enrollment">Are the kids leaving Marblehead, or just leaving the public schools?</h2>
+  <p>Enrollment fell 21% between FY14 and FY24, but the chart at the top of this page does not say whether the school-age population of Marblehead also fell, or whether resident families left <abbr class="g" title="Marblehead Public Schools">MPS</abbr> for private, charter, or out-of-district schools. The two questions have different answers.</p>
+
+  <p class="chart-label">Marblehead resident school-age kids vs. <abbr class="g" title="Marblehead Public Schools">MPS</abbr> enrollment, 2014&ndash;2026</p>
+
+  <div class="legend">
+    <span class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">School-age residents (ages 5&ndash;17, <abbr class="g" title="American Community Survey">ACS</abbr>)</span></span>
+    <span class="legend-item s-marblehead"><span class="legend-swatch"></span><span class="legend-text"><abbr class="g" title="Marblehead Public Schools">MPS</abbr> resident enrollment</span></span>
+    <span class="legend-item s-stoneham"><span class="legend-swatch"></span><span class="legend-text"><abbr class="g" title="Metropolitan Council for Educational Opportunity">METCO</abbr> non-residents</span></span>
+  </div>
+
+  <div class="chart-wrapper" data-chart-tooltip>
+    <script type="application/json" class="chart-tooltip-data">
+    {
+      "xLabels": ["2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+      "xPositions": [70,115,160,205,250,295,340,385,430,475,520,565,610],
+      "valueDecimals": 0,
+      "series": [
+        {
+          "name": "School-age residents (5-17)",
+          "className": "s-neutral",
+          "values": [4091,3996,3981,3981,3835,3991,3998,3974,3823,3870,null,null,null]
+        },
+        {
+          "name": "MPS resident enrollment",
+          "className": "s-marblehead",
+          "values": [3184,3128,3094,3032,2986,2952,2866,2616,2519,2545,2531,2488,2321]
+        },
+        {
+          "name": "METCO non-residents",
+          "className": "s-stoneham",
+          "values": [81,87,81,76,74,64,58,55,45,44,51,45,47]
+        }
+      ]
+    }
+    </script>
+    <svg class="chart" viewBox="0 0 740 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three-line chart 2014 to 2026. School-age residents (US Census estimate) is roughly flat near 4,000. Marblehead resident public school enrollment falls from about 3,184 to 2,321. Non-resident enrollment falls from 81 to 47.">
+      <line class="axis-base" x1="70" y1="170" x2="610" y2="170"/>
+
+      <!-- Y gridlines -->
+      <line class="grid-minor" x1="70" y1="139" x2="610" y2="139"/>
+      <line class="grid-minor" x1="70" y1="108" x2="610" y2="108"/>
+      <line class="grid-minor" x1="70" y1="77" x2="610" y2="77"/>
+      <line class="grid-minor" x1="70" y1="46" x2="610" y2="46"/>
+
+      <!-- Y tick labels -->
+      <text class="tick-label" x="63" y="174" text-anchor="end">0</text>
+      <text class="tick-label" x="63" y="143" text-anchor="end">1,000</text>
+      <text class="tick-label" x="63" y="112" text-anchor="end">2,000</text>
+      <text class="tick-label" x="63" y="81" text-anchor="end">3,000</text>
+      <text class="tick-label" x="63" y="50" text-anchor="end">4,000</text>
+
+      <!-- School-age residents (Census, 2014-2023; line stops where the survey data does) -->
+      <polyline class="data-line s-neutral"
+                points="70,43 115,46 160,46 205,46 250,51 295,46 340,46 385,46 430,51 475,50"/>
+      <text class="end-label s-neutral" x="481" y="44">3,870</text>
+
+      <!-- MPS resident enrollment -->
+      <polyline class="data-line s-marblehead"
+                points="70,71 115,73 160,74 205,76 250,77 295,78 340,81 385,89 430,92 475,91 520,91 565,93 610,98"/>
+      <text class="end-label s-marblehead" x="616" y="102">2,321</text>
+
+      <!-- METCO -->
+      <polyline class="data-line s-stoneham"
+                points="70,167 115,167 160,167 205,168 250,168 295,168 340,168 385,168 430,169 475,169 520,168 565,169 610,169"/>
+      <text class="end-label s-stoneham" x="616" y="172">47</text>
+
+      <!-- X labels -->
+      <text class="tick-label tick-label--major" x="70"  y="190" text-anchor="middle">2014</text>
+      <text class="tick-label tick-label--minor" x="250" y="190" text-anchor="middle">2018</text>
+      <text class="tick-label tick-label--minor" x="430" y="190" text-anchor="middle">2022</text>
+      <text class="tick-label tick-label--major" x="610" y="190" text-anchor="middle">2026</text>
+    </svg>
+  </div>
+
+  <p class="caption">
+    School-age residents (ages 5&ndash;17) from <abbr class="g" title="American Community Survey">ACS</abbr> 5-year estimates, end-years 2014&ndash;2023; the line stops at 2023 because the 2024 5-year vintage has not yet been released. <abbr class="g" title="American Community Survey">ACS</abbr> small-area age estimates carry margins of error of roughly &plusmn;400; read the line as a trend, not an exact count. <abbr class="g" title="Marblehead Public Schools">MPS</abbr> resident enrollment and <abbr class="g" title="Metropolitan Council for Educational Opportunity">METCO</abbr> from <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> "Reasons for Student Enrollment by Town"<sup class="cite" data-href="https://educationtocareer.data.mass.gov/resource/8xyg-59b2.json" data-source="MA DESE Reasons for Student Enrollment by Town (Receiving), Socrata resource 8xyg-59b2. Filtered to dist_code=01680000 (Marblehead). MPS resident is the count where town_name=Marblehead. METCO is the count where enr_reason=METCO."></sup>. Resident enrollment fell 27% (3,184 to 2,321), <abbr class="g" title="Metropolitan Council for Educational Opportunity">METCO</abbr> fell 42% (81 to 47), and the school-age cohort fell about 5% (within margin of error). Raw data in <code>data/acs_school_age_marblehead.csv</code> and <code>data/dese_metco_nonresident.csv</code>.
+  </p>
+
+  <h3>Where do Marblehead's school-attending kids actually go?</h3>
+  <p>The chart above raises a question it does not fully answer. <abbr class="g" title="American Community Survey">ACS</abbr> says about 3,870 school-age residents live in town. <abbr class="g" title="Marblehead Public Schools">MPS</abbr> enrolls about 2,531 of them. So where are the rest? <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> publishes a separate, direct enumeration of where students residing in each Massachusetts town actually attend school. The most recent year available is school year 2023&ndash;24:</p>
+
+  <div class="table-wrap">
+    <table class="data data--stack-attending">
+      <thead>
+        <tr>
+          <th scope="col">Where Marblehead-resident students attend</th>
+          <th scope="col">SY 2023&ndash;24</th>
+          <th scope="col">Share</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Marblehead Public Schools</td>
+          <td data-label="SY 2023-24">2,465</td>
+          <td data-label="Share">79.4%</td>
+        </tr>
+        <tr>
+          <td>In-state private schools</td>
+          <td data-label="SY 2023-24">500</td>
+          <td data-label="Share">16.1%</td>
+        </tr>
+        <tr>
+          <td>Charter schools</td>
+          <td data-label="SY 2023-24">61</td>
+          <td data-label="Share">2.0%</td>
+        </tr>
+        <tr>
+          <td>Homeschool</td>
+          <td data-label="SY 2023-24">37</td>
+          <td data-label="Share">1.2%</td>
+        </tr>
+        <tr>
+          <td>Vocational (Essex Tech) and collaboratives</td>
+          <td data-label="SY 2023-24">32</td>
+          <td data-label="Share">1.0%</td>
+        </tr>
+        <tr>
+          <td>Out-of-district public (mostly <abbr class="g" title="Special Education">SPED</abbr>)</td>
+          <td data-label="SY 2023-24">8</td>
+          <td data-label="Share">0.3%</td>
+        </tr>
+        <tr>
+          <td>Out-of-state private</td>
+          <td data-label="SY 2023-24">3</td>
+          <td data-label="Share">0.1%</td>
+        </tr>
+        <tr>
+          <td><strong>Total Marblehead kids in school</strong></td>
+          <td data-label="SY 2023-24"><strong>3,106</strong></td>
+          <td data-label="Share"><strong>100.0%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="caption">
+    From <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> "School Attending Children"<sup class="cite" data-href="https://educationtocareer.data.mass.gov/resource/rdxw-mfv3.json" data-source="MA DESE School Attending Children dataset, Socrata resource rdxw-mfv3. Filtered to town=Marblehead. Counts where Marblehead-resident kids attend school across all categories."></sup>, which counts every student by town of residence and category of school attended. The total here (3,106) is below the <abbr class="g" title="American Community Survey">ACS</abbr> school-age population (~3,870) because <abbr class="g" title="American Community Survey">ACS</abbr> counts all 5- to 17-year-olds living in town, including children not yet enrolled in kindergarten and a small number who do not appear in any school enrollment system. Raw data in <code>data/dese_school_attending_marblehead.csv</code>.
+  </p>
+
+  <h3>The 40-year picture</h3>
+  <p>The "School Attending Children" dataset goes back to 1985. Comparing where Marblehead kids attended school in 1985, 2010, and today shows that the public school share has been remarkably stable across four decades, while the total cohort has gone up and back down:</p>
+
+  <p class="chart-label">Marblehead-resident kids by where they attend school, 1985&ndash;2025</p>
+
+  <div class="legend">
+    <span class="legend-item s-marblehead"><span class="legend-swatch"></span><span class="legend-text">Attending <abbr class="g" title="Marblehead Public Schools">MPS</abbr></span></span>
+    <span class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">Attending non-<abbr class="g" title="Marblehead Public Schools">MPS</abbr> (private, charter, vocational, <abbr class="g" title="Special Education">SPED</abbr>, homeschool)</span></span>
+  </div>
+
+  <div class="chart-wrapper" data-chart-tooltip>
+    <script type="application/json" class="chart-tooltip-data">
+    {
+      "xLabels": ["1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025"],
+      "xPositions": [70,84,97,110,124,138,151,164,178,192,205,218,232,246,259,272,286,300,313,326,340,354,367,380,394,408,421,434,448,462,475,488,502,516,529,542,556,570,583,596,610],
+      "valueDecimals": 0,
+      "series": [
+        {
+          "name": "Attending MPS",
+          "className": "s-marblehead",
+          "values": [2599,2441,2410,2417,2250,2229,2266,2363,2414,2449,2543,2552,2625,2679,2764,2672,2665,2756,2849,2881,2943,2978,3007,3099,3130,3107,3091,3047,3123,3130,3061,3023,2982,2935,2887,null,2537,2457,2478,2465,2395]
+        },
+        {
+          "name": "Attending non-MPS",
+          "className": "s-neutral",
+          "values": [433,452,462,425,445,430,431,429,454,474,502,525,542,586,554,674,686,677,678,525,705,703,541,632,628,676,702,713,832,675,792,809,827,831,867,null,493,677,777,641,696]
+        }
+      ]
+    }
+    </script>
+    <svg class="chart" viewBox="0 0 740 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two-line chart 1985 to 2025 of Marblehead-resident kids by school type. Public school attendance rises from 2,599 in 1985 to a peak around 3,130 in 2010, then falls to 2,395 in 2025. Non-public school attendance rises slowly from 433 in 1985 to about 700 in recent years.">
+      <line class="axis-base" x1="70" y1="170" x2="610" y2="170"/>
+
+      <!-- Y gridlines -->
+      <line class="grid-minor" x1="70" y1="130" x2="610" y2="130"/>
+      <line class="grid-minor" x1="70" y1="90" x2="610" y2="90"/>
+      <line class="grid-minor" x1="70" y1="50" x2="610" y2="50"/>
+
+      <!-- Y tick labels -->
+      <text class="tick-label" x="63" y="174" text-anchor="end">0</text>
+      <text class="tick-label" x="63" y="134" text-anchor="end">1,000</text>
+      <text class="tick-label" x="63" y="94" text-anchor="end">2,000</text>
+      <text class="tick-label" x="63" y="54" text-anchor="end">3,000</text>
+
+      <!-- MPS attending: SY 2020 missing, so polyline splits into two segments -->
+      <polyline class="data-line s-marblehead"
+                points="70,66 84,72 97,74 110,73 124,80 138,81 151,79 164,75 178,73 192,72 205,68 218,68 232,65 246,63 259,59 272,63 286,63 300,60 313,56 326,55 340,52 354,51 367,50 380,46 394,45 408,46 421,46 434,48 448,45 462,45 475,48 488,49 502,51 516,53 529,55"/>
+      <polyline class="data-line s-marblehead"
+                points="556,69 570,72 583,71 596,71 610,74"/>
+      <text class="end-label s-marblehead" x="616" y="78">2,395</text>
+
+      <!-- Non-MPS attending -->
+      <polyline class="data-line s-neutral"
+                points="70,153 84,152 97,152 110,153 124,152 138,153 151,153 164,153 178,152 192,151 205,150 218,149 232,148 246,147 259,148 272,143 286,143 300,143 313,143 326,149 340,142 354,142 367,148 380,145 394,145 408,143 421,142 434,141 448,137 462,143 475,138 488,138 502,137 516,137 529,135"/>
+      <polyline class="data-line s-neutral"
+                points="556,150 570,143 583,139 596,144 610,142"/>
+      <text class="end-label s-neutral" x="616" y="146">696</text>
+
+      <!-- X labels -->
+      <text class="tick-label tick-label--major" x="70"  y="190" text-anchor="middle">1985</text>
+      <text class="tick-label tick-label--minor" x="205" y="190" text-anchor="middle">1995</text>
+      <text class="tick-label tick-label--minor" x="340" y="190" text-anchor="middle">2005</text>
+      <text class="tick-label tick-label--minor" x="475" y="190" text-anchor="middle">2015</text>
+      <text class="tick-label tick-label--major" x="610" y="190" text-anchor="middle">2025</text>
+    </svg>
+  </div>
+
+  <p class="caption">
+    Same source as the table above. The public school share of Marblehead-resident kids in school has held in a narrow band between 76% and 86% across the entire 1985&ndash;2025 window. The total cohort rose from 3,032 (1985) to a peak of 3,955 (2013), then fell to 3,091 (2025), almost back to its 1985 level. Of the 712-student decline in <abbr class="g" title="Marblehead Public Schools">MPS</abbr> attendance from the 2010 peak to 2025, about 670 students (94%) tracks the cohort decline; the remaining ~40 reflects a modest share shift toward non-<abbr class="g" title="Marblehead Public Schools">MPS</abbr> options. School year 2020 is missing from the source dataset.
+  </p>
+
+  <div class="notes">
+    <p><strong>What the residual table is, and is not.</strong> The decomposition table answers "where do Marblehead-resident kids attend school?" using one direct count from the state. It does not answer "why?" Reasons families choose private, charter, or homeschool vary, and most of those choices have been made consistently for decades, not driven by recent <abbr class="g" title="Marblehead Public Schools">MPS</abbr> events. The total cohort decline appears to be the dominant driver of the <abbr class="g" title="Marblehead Public Schools">MPS</abbr> enrollment drop, not migration to private schools.</p>
+    <p><strong>Two slightly different "<abbr class="g" title="Marblehead Public Schools">MPS</abbr> resident" numbers.</strong> The first chart shows 2,531 (SY 2023&ndash;24) from <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr>'s by-reason dataset. The decomposition table shows 2,465 from the school-attending-children dataset. The difference (~66 students) is at the margin of how the two datasets classify foreign-exchange students, parent-paid tuitioned-in students, and pre-K. Both are valid <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> figures using slightly different definitions of "Marblehead-resident."</p>
   </div>
 
   <div class="read-next">
