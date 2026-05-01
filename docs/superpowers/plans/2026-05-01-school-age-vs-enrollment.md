@@ -12,17 +12,27 @@
 
 ## File Structure
 
+**Scope expansion (2026-05-01 during execution):** while implementing Task 2, discovered DESE dataset `rdxw-mfv3` ("School Attending Children" by town of residence, SY 1985-2025). This directly decomposes the residual into private / charter / homeschool / SPED / vocational categories, and provides 40 years of trend data showing public-share is stable in the 82-90% band. Spec's vague "residual" is replaced with concrete decomposition table; a small second chart shows the long-arc public-vs-non-public trend. User approved the expansion.
+
 **Create:**
-- `scripts/fetch_acs_school_age.py` — pulls ACS B01001 5-year estimates for Marblehead, end-years 2010-2023, writes `data/acs_school_age_marblehead.csv`.
-- `scripts/fetch_dese_selected_populations.py` — pulls DESE Selected Populations / Enrollment data for Marblehead, school years 2009-10 through 2023-24, writes `data/dese_metco_nonresident.csv`.
-- `data/acs_school_age_marblehead.csv` — ACS data, output of fetch script.
-- `data/dese_metco_nonresident.csv` — DESE data, output of fetch script.
+- `scripts/fetch_acs_school_age.py` — pulls ACS B01001 5-year estimates for Marblehead, end-years 2014-2023.
+- `scripts/fetch_dese_selected_populations.py` — pulls DESE enrollment-by-reason for Marblehead district, SY 2014-2026.
+- `scripts/fetch_dese_school_attending_children.py` — pulls DESE "School Attending Children" by town of residence for Marblehead, SY 1985-2025.
+- `data/acs_school_age_marblehead.csv` — ACS data.
+- `data/dese_metco_nonresident.csv` — DESE enrollment-by-reason data.
+- `data/dese_school_attending_marblehead.csv` — DESE school-attending-children data.
 
 **Modify:**
-- `charts/enrollment_vs_staffing.html` — append one new `<section>` at end of body (before closing `</div>` of `read-next` block). Section contains an `<h2>`, an `<svg.chart>`, a caption, a residual table, and a residual-disclosure paragraph.
-- `data/SOURCE_LOOKUP.md` — add Census ACS B01001 and DESE Selected Populations entries.
-- `data/DATA_CATALOG.md` — add the two new CSVs.
-- `tests/smoke-test.mjs` — add one assertion that the new section's `<h2>` exists when loading `/charts/enrollment_vs_staffing/`.
+- `charts/enrollment_vs_staffing.html` — append one new `<section>` at end of body (before the existing `<div class="read-next">` block). Section contains:
+  1. Headline `<h2>` and short framing paragraph.
+  2. **Headline 3-line chart** — school-age (ACS), MPS resident, METCO over 2014-2026.
+  3. Caption with MOE disclosure.
+  4. `<h3>` "Where do the rest go?" + concrete decomposition table for SY 2024 (from `rdxw-mfv3`).
+  5. `<h3>` "The long-arc story" + **second 2-line chart** — Marblehead kids in MPS vs Marblehead kids in non-MPS schools combined, over 1985-2025. Shows both lines move together.
+  6. Closing caption with the headline finding ("public share has held 82-90% for 40 years").
+- `data/SOURCE_LOOKUP.md` — add Census ACS B01001, DESE enrollment-by-reason, and DESE school-attending-children entries.
+- `data/DATA_CATALOG.md` — add the three new CSVs.
+- `tests/smoke-test.mjs` — add an assertion that the new section's `<h2>` exists and the page now has at least 5 SVG charts (was 4; now 4 + 2 new = 6).
 
 ---
 
@@ -452,6 +462,171 @@ git commit -m "Add DESE enrollment-by-reason fetch for Marblehead
 non-residents, and other non-residents for the Marblehead district.
 Resident enrollment is the count of MPS-enrolled students whose
 town of residence is Marblehead."
+```
+
+---
+
+### Task 3b: DESE School-Attending-Children fetch (added during execution)
+
+This task was added when discovery in Task 2 surfaced the `rdxw-mfv3` dataset. It powers the concrete decomposition table (Task 6) and the long-arc 2-line chart (Task 6b).
+
+**Files:**
+- Create: `scripts/fetch_dese_school_attending_children.py`
+- Create: `data/dese_school_attending_marblehead.csv` (generated)
+
+- [ ] **Step 1: Write the script**
+
+```python
+#!/usr/bin/env python3
+"""Fetch DESE "School Attending Children" for Marblehead.
+
+This dataset breaks down where students residing in a given Massachusetts
+town actually attend school: local public, regional academic, vocational,
+collaborative, charter, out-of-district public, homeschool, in-state
+private, and out-of-state private. Coverage runs SY 1985 through SY 2025
+(SY 2020 is missing, plausibly a COVID reporting gap).
+
+Output: data/dese_school_attending_marblehead.csv
+Source: https://educationtocareer.data.mass.gov/resource/rdxw-mfv3.json
+
+The `sy` field is the academic-year-ending year (sy=2024 means SY 2023-24,
+which Marblehead reports as FY24).
+"""
+import csv
+import json
+import os
+import sys
+import urllib.parse
+import urllib.request
+
+OUT_PATH = "data/dese_school_attending_marblehead.csv"
+RESOURCE = "rdxw-mfv3"
+TOWN = "Marblehead"
+BASE = "https://educationtocareer.data.mass.gov/resource"
+
+HEADERS = [
+    "school_year_end",
+    "town",
+    "loc_pub",
+    "acad_reg",
+    "voc_reg",
+    "collabs",
+    "charter",
+    "ood_pub",
+    "homeschool",
+    "in_state_priv",
+    "oos_priv",
+    "total",
+    "total_pub",
+    "public_pct",
+]
+
+NUMERIC_FIELDS = HEADERS[2:-1]  # everything except keys + the percent string
+
+
+def fetch_all():
+    params = {"town": TOWN, "$limit": "100", "$order": "sy"}
+    url = f"{BASE}/{RESOURCE}.json?{urllib.parse.urlencode(params)}"
+    with urllib.request.urlopen(url, timeout=30) as resp:
+        return json.loads(resp.read().decode())
+
+
+def to_int(v):
+    if v in (None, "", "-"):
+        return 0
+    try:
+        return int(v)
+    except (TypeError, ValueError):
+        return 0
+
+
+def main():
+    rows = fetch_all()
+    if not rows:
+        print("No rows returned, aborting.", file=sys.stderr)
+        sys.exit(1)
+
+    out = []
+    for r in rows:
+        out.append([
+            int(r["sy"]),
+            r["town"],
+            to_int(r.get("loc_pub_cnt")),
+            to_int(r.get("acad_reg_cnt")),
+            to_int(r.get("voc_reg_cnt")),
+            to_int(r.get("collabs_cnt")),
+            to_int(r.get("chart_cnt")),
+            to_int(r.get("ood_pub_cnt")),
+            to_int(r.get("home_schld_cnt")),
+            to_int(r.get("in_state_priv_cnt")),
+            to_int(r.get("oos_priv_cnt")),
+            to_int(r.get("total_cnt")),
+            to_int(r.get("total_pub_cnt")),
+            r.get("public_pct", ""),
+        ])
+        sy = r["sy"]
+        print(
+            f"  SY {sy}: total={out[-1][11]} mps={out[-1][2]} "
+            f"priv={out[-1][9]} pub_pct={out[-1][13]}",
+            flush=True,
+        )
+
+    os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
+    with open(OUT_PATH, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(HEADERS)
+        for r in out:
+            w.writerow(r)
+    print(f"\nWrote {OUT_PATH} ({len(out)} rows)")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+- [ ] **Step 2: Run the script**
+
+```bash
+chmod +x scripts/fetch_dese_school_attending_children.py
+python3 scripts/fetch_dese_school_attending_children.py
+```
+
+Expected: ~40 rows from SY 1985 to SY 2025 (with one gap at SY 2020).
+
+- [ ] **Step 3: Spot-check SY 2024 against known ground truth**
+
+Verify the SY 2024 row matches the ground truth printed during Task 1 discovery:
+
+```bash
+python3 -c "
+import csv
+with open('data/dese_school_attending_marblehead.csv') as f:
+    rows = {int(r['school_year_end']): r for r in csv.DictReader(f)}
+r = rows[2024]
+expect = {
+    'loc_pub': 2465, 'in_state_priv': 500, 'charter': 61,
+    'homeschool': 37, 'voc_reg': 26, 'ood_pub': 8,
+    'oos_priv': 3, 'total': 3106
+}
+for k, v in expect.items():
+    actual = int(r[k])
+    print(f'{k:<14} actual={actual:>5}  expected={v:>5}  match={actual == v}')
+"
+```
+
+All eight should match. If not, investigate before continuing.
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add scripts/fetch_dese_school_attending_children.py data/dese_school_attending_marblehead.csv
+git commit -m "Add DESE School-Attending-Children fetch for Marblehead
+
+40 years (SY 1985 through SY 2025) of where Marblehead-resident kids
+attend school: local public, charter, in-state private, out-of-state
+private, homeschool, out-of-district public, regional academic and
+vocational, and collaboratives. Powers the decomposition table and
+long-arc trend chart on enrollment_vs_staffing.html."
 ```
 
 ---
