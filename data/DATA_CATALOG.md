@@ -150,19 +150,19 @@ All data compiled April 2026 from primary public sources. Every number is either
 
 ### Town Payroll Headcount by Department (19 fiscal years, FY08-FY26)
 - **What it is:** Annual headcount of every paid Town employee, by department, from the Town's payroll system. One row per employee (any pay frequency: annual, weekly, on-call, seasonal). Dept-level subtotals labeled "Number of Employees".
-- **Source:** Public records request response, April 28, 2026 (RAO Kyle A. Wiley). Raw file: `employee_count_FY2008-2026.xls`. Long-form CSV: `town_employee_headcount_FY08-26.csv`. Schools/Town summary: `town_employee_headcount_summary_FY08-26.csv`.
-- **Caveat:** Headcount, not FTE. A 0.1 FTE substitute counts as 1 employee. Year-over-year deltas are reliable because methodology is consistent. Use ACFR FTE (with FY23 caveat) when an FTE-weighted figure is needed.
+- **Source:** Public records request response, April 28, 2026 (<abbr class="g" title="Records Access Officer">RAO</abbr> Kyle A. Wiley). Raw file: `employee_count_FY2008-2026.xls`. Long-form <abbr class="g" title="Comma-Separated Values">CSV</abbr>: `town_employee_headcount_FY08-26.csv`. Schools/Town summary: `town_employee_headcount_summary_FY08-26.csv`.
+- **Caveat:** Headcount, not <abbr class="g" title="Full-Time Equivalent">FTE</abbr>. A 0.1 FTE substitute counts as 1 employee. Year-over-year deltas are reliable because methodology is consistent. Use <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> FTE (with FY23 caveat) when an FTE-weighted figure is needed.
 - **Confidence:** High. Direct payroll-system extract.
 
-### GIC Monthly Invoice History (13 fiscal years, FY14-FY26)
-- **What it is:** Every monthly Group Insurance Commission invoice paid by the Town, with enrollment counts (active, retired, retiree dental, survivor, COBRA) and dollar costs by category. FY26 partial (11 months).
-- **Source:** Public records request response, April 28, 2026. Raw file: `gic_invoices_FY2014-2026.xlsx`. Monthly CSV: `gic_monthly_invoices_FY14-26.csv`. Per-FY rollup: `gic_invoices_summary_FY14-26.csv`.
-- **Caveat:** Total Amount Due is the full premium charged by GIC (employer + employee share), not just the Town's own appropriation. Do not compare directly to the "Group Insurance" budget line, which is a different figure (Town's own share).
+### <abbr class="g" title="Group Insurance Commission">GIC</abbr> Monthly Invoice History (13 fiscal years, FY14-FY26)
+- **What it is:** Every monthly Group Insurance Commission invoice paid by the Town, with enrollment counts (active, retired, retiree dental, survivor, <abbr class="g" title="Consolidated Omnibus Budget Reconciliation Act">COBRA</abbr>) and dollar costs by category. FY26 partial (11 months).
+- **Source:** Public records request response, April 28, 2026. Raw file: `gic_invoices_FY2014-2026.xlsx`. Monthly <abbr class="g" title="Comma-Separated Values">CSV</abbr>: `gic_monthly_invoices_FY14-26.csv`. Per-FY rollup: `gic_invoices_summary_FY14-26.csv`.
+- **Caveat:** Total Amount Due is the full premium charged by <abbr class="g" title="Group Insurance Commission">GIC</abbr> (employer + employee share), not just the Town's own appropriation. Do not compare directly to the "Group Insurance" budget line, which is a different figure (Town's own share).
 - **Confidence:** High. Direct invoice ledger.
 
 ## What We Don't Have (identified gaps)
 
-1. **GIC premium rates FY12-FY18** - not publicly available online.
-2. **Claims breakdown by category** - what's driving the 119% loss ratio. Would need GIC or Hill Group consultant data.
-3. **Peer town staffing comparisons** - need Melrose/Swampscott/Stoneham FTE data to validate "too many employees" claim.
-4. **School enrollment from DESE** - have it from ACFRs but DESE would have grade-level breakdown.
+1. **<abbr class="g" title="Group Insurance Commission">GIC</abbr> premium rates FY12-FY18** - not publicly available online.
+2. **Claims breakdown by category** - what's driving the 119% loss ratio. Would need <abbr class="g" title="Group Insurance Commission">GIC</abbr> or Hill Group consultant data.
+3. **Peer town staffing comparisons** - need Melrose/Swampscott/Stoneham <abbr class="g" title="Full-Time Equivalent">FTE</abbr> data to validate "too many employees" claim.
+4. **School enrollment from <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr>** - have it from <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>s but DESE would have grade-level breakdown.
