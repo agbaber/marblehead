@@ -160,7 +160,7 @@ og_url: https://marbleheaddata.org/inside-school-staffing.html
       <button type="button" data-role="Tutors" class="active" aria-pressed="true">Tutors</button>
       <button type="button" data-role="Paraprofessionals" aria-pressed="false">Paras</button>
       <button type="button" data-role="Co-teachers" aria-pressed="false">Co-teachers</button>
-      <button type="button" data-role="Special ed related" aria-pressed="false">SPED related</button>
+      <button type="button" data-role="Special ed related" aria-pressed="false"><abbr class="g" title="Special Education">SPED</abbr> related</button>
       <button type="button" data-role="School counselors" aria-pressed="false">Counselors</button>
       <button type="button" data-role="Administrators" aria-pressed="false">Admins</button>
       <button type="button" data-role="Teachers (core)" aria-pressed="false">Teachers</button>
@@ -168,12 +168,12 @@ og_url: https://marbleheaddata.org/inside-school-staffing.html
 
     <div class="chart-wrapper">
       <svg class="chart" id="role-history-svg" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="role-history-title role-history-desc">
-        <title id="role-history-title">Marblehead and peer staffing FTE history by role category, SY2008 through SY2026.</title>
+        <title id="role-history-title">Marblehead and peer staffing levels by role category, school years 2008 through 2026.</title>
         <desc id="role-history-desc">Line chart with one line per district. Use the toggle buttons above to switch the role being shown. Source data linked in the caption.</desc>
 
         <!-- Legend -->
         <g id="rh-legend">
-          <text class="annotation" x="60" y="20" font-size="12" font-weight="600" id="rh-title">Tutors (FTE)</text>
+          <text class="annotation" x="60" y="20" font-size="12" font-weight="600" id="rh-title">Tutors</text>
           <rect class="s-marblehead" x="240" y="11" width="10" height="10" rx="2" fill="currentColor"/>
           <text class="tick-label" x="254" y="20" font-size="10">Marblehead</text>
           <rect class="s-melrose" x="324" y="11" width="10" height="10" rx="2" fill="currentColor"/>
@@ -185,7 +185,7 @@ og_url: https://marbleheaddata.org/inside-school-staffing.html
         </g>
 
         <!-- Y axis label -->
-        <text class="tick-label" x="55" y="36" text-anchor="end" font-size="10">FTE</text>
+        <text class="tick-label" x="55" y="36" text-anchor="end" font-size="10">Staff</text>
 
         <!-- Y grid + ticks (built by JS) -->
         <g id="rh-grid"></g>
@@ -247,7 +247,7 @@ og_url: https://marbleheaddata.org/inside-school-staffing.html
 
       function render(role) {
         var titleEl = document.getElementById("rh-title");
-        if (titleEl) titleEl.textContent = role + " (FTE)";
+        if (titleEl) titleEl.textContent = role;
 
         var series = data.series[role];
         var maxV = 0;
