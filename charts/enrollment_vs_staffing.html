@@ -14,6 +14,71 @@ scripts: [chart-tooltip]
 .page .legend + .chart-wrapper { margin-top: 0; }
 #staffing-legend .legend-item { cursor: pointer; }
 #staffing-legend .legend-item--off { opacity: 0.3; }
+
+/* Stacked-card layout for the school-attending decomposition table on
+   narrow viewports. The site-wide .data--stack modifier hardcodes a
+   5-column schema; this table has 3 columns so we use data-label
+   attributes instead of nth-child label rules. */
+@media (max-width: 600px) {
+  table.data--stack-attending {
+    min-width: 0;
+    display: block;
+  }
+  table.data--stack-attending thead {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  table.data--stack-attending tbody { display: block; }
+  table.data--stack-attending tbody tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 14px;
+    padding: 12px 14px 10px;
+    margin-bottom: 10px;
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    border-bottom: none;
+  }
+  table.data--stack-attending tbody tr:last-child { margin-bottom: 0; }
+  table.data--stack-attending tbody tr td {
+    display: block;
+    padding: 2px 0;
+    border-bottom: none;
+    font-size: 0.8125rem;
+    white-space: normal;
+  }
+  /* First column (category): full width, larger, bold. */
+  table.data--stack-attending tbody tr td:first-child {
+    grid-column: 1 / -1;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--divider);
+  }
+  /* Each value gets its column label from data-label. */
+  table.data--stack-attending tbody tr td[data-label] {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: right;
+    color: var(--text-mid);
+  }
+  table.data--stack-attending tbody tr td[data-label]::before {
+    content: attr(data-label);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-subtle);
+  }
+  .table-wrap:has(table.data--stack-attending) { overflow-x: visible; }
+}
 </style>
 <h1 class="h-center">School Enrollment and Education Staffing</h1>
   <p class="subtitle h-center">Marblehead Public Schools. From <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>s and <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> (Massachusetts Department of Elementary and Secondary Education).</p>
@@ -434,7 +499,7 @@ scripts: [chart-tooltip]
   <p>The chart above raises a question it does not fully answer. <abbr class="g" title="American Community Survey">ACS</abbr> says about 3,870 school-age residents live in town. <abbr class="g" title="Marblehead Public Schools">MPS</abbr> enrolls about 2,531 of them. So where are the rest? <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> publishes a separate, direct enumeration of where students residing in each Massachusetts town actually attend school. The most recent year available is school year 2023&ndash;24:</p>
 
   <div class="table-wrap">
-    <table class="data">
+    <table class="data data--stack-attending">
       <thead>
         <tr>
           <th scope="col">Where Marblehead-resident students attend</th>
@@ -445,43 +510,43 @@ scripts: [chart-tooltip]
       <tbody>
         <tr>
           <td>Marblehead Public Schools</td>
-          <td>2,465</td>
-          <td>79.4%</td>
+          <td data-label="SY 2023-24">2,465</td>
+          <td data-label="Share">79.4%</td>
         </tr>
         <tr>
           <td>In-state private schools</td>
-          <td>500</td>
-          <td>16.1%</td>
+          <td data-label="SY 2023-24">500</td>
+          <td data-label="Share">16.1%</td>
         </tr>
         <tr>
           <td>Charter schools</td>
-          <td>61</td>
-          <td>2.0%</td>
+          <td data-label="SY 2023-24">61</td>
+          <td data-label="Share">2.0%</td>
         </tr>
         <tr>
           <td>Homeschool</td>
-          <td>37</td>
-          <td>1.2%</td>
+          <td data-label="SY 2023-24">37</td>
+          <td data-label="Share">1.2%</td>
         </tr>
         <tr>
           <td>Vocational (Essex Tech) and collaboratives</td>
-          <td>32</td>
-          <td>1.0%</td>
+          <td data-label="SY 2023-24">32</td>
+          <td data-label="Share">1.0%</td>
         </tr>
         <tr>
           <td>Out-of-district public (mostly <abbr class="g" title="Special Education">SPED</abbr>)</td>
-          <td>8</td>
-          <td>0.3%</td>
+          <td data-label="SY 2023-24">8</td>
+          <td data-label="Share">0.3%</td>
         </tr>
         <tr>
           <td>Out-of-state private</td>
-          <td>3</td>
-          <td>0.1%</td>
+          <td data-label="SY 2023-24">3</td>
+          <td data-label="Share">0.1%</td>
         </tr>
         <tr>
           <td><strong>Total Marblehead kids in school</strong></td>
-          <td><strong>3,106</strong></td>
-          <td><strong>100.0%</strong></td>
+          <td data-label="SY 2023-24"><strong>3,106</strong></td>
+          <td data-label="Share"><strong>100.0%</strong></td>
         </tr>
       </tbody>
     </table>
