@@ -29,8 +29,8 @@ All data compiled April 2026 from primary public sources. Every number is either
 ### Total FTE (24 data points, FY01-FY24)
 - **What it is:** Full-time equivalent employees across all town departments. Part-time employees counted as fractions (e.g., 20 hrs/wk = 0.5 FTE).
 - **Source:** ACFR Statistical Section, "Full-time Equivalent Town Employees by Function"
-- **Caveat:** FY23 jumped +40.5 total town <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (668.50 to 709.00); education gained +54.31, other functions dropped. Not real hiring: General Fund salaries grew 2.6% the same year, nowhere near what 54 new positions would have cost. The FY23 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> also rounded its values and restructured the schedule. Likely a reporting change involving funding-source recategorization (Circuit Breaker spending tripled FY22 to FY23). Specific methodology pending Town Accountant confirmation. Full breakdown at `inside-school-staffing.html#the-fy23-mystery`.
-- **Confidence:** High for trend; high that FY23 jump is not real hiring. Specific reporting change pending Town Accountant confirmation.
+- **Caveat:** FY23 jumped +40.5 total town <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (668.50 to 709.00); education gained +54.31, other functions dropped. Not real hiring: General Fund salaries grew 2.6% the same year, nowhere near what 54 new positions would have cost. The FY23 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> also rounded its values and restructured the schedule. The Town's payroll roster (released via PRR April 2026, see `town_employee_headcount_FY08-26.csv`) shows school-side headcount went from 705 in FY22 to 699 in FY23, a decline of 6 &ndash; ruling out actual hiring as the source of the +54.31 jump. Likely a reporting change involving funding-source recategorization (Circuit Breaker spending tripled FY22 to FY23). Full breakdown at `inside-school-staffing.html#the-fy23-mystery`.
+- **Confidence:** High for trend; high that FY23 jump is a reporting change, not real hiring.
 
 ### Education FTE (24 data points, FY01-FY24)
 - **What it is:** Education department FTE only (teachers, paraprofessionals, administrators, custodial, all school staff)
@@ -148,11 +148,21 @@ All data compiled April 2026 from primary public sources. Every number is either
   - Snapshot captured 2026-04-17 (FY26 Q3). A later snapshot would include year-end payments and reclassifications.
 - **Confidence:** High for vendor identities and dollar amounts at the snapshot instant. Low for year-end interpretation (8-10 weeks of FY26 still to post).
 
+### Town Payroll Headcount by Department (19 fiscal years, FY08-FY26)
+- **What it is:** Annual headcount of every paid Town employee, by department, from the Town's payroll system. One row per employee (any pay frequency: annual, weekly, on-call, seasonal). Dept-level subtotals labeled "Number of Employees".
+- **Source:** Public records request response, April 28, 2026 (RAO Kyle A. Wiley). Raw file: `employee_count_FY2008-2026.xls`. Long-form CSV: `town_employee_headcount_FY08-26.csv`. Schools/Town summary: `town_employee_headcount_summary_FY08-26.csv`.
+- **Caveat:** Headcount, not FTE. A 0.1 FTE substitute counts as 1 employee. Year-over-year deltas are reliable because methodology is consistent. Use ACFR FTE (with FY23 caveat) when an FTE-weighted figure is needed.
+- **Confidence:** High. Direct payroll-system extract.
+
+### GIC Monthly Invoice History (13 fiscal years, FY14-FY26)
+- **What it is:** Every monthly Group Insurance Commission invoice paid by the Town, with enrollment counts (active, retired, retiree dental, survivor, COBRA) and dollar costs by category. FY26 partial (11 months).
+- **Source:** Public records request response, April 28, 2026. Raw file: `gic_invoices_FY2014-2026.xlsx`. Monthly CSV: `gic_monthly_invoices_FY14-26.csv`. Per-FY rollup: `gic_invoices_summary_FY14-26.csv`.
+- **Caveat:** Total Amount Due is the full premium charged by GIC (employer + employee share), not just the Town's own appropriation. Do not compare directly to the "Group Insurance" budget line, which is a different figure (Town's own share).
+- **Confidence:** High. Direct invoice ledger.
+
 ## What We Don't Have (identified gaps)
 
-1. **Annual total headcount (not FTE)** - only have FY25: 1,185 (from Marblehead Independent). Public records request filed.
-2. **Annual GIC enrollment by Marblehead** - only 8 OPEB data points. Public records request filed.
-3. **GIC premium rates FY12-FY18** - not publicly available online.
-4. **Claims breakdown by category** - what's driving the 119% loss ratio. Would need GIC or Hill Group consultant data.
-5. **Peer town staffing comparisons** - need Melrose/Swampscott/Stoneham FTE data to validate "too many employees" claim.
-6. **School enrollment from DESE** - have it from ACFRs but DESE would have grade-level breakdown.
+1. **GIC premium rates FY12-FY18** - not publicly available online.
+2. **Claims breakdown by category** - what's driving the 119% loss ratio. Would need GIC or Hill Group consultant data.
+3. **Peer town staffing comparisons** - need Melrose/Swampscott/Stoneham FTE data to validate "too many employees" claim.
+4. **School enrollment from DESE** - have it from ACFRs but DESE would have grade-level breakdown.
