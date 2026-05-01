@@ -155,6 +155,27 @@ Each year's draw stays on the levy permanently; Year 3 is the ongoing annual cos
 - Raw JSON saved: `data/acs_b19001_marblehead_2024.json`
 - B19001_001E = total households (8,289). Brackets _002E through _017E cover &lt;$10K up to $200K+. Percentiles on the override calculator are derived from cumulative bracket sums divided by _001E.
 
+## School-Age Population (ACS B01001, ages 5&ndash;17)
+- Source: US Census Bureau, ACS 5-year estimates, table B01001 "Sex by Age", Marblehead town (FIPS 25-009-38400), end-years 2014&ndash;2023.
+- API endpoint pattern: `https://api.census.gov/data/<year>/acs/acs5?get=NAME,B01001_004E,B01001_005E,B01001_006E,B01001_028E,B01001_029E,B01001_030E,...M&for=county+subdivision:38400&in=state:25+county:009`
+- Variables sum male+female counts for ages 5-9, 10-14, and 15-17. Margin of error propagated as sqrt of sum of squared component MOEs.
+- Raw data: `data/acs_school_age_marblehead.csv`. Fetch script: `scripts/fetch_acs_school_age.py`. Used by `charts/enrollment_vs_staffing.html` school-age section.
+
+## DESE Enrollment by Reason (Marblehead district, SY 2014&ndash;2026)
+- Socrata dataset `8xyg-59b2`, "Reasons for Student Enrollment by Town (Receiving)": [educationtocareer.data.mass.gov/resource/8xyg-59b2.json](https://educationtocareer.data.mass.gov/resource/8xyg-59b2.json)
+- Filtered to `dist_code=01680000` (Marblehead). Each row is one (school year, enrollment reason, town of residence) combination.
+- MPS resident enrollment = sum where `town_name=Marblehead` (across all enrollment reasons).
+- METCO = sum where `enr_reason=METCO`.
+- Other non-resident = remainder (school-choice, in-state agreement, foreign exchange from non-Marblehead towns).
+- Cross-checked against Socrata `t8td-gens` district-level total enrollment within &plusmn;1.
+- Raw data: `data/dese_metco_nonresident.csv`. Fetch script: `scripts/fetch_dese_selected_populations.py`.
+
+## DESE School-Attending Children (Marblehead-resident, SY 1985&ndash;2025)
+- Socrata dataset `rdxw-mfv3`, "School Attending Children": [educationtocareer.data.mass.gov/resource/rdxw-mfv3.json](https://educationtocareer.data.mass.gov/resource/rdxw-mfv3.json)
+- Filtered to `town=Marblehead`. Each row is one school year with counts of Marblehead-resident kids attending each school category: local public (`loc_pub_cnt`), regional academic, vocational, collaboratives, charter, out-of-district public, homeschool, in-state private, out-of-state private.
+- SY 2020 is missing from the source dataset. SY 2007 and SY 2008 have known total-count anomalies; charts compute non-MPS totals as the sum of all non-`loc_pub` categories rather than `total_cnt - loc_pub` to avoid those anomalies.
+- Raw data: `data/dese_school_attending_marblehead.csv`. Fetch script: `scripts/fetch_dese_school_attending_children.py`.
+
 ## Peer Town General Fund Revenues and Expenditures, FY2002&ndash;FY2025
 
 Two CSVs pulled from the Massachusetts Department of Revenue Division of Local Services (DLS) Schedule A General Fund reports:

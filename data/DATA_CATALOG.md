@@ -148,6 +148,31 @@ All data compiled April 2026 from primary public sources. Every number is either
   - Snapshot captured 2026-04-17 (FY26 Q3). A later snapshot would include year-end payments and reclassifications.
 - **Confidence:** High for vendor identities and dollar amounts at the snapshot instant. Low for year-end interpretation (8-10 weeks of FY26 still to post).
 
+### School-Age Population (10 data points, ACS end-years 2014-2023)
+- **What it is:** Marblehead-resident kids ages 5-17, sum of male and female counts for ages 5-9, 10-14, 15-17 from ACS Table B01001.
+- **Source:** US Census ACS 5-year estimates, table B01001, Marblehead town (county subdivision 38400).
+- **File:** `acs_school_age_marblehead.csv`
+- **Fetch script:** `scripts/fetch_acs_school_age.py`
+- **Caveat:** Margin of error roughly &plusmn;400 on the 5-17 total; read trends, not exact counts. ACS includes 5-year-olds not yet enrolled in kindergarten, so this count runs higher than DESE school-attending counts.
+- **Confidence:** Medium. Survey-based estimate.
+
+### DESE Enrollment by Reason (13 data points, SY 2014-2026)
+- **What it is:** Marblehead district enrollment broken down by enrollment reason (Resident/Member, METCO, Tuitioned-In variants, Foreign Exchange) crossed with town of residence.
+- **Source:** MA DESE Socrata dataset `8xyg-59b2`, "Reasons for Student Enrollment by Town (Receiving)". Filtered to `dist_code=01680000`.
+- **File:** `dese_metco_nonresident.csv`
+- **Fetch script:** `scripts/fetch_dese_selected_populations.py`
+- **Categorization:** MPS resident = sum of rows with `town_name=Marblehead`. METCO = sum of rows with `enr_reason=METCO`. Other non-resident = remainder.
+- **Cross-check:** SY 2023-24 total matches the existing chart's hard-coded FY24 enrollment of 2,617 exactly.
+- **Confidence:** High. Direct enumeration.
+
+### DESE School-Attending Children (40 data points, SY 1985-2025)
+- **What it is:** Where Marblehead-resident kids actually attend school: local public, regional academic, vocational, collaboratives, charter, out-of-district public, homeschool, in-state private, out-of-state private.
+- **Source:** MA DESE Socrata dataset `rdxw-mfv3`, "School Attending Children". Filtered to `town=Marblehead`.
+- **File:** `dese_school_attending_marblehead.csv`
+- **Fetch script:** `scripts/fetch_dese_school_attending_children.py`
+- **Caveats:** SY 2020 missing from source. SY 2007 and SY 2008 have anomalous `total_cnt` values; for non-MPS calculations, sum the individual non-`loc_pub` category counts rather than subtracting from `total_cnt`.
+- **Confidence:** High for individual category counts.
+
 ## What We Don't Have (identified gaps)
 
 1. **Annual total headcount (not FTE)** - only have FY25: 1,185 (from Marblehead Independent). Public records request filed.
@@ -155,4 +180,4 @@ All data compiled April 2026 from primary public sources. Every number is either
 3. **GIC premium rates FY12-FY18** - not publicly available online.
 4. **Claims breakdown by category** - what's driving the 119% loss ratio. Would need GIC or Hill Group consultant data.
 5. **Peer town staffing comparisons** - need Melrose/Swampscott/Stoneham FTE data to validate "too many employees" claim.
-6. **School enrollment from DESE** - have it from ACFRs but DESE would have grade-level breakdown.
+6. **Grade-level enrollment breakdown from DESE** - district totals are now in `dese_metco_nonresident.csv` and `dese_school_attending_marblehead.csv`, but per-grade counts are not yet pulled (available in DESE Socrata dataset `t8td-gens`).
