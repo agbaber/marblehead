@@ -474,9 +474,37 @@ def parse_school_packet() -> list[dict]:
     return rows
 
 
+def build_lookup(rows: list[dict]) -> dict:
+    """Build a {slug: display_name} lookup helper."""
+    return {r["id"]: r.get("description") for r in rows}
+
+
+def build_meta(rows: list[dict]) -> dict:
+    by_id = {r["id"]: r for r in rows}
+    gf = by_id.get("total_general_fund", {})
+    tb = by_id.get("total_budgets", {})
+    from datetime import datetime, timezone
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "source_doc": "FY27 Proposed Budget — No Override",
+        "source_pdf_url": "https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override",
+        "school_packet_url": "https://www.marbleheadschools.org/school-committee/files/fy27-proposed-budget-packet",
+        "history_source": "DOR Schedule A function-level expenditures FY02-FY24",
+        "total_general_fund": gf.get("fy27_proposed"),
+        "total_with_enterprise": tb.get("fy27_proposed"),
+    }
+
+
 if __name__ == "__main__":
     text = (DATA / "FY27_Proposed_Budget_No_Override.txt").read_text()
     rows = parse_budget_book(text)
     attach_function_history(rows)
     rows.extend(parse_school_packet())
-    print(json.dumps(rows[:5], indent=2))
+    out = {"meta": build_meta(rows), "rows": rows}
+    (DATA / "town_budget_FY27.json").write_text(json.dumps(out, indent=2) + "\n")
+    (DATA / "town_budget_FY27_lookup.json").write_text(
+        json.dumps(build_lookup(rows), indent=2) + "\n"
+    )
+    print(f"Wrote {len(rows)} rows to town_budget_FY27.json")
+    print(f"Total General Fund: ${out['meta']['total_general_fund']:,}")
+    print(f"Total Budgets: ${out['meta']['total_with_enterprise']:,}")
