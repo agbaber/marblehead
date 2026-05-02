@@ -6,3 +6,10 @@ def test_parser_finds_grand_total(fy27_budget_text):
     rows = parse_budget_book(fy27_budget_text)
     grand_total = next(r for r in rows if r["id"] == "total_budgets")
     assert grand_total["fy27_proposed"] == 122_762_030
+
+
+def test_parser_finds_general_fund_total(fy27_budget_text):
+    rows = parse_budget_book(fy27_budget_text)
+    gf = next(r for r in rows if r["id"] == "total_general_fund")
+    assert gf["fy27_proposed"] == 109_777_938
+    assert gf["fy26_budget"] == 106_206_380
