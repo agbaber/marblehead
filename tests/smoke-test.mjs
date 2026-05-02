@@ -261,7 +261,14 @@ async function testTownBudgetPageLoads(page) {
     }
   }
 
+  // Direction filter: turn off "increased", "flat", "cut" — leave only "decreased".
+  // Reset filters first by clicking "all" function chips so we have a known state.
+  const fnAllBtn = await page.$('[data-action="filter-functions-all"]');
+  if (fnAllBtn) await fnAllBtn.click();
+  await page.waitForTimeout(60);
+
   // Search "insurance" — every visible line row should contain "insurance".
+  // Requires all functions to be active so the "other_general_government" function is included.
   const search = await page.$('#tb-search');
   if (search) {
     await search.fill('insurance');
@@ -277,12 +284,6 @@ async function testTownBudgetPageLoads(page) {
     await search.fill('');
     await page.waitForTimeout(60);
   }
-
-  // Direction filter: turn off "increased", "flat", "cut" — leave only "decreased".
-  // Reset filters first by clicking "all" function chips so we have a known state.
-  const fnAllBtn = await page.$('[data-action="filter-functions-all"]');
-  if (fnAllBtn) await fnAllBtn.click();
-  await page.waitForTimeout(60);
 
   const dirChips = ['increased', 'flat', 'cut'];
   for (const dir of dirChips) {
