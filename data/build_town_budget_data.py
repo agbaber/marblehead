@@ -13,7 +13,6 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import Iterable, Optional
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -34,7 +33,7 @@ _GENERAL_FUND_TOTAL_RE = re.compile(
 )
 
 
-def _parse_int(s: str) -> Optional[int]:
+def _parse_int(s: str) -> int:
     s = s.strip().replace(",", "")
     if s in {"", "-"}:
         return 0
@@ -43,7 +42,7 @@ def _parse_int(s: str) -> Optional[int]:
     return int(s)
 
 
-def _parse_pct(s: str) -> Optional[float]:
+def _parse_pct(s: str) -> float:
     s = s.strip().rstrip("%")
     if s in {"", "-"}:
         return 0.0
@@ -54,7 +53,7 @@ def parse_budget_book(text: str) -> list[dict]:
     """Parse the FY27 budget book text into a flat list of rows.
 
     Rows have fields: id, level, parent_id, function, department,
-    description, spend_type, fy25_actual, fy25_budget, fy26_budget,
+    description, spend_type, fy25_budget, fy25_actual, fy26_budget,
     fy27_proposed, change_dollars, change_pct.
     """
     rows: list[dict] = []
