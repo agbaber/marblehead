@@ -261,6 +261,23 @@ async function testTownBudgetPageLoads(page) {
     }
   }
 
+  // Search "insurance" — every visible line row should contain "insurance".
+  const search = await page.$('#tb-search');
+  if (search) {
+    await search.fill('insurance');
+    await page.waitForTimeout(120);
+    const allMatch = await page.evaluate(() => {
+      const lines = [...document.querySelectorAll('.tb-row--line')];
+      if (lines.length === 0) return false;
+      return lines.every(r => r.textContent.toLowerCase().includes('insurance'));
+    });
+    allMatch
+      ? ok('Search: all visible line rows contain "insurance"')
+      : fail('Search', 'non-matching line rows visible');
+    await search.fill('');
+    await page.waitForTimeout(60);
+  }
+
   // Direction filter: turn off "increased", "flat", "cut" — leave only "decreased".
   // Reset filters first by clicking "all" function chips so we have a known state.
   const fnAllBtn = await page.$('[data-action="filter-functions-all"]');
