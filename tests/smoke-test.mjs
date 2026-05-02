@@ -349,7 +349,8 @@ async function testTownBudgetPageLoads(page) {
   }
 
   // Deep link: ?fn=schools should pre-filter to schools only on load.
-  await page.goto(`${SITE}/town-budget.html?fn=schools`);
+  // Use clean URL (no .html) so npx-serve's clean-URL redirect doesn't strip the query string.
+  await page.goto(`${SITE}/town-budget?fn=schools`);
   await page.waitForSelector('.tb-row--function', { timeout: 5000 }).catch(() => null);
   const visibleFns = await page.$$('.tb-row--function');
   visibleFns.length === 1
