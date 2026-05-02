@@ -220,6 +220,25 @@ async function testTownBudgetPageLoads(page) {
         : fail('Line item detail panel', 'panel did not open');
     }
   }
+
+  // Sparkline appears for at least the function-level rows that have history.
+  const sparklines = await page.$$('.tb-sparkline');
+  sparklines.length > 0
+    ? ok(`Town Budget renders ${sparklines.length} sparklines`)
+    : fail('Sparklines', 'expected > 0, got 0');
+
+  // Expand-all toggle reveals all line items.
+  const expandAll = await page.$('#tb-expand-all');
+  if (expandAll) {
+    await expandAll.click();
+    await page.waitForTimeout(120);
+    const lineRows = await page.$$('.tb-row--line');
+    lineRows.length >= 80
+      ? ok(`Expand-all reveals ${lineRows.length} line items`)
+      : fail('Expand-all', `expected >=80 lines, got ${lineRows.length}`);
+  } else {
+    fail('Expand-all', '#tb-expand-all button not found');
+  }
 }
 
 async function testGeneralGovernmentChart(page) {

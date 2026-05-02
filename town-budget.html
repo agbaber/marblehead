@@ -97,6 +97,26 @@ og_url: https://marbleheaddata.org/town-budget.html
     .tb-detail-panel dl { grid-template-columns: repeat(2, 1fr); }
     .tb-detail-panel { padding: 12px 24px; }
   }
+  .tb-toolbar {
+    display: flex; gap: 8px; align-items: center; justify-content: flex-end;
+    padding: 8px 12px; background: var(--surface);
+    border-bottom: 1px solid var(--border-faint, #eee);
+  }
+  .tb-btn {
+    background: transparent; border: 1px solid var(--border, #ddd);
+    border-radius: var(--radius-sm, 4px); padding: 4px 10px;
+    font-size: 12px; cursor: pointer; color: var(--text);
+  }
+  .tb-btn:hover { background: var(--surface-hover, color-mix(in srgb, var(--c-teal) 6%, transparent)); }
+  .tb-sparkline { width: 80px; height: 18px; vertical-align: middle; }
+  .tb-sparkline path { fill: none; stroke: var(--c-teal); stroke-width: 1.5; }
+  .tb-sparkline circle { fill: var(--c-teal); }
+  .tb-table th.tb-col-spark, .tb-table td.tb-col-spark {
+    width: 96px; text-align: center;
+  }
+  @media (max-width: 700px) {
+    .tb-col-spark { display: none; }
+  }
 </style>
 
 <h1>Marblehead's town budget, line by line</h1>
@@ -132,6 +152,7 @@ og_url: https://marbleheaddata.org/town-budget.html
   var state = {
     expanded: new Set(),
     detailFor: null,  // line-row id with an open detail panel
+    allExpanded: false,
   };
 
   function fmtMillions(n) {
@@ -155,6 +176,50 @@ og_url: https://marbleheaddata.org/town-budget.html
     return '';
   }
 
+  function renderSparkline(history) {
+    if (!history) return '';
+    // Pull FY02..FY24 actuals; skip 0s (stubs from empty CSV rows) and nulls.
+    var years = [];
+    for (var yy = 2; yy <= 24; yy++) {
+      var key = 'fy' + (yy < 10 ? '0' + yy : yy) + '_actual';
+      if (history[key] && history[key] > 0) years.push(history[key]);
+    }
+    if (years.length < 2) return '';
+    var min = Math.min.apply(null, years);
+    var max = Math.max.apply(null, years);
+    var w = 80, h = 18, pad = 1;
+    var span = max - min || 1;
+    var pts = years.map(function (v, i) {
+      return [
+        pad + (i * (w - 2 * pad)) / (years.length - 1),
+        h - pad - ((v - min) / span) * (h - 2 * pad)
+      ];
+    });
+    var d = pts.map(function (p, i) {
+      return (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ' ' + p[1].toFixed(1);
+    }).join('');
+    var last = pts[pts.length - 1];
+    return '<svg class="tb-sparkline" viewBox="0 0 ' + w + ' ' + h + '" aria-hidden="true">' +
+             '<path d="' + d + '"/>' +
+             '<circle cx="' + last[0].toFixed(1) + '" cy="' + last[1].toFixed(1) + '" r="1.6"/>' +
+           '</svg>';
+  }
+
+  function toggleExpandAll() {
+    if (state.allExpanded) {
+      state.expanded.clear();
+      state.allExpanded = false;
+    } else {
+      data.rows.forEach(function (r) {
+        if (r.level === 'function' || r.level === 'department') {
+          state.expanded.add(r.id);
+        }
+      });
+      state.allExpanded = true;
+    }
+    renderTable();
+  }
+
   function renderRow(r) {
     var hasChildren = r.level === 'function' || r.level === 'department';
     var caret = hasChildren ? '▸' : '';
@@ -168,6 +233,7 @@ og_url: https://marbleheaddata.org/town-budget.html
         '<td><span class="tb-caret">' + caret + '</span> ' + r.description + '</td>' +
         '<td>' + fmtMillions(r.fy27_proposed) + '</td>' +
         '<td class="' + pctClass(r.change_pct) + '">' + fmtPct(r.change_pct) + '</td>' +
+        '<td class="tb-col-spark">' + (r.history ? renderSparkline(r.history) : '') + '</td>' +
       '</tr>'
     );
   }
@@ -184,7 +250,7 @@ og_url: https://marbleheaddata.org/town-budget.html
       : '—';
     return (
       '<tr class="tb-detail-row">' +
-        '<td colspan="3">' +
+        '<td colspan="4">' +
           '<div class="tb-detail-panel" data-for="' + r.id + '">' +
             '<dl>' +
               '<div><dt>FY25 Budget</dt><dd>' + fmtMillions(r.fy25_budget) + '</dd></div>' +
@@ -246,11 +312,18 @@ og_url: https://marbleheaddata.org/town-budget.html
       }
     });
     var html =
+      '<div class="tb-toolbar">' +
+        '<button class="tb-btn" id="tb-expand-all">' +
+          (state.allExpanded ? 'Collapse all' : 'Expand all') +
+        '</button>' +
+      '</div>' +
       '<table class="tb-table"><thead><tr>' +
         '<th>Description</th><th>FY27</th><th>% vs FY26</th>' +
+        '<th class="tb-col-spark">Trend FY02→FY24</th>' +
       '</tr></thead><tbody>' + bodyHtml + '</tbody></table>';
     document.getElementById('tb-table').innerHTML = html;
     attachListeners();
+    document.getElementById('tb-expand-all').onclick = toggleExpandAll;
   }
 
   function attachListeners() {
