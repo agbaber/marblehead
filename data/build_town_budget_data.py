@@ -10,6 +10,7 @@ Usage:
   python3 data/build_town_budget_data.py
 """
 from __future__ import annotations
+import csv
 import json
 import re
 from pathlib import Path
@@ -309,7 +310,73 @@ def parse_budget_book(text: str) -> list[dict]:
     return rows
 
 
+# Schedule A function-bucket → our function slug.
+# `other_general_government` rolls up four Schedule A buckets that the FY27
+# budget book combines under "Other General Government" + "Debt Service" lines.
+SCHEDULE_A_FUNCTION_MAPPING = {
+    "general_government": ["general_government"],
+    "public_safety":      ["public_safety"],
+    "schools":            ["education"],
+    "public_works":       ["public_works"],
+    "human_services":     ["human_services"],
+    "culture_recreation": ["culture_recreation"],
+    "other_general_government":
+        ["fixed_costs", "intergov_assessments", "other", "debt_service"],
+}
+
+
+def load_schedule_a_history() -> dict[str, dict[str, int]]:
+    """Read peer_schedule_a_expenditures.csv, filter to Marblehead, return
+    {function_slug: {fyXX_actual: int}}.
+    Combines (sums) buckets per SCHEDULE_A_FUNCTION_MAPPING for our slugs.
+    """
+    p = DATA / "peer_schedule_a_expenditures.csv"
+    by_year: dict[int, dict[str, int]] = {}
+    with p.open(newline="") as f:
+        for row in csv.DictReader(f):
+            if row["municipality"] != "Marblehead":
+                continue
+            fy = int(row["fiscal_year"])
+            year_buckets: dict[str, int] = {}
+            for col in ["general_government", "public_safety", "education",
+                        "public_works", "human_services", "culture_recreation",
+                        "fixed_costs", "intergov_assessments", "other",
+                        "debt_service"]:
+                val = row.get(col, "").replace(",", "").strip()
+                year_buckets[col] = int(val) if val and val != "-" else 0
+            by_year[fy] = year_buckets
+
+    history: dict[str, dict[str, int]] = {}
+    for fn_slug, schedule_a_buckets in SCHEDULE_A_FUNCTION_MAPPING.items():
+        history[fn_slug] = {}
+        for fy, buckets in by_year.items():
+            total = sum(buckets.get(b, 0) for b in schedule_a_buckets)
+            # Use 2-digit year suffix: 2002 → fy02, 2024 → fy24.
+            yy = fy % 100
+            history[fn_slug][f"fy{yy:02d}_actual"] = total
+    return history
+
+
+def attach_function_history(rows: list[dict]) -> None:
+    """Attach `history` and `cagr_22yr` to each function-level row that has
+    Schedule A coverage. Mutates rows in place."""
+    history_by_fn = load_schedule_a_history()
+    for r in rows:
+        if r["level"] != "function":
+            continue
+        fn_history = history_by_fn.get(r["id"])
+        if not fn_history:
+            continue  # enterprise funds, schools_dept_wrapper, etc.
+        r["history"] = fn_history
+        # Compute CAGR FY02 → FY24 (22-year span).
+        start = fn_history.get("fy02_actual")
+        end = fn_history.get("fy24_actual")
+        if start and end and start > 0:
+            r["cagr_22yr"] = (end / start) ** (1 / 22) - 1
+
+
 if __name__ == "__main__":
     text = (DATA / "FY27_Proposed_Budget_No_Override.txt").read_text()
     rows = parse_budget_book(text)
+    attach_function_history(rows)
     print(json.dumps(rows[:5], indent=2))

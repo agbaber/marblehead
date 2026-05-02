@@ -1,5 +1,5 @@
 """Tests for build_town_budget_data.py."""
-from build_town_budget_data import parse_budget_book
+from build_town_budget_data import parse_budget_book, attach_function_history
 
 
 def test_parser_finds_grand_total(fy27_budget_text):
@@ -77,3 +77,35 @@ def test_function_subtotals_reconcile(fy27_budget_text):
                            if r["level"] == "department" and r["function"] == fn_slug)
         assert abs(function_total - children_sum) < 5, \
             f"{fn_slug}: function total {function_total} ≠ children sum {children_sum}"
+
+
+def test_function_history_attached(fy27_budget_text):
+    rows = parse_budget_book(fy27_budget_text)
+    attach_function_history(rows)
+    by_id = {r["id"]: r for r in rows}
+
+    police_or_safety = by_id["public_safety"]
+    assert "history" in police_or_safety
+    # FY02-FY24 = 23 years of data
+    history = police_or_safety["history"]
+    assert "fy24_actual" in history
+    assert "fy15_actual" in history
+    # Public safety FY24 actual should be in the millions
+    assert history["fy24_actual"] > 5_000_000
+
+    # CAGR should exist and be a sensible number (between -10% and +20% per year over 22 years).
+    assert "cagr_22yr" in police_or_safety
+    assert -0.10 < police_or_safety["cagr_22yr"] < 0.20
+
+    # Schools (education bucket) should also have history.
+    schools = by_id["schools"]
+    assert "history" in schools
+    assert schools["history"]["fy24_actual"] > 30_000_000
+
+    # other_general_government rolls up 4 buckets — should still get history.
+    ogg = by_id["other_general_government"]
+    assert "history" in ogg
+
+    # Enterprise functions should NOT have history (Schedule A is GF-focused).
+    sewer = by_id["sewer_enterprise"]
+    assert "history" not in sewer
