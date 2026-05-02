@@ -38,3 +38,27 @@ def test_parser_finds_all_function_totals(fy27_budget_text):
         assert by_id[slug]["fy27_proposed"] == amount
         assert abs(by_id[slug]["change_pct"] - pct) < 0.0001
         assert by_id[slug]["level"] == "function"
+
+
+def test_parser_finds_known_line_items(fy27_budget_text):
+    rows = parse_budget_book(fy27_budget_text)
+    by_descr_in_dept = {
+        (r.get("department"), r["description"]): r
+        for r in rows if r["level"] == "line"
+    }
+    police_salaries = by_descr_in_dept[("police", "Salaries")]
+    assert police_salaries["fy27_proposed"] == 4_988_616
+    assert police_salaries["function"] == "public_safety"
+    assert police_salaries["parent_id"] == "police"
+
+    fire_expense = by_descr_in_dept[("fire", "Expense")]
+    assert fire_expense["fy27_proposed"] == 372_780
+
+
+def test_parser_creates_department_rows(fy27_budget_text):
+    rows = parse_budget_book(fy27_budget_text)
+    by_id = {r["id"]: r for r in rows}
+    assert "police" in by_id
+    assert by_id["police"]["level"] == "department"
+    assert by_id["police"]["parent_id"] == "public_safety"
+    assert by_id["police"]["fy27_proposed"] == 5_216_914
