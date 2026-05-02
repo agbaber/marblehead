@@ -11,7 +11,11 @@ og_url: https://marbleheaddata.org/town-budget.html
     display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 12px; margin: 16px 0 24px;
   }
-  @media (max-width: 700px) { .tb-stats { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 700px) {
+    .tb-stats { grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 12px 0 16px; }
+    .tb-stat-value { font-size: 18px; }
+    .tb-stat-tile { padding: 12px 14px; }
+  }
   .tb-stat-tile {
     background: var(--surface); border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm); padding: 14px 16px;
@@ -22,7 +26,7 @@ og_url: https://marbleheaddata.org/town-budget.html
   .tb-stat-label { font-size: 11px; font-weight: 700;
     text-transform: uppercase; letter-spacing: 1px; color: var(--text-subtle); }
   .tb-stat-value { font-size: 22px; font-weight: 700; color: var(--text);
-    font-variant-numeric: tabular-nums; }
+    font-variant-numeric: tabular-nums; word-break: break-word; }
   .tb-stat-sub { font-size: 12px; color: var(--text-muted); }
 
   /* Tree-table container */
@@ -61,10 +65,12 @@ og_url: https://marbleheaddata.org/town-budget.html
   }
   .tb-row--department td:first-child { padding-left: 40px; }
   .tb-caret {
-    display: inline-block; width: 14px; transition: transform 0.15s;
+    display: inline-block; width: 16px; transition: transform 0.15s;
     color: var(--text-subtle); user-select: none;
+    font-size: 13px; line-height: 1;
   }
-  .tb-row.tb-expanded > td .tb-caret { transform: rotate(90deg); }
+  .tb-row.tb-expanded > td .tb-caret { transform: rotate(90deg); color: var(--c-teal); }
+  .tb-row:active { background: color-mix(in srgb, var(--c-teal) 12%, transparent); }
   .tb-row--leaf .tb-caret { visibility: hidden; }
   .tb-row--line td:first-child { padding-left: 64px;
     font-size: 14px; color: var(--text-muted); }
@@ -116,6 +122,16 @@ og_url: https://marbleheaddata.org/town-budget.html
   }
   @media (max-width: 700px) {
     .tb-col-spark { display: none; }
+    .tb-table { font-size: 14px; }
+    .tb-table thead th:nth-child(2),
+    .tb-table tbody td:nth-child(2) { width: 22%; min-width: 76px; }
+    .tb-table thead th:nth-child(3),
+    .tb-table tbody td:nth-child(3) { width: 22%; min-width: 70px; }
+    .tb-row td { padding: 12px 10px; }
+    .tb-row--department td:first-child { padding-left: 28px; }
+    .tb-row--line td:first-child { padding-left: 44px; font-size: 12.5px; }
+    .tb-caret { width: 18px; font-size: 14px; }
+    .tb-table-wrap { margin-bottom: 16px; }
   }
   .tb-filter-bar {
     background: var(--surface); border-radius: var(--radius-md);
@@ -151,6 +167,12 @@ og_url: https://marbleheaddata.org/town-budget.html
   .tb-chip-actions a { cursor: pointer; text-decoration: underline; }
   .tb-filter-count { font-size: 11px; font-weight: 500; color: var(--text-muted); text-transform: none; letter-spacing: 0; margin-left: auto; }
   .tb-toolbar { gap: 12px; flex-wrap: wrap; }
+  @media (max-width: 700px) {
+    .tb-toolbar { flex-wrap: wrap; gap: 6px; padding: 8px; }
+    .tb-toolbar-control { font-size: 11px; }
+    .tb-toolbar-control select { padding: 2px; max-width: 110px; }
+    #tb-expand-all, #tb-reset { padding: 4px 8px; font-size: 11px; }
+  }
   .tb-toolbar-control {
     display: inline-flex; align-items: center; gap: 6px;
     font-size: 12px; color: var(--text-muted);
@@ -394,11 +416,12 @@ og_url: https://marbleheaddata.org/town-budget.html
   function displayLabel(r) {
     var d = r.description || '';
     if (r.level === 'function') {
+      if (r.id === 'other_general_government') return 'Other Government';
       var stripped = d.replace(/^VOTE TOTAL /, '');
-      return titleCase(stripped);
+      return titleCase(stripped).replace(/ and /g, ' & ');
     }
     if (r.id === 'total_general_fund') return 'Total General Fund';
-    if (r.id === 'total_budgets') return 'Total Budget (incl. Enterprise)';
+    if (r.id === 'total_budgets') return 'Total (with Enterprise)';
     return d;
   }
 
