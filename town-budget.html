@@ -126,6 +126,10 @@ og_url: https://marbleheaddata.org/town-budget.html
   row to drill in. Function-level history goes back to FY02 from DOR Schedule A.
 </p>
 
+<p class="tb-footnote" style="font-size:13px;color:var(--text-muted);margin:0 0 16px;">
+  <strong>Vote totals</strong> are the function-level appropriations Town Meeting votes
+  on as single warrant articles. Click any function to drill into its departments and line items.
+</p>
 <div class="tb-stats" id="tb-stats"></div>
 
 <div class="tb-table-wrap">
@@ -220,6 +224,25 @@ og_url: https://marbleheaddata.org/town-budget.html
     renderTable();
   }
 
+  function titleCase(s) {
+    var SMALL = { 'and': 'and', 'of': 'of', 'the': 'the' };
+    return s.toLowerCase().split(/\s+/).map(function (w, i) {
+      if (i > 0 && SMALL[w]) return SMALL[w];
+      return w.charAt(0).toUpperCase() + w.slice(1);
+    }).join(' ');
+  }
+
+  function displayLabel(r) {
+    var d = r.description || '';
+    if (r.level === 'function') {
+      var stripped = d.replace(/^VOTE TOTAL /, '');
+      return titleCase(stripped);
+    }
+    if (r.id === 'total_general_fund') return 'Total General Fund';
+    if (r.id === 'total_budgets') return 'Total Budget (incl. Enterprise)';
+    return d;
+  }
+
   function renderRow(r) {
     var hasChildren = r.level === 'function' || r.level === 'department';
     var caret = hasChildren ? '▸' : '';
@@ -230,7 +253,7 @@ og_url: https://marbleheaddata.org/town-budget.html
     return (
       '<tr class="tb-row ' + levelClass + leaf + expanded +
         '" data-id="' + r.id + '" data-level="' + r.level + '"' + parentAttr + '>' +
-        '<td><span class="tb-caret">' + caret + '</span> ' + r.description + '</td>' +
+        '<td><span class="tb-caret">' + caret + '</span> ' + displayLabel(r) + '</td>' +
         '<td>' + fmtMillions(r.fy27_proposed) + '</td>' +
         '<td class="' + pctClass(r.change_pct) + '">' + fmtPct(r.change_pct) + '</td>' +
         '<td class="tb-col-spark">' + (r.history ? renderSparkline(r.history) : '') + '</td>' +
@@ -364,7 +387,7 @@ og_url: https://marbleheaddata.org/town-budget.html
         value: (gfRow.change_dollars >= 0 ? '+' : '') + fmtMillions(gfRow.change_dollars),
         sub: 'General fund only' },
       { label: 'Biggest mover',
-        value: biggestMover.description.replace(/^VOTE TOTAL /, ''),
+        value: displayLabel(biggestMover),
         sub: fmtPct(biggestMover.change_pct) },
     ];
     document.getElementById('tb-stats').innerHTML = tiles.map(t =>
