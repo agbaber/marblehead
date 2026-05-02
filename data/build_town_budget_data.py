@@ -375,8 +375,108 @@ def attach_function_history(rows: list[dict]) -> None:
             r["cagr_22yr"] = (end / start) ** (1 / 22) - 1
 
 
+def parse_school_packet() -> list[dict]:
+    """Parse the FY27 school budget packet for per-school cost-center totals.
+
+    Returns rows for the schools that could be parsed cleanly. If the packet
+    format prevents extraction (different layout in a future year), returns
+    an empty list -- the UI will fall back to showing Schools as one $47.6M
+    lump matching the town book.
+    """
+    p = (DATA / "schools" / "sc-meetings-fy26"
+         / "agenda-and-materials-2-5-2026-fy27-budget-packet.txt")
+    if not p.exists():
+        return []
+    try:
+        text = p.read_text()
+    except OSError:
+        return []
+
+    rows: list[dict] = []
+
+    # Schools to extract: (slug, header pattern substring, display name)
+    SCHOOLS = [
+        ("school_brown",    "Marblehead Public Schools - Brown Elementary School",
+         "Brown Elementary School"),
+        ("school_glover",   "Marblehead Public Schools - Glover Elementary School",
+         "Glover Elementary School"),
+        ("school_village",  "Marblehead Public Schools - Village Elementary School",
+         "Village Elementary School"),
+        ("school_middle",   "Marblehead Public Schools - Veterans Middle School",
+         "Veterans Middle School"),
+        ("school_high",     "Marblehead Public Schools - Marblehead High School",
+         "Marblehead High School"),
+        ("school_athletics", "Marblehead Public Schools - Athletics",
+         "Athletics"),
+    ]
+
+    # Pattern matching the TOTAL line format (various whitespace layouts):
+    #   TOTAL :  $  5,481,505   $  5,554,252   $  72,747   1.33%
+    #   TOTAL :  $  646,395     $  660,030     $  13,635    2.11%
+    #   TOTAL :  $  4,472,968   $  4,437,815   $  (35,152) $  (0)   <- no % sign
+    # The percentage column is optional/inconsistent; compute pct from dollars.
+    total_re = re.compile(
+        r"TOTAL\s*:\s+\$\s*([\d,]+)\s+\$\s*([\d,]+)\s+\$\s*\(?([\d,]+)\)?"
+    )
+
+    # Only search the first half of the document (level-fund section).
+    # The packet appears twice: first with level-fund adjustments, then
+    # level-service only. We want the first occurrence of each school.
+    # Use the midpoint of the text as a safe upper bound.
+    midpoint = len(text) // 2
+
+    for slug, header_substr, display in SCHOOLS:
+        idx = text.find(header_substr)
+        if idx < 0 or idx > midpoint:
+            # Try again -- Athletics header doesn't include "Marblehead Public Schools -"
+            # in the same way; fall through gracefully.
+            continue
+        # Look in the section starting at this header through a generous window.
+        section_end = min(idx + 60_000, midpoint)
+        # Tighten to the next school header if it's closer.
+        for s2, hs2, _ in SCHOOLS:
+            if s2 == slug:
+                continue
+            other = text.find(hs2, idx + len(header_substr))
+            if 0 < other < section_end:
+                section_end = other
+        section = text[idx:section_end]
+        totals = list(total_re.finditer(section))
+        if len(totals) >= 2:
+            # Take the second TOTAL -- level fund (what gets appropriated).
+            m = totals[1]
+        elif totals:
+            m = totals[0]
+        else:
+            continue
+        fy26 = int(m.group(1).replace(",", ""))
+        fy27 = int(m.group(2).replace(",", ""))
+        # change_dollars from the regex may have wrong sign (parens notation);
+        # always recompute from the actual dollar diff for accuracy.
+        change = fy27 - fy26
+        pct = (change / fy26) if fy26 else 0.0
+        rows.append({
+            "id": slug,
+            "level": "department",
+            "parent_id": "schools",
+            "function": "schools",
+            "department": slug,
+            "description": display,
+            "spend_type": None,
+            "fy25_budget": None, "fy25_actual": None,
+            "fy26_budget": fy26,
+            "fy27_proposed": fy27,
+            "change_dollars": change,
+            "change_pct": pct,
+            "source_ref": {"doc": "fy27_school_packet"},
+        })
+
+    return rows
+
+
 if __name__ == "__main__":
     text = (DATA / "FY27_Proposed_Budget_No_Override.txt").read_text()
     rows = parse_budget_book(text)
     attach_function_history(rows)
+    rows.extend(parse_school_packet())
     print(json.dumps(rows[:5], indent=2))

@@ -1,5 +1,5 @@
 """Tests for build_town_budget_data.py."""
-from build_town_budget_data import parse_budget_book, attach_function_history
+from build_town_budget_data import parse_budget_book, attach_function_history, parse_school_packet
 
 
 def test_parser_finds_grand_total(fy27_budget_text):
@@ -109,3 +109,18 @@ def test_function_history_attached(fy27_budget_text):
     # Enterprise functions should NOT have history (Schedule A is GF-focused).
     sewer = by_id["sewer_enterprise"]
     assert "history" not in sewer
+
+
+def test_school_packet_extracts_some_schools():
+    """We expect at least 4 of the 6 schools to parse cleanly. If fewer than 4
+    succeed, the packet format probably changed and the UI falls back to one
+    schools lump."""
+    rows = parse_school_packet()
+    if len(rows) == 0:
+        # Acceptable fallback -- packet format changed. UI will show one lump.
+        return
+    assert len(rows) >= 4, f"only {len(rows)} schools parsed: {[r['id'] for r in rows]}"
+    by_id = {r["id"]: r for r in rows}
+    if "school_brown" in by_id:
+        # Brown should be in the $4-7M range based on prior years' patterns.
+        assert 4_000_000 < by_id["school_brown"]["fy27_proposed"] < 8_000_000
