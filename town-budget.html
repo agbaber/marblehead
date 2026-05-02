@@ -156,7 +156,7 @@ og_url: https://marbleheaddata.org/town-budget.html
 
 <p class="tb-lead">
   Every line item in the FY27 proposed budget, grouped by function. Click any
-  row to drill in. Function-level history goes back to FY02 from DOR Schedule A.
+  row to drill in. Function-level history goes back to FY02 from <abbr title="Department of Revenue">DOR</abbr> Schedule A.
 </p>
 
 <p class="tb-footnote" style="font-size:13px;color:var(--text-muted);margin:0 0 16px;">
@@ -192,12 +192,12 @@ og_url: https://marbleheaddata.org/town-budget.html
       <h4>Magnitude</h4>
       <label style="display:block;font-size:12px;color:var(--text-muted);margin-bottom:4px;">
         % change &gt;
-        <input id="tb-pct-min" type="number" step="0.5" placeholder="—"
+        <input id="tb-pct-min" type="number" step="0.5" placeholder="-"
                style="width:60px;font-size:12px;padding:2px 4px;margin-left:4px;">
       </label>
       <label style="display:block;font-size:12px;color:var(--text-muted);">
         $ change &gt;
-        <input id="tb-dollar-min" type="number" step="10000" placeholder="—"
+        <input id="tb-dollar-min" type="number" step="10000" placeholder="-"
                style="width:90px;font-size:12px;padding:2px 4px;margin-left:4px;">
       </label>
     </div>
@@ -223,7 +223,7 @@ og_url: https://marbleheaddata.org/town-budget.html
   <ul>
     <li>Line-item amounts: <a href="https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override">FY27 Proposed Budget -- No Override</a></li>
     <li>School cost centers: FY27 budget packet (School Committee 2/5/2026)</li>
-    <li>Function history: DOR Schedule A FY02-FY24</li>
+    <li>Function history: <abbr title="Department of Revenue">DOR</abbr> Schedule A FY02-FY24</li>
     <li>School cost-center totals are gross-of-revenue; the town's $47.6M school appropriation is net of grants and fees.</li>
     <li>Generated: <span id="tb-generated-at">--</span></li>
   </ul>
@@ -276,7 +276,7 @@ og_url: https://marbleheaddata.org/town-budget.html
   };
 
   function fmtMillions(n) {
-    if (n === null || n === undefined) return '—';
+    if (n === null || n === undefined) return '-';
     var sign = n < 0 ? '-' : '';
     var abs = Math.abs(n);
     if (abs >= 1_000_000) return sign + '$' + (abs / 1_000_000).toFixed(2) + 'M';
@@ -386,7 +386,7 @@ og_url: https://marbleheaddata.org/town-budget.html
       ? r.fy25_actual - r.fy25_budget : null;
     var dChange = r.change_dollars != null
       ? (r.change_dollars >= 0 ? '+' : '') + fmtMillions(r.change_dollars)
-      : '—';
+      : '-';
     return (
       '<tr class="tb-detail-row">' +
         '<td colspan="4">' +
@@ -396,8 +396,8 @@ og_url: https://marbleheaddata.org/town-budget.html
               '<div><dt>FY25 Actual</dt><dd>' + fmtMillions(r.fy25_actual) + '</dd></div>' +
               '<div><dt>FY26 Budget</dt><dd>' + fmtMillions(r.fy26_budget) + '</dd></div>' +
               '<div><dt>$ change</dt><dd>' + dChange + '</dd></div>' +
-              '<div><dt>FY25 forecast variance</dt><dd>' + (fcastVar != null ? fmtMillions(fcastVar) : '—') + '</dd></div>' +
-              '<div><dt>Spend type</dt><dd>' + (r.spend_type || '—').replace('_', ' ') + '</dd></div>' +
+              '<div><dt>FY25 forecast variance</dt><dd>' + (fcastVar != null ? fmtMillions(fcastVar) : '-') + '</dd></div>' +
+              '<div><dt>Spend type</dt><dd>' + (r.spend_type || '-').replace('_', ' ') + '</dd></div>' +
             '</dl>' +
             (srcLine ? '<div class="tb-source">Source: ' + srcLine + '</div>' : '') +
           '</div>' +
