@@ -329,6 +329,24 @@ async function testTownBudgetPageLoads(page) {
       ? ok('Reset restores 7 default GF function rows')
       : fail('Reset', `expected 7 function rows, got ${fnRows.length}`);
   }
+
+  // Click "Cuts only" preset, expect all visible function rows to be negative.
+  const cutsPreset = await page.$('[data-preset="cuts-only"]');
+  if (cutsPreset) {
+    await cutsPreset.click();
+    await page.waitForTimeout(80);
+    const allCuts = await page.evaluate(() => {
+      const rows = [...document.querySelectorAll('.tb-row--function')];
+      if (rows.length === 0) return false;
+      return rows.every(r => r.querySelector('.tb-pct--neg'));
+    });
+    allCuts ? ok('Preset "Cuts only" hides non-decreasing rows')
+            : fail('Preset cuts-only', 'non-cut rows still visible');
+    // Reset for downstream tests.
+    const resetBtn2 = await page.$('#tb-reset');
+    if (resetBtn2) await resetBtn2.click();
+    await page.waitForTimeout(60);
+  }
 }
 
 async function testGeneralGovernmentChart(page) {
