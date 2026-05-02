@@ -198,6 +198,28 @@ async function testTownBudgetPageLoads(page) {
   } else {
     fail('Public Safety expand', 'public_safety row not found');
   }
+
+  // Click Police, expect line items to appear.
+  const policeRow = await page.$('.tb-row[data-id="police"]');
+  if (policeRow) {
+    await policeRow.click();
+    await page.waitForTimeout(80);
+    const policeLines = await page.$$('.tb-row--line[data-parent="police"]');
+    policeLines.length >= 2
+      ? ok(`Police expands to ${policeLines.length} line items`)
+      : fail('Police expand', `expected >=2 line items, got ${policeLines.length}`);
+
+    // Click the first line item — expect detail panel below it.
+    if (policeLines.length > 0) {
+      const lineId = await policeLines[0].getAttribute('data-id');
+      await policeLines[0].click();
+      await page.waitForTimeout(80);
+      const panel = await page.$('.tb-detail-panel[data-for="' + lineId + '"]');
+      panel
+        ? ok('Line item click opens detail panel')
+        : fail('Line item detail panel', 'panel did not open');
+    }
+  }
 }
 
 async function testGeneralGovernmentChart(page) {
