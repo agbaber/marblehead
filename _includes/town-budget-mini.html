@@ -1,0 +1,52 @@
+<section class="tb-mini">
+  <h2>Or skip the essay - explore every line item yourself.</h2>
+  <p>Here are the five biggest year-over-year movers in the FY27 budget:</p>
+  <table id="tb-mini-table" class="tb-mini-table">
+    <thead><tr><th>Line</th><th>Function</th><th>$ change</th><th>% change</th></tr></thead>
+    <tbody><tr><td colspan="4">Loading...</td></tr></tbody>
+  </table>
+  <p><a class="tb-mini-cta" href="/town-budget.html">See all line items in the Town Budget tool -&gt;</a></p>
+</section>
+<style>
+  .tb-mini { margin: 16px 0 32px; padding: 16px;
+    background: var(--surface); border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm); }
+  .tb-mini h2 { font-size: 18px; margin: 0 0 8px; }
+  .tb-mini-table { width: 100%; border-collapse: collapse; font-size: 14px;
+    font-variant-numeric: tabular-nums; }
+  .tb-mini-table th, .tb-mini-table td { padding: 6px 8px; text-align: left;
+    border-bottom: 1px solid var(--border-faint, #eee); }
+  .tb-mini-table td:nth-child(3), .tb-mini-table td:nth-child(4) { text-align: right; }
+  .tb-mini-cta { font-weight: 600; }
+</style>
+<script>
+  (function () {
+    fetch('/data/town_budget_FY27.json').then(function (r) { return r.json(); }).then(function (d) {
+      var movers = d.rows
+        .filter(function (r) { return r.level === 'line' && r.change_dollars != null; })
+        .sort(function (a, b) { return Math.abs(b.change_dollars) - Math.abs(a.change_dollars); })
+        .slice(0, 5);
+      var FN = {
+        general_government: 'General Govt', public_safety: 'Public Safety',
+        public_works: 'Public Works', human_services: 'Human Services',
+        schools: 'Schools', culture_recreation: 'Culture & Rec',
+        other_general_government: 'Other GG'
+      };
+      var rowsHtml = movers.map(function (r) {
+        var c = r.change_dollars;
+        var sign = c >= 0 ? '+' : '';
+        var color = c >= 0 ? 'var(--c-teal)' : 'var(--c-coral, #c54)';
+        var deepLink = '/town-budget.html?expand=' + (r.parent_id || '') + ',' + r.function +
+          '&q=' + encodeURIComponent(r.description.toLowerCase());
+        return '<tr>' +
+          '<td><a href="' + deepLink + '">' + r.description + '</a></td>' +
+          '<td>' + (FN[r.function] || r.function) + '</td>' +
+          '<td style="color:' + color + ';">' + sign + '$' + Math.round(c/1000) + 'K</td>' +
+          '<td style="color:' + color + ';">' + sign + (r.change_pct * 100).toFixed(1) + '%</td>' +
+        '</tr>';
+      }).join('');
+      var tbody = document.getElementById('tb-mini-table').querySelector('tbody');
+      if (tbody) tbody.innerHTML = rowsHtml;
+    });
+  })();
+</script>
