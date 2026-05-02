@@ -1,0 +1,11 @@
+fiscal_year,school_year,avg_teacher_salary,fte_count,source_url,source_description
+2015,2014-15,67142,,https://profiles.doe.mass.edu/profiles/teacher.aspx?orgcode=01680000&orgtypecode=5&fycode=2015,DESE School and District Profiles - Teacher Salaries
+2016,2015-16,72199,,https://profiles.doe.mass.edu/profiles/teacher.aspx?orgcode=01680000&orgtypecode=5&fycode=2016,DESE School and District Profiles - Teacher Salaries
+2017,2016-17,74936,,https://profiles.doe.mass.edu/profiles/teacher.aspx?orgcode=01680000&orgtypecode=5&fycode=2017,DESE School and District Profiles - Teacher Salaries
+2018,2017-18,77375,,https://profiles.doe.mass.edu/profiles/teacher.aspx?orgcode=01680000&orgtypecode=5&fycode=2018,DESE School and District Profiles - Teacher Salaries
+2019,2018-19,79989,,https://profiles.doe.mass.edu/profiles/teacher.aspx?orgcode=01680000&orgtypecode=5&fycode=2019,DESE School and District Profiles - Teacher Salaries
+2020,2019-20,83051,,https://profiles.doe.mass.edu/profiles/teacher.aspx?orgcode=01680000&orgtypecode=5&fycode=2020,DESE School and District Profiles - Teacher Salaries
+2021,2020-21,84365,,https://profiles.doe.mass.edu/profiles/teacher.aspx?orgcode=01680000&orgtypecode=5&fycode=2021,DESE School and District Profiles - Teacher Salaries
+2022,2021-22,85320,,https://profiles.doe.mass.edu/profiles/teacher.aspx?orgcode=01680000&orgtypecode=5&fycode=2022,DESE School and District Profiles - Teacher Salaries
+2023,2022-23,85363,,https://profiles.doe.mass.edu/profiles/teacher.aspx?orgcode=01680000&orgtypecode=5&fycode=2023,DESE School and District Profiles - Teacher Salaries
+2024,2023-24,90696,245.8,https://profiles.doe.mass.edu/statereport/teachersalaries.aspx?orgcode=01680000&orgtypecode=5&fycode=2024,DESE School and District Profiles - Teacher Salaries Report (FTE from peer_teacher_compensation_FY24.csv)
