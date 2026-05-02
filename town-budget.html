@@ -543,28 +543,53 @@ og_url: https://marbleheaddata.org/town-budget.html
       if (action === 'filter-functions-all') {
         e.preventDefault();
         FUNCTIONS.forEach(function (f) { state.filters.functions.add(f.slug); });
-        renderAll();
-        return;
+        renderAll(); return;
       }
       if (action === 'filter-functions-none') {
         e.preventDefault();
         state.filters.functions.clear();
-        renderAll();
-        return;
+        renderAll(); return;
       }
-      var chip = e.target.closest('.tb-chip[data-function]');
-      if (chip) {
-        var slug = chip.dataset.function;
+      var fnChip = e.target.closest('.tb-chip[data-function]');
+      if (fnChip) {
+        var slug = fnChip.dataset.function;
         if (state.filters.functions.has(slug)) state.filters.functions.delete(slug);
         else state.filters.functions.add(slug);
-        renderAll();
+        renderAll(); return;
       }
+      var spendChip = e.target.closest('.tb-chip[data-spend]');
+      if (spendChip) {
+        var t = spendChip.dataset.spend;
+        if (state.filters.spendTypes.has(t)) state.filters.spendTypes.delete(t);
+        else state.filters.spendTypes.add(t);
+        renderAll(); return;
+      }
+      var dirChip = e.target.closest('.tb-chip[data-direction]');
+      if (dirChip) {
+        var d = dirChip.dataset.direction;
+        if (state.filters.directions.has(d)) state.filters.directions.delete(d);
+        else state.filters.directions.add(d);
+        renderAll(); return;
+      }
+    };
+    // Numeric inputs (these are not click events).
+    document.getElementById('tb-pct-min').oninput = function (e) {
+      var v = e.target.value === '' ? null : parseFloat(e.target.value);
+      state.filters.pctMin = (v != null && !isNaN(v)) ? v : null;
+      renderAll();
+    };
+    document.getElementById('tb-dollar-min').oninput = function (e) {
+      var v = e.target.value === '' ? null : parseFloat(e.target.value);
+      state.filters.dollarMin = (v != null && !isNaN(v)) ? v : null;
+      renderAll();
     };
   }
 
   function renderAll() {
     renderStats();
     renderFunctionChips();
+    renderSpendChips();
+    renderDirChips();
     renderTable();
   }
 
