@@ -375,13 +375,48 @@ def attach_function_history(rows: list[dict]) -> None:
             r["cagr_22yr"] = (end / start) ** (1 / 22) - 1
 
 
+# Munis line item pattern. Matches lines like:
+#   PROFESSIONAL SALARIES - SPED    1212021   510100 500   $   107,110   $   110,323   $   3,213   3.00%
+#   Instructional Assistants - General Ed   2233013   510302   100   $   168,687   $   177,402   $   8,716   4.91%
+# Description: one or more words (upper or mixed case), may include -/&.'
+# ORG: 7 digits, OBJ: 6 digits, PROJ: 1-3 digits
+# FY26 and FY27 amounts: $ NNN,NNN with optional spaces
+# Change $: may be paren-wrapped (negative), may be missing FY26 for new items
+# Change %: numeric with %, may be negative or absent
+_MUNIS_LINE_RE = re.compile(
+    r"^\s*"
+    r"([A-Za-z][A-Za-z0-9 &/\-.'*]+?)\s+"    # description (upper or mixed, may trail *)
+    r"(\d{7})\s+"                              # ORG (7 digits)
+    r"(\d{6})\s+"                              # OBJ (6 digits)
+    r"(\d{1,3})\s+"                            # PROJ (1-3 digits)
+    r"\$\s*([\d,]+)\s+"                        # FY26 $ amount
+    r"\$\s*([\d,]+)\s+"                        # FY27 $ amount
+    r"\$\s*(\([\d,]+\)|[\d,]+)\s*"            # $ Change (may be parens-negative)
+    r"(-?[\d.]+%)?",                           # % Change (optional)
+    re.MULTILINE,
+)
+
+# Lines to skip even if they match the pattern.
+_SKIP_DESCR_RE = re.compile(
+    r"^(Sub Total|TOTAL|.*TOTAL\s*:|.*SERVICES TOTAL|.*PROGRAMS TOTAL"
+    r"|.*ADMINSTR Total|.*TOTAL$|Level Fund|ADDITIONS|NEW REQUESTS"
+    r"|Maintenance Sub Total)",
+    re.IGNORECASE,
+)
+
+
 def parse_school_packet() -> list[dict]:
-    """Parse the FY27 school budget packet for per-school cost-center totals.
+    """Parse the FY27 school budget packet for per-school cost-center totals
+    and Munis-level sub-line items.
 
     Returns rows for the schools that could be parsed cleanly. If the packet
     format prevents extraction (different layout in a future year), returns
     an empty list -- the UI will fall back to showing Schools as one $47.6M
     lump matching the town book.
+
+    The returned list contains:
+    - 6 department-level rows (one per school) with level="department"
+    - N line-level rows (one per Munis line item) with level="line"
     """
     p = (DATA / "schools" / "sc-meetings-fy26"
          / "agenda-and-materials-2-5-2026-fy27-budget-packet.txt")
@@ -470,6 +505,77 @@ def parse_school_packet() -> list[dict]:
             "change_pct": pct,
             "source_ref": {"doc": "fy27_school_packet"},
         })
+
+        # Second pass: extract Munis-level line items from this school's section.
+        # Only look in the section up to (but not including) the ADDITIONS block
+        # or the second TOTAL (level-fund adjusted total), so we don't double-count.
+        # Find where the first TOTAL is and stop there.
+        additions_idx = section.find("ADDITIONS")
+        if additions_idx > 0:
+            line_search_end = additions_idx
+        elif totals:
+            line_search_end = totals[0].start()
+        else:
+            line_search_end = len(section)
+        line_section = section[:line_search_end]
+
+        seen_ids: set[str] = set()
+        for lm in _MUNIS_LINE_RE.finditer(line_section):
+            descr = lm.group(1).strip().rstrip("*").strip()
+            org = lm.group(2)
+            obj = lm.group(3)
+            proj = lm.group(4)
+            fy26_raw = lm.group(5)
+            fy27_raw = lm.group(6)
+            chg_raw = lm.group(7)
+
+            # Skip summary/subtotal lines.
+            if _SKIP_DESCR_RE.match(descr):
+                continue
+
+            # Skip header rows (no numeric codes that look like Munis ORG).
+            # Description should not be a column header keyword.
+            if descr.lower() in {"org", "obj", "proj", "budget", "level fund",
+                                  "munis", "fy26", "fy27"}:
+                continue
+
+            line_id = f"school_{slug.replace('school_', '')}_{org}_{obj}_{proj}"
+            # Deduplicate within the section (some items appear across page breaks).
+            if line_id in seen_ids:
+                continue
+            seen_ids.add(line_id)
+
+            fy26_val = int(fy26_raw.replace(",", ""))
+            fy27_val = int(fy27_raw.replace(",", ""))
+            if chg_raw.startswith("(") and chg_raw.endswith(")"):
+                chg_val = -int(chg_raw[1:-1].replace(",", ""))
+            else:
+                chg_val = int(chg_raw.replace(",", ""))
+            # Recompute from actual values for accuracy.
+            chg_val = fy27_val - fy26_val
+            chg_pct = (chg_val / fy26_val) if fy26_val else 0.0
+
+            rows.append({
+                "id": line_id,
+                "level": "line",
+                "parent_id": slug,
+                "function": "schools",
+                "department": slug,
+                "description": descr,
+                "spend_type": classify_spend_type(descr),
+                "fy25_budget": None,
+                "fy25_actual": None,
+                "fy26_budget": fy26_val,
+                "fy27_proposed": fy27_val,
+                "change_dollars": chg_val,
+                "change_pct": chg_pct,
+                "source_ref": {
+                    "doc": "fy27_school_packet",
+                    "munis_org": org,
+                    "munis_obj": obj,
+                    "munis_proj": proj,
+                },
+            })
 
     return rows
 

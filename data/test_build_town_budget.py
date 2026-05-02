@@ -119,8 +119,29 @@ def test_school_packet_extracts_some_schools():
     if len(rows) == 0:
         # Acceptable fallback -- packet format changed. UI will show one lump.
         return
-    assert len(rows) >= 4, f"only {len(rows)} schools parsed: {[r['id'] for r in rows]}"
-    by_id = {r["id"]: r for r in rows}
+    dept_rows = [r for r in rows if r["level"] == "department"]
+    assert len(dept_rows) >= 4, f"only {len(dept_rows)} schools parsed: {[r['id'] for r in dept_rows]}"
+    by_id = {r["id"]: r for r in dept_rows}
     if "school_brown" in by_id:
         # Brown should be in the $4-7M range based on prior years' patterns.
         assert 4_000_000 < by_id["school_brown"]["fy27_proposed"] < 8_000_000
+
+
+def test_school_packet_extracts_munis_lines():
+    """Munis-level line items should be extracted for each school."""
+    rows = parse_school_packet()
+    munis_rows = [r for r in rows if r["level"] == "line"]
+    # Expect at least 100 sub-line items across all 6 schools.
+    assert len(munis_rows) >= 100, f"only {len(munis_rows)} Munis lines extracted"
+    # Each munis row has source_ref with munis_org/obj/proj.
+    sample = munis_rows[0]
+    assert "munis_org" in sample["source_ref"]
+    assert "munis_obj" in sample["source_ref"]
+    assert "munis_proj" in sample["source_ref"]
+    # Brown should have its own Munis lines.
+    brown_lines = [r for r in munis_rows if r["parent_id"] == "school_brown"]
+    assert len(brown_lines) >= 10, f"only {len(brown_lines)} Brown Munis lines"
+    # Each row has fy26 and fy27 ints.
+    for r in munis_rows[:20]:
+        assert isinstance(r["fy26_budget"], int), f"fy26_budget not int: {r}"
+        assert isinstance(r["fy27_proposed"], int), f"fy27_proposed not int: {r}"
