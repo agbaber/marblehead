@@ -44,11 +44,13 @@ og_url: https://marbleheaddata.org/override-primer.html
     opacity: 0.4;
   }
   .primer-hero h1 {
-    font-size: clamp(32px, 5.5vw, 52px);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-family: var(--primer-mono);
+    font-size: clamp(40px, 8vw, 88px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
     color: var(--text);
-    margin: 0 0 18px;
+    margin: 0 0 22px;
+    font-weight: 400;
   }
   .primer-hero-lead {
     font-size: 19px;
@@ -279,9 +281,24 @@ og_url: https://marbleheaddata.org/override-primer.html
     font-size: 11px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--c-buoy);
+    color: var(--text-faint);
     align-self: start;
-    padding-top: 4px;
+    padding-top: 14px;
+    border-top: 1px solid var(--primer-rule-strong);
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .primer-fact-tag::before {
+    content: attr(data-num);
+    display: block;
+    font-family: var(--primer-mono);
+    font-size: clamp(40px, 7vw, 64px);
+    color: var(--c-navy);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    font-weight: 400;
   }
   .primer-fact-body {
     display: flex;
@@ -348,11 +365,113 @@ og_url: https://marbleheaddata.org/override-primer.html
     color: var(--text-faint);
   }
 
+  /* Date split: JUN + 9 inline with size hierarchy */
+  .primer-fact-num-mo {
+    font-size: 0.55em;
+    margin-right: 0.18em;
+    color: var(--c-buoy);
+    letter-spacing: 0.04em;
+  }
+  .primer-fact-num-day {
+    color: var(--c-navy);
+  }
+
+  /* Tier-stack: nested bars showing T1 contained in T2 contained in T3 */
+  .primer-tier-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 640px;
+  }
+  .primer-tier-stack-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .primer-tier-stack-bar {
+    height: clamp(48px, 8vw, 68px);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    font-family: var(--primer-mono);
+    font-size: clamp(20px, 3.5vw, 30px);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    flex-shrink: 0;
+  }
+  .primer-tier-stack-bar--t1 { background: color-mix(in srgb, var(--c-navy) 78%, var(--c-buoy)); }
+  .primer-tier-stack-bar--t2 { background: color-mix(in srgb, var(--c-navy) 50%, var(--c-buoy)); }
+  .primer-tier-stack-bar--t3 { background: var(--c-buoy); }
+  .primer-tier-stack-amt {
+    color: white;
+  }
+  .primer-tier-stack-label {
+    font-family: var(--primer-mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  /* Cost bars: vertical bar chart of $99/$132/$165 */
+  .primer-cost-bars {
+    display: flex;
+    gap: clamp(16px, 4vw, 36px);
+    align-items: flex-end;
+    height: clamp(180px, 28vw, 240px);
+    max-width: 540px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--primer-rule);
+  }
+  .primer-cost-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 10px;
+    height: 100%;
+    min-width: 0;
+  }
+  .primer-cost-bar-fill {
+    border-radius: 6px 6px 0 0;
+    width: 100%;
+  }
+  .primer-cost-bar--t1 .primer-cost-bar-fill { background: color-mix(in srgb, var(--c-navy) 78%, var(--c-buoy)); }
+  .primer-cost-bar--t2 .primer-cost-bar-fill { background: color-mix(in srgb, var(--c-navy) 50%, var(--c-buoy)); }
+  .primer-cost-bar--t3 .primer-cost-bar-fill { background: var(--c-buoy); }
+  .primer-cost-bar-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding-top: 8px;
+  }
+  .primer-cost-bar-amt {
+    font-family: var(--primer-mono);
+    font-size: clamp(22px, 4vw, 34px);
+    color: var(--c-navy);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .primer-cost-bar--t3 .primer-cost-bar-amt { color: var(--c-buoy); }
+  .primer-cost-bar-meta {
+    font-family: var(--primer-mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    text-align: center;
+  }
+
   @media (min-width: 720px) {
     .primer-fact {
       grid-template-columns: 180px 1fr;
       gap: 36px;
-      align-items: baseline;
+      align-items: start;
     }
   }
   @media (max-width: 480px) {
@@ -361,13 +480,19 @@ og_url: https://marbleheaddata.org/override-primer.html
 
   /* ---------- BOTH SIDES (mirrors the-debate.html .perspective) ---------- */
   .primer-bothsides {
-    padding: 56px 0 32px;
+    padding: 80px 0 48px;
+    border-top: 1px solid var(--primer-rule-strong);
     border-bottom: 1px solid var(--primer-rule);
+    margin-top: 48px;
   }
   .primer-bothsides h2 {
-    font-size: clamp(22px, 3vw, 28px);
-    margin: 0 0 8px;
+    font-family: var(--primer-mono);
+    font-size: clamp(32px, 6vw, 56px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin: 0 0 14px;
     color: var(--text);
+    font-weight: 400;
   }
   .primer-bothsides-framing {
     font-size: 14px;
@@ -387,10 +512,10 @@ og_url: https://marbleheaddata.org/override-primer.html
   }
   .primer .perspective {
     border-radius: 0 10px 10px 0;
-    padding: 18px 22px 16px;
+    padding: 28px 30px 26px;
     margin: 0;
     background: var(--surface);
-    border-left: 4px solid var(--border);
+    border-left: 6px solid var(--border);
     box-shadow: var(--shadow-sm);
   }
   .primer .perspective--for {
@@ -402,15 +527,20 @@ og_url: https://marbleheaddata.org/override-primer.html
     background: color-mix(in srgb, var(--c-brass) 5%, var(--surface));
   }
   .primer .perspective-label {
-    font-size: 10px;
-    font-weight: 700;
+    font-family: var(--primer-mono);
+    font-size: 11px;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 1.4px;
+    letter-spacing: 0.22em;
     color: var(--text-subtle);
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--primer-rule);
   }
+  .primer .perspective--for .perspective-label { color: var(--c-teal); }
+  .primer .perspective--against .perspective-label { color: var(--c-brass); }
   .primer .perspective p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.65;
     color: var(--text);
     margin: 0 0 10px;
@@ -549,23 +679,23 @@ og_url: https://marbleheaddata.org/override-primer.html
   </section>
   <section class="primer-facts">
     <div class="primer-fact" id="fact-vote">
-      <div class="primer-fact-tag">01 &middot; The vote</div>
+      <div class="primer-fact-tag" data-num="01">The vote</div>
       <div class="primer-fact-body">
-        <div class="primer-fact-num">JUN&nbsp;9</div>
+        <div class="primer-fact-num"><span class="primer-fact-num-mo">JUN</span><span class="primer-fact-num-day">9</span></div>
         <p class="primer-fact-caption">Yes/no on a Proposition 2&frac12; operating override at the 2026 Annual Town Election. <strong>Last successful operating override: 2005.</strong><sup class="cite" data-href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride" data-source="MA DOR, Proposition 2½ Override & Underride Votes (Marblehead record)"></sup></p>
       </div>
     </div>
 
     <div class="primer-fact" id="fact-gap">
-      <div class="primer-fact-tag">02 &middot; The gap</div>
+      <div class="primer-fact-tag" data-num="02">The gap</div>
       <div class="primer-fact-body">
         <div class="primer-fact-num"><a href="https://marbleheadma.gov/wp-content/uploads/2026/02/2026-State-of-the-Town-Presenation-Final.pdf">$8.47M</a></div>
-        <p class="primer-fact-caption">Projected FY27 operating deficit. Forecast a year in advance by the Finance Committee.</p>
+        <p class="primer-fact-caption">Projected FY27 operating deficit. Recurring expenses outpace recurring revenue. Forecast a year in advance by the Finance Committee.</p>
       </div>
     </div>
 
     <div class="primer-fact" id="fact-cap">
-      <div class="primer-fact-tag">03 &middot; The cap</div>
+      <div class="primer-fact-tag" data-num="03">The cap</div>
       <div class="primer-fact-body">
         <div class="primer-fact-num">2.5%</div>
         <p class="primer-fact-caption">Maximum annual property tax growth allowed by <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter59/Section21C">Proposition 2&frac12;</a>. An override is the only permanent way past that cap.</p>
@@ -573,41 +703,56 @@ og_url: https://marbleheaddata.org/override-primer.html
     </div>
 
     <div class="primer-fact" id="fact-ask">
-      <div class="primer-fact-tag">04 &middot; The ask</div>
+      <div class="primer-fact-tag" data-num="04">The ask</div>
       <div class="primer-fact-body">
-        <div class="primer-fact-multi">
-          <div class="primer-fact-multi-item primer-fact-multi-item--t1">
-            <span class="primer-fact-multi-num">$9M</span>
-            <span class="primer-fact-multi-label">Tier 1</span>
+        <div class="primer-tier-stack" role="img" aria-label="Three nested override tiers: Tier 1 $9M, Tier 2 $12M including Tier 1, Tier 3 $15M including Tier 2">
+          <div class="primer-tier-stack-row">
+            <div class="primer-tier-stack-bar primer-tier-stack-bar--t1" style="width: 60%;">
+              <span class="primer-tier-stack-amt">$9M</span>
+            </div>
+            <span class="primer-tier-stack-label">Tier 1 &middot; Restore</span>
           </div>
-          <div class="primer-fact-multi-item primer-fact-multi-item--t2">
-            <span class="primer-fact-multi-num">$12M</span>
-            <span class="primer-fact-multi-label">Tier 2</span>
+          <div class="primer-tier-stack-row">
+            <div class="primer-tier-stack-bar primer-tier-stack-bar--t2" style="width: 80%;">
+              <span class="primer-tier-stack-amt">$12M</span>
+            </div>
+            <span class="primer-tier-stack-label">Tier 2 &middot; Build</span>
           </div>
-          <div class="primer-fact-multi-item primer-fact-multi-item--t3">
-            <span class="primer-fact-multi-num">$15M</span>
-            <span class="primer-fact-multi-label">Tier 3</span>
+          <div class="primer-tier-stack-row">
+            <div class="primer-tier-stack-bar primer-tier-stack-bar--t3" style="width: 100%;">
+              <span class="primer-tier-stack-amt">$15M</span>
+            </div>
+            <span class="primer-tier-stack-label">Tier 3 &middot; Invest</span>
           </div>
         </div>
-        <p class="primer-fact-caption">Three nested tiers on the ballot. The highest tier with a majority sets the override amount.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-08_Override_Presentation.pdf" data-source="Town Administrator's April 8, 2026 override presentation"></sup></p>
+        <p class="primer-fact-caption">Three nested tiers on the ballot. Each contains the one below. The highest tier with a majority sets the override amount.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-08_Override_Presentation.pdf" data-source="Town Administrator's April 8, 2026 override presentation"></sup></p>
       </div>
     </div>
 
     <div class="primer-fact" id="fact-cost">
-      <div class="primer-fact-tag">05 &middot; The cost</div>
+      <div class="primer-fact-tag" data-num="05">The cost</div>
       <div class="primer-fact-body">
-        <div class="primer-fact-multi">
-          <div class="primer-fact-multi-item primer-fact-multi-item--t1">
-            <span class="primer-fact-multi-num">$99</span>
-            <span class="primer-fact-multi-label">Tier 1 &middot; /mo</span>
+        <div class="primer-cost-bars" role="img" aria-label="Monthly cost at the average Marblehead home: Tier 1 $99, Tier 2 $132, Tier 3 $165">
+          <div class="primer-cost-bar primer-cost-bar--t1">
+            <div class="primer-cost-bar-fill" style="height: 60%;"></div>
+            <div class="primer-cost-bar-label">
+              <span class="primer-cost-bar-amt">$99</span>
+              <span class="primer-cost-bar-meta">Tier 1 &middot; /mo</span>
+            </div>
           </div>
-          <div class="primer-fact-multi-item primer-fact-multi-item--t2">
-            <span class="primer-fact-multi-num">$132</span>
-            <span class="primer-fact-multi-label">Tier 2 &middot; /mo</span>
+          <div class="primer-cost-bar primer-cost-bar--t2">
+            <div class="primer-cost-bar-fill" style="height: 80%;"></div>
+            <div class="primer-cost-bar-label">
+              <span class="primer-cost-bar-amt">$132</span>
+              <span class="primer-cost-bar-meta">Tier 2 &middot; /mo</span>
+            </div>
           </div>
-          <div class="primer-fact-multi-item primer-fact-multi-item--t3">
-            <span class="primer-fact-multi-num">$165</span>
-            <span class="primer-fact-multi-label">Tier 3 &middot; /mo</span>
+          <div class="primer-cost-bar primer-cost-bar--t3">
+            <div class="primer-cost-bar-fill" style="height: 100%;"></div>
+            <div class="primer-cost-bar-label">
+              <span class="primer-cost-bar-amt">$165</span>
+              <span class="primer-cost-bar-meta">Tier 3 &middot; /mo</span>
+            </div>
           </div>
         </div>
         <p class="primer-fact-caption">At the average $1.29M Marblehead home. Permanent. The new baseline compounds at 2.5% from there.</p>
