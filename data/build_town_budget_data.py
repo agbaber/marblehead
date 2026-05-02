@@ -22,13 +22,14 @@ DATA = ROOT / "data"
 # Six numeric columns, last is a percentage.
 _NUM = r"[\d,]+|-"
 _PCT = r"-?[\d.]+%"
+_CHANGE = r"(?:\([\d,]+\)|[\d,]+|-)"
 _GRAND_TOTAL_RE = re.compile(
-    rf"^\s*TOTAL BUDGETS\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+(\(?{_NUM}\)?)\s+({_PCT})",
+    rf"^\s*TOTAL BUDGETS\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+({_CHANGE})\s+({_PCT})",
     re.MULTILINE,
 )
 
 _GENERAL_FUND_TOTAL_RE = re.compile(
-    rf"^\s*TOTAL GENERAL FUND ACCOUNTS\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+(\(?{_NUM}\)?)\s+({_PCT})",
+    rf"^\s*TOTAL GENERAL FUND ACCOUNTS\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+({_CHANGE})\s+({_PCT})",
     re.MULTILINE,
 )
 
@@ -46,7 +47,6 @@ _FUNCTION_DESC_TO_SLUG = {
     "VOTE TOTAL HARBOR ENTERPRISE FUND":        "harbor_enterprise",
 }
 
-_CHANGE = r"(?:\([\d,]+\)|[\d,]+|-)"
 _VOTE_TOTAL_RE = re.compile(
     rf"^\s*(VOTE TOTAL [A-Z& ]+?)\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+({_CHANGE})\s+({_PCT})",
     re.MULTILINE,
