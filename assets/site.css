@@ -4182,6 +4182,35 @@ svg.chart .data-dot--halo {
   stroke-width: 1.5;
 }
 
+/* Deep-dive body content (methodology section etc.):
+   the global `* { padding: 0 }` reset zeroes <ul> padding, and the
+   safety-net rule for `.container > details > ul` doesn't reach lists
+   nested inside `.deep-dive-body > ul`. Restore list and heading
+   styling explicitly. */
+.deep-dive .deep-dive-body h3 {
+  margin: 1.25rem 0 0.4rem;
+  font-size: 1rem;
+  color: var(--c-navy);
+}
+.deep-dive .deep-dive-body h3:first-child {
+  margin-top: 0;
+}
+.deep-dive .deep-dive-body p {
+  line-height: 1.6;
+}
+.deep-dive .deep-dive-body ul,
+.deep-dive .deep-dive-body ol {
+  padding-left: 1.5rem;
+  margin: 0 0 0.85rem;
+  list-style: disc;
+}
+.deep-dive .deep-dive-body ol { list-style: decimal; }
+.deep-dive .deep-dive-body li {
+  margin-bottom: 0.25rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
 /* Cap-vs-cost dollar comparison table */
 .dollar-table {
   width: 100%;
