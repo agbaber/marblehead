@@ -366,6 +366,74 @@ async function testTownBudgetPageLoads(page) {
       ? ok('State change updates URL params')
       : fail('URL serialization', `URL did not include dirfilter=, got ${url}`);
   }
+
+  // Reset to known state before empty-state test.
+  await page.goto(`${SITE}/town-budget.html`);
+  await page.waitForSelector('.tb-row--function', { timeout: 5000 }).catch(() => null);
+
+  // Open the filter bar so direction chips are reachable.
+  const filterToggle2 = await page.$('#tb-filter-bar > summary');
+  if (filterToggle2) {
+    await filterToggle2.click();
+    await page.waitForTimeout(60);
+  }
+
+  // Empty state: clear all directions to produce zero visible rows, expect .tb-empty.
+  // Use page.click() with selector strings so each click re-finds the element after
+  // renderAll() re-renders the chips.
+  for (const dir of ['increased', 'decreased', 'flat', 'cut']) {
+    await page.click(`.tb-chip[data-direction="${dir}"]`).catch(() => {});
+    await page.waitForTimeout(40);
+  }
+  await page.waitForTimeout(60);
+  const emptyState = await page.$('.tb-empty');
+  emptyState
+    ? ok('Empty-state appears when filters match nothing')
+    : fail('Empty state', 'no .tb-empty element when filters match nothing');
+  // Clear filters via the empty-state link.
+  if (emptyState) {
+    const clearLink = await page.$('#tb-empty-clear');
+    if (clearLink) {
+      await clearLink.click();
+      await page.waitForTimeout(60);
+      const afterReset = await page.$$('.tb-row--function');
+      afterReset.length >= 7
+        ? ok('Empty-state "Clear filters" link restores rows')
+        : fail('Empty-state clear link', `expected >=7 function rows after clear, got ${afterReset.length}`);
+    }
+  } else {
+    // Still reset for downstream tests.
+    const resetBtn3 = await page.$('#tb-reset');
+    if (resetBtn3) await resetBtn3.click();
+    await page.waitForTimeout(60);
+  }
+
+  // Source citation: detail panel shows a Source: line.
+  const fnAllBtn2 = await page.$('[data-action="filter-functions-all"]');
+  if (fnAllBtn2) await fnAllBtn2.click();
+  await page.waitForTimeout(60);
+  const psRow2 = await page.$('.tb-row[data-id="public_safety"]');
+  if (psRow2) {
+    await psRow2.click();
+    await page.waitForTimeout(80);
+    const policeRow2 = await page.$('.tb-row[data-id="police"]');
+    if (policeRow2) {
+      await policeRow2.click();
+      await page.waitForTimeout(80);
+      const lineRow = await page.$('.tb-row--line[data-parent="police"]');
+      if (lineRow) {
+        await lineRow.click();
+        await page.waitForTimeout(60);
+        const srcText = await page.evaluate(() => {
+          const el = document.querySelector('.tb-detail-panel .tb-source');
+          return el ? el.textContent : '';
+        });
+        srcText.includes('Budget Book')
+          ? ok('Detail panel cites a source')
+          : fail('Source citation', `no Budget Book reference in: ${srcText}`);
+      }
+    }
+  }
 }
 
 async function testGeneralGovernmentChart(page) {

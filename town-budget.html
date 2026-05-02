@@ -173,6 +173,12 @@ og_url: https://marbleheaddata.org/town-budget.html
     font-size: 12px; cursor: pointer; color: var(--text);
   }
   .tb-active-chip:hover { background: color-mix(in srgb, var(--c-teal) 22%, transparent); }
+  .tb-empty {
+    padding: 48px 24px; text-align: center;
+    color: var(--text-muted); font-size: 15px;
+    background: var(--surface);
+  }
+  .tb-empty a { color: var(--c-teal); text-decoration: underline; cursor: pointer; }
 </style>
 
 <h1>Marblehead's town budget, line by line</h1>
@@ -416,9 +422,12 @@ og_url: https://marbleheaddata.org/town-budget.html
 
   function renderDetailPanel(r) {
     var ref = r.source_ref || {};
-    var srcLine = ref.line_item
-      ? 'FY27 Proposed Budget Book, Item #' + ref.line_item
-      : '';
+    var srcLine = '';
+    if (ref.line_item) {
+      srcLine = 'FY27 Proposed Budget Book, Item #' + ref.line_item;
+    } else if (ref.doc === 'fy27_school_packet') {
+      srcLine = 'FY27 School Department Budget Packet (School Committee 2/5/2026)';
+    }
     var fcastVar = (r.fy25_actual != null && r.fy25_budget != null)
       ? r.fy25_actual - r.fy25_budget : null;
     var dChange = r.change_dollars != null
@@ -589,16 +598,8 @@ og_url: https://marbleheaddata.org/town-budget.html
     return visible3;
   }
 
-  function renderTable() {
-    var rows = buildVisibleRows();
-    var bodyHtml = '';
-    rows.forEach(function (r) {
-      bodyHtml += renderRow(r);
-      if (r.level === 'line' && state.detailFor === r.id) {
-        bodyHtml += renderDetailPanel(r);
-      }
-    });
-    var html =
+  function toolbarHTML() {
+    return (
       '<div class="tb-toolbar">' +
         '<label class="tb-toolbar-control">Sort:' +
           '<select id="tb-sort">' +
@@ -624,7 +625,39 @@ og_url: https://marbleheaddata.org/town-budget.html
           (state.allExpanded ? 'Collapse all' : 'Expand all') +
         '</button>' +
         '<button class="tb-btn" id="tb-reset" title="Reset all filters and sort">Reset</button>' +
-      '</div>' +
+      '</div>'
+    );
+  }
+
+  function renderTable() {
+    var rows = buildVisibleRows();
+
+    if (rows.length === 0) {
+      var html =
+        toolbarHTML() +
+        '<div class="tb-empty">' +
+          'No rows match the current filters. ' +
+          '<a href="#" id="tb-empty-clear">Clear filters</a>' +
+        '</div>';
+      document.getElementById('tb-table').innerHTML = html;
+      wireToolbar();
+      document.getElementById('tb-empty-clear').onclick = function (e) {
+        e.preventDefault();
+        resetState();
+      };
+      serializeURLState();
+      return;
+    }
+
+    var bodyHtml = '';
+    rows.forEach(function (r) {
+      bodyHtml += renderRow(r);
+      if (r.level === 'line' && state.detailFor === r.id) {
+        bodyHtml += renderDetailPanel(r);
+      }
+    });
+    var html =
+      toolbarHTML() +
       '<table class="tb-table"><thead><tr>' +
         '<th>Description</th><th>FY27</th><th>% vs FY26</th>' +
         '<th class="tb-col-spark">Trend FY02→FY24</th>' +
@@ -772,6 +805,26 @@ og_url: https://marbleheaddata.org/town-budget.html
     Array.prototype.forEach.call(container.querySelectorAll('.tb-active-chip'), function (el, i) {
       el.onclick = function () { chips[i].reset(); renderAll(); };
     });
+  }
+
+  function renderFilterCount() {
+    var count = 0;
+    if (state.filters.functions.size !== DEFAULT_ENABLED_FUNCTIONS.size) {
+      count++;
+    } else {
+      var fnArr = [...state.filters.functions];
+      for (var fi = 0; fi < fnArr.length; fi++) {
+        if (!DEFAULT_ENABLED_FUNCTIONS.has(fnArr[fi])) { count++; break; }
+      }
+    }
+    if (state.filters.spendTypes.size !== SPEND_TYPES.length) count++;
+    if (state.filters.directions.size !== DIRECTIONS.length) count++;
+    if (state.filters.pctMin != null) count++;
+    if (state.filters.dollarMin != null) count++;
+    if (state.filters.searchQuery) count++;
+    if (state.filters.deptQuery) count++;
+    var el = document.getElementById('tb-filter-count');
+    if (el) el.textContent = count > 0 ? '(' + count + ' active)' : '';
   }
 
   function attachPresetListeners() {
@@ -1008,6 +1061,7 @@ og_url: https://marbleheaddata.org/town-budget.html
     renderSpendChips();
     renderDirChips();
     renderActiveChips();
+    renderFilterCount();
     renderTable();
     serializeURLState();
   }
