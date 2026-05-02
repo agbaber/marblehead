@@ -163,6 +163,16 @@ og_url: https://marbleheaddata.org/town-budget.html
     color: var(--text);
   }
   .tb-sort-dir { padding: 2px 8px; font-size: 14px; }
+  .tb-presets { margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+  .tb-active-chips { margin: 8px 0 12px; display: flex; flex-wrap: wrap; gap: 4px; min-height: 0; }
+  .tb-active-chips:empty { margin: 0; }
+  .tb-active-chip {
+    display: inline-block; padding: 3px 10px; margin: 2px;
+    border-radius: 999px; border: 1px solid var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 12%, transparent);
+    font-size: 12px; cursor: pointer; color: var(--text);
+  }
+  .tb-active-chip:hover { background: color-mix(in srgb, var(--c-teal) 22%, transparent); }
 </style>
 
 <h1>Marblehead's town budget, line by line</h1>
@@ -177,6 +187,15 @@ og_url: https://marbleheaddata.org/town-budget.html
   on as single warrant articles. Click any function to drill into its departments and line items.
 </p>
 <div class="tb-stats" id="tb-stats"></div>
+
+<div class="tb-presets">
+  <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-subtle);margin-right:6px;">Quick:</span>
+  <span class="tb-chip" data-preset="biggest-50">Biggest 50 lines</span>
+  <span class="tb-chip" data-preset="cuts-only">Cuts only</span>
+  <span class="tb-chip" data-preset="grew-10">Grew &gt;10%</span>
+  <span class="tb-chip" data-preset="salary">Salary footprint</span>
+  <span class="tb-chip" data-preset="forecast-misses">Forecast misses</span>
+</div>
 
 <details class="tb-filter-bar" id="tb-filter-bar">
   <summary>
@@ -226,6 +245,8 @@ og_url: https://marbleheaddata.org/town-budget.html
     </div>
   </div>
 </details>
+
+<div class="tb-active-chips" id="tb-active-chips"></div>
 
 <div class="tb-table-wrap">
   <div id="tb-table"></div>
@@ -656,6 +677,109 @@ og_url: https://marbleheaddata.org/town-budget.html
     renderAll();
   }
 
+  function applyPreset(name) {
+    resetState();  // start from defaults
+    if (name === 'cuts-only') {
+      state.filters.directions = new Set(['decreased', 'cut']);
+    } else if (name === 'grew-10') {
+      state.filters.directions = new Set(['increased']);
+      state.filters.pctMin = 10;
+      var pctInput = document.getElementById('tb-pct-min');
+      if (pctInput) pctInput.value = '10';
+    } else if (name === 'salary') {
+      state.groupBy = 'spend_type';
+      // Will show all spend-type groups; user can click into Salaries.
+    } else if (name === 'biggest-50') {
+      state.allExpanded = true;
+      data.rows.forEach(function (r) {
+        if (r.level === 'function' || r.level === 'department') {
+          state.expanded.add(r.id);
+        }
+      });
+      state.sortKey = 'fy27_proposed';
+      state.sortDir = 'desc';
+    } else if (name === 'forecast-misses') {
+      state.sortKey = 'forecast_variance';
+      state.sortDir = 'desc';
+    }
+    renderAll();
+  }
+
+  function renderActiveChips() {
+    var chips = [];
+    if (state.filters.functions.size !== DEFAULT_ENABLED_FUNCTIONS.size ||
+        [...state.filters.functions].some(function (f) { return !DEFAULT_ENABLED_FUNCTIONS.has(f); })) {
+      chips.push({
+        label: 'Functions: ' + [...state.filters.functions].join(', '),
+        reset: function () {
+          state.filters.functions = new Set(DEFAULT_ENABLED_FUNCTIONS);
+        },
+      });
+    }
+    if (state.filters.spendTypes.size !== SPEND_TYPES.length) {
+      chips.push({
+        label: 'Spend: ' + [...state.filters.spendTypes].join(', '),
+        reset: function () { state.filters.spendTypes = new Set(SPEND_TYPES); },
+      });
+    }
+    if (state.filters.directions.size !== DIRECTIONS.length) {
+      chips.push({
+        label: 'Direction: ' + [...state.filters.directions].join(', '),
+        reset: function () { state.filters.directions = new Set(DIRECTIONS); },
+      });
+    }
+    if (state.filters.pctMin != null) {
+      chips.push({
+        label: '% change > ' + state.filters.pctMin,
+        reset: function () {
+          state.filters.pctMin = null;
+          var el = document.getElementById('tb-pct-min'); if (el) el.value = '';
+        },
+      });
+    }
+    if (state.filters.dollarMin != null) {
+      chips.push({
+        label: '$ change > ' + state.filters.dollarMin,
+        reset: function () {
+          state.filters.dollarMin = null;
+          var el = document.getElementById('tb-dollar-min'); if (el) el.value = '';
+        },
+      });
+    }
+    if (state.filters.searchQuery) {
+      chips.push({
+        label: 'Search: "' + state.filters.searchQuery + '"',
+        reset: function () {
+          state.filters.searchQuery = '';
+          var el = document.getElementById('tb-search'); if (el) el.value = '';
+        },
+      });
+    }
+    if (state.filters.deptQuery) {
+      chips.push({
+        label: 'Dept: "' + state.filters.deptQuery + '"',
+        reset: function () {
+          state.filters.deptQuery = '';
+          var el = document.getElementById('tb-dept-filter'); if (el) el.value = '';
+        },
+      });
+    }
+
+    var container = document.getElementById('tb-active-chips');
+    container.innerHTML = chips.map(function (c) {
+      return '<span class="tb-active-chip">' + c.label + ' &times;</span>';
+    }).join('');
+    Array.prototype.forEach.call(container.querySelectorAll('.tb-active-chip'), function (el, i) {
+      el.onclick = function () { chips[i].reset(); renderAll(); };
+    });
+  }
+
+  function attachPresetListeners() {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-preset]'), function (el) {
+      el.onclick = function () { applyPreset(el.dataset.preset); };
+    });
+  }
+
   function wireToolbar() {
     document.getElementById('tb-expand-all').onclick = toggleExpandAll;
     document.getElementById('tb-reset').onclick = resetState;
@@ -801,6 +925,7 @@ og_url: https://marbleheaddata.org/town-budget.html
     renderFunctionChips();
     renderSpendChips();
     renderDirChips();
+    renderActiveChips();
     renderTable();
   }
 
@@ -839,6 +964,7 @@ og_url: https://marbleheaddata.org/town-budget.html
       data = d;
       renderAll();
       attachFilterListeners();
+      attachPresetListeners();
       document.getElementById('tb-generated-at').textContent =
         new Date(d.meta.generated_at).toLocaleDateString();
     });
