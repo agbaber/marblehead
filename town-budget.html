@@ -1,0 +1,1231 @@
+---
+title: "Marblehead's town budget, line by line"
+scripts: [citations]
+og_title: "Marblehead Town Budget Explorer"
+og_description: "Every line item in the $122.76M FY27 proposed budget. Filter, sort, drill into any department."
+og_url: https://marbleheaddata.org/town-budget.html
+---
+<style>
+  /* Anchor stats row */
+  .tb-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 12px; margin: 16px 0 24px;
+  }
+  @media (max-width: 700px) {
+    .tb-stats { grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 12px 0 16px; }
+    .tb-stat-value { font-size: 18px; }
+    .tb-stat-tile { padding: 12px 14px; }
+  }
+  .tb-stat-tile {
+    background: var(--surface); border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm); padding: 14px 16px;
+    text-decoration: none; color: inherit;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .tb-stat-tile:hover { background: var(--surface-hover, var(--surface)); }
+  .tb-stat-label { font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px; color: var(--text-subtle); }
+  .tb-stat-value { font-size: 22px; font-weight: 700; color: var(--text);
+    font-variant-numeric: tabular-nums; word-break: break-word; }
+  .tb-stat-sub { font-size: 12px; color: var(--text-muted); }
+
+  /* Tree-table container */
+  .tb-table-wrap {
+    background: var(--surface); border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm); overflow: visible; margin: 0 0 24px;
+  }
+
+  /* Lead text */
+  .tb-lead { color: var(--text-muted); font-size: 15px; line-height: 1.6;
+    margin: -4px 0 16px; }
+
+  .tb-table { width: 100%; border-collapse: collapse;
+    font-variant-numeric: tabular-nums; }
+  .tb-table thead th {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-subtle); text-align: right;
+    padding: 10px 12px; border-bottom: 1px solid var(--border, #ddd);
+    background: var(--surface);
+    position: sticky; top: 0; z-index: 2;
+  }
+  .tb-table thead th:first-child { text-align: left; }
+  .tb-row { transition: background 0.1s; }
+  .tb-row td { padding: 8px 12px; border-bottom: 1px solid var(--border-faint, #eee); }
+  .tb-row td:not(:first-child) { text-align: right; }
+  .tb-row--function td:first-child { font-weight: 700; padding-left: 16px;
+    border-left: 5px solid var(--c-teal); }
+  @media (max-width: 700px) {
+    .tb-row--function td:first-child {
+      border-left-width: 6px;
+      background: color-mix(in srgb, var(--c-teal) 5%, transparent);
+    }
+  }
+  .tb-row--total td { font-weight: 700;
+    background: color-mix(in srgb, var(--c-teal) 6%, transparent);
+    border-top: 2px solid var(--c-teal); }
+  .tb-pct--pos { color: var(--c-teal); }
+  .tb-pct--neg { color: var(--c-coral, #c54); }
+  .tb-row { cursor: default; }
+  .tb-row--function, .tb-row--department { cursor: pointer; }
+  .tb-row--function:hover, .tb-row--department:hover {
+    background: var(--surface-hover, color-mix(in srgb, var(--c-teal) 4%, transparent));
+  }
+  .tb-row--department td:first-child { padding-left: 40px; }
+  .tb-caret {
+    display: inline-block; width: 16px; transition: transform 0.15s;
+    color: var(--text-subtle); user-select: none;
+    font-size: 13px; line-height: 1;
+  }
+  .tb-row.tb-expanded > td .tb-caret { transform: rotate(90deg); color: var(--c-teal); }
+  .tb-row:active { background: color-mix(in srgb, var(--c-teal) 12%, transparent); }
+  .tb-row--leaf .tb-caret { visibility: hidden; }
+  .tb-row--line td:first-child { padding-left: 64px;
+    font-size: 14px; color: var(--text-muted); }
+  .tb-row--line { cursor: pointer; }
+  .tb-row--line:hover { background: color-mix(in srgb, var(--c-teal) 4%, transparent); }
+  .tb-detail-row td { padding: 0; }
+  .tb-detail-panel {
+    background: color-mix(in srgb, var(--c-teal) 4%, transparent);
+    padding: 14px 64px; font-size: 14px; color: var(--text);
+    border-bottom: 1px solid var(--border-faint, #eee);
+  }
+  .tb-detail-panel dl {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px 16px; margin: 0;
+  }
+  .tb-detail-panel dt {
+    font-weight: 600; color: var(--text-muted);
+    font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+    margin: 4px 0 0;
+  }
+  .tb-detail-panel dd {
+    margin: 0 0 4px; font-variant-numeric: tabular-nums;
+  }
+  .tb-detail-panel .tb-source {
+    font-size: 12px; color: var(--text-muted);
+    margin-top: 10px; padding-top: 8px;
+    border-top: 1px solid var(--border-faint, #eee);
+  }
+  @media (max-width: 700px) {
+    .tb-detail-panel dl { grid-template-columns: repeat(2, 1fr); }
+    .tb-detail-panel { padding: 12px 24px; }
+  }
+  .tb-toolbar {
+    display: flex; gap: 8px; align-items: center; justify-content: flex-end;
+    padding: 8px 12px; background: var(--surface);
+    border-bottom: 1px solid var(--border-faint, #eee);
+  }
+  .tb-btn {
+    background: transparent; border: 1px solid var(--border, #ddd);
+    border-radius: var(--radius-sm, 4px); padding: 4px 10px;
+    font-size: 12px; cursor: pointer; color: var(--text);
+  }
+  .tb-btn:hover { background: var(--surface-hover, color-mix(in srgb, var(--c-teal) 6%, transparent)); }
+  .tb-sparkline { width: 80px; height: 18px; vertical-align: middle; }
+  .tb-sparkline path { fill: none; stroke: var(--c-teal); stroke-width: 1.5; }
+  .tb-sparkline circle { fill: var(--c-teal); }
+  .tb-table th.tb-col-spark, .tb-table td.tb-col-spark {
+    width: 96px; text-align: center;
+  }
+  @media (max-width: 700px) {
+    .tb-col-spark { display: none; }
+    .tb-table { font-size: 14px; }
+    .tb-table thead th:nth-child(2),
+    .tb-table tbody td:nth-child(2) { width: 22%; min-width: 76px; }
+    .tb-table thead th:nth-child(3),
+    .tb-table tbody td:nth-child(3) { width: 22%; min-width: 70px; }
+    .tb-row td { padding: 12px 10px; }
+    .tb-row--department td:first-child { padding-left: 28px; }
+    .tb-row--line td:first-child { padding-left: 44px; font-size: 12.5px; }
+    .tb-caret { width: 18px; font-size: 14px; }
+    .tb-table-wrap { margin-bottom: 16px; }
+  }
+  .tb-filter-bar {
+    background: var(--surface); border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm); padding: 12px 16px; margin: 0 0 12px;
+  }
+  .tb-filter-bar > summary {
+    list-style: none; cursor: pointer; user-select: none;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-subtle);
+  }
+  .tb-filter-bar > summary::-webkit-details-marker { display: none; }
+  .tb-filter-bar > summary:hover { color: var(--text); }
+  .tb-filter-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px 16px; margin-top: 14px;
+  }
+  .tb-filter-section h4 {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-muted); margin: 0 0 6px;
+  }
+  .tb-chip {
+    display: inline-block; padding: 3px 9px; margin: 2px;
+    border-radius: 999px; border: 1px solid var(--border, #ddd);
+    background: var(--surface); font-size: 12px; cursor: pointer;
+    color: var(--text-muted); user-select: none;
+  }
+  .tb-chip[data-active="true"] {
+    background: var(--c-teal); color: #fff; border-color: var(--c-teal);
+  }
+  .tb-chip:hover { border-color: var(--c-teal); }
+  .tb-chip-actions { font-size: 11px; color: var(--text-subtle); margin-left: 8px; font-weight: 400; text-transform: none; letter-spacing: 0; }
+  .tb-chip-actions a { cursor: pointer; text-decoration: underline; }
+  .tb-filter-count { font-size: 11px; font-weight: 500; color: var(--text-muted); text-transform: none; letter-spacing: 0; margin-left: auto; }
+  .tb-toolbar { gap: 12px; flex-wrap: wrap; }
+  @media (max-width: 700px) {
+    .tb-toolbar { flex-wrap: wrap; gap: 6px; padding: 8px; }
+    .tb-toolbar-control { font-size: 11px; }
+    .tb-toolbar-control select { padding: 2px; max-width: 110px; }
+    #tb-expand-all, #tb-reset { padding: 4px 8px; font-size: 11px; }
+  }
+  .tb-toolbar-control {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; color: var(--text-muted);
+  }
+  .tb-toolbar-control select {
+    font-size: 12px; padding: 3px 4px;
+    border: 1px solid var(--border, #ddd);
+    border-radius: var(--radius-sm, 4px);
+    background: var(--surface);
+    color: var(--text);
+  }
+  .tb-sort-dir { padding: 2px 8px; font-size: 14px; }
+  .tb-presets { margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+  .tb-active-chips { margin: 8px 0 12px; display: flex; flex-wrap: wrap; gap: 4px; min-height: 0; }
+  .tb-active-chips:empty { margin: 0; }
+  .tb-active-chip {
+    display: inline-block; padding: 3px 10px; margin: 2px;
+    border-radius: 999px; border: 1px solid var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 12%, transparent);
+    font-size: 12px; cursor: pointer; color: var(--text);
+  }
+  .tb-active-chip:hover { background: color-mix(in srgb, var(--c-teal) 22%, transparent); }
+  .tb-empty {
+    padding: 48px 24px; text-align: center;
+    color: var(--text-muted); font-size: 15px;
+    background: var(--surface);
+  }
+  .tb-empty a { color: var(--c-teal); text-decoration: underline; cursor: pointer; }
+
+  /* Alternating row stripes -- only line/department rows */
+  .tb-row--alt td { background: color-mix(in srgb, var(--text-subtle) 4%, transparent); }
+
+  /* Show-more row */
+  .tb-row--show-more td {
+    text-align: center; color: var(--c-teal); font-size: 13px;
+    cursor: pointer; padding: 10px;
+  }
+  .tb-row--show-more:hover td { background: color-mix(in srgb, var(--c-teal) 6%, transparent); }
+
+  /* Table footer jump-link */
+  .tb-table-footer {
+    font-size: 12px; color: var(--text-muted); text-align: center;
+    margin: 12px 0 0; padding: 0 12px 12px;
+  }
+  .tb-table-footer a { color: var(--c-teal); }
+
+  @media (max-width: 700px) {
+    .tb-presets { font-size: 11px; gap: 3px; }
+    .tb-presets .tb-chip { font-size: 11px; padding: 2px 7px; }
+    .tb-filter-bar { margin-bottom: 10px; }
+    .tb-active-chips { margin: 6px 0 10px; }
+  }
+
+  #tb-sources {
+    margin: 16px 0 24px;
+    padding: 0;
+  }
+  #tb-sources h2 {
+    font-size: 18px;
+    margin: 0 0 8px;
+  }
+  #tb-sources ul {
+    padding-left: 20px;
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  #tb-sources li {
+    margin: 4px 0;
+  }
+  @media (max-width: 700px) {
+    #tb-sources {
+      margin: 12px 0 32px;
+    }
+    #tb-sources h2 { font-size: 16px; }
+    #tb-sources ul { font-size: 13px; padding-left: 18px; }
+  }
+</style>
+
+<h1>Marblehead's town budget, line by line</h1>
+
+<p class="tb-lead">
+  Every line item in the FY27 proposed budget, grouped by function. Click any
+  row to drill in. Function-level history goes back to FY02 from <abbr title="Department of Revenue">DOR</abbr> Schedule A.
+</p>
+
+<p class="tb-footnote" style="font-size:13px;color:var(--text-muted);margin:0 0 16px;">
+  <strong>Vote totals</strong> are the function-level appropriations Town Meeting votes
+  on as single warrant articles. Click any function to drill into its departments and line items.
+</p>
+<div class="tb-stats" id="tb-stats"></div>
+
+<div class="tb-presets">
+  <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-subtle);margin-right:6px;">Quick:</span>
+  <span class="tb-chip" data-preset="biggest-50">Biggest 50 lines</span>
+  <span class="tb-chip" data-preset="cuts-only">Cuts only</span>
+  <span class="tb-chip" data-preset="grew-10">Grew &gt;10%</span>
+  <span class="tb-chip" data-preset="salary">Salary footprint</span>
+  <span class="tb-chip" data-preset="forecast-misses">Forecast misses</span>
+</div>
+
+<details class="tb-filter-bar" id="tb-filter-bar">
+  <summary>
+    <span>Filters</span>
+    <span class="tb-filter-count" id="tb-filter-count"></span>
+  </summary>
+  <div class="tb-filter-grid">
+    <div class="tb-filter-section">
+      <h4>Function
+        <span class="tb-chip-actions">
+          (<a data-action="filter-functions-all">all</a> /
+           <a data-action="filter-functions-none">none</a>)
+        </span>
+      </h4>
+      <div id="tb-function-chips"></div>
+    </div>
+    <div class="tb-filter-section">
+      <h4>Spend type</h4>
+      <div id="tb-spend-chips"></div>
+    </div>
+    <div class="tb-filter-section">
+      <h4>Direction</h4>
+      <div id="tb-dir-chips"></div>
+    </div>
+    <div class="tb-filter-section">
+      <h4>Magnitude</h4>
+      <label style="display:block;font-size:12px;color:var(--text-muted);margin-bottom:4px;">
+        % change &gt;
+        <input id="tb-pct-min" type="number" step="0.5" placeholder="-"
+               style="width:60px;font-size:12px;padding:2px 4px;margin-left:4px;">
+      </label>
+      <label style="display:block;font-size:12px;color:var(--text-muted);">
+        $ change &gt;
+        <input id="tb-dollar-min" type="number" step="10000" placeholder="-"
+               style="width:90px;font-size:12px;padding:2px 4px;margin-left:4px;">
+      </label>
+    </div>
+    <div class="tb-filter-section">
+      <h4>Search</h4>
+      <input id="tb-search" type="search" placeholder="Description..."
+             style="width:100%;font-size:13px;padding:4px 8px;">
+    </div>
+    <div class="tb-filter-section">
+      <h4>Department</h4>
+      <input id="tb-dept-filter" type="search" placeholder="Type to filter..."
+             style="width:100%;font-size:13px;padding:4px 8px;">
+    </div>
+  </div>
+</details>
+
+<div class="tb-active-chips" id="tb-active-chips"></div>
+
+<div class="tb-table-wrap">
+  <div id="tb-table"></div>
+</div>
+
+<section id="tb-sources">
+  <h2>Sources &amp; methodology</h2>
+  <ul>
+    <li>Line-item amounts: <a href="https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override">FY27 Proposed Budget (No Override)</a></li>
+    <li>School cost centers: FY27 budget packet (School Committee 2/5/2026)</li>
+    <li>Function history: <abbr title="Department of Revenue">DOR</abbr> Schedule A FY02-FY24</li>
+    <li>School cost-center totals are gross-of-revenue; the town's $47.6M school appropriation is net of grants and fees.</li>
+    <li>Generated: <span id="tb-generated-at">--</span></li>
+  </ul>
+</section>
+
+<script>
+(function () {
+  'use strict';
+
+  let data = null;
+
+  var FUNCTIONS = [
+    { slug: 'general_government',       label: 'General Govt' },
+    { slug: 'public_safety',             label: 'Public Safety' },
+    { slug: 'public_works',              label: 'Public Works' },
+    { slug: 'human_services',            label: 'Human Services' },
+    { slug: 'schools',                   label: 'Schools' },
+    { slug: 'culture_recreation',        label: 'Culture & Rec' },
+    { slug: 'other_general_government',  label: 'Other GG' },
+    { slug: 'sewer_enterprise',          label: 'Sewer' },
+    { slug: 'water_enterprise',          label: 'Water' },
+    { slug: 'harbor_enterprise',         label: 'Harbor' },
+  ];
+
+  var SPEND_TYPES = [
+    'salaries', 'expense', 'officials_expense', 'benefits',
+    'debt', 'transfer', 'utility', 'reserve', 'other',
+  ];
+  var DIRECTIONS = ['increased', 'decreased', 'flat', 'cut'];
+
+  // Default: all general-fund functions on, enterprise off.
+  var DEFAULT_ENABLED_FUNCTIONS = new Set([
+    'general_government', 'public_safety', 'public_works', 'human_services',
+    'schools', 'culture_recreation', 'other_general_government',
+  ]);
+
+  var state = {
+    expanded: new Set(),
+    fullyExpanded: new Set(),  // dept IDs where user clicked "show all"
+    detailFor: null,  // line-row id with an open detail panel
+    allExpanded: false,
+    sortKey: 'fy27_proposed',
+    sortDir: 'desc',
+    groupBy: 'function',
+    filters: {
+      functions: new Set(DEFAULT_ENABLED_FUNCTIONS),
+      spendTypes: new Set(SPEND_TYPES),
+      directions: new Set(DIRECTIONS),
+      pctMin: null,
+      dollarMin: null,
+      searchQuery: '',
+      deptQuery: '',
+    },
+  };
+
+  function fmtMillions(n) {
+    if (n === null || n === undefined) return '-';
+    var sign = n < 0 ? '-' : '';
+    var abs = Math.abs(n);
+    if (abs >= 1_000_000) return sign + '$' + (abs / 1_000_000).toFixed(2) + 'M';
+    if (abs >= 1_000) return sign + '$' + (abs / 1_000).toFixed(0) + 'K';
+    return sign + '$' + abs;
+  }
+  function fmtPct(p) {
+    if (p === null || p === undefined) return '--';
+    var sign = p >= 0 ? '+' : '';
+    return sign + (p * 100).toFixed(2) + '%';
+  }
+
+  function pctClass(p) {
+    if (p === null || p === undefined) return '';
+    if (p > 0.0005) return 'tb-pct--pos';
+    if (p < -0.0005) return 'tb-pct--neg';
+    return '';
+  }
+
+  function renderSparkline(history) {
+    if (!history) return '';
+    // Pull FY02..FY24 actuals; skip 0s (stubs from empty CSV rows) and nulls.
+    var years = [];
+    for (var yy = 2; yy <= 24; yy++) {
+      var key = 'fy' + (yy < 10 ? '0' + yy : yy) + '_actual';
+      if (history[key] && history[key] > 0) years.push(history[key]);
+    }
+    if (years.length < 2) return '';
+    var min = Math.min.apply(null, years);
+    var max = Math.max.apply(null, years);
+    var w = 80, h = 18, pad = 1;
+    var span = max - min || 1;
+    var pts = years.map(function (v, i) {
+      return [
+        pad + (i * (w - 2 * pad)) / (years.length - 1),
+        h - pad - ((v - min) / span) * (h - 2 * pad)
+      ];
+    });
+    var d = pts.map(function (p, i) {
+      return (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ' ' + p[1].toFixed(1);
+    }).join('');
+    var last = pts[pts.length - 1];
+    return '<svg class="tb-sparkline" viewBox="0 0 ' + w + ' ' + h + '" aria-hidden="true">' +
+             '<path d="' + d + '"/>' +
+             '<circle cx="' + last[0].toFixed(1) + '" cy="' + last[1].toFixed(1) + '" r="1.6"/>' +
+           '</svg>';
+  }
+
+  function toggleExpandAll() {
+    if (state.allExpanded) {
+      state.expanded.clear();
+      state.allExpanded = false;
+    } else {
+      data.rows.forEach(function (r) {
+        if (r.level === 'function' || r.level === 'department') {
+          state.expanded.add(r.id);
+        }
+      });
+      state.allExpanded = true;
+    }
+    renderTable();
+  }
+
+  function titleCase(s) {
+    var SMALL = { 'and': 'and', 'of': 'of', 'the': 'the' };
+    return s.toLowerCase().split(/\s+/).map(function (w, i) {
+      if (i > 0 && SMALL[w]) return SMALL[w];
+      return w.charAt(0).toUpperCase() + w.slice(1);
+    }).join(' ');
+  }
+
+  function displayLabel(r) {
+    var d = r.description || '';
+    if (r.level === 'function') {
+      if (r.id === 'other_general_government') return 'Other Government';
+      var stripped = d.replace(/^VOTE TOTAL /, '');
+      return titleCase(stripped).replace(/ and /g, ' & ');
+    }
+    if (r.id === 'total_general_fund') return 'Total General Fund';
+    if (r.id === 'total_budgets') return 'Total (with Enterprise)';
+    return d;
+  }
+
+  function renderRow(r, idx) {
+    var hasChildren = r.level === 'function' || r.level === 'department';
+    var caret = hasChildren ? '▸' : '';
+    var levelClass = 'tb-row--' + (r.level === 'grand_total' ? 'total' : r.level);
+    var leaf = !hasChildren ? ' tb-row--leaf' : '';
+    var expanded = state.expanded.has(r.id) ? ' tb-expanded' : '';
+    var alt = (r.level === 'line' || r.level === 'department') && (idx % 2 === 1)
+      ? ' tb-row--alt' : '';
+    var parentAttr = r.parent_id ? ' data-parent="' + r.parent_id + '"' : '';
+    return (
+      '<tr class="tb-row ' + levelClass + leaf + expanded + alt +
+        '" data-id="' + r.id + '" data-level="' + r.level + '"' + parentAttr + '>' +
+        '<td><span class="tb-caret">' + caret + '</span> ' + displayLabel(r) + '</td>' +
+        '<td>' + fmtMillions(r.fy27_proposed) + '</td>' +
+        '<td class="' + pctClass(r.change_pct) + '">' + fmtPct(r.change_pct) + '</td>' +
+        '<td class="tb-col-spark">' + (r.history ? renderSparkline(r.history) : '') + '</td>' +
+      '</tr>'
+    );
+  }
+
+  function renderShowMoreRow(r) {
+    return '<tr class="tb-row tb-row--show-more" data-id="' + r.id + '" data-level="show_more">' +
+      '<td colspan="4">' + r.description + '</td></tr>';
+  }
+
+  function renderDetailPanel(r) {
+    var ref = r.source_ref || {};
+    var srcLine = '';
+    if (ref.line_item) {
+      srcLine = 'FY27 Proposed Budget Book, Item #' + ref.line_item;
+    } else if (ref.doc === 'fy27_school_packet') {
+      srcLine = 'FY27 School Department Budget Packet (School Committee 2/5/2026)';
+    }
+    var fcastVar = (r.fy25_actual != null && r.fy25_budget != null)
+      ? r.fy25_actual - r.fy25_budget : null;
+    var dChange = r.change_dollars != null
+      ? (r.change_dollars >= 0 ? '+' : '') + fmtMillions(r.change_dollars)
+      : '-';
+    return (
+      '<tr class="tb-detail-row">' +
+        '<td colspan="4">' +
+          '<div class="tb-detail-panel" data-for="' + r.id + '">' +
+            '<dl>' +
+              '<div><dt>FY25 Budget</dt><dd>' + fmtMillions(r.fy25_budget) + '</dd></div>' +
+              '<div><dt>FY25 Actual</dt><dd>' + fmtMillions(r.fy25_actual) + '</dd></div>' +
+              '<div><dt>FY26 Budget</dt><dd>' + fmtMillions(r.fy26_budget) + '</dd></div>' +
+              '<div><dt>$ change</dt><dd>' + dChange + '</dd></div>' +
+              '<div><dt>FY25 forecast variance</dt><dd>' + (fcastVar != null ? fmtMillions(fcastVar) : '-') + '</dd></div>' +
+              '<div><dt>Spend type</dt><dd>' + (r.spend_type || '-').replace('_', ' ') + '</dd></div>' +
+            '</dl>' +
+            (srcLine ? '<div class="tb-source">Source: ' + srcLine + '</div>' : '') +
+          '</div>' +
+        '</td>' +
+      '</tr>'
+    );
+  }
+
+  var ORDER = [
+    'general_government', 'public_safety', 'public_works', 'human_services',
+    'schools', 'culture_recreation', 'other_general_government',
+    'total_general_fund',
+    'sewer_enterprise', 'water_enterprise', 'harbor_enterprise',
+    'total_budgets',
+  ];
+
+  function ancestorsOfMatching() {
+    if (!state.filters.searchQuery) return new Set();
+    var s = new Set();
+    data.rows.forEach(function (r) {
+      if (r.description &&
+          r.description.toLowerCase().includes(state.filters.searchQuery)) {
+        var p = r.parent_id;
+        while (p) {
+          s.add(p);
+          var pr = data.rows.find(function (x) { return x.id === p; });
+          p = pr ? pr.parent_id : null;
+        }
+      }
+    });
+    return s;
+  }
+
+  function sortChildren(children) {
+    return children.slice().sort(function (a, b) {
+      var av = a[state.sortKey], bv = b[state.sortKey];
+      if (state.sortKey === 'description') {
+        return (av || '').localeCompare(bv || '') *
+               (state.sortDir === 'asc' ? 1 : -1);
+      }
+      if (state.sortKey === 'forecast_variance') {
+        av = (a.fy25_actual != null && a.fy25_budget != null) ? a.fy25_actual - a.fy25_budget : null;
+        bv = (b.fy25_actual != null && b.fy25_budget != null) ? b.fy25_actual - b.fy25_budget : null;
+      }
+      if (av == null && bv == null) return 0;
+      if (av == null) return 1;
+      if (bv == null) return -1;
+      return (av < bv ? -1 : av > bv ? 1 : 0) *
+             (state.sortDir === 'asc' ? 1 : -1);
+    });
+  }
+
+  function buildVisibleRows() {
+    var byParent = {};
+    data.rows.forEach(function (r) {
+      if (r.parent_id) {
+        (byParent[r.parent_id] = byParent[r.parent_id] || []).push(r);
+      }
+    });
+
+    if (state.groupBy === 'department') {
+      // Flat list of department-level rows that pass filters; clicking expands
+      // to show line items.
+      var depts = data.rows.filter(function (r) {
+        return r.level === 'department' && rowMatchesFilters(r) &&
+          (!r.function || state.filters.functions.has(r.function));
+      });
+      depts.sort(function (a, b) {
+        return (b.fy27_proposed || 0) - (a.fy27_proposed || 0);
+      });
+      var visible = [];
+      depts.forEach(function (d) {
+        visible.push(d);
+        if (state.expanded.has(d.id)) {
+          var kids = (byParent[d.id] || []).filter(rowMatchesFilters);
+          kids = sortChildren(kids);
+          kids.forEach(function (k) { visible.push(k); });
+        }
+      });
+      return visible;
+    }
+
+    if (state.groupBy === 'spend_type') {
+      // Pseudo-groups: one synthetic row per spend type with line-items as children.
+      var groups = {};
+      var groupChildren = {};
+      data.rows.filter(function (r) { return r.level === 'line' && rowMatchesFilters(r); })
+        .filter(function (r) { return !r.function || state.filters.functions.has(r.function); })
+        .forEach(function (r) {
+          var t = r.spend_type || 'other';
+          var gid = 'spend_' + t;
+          if (!groups[gid]) {
+            groups[gid] = {
+              id: gid, level: 'function', parent_id: null,
+              function: gid, department: null,
+              description: t.charAt(0).toUpperCase() + t.slice(1).replace('_', ' '),
+              spend_type: null,
+              fy25_budget: 0, fy25_actual: 0, fy26_budget: 0,
+              fy27_proposed: 0, change_dollars: 0, change_pct: 0,
+            };
+            groupChildren[gid] = [];
+          }
+          var g = groups[gid];
+          ['fy25_budget','fy25_actual','fy26_budget','fy27_proposed','change_dollars'].forEach(function (k) {
+            g[k] += r[k] || 0;
+          });
+          var deptRow = data.rows.find(function (x) { return x.id === r.department; });
+          var deptName = deptRow ? deptRow.description : (r.department || '');
+          groupChildren[gid].push(Object.assign({}, r, {
+            parent_id: gid,
+            description: deptName ? deptName + ' - ' + r.description : r.description
+          }));
+        });
+      Object.values(groups).forEach(function (g) {
+        g.change_pct = g.fy26_budget ? g.change_dollars / g.fy26_budget : 0;
+      });
+      var sortedGroups = Object.values(groups).sort(function (a, b) {
+        return (b.fy27_proposed || 0) - (a.fy27_proposed || 0);
+      });
+      var visible2 = [];
+      sortedGroups.forEach(function (g) {
+        visible2.push(g);
+        if (state.expanded.has(g.id)) {
+          groupChildren[g.id].forEach(function (k) { visible2.push(k); });
+        }
+      });
+      return visible2;
+    }
+
+    // Default: function tree (existing logic).
+    var topLevel = ORDER
+      .map(function (id) { return data.rows.find(function (r) { return r.id === id; }); })
+      .filter(function (r) { return r != null; })
+      .filter(function (r) {
+        if (r.level === 'grand_total') return true;  // always show totals
+        if (r.function && state.filters.functions.size > 0) {
+          return state.filters.functions.has(r.function);
+        }
+        return state.filters.functions.size === 0;  // empty filter = nothing visible
+      });
+
+    var forced = ancestorsOfMatching();
+
+    var visible3 = [];
+    function walk(r) {
+      // Search forces parents (forced) to be visible even if they don't otherwise match.
+      if (!rowMatchesFilters(r) && !forced.has(r.id)) {
+        return;
+      }
+      visible3.push(r);
+      if (state.expanded.has(r.id) || forced.has(r.id)) {
+        var children = sortChildren(byParent[r.id] || []);
+        if (r.level === 'department') {
+          var showAll = state.fullyExpanded.has(r.id) || children.length <= 12;
+          var visibleChildren = showAll ? children : children.slice(0, 10);
+          visibleChildren.forEach(walk);
+          if (!showAll) {
+            visible3.push({
+              id: '__show_more__' + r.id,
+              level: 'show_more',
+              parent_id: r.id,
+              description: 'Show all ' + children.length + ' lines',
+              _hiddenCount: children.length - 10,
+            });
+          }
+        } else {
+          children.forEach(walk);
+        }
+      }
+    }
+    topLevel.forEach(walk);
+    return visible3;
+  }
+
+  function toolbarHTML() {
+    return (
+      '<div class="tb-toolbar">' +
+        '<label class="tb-toolbar-control">Sort:' +
+          '<select id="tb-sort">' +
+            '<option value="fy27_proposed">FY27 amount</option>' +
+            '<option value="change_pct">% change</option>' +
+            '<option value="change_dollars">$ change</option>' +
+            '<option value="cagr_22yr">22-yr CAGR (functions)</option>' +
+            '<option value="description">Description</option>' +
+            '<option value="forecast_variance">FY25 forecast variance</option>' +
+          '</select>' +
+          '<button class="tb-btn tb-sort-dir" id="tb-sort-dir" title="Toggle direction">' +
+            (state.sortDir === 'asc' ? '↑' : '↓') +
+          '</button>' +
+        '</label>' +
+        '<label class="tb-toolbar-control">Group by:' +
+          '<select id="tb-group">' +
+            '<option value="function">Function</option>' +
+            '<option value="department">Department</option>' +
+            '<option value="spend_type">Spend type</option>' +
+          '</select>' +
+        '</label>' +
+        '<button class="tb-btn" id="tb-expand-all">' +
+          (state.allExpanded ? 'Collapse all' : 'Expand all') +
+        '</button>' +
+        '<button class="tb-btn" id="tb-reset" title="Reset all filters and sort">Reset</button>' +
+      '</div>'
+    );
+  }
+
+  function renderTable() {
+    var rows = buildVisibleRows();
+
+    if (rows.length === 0) {
+      var html =
+        toolbarHTML() +
+        '<div class="tb-empty">' +
+          'No rows match the current filters. ' +
+          '<a href="#" id="tb-empty-clear">Clear filters</a>' +
+        '</div>';
+      document.getElementById('tb-table').innerHTML = html;
+      wireToolbar();
+      document.getElementById('tb-empty-clear').onclick = function (e) {
+        e.preventDefault();
+        resetState();
+      };
+      serializeURLState();
+      return;
+    }
+
+    var bodyHtml = '';
+    rows.forEach(function (r, i) {
+      if (r.level === 'show_more') {
+        bodyHtml += renderShowMoreRow(r);
+      } else {
+        bodyHtml += renderRow(r, i);
+        if (r.level === 'line' && state.detailFor === r.id) {
+          bodyHtml += renderDetailPanel(r);
+        }
+      }
+    });
+    var html =
+      toolbarHTML() +
+      '<table class="tb-table"><thead><tr>' +
+        '<th>Description</th><th>FY27</th><th>% vs FY26</th>' +
+        '<th class="tb-col-spark">Trend FY02&rarr;FY24</th>' +
+      '</tr></thead><tbody>' + bodyHtml + '</tbody></table>' +
+      '<p class="tb-table-footer">' +
+        '<a href="#tb-sources">Sources &amp; methodology &darr;</a>' +
+        ' &nbsp;&middot;&nbsp; ' +
+        '<a href="/where-has-the-money-gone.html">Read the FY15-FY26 narrative &rarr;</a>' +
+      '</p>';
+    document.getElementById('tb-table').innerHTML = html;
+    attachListeners();
+    wireToolbar();
+  }
+
+  function attachListeners() {
+    var table = document.getElementById('tb-table');
+    table.onclick = function (e) {
+      // Ignore clicks inside the detail panel itself (don't toggle when user is inspecting).
+      if (e.target.closest('.tb-detail-panel')) return;
+      var row = e.target.closest('.tb-row');
+      if (!row) return;
+      var level = row.dataset.level;
+      var id = row.dataset.id;
+      if (level === 'function' || level === 'department') {
+        if (state.expanded.has(id)) state.expanded.delete(id);
+        else state.expanded.add(id);
+      } else if (level === 'line') {
+        state.detailFor = state.detailFor === id ? null : id;
+      } else if (level === 'show_more') {
+        var deptId = id.replace(/^__show_more__/, '');
+        state.fullyExpanded.add(deptId);
+      } else {
+        return;
+      }
+      renderTable();
+    };
+  }
+
+  function resetState() {
+    state.expanded = new Set();
+    state.fullyExpanded = new Set();
+    state.detailFor = null;
+    state.allExpanded = false;
+    state.filters.functions = new Set(DEFAULT_ENABLED_FUNCTIONS);
+    state.filters.spendTypes = new Set(SPEND_TYPES);
+    state.filters.directions = new Set(DIRECTIONS);
+    state.filters.pctMin = null;
+    state.filters.dollarMin = null;
+    state.filters.searchQuery = '';
+    state.filters.deptQuery = '';
+    state.sortKey = 'fy27_proposed';
+    state.sortDir = 'desc';
+    state.groupBy = 'function';
+    // Reset DOM input values too.
+    ['tb-pct-min', 'tb-dollar-min', 'tb-search', 'tb-dept-filter'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.value = '';
+    });
+    renderAll();
+  }
+
+  function applyPreset(name) {
+    resetState();  // start from defaults
+    if (name === 'cuts-only') {
+      state.filters.directions = new Set(['decreased', 'cut']);
+    } else if (name === 'grew-10') {
+      state.filters.directions = new Set(['increased']);
+      state.filters.pctMin = 10;
+      var pctInput = document.getElementById('tb-pct-min');
+      if (pctInput) pctInput.value = '10';
+    } else if (name === 'salary') {
+      state.groupBy = 'spend_type';
+      // Will show all spend-type groups; user can click into Salaries.
+    } else if (name === 'biggest-50') {
+      state.allExpanded = true;
+      data.rows.forEach(function (r) {
+        if (r.level === 'function' || r.level === 'department') {
+          state.expanded.add(r.id);
+        }
+      });
+      state.sortKey = 'fy27_proposed';
+      state.sortDir = 'desc';
+    } else if (name === 'forecast-misses') {
+      state.sortKey = 'forecast_variance';
+      state.sortDir = 'desc';
+    }
+    renderAll();
+  }
+
+  function renderActiveChips() {
+    var chips = [];
+    if (state.filters.functions.size !== DEFAULT_ENABLED_FUNCTIONS.size ||
+        [...state.filters.functions].some(function (f) { return !DEFAULT_ENABLED_FUNCTIONS.has(f); })) {
+      chips.push({
+        label: 'Functions: ' + [...state.filters.functions].join(', '),
+        reset: function () {
+          state.filters.functions = new Set(DEFAULT_ENABLED_FUNCTIONS);
+        },
+      });
+    }
+    if (state.filters.spendTypes.size !== SPEND_TYPES.length) {
+      chips.push({
+        label: 'Spend: ' + [...state.filters.spendTypes].join(', '),
+        reset: function () { state.filters.spendTypes = new Set(SPEND_TYPES); },
+      });
+    }
+    if (state.filters.directions.size !== DIRECTIONS.length) {
+      chips.push({
+        label: 'Direction: ' + [...state.filters.directions].join(', '),
+        reset: function () { state.filters.directions = new Set(DIRECTIONS); },
+      });
+    }
+    if (state.filters.pctMin != null) {
+      chips.push({
+        label: '% change > ' + state.filters.pctMin,
+        reset: function () {
+          state.filters.pctMin = null;
+          var el = document.getElementById('tb-pct-min'); if (el) el.value = '';
+        },
+      });
+    }
+    if (state.filters.dollarMin != null) {
+      chips.push({
+        label: '$ change > ' + state.filters.dollarMin,
+        reset: function () {
+          state.filters.dollarMin = null;
+          var el = document.getElementById('tb-dollar-min'); if (el) el.value = '';
+        },
+      });
+    }
+    if (state.filters.searchQuery) {
+      chips.push({
+        label: 'Search: "' + state.filters.searchQuery + '"',
+        reset: function () {
+          state.filters.searchQuery = '';
+          var el = document.getElementById('tb-search'); if (el) el.value = '';
+        },
+      });
+    }
+    if (state.filters.deptQuery) {
+      chips.push({
+        label: 'Dept: "' + state.filters.deptQuery + '"',
+        reset: function () {
+          state.filters.deptQuery = '';
+          var el = document.getElementById('tb-dept-filter'); if (el) el.value = '';
+        },
+      });
+    }
+
+    var container = document.getElementById('tb-active-chips');
+    container.innerHTML = chips.map(function (c) {
+      return '<span class="tb-active-chip">' + c.label + ' &times;</span>';
+    }).join('');
+    Array.prototype.forEach.call(container.querySelectorAll('.tb-active-chip'), function (el, i) {
+      el.onclick = function () { chips[i].reset(); renderAll(); };
+    });
+  }
+
+  function renderFilterCount() {
+    var count = 0;
+    if (state.filters.functions.size !== DEFAULT_ENABLED_FUNCTIONS.size) {
+      count++;
+    } else {
+      var fnArr = [...state.filters.functions];
+      for (var fi = 0; fi < fnArr.length; fi++) {
+        if (!DEFAULT_ENABLED_FUNCTIONS.has(fnArr[fi])) { count++; break; }
+      }
+    }
+    if (state.filters.spendTypes.size !== SPEND_TYPES.length) count++;
+    if (state.filters.directions.size !== DIRECTIONS.length) count++;
+    if (state.filters.pctMin != null) count++;
+    if (state.filters.dollarMin != null) count++;
+    if (state.filters.searchQuery) count++;
+    if (state.filters.deptQuery) count++;
+    var el = document.getElementById('tb-filter-count');
+    if (el) el.textContent = count > 0 ? '(' + count + ' active)' : '';
+  }
+
+  function attachPresetListeners() {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-preset]'), function (el) {
+      el.onclick = function () { applyPreset(el.dataset.preset); };
+    });
+  }
+
+  function wireToolbar() {
+    document.getElementById('tb-expand-all').onclick = toggleExpandAll;
+    document.getElementById('tb-reset').onclick = resetState;
+
+    var sortSel = document.getElementById('tb-sort');
+    sortSel.value = state.sortKey;
+    sortSel.onchange = function (e) {
+      state.sortKey = e.target.value;
+      renderAll();
+    };
+
+    document.getElementById('tb-sort-dir').onclick = function () {
+      state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+      renderAll();
+    };
+
+    var groupSel = document.getElementById('tb-group');
+    groupSel.value = state.groupBy;
+    groupSel.onchange = function (e) {
+      state.groupBy = e.target.value;
+      state.expanded.clear();  // group-by reset clears manual expansions
+      renderAll();
+    };
+  }
+
+  function renderFunctionChips() {
+    document.getElementById('tb-function-chips').innerHTML = FUNCTIONS.map(function (f) {
+      return '<span class="tb-chip" data-function="' + f.slug + '" data-active="' +
+        (state.filters.functions.has(f.slug) ? 'true' : 'false') + '">' + f.label + '</span>';
+    }).join('');
+  }
+
+  function renderSpendChips() {
+    document.getElementById('tb-spend-chips').innerHTML = SPEND_TYPES.map(function (t) {
+      return '<span class="tb-chip" data-spend="' + t + '" data-active="' +
+        (state.filters.spendTypes.has(t) ? 'true' : 'false') + '">' +
+        t.replace('_', ' ') + '</span>';
+    }).join('');
+  }
+
+  function renderDirChips() {
+    document.getElementById('tb-dir-chips').innerHTML = DIRECTIONS.map(function (d) {
+      return '<span class="tb-chip" data-direction="' + d + '" data-active="' +
+        (state.filters.directions.has(d) ? 'true' : 'false') + '">' + d + '</span>';
+    }).join('');
+  }
+
+  function rowMatchesFilters(r) {
+    // Spend type -- only applies to line-item rows.
+    if (r.level === 'line') {
+      if (r.spend_type && !state.filters.spendTypes.has(r.spend_type)) return false;
+    }
+    // Direction.
+    if (r.change_pct != null) {
+      var dir;
+      if (r.fy27_proposed === 0 && r.fy26_budget !== 0) dir = 'cut';
+      else if (r.change_pct > 0.001) dir = 'increased';
+      else if (r.change_pct < -0.001) dir = 'decreased';
+      else dir = 'flat';
+      if (!state.filters.directions.has(dir)) return false;
+    }
+    // Magnitude.
+    if (state.filters.pctMin != null && r.change_pct != null) {
+      if (Math.abs(r.change_pct * 100) < state.filters.pctMin) return false;
+    }
+    if (state.filters.dollarMin != null && r.change_dollars != null) {
+      if (Math.abs(r.change_dollars) < state.filters.dollarMin) return false;
+    }
+    // Search: match description substring on any row level.
+    if (state.filters.searchQuery) {
+      if (!r.description || !r.description.toLowerCase().includes(state.filters.searchQuery)) {
+        return false;
+      }
+    }
+    // Department typeahead: only applied to department-level rows.
+    if (state.filters.deptQuery && r.level === 'department') {
+      if (!r.description || !r.description.toLowerCase().includes(state.filters.deptQuery)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function attachFilterListeners() {
+    var bar = document.getElementById('tb-filter-bar');
+    bar.onclick = function (e) {
+      var action = e.target.dataset.action;
+      if (action === 'filter-functions-all') {
+        e.preventDefault();
+        FUNCTIONS.forEach(function (f) { state.filters.functions.add(f.slug); });
+        renderAll(); return;
+      }
+      if (action === 'filter-functions-none') {
+        e.preventDefault();
+        state.filters.functions.clear();
+        renderAll(); return;
+      }
+      var fnChip = e.target.closest('.tb-chip[data-function]');
+      if (fnChip) {
+        var slug = fnChip.dataset.function;
+        if (state.filters.functions.has(slug)) state.filters.functions.delete(slug);
+        else state.filters.functions.add(slug);
+        renderAll(); return;
+      }
+      var spendChip = e.target.closest('.tb-chip[data-spend]');
+      if (spendChip) {
+        var t = spendChip.dataset.spend;
+        if (state.filters.spendTypes.has(t)) state.filters.spendTypes.delete(t);
+        else state.filters.spendTypes.add(t);
+        renderAll(); return;
+      }
+      var dirChip = e.target.closest('.tb-chip[data-direction]');
+      if (dirChip) {
+        var d = dirChip.dataset.direction;
+        if (state.filters.directions.has(d)) state.filters.directions.delete(d);
+        else state.filters.directions.add(d);
+        renderAll(); return;
+      }
+    };
+    // Numeric inputs (these are not click events).
+    document.getElementById('tb-pct-min').oninput = function (e) {
+      var v = e.target.value === '' ? null : parseFloat(e.target.value);
+      state.filters.pctMin = (v != null && !isNaN(v)) ? v : null;
+      renderAll();
+    };
+    document.getElementById('tb-dollar-min').oninput = function (e) {
+      var v = e.target.value === '' ? null : parseFloat(e.target.value);
+      state.filters.dollarMin = (v != null && !isNaN(v)) ? v : null;
+      renderAll();
+    };
+    document.getElementById('tb-search').oninput = function (e) {
+      state.filters.searchQuery = (e.target.value || '').toLowerCase();
+      renderAll();
+    };
+    document.getElementById('tb-dept-filter').oninput = function (e) {
+      state.filters.deptQuery = (e.target.value || '').toLowerCase();
+      renderAll();
+    };
+  }
+
+  // URL state schema (kept short for shareable links).
+  function parseURLState() {
+    var p = new URLSearchParams(location.search);
+
+    if (p.has('fn')) {
+      state.filters.functions = new Set(p.get('fn').split(',').filter(Boolean));
+    }
+    if (p.has('type')) {
+      state.filters.spendTypes = new Set(p.get('type').split(',').filter(Boolean));
+    }
+    if (p.has('dirfilter')) {
+      state.filters.directions = new Set(p.get('dirfilter').split(',').filter(Boolean));
+    }
+    if (p.has('pct_min')) {
+      var pm = parseFloat(p.get('pct_min'));
+      if (!isNaN(pm)) state.filters.pctMin = pm;
+    }
+    if (p.has('dollar_min')) {
+      var dm = parseFloat(p.get('dollar_min'));
+      if (!isNaN(dm)) state.filters.dollarMin = dm;
+    }
+    if (p.has('q')) state.filters.searchQuery = p.get('q').toLowerCase();
+    if (p.has('dept')) state.filters.deptQuery = p.get('dept').toLowerCase();
+    if (p.has('sort')) state.sortKey = p.get('sort');
+    if (p.has('dir') && (p.get('dir') === 'asc' || p.get('dir') === 'desc')) {
+      state.sortDir = p.get('dir');
+    }
+    if (p.has('group') &&
+        ['function', 'department', 'spend_type'].indexOf(p.get('group')) >= 0) {
+      state.groupBy = p.get('group');
+    }
+    if (p.has('expand')) {
+      p.get('expand').split(',').filter(Boolean).forEach(function (id) {
+        state.expanded.add(id);
+      });
+    }
+
+    // Sync DOM input values from state (so visible inputs match URL).
+    var pctEl = document.getElementById('tb-pct-min');
+    if (pctEl && state.filters.pctMin != null) pctEl.value = state.filters.pctMin;
+    var dollarEl = document.getElementById('tb-dollar-min');
+    if (dollarEl && state.filters.dollarMin != null) dollarEl.value = state.filters.dollarMin;
+    var searchEl = document.getElementById('tb-search');
+    if (searchEl && state.filters.searchQuery) searchEl.value = state.filters.searchQuery;
+    var deptEl = document.getElementById('tb-dept-filter');
+    if (deptEl && state.filters.deptQuery) deptEl.value = state.filters.deptQuery;
+  }
+
+  function serializeURLState() {
+    var p = new URLSearchParams();
+
+    // Functions: only if differs from default.
+    var fnArr = [...state.filters.functions].sort();
+    var defaultFnArr = [...DEFAULT_ENABLED_FUNCTIONS].sort();
+    if (fnArr.join(',') !== defaultFnArr.join(',')) {
+      p.set('fn', fnArr.join(','));
+    }
+
+    if (state.filters.spendTypes.size !== SPEND_TYPES.length) {
+      p.set('type', [...state.filters.spendTypes].join(','));
+    }
+    if (state.filters.directions.size !== DIRECTIONS.length) {
+      p.set('dirfilter', [...state.filters.directions].join(','));
+    }
+    if (state.filters.pctMin != null) p.set('pct_min', state.filters.pctMin);
+    if (state.filters.dollarMin != null) p.set('dollar_min', state.filters.dollarMin);
+    if (state.filters.searchQuery) p.set('q', state.filters.searchQuery);
+    if (state.filters.deptQuery) p.set('dept', state.filters.deptQuery);
+    if (state.sortKey !== 'fy27_proposed') p.set('sort', state.sortKey);
+    if (state.sortDir !== 'desc') p.set('dir', state.sortDir);
+    if (state.groupBy !== 'function') p.set('group', state.groupBy);
+    if (state.expanded.size > 0) {
+      p.set('expand', [...state.expanded].sort().join(','));
+    }
+
+    var qs = p.toString();
+    var newUrl = location.pathname + (qs ? '?' + qs : '');
+    if (newUrl !== location.pathname + location.search) {
+      history.replaceState(null, '', newUrl);
+    }
+  }
+
+  function renderAll() {
+    renderStats();
+    renderFunctionChips();
+    renderSpendChips();
+    renderDirChips();
+    renderActiveChips();
+    renderFilterCount();
+    renderTable();
+    serializeURLState();
+  }
+
+  function renderStats() {
+    var meta = data.meta;
+    var gfRow = data.rows.find(r => r.id === 'total_general_fund');
+    var tbRow = data.rows.find(r => r.id === 'total_budgets');
+    var biggestMover = data.rows
+      .filter(r => r.level === 'function' && r.change_dollars != null)
+      .reduce((a, b) => Math.abs(a.change_dollars) > Math.abs(b.change_dollars) ? a : b);
+
+    var tiles = [
+      { label: 'General Fund FY27', value: fmtMillions(meta.total_general_fund),
+        sub: fmtPct(gfRow && gfRow.change_pct) + ' vs FY26' },
+      { label: '+ Enterprise', value: fmtMillions(meta.total_with_enterprise),
+        sub: fmtPct(tbRow && tbRow.change_pct) + ' vs FY26' },
+      { label: 'Change vs FY26',
+        value: (gfRow.change_dollars >= 0 ? '+' : '') + fmtMillions(gfRow.change_dollars),
+        sub: 'General fund only' },
+      { label: 'Biggest mover',
+        value: displayLabel(biggestMover),
+        sub: fmtPct(biggestMover.change_pct) },
+    ];
+    document.getElementById('tb-stats').innerHTML = tiles.map(t =>
+      '<a class="tb-stat-tile" href="#tb-table">' +
+        '<span class="tb-stat-label">' + t.label + '</span>' +
+        '<span class="tb-stat-value">' + t.value + '</span>' +
+        '<span class="tb-stat-sub">' + t.sub + '</span>' +
+      '</a>'
+    ).join('');
+  }
+
+  fetch('data/town_budget_FY27.json')
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      data = d;
+      parseURLState();              // hydrate from URL
+      renderAll();
+      attachFilterListeners();
+      attachPresetListeners();
+      document.getElementById('tb-generated-at').textContent =
+        new Date(d.meta.generated_at).toLocaleDateString();
+    });
+})();
+</script>
