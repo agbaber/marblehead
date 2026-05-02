@@ -180,6 +180,27 @@ og_url: https://marbleheaddata.org/town-budget.html
       </h4>
       <div id="tb-function-chips"></div>
     </div>
+    <div class="tb-filter-section">
+      <h4>Spend type</h4>
+      <div id="tb-spend-chips"></div>
+    </div>
+    <div class="tb-filter-section">
+      <h4>Direction</h4>
+      <div id="tb-dir-chips"></div>
+    </div>
+    <div class="tb-filter-section">
+      <h4>Magnitude</h4>
+      <label style="display:block;font-size:12px;color:var(--text-muted);margin-bottom:4px;">
+        % change &gt;
+        <input id="tb-pct-min" type="number" step="0.5" placeholder="—"
+               style="width:60px;font-size:12px;padding:2px 4px;margin-left:4px;">
+      </label>
+      <label style="display:block;font-size:12px;color:var(--text-muted);">
+        $ change &gt;
+        <input id="tb-dollar-min" type="number" step="10000" placeholder="—"
+               style="width:90px;font-size:12px;padding:2px 4px;margin-left:4px;">
+      </label>
+    </div>
   </div>
 </details>
 
@@ -217,6 +238,12 @@ og_url: https://marbleheaddata.org/town-budget.html
     { slug: 'harbor_enterprise',         label: 'Harbor' },
   ];
 
+  var SPEND_TYPES = [
+    'salaries', 'expense', 'officials_expense', 'benefits',
+    'debt', 'transfer', 'utility', 'reserve', 'other',
+  ];
+  var DIRECTIONS = ['increased', 'decreased', 'flat', 'cut'];
+
   // Default: all general-fund functions on, enterprise off.
   var DEFAULT_ENABLED_FUNCTIONS = new Set([
     'general_government', 'public_safety', 'public_works', 'human_services',
@@ -229,6 +256,10 @@ og_url: https://marbleheaddata.org/town-budget.html
     allExpanded: false,
     filters: {
       functions: new Set(DEFAULT_ENABLED_FUNCTIONS),
+      spendTypes: new Set(SPEND_TYPES),
+      directions: new Set(DIRECTIONS),
+      pctMin: null,
+      dollarMin: null,
     },
   };
 
@@ -392,6 +423,15 @@ og_url: https://marbleheaddata.org/town-budget.html
 
     var visible = [];
     function walk(r) {
+      if (!rowMatchesFilters(r)) {
+        // Don't show this row, but if it's a parent of matches, descend anyway.
+        // For now: simple -- if a non-line row fails the filter, skip it and its children.
+        if (r.level === 'line') return;
+        // Functions/departments are always shown if their function chip is on; we
+        // only filter them by direction/magnitude. So if direction/magnitude
+        // filters them out, drop them too.
+        return;
+      }
       visible.push(r);
       if (state.expanded.has(r.id)) {
         var children = (byParent[r.id] || []).slice();
@@ -455,6 +495,45 @@ og_url: https://marbleheaddata.org/town-budget.html
       return '<span class="tb-chip" data-function="' + f.slug + '" data-active="' +
         (state.filters.functions.has(f.slug) ? 'true' : 'false') + '">' + f.label + '</span>';
     }).join('');
+  }
+
+  function renderSpendChips() {
+    document.getElementById('tb-spend-chips').innerHTML = SPEND_TYPES.map(function (t) {
+      return '<span class="tb-chip" data-spend="' + t + '" data-active="' +
+        (state.filters.spendTypes.has(t) ? 'true' : 'false') + '">' +
+        t.replace('_', ' ') + '</span>';
+    }).join('');
+  }
+
+  function renderDirChips() {
+    document.getElementById('tb-dir-chips').innerHTML = DIRECTIONS.map(function (d) {
+      return '<span class="tb-chip" data-direction="' + d + '" data-active="' +
+        (state.filters.directions.has(d) ? 'true' : 'false') + '">' + d + '</span>';
+    }).join('');
+  }
+
+  function rowMatchesFilters(r) {
+    // Spend type -- only applies to line-item rows.
+    if (r.level === 'line') {
+      if (r.spend_type && !state.filters.spendTypes.has(r.spend_type)) return false;
+    }
+    // Direction.
+    if (r.change_pct != null) {
+      var dir;
+      if (r.fy27_proposed === 0 && r.fy26_budget !== 0) dir = 'cut';
+      else if (r.change_pct > 0.001) dir = 'increased';
+      else if (r.change_pct < -0.001) dir = 'decreased';
+      else dir = 'flat';
+      if (!state.filters.directions.has(dir)) return false;
+    }
+    // Magnitude.
+    if (state.filters.pctMin != null && r.change_pct != null) {
+      if (Math.abs(r.change_pct * 100) < state.filters.pctMin) return false;
+    }
+    if (state.filters.dollarMin != null && r.change_dollars != null) {
+      if (Math.abs(r.change_dollars) < state.filters.dollarMin) return false;
+    }
+    return true;
   }
 
   function attachFilterListeners() {

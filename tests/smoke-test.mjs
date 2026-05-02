@@ -260,6 +260,33 @@ async function testTownBudgetPageLoads(page) {
       }
     }
   }
+
+  // Direction filter: turn off "increased", "flat", "cut" — leave only "decreased".
+  // Reset filters first by clicking "all" function chips so we have a known state.
+  const fnAllBtn = await page.$('[data-action="filter-functions-all"]');
+  if (fnAllBtn) await fnAllBtn.click();
+  await page.waitForTimeout(60);
+
+  const dirChips = ['increased', 'flat', 'cut'];
+  for (const dir of dirChips) {
+    const c = await page.$('.tb-chip[data-direction="' + dir + '"]');
+    if (c) await c.click();
+  }
+  await page.waitForTimeout(80);
+  const allNeg = await page.evaluate(() => {
+    const rows = [...document.querySelectorAll('.tb-row--function')];
+    if (rows.length === 0) return false;
+    return rows.every(row => row.querySelector('.tb-pct--neg'));
+  });
+  allNeg
+    ? ok('Direction filter: visible function rows are all negative')
+    : fail('Direction filter', 'some non-negative rows visible');
+  // Reset for downstream tests.
+  for (const dir of dirChips) {
+    const c = await page.$('.tb-chip[data-direction="' + dir + '"]');
+    if (c) await c.click();
+  }
+  await page.waitForTimeout(60);
 }
 
 async function testGeneralGovernmentChart(page) {
