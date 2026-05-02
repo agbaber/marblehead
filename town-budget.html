@@ -232,6 +232,32 @@ og_url: https://marbleheaddata.org/town-budget.html
     .tb-filter-bar { margin-bottom: 10px; }
     .tb-active-chips { margin: 6px 0 10px; }
   }
+
+  #tb-sources {
+    margin: 16px 0 24px;
+    padding: 0;
+  }
+  #tb-sources h2 {
+    font-size: 18px;
+    margin: 0 0 8px;
+  }
+  #tb-sources ul {
+    padding-left: 20px;
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  #tb-sources li {
+    margin: 4px 0;
+  }
+  @media (max-width: 700px) {
+    #tb-sources {
+      margin: 12px 0 32px;
+    }
+    #tb-sources h2 { font-size: 16px; }
+    #tb-sources ul { font-size: 13px; padding-left: 18px; }
+  }
 </style>
 
 <h1>Marblehead's town budget, line by line</h1>
@@ -314,7 +340,7 @@ og_url: https://marbleheaddata.org/town-budget.html
 <section id="tb-sources">
   <h2>Sources &amp; methodology</h2>
   <ul>
-    <li>Line-item amounts: <a href="https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override">FY27 Proposed Budget -- No Override</a></li>
+    <li>Line-item amounts: <a href="https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override">FY27 Proposed Budget (No Override)</a></li>
     <li>School cost centers: FY27 budget packet (School Committee 2/5/2026)</li>
     <li>Function history: <abbr title="Department of Revenue">DOR</abbr> Schedule A FY02-FY24</li>
     <li>School cost-center totals are gross-of-revenue; the town's $47.6M school appropriation is net of grants and fees.</li>
