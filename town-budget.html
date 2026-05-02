@@ -1,0 +1,119 @@
+---
+title: "Marblehead's town budget, line by line"
+scripts: [citations]
+og_title: "Marblehead Town Budget Explorer"
+og_description: "Every line item in the $122.76M FY27 proposed budget. Filter, sort, drill into any department."
+og_url: https://marbleheaddata.org/town-budget.html
+---
+<style>
+  /* Anchor stats row */
+  .tb-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 12px; margin: 16px 0 24px;
+  }
+  @media (max-width: 700px) { .tb-stats { grid-template-columns: repeat(2, 1fr); } }
+  .tb-stat-tile {
+    background: var(--surface); border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm); padding: 14px 16px;
+    text-decoration: none; color: inherit;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .tb-stat-tile:hover { background: var(--surface-hover, var(--surface)); }
+  .tb-stat-label { font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px; color: var(--text-subtle); }
+  .tb-stat-value { font-size: 22px; font-weight: 700; color: var(--text);
+    font-variant-numeric: tabular-nums; }
+  .tb-stat-sub { font-size: 12px; color: var(--text-muted); }
+
+  /* Tree-table container */
+  .tb-table-wrap {
+    background: var(--surface); border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm); overflow: hidden; margin: 0 0 24px;
+  }
+
+  /* Lead text */
+  .tb-lead { color: var(--text-muted); font-size: 15px; line-height: 1.6;
+    margin: -4px 0 16px; }
+</style>
+
+<h1>Marblehead's town budget, line by line</h1>
+
+<p class="tb-lead">
+  Every line item in the FY27 proposed budget, grouped by function. Click any
+  row to drill in. Function-level history goes back to FY02 from DOR Schedule A.
+</p>
+
+<div class="tb-stats" id="tb-stats"></div>
+
+<div class="tb-table-wrap">
+  <div id="tb-table"></div>
+</div>
+
+<section id="tb-sources">
+  <h2>Sources &amp; methodology</h2>
+  <ul>
+    <li>Line-item amounts: <a href="https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override">FY27 Proposed Budget -- No Override</a></li>
+    <li>School cost centers: FY27 budget packet (School Committee 2/5/2026)</li>
+    <li>Function history: DOR Schedule A FY02-FY24</li>
+    <li>School cost-center totals are gross-of-revenue; the town's $47.6M school appropriation is net of grants and fees.</li>
+    <li>Generated: <span id="tb-generated-at">--</span></li>
+  </ul>
+</section>
+
+<script>
+(function () {
+  'use strict';
+
+  let data = null;
+
+  function fmtMillions(n) {
+    if (n === null || n === undefined) return '--';
+    if (Math.abs(n) >= 1_000_000) return '$' + (n / 1_000_000).toFixed(2) + 'M';
+    if (Math.abs(n) >= 1_000) return '$' + (n / 1_000).toFixed(0) + 'K';
+    return '$' + n;
+  }
+  function fmtPct(p) {
+    if (p === null || p === undefined) return '--';
+    var sign = p >= 0 ? '+' : '';
+    return sign + (p * 100).toFixed(2) + '%';
+  }
+
+  function renderStats() {
+    var meta = data.meta;
+    var gfRow = data.rows.find(r => r.id === 'total_general_fund');
+    var tbRow = data.rows.find(r => r.id === 'total_budgets');
+    var biggestMover = data.rows
+      .filter(r => r.level === 'function' && r.change_dollars != null)
+      .reduce((a, b) => Math.abs(a.change_dollars) > Math.abs(b.change_dollars) ? a : b);
+
+    var tiles = [
+      { label: 'General Fund FY27', value: fmtMillions(meta.total_general_fund),
+        sub: fmtPct(gfRow && gfRow.change_pct) + ' vs FY26' },
+      { label: '+ Enterprise', value: fmtMillions(meta.total_with_enterprise),
+        sub: fmtPct(tbRow && tbRow.change_pct) + ' vs FY26' },
+      { label: 'Change vs FY26',
+        value: (gfRow.change_dollars >= 0 ? '+' : '') + fmtMillions(gfRow.change_dollars),
+        sub: 'General fund only' },
+      { label: 'Biggest mover',
+        value: biggestMover.description.replace(/^VOTE TOTAL /, ''),
+        sub: fmtPct(biggestMover.change_pct) },
+    ];
+    document.getElementById('tb-stats').innerHTML = tiles.map(t =>
+      '<a class="tb-stat-tile" href="#tb-table">' +
+        '<span class="tb-stat-label">' + t.label + '</span>' +
+        '<span class="tb-stat-value">' + t.value + '</span>' +
+        '<span class="tb-stat-sub">' + t.sub + '</span>' +
+      '</a>'
+    ).join('');
+  }
+
+  fetch('data/town_budget_FY27.json')
+    .then(r => r.json())
+    .then(d => {
+      data = d;
+      renderStats();
+      document.getElementById('tb-generated-at').textContent =
+        new Date(d.meta.generated_at).toLocaleDateString();
+    });
+})();
+</script>

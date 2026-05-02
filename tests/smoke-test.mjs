@@ -160,6 +160,20 @@ async function testSchoolAgeVsEnrollment(page) {
     : fail('Decomposition table', `expected >= 8 rows, got ${tableRows.length}`);
 }
 
+async function testTownBudgetPageLoads(page) {
+  console.log('\n── Town Budget page ──');
+  const resp = await page.goto(`${SITE}/town-budget.html`);
+  resp && resp.status() === 200
+    ? ok('Town Budget page returns 200')
+    : fail('Town Budget page', `status ${resp ? resp.status() : 'no response'}`);
+  const h1 = await page.$('h1');
+  h1 ? ok('Town Budget has an h1') : fail('Town Budget h1', 'missing');
+  const stats = await page.$$('.tb-stat-tile');
+  stats.length === 4
+    ? ok('Town Budget shows 4 anchor stat tiles')
+    : fail('Town Budget anchor stats', `expected 4 tiles, got ${stats.length}`);
+}
+
 async function testGeneralGovernmentChart(page) {
   console.log('\n── General Government Over Time chart ──');
   await page.goto(SITE + '/charts/general_government_over_time.html', { waitUntil: 'domcontentloaded' });
@@ -214,6 +228,7 @@ async function testStatsStrip(page) {
     await testNavLinks(page1);
     await testGeneralGovernmentChart(page1);
     await testSchoolAgeVsEnrollment(page1);
+    await testTownBudgetPageLoads(page1);
     await ctx1.close();
 
     // Interactive tests (fresh context so localStorage is clean)
