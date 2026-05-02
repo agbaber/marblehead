@@ -185,6 +185,19 @@ async function testTownBudgetPageLoads(page) {
   totalRows.length === 2
     ? ok('Town Budget shows 2 grand-total rows (GF, +Enterprise)')
     : fail('Town Budget grand totals', `expected 2, got ${totalRows.length}`);
+
+  // Click Public Safety, expect dept rows to appear underneath.
+  const psRow = await page.$('.tb-row[data-id="public_safety"]');
+  if (psRow) {
+    await psRow.click();
+    await page.waitForTimeout(80);
+    const psDepts = await page.$$('.tb-row--department[data-parent="public_safety"]');
+    psDepts.length >= 4
+      ? ok(`Public Safety expands to ${psDepts.length} dept rows`)
+      : fail('Public Safety expand', `expected >=4 dept rows, got ${psDepts.length}`);
+  } else {
+    fail('Public Safety expand', 'public_safety row not found');
+  }
 }
 
 async function testGeneralGovernmentChart(page) {
