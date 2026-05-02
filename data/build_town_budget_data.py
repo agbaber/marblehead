@@ -90,7 +90,10 @@ _DEPT_DISPLAY_TO_SLUG = {
     "Human Resources Department": "human_resources",
     "Comm Dev & Planning Department": "community_development",
     "Public Works Department": "public_works_dept",
+    "Public Works (Highway, Tree, Drains)": "public_works_ops",
     "Trash and Recycling": "trash_recycling",
+    "Waste Collection": "waste_collection",
+    "NEW Curbside Collection": "curbside_collection",
     "Cemetery Department": "cemetery",
     "Health Department": "health",
     "Council on Aging": "council_on_aging",
@@ -292,6 +295,14 @@ def parse_budget_book(text: str) -> list[dict]:
                 d["change_dollars"] += chg_d
             continue
 
+        # Check explicit display-name map first (handles names with parens,
+        # "NEW" prefixes, and other patterns the regex won't catch).
+        stripped = raw.strip()
+        if stripped in _DEPT_DISPLAY_TO_SLUG:
+            current_dept_slug = _DEPT_DISPLAY_TO_SLUG[stripped]
+            current_dept_descr = stripped
+            continue
+
         dept_m = _DEPT_HEADER_RE.match(raw)
         if dept_m:
             dept_descr = dept_m.group(1).strip()
@@ -306,6 +317,18 @@ def parse_budget_book(text: str) -> list[dict]:
         prior = d["fy26_budget"]
         d["change_pct"] = (d["change_dollars"] / prior) if prior else 0.0
         rows.append(d)
+
+    # Drop department rows that are completely zeroed in both FY26 and FY27.
+    # This removes eliminated departments (e.g. "Engineer" was folded into
+    # Public Works in FY25; its FY27 budget book entry is $0 in both years).
+    rows = [
+        r for r in rows
+        if not (
+            r["level"] == "department"
+            and (r.get("fy26_budget") or 0) == 0
+            and (r.get("fy27_proposed") or 0) == 0
+        )
+    ]
 
     return rows
 

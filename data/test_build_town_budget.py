@@ -79,6 +79,46 @@ def test_function_subtotals_reconcile(fy27_budget_text):
             f"{fn_slug}: function total {function_total} ≠ children sum {children_sum}"
 
 
+def test_engineer_dept_dropped(fy27_budget_text):
+    """Engineer dept was eliminated in FY25/FY26; should not appear in output
+    because its FY26 and FY27 budgets are both $0."""
+    rows = parse_budget_book(fy27_budget_text)
+    by_id = {r["id"]: r for r in rows}
+    assert "engineer" not in by_id, \
+        "Engineer dept (zeroed in FY26+FY27) should be filtered out"
+
+
+def test_public_works_ops_separate_from_engineer(fy27_budget_text):
+    """Public Works (Highway, Tree, Drains) operations should be its own
+    department row, not bundled under the eliminated Engineer dept."""
+    rows = parse_budget_book(fy27_budget_text)
+    by_id = {r["id"]: r for r in rows}
+    assert "public_works_ops" in by_id, \
+        "public_works_ops dept should exist after fix"
+    pwo = by_id["public_works_ops"]
+    assert pwo["level"] == "department"
+    assert pwo["function"] == "public_works"
+    # Public Works ops (lines 112-116) = $2,369,771 + Snow Removal line 117 = $105,000
+    assert 2_300_000 < pwo["fy27_proposed"] < 2_600_000, \
+        f"public_works_ops fy27 {pwo['fy27_proposed']} out of expected range"
+
+
+def test_curbside_collection_is_separate_dept(fy27_budget_text):
+    """NEW Curbside Collection should be parsed as its own department, not
+    lumped into waste_collection."""
+    rows = parse_budget_book(fy27_budget_text)
+    by_id = {r["id"]: r for r in rows}
+    assert "curbside_collection" in by_id, \
+        "curbside_collection dept should exist"
+    cc = by_id["curbside_collection"]
+    assert cc["fy27_proposed"] == 2_186_516, \
+        f"curbside_collection fy27 {cc['fy27_proposed']} != 2,186,516"
+    # Waste collection should NOT include curbside amounts
+    wc = by_id["waste_collection"]
+    assert wc["fy27_proposed"] == 1_790_344, \
+        f"waste_collection fy27 {wc['fy27_proposed']} != 1,790,344"
+
+
 def test_function_history_attached(fy27_budget_text):
     rows = parse_budget_book(fy27_budget_text)
     attach_function_history(rows)
