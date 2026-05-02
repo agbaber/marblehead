@@ -347,6 +347,25 @@ async function testTownBudgetPageLoads(page) {
     if (resetBtn2) await resetBtn2.click();
     await page.waitForTimeout(60);
   }
+
+  // Deep link: ?fn=schools should pre-filter to schools only on load.
+  await page.goto(`${SITE}/town-budget.html?fn=schools`);
+  await page.waitForSelector('.tb-row--function', { timeout: 5000 }).catch(() => null);
+  const visibleFns = await page.$$('.tb-row--function');
+  visibleFns.length === 1
+    ? ok('Deep link ?fn=schools narrows to 1 function')
+    : fail('Deep link ?fn=schools', `expected 1 function, got ${visibleFns.length}`);
+
+  // Click a preset, expect URL to update.
+  const preset = await page.$('[data-preset="cuts-only"]');
+  if (preset) {
+    await preset.click();
+    await page.waitForTimeout(80);
+    const url = page.url();
+    url.includes('dirfilter=')
+      ? ok('State change updates URL params')
+      : fail('URL serialization', `URL did not include dirfilter=, got ${url}`);
+  }
 }
 
 async function testGeneralGovernmentChart(page) {
