@@ -550,7 +550,12 @@ og_url: https://marbleheaddata.org/town-budget.html
           ['fy25_budget','fy25_actual','fy26_budget','fy27_proposed','change_dollars'].forEach(function (k) {
             g[k] += r[k] || 0;
           });
-          groupChildren[gid].push(Object.assign({}, r, { parent_id: gid }));
+          var deptRow = data.rows.find(function (x) { return x.id === r.department; });
+          var deptName = deptRow ? deptRow.description : (r.department || '');
+          groupChildren[gid].push(Object.assign({}, r, {
+            parent_id: gid,
+            description: deptName ? deptName + ' - ' + r.description : r.description
+          }));
         });
       Object.values(groups).forEach(function (g) {
         g.change_pct = g.fy26_budget ? g.change_dollars / g.fy26_budget : 0;
