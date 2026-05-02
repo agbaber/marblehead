@@ -32,6 +32,26 @@ _GENERAL_FUND_TOTAL_RE = re.compile(
     re.MULTILINE,
 )
 
+# Map "VOTE TOTAL <CAPS DESCRIPTION>" → slug.
+_FUNCTION_DESC_TO_SLUG = {
+    "VOTE TOTAL GENERAL GOVERNMENT":            "general_government",
+    "VOTE TOTAL PUBLIC SAFETY":                 "public_safety",
+    "VOTE TOTAL SCHOOLS":                       "schools",
+    "VOTE TOTAL PUBLIC WORKS AND FACILITIES":   "public_works",
+    "VOTE TOTAL HUMAN SERVICES":                "human_services",
+    "VOTE TOTAL CULTURE AND RECREATION":        "culture_recreation",
+    "VOTE TOTAL OTHER GENERAL GOVERNMENT":      "other_general_government",
+    "VOTE TOTAL SEWER ENTERPRISE FUND":         "sewer_enterprise",
+    "VOTE TOTAL WATER ENTERPRISE FUND":         "water_enterprise",
+    "VOTE TOTAL HARBOR ENTERPRISE FUND":        "harbor_enterprise",
+}
+
+_CHANGE = r"(?:\([\d,]+\)|[\d,]+|-)"
+_VOTE_TOTAL_RE = re.compile(
+    rf"^\s*(VOTE TOTAL [A-Z& ]+?)\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+({_NUM})\s+({_CHANGE})\s+({_PCT})",
+    re.MULTILINE,
+)
+
 
 def _parse_int(s: str) -> int:
     s = s.strip().replace(",", "")
@@ -92,6 +112,27 @@ def parse_budget_book(text: str) -> list[dict]:
             "fy27_proposed": _parse_int(m.group(4)),
             "change_dollars": _parse_int(m.group(5)),
             "change_pct": _parse_pct(m.group(6)),
+        })
+
+    for m in _VOTE_TOTAL_RE.finditer(text):
+        descr = m.group(1).strip()
+        slug = _FUNCTION_DESC_TO_SLUG.get(descr)
+        if slug is None:
+            continue
+        rows.append({
+            "id": slug,
+            "level": "function",
+            "parent_id": None,
+            "function": slug,
+            "department": None,
+            "description": descr,
+            "spend_type": None,
+            "fy25_budget": _parse_int(m.group(2)),
+            "fy25_actual": _parse_int(m.group(3)),
+            "fy26_budget": _parse_int(m.group(4)),
+            "fy27_proposed": _parse_int(m.group(5)),
+            "change_dollars": _parse_int(m.group(6)),
+            "change_pct": _parse_pct(m.group(7)),
         })
 
     return rows

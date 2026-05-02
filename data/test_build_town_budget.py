@@ -13,3 +13,28 @@ def test_parser_finds_general_fund_total(fy27_budget_text):
     gf = next(r for r in rows if r["id"] == "total_general_fund")
     assert gf["fy27_proposed"] == 109_777_938
     assert gf["fy26_budget"] == 106_206_380
+
+
+EXPECTED_FUNCTIONS = {
+    "general_government":     ("VOTE TOTAL GENERAL GOVERNMENT",                4_618_544, -0.0286),
+    "public_safety":          ("VOTE TOTAL PUBLIC SAFETY",                    11_861_711, +0.0555),
+    "schools":                ("VOTE TOTAL SCHOOLS",                          47_620_287, -0.0305),
+    "public_works":           ("VOTE TOTAL PUBLIC WORKS AND FACILITIES",       6_862_170, +0.1741),
+    "human_services":         ("VOTE TOTAL HUMAN SERVICES",                      881_569, -0.0183),
+    "culture_recreation":     ("VOTE TOTAL CULTURE AND RECREATION",            1_870_167, -0.2631),
+    "other_general_government": ("VOTE TOTAL OTHER GENERAL GOVERNMENT",       24_965_092, +0.1096),
+    "sewer_enterprise":       ("VOTE TOTAL SEWER ENTERPRISE FUND",             4_799_291, -0.1325),
+    "water_enterprise":       ("VOTE TOTAL WATER ENTERPRISE FUND",             6_865_301, +0.0621),
+    "harbor_enterprise":      ("VOTE TOTAL HARBOR ENTERPRISE FUND",            1_319_500, +0.0334),
+}
+
+
+def test_parser_finds_all_function_totals(fy27_budget_text):
+    rows = parse_budget_book(fy27_budget_text)
+    by_id = {r["id"]: r for r in rows}
+    for slug, (descr, amount, pct) in EXPECTED_FUNCTIONS.items():
+        assert slug in by_id, f"missing function row {slug}"
+        assert by_id[slug]["description"] == descr
+        assert by_id[slug]["fy27_proposed"] == amount
+        assert abs(by_id[slug]["change_pct"] - pct) < 0.0001
+        assert by_id[slug]["level"] == "function"
