@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-02T20:18:59+00:00",
+    "generated_at": "2026-05-02T20:47:10+00:00",
     "source_doc": "FY27 Proposed Budget \u2014 No Override",
     "source_pdf_url": "https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override",
     "school_packet_url": "https://www.marbleheadschools.org/school-committee/files/fy27-proposed-budget-packet",
@@ -1022,25 +1022,6 @@
       "source_ref": {
         "doc": "fy27_budget_book",
         "line_item": 86
-      }
-    },
-    {
-      "id": "line_101",
-      "level": "line",
-      "parent_id": "schools_dept_wrapper",
-      "function": "schools",
-      "department": "schools_dept_wrapper",
-      "description": "Schools",
-      "spend_type": "other",
-      "fy25_budget": 46759111,
-      "fy25_actual": 46294268,
-      "fy26_budget": 49120287,
-      "fy27_proposed": 47620287,
-      "change_dollars": -1500000,
-      "change_pct": -0.0305,
-      "source_ref": {
-        "doc": "fy27_budget_book",
-        "line_item": 101
       }
     },
     {
@@ -2353,21 +2334,6 @@
       "fy27_proposed": 2400,
       "change_dollars": 0,
       "change_pct": 0.0
-    },
-    {
-      "id": "schools_dept_wrapper",
-      "level": "department",
-      "parent_id": "schools",
-      "function": "schools",
-      "department": "schools_dept_wrapper",
-      "description": "School Department",
-      "spend_type": null,
-      "fy25_budget": 46759111,
-      "fy25_actual": 46294268,
-      "fy26_budget": 49120287,
-      "fy27_proposed": 47620287,
-      "change_dollars": -1500000,
-      "change_pct": -0.030537280859128532
     },
     {
       "id": "engineer",

@@ -606,6 +606,12 @@ if __name__ == "__main__":
     rows = parse_budget_book(text)
     attach_function_history(rows)
     rows.extend(parse_school_packet())
+    # The town book's "School Department" wrapper department and its single
+    # "101 Schools" appropriation line are redundant with the Schools function
+    # row (also $47.62M) and the school packet's per-school cost-center
+    # breakdown. Drop them so the schools tree reads cleanly.
+    SCHOOLS_NOISE_IDS = {"schools_dept_wrapper", "line_101"}
+    rows = [r for r in rows if r["id"] not in SCHOOLS_NOISE_IDS]
     out = {"meta": build_meta(rows), "rows": rows}
     (DATA / "town_budget_FY27.json").write_text(json.dumps(out, indent=2) + "\n")
     (DATA / "town_budget_FY27_lookup.json").write_text(
