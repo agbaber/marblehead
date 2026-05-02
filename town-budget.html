@@ -34,6 +34,26 @@ og_url: https://marbleheaddata.org/town-budget.html
   /* Lead text */
   .tb-lead { color: var(--text-muted); font-size: 15px; line-height: 1.6;
     margin: -4px 0 16px; }
+
+  .tb-table { width: 100%; border-collapse: collapse;
+    font-variant-numeric: tabular-nums; }
+  .tb-table thead th {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-subtle); text-align: right;
+    padding: 10px 12px; border-bottom: 1px solid var(--border, #ddd);
+    background: var(--surface);
+  }
+  .tb-table thead th:first-child { text-align: left; }
+  .tb-row { transition: background 0.1s; }
+  .tb-row td { padding: 8px 12px; border-bottom: 1px solid var(--border-faint, #eee); }
+  .tb-row td:not(:first-child) { text-align: right; }
+  .tb-row--function td:first-child { font-weight: 700; padding-left: 16px;
+    border-left: 4px solid var(--c-teal); }
+  .tb-row--total td { font-weight: 700;
+    background: color-mix(in srgb, var(--c-teal) 6%, transparent);
+    border-top: 2px solid var(--c-teal); }
+  .tb-pct--pos { color: var(--c-teal); }
+  .tb-pct--neg { color: var(--c-coral, #c54); }
 </style>
 
 <h1>Marblehead's town budget, line by line</h1>
@@ -80,6 +100,45 @@ og_url: https://marbleheaddata.org/town-budget.html
     return sign + (p * 100).toFixed(2) + '%';
   }
 
+  function pctClass(p) {
+    if (p === null || p === undefined) return '';
+    if (p > 0.0005) return 'tb-pct--pos';
+    if (p < -0.0005) return 'tb-pct--neg';
+    return '';
+  }
+
+  function renderRow(r) {
+    var levelClass = 'tb-row--' + (r.level === 'grand_total' ? 'total' : r.level);
+    return (
+      '<tr class="tb-row ' + levelClass + '" data-id="' + r.id + '" data-level="' + r.level + '">' +
+        '<td>' + r.description + '</td>' +
+        '<td>' + fmtMillions(r.fy27_proposed) + '</td>' +
+        '<td class="' + pctClass(r.change_pct) + '">' + fmtPct(r.change_pct) + '</td>' +
+      '</tr>'
+    );
+  }
+
+  var ORDER = [
+    'general_government', 'public_safety', 'public_works', 'human_services',
+    'schools', 'culture_recreation', 'other_general_government',
+    'total_general_fund',
+    'sewer_enterprise', 'water_enterprise', 'harbor_enterprise',
+    'total_budgets',
+  ];
+
+  function renderTable() {
+    var rowsByOrder = ORDER
+      .map(id => data.rows.find(r => r.id === id))
+      .filter(r => r != null);
+    var html =
+      '<table class="tb-table"><thead><tr>' +
+        '<th>Description</th><th>FY27</th><th>% vs FY26</th>' +
+      '</tr></thead><tbody>' +
+      rowsByOrder.map(renderRow).join('') +
+      '</tbody></table>';
+    document.getElementById('tb-table').innerHTML = html;
+  }
+
   function renderStats() {
     var meta = data.meta;
     var gfRow = data.rows.find(r => r.id === 'total_general_fund');
@@ -114,6 +173,7 @@ og_url: https://marbleheaddata.org/town-budget.html
     .then(d => {
       data = d;
       renderStats();
+      renderTable();
       document.getElementById('tb-generated-at').textContent =
         new Date(d.meta.generated_at).toLocaleDateString();
     });

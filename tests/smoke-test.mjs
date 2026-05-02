@@ -172,6 +172,19 @@ async function testTownBudgetPageLoads(page) {
   stats.length === 4
     ? ok('Town Budget shows 4 anchor stat tiles')
     : fail('Town Budget anchor stats', `expected 4 tiles, got ${stats.length}`);
+
+  // Wait for the table to render (it's filled via fetch, may not be present immediately).
+  await page.waitForSelector('.tb-row--function', { timeout: 5000 }).catch(() => null);
+
+  const functionRows = await page.$$('.tb-row--function');
+  functionRows.length >= 8
+    ? ok(`Town Budget shows ${functionRows.length} function rows`)
+    : fail('Town Budget function rows', `expected >=8, got ${functionRows.length}`);
+
+  const totalRows = await page.$$('.tb-row--total');
+  totalRows.length === 2
+    ? ok('Town Budget shows 2 grand-total rows (GF, +Enterprise)')
+    : fail('Town Budget grand totals', `expected 2, got ${totalRows.length}`);
 }
 
 async function testGeneralGovernmentChart(page) {
