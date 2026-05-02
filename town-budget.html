@@ -920,6 +920,88 @@ og_url: https://marbleheaddata.org/town-budget.html
     };
   }
 
+  // URL state schema (kept short for shareable links).
+  function parseURLState() {
+    var p = new URLSearchParams(location.search);
+
+    if (p.has('fn')) {
+      state.filters.functions = new Set(p.get('fn').split(',').filter(Boolean));
+    }
+    if (p.has('type')) {
+      state.filters.spendTypes = new Set(p.get('type').split(',').filter(Boolean));
+    }
+    if (p.has('dirfilter')) {
+      state.filters.directions = new Set(p.get('dirfilter').split(',').filter(Boolean));
+    }
+    if (p.has('pct_min')) {
+      var pm = parseFloat(p.get('pct_min'));
+      if (!isNaN(pm)) state.filters.pctMin = pm;
+    }
+    if (p.has('dollar_min')) {
+      var dm = parseFloat(p.get('dollar_min'));
+      if (!isNaN(dm)) state.filters.dollarMin = dm;
+    }
+    if (p.has('q')) state.filters.searchQuery = p.get('q').toLowerCase();
+    if (p.has('dept')) state.filters.deptQuery = p.get('dept').toLowerCase();
+    if (p.has('sort')) state.sortKey = p.get('sort');
+    if (p.has('dir') && (p.get('dir') === 'asc' || p.get('dir') === 'desc')) {
+      state.sortDir = p.get('dir');
+    }
+    if (p.has('group') &&
+        ['function', 'department', 'spend_type'].indexOf(p.get('group')) >= 0) {
+      state.groupBy = p.get('group');
+    }
+    if (p.has('expand')) {
+      p.get('expand').split(',').filter(Boolean).forEach(function (id) {
+        state.expanded.add(id);
+      });
+    }
+
+    // Sync DOM input values from state (so visible inputs match URL).
+    var pctEl = document.getElementById('tb-pct-min');
+    if (pctEl && state.filters.pctMin != null) pctEl.value = state.filters.pctMin;
+    var dollarEl = document.getElementById('tb-dollar-min');
+    if (dollarEl && state.filters.dollarMin != null) dollarEl.value = state.filters.dollarMin;
+    var searchEl = document.getElementById('tb-search');
+    if (searchEl && state.filters.searchQuery) searchEl.value = state.filters.searchQuery;
+    var deptEl = document.getElementById('tb-dept-filter');
+    if (deptEl && state.filters.deptQuery) deptEl.value = state.filters.deptQuery;
+  }
+
+  function serializeURLState() {
+    var p = new URLSearchParams();
+
+    // Functions: only if differs from default.
+    var fnArr = [...state.filters.functions].sort();
+    var defaultFnArr = [...DEFAULT_ENABLED_FUNCTIONS].sort();
+    if (fnArr.join(',') !== defaultFnArr.join(',')) {
+      p.set('fn', fnArr.join(','));
+    }
+
+    if (state.filters.spendTypes.size !== SPEND_TYPES.length) {
+      p.set('type', [...state.filters.spendTypes].join(','));
+    }
+    if (state.filters.directions.size !== DIRECTIONS.length) {
+      p.set('dirfilter', [...state.filters.directions].join(','));
+    }
+    if (state.filters.pctMin != null) p.set('pct_min', state.filters.pctMin);
+    if (state.filters.dollarMin != null) p.set('dollar_min', state.filters.dollarMin);
+    if (state.filters.searchQuery) p.set('q', state.filters.searchQuery);
+    if (state.filters.deptQuery) p.set('dept', state.filters.deptQuery);
+    if (state.sortKey !== 'fy27_proposed') p.set('sort', state.sortKey);
+    if (state.sortDir !== 'desc') p.set('dir', state.sortDir);
+    if (state.groupBy !== 'function') p.set('group', state.groupBy);
+    if (state.expanded.size > 0) {
+      p.set('expand', [...state.expanded].sort().join(','));
+    }
+
+    var qs = p.toString();
+    var newUrl = location.pathname + (qs ? '?' + qs : '');
+    if (newUrl !== location.pathname + location.search) {
+      history.replaceState(null, '', newUrl);
+    }
+  }
+
   function renderAll() {
     renderStats();
     renderFunctionChips();
@@ -927,6 +1009,7 @@ og_url: https://marbleheaddata.org/town-budget.html
     renderDirChips();
     renderActiveChips();
     renderTable();
+    serializeURLState();
   }
 
   function renderStats() {
@@ -962,6 +1045,7 @@ og_url: https://marbleheaddata.org/town-budget.html
     .then(function (r) { return r.json(); })
     .then(function (d) {
       data = d;
+      parseURLState();              // hydrate from URL
       renderAll();
       attachFilterListeners();
       attachPresetListeners();
