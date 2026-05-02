@@ -1,0 +1,224 @@
+---
+title: "Has the 2.5% cap kept up with the cost of running a town?"
+scripts: [citations]
+body_class: has-numbered-charts
+og_title: "Has Prop 2.5 kept up with the cost of running a town?"
+og_description: "The 2.5% cap on tax growth, the levy with new growth, the price of buying a teacher and a family health plan, indexed to FY15 = 100. Three views of the same question."
+og_url: https://marbleheaddata.org/cap-vs-cost.html
+---
+
+<h1>Has the 2.5% cap kept up with the cost of running a town?</h1>
+
+<p class="page-lead">Proposition 2&frac12; caps how fast Marblehead's tax revenue can grow. It does not cap how fast anything else grows. Not health insurance, not teacher salaries, not the price of fuel. Three views of what that gap looks like.</p>
+
+<div class="key-stats">
+  <div class="key-stat"><div class="key-stat-value">2.5%/yr</div><div class="key-stat-label">Pure 2&frac12;% cap</div></div>
+  <div class="key-stat"><div class="key-stat-value">3.0%/yr</div><div class="key-stat-label">Marblehead levy</div></div>
+  <div class="key-stat"><div class="key-stat-value">3.4%/yr</div><div class="key-stat-label">Avg teacher salary</div></div>
+  <div class="key-stat"><div class="key-stat-value">4.6%/yr</div><div class="key-stat-label">Family health premium</div></div>
+</div>
+
+<h2 id="speed-limit">1. The speed limit</h2>
+
+<p>Each bar is one cost, with its annual growth rate. The dashed vertical line is the rate Marblehead's actual tax revenue grew at over the same period. Anything past that line grew faster than the levy could keep up with.</p>
+
+<div class="chart-wrap">
+<svg class="chart" viewBox="0 0 820 290" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Horizontal bar chart of annual growth rates: pure 2.5% cap (legal floor), Marblehead levy 3.0% per year, average teacher salary 3.4% per year, family health premium 4.6% per year. Vertical dashed line at 3.0% marks Marblehead's actual revenue speed; teacher salary and family health premium exceed it.">
+
+  <line class="grid-minor" x1="170" y1="55" x2="170" y2="225"/>
+  <line class="grid-minor" x1="280" y1="55" x2="280" y2="225"/>
+  <line class="grid-minor" x1="390" y1="55" x2="390" y2="225"/>
+  <line class="grid-minor" x1="500" y1="55" x2="500" y2="225"/>
+  <line class="grid-minor" x1="610" y1="55" x2="610" y2="225"/>
+  <line class="grid-minor" x1="720" y1="55" x2="720" y2="225"/>
+
+  <rect class="bar-solid-cap"  x="170" y="60"  width="275"   height="32" rx="2"/>
+  <text class="row-label"      x="160" y="80"  text-anchor="end">Pure 2&frac12;% cap</text>
+  <text class="end-label"      x="455" y="80">2.5%/yr</text>
+
+  <g class="s-marblehead">
+    <rect class="data-bar"     x="170" y="100" width="334.4" height="32" rx="2"/>
+  </g>
+  <text class="row-label"      x="160" y="120" text-anchor="end">Marblehead levy</text>
+  <text class="end-label"      x="514" y="120">3.0%/yr</text>
+
+  <g class="s-teacher">
+    <rect class="data-bar"     x="170" y="140" width="372.9" height="32" rx="2"/>
+  </g>
+  <text class="row-label"      x="160" y="160" text-anchor="end">Avg teacher salary</text>
+  <text class="end-label"      x="552" y="160">3.4%/yr</text>
+
+  <g class="s-cost">
+    <rect class="data-bar"     x="170" y="180" width="502.7" height="32" rx="2"/>
+  </g>
+  <text class="row-label"      x="160" y="200" text-anchor="end">Family health premium</text>
+  <text class="end-label"      x="682" y="200">4.6%/yr</text>
+
+  <line class="speed-limit"    x1="504.4" y1="50" x2="504.4" y2="225"/>
+  <text class="speed-limit-label" x="504.4" y="38" text-anchor="middle">SPEED LIMIT</text>
+  <text class="annotation"     x="504.4" y="20" text-anchor="middle">Marblehead's levy = 2&frac12;% cap + new growth</text>
+
+  <line class="axis-base"      x1="170" y1="225" x2="720" y2="225"/>
+
+  <text class="tick-label"     x="170" y="245" text-anchor="middle">0%</text>
+  <text class="tick-label"     x="280" y="245" text-anchor="middle">1%</text>
+  <text class="tick-label"     x="390" y="245" text-anchor="middle">2%</text>
+  <text class="tick-label"     x="500" y="245" text-anchor="middle">3%</text>
+  <text class="tick-label"     x="610" y="245" text-anchor="middle">4%</text>
+  <text class="tick-label"     x="720" y="245" text-anchor="middle">5%</text>
+  <text class="annotation"     x="445" y="270" text-anchor="middle">growth per year, FY15&ndash;FY27</text>
+
+</svg>
+</div>
+
+<p class="caption">Compound annual growth rate (<abbr class="g" title="Compound Annual Growth Rate">CAGR</abbr>) over each line's data window. Cap is the statutory ceiling on levy growth.<sup class="cite" data-href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter59/Section21C" data-source="Massachusetts General Laws, Chapter 59, Section 21C (Proposition 2&frac12;)"></sup> Levy is FY15&ndash;FY27 from <abbr class="g" title="Department of Revenue">DOR</abbr> Tax Recap.<sup class="cite" data-href="data/marblehead_levy.csv" data-source="Massachusetts Department of Revenue, Tax Recap reports compiled in data/marblehead_levy.csv"></sup> Teacher salary is FY15&ndash;FY24 from <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> School and District Profiles, Marblehead district 01680000.<sup class="cite" data-href="data/dese_marblehead_avg_teacher_salary.csv" data-source="DESE School and District Profiles, Teacher Salaries Report (Marblehead, district 01680000); compiled annually FY15-FY24"></sup> Family health premium is FY15&ndash;FY24 actual plus FY25&ndash;FY27 estimated at the long-run <abbr class="g" title="Kaiser Family Foundation">KFF</abbr> trend, from KFF Employer Health Benefits Survey national family premium.<sup class="cite" data-href="data/health_premiums.csv" data-source="Kaiser Family Foundation Employer Health Benefits Annual Survey, Average Annual Premiums for Family Coverage; compiled in data/health_premiums.csv"></sup></p>
+
+<p class="caption"><em>Why teacher salary as the wage line:</em> Marblehead's payroll has two halves with separate contracts. School employees (teachers, paraprofessionals, school administration) are negotiated by the School Committee. Town employees (police, fire, <abbr class="g" title="Department of Public Works">DPW</abbr>, library, town hall) are negotiated by the Town Administrator and Select Board, each with their own union. Teacher salary is shown because <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> publishes it annually with multi-year transparency for every district; the other municipal contracts are public but not aggregated into a single time series. Aggregate state-and-local government employee compensation nationally tracked similar rates over the same window per the <abbr class="g" title="Bureau of Labor Statistics">BLS</abbr> Employment Cost Index.<sup class="cite" data-href="https://www.bls.gov/eci/" data-source="U.S. Bureau of Labor Statistics, Employment Cost Index, state and local government employee compensation series (CIU2020000000000I)"></sup></p>
+
+<h2 id="dollars">2. The same costs in dollars</h2>
+
+<p>Indexed growth rates are abstract. Same data, in dollars, FY15 vs the most recent audited year:</p>
+
+<table class="dollar-table">
+  <caption>FY15 &rarr; FY24 (last year with audited data for all four)</caption>
+  <thead>
+    <tr>
+      <th>Cost</th>
+      <th>FY15</th>
+      <th>FY24 actual</th>
+      <th>If 2&frac12;% cap had been the only growth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Avg teacher salary <small style="color:var(--text-subtle)">(<abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr>)</small></td>
+      <td>$67,142</td>
+      <td>$90,696 <span class="pct">(+35%)</span></td>
+      <td class="baseline">$83,824 <small>(+25%)</small></td>
+    </tr>
+    <tr>
+      <td>Family health plan <small style="color:var(--text-subtle)">(KFF national)</small></td>
+      <td>$17,545</td>
+      <td>$25,572 <span class="pct">(+46%)</span></td>
+      <td class="baseline">$21,898 <small>(+25%)</small></td>
+    </tr>
+    <tr>
+      <td>Marblehead total levy <small style="color:var(--text-subtle)">(<abbr class="g" title="Department of Revenue">DOR</abbr>)</small></td>
+      <td>$54.10M</td>
+      <td>$71.42M <span class="pct">(+32%)</span></td>
+      <td class="baseline">$67.55M <small>(+25%)</small></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">The rightmost column shows what each value would have been if it grew exactly 2.5% per year for nine years. The gap between that number and the FY24 actual is what the town and households actually paid above the cap. Marblehead's avg single-family tax bill rose faster than the total levy &ndash; from $7,669 to $10,778, +41% &ndash; because residential property values appreciated faster than commercial during this window, shifting more of the levy onto homeowners.<sup class="cite" data-href="data/DOR_AvgSingleFamTaxBill_4towns.xlsx" data-source="Massachusetts DOR, Average Single-Family Tax Bill by municipality, FY1999-FY2026"></sup></td>
+    </tr>
+  </tfoot>
+</table>
+
+<div class="takeaway takeaway--neutral">
+The same family health plan that cost $17,545 in FY15 cost $25,572 in FY24 &ndash; an increase of $8,027 in nine years. If health insurance had grown at the cap rate, that same plan would have cost $21,898. Multiply that gap by the number of covered families, year after year, and you have most of the budget squeeze.
+</div>
+
+<h2 id="year-by-year">3. Year by year</h2>
+
+<p>The bar chart compresses each line to a single number. The full picture, indexed to FY15 = 100:</p>
+
+<div class="legend">
+  <div class="legend-item s-cost"><span class="legend-swatch"></span><span class="legend-text">Family health premium &middot; +4.6%/yr</span></div>
+  <div class="legend-item s-marblehead"><span class="legend-swatch"></span><span class="legend-text">Marblehead levy limit &middot; +3.0%/yr</span></div>
+  <div class="legend-item s-teacher"><span class="legend-swatch"></span><span class="legend-text">Avg teacher salary &middot; +3.4%/yr</span></div>
+  <div class="legend-item s-cap"><span class="legend-swatch"></span><span class="legend-text">Pure 2&frac12;% cap &middot; +2.5%/yr</span></div>
+</div>
+
+<div class="chart-wrap">
+<svg class="chart" viewBox="0 0 820 360" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Indexed line chart from FY15 to FY27 with FY15 set to 100. Family health premium reaches 171, Marblehead levy 143, teacher salary 149 (extrapolated), pure 2.5% cap 134.">
+
+  <line class="grid-minor" x1="70" y1="300" x2="690" y2="300"/>
+  <line class="grid-minor" x1="70" y1="248" x2="690" y2="248"/>
+  <line class="grid-minor" x1="70" y1="196" x2="690" y2="196"/>
+  <line class="grid-minor" x1="70" y1="144" x2="690" y2="144"/>
+  <line class="grid-minor" x1="70" y1="92"  x2="690" y2="92"/>
+  <line class="grid-minor" x1="70" y1="40"  x2="690" y2="40"/>
+
+  <text class="tick-label" x="64" y="304" text-anchor="end">100</text>
+  <text class="tick-label" x="64" y="252" text-anchor="end">120</text>
+  <text class="tick-label" x="64" y="200" text-anchor="end">140</text>
+  <text class="tick-label" x="64" y="148" text-anchor="end">160</text>
+  <text class="tick-label" x="64" y="96"  text-anchor="end">180</text>
+  <text class="tick-label" x="64" y="44"  text-anchor="end">200</text>
+
+  <line class="axis-base" x1="70" y1="300" x2="690" y2="300"/>
+
+  <line class="tick" x1="70.00"   y1="300" x2="70.00"   y2="304"/>
+  <line class="tick" x1="121.67"  y1="300" x2="121.67"  y2="304"/>
+  <line class="tick" x1="173.33"  y1="300" x2="173.33"  y2="304"/>
+  <line class="tick" x1="225.00"  y1="300" x2="225.00"  y2="304"/>
+  <line class="tick" x1="276.67"  y1="300" x2="276.67"  y2="304"/>
+  <line class="tick" x1="328.33"  y1="300" x2="328.33"  y2="304"/>
+  <line class="tick" x1="380.00"  y1="300" x2="380.00"  y2="304"/>
+  <line class="tick" x1="431.67"  y1="300" x2="431.67"  y2="304"/>
+  <line class="tick" x1="483.33"  y1="300" x2="483.33"  y2="304"/>
+  <line class="tick" x1="535.00"  y1="300" x2="535.00"  y2="304"/>
+  <line class="tick" x1="586.67"  y1="300" x2="586.67"  y2="304"/>
+  <line class="tick" x1="638.33"  y1="300" x2="638.33"  y2="304"/>
+  <line class="tick" x1="690.00"  y1="300" x2="690.00"  y2="304"/>
+
+  <text class="tick-label tick-label--major" x="70.00"  y="320" text-anchor="middle">FY15</text>
+  <text class="tick-label tick-label--major" x="225.00" y="320" text-anchor="middle">FY18</text>
+  <text class="tick-label tick-label--major" x="380.00" y="320" text-anchor="middle">FY21</text>
+  <text class="tick-label tick-label--major" x="535.00" y="320" text-anchor="middle">FY24</text>
+  <text class="tick-label tick-label--major" x="690.00" y="320" text-anchor="middle">FY27</text>
+
+  <line class="annotation-line" x1="535" y1="40" x2="535" y2="300"/>
+  <text class="annotation" x="531" y="50" text-anchor="end">audited</text>
+  <text class="annotation" x="539" y="50">estimated</text>
+
+  <g class="s-cap">
+    <path class="data-line data-line--dashed"
+          d="M70,300 L121.67,293.50 L173.33,286.85 L225,279.99 L276.67,273.01 L328.33,265.84 L380,258.48 L431.67,250.94 L483.33,243.22 L535,235.29 L586.67,227.17 L638.33,218.85 L690,210.33"/>
+    <circle class="data-dot data-dot--halo" cx="690" cy="210.33" r="3.5"/>
+    <text class="end-label" x="700" y="214">Cap</text>
+  </g>
+
+  <g class="s-marblehead">
+    <path class="data-line data-line--bold"
+          d="M70,300 L121.67,291.47 L173.33,282.32 L225,273.61 L276.67,264.93 L328.33,256.09 L380,247.04 L431.67,237.50 L483.33,227.36 L535,216.77 L586.67,206.63 L638.33,196.44 L690,187.34"/>
+    <circle class="data-dot data-dot--halo" cx="690" cy="187.34" r="3.5"/>
+    <text class="end-label" x="700" y="191">Levy</text>
+  </g>
+
+  <g class="s-teacher">
+    <path class="data-line"
+          d="M70,300 L121.67,280.42 L173.33,269.82 L225,260.38 L276.67,250.27 L328.33,238.41 L380,233.31 L431.67,229.62 L483.33,229.46 L535,208.82"/>
+    <path class="data-line data-line--dotted"
+          d="M535,208.82 L586.67,196.91 L638.33,184.59 L690,171.87"/>
+    <circle class="data-dot data-dot--halo" cx="690" cy="171.87" r="3.5"/>
+    <text class="end-label" x="700" y="175">Teacher salary</text>
+  </g>
+
+  <g class="s-cost">
+    <path class="data-line"
+          d="M70,300 L121.67,291.15 L173.33,281.94 L225,269.31 L276.67,270.01 L328.33,243.73 L380,230.71 L431.67,227.12 L483.33,204.82 L535,181.05"/>
+    <path class="data-line data-line--dotted"
+          d="M535,181.05 L586.67,160.21 L638.33,138.22 L690,115.01"/>
+    <circle class="data-dot data-dot--halo" cx="690" cy="115.01" r="3.5"/>
+    <text class="end-label" x="700" y="119">Health</text>
+  </g>
+
+</svg>
+</div>
+
+<p class="caption">Each line indexed so FY15 = 100; an indexed value of 143 means "43% above FY15." Solid lines are audited or directly published values; dotted segments past FY24 are trend extrapolations at each line's CAGR (cap and levy are forward-projected at 2.5%/yr and the levy limit's expected new-growth pace; teacher salary at +3.4%/yr; family health premium at +5.5%/yr long-run KFF average).</p>
+
+<h2 id="what-this-means">What this means</h2>
+
+<p>The cap is fixed at 2.5% by state law. The costs are not. When costs grow faster than the cap allows &ndash; the family health premium has, every year of this window &ndash; the difference has to come from somewhere.</p>
+
+<p>For nine years, Marblehead made up the difference with state aid, fees, and free cash. The 2026 Finance Committee Annual Report reported the FY26 budget was balanced only through one-time adjustments and that the three-year forecast had identified projected deficits for FY26, FY27, and FY28.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026_FinCom_Report.pdf" data-source="2026 Finance Committee Annual Report (FY26 budget, May 2025 Annual Town Meeting), p. 3"></sup> The FY27 budget shows an $8.47M structural deficit at current service levels.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026_State_of_the_Town.pdf" data-source="2026 State of the Town presentation, January 28, 2026"></sup></p>
+
+<p>The override question on the June 2026 ballot is whether to raise the cap. The data does not say which way to vote. It says what the cap has and has not been able to keep up with.</p>
+
+<p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 2rem;">More: <a href="what-is-the-override.html">What is the override?</a> &middot; <a href="how-we-got-here.html">How did we get here?</a> &middot; <a href="charts/healthcare_costs.html">Why health insurance is outpacing the tax levy</a> &middot; <a href="where-has-the-money-gone.html">Where has the money gone?</a></p>

@@ -4146,3 +4146,108 @@ abbr.g:focus::after {
 .four-oh-four-links .btn-link {
   margin: 0;
 }
+
+/* ==========================================================================
+   Cap-vs-cost chart helpers
+   - .s-teacher / .s-cap series colors
+   - .bar-solid-cap (hollow/dashed cap bar to distinguish from solid bars)
+   - .speed-limit vertical reference line + label
+   - .dollar-table for FY15 vs FY24 comparison rows
+   ========================================================================== */
+
+svg.chart .s-teacher { color: var(--c-sage); }
+svg.chart .s-cap     { color: var(--c-text-sub); }
+
+svg.chart .bar-solid-cap {
+  fill: var(--c-text-sub);
+  fill-opacity: 0.18;
+  stroke: var(--c-text-sub);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
+}
+
+svg.chart .speed-limit {
+  stroke: var(--c-text);
+  stroke-width: 2;
+  stroke-dasharray: 6 4;
+  fill: none;
+}
+svg.chart .speed-limit-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  fill: var(--c-text);
+  letter-spacing: 0.04em;
+}
+svg.chart .row-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  fill: var(--c-text);
+}
+svg.chart .data-dot--halo {
+  stroke: var(--bg);
+  stroke-width: 1.5;
+}
+
+/* Cap-vs-cost dollar comparison table */
+.dollar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 1rem;
+  font-size: 0.95rem;
+}
+.dollar-table caption {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-bottom: 0.5rem;
+}
+.dollar-table th,
+.dollar-table td {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--chart-grid-major);
+  text-align: right;
+}
+.dollar-table th:first-child,
+.dollar-table td:first-child {
+  text-align: left;
+}
+.dollar-table thead th {
+  background: var(--surface);
+  border-bottom: 2px solid var(--c-navy);
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.dollar-table .pct {
+  font-weight: 700;
+  color: var(--c-navy);
+}
+.dollar-table .baseline {
+  color: var(--text-subtle);
+}
+.dollar-table tbody tr:last-child td {
+  border-bottom: 1px solid var(--chart-grid-major);
+}
+.dollar-table tfoot td {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-align: left;
+  border-bottom: none;
+  padding-top: 0.85rem;
+  line-height: 1.55;
+}
+
+/* Generous spacing between numbered chart sections on cap-vs-cost */
+body.has-numbered-charts h2 {
+  margin-top: 2.5rem;
+}
+body.has-numbered-charts .chart-wrapper,
+body.has-numbered-charts .dollar-table {
+  margin-top: 1rem;
+}
