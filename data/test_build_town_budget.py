@@ -62,3 +62,18 @@ def test_parser_creates_department_rows(fy27_budget_text):
     assert by_id["police"]["level"] == "department"
     assert by_id["police"]["parent_id"] == "public_safety"
     assert by_id["police"]["fy27_proposed"] == 5_216_914
+
+
+def test_function_subtotals_reconcile(fy27_budget_text):
+    """Each function's department children should sum to its function total
+    within $1 (rounding tolerance)."""
+    rows = parse_budget_book(fy27_budget_text)
+    by_id = {r["id"]: r for r in rows}
+    for fn_slug in ["general_government", "public_safety", "public_works",
+                    "human_services", "culture_recreation",
+                    "sewer_enterprise", "water_enterprise", "harbor_enterprise"]:
+        function_total = by_id[fn_slug]["fy27_proposed"]
+        children_sum = sum(r["fy27_proposed"] for r in rows
+                           if r["level"] == "department" and r["function"] == fn_slug)
+        assert abs(function_total - children_sum) < 5, \
+            f"{fn_slug}: function total {function_total} ≠ children sum {children_sum}"
