@@ -150,6 +150,19 @@ og_url: https://marbleheaddata.org/town-budget.html
   .tb-chip-actions { font-size: 11px; color: var(--text-subtle); margin-left: 8px; font-weight: 400; text-transform: none; letter-spacing: 0; }
   .tb-chip-actions a { cursor: pointer; text-decoration: underline; }
   .tb-filter-count { font-size: 11px; font-weight: 500; color: var(--text-muted); text-transform: none; letter-spacing: 0; margin-left: auto; }
+  .tb-toolbar { gap: 12px; flex-wrap: wrap; }
+  .tb-toolbar-control {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; color: var(--text-muted);
+  }
+  .tb-toolbar-control select {
+    font-size: 12px; padding: 3px 4px;
+    border: 1px solid var(--border, #ddd);
+    border-radius: var(--radius-sm, 4px);
+    background: var(--surface);
+    color: var(--text);
+  }
+  .tb-sort-dir { padding: 2px 8px; font-size: 14px; }
 </style>
 
 <h1>Marblehead's town budget, line by line</h1>
@@ -264,6 +277,9 @@ og_url: https://marbleheaddata.org/town-budget.html
     expanded: new Set(),
     detailFor: null,  // line-row id with an open detail panel
     allExpanded: false,
+    sortKey: 'fy27_proposed',
+    sortDir: 'desc',
+    groupBy: 'function',
     filters: {
       functions: new Set(DEFAULT_ENABLED_FUNCTIONS),
       spendTypes: new Set(SPEND_TYPES),
@@ -431,6 +447,25 @@ og_url: https://marbleheaddata.org/town-budget.html
     return s;
   }
 
+  function sortChildren(children) {
+    return children.slice().sort(function (a, b) {
+      var av = a[state.sortKey], bv = b[state.sortKey];
+      if (state.sortKey === 'description') {
+        return (av || '').localeCompare(bv || '') *
+               (state.sortDir === 'asc' ? 1 : -1);
+      }
+      if (state.sortKey === 'forecast_variance') {
+        av = (a.fy25_actual != null && a.fy25_budget != null) ? a.fy25_actual - a.fy25_budget : null;
+        bv = (b.fy25_actual != null && b.fy25_budget != null) ? b.fy25_actual - b.fy25_budget : null;
+      }
+      if (av == null && bv == null) return 0;
+      if (av == null) return 1;
+      if (bv == null) return -1;
+      return (av < bv ? -1 : av > bv ? 1 : 0) *
+             (state.sortDir === 'asc' ? 1 : -1);
+    });
+  }
+
   function buildVisibleRows() {
     var byParent = {};
     data.rows.forEach(function (r) {
@@ -439,6 +474,71 @@ og_url: https://marbleheaddata.org/town-budget.html
       }
     });
 
+    if (state.groupBy === 'department') {
+      // Flat list of department-level rows that pass filters; clicking expands
+      // to show line items.
+      var depts = data.rows.filter(function (r) {
+        return r.level === 'department' && rowMatchesFilters(r) &&
+          (!r.function || state.filters.functions.has(r.function));
+      });
+      depts.sort(function (a, b) {
+        return (b.fy27_proposed || 0) - (a.fy27_proposed || 0);
+      });
+      var visible = [];
+      depts.forEach(function (d) {
+        visible.push(d);
+        if (state.expanded.has(d.id)) {
+          var kids = (byParent[d.id] || []).filter(rowMatchesFilters);
+          kids = sortChildren(kids);
+          kids.forEach(function (k) { visible.push(k); });
+        }
+      });
+      return visible;
+    }
+
+    if (state.groupBy === 'spend_type') {
+      // Pseudo-groups: one synthetic row per spend type with line-items as children.
+      var groups = {};
+      var groupChildren = {};
+      data.rows.filter(function (r) { return r.level === 'line' && rowMatchesFilters(r); })
+        .filter(function (r) { return !r.function || state.filters.functions.has(r.function); })
+        .forEach(function (r) {
+          var t = r.spend_type || 'other';
+          var gid = 'spend_' + t;
+          if (!groups[gid]) {
+            groups[gid] = {
+              id: gid, level: 'function', parent_id: null,
+              function: gid, department: null,
+              description: t.charAt(0).toUpperCase() + t.slice(1).replace('_', ' '),
+              spend_type: null,
+              fy25_budget: 0, fy25_actual: 0, fy26_budget: 0,
+              fy27_proposed: 0, change_dollars: 0, change_pct: 0,
+            };
+            groupChildren[gid] = [];
+          }
+          var g = groups[gid];
+          ['fy25_budget','fy25_actual','fy26_budget','fy27_proposed','change_dollars'].forEach(function (k) {
+            g[k] += r[k] || 0;
+          });
+          groupChildren[gid].push(Object.assign({}, r, { parent_id: gid }));
+        });
+      Object.values(groups).forEach(function (g) {
+        g.change_pct = g.fy26_budget ? g.change_dollars / g.fy26_budget : 0;
+      });
+      var sortedGroups = Object.values(groups).sort(function (a, b) {
+        return (b.fy27_proposed || 0) - (a.fy27_proposed || 0);
+      });
+      var visible2 = [];
+      sortedGroups.forEach(function (g) {
+        visible2.push(g);
+        if (state.expanded.has(g.id)) {
+          groupChildren[g.id].forEach(function (k) { visible2.push(k); });
+        }
+      });
+      return visible2;
+    }
+
+    // Default: function tree (existing logic).
     var topLevel = ORDER
       .map(function (id) { return data.rows.find(function (r) { return r.id === id; }); })
       .filter(function (r) { return r != null; })
@@ -452,23 +552,20 @@ og_url: https://marbleheaddata.org/town-budget.html
 
     var forced = ancestorsOfMatching();
 
-    var visible = [];
+    var visible3 = [];
     function walk(r) {
       // Search forces parents (forced) to be visible even if they don't otherwise match.
       if (!rowMatchesFilters(r) && !forced.has(r.id)) {
         return;
       }
-      visible.push(r);
+      visible3.push(r);
       if (state.expanded.has(r.id) || forced.has(r.id)) {
-        var children = (byParent[r.id] || []).slice();
-        children.sort(function (a, b) {
-          return (b.fy27_proposed || 0) - (a.fy27_proposed || 0);
-        });
+        var children = sortChildren(byParent[r.id] || []);
         children.forEach(walk);
       }
     }
     topLevel.forEach(walk);
-    return visible;
+    return visible3;
   }
 
   function renderTable() {
@@ -482,9 +579,30 @@ og_url: https://marbleheaddata.org/town-budget.html
     });
     var html =
       '<div class="tb-toolbar">' +
+        '<label class="tb-toolbar-control">Sort:' +
+          '<select id="tb-sort">' +
+            '<option value="fy27_proposed">FY27 amount</option>' +
+            '<option value="change_pct">% change</option>' +
+            '<option value="change_dollars">$ change</option>' +
+            '<option value="cagr_22yr">22-yr CAGR (functions)</option>' +
+            '<option value="description">Description</option>' +
+            '<option value="forecast_variance">FY25 forecast variance</option>' +
+          '</select>' +
+          '<button class="tb-btn tb-sort-dir" id="tb-sort-dir" title="Toggle direction">' +
+            (state.sortDir === 'asc' ? '↑' : '↓') +
+          '</button>' +
+        '</label>' +
+        '<label class="tb-toolbar-control">Group by:' +
+          '<select id="tb-group">' +
+            '<option value="function">Function</option>' +
+            '<option value="department">Department</option>' +
+            '<option value="spend_type">Spend type</option>' +
+          '</select>' +
+        '</label>' +
         '<button class="tb-btn" id="tb-expand-all">' +
           (state.allExpanded ? 'Collapse all' : 'Expand all') +
         '</button>' +
+        '<button class="tb-btn" id="tb-reset" title="Reset all filters and sort">Reset</button>' +
       '</div>' +
       '<table class="tb-table"><thead><tr>' +
         '<th>Description</th><th>FY27</th><th>% vs FY26</th>' +
@@ -492,7 +610,7 @@ og_url: https://marbleheaddata.org/town-budget.html
       '</tr></thead><tbody>' + bodyHtml + '</tbody></table>';
     document.getElementById('tb-table').innerHTML = html;
     attachListeners();
-    document.getElementById('tb-expand-all').onclick = toggleExpandAll;
+    wireToolbar();
   }
 
   function attachListeners() {
@@ -513,6 +631,53 @@ og_url: https://marbleheaddata.org/town-budget.html
         return;
       }
       renderTable();
+    };
+  }
+
+  function resetState() {
+    state.expanded = new Set();
+    state.detailFor = null;
+    state.allExpanded = false;
+    state.filters.functions = new Set(DEFAULT_ENABLED_FUNCTIONS);
+    state.filters.spendTypes = new Set(SPEND_TYPES);
+    state.filters.directions = new Set(DIRECTIONS);
+    state.filters.pctMin = null;
+    state.filters.dollarMin = null;
+    state.filters.searchQuery = '';
+    state.filters.deptQuery = '';
+    state.sortKey = 'fy27_proposed';
+    state.sortDir = 'desc';
+    state.groupBy = 'function';
+    // Reset DOM input values too.
+    ['tb-pct-min', 'tb-dollar-min', 'tb-search', 'tb-dept-filter'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.value = '';
+    });
+    renderAll();
+  }
+
+  function wireToolbar() {
+    document.getElementById('tb-expand-all').onclick = toggleExpandAll;
+    document.getElementById('tb-reset').onclick = resetState;
+
+    var sortSel = document.getElementById('tb-sort');
+    sortSel.value = state.sortKey;
+    sortSel.onchange = function (e) {
+      state.sortKey = e.target.value;
+      renderAll();
+    };
+
+    document.getElementById('tb-sort-dir').onclick = function () {
+      state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+      renderAll();
+    };
+
+    var groupSel = document.getElementById('tb-group');
+    groupSel.value = state.groupBy;
+    groupSel.onchange = function (e) {
+      state.groupBy = e.target.value;
+      state.expanded.clear();  // group-by reset clears manual expansions
+      renderAll();
     };
   }
 

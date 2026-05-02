@@ -305,6 +305,30 @@ async function testTownBudgetPageLoads(page) {
     if (c) await c.click();
   }
   await page.waitForTimeout(60);
+
+  // Sort by % change desc -- top function row should have positive change.
+  const sortDropdown = await page.$('#tb-sort');
+  if (sortDropdown) {
+    await sortDropdown.selectOption('change_pct');
+    await page.waitForTimeout(80);
+    // Sort within parents -- top-level rows still in ORDER. The smoke test just
+    // confirms the dropdown exists and the page didn't blow up.
+    const stillRendered = await page.$$('.tb-row--function');
+    stillRendered.length > 0
+      ? ok('Sort dropdown changes selection without breaking render')
+      : fail('Sort dropdown', 'render broken after sort change');
+  }
+
+  // Reset button restores defaults.
+  const resetBtn = await page.$('#tb-reset');
+  if (resetBtn) {
+    await resetBtn.click();
+    await page.waitForTimeout(80);
+    const fnRows = await page.$$('.tb-row--function');
+    fnRows.length === 7
+      ? ok('Reset restores 7 default GF function rows')
+      : fail('Reset', `expected 7 function rows, got ${fnRows.length}`);
+  }
 }
 
 async function testGeneralGovernmentChart(page) {
