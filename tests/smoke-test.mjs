@@ -177,9 +177,9 @@ async function testTownBudgetPageLoads(page) {
   await page.waitForSelector('.tb-row--function', { timeout: 5000 }).catch(() => null);
 
   const functionRows = await page.$$('.tb-row--function');
-  functionRows.length >= 8
+  functionRows.length >= 7
     ? ok(`Town Budget shows ${functionRows.length} function rows`)
-    : fail('Town Budget function rows', `expected >=8, got ${functionRows.length}`);
+    : fail('Town Budget function rows', `expected >=7, got ${functionRows.length}`);
 
   const totalRows = await page.$$('.tb-row--total');
   totalRows.length === 2
@@ -238,6 +238,27 @@ async function testTownBudgetPageLoads(page) {
       : fail('Expand-all', `expected >=80 lines, got ${lineRows.length}`);
   } else {
     fail('Expand-all', '#tb-expand-all button not found');
+  }
+
+  // Open filters, narrow to schools only, expect just 1 function row visible.
+  const filterToggle = await page.$('#tb-filter-bar > summary');
+  if (filterToggle) {
+    await filterToggle.click();
+    await page.waitForTimeout(60);
+    const noneBtn = await page.$('[data-action="filter-functions-none"]');
+    if (noneBtn) {
+      await noneBtn.click();
+      await page.waitForTimeout(60);
+      const schoolsChip = await page.$('.tb-chip[data-function="schools"]');
+      if (schoolsChip) {
+        await schoolsChip.click();
+        await page.waitForTimeout(60);
+        const visibleFunctions = await page.$$('.tb-row--function');
+        visibleFunctions.length === 1
+          ? ok('Function chip filter narrows to 1 function row')
+          : fail('Function chip filter', `expected 1 function row, got ${visibleFunctions.length}`);
+      }
+    }
   }
 }
 

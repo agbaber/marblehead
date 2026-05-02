@@ -117,6 +117,39 @@ og_url: https://marbleheaddata.org/town-budget.html
   @media (max-width: 700px) {
     .tb-col-spark { display: none; }
   }
+  .tb-filter-bar {
+    background: var(--surface); border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm); padding: 12px 16px; margin: 0 0 12px;
+  }
+  .tb-filter-bar > summary {
+    list-style: none; cursor: pointer; user-select: none;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-subtle);
+  }
+  .tb-filter-bar > summary::-webkit-details-marker { display: none; }
+  .tb-filter-bar > summary:hover { color: var(--text); }
+  .tb-filter-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px 16px; margin-top: 14px;
+  }
+  .tb-filter-section h4 {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-muted); margin: 0 0 6px;
+  }
+  .tb-chip {
+    display: inline-block; padding: 3px 9px; margin: 2px;
+    border-radius: 999px; border: 1px solid var(--border, #ddd);
+    background: var(--surface); font-size: 12px; cursor: pointer;
+    color: var(--text-muted); user-select: none;
+  }
+  .tb-chip[data-active="true"] {
+    background: var(--c-teal); color: #fff; border-color: var(--c-teal);
+  }
+  .tb-chip:hover { border-color: var(--c-teal); }
+  .tb-chip-actions { font-size: 11px; color: var(--text-subtle); margin-left: 8px; font-weight: 400; text-transform: none; letter-spacing: 0; }
+  .tb-chip-actions a { cursor: pointer; text-decoration: underline; }
+  .tb-filter-count { font-size: 11px; font-weight: 500; color: var(--text-muted); text-transform: none; letter-spacing: 0; margin-left: auto; }
 </style>
 
 <h1>Marblehead's town budget, line by line</h1>
@@ -131,6 +164,24 @@ og_url: https://marbleheaddata.org/town-budget.html
   on as single warrant articles. Click any function to drill into its departments and line items.
 </p>
 <div class="tb-stats" id="tb-stats"></div>
+
+<details class="tb-filter-bar" id="tb-filter-bar">
+  <summary>
+    <span>Filters</span>
+    <span class="tb-filter-count" id="tb-filter-count"></span>
+  </summary>
+  <div class="tb-filter-grid">
+    <div class="tb-filter-section">
+      <h4>Function
+        <span class="tb-chip-actions">
+          (<a data-action="filter-functions-all">all</a> /
+           <a data-action="filter-functions-none">none</a>)
+        </span>
+      </h4>
+      <div id="tb-function-chips"></div>
+    </div>
+  </div>
+</details>
 
 <div class="tb-table-wrap">
   <div id="tb-table"></div>
@@ -153,10 +204,32 @@ og_url: https://marbleheaddata.org/town-budget.html
 
   let data = null;
 
+  var FUNCTIONS = [
+    { slug: 'general_government',       label: 'General Govt' },
+    { slug: 'public_safety',             label: 'Public Safety' },
+    { slug: 'public_works',              label: 'Public Works' },
+    { slug: 'human_services',            label: 'Human Services' },
+    { slug: 'schools',                   label: 'Schools' },
+    { slug: 'culture_recreation',        label: 'Culture & Rec' },
+    { slug: 'other_general_government',  label: 'Other GG' },
+    { slug: 'sewer_enterprise',          label: 'Sewer' },
+    { slug: 'water_enterprise',          label: 'Water' },
+    { slug: 'harbor_enterprise',         label: 'Harbor' },
+  ];
+
+  // Default: all general-fund functions on, enterprise off.
+  var DEFAULT_ENABLED_FUNCTIONS = new Set([
+    'general_government', 'public_safety', 'public_works', 'human_services',
+    'schools', 'culture_recreation', 'other_general_government',
+  ]);
+
   var state = {
     expanded: new Set(),
     detailFor: null,  // line-row id with an open detail panel
     allExpanded: false,
+    filters: {
+      functions: new Set(DEFAULT_ENABLED_FUNCTIONS),
+    },
   };
 
   function fmtMillions(n) {
@@ -308,7 +381,14 @@ og_url: https://marbleheaddata.org/town-budget.html
 
     var topLevel = ORDER
       .map(function (id) { return data.rows.find(function (r) { return r.id === id; }); })
-      .filter(function (r) { return r != null; });
+      .filter(function (r) { return r != null; })
+      .filter(function (r) {
+        if (r.level === 'grand_total') return true;  // always show totals
+        if (r.function && state.filters.functions.size > 0) {
+          return state.filters.functions.has(r.function);
+        }
+        return state.filters.functions.size === 0;  // empty filter = nothing visible
+      });
 
     var visible = [];
     function walk(r) {
@@ -370,6 +450,45 @@ og_url: https://marbleheaddata.org/town-budget.html
     };
   }
 
+  function renderFunctionChips() {
+    document.getElementById('tb-function-chips').innerHTML = FUNCTIONS.map(function (f) {
+      return '<span class="tb-chip" data-function="' + f.slug + '" data-active="' +
+        (state.filters.functions.has(f.slug) ? 'true' : 'false') + '">' + f.label + '</span>';
+    }).join('');
+  }
+
+  function attachFilterListeners() {
+    var bar = document.getElementById('tb-filter-bar');
+    bar.onclick = function (e) {
+      var action = e.target.dataset.action;
+      if (action === 'filter-functions-all') {
+        e.preventDefault();
+        FUNCTIONS.forEach(function (f) { state.filters.functions.add(f.slug); });
+        renderAll();
+        return;
+      }
+      if (action === 'filter-functions-none') {
+        e.preventDefault();
+        state.filters.functions.clear();
+        renderAll();
+        return;
+      }
+      var chip = e.target.closest('.tb-chip[data-function]');
+      if (chip) {
+        var slug = chip.dataset.function;
+        if (state.filters.functions.has(slug)) state.filters.functions.delete(slug);
+        else state.filters.functions.add(slug);
+        renderAll();
+      }
+    };
+  }
+
+  function renderAll() {
+    renderStats();
+    renderFunctionChips();
+    renderTable();
+  }
+
   function renderStats() {
     var meta = data.meta;
     var gfRow = data.rows.find(r => r.id === 'total_general_fund');
@@ -400,11 +519,11 @@ og_url: https://marbleheaddata.org/town-budget.html
   }
 
   fetch('data/town_budget_FY27.json')
-    .then(r => r.json())
-    .then(d => {
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
       data = d;
-      renderStats();
-      renderTable();
+      renderAll();
+      attachFilterListeners();
       document.getElementById('tb-generated-at').textContent =
         new Date(d.meta.generated_at).toLocaleDateString();
     });
