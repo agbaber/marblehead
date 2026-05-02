@@ -4172,12 +4172,6 @@ svg.chart .speed-limit {
   stroke-dasharray: 6 4;
   fill: none;
 }
-svg.chart .speed-limit-label {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  fill: var(--c-text);
-  letter-spacing: 0.04em;
-}
 svg.chart .row-label {
   font-size: 0.8125rem;
   font-weight: 600;
