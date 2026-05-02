@@ -20,11 +20,11 @@ og_url: https://marbleheaddata.org/cap-vs-cost.html
 
 <h2 id="growth-rates">1. How fast each one grew</h2>
 
-<p>Each bar is one cost, with its annual growth rate. The Marblehead levy bar is itself the 2.5% cap (gray) plus new growth from new construction (navy). The dashed vertical line at the levy's right edge marks the rate the levy actually grew at; bars past that line grew faster than the levy could keep up with.</p>
+<p>Each bar is one cost, with its annual growth rate. The dashed vertical line marks the rate Marblehead's revenue actually grew at (the 2.5% cap plus new growth from new construction). Bars past that line grew faster than the levy could keep up with.</p>
 
 <div class="chart-wrap">
 <svg class="chart" viewBox="0 0 820 290" xmlns="http://www.w3.org/2000/svg" role="img"
-     aria-label="Horizontal bar chart of annual growth rates: pure 2.5% cap (legal floor), Marblehead levy 3.0% per year (composed of the 2.5% cap plus 0.5% from new construction), average teacher salary 3.4% per year, family health premium 4.3% per year. Vertical dashed line at 3.0% marks the levy's actual growth rate; teacher salary and family health premium exceed it.">
+     aria-label="Horizontal bar chart of annual growth rates: pure 2.5% cap (legal floor), Marblehead levy 3.0% per year, average teacher salary 3.4% per year, family health premium 4.3% per year. Vertical dashed line at 3.0% marks Marblehead's actual revenue speed; teacher salary and family health premium exceed it.">
 
   <line class="grid-minor" x1="170" y1="55" x2="170" y2="225"/>
   <line class="grid-minor" x1="280" y1="55" x2="280" y2="225"/>
@@ -37,10 +37,8 @@ og_url: https://marbleheaddata.org/cap-vs-cost.html
   <text class="row-label"      x="160" y="80"  text-anchor="end">Pure 2&frac12;% cap</text>
   <text class="end-label"      x="455" y="80">2.5%/yr</text>
 
-  <!-- Marblehead levy: stacked. Cap-portion (0->2.5%) styled like the cap bar above; new-growth portion (2.5->3.0%) is solid navy. -->
-  <rect class="bar-solid-cap"  x="170" y="100" width="275"   height="32" rx="2"/>
   <g class="s-marblehead">
-    <rect class="data-bar"     x="445" y="100" width="59.4"  height="32" rx="2"/>
+    <rect class="data-bar"     x="170" y="100" width="334.4" height="32" rx="2"/>
   </g>
   <text class="row-label"      x="160" y="120" text-anchor="end">Marblehead levy</text>
   <text class="end-label"      x="514" y="120">3.0%/yr</text>
