@@ -32,7 +32,7 @@ og_url: https://marbleheaddata.org/town-budget.html
   /* Tree-table container */
   .tb-table-wrap {
     background: var(--surface); border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm); overflow: hidden; margin: 0 0 24px;
+    box-shadow: var(--shadow-sm); overflow: visible; margin: 0 0 24px;
   }
 
   /* Lead text */
@@ -46,13 +46,20 @@ og_url: https://marbleheaddata.org/town-budget.html
     letter-spacing: 1px; color: var(--text-subtle); text-align: right;
     padding: 10px 12px; border-bottom: 1px solid var(--border, #ddd);
     background: var(--surface);
+    position: sticky; top: 0; z-index: 2;
   }
   .tb-table thead th:first-child { text-align: left; }
   .tb-row { transition: background 0.1s; }
   .tb-row td { padding: 8px 12px; border-bottom: 1px solid var(--border-faint, #eee); }
   .tb-row td:not(:first-child) { text-align: right; }
   .tb-row--function td:first-child { font-weight: 700; padding-left: 16px;
-    border-left: 4px solid var(--c-teal); }
+    border-left: 5px solid var(--c-teal); }
+  @media (max-width: 700px) {
+    .tb-row--function td:first-child {
+      border-left-width: 6px;
+      background: color-mix(in srgb, var(--c-teal) 5%, transparent);
+    }
+  }
   .tb-row--total td { font-weight: 700;
     background: color-mix(in srgb, var(--c-teal) 6%, transparent);
     border-top: 2px solid var(--c-teal); }
@@ -201,6 +208,30 @@ og_url: https://marbleheaddata.org/town-budget.html
     background: var(--surface);
   }
   .tb-empty a { color: var(--c-teal); text-decoration: underline; cursor: pointer; }
+
+  /* Alternating row stripes -- only line/department rows */
+  .tb-row--alt td { background: color-mix(in srgb, var(--text-subtle) 4%, transparent); }
+
+  /* Show-more row */
+  .tb-row--show-more td {
+    text-align: center; color: var(--c-teal); font-size: 13px;
+    cursor: pointer; padding: 10px;
+  }
+  .tb-row--show-more:hover td { background: color-mix(in srgb, var(--c-teal) 6%, transparent); }
+
+  /* Table footer jump-link */
+  .tb-table-footer {
+    font-size: 12px; color: var(--text-muted); text-align: center;
+    margin: 12px 0 0; padding: 0 12px 12px;
+  }
+  .tb-table-footer a { color: var(--c-teal); }
+
+  @media (max-width: 700px) {
+    .tb-presets { font-size: 11px; gap: 3px; }
+    .tb-presets .tb-chip { font-size: 11px; padding: 2px 7px; }
+    .tb-filter-bar { margin-bottom: 10px; }
+    .tb-active-chips { margin: 6px 0 10px; }
+  }
 </style>
 
 <h1>Marblehead's town budget, line by line</h1>
@@ -324,6 +355,7 @@ og_url: https://marbleheaddata.org/town-budget.html
 
   var state = {
     expanded: new Set(),
+    fullyExpanded: new Set(),  // dept IDs where user clicked "show all"
     detailFor: null,  // line-row id with an open detail panel
     allExpanded: false,
     sortKey: 'fy27_proposed',
@@ -425,15 +457,17 @@ og_url: https://marbleheaddata.org/town-budget.html
     return d;
   }
 
-  function renderRow(r) {
+  function renderRow(r, idx) {
     var hasChildren = r.level === 'function' || r.level === 'department';
     var caret = hasChildren ? '▸' : '';
     var levelClass = 'tb-row--' + (r.level === 'grand_total' ? 'total' : r.level);
     var leaf = !hasChildren ? ' tb-row--leaf' : '';
     var expanded = state.expanded.has(r.id) ? ' tb-expanded' : '';
+    var alt = (r.level === 'line' || r.level === 'department') && (idx % 2 === 1)
+      ? ' tb-row--alt' : '';
     var parentAttr = r.parent_id ? ' data-parent="' + r.parent_id + '"' : '';
     return (
-      '<tr class="tb-row ' + levelClass + leaf + expanded +
+      '<tr class="tb-row ' + levelClass + leaf + expanded + alt +
         '" data-id="' + r.id + '" data-level="' + r.level + '"' + parentAttr + '>' +
         '<td><span class="tb-caret">' + caret + '</span> ' + displayLabel(r) + '</td>' +
         '<td>' + fmtMillions(r.fy27_proposed) + '</td>' +
@@ -441,6 +475,11 @@ og_url: https://marbleheaddata.org/town-budget.html
         '<td class="tb-col-spark">' + (r.history ? renderSparkline(r.history) : '') + '</td>' +
       '</tr>'
     );
+  }
+
+  function renderShowMoreRow(r) {
+    return '<tr class="tb-row tb-row--show-more" data-id="' + r.id + '" data-level="show_more">' +
+      '<td colspan="4">' + r.description + '</td></tr>';
   }
 
   function renderDetailPanel(r) {
@@ -619,7 +658,22 @@ og_url: https://marbleheaddata.org/town-budget.html
       visible3.push(r);
       if (state.expanded.has(r.id) || forced.has(r.id)) {
         var children = sortChildren(byParent[r.id] || []);
-        children.forEach(walk);
+        if (r.level === 'department') {
+          var showAll = state.fullyExpanded.has(r.id) || children.length <= 12;
+          var visibleChildren = showAll ? children : children.slice(0, 10);
+          visibleChildren.forEach(walk);
+          if (!showAll) {
+            visible3.push({
+              id: '__show_more__' + r.id,
+              level: 'show_more',
+              parent_id: r.id,
+              description: 'Show all ' + children.length + ' lines',
+              _hiddenCount: children.length - 10,
+            });
+          }
+        } else {
+          children.forEach(walk);
+        }
       }
     }
     topLevel.forEach(walk);
@@ -678,18 +732,27 @@ og_url: https://marbleheaddata.org/town-budget.html
     }
 
     var bodyHtml = '';
-    rows.forEach(function (r) {
-      bodyHtml += renderRow(r);
-      if (r.level === 'line' && state.detailFor === r.id) {
-        bodyHtml += renderDetailPanel(r);
+    rows.forEach(function (r, i) {
+      if (r.level === 'show_more') {
+        bodyHtml += renderShowMoreRow(r);
+      } else {
+        bodyHtml += renderRow(r, i);
+        if (r.level === 'line' && state.detailFor === r.id) {
+          bodyHtml += renderDetailPanel(r);
+        }
       }
     });
     var html =
       toolbarHTML() +
       '<table class="tb-table"><thead><tr>' +
         '<th>Description</th><th>FY27</th><th>% vs FY26</th>' +
-        '<th class="tb-col-spark">Trend FY02→FY24</th>' +
-      '</tr></thead><tbody>' + bodyHtml + '</tbody></table>';
+        '<th class="tb-col-spark">Trend FY02&rarr;FY24</th>' +
+      '</tr></thead><tbody>' + bodyHtml + '</tbody></table>' +
+      '<p class="tb-table-footer">' +
+        '<a href="#tb-sources">Sources &amp; methodology &darr;</a>' +
+        ' &nbsp;&middot;&nbsp; ' +
+        '<a href="/where-has-the-money-gone.html">Read the FY15-FY26 narrative &rarr;</a>' +
+      '</p>';
     document.getElementById('tb-table').innerHTML = html;
     attachListeners();
     wireToolbar();
@@ -709,6 +772,9 @@ og_url: https://marbleheaddata.org/town-budget.html
         else state.expanded.add(id);
       } else if (level === 'line') {
         state.detailFor = state.detailFor === id ? null : id;
+      } else if (level === 'show_more') {
+        var deptId = id.replace(/^__show_more__/, '');
+        state.fullyExpanded.add(deptId);
       } else {
         return;
       }
@@ -718,6 +784,7 @@ og_url: https://marbleheaddata.org/town-budget.html
 
   function resetState() {
     state.expanded = new Set();
+    state.fullyExpanded = new Set();
     state.detailFor = null;
     state.allExpanded = false;
     state.filters.functions = new Set(DEFAULT_ENABLED_FUNCTIONS);
