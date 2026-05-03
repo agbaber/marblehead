@@ -121,3 +121,20 @@ Methodology notes for specific data files on marbleheaddata.org. Unlike the [Sou
 All lines normalized to 2000 = 100 (FY2000 for Marblehead levy) for direct visual comparison. Marblehead per-pupil line normalized at its first available year (FY2008) to its value *relative to where the other lines are at FY2008*, so the starting points align visually. Specifically: the per-pupil line is scaled so that its FY2008 value shows where Marblehead per-pupil would be indexed if we assumed it had tracked exactly with CPI from 2000-2008. This is labeled explicitly on the chart to avoid confusion.
 
 (Alternative: show raw index starting at 100 in FY2008, which would visually under-state per-pupil growth relative to the other 2000-indexed lines. The chosen approach is more directly comparable but requires a note.)
+
+
+## `cherry_sheet_FY26.csv`: FY2026 net Cherry Sheet aid for 37 MA municipalities
+
+**Source:** Massachusetts Department of Revenue, Division of Local Services (DLS), Cherry Sheet by Program report, retrieved one report per municipality from the DLS Gateway:
+
+> https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=CherrySheets.CSbyProgMunis.MuniBudgFinal&islMuni={code}&islYear=2026
+
+**Coverage:** FY2026 estimated state aid receipts and assessed charges for 37 municipalities used as peers on why-not-elsewhere.html. Scrape date: 2026-05-03.
+
+**What "net aid" means here:** Total estimated receipts minus total estimated charges, as printed at the bottom of each Cherry Sheet. Receipts include Chapter 70, Unrestricted General Government Aid, school transportation reimbursement, charter reimbursement, school choice receiving tuition, veterans benefits, exemption reimbursements, public library aid, state-owned land payment in lieu of taxes, and Chapter 40R smart growth. Charges include MBTA assessment, charter sending tuition, school choice sending tuition, MAPC, and mosquito control. The Cherry Sheet itself reports a final net line; the per-capita figures on this site divide that net by population.
+
+**Per-capita denominator:** FY2026 population from the DLS Income, EQV & Population report (already in `data/dor_all_351_FY26.csv`).
+
+**Reproducibility:** The CSV is rebuilt by `scripts/build_cherry_sheet_csv.py` (no third-party packages; falls back to `curl -k` if macOS Python cannot verify the state.ma.us SSL chain). Companion DESE Chapter 70 spreadsheets, `data/dese/chapter-2026-local.xlsx` and `data/dese/chapter-2026-reg.xlsx`, are mirrored from https://www.doe.mass.edu/finance/chapter70/chapter-cal.html for districts that prefer the DESE format.
+
+**Caveat (Boston and Cambridge).** On gross receipts both Boston and Cambridge rank among the highest in the peer set, but each pays large MBTA assessments and charter sending tuition that net out their position. Net per capita is the right metric for "what reaches the town's books"; it is not the same as gross state aid received.
