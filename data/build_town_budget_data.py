@@ -608,6 +608,24 @@ def build_lookup(rows: list[dict]) -> dict:
     return {r["id"]: r.get("description") for r in rows}
 
 
+def load_override_tiers() -> list[dict]:
+    """Read override_town_line_items.csv and return as a list of dicts."""
+    p = DATA / "override_town_line_items.csv"
+    if not p.exists():
+        return []
+    items = []
+    with p.open(newline="") as f:
+        for row in csv.DictReader(f):
+            items.append({
+                "category": row["category"],
+                "description": row["description"],
+                "tier_1": int(row["tier_1_9m"]) if row["tier_1_9m"] else 0,
+                "tier_2": int(row["tier_2_12m"]) if row["tier_2_12m"] else 0,
+                "tier_3": int(row["tier_3_15m"]) if row["tier_3_15m"] else 0,
+            })
+    return items
+
+
 def build_meta(rows: list[dict]) -> dict:
     by_id = {r["id"]: r for r in rows}
     gf = by_id.get("total_general_fund", {})
@@ -621,6 +639,7 @@ def build_meta(rows: list[dict]) -> dict:
         "history_source": "DOR Schedule A function-level expenditures FY02-FY24",
         "total_general_fund": gf.get("fy27_proposed"),
         "total_with_enterprise": tb.get("fy27_proposed"),
+        "override_tiers": load_override_tiers(),
     }
 
 
