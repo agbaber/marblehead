@@ -1,8 +1,25 @@
 #!/usr/bin/env python3
-"""Parse the FY27 Proposed Budget book into a structured row list.
+"""Build the structured FY27 budget JSON consumed by town-budget.html.
 
-Source: data/FY27_Proposed_Budget_No_Override.txt (whitespace-delimited
-text dump of the FY27 budget book PDF).
+Sources combined:
+
+1. ``data/FY27_Proposed_Budget_No_Override.txt`` -- whitespace dump of
+   the FY27 Proposed Budget book PDF. Provides function-level vote
+   totals, department headers, FY25 budget + FY25 actual columns, and
+   the original "TOTAL GENERAL FUND ACCOUNTS" grand total.
+
+2. ``data/budget_source/FY27-Proposed-Budget-vs-FY26-w-Acct-Details.xlsx``
+   -- the Town's Munis-account-level worksheet (FY26 vs FY27, ~600 rows).
+   When present, replaces the rolled-up "Salaries / Expense" lines from
+   the budget book with one row per Munis account code (individual
+   salaried positions, supply categories, etc.). Excel covers town-side
+   general-fund departments only -- not enterprise funds, not schools.
+
+3. ``data/peer_schedule_a_expenditures.csv`` -- DOR Schedule A FY02-FY24
+   for sparkline history on function rows.
+
+4. ``data/schools/sc-meetings-fy26/agenda-and-materials-2-5-2026-fy27-budget-packet.txt``
+   -- per-school cost-center totals + Munis-level lines.
 
 Output: data/town_budget_FY27.json + data/town_budget_FY27_lookup.json
 
@@ -178,12 +195,49 @@ def _make_function_row(slug: str, descr: str, m: re.Match) -> dict:
     }
 
 
-def classify_spend_type(descr: str) -> str:
+def classify_spend_type(descr: str, munis_obj: Optional[str] = None) -> str:
     """Bucket a line-item description into a spend type.
 
     Buckets: salaries | expense | officials_expense | benefits | debt
     | transfer | utility | reserve | other.
+
+    If ``munis_obj`` is provided (Munis object code), use the code's
+    leading digits to classify first. Falls back to description matching.
     """
+    if munis_obj:
+        # 517xxx: benefits umbrella (retirement, insurance, medicare,
+        # unemployment, workers comp, flex spending). Some 517 lines
+        # describe payroll-style payouts; treat sick-bonus-retirement
+        # as salaries because that's how it's pooled in the town book.
+        if munis_obj.startswith("517"):
+            d = descr.lower()
+            if "sick bonus retirement" in d:
+                return "salaries"
+            return "benefits"
+        # 51xxxx (other): salaries, OT, longevity, sick, stipends,
+        # incentive, holiday, night-diff -- all payroll.
+        if munis_obj.startswith("51"):
+            return "salaries"
+        # 521xxx: utilities (electricity, gas, oil, water/sewer charges)
+        if munis_obj.startswith("521") or munis_obj.startswith("523"):
+            return "utility"
+        # 591xxx / 592xxx: long-term & short-term debt
+        if munis_obj.startswith("591") or munis_obj.startswith("592"):
+            return "debt"
+        # 596xxx: interfund transfers
+        if munis_obj.startswith("596"):
+            return "transfer"
+        # 572500: officials expense (moderator, elected positions)
+        if munis_obj == "572500":
+            return "officials_expense"
+        # 579900: reserve fund transfer account
+        if munis_obj == "579900":
+            return "reserve"
+        # Everything else under 5xxxxx is operating expense (supplies,
+        # services, dues, repairs, travel, etc.)
+        if munis_obj.startswith("5"):
+            return "expense"
+
     d = descr.lower()
     if "salaries" in d or "salary reserve" in d:
         return "salaries"
@@ -603,6 +657,178 @@ def parse_school_packet() -> list[dict]:
     return rows
 
 
+# Excel "DEPARTMENT" column → existing town-side dept slug.
+# Source: data/budget_source/FY27-Proposed-Budget-vs-FY26-w-Acct-Details.xlsx,
+# the Town's Munis-account-level FY26-vs-FY27 worksheet (32 distinct dept
+# names). The Excel typo "COMMUNTY DEVELOPMENT" is reproduced verbatim from
+# the source. Snow & Ice rolls into the Public Works ops department in our
+# tree because the function-level rollup already includes Snow Removal as a
+# line under "Public Works (Highway, Tree, Drains)".
+_EXCEL_DEPT_TO_SLUG = {
+    "MODERATOR":                    "moderator",
+    "SELECT BOARD":                 "select_board",
+    "FINANCE COMMITTEE":            "finance_committee",
+    "RESERVE FUND":                 "reserve_fund",
+    "FINANCE":                      "finance",
+    "ASSESSOR":                     "assessor",
+    "TOWN COUNSEL":                 "town_counsel",
+    "HUMAN RESOURCES":              "human_resources",
+    "PARKING CLERK":                "parking_clerk",
+    "TOWN CLERK":                   "town_clerk",
+    "ELECTIONS":                    "election_registration",
+    "PLANNING BOARD":               "planning_board",
+    "COMMUNTY DEVELOPMENT":         "community_development",
+    "PUBLIC BUILDINGS":             "public_buildings",
+    "POLICE":                       "police",
+    "FIRE":                         "fire",
+    "BUILDING INSPECTIONS":         "building_inspection",
+    "SEALER OF WEIGHTS & MEASURES": "sealer_weights_measures",
+    "ANIMAL INSPECTOR":             "animal_inspector",
+    "PUBLIC WORKS":                 "public_works_ops",
+    "SNOW & ICE":                   "public_works_ops",
+    "WASTE COLLECTION":             "waste_collection",
+    "CURBSIDE COLLECTION":          "curbside_collection",
+    "CEMETERY":                     "cemetery",
+    "HEALTH":                       "health",
+    "COUNCIL ON AGING":             "council_on_aging",
+    "VETERANS SERVICES":            "veterans_benefits",
+    "LIBRARY":                      "library",
+    "RECREATION & PARKS":           "rec_park",
+    "MEMORIAL & VETERANS DAY":      "memorial_veterans_day",
+    "OTHER GENERAL GOVERNMENT":     "other_general_government_dept",
+    "DEBT EXCLUSIONS":              "debt_service",
+}
+
+
+def parse_excel_account_details(xlsx_path: Path) -> dict[str, list[dict]]:
+    """Parse the FY27-Proposed-Budget-vs-FY26-w-Acct-Details.xlsx workbook
+    into per-department line-item rows.
+
+    The Excel is the most current source the Town publishes for general-fund
+    spending: every Munis account code (~600 lines) with FY26 budget, FY27
+    proposed, $ change, and % change. It does not contain FY25 actuals or
+    enterprise funds; for those the TXT budget book remains authoritative.
+
+    Returns a dict mapping dept slug → list of line-row dicts ready to splice
+    into the main row list.
+    """
+    try:
+        import openpyxl  # imported lazily so non-build code paths don't need it
+    except ImportError as e:
+        raise ImportError(
+            "openpyxl is required to parse the Excel account-detail workbook. "
+            "Install with: pip install openpyxl"
+        ) from e
+
+    wb = openpyxl.load_workbook(xlsx_path, data_only=True)
+    ws = wb.active
+
+    by_dept: dict[str, list[dict]] = {}
+    seen_ids: set[str] = set()
+
+    for r in range(2, ws.max_row + 1):
+        dept_name = ws.cell(r, 1).value
+        org = ws.cell(r, 2).value
+        obj = ws.cell(r, 3).value
+        descr = ws.cell(r, 4).value
+        fy26 = ws.cell(r, 5).value
+        fy27 = ws.cell(r, 6).value
+
+        # Skip blank rows, header repeats, and section subtotals (which
+        # have null department + null description but populated amounts).
+        if not dept_name or dept_name == "DEPARTMENT" or not descr:
+            continue
+
+        dept_name = dept_name.strip()
+        slug = _EXCEL_DEPT_TO_SLUG.get(dept_name)
+        if slug is None:
+            # Unknown dept; skip rather than guess. Tests will catch coverage gaps.
+            continue
+
+        descr = descr.strip()
+        org = str(org).strip() if org is not None else ""
+        obj = str(obj).strip() if obj is not None else ""
+
+        fy26_v = int(fy26) if fy26 is not None else 0
+        fy27_v = int(fy27) if fy27 is not None else 0
+        change = fy27_v - fy26_v
+        pct = (change / fy26_v) if fy26_v else 0.0
+
+        # Use Munis ORG+OBJ for the line ID. A given dept can have the same
+        # OBJ code under multiple ORG codes (e.g. salary lines for different
+        # divisions), so include both.
+        line_id = f"acct_{slug}_{org}_{obj}"
+        if line_id in seen_ids:
+            # Duplicate row -- shouldn't happen in clean source, but guard.
+            continue
+        seen_ids.add(line_id)
+
+        by_dept.setdefault(slug, []).append({
+            "id": line_id,
+            "level": "line",
+            "parent_id": slug,
+            "function": None,  # filled in when spliced (parent dept knows its function)
+            "department": slug,
+            "description": descr,
+            "spend_type": classify_spend_type(descr, obj),
+            "fy25_budget": None,
+            "fy25_actual": None,
+            "fy26_budget": fy26_v,
+            "fy27_proposed": fy27_v,
+            "change_dollars": change,
+            "change_pct": pct,
+            "source_ref": {
+                "doc": "fy27_account_details",
+                "munis_org": org,
+                "munis_obj": obj,
+            },
+        })
+
+    return by_dept
+
+
+def merge_excel_into_rows(rows: list[dict],
+                          excel_lines_by_dept: dict[str, list[dict]]) -> list[dict]:
+    """Replace TXT-derived line-rows for any town dept that the Excel covers,
+    using the Excel's finer Munis-level lines instead. Recompute the dept
+    rollups from the Excel sums for FY26/FY27 (preserving FY25 from TXT, since
+    Excel doesn't include it).
+
+    Enterprise funds (sewer, water, harbor) and Schools cost-centers are not
+    covered by the Excel and pass through untouched.
+    """
+    covered_slugs = set(excel_lines_by_dept.keys())
+    by_id = {r["id"]: r for r in rows}
+
+    # Drop existing line rows for any dept the Excel covers.
+    rows = [
+        r for r in rows
+        if not (r["level"] == "line" and r.get("department") in covered_slugs)
+    ]
+
+    # Splice in Excel lines and recompute dept rollups.
+    for slug, lines in excel_lines_by_dept.items():
+        dept = by_id.get(slug)
+        if dept is None:
+            # Excel mentions a dept slug not in the TXT-built rows. Skip
+            # rather than fabricate a parent we don't have function info for.
+            continue
+        fn = dept.get("function")
+        sum_fy26 = sum(l["fy26_budget"] for l in lines)
+        sum_fy27 = sum(l["fy27_proposed"] for l in lines)
+        for l in lines:
+            l["function"] = fn  # link to function via the dept
+            rows.append(l)
+        # Update dept rollup from Excel sums; Excel is the more current source.
+        # Preserve FY25 columns from TXT since Excel doesn't include them.
+        dept["fy26_budget"] = sum_fy26
+        dept["fy27_proposed"] = sum_fy27
+        dept["change_dollars"] = sum_fy27 - sum_fy26
+        dept["change_pct"] = (dept["change_dollars"] / sum_fy26) if sum_fy26 else 0.0
+
+    return rows
+
+
 def build_lookup(rows: list[dict]) -> dict:
     """Build a {slug: display_name} lookup helper."""
     return {r["id"]: r.get("description") for r in rows}
@@ -615,13 +841,58 @@ def build_meta(rows: list[dict]) -> dict:
     from datetime import datetime, timezone
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "source_doc": "FY27 Proposed Budget — No Override",
+        "source_doc": "FY27 Proposed Budget — No Override (function/dept totals + FY25 actuals)",
         "source_pdf_url": "https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override",
+        "account_detail_doc": "FY27 Proposed Budget vs FY26 with Account Details",
+        "account_detail_url": "https://marbleheadma.gov/wp-content/uploads/2026/05/FY27-Proposed-Budget-vs-FY26-w-Acct-Details.xlsx",
         "school_packet_url": "https://www.marbleheadschools.org/school-committee/files/fy27-proposed-budget-packet",
         "history_source": "DOR Schedule A function-level expenditures FY02-FY24",
         "total_general_fund": gf.get("fy27_proposed"),
         "total_with_enterprise": tb.get("fy27_proposed"),
     }
+
+
+def update_general_fund_total(rows: list[dict]) -> None:
+    """After Excel splice, the general-fund grand total may differ from the
+    TXT-derived value because the TXT pipeline missed a few Munis-level
+    lines (e.g. Transfer to Workers Comp) that the Excel includes. Recompute
+    the GF total as the sum of GF function rows so the meta tile and the
+    grand-total row reconcile to the per-dept tree.
+    """
+    by_id = {r["id"]: r for r in rows}
+    gf_total = by_id.get("total_general_fund")
+    if gf_total is None:
+        return
+    GF_FUNCTIONS = [
+        "general_government", "public_safety", "public_works",
+        "human_services", "schools", "culture_recreation",
+        "other_general_government",
+    ]
+    # Sum the *function* rows (Town Meeting vote totals) + debt_service.
+    # The budget book treats "TOTAL DEBT SERVICE" as a parallel subtotal
+    # under Other General Government -- it is not part of the OGG function
+    # vote total but does count toward TOTAL GENERAL FUND ACCOUNTS.
+    sum_fy26 = sum(by_id[fn]["fy26_budget"] for fn in GF_FUNCTIONS if fn in by_id)
+    sum_fy27 = sum(by_id[fn]["fy27_proposed"] for fn in GF_FUNCTIONS if fn in by_id)
+    if "debt_service" in by_id:
+        sum_fy26 += by_id["debt_service"]["fy26_budget"]
+        sum_fy27 += by_id["debt_service"]["fy27_proposed"]
+    gf_total["fy26_budget"] = sum_fy26
+    gf_total["fy27_proposed"] = sum_fy27
+    gf_total["change_dollars"] = sum_fy27 - sum_fy26
+    gf_total["change_pct"] = (gf_total["change_dollars"] / sum_fy26) if sum_fy26 else 0.0
+
+    # Total budgets = GF + enterprise functions.
+    tb = by_id.get("total_budgets")
+    if tb is None:
+        return
+    ENTERPRISE_FUNCTIONS = ["sewer_enterprise", "water_enterprise", "harbor_enterprise"]
+    ent_fy26 = sum(by_id[fn]["fy26_budget"] for fn in ENTERPRISE_FUNCTIONS if fn in by_id)
+    ent_fy27 = sum(by_id[fn]["fy27_proposed"] for fn in ENTERPRISE_FUNCTIONS if fn in by_id)
+    tb["fy26_budget"] = sum_fy26 + ent_fy26
+    tb["fy27_proposed"] = sum_fy27 + ent_fy27
+    tb["change_dollars"] = tb["fy27_proposed"] - tb["fy26_budget"]
+    tb["change_pct"] = (tb["change_dollars"] / tb["fy26_budget"]) if tb["fy26_budget"] else 0.0
 
 
 if __name__ == "__main__":
@@ -635,6 +906,20 @@ if __name__ == "__main__":
     # breakdown. Drop them so the schools tree reads cleanly.
     SCHOOLS_NOISE_IDS = {"schools_dept_wrapper", "line_101"}
     rows = [r for r in rows if r["id"] not in SCHOOLS_NOISE_IDS]
+
+    # Splice in Munis-account-level line items from the Excel workbook.
+    # Excel covers all general-fund Town departments (no schools, no enterprise);
+    # for each dept it covers we replace the rolled-up "Salaries / Expense"
+    # lines from TXT with one line per Munis account code.
+    xlsx_path = DATA / "budget_source" / "FY27-Proposed-Budget-vs-FY26-w-Acct-Details.xlsx"
+    if xlsx_path.exists():
+        excel_lines = parse_excel_account_details(xlsx_path)
+        rows = merge_excel_into_rows(rows, excel_lines)
+        update_general_fund_total(rows)
+    else:
+        print(f"WARN: {xlsx_path} not found; skipping account-detail splice. "
+              f"Output will use TXT-only Salaries/Expense rollups.")
+
     out = {"meta": build_meta(rows), "rows": rows}
     (DATA / "town_budget_FY27.json").write_text(json.dumps(out, indent=2) + "\n")
     (DATA / "town_budget_FY27_lookup.json").write_text(
