@@ -202,6 +202,21 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
     margin: 0 0 8px;
   }
   .vote-step-body p:last-child { margin-bottom: 0; }
+  /* Step state: completed (Town Meeting passed) */
+  .vote-step--done {
+    border-left-color: var(--text-subtle);
+    opacity: 0.92;
+  }
+  .vote-step--done .vote-step-num {
+    background: var(--text-subtle);
+  }
+  .vote-step--done .vote-step-date {
+    color: var(--text-subtle);
+  }
+  /* Step state: current (ballot is up next) */
+  .vote-step--current {
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--c-teal) 35%, transparent);
+  }
   @media (max-width: 600px) {
     .vote-step { padding: 16px 18px 14px; gap: 12px; }
     .vote-step-num { flex: 0 0 28px; height: 28px; font-size: 14px; }
@@ -228,14 +243,14 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
 
 <h1>What can you do?</h1>
 
-<p>This year's override goes through <strong>two separate votes</strong>: one at Annual Town Meeting on May 4, and one at the ballot on June 9. Either vote can end it. The first section below walks through how those two votes work. Structural reforms that could affect future budgets are real, but they are slow, and none of them change what is on this year's ballot. Everything else is about influencing what comes next.</p>
+<p>This year's override needed <strong>two separate votes</strong>: one at Annual Town Meeting on May 4, and one at the ballot on June 9. Town Meeting passed the override authorization 1,227 to 159 on May 4.<sup class="cite" data-source="2026 Annual Town Meeting, May 4 (Article 29 floor vote)"></sup> Only the ballot remains. The first section below walks through how those two votes work. Structural reforms that could affect future budgets are real, but they are slow, and none of them change what is on this year's ballot. Everything else is about influencing what comes next.</p>
 
 <p>Still deciding how to vote? See <a href="what-is-the-override.html">what is the override</a> and <a href="no-override-budget.html">what is in the no-override budget</a>.</p>
 
 <div class="tldr">
   <p class="tldr-label">The short version</p>
   <ul>
-    <li><strong>Two votes decide the override.</strong> Annual Town Meeting on May 4 decides whether it goes to the ballot. The June 9 ballot picks the tier. Either vote can end the override. See <a href="#your-two-votes">the two votes</a> below.</li>
+    <li><strong>One vote left.</strong> Town Meeting passed the override 1,227-159 on May 4. The June 9 ballot picks the tier and is the last decision. See <a href="#your-two-votes">the two votes</a> below.</li>
     <li><strong>Town Meeting is the lever</strong> for the overall size of the town budget. The Select Board handles operations and policy. The Finance Committee reviews and recommends. The School Committee sets priorities within the school budget.</li>
     <li><strong>Two transparency reforms with precedent elsewhere:</strong> a state <abbr class="g" title="Division of Local Services">DLS</abbr> Financial Management Review (free, independent, requested by the Select Board) and more detailed department-level budget reporting (a format choice, no warrant article needed). Cost-level levers (the health premium split, staffing composition, contract-renewal timing) are a separate category and sit with the Select Board, Town Administrator, and School Committee; see the <a href="#structural-reform">structural reform card</a>.</li>
     <li><strong>Every body listed below is public.</strong> Meetings are hybrid. Agendas are posted on the <a href="https://marbleheadma.gov/">town calendar</a> at least 48 hours ahead.</li>
@@ -254,23 +269,23 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
 </nav>
 
 <h2 id="your-two-votes">The two votes</h2>
-<p>The override on this year's warrant faces two separate votes. The first is at Annual Town Meeting, where residents decide whether to send the override to the ballot at all. If Town Meeting votes no, there is no second vote on this question and the no-override budget takes effect. If Town Meeting votes yes, the override moves to the June ballot, where voters pick the tier. A no at either vote ends the override.</p>
+<p>The override on this year's warrant required two separate votes. The first was at Annual Town Meeting on May 4, where residents authorized sending the override to the ballot. Town Meeting passed Article 29 by 1,227 to 159, an 88 percent yes margin.<sup class="cite" data-source="2026 Annual Town Meeting, May 4 (Article 29 floor vote)"></sup> The override now moves to the June 9 ballot, where voters pick the tier. A no at the ballot ends the override.</p>
 
 <div class="vote-steps">
-  <div class="vote-step">
+  <div class="vote-step vote-step--done">
     <div class="vote-step-num">1</div>
     <div class="vote-step-body">
-      <div class="vote-step-date">Monday, May 4, 2026 &middot; Annual Town Meeting</div>
-      <h3>Residents authorize the ballot question</h3>
-      <p>Town Meeting votes yes or no on a single question: <em>should the override go to the ballot as three tiers with a ceiling of $15M?</em> Town Meeting does not pick between the tiers. A yes vote sends the three-tier ballot question in front of voters on June 9, and voters then pick the actual amount. The Select Board described it this way at their April 8, 2026 meeting: "At town meeting, you're not voting on the three. You will be voting for those three in the ballot... if you pass town meeting, you're authorizing the select board to put it on the ballot."<sup class="cite" data-href="data/select_board_2026-04-08_transcript.txt" data-source="Select Board meeting, April 8, 2026 (transcript): &quot;At town meeting, you're not voting on the three. You will be voting for those three in the ballot... if you pass town meeting, you're authorizing the select board to put it on the ballot&quot; and &quot;There will be a figure attached, which will be to authorize to go up to the highest number&quot;"></sup></p>
-      <p>Any registered Marblehead voter can attend, speak on the warrant article, and vote. See <a href="#town-meeting">what to expect at Town Meeting</a> for the logistics. If Town Meeting votes no, nothing goes to the ballot and the <a href="no-override-budget.html">no-override budget</a> takes effect. If Town Meeting votes yes, the override moves to step 2.</p>
+      <div class="vote-step-date">Monday, May 4, 2026 &middot; Annual Town Meeting &middot; <strong>Passed 1,227&ndash;159</strong></div>
+      <h3>Residents authorized the ballot question</h3>
+      <p>Town Meeting voted on a single question: <em>should the override go to the ballot as three tiers with a ceiling of $15M?</em> Town Meeting did not pick between the tiers. The yes vote sent the three-tier ballot question in front of voters on June 9, and voters now pick the actual amount. The Select Board described it this way at their April 8, 2026 meeting: "At town meeting, you're not voting on the three. You will be voting for those three in the ballot... if you pass town meeting, you're authorizing the select board to put it on the ballot."<sup class="cite" data-href="data/select_board_2026-04-08_transcript.txt" data-source="Select Board meeting, April 8, 2026 (transcript): &quot;At town meeting, you're not voting on the three. You will be voting for those three in the ballot... if you pass town meeting, you're authorizing the select board to put it on the ballot&quot; and &quot;There will be a figure attached, which will be to authorize to go up to the highest number&quot;"></sup></p>
+      <p>The Article 29 vote was taken with the Meridia ARS clicker, electronic and secret per voter.</p>
     </div>
   </div>
 
-  <div class="vote-step">
+  <div class="vote-step vote-step--current">
     <div class="vote-step-num">2</div>
     <div class="vote-step-body">
-      <div class="vote-step-date">Tuesday, June 9, 2026 &middot; Annual Town Election</div>
+      <div class="vote-step-date">Tuesday, June 9, 2026 &middot; Annual Town Election &middot; <strong>Up next</strong></div>
       <h3>Voters pick the tier at the ballot</h3>
       <p>All registered Marblehead voters can vote at their precinct polling place. The ballot has three tier questions (<strong>1A: $15M "Invest"</strong>, <strong>1B: $12M "Build"</strong>, <strong>1C: $9M "Partial Restore"</strong>), and you may vote yes on more than one. The highest tier with a majority yes sets the override amount. If none of the three get a majority, no override takes effect.<sup class="cite" data-href="https://marbleheadma.gov/wp-content/uploads/2026/03/2026-03-25-Override-Presentation.pdf" data-source="Town Administrator's March 25, 2026 override presentation, sample ballot language for three tiers"></sup></p>
       <p>See the <a href="whats-on-the-ballot.html#how-youll-vote">sample ballot walkthrough</a> on the ballot rundown page, and the <a href="charts/override_calculator.html">override cost calculator</a> for what each tier costs at different home values.</p>
@@ -283,11 +298,11 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
   <p><strong>Clearing one bar does not mean the override passes.</strong> The 2023 precedent shows how the two votes can split: a $2.5M override <a href="https://marbleheadma.gov/wp-content/uploads/2025/03/town_meeting_minutes_2023__0.pdf">passed Town Meeting 534 to 230</a>, then was rejected at the ballot six weeks later 2,992 to 3,399.<sup class="cite" data-href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.overrideunderride" data-source="MA DOR, Proposition 2½ Override &amp; Underride Votes (Marblehead): June 2023 General Government override $2.5M, Yes 2,992 / No 3,399"></sup> The override did not take effect, and the FY24 budget was delivered as a reduced-services version instead. See <a href="how-we-got-here.html">how we got here</a> for the full arc.</p>
 </div>
 
-<h3 id="make-sure-youre-registered">Before either vote: make sure you're registered</h3>
+<h3 id="make-sure-youre-registered">Before the ballot: make sure you're registered</h3>
 
 <div class="card">
-  <p>You have to be a registered Marblehead voter to speak or vote at Annual Town Meeting and to cast a ballot at the Annual Town Election. Under the 2022 <a href="https://www.sec.state.ma.us/divisions/elections/laws-and-regulations/votes-act.htm">VOTES Act</a>, Massachusetts's registration deadline is <strong>10 days before any election or town meeting</strong>, including town meetings.<sup class="cite" data-href="https://www.sec.state.ma.us/divisions/elections/voter-resources/registering-to-vote.htm" data-source="MA Secretary of the Commonwealth, &quot;Registering to Vote&quot;: voter registration deadline is 10 days before any election or town meeting under the VOTES Act"></sup></p>
-  <p>For this year's votes that means the deadline is roughly <strong>April 24</strong> for Town Meeting (May 4) and roughly <strong>May 30</strong> for the ballot (June 9). Confirm the exact dates with the town clerk.</p>
+  <p>You have to be a registered Marblehead voter to cast a ballot at the Annual Town Election. Under the 2022 <a href="https://www.sec.state.ma.us/divisions/elections/laws-and-regulations/votes-act.htm">VOTES Act</a>, Massachusetts's registration deadline is <strong>10 days before any election</strong>.<sup class="cite" data-href="https://www.sec.state.ma.us/divisions/elections/voter-resources/registering-to-vote.htm" data-source="MA Secretary of the Commonwealth, &quot;Registering to Vote&quot;: voter registration deadline is 10 days before any election or town meeting under the VOTES Act"></sup></p>
+  <p>For the June 9 ballot that puts the deadline around <strong>May 30</strong>. Confirm the exact date with the town clerk.</p>
   <ul>
     <li><strong>Check your status:</strong> <a href="https://www.sec.state.ma.us/VoterRegistrationSearch/MyVoterRegStatus.aspx">My Voter Registration Status</a> (Massachusetts Secretary of the Commonwealth). Takes about 10 seconds; confirms whether you're registered, at what address, and in which precinct.</li>
     <li><strong>If you're not registered or need to update your address:</strong> register online at <a href="https://www.sec.state.ma.us/OVR/">sec.state.ma.us/OVR</a>, mail or drop a paper form to the Marblehead Town Clerk (Abbot Hall, 188 Washington Street), or register in person during business hours.</li>
@@ -301,12 +316,12 @@ og_url: https://marbleheaddata.org/what-you-can-do.html
 <div class="goal-cards">
   <div class="goal-card">
     <div class="goal-card-eyebrow">If you want the override to pass</div>
-    <p>Vote yes on one or more tiers. The tiers are nested, so the highest one that gets a majority sets the amount. Read <a href="what-is-the-override.html">what is the override</a> for the tier breakdown. Talk to neighbors. Attend the May 4 Town Meeting to support the budget motion.</p>
+    <p>Vote yes on one or more tiers on June 9. The tiers are nested, so the highest one that gets a majority sets the amount. Read <a href="what-is-the-override.html">what is the override</a> for the tier breakdown. Talk to neighbors.</p>
   </div>
 
   <div class="goal-card">
     <div class="goal-card-eyebrow">If you want the override to fail</div>
-    <p>Vote no on all three tiers. Attend the May 4 Town Meeting to oppose specific line items. Read <a href="no-override-budget.html">what is in the no-override budget</a> to understand what takes effect if no override passes: this is a real outcome, not a hypothetical.</p>
+    <p>Vote no on all three tiers on June 9. Read <a href="no-override-budget.html">what is in the no-override budget</a> to understand what takes effect if no override passes: this is a real outcome, not a hypothetical.</p>
     <p>If your "no" is motivated by the view that the underlying cost drivers should be restructured rather than funded, the levers that actually move those drivers (the health premium split, staffing composition, contract-renewal timing) are not on this year's ballot. See the <a href="#structural-reform">structural reform card</a> below for where those decisions sit and how residents can push on them.</p>
   </div>
 

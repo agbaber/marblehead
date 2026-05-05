@@ -108,6 +108,12 @@ Document links below point at the [primary source archive](archive), a GitHub re
 - Both override-contingent appropriations are written as "a sum of money" in the warrant; tier-specific amounts are set by motion on the floor.
 - Article 30 rescinds $1,619,627 of unused borrowing authority from the 2019 Gerry Elementary School authorization.
 
+## 2026 Annual Town Meeting Results (May 4, 2026)
+- Source: moderator's announcements from the floor, May 4 ATM (attended). Town Clerk minutes will be the documented form of the same record once posted.
+- **Article 29 (override authorization):** 1,227 in favor, 159 against, 1,386 total cast (88.5% yes). Vote taken with the Meridia ARS clicker (electronic, secret per voter).
+- **Article 4 (3A multifamily overlay):** 881 in favor, 82 against, 963 total cast (91.5% yes).
+- **Article 1 amendment (article reordering):** 1,023-225 (1,248 total).
+
 ## Revenue and Expense Projections
 - [2026 State of the Town](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026_State_of_the_Town.pdf), pages 13-29
 - FY25 actual, FY26 projected, FY27 projected with line-by-line detail
