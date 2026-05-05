@@ -1673,6 +1673,20 @@
     flex: 1;
     min-width: 0;
   }
+  .votes-strip-step--past .votes-strip-step-what {
+    color: var(--text-muted);
+  }
+  .votes-strip-step--current {
+    border-left: 2px solid var(--c-teal);
+    padding-left: 10px;
+  }
+  .votes-strip-result {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--text);
+    font-size: 12px;
+    margin-right: 4px;
+  }
   .votes-strip-step-when {
     font-size: 11px;
     font-weight: 700;
