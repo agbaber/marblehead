@@ -52,3 +52,6 @@ data/.pass*_batch_state.json
 
 # Local PDF cache for schools-site scrape (committed text files only)
 data/schools/_pdfs/
+
+# Local PDF cache for annual town reports (committed text files only)
+data/town_docs/annual_reports/*.pdf
