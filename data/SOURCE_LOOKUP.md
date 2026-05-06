@@ -213,6 +213,33 @@ DLS's definition of General Fund scope follows the [Uniform Massachusetts Accoun
 
 Note on the `general_government` category: Schedule A's `general_government` is a state-standardized definition that lets all 351 Massachusetts municipalities be compared on the same line. It does not always match a town's internal budget grouping. For Marblehead in FY27, the local "general government" category in the town budget (~$6.89M) is roughly twice the Schedule A value (~$3.31M FY24) because some functions Marblehead groups under general government locally (notably facilities and shared services) are categorized elsewhere by Schedule A. Used by `charts/general_government_over_time.html`.
 
+## Annual Town Reports, 2006&ndash;2025 (full corpus)
+
+Plain-text extracts of every Annual Town Report published by the Town, covering calendar years 2006 through 2025 (20 reports total). Pulled from [marbleheadma.gov/document/annual-town-reports](https://marbleheadma.gov/document/annual-town-reports/) and extracted with `pdftotext -layout`.
+
+- `data/town_docs/annual_reports/Annual-Report-YYYY.txt` &ndash; one text file per calendar year, ~14k&ndash;30k lines each
+- `data/town_docs/annual_reports/manifest.csv` &ndash; year, source PDF URL, file sizes, page count, extraction method, extraction date
+- `data/town_docs/annual_reports/README.md` &ndash; provenance and citation pattern
+
+PDFs themselves are gitignored; URLs in the manifest let any future session re-fetch a specific year.
+
+What's in each report (shape varies year to year, but typically):
+
+- Department writeups: Selectmen, Police, Fire, <abbr class="g" title="Department of Public Works">DPW</abbr>, Schools, Library, Recreation, Health, <abbr class="g" title="Council on Aging">COA</abbr>, Building, Community Development, etc.
+- Town Meeting warrants and **voted results** (Annual + any Specials), article by article
+- Election warrants and tallies (annual local, state primary, state election, presidential primary)
+- Employee rosters with annual salaries (the report's "Compensation" or "Salaries Paid" appendix)
+- Vital statistics: births, marriages, deaths
+- Boards and committees with member names
+- Town Treasurer's financial summary
+
+Treat as **secondary** for any audited financial figure &ndash; the <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> is the audited primary source. Use the ATR for narrative context, town meeting article history, and historical employee/department rosters.
+
+Caveats:
+- `pdftotext -layout` preserves table columns at the cost of leading whitespace. Most queries are fine; if you need paragraph-flow text, re-extract from the PDF without `-layout`.
+- 2012 and 2022 extracts are 4&ndash;5&times; larger than other years because those PDFs use unusually wide column layouts, not because they contain more content.
+- Citation pattern: *Marblehead Annual Town Report YYYY, [Department Name], page N* (use the PDF page number from the report's table of contents).
+
 ## Marblehead Independent & Current Articles (referenced across site)
 - ["Marblehead advances $122.8M budget built on cuts, defers override decisions"](https://www.marbleheadindependent.com/marblehead-advances-122-8m-budget-built-on-cuts-defers-override-decisions/) (Marblehead Independent)
 - ["Concerns over staffing cuts shape Marblehead school budget hearing"](https://www.marbleheadindependent.com/concerns-over-staffing-cuts-shape-marblehead-school-budget-hearing/) (Marblehead Independent)
