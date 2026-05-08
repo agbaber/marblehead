@@ -1,0 +1,39 @@
+---
+layout: page
+title: "Topic: Elections and procedural"
+permalink: /topics/elections-procedural/
+body_class: transcripts-page
+topic_slug: elections-procedural
+---
+
+{% assign seeds = site.data.topic_seeds | where: "slug", page.topic_slug %}
+{% assign topic = seeds[0] %}
+
+<p class="page-intro">{{ topic.description }}</p>
+
+{%- comment -%}Collect every (transcript, segment) pair tagged with this topic.{%- endcomment -%}
+{% assign hits = "" | split: "" %}
+{% for t in site.transcripts %}
+  {% for seg in t.topic_segments %}
+    {% if seg.topic == page.topic_slug %}
+      {% capture row %}{{ t.date }}|{{ t.url }}|{{ t.title }}|{{ seg.start_seconds }}|{{ seg.end_seconds }}|{{ seg.summary }}|{{ t.vimeo_url }}{% endcapture %}
+      {% assign hits = hits | push: row %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% if hits.size == 0 %}
+  <p class="topic-empty">No segments tagged with this topic yet. Check back as new meeting transcripts are published.</p>
+{% else %}
+  <ul class="topic-feed">
+    {% assign hits_sorted = hits | sort | reverse %}
+    {% for h in hits_sorted %}
+      {% assign parts = h | split: "|" %}
+      <li>
+        <p class="th-date"><time>{{ parts[0] | date: "%B %-d, %Y" }}</time> &middot; <a href="{{ parts[1] | relative_url }}">{{ parts[2] }}</a></p>
+        <p class="th-summary">{{ parts[5] }}</p>
+        <p class="th-jump"><a href="{{ parts[6] }}#t={{ parts[3] }}s" rel="noopener">Jump to this segment in the source video &rarr;</a></p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
