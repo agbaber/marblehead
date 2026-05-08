@@ -1,0 +1,14 @@
+[
+  { "slug": "override",            "title": "Override / Prop 2½ / fiscal",     "description": "Override votes, the 2½ levy cap, structural deficits, FY27 budget gap." },
+  { "slug": "school-budget",       "title": "School budget",                    "description": "Marblehead Public Schools finance, staffing, FY budgets, MPS-specific operations." },
+  { "slug": "40b-mbta",            "title": "Housing / 40B / MBTA Communities", "description": "Comprehensive permits, 40B projects, MBTA Communities Act 3A compliance." },
+  { "slug": "bonding-capital",     "title": "Bonds and capital plan",           "description": "Bond sales, capital improvement plan, debt service, infrastructure financing." },
+  { "slug": "trash-dpw",           "title": "Trash and DPW",                    "description": "Solid waste collection, recycling, DPW operations, public works contracts." },
+  { "slug": "labor-personnel",     "title": "Labor and personnel",              "description": "Union contracts, hiring, terminations, personnel policy, executive sessions about same." },
+  { "slug": "public-comment",      "title": "Public comment",                   "description": "Public comment periods open to residents at any board meeting." },
+  { "slug": "permits-zoning",      "title": "Permits and zoning",               "description": "Zoning Board of Appeals, Planning Board, Conservation Commission, license renewals." },
+  { "slug": "public-safety",       "title": "Public safety",                    "description": "Police, fire, harbormaster, emergency management, public safety policy." },
+  { "slug": "recreation-events",   "title": "Recreation and events",            "description": "Rec department, parks, harbor, town events, festivals, parade approvals." },
+  { "slug": "elections-procedural","title": "Elections and procedural",         "description": "Town clerk operations, ballot questions, election procedures, warrant articles." },
+  { "slug": "admin-housekeeping",  "title": "Admin and housekeeping",           "description": "Reading and approving prior minutes, future agenda items, board self-administration." }
+]
