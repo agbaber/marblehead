@@ -1,6 +1,7 @@
 [
   { "slug": "override",            "title": "Override / Prop 2½ / fiscal",     "description": "Override votes, the 2½ levy cap, structural deficits, FY27 budget gap." },
   { "slug": "school-budget",       "title": "School budget",                    "description": "Marblehead Public Schools finance, staffing, FY budgets, MPS-specific operations." },
+  { "slug": "health-insurance",    "title": "Health insurance and GIC",         "description": "GIC premium share, healthcare cost trends, retiree OPEB, insurance vs wage tradeoffs in collective bargaining." },
   { "slug": "40b-mbta",            "title": "Housing / 40B / MBTA Communities", "description": "Comprehensive permits, 40B projects, MBTA Communities Act 3A compliance." },
   { "slug": "bonding-capital",     "title": "Bonds and capital plan",           "description": "Bond sales, capital improvement plan, debt service, infrastructure financing." },
   { "slug": "trash-dpw",           "title": "Trash and DPW",                    "description": "Solid waste collection, recycling, DPW operations, public works contracts." },

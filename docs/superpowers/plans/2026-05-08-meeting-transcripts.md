@@ -40,7 +40,7 @@ scripts/transcripts/
     meetings_sample.json               pull_meetings.mjs output sample
 
 data/
-  topic_seeds.json                     12 fixed topic slugs + descriptions
+  topic_seeds.json                     13 fixed topic slugs + descriptions
   transcripts_proposed_topics.json     accumulator (starts as `[]`)
   transcripts_failures.json            failure log (starts as `[]`)
 
@@ -88,6 +88,7 @@ package.json                           add `transcribe` and `test:transcripts` s
 [
   { "slug": "override",            "title": "Override / Prop 2½ / fiscal",     "description": "Override votes, the 2½ levy cap, structural deficits, FY27 budget gap." },
   { "slug": "school-budget",       "title": "School budget",                    "description": "Marblehead Public Schools finance, staffing, FY budgets, MPS-specific operations." },
+  { "slug": "health-insurance",    "title": "Health insurance and GIC",         "description": "GIC premium share, healthcare cost trends, retiree OPEB, insurance vs wage tradeoffs in collective bargaining." },
   { "slug": "40b-mbta",            "title": "Housing / 40B / MBTA Communities", "description": "Comprehensive permits, 40B projects, MBTA Communities Act 3A compliance." },
   { "slug": "bonding-capital",     "title": "Bonds and capital plan",           "description": "Bond sales, capital improvement plan, debt service, infrastructure financing." },
   { "slug": "trash-dpw",           "title": "Trash and DPW",                    "description": "Solid waste collection, recycling, DPW operations, public works contracts." },
@@ -107,13 +108,13 @@ package.json                           add `transcribe` and `test:transcripts` s
 node -e "console.log(JSON.parse(require('node:fs').readFileSync('data/topic_seeds.json','utf8')).length, 'topics loaded')"
 ```
 
-Expected: `12 topics loaded`
+Expected: `13 topics loaded`
 
 - [ ] **Step 3: Commit**
 
 ```bash
 git add data/topic_seeds.json
-git commit -m "transcripts: add 12-topic seed taxonomy"
+git commit -m "transcripts: add 13-topic seed taxonomy"
 ```
 
 ---
@@ -509,7 +510,7 @@ git commit -m "transcripts: add /meetings/ chronological feed"
 - Create: `topics/school-budget.html` (placeholder, for parity)
 - Create: `topics/bonding-capital.html`
 
-We create three to prove the pattern. The remaining 9 are added in Task 8 once we know the template is right.
+We create three to prove the pattern. The remaining 10 are added in Task 8 once we know the template is right.
 
 - [ ] **Step 1: Create `topics.html`**
 
@@ -622,17 +623,18 @@ git commit -m "transcripts: add topics index and 3 example topic pages"
 
 ---
 
-### Task 8: Remaining 9 topic pages
+### Task 8: Remaining 10 topic pages
 
 **Files:**
-- Create: `topics/40b-mbta.html`, `topics/trash-dpw.html`, `topics/labor-personnel.html`, `topics/public-comment.html`, `topics/permits-zoning.html`, `topics/public-safety.html`, `topics/recreation-events.html`, `topics/elections-procedural.html`, `topics/admin-housekeeping.html`
+- Create: `topics/health-insurance.html`, `topics/40b-mbta.html`, `topics/trash-dpw.html`, `topics/labor-personnel.html`, `topics/public-comment.html`, `topics/permits-zoning.html`, `topics/public-safety.html`, `topics/recreation-events.html`, `topics/elections-procedural.html`, `topics/admin-housekeeping.html`
 
-- [ ] **Step 1: Stamp out the 9 files**
+- [ ] **Step 1: Stamp out the 10 files**
 
 Each is structurally identical to `topics/override.html` (same Liquid logic). Only frontmatter differs. From the seeds in `data/topic_seeds.json`, the mapping is:
 
 | File | title | permalink | topic_slug |
 |---|---|---|---|
+| `topics/health-insurance.html` | `"Topic: Health insurance and GIC"` | `/topics/health-insurance/` | `health-insurance` |
 | `topics/40b-mbta.html` | `"Topic: Housing / 40B / MBTA Communities"` | `/topics/40b-mbta/` | `40b-mbta` |
 | `topics/trash-dpw.html` | `"Topic: Trash and DPW"` | `/topics/trash-dpw/` | `trash-dpw` |
 | `topics/labor-personnel.html` | `"Topic: Labor and personnel"` | `/topics/labor-personnel/` | `labor-personnel` |
@@ -645,19 +647,19 @@ Each is structurally identical to `topics/override.html` (same Liquid logic). On
 
 For each: copy `topics/override.html`, edit those three frontmatter fields, save under the new filename.
 
-- [ ] **Step 2: Verify all 12 topic pages build**
+- [ ] **Step 2: Verify all 13 topic pages build**
 
 ```bash
 bundle exec jekyll build && ls _site/topics/*/index.html | wc -l
 ```
 
-Expected: `12`
+Expected: `13`
 
 - [ ] **Step 3: Commit**
 
 ```bash
 git add topics/*.html
-git commit -m "transcripts: add remaining 9 topic pages from seed list"
+git commit -m "transcripts: add remaining 10 topic pages from seed list"
 ```
 
 ---
@@ -713,9 +715,10 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { TOPIC_SLUGS, BOARD_SLUGS, paths, slugForMeeting } from './config.mjs';
 
-test('TOPIC_SLUGS has all 12 seed topics', () => {
-  assert.equal(TOPIC_SLUGS.length, 12);
+test('TOPIC_SLUGS has all 13 seed topics', () => {
+  assert.equal(TOPIC_SLUGS.length, 13);
   assert.ok(TOPIC_SLUGS.includes('override'));
+  assert.ok(TOPIC_SLUGS.includes('health-insurance'));
   assert.ok(TOPIC_SLUGS.includes('admin-housekeeping'));
 });
 
@@ -2403,10 +2406,10 @@ After merging both PRs, the box owner deploys the systemd timer and the pipeline
 
 **Spec coverage:**
 - Goal / why now → covered by Tasks 4, 5, 22 (end-to-end demonstration)
-- User-facing surfaces (3 views) → Tasks 4, 5 (transcript layout), 6 (chronological feed), 7-8 (12 topic pages), 9 (Pagefind)
+- User-facing surfaces (3 views) → Tasks 4, 5 (transcript layout), 6 (chronological feed), 7-8 (13 topic pages), 9 (Pagefind)
 - Pipeline architecture (yt-dlp → AAI → Claude → render → PR) → Tasks 12, 13, 15, 16, 17, 18
 - Data model (frontmatter shape) → Task 16 render module produces it; Task 5 hand-crafts an example
-- Topic taxonomy (12 seeds) → Task 1; Task 15 prompt enforces it
+- Topic taxonomy (13 seeds) → Task 1; Task 15 prompt enforces it
 - LLM prompt structure → Task 14; cache_control present in Task 15 implementation
 - Trust model (two-tier, PR review) → Task 18 PR body has reviewer checklist
 - Failure modes (skip on yt-dlp fail, AAI error, JSON invalid) → Task 18 try/catch around per-meeting work, failures recorded

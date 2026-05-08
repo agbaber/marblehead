@@ -170,11 +170,12 @@ collection via the GitHub API.
 
 ## Topic taxonomy (hybrid)
 
-Initial fixed list (12 seeds, drives subscription topics):
+Initial fixed list (13 seeds, drives subscription topics):
 
 ```
 override                Override / Prop 2½ / fiscal
 school-budget           Schools — finance, budget, MPS
+health-insurance        Health insurance, GIC, OPEB, insurance-vs-wage
 40b-mbta                Housing — 40B / MBTA Communities / 3A
 bonding-capital         Bonds, capital plan, debt
 trash-dpw               Solid waste, DPW operations
