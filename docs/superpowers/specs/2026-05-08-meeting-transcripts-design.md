@@ -73,7 +73,7 @@ pipeline:
    │                                                                     │
    │  1. node pull_meetings.mjs        (refresh data/meetings.json)      │
    │                                                                     │
-   │  2. Diff meetings.json ⇄ data/transcripts/                          │
+   │  2. Diff meetings.json ⇄ _transcripts/                              │
    │     → list of un-transcribed meetings                               │
    │                                                                     │
    │  3. For each new meeting:                                           │
@@ -83,8 +83,7 @@ pipeline:
    │     d. Poll /v2/transcript/<id> until completed                     │
    │     e. Anthropic API → summary + topic-segment JSON                 │
    │        (with Claude prompt-caching, 5min TTL)                       │
-   │     f. Render: data/transcripts/<slug>.md  +                        │
-   │                data/transcripts/<slug>.json                         │
+   │     f. Render: _transcripts/<slug>.md (frontmatter + transcript)    │
    │                                                                     │
    │  4. git checkout -b auto/transcripts-<date>                         │
    │     git add + commit + push                                         │
@@ -105,20 +104,52 @@ GitHub API and sends emails — no migration needed.
 
 ## Data model
 
-Each meeting produces two files committed to `data/transcripts/`:
-
-**`<slug>.md`** — human-readable transcript page
+Each meeting produces **one Markdown file** in the Jekyll collection
+`_transcripts/`. All structured data lives in YAML frontmatter; the
+Markdown body is the human-readable transcript. Slug format:
+`<board>-<YYYY-MM-DD>` (e.g. `_transcripts/select-board-2026-04-22.md`).
+Permalink: `/meetings/<slug>/`.
 
 ```markdown
 ---
 layout: transcript
+slug: select-board-2026-04-22
 board: select-board
+board_display: "Select Board"
 date: 2026-04-22
 title: "Select Board: April 22, 2026"
 vimeo_id: 1185906675
+vimeo_url: "https://vimeo.com/1185906675"
 duration_seconds: 2969
 ai_generated: true
 status: published
+
+summary_card:
+  headline: "Approved $24.9M bond sale to Oppenheimer at 5.32% TIC"
+  summary: "~100-word paragraph capturing decisions and discussion arc."
+  decisions:
+    - "Approved sale of $24,975,000 GO bonds to Oppenheimer Co."
+    - "Authorized town treasurer to execute SEC Rule 15c2-12 disclosure"
+  votes:
+    - motion: "Approve bond sale"
+      result: "5-0"
+      members_in_favor: ["Fox", "Krieger", "Singing"]
+
+topic_segments:
+  - topic: bonding-capital
+    topic_confidence: 0.95
+    start_seconds: 600
+    end_seconds: 1100
+    summary: "Bond sale closing — accepted Oppenheimer's bid at $26.4M for $24.975M par."
+    key_speakers: ["Speaker A (bond agent)", "Speaker C (chair)"]
+
+ingest:
+  transcribed_at: "2026-05-08T13:00:00Z"
+  assemblyai_id: "e85994e3-..."
+  speech_model: "universal-2"
+  speech_model_cost_usd: 0.81
+  summary_model: "claude-sonnet-4-6"
+  summary_cost_usd: 0.04
 ---
 
 [ 0:00:32 ] **Speaker A** (bond agent, name not identified):
@@ -127,61 +158,15 @@ services as follows. We have roads and sidewalks at $9,098,250...
 
 [ 0:53:36 ] **Speaker C** (board chair, voting "in favor"):
 Any questions from the board?
-
-...
 ```
 
-Slug format: `<board>-<YYYY-MM-DD>` (e.g.
-`select-board-2026-04-22.md`). Speaker labels stay generic ("Speaker
-A", "Speaker B") in v1 — they may be edited to real names by the
-reviewer when obvious from context, with a "(likely X)" parenthetical
-indicating uncertainty.
+Speaker labels stay generic ("Speaker A", "Speaker B") in v1 — they may
+be edited to real names by the reviewer when obvious from context, with
+a parenthetical role/uncertainty marker.
 
-**`<slug>.json`** — structured sidecar consumed by topic pages and
-future subscription engine
-
-```json
-{
-  "slug": "select-board-2026-04-22",
-  "board": "select-board",
-  "date": "2026-04-22",
-  "vimeo_id": 1185906675,
-  "duration_seconds": 2969,
-  "summary_card": {
-    "headline": "Approved $24.9M bond sale to Oppenheimer at 5.32% TIC",
-    "summary": "100-word paragraph...",
-    "decisions": [
-      "Approved sale of $24,975,000 GO bonds to Oppenheimer Co.",
-      "Authorized town treasurer to execute SEC Rule 15c2-12 disclosure"
-    ],
-    "votes": [
-      {"motion": "Approve bond sale", "result": "5-0", "members_in_favor": ["Fox", "Krieger", "Singing"]}
-    ]
-  },
-  "topic_segments": [
-    {
-      "topic": "bonding-capital",
-      "topic_confidence": 0.95,
-      "start_seconds": 600,
-      "end_seconds": 1100,
-      "summary": "Bond sale closing — accepted Oppenheimer's bid at $26.4M for $24.975M par.",
-      "key_speakers": ["Speaker A (bond agent)", "Speaker C (chair)"]
-    }
-  ],
-  "ingest_metadata": {
-    "transcribed_at": "2026-05-08T13:00:00Z",
-    "assemblyai_id": "e85994e3-...",
-    "model": "universal-2",
-    "speech_model_cost_usd": 0.81,
-    "summary_model": "claude-sonnet-4-6",
-    "summary_cost_usd": 0.04
-  }
-}
-```
-
-The JSON is the canonical source for `/topics/` aggregation pages,
-generated at Jekyll build time from a Liquid loop over
-`site.data.transcripts`.
+`/topics/<topic>/` pages iterate `site.transcripts` and filter by
+`topic_segments[].topic`. The future subscription engine reads the same
+collection via the GitHub API.
 
 ## Topic taxonomy (hybrid)
 
@@ -205,7 +190,7 @@ admin-housekeeping      Reading minutes, future agenda items, votes-on-votes
 The LLM is given this list and may *also* propose a new topic per
 segment (with a `topic_confidence` < 0.5 and a `proposed_new: true`
 flag). New topic proposals accumulate in
-`data/transcripts/proposed_topics.json`. Andrew reviews proposals
+`data/transcripts_proposed_topics.json`. Andrew reviews proposals
 monthly and promotes to the fixed list if useful.
 
 This keeps subscriptions sane (a fixed set of subscribable topics) while
@@ -253,7 +238,7 @@ correction history.
 
 | Failure | Detection | Response |
 |---|---|---|
-| Vimeo URL won't yt-dlp (auth, geoblock) | `yt-dlp` non-zero exit | Skip meeting, log to `data/transcripts/failures.json`, retry next run |
+| Vimeo URL won't yt-dlp (auth, geoblock) | `yt-dlp` non-zero exit | Skip meeting, log to `data/transcripts_failures.json`, retry next run |
 | AssemblyAI 5xx or timeout | Status check returns `error` | Skip meeting, retry next run (re-upload audio fresh) |
 | LLM JSON schema invalid | JSON parse / schema check fails | Mark transcript as draft-only; commit transcript without summary; flag in PR description for manual summary |
 | Audio is silent / very short (<60s) | AAI returns near-empty utterances | Skip — almost certainly a procedural test recording |
