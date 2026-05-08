@@ -270,10 +270,23 @@
   margin: 1rem 0;
 }
 
+.topic-section-h {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-text-mid);
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.topic-section-h-empty {
+  margin-top: 2rem;
+}
+
 .topic-index {
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0;
+  margin: 0 0 1rem;
 }
 
 .topic-index li {
@@ -287,6 +300,9 @@
 .topic-index h3 {
   margin: 0 0 0.3rem;
   font-size: 1.05rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
 }
 
 .topic-index h3 a {
@@ -304,6 +320,26 @@
   color: var(--c-text-mid);
   font-size: 0.92rem;
   line-height: 1.5;
+}
+
+.topic-count {
+  background: var(--c-navy);
+  color: var(--c-fog);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.topic-index-empty li.empty {
+  background: transparent;
+  border: 1px dashed var(--c-border);
+  opacity: 0.75;
+}
+
+.topic-index-empty h3 a {
+  color: var(--c-text-mid);
 }
 
 .topic-feed {
