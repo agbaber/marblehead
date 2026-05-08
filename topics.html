@@ -1,0 +1,23 @@
+---
+layout: page
+title: Topics
+permalink: /topics/
+body_class: transcripts-page
+description: Topic pages aggregate every mention across meetings, with timestamped quotes and one-click jumps to the source video.
+---
+
+<p class="page-intro">
+  Topic pages aggregate every mention across meetings. Click in to see
+  every time it came up, who said what, and a one-click jump to the
+  source video.
+</p>
+
+{% assign seeds = site.data.topic_seeds %}
+<ul class="topic-index">
+{% for t in seeds %}
+  <li>
+    <h3><a href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}">{{ t.title }}</a></h3>
+    <p>{{ t.description }}</p>
+  </li>
+{% endfor %}
+</ul>
