@@ -22,8 +22,18 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
 
 async function testHomepageLoads(page) {
   console.log('\n── Homepage ──');
+  const hero = await page.$('.home-hero');
+  hero ? ok('Homepage renders .home-hero') : fail('Homepage', '.home-hero missing');
+  const stops = await page.$$('.home-stop');
+  stops.length >= 5
+    ? ok(`${stops.length} scroll-stops on homepage`)
+    : fail('Homepage scroll-stops', `expected >= 5, got ${stops.length}`);
+}
+
+async function testExplorePageLoads(page) {
+  console.log('\n── Explore page ──');
   const explore = await page.$('.explore-stage');
-  explore ? ok('Homepage renders .explore-stage') : fail('Homepage', '.explore-stage missing');
+  explore ? ok('Explore page renders .explore-stage') : fail('Explore page', '.explore-stage missing');
 }
 
 async function testQuestionScreens(page) {
@@ -464,8 +474,8 @@ async function testGeneralGovernmentChart(page) {
 
 async function testStatsStrip(page) {
   console.log('\n── Stats strip ──');
-  // Navigate to landing to see stats
-  await page.goto(SITE, { waitUntil: 'networkidle' });
+  // Navigate to explore page to see stats
+  await page.goto(SITE + '/explore.html', { waitUntil: 'networkidle' });
   try {
     const stats = page.locator('#exploreStats');
     await stats.waitFor({ state: 'visible', timeout: 5000 });
@@ -486,9 +496,11 @@ async function testStatsStrip(page) {
     const page1 = await ctx1.newPage();
     await page1.goto(SITE, { waitUntil: 'networkidle' });
     await testHomepageLoads(page1);
+    await testNavLinks(page1);
+    await page1.goto(SITE + '/explore.html', { waitUntil: 'networkidle' });
+    await testExplorePageLoads(page1);
     await testQuestionScreens(page1);
     await testUnsureButtons(page1);
-    await testNavLinks(page1);
     await testGeneralGovernmentChart(page1);
     await testSchoolAgeVsEnrollment(page1);
     await testTownBudgetPageLoads(page1);
@@ -497,7 +509,7 @@ async function testStatsStrip(page) {
     // Interactive tests (fresh context so localStorage is clean)
     const ctx2 = await browser.newContext({ viewport: { width: 1280, height: 800 } });
     const page2 = await ctx2.newPage();
-    await page2.goto(SITE + '/?q=override', { waitUntil: 'networkidle' });
+    await page2.goto(SITE + '/explore?q=override', { waitUntil: 'networkidle' });
     await testAnswerOpensEvidence(page2);
     await testPickCommit(page2);
     await testStatsStrip(page2);
