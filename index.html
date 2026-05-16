@@ -45,17 +45,17 @@ og_url: https://marbleheaddata.org/
     letter-spacing: 1.6px;
     text-transform: uppercase;
     color: var(--text-subtle);
-    margin: 0 0 20px;
+    margin: 0 0 28px;
   }
   .home-eye .dot { color: var(--c-buoy); margin: 0 6px; }
 
   /* Giant number */
   .home-big {
     font-size: clamp(64px, 12vw, 144px);
-    line-height: 0.9;
+    line-height: 0.98;
     font-weight: 800;
     letter-spacing: -0.04em;
-    margin: 0 0 18px;
+    margin: 0 0 32px;
     color: var(--text);
     font-variant-numeric: tabular-nums;
   }
@@ -157,49 +157,85 @@ og_url: https://marbleheaddata.org/
   }
   .home-cta a:hover { filter: brightness(0.95); }
 
-  /* === Deficit bar === */
+  /* === Deficit bar + legend === */
   .deficit-bar {
     display: flex;
     width: 100%;
-    height: 64px;
+    height: 48px;
     border-radius: 8px;
     overflow: hidden;
-    margin: 8px 0 12px;
+    margin: 8px 0 16px;
     box-shadow: var(--shadow-sm);
+    max-width: 760px;
   }
   .deficit-seg {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     color: #fff;
     padding: 0 10px;
     background: var(--c-buoy);
     border-right: 1px solid rgba(0,0,0,0.18);
     min-width: 0;
     overflow: hidden;
-  }
-  .deficit-seg:last-child { border-right: none; }
-  .deficit-seg .seg-amt {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 800;
     font-variant-numeric: tabular-nums;
-    line-height: 1;
   }
-  .deficit-seg .seg-name {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    opacity: 0.92;
-    margin-top: 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  .deficit-seg:last-child { border-right: none; }
+  .deficit-seg--1 { background: var(--c-buoy); }
   .deficit-seg--2 { background: color-mix(in srgb, var(--c-buoy) 88%, black); }
   .deficit-seg--3 { background: color-mix(in srgb, var(--c-buoy) 76%, black); }
   .deficit-seg--4 { background: color-mix(in srgb, var(--c-buoy) 64%, black); }
   .deficit-seg--5 { background: color-mix(in srgb, var(--c-buoy) 52%, black); }
+
+  .deficit-legend {
+    list-style: none;
+    margin: 0 0 12px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    max-width: 760px;
+  }
+  @media (min-width: 600px) {
+    .deficit-legend { grid-template-columns: 1fr 1fr; }
+  }
+  .deficit-legend li {
+    display: grid;
+    grid-template-columns: 14px 64px 1fr;
+    gap: 10px;
+    align-items: baseline;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  .deficit-legend .swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    align-self: center;
+    background: var(--c-buoy);
+  }
+  .deficit-legend li[data-seg="2"] .swatch { background: color-mix(in srgb, var(--c-buoy) 88%, black); }
+  .deficit-legend li[data-seg="3"] .swatch { background: color-mix(in srgb, var(--c-buoy) 76%, black); }
+  .deficit-legend li[data-seg="4"] .swatch { background: color-mix(in srgb, var(--c-buoy) 64%, black); }
+  .deficit-legend li[data-seg="5"] .swatch { background: color-mix(in srgb, var(--c-buoy) 52%, black); }
+  .deficit-legend .amt {
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+  }
+  .deficit-legend .label {
+    color: var(--text);
+  }
+  .deficit-legend .label .gloss {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.45;
+    margin-top: 2px;
+  }
 
   /* === Cost slider === */
   .cost-slider-wrap {
@@ -297,12 +333,15 @@ og_url: https://marbleheaddata.org/
     background: var(--series-tier-1);
     display: flex;
     align-items: center;
-    padding: 0 16px;
+    justify-content: center;
+    padding: 0 12px;
     color: #fff;
     font-weight: 700;
     font-size: 14px;
     white-space: nowrap;
     font-variant-numeric: tabular-nums;
+    min-width: clamp(80px, 18vw, 120px);
+    flex-shrink: 0;
   }
   .ballot-bar[data-tier="1A"] .ballot-bar-fill { background: var(--series-tier-3); }
   .ballot-bar[data-tier="1B"] .ballot-bar-fill { background: var(--series-tier-2); }
@@ -310,6 +349,7 @@ og_url: https://marbleheaddata.org/
   .ballot-bar[data-tier="2"] .ballot-bar-fill { background: var(--c-brass); }
   .ballot-bar-label {
     flex: 1;
+    min-width: 0;
     padding: 0 14px;
     font-size: 14px;
     color: var(--text);
@@ -320,7 +360,18 @@ og_url: https://marbleheaddata.org/
     line-height: 1.25;
   }
   .ballot-bar-label strong { font-weight: 700; }
-  .ballot-bar-label .small { font-size: 12px; color: var(--text-muted); }
+  .ballot-bar-label .small {
+    font-size: 12px;
+    color: var(--text-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  @media (max-width: 600px) {
+    .ballot-bar { height: auto; min-height: 56px; }
+    .ballot-bar-label { padding: 8px 12px; }
+    .ballot-bar-label .small { white-space: normal; }
+  }
 
   /* === If-fails stop === */
   .fails-row {
@@ -498,29 +549,43 @@ og_url: https://marbleheaddata.org/
   <div class="home-big home-big--cost">$8.47M</div>
   <p class="home-cap">The gap between FY27 revenue and expenses, after the levy grows 2.5% and one-time reserves run out.</p>
 
-  <div class="deficit-bar" role="img" aria-label="Drivers of the 8.47 million dollar gap, summing to 11.2 million in gross cost growth, offset by 2.7 million in revenue growth.">
-    <div class="deficit-seg deficit-seg--1" style="flex: 4.00;">
-      <span class="seg-amt">$4.0M</span>
-      <span class="seg-name">Free Cash out</span>
-    </div>
-    <div class="deficit-seg deficit-seg--2" style="flex: 3.23;">
-      <span class="seg-amt">$3.2M</span>
-      <span class="seg-name">Other costs</span>
-    </div>
-    <div class="deficit-seg deficit-seg--3" style="flex: 1.65;">
-      <span class="seg-amt">$1.7M</span>
-      <span class="seg-name">Health +11%</span>
-    </div>
-    <div class="deficit-seg deficit-seg--4" style="flex: 0.96;">
-      <span class="seg-amt">$1.0M</span>
-      <span class="seg-name">Receipts</span>
-    </div>
-    <div class="deficit-seg deficit-seg--5" style="flex: 1.30;">
-      <span class="seg-amt">$1.3M</span>
-      <span class="seg-name">Trash + pension</span>
-    </div>
+  <div class="deficit-bar" role="img" aria-label="Five drivers of the 8.47 million dollar FY27 gap, summing to 11.2 million in gross cost growth, offset by 2.7 million in revenue growth.">
+    <div class="deficit-seg deficit-seg--1" style="flex: 4.00;">$4.0M</div>
+    <div class="deficit-seg deficit-seg--2" style="flex: 3.23;">$3.2M</div>
+    <div class="deficit-seg deficit-seg--3" style="flex: 1.65;">$1.7M</div>
+    <div class="deficit-seg deficit-seg--4" style="flex: 0.96;">$1.0M</div>
+    <div class="deficit-seg deficit-seg--5" style="flex: 1.30;">$1.3M</div>
   </div>
-  <p class="home-cap-sub">Offset by $2.7M in levy growth (the 2.5% Prop 2&frac12; cap plus new growth) and other revenue. The remainder is the $8.47M gap.<sup class="cite" data-href="https://marbleheadma.gov/wp-content/uploads/2026/02/2026-State-of-the-Town-Presenation-Final.pdf" data-source="2026 State of the Town presentation, January 28, 2026"></sup></p>
+
+  <ul class="deficit-legend">
+    <li data-seg="1">
+      <span class="swatch" aria-hidden="true"></span>
+      <span class="amt">$4.0M</span>
+      <span class="label">One-time reserves used up<span class="gloss">FY26 was balanced by drawing down $4M of "free cash" (prior-years' surplus the state certifies each fall). That source can't repeat in FY27.</span></span>
+    </li>
+    <li data-seg="2">
+      <span class="swatch" aria-hidden="true"></span>
+      <span class="amt">$3.2M</span>
+      <span class="label">Contracted raises and Essex Tech<span class="gloss">Annual step increases in negotiated salaries, plus the vocational-school assessment growing as more Marblehead students attend Essex North Shore Tech.</span></span>
+    </li>
+    <li data-seg="3">
+      <span class="swatch" aria-hidden="true"></span>
+      <span class="amt">$1.7M</span>
+      <span class="label">Health insurance premium up about 11%<span class="gloss">The town's share of the GIC group insurance plan covering employees and retirees.</span></span>
+    </li>
+    <li data-seg="4">
+      <span class="swatch" aria-hidden="true"></span>
+      <span class="amt">$1.0M</span>
+      <span class="label">Local fees and excise tax projected down<span class="gloss">Motor-vehicle excise tax, building-permit fees, and other non-property-tax local revenue is projected to drop in FY27.</span></span>
+    </li>
+    <li data-seg="5">
+      <span class="swatch" aria-hidden="true"></span>
+      <span class="amt">$1.3M</span>
+      <span class="label">New trash contract and pension<span class="gloss">A new curbside trash and recycling contract starts FY27, plus the town's mandatory pension payment is up 9% on the actuary's fixed schedule.</span></span>
+    </li>
+  </ul>
+
+  <p class="home-cap-sub">Offset by $2.7M in levy growth (the 2.5% Prop 2&frac12; cap plus new construction) and other revenue. The remainder is the $8.47M gap.<sup class="cite" data-href="https://marbleheadma.gov/wp-content/uploads/2026/02/2026-State-of-the-Town-Presenation-Final.pdf" data-source="2026 State of the Town presentation, January 28, 2026"></sup></p>
 
   <a class="home-deeper" href="no-override-budget.html#fy27-gap-calculated">Full deficit waterfall</a>
 </section>
