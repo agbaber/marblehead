@@ -188,6 +188,13 @@ og_url: https://marbleheaddata.org/
   .deficit-seg--3 { background: color-mix(in srgb, var(--c-buoy) 76%, black); }
   .deficit-seg--4 { background: color-mix(in srgb, var(--c-buoy) 64%, black); }
   .deficit-seg--5 { background: color-mix(in srgb, var(--c-buoy) 52%, black); }
+  @media (max-width: 600px) {
+    .deficit-bar { height: 28px; }
+    .deficit-seg {
+      font-size: 0;
+      padding: 0;
+    }
+  }
 
   .deficit-legend {
     list-style: none;
