@@ -7,9 +7,94 @@ og_description: Every page on marbleheaddata.org, grouped by topic. The 15 voter
 og_type: website
 og_url: https://marbleheaddata.org/browse.html
 ---
+<style>
+  /* Compact tool tiles for the top-of-page calculators & tools strip. */
+  .tool-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 0 0 28px;
+  }
+  @media (min-width: 600px) {
+    .tool-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 900px) {
+    .tool-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  .tool-tile {
+    display: block;
+    padding: 14px 16px 13px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .tool-tile:hover {
+    border-color: var(--c-teal);
+    transform: translateY(-1px);
+  }
+  .tool-tile-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 0 4px;
+  }
+  .tool-tile-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--c-teal);
+    line-height: 1.2;
+  }
+  .tool-tile-kind {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    white-space: nowrap;
+  }
+  .tool-tile-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.45;
+    margin: 0;
+  }
+</style>
+
 <div class="hero">
     <h1>All pages</h1>
     <p>Every page on marbleheaddata.org, grouped by topic. For the 15 steelmanned voter questions, start at <a href="/explore.html">Questions</a>; for the streamlined overview, the <a href="/">home page</a>. Every claim cites a primary source &ndash; <a href="#data-sources">see all sources</a>.</p>
+  </div>
+
+  <p class="section-label">Calculators &amp; tools</p>
+  <div class="tool-grid">
+    <a class="tool-tile" href="charts/override_calculator.html">
+      <div class="tool-tile-head"><span class="tool-tile-name">Override calculator</span><span class="tool-tile-kind">Calculator</span></div>
+      <p class="tool-tile-desc">Enter your home value, see the monthly and annual cost for each tier.</p>
+    </a>
+    <a class="tool-tile" href="charts/deficit_model.html">
+      <div class="tool-tile-head"><span class="tool-tile-name">Deficit model</span><span class="tool-tile-kind">Interactive</span></div>
+      <p class="tool-tile-desc">Adjust revenue and expense growth, toggle tiers, see when the next gap opens.</p>
+    </a>
+    <a class="tool-tile" href="charts/town_explorer.html">
+      <div class="tool-tile-head"><span class="tool-tile-name">Town explorer</span><span class="tool-tile-kind">Interactive</span></div>
+      <p class="tool-tile-desc">Compare Marblehead against all 351 Massachusetts towns on rate, levy, and burden.</p>
+    </a>
+    <a class="tool-tile" href="charts/budget_flow.html">
+      <div class="tool-tile-head"><span class="tool-tile-name">Budget flow</span><span class="tool-tile-kind">Interactive</span></div>
+      <p class="tool-tile-desc">Sankey-style flow from FY27 revenue sources to expense categories.</p>
+    </a>
+    <a class="tool-tile" href="senior-tax-relief.html">
+      <div class="tool-tile-head"><span class="tool-tile-name">Senior tax relief</span><span class="tool-tile-kind">Calculator</span></div>
+      <p class="tool-tile-desc">Circuit Breaker credit by income and home value, plus override impact after relief.</p>
+    </a>
+    <a class="tool-tile" href="charts/your_tax_bill.html">
+      <div class="tool-tile-head"><span class="tool-tile-name">Tax bill split</span><span class="tool-tile-kind">Chart</span></div>
+      <p class="tool-tile-desc">Where your tax dollars go: 8-category breakdown with override tier toggle.</p>
+    </a>
   </div>
 
   <p class="section-label">The ballot</p>
