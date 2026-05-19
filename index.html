@@ -320,10 +320,10 @@ og_url: https://marbleheaddata.org/
     min-width: clamp(80px, 18vw, 120px);
     flex-shrink: 0;
   }
-  .ballot-bar[data-tier="1A"] .ballot-bar-fill { background: var(--series-tier-3); }
-  .ballot-bar[data-tier="1B"] .ballot-bar-fill { background: var(--series-tier-2); }
-  .ballot-bar[data-tier="1C"] .ballot-bar-fill { background: var(--series-tier-1); }
-  .ballot-bar[data-tier="2"] .ballot-bar-fill { background: var(--c-brass); }
+  .ballot-bar[data-tier="q1"] .ballot-bar-fill { background: var(--series-tier-1); }
+  .ballot-bar[data-tier="q2"] .ballot-bar-fill { background: var(--series-tier-2); }
+  .ballot-bar[data-tier="q3"] .ballot-bar-fill { background: var(--series-tier-3); }
+  .ballot-bar[data-tier="q4"] .ballot-bar-fill { background: var(--c-brass); }
   .ballot-bar-label {
     flex: 1;
     min-width: 0;
@@ -602,25 +602,25 @@ og_url: https://marbleheaddata.org/
 
 <section class="home-stop home-stop--tinted" id="ballot">
   <p class="home-eye">June 9 ballot</p>
-  <div class="home-big">2 questions <span style="color:var(--text-muted); font-weight:500;">/</span> 3 tiers</div>
-  <p class="home-cap">Vote yes on each tier you'd accept. The highest tier with a majority wins. Question 2 is independent.</p>
+  <div class="home-big">4 questions <span style="color:var(--text-muted); font-weight:500;">/</span> 3 override tiers</div>
+  <p class="home-cap">Vote yes on each override tier you'd accept. If more than one passes, the highest dollar amount prevails. Question 4 (curbside trash) is independent.</p>
 
   <div class="ballot-viz">
-    <div class="ballot-bar" data-tier="1A">
-      <div class="ballot-bar-fill" style="width: 60%;">1A &middot; $15M</div>
-      <div class="ballot-bar-label"><strong>Invest</strong><span class="small">restores cuts, rebuilds reserves, funds growth</span></div>
-    </div>
-    <div class="ballot-bar" data-tier="1B">
-      <div class="ballot-bar-fill" style="width: 48%;">1B &middot; $12M</div>
-      <div class="ballot-bar-label"><strong>Build</strong><span class="small">restores cuts, partial reserves</span></div>
-    </div>
-    <div class="ballot-bar" data-tier="1C">
-      <div class="ballot-bar-fill" style="width: 36%;">1C &middot; $9M</div>
+    <div class="ballot-bar" data-tier="q1">
+      <div class="ballot-bar-fill" style="width: 36%;">Q1 &middot; $9M</div>
       <div class="ballot-bar-label"><strong>Partial restore</strong><span class="small">restores most budget cuts</span></div>
     </div>
-    <div class="ballot-bar" data-tier="2">
-      <div class="ballot-bar-fill" style="width: 9%;">$2.3M</div>
-      <div class="ballot-bar-label"><strong>Question 2 &bull; Trash</strong><span class="small">levy carve-out, or a ~$281/household flat fee</span></div>
+    <div class="ballot-bar" data-tier="q2">
+      <div class="ballot-bar-fill" style="width: 48%;">Q2 &middot; $12M</div>
+      <div class="ballot-bar-label"><strong>Build</strong><span class="small">restores cuts, partial reserves</span></div>
+    </div>
+    <div class="ballot-bar" data-tier="q3">
+      <div class="ballot-bar-fill" style="width: 60%;">Q3 &middot; $15M</div>
+      <div class="ballot-bar-label"><strong>Invest</strong><span class="small">restores cuts, rebuilds reserves, funds growth</span></div>
+    </div>
+    <div class="ballot-bar" data-tier="q4">
+      <div class="ballot-bar-fill" style="width: 9%;">Q4 &middot; $2.3M</div>
+      <div class="ballot-bar-label"><strong>Curbside trash</strong><span class="small">levy carve-out, or a ~$281/household flat fee</span></div>
     </div>
   </div>
 
