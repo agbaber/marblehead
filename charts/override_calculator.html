@@ -228,7 +228,7 @@ title: "What the Override Costs You"
     <p><span class="footnote-marker"></span>Cumulative totals assume the Year 3 rate continues unchanged. Actual future rates may differ if the town adjusts spending or if a subsequent override passes.</p>
     <p><span class="footnote-marker"></span>Median household income ($182,132) from US Census Bureau, ACS 2020&ndash;2024 5-year estimates, table B19001, for Marblehead town, Essex County, MA (FIPS 25-009-38400). 8,289 households total. Percentile positions derived from cumulative B19001 bracket counts divided by B19001_001E (total): under $50K = 16% (B19001_002E through _010E), under $75K = 23% (through _012E), under $125K = 36% (through _014E). The $200K+ bracket (B19001_017E) contains 47% of households; $250K and $400K thresholds both fall within that bracket. Raw data saved in data/acs_b19001_marblehead_2024.json.</p>
     <p><span class="footnote-marker"></span>Trash/recycling (Question 4) is not included above. You'll pay for it either way: as a levy increase (~$19/mo on a $1M home) or as a flat fee (~$23/mo per household) if Question 4 fails. See <a href="../question-2-trash.html">Question 4: trash funding</a> for the full personal-cost calculator and context.</p>
-    <p><span class="footnote-marker"></span>The "full tax bill" table assumes 2.5% annual Prop 2&frac12; growth on the existing tax bill, the published override phase-in schedule, and Q4 trash levied per the Board of Health phase-in ($2,186,516 FY27 / $2,241,179 FY28 / $2,298,575 FY29 against ~$9.9B total residential assessed value). If Q4 fails, the Board of Health implements a flat $281/household curbside fee (held flat across years here; in reality it would track contract growth). Bill back-calculation from the current-bill input uses the published FY26 residential rate of $9.05/$1,000. Homeowners with senior, veteran, or blind exemptions have a higher actual assessed value than this back-calc suggests &mdash; if you know your assessed value, enter it above.</p>
+    <p><span class="footnote-marker"></span>The "full tax bill" table assumes 2.5% annual Prop 2&frac12; growth on the existing tax bill, the published override phase-in schedule, and Q4 trash levied per the Board of Health phase-in ($2,186,516 FY27 / $2,241,179 FY28 / $2,298,575 FY29 against ~$9.9B total residential assessed value). If Q4 fails, the Board of Health implements a flat $281/household curbside fee (held flat across years here; in reality it would track contract growth). Bill back-calculation from the current-bill input uses the published FY26 residential rate of $9.05/$1,000. Homeowners with senior, veteran, or blind exemptions have a higher actual assessed value than this back-calc suggests &ndash; if you know your assessed value, enter it above.</p>
   </div>
 
   <p style="font-size:13px;color:var(--text-muted);margin-top:8px;">
@@ -271,7 +271,7 @@ const TIER_META = {
   2: { label: 'Tier 2 ($12M), Build',         swatch: 'var(--series-tier-2)' },
   3: { label: 'Tier 3 ($15M), Invest',    swatch: 'var(--series-tier-3)' },
 };
-// Residential tax rate per $1,000 of assessed value (DOR FY26, marblehead).
+// Residential tax rate per $1,000 of assessed value (Massachusetts Department of Revenue FY26 figures).
 // Used to convert between assessed value and current annual tax bill.
 const RESIDENTIAL_RATE = 9.05;
 // Q4 trash override phased draw (data/2026-04-15 Override Presentation; question-2-trash.html).

@@ -63,6 +63,7 @@ jobs:
             ':!CLAUDE.md'
             ':!docs'
             ':!community-pulse'
+            ':!proof'
             ':!.github'
             ':!data/is-the-board-trying.md'
             ':!data/what-have-we-tried.md'
