@@ -131,6 +131,16 @@ title: "What the Override Costs You"
 .scenario-table .cell-override-amt {
   color: var(--text-subtle);
 }
+.scenario-table .cell-delta {
+  font-size: 11px; font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 4px; line-height: 1.3;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.scenario-table .cell-delta-pct {
+  color: var(--text-subtle); font-weight: 400; margin-left: 3px;
+}
 .scenario-table .override-pill {
   background: color-mix(in srgb, var(--c-buoy) 14%, transparent);
   color: var(--c-buoy);
@@ -210,7 +220,7 @@ title: "What the Override Costs You"
   <p class="subtitle h-center">Total annual property tax (plus Board of Health fee if Question 4 fails) year by year, with the operating-override portion broken out.</p>
   <div id="scenario-panel"></div>
   <div class="scenario-legend">
-    The highlighted <span class="override-pill">%</span> in each cell shows what share of the bill is the Q1/Q2/Q3 operating override. The rest is your existing bill, Prop 2&frac12; baseline growth, and trash (Q4 levy or BoH fee).
+    Each cell shows your total bill, the change vs. today, and the Q1/Q2/Q3 operating-override share as a <span class="override-pill">%</span> pill. The rest of the bill is your existing taxes, Prop 2&frac12; baseline growth, and trash (Q4 levy or BoH fee).
   </div>
 
   <h2 class="h-center">Cumulative cost over time</h2>
@@ -426,22 +436,28 @@ function calculateScenario(av, currentBill, year, scenario) {
            baseline: baseline, trashAmount: trashAmount, bohFee: bohFee };
 }
 
-function renderScenarioCell(result) {
+function renderScenarioCell(result, currentBill) {
+  const delta = result.total - currentBill;
+  const deltaPct = currentBill > 0 ? delta / currentBill : 0;
+  const deltaLine = '<div class="cell-delta">+' + money(delta) +
+                    '<span class="cell-delta-pct">(' + pct(deltaPct) + ' vs today)</span></div>';
   if (result.overrideAmount > 0) {
     return '<div class="cell-total">' + money(result.total) + '</div>' +
+           deltaLine +
            '<div class="cell-detail">' +
              '<span class="cell-override-amt">override ' + money(result.overrideAmount) + '</span>' +
              '<span class="override-pill">' + pct(result.overridePct) + '</span>' +
            '</div>';
   }
   return '<div class="cell-total">' + money(result.total) + '</div>' +
+         deltaLine +
          '<div class="cell-detail-none">no operating override</div>';
 }
 
 function renderScenarioRow(s, av, currentBill) {
   const cells = [1, 2, 3].map(function(year) {
     const result = calculateScenario(av, currentBill, year, s);
-    return '<td>' + renderScenarioCell(result) + '</td>';
+    return '<td>' + renderScenarioCell(result, currentBill) + '</td>';
   }).join('');
   const label = '<td>' +
     '<span class="scenario-label-primary">' + s.primary + '</span>' +
