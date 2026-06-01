@@ -40,54 +40,81 @@ title: "What the Override Costs You"
 .tier-badge-2 { background: var(--series-tier-2); color: white; }
 .tier-badge-3 { background: var(--series-tier-3); color: white; }
 
-/* Tier tabs: badge + dollar amount, no description. */
+/* Tier tabs: badge + stacked amount/name so the content reads as one
+   compact graphic, not a stretched horizontal label. */
 .tabs.tier-tabs .tab {
   display: flex; align-items: center; justify-content: center;
-  gap: 8px;
+  gap: 10px;
+  padding: 10px 8px;
+}
+.tabs.tier-tabs .tab .tier-tab-meta {
+  display: inline-flex; flex-direction: column;
+  align-items: flex-start; text-align: left;
+  line-height: 1.15;
 }
 .tabs.tier-tabs .tab .tier-tab-amt {
-  font-weight: 700; font-size: 14px;
+  font-weight: 700; font-size: 14px; color: var(--text-muted);
 }
+.tabs.tier-tabs .tab.active .tier-tab-amt { color: var(--text); }
 .tabs.tier-tabs .tab .tier-tab-name {
-  font-size: 11px; color: var(--text-subtle); font-weight: 500;
+  font-size: 10px; color: var(--text-subtle);
+  font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
+  margin-top: 2px;
 }
 .tabs.tier-tabs .tab.active .tier-tab-name { color: var(--text-muted); }
 
-/* Year rows inside the active tier panel. */
-.year-rows {
-  display: flex; flex-direction: column;
-  max-width: 520px; margin: 0 auto;
+/* Year cards inside the active tier panel: 3-up grid, deepens left to
+   right so the eye tracks the phase-in (same rhythm as the scenario
+   table below). */
+.year-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 580px;
+  margin: 8px auto 4px;
 }
-.year-row {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 24px; padding: 14px 4px;
-  border-bottom: 1px solid var(--divider);
+.year-card {
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+  padding: 14px 14px 16px;
+  text-align: center;
+  background: var(--surface);
 }
-.year-row:last-child { border-bottom: none; }
-.year-row-label {
-  display: flex; flex-direction: column; gap: 2px;
-  color: var(--text);
+.year-cards .year-card:nth-child(1) { background: color-mix(in srgb, var(--c-teal) 4%, var(--surface)); }
+.year-cards .year-card:nth-child(2) { background: color-mix(in srgb, var(--c-teal) 7%, var(--surface)); }
+.year-cards .year-card:nth-child(3) { background: color-mix(in srgb, var(--c-teal) 10%, var(--surface)); }
+.year-card .yc-name {
+  display: block; font-weight: 700; font-size: 13px;
+  color: var(--text); line-height: 1.2;
 }
-.year-row-label .yr-name { font-weight: 700; font-size: 15px; }
-.year-row-label .yr-sub  { font-size: 11px; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.5px; }
-.year-row-cost { text-align: right; flex-shrink: 0; }
-.cost-primary {
-  font-size: 22px; font-weight: 700; color: var(--text);
-  font-variant-numeric: tabular-nums; line-height: 1.1;
+.year-card .yc-sub {
+  display: block; font-size: 10px;
+  color: var(--text-subtle);
+  text-transform: uppercase; letter-spacing: 0.6px;
+  margin-top: 1px; margin-bottom: 10px;
 }
-.cost-primary .cost-unit {
-  font-size: 13px; font-weight: 500; color: var(--text-subtle); margin-left: 2px;
+.year-card .yc-mo {
+  font-size: 22px; font-weight: 700;
+  color: var(--text); line-height: 1.1;
+  font-variant-numeric: tabular-nums;
 }
-.cost-secondary {
+.year-card .yc-mo .yc-unit {
+  font-size: 12px; font-weight: 500;
+  color: var(--text-subtle); margin-left: 2px;
+}
+.year-card .yc-yr {
   font-size: 12px; color: var(--text-subtle);
-  font-variant-numeric: tabular-nums; margin-top: 3px;
+  margin-top: 4px;
+  font-variant-numeric: tabular-nums;
 }
 @media (max-width: 520px) {
-  .year-row { gap: 12px; padding: 12px 2px; }
-  .year-row-label .yr-name { font-size: 14px; }
-  .cost-primary { font-size: 20px; }
-  .cost-primary .cost-unit { font-size: 12px; }
-  .cost-secondary { font-size: 11px; }
+  .year-cards { gap: 6px; }
+  .year-card { padding: 10px 6px 12px; }
+  .year-card .yc-name { font-size: 12px; }
+  .year-card .yc-sub  { font-size: 9px; margin-bottom: 6px; }
+  .year-card .yc-mo   { font-size: 17px; }
+  .year-card .yc-mo .yc-unit { font-size: 10px; }
+  .year-card .yc-yr   { font-size: 11px; }
   .tabs.tier-tabs .tab { gap: 6px; }
   .tabs.tier-tabs .tab .tier-tab-amt { font-size: 12px; }
   .tabs.tier-tabs .tab .tier-tab-name { display: none; }
@@ -324,18 +351,24 @@ title: "What the Override Costs You"
   <div class="tabs tier-tabs">
     <button class="tab" data-tier="1">
       <span class="tier-badge tier-badge-1">1</span>
-      <span class="tier-tab-amt">$9M</span>
-      <span class="tier-tab-name">Partial Restore</span>
+      <span class="tier-tab-meta">
+        <span class="tier-tab-amt">$9M</span>
+        <span class="tier-tab-name">Partial Restore</span>
+      </span>
     </button>
     <button class="tab" data-tier="2">
       <span class="tier-badge tier-badge-2">2</span>
-      <span class="tier-tab-amt">$12M</span>
-      <span class="tier-tab-name">Build</span>
+      <span class="tier-tab-meta">
+        <span class="tier-tab-amt">$12M</span>
+        <span class="tier-tab-name">Build</span>
+      </span>
     </button>
     <button class="tab active" data-tier="3">
       <span class="tier-badge tier-badge-3">3</span>
-      <span class="tier-tab-amt">$15M</span>
-      <span class="tier-tab-name">Invest</span>
+      <span class="tier-tab-meta">
+        <span class="tier-tab-amt">$15M</span>
+        <span class="tier-tab-name">Invest</span>
+      </span>
     </button>
   </div>
 
@@ -437,24 +470,20 @@ function money(n) {
 }
 
 function renderTierPanel(assessedValue, tier) {
-  const rows = [1, 2, 3].map(function(year) {
+  const cards = [1, 2, 3].map(function(year) {
     const annual = annualForYear(assessedValue, tier, year);
     const monthly = annual / 12;
     const ym = YEAR_META[year];
     return (
-      '<div class="year-row">' +
-        '<div class="year-row-label">' +
-          '<span class="yr-name">' + ym.label + '</span>' +
-          '<span class="yr-sub">' + ym.fy + '</span>' +
-        '</div>' +
-        '<div class="year-row-cost">' +
-          '<div class="cost-primary">' + money(monthly) + '<span class="cost-unit">/mo</span></div>' +
-          '<div class="cost-secondary">' + money(annual) + '/yr</div>' +
-        '</div>' +
+      '<div class="year-card">' +
+        '<span class="yc-name">' + ym.label + '</span>' +
+        '<span class="yc-sub">' + ym.fy + '</span>' +
+        '<div class="yc-mo">' + money(monthly) + '<span class="yc-unit">/mo</span></div>' +
+        '<div class="yc-yr">' + money(annual) + '/yr</div>' +
       '</div>'
     );
   }).join('');
-  return '<div class="year-rows">' + rows + '</div>';
+  return '<div class="year-cards">' + cards + '</div>';
 }
 
 function parseAssessed(raw) {
