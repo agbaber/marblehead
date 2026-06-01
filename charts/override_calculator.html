@@ -22,21 +22,55 @@ title: "What the Override Costs You"
 .calc-input .hint a { color: var(--link); }
 .calc-input .hint-default { display: block; font-size: 11px; color: var(--text-faint); margin-top: 3px; }
 
-.tier-rows {
+/* Tier panel show/hide (mirrors the global .year-panel rule for the
+   flipped tier-as-tab layout). */
+.tier-panel { display: none; }
+.tier-panel.active { display: block; }
+
+/* Tier badge: graphic stand-in for the wordy "Tier N ($Xm)" label. */
+.tier-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 50%;
+  font-weight: 700; font-size: 13px; color: white;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+.tier-badge.tier-badge-sm { width: 18px; height: 18px; font-size: 11px; }
+.tier-badge-1 { background: var(--series-tier-1); color: #0a2a33; }
+.tier-badge-2 { background: var(--series-tier-2); color: white; }
+.tier-badge-3 { background: var(--series-tier-3); color: white; }
+
+/* Tier tabs: badge + dollar amount, no description. */
+.tabs.tier-tabs .tab {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px;
+}
+.tabs.tier-tabs .tab .tier-tab-amt {
+  font-weight: 700; font-size: 14px;
+}
+.tabs.tier-tabs .tab .tier-tab-name {
+  font-size: 11px; color: var(--text-subtle); font-weight: 500;
+}
+.tabs.tier-tabs .tab.active .tier-tab-name { color: var(--text-muted); }
+
+/* Year rows inside the active tier panel. */
+.year-rows {
   display: flex; flex-direction: column;
   max-width: 520px; margin: 0 auto;
 }
-.tier-row {
+.year-row {
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px; padding: 14px 4px;
   border-bottom: 1px solid var(--divider);
 }
-.tier-row:last-child { border-bottom: none; }
-.tier-row-label {
-  display: flex; align-items: center; gap: 8px;
-  font-weight: 600; color: var(--text); font-size: 15px;
+.year-row:last-child { border-bottom: none; }
+.year-row-label {
+  display: flex; flex-direction: column; gap: 2px;
+  color: var(--text);
 }
-.tier-row-cost { text-align: right; flex-shrink: 0; }
+.year-row-label .yr-name { font-weight: 700; font-size: 15px; }
+.year-row-label .yr-sub  { font-size: 11px; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.5px; }
+.year-row-cost { text-align: right; flex-shrink: 0; }
 .cost-primary {
   font-size: 22px; font-weight: 700; color: var(--text);
   font-variant-numeric: tabular-nums; line-height: 1.1;
@@ -49,11 +83,14 @@ title: "What the Override Costs You"
   font-variant-numeric: tabular-nums; margin-top: 3px;
 }
 @media (max-width: 520px) {
-  .tier-row { gap: 12px; padding: 12px 2px; }
-  .tier-row-label { font-size: 14px; min-width: 0; }
+  .year-row { gap: 12px; padding: 12px 2px; }
+  .year-row-label .yr-name { font-size: 14px; }
   .cost-primary { font-size: 20px; }
   .cost-primary .cost-unit { font-size: 12px; }
   .cost-secondary { font-size: 11px; }
+  .tabs.tier-tabs .tab { gap: 6px; }
+  .tabs.tier-tabs .tab .tier-tab-amt { font-size: 12px; }
+  .tabs.tier-tabs .tab .tier-tab-name { display: none; }
 }
 
 .cumul-table {
@@ -93,26 +130,57 @@ title: "What the Override Costs You"
 .income-note-row td a { color: var(--link); }
 
 .scenario-table {
-  width: 100%; max-width: 780px; margin: 0 auto 12px;
-  border-collapse: collapse; font-variant-numeric: tabular-nums;
+  width: 100%; max-width: 820px; margin: 0 auto 12px;
+  border-collapse: separate; border-spacing: 0;
+  font-variant-numeric: tabular-nums;
 }
 .scenario-table th, .scenario-table td {
-  padding: 14px 12px; font-size: 13px;
+  padding: 14px 14px; font-size: 13px;
   border-bottom: 1px solid var(--divider);
   vertical-align: top;
 }
 .scenario-table th {
-  font-size: 10px; color: var(--text-subtle); text-transform: uppercase;
-  letter-spacing: 0.6px; font-weight: 600; text-align: right;
-  padding-top: 8px; padding-bottom: 8px;
+  font-size: 11px; color: var(--text-muted); text-transform: uppercase;
+  letter-spacing: 0.8px; font-weight: 700; text-align: right;
+  padding-top: 10px; padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+.scenario-table th .yr-fy {
+  display: block; font-size: 14px; font-weight: 700;
+  color: var(--text); text-transform: none; letter-spacing: 0;
+  margin-bottom: 2px;
 }
 .scenario-table th:first-child { text-align: left; }
 .scenario-table td:first-child { text-align: left; }
 .scenario-table td:not(:first-child) { text-align: right; }
+/* Visible year-column separation: alternate column tints + dividers. */
+.scenario-table th:nth-child(2),
+.scenario-table td:nth-child(2) {
+  background: color-mix(in srgb, var(--c-teal) 4%, transparent);
+  border-left: 1px solid var(--divider);
+}
+.scenario-table th:nth-child(3),
+.scenario-table td:nth-child(3) {
+  background: color-mix(in srgb, var(--c-teal) 7%, transparent);
+  border-left: 1px solid var(--divider);
+}
+.scenario-table th:nth-child(4),
+.scenario-table td:nth-child(4) {
+  background: color-mix(in srgb, var(--c-teal) 10%, transparent);
+  border-left: 1px solid var(--divider);
+}
+.scenario-table tbody td:not(:first-child) { cursor: help; transition: filter 0.15s; }
+.scenario-table tbody td:not(:first-child):hover {
+  filter: brightness(0.97);
+}
 
 .scenario-label-primary {
   display: block; font-weight: 700; font-size: 14px;
   color: var(--text); line-height: 1.2;
+}
+.scenario-label-badges {
+  display: inline-flex; gap: 4px; vertical-align: middle;
+  margin-right: 4px;
 }
 .scenario-label-secondary {
   display: block; font-size: 11px; color: var(--text-subtle);
@@ -182,12 +250,59 @@ title: "What the Override Costs You"
   .scenario-table th, .scenario-table td {
     padding: 12px 8px; font-size: 12px;
   }
+  .scenario-table th .yr-fy { font-size: 12px; }
   .scenario-label-primary { font-size: 12px; }
   .scenario-label-secondary { font-size: 10px; }
   .scenario-table .cell-total { font-size: 14px; }
   .scenario-table .cell-detail,
   .scenario-table .cell-detail-none { font-size: 10px; }
   .scenario-table .override-pill { font-size: 9.5px; padding: 1px 5px; }
+}
+
+/* Floating cell-breakdown tooltip. Triggered by hover on scenario-table
+   data cells; tap-to-open on touch. */
+.calc-tooltip {
+  position: fixed; z-index: 1000;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  padding: 12px 14px;
+  min-width: 240px; max-width: 320px;
+  font-size: 12px; line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.12s;
+}
+.calc-tooltip.visible { opacity: 1; pointer-events: auto; }
+.calc-tooltip .tt-title {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 700; font-size: 12px;
+  color: var(--text); margin-bottom: 8px;
+  padding-bottom: 6px; border-bottom: 1px solid var(--divider);
+}
+.calc-tooltip .tt-row {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 3px 0; color: var(--text-muted);
+}
+.calc-tooltip .tt-row .tt-amt {
+  font-weight: 600; color: var(--text); white-space: nowrap;
+}
+.calc-tooltip .tt-row.tt-row-total {
+  margin-top: 6px; padding-top: 6px;
+  border-top: 1px solid var(--divider);
+  font-weight: 700; color: var(--text);
+}
+.calc-tooltip .tt-row.tt-row-total .tt-amt { font-size: 14px; }
+.calc-tooltip .tt-delta {
+  font-size: 11px; color: var(--text-subtle); text-align: right;
+  margin-top: 2px;
+}
+.calc-tooltip .tt-row-add .tt-amt { color: var(--c-buoy); }
+.calc-tooltip .tt-row-neutral .tt-amt { color: var(--text-muted); }
+
+@media (hover: none) {
+  .scenario-table tbody td:not(:first-child) { cursor: pointer; }
 }
 </style>
 <h1 class="h-center">What the Override Costs You</h1>
@@ -206,15 +321,27 @@ title: "What the Override Costs You"
     <span class="hint-default">Alternative to entering assessed value. Editing either updates the other.</span>
   </div>
 
-  <div class="tabs">
-    <button class="tab" data-year="1">Year 1 (FY27)</button>
-    <button class="tab" data-year="2">Year 2 (FY28)</button>
-    <button class="tab active" data-year="3">Year 3 (FY29)</button>
+  <div class="tabs tier-tabs">
+    <button class="tab" data-tier="1">
+      <span class="tier-badge tier-badge-1">1</span>
+      <span class="tier-tab-amt">$9M</span>
+      <span class="tier-tab-name">Partial Restore</span>
+    </button>
+    <button class="tab" data-tier="2">
+      <span class="tier-badge tier-badge-2">2</span>
+      <span class="tier-tab-amt">$12M</span>
+      <span class="tier-tab-name">Build</span>
+    </button>
+    <button class="tab active" data-tier="3">
+      <span class="tier-badge tier-badge-3">3</span>
+      <span class="tier-tab-amt">$15M</span>
+      <span class="tier-tab-name">Invest</span>
+    </button>
   </div>
 
-  <div class="year-panel" id="year-1"></div>
-  <div class="year-panel" id="year-2"></div>
-  <div class="year-panel active" id="year-3"></div>
+  <div class="tier-panel" id="tier-1"></div>
+  <div class="tier-panel" id="tier-2"></div>
+  <div class="tier-panel active" id="tier-3"></div>
 
   <h2 class="h-center" style="margin-top: 48px;">Your full tax bill, by ballot outcome</h2>
   <p class="subtitle h-center">Total annual property tax (plus Board of Health fee if Question 4 fails) year by year, with the operating-override portion broken out.</p>
@@ -277,10 +404,19 @@ const RATES = {
   3: { y1: 556, y2: 1487, y3: 1989 }, // Tier 3, $15M, Invest
 };
 const TIER_META = {
-  1: { label: 'Tier 1 ($9M), Partial Restore', swatch: 'var(--series-tier-1)' },
-  2: { label: 'Tier 2 ($12M), Build',         swatch: 'var(--series-tier-2)' },
-  3: { label: 'Tier 3 ($15M), Invest',    swatch: 'var(--series-tier-3)' },
+  1: { amount: '$9M',  name: 'Partial Restore', swatch: 'var(--series-tier-1)' },
+  2: { amount: '$12M', name: 'Build',           swatch: 'var(--series-tier-2)' },
+  3: { amount: '$15M', name: 'Invest',          swatch: 'var(--series-tier-3)' },
 };
+const YEAR_META = {
+  1: { fy: 'FY27', label: 'Year 1' },
+  2: { fy: 'FY28', label: 'Year 2' },
+  3: { fy: 'FY29', label: 'Year 3' },
+};
+function tierBadge(n, small) {
+  const cls = 'tier-badge tier-badge-' + n + (small ? ' tier-badge-sm' : '');
+  return '<span class="' + cls + '">' + n + '</span>';
+}
 // Residential tax rate per $1,000 of assessed value (Massachusetts Department of Revenue FY26 figures).
 // Used to convert between assessed value and current annual tax bill.
 const RESIDENTIAL_RATE = 8.56;
@@ -300,24 +436,25 @@ function money(n) {
   return '$' + Math.round(n).toLocaleString('en-US');
 }
 
-function renderYearPanel(assessedValue, year) {
-  const rows = [1, 2, 3].map(function(tier) {
+function renderTierPanel(assessedValue, tier) {
+  const rows = [1, 2, 3].map(function(year) {
     const annual = annualForYear(assessedValue, tier, year);
     const monthly = annual / 12;
-    const meta = TIER_META[tier];
+    const ym = YEAR_META[year];
     return (
-      '<div class="tier-row">' +
-        '<div class="tier-row-label">' +
-          '<span class="swatch" style="background: ' + meta.swatch + ';"></span>' + meta.label +
+      '<div class="year-row">' +
+        '<div class="year-row-label">' +
+          '<span class="yr-name">' + ym.label + '</span>' +
+          '<span class="yr-sub">' + ym.fy + '</span>' +
         '</div>' +
-        '<div class="tier-row-cost">' +
+        '<div class="year-row-cost">' +
           '<div class="cost-primary">' + money(monthly) + '<span class="cost-unit">/mo</span></div>' +
           '<div class="cost-secondary">' + money(annual) + '/yr</div>' +
         '</div>' +
       '</div>'
     );
   }).join('');
-  return '<div class="tier-rows">' + rows + '</div>';
+  return '<div class="year-rows">' + rows + '</div>';
 }
 
 function parseAssessed(raw) {
@@ -356,7 +493,7 @@ function renderCumulativePanel(assessedValue) {
     var cum5 = cumulativeCost(assessedValue, tier, 5);
     var cum10 = cumulativeCost(assessedValue, tier, 10);
     return '<tr>' +
-      '<td><span class="swatch" style="background:' + meta.swatch + ';"></span>' + meta.label + '</td>' +
+      '<td>' + tierBadge(tier) + ' ' + meta.amount + ' (' + meta.name + ')</td>' +
       '<td>' + money(cum5) + '</td>' +
       '<td>' + money(cum10) + '</td>' +
     '</tr>';
@@ -417,11 +554,11 @@ function baselineForYear(currentBill, year) {
 }
 
 const SCENARIOS = [
-  { id: 'q1',     primary: 'Tier 1 only',     secondary: '$9M override · Q4 fails (BoH fee)',  tier: 1, q4: false },
-  { id: 'q1q2',   primary: 'Tier 1 + 2',      secondary: '$12M override · Q4 fails (BoH fee)', tier: 2, q4: false },
-  { id: 'q1q2q3', primary: 'Tier 1 + 2 + 3',  secondary: '$15M override · Q4 fails (BoH fee)', tier: 3, q4: false },
-  { id: 'all',    primary: 'All four pass',   secondary: '$15M override + Q4 trash levy',      tier: 3, q4: true },
-  { id: 'q4',     primary: 'Q4 only',         secondary: 'Trash levy, no operating override',  tier: 0, q4: true },
+  { id: 'q1',     primary: 'Tier 1 only',     secondary: '$9M override · Q4 fails (BoH fee)',  tier: 1, q4: false, badges: [1] },
+  { id: 'q1q2',   primary: 'Tier 1 + 2',      secondary: '$12M override · Q4 fails (BoH fee)', tier: 2, q4: false, badges: [1,2] },
+  { id: 'q1q2q3', primary: 'Tier 1 + 2 + 3',  secondary: '$15M override · Q4 fails (BoH fee)', tier: 3, q4: false, badges: [1,2,3] },
+  { id: 'all',    primary: 'All four pass',   secondary: '$15M override + Q4 trash levy',      tier: 3, q4: true,  badges: [1,2,3] },
+  { id: 'q4',     primary: 'Q4 only',         secondary: 'Trash levy, no operating override',  tier: 0, q4: true,  badges: [] },
 ];
 
 function calculateScenario(av, currentBill, year, scenario) {
@@ -457,18 +594,34 @@ function renderScenarioCell(result, currentBill) {
 function renderScenarioRow(s, av, currentBill) {
   const cells = [1, 2, 3].map(function(year) {
     const result = calculateScenario(av, currentBill, year, s);
-    return '<td>' + renderScenarioCell(result, currentBill) + '</td>';
+    // Stash the breakdown on the cell so the tooltip handler can pull it.
+    const data = ' data-tt-scenario="' + s.id +
+                 '" data-tt-year="' + year +
+                 '" data-tt-baseline="' + result.baseline.toFixed(2) +
+                 '" data-tt-override="' + result.overrideAmount.toFixed(2) +
+                 '" data-tt-trash="' + result.trashAmount.toFixed(2) +
+                 '" data-tt-fee="' + result.bohFee.toFixed(2) +
+                 '" data-tt-total="' + result.total.toFixed(2) + '"';
+    return '<td' + data + '>' + renderScenarioCell(result, currentBill) + '</td>';
   }).join('');
+  const badgesHtml = s.badges.map(function(n) { return tierBadge(n, true); }).join(' ');
+  const badgesWrap = badgesHtml
+    ? '<span class="scenario-label-badges">' + badgesHtml + '</span> '
+    : '';
   const label = '<td>' +
-    '<span class="scenario-label-primary">' + s.primary + '</span>' +
+    '<span class="scenario-label-primary">' + badgesWrap + s.primary + '</span>' +
     '<span class="scenario-label-secondary">' + s.secondary + '</span>' +
   '</td>';
   return '<tr class="scenario-' + s.id + '">' + label + cells + '</tr>';
 }
 
 function renderScenarioTable(av, currentBill) {
-  const header = '<tr><th>Ballot outcome</th><th>FY27 (Year 1)</th>' +
-                 '<th>FY28 (Year 2)</th><th>FY29 (Year 3)</th></tr>';
+  const header = '<tr><th>Ballot outcome</th>' +
+    [1,2,3].map(function(y) {
+      var ym = YEAR_META[y];
+      return '<th><span class="yr-fy">' + ym.fy + '</span>' + ym.label + '</th>';
+    }).join('') +
+  '</tr>';
   // Group Q4-fails scenarios (first 3) and Q4-passes scenarios (last 2)
   // with a visual divider between them.
   const q4FailsRows = SCENARIOS.filter(function(s) { return !s.q4; })
@@ -502,12 +655,13 @@ function update() {
   const value = parseAssessed(avInput.value);
   saveStored(value);
   const currentBill = billFromAV(value);
-  for (const year of [1, 2, 3]) {
-    document.getElementById('year-' + year).innerHTML = renderYearPanel(value, year);
+  for (const tier of [1, 2, 3]) {
+    document.getElementById('tier-' + tier).innerHTML = renderTierPanel(value, tier);
   }
   document.getElementById('scenario-panel').innerHTML = renderScenarioTable(value, currentBill);
   document.getElementById('cumulative-panel').innerHTML = renderCumulativePanel(value);
   document.getElementById('income-panel').innerHTML = renderIncomePanel(value);
+  wireScenarioTooltip();
 }
 
 const input = document.getElementById('assessed-value');
@@ -535,14 +689,118 @@ billInput.addEventListener('blur', function() {
   update();
 });
 
-document.querySelectorAll('.tab').forEach(function(btn) {
+document.querySelectorAll('.tier-tabs .tab').forEach(function(btn) {
   btn.addEventListener('click', function() {
-    document.querySelectorAll('.tab').forEach(function(b) { b.classList.remove('active'); });
-    document.querySelectorAll('.year-panel').forEach(function(p) { p.classList.remove('active'); });
+    document.querySelectorAll('.tier-tabs .tab').forEach(function(b) { b.classList.remove('active'); });
+    document.querySelectorAll('.tier-panel').forEach(function(p) { p.classList.remove('active'); });
     btn.classList.add('active');
-    document.getElementById('year-' + btn.dataset.year).classList.add('active');
+    document.getElementById('tier-' + btn.dataset.tier).classList.add('active');
   });
 });
+
+// Floating cell-breakdown tooltip for the scenario table. Hover (desktop)
+// or tap (touch) any data cell to see the bill broken into baseline +
+// override + trash/fee. Re-wired after every render.
+function ensureCalcTooltip() {
+  var el = document.getElementById('calcTooltip');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'calcTooltip';
+    el.className = 'calc-tooltip';
+    document.body.appendChild(el);
+  }
+  return el;
+}
+
+function tooltipContent(td) {
+  var sid = td.getAttribute('data-tt-scenario');
+  var yr  = parseInt(td.getAttribute('data-tt-year'), 10);
+  var scenario = SCENARIOS.find(function(s) { return s.id === sid; });
+  if (!scenario) return '';
+  var baseline = parseFloat(td.getAttribute('data-tt-baseline'));
+  var override = parseFloat(td.getAttribute('data-tt-override'));
+  var trash    = parseFloat(td.getAttribute('data-tt-trash'));
+  var fee      = parseFloat(td.getAttribute('data-tt-fee'));
+  var total    = parseFloat(td.getAttribute('data-tt-total'));
+  var currentBill = billFromAV(parseAssessed(document.getElementById('assessed-value').value));
+  var growth   = baseline - currentBill;
+  var delta    = total - currentBill;
+  var deltaPct = currentBill > 0 ? delta / currentBill : 0;
+
+  var ym = YEAR_META[yr];
+  var badgeHtml = scenario.badges.map(function(n) { return tierBadge(n, true); }).join(' ');
+  var title = (badgeHtml ? badgeHtml + ' ' : '') + scenario.primary +
+              ' <span style="color:var(--text-subtle);font-weight:600;">' + ym.fy + '</span>';
+
+  var rows = '';
+  rows += '<div class="tt-row tt-row-neutral"><span>Your current bill</span><span class="tt-amt">' + money(currentBill) + '</span></div>';
+  rows += '<div class="tt-row tt-row-add"><span>+ Prop 2&frac12; growth (' + yr + ' yr' + (yr>1?'s':'') + ')</span><span class="tt-amt">+' + money(growth) + '</span></div>';
+  if (override > 0) {
+    rows += '<div class="tt-row tt-row-add"><span>+ Override (Tier ' + scenario.tier + ')</span><span class="tt-amt">+' + money(override) + '</span></div>';
+  }
+  if (trash > 0) {
+    rows += '<div class="tt-row tt-row-add"><span>+ Q4 trash levy</span><span class="tt-amt">+' + money(trash) + '</span></div>';
+  } else if (fee > 0) {
+    rows += '<div class="tt-row tt-row-add"><span>+ Board of Health fee</span><span class="tt-amt">+' + money(fee) + '</span></div>';
+  }
+  rows += '<div class="tt-row tt-row-total"><span>Total bill</span><span class="tt-amt">' + money(total) + '</span></div>';
+  rows += '<div class="tt-delta">+' + money(delta) + ' (' + pct(deltaPct) + ' vs today)</div>';
+
+  return '<div class="tt-title">' + title + '</div>' + rows;
+}
+
+function positionTooltip(el, evt, td) {
+  var rect = td.getBoundingClientRect();
+  var ttW = el.offsetWidth;
+  var ttH = el.offsetHeight;
+  // Default: above the cell, anchored to the cell's right edge.
+  var x = rect.right - ttW;
+  var y = rect.top - ttH - 8;
+  if (y < 8) y = rect.bottom + 8;        // flip below if it'd clip the top
+  if (x < 8) x = 8;                       // keep within viewport
+  if (x + ttW > window.innerWidth - 8) x = window.innerWidth - ttW - 8;
+  el.style.left = x + 'px';
+  el.style.top = y + 'px';
+}
+
+var activeTooltipCell = null;
+var tooltipOutsideClickWired = false;
+function wireScenarioTooltip() {
+  var tt = ensureCalcTooltip();
+  var cells = document.querySelectorAll('.scenario-table tbody td[data-tt-scenario]');
+  cells.forEach(function(td) {
+    td.addEventListener('mouseenter', function(evt) {
+      tt.innerHTML = tooltipContent(td);
+      tt.classList.add('visible');
+      positionTooltip(tt, evt, td);
+      activeTooltipCell = td;
+    });
+    td.addEventListener('mouseleave', function() {
+      tt.classList.remove('visible');
+      activeTooltipCell = null;
+    });
+    td.addEventListener('click', function(evt) {
+      if (activeTooltipCell === td) {
+        tt.classList.remove('visible');
+        activeTooltipCell = null;
+      } else {
+        tt.innerHTML = tooltipContent(td);
+        tt.classList.add('visible');
+        positionTooltip(tt, evt, td);
+        activeTooltipCell = td;
+      }
+    });
+  });
+  if (!tooltipOutsideClickWired) {
+    document.addEventListener('click', function(evt) {
+      if (!activeTooltipCell) return;
+      if (evt.target.closest('.scenario-table td[data-tt-scenario]')) return;
+      tt.classList.remove('visible');
+      activeTooltipCell = null;
+    });
+    tooltipOutsideClickWired = true;
+  }
+}
 
 update();
 </script>
