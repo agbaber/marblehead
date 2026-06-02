@@ -15,6 +15,16 @@
 
 Both ride on top of the transcript collection and the existing Neighbor Verification Network. Neither makes sense without verified-resident identity at the entry point: we don't want anonymous spam or non-residents driving the queue. The verification network already handles passkey auth, two-sided invite handshakes, street typeahead, and verified-ballot tally &mdash; **that layer is the foundation; we don't rebuild it.**
 
+### Prerequisite: email capture on the verification network
+
+The current verification flow is passkey-only and does **not** capture an email address. That gap is the blocker for subscriptions. Before either feature ships, the verify flow needs:
+
+1. An optional email field at sign-up, with a clear "this is only used for the meeting digest you opt into; we won't email you otherwise" disclosure.
+2. An email-management surface for the resident to add/change/remove the address later.
+3. Storage in the existing D1 verification database, joined to the resident's verified identity row.
+
+Until that lands, the "Log in to subscribe" CTA on transcript pages is gated behind a `site.transcripts_subscribe` feature flag in `_config.yml` (currently `false`). Flip to `true` once the email-capture flow and the Friday-digest worker both exist.
+
 ## Why now
 
 Three readers' jobs to be done that the current site doesn't serve:

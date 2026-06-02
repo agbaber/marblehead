@@ -25,6 +25,7 @@ layout: default
     </header>
 
     {%- comment -%} ─── LOGIN TO SUBSCRIBE CTA ─── {%- endcomment -%}
+    {% if site.transcripts_subscribe %}
     <aside class="ms-subscribe" aria-label="Subscribe to meeting summaries">
       <div class="ms-subscribe-copy">
         <p class="ms-subscribe-lead"><strong>Get this in your inbox.</strong></p>
@@ -34,6 +35,7 @@ layout: default
         Log in to subscribe&nbsp;&rarr;
       </a>
     </aside>
+    {% endif %}
 
     {%- comment -%} ─── SEPARATE FEATURED FROM REST ─── {%- endcomment -%}
     {% assign featured = page.topic_segments | where: "featured", true %}
