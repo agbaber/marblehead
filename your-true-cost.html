@@ -350,6 +350,12 @@ body.true-cost .page { max-width: 1100px; }
   justify-content: center; margin-top: 24px;
   font-size: 12px; color: var(--text-muted);
 }
+.tc-bars-summary {
+  text-align: center; margin: 18px auto 0; max-width: 540px;
+  font-size: 13px; color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.tc-bars-summary strong { color: var(--text); font-weight: 700; }
 .tc-legend-swatch {
   display: inline-block; width: 12px; height: 12px;
   border-radius: 3px; margin-right: 6px; vertical-align: middle;
@@ -796,6 +802,7 @@ body.true-cost .page { max-width: 1100px; }
   <div class="tc-bars-wrap tc-reveal" id="s2Bars">
     <div id="s2Rows"></div>
     <div class="tc-bars-legend" id="s2Legend"></div>
+    <p class="tc-bars-summary" id="s2Summary"></p>
   </div>
 </section>
 
@@ -1363,15 +1370,29 @@ function renderSection2(t) {
   const cb = t.currentBill;
   const maxBar = (baselineForYear(cb, 3) + RATES[3].y3 * (state.assessedValue / AVG_ASSESSED)) * 1.05;
   const rows = [];
+  // FY26 today row — anchor so the FY27 YoY delta makes sense
+  const w0 = (cb / maxBar) * 100;
+  rows.push(
+    '<div class="tc-bars" style="margin-bottom: 10px;">' +
+      '<div class="tc-bar-year">Today (FY26)</div>' +
+      '<div class="tc-bar-track">' +
+        '<div class="tc-bar-seg tc-bar-seg-current" style="width:' + w0 + '%"></div>' +
+      '</div>' +
+      '<div class="tc-bar-total">' + wrapCite(money(cb), 'fy26-rate') + '</div>' +
+    '</div>'
+  );
+  // Future years: YoY delta vs prior year
+  let prevTotal = cb;
   for (let y = 1; y <= 3; y++) {
     const baseline = baselineForYear(cb, y);
     const tierAmt = overrideForYear(state.assessedValue, state.tier, y);
+    const total = baseline + tierAmt;
+    const yoy = total - prevTotal;
     const growth = baseline - cb;
     const w1 = (cb / maxBar) * 100;
     const w2 = (growth / maxBar) * 100;
     const w3 = (tierAmt / maxBar) * 100;
     const tierColor = state.tier === 0 ? '' : 'tc-bar-seg-tier' + state.tier;
-    const phaseLabel = y === 3 ? 'full phase-in' : 'phasing in (year ' + y + ' of 3)';
     rows.push(
       '<div class="tc-bars" style="margin-bottom: 10px;">' +
         '<div class="tc-bar-year">FY' + (26 + y) + '</div>' +
@@ -1380,16 +1401,15 @@ function renderSection2(t) {
           '<div class="tc-bar-seg tc-bar-seg-growth" style="width:' + w2 + '%"></div>' +
           (tierAmt > 0 ? '<div class="tc-bar-seg ' + tierColor + '" style="width:' + w3 + '%"></div>' : '') +
         '</div>' +
-        '<div class="tc-bar-total">' + wrapCite(money(baseline + tierAmt), 'override-rates') +
-          (tierAmt > 0
-            ? '<span class="delta">' + money(tierAmt) + ' override · ' + phaseLabel + '</span>'
-            : '<span class="delta">no override</span>') +
+        '<div class="tc-bar-total">' + wrapCite(money(total), tierAmt > 0 ? 'override-rates' : 'prop25') +
+          '<span class="delta">+' + money(yoy) + ' vs prior yr</span>' +
         '</div>' +
       '</div>'
     );
+    prevTotal = total;
   }
   document.getElementById('s2Rows').innerHTML = rows.join('');
-  // Legend: only show what's actually drawn — Current + Baseline growth + the selected tier (if any).
+  // Legend: only show what's actually drawn.
   const legendItems = [
     '<span><span class="tc-legend-swatch" style="background: var(--c-text-mid);"></span>Current</span>',
     '<span><span class="tc-legend-swatch" style="background: color-mix(in srgb, var(--c-text-mid) 60%, var(--surface));"></span>Baseline growth</span>'
@@ -1400,6 +1420,13 @@ function renderSection2(t) {
     );
   }
   document.getElementById('s2Legend').innerHTML = legendItems.join('');
+  // Separate total-raise summary line
+  const totalRise = prevTotal - cb;
+  const summaryEl = document.getElementById('s2Summary');
+  if (summaryEl) {
+    summaryEl.innerHTML = 'Over 3 years your bill rises <strong>+' + money(totalRise) +
+      '</strong> total, about ' + moneyDec(totalRise / 365 / 3) + '/day on average.';
+  }
 }
 
 /* ── Section 3: trash comparison ── */
