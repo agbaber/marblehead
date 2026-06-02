@@ -17,18 +17,18 @@ summary_card:
     plus a separate $2.3M trash question, and previewed a tri-board MOU
     that pledges no further override until FY2030. The FY27 warrant was
     approved in bulk (holds on Articles 19, 29, 34), and the Essex Tech
-    assessment was ratified at $749,920 &mdash; up 60% over two years.
+    assessment was ratified at $749,920 &ndash; up 60% over two years.
   decisions:
     - "Approved Cultural Council appointment of Katherine Zukowski (term to June 2029)"
     - "Continued the Shindonisi liquor license revocation hearing (00042-RS-0656, 1 Atlantic Ave) to April 22, pending final 304 life-safety inspection"
     - "Reauthorized FY27 Board of Health solid-waste revolving fund cap at $1.3M (supersedes Feb 11 motion)"
     - "Approved bulk motion on FY27 warrant articles 3, 4, 6 ($60,182.27), 7 ($4,205,300 revolving funds), 8, 9 ($524,067 lease-purchase), 10, 11 ($25,000 walls/fences), 12 ($200,000 stormwater), 13 ($2,400,000 water + $2,100,000 sewer), 15-18 (pay schedules at 3%, town clerk at $97,460), 23 ($122,762.03), 31 (indefinitely postpone), 33 (cryptocurrency ATM prohibition), 36 (DPW housekeeping)"
     - "Approved Article 21 (Essex North Shore Agricultural & Technical) at $749,920"
-    - "Held Articles 19 (fire collective bargaining), 29 (override tiers &mdash; pending school vote), 34 (dissolve Public Works Committee)"
+    - "Held Articles 19 (fire collective bargaining), 29 (override tiers &ndash; pending school vote), 34 (dissolve Public Works Committee)"
     - "Amended overnight street-sweeping parking-ban dates from April 20-24 (school vacation week) to April 27 - May 1"
     - "Renewed Eastern Yacht Club pool license (42-44 Foster Street)"
     - "Approved consent agenda: Abbot Hall reservations (Marblehead School of Music, National Prayer Day, Marblehead Charter School mock public meeting, Harbor Rotary Pops Concert), Marblehead Counseling Community Champion Celebration proclamation"
-    - "Approved change order #3 for Village Street bridge replacement contract with Freeman Peterson Inc. &mdash; $55,000 extension through Dec 31, 2026 (Chapter 90 funds)"
+    - "Approved change order #3 for Village Street bridge replacement contract with Freeman Peterson Inc. &ndash; $55,000 extension through Dec 31, 2026 (Chapter 90 funds)"
     - "Approved one-day liquor licenses: Coastline Marine (8 Sewall St, May 2) and Steven Decor (4 Quick St, April 25)"
     - "Set May 13 to interview student rep candidate for Marblehead Task Force on Discrimination"
   votes:
@@ -48,7 +48,7 @@ summary_card:
       result: "in favor (roll-call, 5 in favor)"
     - motion: "Approve consent agenda (Abbot Hall reservations and Marblehead Counseling proclamation)"
       result: "in favor (voice vote)"
-    - motion: "Approve change order #3 for Village Street bridge contract &mdash; $55,000 extension to Dec 31, 2026"
+    - motion: "Approve change order #3 for Village Street bridge contract &ndash; $55,000 extension to Dec 31, 2026"
       result: "in favor (voice vote)"
     - motion: "Approve one-day liquor licenses for Coastline Marine and Steven Decor"
       result: "in favor (roll-call, 5 in favor)"
@@ -94,7 +94,7 @@ topic_segments:
     summary: |
       **Two ballot questions.** **Q1** asks voters to set the operating-budget override at one of three tiers (**$9M / $12M / $15M**), drawn down over three years. **Q2** is a separate **$2.3M** question to replace the new curbside trash fee with a tax increase.
 
-      Highest tier with a yes-majority wins. Votes are **not** cumulative &mdash; if Tier 3 fails but Tier 2 passes, the result is $12M.
+      Highest tier with a yes-majority wins. Votes are **not** cumulative &ndash; if Tier 3 fails but Tier 2 passes, the result is $12M.
 
       ### Tax impact on a $1M home (three-year totals)
 
@@ -108,9 +108,9 @@ topic_segments:
 
       ### What each tier restores
 
-      - **Tier 1** &mdash; School Resource Officer; DPW staffing (1 special labor, 1 temp clerk, 1 HEO); library accreditation ($311,183); Community Planning & Development director; recreation groundskeeper; OPEB transfer; reserve fund.
-      - **Tier 2 adds** &mdash; 1 police officer; 2 firefighters; 1 GIS position; IT director; budget analyst; assistant planner (sustainability coordinator); conservation agent; town-wide maintenance division ($450,000).
-      - **Tier 3 adds** &mdash; 2 more police; 4 more firefighters (6 total); grant writer; recurring $1M capital; $60K psychological counseling.
+      - **Tier 1** &ndash; School Resource Officer; DPW staffing (1 special labor, 1 temp clerk, 1 HEO); library accreditation ($311,183); Community Planning & Development director; recreation groundskeeper; OPEB transfer; reserve fund.
+      - **Tier 2 adds** &ndash; 1 police officer; 2 firefighters; 1 GIS position; IT director; budget analyst; assistant planner (sustainability coordinator); conservation agent; town-wide maintenance division ($450,000).
+      - **Tier 3 adds** &ndash; 2 more police; 4 more firefighters (6 total); grant writer; recurring $1M capital; $60K psychological counseling.
 
       Schools draw nothing in FY27 across all tiers; roughly **14 school positions are still cut** in Tier 1, reflecting a multi-year headcount reduction tied to declining enrollment.
 
@@ -152,12 +152,12 @@ topic_segments:
       - **No second override** until at least FY2030, regardless of which tier passes.
       - **Annual draw caps**, with school and municipal portions broken out separately.
       - Any surplus flows to the **stabilization fund first** (target: 5% of operating budget), then capital, then OPEB and pension.
-      - **Free-cash reliance steps down** &mdash; $5M (FY26) &rarr; $4M (FY27) &rarr; $3M (FY28).
+      - **Free-cash reliance steps down** &ndash; $5M (FY26) &rarr; $4M (FY27) &rarr; $3M (FY28).
       - **Health-insurance growth assumed at 6%** (deliberately conservative on revenue).
-      - **New-growth split** &mdash; 62% town, 38% schools.
+      - **New-growth split** &ndash; 62% town, 38% schools.
       - Quarterly reporting from Town Administrator and Superintendent to all three board chairs; State of the Town will publish year-to-date override budgeted vs. spent.
 
-      Deviation from the caps requires a **two-thirds vote of all three boards** &mdash; the "black swan" mechanism for extraordinary circumstances.
+      Deviation from the caps requires a **two-thirds vote of all three boards** &ndash; the "black swan" mechanism for extraordinary circumstances.
 
       > Sample ballot language: "Shall the Town of Marblehead be allowed to assess an additional $15M [or $12M, or $9M] in real estate and property taxes for purposes of operating the municipal government and public schools for the fiscal year beginning July 1, 2026?"
     key_speakers: ["Dan Fox (chair)", "Matt Fernald (CFO)", "Moses"]
@@ -165,14 +165,14 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 8500
     end_seconds: 9300
-    headline: "Essex Tech assessment jumps to $750K &mdash; and the trajectory is the bigger story"
+    headline: "Essex Tech assessment jumps to $750K &ndash; and the trajectory is the bigger story"
     dek: "Lottery seats grew from 35 to 39; line item up 60% over two years; FinCom may seek state-level relief."
     summary: |
       Article 21 approved at **$749,920** for the FY27 assessment. The trajectory matters more than the number:
 
       | Year | Assessment | Change |
       |------|-----------:|-------:|
-      | FY25 | $468,000   | &mdash;     |
+      | FY25 | $468,000   | &ndash;     |
       | FY26 | $627,000   | +34% |
       | FY27 | **$749,920** | +20% |
 
@@ -191,7 +191,7 @@ topic_segments:
     end_seconds: 8500
     headline: "Fire-union contract held for board review; pay schedules approved at 3%"
     dek: "Board hasn't seen the firefighter agreement; reviewing Tuesday. Article 31 indefinitely postponed."
-    summary: "Article 19 (fire collective bargaining) held &mdash; board has not seen the agreement yet, meeting scheduled for the following Tuesday. Article 31 (administrative benefit amendment) indefinitely postponed. Pay-schedule articles 15-18 approved with uniform 3% increases (town clerk at $97,460). Resident Terry Tollef (online) asked whether the MOU's contractual-raise constraints apply to individual administrator and department-head contracts as well as union contracts; staff confirmed all are bound by the MOU budget growth assumptions."
+    summary: "Article 19 (fire collective bargaining) held &ndash; board has not seen the agreement yet, meeting scheduled for the following Tuesday. Article 31 (administrative benefit amendment) indefinitely postponed. Pay-schedule articles 15-18 approved with uniform 3% increases (town clerk at $97,460). Resident Terry Tollef (online) asked whether the MOU's contractual-raise constraints apply to individual administrator and department-head contracts as well as union contracts; staff confirmed all are bound by the MOU budget growth assumptions."
     key_speakers: ["Dan Fox (chair)", "Terry Tollef (resident, online)"]
   - topic: admin-housekeeping
     topic_confidence: 0.90
@@ -237,7 +237,7 @@ topic_segments:
       School student mock public meeting, Marblehead Harbor Rotary Pops
       Concert; Marblehead Counseling Second Annual Community Champion
       Celebration proclamation for May 7). Change order #3 for the Village
-      Street bridge replacement contract approved &mdash; $55,000 extension to
+      Street bridge replacement contract approved &ndash; $55,000 extension to
       Dec 31, 2026, funded with Chapter 90 dollars. One-day liquor licenses
       approved for Coastline Marine (8 Sewall St, May 2) and Steven Decor
       (4 Quick St, April 25). Student-rep interview for Marblehead Task
@@ -248,7 +248,7 @@ topic_segments:
 associated_documents:
   - label: "FY27 Annual Town Meeting Warrant (referenced articles 3-36)"
     note: "Bulk motion approving articles 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 15-18, 23, 31, 33, 36; holds on 19, 21, 29, 34. Numbers given in the motion match the warrant; verify against the published warrant book."
-  - label: "Article 11 (2022) &mdash; $12M five-year road and sidewalk repair authorization"
+  - label: "Article 11 (2022) &ndash; $12M five-year road and sidewalk repair authorization"
     note: "Referenced by resident Amy Hurd in objection to Bouvier Road sidewalk additions"
   - label: "Tri-board MOU on FY27-FY29 override draws"
     note: "Six-page draft, not voted on this meeting; awaiting School Committee vote (next day)"
@@ -268,19 +268,19 @@ ingest:
   notes: "Transcript is plain-text with no speaker labels or timestamps. Speaker attributions are inferred from context. start_seconds in topic_segments are estimates based on the position of each topic in the transcript (280 lines / 177 minutes = ~38 sec/line); they orient the reader but do not reflect verified Vimeo timecodes."
 ---
 
-> **Note on this transcript.** The source recording for this meeting is the Zoom video on MHTV ([vimeo.com/1181632658](https://vimeo.com/1181632658), 177 minutes). The text below is a machine-cleaned transcript that does not preserve speaker boundaries or timestamps &mdash; quotations and topic timing are approximate. For verbatim quotes, please confirm against the source video.
+> **Note on this transcript.** The source recording for this meeting is the Zoom video on MHTV ([vimeo.com/1181632658](https://vimeo.com/1181632658), 177 minutes). The text below is a machine-cleaned transcript that does not preserve speaker boundaries or timestamps &ndash; quotations and topic timing are approximate. For verbatim quotes, please confirm against the source video.
 
 ## Public comment (approx. 0:00 &ndash; 13:00)
 
-**Eileen Good, 44 Brandywine Drive** &mdash; asked the board to include the sustainability coordinator (titled "assistant planner and coordinator") in Tier 1 of the override. Cited grant-related revenue: "$150,000 a year, which would be a million over five years."
+**Eileen Good, 44 Brandywine Drive** &ndash; asked the board to include the sustainability coordinator (titled "assistant planner and coordinator") in Tier 1 of the override. Cited grant-related revenue: "$150,000 a year, which would be a million over five years."
 
-**Elaine Lansey, Ida Road** &mdash; urged keeping the Community Planning and Development Department in Tier 1, listing recent projects: Marblehead Shipyard Resiliency, State Street Landing, Cliff Street UST closeout, Village Street bridge replacement, Elm Street playground, Devereux Beach ADA improvements, Five Corners redesign, Rail Trail improvements.
+**Elaine Lansey, Ida Road** &ndash; urged keeping the Community Planning and Development Department in Tier 1, listing recent projects: Marblehead Shipyard Resiliency, State Street Landing, Cliff Street UST closeout, Village Street bridge replacement, Elm Street playground, Devereux Beach ADA improvements, Five Corners redesign, Rail Trail improvements.
 
-**Tom McMahon, 16 Shorewood Road** &mdash; raised social hosting laws and asked Chair Dan Fox two questions: (1) do you support Marblehead police enforcing social hosting laws, (2) will you attend the April 14 Board of Health meeting with DA Paul Tucker? Chair declined to respond as the item was not on the agenda (Open Meeting Law).
+**Tom McMahon, 16 Shorewood Road** &ndash; raised social hosting laws and asked Chair Dan Fox two questions: (1) do you support Marblehead police enforcing social hosting laws, (2) will you attend the April 14 Board of Health meeting with DA Paul Tucker? Chair declined to respond as the item was not on the agenda (Open Meeting Law).
 
-**Amy Hurd, 36 Bouvier Road** &mdash; described DPW work on March 30 to add new sidewalks under the 2022 Article 11 road and sidewalk repair authorization ($12M over five years). She argued: (1) the article authorized repair, not new construction; (2) the town bylaw requires notice before work begins, which was not given; (3) Bouvier Road was not on the prioritized safety-study list; (4) the new sidewalks terminate mid-block. She had reached out to DPW, engineering, and the board with no response.
+**Amy Hurd, 36 Bouvier Road** &ndash; described DPW work on March 30 to add new sidewalks under the 2022 Article 11 road and sidewalk repair authorization ($12M over five years). She argued: (1) the article authorized repair, not new construction; (2) the town bylaw requires notice before work begins, which was not given; (3) Bouvier Road was not on the prioritized safety-study list; (4) the new sidewalks terminate mid-block. She had reached out to DPW, engineering, and the board with no response.
 
-**Albert Jordan** &mdash; supported attendance at the April 14 Paul Tucker meeting.
+**Albert Jordan** &ndash; supported attendance at the April 14 Paul Tucker meeting.
 
 ## Town Administrator update (approx. 13:00 &ndash; 16:00)
 
@@ -292,13 +292,13 @@ Five Corners Improvement Project commenced (survey crew visible); public input p
 
 ## Shindonisi liquor license revocation (approx. 18:00 &ndash; 22:00)
 
-Continuation of public hearing opened November 13, 2024, on revocation of wine-malt beverage license 00042-RS-0656 at 1 Atlantic Ave. Owner Greg Lewis reported soft-opening date of April 25 pending one remaining inspection &mdash; the 304 life-safety inspection (instituted post-Rhode Island club fire). Hearing continued to April 22 to align with the inspection; owner does not need to attend the April 22 meeting if the 304 sign-off is in hand.
+Continuation of public hearing opened November 13, 2024, on revocation of wine-malt beverage license 00042-RS-0656 at 1 Atlantic Ave. Owner Greg Lewis reported soft-opening date of April 25 pending one remaining inspection &ndash; the 304 life-safety inspection (instituted post-Rhode Island club fire). Hearing continued to April 22 to align with the inspection; owner does not need to attend the April 22 meeting if the 304 sign-off is in hand.
 
-## Override discussion &mdash; CFO Matt Fernald presentation (approx. 22:00 &ndash; 1:48:00)
+## Override discussion &ndash; CFO Matt Fernald presentation (approx. 22:00 &ndash; 1:48:00)
 
 **Structure.** Two ballot questions. Question 1 is the operating-budget override, structured in three tiers; Question 2 is a separate $2.3M question on whether to replace the new curbside trash fee with a property-tax increase.
 
-**Tier mechanics.** Three tiers are stacked &mdash; Tier 2 contains everything in Tier 1 plus additions; Tier 3 contains everything in Tier 2 plus additions. Voters can vote yes or no on each tier independently. The highest tier that receives a majority yes is the levy increase. Order of presentation on the ballot is still being decided; staff cited Stoneham and Melrose as examples where the highest tier appeared first.
+**Tier mechanics.** Three tiers are stacked &ndash; Tier 2 contains everything in Tier 1 plus additions; Tier 3 contains everything in Tier 2 plus additions. Voters can vote yes or no on each tier independently. The highest tier that receives a majority yes is the levy increase. Order of presentation on the ballot is still being decided; staff cited Stoneham and Melrose as examples where the highest tier appeared first.
 
 **Three-year draw schedule.** The total authorization covers FY27, FY28, and FY29. The board committed not to seek another general override before FY2030. Annual draws are sized so that taxes step up over three years rather than spiking in year one.
 
@@ -336,17 +336,17 @@ Tier 3 adds to Tier 2: 2 more police; 4 more firefighters (6 total); 1 grant wri
 
 **Public comment during this section.** A resident (unnamed in the transcript) said her main confusion is: voting structure aside, what do we lose if we don't pass each tier? She urged the board to lead with what is lost, not what is restored.
 
-**George Rosenblatt, Avenue M** &mdash; questioned why tiers are not separate ballot questions and worried about elderly voters who may stop after the first question.
+**George Rosenblatt, Avenue M** &ndash; questioned why tiers are not separate ballot questions and worried about elderly voters who may stop after the first question.
 
-**Christine Duchow, Three Dannys Way** &mdash; asked about two-family-home trash fee treatment and noted Marblehead historically uses median household value in tax presentations; she has the data files going back to the 1990s and offered to verify.
+**Christine Duchow, Three Dannys Way** &ndash; asked about two-family-home trash fee treatment and noted Marblehead historically uses median household value in tax presentations; she has the data files going back to the 1990s and offered to verify.
 
-**Constance (Europe)** &mdash; ballot-question-committee member; asked that the presentation be posted before the meeting, and pressed the board to clarify how "highest tier with a majority wins" works in plain language. Walked through the unusual case where Tier 1 has 100% yes but Tier 3 has 51% yes &mdash; Tier 3 is the result.
+**Constance (Europe)** &ndash; ballot-question-committee member; asked that the presentation be posted before the meeting, and pressed the board to clarify how "highest tier with a majority wins" works in plain language. Walked through the unusual case where Tier 1 has 100% yes but Tier 3 has 51% yes &ndash; Tier 3 is the result.
 
-**Nick Ward, Rolleston Road (online)** &mdash; raised three points: (1) new growth taxation is a third lever for balancing the budget that the board does not discuss; (2) the schools at this point are providing "less education," not just running more efficiently, after multiple failed overrides; (3) DOR data ranks Marblehead 20th of 351 communities in per-capita income, which should temper claims about widespread financial hardship.
+**Nick Ward, Rolleston Road (online)** &ndash; raised three points: (1) new growth taxation is a third lever for balancing the budget that the board does not discuss; (2) the schools at this point are providing "less education," not just running more efficiently, after multiple failed overrides; (3) DOR data ranks Marblehead 20th of 351 communities in per-capita income, which should temper claims about widespread financial hardship.
 
-**Jack Atkins, 67 Beach Street** &mdash; asked for an estimate of what each year's change does to the tax rate. Board agreed to produce this.
+**Jack Atkins, 67 Beach Street** &ndash; asked for an estimate of what each year's change does to the tax rate. Board agreed to produce this.
 
-## Memorandum of Understanding &mdash; tri-board override agreement (approx. 1:48:00 &ndash; 2:18:00)
+## Memorandum of Understanding &ndash; tri-board override agreement (approx. 1:48:00 &ndash; 2:18:00)
 
 Six-page MOU among Select Board, School Committee, and Finance Committee. Not voted at this meeting; awaiting School Committee vote (next day).
 
@@ -363,11 +363,11 @@ Six-page MOU among Select Board, School Committee, and Finance Committee. Not vo
 - State of the Town will include override budgeted vs. spent (using Munis / ClearGov).
 - The MOU does not cover Question 2 (trash); that is a standalone decision.
 
-**Kate (resident)** &mdash; asked the board to revise the "Restore / Stabilize / Invest" labels since Tier 1 is a partial restore, Tier 2 is also still a reduction (not a stabilization), and Tier 3 is closer to maintenance. Board agreed the labels should be reconsidered.
+**Kate (resident)** &ndash; asked the board to revise the "Restore / Stabilize / Invest" labels since Tier 1 is a partial restore, Tier 2 is also still a reduction (not a stabilization), and Tier 3 is closer to maintenance. Board agreed the labels should be reconsidered.
 
-**Christine Duchow** &mdash; emphasized that schools have been engaged in a multi-year headcount reduction tied to declining enrollment, and asked the board to communicate that the override is not "going back to where we were last year."
+**Christine Duchow** &ndash; emphasized that schools have been engaged in a multi-year headcount reduction tied to declining enrollment, and asked the board to communicate that the override is not "going back to where we were last year."
 
-**Terry Tollef (online)** &mdash; asked whether the MOU's contractual-raise limits cover individual administrator / department-head contracts as well as union contracts. Staff confirmed all are bound by the MOU budget assumptions.
+**Terry Tollef (online)** &ndash; asked whether the MOU's contractual-raise limits cover individual administrator / department-head contracts as well as union contracts. Staff confirmed all are bound by the MOU budget assumptions.
 
 ## FY27 warrant articles (approx. 2:18:00 &ndash; 2:46:00)
 
@@ -375,8 +375,8 @@ Articles voted on in a single bulk motion (with holds on 19, 21, 29, 34):
 
 | Article | Amount | Item |
 |---|---|---|
-| 3 | &mdash; | Consent articles (a) liability, (b) trust property (none), (c) lease town property (none), (d) contracts over three years, (e) conservation financial assistance |
-| 4 | &mdash; | Amend zoning bylaw &mdash; 3A multifamily overlay district |
+| 3 | &ndash; | Consent articles (a) liability, (b) trust property (none), (c) lease town property (none), (d) contracts over three years, (e) conservation financial assistance |
+| 4 | &ndash; | Amend zoning bylaw &ndash; 3A multifamily overlay district |
 | 6 | $60,182.27 | Unpaid amounts of funds |
 | 7 | $4,205,300 | Departmental revolving funds |
 | 8 | $0 | Equipment purchase (several departments) |
@@ -385,24 +385,24 @@ Articles voted on in a single bulk motion (with holds on 19, 21, 29, 34):
 | 11 | $25,000 | Walls and fences (halved from $50K "because we couldn't afford it") |
 | 12 | $200,000 | Stormwater construction (halved from $400K) |
 | 13a / 13b | $2,400,000 / $2,100,000 | Water / sewer department construction |
-| 13c | &mdash; | Water and sewer commission claims |
+| 13c | &ndash; | Water and sewer commission claims |
 | 15 / 16 / 17 | 3% | Pay schedules (administrative / traffic supervisors / seasonal-temporary) |
 | 18 | $97,460 | Town clerk compensation |
 | 23 | $122,762.03 | Expense of several departments |
-| 31 | &mdash; | Administrative benefit amendment &mdash; indefinitely postponed |
-| 33 | &mdash; | Amend general bylaws &mdash; prohibition of cryptocurrency automatic teller machines |
-| 36 | &mdash; | Amend bylaws related to DPW (housekeeping) |
+| 31 | &ndash; | Administrative benefit amendment &ndash; indefinitely postponed |
+| 33 | &ndash; | Amend general bylaws &ndash; prohibition of cryptocurrency automatic teller machines |
+| 36 | &ndash; | Amend bylaws related to DPW (housekeeping) |
 
 **Held articles:**
 
-- **Article 19** &mdash; fire collective bargaining. Board has not seen the agreement; meeting Tuesday.
-- **Article 21** &mdash; Essex North Shore Agricultural & Technical at $749,920 (later approved separately). Trajectory: $468K (FY25) &rarr; $627K (FY26) &rarr; $750K (FY27). School moved to a lottery system; allocated seats rose from 35 to 39; cost per student rises ~3%/year. Board flagged this as a structural growth risk and an example of an externally-imposed cost the MOU cannot control. Finance Committee is engaging the North Shore Collaborative and may pursue state-level relief.
-- **Article 29** &mdash; override tiers. Held pending School Committee vote.
-- **Article 34** &mdash; dissolve Public Works Committee. Held for further discussion (see below).
+- **Article 19** &ndash; fire collective bargaining. Board has not seen the agreement; meeting Tuesday.
+- **Article 21** &ndash; Essex North Shore Agricultural & Technical at $749,920 (later approved separately). Trajectory: $468K (FY25) &rarr; $627K (FY26) &rarr; $750K (FY27). School moved to a lottery system; allocated seats rose from 35 to 39; cost per student rises ~3%/year. Board flagged this as a structural growth risk and an example of an externally-imposed cost the MOU cannot control. Finance Committee is engaging the North Shore Collaborative and may pursue state-level relief.
+- **Article 29** &ndash; override tiers. Held pending School Committee vote.
+- **Article 34** &ndash; dissolve Public Works Committee. Held for further discussion (see below).
 
-## Article 34 / 35 &mdash; Public Works Committee debate
+## Article 34 / 35 &ndash; Public Works Committee debate
 
-Public Works Committee was created in 1970, before the Town Administrator role existed. The Select Board originally placed Article 34 (dissolve) on the warrant. Some members had since become persuaded the committee provides real coordination value &mdash; Jim cited the Brown School Building Committee underground utility work and Shelly Bedrosian's Reynolds Playground project as recent successes. Town Administrator Thatcher argued the committee is structurally a conflict because, as TA, he would be one member of a committee made up of his own subordinates; he prefers the TA chain of command. Moses proposed that a redesigned committee &mdash; chaired by the TA &mdash; could preserve the inter-departmental coordination while resolving the governance issue. Article 35 (modernize the committee) was referenced but not discussed in detail. Board held both pending further conversations with proponents.
+Public Works Committee was created in 1970, before the Town Administrator role existed. The Select Board originally placed Article 34 (dissolve) on the warrant. Some members had since become persuaded the committee provides real coordination value &ndash; Jim cited the Brown School Building Committee underground utility work and Shelly Bedrosian's Reynolds Playground project as recent successes. Town Administrator Thatcher argued the committee is structurally a conflict because, as TA, he would be one member of a committee made up of his own subordinates; he prefers the TA chain of command. Moses proposed that a redesigned committee &ndash; chaired by the TA &ndash; could preserve the inter-departmental coordination while resolving the governance issue. Article 35 (modernize the committee) was referenced but not discussed in detail. Board held both pending further conversations with proponents.
 
 ## Overnight parking ban for street sweeping (approx. 2:46:00 &ndash; 2:51:00)
 
@@ -410,7 +410,7 @@ Original motion: April 20-24, 12:01 AM &ndash; 7:00 AM. Board flagged that this 
 
 ## Licensing and consent agenda (approx. 2:51:00 &ndash; 2:57:00)
 
-Eastern Yacht Club pool license renewed (42-44 Foster Street, Manager Jared Shawnee). Dolphin Yacht Club local Sunday entertainment license renewed. Consent agenda approved: Abbot Hall reservations (Marblehead School of Music June 13-14; National Prayer Day May 7 &mdash; bell-ringing at noon then 10 minutes in the Select Board room; Marblehead Charter School student mock public meeting April 8; Marblehead Harbor Rotary Pops Concert December 12); Marblehead Counseling Second Annual Community Champion Celebration proclamation for May 7.
+Eastern Yacht Club pool license renewed (42-44 Foster Street, Manager Jared Shawnee). Dolphin Yacht Club local Sunday entertainment license renewed. Consent agenda approved: Abbot Hall reservations (Marblehead School of Music June 13-14; National Prayer Day May 7 &ndash; bell-ringing at noon then 10 minutes in the Select Board room; Marblehead Charter School student mock public meeting April 8; Marblehead Harbor Rotary Pops Concert December 12); Marblehead Counseling Second Annual Community Champion Celebration proclamation for May 7.
 
 Change order #3 for the Village Street bridge replacement (contract 2023-003 with Freeman Peterson Inc.) approved at $55,000, extending the contract through December 31, 2026. Chapter 90 funded.
 

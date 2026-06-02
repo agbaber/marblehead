@@ -22,7 +22,7 @@ summary_card:
 
   decisions:
     - "Approved Portugal field trip (Apr 15-24, 2026); same vendor and tour guide Haime Crystal; chaperones Dan Richards, Erin Bark, Jay Gudara, Kelly"
-    - "Approved FY27 line-item budget at $47,620,287 &mdash; a $3,157,460 reduction; 22 positions affected (18.25 FTE; 11 vacant, 11 currently filled)"
+    - "Approved FY27 line-item budget at $47,620,287 &ndash; a $3,157,460 reduction; 22 positions affected (18.25 FTE; 11 vacant, 11 currently filled)"
     - "Endorsed school-side override structure: Tier 1 $6.2M, Tier 2 $7.2M, Tier 3 $8.5M over three years; schools draw $0 in FY27 across all tiers"
     - "Voted to support draft tri-board MOU on the FY27-FY29 override framework, subject to numbers being added to the override structure section"
     - "Approved bills consent: schedules totaling $443,690.77 and meeting minutes from March 12 and March 27, 2026"
@@ -56,7 +56,7 @@ topic_segments:
     headline: "Magic Coalition takes its anti-hate message to Village School next"
     dek: "Student-led group formed after the October 7 swastika incident plans an assembly for sixth-graders at the start of June."
     summary: |
-      Five high-school students &mdash; **Michael Labosier**, **Max Colin**, **Don Obesi**, **Caleb Sidman** (juniors) and **Lucy Molinari** (sophomore) &mdash; presented the work of **Marblehead High School's Magic Coalition**: **Marble Headers Alliance for Growth, Inclusion, and Connection.**
+      Five high-school students &ndash; **Michael Labosier**, **Max Colin**, **Don Obesi**, **Caleb Sidman** (juniors) and **Lucy Molinari** (sophomore) &ndash; presented the work of **Marblehead High School's Magic Coalition**: **Marble Headers Alliance for Growth, Inclusion, and Connection.**
 
       The group formed in response to the October 7 incident in which a swastika was reportedly drawn in a second-floor men's bathroom. Existing reporting channels for hate incidents had not produced the result students wanted, so a peer-led structure was created to give students, teachers, and the broader community a clearer way to speak up.
 
@@ -64,13 +64,13 @@ topic_segments:
 
       - Ran a **full-school assembly** during MAGIC block, broken into grade-level sessions (freshmen, sophomores, juniors, seniors).
       - Set up **suggestion boxes** around the building.
-      - Planning a **Village School (sixth-grade) assembly** at end of May / start of June &mdash; aiming to reach younger students before patterns set in.
+      - Planning a **Village School (sixth-grade) assembly** at end of May / start of June &ndash; aiming to reach younger students before patterns set in.
 
       > "Hate is not necessarily in someone's heart, but more in their surroundings and in their environment. When someone is raised in an environment where they don't know what their words mean, then it leads to things like this with repeated acts of hate happening."
 
       > "We're really trying to provide hope in the students' minds that they have a place to go if they feel they're being discriminated against. We really just want to make people feel comfortable for who they are."
 
-      The peer-to-peer framing was deliberate &mdash; students argued the message lands differently from a peer than from a teacher. Committee thanked the group for the work.
+      The peer-to-peer framing was deliberate &ndash; students argued the message lands differently from a peer than from a teacher. Committee thanked the group for the work.
     key_speakers: ["Michael Labosier (student)", "Max Colin (student)", "Don Obesi (student)", "Caleb Sidman (student)", "Lucy Molinari (student)"]
 
   - topic: school-budget
@@ -86,8 +86,8 @@ topic_segments:
 
       ### Position changes (22 total / 18.25 FTE)
 
-      - **11 currently filled** &mdash; reduction in force, subject to bumping under the unit contract.
-      - **11 currently unfilled** &mdash; vacancies in the budget that won't be funded.
+      - **11 currently filled** &ndash; reduction in force, subject to bumping under the unit contract.
+      - **11 currently unfilled** &ndash; vacancies in the budget that won't be funded.
 
       ### Where the cuts land
 
@@ -105,11 +105,11 @@ topic_segments:
 
       ### The prepayment
 
-      The biggest single move was **prepaying $1.5M of FY27 out-of-district tuition** from the FY26 unencumbered balance. The reserve fell from $12.1M last year to a target of **$1.5M** &mdash; spending the safety net to keep teachers in classrooms.
+      The biggest single move was **prepaying $1.5M of FY27 out-of-district tuition** from the FY26 unencumbered balance. The reserve fell from $12.1M last year to a target of **$1.5M** &ndash; spending the safety net to keep teachers in classrooms.
 
       Three remaining safety nets after the move: **circuit breaker** (SPED reimbursement); a smaller **SPED stabilization fund** (requires town meeting authorization); and the **Finance Committee stabilization fund** (broad, hard to access).
 
-      > "I would rather risk one more year than have any impact &mdash; if we can reduce the impact on education for another year, hopefully forever, but for another year, I think it's more critical than us holding something in reserve."
+      > "I would rather risk one more year than have any impact &ndash; if we can reduce the impact on education for another year, hopefully forever, but for another year, I think it's more critical than us holding something in reserve."
 
       Build assumption: 6% over prior-year budget. Plus **$540K** in unanticipated FY27 increases (incl. Educational Consortium 9.4% average / 12% high-end tuition increase notified one week prior) that had to be absorbed.
     key_speakers: ["John (Superintendent)", "Mike (Asst Supt of Finance)", "Jen (chair)", "Kate", "Henry", "Melissa", "Al"]
@@ -121,7 +121,7 @@ topic_segments:
     headline: "Schools endorse $6.2M / $7.2M / $8.5M override tiers; FY27 school draw is zero"
     dek: "Vote 4-0 after a member flagged \"value-statement\" language in the slide deck; superintendent agreed to revise."
     summary: |
-      Committee endorsed the school-department piece of the tri-board override structure, three tiers over three years. Across all tiers, **schools draw $0 from the override in FY27** &mdash; the cuts above are the FY27 plan regardless of the ballot outcome.
+      Committee endorsed the school-department piece of the tri-board override structure, three tiers over three years. Across all tiers, **schools draw $0 from the override in FY27** &ndash; the cuts above are the FY27 plan regardless of the ballot outcome.
 
       ### What each tier covers
 
@@ -135,7 +135,7 @@ topic_segments:
 
       ### Procedural pushback
 
-      > **Jen (chair):** "Without an override, these shortfalls compounded cannot be resolved within the levy limit &mdash; you've got school committee members involved in this when this was not the directive. It will be the will of this entire committee to decide how we want to go forward."
+      > **Jen (chair):** "Without an override, these shortfalls compounded cannot be resolved within the levy limit &ndash; you've got school committee members involved in this when this was not the directive. It will be the will of this entire committee to decide how we want to go forward."
 
       Jen flagged the override slide deck for **finance-law-adjacent value statements** the committee cannot advocate, and pressed the superintendent to revise. Acknowledged. The deck was authored collaboratively (administration plus Kate and Melissa as members of the working group) but the messaging will be tightened before public release.
 
@@ -178,7 +178,7 @@ topic_segments:
       - **Reserved for next year:** **$1.5M** to subsidize the FY27 out-of-district tuition line via prepayment (driving the budget vote later in the agenda).
       - **March surprises:** HVAC failures at Brown and Glover; bus repairs; elevator repairs. "When it rains, it pours."
 
-      Roof projects in motion: **Veterans Middle School** roof restarting within two weeks; **Marblehead High School** roof &mdash; three small sections done during April vacation (the section above the meeting room, a section by the concession stand, and one on the far side). Sections selected to avoid HVAC/exhaust units. "Praying for nice weather."
+      Roof projects in motion: **Veterans Middle School** roof restarting within two weeks; **Marblehead High School** roof &ndash; three small sections done during April vacation (the section above the meeting room, a section by the concession stand, and one on the far side). Sections selected to avoid HVAC/exhaust units. "Praying for nice weather."
     key_speakers: ["Mike (Asst Supt of Finance)"]
 
   - topic: recreation-events
@@ -210,11 +210,11 @@ topic_segments:
       Superintendent's announcements covered the week's community work:
 
       - **Harry Ki**, MHS '11 alum and co-producer of the Broadway show *Suffs*, came to work with the MHS women's ensemble on the show's final number, performed at Marblehead Little Theater. Thanks to Colleen for the connection.
-      - **May 4 Town Meeting parking** &mdash; participants getting VIP parking at 5:00 PM (meeting moves to MHS field house).
-      - **Drive to Stay Alive** &mdash; Essex County DA's office programming for senior students and parents on substance abuse, social hosting, and prom-season safety. Presenters: Kathy and Chris Sullivan.
-      - **Joint letter** drafted by Chief King, DA Paul Tucker, and the Superintendent on the town's collective commitment to student safety &mdash; to be released shortly. All three will sit on a panel at the **April 14 Board of Health meeting** at Mary Alley, 7:00 PM.
+      - **May 4 Town Meeting parking** &ndash; participants getting VIP parking at 5:00 PM (meeting moves to MHS field house).
+      - **Drive to Stay Alive** &ndash; Essex County DA's office programming for senior students and parents on substance abuse, social hosting, and prom-season safety. Presenters: Kathy and Chris Sullivan.
+      - **Joint letter** drafted by Chief King, DA Paul Tucker, and the Superintendent on the town's collective commitment to student safety &ndash; to be released shortly. All three will sit on a panel at the **April 14 Board of Health meeting** at Mary Alley, 7:00 PM.
       - **MECCO advocacy day** at the State House the following Monday. Funding for the program may be reduced; a transportation collaboration with Swampscott is being piloted to absorb any cuts.
-      - **COA panel** with all Marblehead department heads hosted by the Select Board &mdash; first time the format had been tried, well-received with ~30 community members.
+      - **COA panel** with all Marblehead department heads hosted by the Select Board &ndash; first time the format had been tried, well-received with ~30 community members.
 
       Principal shoutouts: MVMS Tech Department (MCAS testing transition); Mary Davies (Village substitute, decade-plus); Eileen DeMoore (Brown music teacher, second-year live arrival concert program).
     key_speakers: ["John (Superintendent)"]
@@ -230,7 +230,7 @@ topic_segments:
 
       Athletic Director Ken Cant declared surplus on portable basketball nets, field sweepers, and miscellaneous broken equipment totaling roughly **$1,100**. Standard end-of-year housekeeping. Approved.
 
-      **Tommo Tackle** at 104 Highland St, Salem donated a rod/reel combination ($140), a $25 gift certificate, and a $50 gift certificate &mdash; total **$215** &mdash; for the Borndale outdoor-education trip. Phys-ed director Steve Vulpi worked with the shop. Thank-you noted to Tommo's. Approved.
+      **Tommo Tackle** at 104 Highland St, Salem donated a rod/reel combination ($140), a $25 gift certificate, and a $50 gift certificate &ndash; total **$215** &ndash; for the Borndale outdoor-education trip. Phys-ed director Steve Vulpi worked with the shop. Thank-you noted to Tommo's. Approved.
     key_speakers: ["John (Superintendent)", "Kate", "Henry", "Melissa", "Al"]
 
   - topic: admin-housekeeping
@@ -242,8 +242,8 @@ topic_segments:
     summary: |
       Two committee meeting dates moved:
 
-      - **June 18 &rarr; June 11** &mdash; aligns with the post-election cycle so new membership/sub-committee assignments can be sorted quickly after the June ballot.
-      - **April 16 &rarr; April 30** &mdash; Jen and Melissa both unavailable on the 16th; the 23rd is school vacation week so the 30th is the next workable Thursday.
+      - **June 18 &rarr; June 11** &ndash; aligns with the post-election cycle so new membership/sub-committee assignments can be sorted quickly after the June ballot.
+      - **April 16 &rarr; April 30** &ndash; Jen and Melissa both unavailable on the 16th; the 23rd is school vacation week so the 30th is the next workable Thursday.
 
       Also affirmed: executive session minutes from **September 12, 2025** and **October 10, 2025** remain under non-disclosure following the March 19, 2026 re-review.
     key_speakers: ["Jen (chair)", "Melissa", "Kate"]
@@ -259,7 +259,7 @@ topic_segments:
       Roof project at Veterans Middle School starting up in two weeks; Marblehead High School roof done in three small sections during April vacation. Long-lead HVAC and steel-fabrication items being tracked closely; delivery on schedule. CORI approvals underway for site contractors.
 
       ### CPAC (Community Preservation Advisory Committee)
-      Meeting was short on agenda items &mdash; most resident questions were about the budget and override. CPAC is recruiting new members and a chair; reach out if interested.
+      Meeting was short on agenda items &ndash; most resident questions were about the budget and override. CPAC is recruiting new members and a chair; reach out if interested.
 
       ### Wellness Advisory Committee
       Bulk of the year's work was revising the wellness policy (already approved). New items discussed: distracted driving (Kate flagged), new DESE guidance items, and a draft **measles protocol** by school nurse Megan in case of an outbreak. The committee will continue meeting on implementation.
@@ -310,23 +310,23 @@ ingest:
     POC is "regular meeting, nothing big happening on the news cycle."
 ---
 
-> **Note on this transcript.** Source is the School Committee's YouTube channel ([SC YouTube](https://www.youtube.com/channel/UC3mmZuBmhKUJsXeWbqwFQJQ)) &mdash; the specific video for this meeting has not been resolved here, so timestamp jump-links go to the channel root, not to a per-meeting URL. The text below is a machine-cleaned transcript with no speaker boundaries or timestamps preserved. Attributions are inferred from context. For verbatim quotes, please confirm against the source video.
+> **Note on this transcript.** Source is the School Committee's YouTube channel ([SC YouTube](https://www.youtube.com/channel/UC3mmZuBmhKUJsXeWbqwFQJQ)) &ndash; the specific video for this meeting has not been resolved here, so timestamp jump-links go to the channel root, not to a per-meeting URL. The text below is a machine-cleaned transcript with no speaker boundaries or timestamps preserved. Attributions are inferred from context. For verbatim quotes, please confirm against the source video.
 
 ## Superintendent's announcements and recognitions (approx. 0:00 &ndash; 15:00)
 
-**Harry Ki, MHS '11 / Broadway producer of *Suffs*** &mdash; came to Marblehead Little Theater to work with the MHS women's ensemble on the show's final number, and to talk to students about her Broadway journey. Thanks to Colleen.
+**Harry Ki, MHS '11 / Broadway producer of *Suffs*** &ndash; came to Marblehead Little Theater to work with the MHS women's ensemble on the show's final number, and to talk to students about her Broadway journey. Thanks to Colleen.
 
-**May 4 Town Meeting parking** &mdash; participants get VIP parking from 5:00 PM, moving inside MHS field house for the meeting.
+**May 4 Town Meeting parking** &ndash; participants get VIP parking from 5:00 PM, moving inside MHS field house for the meeting.
 
-**Drive to Stay Alive** &mdash; Essex County DA's office event for senior parents and students on substance abuse, social hosting, and prom-season safety. Presenters Kathy and Chris Sullivan.
+**Drive to Stay Alive** &ndash; Essex County DA's office event for senior parents and students on substance abuse, social hosting, and prom-season safety. Presenters Kathy and Chris Sullivan.
 
-**Joint safety letter** &mdash; Chief King, DA Paul Tucker, and Supt John drafted a joint letter; release imminent. All three will sit on a panel at the April 14 Board of Health meeting at Mary Alley (7:00 PM).
+**Joint safety letter** &ndash; Chief King, DA Paul Tucker, and Supt John drafted a joint letter; release imminent. All three will sit on a panel at the April 14 Board of Health meeting at Mary Alley (7:00 PM).
 
 **MECCO advocacy day at the State House** the following Monday. Possible state-level funding reduction next year; a transportation collaboration with Swampscott is being piloted to mitigate.
 
-**COA panel** &mdash; first-time format hosted by the Select Board with all Marblehead department heads. About 30 community members attended; well-received.
+**COA panel** &ndash; first-time format hosted by the Select Board with all Marblehead department heads. About 30 community members attended; well-received.
 
-**Principal shoutouts** &mdash; MVMS Tech Department (smooth same-day MCAS rollout), Mary Davies (Village substitute, decade-plus), Eileen DeMoore (Brown music teacher, second year of live morning concerts and an evening 1st-3rd grade concert).
+**Principal shoutouts** &ndash; MVMS Tech Department (smooth same-day MCAS rollout), Mary Davies (Village substitute, decade-plus), Eileen DeMoore (Brown music teacher, second year of live morning concerts and an evening 1st-3rd grade concert).
 
 ## Monthly financial update (approx. 15:00 &ndash; 25:00)
 
@@ -340,7 +340,7 @@ Students Michael Labosier, Max Colin, Don Obesi, Caleb Sidman (juniors) and Lucy
 
 Lead world-language teacher Kelly requested approval for a Portugal field trip April 15-24, 2026. Two base cities (Lisbon and Porto) chosen to reduce hotel-hopping. Same vendor and tour guide (Haime Crystal) as the previous trip. Chaperones: Dan Richards (admin), Erin Bark, Jay Gudara, and Kelly. Approved 5-0.
 
-## FY27 budget approval &mdash; line by line (approx. 50:00 &ndash; 1:30:00)
+## FY27 budget approval &ndash; line by line (approx. 50:00 &ndash; 1:30:00)
 
 Supt John framed the budget process. FY26 = $49,122,287; FY27 level-services would have been $50,773,633; approved FY27 = **$47,620,287**, a **$3,157,460** reduction. **22 positions** affected, 18.25 FTE; 11 currently filled, 11 unfilled. Areas of cost growth the district can't control: SPED out-of-district tuition (Educational Consortium notified the district one week prior of a 9.4% average / 12% high-end increase), transportation, contractual COLA and step.
 
@@ -354,9 +354,9 @@ Supt John presented the school-side override structure produced in the tri-board
 
 | Tier | 3-year total | School theme |
 |---|---:|---|
-| 1 | $6.2M | Prevent further damage &mdash; FY27 $0, FY28 $4.3M, FY29 $1.9M |
-| 2 | $7.2M | Get back to basics &mdash; adds tech lease + remove full-day K fee |
-| 3 | $8.5M | Invest in MHD's future &mdash; adds curriculum/PD, 18-22 SPED program, building capital fund |
+| 1 | $6.2M | Prevent further damage &ndash; FY27 $0, FY28 $4.3M, FY29 $1.9M |
+| 2 | $7.2M | Get back to basics &ndash; adds tech lease + remove full-day K fee |
+| 3 | $8.5M | Invest in MHD's future &ndash; adds curriculum/PD, 18-22 SPED program, building capital fund |
 
 Across all tiers: schools draw **$0** from the override in FY27; the 18.25 FTE cut in this budget cycle is not recommended for restoration in any tier; the cut tracks declining enrollment (down 3.8% since 2019, 86 fewer students projected next fall).
 
