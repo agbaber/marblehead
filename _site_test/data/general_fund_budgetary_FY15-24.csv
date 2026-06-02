@@ -1,0 +1,11 @@
+fiscal_year,total_revenues_budgetary,total_expenditures_budgetary,free_cash_appropriated,free_cash_source_row,source_acfr,notes
+FY15,71319549,70498077,4988974,"Original Budget NET CHANGE IN FUND BALANCE (negated)",data/acfr/FY15_ACFR.pdf,"Old schedule format; fc value is TOTAL budgeted fund balance use (operating + other), slightly broader than pure operating free cash"
+FY16,74056719,73195652,5428672,"Original Budget NET CHANGE IN FUND BALANCE (negated)",data/acfr/FY16_ACFR.pdf,"Old schedule format; fc value is TOTAL budgeted fund balance use"
+FY17,77059736,76863996,6640791,"Original Budget NET CHANGE IN FUND BALANCE (negated)",data/acfr/FY17_ACFR.pdf,"Old schedule format; fc value is TOTAL budgeted fund balance use. FinCom report gives operating portion as $6,025,000 (difference is other non-operating fund balance uses)."
+FY18,79734016,81764140,7667948,"Original Budget NET CHANGE IN FUND BALANCE (negated)",data/acfr/FY18_ACFR.pdf,"Old schedule format; fc value is TOTAL budgeted fund balance use. First year exp > rev on ACFR-budgetary basis."
+FY19,82544380,83265637,8310609,"Original Budget NET CHANGE IN FUND BALANCE (negated)",data/acfr/FY19_ACFR.pdf,"Old schedule format; fc value is TOTAL budgeted fund balance use. FinCom 2019 report first flags reliance as 'not sustainable'."
+FY20,84768374,85208855,8575000,"Use of free cash to reduce the tax rate (new schedule format)",data/acfr/FY20_ACFR.pdf,"New schedule format from FY20 onward; fc value is specifically operating (to reduce the tax rate), excludes capital/other uses"
+FY21,85386534,85798423,7200000,"Use of free cash to reduce the tax rate",data/acfr/FY21_ACFR.pdf,
+FY22,91452968,93580192,8792102,"Use of free cash to reduce the tax rate",data/acfr/FY22_ACFR.pdf,"FinCom 2022 report also shows amended total of $8,950,000 after a $142,102 collective bargaining supplemental; ACFR captures the pre-amendment original amount."
+FY23,95125712,96829408,10200000,"Use of free cash to reduce the tax rate",data/acfr/FY23_ACFR.pdf,"Peak year. Matches FinCom 2022 report (which covers FY23 budget adopted May 2022 ATM)."
+FY24,98789053,100103542,8000000,"Use of unassigned fund balance (Other Budgetary Items section)",data/acfr/FY24_ACFR.pdf,"Matches FinCom 2023 report which covers FY24 budget adopted May 2023 ATM."

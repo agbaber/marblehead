@@ -1,0 +1,194 @@
+municipality,fiscal_year,vote_date,win_loss,yes_votes,no_votes,vote_type,department,description,amount
+Arlington,1990,1989-06-01 00:00:00,LOSS,"5,805","6,078",Override,GENERAL OPERATING,Operating Expenses Of Town And Schools,2269528
+Arlington,1991,1990-06-01 00:00:00,WIN,"8,828","7,731",Override,GENERAL OPERATING,General Operating Budget,2520000
+Arlington,2006,2005-06-11 00:00:00,WIN,"7,126","6,570",Override,SCHOOL,Fund Town And School Budgets,6000000
+Arlington,2012,2011-06-07 00:00:00,WIN,"7,226","6,366",Override,GENERAL OPERATING,Funding Operating Budgets Of Town And School,6490000
+Arlington,2020,2019-06-11 00:00:00,WIN,"8,655","4,029",Override,GENERAL OPERATING,Town And School Operating Budget,5500000
+Arlington,2025,2023-11-07 00:00:00,WIN,"7,951","4,964",Override,GENERAL OPERATING,Operating Override,7000000
+Arlington,2027,2026-03-28 00:00:00,WIN,"9,829","3,855",Override,GENERAL OPERATING,Fund Town And School Operations,14800000
+Brookline,1995,1994-05-03 00:00:00,WIN,"5,958","5,072",Override,GENERAL OPERATING,General Expenditures,2960000
+Brookline,2009,2008-05-06 00:00:00,WIN,"5,236","4,305",Override,GENERAL OPERATING,"Funding School, Police, Fire, And Library Depts. Etc",6200000
+Brookline,2016,2015-05-05 00:00:00,WIN,"6,325","3,958",Override,SCHOOL,Fund Additional Enrollment In Brookline Public Schools And Expenditures In Municipal Departments,7665000
+Brookline,2019,2018-05-08 00:00:00,WIN,"5,412","2,371",Override,SCHOOL,Funding The Cost Of Expenditures In The Public Schools,6575425
+Brookline,2024,2023-05-02 00:00:00,WIN,"7,516","4,799",Override,GENERAL OPERATING,Question 2a Operating Override,11983367
+Cohasset,1990,1989-06-01 00:00:00,LOSS,953,"1,481",Override,EMPLOYEE BENEFITS,Funding Collective Bargaining Agreemen,64349
+Cohasset,1990,1989-06-01 00:00:00,LOSS,"1,097","1,354",Override,GENERAL OPERATING,General Operating Budget,303800
+Cohasset,1990,1989-06-01 00:00:00,WIN,"1,305","1,153",Override,GENERAL OPERATING,General Operating Budget,203800
+Cohasset,1990,1989-05-01 00:00:00,LOSS,"1,022","1,163",Override,GENERAL OPERATING,General Operating Budget,844000
+Cohasset,1991,1990-04-01 00:00:00,LOSS,"1,254","1,262",Override,GENERAL OPERATING,Town Operating Budget,120000
+Cohasset,1992,1991-05-01 00:00:00,WIN,"1,083",832,Override,GENERAL OPERATING,Fund Gen. Oper. Budget,142000
+Cohasset,1992,1991-05-01 00:00:00,LOSS,418,"1,470",Override,GENERAL GOVERNMENT,Rennovations/Imprmts/Town Property,30000
+Cohasset,1992,1991-05-01 00:00:00,LOSS,586,"1,312",Override,GENERAL GOVERNMENT,Fund Salary Increases For Town Employee'S,24653
+Cohasset,1992,1991-05-01 00:00:00,LOSS,622,"1,291",Override,PUBLIC WORKS & FACILITIES,Reconstructing An Intersection,3000
+Cohasset,1992,1991-05-01 00:00:00,LOSS,736,"1,169",Override,GENERAL GOVERNMENT,Fund Revaluation Cost,60000
+Cohasset,1992,1991-05-01 00:00:00,LOSS,760,"1,169",Override,GENERAL GOVERNMENT,Paint/Repair/Town Hall,20000
+Cohasset,1992,1991-05-01 00:00:00,WIN,"1,229",698,Override,HEALTH AND HUMAN SERVICE,Partially Fund Council On Age.Salary Budg,4169
+Cohasset,1993,1992-05-16 00:00:00,WIN,"1,107",892,Override,PUBLIC WORKS & FACILITIES,Funding Hazardous Waste Collection Day,15000
+Cohasset,1993,1992-05-16 00:00:00,WIN,"1,238",774,Override,GENERAL OPERATING,Town Operating Budget,377416
+Cohasset,1996,1995-05-13 00:00:00,WIN,"1,589","1,115",Override,GENERAL OPERATING,General Operating Budget,358000
+Cohasset,2000,1999-05-22 00:00:00,LOSS,"1,136","1,639",Override,GENERAL OPERATING,General Operating Expenses,612895
+Cohasset,2000,1999-05-22 00:00:00,LOSS,"1,254","1,535",Override,GENERAL OPERATING,General Operating Expenses,509554
+Cohasset,2000,1999-05-22 00:00:00,WIN,"1,413","1,364",Override,GENERAL OPERATING,General Operating Expenses,380000
+Cohasset,2002,2001-04-07 00:00:00,WIN,951,819,Override,GENERAL OPERATING,General Operating Expenses,300000
+Cohasset,2004,2003-04-05 00:00:00,WIN,"1,271","1,034",Override,GENERAL GOVERNMENT,General Operating Expenses,350000
+Cohasset,2005,2004-04-23 00:00:00,WIN,"1,379","1,228",Override,GENERAL OPERATING,Operational Expenses Of Town Government And School System,400000
+Framingham,1991,1990-04-01 00:00:00,WIN,"6,396","6,002",Override,HEALTH AND HUMAN SERVICE,Fund Council On Aging Budget,80000
+Framingham,1991,1990-04-01 00:00:00,LOSS,"5,280","7,118",Override,SCHOOL,Fund School Operating Budget,1200000
+Framingham,1991,1990-04-01 00:00:00,LOSS,"5,295","6,826",Override,CULTURE AND RECREATION,Fund Parks & Recr.Dept. Budget,50000
+Framingham,1991,1990-04-01 00:00:00,LOSS,"5,387","6,860",Override,PUBLIC SAFETY,Fund Portion Of Police Dept. Budget,100000
+Framingham,1991,1990-04-01 00:00:00,LOSS,"5,115","7,028",Override,HEALTH AND HUMAN SERVICE,Fund Youth Commission Oper. Budget,100000
+Framingham,1991,1990-04-01 00:00:00,WIN,"6,253","6,072",Override,CULTURE AND RECREATION,Fund Portion Of Library Oper. Budget,50000
+Framingham,1992,1991-04-01 00:00:00,LOSS,"4,369","5,426",Override,PUBLIC SAFETY,Funding Portion Of Police Dept. Budget,300000
+Framingham,1992,1991-04-01 00:00:00,LOSS,"4,554","5,266",Override,PUBLIC SAFETY,Funding Portion Of Fire Dept. Budget,700000
+Framingham,1992,1991-06-01 00:00:00,WIN,"6,932","6,594",Override,GENERAL OPERATING,Fund Gen. Operating Budget,4347699
+Framingham,2003,2002-06-11 00:00:00,WIN,"6,877","6,536",Override,GENERAL GOVERNMENT,Funding General Operating Expenses,7173239
+Hingham,1990,1989-04-01 00:00:00,LOSS,"2,777","3,032",Override,GENERAL OPERATING,School And Municipal Services,950000
+Hingham,1990,1989-04-01 00:00:00,LOSS,"2,591","3,365",Override,GENERAL OPERATING,School And Municipal Services,1900000
+Hingham,1991,1990-04-01 00:00:00,WIN,"4,823","3,081",Override,GENERAL OPERATING,General Operating Budget,875000
+Hingham,1992,1991-04-27 00:00:00,LOSS,"3,292","3,294",Override,GENERAL OPERATING,General Operating Expenses,1000000
+Hingham,1992,1991-09-01 00:00:00,LOSS,"3,934","4,271",Override,GENERAL OPERATING,Fund General Operating Budget,1000000
+Hingham,1994,1993-05-01 00:00:00,WIN,"3,268","2,623",Override,SCHOOL,Purpose Of Funding School Oper Expenses,485508
+Hingham,2005,2004-04-26 00:00:00,WIN,"2,363","1,370",Override,SCHOOL,Funding School Operations,753682
+Hingham,2010,2009-05-02 00:00:00,WIN,"3,095","1,540",Override,SCHOOL,Purpose Of Operation Of The New Elementary School,1100000
+Hingham,2024,2023-04-24 00:00:00,WIN,"3,515","2,123",Override,GENERAL OPERATING,Override,7890467
+Lexington,1991,1990-06-01 00:00:00,WIN,"6,584","5,721",Override,GENERAL OPERATING,General Operating Budget,1097829
+Lexington,1993,1992-06-15 00:00:00,WIN,"6,247","3,654",Override,PUBLIC WORKS & FACILITIES,Additional Taxes For Trash Disposal,2718092
+Lexington,1996,1995-06-12 00:00:00,WIN,"4,725","4,217",Override,PUBLIC WORKS & FACILITIES,Maintaining Public Open Space,29000
+Lexington,1996,1995-06-12 00:00:00,WIN,"4,915","4,033",Override,PUBLIC SAFETY,Police Salaries,102000
+Lexington,1996,1995-06-12 00:00:00,WIN,"5,434","3,485",Override,PUBLIC SAFETY,Fire Salaries,196848
+Lexington,1996,1995-06-12 00:00:00,WIN,"4,539","4,338",Override,SCHOOL,Maintain Level Of School Services,1172152
+Lexington,2001,2000-05-22 00:00:00,WIN,"5,402","3,058",Override,GENERAL OPERATING,General Operating Expenses,3440829
+Lexington,2004,2003-06-02 00:00:00,LOSS,"5,634","6,019",Override,GENERAL GOVERNMENT,General Operating Expenses,4957000
+Lexington,2005,2004-06-08 00:00:00,WIN,"7,520","5,287",Override,CULTURE AND RECREATION,Restoring Library Services Including Personnel And Saturday And Sunday Hours Of Operation,191730
+Lexington,2005,2004-06-08 00:00:00,WIN,"8,016","4,789",Override,PUBLIC SAFETY,Purpose Of Public Safety,173443
+Lexington,2005,2004-06-08 00:00:00,WIN,"6,791","5,968",Override,GENERAL OPERATING,Social Services And Town Support Services,179961
+Lexington,2005,2004-06-08 00:00:00,WIN,"7,907","4,871",Override,PUBLIC WORKS & FACILITIES,"Dpw, Including Restoring Curb Side Yard Waste Pickup, Cleaning Street Light And Other Maintenance",194693
+Lexington,2005,2004-06-08 00:00:00,WIN,"6,870","5,926",Override,GENERAL OPERATING,Operation Of A Six Route Lexpress Transportation System,213028
+Lexington,2005,2004-06-08 00:00:00,WIN,"7,343","5,492",Override,SCHOOL,Restoring And Preserving School Services To Meed Educational Goals,3271485
+Lexington,2007,2006-06-05 00:00:00,WIN,"5,494","5,013",Override,GENERAL GOVERNMENT,Funding Necessary And Appropriate Maintenance Of Municipal School Buildings,1059100
+Lexington,2007,2006-06-05 00:00:00,WIN,"5,327","5,192",Override,GENERAL OPERATING,Restoring And Preserving Municipal Services,799335
+Lexington,2007,2006-06-05 00:00:00,LOSS,"5,146","5,370",Override,SCHOOL,Purpose Of Meeting Educational Goals,2614509
+Lexington,2007,2006-06-05 00:00:00,LOSS,"4,975","5,537",Override,SCHOOL,Meeting Educational Goals,551607
+Lexington,2008,2007-06-05 00:00:00,WIN,"6,391","5,400",Override,SCHOOL,Operating Budget Of The Public Schools,3981589
+Marblehead,1991,1990-06-01 00:00:00,LOSS,"2,664","4,539",Override,GENERAL OPERATING,General Operating Budget,1000000
+Marblehead,1992,1991-08-19 00:00:00,LOSS,716,782,Override,HEALTH AND HUMAN SERVICE,Funding Meals On Wheels,508
+Marblehead,1992,1991-08-19 00:00:00,LOSS,564,935,Override,GENERAL OPERATING,Funding Salaries For Town Clerks Office,15716
+Marblehead,1992,1991-06-17 00:00:00,LOSS,"1,629","2,598",Override,GENERAL OPERATING,General Operating Expenseds,575000
+Marblehead,1996,1995-06-05 00:00:00,LOSS,"2,473","2,553",Override,SCHOOL,School Department Salaries,348929
+Marblehead,1997,1996-06-10 00:00:00,LOSS,"2,737","3,376",Override,SCHOOL,School Department Expenses,870084
+Marblehead,2001,2000-06-19 00:00:00,LOSS,833,"1,150",Override,GENERAL GOVERNMENT,Improvements At The Old Town House,149000
+Marblehead,2002,2001-06-18 00:00:00,WIN,"3,016","1,482",Override,PUBLIC WORKS & FACILITIES,Construction Of Sewers And Surface Drains,300000
+Marblehead,2004,2003-06-16 00:00:00,WIN,"3,936","2,350",Override,GENERAL GOVERNMENT,Supplemental Budget Expenses,1381017
+Marblehead,2005,2004-06-21 00:00:00,LOSS,"2,419","2,661",Override,PUBLIC SAFETY,Cruiser For Police Dept.-Van For Dog Officer-Front End Loader And Backlhoe For Waste Coll. Dept.,482590
+Marblehead,2005,2004-06-21 00:00:00,WIN,"2,857","2,289",Override,SCHOOL,Supplemental Expenses For School Department,422246
+Marblehead,2005,2004-06-21 00:00:00,LOSS,"2,288","2,758",Override,PUBLIC SAFETY,Supplemental Expenses Of Police Department,132500
+Marblehead,2005,2004-06-21 00:00:00,WIN,"2,775","2,323",Override,CULTURE AND RECREATION,Library Expenses,73051
+Marblehead,2005,2004-06-21 00:00:00,LOSS,"1,639","3,384",Override,GENERAL OPERATING,General Operating Expenditures,55000
+Marblehead,2005,2004-06-21 00:00:00,WIN,"2,849","2,240",Override,PUBLIC WORKS & FACILITIES,Supplemental Expenses For Waste Collection,17100
+Marblehead,2006,2005-06-15 00:00:00,WIN,"3,869","3,456",Override,GENERAL GOVERNMENT,Supplemental Expenses Of Several Town Departments,2730167
+Marblehead,2012,2011-06-14 00:00:00,LOSS,"2,531","3,567",Override,GENERAL GOVERNMENT,"Final Design, Public Bidding And Construction For Improvements To The Old Town House",667793
+Marblehead,2023,2022-06-21 00:00:00,LOSS,"1,802","3,929",Override,SCHOOL,School Department Operating Budget,3051093
+Marblehead,2024,2023-06-20 00:00:00,LOSS,"2,996","3,414",Override,GENERAL GOVERNMENT,General Government Operating Budget,2472056
+Marblehead,2025,2025-06-30 00:00:00,LOSS,0,0,Override,FUNDS,Fix Clerk Error,0
+Melrose,1991,1990-10-01 00:00:00,LOSS,"1,839","6,300",Override,GENERAL GOVERNMENT,Asbestos Removal City Buildings,165750
+Melrose,1991,1990-10-01 00:00:00,LOSS,"2,259","5,887",Override,PUBLIC WORKS & FACILITIES,"Dpw Repair Roads,Sidewalks,Tree Maint",350000
+Melrose,1991,1990-10-01 00:00:00,LOSS,"2,495","5,656",Override,SCHOOL,"5 Teachers Aides,For Lang,Art,Music Teach",135000
+Melrose,1991,1990-10-01 00:00:00,LOSS,"2,880","5,299",Override,CULTURE AND RECREATION,Textbooks And Library Books,160000
+Melrose,1991,1990-10-01 00:00:00,LOSS,"3,011","5,175",Override,PUBLIC SAFETY,New Fire Engine,162000
+Melrose,1993,1992-11-03 00:00:00,WIN,"7,748","7,385",Override,GENERAL OPERATING,Funding Budget Of City And For Schools,3000000
+Melrose,2003,2003-06-03 00:00:00,LOSS,"2,813","6,266",Override,PRE-PROPOSITION 2 1/2 DEBT,Override,5300000
+Melrose,2016,2015-11-03 00:00:00,LOSS,"3,023","5,034",Override,PRE-PROPOSITION 2 1/2 DEBT,Override,2250000
+Melrose,2020,2019-04-02 00:00:00,WIN,"6,084","4,875",Override,SCHOOL,General Operation Of School,5180000
+Melrose,2025,2024-06-18 00:00:00,LOSS,"4,296","5,174",Override,GENERAL OPERATING,"Funding School,City, And Public Safety Personnel, Associated Benefits, And Services",7700000
+Melrose,2026,2025-11-04 00:00:00,WIN,"6,018","5,052",Override,GENERAL OPERATING,Override,13500000
+Natick,1991,1990-05-01 00:00:00,LOSS,"2,320","2,965",Override,SCHOOL,General Operating Budget/School Budget,800000
+Natick,1992,1990-05-01 00:00:00,LOSS,"2,274","2,998",Override,SCHOOL,General Operating Budget/School Budget,1000000
+Natick,2001,2000-11-07 00:00:00,WIN,"9,410","7,146",Override,PUBLIC SAFETY,Implementing Second Ambulance,427000
+Natick,2009,2008-03-25 00:00:00,WIN,"5,356","4,219",Override,GENERAL OPERATING,Funding Operating And School Budget,3900000
+Natick,2026,2025-03-25 00:00:00,WIN,"4,659","3,040",Override,GENERAL GOVERNMENT,Operational Override,7000000
+Needham,1990,1988-10-01 00:00:00,LOSS,"3,458","3,582",Override,GENERAL OPERATING,"Education,Police,Fire,Public Works,Svcs.",1595000
+Needham,1991,1990-05-01 00:00:00,LOSS,"4,861","4,903",Override,GENERAL OPERATING,General Budget,2025484
+Needham,1992,1991-04-01 00:00:00,WIN,"5,991","4,704",Override,HEALTH AND HUMAN SERVICE,Fund Youth Commission Department Budget,26872
+Needham,1992,1991-04-01 00:00:00,WIN,"6,886","3,994",Override,PUBLIC SAFETY,Fund Police Department Budget,152113
+Needham,1992,1991-04-01 00:00:00,WIN,"6,042","4,660",Override,CULTURE AND RECREATION,Fund Park & Recreation Department Budget,52000
+Needham,1992,1991-04-01 00:00:00,WIN,"7,058","3,757",Override,HEALTH AND HUMAN SERVICE,Fund Council On Aging Budget,69985
+Needham,1992,1991-04-01 00:00:00,WIN,"7,208","3,760",Override,SCHOOL,Fund School Department Budget,978000
+Needham,1992,1991-04-01 00:00:00,WIN,"7,322","3,628",Override,PUBLIC SAFETY,Fund Fire Dept.& Ambulance Service Budget,198115
+Needham,1992,1991-04-01 00:00:00,WIN,"8,196","2,819",Override,CULTURE AND RECREATION,Fund Library Operating Budget,467000
+Needham,1997,1996-04-08 00:00:00,LOSS,"3,908","3,969",Override,SCHOOL,Operations Of School Department,1489811
+Needham,1997,1996-04-08 00:00:00,LOSS,"3,894","3,955",Override,PUBLIC WORKS & FACILITIES,Operations Of The Board Of Health,57831
+Needham,1997,1996-04-08 00:00:00,LOSS,"3,883","3,947",Override,PUBLIC SAFETY,Operations Of Police Department,97651
+Needham,1997,1996-04-08 00:00:00,LOSS,"3,364","4,366",Override,GENERAL GOVERNMENT,Maintainance Of Municipal Maint.Dept.,45000
+Needham,1997,1996-04-08 00:00:00,LOSS,"3,359","4,373",Override,PUBLIC WORKS & FACILITIES,Operations Of Public Works Dept.,105605
+Needham,1997,1996-04-08 00:00:00,WIN,"4,098","3,755",Override,CULTURE AND RECREATION,Operations Of Parks And Recreation Dept.,40500
+Needham,1997,1996-04-08 00:00:00,WIN,"4,139","3,679",Override,PUBLIC SAFETY,Operations Of Fire Department,107000
+Needham,1997,1996-04-08 00:00:00,WIN,"4,267","3,596",Override,CULTURE AND RECREATION,Operations Of Youth Commission,66431
+Needham,1997,1996-04-08 00:00:00,WIN,"4,393","3,481",Override,HEALTH AND HUMAN SERVICE,Operations Of Council On Aging,40000
+Needham,1997,1996-04-08 00:00:00,WIN,"5,692","2,304",Override,CULTURE AND RECREATION,Operatons Of The Library,295000
+Needham,1998,1997-05-03 00:00:00,LOSS,"4,019","4,069",Override,SCHOOL,School Dept. Operations,1500000
+Needham,2003,2002-11-05 00:00:00,LOSS,"5,182","8,544",Override,GENERAL GOVERNMENT,Funding Infrastructure Maintenance Programs,5656000
+Needham,2003,2002-11-05 00:00:00,LOSS,"4,579","9,186",Override,GENERAL GOVERNMENT,Funding Infrastructure Maintenance Programs,6970000
+Needham,2003,2002-11-05 00:00:00,LOSS,"6,567","7,330",Override,GENERAL GOVERNMENT,Funding Infrastructure Maintenance Programs,4650000
+Needham,2004,2003-04-14 00:00:00,WIN,"5,782","3,977",Override,SCHOOL,Defraying School Operating Expenses,2309318
+Needham,2004,2003-04-23 00:00:00,WIN,"6,602","3,133",Override,PUBLIC WORKS & FACILITIES,Road Maintenance,150000
+Needham,2007,2006-04-11 00:00:00,WIN,"4,054","3,726",Override,GENERAL OPERATING,General Operating Expenditures,597370
+Needham,2007,2006-04-11 00:00:00,LOSS,"3,671","4,115",Override,SCHOOL,School Department Expenditures,1476017
+Needham,2008,2007-04-10 00:00:00,WIN,"4,681","3,376",Override,SCHOOL,Defray School Operating Expenses,1128670
+Needham,2010,2008-11-04 00:00:00,WIN,"8,900","7,751",Override,SCHOOL,Funding Operating Expenses For The Public Schools,1887929
+Needham,2015,2014-04-08 00:00:00,WIN,"2,984","2,307",Override,SCHOOL,Funding Operating Expenses For The Public Schools,1548410
+Stoneham,1991,1990-04-01 00:00:00,LOSS,"2,213","2,602",Override,GENERAL OPERATING,Schools And Council On Aging,592000
+Stoneham,1991,1990-04-01 00:00:00,LOSS,"2,006","2,827",Override,PUBLIC WORKS & FACILITIES,Collection Of Solid Waste,1100000
+Stoneham,1993,1992-04-02 00:00:00,LOSS,"1,327","3,352",Override,CULTURE AND RECREATION,Additional Funds For Public Library,97000
+Stoneham,1993,1992-04-02 00:00:00,LOSS,848,"3,602",Override,PUBLIC SAFETY,Asses Addit Funds For Police Department,70000
+Stoneham,1993,1992-04-02 00:00:00,LOSS,"1,336","3,333",Override,PUBLIC WORKS & FACILITIES,Collection And Disposal Of Solid Waste,550000
+Stoneham,2008,2007-06-19 00:00:00,LOSS,"2,699","2,936",Override,GENERAL GOVERNMENT,Funding Of Town And School Operations,3000000
+Stoneham,2012,2011-04-05 00:00:00,LOSS,842,"1,892",Override,GENERAL OPERATING,Funding Town And School Budgets,1900000
+Stoneham,2026,2025-04-01 00:00:00,LOSS,"2,909","3,432",Override,GENERAL GOVERNMENT,"$14.6 Million To Fund Public Safety, Education, Public Works And General Government Expenses Beginning July 1, 2025",14600000
+Stoneham,2027,2025-12-09 00:00:00,LOSS,"3,600","3,643",Override,GENERAL GOVERNMENT,Funding School And Town Expenses For Fy27,12500000
+Stoneham,2027,2025-12-09 00:00:00,WIN,"4,001","3,274",Override,GENERAL GOVERNMENT,Funding School And Town Expenses For Fy27,9300000
+Swampscott,1991,1990-06-01 00:00:00,WIN,"2,584","2,401",Override,GENERAL OPERATING,General Operating Budget,1837000
+Swampscott,2002,2001-06-19 00:00:00,WIN,"2,076","1,888",Override,GENERAL OPERATING,Supplementing Budget,2469790
+Swampscott,2006,2005-06-14 00:00:00,LOSS,"1,506","3,271",Override,GENERAL OPERATING,"Treasurer, Collector-Postage",7500
+Swampscott,2006,2005-06-14 00:00:00,LOSS,"1,515","3,259",Override,GENERAL OPERATING,Law Department Expenses,10000
+Swampscott,2006,2005-06-14 00:00:00,WIN,"2,548","2,262",Override,CULTURE AND RECREATION,Operating Expenses For The Council On Aging,6000
+Swampscott,2006,2005-06-14 00:00:00,LOSS,"1,673","3,097",Override,GENERAL OPERATING,Operating Expenses For Building Department,8500
+Swampscott,2006,2005-06-14 00:00:00,LOSS,"1,650","3,103",Override,GENERAL OPERATING,Funding Stabilization Fund,28000
+Swampscott,2006,2005-06-14 00:00:00,WIN,"3,073","1,816",Override,PUBLIC SAFETY,Operating Expenses For The Police Department,180000
+Swampscott,2006,2005-06-14 00:00:00,WIN,"2,765","2,084",Override,CULTURE AND RECREATION,Operating Expenses Of The Library,30000
+Swampscott,2006,2005-06-14 00:00:00,WIN,"3,038","1,840",Override,PUBLIC SAFETY,Operating Expenses Of The Fire Department,265000
+Swampscott,2006,2005-06-14 00:00:00,LOSS,"2,078","2,819",Override,SCHOOL,Operating Expenses Of The School Department,2750000
+Swampscott,2006,2005-06-14 00:00:00,WIN,"2,573","2,327",Override,SCHOOL,Funding Operating Expenses Of The School Department,1750000
+Swampscott,2006,2005-06-14 00:00:00,LOSS,"1,588","3,187",Override,GENERAL OPERATING,Operating Expenses For The Personnell Department,15000
+Wellesley,1990,1989-03-01 00:00:00,LOSS,"2,458","4,050",Override,GENERAL OPERATING,Capital Outlay And Maintenance Of Program,700000
+Wellesley,1990,1989-03-01 00:00:00,LOSS,"1,965","4,478",Override,PUBLIC SAFETY,Police And Fire Department,204000
+Wellesley,1990,1989-03-01 00:00:00,LOSS,"3,202","3,309",Override,SCHOOL,Asbestos Removal In Schools,240000
+Wellesley,1990,1989-03-01 00:00:00,LOSS,"2,643","3,846",Override,GENERAL OPERATING,"General Government,Public Works,Educ,Libr",922000
+Wellesley,1991,1990-05-01 00:00:00,LOSS,"2,623","5,052",Override,HEALTH AND HUMAN SERVICE,Fund Youth Commission Operations,15389
+Wellesley,1991,1990-05-01 00:00:00,LOSS,"2,325","5,297",Override,GENERAL GOVERNMENT,Fund Personnel Board Operations,6900
+Wellesley,1991,1990-05-01 00:00:00,LOSS,"3,410","4,273",Override,HEALTH AND HUMAN SERVICE,Fund Board Of Health Oper.Budget,15000
+Wellesley,1991,1990-05-01 00:00:00,WIN,"4,038","3,678",Override,PUBLIC WORKS & FACILITIES,Fund Dpw Recycling Disposal Facility,347300
+Wellesley,1991,1990-05-01 00:00:00,WIN,"5,420","2,359",Override,SCHOOL,Fund Sch./Education Budget,270600
+Wellesley,1992,1991-05-01 00:00:00,WIN,"3,935","2,103",Override,SCHOOL,Fund Public Education Department,246800
+Wellesley,1992,1991-05-01 00:00:00,WIN,"3,519","2,519",Override,CULTURE AND RECREATION,Fund Library Department Operations,78200
+Wellesley,2001,2000-05-02 00:00:00,WIN,"3,120",957,Override,SCHOOL,Public Education,750000
+Wellesley,2002,2001-05-01 00:00:00,WIN,"3,031","1,582",Override,SCHOOL,Public Education,1967821
+Wellesley,2003,2002-05-07 00:00:00,WIN,"2,814","1,265",Override,GENERAL OPERATING,Fully Fund General Fund Operating Budget,2539201
+Wellesley,2004,2003-05-13 00:00:00,WIN,"4,345","3,804",Override,GENERAL OPERATING,General Operating Budget,2895436
+Wellesley,2005,2004-11-02 00:00:00,LOSS,"3,123","9,777",Override,GENERAL OPERATING,Group Insurance Libability Trust Fund To Reduce Unfunded Post Retirement Benefit,2500000
+Wellesley,2006,2005-05-10 00:00:00,LOSS,"4,101","4,118",Override,GENERAL OPERATING,General Operating Budget,3552392
+Wellesley,2006,2005-05-10 00:00:00,WIN,"4,465","3,750",Override,GENERAL OPERATING,General Fund Operating Budget,2596851
+Wellesley,2007,2006-05-16 00:00:00,LOSS,"4,325","5,126",Override,PUBLIC WORKS & FACILITIES,Sunday Openings Of The Towns Recycling And Disposal Facility,45043
+Wellesley,2007,2006-05-16 00:00:00,LOSS,"4,512","4,927",Override,CULTURE AND RECREATION,Funding Budget For Hills Branch And Fells Branch Of The Free Library,75603
+Wellesley,2007,2006-05-16 00:00:00,WIN,"5,607","3,862",Override,GENERAL OPERATING,Public Education And General Operating,3158618
+Wellesley,2015,2014-05-20 00:00:00,WIN,"4,252","2,944",Override,GENERAL OPERATING,To Support 2015 Operating Budget,3345000
+Winchester,1992,1991-03-26 00:00:00,LOSS,"2,599","3,127",Override,CULTURE AND RECREATION,Funding For Library Book Account,27000
+Winchester,1992,1991-03-26 00:00:00,LOSS,"1,892","3,679",Override,HEALTH AND HUMAN SERVICE,Funding Rent On Council On Aging,12000
+Winchester,1992,1991-03-26 00:00:00,LOSS,"1,935","3,635",Override,PUBLIC WORKS & FACILITIES,Funding For Health Dept. Inspector,41000
+Winchester,1992,1991-03-26 00:00:00,LOSS,"2,395","3,310",Override,PUBLIC WORKS & FACILITIES,Funding Public Works Grounds Div.Budget,200000
+Winchester,1992,1991-03-26 00:00:00,LOSS,"2,421","3,306",Override,SCHOOL,Fund School Department Budget,644000
+Winchester,2003,2002-04-16 00:00:00,WIN,"4,465","3,390",Override,GENERAL GOVERNMENT,General Operating Budget,4550000
+Winchester,2006,2004-12-07 00:00:00,LOSS,"3,518","4,543",Override,GENERAL OPERATING,General Operating Expenditures,3933000
+Winchester,2008,2007-03-13 00:00:00,WIN,"4,252","2,297",Override,GENERAL OPERATING,"Operating Budget For Police, Fire, Library, School, Public Works And Other Municipal Personnel",1347000
+Winchester,2012,2011-03-29 00:00:00,LOSS,"1,814","2,049",Override,GENERAL OPERATING,"Funding Annual Operating Budgets For Schools, Police, Fire, Library, Public Works,Etc.",1440000
+Winchester,2020,2019-03-26 00:00:00,WIN,"2,849","1,901",Override,GENERAL GOVERNMENT,Operating Budget And Building Stab Fund,10000000
+Winchester,2024,2023-01-07 00:00:00,WIN,"1,879","1,593",Override,GENERAL GOVERNMENT,Capital Stabilization Fund,400000

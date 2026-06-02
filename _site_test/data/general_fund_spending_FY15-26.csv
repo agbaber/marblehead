@@ -1,0 +1,13 @@
+fiscal_year,total_general_fund_spending,data_type,source,notes
+FY15,70491667,actual,where-has-the-money-gone.html polygon coords (originally ACFR),"Categories stacked: Schools, Health, Public Safety, Debt, Pensions, Everything else. Decoded from chart y=126.2; precision approx +/-$50K. For exact values re-extract from FY15 ACFR General Fund schedule."
+FY16,73195833,actual,where-has-the-money-gone.html polygon coords (originally ACFR),Decoded from chart y=120.3; precision approx +/-$50K.
+FY17,76862500,actual,where-has-the-money-gone.html polygon coords (originally ACFR),Decoded from chart y=112.3; precision approx +/-$50K.
+FY18,81766667,actual,where-has-the-money-gone.html polygon coords (originally ACFR),Decoded from chart y=101.6; precision approx +/-$50K.
+FY19,83279167,actual,where-has-the-money-gone.html polygon coords (originally ACFR),Decoded from chart y=98.3; precision approx +/-$50K.
+FY20,85204167,actual,where-has-the-money-gone.html polygon coords (originally ACFR),Decoded from chart y=94.1; precision approx +/-$50K.
+FY21,85800000,actual,where-has-the-money-gone.html polygon coords (originally ACFR),Decoded from chart y=92.8; precision approx +/-$50K.
+FY22,93591667,actual,where-has-the-money-gone.html polygon coords (originally ACFR),Decoded from chart y=75.8; precision approx +/-$50K.
+FY23,96845833,actual,where-has-the-money-gone.html polygon coords (originally ACFR),Decoded from chart y=68.7; precision approx +/-$50K.
+FY24,102254167,actual,where-has-the-money-gone.html polygon coords (originally ACFR),Decoded from chart y=56.9; precision approx +/-$50K.
+FY25,100466667,expended-not-audited,where-has-the-money-gone.html polygon coords (originally ACFR),"Decoded from chart y=60.8; chart annotation labels FY25 'expended, not audited'. Precision approx +/-$50K."
+FY26,106195833,budget-not-actual,where-has-the-money-gone.html polygon coords (originally ACFR),"Decoded from chart y=48.3; chart annotation labels FY26 'budget, not actual'. Precision approx +/-$50K."

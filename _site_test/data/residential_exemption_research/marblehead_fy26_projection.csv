@@ -1,0 +1,8 @@
+exemption_pct,exemption_per_parcel,new_residential_taxable_value,new_tax_rate,tax_rate_pct_increase,breakeven_assessed_value,note
+5%,65624,9043549515,8.94,4.1,1675892,Estimate uses 86% owner-occupied share (Lexington 2019 proxy); update with Marblehead Assessor data
+10%,131249,8637204030,9.36,9.0,1594168,Estimate uses 86% owner-occupied share (Lexington 2019 proxy); update with Marblehead Assessor data
+15%,196873,8230858545,9.82,14.4,1568669,Estimate uses 86% owner-occupied share (Lexington 2019 proxy); update with Marblehead Assessor data
+20%,262497,7824513060,10.33,20.3,1556223,Estimate uses 86% owner-occupied share (Lexington 2019 proxy); update with Marblehead Assessor data
+25%,328121,7418167575,10.9,26.9,1548850,Estimate uses 86% owner-occupied share (Lexington 2019 proxy); update with Marblehead Assessor data
+30%,393746,7011822090,11.53,34.2,1543973,Estimate uses 86% owner-occupied share (Lexington 2019 proxy); update with Marblehead Assessor data
+35%,459370,6605476605,12.24,42.5,1540509,Estimate uses 86% owner-occupied share (Lexington 2019 proxy); update with Marblehead Assessor data

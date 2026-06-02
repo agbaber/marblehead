@@ -1,0 +1,6 @@
+# robots.txt for marbleheaddata.org
+
+User-agent: *
+Allow: /
+
+Sitemap: https://marbleheaddata.org/sitemap.xml

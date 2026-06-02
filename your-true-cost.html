@@ -534,9 +534,13 @@ body.true-cost .page { max-width: 1100px; }
   padding: 10px 12px; margin: 0 0 12px;
   background: color-mix(in srgb, var(--c-brass) 6%, var(--surface));
   border-radius: var(--radius-sm);
-  font-size: 12px; color: var(--text); line-height: 1.5;
+  color: var(--text); line-height: 1.5;
   border-left: 3px solid var(--c-brass);
   font-family: var(--font-mono); font-size: 11px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .tc-cite-actions {
   display: flex; gap: 14px; font-size: 12px;
