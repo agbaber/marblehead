@@ -577,7 +577,10 @@ body.true-cost .read-time { display: none; }
 .tc-deduction-running-breakdown li .pct {
   font-weight: 500; font-size: 11px;
   color: rgba(255,255,255,0.5);
-  min-width: 56px; text-align: right;
+  min-width: 48px; text-align: right;
+}
+.tc-deduction-running-breakdown li.total .pct {
+  min-width: 110px;
 }
 .tc-deduction-running-breakdown li.sub .pct { color: rgba(188, 228, 208, 0.6); }
 .tc-deduction-running-breakdown li.total .pct {
@@ -1708,13 +1711,13 @@ function renderSection4(t) {
   items.push({ cls: 'base', label: todayLabel, sign: '', amount: t.currentNet });
   const baselineGrowth = t.baseline - t.currentBill;
   if (baselineGrowth > 0.5) {
-    items.push({ cls: 'add', label: 'Prop 2½ baseline growth (' + yearLabel + ')', sign: '+', amount: baselineGrowth });
+    items.push({ cls: 'add', label: 'Prop 2½ baseline growth (FY26 → ' + yearLabel + ')', sign: '+', amount: baselineGrowth });
   }
   if (t.overrideAmt > 0.5) {
-    items.push({ cls: 'add', label: 'Tier ' + state.tier + ' override (' + yearLabel + ')', sign: '+', amount: t.overrideAmt });
+    items.push({ cls: 'add', label: 'Tier ' + state.tier + ' override (' + yearLabel + ' phase-in)', sign: '+', amount: t.overrideAmt });
   }
   if (t.trashAmt > 0.5) {
-    items.push({ cls: 'add', label: 'Q4 trash levy share', sign: '+', amount: t.trashAmt });
+    items.push({ cls: 'add', label: 'Q4 trash levy share (' + yearLabel + ' levy)', sign: '+', amount: t.trashAmt });
   }
   if (t.bohFee > 0.5) {
     items.push({ cls: 'add', label: 'Board of Health curbside fee', sign: '+', amount: t.bohFee });
@@ -1734,27 +1737,39 @@ function renderSection4(t) {
       items.push({ cls: 'sub', label: label, sign: '−', amount: delta });
     }
   });
-  // Percentages: each addition's share of the gross bill, each
-  // subtraction's discount off gross, total's net-vs-gross ratio.
-  const gross = t.grossBill;
-  const pctOf = n => gross > 0 ? Math.round((n / gross) * 100) + '%' : '';
+  // Percentages: each line as a % change vs TODAY's net bill (the meaningful
+  // "how much more / less am I paying because of this?"). The total row
+  // shows the overall % change. All shares share the same denominator
+  // (today's net) so they sum mathematically to the total %.
+  const todayNet = t.currentNet;
+  const pctChange = n => todayNet > 0 ? Math.round((n / todayNet) * 100) : 0;
   const breakdownHTML = items.map(item => {
-    const pct = pctOf(item.amount);
-    const pctSuffix = item.cls === 'sub' ? ' off' : '';
+    let pctStr = '';
+    if (item.cls === 'add') {
+      pctStr = '+' + pctChange(item.amount) + '%';
+    } else if (item.cls === 'sub') {
+      pctStr = '−' + pctChange(item.amount) + '%';
+    }
+    // base row: no percentage (it's the reference point itself)
     return '<li class="' + item.cls + '">' +
       '<span class="label">' + item.label + '</span>' +
       '<span class="amount">' +
         (item.sign === '−' ? '−' : (item.sign === '+' ? '+' : '')) + money(item.amount) +
-        '<span class="pct">' + pct + pctSuffix + '</span>' +
+        (pctStr ? '<span class="pct">' + pctStr + '</span>' : '<span class="pct"></span>') +
       '</span>' +
     '</li>';
   }).join('') +
-  '<li class="total">' +
-    '<span class="label">' + yearLabel + ' total</span>' +
-    '<span class="amount">' + money(t.netBill) +
-      '<span class="pct">' + pctOf(t.netBill) + ' of gross</span>' +
-    '</span>' +
-  '</li>';
+  (function() {
+    const delta = t.netBill - todayNet;
+    const totalPct = pctChange(delta);
+    const totalPctStr = (delta >= 0 ? '+' : '−') + Math.abs(totalPct) + '% vs today';
+    return '<li class="total">' +
+      '<span class="label">' + yearLabel + ' total</span>' +
+      '<span class="amount">' + money(t.netBill) +
+        '<span class="pct">' + totalPctStr + '</span>' +
+      '</span>' +
+    '</li>';
+  })();
   document.getElementById('s4Breakdown').innerHTML = '<ul>' + breakdownHTML + '</ul>';
 }
 
