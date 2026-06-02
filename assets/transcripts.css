@@ -384,47 +384,124 @@
 
 .ms-transcript-disclaimer {
   margin: 0;
-  padding: 10px 18px;
+  padding: 10px 22px;
   border-top: 1px solid var(--c-divider);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.3px;
   color: var(--c-text-sub);
 }
-.ms-transcript-body { padding: 0 18px 18px; }
+.ms-transcript-body {
+  padding: 4px 22px 22px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Section headers — bigger with a clear top rule. Any parenthetical
+   approx timestamp at the end is rendered subdued by inline span where
+   present, but plain text in parens still reads cleanly here. */
 .ms-transcript-body h2 {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
-  color: var(--c-text-mid);
-  margin: 22px 0 10px;
-  padding: 0;
-  border: none;
+  letter-spacing: -0.2px;
+  text-transform: none;
+  color: var(--c-navy);
+  margin: 28px 0 14px;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--c-divider);
 }
-.ms-transcript-body h2:first-child { margin-top: 12px; }
+.ms-transcript-body h2:first-child { margin-top: 16px; border-top: none; padding-top: 0; }
+
 .ms-transcript-body p {
-  line-height: 1.65;
-  font-size: 14px;
+  line-height: 1.7;
+  font-size: 15px;
   color: var(--c-text);
-  margin: 0 0 12px;
+  margin: 0 0 14px;
 }
+
+/* Speaker-led paragraphs: the markdown body uses a consistent pattern
+   of `**Name, Address** — quote/action.` for each speaker turn.
+   Lift the leading strong as a quote attribution. */
+.ms-transcript-body p strong:first-child {
+  display: inline;
+  color: var(--c-navy);
+  font-weight: 700;
+}
+
+/* Preamble blockquote: the "Note on this transcript" notice at the top
+   of the markdown body. Brass left rail with tinted background reads
+   as a calm informational notice, matching the rest of the page. */
+.ms-transcript-body blockquote {
+  margin: 0 0 18px;
+  padding: 12px 18px;
+  border-left: 3px solid var(--c-brass);
+  background: color-mix(in srgb, var(--c-brass) 8%, transparent);
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--c-text);
+}
+.ms-transcript-body blockquote p { margin: 0 0 8px; font-size: 14px; line-height: 1.55; }
+.ms-transcript-body blockquote p:last-child { margin-bottom: 0; }
+
+/* Tighter list spacing for the few markdown lists in the body. */
+.ms-transcript-body ul,
+.ms-transcript-body ol {
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+.ms-transcript-body li {
+  margin-bottom: 5px;
+  line-height: 1.55;
+  font-size: 14.5px;
+}
+.ms-transcript-body li::marker { color: var(--c-teal); }
+
+/* Tables: the FY27 warrant article table is the main one. Polished
+   to match the deeper-dive table treatment. */
 .ms-transcript-body table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 13px;
-  margin: 8px 0 14px;
+  font-size: 13.5px;
+  margin: 4px 0 18px;
+  font-variant-numeric: tabular-nums;
 }
-.ms-transcript-body th,
-.ms-transcript-body td {
-  border-bottom: 1px solid var(--c-divider);
-  padding: 6px 8px;
+.ms-transcript-body thead th {
+  background: color-mix(in srgb, var(--c-teal) 8%, transparent);
+  color: var(--c-navy);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  padding: 8px 10px;
   text-align: left;
+  border-bottom: 1.5px solid color-mix(in srgb, var(--c-teal) 30%, transparent);
+}
+.ms-transcript-body tbody td {
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--c-divider);
   vertical-align: top;
 }
-.ms-transcript-body th {
+.ms-transcript-body tbody tr:last-child td { border-bottom: none; }
+.ms-transcript-body tbody td:first-child {
   font-weight: 700;
-  background: color-mix(in srgb, var(--c-navy) 4%, transparent);
+  color: var(--c-navy);
+  white-space: nowrap;
+}
+
+/* Inline `code` (rare but possible) — bond reference numbers etc. */
+.ms-transcript-body code {
+  background: color-mix(in srgb, var(--c-navy) 6%, transparent);
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 90%;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 600px) {
+  .ms-transcript-body { padding: 4px 16px 18px; }
+  .ms-transcript-body p { font-size: 14.5px; }
+  .ms-transcript-body h2 { font-size: 15px; }
 }
 
 /* ── Back-to-meetings ──────────────────────────────────────────── */
