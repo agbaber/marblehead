@@ -1,0 +1,132 @@
+import { chromium, devices } from 'playwright';
+
+const URL = 'http://localhost:4001/charts/checkbook.html';
+
+async function run() {
+  const browser = await chromium.launch();
+  const failures = [];
+  const ok = (label) => console.log('  ✓', label);
+  const fail = (label, err) => { failures.push(label + ': ' + err); console.log('  ✗', label, '-', err); };
+
+  for (const profile of [
+    { name: 'Desktop',  viewport: { width: 1280, height: 900 } },
+    { name: 'Mobile',   viewport: devices['iPhone 13'].viewport },
+  ]) {
+    console.log('\n[' + profile.name + ']');
+    const context = await browser.newContext({ viewport: profile.viewport });
+    const page = await context.newPage();
+    const errors = [];
+    page.on('pageerror', (e) => errors.push(String(e)));
+    page.on('console', (msg) => {
+      if (msg.type() !== 'error') return;
+      const t = msg.text();
+      // Ignore third-party beacons that only fail when serving from localhost
+      if (t.includes('cloudflareinsights.com')) return;
+      if (t.includes('ERR_FAILED') && t.includes('cdn-cgi')) return;
+      errors.push('console: ' + t);
+    });
+
+    try {
+      await page.goto(URL, { waitUntil: 'networkidle' });
+    } catch (e) {
+      fail(profile.name + ' nav', e.message);
+      await context.close();
+      continue;
+    }
+
+    // 1. h1 present
+    try {
+      const h1 = await page.locator('h1').first().innerText();
+      if (!h1.toLowerCase().includes('checkbook')) throw new Error('h1 was "' + h1 + '"');
+      ok('h1 says Checkbook');
+    } catch (e) { fail('h1', e.message); }
+
+    // 2. hero card values rendered
+    try {
+      const heroVals = await page.locator('.hero-value').allInnerTexts();
+      if (heroVals.length < 4) throw new Error('only ' + heroVals.length + ' hero values');
+      if (!heroVals[0].includes('206')) throw new Error('first hero ≠ 206M: ' + heroVals[0]);
+      ok('hero card has 4 stats with budget amounts');
+    } catch (e) { fail('hero', e.message); }
+
+    // 3. Budget vs Actual chart populates after data load
+    try {
+      await page.waitForSelector('.bva-row', { timeout: 8000 });
+      const rowCount = await page.locator('.bva-row').count();
+      if (rowCount < 5) throw new Error('only ' + rowCount + ' bva rows');
+      const firstName = await page.locator('.bva-row .bva-name').first().innerText();
+      if (!firstName.toLowerCase().includes('general fund')) throw new Error('first row was "' + firstName + '"');
+      ok('budget-vs-actual chart shows ' + rowCount + ' rows, top = ' + firstName);
+    } catch (e) { fail('bva-chart', e.message); }
+
+    // 4. Switching breakdown updates rows
+    try {
+      await page.click('.breakdown-btn[data-breakdown="by_department"]');
+      await page.waitForTimeout(150);
+      const newFirst = await page.locator('.bva-row .bva-name').first().innerText();
+      if (!/governmental|districtwide|school/i.test(newFirst)) throw new Error('after-switch first row: ' + newFirst);
+      ok('breakdown switch updates chart (first now = ' + newFirst + ')');
+    } catch (e) { fail('breakdown-switch', e.message); }
+
+    // 5. Transaction table populated
+    try {
+      await page.waitForSelector('table.ck-table tbody tr td.vendor', { timeout: 12000 });
+      const txnRows = await page.locator('table.ck-table tbody tr').count();
+      if (txnRows < 10) throw new Error('only ' + txnRows + ' txn rows');
+      const firstVendor = await page.locator('table.ck-table tbody tr td.vendor').first().innerText();
+      ok('transaction table shows ' + txnRows + ' rows, top vendor = ' + firstVendor);
+    } catch (e) { fail('table', e.message); }
+
+    // 6. Pager info shows total
+    try {
+      const info = await page.locator('#pager-info').innerText();
+      if (!info.includes('15,561') && !info.toLowerCase().includes('showing')) throw new Error('pager-info: ' + info);
+      ok('pager info: ' + info);
+    } catch (e) { fail('pager-info', e.message); }
+
+    // 7. Vendor filter works
+    try {
+      await page.fill('#f-vendor', 'AMAZON');
+      await page.waitForTimeout(300);
+      const filteredFirst = await page.locator('table.ck-table tbody tr td.vendor').first().innerText();
+      if (!filteredFirst.toUpperCase().includes('AMAZON')) throw new Error('filtered first vendor: ' + filteredFirst);
+      ok('vendor filter narrows to AMAZON');
+    } catch (e) { fail('vendor-filter', e.message); }
+
+    // 8. Reset filters
+    try {
+      await page.click('#reset-filters');
+      await page.waitForTimeout(200);
+      const v = await page.locator('#f-vendor').inputValue();
+      if (v !== '') throw new Error('vendor still: ' + v);
+      ok('reset clears filters');
+    } catch (e) { fail('reset', e.message); }
+
+    // 9. No console errors
+    if (errors.length) fail('console errors', errors.join(' | '));
+    else ok('no console errors');
+
+    // 10. Browse page links to the new tool
+    if (profile.name === 'Desktop') {
+      try {
+        await page.goto('http://localhost:4001/browse.html', { waitUntil: 'networkidle' });
+        const links = await page.locator('a[href="charts/checkbook.html"]').count();
+        if (links < 2) throw new Error('only ' + links + ' links to checkbook from browse');
+        ok('browse.html has ' + links + ' links to the checkbook tool');
+      } catch (e) { fail('browse-link', e.message); }
+    }
+
+    await context.close();
+  }
+
+  await browser.close();
+  if (failures.length) {
+    console.log('\n' + failures.length + ' FAILURE(S):');
+    failures.forEach(f => console.log('  - ' + f));
+    process.exit(1);
+  } else {
+    console.log('\nAll smoke checks passed.');
+  }
+}
+
+run().catch((e) => { console.error(e); process.exit(1); });

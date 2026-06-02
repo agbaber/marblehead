@@ -176,6 +176,15 @@ Caveats:
 - FY26 <abbr class="g" title="Group Insurance Commission">GIC</abbr> sheet covers 11 months only (July 2025 through May 2026 invoice dates).
 - <abbr class="g" title="Group Insurance Commission">GIC</abbr> invoice totals are the full premium (employer + employee share). This is not the same number as the Town's "Group Insurance" budget line, which represents the Town's own appropriation. Compare with care.
 
+## FY26 Checkbook and Adopted Budget (Socrata portals, June 2026)
+
+The town runs two Socrata-hosted portals that publish FY26 spending data. Both were exported on 2026-06-01 and bundled into this repo so the checkbook tool can render without hitting the live API (the spending portal's `/api/opex/*` endpoints are session-protected and don't allow cross-origin requests).
+
+- [Spending portal](https://townofmarblehead-ma-oe.spending.socrata.com/#!/year/All%20Years/explore/1-/segment2) &ndash; vendor-payment detail. The portal's CSV export with the year filter set to FY26 produced `data/checkbook_FY26_2026-06-02.csv` (15,561 rows, $98,488,006.04 total, covering 2025-07-01 through 2026-05-29). Columns: Vendor, Fund, Division, Description, Date, Amount. Excludes payroll, inter-fund transfers, and intergovernmental remittances posted through the GL.
+- [Budget portal](https://townofmarblehead-ma-ob.budget.socrata.com/) &ndash; revised/actual/original budget by Fund Group, Fund, Department, Category, Division, and Object. The `fund_source_data.json` endpoint (no cookie required, no CORS) gave the 317-fund all-funds rollup ($206,063,591.63) saved as `data/budget_FY26_by_fund.json`. The portal's CSV-export buttons on the Budgeted Annual Funds view gave five drill-downs (by Fund / Department / Category / Division / Object) for the $127,338,097.88 Budgeted Annual envelope; these and the top-level Adopted Budget rollup were merged via `scripts/build_budget_actual.py` into `data/budget_actual_FY26.json`.
+
+The checkbook total ($98.5M) and the budget portal's Actual rollup ($140.4M) intentionally don't match: the checkbook is AP-only, while Actual includes payroll runs, transfers, and intergovernmental remittances. The Electric Light Department ($13.16M of Actual) runs as a self-supporting enterprise with no appropriation, so it appears with $0 Revised Budget. Used by `charts/checkbook.html`.
+
 ## Household Income Distribution (ACS 2020&ndash;2024, table B19001)
 - Source: US Census Bureau, ACS 2020&ndash;2024 5-year estimates, table B19001, Marblehead town, Essex County, MA (FIPS 25-009-38400)
 - API endpoint: `https://api.census.gov/data/2024/acs/acs5?get=NAME,B19001_001E,...,B19001_017E&for=county%20subdivision:38400&in=state:25%20county:009`
