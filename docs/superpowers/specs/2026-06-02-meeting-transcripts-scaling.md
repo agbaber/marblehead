@@ -25,59 +25,55 @@ Cover every public Marblehead board / committee meeting that matters &mdash; rel
 | | Today | Scaled |
 |---|---|---|
 | **Authorship** | Claude reads transcript and writes YAML in a session | LLM does both steps unattended; human reviews PR |
-| **Source feed** | Two transcripts on disk; SC video lives on YouTube not Vimeo | Multi-source ingest: MHTV Vimeo, MPS YouTube channel, town PDF minutes |
-| **Coverage** | 2 meetings | ~30 meetings/month at peak (warrant + budget season); ~12-15/month off-season |
+| **Source feed** | Two transcripts on disk; SC video lives on YouTube not Vimeo | Multi-source ingest: MHTV Vimeo + MPS YouTube channel |
+| **Coverage** | 2 meetings | ~6-8 meetings/month at peak (warrant + budget season); ~4-5/month off-season |
 
 ## Decision: which meetings get the full treatment
 
-Three tiers, picked deliberately. Not every meeting deserves the same surface area.
+**Default: the 5 boards that drive policy.** Skip everything else automatically. Hand-promote individual meetings when something newsworthy actually happens at a non-default board.
 
-### Tier A: full transcript + summary card (high-stakes recurring boards)
+### Default coverage (automated pipeline)
 
 - **Select Board** &mdash; ~36/year (every other Wednesday)
 - **School Committee** &mdash; ~24/year
 - **Finance Committee** &mdash; ~20/year peak, ~12/year off-season
 - **Town Meeting** &mdash; 2/year (annual + special)
-- **Board of Health** when on substantive issues (trash, social hosting, public-safety overlap; not routine permit hearings) &mdash; ~6/year
+- **Board of Health** &mdash; ~10/year (all of them; the substantive-vs-routine split is too noisy to automate, and the volume is small enough that overinclusion is cheap)
 
-Total: **~90 meetings/year** at full treatment. These are the meetings residents ask about, the ones that drive policy, and the ones where a PR-comment thread on the splashy page becomes worth maintaining.
+Total: **~90 meetings/year** covered by the automated nightly pipeline.
 
-### Tier B: summary card + topic chips, no transcript body (procedural boards with low resident interest but real decisions)
+### Skipped by default
 
-- **Planning Board** &mdash; comprehensive permits, MBTA 3A compliance, mostly procedural
-- **Zoning Board of Appeals** &mdash; permit appeals, mostly case-by-case
-- **Board of Health** routine permit/license meetings (the procedural majority)
-- **Recreation & Parks Commission**
-- **Conservation Commission**
+- **Planning Board, ZBA, Conservation Commission, Recreation & Parks Commission** &mdash; case-by-case procedural meetings. "Approved a setback variance at 47 Atlantic Ave" is not a story; the format ("headlines you can skim and pick from") adds nothing over the PDF minutes the town already publishes. **~120 meetings/year skipped.**
+- **Subcommittees, joint working sessions, school-building-committee technical meetings** &mdash; not in the `_transcripts/` collection at all. They appear in `data/meetings.json` (the chronological video index) but get no summary page. **~200 meetings/year skipped.**
 
-Total: **~120 meetings/year**, treated more like newspaper briefs &mdash; one or two paragraphs, the votes table, no `topic_segments[]` rich content, no full transcript. Cost per meeting drops by an order of magnitude because we skip transcription and LLM is given the PDF minutes only.
+### Hand promotion when a skipped meeting matters
 
-### Tier C: just a row in `data/meetings.json`, no `_transcripts/` entry
+When an agenda at one of the skipped boards hits a real story (a 40B project at Planning Board, an MBTA 3A enforcement action, a big-money capital decision), an editor writes a one-off transcript file the same way the Select Board 4/8 and School Committee 4/9 POCs in PR #754 were written: read the video, write the YAML, open a PR. Takes ~20 min.
 
-- Subcommittee meetings, joint sessions covered by Tier A, school-building-committee technical sessions, etc.
+This matches how news organizations cover government: not the ZBA's calendar, but the ZBA meeting where something newsworthy happens.
 
-Total: **~200/year**. The chronological feed at `/meetings/` shows these as title + date + "no summary" so they remain searchable for residents who know what they're looking for, but we don't burn LLM tokens summarizing them.
+Expected volume: **~5-10 hand-promoted meetings/year**, concentrated in spring (warrant + planning-board MBTA cycles).
 
-### How we pick the tier at ingest time
+### Why this isn't a three-tier system
 
-Hardcoded mapping in `scripts/transcripts/lib/config.mjs`:
+An earlier draft proposed Tier A (full transcript, the 5 boards), Tier B (summary-from-PDF for procedural boards), and Tier C (index row only for subcommittees). The Tier B layer was cargo-culted: there's no evidence any resident wants systematic Planning Board summaries, and publishing them dilutes the signal on `/meetings/` &mdash; a reader who can skim 8 routine Planning Board cards a month stops trusting the Select Board card next to them. If demand for Planning Board coverage emerges later, adding it back is a few lines of config. Until then, skipping is the editorial choice.
+
+### How the board list lives in code
+
+Hardcoded list in `scripts/transcripts/lib/config.mjs`:
 
 ```js
-export const BOARD_TIERS = {
-  'Marblehead Select Board Meeting':            'A',
-  'Marblehead School Committee':                'A',
-  'Marblehead Finance Committee':               'A',
-  'Marblehead Town Meeting':                    'A',
-  'Marblehead Planning Board':                  'B',
-  'Marblehead Zoning Board':                    'B',
-  'Marblehead Board of Health':                 'B',    // upgrade by hand if substantive
-  'Marblehead Recreation and Parks':            'B',
-  'Marblehead Conservation Commission':         'B',
-  // anything else → C (no automated summary)
-};
+export const DEFAULT_BOARDS = [
+  'Marblehead Select Board Meeting',
+  'Marblehead School Committee',
+  'Marblehead Finance Committee',
+  'Marblehead Town Meeting',
+  'Marblehead Board of Health',
+];
 ```
 
-Upgrading a Tier B meeting to A is a one-line PR (after the meeting). Downgrading is the same.
+If a board isn't on the list, the pipeline skips the meeting silently. Adding a board is one line. Hand-promoting one meeting from a non-default board is a separate PR with a single new `_transcripts/<slug>.md` file.
 
 ## Source feeds
 
@@ -92,17 +88,10 @@ Upgrading a Tier B meeting to A is a one-line PR (after the meeting). Downgradin
 - Add `pull_meetings.mjs --youtube` (or a sibling script): use `yt-dlp --flat-playlist --print-json` to list channel uploads. Output merges into `data/meetings.json` with `source: 'youtube'` on the row.
 - This requires updating the layout's `vimeo_url` → `source_url` and adding `source_label` (e.g. "MHTV", "School Committee YouTube"). One-time schema migration.
 
-### Town PDF minutes (Tier B)
+### Town PDF minutes (reference only, not automated)
 
-- `pull_meetings.mjs --pdfs` already scaffolded (see CLAUDE.md project memory). Boards' minutes pages on marbleheadma.gov:
-  - `/select-board/minutes`
-  - `/finance-committee/minutes`
-  - `/planning-board/minutes`
-  - `/zoning-board-of-appeals/minutes`
-  - `/board-of-health/minutes`
-  - `/board-of-assessors/minutes`
-- Output: `data/meetings.json.pdfs[]` rows with `pdf_url`, `board`, `date`. **For Tier B**, the PDF is the primary source &mdash; no transcription needed, LLM reads it directly.
-- Tier A still prefers video + transcription because the minutes are typically thin and lag the meeting by weeks.
+- `pull_meetings.mjs --pdfs` already scaffolded (see CLAUDE.md project memory). Boards' minutes pages live on marbleheadma.gov.
+- PDFs are not pulled into the nightly pipeline. They exist as a reference for the editor when hand-promoting a meeting from a skipped board, since the town's PDF minutes typically lag the meeting by 2-4 weeks but are an authoritative cross-check.
 
 ### Hard problems we are not solving in this design
 
@@ -120,23 +109,15 @@ A nightly systemd timer on the Hetzner box runs `scripts/transcribe.mjs`:
 3. node pull_meetings.mjs --pdfs                (refresh town PDFs)
 4. Diff meetings.json against _transcripts/
 5. For each new meeting:
-   a. Look up tier (A / B / C) by board name
-   b. If C: skip (no further action)
-   c. If A:
-      - yt-dlp -f bestaudio --extract-audio  → /tmp/<id>.mp3
-      - POST audio bytes → AssemblyAI /v2/upload
-      - POST transcript job (universal-2, speaker_labels=true)
-      - Poll until completed
-      - Anthropic API → summary card + topic_segments JSON, with
-        prompt-caching (5-min TTL on system prompt + topic seeds)
-      - Render: _transcripts/<board>-<YYYY-MM-DD>.md
-   d. If B:
-      - Skip transcription entirely
-      - Download PDF, extract text via pdftotext
-      - Anthropic API → summary card + topic_segments JSON (no full
-        transcript body; the .md has just the YAML frontmatter)
-      - Render: _transcripts/<board>-<YYYY-MM-DD>.md with body =
-        "Full minutes available at <pdf_url>"
+   a. Look up board in DEFAULT_BOARDS
+   b. If not in the list: skip (no further action)
+   c. yt-dlp -f bestaudio --extract-audio  → /tmp/<id>.mp3
+   d. POST audio bytes → AssemblyAI /v2/upload
+   e. POST transcript job (universal-2, speaker_labels=true)
+   f. Poll until completed
+   g. Anthropic API → summary card + topic_segments JSON, with
+      prompt-caching (5-min TTL on system prompt + topic seeds)
+   h. Render: _transcripts/<board>-<YYYY-MM-DD>.md
 6. For each new meeting, run a schema-validation pass before commit:
    - Required fields present
    - topic_segments[].topic ∈ seeds list (or proposed_new: true)
@@ -145,35 +126,32 @@ A nightly systemd timer on the Hetzner box runs `scripts/transcribe.mjs`:
 7. git checkout -b auto/transcripts-<date>
    git add + commit + push
    gh pr create  (PR title: "Transcripts: <list of meetings>")
-8. Andrew reviews PR (≈ 3 min/meeting at Tier B, 8 min at Tier A),
-   edits where needed, merges. Jekyll rebuild → live.
+8. Andrew reviews PR (≈ 5-8 min/meeting), edits where needed, merges. Jekyll rebuild → live.
 ```
 
 ### Cost model
 
 | | Per meeting | Per month at scale | Per year |
 |---|---:|---:|---:|
-| Tier A AssemblyAI universal-2 (~3hr audio) | $0.81 | ~$8 (peak), ~$5 (off-season) | ~$72 |
-| Tier A Claude Sonnet 4.6 summary (~15K input tokens, ~3K output, prompt-cached) | $0.06 | $0.50 | $6 |
-| Tier B Claude Sonnet 4.6 from PDF (~5K input, ~2K output, cached) | $0.02 | $0.20 | $2.40 |
+| AssemblyAI universal-2 (~3hr audio) | $0.81 | ~$8 peak, ~$5 off-season | ~$60 |
+| Claude Sonnet 4.6 summary (~15K input, ~3K output, prompt-cached) | $0.06 | $0.50 | $5 |
 | Hetzner box | &mdash; | &mdash; | already running |
-| **Total** | | **~$9/mo** | **~$80/yr** |
+| **Total** | | **~$8/mo** | **~$65/yr** |
 
-This is comfortably absorbable.
+Hand-promoted meetings cost ~$1 each (same AssemblyAI run + LLM call) and happen ~5-10/year, so the budget gap is rounding error.
 
 ## Open questions for the human reviewer
 
-1. **Do we backfill?** The 2025 fiscal year was the run-up to the FY27 deficit emerging. Backfilling Select Board + School Committee + FinCom for FY25 + FY26 would cost ~$200 in transcription + ~$15 in LLM and create a real research archive. Decision: yes / no?
-2. **Tier B board-of-health override.** Some BOH meetings are routine permits; others (social hosting, trash) are high-stakes. Mark substantive ones for upgrade after the meeting, or just put BOH in A and accept some waste? Recommendation: A unless we see a wave of waste.
-3. **Joint sessions.** Tag with both boards? Recommend: assign to host, tag with both in `topic_segments[].key_speakers`.
-4. **MPS YouTube auth.** YouTube public channel doesn't need auth; yt-dlp handles it. No problem.
-5. **Auto-published transcripts before human review.** Phase 1 spec already says "auto-published with PR merge." Keep that; the LLM mistakes will be on the body text, which already has the "AI-generated, may contain errors" disclaimer. The summary card is the editorial layer that the reviewer sees in the PR.
-6. **Pagefind indexes the transcript body.** Confirmed. Residents will be able to search "Bouvier Road" and land on the right meeting. No further work.
+1. **Do we backfill?** The 2025 fiscal year was the run-up to the FY27 deficit emerging. Backfilling Select Board + School Committee + FinCom for FY25 + FY26 would cost ~$150 in transcription + ~$10 in LLM and create a real research archive. Decision: yes / no?
+2. **Joint sessions.** Tag with both boards? Recommend: assign to host, tag with both in `topic_segments[].key_speakers`.
+3. **MPS YouTube auth.** YouTube public channel doesn't need auth; yt-dlp handles it. No problem.
+4. **Auto-published transcripts before human review.** Phase 1 spec already says "auto-published with PR merge." Keep that; the LLM mistakes will be on the body text, which already has the "AI-generated, may contain errors" disclaimer. The summary card is the editorial layer that the reviewer sees in the PR.
+5. **Pagefind indexes the transcript body.** Confirmed. Residents will be able to search "Bouvier Road" and land on the right meeting. No further work.
 
 ## Success criteria
 
-- ≥80% of Tier A meetings published within 48 hours of the meeting
-- Reviewer time ≤45 min/week peak (8 meetings × 5 min Tier A + 3 meetings × 3 min Tier B)
+- ≥80% of default-board meetings published within 48 hours of the meeting
+- Reviewer time ≤30 min/week peak (~6 meetings × 5 min average, including occasional hand promotions)
 - Cron runs 30 days unattended without manual intervention
 - At least one resident has cited a transcript URL in a public-comment thread
 
@@ -191,10 +169,9 @@ The pipeline implementation plan from the original spec
 ([2026-05-08-meeting-transcripts.md](../plans/2026-05-08-meeting-transcripts.md))
 covers Tasks 10-18 (Phase 2). This scaling spec adds:
 
-- Task 19: tier-mapping config + dispatch in `scripts/transcripts/lib/config.mjs`
+- Task 19: `DEFAULT_BOARDS` list + skip-everything-else dispatch in `scripts/transcripts/lib/config.mjs`
 - Task 20: YouTube source feed in `pull_meetings.mjs --youtube`
 - Task 21: schema migration `vimeo_*` → `source_url` + `source_label`
-- Task 22: PDF-minutes path for Tier B (skip transcription, parse PDF directly)
-- Task 23: backfill flag (`--backfill --since=2024-07-01`) on the orchestrator
+- Task 22: backfill flag (`--backfill --since=2024-07-01`) on the orchestrator, scoped to default boards
 
 Next step: `writing-plans` skill on this spec to break those into ordered tasks with file paths.
