@@ -13,17 +13,11 @@ status: published
 summary_card:
   headline: "Three-tier override sized at $9M / $12M / $15M; tri-board MOU pledges no second override until FY30"
   summary: >
-    The CFO presented the proposed FY27 override as two ballot questions: a tiered
-    operating-budget override ($9M / $12M / $15M, drawn over three years to cover FY27-FY29),
-    and a separate $2.3M question to replace the new curbside trash fee. Board and public
-    pushed back on the "Restore" label for Tier 1, which leaves the schools cutting
-    roughly 14 positions and does not fully restore the FY27 deficit. A six-page tri-board
-    Memorandum of Understanding among Select Board, School Committee, and Finance Committee
-    was previewed: annual draw caps, no further general override until at least FY2030,
-    free cash reliance stepped down $5M to $4M to $3M, and a 6% health-insurance growth
-    assumption. The board also approved the FY27 warrant in bulk (holding Articles 19, 29,
-    and 34 for further discussion) and ratified Essex North Shore Tech assessment at
-    $749,920, up from $468K in FY25 and $627K in FY26.
+    The board sized the FY27 override at three tiers ($9M / $12M / $15M)
+    plus a separate $2.3M trash question, and previewed a tri-board MOU
+    that pledges no further override until FY2030. The FY27 warrant was
+    approved in bulk (holds on Articles 19, 29, 34), and the Essex Tech
+    assessment was ratified at $749,920 &mdash; up 60% over two years.
   decisions:
     - "Approved Cultural Council appointment of Katherine Zukowski (term to June 2029)"
     - "Continued the Shindonisi liquor license revocation hearing (00042-RS-0656, 1 Atlantic Ave) to April 22, pending final 304 life-safety inspection"
@@ -64,6 +58,8 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 0
     end_seconds: 800
+    headline: "Five residents pressed the board on three issues at the mic"
+    dek: "Sustainability funding, social-host enforcement, and a Bouvier Road sidewalk dispute opened the meeting."
     summary: |
       Five residents spoke during open comment:
 
@@ -76,18 +72,25 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 800
     end_seconds: 1340
+    headline: "Five grant-funded projects in motion as town hunts for outside revenue"
+    dek: "Five Corners, Rail Trail, Coffin School Reuse, Tucker's Wharf Resiliency, and a high-school cooling corridor."
     summary: "Town Administrator update on grant-funded capital projects: Five Corners Improvement Project (public input page open through April 30), Rail Trail design review April 13, Coffin School Reuse Study survey (closes April 13), State Street Landing and Tucker's Wharf Resiliency CZM grant ($519,193 for 60% design), Marblehead High School Tree Planting cooling-corridor grant ($51,265). Cultural Council appointment of Katherine Zukowski approved (term to June 2029)."
     key_speakers: ["Thatcher (Town Administrator)", "Katherine Zukowski"]
   - topic: permits-zoning
     topic_confidence: 0.90
     start_seconds: 1100
     end_seconds: 1340
+    headline: "Shindonisi clears all but one safety inspection before April 25 opening"
+    dek: "The 304 life-safety check, instituted after the Rhode Island club fire, is the last hurdle."
     summary: "Continuation of Shindonisi (1 Atlantic Ave) wine-malt beverage license revocation hearing (00042-RS-0656). Owner reported soft-opening date of April 25 pending final 304 life-safety inspection (post-Rhode Island club fire requirement). Hearing continued to April 22."
     key_speakers: ["Greg Lewis (Shindonisi owner)"]
   - topic: override
     topic_confidence: 0.98
     start_seconds: 1340
     end_seconds: 6500
+    featured: true
+    headline: "Marblehead's first tiered override puts $9M, $12M, and $15M on the ballot"
+    dek: "Highest tier with a yes-majority wins. On a $1M home, three-year cumulative cost ranges from $900 to $1,500."
     summary: |
       **Two ballot questions.** **Q1** asks voters to set the operating-budget override at one of three tiers (**$9M / $12M / $15M**), drawn down over three years. **Q2** is a separate **$2.3M** question to replace the new curbside trash fee with a tax increase.
 
@@ -123,6 +126,8 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 3000
     end_seconds: 3800
+    headline: "Voters get a second question: pay for trash on the tax bill or by the household"
+    dek: "The $2.3M Q2 override would replace the new ~$280-per-household curbside fee."
     summary: >
       Q2 ballot question on curbside trash and recycling: vote yes to replace
       the new ~$280/household fee with a $2,298,575 tax-levy increase
@@ -137,6 +142,8 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 6500
     end_seconds: 8300
+    headline: "Three boards pledge no second override until at least FY2030"
+    dek: "Annual draw caps, free-cash phase-down, 6% health-insurance assumption, and a two-thirds escape hatch."
     summary: |
       A **six-page Memorandum of Understanding** among the Select Board, School Committee, and Finance Committee, covering FY27&ndash;FY29. Not voted on this meeting; awaiting School Committee vote the following night.
 
@@ -158,6 +165,8 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 8500
     end_seconds: 9300
+    headline: "Essex Tech assessment jumps to $750K &mdash; and the trajectory is the bigger story"
+    dek: "Lottery seats grew from 35 to 39; line item up 60% over two years; FinCom may seek state-level relief."
     summary: |
       Article 21 approved at **$749,920** for the FY27 assessment. The trajectory matters more than the number:
 
@@ -180,12 +189,16 @@ topic_segments:
     topic_confidence: 0.80
     start_seconds: 8300
     end_seconds: 8500
+    headline: "Fire-union contract held for board review; pay schedules approved at 3%"
+    dek: "Board hasn't seen the firefighter agreement; reviewing Tuesday. Article 31 indefinitely postponed."
     summary: "Article 19 (fire collective bargaining) held — board has not seen the agreement yet, meeting scheduled for the following Tuesday. Article 31 (administrative benefit amendment) indefinitely postponed. Pay-schedule articles 15-18 approved with uniform 3% increases (town clerk at $97,460). Resident Terry Tollef (online) asked whether the MOU's contractual-raise constraints apply to individual administrator and department-head contracts as well as union contracts; staff confirmed all are bound by the MOU budget growth assumptions."
     key_speakers: ["Dan Fox (chair)", "Terry Tollef (resident, online)"]
   - topic: admin-housekeeping
     topic_confidence: 0.90
     start_seconds: 9300
     end_seconds: 10000
+    headline: "Board can't decide whether to kill or rebuild the 1970-era Public Works Committee"
+    dek: "TA argues it conflicts with the chain of command; Jim defends recent project wins. Held for further talks."
     summary: >
       Article 34 (dissolve Public Works Committee) held for further discussion.
       Committee was created in 1970, before the Town Administrator role existed.
@@ -201,6 +214,8 @@ topic_segments:
     topic_confidence: 0.70
     start_seconds: 10000
     end_seconds: 10300
+    headline: "Street-sweeping parking ban shifted a week to avoid school vacation"
+    dek: "Original April 20-24 dates moved to April 27 &ndash; May 1. Must wrap before Mother's Day."
     summary: >
       Overnight parking ban approved for street sweeping: original April 20-24
       dates moved to April 27 - May 1 (12:01 AM - 7:00 AM) after the board
@@ -212,6 +227,8 @@ topic_segments:
     topic_confidence: 0.75
     start_seconds: 10300
     end_seconds: 10620
+    headline: "Routine licensing and a bridge-contract extension close the night"
+    dek: "Eastern Yacht Club, Coastline Marine, Steven Decor, Village Street bridge ($55K extension)."
     summary: >
       Licensing and consent: Eastern Yacht Club pool license renewed (42-44
       Foster St); Dolphin Yacht Club local Sunday entertainment license
@@ -226,6 +243,7 @@ topic_segments:
       (4 Quick St, April 25). Student-rep interview for Marblehead Task
       Force on Discrimination scheduled for May 13 (avoiding school
       vacation week).
+    key_speakers: ["Dan Fox (chair)"]
 
 associated_documents:
   - label: "FY27 Annual Town Meeting Warrant (referenced articles 3-36)"
