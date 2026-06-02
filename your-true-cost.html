@@ -450,7 +450,7 @@ body.true-cost .read-time { display: none; }
   background: var(--surface);
   position: relative; transition: border-color 0.2s, box-shadow 0.2s;
 }
-.tc-trash-card.cheaper {
+.tc-trash-card.selected {
   border-color: color-mix(in srgb, var(--c-teal) 60%, var(--border));
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--c-teal) 60%, var(--border));
 }
@@ -461,7 +461,7 @@ body.true-cost .read-time { display: none; }
   background: var(--c-fog); color: var(--text-subtle);
   margin-bottom: 8px;
 }
-.tc-trash-card.cheaper .tc-trash-card-tag {
+.tc-trash-card.selected .tc-trash-card-tag {
   background: color-mix(in srgb, var(--c-teal) 18%, transparent);
   color: var(--c-teal);
 }
@@ -1542,22 +1542,27 @@ function renderSection3() {
   pCard.querySelector('.tc-trash-sub').innerHTML = 'about ' + money(pass / 12) + '/mo';
   fCard.querySelector('.tc-trash-amount').innerHTML = wrapCite(money(fail), 'boh-fee') + '<span class="unit">/yr</span>';
   fCard.querySelector('.tc-trash-sub').innerHTML = 'about ' + money(fail / 12) + '/mo';
-  pCard.classList.toggle('cheaper', pass < fail);
-  fCard.classList.toggle('cheaper', fail < pass);
-  const diff = Math.abs(pass - fail);
-  const cross = AVG_ASSESSED * (fail / TRASH_LEVY_TOTAL['y' + state.year]) * TOTAL_RESIDENTIAL_AV / AVG_ASSESSED;
-  // crossover assessed value where pass == fail
+  // Highlight whichever card matches the user's current Q4 selection in
+  // the pinned card — not whichever is mathematically cheaper. The
+  // page takes no position on which outcome is "better"; the user's
+  // toggle is the source of truth.
+  pCard.classList.toggle('selected', state.q4 === 1);
+  fCard.classList.toggle('selected', state.q4 === 0);
+  // Crossover assessed value: where pass == fail (i.e. levy share == BoH flat fee)
   const crossover = (fail * TOTAL_RESIDENTIAL_AV) / TRASH_LEVY_TOTAL['y' + state.year];
-  let msg;
-  if (pass < fail) {
-    msg = 'At your $' + Math.round(state.assessedValue).toLocaleString() + ' home, the levy is ' + money(diff) + '/yr <em>cheaper</em> than the flat fee.';
-  } else if (pass > fail) {
-    msg = 'At your $' + Math.round(state.assessedValue).toLocaleString() + ' home, the levy is ' + money(diff) + '/yr <em>more expensive</em> than the flat fee.';
+  const av = Math.round(state.assessedValue);
+  const diff = pass - fail;
+  let diffSentence;
+  if (diff > 0) {
+    diffSentence = 'At your $' + av.toLocaleString() + ' home, the levy is ' + money(diff) + '/yr more than the flat fee.';
+  } else if (diff < 0) {
+    diffSentence = 'At your $' + av.toLocaleString() + ' home, the levy is ' + money(-diff) + '/yr less than the flat fee.';
   } else {
-    msg = 'At your home value, the levy and the flat fee are about the same.';
+    diffSentence = 'At your home value, the levy and the flat fee are about the same.';
   }
-  msg += ' The crossover happens at about ' + money(crossover) + ' assessed value.';
-  document.getElementById('s3Cross').innerHTML = msg;
+  document.getElementById('s3Cross').innerHTML = diffSentence +
+    ' The two break even at about ' + money(crossover) + ' assessed value &mdash; ' +
+    'homes above that pay more under the levy, homes below pay less.';
 }
 
 /* ── Section 4: deductions ── */
