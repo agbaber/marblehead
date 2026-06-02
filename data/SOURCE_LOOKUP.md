@@ -130,7 +130,7 @@ Document links below point at the [primary source archive](archive), a GitHub re
 Extracted into:
 - `data/override_town_line_items.csv` has every town-side item funded at each tier (slide 6)
 - `data/override_school_items.csv` has school-side items by tier and fiscal year (slides 7-9)
-- `data/override_draws_schedule.csv` has the year-by-year draw schedule per tier (slides 10-12)
+- `data/override_draws_schedule.csv` has the year-by-year draw schedule per tier. Values reconciled to the **signed FY27-29 Override Framework MOU** (dated April 7, 2026; `marbleheadma.gov/wp-content/uploads/2026/05/SB-SC-FinCom-FY27-29-Override-Framework-MOU.pdf`), Override Structure section, which supersedes the April 8 presentation draft (slides 10-12). FY27 draws and the $9M/$12M/$15M totals match the presentation; the FY28/FY29 splits differ by up to ~$85K per tier.
 - `data/override_tax_impact_asf.csv` has the annual and monthly tax impact on the average single-family home ($1,291,507) per tier per year (April 8 slides 13-15)
 - `data/override_tax_impact_median.csv` has the phase-in schedule on the **median** single-family home ($998,600) per tier per year (April 15 FINAL slide 7)
 - `data/override_tax_impact_by_home_value.csv` has the steady-state (fully-phased) annual tax increase by home value from $500K to $1.5M, plus tier 3 monthly cost (April 15 FINAL slide 9)
