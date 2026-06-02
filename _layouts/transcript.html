@@ -1,0 +1,165 @@
+---
+layout: default
+---
+{% include nav.html %}
+
+<div class="page">
+  <article class="meeting-summary">
+
+    {%- comment -%} ─── SLIM HERO ─── {%- endcomment -%}
+    <header class="ms-hero">
+      <p class="ms-board-chip">{{ page.board_display }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="ms-meta">
+        <time datetime="{{ page.date }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        {% if page.duration_seconds %}
+        <span class="ms-meta-sep">&middot;</span>
+        <span>{{ page.duration_seconds | divided_by: 60 }} min</span>
+        {% endif %}
+        <span class="ms-meta-sep">&middot;</span>
+        <a class="ms-meta-link" href="{{ page.vimeo_url }}" rel="noopener">Watch on MHTV &rarr;</a>
+      </p>
+      {% if page.summary_card.summary %}
+      <p class="ms-deck">{{ page.summary_card.summary }}</p>
+      {% endif %}
+    </header>
+
+    {%- comment -%} ─── LOGIN TO SUBSCRIBE CTA ─── {%- endcomment -%}
+    <aside class="ms-subscribe" aria-label="Subscribe to meeting summaries">
+      <div class="ms-subscribe-copy">
+        <p class="ms-subscribe-lead"><strong>Get this in your inbox.</strong></p>
+        <p class="ms-subscribe-body">A Friday digest of meetings that match the boards and topics you care about. Verified residents only.</p>
+      </div>
+      <a class="ms-subscribe-btn" href="{{ '/verify.html' | relative_url }}?next=subscribe">
+        Log in to subscribe&nbsp;&rarr;
+      </a>
+    </aside>
+
+    {%- comment -%} ─── SEPARATE FEATURED FROM REST ─── {%- endcomment -%}
+    {% assign featured = page.topic_segments | where: "featured", true %}
+    {% assign secondary = page.topic_segments | where_exp: "s", "s.featured != true" %}
+
+    {%- comment -%} ─── LEAD STORY ─── {%- endcomment -%}
+    {% for seg in featured %}
+    <details class="ms-story ms-story--lead" {% if forloop.first %}open{% endif %}>
+      <summary class="ms-story-summary">
+        <div class="ms-story-eyebrow">
+          <a class="ms-story-topic" href="{{ '/topics/' | append: seg.topic | append: '/' | relative_url }}">#{{ seg.topic }}</a>
+          <span class="ms-story-lead-tag">Lead</span>
+          {% assign mins = seg.start_seconds | divided_by: 60 %}
+          <a class="ms-story-jump" href="{{ page.vimeo_url }}#t={{ seg.start_seconds }}s" rel="noopener" onclick="event.stopPropagation()">&#9654; {{ mins }} min</a>
+        </div>
+        <h2 class="ms-story-headline">{{ seg.headline | default: seg.topic }}</h2>
+        {% if seg.dek %}<p class="ms-story-dek">{{ seg.dek }}</p>{% endif %}
+        <span class="ms-story-expand">Read the full breakdown <span class="ms-story-chevron">&#9662;</span></span>
+      </summary>
+      <div class="ms-story-body">
+        {{ seg.summary | markdownify }}
+        {% if seg.key_speakers and seg.key_speakers.size > 0 %}
+        <p class="ms-story-speakers">{{ seg.key_speakers | join: " &middot; " }}</p>
+        {% endif %}
+      </div>
+    </details>
+    {% endfor %}
+
+    {%- comment -%} ─── SECONDARY GRID ─── {%- endcomment -%}
+    {% if secondary.size > 0 %}
+    <h2 class="ms-section-label">Also on the agenda</h2>
+    <div class="ms-grid">
+      {% for seg in secondary %}
+      <details class="ms-story">
+        <summary class="ms-story-summary">
+          <div class="ms-story-eyebrow">
+            <a class="ms-story-topic" href="{{ '/topics/' | append: seg.topic | append: '/' | relative_url }}">#{{ seg.topic }}</a>
+            {% assign mins = seg.start_seconds | divided_by: 60 %}
+            <a class="ms-story-jump" href="{{ page.vimeo_url }}#t={{ seg.start_seconds }}s" rel="noopener" onclick="event.stopPropagation()">&#9654; {{ mins }} min</a>
+          </div>
+          <h3 class="ms-story-headline">{{ seg.headline | default: seg.topic }}</h3>
+          {% if seg.dek %}<p class="ms-story-dek">{{ seg.dek }}</p>{% endif %}
+          <span class="ms-story-expand">Read <span class="ms-story-chevron">&#9662;</span></span>
+        </summary>
+        <div class="ms-story-body">
+          {{ seg.summary | markdownify }}
+          {% if seg.key_speakers and seg.key_speakers.size > 0 %}
+          <p class="ms-story-speakers">{{ seg.key_speakers | join: " &middot; " }}</p>
+          {% endif %}
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {%- comment -%} ─── REFERENCE STRIP ─── {%- endcomment -%}
+    <div class="ms-ref-strip">
+      <h2 class="ms-section-label">Tonight's record</h2>
+
+      {% if page.summary_card.decisions.size > 0 %}
+      <details class="ms-ref">
+        <summary>
+          <span class="ms-ref-n">{{ page.summary_card.decisions.size }}</span>
+          <span class="ms-ref-label">decision{% if page.summary_card.decisions.size != 1 %}s{% endif %}</span>
+          <span class="ms-ref-chevron">&#9662;</span>
+        </summary>
+        <ol class="ms-ref-list">
+          {% for d in page.summary_card.decisions %}
+          <li>{{ d }}</li>
+          {% endfor %}
+        </ol>
+      </details>
+      {% endif %}
+
+      {% if page.summary_card.votes.size > 0 %}
+      <details class="ms-ref">
+        <summary>
+          <span class="ms-ref-n">{{ page.summary_card.votes.size }}</span>
+          <span class="ms-ref-label">vote{% if page.summary_card.votes.size != 1 %}s{% endif %}</span>
+          <span class="ms-ref-chevron">&#9662;</span>
+        </summary>
+        <ul class="ms-ref-list ms-ref-list--votes">
+          {% for v in page.summary_card.votes %}
+          <li>
+            <span class="ms-vote-result">{{ v.result }}</span>
+            <span class="ms-vote-motion">{{ v.motion }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </details>
+      {% endif %}
+
+      {% if page.associated_documents.size > 0 %}
+      <details class="ms-ref">
+        <summary>
+          <span class="ms-ref-n">{{ page.associated_documents.size }}</span>
+          <span class="ms-ref-label">document{% if page.associated_documents.size != 1 %}s{% endif %}</span>
+          <span class="ms-ref-chevron">&#9662;</span>
+        </summary>
+        <ul class="ms-ref-list ms-ref-list--docs">
+          {% for doc in page.associated_documents %}
+          <li>
+            <strong>{{ doc.label }}</strong>
+            {% if doc.note %}<span class="ms-doc-note"> &mdash; {{ doc.note }}</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </details>
+      {% endif %}
+
+      <details class="ms-ref">
+        <summary>
+          <span class="ms-ref-n">{{ page.duration_seconds | divided_by: 60 }}</span>
+          <span class="ms-ref-label">min full transcript</span>
+          <span class="ms-ref-chevron">&#9662;</span>
+        </summary>
+        <p class="ms-transcript-disclaimer">AI-generated &middot; may contain errors &middot; verify with the source video</p>
+        <div class="ms-transcript-body">
+          {{ content }}
+        </div>
+      </details>
+    </div>
+
+    <p class="ms-back"><a href="{{ '/meetings/' | relative_url }}">&larr; All meetings</a></p>
+
+  </article>
+
+  {% include footer.html %}
+</div>

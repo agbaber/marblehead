@@ -54,7 +54,10 @@ jobs:
           # narrative drafts are dense topic-to-meeting cross-references
           # where inline <abbr> on every OPEB/GIC/DPW would make the doc
           # unreadable; they're `sitemap: false` opt-in review pages, not
-          # site-facing prose.
+          # site-facing prose. The _transcripts/ collection is verbatim
+          # machine-cleaned speech with an AI-disclaimer banner; same
+          # reasoning applies (acronyms come from the speaker, not the
+          # site voice).
           PATHSPEC=(
             '*.html'
             '*.md'
@@ -68,6 +71,7 @@ jobs:
             ':!data/is-the-board-trying.md'
             ':!data/what-have-we-tried.md'
             ':!data/minutes_catalog*.md'
+            ':!_transcripts/*.md'
           )
 
           added=$(git diff "origin/$BASE_REF"...HEAD -- "${PATHSPEC[@]}" \

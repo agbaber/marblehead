@@ -11,6 +11,11 @@ turnstile_site_key: "0x4AAAAAADEi6Ymsaf-lEIvW"
 
 plugins: []
 
+collections:
+  transcripts:
+    output: true
+    permalink: /meetings/:path/
+
 defaults:
   - scope:
       path: ""
@@ -24,6 +29,12 @@ defaults:
       path: "charts"
     values:
       layout: chart
+      community_pulse: off-sections
+  - scope:
+      path: ""
+      type: transcripts
+    values:
+      layout: transcript
       community_pulse: off-sections
 
 exclude:
