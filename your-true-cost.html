@@ -41,6 +41,57 @@ body.true-cost .page { max-width: 1100px; }
   border-radius: var(--radius-md);
   background: var(--surface); box-shadow: var(--shadow-sm);
 }
+
+/* ── Preset starter chips ── */
+.tc-presets {
+  max-width: 760px; margin: 0 auto 14px;
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 6px; justify-content: center;
+}
+.tc-presets-label {
+  font-size: 11px; color: var(--text-subtle);
+  text-transform: uppercase; letter-spacing: 0.6px;
+  font-weight: 700; margin-right: 4px;
+}
+.tc-preset-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
+  font-size: 12px; font-weight: 600;
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer; font-family: inherit;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.tc-preset-chip:hover {
+  border-color: var(--c-teal);
+  color: var(--c-teal);
+  background: color-mix(in srgb, var(--c-teal) 6%, var(--surface));
+}
+.tc-preset-chip.active {
+  border-color: var(--c-navy);
+  background: var(--c-navy);
+  color: white;
+}
+.tc-preset-chip .preset-icon { font-size: 13px; line-height: 1; }
+@media (max-width: 600px) {
+  .tc-preset-chip { font-size: 11px; padding: 5px 10px; }
+}
+
+/* Input flash highlight when a preset is applied */
+.tc-input input.tc-flash,
+.tc-input select.tc-flash {
+  animation: tcFlash 0.9s ease-out;
+}
+@keyframes tcFlash {
+  0%   { background: color-mix(in srgb, var(--c-brass) 28%, var(--surface)); }
+  100% { background: var(--surface); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tc-input input.tc-flash, .tc-input select.tc-flash { animation: none; }
+}
 .tc-input { text-align: left; }
 .tc-input label {
   display: block; font-size: 11px; color: var(--text-subtle);
@@ -622,6 +673,11 @@ body.true-cost .page { max-width: 1100px; }
   <div class="tc-fact-check-banner">
     <span class="icon">⌕</span>
     <span>Every number is clickable. Tap any figure to see exactly which document it came from.</span>
+  </div>
+
+  <div class="tc-presets" id="tcPresets" role="group" aria-label="Preset scenarios">
+    <span class="tc-presets-label">Quick start:</span>
+    <!-- buttons injected by JS so the PRESETS array is the single source of truth -->
   </div>
 
   <div class="tc-inputs" id="tcInputs">
@@ -1610,10 +1666,94 @@ function wireInputs() {
 }
 
 /* ════════════════════════════════════════════════════════════
+   PRESET STARTERS
+   Each preset is a quick-start scenario that fills the inputs
+   to demonstrate a different facet of the calculator:
+   ── average household (no benefits trigger)
+   ── retiree on fixed income (Circuit Breaker + Clause 41C trigger)
+   ── senior with high-value home (41C only; AV exceeds CB limit)
+   ── high-earner with SALT itemized (SALT estimate triggers)
+   ── young family on a starter home (no benefits, smaller bill)
+   ── veteran homeowner (Clause 22 triggers)
+   ════════════════════════════════════════════════════════════ */
+const PRESETS = [
+  { id: 'avg',     icon: '🏠', label: 'Town average',
+    desc: 'Marblehead median household',
+    state: { assessedValue: 1291507, income: 182132, filing: 'married', age: 50,
+             itemize: false, veteran: false, blind: false, spouse: false } },
+  { id: 'starter', icon: '🌱', label: 'Young family, starter home',
+    desc: 'First-time buyers, two-earner household',
+    state: { assessedValue: 850000, income: 145000, filing: 'married', age: 33,
+             itemize: false, veteran: false, blind: false, spouse: false } },
+  { id: 'cb',      icon: '🕯', label: 'Retiree on fixed income',
+    desc: 'Senior, qualifies for Circuit Breaker + Clause 41C',
+    state: { assessedValue: 850000, income: 55000, filing: 'married', age: 75,
+             itemize: false, veteran: false, blind: false, spouse: false } },
+  { id: 'senior',  icon: '🌳', label: 'Senior, high-value home',
+    desc: '41C exemption, but home exceeds Circuit Breaker AV limit',
+    state: { assessedValue: 1450000, income: 95000, filing: 'married', age: 72,
+             itemize: false, veteran: false, blind: false, spouse: false } },
+  { id: 'salt',    icon: '⚓', label: 'High earner, itemizes',
+    desc: 'Federal SALT estimate kicks in',
+    state: { assessedValue: 2750000, income: 450000, filing: 'married', age: 52,
+             itemize: true, veteran: false, blind: false, spouse: false } },
+  { id: 'vet',     icon: '★', label: 'Veteran homeowner',
+    desc: 'Clause 22 veteran exemption',
+    state: { assessedValue: 1100000, income: 115000, filing: 'single', age: 60,
+             itemize: false, veteran: true, blind: false, spouse: false } }
+];
+
+function buildPresets() {
+  const wrap = document.getElementById('tcPresets');
+  PRESETS.forEach(p => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'tc-preset-chip';
+    btn.dataset.preset = p.id;
+    btn.title = p.desc;
+    btn.innerHTML = '<span class="preset-icon">' + p.icon + '</span>' + p.label;
+    btn.addEventListener('click', () => applyPreset(p));
+    wrap.appendChild(btn);
+  });
+}
+
+function applyPreset(p) {
+  Object.assign(state, p.state);
+  // sync DOM inputs from new state
+  const flashIds = ['tc-assessed','tc-income','tc-filing','tc-age',
+                    'tc-itemize','tc-veteran','tc-blind','tc-spouse'];
+  document.getElementById('tc-assessed').value = formatInput(p.state.assessedValue);
+  document.getElementById('tc-income').value   = formatInput(p.state.income);
+  document.getElementById('tc-filing').value   = p.state.filing;
+  document.getElementById('tc-age').value      = p.state.age;
+  document.getElementById('tc-itemize').checked = p.state.itemize;
+  document.getElementById('tc-veteran').checked = p.state.veteran;
+  document.getElementById('tc-blind').checked   = p.state.blind;
+  document.getElementById('tc-spouse').checked  = p.state.spouse;
+  // open the "More options" expander if a toggle was set so user can see it
+  if (p.state.itemize || p.state.veteran || p.state.blind || p.state.spouse) {
+    document.querySelector('.tc-more-exemptions').open = true;
+  }
+  // flash inputs to signal the change
+  flashIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove('tc-flash');
+    void el.offsetWidth;
+    el.classList.add('tc-flash');
+  });
+  // mark this chip active
+  document.querySelectorAll('.tc-preset-chip').forEach(b =>
+    b.classList.toggle('active', b.dataset.preset === p.id));
+  update();
+}
+
+/* ════════════════════════════════════════════════════════════
    BOOT
    ════════════════════════════════════════════════════════════ */
 function init() {
   buildDrawer();
+  buildPresets();
   wireInputs();
   update();
   setupReveal();
