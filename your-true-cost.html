@@ -11,36 +11,80 @@ community_pulse: off-sections
 
 body.true-cost .page { max-width: 1100px; }
 
-/* ── Hero ── */
-.tc-hero { text-align: center; padding: 8px 0 40px; }
+/* ── Hero (above the fold) ──
+   Distinct background wash + bold typography + a single cohesive
+   "control card" containing both presets and inputs. */
+.tc-hero {
+  text-align: center;
+  padding: 24px 0 56px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.tc-hero::before {
+  content: ''; position: absolute;
+  left: 50%; transform: translateX(-50%);
+  top: -40px; bottom: -10px;
+  width: 100vw; max-width: 100vw;
+  background:
+    radial-gradient(ellipse at top, color-mix(in srgb, var(--c-buoy) 5%, transparent) 0%, transparent 60%),
+    linear-gradient(180deg, color-mix(in srgb, var(--c-fog) 60%, var(--surface)) 0%, transparent 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+.tc-hero-eyebrow {
+  display: inline-block;
+  font-size: 11px; color: var(--c-teal);
+  text-transform: uppercase; letter-spacing: 1.2px;
+  font-weight: 700; margin-bottom: 14px;
+}
 .tc-hero h1 {
-  font-size: clamp(28px, 4.2vw, 44px);
-  line-height: 1.1; margin: 0 0 12px;
-  letter-spacing: -0.01em;
+  font-size: clamp(34px, 5.2vw, 56px);
+  font-weight: 800; line-height: 1.04;
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
 }
-.tc-hero h1 .accent { color: var(--c-buoy); }
+.tc-hero h1 .accent {
+  color: var(--c-buoy);
+  position: relative; display: inline-block;
+}
+.tc-hero h1 .accent::after {
+  content: ''; position: absolute;
+  left: 4%; right: 4%; bottom: -2px;
+  height: 6px; border-radius: 4px;
+  background: color-mix(in srgb, var(--c-buoy) 22%, transparent);
+  z-index: -1;
+}
 .tc-hero .subtitle {
-  font-size: 16px; color: var(--text-muted);
-  max-width: 580px; margin: 0 auto 24px; line-height: 1.5;
+  font-size: 17px; color: var(--text-muted);
+  max-width: 620px; margin: 0 auto 32px; line-height: 1.55;
 }
-.tc-fact-check-banner {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 6px 14px; border-radius: 999px;
-  background: color-mix(in srgb, var(--c-teal) 8%, var(--surface));
-  border: 1px solid color-mix(in srgb, var(--c-teal) 24%, var(--border));
-  color: var(--c-teal); font-size: 13px; font-weight: 500;
-  margin-bottom: 28px;
-}
-.tc-fact-check-banner .icon { font-weight: 700; }
 
-/* ── Inputs grid (hero) ── */
+/* The big control card holds Quick-start chips and inputs together. */
+.tc-control-card {
+  max-width: 860px; margin: 0 auto;
+  padding: 22px 24px 26px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+.tc-control-card::before {
+  content: ''; position: absolute;
+  top: -1px; left: 16px; right: 16px;
+  height: 3px; border-radius: 0 0 3px 3px;
+  background: linear-gradient(90deg, var(--c-teal), var(--c-navy));
+  opacity: 0.85;
+}
+.tc-control-divider {
+  height: 1px; background: var(--divider);
+  margin: 18px -24px 18px;
+}
+
+/* ── Inputs grid ── */
 .tc-inputs {
   display: grid; gap: 16px;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 820px; margin: 0 auto;
-  padding: 22px; border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  background: var(--surface); box-shadow: var(--shadow-sm);
 }
 @media (max-width: 760px) {
   .tc-inputs { grid-template-columns: repeat(2, 1fr); }
@@ -49,9 +93,26 @@ body.true-cost .page { max-width: 1100px; }
   .tc-inputs { grid-template-columns: 1fr; }
 }
 
-/* ── Preset starter chips ── */
+/* ── Scroll-cue below hero ── */
+.tc-scroll-cue {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 6px; margin: 28px auto 0;
+  color: var(--text-faint); font-size: 12px;
+  text-transform: uppercase; letter-spacing: 1px;
+  font-weight: 600;
+  animation: tcScrollNudge 2.4s ease-in-out infinite;
+}
+.tc-scroll-cue svg { width: 18px; height: 18px; opacity: 0.6; }
+@keyframes tcScrollNudge {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tc-scroll-cue { animation: none; }
+}
+
+/* ── Preset starter chips (lives inside the control card) ── */
 .tc-presets {
-  max-width: 760px; margin: 0 auto 14px;
   display: flex; flex-wrap: wrap; align-items: center;
   gap: 6px; justify-content: center;
 }
@@ -698,19 +759,17 @@ body.true-cost .page { max-width: 1100px; }
 </style>
 
 <div class="tc-hero">
+  <span class="tc-hero-eyebrow">2026 Marblehead override · personalized calculator</span>
   <h1>What you'll <span class="accent">actually</span> pay</h1>
-  <p class="subtitle">A personalized walk-through of the 2026 override ballot — baseline growth, every tier, trash, and every benefit you may qualify for.</p>
-  <div class="tc-fact-check-banner">
-    <span class="icon">⌕</span>
-    <span>Look for the <strong>ⓘ</strong> chip next to a figure to see exactly which primary source it came from.</span>
-  </div>
+  <p class="subtitle">Enter your home value and a few details — the page builds your bill, your override share, and every state and federal benefit you may qualify for.</p>
 
-  <div class="tc-presets" id="tcPresets" role="group" aria-label="Preset scenarios">
-    <span class="tc-presets-label">Quick start:</span>
-    <!-- buttons injected by JS so the PRESETS array is the single source of truth -->
-  </div>
-
-  <div class="tc-inputs" id="tcInputs">
+  <div class="tc-control-card">
+    <div class="tc-presets" id="tcPresets" role="group" aria-label="Preset scenarios">
+      <span class="tc-presets-label">Quick start:</span>
+      <!-- buttons injected by JS so the PRESETS array is the single source of truth -->
+    </div>
+    <div class="tc-control-divider"></div>
+    <div class="tc-inputs" id="tcInputs">
     <div class="tc-input">
       <label for="tc-assessed">
         <span class="tc-input-icon"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8 L9 2.5 L15.5 8 V15 H2.5 Z"/><path d="M7 15 V10.5 H11 V15"/></svg></span>
@@ -758,6 +817,12 @@ body.true-cost .page { max-width: 1100px; }
         <label class="tc-toggle-row"><input type="checkbox" id="tc-spouse"> Surviving spouse (Clause 17D)</label>
       </div>
     </details>
+    </div><!-- /.tc-inputs -->
+  </div><!-- /.tc-control-card -->
+
+  <div class="tc-scroll-cue" aria-hidden="true">
+    <span>Scroll to see your bill</span>
+    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7 L9 12 L13 7"/></svg>
   </div>
 </div>
 
