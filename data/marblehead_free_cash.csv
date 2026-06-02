@@ -1,0 +1,22 @@
+fiscal_year,certified_free_cash,appropriated_free_cash,cushion,certified_source,appropriated_source,notes
+FY04,2140934,,,DOR DLS Gateway FreeCash2 report,,Certified as of ~7/1/2003 (end of FY03); available to appropriate during FY04
+FY05,2027245,,,DOR DLS Gateway FreeCash2 report,,
+FY06,719553,,,DOR DLS Gateway FreeCash2 report,,
+FY07,1979269,,,DOR DLS Gateway FreeCash2 report,,
+FY08,2440184,,,DOR DLS Gateway FreeCash2 report,,
+FY09,2925664,,,DOR DLS Gateway FreeCash2 report,,
+FY10,4030276,,,DOR DLS Gateway FreeCash2 report,,
+FY11,4266672,,,DOR DLS Gateway FreeCash2 report,,
+FY12,4595434,,,DOR DLS Gateway FreeCash2 report,,
+FY13,5899292,,,DOR DLS Gateway FreeCash2 report,,
+FY14,5609874,,,DOR DLS Gateway FreeCash2 report,,
+FY15,7862450,4988974,2873476,DOR DLS Gateway FreeCash2 report,data/general_fund_budgetary_FY15-24.csv (FY15 ACFR original budget),Appropriated value FY15-FY19 is total budgeted fund balance use (slightly broader than pure operating free cash)
+FY16,10521579,5428672,5092907,DOR DLS Gateway FreeCash2 report,data/general_fund_budgetary_FY15-24.csv (FY16 ACFR original budget),
+FY17,12326173,6640791,5685382,DOR DLS Gateway FreeCash2 report,data/general_fund_budgetary_FY15-24.csv (FY17 ACFR original budget),FinCom report gives operating-only portion as 6025000 (difference is other non-operating fund balance uses)
+FY18,13087811,7667948,5419863,DOR DLS Gateway FreeCash2 report,data/general_fund_budgetary_FY15-24.csv (FY18 ACFR original budget),First year exp > rev on ACFR-budgetary basis
+FY19,13432440,8310609,5121831,DOR DLS Gateway FreeCash2 report,data/general_fund_budgetary_FY15-24.csv (FY19 ACFR original budget),FinCom 2019 report first flags reliance as not sustainable
+FY20,12675462,8575000,4100462,DOR DLS Gateway FreeCash2 report,data/general_fund_budgetary_FY15-24.csv (FY20 ACFR original budget),New ACFR schedule format from FY20 onward; appropriated value is specifically operating (use of free cash to reduce the tax rate)
+FY21,10243709,7200000,3043709,DOR DLS Gateway FreeCash2 report,data/general_fund_budgetary_FY15-24.csv (FY21 ACFR original budget),
+FY22,11526201,8792102,2734099,DOR DLS Gateway FreeCash2 report,data/general_fund_budgetary_FY15-24.csv (FY22 ACFR original budget),FinCom 2022 report shows amended total of 8950000 after a 142102 collective bargaining supplemental
+FY23,10772495,10200000,572495,DOR DLS Gateway FreeCash2 report,data/general_fund_budgetary_FY15-24.csv (FY23 ACFR original budget),Peak appropriation year
+FY24,9079739,8000000,1079739,DOR DLS Gateway FreeCash2 report,data/general_fund_budgetary_FY15-24.csv (FY24 ACFR original budget),

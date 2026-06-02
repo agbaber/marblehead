@@ -246,6 +246,18 @@ Caveats:
 - 2012 and 2022 extracts are 4&ndash;5&times; larger than other years because those PDFs use unusually wide column layouts, not because they contain more content.
 - Citation pattern: *Marblehead Annual Town Report YYYY, [Department Name], page N* (use the PDF page number from the report's table of contents).
 
+## Marblehead Free Cash, FY2004&ndash;FY2024
+
+`data/marblehead_free_cash.csv` joins two series for Marblehead in one file:
+
+- **Certified free cash** (FY2004&ndash;FY2024): the unreserved fund balance certified by the Department of Revenue at the end of each prior fiscal year and made available to appropriate during that fiscal year. Pulled from the [<abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> Gateway Certified Free Cash report](https://dlsgateway.dor.state.ma.us/reports/rdPage.aspx?rdReport=FreeCash2) (community: Marblehead, all years).
+- **Appropriated free cash** (FY2015&ndash;FY2024): the portion of the certified pool actually drawn into the operating budget that year. From `data/general_fund_budgetary_FY15-24.csv`, which traces each year to its <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> original budget schedule.
+- **Cushion**: certified minus appropriated. The unspent portion that rolled forward.
+
+Pre-FY2015 appropriated values are not in this CSV because the matching <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>-derived series only covers FY15 onward. The certified series alone for FY04&ndash;FY14 is still useful for trend context.
+
+Caveats per the underlying CSV's `notes` column: appropriated values for FY15&ndash;FY19 are total budgeted fund balance use (slightly broader than pure operating free cash). FY20 onward is specifically operating (use of free cash to reduce the tax rate) per the post-FY20 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> schedule format. FY22 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> captures pre-amendment original $8,792,102; the <abbr class="g" title="Finance Committee">FinCom</abbr> 2022 report shows an amended total of $8,950,000 after a $142,102 collective bargaining supplemental.
+
 ## Marblehead Independent & Current Articles (referenced across site)
 - ["Marblehead advances $122.8M budget built on cuts, defers override decisions"](https://www.marbleheadindependent.com/marblehead-advances-122-8m-budget-built-on-cuts-defers-override-decisions/) (Marblehead Independent)
 - ["Concerns over staffing cuts shape Marblehead school budget hearing"](https://www.marbleheadindependent.com/concerns-over-staffing-cuts-shape-marblehead-school-budget-hearing/) (Marblehead Independent)
