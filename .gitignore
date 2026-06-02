@@ -55,3 +55,4 @@ data/schools/_pdfs/
 
 # Local PDF cache for annual town reports (committed text files only)
 data/town_docs/annual_reports/*.pdf
+_site_test/
