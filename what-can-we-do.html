@@ -176,38 +176,6 @@ scripts: [citations]
   }
 
   /* Status pill row sits right under title */
-  .idea-status-row {
-    margin: 0 0 18px;
-  }
-  .idea-status {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    padding: 4px 9px;
-    border-radius: 4px;
-  }
-  .idea-status[data-s="rejected"] {
-    background: color-mix(in srgb, var(--c-buoy) 14%, transparent);
-    color: var(--c-buoy);
-  }
-  .idea-status[data-s="not-tried"] {
-    background: color-mix(in srgb, var(--c-teal) 14%, transparent);
-    color: var(--c-teal);
-  }
-  .idea-status[data-s="partial"] {
-    background: color-mix(in srgb, var(--c-brass) 18%, transparent);
-    color: var(--c-brass);
-  }
-  .idea-status[data-s="discussed"] {
-    background: color-mix(in srgb, var(--text) 10%, transparent);
-    color: var(--text-muted);
-  }
-  .idea-status[data-s="unknown"] {
-    background: color-mix(in srgb, var(--text) 8%, transparent);
-    color: var(--text-muted);
-  }
 
   /* Body prose: the main content of each card */
   .idea-body {
@@ -541,9 +509,6 @@ scripts: [citations]
     <div class="idea" data-cat="rev">
       <p class="idea-num">01 &middot; Local option tax</p>
       <h3 class="idea-title">Adopt the room and short-term rental occupancy excise</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="rejected">Narrowly rejected, 2023</span>
-      </div>
       <div class="idea-body">
         <p>A local tax on overnight stays in hotels, inns, B&amp;Bs, and Airbnb-style rentals. Massachusetts lets each town add up to 6% on top of the state's 5.7% lodging tax. <strong>Most residents never pay it; visitors do.</strong></p>
         <p>Marblehead voted on this at the 2023 Annual Town Meeting as Article 25. It lost by three votes: <strong>391 Yes, 394 No</strong>. Hasn't been on a warrant since.</p>
@@ -573,9 +538,6 @@ scripts: [citations]
     <div class="idea" data-cat="rev">
       <p class="idea-num">02 &middot; Local option tax</p>
       <h3 class="idea-title">Community Impact Fee on professionally managed short-term rentals</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="not-tried">Not tried separately</span>
-      </div>
       <div class="idea-body">
         <p>A separate small fee that <strong>only applies to people running 2 or more short-term rentals as a business</strong>. Doesn't touch a homeowner renting out their own place occasionally. Most of the proceeds have to go to affordable housing under state law.</p>
         <p>Usually bundled with the room excise above when towns adopt it. Wasn't presented separately at the 2023 Annual Town Meeting.</p>
@@ -602,9 +564,6 @@ scripts: [citations]
     <div class="idea" data-cat="rev">
       <p class="idea-num">03 &middot; Existing asset</p>
       <h3 class="idea-title">Have the town-owned electric company contribute more to the town budget</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="partial">Partial, FY27</span>
-      </div>
       <div class="idea-body">
         <p><strong>Marblehead owns its electric company.</strong> Most towns buy power from National Grid or Eversource; we have our own utility (the Marblehead Municipal Light Department, or <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr>). The utility pays a flat contribution to the town's general fund every year, called a "payment in lieu of taxes" because the utility itself isn't taxed directly.</p>
         <p>That payment just rose from <strong>$330,000 to $360,000</strong> in the FY27 budget. The first increase in years. Towns with their own utilities, including Wellesley, Belmont, and Concord, often contribute materially more relative to utility revenue.</p>
@@ -633,9 +592,6 @@ scripts: [citations]
     <div class="idea" data-cat="rev">
       <p class="idea-num">04 &middot; Existing asset</p>
       <h3 class="idea-title">Audit the boat excise rolls for compliance</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="unknown">Status unclear</span>
-      </div>
       <div class="idea-body">
         <p>Massachusetts taxes recreational boats at <strong>$10 per $1,000 of valuation</strong> under state law (G.L. c. 60B). Marblehead has historically collected around <strong>$150,000 a year</strong> from about 2,000 to 2,300 boats, roughly flat from the mid-2000s through the latest annual reports.</p>
         <p>The valuations themselves are set by a state formula based on length and age, so a town can't "revalue" boats locally. What a town <em>can</em> do is audit for compliance: identifying boats moored or stored here on July 1 that aren't on the excise rolls. The state's valuation table is also famously low (a brand-new 25-foot boat is valued at around $11,000, far below market), but that's a state legislature issue, not a local one.</p>
@@ -664,9 +620,6 @@ scripts: [citations]
     <div class="idea" data-cat="rev">
       <p class="idea-num">05 &middot; Existing asset</p>
       <h3 class="idea-title">Mooring waitlist transfer fee</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="partial">Partial &middot; fees raised 2022, waitlist untouched</span>
-      </div>
       <div class="idea-body">
         <p>Mooring permits in Marblehead Harbor are scarce; <strong>the waitlist is decades long</strong>. When someone gives up their mooring, the next person on the list gets it at the standard annual fee. A transfer fee would put a price on the handoff itself, recognizing that a usable mooring spot has real economic value to the person stepping into it.</p>
         <p>Politically charged because long-time families view waitlist position as a kind of inheritance. Mooring fees themselves were raised at the 2022 Annual Town Meeting, but the transfer mechanism wasn't.</p>
@@ -706,9 +659,6 @@ scripts: [citations]
     <div class="idea" data-cat="cost">
       <p class="idea-num">06 &middot; Retiree benefits</p>
       <h3 class="idea-title">Switch retiree health coverage from the state <abbr class="g" title="Group Insurance Commission">GIC</abbr> to a Group Medicare Advantage plan</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="not-tried">Not studied locally</span>
-      </div>
       <div class="idea-body">
         <p>Retirees over 65 get most of their health coverage from <strong>federal Medicare</strong>. The town pays for a supplemental plan on top, currently through the state's <abbr class="g" title="Group Insurance Commission">GIC</abbr>. Switching that supplemental layer to a different style of coverage, called "Group Medicare Advantage," can cost the town significantly less per retiree.</p>
         <p>It also changes how retirees access care: <strong>more network restrictions and more prior-authorization paperwork</strong>. Real money on the table, real tradeoffs for retirees. Other Massachusetts cities and towns have done it (Boston, Saugus) and others have studied it. Marblehead has not, per the town's own published list of cost-control measures.</p>
@@ -739,9 +689,6 @@ scripts: [citations]
     <div class="idea" data-cat="cost">
       <p class="idea-num">07 &middot; Energy</p>
       <h3 class="idea-title">Energy Savings Performance Contract on schools and town buildings</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="not-tried">Not on buildings</span>
-      </div>
       <div class="idea-body">
         <p>Hire a private energy-services company to audit our schools and town buildings, install efficiency upgrades (lighting, heating, controls), and <strong>get paid only out of the energy savings over time</strong>. The town fronts no money. If the projected savings don't materialize, the energy company eats the loss, not us.</p>
         <p>The state has a pre-vetted procurement process for this through the Department of Energy Resources. Used by hundreds of Massachusetts towns. <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> received a federal grid-resilience grant recently, but that's a separate thing, not a buildings-side energy contract.</p>
@@ -771,9 +718,6 @@ scripts: [citations]
     <div class="idea" data-cat="cost">
       <p class="idea-num">08 &middot; Operations</p>
       <h3 class="idea-title">Expand shared back-office services between town and schools</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="partial">Early discussions underway</span>
-      </div>
       <div class="idea-body">
         <p>Marblehead's town side and school side currently run separate finance, <abbr class="g" title="Information Technology">IT</abbr>, <abbr class="g" title="Human Resources">HR</abbr>, and procurement teams. There's no legal barrier to sharing them. What state law (<abbr class="g" title="Massachusetts General Laws">MGL</abbr> c. 71 &sect; 37) does say is that the School Committee retains <strong>final approval over its own budget</strong> within the lump sum Town Meeting appropriates, and that school employees report to the superintendent rather than the town administrator. The two structures can't be merged into one, but the services can be shared by agreement.</p>
         <p>Many other Massachusetts towns share: combined <abbr class="g" title="Information Technology">IT</abbr>, joint procurement, shared payroll processing, sometimes a unified facilities team. Wellesley runs a single Director of Finance &amp; Administration serving both sides. <strong>The barrier in Marblehead is political, not legal:</strong> both the Select Board and the School Committee have to want to share, and so far both sides have largely run parallel operations.</p>
@@ -805,9 +749,6 @@ scripts: [citations]
     <div class="idea" data-cat="cost">
       <p class="idea-num">09 &middot; Regional</p>
       <h3 class="idea-title">Expand inter-municipal sharing with neighbor towns</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="partial">Joint ambulance approved 2025</span>
-      </div>
       <div class="idea-body">
         <p>State law (G.L. c. 40 &sect; 4A) lets two or more towns formally share a service or a staff member, with cost split between them. Marblehead has <strong>one recent example</strong>: the Select Board approved a joint ambulance services contract with Swampscott and Beauport Ambulance Services in July 2025, providing one fully staffed ALS ambulance plus additional coverage, with cost-sharing and a 6-month opt-out clause.<sup class="cite" data-href="/meetings/select-board-2025-07-23/" data-source="Select Board minutes, 2025-07-23, Ambulance Contract: 'This is a joint contract, approved by Swampscott the night before, which will provide enhanced competitiveness and include provisions for response times, performance oversight, and a 6-month notification period for municipalities to opt out. Beauport, which has experience serving multiple towns, will provide one fully staffed ALS ambulance and additional BLS coverage, with new co-branded vehicles.' Motion approved unanimously; contract begins August 15. (quote_verified flag not yet set in catalog)"></sup> The model works locally.</p>
         <p>Beyond ambulance, the natural candidates are staff roles where the workload is well under one full-time position for either town alone: assistant assessor, alternate building inspector, veterans agent, joint procurement officer. Each shared role saves the town roughly half a full-time position relative to going alone. Slow to set up but the legal mechanism is well-trodden.</p>
@@ -835,9 +776,6 @@ scripts: [citations]
     <div class="idea" data-cat="cost">
       <p class="idea-num">10 &middot; Operations</p>
       <h3 class="idea-title">Move building permits and inspections fully online</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="partial">Procurement online, permits not</span>
-      </div>
       <div class="idea-body">
         <p>Building permits, inspection sign-offs, and zoning approvals still need <strong>paper forms and in-person counter visits</strong>. Modern permitting software (OpenGov, which the town already uses for procurement; Tyler; Energov) lets residents file, pay, and track everything online. The town adopted OpenGov for procurement bids in 2025; extending it to permitting is a natural next step.</p>
         <p>Honest math: this is <strong>roughly cost-neutral in the short term and a small net savings long term</strong>, not a meaningful dollar play. A permitting platform for a town Marblehead's size typically costs $30K to $80K per year in licensing plus $30K to $80K one-time to implement. The savings come from a fraction of a full-time position recovered over a 1 to 2 year ramp, plus a small acceleration in when permit revenue hits the books. Real benefits beyond dollars: faster permit cycles for residents, better data and oversight, and less paper.</p>
@@ -866,9 +804,6 @@ scripts: [citations]
     <div class="idea" data-cat="cost">
       <p class="idea-num">11 &middot; Benefits</p>
       <h3 class="idea-title">Renegotiate the 83% health-insurance premium share for active employees</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="not-tried">Not proposed in current bargaining</span>
-      </div>
       <div class="idea-body">
         <p>Marblehead pays <strong>83% of the health insurance premium</strong> for active employees; the employee pays 17%. That split is tied for the highest among comparable Massachusetts towns. Most peer towns have moved to 75/25 or 78/22 over the past decade. Each percentage point of share-shift saves the town roughly $300,000 to $500,000 per year, depending on the total premium base.</p>
         <p>The catch is well-documented and important: <strong>unions almost always trade premium-share concessions for wage increases</strong>. Hingham moved its split a few years ago and gave teachers about $16,000 in additional base salary in compensation, and the longer-term math depends on whether wage growth or health-cost growth dominates. The net savings are real but materially smaller than the headline.</p>
@@ -898,9 +833,6 @@ scripts: [citations]
     <div class="idea" data-cat="cost">
       <p class="idea-num">12 &middot; Benefits</p>
       <h3 class="idea-title">Add a spousal surcharge or carve-out on the health plan</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="not-tried">Not proposed</span>
-      </div>
       <div class="idea-body">
         <p>The mechanism: <strong>if a town employee's spouse has access to coverage through their own employer</strong>, the spouse either (a) pays a monthly surcharge of around $50 to $150 to stay on Marblehead's plan, or (b) is excluded and must use their own employer's coverage. The first version is called a "spousal surcharge"; the second is called a "spousal carve-out."</p>
         <p>The equity argument is clean: <strong>the town probably shouldn't subsidize spouses whose own employer offers comparable coverage</strong>. The mechanism is used by large private employers (Boeing, Walmart) and by a growing number of Massachusetts municipalities. Requires annual attestation from employees about spouse employment and coverage availability, which carries an administrative cost.</p>
@@ -929,9 +861,6 @@ scripts: [citations]
     <div class="idea" data-cat="cost">
       <p class="idea-num">13 &middot; Personnel</p>
       <h3 class="idea-title">Audit overtime patterns in police, fire, and <abbr class="g" title="Department of Public Works">DPW</abbr></h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="unknown">Status unclear</span>
-      </div>
       <div class="idea-body">
         <p>Overtime in public-safety and public-works departments is typically the largest discretionary personnel-cost variable in a town budget. Marblehead's police, fire, and <abbr class="g" title="Department of Public Works">DPW</abbr> all run material overtime. The honest accounting is more complicated than it sounds:</p>
         <p><strong>Some overtime is reimbursed and isn't on the town's tab</strong>, police details paid for by Eversource, utility contractors, or developers; some fire mutual-aid time. <strong>Some overtime is structural, not discretionary</strong>, minimum-staffing rules in fire contracts, court appearances, sick coverage, mandatory training. <strong>Some overtime is genuinely cheaper than hiring</strong>, overtime is 1.5x wage with no benefits add-on; a new full-time hire is 1x wage plus roughly 40% in benefits and pension cost, so the breakeven is real.</p>
@@ -961,9 +890,6 @@ scripts: [citations]
     <div class="idea" data-cat="cost">
       <p class="idea-num">14 &middot; Benefits</p>
       <h3 class="idea-title">Restructure part-time positions to avoid benefit eligibility</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="discussed">Not recommended</span>
-      </div>
       <div class="idea-body">
         <p>The mechanism: in Massachusetts, employees become eligible for town-paid health insurance once they work <strong>20 or more hours per week on a regular basis</strong>. Some employers structure part-time jobs at 18 or 19 hours specifically to stay below that threshold and avoid the benefit cost.</p>
         <p>Included on this page because it came up in conversation and the math, in isolation, sounds attractive. <strong>We do not recommend it.</strong> The reasons:</p>
@@ -999,9 +925,6 @@ scripts: [citations]
     <div class="idea" data-cat="cost">
       <p class="idea-num">15 &middot; Benefits</p>
       <h3 class="idea-title">Pay employees to waive coverage when they have access through a spouse</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="not-tried">Not proposed</span>
-      </div>
       <div class="idea-body">
         <p>The mechanism: <strong>if a town employee has access to health coverage through a spouse's employer, they can choose to waive Marblehead's plan in exchange for a fixed annual cash payment</strong>, typically $1,500 to $5,000. The town saves the difference between its premium share (around $15,000 to $23,000 per family plan at 83%) and the buyout payment &ndash; net savings of $13,000 to $20,000 per employee who opts out.</p>
         <p>This is the <strong>carrot version</strong> of the spousal surcharge in idea 12. Where the surcharge raises the price for dual-coverage families, the opt-out incentive pays them to leave entirely. The two can run in parallel. Many Massachusetts municipalities and most large private employers offer some version. Uptake is typically 5 to 15 percent of eligible employees with spouses on benefited employment elsewhere.</p>
@@ -1044,9 +967,6 @@ scripts: [citations]
     <div class="idea" data-cat="gov">
       <p class="idea-num">16 &middot; Bylaw</p>
       <h3 class="idea-title">Create a standing citizen Efficiency and Shared Services Commission</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="not-tried">Not done</span>
-      </div>
       <div class="idea-body">
         <p>Create a <strong>permanent citizen commission, written into the town bylaws</strong>, whose only job is to find cost savings and shared-service opportunities and report to the Select Board, School Committee, and Finance Committee annually before each budget cycle.</p>
         <p>Without formal standing in the bylaws, advisory groups tend to get politely ignored. With formal standing and a reporting deadline tied to the budget, they're harder to brush aside. The CliftonLarsonAllen assessment in 2024 was a one-time consulting engagement, not a recurring body.</p>
@@ -1074,9 +994,6 @@ scripts: [citations]
     <div class="idea" data-cat="gov">
       <p class="idea-num">17 &middot; Budget process</p>
       <h3 class="idea-title">Rebuild the top three department budgets from $0 once every few years</h3>
-      <div class="idea-status-row">
-        <span class="idea-status" data-s="discussed">Raised at School Committee four times, not adopted</span>
-      </div>
       <div class="idea-body">
         <p>Most departments build next year's budget by <strong>starting with last year's number and adding inflation</strong>. "Zero-based budgeting" starts from $0 and forces every line to be re-justified from scratch. It's a heavy lift, but done once every few years per department, it resets baselines and uncovers spending that nobody currently remembers approving.</p>
         <p>Schools, Police, and Fire account for about 70% of operating, so they're the natural targets. Zero-based budgeting has come up at School Committee at least four times: a 2020-06-08 commitment to develop a zero-based budget for FY22,<sup class="cite" data-href="/meetings/school-committee-2020-06-08/" data-source="School Committee minutes, 2020-06-08, Public Hearing on the Proposed FY21 School Budget: 'Mr. McAlduff stated the School Committee would need to meet and possibly include the town finance side and write down what definition of a zero based budget we would be using as there are several varying definitions.' (quote_verified=true in catalog)"></sup> a 2022-07-19 overview by the Finance Director proposing an October start with intensive staffing review,<sup class="cite" data-href="/meetings/school-committee-2022-07-19/" data-source="School Committee minutes, 2022-07-19, Zero Based Budget Presentation by Michelle Cresta: 'Assistant Superintendent of Finance and Operations, Michelle Cresta gave an overview of what a zero based budgeting approach would entail. It was explained that the process was created to justify costs based on need in every salary line. Ms. Cresta also provided recommendations for planning for the FY24 budgeting season including beginning the process in October while incorporating an intensive overview of staffing levels, which was last completed some time ago.' (quote_verified=true in catalog)"></sup> a 2023-07-06 proposal to work with an outside consultant on staffing specifically,<sup class="cite" data-href="/meetings/school-committee-2023-07-06/" data-source="School Committee minutes, 2023-07-06, FY24 Budget Discussions: 'Ms. Schaeffner mentioned working with administration to look at a zero-based budgeting for staffing specifically. She also recommended bringing in an outside consultant to complete the process. It was recommended that the discussion be continued at a meeting in August.' (quote_verified=true in catalog)"></sup> and a 2025-10-17 request for a zero-based approach examining staffing against enrollment projections.<sup class="cite" data-href="/meetings/school-committee-2025-10-17/" data-source="School Committee minutes, 2025-10-17, FY27 Budget Planning Discussion and Staffing Analysis: 'Committee requested zero-based budgeting approach examining staffing needs by building based on enrollment projections. Superintendent noted current process already considers contractual obligations and service requirements. Enrollment declined 800 students over eight years, requiring staffing justification. Level funding with contractual increases estimated to require $1.7 million in cuts. Potential elimination of approximately 30 professional staff positions (10% of staff).' (quote_verified flag not yet set in catalog)"></sup> No published board action in the catalog of 331 minute-level entries (FY19&ndash;present) constitutes a formal zero-based exercise. The most recent attempt &ndash; the Oct 17, 2025 request, with methodology development promised for an Oct 28 meeting &ndash; was overtaken at the next School Committee meeting on Oct 30, 2025, where the Budget Subcommittee instead directed all departments to prepare level-service budgets.<sup class="cite" data-href="/meetings/school-committee-2025-10-30/" data-source="School Committee minutes, 2025-10-30, Budget Subcommittee Report: 'Budget subcommittee met twice with finance committee liaison; all departments directed to prepare level service budgets and laid out a timeline (December preliminary information).' The Oct 30 minutes (data/minutes/school_committee/2025-10-30.cleaned.txt) contain no mention of zero-based budgeting, methodology, or the school-by-school staffing breakdowns the Superintendent had committed to on Oct 17."></sup></p>
