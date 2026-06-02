@@ -675,6 +675,12 @@ body.true-cost .read-time { display: none; }
 .tc-deduction-running-breakdown li.total .pct {
   min-width: 118px;
 }
+.tc-deduction-running-note {
+  font-size: 11px; color: rgba(255,255,255,0.55);
+  line-height: 1.5; font-style: italic;
+  margin-top: 14px; padding-top: 12px;
+  border-top: 1px dashed rgba(255,255,255,0.14);
+}
 .tc-deduction-running-breakdown li.sub .pct { color: rgba(188, 228, 208, 0.6); }
 .tc-deduction-running-breakdown li.total .pct {
   color: rgba(255,255,255,0.7); font-weight: 600;
@@ -1123,6 +1129,9 @@ body.true-cost .read-time { display: none; }
       <div class="tc-deduction-running-value" id="s4Net">$11,847</div>
       <div class="tc-deduction-running-meta" id="s4Meta"></div>
       <div class="tc-deduction-running-breakdown" id="s4Breakdown"></div>
+      <p class="tc-deduction-running-note">
+        Override and trash levy lines are <strong>FY29 totals from the Town Administrator's published phase-in schedule</strong> — they already include their own 2.5%/yr compounding. The baseline-growth line covers only the compounding on your existing bill, so the three streams don't double-count.
+      </p>
     </div>
   </div>
 </section>
