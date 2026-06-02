@@ -1,6 +1,7 @@
 ---
 title: "What you'll actually pay"
 body_class: true-cost
+community_pulse: off-sections
 ---
 <style>
 /* ════════════════════════════════════════════════════════════
@@ -60,8 +61,8 @@ body.true-cost .page { max-width: 1100px; }
   font-weight: 700; margin-right: 4px;
 }
 .tc-preset-chip {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 12px;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 13px;
   font-size: 12px; font-weight: 600;
   background: var(--surface);
   color: var(--text-muted);
@@ -71,6 +72,12 @@ body.true-cost .page { max-width: 1100px; }
   transition: background 0.15s, color 0.15s, border-color 0.15s;
   white-space: nowrap;
 }
+.tc-preset-chip-icon {
+  width: 16px; height: 16px; flex-shrink: 0;
+  color: var(--c-teal);
+}
+.tc-preset-chip-icon svg { width: 100%; height: 100%; display: block; }
+.tc-preset-chip.active .tc-preset-chip-icon { color: white; }
 .tc-preset-chip:hover {
   border-color: var(--c-teal);
   color: var(--c-teal);
@@ -81,9 +88,9 @@ body.true-cost .page { max-width: 1100px; }
   background: var(--c-navy);
   color: white;
 }
-.tc-preset-chip .preset-icon { font-size: 13px; line-height: 1; }
 @media (max-width: 600px) {
-  .tc-preset-chip { font-size: 11px; padding: 5px 10px; }
+  .tc-preset-chip { font-size: 11px; padding: 6px 11px; }
+  .tc-preset-chip-icon { width: 14px; height: 14px; }
 }
 
 /* Input flash highlight when a preset is applied */
@@ -694,17 +701,26 @@ body.true-cost .page { max-width: 1100px; }
 
   <div class="tc-inputs" id="tcInputs">
     <div class="tc-input">
-      <label for="tc-assessed">Home assessed value</label>
+      <label for="tc-assessed">
+        <span class="tc-input-icon"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8 L9 2.5 L15.5 8 V15 H2.5 Z"/><path d="M7 15 V10.5 H11 V15"/></svg></span>
+        Home assessed value
+      </label>
       <input id="tc-assessed" type="text" inputmode="numeric" value="$1,291,507">
       <span class="hint">Town average. <a href="https://epay.cityhallsystems.com/selection" target="_blank" rel="noopener">Look up yours →</a></span>
     </div>
     <div class="tc-input">
-      <label for="tc-income">Household income</label>
+      <label for="tc-income">
+        <span class="tc-input-icon"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="4" width="15" height="10" rx="1.5"/><circle cx="9" cy="9" r="2.2"/><path d="M4.5 7 V7 M13.5 11 V11"/></svg></span>
+        Household income
+      </label>
       <input id="tc-income" type="text" inputmode="numeric" value="$182,132">
       <span class="hint">Marblehead median (ACS).</span>
     </div>
     <div class="tc-input">
-      <label for="tc-filing">Filing status</label>
+      <label for="tc-filing">
+        <span class="tc-input-icon"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.2"/><circle cx="12.5" cy="6.5" r="1.8"/><path d="M2 15.5 C2 12.5 3.8 10.8 6 10.8 C8.2 10.8 10 12.5 10 15.5"/><path d="M9.5 15.5 C9.5 13.5 10.8 12 12.5 12 C14.2 12 15.8 13.5 15.8 15.5"/></svg></span>
+        Filing status
+      </label>
       <select id="tc-filing">
         <option value="married">Married, filing jointly</option>
         <option value="single">Single</option>
@@ -712,12 +728,18 @@ body.true-cost .page { max-width: 1100px; }
       </select>
     </div>
     <div class="tc-input">
-      <label for="tc-age">Age of oldest owner</label>
+      <label for="tc-age">
+        <span class="tc-input-icon"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="7"/><path d="M9 4.5 V9 L12 11"/></svg></span>
+        Age of oldest owner
+      </label>
       <input id="tc-age" type="number" min="18" max="120" value="50">
       <span class="hint">For senior benefits (Circuit Breaker 65+, Clause 41C 70+).</span>
     </div>
     <details class="tc-more-exemptions">
-      <summary>More options (itemize, veteran, blind)</summary>
+      <summary>
+        <span class="tc-input-icon" style="display:inline-block;vertical-align:-2px;margin-right:6px;"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="2"/><path d="M9 1.5 V3.5 M9 14.5 V16.5 M1.5 9 H3.5 M14.5 9 H16.5 M3.6 3.6 L5 5 M13 13 L14.4 14.4 M3.6 14.4 L5 13 M13 5 L14.4 3.6"/></svg></span>
+        More options (itemize, veteran, blind)
+      </summary>
       <div class="tc-exemption-grid">
         <label class="tc-toggle-row"><input type="checkbox" id="tc-itemize"> I itemize on federal taxes</label>
         <label class="tc-toggle-row"><input type="checkbox" id="tc-veteran"> Veteran (Clause 22)</label>
@@ -792,13 +814,7 @@ body.true-cost .page { max-width: 1100px; }
   <p class="tc-section-lede">Q1, Q2, and Q3 are nested override tiers ($9M / $12M / $15M annual). The highest passing question sets the amount. Tap a tier to see the impact.</p>
   <div class="tc-bars-wrap tc-reveal" id="s2Bars">
     <div id="s2Rows"></div>
-    <div class="tc-bars-legend">
-      <span><span class="tc-legend-swatch" style="background: var(--c-text-mid);"></span>Current</span>
-      <span><span class="tc-legend-swatch" style="background: color-mix(in srgb, var(--c-text-mid) 60%, var(--surface));"></span>Baseline growth</span>
-      <span><span class="tc-legend-swatch" style="background: var(--series-tier-1);"></span>Tier 1</span>
-      <span><span class="tc-legend-swatch" style="background: var(--series-tier-2);"></span>Tier 2</span>
-      <span><span class="tc-legend-swatch" style="background: var(--series-tier-3);"></span>Tier 3</span>
-    </div>
+    <div class="tc-bars-legend" id="s2Legend"></div>
   </div>
 </section>
 
@@ -1221,7 +1237,15 @@ function computeTotals() {
   const benefits = computeBenefits(state, grossBill);
   const totalBenefits = benefits.filter(b => b.eligible && !b.info).reduce((s, b) => s + b.amount, 0);
   const netBill = Math.max(0, grossBill - totalBenefits);
-  return { currentBill, baseline, overrideAmt, trashAmt, bohFee, grossBill, benefits, totalBenefits, netBill };
+  // Honest "vs today" comparison: apply the same benefits to today's bill.
+  // Otherwise we compare next-year-net to today-gross, which makes
+  // benefit-eligible households (e.g. seniors) appear to pay less than today
+  // when really they're already receiving those benefits today too.
+  const currentBenefits = computeBenefits(state, currentBill);
+  const currentTotalBenefits = currentBenefits.filter(b => b.eligible && !b.info).reduce((s, b) => s + b.amount, 0);
+  const currentNet = Math.max(0, currentBill - currentTotalBenefits);
+  return { currentBill, currentNet, baseline, overrideAmt, trashAmt, bohFee,
+           grossBill, benefits, totalBenefits, netBill };
 }
 
 /* ════════════════════════════════════════════════════════════
@@ -1332,7 +1356,9 @@ function closeDrawer() {
 /* ── Pinned card ── */
 function renderPinned(t) {
   document.getElementById('pinnedTotal').textContent = money(t.netBill);
-  const deltaTotal = t.netBill - t.currentBill;
+  // Compare net-after-benefits future vs net-after-benefits today (not gross today),
+  // so benefit-eligible households see an apples-to-apples delta.
+  const deltaTotal = t.netBill - t.currentNet;
   const sign = deltaTotal >= 0 ? '↑' : '↓';
   document.getElementById('pinnedTotalSub').textContent = sign + money(Math.abs(deltaTotal)) + ' vs. today';
   document.getElementById('pinnedOverride').textContent = (state.tier === 0 ? '$0' : '+' + money(t.overrideAmt));
@@ -1353,7 +1379,9 @@ function renderSection1(t) {
   const maxBar = cb * Math.pow(1 + PROP25_GROWTH, 3) + 200;
   for (let y = 0; y <= 3; y++) {
     const total = baselineForYear(cb, y);
-    const growth = total - cb;
+    const growth = total - cb;                              // cumulative from today (for bar width)
+    const prevTotal = y > 0 ? baselineForYear(cb, y - 1) : cb;
+    const yoy = total - prevTotal;                          // increment this year only
     const w1 = (cb / maxBar) * 100;
     const w2 = (growth / maxBar) * 100;
     const yearLabel = ['Today (FY26)', 'FY27', 'FY28', 'FY29'][y];
@@ -1365,7 +1393,7 @@ function renderSection1(t) {
           (growth > 0 ? '<div class="tc-bar-seg tc-bar-seg-growth" style="width:' + w2 + '%"></div>' : '') +
         '</div>' +
         '<div class="tc-bar-total">' + wrapCite(money(total), y === 0 ? 'fy26-rate' : 'prop25') +
-          (y > 0 ? '<span class="delta">+' + money(growth) + '</span>' : '') +
+          (y > 0 ? '<span class="delta">+' + money(yoy) + ' vs prior yr</span>' : '') +
         '</div>' +
       '</div>'
     );
@@ -1406,6 +1434,17 @@ function renderSection2(t) {
     );
   }
   document.getElementById('s2Rows').innerHTML = rows.join('');
+  // Legend: only show what's actually drawn — Current + Baseline growth + the selected tier (if any).
+  const legendItems = [
+    '<span><span class="tc-legend-swatch" style="background: var(--c-text-mid);"></span>Current</span>',
+    '<span><span class="tc-legend-swatch" style="background: color-mix(in srgb, var(--c-text-mid) 60%, var(--surface));"></span>Baseline growth</span>'
+  ];
+  if (state.tier > 0) {
+    legendItems.push(
+      '<span><span class="tc-legend-swatch" style="background: var(--series-tier-' + state.tier + ');"></span>Tier ' + state.tier + ' override</span>'
+    );
+  }
+  document.getElementById('s2Legend').innerHTML = legendItems.join('');
 }
 
 /* ── Section 3: trash comparison ── */
@@ -1688,28 +1727,45 @@ function wireInputs() {
    ── young family on a starter home (no benefits, smaller bill)
    ── veteran homeowner (Clause 22 triggers)
    ════════════════════════════════════════════════════════════ */
+/* Hand-drawn line icons keyed to PRESET ids. 16x16 viewBox,
+   currentColor stroke, fill none. */
+const PRESET_ICONS = {
+  // simple house outline — town average
+  house: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7.5 L8 2.5 L14 7.5 V13.5 H2 Z M6 13.5 V9.5 H10 V13.5"/></svg>',
+  // two figures, one smaller — young family
+  family: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="5" r="2"/><path d="M2.5 13.5 C2.5 11 4 9.5 5.5 9.5 C7 9.5 8.5 11 8.5 13.5"/><circle cx="11.5" cy="7" r="1.4"/><path d="M9.7 13.5 C9.7 12 10.6 11 11.5 11 C12.4 11 13.3 12 13.3 13.5"/></svg>',
+  // armchair — retiree
+  chair: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8 V5.5 C3 4.7 3.6 4 4.5 4 H11.5 C12.4 4 13 4.7 13 5.5 V8"/><path d="M2 8 H14 V11.5 H2 Z"/><path d="M3.5 11.5 V13.5 M12.5 11.5 V13.5"/></svg>',
+  // house with upward arrow — senior high-value home
+  houseUp: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5 L7 4 L12 8.5 V14 H2 Z M5 14 V10.5 H9 V14"/><path d="M12.5 5.5 V1.5 M11 3 L12.5 1.5 L14 3"/></svg>',
+  // document with lines — itemizing
+  doc: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2 H10.5 L13 4.5 V14 H4 Z"/><path d="M10 2 V5 H13"/><path d="M6 8 H11 M6 10.5 H11 M6 13 H9"/></svg>',
+  // shield — veteran
+  shield: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1.8 L13.5 3.5 V8 C13.5 11.5 11 13.5 8 14.5 C5 13.5 2.5 11.5 2.5 8 V3.5 Z"/><path d="M5.5 8 L7.2 9.7 L10.5 6.4"/></svg>'
+};
+
 const PRESETS = [
-  { id: 'avg',     icon: '🏠', label: 'Town average',
+  { id: 'avg',     icon: 'house',   label: 'Town average',
     desc: 'Marblehead median household',
     state: { assessedValue: 1291507, income: 182132, filing: 'married', age: 50,
              itemize: false, veteran: false, blind: false, spouse: false } },
-  { id: 'starter', icon: '🌱', label: 'Young family, starter home',
+  { id: 'starter', icon: 'family',  label: 'Young family, starter home',
     desc: 'First-time buyers, two-earner household',
     state: { assessedValue: 850000, income: 145000, filing: 'married', age: 33,
              itemize: false, veteran: false, blind: false, spouse: false } },
-  { id: 'cb',      icon: '🕯', label: 'Retiree on fixed income',
+  { id: 'cb',      icon: 'chair',   label: 'Retiree on fixed income',
     desc: 'Senior, qualifies for Circuit Breaker + Clause 41C',
     state: { assessedValue: 850000, income: 55000, filing: 'married', age: 75,
              itemize: false, veteran: false, blind: false, spouse: false } },
-  { id: 'senior',  icon: '🌳', label: 'Senior, high-value home',
+  { id: 'senior',  icon: 'houseUp', label: 'Senior, high-value home',
     desc: '41C exemption, but home exceeds Circuit Breaker AV limit',
     state: { assessedValue: 1450000, income: 95000, filing: 'married', age: 72,
              itemize: false, veteran: false, blind: false, spouse: false } },
-  { id: 'salt',    icon: '⚓', label: 'High earner, itemizes',
+  { id: 'salt',    icon: 'doc',     label: 'High earner, itemizes',
     desc: 'Federal SALT estimate kicks in',
     state: { assessedValue: 2750000, income: 450000, filing: 'married', age: 52,
              itemize: true, veteran: false, blind: false, spouse: false } },
-  { id: 'vet',     icon: '★', label: 'Veteran homeowner',
+  { id: 'vet',     icon: 'shield',  label: 'Veteran homeowner',
     desc: 'Clause 22 veteran exemption',
     state: { assessedValue: 1100000, income: 115000, filing: 'single', age: 60,
              itemize: false, veteran: true, blind: false, spouse: false } }
@@ -1723,7 +1779,7 @@ function buildPresets() {
     btn.className = 'tc-preset-chip';
     btn.dataset.preset = p.id;
     btn.title = p.desc;
-    btn.innerHTML = '<span class="preset-icon">' + p.icon + '</span>' + p.label;
+    btn.innerHTML = '<span class="tc-preset-chip-icon">' + (PRESET_ICONS[p.icon] || '') + '</span>' + p.label;
     btn.addEventListener('click', () => applyPreset(p));
     wrap.appendChild(btn);
   });
