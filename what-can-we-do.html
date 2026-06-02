@@ -258,6 +258,33 @@ sitemap: false
     margin: 6px 0 0;
   }
 
+  /* "Who pays?" block: explicit distributional fact, same weight as the guess */
+  .idea-catch {
+    background: color-mix(in srgb, var(--c-buoy) 5%, transparent);
+    border: 1px solid color-mix(in srgb, var(--c-buoy) 18%, transparent);
+    border-left: 3px solid var(--c-buoy);
+    padding: 12px 14px 13px;
+    margin: 0 0 18px;
+    border-radius: 0 8px 8px 0;
+  }
+  .idea-catch-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--c-buoy);
+    margin: 0 0 6px;
+  }
+  .idea-catch p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--text);
+    margin: 0 0 8px;
+  }
+  .idea-catch p:last-child { margin-bottom: 0; }
+  .idea-catch p strong { font-weight: 700; }
+
   /* Research details (expandable) */
   .idea-research {
     margin-top: auto;
@@ -525,6 +552,11 @@ sitemap: false
         <span class="idea-guess-num">$200K to $500K</span>
         <span class="idea-guess-cap">per year, at the 6% cap. Range depends on hotel and <abbr class="g" title="Short-Term Rental">STR</abbr> inventory we haven't actually counted.</span>
       </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Visitors pay.</strong> Hotels, inns, and Airbnb hosts collect and remit. The lodging industry argues it suppresses bookings at the margin; data on this is mixed.</p>
+        <p>Worth noting: visitors use the harbor, beaches, parking, and emergency services without paying property tax. One argument is that this tax makes their use of town services more equitable. Another is that it makes visiting Marblehead more expensive without obvious benefit. Reasonable people disagree.</p>
+      </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
         <ul>
@@ -552,6 +584,10 @@ sitemap: false
         <span class="idea-guess-num">$20K to $75K</span>
         <span class="idea-guess-cap">per year. Small, because it only applies to commercial operators with 2+ units.</span>
       </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Commercial Airbnb operators with 2 or more properties.</strong> Homeowners renting their own place occasionally are unaffected. Small commercial operators sometimes exit at this margin; large operators absorb it. Targeted at investor-class STR operators specifically.</p>
+      </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
         <ul>
@@ -576,6 +612,11 @@ sitemap: false
         <span class="idea-guess-label">Rough guess</span>
         <span class="idea-guess-num">$150K to $400K</span>
         <span class="idea-guess-cap">per year of additional headroom. Heavily dependent on peer-utility comparisons we haven't actually run.</span>
+      </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Electric ratepayers.</strong> A bigger contribution from <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> means slightly higher electric rates to fund it. Whether that's a con depends on you.</p>
+        <p>Big house with central AC, electric heat, and EV charging? Your electric bill is large; a <abbr class="g" title="Payment In Lieu Of Taxes">PILOT</abbr> increase costs you. Senior in an older smaller home with modest electric use but a high property tax bill? You'd come out ahead, because the cost is shifting from your tax bill toward heavier electric consumers. Renters who pay their own electric directly: you'd pay a bit more. Functionally this is a <strong>shift from a property-value tax base to a consumption-based one</strong>, not new money.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -604,6 +645,10 @@ sitemap: false
         <span class="idea-guess-num">$10K to $30K</span>
         <span class="idea-guess-cap">per year, optimistically. Possibly less. Genuinely uncertain whether the audit pays for itself.</span>
       </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Boat owners whose vessels are kept in Marblehead but somehow not on the rolls here.</strong> Some are non-residents; some are residents who weren't being caught. Every Massachusetts boat owner pays excise to <em>some</em> town anyway, so this isn't new tax, just correctly-allocated tax. The boat-owning community is small but vocal.</p>
+      </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
         <ul>
@@ -629,6 +674,10 @@ sitemap: false
         <span class="idea-guess-label">Rough guess</span>
         <span class="idea-guess-num">$25K to $100K</span>
         <span class="idea-guess-cap">per year, depending entirely on waitlist turnover. Could be way off either direction.</span>
+      </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Whoever gets to the front of a decades-long waitlist.</strong> Long-time Marblehead families view waitlist position as something to pass to children. Putting a price on the handoff disrupts that social expectation. Progressive in tax incidence (it falls on people receiving a scarce asset) but contentious on cultural grounds, especially with families who've waited two or three generations.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -668,6 +717,11 @@ sitemap: false
         <span class="idea-guess-num">$300K to $900K</span>
         <span class="idea-guess-cap">per year of town-side savings. Almost certainly the largest dollar item on this page, but needs a real actuarial study before believing it.</span>
       </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Retirees.</strong> Specifically: retirees with out-of-network specialists, retirees who travel or live part-time in other states, retirees with chronic conditions that involve prior-authorization paperwork. Some retirees may have to switch doctors.</p>
+        <p>This is the item on the page where the cost falls most clearly on a defined group. The town saves real money; some retirees pay in friction, switched providers, or out-of-pocket for care that was previously covered. The decision is not easily reversible. <strong>This one deserves a full feasibility study and retiree consultation before adopting.</strong></p>
+      </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
         <ul>
@@ -696,6 +750,11 @@ sitemap: false
         <span class="idea-guess-num">$250K to $500K</span>
         <span class="idea-guess-cap">per year of avoided energy cost, plus $2M to $4M of deferred building maintenance funded from those savings rather than from town capital.</span>
       </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>The town, over 10 to 20 years, through the savings stream.</strong> "No upfront cost" is true but slightly misleading: the energy company is financing the upgrades at their margin and capital cost. Over the contract life, the town pays full retail for the upgrades plus the energy company's spread, not the wholesale cost.</p>
+        <p>The "guaranteed savings" usually has carve-outs (weather adjustments, utility-rate changes, occupancy variations). It's a real tool with a real track record, but the energy company is a for-profit entity and the contract reflects that. Long-term lock-in is the trade for zero upfront capex.</p>
+      </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
         <ul>
@@ -722,6 +781,11 @@ sitemap: false
         <span class="idea-guess-label">Rough guess</span>
         <span class="idea-guess-num">$200K to $400K</span>
         <span class="idea-guess-cap">per year over a 24-36 month window. Higher if a single financial system replaces parallel ones.</span>
+      </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Back-office staff in redundant roles.</strong> Most savings come through attrition: when someone retires, the position doesn't get refilled, and the remaining people absorb the work. No one gets laid off, but workloads on remaining staff get heavier during transition. Service quality often dips for a year or two while systems get consolidated.</p>
+        <p>School-side staff sometimes feel the move is a takeover by the town side, particularly around financial controls. Politically slow because both Select Board and School Committee have to agree on the structure.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -750,6 +814,10 @@ sitemap: false
         <span class="idea-guess-num">$50K to $150K</span>
         <span class="idea-guess-cap">per year per shared role. Depends entirely on which role and which neighbor.</span>
       </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>The shared employee, and any Marblehead resident who needs them quickly.</strong> The shared role now has two bosses. Marblehead-specific tasks compete with the neighbor's priorities. Slower response on issues that aren't urgent to both towns. Marblehead also has less unilateral authority over hiring, firing, and discipline of that role.</p>
+      </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
         <ul>
@@ -775,6 +843,10 @@ sitemap: false
         <span class="idea-guess-label">Rough guess</span>
         <span class="idea-guess-num">$50K to $100K</span>
         <span class="idea-guess-cap">per year, through staff-time savings and faster permit-revenue recognition.</span>
+      </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>The town up front, in software costs and staff training.</strong> Older residents and people without reliable internet face a transition curve and may need help getting their permits through. Inspectional Services may need to staff a help line at the counter for a while. Acquisition and annual licensing fees offset some of the savings; the net win is usually positive but small.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -815,6 +887,10 @@ sitemap: false
         <span class="idea-guess-num">No direct dollars</span>
         <span class="idea-guess-cap">The commission itself produces no revenue. What it produces is recommendations. Peer-town efficiency commissions have surfaced anywhere from nothing to several million per year, depending heavily on composition and authority.</span>
       </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Department staff who get audited, and residents who serve on the commission.</strong> Commission seats become contested; the commission's quality depends entirely on membership. Recommendations land on already-busy department heads who can implement them or quietly ignore them. Done well, it produces real savings; done poorly, it produces friction without much else.</p>
+      </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
         <ul>
@@ -841,6 +917,10 @@ sitemap: false
         <span class="idea-guess-num">$500K to $1.5M</span>
         <span class="idea-guess-cap">per cycle of potential reallocation, declining over time as baselines reset. Highly speculative until tried locally.</span>
       </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Department staff.</strong> The exercise is several weeks of line-by-line justification work on top of their regular duties. Demoralizing if framed as "we don't trust your judgment." Some departments learn to game zero-based budgeting by reorganizing line items rather than rethinking spending. Done as a partnership it produces real reallocations; done as an audit it just produces friction.</p>
+      </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
         <ul>
@@ -864,28 +944,20 @@ sitemap: false
 
   <div class="cautions">
     <div class="caution">
-      <p class="caution-h">Medicare Advantage carries real impact on retirees.</p>
-      <p class="caution-p">Network restrictions, prior-authorization paperwork, and disruption for retirees who travel or live in multiple states. Federal payment rates to Medicare Advantage plans have been compressed since 2024, which is shrinking the savings opportunity over time. The decision is hard to reverse.</p>
+      <p class="caution-h">Cost-shifts aren't new money.</p>
+      <p class="caution-p">Several of the revenue ideas above (the room excise, the <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> contribution, the mooring transfer fee) shift <em>who</em> pays rather than finding money that wasn't there before. That's not necessarily bad, but it's a different argument from "found money." Worth being honest about which item is which.</p>
     </div>
     <div class="caution">
-      <p class="caution-h">The room and <abbr class="g" title="Short-Term Rental">STR</abbr> tax raises the cost of visiting Marblehead.</p>
-      <p class="caution-p">At the 6% cap, the burden is modest relative to seasonal pricing, but the political case has to be made on its own terms. Local lodging operators have a real interest in being heard.</p>
+      <p class="caution-h">"No Town Meeting needed" doesn't mean easy.</p>
+      <p class="caution-p">Several items above can begin at the next board meeting. That doesn't mean they're fast or politically simple. Medicare Advantage requires retiree negotiation; an energy contract needs an investment-grade audit; shared back office crosses the town/school line. Months of work, even when no vote is needed.</p>
     </div>
     <div class="caution">
-      <p class="caution-h">Efficiency commissions are mixed.</p>
-      <p class="caution-p">Some Massachusetts towns produce material findings; others produce reports that sit on shelves. Composition, reporting cadence, and a forcing function determine which outcome you get.</p>
+      <p class="caution-h">The ranges are estimates, not forecasts.</p>
+      <p class="caution-p">Every dollar number on this page is order-of-magnitude. A careful study might show the real number is half what's listed; some items might also turn out larger than estimated. The point of publishing this is to make the questions askable, not to project confidence we don't have.</p>
     </div>
     <div class="caution">
-      <p class="caution-h">The <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> contribution is a transfer, not new money.</p>
-      <p class="caution-p">Functionally it moves dollars from electric ratepayers to property taxpayers. Overlapping populations, but not identical. The ratepayer side is also organized and will be heard.</p>
-    </div>
-    <div class="caution">
-      <p class="caution-h">Shared services save money slowly.</p>
-      <p class="caution-p">Most savings show up through attrition over multiple years, not through headcount cuts in year one. The political timeline tends to outrun the operational one.</p>
-    </div>
-    <div class="caution">
-      <p class="caution-h">This page is a draft assembled by one resident.</p>
-      <p class="caution-p">It hasn't been vetted by the <abbr class="g" title="Chief Financial Officer">CFO</abbr>, Finance Committee, town counsel, or any peer-town benchmarking. Some items might be naive, or already considered and rejected for reasons not yet surfaced here.</p>
+      <p class="caution-h">One resident's draft, not a finance committee output.</p>
+      <p class="caution-p">Some items on this page may be naive, or already studied and rejected for reasons not captured here. The "Who pays?" boxes on each card name the most obvious tradeoffs, but every item carries more nuance than fits on a card. Treat each one as a starting question.</p>
     </div>
   </div>
 </section>
