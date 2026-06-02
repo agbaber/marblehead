@@ -24,6 +24,17 @@ layout: default
       {% endif %}
     </header>
 
+    {%- comment -%} ─── LOGIN TO SUBSCRIBE CTA ─── {%- endcomment -%}
+    <aside class="ms-subscribe" aria-label="Subscribe to meeting summaries">
+      <div class="ms-subscribe-copy">
+        <p class="ms-subscribe-lead"><strong>Get this in your inbox.</strong></p>
+        <p class="ms-subscribe-body">A Friday digest of meetings that match the boards and topics you care about. Verified residents only.</p>
+      </div>
+      <a class="ms-subscribe-btn" href="{{ '/verify.html' | relative_url }}?next=subscribe">
+        Log in to subscribe&nbsp;&rarr;
+      </a>
+    </aside>
+
     {%- comment -%} ─── SEPARATE FEATURED FROM REST ─── {%- endcomment -%}
     {% assign featured = page.topic_segments | where: "featured", true %}
     {% assign secondary = page.topic_segments | where_exp: "s", "s.featured != true" %}
@@ -146,13 +157,7 @@ layout: default
       </details>
     </div>
 
-    <p class="ms-back">
-      <a href="{{ '/meetings/' | relative_url }}">&larr; All meetings</a>
-      {% if page.slug == "select-board-2026-04-08" %}
-      &nbsp;&middot;&nbsp;
-      <a href="{{ '/meetings/select-board-2026-04-08-boring/' | relative_url }}">See the boring version for comparison &rarr;</a>
-      {% endif %}
-    </p>
+    <p class="ms-back"><a href="{{ '/meetings/' | relative_url }}">&larr; All meetings</a></p>
 
   </article>
 

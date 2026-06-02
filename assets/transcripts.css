@@ -59,6 +59,58 @@
   color: var(--c-text-mid);
 }
 
+/* ── Subscribe CTA ─────────────────────────────────────────────── */
+.ms-subscribe {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: color-mix(in srgb, var(--c-teal) 6%, var(--c-surface));
+  border: 1px solid color-mix(in srgb, var(--c-teal) 22%, var(--c-border));
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin: 0 0 24px;
+}
+.ms-subscribe-copy { flex: 1; min-width: 0; }
+.ms-subscribe-lead {
+  margin: 0 0 2px;
+  font-size: 14.5px;
+  color: var(--c-text);
+}
+.ms-subscribe-lead strong { color: var(--c-navy); }
+.ms-subscribe-body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--c-text-mid);
+}
+.ms-subscribe-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--c-fog);
+  background: var(--c-teal);
+  border-radius: 10px;
+  padding: 10px 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.ms-subscribe-btn:hover {
+  background: color-mix(in srgb, var(--c-navy) 30%, var(--c-teal));
+}
+@media (max-width: 600px) {
+  .ms-subscribe {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 14px;
+  }
+  .ms-subscribe-btn { text-align: center; justify-content: center; }
+}
+
 /* ── Section labels ─────────────────────────────────────────────── */
 .ms-section-label {
   font-size: 11px;
