@@ -788,30 +788,11 @@ body.true-cost .page { max-width: 1100px; }
   </div>
 </aside>
 
-<!-- ── SECTION 1: Prop 2½ baseline ── -->
-<section class="tc-section" id="tcSection1" data-section="1">
-  <div class="tc-section-eyebrow">First, the baseline</div>
-  <h2>Some growth is already happening, with or without overrides</h2>
-  <p class="tc-section-lede">Massachusetts state law (Proposition 2½) lets towns raise the property-tax levy by 2.5% per year automatically. So your bill grows even if every override ballot question fails.</p>
-  <div class="tc-stat-row tc-reveal" id="s1Stats">
-    <div class="tc-stat-block"><div class="tc-stat-label">Per day</div><div class="tc-stat-value" data-stat="s1-day">$0.78</div></div>
-    <div class="tc-stat-block"><div class="tc-stat-label">Per month</div><div class="tc-stat-value" data-stat="s1-mo">$24</div></div>
-    <div class="tc-stat-block"><div class="tc-stat-label">FY26 → FY29 total</div><div class="tc-stat-value" data-stat="s1-total">$852</div></div>
-  </div>
-  <div class="tc-bars-wrap tc-reveal" id="s1Bars">
-    <div id="s1Rows"></div>
-    <div class="tc-bars-legend">
-      <span><span class="tc-legend-swatch" style="background: var(--c-text-mid);"></span>Your current bill</span>
-      <span><span class="tc-legend-swatch" style="background: color-mix(in srgb, var(--c-text-mid) 60%, var(--surface));"></span>Prop 2½ baseline growth</span>
-    </div>
-  </div>
-</section>
-
-<!-- ── SECTION 2: Override tiers ── -->
+<!-- ── SECTION 2: Override tiers (with Prop 2½ baseline built in) ── -->
 <section class="tc-section" id="tcSection2" data-section="2">
-  <div class="tc-section-eyebrow">The override question</div>
-  <h2>What each tier adds on top</h2>
-  <p class="tc-section-lede">Q1, Q2, and Q3 are nested override tiers ($9M / $12M / $15M annual). The highest passing question sets the amount. Tap a tier to see the impact.</p>
+  <div class="tc-section-eyebrow">Your bill, year by year</div>
+  <h2>Pick a tier. See what's stacked into your bill.</h2>
+  <p class="tc-section-lede">State law (Prop 2½) raises the levy <strong>2.5% per year</strong> automatically — the lighter slice in every bar. Q1, Q2, and Q3 are nested override tiers ($9M / $12M / $15M annual) that stack on top. The highest passing question sets the amount. <strong>None</strong> shows what your bill does if no override passes.</p>
   <div class="tc-bars-wrap tc-reveal" id="s2Bars">
     <div id="s2Rows"></div>
     <div class="tc-bars-legend" id="s2Legend"></div>
@@ -1372,39 +1353,10 @@ function renderPinned(t) {
   document.querySelectorAll('[data-q4]').forEach(b => b.classList.toggle('active', +b.dataset.q4 === state.q4));
 }
 
-/* ── Section 1: baseline bars ── */
-function renderSection1(t) {
-  const cb = t.currentBill;
-  const rows = [];
-  const maxBar = cb * Math.pow(1 + PROP25_GROWTH, 3) + 200;
-  for (let y = 0; y <= 3; y++) {
-    const total = baselineForYear(cb, y);
-    const growth = total - cb;                              // cumulative from today (for bar width)
-    const prevTotal = y > 0 ? baselineForYear(cb, y - 1) : cb;
-    const yoy = total - prevTotal;                          // increment this year only
-    const w1 = (cb / maxBar) * 100;
-    const w2 = (growth / maxBar) * 100;
-    const yearLabel = ['Today (FY26)', 'FY27', 'FY28', 'FY29'][y];
-    rows.push(
-      '<div class="tc-bars" style="margin-bottom: 10px;">' +
-        '<div class="tc-bar-year">' + yearLabel + '</div>' +
-        '<div class="tc-bar-track">' +
-          '<div class="tc-bar-seg tc-bar-seg-current" style="width:' + w1 + '%"></div>' +
-          (growth > 0 ? '<div class="tc-bar-seg tc-bar-seg-growth" style="width:' + w2 + '%"></div>' : '') +
-        '</div>' +
-        '<div class="tc-bar-total">' + wrapCite(money(total), y === 0 ? 'fy26-rate' : 'prop25') +
-          (y > 0 ? '<span class="delta">+' + money(yoy) + ' vs prior yr</span>' : '') +
-        '</div>' +
-      '</div>'
-    );
-  }
-  document.getElementById('s1Rows').innerHTML = rows.join('');
-  const fy29 = baselineForYear(cb, 3);
-  const totalGrowth = fy29 - cb;
-  setStat('s1-day', moneyDec(totalGrowth / 365 / 3));
-  setStat('s1-mo', money(totalGrowth / 36));
-  setStat('s1-total', money(totalGrowth));
-}
+/* Section 1 (baseline) was merged into Section 2 — the tier bars
+   already render the lighter baseline-growth segment, so a separate
+   "this happens anyway" section was redundant and made the tier
+   picker feel like a clunky second step. */
 
 /* ── Section 2: tier-stacked bars ── */
 function renderSection2(t) {
@@ -1629,14 +1581,13 @@ function setupPinnedAndSectionTracking() {
   // Section-aware pulse on pinned card
   const sections = document.querySelectorAll('.tc-section');
   const captions = {
-    '1': 'this growth happens with or without overrides',
     '2': '← the override layer for the selected tier',
     '3': 'Q4 outcome flips the trash row',
     '4': 'benefits below subtract from the total',
     '5': 'this is where every dollar goes'
   };
   const pulseTargets = {
-    '1': 'pulseTotal', '2': 'pulseOverride', '3': 'pulseTotal',
+    '2': 'pulseOverride', '3': 'pulseTotal',
     '4': 'pulseTotal', '5': 'pulseTotal'
   };
   let currentSection = null;
@@ -1681,7 +1632,6 @@ function update() {
   readInputs();
   const t = computeTotals();
   renderPinned(t);
-  renderSection1(t);
   renderSection2(t);
   renderSection3();
   renderSection4(t);
