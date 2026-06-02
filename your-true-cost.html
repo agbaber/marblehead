@@ -691,7 +691,7 @@ body.true-cost .page { max-width: 1100px; }
   <p class="subtitle">A personalized walk-through of the 2026 override ballot — baseline growth, every tier, trash, and every benefit you may qualify for.</p>
   <div class="tc-fact-check-banner">
     <span class="icon">⌕</span>
-    <span>Every number is clickable. Tap any figure to see exactly which document it came from.</span>
+    <span>Look for the <strong>ⓘ</strong> chip next to a figure to see exactly which primary source it came from.</span>
   </div>
 
   <div class="tc-presets" id="tcPresets" role="group" aria-label="Preset scenarios">
@@ -1371,6 +1371,7 @@ function renderSection2(t) {
     const w2 = (growth / maxBar) * 100;
     const w3 = (tierAmt / maxBar) * 100;
     const tierColor = state.tier === 0 ? '' : 'tc-bar-seg-tier' + state.tier;
+    const phaseLabel = y === 3 ? 'full phase-in' : 'phasing in (year ' + y + ' of 3)';
     rows.push(
       '<div class="tc-bars" style="margin-bottom: 10px;">' +
         '<div class="tc-bar-year">FY' + (26 + y) + '</div>' +
@@ -1380,7 +1381,9 @@ function renderSection2(t) {
           (tierAmt > 0 ? '<div class="tc-bar-seg ' + tierColor + '" style="width:' + w3 + '%"></div>' : '') +
         '</div>' +
         '<div class="tc-bar-total">' + wrapCite(money(baseline + tierAmt), 'override-rates') +
-          (tierAmt > 0 ? '<span class="delta">+' + money(tierAmt) + ' override</span>' : '<span class="delta">no override</span>') +
+          (tierAmt > 0
+            ? '<span class="delta">' + money(tierAmt) + ' override · ' + phaseLabel + '</span>'
+            : '<span class="delta">no override</span>') +
         '</div>' +
       '</div>'
     );
