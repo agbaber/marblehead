@@ -1821,6 +1821,19 @@ svg.chart .s-tier-3     { color: var(--series-tier-3); }
 .legend-item.s-tier-3     { color: var(--series-tier-3); }
 .legend-item span.legend-text { color: var(--text-muted); }
 
+/* Capacity-vs-draw chart legend (what-is-the-override.html): block swatches
+   instead of the default 3px line swatch, so the solid "draw" and the
+   ghosted "unused capacity" read as filled areas. */
+.cap-draw-legend .legend-swatch {
+  width: 14px; height: 14px; border-radius: 2px;
+  box-sizing: border-box;
+}
+.cap-draw-legend .legend-swatch--draw { background: var(--series-tier-3); }
+.cap-draw-legend .legend-swatch--cap {
+  background: var(--chart-grid-major);
+  border: 1.5px dashed var(--c-text-sub);
+}
+
 /* ==========================================================================
    Override calculator — specific styles
    ========================================================================== */
