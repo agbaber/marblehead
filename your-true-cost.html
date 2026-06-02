@@ -395,12 +395,13 @@ body.true-cost .read-time { display: none; }
   height: 100%; float: left; transition: width 0.8s cubic-bezier(.2,.7,.3,1);
   width: 0;
 }
-/* Use fixed slate-grays for the bar segments so they read the same in
-   light and dark mode. The previous var(--c-text-mid) flipped to a
-   near-white color in dark mode and made the "Current" segment look
-   like a blank bar. */
-.tc-bar-seg-current  { background: #5B6A78; }
-.tc-bar-seg-growth   { background: #9CA9B5; }
+/* Fixed colors so legend and bars stay in sync across light/dark mode.
+   Three distinct hues so the segments aren't all "slate-on-slate":
+   - Current  = dark slate (foundation / what you pay today)
+   - Growth   = muted brass (semantically "time-driven, automatic")
+   - Override = tier teal (the policy choice on the ballot) */
+.tc-bar-seg-current  { background: #4A5C6A; }
+.tc-bar-seg-growth   { background: #B89858; }
 .tc-bar-seg-tier1    { background: var(--series-tier-1); }
 .tc-bar-seg-tier2    { background: var(--series-tier-2); }
 .tc-bar-seg-tier3    { background: var(--series-tier-3); }
@@ -1556,10 +1557,12 @@ function renderSection2(t) {
     prevTotal = total;
   }
   document.getElementById('s2Rows').innerHTML = rows.join('');
-  // Legend: only show what's actually drawn.
+  // Legend uses the SAME fixed colors as the bar segments
+  // (.tc-bar-seg-current / -growth in CSS), so swatches and bars never
+  // drift out of sync between light and dark mode.
   const legendItems = [
-    '<span><span class="tc-legend-swatch" style="background: var(--c-text-mid);"></span>Current</span>',
-    '<span><span class="tc-legend-swatch" style="background: color-mix(in srgb, var(--c-text-mid) 60%, var(--surface));"></span>Baseline growth</span>'
+    '<span><span class="tc-legend-swatch" style="background: #4A5C6A;"></span>Current</span>',
+    '<span><span class="tc-legend-swatch" style="background: #B89858;"></span>Baseline growth (Prop 2½)</span>'
   ];
   if (state.tier > 0) {
     legendItems.push(
