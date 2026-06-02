@@ -37,11 +37,11 @@ Numbers below are order-of-magnitude unless cited to a primary source. Where the
 
 **Have we tried this?** **Not separately.** The fee under G.L. c. 64G § 3D was not separately presented at <abbr class="g" title="Annual Town Meeting">ATM</abbr>; it would typically be bundled with Article 1 above.
 
-**What is the potential?** Modest — likely **$20,000 to $75,000 per year** at 3 percent. The fee only applies to operators with two or more short-term rentals in the Commonwealth, so the base is much narrower than the room excise. The statute requires at least 35 percent of the proceeds be dedicated to affordable housing, infrastructure, or property stabilization.
+**What is the potential?** Modest, likely **$20,000 to $75,000 per year** at 3 percent. The fee only applies to operators with two or more short-term rentals in the Commonwealth, so the base is much narrower than the room excise. The statute requires at least 35 percent of the proceeds be dedicated to affordable housing, infrastructure, or property stabilization.
 
 **What we still need to know:**
 
-- [ ] Count of professionally managed STR units in Marblehead from the state DOR registry
+- [ ] Count of professionally managed <abbr class="g" title="Short-Term Rental">STR</abbr> units in Marblehead from the state <abbr class="g" title="Department of Revenue">DOR</abbr> registry
 - [ ] Average rent per night for those units from AirDNA
 
 ### 3. Increase the <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> payment in lieu of taxes (PILOT)
@@ -85,12 +85,12 @@ Numbers below are order-of-magnitude unless cited to a primary source. Where the
 
 **Have we tried this?** **Not tried.** No record of a feasibility study or <abbr class="g" title="Public Employee Committee">PEC</abbr> consultation in the public minutes. The town's `what-has-the-town-done.html` page is explicit that no operational efficiency review of retiree benefits has been conducted.
 
-**What is the potential?** Likely the **single largest fast-impact lever**, roughly **$300,000 to $900,000 per year** in town share of savings. The mechanism: leave the <abbr class="g" title="Group Insurance Commission">GIC</abbr> for the Medicare-eligible cohort and directly procure a Group Medicare Advantage PPO that delivers actuarially equivalent benefits at a lower per-retiree premium. Downsides include network restrictions, prior authorization requirements, and federal <abbr class="g" title="Centers for Medicare and Medicaid Services">CMS</abbr> rate volatility — see the cautions on this page.
+**What is the potential?** Likely the **single largest fast-impact lever**, roughly **$300,000 to $900,000 per year** in town share of savings. The mechanism: leave the <abbr class="g" title="Group Insurance Commission">GIC</abbr> for the Medicare-eligible cohort and directly procure a Group Medicare Advantage PPO that delivers actuarially equivalent benefits at a lower per-retiree premium. Downsides include network restrictions, prior authorization requirements, and federal <abbr class="g" title="Centers for Medicare and Medicaid Services">CMS</abbr> rate volatility; see the cautions on this page.
 
 **What we still need to know:**
 
 - [ ] FY25 retiree census split by Medicare-eligible (post-65) vs. pre-65 (PRR to <abbr class="g" title="Chief Financial Officer">CFO</abbr>)
-- [ ] Current enrollment distribution by GIC plan for post-65 retirees
+- [ ] Current enrollment distribution by <abbr class="g" title="Group Insurance Commission">GIC</abbr> plan for post-65 retirees
 - [ ] Town vs. retiree premium share by hire date
 - [ ] Quote range from 2 to 3 carriers (Tufts, Blue Cross MA, Aetna, Humana) for an equivalent Group MA PPO
 - [ ] Quote range from 4 to 5 actuarial firms (Segal, Aon, Mercer, USI, Hilb) for a feasibility study
@@ -104,7 +104,7 @@ Numbers below are order-of-magnitude unless cited to a primary source. Where the
 **What we still need to know:**
 
 - [ ] Five-year electric load profiles per municipal and school building from MMLD
-- [ ] Five-year heating fuel and oil consumption from DPW and the school facilities director
+- [ ] Five-year heating fuel and oil consumption from <abbr class="g" title="Department of Public Works">DPW</abbr> and the school facilities director
 - [ ] DOER Green Communities preliminary energy assessment, available free to Marblehead as a participant
 - [ ] Indicative scope from two or three pre-qualified ESCOs (Ameresco, Honeywell, Trane, ENGIE, Schneider)
 
@@ -137,7 +137,7 @@ Numbers below are order-of-magnitude unless cited to a primary source. Where the
 
 **Have we tried this?** **Partial.** OpenGov was adopted for procurement (100 percent of formal bids issued electronically as of 2025). Munis is the financial system of record. No dedicated permitting and inspections platform has been adopted.
 
-**What is the potential?** **$50,000 to $100,000 per year** through a 0.5 FTE saved on counter staffing plus accelerated recognition of permit revenue. Likely an extension of the existing OpenGov footprint.
+**What is the potential?** **$50,000 to $100,000 per year** through a 0.5 <abbr class="g" title="Full-Time Equivalent">FTE</abbr> saved on counter staffing plus accelerated recognition of permit revenue. Likely an extension of the existing OpenGov footprint.
 
 **What we still need to know:**
 
@@ -163,13 +163,13 @@ Numbers below are order-of-magnitude unless cited to a primary source. Where the
 
 **Have we tried this?** **Discussed, not adopted.** The School Committee twice discussed zero-based budgeting (2022-07-19 and 2025-10-17) without adopting it. A three-year operating budget forecast for FY26 through FY28 exists but is not the same as ZBB.
 
-**What is the potential?** One-time **$500,000 to $1,500,000** of reallocation potential per cycle, declining as baselines reset. Most useful as a periodic exercise — once every 5 years per department — rather than annually.
+**What is the potential?** One-time **$500,000 to $1,500,000** of reallocation potential per cycle, declining as baselines reset. Most useful as a periodic exercise, once every 5 years per department, rather than annually.
 
 **What we still need to know:**
 
 - [ ] Past zero-based budgeting precedents in MA municipal practice
 - [ ] Departmental appetite (Schools, Police, Fire account for about 70 percent of operating)
-- [ ] Resource cost of running ZBB (typically 1 FTE-quarter per major department)
+- [ ] Resource cost of running <abbr class="g" title="Zero-Based Budgeting">ZBB</abbr> (typically 1 <abbr class="g" title="Full-Time Equivalent">FTE</abbr>-quarter per major department)
 
 ## Important cautions
 
@@ -178,7 +178,7 @@ This is not a list of free money. Several entries carry real downsides that dese
 - **Medicare Advantage migration** can produce member dissatisfaction, prior authorization friction, and provider network restrictions. CMS rate compression since 2024 is shrinking the savings opportunity over time. The decision is not reversible cheaply.
 - **Room and STR excise** raises the cost of visiting Marblehead and affects local lodging operators. Even at the cap of 6 percent the burden is modest relative to seasonal pricing, but the political case has to be made on its own terms.
 - **Efficiency Commission with formal standing** has been tried in many MA towns; some produce material findings, others produce reports that sit on shelves. Composition and reporting cadence determine the outcome.
-- **MMLD PILOT** is functionally a transfer from ratepayers to taxpayers — overlapping populations, but not identical.
+- **MMLD PILOT** is functionally a transfer from ratepayers to taxpayers; overlapping populations, but not identical.
 - **Shared services** save money slowly. Most savings show up through attrition over multiple years, not headcount cuts in year one.
 
 ## Procedural paths
@@ -191,7 +191,7 @@ Items 1, 2, and 11 require a Town Meeting vote. Either an Annual Town Meeting in
 
 This page will grow as research arrives. Updates are noted here for transparency.
 
-- **2026-06-02** — Initial draft from session research. All ranges are estimates; primary citations will be added as <abbr class="g" title="Public Records Request">PRR</abbr>, DLS, AirDNA, and DOER data come in.
+- **2026-06-02.** Initial draft from session research. All ranges are estimates; primary citations will be added as <abbr class="g" title="Public Records Request">PRR</abbr>, <abbr class="g" title="Division of Local Services">DLS</abbr>, AirDNA, and <abbr class="g" title="Department of Energy Resources">DOER</abbr> data come in.
 
 ## Send corrections
 
