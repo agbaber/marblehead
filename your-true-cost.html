@@ -1742,6 +1742,7 @@ function update() {
   renderSection3();
   renderSection4(t);
   renderSection5(t);
+  refreshPresetActive();
 }
 
 function wireInputs() {
@@ -1866,10 +1867,19 @@ function applyPreset(p) {
     void el.offsetWidth;
     el.classList.add('tc-flash');
   });
-  // mark this chip active
-  document.querySelectorAll('.tc-preset-chip').forEach(b =>
-    b.classList.toggle('active', b.dataset.preset === p.id));
   update();
+}
+
+/* Highlight whichever preset chip matches the current state (if any).
+   Runs on every update() so it auto-clears when the user tweaks a
+   field away from a preset's values. */
+function refreshPresetActive() {
+  document.querySelectorAll('.tc-preset-chip').forEach(b => {
+    const p = PRESETS.find(pp => pp.id === b.dataset.preset);
+    if (!p) return;
+    const matches = Object.keys(p.state).every(k => p.state[k] === state[k]);
+    b.classList.toggle('active', matches);
+  });
 }
 
 /* ════════════════════════════════════════════════════════════
