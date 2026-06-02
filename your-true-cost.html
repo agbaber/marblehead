@@ -356,6 +356,11 @@ body.true-cost .page { max-width: 1100px; }
   font-variant-numeric: tabular-nums;
 }
 .tc-bars-summary strong { color: var(--text); font-weight: 700; }
+.tc-bars-summary-note {
+  text-align: center; margin: 8px auto 0; max-width: 580px;
+  font-size: 12px; color: var(--text-faint);
+  line-height: 1.5; font-style: italic;
+}
 .tc-legend-swatch {
   display: inline-block; width: 12px; height: 12px;
   border-radius: 3px; margin-right: 6px; vertical-align: middle;
@@ -803,6 +808,7 @@ body.true-cost .page { max-width: 1100px; }
     <div id="s2Rows"></div>
     <div class="tc-bars-legend" id="s2Legend"></div>
     <p class="tc-bars-summary" id="s2Summary"></p>
+    <p class="tc-bars-summary-note" id="s2SummaryNote"></p>
   </div>
 </section>
 
@@ -1426,6 +1432,13 @@ function renderSection2(t) {
   if (summaryEl) {
     summaryEl.innerHTML = 'Over 3 years your bill rises <strong>+' + money(totalRise) +
       '</strong> total, about ' + moneyDec(totalRise / 365 / 3) + '/day on average.';
+  }
+  // Explain the uneven phase-in (FY28 is biggest because schools side starts that year)
+  const noteEl = document.getElementById('s2SummaryNote');
+  if (noteEl) {
+    noteEl.innerHTML = state.tier > 0
+      ? 'FY28 is the biggest jump because the schools portion of the override begins that year (special ed, full-day kindergarten, technology) — the town-side started in FY27, and capital items finalize in FY29.'
+      : '';
   }
 }
 
