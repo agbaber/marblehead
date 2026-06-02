@@ -1,3 +1,438 @@
+/* ════════════════════════════════════════════════════════════════════
+   meeting summary — splashy, homepage-style treatment.
+   New classes are .ms-*. Legacy .transcript-* / .summary-* / .topic-*
+   classes are kept below for the index pages (/meetings, /topics).
+   ════════════════════════════════════════════════════════════════════ */
+
+.meeting-summary {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ── Hero ────────────────────────────────────────────────────────── */
+.ms-hero {
+  text-align: center;
+  padding: 28px 0 20px;
+  border-bottom: 1px solid var(--c-divider);
+  margin-bottom: 28px;
+}
+.ms-board-chip {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--c-teal);
+  background: color-mix(in srgb, var(--c-teal) 10%, transparent);
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin: 0 0 14px;
+}
+.ms-hero h1 {
+  font-size: clamp(26px, 4.2vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  line-height: 1.18;
+  color: var(--c-text);
+  margin: 0 0 12px;
+}
+.ms-meta {
+  font-size: 14px;
+  color: var(--c-text-mid);
+  margin: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+.ms-meta-sep { color: var(--c-text-sub); }
+.ms-meta-link { color: var(--c-teal); text-decoration: none; font-weight: 600; }
+.ms-meta-link:hover { text-decoration: underline; }
+
+/* ── Headline callout (teal left-rail like .votes-strip) ─────────── */
+.ms-headline {
+  background: var(--c-surface);
+  border: 1.5px solid var(--c-border);
+  border-left: 3px solid var(--c-teal);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 0 0 18px;
+}
+.ms-headline-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: var(--c-teal);
+  margin: 0 0 6px;
+}
+.ms-headline-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--c-text);
+  margin: 0;
+}
+
+/* ── Stats strip ─────────────────────────────────────────────────── */
+.ms-stats {
+  display: flex;
+  gap: 12px;
+  margin: 0 0 22px;
+}
+.ms-stat {
+  flex: 1;
+  background: var(--c-surface);
+  border: 1.5px solid var(--c-border);
+  border-radius: 12px;
+  padding: 14px 12px;
+  text-align: center;
+}
+.ms-stat-n {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-navy);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.5px;
+}
+.ms-stat-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--c-text-mid);
+  margin-top: 6px;
+}
+
+/* ── TL;DR paragraph ──────────────────────────────────────────────── */
+.ms-tldr {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--c-text);
+  margin: 0 0 18px;
+}
+
+/* ── Topic chips ──────────────────────────────────────────────────── */
+.ms-topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 32px;
+}
+.ms-topic-chip {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-teal);
+  background: color-mix(in srgb, var(--c-teal) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c-teal) 22%, transparent);
+  border-radius: 14px;
+  padding: 4px 10px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.ms-topic-chip:hover {
+  background: var(--c-teal);
+  color: var(--c-fog);
+  border-color: var(--c-teal);
+}
+
+/* ── Section headers ──────────────────────────────────────────────── */
+.ms-section {
+  margin: 0 0 28px;
+}
+.ms-section h2 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--c-text-sub);
+  margin: 0 0 12px;
+  border: none;
+  padding: 0;
+}
+
+/* ── Decisions list ───────────────────────────────────────────────── */
+.ms-decisions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ms-decisions li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.ms-decision-n {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-navy);
+  color: var(--c-fog);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.ms-decision-text {
+  flex: 1;
+  line-height: 1.5;
+  color: var(--c-text);
+  font-size: 14.5px;
+}
+
+/* ── Votes list ───────────────────────────────────────────────────── */
+.ms-votes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ms-votes li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--c-divider);
+  line-height: 1.45;
+}
+.ms-votes li:last-child { border-bottom: none; }
+.ms-vote-result {
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--c-teal);
+  background: color-mix(in srgb, var(--c-teal) 10%, transparent);
+  border-radius: 4px;
+  padding: 3px 8px;
+  white-space: nowrap;
+  align-self: flex-start;
+  margin-top: 1px;
+}
+.ms-vote-motion {
+  flex: 1;
+  color: var(--c-text);
+  font-size: 14.5px;
+}
+
+/* ── Topic segments (deeper dives) ────────────────────────────────── */
+.ms-segments {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+@media (max-width: 600px) {
+  .ms-segments { grid-template-columns: 1fr; }
+}
+.ms-segment {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.ms-segment-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.ms-segment-topic {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--c-teal);
+  text-decoration: none;
+}
+.ms-segment-topic:hover { text-decoration: underline; }
+.ms-segment-jump {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-text-mid);
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.ms-segment-jump:hover { color: var(--c-teal); }
+.ms-segment-summary {
+  margin: 0 0 6px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--c-text);
+}
+.ms-segment-speakers {
+  margin: 0;
+  font-size: 12px;
+  color: var(--c-text-sub);
+  font-style: italic;
+}
+
+/* ── Associated documents ─────────────────────────────────────────── */
+.ms-docs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ms-docs li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--c-divider);
+}
+.ms-docs li:last-child { border-bottom: none; }
+.ms-doc-label {
+  margin: 0 0 2px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--c-text);
+  line-height: 1.4;
+}
+.ms-doc-note {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--c-text-mid);
+}
+
+/* ── Full-transcript disclosure ──────────────────────────────────── */
+.ms-transcript {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: 0;
+  margin: 32px 0 16px;
+  overflow: hidden;
+}
+.ms-transcript > summary {
+  cursor: pointer;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--c-text);
+  list-style: none;
+}
+.ms-transcript > summary::-webkit-details-marker { display: none; }
+.ms-transcript > summary::after {
+  content: "+";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--c-teal) 10%, transparent);
+  color: var(--c-teal);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+}
+.ms-transcript[open] > summary::after { content: "−"; }
+.ms-transcript-summary-label { font-size: 14.5px; }
+.ms-transcript-disclaimer {
+  flex: 1;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--c-text-sub);
+  text-align: right;
+}
+.ms-transcript-body {
+  padding: 8px 18px 20px;
+  border-top: 1px solid var(--c-divider);
+}
+.ms-transcript-body h2 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--c-text-mid);
+  margin: 24px 0 10px;
+  padding: 0;
+  border: none;
+}
+.ms-transcript-body h2:first-child { margin-top: 8px; }
+.ms-transcript-body p {
+  line-height: 1.65;
+  font-size: 14.5px;
+  color: var(--c-text);
+  margin: 0 0 12px;
+}
+.ms-transcript-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  margin: 8px 0 16px;
+}
+.ms-transcript-body th,
+.ms-transcript-body td {
+  border-bottom: 1px solid var(--c-divider);
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+.ms-transcript-body th {
+  font-weight: 700;
+  background: color-mix(in srgb, var(--c-navy) 4%, transparent);
+}
+
+/* ── Back-to-meetings ────────────────────────────────────────────── */
+.ms-back {
+  margin: 24px 0 0;
+  text-align: center;
+}
+.ms-back a {
+  font-size: 13px;
+  color: var(--c-text-mid);
+  text-decoration: none;
+}
+.ms-back a:hover { color: var(--c-teal); }
+
+/* ── Mobile tweaks ───────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .ms-stats { gap: 6px; }
+  .ms-stat { padding: 10px 6px; }
+  .ms-stat-n { font-size: 22px; }
+  .ms-stat-label { font-size: 10px; }
+  .ms-transcript > summary {
+    flex-wrap: wrap;
+    padding: 12px 14px;
+  }
+  .ms-transcript-disclaimer {
+    flex: 1 0 100%;
+    text-align: left;
+    margin-top: 4px;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   Legacy index / topic styles (still used by /meetings/ and /topics/).
+   ════════════════════════════════════════════════════════════════════ */
+
 .transcript-page {
   max-width: 760px;
   margin: 0 auto;
