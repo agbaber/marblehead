@@ -428,7 +428,7 @@ og_url: https://marbleheaddata.org/what-is-the-override.html
   <p>For an interactive sample ballot showing how Questions 1, 2, 3, and 4 appear on the June 9 paper ballot, see <a href="whats-on-the-ballot.html#how-youll-vote">how you'll vote</a> on the ballot rundown page.</p>
 
   <h2 data-stance-section="what-it-costs" id="what-it-costs">What It Costs</h2>
-  <p>The override phases in over three years (FY27 to FY29). Year 1 draws only a fraction of the full amount; the full override is active only in Year 3:</p>
+  <p>The override <em>cost</em> phases in over three years (FY27 to FY29). Year 1 spends only a fraction of the full amount, reaching the full tier only in Year 3. (The levy <em>limit</em> is a separate matter, covered just below.)</p>
 
   <div class="phase-chart">
     <div class="phase-chart-corner"></div>
@@ -478,12 +478,63 @@ og_url: https://marbleheaddata.org/what-is-the-override.html
       <div class="phase-chart-amt">$15.0M</div>
     </div>
 
-    <p class="phase-chart-caption">Cumulative override levy active in each fiscal year, by tier. Bar widths show each year's draw as a percentage of that tier's full amount.</p>
+    <p class="phase-chart-caption">Planned draw in each fiscal year, by tier: the spending the town commits to fund from the override. Bar widths show each year's draw as a percentage of that tier's full amount. This is the spending side, not the levy limit (see below).</p>
   </div>
 
   <div class="takeaway takeaway--neutral">
     You do not pay the full override amount in year one. The cost phases in over three fiscal years, reaching its full amount only in FY29.
   </div>
+
+  <p>That is the spending side. The <strong>levy limit</strong>, the amount the town is legally authorized to assess, is a different number. An override raises it by the full amount in year one, whether or not the town spends that much. The draw schedule above is the planned spend; the chart below sets it against the capacity the override actually unlocks, using the $15M tier as the example.</p>
+
+  <svg class="chart" viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Column chart for the $15M Tier 3 override, fiscal years 2027 to 2029. Each column rises to the levy-limit capacity the override authorizes: $15.0M in FY27, $15.4M in FY28, $15.8M in FY29 as the 2.5% annual growth compounds. The solid lower portion is the planned draw the town commits to assess: $4.3M, then $10.5M, then $15.0M. The shaded upper portion is unused capacity, authorized but not drawn: $10.7M in FY27, $4.8M in FY28, $0.8M in FY29.">
+    <line class="grid-major" x1="70" y1="30" x2="540" y2="30"></line>
+    <line class="grid-major" x1="70" y1="90" x2="540" y2="90"></line>
+    <line class="grid-major" x1="70" y1="150" x2="540" y2="150"></line>
+    <line class="grid-major" x1="70" y1="210" x2="540" y2="210"></line>
+    <line class="axis-base" x1="70" y1="270" x2="540" y2="270"></line>
+
+    <text class="tick-label" x="58" y="34" text-anchor="end">$16M</text>
+    <text class="tick-label" x="58" y="94" text-anchor="end">$12M</text>
+    <text class="tick-label" x="58" y="154" text-anchor="end">$8M</text>
+    <text class="tick-label" x="58" y="214" text-anchor="end">$4M</text>
+    <text class="tick-label" x="58" y="274" text-anchor="end">$0</text>
+
+    <text class="annotation" x="305" y="16" text-anchor="middle">Top of each bar = levy-limit capacity the override authorizes</text>
+
+    <g class="s-tier-3">
+      <rect class="data-bar" x="97" y="205.5" width="96" height="64.5"></rect>
+      <rect class="data-bar" x="252" y="111.9" width="96" height="158.1"></rect>
+      <rect class="data-bar" x="407" y="45" width="96" height="225"></rect>
+    </g>
+
+    <rect class="bar-solid-cap" x="97" y="45" width="96" height="160.5"></rect>
+    <rect class="bar-solid-cap" x="252" y="39.4" width="96" height="72.5"></rect>
+    <rect class="bar-solid-cap" x="407" y="33.6" width="96" height="11.4"></rect>
+
+    <text class="value-label" x="145" y="39" text-anchor="middle">$15.0M</text>
+    <text class="value-label" x="300" y="33" text-anchor="middle">$15.4M</text>
+    <text class="value-label" x="455" y="27" text-anchor="middle">$15.8M</text>
+
+    <text class="value-label" x="145" y="119" text-anchor="middle">$10.7M</text>
+    <text class="annotation" x="145" y="133" text-anchor="middle">unused</text>
+    <text class="value-label" x="300" y="71" text-anchor="middle">$4.8M</text>
+    <text class="annotation" x="300" y="85" text-anchor="middle">unused</text>
+
+    <text class="tick-label--major" x="145" y="292" text-anchor="middle">FY27</text>
+    <text class="tick-label--major" x="300" y="292" text-anchor="middle">FY28</text>
+    <text class="tick-label--major" x="455" y="292" text-anchor="middle">FY29</text>
+    <text class="tick-label" x="145" y="307" text-anchor="middle">draw $4.3M</text>
+    <text class="tick-label" x="300" y="307" text-anchor="middle">draw $10.5M</text>
+    <text class="tick-label" x="455" y="307" text-anchor="middle">draw $15.0M</text>
+  </svg>
+
+  <div class="legend cap-draw-legend">
+    <div class="legend-item s-tier-3"><span class="legend-swatch legend-swatch--draw"></span><span class="legend-text">Planned draw (what the MOU commits to assess)</span></div>
+    <div class="legend-item"><span class="legend-swatch legend-swatch--cap"></span><span class="legend-text">Unused capacity (authorized, not drawn)</span></div>
+  </div>
+
+  <p class="caption">The levy limit rises by the full override amount in FY27; the draw is what the town commits to assess under the <a href="#mou-commitments">three-board MOU</a>. In FY27 the gap is held back by the appropriation rule, since the town cannot assess more than Town Meeting appropriates. From FY28 on, the gap is held back only by the MOU, which is not binding: changing it takes a two-thirds vote of all three boards. Under the MOU, revenue above the draw caps goes first to stabilization, then capital, then pension and OPEB. The 2.5% growth shown is the same Proposition 2&frac12; growth the entire levy receives by law; new construction growth is excluded. Source: ballot questions and per-tier draw schedule, Town Administrator override presentation, April 8, 2026.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-08_Override_Presentation.pdf" data-source="Town Administrator FY2027 Budget &amp; Override Options presentation, April 8, 2026: Example Override Questions (full-amount ballot wording) and per-tier Override Draw schedule."></sup></p>
 
   <p>The normal 2.5% annual levy growth continues on top of the override. An override permanently raises the levy limit; after that, the 2.5% growth compounds from the new, higher base. The town's April 15 presentation shows the override cost without the 2.5% (e.g. $899/yr at median home for Tier 1). The calculator below, which uses the town's own phase-in schedule, produces slightly higher figures ($918/yr for Tier 1) because the 2.5% compounds on portions added in earlier years of the phase-in.</p>
 
