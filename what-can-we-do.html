@@ -195,8 +195,35 @@ sitemap: false
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.4;
-    margin: 0 0 18px;
+    margin: 0 0 16px;
   }
+
+  /* Plain-language block: what this actually means */
+  .idea-plain {
+    background: color-mix(in srgb, var(--c-fog) 60%, transparent);
+    border-left: 3px solid var(--c-teal);
+    padding: 12px 14px 13px;
+    margin: 0 0 18px;
+    border-radius: 0 8px 8px 0;
+  }
+  .idea[data-cat="cost"] .idea-plain { border-left-color: var(--c-navy); }
+  .idea[data-cat="gov"] .idea-plain { border-left-color: var(--c-brass); }
+  .idea-plain-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 5px;
+  }
+  .idea-plain p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--text);
+    margin: 0;
+  }
+  .idea-plain p strong { font-weight: 700; }
 
   .idea-qa {
     display: flex;
@@ -507,6 +534,10 @@ sitemap: false
       <h3 class="idea-title">Adopt the room and short-term rental occupancy excise</h3>
       <p class="idea-amt">$200K&ndash;$500K<span class="idea-amt-unit">/yr</span></p>
       <p class="idea-amt-cap">At the 6 percent statutory cap. Range depends on hotel and <abbr class="g" title="Short-Term Rental">STR</abbr> inventory.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p>A local tax on overnight stays in hotels, inns, B&amp;Bs, and Airbnb-style rentals. Massachusetts lets each town add up to 6% on top of the state's 5.7% lodging tax. <strong>Most residents never pay it</strong>; visitors do.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
@@ -534,6 +565,10 @@ sitemap: false
       <h3 class="idea-title">Community Impact Fee on professionally managed STRs</h3>
       <p class="idea-amt">$20K&ndash;$75K<span class="idea-amt-unit">/yr</span></p>
       <p class="idea-amt-cap">3 percent on operators with 2+ short-term rentals. Statute requires 35%+ to affordable housing.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p>A separate fee that <strong>only applies to people running 2 or more short-term rentals as a business</strong>. Doesn't touch a homeowner renting their own place occasionally. Most of the proceeds have to go to affordable housing under state law.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
@@ -559,6 +594,10 @@ sitemap: false
       <h3 class="idea-title">Increase the <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> <abbr class="g" title="Payment In Lieu Of Taxes">PILOT</abbr> beyond the FY27 bump</h3>
       <p class="idea-amt">$150K&ndash;$400K<span class="idea-amt-unit">/yr</span></p>
       <p class="idea-amt-cap">Additional headroom above the recent $330K to $360K increase, benchmarked against peer municipal utilities.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p><strong>Marblehead owns its electric company.</strong> Most towns buy power from National Grid or Eversource; we have our own utility (the Marblehead Municipal Light Department). The utility pays a flat contribution to the town's general fund every year, called a "payment in lieu of taxes" because the utility isn't taxed directly. That payment just rose from $330K to $360K. Towns with their own utilities, Wellesley, Belmont, Concord, often get materially more.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
@@ -585,6 +624,10 @@ sitemap: false
       <h3 class="idea-title">Audit and revalue the boat excise base</h3>
       <p class="idea-amt">$25K&ndash;$75K<span class="idea-amt-unit">/yr</span></p>
       <p class="idea-amt-cap">Assessor-administered. One-time catch-up plus modest ongoing lift.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p>Massachusetts taxes recreational boats based on their assessed value. <strong>If no one re-checks those values, they drift below current market prices</strong> and the town collects less than it should. A revaluation catches the gap. Marblehead is a sailing town with a lot of boats.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
@@ -611,6 +654,10 @@ sitemap: false
       <h3 class="idea-title">Mooring waitlist transfer fee</h3>
       <p class="idea-amt">$25K&ndash;$100K<span class="idea-amt-unit">/yr</span></p>
       <p class="idea-amt-cap">Politically contentious. The waitlist is decades long and is viewed as a heritage benefit.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p>Mooring permits in Marblehead Harbor are scarce; the waitlist is <strong>decades long</strong>. When someone gives up their mooring, the next person on the list gets it at the standard fee. A transfer fee would put a price on the handoff, recognizing that the spot itself has real economic value. Politically charged because long-time families view waitlist position as a kind of inheritance.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
@@ -649,6 +696,10 @@ sitemap: false
       <h3 class="idea-title">Move Medicare-eligible retirees to a Group Medicare Advantage plan</h3>
       <p class="idea-amt">$300K&ndash;$900K<span class="idea-amt-unit">/yr</span></p>
       <p class="idea-amt-cap">Town share, after factoring premium split. Likely the single largest fast-impact lever.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p>Retirees over 65 get most of their health coverage from federal Medicare. The town pays for a <strong>supplemental plan on top</strong>, currently through the state's Group Insurance Commission. Switching that supplemental plan to a different style (called "Group Medicare Advantage") can cost the town significantly less per retiree. But it also changes how retirees access care: more network restrictions, more prior-authorization paperwork. Real money on the table, real tradeoffs for retirees. Needs a study before committing.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
@@ -677,6 +728,10 @@ sitemap: false
       <h3 class="idea-title">Energy Savings Performance Contract on schools and town buildings</h3>
       <p class="idea-amt">$250K&ndash;$500K<span class="idea-amt-unit">/yr</span></p>
       <p class="idea-amt-cap">In avoided energy cost. Plus $2-4M of deferred maintenance funded from guaranteed savings, not capital.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p>Hire a private energy-services company to audit our school and town buildings, install efficiency upgrades (lighting, heating, controls), and <strong>get paid only from the energy savings over time</strong>. The town fronts no money. If the projected savings don't show up, the energy company eats the loss, not us. The state has a pre-vetted procurement process for this. Used by hundreds of MA towns; not yet by Marblehead on buildings.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
@@ -704,6 +759,10 @@ sitemap: false
       <h3 class="idea-title">Town and school shared back office</h3>
       <p class="idea-amt">$200K&ndash;$400K<span class="idea-amt-unit">/yr</span></p>
       <p class="idea-amt-cap">Attrition-based consolidation of finance, <abbr class="g" title="Information Technology">IT</abbr>, <abbr class="g" title="Human Resources">HR</abbr>, and procurement over 24-36 months.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p>Marblehead's town side and school side <strong>each run their own finance department, <abbr class="g" title="Information Technology">IT</abbr> department, <abbr class="g" title="Human Resources">HR</abbr> team, and procurement office in parallel</strong>. Many other towns do too, but the duplication adds cost. Combining them (or having them share more services) saves money over time, mostly through not refilling positions when people retire. Slow. Politically tricky because it crosses the town/school line.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
@@ -731,6 +790,10 @@ sitemap: false
       <h3 class="idea-title">Inter-municipal agreement with a neighbor town</h3>
       <p class="idea-amt">$50K&ndash;$150K<span class="idea-amt-unit">/yr</span></p>
       <p class="idea-amt-cap">Per shared role under G.L. c. 40 &sect; 4A. First candidates: assistant assessor, veterans agent, alternate building inspector.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p>State law lets two towns formally share a staff member, one assessor working for both Marblehead and Swampscott, for example, with the cost split between them. <strong>Marblehead currently shares nothing with any neighbor town.</strong> Easiest first roles to share: assistant assessor, building inspector, veterans agent. Each shared role saves the town roughly half a full-time position.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
@@ -757,6 +820,10 @@ sitemap: false
       <h3 class="idea-title">Modernize permitting and inspections software</h3>
       <p class="idea-amt">$50K&ndash;$100K<span class="idea-amt-unit">/yr</span></p>
       <p class="idea-amt-cap">Through 0.5 <abbr class="g" title="Full-Time Equivalent">FTE</abbr> saved on counter staffing plus accelerated permit revenue recognition.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p>Building permits, inspection sign-offs, and zoning approvals still need <strong>paper forms and in-person counter visits</strong>. Modern software (OpenGov, which the town already uses for procurement; Tyler; Energov) lets residents file, pay, and track everything online. Faster permits mean faster revenue collection plus less time spent at the counter.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
@@ -796,6 +863,10 @@ sitemap: false
       <h3 class="idea-title">Efficiency and Shared Services Commission with formal standing</h3>
       <p class="idea-amt">$500K&ndash;$2M<span class="idea-amt-unit">/yr indirect</span></p>
       <p class="idea-amt-cap">Indirect potential, based on what comparable commissions in peer MA municipalities have surfaced.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p>Create a <strong>permanent citizen commission, written into the town bylaws</strong>, whose only job is to find cost savings and shared-service opportunities and report annually to the Select Board, School Committee, and Finance Committee before each budget cycle. Without formal standing in the bylaws, advisory groups get politely ignored. With formal standing and a reporting deadline tied to the budget, they're harder to brush aside.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
@@ -822,6 +893,10 @@ sitemap: false
       <h3 class="idea-title">Zero-based budgeting on the top three cost centers</h3>
       <p class="idea-amt">$500K&ndash;$1.5M<span class="idea-amt-unit">/cycle</span></p>
       <p class="idea-amt-cap">One-time per cycle. Declining as baselines reset. Most useful once every 5 years per department.</p>
+      <div class="idea-plain">
+        <span class="idea-plain-label">In plain language</span>
+        <p>Most departments build next year's budget by <strong>starting with last year's number and adding inflation</strong>. Zero-based budgeting starts from $0 and forces every line to be re-justified from scratch. It's a heavy lift, but done once every few years per department, it resets baselines and uncovers spending that nobody remembers approving. Marblehead schools, police, and fire account for ~70% of the operating budget, the natural targets.</p>
+      </div>
       <div class="idea-qa">
         <div>
           <span class="idea-q">Have we tried this?</span>
