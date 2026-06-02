@@ -1395,7 +1395,8 @@ function computeTotals() {
   const currentBenefits = computeBenefits(state, currentBill);
   const currentTotalBenefits = currentBenefits.filter(b => b.eligible && !b.info).reduce((s, b) => s + b.amount, 0);
   const currentNet = Math.max(0, currentBill - currentTotalBenefits);
-  return { currentBill, currentNet, baseline, overrideAmt, trashAmt, bohFee,
+  return { currentBill, currentNet, currentBenefits, currentTotalBenefits,
+           baseline, overrideAmt, trashAmt, bohFee,
            grossBill, benefits, totalBenefits, netBill };
 }
 
@@ -1681,14 +1682,30 @@ function renderSection4(t) {
 
   // Quiet meta line below the number
   const appliedBenefits = t.benefits.filter(b => b.eligible && !b.info && b.amount > 0);
-  document.getElementById('s4Meta').textContent = appliedBenefits.length === 0
-    ? 'No benefits apply at this age / income / status.'
-    : appliedBenefits.length + ' benefit' + (appliedBenefits.length > 1 ? 's' : '') +
-      ' applied, total savings ' + money(t.totalBenefits) + '.';
+  const incrementalSavings = t.totalBenefits - t.currentTotalBenefits;
+  if (appliedBenefits.length === 0) {
+    document.getElementById('s4Meta').textContent = 'No benefits apply at this age / income / status.';
+  } else if (incrementalSavings > 0.5) {
+    document.getElementById('s4Meta').textContent =
+      appliedBenefits.length + ' benefit' + (appliedBenefits.length > 1 ? 's' : '') +
+      ' applied (' + money(t.totalBenefits) + ' total; ' + money(incrementalSavings) +
+      ' new in ' + yearLabel + ').';
+  } else {
+    document.getElementById('s4Meta').textContent =
+      appliedBenefits.length + ' benefit' + (appliedBenefits.length > 1 ? 's' : '') +
+      ' applied (' + money(t.totalBenefits) + ' total, unchanged from today).';
+  }
 
-  // Show-your-work breakdown: today + growth + override + trash − benefits = net
+  // Show-your-work breakdown: today (net) + growth + override + trash − incremental_benefits = future_net
+  // We use NET today (not gross) as the starting point so the math is
+  // apples-to-apples — users with senior credits are already receiving
+  // them today; only the INCREMENTAL credit added in FY29 should appear
+  // as a subtraction below.
   const items = [];
-  items.push({ cls: 'base', label: "Today's bill (FY26)",   sign: '',  amount: t.currentBill });
+  const todayLabel = t.currentTotalBenefits > 0
+    ? "Today's bill (FY26, after current credits)"
+    : "Today's bill (FY26)";
+  items.push({ cls: 'base', label: todayLabel, sign: '', amount: t.currentNet });
   const baselineGrowth = t.baseline - t.currentBill;
   if (baselineGrowth > 0.5) {
     items.push({ cls: 'add', label: 'Prop 2½ baseline growth (' + yearLabel + ')', sign: '+', amount: baselineGrowth });
@@ -1703,7 +1720,19 @@ function renderSection4(t) {
     items.push({ cls: 'add', label: 'Board of Health curbside fee', sign: '+', amount: t.bohFee });
   }
   appliedBenefits.forEach(b => {
-    items.push({ cls: 'sub', label: b.title, sign: '−', amount: b.amount });
+    // Only show the INCREMENTAL credit added in FY29 — what's actually new
+    // about that year. If a credit hasn't grown (e.g. Clause 41C is a flat
+    // $1,000), it shouldn't appear here at all — it's already baked into
+    // the "today's bill (after current credits)" starting line.
+    const todayB = t.currentBenefits.find(cb => cb.id === b.id);
+    const todayAmt = (todayB && todayB.eligible && !todayB.info) ? todayB.amount : 0;
+    const delta = b.amount - todayAmt;
+    if (delta > 0.5) {
+      const label = todayAmt > 0
+        ? b.title + ' (extra ' + yearLabel + ' credit as bill rises)'
+        : b.title;
+      items.push({ cls: 'sub', label: label, sign: '−', amount: delta });
+    }
   });
   // Percentages: each addition's share of the gross bill, each
   // subtraction's discount off gross, total's net-vs-gross ratio.
