@@ -64,7 +64,13 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 0
     end_seconds: 800
-    summary: "Public comment from six residents. Eileen Good (44 Brandywine) and Elaine Lansey (Ida Rd) urged the board to include the sustainability coordinator / assistant planner and Community Planning and Development Department director in Tier 1 of the override, citing $150K/year ($1M over five years) in grant-funded projects. Tom McMahon (16 Shorewood) demanded the chair publicly support enforcement of social hosting laws and attend the April 14 Board of Health meeting with DA Paul Tucker. Amy Hurd (36 Bouvier) objected to DPW paving over the public way for new sidewalks under the 2022 Article 11 road-and-sidewalk repair authorization ($12M over five years), arguing the bylaw requires advance notice and the project was not on the prioritized safety study. Albert Jordan supported the Tucker meeting."
+    summary: |
+      Five residents spoke during open comment:
+
+      - **Eileen Good** (44 Brandywine) and **Elaine Lansey** (Ida Rd) urged the board to put the **sustainability coordinator** (titled "assistant planner") and the **Community Planning & Development director** in Tier 1 of the override, citing $150K/year (about $1M over five years) in grant funding tied to those roles.
+      - **Tom McMahon** (16 Shorewood) demanded the chair publicly support enforcement of social hosting laws and attend the April 14 Board of Health meeting with DA Paul Tucker. The chair declined to respond under Open Meeting Law (item not on the agenda).
+      - **Amy Hurd** (36 Bouvier) objected to DPW paving over the public way for **new** sidewalks under the 2022 Article 11 road-and-sidewalk repair authorization ($12M / 5 years). She argued the article authorized repairs, not new construction; the bylaw requires advance notice (which was not given); and Bouvier Road was not on the prioritized safety study.
+      - **Albert Jordan** supported the Tucker meeting.
     key_speakers: ["Eileen Good (resident)", "Elaine Lansey (resident)", "Tom McMahon (resident)", "Amy Hurd (resident)", "Albert Jordan (resident)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
@@ -82,32 +88,36 @@ topic_segments:
     topic_confidence: 0.98
     start_seconds: 1340
     end_seconds: 6500
-    summary: >
-      CFO Matt Fernald presented the override structure. Two ballot questions:
-      Q1 = three operating-budget tiers ($9M / $12M / $15M), Q2 = $2.3M trash-fee
-      replacement. Highest tier with a yes-majority wins (not cumulative).
-      Tax impact on a $1M home, three-year totals: Tier 1 = $900 ($127 / $503 / $270);
-      Tier 2 = $1,200 ($281 / $590 / $329); Tier 3 = $1,500 ($430 / $624 / $446).
-      On the average single-family home ($1.291M), Tier 1 = $167, Tier 2 = $304,
-      Tier 3 = $1,186 (year-one) — board agreed to standardize on either average or
-      median going forward. Tier 1 partial restore includes the School Resource Officer,
-      DPW staffing (1 special labor, 1 temp clerk, 1 HEO), library accreditation
-      funding ($311,183), CPD director, recreation groundskeeper, OPEB transfer,
-      and reserve fund. Tier 2 adds one police officer, two firefighters, GIS
-      position, IT director, budget analyst, assistant planner (sustainability
-      coordinator), conservation agent, town-wide maintenance division ($450,000).
-      Tier 3 adds two more police, four more firefighters (6 total), grant writer,
-      recurring $1M capital, $60K psychological counseling. Schools draw nothing
-      in FY27 across all tiers — their cuts (roughly 14 positions in Tier 1)
-      reflect prior multi-year headcount reduction tied to declining enrollment.
-      Board pressed for clearer P&L-style year-over-year presentation and a
-      named list of what is NOT restored at each tier. Multiple residents
-      (Kate, Christine Duchow, Susan Shannon, Nick Ward) challenged the
-      "Restore / Stabilize / Invest" labels as misleading — Tier 1 is a partial
-      restore, not a true restore. Nick Ward (Rolleston Rd, online) raised new
-      growth as a third budgetary lever the board has not modeled, and noted
-      DOR ranks Marblehead 20th of 351 communities in per-capita income.
-      This is Marblehead's first tiered override.
+    summary: |
+      **Two ballot questions.** **Q1** asks voters to set the operating-budget override at one of three tiers (**$9M / $12M / $15M**), drawn down over three years. **Q2** is a separate **$2.3M** question to replace the new curbside trash fee with a tax increase.
+
+      Highest tier with a yes-majority wins. Votes are **not** cumulative &mdash; if Tier 3 fails but Tier 2 passes, the result is $12M.
+
+      ### Tax impact on a $1M home (three-year totals)
+
+      | Tier  | Year 1 | Year 2 | Year 3 | Cumulative |
+      |-------|-------:|-------:|-------:|-----------:|
+      | **1** ($9M)  | $127 | $503 | $270 | **$900**   |
+      | **2** ($12M) | $281 | $590 | $329 | **$1,200** |
+      | **3** ($15M) | $430 | $624 | $446 | **$1,500** |
+
+      On the average single-family home ($1.291M), Tier 1 = $167, Tier 2 = $304, Tier 3 = $1,186 in year one. Board agreed to standardize on average or median going forward.
+
+      ### What each tier restores
+
+      - **Tier 1** &mdash; School Resource Officer; DPW staffing (1 special labor, 1 temp clerk, 1 HEO); library accreditation ($311,183); Community Planning & Development director; recreation groundskeeper; OPEB transfer; reserve fund.
+      - **Tier 2 adds** &mdash; 1 police officer; 2 firefighters; 1 GIS position; IT director; budget analyst; assistant planner (sustainability coordinator); conservation agent; town-wide maintenance division ($450,000).
+      - **Tier 3 adds** &mdash; 2 more police; 4 more firefighters (6 total); grant writer; recurring $1M capital; $60K psychological counseling.
+
+      Schools draw nothing in FY27 across all tiers; roughly **14 school positions are still cut** in Tier 1, reflecting a multi-year headcount reduction tied to declining enrollment.
+
+      ### Pushback from the public
+
+      > Several residents (Kate, Christine Duchow, Susan Shannon, Nick Ward) challenged the "Restore / Stabilize / Invest" labels as misleading. Tier 1 is a **partial** restore, not a true restore.
+
+      > Nick Ward (Rolleston Rd, online) flagged **new growth** as a third budgetary lever the board has not modeled, and noted DOR ranks Marblehead **20th of 351** Massachusetts communities by per-capita income.
+
+      Board members pressed staff for a clearer P&amp;L-style year-over-year presentation and a named list of what is **not** restored at each tier. This is Marblehead's first tiered override.
     key_speakers: ["Matt Fernald (CFO)", "Alicia (Finance)", "Dan Fox (chair)", "Moses", "Jamie", "Alexis", "Phil", "Kate (resident)", "Christine Duchow (resident)", "Nick Ward (resident, online)", "Susan Shannon (resident)", "George Rosenblatt (resident)"]
   - topic: trash-dpw
     topic_confidence: 0.95
@@ -127,37 +137,44 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 6500
     end_seconds: 8300
-    summary: >
-      Six-page Memorandum of Understanding among Select Board, School Committee,
-      and Finance Committee covering FY27-FY29. Key commitments: no further
-      general override until at least FY2030 regardless of which tier passes;
-      annual draw caps (school side / municipal side broken out); first-priority
-      use of any surplus is the stabilization fund (5% of operating budget
-      target); secondary uses are capital, then OPEB/pension. Assumptions:
-      free-cash reliance reduced from $5M (FY26) to $4M (FY27) to $3M (FY28);
-      6% health-insurance growth assumption; new-growth split of 62% town /
-      38% schools. Deviation from caps requires a two-thirds vote of all three
-      boards ("black swan" mechanism). Quarterly reporting from Town Administrator
-      and Superintendent to all three board chairs; State of the Town will
-      include year-to-date override budgeted vs. spent. Sample ballot language:
-      "Shall the Town of Marblehead be allowed to assess an additional $15M
-      [or $12M, or $9M] in real estate and property taxes for purposes of
-      operating the municipal government and public schools for the fiscal
-      year beginning July 1, 2026?"
+    summary: |
+      A **six-page Memorandum of Understanding** among the Select Board, School Committee, and Finance Committee, covering FY27&ndash;FY29. Not voted on this meeting; awaiting School Committee vote the following night.
+
+      ### Commitments
+
+      - **No second override** until at least FY2030, regardless of which tier passes.
+      - **Annual draw caps**, with school and municipal portions broken out separately.
+      - Any surplus flows to the **stabilization fund first** (target: 5% of operating budget), then capital, then OPEB and pension.
+      - **Free-cash reliance steps down** &mdash; $5M (FY26) &rarr; $4M (FY27) &rarr; $3M (FY28).
+      - **Health-insurance growth assumed at 6%** (deliberately conservative on revenue).
+      - **New-growth split** &mdash; 62% town, 38% schools.
+      - Quarterly reporting from Town Administrator and Superintendent to all three board chairs; State of the Town will publish year-to-date override budgeted vs. spent.
+
+      Deviation from the caps requires a **two-thirds vote of all three boards** &mdash; the "black swan" mechanism for extraordinary circumstances.
+
+      > Sample ballot language: "Shall the Town of Marblehead be allowed to assess an additional $15M [or $12M, or $9M] in real estate and property taxes for purposes of operating the municipal government and public schools for the fiscal year beginning July 1, 2026?"
     key_speakers: ["Dan Fox (chair)", "Matt Fernald (CFO)", "Moses"]
   - topic: school-budget
     topic_confidence: 0.85
     start_seconds: 8500
     end_seconds: 9300
-    summary: >
-      Essex North Shore Agricultural & Technical FY27 assessment approved at
-      $749,920 (Article 21) — up from $468K in FY25 and $627K in FY26. Board
-      flagged the trajectory as a structural concern: the school changed to
-      a lottery system, raising allocated seats from 35 to 39; cost per
-      student rises ~3% per year and seat allocation can grow further. The
-      Finance Committee is working with the North Shore Collaborative on
-      assumptions and may pursue state-level relief, but participation is
-      mandatory.
+    summary: |
+      Article 21 approved at **$749,920** for the FY27 assessment. The trajectory matters more than the number:
+
+      | Year | Assessment | Change |
+      |------|-----------:|-------:|
+      | FY25 | $468,000   | &mdash;     |
+      | FY26 | $627,000   | +34% |
+      | FY27 | **$749,920** | +20% |
+
+      Two drivers compound:
+
+      - The school **changed to a lottery system**, raising Marblehead's allocated seats from 35 to 39.
+      - Cost per student rises roughly **3% per year**.
+
+      Participation is mandatory under the regional-school agreement. The Finance Committee is working with the North Shore Collaborative on the assumptions and may pursue **state-level relief**.
+
+      > Board concern: this line item is one of several externally-imposed costs (alongside GIC health insurance) the MOU cannot constrain. A further allocation jump in FY28 could blow through the override's three-year envelope.
     key_speakers: ["Alicia (Finance)", "Dan Fox (chair)", "Alexis"]
   - topic: labor-personnel
     topic_confidence: 0.80

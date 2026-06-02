@@ -114,7 +114,7 @@ layout: default
             {% assign mins = seg.start_seconds | divided_by: 60 %}
             <a class="ms-segment-jump" href="{{ page.vimeo_url }}#t={{ seg.start_seconds }}s" rel="noopener" title="Jump to {{ mins }} min on Vimeo">&#9654; {{ mins }} min</a>
           </div>
-          <p class="ms-segment-summary">{{ seg.summary }}</p>
+          <div class="ms-segment-summary">{{ seg.summary | markdownify }}</div>
           {% if seg.key_speakers and seg.key_speakers.size > 0 %}
           <p class="ms-segment-speakers">{{ seg.key_speakers | join: " &middot; " }}</p>
           {% endif %}
