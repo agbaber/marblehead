@@ -104,9 +104,9 @@ All data compiled April 2026 from primary public sources. Every number is either
 ### Free Cash - Certified and Appropriated (21 data points, FY04-FY24)
 - **What it is:** Per fiscal year: certified free cash pool available at the start of that year, free cash appropriated into that year's operating budget, and the cushion left over.
 - **File:** `marblehead_free_cash.csv`
-- **Source:** Certified column from DOR DLS Gateway FreeCash2 report. Appropriated column from `general_fund_budgetary_FY15-24.csv`, which traces each value to its ACFR original budget.
+- **Source:** Certified column from <abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> Gateway FreeCash2 report. Appropriated column from `general_fund_budgetary_FY15-24.csv`, which traces each value to its <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> original budget.
 - **Coverage:** Certified series runs FY04-FY24 (21 years). Appropriated series runs FY15-FY24 (10 years); FY04-FY14 cells are intentionally blank.
-- **Caveat:** Appropriated values FY15-FY19 reflect total budgeted fund balance use (slightly broader than pure operating free cash). FY20 onward is specifically operating draw per the post-FY20 ACFR schedule format. See per-row `notes` column.
+- **Caveat:** Appropriated values FY15-FY19 reflect total budgeted fund balance use (slightly broader than pure operating free cash). FY20 onward is specifically operating draw per the post-FY20 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> schedule format. See per-row `notes` column.
 - **Confidence:** High. State agency report (certified) and audited budget schedules (appropriated).
 
 ## Key Single-Year Data Points (not in MASTER_DATA.csv)
