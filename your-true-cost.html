@@ -159,12 +159,19 @@ body.true-cost .read-time { display: none; }
   padding: 12px 14px 10px;
   background: color-mix(in srgb, var(--text) 4%, transparent);
   border-radius: 10px;
-  border: 1px solid transparent;
-  transition: border-color 0.15s, background 0.15s;
+  border: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+  cursor: text;
+}
+.tc-input:has(select) { cursor: pointer; }
+.tc-input:hover {
+  background: color-mix(in srgb, var(--text) 6%, transparent);
+  border-color: color-mix(in srgb, var(--c-teal) 30%, transparent);
 }
 .tc-input:focus-within {
-  background: color-mix(in srgb, var(--text) 5%, transparent);
-  border-color: color-mix(in srgb, var(--c-teal) 60%, transparent);
+  background: color-mix(in srgb, var(--text) 6%, transparent);
+  border-color: var(--c-teal);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-teal) 18%, transparent);
 }
 .tc-input label {
   display: flex; align-items: center; gap: 5px;
@@ -200,14 +207,65 @@ body.true-cost .read-time { display: none; }
 }
 .tc-input .hint a { color: var(--c-teal); }
 
-.tc-toggle-row {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 13px; color: var(--text-muted);
+/* Toggle chips for boolean exemptions — matches the preset-chip pattern.
+   Native checkbox is hidden visually but kept for keyboard + a11y. */
+.tc-toggle-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 13px;
+  font-size: 12px; font-weight: 600;
+  background: color-mix(in srgb, var(--text) 4%, transparent);
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  border-radius: 999px;
   cursor: pointer; user-select: none;
-  padding: 4px 0;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  position: relative;
 }
-.tc-toggle-row input[type=checkbox] {
-  width: 16px; height: 16px; cursor: pointer; accent-color: var(--c-teal);
+.tc-toggle-chip input[type=checkbox] {
+  position: absolute; opacity: 0;
+  width: 0; height: 0;
+  pointer-events: none; margin: 0;
+}
+.tc-toggle-chip::before {
+  content: ''; display: inline-block;
+  width: 14px; height: 14px;
+  border-radius: 4px;
+  border: 1.5px solid color-mix(in srgb, var(--text) 25%, transparent);
+  background: transparent;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+  position: relative;
+}
+.tc-toggle-chip:hover {
+  background: color-mix(in srgb, var(--c-teal) 10%, transparent);
+  color: var(--c-teal);
+}
+.tc-toggle-chip:hover::before {
+  border-color: var(--c-teal);
+}
+.tc-toggle-chip:has(input:checked) {
+  background: var(--c-teal);
+  color: white;
+  box-shadow: 0 1px 3px rgba(15,42,61,0.18);
+}
+.tc-toggle-chip:has(input:checked)::before {
+  background: white;
+  border-color: white;
+}
+.tc-toggle-chip:has(input:checked)::after {
+  content: ''; position: absolute;
+  left: 16px; top: 50%;
+  width: 5px; height: 9px;
+  border: solid var(--c-teal);
+  border-width: 0 2px 2px 0;
+  transform: translateY(-65%) rotate(45deg);
+  pointer-events: none;
+}
+.tc-toggle-chip input[type=checkbox]:focus-visible + .tc-toggle-chip-label,
+.tc-toggle-chip:has(input:focus-visible) {
+  outline: 2px solid var(--c-teal);
+  outline-offset: 2px;
 }
 
 /* "More options" disclosure — promoted from afterthought to inline section */
@@ -233,8 +291,8 @@ body.true-cost .read-time { display: none; }
 }
 .tc-more-exemptions[open] summary::before { content: '−'; }
 .tc-more-exemptions .tc-exemption-grid {
-  display: grid; gap: 8px; padding: 12px 0 2px;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding: 12px 0 2px;
 }
 
 /* ── Pinned answer card ── */
@@ -908,10 +966,22 @@ body.true-cost .read-time { display: none; }
         More options (itemize, veteran, blind)
       </summary>
       <div class="tc-exemption-grid">
-        <label class="tc-toggle-row"><input type="checkbox" id="tc-itemize"> I itemize on federal taxes</label>
-        <label class="tc-toggle-row"><input type="checkbox" id="tc-veteran"> Veteran (Clause 22)</label>
-        <label class="tc-toggle-row"><input type="checkbox" id="tc-blind"> Legally blind (Clause 37A)</label>
-        <label class="tc-toggle-row"><input type="checkbox" id="tc-spouse"> Surviving spouse (Clause 17D)</label>
+        <label class="tc-toggle-chip" title="I itemize on federal taxes (unlocks SALT estimate)">
+          <input type="checkbox" id="tc-itemize">
+          Itemize federal
+        </label>
+        <label class="tc-toggle-chip" title="MGL c.59 §5 cl.22 — veteran exemption">
+          <input type="checkbox" id="tc-veteran">
+          Veteran
+        </label>
+        <label class="tc-toggle-chip" title="MGL c.59 §5 cl.37A — blind exemption">
+          <input type="checkbox" id="tc-blind">
+          Legally blind
+        </label>
+        <label class="tc-toggle-chip" title="MGL c.59 §5 cl.17D — surviving spouse">
+          <input type="checkbox" id="tc-spouse">
+          Surviving spouse
+        </label>
       </div>
     </details>
     </div><!-- /.tc-inputs -->
