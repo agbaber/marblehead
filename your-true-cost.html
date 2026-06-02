@@ -578,22 +578,53 @@ body.true-cost .read-time { display: none; }
 .tc-donut-wrap {
   max-width: 460px; margin: 0 auto 36px;
   text-align: center;
+  position: relative;
+}
+/* Subtle stage behind the donut — defines the chart as a card. */
+.tc-donut-wrap::before {
+  content: ''; position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px; height: 340px;
+  max-width: 92%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+    color-mix(in srgb, var(--c-teal) 4%, transparent) 0%,
+    transparent 70%);
+  pointer-events: none;
 }
 .tc-donut-svg {
   width: 100%; max-width: 320px; margin: 0 auto;
   height: auto; display: block;
+  position: relative;
+  filter: drop-shadow(0 2px 12px rgba(15, 42, 61, 0.08));
+}
+.tc-donut-svg path {
+  transition: opacity 0.18s, transform 0.18s;
+  transform-origin: 120px 120px;
+}
+.tc-donut-svg:hover path { opacity: 0.6; }
+.tc-donut-svg:hover path:hover {
+  opacity: 1;
+  transform: scale(1.025);
 }
 .tc-donut-center {
   text-anchor: middle; dominant-baseline: middle;
+  pointer-events: none;
 }
 .tc-donut-center .label {
-  fill: var(--text-subtle); font-size: 11px;
-  text-transform: uppercase; letter-spacing: 0.6px;
-  font-weight: 600;
+  fill: var(--text-subtle); font-size: 10px;
+  text-transform: uppercase; letter-spacing: 0.8px;
+  font-weight: 700;
 }
 .tc-donut-center .value {
-  fill: var(--text); font-size: 28px;
-  font-weight: 700; font-family: var(--font-heading);
+  fill: var(--text); font-size: 30px;
+  font-weight: 800; font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+.tc-donut-center .sublabel {
+  fill: var(--text-faint); font-size: 10px;
+  font-weight: 500;
 }
 .tc-donut-legend {
   display: grid; gap: 8px;
@@ -1683,19 +1714,29 @@ function renderSection5(t) {
     const share = c.base / total;
     const angle = share * Math.PI * 2;
     const endAngle = startAngle + angle;
-    const gap = 0.014;
+    const gap = 0.022;
     const a1 = startAngle + gap;
     const a2 = endAngle - gap;
     if (a2 > a1) {
+      const dollars = t.netBill * (c.base / TOTAL_BUDGET);
+      const pct = (share * 100).toFixed(1);
+      const titleText = c.label + ': ' + money(dollars) + ' (' + pct + '%)';
       paths += '<path d="' + arcPath(cx, cy, R, r, a1, a2) +
-        '" fill="' + c.color + '" stroke="var(--surface)" stroke-width="1.5" stroke-linejoin="round" />';
+        '" fill="' + c.color + '" stroke="none">' +
+        '<title>' + titleText + '</title>' +
+      '</path>';
     }
     startAngle = endAngle;
   });
-  svg.innerHTML = paths +
+  // Inner circle gives the center a defined surface (instead of a hole through the page bg)
+  const yearLabel = ['FY27', 'FY28', 'FY29'][state.year - 1];
+  svg.innerHTML =
+    '<circle cx="' + cx + '" cy="' + cy + '" r="' + (r - 2) + '" fill="var(--surface)" />' +
+    paths +
     '<g class="tc-donut-center">' +
-      '<text x="' + cx + '" y="' + (cy - 8) + '" class="label">your bill</text>' +
-      '<text x="' + cx + '" y="' + (cy + 18) + '" class="value">' + money(t.netBill) + '</text>' +
+      '<text x="' + cx + '" y="' + (cy - 16) + '" class="label">YOUR BILL</text>' +
+      '<text x="' + cx + '" y="' + (cy + 8) + '" class="value">' + money(t.netBill) + '</text>' +
+      '<text x="' + cx + '" y="' + (cy + 28) + '" class="sublabel">' + yearLabel + ' · ' + moneyDec(t.netBill / 365) + '/day</text>' +
     '</g>';
 
   // full breakdown cards (these replace the previously-separate legend column —
