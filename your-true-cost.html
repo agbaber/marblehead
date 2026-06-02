@@ -62,31 +62,30 @@ body.true-cost .read-time { display: none; }
   max-width: 620px; margin: 0 auto 32px; line-height: 1.55;
 }
 
-/* The big control card holds Quick-start chips and inputs together. */
+/* ════════════════════════════════════════════════════════════
+   Control card (hero) — redesigned for higher UI/UX quality bar
+   - Removed: gradient stripe, internal divider, input-field borders
+   - Filled input tiles (Linear/Stripe-style) with bold value type
+   - Stronger card elevation + slightly tinted surface
+   - Solid-fill active chip for confident state, not pale-teal wash
+   - Fixed select chevron overlap (proper padding-right)
+   ════════════════════════════════════════════════════════════ */
 .tc-control-card {
-  max-width: 860px; margin: 0 auto;
-  padding: 22px 24px 26px;
-  border: 1px solid var(--border);
+  max-width: 880px; margin: 0 auto;
+  padding: 24px 26px 22px;
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
   border-radius: var(--radius-lg);
   background: var(--surface);
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    0 1px 0 rgba(15,42,61,0.04),
+    0 8px 28px rgba(15,42,61,0.08),
+    0 24px 60px -20px rgba(15,42,61,0.12);
   position: relative;
 }
-.tc-control-card::before {
-  content: ''; position: absolute;
-  top: -1px; left: 16px; right: 16px;
-  height: 3px; border-radius: 0 0 3px 3px;
-  background: linear-gradient(90deg, var(--c-teal), var(--c-navy));
-  opacity: 0.85;
-}
-.tc-control-divider {
-  height: 1px; background: var(--divider);
-  margin: 18px -24px 18px;
-}
 
-/* ── Inputs grid ── */
+/* Inputs grid */
 .tc-inputs {
-  display: grid; gap: 16px;
+  display: grid; gap: 12px;
   grid-template-columns: repeat(4, 1fr);
 }
 @media (max-width: 760px) {
@@ -96,47 +95,49 @@ body.true-cost .read-time { display: none; }
   .tc-inputs { grid-template-columns: 1fr; }
 }
 
-/* ── Preset starter chips (lives inside the control card) ── */
+/* Preset chips row sits above inputs with a quiet spacer */
 .tc-presets {
   display: flex; flex-wrap: wrap; align-items: center;
   gap: 6px; justify-content: center;
+  padding-bottom: 22px;
+  margin-bottom: 4px;
+  border-bottom: 1px dashed color-mix(in srgb, var(--border) 60%, transparent);
 }
 .tc-presets-label {
-  font-size: 11px; color: var(--text-subtle);
-  text-transform: uppercase; letter-spacing: 0.6px;
-  font-weight: 700; margin-right: 4px;
+  font-size: 10px; color: var(--text-subtle);
+  text-transform: uppercase; letter-spacing: 0.9px;
+  font-weight: 700; margin-right: 6px;
 }
 .tc-preset-chip {
-  display: inline-flex; align-items: center; gap: 7px;
-  padding: 7px 13px;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
   font-size: 12px; font-weight: 600;
-  background: var(--surface);
+  background: color-mix(in srgb, var(--text) 4%, transparent);
   color: var(--text-muted);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   border-radius: 999px;
   cursor: pointer; font-family: inherit;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
   white-space: nowrap;
 }
 .tc-preset-chip-icon {
-  width: 16px; height: 16px; flex-shrink: 0;
-  color: var(--c-teal);
+  width: 14px; height: 14px; flex-shrink: 0;
+  color: currentColor; opacity: 0.7;
 }
 .tc-preset-chip-icon svg { width: 100%; height: 100%; display: block; }
-.tc-preset-chip.active .tc-preset-chip-icon { color: white; }
 .tc-preset-chip:hover {
-  border-color: var(--c-teal);
+  background: color-mix(in srgb, var(--c-teal) 10%, transparent);
   color: var(--c-teal);
-  background: color-mix(in srgb, var(--c-teal) 6%, var(--surface));
 }
 .tc-preset-chip.active {
-  border-color: var(--c-navy);
   background: var(--c-navy);
   color: white;
+  box-shadow: 0 1px 3px rgba(15,42,61,0.2);
 }
+.tc-preset-chip.active .tc-preset-chip-icon { opacity: 1; }
 @media (max-width: 600px) {
-  .tc-preset-chip { font-size: 11px; padding: 6px 11px; }
-  .tc-preset-chip-icon { width: 14px; height: 14px; }
+  .tc-preset-chip { font-size: 11px; padding: 5px 10px; }
+  .tc-preset-chip-icon { width: 13px; height: 13px; }
 }
 
 /* Input flash highlight when a preset is applied */
@@ -145,66 +146,94 @@ body.true-cost .read-time { display: none; }
   animation: tcFlash 0.9s ease-out;
 }
 @keyframes tcFlash {
-  0%   { background: color-mix(in srgb, var(--c-brass) 28%, var(--surface)); }
-  100% { background: var(--surface); }
+  0%   { background: color-mix(in srgb, var(--c-brass) 22%, var(--c-fog)); }
+  100% { background: color-mix(in srgb, var(--text) 4%, transparent); }
 }
 @media (prefers-reduced-motion: reduce) {
   .tc-input input.tc-flash, .tc-input select.tc-flash { animation: none; }
 }
-.tc-input { text-align: left; }
+
+/* ── Filled input tiles ── */
+.tc-input {
+  text-align: left;
+  padding: 12px 14px 10px;
+  background: color-mix(in srgb, var(--text) 4%, transparent);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: border-color 0.15s, background 0.15s;
+}
+.tc-input:focus-within {
+  background: color-mix(in srgb, var(--text) 5%, transparent);
+  border-color: color-mix(in srgb, var(--c-teal) 60%, transparent);
+}
 .tc-input label {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 11px; color: var(--text-subtle);
-  text-transform: uppercase; letter-spacing: 0.6px;
-  font-weight: 600; margin-bottom: 6px;
+  display: flex; align-items: center; gap: 5px;
+  font-size: 10px; color: var(--text-subtle);
+  text-transform: uppercase; letter-spacing: 0.9px;
+  font-weight: 700; margin-bottom: 6px;
 }
 .tc-input-icon {
-  width: 14px; height: 14px; flex-shrink: 0;
-  color: var(--c-teal);
+  width: 12px; height: 12px; flex-shrink: 0;
+  color: var(--text-subtle); opacity: 0.7;
 }
 .tc-input-icon svg { width: 100%; height: 100%; display: block; }
 .tc-input input, .tc-input select {
-  width: 100%; padding: 9px 12px; font-size: 15px; font-weight: 600;
-  color: var(--text); background: var(--surface);
-  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  width: 100%; padding: 0; margin: 0;
+  font-size: 18px; font-weight: 700;
+  color: var(--text); background: transparent;
+  border: none; outline: none;
   font-variant-numeric: tabular-nums; font-family: var(--font-sans);
+  letter-spacing: -0.005em;
   appearance: none; -webkit-appearance: none;
 }
 .tc-input select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%237A8A98' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: right 12px center;
-  padding-right: 32px;
+  background-repeat: no-repeat; background-position: right 0 center;
+  padding-right: 18px;
+  cursor: pointer;
+  /* Trim "Married, filing jointly" so it doesn't clash with the chevron at narrow widths */
+  text-overflow: ellipsis;
 }
-.tc-input input:focus, .tc-input select:focus {
-  outline: none; border-color: var(--link);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--link) 22%, transparent);
+.tc-input .hint {
+  display: block; font-size: 10.5px; color: var(--text-faint);
+  margin-top: 6px; line-height: 1.35;
 }
-.tc-input .hint { display: block; font-size: 11px; color: var(--text-faint); margin-top: 4px; line-height: 1.4; }
-.tc-input .hint a { color: var(--link); }
+.tc-input .hint a { color: var(--c-teal); }
+
 .tc-toggle-row {
   display: flex; align-items: center; gap: 10px;
-  margin-top: 14px; font-size: 14px; color: var(--text-muted);
+  font-size: 13px; color: var(--text-muted);
   cursor: pointer; user-select: none;
+  padding: 4px 0;
 }
 .tc-toggle-row input[type=checkbox] {
-  width: 18px; height: 18px; cursor: pointer; accent-color: var(--c-teal);
+  width: 16px; height: 16px; cursor: pointer; accent-color: var(--c-teal);
 }
+
+/* "More options" disclosure — promoted from afterthought to inline section */
 .tc-more-exemptions {
   grid-column: 1 / -1;
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 1px dashed color-mix(in srgb, var(--border) 60%, transparent);
 }
 .tc-more-exemptions summary {
-  cursor: pointer; font-size: 13px; color: var(--link);
-  padding: 4px 0; font-weight: 500;
+  cursor: pointer; font-size: 12px; color: var(--text-muted);
+  font-weight: 600; padding: 2px 0;
   list-style: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  text-transform: uppercase; letter-spacing: 0.8px;
 }
+.tc-more-exemptions summary:hover { color: var(--c-teal); }
 .tc-more-exemptions summary::-webkit-details-marker { display: none; }
 .tc-more-exemptions summary::before {
-  content: '+'; display: inline-block; width: 14px;
-  font-weight: 700; transition: transform 0.2s;
+  content: '+'; display: inline-block; width: 12px;
+  font-size: 14px; font-weight: 700;
+  transition: transform 0.2s;
 }
 .tc-more-exemptions[open] summary::before { content: '−'; }
 .tc-more-exemptions .tc-exemption-grid {
-  display: grid; gap: 10px; padding: 14px 0 4px;
+  display: grid; gap: 8px; padding: 12px 0 2px;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
@@ -831,10 +860,9 @@ body.true-cost .read-time { display: none; }
 
   <div class="tc-control-card">
     <div class="tc-presets" id="tcPresets" role="group" aria-label="Preset scenarios">
-      <span class="tc-presets-label">Quick start:</span>
+      <span class="tc-presets-label">Quick start</span>
       <!-- buttons injected by JS so the PRESETS array is the single source of truth -->
     </div>
-    <div class="tc-control-divider"></div>
     <div class="tc-inputs" id="tcInputs">
     <div class="tc-input">
       <label for="tc-assessed">
