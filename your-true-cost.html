@@ -10,6 +10,9 @@ community_pulse: off-sections
    ════════════════════════════════════════════════════════════ */
 
 body.true-cost .page { max-width: 1100px; }
+/* Hide the layout's auto reading-time label — this is an interactive
+   calculator, not a long-read piece. */
+body.true-cost .read-time { display: none; }
 
 /* ── Hero (above the fold) ──
    Distinct background wash + bold typography + a single cohesive
@@ -316,7 +319,7 @@ body.true-cost .page { max-width: 1100px; }
 
 /* ── Section frame ── */
 .tc-section {
-  padding: 100px 0 60px;
+  padding: 72px 0 56px;
   border-bottom: 1px solid var(--divider);
   position: relative;
 }
@@ -392,8 +395,12 @@ body.true-cost .page { max-width: 1100px; }
   height: 100%; float: left; transition: width 0.8s cubic-bezier(.2,.7,.3,1);
   width: 0;
 }
-.tc-bar-seg-current  { background: var(--c-text-mid); }
-.tc-bar-seg-growth   { background: color-mix(in srgb, var(--c-text-mid) 60%, var(--surface)); }
+/* Use fixed slate-grays for the bar segments so they read the same in
+   light and dark mode. The previous var(--c-text-mid) flipped to a
+   near-white color in dark mode and made the "Current" segment look
+   like a blank bar. */
+.tc-bar-seg-current  { background: #5B6A78; }
+.tc-bar-seg-growth   { background: #9CA9B5; }
 .tc-bar-seg-tier1    { background: var(--series-tier-1); }
 .tc-bar-seg-tier2    { background: var(--series-tier-2); }
 .tc-bar-seg-tier3    { background: var(--series-tier-3); }
@@ -410,6 +417,9 @@ body.true-cost .page { max-width: 1100px; }
   display: flex; flex-wrap: wrap; gap: 14px;
   justify-content: center; margin-top: 24px;
   font-size: 12px; color: var(--text-muted);
+}
+.tc-bars-legend span {
+  display: inline-flex; align-items: center;
 }
 .tc-bars-summary {
   text-align: center; margin: 18px auto 0; max-width: 540px;
@@ -532,14 +542,11 @@ body.true-cost .page { max-width: 1100px; }
 
 /* ── Section 5: where your money goes (donut + cards) ── */
 .tc-donut-wrap {
-  display: grid; gap: 28px;
-  grid-template-columns: 1fr 1fr;
-  max-width: 920px; margin: 0 auto 32px;
-  align-items: center;
+  max-width: 460px; margin: 0 auto 36px;
+  text-align: center;
 }
-@media (max-width: 700px) { .tc-donut-wrap { grid-template-columns: 1fr; } }
 .tc-donut-svg {
-  width: 100%; max-width: 360px; margin: 0 auto;
+  width: 100%; max-width: 320px; margin: 0 auto;
   height: auto; display: block;
 }
 .tc-donut-center {
@@ -615,15 +622,16 @@ body.true-cost .page { max-width: 1100px; }
 .tc-cited { position: relative; white-space: nowrap; }
 .tc-cite-chip {
   display: inline-flex; align-items: center; justify-content: center;
-  min-width: 18px; height: 18px; padding: 0 5px;
+  width: 14px; height: 14px; padding: 0;
   margin: 0 0 0 4px; vertical-align: super;
-  font-size: 10px; font-weight: 700; line-height: 1;
+  font-size: 9px; font-weight: 700; line-height: 1;
   color: var(--c-teal);
-  background: color-mix(in srgb, var(--c-teal) 14%, transparent);
+  background: transparent;
   border-radius: 999px; cursor: pointer;
-  border: 1px solid color-mix(in srgb, var(--c-teal) 30%, transparent);
-  font-family: var(--font-mono);
+  border: 1px solid color-mix(in srgb, var(--c-teal) 50%, transparent);
+  font-family: var(--font-sans);
   transition: background 0.15s, color 0.15s;
+  opacity: 0.65;
 }
 .tc-cite-chip::before {
   content: ''; position: absolute;
@@ -632,6 +640,7 @@ body.true-cost .page { max-width: 1100px; }
 }
 .tc-cite-chip:hover, .tc-cite-chip:focus {
   background: var(--c-teal); color: white; outline: none;
+  opacity: 1;
 }
 
 .tc-cite-popover {
@@ -759,7 +768,6 @@ body.true-cost .page { max-width: 1100px; }
 </style>
 
 <div class="tc-hero">
-  <span class="tc-hero-eyebrow">2026 Marblehead override · personalized calculator</span>
   <h1>What you'll <span class="accent">actually</span> pay</h1>
   <p class="subtitle">Enter your home value and a few details — the page builds your bill, your override share, and every state and federal benefit you may qualify for.</p>
 
@@ -905,7 +913,7 @@ body.true-cost .page { max-width: 1100px; }
 <section class="tc-section" id="tcSection4" data-section="4">
   <div class="tc-section-eyebrow">What you can claw back</div>
   <h2>Benefits you may qualify for</h2>
-  <p class="tc-section-lede">Massachusetts and federal law include several property-tax relief programs. Eligibility depends on age, income, and other factors. Greyed-out cards show what you don't qualify for and why.</p>
+  <p class="tc-section-lede">Greyed-out cards show what you don't qualify for, and why.</p>
   <div class="tc-deductions-wrap tc-reveal" id="s4Wrap">
     <div id="s4List"></div>
     <div class="tc-deduction-running">
@@ -920,7 +928,7 @@ body.true-cost .page { max-width: 1100px; }
 <section class="tc-section" id="tcSection5" data-section="5">
   <div class="tc-section-eyebrow">Where it goes</div>
   <h2>Where your tax dollars actually land</h2>
-  <p class="tc-section-lede">Marblehead's general fund has no line-item earmarking — every property tax dollar is allocated across departments in the same ratio as the overall FY26 budget. Here's your specific share.</p>
+  <p class="tc-section-lede">Your share of each department, scaled from the FY26 general fund budget.</p>
   <div class="tc-stat-row tc-reveal" id="s5Stats">
     <div class="tc-stat-block"><div class="tc-stat-label">Per day</div><div class="tc-stat-value accent" data-stat="s5-day">$32</div></div>
     <div class="tc-stat-block"><div class="tc-stat-label">Per month</div><div class="tc-stat-value accent" data-stat="s5-mo">$987</div></div>
@@ -928,7 +936,6 @@ body.true-cost .page { max-width: 1100px; }
   </div>
   <div class="tc-donut-wrap tc-reveal" id="s5Donut">
     <svg class="tc-donut-svg" viewBox="0 0 240 240" id="s5DonutSvg" aria-label="Donut chart of tax bill by spending category"></svg>
-    <div class="tc-donut-legend" id="s5Legend"></div>
   </div>
   <div class="tc-breakdown-list tc-reveal" id="s5Breakdown"></div>
 </section>
@@ -1601,18 +1608,9 @@ function renderSection5(t) {
       '<text x="' + cx + '" y="' + (cy + 18) + '" class="value">' + money(t.netBill) + '</text>' +
     '</g>';
 
-  // legend (compact, beside donut)
-  const legend = document.getElementById('s5Legend');
-  legend.innerHTML = SPEND_CATS.map(c => {
-    const share = t.netBill * (c.base / TOTAL_BUDGET);
-    return '<div class="tc-donut-legend-item">' +
-      '<div class="tc-donut-legend-swatch" style="background:' + c.color + ';"></div>' +
-      '<div class="legend-name">' + c.label + '</div>' +
-      '<div class="legend-value">' + money(share) + '</div>' +
-    '</div>';
-  }).join('');
-
-  // full breakdown cards
+  // full breakdown cards (these replace the previously-separate legend column —
+  // they carry the same swatch/name/$ info plus icon, description, %, $/day,
+  // and an animated progress bar)
   const breakdown = document.getElementById('s5Breakdown');
   breakdown.innerHTML = SPEND_CATS.map(c => {
     const share = t.netBill * (c.base / TOTAL_BUDGET);
