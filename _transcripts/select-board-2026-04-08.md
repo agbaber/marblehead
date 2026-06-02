@@ -24,11 +24,11 @@ summary_card:
     - "Reauthorized FY27 Board of Health solid-waste revolving fund cap at $1.3M (supersedes Feb 11 motion)"
     - "Approved bulk motion on FY27 warrant articles 3, 4, 6 ($60,182.27), 7 ($4,205,300 revolving funds), 8, 9 ($524,067 lease-purchase), 10, 11 ($25,000 walls/fences), 12 ($200,000 stormwater), 13 ($2,400,000 water + $2,100,000 sewer), 15-18 (pay schedules at 3%, town clerk at $97,460), 23 ($122,762.03), 31 (indefinitely postpone), 33 (cryptocurrency ATM prohibition), 36 (DPW housekeeping)"
     - "Approved Article 21 (Essex North Shore Agricultural & Technical) at $749,920"
-    - "Held Articles 19 (fire collective bargaining), 29 (override tiers — pending school vote), 34 (dissolve Public Works Committee)"
+    - "Held Articles 19 (fire collective bargaining), 29 (override tiers &mdash; pending school vote), 34 (dissolve Public Works Committee)"
     - "Amended overnight street-sweeping parking-ban dates from April 20-24 (school vacation week) to April 27 - May 1"
     - "Renewed Eastern Yacht Club pool license (42-44 Foster Street)"
     - "Approved consent agenda: Abbot Hall reservations (Marblehead School of Music, National Prayer Day, Marblehead Charter School mock public meeting, Harbor Rotary Pops Concert), Marblehead Counseling Community Champion Celebration proclamation"
-    - "Approved change order #3 for Village Street bridge replacement contract with Freeman Peterson Inc. — $55,000 extension through Dec 31, 2026 (Chapter 90 funds)"
+    - "Approved change order #3 for Village Street bridge replacement contract with Freeman Peterson Inc. &mdash; $55,000 extension through Dec 31, 2026 (Chapter 90 funds)"
     - "Approved one-day liquor licenses: Coastline Marine (8 Sewall St, May 2) and Steven Decor (4 Quick St, April 25)"
     - "Set May 13 to interview student rep candidate for Marblehead Task Force on Discrimination"
   votes:
@@ -48,7 +48,7 @@ summary_card:
       result: "in favor (roll-call, 5 in favor)"
     - motion: "Approve consent agenda (Abbot Hall reservations and Marblehead Counseling proclamation)"
       result: "in favor (voice vote)"
-    - motion: "Approve change order #3 for Village Street bridge contract — $55,000 extension to Dec 31, 2026"
+    - motion: "Approve change order #3 for Village Street bridge contract &mdash; $55,000 extension to Dec 31, 2026"
       result: "in favor (voice vote)"
     - motion: "Approve one-day liquor licenses for Coastline Marine and Steven Decor"
       result: "in favor (roll-call, 5 in favor)"
@@ -191,7 +191,7 @@ topic_segments:
     end_seconds: 8500
     headline: "Fire-union contract held for board review; pay schedules approved at 3%"
     dek: "Board hasn't seen the firefighter agreement; reviewing Tuesday. Article 31 indefinitely postponed."
-    summary: "Article 19 (fire collective bargaining) held — board has not seen the agreement yet, meeting scheduled for the following Tuesday. Article 31 (administrative benefit amendment) indefinitely postponed. Pay-schedule articles 15-18 approved with uniform 3% increases (town clerk at $97,460). Resident Terry Tollef (online) asked whether the MOU's contractual-raise constraints apply to individual administrator and department-head contracts as well as union contracts; staff confirmed all are bound by the MOU budget growth assumptions."
+    summary: "Article 19 (fire collective bargaining) held &mdash; board has not seen the agreement yet, meeting scheduled for the following Tuesday. Article 31 (administrative benefit amendment) indefinitely postponed. Pay-schedule articles 15-18 approved with uniform 3% increases (town clerk at $97,460). Resident Terry Tollef (online) asked whether the MOU's contractual-raise constraints apply to individual administrator and department-head contracts as well as union contracts; staff confirmed all are bound by the MOU budget growth assumptions."
     key_speakers: ["Dan Fox (chair)", "Terry Tollef (resident, online)"]
   - topic: admin-housekeeping
     topic_confidence: 0.90
@@ -237,7 +237,7 @@ topic_segments:
       School student mock public meeting, Marblehead Harbor Rotary Pops
       Concert; Marblehead Counseling Second Annual Community Champion
       Celebration proclamation for May 7). Change order #3 for the Village
-      Street bridge replacement contract approved — $55,000 extension to
+      Street bridge replacement contract approved &mdash; $55,000 extension to
       Dec 31, 2026, funded with Chapter 90 dollars. One-day liquor licenses
       approved for Coastline Marine (8 Sewall St, May 2) and Steven Decor
       (4 Quick St, April 25). Student-rep interview for Marblehead Task
@@ -248,7 +248,7 @@ topic_segments:
 associated_documents:
   - label: "FY27 Annual Town Meeting Warrant (referenced articles 3-36)"
     note: "Bulk motion approving articles 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 15-18, 23, 31, 33, 36; holds on 19, 21, 29, 34. Numbers given in the motion match the warrant; verify against the published warrant book."
-  - label: "Article 11 (2022) — $12M five-year road and sidewalk repair authorization"
+  - label: "Article 11 (2022) &mdash; $12M five-year road and sidewalk repair authorization"
     note: "Referenced by resident Amy Hurd in objection to Bouvier Road sidewalk additions"
   - label: "Tri-board MOU on FY27-FY29 override draws"
     note: "Six-page draft, not voted on this meeting; awaiting School Committee vote (next day)"

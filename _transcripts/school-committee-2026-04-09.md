@@ -22,7 +22,7 @@ summary_card:
 
   decisions:
     - "Approved Portugal field trip (Apr 15-24, 2026); same vendor and tour guide Haime Crystal; chaperones Dan Richards, Erin Bark, Jay Gudara, Kelly"
-    - "Approved FY27 line-item budget at $47,620,287 — a $3,157,460 reduction; 22 positions affected (18.25 FTE; 11 vacant, 11 currently filled)"
+    - "Approved FY27 line-item budget at $47,620,287 &mdash; a $3,157,460 reduction; 22 positions affected (18.25 FTE; 11 vacant, 11 currently filled)"
     - "Endorsed school-side override structure: Tier 1 $6.2M, Tier 2 $7.2M, Tier 3 $8.5M over three years; schools draw $0 in FY27 across all tiers"
     - "Voted to support draft tri-board MOU on the FY27-FY29 override framework, subject to numbers being added to the override structure section"
     - "Approved bills consent: schedules totaling $443,690.77 and meeting minutes from March 12 and March 27, 2026"
