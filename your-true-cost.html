@@ -1498,12 +1498,22 @@ function renderSection2(t) {
     );
   }
   document.getElementById('s2Legend').innerHTML = legendItems.join('');
-  // Separate total-raise summary line
-  const totalRise = prevTotal - cb;
+  // Separate total-raise summary line, broken down by source
+  const baselineRise = baselineForYear(cb, 3) - cb;
+  const overrideRise = overrideForYear(state.assessedValue, state.tier, 3);
+  const totalRise = baselineRise + overrideRise;
   const summaryEl = document.getElementById('s2Summary');
   if (summaryEl) {
-    summaryEl.innerHTML = 'Over 3 years your bill rises <strong>+' + money(totalRise) +
-      '</strong> total, about ' + moneyDec(totalRise / 365 / 3) + '/day on average.';
+    const perDay = moneyDec(totalRise / 365 / 3);
+    if (state.tier === 0) {
+      summaryEl.innerHTML = 'Over 3 years your bill rises <strong>+' + money(totalRise) +
+        '</strong> &mdash; entirely from automatic 2.5% baseline growth (~' + perDay + '/day on average).';
+    } else {
+      summaryEl.innerHTML = 'Over 3 years your bill rises <strong>+' + money(totalRise) +
+        '</strong> &mdash; <strong>' + money(baselineRise) +
+        '</strong> from automatic 2.5% growth + <strong>' + money(overrideRise) +
+        '</strong> from the Tier ' + state.tier + ' override (~' + perDay + '/day on average).';
+    }
   }
   // Explain the uneven phase-in (FY28 is biggest because schools side starts that year)
   const noteEl = document.getElementById('s2SummaryNote');
