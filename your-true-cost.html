@@ -1742,7 +1742,10 @@ function renderSection4(t) {
   // shows the overall % change. All shares share the same denominator
   // (today's net) so they sum mathematically to the total %.
   const todayNet = t.currentNet;
-  const pctChange = n => todayNet > 0 ? Math.round((n / todayNet) * 100) : 0;
+  // One-decimal precision so the per-row %s sum cleanly to the total
+  // (whole-number rounding causes the individual %s to add up to a
+  // different number than the rounded total — visibly broken).
+  const pctChange = n => todayNet > 0 ? ((n / todayNet) * 100).toFixed(1) : '0.0';
   const breakdownHTML = items.map(item => {
     let pctStr = '';
     if (item.cls === 'add') {
@@ -1761,8 +1764,8 @@ function renderSection4(t) {
   }).join('') +
   (function() {
     const delta = t.netBill - todayNet;
-    const totalPct = pctChange(delta);
-    const totalPctStr = (delta >= 0 ? '+' : '−') + Math.abs(totalPct) + '% vs today';
+    const absPct = pctChange(Math.abs(delta));
+    const totalPctStr = (delta >= 0 ? '+' : '−') + absPct + '% vs today';
     return '<li class="total">' +
       '<span class="label">' + yearLabel + ' total</span>' +
       '<span class="amount">' + money(t.netBill) +
