@@ -1,0 +1,967 @@
+---
+title: "What can we do?"
+og_title: "What can Marblehead do, in the next 24 to 36 months, to close the structural gap?"
+og_description: "A draft inventory of twelve specific revenue and cost-savings measures. Each answers two questions: have we tried this, and what is the potential."
+og_url: https://marbleheaddata.org/what-can-we-do.html
+sitemap: false
+---
+<style>
+  /* === Scrolling stops, homepage-style === */
+  .wcwd-hero,
+  .wcwd-stop {
+    box-sizing: border-box;
+    padding: 64px 0 56px;
+    position: relative;
+  }
+  .wcwd-hero { padding-top: 48px; padding-bottom: 32px; }
+  @media (max-width: 600px) {
+    .wcwd-hero,
+    .wcwd-stop { padding: 44px 0 36px; }
+  }
+
+  .wcwd-stop--tinted {
+    background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
+    border-top: 1px solid color-mix(in srgb, var(--c-navy) 10%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--c-navy) 10%, transparent);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+  }
+
+  /* Eyebrow label */
+  .wcwd-eye {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 22px;
+  }
+  .wcwd-eye .dot { color: var(--c-buoy); margin: 0 6px; }
+
+  /* Hero */
+  .wcwd-hero h1 {
+    font-size: clamp(40px, 7vw, 84px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+    margin: 0 0 20px;
+    max-width: 780px;
+  }
+  .wcwd-hero-sub {
+    font-size: clamp(17px, 2.2vw, 22px);
+    line-height: 1.45;
+    color: var(--text-muted);
+    margin: 0 0 28px;
+    max-width: 680px;
+    font-weight: 500;
+  }
+  .wcwd-hero-sub strong { color: var(--text); font-weight: 700; }
+
+  /* Jump-nav chips */
+  .wcwd-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 6px;
+  }
+  .wcwd-jump a {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .wcwd-jump a:hover {
+    border-color: var(--c-teal);
+    transform: translateY(-1px);
+  }
+  .wcwd-jump a[data-cat="rev"]:hover { border-color: var(--c-teal); }
+  .wcwd-jump a[data-cat="cost"]:hover { border-color: var(--c-navy); }
+  .wcwd-jump a[data-cat="gov"]:hover { border-color: var(--c-brass); }
+
+  /* Total potential stop */
+  .wcwd-big {
+    font-size: clamp(72px, 14vw, 168px);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    margin: 0 0 18px;
+    color: var(--c-teal);
+    font-variant-numeric: tabular-nums;
+  }
+  .wcwd-big-cap {
+    font-size: clamp(18px, 2.4vw, 24px);
+    line-height: 1.4;
+    color: var(--text);
+    margin: 0 0 18px;
+    max-width: 680px;
+    font-weight: 500;
+  }
+  .wcwd-big-sub {
+    font-size: clamp(13px, 1.6vw, 15px);
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 12px 0 0;
+    max-width: 640px;
+  }
+
+  /* Section title */
+  .wcwd-section-h2 {
+    font-size: clamp(28px, 4.4vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    margin: 0 0 12px;
+    max-width: 740px;
+  }
+  .wcwd-section-lead {
+    font-size: clamp(15px, 1.9vw, 18px);
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 0 0 32px;
+    max-width: 640px;
+  }
+
+  /* Idea grid */
+  .idea-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 0 0 8px;
+  }
+  @media (min-width: 720px) {
+    .idea-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* Idea card */
+  .idea {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 24px 20px;
+    box-shadow: var(--shadow-sm);
+    border-top: 4px solid var(--c-teal);
+  }
+  .idea[data-cat="rev"] { border-top-color: var(--c-teal); }
+  .idea[data-cat="cost"] { border-top-color: var(--c-navy); }
+  .idea[data-cat="gov"] { border-top-color: var(--c-brass); }
+
+  .idea-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 6px;
+  }
+  .idea[data-cat="rev"] .idea-num { color: var(--c-teal); }
+  .idea[data-cat="cost"] .idea-num { color: var(--c-navy); }
+  .idea[data-cat="gov"] .idea-num { color: var(--c-brass); }
+
+  .idea-title {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 14px;
+  }
+
+  .idea-amt {
+    font-size: clamp(34px, 5.4vw, 48px);
+    line-height: 1;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.025em;
+    font-variant-numeric: tabular-nums;
+    margin: 0 0 4px;
+  }
+  .idea-amt-unit {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0;
+    margin-left: 2px;
+  }
+  .idea-amt-cap {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin: 0 0 18px;
+  }
+
+  .idea-qa {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 0 14px;
+  }
+  .idea-q {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 4px;
+    display: block;
+  }
+  .idea-a {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text);
+    margin: 0;
+  }
+  .idea-a strong { font-weight: 700; }
+
+  .idea-status {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+    vertical-align: 2px;
+  }
+  .idea-status[data-s="rejected"] {
+    background: color-mix(in srgb, var(--c-buoy) 14%, transparent);
+    color: var(--c-buoy);
+  }
+  .idea-status[data-s="not-tried"] {
+    background: color-mix(in srgb, var(--c-teal) 14%, transparent);
+    color: var(--c-teal);
+  }
+  .idea-status[data-s="partial"] {
+    background: color-mix(in srgb, var(--c-brass) 18%, transparent);
+    color: var(--c-brass);
+  }
+  .idea-status[data-s="discussed"] {
+    background: color-mix(in srgb, var(--text) 10%, transparent);
+    color: var(--text-muted);
+  }
+  .idea-status[data-s="unknown"] {
+    background: color-mix(in srgb, var(--text) 8%, transparent);
+    color: var(--text-muted);
+  }
+
+  /* Research details (expandable) */
+  .idea-research {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px dashed var(--border);
+  }
+  .idea-research summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .idea-research summary::-webkit-details-marker { display: none; }
+  .idea-research summary::before {
+    content: "+";
+    display: inline-block;
+    width: 14px;
+    text-align: center;
+    color: var(--text-muted);
+    font-weight: 700;
+  }
+  .idea-research[open] summary::before { content: "\2212"; }
+  .idea-research summary:hover { color: var(--text); }
+  .idea-research ul {
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .idea-research li {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    padding: 5px 0 5px 22px;
+    position: relative;
+  }
+  .idea-research li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid var(--text-subtle);
+    border-radius: 3px;
+    background: transparent;
+  }
+
+  /* Cautions stop */
+  .cautions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 0;
+    max-width: 760px;
+  }
+  @media (min-width: 720px) {
+    .cautions { grid-template-columns: 1fr 1fr; }
+  }
+  .caution {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--c-buoy);
+  }
+  .caution-h {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .caution-p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* Procedural paths */
+  .paths-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 0;
+    max-width: 880px;
+  }
+  @media (min-width: 720px) {
+    .paths-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  .path {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 22px 20px;
+  }
+  .path-eye {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--c-teal);
+    margin: 0 0 8px;
+  }
+  .path[data-p="atm"] .path-eye { color: var(--c-navy); }
+  .path[data-p="atm-only"] .path-eye { color: var(--c-buoy); }
+  .path-h {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--text);
+    margin: 0 0 10px;
+  }
+  .path-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .path-list li {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    padding: 4px 0 4px 18px;
+    position: relative;
+  }
+  .path-list li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--text-subtle);
+  }
+
+  /* Closing stop */
+  .wcwd-close-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 18px 0 6px;
+    max-width: 740px;
+  }
+  @media (min-width: 600px) {
+    .wcwd-close-cards { grid-template-columns: 1fr 1fr; }
+  }
+  .wcwd-close-card {
+    display: block;
+    padding: 20px 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .wcwd-close-card:hover {
+    border-color: var(--c-teal);
+    transform: translateY(-2px);
+  }
+  .wcwd-close-card-eye {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--c-teal);
+    margin: 0 0 6px;
+  }
+  .wcwd-close-card h3 {
+    font-size: 18px;
+    margin: 0 0 6px;
+    line-height: 1.25;
+  }
+  .wcwd-close-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .wcwd-draft {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: color-mix(in srgb, var(--c-brass) 18%, transparent);
+    color: var(--c-brass);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin: 0 0 16px;
+  }
+  .wcwd-draft::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--c-brass);
+  }
+</style>
+
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<section class="wcwd-hero">
+  <span class="wcwd-draft">Draft &middot; Updated 2026-06-02</span>
+  <h1>What can we do?</h1>
+  <p class="wcwd-hero-sub">
+    A working inventory of <strong>twelve specific measures</strong> Marblehead could pursue in the next 24 to 36 months, alongside or instead of an override. Each one answers two questions: <strong>have we tried this</strong>, and <strong>what is the potential</strong>.
+  </p>
+  <nav class="wcwd-jump" aria-label="Page sections">
+    <a href="#revenue" data-cat="rev">5 revenue ideas</a>
+    <a href="#cost" data-cat="cost">5 cost reductions</a>
+    <a href="#governance" data-cat="gov">2 governance changes</a>
+    <a href="#cautions">Cautions</a>
+    <a href="#paths">How adoption happens</a>
+  </nav>
+</section>
+
+<!-- ============================================================ -->
+<!-- TOTAL POTENTIAL -->
+<!-- ============================================================ -->
+<section class="wcwd-stop wcwd-stop--tinted">
+  <p class="wcwd-eye">Plausible scale, summed across items <span class="dot">&bull;</span> Order of magnitude</p>
+  <p class="wcwd-big">$2&ndash;5M</p>
+  <p class="wcwd-big-cap">
+    per year in new revenue plus avoided cost, if the highest-leverage items land. Not a forecast. An inventory of what is technically and procedurally available.
+  </p>
+  <p class="wcwd-big-sub">
+    Every range below is an estimate with explicit research questions attached. Where the citation is missing, the number is a starting point for research, not a finding. Send corrections to the contact at the bottom of this page.
+  </p>
+</section>
+
+<!-- ============================================================ -->
+<!-- REVENUE -->
+<!-- ============================================================ -->
+<section id="revenue" class="wcwd-stop">
+  <p class="wcwd-eye">Revenue <span class="dot">&bull;</span> 5 ideas</p>
+  <h2 class="wcwd-section-h2">Money the town could raise.</h2>
+  <p class="wcwd-section-lead">Local-option taxes, fee structures, and existing assets the town could monetize more aggressively. Several of these have already been voted on and narrowly lost.</p>
+
+  <div class="idea-grid">
+
+    <!-- Idea 1: Room/STR Excise -->
+    <div class="idea" data-cat="rev">
+      <p class="idea-num">01 &middot; Local Option Tax</p>
+      <h3 class="idea-title">Adopt the room and short-term rental occupancy excise</h3>
+      <p class="idea-amt">$200K&ndash;$500K<span class="idea-amt-unit">/yr</span></p>
+      <p class="idea-amt-cap">At the 6 percent statutory cap. Range depends on hotel and STR inventory.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="rejected">Narrowly rejected</span>Article 25, May 2023 ATM: <strong>391 Yes / 394 No</strong>. Three-vote margin. Not on a warrant since.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">Hotels plus inns plus B&amp;Bs plus STRs at 6 percent under G.L. c. 64G &sect; 3A. Stacks on top of the 5.7 percent state excise.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>4 open research questions</summary>
+        <ul>
+          <li>Active STR listing count and revenue from AirDNA or the state STR registry</li>
+          <li>Current licensed hotel and B&amp;B room inventory from the Building and Health Departments</li>
+          <li>Comparable annual room excise collections from Salem, Rockport, Manchester, Cohasset, Nahant (<abbr class="g" title="Department of Revenue">DOR</abbr> Schedule A)</li>
+          <li><abbr class="g" title="Division of Local Services">DLS</abbr> technical assistance memo, if requested by the CFO</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 2: Community Impact Fee -->
+    <div class="idea" data-cat="rev">
+      <p class="idea-num">02 &middot; Local Option Tax</p>
+      <h3 class="idea-title">Community Impact Fee on professionally managed STRs</h3>
+      <p class="idea-amt">$20K&ndash;$75K<span class="idea-amt-unit">/yr</span></p>
+      <p class="idea-amt-cap">3 percent on operators with 2+ short-term rentals. Statute requires 35%+ to affordable housing.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="not-tried">Not separately</span>Typically bundled with the room excise above; not separately presented at ATM.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">Modest. Applies only to multi-unit operators in the Commonwealth, so the base is much narrower than the room excise.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>2 open research questions</summary>
+        <ul>
+          <li>Count of professionally managed STR units in Marblehead from the state <abbr class="g" title="Department of Revenue">DOR</abbr> registry</li>
+          <li>Average rent per night for those units from AirDNA</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 3: MMLD PILOT -->
+    <div class="idea" data-cat="rev">
+      <p class="idea-num">03 &middot; Existing Asset</p>
+      <h3 class="idea-title">Increase the MMLD PILOT beyond the FY27 bump</h3>
+      <p class="idea-amt">$150K&ndash;$400K<span class="idea-amt-unit">/yr</span></p>
+      <p class="idea-amt-cap">Additional headroom above the recent $330K to $360K increase, benchmarked against peer municipal utilities.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="partial">Partial</span>PILOT from MMLD to the General Fund was raised from <strong>$330,000 to $360,000</strong> in the FY27 budget. The first increase in years.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">Depends on peer-utility PILOT-to-revenue ratios. Functionally a transfer from ratepayers to taxpayers, see cautions below.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>3 open research questions</summary>
+        <ul>
+          <li>MMLD annual operating revenue and net position from the most recent <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr></li>
+          <li>PILOT-to-revenue ratios from Wellesley, Belmont, Concord, Hingham, Mansfield, Reading</li>
+          <li>Light Commission posture on a further increase</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 4: Boat Excise -->
+    <div class="idea" data-cat="rev">
+      <p class="idea-num">04 &middot; Existing Asset</p>
+      <h3 class="idea-title">Audit and revalue the boat excise base</h3>
+      <p class="idea-amt">$25K&ndash;$75K<span class="idea-amt-unit">/yr</span></p>
+      <p class="idea-amt-cap">Assessor-administered. One-time catch-up plus modest ongoing lift.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="unknown">Unknown</span>No reference found in annual reports or budget documents.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">Marblehead has a large recreational fleet and the excise can drift from current market values.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>3 open research questions</summary>
+        <ul>
+          <li>Current boat excise commitment and collections from the Assessor</li>
+          <li>Date of the last revaluation</li>
+          <li>Sample comparison of assessed values to current market values</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 5: Mooring Waitlist -->
+    <div class="idea" data-cat="rev">
+      <p class="idea-num">05 &middot; Existing Asset</p>
+      <h3 class="idea-title">Mooring waitlist transfer fee</h3>
+      <p class="idea-amt">$25K&ndash;$100K<span class="idea-amt-unit">/yr</span></p>
+      <p class="idea-amt-cap">Politically contentious. The waitlist is decades long and is viewed as a heritage benefit.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="partial">Partial</span>Mooring fees were raised at the 2022 ATM (harbor $8 to $10/ft, other $7 to $9). The waitlist itself has not been monetized.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">Depends on waitlist turnover. Harbor pricing in general is below market for the supply constraint.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>2 open research questions</summary>
+        <ul>
+          <li>Waitlist length, average wait time, and annual turnover from the Harbormaster</li>
+          <li>Whether a transfer fee is permissible under current bylaws or requires an amendment</li>
+        </ul>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- COST REDUCTION -->
+<!-- ============================================================ -->
+<section id="cost" class="wcwd-stop wcwd-stop--tinted">
+  <p class="wcwd-eye">Cost reduction <span class="dot">&bull;</span> 5 ideas</p>
+  <h2 class="wcwd-section-h2">Money the town could stop spending.</h2>
+  <p class="wcwd-section-lead">Structural cost work and procurement moves available within existing board authority. Several of these can begin without any Town Meeting vote.</p>
+
+  <div class="idea-grid">
+
+    <!-- Idea 6: Medicare Advantage -->
+    <div class="idea" data-cat="cost">
+      <p class="idea-num">06 &middot; Retiree Benefits</p>
+      <h3 class="idea-title">Move Medicare-eligible retirees to a Group Medicare Advantage plan</h3>
+      <p class="idea-amt">$300K&ndash;$900K<span class="idea-amt-unit">/yr</span></p>
+      <p class="idea-amt-cap">Town share, after factoring premium split. Likely the single largest fast-impact lever.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="not-tried">Not tried</span>No record of a feasibility study or PEC consultation. The town's own page is explicit that no operational efficiency review of retiree benefits has been conducted.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">Leave <abbr class="g" title="Group Insurance Commission">GIC</abbr> for the Medicare-eligible cohort and procure a Group MA PPO directly. Downsides include network restrictions, prior auth, and federal CMS rate volatility; see cautions.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>5 open research questions</summary>
+        <ul>
+          <li>FY25 retiree census split by Medicare-eligible (post-65) vs. pre-65 via PRR to CFO</li>
+          <li>Current enrollment distribution by <abbr class="g" title="Group Insurance Commission">GIC</abbr> plan for post-65 retirees</li>
+          <li>Town vs. retiree premium share by hire date</li>
+          <li>RFI to 2-3 carriers (Tufts, Blue Cross MA, Aetna, Humana) for an equivalent Group MA PPO</li>
+          <li>RFI to 4-5 actuarial firms (Segal, Aon, Mercer, USI, Hilb) for a feasibility study</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 7: ESPC -->
+    <div class="idea" data-cat="cost">
+      <p class="idea-num">07 &middot; Energy</p>
+      <h3 class="idea-title">Energy Savings Performance Contract on schools and town buildings</h3>
+      <p class="idea-amt">$250K&ndash;$500K<span class="idea-amt-unit">/yr</span></p>
+      <p class="idea-amt-cap">In avoided energy cost. Plus $2-4M of deferred maintenance funded from guaranteed savings, not capital.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="not-tried">Not on buildings</span>MMLD received a $1.3M federal grid-resilience grant, but that is not a buildings-side ESPC.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">Town procures an ESCO under G.L. c. 25A &sect; 11I and the MA DOER framework. ESCO eats the difference if savings underperform. Zero upfront capex.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>4 open research questions</summary>
+        <ul>
+          <li>Five-year electric load profiles per municipal and school building from MMLD</li>
+          <li>Five-year heating fuel and oil consumption from <abbr class="g" title="Department of Public Works">DPW</abbr> and the school facilities director</li>
+          <li>DOER Green Communities preliminary energy assessment (free)</li>
+          <li>Indicative scope from 2-3 pre-qualified ESCOs (Ameresco, Honeywell, Trane, ENGIE, Schneider)</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 8: Shared back office -->
+    <div class="idea" data-cat="cost">
+      <p class="idea-num">08 &middot; Operations</p>
+      <h3 class="idea-title">Town and school shared back office</h3>
+      <p class="idea-amt">$200K&ndash;$400K<span class="idea-amt-unit">/yr</span></p>
+      <p class="idea-amt-cap">Attrition-based consolidation of finance, IT, HR, and procurement over 24-36 months.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="partial">Partial</span>2024 CliftonLarsonAllen Finance Assessment touched the town finance side: 15 of 23 recommendations completed by 2024-03-27. School side and joint structure untouched.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">Town and school sides currently run parallel back offices. Higher savings possible if a single ERP replaces parallel systems.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>4 open research questions</summary>
+        <ul>
+          <li>Headcount and salary for finance, IT, HR, procurement on each side</li>
+          <li>List of software systems run separately by each side</li>
+          <li>CliftonLarsonAllen Finance Department Assessment full report</li>
+          <li>Select Board and School Committee posture on a joint MOU</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 9: IMA -->
+    <div class="idea" data-cat="cost">
+      <p class="idea-num">09 &middot; Regional</p>
+      <h3 class="idea-title">Inter-municipal agreement with a neighbor town</h3>
+      <p class="idea-amt">$50K&ndash;$150K<span class="idea-amt-unit">/yr</span></p>
+      <p class="idea-amt-cap">Per shared role under G.L. c. 40 &sect; 4A. First candidates: assistant assessor, veterans agent, alternate building inspector.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="not-tried">Not done</span>The town's own page states no shared-service agreements exist with Swampscott or Salem for dispatch, IT, procurement, HR, finance, or inspections.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">Statutory authorization exists under G.L. c. 40 &sect; 4A. Each shared role saves a fraction of an <abbr class="g" title="Full-Time Equivalent">FTE</abbr> on each town's side.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>3 open research questions</summary>
+        <ul>
+          <li>Current cost of each candidate role on the Marblehead side</li>
+          <li>Posture from Swampscott and Salem on a 4A partnership</li>
+          <li>Existing 4A precedent on the North Shore for reference structure</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 10: Permitting -->
+    <div class="idea" data-cat="cost">
+      <p class="idea-num">10 &middot; Operations</p>
+      <h3 class="idea-title">Modernize permitting and inspections software</h3>
+      <p class="idea-amt">$50K&ndash;$100K<span class="idea-amt-unit">/yr</span></p>
+      <p class="idea-amt-cap">Through 0.5 <abbr class="g" title="Full-Time Equivalent">FTE</abbr> saved on counter staffing plus accelerated permit revenue recognition.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="partial">Partial</span>OpenGov adopted for procurement (100% of formal bids electronic as of 2025). Munis runs financials. No dedicated permitting platform.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">Likely a natural extension of the existing OpenGov footprint. Alternatives: Energov, Tyler.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>3 open research questions</summary>
+        <ul>
+          <li>Current permit volume and average cycle time</li>
+          <li>Vendor quotes for OpenGov permitting module, Energov, or Tyler</li>
+          <li>Inspectional Services staffing baseline</li>
+        </ul>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- GOVERNANCE -->
+<!-- ============================================================ -->
+<section id="governance" class="wcwd-stop">
+  <p class="wcwd-eye">Governance and process <span class="dot">&bull;</span> 2 ideas</p>
+  <h2 class="wcwd-section-h2">How decisions get made.</h2>
+  <p class="wcwd-section-lead">No direct dollar impact from these articles, but they are the institutional vehicles that protect the items above from being picked off individually.</p>
+
+  <div class="idea-grid">
+
+    <!-- Idea 11: Efficiency Commission -->
+    <div class="idea" data-cat="gov">
+      <p class="idea-num">11 &middot; Bylaw</p>
+      <h3 class="idea-title">Efficiency and Shared Services Commission with formal standing</h3>
+      <p class="idea-amt">$500K&ndash;$2M<span class="idea-amt-unit">/yr indirect</span></p>
+      <p class="idea-amt-cap">Indirect potential, based on what comparable commissions in peer MA municipalities have surfaced.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="not-tried">Not done</span>No standing efficiency commission. The CliftonLarsonAllen assessment was a one-time consulting engagement, not a recurring body.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">The article itself produces no dollars; the commission produces them. Annual reporting requirement creates a forcing function.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>3 open research questions</summary>
+        <ul>
+          <li>Sample bylaw language from peer towns that stood up similar bodies</li>
+          <li>Composition appropriate to Marblehead (size, terms, appointing authority)</li>
+          <li>Reporting cadence and forcing function tied to budget cycle</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 12: Zero-Based Budgeting -->
+    <div class="idea" data-cat="gov">
+      <p class="idea-num">12 &middot; Budget Process</p>
+      <h3 class="idea-title">Zero-based budgeting on the top three cost centers</h3>
+      <p class="idea-amt">$500K&ndash;$1.5M<span class="idea-amt-unit">/cycle</span></p>
+      <p class="idea-amt-cap">One-time per cycle. Declining as baselines reset. Most useful once every 5 years per department.</p>
+      <div class="idea-qa">
+        <div>
+          <span class="idea-q">Have we tried this?</span>
+          <p class="idea-a"><span class="idea-status" data-s="discussed">Discussed, not adopted</span>School Committee twice discussed it (2022-07-19 and 2025-10-17). 3-year forecast for FY26-28 exists, but ZBB does not.</p>
+        </div>
+        <div>
+          <span class="idea-q">What is the potential?</span>
+          <p class="idea-a">Schools, Police, Fire account for about 70% of operating. Resetting baselines once per cycle on each.</p>
+        </div>
+      </div>
+      <details class="idea-research">
+        <summary>3 open research questions</summary>
+        <ul>
+          <li>Past ZBB precedents in MA municipal practice</li>
+          <li>Departmental appetite from Schools, Police, Fire</li>
+          <li>Resource cost of running ZBB (typically 1 <abbr class="g" title="Full-Time Equivalent">FTE</abbr>-quarter per major department)</li>
+        </ul>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CAUTIONS -->
+<!-- ============================================================ -->
+<section id="cautions" class="wcwd-stop wcwd-stop--tinted">
+  <p class="wcwd-eye">Important cautions</p>
+  <h2 class="wcwd-section-h2">This is not a list of free money.</h2>
+  <p class="wcwd-section-lead">Several entries carry real downsides that deserve to sit on the page next to the upside.</p>
+
+  <div class="cautions">
+    <div class="caution">
+      <p class="caution-h">Medicare Advantage carries real member impact.</p>
+      <p class="caution-p">Network restrictions, prior authorization friction, and provider-relationship disruption for snowbird and multi-state retirees. CMS rate compression since 2024 is shrinking the savings opportunity over time. The decision is not reversible cheaply.</p>
+    </div>
+    <div class="caution">
+      <p class="caution-h">Room and STR excise affects visitor costs.</p>
+      <p class="caution-p">At the 6 percent cap, the burden is modest relative to seasonal pricing, but the political case has to be made on its own terms. Local lodging operators will be vocal.</p>
+    </div>
+    <div class="caution">
+      <p class="caution-h">Efficiency commissions are mixed.</p>
+      <p class="caution-p">Some MA towns produce material findings; others produce reports that sit on shelves. Composition, reporting cadence, and a forcing function determine the outcome.</p>
+    </div>
+    <div class="caution">
+      <p class="caution-h">MMLD PILOT is a transfer, not new money.</p>
+      <p class="caution-p">Functionally it moves dollars from ratepayers to taxpayers. Overlapping populations, but not identical, and the ratepayer side is also organized.</p>
+    </div>
+    <div class="caution">
+      <p class="caution-h">Shared services save money slowly.</p>
+      <p class="caution-p">Most savings show up through attrition over multiple years, not headcount cuts in year one. The political timeline often outruns the operational one.</p>
+    </div>
+    <div class="caution">
+      <p class="caution-h">All ranges are estimates.</p>
+      <p class="caution-p">Every dollar figure on this page is order-of-magnitude until research arrives. The bold numbers without their caveats can mislead. Every claim should be traceable to a primary source; where it is not, that is a bug.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PROCEDURAL PATHS -->
+<!-- ============================================================ -->
+<section id="paths" class="wcwd-stop">
+  <p class="wcwd-eye">How adoption happens</p>
+  <h2 class="wcwd-section-h2">Most of this needs no Town Meeting vote.</h2>
+  <p class="wcwd-section-lead">Three procedural paths. Two of these items need Town Meeting; the rest can begin at the next board meeting.</p>
+
+  <div class="paths-grid">
+
+    <div class="path" data-p="board">
+      <p class="path-eye">Path A &middot; Board can start now</p>
+      <h3 class="path-h">No Town Meeting required.</h3>
+      <ul class="path-list">
+        <li>Medicare Advantage migration (06)</li>
+        <li>ESPC on buildings (07)</li>
+        <li>Town/school shared back office (08)</li>
+        <li>IMA with neighbor town (09)</li>
+        <li>Permitting modernization (10)</li>
+        <li>Boat excise revaluation (04)</li>
+        <li>MMLD PILOT renegotiation (03)</li>
+      </ul>
+    </div>
+
+    <div class="path" data-p="atm">
+      <p class="path-eye">Path B &middot; Annual or Special TM</p>
+      <h3 class="path-h">Either ATM or STM works.</h3>
+      <ul class="path-list">
+        <li>Room and STR occupancy excise (01)</li>
+        <li>Community Impact Fee (02)</li>
+        <li>Efficiency Commission bylaw (11)</li>
+        <li>Any bylaw amendment</li>
+      </ul>
+      <p class="caution-p" style="margin-top:12px;font-size:12px;">A Special Town Meeting can be called by the Select Board or by petition of 200 voters. Once warned, 10 voters can add an article.</p>
+    </div>
+
+    <div class="path" data-p="atm-only">
+      <p class="path-eye">Path C &middot; Annual TM only</p>
+      <h3 class="path-h">Locked to the Annual.</h3>
+      <ul class="path-list">
+        <li>The FY operating budget itself</li>
+        <li>Officer elections at the annual town election</li>
+      </ul>
+      <p class="caution-p" style="margin-top:12px;font-size:12px;">Override ballot questions can go on STM warrants. Only the budget appropriation must wait for ATM.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CLOSE -->
+<!-- ============================================================ -->
+<section class="wcwd-stop wcwd-stop--tinted">
+  <p class="wcwd-eye">Companion pages and corrections</p>
+  <h2 class="wcwd-section-h2">This is a draft. Help us tighten it.</h2>
+  <p class="wcwd-section-lead">Every range above is order-of-magnitude until research arrives. If a primary source contradicts what is on this page, or if a "have we tried this" answer is incomplete, please write.</p>
+
+  <div class="wcwd-close-cards">
+    <a class="wcwd-close-card" href="what-have-we-tried.html">
+      <p class="wcwd-close-card-eye">Companion page</p>
+      <h3>What have we tried?</h3>
+      <p>A catalog of 331 prior attempts to address fiscal pressure, cited to Select Board and School Committee minutes.</p>
+    </a>
+    <a class="wcwd-close-card" href="is-the-board-trying.html">
+      <p class="wcwd-close-card-eye">Companion page</p>
+      <h3>Is the board trying?</h3>
+      <p>An honest read on the volume and substance of board-level efforts over the last seven fiscal years.</p>
+    </a>
+    <a class="wcwd-close-card" href="what-has-the-town-done.html">
+      <p class="wcwd-close-card-eye">Reference</p>
+      <h3>What has the town done?</h3>
+      <p>The town's own inventory of cost-control measures already taken, including the explicit list of what has not been studied.</p>
+    </a>
+    <a class="wcwd-close-card" href="mailto:agbaber@gmail.com?subject=what-can-we-do.html correction">
+      <p class="wcwd-close-card-eye">Send a correction</p>
+      <h3>Email the maintainer</h3>
+      <p>If a number is wrong or a primary source contradicts a claim, send the citation. Updates are logged at the bottom of this page.</p>
+    </a>
+  </div>
+
+  <p class="wcwd-big-sub" style="margin-top:32px;">
+    <strong>Updates.</strong> 2026-06-02: Initial draft from session research. All ranges are estimates; primary citations will be added as PRR, <abbr class="g" title="Division of Local Services">DLS</abbr>, AirDNA, and DOER data come in.
+  </p>
+</section>
