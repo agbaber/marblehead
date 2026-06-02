@@ -521,24 +521,58 @@ body.true-cost .read-time { display: none; }
 .tc-deduction-amount.saving::before { content: '−'; }
 .tc-deduction-amount.zero { color: var(--text-faint); font-size: 14px; }
 
+/* Use fixed navy so the panel stays dark in both light + dark mode
+   (var(--c-navy) auto-flips in dark mode and renders as light teal). */
 .tc-deduction-running {
-  display: grid; gap: 8px; padding: 18px 22px;
+  padding: 22px 26px 20px;
   margin: 18px 0 0;
-  background: var(--c-navy); color: white;
+  background: #1B3A57; color: white;
   border-radius: var(--radius-md);
 }
 .tc-deduction-running-label {
   font-size: 11px; color: rgba(255,255,255,0.7);
   text-transform: uppercase; letter-spacing: 0.6px;
-  font-weight: 600;
+  font-weight: 600; margin-bottom: 4px;
 }
 .tc-deduction-running-value {
-  font-size: 32px; font-weight: 700; line-height: 1.05;
+  font-size: 34px; font-weight: 800; line-height: 1.05;
   font-variant-numeric: tabular-nums; font-family: var(--font-heading);
+  margin-bottom: 4px;
 }
 .tc-deduction-running-meta {
-  font-size: 12px; color: rgba(255,255,255,0.75);
+  font-size: 12px; color: rgba(255,255,255,0.7);
+  margin-bottom: 14px;
 }
+.tc-deduction-running-breakdown {
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.18);
+}
+.tc-deduction-running-breakdown ul {
+  list-style: none; padding: 0; margin: 0;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+.tc-deduction-running-breakdown li {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 5px 0;
+  color: rgba(255,255,255,0.86);
+  line-height: 1.35;
+}
+.tc-deduction-running-breakdown li .amount {
+  flex-shrink: 0; font-weight: 600;
+}
+.tc-deduction-running-breakdown li.add .amount { color: rgba(255,255,255,0.92); }
+.tc-deduction-running-breakdown li.sub {
+  color: rgba(149, 200, 178, 0.95);  /* sage-tinted for credits */
+}
+.tc-deduction-running-breakdown li.sub .amount { color: #BCE4D0; }
+.tc-deduction-running-breakdown li.total {
+  border-top: 1px solid rgba(255,255,255,0.28);
+  margin-top: 8px; padding-top: 10px;
+  font-weight: 700; color: white;
+  font-size: 14px;
+}
+.tc-deduction-running-breakdown li.total .amount { color: white; }
 
 /* ── Section 5: where your money goes (donut + cards) ── */
 .tc-donut-wrap {
@@ -917,9 +951,10 @@ body.true-cost .read-time { display: none; }
   <div class="tc-deductions-wrap tc-reveal" id="s4Wrap">
     <div id="s4List"></div>
     <div class="tc-deduction-running">
-      <div class="tc-deduction-running-label">Your bill after every applicable benefit</div>
+      <div class="tc-deduction-running-label" id="s4Label">Your FY29 bill after every applicable benefit</div>
       <div class="tc-deduction-running-value" id="s4Net">$11,847</div>
-      <div class="tc-deduction-running-meta" id="s4Meta">no benefits applied at this income / age</div>
+      <div class="tc-deduction-running-meta" id="s4Meta"></div>
+      <div class="tc-deduction-running-breakdown" id="s4Breakdown"></div>
     </div>
   </div>
 </section>
@@ -1589,10 +1624,46 @@ function renderSection4(t) {
     '</div>';
   }).join('');
   document.getElementById('s4Net').textContent = money(t.netBill);
-  const appliedCount = t.benefits.filter(b => b.eligible && !b.info && b.amount > 0).length;
-  document.getElementById('s4Meta').textContent = appliedCount === 0
-    ? 'no benefits applied at this age / income / status'
-    : appliedCount + ' benefit' + (appliedCount > 1 ? 's' : '') + ' applied, total savings ' + money(t.totalBenefits);
+
+  // Year-labelled heading
+  const yearLabel = ['FY27', 'FY28', 'FY29'][state.year - 1];
+  document.getElementById('s4Label').textContent =
+    'Your ' + yearLabel + ' bill after every applicable benefit';
+
+  // Quiet meta line below the number
+  const appliedBenefits = t.benefits.filter(b => b.eligible && !b.info && b.amount > 0);
+  document.getElementById('s4Meta').textContent = appliedBenefits.length === 0
+    ? 'No benefits apply at this age / income / status.'
+    : appliedBenefits.length + ' benefit' + (appliedBenefits.length > 1 ? 's' : '') +
+      ' applied, total savings ' + money(t.totalBenefits) + '.';
+
+  // Show-your-work breakdown: today + growth + override + trash − benefits = net
+  const items = [];
+  items.push({ cls: 'base', label: "Today's bill (FY26)",   sign: '',  amount: t.currentBill });
+  const baselineGrowth = t.baseline - t.currentBill;
+  if (baselineGrowth > 0.5) {
+    items.push({ cls: 'add', label: 'Prop 2½ baseline growth (' + yearLabel + ')', sign: '+', amount: baselineGrowth });
+  }
+  if (t.overrideAmt > 0.5) {
+    items.push({ cls: 'add', label: 'Tier ' + state.tier + ' override (' + yearLabel + ')', sign: '+', amount: t.overrideAmt });
+  }
+  if (t.trashAmt > 0.5) {
+    items.push({ cls: 'add', label: 'Q4 trash levy share', sign: '+', amount: t.trashAmt });
+  }
+  if (t.bohFee > 0.5) {
+    items.push({ cls: 'add', label: 'Board of Health curbside fee', sign: '+', amount: t.bohFee });
+  }
+  appliedBenefits.forEach(b => {
+    items.push({ cls: 'sub', label: b.title, sign: '−', amount: b.amount });
+  });
+  const breakdownHTML = items.map(item =>
+    '<li class="' + item.cls + '">' +
+      '<span class="label">' + item.label + '</span>' +
+      '<span class="amount">' + (item.sign === '−' ? '−' : (item.sign === '+' ? '+' : '')) + money(item.amount) + '</span>' +
+    '</li>'
+  ).join('') +
+  '<li class="total"><span class="label">' + yearLabel + ' total</span><span class="amount">' + money(t.netBill) + '</span></li>';
+  document.getElementById('s4Breakdown').innerHTML = '<ul>' + breakdownHTML + '</ul>';
 }
 
 /* ── Section 5: donut + breakdown ── */
