@@ -19,9 +19,9 @@ body.true-cost .read-time { display: none; }
    "control card" containing both presets and inputs. */
 .tc-hero {
   text-align: center;
-  padding: 24px 0 56px;
+  padding: 24px 0 32px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .tc-hero::before {
   content: ''; position: absolute;
@@ -94,24 +94,6 @@ body.true-cost .read-time { display: none; }
 }
 @media (max-width: 420px) {
   .tc-inputs { grid-template-columns: 1fr; }
-}
-
-/* ── Scroll-cue below hero ── */
-.tc-scroll-cue {
-  display: flex; flex-direction: column; align-items: center;
-  gap: 6px; margin: 28px auto 0;
-  color: var(--text-faint); font-size: 12px;
-  text-transform: uppercase; letter-spacing: 1px;
-  font-weight: 600;
-  animation: tcScrollNudge 2.4s ease-in-out infinite;
-}
-.tc-scroll-cue svg { width: 18px; height: 18px; opacity: 0.6; }
-@keyframes tcScrollNudge {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(4px); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .tc-scroll-cue { animation: none; }
 }
 
 /* ── Preset starter chips (lives inside the control card) ── */
@@ -893,11 +875,6 @@ body.true-cost .read-time { display: none; }
     </details>
     </div><!-- /.tc-inputs -->
   </div><!-- /.tc-control-card -->
-
-  <div class="tc-scroll-cue" aria-hidden="true">
-    <span>Scroll to see your bill</span>
-    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7 L9 12 L13 7"/></svg>
-  </div>
 </div>
 
 <!-- Pinned answer card (sticky after hero scrolls past) -->
