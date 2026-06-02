@@ -989,15 +989,18 @@ const BOH_FEE = 281;
 const PROP25_GROWTH = 0.025;
 
 const TOTAL_BUDGET = 106206380;
+/* Fixed brand-derived colors for the donut so saturation reads
+   identically in light + dark mode. The site's var(--c-*) values
+   auto-flip in dark mode and desaturate the chart. */
 const SPEND_CATS = [
-  { id: 'schools',    label: 'Schools',                base: 49120287, color: 'var(--c-navy)',  icon: '🎓', desc: 'MPS operations + Essex North Shore Tech assessment' },
-  { id: 'healthcare', label: 'Healthcare & insurance', base: 16238963, color: 'var(--c-plum)',  icon: '⚕', desc: 'Employee + retiree health premiums (GIC)' },
-  { id: 'safety',     label: 'Public safety',          base: 11237760, color: 'var(--c-teal)',  icon: '◇', desc: 'Police + fire + emergency services' },
-  { id: 'debt',       label: 'Debt service',           base:  9314141, color: 'var(--c-buoy)',  icon: '$', desc: 'Bonds: schools, water/sewer, capital' },
-  { id: 'gov',        label: 'General government',     base:  6889841, color: '#7A8A98',        icon: '⚖', desc: 'Town manager, finance, IT, planning, COA' },
-  { id: 'pensions',   label: 'Pensions & OPEB',        base:  5630625, color: 'var(--c-brass)', icon: '⏳', desc: 'Retiree pensions + future health obligations' },
-  { id: 'pw',         label: 'Public works & waste',   base:  5244444, color: 'var(--c-sage)',  icon: '⚙', desc: 'DPW, streets, parks, refuse/recycling' },
-  { id: 'library',    label: 'Library & recreation',   base:  2530319, color: '#6BB8C9',        icon: '📖', desc: 'Abbot Library, rec programs' }
+  { id: 'schools',    label: 'Schools',                base: 49120287, color: '#2B4F7A', icon: '🎓', desc: 'MPS operations + Essex North Shore Tech assessment' },
+  { id: 'healthcare', label: 'Healthcare & insurance', base: 16238963, color: '#8B5A8E', icon: '⚕', desc: 'Employee + retiree health premiums (GIC)' },
+  { id: 'safety',     label: 'Public safety',          base: 11237760, color: '#2F7D8E', icon: '◇', desc: 'Police + fire + emergency services' },
+  { id: 'debt',       label: 'Debt service',           base:  9314141, color: '#C8553D', icon: '$', desc: 'Bonds: schools, water/sewer, capital' },
+  { id: 'gov',        label: 'General government',     base:  6889841, color: '#7A8A98', icon: '⚖', desc: 'Town manager, finance, IT, planning, COA' },
+  { id: 'pensions',   label: 'Pensions & OPEB',        base:  5630625, color: '#C09A1F', icon: '⏳', desc: 'Retiree pensions + future health obligations' },
+  { id: 'pw',         label: 'Public works & waste',   base:  5244444, color: '#6B8260', icon: '⚙', desc: 'DPW, streets, parks, refuse/recycling' },
+  { id: 'library',    label: 'Library & recreation',   base:  2530319, color: '#6BB8C9', icon: '📖', desc: 'Abbot Library, rec programs' }
 ];
 
 /* Circuit Breaker thresholds (MA DOR Schedule CB, TY2024 — most recent
@@ -1604,11 +1607,12 @@ function renderSection5(t) {
     const share = c.base / total;
     const angle = share * Math.PI * 2;
     const endAngle = startAngle + angle;
-    const gap = 0.012;
+    const gap = 0.014;
     const a1 = startAngle + gap;
     const a2 = endAngle - gap;
     if (a2 > a1) {
-      paths += '<path d="' + arcPath(cx, cy, R, r, a1, a2) + '" fill="' + c.color + '" />';
+      paths += '<path d="' + arcPath(cx, cy, R, r, a1, a2) +
+        '" fill="' + c.color + '" stroke="var(--surface)" stroke-width="1.5" stroke-linejoin="round" />';
     }
     startAngle = endAngle;
   });
