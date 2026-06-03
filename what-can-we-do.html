@@ -245,13 +245,18 @@ community_pulse: off-sections
   }
 
   /* Idea grid: 1-column at all widths so each card gets full reading width
-     and side panels (Rough Guess / Difficulty / Who Pays) sit cleanly */
+     and side panels (Rough Guess / Difficulty / Who Pays) sit cleanly.
+     Larger gap restores card-as-unit rhythm at desktop widths where
+     internal box spacing would otherwise read as similar to inter-card gap. */
   .idea-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 48px;
     margin: 0 0 8px;
     max-width: 880px;
+  }
+  @media (max-width: 600px) {
+    .idea-grid { gap: 32px; }
   }
   /* Allow rough-guess / difficulty / who-pays panels to flow side-by-side
      on desktop while staying stacked on mobile */
@@ -271,33 +276,37 @@ community_pulse: off-sections
     flex-direction: column;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 24px 24px 20px;
-    box-shadow: var(--shadow-sm);
-    border-top: 4px solid var(--c-teal);
+    border-radius: 16px;
+    padding: 32px 32px 28px;
+    box-shadow: 0 1px 2px rgba(15, 42, 61, 0.04), 0 4px 12px rgba(15, 42, 61, 0.05);
+    border-top: 6px solid var(--c-teal);
+  }
+  @media (max-width: 600px) {
+    .idea { padding: 24px 22px 22px; }
   }
   .idea[data-cat="rev"] { border-top-color: var(--c-teal); }
   .idea[data-cat="cost"] { border-top-color: var(--c-navy); }
   .idea[data-cat="gov"] { border-top-color: var(--c-brass); }
 
   .idea-num {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 1.4px;
     text-transform: uppercase;
     color: var(--text-subtle);
-    margin: 0 0 6px;
+    margin: 0 0 10px;
   }
   .idea[data-cat="rev"] .idea-num { color: var(--c-teal); }
   .idea[data-cat="cost"] .idea-num { color: var(--c-navy); }
   .idea[data-cat="gov"] .idea-num { color: var(--c-brass); }
 
   .idea-title {
-    font-size: 20px;
-    line-height: 1.25;
+    font-size: clamp(22px, 2.6vw, 30px);
+    line-height: 1.18;
     font-weight: 700;
     color: var(--text);
-    margin: 0 0 12px;
+    margin: 0 0 18px;
+    letter-spacing: -0.012em;
   }
 
   /* Status pill row sits right under title */
@@ -352,14 +361,15 @@ community_pulse: off-sections
     margin: 6px 0 0;
   }
 
-  /* Difficulty + timeline: how hard, how long */
+  /* Difficulty + timeline: how hard, how long.
+     Lighter treatment than .idea-guess — supporting info, not the headline. */
   .idea-odds {
-    background: color-mix(in srgb, var(--c-brass) 8%, transparent);
-    border: 1px solid color-mix(in srgb, var(--c-brass) 22%, transparent);
+    background: transparent;
+    border: none;
     border-left: 3px solid var(--c-brass);
-    padding: 12px 14px 13px;
+    padding: 4px 0 4px 16px;
     margin: 0 0 18px;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0;
   }
   .idea-odds-label {
     display: block;
@@ -379,14 +389,15 @@ community_pulse: off-sections
   .idea-odds p:last-child { margin-bottom: 0; }
   .idea-odds p strong { font-weight: 700; }
 
-  /* "Who pays?" block: explicit distributional fact, same weight as the guess */
+  /* "Who pays?" block: explicit distributional fact.
+     Lighter treatment than .idea-guess — supporting info, not the headline. */
   .idea-catch {
-    background: color-mix(in srgb, var(--c-buoy) 5%, transparent);
-    border: 1px solid color-mix(in srgb, var(--c-buoy) 18%, transparent);
+    background: transparent;
+    border: none;
     border-left: 3px solid var(--c-buoy);
-    padding: 12px 14px 13px;
+    padding: 4px 0 4px 16px;
     margin: 0 0 18px;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0;
   }
   .idea-catch-label {
     display: block;
