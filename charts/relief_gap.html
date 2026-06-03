@@ -61,17 +61,66 @@ og_url: https://marbleheaddata.org/charts/relief_gap.html
     .relief-data-table th, .relief-data-table td { padding: 0.4rem 0.4rem; font-size: 0.875rem; }
     .relief-data-table .is-indent .group-cell { padding-left: 1rem; }
   }
+
+  /* Relief programs table: structured, scannable, fixed column widths */
+  .programs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    table-layout: fixed;
+    line-height: 1.45;
+  }
+  .programs-table th,
+  .programs-table td {
+    padding: 0.85rem 1rem;
+    vertical-align: top;
+    border-bottom: 1px solid var(--c-divider, rgba(0,0,0,0.08));
+    text-align: left;
+  }
+  .programs-table thead th {
+    font-weight: 600;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 2px solid var(--c-divider, rgba(0,0,0,0.18));
+  }
+  .programs-table .col-program { width: 24%; }
+  .programs-table .col-elig    { width: 30%; }
+  .programs-table .col-effect  { width: 46%; }
+  .programs-table .clause-name {
+    display: block;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .programs-table .clause-desc {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-top: 0.15rem;
+  }
+  .programs-table .is-pending td { color: var(--text-muted); }
+  .programs-table .is-pending .clause-name { color: var(--text); }
+  @media (max-width: 600px) {
+    .programs-table { table-layout: auto; }
+    .programs-table th, .programs-table td { padding: 0.55rem 0.4rem; font-size: 0.875rem; }
+    .programs-table .col-program,
+    .programs-table .col-elig,
+    .programs-table .col-effect { width: auto; }
+  }
 </style>
 
 <h1 class="h-center">Cost Burden and Tax Relief in Marblehead</h1>
-<p class="subtitle h-center">Before any override is voted on, 1,672 of 6,776 owner-occupied households already pay more than 30% of income on housing. Marblehead grants about 144 statutory tax exemptions in a typical year.</p>
+<p class="subtitle h-center">Before any override, 1,756 of Marblehead's 7,061 owner-occupied households already pay more than 30% of household income on housing. The town grants about 144 tax exemptions a year.</p>
 
-<p>The US Department of Housing and Urban Development calls a household "cost-burdened" when housing costs (mortgage, property tax, insurance, utilities) exceed 30% of household income. American Community Survey table B25106 measures this directly for every Massachusetts community. In Marblehead, the count today, before any override, is 1,672. Another 1,357 sit in the 20-29% band: a modest tax bump from the line.</p>
+<p>A household is "cost-burdened" when housing costs (mortgage, property tax, insurance, utilities) exceed 30% of household income. The federal government uses that threshold to decide who qualifies for affordable-housing programs, and it is the standard cutoff in housing-policy research.</p>
+
+<p>The Census Bureau measures it through its annual survey of about 3.5 million American households. Surveyors ask each household what it earns and what it pays for housing; the ratio is computed per household and totaled across the community. In Marblehead the survey covers 7,061 owner households and 1,228 renter households. Of the owners, 1,756 are over the 30% line, and another 1,439 sit between 20% and 30%, close enough that a modest tax bump would push them over.</p>
 
 <h2 class="h-center">Marblehead's owner-occupied households, by housing cost burden</h2>
 
 <div class="chart-wrapper">
-<svg class="chart" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vertical bar chart of Marblehead owner-occupied households grouped by share of income paid on housing. Bar heights are counts: 3,747 households spend less than 20% of income on housing, 1,357 spend 20-29%, and 1,672 spend 30% or more. A vertical dashed line between the second and third bars marks the HUD cost-burden threshold; everything to the right of the line is cost-burdened.">
+<svg class="chart" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vertical bar chart of Marblehead owner-occupied households grouped by share of income paid on housing. Bar heights are counts: 3,866 households spend less than 20% of income on housing, 1,439 spend 20-29%, and 1,756 spend 30% or more. A vertical dashed line between the second and third bars marks the HUD cost-burden threshold; everything to the right of the line is cost-burdened.">
   <line class="grid-minor" x1="70" y1="260.0" x2="690" y2="260.0"/>
   <text class="tick-label" x="62" y="263.0" text-anchor="end">0</text>
   <line class="grid-minor" x1="70" y1="207.5" x2="690" y2="207.5"/>
@@ -85,12 +134,12 @@ og_url: https://marbleheaddata.org/charts/relief_gap.html
   <line class="axis-base" x1="70" y1="260" x2="690" y2="260"/>
   <line class="annotation-line" x1="483.3" y1="40" x2="483.3" y2="268.0"/>
   <text class="annotation" x="483.3" y="34" text-anchor="middle">HUD cost-burden threshold (30%)</text>
-  <rect class="data-bar s-tier-1" x="125.8" y="63.3" width="95" height="196.7"/>
-  <text class="value-label" x="173.3" y="57.3" text-anchor="middle">3,747</text>
-  <rect class="data-bar s-tier-1" x="332.5" y="188.8" width="95" height="71.2"/>
-  <text class="value-label" x="380.0" y="182.8" text-anchor="middle">1,357</text>
-  <rect class="data-bar s-tier-3" x="539.2" y="172.2" width="95" height="87.8"/>
-  <text class="value-label" x="586.7" y="166.2" text-anchor="middle">1,672</text>
+  <rect class="data-bar s-tier-1" x="125.8" y="57.0" width="95" height="203.0"/>
+  <text class="value-label" x="173.3" y="51.0" text-anchor="middle">3,866</text>
+  <rect class="data-bar s-tier-1" x="332.5" y="184.5" width="95" height="75.5"/>
+  <text class="value-label" x="380.0" y="178.5" text-anchor="middle">1,439</text>
+  <rect class="data-bar s-tier-3" x="539.2" y="167.8" width="95" height="92.2"/>
+  <text class="value-label" x="586.7" y="161.8" text-anchor="middle">1,756</text>
   <text class="tick-label" x="173.3" y="282" text-anchor="middle">Under 20%</text>
   <text class="tick-label tick-label--minor" x="173.3" y="298" text-anchor="middle">of income on housing</text>
   <text class="tick-label" x="380.0" y="282" text-anchor="middle">20-29%</text>
@@ -102,63 +151,96 @@ og_url: https://marbleheaddata.org/charts/relief_gap.html
 </svg>
 </div>
 
-<p class="caption">All 6,776 owner-occupied households in Marblehead, divided into the three <abbr class="g" title="Selected Monthly Owner Costs as a Percentage of Household Income">SMOCAPI</abbr> bands used by the Census Bureau. The dark band is the HUD cost-burden threshold. Source: <abbr class="g" title="American Community Survey">ACS</abbr> table B25106, 2023 5-year vintage, Marblehead town.<sup class="cite" data-href="https://api.census.gov/data/2023/acs/acs5?get=NAME,group(B25106)&amp;for=county%20subdivision:38400&amp;in=state:25%20county:009" data-source="American Community Survey, table B25106, 2023 5-year estimates, Marblehead town, Census Bureau API"></sup></p>
+<p class="caption">All 7,061 owner-occupied households in Marblehead, grouped by what share of household income goes to total housing costs. The dashed line marks the federal 30% cost-burden threshold. The bar to its right (1,756 households) is the cost-burdened group.<sup class="cite" data-href="https://api.census.gov/data/2023/acs/acs5?get=NAME,group(B25106)&amp;for=county%20subdivision:38400&amp;in=state:25%20county:009" data-source="American Community Survey 5-year estimates 2019-2023, table B25106, Marblehead town"></sup></p>
 
 <h2 class="h-center">Who the cost-burdened are</h2>
 
-<p>The 1,672 cost-burdened owner households break down sharply along two cuts. By income, nearly every Marblehead owner earning under $35,000 is cost-burdened, and most up to $50,000. By age, the 65-and-older share is much higher than for the under-65 population.</p>
+<p>By income, nearly every owner earning under $35,000 is cost-burdened, and most under $50,000. By age, the 65-and-older share (34%) is roughly double the under-65 share (20%). The age cut matters because Marblehead's tax-relief programs are almost all restricted to seniors.</p>
 
 <table class="relief-data-table">
   <thead>
     <tr><th>Group</th><th class="num-cell">Total owners</th><th class="num-cell">Cost-burdened</th><th>Burden rate</th></tr>
   </thead>
   <tbody>
-    <tr class="data-row"><td class="group-cell">All Marblehead owner households</td><td class="num-cell">6,776</td><td class="num-cell">1,672</td><td class="rate-cell"><span class="rate-num">25%</span><span class="rate-bar" style="--pct: 25%"></span></td></tr>
+    <tr class="data-row"><td class="group-cell">All Marblehead owner households</td><td class="num-cell">7,061</td><td class="num-cell">1,756</td><td class="rate-cell"><span class="rate-num">25%</span><span class="rate-bar" style="--pct: 25%"></span></td></tr>
     <tr class="section-row"><td colspan="4">By household income</td></tr>
-    <tr class="data-row is-indent"><td class="group-cell">Under $20K</td><td class="num-cell">252</td><td class="num-cell">237</td><td class="rate-cell"><span class="rate-num">94%</span><span class="rate-bar" style="--pct: 94%"></span></td></tr>
-    <tr class="data-row is-indent"><td class="group-cell">$20-35K</td><td class="num-cell">200</td><td class="num-cell">188</td><td class="rate-cell"><span class="rate-num">94%</span><span class="rate-bar" style="--pct: 94%"></span></td></tr>
-    <tr class="data-row is-indent"><td class="group-cell">$35-50K</td><td class="num-cell">237</td><td class="num-cell">201</td><td class="rate-cell"><span class="rate-num">85%</span><span class="rate-bar" style="--pct: 85%"></span></td></tr>
-    <tr class="data-row is-indent"><td class="group-cell">$50-75K</td><td class="num-cell">432</td><td class="num-cell">271</td><td class="rate-cell"><span class="rate-num">63%</span><span class="rate-bar" style="--pct: 63%"></span></td></tr>
-    <tr class="data-row is-indent"><td class="group-cell">$75K+</td><td class="num-cell">5,655</td><td class="num-cell">775</td><td class="rate-cell"><span class="rate-num">14%</span><span class="rate-bar" style="--pct: 14%"></span></td></tr>
+    <tr class="data-row is-indent"><td class="group-cell">Under $20K</td><td class="num-cell">332</td><td class="num-cell">318</td><td class="rate-cell"><span class="rate-num">96%</span><span class="rate-bar" style="--pct: 96%"></span></td></tr>
+    <tr class="data-row is-indent"><td class="group-cell">$20-35K</td><td class="num-cell">170</td><td class="num-cell">158</td><td class="rate-cell"><span class="rate-num">93%</span><span class="rate-bar" style="--pct: 93%"></span></td></tr>
+    <tr class="data-row is-indent"><td class="group-cell">$35-50K</td><td class="num-cell">304</td><td class="num-cell">262</td><td class="rate-cell"><span class="rate-num">86%</span><span class="rate-bar" style="--pct: 86%"></span></td></tr>
+    <tr class="data-row is-indent"><td class="group-cell">$50-75K</td><td class="num-cell">423</td><td class="num-cell">242</td><td class="rate-cell"><span class="rate-num">57%</span><span class="rate-bar" style="--pct: 57%"></span></td></tr>
+    <tr class="data-row is-indent"><td class="group-cell">$75K+</td><td class="num-cell">5,832</td><td class="num-cell">776</td><td class="rate-cell"><span class="rate-num">13%</span><span class="rate-bar" style="--pct: 13%"></span></td></tr>
     <tr class="section-row"><td colspan="4">By age of householder</td></tr>
-    <tr class="data-row is-indent"><td class="group-cell">Under 65</td><td class="num-cell">4,384</td><td class="num-cell">868</td><td class="rate-cell"><span class="rate-num">20%</span><span class="rate-bar" style="--pct: 20%"></span></td></tr>
-    <tr class="data-row is-indent"><td class="group-cell">65 and older</td><td class="num-cell">2,392</td><td class="num-cell">804</td><td class="rate-cell"><span class="rate-num">34%</span><span class="rate-bar" style="--pct: 34%"></span></td></tr>
+    <tr class="data-row is-indent"><td class="group-cell">Under 65</td><td class="num-cell">4,508</td><td class="num-cell">853</td><td class="rate-cell"><span class="rate-num">19%</span><span class="rate-bar" style="--pct: 19%"></span></td></tr>
+    <tr class="data-row is-indent"><td class="group-cell">65 and older</td><td class="num-cell">2,553</td><td class="num-cell">889</td><td class="rate-cell"><span class="rate-num">35%</span><span class="rate-bar" style="--pct: 35%"></span></td></tr>
   </tbody>
 </table>
 
-<p class="caption">All counts are owner-occupied households. "Cost-burdened" is the share of each group at 30%+ <abbr class="g" title="Selected Monthly Owner Costs as a Percentage of Household Income">SMOCAPI</abbr>. Income breakdown from <abbr class="g" title="American Community Survey">ACS</abbr> B25106; age breakdown from <abbr class="g" title="American Community Survey">ACS</abbr> B25093.<sup class="cite" data-href="https://api.census.gov/data/2023/acs/acs5?get=NAME,group(B25093)&amp;for=county%20subdivision:38400&amp;in=state:25%20county:009" data-source="American Community Survey, table B25093, 2023 5-year estimates, Marblehead town, Census Bureau API"></sup> The 15-24 age bracket (43 households, all cost-burdened) is folded into the Under-65 row.</p>
+<p class="caption">Counts of owner-occupied households. The burden rate is the share of each group at 30%+ of income on housing.<sup class="cite" data-href="https://api.census.gov/data/2023/acs/acs5?get=NAME,group(B25093)&amp;for=county%20subdivision:38400&amp;in=state:25%20county:009" data-source="American Community Survey 5-year estimates 2019-2023, table B25093, Marblehead town"></sup> The 15-24 age bracket (43 households, all cost-burdened) is folded into the Under-65 row.</p>
 
-<h2 class="h-center">What Marblehead's relief programs cover</h2>
+<h2 class="h-center">Marblehead's tax relief programs</h2>
 
-<p>Massachusetts authorizes municipalities to grant property tax exemptions and deferrals under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter59/Section5">G.L. c. 59, sec. 5</a>. Each "clause" is a separate program. Marblehead's assessor lists the following adopted programs:<sup class="cite" data-href="https://marbleheadma.gov/town-of-marblehead-property-tax-relief-personal-exemptions/" data-source="Marblehead Board of Assessors, &quot;Property Tax Relief / Personal Exemptions&quot; page"></sup></p>
+<p>Massachusetts gives every town a menu of property tax relief programs under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter59/Section5">state law (G.L. c. 59, sec. 5)</a>. Each program is a separate "clause." Marblehead has adopted these:<sup class="cite" data-href="https://marbleheadma.gov/town-of-marblehead-property-tax-relief-personal-exemptions/" data-source="Marblehead Board of Assessors, &quot;Property Tax Relief / Personal Exemptions&quot; page"></sup></p>
 
-<div class="table-wrap">
-<table>
-<thead><tr><th>Program</th><th>Eligibility</th><th>What it does</th></tr></thead>
+<table class="programs-table">
+<colgroup>
+<col class="col-program">
+<col class="col-elig">
+<col class="col-effect">
+</colgroup>
+<thead>
+<tr><th>Program</th><th>Who qualifies</th><th>What it does</th></tr>
+</thead>
 <tbody>
-<tr><td><strong>Clause 41C</strong> elderly low-income</td><td>Age 65+, modest income and asset limits (<abbr class="g" title="Consumer Price Index">CPI</abbr>-adjusted via Clause 41D, accepted at 2024 Town Meeting<sup class="cite" data-href="data/town_docs/annual_reports/Annual-Report-2024.txt" data-source="Marblehead FY2024 Annual Report, 2024 Town Meeting Article 22 (Clause 41D adoption, vote: Yes 741 / No 40)"></sup>)</td><td>Direct credit, typically about $500-$1,000</td></tr>
-<tr><td><strong>Clause 41A</strong> senior deferral</td><td>Age 65+, income limit set by statute or local option</td><td>Defers tax until sale or death; balance accrues interest. The town does not advertise a locally adopted lower interest rate or higher income cap, suggesting state default settings (income $20K, 8% simple interest)</td></tr>
-<tr><td><strong>Clause 17D</strong> senior</td><td>Age 70+, surviving spouses any age</td><td>About $175 credit, no income test</td></tr>
-<tr><td><strong>Clause 22 series</strong> veterans</td><td>Veteran status, disability ratings</td><td>$400-$2,000 credit by service-connection level</td></tr>
-<tr><td><strong>Clause 37A</strong> blind</td><td>Certified legally blind</td><td>$500 credit</td></tr>
-<tr><td><strong>Clause 5K</strong> senior tax work-off</td><td>Typically 60+ or 65+</td><td>Up to about $1,500 credit by volunteering for the town</td></tr>
-<tr><td><strong>Means-tested senior exemption</strong> (proposed)</td><td>Age 65+, ties to Circuit Breaker income limit (about $72K single)</td><td>Pending: home rule petition (2025 Town Meeting Article 28) awaiting state legislative approval (Massachusetts H.4225)<sup class="cite" data-href="data/town_docs/annual_reports/Annual-Report-2025.txt" data-source="Marblehead FY2025 Annual Report, 2025 Town Meeting Article 28 (home rule petition for means-tested senior exemption)"></sup></td></tr>
+<tr>
+  <td><span class="clause-name">Clause 41C</span><span class="clause-desc">Elderly low-income</span></td>
+  <td>Age 65+, modest income and asset limits. Limits are adjusted annually for inflation (Clause 41D, adopted at 2024 Town Meeting<sup class="cite" data-href="data/town_docs/annual_reports/Annual-Report-2024.txt" data-source="Marblehead FY2024 Annual Report, 2024 Town Meeting Article 22 (Clause 41D adoption, vote: Yes 741 / No 40)"></sup>).</td>
+  <td>Credit on the property tax bill, about $500 to $1,000.</td>
+</tr>
+<tr>
+  <td><span class="clause-name">Clause 41A</span><span class="clause-desc">Senior deferral</span></td>
+  <td>Age 65+. Income limit set by state default ($20,000) unless the town raises it. Marblehead does not advertise a higher local limit.</td>
+  <td>Defers the property tax bill until the home is sold or the owner dies. Balance accrues interest at the state-default 8% simple rate.</td>
+</tr>
+<tr>
+  <td><span class="clause-name">Clause 17D</span><span class="clause-desc">Senior, blind, surviving spouse</span></td>
+  <td>Age 70+, or surviving spouse of any age. No income test.</td>
+  <td>About $175 credit.</td>
+</tr>
+<tr>
+  <td><span class="clause-name">Clause 22 series</span><span class="clause-desc">Veterans</span></td>
+  <td>Veteran status with a service-connected disability rating.</td>
+  <td>$400 to $2,000 credit, by disability level.</td>
+</tr>
+<tr>
+  <td><span class="clause-name">Clause 37A</span><span class="clause-desc">Legally blind</span></td>
+  <td>Certified legally blind.</td>
+  <td>$500 credit.</td>
+</tr>
+<tr>
+  <td><span class="clause-name">Clause 5K</span><span class="clause-desc">Senior tax work-off</span></td>
+  <td>Age 60 or 65 and up, town-administered.</td>
+  <td>Up to about $1,500 credit, earned by volunteering hours for the town.</td>
+</tr>
+<tr class="is-pending">
+  <td><span class="clause-name">Means-tested senior exemption</span><span class="clause-desc">Proposed</span></td>
+  <td>Age 65+, household income up to the state Circuit Breaker limit (roughly $72,000 single).</td>
+  <td>Pending. Home rule petition adopted at 2025 Town Meeting (Article 28) awaiting state legislative approval.<sup class="cite" data-href="data/town_docs/annual_reports/Annual-Report-2025.txt" data-source="Marblehead FY2025 Annual Report, 2025 Town Meeting Article 28 (home rule petition for means-tested senior exemption)"></sup></td>
+</tr>
 </tbody>
 </table>
-</div>
 
-<p>The Marblehead FY2024 Annual Report's assessor's section states: <em>"The Board of Assessors granted 144 statutory exemptions for a total of $182,907.62 to qualified applicants and senior work-off volunteers (as of December 2024)."</em><sup class="cite" data-href="data/town_docs/annual_reports/Annual-Report-2024.txt" data-source="Marblehead FY2024 Annual Report, Board of Assessors section (granted 144 statutory exemptions totaling $182,907.62 in FY24)"></sup> That averages $1,270 per recipient. The state Cherry Sheet reports a $129,339 reimbursement to Marblehead for veterans, blind, surviving-spouse, and elderly exemptions in FY26.<sup class="cite" data-href="data/cherry_sheet_FY26.csv" data-source="MA Department of Revenue, Cherry Sheet FY2026, exempt_vbs_eld column for Marblehead"></sup></p>
+<p>The town's FY2024 Annual Report records 144 statutory exemptions granted that year, totaling $182,907 in reduced tax bills.<sup class="cite" data-href="data/town_docs/annual_reports/Annual-Report-2024.txt" data-source="Marblehead FY2024 Annual Report, Board of Assessors section (granted 144 statutory exemptions totaling $182,907.62 in FY24)"></sup> That averages about $1,270 per recipient against an average tax bill of $11,055. State reimbursement was $129,339 (FY26 Cherry Sheet).<sup class="cite" data-href="data/cherry_sheet_FY26.csv" data-source="MA Department of Revenue, Cherry Sheet FY2026, exempt_vbs_eld column for Marblehead"></sup></p>
 
 <h2 class="h-center">The relief gap</h2>
 
-<p>Set the two numbers side by side: <strong>1,672</strong> Marblehead owner households are cost-burdened today. The town's statutory exemption programs touch about <strong>144</strong> households in any given year. Even if every single one of those 144 went to a cost-burdened recipient, the reach is 8.6%.</p>
+<p>Set the two numbers side by side: <strong>1,756</strong> Marblehead owner households are cost-burdened today. The town's statutory exemption programs touch about <strong>144</strong> households in any given year. Even if every single one of those 144 went to a cost-burdened recipient, the reach is 8.6%.</p>
 
-<p>The structural reason: most of Marblehead's adopted relief programs require the householder to be 65 or older (Clauses 41C, 41A, 17D, 5K) or to qualify on a non-age basis (veteran status, legal blindness). The 65+ cost-burdened cohort has theoretical access to multiple programs. The under-65 cost-burdened cohort, <strong>868 owner households</strong>, has access only to the veteran and blind exemptions if they qualify on those grounds. There is no general-purpose Marblehead property tax program for a working-age homeowner in financial difficulty.</p>
+<p>The structural reason: most of Marblehead's adopted relief programs require the householder to be 65 or older (Clauses 41C, 41A, 17D, 5K) or to qualify on a non-age basis (veteran status, legal blindness). The 65+ cost-burdened cohort has theoretical access to multiple programs. The under-65 cost-burdened cohort, <strong>853 owner households</strong>, has access only to the veteran and blind exemptions if they qualify on those grounds. There is no general-purpose Marblehead property tax program for a working-age homeowner in financial difficulty.</p>
 
 <p>The proposed means-tested senior exemption (2025 Town Meeting Article 28) would extend reach within the 65+ group if the state legislature enacts the enabling act. It would not change the under-65 picture.</p>
 
 <div class="notes">
-<p><strong>Scope.</strong> This page measures cost burden among owner-occupied households. It does not measure renter burden. Marblehead has 1,411 renter-occupied households; renter cost burden is tabulated by <abbr class="g" title="American Community Survey">ACS</abbr> table B25074 and is not analyzed here. Override-driven property tax increases flow through to renters indirectly via rent.</p>
+<p><strong>Scope.</strong> This page measures cost burden among owner-occupied households. It does not measure renter burden. Marblehead has 1,228 renter-occupied households; renter cost burden is tabulated by <abbr class="g" title="American Community Survey">ACS</abbr> table B25074 and is not analyzed here. Override-driven property tax increases flow through to renters indirectly via rent.</p>
 
 <p><strong>What ACS measures.</strong> "Cost burden" uses the HUD threshold of 30% of household income on selected monthly owner costs (mortgage principal and interest, property taxes, hazard insurance, utilities, condo fees, mobile home costs). The override changes the property tax component only. This page does not model the override; it establishes the baseline against which any override interacts.</p>
 
