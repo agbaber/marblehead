@@ -1,8 +1,6 @@
 import { chromium } from 'playwright';
-
 const url = process.argv[2];
 const out = process.argv[3];
-
 const browser = await chromium.launch();
 const ctx = await browser.newContext({
   viewport: { width: 1440, height: 900 },
