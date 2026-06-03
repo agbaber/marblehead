@@ -130,15 +130,139 @@ community_pulse: off-sections
     max-width: 640px;
   }
 
-  /* Idea grid */
+  /* Scoreboard: all 18 items on one screen */
+  .sb {
+    max-width: 980px;
+    margin: 0 0 8px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .sb-head {
+    display: grid;
+    grid-template-columns: 36px 1fr 140px 130px 130px;
+    gap: 12px;
+    padding: 11px 16px;
+    background: color-mix(in srgb, var(--c-navy) 6%, var(--surface));
+    border-bottom: 1px solid var(--border);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+  }
+  .sb-group {
+    padding: 12px 16px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    background: color-mix(in srgb, var(--c-fog) 35%, transparent);
+    border-top: 1px solid var(--border);
+  }
+  .sb-row {
+    display: grid;
+    grid-template-columns: 36px 1fr 140px 130px 130px;
+    gap: 12px;
+    padding: 11px 16px;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text);
+    border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+    transition: background 0.12s;
+  }
+  .sb-row:first-of-type { border-top: none; }
+  .sb-row:hover {
+    background: color-mix(in srgb, var(--c-fog) 50%, transparent);
+  }
+  .sb-c-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-subtle);
+    font-variant-numeric: tabular-nums;
+  }
+  .sb-row[data-cat="rev"] .sb-c-num { color: var(--c-teal); }
+  .sb-row[data-cat="cost"] .sb-c-num { color: var(--c-navy); }
+  .sb-row[data-cat="gov"] .sb-c-num { color: var(--c-brass); }
+  .sb-c-item {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--text);
+  }
+  .sb-c-money {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .sb-c-time {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .sb-pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    line-height: 1.2;
+  }
+  .sb-pill-easy {
+    background: color-mix(in srgb, var(--c-teal) 14%, transparent);
+    color: var(--c-teal);
+  }
+  .sb-pill-med {
+    background: color-mix(in srgb, var(--c-brass) 18%, transparent);
+    color: var(--c-brass);
+  }
+  .sb-pill-hard {
+    background: color-mix(in srgb, var(--c-buoy) 14%, transparent);
+    color: var(--c-buoy);
+  }
+  @media (max-width: 720px) {
+    .sb-head { display: none; }
+    .sb-row {
+      grid-template-columns: 36px 1fr;
+      grid-template-areas:
+        "num item"
+        ".   money"
+        ".   diff"
+        ".   time";
+      row-gap: 4px;
+      padding: 14px 16px;
+    }
+    .sb-c-num { grid-area: num; }
+    .sb-c-item { grid-area: item; }
+    .sb-c-money { grid-area: money; }
+    .sb-c-diff { grid-area: diff; }
+    .sb-c-time { grid-area: time; }
+  }
+
+  /* Idea grid: 1-column at all widths so each card gets full reading width
+     and side panels (Rough Guess / Difficulty / Who Pays) sit cleanly */
   .idea-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
     margin: 0 0 8px;
+    max-width: 880px;
   }
+  /* Allow rough-guess / difficulty / who-pays panels to flow side-by-side
+     on desktop while staying stacked on mobile */
   @media (min-width: 720px) {
-    .idea-grid { grid-template-columns: 1fr 1fr; }
+    .idea-panels {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin: 0 0 14px;
+    }
+    .idea-panels > div { margin: 0 !important; }
   }
 
   /* Idea card */
@@ -501,6 +625,7 @@ community_pulse: off-sections
     <a href="#revenue" data-cat="rev">5 revenue ideas</a>
     <a href="#cost" data-cat="cost">10 cost reductions</a>
     <a href="#governance" data-cat="gov">3 governance changes</a>
+    <a href="#scoreboard">At a glance</a>
     <a href="#cautions">Cautions</a>
     <a href="#paths">How adoption happens</a>
   </nav>
@@ -524,6 +649,49 @@ community_pulse: off-sections
 </section>
 
 <!-- ============================================================ -->
+<!-- SCOREBOARD: all 18 at a glance -->
+<!-- ============================================================ -->
+<section id="scoreboard" class="wcwd-stop">
+  <p class="wcwd-eye">At a glance &middot; All 18 items</p>
+  <h2 class="wcwd-section-h2">The whole list, on one screen.</h2>
+  <p class="wcwd-section-lead">Skim the dollar range, the difficulty, and the timeline. Click any row to jump to the full card with the "Who pays?" and "In real dollars" detail.</p>
+
+  <div class="sb">
+    <div class="sb-head">
+      <span class="sb-c-num">#</span>
+      <span class="sb-c-item">Item</span>
+      <span class="sb-c-money">Rough range</span>
+      <span class="sb-c-diff">Difficulty</span>
+      <span class="sb-c-time">Timeline</span>
+    </div>
+
+    <div class="sb-group">Revenue</div>
+    <a class="sb-row" data-cat="rev" href="#idea-01"><span class="sb-c-num">01</span><span class="sb-c-item">Room and short-term rental occupancy excise</span><span class="sb-c-money">$200K&ndash;$500K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="rev" href="#idea-02"><span class="sb-c-num">02</span><span class="sb-c-item">Community Impact Fee on professionally managed STRs</span><span class="sb-c-money">$20K&ndash;$75K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy if bundled</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="rev" href="#idea-03"><span class="sb-c-num">03</span><span class="sb-c-item">Increase MMLD contribution to town budget</span><span class="sb-c-money">$150K&ndash;$400K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">~12 months</span></a>
+    <a class="sb-row" data-cat="rev" href="#idea-04"><span class="sb-c-num">04</span><span class="sb-c-item">Boat excise compliance audit</span><span class="sb-c-money">$10K&ndash;$30K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="rev" href="#idea-05"><span class="sb-c-num">05</span><span class="sb-c-item">Mooring waitlist transfer fee</span><span class="sb-c-money">$25K&ndash;$100K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">1&ndash;2 years</span></a>
+
+    <div class="sb-group">Cost reduction</div>
+    <a class="sb-row" data-cat="cost" href="#idea-06"><span class="sb-c-num">06</span><span class="sb-c-item">Medicare Advantage for Medicare-eligible retirees</span><span class="sb-c-money">$300K&ndash;$900K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">2&ndash;3 years</span></a>
+    <a class="sb-row" data-cat="cost" href="#idea-07"><span class="sb-c-num">07</span><span class="sb-c-item">Energy Savings Performance Contract on buildings</span><span class="sb-c-money">$250K&ndash;$500K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">12&ndash;24 months</span></a>
+    <a class="sb-row" data-cat="cost" href="#idea-08"><span class="sb-c-num">08</span><span class="sb-c-item">Expand shared back-office services with schools</span><span class="sb-c-money">$100K&ndash;$300K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">3&ndash;5 years</span></a>
+    <a class="sb-row" data-cat="cost" href="#idea-09"><span class="sb-c-num">09</span><span class="sb-c-item">Inter-municipal staff sharing with neighbor towns</span><span class="sb-c-money">$50K&ndash;$150K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;2 years</span></a>
+    <a class="sb-row" data-cat="cost" href="#idea-10"><span class="sb-c-num">10</span><span class="sb-c-item">Move permits and inspections online</span><span class="sb-c-money">Cost-neutral</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">12&ndash;18 months</span></a>
+    <a class="sb-row" data-cat="cost" href="#idea-11"><span class="sb-c-num">11</span><span class="sb-c-item">Renegotiate the 83% premium share for active employees</span><span class="sb-c-money">$300K&ndash;$1.5M/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">3&ndash;6 years</span></a>
+    <a class="sb-row" data-cat="cost" href="#idea-12"><span class="sb-c-num">12</span><span class="sb-c-item">Spousal surcharge or carve-out on the health plan</span><span class="sb-c-money">$100K&ndash;$400K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">2&ndash;4 years</span></a>
+    <a class="sb-row" data-cat="cost" href="#idea-13"><span class="sb-c-num">13</span><span class="sb-c-item">Audit overtime patterns in police, fire, <abbr class="g" title="Department of Public Works">DPW</abbr></span><span class="sb-c-money">$50K&ndash;$300K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="cost" href="#idea-14"><span class="sb-c-num">14</span><span class="sb-c-item">Restructure part-time positions to avoid benefits</span><span class="sb-c-money">$20K&ndash;$100K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard in practice</span></span><span class="sb-c-time">no comparable</span></a>
+    <a class="sb-row" data-cat="cost" href="#idea-15"><span class="sb-c-num">15</span><span class="sb-c-item">Health-plan opt-out buyout for waiver-eligible staff</span><span class="sb-c-money">$300K&ndash;$650K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;3 years</span></a>
+
+    <div class="sb-group">Governance and process</div>
+    <a class="sb-row" data-cat="gov" href="#idea-16"><span class="sb-c-num">16</span><span class="sb-c-item">Standing citizen Efficiency Commission (bylaw)</span><span class="sb-c-money">No direct $</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">6 mo bylaw, 1&ndash;2 yr findings</span></a>
+    <a class="sb-row" data-cat="gov" href="#idea-17"><span class="sb-c-num">17</span><span class="sb-c-item">Department-level zero-based / scoped review</span><span class="sb-c-money">$500K&ndash;$1.5M/cycle</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;2 years/cycle</span></a>
+    <a class="sb-row" data-cat="gov" href="#idea-18"><span class="sb-c-num">18</span><span class="sb-c-item">Formal performance audit of major cost centers</span><span class="sb-c-money">$30K&ndash;$400K cost</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy to commission</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+  </div>
+</section>
+
+<!-- ============================================================ -->
 <!-- REVENUE -->
 <!-- ============================================================ -->
 <section id="revenue" class="wcwd-stop">
@@ -534,7 +702,7 @@ community_pulse: off-sections
   <div class="idea-grid">
 
     <!-- Idea 1: Room/STR Excise -->
-    <div class="idea" data-cat="rev">
+    <div class="idea" data-cat="rev" id="idea-01">
       <p class="idea-num">01 &middot; Local option tax</p>
       <h3 class="idea-title">Adopt the room and short-term rental occupancy excise</h3>
       <div class="idea-body">
@@ -555,6 +723,8 @@ community_pulse: off-sections
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Visitors pay.</strong> Hotels, inns, and Airbnb hosts collect and remit. The lodging industry argues it suppresses bookings at the margin; data on this is mixed.</p>
         <p>Worth noting: visitors use the harbor, beaches, parking, and emergency services without paying property tax. One argument is that this tax makes their use of town services more equitable. Another is that it makes visiting Marblehead more expensive without obvious benefit. Reasonable people disagree.</p>
+        <p><strong>In real dollars:</strong> a $250-a-night Airbnb stay for a weekend ($500 total) would cost an extra $30 with the 6 percent excise. A 5-night hotel stay at $200 a night ($1,000 total) would cost an extra $60. The state's 5.7 percent excise already applies on top.</p>
+        <p><strong>In real dollars:</strong> a $250-a-night Airbnb stay for a weekend ($500 total) would cost an extra $30 with the 6 percent excise. A 5-night hotel stay at $200 a night ($1,000 total) would cost an extra $60. The state's 5.7 percent excise already applies on top.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -568,7 +738,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 2: Community Impact Fee -->
-    <div class="idea" data-cat="rev">
+    <div class="idea" data-cat="rev" id="idea-02">
       <p class="idea-num">02 &middot; Local option tax</p>
       <h3 class="idea-title">Community Impact Fee on professionally managed short-term rentals</h3>
       <div class="idea-body">
@@ -588,6 +758,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Commercial Airbnb operators with 2 or more properties.</strong> Homeowners renting their own place occasionally are unaffected. Small commercial operators sometimes exit at this margin; large operators absorb it. Targeted at investor-class STR operators specifically.</p>
+        <p><strong>In real dollars:</strong> on the same $500 Airbnb weekend, an additional $15 if the host runs 2 or more rentals, on top of the local room excise and state excise. A homeowner renting out their own place occasionally pays nothing extra.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -599,7 +770,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 3: MMLD PILOT -->
-    <div class="idea" data-cat="rev">
+    <div class="idea" data-cat="rev" id="idea-03">
       <p class="idea-num">03 &middot; Existing asset</p>
       <h3 class="idea-title">Have the town-owned electric company contribute more to the town budget</h3>
       <div class="idea-body">
@@ -620,6 +791,7 @@ community_pulse: off-sections
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Electric ratepayers.</strong> A bigger contribution from <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> means slightly higher electric rates to fund it. Whether that's a con depends on you.</p>
         <p>Big house with central AC, electric heat, and EV charging? Your electric bill is large; a <abbr class="g" title="Payment In Lieu Of Taxes">PILOT</abbr> increase costs you. Senior in an older smaller home with modest electric use but a high property tax bill? You'd come out ahead, because the cost is shifting from your tax bill toward heavier electric consumers. Renters who pay their own electric directly: you'd pay a bit more. Functionally this is a <strong>shift from a property-value tax base to a consumption-based one</strong>, not new money.</p>
+        <p><strong>In real dollars:</strong> a $200K increase in <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr>'s annual contribution, spread across roughly 7,000 to 8,000 ratepayers, works out to an extra $2 to $3 a month on the typical residential electric bill. A high-usage household with central air conditioning and EV charging feels it more, maybe $4 to $6 a month.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -632,7 +804,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 4: Boat Excise (rewritten honestly) -->
-    <div class="idea" data-cat="rev">
+    <div class="idea" data-cat="rev" id="idea-04">
       <p class="idea-num">04 &middot; Existing asset</p>
       <h3 class="idea-title">Audit the boat excise rolls for compliance</h3>
       <div class="idea-body">
@@ -653,6 +825,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Boat owners whose vessels are kept in Marblehead but somehow not on the rolls here.</strong> Some are non-residents; some are residents who weren't being caught. Every Massachusetts boat owner pays excise to <em>some</em> town anyway, so this isn't new tax, just correctly-allocated tax. The boat-owning community is small but vocal.</p>
+        <p><strong>In real dollars:</strong> a 25-foot powerboat assessed at $11,000 under the state schedule owes about $110 a year. A 40-foot sailboat assessed at $25,000 owes $250. Boats currently moored or stored in Marblehead but not on the town's excise rolls would start receiving bills at these rates.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -665,7 +838,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 5: Mooring Waitlist -->
-    <div class="idea" data-cat="rev">
+    <div class="idea" data-cat="rev" id="idea-05">
       <p class="idea-num">05 &middot; Existing asset</p>
       <h3 class="idea-title">Mooring waitlist transfer fee</h3>
       <div class="idea-body">
@@ -685,6 +858,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Whoever gets to the front of a decades-long waitlist.</strong> Long-time Marblehead families view waitlist position as something to pass to children. Putting a price on the handoff disrupts that social expectation. Progressive in tax incidence (it falls on people receiving a scarce asset) but contentious on cultural grounds, especially with families who've waited two or three generations.</p>
+        <p><strong>In real dollars:</strong> if the fee were set at $5,000 (a typical mid-range number among towns that have adopted similar fees), the next family on a 30-year waitlist pays $5,000 once to accept the mooring assignment, on top of the standard $10-per-foot annual fee.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -709,7 +883,7 @@ community_pulse: off-sections
   <div class="idea-grid">
 
     <!-- Idea 6: Medicare Advantage -->
-    <div class="idea" data-cat="cost">
+    <div class="idea" data-cat="cost" id="idea-06">
       <p class="idea-num">06 &middot; Retiree benefits</p>
       <h3 class="idea-title">Switch retiree health coverage from the state <abbr class="g" title="Group Insurance Commission">GIC</abbr> to a Group Medicare Advantage plan</h3>
       <div class="idea-body">
@@ -730,6 +904,8 @@ community_pulse: off-sections
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Retirees.</strong> Specifically: retirees with out-of-network specialists, retirees who travel or live part-time in other states, retirees with chronic conditions that involve prior-authorization paperwork. Some retirees may have to switch doctors.</p>
         <p>This is the item on the page where the cost falls most clearly on a defined group. The town saves real money; some retirees pay in friction, switched providers, or out-of-pocket for care that was previously covered. The decision is not easily reversible. <strong>This one deserves a full feasibility study and retiree consultation before adopting.</strong></p>
+        <p><strong>In real dollars:</strong> a retiree share of <abbr class="g" title="Group Insurance Commission">GIC</abbr> Medicare Indemnity coverage today is roughly $70 to $100 a month. Under a Group Medicare Advantage plan, that might drop to $40 to $60 a month, saving the retiree $300 to $600 a year. But a single visit to an out-of-network specialist that's currently free could cost $150 to $400 out of pocket, and prior-authorization paperwork on a planned procedure could delay it by weeks.</p>
+        <p><strong>In real dollars:</strong> a retiree share of <abbr class="g" title="Group Insurance Commission">GIC</abbr> Medicare Indemnity coverage today is roughly $70 to $100 a month. Under a Group Medicare Advantage plan, that might drop to $40 to $60 a month, saving the retiree $300 to $600 a year. But a single visit to an out-of-network specialist that's currently free could cost $150 to $400 out of pocket, and prior-authorization paperwork on a planned procedure could delay it by weeks.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -744,7 +920,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 7: ESPC -->
-    <div class="idea" data-cat="cost">
+    <div class="idea" data-cat="cost" id="idea-07">
       <p class="idea-num">07 &middot; Energy</p>
       <h3 class="idea-title">Energy Savings Performance Contract on schools and town buildings</h3>
       <div class="idea-body">
@@ -778,7 +954,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 8: Shared back office -->
-    <div class="idea" data-cat="cost">
+    <div class="idea" data-cat="cost" id="idea-08">
       <p class="idea-num">08 &middot; Operations</p>
       <h3 class="idea-title">Expand shared back-office services between town and schools</h3>
       <div class="idea-body">
@@ -814,7 +990,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 9: IMA -->
-    <div class="idea" data-cat="cost">
+    <div class="idea" data-cat="cost" id="idea-09">
       <p class="idea-num">09 &middot; Regional</p>
       <h3 class="idea-title">Expand inter-municipal sharing with neighbor towns</h3>
       <div class="idea-body">
@@ -846,7 +1022,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 10: Permitting -->
-    <div class="idea" data-cat="cost">
+    <div class="idea" data-cat="cost" id="idea-10">
       <p class="idea-num">10 &middot; Operations</p>
       <h3 class="idea-title">Move building permits and inspections fully online</h3>
       <div class="idea-body">
@@ -879,7 +1055,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 11: Premium split for active employees -->
-    <div class="idea" data-cat="cost">
+    <div class="idea" data-cat="cost" id="idea-11">
       <p class="idea-num">11 &middot; Benefits</p>
       <h3 class="idea-title">Renegotiate the 83% health-insurance premium share for active employees</h3>
       <div class="idea-body">
@@ -900,6 +1076,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Active employees, through higher premium contributions, partially offset by wage increases over time.</strong> A flat percentage-point change hits lower-paid employees harder than higher-paid ones in absolute terms, since the same percentage of a smaller premium is still a meaningful chunk of a smaller paycheck. The wage offset typically lands on base salary, which then compounds in pensions, so the long-run distributional effects favor higher-tenure employees.</p>
+        <p><strong>In real dollars:</strong> an employee with $25,000 annual total premium currently pays 17 percent, or $4,250 out of pocket. At a 78/22 split, they'd pay $5,500, about $100 a month more. Hingham offset its split move with a roughly $16,000 base-salary increase for teachers, which more than covered the higher premium contribution but didn't restore the full pre-change take-home position.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -913,7 +1090,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 12: Spousal surcharge / carve-out -->
-    <div class="idea" data-cat="cost">
+    <div class="idea" data-cat="cost" id="idea-12">
       <p class="idea-num">12 &middot; Benefits</p>
       <h3 class="idea-title">Add a spousal surcharge or carve-out on the health plan</h3>
       <div class="idea-body">
@@ -933,6 +1110,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Couples where both spouses have full-time jobs with benefits.</strong> Some of those spouses are on Marblehead's plan specifically because it's better than the alternative; for them, the surcharge or carve-out is a real loss. Couples where only one spouse works in benefited employment are unaffected. Bargained with unions; takes a contract cycle.</p>
+        <p><strong>In real dollars:</strong> a town employee whose spouse has access to coverage through their own employer pays an extra $50 to $150 a month, or $600 to $1,800 a year, to keep that spouse on Marblehead's plan instead of moving them to the spouse's plan.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -946,7 +1124,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 13: Overtime audit -->
-    <div class="idea" data-cat="cost">
+    <div class="idea" data-cat="cost" id="idea-13">
       <p class="idea-num">13 &middot; Personnel</p>
       <h3 class="idea-title">Audit overtime patterns in police, fire, and <abbr class="g" title="Department of Public Works">DPW</abbr></h3>
       <div class="idea-body">
@@ -980,7 +1158,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 14: Schedule fragmentation (caution) -->
-    <div class="idea" data-cat="cost">
+    <div class="idea" data-cat="cost" id="idea-14">
       <p class="idea-num">14 &middot; Benefits</p>
       <h3 class="idea-title">Restructure part-time positions to avoid benefit eligibility</h3>
       <div class="idea-body">
@@ -1005,7 +1183,8 @@ community_pulse: off-sections
       </div>
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
-        <p><strong>Low-wage workers in part-time roles.</strong> These are often retirees supplementing pensions, students, or second-earners in families with primary jobs elsewhere, populations who specifically rely on these jobs not to be exploitative. The job loses benefit value, the worker loses health coverage or pays more for it, and the town loses recruitment capability. The math may pencil narrowly; the human cost doesn't.</p>
+        <p><strong>Low-wage workers in part-time roles.</strong> Many of these positions are held by retirees supplementing pensions, students, or second-earners in families with primary jobs elsewhere. Losing benefit eligibility means losing health coverage or paying for it elsewhere. Turnover in affected positions tends to rise; recruiting difficulty follows.</p>
+        <p><strong>In real dollars:</strong> a school cafeteria worker scheduled at 22 hours a week today (roughly $22,000 in salary plus $22,000 in benefits) restructured to 18 hours would lose access to town health insurance. Replacement coverage on the <abbr class="g" title="Affordable Care Act">ACA</abbr> marketplace typically costs $400 to $800 a month with higher deductibles and copays.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -1018,7 +1197,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 15: Health-plan opt-out buyout -->
-    <div class="idea" data-cat="cost">
+    <div class="idea" data-cat="cost" id="idea-15">
       <p class="idea-num">15 &middot; Benefits</p>
       <h3 class="idea-title">Pay employees to waive coverage when they have access through a spouse</h3>
       <div class="idea-body">
@@ -1038,6 +1217,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Almost nobody directly &ndash; that's why it works.</strong> Employees who opt out get cash and keep coverage through their spouse. Employees who keep town coverage are unaffected. The town saves real money. The catch is administrative: the ACA's "unconditional opt-out" rules require careful structuring so the cash isn't counted against the affordability calculation, and the buyout amount has to be high enough to drive uptake but low enough to keep the net savings worth it. Bargained with unions, but typically less contentious than the spousal surcharge.</p>
+        <p><strong>In real dollars:</strong> an employee whose spouse covers them on a strong employer plan could accept an annual buyout of, say, $5,000 to waive the town's coverage entirely. The town saves roughly $20,000 (the cost of insuring them) net of the buyout. The employee gets $5,000 of cash for a benefit they were doubling up on.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -1065,7 +1245,7 @@ community_pulse: off-sections
   <div class="idea-grid">
 
     <!-- Idea 16: Efficiency Commission -->
-    <div class="idea" data-cat="gov">
+    <div class="idea" data-cat="gov" id="idea-16">
       <p class="idea-num">16 &middot; Bylaw</p>
       <h3 class="idea-title">Create a standing citizen Efficiency and Shared Services Commission</h3>
       <div class="idea-body">
@@ -1097,7 +1277,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 17: Zero-Based Budgeting -->
-    <div class="idea" data-cat="gov">
+    <div class="idea" data-cat="gov" id="idea-17">
       <p class="idea-num">17 &middot; Budget process</p>
       <h3 class="idea-title">Rebuild the top three department budgets from $0 once every few years</h3>
       <div class="idea-body">
@@ -1131,7 +1311,7 @@ community_pulse: off-sections
     </div>
 
     <!-- Idea 18: Performance audit -->
-    <div class="idea" data-cat="gov">
+    <div class="idea" data-cat="gov" id="idea-18">
       <p class="idea-num">18 &middot; Audit</p>
       <h3 class="idea-title">Commission a formal performance audit of the major cost centers</h3>
       <div class="idea-body">
