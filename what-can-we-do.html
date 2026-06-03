@@ -130,15 +130,25 @@ community_pulse: off-sections
     max-width: 640px;
   }
 
-  /* Idea grid */
+  /* Idea grid: 1-column at all widths so each card gets full reading width
+     and side panels (Rough Guess / Difficulty / Who Pays) sit cleanly */
   .idea-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
     margin: 0 0 8px;
+    max-width: 880px;
   }
+  /* Allow rough-guess / difficulty / who-pays panels to flow side-by-side
+     on desktop while staying stacked on mobile */
   @media (min-width: 720px) {
-    .idea-grid { grid-template-columns: 1fr 1fr; }
+    .idea-panels {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin: 0 0 14px;
+    }
+    .idea-panels > div { margin: 0 !important; }
   }
 
   /* Idea card */
@@ -555,6 +565,8 @@ community_pulse: off-sections
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Visitors pay.</strong> Hotels, inns, and Airbnb hosts collect and remit. The lodging industry argues it suppresses bookings at the margin; data on this is mixed.</p>
         <p>Worth noting: visitors use the harbor, beaches, parking, and emergency services without paying property tax. One argument is that this tax makes their use of town services more equitable. Another is that it makes visiting Marblehead more expensive without obvious benefit. Reasonable people disagree.</p>
+        <p><strong>In real dollars:</strong> a $250-a-night Airbnb stay for a weekend ($500 total) would cost an extra $30 with the 6 percent excise. A 5-night hotel stay at $200 a night ($1,000 total) would cost an extra $60. The state's 5.7 percent excise already applies on top.</p>
+        <p><strong>In real dollars:</strong> a $250-a-night Airbnb stay for a weekend ($500 total) would cost an extra $30 with the 6 percent excise. A 5-night hotel stay at $200 a night ($1,000 total) would cost an extra $60. The state's 5.7 percent excise already applies on top.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -588,6 +600,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Commercial Airbnb operators with 2 or more properties.</strong> Homeowners renting their own place occasionally are unaffected. Small commercial operators sometimes exit at this margin; large operators absorb it. Targeted at investor-class STR operators specifically.</p>
+        <p><strong>In real dollars:</strong> on the same $500 Airbnb weekend, an additional $15 if the host runs 2 or more rentals, on top of the local room excise and state excise. A homeowner renting out their own place occasionally pays nothing extra.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -620,6 +633,7 @@ community_pulse: off-sections
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Electric ratepayers.</strong> A bigger contribution from <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> means slightly higher electric rates to fund it. Whether that's a con depends on you.</p>
         <p>Big house with central AC, electric heat, and EV charging? Your electric bill is large; a <abbr class="g" title="Payment In Lieu Of Taxes">PILOT</abbr> increase costs you. Senior in an older smaller home with modest electric use but a high property tax bill? You'd come out ahead, because the cost is shifting from your tax bill toward heavier electric consumers. Renters who pay their own electric directly: you'd pay a bit more. Functionally this is a <strong>shift from a property-value tax base to a consumption-based one</strong>, not new money.</p>
+        <p><strong>In real dollars:</strong> a $200K increase in <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr>'s annual contribution, spread across roughly 7,000 to 8,000 ratepayers, works out to an extra $2 to $3 a month on the typical residential electric bill. A high-usage household with central air conditioning and EV charging feels it more, maybe $4 to $6 a month.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -653,6 +667,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Boat owners whose vessels are kept in Marblehead but somehow not on the rolls here.</strong> Some are non-residents; some are residents who weren't being caught. Every Massachusetts boat owner pays excise to <em>some</em> town anyway, so this isn't new tax, just correctly-allocated tax. The boat-owning community is small but vocal.</p>
+        <p><strong>In real dollars:</strong> a 25-foot powerboat assessed at $11,000 under the state schedule owes about $110 a year. A 40-foot sailboat assessed at $25,000 owes $250. Boats currently moored or stored in Marblehead but not on the town's excise rolls would start receiving bills at these rates.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -685,6 +700,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Whoever gets to the front of a decades-long waitlist.</strong> Long-time Marblehead families view waitlist position as something to pass to children. Putting a price on the handoff disrupts that social expectation. Progressive in tax incidence (it falls on people receiving a scarce asset) but contentious on cultural grounds, especially with families who've waited two or three generations.</p>
+        <p><strong>In real dollars:</strong> if the fee were set at $5,000 (a typical mid-range number among towns that have adopted similar fees), the next family on a 30-year waitlist pays $5,000 once to accept the mooring assignment, on top of the standard $10-per-foot annual fee.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -730,6 +746,8 @@ community_pulse: off-sections
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Retirees.</strong> Specifically: retirees with out-of-network specialists, retirees who travel or live part-time in other states, retirees with chronic conditions that involve prior-authorization paperwork. Some retirees may have to switch doctors.</p>
         <p>This is the item on the page where the cost falls most clearly on a defined group. The town saves real money; some retirees pay in friction, switched providers, or out-of-pocket for care that was previously covered. The decision is not easily reversible. <strong>This one deserves a full feasibility study and retiree consultation before adopting.</strong></p>
+        <p><strong>In real dollars:</strong> a retiree share of <abbr class="g" title="Group Insurance Commission">GIC</abbr> Medicare Indemnity coverage today is roughly $70 to $100 a month. Under a Group Medicare Advantage plan, that might drop to $40 to $60 a month, saving the retiree $300 to $600 a year. But a single visit to an out-of-network specialist that's currently free could cost $150 to $400 out of pocket, and prior-authorization paperwork on a planned procedure could delay it by weeks.</p>
+        <p><strong>In real dollars:</strong> a retiree share of <abbr class="g" title="Group Insurance Commission">GIC</abbr> Medicare Indemnity coverage today is roughly $70 to $100 a month. Under a Group Medicare Advantage plan, that might drop to $40 to $60 a month, saving the retiree $300 to $600 a year. But a single visit to an out-of-network specialist that's currently free could cost $150 to $400 out of pocket, and prior-authorization paperwork on a planned procedure could delay it by weeks.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -900,6 +918,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Active employees, through higher premium contributions, partially offset by wage increases over time.</strong> A flat percentage-point change hits lower-paid employees harder than higher-paid ones in absolute terms, since the same percentage of a smaller premium is still a meaningful chunk of a smaller paycheck. The wage offset typically lands on base salary, which then compounds in pensions, so the long-run distributional effects favor higher-tenure employees.</p>
+        <p><strong>In real dollars:</strong> an employee with $25,000 annual total premium currently pays 17 percent, or $4,250 out of pocket. At a 78/22 split, they'd pay $5,500, about $100 a month more. Hingham offset its split move with a roughly $16,000 base-salary increase for teachers, which more than covered the higher premium contribution but didn't restore the full pre-change take-home position.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -933,6 +952,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Couples where both spouses have full-time jobs with benefits.</strong> Some of those spouses are on Marblehead's plan specifically because it's better than the alternative; for them, the surcharge or carve-out is a real loss. Couples where only one spouse works in benefited employment are unaffected. Bargained with unions; takes a contract cycle.</p>
+        <p><strong>In real dollars:</strong> a town employee whose spouse has access to coverage through their own employer pays an extra $50 to $150 a month, or $600 to $1,800 a year, to keep that spouse on Marblehead's plan instead of moving them to the spouse's plan.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -1005,7 +1025,8 @@ community_pulse: off-sections
       </div>
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
-        <p><strong>Low-wage workers in part-time roles.</strong> These are often retirees supplementing pensions, students, or second-earners in families with primary jobs elsewhere, populations who specifically rely on these jobs not to be exploitative. The job loses benefit value, the worker loses health coverage or pays more for it, and the town loses recruitment capability. The math may pencil narrowly; the human cost doesn't.</p>
+        <p><strong>Low-wage workers in part-time roles.</strong> Many of these positions are held by retirees supplementing pensions, students, or second-earners in families with primary jobs elsewhere. Losing benefit eligibility means losing health coverage or paying for it elsewhere. Turnover in affected positions tends to rise; recruiting difficulty follows.</p>
+        <p><strong>In real dollars:</strong> a school cafeteria worker scheduled at 22 hours a week today (roughly $22,000 in salary plus $22,000 in benefits) restructured to 18 hours would lose access to town health insurance. Replacement coverage on the <abbr class="g" title="Affordable Care Act">ACA</abbr> marketplace typically costs $400 to $800 a month with higher deductibles and copays.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
@@ -1038,6 +1059,7 @@ community_pulse: off-sections
 <div class="idea-catch">
         <span class="idea-catch-label">Who pays?</span>
         <p><strong>Almost nobody directly &ndash; that's why it works.</strong> Employees who opt out get cash and keep coverage through their spouse. Employees who keep town coverage are unaffected. The town saves real money. The catch is administrative: the ACA's "unconditional opt-out" rules require careful structuring so the cash isn't counted against the affordability calculation, and the buyout amount has to be high enough to drive uptake but low enough to keep the net savings worth it. Bargained with unions, but typically less contentious than the spousal surcharge.</p>
+        <p><strong>In real dollars:</strong> an employee whose spouse covers them on a strong employer plan could accept an annual buyout of, say, $5,000 to waive the town's coverage entirely. The town saves roughly $20,000 (the cost of insuring them) net of the buyout. The employee gets $5,000 of cash for a benefit they were doubling up on.</p>
       </div>
       <details class="idea-research">
         <summary>What we'd need to firm this up</summary>
