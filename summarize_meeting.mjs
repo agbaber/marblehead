@@ -20,7 +20,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs';
 
 const MEETINGS_FILE = 'data/meetings.json';
 const MODEL         = 'claude-sonnet-4-6';
-const MAX_TOKENS    = 2048;
+const MAX_TOKENS    = 4096; // dense agendas (bonds, CBAs, multiple votes) overflow 2048 and truncate the JSON
 
 /* ── Load API key ───────────────────────────────────────────────────── */
 
