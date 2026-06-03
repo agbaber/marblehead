@@ -5,8 +5,11 @@ og_description: "Before any override is voted on, 1,672 Marblehead owner househo
 og_url: https://marbleheaddata.org/charts/relief_gap.html
 ---
 <style>
-  /* No in-bar labels in the rebuilt anchor chart; values sit above each
-     bar via the existing .value-label class. */
+  /* Peer dot plot styles */
+  svg.chart .peer-dot { fill: var(--text-muted); }
+  svg.chart .peer-ref { fill: var(--text-muted); opacity: 0.55; }
+  svg.chart .peer-label-mh { font-weight: 700; fill: var(--text); }
+  svg.chart .data-dot.s-tier-3 { fill: var(--series-tier-3); }
 
   /* Tufte data table */
   .relief-data-table {
@@ -151,7 +154,72 @@ og_url: https://marbleheaddata.org/charts/relief_gap.html
 </svg>
 </div>
 
-<p class="caption">All 7,061 owner-occupied households in Marblehead, grouped by what share of household income goes to total housing costs. The dashed line marks the federal 30% cost-burden threshold. The bar to its right (1,756 households) is the cost-burdened group.<sup class="cite" data-href="https://api.census.gov/data/2023/acs/acs5?get=NAME,group(B25106)&amp;for=county%20subdivision:38400&amp;in=state:25%20county:009" data-source="American Community Survey 5-year estimates 2019-2023, table B25106, Marblehead town"></sup></p>
+<p class="caption">All 7,061 owner-occupied households in Marblehead, grouped by what share of household income goes to total housing costs. The dashed line marks the federal 30% cost-burden threshold. The bar to its right (1,756 households) is the cost-burdened group.<sup class="cite" data-href="https://api.census.gov/data/2024/acs/acs5?get=NAME,group(B25106)&amp;for=county%20subdivision:38400&amp;in=state:25%20county:009" data-source="American Community Survey 5-year estimates 2020-2024, table B25106, Marblehead town"></sup></p>
+
+<h2 class="h-center">Is this typical?</h2>
+
+<p>1,756 cost-burdened owner households is the count. The <em>rate</em> — 24.9% of owners — is roughly typical for a wealthy Massachusetts suburb. Ten peer towns range from 20% to 32%, with Marblehead near the middle. Statewide, 27% of Massachusetts owners are cost-burdened; nationally, 23%.</p>
+
+<div class="chart-wrapper">
+<svg class="chart" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dot plot comparing owner-occupied cost-burden rates across Marblehead, peer Massachusetts towns, Massachusetts statewide, and the United States. Marblehead at 24.9 percent sits in the middle of the peer range from 20.2 percent (Winchester) to 31.9 percent (Swampscott).">
+  <line class="grid-minor" x1="130.0" y1="50.0" x2="130.0" y2="310.0"/>
+  <text class="tick-label" x="130.0" y="328.0" text-anchor="middle">18%</text>
+  <line class="grid-minor" x1="270.0" y1="50.0" x2="270.0" y2="310.0"/>
+  <text class="tick-label" x="270.0" y="328.0" text-anchor="middle">22%</text>
+  <line class="grid-minor" x1="410.0" y1="50.0" x2="410.0" y2="310.0"/>
+  <text class="tick-label" x="410.0" y="328.0" text-anchor="middle">26%</text>
+  <line class="grid-minor" x1="550.0" y1="50.0" x2="550.0" y2="310.0"/>
+  <text class="tick-label" x="550.0" y="328.0" text-anchor="middle">30%</text>
+  <line class="grid-minor" x1="690.0" y1="50.0" x2="690.0" y2="310.0"/>
+  <text class="tick-label" x="690.0" y="328.0" text-anchor="middle">34%</text>
+  <text class="tick-label" x="410.0" y="346.0" text-anchor="middle">Share of owner households at 30%+ cost burden</text>
+  <line class="annotation-line" x1="442.9" y1="44.0" x2="442.9" y2="310.0"/>
+  <line class="annotation-line" x1="319.0" y1="44.0" x2="319.0" y2="310.0"/>
+  <text class="tick-label" x="120" y="64.0" text-anchor="end">Swampscott</text>
+  <circle class="data-dot peer-dot" cx="616.2" cy="60.0" r="5"/>
+  <text class="value-label" x="627.2" y="64.0">31.9%</text>
+  <text class="tick-label" x="120" y="84.0" text-anchor="end">Massachusetts</text>
+  <circle class="data-dot peer-dot peer-ref" cx="442.9" cy="80.0" r="5"/>
+  <text class="value-label" x="453.9" y="84.0">26.9%</text>
+  <text class="tick-label" x="120" y="104.0" text-anchor="end">Beverly</text>
+  <circle class="data-dot peer-dot" cx="426.1" cy="100.0" r="5"/>
+  <text class="value-label" x="437.1" y="104.0">26.5%</text>
+  <text class="tick-label" x="120" y="124.0" text-anchor="end">Andover</text>
+  <circle class="data-dot peer-dot" cx="392.9" cy="120.0" r="5"/>
+  <text class="value-label" x="403.9" y="124.0">25.5%</text>
+  <text class="tick-label peer-label-mh" x="120" y="144.0" text-anchor="end">Marblehead</text>
+  <circle class="data-dot s-tier-3" cx="370.5" cy="140.0" r="7"/>
+  <text class="value-label peer-label-mh" x="381.5" y="144.0">24.9%</text>
+  <text class="tick-label" x="120" y="164.0" text-anchor="end">Concord</text>
+  <circle class="data-dot peer-dot" cx="370.1" cy="160.0" r="5"/>
+  <text class="value-label" x="381.1" y="164.0">24.9%</text>
+  <text class="tick-label" x="120" y="184.0" text-anchor="end">Wellesley</text>
+  <circle class="data-dot peer-dot" cx="324.6" cy="180.0" r="5"/>
+  <text class="value-label" x="335.6" y="184.0">23.6%</text>
+  <text class="tick-label" x="120" y="204.0" text-anchor="end">United States</text>
+  <circle class="data-dot peer-dot peer-ref" cx="319.0" cy="200.0" r="5"/>
+  <text class="value-label" x="330.0" y="204.0">23.4%</text>
+  <text class="tick-label" x="120" y="224.0" text-anchor="end">Cohasset</text>
+  <circle class="data-dot peer-dot" cx="286.8" cy="220.0" r="5"/>
+  <text class="value-label" x="297.8" y="224.0">22.5%</text>
+  <text class="tick-label" x="120" y="244.0" text-anchor="end">Hingham</text>
+  <circle class="data-dot peer-dot" cx="276.7" cy="240.0" r="5"/>
+  <text class="value-label" x="287.7" y="244.0">22.2%</text>
+  <text class="tick-label" x="120" y="264.0" text-anchor="end">Melrose</text>
+  <circle class="data-dot peer-dot" cx="249.4" cy="260.0" r="5"/>
+  <text class="value-label" x="260.4" y="264.0">21.4%</text>
+  <text class="tick-label" x="120" y="284.0" text-anchor="end">Lexington</text>
+  <circle class="data-dot peer-dot" cx="224.9" cy="280.0" r="5"/>
+  <text class="value-label" x="235.9" y="284.0">20.7%</text>
+  <text class="tick-label" x="120" y="304.0" text-anchor="end">Winchester</text>
+  <circle class="data-dot peer-dot" cx="206.0" cy="300.0" r="5"/>
+  <text class="value-label" x="217.0" y="304.0">20.2%</text>
+</svg>
+</div>
+
+<p class="caption">Share of owner-occupied households paying more than 30% of household income on housing, across Marblehead, ten wealthy Massachusetts peer towns, the state of Massachusetts, and the United States. Dashed vertical lines mark the state and national averages. Marblehead at 24.9% sits near the middle of the peer range.<sup class="cite" data-href="data/acs_b25106_peer_burden_2024.json" data-source="American Community Survey 5-year estimates 2020-2024, table B25106, owner-occupied cost burden by income across Marblehead, ten peer MA towns, Massachusetts, and the United States"></sup></p>
+
+<p>The takeaway is not that Marblehead is unusually burdened. It isn't. The takeaway is that 1,756 is the count, the rate matches the peer norm, and the question worth asking is whether Marblehead's relief programs reach those households at a typical rate too.</p>
 
 <h2 class="h-center">Who the cost-burdened are</h2>
 
@@ -171,7 +239,7 @@ og_url: https://marbleheaddata.org/charts/relief_gap.html
     <tr class="data-row is-indent"><td class="group-cell">$75K+</td><td class="num-cell">5,832</td><td class="num-cell">776</td><td class="rate-cell"><span class="rate-num">13%</span><span class="rate-bar" style="--pct: 13%"></span></td></tr>
     <tr class="section-row"><td colspan="4">By age of householder</td></tr>
     <tr class="data-row is-indent"><td class="group-cell">Under 65</td><td class="num-cell">4,508</td><td class="num-cell">853</td><td class="rate-cell"><span class="rate-num">19%</span><span class="rate-bar" style="--pct: 19%"></span></td></tr>
-    <tr class="data-row is-indent"><td class="group-cell">65 and older</td><td class="num-cell">2,553</td><td class="num-cell">889</td><td class="rate-cell"><span class="rate-num">35%</span><span class="rate-bar" style="--pct: 35%"></span></td></tr>
+    <tr class="data-row is-indent"><td class="group-cell">65 and older</td><td class="num-cell">2,553</td><td class="num-cell">903</td><td class="rate-cell"><span class="rate-num">35%</span><span class="rate-bar" style="--pct: 35%"></span></td></tr>
   </tbody>
 </table>
 
