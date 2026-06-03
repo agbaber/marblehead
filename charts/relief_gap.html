@@ -5,14 +5,8 @@ og_description: "Before any override is voted on, 1,672 Marblehead owner househo
 og_url: https://marbleheaddata.org/charts/relief_gap.html
 ---
 <style>
-  /* Anchor chart labels: fixed contrast colors because the bar colors are
-     theme-independent. Navy text on the light teal segment, white text on
-     the medium and dark teal segments. Sublabel opacity makes the rank
-     between count and share visible without losing contrast. */
-  svg.chart .anchor-label-on-light    { font-size: 1.0625rem; font-weight: 700; fill: #0B1620; }
-  svg.chart .anchor-sublabel-on-light { font-size: 0.8125rem; fill: #0B1620; opacity: 0.70; }
-  svg.chart .anchor-label-on-dark     { font-size: 1.0625rem; font-weight: 700; fill: #FFFFFF; }
-  svg.chart .anchor-sublabel-on-dark  { font-size: 0.8125rem; fill: #FFFFFF; opacity: 0.85; }
+  /* No in-bar labels in the rebuilt anchor chart; values sit above each
+     bar via the existing .value-label class. */
 
   /* Tufte data table */
   .relief-data-table {
@@ -77,20 +71,34 @@ og_url: https://marbleheaddata.org/charts/relief_gap.html
 <h2 class="h-center">Marblehead's owner-occupied households, by housing cost burden</h2>
 
 <div class="chart-wrapper">
-<svg class="chart" viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Single horizontal bar representing all 6,776 Marblehead owner-occupied households, segmented into three housing cost burden bands: 3,747 paying under 20% of income on housing, 1,357 paying 20-29%, and 1,672 paying 30% or more (cost-burdened).">
-  <text class="tick-label" x="360.0" y="22" text-anchor="middle">6,776 owner-occupied households</text>
-  <rect class="data-bar s-tier-1" x="30.0" y="70" width="365.0" height="70"/>
-  <rect class="data-bar s-tier-2" x="395.0" y="70" width="132.2" height="70"/>
-  <rect class="data-bar s-tier-3" x="527.1" y="70" width="162.9" height="70"/>
-  <text class="anchor-label-on-light" x="212.5" y="102.0" text-anchor="middle">3,747</text>
-  <text class="anchor-sublabel-on-light" x="212.5" y="117.0" text-anchor="middle">55%</text>
-  <text class="anchor-label-on-dark" x="461.1" y="102.0" text-anchor="middle">1,357</text>
-  <text class="anchor-sublabel-on-dark" x="461.1" y="117.0" text-anchor="middle">20%</text>
-  <text class="anchor-label-on-dark" x="608.6" y="102.0" text-anchor="middle">1,672</text>
-  <text class="anchor-sublabel-on-dark" x="608.6" y="117.0" text-anchor="middle">25%</text>
-  <text class="tick-label" x="212.5" y="158" text-anchor="middle">Housing cost under 20% of income</text>
-  <text class="tick-label" x="461.1" y="158" text-anchor="middle">20-29%</text>
-  <text class="tick-label" x="608.6" y="158" text-anchor="middle">30%+ cost-burdened</text>
+<svg class="chart" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vertical bar chart of Marblehead owner-occupied households grouped by share of income paid on housing. Bar heights are counts: 3,747 households spend less than 20% of income on housing, 1,357 spend 20-29%, and 1,672 spend 30% or more. A vertical dashed line between the second and third bars marks the HUD cost-burden threshold; everything to the right of the line is cost-burdened.">
+  <line class="grid-minor" x1="70" y1="260.0" x2="690" y2="260.0"/>
+  <text class="tick-label" x="62" y="263.0" text-anchor="end">0</text>
+  <line class="grid-minor" x1="70" y1="207.5" x2="690" y2="207.5"/>
+  <text class="tick-label" x="62" y="210.5" text-anchor="end">1,000</text>
+  <line class="grid-minor" x1="70" y1="155.0" x2="690" y2="155.0"/>
+  <text class="tick-label" x="62" y="158.0" text-anchor="end">2,000</text>
+  <line class="grid-minor" x1="70" y1="102.5" x2="690" y2="102.5"/>
+  <text class="tick-label" x="62" y="105.5" text-anchor="end">3,000</text>
+  <line class="grid-minor" x1="70" y1="50.0" x2="690" y2="50.0"/>
+  <text class="tick-label" x="62" y="53.0" text-anchor="end">4,000</text>
+  <line class="axis-base" x1="70" y1="260" x2="690" y2="260"/>
+  <line class="annotation-line" x1="483.3" y1="40" x2="483.3" y2="268.0"/>
+  <text class="annotation" x="483.3" y="34" text-anchor="middle">HUD cost-burden threshold (30%)</text>
+  <rect class="data-bar s-tier-1" x="125.8" y="63.3" width="95" height="196.7"/>
+  <text class="value-label" x="173.3" y="57.3" text-anchor="middle">3,747</text>
+  <rect class="data-bar s-tier-1" x="332.5" y="188.8" width="95" height="71.2"/>
+  <text class="value-label" x="380.0" y="182.8" text-anchor="middle">1,357</text>
+  <rect class="data-bar s-tier-3" x="539.2" y="172.2" width="95" height="87.8"/>
+  <text class="value-label" x="586.7" y="166.2" text-anchor="middle">1,672</text>
+  <text class="tick-label" x="173.3" y="282" text-anchor="middle">Under 20%</text>
+  <text class="tick-label tick-label--minor" x="173.3" y="298" text-anchor="middle">of income on housing</text>
+  <text class="tick-label" x="380.0" y="282" text-anchor="middle">20-29%</text>
+  <text class="tick-label tick-label--minor" x="380.0" y="298" text-anchor="middle">of income on housing</text>
+  <text class="tick-label" x="586.7" y="282" text-anchor="middle">30% or more</text>
+  <text class="tick-label tick-label--minor" x="586.7" y="298" text-anchor="middle">of income on housing</text>
+  <text class="annotation" x="586.7" y="322" text-anchor="middle">cost-burdened &rarr;</text>
+  <text class="tick-label" x="14" y="155.0" text-anchor="middle" transform="rotate(-90, 14, 155.0)">Owner-occupied households</text>
 </svg>
 </div>
 
