@@ -5,11 +5,14 @@ og_description: "Before any override is voted on, 1,672 Marblehead owner househo
 og_url: https://marbleheaddata.org/charts/relief_gap.html
 ---
 <style>
-  /* Anchor chart labels: contrast on each segment */
-  svg.chart .anchor-label-on-light { font-size: 1.0625rem; font-weight: 700; fill: var(--text); }
-  svg.chart .anchor-sublabel-on-light { font-size: 0.75rem; fill: var(--text-muted); }
-  svg.chart .anchor-label-on-dark { font-size: 1.0625rem; font-weight: 700; fill: var(--c-fog); }
-  svg.chart .anchor-sublabel-on-dark { font-size: 0.75rem; fill: var(--c-fog); }
+  /* Anchor chart labels: fixed contrast colors because the bar colors are
+     theme-independent. Navy text on the light teal segment, white text on
+     the medium and dark teal segments. Sublabel opacity makes the rank
+     between count and share visible without losing contrast. */
+  svg.chart .anchor-label-on-light    { font-size: 1.0625rem; font-weight: 700; fill: #0B1620; }
+  svg.chart .anchor-sublabel-on-light { font-size: 0.8125rem; fill: #0B1620; opacity: 0.70; }
+  svg.chart .anchor-label-on-dark     { font-size: 1.0625rem; font-weight: 700; fill: #FFFFFF; }
+  svg.chart .anchor-sublabel-on-dark  { font-size: 0.8125rem; fill: #FFFFFF; opacity: 0.85; }
 
   /* Tufte data table */
   .relief-data-table {
@@ -81,8 +84,8 @@ og_url: https://marbleheaddata.org/charts/relief_gap.html
   <rect class="data-bar s-tier-3" x="527.1" y="70" width="162.9" height="70"/>
   <text class="anchor-label-on-light" x="212.5" y="102.0" text-anchor="middle">3,747</text>
   <text class="anchor-sublabel-on-light" x="212.5" y="117.0" text-anchor="middle">55%</text>
-  <text class="anchor-label-on-light" x="461.1" y="102.0" text-anchor="middle">1,357</text>
-  <text class="anchor-sublabel-on-light" x="461.1" y="117.0" text-anchor="middle">20%</text>
+  <text class="anchor-label-on-dark" x="461.1" y="102.0" text-anchor="middle">1,357</text>
+  <text class="anchor-sublabel-on-dark" x="461.1" y="117.0" text-anchor="middle">20%</text>
   <text class="anchor-label-on-dark" x="608.6" y="102.0" text-anchor="middle">1,672</text>
   <text class="anchor-sublabel-on-dark" x="608.6" y="117.0" text-anchor="middle">25%</text>
   <text class="tick-label" x="212.5" y="158" text-anchor="middle">Housing cost under 20% of income</text>
