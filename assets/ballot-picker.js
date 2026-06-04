@@ -116,8 +116,20 @@
   function updateCounter(rd) {
     if (!rd.counter) return;
     var n = selected(rd).length;
-    rd.counter.textContent = n + ' of ' + rd.max + ' selected';
-    rd.counter.classList.toggle('is-full', n >= rd.max);
+    rd.counter.classList.remove('is-need', 'is-full');
+    if (n === 0) {
+      rd.counter.textContent = '';
+      rd.counter.style.display = 'none';
+      return;
+    }
+    rd.counter.style.display = '';
+    if (n < rd.max) {
+      rd.counter.textContent = 'Pick ' + (rd.max - n) + ' more';
+      rd.counter.classList.add('is-need');
+    } else {
+      rd.counter.textContent = rd.max + ' selected';
+      rd.counter.classList.add('is-full');
+    }
   }
 
   function racesChosen() {
@@ -193,7 +205,10 @@
       var pick = arr.length
         ? arr.map(function (n) { return '<p class="bp-row__pick">' + escapeHtml(n) + '</p>'; }).join('')
         : '<p class="bp-row__pick is-empty">No pick yet</p>';
-      row.innerHTML = '<p class="bp-row__race">' + escapeHtml(rd.name) + '</p>' + pick;
+      var hint = (arr.length && arr.length < rd.max)
+        ? '<p class="bp-row__hint">Pick ' + (rd.max - arr.length) + ' more</p>'
+        : '';
+      row.innerHTML = '<p class="bp-row__race">' + escapeHtml(rd.name) + '</p>' + pick + hint;
       rows.appendChild(row);
     });
   }

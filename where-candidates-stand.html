@@ -289,14 +289,44 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
 
   /* per-race seat counter, shown only on multi-seat races */
   .seat-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    color: var(--text-subtle);
+    font-weight: 800;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-left: 8px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    vertical-align: middle;
+    color: var(--text-subtle);
+    background: color-mix(in srgb, var(--text-subtle) 12%, var(--surface));
   }
-  .seat-count.is-full { color: var(--accent); }
+  .seat-count.is-need {
+    color: #fff;
+    background: var(--accent);
+    animation: seatNudge 0.4s ease;
+  }
+  .seat-count.is-full {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 13%, var(--surface));
+  }
+  @keyframes seatNudge {
+    0% { transform: scale(0.9); }
+    60% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+  }
+  @media (prefers-reduced-motion: reduce) { .seat-count.is-need { animation: none; } }
+
+  /* incomplete-race hint inside the summary card */
+  .bp-row__hint {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--accent);
+    margin: 4px 0 0;
+  }
 
   /* sticky progress bar */
   .bp-bar {
