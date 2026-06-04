@@ -191,7 +191,7 @@
       var row = document.createElement('div');
       row.className = 'bp-row';
       var pick = arr.length
-        ? '<p class="bp-row__pick">' + escapeHtml(arr.join(', ')) + '</p>'
+        ? arr.map(function (n) { return '<p class="bp-row__pick">' + escapeHtml(n) + '</p>'; }).join('')
         : '<p class="bp-row__pick is-empty">No pick yet</p>';
       row.innerHTML = '<p class="bp-row__race">' + escapeHtml(rd.name) + '</p>' + pick;
       rows.appendChild(row);
@@ -227,7 +227,14 @@
     var any = false;
     raceData.forEach(function (rd) {
       var arr = selected(rd);
-      if (arr.length) { lines.push(rd.name + ': ' + arr.join(', ')); any = true; }
+      if (!arr.length) return;
+      any = true;
+      if (arr.length === 1) {
+        lines.push(rd.name + ': ' + arr[0]);
+      } else {
+        lines.push(rd.name + ':');
+        arr.forEach(function (n) { lines.push('  ' + n); });
+      }
     });
     if (!any) lines.push('(no picks yet)');
     lines.push('');
@@ -332,7 +339,10 @@
       c.font = '600 40px ' + SANS;
       if (arr.length) {
         c.fillStyle = '#0F2A3D';
-        y = wrapText(c, arr.join(', '), PAD, y, W - PAD * 2, 50);
+        arr.forEach(function (n, idx) {
+          if (idx > 0) y += 50;
+          y = wrapText(c, n, PAD, y, W - PAD * 2, 50);
+        });
       } else {
         c.fillStyle = '#A6B3BE';
         c.fillText('No pick yet', PAD, y);
