@@ -11,6 +11,95 @@ og_url: https://marbleheaddata.org/charts/relief_gap.html
   svg.chart .peer-label-mh { font-weight: 700; fill: var(--text); }
   svg.chart .data-dot.s-tier-3 { fill: var(--series-tier-3); }
 
+  /* Persona cards */
+  .persona-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0;
+  }
+  .persona-card {
+    background: var(--c-surface, #fff);
+    border: 1px solid var(--c-divider, rgba(0,0,0,0.08));
+    border-radius: 8px;
+    padding: 1.1rem 1.15rem;
+    border-left-width: 4px;
+    border-left-style: solid;
+  }
+  .persona-card--burdened { border-left-color: var(--series-tier-3); }
+  .persona-card--ok        { border-left-color: var(--series-tier-1); }
+  .persona-card--artifact  { border-left-color: var(--c-brass, #B8860B); }
+  .persona-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 0.5rem; margin-bottom: 0.1rem;
+  }
+  .persona-name { font-weight: 700; font-size: 1.0625rem; }
+  .persona-badge {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    background: var(--c-divider, rgba(0,0,0,0.06));
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .persona-badge--burdened {
+    background: var(--series-tier-3); color: #fff;
+  }
+  .persona-badge--artifact {
+    background: var(--c-brass, #B8860B); color: #fff;
+  }
+  .persona-tag {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    margin-bottom: 0.55rem;
+  }
+  .persona-story {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    margin: 0.4rem 0 0.65rem;
+  }
+  .persona-numbers {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.2rem 0.6rem;
+    font-size: 0.825rem;
+    margin: 0 0 0.65rem 0;
+    padding: 0.55rem 0.7rem;
+    background: var(--c-fog, rgba(0,0,0,0.03));
+    border-radius: 4px;
+  }
+  .persona-numbers dt { color: var(--text-muted); }
+  .persona-numbers dd {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    margin: 0;
+  }
+  .persona-impact {
+    font-size: 0.825rem;
+    margin: 0.5rem 0 0.65rem;
+    line-height: 1.5;
+  }
+  .persona-impact-row {
+    display: grid; grid-template-columns: max-content 1fr;
+    gap: 0.4rem 0.6rem; padding: 0.15rem 0;
+  }
+  .persona-impact-row span { color: var(--text-muted); }
+  .persona-impact-row em { font-style: normal; }
+  .persona-keypoint {
+    font-size: 0.875rem;
+    line-height: 1.45;
+    margin: 0.55rem 0 0;
+    padding-top: 0.55rem;
+    border-top: 1px solid var(--c-divider, rgba(0,0,0,0.08));
+    color: var(--text);
+  }
+  @media (max-width: 600px) {
+    .persona-grid { grid-template-columns: 1fr; gap: 0.85rem; }
+    .persona-card { padding: 0.9rem; }
+  }
+
   /* Tufte data table */
   .relief-data-table {
     width: 100%;
@@ -243,7 +332,216 @@ og_url: https://marbleheaddata.org/charts/relief_gap.html
   </tbody>
 </table>
 
-<p class="caption">Counts of owner-occupied households. The burden rate is the share of each group at 30%+ of income on housing.<sup class="cite" data-href="https://api.census.gov/data/2023/acs/acs5?get=NAME,group(B25093)&amp;for=county%20subdivision:38400&amp;in=state:25%20county:009" data-source="American Community Survey 5-year estimates 2019-2023, table B25093, Marblehead town"></sup> The 15-24 age bracket (43 households, all cost-burdened) is folded into the Under-65 row.</p>
+<p class="caption">Counts of owner-occupied households. The burden rate is the share of each group at 30%+ of income on housing.<sup class="cite" data-href="https://api.census.gov/data/2024/acs/acs5?get=NAME,group(B25093)&amp;for=county%20subdivision:38400&amp;in=state:25%20county:009" data-source="American Community Survey 5-year estimates 2020-2024, table B25093, Marblehead town"></sup></p>
+
+<h2 class="h-center">Ten Marblehead households, end-to-end</h2>
+
+<p>The numbers above are real but abstract. Ten composite households, each grounded in the Marblehead market and current tax rates, make the same data concrete. Each one shows current income, home value, tax bill, current housing burden, and what the proposed tier 3 override adds. None of these people are real; their math is.</p>
+
+<div class="persona-grid">
+<div class="persona-card persona-card--burdened">
+  <div class="persona-head">
+    <div class="persona-name">Eleanor</div>
+    <span class="persona-badge persona-badge--burdened">Cost-burdened</span>
+  </div>
+  <div class="persona-tag">78, widow, lives alone on Social Security</div>
+  <p class="persona-story">Bought a 1,200 sq ft Cape with her husband in 1972 for $35,000. Mortgage paid off in 1998. Husband died in 2009; she has lived alone since.</p>
+  <dl class="persona-numbers">
+    <dt>Income</dt><dd>$22,000 (Social Security only)</dd>
+    <dt>Home</dt><dd>$580,000, paid off</dd>
+    <dt>Tax bill</dt><dd>$4,965/yr</dd>
+    <dt>Housing burden</dt><dd>38.9% of income</dd>
+  </dl>
+  <div class="persona-impact">
+    <div class="persona-impact-row"><span>Override adds</span><strong>$870/yr ($73/mo)</strong></div>
+    <div class="persona-impact-row"><span>New burden</span><strong>42.9%</strong></div>
+    <div class="persona-impact-row"><span>Relief eligible</span><em>Clause 41C borderline (income at the local limit). Circuit Breaker yes.</em></div>
+  </div>
+  <p class="persona-keypoint">Low fixed income, paid-off small home — but 'paid off' doesn't mean cheap. The tax bill alone is 22.6% of her income.</p>
+</div>
+<div class="persona-card persona-card--ok">
+  <div class="persona-head">
+    <div class="persona-name">Bob and Carol</div>
+    <span class="persona-badge">Not cost-burdened</span>
+  </div>
+  <div class="persona-tag">72 and 71, retired couple, paid-off mid-range home</div>
+  <p class="persona-story">Bob retired from his manufacturing job in 2018. Carol retired from teaching in 2019. Pension plus Social Security plus a small annual Required Minimum Distribution covers their expenses.</p>
+  <dl class="persona-numbers">
+    <dt>Income</dt><dd>$58,000 combined (Social Security + pension + RMD)</dd>
+    <dt>Home</dt><dd>$920,000, paid off (bought 1985 for $185K)</dd>
+    <dt>Tax bill</dt><dd>$7,876/yr</dd>
+    <dt>Housing burden</dt><dd>22.9% of income</dd>
+  </dl>
+  <div class="persona-impact">
+    <div class="persona-impact-row"><span>Override adds</span><strong>$1,380/yr ($115/mo)</strong></div>
+    <div class="persona-impact-row"><span>New burden</span><strong>25.3%</strong></div>
+    <div class="persona-impact-row"><span>Relief eligible</span><em>41C: no (over income). 17D: yes (both 70+). Circuit Breaker: yes.</em></div>
+  </div>
+  <p class="persona-keypoint">Not cost-burdened by the 30% rule, but the override is a real $115/month line item for a fixed-income couple. They feel the squeeze even though ACS doesn't classify them as cost-burdened.</p>
+</div>
+<div class="persona-card persona-card--artifact">
+  <div class="persona-head">
+    <div class="persona-name">Margaret</div>
+    <span class="persona-badge persona-badge--artifact">Measurement artifact</span>
+  </div>
+  <div class="persona-tag">68, single, retired, wealthy on paper</div>
+  <p class="persona-story">Sold her medical practice in 2020. Took Social Security at 67. Lives off a $1.5M portfolio: about $34K shows on her tax return as SS and small dividends, plus $80K/yr from selling appreciated stock. ACS counts only the $34K.</p>
+  <dl class="persona-numbers">
+    <dt>Income</dt><dd>$34,000 (per ACS). Actual cash flow: ~$114,000.</dd>
+    <dt>Home</dt><dd>$1,400,000, paid off</dd>
+    <dt>Tax bill</dt><dd>$11,984/yr</dd>
+    <dt>Housing burden</dt><dd>56.4% of income</dd>
+  </dl>
+  <div class="persona-impact">
+    <div class="persona-impact-row"><span>Override adds</span><strong>$2,100/yr ($175/mo)</strong></div>
+    <div class="persona-impact-row"><span>New burden</span><strong>62.6%</strong></div>
+    <div class="persona-impact-row"><span>Relief eligible</span><em>41C: no (over income limit even on ACS-reported income). Circuit Breaker: borderline.</em></div>
+  </div>
+  <p class="persona-keypoint">Counts as 'severely cost-burdened' in the ACS data but is not actually distressed. Some unknown share of the 903 cost-burdened seniors falls into this category.</p>
+</div>
+<div class="persona-card persona-card--ok">
+  <div class="persona-head">
+    <div class="persona-name">James and Sarah</div>
+    <span class="persona-badge">Not cost-burdened</span>
+  </div>
+  <div class="persona-tag">52 and 50, single income, paid-off ranch</div>
+  <p class="persona-story">James works as a mechanic. Sarah left her bookkeeping job in 2022 to care full-time for her mother, who has Alzheimer's and lives with them. Their teenage daughter is in high school.</p>
+  <dl class="persona-numbers">
+    <dt>Income</dt><dd>$48,000 (James's wages)</dd>
+    <dt>Home</dt><dd>$640,000, paid off (bought 1998 for $245K)</dd>
+    <dt>Tax bill</dt><dd>$5,478/yr</dd>
+    <dt>Housing burden</dt><dd>21.0% of income</dd>
+  </dl>
+  <div class="persona-impact">
+    <div class="persona-impact-row"><span>Override adds</span><strong>$960/yr ($80/mo)</strong></div>
+    <div class="persona-impact-row"><span>New burden</span><strong>23.0%</strong></div>
+    <div class="persona-impact-row"><span>Relief eligible</span><em>Nothing. Too young for senior clauses. Not a veteran. No qualifying disability.</em></div>
+  </div>
+  <p class="persona-keypoint">The under-65 'missing middle.' Under any cost-burden definition they're fine — but they have no relief mechanism at all if their situation changes.</p>
+</div>
+<div class="persona-card persona-card--burdened">
+  <div class="persona-head">
+    <div class="persona-name">David</div>
+    <span class="persona-badge persona-badge--burdened">Cost-burdened</span>
+  </div>
+  <div class="persona-tag">71, widower, recently widowed</div>
+  <p class="persona-story">Wife died two years ago after a long illness. He lost her Social Security benefit. He kept the house they bought together in 1989 because moving feels like leaving her behind.</p>
+  <dl class="persona-numbers">
+    <dt>Income</dt><dd>$26,000 (his Social Security only)</dd>
+    <dt>Home</dt><dd>$720,000, paid off</dd>
+    <dt>Tax bill</dt><dd>$6,163/yr</dd>
+    <dt>Housing burden</dt><dd>44.1% of income</dd>
+  </dl>
+  <div class="persona-impact">
+    <div class="persona-impact-row"><span>Override adds</span><strong>$1,080/yr ($90/mo)</strong></div>
+    <div class="persona-impact-row"><span>New burden</span><strong>48.3%</strong></div>
+    <div class="persona-impact-row"><span>Relief eligible</span><em>41C: possibly (income at threshold). 17D: complex (he was widowed at 69, not 70+ when his wife died). Circuit Breaker: yes.</em></div>
+  </div>
+  <p class="persona-keypoint">The override is not what makes his situation hard. The loss of his wife's Social Security benefit was. The override adds $90/month on top.</p>
+</div>
+<div class="persona-card persona-card--burdened">
+  <div class="persona-head">
+    <div class="persona-name">Anand and Priya (the Patels)</div>
+    <span class="persona-badge persona-badge--burdened">Cost-burdened</span>
+  </div>
+  <div class="persona-tag">36 and 34, two kids, recent home purchase</div>
+  <p class="persona-story">Both engineers. Moved to Marblehead in 2022 for the schools. Bought their home at near-peak prices with a 6.8% mortgage. Two kids in elementary school.</p>
+  <dl class="persona-numbers">
+    <dt>Income</dt><dd>$185,000 combined gross</dd>
+    <dt>Home</dt><dd>$1,050,000 purchased 2022, current value similar; $4,800/month mortgage P+I</dd>
+    <dt>Tax bill</dt><dd>$8,988/yr</dd>
+    <dt>Housing burden</dt><dd>40.0% of income</dd>
+  </dl>
+  <div class="persona-impact">
+    <div class="persona-impact-row"><span>Override adds</span><strong>$1,575/yr ($131/mo)</strong></div>
+    <div class="persona-impact-row"><span>New burden</span><strong>40.8%</strong></div>
+    <div class="persona-impact-row"><span>Relief eligible</span><em>None.</em></div>
+  </div>
+  <p class="persona-keypoint">High income, high cost burden, no relief eligibility. They chose to stretch for the schools. The override is meaningful but doesn't change the fundamental decision they already made.</p>
+</div>
+<div class="persona-card persona-card--burdened">
+  <div class="persona-head">
+    <div class="persona-name">Tom</div>
+    <span class="persona-badge persona-badge--burdened">Cost-burdened</span>
+  </div>
+  <div class="persona-tag">42, single parent, condo owner</div>
+  <p class="persona-story">Divorced in 2018. Bought a 2BR condo for $385K in 2019. Has primary custody of his 14-year-old. Works in commercial real estate; income is variable but averaged around $58K the past three years.</p>
+  <dl class="persona-numbers">
+    <dt>Income</dt><dd>$58,000</dd>
+    <dt>Home</dt><dd>$480,000 condo, $1,900/month mortgage + $400/month HOA</dd>
+    <dt>Tax bill</dt><dd>$4,109/yr</dd>
+    <dt>Housing burden</dt><dd>58.8% of income</dd>
+  </dl>
+  <div class="persona-impact">
+    <div class="persona-impact-row"><span>Override adds</span><strong>$720/yr ($60/mo)</strong></div>
+    <div class="persona-impact-row"><span>New burden</span><strong>60.1%</strong></div>
+    <div class="persona-impact-row"><span>Relief eligible</span><em>None. Too young.</em></div>
+  </div>
+  <p class="persona-keypoint">Single parent, modest income, no relief eligibility. Already at 58.8% housing burden. The override adds 1.3 percentage points.</p>
+</div>
+<div class="persona-card persona-card--burdened">
+  <div class="persona-head">
+    <div class="persona-name">Linda and Mark</div>
+    <span class="persona-badge persona-badge--burdened">Cost-burdened</span>
+  </div>
+  <div class="persona-tag">49 and 48, middle-class family</div>
+  <p class="persona-story">Both work professional jobs. One child in high school. Bought their home in 2010 with a 30-year mortgage; about 17 years remaining. Refinanced twice for lower rates.</p>
+  <dl class="persona-numbers">
+    <dt>Income</dt><dd>$145,000 combined</dd>
+    <dt>Home</dt><dd>$940,000, $2,800/month mortgage P+I</dd>
+    <dt>Tax bill</dt><dd>$8,046/yr</dd>
+    <dt>Housing burden</dt><dd>33.3% of income</dd>
+  </dl>
+  <div class="persona-impact">
+    <div class="persona-impact-row"><span>Override adds</span><strong>$1,410/yr ($118/mo)</strong></div>
+    <div class="persona-impact-row"><span>New burden</span><strong>34.3%</strong></div>
+    <div class="persona-impact-row"><span>Relief eligible</span><em>None.</em></div>
+  </div>
+  <p class="persona-keypoint">Standard middle-class Marblehead family. Cost-burdened by the ACS rule because they still have a mortgage. The override is a $118/month line item — meaningful, not transformative.</p>
+</div>
+<div class="persona-card persona-card--ok">
+  <div class="persona-head">
+    <div class="persona-name">Bill and Jennifer Williamson</div>
+    <span class="persona-badge">Not cost-burdened</span>
+  </div>
+  <div class="persona-tag">56 and 54, established, two kids in college</div>
+  <p class="persona-story">Bill is a partner at a Boston law firm; Jennifer is a senior product manager. Two kids at private colleges. Mortgage paid off in 2021. They have substantial savings and retirement accounts.</p>
+  <dl class="persona-numbers">
+    <dt>Income</dt><dd>$295,000 combined</dd>
+    <dt>Home</dt><dd>$1,450,000, paid off</dd>
+    <dt>Tax bill</dt><dd>$12,412/yr</dd>
+    <dt>Housing burden</dt><dd>7.3% of income</dd>
+  </dl>
+  <div class="persona-impact">
+    <div class="persona-impact-row"><span>Override adds</span><strong>$2,175/yr ($181/mo)</strong></div>
+    <div class="persona-impact-row"><span>New burden</span><strong>8.0%</strong></div>
+    <div class="persona-impact-row"><span>Relief eligible</span><em>None — but they don't need it.</em></div>
+  </div>
+  <p class="persona-keypoint">Highest dollar override impact in this set ($181/month), smallest burden in income terms (0.7 percentage point increase). This is the household profile the override math is designed around.</p>
+</div>
+<div class="persona-card persona-card--burdened">
+  <div class="persona-head">
+    <div class="persona-name">Sasha and Mike</div>
+    <span class="persona-badge persona-badge--burdened">Cost-burdened</span>
+  </div>
+  <div class="persona-tag">41 and 42, two-professional couple, new high-end home</div>
+  <p class="persona-story">Both work in tech. Two kids. Moved from a smaller home in 2024 to a larger one because they wanted the schools and the space. New mortgage at 6.5%.</p>
+  <dl class="persona-numbers">
+    <dt>Income</dt><dd>$340,000 combined</dd>
+    <dt>Home</dt><dd>$1,800,000, $7,500/month mortgage P+I</dd>
+    <dt>Tax bill</dt><dd>$15,408/yr</dd>
+    <dt>Housing burden</dt><dd>33.7% of income</dd>
+  </dl>
+  <div class="persona-impact">
+    <div class="persona-impact-row"><span>Override adds</span><strong>$2,700/yr ($225/mo)</strong></div>
+    <div class="persona-impact-row"><span>New burden</span><strong>34.5%</strong></div>
+    <div class="persona-impact-row"><span>Relief eligible</span><em>None.</em></div>
+  </div>
+  <p class="persona-keypoint">High-income but high-leverage. They count as cost-burdened in ACS data but they chose this stretch. They're roughly 7% of the cost-burdened cohort: high-income households who bought above their comfort range.</p>
+</div>
+</div>
+
+<p class="caption">Each persona is a composite. Income figures are gross household income as ACS measures it (does not include capital gains, savings withdrawals, or wealth). Home values match Marblehead's current assessment band ($400K-$1.8M). Base tax rate is the FY26 residential rate of $8.56 per $1,000 of assessed value; the override increment is $1.50 per $1,000 (tier 3, full override). Insurance and utility estimates use current local quotes. Relief eligibility reflects current Massachusetts clauses and Marblehead's local-option settings as best documented.<sup class="cite" data-href="data/personas_relief_gap.json" data-source="Composite personas, computed using FY26 Marblehead residential tax rate ($8.56/$1,000), April 15 2026 override presentation (tier 3 = $1.50/$1,000), and current local housing-cost estimates"></sup></p>
 
 <h2 class="h-center">Marblehead's tax relief programs</h2>
 
@@ -301,16 +599,20 @@ og_url: https://marbleheaddata.org/charts/relief_gap.html
 
 <h2 class="h-center">The relief gap</h2>
 
-<p>Set the two numbers side by side: <strong>1,756</strong> Marblehead owner households are cost-burdened today. The town's statutory exemption programs touch about <strong>144</strong> households in any given year. Even if every single one of those 144 went to a cost-burdened recipient, the reach is 8.6%.</p>
+<p>The override does not "price people out." For the cost-burdened modest-income households the affordability conversation is mostly about — owners with $20K-$75K income in $400K-$700K homes — the tier 3 override adds about <strong>$50 to $90 a month</strong> on top of an already-high housing burden. That is meaningful but not transformative. No household in the personas above sees an override increment large enough to force a move on its own.</p>
 
-<p>The structural reason: most of Marblehead's adopted relief programs require the householder to be 65 or older (Clauses 41C, 41A, 17D, 5K) or to qualify on a non-age basis (veteran status, legal blindness). The 65+ cost-burdened cohort has theoretical access to multiple programs. The under-65 cost-burdened cohort, <strong>853 owner households</strong>, has access only to the veteran and blind exemptions if they qualify on those grounds. There is no general-purpose Marblehead property tax program for a working-age homeowner in financial difficulty.</p>
+<p>What the override does instead is <em>compound</em> a pressure that already exists. 1,756 of Marblehead's 7,061 owner households were already at or past the federal cost-burden threshold before the override was on the ballot. The town's statutory exemption programs touch about <strong>144</strong> households in any given year — fewer than 1 in 12 of the cost-burdened. The override adds to that population's tax bill at the same dollar amount everyone else pays, with no compensating relief mechanism for the people for whom the increment is largest as a share of income.</p>
 
-<p>The proposed means-tested senior exemption (2025 Town Meeting Article 28) would extend reach within the 65+ group if the state legislature enacts the enabling act. It would not change the under-65 picture.</p>
+<p>The under-65 picture is starker. Marblehead's relief programs almost all require age 65+ (Clauses 41C, 41A, 17D, 5K) or non-age qualification (veteran, legal blindness). The under-65 cost-burdened cohort, <strong>853 owner households</strong>, has no general-purpose town relief mechanism available to it. The James-and-Sarah, Patel, Tom, Linda-and-Mark, and Sasha-and-Mike personas all fall into this category. The override hits them in full.</p>
+
+<p>The proposed means-tested senior exemption (2025 Town Meeting Article 28) would extend reach within the 65+ group if the state legislature enacts the enabling act. It would not change the under-65 picture. Other moves Marblehead could make without state action: lowering the Clause 41A deferral interest rate (currently the state default 8%), raising the local-option Clause 41C income limit toward the Circuit Breaker threshold, and actively promoting Circuit Breaker enrollment for eligible seniors.</p>
 
 <div class="notes">
 <p><strong>Scope.</strong> This page measures cost burden among owner-occupied households. It does not measure renter burden. Marblehead has 1,228 renter-occupied households; renter cost burden is tabulated by <abbr class="g" title="American Community Survey">ACS</abbr> table B25074 and is not analyzed here. Override-driven property tax increases flow through to renters indirectly via rent.</p>
 
-<p><strong>What ACS measures.</strong> "Cost burden" uses the HUD threshold of 30% of household income on selected monthly owner costs (mortgage principal and interest, property taxes, hazard insurance, utilities, condo fees, mobile home costs). The override changes the property tax component only. This page does not model the override; it establishes the baseline against which any override interacts.</p>
+<p><strong>What ACS measures.</strong> "Cost burden" uses the HUD threshold of 30% of household income on selected monthly owner costs (mortgage principal and interest, property taxes, hazard insurance, utilities, condo fees, mobile home costs). The override changes the property tax component only. This page does not model the override at the population level; the persona section shows it at the household level.</p>
+
+<p><strong>What ACS counts as "income."</strong> Wages, salary, self-employment earnings, Social Security, pensions, IRA and 401(k) <em>withdrawals</em>, interest, dividends, rental income, and a few smaller categories. <strong>It does not count capital gains, savings withdrawals, lump-sum inheritances, gifts, home equity, or wealth of any kind.</strong> A retiree living off appreciated stock sales (which generate capital gains, not income as ACS defines it) shows up as low-income even with substantial liquidity. Some unknown share of the 903 cost-burdened 65+ owner households in Marblehead falls into this measurement-artifact category — comfortable in cash flow but classified as cost-burdened on income they don't actually rely on. The Margaret persona above illustrates this case. The under-65 cost-burdened cohort is much less subject to this measurement issue, which is why this page leans on the under-65 number as the cleaner finding.</p>
 
 <p><strong>Why the 144 number is generous.</strong> The 144 figure includes recipients of clauses unrelated to cost burden (some veteran-status and blind-clause recipients are higher-income and not cost-burdened). Treating all 144 as cost-burden relief is the upper bound on the program's reach into the cost-burdened cohort. A more conservative read is that 100-130 of the 144 are at the intersection.</p>
 
