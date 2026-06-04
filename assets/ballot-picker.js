@@ -116,6 +116,7 @@
   function updateCounter(rd) {
     if (!rd.counter) return;
     var n = selected(rd).length;
+    rd.el.classList.toggle('is-incomplete', n > 0 && n < rd.max);
     rd.counter.classList.remove('is-need', 'is-full');
     if (n === 0) {
       rd.counter.textContent = '';

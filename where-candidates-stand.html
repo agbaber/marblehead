@@ -328,6 +328,15 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
     margin: 4px 0 0;
   }
 
+  /* a multi-seat race with an unfilled seat gets an accent ring */
+  .race.is-incomplete {
+    border-color: color-mix(in srgb, var(--race-accent, var(--accent)) 55%, var(--border));
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--race-accent, var(--accent)) 22%, transparent), var(--shadow-sm);
+  }
+  .race.is-incomplete:hover {
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--race-accent, var(--accent)) 30%, transparent), var(--shadow-md);
+  }
+
   /* sticky progress bar */
   .bp-bar {
     position: fixed;
