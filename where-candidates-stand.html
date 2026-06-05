@@ -1,6 +1,7 @@
 ---
 title: "Where the candidates stand"
-scripts: [citations]
+scripts: [citations, ballot-picker]
+community_pulse: "off-sections"
 og_title: "Where the candidates stand"
 og_description: "What every candidate in Marblehead's six contested June 9 races said about the override, the budget, schools and trash, drawn from their own published candidate Q&As in the Marblehead Current and the Marblehead Independent voter guide."
 og_url: https://marbleheaddata.org/where-candidates-stand.html
@@ -235,6 +236,321 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
       from { opacity: 0; transform: translateY(14px); }
       to   { opacity: 1; transform: translateY(0); }
     }
+  }
+
+  /* ============================================================
+     Sample-ballot picker (progressive enhancement; .js-picker is
+     added to <body> by ballot-picker.js once it wires up)
+     ============================================================ */
+
+  /* pick control injected into each .cand-head */
+  .pick-btn {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--accent);
+    background: var(--surface);
+    border: 1.5px solid color-mix(in srgb, var(--accent) 32%, var(--surface));
+    border-radius: 999px;
+    padding: 5px 12px 5px 9px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+  }
+  .pick-btn:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+  .pick-btn:active { transform: scale(0.96); }
+  .pick-btn .tick {
+    width: 15px; height: 15px;
+    border-radius: 50%;
+    border: 1.5px solid color-mix(in srgb, var(--accent) 45%, var(--surface));
+    display: inline-flex; align-items: center; justify-content: center;
+    flex: none;
+  }
+  .pick-btn .tick svg { width: 9px; height: 9px; opacity: 0; transition: opacity 0.15s ease; }
+  .cand.is-picked .pick-btn {
+    color: #fff;
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .cand.is-picked .pick-btn .tick { border-color: rgba(255,255,255,0.9); }
+  .cand.is-picked .pick-btn .tick svg { opacity: 1; }
+  .cand.is-picked .avatar {
+    color: #fff;
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .cand { transition: background 0.18s ease; border-radius: var(--radius-sm); }
+  .cand.is-picked { background: color-mix(in srgb, var(--accent) 5%, var(--surface)); }
+
+  /* per-race seat counter, shown only on multi-seat races */
+  .seat-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-left: 8px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    vertical-align: middle;
+    color: var(--text-subtle);
+    background: color-mix(in srgb, var(--text-subtle) 12%, var(--surface));
+  }
+  .seat-count.is-need {
+    color: #fff;
+    background: var(--accent);
+    animation: seatNudge 0.4s ease;
+  }
+  .seat-count.is-full {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 13%, var(--surface));
+  }
+  @keyframes seatNudge {
+    0% { transform: scale(0.9); }
+    60% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+  }
+  @media (prefers-reduced-motion: reduce) { .seat-count.is-need { animation: none; } }
+
+  /* incomplete-race hint inside the summary card */
+  .bp-row__hint {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--accent);
+    margin: 4px 0 0;
+  }
+
+  /* a multi-seat race with an unfilled seat gets an accent ring */
+  .race.is-incomplete {
+    border-color: color-mix(in srgb, var(--race-accent, var(--accent)) 55%, var(--border));
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--race-accent, var(--accent)) 22%, transparent), var(--shadow-sm);
+  }
+  .race.is-incomplete:hover {
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--race-accent, var(--accent)) 30%, transparent), var(--shadow-md);
+  }
+
+  /* sticky progress bar */
+  .bp-bar {
+    position: fixed;
+    left: 50%;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    transform: translate(-50%, 130%);
+    z-index: 60;
+    width: min(560px, calc(100vw - 28px));
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px 10px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
+  }
+  .bp-bar.is-active { transform: translate(-50%, 0); opacity: 1; }
+  .bp-bar__text {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    flex: none;
+  }
+  .bp-bar__track {
+    flex: 1;
+    height: 6px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--accent) 14%, var(--surface));
+    overflow: hidden;
+    min-width: 40px;
+  }
+  .bp-bar__fill {
+    height: 100%;
+    width: 0;
+    border-radius: 999px;
+    background: var(--accent);
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .bp-bar__btn {
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--accent);
+    border: 0;
+    border-radius: 999px;
+    padding: 8px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    flex: none;
+    transition: filter 0.15s ease, transform 0.12s ease;
+  }
+  .bp-bar__btn:hover { filter: brightness(1.08); }
+  .bp-bar__btn:active { transform: scale(0.97); }
+  @media (max-width: 480px) {
+    .bp-bar__text { font-size: 12px; }
+    .bp-bar__btn { padding: 8px 13px; }
+  }
+
+  /* summary overlay */
+  .bp-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24px 16px;
+    overflow-y: auto;
+    background: color-mix(in srgb, var(--c-text) 55%, transparent);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+  .bp-overlay.is-open { opacity: 1; pointer-events: auto; }
+  .bp-modal {
+    width: min(460px, 100%);
+    margin: auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transform: translateY(16px) scale(0.98);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .bp-overlay.is-open .bp-modal { transform: translateY(0) scale(1); }
+
+  /* the screenshot-ready ballot card */
+  .bp-card {
+    padding: 22px 22px 20px;
+    background:
+      radial-gradient(120% 80% at 100% 0%, color-mix(in srgb, var(--c-teal) 12%, var(--surface)), transparent 60%),
+      radial-gradient(120% 80% at 0% 100%, color-mix(in srgb, var(--c-navy) 12%, var(--surface)), transparent 55%),
+      var(--surface);
+  }
+  .bp-card__kicker {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 2px;
+  }
+  .bp-card__title {
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0 0 14px;
+    line-height: 1.15;
+  }
+  .bp-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 9px 0;
+    border-top: 1px solid var(--divider);
+  }
+  .bp-row:first-child { border-top: 0; }
+  .bp-row__race {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 3px;
+  }
+  .bp-row__pick {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+    line-height: 1.35;
+  }
+  .bp-row__pick.is-empty {
+    font-weight: 500;
+    font-style: italic;
+    color: var(--text-faint);
+  }
+  .bp-card__foot {
+    margin: 16px 0 0;
+    font-size: 11px;
+    color: var(--text-subtle);
+    border-top: 1px solid var(--divider);
+    padding-top: 10px;
+  }
+  .bp-card__foot strong { color: var(--text-muted); font-weight: 700; }
+
+  /* actions under the card */
+  .bp-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px 18px 8px;
+    border-top: 1px solid var(--divider);
+  }
+  .bp-act {
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    padding: 9px 14px;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
+  }
+  .bp-act:hover { background: var(--bg); }
+  .bp-act:active { transform: scale(0.97); }
+  .bp-act--primary {
+    color: #fff;
+    background: var(--accent);
+    border-color: var(--accent);
+    flex: 1;
+    min-width: 150px;
+  }
+  .bp-act--primary:hover { background: var(--accent); filter: brightness(1.08); }
+  .bp-act--ghost { color: var(--text-subtle); border-color: transparent; }
+  .bp-act--ghost:hover { color: var(--text); background: var(--bg); }
+  .bp-footnote {
+    padding: 4px 18px 16px;
+    font-size: 12px;
+    color: var(--text-subtle);
+    line-height: 1.5;
+  }
+  .bp-footnote a { color: var(--link); }
+
+  .bp-toast {
+    position: fixed;
+    left: 50%;
+    bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+    transform: translate(-50%, 12px);
+    z-index: 80;
+    background: var(--c-text);
+    color: var(--c-fog);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 999px;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .bp-toast.is-show { opacity: 1; transform: translate(-50%, 0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bp-bar, .bp-overlay, .bp-modal, .bp-bar__fill, .pick-btn, .bp-act { transition: none; }
   }
 </style>
 
