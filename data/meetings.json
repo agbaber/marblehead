@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-04-24T00:06:11.604Z",
-  "video_count": 61,
+  "video_count": 62,
   "meeting_count": 13,
   "community_count": 48,
   "pdf_count": 0,
@@ -11,6 +11,50 @@
     "Finance Committee": 3
   },
   "videos": [
+    {
+      "id": "ootpoCJlG6k",
+      "title": "Marblehead Annual Town Meeting 5-8-25",
+      "board": "Town Meeting",
+      "date": "2025-05-08",
+      "duration_min": 158,
+      "description": "Final session of the 2025 Annual Town Meeting.",
+      "url": "https://www.youtube.com/watch?v=ootpoCJlG6k",
+      "thumbnail": null,
+      "upload_date": "2025-05-09",
+      "plays": 0,
+      "summary": {
+        "summary": "At the May 8, 2025 Annual Town Meeting, Article 46, which proposed appropriating up to $100,000 from free cash to fund an independent town audit, was indefinitely postponed at the request of its own sponsor, Philip A. Mancuso, Jr. The motion to indefinitely postpone carried 405 to 21 with no debate and no speakers recorded. No funds were appropriated and no independent audit was established.",
+        "topics": [
+          {
+            "title": "Article 46: Appropriate Funds for an Independent Audit (Indefinitely Postponed)",
+            "detail": "The article, sponsored by Philip A. Mancuso, Jr. and others, originally proposed appropriating up to $100,000 from free cash to establish an independent audit of town departments. The auditor would have been selected by the Finance Committee, published findings to voters at the 2026 Annual Town Meeting, and the authorization would have been subject to annual reauthorization. The sponsor moved indefinite postponement; there was no debate and no speakers were recorded before the vote.",
+            "vote": "Motion to indefinitely postpone, moved by the sponsor. Passed 405 to 21."
+          }
+        ],
+        "public_comment_themes": [],
+        "key_numbers": [
+          {
+            "label": "Maximum appropriation proposed in Article 46 (not approved)",
+            "value": "$100,000"
+          },
+          {
+            "label": "Vote in favor of indefinite postponement",
+            "value": "405"
+          },
+          {
+            "label": "Votes opposed to indefinite postponement",
+            "value": "21"
+          }
+        ],
+        "action_items": [
+          "No action items. The article was indefinitely postponed; no funds were appropriated and no independent audit was established.",
+          "Confirm final vote tally against Town Clerk's official minutes."
+        ],
+        "override_relevant": false,
+        "override_details": ""
+      },
+      "transcript_file": "data/town_meeting_2025-05-08_transcript.txt"
+    },
     {
       "id": "1185678252",
       "title": "REV250 Marblehead Revolutionary Near Miss by Judy Anderson",
