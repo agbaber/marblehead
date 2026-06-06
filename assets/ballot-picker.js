@@ -285,21 +285,22 @@
   }
 
   function sharePicks() {
-    var canvas = drawShareCard();
-    canvas.toBlob(function (blob) {
-      if (!blob) { toast('Could not make image'); return; }
-      var file = new File([blob], 'marblehead-ballot.png', { type: 'image/png' });
-      var shareData = {
-        title: 'My Marblehead sample ballot',
-        text: ballotText()
-      };
-      if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
-        shareData.files = [file];
-        navigator.share(shareData).catch(function () {});
-      } else {
-        downloadCanvas(canvas);
-      }
-    }, 'image/png');
+    drawShareCard().then(function (canvas) {
+      canvas.toBlob(function (blob) {
+        if (!blob) { toast('Could not make image'); return; }
+        var file = new File([blob], 'marblehead-ballot.png', { type: 'image/png' });
+        var shareData = {
+          title: 'My Marblehead sample ballot',
+          text: ballotText()
+        };
+        if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
+          shareData.files = [file];
+          navigator.share(shareData).catch(function () {});
+        } else {
+          downloadCanvas(canvas);
+        }
+      }, 'image/png');
+    }).catch(function () { toast('Could not make image'); });
   }
 
   function downloadCanvas(canvas) {
@@ -315,72 +316,197 @@
     } catch (e) { toast('Could not save image'); }
   }
 
-  // ---- share card (drawn client-side, light palette) -----------------
+  // ---- share card (drawn client-side, dark palette) ------------------
+  // Hardcoded for the June 9, 2026 election. Update when next election rolls.
+  var ELECTION_KICKER = 'MARBLEHEAD · JUNE 9, 2026 ELECTION';
+
+  // Dark theme tokens (mirroring assets/site.css prefers-color-scheme: dark)
+  var SC_BG = '#0B1620';
+  var SC_NAV_BG = '#0F1B26';
+  var SC_TEXT = '#E6ECF1';
+  var SC_TEXT_MID = '#AFBCC7';
+  var SC_TEXT_SUB = '#7D8C99';
+  var SC_TEXT_FAINT = '#5B6B78';
+  var SC_HAIRLINE = '#22303C';
+
+  // Race accent color per data-accent value (dark-theme lifted variants)
+  var SC_ACCENT = {
+    navy:  '#8AB0C4',
+    teal:  '#6FB3C7',
+    plum:  '#B08AB4',
+    sage:  '#9DBC7A',
+    brass: '#E4B363'
+  };
+
+  var SC_HEAD = '"Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
+  var SC_SANS = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
+
+  var houseImg = null;
+  function loadHouseImg() {
+    if (houseImg) return Promise.resolve(houseImg);
+    return fetch('/assets/lighthouse/lighthouse.svg')
+      .then(function (r) { return r.text(); })
+      .then(function (svgText) {
+        var recolored = svgText.replace(/currentColor/g, SC_TEXT);
+        var blob = new Blob([recolored], { type: 'image/svg+xml' });
+        var url = URL.createObjectURL(blob);
+        return new Promise(function (resolve, reject) {
+          var img = new Image();
+          img.onload = function () { houseImg = img; resolve(img); };
+          img.onerror = reject;
+          img.src = url;
+        });
+      });
+  }
+
+  function ensureFonts() {
+    if (!document.fonts || !document.fonts.load) return Promise.resolve();
+    return Promise.all([
+      document.fonts.load('700 80px "Libre Franklin"'),
+      document.fonts.load('700 36px "Libre Franklin"'),
+      document.fonts.load('700 26px "Libre Franklin"'),
+      document.fonts.load('500 28px "Libre Franklin"'),
+      document.fonts.ready
+    ]);
+  }
+
   function drawShareCard() {
-    var W = 1080, H = 1350;
+    return Promise.all([loadHouseImg().catch(function () { return null; }), ensureFonts()])
+      .then(function () { return drawShareCardSync(); });
+  }
+
+  function drawShareCardSync() {
+    var W = 1080, H = 1500;
     var canvas = document.createElement('canvas');
     canvas.width = W; canvas.height = H;
     var c = canvas.getContext('2d');
+    c.textBaseline = 'alphabetic';
 
     // background
-    var g = c.createLinearGradient(0, 0, W, H);
-    g.addColorStop(0, '#FFFFFF');
-    g.addColorStop(1, '#EAF1F5');
-    c.fillStyle = g; c.fillRect(0, 0, W, H);
-    // top accent band
-    c.fillStyle = '#1B3A57'; c.fillRect(0, 0, W, 14);
+    c.fillStyle = SC_BG; c.fillRect(0, 0, W, H);
+
+    // lighthouse watermark behind content
+    if (houseImg) {
+      c.save();
+      c.globalAlpha = 0.065;
+      c.drawImage(houseImg, W - 700, H - 1280, 820, 1230);
+      c.restore();
+    }
+
+    // top nav strip
+    var navH = 88;
+    c.fillStyle = SC_NAV_BG; c.fillRect(0, 0, W, navH);
+    c.strokeStyle = SC_HAIRLINE; c.lineWidth = 1;
+    c.beginPath(); c.moveTo(0, navH); c.lineTo(W, navH); c.stroke();
+    if (houseImg) {
+      // Use the cropped favicon-style icon for the nav badge: a small
+      // navy roundel with the lighthouse silhouette.
+      c.save();
+      c.fillStyle = '#1B3A57';
+      var iconR = 10;
+      roundRect(c, 40, 22, 48, 48, iconR);
+      c.fill();
+      c.globalAlpha = 1;
+      // Draw the full SVG scaled and offset so just the lamp room shows
+      // (mimics the favicon crop).
+      c.drawImage(houseImg, 40 - 12, 22 - 8, 48 * 1.6, 48 * 1.6 * (1536 / 1024));
+      c.restore();
+    }
+    c.fillStyle = SC_TEXT;
+    c.font = '700 26px ' + SC_HEAD;
+    c.fillText('MHD Data', 104, 58);
 
     var PAD = 84;
-    var SANS = 'ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
-    var y = 150;
+    var y = navH + 96;
 
-    c.textBaseline = 'alphabetic';
-    c.fillStyle = '#7A8A98';
-    c.font = '700 26px ' + SANS;
-    c.fillText('MARBLEHEAD  ·  JUNE 9, 2026', PAD, y);
-    y += 64;
+    // kicker with leading rule
+    var ruleW = 28;
+    c.fillStyle = SC_TEXT;
+    c.fillRect(PAD, y - 6, ruleW, 3);
+    c.fillStyle = SC_TEXT_SUB;
+    c.font = '700 16px ' + SC_SANS;
+    drawTracked(c, ELECTION_KICKER, PAD + ruleW + 14, y, 2);
 
-    c.fillStyle = '#0F2A3D';
-    c.font = '800 76px ' + SANS;
+    y += 76;
+    c.fillStyle = SC_TEXT;
+    c.font = '700 80px ' + SC_HEAD;
     c.fillText('My sample ballot', PAD, y);
-    y += 40;
 
-    c.strokeStyle = '#D8E1E8'; c.lineWidth = 2;
-    c.beginPath(); c.moveTo(PAD, y); c.lineTo(W - PAD, y); c.stroke();
-    y += 30;
+    y += 80;
 
-    raceData.forEach(function (rd) {
+    raceData.forEach(function (rd, idx) {
       var arr = selected(rd);
-      y += 34;
-      c.fillStyle = '#7A8A98';
-      c.font = '700 24px ' + SANS;
-      c.fillText(rd.name.toUpperCase(), PAD, y);
-      y += 46;
-      c.font = '600 40px ' + SANS;
-      if (arr.length) {
-        c.fillStyle = '#0F2A3D';
-        arr.forEach(function (n, idx) {
-          if (idx > 0) y += 50;
-          y = wrapText(c, n, PAD, y, W - PAD * 2, 50);
-        });
-      } else {
-        c.fillStyle = '#A6B3BE';
+      var accent = resolveAccent(rd);
+
+      // accent dot
+      c.fillStyle = accent;
+      c.beginPath();
+      c.arc(PAD + 6, y - 7, 6, 0, Math.PI * 2);
+      c.fill();
+
+      // race label small caps tracked
+      c.fillStyle = SC_TEXT_SUB;
+      c.font = '700 16px ' + SC_SANS;
+      drawTracked(c, rd.name.toUpperCase(), PAD + 22, y, 1.8);
+
+      y += 38;
+
+      if (arr.length === 0) {
+        c.fillStyle = SC_TEXT_FAINT;
+        c.font = '500 28px ' + SC_HEAD;
         c.fillText('No pick yet', PAD, y);
+        y += 12;
+      } else {
+        c.fillStyle = SC_TEXT;
+        c.font = '700 36px ' + SC_HEAD;
+        arr.forEach(function (n, i) {
+          if (i > 0) y += 48;
+          y = wrapText(c, n, PAD, y, W - PAD * 2, 48);
+        });
+        y += 12;
       }
-      y += 18;
-      c.strokeStyle = '#ECF1F5'; c.lineWidth = 1;
-      c.beginPath(); c.moveTo(PAD, y); c.lineTo(W - PAD, y); c.stroke();
+
+      y += 36;
+      if (idx < raceData.length - 1) {
+        c.strokeStyle = SC_HAIRLINE; c.lineWidth = 1;
+        c.beginPath(); c.moveTo(PAD, y); c.lineTo(W - PAD, y); c.stroke();
+        y += 36;
+      }
     });
 
     // footer
-    c.fillStyle = '#1B3A57';
-    c.font = '800 30px ' + SANS;
-    c.fillText('marbleheaddata.org', PAD, H - 90);
-    c.fillStyle = '#7A8A98';
-    c.font = '500 24px ' + SANS;
-    c.fillText('My sample ballot, not an endorsement.', PAD, H - 54);
+    var footY = H - 70;
+    c.fillStyle = SC_TEXT;
+    c.font = '700 24px ' + SC_HEAD;
+    c.fillText('marbleheaddata.org', PAD, footY);
+    c.fillStyle = SC_TEXT_SUB;
+    c.font = '500 16px ' + SC_SANS;
+    var tag = 'Saved on this device';
+    var tagW = c.measureText(tag).width;
+    c.fillText(tag, W - PAD - tagW, footY);
 
     return canvas;
+  }
+
+  function resolveAccent(rd) {
+    var hex = rd.el && rd.el.getAttribute('data-accent');
+    return SC_ACCENT[hex] || SC_ACCENT.navy;
+  }
+  function drawTracked(c, text, x, y, ls) {
+    var cx = x;
+    for (var i = 0; i < text.length; i++) {
+      c.fillText(text[i], cx, y);
+      cx += c.measureText(text[i]).width + ls;
+    }
+  }
+  function roundRect(c, x, y, w, h, r) {
+    c.beginPath();
+    c.moveTo(x + r, y);
+    c.arcTo(x + w, y, x + w, y + h, r);
+    c.arcTo(x + w, y + h, x, y + h, r);
+    c.arcTo(x, y + h, x, y, r);
+    c.arcTo(x, y, x + w, y, r);
+    c.closePath();
   }
 
   function wrapText(c, text, x, y, maxWidth, lineHeight) {
