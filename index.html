@@ -214,6 +214,37 @@ og_url: https://marbleheaddata.org/
     margin: 2px 0 0;
   }
 
+  /* === Contested-races list (homepage candidates stop) === */
+  .race-list {
+    list-style: none;
+    margin: 8px 0 16px;
+    padding: 0;
+    max-width: 640px;
+    width: 100%;
+  }
+  .race-list li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 14px;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+  }
+  .race-list li:last-child { border-bottom: none; }
+  .race-list-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .race-list-count {
+    font-size: 15px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
   /* === Cost slider === */
   .cost-slider-wrap {
     background: var(--surface);
@@ -625,6 +656,23 @@ og_url: https://marbleheaddata.org/
   </div>
 
   <a class="home-deeper" href="whats-on-the-ballot.html">Sample ballot, candidates, and the 24 other races</a>
+</section>
+
+<section class="home-stop" id="candidates">
+  <p class="home-eye">June 9 ballot &bull; who's running</p>
+  <div class="home-big">6 contested races <span style="color:var(--text-muted); font-weight:500;">/</span> 18 candidates</div>
+  <p class="home-cap">Select Board, School Committee, Moderator, Recreation &amp; Park, Cemetery, and Housing Authority all have more candidates than seats this year.</p>
+
+  <ul class="race-list" aria-label="Six contested races in the June 9 election">
+    <li><span class="race-list-label">Select Board</span><span class="race-list-count">3 for 2 seats</span></li>
+    <li><span class="race-list-label">School Committee</span><span class="race-list-count">3 for 2 seats</span></li>
+    <li><span class="race-list-label">Moderator</span><span class="race-list-count">2 for 1 seat</span></li>
+    <li><span class="race-list-label">Recreation &amp; Park Commission</span><span class="race-list-count">6 for 5 seats</span></li>
+    <li><span class="race-list-label">Cemetery Commission</span><span class="race-list-count">2 for 1 seat</span></li>
+    <li><span class="race-list-label">Housing Authority</span><span class="race-list-count">2 for 1 seat</span></li>
+  </ul>
+
+  <a class="home-deeper" href="where-candidates-stand.html">Candidate positions and sample-ballot picker</a>
 </section>
 
 <section class="home-stop" id="fails">
