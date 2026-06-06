@@ -156,6 +156,25 @@ title: "What the Override Costs You"
 }
 .income-note-row td a { color: var(--link); }
 
+/* Q4 toggle: inherits the site's pill-on-track .tabs styling. Sized
+   smaller than the tier tabs so it reads as a sub-control on the
+   scenario table, not a peer of the tier picker. */
+.q4-toggle.tabs {
+  max-width: 380px; margin: 0 auto 18px;
+}
+.q4-toggle.tabs .tab {
+  padding: 8px 10px; gap: 0;
+  display: flex; flex-direction: column; align-items: center;
+  line-height: 1.2;
+}
+.q4-toggle .q4-label { font-size: 13px; font-weight: 700; }
+.q4-toggle .q4-sub {
+  font-size: 10px; font-weight: 500;
+  color: var(--text-subtle); margin-top: 2px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.q4-toggle .tab.active .q4-sub { color: var(--text-muted); }
+
 .scenario-table {
   width: 100%; max-width: 820px; margin: 0 auto 12px;
   border-collapse: separate; border-spacing: 0;
@@ -377,7 +396,17 @@ title: "What the Override Costs You"
   <div class="tier-panel active" id="tier-3"></div>
 
   <h2 class="h-center" style="margin-top: 48px;">Your full tax bill, by ballot outcome</h2>
-  <p class="subtitle h-center">Total annual property tax (plus Board of Health fee if Question 4 fails) year by year, with the operating-override portion broken out.</p>
+  <p class="subtitle h-center">Total annual property tax year by year, with the operating-override portion broken out. Pick what happens with Question 4 (trash); the table compares all four override outcomes inside it.</p>
+  <div class="tabs q4-toggle" role="tablist" aria-label="Question 4 outcome">
+    <button class="tab" data-q4="true" role="tab">
+      <span class="q4-label">Q4 passes</span>
+      <span class="q4-sub">trash on tax bill</span>
+    </button>
+    <button class="tab" data-q4="false" role="tab">
+      <span class="q4-label">Q4 fails</span>
+      <span class="q4-sub">$281 BoH flat fee</span>
+    </button>
+  </div>
   <div id="scenario-panel"></div>
   <div class="scenario-legend">
     Each cell shows your total bill, the change vs. today, and the Q1/Q2/Q3 operating-override share as a <span class="override-pill">%</span> pill. The rest of the bill is your existing taxes, Prop 2&frac12; baseline growth, and trash (Q4 levy or BoH fee).
@@ -582,13 +611,49 @@ function baselineForYear(currentBill, year) {
   return currentBill * Math.pow(1 + PROP25_GROWTH, year);
 }
 
-const SCENARIOS = [
-  { id: 'q1',     primary: 'Tier 1 only',     secondary: '$9M override · Q4 fails (BoH fee)',  tier: 1, q4: false, badges: [1] },
-  { id: 'q1q2',   primary: 'Tier 1 + 2',      secondary: '$12M override · Q4 fails (BoH fee)', tier: 2, q4: false, badges: [1,2] },
-  { id: 'q1q2q3', primary: 'Tier 1 + 2 + 3',  secondary: '$15M override · Q4 fails (BoH fee)', tier: 3, q4: false, badges: [1,2,3] },
-  { id: 'all',    primary: 'All four pass',   secondary: '$15M override + Q4 trash levy',      tier: 3, q4: true,  badges: [1,2,3] },
-  { id: 'q4',     primary: 'Q4 only',         secondary: 'Trash levy, no operating override',  tier: 0, q4: true,  badges: [] },
+// Each Q4 state produces four rows: no override + the three override tiers.
+// The Q4 toggle picks which set is shown; the table compares tiers within.
+const SCENARIO_TIERS = [
+  { id: 'none', primary: 'No override',       tier: 0, badges: [] },
+  { id: 't1',   primary: 'Tier 1 only',       tier: 1, badges: [1] },
+  { id: 't1t2', primary: 'Tier 1 + 2',        tier: 2, badges: [1, 2] },
+  { id: 't1t2t3', primary: 'Tier 1 + 2 + 3',  tier: 3, badges: [1, 2, 3] },
 ];
+
+const Q4_STORAGE_KEY = 'mh_override_calc_q4_passes';
+
+function loadQ4() {
+  try {
+    const raw = localStorage.getItem(Q4_STORAGE_KEY);
+    if (raw === 'true') return true;
+    if (raw === 'false') return false;
+  } catch (e) {}
+  return true;
+}
+
+function saveQ4(v) {
+  try { localStorage.setItem(Q4_STORAGE_KEY, String(v)); } catch (e) {}
+}
+
+let q4Passes = loadQ4();
+
+function buildScenarios(q4) {
+  return SCENARIO_TIERS.map(function(s) {
+    var sec;
+    if (s.tier === 0) {
+      sec = q4 ? 'No operating override · Q4 trash levy' : 'No operating override · BoH flat fee';
+    } else {
+      sec = TIER_META[s.tier].amount + ' override';
+    }
+    return { id: s.id + (q4 ? '-q4y' : '-q4n'),
+             primary: s.primary, secondary: sec,
+             tier: s.tier, q4: q4, badges: s.badges };
+  });
+}
+
+// Backwards-compatible alias for tooltipContent; rebuilt each render so the
+// IDs match what's currently in the DOM.
+let SCENARIOS = buildScenarios(q4Passes);
 
 function calculateScenario(av, currentBill, year, scenario) {
   const baseline = baselineForYear(currentBill, year);
@@ -651,16 +716,9 @@ function renderScenarioTable(av, currentBill) {
       return '<th><span class="yr-fy">' + ym.fy + '</span>' + ym.label + '</th>';
     }).join('') +
   '</tr>';
-  // Group Q4-fails scenarios (first 3) and Q4-passes scenarios (last 2)
-  // with a visual divider between them.
-  const q4FailsRows = SCENARIOS.filter(function(s) { return !s.q4; })
-    .map(function(s) { return renderScenarioRow(s, av, currentBill); }).join('');
-  const q4PassesRows = SCENARIOS.filter(function(s) { return s.q4; })
-    .map(function(s) { return renderScenarioRow(s, av, currentBill); }).join('');
-  const divider = '<tr class="scenario-divider"><td colspan="4">' +
-                  '<div>If Q4 trash override passes</div></td></tr>';
+  const rows = SCENARIOS.map(function(s) { return renderScenarioRow(s, av, currentBill); }).join('');
   return '<table class="scenario-table"><thead>' + header + '</thead>' +
-         '<tbody>' + q4FailsRows + divider + q4PassesRows + '</tbody></table>';
+         '<tbody>' + rows + '</tbody></table>';
 }
 
 let syncing = false;
@@ -684,6 +742,7 @@ function update() {
   const value = parseAssessed(avInput.value);
   saveStored(value);
   const currentBill = billFromAV(value);
+  SCENARIOS = buildScenarios(q4Passes);
   for (const tier of [1, 2, 3]) {
     document.getElementById('tier-' + tier).innerHTML = renderTierPanel(value, tier);
   }
@@ -691,6 +750,14 @@ function update() {
   document.getElementById('cumulative-panel').innerHTML = renderCumulativePanel(value);
   document.getElementById('income-panel').innerHTML = renderIncomePanel(value);
   wireScenarioTooltip();
+}
+
+function syncQ4Buttons() {
+  document.querySelectorAll('.q4-toggle button').forEach(function(b) {
+    var on = (b.dataset.q4 === 'true') === q4Passes;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
 }
 
 const input = document.getElementById('assessed-value');
@@ -726,6 +793,16 @@ document.querySelectorAll('.tier-tabs .tab').forEach(function(btn) {
     document.getElementById('tier-' + btn.dataset.tier).classList.add('active');
   });
 });
+
+document.querySelectorAll('.q4-toggle button').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    q4Passes = btn.dataset.q4 === 'true';
+    saveQ4(q4Passes);
+    syncQ4Buttons();
+    update();
+  });
+});
+syncQ4Buttons();
 
 // Floating cell-breakdown tooltip for the scenario table. Hover (desktop)
 // or tap (touch) any data cell to see the bill broken into baseline +
