@@ -46,7 +46,10 @@
     if (!h2) return;
     var name = h2.textContent.trim();
     var max = 1;
-    if (meta) {
+    var dataSeats = raceEl.getAttribute('data-seats');
+    if (dataSeats && /^\d+$/.test(dataSeats)) {
+      max = parseInt(dataSeats, 10);
+    } else if (meta) {
       var m = meta.textContent.match(/not more than\s+(\d+)/i);
       if (m) max = parseInt(m[1], 10);
     }
@@ -74,7 +77,10 @@
     if (max > 1 && meta) {
       rd.counter = document.createElement('span');
       rd.counter.className = 'seat-count';
-      meta.appendChild(rd.counter);
+      var pickRow = document.createElement('p');
+      pickRow.className = 'race-pick';
+      pickRow.appendChild(rd.counter);
+      meta.parentNode.insertBefore(pickRow, meta);
     }
 
     raceData.push(rd);
@@ -119,11 +125,9 @@
     rd.el.classList.toggle('is-incomplete', n > 0 && n < rd.max);
     rd.counter.classList.remove('is-need', 'is-full');
     if (n === 0) {
-      rd.counter.textContent = '';
-      rd.counter.style.display = 'none';
+      rd.counter.textContent = 'Pick up to ' + rd.max;
       return;
     }
-    rd.counter.style.display = '';
     if (n < rd.max) {
       rd.counter.textContent = 'Pick ' + (rd.max - n) + ' more';
       rd.counter.classList.add('is-need');

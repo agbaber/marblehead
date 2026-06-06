@@ -155,6 +155,7 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
 
   /* ---- candidate row ---- */
   .cand {
+    position: relative;
     display: grid;
     grid-template-columns: 44px 1fr;
     gap: 4px 14px;
@@ -182,8 +183,9 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px 8px;
     min-height: 44px;
+    padding-right: 92px;
   }
   .cand-head h3 {
     font-size: 16px;
@@ -210,16 +212,18 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
   .cand-body p:last-child { margin-bottom: 0; }
   .cand-body p strong { color: var(--text); }
   .cand-body .no-answer {
+    font-size: 12.5px;
     font-style: italic;
     color: var(--text-subtle);
     padding-left: 11px;
     border-left: 2px solid var(--border);
+    margin-top: 10px;
   }
 
   @media (max-width: 600px) {
     .cand { grid-template-columns: 36px 1fr; gap: 4px 11px; }
     .avatar { width: 36px; height: 36px; font-size: 12px; }
-    .cand-head { min-height: 36px; }
+    .cand-head { min-height: 36px; padding-right: 80px; }
     .race { padding-left: 18px; padding-right: 16px; }
   }
 
@@ -243,9 +247,13 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
      added to <body> by ballot-picker.js once it wires up)
      ============================================================ */
 
-  /* pick control injected into each .cand-head */
+  /* pick control: absolutely pinned to the top-right of each .cand so
+     it lands in the same spot regardless of name length, badges, or
+     tier chip wrapping. */
   .pick-btn {
-    margin-left: auto;
+    position: absolute;
+    top: 24px;
+    right: 0;
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -261,6 +269,9 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
     cursor: pointer;
     white-space: nowrap;
     transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+  }
+  @media (max-width: 600px) {
+    .pick-btn { top: 20px; }
   }
   .pick-btn:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
   .pick-btn:active { transform: scale(0.96); }
@@ -287,30 +298,38 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
   .cand { transition: background 0.18s ease; border-radius: var(--radius-sm); }
   .cand.is-picked { background: color-mix(in srgb, var(--accent) 5%, var(--surface)); }
 
-  /* per-race seat counter, shown only on multi-seat races */
+  /* per-race "Pick N" row, shown only on multi-seat races. Lives on
+     its own line directly under the race title so the instruction is
+     unmissable on mobile. */
+  .race-pick {
+    margin: 4px 0 0;
+    padding: 0;
+    line-height: 1;
+  }
   .seat-count {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    font-size: 11px;
+    font-size: 12.5px;
     font-weight: 800;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
     text-transform: uppercase;
-    margin-left: 8px;
-    padding: 3px 9px;
+    padding: 5px 11px;
     border-radius: 999px;
-    vertical-align: middle;
-    color: var(--text-subtle);
-    background: color-mix(in srgb, var(--text-subtle) 12%, var(--surface));
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--accent) 26%, var(--surface));
   }
   .seat-count.is-need {
     color: #fff;
     background: var(--accent);
+    border-color: var(--accent);
     animation: seatNudge 0.4s ease;
   }
   .seat-count.is-full {
     color: var(--accent);
-    background: color-mix(in srgb, var(--accent) 13%, var(--surface));
+    background: color-mix(in srgb, var(--accent) 14%, var(--surface));
+    border-color: color-mix(in srgb, var(--accent) 32%, var(--surface));
   }
   @keyframes seatNudge {
     0% { transform: scale(0.9); }
@@ -569,12 +588,12 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
   <span class="chip tnone"><span class="dot"></span>No tier named</span>
 </div>
 
-<div class="race" data-accent="navy">
+<div class="race" data-accent="navy" data-seats="2">
   <div class="race-head">
     <div class="race-num">01</div>
     <div class="race-headings">
       <h2 id="select-board">Select Board</h2>
-      <p class="race-meta">Three candidates, two seats &middot; Vote for not more than 2 &middot; 3-year terms</p>
+      <p class="race-meta">Three candidates, two seats &middot; 3-year terms</p>
     </div>
   </div>
 
@@ -610,18 +629,18 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
       <span class="chip tnone"><span class="dot"></span>No tier named</span>
     </div>
     <div class="cand-body">
-      <p>Calls the town's finances "a genuine fiscal crisis" and says that after years of spending down reserves, raising the tax levy may be "an unfortunate but necessary step." She <strong>does not endorse a tier</strong>, citing concerns about transparency and noting that 2025 voters wanted a menu of choices that "deserved to be heard and respected." If the override passes and she is elected, she commits to "fight to ensure that the additional revenue is used to provide meaningful relief."<sup class="cite" data-href="https://marbleheadcurrent.org/2026/05/19/jenn-schaeffner-for-select-board/" data-source="Marblehead Current, candidate Q&A: Jenn Schaeffner for Select Board, May 19, 2026"></sup></p>
+      <p>Calls the town's finances "a genuine fiscal crisis" and says that after years of spending down reserves, raising the tax levy may be "an unfortunate but necessary step." She does not endorse a tier, citing concerns about transparency and noting that 2025 voters wanted a menu of choices that "deserved to be heard and respected." If the override passes and she is elected, she commits to "fight to ensure that the additional revenue is used to provide meaningful relief."<sup class="cite" data-href="https://marbleheadcurrent.org/2026/05/19/jenn-schaeffner-for-select-board/" data-source="Marblehead Current, candidate Q&A: Jenn Schaeffner for Select Board, May 19, 2026"></sup></p>
       <p>A current School Committee member and Housing Authority chair with a finance and banking background, she would apply "zero-based budgeting across every town department," look for shared services to cut duplication, and grow revenue through tourism and a more business-friendly approach "without adding to the tax burden on our residents."<sup class="cite" data-href="https://wdowd-arch.github.io/marblehead-voter-guide-2026/" data-source="Marblehead Independent 2026 Voter Guide, candidate questionnaire responses (last updated June 1, 2026)"></sup></p>
     </div>
   </div>
 </div>
 
-<div class="race" data-accent="teal">
+<div class="race" data-accent="teal" data-seats="2">
   <div class="race-head">
     <div class="race-num">02</div>
     <div class="race-headings">
       <h2 id="school-committee">School Committee</h2>
-      <p class="race-meta">Three candidates, two seats &middot; Vote for not more than 2</p>
+      <p class="race-meta">Three candidates, two seats</p>
     </div>
   </div>
 
@@ -645,7 +664,7 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
       <span class="chip tnone"><span class="dot"></span>No tier named</span>
     </div>
     <div class="cand-body">
-      <p>Says the town's "tax levy capacity needs to grow" but <strong>does not commit to a tier</strong>, calling herself "troubled by what appears to have been a rushed process" and saying she is still "digging into" what each tier funds so she can "make an educated decision on June 9."<sup class="cite" data-href="https://marbleheadcurrent.org/2026/05/20/sarah-fox-for-school-committee/" data-source="Marblehead Current, candidate Q&A: Sarah Fox for School Committee, May 20, 2026"></sup> In the Independent's guide she notes the current plan "does not return any of the eliminated positions to the schools at any tier," and that a projected $2M surplus might allow full-day kindergarten to be "phased in" without a full override.<sup class="cite" data-href="https://wdowd-arch.github.io/marblehead-voter-guide-2026/" data-source="Marblehead Independent 2026 Voter Guide, candidate questionnaire responses (last updated June 1, 2026)"></sup></p>
+      <p>Says the town's "tax levy capacity needs to grow" but does not commit to a tier, calling herself "troubled by what appears to have been a rushed process" and saying she is still "digging into" what each tier funds so she can "make an educated decision on June 9."<sup class="cite" data-href="https://marbleheadcurrent.org/2026/05/20/sarah-fox-for-school-committee/" data-source="Marblehead Current, candidate Q&A: Sarah Fox for School Committee, May 20, 2026"></sup> In the Independent's guide she notes the current plan "does not return any of the eliminated positions to the schools at any tier," and that a projected $2M surplus might allow full-day kindergarten to be "phased in" without a full override.<sup class="cite" data-href="https://wdowd-arch.github.io/marblehead-voter-guide-2026/" data-source="Marblehead Independent 2026 Voter Guide, candidate questionnaire responses (last updated June 1, 2026)"></sup></p>
       <p>A former two-term member and budget subcommittee chair, she wants the district to "work collaboratively towards a zero-based budget" built on a current analysis of student needs "rather than simply rolling over what may currently exist," and renews her call for exit surveys of departing families.<sup class="cite" data-href="https://marbleheadcurrent.org/2026/05/20/sarah-fox-for-school-committee/" data-source="Marblehead Current, candidate Q&A: Sarah Fox for School Committee, May 20, 2026"></sup></p>
     </div>
   </div>
@@ -663,12 +682,12 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
   </div>
 </div>
 
-<div class="race" data-accent="plum">
+<div class="race" data-accent="plum" data-seats="1">
   <div class="race-head">
     <div class="race-num">03</div>
     <div class="race-headings">
       <h2 id="moderator">Moderator</h2>
-      <p class="race-meta">Two candidates, one seat &middot; Vote for not more than 1 &middot; 1-year term</p>
+      <p class="race-meta">Two candidates, one seat &middot; 1-year term</p>
     </div>
   </div>
 
@@ -689,18 +708,18 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
       <h3>Peter Jaffe</h3>
     </div>
     <div class="cand-body">
-      <p class="no-answer">Did not submit answers to the Independent's voter guide.</p>
       <p>At the May 27 candidates forum, the lifelong resident and first-time candidate said he would focus on closer review of warrant articles, coordinating with town counsel, more consistent procedure (he questioned the use of hand counts over electronic clickers) and firmer enforcement of meeting decorum.<sup class="cite" data-href="https://marbleheadcurrent.org/2026/05/27/overrides-trust-and-towns-path-forward-debated-at-candidates-forum/" data-source="Marblehead Current, 'Overrides, trust and town's path forward debated at candidates forum,' May 27, 2026"></sup></p>
+      <p class="no-answer">Did not submit answers to the Independent's voter guide.</p>
     </div>
   </div>
 </div>
 
-<div class="race" data-accent="sage">
+<div class="race" data-accent="sage" data-seats="5">
   <div class="race-head">
     <div class="race-num">04</div>
     <div class="race-headings">
       <h2 id="rec-park">Recreation &amp; Park Commission</h2>
-      <p class="race-meta">Six candidates, five seats &middot; Vote for not more than 5 &middot; 1-year terms</p>
+      <p class="race-meta">Six candidates, five seats &middot; 1-year terms</p>
     </div>
   </div>
 
@@ -760,8 +779,8 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
       <span class="badge">Incumbent</span>
     </div>
     <div class="cand-body">
-      <p class="no-answer">Did not submit answers to the Independent's voter guide.</p>
       <p>At the May 27 forum he supported the turf proposal, saying the town needs "more turf" and "more playability."<sup class="cite" data-href="https://marbleheadcurrent.org/2026/05/27/overrides-trust-and-towns-path-forward-debated-at-candidates-forum/" data-source="Marblehead Current, 'Overrides, trust and town's path forward debated at candidates forum,' May 27, 2026"></sup></p>
+      <p class="no-answer">Did not submit answers to the Independent's voter guide.</p>
     </div>
   </div>
 
@@ -771,18 +790,18 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
       <h3>Michael Ryan McCarthy</h3>
     </div>
     <div class="cand-body">
-      <p class="no-answer">Did not submit answers to the Independent's voter guide, and a statement was read on his behalf at the forum because of a medical situation.</p>
-      <p>That statement cited more than 20 years in commercial real estate and coaching Marblehead youth sports, and said he is "the only candidate with children utilizing the fields today."<sup class="cite" data-href="https://marbleheadcurrent.org/2026/05/27/overrides-trust-and-towns-path-forward-debated-at-candidates-forum/" data-source="Marblehead Current, 'Overrides, trust and town's path forward debated at candidates forum,' May 27, 2026"></sup></p>
+      <p>A statement read on his behalf at the May 27 forum, in his absence because of a medical situation, cited more than 20 years in commercial real estate and coaching Marblehead youth sports, and said he is "the only candidate with children utilizing the fields today."<sup class="cite" data-href="https://marbleheadcurrent.org/2026/05/27/overrides-trust-and-towns-path-forward-debated-at-candidates-forum/" data-source="Marblehead Current, 'Overrides, trust and town's path forward debated at candidates forum,' May 27, 2026"></sup></p>
+      <p class="no-answer">Did not submit answers to the Independent's voter guide.</p>
     </div>
   </div>
 </div>
 
-<div class="race" data-accent="brass">
+<div class="race" data-accent="brass" data-seats="1">
   <div class="race-head">
     <div class="race-num">05</div>
     <div class="race-headings">
       <h2 id="cemetery">Cemetery Commission</h2>
-      <p class="race-meta">Two candidates, one seat &middot; Vote for not more than 1 &middot; 2-year unexpired term</p>
+      <p class="race-meta">Two candidates, one seat &middot; 2-year unexpired term</p>
     </div>
   </div>
 
@@ -810,12 +829,12 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
   </div>
 </div>
 
-<div class="race" data-accent="navy">
+<div class="race" data-accent="navy" data-seats="1">
   <div class="race-head">
     <div class="race-num">06</div>
     <div class="race-headings">
       <h2 id="housing-authority">Housing Authority</h2>
-      <p class="race-meta">Two candidates, one seat &middot; Vote for not more than 1</p>
+      <p class="race-meta">Two candidates, one seat</p>
     </div>
   </div>
 
@@ -837,8 +856,8 @@ og_url: https://marbleheaddata.org/where-candidates-stand.html
       <span class="badge">Incumbent</span>
     </div>
     <div class="cand-body">
-      <p class="no-answer">Her voter-guide questionnaire response was incomplete in the source as of June 1.</p>
       <p>On the Housing Authority since 1994, she runs on "a practical understanding of how it works, institutional knowledge, and commitment to the residents we serve," and notes she has attended town meetings "every single Wednesday night, rain, shine or snow."<sup class="cite" data-href="https://wdowd-arch.github.io/marblehead-voter-guide-2026/" data-source="Marblehead Independent 2026 Voter Guide, candidate questionnaire responses (last updated June 1, 2026)"></sup></p>
+      <p class="no-answer">Her voter-guide questionnaire response was incomplete in the source as of June 1.</p>
     </div>
   </div>
 </div>
