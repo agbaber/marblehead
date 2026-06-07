@@ -391,7 +391,13 @@ title: "What the Override Costs You"
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 13px; color: var(--text);
   font-variant-numeric: tabular-nums;
-  white-space: pre-wrap; word-break: break-word;
+  /* Preserve equation alignment; let long lines scroll horizontally
+     instead of wrapping mid-expression. */
+  white-space: pre; overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 520px) {
+  .method-formula { font-size: 11.5px; padding: 8px 10px; }
 }
 .methodology-body .anchor-table {
   width: 100%; border-collapse: collapse;
@@ -481,21 +487,33 @@ title: "What the Override Costs You"
   <details class="methodology" id="methodology">
     <summary>How this is calculated</summary>
     <div class="methodology-body">
-      <p>Every figure on this page scales linearly from a town-average anchor and adds Prop 2&frac12; baseline growth on top of your current bill. Sources are in the footnotes below.</p>
+      <p>Your new bill is your anticipated bill (current bill plus the 2.5% Prop 2&frac12; growth that happens every year regardless), times the ratio of the town-wide tax levy with the override to the town-wide tax levy without it. The Q4 trash piece is either part of that levy ratio (if Q4 passes) or a flat $281 Board of Health fee (if it fails). Sources are in the footnotes below.</p>
+
+      <h3>The formula</h3>
+      <code class="method-formula">anticipated = current_bill &times; 1.025^year
+levy_ratio  = (existing_levy + override) / existing_levy
+new_bill    = anticipated &times; levy_ratio</code>
+      <p>If Question 4 fails, add a flat $281/yr Board of Health curbside fee on top. If Question 4 passes, the trash levy is rolled into <code>override</code> in the ratio above.</p>
+      <p>Under a single residential tax rate, this is algebraically identical to "your share of the new town-wide override and trash levies, added to your anticipated bill." Both forms give the same answer; the multiplicative form is the more intuitive mental model.</p>
 
       <h3>Anchor numbers</h3>
       <table class="anchor-table">
         <thead><tr><th>Constant</th><th>Value</th></tr></thead>
         <tbody>
-          <tr><td>Average single-family assessed value</td><td>$1,291,507</td></tr>
           <tr><td>FY26 residential tax rate</td><td>$8.56 per $1,000</td></tr>
           <tr><td>Prop 2&frac12; baseline growth</td><td>2.5%/yr, compounded</td></tr>
-          <tr><td>Total residential assessed value (Q4 trash base)</td><td>~$9.9B</td></tr>
+          <tr><td>Total residential assessed value</td><td>~$9.9B</td></tr>
           <tr><td>Board of Health curbside fee (if Q4 fails)</td><td>$281/household, flat</td></tr>
         </tbody>
       </table>
 
-      <p>Per-year override dollars at the average home, from the Town Administrator's April 8, 2026 presentation:</p>
+      <h3>Your share of any town-wide levy</h3>
+      <p>For any town-wide tax levy (existing, override addition, Q4 trash addition), your share is your assessed value divided by the total residential assessed value:</p>
+      <code class="method-formula">your_share = your_AV / 9,900,000,000</code>
+      <p>For an override that raises $9M town-wide, an avg-AV ($1.29M) home pays about $9M &times; (1.29M / 9.9B) = $1,174. The page reads each year's per-home dollar straight from the Town Administrator's April 8 2026 schedule (table below) and rescales linearly, but the math is the same as multiplying town-wide totals by <code>your_share</code>.</p>
+
+      <h3>Override draw per year, per tier</h3>
+      <p>The override phases in over three years. These are the dollars an average single-family home ($1,291,507 AV) pays at end of each phase-in year. To get your number, multiply by (your_AV / $1,291,507).</p>
       <table class="anchor-table">
         <thead><tr><th>Tier</th><th>Year 1 (FY27)</th><th>Year 2 (FY28)</th><th>Year 3 (FY29)</th></tr></thead>
         <tbody>
@@ -504,32 +522,19 @@ title: "What the Override Costs You"
           <tr><td>Tier 3 ($15M)</td><td>$556</td><td>$1,487</td><td>$1,989</td></tr>
         </tbody>
       </table>
-
-      <h3>Scaling to your home</h3>
-      <code class="method-formula">override(tier, year) = anchor[tier][year] &times; (your_AV / 1,291,507)
-trash_levy(year)       = trash_total[year] &times; (your_AV / 9,900,000,000)</code>
+      <p>Source: Town Administrator's April 8 2026 presentation, slide 8. Year 2 and Year 3 already include 2.5% Prop 2&frac12; growth compounding on the override base during phase-in, which is why this method gives slightly higher numbers than the simplified per-$1,000 rates in the April 15 presentation (e.g. $918/yr vs. $899/yr at median home for Tier 1).</p>
 
       <h3>Bill &harr; assessed value bridge</h3>
       <p>If you enter your bill instead of AV, the page back-calculates at the FY26 residential rate:</p>
       <code class="method-formula">AV = bill &times; 1,000 / 8.56</code>
       <p>This assumes no exemptions. Seniors, veterans, and blind homeowners with statutory exemptions have a higher actual AV than the back-calc shows; entering AV directly is more accurate for them.</p>
 
-      <h3>Your full bill in any scenario</h3>
-      <code class="method-formula">baseline(year)  = current_bill &times; (1.025)^year
-override(year)  = anchor[tier][year] &times; (your_AV / 1,291,507)   (0 if no override passes)
-trash(year)     = trash_levy(year) if Q4 passes, else $281 BoH fee
-total(year)     = baseline + override + trash
-override_share  = override / total</code>
-
       <h3>Cumulative cost (5- and 10-year totals)</h3>
       <p>The override is permanent. Year 3 is the full phase-in rate; the cumulative formula assumes it holds steady after that:</p>
       <code class="method-formula">cumulative(N years) = Y1 + Y2 + Y3 &times; (N &minus; 2)</code>
 
       <h3>Income context</h3>
-      <p>Each cell is the Year 3 (full phase-in) override at your AV, divided by the bracket income. Percentile labels come from ACS 2020&ndash;2024 table B19001 for Marblehead.</p>
-
-      <h3>Why these numbers are a touch higher than the April 15 per-$1,000 figures</h3>
-      <p>The anchor table already bakes in 2.5% Prop 2&frac12; growth compounding on the override base during the three-year phase-in. The simplified per-$1,000 rates in the April 15 presentation strip that out for legibility. Same source, same math, slightly fuller picture: $918/yr here vs. $899/yr there at the median home for Tier 1.</p>
+      <p>Each cell is your Year 3 (full phase-in) override cost, divided by the bracket income. Percentile labels come from ACS 2020&ndash;2024 table B19001 for Marblehead.</p>
     </div>
   </details>
 
