@@ -350,6 +350,64 @@ title: "What the Override Costs You"
 @media (hover: none) {
   .scenario-table tbody td:not(:first-child) { cursor: pointer; }
 }
+
+/* Methodology disclosure: anchored at #methodology, shareable. Native
+   <details> behavior, no script. */
+.methodology {
+  max-width: 780px; margin: 36px auto 28px;
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  background: var(--surface); overflow: hidden;
+}
+.methodology > summary {
+  cursor: pointer; list-style: none; user-select: none;
+  padding: 14px 18px; display: flex; align-items: center; gap: 10px;
+  font-weight: 700; color: var(--text);
+}
+.methodology > summary::-webkit-details-marker { display: none; }
+.methodology > summary::before {
+  content: "\25B8"; display: inline-flex; align-items: center; justify-content: center;
+  width: 20px; height: 20px; border: 1.5px solid var(--c-teal); border-radius: 50%;
+  font-size: 10px; color: var(--c-teal);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+.methodology[open] > summary::before {
+  transform: rotate(90deg); background: var(--c-teal); color: #fff;
+}
+.methodology-body {
+  padding: 4px 18px 18px; border-top: 1px solid var(--divider);
+  font-size: 14px; color: var(--text-muted); line-height: 1.55;
+}
+.methodology-body h3 {
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px;
+  color: var(--text-subtle); margin: 18px 0 8px; font-weight: 700;
+}
+.methodology-body h3:first-child { margin-top: 12px; }
+.method-formula {
+  display: block; background: color-mix(in srgb, var(--c-teal) 6%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--c-teal) 18%, var(--border));
+  border-radius: var(--radius-sm);
+  padding: 10px 14px; margin: 6px 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px; color: var(--text);
+  font-variant-numeric: tabular-nums;
+  white-space: pre-wrap; word-break: break-word;
+}
+.methodology-body .anchor-table {
+  width: 100%; border-collapse: collapse;
+  font-variant-numeric: tabular-nums; font-size: 13px;
+  margin: 4px 0 4px;
+}
+.methodology-body .anchor-table th,
+.methodology-body .anchor-table td {
+  padding: 6px 10px; text-align: right; border-bottom: 1px solid var(--divider);
+}
+.methodology-body .anchor-table th {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px;
+  color: var(--text-subtle); font-weight: 600;
+}
+.methodology-body .anchor-table td:first-child,
+.methodology-body .anchor-table th:first-child { text-align: left; }
 </style>
 <h1 class="h-center">What the Override Costs You</h1>
   <p class="subtitle h-center">Enter your home's assessed value to see the cost year-by-year for each override tier.</p>
@@ -419,6 +477,61 @@ title: "What the Override Costs You"
   <h2 class="h-center">Income context</h2>
   <p class="subtitle h-center">Override cost as a share of household income across the distribution.</p>
   <div id="income-panel"></div>
+
+  <details class="methodology" id="methodology">
+    <summary>How this is calculated</summary>
+    <div class="methodology-body">
+      <p>Every figure on this page scales linearly from a town-average anchor and adds Prop 2&frac12; baseline growth on top of your current bill. Sources are in the footnotes below.</p>
+
+      <h3>Anchor numbers</h3>
+      <table class="anchor-table">
+        <thead><tr><th>Constant</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Average single-family assessed value</td><td>$1,291,507</td></tr>
+          <tr><td>FY26 residential tax rate</td><td>$8.56 per $1,000</td></tr>
+          <tr><td>Prop 2&frac12; baseline growth</td><td>2.5%/yr, compounded</td></tr>
+          <tr><td>Total residential assessed value (Q4 trash base)</td><td>~$9.9B</td></tr>
+          <tr><td>Board of Health curbside fee (if Q4 fails)</td><td>$281/household, flat</td></tr>
+        </tbody>
+      </table>
+
+      <p>Per-year override dollars at the average home, from the Town Administrator's April 8, 2026 presentation:</p>
+      <table class="anchor-table">
+        <thead><tr><th>Tier</th><th>Year 1 (FY27)</th><th>Year 2 (FY28)</th><th>Year 3 (FY29)</th></tr></thead>
+        <tbody>
+          <tr><td>Tier 1 ($9M)</td><td>$168</td><td>$857</td><td>$1,188</td></tr>
+          <tr><td>Tier 2 ($12M)</td><td>$362</td><td>$1,237</td><td>$1,590</td></tr>
+          <tr><td>Tier 3 ($15M)</td><td>$556</td><td>$1,487</td><td>$1,989</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Scaling to your home</h3>
+      <code class="method-formula">override(tier, year) = anchor[tier][year] &times; (your_AV / 1,291,507)
+trash_levy(year)       = trash_total[year] &times; (your_AV / 9,900,000,000)</code>
+
+      <h3>Bill &harr; assessed value bridge</h3>
+      <p>If you enter your bill instead of AV, the page back-calculates at the FY26 residential rate:</p>
+      <code class="method-formula">AV = bill &times; 1,000 / 8.56</code>
+      <p>This assumes no exemptions. Seniors, veterans, and blind homeowners with statutory exemptions have a higher actual AV than the back-calc shows; entering AV directly is more accurate for them.</p>
+
+      <h3>Your full bill in any scenario</h3>
+      <code class="method-formula">baseline(year)  = current_bill &times; (1.025)^year
+override(year)  = anchor[tier][year] &times; (your_AV / 1,291,507)   (0 if no override passes)
+trash(year)     = trash_levy(year) if Q4 passes, else $281 BoH fee
+total(year)     = baseline + override + trash
+override_share  = override / total</code>
+
+      <h3>Cumulative cost (5- and 10-year totals)</h3>
+      <p>The override is permanent. Year 3 is the full phase-in rate; the cumulative formula assumes it holds steady after that:</p>
+      <code class="method-formula">cumulative(N years) = Y1 + Y2 + Y3 &times; (N &minus; 2)</code>
+
+      <h3>Income context</h3>
+      <p>Each cell is the Year 3 (full phase-in) override at your AV, divided by the bracket income. Percentile labels come from ACS 2020&ndash;2024 table B19001 for Marblehead.</p>
+
+      <h3>Why these numbers are a touch higher than the April 15 per-$1,000 figures</h3>
+      <p>The anchor table already bakes in 2.5% Prop 2&frac12; growth compounding on the override base during the three-year phase-in. The simplified per-$1,000 rates in the April 15 presentation strip that out for legibility. Same source, same math, slightly fuller picture: $918/yr here vs. $899/yr there at the median home for Tier 1.</p>
+    </div>
+  </details>
 
   <div class="footnotes">
     <p><span class="footnote-marker"></span>Exact numbers from the Town Administrator's override presentation (April 8, 2026). Anchored to the average single-family assessed value of $1,291,507 and scaled linearly to your value. These figures include the normal 2.5% Proposition 2&frac12; levy growth compounding on the override base during the three-year phase-in, which is why they are slightly higher than the simplified per-$1,000 rates in the April 15 presentation (e.g. $918/yr vs. $899/yr at median home for Tier 1). The 2.5% growth is state law, not a local policy choice.</p>
@@ -909,4 +1022,20 @@ function wireScenarioTooltip() {
 }
 
 update();
+
+// Open the methodology disclosure when deep-linked via #methodology so the
+// shareable URL actually shows the formulas, not the closed summary.
+(function () {
+  function openMethodologyIfHashed() {
+    if (window.location.hash !== '#methodology') return;
+    var el = document.getElementById('methodology');
+    if (!el) return;
+    el.open = true;
+    requestAnimationFrame(function () {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+  openMethodologyIfHashed();
+  window.addEventListener('hashchange', openMethodologyIfHashed);
+})();
 </script>
