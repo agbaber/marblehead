@@ -27,11 +27,19 @@ function validateSegment(seg, i, errors) {
   }
 }
 
+function stripFences(text) {
+  // The prompt says "no code fences" but models occasionally wrap output anyway.
+  return text
+    .replace(/^\s*```(?:json)?\s*\n/, '')
+    .replace(/\n```\s*$/, '')
+    .trim();
+}
+
 export function parseResponse(text) {
   const errors = [];
   let obj;
   try {
-    obj = JSON.parse(text);
+    obj = JSON.parse(stripFences(text));
   } catch (e) {
     return { valid: false, errors: [`invalid JSON: ${e.message}`] };
   }

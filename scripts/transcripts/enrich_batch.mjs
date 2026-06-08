@@ -101,7 +101,7 @@ async function collect() {
     process.exit(1);
   }
   let written = 0, failed = 0;
-  for await (const result of client.messages.batches.results(state.batch_id)) {
+  for await (const result of await client.messages.batches.results(state.batch_id)) {
     const slug = result.custom_id;
     const path = resolve(TRANSCRIPTS_DIR, `${slug}.md`);
     if (!existsSync(path)) {

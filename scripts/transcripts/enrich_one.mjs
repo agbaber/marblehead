@@ -45,7 +45,7 @@ async function main() {
   const client = new Anthropic();
   const res = await client.messages.create({
     model: MODEL,
-    max_tokens: 8192,
+    max_tokens: 16384,
     system: [{ type: 'text', text: systemPrompt, cache_control: { type: 'ephemeral' } }],
     messages: [{ role: 'user', content: body }],
   });
