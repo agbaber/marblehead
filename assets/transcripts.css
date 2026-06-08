@@ -1085,3 +1085,24 @@
   background: var(--c-navy);
   color: var(--c-fog);
 }
+
+/* Whole-card-clickable pattern: the title anchor stretches to cover the
+   card, and topic chip links lift above it via z-index so they stay
+   independently clickable. */
+.meeting-card { position: relative; }
+
+.meeting-card .card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.meeting-card .card-topics a {
+  position: relative;
+  z-index: 1;
+}
+
+.meeting-card:hover {
+  border-color: var(--c-navy);
+}
