@@ -9,7 +9,37 @@ vimeo_url: "https://vimeo.com/1158848163"
 duration_seconds: 695
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board unanimously declares snow emergency through January 30, 2026"
+  summary: "The Marblehead Select Board convened an emergency virtual meeting on January 26, 2026 to declare a snow emergency covering January 26 through January 30, 2026 at 7:00 AM. The declaration authorizes the DPW to remove accumulated snow from the business district, historic district, school crosswalks, and the causeway sidewalk, depositing it at the State Street landing and Riverhead Beach boat ramp. The acting conservation agent, Brendan Callahan, has been coordinating with the Conservation Commission chair and notifying MassDEP, with the Conservation Commission set to ratify the actions at a scheduled Thursday meeting. Bulk snow removal operations are planned overnight Tuesday through Thursday."
+  decisions:
+    - "Approved snow emergency declaration for Marblehead from January 26 through January 30, 2026 at 7:00 AM"
+  votes:
+    - motion: "Declare snow emergency January 26–30, 2026 due to significant snow accumulation posing immediate threat to health and safety"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-safety
+    topic_confidence: 0.92
+    start_seconds: 0
+    end_seconds: 687
+    featured: true
+    headline: "Select Board unanimously declares snow emergency through January 30 to enable snow removal"
+    dek: "DPW Director outlined removal locations, DEP notification requirements, and public safety rationale for the emergency declaration."
+    summary: |
+      The board convened virtually and heard from the DPW Director (identified contextually as Amy) on the need for the declaration. Key points included:
+      
+      - Accumulated snow has narrowed streets, reducing clearance for emergency vehicles, and blocked sidewalks and crosswalks near schools and businesses.
+      - The town has no remaining open space for snow deposit; the only approved disposal sites are the **State Street landing** and **Riverhead Beach** (boat ramp), both reported to have minimal additional environmental impact compared to snow melting into storm drains.
+      - Snow has not collected significant trash and was not treated with additional salt or de-icer during the current storm, limiting contaminants.
+      - Acting Conservation Agent **Brendan Callahan** has notified the Conservation Commission chair and sent a heads-up to MassDEP. A formal DEP submission will follow the board's declaration, and the Conservation Commission is expected to ratify the emergency action at its Thursday meeting.
+      - Removal operations are planned primarily **overnight (midnight–7 AM) Tuesday, Wednesday, and Thursday**; smaller crosswalk clearance may begin Tuesday daytime.
+      - The DPW Director asked residents to keep snow on private property, clear catch basins and fire hydrants if possible, and drip faucets given forecast extreme cold following three reported frozen-pipe incidents.
+      
+      The board voted unanimously (Singer – in favor, Nunan – in favor, Zis – in favor, Fox – in favor) to declare the emergency.
+    key_speakers: ["Amy (DPW Director)", "Mr. Fox (Select Board Chair)", "Ms. Singer (Select Board)", "Ms. Nunan (Select Board)", "Mr. Zis (Select Board)", "Brendan Callahan (Acting Conservation Agent, referenced)", "Chief (Police or Fire Chief, referenced)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

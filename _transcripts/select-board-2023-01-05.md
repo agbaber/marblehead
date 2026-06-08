@@ -9,7 +9,95 @@ vimeo_url: "https://vimeo.com/786650339"
 duration_seconds: 2192
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Alicia Benjamin appointed Finance Director; Lt. Sweeney receives Medal of Commendation"
+  summary: "The Select Board convened briefly in executive session to conclude contract negotiations, then unanimously appointed Alicia Benjamin as Finance Director. The board also recognized Lieutenant Sean Sweeney Sr. with the police department's highest award, the Medal of Commendation, for entering 49-degree ocean water to rescue a woman at Point of Rocks Lane on December 4, 2022. Additional business included approval of a lease for two hybrid police vehicles and a common victualler license for A&D Clam Box at 195 Pleasant Street."
+  decisions:
+    - "Approved appointment of Alicia Benjamin as Finance Director"
+    - "Approved letter of appreciation for Lt. Sean Sweeney Sr. from the Select Board"
+    - "Approved lease for two new hybrid police vehicles with outfitting"
+    - "Approved common victualler license for A&D Clam Box, 195 Pleasant Street"
+    - "Approved minutes of November 30, 2022 and December 7, 2022"
+  votes:
+    - motion: "Enter executive session for Finance Director contract negotiations"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Alicia Benjamin as Finance Director"
+      result: "in favor (unanimous)"
+    - motion: "Select Board letter of appreciation for Lt. Sweeney Sr."
+      result: "in favor (unanimous)"
+    - motion: "Approve lease for two new police vehicles"
+      result: "in favor (unanimous)"
+    - motion: "Approve common victualler license for A&D Clam Box"
+      result: "in favor (unanimous)"
+    - motion: "Approve minutes of November 30 and December 7, 2022"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 1
+    end_seconds: 164
+    featured: true
+    headline: "Alicia Benjamin unanimously appointed Finance Director after executive session"
+    dek: "The board entered executive session to finalize Benjamin's employment contract, then returned to open session to formally vote on her appointment."
+    summary: "The board opened the meeting by immediately voting to enter executive session under General Law Section 38 for contract negotiations with the Finance Director candidate, noting that public discussion could have a detrimental effect on the negotiating position. Upon reconvening in open session, Town Administrator (voice on record) announced that a contract had been concluded with Alicia Benjamin and moved for her formal appointment. The board voted unanimously to appoint Benjamin as Finance Director, subject to execution of the approved employment contract."
+    key_speakers: ["Alicia Benjamin (Finance Director appointee)", "Town Administrator"]
+  - topic: public-safety
+    topic_confidence: 0.98
+    start_seconds: 165
+    end_seconds: 656
+    headline: "Lt. Sean Sweeney Sr. awarded Medal of Commendation for ocean rescue"
+    dek: "The police chief read the formal commendation describing Sweeney's entry into 49-degree surf to pull a woman from the ocean at Point of Rocks Lane on December 4, 2022."
+    summary: |
+      Police Chief King presented the department's highest meritorious recognition, the Medal of Commendation, to Lieutenant Sean Sweeney Sr. for actions on December 4, 2022, at approximately 3:06 PM. According to the commendation letter, Sweeney responded to a report of a distressed woman at Point of Rocks Lane, found her unresponsive and positioned dangerously close to the ocean edge on slippery rocks with waves crashing nearby. Sweeney entered the approximately 49-degree water, held onto a shore rock with one arm, and seized an opportunity as tidal surge brought the woman back toward shore, grabbing her sweatshirt to prevent her from being pulled out to sea. He and Officer DeBellis then pulled the woman from the water and assisted her to safety until Marblehead fire rescue arrived.
+      
+      The chief noted that Sweeney had not wanted the recognition and is nearing retirement after approximately 25 years of service, and that both of his sons are also police officers. The Select Board voted unanimously to issue a formal letter of appreciation to Sweeney in addition to the departmental medal.
+    key_speakers: ["Chief King (Police Chief)", "Lt. Sean Sweeney Sr."]
+  - topic: public-safety
+    topic_confidence: 0.9
+    start_seconds: 698
+    end_seconds: 956
+    headline: "Select Board approves lease for two hybrid police interceptor vehicles"
+    dek: "The board unanimously approved the lease terms for two Ford hybrid police interceptors, funding for which was previously authorized by town meeting warrant articles."
+    summary: |
+      Chief King presented the lease agreement for two police vehicles previously approved through warrant articles. He noted that pricing on police interceptors, particularly hybrids, is largely non-negotiable but that departments can achieve some savings through outfitting, reusing equipment from vehicles being taken out of service. Purchasing is conducted through regional consortiums that handle competitive bidding.
+      
+      The chief confirmed the vehicles are Ford hybrid interceptors and indicated the department intends to repurpose one retiring patrol vehicle for the School Resource Officer (SRO) role. Any sale of the second vehicle on the open market would require a return to the board for approval. The board voted unanimously to approve the lease and authorized the chair to sign on behalf of the board.
+    key_speakers: ["Chief King (Police Chief)"]
+  - topic: permits-zoning
+    topic_confidence: 0.92
+    start_seconds: 957
+    end_seconds: 1103
+    headline: "Common victualler license approved for A&D Clam Box at 195 Pleasant Street"
+    dek: "Owner Clevis Curesa, who already operates other businesses in town, plans a family-oriented seafood restaurant with seating for 13, open Monday–Sunday 10 AM to 10 PM."
+    summary: "The Select Board approved a common victualler license for A&D Clam Box at 195 Pleasant Street. Applicant Clevis Curesa described plans to continue the property's legacy as a seafood destination, offering baked fish, fried items, burgers, and family meals in a slightly more upscale style than its predecessor, Big Fish. Curesa noted the surrounding intersection has been undergoing beautification work. Seating capacity is 13, with operating hours Monday through Sunday, 10 AM to 10 PM. The board voted unanimously to approve the license; the operator anticipated opening within approximately one week."
+    key_speakers: ["Clevis Curesa (A&D Clam Box applicant)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1104
+    end_seconds: 1146
+    headline: "Meeting minutes of November 30 and December 7, 2022 approved"
+    dek: "The board voted unanimously to approve two sets of prior meeting minutes with no discussion."
+    summary: "The board moved and voted unanimously to approve the minutes of November 30, 2022 and December 7, 2022. No correspondence was noted."
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 1147
+    end_seconds: 2170
+    headline: "Resident Dan Albert raises pedestrian safety concerns after November 29 crash at Pleasant Street"
+    dek: "Albert presented details from police reports about a pedestrian struck at Besson and Pleasant Streets and urged the board to improve incident escalation, street lighting, and police cultural attitudes toward vulnerable road users."
+    summary: |
+      Resident Dan Albert of 58 Leeson Road described a pedestrian-vehicle collision that occurred November 29 at approximately 5:02 PM at Besson Street and Pleasant Street (Village Plaza area). According to Albert's review of police reports, pedestrian Mary Pimentel was struck when a driver making a left turn from Besson Street did not see her crossing outside a marked crosswalk. A witness had stopped her vehicle to yield to Pimentel, and the striking driver apparently interpreted that stop as a signal to proceed.
+      
+      Albert made three recommendations to the board:
+      
+      1. **Incident escalation**: All police reports involving pedestrians, cyclists, or other vulnerable road users should be systematically forwarded to the Town Administrator and reported to the Select Board.
+      2. **Street lighting**: The intersection is served by a street light but was described in the police report as "very dark." Albert argued the Marblehead Municipal Light Department (MMLD) should coordinate with relevant departments to meet lighting standards set by the Manual on Uniform Traffic Control Devices.
+      3. **Police reporting culture**: Albert contended the responding officers' reports focused on the pedestrian's dark clothing and lack of crosswalk use rather than on driver behavior, and argued this reflects a broader cultural bias toward motorists. He noted that state law does not require pedestrians to use a crosswalk if one is more than 300 feet away, nor to wear reflective clothing.
+      
+      The Town Administrator responded that serious incidents are communicated to his office by the police chief, that crosswalk repainting follows a seasonal construction cycle, and that a sidewalk and pedestrian study is underway that will produce an inventory of needed improvements. The board acknowledged the comments and stated that incident reports are forwarded to relevant departments and patterns are tracked.
+    key_speakers: ["Dan Albert (resident, 58 Leeson Road)", "Town Administrator"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

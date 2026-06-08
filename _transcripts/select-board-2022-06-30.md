@@ -9,7 +9,103 @@ vimeo_url: "https://vimeo.com/725755777"
 duration_seconds: 2181
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board approves year-end transfers totaling $260,095 and routine licenses"
+  summary: "The Select Board heard the annual stormwater management program presentation required under EPA permit, then approved a set of year-end budget transfers totaling $260,095 drawn primarily from surplus health insurance funds. The board also approved a common victualler license for Eat Well Kitchen, a one-day outdoor entertainment license for The Beacon restaurant, and two contract amendments for the police station painting and State Street restroom projects."
+  decisions:
+    - "Approved year-end FY22 budget transfers totaling $260,095"
+    - "Approved common victualler license for Eat Well Kitchen on Atlantic Avenue"
+    - "Approved one-day outdoor entertainment license for The Beacon at 143 Pleasant Street for June 30, 2022"
+    - "Approved contract amendment for police station exterior painting, increasing contract by $4,000"
+    - "Approved contract amendment for State Street restroom project, increasing contract by $2,903.18"
+  votes:
+    - motion: "Year-end FY22 budget transfers"
+      result: "in favor (unanimous)"
+    - motion: "Common victualler license for Eat Well Kitchen"
+      result: "in favor (unanimous)"
+    - motion: "One-day entertainment license for The Beacon"
+      result: "in favor (unanimous)"
+    - motion: "Contract amendments for police station painting and State Street restroom"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: trash-dpw
+    topic_confidence: 0.82
+    start_seconds: 197
+    end_seconds: 1011
+    headline: "DPW presents annual EPA stormwater management program update to Select Board"
+    dek: "Staff outlined six EPA-required minimum control measures and noted dog waste in catch basins as a leading source of bacterial contamination."
+    summary: |
+      A DPW staff member presented the town's MS4 stormwater management program, now in its fourth year of compliance under an EPA permit. The six minimum control measures covered were: public education (including fourth-grade outreach and partnership with Salem Sound Coastwatch), public involvement (annual comment period on the posted stormwater management plan), illicit discharge detection and elimination (annual employee training), construction site runoff control (inspections with the building department and Conservation Commission), post-construction stormwater management, and good housekeeping/pollution prevention.
+      
+      Key operational highlights included:
+      - Annual catch basin cleaning; basins are tagged with orange markers when cleaned and re-inspected if found 50% or more full
+      - New catch basins installed with hoods and sumps to trap sediment and oil before discharge to the ocean
+      - Annual dry-weather and wet-weather testing of approximately 86 outfalls, with about 80% completed this year; bacteria levels are the primary metric
+      - GIS system currently being updated to track basin inspection data
+      - ~100 storm drain medallions installed in Old Town in partnership with Sustainable Marblehead under a World Ocean Day initiative
+      
+      Board members noted that dog waste deposited in catch basins is a major contributor to bacterial readings, and staff described how the Beyond Street culvert replacement project produced a measurable reduction in bacteria levels at that outfall.
+    key_speakers: ["DPW/Stormwater staff presenter (name not identified)", "Maggie (GIS/stormwater staff, referenced by name)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 1038
+    end_seconds: 1456
+    featured: true
+    headline: "Select Board approves $260,095 in year-end FY22 budget transfers, primarily from health insurance surplus"
+    dek: "The interim finance director walked through eleven line-item transfers covering trash disposal, highway expenses, legal fees, police overtime, and other accounts running over budget."
+    summary: |
+      The interim finance director presented a slate of year-end transfers for FY22, previously reviewed and approved by the Finance Committee. All transfers except one draw from a surplus in the health insurance fund, which has historically been over-budgeted. The highway department transfer moves money from salary savings to expense due to personnel shortages that required contracted street sweeping and equipment repairs.
+      
+      | Line Item | Amount | Notes |
+      |---|---|---|
+      | Trash disposal | (not specified) | Rising trash rates and anticipated June bills |
+      | Highway dept. salary → expense | ~$79,000 | Street sweeping contract, broken equipment door, lift, partitioning |
+      | Legal | ~$5,700 over budget | Anticipated year-end bills |
+      | Police overtime | $20,000 | Two unanticipated retirements and two trials; ~$13,000 offset by grant |
+      | Street lighting | (not specified) | Anticipated June bill; partially offset by longer days |
+      | Parking tickets | ~$12,000 over | Higher administrative partnership costs |
+      | Cemetery unemployment | ~$10,700 | Unanticipated unemployment claim |
+      | Traffic lights | ~$3,600 over | Repair of existing signals |
+      | Street maintenance | $2,635 | Public lot paving |
+      | Accounting/audit | (not specified) | Audit firm fees increased after budget set |
+      | Psychological counseling (Health Dept.) | (not specified) | Contract slightly over; grant revenue anticipated |
+      | Legal notices | $100 | Anticipated grant-related notice |
+      
+      **Total transfers: $260,095**
+      
+      The board noted these year-end transfers are a routine annual process. The motion passed unanimously.
+    key_speakers: ["Interim Finance Director (name not identified)"]
+  - topic: permits-zoning
+    topic_confidence: 0.88
+    start_seconds: 1501
+    end_seconds: 1773
+    headline: "Select Board approves common victualler license for Eat Well Kitchen and one-day license for The Beacon"
+    dek: "New owner Fernanda de Oliveira received a license for the Atlantic Avenue health-food café; The Beacon on Pleasant Street received a one-day outdoor entertainment license for its first anniversary."
+    summary: |
+      **Eat Well Kitchen** – Fernanda de Oliveira appeared before the board to receive a common victualler and bitter license for Eat Well Kitchen on Atlantic Avenue. She described purchasing the business from a prior owner after working there for two years. Hours of operation are Monday through Sunday, 8 AM to 4 PM; seating capacity is 16. License was approved unanimously subject to all applicable inspections, signage, and fees paid.
+      
+      **The Beacon, 143 Pleasant Street** – Event coordinator Michael Tumulty requested a one-day outdoor entertainment license for the patio area on June 30, 2022 (the restaurant's first anniversary), from 12 PM to 4 PM. The board noted this is a single-day license and any future music or entertainment events would require a separate application. Motion passed unanimously.
+    key_speakers: ["Fernanda de Oliveira (Eat Well Kitchen owner)", "Michael Tumulty (event coordinator, The Beacon)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1773
+    end_seconds: 2133
+    headline: "Board approves two contract amendments and hears updates on Mass Trails grant and sling lift dedication"
+    dek: "Change orders for police station painting and State Street restrooms were approved; a Mass Trails design grant application and a new accessible boat launch lift were highlighted."
+    summary: |
+      **Contract Amendments**
+      - *Police station exterior painting* (contractor: John Florissant): Contract increased by $4,000 due to additional rotted wood found during work. Funds are within the project's appropriated contingency.
+      - *State Street restroom project* (contractor: MGS Construction): Contract increased by $2,903.18 for unanticipated plumbing repairs from winter freeze damage and automatic lock hardware. Funded within the $550,000 state grant earmarked for the project. Board inquired about timeline; staff indicated they are pushing for completion before the season opens.
+      
+      **Mass Trails Grant** – Staff described a grant application (Marblehead as lead, Salem as partner) for design and permitting of a bike path extension from Lafayette Street in Salem through Leed Mills. The design would follow the rail trail master plan using deconstructed granite, improved bridge accessibility, and restored sightlines. This is a precursor to future construction funding.
+      
+      **Sling Lift Dedication** – A board member reported that the Marblehead Disabilities Commission held a dedication ceremony for a new sling/Hoyer lift installed at State Street Landing — the first of its kind on Marblehead Harbor — allowing residents with mobility limitations to safely board boats. The purchase was made possible by a donation from the Mariners of Marblehead and Jim Moses.
+      
+      **Planning Board Update** – A board member noted attending a Planning Board meeting where accessory dwelling units were discussed, describing the discussion as broadly positive.
+    key_speakers: ["Select Board member (Becky, referenced by name)", "Select Board member (Jackie, referenced by name)", "Select Board member (Aaron, referenced by name)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

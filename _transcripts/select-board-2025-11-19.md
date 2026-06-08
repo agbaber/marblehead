@@ -9,7 +9,314 @@ vimeo_url: "https://vimeo.com/1139043753"
 duration_seconds: 8649
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board approves $1M MWRA water bond, multiple contracts, and hears Green Community energy plan"
+  summary: "The Marblehead Select Board met on November 19, 2025, approving a $1 million interest-free MWRA water bond, several building and infrastructure contracts totaling over $500,000, and shellfish constable appointments. The board received a presentation on a Municipal Energy Reduction Plan aimed at qualifying the town for the state's Green Communities program, with a vote planned for the next meeting. A continuation of a liquor license revocation hearing for Shin Dynasty was extended to December 10, 2025."
+  decisions:
+    - "Approved $1M MWRA interest-free water bond"
+    - "Approved $43,000 contract for Franklin Street Fire Station siding"
+    - "Approved $14,000 contract for Abbott Hall entry door refinishing"
+    - "Approved $47,000 contract for Moses Pickett House siding replacement"
+    - "Approved extension of fire station alerting system contract to June 30, 2026"
+    - "Approved $23,344 change order for document digitization project with MetaSource"
+    - "Approved $240,000 change order for roadway and sidewalk improvements"
+    - "Approved $73,724 three-year lease for hybrid Ford police vehicle"
+    - "Approved $19,880 change order for Elm Street Park improvements"
+    - "Approved $6,500 contract for Rail Trail Y-junction engineering services"
+    - "Approved $5,950 contract for hazardous material investigation at Coffin School"
+    - "Approved $289,000 contract for Veterans Middle School DPW roof replacement"
+    - "Approved one-day liquor licenses for Bubble Bar and Rotary Club at Abbott Hall"
+    - "Approved $5,000 fire department donation from Qua Charitable Foundation"
+    - "Approved winter snow emergency parking ban implementation"
+    - "Approved Rail Trail signage for Pleasant and Smith Street segment"
+    - "Appointed Felix Ler as Shellfish Constable, term to expire June 2026"
+    - "Appointed Jennifer Duffy as Shellfish Constable, term to expire June 2026"
+    - "Continued Shin Dynasty liquor license revocation hearing to December 10, 2025"
+    - "Set Annual Town Meeting for May 4, 2026; opened warrant; set public close date January 23, 2026 and town government close date January 30, 2026"
+    - "Approved letter of condolence for Mark Miller, town labor counsel"
+    - "Approved letter of appreciation for Massport Community Advisory Board resignation"
+  votes:
+    - motion: "Approve $1M MWRA water bond"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Felix Ler as Shellfish Constable"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Jennifer Duffy as Shellfish Constable"
+      result: "in favor (unanimous)"
+    - motion: "Continue Shin Dynasty hearing to December 10, 2025"
+      result: "in favor (unanimous)"
+    - motion: "Annual Town Meeting set for May 4, 2026"
+      result: "in favor (unanimous)"
+    - motion: "Open warrant for May 4, 2026 Annual Town Meeting"
+      result: "in favor (unanimous)"
+    - motion: "Close warrant for general public January 23, 2026"
+      result: "in favor (unanimous)"
+    - motion: "Close warrant for town government January 30, 2026"
+      result: "in favor (unanimous)"
+    - motion: "Accept $5,000 Qua Charitable Foundation donation to fire department"
+      result: "in favor (unanimous)"
+    - motion: "Approve winter snow emergency parking ban"
+      result: "in favor (unanimous)"
+    - motion: "Approve Rail Trail signage at Pleasant and Smith Street segment"
+      result: "in favor (unanimous)"
+    - motion: "Approve Franklin Street Fire Station siding contract $43,000"
+      result: "in favor (unanimous)"
+    - motion: "Approve Abbott Hall entry door refinishing contract $14,000"
+      result: "in favor (unanimous)"
+    - motion: "Approve Moses Pickett House siding contract $47,000"
+      result: "in favor (unanimous)"
+    - motion: "Extend fire station alerting system contract"
+      result: "in favor (unanimous)"
+    - motion: "Approve MetaSource digitization change order $23,344"
+      result: "in favor (unanimous)"
+    - motion: "Approve roadway and sidewalk improvements change order $240,000"
+      result: "in favor (unanimous)"
+    - motion: "Approve hybrid Ford police vehicle lease $73,724"
+      result: "in favor (unanimous)"
+    - motion: "Approve Elm Street Park improvements change order $19,880"
+      result: "in favor (unanimous)"
+    - motion: "Approve Rail Trail Y-junction engineering contract $6,500"
+      result: "in favor (unanimous)"
+    - motion: "Approve Coffin School hazardous material investigation contract $5,950"
+      result: "in favor (unanimous)"
+    - motion: "Approve Veterans Middle School DPW roof replacement contract $289,000"
+      result: "in favor (unanimous)"
+    - motion: "Approve one-day liquor licenses for Bubble Bar and Rotary Club"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 23
+    end_seconds: 544
+    headline: "Residents speak in support of Green Community energy plan; one raises abandoned vehicles at Coffin School"
+    dek: "Five residents addressed the board during public comment, four urging adoption of the upcoming energy reduction plan and one flagging abandoned vehicles and a fire-hazard shed near the Coffin School."
+    summary: |
+      Albert Jordan (Roosevelt Ave) asked the board to address three abandoned vehicles near the Coffin School that he said are blocking the building and attracting vandalism, and requested removal of a small wooden shed he described as a fire hazard. A board member confirmed the shed is being taken down.
+      
+      John Livermore (19 Russell Street), Eileen Haley (44 Longview Drive), Michelle Bell (Ocean Avenue), and Elaine Lahey (Ida Road) each spoke in favor of the Municipal Energy Reduction Plan about to be presented, citing potential grant access of up to $1,125,000 over five years, cost savings on utility bills, alignment with the town's Net Zero 2040 goal, and the requirement to become a Green Community.
+    key_speakers: ["Albert Jordan (resident, Roosevelt Ave)", "John Livermore (resident, 19 Russell St)", "Eileen Haley (resident, 44 Longview Dr)", "Michelle Bell (resident, Ocean Ave)", "Elaine Lahey (resident, Ida Rd)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.93
+    start_seconds: 545
+    end_seconds: 1267
+    headline: "Town Planner resigns; Employee of Month program launches; MBTA 3A noncompliance blocks COA van grant"
+    dek: "Town Administrator Thatcher Keer reported the town planner's resignation effective December 12, announced the first Employee of the Month, and warned that MBTA 3A noncompliance is blocking a Community Transit Grant needed to replace Council on Aging shuttle vans."
+    summary: |
+      Town Planner Alex Heitler submitted his resignation effective December 12, 2025, to pursue opportunities in Australia with his partner. The Town Administrator noted the position is critical but flagged a general caution about posting vacancies during fiscal uncertainty.
+      
+      The town's new Employee of the Month program, administered through HR, named Amanda Elli (payroll and benefits) as its first recipient; she receives a day off and her nominator, Victoria in the assessor's office, receives a half day off.
+      
+      The board was told the Community Transit Grant program — which has provided an 80% state match for Council on Aging shuttle vans and approximately $45,000 in operational support — is no longer accessible due to MBTA 3A noncompliance. Three of four COA vans were funded through the program; the 2015 vehicle is likely the next to require replacement. A select board member stated on the record that a campaign of 'active disinformation and fearmongering' contributed to the noncompliance vote and called the ongoing grant losses 'heart wrenching.'
+    key_speakers: ["Thatcher Keer (Town Administrator)", "Select board member (unidentified)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 1268
+    end_seconds: 1604
+    headline: "MHTV board seeks select board appointee; studio out of commission after roof damage"
+    dek: "MHTV board member Bob Beck asked the community to apply for the select board's designated seat on the MHTV board of directors, noting the studio is currently inoperable due to rain damage and the longtime executive director is retiring."
+    summary: |
+      Bob Beck of Marblehead Community Access and Media (MHTV) appeared to solicit applicants for the select board's one-seat appointment on the MHTV board of directors, which has been vacant for approximately two years. A school-representative seat is also open.
+      
+      Beck noted that longtime Executive Director Joan Gallaboy is retiring and a search is underway, but candidate interviews were delayed when the studio roof was damaged by rain, taking live broadcasting capabilities offline. Beck estimated the studio could be back in operation within a month. Board members meet approximately once per month.
+    key_speakers: ["Bob Beck (MHTV board member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.97
+    start_seconds: 1605
+    end_seconds: 1775
+    headline: "Board approves $1M interest-free MWRA water bond for water purification system work"
+    dek: "The board unanimously approved a $1 million, 0% interest, 10-year MWRA loan authorized under Article 17 of 2023 for construction and reconstruction of the water purification system."
+    summary: "The board voted to issue a $1,000,000 bond under the MWRA's community loan program, authorized by Article 17 of the 2023 Annual Town Meeting (which authorized $1,022,400 for the project). The loan carries 0% interest over 10 years and repayment is already incorporated into water and sewer rates. A Water and Sewer Commission representative explained the program allows the town to accelerate major infrastructure projects — such as work on Humphrey Street and ESCO Street — ahead of the paving schedule rather than spreading construction over many years."
+    key_speakers: ["Kami (Water and Sewer Commission representative, name approximate)"]
+  - topic: public-safety
+    topic_confidence: 0.98
+    start_seconds: 1776
+    end_seconds: 2673
+    headline: "Marblehead Police Department receives second re-accreditation from Massachusetts Police Accreditation Commission"
+    dek: "Chief King, Lieutenant Dave Ovi, and Officer Dan Gagnon presented the department's re-accreditation certificate, valid through October 2028, before the Select Board."
+    summary: |
+      Police Chief King and Lieutenant Dave Ovi presented the Marblehead Police Department's second re-accreditation (fourth overall assessment) from the Massachusetts Police Accreditation Commission, voted on September 16, 2025 and valid through October 2028.
+      
+      Of 258 police agencies in the Commonwealth's accreditation program, only 112 are fully accredited. The department has 32 sworn officers and 9 dispatchers. Lieutenant Ovi explained the program covers 274 mandatory standards plus approximately 70 optional standards, touching every aspect of department operations from patrol and training to hiring and discipline.
+      
+      The assessment, originally scheduled for three days, was completed in two days. Assessors came from Manchester-by-the-Sea, Mansfield, and Saugus. Board members highlighted that accreditation strengthens the department's position in competitive grant applications.
+    key_speakers: ["Chief King (Police Chief)", "Lieutenant Dave Ovi (accreditation manager)", "Officer Dan Gagnon (assistant accreditation manager)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 2674
+    end_seconds: 5172
+    featured: true
+    headline: "Select Board hears Municipal Energy Reduction Plan tied to Green Community designation; vote deferred to next meeting"
+    dek: "Sustainability Coordinator Logan Casey presented a draft plan projecting up to 45% energy reduction across 25 town buildings and 175 vehicles, required to apply for the state Green Communities program, with a vote expected at the next meeting; MBTA 3A noncompliance would withhold grant funds until compliance is restored."
+    summary: |
+      Logan Casey, the town's Sustainability Coordinator, presented the draft Municipal Energy Reduction Plan developed with nonprofit Power Options at a cost of $9,500 in ARPA funds. The plan covers 25 buildings, 28 water/sewer facilities, and 175 vehicles and is required for the town to apply to the state's Green Communities program.
+      
+      **Energy baseline (FY2024):** Approximately 60,000 million BTU annual energy use, generating roughly 3,700 tons of CO₂ equivalents — about 2% of community-wide emissions.
+      
+      **Building strategies (14 highest-energy buildings including all schools, DPW/Mary Alley, fire station, police station):**
+      - Near-term (1–3 years, payback ≤2 years): optimize heating set points, ventilation scheduling, LED lighting conversions, motion sensors, energy-efficient appliances
+      - Long-term: electrification (heat pumps), deep energy retrofits, roof-mounted solar generation
+      - Projected savings if all actions implemented: **25% of annual building energy use**
+      
+      **Vehicle strategies:** Zero Emissions Vehicle First procurement policy already adopted; plan calls for approximately 6 light-duty ZEVs per year; vehicles alone projected to save **~20% of energy use** over time; approximately 1 in 4 fleet vehicles projected to be all-electric by 2030.
+      
+      **Combined potential:** Plan's full action set could reduce annual energy use by up to **45%**, exceeding the state's 20% over 5 years minimum (non-binding).
+      
+      **Green Communities grants (if eligible):**
+      | Grant | Amount |
+      |---|---|
+      | Designation grant (one-time) | $150,000–$175,000 |
+      | Competitive grant (twice annually, standard) | up to $250,000 per round |
+      | Competitive grant (full electrification projects) | up to $500,000 |
+      
+      **3A complication:** DOER confirmed that if the town applied and was designated a Green Community while out of MBTA 3A compliance, both the designation grant and competitive grants would be withheld until compliance is restored. Marblehead is described as the 'test case' for this situation. The municipal light plant must also adopt a renewable energy charge (estimated ~$5–$6/year per average household) as a condition; the Light Commission has expressed concern about imposing the charge before grant benefits are accessible.
+      
+      The board discussed potentially adopting the plan at the next meeting and sending a letter of support to the Light Commission, with caution expressed about directing another board on rate-setting. A board member proposed a grant triage analysis to quantify losses from 3A noncompliance and develop alternative funding scenarios including a potential debt override. No vote was taken; adoption is expected at the next meeting.
+    key_speakers: ["Logan Casey (Sustainability Coordinator)", "Thatcher Keer (Town Administrator)", "Select board members (unidentified)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 5173
+    end_seconds: 5359
+    headline: "Board appoints two shellfish constables: Felix Ler and Jennifer Duffy"
+    dek: "Felix Ler, a lifelong resident and assistant harbormaster, and Jennifer Duffy, a 30-year Marblehead resident, were each appointed Shellfish Constable with terms expiring June 2026."
+    summary: "The board appointed Felix Ler (lifelong resident, assistant harbormaster, Bachelor's degree holder) and Jennifer Duffy (resident approximately 30 years, Great Lakes fishing background) as Shellfish Constables, both with terms expiring June 2026. A third applicant, Eric Bur, was not present despite multiple contact attempts and was not considered. Both appointees were directed to be sworn in by the town clerk."
+    key_speakers: ["Felix Ler (appointee)", "Jennifer Duffy (appointee)"]
+  - topic: permits-zoning
+    topic_confidence: 0.97
+    start_seconds: 5360
+    end_seconds: 5825
+    headline: "Shin Dynasty liquor license revocation hearing continued to December 10 as inspections near completion"
+    dek: "Owner Alex Lewis reported plumbing, electrical, and building inspections are complete; outstanding items are gas restoration, water inspection, and health inspection, all with a state-imposed November 30 deadline."
+    summary: |
+      The board continued a public hearing — originally opened November 13, 2024 — regarding possible revocation of wine and malt beverage license #0042-0656 for Shin Dynasty at 1 Atlantic Avenue.
+      
+      Owner Alex Lewis reported that plumbing, electrical, and building inspections have been signed off. National Grid was scheduled to restore gas service the following day; once confirmed, the water system can be pressurized, enabling water and health inspections. Fire inspection was described as likely ready.
+      
+      The state-imposed deadline for inspections is November 30, 2025 — approximately four and a half business days away given the Thanksgiving holiday. The board expressed sympathy but noted its hands are tied by the state deadline. The board will not extend beyond November 30; if inspections are not complete by that date, the license would lapse and Lewis would need to reapply. Board members encouraged Lewis to stay in contact with Building Inspector Steve Cummings and the health department.
+      
+      The hearing was continued to December 10, 2025.
+    key_speakers: ["Alex Lewis (Shin Dynasty owner)", "Select board chair"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 5826
+    end_seconds: 6144
+    headline: "Coffin School reuse process update: five internal EOIs and three RFI responses received; second public meeting planned"
+    dek: "Town Administrator Brendan Callahan received interest from five town departments and three external parties, including Harbor Light Homes for 40B affordable housing; a second public meeting with a different format is being considered."
+    summary: |
+      Town Administrator Callahan's memo summarized responses to the Coffin School reuse process:
+      
+      **Expressions of Interest (internal town departments, 5 total):** Municipal Light Department, Cemetery, Recreation & Parks, Housing Authority, Community Development.
+      
+      **Request for Information responses (external, 3 total):** Cemetery (submitted twice), Harbor Light Homes (local nonprofit, proposed a 40-unit affordable housing project), and Marblehead Housing Authority.
+      
+      A first public meeting drew neighbors focused largely on housing concerns and open space. Board members noted they had expected more varied ideas (farms, art galleries, etc.) and discussed holding a second public meeting in a larger, facilitated format with dot-voting or sticky-note exercises to surface a broader range of ideas. The board also noted that a hazardous materials and demolition cost estimate for the building is being arranged (a comparable Bell School demolition/abatement cost approximately $1.4 million five years ago).
+    key_speakers: ["Select board chair", "Select board members (unidentified)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 6145
+    end_seconds: 6590
+    headline: "Board sets Annual Town Meeting for May 4, 2026; opens warrant with public deadline January 23"
+    dek: "The board voted to hold the 2026 Annual Town Meeting on May 4, 2026 at 7:00 PM, open the warrant, and set public submission deadline at January 23 and town government deadline at January 30."
+    summary: |
+      Four motions were approved unanimously:
+      1. Annual Town Meeting to be held Monday, May 4, 2026 at 7:00 PM (venue to be announced)
+      2. Warrant opened for May 4, 2026 ATM
+      3. Warrant closed to general public: Friday, January 23, 2026 at 12:00 noon
+      4. Warrant closed to town government boards and commissions: Friday, January 30, 2026 at 12:00 noon
+  - topic: public-safety
+    topic_confidence: 0.9
+    start_seconds: 6591
+    end_seconds: 6726
+    headline: "Board accepts $5,000 donation from Qua Charitable Foundation to Marblehead Fire Department"
+    dek: "The board accepted a $5,000 gift from William Lundrigan / Qua Charitable Foundation, placed under the sole discretion of the fire chief, and authorized a letter of appreciation."
+    summary: "The board unanimously accepted a $5,000 donation from William Lundrigan and the Qua Charitable Foundation to the Marblehead Fire Department, to be used at the fire chief's sole discretion, and authorized a letter of appreciation."
+  - topic: trash-dpw
+    topic_confidence: 0.82
+    start_seconds: 6727
+    end_seconds: 6752
+    headline: "Board approves as-needed winter snow emergency parking ban replacing fixed overnight ban"
+    dek: "The overnight parking ban is suspended and replaced by a snow emergency declared as-needed by DPW, fire chief, and police chief in coordination with the Town Administrator."
+    summary: "The board voted to suspend the all-night parking ban under Traffic Regulations Article 5, Section 8 and replace it with a snow emergency system activated on an as-needed basis. The DPW Director, Fire Chief, and Police Chief, in coordination with the Town Administrator, will set start and end times based on forecast or live weather conditions. Violations are subject to parking tickets and towing. Notification will be through the town website, CodeRED, social media, and MHTV. The vote is revocable if the arrangement negatively impacts public health and safety. A board member noted that enabling legislation was signed by the governor the prior week."
+  - topic: recreation-events
+    topic_confidence: 0.9
+    start_seconds: 6753
+    end_seconds: 6830
+    headline: "Board approves Rail Trail etiquette signage for Pleasant Street to Smith Street segment"
+    dek: "Town Engineer Maggie Wheeler received approval to install trail etiquette signs on the Pleasant–Smith Street segment of the Marblehead Rail Trail."
+    summary: "Town Engineer Maggie Wheeler presented the approved sign design (brown, not red as it appears in print) for the Pleasant Street to Smith Street segment of the Marblehead Rail Trail. A prior October vote covered the Clifton-Rockaway section. The board approved installation unanimously."
+    key_speakers: ["Maggie Wheeler (Town Engineer)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 6831
+    end_seconds: 7061
+    headline: "Consent agenda approved including Christmas Walk permits, surplus property declarations, and holiday hours"
+    dek: "The board approved minutes, Abbott Hall use permits, the Chamber of Commerce 54th Annual Christmas Walk and Tree Lighting events, surplus property declarations, and holiday office hours."
+    summary: |
+      Consent agenda items approved unanimously included:
+      - Minutes of October 22, November 5, and November 13, 2025
+      - Abbott Hall use for Holocaust Remembrance Day task force (January 30, 2026) and Historical Commission holiday gathering
+      - Chamber of Commerce 54th Annual Christmas Walk: Tree Lighting Friday December 5, Parade Saturday December 6, 2025, with associated street closures and parking restrictions as recommended by the police chief
+      - Holiday wreath/garland installations at business districts starting November 24 (removed by January 5, 2026), subject to Marblehead Municipal Light Department approval
+      - Holiday lighting at Old Townhouse and State Street Landing by November 21, 2025
+      - Santa's arrival at Park Landing December 6 at ~9:30 AM
+      - Surplus property: police property room firearms, Coffin School playground equipment
+      - Abbott Hall and Mary Alley holiday hours (various December 22–January 2 closures and reduced hours)
+  - topic: bonding-capital
+    topic_confidence: 0.93
+    start_seconds: 7062
+    end_seconds: 7700
+    headline: "Board approves eight contracts and change orders totaling over $760,000 for buildings, roads, fleet, and technology"
+    dek: "Contracts approved include $43K fire station siding, $14K Abbott Hall doors, $47K Moses Pickett House siding, a $240K road/sidewalk change order, $289K Veterans Middle School roof, a $73K police vehicle lease, and other items."
+    summary: |
+      The board voted on each contract individually, approving all unanimously:
+      
+      | Contract | Vendor | Amount | Funding |
+      |---|---|---|---|
+      | Franklin St Fire Station siding | Unicorn Inc. | $43,000 | Article 11, 2022 |
+      | Abbott Hall entry door refinishing | Old Boston (approx.) | $14,000 | Historical Commission gift |
+      | Moses Pickett House siding | Unicorn Inc. | $47,000 | Charitable maintenance fund |
+      | Fire station alerting system extension | Purvis Systems Inc. | $241,154 (original; no cost change) | Article 11, 2022 |
+      | Document digitization change order | MetaSource | $23,344 | IT budget |
+      | Roadway & sidewalk improvements change order | DNR Contracting | $240,000 | Article 11, 2022 |
+      | Hybrid Ford police vehicle lease (3 yr) | First American | $73,724 | — |
+      | Elm Street Park improvements change order | Raphael Construction | $19,880 | Buildings & Grounds, Historical Commission ($5K), Rec & Parks ($5K), Friends of Gary School Playground (~$4K) |
+      | Rail Trail Y-junction engineering | Apex Companies LLC | $6,500 | Maintenance/Buildings & Grounds |
+      | Coffin School hazardous materials investigation | West End Sampson (approx.) | $5,950 | — |
+      | Veterans Middle School DPW roof replacement | PAC-ON LLC | $289,000 | Article 11, 2022 |
+      
+      The Elm Street Park change order funds granite stair construction using stone recovered from an unknown cistern discovered during the project. The Rail Trail Y-junction engineering contract fulfills a federal requirement for independent cost-estimate review of the federally funded project.
+    key_speakers: ["Thatcher Keer (Town Administrator)"]
+  - topic: permits-zoning
+    topic_confidence: 0.95
+    start_seconds: 7700
+    end_seconds: 7893
+    headline: "One-day liquor licenses approved for Bubble Bar at Abbott Hall (Dec 6–7) and Rotary Club (Dec 13)"
+    dek: "Two organizations received one-day wine and malt licenses at Abbott Hall for holiday events in December 2025."
+    summary: |
+      The board approved one-day wine and malt beverage licenses for:
+      - **Bubble Bar by Boston:** December 6 and December 7, 2025, Abbott Hall, 1:00 PM–6:00 PM
+      - **Rotary Club of Marblehead:** December 13, 2025, Abbott Hall, 6:30 PM–10:30 PM
+      
+      Standard conditions apply including proof of purchase source, $50 fee per license, liability insurance, and no overnight alcohol storage. Both are to purchase from Marblehead or North Shore liquor vendors.
+  - topic: labor-personnel
+    topic_confidence: 0.82
+    start_seconds: 8112
+    end_seconds: 8203
+    headline: "Board notes passing of town labor counsel Mark Miller; approves letter of condolence"
+    dek: "Select board members announced the death of Mark Miller, who served as the town's labor counsel for approximately 20 years, and voted to send a letter of condolence to his family."
+    summary: "A board member announced that Mark Miller, the town's labor counsel for approximately 20 years, passed away after a long illness. The board unanimously approved sending a letter of condolence and recognition to his family."
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 8203
+    end_seconds: 8642
+    headline: "Board previews possible emergency meeting for high school roof contract; discusses capital planning process"
+    dek: "The board may hold a special meeting as early as Tuesday, November 25 to approve a high school roof replacement contract pending school committee vote on November 20; members also discussed the need for a formal capital improvement planning process."
+    summary: |
+      The board chair noted the school committee is voting November 20 on a contract for the high school roof replacement (a full replacement was selected over other options). Because HVAC components must be ordered promptly, the select board may hold a brief special meeting approximately 48 hours after school committee approval, likely Tuesday, November 25.
+      
+      Separately, a board member suggested placing a capital improvement plan discussion on a future agenda, including bringing facilities director Steve Cummings in to begin cataloguing multi-year capital needs. The Town Administrator noted a reinstated capital planning committee will focus on projects above approximately $1 million, with smaller items handled through the annual budget process. Known near-term needs include elevator/lift installation at the Old Townhouse and improvements to several historic buildings. The board agreed to add the item to a December agenda.
+    key_speakers: ["Thatcher Keer (Town Administrator)", "Select board members (unidentified)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

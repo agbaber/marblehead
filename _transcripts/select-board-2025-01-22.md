@@ -9,7 +9,137 @@ vimeo_url: "https://vimeo.com/1049710330"
 duration_seconds: 2237
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Marblehead Select Board approves carpet contract, grants, and previews 2025 Town Meeting articles"
+  summary: "At its January 22, 2025 meeting the Select Board heard Town Administrator updates on Mary Alley building improvements, a new keycard security system, and the hire of a new Community Development Planning Director. The board approved consent agenda contracts including a $58,828 carpet project for Mary Alley offices and a $3,800 increase to the Elm Street Improvement Project contract. Members also previewed 2025 Town Meeting articles including a Prop 2½ override placeholder, MBTA 3A zoning, Coffin School reuse, and Mary Alley HVAC replacement."
+  decisions:
+    - "Approved consent agenda minutes (December 11, December 23, February 8) and surplus equipment"
+    - "Approved appointment of Logan Casey as Marblehead's designee on the MBTA Advisory Board's Climate and Clean Energy Committee"
+    - "Approved contracts: Rafael Construction Elm Street Improvement Project increase of $3,800 and Ulti Floors Mary Alley carpet project for $58,828"
+    - "Approved letters to Metropolitan Planning Organization supporting Village Street Bridge improvements and additional bike rack funding"
+    - "Approved submission of FY2025 survey and planning grant for Marblehead Historical Properties Inventory update"
+    - "Approved proclamation of March 23–April 30, 2025 as Motorcycle Safety Awareness Period"
+    - "Approved letters of condolence to families of Libby Moore and Ed Bell"
+    - "Set February 7 deadline for Conservation Commission applications"
+  votes:
+    - motion: "Consent agenda (minutes and surplus equipment)"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Logan Casey to MBTA Advisory Board Climate and Clean Energy Committee"
+      result: "in favor (unanimous)"
+    - motion: "Consent agenda contracts (Rafael Construction and Ulti Floors)"
+      result: "in favor (unanimous)"
+    - motion: "MPO grant support letters"
+      result: "in favor (unanimous)"
+    - motion: "Historical properties inventory grant submission"
+      result: "in favor (unanimous)"
+    - motion: "Motorcycle Safety Awareness Period proclamation"
+      result: "in favor (unanimous)"
+    - motion: "Letters of condolence for Libby Moore and Ed Bell"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 3
+    end_seconds: 30
+    headline: "No public comment at January 22 meeting"
+    dek: "The chair opened public comment and received no speakers from the audience or online."
+    summary: "The chair called the meeting to order at 7:01 p.m. on January 22, 2025 and invited public comment. No members of the public, in person or online, came forward."
+    key_speakers: ["Chair (Madam Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 30
+    end_seconds: 517
+    headline: "Town Administrator details Mary Alley renovations and hire of new Planning Director"
+    dek: "Insurance proceeds and ARPA funds are funding carpet replacement, office reconfigurations, and a new keycard security system; Brendan Callahan joins as Planning Director February 10."
+    summary: |
+      Town Administrator Keer outlined several improvements underway at the Mary Alley building:
+      
+      - A carpet replacement project for the upper working level is funded through a combination of insurance proceeds (from a break-in and a flooding incident) and ARPA funding.
+      - Office space has been reconfigured: Building Inspection staff consolidated into one space with a service counter, a new small conference room created, mailroom and copy areas consolidated, and a new shared break room planned.
+      - A new keycard access system will control three entry doors, automatically locking and unlocking at set times, and will double as employee ID cards.
+      - The treasurer's office and IT server room will have restricted keycard access.
+      
+      Keer also announced that Brendan Callahan will join as the town's first-ever Community Development Planning Director on February 10. Callahan is currently the assistant director of planning for the City of Peabody and has over 19 years of public-sector experience including 16 years as senior city planner in Peabody. He is a Marblehead resident.
+    key_speakers: ["Town Administrator (Keer)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 517
+    end_seconds: 1504
+    featured: true
+    headline: "Board previews 2025 Town Meeting articles including override placeholder and Coffin School reuse"
+    dek: "Planned articles cover MBTA 3A zoning, Coffin School transfer, Mary Alley HVAC, ADU bylaw alignment, floodplain update, police hiring age limits, and a senior tax exemption program."
+    summary: |
+      The Town Administrator and board reviewed draft 2025 Town Meeting articles, including:
+      
+      | Article Area | Notes |
+      |---|---|
+      | Prop 2½ Override | Placeholder only; no decision made |
+      | Coffin School Reuse | Transfers control from School Committee to Select Board; triggers community process on future use |
+      | Mary Alley HVAC | Replace aging boiler/HVAC system via debt exclusion |
+      | MBTA 3A Multifamily Overlay | Already submitted to EOHLC with preliminary approval; same plan as previously presented |
+      | ADU Bylaw Update | Aligns local bylaw with new state ADU law; key change removes owner-occupancy requirement |
+      | Floodplain Map Update | Adjusts flood plain map for proper resident insurance coverage |
+      | Police Hiring Age Limit | Repeal age cap for police only (not fire) to broaden candidate pool |
+      | Senior Tax Exemption | Proposed local circuit-breaker supplement for seniors facing high tax burden; requires special legislation |
+      | Inspection Services Fees | Two-part: authorize Select Board to set fees via public hearing; and add home battery installation as a new fee category |
+      | Elm Street Playground | Transfer control from Select Board to Rec & Parks |
+      | Marblehead High School HVAC/Roof | Clarified: roof project cost unchanged; scope expanded to include rooftop HVAC systems to protect roof warranty |
+      
+      A board member asked whether the 3A zoning could include a stronger affordability component; the Town Administrator noted this is procedurally not feasible for this cycle but could be revisited after adoption. The existing plan includes a 10% affordability requirement for projects of six or more units.
+    key_speakers: ["Town Administrator (Keer)", "Board member"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1504
+    end_seconds: 1654
+    headline: "Board clarifies Marblehead High School roof project scope and cost"
+    dek: "The roof replacement budget is unchanged; a separate HVAC component was added to avoid damaging a new roof during future system replacement."
+    summary: "The Town Administrator clarified that the Marblehead High School project, sometimes referred to as \"the roof project,\" has not increased in cost. A decision was made to add replacement of the rooftop HVAC systems—which are at end of lifecycle—to the roof project scope. Doing the HVAC work separately after a new roof was installed would require penetrating the new roof and would void the roof warranty. The original roof project funding and cost estimate remain valid."
+    key_speakers: ["Town Administrator (Keer)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1654
+    end_seconds: 1918
+    headline: "Board approves consent agenda including carpet contract and Elm Street project increase"
+    dek: "Contracts approved include a $58,828 carpet installation at Mary Alley and a $3,800 increase to the Elm Street Improvement Project due to unexpected subsurface fabric removal."
+    summary: |
+      The board voted to approve:
+      
+      - **Minutes** for December 11, December 23, and February 8, plus surplus of a wooden desk.
+      - **Logan Casey** appointed as Marblehead's designee on the MBTA Advisory Board's Climate and Clean Energy Committee (subcommittee slot distinct from the chair's broader MBTA advisory board seat).
+      - **Rafael Construction** Elm Street Improvement Project contract increase of **$3,800** (covered by previously authorized ARPA funds; caused by unexpected weed-block fabric beneath the parking lot surface).
+      - **Ulti Floors** Mary Alley carpet project for **$58,828** (partially offset by insurance proceeds).
+      - **MPO grant support letters** for Village Street Bridge improvements and additional bike racks.
+    key_speakers: ["Chair (Madam Chair)", "Town Administrator (Keer)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1918
+    end_seconds: 2068
+    headline: "Board approves historical inventory grant, motorcycle safety proclamation, and sets Conservation Commission deadline"
+    dek: "Applications for the open Conservation Commission seat are due February 7, with interviews planned for the February 12 meeting."
+    summary: |
+      The board approved:
+      
+      - Submission of a FY2025 survey and planning grant for the Marblehead Historical Properties Inventory update (requested by Historical Commission's Pat Franklin).
+      - Proclamation of March 23–April 30, 2025 as Motorcycle Safety Awareness Period (requested by Theresa Collins of 292 Pleasant Street).
+      
+      The board also noted two letters of interest: Joanna Rose for the Disabilities Commission and Eugene Record for the Conservation Commission. A deadline of **February 7** was set for Conservation Commission applications, with interviews at the February 12 meeting.
+    key_speakers: ["Chair (Madam Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2068
+    end_seconds: 2230
+    headline: "Board approves condolence letters for Libby Moore and Ed Bell; updates on Elm Street work"
+    dek: "A board member noted the passing of two community pillars; the chair updated neighbors that Elm Street playground work began earlier than expected and should finish by early spring."
+    summary: |
+      A board member moved to send letters of condolence to the families of Libby Moore and Ed Bell, describing both as pillars of the community. The MHTV studio was noted as having been dedicated to Ed Bell in November.
+      
+      The chair updated residents that work on the Gary School / Elm Street playground project began earlier than anticipated. Parking will be unavailable during construction. Completion is expected in early spring, earlier than the originally projected March–April start. Updates are posted on the Planning Board website.
+    key_speakers: ["Chair (Madam Chair)", "Board member"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

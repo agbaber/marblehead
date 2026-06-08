@@ -9,7 +9,60 @@ vimeo_url: "https://vimeo.com/1140493652"
 duration_seconds: 574
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select board approves $8.97M contract with Homer Contracting for Marblehead High School roof/HVAC project"
+  summary: "The Marblehead Select Board, meeting with a chair pro tem, voted unanimously to approve a construction contract with Homer Contracting for the Marblehead High School roof and HVAC project at $8,970,000. The bid came in approximately $2.1 million under the construction estimate, and the total project cost is expected to come in around $12 million against an approved budget of $14 million. Heavy construction is expected to be complete before students return to school, with full project wrap-up anticipated in September or early October."
+  decisions:
+    - "Appointed Moses Rader as chair pro tem"
+    - "Approved contract with Homer Contracting for Marblehead High School roof/HVAC project at $8,970,000 and authorized the chair to sign on behalf of the board"
+  votes:
+    - motion: "Appoint Moses Rader as chair pro tem"
+      result: "in favor (unanimous)"
+    - motion: "Approve contract with Homer Contracting for MHS roof/HVAC project at $8,970,000"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 0
+    end_seconds: 38
+    headline: "No public comment received at opening of meeting"
+    dek: "Chair pro tem opened the floor to public comment; no one came forward in person or online."
+    summary: "Moses Rader was appointed chair pro tem in the absence of the chair, then opened the floor to public comment. No members of the public — online or in-person — came forward."
+    key_speakers: ["Moses Rader (chair pro tem)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 38
+    end_seconds: 539
+    featured: true
+    headline: "Board unanimously approves $8.97M Homer Contracting deal for MHS roof and HVAC"
+    dek: "The bid came in roughly $2.1M under the construction estimate; total project cost is projected at approximately $12M against a $14M approved budget."
+    summary: |
+      A school department representative presented the results of a competitively bid construction project for the Marblehead High School roof and HVAC replacement. Key points included:
+      
+      - All general contractors and subcontractors were pre-qualified prior to bidding.
+      - Filed sub bids were received for roofing, HVAC, plumbing, electrical, and at least one additional trade.
+      - The lowest responsive and responsible bidder was **Homer Contracting**.
+      - The bid of **$8,970,000** came in approximately **$2.1 million under** the construction estimate.
+      - Total project cost including OPM, designer, and related costs is projected at approximately **$12 million**, against a town meeting–approved budget of **$14 million**.
+      - HVAC equipment lead time could be up to six months, making timely contract execution critical.
+      
+      **Construction timeline:**
+      | Milestone | Expected Timing |
+      |---|---|
+      | Mobilization begins | After graduation |
+      | No construction before | Last day of school |
+      | Heavy lifting/cranes complete | Before students return in fall |
+      | Construction phase wrap-up | September–early October |
+      
+      A community subcommittee chaired by a school committee member reviewed contracts and will continue to advise the OPM and designer through construction. The contract was already circulating for signatures after school committee approval the prior week.
+      
+      The select board voted unanimously to approve the contract and authorize the chair to sign on behalf of the board.
+    key_speakers: ["Moses Rader (chair pro tem)", "School department representative (presenter)", "Town Counsel (Lisa Mead, referenced)", "Chris Hoak (town accountant, referenced)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

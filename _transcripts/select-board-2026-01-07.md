@@ -9,7 +9,98 @@ vimeo_url: "https://vimeo.com/1152300232"
 duration_seconds: 1113
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board approves five contracts and school copier lease to open 2026"
+  summary: "At the January 7, 2026 meeting, the Select Board approved five contracts covering the Gary School Playground Phase 2, a DPW overhead door, window replacements at 66 Cliff Ave, a Waterside Cemetery expansion, and a four-year copier lease for the school department. The copier lease switch from a three-year to four-year term with a per-copy pricing model is expected to save approximately $22,000 per year. All motions passed unanimously."
+  decisions:
+    - "Approved contract 26-09 for Gary School Playground Phase 2 with Belco Landscaping for $433,000"
+    - "Approved contract 26-35 to install overhead door at DPW yard with Commons Overhead Door for $14,695"
+    - "Approved contract 26-32 to replace 50 windows at 66 Cliff Ave with Gambal Construction for $24,950"
+    - "Approved contract 26-13 to expand Waterside Cemetery with Rafael Construction for $99,130"
+    - "Approved school department four-year copier lease with UIO Business Services"
+  votes:
+    - motion: "Award contract 26-09 Gary School Playground Phase 2 to Belco Landscaping ($433,000)"
+      result: "in favor (unanimous)"
+    - motion: "Award contract 26-35 overhead door at DPW yard to Commons Overhead Door ($14,695)"
+      result: "in favor (unanimous)"
+    - motion: "Approve contract 26-32 replace 50 windows at 66 Cliff Ave with Gambal Construction ($24,950)"
+      result: "in favor (unanimous)"
+    - motion: "Approve contract 26-13 Waterside Cemetery expansion with Rafael Construction ($99,130)"
+      result: "in favor (unanimous)"
+    - motion: "Approve school department four-year copier lease with UIO Business Services"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.6
+    start_seconds: 0
+    end_seconds: 21
+    headline: "Board opens first meeting of 2026 with public comment period"
+    dek: "Chair calls the January 7, 2026 meeting to order and opens public comment; no speakers came forward."
+    summary: "The chair called the meeting to order, noted the meeting is being recorded, wished everyone a Happy New Year, and opened public comment. No public speakers participated and the board moved on."
+  - topic: recreation-events
+    topic_confidence: 0.75
+    start_seconds: 21
+    end_seconds: 115
+    headline: "Board approves $433,000 contract for Gary School Playground Phase 2"
+    dek: "Funding comes entirely from donations raised by the community for the playground project."
+    summary: "The board approved a contract with Belco Landscaping for $433,000 to complete Phase 2 of the Gary School Playground improvements. Phase 2 includes irrigation, plantings, ADA accessibility features, and equipment. All funds are drawn from the Gary School Playground donation account. Members noted the community raised roughly half a million dollars for the project, with the remainder of Phase 1 covered by the town, including approximately $200,000 in ARPA funding."
+    key_speakers: ["Town Administrator"]
+  - topic: trash-dpw
+    topic_confidence: 0.8
+    start_seconds: 115
+    end_seconds: 160
+    headline: "Board approves $14,695 contract to replace overhead door at DPW yard"
+    dek: "Replacement door is considered critical for winter operations to keep the building heated and allow efficient truck access."
+    summary: "The board approved a contract with Commons Overhead Door to install a new overhead door at the DPW yard for $14,695, paid from the repair and maintenance budget. The door was described as critical for winter operations."
+  - topic: bonding-capital
+    topic_confidence: 0.65
+    start_seconds: 160
+    end_seconds: 534
+    headline: "Board approves $24,950 window replacement at 66 Cliff Ave; deferred building maintenance discussed"
+    dek: "Discussion revealed a growing backlog of facility maintenance and plans for a more systematic funding approach."
+    summary: |
+      The board approved a contract with Gambal Construction to replace 50 windows at 66 Cliff Ave (formerly listed as 35 in early discussion) for $24,950, funded through the Hobbs House Improvement operating line. Members noted the building has received a new boiler, back porch/egress repairs, and now windows, with siding identified as a future capital request.
+      
+      A broader discussion followed about deferred facility maintenance across town buildings. Members and the Town Administrator noted that the current annual buildings article amount has not kept pace with growing needs, and that costs are increasingly drawn from operating budgets. Plans were discussed to centralize building oversight, develop a comprehensive facility maintenance inventory, and return with a more systematic funding proposal.
+    key_speakers: ["Town Administrator", "Steve (Buildings Manager)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 534
+    end_seconds: 581
+    headline: "Board approves $99,130 contract for Waterside Cemetery expansion"
+    dek: "Funding comes from Town Meeting articles 42 and 43 passed last year to add burial sites and remove granite trees and stumps."
+    summary: "The board approved contract 26-13 with Rafael Construction for $99,130 to expand Waterside Cemetery. The work includes adding future burial sites and removing granite trees and stumps. The Cemetery Commission voted to approve the project at its December 18 meeting. Funding was appropriated at last year's Town Meeting under articles 42 and 43."
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 581
+    end_seconds: 999
+    featured: true
+    headline: "Select Board approves four-year school copier lease saving ~$22,000 per year"
+    dek: "The switch from a three-year to four-year lease term required Select Board approval and includes badge-tap print release and per-copy toner pricing."
+    summary: |
+      School department Chief Operating Officer Mike presented a proposal to replace the district's 29 copiers under a new four-year lease with UIO Business Services, saving approximately $22,000 per year compared to the expiring contract. Three vendors were solicited; the selected option uses a per-copy click charge (approximately $0.004 per black-and-white copy and $0.04 per color copy) that includes toner and service, eliminating the need to purchase and store toner cartridges.
+      
+      New machines will support badge-tap print release, allowing staff to release print jobs at any machine using their ID badge, improving print confidentiality and reducing paper waste by auto-deleting unreleased jobs after 24 hours. The term extension beyond three years required Select Board approval in addition to School Committee authorization. The board approved unanimously.
+      
+      Separately, Mike noted the district switched paper suppliers from the Crest Collaborative to Staples, reducing per-case paper cost from approximately $38–$39 to $30.
+    key_speakers: ["Mike (School Department COO)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 999
+    end_seconds: 1090
+    headline: "Board shares announcements including a local Marine's graduation from Parris Island"
+    dek: "A board member recognized Marblehead resident Hannah Friday, who restarted boot camp after a week-10 injury and graduated Friday."
+    summary: "A board member announced that Hannah Friday, granddaughter of COA employee Dave Dragon, graduated from Parris Island after sustaining an injury in week 10 of 13 and choosing to restart boot camp from week zero rather than go home. Another member noted the successful Christmas tree bonfire organized by the fire department, and confirmed curbside tree pickup runs through January 16."
+  - topic: admin-housekeeping
+    topic_confidence: 0.6
+    start_seconds: 1090
+    end_seconds: 1110
+    headline: "Board adjourns; next meeting scheduled for the following Wednesday"
+    dek: "Motion to adjourn passed unanimously."
+    summary: "The chair confirmed a meeting the following Wednesday and the board voted unanimously to adjourn."
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

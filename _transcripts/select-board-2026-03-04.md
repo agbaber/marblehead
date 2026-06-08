@@ -9,7 +9,147 @@ vimeo_url: "https://vimeo.com/1170726912"
 duration_seconds: 8548
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board previews FY27 budget with $7.7M gap; favors Scenario B with trash fee"
+  summary: "The Marblehead Select Board reviewed two FY27 budget scenarios showing a $7.7 million shortfall under current revenue projections. Scenario A would defund six departments and eliminate 56 positions; Scenario B would instead implement a curbside trash fee of approximately $254 per household per year and ask the schools for an additional $1.5 million in cuts, reducing position impacts to about 20.5 FTE. Board members expressed general consensus favoring Scenario B, with a formal budget vote expected March 19th and override options to be presented the following week."
+  decisions:
+    - "Approved Municipal Energy Reduction Plan (unanimous)"
+    - "Continued liquor license revocation public hearing for 1 Atlantic Ave to April 8th (unanimous)"
+    - "Approved $5,000 donation from The Mariner to Council on Aging (unanimous)"
+    - "Approved $1,000 donation from Connections Program Inc. to Affordable Housing Trust Fund (unanimous)"
+    - "Approved proclamation declaring March 29th 2026 Superhero Day in honor of Super JJ (unanimous)"
+    - "Approved reserve fund transfer request of $53,460 for town meeting audio/visual equipment (unanimous)"
+    - "Approved consent agenda including meeting minutes and event permits (unanimous)"
+    - "Approved motorcycle safety awareness proclamation for March 22–April 30 (unanimous)"
+    - "Approved contract 26-52 for fire department compliance software with Brier LP (unanimous)"
+    - "Approved license agreement 26-53 for water-based activities at Riverhead Beach with Sub East (unanimous)"
+    - "Approved change order number 3 with Greenman Pedersen Inc. for Village Street Bridge, increasing contract by $55,000 (unanimous)"
+    - "Approved one-day liquor licenses for multiple events at Abbott Hall and other venues (unanimous)"
+  votes:
+    - motion: "Continue liquor license revocation public hearing to April 8th"
+      result: "in favor (unanimous)"
+    - motion: "Approve Municipal Energy Reduction Plan"
+      result: "in favor (unanimous)"
+    - motion: "Accept $5,000 donation from The Mariner to Council on Aging"
+      result: "in favor (unanimous)"
+    - motion: "Accept $1,000 donation from Connections Program Inc. to Affordable Housing Trust Fund"
+      result: "in favor (unanimous)"
+    - motion: "Declare March 29th 2026 Superhero Day"
+      result: "in favor (unanimous)"
+    - motion: "Authorize reserve fund transfer of $53,460 for town meeting AV equipment"
+      result: "in favor (unanimous)"
+    - motion: "Approve consent agenda"
+      result: "in favor (unanimous)"
+    - motion: "Approve motorcycle safety awareness proclamation"
+      result: "in favor (unanimous)"
+    - motion: "Approve contract 26-52 with Brier LP"
+      result: "in favor (unanimous)"
+    - motion: "Approve license agreement 26-53 with Sub East"
+      result: "in favor (unanimous)"
+    - motion: "Approve Village Street Bridge change order 3 ($55,000 increase)"
+      result: "in favor (unanimous)"
+    - motion: "Approve one-day liquor licenses"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 3
+    end_seconds: 563
+    headline: "Residents urge support for energy plan, raise concerns about trash fees and Public Works committee"
+    dek: "Four residents spoke during public comment on topics ranging from the Municipal Energy Reduction Plan and MMLD rate impacts to the proposed dissolution of the Public Works committee."
+    summary: |
+      Four residents addressed the board before the budget presentation:
+      
+      - A resident from 7 Glover Square thanked the board in advance for supporting the Municipal Energy Reduction Plan and the town's net-zero-by-2040 goal.
+      - A resident identifying herself as chair of the light board noted that the town is MMLD's largest customer and that improving building efficiency would reduce peak demand costs, helping keep electric rates stable.
+      - Amy Chu of 30 H Brand spoke against a warrant article to dissolve the Public Works committee, noting it had been restructured and that department heads found it valuable.
+      - A resident expressed concern that proceeding with the energy plan before resolving MBTA Communities (3A) compliance could jeopardize grant eligibility.
+    key_speakers: ["Resident at mic (7 Glover Square)", "Resident at mic (light board chair)", "Amy Chu (Public Works committee)", "Jordan (resident)"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 563
+    end_seconds: 6277
+    featured: true
+    headline: "FY27 budget gap of $7.7M; Scenario B with trash fee and school cut favored by board"
+    dek: "Town Administrator presented two balanced-budget scenarios: Scenario A eliminating 56 positions across six departments, and Scenario B using a curbside trash fee and additional school cuts to reduce impacts to about 20.5 FTE."
+    summary: |
+      Town Administrator and Finance Director Alicia Benjamin presented the FY27 budget outlook showing a gap of approximately $7,736,211 under current projections (based on an 11% health insurance increase estimate, pending GIC vote the following day).
+      
+      **Scenario A** — Straightforward cuts to balance the budget:
+      - Total cuts of $7.7 million from requested budgets
+      - Town side: $5.7 million in cuts; School side: $1.9 million in cuts
+      - Would require defunding 6 departments entirely: Community Development & Planning, Cemetery, Health (except health agent), Council on Aging, Library, and Recreation & Parks
+      - 56 positions eliminated out of approximately 185–190 town positions
+      
+      **Scenario B** — Structural shifts to reduce service impacts:
+      - Implement a curbside trash fee covering approximately $2,037,184 of contractual trash/recycling costs
+      - Estimated $254/year (~$21/month or ~$64/quarter) per household based on ~8,000 households
+      - Opt-out option for residents who use the transfer station sticker program; discounts proposed for tax-exempt residents
+      - Board of Health would need to implement the fee structure; Select Board decision is to defund the line item
+      - Additional $1.5 million reduction requested from the schools, based on a proportional share of rising employee benefit costs (school workforce is ~66% of active GIC enrollees)
+      - Total cuts: $7.9 million; Town side ~$4.4 million; School side ~$3.4 million
+      - Reduces position impacts to approximately 20.5 FTE
+      
+      **Key caveats noted:**
+      - GIC vote on health insurance rates was scheduled for the following day; projections carried at 11% blended rate, down from earlier 15% estimate
+      - Free cash not yet certified by DOR; approximately $5 million projected for budget use with no allocation to stabilization
+      - Even under Scenario B, approximately $1.4 million in items remain unfunded on the town side, which staff identified as a starting point for override discussions
+      - Library director noted via email that the staff-share model proposed in Scenario B was not sustainable; library operations would effectively close around December 1, 2026 absent an override
+      
+      **Board discussion:**
+      - All five board members expressed general support for proceeding with Scenario B
+      - Members emphasized the need for a formal policy/guideline on how revenue increases and deficits are split between municipal and school budgets going forward
+      - Multiple members called for a joint override with the school district rather than separate articles
+      - Override options (restore, stabilize, and capital tiers) to be presented the following Wednesday, March 11
+      - Formal budget vote expected March 19th
+      
+      **Public questions raised:**
+      - Whether trash fees require town meeting approval (a resident cited the town's lack of a charter and referenced the town of Abington as a current test case; board noted they have a legal opinion from counsel)
+      - Whether Scenario A is a realistic option or primarily a framing device
+      - Concern about the library closing despite an existing debt exclusion bond on the building
+      - Calls for more transparency in how town-school budget splits are calculated and presented
+    key_speakers: ["Thatcher (Town Administrator)", "Alicia Benjamin (Finance Director)", "Aaron Newan (Select Board, remote)", "Moses Grader (Select Board, remote)", "Dan Zis (Select Board)", "Mark Singer (Select Board)", "Marlon Current (resident)", "Jordan (resident)", "Sarah (resident)", "Matt Hooks (resident)", "Eric (resident, library director)", "Jack (Finance Committee)"]
+  - topic: permits-zoning
+    topic_confidence: 0.97
+    start_seconds: 6912
+    end_seconds: 7212
+    headline: "Liquor license revocation hearing for 1 Atlantic Ave continued to April 8th"
+    dek: "The licensee returned with nearly all required sign-offs; the board continued the public hearing to April 8th pending fire prevention and water/sewer approvals."
+    summary: "The board resumed a continued public hearing on the revocation of the liquor license at 1 Atlantic Avenue. The licensee (Mr. Lewis) presented a signature sheet showing approvals from finals on water, plumbing, building, and health departments. Remaining sign-offs needed were from fire prevention and water and sewer. The board voted unanimously to continue the public hearing to April 8th at 7:00 PM, noting the licensee may open his establishment once the final sign-offs are obtained."
+    key_speakers: ["Mr. Lewis (licensee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 7212
+    end_seconds: 8540
+    headline: "Board approves energy plan, donations, Make-A-Wish proclamation, contracts, and consent agenda"
+    dek: "The board took up a series of routine and administrative items including the Municipal Energy Reduction Plan, two charitable donations, event proclamations, software and recreation contracts, a bridge change order, and one-day liquor licenses."
+    summary: |
+      **Municipal Energy Reduction Plan** — Sustainability Coordinator Logan Casey presented the final plan covering 28 municipal buildings. The plan targets a 20% energy reduction over five years as required for Green Community designation, with full implementation potentially achieving a 45% reduction. The board voted unanimously to adopt the plan. A separate vote by the Municipal Light Board on a renewable energy charge is required before the town can apply for Green Community status.
+      
+      **Donations accepted:**
+      | Donor | Amount | Designated use |
+      |---|---|---|
+      | The Mariner (Marblehead) | $5,000 | Council on Aging / bocce court naming |
+      | Connections Program Inc. | $1,000 | Affordable Housing Trust Fund |
+      
+      **Proclamations:**
+      - March 29th declared Superhero Day in honor of "Super JJ," a 4-year-old Make-A-Wish recipient, to include a community scavenger hunt.
+      - Motorcycle Safety Awareness Period proclaimed for March 22–April 30, 2026.
+      
+      **Reserve fund transfer:** Authorized the town clerk to request $53,460 from the Finance Committee reserve fund for audio/visual upgrades to the Fieldhouse for the 2026 Annual Town Meeting.
+      
+      **Contracts approved:**
+      - Contract 26-52: Fire department life safety compliance software with Brier LP (cost borne by inspected businesses)
+      - License agreement 26-53: Water-based recreational activities at Riverhead Beach with Sub East (vendor pays town)
+      - Change order 3: Village Street Bridge replacement with Greenman Pedersen Inc., increasing contract by $55,000 (funded by Chapter 90 state aid) and extending performance date
+      
+      **Consent agenda:** Approved minutes of January 8, February 9, and February 11, 2026; road race permit for Lynch Van Loo YMCA Hill to Harbor 5K/10K on May 17; Marblehead Festival of Arts permit for May 29; surplus disposal of one desk chair at Abbott Hall.
+      
+      **One-day liquor licenses:** Approved for Torian Presents at Abbott Hall (November 14), Temple Emanuel (April 30), and Marblehead Festival of Arts at Abbott Hall (May 29).
+    key_speakers: ["Logan Casey (Sustainability Coordinator)", "Thatcher (Town Administrator)", "Maggie (DPW/Engineering staff)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

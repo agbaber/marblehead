@@ -9,7 +9,254 @@ vimeo_url: "https://vimeo.com/1164420772"
 duration_seconds: 8354
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select board appoints police captain, delegates snow emergency authority, advances budget planning"
+  summary: "The Marblehead Select Board appointed Jonathan Lund as Captain of the Marblehead Police Department following a civil service exam and interview process. The board delegated snow emergency declaration authority to the Town Administrator in coordination with department heads for the remainder of the 2025-26 winter season. A lengthy discussion on the FY27 budget process addressed the challenge that projected healthcare cost increases of approximately $1.9 million nearly consume the town's entire new Proposition 2½ levy capacity of $2.2 million."
+  decisions:
+    - "Approved appointment of Jonathan Lund as Captain of the Marblehead Police Department"
+    - "Approved appointment of Sally Sands to the Cemetery Commission vacancy"
+    - "Continued Shin Dynasty liquor license public hearing to February 25th"
+    - "Approved delegation of snow emergency declaration authority to Town Administrator through end of 2025-26 winter season"
+    - "Approved snow emergency from 11:00 PM February 11 through 7:00 AM February 14"
+    - "Approved FY27 revolving fund account authorizations"
+    - "Approved consent agenda items including minutes and event permits"
+    - "Approved on-call service contracts and Five Corners design contract"
+  votes:
+    - motion: "Appoint Jonathan Lund as Police Captain"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Sally Sands to Cemetery Commission"
+      result: "in favor (unanimous)"
+    - motion: "Continue Shin Dynasty public hearing to February 25th"
+      result: "in favor (unanimous)"
+    - motion: "Delegate snow emergency authority to Town Administrator for remainder of winter season"
+      result: "in favor (unanimous)"
+    - motion: "Declare snow emergency 11 PM Feb 11 through 7 AM Feb 14"
+      result: "in favor (unanimous)"
+    - motion: "Authorize FY27 revolving fund accounts"
+      result: "in favor (unanimous)"
+    - motion: "Approve consent agenda"
+      result: "in favor (unanimous)"
+    - motion: "Award contract 26-40 on-call painting to Capital Contracting Inc."
+      result: "in favor (unanimous)"
+    - motion: "Award contract 26-41 on-call plumbing to Bott Mechanical Inc."
+      result: "in favor (unanimous)"
+    - motion: "Award contract 26-44 on-call generator repairs to Sherborne Consolidated"
+      result: "in favor (unanimous)"
+    - motion: "Award contract 26-46 on-call electrical to Patriot Light and Power LLC"
+      result: "in favor (unanimous)"
+    - motion: "Award contract 26-50 Five Corners design to APAC Companies LLC for $150,000"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 1
+    end_seconds: 26
+    headline: "No public comment submitted at February 11 Select Board meeting"
+    dek: "The chair opened and immediately closed public comment with no in-person or remote participants."
+    summary: "The chair called the meeting to order, noted it was being recorded, and opened the floor for public comment. No members of the public came forward in person or online, and public comment was closed."
+    key_speakers: ["Chair (Select Board)"]
+  - topic: public-safety
+    topic_confidence: 0.98
+    start_seconds: 26
+    end_seconds: 452
+    featured: true
+    headline: "Select board unanimously promotes Jonathan Lund to Police Captain"
+    dek: "Chief King described a civil service exam and oral interview process that Lund topped after serving nearly 11 months as acting captain."
+    summary: |
+      Police Chief King presented the promotion of Jonathan Lund to Captain, describing the selection process: a statewide civil service exam, oral interviews on leadership and objectives, and a final ranking. Lund had been serving as acting captain for approximately 11 months following the departure of the previous captain.
+      
+      Chief King noted Lund has been with the department since 1998 and has held a superior officer rank for approximately 22 years, including nearly 20 years as a lieutenant. He highlighted Lund's service as a SWAT team member with the North Shore Massachusetts Law Enforcement Council (NEMLEC), his role managing the evidence room, and his work as an internal affairs investigator.
+      
+      The board voted unanimously to appoint Lund, with board members offering congratulations. A formal pinning ceremony was noted for a future meeting approximately one month out.
+    key_speakers: ["Chief King (Police Chief)", "Jonathan Lund (incoming Captain)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 452
+    end_seconds: 679
+    headline: "Cemetery Commission vacancy: Sally Sands appointed over Rose McCarthy in board vote"
+    dek: "The Select Board and Cemetery Commission jointly interviewed Sands; McCarthy did not attend; Sands received a majority of votes."
+    summary: |
+      In a joint session with the Cemetery Commission, the Select Board interviewed Sally Sands for a vacancy. The other applicant, Rose McCarthy, was unable to attend and was not interviewed. Sands described her background: over 10 years on the Old Town Historic District Commission, experience with fundraising and budget management, and familiarity with Marblehead's cemeteries.
+      
+      Sands noted an interest in improving the experience for residents dealing with bereavement and in addressing cemetery capacity. Cemetery Commissioner David spoke favorably about Sands and mentioned ongoing projects including paving a hill at Waterside Cemetery and a planned cemetery expansion.
+      
+      Both names were placed on the table for nomination. Board members and commission members each named their preference; Sands received a majority. She was appointed to the vacancy.
+    key_speakers: ["Sally Sands (applicant)", "David (Cemetery Commission member)", "Chair (Select Board)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 1043
+    end_seconds: 1786
+    headline: "Town switches mass notification vendor from Code Red to Regroup at roughly half the cost"
+    dek: "A cyberattack on Code Red (Crisis 24) degraded the town's emergency notification database; the replacement contract is $6,500 versus approximately $12,000 previously."
+    summary: |
+      Town Administrator Thatcher provided two administrative updates.
+      
+      **Financial transparency platform:** The town's new Open Finance Transparency Center using the Munis platform is now live on the town website under the Finance Department page. The prior vendor, ClearGov, will be retained temporarily to preserve historical data until back data is migrated into Munis. Unlike ClearGov, Munis provides a live link that updates overnight. Board members discussed the desire to display FY24, FY25, and year-to-date FY26 actuals alongside budget figures for resident review.
+      
+      **Mass notification system replacement:** Following a cyberattack on Code Red (now branded Crisis 24), the town's notification database of approximately 8,000 contacts was partially destroyed and message delivery was degraded. The town will terminate that contract as of March 1st and has selected Regroup Mass Notification as a replacement. The new contract is approximately $6,500 per year (roughly half the prior $12,000 cost) and includes migration of existing data. Regroup will support phone, text, and email notifications with flexible geographic targeting and resident-selectable categories. Residents will be asked to verify or update their information once the system is live.
+      
+      A blue-light warning system for street poles is also in progress, with installation described as weeks away pending electrical work.
+    key_speakers: ["Thatcher (Town Administrator)"]
+  - topic: permits-zoning
+    topic_confidence: 0.97
+    start_seconds: 1786
+    end_seconds: 2406
+    headline: "Shin Dynasty liquor license hearing continued to February 25 after contractor assurances"
+    dek: "Contractor Doug Dubin told the board all major work is complete and inspections are days away; board members said they came ready to revoke but were persuaded to extend."
+    summary: |
+      The board reopened a continued public hearing on a liquor license for Shin Dynasty (applicant Alexander Lewis). Contractor Doug Dubin appeared to update the board on construction status.
+      
+      Dubin described the scope of completed work: plumbing, hand sinks, tables, rebuilt heat and hot water systems, a rebuilt hood, a new CO2 system, a new Ansul fire suppression system, new flooring and paint, and new electrical. Outstanding items included the plumber completing final fixture hookups (expected the following week) and installation of an ADA-compliant rear door button. He stated all inspectors — building, electrical, fire — had reviewed the space and were ready to sign off, and estimated all permits could be complete within a week.
+      
+      Board members expressed that they had come to the meeting prepared to revoke the license given approximately 18 months of delays and repeated continuances, but Dubin's in-person presentation gave them pause. Several members stated they would have voted to revoke had the contractor not been present. The applicant confirmed he has the financial capability to continue, that a point-of-sale system (Toast) is under contract, and that tableware and menus are ready.
+      
+      The board voted unanimously to continue the public hearing to February 25th at 7:00 PM.
+    key_speakers: ["Doug Dubin (contractor)", "Alexander Lewis (applicant)", "Board members"]
+  - topic: 40b-mbta
+    topic_confidence: 0.98
+    start_seconds: 2406
+    end_seconds: 2686
+    headline: "EOHLC finds Marblehead's MBTA 3A zoning district 'in good position for compliance'"
+    dek: "A 900-unit district across Bromion Road andESCO areas advances to a March 10 Planning Board hearing with a town meeting vote to follow."
+    summary: |
+      Community Development Director Brenda Callahan provided an update on Marblehead's MBTA Communities (Chapter 40A Section 3A) compliance process. The state agency EOHLC responded that adoption of the proposed district would put Marblehead in a good position for compliance.
+      
+      Key details:
+      - The district is composed of two sub-districts: the Bromion Road District and the ESCO District
+      - The Glover property was removed after the initial submission due to lack of frontage on Marblehead streets (the property fronts on Salem)
+      - The required unit count is 897; the closest achievable whole-number total is 900 units
+      - One minor comment from EOHLC has been addressed by consultant Barrett Planning Group; the text has been submitted to legal counsel for review
+      
+      **Next steps:**
+      1. Planning Board public hearing — scheduled for March 10th
+      2. Placement on the town meeting warrant
+      3. Planning Board recommendation to town meeting
+      4. Town meeting vote
+      5. Submission of final documentation to EOHLC
+      
+      The board discussed holding at least one public informational session, potentially during the day before the Planning Board hearing. Board members expressed a preference for a straightforward factual presentation rather than a rehash of the merits of the law itself.
+    key_speakers: ["Brenda Callahan (Community Development Director)"]
+  - topic: bonding-capital
+    topic_confidence: 0.82
+    start_seconds: 2686
+    end_seconds: 3242
+    headline: "UConn TAB program engaged to lead free Coffin School community visioning and reuse assessment"
+    dek: "EPA Brownfields-funded university team will conduct at least one visioning session in March and deliver site renderings and a reuse assessment report by early May."
+    summary: |
+      Community Development Director Callahan updated the board on the Coffin School reuse planning process.
+      
+      **Hazardous materials assessment (completed December):** A building investigation of the 1963 annex and main structure found asbestos and lead-based paint. Key cost findings:
+      - Renovation abatement within the main building: approximately $10,000
+      - Replacement of existing built-in windows: $25,000–$35,000
+      - The presence of hazardous materials does not require demolition if materials are not disturbed
+      
+      **UConn TAB Program partnership:** The town has partnered at no cost with the University of Connecticut's TAB (Technical Assistance to Brownfields) program, funded through the EPA Brownfields program. The site qualifies as a brownfield due to the presence of asbestos and lead paint inside the buildings. The team will:
+      - Facilitate at least one community visioning session (planned for March)
+      - Conduct a site reuse assessment with renderings of potential development scenarios
+      - Potentially hold a second session in late May or early June to present findings
+      
+      Board members noted the need for broad public outreach to maximize attendance, including possible bill inserts, social media, and use of the town's new notification system once deployed. The board also asked that informational materials clearly explain what a "brownfield" designation means so residents are not alarmed.
+    key_speakers: ["Brenda Callahan (Community Development Director)"]
+  - topic: override
+    topic_confidence: 0.97
+    start_seconds: 3380
+    end_seconds: 6623
+    headline: "Board debates override strategy as healthcare cost increases consume nearly all new Prop 2½ revenue"
+    dek: "Town Administrator laid out the budget phase schedule; board members discussed whether to seek a multi-year override and asked staff to present a balanced budget alongside restorative scenarios on February 25."
+    summary: |
+      Town Administrator Thatcher walked the board through the FY27 budget development timeline across five phases:
+      
+      | Phase | Period | Key Activities |
+      |---|---|---|
+      | 1 | June–Sept 2025 | Financial system migration, staff training |
+      | 2 | Oct–Nov 2025 | Revenue forecast, level-funded budget guidance to departments |
+      | 3 | Dec 2025 | Tax classification, three-year revenue/expense forecast |
+      | 4 | Jan–Feb 2026 | State of the Town, compensation committee report, department meetings |
+      | 5 | March+ | Finance Committee public review, balanced budget to town meeting |
+      
+      **Key fiscal challenge:** The town's total new tax revenue available under Proposition 2½ is approximately $2.2 million. Current projections for healthcare cost increases alone are approximately $1.9 million — nearly wiping out all new revenue before accounting for the new trash contract or other inflationary costs.
+      
+      The GIC (Group Insurance Commission) vote on plan redesign is scheduled for February 26th. That vote could shift costs from premiums to employee copays and deductibles. Marblehead's blended rate increase depends on its own mix of employees across plan types and may differ significantly from the GIC's publicized average of 15–18%.
+      
+      **Board discussion on override strategy:**
+      Several board members discussed what type of override scenario to present to voters. One member listed service reductions over the past five years under level-funded budgets: one full-time police officer position defunded, several firefighter positions, and three DPW positions (a heavy equipment operator, a working foreman, and a general laborer). That member called for a restorative option alongside a balanced budget for the February 25th meeting.
+      
+      Another board member cautioned against committing to a specific dollar figure before seeing the balanced budget numbers, noting that a three-year projection showed the gap growing to approximately $15 million by year three and that asking voters for that amount at once would be a difficult sell. Other members agreed that a multi-year outlook for planning purposes is useful but distinct from asking voters to fund a multi-year figure in a single vote.
+      
+      Board consensus for the February 25th meeting: present the balanced (reduced) budget alongside a restorative/status-quo scenario and begin framing what a multi-year override plan might look like, with the understanding that numbers are still being refined.
+      
+      Additional items raised:
+      - Board members requested department-level FTE histories and a two-to-three year capital and staffing outlook
+      - One member suggested the town explore outsourcing options and put professional services (including legal) out to competitive bid
+      - A proposal was made to hold public "Municipal Bootcamp" forums in March where department heads can explain their operations to residents
+      - One member renewed a call for the town to resume producing a GFOA-award-eligible budget document, which was last produced under a previous administration
+    key_speakers: ["Thatcher (Town Administrator)", "Board members"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 6809
+    end_seconds: 7277
+    headline: "Five warrant articles outlined for 2026 town meeting, including 3A zoning and crypto ATM ban"
+    dek: "Select board-sponsored articles include MBTA 3A zoning, DPW bylaw housekeeping, a prohibition on cryptocurrency ATMs, dissolution of the Public Works Committee, and non-union benefit updates."
+    summary: |
+      Town Administrator Thatcher outlined five warrant articles sponsored by the Select Board for the 2026 Annual Town Meeting:
+      
+      1. **MBTA Communities 3A zoning bylaw** — co-sponsored by the Select Board (as in prior years)
+      2. **DPW bylaw housekeeping** — updates nomenclature (removes references to "drains," updates position titles from Superintendent to Director of Public Works)
+      3. **Prohibition of cryptocurrency ATMs** — requested by the Police Chief; currently one crypto ATM operates in town, down from three; prompted by scams targeting elderly residents across the state
+      4. **Dissolution of the Public Works Committee** — a legacy bylaw committee predating the Town Administrator form of government; its continued existence creates Open Meeting Law compliance problems because department-head staff meetings would need to be publicly posted; the committee has been meeting monthly as required by the bylaw
+      5. **Administrative benefits amendment** — updates benefits for non-union employees, including adding personal days (currently unavailable) and adjusting longevity payment eligibility thresholds
+    key_speakers: ["Thatcher (Town Administrator)"]
+  - topic: trash-dpw
+    topic_confidence: 0.88
+    start_seconds: 7417
+    end_seconds: 7663
+    headline: "Select board delegates snow emergency declaration authority to Town Administrator for winter season"
+    dek: "Motion passed unanimously; a separate vote immediately declared an emergency from 11 PM February 11 through 7 AM February 14 to authorize snow clearing operations."
+    summary: |
+      The board voted to delegate authority to declare snow emergencies to the Town Administrator, acting in coordination with the DPW Director, Police Chief, and Fire Chief, for the remainder of the 2025–26 winter season. Any declaration must include notification to the Conservation Commission, required reporting to Mass DEP, and notice to the Select Board at the earliest practicable time. The delegation automatically terminates at the end of the winter season unless amended or rescinded earlier.
+      
+      Following the vote, DPW Director Amy requested an immediate declaration to authorize snow clearing operations for the next several nights. The board voted to declare a snow emergency beginning at 11:00 PM on February 11th and running through 7:00 AM on Saturday, February 14th. Notifications had already been sent via email and text (not voice call) given ongoing issues with the Code Red system.
+    key_speakers: ["Thatcher (Town Administrator)", "Amy (DPW Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.93
+    start_seconds: 7772
+    end_seconds: 8261
+    headline: "Board authorizes FY27 revolving funds and approves on-call service contracts and Five Corners design"
+    dek: "Revolving fund authorizations total approximately $3.96 million across 12 accounts; Five Corners design contract of $150,000 funded primarily by a Mass Works grant."
+    summary: |
+      **FY27 Revolving Fund Authorizations** (Mass General Law Ch. 44 §53E½):
+      
+      | Account | Amount |
+      |---|---|
+      | Animal Control | $5,500 |
+      | Council on Aging | $350,000 |
+      | Board of Health – Commercial Waste Disposal | $1,067,598 |
+      | Board of Health – Vaccines | $10,000 |
+      | Highway Street Opening Fees | $200,000 |
+      | Sump Pump Improvement | $10,300 |
+      | Conservation Fines | $75,000 |
+      | Historical Commission Gift Shop | $25,000 |
+      | Recreation & Parks | $2,000,000 |
+      | OPS Memorial Fund | $15,000 |
+      | Special Education | $200,000 |
+      | School Transportation | $15,000 |
+      
+      **On-call service contracts approved:**
+      - Contract 26-40: On-call painting — Capital Contracting Inc.
+      - Contract 26-41: On-call plumbing — Bott Mechanical Inc.
+      - Contract 26-44: On-call generator/transfer switch — Sherborne Consolidated
+      - Contract 26-46: On-call electrical — Patriot Light and Power LLC
+      
+      **Five Corners design:**
+      - Contract 26-50: APAC Companies LLC, $150,000
+      - Funded by a $135,000 Mass Works grant plus approximately $15,000 from municipal funds
+      - Represents design work through the 50% design stage for the Five Corners intersection improvement
+      
+      All votes were unanimous. The board also noted a vacancy on the Housing Committee (the prior appointee resigned before being sworn in to serve on the Finance Committee instead) and set a March 6th application deadline with potential interviews on March 11th.
+    key_speakers: ["Thatcher (Town Administrator)", "Chair (Select Board)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

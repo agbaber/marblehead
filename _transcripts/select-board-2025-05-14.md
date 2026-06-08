@@ -9,7 +9,159 @@ vimeo_url: "https://vimeo.com/1084464471"
 duration_seconds: 2404
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board approves polling-location change to Marblehead High School field house for June 10 election"
+  summary: "The Select Board voted to move precincts 3–6 to the Marblehead High School Field House for the June 10, 2025 annual town election, citing accessibility improvements demonstrated during the May town meeting relocation. The board also submitted two home-rule petitions to the General Court, approved several contracts totaling roughly $92,000, and authorized a letter of support for an $11.25 million federal port infrastructure grant. Town Administrator and board members publicly acknowledged staff and neighboring towns whose last-minute assistance made the emergency field-house town meeting possible."
+  decisions:
+    - "Approved polling-location change: precincts 3–6 moved to Marblehead High School Field House for June 10, 2025 election"
+    - "Approved Home Rule Petition for Article 28 (means-tested senior citizens property tax exemption) for submission to the General Court"
+    - "Approved Home Rule Petition for Article 44 (amendment to Chapter 37 of the Acts of 2004) for submission to the General Court"
+    - "Approved consent agenda use-of-Abbott-Hall items (Juneteenth Committee June 13 and Sergeant Lodge Nov. 7–8)"
+    - "Approved consent agenda contracts including bocce facility change order ($6,450), Abbott Hall brick repointing increase ($3,600), geothermal evaluation for Abbott Hall ($7,010), roof design for Mary Alley and Jacoby Community Center ($28,900), Purvis Systems contract amendment, and Office 365 license renewal ($46,920)"
+    - "Authorized chair to sign letter of support for $11.25 million federal Port Infrastructure Development Program grant application"
+    - "Approved 2025 temporary outdoor dining applications for The Barrowman and Five Corners Kitchen"
+  votes:
+    - motion: "Approve polling-location change to field house for June 10 election"
+      result: "in favor (unanimous)"
+    - motion: "Submit Article 28 Home Rule Petition (senior tax exemption) to General Court"
+      result: "in favor (unanimous)"
+    - motion: "Submit Article 44 Home Rule Petition to General Court"
+      result: "in favor (unanimous)"
+    - motion: "Approve consent agenda use-of-hall items"
+      result: "in favor (unanimous)"
+    - motion: "Approve consent agenda contracts"
+      result: "in favor (unanimous)"
+    - motion: "Authorize letter of support for port infrastructure grant"
+      result: "in favor (unanimous)"
+    - motion: "Approve temporary outdoor dining applications"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 0
+    end_seconds: 311
+    headline: "Resident urges town meeting at new high school, faster Coffin School reuse, and policy on take-home vehicles"
+    dek: "Albert Jordan raised three items: moving town meeting permanently to the new high school, expediting reuse of the Coffin School property, and reviewing the color and take-home policy for town vehicles."
+    summary: |
+      Albert Jordan, 64 Roosevelt Avenue, spoke on three topics:
+      
+      1. **Town meeting venue** — He urged the board to designate the new high school for future town meetings, citing better accessibility, ventilation, and capacity.
+      2. **Coffin School property** — He asked the incoming board to act within three to six months on reuse, describing the property as an eyesore with broken windows and a buckled parking lot.
+      3. **Town vehicles** — He questioned the take-home policy for department-head vehicles, citing concerns about fuel costs paid by taxpayers and potential state tax implications, and said he would raise the matter with the town administrator.
+    key_speakers: ["Albert Jordan (resident, 64 Roosevelt Ave)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.93
+    start_seconds: 311
+    end_seconds: 993
+    headline: "Town administrator thanks neighboring towns and staff for emergency town-meeting relocation; chief honored by ADL"
+    dek: "Town Administrator Keer detailed how 2,900 electronic voting clickers were assembled from four municipalities and recognized staff who executed the same-day field-house setup; he also noted Police Chief King received a community-leadership award from ADL New England."
+    summary: |
+      Town Administrator Keer reported that the field-house town-meeting relocation worked well and identified areas for improvement, including larger screens, better audio, and higher-mounted clicker receivers. He explained that the electronic voting system stalled because of a wi-fi traffic jam and that a reboot—later documented by IT staffer Frank Perez and shared with vendor Meridian—resolved the issue.
+      
+      To meet unanticipated attendance, clickers were assembled from four sources:
+      - 1,500 owned by Marblehead
+      - 800 rented through Meridian (originally Hopkinton's)
+      - 300 loaned by the Town of Westford
+      - 300 loaned by the Town of Hamilton
+      
+      The chair added thanks for COA transportation staff (including a driver who worked 15.5 hours), childcare coordinator Janie Block, school IT staffer Gretchen Langton, and St. Stephens Church for overflow support.
+      
+      Keer separately noted that Police Chief King and Swampscott Chief Rubin Casada jointly received a community-leadership award from ADL New England for their response to antisemitic incidents following October 7, 2023.
+    key_speakers: ["Town Administrator Keer", "Chair (Select Board)", "Lisa Hooper (COA Transportation)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 993
+    end_seconds: 1510
+    headline: "Charter Committee reports draft review nearing completion; three public forums scheduled for late May"
+    dek: "Charter Committee Chair Amy Drinker told the Select Board the committee will finish reviewing Draft A this week and will hold forums on May 27 and two other dates, with a target of presenting a final charter to town meeting in May 2026."
+    summary: |
+      Amy Drinker, chair of the town charter committee, reported that the committee has been reviewing Draft A section by section since January, assisted by drafter Sean Casey and attorney Victor Wild. The final review session covering Articles 7.5 (recall) through 11 is scheduled for the following evening.
+      
+      Three public forums are planned for late May at different venues, including a lunchtime session at the Jacobi Center hosted by the Council on Aging. Draft A has been publicly available on the town website since January. The Collins Center (not MAPC) holds a contract with the Select Board and will be engaged for charter review at a later, more critical stage. If the Select Board votes to forward the charter to town meeting, the state home-rule petition process takes approximately one year before it can return to voters.
+    key_speakers: ["Amy Drinker (Charter Committee Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 1510
+    end_seconds: 1670
+    featured: true
+    headline: "Board moves precincts 3–6 to high school field house for June 10 election and sends two home-rule petitions to General Court"
+    dek: "The Select Board unanimously approved relocating four precincts to the Marblehead High School Field House and submitted petitions for a means-tested senior property-tax exemption and a charter amendment to the state legislature."
+    summary: |
+      The Select Board took three formal votes:
+      
+      1. **Polling location change** — Precincts 1 and 2 remain at Abbott Hall (188 Washington Street); Precincts 3, 4, 5, and 6 move to the Marblehead High School Field House (2 Humphrey Street), effective for the June 10, 2025 annual town election and any subsequent elections unless the board votes otherwise.
+      
+      2. **Home Rule Petition — Article 28** — Establishing a means-tested senior citizens property-tax exemption, as approved at the May 7, 2025 town meeting, submitted to the General Court.
+      
+      3. **Home Rule Petition — Article 44** — Amending Chapter 37 of the Acts of 2004, as voted at the May 8, 2025 town meeting, submitted to the General Court.
+      
+      All three votes were unanimous (5–0).
+    key_speakers: ["Chair Nunan (Select Board)", "Board members Fox, Singer, Murray, Grader"]
+  - topic: recreation-events
+    topic_confidence: 0.82
+    start_seconds: 1670
+    end_seconds: 1775
+    headline: "Memorial Day weekend schedule announced: parade, cemetery services, and trolley rides May 23–26"
+    dek: "The board read into the record a full schedule of Memorial Day activities including grave flagging, a VFW service, the 9 AM parade muster, and a student essay at Waterside Cemetery."
+    summary: |
+      Memorial Day weekend events:
+      
+      | Date | Event |
+      |------|-------|
+      | Fri May 23 | Veterans Breakfast (9 AM, COA); grave flagging at Star of the Sea Cemetery |
+      | Sat May 24 | Grave flagging at Waterside Cemetery (9 AM, Bell Tower) |
+      | Sun May 25 | VFW Veteran Service, Star of the Sea Cemetery (1 PM) |
+      | Mon May 26 | Clark's Landing memorial service (8 AM); parade muster at old townhouse (8:30 AM); parade begins 9 AM, stops at Memorial Park, continues to Waterside Cemetery |
+      
+      A trolley will be available. Selectman Moses Grader will speak at Memorial Park. A student essay will be delivered at Waterside Cemetery. Grand Marshal and principal speakers were to be determined.
+    key_speakers: ["Chair Nunan (Select Board)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1775
+    end_seconds: 2230
+    headline: "Board approves consent agenda contracts totaling roughly $92,000 and authorizes $11.25M federal harbor-resiliency grant letter"
+    dek: "Contracts covered a bocce court change order, Abbott Hall brick repointing, a geothermal evaluation, roof design for Mary Alley and Jacoby Center, a Purvis Systems amendment, and an Office 365 license; a separate vote authorized a letter supporting an $11.25 million federal port infrastructure grant."
+    summary: |
+      **Consent agenda contracts approved:**
+      
+      | Contract | Vendor | Amount |
+      |----------|--------|--------|
+      | COA/Rec Bocce facility change order | Price Landscaping | $6,450 |
+      | Abbott Hall brick repointing increase | Raphael Construction | +$3,600 (extended to Sept 30, 2025) |
+      | Geothermal evaluation, Abbott Hall | Achieve Renewable Energy LLC (Salem) | ≤$7,010 |
+      | Roof design, Mary Alley & Jacoby Community Center | Gorman Richardson Lewis Architects (Hopkinton) | $28,900 |
+      | Purvis Systems Fire Station alerting system | Purvis Systems | Contract language amendment only |
+      | Office 365 license renewal | New Era Technology | $46,920 (IT budget) |
+      
+      **Port Infrastructure Development Program:** The board authorized a letter of support for a federal grant application seeking $11,250,000 for the Town's Municipal Shipyard Resiliency Project. The town previously received state matching-grant acceptance. The project is approximately 75% through design, funded largely by prior grants. The federal grant program had been paused and reinstated for the next fiscal year.
+    key_speakers: ["Town Administrator Keer", "Chair Nunan (Select Board)"]
+  - topic: permits-zoning
+    topic_confidence: 0.75
+    start_seconds: 2230
+    end_seconds: 2319
+    headline: "Outdoor dining permits approved for The Barrowman and Five Corners Kitchen for 2025 season"
+    dek: "Both restaurants received unanimous approval for temporary outdoor dining subject to standard town conditions and sign-off from police, fire, building commissioner, and town administrator."
+    summary: |
+      The Select Board approved 2025 temporary outdoor dining applications for:
+      - **The Barrowman**, 257 Washington Street
+      - **Five Corners Kitchen**, 2 School Street
+      
+      Approval is subject to receipt of required forms, fees, and insurance, and final approval from police, fire, the building commissioner, and the town administrator. Vote: 5–0.
+    key_speakers: ["Chair Nunan (Select Board)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2319
+    end_seconds: 2420
+    headline: "Board announces June 5 blood drive and closes with thanks to Community Development staff for town-meeting presentations"
+    dek: "The chair noted a blood drive at 210 Beacon Street on June 5 and board members recognized Town Planner Alex and CD&P Director Brendan for their work at town meeting."
+    summary: |
+      The Marblehead Blood Drive is scheduled for Thursday, June 5, 2025, 9 AM–7 PM at 210 Beacon Street (Gary Five).
+      
+      Board members also publicly thanked the Community Development and Planning Department, specifically Town Planner Alex and department head Brendan, for their detailed presentations on EDU calculations, zoning, and floodplains at the May town meeting. The board then adjourned.
+    key_speakers: ["Chair Nunan (Select Board)", "Board member Singer"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

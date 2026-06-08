@@ -9,7 +9,120 @@ vimeo_url: "https://vimeo.com/1184114075"
 duration_seconds: 3973
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board approves three-tiered override ($9M/$12M/$15M) and MOU with schools"
+  summary: "The Marblehead Select Board voted 3-0 (one recusal) to approve a three-tiered Proposition 2½ override structured at $9 million (tier one), $12 million (tier two), and $15 million (tier three) over three years, with the schools accounting for the majority of each tier's funding. The board also unanimously approved a memorandum of understanding with the school committee governing revenue sharing and a commitment not to return for another override before 2030. A firefighters union representative opened public comment raising concerns about a labor agreement he said was unraveling."
+  decisions:
+    - "Approved three-tiered override framework at $9M / $12M / $15M for inclusion in town meeting warrant"
+    - "Approved MOU between town and school committee (unanimously)"
+    - "Reversed indefinite postponement of Article 31 (administrative benefit amendment, ~$12,000) and approved it"
+    - "Voted to indefinitely postpone Article 34"
+    - "Continued Article 29 (supplemental appropriation) to April 22nd meeting"
+    - "Voted to enter executive session regarding collective bargaining with IAFF Local 2043"
+  votes:
+    - motion: "Approve three-tiered override ($9M / $12M / $15M)"
+      result: "in favor (3 to 0, one recusal)"
+    - motion: "Approve MOU with schools"
+      result: "in favor (unanimous)"
+    - motion: "Approve Article 31 administrative benefit amendment (~$12,000)"
+      result: "in favor (unanimous)"
+    - motion: "Indefinitely postpone Article 34"
+      result: "in favor (unanimous)"
+    - motion: "Enter executive session for IAFF Local 2043 collective bargaining"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.98
+    start_seconds: 4
+    end_seconds: 96
+    headline: "Firefighters union president warns labor agreement is 'unraveling at the 11th hour'"
+    dek: "Mark Tinzando, president of Marblehead Firefighters Union Local 2043, said a handshake agreement reached in good faith now appears uncertain."
+    summary: "Mark Tinzando of Dartmouth Road, president of Marblehead Firefighters Union Local 2043, addressed the board during public comment. He stated that the union is concerned an agreement reached in good faith between both sides now appears to be unraveling, calling it a \"handshake agreement built on mutual trust.\" He urged the town to stand behind its commitment to public safety."
+    key_speakers: ["Mark Tinzando (President, Marblehead Firefighters Union Local 2043)"]
+  - topic: override
+    topic_confidence: 0.99
+    start_seconds: 96
+    end_seconds: 3428
+    featured: true
+    headline: "Select Board votes 3-0 to approve three-tiered override at $9M, $12M, and $15M"
+    dek: "The tiered structure phases in the levy increase over three years, with year-one tax impacts on a median-assessed home of $130, $280, or $430 depending on the tier."
+    summary: |
+      The board reviewed a detailed presentation of a three-tiered Proposition 2½ override for the FY27 town meeting warrant.
+      
+      **Tier structure:**
+      
+      | Tier | Total (3 yrs) | Description | Year 1 tax (median home ~$998,600) |
+      |---|---|---|---|
+      | Tier 1 | $9M | Partial restore | $130 |
+      | Tier 2 | $12M | Rebuild | $280 |
+      | Tier 3 | $15M | Invest | $430 |
+      
+      **Tier 1 – Partial Restore ($9M)**
+      Restores 15 previously cut positions including a police school resource officer, library accreditation waiver eligibility, DPW groundskeeper, COA (2 positions), public buildings (2 custodians), community development director, and cemetery laborer. Also restores financial contributions: $26,000 workers' comp reserve, $250,000 to stabilization, and OPEB funding.
+      
+      **Tier 2 – Rebuild ($12M)**
+      Adds everything in Tier 1 plus 7 new positions: 2 firefighters, 1 police officer, 1 IT director, 1 budget analyst, 1 part-time social worker (COA), 1 GIS position (DPW). Also adds $450,000 maintenance budget ($400K town-wide, $50K rail trail), restores 1 special clerk in town clerk's office, 1 assistant planner, and 1 conservation agent. Full library restore including staffing and materials.
+      
+      **Tier 3 – Invest ($15M)**
+      Adds everything in Tiers 1 and 2 plus 6 additional positions: 2 more firefighters (4 total), 1 more police officer (force of 33), 1 stormwater foreman, 1 specialized HEO, 1 grant writer. Adds $60,000/year for mental health counseling and $1 million for recurring capital investments.
+      
+      **School/Town split (approximate):**
+      - Tier 1: ~$3M town / ~$6M schools
+      - Tier 2: ~$4.8M town / ~$7.2M schools
+      - Tier 3: ~$6.5M town / ~$8.5M schools
+      
+      **How the tiered ballot works:**
+      Voters see one question with three tiers. The highest tier receiving a majority vote is enacted. Town meeting approves the appropriation (year one only, contingent on override passing); draw in years two and three requires subsequent town meeting appropriations.
+      
+      **Tax impact on average home:**
+      - Tier 1: $381 / $689 / $331 = ~$1,088 cumulative over 3 years
+      - Tier 2: $362 / $875 / $553 = ~$1,590 cumulative
+      - Tier 3: $556 / $931 / $502 = ~$1,933 cumulative
+      
+      A board member noted that a three-year projection for the school side needs to be presented alongside the municipal side before town meeting, and the board agreed to continue developing an integrated presentation for the April 22 meeting.
+      
+      **Vote:** 3-0 in favor, with one member recused due to a family member employed by the schools.
+    key_speakers: ["Town Administrator (Alicia)", "Select Board Chair", "Moses (Select Board member)", "Jim (Select Board member)", "Leah (press/public questioner)", "Sarah (public questioner)"]
+  - topic: override
+    topic_confidence: 0.97
+    start_seconds: 3428
+    end_seconds: 3672
+    headline: "Select Board unanimously approves MOU with school committee governing 62/38 revenue split"
+    dek: "The MOU commits the town not to seek another override before 2030 and allocates future unrestricted revenue 62% to schools and 38% to the town."
+    summary: |
+      Following the override vote, the board moved to approve the memorandum of understanding (MOU) with the school committee. Key provisions include:
+      
+      - No override request before 2030 at the earliest
+      - Future unrestricted revenue split: 62% schools / 38% town, based on fully cost-allocated budgets
+      - Quarterly joint financial review by the town administrator and superintendent
+      - Reduction of reliance on free cash; excess free cash directed to stabilization until it reaches 5% of the operating budget
+      
+      Board members noted the MOU is a guiding document and the 62/38 ratio could be re-evaluated in a successor MOU. The vote was unanimous.
+    key_speakers: ["Town Administrator (Alicia)", "Moses (Select Board member)", "Select Board Chair"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 3672
+    end_seconds: 3904
+    headline: "Board approves Article 31 administrative benefit amendment (~$12,000); continues Article 29"
+    dek: "The board reversed its prior position on Article 31, approving a ~$12,000 administrative benefit update not reviewed in over 25 years, and continued Article 29 to the April 22 meeting."
+    summary: |
+      The board addressed three warrant articles:
+      
+      - **Article 29 (supplemental appropriation, ~$4.3M):** Continued to April 22 for further clarification.
+      - **Article 31 (administrative benefit amendment, ~$12,000):** The town administrator reversed her earlier recommendation to indefinitely postpone after meeting with the affected administrators. She noted the cost is approximately $12,000 and the benefits have not been reviewed in over 25 years. The board approved unanimously.
+      - **Article 34:** Voted unanimously to indefinitely postpone.
+    key_speakers: ["Town Administrator (Alicia)", "Jim (Select Board member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.99
+    start_seconds: 3904
+    end_seconds: 3971
+    headline: "Board votes to enter executive session for IAFF Local 2043 collective bargaining discussion"
+    dek: "The board voted unanimously to close open session and enter executive session to discuss negotiating strategies with the firefighters union; the board did not plan to reconvene in open session."
+    summary: "The chair read the statutory basis for executive session under MGL c. 30A §21 — to discuss collective bargaining strategies with the International Association of Firefighters AFL-CIO/CLC Local 2043 where open discussion could have a detrimental effect on the town's negotiating position. A roll-call vote was taken; all members voted in favor. The board did not plan to reconvene in open session."
+    key_speakers: ["Select Board Chair"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

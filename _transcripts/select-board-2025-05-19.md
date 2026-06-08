@@ -9,7 +9,80 @@ vimeo_url: "https://vimeo.com/1086093398"
 duration_seconds: 1199
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board unanimously votes to set July 8 special election on MBTA zoning"
+  summary: "The Marblehead Select Board held a brief special meeting to formally call a special town election for Tuesday, July 8, 2025, to allow voters to affirm or repeal the town meeting vote adopting MBTA Communities (Chapter 40A Section 3A) zoning overlay districts. Six sequential motions were passed unanimously: waiving prior notice, calling the special election, opening the warrant, placing the ballot question, closing the warrant, and transmitting the question to the town clerk. Public commenters raised concerns about voting access, polling hours, and the legal threshold required to reverse the town meeting vote."
+  decisions:
+    - "Approved waiving prior public notice to call the special election forthwith"
+    - "Approved calling a special town election for Tuesday, July 8, 2025"
+    - "Approved opening the warrant for insertion of a question"
+    - "Approved placing the MBTA zoning question on the special election ballot"
+    - "Approved closing the warrant for the July 8 special election"
+    - "Approved transmitting the ballot question notice to the town clerk"
+  votes:
+    - motion: "Waive prior public notice of special election"
+      result: "in favor (unanimous)"
+    - motion: "Call special town election for July 8, 2025"
+      result: "in favor (unanimous)"
+    - motion: "Open warrant for insertion of a question"
+      result: "in favor (unanimous)"
+    - motion: "Place MBTA zoning question on special election ballot"
+      result: "in favor (unanimous)"
+    - motion: "Close the warrant for the July 8 special election"
+      result: "in favor (unanimous)"
+    - motion: "Transmit notice to town clerk"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 4
+    end_seconds: 563
+    headline: "Residents urge maximum voting access and raise legal threshold questions"
+    dek: "Three commenters asked the board to ensure mail-in voting, early voting, extended poll hours, and addressed the unsettled legal question of what vote margin is required to reverse the town meeting decision."
+    summary: |
+      **Nick Ward (6 Ton Road)** opened public comment by asking the Select Board to maximize voting opportunities for the upcoming special election, citing the concern among petition signers that they lacked a chance to vote at town meeting. He specifically requested vote-by-mail and early in-person voting options.
+      
+      A board member responded that mail-in voting is now available by right under state law (residents must opt in via the Secretary of State's website), and that the Board of Registrars was meeting the following week to determine whether early voting would be offered for the June 10 election and for the special election as well.
+      
+      **Megan (online)** echoed the voting-access request and suggested the Select Board might have considered filing a state exemption to Article 3, while thanking the board and town clerk for their efforts.
+      
+      **John (6th grade Road — likely 'Six Acres Road' or similar)** raised two questions: (1) whether the polls could remain open until 10:00 PM rather than just 8:00 PM, noting the prior week is a holiday; and (2) the unsettled legal question of whether a simple majority suffices or whether a majority representing at least 20% of registered voters is required to reverse the town meeting vote. He noted no case law directly interprets Chapter 405 of the Acts of 1954 on this point, and proposed a compromise threshold of 15% of registered voters (approximately 825 fewer votes than the 20% standard) to avoid potential litigation.
+    key_speakers: ["Nick Ward (resident)", "Megan (resident, online)", "John (resident)"]
+  - topic: 40b-mbta
+    topic_confidence: 0.97
+    start_seconds: 563
+    end_seconds: 1004
+    featured: true
+    headline: "Select Board unanimously calls July 8 special election to ratify or repeal MBTA zoning vote"
+    dek: "Six sequential motions were passed unanimously, setting a July 8, 2025 special election on whether to affirm the town meeting adoption of Chapter 40A Section 3A zoning overlay districts."
+    summary: |
+      The Select Board passed six consecutive unanimous votes to formally call the special election:
+      
+      1. Waived prior public notice, finding action was required forthwith.
+      2. Called a special town election for **Tuesday, July 8, 2025**.
+      3. Opened the warrant for insertion of a question.
+      4. Placed the following question on the ballot:
+      
+      > *"Shall the town vote to approve the action of the town meeting wherein the town meeting voted to approve Article 23, the adoption of [MGL] Chapter 40A Section 3A zoning overlay districts — yes or no? A yes vote would affirm the adoption; a no vote would repeal it."*
+      
+      5. Closed the warrant.
+      6. Directed that notice be transmitted forthwith to the town clerk.
+      
+      Following the votes, board members offered remarks noting that all five Select Board members, all five Planning Board members, and eight of nine Finance Committee members had voted in favor of Article 23 (18 of 19 officials). Multiple members expressed concern about personal attacks on individual board members online, calling for debate to be directed at the issue rather than individuals. The board noted a legal opinion on the referendum vote threshold would be made publicly available.
+    key_speakers: ["Board Chair (unnamed)", "Board Member (Brett, unnamed)", "Board Member (unnamed)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1004
+    end_seconds: 1165
+    headline: "Board adjourns after members call for civil discourse ahead of special election"
+    dek: "Board members encouraged residents to use official communication channels and noted a legal opinion on the vote threshold would be made available before adjourning."
+    summary: "In closing remarks, board members asked residents to use email and other direct-contact channels rather than social media for questions and concerns about the upcoming special election. One member noted that a legal opinion on the referendum vote threshold question would be released publicly. The board then voted unanimously to adjourn."
+    key_speakers: ["Board Member (unnamed)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

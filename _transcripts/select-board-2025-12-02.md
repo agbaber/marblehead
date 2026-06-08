@@ -9,7 +9,82 @@ vimeo_url: "https://vimeo.com/1143192131"
 duration_seconds: 3016
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board adopts single uniform tax rate for FY26; rate drops to ~$8.60 per thousand"
+  summary: "The Marblehead Select Board held its annual tax classification hearing on December 2nd, receiving a presentation from Assessor John Kelly and Assistant Assessor Todd Laramie. The Board of Assessors recommended against adopting a residential exemption, small commercial exemption, or open space discount, and recommended maintaining a single uniform tax rate. The board voted unanimously on all four motions, adopting a residential factor of one for fiscal year 2026."
+  decisions:
+    - "Approved not adopting a residential exemption"
+    - "Approved not adopting a small commercial exemption"
+    - "Approved not adopting an open space discount"
+    - "Approved a single tax rate factor of one (100% for all parcels)"
+  votes:
+    - motion: "Not to adopt residential exemption"
+      result: "in favor (unanimous)"
+    - motion: "Not to adopt small commercial exemption"
+      result: "in favor (unanimous)"
+    - motion: "Not to adopt open space discount"
+      result: "in favor (unanimous)"
+    - motion: "Adopt single rate factor of one"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.7
+    start_seconds: 0
+    end_seconds: 19
+    headline: "No public comment at opening of December 2 meeting"
+    dek: "Chair called the meeting to order and solicited general public comment before opening the tax classification hearing."
+    summary: "The chair called the meeting of December 2nd to order, noted the meeting was being recorded, and invited general public comment. No public comment was offered, and the board moved directly into the tax classification hearing."
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 19
+    end_seconds: 2823
+    featured: true
+    headline: "Board adopts single FY26 tax rate of ~$8.60/thousand, lowest in recent memory"
+    dek: "Assessors presented all four classification options and recommended against exemptions; board voted unanimously to maintain a uniform single tax rate."
+    summary: |
+      Assessor John Kelly and Assistant Assessor Todd Laramie presented the annual tax classification options to the Select Board for fiscal year 2026.
+      
+      **Key findings from the presentation:**
+      
+      - Total taxable valuation for FY26 is approximately **$9.4 billion**, up from roughly $7 billion in FY22.
+      - Residential property comprises approximately **95%** of total assessed valuation; commercial, industrial, and personal property account for roughly **4%**.
+      - The proposed tax rate is approximately **$8.60 per thousand**, described by board members as the lowest in recent memory, down considerably from prior years. The reduction reflects both rising property values and high school debt rolling off.
+      - Median single-family valuation is just over **$1 million**.
+      - New growth for FY26 is approximately **$287,000** in additional tax levy (approximately $30 million in assessed value of new construction).
+      - FY26 valuations are based on calendar year 2024 sales.
+      
+      **Board of Assessors recommendations (all adopted):**
+      
+      | Option | Recommendation | Reason |
+      |---|---|---|
+      | Residential Exemption | Do not adopt | Nearly all residential parcels owner-occupied; little benefit |
+      | Small Commercial Exemption | Do not adopt | Most Marblehead businesses are small; little relief available |
+      | Open Space Discount | Do not adopt | No vacant land parcels meet the criteria |
+      | Residential Factor | Adopt factor of 1 (single rate) | Only ~4% of valuation is commercial/industrial; split rate provides minimal residential relief while burdening small businesses |
+      
+      A resident from the audience asked about the relationship between the levy cap (Proposition 2½), property values, and the tax rate. Assessors explained that the levy can rise by no more than 2.5% plus new growth annually; the tax rate is simply the mathematical ratio of the levy to total assessed value.
+      
+      Despite the lower rate, tax bills for properties above the mean valuation are expected to increase modestly due to rising assessed values. Real tax bills for the first two quarters were estimated; actual bills reflecting the certified FY26 rate are expected to be mailed by end of December.
+      
+      A board member noted that the open space discount definition does not include Chapter 61A/B land, flagging that as a possible future discussion topic.
+    key_speakers: ["John Kelly (Assessor)", "Todd Laramie (Assistant Assessor)", "Resident (Lander, 8 West Tar — mic)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 2914
+    end_seconds: 2963
+    headline: "Board member thanks chair for response defending town employees"
+    dek: "A board member expressed appreciation for a response to comments that mischaracterized town employees, citing commitment to collaboration with other officials."
+    summary: "Following the tax classification votes, a board member stated appreciation for a response issued on behalf of the Board of Health regarding comments that mischaracterized valued employees. The member emphasized the board's commitment to working collaboratively with other town officials. A second member concurred, stressing the importance of deliberative process and avoiding loose characterizations."
+  - topic: admin-housekeeping
+    topic_confidence: 0.6
+    start_seconds: 2963
+    end_seconds: 2979
+    headline: "Meeting adjourned"
+    dek: "Motion to adjourn passed unanimously."
+    summary: "A motion to adjourn was made, seconded, and approved unanimously."
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

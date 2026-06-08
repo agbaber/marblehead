@@ -9,7 +9,191 @@ vimeo_url: "https://vimeo.com/790847120"
 duration_seconds: 4723
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board approves ARPA funds for school literacy curriculum, makes five board appointments"
+  summary: "The Marblehead Select Board met on January 18, 2023 and approved $400,000 in ARPA funding for a literacy curriculum adoption and implementation program in the elementary schools, expected to cover the next five years. The board also made five appointments to local boards and committees, including a joint appointment with the Housing Authority. Additional routine actions included approving event permits, a lodging house license renewal, a cost-of-living increase for retirees, and a dangerous dog hearing referral."
+  decisions:
+    - "Approved appointment of Helena Tedesi as student representative to the Task Force Against Discrimination"
+    - "Approved appointment of Judy Gates and Andrew Gallucci to the Old Burial Hill Committee"
+    - "Approved appointment of Teresa Toro to the Marblehead Housing Authority"
+    - "Approved lodging house license for Hotel Marblehead, 264 Pleasant Street"
+    - "Approved 5% COLA increase for retirees per Chapter 269 of the Acts of 2022"
+    - "Approved Fair Housing Committee membership and alternates"
+    - "Approved minutes for December 21, 2022 and January 5, 2023"
+    - "Approved license agreement with Bill's Auto Clinic of Salem for snow emergency vehicle towing"
+    - "Approved $400,000 ARPA expenditure for literacy curriculum adoption and implementation"
+    - "Approved Miles for Mary Memorial 5K road race, October 14, 2023"
+    - "Approved Complete Streets Committee minutes from 2019"
+    - "Approved Head of the Hill 5K road race, May 21, 2023"
+    - "Approved ringing of bells at Abbott Hall and churches on Washington's Birthday, February 22, 2023"
+    - "Approved license agreement for private drainage connection at 118 Pleasant Street"
+    - "Designated Town Administrator as board representative for PEC negotiations"
+    - "Approved dangerous dog hearing referral for dog at 45 Pickwick Road"
+    - "Approved Marblehead Youth Baseball opening day parade, April 29, 2023"
+  votes:
+    - motion: "Appoint Helena Tedesi to Task Force Against Discrimination"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Judy Gates and Andrew Gallucci to Old Burial Hill Committee"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Teresa Toro to Marblehead Housing Authority"
+      result: "in favor (unanimous)"
+    - motion: "Approve lodging house license for Hotel Marblehead"
+      result: "in favor (unanimous)"
+    - motion: "Adopt COLA increase per Chapter 269 of the Acts of 2022"
+      result: "in favor (unanimous)"
+    - motion: "Approve Fair Housing Committee composition"
+      result: "in favor (unanimous)"
+    - motion: "Approve license agreement with Bill's Auto Clinic"
+      result: "in favor (unanimous)"
+    - motion: "Expend $400,000 for literacy curriculum adoption and implementation"
+      result: "in favor (unanimous)"
+    - motion: "Approve Miles for Mary Memorial 5K"
+      result: "in favor (unanimous)"
+    - motion: "Approve Complete Streets Committee minutes"
+      result: "in favor (unanimous)"
+    - motion: "Approve Head of the Hill 5K"
+      result: "in favor (unanimous)"
+    - motion: "Approve bell ringing on Washington's Birthday"
+      result: "in favor (unanimous)"
+    - motion: "Approve drainage license agreement at 118 Pleasant Street"
+      result: "in favor (unanimous)"
+    - motion: "Designate Town Administrator as PEC negotiations representative"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Town Administrator to investigate and hold dangerous dog hearing"
+      result: "in favor (unanimous)"
+    - motion: "Approve Marblehead Youth Baseball opening day parade"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 154
+    end_seconds: 310
+    headline: "MHS senior Helena Tedesi appointed as student rep to Task Force Against Discrimination"
+    dek: "Tedesi, a senior at Marblehead High School, cited her involvement with Team Harmony and interest in inclusivity as reasons for seeking the appointment."
+    summary: "Helena Tedesi, a senior at Marblehead High School, was interviewed and unanimously appointed as the student representative to the Task Force Against Discrimination, with the term expiring June 2023. She described her participation in the club Team Harmony, which focuses on social and racial justice, and her desire to give voice to underrepresented community members."
+    key_speakers: ["Helena Tedesi (applicant)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 312
+    end_seconds: 667
+    headline: "Judy Gates and Andrew Gallucci appointed to Old Burial Hill Committee"
+    dek: "Both candidates cited long-standing connections to Old Burial Hill; Gates as a neighbor since 1965 and Gallucci as a recent returnee with project management experience."
+    summary: "The board interviewed and unanimously appointed Judy Gates and Andrew Gallucci to the two vacancies on the Old Burial Hill Committee, with terms expiring June 2023. Gates, a Marblehead resident since 1965, described decades of involvement with the site. Gallucci, who returned to Marblehead during the pandemic, highlighted his background in hospitality and capital project management overseeing condominium associations in Boston."
+    key_speakers: ["Judy Gates (appointee)", "Andrew Gallucci (appointee)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 667
+    end_seconds: 1888
+    headline: "Teresa Toro appointed to Marblehead Housing Authority in joint session"
+    dek: "Toro, who grew up in public housing in Marblehead and serves as president of the municipal employees union, was unanimously approved to fill a vacancy created by a resignation."
+    summary: "The Select Board conducted a joint meeting with the Marblehead Housing Authority to interview and appoint Teresa Toro to fill the vacancy created by the resignation of Joan Cutler, with the term expiring June 2023. The Housing Authority chair clarified that the authority is a state agency regulated by DHCD, with the Select Board's role limited to participating in board member appointments. Toro described her upbringing in public housing on Barnard Hawks Court, her experience assisting with grants as a harbor master employee, and her goals around tenant communication, community-building, and securing funding for aging infrastructure. State Representative Jenny Armenia was acknowledged as being present in the audience."
+    key_speakers: ["Teresa Toro (appointee)", "Housing Authority Chair (unnamed)", "Jen Jaffner (governor-appointed Housing Authority member)"]
+  - topic: permits-zoning
+    topic_confidence: 0.9
+    start_seconds: 1923
+    end_seconds: 2012
+    headline: "Hotel Marblehead lodging house license renewed for 264 Pleasant Street"
+    dek: "The applicant reported strong business performance and the board approved the renewal unanimously."
+    summary: "The board approved the annual lodging house license renewal for Hotel Marblehead at 264 Pleasant Street, subject to receipt of all application fees and required sign-offs. The applicant reported a successful prior year and expressed intent to maintain operations."
+    key_speakers: ["Julius (Hotel Marblehead representative)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 2012
+    end_seconds: 2401
+    headline: "Select Board approves one-time 5% COLA for retirees under state special legislation"
+    dek: "The additional 2% above the usual 3% cap, enabled by Chapter 269 of the Acts of 2022, applies to 314 eligible retirees at a total additional cost of approximately $75,360."
+    summary: "Marblehead Retirement Board representative Bob Peck presented a request to approve a one-time cost-of-living increase of 5% for active retirees, enabled by Chapter 269 of the Acts of 2022. The standard cap is 3%, applied to the first $12,000 of pension. The additional 2% represents $240 per retiree per year, retroactive to July 1, for a total additional cost of approximately $75,360 across 314 eligible retirees. The average Marblehead pension was noted at approximately $29,000. The board unanimously approved the measure."
+    key_speakers: ["Bob Peck (Marblehead Retirement Board)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2401
+    end_seconds: 2583
+    headline: "Fair Housing Committee membership structure confirmed with three members and three alternates"
+    dek: "The board affirmed the reorganized composition following a prior vote, slotting existing participants into full-member and alternate roles."
+    summary: "Town Administrator Thatcher Keyes described the reorganized Fair Housing Committee structure approved at a prior meeting, consisting of required members (including the Town Administrator as chair, the town planner, a Select Board member, and representatives from several commissions) plus three additional members with staggered three-year terms and three alternates. The board voted unanimously to affirm all appointments as presented."
+    key_speakers: ["Thatcher Keyes (Town Administrator)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2583
+    end_seconds: 2680
+    headline: "Snow emergency towing agreement with Bill's Auto Clinic of Salem approved"
+    dek: "Vehicles not moved during a declared snow emergency will be towed first to the transfer station and then to Bill's Auto Clinic in Salem after approximately 72 hours."
+    summary: "The board approved a license agreement with Bill's Auto Clinic of Salem to handle vehicles towed during snow emergencies. Vehicles will initially be taken to the transfer station; after approximately 72 hours following the end of the emergency declaration, unclaimed vehicles will be transferred to the Salem facility. The agreement is intended to ensure streets are cleared for public works and public safety vehicles."
+    key_speakers: ["Thatcher Keyes (Town Administrator)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 2694
+    end_seconds: 2892
+    featured: true
+    headline: "Select Board approves $400,000 in ARPA funds for elementary school literacy curriculum"
+    dek: "The funding will support a unified literacy curriculum across Marblehead's elementary schools for approximately five years, with $3,453,100 in ARPA funds remaining after this allocation."
+    summary: "The board unanimously approved an expenditure of $400,000 in ARPA funds for literacy curriculum adoption and implementation in the Marblehead Public Schools. The Town Administrator described it as funding a unified, comprehensive literacy plan across elementary schools covering the next five years, after which a reassessment would occur. The allocation received a high ranking from the ARPA working group, partly due to its alignment with COVID-19 recovery priorities. Following approval, approximately $3,453,100 in ARPA funds will remain."
+    key_speakers: ["Thatcher Keyes (Town Administrator)"]
+  - topic: recreation-events
+    topic_confidence: 0.95
+    start_seconds: 2892
+    end_seconds: 3039
+    headline: "Annual Miles for Mary 5K and Head of the Hill 5K road races approved for 2023"
+    dek: "Miles for Mary is scheduled for October 14 and the Head of the Hill for May 21, both subject to standard public safety and insurance conditions."
+    summary: "The board approved two road race events. The Miles for Mary Memorial 5K, submitted by William H. Park to benefit brain cancer research, was approved for October 14, 2023. The Head of the Hill 5K, submitted by Carol Mayer of the YMCA of the North Shore, was approved for May 21, 2023. Both are subject to police and fire approval, required insurance certificates, and prohibition on permanent street markings."
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 3039
+    end_seconds: 3321
+    headline: "Select Board approves 2019 Complete Streets Committee minutes as administrative cleanup"
+    dek: "A resident speaking during public comment objected that the town had not fulfilled its Complete Streets commitments."
+    summary: "The board approved three sets of Complete Streets Committee minutes from 2019 as an administrative records cleanup, acting in its capacity as the appointing authority for that committee. Discussion touched on whether the committee is still active (it is not, with members having departed) and whether complete streets grant eligibility might apply to future road projects. During public comment, a resident expressed concern that the town had not followed through on its Complete Streets commitments despite accepting state funding."
+    key_speakers: ["Thatcher Keyes (Town Administrator)", "Resident at mic (public comment)"]
+  - topic: recreation-events
+    topic_confidence: 0.9
+    start_seconds: 3321
+    end_seconds: 3435
+    headline: "Washington's Birthday bell ringing and Marblehead Youth Baseball parade approved"
+    dek: "Bells at Abbott Hall and local churches are authorized for February 22; the baseball parade is set for April 29 from Veterans Middle School."
+    summary: "The board approved the traditional ringing of bells at Abbott Hall and all Marblehead churches on Washington's Birthday, February 22, 2023. The board also approved the Marblehead Youth Baseball annual opening day parade for April 29, 2023, starting behind Veterans Middle School and ending at Getchell's Park, subject to standard conditions."
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 3435
+    end_seconds: 3649
+    headline: "Drainage license at 118 Pleasant Street and PEC negotiation delegation approved"
+    dek: "The board also designated the Town Administrator to negotiate a successor agreement with the Public Employee Committee."
+    summary: "The board approved a license agreement for a private connection to the town drainage system at 118 Pleasant Street for Neptune Realty LLC, authorizing the chair to sign. The board also voted to designate Town Administrator Thatcher Keyes as the board's representative to enter negotiations with the town's Public Employee Committee regarding a successor agreement effective June 30, 2018."
+    key_speakers: ["Thatcher Keyes (Town Administrator)"]
+  - topic: public-safety
+    topic_confidence: 0.9
+    start_seconds: 3534
+    end_seconds: 3829
+    headline: "Town Administrator directed to investigate and hold dangerous dog hearing for dog at 45 Pickwick Road"
+    dek: "The referral originated with the police chief; the fire chief has also flagged the Village Street Bridge weight limit as a public safety concern."
+    summary: "The board unanimously voted to appoint the Town Administrator to investigate and conduct a public hearing on a dangerous dog complaint originating from the police chief, concerning a dog at 45 Pickwick Road. The board noted that 10 days' written notice must be provided to the dog owner, and the Town Administrator indicated he would follow up with the police chief regarding interim restraint measures."
+    key_speakers: ["Thatcher Keyes (Town Administrator)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 4113
+    end_seconds: 4442
+    headline: "Town Administrator previews Village Street Bridge replacement design contract at approximately $400,000"
+    dek: "The 1939 bridge is weight-restricted below fire truck limits; the plan uses Chapter 90 funds for 25% design work to get the project on the state's Transportation Improvement Plan."
+    summary: "Town Administrator Keyes described plans to bring forward a contract with engineering firm GPI to complete 25% design work for the Village Street Bridge replacement, at an estimated cost of slightly under $400,000 funded from existing Chapter 90 funds. The 1939 bridge has been identified as needing replacement since the 1990s and is currently weight-restricted below the weight of fire trucks. The concept under consideration is to replace the bridge with a formed cement tunnel structure, similar to a project in Amesbury. The goal is to achieve placement on the Boston Region Metropolitan Planning Organization's Transportation Improvement Plan for state and federal funding. Full design completion is targeted for September 2024. The contract is expected to come before the board at a future meeting."
+    key_speakers: ["Thatcher Keyes (Town Administrator)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 3985
+    end_seconds: 4091
+    headline: "Resident criticizes town's follow-through on Complete Streets commitments during public comment"
+    dek: "The speaker argued that Complete Streets is a design philosophy, not merely a funding program, and questioned whether the town honored its obligations after accepting state money."
+    summary: "During public comment, one resident spoke online to address the Complete Streets discussion. The resident argued that Complete Streets is a design philosophy encompassing pedestrians, cyclists, transit users, and people of different abilities — not simply a grant funding stream — and expressed concern that the town had not fulfilled its commitments after accepting state funds, noting that meeting minutes from the committee were apparently not collected. The chair acknowledged the comments."
+    key_speakers: ["Resident at mic (online)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 4442
+    end_seconds: 4710
+    headline: "ADA self-evaluation survey promoted; board members note correspondence on committee vacancies"
+    dek: "The Collins Center survey will be re-blasted via email; letters of interest were received for Marblehead Forever and the Cultural Council."
+    summary: "The Town Administrator reminded residents to complete the ADA self-evaluation transition plan survey on the town website, noting a second email blast would go out the following day. A board member raised questions about the survey's design for residents with disabilities; staff noted the Collins Center uses multiple methods to gather that information. The board also noted letters of interest from Meredith Reardon for the Marblehead Forever Committee and Marjorie Norman for the Marblehead Cultural Council, both to be considered at a future meeting."
+    key_speakers: ["Thatcher Keyes (Town Administrator)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

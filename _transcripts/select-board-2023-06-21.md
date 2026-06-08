@@ -9,7 +9,63 @@ vimeo_url: "https://vimeo.com/838715576"
 duration_seconds: 716
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board elects Aaron Noonan chair, approves carry-in license for Plus Cafe"
+  summary: "The Marblehead Select Board convened on June 21, 2023 and elected Aaron Noonan as chair for the upcoming year by unanimous vote, following thanks to outgoing chair Moses. The board then held a public hearing and unanimously approved a carry-in beer and wine license for Plus Cafe at 34A Atlantic Avenue. The meeting concluded after a motion to send a letter of thanks to Jackie Becker for 18 years of service on the Select Board; a brief attempt by attendees to raise an unagendaed topic was not accommodated by the chair."
+  decisions:
+    - "Approved Aaron Noonan as Select Board chair for the upcoming year"
+    - "Approved carry-in beer and wine license for Plus Cafe, 34A Atlantic Avenue, subject to police chief approval, required fees, departmental approvals, and ABCC approval"
+    - "Approved motion to send letter of thanks to Jackie Becker for 18 years of service on the Select Board"
+  votes:
+    - motion: "Elect Aaron Noonan as Select Board chair"
+      result: "in favor (unanimous)"
+    - motion: "Approve carry-in alcoholic beverage license for Plus Cafe"
+      result: "in favor (unanimous)"
+    - motion: "Send letter of thanks to Jackie Becker"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2
+    end_seconds: 228
+    headline: "New Select Board member sworn in; Aaron Noonan elected chair unanimously"
+    dek: "The board opened its first meeting of the new year with a swearing-in and then nominated and elected Aaron Noonan as chair, with members citing the value of rotating the chair role."
+    summary: "The meeting opened with a swearing-in ceremony for a new Select Board member. The board then moved to nominate a chair for the upcoming year. Aaron Noonan was nominated; members discussed the value of rotating the chair position and acknowledged outgoing chair Moses for his leadership during a stressful year. The vote was unanimous in favor of Noonan."
+    key_speakers: ["Aaron Noonan (Select Board member, newly elected chair)"]
+  - topic: permits-zoning
+    topic_confidence: 0.95
+    start_seconds: 351
+    end_seconds: 631
+    featured: true
+    headline: "Select Board approves carry-in beer and wine license for Plus Cafe at 34A Atlantic Ave"
+    dek: "Applicant Clevis Racia described the license as a customer-driven request allowing patrons to bring their own wine or beer to enjoy at the cafe, with extended winter hours possible."
+    summary: |
+      The board held a publicly advertised hearing on a carry-in alcoholic beverage application from Plus Cafe at 34A Atlantic Avenue. The applicant explained the license was sought in response to customer demand, similar to a prior application for a nearby location, and noted the cafe may extend winter hours to approximately 8:00 PM.
+      
+      No members of the public spoke in opposition or in favor. The board voted unanimously to approve the carry-in beer and wine license subject to:
+      - Police chief approval
+      - Receipt of required forms and fees
+      - Departmental approvals and ABCC approval
+      - A TIPS- or BAT-trained person on premises at all times carry-in is permitted
+      - Hours of operation: Monday–Sunday, 10:00 AM–10:00 PM
+      - Seating capacity: 20
+    key_speakers: ["Clevis Racia (applicant, Plus Cafe)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 631
+    end_seconds: 715
+    headline: "Board approves letter of thanks to Jackie Becker for 18 years of Select Board service"
+    dek: "A board member proposed the letter following the prior day's election; a brief attempt by attendees to raise an unagendaed topic was not entertained before adjournment."
+    summary: |
+      A board member thanked voters for turnout at the previous day's election and moved to send a letter of thanks to Jackie Becker for 18 years of service on the Select Board and 5 years on the School Board. The motion passed unanimously.
+      
+      As the board moved to adjourn, individuals in attendance attempted to raise a topic not on the agenda. The chair noted a meeting was scheduled in seven days and that the town administrator had communicated with the attendees, then called the vote to adjourn. The meeting adjourned unanimously.
+    key_speakers: ["Aaron Noonan (chair)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

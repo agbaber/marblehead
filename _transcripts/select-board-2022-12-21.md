@@ -9,7 +9,56 @@ vimeo_url: "https://vimeo.com/783395210"
 duration_seconds: 316
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board approves $52,593 contract amendment for rail trail crossings project"
+  summary: "The Select Board held a special meeting to approve a contract amendment for the Complete Streets rail trail crossings project before a December 30, 2022 grant deadline. The amendment increases the contract with Richard F. D'Ambrosia Inc. of Weymouth by $52,593.50, covering unforeseen drainage work, rapid flashing beacons, and concrete median island modifications. Funding comes from the Complete Streets grant ($25,048) and the town drainage account. The board also appointed a chair pro tem before conducting the single vote."
+  decisions:
+    - "Approved appointment of chair pro tem"
+    - "Approved amendment to crossing improvement contract with Richard F. D'Ambrosia Inc., increasing contract by $52,593.50 and extending deadline to December 30, 2022"
+  votes:
+    - motion: "Appoint chair pro tem"
+      result: "in favor (unanimous)"
+    - motion: "Amend crossing improvement contract with Richard F. D'Ambrosia Inc."
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 0
+    end_seconds: 47
+    headline: "Board appoints chair pro tem by roll call vote"
+    dek: "With the regular chair absent, members nominated and unanimously elected a chair pro tem to preside over the meeting."
+    summary: "The meeting opened with a roll-call vote to appoint a chair pro tem. Members Noonan, Knight, and Belt Becker all voted in favor. Belt Becker was appointed chair pro tem."
+  - topic: bonding-capital
+    topic_confidence: 0.7
+    start_seconds: 47
+    end_seconds: 253
+    featured: true
+    headline: "Board approves $52,593 amendment to rail trail crossings contract before grant deadline"
+    dek: "The amendment covers unforeseen drainage work, rapid flashing beacons, and median island changes at Smith Street, Pleasant, Mohawk, and Westshore crossings."
+    summary: |
+      A town official (likely DPW Director or Town Engineer) presented a contract amendment for the Complete Streets rail trail crossings project. The original bid came in at approximately $368,000 against a $393,000 grant. The amendment of $52,593.50 covers:
+      
+      - Unforeseen drainage work around an unknown underground duct
+      - Rapid flashing beacons (purchased through the contractor for faster delivery)
+      - Modifications to concrete median islands (originally a deduct alternate)
+      - An ADA ramp adjustment at Smith Street requiring a ~9-foot setback
+      
+      Funding breakdown:
+      - $25,048 from the Complete Streets grant (bringing total to the full grant amount)
+      - Remainder from the town drainage account
+      
+      The contract deadline was also extended to December 30, 2022. The contractor anticipated completing work the following day.
+    key_speakers: ["Town official (DPW/Engineering)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 253
+    end_seconds: 297
+    headline: "Board opens public comment; no speakers present; meeting adjourned"
+    dek: "No members of the public appeared for comment, and the board voted unanimously to adjourn."
+    summary: "Following the contract vote, the chair pro tem opened the public comment portion of the agenda. No residents came forward. The board then voted unanimously to adjourn."
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

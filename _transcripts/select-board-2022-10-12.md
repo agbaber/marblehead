@@ -9,7 +9,141 @@ vimeo_url: "https://vimeo.com/759874158"
 duration_seconds: 4739
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board approves ~$946K in ARPA allocations and proclaims Jan. 27 Holocaust Remembrance Day"
+  summary: "The Marblehead Select Board unanimously approved allocation of federal ARPA funds totaling approximately $946,000 across five projects, including $200,000 for mental health treatment resources, $150,000 for administrative ARPA implementation staffing, and $584,142 in revenue replacement funding. The board also unanimously proclaimed January 27th as Holocaust Remembrance Day on a permanent annual basis, following a request from the town's Task Force Against Discrimination. Additional routine votes approved a drainage license agreement, a Rotary Club clock gift, use of Abbott Hall for a December artisans fair, and award of a rail trail design contract."
+  decisions:
+    - "Approved ARPA fund allocations totaling approximately $946,000 across five line items"
+    - "Proclaimed January 27th as Holocaust Remembrance Day on a permanent annual basis"
+    - "Approved license agreement for private drainage connection at 45 Lincoln Ave."
+    - "Accepted Rotary Club centennial clock as gift to the town"
+    - "Approved use of Abbott Hall for Festival of Arts Artisans Marketplace, December 2–4, 2022"
+    - "Awarded Lead Mills Rail Trail design contract to Toole Design of Boston for $150,800"
+    - "Appointed Town Administrator Thatcher Keyser as hearing officer in disciplinary matter involving Officer Christopher Gallo"
+    - "Approved minutes of September 28, 2022"
+  votes:
+    - motion: "Proclaim January 27th Holocaust Remembrance Day annually"
+      result: "in favor (unanimous)"
+    - motion: "Approve ARPA fund allocations (~$946K across five projects)"
+      result: "in favor (unanimous)"
+    - motion: "Approve minutes of September 28, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Approve drainage license agreement at 45 Lincoln Ave."
+      result: "in favor (unanimous)"
+    - motion: "Accept Rotary Club clock as gift to the town"
+      result: "in favor (unanimous)"
+    - motion: "Approve Abbott Hall use for Artisans Marketplace, Dec. 2–4, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Award rail trail design contract to Toole Design for $150,800"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Town Administrator as hearing officer in Gallo disciplinary matter"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 0
+    end_seconds: 860
+    headline: "Task Force asks Select Board to permanently designate Jan. 27 Holocaust Remembrance Day"
+    dek: "Helaine Hazlet, co-chair of the Task Force Against Discrimination, presented the UN General Assembly resolution and requested an annual proclamation."
+    summary: |
+      Helaine Hazlet appeared before the board representing the Task Force Against Discrimination, which had voted unanimously in favor of the request. She read aloud UN General Assembly Resolution 60/7 (2005) designating January 27th—the anniversary of the liberation of Auschwitz—as International Holocaust Remembrance Day, and noted that dozens of countries observe the date.
+      
+      One board member shared that most of their parents' immediate family members perished in the Holocaust and spoke about the importance of education and vigilance. The board voted unanimously to proclaim January 27th Holocaust Remembrance Day on a permanent annual basis and to sign the associated proclamation.
+      
+      Hazlet also asked the board to consider a budget line item to support programming for groups recognized on commemorative days, noting the task force has been relying on fundraising from private sources.
+    key_speakers: ["Helaine Hazlet (Task Force Against Discrimination co-chair)", "Jackie Belf-Becker (Select Board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 861
+    end_seconds: 3334
+    featured: true
+    headline: "Board approves ~$946K in ARPA spending after presentation on project-ranking methodology"
+    dek: "An ARPA working group presented a scored prioritization framework covering 72 projects before the board voted on five specific allocations."
+    summary: |
+      Town Administrator Thatcher Keyser and ARPA working group member Moses presented a detailed overview of the town's ARPA spending process. Total ARPA funds expected: approximately $6,161,440, of which roughly $296,476 had already been expended prior to this meeting.
+      
+      **Prioritization criteria (published before solicitation):**
+      1. Public health and safety
+      2. Replenishing reserves due to COVID losses
+      3. Economic recovery programs
+      4. Infrastructure investment
+      5. Temporary operating deficits caused by COVID-19
+      
+      A community survey of approximately 344 participants showed a 60% overlap with the working group's top-30 ranked projects. The working group emphasized that no new permanent staff positions or ongoing operating commitments would be funded.
+      
+      **Projects approved tonight:**
+      
+      | Project | Amount |
+      |---|---|
+      | Administrative ARPA implementation staffing support (2-year temp position) | $150,000 |
+      | Equip meeting spaces with hybrid technology (schools) | $5,700 |
+      | Mental health treatment resources and support | $200,000 |
+      | Revenue replacement funding | $584,142 |
+      | Visitor booth upgrade | $6,311 |
+      | **Total** | **~$946,000** |
+      
+      Remaining ARPA funds after these approvals: approximately $5,046,153. The board noted a corrective re-vote was needed after the original motion inadvertently omitted the visitor booth upgrade and duplicated the administrative staffing line.
+    key_speakers: ["Thatcher Keyser (Town Administrator)", "Moses (ARPA working group member)", "Alexa (Select Board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 3336
+    end_seconds: 3614
+    headline: "Board approves drainage license, accepts Rotary Club clock gift, and approves Abbott Hall use"
+    dek: "Three routine votes covered a private drainage connection at 45 Lincoln Ave., a centennial clock donation from the Rotary Club, and use of Abbott Hall for a December artisans fair."
+    summary: |
+      The board approved a license agreement for a private connection to the town drainage system at 45 Lincoln Avenue for Margaret Strage.
+      
+      The Rotary Club of Marblehead offered a ten-and-a-half-foot two-dial Howard clock (made by Electric Time, a Massachusetts company) to commemorate the club's 100th anniversary in April 2023. The board accepted the gift and directed the Town Administrator to coordinate location and installation. A letter of thanks was also authorized.
+      
+      The Festival of Arts received approval to use Abbott Hall and its upper grounds for an Artisans Marketplace and five ice sculptures on December 2–4, 2022, subject to standard rules, fees, and insurance requirements.
+    key_speakers: ["Thatcher Keyser (Town Administrator)"]
+  - topic: bonding-capital
+    topic_confidence: 0.75
+    start_seconds: 3618
+    end_seconds: 3732
+    headline: "Board awards Lead Mills Rail Trail design contract to Toole Design for $150,800"
+    dek: "Toole Design of Boston, which prepared the original rail trail master plan, was selected to perform permitting and design work."
+    summary: "The board voted unanimously to award the Lead Mills Rail Trail project design contract to Toole Design of Boston for $150,800, funded through ARPA. Toole Design had previously completed the master plan for the trail and will handle permitting and design to make the project ready for construction bidding."
+    key_speakers: ["Thatcher Keyser (Town Administrator)"]
+  - topic: labor-personnel
+    topic_confidence: 0.82
+    start_seconds: 3732
+    end_seconds: 3857
+    headline: "Town Administrator appointed hearing officer in disciplinary matter involving Officer Christopher Gallo"
+    dek: "The board acted on advice of town counsel in appointing Thatcher Keyser to hear pending disciplinary matters and report findings back to the board."
+    summary: "On the advice of town counsel, the board unanimously appointed Town Administrator Thatcher Keyser as hearing officer in pending disciplinary matters involving Officer Christopher Gallo, with direction to report findings back to the Select Board."
+    key_speakers: ["Thatcher Keyser (Town Administrator)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 3857
+    end_seconds: 4254
+    headline: "Residents urge action on Lakehill Road speed limit and ARPA funds for school learning loss"
+    dek: "Two residents spoke during open public comment: one on a decade-old commitment to reduce speeds near the YMCA preschool, and one on using ARPA funds to address learning loss."
+    summary: |
+      **Dan Albert, 58 Lester Road**, described a plan from roughly a decade ago to establish a 25 mph school safety zone on Lakehill Road near the YMCA, which operates a state-registered preschool. He said the existing electronic speed advisory sign has not functioned in years and asked the board to follow through on prior commitments by working with engineering firms Toole Design and Stantec to implement the safety zone.
+      
+      **Sarah Fox** urged the board, as it advances further ARPA allocations, to look at how other communities are using ARPA funds to address learning loss and social-emotional outcomes in schools, and to pursue joint town-school partnerships using those dollars.
+    key_speakers: ["Dan Albert (resident, 58 Lester Road)", "Sarah Fox (resident)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.87
+    start_seconds: 4254
+    end_seconds: 4719
+    headline: "Town Administrator reports on finance director search, IT migration, ADA plan update, and infrastructure projects"
+    dek: "Thatcher Keyser provided updates on staffing, technology, a new ADA transition plan grant, and two ongoing public works projects."
+    summary: |
+      **Finance director search:** Interviews completed; references being checked; recommendation to the board expected soon.
+      
+      **IT:** New e-plus technician Leandro Alcantara has joined for desktop and network support. Office 365 migration for staff is ongoing.
+      
+      **ADA Transition Plan:** Marblehead received a Community Compact Grant and will contract with the Collins Center to update the town's ADA transition plan, which will tie into the capital improvement plan.
+      
+      **Pleasant and Village Street project:** Concrete sidewalk pouring is the next step; project expected to complete in November 2022. The project included water infrastructure upgrades beneath the roadway.
+      
+      **Reeds Pond walkway:** DPW Director Amy is developing a temporary fix—removing asphalt over known voids, then filling with fabric, stone, and stone dust—to make the path safe while a more permanent engineering solution is pursued. Wall integrity and equipment access are complicating factors.
+    key_speakers: ["Thatcher Keyser (Town Administrator)", "Amy (DPW Director)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

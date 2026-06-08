@@ -9,7 +9,325 @@ vimeo_url: "https://vimeo.com/894514402"
 duration_seconds: 7703
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board appoints Lindsay Duby to Finance Committee; approves Tyler Technologies contract"
+  summary: "The Marblehead Select Board interviewed three Finance Committee applicants and unanimously selected Lindsay Duby, a senior vice president at Eagle Bank with a finance background. The board also approved a three-year administrative software contract with Tyler Technologies (Munis) totaling approximately $1,023,923, with $461,440 covered by ARPA funds for one-time implementation costs. Additional action included renewal of dozens of entertainment and liquor licenses, approval of a Council on Aging renovation project funded through private sources, and a discussion of initiating a town charter process."
+  decisions:
+    - "Approved appointment of Lindsay Duby to the Finance Committee (term expires June 2026)"
+    - "Approved renovation project at Council on Aging community center"
+    - "Approved change of ownership interest for Warwick Entertainment"
+    - "Approved annual and Sunday entertainment licenses for Riptide Group, 116 Pleasant Street"
+    - "Approved annual and Sunday entertainment licenses for Hidden Door, 259 Washington Street"
+    - "Approved MS Walk permit for May 11, 2024"
+    - "Approved renewal of 2024 lodging, entertainment, secondhand dealer, amusement device, common victualler, package store, and alcoholic beverage licenses"
+    - "Approved extended restaurant hours until 1:00 AM on January 1, 2024"
+    - "Approved tree burning/curbside pickup announcement for January 6, 2024"
+    - "Approved minutes of November 3, November 13, and December 4, 2023"
+    - "Approved Tyler Technologies three-year administrative software contract for $1,023,923"
+    - "Approved option year three of Roadway Maintenance Services stormwater catch basin cleaning contract for $107,500"
+    - "Approved six-month extension of Environmental Partners sidewalk/ramp/signal asset management contract"
+    - "Approved use of Abbott Hall for wedding ceremony on October 26, 2024"
+    - "Approved letter of support for Marblehead Arts Association capital grant application"
+    - "Approved letter to MassDOT supporting extended ferry service"
+    - "Approved holiday hours for Abbott Hall and Mary Alley building"
+    - "Approved donation account for Green Street Woods Bike Path"
+    - "Approved surplus declaration for seven antiquated floor safes"
+  votes:
+    - motion: "Place all Finance Committee candidate names into nomination"
+      result: "in favor (unanimous)"
+    - motion: "Poll vote for Finance Committee appointment"
+      result: "in favor (unanimous) — all four members voted Lindsay Duby"
+    - motion: "Approve Council on Aging renovation project"
+      result: "in favor (unanimous)"
+    - motion: "Approve Warwick Entertainment change of ownership interest"
+      result: "in favor (unanimous)"
+    - motion: "Approve Riptide Group annual entertainment license"
+      result: "in favor (unanimous)"
+    - motion: "Approve Riptide Group Sunday entertainment license"
+      result: "in favor (unanimous)"
+    - motion: "Approve Hidden Door annual entertainment license"
+      result: "in favor (unanimous)"
+    - motion: "Approve Hidden Door Sunday entertainment license"
+      result: "in favor (unanimous)"
+    - motion: "Approve MS Walk permit"
+      result: "in favor (unanimous)"
+    - motion: "Renew 2024 entertainment, lodging, secondhand, and amusement licenses"
+      result: "in favor (unanimous)"
+    - motion: "Renew Sunday entertainment licenses"
+      result: "in favor (unanimous)"
+    - motion: "Renew common victualler licenses"
+      result: "in favor (unanimous)"
+    - motion: "Renew package store liquor licenses"
+      result: "in favor (unanimous)"
+    - motion: "Renew alcoholic beverage licenses (roll call)"
+      result: "in favor (unanimous)"
+    - motion: "Approve extended New Year's Eve hours"
+      result: "in favor (unanimous)"
+    - motion: "Approve minutes"
+      result: "in favor (unanimous)"
+    - motion: "Award Tyler Technologies contract for $1,023,923"
+      result: "in favor (unanimous)"
+    - motion: "Award Roadway Maintenance Services option year three for $107,500"
+      result: "in favor (unanimous)"
+    - motion: "Extend Environmental Partners contract six months"
+      result: "in favor (unanimous)"
+    - motion: "Approve Abbott Hall wedding use"
+      result: "in favor (unanimous)"
+    - motion: "Approve letter of support for Marblehead Arts Association grant"
+      result: "in favor (unanimous)"
+    - motion: "Approve letter to MassDOT on ferry service"
+      result: "in favor (unanimous)"
+    - motion: "Approve holiday hours"
+      result: "in favor (unanimous)"
+    - motion: "Approve Green Street Woods Bike Path donation account"
+      result: "in favor (unanimous)"
+    - motion: "Declare seven floor safes surplus"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 0
+    end_seconds: 1960
+    featured: true
+    headline: "Select Board unanimously appoints Lindsay Duby to Finance Committee vacancy"
+    dek: "Three candidates — Lindsay Duby, Colin Gypsy, and Roger Pellicani — were interviewed before all four board members cast poll votes for Duby."
+    summary: |
+      The board interviewed three Finance Committee applicants in sequence, asking each the same four questions covering background, understanding of the finance committee's role and Prop 2½ constraints, areas of town government interest, and willingness to make unpopular decisions.
+      
+      **Lindsay Duby** — senior vice president and head of commercial credit at Eagle Bank, lifelong Marblehead resident, Salem State finance degree, prior experience at Morgan Stanley. Interested in capital expenditures and infrastructure. Cited day-to-day loan denials as examples of unpopular decisions.
+      
+      **Colin Gypsy** — commercial real estate background (CBRE, equity office, own firm); managed a $3M+ operating budget for a downtown high-rise; MBA with finance minor; new to Marblehead; acknowledged limited familiarity with Prop 2½. Interested in education budget.
+      
+      **Roger Pellicani** — 30 years in financial services including American Express (enterprise budgets, EMEA merchant business with $1B+ revenue responsibility), consulting for Visa and private equity; treasurer of Marblehead Rowing Club for a decade; three sons in Marblehead public schools including one in special education. Interested in schools and real estate/zoning issues.
+      
+      After nominations were placed en bloc, a roll-call poll vote was taken; all four board members present voted for Duby. The term expires June 2026; Duby must be sworn in at the town clerk's office before taking her seat.
+    key_speakers: ["Lindsay Duby (Finance Committee appointee)", "Colin Gypsy (applicant)", "Roger Pellicani (applicant)", "Board Chair (pro tem)", "Alexa Singer (Select Board member)", "Jim Murray (Select Board member)", "Mr. Nye (Select Board member)", "Mr. Grader (Select Board member)"]
+  - topic: recreation-events
+    topic_confidence: 0.88
+    start_seconds: 1960
+    end_seconds: 2520
+    headline: "Board approves Council on Aging café-style renovation funded by Friends group and SHA grants"
+    dek: "The project replaces an unheated, uninsulated 26-year-old sunroom with a conditioned diner-style space in the same footprint plus a one-foot bump-out, serving coffee, muffins, and social programming."
+    summary: |
+      COA Director Lisa Huber, Friends of the COA President Christine Van Remortel, COA Chair Suzanne Gruel, and architect Walter Jacobs presented plans to remove the existing three-season sunroom and combine the lounge/library into a single café-style room with booth seating, counter seating, a small service station (one hand-washing sink), and operable awning windows on the sides.
+      
+      Key design points:
+      - Roughly the same footprint as the existing sunroom, with approximately a one-foot bump-out
+      - Fully conditioned (heated and cooled), meeting current building codes
+      - Health Department consulted and supportive
+      - Flexible layout intended to evolve with programming needs
+      
+      Funding comes from the Friends of the COA (fundraising) and a SHA grant; no taxpayer capital funds are involved. Huber noted Tuesday lunches have grown from roughly 20 people three times a week to 125 every Tuesday since the 2018–2019 kitchen renovation. The board moved the project outside the normal capital improvement plan process given the non-taxpayer funding source. Vote was unanimous.
+    key_speakers: ["Lisa Huber (COA Director)", "Walter Jacobs (architect)", "Town Administrator (Thatcher)"]
+  - topic: permits-zoning
+    topic_confidence: 0.97
+    start_seconds: 2520
+    end_seconds: 3100
+    headline: "Board approves entertainment licenses for Riptide Group and Hidden Door; clears Warwick ownership change"
+    dek: "Warwick Entertainment corrected an inadvertent omission of a stockholder transfer during COVID; Riptide Group received new annual and Sunday licenses following building renovations."
+    summary: |
+      **Warwick Entertainment (123 Pleasant St):** Applicant disclosed a stockholder transfer — David Groom joining, Ike Van Otter departing — that was not previously filed with the ABCC. Board approved the change of ownership interest subject to receipt of required documents and ABCC approval.
+      
+      **Riptide Group (116 Pleasant St):** New ownership; granted both an annual entertainment license (TVs, pool table, dartboard, jukebox 11 AM–11:45 PM seven days; live bands Thu–Sat 4–11 PM, no music audible from the street) and a Sunday entertainment license on the same terms, contingent on Commonwealth DPS approval.
+      
+      **Hidden Door (259 Washington St):** Renewed annual and Sunday entertainment licenses for cool jazz, reggae, and adult contemporary; band size two to six; same no-music-from-streets condition.
+      
+      All four motions passed unanimously.
+    key_speakers: ["David Groom (Warwick Entertainment applicant)", "Town Administrator (Thatcher)"]
+  - topic: recreation-events
+    topic_confidence: 0.85
+    start_seconds: 2851
+    end_seconds: 2900
+    headline: "Annual MS Walk permit approved for May 11, 2024 at Marblehead High School"
+    dek: "Angela Garger of the National Multiple Sclerosis Society received approval for the walk with standard conditions including police and fire details and no permanent street markings."
+    summary: "The board approved the annual MS Walk permit for Saturday, May 11, 2024. The walk starts and ends at Marblehead High School. Conditions include approval from police, fire, schools, recreation and parks, required police details, certificate of insurance, no permanent markings on streets, and removal of all temporary markings at the conclusion of the event."
+  - topic: permits-zoning
+    topic_confidence: 0.95
+    start_seconds: 2897
+    end_seconds: 3500
+    headline: "Board renews 2024 entertainment, common victualler, and liquor licenses for dozens of Marblehead businesses"
+    dek: "Annual batch renewal covered lodging houses, entertainment venues, secondhand dealers, common victuallers, package stores, and all-alcoholic, wine-and-malt, club, and carry-in licenses."
+    summary: |
+      The board processed several omnibus license renewal motions covering the 2024 calendar year. Categories and selected establishments included:
+      
+      | Category | Examples |
+      |---|---|
+      | Lodging houses | Harbor Light Inn, Marblehead Hotel |
+      | Entertainment | Boston Yacht Club, Eastern Yacht Club, Corinthian Yacht Club, Tedesco Country Club, Riptide Group, Hidden Door, Maddie's Sail Loft, My Thai Lounge, Gary #5 VFA, the Beacon (Warwick) |
+      | Secondhand dealers | Carmen's Jewelry, Lee Antiques, Assists Consignment |
+      | Common victuallers | Clam Box, Casa Corona, Barnacle, Blue Canoe Café, Café Italia, Driftwood, Riptide, Sea Salt, Spitfire Tacos, Starbucks, and many others |
+      | Package stores (all-alcoholic) | Beachball Liquors, Haley's Wine & Spirits, Village Liquors, Chuy's Liquor |
+      | Package stores (wine & malt) | Crosby's Market, Little Harbor Lobster, Richdale Marblehead |
+      | All-alcoholic common vics | Barnacle, Café Italia, Fe Yang, Five Corners Kitchen, Barroom, Hidden Door, Maddie's Sail Loft, The Landing, Riptide, Three Cod Tavern, Amor Tequila Bar, Sea Salt, Casa Corona, the Beacon |
+      | Club licenses | Boston Yacht Club, Corinthian YC, Eastern YC, Tedesco CC, Gary #5 VFA, Header's Club, Chaplain Lyman Rollins Post 2005 VFW |
+      | Brewery pouring permit | Marblehead Brewing Company |
+      | Carry-in alcoholic | Fresca Pizza, The Little Store, Chuy's, Clam Box, Plus Café |
+      
+      All motions passed unanimously; the alcoholic beverage renewal required a roll-call vote (Murray, Nye, Singer, Grader — all in favor).
+    key_speakers: ["Board Chair (pro tem)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 3500
+    end_seconds: 3600
+    headline: "Extended New Year's Eve restaurant hours approved through 1:00 AM on January 1, 2024"
+    dek: "Annual motion allows Marblehead restaurants to remain open at their discretion until 1:00 AM."
+    summary: "The board unanimously approved allowing restaurants in Marblehead to remain open for business until 1:00 AM on Monday, January 1, 2024 at their discretion."
+  - topic: trash-dpw
+    topic_confidence: 0.82
+    start_seconds: 3600
+    end_seconds: 4115
+    headline: "Annual Christmas tree burning set for January 6 at Riverhead Beach; curbside pickup December 27–January 12"
+    dek: "Fire Chief and Amy outlined pickup schedule, reminder that lights, ornaments, and stands must be removed; trees can also be brought to the event on the night of the burn."
+    summary: |
+      The 2024 annual tree burning is scheduled for Saturday, January 6, 2024 at Riverhead Beach at 6:00 PM.
+      
+      **Curbside pickup schedule:**
+      - December 27, 2023 – January 5, 2024: pre-event curbside pickup
+      - After January 6 through January 12: continued curbside pickup
+      - After January 12: residents must bring trees to the transfer station
+      
+      **Requirements:** All lights, ornaments, and stands must be removed; trees must not be in plastic bags. Wreaths, roping, and garlands will not be collected. Residents may also bring trees directly to Riverhead Beach on the night of the event. The information will be posted on the fire department website and distributed via email.
+    key_speakers: ["Fire Chief (Gilland)", "Amy (DPW/Water & Sewer)"]
+  - topic: bonding-capital
+    topic_confidence: 0.92
+    start_seconds: 4160
+    end_seconds: 4450
+    headline: "Board awards $1,023,923 Tyler Technologies (Munis) contract to replace 1980s financial software"
+    dek: "Three-year software-as-a-service contract covers general ledger, HR, payroll, and collections; $461,440 in one-time implementation costs will be paid with ARPA funds."
+    summary: |
+      The town completed a competitive procurement process for a new enterprise financial software system. Tyler Technologies, which markets under the name Munis, was selected.
+      
+      **Contract breakdown:**
+      - Total three-year contract: $1,023,923
+      - One-time implementation/onboarding costs: $461,440 (funded with previously approved ARPA funds)
+      - Net ongoing cost: approximately $562,483 over three years (~$187,494/year)
+      
+      The system covers general ledger, collections, HR, payroll, and other enterprise functions. Implementation will proceed module by module, beginning with the general ledger, and is expected to take over a year for full rollout. A separate ARPA-funded consultant is simultaneously rebuilding the town's chart of accounts so historical data can be mapped when the new system goes live.
+      
+      Vote was unanimous.
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: trash-dpw
+    topic_confidence: 0.9
+    start_seconds: 4443
+    end_seconds: 4495
+    headline: "Board renews option year three of stormwater catch basin cleaning contract for $107,500"
+    dek: "Roadway Maintenance Services Inc. continues for January 1 – December 31, 2024 under the third and final year of a three-year contract."
+    summary: "The board approved option year three of the Roadway Maintenance Services Inc. contract for cleaning of stormwater catch basins, dated originally May 1, 2022. The not-to-exceed price is $107,500 for the period January 1 – December 31, 2024. Vote was unanimous."
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 4489
+    end_seconds: 4640
+    headline: "Environmental Partners sidewalk/ramp/signal asset management contract extended six months to May 23, 2024"
+    dek: "Extension gives the Quincy firm additional time to complete infrastructure asset management work on sidewalks, ramps, and signals."
+    summary: "The board approved a six-month extension to the contract with Environmental Partners of Quincy, Massachusetts for infrastructure asset management covering sidewalks, ramps, and signals. The extended end date is May 23, 2024. Vote was unanimous."
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: recreation-events
+    topic_confidence: 0.8
+    start_seconds: 4536
+    end_seconds: 4640
+    headline: "Abbott Hall approved for wedding ceremony on October 26, 2024"
+    dek: "Will Britton and Meredith O'Hare may use Abbott Hall for a ceremony from 2:00–5:00 PM subject to standard rules and certificate of insurance."
+    summary: "The board approved the request from Will Britton and Meredith O'Hare to use Abbott Hall for a wedding ceremony on October 26, 2024 from 2:00 PM to 5:00 PM, subject to usual rules, regulations, custodial fees, and receipt of the required certificate of insurance. Vote was unanimous."
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 4579
+    end_seconds: 4780
+    headline: "Board approves letters supporting Marblehead Arts Association grant and North Shore ferry service extension"
+    dek: "One letter backs a Mass Cultural Council facilities grant for an accessible bathroom at King Hooper Mansion; a second asks MassDOT about making Sumner Tunnel-era ferry service permanent."
+    summary: |
+      **Marblehead Arts Association:** The board approved a letter of support for the Arts Association's application to the Mass Cultural Council Facilities Fund to create a handicap-accessible bathroom on the first floor of the King Hooper Mansion, a roughly 300-year-old building currently lacking first-floor restroom access.
+      
+      **Ferry service:** Led by a request from the Mayor of Lynn, North Shore coastal communities are collectively asking MassDOT to consider making the ferry service—created as a temporary alternative during Sumner Tunnel construction—a permanent commuter option. The board's letter seeks answers about long-term decisions regarding water transportation in advance of 2024. Both votes were unanimous.
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 4812
+    end_seconds: 5420
+    headline: "Select Board discusses initiating a town charter process; Collins Center presentation being arranged"
+    dek: "Board members and the absent chair Aaron expressed support for exploring a charter, describing it as a multi-year process that would codify Marblehead's governance structure."
+    summary: |
+      Board members reviewed a letter from absent chair Aaron expressing support for exploring a town charter, describing it as a document that defines government structure and allows flexibility to amend local governance without home rule petitions.
+      
+      Key discussion points:
+      - The board attended an MMA webinar on charter forms of government; Marblehead currently operates under a collection of state statutes rather than a formal charter
+      - A charter could codify the existing structure in one document, even without changing anything
+      - Charters can be tailored to community needs and revised over time
+      - The last deep review of town governance structure was cited as approximately 1989
+      - Board members emphasized this is a multi-year process; nothing would come before town meeting quickly
+      - The Town Administrator is arranging for the Collins Center (where he previously consulted) to present to the board on charter process options
+      - The League of Women Voters was noted as having completed approximately a year of research on the topic
+      - A resident during public comment confirmed the LWV has substantial research and offered to share it
+    key_speakers: ["Town Administrator (Thatcher)", "Board members"]
+  - topic: trash-dpw
+    topic_confidence: 0.95
+    start_seconds: 5458
+    end_seconds: 6125
+    headline: "Water & Sewer presents no-parking zone proposal for 18 sewer pump station access points"
+    dek: "Amy (Water & Sewer) showed photos of 28 pump stations; seeking permanent no-parking signs with tow-zone designation at roughly 14 public-way locations, with expanded winter zones November 15–April 15."
+    summary: |
+      Water & Sewer Director Amy presented a proposal to establish formal no-parking zones at pump stations accessible from public ways, where emergency response is required within 9–15 minutes and equipment includes vac trucks, portable pumps (with 8–12 inch hoses), and generators up to 100 kV on 18-foot trailers.
+      
+      **Locations proposed (public ways only; private-road stations addressed separately):**
+      Fort Beach Lane (station 1), Norman Street (station 2), Kenneth Road, Green Street, Village Street, Shorewood, BU station, Han Street, Sumac (Harbor Ave), Foster Street, Harbor Ave, Phillips (Gulf Way), Seaview, May Street, Wilson Road, Lafayette, Driftwood easement.
+      
+      **Proposed signage:**
+      - Permanent poles and signs indicating no parking / tow zone
+      - Base zone: 20 feet, year-round
+      - Winter expansion: additional 20 feet, November 15 – April 15
+      - No striping; sign-based only for consistency
+      - Approximately 18 spaces affected total; roughly half already have informal no-parking markings
+      
+      The board received the presentation as informational; a formal vote on the parking designations was deferred to a subsequent meeting to allow public notice of the intent.
+    key_speakers: ["Amy (Water & Sewer Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 6614
+    end_seconds: 6760
+    headline: "Holiday hours approved for Abbott Hall and Mary Alley; transfer station remains open Christmas Eve"
+    dek: "Under collective bargaining agreements employees receive the holiday and eve off; essential functions such as the transfer station will remain staffed with compensatory time or overtime."
+    summary: "The board approved holiday hours for Abbott Hall and the Mary Alley municipal building covering December 18, 2023 through January 1, 2024. Abbreviated hours apply December 21 and 29 (8 AM–12:30 PM); closures fall on December 22 and 30 (New Year's and Christmas eves), and December 26 and January 1 (observed holidays). The Town Administrator noted that some functions (e.g., transfer station) will remain open on designated days, with affected employees receiving floating holidays or overtime as applicable."
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: recreation-events
+    topic_confidence: 0.75
+    start_seconds: 6754
+    end_seconds: 6805
+    headline: "Donation account established for Green Street Woods Bike Path repairs and upgrades"
+    dek: "Superintendent of Recreation and Parks Peter James requested the account; donations will fund any needed repairs and upgrades to the path."
+    summary: "The board approved the establishment of a donation account for the Green Street Woods Bike Path at the request of Recreation and Parks Superintendent Peter James. Donations received will be used for repairs and upgrades to the path. The board's authority to establish such accounts is standard practice for financial accountability of restricted donations. Vote was unanimous."
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 6845
+    end_seconds: 7425
+    headline: "Residents comment on town charter process and double utility pole blocking traffic light near Brown School"
+    dek: "Jim (2 Mom Road) praised the charter initiative and offered League of Women Voters research; Albert Jordan raised concerns about a double utility pole at Smith and Baldwin blocking a traffic light and contractor equipment left on roads."
+    summary: |
+      **Jim (2 Mom Road):** Expressed support for the charter discussion and the idea of bringing in the Collins Center. Noted the League of Women Voters has approximately a year of research to share. Cited the example of an attempted conversion to city government in a neighboring community that failed at the community level as a cautionary tale. Mentioned the Board of Health is planning a town meeting article to increase its board size to five as the type of incremental change a charter process might address.
+      
+      **Albert Jordan (64 Roosevelt Ave):** Raised a public safety concern about a long-standing double utility pole at Smith Street and Baldwin Road near the Brown (formerly Bell) School that he said obstructs a traffic signal, creates visibility problems for pedestrians in the school crosswalk, and has been struck by trucks. Said the pole is a Verizon pole and he has raised the issue with the electric light department. Also raised concerns about Verizon's planned replacement of approximately 400 poles in Marblehead and contractor equipment (backhoe, compressor, sand piles) left on Turner Road for months creating hazards. Referenced a recent accident near National Grand.
+    key_speakers: ["Jim (resident, 2 Mom Road)", "Albert Jordan (resident, 64 Roosevelt Ave)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 7425
+    end_seconds: 7640
+    headline: "Town Administrator reports police vacancy, initiates lateral-transfer search; announces spring perambulation of town boundaries"
+    dek: "Officer Luke Marcus resigned effective December 16; the town will post for a lateral transfer first before using the civil service list. Perambulation — required at least every five years by state law — will be organized for spring."
+    summary: |
+      **Police vacancy:** Officer Luke Marcus submitted his resignation effective December 16, 2023. The Town Administrator's plan is to post first as a lateral transfer from other communities (certified officers ready to work immediately), then proceed through civil service if no lateral candidates emerge. The Select Board would be involved in the civil service process.
+      
+      **Perambulation:** State law (dating to the late 1600s/early 1700s) requires at least two selectmen to walk town boundary markers at least every five years. Marblehead has traditionally used this to confirm public ways to the water. The Conservation Commission had historically conducted perambulations but is unable to continue. The Town Administrator is coordinating an in-house effort for spring 2024, with a plan to be presented at an upcoming meeting. The traditional date had been the Saturday after town meeting.
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 6942
+    end_seconds: 6970
+    headline: "Seven antiquated floor safes at Mary Alley and Abbott Hall declared surplus"
+    dek: "Safes will be posted for two weeks; if no takers, a rigger will remove them as part of preparation for the Mary Alley floor project."
+    summary: "As part of preparations for the Mary Alley building floor project, the board declared surplus six antiquated floor safes at the Mary Alley municipal building and one at Abbott Hall. Under town surplus policy, items must be posted for a minimum of two weeks; if there are no takers they may be disposed of as the town sees fit (likely scrap metal given the safes' size and weight). Vote was unanimous."
+    key_speakers: ["Town Administrator (Thatcher)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

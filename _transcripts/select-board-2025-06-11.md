@@ -9,7 +9,133 @@ vimeo_url: "https://vimeo.com/1092834841"
 duration_seconds: 2599
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Dan Fox elected Select Board chair; board approves tree removal, yacht club manager license"
+  summary: "At its annual organizational meeting on June 11, 2025, the Select Board unanimously elected Dan Fox as chair for the upcoming year. The board conducted a public hearing on the removal of two Norway maple shade trees at 344 Ocean Avenue, approving the request with replacement conditions. Additional business included approving a change of manager license for Corinthian Yacht Club, setting early voting hours for the July 8 special election, and acting on several consent agenda items."
+  decisions:
+    - "Approved Dan Fox as Select Board chair"
+    - "Approved removal of two Norway maples at 344 Ocean Avenue with tree replacement required"
+    - "Approved change of manager license for Corinthian Yacht Club (license #008-CL-0656)"
+    - "Approved early voting hours for July 8 special election: June 30 and July 1, 8:30 AM–4:30 PM at Abbot Hall"
+    - "Approved consent agenda including meeting minutes, holiday hours, 4th of July parade, and Wicked Half Marathon"
+    - "Approved delegating Open Meeting Law complaint response to Town Counsel"
+    - "Approved one-day liquor licenses for Play on Yacht Club, Star of the Sea, and Bubble Bar Boston"
+    - "Accepted resignation of Amy Hirsch from Disabilities Commission"
+  votes:
+    - motion: "Appoint Dan Fox as Select Board chair"
+      result: "in favor (unanimous)"
+    - motion: "Approve removal of two Norway maples at 344 Ocean Avenue"
+      result: "in favor (unanimous)"
+    - motion: "Approve Corinthian Yacht Club change of manager license"
+      result: "in favor (unanimous)"
+    - motion: "Approve early voting hours for July 8 special election"
+      result: "in favor (unanimous)"
+    - motion: "Approve consent agenda items"
+      result: "in favor (unanimous)"
+    - motion: "Delegate Open Meeting Law complaint to Town Counsel"
+      result: "in favor (unanimous)"
+    - motion: "Approve one-day liquor licenses"
+      result: "in favor (unanimous)"
+    - motion: "Accept Amy Hirsch resignation from Disabilities Commission"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 0
+    end_seconds: 220
+    headline: "Dan Fox unanimously elected Select Board chair at annual organizational meeting"
+    dek: "Fox thanked outgoing chair Erin for her leadership during a demanding year before reading the town's land acknowledgement."
+    summary: "The board opened its 377th annual convening by nominating and unanimously electing Dan Fox as chair. Fox thanked the outgoing chair, noting the significant behind-the-scenes work involved. Fox then read the Town of Marblehead Land Acknowledgement, referencing the Naumkeag people as original stewards of the land, as adopted at the 2022 Annual Town Meeting (Article 32)."
+    key_speakers: ["Dan Fox (incoming chair)", "Erin (outgoing chair)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 220
+    end_seconds: 419
+    headline: "Resident urges scrutiny of school budget and questions Board of Health hiring amid freeze"
+    dek: "Albert Jordan cited Tuesday's election results as a signal from taxpayers and questioned a new Board of Health position reportedly posted despite a hiring freeze."
+    summary: "Albert Jordan of 64 Roosevelt Avenue commented on two topics. First, he expressed satisfaction with voter turnout at a recent election and urged the school department to closely examine its budget, noting that increased spending has not resolved persistent problems. Second, he questioned a Board of Health position that he said appeared in a local paper, asserting it contradicts a hiring freeze in place under Town Administrator Laura Haley. He also suggested the town explore privatization of the transfer station and look to South Essex Sewerage District as a model for regional cost-sharing."
+    key_speakers: ["Albert Jordan (resident, 64 Roosevelt Avenue)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 419
+    end_seconds: 1163
+    headline: "Town transitions to .gov domain, posts Chief Procurement Officer position, and plans new street-sweeping schedule"
+    dek: "Town Administrator outlined three operational updates including a domain migration effective June 17, a new procurement officer hire with supporting software, and a proposed seasonal street-sweeping plan."
+    summary: |
+      The Town Administrator reported three items:
+      
+      **Domain transition:** Marblehead will move from marblehead.org to a .gov domain managed by the U.S. General Services Administration, effective June 17. The .org domain will remain active as a redirect during a transition period.
+      
+      **Chief Procurement Officer:** The town will post for this position, which previously was held part-time by the former town planner Becky Kern. The role will sit in the Select Board's office and serve all town departments. A new procurement software module will be implemented to manage bidding processes and maintain a contract database. Board members noted FinCom support and that a former Inspector General's office member on FinCom endorsed the position as a value-add rather than a cost.
+      
+      **Street sweeping:** With the shift away from an all-winter parking ban to an as-needed snow ban, public works has lost its open window for street sweeping. The town plans to present a new plan defining set spring and fall sweeping periods advertised in advance, and will encourage residents to register for the CodeRed notification system to avoid towing.
+    key_speakers: ["Town Administrator (Thatcher)", "Board member (Erin)", "Board member (remote)"]
+  - topic: permits-zoning
+    topic_confidence: 0.85
+    start_seconds: 1163
+    end_seconds: 1736
+    featured: true
+    headline: "Select Board approves removal of two Norway maples at 344 Ocean Avenue with replacement requirement"
+    dek: "Tree Warden John Forward recommended approval, noting the trees are viable but weedy self-seeded Norway maples that will eventually become a problem, and the owner agreed to fund removal and replace four trees."
+    summary: |
+      The board held a public hearing under M.G.L. Chapter 87, Section 3 on a request by Martha Walton of 344 Ocean Avenue to remove two Norway maple trees (11-inch and 13-inch DBH) located on the Brown Street side of her property line.
+      
+      Tree Warden John Forward testified that he inspected the trees, which are approximately 50–55 feet tall with canopy only above 35–40 feet, and self-seeded. While Norway maples are considered a weed species, they remain viable town trees. Forward stated he had no objection to removal. Conditions agreed to by the applicant:
+      
+      - All removal and stump grinding at the owner's expense
+      - Restoration of the dirt area to original condition
+      - Planting of two replacement shade trees at the site
+      - Planting of two additional trees elsewhere in town
+      
+      The trees had been posted with signage for two weeks prior to the hearing. The applicant participated remotely but experienced audio difficulties; the board proceeded based on her written application in the record. The motion passed unanimously.
+    key_speakers: ["John Forward (Tree Warden)", "Martha Walton (applicant, remote)"]
+  - topic: permits-zoning
+    topic_confidence: 0.9
+    start_seconds: 1736
+    end_seconds: 1877
+    headline: "Corinthian Yacht Club new general manager approved for liquor license change of manager"
+    dek: "Incoming GM George presented his background in hospitality management; the board approved the change unanimously."
+    summary: "The board approved a change of manager application for the Corinthian Yacht Club at 1 Han Street (license #008-CL-0656). The new general manager, who came from hospitality roles including the Museum of Fine Arts in Boston, was introduced and affirmed his experience holding liquor licenses. The board voted unanimously in favor."
+    key_speakers: ["George (incoming GM, Corinthian Yacht Club)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 1877
+    end_seconds: 2400
+    headline: "Board sets early voting June 30–July 1 for July 8 special election and approves consent agenda"
+    dek: "Early voting window constrained by July 4th holiday closure of Abbot Hall; consent agenda included parade, half-marathon, and holiday hours."
+    summary: |
+      **Early voting:** On recommendation of the town clerk and Board of Registrars, the board approved early voting for the July 8 special election on:
+      - Monday, June 30, 2025: 8:30 AM–4:30 PM
+      - Tuesday, July 1, 2025: 8:30 AM–4:30 PM
+      
+      Abbot Hall is unavailable July 2–4 due to the Festival of Arts and the July 4th holiday. Mail-in voting remains available.
+      
+      **Consent agenda approved:**
+      - Minutes of May 5, 6, and 19, 2025
+      - Holiday hours for Abbot Hall and Mary Alley Building (June 30–July 4)
+      - 4th of July Parade on July 4, 2025 at 10:10 AM, same route as prior year starting and ending at National Grand Bank (rain date July 6)
+      - BNS Fitness Wicked Half Marathon on Sunday, September 21, 2025
+      
+      **Open Meeting Law complaint:** Motion approved to delegate response to the complaint filed by Dan Albert (May 25, 2025) to Town Counsel.
+      
+      **One-day liquor licenses approved** for:
+      - Play on Yacht Club, July 2, 2025
+      - Star of the Sea, June 28, 2025
+      - Bubble Bar Boston, July 4–6, 2025
+      
+      **Resignation:** Amy Hirsch's resignation from the Disabilities Commission accepted; letter of appreciation to be sent.
+    key_speakers: ["Town Administrator (Thatcher)", "Dan Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2400
+    end_seconds: 2577
+    headline: "Board welcomes new member Jim Zon and congratulates all candidates who ran in recent election"
+    dek: "Members offered remarks praising voter turnout and recognizing poll workers and election volunteers."
+    summary: "Board members congratulated newly elected member Jim Zon on joining the board and acknowledged all candidates who ran in the recent election. Members noted the high voter turnout and praised the use of the high school as a polling location for its accessibility and smooth operations. A fire department event on the prior Sunday was also commended. The board then voted unanimously to adjourn."
+    key_speakers: ["Dan Fox (Chair)", "Board member (Erin)", "Board member (remote)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -9,7 +9,130 @@ vimeo_url: "https://vimeo.com/949356958"
 duration_seconds: 1631
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Select Board approves rail trail and Red's Pond contracts; honors Jim Nye's 19-year service"
+  summary: "The Select Board approved three infrastructure contracts totaling over $628,000 for Red's Pond accessibility improvements and rail trail design work funded by ARPA and federal earmarks. The board also handled routine housekeeping items including opening and closing the warrant for the June 11, 2024 town election. The meeting concluded with remarks and a presentation honoring Select Board member Jim Nye on 19 years of service."
+  decisions:
+    - "Approved minutes of May 9th and May 15th"
+    - "Approved surplus declaration for Hewlett Packard DesignJet printer"
+    - "Approved opening and closing of warrant for June 11, 2024 annual town election"
+    - "Approved July 4th church bell ringing request"
+    - "Approved contract with PARE Corporation for Red's Pond accessibility improvement plan for $87,500"
+    - "Approved contract with Toole Design for rail trail design from Salem line to West Shore Drive for $378,684"
+    - "Approved contract with Toole Design for preliminary rail trail design from Swampscott line to Smith Street not to exceed $162,000"
+    - "Approved elevator upgrade request from North Shore Medical Center at 1 Widger Road"
+    - "Approved one-day liquor license for St. Andrews Church on June 29, 2024"
+    - "Approved letter of congratulations for St. Andrews Church centennial"
+    - "Approved use of Abbott Hall for Marblehead Museum Indigenous People's Day event on October 14, 2024 with waived rental fee"
+  votes:
+    - motion: "Approve minutes of May 9th and May 15th"
+      result: "in favor (unanimous)"
+    - motion: "Declare HP DesignJet as surplus equipment"
+      result: "in favor (unanimous)"
+    - motion: "Open warrant for June 11, 2024 annual town election"
+      result: "in favor (unanimous)"
+    - motion: "Close warrant for June 11, 2024 annual town election"
+      result: "in favor (unanimous)"
+    - motion: "July 4th church bell ringing"
+      result: "in favor (unanimous)"
+    - motion: "Award contract to PARE Corporation for Red's Pond accessibility improvement plan, $87,500"
+      result: "in favor (unanimous)"
+    - motion: "Award contract to Toole Design for rail trail from Salem line to West Shore Drive, $378,684"
+      result: "in favor (unanimous)"
+    - motion: "Award contract to Toole Design for rail trail preliminary design from Swampscott line to Smith Street, not to exceed $162,000"
+      result: "in favor (unanimous)"
+    - motion: "Approve elevator upgrade at 1 Widger Road by North Shore Medical Center"
+      result: "in favor (unanimous)"
+    - motion: "One-day liquor license for St. Andrews Church, June 29, 2024"
+      result: "in favor (unanimous)"
+    - motion: "Send congratulatory letter for St. Andrews Church centennial"
+      result: "in favor (unanimous)"
+    - motion: "Approve Abbott Hall use for Indigenous People's Day event with fee waiver"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 2
+    end_seconds: 163
+    headline: "Board approves May minutes, declares printer surplus, opens and closes election warrant"
+    dek: "Routine housekeeping items including surplus declaration and warrant for the June 11, 2024 annual town election were approved."
+    summary: "The board approved minutes from May 9th and May 15th, declared a 17-year-old Hewlett Packard DesignJet printer as surplus equipment, and opened and closed the warrant for the June 11, 2024 annual town election. The warrant lists candidates sought for Select Board (vote for five), Moderator, Assessor, Cemetery, Board of Health, Housing Authority (vote for two), Library Trustee (vote for two), Municipal Light Commissioner (vote for two), Planning Board (vote for two), Recreation and Park Commission (vote for five), School Committee, and Water and Sewer Commission."
+    key_speakers: ["Town Administrator"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 164
+    end_seconds: 230
+    headline: "Board approves July 4th church bell ringing at traditional holiday hours"
+    dek: "Annual motion passed requesting church bells rung on July 4th, 2024 at 7:30 AM, noon, and 6:00 PM."
+    summary: "The board unanimously approved the annual request that church bells throughout the town be rung on Wednesday, July 4th, 2024 at the usual holiday hours: 7:30–8:00 AM, 12:00–12:30 PM, and 6:00–6:30 PM."
+  - topic: bonding-capital
+    topic_confidence: 0.82
+    start_seconds: 231
+    end_seconds: 425
+    featured: true
+    headline: "Board awards three contracts totaling over $628K for Red's Pond and rail trail improvements"
+    dek: "Contracts funded by ARPA and federal earmarks cover Red's Pond accessibility design and two rail trail design phases."
+    summary: |
+      The board approved three infrastructure contracts:
+      
+      | Contract | Vendor | Amount | Funding |
+      |---|---|---|---|
+      | Red's Pond accessibility improvement plan | PARE Corporation, Foxborough | $87,500 | ARPA + state legislative earmark (Rep. Armini) |
+      | Rail trail design, Salem line to West Shore Drive | Toole Design, Boston | $378,684 | ARPA |
+      | Rail trail preliminary design, Swampscott line to Smith Street | Toole Design, Boston | Not to exceed $162,000 | Federal earmark (Rep. Seth Moulton / Boston to Border Rail Trail) |
+      
+      The Red's Pond project covers design, bid documents, and estimated construction costs for rehabilitation of the pond wall, walkway, and water quality improvements. The rail trail contracts represent different phases: final design and engineering for the Salem-to-West Shore Drive segment, and preliminary design, permitting, and wetlands delineation for the Swampscott-to-Smith Street segment.
+    key_speakers: ["Town Administrator"]
+  - topic: permits-zoning
+    topic_confidence: 0.75
+    start_seconds: 426
+    end_seconds: 519
+    headline: "Board approves North Shore Medical Center elevator upgrade at town-owned 1 Widger Road"
+    dek: "As building owner and landlord, the board granted permission for the tenant to perform elevator system upgrades at its own expense."
+    summary: "The board approved a request from Diana Lombard, Real Estate Manager at Salem Hospital, to perform necessary elevator upgrade work at 1 Widger Road (the Mary Alley medical building). The town owns the building; North Shore Medical Center is the tenant and will fund the work. Per the March 6, 2023 lease, tenant approval from the town is required for significant building alterations under Section 17 (Alteration and Installation of Equipment)."
+    key_speakers: ["Town Administrator"]
+  - topic: permits-zoning
+    topic_confidence: 0.85
+    start_seconds: 520
+    end_seconds: 624
+    headline: "One-day liquor license approved for St. Andrews Church; centennial congratulations letter authorized"
+    dek: "St. Andrews Church received a one-day license for a June 29 event and a congratulatory letter marking its 100th anniversary."
+    summary: "The board approved a polled vote on a one-day liquor license for St. Andrews Church (Reverend Clyde Elledge), 135 Lafayette Street, Saturday June 29, 2024, 6:00–9:00 PM. Standard conditions apply including a $50 fee and proof of purchase from an authorized distributor. All five members voted in favor. The board also unanimously approved sending a congratulatory letter to St. Andrews Church on its centennial anniversary."
+  - topic: recreation-events
+    topic_confidence: 0.9
+    start_seconds: 578
+    end_seconds: 624
+    headline: "Abbott Hall approved for Marblehead Museum's Indigenous People's Day event, rental fee waived"
+    dek: "The Marblehead Museum will use Abbott Hall on October 14, 2024 for its annual Indigenous People's Day event, 10 AM–2 PM."
+    summary: "The board approved the request from Lauren McCormick, Executive Director of the Marblehead Museum, to use Abbott Hall on Monday, October 14, 2024 for the 2024 Indigenous People's Day event from 10:00 AM to 2:00 PM. The rental fee was waived, subject to standard rules, regulations, and receipt of a certificate of insurance."
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 625
+    end_seconds: 812
+    headline: "Town Administrator presents Traffic Safety report and five draft HR compliance policies for future vote"
+    dek: "A quarterly Traffic Safety Advisory Committee report was submitted, and five draft HR policies covering FMLA, harassment, discrimination, conduct, and parental leave were distributed for review ahead of a future meeting."
+    summary: |
+      The Town Administrator submitted the quarterly Traffic Safety Advisory Committee report as required by bylaw. Additionally, five draft HR policies were distributed for board review, with a vote anticipated at the next regular meeting. The policies being introduced for federal and state compliance include:
+      
+      - Family and Medical Leave Act policy
+      - Sexual harassment policy (update)
+      - Anti-discrimination and anti-harassment policy
+      - Employee conduct and discipline policy
+      - Parental Leave Act policy
+      
+      The board discussed whether any of these policies would trigger collective bargaining obligations, with the Town Administrator indicating that any changes affecting working conditions would be reviewed for bargaining requirements.
+    key_speakers: ["Town Administrator"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 813
+    end_seconds: 1590
+    headline: "Select Board honors Jim Nye on 19 years of service with remarks and gift presentation"
+    dek: "Colleagues, residents, department heads, and family members offered remarks before Nye was presented with a gift on behalf of the town."
+    summary: "The meeting closed with a recognition ceremony for Select Board member Jim Nye marking 19 years of service. Board members, town staff, family, and community members offered remarks highlighting Nye's dedication, decorum, and community involvement. Nye introduced his mother Suzanne Nye and three daughters (Abigail, Alyssa, and Ashley). A gift was presented on behalf of the town. The board then adjourned."
+    key_speakers: ["Jim Nye (Select Board member, outgoing)", "Town Administrator"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
