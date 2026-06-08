@@ -11,53 +11,53 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board approves outdoor dining policy, multiple contracts, and liquor licenses"
-  summary: "The Marblehead Select Board met on June 5, 2024 and adopted a formal outdoor dining policy, approved several municipal contracts totaling over $1.4 million, and granted multiple one-day liquor licenses. The board also appointed Ruth Ferguson to the Cable Television Advisory Committee and authorized the annual July 4th fireworks and Horribles Parade. A resident offered public comment opposing the use of public parking spaces for outdoor restaurant seating."
+  headline: "Select Board approves outdoor dining policy, multiple contracts, and fireworks plans"
+  summary: "The Marblehead Select Board met on June 5, 2024 and adopted a formal outdoor dining policy, approved several contracts including a $1,182,292 roadway and sidewalk improvement project and a $133,000 Franklin Street Firehouse window rehabilitation, and authorized the annual July 4th fireworks and Horribles Parade. The board also appointed Ruth Ferguson to the Cable Television Advisory Committee and renewed Police Chief Dennis King's contract through June 30, 2027. One resident offered critical public comment on the outdoor dining policy's use of public parking spaces."
   decisions:
-    - "Approved appointment of Ruth Ferguson to Cable Television Advisory Committee"
-    - "Approved annual Marblehead Fireworks and Harbor Illumination on July 4th"
+    - "Approved appointment of Ruth Ferguson to the Cable Television Advisory Committee (term to June 2025)"
+    - "Approved annual Marblehead fireworks and Harbor Illumination on July 4th"
     - "Approved eight one-day liquor licenses for Marblehead Little Theater"
     - "Adopted Town of Marblehead Outdoor Dining Policy dated June 2024"
-    - "Approved minutes for May 22nd and May 23rd"
-    - "Approved Horribles Parade on July 4th"
-    - "Approved temporary street closures for July 4th events"
+    - "Approved annual Horribles Parade on July 4th, 2024"
+    - "Approved temporary street closures and traffic regulations for July 4th events"
     - "Approved indemnification of Lieutenant Lund for on-duty injury"
-    - "Approved temporary parking restrictions for Community Wellness Day on June 22nd"
+    - "Approved temporary parking restrictions for Marblehead Counseling Center Community Wellness Day on June 22nd"
     - "Approved holiday hours for Abbott Hall and Mary Alley building"
-    - "Approved renewal of Police Chief Dennis King's contract through June 30, 2027"
-    - "Approved contract with Homer Contracting Inc. for Franklin Street Firehouse window rehabilitation for $133,000"
-    - "Approved contract with DNR General Contractor for roadway and sidewalk improvements for $1,182,292.50"
-    - "Approved contract with George Carnes and Sons for shipyard public access improvements for $77,700"
+    - "Approved renewal of Police Chief Dennis King's contract effective July 1, 2024 through June 30, 2027"
+    - "Approved contract with Homer Contracting Inc. for Franklin Street Firehouse window rehabilitation in the amount of $133,000"
+    - "Approved contract with DNR General Contractor for roadway and sidewalk improvements not to exceed $1,182,292.50"
+    - "Approved contract with George Carnes and Sons for shipyard public access improvements in the amount of $77,700"
     - "Approved updated host community agreement with Seven Leaf Sisters"
-    - "Approved change order to Rafael Construction for Abbott Hall brick repointing for $20,300"
+    - "Approved change order to Rafael Construction for Abbott Hall brick repairs increasing contract by $20,300"
     - "Approved use of Abbott Hall and Old Townhouse for Festival of Arts setup"
-    - "Approved one-day liquor license for Friends of Marblehead Public Schools"
-    - "Approved one-day liquor license for Our Lady Star of the Sea"
+    - "Approved one-day liquor license for Friends of Marblehead Public Schools event"
+    - "Approved one-day liquor license for Our Lady Star of the Sea Garden Party"
   votes:
     - motion: "Appoint Ruth Ferguson to Cable Television Advisory Committee"
       result: "in favor (unanimous)"
-    - motion: "Approve annual fireworks and Harbor Illumination"
+    - motion: "Approve annual Marblehead fireworks and Harbor Illumination on July 4th"
       result: "in favor (unanimous)"
     - motion: "Approve eight one-day liquor licenses for Marblehead Little Theater"
       result: "in favor (unanimous)"
-    - motion: "Adopt outdoor dining policy"
+    - motion: "Adopt Town of Marblehead Outdoor Dining Policy"
       result: "in favor (unanimous)"
-    - motion: "Approve Horribles Parade"
+    - motion: "Approve Horribles Parade on July 4th"
       result: "in favor (unanimous)"
-    - motion: "Approve temporary street closures"
+    - motion: "Approve July 4th street closures and traffic regulations"
       result: "in favor (unanimous)"
-    - motion: "Renew contract of Chief Dennis King"
+    - motion: "Renew contract of Police Chief Dennis King through June 30, 2027"
       result: "in favor (unanimous)"
-    - motion: "Award Franklin Street Firehouse window rehab contract to Homer Contracting for $133,000"
+    - motion: "Award Franklin Street Firehouse window rehab contract to Homer Contracting Inc. for $133,000"
       result: "in favor (unanimous)"
-    - motion: "Award roadway and sidewalk improvement contract to DNR General Contractor for $1,182,292.50"
+    - motion: "Award roadway and sidewalk improvement contract to DNR General Contractor for not to exceed $1,182,292.50"
       result: "in favor (unanimous)"
     - motion: "Award shipyard public access improvements contract to George Carnes and Sons for $77,700"
       result: "in favor (unanimous)"
     - motion: "Approve updated host community agreement with Seven Leaf Sisters"
       result: "in favor (unanimous)"
-    - motion: "Approve change order to Rafael Construction for $20,300"
+    - motion: "Approve change order to Rafael Construction increasing contract by $20,300"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -66,167 +66,149 @@ topic_segments:
     start_seconds: 0
     end_seconds: 542
     headline: "Ruth Ferguson appointed to Cable Television Advisory Committee"
-    dek: "The board heard an overview of pending Verizon cable franchise renewal due January 2025 before unanimously appointing Ferguson."
-    summary: |
-      Bob (committee chair) briefed the board on the Cable Television Advisory Committee's status. The Verizon cable franchise expires in January 2025; the Comcast contract runs another four years. Both providers currently contribute 5% of gross cable TV revenues to MHTV and $30,000 per year in capital funds. HD service is now available on both systems (Verizon channel 2128; Comcast channel 1073).
-      
-      Ruth Ferguson, 28 Washington Street, described her background in cable franchising beginning in the early 1980s with Warner Amex Cable and later with the Massachusetts Corporation for Educational Telecommunications. A second applicant had withdrawn earlier that day, leaving Ferguson as the sole nominee. The board unanimously appointed her to a term expiring June 2025.
-    key_speakers: ["Bob (Cable Television Advisory Committee chair)", "Ruth Ferguson (applicant, 28 Washington St)"]
+    dek: "The board appointed Ferguson, a cable industry veteran, as the committee prepares for an upcoming Verizon license renewal in January 2025."
+    summary: "Bob (committee chair) and Ruth Ferguson appeared before the board to discuss the Cable Television Advisory Committee and a pending Verizon franchise renewal. The current 10-year Comcast license is mid-term; Verizon's contract expires January 2025. The committee secured a 5% gross revenue contribution from both providers for MHTV, plus $30,000 per year each in capital equipment funding. A second applicant had withdrawn earlier that day, leaving Ferguson as the sole appointee. The board voted to appoint Ferguson with a term expiring June 2025."
+    key_speakers: ["Ruth Ferguson (Cable TV Advisory Committee applicant)", "Bob (Cable TV Advisory Committee chair)"]
   - topic: recreation-events
     topic_confidence: 0.95
     start_seconds: 551
     end_seconds: 828
-    headline: "July 4th fireworks and Harbor Illumination approved; new website and Venmo donations added"
-    dek: "Alexander Falk of the Marblehead Fireworks Committee presented updates including a rebuilt website and new Venmo donation option."
-    summary: |
-      Alexander Falk, 452 Atlantic Avenue, representing the Fireworks Committee, requested approval for the annual Marblehead Fireworks and Harbor Illumination on July 4th, with Harbor Illumination at 9:00 PM and fireworks at 9:15 PM.
-      
-      New items for 2024 include a rebuilt website at MarbleheadFireworks (with a content delivery network to prevent crashes like the one that occurred July 4, 2023), Venmo and QR code donation options in addition to PayPal, and a new drone guidance page on the website developed in coordination with the police chief. Recreational drone pilots are prohibited; commercial operators with FAA licenses must comply with detailed regulations listed on the site. Falk noted the committee still needs additional donations to meet its fundraising goal.
-    key_speakers: ["Alexander Falk (Marblehead Fireworks Committee, 452 Atlantic Ave)"]
-  - topic: permits-zoning
+    headline: "Marblehead Fireworks Committee presents plans for July 4th show"
+    dek: "Alexander Falk announced a new website, Venmo donations, and a drone guidance page ahead of the July 4th fireworks and Harbor Illumination."
+    summary: "Alexander Falk of the Marblehead Fireworks Committee reported a fully rebuilt website (marbleheadfireworks with a dot in the middle) after the prior site crashed on July 4, 2023. New features include Venmo payment support alongside PayPal, a QR code for mobile donations, and a new page for drone operators outlining recreational and commercial restrictions developed in coordination with the police chief. Falk noted the committee is still short of its fundraising goal and encouraged donations."
+    key_speakers: ["Alexander Falk (Marblehead Fireworks Committee)"]
+  - topic: recreation-events
     topic_confidence: 0.9
     start_seconds: 828
-    end_seconds: 945
-    headline: "Eight one-day liquor licenses approved for Marblehead Little Theater's 'Something Rotten' run"
-    dek: "Licenses cover performances at 12 School Street from June 21 through June 30, 2024."
-    summary: |
-      The board approved eight one-day liquor licenses for Andrew Barnett of Marblehead Little Theater at 12 School Street for performances of *Something Rotten*. Dates and times:
-      
-      | Date | Hours |
-      |------|-------|
-      | June 21 | 6:30 PM – 11:00 PM |
-      | June 22 | 1:30 PM – 11:00 PM |
-      | June 23 | 1:30 PM – 6:00 PM |
-      | June 26 | 6:30 PM – 11:00 PM |
-      | June 27 | 6:30 PM – 11:00 PM |
-      | June 28 | 6:30 PM – 11:00 PM |
-      | June 29 | 1:30 PM – 11:00 PM |
-      | June 30 | 1:30 PM – 6:00 PM |
-      
-      Alcohol to be purchased from Kathy's Importing. Standard $50 fee and proof-of-purchase conditions apply.
+    end_seconds: 899
+    headline: "Board approves July 4th fireworks, Harbor Illumination, and Horribles Parade"
+    dek: "Harbor Illumination is set for 9:00 PM and fireworks at 9:15 PM; the Horribles Parade begins at 10:00 AM with a rain date of July 7th."
+    summary: "The board voted to hold the annual fireworks and Harbor Illumination on July 4th, and separately approved the Horribles Parade organized by Carol McHugh and Joan Chaplin's Gary Five Veterans Firemen's Association, starting at the National Grand Bank. A rain date of Sunday, July 7th was also approved."
   - topic: permits-zoning
-    topic_confidence: 0.88
+    topic_confidence: 0.95
+    start_seconds: 851
+    end_seconds: 945
+    headline: "Board approves eight one-day liquor licenses for Marblehead Little Theater's 'Something Rotten' production"
+    dek: "Licenses cover performances at 12 School Street from June 21 through June 30, 2024."
+    summary: "The board approved eight one-day liquor licenses for Andrew Barnett of Marblehead Little Theater for performances of 'Something Rotten' at 12 School Street. Dates span June 21–30, 2024, with alcohol to be purchased from Kathy's Importing. All standard conditions under General Laws Chapter 138 apply."
+  - topic: permits-zoning
+    topic_confidence: 0.9
     start_seconds: 945
     end_seconds: 1785
     featured: true
-    headline: "Select Board adopts formal outdoor dining policy for Memorial Day through October season"
-    dek: "The policy, modeled on Salem's framework, requires multi-department sign-off and sets parameters for use of public space, capacity, and alcohol service."
+    headline: "Select Board adopts formal outdoor dining policy covering permits, capacity, and public-space use"
+    dek: "The policy, modeled on Salem's framework, governs applications for expanded dining on public and private property from Memorial Day through October."
     summary: |
-      The Town Administrator presented a draft outdoor dining policy to replace the informal COVID-era arrangements, prompted by the ABCC ceding local approval authority back to municipalities.
+      Town Administrator Thatcher presented an outdoor dining policy developed after the ABCC delegated local approval authority to municipalities. The policy was adapted from Salem's framework and covers:
       
-      **Key provisions:**
-      - Season runs Memorial Day weekend through end of October
-      - Outdoor seating must be contiguous to the licensed establishment
-      - Capacity limited by existing restroom capacity
-      - Alcohol may only be served to patrons seated at tables, in conjunction with food
-      - No smoking; no dogs (except service animals)
-      - Trash, recycling, and weather-related debris management required
-      - Applications must receive sign-off from police, fire, board of health, building department, and DPW before coming to the Select Board
-      - Nominal fee charged for use of public space and Jersey barriers
-      - A license agreement (previously used for several years, reviewed by town counsel) separately addresses insurance and indemnification
+      - **Location**: Dining areas must be contiguous to the establishment; some flexibility allowed for buildings with varying configurations
+      - **Capacity**: Limited by existing restroom capacity; no unlimited outdoor expansion
+      - **Oversight**: Applications require sign-off from police, fire, board of health, building department, and DPW
+      - **Alcohol**: Permitted only at tables, in conjunction with food (common victualer license); existing liquor license holders apply for expanded outdoor service
+      - **Season**: Memorial Day through end of October
+      - **Fees**: Nominal fee for use of public space; separate fee for use of Jersey barriers if needed
+      - **Insurance**: Covered in a separate license agreement (not this policy document) requiring the town be named as additionally insured
       
-      Board members discussed equity concerns for restaurants not geographically positioned to use outdoor space, and the impact on public parking. One member noted a specific complaint about lost parking on School Street. The Town Administrator confirmed each application will be reviewed case by case.
-      
-      The board adopted the policy unanimously.
-    key_speakers: ["Town Administrator (Thatcher)", "Board member (Singer)", "Board member (Murray)"]
+      The policy is designed to be case-by-case; approximately four applications are pending. Board members noted some businesses lack the geographic advantage to participate. The board adopted the policy unanimously.
+    key_speakers: ["Thatcher (Town Administrator)"]
   - topic: recreation-events
     topic_confidence: 0.85
-    start_seconds: 1830
-    end_seconds: 2022
-    headline: "Horribles Parade and July 4th street closures approved for July 4th, 2024"
-    dek: "Parade starts at 10 AM from National Grand Bank; street closures include Front Street from 7 PM for fireworks traffic management."
-    summary: |
-      The board approved the annual Horribles Parade, organized by Carol McHugh and Joan Chaplin of the Gary 5 Veterans Firemen's Association, on July 4th at 10:00 AM with a rain date of July 7th. Registration occurs July 3rd (6–8 PM at Gary 5, 210 Beacon Street) and July 4th (8–9:30 AM at National Grand Bank parking lot).
-      
-      Street closures approved on police chief recommendation:
-      - **Horribles Parade (9:00 AM):** Pleasant Street closed between Spring and Washington; Spring Street one-way from Pleasant to Sewell; Essex Street closed during staging
-      - **Fireworks (7:00 PM):** Front Street closed between Franklin Street and Fort Sewell Lane; Franklin Street one-way; Washington Street one-way; post-fireworks traffic directed from Ocean/Atlantic intersection; MBTA route follows snow-route detour 6–11 PM
-      - **Festival of Arts (11 AM–3 PM):** Washington Street closed between Rockaway and Darling; Hooper Street and Mason Street closed between Tucker and Washington
-    key_speakers: ["Town Administrator"]
-  - topic: public-safety
+    start_seconds: 1785
+    end_seconds: 2067
+    headline: "Board approves July 4th street closures and Community Wellness Day parking restrictions"
+    dek: "Street closures cover the Horribles Parade route, fireworks traffic, and the Festival of Arts on Washington Street."
+    summary: "On recommendation from the police chief, the board approved temporary street closures for July 4th covering the Horribles Parade (Pleasant, Spring, and Essex Streets beginning at 9:00 AM), fireworks traffic management (Front Street, Franklin Street, Washington Street beginning at 7:00 PM), and the Festival of Arts (Washington Street between Rockaway and Darling Streets, 11:00 AM–3:00 PM). The MBTA route will follow a pre-designated snow route from 6:00 PM to 11:00 PM. The board also approved temporary parking restrictions on Alewife Lane on June 22nd from 11:00 AM to 5:00 PM for the Marblehead Counseling Center's Community Wellness Day at Hobbs Field."
+  - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 2022
+    start_seconds: 2067
     end_seconds: 2230
-    headline: "Board indemnifies Lieutenant Lund for on-duty injury; approves Community Wellness Day parking restrictions"
-    dek: "Lieutenant Lund was injured May 24th; the Marblehead Counseling Center's June 22nd event at Hobbs Field requires temporary lane closure on Aware Lane."
-    summary: |
-      The board approved indemnification of Lieutenant Lund for an injury sustained on duty May 24, 2024. One member recused from that vote.
-      
-      The board also approved temporary parking restrictions on Saturday, June 22nd from 11:00 AM to 5:00 PM for the Marblehead Counseling Center's Community Wellness Day at Hobbs Field. The closure covers Aware Lane (paralleling the former Eit School and Hobbs Field from Brook Road to the MCC parking lot exit) and the MCC parking lot from Clifton Avenue. Abutters on Aware Lane are to be notified.
+    headline: "Board approves holiday hours for Abbott Hall and Mary Alley and approves minutes"
+    dek: "Both buildings will close for Juneteenth on June 19th and for the July 4th holiday; Abbott Hall will open for the Festival of Arts."
+    summary: "The board approved holiday hours for Abbott Hall and the Mary Alley building: closed all day June 19th for Juneteenth and all day July 4th for the holiday, with Abbott Hall opening for the Festival of Arts. Minutes from May 22nd and May 23rd were also approved."
   - topic: labor-personnel
     topic_confidence: 0.95
     start_seconds: 2230
     end_seconds: 2324
     headline: "Police Chief Dennis King's contract renewed through June 30, 2027"
-    dek: "The board ratified publicly a contract previously approved in executive session, effective July 1, 2024."
-    summary: "The board voted to renew the contract of Police Chief Dennis King effective July 1, 2024 through June 30, 2027, in accordance with terms previously deliberated in executive session, subject to final review of technical language by town counsel. Chief King was not present, as he was receiving recognition at another event on behalf of the department. One member recused."
+    dek: "The board voted publicly to ratify terms previously deliberated in executive session, effective July 1, 2024."
+    summary: "Following prior executive session deliberation, the board voted to renew Chief Dennis King's contract effective July 1, 2024 through June 30, 2027, subject to final technical language review by town counsel. One board member recused. King was not present, attending an event recognizing the police department."
   - topic: bonding-capital
-    topic_confidence: 0.88
+    topic_confidence: 0.9
     start_seconds: 2324
-    end_seconds: 2733
-    headline: "Board awards $1.4M in contracts for firehouse windows, road improvements, and shipyard access"
-    dek: "Three separate contracts address Franklin Street Fire Station windows ($133K), roadway/sidewalk work ($1.18M), and shipyard public access improvements ($77.7K)."
-    summary: |
-      **Franklin Street Firehouse Windows — $133,000 (Homer Contracting, Arlington)**
-      Original windows will be removed, restored off-site at a Boston specialty shop, and reinstalled with period-appropriate storm windows. Work is expected to span approximately 6–10 weeks. Preserving original windows maintains the building's historic character.
-      
-      **Roadway and Sidewalk Improvements — $1,182,292.50 (DNR General Contractor, Melrose)**
-      Work includes: (1) ADA-compliant sidewalk from the Salem line to Maple Street on Lafayette Street, filling a gap identified by the Traffic Safety Advisory Committee; (2) curb-to-curb paving on Commercial Street from Atlantic Avenue to Cliff Street and State Street, to follow completion of Municipal Light Department and harbor-area improvements; (3) Atlantic Avenue to Cliff Street systematic improvements. Funding is from Article 11, a bonding article approved approximately two years ago.
-      
-      **Shipyard Public Access Improvements — $77,700 (George Carnes and Sons, Windham NH)**
-      Funded by a CZM (Coastal Zone Management) climate resiliency grant; must be completed by June 30 to qualify. Work connects the pocket park to Hammond Park and improves waterfront access in the shipyard district. Some stone chipping will create noise over approximately two weeks.
-    key_speakers: ["Town Administrator", "Fire Chief"]
-  - topic: admin-housekeeping
+    end_seconds: 2508
+    headline: "Board awards $133,000 contract for Franklin Street Firehouse window rehabilitation"
+    dek: "Homer Contracting of Arlington will restore original historic windows off-site, with work expected to conclude in late summer."
+    summary: "The board awarded a $133,000 contract to Homer Contracting Inc. of Arlington, MA for rehabilitation of the Franklin Street Fire Station's historic windows. The original windows will be removed, sent to a specialized Boston-area restoration shop for six to eight weeks, and reinstalled with storm windows. The project maintains the building's historic character; replacing with modern windows would jeopardize historic status. North and south elevations are addressed first, with east and west to follow. Funding is from capital appropriations."
+    key_speakers: ["Fire Chief (unnamed)"]
+  - topic: trash-dpw
     topic_confidence: 0.85
-    start_seconds: 2733
-    end_seconds: 3104
-    headline: "Host community agreement with Seven Leaf Sisters updated; Abbott Hall repointing change order and liquor licenses approved"
-    dek: "Cannabis Control Commission template required HCA update; Abbott Hall stairway repointing adds $20,300 to existing contract."
+    start_seconds: 2508
+    end_seconds: 2694
+    headline: "Board awards $1.18M roadway and sidewalk improvement contract to DNR General Contractor"
+    dek: "Work includes a new ADA-compliant sidewalk on Lafayette Street from the Salem line to Maple Street, and paving on Commercial Street and Atlantic Avenue."
     summary: |
-      **Seven Leaf Sisters HCA Update:** The Cannabis Control Commission issued new regulations governing host community agreements, including how impact fees are structured and used. The town used the Commission's template to update the existing agreement. The board authorized the Town Administrator to sign.
+      The board awarded a contract not to exceed $1,182,292.50 to DNR General Contractor of Melrose for the FY2024 roadway and sidewalk improvement project. Scope includes:
       
-      **Abbott Hall Brick/Repointing Change Order — $20,300 (Rafael Construction):** During drainage and walkway work already underway, the stairways and railings were identified as needing repointing and securing. The change order adds seven days and $20,300 to the existing contract.
+      - A new ADA-compliant sidewalk on Lafayette Street inbound side from the Salem line to Maple Street, filling an existing gap
+      - Curb-to-curb paving with sidewalk improvements on Commercial Street (Atlantic Ave to Cliff Street and State Street), coordinated with ongoing MLD and harbor area improvements
+      - Sidewalk improvements on Atlantic Avenue at Cliff Street
       
-      **Festival of Arts:** Abbott Hall and Old Townhouse approved for art drop-off and setup; times to be coordinated with the Town Administrator's office.
-      
-      **One-day liquor licenses approved:**
-      - Friends of Marblehead Public Schools, 388 Ocean Ave, June 15th, 6:30–9:30 PM (alcohol from CAPS Distributors; roll-call vote unanimous)
-      - Our Lady Star of the Sea (Monsignor Timothy Moran), 85 Atlantic Ave, June 22nd, 5:00–7:00 PM (roll-call vote unanimous)
-    key_speakers: ["Town Administrator"]
+      Funding is from Article 11, a bonding article approved two years prior.
+    key_speakers: ["Thatcher (Town Administrator)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 2694
+    end_seconds: 2782
+    headline: "Board awards $77,700 contract for Shipyard public access improvements"
+    dek: "Work funded by a CZM climate resiliency grant must be completed by June 30th and will connect the pocket park to Hammond Park along the waterfront."
+    summary: "The board awarded a $77,700 contract to George Carnes and Sons of Windham, NH for shipyard public access improvements at Hammond Park and the Commercial Street dock area. The work, funded by a Coastal Zone Management (CZM) grant, must be completed by June 30th. It includes stone chipping to improve waterfront access and will connect to the pocket park and Hammond Park. Residents near the site were cautioned about noise during the work period."
+  - topic: permits-zoning
+    topic_confidence: 0.85
+    start_seconds: 2782
+    end_seconds: 2874
+    headline: "Board approves updated host community agreement with Seven Leaf Sisters cannabis operator"
+    dek: "The update brings the agreement into compliance with new Cannabis Control Commission regulations on impact fee structure."
+    summary: "The board approved an updated host community agreement with Seven Leaf Sisters, a cannabis operator, to comply with new Cannabis Control Commission regulations governing how municipalities structure such agreements, particularly regarding impact fees. The CCC provided a template which the town adapted. The town administrator was authorized to sign on behalf of the board."
+  - topic: bonding-capital
+    topic_confidence: 0.8
+    start_seconds: 2874
+    end_seconds: 2984
+    headline: "Board approves $20,300 change order to Rafael Construction for Abbott Hall stairway repointing"
+    dek: "The change order adds seven days and $20,300 to the existing Abbott Hall brick rentals contract to repair steps and railings around the building."
+    summary: "A change order was approved to the existing Rafael Construction contract for the Abbott Hall brick rentals project, increasing the contract by $20,300 and extending the timeline by seven days. The additional scope covers repointing and securing the building's stairways and railings, identified as necessary during ongoing drainage and walkway work."
+  - topic: recreation-events
+    topic_confidence: 0.8
+    start_seconds: 2984
+    end_seconds: 3104
+    headline: "Board approves Festival of Arts building use and several one-day liquor licenses"
+    dek: "Licenses approved for Friends of Marblehead Public Schools and Our Lady Star of the Sea events in June."
+    summary: "The board approved use of Abbott Hall and Old Townhouse for Festival of Arts setup and art drop-off, with times to be coordinated with the Town Administrator's office. One-day liquor licenses were also approved for the Friends of Marblehead Public Schools event at 388 Ocean Ave on June 15th (6:30–9:30 PM, alcohol from CAPS Distributors) and for Monsignor Timothy Moran's second annual Garden Party at Our Lady Star of the Sea, 85 Atlantic Ave, on June 22nd (5:00–7:00 PM)."
   - topic: public-comment
     topic_confidence: 0.95
     start_seconds: 3152
     end_seconds: 3383
-    headline: "Resident opposes outdoor restaurant seating on public parking spaces along School Street"
-    dek: "Albert Jordan criticized safety hazards, lack of usage, and loss of public parking created by Jersey barrier-enclosed outdoor dining areas."
+    headline: "Resident criticizes outdoor dining barriers on School Street as unsafe and inequitable"
+    dek: "Albert Jordan of Roosevelt Drive argued Jersey barriers harm pedestrian safety, block parking, and disadvantage businesses that cannot expand outdoors."
     summary: |
-      Albert Jordan (Roosevelt Drive) addressed the board during public comment, expressing opposition to the use of public parking spaces for outdoor restaurant seating, specifically referencing School Street. His concerns included:
+      Albert Jordan, a resident, addressed the board during public comment to raise concerns about outdoor dining enclosures on School Street. He argued that:
       
-      - Jersey barriers create navigation hazards for pedestrians, including older residents
-      - Patrons cross the street to smoke outside the barriers without using crosswalks
-      - Tables are frequently unused, yet parking is lost for the full six-month season
-      - Street sweepers cannot access the space between barriers
-      - Delivery trucks must block crosswalks because parking is removed on one side
-      - Neighboring businesses (he cited a nearby pizza establishment) are not uniformly in favor
-      - He argued the arrangement is inequitable: private businesses benefit from public land without paying taxes on it
+      - Jersey barriers are an eyesore and create pedestrian safety hazards, particularly for older residents
+      - People jaywalk across the street between barriers and other establishments at night
+      - Delivery trucks are forced to block crosswalks because the barriers eliminate curbside access
+      - The spaces are tied up 24 hours a day but used only briefly
+      - Street sweepers cannot access the areas between barriers
+      - Businesses unable to expand outdoors are disadvantaged while competitors benefit from public property
       
-      He asked the board to consider shorter hours or seasonal limits rather than a blanket six-month approval, and suggested department heads conduct nighttime and weekend walkthroughs to observe conditions firsthand.
+      He asked the board to address these concerns on a case-by-case basis and suggested limiting the season and hours of use.
     key_speakers: ["Albert Jordan (resident, Roosevelt Drive)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
+    topic_confidence: 0.9
     start_seconds: 3383
     end_seconds: 3531
-    headline: "Town Administrator shares Fort Sewell landscape award and Flag Day retirement ceremony"
-    dek: "Fort Sewell project received a merit award from the Boston Society of Landscape Architects; flag retirement ceremony set for June 14th at Waterside Cemetery."
-    summary: |
-      Town Administrator Patrick Keyser reported two items:
-      
-      1. The Fort Sewell landscape project received a merit award in the general design category from the Boston Society of Landscape Architects. Project manager Naomi Cantrell noted the project competed against many prominent New England projects.
-      
-      2. Theresa Collins organized a flag retirement ceremony at Waterside Cemetery on Flag Day, June 14th at 5:00 PM, open to all residents wishing to properly dispose of worn flags.
-      
-      A board member noted it was his final meeting; the board acknowledged his service.
-    key_speakers: ["Town Administrator (Patrick Keyser)"]
+    headline: "Town Administrator announces landscape award for Fort Sewell and a new Flag Day retirement ceremony"
+    dek: "The Fort Sewell landscape project received a merit award from the Boston Society of Landscape Architects; a flag retirement ceremony is set for June 14th at Waterside Cemetery."
+    summary: "Town Administrator Patrick Keyser reported two items: Fort Sewell's landscape project received a merit award in the general design category from the Boston Society of Landscape Architects, with project manager Naomi Catrell noting the project competed against major New England projects. Separately, Theresa Collins has organized a flag retirement ceremony at Waterside Cemetery on Flag Day, June 14th at 5:00 PM, open to all residents. The meeting concluded with a brief acknowledgment of a board member's final meeting before adjournment."
+    key_speakers: ["Patrick Keyser (Town Administrator)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

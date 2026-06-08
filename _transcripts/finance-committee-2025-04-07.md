@@ -11,480 +11,493 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Finance Committee recommends 52-article FY26 warrant, backs MBTA 3A zoning 8-1"
-  summary: "The Marblehead Finance Committee held its annual warrant hearing, deliberating on all 52 articles for the May 2025 Annual Town Meeting. The committee voted to recommend a $119.5 million operating budget for FY26, funded from taxation and enterprise funds, along with approximately $2 million in free-cash-funded capital improvements. The most debated item was Article 23, the MBTA Communities Act (3A) zoning overlay, which the committee recommended 8-1 after extensive public comment on litigation risk, grant exposure exceeding $8 million, and the unfunded-mandate audit opinion."
+  headline: "Marblehead FinCom endorses MBTA 3A zoning, school roof debt exclusion, and FY26 balanced budget"
+  summary: "The Finance Committee held its 2025 annual warrant hearing, reviewing all 52 articles on the May town meeting warrant. The committee voted 8-1 to recommend adoption of the MBTA Communities Act (3A) multifamily overlay zoning article, reversing the town meeting outcome from last year. The committee unanimously recommended a $8.6 million debt exclusion override for the Marblehead High School roof and HVAC replacement, and approved the $119.5 million FY26 operating budget."
   decisions:
     - "Approved consent articles (Article 3)"
     - "Approved unpaid accounts of $21,368.72 (Article 4)"
     - "Approved departmental revolving fund caps for FY26 (Article 5)"
-    - "Approved $301,741 in capital equipment from free cash (Article 6)"
+    - "Approved $301,741 in equipment purchases from free cash (Article 6)"
     - "Approved $491,218 in lease-purchase payments (Article 7)"
     - "Approved $1,236,958 in capital improvements for public buildings from free cash (Article 8)"
     - "Approved $50,000 for walls and fences from tax levy (Article 9)"
     - "Approved $400,000 for stormwater construction from tax levy (Article 10)"
-    - "Approved $1,236,000 water and $1,599,000 sewer construction from retained earnings (Article 11)"
-    - "Approved 2% COLA for administrative positions effective July 1, 2025 (Article 12)"
-    - "Approved 2% COLA for traffic supervisors effective July 1, 2025 (Article 13)"
-    - "Approved 2% COLA for seasonal and temporary personnel effective July 1, 2025 (Article 14)"
-    - "Approved town clerk annual salary of $93,048 (Article 15)"
+    - "Approved $1,236,000 from water retained earnings and $1,599,000 from sewer retained earnings (Article 11)"
+    - "Approved 2% COLA for administrative, traffic supervisor, and seasonal/temporary positions (Articles 12-14)"
+    - "Approved town clerk salary of $93,048 (Article 15)"
     - "Approved ratification of Compensation Committee actions (Article 16)"
-    - "Approved $627,323 for Essex North Shore Agri-Tech School District (Article 17)"
-    - "Approved $7,000,000 from free cash and $360,000 from electric surplus to reduce tax rate (Article 18)"
-    - "Held recommendation on Articles 19, 20, 21 (collective bargaining — negotiations pending)"
-    - "Approved $119,479,480 operating budget for FY26 (Article 22)"
-    - "Approved recommendation to adopt MBTA 3A zoning overlay (Article 23)"
-    - "Held recommendation on Article 24 (ADU bylaw amendment — no financial impact)"
-    - "Held recommendation on Article 25 (floodplain district — no financial impact)"
+    - "Approved $627,323 for Essex North Shore Agricultural and Technical School (Article 17)"
+    - "Approved use of $7,000,000 from free cash and $360,000 from electric surplus to reduce tax rate (Article 18)"
+    - "Held collective bargaining articles for police, MEU, and fire pending negotiations (Articles 19-21)"
+    - "Approved $119,479,480 FY26 operating budget (Article 22)"
+    - "Approved MBTA 3A multifamily overlay zoning article (Article 23)"
+    - "No recommendation on ADU zoning bylaw amendment (Article 24)"
+    - "No recommendation on floodplain district amendment (Article 25)"
     - "Approved prudent investor standard for trust funds (Article 26)"
-    - "Approved $2,000,000 transfer from free cash to General Stabilization Fund (Article 27)"
-    - "Approved home rule petition for means-tested senior property tax exemption (Article 28)"
+    - "Approved $2,000,000 transfer from free cash to general stabilization fund (Article 27)"
+    - "Approved means-tested senior citizen property tax exemption home rule petition (Article 28)"
     - "Approved CPI-adjusted veterans property tax exemption (Article 29)"
-    - "Approved 100% increase in veterans exemption amount (Article 30)"
+    - "Approved 100% increase to veterans property tax exemption (Article 30)"
     - "Approved Coffin School reuse transfer to Select Board (Article 31)"
-    - "Held recommendation on Article 32 (Gary School playground transfer — no financial impact)"
-    - "Held Article 33 for April 28 follow-up meeting"
+    - "No recommendation on Gary School playground transfer (Article 32)"
     - "Approved $8,610,602 debt exclusion override for Marblehead High School roof and HVAC (Article 34)"
-    - "Approved amendment to 2022 Article 11 debt authorization for Franklin Street fire station (Article 35)"
-    - "Held recommendation on Article 36 (stormwater enterprise fund establishment — no immediate financial impact)"
-    - "Held recommendation on Article 37 (police hiring age limit — no financial impact)"
-    - "Held recommendation on Articles 38 and 39 (fee-setting authority transfer)"
-    - "Approved building permit fee increase from $15 to $17 per thousand (Article 40)"
-    - "Approved electrical installation fee schedule including battery storage (Article 41)"
-    - "Approved Cemetery Perpetual Care Trust Fund transfer of $80,000 for capital (Article 42)"
+    - "Approved amendment to prior roof repair article to expand Franklin Street Fire Station scope (Article 35)"
+    - "No recommendation on stormwater enterprise fund establishment (Article 36)"
+    - "No recommendation on police hiring age limit rescission (Article 37)"
+    - "No recommendation on building permit fee-setting authority transfer to Select Board (Articles 38-39)"
+    - "Approved increase in building permit fee from $15 to $17 per thousand (Article 40)"
+    - "Approved updated electrical installation fee schedule including battery storage (Article 41)"
+    - "Approved $80,000 transfer from Cemetery Perpetual Care Trust Fund for capital (Article 42)"
     - "Approved $100,000 transfer from Cemetery Sale of Lots Trust Fund for capital (Article 43)"
-    - "Approved snow emergency parking ticket fee increase home rule petition (Article 44)"
-    - "Held recommendation on Article 45 (fishing gear storage zoning — no financial impact)"
-    - "Opposed Article 46 (independent audit fund — existing audit processes deemed sufficient)"
-    - "Opposed Article 47 (sustainability coordinator elimination)"
-    - "Opposed Article 48 (department head residency requirement)"
-    - "Held recommendation on Articles 49, 50, 51, 52 (no financial impact)"
+    - "Approved increased snow emergency parking fine home rule petition (Article 44)"
+    - "No recommendation on fishing gear storage zoning provision (Article 45)"
+    - "Opposed independent audit appropriation of $100,000 (Article 46)"
+    - "Opposed elimination of sustainability coordinator position (Article 47)"
+    - "Opposed residency requirement for department heads (Article 48)"
+    - "No recommendation on town meeting parliamentarian article (Article 49)"
+    - "No recommendation on Prop 2½ ballot placement article (Article 50)"
+    - "No recommendation on town meeting reconsideration procedure (Article 51)"
+    - "No recommendation on recall provision amendment (Article 52)"
   votes:
-    - motion: "Article 3 — consent articles"
+    - motion: "Article 3 consent articles"
       result: "in favor (unanimous)"
-    - motion: "Article 4 — unpaid accounts $21,368.72"
+    - motion: "Article 4 unpaid accounts $21,368.72"
       result: "in favor (unanimous)"
-    - motion: "Article 5 — revolving fund caps"
+    - motion: "Article 5 revolving fund caps"
       result: "in favor (unanimous)"
-    - motion: "Article 6 — capital equipment $301,741"
+    - motion: "Article 6 equipment purchases $301,741 from free cash"
       result: "in favor (unanimous)"
-    - motion: "Article 7 — lease-purchase $491,218"
+    - motion: "Article 7 lease-purchase payments $491,218"
       result: "in favor (unanimous)"
-    - motion: "Article 8 — public building capital $1,236,958"
+    - motion: "Article 8 capital improvements $1,236,958 from free cash"
       result: "in favor (unanimous)"
-    - motion: "Article 9 — walls and fences $50,000"
+    - motion: "Article 9 walls and fences $50,000"
       result: "in favor (unanimous)"
-    - motion: "Article 10 — stormwater $400,000"
+    - motion: "Article 10 stormwater construction $400,000"
       result: "in favor (unanimous)"
-    - motion: "Article 11 — water/sewer construction"
+    - motion: "Article 11 water/sewer construction"
       result: "in favor (unanimous)"
-    - motion: "Article 12 — admin COLA 2%"
+    - motion: "Article 12 administrative 2% COLA"
       result: "in favor (unanimous)"
-    - motion: "Article 13 — traffic supervisor COLA 2%"
+    - motion: "Article 13 traffic supervisor 2% COLA"
       result: "in favor (unanimous)"
-    - motion: "Article 14 — seasonal/temp COLA 2%"
+    - motion: "Article 14 seasonal/temporary 2% COLA"
       result: "in favor (unanimous)"
-    - motion: "Article 15 — town clerk salary $93,048"
+    - motion: "Article 15 town clerk salary $93,048"
       result: "in favor (unanimous)"
-    - motion: "Article 16 — compensation committee ratification"
+    - motion: "Article 16 ratify Compensation Committee actions"
       result: "in favor (unanimous)"
-    - motion: "Article 17 — Essex Tech $627,323"
+    - motion: "Article 17 Essex North Shore Tech $627,323"
       result: "in favor (unanimous)"
-    - motion: "Article 18 — free cash/electric surplus $7,360,000"
+    - motion: "Article 18 free cash and electric surplus $7,360,000"
       result: "in favor (unanimous)"
-    - motion: "Article 22 — operating budget $119,479,480"
+    - motion: "Article 22 FY26 operating budget $119,479,480"
       result: "in favor (unanimous)"
-    - motion: "Article 23 — MBTA 3A zoning overlay adoption"
+    - motion: "Article 23 MBTA 3A zoning overlay"
       result: "in favor (8 to 1)"
-    - motion: "Article 26 — prudent investor trust funds"
+    - motion: "Article 26 prudent investor trust funds"
       result: "in favor (unanimous)"
-    - motion: "Article 27 — stabilization fund $2,000,000"
+    - motion: "Article 27 stabilization fund $2,000,000"
       result: "in favor (unanimous)"
-    - motion: "Article 28 — senior property tax exemption"
+    - motion: "Article 28 senior tax exemption home rule petition"
       result: "in favor (8 to 1)"
-    - motion: "Article 29 — veterans CPI exemption"
+    - motion: "Article 29 veterans CPI exemption"
       result: "in favor (8 to 1)"
-    - motion: "Article 30 — veterans exemption 100% increase"
+    - motion: "Article 30 veterans 100% exemption increase"
       result: "in favor (8 to 1)"
-    - motion: "Article 31 — Coffin School reuse"
+    - motion: "Article 31 Coffin School reuse"
       result: "in favor (unanimous)"
-    - motion: "Article 34 — high school roof/HVAC debt exclusion $8,610,602"
+    - motion: "Article 34 high school roof/HVAC debt exclusion $8,610,602"
       result: "in favor (unanimous)"
-    - motion: "Article 35 — amend 2022 debt authorization"
+    - motion: "Article 35 amend prior roof article"
       result: "in favor (unanimous)"
-    - motion: "Article 40 — building permit fee increase"
+    - motion: "Article 40 building permit fee increase"
       result: "in favor (unanimous)"
-    - motion: "Article 41 — electrical installation fees"
+    - motion: "Article 41 electrical fee schedule"
       result: "in favor (unanimous)"
-    - motion: "Article 42 — cemetery perpetual care transfer $80,000"
+    - motion: "Article 42 cemetery perpetual care transfer $80,000"
       result: "in favor (unanimous)"
-    - motion: "Article 43 — cemetery sale of lots transfer $100,000"
+    - motion: "Article 43 cemetery sale of lots transfer $100,000"
       result: "in favor (unanimous)"
-    - motion: "Article 44 — snow emergency parking fee home rule"
+    - motion: "Article 44 snow emergency parking fines"
       result: "in favor (unanimous)"
-    - motion: "Article 46 — oppose independent audit fund"
+    - motion: "Article 46 oppose independent audit $100,000"
       result: "in favor (unanimous)"
-    - motion: "Article 47 — oppose sustainability coordinator elimination"
+    - motion: "Article 47 oppose elimination of sustainability coordinator"
       result: "in favor (8 to 1)"
-    - motion: "Article 48 — oppose department head residency requirement"
+    - motion: "Article 48 oppose residency requirement for department heads"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 0
-    end_seconds: 460
-    headline: "FinCom opens FY26 warrant hearing with 52 articles; approves consent articles"
-    dek: "Chair Alec Goolsby opened the annual warrant hearing and the committee unanimously approved standard consent articles covering assumed liability, trust property, lease authority, and conservation assistance."
-    summary: "Finance Committee Chair Alec Goolsby opened the 2025 Annual Town Meeting warrant hearing, noting 52 articles were on the agenda. Articles with financial implications would receive FinCom deliberation and a recommendation vote. Articles 1 and 2 (numerical order and report of town officers) carried no financial implications and required no deliberation. Article 3, the consent article bundle covering assumed liability, trust property acceptance, lease authority, contracts over three years, and conservation financial assistance, was unanimously recommended for adoption."
-    key_speakers: ["Alec Goolsby (FinCom Chair)", "Alicia (Town CFO/Finance Director)", "Felicia (presenter, Articles 1–2)"]
+    end_seconds: 461
+    headline: "FinCom opens 2025 warrant hearing; reviews Articles 1-3"
+    dek: "Chair Alec Goolsby opens the 52-article warrant hearing and the committee unanimously recommends adoption of the consent articles."
+    summary: "Finance Committee Chair Alec Goolsby opened the 2025 annual warrant hearing, noting 52 articles for review. Articles 1 (articles in numerical order) and 2 (report of town officers) carry no financial implications and received no FinCom recommendation. Article 3, a multi-part consent article covering assumed liability, trust property, lease of town property, multi-year contracts, and conservation financial assistance, was unanimously approved."
+    key_speakers: ["Alec Goolsby (FinCom Chair)", "Alicia (Finance Director/Town Administrator staff)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 460
-    end_seconds: 1095
-    headline: "FinCom approves $21,368 in unpaid prior-year bills and revolving fund caps"
-    dek: "Article 4 authorized payment of $21,368.72 in FY24 bills received after fiscal year close; Article 5 set departmental revolving fund spending caps for FY26, with notable increases for Parks and commercial waste."
+    start_seconds: 461
+    end_seconds: 890
+    headline: "FinCom approves $21,368 in unpaid prior-year bills and FY26 revolving fund caps"
+    dek: "Articles 4 and 5 cover routine annual housekeeping: prior-year bills requiring a four-fifths vote and departmental revolving fund spending caps."
     summary: |
-      **Article 4 — Unpaid Accounts ($21,368.72):** Bills from the Emerald Group and INN-04 related to IT services were received after the FY24 close and require a four-fifths town meeting vote to pay from the FY25 budget. A resident (Bill Mancuso) requested copies of the underlying invoices; the CFO agreed to provide them by email. Approved unanimously.
+      **Article 4 – Unpaid Accounts ($21,368.72):** Bills from FY24 that arrived after the close of the fiscal year, covering sewer, water, and finance departments. A resident asked for copies of the underlying invoices; the finance director agreed to scan and provide them.
       
-      **Article 5 — Revolving Fund Caps:** Annual caps for departmental revolving funds were presented. The Parks revolving fund and commercial waste fund showed the largest year-over-year increases. Parks is expanding programming; waste needs additional capital reserves following equipment issues at the transfer station. All boards had previously voted their requested caps. Approved unanimously.
-    key_speakers: ["Alicia (CFO)", "Bill Mancuso (resident, online)"]
+      **Article 5 – Departmental Revolving Funds:** Annual authorization of spending caps for departmental fee-based revolving funds. Notable increases were proposed for the Parks revolving fund (program expansion) and commercial waste (capital needs at the transfer station). All boards had previously voted these numbers.
+    key_speakers: ["Alicia (Finance Director)", "Bill Mancuso (public comment)"]
   - topic: bonding-capital
-    topic_confidence: 0.95
-    start_seconds: 1095
-    end_seconds: 1820
-    headline: "FinCom approves ~$2M in free-cash capital: vehicles, leases, and building improvements"
-    dek: "Articles 6, 7, and 8 together appropriate approximately $2 million from free cash for equipment purchases, lease payments, and capital building improvements including a Mary Alley meeting room expansion and Abbott Library roof replacement."
+    topic_confidence: 0.92
+    start_seconds: 890
+    end_seconds: 1868
+    headline: "FinCom approves ~$2M in free-cash-funded capital: vehicles, leases, and building improvements"
+    dek: "Articles 6, 7, and 8 appropriate approximately $2 million from certified free cash for equipment purchases, ongoing lease payments, and public building capital improvements."
     summary: |
-      **Article 6 — Capital Equipment ($301,741 from free cash):** Included a Ford F-150 crew cab for Waste, electric mower for Rec & Park, portable radios and radar for Police, a Ford F-150 for Public Buildings, and an F-350 with plow for DPW. Approved unanimously.
+      **Article 6 – Equipment Purchases ($301,741 from free cash):** Includes a Ford F-150 for Waste, electric mower for Rec & Park, police portable radios and radar replacements, Ford F-150 for Public Buildings, and an F-350 with plow for DPW.
       
-      **Article 7 — Lease-Purchase Payments ($491,218; $29,917 from waste revolving, $461,301 from free cash):** Covered ongoing vehicle and equipment leases across multiple departments including fire, police, DPW, Rec & Park, and schools. A new item was a 7D school transportation van. Approved unanimously.
+      **Article 7 – Lease Purchases ($491,218; $29,917 from Waste Revolving, $461,301 from free cash):** Covers ongoing lease payments for vehicles and equipment across waste, fire, Rec & Park, police, DPW, and schools. The 7D school transportation van is the only new first-year lease.
       
-      **Article 8 — Capital Improvements for Public Buildings ($1,236,958 from free cash):**
-      - Abbott Library partial roof replacement: $373,648 (deferred from the 2022 renovation project when shingled roof still had useful life)
+      **Article 8 – Capital Improvements for Public Buildings ($1,236,958 from free cash):** Key items include:
+      - Abbott Library partial roof replacement: $373,648
       - Fire Headquarters bathroom remodel: $168,310
-      - Glover School cafeteria HVAC (mini-split system): addressed lack of cooling in cafeteria
-      - Glover School playground
-      - Performing Arts Center paint and reupholstering
-      - Mary Alley improvements: $150,000 — expand lower-level meeting room, add ADA-compliant entrance and accessible multi-use bathroom, lock-off corridor for after-hours meeting use
+      - Glover School cafeteria HVAC (mini-split system): included
+      - Glover School playground, Performing Arts Center paint and reupholstering
+      - Mary Alley lower-level renovation for public meeting space and ADA compliance: $150,000
       - Police station flooring: $15,000
       
-      Approved unanimously. A resident (David Patton) questioned the Abbott Library roof given the recent $8.5M renovation; the library director (Gary Arick, 213 Washington St.) explained the shingled roof was intentionally deferred with a 4–5 year useful life remaining.
-    key_speakers: ["Alicia (CFO)", "Thatcher (Town Administrator)", "David Patton (resident, online)", "Gary Arick (213 Washington St., library project)", "Kimberly (Abbott Library Director)", "School Administrator (online)"]
-  - topic: trash-dpw
-    topic_confidence: 0.75
-    start_seconds: 1868
-    end_seconds: 1997
-    headline: "FinCom approves $50K for seawalls and $400K for stormwater, both from tax levy"
-    dek: "Articles 9 and 10 are standard annual appropriations for coastal wall maintenance and MS4 stormwater compliance, unchanged from the prior year."
-    summary: |
-      **Article 9 — Walls and Fences ($50,000 from tax levy):** Annual appropriation for construction and reconstruction of seawalls and protective fences. The DPW director noted the amount is consistent with prior years but wished it were higher. Approved unanimously.
-      
-      **Article 10 — Stormwater Construction ($400,000 from tax levy):** Funds construction, reconstruction, permitting, and maintenance of storm sewer infrastructure to meet MS4 permit requirements. Same amount as prior year. Approved unanimously.
-    key_speakers: ["Alicia (CFO)"]
+      The town administrator described the Mary Alley project as expanding the lower conference room, adding a multi-use ADA-compliant restroom, and enabling self-sufficient after-hours public meeting access to fulfill the spirit of a prior Article 44 town meeting vote on video and accessibility.
+    key_speakers: ["Alec Goolsby (FinCom Chair)", "Thatcher (Town Administrator)", "Alicia (Finance Director)", "Gary Arick (public comment, re: Abbott Library)", "Kimberly (Abbott Library Director)", "David Patton (public comment)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 1997
-    end_seconds: 2670
-    headline: "Water and sewer capital articles approved; water rate discussion covers infrastructure backlog"
-    dek: "Article 11 appropriated $1.236M from water retained earnings and $1.599M from sewer retained earnings for construction; public comment surfaced detailed questions about rate increases and the town's 28 aging pump stations."
+    topic_confidence: 0.88
+    start_seconds: 1868
+    end_seconds: 2532
+    headline: "FinCom recommends $50K walls/fences, $400K stormwater, and water/sewer capital articles"
+    dek: "Articles 9 through 11 cover routine annual appropriations for seawall maintenance, stormwater MS4 compliance, and water/sewer enterprise capital funded by retained earnings."
     summary: |
-      **Article 11 — Water and Sewer Construction:**
-      - Water department construction: $1,236,000 from water retained earnings
-      - Sewer department construction: $1,599,000 from sewer retained earnings
-      - Water and sewer claims: authorized for litigation support
+      **Article 9 – Walls and Fences ($50,000 from tax levy):** Standard annual appropriation for seawall and similar protective structures.
       
-      The water/sewer superintendent (Amy McHugh) explained the prior-year fluctuation in request amounts was due to timing of retained earnings certification. Rate increases were driven by ongoing cleaning and lining projects (to meet an EPA administrative order requiring ~$1M/year in lining), and by MWRA/SESD assessments that make up 40–60% of the operating budget and increase 3–4% annually. The town has 28 pump stations, most installed in the 1960s, currently being assessed as part of a 20-year replacement plan. Approved unanimously.
-    key_speakers: ["Alicia (CFO)", "Amy McHugh (Water/Sewer Superintendent)", "David Patton (resident, online)"]
+      **Article 10 – Stormwater Construction ($400,000 from tax levy):** Annual appropriation to meet MS4 permit requirements.
+      
+      **Article 11 – Water and Sewer Construction:**
+      - Water: $1,236,000 from water retained earnings
+      - Sewer: $1,599,000 from sewer retained earnings
+      
+      The water/sewer superintendent Amy McHugh explained that amounts vary year to year based on retained earnings timing and construction scheduling. The town is under an EPA administrative order to spend $1 million per year on sewer lining over 10 years. She noted 28 aging pump stations (most installed in the 1960s) need eventual replacement at $800,000–$1.8 million each, and that MWRA/SESD costs represent 40–60% of the water/sewer budget, rising 3–4% annually.
+    key_speakers: ["Alicia (Finance Director)", "Amy McHugh (Water/Sewer Superintendent, via public comment)", "David Patton (public comment)"]
   - topic: labor-personnel
-    topic_confidence: 0.9
-    start_seconds: 2670
+    topic_confidence: 0.95
+    start_seconds: 2532
     end_seconds: 3420
-    headline: "FinCom approves 2% COLA for all non-union personnel schedules and ratifies Compensation Committee actions"
-    dek: "Articles 12–16 address pay schedules for administrative, traffic supervisor, seasonal/temporary staff, the elected town clerk, and ratification of 44 Compensation Committee actions taken in calendar year 2024."
+    headline: "FinCom approves 2% COLA for non-union staff and ratifies Compensation Committee actions"
+    dek: "Articles 12–16 cover pay schedules for administrative, traffic supervisor, and seasonal staff, plus the town clerk salary and ratification of 44 Compensation Committee actions from calendar 2024."
     summary: |
-      **Articles 12, 13, 14 — Pay Schedules (2% COLA effective July 1, 2025):** All three articles covering administrative positions (38 positions), traffic supervisors, and seasonal/temporary personnel were approved at an estimated 2% cost-of-living increase, consistent with the assumption built into the FY26 operating budget. Collective bargaining negotiations for police, fire, and MMEU (Local 1776) are ongoing; any settlement above 2% would require supplemental articles.
+      Articles 12, 13, and 14 each establish a 2% cost-of-living increase effective July 1, 2025 for administrative, traffic supervisor, and seasonal/temporary positions respectively. This estimate is consistent with current contracts, though three collective bargaining units (police, fire, MEU) remain under active negotiation.
       
-      **Article 15 — Town Clerk Salary ($93,048):** Required as a separate article because the clerk is an elected position; the amount is already included in the Article 22 budget. Approved unanimously.
+      **Article 15:** Sets the elected Town Clerk's annual salary at $93,048, already included in the Article 22 operating budget.
       
-      **Article 16 — Ratification of Salary Bylaw:** The Compensation Committee (Town Administrator, CFO, and Health Director Andrew Petty) took 44 actions in calendar 2024, including reorganization of DPW positions, updating job descriptions, and above-step-one hires for competitive positions. A GovHR framework governs grading. An updated contract for a new position classification study is being finalized. The committee noted that roughly half of department-head proposals were rejected for not meeting the evaluation framework. Approved unanimously.
-    key_speakers: ["Alicia (CFO)", "Thatcher (Town Administrator)"]
+      **Article 16 – Ratification of Salary Bylaw:** The town administrator described 44 Compensation Committee actions taken in calendar 2024, up from prior years, driven largely by DPW reorganization under Amy McHugh, updated job descriptions, and above-Step-1 hiring to remain competitive. The committee follows a GovHR consulting framework and rejects approximately half of proposals from department heads. A new GovHR study to update all position grades is being contracted.
+    key_speakers: ["Thatcher (Town Administrator)", "Alicia (Finance Director)"]
   - topic: school-budget
-    topic_confidence: 0.85
+    topic_confidence: 0.88
     start_seconds: 3420
-    end_seconds: 3640
-    headline: "Essex North Shore Agri-Tech assessment rises to $627,323 after enrollment and per-pupil increases"
-    dek: "Article 17 appropriates $627,323 for the town's share of the Essex North Shore Agricultural and Technical School District, reversing a multi-year declining trend as both enrollment and per-pupil costs increased."
-    summary: "The Finance Committee approved a $627,323 appropriation for the Essex North Shore Agri-Tech School District, noting enrollment from Marblehead had declined in recent years but is now back up, accompanied by per-pupil rate increases. A FinCom member suggested establishing a liaison relationship with the school's administration, noting that the school's director is a Marblehead resident. The committee chair agreed to add that to a future agenda. Approved unanimously."
+    end_seconds: 3639
+    headline: "FinCom approves $627,323 for Essex North Shore Agricultural and Technical School"
+    dek: "Article 17 funds Marblehead's assessment for the regional vocational school, up year-over-year due to increased enrollment and per-pupil costs."
+    summary: "The Finance Committee approved $627,323 for the town's share of the Essex North Shore Agricultural and Technical School District operating budget. The increase reflects both higher per-pupil costs and an uptick in Marblehead student enrollment after several years of decline. A FinCom member suggested establishing a liaison relationship with the district, noting the school's director is a Marblehead resident; the chair agreed to add it to a future agenda."
     key_speakers: ["Alec Goolsby (FinCom Chair)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 3640
+    topic_confidence: 0.82
+    start_seconds: 3639
     end_seconds: 4084
-    headline: "FinCom approves $7M free cash and $360K electric surplus to reduce FY26 tax rate"
-    dek: "Article 18 dedicates $7 million from free cash and $360,000 from electric surplus (its first increase in at least eight years) to offset the tax rate, while $2M goes to capital and $2M to stabilization."
+    headline: "FinCom approves $7.36M in free cash and electric surplus to reduce tax rate"
+    dek: "Article 18 applies $7 million from certified free cash and $360,000 from the electric surplus to balance the FY26 operating budget, with a total estimated free cash balance of at least $12 million."
     summary: |
-      The Finance Committee approved using $7,000,000 from free cash and $360,000 from electric surplus to offset the tax rate (Article 18). Free cash is estimated at at least $12 million; of that, $7M is used for the operating budget, $2M for capital articles (Articles 6–8), and $2M for the general stabilization fund (Article 27), leaving an estimated $1M+ as a base for next year's free cash.
+      The committee approved appropriating $7,360,000 ($7,000,000 from free cash; $360,000 from the electric light surplus) to assist assessors in setting the tax rate. The electric surplus figure increased from $330,000 to $360,000, the first increase in approximately eight years.
       
-      The current stabilization fund balance is $500,000. The proposed $2M transfer would bring it to $2.5M, representing approximately 2.3% of the operating budget — moving toward the town's own policy target of 3–5% and the DOR guidance of 5–7%. The committee discussed the relationship between debt exclusion overrides, reserves, and the town's AAA bond rating, noting that voter willingness to fund debt exclusions is viewed favorably by bond rating agencies. Three collective bargaining articles (Articles 19, 20, 21 — police, fire, MMEU) were deferred pending completion of negotiations.
-    key_speakers: ["Alec Goolsby (FinCom Chair)", "Alicia (CFO)", "Molly (FinCom member)"]
+      Of an estimated $12+ million in certified free cash:
+      - $7M applied to reduce the tax rate (this article)
+      - $2M used for capital articles (Articles 6, 7, 8)
+      - $2M to stabilization fund (Article 27)
+      - ~$1M+ left as a base for future free cash generation
+      
+      The FinCom chair noted that local receipts increased significantly due to higher interest income in FY24 (attributable to rising interest rates and a newly-filled treasurer position) and the first full year of meals and hotel taxes, but cautioned that neither source guarantees comparable growth next year. The town's stabilization fund currently holds $500,000; after the proposed $2M deposit it would hold $2.5 million, representing approximately 2.3% of the operating budget versus the town's own policy target of 3–5%.
+    key_speakers: ["Alec Goolsby (FinCom Chair)", "Alicia (Finance Director)", "Molly (FinCom member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.8
+    start_seconds: 4052
+    end_seconds: 4129
+    headline: "Collective bargaining articles for police, MEU, and fire held pending settlement"
+    dek: "Articles 19, 20, and 21 cover collective bargaining for the three remaining union contracts; no FinCom recommendation made as negotiations are ongoing."
+    summary: "The town administrator reported that all three units — police, the MEU (local 1776), and fire — are in active negotiations, with the MEU in mediation. The town hopes to settle all three before town meeting. Any cost above the 2% already included in the budget would need to be funded through these articles. The Finance Committee made no recommendation pending settlement."
+    key_speakers: ["Thatcher (Town Administrator)"]
   - topic: school-budget
     topic_confidence: 0.9
-    start_seconds: 4084
-    end_seconds: 4841
-    headline: "FinCom approves $119.5M FY26 operating budget, up $5.7M from prior year"
-    dek: "Article 22 covers the full general fund operating budget; the committee noted salary/benefit costs growing at 4–5% annually outpace the 2.5% levy cap, flagging fiscal pressure for FY27 and beyond."
+    start_seconds: 4129
+    end_seconds: 4851
+    headline: "FinCom unanimously approves $119.5M FY26 balanced operating budget"
+    dek: "Article 22 is the town's general fund operating budget; the FinCom chair presented a detailed fiscal analysis highlighting structural cost pressures that may make future years harder to balance without an override."
     summary: |
-      The Finance Committee unanimously recommended the FY26 operating budget of **$119,479,480**, with $106,206,380 raised from taxation and other available funds, and $13,273,100 from enterprise funds.
+      The Finance Committee unanimously recommended the FY26 operating budget of **$119,479,480**, of which $106,206,380 is raised from taxation and other available funds, and $13,273,100 from enterprise funds.
       
-      **Budget composition (before warrant articles):** Approximately $96.9M funded by the tax levy, of which ~51% is schools, ~25% is town-side operating departments, and ~23% is general government (health insurance, pensions, town insurance).
+      **Budget structure (excluding debt service):**
+      - Base budget (prior year excluding debt service): ~$92.5M
+      - Total increase in available revenues: ~$5.7M
+      - Total operating budget before levy-funded warrant articles: ~$96.9M
+        - ~51% schools
+        - ~25% town-side operating departments
+        - ~23% general government (health insurance, retirement, insurance)
       
-      **Revenue pressures noted by Chair Goolsby:**
-      - Tax levy grows at ~2.3%/year (2.5% + new growth)
-      - Local receipts benefited from a one-time ~$1.7M increase in interest income (FY24 interest rate environment + new treasurer) unlikely to repeat at that level
-      - Hotels/meals tax in its second year; compliance expected to improve
-      - Building permits generating over $1M annually
-      - Free cash use increased year-over-year from ~$5.83M to $7.36M
+      **Key cost pressure highlights from the FinCom chair's analysis:**
       
-      **Expenditure pressures (3-year forecast):**
-      - Salaries (including steps/lanes): 4–5%/year
-      - Health insurance: 5–6%/year
-      - Utilities: ~4%/year (5-year average)
-      - Pensions: 8–9%/year (~$800–900K/year)
-      - Out-of-district tuition and SPED transportation: ~5%/year
-      - Trash contract expires end of FY26; estimated increase up to 35% in first renewal year
+      | Cost Driver | Estimated Annual Growth |
+      |---|---|
+      | Salaries (COLA + steps/lanes) | 4–5% |
+      | Health insurance | 5–6% |
+      | Utilities | ~4% (5-yr avg) |
+      | Pension | 8–9% (~$800–900K/yr) |
+      | Out-of-district tuition/transportation | ~5% |
+      | Trash contract (post-FY26 expiration) | Up to 35% in Year 1 |
       
-      A member of the public (Jack, Palmer Road) asked that future presentations allocate the indirect school costs (health insurance, pensions) proportionally, noting it may shift the apparent school/town split from 50/50 toward approximately 65/35.
-    key_speakers: ["Alec Goolsby (FinCom Chair)", "Alicia (CFO)", "Molly (FinCom member)", "Jack (resident, Palmer Road)"]
+      The chair noted the tax levy can only grow at ~2.5% plus new growth (~0.5–1%), totaling ~3–3.5%, while major cost drivers are growing faster. He warned the budget may be significantly harder to balance in FY27 and beyond. The town has balanced without an operating override for approximately 18–19 consecutive years.
+      
+      A public commenter asked the FinCom to allocate shared overhead costs (health insurance, retirement) proportionally to the school vs. town sides in future presentations, suggesting schools may represent closer to 65% of total cost when indirect costs are included.
+    key_speakers: ["Alec Goolsby (FinCom Chair)", "Alicia (Finance Director)", "Molly (FinCom member)", "Jack (public comment, Palmer Road)", "Thatcher (Town Administrator)"]
   - topic: 40b-mbta
-    topic_confidence: 0.99
-    start_seconds: 4841
-    end_seconds: 9883
+    topic_confidence: 0.98
+    start_seconds: 4968
+    end_seconds: 9872
     featured: true
-    headline: "FinCom recommends MBTA 3A zoning overlay 8-1 after lengthy debate over grants, litigation, and unfunded-mandate ruling"
-    dek: "The committee's most contentious item: an 8-1 vote to recommend adoption of the three-district multifamily overlay, reversing no recommendation from last year, amid public debate over $8M+ in at-risk grants, a state auditor unfunded-mandate opinion, and potential compliance-exemption litigation."
+    headline: "FinCom votes 8-1 to recommend MBTA 3A multifamily overlay zoning; debate runs nearly 90 minutes"
+    dek: "The Finance Committee endorsed Article 23 after extended public testimony on litigation risk, state grant exposure, and the state auditor's unfunded mandate opinion; the article was rejected at the 2024 town meeting by 33 votes."
     summary: |
-      ## Article 23 — MBTA Communities Act (3A) Zoning Overlay
+      **Background:** Article 23 proposes a multifamily overlay zoning district in three sub-areas (Tioga Way, Pleasant Street, Broden Road) to comply with the MBTA Communities Act (Chapter 3A). Town meeting rejected the same article in 2024. The article requires a simple majority (50%) vote at town meeting due to its affordable housing classification.
       
-      **What the article does:** Amends the zoning bylaw to establish a multifamily overlay district in three sub-districts — Tioga Way, Pleasant Street, and Broden Road — permitting multifamily housing by right, as required under the MBTA Communities Act (G.L. c. 40A, §3A). The planning board designed the districts to be consistent with existing development patterns. The overlay would zone for approximately 897 units (the state-required 10% of housing stock); approximately 360 units already exist in those areas, leaving a net theoretical maximum of roughly 500 additional units.
+      **Key facts presented:**
+      - The three districts total roughly 1% of Marblehead's land area
+      - State requires zoning capacity for ~10% of housing stock (~897 units)
+      - ~360 units already exist in the proposed districts; net theoretical maximum new units: ~537
+      - Developer economics: Town Planner Alex Ler stated that small parcel sizes, high land values, parking and open-space requirements, and the need for parcel assembly make significant development unlikely; no comparison community with similar characteristics shows significant 3A-driven development
+      - The Massachusetts SJC upheld the constitutionality of the MBTA Communities Act on January 8, 2025, closing the Milton case
+      - The town's compliance deadline is July 14, 2025; the town is currently within a compliance window due to post-Milton emergency regulations
+      - Grants withheld or at risk: FY24 and before ~$1.5M (received), FY25 ongoing ~$475K, FY26 forward ~$8M — total approximately $10M at risk
+      - Town counsel's rough litigation cost estimate if challenged by the Attorney General: ~$75,000 initial, with potential for significantly more
       
-      **Key facts presented by FinCom Chair Goolsby:**
-      - Town Meeting rejected the identical article in 2024 by 33 votes.
-      - January 8, 2025: The Massachusetts Supreme Judicial Court upheld the constitutionality of the MBTA Communities Act in the Milton case.
-      - The Attorney General has authority to enforce the mandate through litigation.
-      - Town counsel estimates initial litigation cost at approximately $75,000 (acknowledged as a rough figure).
-      - State Auditor Diana DiGloria issued an opinion that the Act is an **unfunded mandate** under the local mandate statute, finding that discretionary grant funding for design/implementation costs exists but is not in the state's operating budget, making it legally unfunded.
-      - Goolsby spoke directly with Auditor DiGloria; she indicated the remedy is simple — move the discretionary grant to the state's operating budget and update the EOHC financial impact statement — and could be resolved quickly.
-      - The auditor's opinion covers only direct design/implementation costs; indirect costs (schools, utilities, infrastructure) are outside its scope.
-      - Since non-compliance in December 2024, the town received correspondence that awarded grants would be withheld; following the Milton case and a new compliance deadline, withheld grants were released.
-      - **Grants at risk if non-compliant after the new deadline:** FY24 and prior: ~$1.5M received; FY25 ongoing: ~$475,000; FY26 forward: ~$8M in infrastructure grants identified.
-      - New compliance deadline is approximately July 14, 2025; town meeting is May 5.
+      **State Auditor's unfunded mandate opinion:**
+      FinCom Chair Goolsby reported speaking directly with State Auditor Diana Dizoglio for approximately one hour. Key points:
+      - The auditor determined 3A is an **unfunded mandate** because the state created a discretionary grant program to cover design/implementation costs while simultaneously issuing a zero-financial-impact statement — the auditor found these two positions contradictory
+      - The auditor confirmed her opinion covers only **direct implementation and design costs** (planning studies, consultant fees), not indirect costs such as schools, water/sewer, or public safety
+      - The auditor indicated the opinion could be changed to "funded" if the state simply moved the grant funding into its operating budget and updated the financial impact statement — she described this as a straightforward fix
+      - Marblehead has received $40,000 in discretionary grant funding covering its direct compliance costs to date
       
-      **Planning board context (Town Planner Alex Ler):**
-      - The overlay affects approximately 1% of Marblehead's total acreage.
-      - Development economics in Marblehead are difficult: small parcels (~0.2 acres), high land values, open space and parking requirements effectively reduce net buildable area by ~50%.
-      - Existing 40B already allows higher density (unlimited height, 25% affordable requirement); 40B has generated very little development due to economics — the same dynamics apply to 3A.
-      - Under 3A, height is limited to the underlying zoning (3 stories).
-      - Larger multifamily projects would likely trigger site plan and zoning review.
+      **Public testimony in opposition (John Dipano):**
+      - Cited pleadings filed April 1, 2025 by the law firm Mead Talman (also Marblehead's town counsel) on behalf of other communities in a pending case
+      - Middleton (pop. ~9,779): affidavits supporting direct costs of compliance including 12 new police officers ($1.4M), 8 new firefighters ($1.2M), transfer station costs up $200K/year, 150–375 new students; total costs claimed over $15M vs. ~$5.4M in projected new property tax revenue
+      - Argued the town should file a compliance exemption petition before the compliance deadline rather than risk foreclosing that option by voluntarily adopting 3A
+      - Select board member Dan Fox noted no ruling has yet issued from an April 2 hearing and the select board has not ruled out filing a compliance exemption
       
-      **Public debate highlights:**
+      **Public testimony in support (Aaron Nunan, online):**
+      - Argued that because 3A is a mandate, town adoption cannot be characterized as voluntary acceptance, making compliance exemption arguments legally inconsistent
+      - Noted Marblehead's student population is declining; Chapter 90 and Chapter 70 funding is formulaic based on enrollment and would not represent unfunded costs
+      - All three proposed districts are already served by water and sewer
+      - Milton spent ~$300,000 litigating and lost
       
-      > *John DiPano (Trager Road):* Argued the town should file a compliance exemption petition before town meeting rather than adopt the overlay. Referenced pending pleadings by law firm Mead Talman (also Marblehead's town counsel) in consolidated cases representing towns including Middleton (750 units, projecting 12 police officers at $1.4M, 8 firefighters at $1.2M, 150–375 new students) and Randham (total direct costs exceeding $15M vs. ~$5.4M in anticipated new growth revenue). Noted that once 3A is voluntarily accepted, the compliance exemption option under the unfunded mandate statute is foreclosed. Emergency regulations run until July 14; a special meeting could adopt 3A after that if a compliance exemption fails.
+      **Vote:** 8 in favor, 1 opposed (Mr. Jenko).
       
-      > *Aaron Nunan (online):* Argued the post-Milton legal landscape means noncompliance risks are quantifiable and known (grants, litigation), while the population/development impacts are speculative. Cited Marblehead's declining student enrollment and noted Chapter 70/90 funding formulas account for enrollment changes. Argued all three designated districts are already connected to water and sewer. Stated that controlled development historically has a positive net fiscal impact.
-      
-      > *Phil Mancuso (online):* Called for no FinCom recommendation due to absence of hard numbers on either side; characterized character-of-town concerns as a significant intangible; opposed moving fee-setting authority to the Select Board.
-      
-      > *David Patton (online):* Asked for clearer communication that the 897-unit figure is a maximum theoretical capacity, not a construction mandate, and that the areas are already developed.
-      
-      > *Dan Fox (West Cottage):* Select Board member; noted the town is bringing the article forward, has not ruled out filing a protective compliance exemption, and is awaiting a ruling from an April 2, 2025 hearing. Noted Marblehead is not as favorable a plaintiff as Middleborough, which had adopted a Smart Growth 40R district.
-      
-      **FinCom vote:** 8 in favor, 1 opposed (Mr. Jenko).
-      
-      **Select Board position:** Bringing article forward; has not ruled out a protective compliance exemption filing; awaiting April 2 hearing ruling.
-    key_speakers: ["Alec Goolsby (FinCom Chair)", "Alex Ler (Town Planner)", "Thatcher (Town Administrator)", "Dan Fox (Select Board, West Cottage)", "John DiPano (resident, Trager Road)", "Aaron Nunan (resident, online)", "Phil Mancuso (resident, online)", "David Patton (resident, online)", "Sarah Fox (resident, Beach Street)"]
+      > The select board stated it is bringing Article 23 forward to the May town meeting and has not ruled out a parallel protective compliance exemption filing if the article fails.
+    key_speakers: ["Alec Goolsby (FinCom Chair)", "Alex Ler (Town Planner)", "Thatcher (Town Administrator)", "Dan Fox (Select Board member, West Cottage)", "John Dipano (public comment, Trager Road)", "Aaron Nunan (public comment, online)", "Bill Mancuso (public comment)", "Sarah Fox (public comment, Beach Street)", "David Patton (public comment, 25 Lee Street)", "Moses (Select Board member)"]
   - topic: 40b-mbta
-    topic_confidence: 0.85
-    start_seconds: 9883
-    end_seconds: 10205
-    headline: "FinCom makes no recommendation on ADU bylaw update required by new state law"
-    dek: "Article 24 updates Marblehead's accessory dwelling unit bylaw to conform with a February 2025 state law requiring ADUs be permitted by right in single-family zones, with no owner-occupancy requirement."
-    summary: "The state passed a new law effective February 2025 requiring ADUs be permitted by right within single-family zoning districts. Key changes: maximum size is 900 sq ft or half the principal dwelling's gross floor area (whichever is smaller); parking is not required within a half-mile of public transit; owner-occupancy of either unit is no longer required. Town Planner Alex Ler noted that if the article is not adopted, the state default regulations apply automatically. The planning board's version preserves site plan review rights for the town. The committee made no recommendation, finding no direct financial impact."
+    topic_confidence: 0.88
+    start_seconds: 10007
+    end_seconds: 10252
+    headline: "FinCom makes no recommendation on ADU zoning update to comply with new state law"
+    dek: "Article 24 amends Marblehead's ADU bylaw to conform with a February 2025 state law allowing accessory dwelling units by right in single-family zones with no owner-occupancy requirement."
+    summary: |
+      The town planner explained that a new state law effective February 2025 requires ADUs to be permitted by right in single-family zoned parcels and removes the owner-occupancy requirement — meaning neither the principal dwelling owner nor the ADU occupant need reside on the property. The law also sets the ADU size limit at 900 square feet or half the gross floor area of the principal dwelling, whichever is smaller, and eliminates parking requirements within half a mile of a transit stop.
+      
+      The article updates the existing Marblehead ADU bylaw to be consistent with the state law rather than defaulting entirely to state regulations. The FinCom made no financial recommendation, noting that declining to adopt would simply default to the same state law requirements.
     key_speakers: ["Alex Ler (Town Planner)", "Thatcher (Town Administrator)"]
-  - topic: permits-zoning
-    topic_confidence: 0.75
-    start_seconds: 10205
-    end_seconds: 10410
-    headline: "No FinCom recommendation on floodplain and prudent investor articles"
-    dek: "Article 25 updates FEMA floodplain maps to maintain residents' access to NFIP insurance; Article 26 adopts the prudent investor standard for town trust funds to maximize income."
-    summary: |
-      **Article 25 — Floodplain District:** Updates the town's zoning bylaw to reflect current FEMA flood plain maps, ensuring residents maintain eligibility for federal flood insurance. No financial impact to the town; no recommendation.
-      
-      **Article 26 — Prudent Investor Standard:** Accepts G.L. c. 44, §50B to allow trust funds to be invested under the prudent investor standard (G.L. c. 203C) rather than the current restricted list. The law was enacted in 2023. This allows the treasurer to use total return investing (appreciation plus income) rather than income-only. Oversight by the CFO. Approved unanimously.
-    key_speakers: ["Alicia (CFO)", "Molly (FinCom member)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 10410
-    end_seconds: 10884
-    headline: "FinCom approves $2M to stabilization fund and new means-tested senior tax exemption home rule petition"
-    dek: "Article 27 transfers $2M from free cash to the General Stabilization Fund, raising it from $500K to $2.5M; Article 28 creates a home rule petition for an income-tested senior property tax relief program estimated to cost $200K annually from the tax overlay."
+    topic_confidence: 0.75
+    start_seconds: 10252
+    end_seconds: 10497
+    headline: "FinCom: no recommendation on floodplain update; approves prudent investor standard for trust funds"
+    dek: "Article 25 updates FEMA flood maps to preserve citizen insurance access; Article 26 allows the treasurer more flexibility in investing town trust funds."
     summary: |
-      **Article 27 — General Stabilization Fund ($2,000,000 from free cash):** The fund was established approximately four to five years ago with a target of $250,000–$500,000 annually; it has received funding only twice. The $2M transfer would bring the balance to $2.5M, or approximately 2.3% of the operating budget, moving toward the town's 3–5% policy target. Approved unanimously.
+      **Article 25 – Floodplain District:** Updates Marblehead's floodplain bylaw to current FEMA maps, preserving resident access to NFIP flood insurance. No financial implications; no FinCom recommendation.
       
-      **Article 28 — Means-Tested Senior Tax Exemption (Home Rule Petition):** A new program targeting seniors whose combined property tax and 50% of water/sewer bill exceeds 10% of income. Key parameters:
-      - Applicant must be 65+ (co-owner 60+), residing in home as domicile for 10+ years
-      - Assessed home value at or below the town average (~$1.218M)
-      - Must first exhaust all state benefits including the circuit breaker tax credit (income limits: ~$72K single, ~$91K head of household, ~$109K married)
-      - Select Board sets income limits and maximum exemption annually
-      - Estimated 80–85 participants in year one based on 20% take-up rate vs. circuit breaker applicants (418 in FY24)
-      - Estimated first-year cost: $200,000 maximum from the tax overlay (~$22/household)
-      - Funded through the tax overlay, not reimbursed by state
-      - Would not be operative until FY27–28 pending legislative approval
+      **Article 26 – Prudent Investor Standard:** Accepts MGL Chapter 44 §50B to allow trust fund investments under the prudent investor standard (MGL Chapter 203C), enabling the treasurer to use total return (appreciation plus income) rather than income-only investing. The Finance Director noted this law was enacted in 2023 and provides flexibility modeled on the long-standing prudent investor principle used in other states. Oversight will rest with the Finance Director in consultation with the treasurer. Approved unanimously.
+    key_speakers: ["Alicia (Finance Director)", "Molly (FinCom member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 10497
+    end_seconds: 10633
+    headline: "FinCom approves $2M transfer to general stabilization fund, bringing balance to $2.5M"
+    dek: "Article 27 uses free cash to fund the stabilization account, which was established several years ago but has been funded inconsistently."
+    summary: "The committee unanimously approved transferring $2,000,000 from free cash to the general stabilization fund (Article 27). The fund currently holds $500,000; after the transfer it would hold $2,500,000, representing approximately 2.3% of the operating budget. Town policy targets 3–5%; state DOR guidance recommends a combined stabilization-plus-unappropriated-free-cash reserve of roughly 8–12% of budget for AAA bond rating maintenance. The fund was established approximately four years ago with a stated goal of contributing $250,000–$500,000 per year."
+    key_speakers: ["Alec Goolsby (FinCom Chair)", "Alicia (Finance Director)", "Molly (FinCom member)"]
+  - topic: health-insurance
+    topic_confidence: 0.72
+    start_seconds: 10633
+    end_seconds: 11383
+    headline: "FinCom approves home rule petition for means-tested senior property tax exemption"
+    dek: "Article 28 creates a new municipal program to reduce property tax burdens for income-eligible seniors aged 65+ after exhausting state circuit breaker and other benefits."
+    summary: |
+      Select Board member Dan Fox presented a home rule petition to establish a means-tested senior property tax exemption. Key program parameters:
+      
+      - **Eligibility:** Age 65+ (co-owner 60+); domicile in Marblehead for at least 10 years; assessed home value at or below town average (slightly above the state circuit breaker threshold of ~$1.1M); no secondary properties or significant outside assets
+      - **Income limits:** To be set annually by the Select Board, expected to align with state circuit breaker limits (~$72K single / ~$91K head of household / ~$109K married)
+      - **Benefit:** Reduces tax burden so that property taxes plus 50% of water/sewer do not exceed 10% of income, after exhausting state benefits
+      - **Funding:** Additional appropriation to the tax overlay (~$200,000 estimated in Year 1)
+      - **Estimated cost per household:** ~$22/year across ~9,000 households
+      - **Estimated participants:** ~80–85 in Year 1 (based on 20% take-up rate vs. 418 current state circuit breaker recipients)
+      - **Timeline:** Requires state legislative approval after town meeting; likely effective FY27–28
+      
+      Research included interviews with assessors from six comparable municipalities. The program applies only after all state exemptions are exhausted and is reviewed annually by the Select Board.
       
       Approved 8-1 (Mr. Jenko opposed).
-    key_speakers: ["Dan Fox (Select Board)", "Molly (FinCom member)", "Alicia (CFO)"]
+    key_speakers: ["Dan Fox (Select Board member)", "Molly (FinCom member)", "David Patton (public comment)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
+    start_seconds: 11383
+    end_seconds: 11998
+    headline: "FinCom approves two Heroes Act veterans property tax exemption enhancements"
+    dek: "Articles 29 and 30 accept local option provisions of the 2024 Heroes Act to index veterans exemptions to CPI and double the base exemption amount."
+    summary: |
+      **Article 29 – CPI Adjustment (Clause 22I):** Accepts a local option under the Heroes Act (signed August 2024) allowing the existing $400 Clause 22 veterans property tax exemption to increase annually by the prior year's CPI as determined by the Commissioner of Revenue. Not reimbursed by the state.
+      
+      **Article 30 – 100% Increase (Clause 22J):** If both articles pass, the CPI-adjusted exemption is further doubled. Example: $400 base + 5% CPI = $420; doubled to $840. Estimated combined maximum cost: ~$60,000 per year to the tax overlay (approximately 30 qualifying veterans). Not state-reimbursed.
+      
+      Both articles approved 8-1 (Mr. Jenko opposed). A public commenter (David Patton) supported Article 29 but questioned whether doubling was necessary given existing veterans benefits; another commenter (Bill McCue) noted the importance of honoring veterans' service.
+    key_speakers: ["Alicia (Finance Director)", "David Patton (public comment)", "Bill McCue (public comment, 38 Gingerbread Hill)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
-    start_seconds: 10884
-    end_seconds: 11217
-    headline: "FinCom approves two veterans property tax exemption enhancements under 2024 Heroes Act"
-    dek: "Articles 29 and 30 accept local options under the Heroes Act to annually index the veterans exemption by CPI and to double the base exemption amount; combined estimated cost is approximately $60,000 from the tax overlay."
-    summary: |
-      **Article 29 — CPI Adjustment (Clause 22I):** Accepts the local option allowing veteran property tax exemptions under Clause 22 (and variants 22A, 22B, 22C, 22E, 22F) to increase annually by the prior year's CPI as determined by the Commissioner of Revenue. Not reimbursed by the state. Approved 8-1.
-      
-      **Article 30 — 100% Increase (Clause 22J):** If both articles pass, the base $400 Clause 22 exemption adjusted by CPI (e.g., $420 at 5% CPI) would be further doubled to $840 at 100%. The assessor's office recommended the 100% option. Approximately 30 veterans qualify. Combined cost for both articles estimated at ~$60,000 from the tax overlay, not reimbursed by state. Approved 8-1 (Mr. Jenko opposed).
-      
-      A resident (David Patton) questioned how 'high level military decoration' is defined under Clause 22A; the CFO agreed to verify with the assessor's office.
-    key_speakers: ["Alicia (CFO)", "David Patton (resident, online)", "Bill McCue (resident, 38 Gingerbread Hill)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 11217
-    end_seconds: 12294
-    headline: "FinCom approves Coffin School reuse transfer and Gary School playground custody change"
-    dek: "Article 31 transfers the Coffin School property from school to Select Board control to begin a public reuse process; Article 32 transfers the Gary School/Elm Street Park playground to the Recreation Commission."
-    summary: |
-      **Article 31 — Coffin School Reuse:** The School Committee previously voted to release the Coffin School from educational purposes. This article completes the transfer of care and custody to the Select Board, which would then initiate a public process (with community input) to determine the highest and best reuse. Approved unanimously.
-      
-      **Article 32 — Gary School Playground / Elm Street Park:** As part of the original surplus transaction, the Gary School playground was preserved for public use. Ongoing construction to improve it as a park/playground is underway with significant community involvement. This article transfers care and custody to the Recreation and Park Commission, which manages other town parks. No direct financial implications; no recommendation made.
-      
-      **Article 33** was deferred to the April 28 follow-up FinCom meeting due to late-arriving information.
+    start_seconds: 11998
+    end_seconds: 12265
+    headline: "FinCom approves Coffin School reuse transfer to Select Board"
+    dek: "Article 31 completes the transfer of the Coffin School property from educational use to Select Board control, enabling a public process to determine the building's highest and best use."
+    summary: "The School Committee has already voted to release the Coffin School property from educational purposes. Article 31 completes the statutory transfer of care, custody, and control to the Select Board, which will then conduct a public input process to determine future use. The town administrator noted this could have positive financial implications depending on the disposition. Approved unanimously."
+    key_speakers: ["Thatcher (Town Administrator)"]
+  - topic: recreation-events
+    topic_confidence: 0.7
+    start_seconds: 12126
+    end_seconds: 12265
+    headline: "No FinCom recommendation on Gary School playground transfer to Recreation Commission"
+    dek: "Article 32 transfers care and custody of the former Gary School playground (now Elm Street Park) to the Recreation and Park Commission; no direct financial impact."
+    summary: "The former Gary School playground is currently undergoing construction to become a public park with significant community involvement. Article 32 transfers care and custody to the Recreation and Park Commission, consistent with how other town parks are managed. The FinCom made no recommendation, finding no direct financial implications."
     key_speakers: ["Thatcher (Town Administrator)"]
   - topic: bonding-capital
-    topic_confidence: 0.97
-    start_seconds: 12294
-    end_seconds: 13700
-    headline: "FinCom unanimously approves $8.61M debt exclusion override for Marblehead High School roof and HVAC"
-    dek: "Article 34 adds $8.61M in debt exclusion borrowing to the previously authorized $5.4M roof-only project after consultants discovered on-site that HVAC units must be replaced simultaneously to protect the new roof membrane and warranty."
+    topic_confidence: 0.95
+    start_seconds: 12265
+    end_seconds: 13651
+    headline: "FinCom unanimously endorses $8.61M debt exclusion override for Marblehead High School roof and HVAC"
+    dek: "Article 34 adds $8.6M to the $5.4M already authorized in 2022 for the high school roof, now expanded to include replacement of HVAC rooftop units found to be near end of life."
     summary: |
-      ## Article 34 — High School Roof and HVAC ($8,610,602 debt exclusion override)
+      Superintendent Mike Erling presented the case for expanding the previously authorized roof project (Article 11, May 2022, $5.4M for roof only) to include simultaneous replacement of rooftop HVAC units.
       
-      **Background:** Town Meeting in 2022 authorized approximately $5.4M for roof replacement at Marblehead High School. When OPM (Left Field) and schematic designer (Raymond Design Associates / RDA) were engaged and first accessed the roof, they discovered the HVAC rooftop units — exposed to coastal salt air at an elevated site — had deteriorated beyond useful life. Replacing the roof without replacing the HVAC units would void the new roof membrane warranty within 2–5 years when the HVAC units would need to be cut into. The school committee has voted to proceed with both simultaneously at a total project cost of approximately $14M.
+      **Project background:**
+      - When OPM (Leftfield) and schematic designer (Raymond Design Associates/RDA) accessed the roof after being hired in summer 2024, they found the HVAC units beyond useful life — attributed to salt-air corrosion at the elevated building location
+      - Original $5.4M estimate was based on square footage, not an on-site assessment, and did not contemplate HVAC
+      - Cutting into a new roof membrane within 5 years to replace HVAC would void the roof warranty
+      - Replacing HVAC in a separate future project would add approximately $2M in re-staging, rebidding, and remobilization costs
+      - MSBA rejected two appeals; the 30-year age threshold is a hard rule regardless of known material failure
+      - Total project cost: ~$14M ($5.4M previously borrowed + $8.61M new debt exclusion)
+      - Minimum roof warranty: 20 years; 30-year warranty under discussion
+      - Debt term: 15 years
       
-      **Why not phase it:** A phased approach (roof first, HVAC later) was estimated to add approximately $2M in remobilization, rebidding, and redesign costs, bringing the total to approximately $16M.
+      **Tax impact (from finance director's analysis):**
+      - Debt rolling off (prior high school bond): reduces average single-family tax bill by ~$253
+      - Previously authorized but unissued debt: adds ~$112
+      - This new debt exclusion: adds ~$107 (average home); ~$49 (median home)
+      - **Net estimated year-over-year tax impact: -$34 (a slight decrease)**
+      - Debt service as % of general fund revenue: estimated at ~9.4–9.5%, well below the town's 15% policy ceiling
       
-      **MSBA rejection:** The MSBA will not consider projects on roofs less than 30 years old; the existing roof's system type is documented to fail earlier than projected but MSBA held to the 30-year rule on appeal.
-      
-      **Debt impact analysis (per Alicia, CFO):**
-      
-      | Item | Impact on avg. single-family ($1.218M assessed) |
-      |---|---|
-      | Existing debt rolling off | −$253 |
-      | Previously authorized/unissued debt rolling on | +$112 |
-      | High school roof/HVAC new debt | +$107 |
-      | **Net impact vs. prior year** | **−$34** |
-      
-      Debt service as a percentage of general fund revenue is estimated at approximately 9.4–10.5%, well below the Select Board's 15% policy cap.
-      
-      **Oversight:** Left Field (OPM), RDA (architect), school facilities staff, and Alicia's finance office. Superintendent noted a candidate with building envelope and MSBA experience is being considered for the school committee's facilities subcommittee.
-      
-      **Process note:** The original 2022 estimate was based on square footage provided to Left Field without on-site inspection; the school committee was not aware of this limitation at the time of the 2022 town meeting vote.
+      **Oversight:** OPM (Leftfield), architect/designer (RDA), and school administration. The superintendent indicated interest in recruiting a town resident with building envelope/MSBA expertise to the school facilities subcommittee.
       
       Approved unanimously.
-    key_speakers: ["Mike Erling (School Superintendent, online)", "Alicia (CFO)", "Sarah Fox (Select Board member)", "David Patton (resident, online)"]
+    key_speakers: ["Mike Erling (School Superintendent)", "Alicia (Finance Director)", "Sarah Fox (public comment, Beach Street)", "Jack (public comment, Palmer Road)"]
   - topic: bonding-capital
-    topic_confidence: 0.75
-    start_seconds: 13700
-    end_seconds: 13870
-    headline: "FinCom approves amendment to 2022 debt authorization to give fire station repair flexibility"
-    dek: "Article 35 expands the language of the Franklin Street Fire Station's $130,000 portion of the 2022 debt article from 'roof and gutter replacement' to allow broader building repairs including window replacements."
-    summary: "Article 35 amends the May 2, 2022 town meeting vote under Article 11, which authorized $8,977,298 for roof reconstruction and repairs across multiple town buildings. The Franklin Street Fire Station's $130,000 allocation was narrowly specified as 'roof and gutter replacement.' Expanding the language allows the fire chief to address other building needs (including window replacement) with those same authorized funds. No additional appropriation is requested. Approved unanimously."
-    key_speakers: ["Alicia (CFO)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.75
-    start_seconds: 13870
-    end_seconds: 14205
-    headline: "FinCom makes no recommendation on stormwater enterprise fund establishment or police hiring age limit"
-    dek: "Article 36 would establish a stormwater enterprise fund structure (no funds appropriated yet); Article 37 would rescind the age cap for police officer hiring only."
+    topic_confidence: 0.82
+    start_seconds: 13651
+    end_seconds: 13867
+    headline: "FinCom approves amendment to 2022 roof article to expand Franklin Street Fire Station scope"
+    dek: "Article 35 amends the language of the $8.97M May 2022 capital borrowing to allow the $130,000 Franklin Street fire station portion to be used for windows and other improvements, not only roof and gutters."
+    summary: "Of the approximately $8.97M authorized in May 2022 for roof replacements and repairs, the $130,000 line for the Franklin Street Fire Station was restricted to roof and gutter replacement. The fire chief needs to address windows and other building improvements. Article 35 expands the language to give flexibility for the full scope of necessary repairs at that station. The change does not involve any new money. Approved unanimously."
+    key_speakers: ["Alicia (Finance Director)", "Thatcher (Town Administrator)"]
+  - topic: trash-dpw
+    topic_confidence: 0.7
+    start_seconds: 13867
+    end_seconds: 14112
+    headline: "FinCom makes no recommendation on stormwater enterprise fund establishment or police age limit rescission"
+    dek: "Articles 36 and 37 carry no direct financial impact in FY26; Article 36 creates the legal structure for a future stormwater enterprise fund and Article 37 removes the hiring age cap for police only."
     summary: |
-      **Article 36 — Stormwater Enterprise Fund:** Creates the legal framework to establish a stormwater enterprise fund in the future, which would allow fee-based funding rather than tax levy. No money is appropriated; no immediate financial impact. No recommendation.
+      **Article 36 – Stormwater Enterprise Fund:** Establishes the legal framework to create a stormwater enterprise fund in the future, which would shift stormwater costs from the tax levy to a fee-based fund. No money is placed in the fund by this article. No FinCom recommendation.
       
-      **Article 37 — Police Hiring Age Limit:** Rescind prior acceptance of the state act imposing an age cap for police officer hiring (the age cap for fire hiring would remain). No direct financial impact identified. No recommendation.
-    key_speakers: ["Alicia (CFO)", "Thatcher (Town Administrator)"]
+      **Article 37 – Police Hiring Age Limit:** Rescinds the town's prior acceptance of a state act setting a hiring age cap for police (leaving the fire department age cap in place). No financial implications identified. No FinCom recommendation.
+    key_speakers: ["Alicia (Finance Director)", "Thatcher (Town Administrator)"]
   - topic: permits-zoning
-    topic_confidence: 0.7
-    start_seconds: 14205
-    end_seconds: 14378
-    headline: "FinCom makes no recommendation on transferring fee-setting authority to Select Board"
-    dek: "Articles 38 and 39 would shift building permit and electrical fee adjustments from town meeting to the Select Board via public hearing; Articles 40 and 41 address the fee increases under the current mechanism."
-    summary: "Articles 38 and 39 would amend town bylaws to allow the Select Board to set and adjust building permit fees (Article 38) and electrical installation fees (Article 39) after a public hearing, rather than requiring town meeting action. No direct financial implications in the current year. The committee made no recommendation, noting that Articles 40 and 41 address the immediate fee changes under the existing mechanism."
-    key_speakers: ["Thatcher (Town Administrator)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 14378
-    end_seconds: 14586
-    headline: "FinCom approves building permit fee increase to $17 per thousand and adds battery storage inspection fee"
-    dek: "Article 40 raises the comprehensive building permit fee from $15 to $17 per thousand dollars of construction value; Article 41 adds a new fee category for electrical storage battery inspections."
+    topic_confidence: 0.75
+    start_seconds: 14112
+    end_seconds: 14568
+    headline: "FinCom approves building permit fee increase from $15 to $17 per thousand; defers fee-setting authority articles"
+    dek: "Articles 38-41 address building and electrical permit fees; the committee makes no recommendation on transferring fee-setting authority to the Select Board but approves the underlying fee increases."
     summary: |
-      **Article 40 — Building Permit Fees:** The comprehensive permit fee (based on construction value) increases from $15 to $17 per thousand. Item fees were adjusted last year. A resident raised concerns that Massachusetts fee-setting rules require documentation beyond market surveys; the CFO noted the state guidance for municipalities differs from state agency rules. Approved unanimously, with a note to verify compliance with fee-setting procedures before town meeting.
+      **Articles 38 and 39 – Transfer fee-setting authority to Select Board:** Would allow the Select Board to set building permit and electrical fees after a public hearing, rather than requiring town meeting approval. No direct FY26 financial impact; no FinCom recommendation.
       
-      **Article 41 — Electrical Installation Fees:** Adds a new fee category for inspection of electrical storage battery systems (typically paired with solar installations), which are increasingly common but not currently recognized in the fee schedule. Also references the $17-per-thousand rate adopted in Article 40. Approved unanimously.
-    key_speakers: ["Thatcher (Town Administrator)", "Resident at mic (unnamed)"]
-  - topic: recreation-events
+      **Article 40 – Building Permit Fee Increase:** Increases the comprehensive permit fee from $15 to $17 per thousand dollars of project value. A resident (unidentified) raised concerns that Massachusetts law requires a formal cost-justification process before raising fees and that fees may not be used as revenue generators. The town administrator indicated they would verify compliance. Approved unanimously.
+      
+      **Article 41 – Electrical Fee Schedule:** Updates the electrical permit fee schedule to add a new fee category for electrical storage battery installations (e.g., home battery systems paired with solar panels). The $17/thousand reference is incorporated for consistency with Article 40. Approved unanimously.
+    key_speakers: ["Thatcher (Town Administrator)", "Alicia (Finance Director)", "Resident (public comment, concerns about fee-setting process)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 14568
+    end_seconds: 14913
+    headline: "FinCom approves cemetery trust fund transfers and increased snow emergency parking fine home rule petition"
+    dek: "Articles 42, 43, and 44 transfer cemetery trust funds for capital projects and refile a previously approved home rule petition to increase snow emergency parking fines."
+    summary: |
+      **Article 42 – Cemetery Perpetual Care Trust Fund ($80,000):** Transfers funds to a cemetery department capital account for identified improvement projects. Approved unanimously.
+      
+      **Article 43 – Cemetery Sale of Lots Trust Fund ($100,000):** Parallel transfer for additional capital needs. Approved unanimously.
+      
+      **Article 44 – Snow Emergency Parking Fines:** Refiles a home rule petition to increase fines beyond $50 for vehicles blocking snow removal operations. The Select Board previously voted to increase the fine to $50; further increases require home rule approval. The petition lapsed in the legislature and is being refiled. Approved unanimously.
+    key_speakers: ["Alicia (Finance Director)", "Jerry (Cemetery Commissioner)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 14914
+    end_seconds: 15300
+    headline: "FinCom opposes independent audit article; sustainability coordinator elimination article also opposed"
+    dek: "Articles 46 and 47 are citizen-sponsored advisory articles; the Finance Committee voted against both, noting existing audit requirements and the sustainability coordinator's grant-generating track record."
+    summary: |
+      **Article 46 – Independent Audit ($100,000):** Citizen-sponsored article to fund an independent audit of town departmental budgets, with results reported at the 2026 town meeting. The Finance Director noted the town is already legally required to conduct an annual CPA audit (~$70,000) and also conducted an internal controls audit in recent years through a separate firm. The FinCom voted 9-0 to oppose, citing duplication of existing requirements and the article presenter's absence.
+      
+      **Article 47 – Eliminate Sustainability Coordinator:** Advisory article to eliminate the sustainability coordinator position. Brendan (Community Development Director) reported that Logan (Sustainability Coordinator, hired January 2024) has secured over $665,000 in grants and is working toward Green Community certification (which would provide $170,000 upfront and up to $125,000/year). The town administrator noted his background at CTPS and transportation grant expertise. A FinCom member noted the position appears financially net-positive. Voted 8-1 to oppose (Mr. Jenko supported the article).
+    key_speakers: ["Alicia (Finance Director)", "Brendan (Community Development Director)", "Thatcher (Town Administrator)", "Phil Mancuso (public comment)"]
+  - topic: labor-personnel
+    topic_confidence: 0.72
+    start_seconds: 15782
+    end_seconds: 16091
+    headline: "FinCom opposes advisory article requiring department heads to reside in Marblehead"
+    dek: "Article 48, a citizen-sponsored advisory article, would direct the Select Board to require all division-level department heads to live in Marblehead."
+    summary: "The committee voted unanimously to oppose Article 48, which would advise the Select Board to enact a policy requiring department heads to reside in Marblehead. Multiple FinCom members expressed concern that restricting the applicant pool to Marblehead residents would reduce competition for specialized positions and likely increase compensation costs to attract suitable candidates. A FinCom member noted that most department heads report to elected or appointed boards and commissions whose members must be residents, providing substantial resident oversight. The article is advisory only and could not legally force the position."
+    key_speakers: ["Eric (FinCom member)", "Pat (FinCom member)", "Resident (public comment)"]
+  - topic: elections-procedural
     topic_confidence: 0.6
-    start_seconds: 14586
-    end_seconds: 14755
-    headline: "FinCom approves cemetery capital transfers totaling $180,000"
-    dek: "Articles 42 and 43 transfer $80,000 from the Cemetery Perpetual Care Trust Fund and $100,000 from the Cemetery Sale of Lots Trust Fund into a capital account for cemetery improvements."
-    summary: "**Articles 42 and 43 — Cemetery Capital Transfers:** The Cemetery Perpetual Care Trust Fund (funded by investment earnings and perpetual care fees at time of burial) and the Cemetery Sale of Lots Trust Fund (funded by proceeds of lot sales) together provide $180,000 for a capital improvement account. Cemetery commissioners identified multiple capital projects. Town meeting authorization is required to move trust funds into a spendable capital account. Both approved unanimously."
-    key_speakers: ["Alicia (CFO)", "Jerry (Cemetery Commissioner)"]
-  - topic: public-safety
-    topic_confidence: 0.7
-    start_seconds: 14755
-    end_seconds: 14870
-    headline: "FinCom approves home rule petition to raise snow emergency parking fine above $50"
-    dek: "Article 44 re-files a previously approved but legislatively lapsed home rule petition to increase the snow emergency parking fine, which residents were using as a fee to park during snow removal."
-    summary: "The Select Board previously voted to increase the snow emergency parking fine to $50; raising it further requires a home rule petition. An earlier petition passed town meeting but did not advance through the legislature before expiring, so it is being re-filed. The higher fine is intended to deter vehicles from blocking snow removal operations in the dense town. Approved unanimously."
-    key_speakers: ["Thatcher (Town Administrator)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.7
-    start_seconds: 14870
-    end_seconds: 15252
-    headline: "FinCom opposes independent audit fund article; recommends against eliminating sustainability coordinator"
-    dek: "Article 46 sought $100,000 for a new independent town audit; Article 47 (advisory) sought elimination of the sustainability coordinator position — both opposed unanimously or nearly so."
+    start_seconds: 16091
+    end_seconds: 16389
+    headline: "No FinCom recommendation on three procedural/governance articles"
+    dek: "Articles 49, 50, and 51 address the town meeting parliamentarian role, Prop 2½ ballot item structure, and town meeting reconsideration procedures; all carry no financial implications."
     summary: |
-      **Article 45 — Fishing Gear/Lobster Trap Storage Zoning:** No financial impact; no recommendation.
+      **Article 49 – Town Meeting Parliamentarian:** Addresses the role of town counsel in advising on citizen amendments at town meeting; the article sponsor noted concerns about potential conflict of interest when town counsel is engaged to advise on motions that may be adverse to the Select Board's interests. No recommendation.
       
-      **Article 46 — Independent Audit ($100,000):** The article would fund an independent audit focused on departmental budget recommendations and cost controls, with the FinCom selecting the auditor. The committee noted the town already conducts an annual CPA audit (~$70,000) and recently completed an internal controls audit. A new audit firm is being engaged. The committee suggested the incoming auditors present a 30-minute summary to the Select Board annually. The article sponsor (Phil Mancuso) was not present for the vote. Opposed unanimously.
+      **Article 50 – Prop 2½ Ballot Structure:** Advisory article directing the Select Board to place each debt exclusion override as a separate ballot question corresponding to its article, rather than bundling multiple overrides into a single question. No direct financial impact; no recommendation.
       
-      **Article 47 — Eliminate Sustainability Coordinator:** Described as advisory only (cannot directly eliminate a position). Community Development Director Brenda noted the sustainability coordinator (Logan) has secured over $665,000 in grants since January 2024, is pursuing Green Community certification (anticipated to yield a $170,000 upfront grant plus up to $125,000 annually), assisted on ADA compliance, and is working toward an electric fire truck grant. Thatcher noted the coordinator's background at CTPS provides a valuable transportation funding network. Opposed 8-1 (Mr. Jenko in favor of elimination).
-    key_speakers: ["Brenda (Community Development Director)", "Thatcher (Town Administrator)", "Phil Mancuso (resident, online — Article 46)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.7
-    start_seconds: 15252
-    end_seconds: 16420
-    headline: "FinCom opposes department head residency requirement and makes no recommendation on remaining advisory articles"
-    dek: "Article 48 (department head residency) was opposed unanimously; Articles 49–52 on town meeting procedures carried no financial implications and received no recommendation."
-    summary: |
-      **Article 48 — Department Head Residency Requirement (Advisory):** Would advise the Select Board to require all division heads to reside in Marblehead. The committee noted this is advisory only and would have downstream financial implications — reduced talent pool, potential difficulty recruiting for specialized positions, possible contract buyout costs. Several members noted that department heads already report to commissions/boards whose members must be residents. Opposed unanimously.
+      **Article 51 – Reconsideration Procedure:** No financial implications; no recommendation.
       
-      **Articles 49–52 — Town Meeting Procedures:**
-      - Article 49: Town Meeting Parliamentarian — sponsor (unnamed) expressed concern about town counsel's role in ruling on citizen motions; no financial impact; no recommendation.
-      - Article 50: Prop 2½ ballot placement — each debt exclusion override should appear as a separate ballot question rather than being grouped; no financial impact; no recommendation.
-      - Article 51: Town Meeting Reconsideration Procedure — no financial impact; no recommendation.
-      - Article 52: Amend recall bylaw provision — no financial impact; no recommendation.
-      
-      Meeting adjourned at approximately 11:40 PM. A follow-up warrant hearing is scheduled for **April 28** to address Article 33 and any other outstanding items.
-    key_speakers: ["Alec Goolsby (FinCom Chair)", "Eric Meyer (FinCom member)", "Resident at mic (Article 49 sponsor)"]
+      **Article 52 – Recall Provision Amendment:** No financial implications; no recommendation. Meeting adjourned at approximately 11:40 PM.
+    key_speakers: ["Alec Goolsby (FinCom Chair)", "John Dipano (public comment, article 50 context)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

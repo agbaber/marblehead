@@ -11,57 +11,57 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Board appoints two Measures of Leather and approves Holocaust Remembrance Day proclamation"
-  summary: "The Marblehead Select Board met on October 25, 2023 and conducted a full slate of routine business including appointments, sign permits, and contract approvals. Highlights included appointing two candidates — Amy Elia and Brian Ruco — as co-Measures of Leather under MGL Ch. 95 §1, and approving an annual proclamation of January 27th as International Holocaust Remembrance Day with use of Abbott Hall grounds. The board also approved renovation plans for the Marblehead Counseling Center at 66 Clifton Ave. at no cost to the town, and received a Town Administrator update covering municipal building finance proposals, a police locker room project, and a $9,000 Safe Routes to School grant."
+  headline: "Select Board appoints two Measures of Leather, approves Holocaust Remembrance Day proclamation"
+  summary: "The Marblehead Select Board appointed two candidates — Amy Elia and Brian Ruco — as Measures of Leather under MGL Chapter 95, Section 1, filling a long-vacant position. The board also proclaimed January 27th as International Holocaust Remembrance Day annually and approved use of Abbott Hall grounds for a January 26, 2024 ceremony. Additional routine actions included sign permit approval, contract awards, and several one-day liquor licenses."
   decisions:
-    - "Approved proclamation of January 27th annually as International Holocaust Remembrance Day and use of Abbott Hall grounds on January 26th"
-    - "Appointed Amy Elia and Brian Ruco as co-Measures of Leather with terms expiring June 30, 2024"
-    - "Approved sign permit for Old Town Antiques at 134 Washington Street, Unit 4"
-    - "Appointed Jeannie Stahl to the Cultural Council with term expiring June 2026"
-    - "Approved Marblehead Counseling Center renovations at 66 Clifton Ave. at no cost to the town"
-    - "Declared one cast iron stove at 66 Clifton Ave. as surplus property"
-    - "Approved one-day liquor license for Marblehead Friends of the Performing Arts fundraising gala on November 2, 2023 at King Hooper Mansion"
-    - "Approved $40,000 contract with John Clemson for historic properties survey in Preston Beach and Clifton neighborhood"
-    - "Approved change order increasing contract with Tom's Painting and Contracting for Old Coast Building by $2,554.54"
-    - "Approved change order increasing contract with Tom's Painting and Contracting for Hobbs Garage by $6,927.13"
-    - "Approved Fort Sewell Oversight Committee representation changes as requested by Larry Sands"
+    - "Approved proclamation designating January 27th annually as International Holocaust Remembrance Day"
+    - "Approved use of Abbott Hall grounds or building for January 26, 2024 Holocaust Remembrance ceremony"
+    - "Appointed Amy Elia and Brian Ruco as Measures of Leather through June 30, 2024"
+    - "Appointed Jeannie Stahl to the Cultural Council with term to expire June 2026"
+    - "Approved sign permit for Old Town Antiques at 134 Washington Street (Tim Wissler)"
+    - "Approved Marblehead Counseling Center renovations at 66 Clifton Ave at no cost to the town"
+    - "Declared one cast-iron stove at 66 Clifton Ave surplus property"
+    - "Approved $40,000 contract to John Clemson for historic properties survey in Preston Beach and Clifton neighborhood"
+    - "Approved change order of $2,554.54 for Old Coast Building painting and repair"
+    - "Approved change order of $6,927.13 for Hobbs Garage painting and repair"
+    - "Approved changes in representation on Fort Sewell Oversight Committee"
     - "Approved minutes for September 27, October 6, October 11, and October 16, 2023"
     - "Approved use of Abbott Hall for Eagle Scout Court of Honor on November 19, 2023 with fee waived"
-    - "Approved congratulatory letter to Eagle Scout Samuel Putnam"
-    - "Approved one-day beer/wine license for Boston Bubble Bar at Abbott Hall on December 2, 2023 for Christmas Walk Marketplace"
+    - "Approved sending congratulatory letter to Eagle Scout Samuel Putnam"
+    - "Approved one-day liquor license for Marblehead Friends of Performing Arts gala on November 2, 2023"
+    - "Approved one-day liquor license for Boston Bubble Bar at Abbott Hall on December 2, 2023"
   votes:
-    - motion: "Proclaim January 27th as International Holocaust Remembrance Day and allow use of Abbott Hall grounds"
+    - motion: "Proclaim January 27th as International Holocaust Remembrance Day and approve use of Abbott Hall"
       result: "in favor (unanimous)"
-    - motion: "Place both Measure of Leather candidates in nomination"
-      result: "in favor (unanimous)"
-    - motion: "Appoint Amy Elia and Brian Ruco as co-Measures of Leather"
-      result: "in favor (unanimous)"
-    - motion: "Approve sign permit for Old Town Antiques"
+    - motion: "Appoint Amy Elia and Brian Ruco as Measures of Leather"
       result: "in favor (unanimous)"
     - motion: "Appoint Jeannie Stahl to Cultural Council"
       result: "in favor (unanimous)"
+    - motion: "Approve Old Town Antiques sign permit"
+      result: "in favor (unanimous)"
     - motion: "Approve Marblehead Counseling Center renovations"
       result: "in favor (unanimous)"
-    - motion: "Declare cast iron stove at 66 Clifton Ave. surplus"
+    - motion: "Declare cast-iron stove surplus"
       result: "in favor (unanimous)"
-    - motion: "One-day liquor license for Marblehead Friends of the Performing Arts"
+    - motion: "Award $40,000 contract to John Clemson"
       result: "in favor (unanimous)"
-    - motion: "Award $40,000 contract to John Clemson for historic properties survey"
+    - motion: "Change order $2,554.54 for Old Coast Building"
       result: "in favor (unanimous)"
-    - motion: "Change order for Old Coast Building painting contract (+$2,554.54)"
-      result: "in favor (unanimous)"
-    - motion: "Change order for Hobbs Garage painting contract (+$6,927.13)"
+    - motion: "Change order $6,927.13 for Hobbs Garage"
       result: "in favor (unanimous)"
     - motion: "Fort Sewell Oversight Committee representation changes"
       result: "in favor (unanimous)"
-    - motion: "Approve minutes September 27 – October 16, 2023"
+    - motion: "Approve four sets of minutes"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall use for Eagle Scout Court of Honor with fee waiver"
+    - motion: "Approve Abbott Hall use for Eagle Scout ceremony with fee waiver"
       result: "in favor (unanimous)"
-    - motion: "Congratulatory letter to Eagle Scout Samuel Putnam"
+    - motion: "Send congratulatory letter to Eagle Scout Samuel Putnam"
       result: "in favor (unanimous)"
-    - motion: "One-day beer/wine license for Boston Bubble Bar at Abbott Hall"
+    - motion: "One-day liquor license for Friends of Performing Arts gala"
+      result: "in favor (unanimous)"
+    - motion: "One-day liquor license for Boston Bubble Bar at Abbott Hall"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -69,124 +69,122 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 2
     end_seconds: 233
-    headline: "Veterans Day 2023 ceremony planned for November 11 at Abbott Hall with shuttle service"
-    dek: "Dave Rogers outlined the full Veterans Day program including a COA breakfast, shuttle service, and the principal speaker Colonel Josh Bradstreet USMC."
-    summary: "Dave Rogers briefed the board on Veterans Day 2023 events. On Thursday, November 9th, the Council on Aging is hosting a breakfast at the Senior Center sponsored by the Masons; veterans should notify COA in advance. The main ceremony is November 11th at 10:00 AM in Abbott Hall Auditorium, with doors opening at 9:00 AM. Parking and shuttle service will run from the National Grand Bank lot with the last shuttle to Abbott Hall at 9:45 AM. Principal speaker is Colonel Josh Bradstreet, USMC, a Marblehead resident. The VFW will host a coffee and breakfast after the service. A Wreaths Across America fundraiser connected to Theresa Collins at the police station was also noted."
+    headline: "Veterans Day 2023 ceremony planned for November 11 at Abbott Hall"
+    dek: "Dave Rogers outlined the schedule including a COA breakfast, shuttle service, and a principal speaker from the Marine Corps."
+    summary: "Dave Rogers briefed the board on Veterans Day 2023 activities. On the Thursday before (November 9), the COA will host a breakfast at the Senior Center sponsored by the Masons at 9:00 AM. The main ceremony on Saturday, November 11 begins at 10:00 AM in the Abbott Hall Auditorium, with doors open at 9:00 AM. Parking shuttles will run from the National Grand Bank lot beginning at 9:00 AM, with the last shuttle at 9:45 AM. The Coral Group directed by Andrew Scolio will perform. Principal speaker is Colonel Josh Bradstreet, USMC, a town resident. After the service, the VFW will host a coffee and breakfast open to all. Rogers also mentioned a Wreaths for America fundraiser; donations can be made payable to Wreaths for America and dropped off with Theresa Collins at the police station."
     key_speakers: ["Dave Rogers (Veterans Day coordinator)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.92
     start_seconds: 235
     end_seconds: 788
-    headline: "Board approves annual Holocaust Remembrance Day proclamation and Abbott Hall use for January ceremony"
-    dek: "Helene Haslet, co-chair of the town's Diversity Task Force, requested the proclamation and asked the board to consider a $1,000 annual budget contribution to support inclusive community events."
+    headline: "Select Board proclaims January 27th International Holocaust Remembrance Day annually"
+    dek: "Helene Haslet of the Diversity Task Force requested the annual proclamation and use of Abbott Hall for a January 26 ceremony, and asked the board to consider $1,000 in funding for task force events."
     summary: |
-      Helene Haslet appeared on behalf of the Marblehead Diversity Task Force to request that the board again proclaim January 27th as International Holocaust Remembrance Day, consistent with a United Nations General Assembly resolution designating that date to commemorate victims of the Holocaust. The observance marks the 1945 liberation of Auschwitz by the Red Army.
+      Helene Haslet, co-chair of the town's Diversity Task Force alongside Diane Gora, asked the board to annually designate January 27th as International Holocaust Remembrance Day, consistent with a 2005 United Nations General Assembly resolution commemorating the liberation of Auschwitz on that date in 1945. Because January 27, 2024 falls on a Saturday, she requested use of Abbott Hall grounds (or interior if weather dictates) on Friday, January 26 at noon for a brief ceremony featuring students and clergy. Rabbi Michael Schwartz will also mark the occasion at Temple Sinai that same Friday evening.
       
-      Haslet requested use of the Abbott Hall upper lawn (or interior if weather requires) on Friday, January 26th at noon for a brief ceremony with students and clergy; Temple Sinai will hold a separate Sabbath service that evening. She also asked the board to consider allocating $1,000 from the Select Board budget to the task force to support Indigenous People's Day, Pride Day, Juneteenth, and Holocaust Remembrance Day — roughly $200 per event. The board approved the proclamation and grounds use unanimously; the budget request was noted for future budget discussions.
+      Haslet additionally asked the board to consider allocating $1,000 from its budget to the task force to support events including Indigenous People's Day, Pride Day, Juneteenth, and Holocaust Remembrance Day — approximately $200 per event. The board approved the proclamation and Abbott Hall use unanimously.
     key_speakers: ["Helene Haslet (Diversity Task Force co-chair)"]
   - topic: admin-housekeeping
     topic_confidence: 0.95
     start_seconds: 792
-    end_seconds: 1526
+    end_seconds: 1530
     featured: true
-    headline: "Board appoints two co-Measures of Leather — Amy Elia and Brian Ruco — under MGL Ch. 95 §1"
-    dek: "Both candidates demonstrated hands-on leather expertise; the board cited the statute's 'one or more' language to justify the dual appointment through June 2024."
+    headline: "Board appoints two Measures of Leather, reviving a long-dormant statutory role"
+    dek: "Amy Elia and Brian Ruco were both appointed under MGL Ch. 95 §1, which allows one or more measurers; neither had predecessors appointed in recent memory."
     summary: |
-      The board interviewed two candidates for Marblehead's vacant Measure of Leather position, an appointment required under Massachusetts General Laws Chapter 95, Section 1. The role authorizes the appointee to inspect and verify the weight and quality of leather sold in town — and, notably, in other towns as well — and to levy fines of $12 to $55 for mismeasurement.
+      The board interviewed two candidates for the position of Measurer of Leather, a statutory role required under Massachusetts General Law Chapter 95, Section 1, which directs selectmen to appoint one or more measurers annually upon request of two or more voters. The position had apparently been vacant for many years; the board was uncertain when it was last filled.
       
-      **Amy Elia** described 30 years in the footwear industry, comfort with both metric and imperial measurement, and familiarity with temper and thickness gauges. **Brian Ruco** brought hands-on leather-working experience through Glover's Marblehead Regiment (making historically accurate leather canteens), a personal leather craft shop, and noted he had recently sold a cobbler shop in town whose equipment ended up in his garage. Ruco brought physical measuring tools and a handmade leather bag to demonstrate his craft.
+      **Amy Elia** has spent 30 years in the footwear industry and works with leather measurement professionally, including use of metric and imperial thickness gauges. She expressed a longstanding personal connection to Marblehead's shoemaking history.
       
-      The board noted MGL Ch. 95 §1 allows appointment of 'one or more' measures and voted unanimously to appoint both candidates. Terms expire June 30, 2024, filling the balance of a vacant slot. Former long-serving Measure of Leather John Smith offered to mentor both appointees. The board encouraged cross-collaboration with the Historical and Cultural Commission.
+      **Brian Ruco** is a member of Glover's Regiment and an active leather craftsman, making historically accurate canteens, bags, and belts from vegetable-tanned leather. He also recently sold a cobbler shop in town whose machinery ended up in his garage. He demonstrated measuring tools and noted that the Measurer of Leather can issue fines of $12 to $55 for improper measurements and is authorized to measure leather in other towns as well.
+      
+      After interviewing both candidates, the board determined it could appoint more than one and voted unanimously to appoint both Elia and Ruco for a term through June 30, 2024. Former long-serving Measurer of Leather John Smith (approximately 30 years in the role) offered to mentor the new appointees. Both were directed to be sworn in at Town Hall before beginning official duties.
     key_speakers: ["Amy Elia (appointee)", "Brian Ruco (appointee)"]
   - topic: permits-zoning
     topic_confidence: 0.9
     start_seconds: 1726
     end_seconds: 1962
-    headline: "Board approves hanging sign permit for Old Town Antiques at 134 Washington Street"
-    dek: "The proposed 2×3 ft. wooden sign does not require Old and Historic District Commission approval at that size; applicant Tim W. plans a Marblehead-history-focused antique shop opening around April 2024."
-    summary: "Tim W. requested a sign permit for his new shop, Old Town Antiques, at 134 Washington Street, Unit 4. The applicant described plans to sell Marblehead-centric historical items including ships' logs, broadsides, Elbridge Gerry letters, and period postcards, with a planned opening around April 2024. The proposed sign is 2 feet by 3 feet and intended to be made of wood, consistent with Old Town standards. Because the sign does not exceed 2×3 feet, OHDC approval is not required; Select Board approval is. The board approved the request subject to receipt of the required sign permit and certificate of liability naming the town as additionally insured."
-    key_speakers: ["Tim W. (applicant)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.9
-    start_seconds: 1962
-    end_seconds: 2085
-    headline: "Jeannie Stahl appointed to Marblehead Cultural Council through June 2026"
-    dek: "Stahl, a musician with museum and grant experience, filled one of two recent vacancies on the council."
-    summary: "Jeannie Stahl interviewed for a vacancy on the Marblehead Cultural Council, citing a background as a musician and experience both receiving and working with grants. The board noted two members had recently stepped down, and the board appointed Stahl to a term expiring June 2026."
-    key_speakers: ["Jeannie Stahl (appointee)"]
+    headline: "Board approves overhanging sign permit for Old Town Antiques at 134 Washington Street"
+    dek: "Applicant Tim Wissler plans to open a Marblehead-history-focused antique shop in a late-18th-century building adjacent to the new bookstore."
+    summary: "Tim Wissler received approval for a 3-foot by 2-foot wooden overhanging sign for Old Town Antiques at 134 Washington Street, Unit 4. The location is in the Old and Historic District, but because the sign does not exceed two by three feet, it did not require Old and Historic District Commission (OHDC) approval, only Select Board approval. Wissler described the shop's focus as Marblehead-centric historical items — ship's logs, broadsides, Elbridge Gerry letters, old postcards — with a planned opening in April 2024. The building dates to the late 1700s; Wissler is restoring exposed beams and two fireplaces. Approval was subject to receipt of the required sign permit and certificate of liability naming the town as additionally insured."
+    key_speakers: ["Tim Wissler (applicant)"]
   - topic: admin-housekeeping
     topic_confidence: 0.88
-    start_seconds: 2085
-    end_seconds: 2591
-    headline: "Board approves Marblehead Counseling Center renovations at 66 Clifton Ave. and declares stove surplus"
-    dek: "The renovation plan, designed pro bono by architect Craig Bosworth, adds partition walls for HIPAA compliance and relocates administrative staff to the first floor; APA funds are supporting the project."
+    start_seconds: 1962
+    end_seconds: 2410
+    headline: "Board appoints Jeannie Stahl to Cultural Council; approves Marblehead Counseling Center renovations"
+    dek: "Stahl, a musician with grant experience, fills a vacancy; the Counseling Center renovation separates administrative and clinical spaces for HIPAA compliance at no cost to the town."
     summary: |
-      Ron Grier and Ruth Ferguson of the Marblehead Counseling Center presented a renovation plan for their space in the Sam Hobbs Memorial Building at 66 Clifton Ave., a town-owned property. The core change involves adding two partition walls and doors on the first floor to create a HIPAA-compliant administrative area for insurance processing, and relocating the chief business officer to the first floor. The design was donated by local architect Craig Bosworth.
+      **Cultural Council:** Jeannie Stahl was appointed to the Cultural Council with a term expiring June 2026, filling a vacancy. Stahl is a musician with experience working with museums and on the receiving end of grants; she expressed interest in contributing to the grant-giving side.
       
-      Board member Becky noted that none of the walls are load-bearing and that the changes are reversible. Accessibility for people with disabilities is maintained under the plan. The project is funded in part by APA funds and the Board of Health. The board approved the renovations at no cost to the town, consistent with the building lease.
-      
-      Separately, the board declared a large antique cast iron stove in the building surplus, as it has no current municipal use and its removal will free space for a potential conference or group session room. The stove will be disposed of via the town's municipal surplus bidding website.
-    key_speakers: ["Ron Grier (Marblehead Counseling Center)", "Ruth Ferguson (Board vice president, Marblehead Counseling Center)"]
-  - topic: permits-zoning
+      **Marblehead Counseling Center Renovations:** Ron Grier and Ruth Ferguson (vice president of the board) presented renovation plans for the center's space at 66 Clifton Avenue (Sam Hobbs Memorial Building). Architect Craig Bosworth donated his design services. The core change is adding one wall on the first floor to enclose administrative staff who handle insurance claims, for HIPAA compliance, and relocating the chief business officer from the second to the first floor. Additional doors accompany the two new walls. None of the walls are load-bearing, so the configuration can be reversed if needed. Accessibility for persons with disabilities was confirmed to be maintained. Funding comes from ARPA funds and the Board of Health. The board approved the renovation request at no cost to the town, consistent with the existing lease agreement for the building.
+    key_speakers: ["Ron Grier (Marblehead Counseling Center)", "Ruth Ferguson (Counseling Center board vice president)", "Jeannie Stahl (Cultural Council appointee)"]
+  - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 2591
+    start_seconds: 2410
+    end_seconds: 2596
+    headline: "Board declares cast-iron stove at 66 Clifton Ave surplus; to be offered for bid online"
+    dek: "The large cast-iron stove is town property that came with the building and has no current municipal use."
+    summary: "As a follow-on to the Counseling Center renovation discussion, the board declared a large cast-iron stove at 66 Clifton Avenue surplus property in accordance with the town's surplus equipment policy. The stove occupies space needed for a future conference or group-session room on the first floor. Because the stove is town property, disposal requires following the formal surplus process; it will be listed on a municipal surplus website for bidding. The board approved the declaration unanimously."
+    key_speakers: ["Ron Grier (Marblehead Counseling Center)", "Town Administrator"]
+  - topic: permits-zoning
+    topic_confidence: 0.9
+    start_seconds: 2596
     end_seconds: 2688
-    headline: "One-day liquor license approved for Marblehead Friends of the Performing Arts gala at King Hooper Mansion"
-    dek: "The November 2, 2023 fundraising event will run 7–10 PM with alcohol purchased from Cap's Importing."
-    summary: "The board approved a one-day liquor license for the Marblehead Friends of the Performing Arts fundraising gala at the King Hooper Mansion, 8 Hooper Street, on November 2, 2023 from 7:00 to 10:00 PM. Alcohol will be purchased from Cap's Importing, subject to standard Chapter 138 conditions including a $50 fee."
+    headline: "One-day liquor license approved for Marblehead Friends of Performing Arts gala on November 2"
+    dek: "Event is at the King Hooper Mansion, 8 Hooper Street, 7–10 PM; alcohol to be purchased from Cap's Importing."
+    summary: "The board approved a one-day liquor license for the Marblehead Friends of Performing Arts fundraising gala on Thursday, November 2, 2023, from 7:00 PM to 10:00 PM at the King Hooper Mansion, 8 Hooper Street. Conditions included payment of the $50 fee, proof of purchase from an authorized source (Cap's Importing), and compliance with MGL Chapter 138."
   - topic: bonding-capital
-    topic_confidence: 0.8
+    topic_confidence: 0.82
     start_seconds: 2688
     end_seconds: 2875
-    headline: "Board awards $40,000 historic survey contract and approves two painting change orders totaling ~$9,480"
-    dek: "John Clemson will survey historic properties in the Preston Beach and Clifton neighborhood using Mass Historic Commission and matching funds; change orders close out painting contracts at the Old Coast Building and Hobbs Garage."
+    headline: "Board awards $40,000 historic survey contract and two painting change orders for town buildings"
+    dek: "John Clemson hired for Preston Beach/Clifton neighborhood historic properties survey; change orders close out painting contracts at the Old Coast Building and Hobbs Garage."
     summary: |
-      The board took action on three separate contract items:
+      Three contract actions were approved:
       
-      1. **Historic Properties Survey** — Awarded a $40,000 contract to consultant John Clemson, approved by the Mass Historic Commission, to conduct a historic property survey of the Preston Beach and Clifton neighborhood. Funding comes from Mass Historic Commission grants and local historic commission matching funds.
+      1. **Historic Properties Survey** — $40,000 contract awarded to consultant John Clemson, funded through Mass Historic Commission funds and a matching grant, to conduct a historic property survey of the Preston Beach and Clifton neighborhood. Clemson was approved by the Mass Historic Commission for this type of work.
       
-      2. **Old Coast Building change order** — Amended the painting and repair contract with Tom's Painting and Contracting by $2,554.54 for additional rotted-wood repair work, closing out that contract.
+      2. **Old Coast Building change order** — Contract with Tom's Painting and Contracting Services increased by **$2,554.54** for additional repairs and materials (rotted wood removal) discovered during the painting project.
       
-      3. **Hobbs Garage change order** — Amended the same contractor's Hobbs Garage painting and repair contract by $6,927.13 for similar additional repairs, closing out that contract.
-    key_speakers: ["Town Administrator (Thatcher Kezer)"]
+      3. **Hobbs Garage change order** — Same contractor; contract increased by **$6,927.13** for similar additional repairs. Both change orders close out those contracts.
+    key_speakers: ["Town Administrator"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 2875
     end_seconds: 3217
-    headline: "Board approves Fort Sewell committee changes, four sets of minutes, Eagle Scout hall use, and Christmas Walk liquor license"
-    dek: "Routine consent-type items approved in sequence, including a fee waiver for an Eagle Scout Court of Honor and a beer/wine license for the Christmas Walk Marketplace at Abbott Hall."
+    headline: "Board approves committee change, multiple sets of minutes, Eagle Scout ceremony, and a second one-day liquor license"
+    dek: "Routine consent-type items including Fort Sewell committee membership change, four sets of meeting minutes, Abbott Hall use for Eagle Scout ceremony, and a liquor license for the Christmas Walk."
     summary: |
-      The board approved several routine items:
-      
-      - **Fort Sewell Oversight Committee**: Changed Larry Sands's affiliation from Glover's Marblehead Regiment (GMR) to Old Marblehead Improvement Association, and added Seamus Daily of 14 Ridge Road as the new GMR representative.
-      - **Minutes**: Approved meeting minutes for September 27, October 6, October 11, and October 16, 2023.
-      - **Eagle Scout Court of Honor**: Approved use of Abbott Hall on November 19, 2023 from noon to 4:00 PM for Samuel Putnam's Eagle Scout Court of Honor, with the rental fee waived. The board also voted to send a congratulatory letter to the Eagle Scout.
-      - **Christmas Walk liquor license**: Approved a one-day beer/wine license for Boston Bubble Bar (Maria Kins applicant) at Abbott Hall, 188 Washington Street, on December 2, 2023 from 5:00 to 7:00 PM for the Christmas Walk Marketplace. Alcohol will be purchased from Horizon Liquors.
-      - **Affordable Housing Trust Fund vacancy**: Applications will remain open through November 10, with interviews scheduled for November 15.
+      - **Fort Sewell Oversight Committee:** Approved change in Larry Sands's representation from Glover's Marblehead Regiment (GMR) to the Old Marblehead Improvement Association, and addition of Seamus Daily of 14 Ridge Road as the new GMR representative.
+      - **Minutes:** Approved minutes for September 27, October 6, October 11, and October 16, 2023.
+      - **Eagle Scout:** Approved use of Abbott Hall on Sunday, November 19, 2023, noon–4:00 PM, for an Eagle Scout Court of Honor for Samuel Putnam, with the rental fee waived. Board also voted to send a congratulatory letter to Samuel Putnam.
+      - **One-day liquor license:** Approved beer and wine only license for Boston Bubble Bar (Maria Kins) at Abbott Hall, 188 Washington Street, on Saturday, December 2, 2023, from 5:00–7:00 PM for the Christmas Walk Marketplace; alcohol to be purchased from Horizon Liquors.
+      - **Affordable Housing Trust Fund vacancy:** Board agreed to keep the application period open through November 10, with interviews scheduled for November 15.
   - topic: admin-housekeeping
-    topic_confidence: 0.92
-    start_seconds: 3217
+    topic_confidence: 0.93
+    start_seconds: 3262
     end_seconds: 3813
-    headline: "Town Administrator reports on Lieutenant Governor's listening tour, police locker rooms, $9,000 Safe Routes grant, and IT transition"
-    dek: "Thatcher Kezer proposed a state municipal building assistance fund and extended financing terms at the October 13 listening tour; police officers' volunteer labor saved $6,500 on the locker room project."
+    headline: "Town Administrator reports on Lieutenant Governor's listening tour, police locker room savings, IT transition, and fire chief training"
+    dek: "Thatcher Kezer presented suggestions to the state on municipal building financing and software procurement, noted a $6,500 savings on the police locker room project, and a $9,000 Safe Routes to School grant."
     summary: |
       Town Administrator Thatcher Kezer provided several updates:
       
-      **Lieutenant Governor's Listening Tour (October 13):** Kezer attended and offered two suggestions: (1) creation of a state municipal building assistance fund modeled on the school building assistance program, with extended financing terms beyond the typical 20–30 years to lower annual costs for communities; (2) reform of Department of Revenue reporting requirements so that more financial software vendors can serve municipalities, increasing competition and lowering costs.
+      **Lieutenant Governor's Listening Tour (October 13):** Kezer attended and offered two suggestions: (1) creation of a state municipal building assistance fund modeled on the school building assistance program, with extended financing periods (beyond the typical 20–30 years) to reduce annual debt burden; (2) that the Department of Revenue ease reporting requirements so more software vendors can compete for municipal financial systems contracts, lowering costs and increasing options.
       
-      **Police Department:** The officer locker room project is complete, with new wider and deeper lockers. Police officers' own participation in the work generated a savings of approximately $6,500. Marblehead also received a Safe Routes to School Lines and Signs grant of $9,000, up from the typical $6,000, to fund thermoplastic crosswalks and pedestrian signage near schools.
+      **Police Department:** The locker room renovation project was completed. Officers' own labor on the project generated a savings of approximately **$6,500**. Additionally, Marblehead received a Safe Routes to School Lines and Signs grant of **$9,000** (up from the typical $6,000), to fund thermoplastic crosswalks and pedestrian signage near schools.
       
-      **IT Transition:** Onboarding of IO4, the new network and desktop support vendor replacing the prior vendor, is underway. The Municipal IT Collaborative based in Danvers had not yet voted Marblehead in due to a quorum issue at its most recent meeting, but members present expressed general support. Improvements in trouble-ticket handling are already being observed.
+      **IT Transition:** Onboarding has begun with the new IT vendor (iO4) replacing ePlus for network, desktop, and firewall support. Marblehead is awaiting a vote by the municipal IT collaborative based in Danvers to formally join; a quorum issue postponed the vote but support appeared favorable. Improvement in trouble ticket handling was already noted.
       
-      **Training:** Kezer taught a class at the Fire Academy in Stow for new fire chiefs on intergovernmental communication, covering crisis versus deliberative communication styles.
+      **Fire Chief Training:** Kezer spent an afternoon at the Fire Academy in Stow teaching new fire chiefs and deputy chiefs on intergovernmental communication, covering both crisis communication and deliberative (budget/planning) communication styles.
     key_speakers: ["Town Administrator (Thatcher Kezer)"]
   - topic: 40b-mbta
-    topic_confidence: 0.88
+    topic_confidence: 0.9
     start_seconds: 3813
     end_seconds: 3943
-    headline: "Board highlights MBTA Communities zoning webinar scheduled for the following evening"
-    dek: "The Planning Board is hosting an online Zoom presentation on MBTA Communities zoning compliance as a precursor to town meeting; an in-person follow-up forum with maps is planned shortly after."
-    summary: "The Town Administrator noted that MBTA Advisory Board representative Dan Elbit's written update on MBTA electrification efforts was included in the board's packet. A board member reminded attendees of a Planning Board Zoom webinar scheduled for the following evening at 7:30 PM on MBTA Communities zoning compliance. The session, prepared by the town planner, was characterized as a precursor to town meeting content. An in-person follow-up forum with maps and community feedback is planned shortly thereafter."
+    headline: "Board reminds public of October online MBTA Communities zoning presentation"
+    dek: "A Planning Board Zoom webinar on MBTA Communities zoning compliance is scheduled for the following evening at 7:30 PM, with an in-person follow-up forum planned shortly after."
+    summary: "The Town Administrator noted that a report from Dan Elbit, Marblehead's representative on the MBTA Advisory Board, regarding MBTA electrification efforts was included in the board's packet. A board member then reminded residents that the following evening (the day after the meeting) at 7:30 PM, the Planning Board was hosting an online Zoom presentation on MBTA Communities zoning. A subsequent in-person forum with maps and community input was also being planned by the town planner. The session was described as a precursor to what will be presented at Town Meeting."
     key_speakers: ["Town Administrator (Thatcher Kezer)"]
 ---
 

@@ -11,12 +11,13 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Marblehead School Committee rejects further cuts, eyes Monday budget vote"
-  summary: "The Marblehead School Committee hosted a League of Women Voters public forum covering the interim superintendent search, school facilities, DEI, and flag policy, then convened its business meeting for FY25 budget deliberations. The committee unanimously rejected the reduced-services budget as presented and directed administration to provide a prioritized list of cut items before a follow-up meeting Monday. Members discussed revolving fund adjustments, circuit breaker reserves, and the possibility of an override as potential funding mechanisms."
+  headline: "Marblehead School Committee holds public forum, rules out reduced-services budget"
+  summary: "The Marblehead School Committee hosted a League of Women Voters-moderated public forum covering the interim superintendent search, school facilities, budget options, and policy issues. Following the forum, the committee held a budget deliberation session and unanimously indicated it would not support the reduced-services (level-funded) budget as presented. Members directed the interim superintendent to provide a prioritized list of cut items before a follow-up meeting scheduled for Monday."
   decisions:
-    - "Rejected reduced-services budget as an acceptable outcome (unanimous committee consensus)"
-    - "Directed administration to provide prioritized cut list before Monday meeting"
+    - "Rejected reduced-services budget as an acceptable path forward (unanimous committee consensus)"
+    - "Directed administration to provide prioritized staffing/program list before Monday budget meeting"
     - "Scheduled follow-up budget deliberation meeting for Monday at 7:00 PM"
 
 topic_segments:
@@ -25,122 +26,155 @@ topic_segments:
     start_seconds: 0
     end_seconds: 373
     headline: "League of Women Voters moderates Marblehead School Committee public forum"
-    dek: "Catherine Redmond and moderator Elizabeth Foster Nolan of the Massachusetts League of Women Voters opened the forum, explaining the question-collection process and ground rules."
-    summary: "The forum was organized by the Marblehead League of Women Voters after receiving over 50 submitted questions. Questions were categorized and combined by a small group of League members. School committee members did not receive the specific questions in advance, only the topic categories. Moderator Elizabeth Foster Nolan, co-president of the Massachusetts League of Women Voters, described the League as non-partisan and reviewed the format."
-    key_speakers: ["Catherine Redmond (League of Women Voters representative)", "Elizabeth Foster Nolan (Moderator, MA League of Women Voters co-president)"]
-  - topic: labor-personnel
+    dek: "Moderator Elizabeth Foster Nolan and Catherine Redmond of the Marblehead League of Women Voters open the forum, explaining the question-collection and format process."
+    summary: "Chair Sarah Fox called the meeting to order and turned proceedings over to the League of Women Voters. Catherine Redmond introduced Elizabeth Foster Nolan, co-president of the Massachusetts League of Women Voters, as moderator. Foster Nolan explained that over 50 questions were submitted by the public, consolidated into topic categories; school committee members did not receive the specific questions in advance, only the topic areas."
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Catherine Redmond (League of Women Voters, Marblehead)", "Elizabeth Foster Nolan (Moderator, MA League of Women Voters co-president)"]
+  - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 373
+    end_seconds: 809
+    headline: "School Committee outlines interim superintendent search timeline and desired qualities"
+    dek: "The posting closes around April 12; public interviews and community feedback sessions are planned for late April."
+    summary: |
+      Fox described the search process managed by the Massachusetts Association of School Committees (MASC): the position advertisement was released approximately four weeks prior, posted on MASC platforms and SchoolSpring, with a closing date of approximately April 12 or until filled. Candidate review is planned for the week of April 22; interviews will be held publicly with community feedback via written forms and a Google Form.
+      
+      Each committee member offered their top two qualities for an interim superintendent:
+      - **Al Williams**: communication/teamwork skills and strategic background
+      - **Brian Otto**: quick thinking and communication ability
+      - **Sarah Fox**: collaborative leadership style and ability to make strategic ideas actionable with timelines and budget drivers
+      - **Jen (member)**: good judgment and demonstrated personnel management experience
+      - **Allison Taylor**: prior superintendent experience and situational judgment revealed through interview questions
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Al Williams (School Committee Member)", "Brian Otto (School Committee Member)", "Allison Taylor (School Committee Member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.75
+    start_seconds: 809
     end_seconds: 1193
-    headline: "School committee details interim superintendent search timeline and desired qualities"
-    dek: "Chair Fox outlined the MASC-assisted search process with a posting deadline around April 12 and public interviews to follow; all five members described the top qualities they seek in a candidate."
+    headline: "Committee members cite budget pressure and public vitriol as barriers to retaining school leadership"
+    dek: "Members described annual layoff cycles and hostile public discourse as demoralizing to administrators, and called for succession planning."
     summary: |
-      The advertisement for the interim superintendent was released to the Massachusetts Association of School Committees (MASC) approximately four weeks prior to the forum. The posting was set to close around April 12 or when filled. After that, MASC would compile resumes for a committee review meeting tentatively around April 22 or 27. Public interviews and a community feedback period were planned, with Google Form input available. The position is a one-year interim, so the process is more truncated than a full superintendent search.
+      Asked about strategies to retain executive leadership, committee members identified recurring budget cuts as demoralizing to administrators and noted that public vitriol has made it difficult for staff to function. Members emphasized the need for civil discourse and noted that children observe school committee meetings and community behavior.
       
-      **Top qualities sought by each member:**
-      
-      | Member | Quality 1 | Quality 2 |
-      |---|---|---|
-      | Williams | Communication/teamwork | Strategic background |
-      | Otto | Quick thinking/decision-making | Communication |
-      | Fox (Chair) | Collaborative leadership style | Ability to make ideas actionable with timelines and budget drivers |
-      | Krintzman | Good judgment | Personnel management experience |
-      | Dowd | Superintendent experience | Leadership style revealed through situational questions |
-      
-      Members also discussed retention challenges, citing annual budget cuts as demoralizing to administrators, and noted the importance of succession planning as a longer-term strategy.
-    key_speakers: ["Sarah Fox (School Committee Chair)", "Brian Williams (School Committee member)", "Al Otto (School Committee member)", "Jen Krintzman (School Committee member)", "Allison Dowd (School Committee member)"]
-  - topic: school-budget
-    topic_confidence: 0.95
+      One member raised the absence of succession planning as a structural gap, noting prior superintendents had dismissed the concept as a private-sector practice. The member argued interim hiring should be accompanied by a longer-range succession and networking plan to develop internal candidates and maintain external contacts for future openings.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Allison Taylor (School Committee Member)", "Al Williams (School Committee Member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.8
     start_seconds: 1193
-    end_seconds: 2124
-    headline: "Facilities funding gap, mold testing at high school, and Coffin School retention discussed"
-    dek: "The facilities subcommittee noted a gap between the recommended $1–2M annual capital investment and the roughly $200–300K typically allocated; the high school roof is out to bid and industrial hygienists have been engaged for mold testing."
+    end_seconds: 1554
+    headline: "Facilities subcommittee says capital funding at roughly 10% of recommended level; roof replacement underway"
+    dek: "Best-practice capital spending is $1.5–$2M annually; the district typically receives $200,000–$300,000, and a high school roof replacement is in the public bid process."
     summary: |
-      Co-chairs of the facilities subcommittee (Fox and Taylor) described a three-year-old facility strategic plan that identified best-practice capital investment needs of $1–2M annually. Town meeting capital articles have typically funded only about $200–300K per year. The high school roof replacement was approved at town meeting and is in the public bid process, which is complex for projects over $1 million. Industrial hygienists have been engaged for additional mold testing.
+      Fox and Taylor, co-chairs of the facilities subcommittee, described a facility strategic plan developed three years ago with an outside firm recommending $1–$2 million in annual capital improvements. In practice, the district receives approximately $200,000–$300,000 per year from town capital articles—roughly 10% of need.
       
-      On the Coffin School property, members explained that under Massachusetts law, school properties deemed surplus revert to the town and proceeds cannot be directed to the school budget. The committee also cited uncertainty from the pending MBTA Communities zoning vote, which could add up to 900 housing units with a family-housing priority, as a reason to retain the property. The Elhi School is temporarily occupied by the Marblehead Public Library during its renovation.
+      Regarding reported mold at the high school, Fox said industrial hygienists are being brought in for additional testing. A complete roof replacement has been approved at town meeting and is currently in the public bid process; the process is lengthy because the project exceeds $1 million and requires an Owner's Project Manager (OPM).
       
-      Member Krintzman raised the potential of an early education center as a revenue-generating use for vacant school properties, noting the district's preschool program is already its largest revenue producer and has wait lists.
-    key_speakers: ["Sarah Fox (School Committee Chair, facilities subcommittee co-chair)", "Jen Krintzman (School Committee member)"]
+      The subcommittee includes the superintendent, assistant superintendent for finance and operations, the director of facilities, a community representative, and periodic subject-matter guests such as members of Sustainable Marblehead. Community members with relevant expertise were invited to contact the committee.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Allison Taylor (School Committee Member)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 1554
+    end_seconds: 1938
+    headline: "Committee describes declining enrollment and rising student-need complexity as twin budget drivers"
+    dek: "Enrollment has declined steadily for seven to eight years; post-COVID student social-emotional needs have grown across general and special education."
+    summary: |
+      Asked about target class sizes, members noted elementary schools aim for 20 or fewer students. Glover School averages 15–16, Brown and Village schools around 20–21. High school core-subject classes average 17–18 students.
+      
+      The committee emphasized that class size alone does not capture budget pressure: post-COVID increases in social-emotional and academic complexity among both general and special education students have expanded service needs regardless of headcount. Enrollment has declined consistently for seven to eight years, a trend common among similarly sized Massachusetts communities.
+    key_speakers: ["Brian Otto (School Committee Member)", "Sarah Fox (School Committee Chair)", "Al Williams (School Committee Member)"]
+  - topic: 40b-mbta
+    topic_confidence: 0.85
+    start_seconds: 1938
+    end_seconds: 2124
+    headline: "School Committee retains Coffin School property pending outcome of MBTA Communities zoning vote"
+    dek: "A town meeting vote on zoning changes could add up to 900 housing units with a family-housing priority, making it premature to release the property."
+    summary: |
+      Fox clarified that school properties returned to the town cannot yield revenue for the school budget; proceeds from any sale would revert to the town's general or revolving fund, not the school department.
+      
+      The committee is holding the Coffin School because a pending town meeting vote on MBTA Communities zoning compliance could add approximately 900 housing units, with the state bylaw language prioritizing family housing. Releasing property before knowing the enrollment implications of that vote was described as fiscally irresponsible.
+      
+      The Elihu school property is also in limbo, currently used temporarily by the Marblehead Public Library during its renovation. A member suggested the district could explore expanding its preschool program—currently its largest revenue producer with waitlists at every town preschool—or developing an early intervention center using federal funding at one of these sites.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Al Williams (School Committee Member)"]
   - topic: school-budget
     topic_confidence: 0.95
     start_seconds: 2124
     end_seconds: 2400
-    headline: "Committee members say 'fully funded' has no agreed definition; budget deliberation deferred to business meeting"
-    dek: "Members noted that community requests for a 'fully funded' budget reflect divergent definitions, and explained that the two budgets produced — level services and reduced services — were developed per town finance direction."
-    summary: "Members explained that the term 'fully funded' means different things to different community members — ranging from no cuts, to meeting current needs, to an aspirational level of service. The committee produced a level services budget (same services as the current year, approximately 5.7% increase) and a reduced services budget (reflecting the town's revenue projection allocation) as directed by the town finance director. A third aspirational budget was discussed as a longer-term planning goal requiring a strategic plan and identified funding source. Members noted that detailed budget documentation, including a staff accountability report, was made available online this year as a transparency improvement."
-    key_speakers: ["Sarah Fox (School Committee Chair)", "Jen Krintzman (School Committee member)", "Allison Dowd (School Committee member)"]
+    headline: "Committee says 'fully funded' is undefined by the public; two budgets produced at town's direction"
+    dek: "The committee produced a level-services budget (5.7% increase) and a reduced-services budget per finance committee guidance; deliberation on next steps follows the forum."
+    summary: |
+      Members noted that the phrase 'fully funded' carries different meanings to different community members—ranging from no further cuts, to restoring previous service levels, to aspirational investment. Without a clear definition, the committee has not produced a third 'fully funded' budget.
+      
+      At the direction of the town's finance director, the committee prepared two budgets: a **level-services budget** (same services as the current year, approximately 5.7% increase) and a **reduced-services budget** (cuts to come in at projected revenue). The finance committee and finance director set the revenue projection framework.
+      
+      One member argued that a fully aspirational budget would require a completed strategic plan and a sustainable long-term funding source, which does not yet exist. The committee noted the FY25 budget deliberation was scheduled as a business item immediately after the forum.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Al Williams (School Committee Member)", "Allison Taylor (School Committee Member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 2400
-    end_seconds: 2616
-    headline: "Committee discusses CIC report on Glover School restraint incident; policy and training responses underway"
-    dek: "Members noted the interim superintendent has begun staff training per the report's recommendations, and the policy subcommittee is developing formalized policies around restraint best practices."
-    summary: "A comprehensive investigations and counseling (CIC) report on a restraint incident at the Glover School had been released publicly. Members noted that the interim superintendent had already begun working with staff on training consistent with state guidelines, including bringing in a specialist trainer. The policy subcommittee (Fox and Krintzman) indicated they would look at formalizing policies around training cadence and debriefing practices. Members emphasized that best practices should be implemented immediately, not waiting for the formal three-reading policy process to conclude. Members were careful not to address personnel matters."
-    key_speakers: ["Al Otto (School Committee member)", "Sarah Fox (School Committee Chair)", "Jen Krintzman (School Committee member)", "Allison Dowd (School Committee member)"]
+    end_seconds: 2663
+    headline: "Committee comments on Glover School restraint report, emphasizes training and policy follow-through"
+    dek: "A Comprehensive Investigations and Counseling (CIC) report was released publicly; the interim superintendent has begun training and policy work on non-personnel recommendations."
+    summary: |
+      The moderator asked for comment on the publicly released CIC report regarding a restraint incident at Glover School, limiting discussion to non-personnel recommendations. Members stated they have seen no information beyond the report itself.
+      
+      Otto noted the interim superintendent has already begun staff training in compliance with state guidelines and has brought in a specialist trainer. Fox and Taylor (policy subcommittee co-chairs) said they are reviewing whether new or updated policies can formalize training cadences. Members described the report's recommendations as common-sense best practices and said they have individually communicated the expectation that best practices be implemented immediately, without waiting for the formal three-reading policy adoption cycle.
+    key_speakers: ["Brian Otto (School Committee Member)", "Sarah Fox (School Committee Chair)", "Allison Taylor (School Committee Member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.75
-    start_seconds: 2616
+    start_seconds: 2663
     end_seconds: 3326
-    headline: "School committee members agree one parent should not dictate curriculum for all students; existing review policy cited"
-    dek: "All five members affirmed that while individual parents may opt their child out of material, a single parent complaint should not remove material from the curriculum for all students, pointing to policy IJLA."
-    summary: "The moderator asked whether one parent should be able to decide a book is not appropriate for all students. All members agreed that parents may request an accommodation for their own child but should not be able to unilaterally remove material for all students. Members described the existing review policy (IJLA) as providing a chain-of-command process starting at the classroom level through the building principal to the superintendent and potentially the school committee. Members noted no book has been formally banned through the process, and no complaint has risen to the full school committee level this year."
-    key_speakers: ["Jen Krintzman (School Committee member)", "Brian Williams (School Committee member)", "Sarah Fox (School Committee Chair)", "Allison Dowd (School Committee member)"]
-  - topic: school-budget
-    topic_confidence: 0.8
+    headline: "Committee members address book challenges, DEI staffing, and METCO program in policy discussion"
+    dek: "All five members agreed one parent should not determine curriculum for all students; views on a DEI staff position and METCO documentation varied."
+    summary: |
+      **Book challenges**: All five members agreed that while parents may opt their child out of specific materials, one parent should not determine curriculum for all students. The district has policy IJLA governing material challenges; no formal challenge has reached the school committee level. Members noted that challenges go through classroom, building, and superintendent levels before reaching the committee.
+      
+      **DEI staffing**: In a hypothetical fully-funded scenario, members were divided. Otto favored adding a DEI position to address racism as lifelong learning. Taylor noted DEI content is already embedded in curriculum and principal presentations. Fox cautioned against treating a DEI director as a checkbox and noted swastika incidents have occurred despite existing programs; she emphasized the need for a culture of belonging, not just a title. One member said measurable goals would need to be defined before adding such a position.
+      
+      **METCO**: Members called the program valuable but noted the district no longer receives student records in advance, which has led to delayed identification of IEP needs—one cited example involved a student with an intensive IEP unidentified for three months. Members said better documentation from METCO is needed to properly serve incoming students.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Brian Otto (School Committee Member)", "Al Williams (School Committee Member)", "Allison Taylor (School Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
     start_seconds: 3326
     end_seconds: 3838
-    headline: "DEI staffing, METCO program, and state funding inadequacy discussed at forum"
-    dek: "Members discussed the value of DEI and METCO programming while noting measurable goals would need to be established before adding a staff position, and described state funding structures as unsustainable."
+    headline: "Committee discusses state funding gaps, communications plan, flag policy, and self-evaluation goals"
+    dek: "Members cited Prop 2½ limits and Student Opportunity Act shortfalls as structural constraints; a communications survey and flag policy are in development."
     summary: |
-      On DEI staffing, members expressed varying views. Some wanted measurable goals and a clear role description before adding a position; others said they would add a DEI staff person if budget allowed. Fox noted the importance of 'belonging' as a concept alongside diversity, equity, and inclusion, and cited curriculum choices like Wit and Wisdom as reflecting that value. Members noted incidents such as swastikas carved in school property as evidence that programmatic responses alone are insufficient.
+      **Funding structure**: Members noted school costs grow at 5–6% annually while Prop 2½ limits municipal revenue growth to 2.5%. The Student Opportunity Act provides Marblehead with $0 due to its demographics. One member called for lobbying at the state level. Another highlighted the need to communicate budget detail to residents who do not attend meetings.
       
-      On METCO, members supported the program but raised concerns about receiving inadequate student records and IEP documentation from METCO prior to enrollment, citing one case where a student's intensive IEP was not disclosed for three months.
+      **Health insurance separation**: One member (second consecutive year) requested separating school health insurance from the town-wide line to clarify actual school budget needs.
       
-      On state funding, members described school cost growth — estimated at 5–6% annually — as consistently outpacing Proposition 2½ revenue growth. The Student Opportunity Act was cited as yielding zero additional funds for Marblehead due to its demographics. Member Fox indicated interest in lobbying for state-level funding reform.
-    key_speakers: ["Sarah Fox (School Committee Chair)", "Brian Williams (School Committee member)", "Al Otto (School Committee member)", "Allison Dowd (School Committee member)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 3838
-    end_seconds: 4409
-    headline: "Flag policy in development; committee plans first reading before end of school year"
-    dek: "The policy subcommittee indicated a flag policy aligned with the town's recently adopted policy is expected to have a first reading before the end of the school year, with a designee structure likely."
-    summary: "Members described the flag policy as under development after an inquiry revealed the district lacked a formal policy. An SJC case prompted municipalities statewide to adopt such policies. Members noted that the town's attorney had confirmed the same legal rationale the school committee had been given, and that the district's policy is expected to be similar to the town's policy. A designee structure — in which the school committee could designate a building-level administrator to make flag decisions — was described as a likely element. The policy subcommittee expected a first reading before the end of the school year, with public comment opportunities at subcommittee meetings as well as regular school committee meetings."
-    key_speakers: ["Sarah Fox (School Committee Chair)", "Jen Krintzman (School Committee member)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.75
-    start_seconds: 4409
-    end_seconds: 4836
-    headline: "School committee acknowledges lack of annual goals this year; commits to retreat and self-evaluation process"
-    dek: "Members said no annual goals were set this year due to the focus on filling leadership vacancies, and committed to a retreat and community-input process to establish goals and a self-evaluation framework going forward."
-    summary: "Members acknowledged that the school committee did not set annual goals at the start of the school year due to the time consumed by the interim superintendent search. Fox described a prior year when goals were set — strategic plan, facilities plan, and budget — and only the facilities plan was achieved, noting the value of that accountability. Members committed to holding a retreat at the start of the next school year to set goals, with community input incorporated into both goal-setting and self-evaluation. Member Williams described a desire for a formal community evaluation process tied to specific goals. Member Otto emphasized the need to schedule a retreat as soon as the school year ends."
-    key_speakers: ["Sarah Fox (School Committee Chair)", "Brian Williams (School Committee member)", "Al Otto (School Committee member)", "Allison Dowd (School Committee member)"]
+      **Flag policy**: The policy subcommittee (Fox and Taylor) is drafting a flag policy consistent with the town's recently adopted policy, expected for a first reading before the end of the school year. A designee structure (similar to the town policy) is under consideration. The policy need arose after the district was asked what its flag policy was and had none.
+      
+      **Self-evaluation and goals**: The committee acknowledged it did not set annual goals this year due to early-year leadership transitions. Members committed to scheduling a retreat after the school year and setting measurable goals with community input. Otto proposed a communications survey to be distributed the following week.
+      
+      **Closing remarks**: Each member offered a takeaway—communication and transparency were the dominant themes, along with a strategic plan with benchmarks, celebrating student achievement, and improving committee team function.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Brian Otto (School Committee Member)", "Al Williams (School Committee Member)", "Allison Taylor (School Committee Member)"]
   - topic: school-budget
-    topic_confidence: 0.98
+    topic_confidence: 0.97
     start_seconds: 5624
     end_seconds: 7819
     featured: true
-    headline: "School committee unanimously rejects reduced-services budget; schedules Monday meeting for prioritized cuts list"
-    dek: "All five members indicated they would not vote for the reduced-services budget as presented; the committee directed Interim Superintendent McGinnis to provide a prioritized list of cut items and meet Monday at 7 PM to determine next steps."
+    headline: "School Committee unanimously rejects reduced-services budget; Monday meeting set to weigh level-services path"
+    dek: "Members directed the interim superintendent to provide a prioritized cut list before a Monday meeting where the committee will decide whether to pursue the level-services budget with or without an override."
     summary: |
-      Following a recess, the committee convened its FY25 budget business meeting. Chair Fox reviewed the two budgets produced at town direction: a level services budget (5.7% increase, same service level as current year) and a reduced services budget (reflecting the town's revenue allocation, with approximately $2.3M less than level services).
+      Following the public forum, the committee convened its business session to deliberate on FY25 budget next steps. Fox summarized the two budgets produced: a **level-services budget** (approximately 5.7% increase over current year) and a **reduced-services budget** aligned to the town's revenue projections.
       
-      **Key financial discussion points:**
+      **Revolving fund analysis**: Fox and Interim Superintendent Theresa McGinnis described efforts underway to identify savings within revolving funds:
+      - **Kindergarten and pre-K revolving accounts**: Finance Director Mary Deley believes not all allowable costs are currently charged to these funds; correction could free operating budget dollars.
+      - **Food service revolving fund**: A large balance has accumulated due to federal reimbursement for all student meals. The food service director's salary (the department's largest) is planned to shift into the revolving fund for FY25, and possibly FY24, freeing that salary line.
+      - **Building rental revolving fund**: Deley is exploring whether utility costs for rental periods could be charged to a town utility reserve.
+      - **Circuit breaker (special education reimbursement)**: McGinnis suggested moving from carrying 100% of the prior year's reimbursement in reserve to 75% for one year to ease budget pressure. Fox expressed reluctance given recent SPED turmoil and the risk of departing from best practice. A special education stabilization fund of $250,000 funded in 2019 has not been used.
       
-      - **Revolving funds:** Finance Director Mary Deley is reviewing whether kindergarten/pre-K and food service revolving funds are being fully and properly charged. The food service revolving fund has accumulated a significant balance due to federal breakfast/lunch reimbursements; the food service director salary is planned to be moved into that fund for FY25 and potentially FY24.
-      - **Circuit breaker reserve:** The district reached best practice of carrying 100% of the prior year's circuit breaker reimbursement in reserve this year, after a years-long effort following a FY18–19 shortfall caused by 18 unexpected out-of-district special education placements and a state reimbursement rate reduction. Interim Superintendent McGinnis suggested a possible one-year reduction to 75% to ease budget pressure.
-      - **Health insurance:** The town had approximately $1.3M in overestimated health insurance funds redirected to town salary lines; the school committee requested that roughly half ($650K) be reallocated to the school budget given the schools represent more than half of covered employees. No confirmed agreement as of the meeting.
-      - **End-of-year surplus:** An unexpected $1.3M surplus occurred last year; the current year is not expected to approach that level, but projections are being refined.
-      - **Special education stabilization fund:** A fund of $250,000 established in 2019 has not been used and remains available.
-      - **One-time funding caution:** Fox expressed concern about using one-time revenue sources to fund recurring costs.
+      **Health insurance**: Fox noted that the town re-allocated $1.3 million in over-budgeted health insurance to town salary lines. She requested that approximately half ($650,000) be allocated to the school budget given schools represent over 50% of town employees; she said the response from the town side has not yet been promising.
       
-      **Committee direction:**
-      All five members indicated they would not vote for the reduced-services budget. Members expressed comfort with at minimum a level services budget but requested a prioritized list from the administration showing which positions and programs would be restored in order of priority at various funding increments. Interim Superintendent McGinnis confirmed she and the principals have been working on such a list combining this year's proposed cuts, last year's 33 eliminated positions, and earlier aspirational requests.
+      **One-time funds concern**: Fox cautioned against using one-time revenue sources for recurring costs, a practice she said the town side is pursuing to bridge one more year.
       
-      The committee noted that a voted budget number is within the school committee's sole legal authority; the finance committee may recommend against it but cannot set the number. Whatever budget the committee votes goes to the floor of town meeting, where it can be amended. If the committee votes a number that requires an override, that vote could occur at or after town meeting.
+      **Budget direction vote (informal)**: The moderator asked whether any committee member supported the reduced-services budget as presented. No member indicated support. Fox stated emphatically she would not vote a budget with further cuts to staff. The committee unanimously indicated the reduced-services budget is off the table.
       
-      A follow-up meeting was scheduled for Monday at 7 PM, location to be confirmed, with Interim Superintendent McGinnis to provide the prioritized list.
-    key_speakers: ["Sarah Fox (School Committee Chair)", "Jen Krintzman (School Committee member)", "Brian Williams (School Committee member)", "Al Otto (School Committee member)", "Allison Dowd (School Committee member)", "Theresa McGinnis (Interim Superintendent)", "Mary Deley (Town Finance Director, referenced)"]
+      **Next steps**: McGinnis said she and the principals have been prioritizing the list of proposed cuts across three scenarios (current year's proposed cuts, last year's 33 cuts, and an earlier aspirational list) so the committee can identify what to restore at various funding levels. She committed to providing this list before Monday's meeting. The committee will meet Monday at 7:00 PM (location to be confirmed) to review the prioritized list and determine whether to proceed with level services, a hybrid, or a number requiring an override.
+      
+      > **Fox**: 'I emphatically am telling you, I am not approving something that has further cuts to our staffs and our students. I'm just not.'
+      
+      The meeting adjourned at approximately 9:20 PM.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Al Williams (School Committee Member)", "Brian Otto (School Committee Member)", "Allison Taylor (School Committee Member)", "Theresa McGinnis (Interim Superintendent)", "Julia Ferrera (Administrator, on Zoom)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

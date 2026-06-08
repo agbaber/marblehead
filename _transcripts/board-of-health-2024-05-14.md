@@ -11,182 +11,198 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Marblehead Board of Health hears staff updates on beach testing, avian flu, mosquitoes, and transfer station project"
-  summary: "The Board of Health received annual public health department updates from Public Health Nurse Tracy Owler and Health Inspector Bobby Cody covering communicable disease surveillance, food inspections, summer camps, pool permitting, and beach water quality testing. The board approved up to $9,000 for an engineering firm to review transfer station project documents and provide value engineering recommendations to help attract contractor bids. Staff also briefed the board on avian flu monitoring, mosquito control, household hazardous waste, and the newly approved veteran transfer station stickers."
+  headline: "Marblehead Board of Health hears staff updates on inspections, beach water quality, avian flu, and mosquito control"
+  summary: "The Board of Health received presentations from Public Health Nurse Tracy Owler and Health Inspector Bobby Cody covering communicable disease surveillance, food and pool inspections, beach water quality testing, avian flu monitoring, and mosquito control. The board approved spending up to $9,000 for an engineering firm to review transfer station project bid documents and explore value engineering options. The board also discussed the town's new veteran transfer station sticker program and household hazardous waste day results."
   decisions:
-    - "Approved minutes of March 5th open meeting with guest facilitator Hannah Bowen"
-    - "Approved up to $9,000 for engineering review of transfer station bid documents"
+    - "Approved minutes of the March 5th open meeting with facilitator Hannah Bowen"
+    - "Approved up to $9,000 for engineering firm review of transfer station project bid documents"
   votes:
-    - motion: "Approve minutes of March 5th open meeting"
+    - motion: "Approve March 5th open meeting minutes"
       result: "in favor (unanimous)"
-    - motion: "Approve up to $9,000 engineering consultant for transfer station project document review"
+    - motion: "Approve up to $9,000 engineering consultant for transfer station bid documents review"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 2
-    end_seconds: 57
-    headline: "Board approves minutes of March 5th conflict-resolution training session"
-    dek: "Minutes from a meeting with guest facilitator Hannah Bowen of the Resolution Center in Beverly were approved unanimously."
-    summary: "The chair called the meeting to order and moved immediately to approval of minutes from the March 5th open meeting, which featured guest facilitator Hannah Bowen from the Resolution Center in Beverly. The board voted unanimously to approve the minutes."
+    end_seconds: 73
+    headline: "Board approves minutes from March 5th conflict-resolution training session"
+    dek: "Minutes from a meeting with guest facilitator Hannah Bowen of the Resolution Center in Beverly were unanimously approved."
+    summary: "The chair called the meeting to order and moved immediately to approve minutes from a March 5th open meeting featuring guest facilitator Hannah Bowen from the Resolution Center in Beverly, who presented on conflict, communication, and active listening skills. The motion was seconded and approved unanimously."
   - topic: public-safety
-    topic_confidence: 0.75
+    topic_confidence: 0.85
     start_seconds: 73
     end_seconds: 1060
-    headline: "Public Health Nurse Tracy Owler, 26-year veteran, receives lifetime achievement award from peers"
-    dek: "Owler briefed the board on communicable disease surveillance, flu clinics, Narcan distribution, body art regulation updates, and annual beach sampling duties."
+    headline: "Public Health Nurse Tracy Owler briefs board on communicable disease surveillance, Narcan, and beach sampling"
+    dek: "Owler, a 26-year public health nurse who recently received a lifetime achievement award from the Massachusetts Association of Public Health Nurses, described her work on Maven disease reporting, flu vaccines, summer camp medical reviews, and Narcan distribution."
     summary: |
-      Tracy Owler, Marblehead's public health nurse since 2012, introduced herself and described her primary responsibilities under the Maven (Massachusetts Virtual Epidemiological Network) system, which she uses to follow up on approximately 80 reportable communicable diseases. She noted that STDs are reported directly to the state for confidentiality reasons.
+      Tracy Owler introduced herself as Marblehead's public health nurse since 2012 and outlined her primary responsibilities:
       
-      Owler was recognized for receiving a lifetime achievement award from the Massachusetts Association of Public Health Nurses, named in honor of a former public health nurse, Charlotte Stepanian.
+      - **Maven system**: Tracks approximately 80 reportable communicable diseases; STDs are reported directly to the state for confidentiality.
+      - **Flu vaccines**: 240 doses ordered for the upcoming fall season; annual clinics held for town employees and seniors.
+      - **Summer camps**: Seven camps reviewed jointly with Health Inspector Bobby Cody covering medical and sanitation components.
+      - **Narcan/naloxone**: Kits available at the health department; lock boxes at several locations including soon the schools; fentanyl test strips also distributed and being picked up regularly.
+      - **Beach sampling**: Six beaches sampled weekly June 12 through September 11; Grace Oliver's Beach is on a heightened closure tier due to repeated failures.
+      - **Award**: Owler received a lifetime achievement award from the Massachusetts Association of Public Health Nurses, named in honor of former public health nurse Charlotte Stepanian.
       
-      Additional responsibilities discussed included:
-      - Annual flu clinics (240 doses ordered for the coming fall)
-      - Joint summer camp inspections with Health Inspector Bobby Cody (seven camps this year)
-      - Emergency dispensing site planning with the Health Director
-      - Body art regulation updates being coordinated across North Shore communities, including new provisions for microblading/micro-pigmentation
-      - Narcan kit distribution and naloxone lockbox maintenance at multiple town locations
-      - Weekly beach water sampling at six beaches from June 12 through September 11
+      The board also discussed bacteria sources at Grace Oliver's Beach, noting that rainfall runoff, wildlife waste, water temperature, and tidal patterns all contribute to elevated counts, making it difficult to pinpoint a single cause.
     key_speakers: ["Tracy Owler (Public Health Nurse)", "Andrew (Health Director)"]
-  - topic: public-safety
-    topic_confidence: 0.8
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
     start_seconds: 1060
     end_seconds: 1934
-    headline: "Health Inspector Bobby Cody outlines inspection schedule covering 133 food establishments, 7 pools, and 7 camps"
-    dek: "Cody described routine and complaint-driven inspections, pool and camp permitting, and compliance assistance for food establishments."
+    headline: "Health Inspector Bobby Cody describes inspection schedule covering 133 food sites, 7 pools, and 7 summer camps"
+    dek: "Cody outlined her biannual inspection schedule, permit review process, complaint response duties, and compliance-focused approach to food safety enforcement."
     summary: |
-      Bobby Cody, Health Inspector for 16 years, described her inspection schedule divided into two halves of the year. For the January–July period, her categories include:
+      Bobby Cody, Health Inspector for 16 years, described her inspection program divided into two half-year cycles:
       
-      | Category | Detail |
-      |---|---|
-      | Food inspections | 133 routine inspections (restaurants, retail, schools, mobile units, houses of worship) |
-      | Pools | 7 pools including yacht clubs, Tower School, Gann Academy; requires lifeguard credentials and certified pool operator |
-      | Camps | 7 camps; joint inspections with Tracy Owler; initial and follow-up inspections |
-      | Complaints | Housing, rodents, trash, and painter/lead dust complaints |
+      **Food inspections (Jan–Jul):**
+      - 133 routine inspections covering restaurants, retail, residential kitchens, schools, mobile units, and houses of worship
+      - Foodborne illness follow-ups in coordination with Tracy Owler
+      - Carnival and beach concession permits, yacht club openings, temporary events, and farmer's markets
       
-      Cody noted that the JCC is opening a splash pad this year, requiring coordination on permitting. She conducts all food inspections unannounced except for residential (cottage food) kitchens, which require appointments. The Devereaux Beach concession stand is expected to open within a few weeks.
+      **Pools (summer):** Seven pools permitted and inspected, including yacht clubs, inns, and school pools used for camps. All require certified lifeguards and a certified pool operator (CPO) except the small Alite Inn.
       
-      The chair noted that Cody is considering retirement at a timeframe of her choosing.
+      **Camps:** Seven camps reviewed jointly with Owler; Cody handles grounds and sanitation, Owler handles medical compliance. An initial inspection and at least one reinspection during the session are conducted.
+      
+      **Complaints:** Active cases include housing, rodents, trash around dumpsters, and painter/dust complaints. Painters must use HEPA vacuums and obtain permits for exterior work on older homes.
+      
+      Cody noted she conducts unannounced inspections at food establishments and focuses on achieving compliance through education rather than punitive enforcement. The chair announced that Cody is considering retirement at a time of her own choosing.
     key_speakers: ["Bobby Cody (Health Inspector)"]
   - topic: trash-dpw
     topic_confidence: 0.95
     start_seconds: 1934
     end_seconds: 2719
     featured: true
-    headline: "Board approves up to $9,000 for engineering review to help restart stalled transfer station bid process"
-    dek: "No contractor responded to the previous bid; staff sent letters to approximately 21 firms and plan to re-bid after value engineering review."
+    headline: "Board approves up to $9,000 for engineering review to support transfer station rebid"
+    dek: "After failing to attract a general contractor in the first bid cycle, the health department is reaching out to 21 contractors and hiring an engineering firm for value engineering and bid document review."
     summary: |
-      The Health Director reported that no general contractor was secured following the previous transfer station project bid process, which he attributed in part to the timing after a DEP permit delay pushed the bid into the busy summer season. The estimated project cost is approximately $1.5–2 million.
+      Health Director Andrew reported that no general contractor submitted a bid for the transfer station renovation project, estimated at approximately $1.52 million. He outlined a two-part strategy to move forward:
       
-      Staff sent outreach letters to approximately 21 DAM-certified contractors in the Northeast region (screened from a larger list by limiting to firms certified for work under $25 million) and plan to follow up by phone to gauge interest before re-bidding.
+      **Contractor outreach:**
+      - Identified a list of 25 DAM-certified contractors in the Northeast region with certifications up to $25 million
+      - Sent letters to approximately 21 contractors with project information and a link to bid documents
+      - Plans to follow up by phone to gauge interest and schedule site meetings
+      - Will put the project back out to bid once contractor interest is confirmed; timing likely fall 2024 given summer schedule conflicts
       
-      A separate engineering firm (Healey Ward) was identified that could review existing bid documents for value engineering opportunities — clarifying details, reducing ambiguity, and potentially lowering construction costs and time. The firm's fee for this review would be up to $9,000. The board voted unanimously to approve this expenditure.
+      **Engineering review (voted):**
+      - A firm (Haley Ward) with experience in landfill closures and large project bidding has offered to review existing bid and design documents for up to $9,000
+      - Goal is value engineering: clarifying bid documents, identifying construction cost reductions, and potentially shortening construction time
+      - This engagement is separate from a feasibility study for a longer-term transfer station rebuild, for which the same firm will provide a separate proposal
       
-      A separate feasibility study proposal from the same firm is forthcoming and will be presented to the board as a distinct agenda item. The director also noted plans to replace the existing oil collection tank at the transfer station with a new upgraded unit in the coming weeks.
+      The board voted unanimously to approve up to $9,000 for the engineering document review. Andrew also noted a new oil tank has been ordered for the transfer station and will be installed at the current location before eventually moving to the new site.
     key_speakers: ["Andrew (Health Director)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.85
+    topic_confidence: 0.8
     start_seconds: 2719
-    end_seconds: 2812
-    headline: "Veteran transfer station stickers now available following town meeting vote"
-    dek: "Veterans can obtain a free annual sticker at the transfer station trailer, the health department, or the treasurer's office by presenting a DD-214 or equivalent proof."
-    summary: "Following a recent town meeting vote approving free annual transfer station stickers for veterans, the Health Director confirmed that stickers are currently available. Veterans can present a DD-214 discharge form, a veterans designation on their driver's license, or equivalent documentation. Registration must also be presented as the license plate number is written on the sticker. The veteran sticker does not count toward the household sticker allocation; an additional household sticker would be purchased at full price."
+    end_seconds: 2908
+    headline: "Veteran transfer station stickers now available; DD-214 or equivalent required with vehicle registration"
+    dek: "Following town meeting approval, veterans may obtain a free annual transfer station sticker at the transfer station, health department, or treasurer's office; the veteran sticker does not count toward the household sticker allowance."
+    summary: "Andrew confirmed that free transfer station stickers for honorably discharged veterans are now available following town meeting approval. Veterans can pick them up at the transfer station trailer, the health department, or the treasurer's office. Required documentation includes a DD-214 discharge form or equivalent (including a driver's license that notes veteran status), plus vehicle registration, as the license plate number is now written on the sticker. The veteran sticker does not count as the household's first sticker; any additional household sticker is purchased at full price. Hardship cases will be considered individually."
     key_speakers: ["Andrew (Health Director)"]
   - topic: public-safety
-    topic_confidence: 0.85
-    start_seconds: 2812
+    topic_confidence: 0.9
+    start_seconds: 2908
     end_seconds: 3372
-    headline: "Avian flu risk described as low; two cases reported in U.S. since 2022, backyard poultry owners notified"
-    dek: "The Health Director presented a CDC summary dated May 13, 2024, noting 36 dairy herds affected nationally and no confirmed person-to-person spread."
+    headline: "Board receives avian flu H5N1 update; two dead birds reported in Marblehead so far this season"
+    dek: "CDC data as of May 13, 2024 shows low public health risk; the health department has notified backyard poultry permit holders and advises residents not to touch dead wild birds."
     summary: |
-      The Health Director presented a current CDC situation summary on H5N1 avian influenza. Key statistics as of May 13, 2024:
+      Andrew presented a CDC update on H5N1 avian influenza (updated May 13, 2024):
       
-      - U.S. human cases: 2 (one dairy worker with conjunctivitis; one poultry exposure)
-      - Wild bird detections: 9,349 jurisdictions across all 50 states
-      - Poultry affected: approximately 90.9 million birds across 48 states
-      - Dairy herds affected: 36 across 9 states
-      - Person-to-person spread: none detected
-      - Current public health risk: low
+      | Metric | Figure |
+      |---|---|
+      | US human cases (since 2022) | 2 |
+      | Wild birds detected (jurisdictions) | 9,349 across all 50 states |
+      | Poultry affected | ~90.9 million birds; 48 states |
+      | Dairy herds affected | 36 herds; 9 states |
+      | Current public health risk | Low |
+      | Person-to-person spread | None reported |
       
-      Massachusetts requires all milk to be pasteurized; no concern about virus transmission through pasteurized milk has been identified. The department notified all permitted backyard poultry holders in Marblehead of guidance from the Massachusetts Department of Agriculture. Residents are asked not to approach dead wild birds and to contact the Health Department instead. Two dead birds have been reported in Marblehead this season; current protocol is to bag and dispose without testing, though coordination between the Department of Agriculture and Department of Public Health on testing protocols is ongoing.
+      Key local points:
+      - Massachusetts requires pasteurization of all commercially sold milk; no concern about pasteurized milk transmission.
+      - Letters sent to all backyard poultry permit holders in Marblehead with Massachusetts Department of Agriculture guidance.
+      - Two dead wild birds have been reported in town this season; they are bagged and disposed of (not tested), pending coordination between the Department of Agriculture and the Department of Public Health on testing protocols.
+      - Residents should not approach dead birds and should contact the health department instead.
     key_speakers: ["Andrew (Health Director)"]
   - topic: public-safety
     topic_confidence: 0.85
     start_seconds: 3372
-    end_seconds: 3862
-    headline: "Beach testing season runs June 12–September 11 at five designated bathing beaches plus two pier sites"
-    dek: "Grace Oliver's Beach remains on a heightened closure tier due to repeated past failures; sampling is done weekly, typically on Wednesdays."
+    end_seconds: 4197
+    headline: "Board briefed on beach water quality testing schedule and Red's Pond cyanobacteria monitoring"
+    dek: "Five designated bathing beaches will be sampled weekly from June 12 through September 11; Red's Pond aeration is under consideration to address recurring cyanobacteria."
     summary: |
-      Marblehead's five designated bathing beaches are Devereaux Beach, Crocker Park, Gas House, Grace Oliver's, and Raki. Village Pier and Sunset Pier are sampled every other week as non-designated swimming areas.
+      Andrew described the bathing beach water quality program:
       
-      Grace Oliver's Beach is on a heightened closure tier: one failing test triggers closure and retest, rather than the two consecutive failures required at other beaches. Factors contributing to elevated bacteria counts include sheet flow from rain events, waterfowl and wildlife waste, rack line accumulation, water temperature, and tidal flushing patterns.
+      **Designated bathing beaches (5):** Devereaux Beach, Crocker Park, Gas House, Grace Oliver's, and Raki. Village Pier and Sunset Pier are sampled every other week as non-designated areas.
       
-      Sampling protocol: wading to three-feet depth, collecting arm-length into the water in a sterilized jar, chilled and submitted to a lab with 24-hour turnaround. A beach survey noting birds, trash, rack lines, and bather counts accompanies each sample. Beach closures are posted on-site with a sawhorse at Gas House and Grace Oliver's, and coordinated with the police department's Facebook page.
+      **Sampling protocol:** Weekly Wednesday sampling near high tide; samples go to a lab with 24-hour turnaround. Results posted online via a state website link.
+      
+      **Closure thresholds:** Devereaux, Crocker Park, Gas House, and Stransky require two consecutive failing tests. Grace Oliver's is on a heightened tier requiring closure after a single failure due to its history of repeated failures.
+      
+      **Beach postings:** Closures are posted at each beach, and the police department posts alerts on Facebook. Sawhorses are now placed at Gas House and Grace Oliver's entrances for visibility.
+      
+      **Red's Pond:** Cyanobacteria (potentially toxic) recurs due to high nutrient loading from waterfowl and fish. Aeration is being explored in coordination with the drain department. Residents are advised to wash hands after fishing and to avoid contact with visible algae blooms.
     key_speakers: ["Andrew (Health Director)"]
   - topic: public-safety
-    topic_confidence: 0.8
-    start_seconds: 3862
-    end_seconds: 4197
-    headline: "2024 expected to be a high triple-E year in Massachusetts; Marblehead treats storm drains with BTI larvicide"
-    dek: "Two mild winters in a row are associated with elevated EEE risk; adulticiding remains available if surveillance warrants it."
+    topic_confidence: 0.85
+    start_seconds: 4197
+    end_seconds: 4243
+    headline: "Mosquito control update: 2024 forecast as high triple-E year for Massachusetts"
+    dek: "Marblehead is part of the Northeast Massachusetts Mosquito Control District; storm drains will be treated with BTI larvicide; adulticiding available if disease risk rises."
     summary: |
-      Marblehead is a member of the Northeast Massachusetts Mosquito Control and Wetland Management District. Treatment focuses on storm drains using BTI (Bacillus thuringiensis israelensis), a naturally occurring bacteria that breaks down mosquito larvae and is consistent with Marblehead's pesticide-free policy.
+      Andrew reported that Marblehead participates in the Northeast Massachusetts Mosquito Control and Wetland Management District. Key points:
       
-      Two mild winters in succession are associated with a higher-risk year for Eastern Equine Encephalitis (EEE) in Massachusetts. EEE risk is higher in inland communities with salt marshes (Ipswich, Topsfield, Essex). Adulticiding from the air is available if risk thresholds are met.
-      
-      West Nile virus: approximately 80% of infected individuals have no symptoms; less than 1% develop severe illness; most develop lifelong immunity. The Health Director noted that rising temperatures from climate change may introduce new mosquito-borne viruses such as dengue to the region over the long term.
-      
-      Red's Pond has experienced recurring cyanobacteria issues; aeration is being explored in coordination with the drain department. Residents are asked to eliminate standing water on their properties.
+      - Storm drains are currently being cleaned and will then be treated with BTI (Bacillus thuringiensis israelensis), a naturally occurring larvicide approved for use in Marblehead's pesticide-free environment.
+      - Marblehead and neighboring coastal towns are generally at lower risk for Eastern Equine Encephalitis (EEE) than inland marsh communities such as Ipswich, Topsfield, and Essex, but vigilance is warranted, especially for nighttime fall activities.
+      - Two mild winters in a row make 2024 a projected high EEE year statewide.
+      - West Nile virus: approximately 80% of infected individuals show no symptoms; most develop lifelong immunity. Considered a lower concern than EEE locally.
+      - Rising temperatures may introduce new mosquito-borne viruses such as dengue over the longer term.
+      - Residents with backyard standing water are encouraged to eliminate breeding sites; Northeast Mosquito Control can inspect wetland areas on request.
     key_speakers: ["Andrew (Health Director)"]
   - topic: public-comment
     topic_confidence: 0.8
     start_seconds: 4243
     end_seconds: 5156
-    headline: "Marblehead Mental Health Task Force previews June wellness fair and discusses youth smartphone risks"
-    dek: "A board member reported on the task force's activities; Dr. Thomas Zaro briefly addressed his column on Jonathan Haidt's book about smartphones and youth mental health."
+    headline: "Mental Health Task Force member and Dr. Thomas Zaro discuss youth smartphone risks and the Nan Project"
+    dek: "A board member presented a Marblehead Current column by Dr. Zaro summarizing Jonathan Haidt's book on smartphone harms; Dr. Zaro attended and elaborated on policy recommendations."
     summary: |
-      A board member reported that the Marblehead Mental Health Task Force met the previous evening. The NAN Project presentation was postponed to the June 3rd meeting (7:00 PM, virtual and in person). The NAN Project helps young people recognize and respond to peers who may be experiencing depression or suicidal ideation; 75 North Shore schools are already engaged.
+      A board member provided an update from the Marblehead Mental Health Task Force:
       
-      On June 22nd, the Marblehead Counseling Center is hosting a wellness health fair at Hobbs Playground. The event will include accessible activities for all ages and a dedication of a garden and bench in memory of Amy Salts, who donated a significant portion of her estate to the counseling center.
+      - The Nan Project (suicide prevention/mental health literacy program) presentation has been postponed to the June 3rd virtual/in-person meeting. Approximately 75 North Shore schools are already engaged with the program.
+      - On June 22nd, the Marblehead Counseling Center will hold a wellness fair at Hobbs Playground, including a garden dedication in memory of Amy Salts, who donated much of her estate to the center.
+      - The Marblehead Current published a column by Dr. Thomas Zaro summarizing Jonathan Haidt's *The Anxious Generation*, recommending that parents, schools, communities, and government take steps to limit youth smartphone and social media use.
       
-      Dr. Thomas Zaro, a board member in attendance, was recognized for a column in the Marblehead Current summarizing Jonathan Haidt's book on smartphones and youth mental health. Key themes discussed:
-      - The arbitrary setting of age 13 as the minimum age for app sign-ups, largely by technology companies
-      - Calls for raising the minimum age to 16 and requiring age verification by technology firms
-      - Research showing that physical writing improves learning and retention compared to typing
-      - Arguments for phone-free school days, not just in-class restrictions
-      - Connections between over-protection in the physical world and under-protection in the digital world
-    key_speakers: ["Dr. Thomas Zaro (board member / physician)", "Joanne (board member, Mental Health Task Force)"]
+      Dr. Zaro spoke briefly, highlighting that the minimum age of 13 for app sign-ups was effectively set by tech companies, and that raising it to 16 with enforceable age verification could be the most impactful public health intervention. He noted rising rates of depression, anxiety, and sexual harassment among young people linked to social media exposure, and pointed to European and British regulatory efforts as models.
+      
+      The discussion also touched on school phone policies, the value of unstructured free play, and research showing that physical writing improves retention compared to typing.
+    key_speakers: ["Dr. Thomas Zaro (resident/physician)", "Joanne (board member, Mental Health Task Force)"]
   - topic: trash-dpw
     topic_confidence: 0.85
     start_seconds: 5156
     end_seconds: 5440
     headline: "Household hazardous waste day served over 170 cars; fall evening event planned to reach working residents"
-    dek: "Staff are also pursuing a permanent Northeast regional hazardous waste facility estimated to cost approximately $2 million, far exceeding the state's $250,000 offer."
+    dek: "A combined Marblehead–Swampscott event processed more than 170 vehicles; a permanent northeast Massachusetts facility is estimated to require approximately $2 million in construction and land costs."
     summary: |
-      The combined Marblehead/Swampscott household hazardous waste event served just over 170 cars with no turn-aways, using contractor Triumvirate Environmental. Setup in the yard waste area improved service flow with two tables operating simultaneously.
+      Andrew reported a successful spring household hazardous waste day:
       
-      A fall event is planned as a Wednesday evening to capture residents who cannot attend Saturday events. Staff aim to hold up to four events per year.
-      
-      Longer term, the Health Director is working with MassDEP and neighboring communities to establish a permanent year-round household hazardous waste facility in the Northeast region. A consultant estimated the facility would cost approximately $2 million ($1 million for construction, $1 million for land). The state's current offer of $250,000 was deemed insufficient. An interim option, NEDT (a private company in western Massachusetts approximately 45–60 minutes away), is listed on the town website for residents with immediate disposal needs.
-      
-      Regarding latex paint: it is non-hazardous and can be dried out with kitty litter or bentonite clay and brought to the transfer station (up to four cans per day with a valid sticker). Oil-based paint is managed at the transfer station under lock and key; a new upgraded oil collection tank is on order and will be installed in the coming weeks.
+      - Over 170 cars served at a combined Marblehead/Swampscott event using vendor Triumvirate Environmental.
+      - New layout in the yard waste area improved traffic flow; no residents turned away.
+      - A fall event is planned as a Wednesday evening to capture residents who cannot attend Saturday events.
+      - Long-term goal is a year-round facility in the northeast; a consultant estimated approximately $1 million for construction and approximately $1 million for land, totaling roughly $2 million — far exceeding a $250,000 state offer.
+      - NEWT (New England Disposal Technologies) facility in western Massachusetts is available year-round as an alternative for residents.
+      - Legislation being pursued to require chemical product manufacturers to accept returns (takeback programs).
+      - Residents with latex/acrylic paint may dry it with kitty litter or bentonite clay and bring up to four cans per day to the transfer station.
     key_speakers: ["Andrew (Health Director)"]
-  - topic: public-comment
-    topic_confidence: 0.7
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
     start_seconds: 5440
-    end_seconds: 5554
-    headline: "Board previews June 4th meeting agenda on substance abuse and youth risk survey"
-    dek: "Next meeting moved from June 11th (election day) to June 4th; Gina Hart will present the annual youth risk behavior survey results."
-    summary: "The chair noted that the next board meeting is scheduled for June 4th because June 11th is election day and a subsequent date falls near the last day of school. Agenda items will include substance abuse, youth wellness, and a presentation by Gina Hart on the annual youth risk behavior survey. A board member also flagged Drug Story Theater — a program by and for recovering teenagers used in other communities — as a potential discussion item."
-  - topic: public-comment
-    topic_confidence: 0.65
-    start_seconds: 5554
     end_seconds: 5658
-    headline: "No public comment; board adjourns"
-    dek: "A brief question on raw milk and dead bird handling protocols preceded the motion to adjourn."
-    summary: "No members of the public came forward during the public comment period. Brief clarifying questions were asked about raw milk (illegal to sell in Massachusetts; must be pasteurized) and the protocol for dead wild birds (bag and dispose; no testing at this time; coordination between the Department of Agriculture and the Department of Public Health is ongoing). The board then voted unanimously to adjourn."
+    headline: "Board sets next meeting for June 4th; substance abuse and youth risk survey on agenda"
+    dek: "The June 11th date was moved to June 4th to avoid conflict with election day; Gina Hart will present the school youth risk survey results."
+    summary: "The chair announced the next Board of Health meeting will be June 4th rather than June 11th, which is election day. Agenda items will include substance abuse, youth wellness, and a presentation by Gina Hart on the school's youth risk behavior survey. A 'Drug Story Theater' program featuring recovering teens was also suggested for the agenda. No public comments were received. The meeting was adjourned unanimously."
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

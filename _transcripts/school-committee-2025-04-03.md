@@ -11,225 +11,198 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Marblehead School Committee debates flag policy, hears antisemitism investigation findings"
-  summary: "The committee held its first formal reading of a revised flag and banner display policy, debating language around 'symbolic displays' and the superintendent's role in recommending displays. An independent investigator's report on allegations of antisemitism among district personnel found that most allegations could not be substantiated under the preponderance-of-evidence standard, though two findings were corroborated. The committee also received a comprehensive special education program review showing significant compliance and culture improvements since new student services leadership arrived."
+  headline: "School committee advances flag-display policy draft amid public debate; antisemitism investigation results reported"
+  summary: "The Marblehead School Committee held its regular April meeting, featuring student presentations from Veterans Middle School, extensive public comment on a proposed flag-display policy, and an overview of an independent antisemitism investigation that found most allegations unsubstantiated. The committee took a first reading of a revised flag policy that would require flags affixed to school property to be approved through the superintendent as government speech, and voted to authorize a response to a union cease-and-desist letter. The committee also approved use of the high school fieldhouse as a town-wide polling place for the June 2025 election and heard a detailed presentation on the Academic Discovery special education program review."
   decisions:
     - "Approved schedule of bills totaling $196,632.61"
-    - "Approved use of Marblehead High School Fieldhouse as a town-wide polling station for the June 10, 2025 election"
+    - "Approved use of Marblehead High School fieldhouse as polling location for June 10, 2025 town elections"
     - "Approved motion authorizing chair to work with legal counsel to draft a response to the MEA cease-and-desist demand letter"
-    - "Approved overnight trip for sixth grade to Camp Bournedale"
-    - "Continued school choice hearing to a future meeting"
-    - "Continued flag policy to a second reading after incorporating proposed language changes"
+    - "Approved overnight trip for sixth-grade students to Camp Bournedale"
+    - "Held first reading of revised flag-display policy (second reading pending)"
   votes:
     - motion: "Approve schedule of bills ($196,632.61)"
       result: "in favor (4 to 0)"
-    - motion: "Approve use of MHS Fieldhouse as polling station for June 2025 election"
+    - motion: "Approve use of MHS fieldhouse as polling station for June 2025 elections"
       result: "in favor (4 to 0)"
-    - motion: "Authorize chair to draft response to MEA cease-and-desist letter"
+    - motion: "Authorize chair to work with legal counsel to respond to MEA cease-and-desist letter"
       result: "in favor (unanimous)"
-    - motion: "Approve overnight trip to Camp Bournedale"
-      result: "in favor (5 to 0)"
+    - motion: "Approve overnight sixth-grade trip to Camp Bournedale"
+      result: "in favor (unanimous)"
 
 topic_segments:
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.85
     start_seconds: 0
     end_seconds: 1139
-    headline: "Vets Middle School students present gummy bear science lab and state-winning essay"
-    dek: "Eighth-grader Melissa Balla was announced as the statewide first-place winner of the Massachusetts Center for Books Letters About Literature contest."
+    headline: "Veterans Middle School students present gummy bear science lab and award-winning sonnets"
+    dek: "Two seventh-graders demonstrated an osmosis lab and three eighth-graders read sonnets; one student's letter to poet Naomi Shihab Nye earned first place in Massachusetts."
     summary: |
-      The meeting opened with cornerstone student presentations from Marblehead Veterans Middle School. Seventh-graders Jordan London and Annabelle Cassidy, with teacher Tony Callahan, demonstrated their gummy bear osmosis/diffusion lab. Eighth-graders June Crawford and Chloe Steiner read original sonnets connecting their independent reading books (*Monster* and *A Night Divided*) to personal reflection.
+      The meeting opened with student presentations from Marblehead Veterans Middle School. Seventh-grade students Jordan London and Annabelle Cassidy, with teacher Tony Callahan, presented a diffusion/osmosis lab using gummy bears. Eighth-grade students June Crawford and Chloe Steiner read sonnets tied to their 'windows and mirrors' independent reading unit.
       
-      Principal Matt Fox announced that the school had two of the top-10 essays in the state in the Letters About Literature program. Student Sophia earned an honorable mention; Melissa Balla's letter to poet Naomi Shihab Nye earned **first place in Massachusetts**. Melissa read her letter aloud to the committee.
-    key_speakers: ["Matt Fox (Vets Middle School Principal)", "Tony Callahan (science teacher)", "Jordan London (student)", "Annabelle Cassidy (student)", "Melissa Balla (student)", "June Crawford (student)", "Chloe Steiner (student)"]
+      Principal Matt Fox announced that eighth-grader Melissa Balla's letter to poet Naomi Shihab Nye earned **first place in the entire state** in the Massachusetts Center for the Book Letters About Literature competition. Two Marblehead students were among the top 10 essays statewide, with another student receiving honorable mention.
+      
+      The student representative reported on upcoming high school events: AP exams going fully digital, Hades Town musical April 11–13, All Strings concert that evening, and spring sports underway.
+    key_speakers: ["Matt Fox (Veterans Middle School Principal)", "Tony Callahan (science teacher)", "Jordan London (student)", "Annabelle Cassidy (student)", "Carolyn Todd (English teacher)", "June Crawford (student)", "Chloe Steiner (student)", "Melissa Balla (student)", "Ella (student representative, MHS)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.85
+    topic_confidence: 0.9
     start_seconds: 1139
     end_seconds: 1413
-    headline: "Student rep previews AP exams, Hades Town musical, and spring sports season"
-    dek: "High school student representative Ella provided updates on AP digital exams, senior project sign-offs, prom ticket sales, and spring athletics."
-    summary: "The student representative reported that AP exams — now fully digital or hybrid — begin in about a month. Seniors must get teacher signatures to confirm passing grades before senior project begins after quarter three ends April 15. Prom ticket sales start the week of April 28 at the State Room in Boston. The school musical *Hades Town* runs April 11–13. The All Strings concert was scheduled for that evening at 7 p.m. Spring sports seasons have begun across multiple teams."
-    key_speakers: ["Ella (student representative, MHS)"]
+    headline: "Superintendent shares spring calendar updates, athletics news, and appoints Glover School principal"
+    dek: "Superintendent Fox noted the district's last day is June 25, FinCom unanimously recommended the school budget, and Frank Kowalski was offered the full principalship at Glover School."
+    summary: |
+      Superintendent John Fox provided district updates including:
+      - **School year**: April 23–25 are school days; last day is June 25 (half day for students).
+      - **Budget**: The FY26 school committee-approved budget was presented to the Finance Committee, which voted unanimously to recommend approval.
+      - **Kindergarten registration** opened March 24; orientation is April 10 at Glover and Brown schools.
+      - **Project Reboot** parent/guardian workshop on healthy technology use is April 10 at 7 PM at Veterans.
+      - **Hades Town** (teen edition) runs April 11–13 at the high school.
+      - **Athletics**: Girls lacrosse, boys lacrosse, baseball, track, softball, and tennis all starting spring seasons.
+      - The dilapidated shed at Village was replaced and track repairs are scheduled for the week of April 21.
+      - Custodian Rick Lemieux retired after 23 years at Village School.
+      - Frank Kowalski was offered the full principalship at Glover School after serving as interim.
+    key_speakers: ["John Fox (Superintendent)"]
   - topic: public-comment
     topic_confidence: 0.98
     start_seconds: 1413
-    end_seconds: 4900
-    headline: "Residents speak extensively on draft flag policy and antisemitism investigation findings"
-    dek: "Thirteen-plus residents addressed the committee on the proposed flag display policy and the independent antisemitism investigation report released that day."
+    end_seconds: 4499
+    headline: "Thirteen residents address flag policy and antisemitism investigation in extended public comment"
+    dek: "Speakers were divided on the proposed flag-display policy and raised concerns about the antisemitism investigation's findings and methodology."
     summary: |
-      Public comment ran well over 15 minutes with the committee ultimately allowing all speakers to be heard. Speakers divided roughly into three clusters:
+      Public comment drew approximately 13 in-person speakers and at least one online speaker. Key themes:
       
-      **On the flag policy (opposed to proposed policy):**
-      - Jeannie Lampkin urged the committee to slow down and consider whether the policy reflects stakeholders' needs.
-      - Margaret Clark argued the language covering 'symbolic displays' would unconstitutionally restrict student and staff expression, including religious symbols.
-      - A speaker with prior state senate policy experience cited lack of statutory requirement for any flag policy, called the draft 'poorly drafted,' and compared it unfavorably to existing town and Marblehead Housing Authority policies.
-      - Diane Gora (30-year Marblehead teacher) opposed the policy as undermining teacher and student expression.
-      - Kristen Zaro (kindergarten teacher) worried the policy could restrict classroom student artwork and posters.
-      - Frank Ner (online) suggested adopting a conflict-resolution framework instead.
-      - An attorney-adjacent speaker urged the committee to narrow 'affixed' language and review CBA provisions.
+      **Flag policy opponents** argued the draft policy's 'symbolic displays' language was overbroad, covering clothing, logos, religious symbols, and student artwork; that no statutory requirement for such a policy exists; that the no-third-party-petition clause was unconstitutional; and that the policy infringed on teacher and student First Amendment rights. Speakers referenced the collective bargaining agreement and compared the draft unfavorably to existing town and Housing Authority flag policies.
       
-      **In support of a flag neutrality policy:**
-      - Sharon Rich argued that without a neutral policy, a proliferation of flags representing every group would be unmanageable, and suggested limiting displays to U.S., Massachusetts, and POW flags.
-      - Emily DeJoy advocated for a distraction-free learning environment with only official flags displayed.
-      - Karen Traeger expressed full support for the draft policy and noted the Israeli flag was removed from the high school without the same public outcry as BLM/Pride flags.
-      - John Diano argued the policy is necessary to address the chilling effect some community members feel when certain flags are present.
+      **Flag policy supporters** argued the policy would promote school neutrality and prevent selective flag display; noted that the Israeli flag had been removed from the high school cafeteria while other flags remained; and said the policy was necessary to prevent students from feeling excluded.
       
-      **On the antisemitism investigation report:**
-      - Sarah Palladian described personal experiences of antisemitism affecting her family and criticized the investigation's findings as insufficient.
-      - Yael Agan criticized the investigators for not solely using the IHRA (International Holocaust Remembrance Alliance) definition of antisemitism, announced she is running for school committee, and called the report 'a slap in the face' to the Jewish community.
-      - Karen Traeger echoed concerns about the IHRA definition.
-      - Shauna King, a 2018 MHS graduate, spoke in support of a named teacher she said was falsely accused, describing her as an inclusive and inspiring educator.
-      - Mary McCarrison stated her support for all flags being displayed and announced she had ordered a Jewish flag to donate to the school.
-    key_speakers: ["Jeannie Lampkin (resident)", "Margaret Clark (resident)", "Sharon Rich (resident)", "Sarah Palladian (resident)", "Yael Agan (resident)", "Mary McCarrison (resident)", "Emily DeJoy (resident)", "Karen Traeger (resident)", "Diane Gora (resident, teacher)", "John Diano (resident)", "Kristen Zaro (resident, teacher)", "Frank Ner (online, resident)", "Shauna King (resident, MHS Class of 2018)", "Brent Speed (resident, attorney)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.9
-    start_seconds: 4900
-    end_seconds: 5500
-    headline: "Superintendent reports school year calendar, Frank Kowalski named full principal at Glover"
-    dek: "Superintendent Fox shared calendar updates, athletic department intern hires, and offered Frank Kowalski the full principalship at Glover School after his interim year."
-    summary: |
-      Superintendent John Fox provided a wide-ranging spring update:
-      
-      - Last day of school is currently June 25 (half day for students, full day for staff) pending no further snow days.
-      - The FY26 school budget was unanimously recommended for approval by the Finance Committee.
-      - Kindergarten registration opened March 24; orientation is April 10 at Glover and Brown.
-      - A 'Project Reboot' tech health workshop for parents/guardians is April 10, 7–8:30 p.m. at Vets.
-      - *Hades Town* performances are April 11–13.
-      - The documentary *October 8* will screen at a local theater on May 9, 10, and 11.
-      - The old shed at Village School was replaced; track repairs at Village are scheduled for the week of April 21.
-      - Rick Lemieux retired after 23 years as a custodian at Village School.
-      - **Frank Kowalski was offered the full principalship at Glover School**, having served as interim principal throughout the year.
-    key_speakers: ["John Fox (Superintendent)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 5500
-    end_seconds: 5520
-    headline: "Committee approves schedule of bills totaling approximately $196,600"
-    dek: "The committee voted 4–0 to approve the monthly schedule of bills."
-    summary: "The committee approved the schedule of bills for the month totaling $196,632.61."
-  - topic: public-safety
-    topic_confidence: 0.9
-    start_seconds: 5520
+      **Antisemitism investigation** speakers expressed dismay that most allegations were not corroborated, argued the investigator should have applied the IHRA definition of antisemitism exclusively, and described personal experiences of antisemitism in Marblehead. One speaker announced she was running for school committee. Another speaker, a 2018 MHS graduate, defended the teacher at the center of allegations.
+    key_speakers: ["Jeannie Lampkin (resident, Devereaux St.)", "Margaret Clark (resident, Watford St.)", "Sharon Rich (resident, Ocean Ave.)", "Sarah Palladian (resident, Ida Rd.)", "Angus (resident, Te Lane area)", "Mary McCarrison (resident, Pine Cliff Dr.)", "Emily DeJoy (resident, Riverside Dr.)", "Karen Telmalco (resident, Traeger Rd.)", "Diane Gora (teacher, Nicholson St.)", "John Diano (resident, Trago Rd.)", "Kristen Zaro (resident, Merrill Rd.)", "Yael Agan (resident, parent)", "Frank Ner (online, Pickwick Rd.)", "Shauna King (MHS class of 2018)", "Megan Kalpin Sapphire (resident)", "Brent Speed (resident)"]
+  - topic: elections-procedural
+    topic_confidence: 0.97
+    start_seconds: 5566
     end_seconds: 5965
-    headline: "Committee votes 4–0 to allow MHS Fieldhouse to serve as centralized polling site for June 2025 election"
-    dek: "Fire Chief Jason Gillen and Town Clerk Robin presented the proposal, citing aging infrastructure at current polling locations and accessibility concerns."
+    headline: "Committee votes 4-0 to allow MHS fieldhouse to serve as town-wide polling place for June 2025 elections"
+    dek: "Fire Chief Jason Gillen and Town Clerk Robin requested the centralized location to address ongoing accessibility and mechanical issues at existing polling sites."
     summary: |
-      Fire Chief Jason Gillen and Town Clerk Robin requested permission to use the Marblehead High School Fieldhouse as a single town-wide polling location for the June 10, 2025 local election. They cited elevator overheating, stalling, and lighting failures at existing locations as risks to election operations, and noted the fieldhouse's central location improves accessibility for voters with disabilities.
+      Fire Chief Jason Gillen and Town Clerk Robin presented a request to use the Marblehead High School fieldhouse as a consolidated polling place for the June 10, 2025 town elections. They cited recurring infrastructure issues at current polling locations including elevator overheats, stalls, and lighting failures.
       
-      Superintendent Fox outlined logistical considerations: the gym would need to be closed for set-up and breakdown, floor protection would be required, and parking management would be needed. He noted that most senior drivers would not be present in June, freeing spaces. The committee voted 4–0 to approve use for the June election only, with plans to discuss making the arrangement permanent after evaluating how it goes. The proposal still requires Select Board approval and a state ADA compliance review.
+      Superintendent Fox noted the fieldhouse can be used safely while school is in session with appropriate security measures, floor covering, and parking coordination. The committee discussed ADA-compliant temporary accessible parking and logistics.
+      
+      The vote was to approve use for the **June 2025 election only**, with a commitment to evaluate permanency going forward. The Select Board must separately approve the arrangement, and the state must conduct an ADA compliance review.
+      
+      **Vote: 4 to 0 in favor.**
     key_speakers: ["Jason Gillen (Fire Chief)", "Robin (Town Clerk)", "John Fox (Superintendent)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.88
-    start_seconds: 5965
-    end_seconds: 7744
-    headline: "Committee reviews draft superintendent evaluation surveys to be distributed week of April 7"
-    dek: "Separate surveys were developed for administrators, staff, and community members, with community respondents identified by name to prevent duplicate submissions."
-    summary: |
-      School committee members Sarah Fox and Brian Oda presented three draft superintendent evaluation surveys — for administrators, staff, and community members — developed after a subcommittee meeting. Key design decisions:
-      
-      - **Staff and administrator surveys** will be anonymous (Google Form limited to school email accounts).
-      - **Community survey** will not be anonymous, as there is no technical means to prevent duplicate submissions from outside the school network.
-      - Several wording refinements were discussed, including changing 'improved' to 'changed' in questions about special education support to avoid leading language, and adding a follow-up open-response question about district culture.
-      - High school students may be invited to take the community survey version.
-      - The committee agreed to distribute surveys around Tuesday, April 8, with a one-week response window, targeting raw data return by approximately April 16–17 ahead of the April 17 meeting.
-    key_speakers: ["Sarah Fox (School Committee Chair)", "Brian Oda (School Committee)", "Allison Taylor (School Committee)", "Jen Schaffner (School Committee)", "Lisa Marie Polito (Asst. Superintendent, Student Services)"]
+    topic_confidence: 0.8
+    start_seconds: 5500
+    end_seconds: 5566
+    headline: "Committee approves April schedule of bills totaling $196,632.61"
+    dek: "Routine consent agenda vote passed 4 to 0; meeting minutes were deferred pending a draft."
+    summary: "The committee voted 4 to 0 to approve the schedule of bills for the month totaling **$196,632.61**. Meeting minutes were not available and were deferred to a future meeting."
   - topic: admin-housekeeping
-    topic_confidence: 0.95
+    topic_confidence: 0.75
+    start_seconds: 6025
+    end_seconds: 7744
+    headline: "Committee refines three-survey package for interim superintendent formative evaluation"
+    dek: "Subcommittee members Sarah Fox and Brian Oda presented separate surveys for administrators, staff, and community; surveys to be distributed the week of April 7 with one-week response window."
+    summary: |
+      Sarah Fox and Brian Oda presented three draft Google surveys for the interim superintendent's formative evaluation — one each for administrators, staff, and community members. Key discussion points:
+      
+      - Staff and administrator surveys will be **anonymous** (Google limiting to one response per school account); the community survey will **not be anonymous** to prevent duplicate submissions.
+      - The committee debated and revised question wording, particularly around student services improvements, agreeing to change 'improved' to 'changed' to avoid leading language.
+      - A demographic identifier question ('student / parent / community member') will be added to the community survey.
+      - High school students will be invited to complete the community survey.
+      - Raw data will be shared with all committee members; Allison Taylor offered to compile a roll-up summary.
+      - Target distribution: **Tuesday, April 8**, with responses due approximately one week later; results available by April 16–17.
+    key_speakers: ["Sarah Fox (Chair)", "Brian Oda (committee member)", "Allison Taylor (committee member)", "Jen Schaffner (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.72
     start_seconds: 7744
     end_seconds: 9921
     featured: true
-    headline: "Flag policy gets first reading; committee votes to respond to MEA cease-and-desist letter"
-    dek: "The revised draft eliminates 'symbolic displays' language, substitutes 'affixed' to school property, and routes all display recommendations through the superintendent to the committee."
+    headline: "Flag-display policy gets first reading; committee votes to respond to MEA cease-and-desist letter"
+    dek: "A revised draft limits the policy to flags and banners affixed to school property, with the superintendent bringing recommendations to the committee; a second reading is scheduled."
     summary: |
-      Chair Sarah Fox read the revised draft flag policy into the record as the first of three required readings. Key features of the revised draft:
+      Chair Sarah Fox read a revised draft flag-display policy into the record as the first of three required readings. Key features of the draft:
       
-      1. **No third-party requests accepted** — this clause will be moved from the opening sentence to a numbered rule.
-      2. The committee retains sole authority over flags and banners **affixed** to school district property (the word 'affixed' was proposed and accepted by consensus as a clarifying addition; 'similar symbolic displays' will be removed).
-      3. The U.S. flag, Massachusetts flag, and POW/MIA flag must be displayed.
-      4. Additional flags/banners reflecting the district's mission, vision, and values may be displayed; the **superintendent acting in their sole discretion** may recommend displays to the committee.
+      1. **No third-party requests** accepted by the committee (to be moved from opening line to a numbered rule).
+      2. Only flags with official legal status (U.S. flag, Massachusetts flag, POW/MIA flag) shall be automatically displayed.
+      3. Additional flags and banners that reflect the district's mission, vision, and values may be recommended by the superintendent to the committee for adoption as government speech.
       
-      The committee debated extensively:
-      - Whether the superintendent recommendation process adds an undesirable layer of bureaucracy.
-      - Whether the policy should specify timing (e.g., annually in August, or quarterly) for superintendent recommendations — no final agreement was reached on timing; the committee leaned toward removing a fixed date from the policy and addressing it operationally.
-      - How to ensure the policy does not restrict personal expression on clothing, backpacks, vehicles, or handheld items — the word 'affixed' was viewed as addressing this.
-      - Member L. Williams stated she remains uncertain a flag policy is necessary at all but would support the current compromise draft if it moves forward.
+      Committee discussion produced several proposed amendments:
+      - Strike 'similar symbolic displays' and add the word **'affixed'** to clarify the policy covers only items attached to school property, not personal clothing, vehicles, or handheld items.
+      - Move the third-party petition prohibition to a numbered rule rather than the opening sentence.
+      - The superintendent will bring recommendations periodically (quarterly suggested) rather than only in August.
       
-      **Separate motion:** The committee voted unanimously (5–0) to authorize the chair to work with legal counsel to draft a formal response to the MEA (local teachers union e-board) cease-and-desist demand letter requesting the committee halt consideration of the policy.
+      Committee member L. Williams stated she remains uncertain whether a flag policy is necessary at all but would not be surprised if she votes against final passage.
       
-      The policy will return for a second reading at the next meeting with the following changes incorporated: (1) move the third-party prohibition to a numbered bullet; (2) add 'affixed' to limit scope to items attached to school property; (3) remove 'similar symbolic displays.'
-    key_speakers: ["Sarah Fox (School Committee Chair)", "Jen Schaffner (School Committee)", "Allison Taylor (School Committee)", "Brian Oda (School Committee)", "L. Williams (School Committee)", "John Fox (Superintendent)"]
+      The committee also voted **unanimously (5 to 0)** to authorize the chair to work with legal counsel to draft a response to the Marblehead Education Association (MEA) e-board's cease-and-desist demand letter opposing the policy.
+    key_speakers: ["Sarah Fox (Chair)", "Jen Schaffner (committee member)", "Allison Taylor (committee member)", "Brian Oda (committee member)", "L. Williams (committee member)", "John Fox (Superintendent)"]
   - topic: school-budget
-    topic_confidence: 0.92
-    start_seconds: 9921
-    end_seconds: 10011
-    headline: "School choice hearing tabled; will be rescheduled before June with proper public notice"
-    dek: "The school choice public hearing for school year 2025–26 requires a formal posting period and will be placed on a future agenda."
-    summary: "The school choice hearing for FY2026 was tabled because it requires a properly noticed public hearing (minimum two weeks' notice) and had not been posted as such. It will be scheduled for an April or May meeting."
-    key_speakers: ["Sarah Fox (School Committee Chair)"]
-  - topic: school-budget
-    topic_confidence: 0.95
+    topic_confidence: 0.9
     start_seconds: 10011
     end_seconds: 13670
-    headline: "Academic Discoveries special education audit finds major compliance progress; restraints down from 72 to 5 this year"
-    dek: "Assistant Superintendent Lisa Marie Polito and Assistant Director Victoria Ryan presented findings from the 359-page Academic Discoveries special education program review commissioned by the committee."
+    headline: "Academic Discovery special education audit shows marked improvements; restraints down from 72 to 5 this year"
+    dek: "Assistant Superintendent Lisa Marie Polito and Victoria Ryan presented findings from a 359-page review covering six focus areas, noting the district exited corrective action ahead of schedule."
     summary: |
-      The committee received a detailed presentation summarizing a 359-page independent audit of the special education department by Academic Discoveries, covering six focus areas.
+      Assistant Superintendent of Student Services Lisa Marie Polito and Assistant Director Victoria Ryan presented an overview of the Academic Discovery special education program review, commissioned by the school committee.
       
-      **Key demographic findings:**
-      - 28.5% of Marblehead K–12 students have disabilities, vs. a state average of 20.2%.
-      - Full inclusion rate is below state average; partial inclusion is above state average.
-      - Residential/homebound placements appear elevated in the data, but administrators noted possible reporting errors and the conflation of two distinct categories.
+      **Key demographics:**
+      - 28.5% of MPS students K–12 have disabilities, above the state average of 20.2%.
+      - Students with disabilities perform above the state average on MCAS but below general education peers in Marblehead.
+      - Suspension rates and dropout rates are higher for students with disabilities than the general population.
       
-      **Progress highlights:**
-      - The district was in corrective action for special education compliance when the new leadership arrived; it was released from corrective action **several months ahead of schedule**.
-      - Physical restraints: 72 in the year before last; 49 last year; **5 so far this school year** (three-quarters complete), with four of five being stand holds.
-      - 85% of staff report feeling supported by special education administrators (vs. a reported ~98% no-confidence vote approximately one year ago).
+      **Six focus areas reviewed:** Program organization and management; student identification and placement; program service delivery; instructional practice; staff support and development; compliance.
+      
+      **Highlights:**
+      - The district exited **corrective action ahead of schedule** after compliance work by the new team.
+      - A master tracker, special education procedural manual, and Goal Book IEP software (grant-funded) were implemented this year.
+      - Language-based and therapeutic programs are under review with Landmark Outreach; entrance/exit criteria and family open houses are planned.
+      - **Restraints dropped dramatically**: 72 in the year before last, 49 last year, and only **5 so far this school year** (four stand holds, one floor restraint).
+      - 85% of staff report feeling supported by special education administrators, compared to a near-total no-confidence vote approximately one year ago.
       - 59% of parents and 78% of staff perceive special education services as moderately to extremely effective.
       
-      **New systems implemented since July:**
-      - Master compliance tracker pre-populated before staff returned in fall.
-      - Special education procedural manual with hyperlinked documents.
-      - Weekly team chair meetings (1.5+ hours); biweekly meetings with building administrators.
-      - Grant-funded 'Goal Book' software to align IEP goals with Massachusetts curriculum frameworks and automate progress monitoring.
-      - Landmark Outreach engaged to develop a vertically aligned language-based program with entrance/exit criteria.
-      - Therapeutic program to be led internally by five district staff rather than contracted externally.
-      - Safety Care (QBS) restraint training expanded; two BCBAs are now certified trainers; a third is in training; building principals will be trained before next school year.
-      
-      **Areas still requiring work:** co-teaching model professional development, caseload-vs.-workload equity among team chairs, transition planning (especially post-secondary 18–22 program, which was previously dissolved without committee notification), and consistency of MTSS implementation across buildings.
-    key_speakers: ["Lisa Marie Polito (Asst. Superintendent, Student Services)", "Victoria Ryan (Asst. Director, Student Services)", "John Fox (Superintendent)", "Jen Schaffner (School Committee)", "Sarah Fox (School Committee Chair)"]
+      **Areas still needing work:** Co-teaching models, MTSS consistency, transition planning (age 14+), reporting accuracy to the state, and staffing in specialized therapeutic roles.
+    key_speakers: ["Lisa Marie Polito (Assistant Superintendent, Student Services)", "Victoria Ryan (Assistant Director, Student Services)", "Jen Schaffner (committee member)", "Sarah Fox (Chair)"]
   - topic: labor-personnel
-    topic_confidence: 0.9
-    start_seconds: 13670
+    topic_confidence: 0.85
+    start_seconds: 14132
     end_seconds: 15034
-    headline: "Superintendent summarizes independent antisemitism investigation: most allegations unsubstantiated; two findings corroborated"
-    dek: "The Cooker Paget independent investigation reviewed 39 allegations involving personnel and found insufficient evidence to substantiate discrimination or harassment claims under the preponderance-of-evidence standard."
+    headline: "Superintendent summarizes independent antisemitism investigation; most allegations unsubstantiated"
+    dek: "Investigator Allison Kirk reviewed 39 separate allegations; two were corroborated — one involving a staff conduct violation, one involving the district's flawed 2023 internal investigation."
     summary: |
-      Superintendent Fox summarized findings of the independent investigation conducted by investigator Alison Kirk (referenced as 'Cooker Paget' on the agenda). The investigation reviewed **39 separate allegations** of antisemitic discrimination, unprofessionalism, and potential harassment/conduct policy violations. Key process facts:
+      Superintendent Fox summarized the executive findings of an independent investigation conducted by investigator Allison Kirk into allegations of antisemitism, discrimination, harassment, and unprofessional conduct.
       
-      - 26 individuals were interviewed (current and former staff, parents, friends/family); 3 declined to participate.
-      - 450 pages of documents were reviewed.
-      - The investigator used federal Title VII and Massachusetts General Law Chapter 151B as the legal standard, with the IHRA definition of antisemitism acknowledged as background context but not applied exclusively.
-      - The **preponderance of evidence standard** was applied.
+      **Process:** 26 individuals interviewed (three declined); 450 pages of documents reviewed including business records, correspondence, PowerPoint slides, forensic IT records, and newspaper articles.
+      
+      **Standard applied:** Preponderance of evidence. The investigator used federal Title VII, MGL Chapter 151B, and considered but did not exclusively rely on the IHRA definition of antisemitism.
       
       **Findings:**
-      - Most allegations could **not be corroborated**.
-      - The report explicitly states this does not mean antisemitism is absent from Marblehead, only that these specific allegations did not meet the legal standard.
-      - **Two corroborated findings:**
-        1. Written evidence corroborated that one party knowingly or neglectfully misrepresented facts in violation of the staff conduct policy.
-        2. The district violated the grievance policy by conducting a 2023 investigation into antisemitism allegations that was not neutral, thorough, fair, or adequate.
-      - No evidence of retaliation, administrative indifference, or interference with free expression rights was found.
+      - Of **39 separate allegations**, most could not be corroborated under the preponderance standard.
+      - **Two allegations were corroborated:**
+        1. A party knowingly or negligently misrepresented facts, violating the staff conduct policy.
+        2. The district violated its own grievance policy by conducting a 2023 internal investigation that was not adequate, fair, or neutral.
+      - Insufficient evidence of discrimination, harassment, retaliation, administrative indifference, favoritism toward Israel, or interference with free expression.
+      - The report explicitly states findings do not mean Marblehead is free of antisemitism.
       
-      Superintendent Fox noted that an anti-discrimination committee is already meeting, that an HR manager joins in May, and that a new combined registrar/HR assistant executive position will also start in May.
-    key_speakers: ["John Fox (Superintendent)", "Sarah Fox (School Committee Chair)", "Jen Schaffner (School Committee)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 15034
+      **Next steps announced by superintendent:** An anti-discrimination committee is already established; an HR manager joins in May; a new executive assistant/registrar role combining registration and HR support will be filled in May; climate surveys for staff and students are planned.
+    key_speakers: ["John Fox (Superintendent)", "Sarah Fox (Chair)", "Jen Schaffner (committee member)"]
+  - topic: recreation-events
+    topic_confidence: 0.9
+    start_seconds: 15173
     end_seconds: 15633
-    headline: "Committee votes 5–0 to approve sixth-grade overnight trip to Camp Bournedale"
-    dek: "Principal Jonathan presented the annual Camp Bournedale program; approximately 152 students will attend with about 12 remaining for a comparable Village School experience."
-    summary: "Village School Principal Jonathan presented the annual sixth-grade Camp Bournedale program in Plymouth. Approximately 152 students will attend the three-day overnight trip; about 12 students will remain at Village School for a comparable in-school 'Village Experience' program including trips to Crane Beach and Taste Buds Kitchen. The camp was recently sold but is continuing operations with the same director and program. The committee voted 5–0 to approve the trip."
-    key_speakers: ["Jonathan (Village School Principal)", "Sarah Fox (School Committee Chair)"]
+    headline: "Committee votes 5-0 to approve sixth-grade overnight trip to Camp Bournedale in Plymouth"
+    dek: "Principal Jonathan presented the multi-day interdisciplinary Village Experience program; approximately 152 students will attend with about 12 remaining for a comparable Village School program."
+    summary: |
+      Village School Principal Jonathan presented the sixth-grade Camp Bournedale ('Dale') overnight trip, a longstanding interdisciplinary program combining marine science, engineering design, team building, and community-building activities.
+      
+      Approximately **152 students** will travel to Plymouth; **12 students** will participate in a comparable Village School experience including trips to Crane Beach, a cooking program, and other activities.
+      
+      The camp was recently sold but is continuing operations with the same director and program. Approximately 60–70 chaperones will participate.
+      
+      **Vote: 5 to 0 in favor.**
+    key_speakers: ["Jonathan (Village School Principal)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

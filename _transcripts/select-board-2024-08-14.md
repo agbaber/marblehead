@@ -11,29 +11,29 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Board approves new bond counsel, police hire, and Council on Aging appointments"
-  summary: "The Select Board met August 14, 2024 and approved several personnel and contractual items, including a conditional offer of employment to a new police officer, appointments to the Council on Aging, and a new bond counsel engagement with Hinckley Allen projected to save approximately 20% on future bond issuances. The board also held an extended joint session with the Task Force Against Discrimination marking its 35th anniversary, and heard a lengthy discussion with the Board of Assessors about a proposed $62,000 revaluation project that was not voted on, with members directing the assessors to first consult the CFO, confirm procurement compliance, and return at a future meeting."
+  headline: "Board approves Hinkley Allen as bond counsel, hears tense assessors budget request"
+  summary: "The Select Board approved Hinkley Allen as bond counsel, projected to save approximately 20% over prior fees, and appointed two new Council on Aging members. A lengthy discussion with the Board of Assessors over a $62,000 request to front-load revaluation work ended without a vote, with the board directing assessors to consult the CFO, review procurement requirements under MGL Chapter 30B, and return at the August 28 meeting. The Task Force Against Discrimination marked its 35th anniversary and requested a line-item budget allocation."
   decisions:
     - "Approved conditional offer of employment to Taylor Nolasco as permanent full-time police officer"
-    - "Approved engagement letter with Hinckley Allen for bond counsel services"
+    - "Approved letter of engagement with Hinkley Allen for bond counsel services"
     - "Approved appointment of Lisa Palmer and Meredith Rearden to Council on Aging (terms to June 2027)"
-    - "Approved VFW Post 2005 request to use Spirit of 76 image on challenge coin"
-    - "Approved Marblehead Museum request to block three parking spaces at Jeremiah Lee Mansion on August 31, 2024"
-    - "Approved consent agenda including meeting minutes, event permits, and surplus declaration"
-    - "Approved contracts with New Era Technology ($42,000), First American (3-year lease for police interceptor, $21,745.70), and Collins Engineering ($9,600)"
-    - "Approved one-day liquor licenses for Marblehead Arts Association (September 13, October 18–19, 2024)"
-    - "Held Board of Assessors $62,000 revaluation transfer request pending CFO consultation and procurement review"
+    - "Approved VFW Post 2005 request to use Spirit of 76 image on challenge coins"
+    - "Approved Marblehead Museum request to block three parking spaces in front of Jeremiah Lee Mansion on August 31, 2024"
+    - "Approved consent agenda items including meeting minutes and event permits"
+    - "Approved contracts with New Era Technology ($42,000), First American lease for Explorer Police Interceptor ($21,745.70), and Collins Engineering ($9,600)"
+    - "Approved one-day liquor licenses for Marblehead Arts Association (September 13, October 18, October 19, 2024)"
   votes:
     - motion: "Conditional offer of employment to Taylor Nolasco"
       result: "in favor (unanimous)"
-    - motion: "Engagement letter with Hinckley Allen for bond counsel"
+    - motion: "Letter of engagement with Hinkley Allen for bond counsel"
       result: "in favor (unanimous)"
     - motion: "Appoint Lisa Palmer and Meredith Rearden to Council on Aging"
       result: "in favor (unanimous)"
-    - motion: "VFW challenge coin image use approval"
+    - motion: "VFW Spirit of 76 challenge coin image use"
       result: "in favor (unanimous)"
-    - motion: "Marblehead Museum parking space block August 31"
+    - motion: "Marblehead Museum parking spaces for Lafayette bicentennial"
       result: "in favor (unanimous)"
     - motion: "Consent agenda items"
       result: "in favor (unanimous)"
@@ -47,144 +47,128 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 3
     end_seconds: 176
-    headline: "Resident raises concerns about police tasing incident and high-speed chase"
-    dek: "Mr. Jordan asked the board and Police Chief for accountability on two recent incidents involving Marblehead residents."
-    summary: "A resident identified as Mr. Jordan addressed the board with concerns about two recent incidents: a high-speed chase on a busy summer day and a reported tasing incident in which a police officer was subsequently suspended. He asked whether the officer would be retrained before being given a taser again, and expressed concern about liability exposure and public safety."
-    key_speakers: ["Mr. Jordan (resident at mic)", "Police Chief King"]
+    headline: "Resident raises concerns about high-speed chase and taser incident involving police"
+    dek: "A resident asked about officer retraining and town liability following two recent police incidents."
+    summary: "Resident Mr. Jordan addressed the board and Police Chief King regarding two recent incidents: a high-speed chase near a beach area and a tasing incident in which a resident was reportedly tased in the back. He questioned whether the suspended officer would be retrained before being issued a taser again and expressed concern about liability and public safety."
+    key_speakers: ["Mr. Jordan (resident)", "Police Chief King"]
   - topic: admin-housekeeping
     topic_confidence: 0.92
     start_seconds: 176
     end_seconds: 2065
-    headline: "Task Force Against Discrimination marks 35th anniversary, requests budget line item"
-    dek: "Co-chairs Helene Hayslett and Diane Gora presented programming highlights and asked for a dedicated budget of approximately $1,500–$2,500 annually."
+    headline: "Task Force Against Discrimination marks 35th anniversary, requests line-item budget"
+    dek: "Co-chairs Helene Hayslett and Diane Gora presented a year in review and asked for a budget allocation of approximately $1,500–$2,500 annually."
     summary: |
-      The Select Board held a joint session with the Task Force Against Discrimination (TFAD), which was established August 2, 1989 following hate crimes at the JCC and Temple Emanuel. Co-chairs Helene Hayslett and Diane Gora, along with members Reese Alberg, Gene Gustafer, Chris Brew, Joe Whipple, and Police Chief King, described the year's programming including Black History Month reading groups, an AAPI cultural event, Juneteenth celebration, Indigenous People's Day proclamation, International Holocaust Remembrance Day, and Pride flag-raising support.
+      The Task Force Against Discrimination appeared before the Select Board to mark 35 years since its founding in August 1989, following antisemitic hate crimes. Members described current programming including a Black History Month family reading program, a Pride flag-raising ceremony, an Asian American Pacific Islander celebration, a Juneteenth event, and Indigenous People's Day. Co-chair Helene Hayslett noted that two openings exist on the committee.
       
-      The task force requested a budget line item, estimating approximately $1,500–$2,500 per year, noting that members currently self-fund printing and promotional materials. Board members expressed general support and asked for a written proposal with itemized costs. The town administrator offered to explore interim printing support through town resources. The board encouraged TFAD to submit a formal proposal ahead of the next budget season.
-    key_speakers: ["Helene Hayslett (TFAD co-chair)", "Diane Gora (TFAD co-chair)", "Reese Alberg (TFAD member)", "Gene Gustafer (TFAD member)", "Chris Brew (TFAD member)", "Joe Whipple (TFAD member, original 1989 member)", "Chief King (Police Chief / TFAD member)", "Jay Morrison (Racial Justice Team liaison)"]
+      The task force requested a modest line-item budget allocation — estimated between $1,500 and $2,500 per year — noting that members currently self-fund printing and promotional materials. Board members expressed general support and asked the task force to submit a written proposal detailing programming needs and costs ahead of the next budget season. The town administrator offered to explore interim printing support through town offices.
+    key_speakers: ["Helene Hayslett (TFAD co-chair)", "Diane Gora (TFAD co-chair)", "Reese Alberg (TFAD member)", "Gene Gustafer (TFAD member)", "Chris Brew (TFAD member)", "Joe Whipple (TFAD member)", "Police Chief King", "Jay Morrison"]
   - topic: public-safety
     topic_confidence: 0.97
     start_seconds: 2065
     end_seconds: 2228
-    headline: "Board approves conditional employment offer to Taylor Nolasco as Marblehead police officer"
-    dek: "Chief King recommended Nolasco, a 14-year Marblehead resident and Marblehead High graduate with a master's degree from Endicott College, pending standard pre-employment exams."
-    summary: "Police Chief King requested a conditional offer of employment for Taylor Nolasco as a permanent full-time police officer, effective September 9, 2024 or the first date of an eligible police academy. The offer is conditioned on successful completion of the Commonwealth of Massachusetts physical abilities test, a complete physical exam, and psychological evaluation. The board approved unanimously."
-    key_speakers: ["Chief King (Police Chief)", "Taylor Nolasco (candidate)"]
+    headline: "Board approves conditional employment offer to Taylor Nolasco as full-time police officer"
+    dek: "Chief King recommended Nolasco, a 14-year Marblehead resident and Endicott College graduate, for permanent full-time officer status effective September 9, 2024."
+    summary: "Police Chief King requested and the board unanimously approved a conditional offer of employment to Taylor Nolasco as a permanent full-time police officer. The offer is conditioned on successful completion of the Commonwealth of Massachusetts physical abilities test, a complete physical exam, and a psychological exam. The effective date is September 9, 2024, or the first date of an eligible police academy."
+    key_speakers: ["Police Chief King", "Taylor Nolasco (candidate)"]
   - topic: admin-housekeeping
     topic_confidence: 0.88
     start_seconds: 2228
-    end_seconds: 2491
+    end_seconds: 2902
     headline: "Town administrator updates board on new state ADU law, sustainability grant, and bicycle plan"
-    dek: "House 4977, signed into law, allows ADUs by right on single-family properties statewide effective February 2025, superseding more restrictive local bylaws."
+    dek: "House 4977, signed by the governor, requires municipalities to allow accessory dwelling units by right effective February 2025."
     summary: |
-      Town Administrator provided three updates:
+      The town administrator provided three updates:
       
-      **ADU Law (House 4977):** The new state law allows one accessory dwelling unit by right on any single-family property, subject to size limits (no more than 900 sq ft and no more than half the primary dwelling). It takes effect 180 days from passage — February 2, 2025. The law supersedes local bylaws that are more restrictive, eliminating public hearing requirements and owner-occupancy restrictions. Properties within a half-mile of a bus or train station may be exempt from parking requirements. Planning staff are reviewing pending applications.
+      1. **ADU Legislation (House 4977):** The new state law requires all municipalities to allow one accessory dwelling unit by right on single-family properties. ADUs must be no more than 900 square feet and no more than half the size of the primary dwelling. Owner-occupancy requirements and family restrictions are no longer permissible. The law takes effect February 2, 2025, superseding more restrictive local bylaws. Staff are reviewing how pending applications under the current bylaw will be processed.
       
-      **Marblehead Sustainability Heritage Project:** A joint grant with Salem is exploring how to reconcile historic district preservation requirements with energy efficiency improvements. Approximately 30 participants attended a recent walking tour of properties that have implemented efficiency technologies in historic districts.
+      2. **Marblehead Sustainability Heritage Project:** A joint grant with Salem is funding work to reconcile energy efficiency goals (such as heat pumps and insulation) with historic district preservation requirements. A walkthrough of historic district properties was held with approximately 30 participants.
       
-      **Comprehensive Bicycle Plan:** A community engagement workshop with approximately 30 participants was held at Town Hall. Outreach and input are ongoing.
-    key_speakers: ["Town Administrator (Thatcher)"]
+      3. **Bicycle Plan Engagement:** A community workshop on developing a comprehensive bicycle plan was held at Town Hall with approximately 30 participants.
+    key_speakers: ["Town Administrator"]
   - topic: bonding-capital
     topic_confidence: 0.97
-    start_seconds: 2491
+    start_seconds: 2902
     end_seconds: 3313
     featured: true
-    headline: "Board approves Hinckley Allen as bond counsel, projected to save ~20% over prior firm"
-    dek: "Hinckley Allen's fixed-fee structure would have saved approximately $38,000 across five recent bond issuances, including 60% savings on the most recent May note."
+    headline: "Board approves Hinkley Allen as bond counsel, projected to save ~20% over prior fees"
+    dek: "Over five prior bond issuances, Hinkley Allen's fee structure would have been approximately $38,000 less than what the town paid; on the most recent note issuance, their fee would have been 60% lower."
     summary: |
-      Representatives Chris Musette and Antonio Martini of Hinckley Allen presented a proposal to serve as bond counsel for the town. The CFO recommended the engagement after reviewing historical fee comparisons.
+      Chris Musette and Antonio Martini of Hinkley Allen presented a client engagement letter for bond counsel services. The firm's fixed-fee structure provides cost predictability, with fees payable from bond or note proceeds. Staff analysis showed Hinkley Allen's fees would have been approximately $38,000 less than the town's actual payments over five prior issuances — an average savings of about 20%. On the most recent May note issuance, their fee would have been approximately 60% lower.
       
-      | Metric | Detail |
-      |---|---|
-      | Projected savings over 5 issuances | ~$38,000 (avg. ~20%) |
-      | Savings on most recent May note | ~60% vs. prior counsel |
-      | Fee structure | Fixed fee, payable from bond/note proceeds |
-      | Termination | At-will by town |
-      
-      The firm noted it does not sell bonds (that role remains with financial advisor Hilltop Securities) but drafts legal documents and issues bond opinions. The board voted unanimously to authorize the chair to sign the engagement letter.
-    key_speakers: ["Chris Musette (Hinckley Allen)", "Antonio Martini (Hinckley Allen)", "Town Administrator (Thatcher)"]
+      The town's existing financial advisor, Hilltop Securities, would remain in place. The engagement is terminable at will. The board unanimously approved authorizing the chair to sign the engagement letter.
+    key_speakers: ["Chris Musette (Hinkley Allen)", "Antonio Martini (Hinkley Allen)", "Town Administrator"]
   - topic: admin-housekeeping
     topic_confidence: 0.95
     start_seconds: 3313
-    end_seconds: 3769
-    headline: "Board appoints Lisa Palmer and Meredith Rearden to Council on Aging"
-    dek: "Both candidates are longtime Marblehead residents already active at the COA; they fill two vacancies on three-year terms expiring June 2027."
+    end_seconds: 3786
+    headline: "Board appoints Lisa Palmer and Meredith Rearden to Council on Aging through June 2027"
+    dek: "Both candidates are longtime Marblehead residents with existing volunteer ties to the COA."
     summary: |
-      Two applicants were interviewed for vacancies on the Council on Aging:
+      The board interviewed and unanimously appointed two candidates to fill Council on Aging vacancies for three-year terms expiring June 2027.
       
-      - **Lisa Palmer (Connor):** 25-year Marblehead resident; background in graphic design, medical administration (Mass General), and higher education; current COA volunteer (lunch program, Triad Committee).
-      - **Meredith Rearden:** Marblehead native; retired Marblehead Public Schools counselor (13 years); co-founded the COA book group; active in exercise programs and the Marblehead Police Academy.
-      
-      The board voted unanimously to appoint both to three-year terms expiring June 2027.
-    key_speakers: ["Lisa Palmer (COA applicant)", "Meredith Rearden (COA applicant)"]
+      - **Lisa Palmer** (listed as Lisa Connor at the mic) has lived in Marblehead over 25 years, has backgrounds in medical administration and graphic design, and has been volunteering at the COA as a lunch server and on the Triad Committee.
+      - **Meredith Rearden** was born and raised in Marblehead, worked as a school counselor in Marblehead Public Schools for 13 years, and has been active at the COA since retiring in 2021, co-founding its book group.
+    key_speakers: ["Lisa Palmer (applicant)", "Meredith Rearden (applicant)"]
   - topic: recreation-events
-    topic_confidence: 0.93
-    start_seconds: 3769
-    end_seconds: 4388
-    headline: "VFW Post 2005 receives approval to use Spirit of 76 image on challenge coin"
-    dek: "New Post Commander Ronnie Knight presented a five-point plan to reenergize the VFW, including a September 14 charity walk benefiting service dogs for veterans with PTSD."
+    topic_confidence: 0.92
+    start_seconds: 3786
+    end_seconds: 4373
+    headline: "VFW Post 2005 granted permission to use Spirit of 76 image on challenge coins"
+    dek: "Commander Ronnie Knight described a five-point plan to reenergize the post, including a September 14 charity walk benefiting veterans with PTSD."
     summary: |
-      VFW Post 2005 Commander Ronnie Knight requested and received approval to use the Spirit of 76 image on a challenge coin to recognize donors, volunteers, and veterans. Coins will also be sold to the public with proceeds supporting future printings and charitable donations.
+      VFW Post 2005 Commander Ronnie Knight requested and received board approval to use an image of the Spirit of 76 on challenge coins to recognize donors and volunteers. The coins will also be sold to the public as keepsakes, with proceeds supporting future printings and charitable donations.
       
-      Knight also highlighted upcoming events:
-      - **Classic Car Show:** Thursday August 15, 5 p.m. to dusk at the Post
-      - **Company to Heroes Patriot Spirit 5K/Walk/Ruck:** September 14, 2024 — a charity event supporting service dogs for veterans with PTSD, organized by Kate Van Oen (retired Army, Bronze Star for Valor)
-      
-      Knight recognized State Representative Jenny Armini for assistance with the Post's Massachusetts Lottery agent application.
-    key_speakers: ["Ronnie Knight (VFW Post 2005 Commander)", "Kate Van Oen (Company to Heroes founder)"]
+      Knight also previewed upcoming events: a classic car show (August 15), and the Company of Heroes Patriot Spirit 5K/ruck march on September 14, 2024, benefiting a program that provides service dogs to veterans with PTSD. East Regiment Beer Company, owned by a former Navy SEAL, is a sponsor.
+    key_speakers: ["Ronnie Knight (VFW Post 2005 Commander)", "Kate Van Oen (Company of Heroes founder)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.82
-    start_seconds: 4388
-    end_seconds: 9389
-    headline: "Board of Assessors' $62,000 revaluation request held pending CFO and procurement review"
-    dek: "The Board of Assessors sought to advance FY26 revaluation work into FY25 at a cost of $62,000 from the reserve fund, but the select board directed them to consult the CFO and confirm Chapter 30B compliance first."
+    topic_confidence: 0.75
+    start_seconds: 4373
+    end_seconds: 9482
+    headline: "Assessors' $62,000 revaluation transfer request sent back for CFO review and procurement check"
+    dek: "The Board of Assessors sought to front-load FY26 revaluation work into FY25 to address database errors, but the Select Board raised concerns about 30B procurement compliance, the CFO not being consulted, and the HR process for filling the vacant assessor position."
     summary: |
-      Board of Assessors Chairman John Kelly and member Jonathan Otterman presented a request to transfer $62,000 from the town's reserve fund (balance approximately $144,000) to fund revaluation work in FY25 rather than FY26, arguing this would allow the department to correct database errors identified in an outside consultant's report before the next tax bills are issued.
+      Board of Assessors Chair John Kelly and member Jonathan Otterman presented a request to transfer approximately $62,000 from the Finance Committee reserve fund to conduct revaluation work in FY25 — one year earlier than the scheduled FY26 revaluation — to address errors in the property assessment database discovered after a staff departure.
       
-      **Key context:**
-      - The department's full-time assistant assessor position is vacant following a personnel action
-      - Database errors from the prior fiscal year resulted in over $500,000 in abatements
-      - Preliminary tax bills were issued using FY25 values and rates rather than the required prior-year figures, requiring correction
-      - An additional error placed a multiplier of 1.52 on building values in the historic district
-      - Patriot Properties hosts the assessing database and has a contract for building permit processing
+      **Background on the database errors:** The prior assistant assessor applied incorrect land value multipliers across multiple neighborhoods (e.g., one area increased 41%, another decreased 2% inexplicably). Subsequent billing errors also occurred when FY25 values and tax rates were loaded for preliminary bills instead of the prior year's figures. An outside consultant's report detailed the errors; it was withheld as a personnel document until legal counsel cleared its release.
+      
+      **The proposal:** Engaging Catalyst (a branch of Patriot Properties) to do the full revaluation field work now, publish preliminary values for public review before tax bills are issued, and allow residents to flag concerns. The assessors argued the net two-year cost would be the same as doing the work in FY26 as scheduled.
       
       **Board concerns raised:**
-      - The CFO had not been consulted on funding sources or the proposal
-      - HR was not involved in drafting the job posting for the vacant assistant assessor position; the posting lacks a salary range and minimum years of experience
-      - Whether the $62,000 contract requires a Chapter 30B competitive procurement process (threshold is $50,000)
-      - Whether the same vendor responsible for hosting the database should conduct the revaluation work without a competitive bid
-      - The title "assistant assessor" may limit the applicant pool; board suggested considering "chief assessor" or updating requirements
+      - CFO Alicia had not been consulted on funding sources or amounts.
+      - The request represents approximately 43% of the $144,000 reserve fund, two months into the fiscal year.
+      - Possible MGL Chapter 30B procurement requirements if the $62,000 engagement exceeds 25% of the existing Patriot Properties contract.
+      - The assessor vacancy posting lacked a salary range, listed only a bachelor's degree as a minimum requirement, and was not coordinated with HR or run through the compensation committee.
+      - The title "assistant assessor" may deter experienced candidates who hold chief assessor roles elsewhere.
+      - Whether revaluation work done by the same vendor that maintained the flawed database is sufficient to restore public confidence.
       
-      **Outcome:** The request was not voted on. The board directed the assessors to: (1) meet with CFO Alicia [last name not captured] to identify alternative funding sources including potential overlay surplus; (2) confirm Chapter 30B procurement requirements; (3) update the job posting with salary range and experience requirements in consultation with HR; and (4) return no later than the August 28 Select Board meeting with a complete proposal.
-    key_speakers: ["John Kelly (Board of Assessors Chair)", "Jonathan Otterman (Board of Assessors member)", "Town Administrator (Thatcher)"]
+      **Outcome:** No vote was taken. The board directed the assessors to: (1) consult CFO Alicia to identify the most appropriate funding source; (2) confirm 30B procurement status; (3) work with HR on the job posting, salary range, and minimum qualifications; and (4) return no later than the August 28 Select Board meeting.
+      
+      The vacant position carries an annual salary of approximately $102,000, generating roughly $8,000/month in savings that could offset the revaluation cost.
+    key_speakers: ["John Kelly (Board of Assessors Chair)", "Jonathan Otterman (Board of Assessors member)", "Town Administrator"]
   - topic: recreation-events
-    topic_confidence: 0.94
-    start_seconds: 9389
+    topic_confidence: 0.93
+    start_seconds: 9482
     end_seconds: 9691
-    headline: "Marblehead Museum receives approval to block three parking spaces for Lafayette bicentennial reenactment"
-    dek: "On August 31, 2024, a Lafayette reenactor will arrive by horse and carriage at the Jeremiah Lee Mansion to mark the 200th anniversary of his 1824 farewell tour visit to Marblehead."
-    summary: "Lauren, representing the Marblehead Museum, requested approval to block three parking spaces directly in front of the Jeremiah Lee Mansion (161 Washington Street) from noon to 1:00 PM on Saturday, August 31, 2024. The event commemorates the exact 200th anniversary of the Marquis de Lafayette's visit to Marblehead during his 1824 farewell tour. A reenactor will arrive by horse and carriage, with police detail arranged in coordination with Chief King. The horse and carriage will immediately relocate to the Masonic Lodge parking lot after the arrival. The board approved unanimously, subject to approval from police, fire, and DPW."
+    headline: "Board approves three parking spaces for Marblehead Museum's Lafayette bicentennial event August 31"
+    dek: "The museum will host a reenactment of Lafayette's 1824 visit, including a horse and carriage arriving at the Jeremiah Lee Mansion."
+    summary: "Marblehead Museum representative Lauren requested and received approval to block three parking spaces in front of the Jeremiah Lee Mansion (161 Washington Street) on Saturday, August 31, 2024 from noon to 1:00 PM. The spaces are needed for a Lafayette reenactor arriving by horse and carriage to mark the 200th anniversary of the Marquis de Lafayette's farewell tour stop in Marblehead. The event is free and open to the public. A police detail is arranged and the horse and carriage will move to the Masonic Lodge parking lot after the arrival. Approval was granted subject to sign-off from police, fire, and DPW."
     key_speakers: ["Lauren (Marblehead Museum, remote)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 9691
     end_seconds: 10075
-    headline: "Board approves consent agenda, three contracts, and one-day liquor licenses"
-    dek: "Routine approvals included meeting minutes, event permits, a surplus declaration, IT and police vehicle contracts, and liquor licenses for the Marblehead Arts Association."
+    headline: "Consent agenda, event permits, and three town contracts approved"
+    dek: "Contracts included IT services, a police vehicle lease, and engineering closeout support totaling approximately $73,000."
     summary: |
-      The board approved the following by unanimous vote:
+      The board approved the consent agenda including meeting minutes, event permits (Marblehead Youth Hockey 5K, BNS Fitness Wicked Half Marathon, Rotary Club 5K, Rotary sign replacement, surplus items declaration), one-day liquor licenses for the Marblehead Arts Association, and three contracts:
       
-      **Consent agenda:** Meeting minutes (June 11, July 24, August 2, 2024); Marblehead Youth Hockey 5K date revision to October 26; BNS Fitness Wicked Half Marathon (September 22); Rotary Club 5K (November 3); surplus items declaration; Marblehead Rotary sign replacement.
+      | Vendor | Purpose | Amount |
+      |---|---|---|
+      | New Era Technology | IT services | $42,000 |
+      | First American | 3-year lease, Explorer Police Interceptor | $21,745.70 |
+      | Collins Engineering | Marblehead Shipyard Resiliency Project closeout | $9,600 |
       
-      **Contracts:**
-      - New Era Technology: IT services, $42,000
-      - First American: 3-year lease for Explorer Police Interceptor, $21,745.70
-      - Collins Engineering: closeout support for Marblehead Shipyard and Resiliency Project, $9,600
-      
-      **One-day liquor licenses:** Marblehead Arts Association (8 Hooper Street) for September 13, October 18, and October 19, 2024 events, subject to standard conditions.
-      
-      The board also received letters of interest from Chris Butler (Historical Commission) and Maura Darley Rocco (Disabilities Commission), setting an application deadline of August 23 with interviews planned for the August 28 meeting.
+      The board also set an application deadline of August 23 for open vacancies on the Historical Commission (1 seat) and Disabilities Commission (2 seats), with interviews planned for the August 28 meeting. Harbor board applicant interviews were also planned for that meeting.
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

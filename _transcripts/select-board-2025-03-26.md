@@ -11,37 +11,39 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Board appoints Jim Maher to Water & Sewer Commission; approves Verizon cable renewal"
-  summary: "The Select Board and Water and Sewer Commission held a joint meeting to interview three candidates for a vacancy on the Water and Sewer Commission, unanimously appointing Jim Maher, a retired CDM Smith vice president with 30 years of water and wastewater engineering experience. The board also approved a five-year cable television renewal license with Verizon New England, including a $210,000 capital grant to MHTV. Additional business included licensing approvals for a new beach retail shop, a proclamation for Sexual Assault Awareness Month, and a discussion of MBTA 3A zoning and the state auditor's unfunded mandate determination."
+  headline: "Select Board appoints Jim Maher to Water & Sewer Commission; approves Verizon cable renewal"
+  summary: "The Select Board and Water & Sewer Commission jointly interviewed three candidates and unanimously appointed Jim Maher to fill the vacancy left by a deceased commissioner. The board also approved a five-year cable television renewal license with Verizon New England, including a $210,000 capital grant to MHTV. Additional actions included licensing approvals for a new Washington Street beach shop, a Boston Yacht Club manager change, and a sexual assault awareness month proclamation."
   decisions:
-    - "Approved appointment of Jim Maher to the Water and Sewer Commission"
-    - "Approved Verizon New England cable television renewal license effective March 26, 2025"
-    - "Approved change of manager at Boston Yacht Club to Lori Moore"
-    - "Approved secondhand dealer's license, sign permit, entertainment license, and three amusement device licenses for Local Noon at 92 Washington Street"
+    - "Approved appointment of Jim Maher to the Water & Sewer Commission"
+    - "Approved five-year cable television renewal license with Verizon New England"
+    - "Approved change of manager to Lori Moore for Boston Yacht Club"
+    - "Approved secondhand dealer license, sign, entertainment license, and three amusement device licenses for Local Noon at 92 Washington Street"
     - "Approved appointment of Maura Darley Rocco to the Task Force Against Discrimination"
-    - "Approved proclamation designating April 2025 as Sexual Assault Awareness Month"
-    - "Approved proclamation designating April 25, 2025 as Arbor Day"
-    - "Approved temporary parking restrictions on Pleasant Street and Roland Street for water main upgrades through June 5, 2025"
-    - "Approved consent agenda including surplus declarations, Arbor Day proclamation, and animal inspector appointment"
-    - "Approved contract change orders including Cliff Street boatyard underground storage tank ($16,650) and Gary Street Playground time extension"
-    - "Approved Gary Playground phase two contract with Crowley Catrell for $30,000"
+    - "Approved Sexual Assault Awareness Month proclamation for April 2025"
+    - "Approved Arbor Day proclamation for April 25, 2025"
     - "Approved handicapped parking space at 118 Front Street"
-    - "Approved seasonal all-alcoholic and Sunday entertainment license renewals for Dolphin Yacht Club"
+    - "Approved temporary parking restrictions on Pleasant Street and Roland Street through June 5, 2025"
+    - "Approved consent agenda including surplus declarations, Rotary Club holiday event, and animal inspector appointment"
+    - "Approved change order for Cliff Street boatyard underground storage tank project ($16,650)"
+    - "Approved contract extension for Gary Street Playground to December 31, 2025 at no cost change"
+    - "Approved Gary Playground phase two contract for $30,000"
+    - "Approved seasonal all-alcoholic club license and Sunday entertainment license renewal for Dolphin Yacht Club"
   votes:
     - motion: "Place all three Water & Sewer Commission candidates in nomination"
       result: "in favor (unanimous)"
-    - motion: "Appoint Jim Maher to Water and Sewer Commission"
+    - motion: "Appoint Jim Maher to Water & Sewer Commission"
       result: "in favor (unanimous)"
-    - motion: "Grant Verizon New England cable television renewal license"
+    - motion: "Approve Verizon cable television renewal license effective March 26, 2025"
       result: "in favor (unanimous)"
     - motion: "Approve Boston Yacht Club change of manager to Lori Moore"
       result: "in favor (unanimous)"
-    - motion: "Approve Local Noon secondhand dealer's license"
+    - motion: "Approve Local Noon secondhand dealer license"
       result: "in favor (unanimous)"
     - motion: "Approve Local Noon sign permit"
       result: "in favor (unanimous)"
-    - motion: "Approve Local Noon entertainment license"
+    - motion: "Approve Local Noon annual and Sunday entertainment license"
       result: "in favor (unanimous)"
     - motion: "Approve Local Noon three amusement device licenses"
       result: "in favor (unanimous)"
@@ -51,11 +53,11 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Proclaim April 25, 2025 as Arbor Day"
       result: "in favor (unanimous)"
+    - motion: "Establish handicapped parking space at 118 Front Street"
+      result: "in favor (unanimous)"
     - motion: "Approve temporary parking restrictions for water main upgrades"
       result: "in favor (unanimous)"
-    - motion: "Approve consent agenda items"
-      result: "in favor (unanimous)"
-    - motion: "Approve contract consent agenda items"
+    - motion: "Approve consent agenda contracts"
       result: "in favor (unanimous)"
     - motion: "Renew Dolphin Yacht Club all-alcoholic seasonal club license"
       result: "in favor (unanimous)"
@@ -67,228 +69,158 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 13
     end_seconds: 200
-    headline: "Resident raises safety, staffing costs, and housing affordability concerns"
-    dek: "A resident commented on sign safety at public meetings, municipal hiring costs, and the affordability of housing in Marblehead."
-    summary: |
-      A resident raised several concerns during public comment:
-      
-      - Criticized large signs being brought into public buildings and doorways being blocked, citing state fire codes and safety risks to older residents.
-      - Expressed fatigue over the ongoing MBTA 3A debate and costs of related litigation.
-      - Questioned the need for additional administrative hires, referencing a new grants coordinator and a proposed contracts position, and suggested using stipends for existing employees instead.
-      - Expressed concern about rising property taxes, the cost of town employee raises, and the lack of genuinely affordable housing for longtime residents.
-    key_speakers: ["Resident (mic only)"]
+    headline: "Resident raises concerns about sign safety, staffing costs, and housing affordability"
+    dek: "A resident addressed the board about signage safety at public meetings, administrative hiring costs, and the affordability of housing in Marblehead."
+    summary: "A resident opened public comment by raising concerns about large signs being carried in public buildings, citing safety and fire-code access issues. The resident also questioned the pace of new administrative hires given budget constraints, suggested using existing employees on stipends rather than new full-time positions, and expressed concern about housing affordability for longtime residents as property values rise."
+    key_speakers: ["Resident at mic"]
   - topic: admin-housekeeping
     topic_confidence: 0.97
-    start_seconds: 200
-    end_seconds: 245
-    headline: "Select Board opens joint meeting with Water & Sewer Commission to fill vacancy"
-    dek: "The chair announced a joint meeting with the Water and Sewer Commission to interview three candidates for an open commission seat."
-    summary: "Following public comment, the chair noted a hand raised online did not persist and moved to the second agenda item: a joint meeting with the Water and Sewer Commission to fill a vacancy created by the passing of a commissioner. Three candidates were to be interviewed in alphabetical order."
-    key_speakers: ["Madam Chair (Select Board)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.93
     start_seconds: 245
     end_seconds: 2575
     featured: true
     headline: "Jim Maher unanimously appointed to Water & Sewer Commission after three-candidate interview"
-    dek: "The Select Board and Water and Sewer Commission jointly interviewed Jim Maher, Tim Meyer, and Tom Vail before unanimously selecting Maher, a retired CDM Smith vice president."
+    dek: "The Select Board and Water & Sewer Commission jointly interviewed three candidates and voted unanimously to appoint retired engineer Jim Maher to fill the vacancy left by the death of a sitting commissioner."
     summary: |
-      The board conducted structured interviews with three candidates for the Water and Sewer Commission vacancy:
+      The Select Board convened a joint meeting with the Water and Sewer Commission to fill a vacancy on the commission. Three candidates were interviewed in alphabetical order: Jim Maher (retired Vice President and engineer at CDM Smith with 30 years of water/wastewater experience including the South Essex Sewage District secondary treatment plant), Tim Meyer (Finance Committee member and liaison to the Water and Sewer Commission for four years, with family background in water authority governance), and Tom Val (industrial controls manager with experience overseeing SCADA systems for a major metropolitan sewer district).
       
-      **Jim Maher** – Retired in 2022 after 30 years at CDM Smith (formerly Camp Dresser McKee), retiring as Vice President and Technical Delivery Manager. He was engineer of record on the South Essex Sewage District secondary treatment plant (1993–1998) and has extensive MWRA experience. He attended the March 4 commission meeting to observe budget discussions and pulled nomination papers to run for the three-year elected term.
-      
-      **Tim Meyer** – Served four to five years on the Finance Committee, including four years as the finance liaison to the Water and Sewer Commission. Background in running a family stone quarry in New Jersey, working with local sewer and water departments. His father served 20 years as chair of the North Jersey Water Authority. Meyer indicated he would resign from FinCom if appointed, noting it would not affect quorum or the commission's already-voted budget. He also pulled nomination papers.
-      
-      **Tom Vail** – Moved to Marblehead five years ago. Spent 10 years with the Metropolitan Council in Minnesota overseeing control systems (SCADA) for a 92-million-gallon-per-day sewage treatment plant and 144 pumping stations. Currently oversees an industrial controls department at Interstate Electric. He had not attended a Water and Sewer Commission meeting prior to the interview but stated he would review meeting minutes and budgets to familiarize himself.
-      
-      **Vote:** All six voting members (select board and commissioners present) selected Jim Maher, with the result declared unanimous. Maher was directed to be sworn in at the town clerk's office before the next commission meeting on Tuesday, April 1.
-    key_speakers: ["Jim Maher (candidate)", "Tim Meyer (candidate)", "Tom Vail (candidate)", "Madam Chair (Select Board)", "Commissioner Bart Hay", "Commissioner Murray", "Commissioner Grader", "Commissioner Fox", "Moses (commissioner or board member)"]
+      After deliberation, all board and commission members voted for Jim Maher, citing his comprehensive engineering resume, deep knowledge of MWRA and South Essex Sewage District operations, and ability to hit the ground running. Maher noted he had already pulled nomination papers to run for the full three-year term at the next election. The Water and Sewer Commission then adjourned its portion of the joint meeting.
+    key_speakers: ["Jim Maher (candidate)", "Tim Meyer (candidate)", "Tom Val (candidate)", "Board Chair (Madam Chair)", "Moses (commissioner)", "Brett (commissioner/select board member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.92
-    start_seconds: 2620
+    start_seconds: 2649
     end_seconds: 3034
-    headline: "Town Administrator reports on digitization project, new assistant engineer hire, and grants"
-    dek: "The Town Administrator highlighted an 84-box document digitization effort, a new assistant engineer starting March 31, a $100,000 historic window grant application, and a State Street bathroom HVAC upgrade."
+    headline: "Town Administrator reports digitization project, new assistant engineer hire, and fire station grant"
+    dek: "The Town Administrator provided updates including shipment of 84 bankers boxes for document digitization, a new assistant engineer starting March 31, and a $100,000 grant application for Franklin Street Fire Station historic window restoration."
     summary: |
-      Town Administrator updates included:
+      The Town Administrator reported that the document digitization project, led by Town Engineer Maggie Wheeler, has shipped 84 bankers boxes containing 3,120 folio files — the oldest dating to 1845 — to a vendor for scanning. Engineering documents are being digitized first, with planning documents next.
       
-      - **Digitization project**: 84 bankers boxes (3,120 folio files) shipped to a vendor to scan engineering documents, the oldest dating to 1845. Planning documents will follow in the current and next fiscal year budgets.
-      - **New assistant engineer**: Caroline Dalton starts March 31, filling the position previously held by Maggie Wheeler before her promotion to Town Engineer.
-      - **Historic windows grant**: A $100,000 grant was submitted to restore historic windows at the Franklin Street Fire Station.
-      - **MBTA 3A public engagement**: Events scheduled March 31 (Abbott Hall), April 15 (Council on Aging), and April 16 (Sustainable Marblehead), with one or two more planned before town meeting.
-      - **Gary School Playground (Elm Street)**: Phase two kicking off, covering design, purchase of site amenities, and construction, funded by community fundraising.
-      - **State Street bathroom**: McKay Plumbing and Heating installing an air source heat pump for year-round operation; a fence to screen equipment is budgeted for the next fiscal year. Completion expected this summer.
+      A new assistant engineer, Caroline Dalton, begins March 31. A $100,000 grant was submitted to restore historic windows at the Franklin Street Fire Station. Staff are conducting multiple public engagement meetings on the MBTA 3A zoning issue, with events scheduled March 31, April 15, and April 16, and one or two more planned before Town Meeting. The former Gary School Playground project is entering phase two. An HVAC contractor is installing an air source heat pump at the State Street restroom facility to enable year-round access, expected to be completed by summer.
     key_speakers: ["Town Administrator (Thatcher)"]
   - topic: permits-zoning
     topic_confidence: 0.95
-    start_seconds: 3034
+    start_seconds: 3075
     end_seconds: 3458
-    headline: "Board approves five-year Verizon cable TV renewal license with $210,000 capital grant to MHTV"
-    dek: "The Cable Television Advisory Committee presented a renewed license with Verizon New England including a $210,000 capital grant and 5% of gross revenues continuing to fund public access station MHTV."
+    headline: "Select Board approves five-year Verizon cable TV renewal license with $210,000 capital grant to MHTV"
+    dek: "The Cable Television Advisory Committee presented and the Select Board unanimously approved a five-year renewal license with Verizon New England, securing continued funding for MHTV at 5% of gross revenues and a capital grant of $210,000."
     summary: |
-      Cable Television Advisory Committee Chair Bob Peck and Attorney William Solomon presented the Verizon New England cable television renewal license for board approval.
+      Cable Television Advisory Committee Chair Bob Peck, member Ruth Ferguson, and town counsel Attorney William Solomon presented the Verizon renewal license for board approval. Key terms include:
       
-      Key terms:
-      - **Term**: Five years with an opt-out option for Verizon after three years
-      - **PEG funding**: 5% of gross revenues, consistent with the prior license and with the existing Comcast agreement
-      - **Capital grant**: $210,000 for the five-year cycle, higher than the prior Verizon license period; a small incremental payment from the old contract was removed in exchange for the increased capital grant
-      - **Channels**: Three standard definition channels and one high definition channel; provisions for electronic guide and on-demand contingent on adoption elsewhere in the Commonwealth
-      - **Effective date**: March 26, 2025
+      | Term | Detail |
+      |------|--------|
+      | License length | 5 years (with 3-year opt-out option for Verizon) |
+      | PEG access funding | 5% of gross revenues (unchanged) |
+      | Capital grant to MHTV | $210,000 (more than prior cycle) |
+      | Channels | 3 standard definition + 1 high definition |
       
-      Peck noted declining subscriptions and potential federal deregulation as drivers of the three-year opt-out provision. The board voted unanimously to approve.
-    key_speakers: ["Bob Peck (Cable Television Advisory Committee Chair)", "Attorney William Solomon (town counsel, remote)"]
+      Peck noted that declining cable subscriptions and potential federal deregulation create some risk of Verizon exercising the three-year opt-out. The board voted unanimously to approve the license effective March 26, 2025.
+    key_speakers: ["Bob Peck (Cable Television Advisory Committee Chair)", "Ruth Ferguson (committee member)", "Attorney William Solomon (town counsel, remote)"]
   - topic: permits-zoning
-    topic_confidence: 0.9
-    start_seconds: 3458
-    end_seconds: 3581
-    headline: "Board approves Boston Yacht Club change of manager to Lori Moore"
-    dek: "Lori Moore, three-year general manager of the Boston Yacht Club, received unanimous board approval for a change of manager on the club's liquor license."
-    summary: "Lori Moore appeared before the board to request a change of manager on the Boston Yacht Club's liquor license. Moore identified herself as the general manager of the club for the past three years. The board approved the application subject to receipt of required fees and documents and ABCC approval."
-    key_speakers: ["Lori Moore (Boston Yacht Club GM)"]
-  - topic: permits-zoning
-    topic_confidence: 0.92
-    start_seconds: 3581
-    end_seconds: 3740
-    headline: "New beach retail shop Local Noon receives four licenses for 92 Washington Street"
-    dek: "Amy Conney's planned beach goods and mixed-use retail space received unanimous approval for a secondhand dealer's license, sign permit, entertainment license, and three amusement device licenses."
+    topic_confidence: 0.93
+    start_seconds: 3503
+    end_seconds: 3719
+    headline: "Board approves Boston Yacht Club manager change and four licenses for new beach shop Local Noon"
+    dek: "The board approved a change of manager at Boston Yacht Club and granted a secondhand dealer license, sign permit, entertainment license, and three amusement device licenses to new Washington Street business Local Noon."
     summary: |
-      Amy Conney, a Marblehead resident, presented plans for Local Noon at 92 Washington Street (formerly the Fat Face location). The shop will sell beach products including swimwear, towels, and chairs, while also hosting rotating artist pop-ups and arcade games for families.
+      Lori Moore was approved as the new general manager of the Boston Yacht Club, subject to ABCC approval.
       
-      The board approved four license requests unanimously:
-      1. Secondhand dealer's license
-      2. Sign permit for a sign overhanging the public way
-      3. Annual and Sunday entertainment license for acoustical music, Monday–Sunday 10 AM–6 PM (music not audible from street)
-      4. Three automatic amusement device licenses at $100 each
-    key_speakers: ["Amy Conney (applicant/resident)"]
+      Amy Conney presented plans for Local Noon, a beach retail store with rotating artist pop-ups and arcade games at 92 Washington Street (former Fat Face location). The board unanimously approved four separate licenses: a secondhand dealer's license, a sign permit for a sign overhanging the public way, an annual and Sunday entertainment license for acoustical music (Mondays–Sundays, 10 AM–6 PM, music not audible from the street), and three automatic amusement device licenses at $100 each.
+    key_speakers: ["Lori Moore (Boston Yacht Club General Manager)", "Amy Conney (Local Noon applicant)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 3740
-    end_seconds: 3879
+    end_seconds: 3834
     headline: "Maura Darley Rocco appointed to Task Force Against Discrimination"
-    dek: "A Marblehead health educator who had informally participated in the task force was unanimously appointed to fill a vacancy."
-    summary: "Maura Darley Rocco, a health educator at Veterans Middle School, was appointed to the Task Force Against Discrimination with a term expiring June 2025. She noted prior informal participation at task force meetings and described alignment between its mission and her professional work in comprehensive health education, including a recent seventh-grade advocacy project on reducing stigma related to mental health."
+    dek: "The board unanimously appointed Maura Darley Rocco, a health educator at Veterans Middle School, to the Task Force Against Discrimination with a term expiring June 2025."
+    summary: "Maura Darley Rocco described her background as a health educator and prior participation in Task Force meetings at the invitation of a current member. She noted alignment between this role and her work on the Disabilities Commission. The board unanimously approved her appointment."
     key_speakers: ["Maura Darley Rocco (appointee)"]
   - topic: 40b-mbta
     topic_confidence: 0.97
     start_seconds: 3879
     end_seconds: 4753
-    headline: "Board discusses state auditor's unfunded mandate finding on MBTA 3A; April 2 injunction hearing noted"
-    dek: "Two board members summarized a conversation with the State Auditor on her unfunded mandate determination, noting she viewed the issue as easily remedied by converting discretionary grants to a budget line item."
+    headline: "Board discusses State Auditor's unfunded mandate determination on MBTA 3A compliance costs"
+    dek: "Two board members summarized a conversation with the State Auditor, who explained that her unfunded mandate finding turned on direct compliance costs being funded through discretionary grants rather than a budget line item, and that the issue could be remedied by the legislature."
     summary: |
-      Two board members (described as chair and one other) reported on a phone conversation with the State Auditor following an introduction through Finance Committee Chair Alec Wilby during a meeting with the state auditor's office.
+      Two select board members reported on a conversation with State Auditor Diana DiZoglio following her appearance at a conference with the state auditor's office. Key takeaways discussed:
       
-      **Key points from the conversation:**
-      - The auditor's unfunded mandate determination was triggered by EOHLC's financial impact statement claiming zero direct costs to municipalities for 3A compliance, which the auditor found internally inconsistent given that millions in technical assistance grants had been distributed.
-      - The auditor's office determines only *whether* a mandate is funded, not the *amount* of funding.
-      - The distinction between direct and indirect costs: direct costs (compliance/planning work) are what the unfunded mandate statute covers; infrastructure costs post-adoption (roads, water, sewer) are deemed indirect and outside the statute's scope.
-      - The auditor believed the issue could be easily remedied if EOHLC converted the discretionary technical assistance grants to a guaranteed budget line item.
-      - She stated she is a supporter of 3A and views her determination as separate from the law's validity.
-      - Marblehead received grants covering all its planning costs with no out-of-pocket expense.
+      - The auditor's determination that MBTA 3A is an unfunded mandate was triggered by the Executive Office of Housing and Livable Communities (EOHLC) submitting a financial impact statement claiming zero direct costs, while simultaneously distributing millions in discretionary grants to municipalities for compliance.
+      - The auditor considers grants discretionary and therefore not funded; she indicated the determination could be remedied if the legislature converted technical assistance funding to a budget line item.
+      - The auditor expressed the view that infrastructure costs (roads, water, sewer) resulting from future development constitute indirect costs, not direct costs, and fall outside the scope of her determination.
+      - It is EOHLC, not the state auditor, that determines what qualifies as a direct cost.
+      - An April 2 hearing on an injunction request was noted as the next relevant legal milestone; the SJC appeal process has already concluded.
+      - The board discussed Marblehead's grant fully covering its compliance costs, leaving no out-of-pocket expense, and debated whether to explore a petition to the legislature.
       
-      **Upcoming:** An injunction hearing is scheduled for April 2 (not an appeal; the SJC appeal is concluded).
-      
-      Board members discussed keeping open the possibility of a petition filing, noting that supporting 3A and filing a petition are not mutually exclusive. Salem was cited as having received a roughly $1 million infrastructure grant after compliance.
-    key_speakers: ["Madam Chair (Select Board)", "Board member (Select Board)", "Town Administrator (Thatcher)"]
+      Board members noted Salem recently received a $1 million infrastructure grant. Discussion concluded with general agreement to keep an open mind about potential petitions while awaiting court developments.
+    key_speakers: ["Select Board Chair (Madam Chair)", "Dan (select board member)", "Board members"]
   - topic: admin-housekeeping
     topic_confidence: 0.82
-    start_seconds: 4753
-    end_seconds: 5930
-    headline: "Board discusses cross-departmental operational collaboration; facilities management gap identified"
-    dek: "Board members proposed forming a working group with other elected boards to explore shared operational resources, citing the absence of a centralized facilities department as one gap."
-    summary: |
-      The chair initiated a discussion on improving coordination among elected boards and commissions, citing informal conversations with cemetery commissioners and Recreation & Parks as evidence of interest.
-      
-      Topics raised:
-      - Using centralized town resources (HR, finance, engineering) across all boards rather than siloed operations
-      - The absence of a dedicated facilities department was highlighted; the town has approximately seven buildings outside the schools currently overseen informally with a building commissioner stipend
-      - Recreation & Parks was noted as having independently begun drafting its own HR policies, an example of duplication the board hoped to address
-      - Board members agreed this effort should be complementary to, not duplicative of, the Town Administrator's ongoing operational restructuring
-      - Consensus that the initiative should originate from the Select Board as the chief executive board, not the town moderator
-      - Next steps: continue conversations; potential retreat or working group with elected board representatives; item to return to a future agenda
-    key_speakers: ["Madam Chair (Select Board)", "Board members (Select Board)", "Town Administrator (Thatcher)"]
+    start_seconds: 4767
+    end_seconds: 5224
+    headline: "Board discusses cross-department operational review and potential inter-board collaboration"
+    dek: "Board members discussed initiating a collaborative operational review with other elected boards, citing facilities management and centralized HR as areas for potential improvement."
+    summary: "A board member raised the idea of a more formal operational review process involving other elected boards (cemetery, recreation and parks, schools) to identify areas of duplicated effort or inefficiency. Discussion touched on the absence of a dedicated facilities department, the ongoing rollout of centralized HR, and the need to involve unions and department heads. Board members generally supported the concept as complementary to the Town Administrator's ongoing reorganization efforts. The board agreed to continue the conversation and bring it back to a future agenda, with the approach to come from the Select Board rather than the moderator."
+    key_speakers: ["Select Board Chair (Madam Chair)", "Dan (select board member)", "Brett (select board member)"]
   - topic: recreation-events
-    topic_confidence: 0.88
+    topic_confidence: 0.85
     start_seconds: 5930
     end_seconds: 7267
-    headline: "Megan Sweeney presents women's history initiative; board approves Sexual Assault Awareness Month proclamation"
-    dek: "Community organizer Megan Sweeney proposed a series of projects to honor Marblehead women in public spaces and requested proclamations for sexual assault and domestic violence awareness months."
+    headline: "Resident presents women's history research and requests proclamations, veterans monument, and public recognition"
+    dek: "Megan Sweeney presented a proposal to better honor Marblehead women in public spaces, including a women's veterans monument, portraits in Abbott Hall, and proclamations on sexual assault awareness and domestic violence."
     summary: |
-      Megan Sweeney presented a women's history initiative during Women's History Month, calling for:
+      Megan Sweeney delivered a presentation during Women's History Month highlighting research into Marblehead women's contributions across military service, civic leadership, education, and community care. She noted difficulty finding and aggregating women's historical records.
       
-      - A proclamation designating April as Sexual Assault Awareness Month (approved unanimously)
-      - A future proclamation for Domestic Violence Awareness Month
-      - A women's veterans monument
-      - Public gardens and plantings (referred to as 'Ms. Rums campaign')
-      - Women's portraits in Abbott Hall, referencing the absence of images of Joyce Mafei, noted as Marblehead's first woman on the Select Board
-      - Easily searchable online archives of women's contributions
-      - Collaboration with Marblehead Forever, the Historic Commission, the town historian, and the Marblehead Museum
+      She requested the board:
+      - Adopt proclamations for Sexual Assault Awareness Month (April) and Domestic Violence Awareness Month
+      - Support a women's veterans monument
+      - Designate space for women's portraits in Abbott Hall
+      - Establish more easily searchable online archives of women's contributions
+      - Support a community beautification initiative she called the 'Ms. Rumphius Campaign'
       
-      Sweeney noted support from Representative Armini, two state senators, the Women's Veterans Network, and the Essex County Commission on the Status of Women. She credited Sean Casey, a local author, for providing much of the research on women who served in World War II. A board member identified Flossie Amero as a personally meaningful figure on the list and noted a tradition of valuing women's strength in Marblehead.
-    key_speakers: ["Megan Sweeney (community organizer/resident)", "Board member (Select Board)"]
+      She cited support from Representative Armini, two state senators, the Women's Veterans Network, and the Essex County Commission on the Status of Women. The board adopted the Sexual Assault Awareness Month proclamation unanimously. Board members noted the work of researcher Sean Casey and mentioned Marblehead native Major General Megan Quigley as an example of notable women to recognize.
+    key_speakers: ["Megan Sweeney (presenter)", "Select Board Chair (Madam Chair)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 7267
     end_seconds: 7412
-    headline: "Board approves consent agenda including surplus items, holiday event permit, and animal inspector"
-    dek: "Routine consent agenda items were approved unanimously, including surplus disposal of a display case and generator, a holiday event permit, and an animal inspector appointment."
-    summary: |
-      Consent agenda items approved unanimously:
-      - Minutes of February 26, 2025
-      - Declare surplus: Historic Commission display case and a Kohler generator from the police station
-      - Rotary Club of Marblehead request for Holiday Pops at Abbott Hall, December 12–15, 2025
-      - Appointment of Daniel Pool as Inspector of Animals, term expiring April 30, 2026
-    key_speakers: ["Madam Chair (Select Board)"]
+    headline: "Board approves consent agenda including surplus equipment, Rotary Club event, and animal inspector appointment"
+    dek: "Consent agenda approved minutes, declared surplus a historical commission display case and a Kohler generator, permitted a holiday pops event in December, and appointed a new inspector of animals."
+    summary: "The board approved minutes of February 26, 2025, declared surplus a historical commission display case and a Kohler generator from the police station, approved the Rotary Club of Marblehead's request for a Holiday Pops event December 12–15, 2025 at Abbott Hall, and appointed Daniel Pool as Inspector of Animals through April 30, 2026."
   - topic: recreation-events
     topic_confidence: 0.88
     start_seconds: 7364
-    end_seconds: 7458
+    end_seconds: 7412
     headline: "Board proclaims April 25, 2025 as Arbor Day; 22 trees to be planted at Getches Playground"
-    dek: "The Tree Warden's fifth annual volunteer program will plant 22 trees at Getches Playground and 100 Holly Winterberry seedlings in conservation areas on April 27."
-    summary: "The Select Board unanimously approved a proclamation designating April 25, 2025 as Arbor Day for Marblehead. The Tree Warden, working with Sustainable Marblehead and the MHS Green Honor Society, is coordinating planting of 22 trees at Getches Playground and 100 Holly Winterberry seedlings in conservation areas on April 27. The program qualifies the town for Tree City USA recognition for the fifth consecutive year."
-    key_speakers: ["Madam Chair (Select Board)"]
+    dek: "The tree warden's Arbor Day program includes planting 22 trees at Getches Playground and 100 holly winterberry seedlings in conservation areas, qualifying Marblehead for Tree City USA recognition."
+    summary: "The board unanimously adopted a proclamation declaring April 25, 2025 as Arbor Day for Marblehead. The tree warden's program, now in its fifth year in partnership with Sustainable Marblehead and MHS Green Honor Society, will plant 22 trees at Getches Playground on April 25 and 100 Holly Winterberry seedlings in conservation areas on April 27."
   - topic: public-safety
-    topic_confidence: 0.88
+    topic_confidence: 0.9
     start_seconds: 7458
     end_seconds: 7553
-    headline: "Board approves handicapped parking space at 118 Front Street on police chief recommendation"
-    dek: "The police chief confirmed the request meets established town criteria; the town engineer will finalize exact placement."
-    summary: "The police chief explained that the area from the Landing Restaurant to the Barnacle on Front Street has no accessible parking in between. The request met town criteria established several years ago for handicapped spaces, which are for public use and not reserved for individual applicants. The town engineer will conduct a follow-up review to finalize exact placement. The board approved unanimously."
+    headline: "Board approves new handicapped parking space at 118 Front Street on police chief recommendation"
+    dek: "The police chief endorsed a handicapped parking space near 118 Front Street, citing no accessible parking between the Landing restaurant and the Barnacle in that area."
+    summary: "The police chief outlined the town's established criteria for handicapped parking spaces and confirmed that the gap in accessible parking between the Landing restaurant and the Barnacle at approximately 118 Front Street meets those criteria. The town engineer will determine the precise placement. The board approved the establishment of the space unanimously."
     key_speakers: ["Police Chief"]
   - topic: trash-dpw
-    topic_confidence: 0.85
+    topic_confidence: 0.92
     start_seconds: 7553
-    end_seconds: 7785
+    end_seconds: 7748
     headline: "Board approves temporary parking restrictions on Pleasant and Roland Streets for water main cleaning and lining project"
-    dek: "DPW Director Amy described bypass pipe installation for water main upgrades requiring parking restrictions through June 5, 2025; Roland Street restrictions were reduced after the bypass fit behind the sidewalk."
-    summary: |
-      DPW Director Amy presented temporary parking restrictions needed for water main cleaning and lining work, which requires excavation pits every 250 feet and bypass pipes placed along roadways.
-      
-      - **Pleasant Street** (Rockaway/Watson Street to Washington Street): 24-hour parking restriction on both sides March 27–June 5, 2025 due to narrow roadway and concern about bus and fire engine access once 4-inch bypass pipes and barrels are placed.
-      - **Roland Street** (Cross Street to Prospect Street, even-numbered side): No parking on right side; the bypass was installed on the back side of the public way, reducing the restriction, but residents are warned not to park on the sidewalk to avoid tire damage from pipe fittings.
-      
-      The director noted that restrictions will remain until the water main passes quality testing, which can extend two to three weeks after construction ends.
+    dek: "The DPW director explained that 4-inch bypass pipes required for water main upgrades necessitate no-parking zones on Pleasant Street through June 5, 2025, and parking restrictions on Roland Street."
+    summary: "DPW Director Amy explained that water main cleaning and lining work requires temporary 4-inch bypass pipes along Pleasant Street (Washington Street to Watson Street) and Roland Street. Because of the narrow width on Pleasant Street near Watson, parking must be prohibited on both sides to allow bus and fire engine access. Residents were warned that the metal pipes can puncture tires if parked adjacent to them. The Roland Street bypass was installed on the back side of the public way, requiring only a no-sidewalk-parking restriction rather than full lane closure. Restrictions run through June 5, 2025, and the bypass pipes will remain until the water main passes quality testing even after construction ends."
     key_speakers: ["Amy (DPW Director)"]
-  - topic: permits-zoning
-    topic_confidence: 0.88
+  - topic: bonding-capital
+    topic_confidence: 0.85
     start_seconds: 7831
-    end_seconds: 8005
-    headline: "Board approves contract items including $16,650 Cliff Street boatyard change order and $30,000 Gary Playground phase two award"
-    dek: "Consent agenda contracts included a change order for an underground storage tank cleanup funded by the Harbors and Waters Board and a phase two playground construction award."
-    summary: |
-      Contract consent agenda items approved unanimously:
-      
-      1. **Change Order #1, Contract 2024-050** – Cliff Street Boatyard underground storage tank cleanup, Collins Engineers, **$16,650**. Funded by the Harbors and Waters Board after the original ARPA grant window closed. Initial cleanup was funded by approximately $200,000 in state ARPA funds; additional contaminants required this additional work.
-      2. **Change Order #1, Contract 2024-16** – Gary Street Playground, Crowley Catrell, time extension to December 31, 2025 at no cost change.
-      3. **Contract 2025-007** – Gary Playground Phase Two, Crowley Catrell, **$30,000**, covering design, site amenity purchase, and construction.
-    key_speakers: ["Madam Chair (Select Board)", "Town Administrator (Thatcher)"]
+    end_seconds: 7958
+    headline: "Board approves change orders and new contract for Cliff Street tank cleanup and Gary Playground phase two"
+    dek: "Consent agenda contracts included a $16,650 change order for the Cliff Street boatyard underground storage tank cleanup funded by the Harbors and Waters Board, and a $30,000 contract for Gary Playground phase two."
+    summary: "The board approved three contract actions: (1) Change Order No. 1 on the Cliff Street boatyard underground storage tank project with Collins Engineers for $16,650, funded by the Harbors and Waters Board after ARPA funds from the state's $200,000 allocation were exhausted; (2) Change Order No. 1 extending the Gary Street Playground contract with Crowley Cotrell to December 31, 2025 at no cost; and (3) Award of contract for Gary Playground phase two with Crowley Cotrell for $30,000."
   - topic: permits-zoning
     topic_confidence: 0.9
     start_seconds: 7958
     end_seconds: 8022
-    headline: "Board renews Dolphin Yacht Club seasonal all-alcoholic and Sunday entertainment licenses"
-    dek: "The Dolphin Yacht Club at 17 Allerton Place received unanimous renewal of its seasonal club license and Sunday entertainment license, manager Scott Kelly."
-    summary: "The board approved renewal of the Dolphin Yacht Club's all-alcoholic seasonal club license and Sunday entertainment license, both subject to taxes, fees, departmental approvals, and ABCC compliance. Manager of record is Scott Kelly."
-    key_speakers: ["Madam Chair (Select Board)"]
+    headline: "Dolphin Yacht Club seasonal all-alcoholic license and Sunday entertainment license renewed"
+    dek: "The board approved seasonal renewal of the Dolphin Yacht Club's all-alcoholic club license and Sunday entertainment license via poll vote."
+    summary: "The board conducted a roll-call vote to renew the Dolphin Yacht Club's all-alcoholic seasonal club license and Sunday entertainment license at 17 Allerton Place under manager Scott Kelly, subject to all taxes, fees, and required approvals. Both motions carried unanimously."
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -11,46 +11,46 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board hears FY27 revenue forecast showing $514K decline; approves Reynolds Field design contract for $581K"
-  summary: "The Select Board received a FY27 revenue forecast projecting approximately $514,641 less available revenue than FY26, driven by declining local receipts, falling investment earnings, and cost pressures including a projected 14% health insurance increase and an estimated $800K–$1M increase in the trash contract. The board also approved a $581,290 contract with CHA and Associates for the Reynolds Field design project, funded from the Lars Anderson gift account. Several appointments, licenses, and routine contracts were approved unanimously."
+  headline: "Select Board hears FY27 revenue warning; OPEB liability falls to $142M"
+  summary: "The Marblehead Select Board received an FY27 revenue forecast projecting approximately $514,000 less available for operations than the prior year, driven by declining local receipts, lower investment earnings, and cost pressures including a projected 14% health-insurance increase and an $800,000–$1M trash-contract increase. An actuarial presentation showed the town's OPEB unfunded liability decreased slightly from $147M to $142M, with a funded ratio of 3.37%. The board also approved multiple contracts, appointments, and licensing items, and received an update that a $295,000 settlement was reached with reinstated Officer Gallo."
   decisions:
-    - "Approved appointment of Nelson Gagnan as on-call plumbing inspector through June 2026"
-    - "Approved appointment of Matthew Burke as alternate member of the Harbors and Waters Board"
-    - "Approved appointment of Suzanne Gruel to the Council on Aging through June 2028"
-    - "Approved Verizon pole relocation on Rockaway Avenue (Plan No. 187BG0E)"
-    - "Approved secondhand dealer's license for Johnny Ray Music Emporium, 31-35 Atlantic Avenue"
+    - "Approved appointment of Nelson Gagnan as on-call plumbing inspector (term to June 2026)"
+    - "Approved appointment of Matthew Burke as alternate member of Harbors and Waters Board"
+    - "Approved appointment of Suzanne Cruel to Council on Aging (term to June 2028)"
+    - "Approved Verizon pole relocation on Rockaway Avenue"
+    - "Approved secondhand dealer's license for Johnny Ray Music Emporium, 31–35 Atlantic Avenue"
     - "Continued public hearing on Dynasty wine/malt beverage license revocation to November 19, 2025"
-    - "Approved overhanging sign for 155 Washington Street subject to OHTC approval"
+    - "Approved overhanging sign at 155 Washington Street (Judy Gold)"
     - "Approved memorandum of agreement with US Army Corps of Engineers for Marblehead Shipyard Resiliency Application"
-    - "Approved $295,000 settlement agreement resolving Officer Gallo arbitration financial matters"
-    - "Approved cannabis social equity policy with 1% impact fee discount"
-    - "Approved hold harmless agreement with Town of Hingham Police Department"
+    - "Approved cannabis social equity policy with 1% impact-fee discount"
+    - "Approved hold-harmless agreement with Hingham Police Department"
     - "Approved Green Marblehead Committee reorganization replacing town planner with Community Development and Planning Director"
-    - "Approved consent agenda including October 1 and October 9, 2025 minutes and Abbott Hall Festival of Artisans permit"
-    - "Approved change order to playground lighting project contract for $13,540.12"
-    - "Approved on-call HVAC maintenance contract with General Air Conditioning Heating for $142,950"
-    - "Approved COA fencing project contract with New Generation Landscaping and Fencing for $18,500"
-    - "Approved rail trail contract time extension to December 30, 2025"
-    - "Approved Reynolds Field design contract with CHA and Associates for $581,290"
-    - "Approved three one-day liquor licenses for Old North Church, Friends of Performing Arts, and Donald Carlton Marblehead Arts Association"
-    - "Approved rail trail signage installation for Rockaway-Clifton and Smith-Pleasant Street segments"
-    - "Approved installation of OMIA recognition sign at Old Town House"
-    - "Authorized chair to respond to Town Charter Committee questionnaire"
+    - "Approved consent agenda including October meeting minutes and Abbott Hall Holiday Marketplace event"
+    - "Approved change order for Glover School playground lighting project ($13,540.12)"
+    - "Approved on-call HVAC maintenance and repair contract with General Air Conditioning Heating ($142,950)"
+    - "Approved COA fencing project contract with New Generation Landscaping ($18,500)"
+    - "Approved rail trail contract extension to December 30, 2025"
+    - "Approved Reynolds Field design contract with CHA and Associates LLP ($581,290)"
+    - "Approved three one-day liquor licenses (Old North Church, Friends of Performing Arts, Donald Carlton Marblehead Arts Association)"
+    - "Approved rail trail signage for Rockaway/Clifton and Smith/Pleasant Street segments"
+    - "Approved Old Townhouse sign for Old Marblehead Improvement Association"
+    - "Authorized Select Board chair to respond to Town Charter Committee questionnaire"
   votes:
     - motion: "Appoint Nelson Gagnan as on-call plumbing inspector"
       result: "in favor (unanimous)"
-    - motion: "Place all names in nomination for Harbors and Waters alternate member"
+    - motion: "Place all names in nomination for Harbors and Waters alternate member vacancy"
       result: "in favor (unanimous)"
     - motion: "Appoint Matthew Burke as Harbors and Waters alternate member"
       result: "in favor (3 to 2)"
-    - motion: "Appoint Suzanne Gruel to Council on Aging"
+    - motion: "Appoint Suzanne Cruel to Council on Aging"
       result: "in favor (unanimous)"
     - motion: "Approve Verizon pole relocation petition"
       result: "in favor (unanimous)"
     - motion: "Approve secondhand dealer's license for Johnny Ray Music Emporium"
       result: "in favor (unanimous)"
-    - motion: "Continue Dynasty liquor license hearing to November 19, 2025"
+    - motion: "Continue Dynasty license revocation hearing to November 19, 2025"
       result: "in favor (unanimous)"
     - motion: "Approve overhanging sign at 155 Washington Street"
       result: "in favor (unanimous)"
@@ -58,29 +58,29 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Adopt cannabis social equity policy"
       result: "in favor (unanimous)"
-    - motion: "Approve hold harmless agreement with Hingham Police Department"
+    - motion: "Approve hold-harmless agreement with Hingham Police Department"
       result: "in favor (unanimous)"
     - motion: "Approve Green Marblehead Committee reorganization"
       result: "in favor (unanimous)"
     - motion: "Approve consent agenda items"
       result: "in favor (unanimous)"
-    - motion: "Approve playground lighting change order for $13,540.12"
+    - motion: "Approve playground lighting change order ($13,540.12)"
       result: "in favor (unanimous)"
-    - motion: "Approve on-call HVAC contract with General Air Conditioning Heating for $142,950"
+    - motion: "Approve on-call HVAC contract ($142,950)"
       result: "in favor (unanimous)"
-    - motion: "Approve COA fencing contract for $18,500"
+    - motion: "Approve COA fencing contract ($18,500)"
       result: "in favor (unanimous)"
     - motion: "Approve rail trail contract time extension"
       result: "in favor (unanimous)"
-    - motion: "Approve Reynolds Field design contract for $581,290"
+    - motion: "Award Reynolds Field design contract to CHA and Associates LLP ($581,290)"
       result: "in favor (unanimous)"
     - motion: "Approve three one-day liquor licenses"
       result: "in favor (unanimous)"
     - motion: "Approve rail trail signage installation"
       result: "in favor (unanimous)"
-    - motion: "Approve OMIA recognition sign at Old Town House"
+    - motion: "Approve Old Townhouse sign for OMIA"
       result: "in favor (unanimous)"
-    - motion: "Authorize chair to respond to Charter Committee questionnaire"
+    - motion: "Authorize chair to respond to Town Charter Committee questionnaire"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -89,337 +89,313 @@ topic_segments:
     start_seconds: 0
     end_seconds: 27
     headline: "No public comment received at opening"
-    dek: "The chair opened and closed the public comment period with no speakers."
-    summary: "The chair called the meeting to order on Wednesday, October 22, 2025, noted the meeting was being recorded, and opened public comment. No members of the public or online participants offered comment, and the period was closed."
+    dek: "Chair opened and closed public comment with no speakers in person or online."
+    summary: "The chair called the meeting to order on October 22, 2025, noted the meeting was being recorded, and opened public comment. No members of the public commented in person or online, and the comment period was closed."
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 27
     end_seconds: 1174
-    headline: "Town Administrator reports $50K and $35K state earmarks; $2.8M in grants lost to MBTA 3A non-compliance"
-    dek: "Representative Jenny and Senator Creighton secured earmarks for cemetery irrigation and police firearms training, while the town was deemed ineligible for approximately $2.8 million in grants after losing MBTA 3A compliance."
+    headline: "Town Administrator reports $50K and $35K state earmarks; $2.8M in grants lost due to 3A non-compliance"
+    dek: "State earmarks for cemetery irrigation and police firearms training were restored by the town's legislative delegation, while MBTA 3A non-compliance rendered approximately $2.8M in pending grants ineligible."
     summary: |
-      The Town Administrator reported two state earmarks secured through the local legislative delegation: $50,000 for repairs and irrigation at the Waterside Cemetery and $35,000 for updated firearms training for the police department.
+      The Town Administrator reported two restored state earmarks: $50,000 for repairs and irrigation at Waterside Cemetery, and $35,000 for updated firearms training for the police department, secured through Representative Jenny and Senator Creighton.
       
-      The administrator also outlined that the town applied for multiple grants through the One Stop and Coastal Zone Management programs covering the Harvard projects, Abbott Hall attic historic storage, rail trail projects, the Washington Street Corridor, Coffin School reuse, a downtown parking study, a vacant storefront tax credit program, and the State Street and Tucker Wharf Resilience Project. After the MBTA 3A referendum vote rendered the town non-compliant, all of these grant applications — totaling approximately **$2,816,493** in potential funding — were deemed ineligible. Staff stated the town will continue applying for all eligible grants.
+      On the grant front, the town applied for multiple grants through the One Stop and Coastal Zone Management program totaling approximately $2,816,493. Following the referendum vote that took the town out of MBTA 3A compliance, the town was deemed ineligible for all of those grants. Staff indicated they intend to continue applying and will let state agencies determine eligibility on a grant-by-grant basis.
       
-      The administrator noted the Village Street Bridge project has reached 25% design funded through the Metropolitan Planning Organization (MPO/TIP process) and is working toward 75% design. Whether MBTA 3A non-compliance will affect that process has not been definitively answered.
+      The Village Street Bridge project is at 25% design, with the next step being 75% design funded through the Metropolitan Planning Organization (TIP process). It remains unclear whether 3A non-compliance will affect the project's position in the TIP conveyor belt.
       
-      The Council on Aging roof project and the Mary Alley building roof project (both approved at prior town meetings via debt exclusions) are underway, with the Mary Alley project expected to take about four weeks.
+      The Council on Aging roof project and Mary Alley building roof project are both underway, funded by previously approved debt exclusions; the Mary Alley project is expected to take approximately four weeks.
       
-      A Coffin School reuse update was provided: the community development and planning department held a meeting with immediate neighbors, issued a request for information (RFI) to potential developers, and plans a broader public meeting in early-to-mid November. Recommendations are expected to be presented to the Select Board around the end of 2025 or early 2026, after which a request for proposals (RFP) would be released. Four town departments submitted potential municipal uses: Parks and Recreation (dog park), the Electric Light Department (battery storage), the Housing Authority (housing), and the Cemetery Department (cemetery expansion).
-    key_speakers: ["Town Administrator", "Select Board Chair"]
-  - topic: override
-    topic_confidence: 0.92
+      The Coffin School reuse process was outlined: internal department input has been collected (park and rec dog park, electric light battery storage, housing authority housing, and cemetery expansion were among requests), a neighbor meeting was held, a Request for Information has been issued to potential developers, and a broader public meeting is planned for the first or second week of November. Recommendations are expected to be presented to the Select Board around the end of the calendar year or early new year, at which point an RFP would be issued.
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: school-budget
+    topic_confidence: 0.72
     start_seconds: 1174
-    end_seconds: 3339
+    end_seconds: 2081
     featured: true
-    headline: "FY27 revenue forecast projects $514K decline; Finance Committee flags path toward general override"
-    dek: "Town Accountant Alicia and Finance Committee Chair Alec presented a preliminary FY27 revenue forecast showing revenues declining approximately $514,641 from FY26, with major cost pressures including a projected 14% health insurance increase and an $800K–$1M trash contract increase."
+    headline: "FY27 revenue forecast projects $514K shortfall; 14% health-insurance hike and $800K trash increase flagged"
+    dek: "Finance Director Alicia presented the annual revenue forecast showing total projected revenues of approximately $109.2M, down roughly $514,000 from FY26, with major cost pressures from health insurance, the trash contract, and pension obligations."
     summary: |
-      Town Accountant Alicia presented the annual October revenue forecast, covering FY25 actuals, FY26 budget, and FY27 projections.
+      Finance Director Alicia presented the FY27 revenue forecast, noting that property taxes — approximately 80% of the town's revenue — grow by roughly $2.2M per year under the Proposition 2½ cap. State aid is projected to increase by only 1%, and local receipts are projected at approximately $8.1M, down from $10M actual in FY25, driven by declining motor vehicle excise taxes, lower investment earnings (dropping from a peak of roughly $2M+ to approximately $800,000 as interest rates fall from 5% to 3.75% and ARPA balances are spent down), and other factors.
       
-      **Key revenue lines (FY27 projected):**
+      | Revenue Category | FY25 Actual | FY26 Budget | FY27 Projected |
+      |---|---|---|---|
+      | Property taxes (approx.) | — | — | +$2.2M growth |
+      | State aid | $9.0M | $8.96M | $9.05M (+1%) |
+      | Local receipts | ~$10M | ~$8.87M | ~$8.1M |
+      | Free cash to operating budget | $7M (FY25) | — | ~$5M (est.) |
+      | **Total revenues** | — | — | **~$109.2M** |
       
-      | Revenue Source | FY27 Projection | Notes |
-      |---|---|---|
-      | Property taxes (Prop 2½ cap) | +~$2.2M year-over-year | ~80% of total revenue |
-      | State aid | ~$9M | Projected +1%; primarily Chapter 70 and UGGA |
-      | Local receipts | ~$8.1M | Down from ~$10M FY25 actual |
-      | Free cash to operating budget | ~$5M | Estimated range $4M–$6M, not yet certified |
-      | **Total revenues** | **~$109.2M** | Down ~$514,641 from FY26 |
+      Key cost pressures identified:
+      - **Health insurance**: projected 14% increase for FY27, approximately $1.5–$1.6M more than FY26; GLP-1 drugs, aging population, and hospital utilization cited as drivers
+      - **Trash contract**: estimated $800,000–$1M increase when new contract is bid
+      - **Pension**: approximately $900K annual increase
+      - **Personnel**: 80% of budget; union contracts settled at ~3%
+      - **ARPA funds**: fully spent by end of 2026, eliminating a one-time revenue buffer
       
-      **Major cost pressures flagged for FY27:**
-      - Health insurance: projected **14% increase** (approximately $1.5–$1.6M above FY26)
-      - Trash contract: estimated increase of **$800K–$1M**
-      - Personnel costs (80% of budget): union contracts at ~3% increases
-      - Pension: increases of just under $1M per year
-      - ARPA funding fully spent by end of FY26
-      - Grant reductions from MBTA 3A non-compliance adding pressure to capital costs
-      
-      **Free cash concerns:** The board discussed the ongoing practice of using free cash to balance the operating budget. Free cash was certified at $9.5M last year; it is expected to be certified at a lower amount (potentially $2–$3M less) for FY26. Board members and the Finance Committee chair emphasized the need to reduce reliance on free cash for operations, build the stabilization fund (currently ~$1.5M), and fund OPEB.
-      
-      Finance Committee Chair Alec noted that a three-year revenue-versus-expense forecast presentation is planned for early December. He confirmed most union contracts are settled, and budget requests to departments are due November 17th on a level-funded basis (same as FY26, with justification required for any contractual increases).
-      
-      > "Our next step is a general override. We haven't had one since 2005, to sustain our high quality services." — Town Accountant Alicia
-      
-      Board members noted that the combination of declining revenues, rising costs outpacing the 2.5% property tax cap, and dwindling free cash reserves make a general override discussion increasingly likely.
-    key_speakers: ["Alicia (Town Accountant)", "Alec (Finance Committee Chair)", "Select Board members"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 3339
-    end_seconds: 4207
-    headline: "Actuary presents OPEB valuation showing unfunded liability down slightly to $142M"
-    dek: "Parker Elmo of a municipal actuarial firm presented the updated OPEB valuation, noting the unfunded liability decreased from $147M to approximately $142M, with the discount rate dropping from 5.74% to 5.51%."
+      Fin Comm Chair Alec (online) noted that free cash certified last year at approximately $9.5M, with $1M going to capital, $500K to reserves, and $1M unappropriated; FY27 free cash is estimated at $4–$6M with $5M projected for the operating budget. Board members expressed concern about continued reliance on free cash to balance the budget and the need to adhere to financial policies around reserves. The stabilization fund currently holds approximately $1.5M. The Town Administrator noted that the next step is a general override, the town's first since 2005.
+    key_speakers: ["Alicia (Finance Director)", "Alec (Finance Committee Chair, remote)"]
+  - topic: health-insurance
+    topic_confidence: 0.95
+    start_seconds: 2081
+    end_seconds: 2969
+    headline: "OPEB actuary reports unfunded liability fell to $142M; 14% health-insurance increase projected"
+    dek: "Actuary Parker Elmo presented the annual OPEB valuation showing the unfunded liability declined from $147M to $142M, while warning that double-digit health-insurance increases are the new near-term normal."
     summary: |
-      Actuary Parker Elmo presented the town's updated GASB OPEB (Other Post-Employment Benefits) valuation.
+      Actuary Parker Elmo of a national municipal actuarial firm presented the annual GASB OPEB valuation for Marblehead.
       
       **Key figures:**
-      
       | Metric | Prior Year | Current Year |
       |---|---|---|
-      | Total OPEB liability | $151M | $147M (then revised to $142M unfunded) |
-      | Unfunded liability | $147M | $142M |
-      | Assets | $4.5M | $4.9M |
-      | Asset return | — | ~8.9% |
+      | Total OPEB liability | $151M | $147M (prior) → $142M unfunded |
       | Funded ratio | — | 3.37% |
+      | Trust assets | $4.5M | $4.9M (8.9% return) |
       | Discount rate | 5.74% | 5.51% |
+      | Annual service cost | — | ~$3.3M |
+      | Pay-as-you-go cost to retirees | ~$6M | ~$6–$7M |
       
-      Factors reducing the liability: higher-than-expected employee turnover (-$10M) and a decrease in the number of retirees and covered spouses (-$13M). Factors increasing the liability: the lower discount rate (+$4M) and premium increases above projections (+$2.6M).
+      The liability decreased due to higher-than-expected turnover (saving ~$10M) and a decrease in retirees and covered spouses (~$13M reduction), partially offset by a lower discount rate (+$4M liability) and higher-than-expected premiums (+$2.6M liability).
       
-      The presenter noted 19 active employees over age 65 remain on non-Medicare plans, adding approximately $7M to the liability. The service cost per active employee is approximately $5,200 per year.
+      Elmo noted 19 active employees over age 65 remaining on non-Medicare plans, adding approximately $7M to the liability. He described the current liability level as near peak in percentage-of-budget terms given Massachusetts demographic trends.
       
-      The presenter characterized Marblehead as near "peak liability" as a percentage of budget, given New England's aging and non-growing population demographics. He noted that 14% health insurance increases are actually on the low end of what municipalities are currently seeing (some as high as 30%).
+      On health insurance, Elmo stated that the 14% increase Alicia projected is actually at the low end of what he is currently seeing (15–30% ranges elsewhere), driven by GLP-1 drug costs, higher hospital utilization, and provider rate increases. He noted that Medicare Advantage plans are seeing provider withdrawals in some states, limiting that as a cost-saving tool.
       
-      Board members discussed the long-term strategy of treating pension and OPEB as a combined retirement liability, with OPEB funded from pension surplus once the pension system approaches full funding. A formal OPEB funding plan is to be submitted. The town has a financial policy contributing approximately the 2.5% statutory minimum annually.
-    key_speakers: ["Parker Elmo (actuary)", "Alicia (Town Accountant)", "Select Board members"]
+      For long-term funding strategy, Elmo suggested treating pension and OPEB as a single retirement liability bucket, noting that as the pension system approaches full funding (per state mandate), freed-up dollars could migrate to OPEB funding. He confirmed Massachusetts limits municipalities' ability to change benefit eligibility, retirement age, premium share above 50%, or spouse coverage rules.
+    key_speakers: ["Parker Elmo (OPEB actuary)", "Alicia (Finance Director)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.95
-    start_seconds: 4207
-    end_seconds: 4395
-    headline: "Nelson Gagnan appointed on-call plumbing inspector through June 2026"
-    dek: "Building Commissioner Steve recommended Gagnan as backup plumbing inspector ahead of the current inspector's knee replacement surgery."
-    summary: "Building Commissioner Steve presented Nelson Gagnan for appointment as an on-call plumbing inspector, noting the existing inspector is scheduled for knee replacement surgery and that having a backup is legally required. Gagnan has experience as a backup plumbing inspector in several other municipalities including Salem. The board voted unanimously to appoint him through June 2026."
+    topic_confidence: 0.9
+    start_seconds: 2969
+    end_seconds: 4298
+    headline: "On-call plumbing inspector Nelson Gagnan appointed unanimously"
+    dek: "Building Commissioner Steve recommended Nelson Gagnan as on-call plumbing inspector to cover the current inspector's knee replacement surgery; the board approved unanimously."
+    summary: "Building Commissioner Steve presented Nelson Gagnan for appointment as on-call plumbing inspector, noting the current inspector is undergoing knee replacement surgery and that having a backup inspector is a legal requirement. Gagnan has prior experience working with the Building Commissioner in Salem and serves as backup plumbing inspector in several other towns. The board voted unanimously to appoint him with a term expiring June 2026."
     key_speakers: ["Steve (Building Commissioner)"]
   - topic: admin-housekeeping
     topic_confidence: 0.88
-    start_seconds: 4395
-    end_seconds: 6097
-    headline: "Matthew Burke appointed as alternate member of Harbors and Waters Board in 3–2 vote"
-    dek: "Three candidates — Matthew Burke, Andy Garnets, and John Lucas — were interviewed for one alternate vacancy; Burke was selected on the first ballot."
+    start_seconds: 4298
+    end_seconds: 6066
+    headline: "Matthew Burke appointed to Harbors and Waters Board alternate seat over two other qualified candidates"
+    dek: "Three applicants — Matthew Burke, Andy Garnets, and John Lucas — interviewed for a single alternate vacancy; Burke was selected 3–2 on the strength of his commercial captain's license and logistics/budgeting background."
     summary: |
-      The board conducted interviews for one alternate member vacancy on the Harbors and Waters Board, interviewing three candidates:
+      The board interviewed three candidates for one alternate member vacancy on the Harbors and Waters Board:
       
-      - **Matthew Burke**: 14-year resident, commercial captain background, current director of transportation for DSG Logistics; cited logistics and budgeting experience and active harbor use.
-      - **Andy Garnets**: Commercial construction estimator/project manager with 20 years' experience managing projects up to $150M; active with the Marblehead Anglers Club; cited public harbor access and finance background.
-      - **John Lucas**: Born and raised in Marblehead, Virginia Tech computer engineer, works on submarine systems at Portsmouth Naval Shipyard; cited maritime engineering and project management experience.
+      - **Matthew Burke**: 14-year resident, former commercial captain, currently Director of Transportation at DSG Logistics; highlighted logistics, budgeting, and on-the-water experience at West Shore
+      - **Andy Garnets**, 8 Partly Street: commercial construction estimator/project manager handling $10M–$150M projects; active member of Marblehead Anglers Club; emphasized budgeting and project management experience
+      - **John Lucas**: Marblehead native, Virginia Tech computer engineer, works on fast-attack submarines at Portsmouth Naval Shipyard; highlighted systems engineering, maritime engineering background, and project management
       
-      Following interviews, the board took a roll-call vote. Sisson, Singer, and a third member voted for Burke (majority of 3); Fox and Grader voted for Garnets. Burke was appointed. The board encouraged all three candidates to continue volunteering with town boards and committees.
-    key_speakers: ["Matthew Burke (applicant)", "Andy Garnets (applicant)", "John Lucas (applicant)", "Select Board members"]
+      Board members noted all three candidates were highly qualified and encouraged the two not selected to continue volunteering. The vote was 3–2 for Burke (Sisson, Degrader/Singer voting Burke; Fox and one other voting Garnets). Burke will need to be sworn in at the Town Clerk's office before attending his first meeting.
+    key_speakers: ["Matthew Burke (applicant)", "Andy Garnets (applicant)", "John Lucas (applicant)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.95
-    start_seconds: 6097
-    end_seconds: 6284
-    headline: "Suzanne Gruel appointed to Council on Aging through June 2028"
-    dek: "Gruel, a Marblehead resident of over 50 years with finance and nonprofit board experience, has been involved with the COA since 2012."
-    summary: "The board interviewed and unanimously appointed Suzanne Gruel to the Council on Aging with a term expiring June 2028. Gruel highlighted over 50 years of Marblehead residency, extensive nonprofit board and finance experience, and continuous involvement with the Council on Aging and Friends of the Council on Aging since 2012."
-    key_speakers: ["Suzanne Gruel (applicant)"]
+    topic_confidence: 0.92
+    start_seconds: 6066
+    end_seconds: 6238
+    headline: "Suzanne Cruel appointed unanimously to Council on Aging"
+    dek: "Cruel, a 50-year Marblehead resident with extensive nonprofit and COA board experience since 2012, was appointed unanimously to a term expiring June 2028."
+    summary: "Suzanne Cruel was the sole applicant for the Council on Aging vacancy. She noted over 50 years of Marblehead residency, extensive finance and nonprofit board experience, and involvement with the COA board and Friends of the Council on Aging since 2012. The board voted unanimously to appoint her with a term expiring June 2028."
+    key_speakers: ["Suzanne Cruel (applicant)"]
   - topic: recreation-events
-    topic_confidence: 0.8
-    start_seconds: 6284
-    end_seconds: 6744
-    headline: "Veterans Services and VFW report active fall schedule; POW/MIA chair for Abbott Hall proposed"
-    dek: "VFW Commander Ron Knight and Veterans Services Officer Ro outlined upcoming events including Veterans Day on November 11 and a December 13 Army-Navy event, and proposed installing a POW/MIA chair at Abbott Hall at a cost of approximately $600–$700."
+    topic_confidence: 0.85
+    start_seconds: 6238
+    end_seconds: 6553
+    headline: "Veterans Day ceremony set for November 11; VFW proposes POW/MIA chair for Abbott Hall"
+    dek: "Veterans Services Agent Ro and VFW Commander Ron Knight outlined the November 11 ceremony program and upcoming events, and proposed installing a POW/MIA chair at Abbott Hall for approximately $600–$700."
     summary: |
-      Veterans Services Officer Ro and VFW Post Commander Ron Knight briefed the board on upcoming veterans events:
+      Veterans Services Agent Ro and VFW Post Commander Ron Knight presented upcoming veterans events:
       
-      - **Read Across America** event held the prior Saturday raised funds for over 800 items
-      - **November 8**: New England Center for Homeless Veterans donation event at the VFW
-      - **November 11**: Veterans Day ceremony at Abbott Hall; Moses Grader confirmed for the proclamation, chorus director and taps performer confirmed; followed by brunch at the VFW
-      - **November 15**: Hosting Py Broden and Brian Ware for the Marblehead Food Pantry
-      - **December 13**: Army-Navy event at the VFW (planning committee of nine people)
+      - **Veterans Day, November 11**: Ceremony at Abbott Hall area; three speakers lined up, chaplain, chorus director, and taps performer (Collins) confirmed. Congressman Moulton's separate event moved to November 10 evening.
+      - **November 8**: New England Center for Homeless Veterans fundraiser at the VFW
+      - **November 15**: Marblehead Food Pantry event at VFW
+      - **December 13**: Army-Navy game watch event at VFW, planning committee of nine underway
       
-      The VFW proposed installing a POW/MIA chair at Abbott Hall, citing that approximately 136 surrounding towns have such a chair. Estimated cost is approximately $600–$700 for the chair, flags, and stanchions (plaque pricing still pending), with the VFW offering to help sponsor costs. A formal vote was deferred to the next meeting agenda.
-    key_speakers: ["Ro (Veterans Services Officer)", "Ron Knight (VFW Commander)"]
+      Commander Knight praised the Veterans Services Agent's work, noted claims are significantly up since the PACT Act expanded to cover more bases and branches.
+      
+      The VFW proposed installing a POW/MIA commemorative chair at Abbott Hall. Research indicated approximately 136 towns in Massachusetts have such chairs, typically at town hall or local VFW posts. Estimated cost is approximately $600–$700 for chair, flags, and stanchions, plus a plaque (pricing pending). The VFW offered to contribute to the cost. The board indicated it would place the matter on the next agenda for a formal vote.
+    key_speakers: ["Ro (Veterans Services Agent)", "Ron Knight (VFW Commander)"]
   - topic: permits-zoning
     topic_confidence: 0.95
-    start_seconds: 6744
-    end_seconds: 7310
-    headline: "Board approves Verizon pole relocation on Rockaway Avenue to accommodate rail trail"
-    dek: "A joint pole (P18-1) will be moved approximately 15 feet northwest to clear the newly constructed rail trail pathway."
+    start_seconds: 6553
+    end_seconds: 7257
+    headline: "Verizon utility pole relocation on Rockaway Avenue approved to clear rail trail path"
+    dek: "The board held a public hearing and approved Verizon's petition to relocate one joint-use pole approximately 15 feet to clear the newly constructed Marblehead Rail Trail."
     summary: |
-      The board held a public hearing on a petition from Verizon New England Inc. and Marblehead Municipal Light Department to relocate one joint utility pole on Rockaway Avenue approximately 15 feet to the northwest to accommodate the Marblehead Rail Trail.
+      Verizon New England, represented by Alexandra Marrero of Pike Telecom (authorized Verizon contractor), petitioned to relocate one existing joint-use pole (40-class-2) on the southeast side of Rockaway Avenue approximately 15 feet to the northwest. The relocation is required because the existing pole is in the middle of the recently constructed rail trail path.
       
-      A resident at 94 Rockaway Avenue appeared and asked about construction impact. The Verizon representative (Ms. Marrero, authorized contractor for Pike Telecom) explained:
-      - New pole installation: approximately 2–3 days
-      - Transfer of cables from each utility: approximately one week per utility (Marblehead Electric, cable company, Verizon), total approximately 3 weeks
-      - No anticipated interruption in electricity, cable, or internet service
-      - The pole will move away from the resident's property toward the 80 Rockaway Avenue property line
+      Community Development and Planning Director Brenda Kelly confirmed the pole is located directly in the trail path; Marblehead Light had already relocated a guy-wire to address a safety hazard. The pole relocation itself could not proceed until this petition.
       
-      Community Development Director Brenda Kelly testified in favor, explaining the pole was in the middle of the completed trail path and that Marblehead Light had already relocated its guy wire; the Verizon pole is the last remaining obstruction.
+      A resident at 94 Rockaway Avenue attended after receiving a certified letter. The petitioner's representative stated: installation of the new pole takes 2–3 days; cable transfers from each utility (Marblehead Electric, cable company, Verizon) take approximately one week each for a total of roughly three weeks; no interruption in electrical, cable, or internet service is expected as cables will be coiled rather than cut during transfer. The board confirmed that Verizon bears the cost of removing the old pole.
       
-      The board voted unanimously to approve Plan No. 187BG0E, subject to standard conditions including police details as required.
-    key_speakers: ["Ms. Marrero (Pike Telecom, Verizon contractor)", "Brenda Kelly (Community Development and Planning Director)", "Resident at 94 Rockaway Avenue"]
+      One resident spoke in favor (Brenda Kelly). No one spoke in opposition. The board voted unanimously to approve.
+    key_speakers: ["Alexandra Marrero (Verizon/Pike Telecom representative)", "Brenda Kelly (Community Development and Planning Director)", "Resident at mic (94 Rockaway Ave)"]
   - topic: permits-zoning
-    topic_confidence: 0.9
-    start_seconds: 7310
-    end_seconds: 7457
-    headline: "Secondhand dealer's license approved for Johnny Ray Music Emporium at 31-35 Atlantic Avenue"
-    dek: "The music store will hold consignment instruments and photographed inventory with serial numbers, with a 30-day hold policy."
-    summary: "Johnny Ray Music Emporium owners presented their application for a secondhand dealer's license, explaining their consignment system includes photographing each instrument with its serial number, recording the seller's identifying information, and holding items approximately 30 days. Much of the inventory is from a collection accumulated over approximately 30 years. The board voted unanimously to approve, subject to required documents, fees, and police department approval."
+    topic_confidence: 0.95
+    start_seconds: 7257
+    end_seconds: 7412
+    headline: "Secondhand dealer's license approved for Johnny Ray Music Emporium at 31–35 Atlantic Avenue"
+    dek: "Johnny Ray Music Emporium, a new retail music business at a previously vacant storefront, was approved for a secondhand dealer's license for consignment and previously owned instruments."
+    summary: "The owners of Johnny Ray Music Emporium (Johnny Ray and Richard Coleman) presented their application for a secondhand dealer's license at 31–35 Atlantic Avenue. Their inventory includes instruments taken on consignment and instruments from a personal collection accumulated over approximately 30 years. The business has a tracking system for secondhand items including photographs, serial numbers, and a 30-day hold period with identification documentation. Board members expressed enthusiasm about a retail business revitalizing the previously vacant corner location. The board voted unanimously to approve the license."
     key_speakers: ["Johnny Ray (applicant)", "Richard Coleman (applicant)"]
   - topic: permits-zoning
     topic_confidence: 0.9
-    start_seconds: 7457
-    end_seconds: 7590
+    start_seconds: 7412
+    end_seconds: 7550
     headline: "Dynasty restaurant liquor license revocation hearing continued to November 19"
-    dek: "Owner Alexander Lewis provided a written update indicating progress toward meeting the board's end-of-November compliance deadline."
-    summary: "The continuation of the public hearing on potential revocation of wine and malt beverage license No. 0042-0656 for Dynasty at 1 Atlantic Avenue was held. Owner Alexander Lewis did not appear but submitted a written update indicating significant recent progress and anticipating compliance by the end of November deadline. Annual renewal mailings are going out imminently, and compliance (inspection, Board of Health sign-off) is required for renewal. The board voted unanimously to continue the hearing to November 19, 2025."
+    dek: "Owner Alexander Lewis submitted a written update indicating progress toward compliance by the end-of-November deadline; the board continued the hearing."
+    summary: "The public hearing on the potential revocation of Dynasty restaurant's wine and malt beverage license (1 Atlantic Avenue, license #0042-0656) was continued. Owner Alexander Lewis was unable to appear but submitted a written update indicating significant progress and anticipating compliance by the end of November. Annual renewal mailings are being sent, and Lewis must be in compliance (inspection, E.O., etc.) for license renewal. The board voted unanimously to continue the hearing to November 19, 2025."
   - topic: permits-zoning
-    topic_confidence: 0.9
-    start_seconds: 7590
+    topic_confidence: 0.85
+    start_seconds: 7550
     end_seconds: 7637
-    headline: "Overhanging sign approved for 155 Washington Street"
-    dek: "A PVC sign with wrought iron hanger, approximately 15 by 7 inches, was approved subject to OHTC review."
-    summary: "The board approved a request to install an overhanging PVC sign with a wrought iron hanger at 155 Washington Street, subject to approval from the Old Historic Town Commission (OHTC), receipt of required certificate of insurance naming the town as additional insured, and payment of any required fees. The sign has no existing sign to replace at the location."
-  - topic: 40b-mbta
-    topic_confidence: 0.75
+    headline: "Overhanging sign approved at 155 Washington Street"
+    dek: "A PVC and wrought-iron overhanging sign for 155 Washington Street was approved unanimously subject to OHTC approval."
+    summary: "An applicant (Judy Gold) presented a 2-by-2 inch PVC and wrought-iron overhanging sign with painted lettering for 155 Washington Street. There is no existing sign at the location. The board voted unanimously to approve, subject to approval from the Old Historic Town Commission and receipt of required certificate of insurance naming the town as additionally insured."
+  - topic: bonding-capital
+    topic_confidence: 0.82
     start_seconds: 7637
     end_seconds: 7732
-    headline: "MOA with Army Corps of Engineers approved for Marblehead Shipyard Resiliency Application Chapter 91 permit"
-    dek: "The agreement requires the town to survey historically flagged structures at the Parker Boatyard area, register them, and install interpretive signage after demolition."
-    summary: "Community Development staff presented a memorandum of agreement (MOA) between the town, the US Army Corps of Engineers, and the Massachusetts State Historic Preservation Office, required as the final condition before issuance of a Chapter 91 permit for the Marblehead Shipyard Resiliency Project (the Bullard/Parker Boatyard area). The Historic Commission had flagged potential historic structures; the MOA requires the town to survey those buildings, enter them in the registry, and install interpretive signage following demolition. The board voted unanimously to approve."
-    key_speakers: ["Brendan (Community Development staff)"]
+    headline: "MOA with US Army Corps of Engineers approved for Marblehead Shipyard Resiliency Chapter 91 permit"
+    dek: "The agreement requires the town to survey and register historic structures at the Parker Boatyard area and install interpretive signage post-demolition, clearing the last condition for a Chapter 91 permit."
+    summary: "The board approved a memorandum of agreement between the town, the US Army Corps of Engineers, and the Massachusetts State Historic Preservation Office. The agreement was required after the Historical Commission identified potentially historic buildings at the Parker Boatyard area (part of the Bullard/Boatyard Resiliency Project). Under the MOA, the town must survey those buildings, enter them in a registry, and install interpretive signage after demolition. This was the final condition needed to obtain the Chapter 91 permit for the project."
+    key_speakers: ["Brendan (staff)"]
   - topic: labor-personnel
-    topic_confidence: 0.95
+    topic_confidence: 0.9
     start_seconds: 7732
-    end_seconds: 7932
-    headline: "Town and Officer Gallo reach $295K settlement resolving arbitration back pay and benefits"
-    dek: "Officer Christopher Gallo, reinstated after his 2024 termination was reversed in arbitration, will receive $260K in wages and $35K in COBRA reimbursement paid over two fiscal years."
+    end_seconds: 7886
+    headline: "Town announces $295,000 settlement with reinstated Officer Gallo covering back pay and COBRA reimbursement"
+    dek: "Following an arbitration award reinstating Officer Christopher Gallo after his 2024 termination, the town reached a full and final financial settlement totaling $295,000 paid in two fiscal-year installments."
     summary: |
-      The board announced a settlement agreement with Officer Christopher Gallo resolving all financial issues arising from an arbitration decision that reinstated him following his February 2024 termination. The arbitration period covered his paid administrative leave beginning June 2021 through his reinstatement in 2025.
+      The Select Board chair read a public statement disclosing that the town and Officer Christopher Gallo reached a settlement agreement resolving all financial issues arising from an arbitration award that reinstated Gallo following his termination in February 2024.
       
       **Settlement terms:**
-      
       | Component | Amount |
       |---|---|
-      | Wages (salary, overtime, details), subject to withholdings | $260,000 |
+      | Wages (salary, overtime, details) — subject to withholding | $260,000 |
       | Non-wage COBRA health insurance reimbursement | $35,000 |
       | **Total** | **$295,000** |
       
-      Payment schedule:
-      - Approximately $150,000 (including COBRA reimbursement) within 30 days of execution — FY26 impact
-      - Remaining $145,000 by July 31, 2026 — FY27 impact
+      **Payment schedule:**
+      - ~$150,000 (including COBRA reimbursement) within 30 days of execution (FY26)
+      - Remaining ~$145,000 by July 31, 2026 (FY27)
+      - Remaining arbitrator fees paid separately
       
-      The agreement is a full and final resolution of all financial matters with no admission of wrongdoing by either party. Both parties retain their respective rights and responsibilities under Massachusetts law.
-    key_speakers: ["Select Board Chair"]
+      The statement noted this represents a full and final resolution of financial matters without admission of wrongdoing by either party, and that both parties retain their respective rights and responsibilities under Massachusetts law.
   - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 7932
-    end_seconds: 8292
-    headline: "Select Board discusses responses to Town Charter Committee questionnaire"
-    dek: "Board members identified several language issues in Articles 4.1 and 4.2 of the charter draft, including concerns about town meeting directing the Select Board and constraints on the town administrator's role."
-    summary: |
-      The board reviewed the Town Charter Committee's questionnaire, noting they were overdue in responding. Key concerns raised:
-      
-      1. **Article 4.1, Paragraph 11**: Language referencing matters "town meeting has authorized or directed the select board to act" may conflict with legal opinions that town meeting cannot direct select board actions; referred to charter committee for review.
-      2. **Article 4.2, Paragraph 3**: Language prohibiting the town administrator from engaging in other business — concern about whether it would prohibit National Guard or military reserve commitments.
-      3. **Town administrator procurement responsibility**: Suggested adding explicit reference to procurement duties.
-      4. **Capital Planning Committee chairmanship**: Suggestion to leave committee composition to bylaws rather than fixing it in the charter, to preserve flexibility.
-      5. **Article 4.2, Paragraph 9**: Language restricting the town administrator from school system functions could conflict with the town administrator's role as chief bargaining agent for the School Committee under Chapter 150E collective bargaining law.
-      6. Suggested additions: language recognizing the Select Board as head of town government for ceremonial purposes; clarification of interim/acting town administrator procedures during vacancies or absences; explicit reference to the board's authority to award and execute contracts and manage litigation.
-      
-      The board voted unanimously to authorize the chair to respond to the charter committee questionnaire incorporating these points.
-    key_speakers: ["Select Board members", "Town Administrator"]
-  - topic: permits-zoning
     topic_confidence: 0.85
-    start_seconds: 9010
-    end_seconds: 9334
-    headline: "Cannabis social equity policy adopted with 1% impact fee discount"
-    dek: "The Cannabis Control Commission-required policy applies to host community agreement renewals; two existing HCAs expire within approximately one year."
+    start_seconds: 7886
+    end_seconds: 9010
+    headline: "Select Board discusses Town Charter Committee questionnaire responses on board powers and TA duties"
+    dek: "The board reviewed the outstanding charter questionnaire, identifying several suggested edits including clarification of town administrator procurement duties, interim TA procedures, and the limits of town meeting authority over the Select Board."
     summary: |
-      The Town Administrator presented the required Cannabis Control Commission social equity policy. Marblehead has two existing host community agreements (HCAs), both expiring within approximately the next year (one in approximately April, one in approximately November). Under the new state guidelines, at least one HCA renewal must meet social equity criteria (minority-owned or disadvantaged business).
+      The Select Board addressed its overdue response to the Town Charter Committee's questionnaire. Discussion focused on two articles:
       
-      The policy's one discretionary element is the impact fee discount: the town is permitted to charge up to a 3% impact fee; the policy sets a 1% discount from whatever fee is imposed. The administrator noted no impact fees have been collected to date from either establishment, as neither has opened. The board voted unanimously to adopt the policy.
-    key_speakers: ["Town Administrator"]
+      **Article 4, Section 4.1:**
+      - Paragraph 11 language referencing "matters which town meeting has authorized or directed the select board to act" was flagged as potentially inconsistent with state law opinions that town meeting cannot direct select board actions; board asked the charter committee to review.
+      - A suggestion was made to add language explicitly noting the Select Board's authority to award and execute contracts on behalf of the town.
+      - A suggestion was made to note the Select Board as the town's sole legal decision-making authority for litigation and legal strategy.
+      - A suggestion was made to recognize the Select Board as head of town government for ceremonial purposes.
+      
+      **Article 4, Section 4.2:**
+      - Paragraph 3 language prohibiting the town administrator from engaging in other business was flagged as potentially problematic for National Guard or military reserve commitments.
+      - Paragraph 9 language restricting TA involvement with the school system was flagged; the TA had served as chief bargaining agent for the school committee under Chapter 150E, and the language should not prohibit the school committee from appointing the TA as their bargaining agent.
+      - Adding procurement responsibility to the TA's listed duties was suggested.
+      - Clarification on interim/acting TA procedures during vacancies or extended absences was suggested.
+      - Language tying committee appointments and chairmanships to bylaws rather than the charter was suggested to preserve flexibility.
+      
+      The board voted unanimously to authorize the chair to respond to the questionnaire.
+  - topic: permits-zoning
+    topic_confidence: 0.88
+    start_seconds: 9010
+    end_seconds: 9262
+    headline: "Cannabis social equity policy adopted with 1% impact-fee discount for qualifying operators"
+    dek: "Required by the Cannabis Control Commission, the policy establishes a 1% discount on the town's up-to-3% impact fee for operators meeting social equity criteria when host community agreements come up for renewal."
+    summary: |
+      The Town Administrator presented the cannabis social equity policy, a requirement of the Cannabis Control Commission applicable to communities with host community agreements (HCAs). Marblehead has two HCAs, both expiring within approximately one year (one in April, one in November). At renewal, at least one must meet social equity criteria (minority-owned or disadvantaged business).
+      
+      The policy's one discretionary element is an impact-fee reduction. The town is authorized to impose up to a 3% impact fee; the policy as adopted provides a 1% discount for qualifying operators, effectively allowing a maximum 2% fee for social-equity-qualifying businesses. The Town Administrator noted the town has collected zero in impact fees to date as neither cannabis establishment has opened. The board voted unanimously to adopt the policy.
+    key_speakers: ["Town Administrator (Thatcher)"]
   - topic: public-safety
-    topic_confidence: 0.95
-    start_seconds: 9334
-    end_seconds: 9429
-    headline: "Hold harmless agreement with Hingham Police Department approved for mutual aid police details"
-    dek: "The agreement allows Hingham officers to cover police details in Marblehead when local staffing is insufficient, consistent with similar agreements already in place with Salem and Swampscott."
-    summary: "The board approved a standard hold harmless agreement with the Town of Hingham Police Department, allowing Hingham officers to work police details in Marblehead to address detail coverage shortfalls. The Chief of Police was unable to attend but supported the agreement. Similar agreements are already in place with Salem and Swampscott. The board voted unanimously to approve and authorized the chair to sign."
-    key_speakers: ["Town Administrator"]
+    topic_confidence: 0.92
+    start_seconds: 9262
+    end_seconds: 9381
+    headline: "Hold-harmless agreement with Hingham Police approved to expand police detail coverage"
+    dek: "With the town experiencing difficulty covering police details, the board approved a standard mutual hold-harmless agreement allowing Hingham officers to work details in Marblehead."
+    summary: "The Select Board approved a hold-harmless agreement between the town and the Hingham Police Department, following the same model used with Salem, Swampscott, and other municipalities. The agreement allows Hingham officers to work police details in Marblehead to address coverage shortfalls. The police chief was unavailable to present in person. The board voted unanimously to approve and authorized the chair to sign on behalf of the board."
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 9381
+    end_seconds: 9526
+    headline: "Green Marblehead Committee reorganized to replace town planner seat with Community Development director"
+    dek: "The board approved swapping the designated town planner member of the Green Marblehead Committee with the Community Development and Planning Director following that position's creation."
+    summary: "The board approved a reorganization of the Green Marblehead Committee membership, replacing the town planner designee with the Community Development and Planning Director (Brenda Kelly) to reflect the creation of that director-level position. The change was described as simply swapping who holds the designated seat. Voted unanimously."
   - topic: admin-housekeeping
     topic_confidence: 0.9
-    start_seconds: 9429
-    end_seconds: 9477
-    headline: "Green Marblehead Committee reorganized to replace town planner position with Community Development director"
-    dek: "The change reflects the town's creation of a Community Development and Planning Director role since the committee's original formation."
-    summary: "The board approved a reorganization of the Green Marblehead Committee, replacing the town planner as a designated member with the Community Development and Planning Director (Brenda Kelly), reflecting the creation of that director role since the committee was originally constituted. The board voted unanimously."
-  - topic: admin-housekeeping
-    topic_confidence: 0.95
-    start_seconds: 9477
+    start_seconds: 9526
     end_seconds: 9805
-    headline: "Board approves consent agenda, playground lighting change order, HVAC contract, and COA fencing"
-    dek: "Routine contracts totaling approximately $175K were approved alongside October meeting minutes and a holiday arts marketplace permit."
+    headline: "Board approves consent agenda and multiple contracts including $581K Reynolds Field design award"
+    dek: "Consent agenda, playground lighting change order, on-call HVAC contract, COA fencing, and rail trail extension were approved; CHA and Associates was awarded the Reynolds Field design contract for $581,290 funded from the Lars Anderson gift account."
     summary: |
-      The board voted on several consent and contract items:
+      **Consent Agenda** (approved unanimously): Minutes of October 1 and October 9, 2025; Abbott Hall Festival of Arts/Artisans Holiday Marketplace, December 5–7, 2025.
       
-      - **Consent agenda**: Minutes of October 1 and October 9, 2025; Abbott Hall Festival of Artisans Holiday Marketplace permit (December 5–7, 2025)
-      - **Playground lighting change order**: Contract 2025-010, Ham Electric LLC, **$13,540.12**, funded from Recreation Revolving Fund
-      - **On-call HVAC maintenance contract**: Contract 26-S-12, General Air Conditioning Heating, **$142,950** (unit price bid based on estimated 700 hours plus $25,000 materials; not a spending obligation), one year with two optional renewal years
-      - **COA fencing project**: Contract 26-14, New Generation Landscaping and Fencing, **$18,500**, funded from building improvement account
+      **Contracts approved:**
       
-      All items approved unanimously.
-    key_speakers: ["Town Administrator"]
+      | Contract | Vendor | Amount | Funding |
+      |---|---|---|---|
+      | Glover School playground lighting change order | Ham Electric LLC | $13,540.12 | Recreation revolving fund |
+      | On-call HVAC maintenance and repair (1 yr + 2 optional renewals) | General Air Conditioning Heating | $142,950 (unit-price scenario) | Operating |
+      | COA fencing project | New Generation Landscaping and Fencing | $18,500 | Building improvement account |
+      | Rail trail (Swamp Club Ranch segment) time extension | Raphael Construction Corp | No additional cost | — |
+      | Reynolds Field design | CHA and Associates LLP | $581,290 | Lars Anderson gift account |
+      
+      **Reynolds Field design notes**: Rec and Parks Commission unanimously selected CHA over one other firm because CHA has an in-house division dedicated to municipal sports fields, whereas the competing firm was assembling an outside team. The contract covers three tasks (stakeholder coordination, topographic/wetland surveys, and a phased options menu). Only the initial ~$69,000 requisition was being submitted; the board approved the full contract with phased expenditure. Additional Lars Anderson funds for construction phases will require a future Select Board vote.
+    key_speakers: ["Karen Wayne (Rec and Parks Commissioner)"]
   - topic: recreation-events
-    topic_confidence: 0.92
+    topic_confidence: 0.9
     start_seconds: 9805
     end_seconds: 10180
-    headline: "Reynolds Field design contract awarded to CHA and Associates for $581,290 using Lars Anderson gift funds"
-    dek: "The Recreation and Parks Commission unanimously selected CHA, which has an in-house sports and municipal facilities division, over a competing firm that proposed assembling an outside team."
-    summary: |
-      The Recreation and Parks Commission recommended awarding the Reynolds Field design contract to CHA (Cloud Harbor and Associates, LLP) following a competitive RFQ process. Commission Chair Karen explained that CHA was selected unanimously because it has a dedicated in-house division for municipal and sports facility projects, reducing change-order risk compared to the competing firm, which proposed an assembled team.
-      
-      **Contract structure:** The full contract is **$581,290**, but it will be executed in phases. The initial authorized expenditure (Tasks 0–2) is approximately **$69,100**, which covers:
-      1. Stakeholder coordination across all town departments (fire, police, DPW, Electric Light, Disabilities Commission, etc.)
-      2. Topographic surveys, wetland delineations, and site condition analysis
-      
-      Following these tasks, CHA will present an à la carte menu of project options with cost estimates, after which the Recreation Commission will define Phase 1 scope and return to the Select Board to authorize additional expenditure from the Lars Anderson gift account.
-      
-      Funding source: Lars Anderson gift account. The board voted unanimously to award the full contract.
-    key_speakers: ["Karen (Recreation and Parks Commission Chair)", "Select Board members"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.88
-    start_seconds: 10180
-    end_seconds: 10274
-    headline: "Rail trail contract extended to December 30, 2025; Callahan Center contract update provided"
-    dek: "The rail trail Raphael Construction contract received a time extension for plantings; the Callahan Center firm agreed to complete outstanding charter review deliverables under the original $20,000 contract."
-    summary: |
-      The board approved a time extension for Contract 2024-071 (Marblehead Rail Trail, Swamp Club ranch segment early construction) with Raphael Construction Corporation to December 30, 2025, to allow for plantings.
-      
-      Separately, the Town Administrator reported that the Callahan Center (a charter consulting firm under a prior $20,000 deliverables-based contract) has agreed to complete the outstanding review of Charter Draft Revision B at no additional cost. One of the firm's two principals departed and the other is on medical leave; a replacement reviewer has been identified. The charter committee's priority is answering questions submitted over the summer.
-    key_speakers: ["Town Administrator"]
+    headline: "Reynolds Field design contract awarded to CHA and Associates for $581,290 from Lars Anderson gift account"
+    dek: "Rec and Parks Commission unanimously selected CHA and Associates after interviewing two firms; the phased contract will begin with topographic surveys and stakeholder coordination before committing to a construction program."
+    summary: "See contract details under admin-housekeeping segment above. The Rec and Parks Commission held a formal interview and selection process, with a commissioner noting the process was well-structured. CHA's in-house multi-discipline team for municipal sports was the deciding factor. Initial expenditure is approximately $69,000 for tasks 0–2 (stakeholder meetings and site surveys); subsequent phases return to the Select Board for additional appropriation from the Lars Anderson gift account. The field has known challenges including drainage issues and significant ledge."
+    key_speakers: ["Karen Wayne (Rec and Parks Commissioner)"]
   - topic: permits-zoning
     topic_confidence: 0.9
-    start_seconds: 10469
+    start_seconds: 10180
     end_seconds: 10562
     headline: "Three one-day liquor licenses approved for November events"
-    dek: "Licenses were granted to Old North Church, Friends of Performing Arts at King-Hooper Mansion, and Donald Carlton Marblehead Arts Association."
+    dek: "One-day licenses were approved for Old North Church, Friends of Performing Arts at King Hooper Mansion, and Donald Carlton Marblehead Arts Association."
     summary: |
-      The board approved three one-day liquor licenses:
+      The board voted unanimously to approve three one-day liquor licenses:
       
       | Applicant | Location | Date | Hours |
       |---|---|---|---|
-      | Old North Church | 8 Stacy Street | November 14, 2025 | 6:30–9:30 PM |
-      | Friends of Performing Arts | King-Hooper Mansion | November 6, 2025 | 6:00–10:30 PM |
-      | Donald Carlton, Marblehead Arts Association | 8 Hooper Street | November 8, 2025 | 6:00–8:30 PM |
+      | Old North Church | 8 Stacy Street | Nov. 14, 2025 | 6:30–9:30 PM |
+      | Friends of Performing Arts | King Hooper Mansion | Nov. 6, 2025 | 6:00–10:30 PM |
+      | Donald Carlton / Marblehead Arts Association | 8 Hooper Street | Nov. 8, 2025 | 6:00–8:30 PM |
       
-      Alcohol to be purchased from Cap's Importing and Distributing and Oz Wine Company. All approved unanimously.
+      Alcohol to be purchased from Cap's Importing and Distributing and Oz Wine Company.
   - topic: recreation-events
-    topic_confidence: 0.85
+    topic_confidence: 0.88
     start_seconds: 10562
     end_seconds: 10746
-    headline: "Rail trail signage approved for Rockaway-Clifton and Smith-Pleasant Street segments"
-    dek: "Brown informational signs sized approximately 8.5 by 13 inches will be installed at the two newly completed trail segments."
-    summary: "Community Development Director Brenda Kelly presented the proposed rail trail regulatory/informational signs for installation at the two recently completed segments: the Rockaway-Clifton Avenue segment and the Smith-Pleasant Street segment. The sign design, revised with input from town staff and the Chief of Police, was presented in brown (consistent with state park signage standards). The board approved the installation unanimously. The signs are not yet being installed throughout the entire rail trail."
-    key_speakers: ["Brenda Kelly (Community Development and Planning Director)"]
+    headline: "Rail trail signage approved for Rockaway/Clifton and Smith/Pleasant Street completed segments"
+    dek: "Brown/green trail signage in a state-park style was approved for installation at the two most recently completed rail trail segments."
+    summary: "Community Development and Planning Director Brenda Callahan presented the proposed rail trail signage. The sign design, developed with input from town staff and Police Chief King, will be installed at the Rockaway/Clifton Avenue segment and the Smith/Pleasant Street segment — the two most recently completed sections. Signs are in a brown/natural color consistent with state park signage conventions. Electric bicycle classification was briefly discussed; Class 3 or equivalent high-speed e-bikes may be considered motorized vehicles under applicable law. The board voted unanimously to approve installation."
+    key_speakers: ["Brenda Callahan (Community Development and Planning Director)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.85
     start_seconds: 10746
     end_seconds: 10915
-    headline: "OMIA sign approved at Old Town House; shellfish flats open October 1 through April 30; board sets appointment interview dates"
-    dek: "A small recognition sign for the Old Marblehead Improvement Association was approved; shellfish flats at Devereux and Tucker's Beach opened for the season; interview deadlines set for Shellfish Constable and Disability Commission vacancies."
+    headline: "Old Townhouse sign approved for OMIA; shellfish flats open through April 2026; disability commission and shellfish constable vacancies announced"
+    dek: "Routine end-of-meeting items included a memorial sign for the Old Marblehead Improvement Association's restoration work, shellfish season notification, and vacancy interview timelines."
     summary: |
-      The board approved a 15-by-7-inch recognition sign for the Old Marblehead Improvement Association (OMIA) to be installed under the Crabtree apple tree at the Old Town House entrance, recognizing OMIA's contributions to building repairs.
+      **Old Townhouse sign**: The board approved a 15-by-7-inch sign under the Crabtree apple tree at the Old Townhouse main entrance recognizing the Old Marblehead Improvement Association's voluntary restoration work (including stone repairs and brick walkway replacement). Voted unanimously.
       
-      The board acknowledged the Massachusetts Division of Marine Fisheries seasonal shellfish classification notice: the flats at Devereux Beach and Tucker's Beach are conditionally approved/open from October 1, 2025 through April 30, 2026.
+      **Shellfish season**: Per Chapter 130 §40A, the Devereux and Tuckers Beach shell-fishing flats are classified conditionally approved and open from October 1, 2025 through April 30, 2026.
       
-      The board set the following appointment schedules:
-      - **Shellfish Constable** (2 vacancies, 3 applicants): applications due November 7; interviews November 19
-      - **Disability Commission** (3 vacancies): applications due December 5; interviews December 10 (regular December meeting)
+      **Vacancies announced:**
+      - Shellfish Constable: 2 vacancies, 3 letters of interest received; application deadline November 7, interviews November 19
+      - Disability Commission: 3 vacancies; application deadline December 5, interviews December 12
       
-      The next regular Select Board meeting was confirmed for November 19, 2025. The December regular meeting will be December 10, 2025.
+      **Next meetings**: November 19 (regular meeting); December 10 (regular meeting, including Disability Commission interviews — corrected from an initially stated December 12 date which fell on a Friday).
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -11,54 +11,48 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board reorganizes, swears in Drager, elects Newton chair, awards $23,365 ADA grant contract"
-  summary: "The 376th annual convening of the Marblehead Select Board opened with the swearing-in of Moses Drager and the unanimous election of Erin Newton as chair for the coming year. The board voted to award a $23,365 contract to SOEP Painting Corporation for resilient floor coating in the police station male cell block, using an ADA accessibility grant expiring June 30. The meeting concluded with select board announcements welcoming new member Dan to the board."
+  headline: "Select Board reorganizes, swears in Drager, approves $23,365 ADA flooring contract"
+  summary: "The Select Board held its 376th annual convening, swearing in Moses Drager and electing Erin Newton (Newnan) as chair for the coming year on a 4–0 vote. The board's sole action item was approving a contract with SOEP Painting Corporation for $23,365 to install a non-slip floor coating in the police station male cell block area, funded by an ADA accessibility grant expiring June 30. The meeting also welcomed newly elected member Dan to the board."
   decisions:
-    - "Approved Erin Newton as Select Board Chair for the 2024-25 year"
-    - "Approved contract with SOEP Painting Corporation for $23,365 for ADA floor coating at the police station"
+    - "Approved Erin Newton as Select Board Chair for the 2024–25 year"
+    - "Approved contract with SOEP Painting Corporation for $23,365 for ADA floor coating at police station male cell block"
   votes:
-    - motion: "Election of Erin Newton as Select Board Chair"
-      result: "in favor (unanimous)"
-    - motion: "Award contract to SOEP Painting Corporation for $23,365 for resilient floor coating, police station cell block"
+    - motion: "Elect Erin Newton as Select Board Chair"
+      result: "in favor (4 to 0)"
+    - motion: "Award contract to SOEP Painting Corporation, $23,365, ADA floor coating at police station"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: admin-housekeeping
     topic_confidence: 0.95
     start_seconds: 4
-    end_seconds: 233
-    headline: "Select Board holds 376th annual convening; swears in Drager, elects Newton chair 4-0"
-    dek: "Moses Drager was sworn in and Erin Newton was unanimously elected chair for the 2024-25 Select Board year."
-    summary: "The 376th annual convening of the Marblehead Select Board opened with the administration of the oath of office to Moses Drager. The board then nominated and voted 4-0 to elect Erin Newton as chair for the coming year. The meeting included a land acknowledgement recognizing the Naumkeag band of the Massachusetts and Pawtucket tribes as the original stewards of the land."
-    key_speakers: ["Erin Newton (Select Board Chair)", "Moses Drager (Select Board Member)"]
+    end_seconds: 162
+    headline: "Moses Drager sworn in; Erin Newton elected Select Board Chair 4–0"
+    dek: "The board held its 376th annual convening, administering the oath of office and selecting its chair for the year."
+    summary: "Moses Drager was sworn in as a member of the Select Board at the opening of the meeting. The board then conducted its annual reorganization; Erin Newton was nominated for chair and elected 4–0. The outgoing chair noted appreciation for the vote of confidence and welcomed newly elected member Dan to the board, noting that Brett Murray was absent due to a prior commitment."
+    key_speakers: ["Moses Drager (incoming Select Board member)", "Erin Newton (Select Board Chair)"]
   - topic: public-safety
-    topic_confidence: 0.9
+    topic_confidence: 0.92
     start_seconds: 233
-    end_seconds: 384
+    end_seconds: 361
     featured: true
-    headline: "Board awards $23,365 ADA grant contract for police station floor coating before June 30 deadline"
-    dek: "The contract with SOEP Painting Corporation covers non-slip resilient floor coating in the male cell block, funded by an ADA accessibility grant expiring June 30."
+    headline: "Board approves $23,365 ADA flooring contract at police station ahead of grant deadline"
+    dek: "A non-slip floor coating for the male cell block area must be installed before the ADA grant expires June 30."
     summary: |
-      The board's sole agenda item was approval of a contract using an ADA accessibility grant previously awarded to the police station. A water-bottle filling station was cited as an earlier project completed under the same grant. The remaining grant funds are to be used for non-slip resilient floor coating in the jail/cell block area to improve safety and accessibility.
+      The police chief reported that the town had received an ADA accessibility grant for the police station. One project already completed under the grant was the installation of a filtered water station. The remaining project — a non-slip resilient floor coating for the male cell block area — required board approval and completion by June 30 to satisfy the grant deadline.
       
-      | Item | Detail |
-      |---|---|
-      | Contractor | SOEP Painting Corporation |
-      | Amount | $23,365 |
-      | Scope | Resilient floor coating, male cell block |
-      | Grant deadline | June 30 |
-      
-      Grant coordination was credited to staff member Becky.
-    key_speakers: ["Erin Newton (Select Board Chair)", "Police Chief (Chief King)"]
+      The board voted unanimously to award the contract to SOEP Painting Corporation in the amount of **$23,365**. The chair noted that staff member Becky led the grant work.
+    key_speakers: ["Police Chief (unidentified)", "Erin Newton (Select Board Chair)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 384
-    end_seconds: 471
-    headline: "Board welcomes new member; notes Brett Murray absent due to prior commitment"
-    dek: "Select board members offered remarks welcoming newly elected member Dan and noted returning member Brett Murray was absent due to a longstanding prior commitment."
-    summary: "During select board announcements, members welcomed newly elected member Dan, who expressed enthusiasm for the role. Chair Newton thanked the board for extending her another year as chair. Brett Murray's absence was noted as due to a prior commitment predating the election date being set."
-    key_speakers: ["Erin Newton (Select Board Chair)", "Dan (new Select Board Member)"]
+    end_seconds: 468
+    headline: "Board welcomes new member Dan; meeting adjourns"
+    dek: "Members offered brief remarks welcoming the newest Select Board member before adjourning."
+    summary: "Board members congratulated Dan on his election and expressed enthusiasm for the coming year. The chair thanked colleagues for extending her another term as chair. The board then voted unanimously to adjourn."
+    key_speakers: ["Erin Newton (Select Board Chair)", "Dan (newly elected Select Board member)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

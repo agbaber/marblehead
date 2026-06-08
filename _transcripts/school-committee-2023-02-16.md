@@ -11,26 +11,29 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "School committee reviews potential 33-FTE cuts under constrained FY24 budget"
-  summary: "The Marblehead School Committee heard a report on potential reductions of approximately 33.6 full-time equivalent positions needed to meet a preliminary town appropriation representing roughly $800,000 over the FY23 budget. Administrators noted that approximately half of those positions are currently vacant and some represent retirements, and the committee discussed the need to develop an override-level budget as an alternative. The committee also approved program-of-studies changes for the 2023-24 school year, a Parks and Recreation MOU, an overnight field trip, and a schedule of bills totaling $887,543."
+  headline: "School Committee warned potential FY24 cuts could eliminate over 33 staff positions"
+  summary: "The Marblehead School Committee received a memo from Superintendent Bucky outlining potential FY24 reductions to meet a preliminary town appropriation that would require eliminating approximately 33.6 full-time equivalent staff positions. Committee members emphasized the need to develop an override request as an alternative scenario. The committee also approved the FY24 program of studies, an MOU with Recreation and Parks, and appointed Tom Mathers as Vice Chair."
   decisions:
-    - "Approved minutes from 12/15/22 and 1/5/23"
-    - "Approved overnight trip to Camp Bourndale for Village School sixth grade, May 23–26, 2023"
-    - "Approved proposed program-of-studies changes for the 2023-24 school year"
+    - "Approved minutes from prior meetings"
+    - "Approved overnight trip to Camp Borndale for Village School sixth grade (May 23–26, 2023)"
+    - "Approved proposed program of studies changes for 2023–24 school year"
+    - "Approved amended MOU between Recreation and Parks Department and Marblehead Public Schools"
     - "Approved schedule of bills totaling $887,543.44"
-    - "Approved amended MOU between Recreation & Parks and Marblehead Public Schools"
     - "Appointed Tom Mathers as Vice Chair"
+    - "Appointed Megan Taylor as METCO liaison"
+    - "Appointed Tom Mathers to policy subcommittee"
   votes:
-    - motion: "Approve minutes from 12/15/22 and 1/5/23"
+    - motion: "Approve prior meeting minutes"
       result: "in favor (4 to 0, 1 abstention)"
-    - motion: "Approve overnight trip to Camp Bourndale"
+    - motion: "Approve Village School Borndale overnight trip"
       result: "in favor (unanimous)"
-    - motion: "Approve program-of-studies changes for 2023-24"
+    - motion: "Approve 2023–24 program of studies changes"
+      result: "in favor (unanimous)"
+    - motion: "Approve amended MOU with Recreation and Parks"
       result: "in favor (unanimous)"
     - motion: "Approve schedule of bills totaling $887,543.44"
-      result: "in favor (unanimous)"
-    - motion: "Approve amended MOU with Recreation & Parks"
       result: "in favor (unanimous)"
     - motion: "Appoint Tom Mathers as Vice Chair"
       result: "in favor (4 to 1)"
@@ -40,115 +43,137 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 0
     end_seconds: 257
-    headline: "Board opens with commendations for students, sports teams, and leadership team"
-    dek: "Members commended the high school students for completing midterms, sports teams heading to a tournament, and the administrative leadership team for budget work."
-    summary: "The meeting opened with commendations recognizing student activities including a holiday show at the Veterans Middle School Performing Arts Center, high school midterms, and the Boys Hockey senior night. Members also praised the administrative leadership team for its work on the FY24 budget reduction exercise. The student representative reported on the senior show, which raised $3,000 for prom."
-    key_speakers: ["Sarah Fox (Chair)", "Student Representative"]
+    headline: "Commendations offered for students, staff, and high school midterms"
+    dek: "Board members recognized the senior show fundraiser, returning midterms, and the leadership team's budget work."
+    summary: "Committee members offered commendations to high school students for completing their first midterms in several years, to the senior class for raising $3,000 at the senior show, and to the administrative leadership team for quickly preparing potential FY24 budget reduction scenarios. The student representative reported on acapella competitions, fundraisers, and upcoming events."
+    key_speakers: ["Sarah Fox (Chair)"]
   - topic: public-comment
     topic_confidence: 0.97
     start_seconds: 257
     end_seconds: 492
-    headline: "Resident challenges use of Thought Exchange survey to set budget priorities"
-    dek: "Jessica Benedetto of Bradley Road argued the 340-respondent survey had selection bias and should not drive budget decisions, and renewed her three-year request for busing for grades 7–12."
-    summary: "Jessica Benedetto addressed the committee regarding a Marblehead Current article quoting Superintendent Bucky on using a Thought Exchange survey—completed by 340 residents out of roughly 2,622 students in the district—to inform budget priorities. She argued the survey suffered from selection bias by excluding busy working parents and noted that transportation ranked 150 out of 172 items surveyed. She also renewed a three-year request for busing for grades 7–12, noting she lives 2.6 miles from the high school with no safe walking route."
+    headline: "Resident criticizes use of Thought Exchange survey for budget priority decisions"
+    dek: "A physician and parent argued the 340-respondent survey had selection bias and should not drive decisions on busing."
+    summary: "Jessica Benedetto of Bradley Road addressed the committee regarding a Marblehead Current article about a Thought Exchange survey in which 340 residents participated. She argued the survey had significant selection bias, excluding busy working parents, and that using its results — in which transportation ranked 150 out of 172 priorities — to guide budget decisions was methodologically flawed. She noted she has requested busing for grades 7–12 for three years and lives 2.6 miles from the high school with no safe walking route."
     key_speakers: ["Jessica Benedetto (resident, Bradley Road)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 492
     end_seconds: 602
-    headline: "Minutes approved; Village School overnight Bourndale trip approved 5-0"
-    dek: "The committee approved meeting minutes and an overnight field trip to Camp Bourndale for the Village School sixth grade, May 23–26, 2023."
-    summary: "The committee voted 4-0 with one abstention to approve minutes from December 15, 2022 and January 5, 2023. Village School principal Mandy Murphy then presented the annual Camp Bourndale trip (Plymouth, MA), a tradition returning after a COVID hiatus. The trip runs May 23–26, 2023 and immerses sixth graders in science, social studies, and social-emotional learning curriculum. The committee approved the trip 5-0."
-    key_speakers: ["Sarah Fox (Chair)", "Mandy Murphy (Village School principal)"]
+    headline: "Committee approves minutes and Village School Borndale overnight trip"
+    dek: "Minutes from two prior meetings were approved and the sixth-grade Camp Borndale trip for May 2023 was authorized."
+    summary: "The committee voted 4–0 with one abstention to approve prior meeting minutes. Principal Mandy Murphy of Village School presented the annual Camp Borndale trip (Plymouth, MA), a three-night, four-day science and SEL immersion experience for sixth graders scheduled May 23–26, 2023. The committee approved the trip unanimously."
+    key_speakers: ["Mandy Murphy (Village School Principal)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
+    topic_confidence: 0.82
     start_seconds: 695
     end_seconds: 1006
-    headline: "Eagle Scout Tyler Arp presents MHS Greenhouse project, seeks donations toward $75,000 goal"
-    dek: "Junior Tyler Arp has raised approximately $43,000 of a $75,000 goal for a greenhouse and raised-bed garden at the high school outdoor classroom; a fundraising dinner is set for March 7 at The Landing."
-    summary: "Tyler Arp, a 16-year-old junior and Life Scout with Troop 11, updated the committee on his Eagle Scout project to build a greenhouse, raised beds, and conduct site conservation at the MHS Outdoor Classroom. Conservation work was completed in summer 2022 with Marblehead Conservancy volunteers. Fundraising has reached approximately $43,000 of a $75,000 goal (~60%). The greenhouse is being manufactured and expected to arrive August–September 2023. A silent auction and fundraising dinner is planned for March 7 at The Landing. Donations are tax-deductible through the MHSPCO via the project website MHSgreenhouse.org or by check to 41 Westshore Drive."
-    key_speakers: ["Tyler Arp (Eagle Scout, MHS junior)"]
+    headline: "Eagle Scout Tyler Herb presents Marblehead High School greenhouse project update"
+    dek: "Junior Tyler Herb has raised approximately $43,000 of a $75,000 goal and plans a silent auction fundraiser at The Landing on March 7."
+    summary: "Tyler Herb, a 16-year-old junior and Life Scout with Troop 11, updated the committee on his Eagle Scout project to build a greenhouse, raised beds, and conduct site conservation at the MHS Outdoor Classroom. He has raised over $43,000 toward a $75,000 goal. The greenhouse is being manufactured and is expected to arrive August–September. A fundraising dinner and silent auction is scheduled March 7 at The Landing. Donations are tax-deductible through the MHSPCO via the project website MHSgreenhouse.org or by check to 41 Westshore Drive."
+    key_speakers: ["Tyler Herb (MHS student, Eagle Scout candidate)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.85
+    topic_confidence: 0.88
     start_seconds: 1039
-    end_seconds: 1393
-    headline: "METCO director reports 43 current students, seeks expansion to 60 for 2023-24"
-    dek: "The METCO director described a busy first year including new clubs, affinity spaces, and a family partner program, and submitted a DESE request to expand enrollment from 43 to 60 students."
-    summary: "The district's METCO director presented her first-year update. Current enrollment stands at 43 students; with 8 expected graduates, the district would have 35 students and has submitted a DESE proposal to expand to 60 for 2023-24, which she noted is within the program's three-to-four-year average of 63 (down from a prior average of 75). Staffing includes two part-time tutors and one newly expanded full-time tutor-coordinator. Highlights include a new Students of Color Association (SOCA) club at the high school, affinity spaces at the high school and Village School, an MLK Day speaker, a reinstated family partner program, and an online merchandise store benefiting the Tyrone METCO scholarship. Upcoming events include a family dinner at METCO headquarters February 26 and a senior boat send-off May 20. Committee member Megan Taylor was named the new METCO liaison."
-    key_speakers: ["METCO Director (Johnson)", "Tom Mathers (committee member)", "Sarah Fox (Chair)"]
-  - topic: school-budget
-    topic_confidence: 0.98
-    start_seconds: 1893
-    end_seconds: 2593
-    headline: "High School approves 2023-24 program-of-studies changes including new AP course, manufacturing pathway"
-    dek: "Principal Dan Bauer and assistant principal Michelle Carlson presented updates adding AP English Seminar, an introductory manufacturing/engineering pathway, and a biliteracy seal program, while eliminating CP2 levels in algebra and biology."
+    end_seconds: 1382
+    headline: "METCO Director reports 43 enrolled students and seeks expansion to 60 for 2023–24"
+    dek: "The METCO director outlined first-year accomplishments including a student affinity club, family programs, and an enrollment expansion request pending state approval."
     summary: |
-      MHS Principal Dan Bauer and Assistant Principal Michelle Carlson presented the proposed 2023-24 program of studies, which the committee approved 5-0. Key additions include:
+      METCO Director Johnson briefed the committee on her first year in the role. Current enrollment stands at 43 students; with 8 expected to graduate, the district would fall to 35. She has submitted an enrollment expansion proposal to DESE requesting 25 additional students to bring enrollment to 60 for 2023–24, consistent with recent historical averages of 63 (down from 75 in prior years). She cited geographic distance from Boston and family choice as factors in the enrollment decline.
       
-      - **AP English Seminar** — brings the total AP offerings to 19
-      - **Introduction to Manufacturing and Engineering** — two new courses supporting a state-pending manufacturing/engineering career pathway
-      - **State Seal of Biliteracy** — a diploma seal program recognizing world language proficiency, with North Shore Community College offering 9–12 college credits for qualifying students; 180 Massachusetts schools already participate
-      - **Marblehead Academy** — an after-school credit recovery and SEL support program formalized in the POS after two years of operation
-      - **Chamber Orchestra** — an after-school extension of the existing strings program
-      - **21st Century Skills and Life After High School** — two new open elective courses
+      Highlights included: launching a Students of Color Association (SoCA) club at the high school, securing METCO affinity spaces at the high school and Village School, reinstating a family partner program, holding a back-to-school event and holiday party, and organizing upcoming retreats and a Cultural Feast (tentatively May 19). Megan Taylor was named the new METCO committee liaison.
+    key_speakers: ["METCO Director Johnson", "Dr. Bucky (Superintendent, remote)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 1893
+    end_seconds: 2601
+    headline: "Committee approves 2023–24 program of studies including new AP course and manufacturing pathway"
+    dek: "MHS Principal Bauer presented changes adding AP English Seminar, a manufacturing/engineering pathway, and a state seal of biliteracy."
+    summary: |
+      MHS Principal Dan Bauer and Assistant Principal Michelle Carlson presented proposed program of studies changes for 2023–24, seeking committee approval to proceed with course selection. Key additions include:
       
-      Courses eliminated include CP2 levels in Algebra 1 (freshman) and Biology, continuing a multi-year rollout toward more inclusive co-taught models. The school is also applying for a capital grant to fund equipment for the manufacturing pathway, with a letter of intent due over spring break and full application in mid-March.
+      - **AP English Seminar** — bringing total AP offerings to 19
+      - **Introduction to Manufacturing and Engineering** — two courses supporting a new manufacturing/engineering CTE pathway submitted to the state for approval
+      - **State Seal of Biliteracy** — a diploma distinction tied to MCAS and world language proficiency; North Shore Community College offers 9–12 credits for recipients
+      - **Chamber Orchestra** — an after-school course
+      - **21st Century Skills and Life After High School** — open electives
+      - **Marblehead Academy** — formalizing the existing credit recovery/SEL support program
+      - **RTI Biology** — a supportive class replacing eliminated CP2 biology
+      
+      Courses eliminated include History of Rock and Roll and CP2 levels in Algebra 1 and Biology (two-year rollout). Dual enrollment seats with Salem State were also noted. The committee voted unanimously (5–0) to approve.
     key_speakers: ["Dan Bauer (MHS Principal)", "Michelle Carlson (MHS Assistant Principal)"]
   - topic: school-budget
-    topic_confidence: 0.99
-    start_seconds: 2647
-    end_seconds: 4095
+    topic_confidence: 0.98
+    start_seconds: 3284
+    end_seconds: 4498
     featured: true
-    headline: "Administration presents FY24 scenario requiring ~33.6 FTE cuts to meet $800K town appropriation increase"
-    dek: "Superintendent Bucky outlined a potential reduction of 33.62 FTE positions across all bargaining units to reach a preliminary town appropriation of roughly $800,000 above FY23, with roughly half of those positions currently vacant."
+    headline: "Superintendent presents scenario requiring elimination of 33+ staff to meet town's preliminary FY24 appropriation"
+    dek: "To meet an $800K increase over FY23, the district would need to cut approximately 33.6 FTE across all bargaining units; committee members called the scenario 'unbearable' and urged moving quickly to an override request."
     summary: |
-      Superintendent Bucky presented a memo to the committee outlining potential reductions necessary to meet a preliminary town appropriation representing approximately $800,000 (roughly 1.8%) above the FY23 budget. Key details:
+      Superintendent Bucky presented a memo outlining potential FY24 reductions needed to meet the town's preliminary appropriation — approximately an $800,000 or 1.8% increase over FY23. Reaching that figure would require reducing approximately **33.6 FTE** across the five bargaining units (teachers, custodians, paras/tutors, permanent subs, CALF) plus administration.
       
-      - **33.62 FTE reductions** spread across five bargaining units (teachers, custodians, paras/tutors, permanent subs, CAFT) plus administration and clerks
-      - The reduction figure already accounts for a **$110,000 third-year math program implementation cost** and funding for **two additional counselors** to avoid costlier out-placements
-      - Administrators noted that **approximately half (~17–18) of those positions are currently vacant**, with additional retirements also included
-      - Benefits savings: the committee discussed that eliminating ~33 positions would reduce the town's fringe/benefits expense by approximately **$600,000** (estimated ~$20,000 per employee), and members argued the district should benefit from corresponding savings given that the district was required to budget fringe costs for new positions in a prior year
-      - The committee discussed asking the town to direct those benefits savings back toward the school budget
-      - Members emphasized this is an **iterative draft**, not the final budget, and called for a prioritization list from leadership to inform an override-level budget proposal
-      - New positions proposed in the earlier aspirational budget (e.g., diversity coach, behavioral coach) **will not be part of an override request**
-      - The committee agreed to schedule dedicated budget workshop meetings separate from regular Thursday sessions
+      Key context provided:
+      - The reduction includes $110,000 for the third year of math program implementation (required regardless of cuts)
+      - Two counselor positions were preserved to avoid more costly out-of-district placements
+      - Roughly half of the 33.6 positions are currently vacant; a few involve retirements
+      - Unemployment costs are already incorporated into the reduction figure
       
-      > "This is the antithesis of why I moved into Marblehead." — Tom Mathers (committee member)
+      **Benefits/fringe discussion:** Committee members raised whether the town should return approximately $600,000 in fringe benefit savings (estimated at ~$20,000 per eliminated employee) to the school budget. Administration noted the town had required the district to fund fringe costs for new hires last year; members argued the reverse should apply. The town has not yet received its FY24 health insurance rates (expected March 1).
       
-      The committee asked the administration to provide a breakdown of the 33.62 positions by category (vacancies, retirements, RIF/elimination) and a prioritization list for items above the current $800K scenario.
-    key_speakers: ["Dr. Bucky (Superintendent)", "Sarah Fox (Chair)", "Tom Mathers (committee member)", "Sarah Gold (committee member)", "Allison Taylor (committee member)", "Michelle (Business Office)"]
+      Committee members described the scenario as representing more than a 5% staffing reduction and noted it would increase class sizes at all levels — Elementary classes potentially rising from ~16–17 to 22–23 students; fewer sections at the middle and high schools.
+      
+      The committee asked the administration to provide a prioritized list of positions and programs to be added back in any override scenario, and discussed scheduling a dedicated budget workshop meeting.
+    key_speakers: ["Dr. Bucky (Superintendent, remote)", "Michelle (Business Office)", "Sarah Fox (Chair)", "Sarah Gold", "Tom Mathers", "Allison Taylor"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 4623
-    end_seconds: 4680
-    headline: "Schedule of bills totaling $887,543 approved unanimously"
-    dek: "The committee approved the enclosed schedule of bills totaling $887,543.44 on a 5-0 vote."
-    summary: "The committee voted 5-0 to approve the schedule of bills totaling $887,543.44."
-    key_speakers: ["Sarah Fox (Chair)"]
-  - topic: recreation-events
-    topic_confidence: 0.88
-    start_seconds: 4680
     end_seconds: 5091
-    headline: "Amended MOU with Recreation & Parks approved 5-0 after multiple revisions"
-    dek: "The committee approved an updated memorandum of understanding governing shared use of school grounds and facilities with the Recreation & Parks department, with a joint meeting possible for implementation discussion."
-    summary: "The committee approved an amended MOU between Marblehead Public Schools and the Recreation & Parks department on a 5-0 vote. The document went through several iterations between the two bodies. The MOU covers lawn mowing of school grounds but not landscaping (bushes, hardscape), for which the district relies on parent volunteers. The committee noted difficulty in attracting bids from local companies for landscaping work even when put out to bid, attributing it to contractor capacity constraints. Both the school district and Parks & Rec face similar staffing shortages. The committee noted a joint meeting may follow to discuss implementation details, particularly around school field scheduling timelines."
-    key_speakers: ["Sarah Fox (Chair)", "John (district administrator)", "Allison Taylor (committee member)"]
+    headline: "Committee approves $887,543 schedule of bills and amended MOU with Recreation and Parks"
+    dek: "Both items passed unanimously; the MOU clarifies lawn maintenance responsibilities and a joint meeting with Rec & Parks may follow."
+    summary: "The committee voted 5–0 to approve a schedule of bills totaling $887,543.44. It then voted 5–0 to approve an amended memorandum of understanding with the Recreation and Parks Department governing use of school grounds. The MOU covers lawn mowing but not landscaping (shrubs, hardscape), for which the district relies on parent volunteers. Members noted difficulty finding vendors willing to bid on landscaping contracts and indicated the district would continue the bidding process. A joint meeting with the Rec & Parks board was discussed for implementation follow-up."
+    key_speakers: ["John (Director of Facilities/Administration)", "Sarah Fox (Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 5131
+    end_seconds: 5383
+    headline: "Committee discusses budget planning process and timeline ahead of Finance Committee presentation"
+    dek: "Members requested a prioritized list of add-backs from administration and discussed scheduling a dedicated budget workshop before the Finance Committee's April warrant hearing."
+    summary: |
+      The committee discussed the process for building an override budget scenario. Members requested that the superintendent provide a prioritized list of positions and programs ranked from the baseline 'austerity' budget upward, rather than working from the aspirational budget downward. Members noted that new program positions from the aspirational budget (e.g., diversity coach, behavioral coach) would not be included in the override request.
+      
+      The Finance Committee's warrant hearing has moved from March 27 to approximately April 11, with a final Finance Committee vote expected around April 3. The committee discussed scheduling its own public budget hearing at least three weeks before the Finance Committee date and agreed to coordinate calendars offline.
+    key_speakers: ["Sarah Fox (Chair)", "Tom Mathers", "Dr. Bucky (Superintendent, remote)"]
   - topic: bonding-capital
-    topic_confidence: 0.7
+    topic_confidence: 0.75
     start_seconds: 5383
     end_seconds: 5801
-    headline: "Committee reviews district-owned property list; Coffin School discussed as liability"
-    dek: "The committee reviewed a list of school-adjacent properties, discussed the Coffin School building as a liability, and agreed to defer disposition decisions until after the FY24 budget cycle."
-    summary: "The committee reviewed a facilities property list, noting that most parcels are adjacent to or functionally part of school campuses (e.g., driveways) and cannot be easily subdivided. The Coffin School was identified as a particular liability — it contains asbestos, is not ADA-compliant, and is not in use — and the committee asked administration to obtain a demolition cost estimate. Any disposition of town-owned school properties would require town approval, and members noted that proceeds could not legally be earmarked for the school district under current mechanisms. The committee agreed to defer further action until after the budget cycle, while noting that the district currently maintains the building at cost from its operating budget. A farm direct co-op was noted to have recently entered a parking lot use agreement at the site."
-    key_speakers: ["Sarah Fox (Chair)", "Tom Mathers (committee member)", "John (district administrator)", "Michelle (Business Office)"]
+    headline: "Committee reviews school-owned property list; disposition discussion deferred until after budget cycle"
+    dek: "Several parcels adjacent to school buildings remain on the district's books; the Coffin School was identified as a liability with no near-term reuse potential."
+    summary: |
+      The committee reviewed a list of school-owned properties, most of which are adjacent to or access-critical for school buildings (e.g., driveways at Village School). A few parcels — including Feet Street and Gary — appear to still be listed as school-owned by the assessor despite prior transfers to the town.
+      
+      The Coffin School was flagged as a significant liability: not ADA-compliant, containing asbestos, and in poor condition. The committee asked administration to obtain a cost estimate to demolish the building. Members noted the town has previously declined to enter into any agreement to return proceeds of property dispositions to the school district.
+      
+      The facilities subcommittee had previously asked the superintendent to develop programming lists for potential uses including an 18–22-year-old transition program, central administration relocation (currently at Witcher Road on the town's goodwill), and an early childhood center to address preschool waitlists. All property disposition discussions were deferred until after the FY24 budget cycle.
+    key_speakers: ["Sarah Fox (Chair)", "John (Facilities)", "Michelle (Business Office)", "Tom Mathers"]
   - topic: labor-personnel
-    topic_confidence: 0.9
+    topic_confidence: 0.88
     start_seconds: 5893
-    end_seconds: 6196
-    headline: "Tom Mathers appointed Vice Chair 4-1; named school committee rep on high school principal search"
-    dek: "The committee filled the vacant vice chair role with Tom Mathers and designated him as the school committee representative on the high school principal search committee."
-    summary: "Following the departure of former Vice Chair Emily Barron, the committee voted 4-1 to appoint Tom Mathers as Vice Chair. The chair noted the role is also required by committee policy and that the position had been vacant since Barron's resignation. Discussion also addressed which committee member would serve on the high school principal search committee; members without children currently enrolled in the high school were discussed as preferable to avoid conflicts of interest, and Mathers was ultimately designated for that role as well. The superintendent outlined a principal search timeline with an initial search committee meeting February 28, semifinalist interviews the week of March 13, finalist community forums the last week of March, and a target announcement date of April 10."
-    key_speakers: ["Sarah Fox (Chair)", "Tom Mathers (committee member)", "Sarah Gold (committee member)", "Megan Taylor (committee member)", "Dr. Bucky (Superintendent)"]
+    end_seconds: 6416
+    headline: "Tom Mathers appointed Vice Chair 4–1; named school committee rep on MHS principal search"
+    dek: "Following brief debate over which member should serve on the principal search, Mathers was designated both Vice Chair and search committee representative."
+    summary: |
+      Following the resignation of former Vice Chair Emily Barron, the committee voted 4–1 to appoint Tom Mathers as Vice Chair. Mathers also volunteered (with committee agreement) to serve as the school committee's representative on the Marblehead High School principal search committee, largely because he is the only member without children currently enrolled in the high school.
+      
+      Superintendent Bucky outlined the principal search timeline:
+      - Search committee first meeting: February 28
+      - Application deadline: the following week
+      - Semifinalist interviews: week of March 13 (approximately 5–6 candidates)
+      - Finalist selection: March 20
+      - Community forums and finalist visits: last week of March
+      - Final announcement: April 10
+      
+      The search committee includes 4 parent reps (Carrie Francis Born, Melissa Kaflewitch, Cindy Shaffer, John White), 4 student reps (Audrey Bathurst, Jeremy Sorkin, David Albert, Lucy Sabin), a CPAC rep (Jennifer Jackson), and a METCO rep (Nakia Bell). Megan Taylor was noted as the preferred school committee rep for the assistant superintendent search.
+    key_speakers: ["Sarah Fox (Chair)", "Tom Mathers", "Dr. Bucky (Superintendent, remote)", "Sarah Gold", "Allison Taylor", "Megan Taylor"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

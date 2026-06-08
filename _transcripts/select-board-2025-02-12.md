@@ -11,48 +11,48 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Board replaces fixed midnight parking ban with flexible snow-emergency system"
-  summary: "The Marblehead Select Board voted to suspend the town's fixed midnight-to-7 AM all-night parking ban and replace it with a storm-specific snow emergency parking system, giving the DPW director, fire chief, and police chief authority to set start and end times as conditions require. The board also welcomed new Community Development and Planning Director Brendan Callahan, heard that Fort Sewell drew over 18,000 visitors in its first season with paid Rangers, and approved a slate of contracts, revolving fund accounts, and routine appointments."
+  headline: "Select Board approves flexible snow-emergency parking ban, appoints new planning director"
+  summary: "The Marblehead Select Board replaced the fixed midnight-to-7 AM all-night parking ban with a flexible snow-emergency system allowing the DPW director, fire chief, and police chief to set start and end times based on storm conditions. The board also formally appointed Brendan Callahan as Community Development and Planning Director and approved a slate of routine licenses, contracts, and revolving fund accounts. Fort Sewell Oversight Committee chair Larry Sands reported over 18,000 visitors to the fort in 2024 through the new Fort Ranger program."
   decisions:
-    - "Approved Corinthian Yacht Club officer/director change application subject to required forms, fees, and ABCC approval"
-    - "Appointed Brendan Callahan as Community Development and Planning Director with term expiring June 2025"
-    - "Approved replacement of fixed midnight-to-7 AM parking ban with flexible storm-specific snow emergency parking system"
-    - "Approved award of Tanesco Country Club Community Golf Day (October 27, 2025) to Marblehead Counseling Center"
-    - "Approved bell ringing at Abbott Hall for three minutes at 11 AM on February 23, 2025 for 250th anniversary commemoration"
-    - "Approved consent agenda including YMCA Head to the Hills 10K, Miles for Mary 5K, Abbott Hall graduation use, and private drain connection license"
-    - "Approved Eastern Yacht Club officer/director change on seasonal club license 065600052"
-    - "Approved FY2026 revolving fund accounts totaling approximately $4.5M across ten departments"
-    - "Approved submission of Article 37 (Board of Health expansion from three to five members) to the General Court"
-    - "Adopted recycled products purchasing policy for 2025"
-    - "Appointed Leonard Rose as Sealer of Weights and Measures with term expiring June 2025"
-    - "Approved contracts including bocce facility ($207,300), bicycle plan extension, bridge replacement amendment (+$8,948.76), rejection of Maverick Street Crossing bids, and custodial services contract ($36,400 through June 2027)"
+    - "Approved Corinthian Yacht Club change of officers and directors (subject to required forms, fees, and ABCC approval)"
+    - "Approved appointment of Brendan Callahan as Community Development and Planning Director (term to June 2025)"
+    - "Approved flexible snow-emergency parking ban replacing fixed midnight-to-7 AM ban"
+    - "Approved Community Golf Day on October 27, 2025 awarded to Marblehead Counseling Center"
+    - "Approved Abbott Hall bell ringing for three minutes at 11 AM on February 23, 2025"
+    - "Approved consent agenda including YMCA Head to the Hills 10K, Miles for Mary 5K, Abbott Hall use, and private drain connection license"
+    - "Approved Eastern Yacht Club change of officers and directors (clerical correction)"
+    - "Approved revolving fund accounts for FY2026"
+    - "Approved submission of Article 37 (Board of Health expansion to five members) to the General Court"
+    - "Approved recycled products purchasing policy for 2025"
+    - "Appointed Leonard Rose as Sealer of Weights and Measures (term to June 2025)"
+    - "Approved contracts including bocce facility ($207,300), bridge replacement amendment, Maverick Street bid rejection, and custodial services ($36,400)"
     - "Approved letter of appreciation for Cheryl Aland upon resignation from Disabilities Commission"
-    - "Set March 7 deadline and March 12 interviews for Disabilities Commission and Task Force Against Discrimination vacancies"
   votes:
-    - motion: "Corinthian Yacht Club officer/director change"
+    - motion: "Corinthian Yacht Club change of officers and directors"
       result: "in favor (unanimous)"
-    - motion: "Appoint Brendan Callahan as Community Development and Planning Director"
+    - motion: "Appointment of Brendan Callahan as Community Development and Planning Director"
       result: "in favor (unanimous)"
-    - motion: "Snow emergency parking ban replacement"
+    - motion: "Flexible snow-emergency parking ban"
       result: "in favor (unanimous)"
-    - motion: "Community Golf Day award to Marblehead Counseling Center"
+    - motion: "Community Golf Day awarded to Marblehead Counseling Center"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall bell ringing February 23"
+    - motion: "Abbott Hall bell ringing February 23, 2025"
       result: "in favor (unanimous)"
-    - motion: "Consent agenda (events, licenses)"
+    - motion: "Consent agenda items"
       result: "in favor (unanimous)"
-    - motion: "Eastern Yacht Club officer/director change"
+    - motion: "Eastern Yacht Club change of officers and directors"
       result: "in favor (unanimous)"
     - motion: "FY2026 revolving fund accounts"
       result: "in favor (unanimous)"
-    - motion: "Submit Article 37 to General Court"
+    - motion: "Article 37 submission to General Court"
       result: "in favor (unanimous)"
-    - motion: "Adopt recycled products purchasing policy"
+    - motion: "Recycled products purchasing policy 2025"
       result: "in favor (unanimous)"
-    - motion: "Appoint Leonard Rose as Sealer of Weights and Measures"
+    - motion: "Appointment of Leonard Rose as Sealer of Weights and Measures"
       result: "in favor (unanimous)"
-    - motion: "Contract consent agenda"
+    - motion: "Contract consent agenda items"
       result: "in favor (unanimous)"
     - motion: "Letter of appreciation for Cheryl Aland"
       result: "in favor (unanimous)"
@@ -61,104 +61,110 @@ summary_card:
 
 topic_segments:
   - topic: public-comment
-    topic_confidence: 0.95
+    topic_confidence: 0.9
     start_seconds: 0
     end_seconds: 18
     headline: "No public comment submitted at opening"
-    dek: "The chair confirmed no members of the public — in person or online — wished to speak."
-    summary: "No residents came to the microphone or raised their hands online during the public comment period."
+    dek: "The chair invited public comment; no residents came forward in person or online."
+    summary: "The chair opened the meeting and invited public comment. No attendees came forward in person or raised hands online."
   - topic: permits-zoning
     topic_confidence: 0.85
-    start_seconds: 18
+    start_seconds: 30
     end_seconds: 167
-    headline: "Corinthian Yacht Club officer/director change approved unanimously"
-    dek: "Commodore Carl Renny presented the routine periodic leadership change application for board approval."
-    summary: "Carl Renny, Commodore of the Corinthian Yacht Club, appeared before the board to request approval of the club's updated officers and directors. The board approved the application subject to receipt of required forms, fees, and ABCC approval. Renny also thanked the board for its acknowledgment letter honoring longtime general manager David Titus at his retirement after approximately 30 years with the club."
-    key_speakers: ["Carl Renny (Corinthian Yacht Club Commodore)"]
+    headline: "Corinthian Yacht Club change of officers and directors approved"
+    dek: "Commodore Carl Renny presented the routine officer-change application, which was approved unanimously subject to ABCC approval."
+    summary: "Commodore Carl Renny appeared before the board to request approval of the Corinthian Yacht Club's change of officers and directors. The board approved the application subject to receipt of required forms, fees, and approval from the Alcoholic Beverage Control Commission."
+    key_speakers: ["Carl Renny (Commodore, Corinthian Yacht Club)"]
   - topic: recreation-events
-    topic_confidence: 0.92
+    topic_confidence: 0.9
     start_seconds: 167
-    end_seconds: 730
-    headline: "Fort Sewell drew over 18,000 visitors in inaugural Fort Ranger season"
-    dek: "Committee chair Larry Sands reported strong first-year results and outlined plans for expanded programming in 2025."
+    end_seconds: 683
+    headline: "Fort Sewell Ranger program drew over 18,000 visitors in first season"
+    dek: "Fort Sewell Oversight Committee chair Larry Sands reported visitor counts and outlined plans for signage, landscaping, and fundraising in 2025."
     summary: |
-      Larry Sands, chair of the Fort Sewell Oversight Committee, reported that the newly launched Fort Ranger program — staffed Tuesday through Sunday, noon to four, from early June through the first weekend in November — attracted over 18,000 visitors in its first season, a figure the committee described as well beyond expectations.
+      Larry Sands, chair of the Fort Sewell Oversight Committee (28 Franklin Street), reported that the newly launched Fort Ranger program hosted more than 18,000 visitors between early June and the first weekend of November 2024, with rangers on duty Tuesday–Sunday noon to 4 PM.
       
-      Key highlights from the update:
-      - A $100,000 fund raised during renovations is expected to sustain the Ranger program for approximately 10 years at roughly $10,000 per year
-      - A separate $200,000 maintenance reserve is being drawn down for ongoing projects including replacement of buried plaques, new signage for the Constitution and Spanish cannon, and tree replacements
-      - Plans for 2025 include outreach to school and camp groups; a third-grade teacher at Brown School has already expressed interest in a field trip
-      - The committee is exploring a donation QR code mechanism and potential merchandise sales (hats, flags, vests) to generate ongoing revenue
-      - Flags cost approximately $1,000 per year due to wind damage
-    key_speakers: ["Larry Sands (Fort Sewell Oversight Committee Chair)"]
+      Key program details:
+      - A $100,000 endowment funds roughly 10 years of ranger operations at approximately $10,000 per year
+      - A separate $200,000 fund covers ongoing maintenance
+      - Plans for 2025 include replacement plaques, new signage for the Constitution and Spanish cannon, tree replacements, a bike rack, and dog waste bags
+      - The committee is exploring a QR code donation system tied to the existing Fort Sewell donation fund
+      - A third-grade teacher at Brown School expressed interest in scheduling a class field trip
+    key_speakers: ["Larry Sands (Chair, Fort Sewell Oversight Committee)"]
   - topic: admin-housekeeping
     topic_confidence: 0.95
     start_seconds: 730
-    end_seconds: 939
-    headline: "Brendan Callahan formally appointed as Community Development and Planning Director"
-    dek: "Callahan, who previously worked in Peabody for 19 years, began the role on Monday and met with staff for the first time."
-    summary: "The board formally appointed Brendan Callahan as Community Development and Planning Director with a term expiring June 2025, subject to reappointment. Callahan described a full first week of back-to-back meetings with planning board members, commissioners, and staff, and praised the existing team as engaged and capable. He has lived in Marblehead since 2004 and noted familiarity with the community as an asset. The board indicated it would like to organize a meet-and-greet with local business owners once he is settled."
+    end_seconds: 892
+    headline: "Brendan Callahan formally appointed Community Development and Planning Director"
+    dek: "Callahan, a Marblehead resident since 2004 and former Peabody planning official of 19 years, was welcomed and appointed through June 2025."
+    summary: "Brendan Callahan introduced himself to the board after starting the position on Monday of that week. He noted an intensive first two days of meetings and expressed enthusiasm for the staff. The board formally appointed him as Community Development and Planning Director with a term expiring June 2025, with a reappointment expected in June."
     key_speakers: ["Brendan Callahan (Community Development and Planning Director)"]
   - topic: permits-zoning
-    topic_confidence: 0.82
+    topic_confidence: 0.8
     start_seconds: 939
-    end_seconds: 1267
-    headline: "Shin Dynasty restaurant update: firewall and ADA variance still pending state approval"
-    dek: "Owner Alex Lewis relayed a letter from his landlord describing delays caused by COVID-19 and a building code compliance issue discovered in October 2024."
-    summary: |
-      Alexander Lewis, owner of Shin Dynasty at 1 Atlantic Avenue, provided a status update on his restaurant's long-delayed opening. A letter from landlord Debra Kotter detailed that construction delays stemming from COVID-19 supply chain disruptions were compounding when, in late October 2024, the building inspector identified a missing firewall and ADA entrance requirements that halted interior construction.
-      
-      Two architects have since been engaged — Bob Elli as architect of record and a second for CAD drawings — and a variance request has been submitted to the state and is awaiting approval or further instruction. Lewis estimated his contractor needs approximately two more weeks of interior work once the firewall is installed. His restaurant license renewal is not due until approximately May. The board expressed support and asked him to maintain communication with staff.
-    key_speakers: ["Alexander Lewis (Shin Dynasty owner)", "Resident at mic (landlord letter read aloud)"]
+    end_seconds: 1219
+    headline: "Shin Dynasty restaurant update: firewall and ADA approvals pending with state"
+    dek: "Owner Alex Lewis reported that architects have submitted required drawings to the state; interior construction remains on hold until approvals are received."
+    summary: "Alexander Lewis, operator of Shin Dynasty at 1 Atlantic Avenue, presented a letter from building owner Debra Kotter explaining delays attributable to COVID-19 supply-chain disruptions and a subsequent stop-work order requiring a new firewall and ADA entrance. Two architects have been retained; a variance request with CAD drawings has been submitted to the state and is awaiting approval. Lewis estimated approximately two weeks of remaining interior work once the firewall is complete. The board noted the license renewal comes up in approximately May."
+    key_speakers: ["Alexander Lewis (applicant, Shin Dynasty)"]
   - topic: public-safety
-    topic_confidence: 0.97
+    topic_confidence: 0.95
     start_seconds: 1267
     end_seconds: 2122
     featured: true
-    headline: "Board replaces midnight-to-7 AM parking ban with flexible storm-specific snow emergency system"
-    dek: "DPW, police, and fire officials jointly proposed the change to allow more effective snow removal operations timed to actual storm conditions."
+    headline: "Board replaces fixed overnight parking ban with flexible storm-based snow emergency system"
+    dek: "DPW, fire, and police leadership jointly proposed — and the board unanimously approved — giving department heads authority to declare and lift parking bans based on actual storm conditions rather than a fixed midnight-to-7 AM schedule."
     summary: |
-      The board voted unanimously to suspend the town's fixed all-night parking ban (Article 5, Section 8 of traffic regulations) and replace it with a flexible snow emergency system. Under the new policy, the DPW director, fire chief, and police chief — in coordination with the town administrator — will jointly set the start and end times of declared snow emergencies based on forecast or live weather conditions.
+      The board heard a joint presentation from DPW Director Amy (last name not captured), Police Chief Gill, and the Town Administrator explaining operational constraints of the fixed midnight-to-7 AM parking ban adopted at the 2020 Town Meeting.
       
-      Key points raised during the discussion:
-      - The fixed midnight-to-7 AM window does not align with storm timing and prevents crews from completing full clean-up cycles; an 8-inch storm typically requires about 14 hours to clear
-      - DPW staff are town employees operating in-house (not contractor rotations), making fatigue and equipment limitations significant factors
-      - Snowfall that cannot be fully pushed back accumulates over the winter, progressively narrowing travel lanes
-      - Code Red notifications have scaled substantially — from roughly 400 email recipients several years ago to over 3,600 in the most recent storm — supplemented by voice calls, text, social media, and the town website
-      - Officials emphasized residents should proactively identify off-street parking options before storm season
-      - A blue light alert system was flagged as a future capital purchase to improve real-time notification
-      - Violations remain subject to ticketing and towing
+      Key arguments presented:
+      - An 8-inch storm takes approximately 14 hours to clear; the fixed window does not align with actual storm timing
+      - Marblehead's narrow streets compound safety risks when snow cannot be pushed back fully
+      - DPW operates in-house crews rather than rotating contractors, raising fatigue concerns
+      - Code Red notifications now reach over 3,600 email subscribers, up from roughly 400 five years ago; alerts go via voice, text, email, social media, and the town website
+      - A blue-light system is planned as a future capital purchase to signal active bans
       
-      The motion authorizes the four-person leadership team to determine time windows on a storm-by-storm basis and communicate through all available town channels.
-    key_speakers: ["Town Administrator (Patrick Keer)", "DPW Director (Amy)", "Police Chief (Gill)", "Fire Chief"]
+      The board voted unanimously to suspend Traffic Regulation Article 5, Section 8 (the all-night parking ban) and replace it with a flexible snow-emergency response. Under the new policy, the DPW director, fire chief, and police chief — in coordination with the Town Administrator — set the start and end times of declared snow emergencies based on forecast or live conditions. Violations remain subject to ticketing and towing.
+    key_speakers: ["Chief Gill (Police Chief)", "Amy (DPW Director, last name not captured)", "Patrick Keer (Town Administrator)"]
   - topic: recreation-events
-    topic_confidence: 0.88
-    start_seconds: 2122
-    end_seconds: 2215
-    headline: "Tanesco Country Club golf day awarded to Marblehead Counseling Center; Abbott Hall bells approved for Revolution anniversary"
-    dek: "Two routine ceremonial and community event approvals were voted on consecutively."
-    summary: "The board approved awarding the Tanesco Country Club's annual complimentary Community Golf Day on October 27, 2025 to the Marblehead Counseling Center. The board also approved a request from the Marblehead 250 Committee to ring the bells of Abbott Hall for three minutes at 11 AM on Sunday, February 23, 2025, as part of the town's commemoration of the 250th anniversary of the American Revolution."
+    topic_confidence: 0.85
+    start_seconds: 2134
+    end_seconds: 2168
+    headline: "Tenesco Country Club Community Golf Day awarded to Marblehead Counseling Center"
+    dek: "The board approved routing the club's annual complimentary golf outing to Marblehead Counseling Center on October 27, 2025."
+    summary: "The board approved awarding the Tenesco Country Club's annual Community Golf Day on October 27, 2025 to Marblehead Counseling Center and directed staff to notify the club of the award."
   - topic: admin-housekeeping
-    topic_confidence: 0.97
+    topic_confidence: 0.9
+    start_seconds: 2168
+    end_seconds: 2215
+    headline: "Abbott Hall bells approved to ring for Marblehead 250th anniversary commemoration"
+    dek: "Bells will ring for three minutes at 11 AM on February 23, 2025 as part of the town's 250th anniversary of the American Revolution observance."
+    summary: "At the request of Judy Anderson of the Marblehead 250 Committee, the board approved ringing the Abbott Hall bells for three minutes at 11 AM on Sunday, February 23, 2025 as part of Marblehead's commemoration of the 250th anniversary of the American Revolution."
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
     start_seconds: 2215
-    end_seconds: 2535
-    headline: "Consent agenda, revolving funds, Eastern Yacht Club license correction, and Board of Health expansion certification approved"
-    dek: "The board moved through a full slate of routine annual authorizations and clerical corrections."
+    end_seconds: 2395
+    headline: "Consent agenda approved including YMCA 10K, Miles for Mary 5K, Abbott Hall, and drain license"
+    dek: "The board approved January 22 minutes, two road-race events, Abbott Hall use for a school graduation, and a private drain connection license."
     summary: |
-      The board approved the following in a series of consent votes:
-      
-      **Consent agenda items:**
+      Consent agenda items approved:
       - Minutes of January 22, 2025
-      - YMCA Head to the Hills 10K (May 18, 2025)
-      - Miles for Mary 5K Walk/Run (October 18, 2025)
-      - Abbott Hall use for Marblehead Community Charter Public School graduation and rehearsals (June 18, 2025)
-      - License for private drain connection at 2–6 Washington Street
+      - YMCA Head to the Hills 10K, May 18, 2025 (subject to police and Rec & Parks approval, insurance, and police details)
+      - Miles for Mary 5K Walk/Run, October 18, 2025 (same conditions)
+      - Abbott Hall for Marblehead Community Charter Public School graduation and rehearsals, June 18, 2025
+      - License for private drain connection, 2–6 Washington Street (Barry and Beum Edelman)
       
-      **Eastern Yacht Club clerical correction:** Officer/director change on seasonal club license 065600052 at 42–44 Foster Street approved.
+      The board also approved a clerical correction appointing the Eastern Yacht Club change of officers and directors on seasonal club license #065600052 at 42–44 Foster Street.
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2314
+    end_seconds: 2535
+    headline: "FY2026 revolving fund accounts reauthorized; Board of Health expansion article forwarded to General Court"
+    dek: "Accounts totaling approximately $4.5 million were reauthorized under MGL Chapter 44; the board also certified Article 37 expanding the Board of Health to five members."
+    summary: |
+      The board reauthorized the following revolving fund accounts for FY2026:
       
-      **FY2026 revolving fund accounts** authorized under MGL Chapter 44, Section 53E½:
-      
-      | Account | Amount |
+      | Department | Amount |
       |---|---|
       | Animal Control | $20,000 |
       | Council on Aging | $250,000 |
@@ -171,55 +177,56 @@ topic_segments:
       | Rec and Park | $2,000,000 |
       | Hobbs Memorial Fund | $11,232 |
       
-      **Article 37 certification:** The board voted to submit the May 2024 annual town meeting article expanding the Board of Health from three to five members to the General Court.
-      
-      **Recycled products purchasing policy** for 2025 reaffirmed to maintain eligibility for a Board of Health grant program.
-    key_speakers: ["Patrick Keer (Town Administrator)"]
+      The board also voted to submit Article 37 of the May 6, 2024 Annual Town Meeting (expanding the Board of Health from three to five members) to the General Court for approval.
   - topic: admin-housekeeping
-    topic_confidence: 0.93
-    start_seconds: 2535
-    end_seconds: 2767
-    headline: "Leonard Rose appointed Sealer of Weights and Measures; bocce court and custodial contracts approved"
-    dek: "The role was moved from Veterans Services to the Inspections Department following a staffing transition."
-    summary: |
-      The board appointed Leonard Rose as Sealer of Weights and Measures with a term expiring June 2025, moving the function under the Inspections Department now managed by Building Commissioner Steve Cummings. The role involves testing and validating weights and measurements at gas stations and retail vendors.
-      
-      The board also approved a contract consent agenda including:
-      - **First Price Landscaping Construction** for a bocce facility at the Council on Aging, $207,300 (funded by the Shaddock Fund and Council on Aging contributions)
-      - **Tool Design Group LLC** bicycle plan contract extension through June 30, 2025 at no additional cost
-      - **Greenman Peterson Inc.** bridge replacement at Village Street over the Rail Trail, increased by $8,948.76 and extended through September 30, 2025
-      - **Rejection of all bids** on the Maverick Street Crossing Project, as all bids exceeded available funding
-      - **Sinclair Cleaning** custodial services for the Judy and Jean Jacoby Community Center, $36,400 through June 30, 2027
+    topic_confidence: 0.9
+    start_seconds: 2442
+    end_seconds: 2626
+    headline: "Recycled products purchasing policy reaffirmed; Sealer of Weights and Measures appointed"
+    dek: "Annual policy reaffirmation preserves eligibility for Board of Health grant programs; Leonard Rose appointed Sealer of Weights and Measures under the inspections department."
+    summary: "The board reaffirmed the town's recycled products purchasing policy for 2025, a requirement for the Board of Health to remain eligible for certain grant programs. The board also appointed Leonard Rose as Sealer of Weights and Measures (term to June 2025), moving the role from the retired Veterans Services officer into the inspections department under Building Commissioner Steve Cummings."
     key_speakers: ["Patrick Keer (Town Administrator)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
-    start_seconds: 2767
-    end_seconds: 2915
-    headline: "Disabilities Commission resignation accepted; vacancies set for March recruitment"
-    dek: "Cheryl Aland resigned; two letters of interest for Disabilities Commission and one for the Task Force Against Discrimination were received."
-    summary: "The board accepted the resignation of Cheryl Aland from the Disabilities Commission and voted to send a letter of appreciation for her service. Two letters of interest were received for the Disabilities Commission (Joanne Clifford and Nancy Horgan) and one for the Task Force Against Discrimination. The board set a March 7 deadline for applications and March 12 interviews for both bodies."
+    start_seconds: 2626
+    end_seconds: 2772
+    headline: "Contracts approved including $207,300 bocce facility and $36,400 custodial services for Community Center"
+    dek: "The board also rejected all Maverick Street Crossing bids as exceeding available funding and extended the bicycle plan contract through June 2025."
+    summary: |
+      The board approved the following contract actions:
+      1. First Price Landscaping Construction — Council on Aging bocce facility: $207,300 (funded by Shaddock Fund and Council on Aging)
+      2. Amend Tool Design Group LLC bicycle plan contract — extend to June 30, 2025 (no cost change)
+      3. Amend Greenman Peterson Inc. bridge replacement at Village Street over Rail Trail — increase by $8,948.76 and extend to September 30, 2025
+      4. Reject all bids received November 19, 2025 on Maverick Street Crossing Project (all bids exceeded available funding)
+      5. Sinclair Cleaning custodial services, Judy and Jean Jacoby Community Center — $36,400 through June 30, 2027
     key_speakers: ["Patrick Keer (Town Administrator)"]
+  - topic: labor-personnel
+    topic_confidence: 0.8
+    start_seconds: 2772
+    end_seconds: 2915
+    headline: "Disability Commission vacancy opened; interviews set for March 12"
+    dek: "Cheryl Aland resigned from the Disabilities Commission; two letters of interest received with a deadline of March 7 and interviews March 12."
+    summary: "The board accepted the resignation of Cheryl Aland from the Disabilities Commission and voted to send her a letter of appreciation. Two letters of interest were received — from Joanne Clifford and Nancy Horgan — for the Disabilities Commission, and one for the Task Force Against Discrimination. The board set an application deadline of March 7 and scheduled interviews for March 12."
   - topic: public-safety
-    topic_confidence: 0.88
+    topic_confidence: 0.9
     start_seconds: 2915
     end_seconds: 3429
-    headline: "Dispatch GIS app earns $50K in free Esri licensing; two police recruits in pipeline"
-    dek: "Town Administrator Patrick Keer highlighted public safety and DPW infrastructure updates including sewer, rail trail, and bridge projects."
+    headline: "Town Administrator reports $50,000 ESRI GIS license award, two police recruit updates, and DPW infrastructure projects"
+    dek: "Dispatch center's custom GIS emergency app earned free licensing; one recruit graduates February 28 and another enters the academy March 3."
     summary: |
-      **Police / Dispatch highlights:**
-      - Marblehead 911 dispatch center received approximately $50,000 in free Esri GIS software licensing in recognition of a field-reporting application developed in-house by dispatchers. The app allows field personnel to photograph and log incidents (e.g., storm damage) in real time, updating dispatchers with a live operational picture. The team won a People's Choice Award at the National Alliance for Public Safety GIS Foundation Innovation Summit in 2023.
-      - Recruit Taylor Nolasco graduates the police academy February 28 and begins field training March 3.
-      - Recruit Brandon Aire begins the police academy March 3.
-      - The department is preparing for a reaccreditation assessment in May, its second reaccreditation cycle.
+      Town Administrator Patrick Keer provided updates across two departments:
       
-      **DPW infrastructure projects underway or planned:**
-      - Sewer lining: Glendale, Pickwick, Brooks, Trager, Roger Shetland area
-      - Sewer main replacement: Sergeant Street
-      - Gas main replacement: Maverick Street (National Grid)
-      - Rail trail rehabilitation: Pleasant Street to Smith Street
-      - Village Street Bridge: boring/drilling complete; design ongoing; state accepted culvert approach, reducing estimated cost from approximately $11 million to $2–3 million
-      - 297 Ocean Ave stormwater pipe: 95% complete
-      - Neighborhood construction Zoom meeting to be scheduled for upcoming week
+      **Police / Dispatch:**
+      - Marblehead's 911 dispatch center received approximately $50,000 in free ESRI GIS licensing for a custom emergency-response dashboard application developed in-house by dispatchers. The app won the People's Choice Award at the National Alliance for Public Safety GIS Foundation Innovation Summit in 2023.
+      - Recruit Taylor Nolasco graduates the police academy February 28 and begins field training March 3.
+      - Recruit Brandon Aire enters the police academy March 3.
+      - The department has completed preparation for its reaccreditation assessment, scheduled for May.
+      
+      **DPW / Infrastructure:**
+      - Active projects include sewer lining on Glendale, Pickwick, Brooks, Trager, and Roger/Shetland areas; Sergeant Street sewer main replacement; Maverick Street gas main replacement; and Rail Trail rehabilitation from Pleasant Street to Smith Street.
+      - Village Street bridge boring work is complete; the state accepted the culvert classification, reducing the estimated project cost from approximately $11 million to $2–3 million.
+      - Stormwater pipe work at 297 Ocean Ave is 95% complete.
+      - A neighborhood construction Zoom meeting is planned for the following week.
     key_speakers: ["Patrick Keer (Town Administrator)"]
 ---
 

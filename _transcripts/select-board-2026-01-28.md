@@ -11,137 +11,139 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board approves fireworks contract, Hobbs House lease extension, and liquor licenses"
-  summary: "The Marblehead Select Board met on January 28, 2026 and approved a $55,000 fireworks contract with Pyrotechnico for July 4th, extended the Hobbs House (Marblehead Counseling Center) lease for five years at $7,488 annually, and approved one-day liquor licenses for two upcoming events. The board also discussed commissioning a scientifically valid resident survey through a vendor called Polco and voted to recognize community member Nico Fina with a proclamation."
+  headline: "Select Board approves $55,000 fireworks contract, discusses resident survey platform"
+  summary: "The Marblehead Select Board held its January 28, 2026 meeting, approving a $55,000 contract with Pyrotechnico Fireworks for the July 4th display and extending the Hobbs House (Marblehead Counseling Center) lease through February 2031 at $7,488 annually. The board also discussed commissioning a scientifically validated resident survey through a platform called Polco, with members agreeing to research it further before committing. Public comment and board announcements focused heavily on snow removal operations following a record-setting storm."
   decisions:
-    - "Approved proclamation recognizing Nikolai Minos (Nico Fina) for his lifelong commitment to the community"
-    - "Approved Abbott Hall Festival of Arts event permit for March 6, 2026"
-    - "Approved five-year lease extension for Hobbs House (Marblehead Counseling Center) at 66 Clifton Avenue through February 14, 2031 at $7,488 annually"
-    - "Approved fireworks contract with Pyrotechnico Fireworks Inc. for July 4th display at $55,000"
-    - "Approved one-day liquor licenses for Marblehead Festival of Arts at Abbott Hall (March 6, 2026) and Marblehead Museum (March 13, 2026)"
-    - "Approved letters of appreciation for retiring employees Bob Titus (DPW, 31 years), Peter James (Rec & Park, 39 years), and Dana Lamou"
+    - "Approved proclamation recognizing Nikolai Minos for lifelong community commitment"
+    - "Approved Abbot Hall Festival of Arts event on March 26, 2026"
+    - "Approved five-year lease extension for Hobbs House/Marblehead Counseling Center at 66 Equip through February 14, 2031"
+    - "Approved $55,000 contract with Pyrotechnico Fireworks for July 4th display"
+    - "Approved one-day liquor licenses for Marblehead Festival of Arts (March 6) and Marblehead Museum (March 13)"
+    - "Approved congratulatory letters to retiring employees Bob Titus (DPW, 31 years), Peter James (Rec & Park, 39 years), and Dana Lamu"
   votes:
-    - motion: "Proclamation recognizing Nico Fina"
+    - motion: "Proclamation for Nikolai Minos"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall Festival of Arts event permit, March 6, 2026"
+    - motion: "Abbot Hall Festival of Arts event approval"
       result: "in favor (unanimous)"
-    - motion: "Hobbs House lease extension through February 14, 2031"
+    - motion: "Hobbs House lease extension"
       result: "in favor (unanimous)"
-    - motion: "Fireworks contract with Pyrotechnico, $55,000"
+    - motion: "Pyrotechnico Fireworks contract $55,000"
       result: "in favor (unanimous)"
-    - motion: "One-day liquor licenses for MFA and Marblehead Museum events"
+    - motion: "One-day liquor licenses for Festival of Arts and Marblehead Museum"
       result: "in favor (unanimous)"
-    - motion: "Letters of appreciation for retiring town employees"
+    - motion: "Congratulatory letters to retiring employees"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: public-comment
-    topic_confidence: 0.97
+    topic_confidence: 0.95
     start_seconds: 0
     end_seconds: 339
-    headline: "Residents raise concerns about document transparency, capital funding, Essex Tech seats, and snow-covered school sidewalks"
-    dek: "Two residents addressed the board during public comment on topics ranging from capital investment levels to dangerous sidewalk conditions near schools following a major snowstorm."
+    headline: "Residents raise concerns about sidewalk snow clearance near schools"
+    dek: "Two residents addressed the board on snow removal priorities, capital investment levels, and the Essex Tech seat expansion's fiscal implications."
     summary: |
-      **Sarah Fox** (40 Foster Street) made three points: (1) requested the Select Board post meeting packets online as the school department does; (2) suggested the town's appropriate annual capital investment is roughly $4–5 million per year, up from a prior estimate of $2–2.5 million; (3) flagged that Essex Tech has increased Marblehead's seat allocation from 9 to 39 — a 333% increase — which she projected would reduce high school enrollment by roughly 100–150 students over four years and materially change the town's cherry sheet assessment.
+      **Sarah Fox (40 Foster Street)** raised three items: (1) requesting that Select Board meeting packets be posted online as the school department does; (2) suggesting the town's annual capital investment target should be roughly $4–5 million per year rather than the previously cited $2–2.5 million; and (3) flagging that Essex Tech increased Marblehead's seat allocation from 9 to 39, a 333% increase, which she projected would reduce high school enrollment by roughly 100–150 students in four years and significantly affect the cherry-sheet assessment.
       
-      **Pat Adams** (Village Street) spoke remotely about dangerous sidewalk conditions around the Village School, where she said students were walking in active streets due to uncleared snow. She requested urgent action and noted she had video documentation. Board members indicated the Town Administrator would provide a snow removal update.
+      **Pat Adams (Village Street)** spoke remotely about dangerous sidewalk conditions near schools following the snowstorm, stating she had witnessed and videoed students walking in the street alongside active vehicle traffic. She expressed concern that no snow removal had occurred near the village school the prior evening and asked for urgent attention before a potential additional storm.
     key_speakers: ["Sarah Fox (resident)", "Pat Adams (resident, remote)"]
   - topic: trash-dpw
-    topic_confidence: 0.88
+    topic_confidence: 0.9
     start_seconds: 339
     end_seconds: 549
-    headline: "DPW provides snow removal update following one of Boston's top-10 largest snowstorms"
-    dek: "The Town Administrator and DPW representatives described the storm response, noting crews had been plowing for over 34 hours and that school department staff handle school-property sidewalks."
-    summary: "The DPW representative reported that the storm was among the top-10 largest on record for Boston and that crews plowed for over 34 consecutive hours. The standard snow removal sequence prioritizes Pleasant Street, Washington Street, Atlantic Street, and Atlantic Avenue due to bus stops and proximity to schools. School department equipment and personnel handle school-property sidewalks, while DPW clears crossings. The representative acknowledged the Village School area as particularly challenging for pedestrian safety even without snow. Board members noted that cemetery and Rec & Park employees also contribute to snow operations."
-    key_speakers: ["Town Administrator (Thatcher)", "DPW representative (Amy)"]
+    headline: "DPW director reports record-setting storm required 34+ hours of plowing"
+    dek: "The town administrator's update focused almost entirely on snow removal operations following what was described as a top-10 Boston-area snowstorm."
+    summary: "The DPW director (speaking in person) described over 34 hours of continuous plowing. Standard priority routes include Pleasant Street, Washington Street, Atlantic Street, and Atlantic Avenue — corridors with high bus-stop and school-adjacent traffic. School department equipment and staff handle school properties first, then work outward to adjacent sidewalks, while DPW handles street crossings. The director acknowledged equipment constraints given the storm's size and committed to coordinating with school department staff on remaining sidewalk clearance. A board member noted Village Street is particularly hazardous even in normal conditions."
+    key_speakers: ["DPW Director / Town Administrator (at podium)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.92
     start_seconds: 549
     end_seconds: 823
-    headline: "Board reads Holocaust Remembrance Day proclamation and approves recognition of community member Nico Fina"
-    dek: "The board read the International Holocaust Remembrance Day proclamation ahead of a January 30 event and unanimously approved a proclamation honoring Nico Fina before his move to Florida."
+    headline: "Board reads Holocaust Remembrance Day proclamation, recognizes community member Nikolai Minos"
+    dek: "The board noted the January 30, 2026 International Holocaust Remembrance Day event at Town Hall and unanimously approved a proclamation honoring departing resident Nikolai Minos."
     summary: |
-      The board noted that the Task Force Against Discrimination is holding an International Holocaust Remembrance Day event on Friday, January 30, 2026 at noon in the Select Board meeting room, marking the 81st anniversary of the liberation of Auschwitz. The proclamation was read aloud.
+      The board read a proclamation for the 81st anniversary of the liberation of Auschwitz, noting an event hosted by the Task Force Against Discrimination on January 30 at noon in the Select Board meeting room.
       
-      The board then unanimously approved a proclamation recognizing **Nikolai Minos (Nico Fina)** for his community involvement, positive spirit, and commitment to extreme cycling and fitness, ahead of a community send-off event organized by Dave Aldrich at the Beacon on Saturday.
-    key_speakers: ["Board Chair (Fox)"]
+      The board then voted unanimously to issue a proclamation recognizing **Nikolai Minos** ('Nico'), who is relocating to Florida. The proclamation cited his community presence, infectious positivity, and dedication to extreme cycling and fitness. A community event organized by Dave Aldrich ('the bagel guy') was scheduled for Saturday at The Beacon with bagels, coffee, and cider.
+    key_speakers: ["Board Chair (reading proclamations)", "Jim (board member, reading Nico Minos proclamation)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.82
+    topic_confidence: 0.85
     start_seconds: 823
     end_seconds: 2174
-    headline: "Board discusses commissioning a scientifically valid resident survey through vendor Polco"
-    dek: "Board member Aaron presented research on Polco, a resident survey platform used by Dedham, Franklin, and Needham, as a tool for data-driven budget and service planning; the board agreed to explore further."
-    summary: |
-      Board member **Aaron** presented findings on **Polco** (also referenced as 'Poco'), a community engagement survey platform that partners with the National Research Center. The platform sends surveys to a randomly selected sample of 3,500 households, keeps the survey open for six weeks, and applies census demographic weighting to validate results. Key features include:
-      
-      - Benchmarking against 500+ municipalities, customizable by population size, median income, and region
-      - A 30-page results report with breakdowns by age and income group
-      - Custom questions, e.g., resident preferences on service cuts vs. tax increases
-      - Ten livability facets covering parks, safety, education, mobility, open space, economy, arts, and health
-      
-      The Town of Dedham achieved a **17% response rate** (~460 respondents) with a **±4–5% margin of error at 95% confidence**, above the ~13% national average. Dedham used a community compact grant and partnered with the Collins Center at UMass for additional budget analysis.
-      
-      A competing vendor, **Flash Vote**, was noted as less expensive but lacking the national benchmarking database. Aaron scheduled a follow-up call with Flash Vote for Friday at 1 PM and invited another board member to join.
-      
-      No vote was taken; the board agreed unanimously to continue research before making a decision.
-    key_speakers: ["Aaron (board member)", "Thatcher (Town Administrator)"]
-  - topic: recreation-events
-    topic_confidence: 0.85
-    start_seconds: 2174
-    end_seconds: 2221
-    headline: "Board approves Abbott Hall Festival of Arts event permit for March 6, 2026"
-    dek: "The board unanimously approved the Abbott Hall Marblehead Festival of Arts event, subject to standard conditions including proof of insurance."
-    summary: "The board approved the Abbott Hall Festival of Arts event for Friday, March 6, 2026, subject to usual rules, regulations, fees, and receipt of required certificate of insurance. The event is described as a launch auction of the Robinson Frame."
-    key_speakers: ["Board Chair (Fox)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.88
-    start_seconds: 2221
-    end_seconds: 2283
-    headline: "Board approves five-year lease extension for Hobbs House counseling center at $7,488 annually"
-    dek: "The Marblehead Counseling Center's lease at 66 Clifton Avenue is extended through February 14, 2031 at the same terms, reflecting a discounted rate in recognition of services provided."
-    summary: "The board unanimously approved a five-year lease extension for the **Marblehead Counseling Center** (Hobbs House), a mental health clinic, at **66 Clifton Avenue** (noted as 'equipped now' in the transcript), running from February 15, 2026 through February 14, 2031. The annual rent is **$7,488**, maintained at a discounted rate in recognition of services the organization provides to the community. The chair was authorized to sign the lease on behalf of the board."
-    key_speakers: ["Board Chair (Fox)"]
-  - topic: recreation-events
-    topic_confidence: 0.9
-    start_seconds: 2283
-    end_seconds: 2413
     featured: true
-    headline: "Board awards $55,000 July 4th fireworks contract to Pyrotechnico, funded primarily by donations"
-    dek: "The board unanimously and enthusiastically approved Contract 26-48 with Pyrotechnico Fireworks Inc. for the July 4th display, with a rain date of July 5th."
-    summary: "The board approved **Contract 26-48** with **Pyrotechnico Fireworks Inc.** for the July 4th fireworks display in the amount of **$55,000**, with a rain date of July 5th. Funding comes primarily from donations collected by the fireworks committee. The chair was authorized to sign the contract on behalf of the board. The vote was unanimous, with the chair voting 'strongly in favor.'"
-    key_speakers: ["Board Chair (Fox)"]
-  - topic: permits-zoning
-    topic_confidence: 0.92
-    start_seconds: 2413
-    end_seconds: 2514
-    headline: "Board approves one-day beer-and-wine licenses for two March cultural events"
-    dek: "One-day liquor licenses were approved for the Marblehead Festival of Arts at Abbott Hall on March 6 and the Marblehead Museum on March 13, 2026."
+    headline: "Board explores scientifically validated resident survey platform to inform budget and planning decisions"
+    dek: "Board member Aaron presented research on Polco and a competing service, Flash Vote, as tools to gather statistically reliable resident input ahead of potential budget and override decisions."
     summary: |
-      The board unanimously approved one-day liquor licenses for two events:
+      Board member Aaron presented findings on **Polco** (a community engagement platform partnered with the National Research Center) as a potential tool for Marblehead. Key features described:
       
-      | Event | Location | Date | Hours | Type |
-      |---|---|---|---|---|
-      | Marblehead Festival of Arts | Abbott Hall | March 6, 2026 | 5–7 PM | Beer and wine only |
-      | Marblehead Museum (Jeremiah Lee Mansion Kitchen) | 157 Washington Street | March 13, 2026 | 6–8 PM | Not specified |
+      - Sends surveys to **3,500 randomly selected households**, open for six weeks
+      - Combines paper mail (postcard + paper survey) and online response
+      - Results cross-referenced against census demographic data to validate representativeness
+      - Benchmarks against **500+ municipalities** nationwide, customizable by population size, median income, and region
+      - Covers 10 livability facets (parks & rec, safety, education, mobility, open space, arts & culture, health & wellness, economy, natural environment, and others)
+      - Produces a ~30-page report with demographic breakdowns and a quality-vs-importance gap analysis
+      - Allows **custom questions** (e.g., resident appetite for tax increases vs. service cuts)
+      - National average response rate ~13%; Dedham achieved ~17% (~460 respondents) at 95% confidence, ~4–5% margin of error
       
-      Conditions include proof of insurance, alcohol sourced from authorized suppliers (Kathy's Importing and Seaboard Beer), no overnight storage, and payment of the $50 license fee.
-    key_speakers: ["Board Chair (Fox)"]
-  - topic: labor-personnel
+      Towns cited as having used Polco: **Needham, Dedham, Franklin, Brookline, Shrewsbury, Cambridge, North Andover**. Dedham used a community compact grant and the Collins Center at UMass alongside the survey to model budget reduction scenarios.
+      
+      Aaron noted a competing service, **Flash Vote**, which is less expensive but lacks the national benchmarking and longitudinal trend analysis. A follow-up call with Flash Vote was scheduled for Friday at 1 PM.
+      
+      The board consensus was to research further; no member opposed moving forward with additional due diligence. Aaron and at least one other member planned to join the Friday call.
+    key_speakers: ["Aaron (board member)", "Board Chair"]
+  - topic: recreation-events
     topic_confidence: 0.88
+    start_seconds: 2174
+    end_seconds: 2283
+    headline: "Board approves Abbot Hall Festival of Arts event and $55,000 fireworks contract for July 4th"
+    dek: "Routine approvals included the Festival of Arts event at Abbot Hall on March 26 and a $55,000 fireworks contract funded primarily by committee donations."
+    summary: |
+      The board unanimously approved:
+      
+      1. **Abbot Hall Festival of Arts** — Friday, March 26, 2026, subject to standard rules, fees, and certificate of insurance. The event is described as launching an auction of the Robinson Frame and MFOA logos.
+      
+      2. **July 4th Fireworks** — Contract 26-48 awarded to **Pyrotechnico Fireworks Inc.** for **$55,000** (rain date July 5th). Funding comes primarily from donations collected by the fireworks committee.
+    key_speakers: ["Board Chair"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2221
+    end_seconds: 2419
+    headline: "Board extends Hobbs House/Marblehead Counseling Center lease through February 2031"
+    dek: "The Marblehead Counseling Center's five-year lease option at 66 Equip was exercised under the same terms at $7,488 annually."
+    summary: "The board voted unanimously to extend the lease for the **Marblehead Counseling Center (Hobbs House)** at 66 Equip for an additional five years, February 15, 2026 through February 14, 2031, at an annual rent of **$7,488**. The board noted the tenant receives a reduced rate in recognition of the mental health services it provides. The chair was authorized to execute the lease on behalf of the board."
+    key_speakers: ["Board Chair"]
+  - topic: permits-zoning
+    topic_confidence: 0.88
+    start_seconds: 2419
+    end_seconds: 2514
+    headline: "Board approves one-day liquor licenses for two March cultural events"
+    dek: "Beer-and-wine licenses approved for the Marblehead Festival of Arts at Abbot Hall (March 6) and the Marblehead Museum at the Jeremiah Lee Kitchen (March 13)."
+    summary: |
+      The board unanimously approved one-day liquor licenses (beer and wine only) subject to standard conditions including proof of licensed-source purchase, liquor liability insurance, no overnight storage, and a $50 fee per license:
+      
+      | Event | Venue | Date | Hours |
+      |---|---|---|---|
+      | Marblehead Festival of Arts | Abbot Hall | March 6, 2026 | 5–7 PM |
+      | Marblehead Museum | Jeremiah Lee Kitchen, 157 Washington St. | March 13, 2026 | 6–8 PM |
+      
+      Alcohol to be purchased from Kathy's Importing and Seaboard Beer.
+    key_speakers: ["Board Chair"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
     start_seconds: 2514
     end_seconds: 2683
-    headline: "Board approves appreciation letters for three retiring long-service town employees"
-    dek: "Bob Titus (DPW, 31 years), Peter James (Rec & Park, 39 years), and Dana Lamou were recognized by the board with letters of appreciation upon their retirements."
+    headline: "Board recognizes three retiring long-term town employees with congratulatory letters"
+    dek: "Bob Titus (DPW, 31 years), Peter James (Rec & Park, 39 years), and Dana Lamu were recognized upon retirement."
     summary: |
-      The board unanimously approved letters of appreciation for three retiring town employees:
+      Board member Moses acknowledged the DPW crew's snow removal effort and announced three retirements:
       
-      - **Bob Titus** — Department of Public Works, 31 years of service
-      - **Peter James** — Recreation and Park Department, 39 years of service
-      - **Dana Lamou** — department not specified in transcript
+      - **Bob Titus** — DPW, 31 years of service
+      - **Peter James** — Rec & Park, 39 years of service
+      - **Dana Lamu** — department not specified in transcript
       
-      Board members also noted in their announcements that Rec & Park and cemetery employees assist with snow removal operations.
-    key_speakers: ["Board member (Moses)", "Aaron (board member)"]
+      The board voted unanimously to send congratulatory letters to all three. Board member Aaron also encouraged residents to be patient with sidewalk conditions, noting that Marblehead's tree roots and narrow sidewalk widths make plowing equipment-intensive, and that the storm ranked as the eighth largest snowfall in Boston history.
+    key_speakers: ["Moses (board member)", "Aaron (board member)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

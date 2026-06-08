@@ -11,49 +11,52 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Melissa Lucas appointed to fill vacant Marblehead School Committee seat"
-  summary: "In a joint session, the Select Board and School Committee interviewed four applicants for the school committee vacancy left by a departing member, then voted unanimously to appoint Melissa Lucas, a CFO with 18 years of finance experience. The board also adopted a zero-emissions vehicle procurement policy and heard updates on road/utility projects, the Coffin School reuse process, and upcoming Marblehead 250th anniversary events."
+  headline: "Joint meeting appoints Melissa Lucas to vacant School Committee seat"
+  summary: "The Select Board and School Committee held a joint session to fill the seat vacated by a departing member, interviewing four candidates before voting unanimously to appoint Melissa Lucas, a CFO with 18 years of finance experience. The board also adopted a zero-emissions vehicle procurement policy as a step toward Green Community designation, continued a liquor-license revocation hearing for Shin Dynasty to October 8, and received updates on street utility projects, the Coffin School reuse process, and the Marblehead 250 commemoration events."
   decisions:
-    - "Appointed Melissa Lucas to the School Committee"
-    - "Adopted the Town of Marblehead Zero Emissions Vehicle First Procurement Policy"
-    - "Continued public hearing on Shin Dynasty liquor license to October 8, 2025"
-    - "Approved one-day liquor license for Bubble Bar Boston at the Lee Mansion on October 4, 2025"
-    - "Approved overhang sign for Farine Artisanal French Bread at 164 Washington Street"
-    - "Approved secondhand dealer's license and overhang sign for Brothers Consignment at 80 R Washington Street"
-    - "Approved appointment of Steve McClure to the Cultural Council (term to June 2028)"
-    - "Approved reappointment of Duncan Facie to the OHDC as full member (term to June 2026)"
-    - "Approved appointment of Michael Hall to the OHDC as alternate member (term to June 2026)"
-    - "Approved one-month $0 demo lease of Demara EES electric mini bus for Council on Aging"
-    - "Approved no-parking tow zone on Roundhouse Road for October 20, 2025 cleanup"
-    - "Approved rotating the Abbot Hall bell in the clock tower"
-    - "Approved consent agenda including minutes of August 28, 2025 and Old Town House event permit"
+    - "Appointed Melissa Lucas to vacant School Committee seat"
+    - "Adopted zero-emissions vehicle first procurement policy"
+    - "Approved reappointment of Duncan Facie to OHDC as full member"
+    - "Approved appointment of Michael Hall as OHDC alternate member"
+    - "Approved appointment of Steve McClure to Cultural Council"
+    - "Continued Shin Dynasty liquor-license revocation hearing to October 8"
+    - "Approved overhang sign for Farine Artisanal French Bread, 164 Washington Street"
+    - "Approved secondhand dealer's license and overhang sign for Brothers Consignment"
+    - "Approved one-month demo lease of Demara EES electric mini bus at no cost"
+    - "Approved no-parking tow zone on Roundhouse Road for October 20 cleanup"
+    - "Approved one-day liquor license for Bubble Bar Boston at Lee Mansion, October 4"
+    - "Approved rotation of the Town Hall clock tower bell"
+    - "Approved event permit for Marblehead Museum at Old Town House, October 18"
   votes:
     - motion: "Appoint Melissa Lucas to School Committee"
       result: "in favor (unanimous)"
-    - motion: "Adopt Zero Emissions Vehicle First Procurement Policy"
+    - motion: "Adjourn School Committee meeting"
       result: "in favor (unanimous)"
-    - motion: "Continue Shin Dynasty hearing to October 8, 2025"
-      result: "in favor (unanimous)"
-    - motion: "One-day liquor license for Bubble Bar Boston at Lee Mansion"
-      result: "in favor (unanimous)"
-    - motion: "Overhang sign for Farine Artisanal French Bread"
-      result: "in favor (unanimous)"
-    - motion: "Secondhand dealer's license for Brothers Consignment"
-      result: "in favor (unanimous)"
-    - motion: "Overhang sign for Brothers Consignment"
-      result: "in favor (unanimous)"
-    - motion: "Appoint Steve McClure to Cultural Council"
+    - motion: "Adopt zero-emissions vehicle procurement policy"
       result: "in favor (unanimous)"
     - motion: "Reappoint Duncan Facie to OHDC full member"
       result: "in favor (unanimous)"
-    - motion: "Appoint Michael Hall to OHDC alternate member"
+    - motion: "Appoint Michael Hall as OHDC alternate member"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Steve McClure to Cultural Council"
+      result: "in favor (unanimous)"
+    - motion: "Continue Shin Dynasty hearing to October 8"
+      result: "in favor (unanimous)"
+    - motion: "Approve Farine Artisanal French Bread overhang sign"
+      result: "in favor (unanimous)"
+    - motion: "Approve Brothers Consignment secondhand dealer's license"
+      result: "in favor (unanimous)"
+    - motion: "Approve Brothers Consignment overhang sign"
       result: "in favor (unanimous)"
     - motion: "Approve Demara EES electric mini bus demo lease"
       result: "in favor (unanimous)"
-    - motion: "Approve Roundhouse Road no-parking tow zone"
+    - motion: "Approve Roundhouse Road no-parking tow zone for October 20"
       result: "in favor (unanimous)"
-    - motion: "Approve rotating the Abbot Hall bell"
+    - motion: "Approve Bubble Bar Boston one-day liquor license at Lee Mansion"
+      result: "in favor (unanimous)"
+    - motion: "Approve rotation of clock tower bell"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -61,228 +64,207 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 0
     end_seconds: 370
-    headline: "Residents speak on Green Community program benefits and rate concerns"
-    dek: "One resident urged steps toward Green Community designation; another cautioned about resulting surcharges on light bills."
+    headline: "Residents debate Green Community designation and light-bill surcharge"
+    dek: "One speaker urged the board to adopt policies enabling a Green Community application; a second cautioned about a ratepayer surcharge."
     summary: |
-      Eileen Haley outlined three steps the Select Board could take to position Marblehead to apply for Green Community status as soon as it achieves MBTA Communities (3A) compliance: adopting a low/zero-emission vehicle purchasing policy, committing to a 20% municipal energy reduction over five years, and sending a letter of support to the Municipal Light Board requesting a renewable energy surcharge. She noted 298 of 351 Massachusetts communities have joined the program, with potential grants of up to $250,000 per cycle.
+      Eileen Haley outlined the financial case for Marblehead joining the state's Green Communities program, noting 298 of 351 Massachusetts communities have enrolled and that the town could access up to $150,000 in year one and $250,000 per subsequent grant cycle. She asked the Select Board to adopt a low/zero-emission vehicle procurement policy, commit to a 20% municipal energy reduction goal over five years, and send a letter of support to the Municipal Light Board requesting it take preparatory steps conditional on the town achieving MBTA 3A compliance.
       
-      Albert Jordan spoke in opposition, warning that the renewable energy surcharge would be reflected on ratepayers' light bills, characterizing the funding as not truly "free money." He also noted the town is already in the process of upgrading heating systems at Mary Alley under recently approved capital spending.
+      Albert Jordan expressed support for going green but cautioned that the program requires a ratepayer surcharge on electric bills, that the light rate has not increased in 15 years, and that accepting state funds creates an obligation to repay them if the town exits the program. He encouraged the board to proceed carefully.
     key_speakers: ["Eileen Haley (resident, 44 Longview Drive)", "Albert Jordan (resident, Roosevelt Avenue)"]
-  - topic: school-budget
-    topic_confidence: 0.97
-    start_seconds: 370
-    end_seconds: 4464
-    featured: true
-    headline: "Melissa Lucas appointed unanimously to fill vacant School Committee seat"
-    dek: "In a joint Select Board–School Committee session, four candidates were interviewed and Lucas, a CFO, was selected in the first round of voting."
-    summary: |
-      The Select Board and School Committee convened jointly to fill the vacancy left by the departure of a sitting member. Four applicants were interviewed in alphabetical order: Melissa Lucas, Sarah Fox, Yale Edeiken, and Mark Schwartz.
-      
-      **Melissa Lucas** identified her top priorities as financial transparency, long-term planning, restoring community trust, and improving student outcomes. She noted enrollment is down approximately 6% this year and emphasized variance analysis and quarterly budget reporting as transparency tools. She acknowledged prior public statements advocating for an override but said she would need to do more analysis before committing to any position.
-      
-      **Sarah Fox**, a former School Committee member with five years on the budget subcommittee, highlighted her deep familiarity with the school budget, the revolving funds, and grant structures. She emphasized the need for a true zero-based budget given a projected approximately $3 million deficit resulting from the collective bargaining agreement, and noted unprecedented enrollment decline of more than 6.5% this year — the steepest single-year drop in recent memory. She also advocated for tracking encumbered spending alongside budgeted and expended figures.
-      
-      **Yale Edeiken**, an attorney with municipal law experience, focused on anti-discrimination and antisemitism policy, consequences for student misconduct, and bringing the community together. She described her background advising school committees and select boards as an asset.
-      
-      **Mark Schwartz**, with over 15 years of classroom teaching experience, emphasized rebuilding trust after the teacher strike, student mental health and wellbeing, and transparent communication including a proposed blog summarizing committee decisions for the public.
-      
-      After brief deliberation, the board moved to nominations. The vote was:
-      
-      | Voter | Nominee |
-      |---|---|
-      | Mr. Quata | Melissa Lucas |
-      | Ms. Schaffner | Sarah Fox |
-      | Ms. Schmick Pepper | Melissa Lucas |
-      | Mr. Williams | Melissa Lucas |
-      | Mr. Grater | Melissa Lucas |
-      | Ms. Nunan | Melissa Lucas |
-      | Ms. Singer | Mark Schwartz |
-      | Mr. Fox | Melissa Lucas |
-      
-      With six votes, Melissa Lucas received a majority in the first round and was unanimously appointed by formal motion. Jim Sison recused himself, leaving eight voting members.
-    key_speakers: ["Melissa Lucas (applicant, CFO)", "Sarah Fox (applicant, former School Committee member)", "Yale Edeiken (applicant, attorney)", "Mark Schwartz (applicant, educator)", "Henry (School Committee member)", "Jen (School Committee member)", "Kate (School Committee member)", "Aaron (School Committee member)", "Alexa (School Committee member)", "Mr. Grater (Select Board member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
-    start_seconds: 4559
-    end_seconds: 5025
-    headline: "Town Administrator highlights staff certifications, police reaccreditation, and $121K mental health grant"
-    dek: "Treasurer/Collector Kami Elli passed the state collector exam on first attempt; police department earned reaccreditation and received a $121,300 mental health clinician grant."
+    start_seconds: 370
+    end_seconds: 416
+    headline: "Select Board and School Committee convene joint session to fill vacancy"
+    dek: "The chair explained the joint appointment process, noting alphabetical interview order and a majority-of-five threshold."
+    summary: "The chair called the joint Select Board–School Committee meeting to order and explained procedures: four applicants would be interviewed individually in alphabetical order, deliberation would follow, and a majority of five votes from the combined eight-member panel (one member recused) would be required for appointment."
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 416
+    end_seconds: 4274
+    featured: true
+    headline: "School Committee vacancy filled: Melissa Lucas appointed unanimously over three other candidates"
+    dek: "The joint board interviewed four applicants—Lucas, Sarah Fox, Yale Weissman, and Mark Schwartz—before voting 7-1 to appoint Lucas, a CFO who cited financial transparency and zero-based budgeting as top priorities."
     summary: |
-      The Town Administrator reported two professional development accomplishments in the finance department: Treasurer/Collector Kami Elli passed the Massachusetts Collectors and Treasurers Association Collector Exam on her first attempt, earning full certification; and assistant assessor Victoria Boca Rate completed the Mass Association of Assessing Officers Annual Summer School program.
+      The Select Board and School Committee jointly interviewed four candidates to fill the seat vacated by a departing member. Each candidate was asked identical questions covering budget challenges, outside funding reliance, carrying out voter intent from the June election, managing difficult team members, budget-cut guiding principles, fact-based financial reporting (variance analysis, DESI dashboard), committee dynamics, and what excited them most about the role.
       
-      The police department was issued a reaccreditation, with a formal recognition ceremony scheduled for October. Separately, a grant of $121,300 was received to fund the department's mental health clinician, Gina Rabbit. The administrator credited Representative Armenian and Senator Creighton with securing the funds after the state-level program had been budget-cut.
-    key_speakers: ["Town Administrator (Thatcher)"]
+      **Melissa Lucas** — CFO with 18 years of finance/accounting experience; parent of three children newly enrolled in Marblehead schools. Priorities: financial transparency, long-term planning, restoring community trust, and improving student outcomes. Noted 6% enrollment decline and called for zero-based budgeting. Said she would need to do detailed analysis before committing to an override position.
+      
+      **Sarah Fox** — Five-year veteran of the School Committee budget subcommittee, described as having deep institutional budget knowledge. Flagged an approximately $3 million projected deficit for the coming year tied to collective bargaining outcomes and a 6.5% enrollment decline (the largest single-year drop she had seen). Advocated strongly for zero-based budgeting and encumbrance tracking; noted revolving funds were used last year to bridge the gap.
+      
+      **Yale Weissman** — Municipal attorney with prior school committee advisory experience. Focused on anti-discrimination/antisemitism policy, student accountability, and community discourse. Less detailed on budget specifics; emphasized fact-based decision-making and open communication.
+      
+      **Mark Schwartz** — 15+ years of classroom teaching; most recent role in marketing/project management at a tech firm. Emphasized mental health and student wellbeing, transparency through simplified public communications (e.g., a plain-language blog), and building community trust post-strike. Acknowledged limited direct Marblehead budget involvement but cited Swampscott budget process experience.
+      
+      One member (Jim Sison) recused himself, leaving eight voting members. On the roll-call vote, six members named Melissa Lucas, one named Sarah Fox, and one named Mark Schwartz. A motion to appoint Lucas carried unanimously on the formal vote. She was directed to be sworn in the following day.
+    key_speakers: ["Melissa Lucas (applicant, CFO)", "Sarah Fox (applicant, former School Committee member)", "Yale Weissman (applicant, municipal attorney)", "Mark Schwartz (applicant, educator/project manager)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 4559
+    end_seconds: 4694
+    headline: "Town Administrator recognizes two finance staff certifications and police re-accreditation"
+    dek: "The Treasurer/Collector passed the Massachusetts certified collector exam on the first attempt; the assistant assessor completed the MAAO summer school."
+    summary: "The Town Administrator highlighted recent professional development: Treasurer/Collector Kami Elli passed the Massachusetts Collectors and Treasurers Association Collector Exam on her first attempt, earning full certification. Assistant Assessor Victoria Boca-rate completed the Massachusetts Association of Assessing Officers Annual Summer School in assessing procedures. The police department was also notified of its re-accreditation (on a roughly three-year cycle), with a formal recognition ceremony planned for October."
+    key_speakers: ["Town Administrator"]
+  - topic: public-safety
+    topic_confidence: 0.9
+    start_seconds: 4694
+    end_seconds: 4838
+    headline: "Police department receives $121,300 grant to fund mental health clinician position"
+    dek: "State funding for police-affiliated mental health clinicians was cut at the budget level but restored through intervention by Representative Armenian and Senator Creighton."
+    summary: "The Town Administrator reported that the Marblehead Police Department received a grant of $121,300 to continue the work of mental health clinician Gina Rabbit. The funding source — a state program supporting mental health clinicians affiliated with police departments — had been cut in the state budget, but local legislators Representative Armenian and Senator Creighton secured restoration of the funds after the police chief contacted them."
+    key_speakers: ["Town Administrator", "Police Chief (referenced)"]
   - topic: trash-dpw
     topic_confidence: 0.88
-    start_seconds: 5025
+    start_seconds: 4838
     end_seconds: 5490
-    headline: "Full-depth reclamation paving of West, Mystic, and Florence Streets begins September 15"
-    dek: "DPW Director Amy McHugh outlined active ADA ramp, paving, water, and gas utility projects town-wide, with paving on three streets starting September 15."
+    headline: "DPW updates board on paving, water, and gas utility projects across town"
+    dek: "Full-depth reclamation paving of West, Mystic, and Florence Streets is set to begin September 15; Pleasant Street water work is nearing completion pending water-quality test results."
     summary: |
-      DPW Director Amy McHugh provided an update on four categories of street and utility work:
+      DPW Director Amy McHugh and the Town Administrator summarized active street and utility projects:
       
-      - **ADA ramp improvements**: Work underway at Atlantic, West Shore Drive, Pleasant, Tadesco, Humphrey, and Lafayette Streets.
-      - **Paving**: Starting September 15, full-depth reclamation paving on West Street, Mystic Street, and Florence Street — the first full-depth reclamation in Marblehead since at least 2010. The process involves removing and rebuilding the entire road base. Residents will briefly drive on a dirt surface during construction.
-      - **Water system upgrades**: Pleasant Street project nearing completion, with water quality testing underway; work shifts to Gary Street October through December.
-      - **Gas utility upgrades**: Conant, Winthrop, Prospect, Atlantic, and Gary Streets.
+      | Category | Streets / Notes |
+      |---|---|
+      | ADA ramp improvements | Atlantic Ave, West Shore Drive, Pleasant St, Tadesco, Humphrey, Lafayette |
+      | Full-depth reclamation paving | West St, Mystic St, Florence St — starting Sept. 15 |
+      | Water system upgrades | Pleasant St (nearing completion, awaiting two rounds of water-quality tests); Gary St (Oct–Dec) |
+      | Gas utility upgrades | Conant, Winthrop, Prospect, Atlantic, Gary Streets |
       
-      McHugh explained the sequencing: utilities must be upgraded before paving, and a freeze-thaw cycle is needed after water work before final paving — a typical timeline of approximately three years from start of utility work to finished road surface. A list of streets completed under Article 11 funding is available and will be posted to the town website.
+      McHugh explained that the reclamation process — Marblehead's first since at least 2010 — involves removing and rebuilding the entire road base, followed by a freeze-thaw season before final paving, typically a roughly three-year cycle from first utility work to finished surface. The Pleasant Street water line has been chlorinated and flushed; results are expected by Saturday. A sidewalk contractor is expected to begin work by end of September, prioritizing low-complexity ADA ramps. A list of streets completed under Article 11 funding is available and will be posted to the town website.
     key_speakers: ["Amy McHugh (DPW Director)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
+    topic_confidence: 0.85
     start_seconds: 5490
     end_seconds: 5628
-    headline: "Select Board approves rotation of Abbot Hall bell to prevent metal fatigue"
-    dek: "Fire Chief explained the bell has never been rotated and risks cracking from repeated hammer strikes at the same point; board unanimously approved the maintenance action."
-    summary: "The Fire Chief explained that the bell in the Abbot Hall clock tower is struck by a brass hammer at the same location every hour. Without rotation, the repeated impact risks fatiguing and potentially cracking the bell. A town employee with steeplejack experience has been spraying the retaining nut for several months to loosen it. The board unanimously approved authorizing the rotation."
+    headline: "Board approves rotating the Town Hall clock tower bell to prevent metal fatigue"
+    dek: "The bell has been struck in the same location for an estimated 140 years and risks cracking without rotation; a local steeplejack will perform the work."
+    summary: "The Fire Chief explained that the clock tower bell is struck hourly by a brass hammer at the same spot and has never been rotated, creating risk of metal fatigue and cracking after approximately 140 years of use. A local steeplejack/welder with relevant experience had been lubricating the retaining nut for several months in preparation. The board unanimously approved granting permission to rotate the bell."
     key_speakers: ["Fire Chief"]
   - topic: recreation-events
-    topic_confidence: 0.85
+    topic_confidence: 0.9
     start_seconds: 5628
     end_seconds: 6006
-    headline: "Marblehead 250th Committee previews September 20–21 events commemorating founding of American Navy"
-    dek: "The schooner Fame will be docked at the landing for free public boarding and ticketed 90-minute cruises celebrating the 250th anniversary of the commissioning of the Hannah."
-    summary: |
-      Don Dahlberg provided an update on the Marblehead Revolution 250 (MHD250) events scheduled for September 20–21, 10 AM to 4 PM. Key highlights:
-      
-      - The schooner **Fame** will be at the Marblehead landing for free public boarding from 9–10:15 AM each day, with Glover's Regiment crew members present.
-      - Ticketed 90-minute cruises depart at 10:15 AM at $50 per person; proceeds support future Marblehead heritage programming. Advance reservations required through the Fame directly.
-      - The events commemorate the 250th anniversary of the commissioning of the **Hannah** by General George Washington — cited as the birthplace of the American Navy.
-      - Students attending can receive a signed slip for service hour credit.
-      - Planning for 2026 events is already underway.
-      - A WBZ TV segment filmed at Fort Sewell was expected to air the following morning between 5–7 AM.
-      
-      Event information is available at www.marblehead.gov/mhd250.
-    key_speakers: ["Don Dahlberg (MHD250 co-chair, 7 Westminster Road)"]
+    headline: "Marblehead 250 committee previews September 20–21 Revolutionary War commemoration events"
+    dek: "The schooner Fame will be available for free boarding and paid 90-minute cruises to mark the 250th anniversary of the commissioning of the Hannah."
+    summary: "Don Dahlberg, co-chair of the Marblehead 250 committee, presented the program for the second year of the town's eight-year Revolutionary War commemoration series. Events on September 20–21 (10 AM–4 PM) will include appearances by Glover's Regiment and BLS Regiment. The schooner Fame — similar in construction to the schooner Hannah, which was commissioned by General George Washington in September 1775 — will be available at the landing for free boarding from 9–10:15 AM each day, with 90-minute paid cruises at $50 per ticket thereafter (proceeds fund future Marblehead in Revolution programming). Students who attend can receive a signed slip for service-hour credit. A WBZ television segment filmed at Fort Sewell was expected to air between 5–7 AM the following morning. Event information is at www.marblehead.gov/mhd250."
+    key_speakers: ["Don Dahlberg (Marblehead 250 co-chair)"]
   - topic: permits-zoning
-    topic_confidence: 0.92
+    topic_confidence: 0.93
     start_seconds: 6006
-    end_seconds: 6238
-    headline: "Overhang sign approved for Farine Artisanal French Bread at 164 Washington Street"
-    dek: "The board approved an approximately 22×23-inch wooden perpendicular sign subject to OHDC approval, building permit, and required insurance."
-    summary: "Graphic designer Suzanne Noden presented a proposed overhang sign for Farine Artisanal French Bread at 164 Washington Street. The sign is approximately 22 inches wide by 23 inches high, made of wood, two-sided, and mounted perpendicularly on a wrought-iron bracket with a minimum clearance of eight feet to the ground. The design features deep red, yellow, and cream colors referencing a medieval French bread-making tradition. The board approved the application subject to OHDC approval, a sign permit, and receipt of required insurance."
-    key_speakers: ["Suzanne Noden (sign designer)"]
-  - topic: permits-zoning
-    topic_confidence: 0.92
-    start_seconds: 6238
-    end_seconds: 6379
-    headline: "Brothers Consignment receives secondhand dealer's license and overhang sign approval for 80R Washington Street"
-    dek: "New men's consignment shop received both approvals, subject to required documents, fees, building department clearance, and insurance."
-    summary: "Kathleen Doyle applied for a secondhand dealer's license and an overhang sign permit for Brothers Consignment at 80R Washington Street. The circular sign was approved subject to building department review for clearance. Both the license and sign were approved unanimously."
-    key_speakers: ["Kathleen Doyle (applicant)"]
+    end_seconds: 6284
+    headline: "Board approves overhang signs for two new Washington Street businesses"
+    dek: "Farine Artisanal French Bread and Brothers Consignment both received sign approvals; Brothers also received a secondhand dealer's license."
+    summary: |
+      **Farine Artisanal French Bread (164 Washington Street):** Designer Suzanne Noden presented a 22″×23″ two-sided wooden overhang sign in deep red, yellow, and cream, inspired by the medieval region of France where owner Laurent is from. The sign will hang with a minimum clearance of 8 feet. Approved subject to OHDC review, sign permit, and receipt of required insurance.
+      
+      **Brothers Consignment (address on Washington Street):** Applicant Kathleen Doyle received approval for a secondhand dealer's license and a 24″ round overhang sign, both subject to standard conditions including building department clearance and required documentation.
+    key_speakers: ["Suzanne Noden (sign designer for Farine)", "Kathleen Doyle (Brothers Consignment)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 6379
+    start_seconds: 6284
     end_seconds: 6472
-    headline: "Steve McClure appointed to Cultural Council through June 2028"
-    dek: "McClure, who operates the Willie Shaker Gallery and runs arts programming, was appointed to the at-large committee with multiple vacancies."
-    summary: "Steve McClure, an artist who operates the Willie Shaker Gallery in Marblehead and runs children's arts programming at the library, was appointed to the Cultural Council with a term expiring June 2028. The board noted multiple vacancies remain on the council."
-    key_speakers: ["Steve McClure (applicant)"]
-  - topic: permits-zoning
+    headline: "Steve McClure appointed to Cultural Council; OHDC seats filled"
+    dek: "McClure, who runs the Willie Shaker Gallery, was appointed with a term to June 2028; Duncan Facie was moved from alternate to full OHDC member and Michael Hall was named OHDC alternate."
+    summary: "Steve McClure, artist and operator of the Willie Shaker Gallery, was appointed to the Cultural Council (term to June 2028). Duncan Facie was reappointed as a full member of the Old and Historic Districts Commission (term to June 2026), correcting an administrative oversight from June. Michael Hall, who holds a master's in Historic Preservation from the University of Edinburgh and helped establish a historic district commission in Augusta, Maine, was appointed OHDC alternate member (term to June 2026)."
+    key_speakers: ["Steve McClure (Cultural Council appointee)", "Michael Hall (OHDC alternate appointee)"]
+  - topic: admin-housekeeping
     topic_confidence: 0.88
     start_seconds: 6472
     end_seconds: 6610
-    headline: "Duncan Facie reappointed and Michael Hall appointed to Old and Historic Districts Commission"
-    dek: "Facie moves from alternate to full member; Hall, with a master's in Historic Preservation, named alternate member, both through June 2026."
-    summary: "Duncan Facie was reappointed from alternate to full member of the Old and Historic Districts Commission (OHDC), a step that had been administratively delayed since June. Michael Hall, who holds a master's degree in Historic Preservation from the University of Edinburgh and previously helped found and staff historic district commissions in Augusta and Waterville, Maine, was appointed as alternate member. Both terms expire June 2026."
-    key_speakers: ["Michael Hall (applicant)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.82
-    start_seconds: 6610
-    end_seconds: 6978
-    headline: "Coffin School reuse process advances with abutter meeting and RFI planned for late September–October"
-    dek: "Town planner Brendan outlined a schedule toward a potential RFP in January, including two public meetings and outreach to abutters before any development direction is chosen."
+    headline: "Coffin School reuse process on track: abutters meeting and public RFI planned for late September/October"
+    dek: "Municipal department expressions of interest are due September 26; an RFI to outside developers will be posted for approximately 30 days, with two public meetings to follow."
     summary: |
-      Town Planner Brendan provided an update on the Coffin School reuse process:
+      Town Planner Brendan reported the Coffin School reuse project is proceeding on schedule. Key upcoming steps:
       
-      - **Expression of interest from municipal departments** issued end of August; responses due September 26.
-      - **Abutter meeting**: Letter to direct abutters being finalized; meeting targeted before end of September.
-      - **Request for Information (RFI)** to go out to potential developers, nonprofits, and other interested parties before end of September, open for approximately 30 days.
-      - **First public meeting**: Planned for early October, format TBD, intended to gather broad community input.
-      - **Second public meeting**: Planned for November, at which the Select Board may begin moving toward a direction.
-      - **Potential RFP**: Ideally issued in January 2026, subject to the preceding steps.
+      - **September 26**: Deadline for municipal department expressions of interest
+      - **Late September**: Letter to direct abutters; in-person/hybrid abutters meeting
+      - **~Early October**: First public meeting following the abutters meeting
+      - **~30-day window**: Request for Information (RFI) to potential outside developers and nonprofits posted to the town website
+      - **~November**: Second public meeting; select board expected to begin deciding direction
+      - **~January (aspirational)**: Potential issuance of a formal RFP
       
-      Board members encouraged the process to start from a genuinely open baseline — as the Gary School reuse process did — rather than presupposing a specific outcome as occurred with a prior MAPC-funded Coffin School study. The board agreed a Select Board member should attend the abutters meeting. The town has created a dedicated webpage for the project.
+      Board members discussed the importance of broad community engagement and a structured criteria-based process, drawing lessons from the Gary School reuse process. At least one Select Board member expressed interest in attending the abutters meeting.
     key_speakers: ["Brendan (Town Planner)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
-    start_seconds: 6978
-    end_seconds: 7207
-    headline: "Zero-emissions vehicle procurement policy adopted unanimously"
-    dek: "Policy applies to light-duty municipal vehicles with a feasibility exception; emergency and heavy-duty vehicles are excluded."
-    summary: "The board adopted the Town of Marblehead Zero Emissions Vehicle First Procurement Policy. The policy requires the town to prioritize low- or zero-emission vehicles for light-duty municipal fleet purchases where feasible, while explicitly excluding emergency vehicles and heavy-duty equipment for which no viable low-emission options currently exist. The policy aligns with the town's Net Zero by 2040 roadmap adopted in 2023 and is a prerequisite step toward eventual Green Community designation. Town staff noted the Town of Concord's policy served as a reference during drafting."
-    key_speakers: ["Logan (staff)"]
+    topic_confidence: 0.93
+    start_seconds: 6610
+    end_seconds: 7069
+    headline: "Board adopts zero-emissions vehicle procurement policy to advance Green Community eligibility"
+    dek: "The policy, developed with town department heads and the CFO, excludes emergency vehicles and heavy equipment and applies a feasibility test before each purchase."
+    summary: |
+      The Select Board unanimously adopted the Town of Marblehead Zero Emissions Vehicles First Procurement Policy. Key features highlighted during discussion:
+      
+      - Applies primarily to light-duty vehicles; emergency vehicles and heavy equipment are explicitly excluded
+      - Includes a feasibility clause so the town is not locked into purchases that are functionally or financially inappropriate
+      - Supports the town's Net Zero by 2040 roadmap adopted in 2023
+      - Constitutes one of the required steps toward applying for Green Community designation from the state (as discussed in public comment)
+      
+      The policy was reviewed by department heads and the CFO before presentation. Staff noted the Town of Concord used a similar policy as a model.
+    key_speakers: ["Logan (sustainability/energy staff)"]
   - topic: permits-zoning
-    topic_confidence: 0.9
-    start_seconds: 7207
-    end_seconds: 7486
-    headline: "Shin Dynasty liquor license revocation hearing continued to October 8"
-    dek: "Landlord's representative reported active construction progress including firewall installation and door framing, but noted a November 30 inspection deadline for license renewal."
+    topic_confidence: 0.92
+    start_seconds: 7069
+    end_seconds: 7444
+    headline: "Shin Dynasty liquor-license revocation hearing continued to October 8"
+    dek: "The landlord's representative reported active construction including firewall installation and door framing, but estimated two to three months to full completion."
     summary: |
-      The public hearing on the potential revocation of the wine and malt beverage license for Shin Dynasty at One Atlantic Avenue was continued from a prior date. The landlord's representative reported visible construction progress: the firewall has been installed at the floor level and is nearly complete through to the roof, the door has been framed and installed, and an electrician pulled a permit last week. Estimated completion of all work is two to three months.
+      The board continued a public hearing — originally opened November 13, 2024 — on potential revocation of the wine and malt beverage license for Shin Dynasty at 1 Atlantic Avenue. The landlord's representative reported significant construction progress: the firewall between units is nearly complete from floor through roof, the door has been framed and installed, and an electrician pulled a permit and was expected to electrify the door within the week. Estimated time to full completion is two to three months.
       
-      The Town Administrator noted two concurrent deadlines: the Select Board's hearing process, and the ABCC annual inspection cycle requiring all inspections to be completed by November 30 in order to renew the license for the coming year. The hearing was continued to October 8, 2025.
-    key_speakers: ["Alexander (landlord's representative)", "Town Administrator (Thatcher)"]
+      The Town Administrator noted a second deadline: under ABCC requirements, the premises must pass all inspections (building, fire, etc.) by November 30 for the annual license renewal cycle. The board continued the hearing to October 8.
+    key_speakers: ["Alexander (landlord's representative)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.78
-    start_seconds: 7486
+    topic_confidence: 0.87
+    start_seconds: 7444
     end_seconds: 7764
-    headline: "Cannabis social equity policy to come to vote at future meeting"
-    dek: "State law requires municipalities to establish a cannabis social equity process; Marblehead has two host community agreements coming up for renewal in 2026 and 2027."
-    summary: |
-      The Town Administrator presented a draft Cannabis Social Equity Policy for informational review, with a vote anticipated at a future meeting. The policy is required under Chapter 180 of the Acts of 2022 and must be adopted by policy or bylaw. It establishes a process giving preference to applicants from disproportionately impacted communities, as well as women-owned and veteran-owned businesses, when renewing host community agreements.
-      
-      Marblehead has two host community agreements expiring in November 2026 and April 2027. If neither existing licensee qualifies as a social equity applicant, the town must hold the application process open for six months for qualifying applicants before accepting others. Staff noted the recent transfer of one license (Seven Sisters to KSS) may qualify under one of the social equity categories, pending further review.
+    headline: "Town presents draft cannabis social equity policy; no vote taken"
+    dek: "State law requires municipalities to adopt a social equity process before renewing host community agreements; Marblehead's two HCAs expire in November 2026 and April 2027."
+    summary: "The Town Administrator presented a draft Cannabis Social Equity Policy required under Chapter 180 of the Acts of 2022, which mandates municipalities establish a process giving advantages to social equity applicants (owners from disproportionately impacted communities), as well as women-owned and veteran-owned businesses. Marblehead has two host community agreements expiring in November 2026 and April 2027. At least one of those two agreements must qualify under the social equity criteria; if neither does when renewal comes up, the town must hold a six-month open application period for qualifying applicants before considering others. Staff indicated the recently transferred Seven Sisters license may qualify. No vote was taken; the policy will return at a future meeting."
     key_speakers: ["Town Administrator (Thatcher)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 7764
-    end_seconds: 7858
-    headline: "Consent agenda approved including minutes and Old Town House event permit"
-    dek: "Board approved August 28 meeting minutes and a Marblehead Museum event at the Old Town House on October 18."
-    summary: "The board approved the consent agenda, including minutes of August 28, 2025, and a permit for the Marblehead Museum to use the Old Town House on October 18, 2025, subject to usual rules, regulations, fees, and receipt of a certificate of insurance."
   - topic: recreation-events
     topic_confidence: 0.82
-    start_seconds: 7858
-    end_seconds: 8092
-    headline: "One-month free demo lease of Demara EES electric mini bus approved for Council on Aging"
-    dek: "The 10–15 passenger low-floor electric bus has approximately 130 miles of range and will be charged at Mary Alley during the trial period."
-    summary: "The board approved a one-month $0 demonstration lease of a Demara EES electric mini bus for use by the Council on Aging. The vehicle has a passenger capacity of approximately 10–15, a range of about 130 miles per charge, and features a low-floor design to improve accessibility for wheelchair users and people with limited mobility. It will be charged at the Mary Alley charger during the trial. Staff plans a public engagement event in early October to showcase the vehicle. The lease is subject to review by town counsel."
-    key_speakers: ["Logan (staff)"]
-  - topic: recreation-events
-    topic_confidence: 0.75
-    start_seconds: 8092
+    start_seconds: 7764
+    end_seconds: 8044
+    headline: "Consent agenda approved including Old Town House event permit for Marblehead Museum"
+    dek: "Minutes of August 28 and an event permit for Marblehead Museum at Old Town House on October 18 were approved in a single motion."
+    summary: "The board approved the consent agenda covering: (1) meeting minutes of August 28, 2025; and (2) use of the Old Town House by the Marblehead Museum on October 18, 2025, subject to standard rules, regulations, fees, and proof of required insurance."
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 8044
+    end_seconds: 8120
+    headline: "Board approves one-month free demo lease of electric mini bus for Council on Aging"
+    dek: "Demara EES mini bus seats up to 15, has ~130-mile range, and features a low floor for accessibility; it will charge at Mary Alley during the trial."
+    summary: "The board approved a one-month, $0-cost demo lease of a Demara EES electric mini bus from Demara Bus USA LLC, subject to town counsel review. The vehicle will be used by the Council on Aging as a direct replacement for existing gas-powered mini buses. Key specifications: approximately 130-mile battery range, capacity of 10–15 passengers, and a low-floor design for wheelchair and mobility-impaired users. The bus will charge at the Mary Alley charger. A public showcase event is planned for early October."
+    key_speakers: ["Logan (sustainability/energy staff)"]
+  - topic: trash-dpw
+    topic_confidence: 0.82
+    start_seconds: 8120
     end_seconds: 8165
-    headline: "No-parking tow zone on Roundhouse Road approved for October 20 annual cleanup"
-    dek: "The zone covers Roundhouse Road from School Street to Besim Street and Upper Anderson Street, with a rain date of October 21."
-    summary: "The board approved a request from DPW Director Amy McHugh to designate Roundhouse Road (School Street through Besim Street) and Upper Anderson Street (from number 10 through Besim Street) as a no-parking tow zone on October 20, 2025 from 7 AM to 3 PM, with a rain date of October 21, to facilitate the annual cleanup and repair of town property in the railroad right-of-way area."
+    headline: "Board approves no-parking tow zone on Roundhouse Road for October 20 annual cleanup"
+    dek: "The tow zone covers the railroad right-of-way from School Street to Besim Street and Upper Anderson Street, 7 AM to 3 PM, with an October 21 rain date."
+    summary: "The board approved DPW Director Amy McHugh's request to designate the entirety of the railroad right-of-way (Roundhouse Road, School Street to Besim Street) and Upper Anderson Street (from number 10 through Besim Street) as a no-parking tow zone on October 20, 2025 (7 AM–3 PM), with a rain date of October 21, to facilitate the annual cleanup and repair of town property in the area."
     key_speakers: ["Amy McHugh (DPW Director)"]
   - topic: permits-zoning
-    topic_confidence: 0.85
+    topic_confidence: 0.88
     start_seconds: 8165
     end_seconds: 8220
-    headline: "One-day liquor license approved for Bubble Bar Boston at Lee Mansion on October 4"
-    dek: "License covers noon to 3 PM; alcohol to be purchased from Martini Liquors."
-    summary: "The board approved a one-day liquor license for Bubble Bar Boston at the Lee Mansion on Saturday, October 4, 2025, from noon to 3 PM. Standard conditions apply including payment of the $50 fee, proof of purchase from an authorized source (Martini Liquors), and proper storage and disposal requirements. The vote was conducted as a roll call."
+    headline: "One-day liquor license approved for Bubble Bar Boston event at Lee Mansion"
+    dek: "The event runs October 4, noon to 3 PM; alcohol to be purchased from Martini Liquors."
+    summary: "The board approved a one-day liquor license for Bubble Bar Boston to operate at the Jeremiah Lee Mansion on Saturday, October 4, 2025 from noon to 3 PM. Conditions include payment of the $50 fee, proof of purchase from an authorized source (Martini Liquors), and compliance with MGL Chapter 138 storage and disposal requirements. The vote was taken by roll call."
   - topic: public-safety
     topic_confidence: 0.8
     start_seconds: 8220
     end_seconds: 8270
-    headline: "September 11 commemoration announced for Memorial Park at 10 AM on September 11, 2025"
-    dek: "Marblehead Fire and Police Departments are hosting the event, open to the public."
-    summary: "Fire Chief Jason announced a September 11 commemoration ceremony at Memorial Park on September 11, 2025 at 10 AM, hosted by the Marblehead Fire and Police Departments and local leaders. The event is open to the public."
-    key_speakers: ["Jason (Fire Chief)"]
+    headline: "September 11 commemoration announced for Memorial Park at 10 AM"
+    dek: "The Marblehead Fire and Police Departments are hosting a public ceremony to mark the 24th anniversary of the 2001 attacks."
+    summary: "The board noted that a ceremony honoring the victims of the September 11, 2001 terrorist attacks would be held at Memorial Park the following morning at 10 AM, hosted by the Marblehead Fire and Police Departments and local leaders. The public was invited to attend."
+    key_speakers: ["Jason (Fire or Police representative, name inferred from context)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.72
+    topic_confidence: 0.78
     start_seconds: 8270
     end_seconds: 8592
-    headline: "Board member flags Lynn Way multimodal corridor project as potential concern for Marblehead commuters"
-    dek: "A $20 million grant-funded project proposes dedicated bus lanes on the Lynn Way; a board member plans to attend an information session and coordinate with Swampscott and Nahant."
-    summary: |
-      A Select Board member raised awareness of the Lynn Way multimodal corridor project, a $20 million grant-funded state initiative to improve bus, pedestrian, and biking conditions on the Lynn Way. A key element under consideration is a dedicated bus lane that would remove a travel lane in each direction. The board member noted that lane reductions on this corridor have historically created significant traffic backlogs affecting commuters from Marblehead, Swampscott, and Nahant.
-      
-      An in-person information session is scheduled at the Abbot Library the following Wednesday from 12:30 to 2 PM. The board member proposed reaching out to the Swampscott and Nahant select boards to coordinate advocacy, and plans to attend the session. Other board members expressed support. Staff noted Representative Jenny's office had already been contacted and the flyer posted to the town website.
-    key_speakers: ["Select Board member (unnamed)"]
+    headline: "Board member flags Lynn Way corridor project as potential commuter concern; plans outreach to Swampscott and Nahant"
+    dek: "A $20 million state grant project proposes a dedicated bus lane on the Lynn Way that could affect commuters from Marblehead, Swampscott, and Nahant."
+    summary: "A board member raised concern about the Lynn Way Multimodal Corridor Project, a $20 million grant-funded initiative to improve the bus, pedestrian, and bicycle experience on the Lynn Way (a state highway). A key element is proposed removal of a travel lane on each side to create a dedicated bus lane, which the member noted could create significant backlog for commuters from Marblehead and neighboring towns. An in-person information session is scheduled at Abbott Library the following Wednesday from 12:30–2 PM. The member proposed reaching out to the Swampscott and Nahant select boards to coordinate advocacy on behalf of commuters, with board support. Staff noted they had already contacted State Representative Jenny's office and posted the project flyer to the town website."
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

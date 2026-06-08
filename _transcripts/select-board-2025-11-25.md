@@ -11,12 +11,13 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select board approves $8.97M contract with Homer Contracting for Marblehead High School roof/HVAC project"
-  summary: "The Marblehead Select Board, meeting with a chair pro tem, voted unanimously to approve a construction contract with Homer Contracting for the Marblehead High School roof and HVAC project at $8,970,000. The bid came in approximately $2.1 million under the construction estimate, and the total project cost is expected to come in around $12 million against an approved budget of $14 million. Heavy construction is expected to be complete before students return to school, with full project wrap-up anticipated in September or early October."
+  headline: "Select Board approves $8.97M Homer Contracting deal for MHS roof/HVAC project"
+  summary: "The Select Board convened a brief special meeting, appointing a chair pro tem in the absence of the chair. A school official presented the results of a competitive bid process for the Marblehead High School roof and HVAC project, with the lowest qualified bid from Homer Contracting coming in approximately $2.1 million under the construction estimate. The board unanimously authorized the contract in the amount of $8,970,000 and authorized the chair to sign on behalf of the board."
   decisions:
-    - "Appointed Moses Rader as chair pro tem"
-    - "Approved contract with Homer Contracting for Marblehead High School roof/HVAC project at $8,970,000 and authorized the chair to sign on behalf of the board"
+    - "Approved appointment of Moses Rader as chair pro tem"
+    - "Approved contract with Homer Contracting for MHS roof/HVAC project at $8,970,000 and authorized chair to sign"
   votes:
     - motion: "Appoint Moses Rader as chair pro tem"
       result: "in favor (unanimous)"
@@ -26,43 +27,56 @@ summary_card:
       result: "in favor (unanimous)"
 
 topic_segments:
-  - topic: public-comment
-    topic_confidence: 0.9
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
     start_seconds: 0
     end_seconds: 38
-    headline: "No public comment received at opening of meeting"
-    dek: "Chair pro tem opened the floor to public comment; no one came forward in person or online."
-    summary: "Moses Rader was appointed chair pro tem in the absence of the chair, then opened the floor to public comment. No members of the public — online or in-person — came forward."
+    headline: "Moses Rader appointed chair pro tem for meeting"
+    dek: "With the regular chair absent, the board unanimously appointed Moses Rader to preside."
+    summary: "The board opened the meeting and immediately moved to appoint a chair pro tem. Moses Rader was nominated and approved unanimously."
     key_speakers: ["Moses Rader (chair pro tem)"]
-  - topic: bonding-capital
-    topic_confidence: 0.85
+  - topic: public-comment
+    topic_confidence: 0.9
     start_seconds: 38
+    end_seconds: 55
+    headline: "No public comment received in person or online"
+    dek: "The chair opened the floor for initial public comment; no members of the public participated."
+    summary: "The chair pro tem invited public comment from those attending in person and online. No one came forward."
+  - topic: bonding-capital
+    topic_confidence: 0.92
+    start_seconds: 55
     end_seconds: 539
     featured: true
-    headline: "Board unanimously approves $8.97M Homer Contracting deal for MHS roof and HVAC"
-    dek: "The bid came in roughly $2.1M under the construction estimate; total project cost is projected at approximately $12M against a $14M approved budget."
+    headline: "Board approves $8.97M Homer Contracting contract for MHS roof/HVAC project"
+    dek: "The bid came in approximately $2.1M under the construction estimate; total project cost is expected to come in around $12M against a $14M approved budget."
     summary: |
-      A school department representative presented the results of a competitively bid construction project for the Marblehead High School roof and HVAC replacement. Key points included:
+      A school official presented results of the competitive bid process for the Marblehead High School roof and HVAC project at 2 Humphrey Street. Key points included:
       
-      - All general contractors and subcontractors were pre-qualified prior to bidding.
-      - Filed sub bids were received for roofing, HVAC, plumbing, electrical, and at least one additional trade.
-      - The lowest responsive and responsible bidder was **Homer Contracting**.
-      - The bid of **$8,970,000** came in approximately **$2.1 million under** the construction estimate.
-      - Total project cost including OPM, designer, and related costs is projected at approximately **$12 million**, against a town meeting–approved budget of **$14 million**.
-      - HVAC equipment lead time could be up to six months, making timely contract execution critical.
+      - All general contractors and subcontractors were pre-qualified before bidding.
+      - Filed sub bids were obtained for roofing, HVAC, plumbing, electrical, and at least one additional trade.
+      - Homer Contracting submitted the lowest responsive and responsible bid.
+      - The construction bid came in approximately **$2.1 million under** the construction estimate, at **$8,970,000**.
+      - Total project costs (including OPM, designer, and related costs) are expected to come in around **$12 million** against an approved budget of **$14 million**.
       
-      **Construction timeline:**
-      | Milestone | Expected Timing |
-      |---|---|
-      | Mobilization begins | After graduation |
-      | No construction before | Last day of school |
-      | Heavy lifting/cranes complete | Before students return in fall |
-      | Construction phase wrap-up | September–early October |
+      **Timeline highlights:**
+      - No construction to begin before graduation; mobilization may begin after graduation with no heavy work before the last day of school.
+      - Heavy lifting and crane work expected to be completed before students return in the fall.
+      - Construction phase expected to wrap up in September or early October.
+      - Students will return to school while finish work continues, but heavy equipment will be cleared.
       
-      A community subcommittee chaired by a school committee member reviewed contracts and will continue to advise the OPM and designer through construction. The contract was already circulating for signatures after school committee approval the prior week.
+      A community subcommittee chaired by a school committee member, with five community members having expertise in contracts, construction, roofing, and HVAC, reviewed all contracts and will continue to advise the OPM and designer through construction.
       
-      The select board voted unanimously to approve the contract and authorize the chair to sign on behalf of the board.
-    key_speakers: ["Moses Rader (chair pro tem)", "School department representative (presenter)", "Town Counsel (Lisa Mead, referenced)", "Chris Hoak (town accountant, referenced)"]
+      The contract was drafted in conjunction with Town Counsel Lisa Mead's office, the OPM (Left Field), and the designer (Raymond Design Associates). The school committee had already approved it the prior week.
+      
+      The board voted unanimously to approve the contract and authorize the chair to sign.
+    key_speakers: ["School official (presenter, name not identified)", "Moses Rader (chair pro tem)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 539
+    end_seconds: 579
+    headline: "Meeting adjourned after holiday wishes"
+    dek: "Board members exchanged Thanksgiving holiday wishes before unanimously voting to adjourn."
+    summary: "Following completion of the sole agenda item, board members wished the public happy holidays. A motion to adjourn was made, seconded, and approved unanimously."
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

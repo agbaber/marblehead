@@ -11,30 +11,31 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "School committee votes to cancel February break and add Dec. 23 as makeup days after strike"
-  summary: "The Marblehead School Committee approved five makeup school days—December 23 and all four days of February vacation—to recover instructional time lost during the recent teachers' strike. The committee also ratified the custodians' one-year and three-year contracts, approved school committee goals for FY25, and approved a $400,000 design contract with Raymond Design Associates for the Marblehead High School roof replacement project. A parent survey on how to handle the remaining five makeup days will be distributed before the December 19 meeting."
+  headline: "School committee votes to add 5 school days over Dec 23 and Feb break to make up strike days"
+  summary: "The Marblehead School Committee approved five makeup school days — December 23 and February 18–21 — to begin fulfilling a 10-day requirement following the teachers' strike. The committee also ratified the custodians' one-year and three-year contracts, approved a $400,000 design contract with Raymond Design Associates for the high school roof replacement, and adopted three school committee goals covering policies, communications, and budget transparency. A parent survey on the remaining five makeup days (April break vs. end-of-year options) was planned before the December 19 meeting."
   decisions:
     - "Approved schedule of bills totaling approximately $2,009,222"
-    - "Approved schedule of bills totaling approximately $135,776"
+    - "Approved schedule of bills totaling approximately $135,777"
     - "Approved minutes of September 5, September 19 (pending one correction), and October 17, 2024"
-    - "Approved custodians' one-year and three-year contracts (MOA)"
+    - "Approved custodians' one-year and three-year contracts (memoranda of agreement)"
     - "Approved school committee goals as presented by the goals subcommittee"
     - "Approved December 23 and February 18–21 as makeup school days"
-    - "Approved design contract with Raymond Design Associates for high school roof replacement ($400,000 base plus reimbursable allowances)"
-    - "Approved temporary reassignment of Jen Schaffner to facilities subcommittee while Sarah Fox is abroad"
+    - "Approved design contract with Raymond Design Associates for high school roof replacement"
+    - "Approved temporary reassignment of Jen Schaffner to facilities subcommittee during Sarah Fox's absence"
   votes:
     - motion: "Schedule of bills ~$2,009,222"
       result: "in favor (unanimous)"
-    - motion: "Schedule of bills ~$135,776"
-      result: "in favor (4 to 0, one abstention)"
-    - motion: "Minutes of September 5, September 19, and October 17, 2024"
+    - motion: "Schedule of bills ~$135,777"
+      result: "in favor (4 to 0 with one abstention)"
+    - motion: "Minutes of Sept 5, Sept 19, Oct 17 2024"
       result: "in favor (unanimous)"
     - motion: "Custodians one-year and three-year contracts"
       result: "in favor (unanimous)"
     - motion: "School committee goals"
       result: "in favor (unanimous)"
-    - motion: "December 23 and February 18–21 as makeup school days"
+    - motion: "Dec 23 and Feb 18–21 as makeup school days"
       result: "in favor (unanimous)"
     - motion: "Raymond Design Associates roof design contract"
       result: "in favor (unanimous)"
@@ -43,128 +44,115 @@ summary_card:
 
 topic_segments:
   - topic: public-comment
-    topic_confidence: 0.95
+    topic_confidence: 0.97
     start_seconds: 226
-    end_seconds: 700
-    headline: "Residents raise concerns about superintendent hiring, roof costs, and committee transparency"
-    dek: "Four residents spoke during public comment about lessons from past superintendent turnover, the high school roof cost increase, and the facilities subcommittee's communication practices."
-    summary: "Daniel Rosen (31 E Street) called on the school committee, union, and town to conduct a formal lessons-learned process regarding superintendent hiring and retention. Mary McCarrison (Pinecliff Drive) thanked staff and asked for greater transparency. Samantha Rosado (Martin Terrace) expressed concern that the high school roof cost had grown from approximately $4 million approved at a prior town meeting to approximately $11 million requiring an override, and that this was not communicated proactively to the community. Kate Thompson (Booba Road) asked why the facilities subcommittee had not met in over a year, requested documentation from FY25 budget requests, and called for the chair of the facilities subcommittee to step down, also describing an email she received from the chair as personally offensive."
+    end_seconds: 651
+    headline: "Residents raise concerns about roof costs, facilities subcommittee oversight, and superintendent history"
+    dek: "Four residents spoke during public comment, addressing lessons-learned from superintendent hiring, the high school roof cost increase, and the facilities subcommittee's year-long lapse in meetings."
+    summary: |
+      - **Daniel Rosen** (31 E Street) asked the school committee, union, and town to undertake a formal lessons-learned process following superintendent contract disputes, citing his 25 years of project management experience.
+      - **Mary McCarrison** (Pinecliff Drive) thanked committee members and staff for securing livable wages and safe schools.
+      - **Samantha Rosado** (Martin Terrace) expressed frustration that a high school roof project approved at town meeting in 2022 for approximately $4 million has grown to approximately $11 million and now requires an override, and noted ongoing mold concerns.
+      - **Kate Thompson** (Booba Road) stated the facilities subcommittee had not met in over a year, asked for documentation of FY25 budget requests, and called on Sarah Fox to step down as chair of the facilities subcommittee, also characterizing an email she received from Fox as personally offensive.
     key_speakers: ["Daniel Rosen (resident)", "Mary McCarrison (resident)", "Samantha Rosado (resident)", "Kate Thompson (resident)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
-    start_seconds: 700
+    topic_confidence: 0.88
+    start_seconds: 655
     end_seconds: 1165
-    headline: "Superintendent shares district updates including sports records, SEL curriculum kudos, and METCO event"
-    dek: "Superintendent provided fall athletics recap, read two letters praising the district's SEL curriculum rollout, and noted new joint labor-management committees stemming from the contract MOAs."
-    summary: |
-      The student representative reported that quarter two had begun, winter sports tryouts were underway, and the co-ed a cappella group the Jewel Tones qualified for the New England Voices competition.
-      
-      The superintendent highlighted:
-      - Custodians completed deferred maintenance projects during the school closure.
-      - Food Services Director John Constantino and staff provided daily breakfast and lunch during the closure, including delivery to Boston-based METCO students at METCO headquarters.
-      - Julia Ferrera (Assistant Superintendent of Teaching and Learning) received praise from the Marblehead Mental Health Task Force for presenting the district's SEL curriculum.
-      - Fall athletics overall record: 63–39–16 (.612 winning percentage); NEC record 51–24–9 (.661).
-      - Menstruation products have been installed at the high school, middle school, and Village School through a partnership with First Period.
-      - Two new joint committees established through the contract MOAs: a Joint Labor Relations Committee to review educator evaluation, and a Joint Committee on School Safety.
-    key_speakers: ["Superintendent (unnamed in transcript)", "Student representative"]
+    headline: "Superintendent shares district updates, sports records, and new SEL and joint-committee initiatives"
+    dek: "Superintendent provided kudos for food services during the strike, fall athletics results, SEL curriculum recognition, and announced two new joint labor-management committees."
+    summary: "The superintendent highlighted that food services director John Constantino provided daily breakfast and lunch including delivery to Boston-based METCO students during the work stoppage. Fall athletic season ended with a combined record of 63–39–16 (0.612 winning percentage). Emails praising Assistant Superintendent Julia Ferrera's SEL curriculum work were read aloud. The superintendent announced two new committees established through the MOAs: a Joint Labor Relations Committee focused on educator evaluation, and a Joint Committee on School Safety; first meetings were to be scheduled by end of December. The menstruation product program was noted as fully installed at the high school, middle school, and Village School."
+    key_speakers: ["Superintendent (district)", "John Constantino (food services director, cited)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 1165
     end_seconds: 1479
-    headline: "Committee approves two schedules of bills and three sets of meeting minutes"
-    dek: "Roll-call votes approved bills totaling approximately $2,009,222 and $135,776, and minutes from September 5, September 19 (pending one factual correction), and October 17, 2024."
-    summary: "The larger bill schedule (~$2,009,222) passed 5–0. The second schedule (~$135,776) passed 4–0 with one abstention. Meeting minutes from September 5 and October 17 were approved as submitted; September 19 minutes were approved pending a correction to the public comment section noted by Brian Ota."
-    key_speakers: ["Jen Schaffner (chair)", "Allison Taylor (committee member)", "Brian Ota (committee member)"]
+    headline: "Committee approves two schedules of bills and meeting minutes from Sept–Oct 2024"
+    dek: "Bills totaling approximately $2,009,222 and $135,777 were approved by roll call; three sets of minutes were approved with one correction pending."
+    summary: "The first schedule of bills totaling $2,009,222.08 was approved 5–0. The second schedule totaling $135,776.96 was approved 4–0 with one abstention. Minutes from September 5, September 19, and October 17, 2024 were approved 5–0, with the September 19 minutes subject to a correction regarding a public comment speaker's position on a commendation item."
+    key_speakers: ["Jen Schaffner (chair)", "Allison Taylor (member)", "Al Williams (member)", "Brian Ota (member)", "Sarah Fox (member)"]
   - topic: labor-personnel
     topic_confidence: 0.97
     start_seconds: 1479
     end_seconds: 1696
-    headline: "Chair updates committee on status of ratified contracts; full integrated documents forthcoming"
-    dek: "All MEA unit contracts have been ratified and MOAs posted on the district website; full integrated contract documents are being drafted by the district's attorney and will not require another vote."
-    summary: "The chair reported that memoranda of agreement for all bargaining units (one-year and three-year contracts) were ratified the prior week and are posted on the school committee website in two locations for easy access. The district attorney is drafting the fully integrated contracts; the committee will sign rather than re-vote once the documents are ready. The custodians' contract was deferred to later in the meeting due to a scheduling conflict."
-    key_speakers: ["Jen Schaffner (chair)", "Sarah Fox (committee member)"]
+    headline: "Committee summarizes ratified contracts; MOAs posted to district website"
+    dek: "All previously ratified one-year and three-year contracts were summarized as MOAs available on the school committee website, with full integrated contracts being drafted by legal counsel."
+    summary: "The bargaining subcommittee reported that all contracts except the custodians' had been ratified at the prior meeting. MOAs are posted in two locations on the district website. Legal counsel is drafting full integrated contract documents; the committee was advised that no additional vote would be needed — only signatures — once drafts are finalized. The custodians' contracts were deferred to later in the meeting pending Thatcher Keer's arrival."
+    key_speakers: ["Jen Schaffner (chair)", "Sarah Fox (bargaining subcommittee member)"]
   - topic: labor-personnel
     topic_confidence: 0.98
     start_seconds: 3325
     end_seconds: 3717
-    headline: "School committee ratifies custodians' one-year and three-year contracts 6–0"
-    dek: "After a brief exchange to confirm the correct document version, the committee voted unanimously to ratify both custodian unit contracts prepared by the district's attorney."
-    summary: "Thatcher Keer arrived partway through the meeting to join the vote. A brief back-and-forth with the union representative (Anthony) confirmed that the December 4 versions of the contracts—including payroll deductions language, a sick leave bank provision, and the withdrawal of a 96-hour personal day request provision—constituted the tentative agreement. The motion covered both the one-year and three-year custodian contracts and passed 6–0."
-    key_speakers: ["Jen Schaffner (chair)", "Thatcher Keer (committee member)", "Sarah Fox (committee member)", "Anthony (union representative, via floor)"]
-  - topic: school-budget
-    topic_confidence: 0.88
+    headline: "Committee ratifies custodians' one-year and three-year contracts 6–0"
+    dek: "After brief back-and-forth clarifying which document version was being ratified, the committee voted unanimously to ratify both custodian MOAs prepared by district counsel dated December 4."
+    summary: "The custodians' union representative (Anthony) and the committee clarified that the document to be ratified was the version prepared by district attorney dated December 4, which included payroll deductions language, sick leave bank provisions, and excluded a previously withdrawn proposal regarding 96-hour notice for personal day requests. The committee voted 6–0 (Thatcher Keer, Al Williams, Brian Ota, Sarah Fox, Allison Taylor, Jen Schaffner in favor). Hard copies were signed at the meeting."
+    key_speakers: ["Jen Schaffner (chair)", "Thatcher Keer (member)", "Sarah Fox (member)", "Anthony (union representative)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
     start_seconds: 1727
-    end_seconds: 3187
-    headline: "Committee approves three school committee goals covering policy, communications, and budget transparency"
-    dek: "Goals address annual policy review, a communications subcommittee plan including one to two town hall meetings before June, and improved documentation of the budget process for community understanding."
+    end_seconds: 3279
+    headline: "Committee adopts three school committee goals covering policies, communications, and budget transparency"
+    dek: "The goals subcommittee presented and the full committee approved goals targeting policy review, enhanced communications including one to two public town halls, and improved budget process documentation."
     summary: |
-      **Goal 1 – Policies and Protocols:** The policy subcommittee will review all school committee policies and protocols for legal and DESE compliance, suggest updates, and organize the policy folder on the website, with completion targeted by June 2025. The committee noted some previously voted policies (e.g., technology policies adopted during COVID) were never added to the policy tab.
+      **Goal 1 (Policy subcommittee):** Review and update all school committee policies and protocols to align with Massachusetts General Laws and DESE requirements; organize the policy folder on the website; target completion by June 2025.
       
-      **Goal 2 – Communications:** The communications subcommittee (Brian Ota and Al Williams) will develop a monthly newsletter template, improve the website, provide minutes within one month of meetings, manage public comment responses, and hold one to two town hall–style meetings before June 2025 (with preference for at least one before May, ahead of town meeting).
+      **Goal 2 (Communication subcommittee — Al Williams & Brian Ota):** Develop a communication plan including a newsletter template, improved website, monthly meeting minutes within 30 days, quarterly community surveys, improved local media relations, and one to two town-hall-style public meetings before May 2025.
       
-      **Goal 3 – Budget Transparency:** The budget subcommittee will create an outline of the budgeting process, a budget primer explaining where numbers originate, definitions of key terms, and a one-page cheat sheet. Progress will be reported monthly. The committee noted that the current budget cycle is behind schedule due to the recent labor action.
-    key_speakers: ["Allison Taylor (committee member)", "Brian Ota (committee member)", "Jen Schaffner (chair)", "Sarah Fox (committee member)"]
+      **Goal 3 (Budget subcommittee):** Improve documentation and community understanding of the budget process through a budget primer, process outline, definition of terms, and identification of gaps in publicly available data; report monthly during budget season.
+      
+      All three goals were approved 5–0.
+    key_speakers: ["Allison Taylor (policy subcommittee)", "Brian Ota (communication subcommittee)", "Al Williams (communication subcommittee)", "Jen Schaffner (budget subcommittee)", "Superintendent (district)"]
   - topic: school-budget
-    topic_confidence: 0.95
-    start_seconds: 3717
-    end_seconds: 5385
+    topic_confidence: 0.85
+    start_seconds: 3766
+    end_seconds: 5339
     featured: true
-    headline: "Committee votes to cancel winter and February breaks as makeup days; survey planned for remaining 5 days"
-    dek: "Ten instructional days must be made up after the strike; the committee approved five days (December 23 and all of February vacation) and will survey parents and staff before deciding how to handle the remaining five."
+    headline: "Committee votes 5–0 to add Dec 23 and all of Feb break as makeup school days; survey planned for remaining 5 days"
+    dek: "Ten school days must be made up following the strike; DESE confirmed no waivers, no virtual substitutions, and no use of extended daily minutes as substitutes for full days."
     summary: |
-      Superintendent John (last name not captured) explained that DESE requires 180 instructional days and that the department confirmed no waivers, no virtual makeup days, and no credit for extended daily minutes are available. Eleven strike days occurred; one PD day was already moved, leaving 10 days to recover.
+      Superintendent reported that DESE requires all 10 strike-related missed days to be made up as full in-person school days before June 30; the commissioner's office confirmed no waivers would be granted and virtual days or extended instructional minutes cannot substitute for full calendar days.
       
-      **Two proposals presented:**
+      **Proposal A:** Dec 23 + Feb 18–21 + Apr 22–25 (preserving end-of-year dates; protects graduation June 6).
+      **Proposal B:** Dec 23 + Feb 18–21 + five days added at year's end (June 23–27); risk that any snow days would then fall back into April vacation.
       
-      | | Proposal A | Proposal B |
-      |---|---|---||
-      | Dec. 23 | School day | School day |
-      | Feb. 18–21 | School days | School days |
-      | Remaining 5 | April vacation (22–25 + June 23) | End of year (June 23–27) |
-      | Snow day buffer | Preserved in April | Not preserved; snow days would push into April anyway |
-      | Graduation impact | None (June 6 preserved) | Would require moving June 6 graduation (168-day rule) |
-      
-      Saturday school was discussed but raised concerns about religious observance, substitute availability, and athletics scheduling.
-      
-      The committee voted 5–0 to designate December 23 and February 18–21 as school days. For the remaining five days, member Allison Taylor volunteered to develop a one-question parent/family survey (to be distributed within days) with explanatory narrative, results to be presented at the December 19 meeting. The committee also indicated intent to suspend attendance penalty policies during the makeup periods so families with pre-existing travel plans are not penalized.
-    key_speakers: ["Superintendent (John, last name unclear)", "Jen Schaffner (chair)", "Sarah Fox (committee member)", "Allison Taylor (committee member)", "Brian Ota (committee member)", "Al Williams (committee member)"]
+      The committee voted 5–0 to approve Dec 23 and Feb 18–21 as school days immediately. The remaining five days were deferred pending a parent/staff survey (to be drafted by Allison Taylor and the superintendent, distributed by the following Tuesday, results presented at the Dec 19 meeting). Attendance policies are expected to be suspended for students during these makeup periods so families with pre-existing travel plans are not penalized. Saturday makeup was discussed but set aside given religious observance concerns and athletics scheduling conflicts.
+    key_speakers: ["Superintendent (district)", "Sarah Fox (member)", "Allison Taylor (member)", "Brian Ota (member)", "Al Williams (member)", "Jen Schaffner (chair)"]
   - topic: bonding-capital
-    topic_confidence: 0.93
+    topic_confidence: 0.92
     start_seconds: 5431
     end_seconds: 5963
-    headline: "Committee approves $400,000 design contract with Raymond Design Associates for high school roof"
-    dek: "The contract covers architectural design services for the roof replacement; optional allowances of $10,000 for a moisture scan and $15,000 for an HVAC review may be added if needed."
+    headline: "Committee approves $400,000 Raymond Design Associates contract for high school roof design"
+    dek: "The design contract covers basic architectural services at $400,000 plus optional allowances of $10,000 for a moisture scan and $15,000 for an HVAC review."
     summary: |
-      The superintendent and facilities staff noted that the select board had already reviewed the proposal. The RFP process—rather than lowest-bid procurement—was used to select Raymond Design Associates (who also designed Brown School) and owner's project manager Left Field (who also managed the Brown School project and brought it in approximately $1.4 million under estimate).
+      The committee approved a design services contract with Raymond Design Associates (RDA) for the Marblehead High School roof replacement project, covering basic services of $400,000 plus reimbursable allowances of $10,000 (moisture scan) and $15,000 (HVAC review of existing rooftop units). RDA and the project's owner's project manager Left Field had previously worked together on the Brown School project. The select board had also reviewed and approved the contract. The vote was 5–0.
       
-      The committee noted concerns raised about quality issues at Brown School but expressed confidence in oversight by Assistant Superintendent of Finance and Operations Mike Ping and multiple MCPPO-certified staff. The $400,000 base fee covers full design drawings required by law for a project of this scale. Two reimbursable allowance items—$10,000 moisture scan and $15,000 HVAC review—are additional if exercised.
-      
-      The committee voted 5–0 to approve the contract.
-    key_speakers: ["Jen Schaffner (chair)", "Sarah Fox (committee member)", "Allison Taylor (committee member)", "Superintendent"]
-  - topic: bonding-capital
-    topic_confidence: 0.85
+      The facilities subcommittee noted that rooftop HVAC units are at end of life and could require replacement within six months to three years; replacing them separately after a new roof membrane is installed would void the roof warranty. The question of whether to include HVAC replacement in the project scope — and how to fund it — was identified as a pending decision requiring further analysis and possible debt exclusion or override funding.
+    key_speakers: ["Jen Schaffner (chair)", "Superintendent (district)", "Sarah Fox (facilities subcommittee chair)", "Al Williams (member)", "Allison Taylor (member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.78
     start_seconds: 5963
-    end_seconds: 6800
-    headline: "Facilities subcommittee reports on district-wide maintenance progress and high school HVAC concerns"
-    dek: "Of 32 planned FY25 facilities items, 15 (47%) are complete; HVAC units atop the high school are nearing end of life and may need replacement concurrent with or shortly after the roof project."
+    end_seconds: 7155
+    headline: "Facilities subcommittee reports on capital projects, Coffin School surplus, early childhood study, and charter committee"
+    dek: "The facilities subcommittee covered building maintenance progress, a recommendation to return Coffin School to the town, an early childhood learning center feasibility inquiry, and a December 12 charter committee appearance."
     summary: |
-      Sarah Fox reported on the December 4 facilities subcommittee meeting (livestreamed and posted to YouTube). Key items:
+      **Facilities update:** Of 32 fiscal-year capital tasks, 15 (47%) were complete; window replacements at the Brown School were scheduled for the following day bringing the figure to 50%.
       
-      - **Maintenance progress:** 15 of 32 FY25 items complete (47%); Brown School window replacements scheduled for December 5, bringing completion to 50% vs. 43% of fiscal year elapsed.
-      - **HVAC concern:** Roof assessment revealed that rooftop HVAC units are at or near end of life expectancy, with salt air from proximity to the ocean accelerating deterioration. Replacing the roof without simultaneously replacing units risks those units breaking through the new roof membrane, voiding the warranty. Replacing units now would require additional funding beyond the roof project, potentially through a debt exclusion or as part of a broader override package.
-      - **Coffin School:** The subcommittee recommends the school committee sponsor a town meeting warrant article to return Coffin School to the town. The town—not the school committee—has authority to sell or repurpose it; sale proceeds would go to the general fund and should fund capital projects, not recurring costs. A formal vote is planned for a subsequent meeting.
-      - **Eli School:** Still partially in use by the town library and archives; Parks and Rec has requested overflow gym access.
-      - **Early childhood education:** John (superintendent) will work with Lisa Marie to explore programming options and potential feasibility study grants for an early childhood learning center at Eli, given ongoing program waitlists and possible future state mandate for universal pre-K.
-      - **Temporary subcommittee reassignment:** Jen Schaffner approved 5–0 to temporarily serve on the facilities subcommittee while Sarah Fox is abroad in December–January.
-    key_speakers: ["Sarah Fox (facilities subcommittee chair)", "Superintendent (John)", "Jen Schaffner (chair)"]
+      **Coffin School:** The facilities subcommittee recommended sponsoring a warrant article to return Coffin School to the town as surplus property. The committee noted that proceeds from any future sale would go to the general fund for capital projects, not operating costs.
+      
+      **Early childhood learning center:** The committee asked the superintendent to work with the early childhood director to explore programming options and potential feasibility study grants, noting long wait lists, revenue potential, and possible future universal pre-K mandates.
+      
+      **Charter committee:** Chair Schaffner agreed to represent the school committee at the town charter committee on December 12; school committee operations are largely governed by state statute and may be minimally affected by any charter adoption.
+      
+      **Facilities subcommittee coverage:** The committee voted 5–0 to temporarily add Jen Schaffner to the facilities subcommittee while Sarah Fox is abroad in January.
+    key_speakers: ["Sarah Fox (facilities subcommittee chair)", "Superintendent (district)", "Jen Schaffner (chair)"]
   - topic: public-comment
-    topic_confidence: 0.9
+    topic_confidence: 0.88
     start_seconds: 7155
     end_seconds: 7514
-    headline: "Resident John Duffy criticizes MEA conduct during strike and warns override faces community opposition"
-    dek: "After the meeting was briefly reconvened, a resident characterized the work stoppage as an illegal strike, described safety concerns for committee members, and said community anger could affect override prospects."
-    summary: "After the meeting was initially adjourned and then briefly reconvened to allow missed public commenters to speak, resident John Duffy (joined via Zoom) stated he objected to characterizing the work stoppage as a \"strike\" rather than an illegal strike. He described the disruption to vacation schedules discussed earlier in the meeting as a consequence of the action. He said his family had moved a child from Marblehead High School to private school and referenced an unverified claim that 77 Marblehead families had transferred to private schools. He expressed concern about the safety environment on the evening school committee members required a police escort, and stated he would be unlikely to support an override unless MEA officers issued a public apology. His comments were met with interruptions from others on the call before the chair adjourned the meeting."
-    key_speakers: ["John Duffy (resident, via Zoom)", "Jen Schaffner (chair)"]
+    headline: "Resident John DePi critiques MEA conduct during strike at reconvened public comment"
+    dek: "After the meeting was adjourned and reconvened, a resident characterized the work stoppage as an illegal strike and called on MEA leadership to issue a public apology, citing its potential effect on a future override vote."
+    summary: "Resident John DePi, whose hand had been raised during public comment, was recognized after the chair reconvened the meeting. He characterized the work stoppage as an illegal strike by civil servants, described coordinated action among Marblehead, Beverly, and Gloucester teacher unions, and stated his family had moved their child to private school. He cited a figure of 77 Marblehead families reportedly moving to private schools and said the MEA's rhetoric had been dangerous. He called on MEA officers John Van, Sally, Hannah Hood, and Allison Carey to issue a public apology, stating that such an apology would be necessary for any override to have a meaningful chance of passing. His remarks were interrupted by off-mic voices before the chair closed public comment and adjourned at 8:08 PM."
+    key_speakers: ["John DePi (resident, Zoom)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

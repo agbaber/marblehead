@@ -11,169 +11,175 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board approves Richdale license transfer, ARPA bike plan funds, and routine spring event permits"
-  summary: "The Marblehead Select Board held a public hearing and approved a transfer of the wine and malt beverage package store license at Richdale to Che LLC (DBA Richdale). The board also authorized $79,763 in ARPA funds for a town-wide pedestrian and bike plan, appointed a new member to the Task Force Against Discrimination, and approved a slate of spring and summer event permits. Finance Director Alicia and Town Administrator Thatcher presented updates on the FY23 audit, a Clifton Larson Allen findings remediation report, and FY25 budget planning including new revenue strategies around meals/rooms tax and new growth capture."
+  headline: "Select Board approves Richdale liquor license transfer, ARPA bike plan funding, and multiple event permits"
+  summary: "The Marblehead Select Board held a public hearing and unanimously approved the transfer of a wine and malt beverage package store license at Richdale to Che LLC. The board also authorized $79,763 in ARPA funds for a town-wide pedestrian and bike plan, and approved a slate of seasonal liquor license renewals and event permits. Finance Director Alicia presented the FY23 Annual Comprehensive Financial Report and an update on completing 15 of 23 recommendations from a prior Clifton Larson Allen audit."
   decisions:
-    - "Approved transfer of wine and malt beverage package store license to Che LLC DBA Richdale, 29 Smith Street"
-    - "Approved appointment of Eugenia Waaf Ferry to the Task Force Against Discrimination"
-    - "Approved change of manager for Dolphin Yacht Club all-alcohol beverage club license to Scott Kelly"
+    - "Approved transfer of wine and malt package store license to Che LLC DBA Richdale at 29 Smith Street"
+    - "Appointed Eugenia Waaf Ferry to the Task Force Against Discrimination"
+    - "Approved change of manager on Dolphin Yacht Club all-alcohol beverage club license to Scott Kelly"
     - "Approved use of $79,763 in ARPA funds for town-wide pedestrian and bike plan"
     - "Approved FY23 Annual Comprehensive Financial Report (informational, no action required)"
     - "Approved minutes of February 7th and February 28th meetings"
-    - "Approved Marblehead Youth Baseball opening day parade start time change from 9:00 AM to 9:30 AM"
-    - "Approved one-day liquor license for Coastline Marine on April 27, 2024"
-    - "Approved use of Abbott Hall for Marblehead Pride Committee event on June 1, 2024"
-    - "Approved MHS National Green School Society 5K race on April 20, 2024"
+    - "Approved Marblehead Youth Baseball opening day parade start time revision to 9:30 AM"
+    - "Approved one-day liquor license for Coastline Marine on April 27th, 2024"
+    - "Approved use of Abbott Hall for Marblehead Pride Committee on June 1st, 2024"
+    - "Approved Marblehead High School Green School Society 5K on April 20th, 2024"
     - "Approved $50,000 fireworks contract with Atlas Pyrotechnic Fireworks Inc. for July 4th"
-    - "Approved General Code LLC bylaw recodification contract for $15,145"
-    - "Adopted Town of Marblehead Hazard Mitigation Plan"
+    - "Approved General Code recodification contract for $15,145"
+    - "Adopted town of Marblehead Hazard Mitigation Plan"
     - "Approved surplus declaration for 2009 Council on Aging van"
-    - "Proclaimed April 26, 2024 as Arbor Day"
+    - "Proclaimed April 26th, 2024 as Arbor Day"
     - "Approved Glover's Regiment use of Fort Sewell July 12–14, 2024"
-    - "Approved use of Abbott Hall for Juneteenth flag raising ceremony on June 12, 2024"
+    - "Approved use of Abbott Hall for Juneteenth flag raising ceremony on June 12th, 2024"
     - "Approved multiple Marblehead Festival of Arts event permits and one-day liquor licenses"
-    - "Approved seasonal renewal of all-alcohol club licenses for Eastern Yacht Club and Dolphin Yacht Club"
-    - "Approved Sunday entertainment license renewal for Dolphin Yacht Club"
-    - "Approved Marblehead Community Charter Public School use of Abbott Hall for graduation on June 17, 2024"
+    - "Renewed seasonal all-alcohol club licenses for Eastern Yacht Club and Dolphin Yacht Club"
+    - "Renewed Sunday entertainment license for Dolphin Yacht Club"
+    - "Approved Marblehead Community Charter Public School use of Abbott Hall for graduation on June 17th, 2024"
   votes:
-    - motion: "Transfer of wine and malt beverage package store license to Che LLC DBA Richdale"
+    - motion: "Transfer of wine and malt package store license to Che LLC DBA Richdale"
       result: "in favor (unanimous)"
     - motion: "Appointment of Eugenia Waaf Ferry to Task Force Against Discrimination"
       result: "in favor (unanimous)"
-    - motion: "Change of manager for Dolphin Yacht Club license to Scott Kelly"
+    - motion: "Change of manager at Dolphin Yacht Club to Scott Kelly"
       result: "in favor (unanimous)"
-    - motion: "ARPA funds authorization of $79,763 for pedestrian and bike plan"
+    - motion: "ARPA funds of $79,763 for town-wide pedestrian and bike plan"
       result: "in favor (unanimous)"
     - motion: "Approval of February 7th and February 28th meeting minutes"
       result: "in favor (unanimous)"
-    - motion: "Atlas Pyrotechnic Fireworks contract for $50,000"
+    - motion: "$50,000 fireworks contract with Atlas Pyrotechnic Fireworks Inc."
       result: "in favor (unanimous)"
-    - motion: "General Code LLC recodification contract for $15,145"
+    - motion: "General Code recodification contract for $15,145"
       result: "in favor (unanimous)"
     - motion: "Adoption of Hazard Mitigation Plan"
       result: "in favor (unanimous)"
-    - motion: "One-day liquor license for Marblehead Festival of Arts at Fort Sewell, June 30"
+    - motion: "One-day liquor license for Coastline Marine April 27th"
       result: "in favor (unanimous)"
-    - motion: "One-day liquor license for Marblehead Festival of Arts at Abbott Hall, May 31"
+    - motion: "One-day liquor license for Marblehead Festival of Arts June 30th at Fort Sewell"
       result: "in favor (unanimous)"
-    - motion: "Seasonal renewal of all-alcohol club licenses for Eastern Yacht Club and Dolphin Yacht Club"
+    - motion: "One-day liquor license for Marblehead Festival of Arts May 31st at Abbott Hall"
+      result: "in favor (unanimous)"
+    - motion: "Seasonal all-alcohol club license renewals for Eastern Yacht Club and Dolphin Yacht Club"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: permits-zoning
-    topic_confidence: 0.95
+    topic_confidence: 0.97
     start_seconds: 81
     end_seconds: 296
-    featured: true
-    headline: "Select Board approves Richdale package store license transfer to Che LLC"
-    dek: "Kush Patel and his mother Nita Ben are purchasing the Richdale convenience store and obtained unanimous approval for transfer of the beer and wine license."
-    summary: "The board opened and closed a public hearing with no speakers in opposition or in favor. Counsel John Moradian presented on behalf of applicant Kush Patel, who has worked at the store since 2018–2019. The new entity, Che LLC DBA Richdale at 29 Smith Street, will operate with no changes to footprint or hours (Monday–Saturday 8 AM–11 PM, Sunday 10 AM–11 PM for alcohol sales). Patel will serve as manager of record and plans to implement an ID scanner and TIP-certified staff. The board voted unanimously to approve the transfer subject to receipt of all required forms, fees, inspections, and ABCC and Cory approvals."
+    headline: "Board unanimously approves Richdale package store license transfer to Che LLC"
+    dek: "Kush Patel and his mother are acquiring the Richdale convenience store at 29 Smith Street and sought transfer of the existing beer and wine license."
+    summary: "Attorney John Moradian presented the application on behalf of Kush Patel and Nita Ben, who formed Che LLC to purchase Richdale at 29 Smith Street. No changes to the store footprint or operations were proposed. Hours of alcohol sales will be Monday–Saturday 8 AM–11 PM and Sunday 10 AM–11 PM. The applicants plan to implement an ID scanner and ensure all staff are TIP certified. No public opposition was raised. The board voted unanimously (poll vote) to approve the transfer."
     key_speakers: ["John Moradian (applicant's counsel)", "Kush Patel (applicant)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.92
     start_seconds: 296
     end_seconds: 578
     headline: "Eugenia Waaf Ferry appointed to Task Force Against Discrimination"
-    dek: "Ferry, a 36-year MCAD veteran and former administrative hearing officer, was unanimously appointed to the town's Task Force Against Discrimination with a term expiring June 2024."
-    summary: "Ferry described her background at the Massachusetts Commission Against Discrimination (MCAD), where she prosecuted discrimination complaints, served as an administrative hearing officer on employment, housing, and public accommodation cases, and worked as a mediator. She expressed motivation to serve given what she described as increasing divisiveness in civic discourse. The board voted unanimously to appoint her; she was directed to be sworn in at the Town Clerk's office before her first meeting."
+    dek: "Ferry, a retired 36-year MCAD attorney and hearing officer, was unanimously appointed to the town's task force."
+    summary: "Eugenia Waaf Ferry presented her background, including 36 years at the Massachusetts Commission Against Discrimination (MCAD) as a hearing officer and mediator, and earlier work at Greater Boston Legal Services representing Hispanic-speaking clients. The board unanimously approved her appointment to the Task Force Against Discrimination with a term expiring June 24th. She was directed to stop by the town clerk's office to be sworn in before her first meeting."
     key_speakers: ["Eugenia Waaf Ferry (appointee)"]
   - topic: permits-zoning
-    topic_confidence: 0.88
+    topic_confidence: 0.9
     start_seconds: 601
     end_seconds: 706
-    headline: "Dolphin Yacht Club manager change approved for Scott Kelly"
-    dek: "Scott Kelly, who joined the Dolphin Yacht Club management team the prior season after 30 years managing Boston restaurants, was approved as the new manager of record for the club's all-alcohol beverage license."
-    summary: "Kelly explained he is taking over as director as the previous manager phases out. The board unanimously approved the change of manager on the all-alcohol beverage club license at 17 Allerton Place, subject to receipt of all required forms, fees, inspections, and ABCC and Cory approvals."
-    key_speakers: ["Scott Kelly (incoming manager)"]
+    headline: "Dolphin Yacht Club manager change approved; Scott Kelly named new manager of record"
+    dek: "Kelly, who joined the management team last season after 30 years in Boston restaurant management, is replacing the outgoing director."
+    summary: "Scott Kelly appeared before the board to present his application for a change of manager on the Dolphin Yacht Club's all-alcohol beverage club license at 17 Allerton Place. He noted he has been part of the management team for one season and has approximately 30 years of restaurant management experience. The board voted unanimously to approve the change of manager."
+    key_speakers: ["Scott Kelly (new manager)"]
   - topic: bonding-capital
-    topic_confidence: 0.82
+    topic_confidence: 0.88
     start_seconds: 706
     end_seconds: 846
-    headline: "Board authorizes $79,763 in ARPA funds for town-wide pedestrian and bike plan"
-    dek: "The approved amount came in below the $150,000 estimate previously carried, freeing up additional ARPA funds for other priorities."
-    summary: "The Town Administrator described the plan as part of a broader effort to develop infrastructure plans before making capital investments. A consultant will be hired to create a comprehensive bicycle and pedestrian transportation program, identify safe on-street and off-street routes, and guide capital investment while identifying additional local, state, and federal funding. The project is consistent with the town's Complete Streets program. The board voted unanimously to authorize $79,763 from ARPA funds."
-    key_speakers: ["Town Administrator (Thatcher)"]
+    headline: "Board approves $79,763 in ARPA funds for town-wide pedestrian and bike plan"
+    dek: "The amount came in under the $150,000 estimate that had been carried, freeing up additional ARPA funds for other priorities."
+    summary: "The Town Administrator presented a request to use ARPA funds to hire a consultant to develop a town-wide pedestrian and bike plan. The plan is intended to guide capital investment, identify safe on-street and off-street cycling routes, and connect to other transportation modes, consistent with the town's Complete Streets program. The project was estimated at $150,000 but came in at $79,763. The board voted unanimously to authorize the expenditure."
+    key_speakers: ["Town Administrator"]
   - topic: admin-housekeeping
-    topic_confidence: 0.92
+    topic_confidence: 0.93
     start_seconds: 846
     end_seconds: 2492
-    headline: "Finance Director presents FY23 audit on time; 15 of 23 Clifton Larson Allen findings resolved"
-    dek: "Town Finance Director Alicia and Town Administrator Thatcher reported that 15 of 23 findings from a prior financial assessment have been completed, with most remaining items to be resolved upon migration to a new financial software system."
+    featured: true
+    headline: "Finance Director reports 15 of 23 audit findings resolved; town finance systems modernization underway"
+    dek: "The board received the FY23 Annual Comprehensive Financial Report on time and heard that 15 of 23 Clifton Larson Allen audit recommendations have been completed, with most remaining items tied to a pending software migration."
     summary: |
-      The FY23 Annual Comprehensive Financial Report was presented as an informational item with no board action required. The Town Administrator noted that 15 of 23 recommendations from the Clifton Larson Allen financial assessment are marked complete; 7 are in progress (most pending migration to the new Muni financial system); and 1 (biweekly payroll) is not being implemented at this time.
+      Finance Director Alicia presented the FY23 Annual Comprehensive Financial Report, noting it was completed on time — a milestone given past challenges. Town Administrator Thatcher briefed the board on the status of 23 recommendations from a prior Clifton Larson Allen assessment:
       
-      The board also discussed FY25 budget planning. The Town Administrator described the current year as a "survival budget" and outlined revenue strategies:
+      - **15 items** marked complete, including adoption of financial policies voted by the board.
+      - **7 items** in progress, most of which will be resolved upon migration to the new Munis financial system.
+      - **1 item** (biweekly payroll) not being implemented at this time.
       
-      - **Meals and rooms tax**: Estimated to generate $800,000–$1 million annually; only $400,000 is programmed in the first-year budget to establish a track record. The meals portion is 0.75%.
-      - **New growth capture**: Investments in building inspection capacity (including a new building inspector and a shared arrangement with Swampscott) to ensure improvements are assessed and fed to the Assessors for timely inclusion in the tax levy.
-      - **Fee updates**: Building permit fees had not been changed since 1991; interim increase of $20 per inspection fee was implemented, with a fuller review planned.
+      The Town Administrator also discussed the FY25 budget planning context, describing the current year as a "survival budget" and outlining revenue strategies:
       
-      Board members noted a desire for a 3–5 year financial forecast, and the Finance Director indicated a new chart of accounts will be ready by end of April in preparation for Muni system conversion.
+      | Revenue Initiative | Details |
+      |---|---|
+      | Meals & rooms tax | Estimated $800K–$1M annually; $400K programmed in FY25 |
+      | New growth capture | Adding a second building inspector; improved data flow to assessors |
+      | Inspection fee increases | Fees raised by $20 per inspection; last updated in 1991 |
+      
+      Board members called for a 3–5 year financial forecast to be developed, noting that FY25 is viewed as a foundation year for longer-term planning heading into FY26.
     key_speakers: ["Alicia (Finance Director)", "Town Administrator (Thatcher)"]
   - topic: recreation-events
     topic_confidence: 0.95
     start_seconds: 2721
-    end_seconds: 3839
-    headline: "Board approves spring and summer event permits including fireworks, Festival of Arts, and Arbor Day"
-    dek: "A slate of routine event approvals covered Youth Baseball parade, Coastline Marine liquor license, Marblehead Pride, a high school 5K, July 4th fireworks, Festival of Arts events, Glover's Regiment encampment, and Juneteenth ceremony."
+    end_seconds: 3950
+    headline: "Board approves slate of spring and summer event permits including fireworks, Festival of Arts, and Juneteenth"
+    dek: "Approved items include a $50,000 July 4th fireworks contract, multiple Festival of Arts venues and liquor licenses, Glover's Regiment encampment, and a Juneteenth flag raising at Abbott Hall."
     summary: |
-      The board approved the following in sequence:
+      The board approved a large batch of event-related items:
       
-      | Item | Date | Notes |
-      |------|------|-------|
-      | Youth Baseball opening day parade | April (start time 9:30 AM) | Changed from 9:00 AM |
-      | Coastline Marine one-day liquor license | April 27, 2024 | 12 noon–4 PM, alcohol from Harpoon Brewery |
-      | Marblehead Pride use of Abbott Hall | June 1, 2024 | Rain date June 2 |
-      | MHS Green School Society 5K | April 20, 2024 | Starts/ends Devereux Beach |
-      | Atlas Pyrotechnic Fireworks contract | July 4, 2024 | $50,000, funded through fireworks committee fundraising |
-      | General Code LLC bylaw recodification | — | $15,145; last recodification was 2003 |
-      | Hazard Mitigation Plan adoption | — | ~300-page document covering coastal flooding, wildfire, temperature extremes |
-      | Council on Aging 2009 van surplus declaration | — | — |
-      | Arbor Day proclamation | April 26, 2024 | Includes 22 trees on Brook House Drive, seedling planting |
-      | Glover's Regiment Fort Sewell encampment | July 12–14, 2024 | Fort to remain open to public |
-      | Juneteenth flag raising at Abbott Hall | June 12, 2024 | 4:30–6 PM |
-      | Festival of Arts whale and co event at Abbott Hall | May 31, 2024 | 5–8 PM |
-      | Festival of Arts 5K/10K race | July 6, 2024 | Smith Street to Community Center |
-      | Festival of Arts July 3–7 venues | July 2024 | Abbott Hall, Old Townhouse, Washington Street closure, Fort Sewell |
-      | Festival of Arts one-day liquor license at Fort Sewell | June 30, 2024 | 4:30–7:30 PM |
-      | Festival of Arts one-day liquor license at Abbott Hall | May 31, 2024 | 4:30–8:30 PM, Carolina Distributors |
-  - topic: permits-zoning
-    topic_confidence: 0.9
-    start_seconds: 3984
-    end_seconds: 4071
-    headline: "Eastern Yacht Club and Dolphin Yacht Club seasonal all-alcohol licenses renewed"
-    dek: "Both clubs received unanimous renewal of their all-alcohol seasonal club licenses and the Dolphin Yacht Club received a Sunday entertainment license renewal."
-    summary: "Eastern Yacht Club at 42–44 Foster Street (manager Jared Charney) and the Golf and Yacht Club (Dolphin Yacht Club) at 17 Allerton Place (manager Ken Martin) had their seasonal all-alcohol club licenses renewed subject to all taxes, fees, departmental approvals, and Cory approval. The Dolphin Yacht Club's local Sunday entertainment license was also renewed."
+      - **Marblehead Youth Baseball** opening day parade start time revised to 9:30 AM
+      - **Coastline Marine** one-day liquor license April 27th, 12 noon–4 PM
+      - **Marblehead Pride Committee** use of Abbott Hall June 1st for a pride event
+      - **MHS National Green School Society** 5K at Devereux Beach on April 20th
+      - **Fireworks contract** with Atlas Pyrotechnic Fireworks Inc. for $50,000 for July 4th (funded through fundraising account)
+      - **General Code recodification** contract for $15,145 to update and reorganize all town bylaws (last done in 2003), with 14 printed code books to be provided
+      - **Arbor Day proclamation** for April 26th; tree planting events scheduled April 20th and 27th
+      - **Glover's Regiment** use of Fort Sewell July 12–14
+      - **Juneteenth** flag raising at Abbott Hall June 12th
+      - **Marblehead Festival of Arts** multiple venues (Abbott Hall, old townhouse, Washington Street, Fort Sewell) July 3–7; one-day liquor licenses for May 31st at Abbott Hall and June 30th at Fort Sewell
+      - **Eastern Yacht Club and Dolphin Yacht Club** seasonal all-alcohol club license renewals
+      - **Dolphin Yacht Club** Sunday entertainment license renewal
+      - **Marblehead Community Charter Public School** use of Abbott Hall for graduation June 17th
+  - topic: public-safety
+    topic_confidence: 0.82
+    start_seconds: 3186
+    end_seconds: 3392
+    headline: "Board adopts town-wide All Hazards Mitigation Plan covering flooding, extreme heat, wildfire, and other risks"
+    dek: "The plan, managed by Emergency Management Coordinator Becky Currin, is required to be filed with the state and covers a range of natural and climate-related hazards."
+    summary: "The Town Administrator presented the Hazard Mitigation Plan, a roughly 300-page document prepared with stakeholder input. It identifies potential threats — coastal flooding, hurricane surge, extreme temperature days, and wildfire probability — and outlines preparedness steps. Adopting the plan fulfills a state reporting requirement. The board voted unanimously to adopt the plan and authorize the chair to sign the resolution."
+    key_speakers: ["Town Administrator (Thatcher)"]
   - topic: public-comment
-    topic_confidence: 0.97
-    start_seconds: 4117
+    topic_confidence: 0.98
+    start_seconds: 4129
     end_seconds: 5009
-    headline: "Resident raises concerns about Board of Health conduct, assessors, school departures, and Coffin School building"
-    dek: "A resident identified as Mr. Jordan spoke at length about inter-board civility, the Coffin School building sitting vacant, a school administrator departure, and road conditions."
+    headline: "Resident raises concerns about Board of Health conduct, assessor audit, road conditions, and Coffin School building"
+    dek: "A resident (identified in context as Mr. Jordan) delivered an extended public comment touching on intergovernmental civility, school staffing, and surplus town buildings."
     summary: |
-      The resident raised several concerns during public comment:
+      A resident offered public comment on several topics:
       
-      - **Tenesco Country Club / Swampscott**: Suggested Swampscott found a loophole on property assessments that benefits the country club at taxpayers' expense.
-      - **Board of Health**: Expressed concern about conduct and interpersonal conflict at recent Board of Health meetings, particularly in the context of a member attempting to address substance use and overdose deaths.
-      - **Traffic and Safety Advisory Committee**: Noted the committee's meetings begin at 4 PM with a hard stop at 5 PM, limiting public participation for residents who work during the day.
-      - **Assessors**: Referenced an ongoing audit and expressed frustration that a department head was reportedly not coming to work.
-      - **School administrator departure**: Praised a long-tenured administrator (referenced as Amanda Murphy, principal) who is reportedly leaving, citing concern about institutional knowledge loss.
-      - **Coffin School building**: Argued the building is sitting vacant at taxpayer expense and that the school committee should relinquish control; suggested the Select Board seek jurisdiction over all surplus town buildings.
-      - **Road conditions**: Called for more regular appearances by the highway/DPW department before the board.
+      - **Tenesco Country Club / assessor issue**: Concern that Swampscott found a loophole allowing reduced assessments, potentially shifting tax burden to Marblehead residents.
+      - **Board of Health conduct**: Described recent meetings as uncivil and called on the Select Board to encourage better decorum across all town boards.
+      - **Traffic & Safety Advisory Committee**: Questioned why meetings are held at 4 PM in Abbott Hall when many working residents cannot attend.
+      - **Road conditions**: Called for more public reporting from the highway/DPW department and noted deplorable street conditions.
+      - **School staffing**: Expressed concern about experienced staff departing, specifically naming a principal (Amanda Murphy) who is leaving.
+      - **Coffin School building**: Objected to the School Committee's reported reluctance to relinquish the building, noting ongoing heating and electricity costs.
       
-      The board chair responded that she shares concerns about the Coffin School and encouraged the resident to speak to the School Committee. The Town Administrator noted that all department heads will present at the upcoming Friday budget hearing.
-    key_speakers: ["Resident (Mr. Jordan)"]
+      The Chair thanked the resident and noted the budget hearing Friday would include all department heads; she also suggested the Traffic Safety Advisory Committee be given feedback about extending meeting time.
+    key_speakers: ["Resident at mic (identified as Mr. Jordan)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.88
+    topic_confidence: 0.92
     start_seconds: 5104
     end_seconds: 5381
-    headline: "Town Administrator reports ARPA coordinator hire, new website vendor, and upgraded meeting room WiFi"
-    dek: "Three technology and staffing updates were announced: a contract ARPA coordinator, a new website vendor selected through procurement, and newly activated dual-channel WiFi in the Select Board meeting room."
+    headline: "Town Administrator announces ARPA coordinator hire, new website vendor, and upgraded meeting room WiFi"
+    dek: "Three operational updates were presented: a contract ARPA project coordinator, a new town website vendor with improved capabilities and lower cost, and newly activated public WiFi in the Select Board meeting room."
     summary: |
-      - **ARPA Coordinator**: A contract position funded through ARPA funds will be hired to manage ARPA reporting requirements and project management through the end of 2025, when funds must be expended.
-      - **Website**: A new vendor was selected through a procurement process to host the town's website. Migration is expected to take approximately six months and will include improved capabilities and cost savings compared to the current vendor.
-      - **WiFi**: New WiFi equipment was installed in the Select Board meeting room, providing a secure channel for staff and a public channel for meeting attendees. QR codes are available at the table for public access.
+      The Town Administrator provided three updates:
+      
+      1. **ARPA Coordinator**: A contract position funded through ARPA funds will be hired to manage ARPA project reporting and implementation through the end of 2025 fund-expenditure deadline.
+      2. **New website vendor**: A procurement process has been completed and a new vendor selected to host the town website. Transition is expected to take approximately six months and will include improved functionality at a lower cost than the current vendor.
+      3. **Meeting room WiFi**: New WiFi has been installed and activated in the Select Board meeting room, with both a secure employee channel and a public channel. QR codes are available at the table for residents to connect.
     key_speakers: ["Town Administrator (Thatcher)"]
 ---
 

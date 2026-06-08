@@ -11,9 +11,10 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
   headline: "Select Board meeting adjourned immediately at 7:31 PM on counsel's advice"
-  summary: "The chair called the meeting to order at 7:30 PM and announced that, due to last-minute communication with counsel, the board would not proceed with any agenda items. The meeting was adjourned at 7:31 PM with no business conducted."
+  summary: "The chair called the meeting to order at 7:30 PM and announced that, due to last-minute communication with counsel, the board would not proceed. The meeting was adjourned at 7:31 PM with no business conducted."
   decisions:
     - "Adjourned meeting immediately on advice of counsel"
 
@@ -22,10 +23,9 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 0
     end_seconds: 3
-    featured: true
-    headline: "Select Board meeting adjourned at 7:31 PM on advice of counsel"
-    dek: "No business was conducted; the chair immediately adjourned following last-minute legal guidance."
-    summary: "The chair called the meeting to order at 7:30 PM and stated that, due to last-minute communication with counsel, the board could not proceed. The meeting was adjourned at 7:31 PM. No agenda items were heard and no votes were taken."
+    headline: "Meeting adjourned at 7:31 PM on counsel's advice; no business conducted"
+    dek: "The chair received last-minute legal advice and immediately adjourned without taking up any agenda items."
+    summary: "The chair called the meeting to order at 7:30 PM and within one minute announced that counsel had advised adjournment. No agenda items were heard and no votes were taken. The meeting adjourned at 7:31 PM."
     key_speakers: ["Chair (unnamed)"]
 ---
 

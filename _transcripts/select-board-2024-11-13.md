@@ -11,42 +11,37 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board approves teacher-strike statement; hears override forecast warning"
-  summary: "The Marblehead Select Board held its November 13, 2024 meeting amid an ongoing MEA teacher strike, hearing extensive public comment from teachers, parents, and a parent-attorney who filed for emergency injunctive relief to allow student extracurricular activities to continue. The board approved a formal statement urging the MEA and school committee to reach a fair and sustainable contract settlement. Finance Committee Chair Alec Sby and Finance Director Alicia Benjamin presented a preliminary fiscal outlook indicating that health insurance and pension cost increases alone (~$1.5 million/year) nearly consume projected new revenue of roughly $2.1–$2.3 million, signaling that a Proposition 2½ override will likely be necessary."
+  headline: "Marblehead Select Board hears teacher strike testimony, advances override planning"
+  summary: "The Select Board held its November 13, 2024 meeting amid an active teacher strike, receiving public comment from educators and parents urging contract settlement and extracurricular activity relief. The Finance Committee chair and Finance Director presented a preliminary fiscal outlook indicating that fixed cost increases of approximately $1.5 million annually (health insurance and pension alone) nearly consume projected revenue growth of $2.1–$2.3 million, making an override likely necessary. The board also approved a $425,000 design contract for the Marblehead High School roof and voted on several other contracts and routine matters."
   decisions:
-    - "Approved Select Board statement on teacher strike and contract negotiations"
-    - "Continued Shin Dynasty LLC liquor license revocation hearing to May 2025 with monthly reporting requirement"
-    - "Approved contract with Raymond Design Associates for Marblehead High School roof design services not to exceed $425,000"
-    - "Approved three contracts for the State Street Landing/Tucker's Wharf Resilience Project (Salem Sound Coast Watch $33,000; Collins Engineering $103,728; Woods Hole Group $86,157)"
-    - "Approved increase in Senior Tax Work-Off income eligibility to 500% above poverty guidelines"
+    - "Continued revocation hearing for Shin Dynasty LLC liquor license six months to May 2025 with monthly reporting requirement"
+    - "Approved contract with Raymond Design Associates for Marblehead High School roof designer services not to exceed $425,000"
+    - "Approved three contracts (Salem Sound Coast Watch $33,000; Collins Engineering $103,728; Woods Hole Group $86,157) for State Street Landing and Tucker's Wharf Resilience Project"
+    - "Approved increase in Senior Tax Work-Off income eligibility to 500% above poverty (single: $75,300; two-person: $102,200)"
     - "Approved two one-day beer-and-wine licenses for Bubble Bar Boston at Abbott Hall, December 7–8, 2024"
-    - "Approved consent agenda including meeting minutes, OWL technology donation, Chamber of Commerce Christmas Walk parking restrictions, and Abbott Hall Eagle Scout use"
-    - "Approved stormwater and infrastructure contract change orders (Foster Architecture, Environmental Partners, Greenman Peterson)"
-    - "Set Annual Town Meeting for May 5, 2025; opened warrant; set public deadline January 24, 2025 and government deadline January 31, 2025"
-    - "Approved 2025 Senior Tax Work-Off income eligibility rate increase"
+    - "Set Annual Town Meeting for May 5, 2025; opened warrant; closed warrant for general public January 24, 2025 and for town government January 31, 2025"
+    - "Approved Select Board statement on teacher strike and contract negotiations"
+    - "Approved consent agenda including meeting minutes, OWL technology donation, Chamber of Commerce Christmas Walk permits, and Abbott Hall Eagle Scout use"
   votes:
-    - motion: "Continue Shin Dynasty license revocation hearing to May 2025"
+    - motion: "Continue Shin Dynasty license revocation hearing six months"
       result: "in favor (unanimous)"
     - motion: "Approve Select Board statement on teacher strike"
       result: "in favor (unanimous)"
-    - motion: "Approve consent agenda items"
+    - motion: "Approve Raymond Design Associates roof design contract ($425,000)"
       result: "in favor (unanimous)"
-    - motion: "Approve stormwater contract change orders"
-      result: "in favor (unanimous)"
-    - motion: "Approve Raymond Design Associates contract up to $425,000"
-      result: "in favor (unanimous)"
-    - motion: "Approve three State Street Landing/Tucker's Wharf resilience contracts"
+    - motion: "Approve three resilience project contracts"
       result: "in favor (unanimous)"
     - motion: "Approve Senior Tax Work-Off income eligibility increase"
       result: "in favor (unanimous)"
-    - motion: "Approve Bubble Bar Boston one-day liquor licenses"
+    - motion: "Approve Bubble Bar Boston one-day liquor licenses (polled vote)"
       result: "in favor (unanimous)"
-    - motion: "Set Annual Town Meeting for May 5, 2025 and open warrant"
+    - motion: "Set Annual Town Meeting May 5, 2025 and open/close warrant"
       result: "in favor (unanimous)"
-    - motion: "Close warrant for general public January 24, 2025"
+    - motion: "Approve consent agenda items"
       result: "in favor (unanimous)"
-    - motion: "Close warrant for town government January 31, 2025"
+    - motion: "Approve engineering/stormwater contract change orders (consent)"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -54,215 +49,182 @@ topic_segments:
     topic_confidence: 0.99
     start_seconds: 0
     end_seconds: 1049
-    featured: true
-    headline: "Teachers, parents, attorney address board during MEA strike; injunctive relief sought for student events"
-    dek: "Speakers urged the board to press for a settled contract, competitive pay, and parental leave, while an attorney announced an emergency court filing to allow student extracurricular activities to continue."
+    headline: "Teachers, parents, and attorney speak at mic on strike and student activity restrictions"
+    dek: "Five speakers addressed the board on the teacher strike, contract negotiations, and an emergency court filing seeking to allow student athletes to compete during the work stoppage."
     summary: |
-      Four members of the public spoke during open comment, all focused on the ongoing Marblehead Education Association teacher strike:
+      Multiple residents addressed the Select Board during public comment:
       
-      **Mary LeBlanc (30 Peach Highlands), literacy coach and teacher:** Called for competitive pay, parental leave, and bereavement leave for pregnancy loss. Alleged the school committee and Town Administrator Thatcher Keer are stalling negotiations and urged the public and select board to intervene to settle the contract.
-      
-      **John Wales (8 Jefferson Street):** Representing a group of Marblehead High School students with attorney Keith Sacks, he described an emergency motion for injunctive relief filed in Lawrence Superior Court to allow students to participate in milestone events during the work stoppage — including a quarterfinal football playoff game in Grafton, a cheer competition, a performing arts senior showcase in North Andover, and a state cross country meet where four qualified runners had college coaches attending. He contrasted the Marblehead superintendent's position with Beverly, which is allowing extracurricular activities during its own work stoppage, and asked the board to implore the school committee to reconsider.
-      
-      **Catherine Wilmont Sullivan (school adjustment counselor, Glover School):** Described feeling demoralized and personally damaged over the past two years, noting the loss of multiple colleagues including special educators to other districts offering $20,000–$30,000 more per year. She cited Village School losing 10 special educators this year and urged the board to push for a settled contract and an override.
-      
-      **Jen Billings (67 Atlantic Avenue), English teacher, Marblehead High School:** Stated mediation is not working and called for face-to-face bargaining. Cited paraprofessional starting salaries of $16–$17/hour as inadequate. Alleged school committee members and the town manager refused face-to-face meetings with the MEA bargaining team.
-    key_speakers: ["Mary LeBlanc (teacher/literacy coach, 30 Peach Highlands)", "John Wales (parent/attorney, 8 Jefferson Street)", "Jane Kassler (resident, 199 Washington Street)", "Catherine Wilmont Sullivan (school adjustment counselor, Glover School)", "Jen Billings (English teacher, Marblehead High School)"]
+      - **Mary Leblanc (30 Peach Highlands), literacy coach and teacher**: Called on the community to support fair wages, parental leave, and bereavement leave, and urged the school committee and town administrator to settle the contract immediately.
+      - **John Wales (8 Jefferson Street)**: Described an emergency motion for injunctive relief filed in Lawrence Superior Court on behalf of a diverse group of Marblehead High School students, seeking to allow extracurricular activities and sports to continue during the work stoppage. He cited a playoff football game, a cheer competition, a performing arts senior showcase, and a state cross country meet with college scouts attending as events at risk. He referenced Beverly schools as a comparable district allowing activities to proceed.
+      - **Jane Kassler (199 Washington Street)**: Raised the MBTA Communities Act, noting the December 31 compliance deadline, the town's prior vote against compliance, and potential penalties including loss of state grants and possible action by the Attorney General.
+      - **Catherine Wilmont Sullivan, school adjustment counselor at Glover School**: Described low morale, staff departures, and the loss of special educators at Village School (10 special educators this year), urging the board to act on the contract and the override.
+      - **Jen Billings (67 Atlantic Avenue), English teacher at Marblehead High School**: Stated that mediation has not produced results and accused the school committee of making no substantive counter-proposals. She cited paraprofessional starting wages of $16–$17 per hour and called for face-to-face bargaining.
+    key_speakers: ["Mary Leblanc (teacher/literacy coach, 30 Peach Highlands)", "John Wales (parent/attorney, 8 Jefferson Street)", "Jane Kassler (resident, 199 Washington Street)", "Catherine Wilmont Sullivan (school adjustment counselor, Glover School)", "Jen Billings (English teacher, Marblehead High School)"]
   - topic: labor-personnel
     topic_confidence: 0.97
     start_seconds: 1049
     end_seconds: 1474
-    headline: "Town Administrator details status of four active union negotiations including MEA, police, and MMEU"
-    dek: "Town Administrator Thatcher Keer described mandatory mediation in the MEA strike, ongoing MMEU and police negotiations both scheduled for November 20, and the firefighters' contract expiring June 2025."
+    headline: "Town administrator describes mandatory mediation in teacher strike and two other active union negotiations"
+    dek: "The town administrator explained that the teachers' strike triggered mandatory state mediation under Chapter 150E, and outlined parallel negotiations with the municipal employees union and police union."
     summary: |
-      Town Administrator Thatcher Keer provided a collective bargaining update:
+      The town administrator provided an update on collective bargaining activity:
       
-      - **MEA (teacher strike):** Following the strike vote while Keer was out of state with the Mass National Guard hockey team, the Department of Labor Relations initiated mandatory mediation. Parties are in separate rooms under state-directed process. Keer participated in a Saturday fact-finding session via Zoom and attended an approximately 10–12 hour in-person session Monday after returning at 2:30 AM.
-      - **MMEU (Marblehead Municipal Employees Union):** Covers most town hall employees, water, sewer, DPW, and dispatchers. Contract expired June 30, 2024. First mediation session was October 31; next session scheduled November 20.
-      - **Police (Mass Cops):** Contract expired June 30, 2024. Last session September 2; next session November 20. Described as productive ongoing negotiations.
-      - **Fire union:** Contract expires June 30, 2025. Negotiations expected to begin after January 2025 notice from the union.
+      - **Teacher strike / school negotiations**: When the MEA voted to strike, the Department of Labor Relations initiated mandatory mediation. The town administrator participated via Zoom during the first Saturday session while out of state for a Massachusetts National Guard hockey event, then returned Monday at 2:30 AM and participated in sessions that ran 10–12 hours. He noted that in mandatory mediation the parties are in separate rooms with a mediator shuttling between them — not face-to-face — as dictated by state process.
+      - **MMEU (Marblehead Municipal Employees Union)**: Contract expired June 30, 2024. First mediation session was October 31; next session scheduled for November 20.
+      - **Police (Mass Cops)**: Contract expired June 30, 2024. Last session September 2; next session November 20. Described as productive but not yet resolved.
+      - **Fire union**: Contract expires June 30, 2025. Negotiations expected to begin after January.
       
-      Keer also noted that interviews are underway for a new Director of Planning and Community Development — a position created at town meeting, funded by redirecting the retired town engineer's salary — to focus on new growth revenues.
+      The administrator also noted that interviews are underway for a new Director of Planning and Community Development, a position funded by redirecting the salary of a recently retired town engineer.
     key_speakers: ["Thatcher Keer (Town Administrator)"]
-  - topic: permits-zoning
-    topic_confidence: 0.95
-    start_seconds: 1474
-    end_seconds: 1806
-    headline: "Shin Dynasty liquor license revocation continued to May 2025 after COVID, contractor, and building issues cited"
-    dek: "Attorney Michael Vito explained a series of construction delays including a flooded basement, full electrical and plumbing redo, a newly required accessible entrance, and a missing firewall; the board granted a six-month continuation with monthly reporting."
-    summary: |
-      The board held a revocation hearing for Shin Dynasty LLC's all-malt beverage license (license #00042S06560) at 1 Atlantic Avenue. The license was originally granted in 2020. Attorney Michael Vito, representing owner Alex Lewis, detailed delays: the original contractor was lost to COVID, a new contractor encountered a flooded basement requiring full electrical and plumbing replacement, and a handicap-accessible entrance and firewall between Shin Dynasty and the adjacent pizza restaurant were recently identified as required by the building commissioner.
-      
-      Vito estimated the business could open within three to four months. The board voted to continue the revocation hearing to May 2025, requiring monthly status reports either in person or in writing. A board member also advised ongoing communication with Building Commissioner Steve Cummings, whose sign-off is required before the next licensing step.
-    key_speakers: ["Michael Vito (attorney for Shin Dynasty LLC)", "Alex Lewis (license applicant)"]
   - topic: override
     topic_confidence: 0.98
     start_seconds: 1806
     end_seconds: 4429
-    headline: "Finance Committee previews grim three-year outlook; health and pension costs alone near $1.5M/year, override expected"
-    dek: "Finance Chair Alec Sby and Finance Director Alicia Benjamin presented a preliminary fiscal forecast showing rising fixed costs outpacing levy growth, with free cash declining from $13.4M to $8.7M since Sby joined FinCom."
+    featured: true
+    headline: "Finance Committee and Finance Director project override will be needed; fixed costs alone consume most of projected $2.1–2.3M revenue growth"
+    dek: "Finance Committee Chair Alec Sby and Finance Director Alicia Benjamin presented a preliminary three-year fiscal outlook showing that health insurance and pension increases alone total approximately $1.5 million annually against projected levy and new-growth revenue gains of only $2.1–$2.3 million."
     summary: |
-      Finance Committee Chair Alec Sby and Finance Director Alicia Benjamin, with FinCom Vice Chair Molly Teets joining remotely, provided a detailed financial planning update:
-      
-      ### Key cost drivers identified
-      | Driver | Annual increase (est.) |
-      |---|---|
-      | Health insurance (6% trend) | ~$1,000,000 |
-      | Pension (actuarial, ~8.6%/yr) | ~$500,000 |
-      | **Subtotal (fixed costs)** | **~$1,500,000** |
-      | New trash/recycling contract | TBD |
-      | Energy/utilities | TBD |
-      | General inflation on operations | TBD |
-      
-      ### Revenue outlook
-      Projected annual levy increase (2.5% + ~$350K new growth): approximately **$2.1–$2.3 million/year**, leaving roughly $600,000 to cover all other cost pressures before wages and contract increases.
-      
-      ### Free cash trend
-      Free cash certified at $13.4M when Sby joined FinCom; currently at $8.7M. Combined free cash and stabilization fund is approximately 8.5% of operating budget — at the low end of the DOR-recommended 8–12% range. The board's own financial policy targets at least 5% in free cash; the town is at approximately 2.5% of operating budget. Use of free cash to balance the operating budget has declined from $10.2M (FY23) to approximately $5.5M last year to a target of under $1M going forward.
-      
-      ### Enrollment vs. budget note
-      Sby noted school enrollment declined from approximately 2,293 to 2,617 (approximately 20%) over the past decade while the school budget increased approximately 45% in aggregate, with FTE count essentially flat at approximately 245–246. He framed this as a potential topic for mediation discussions.
+      Finance Committee Chair Alec Sby and Finance Director Alicia Benjamin joined the Select Board for a financial planning update, with Finance Committee Vice Chair Molly Teets participating via Zoom.
       
       ### Key dates
-      - **~December 11, 2025:** Preliminary three-year revenue and expense forecast presented by Benjamin and Keer
-      - **Late January 2025:** State of the Town address with updated numbers
-      - **February–March 2025:** Detailed liaison meetings and department budget reviews
-      - **Late March/Early April 2025:** FinCom budget hearing votes
-      - **April 7, 2025:** Warrant hearing; FinCom approves balanced budget
+      | Milestone | Approximate date |
+      |---|---|
+      | Preliminary revenue & expense forecast presented | ~December 11, 2024 |
+      | State of the Town / updated forecast | Late January 2025 |
+      | Detailed liaison budget meetings | February–March 2025 |
+      | FinCom votes balanced budget | Late March–early April 2025 |
+      | Warrant hearing (FinCom approves full budget) | April 7, 2025 |
+      | Annual Town Meeting | May 5, 2025 |
       
-      All three speakers — Sby, Benjamin, and Teets — indicated a Proposition 2½ operational override is likely necessary. Sby stated his position "hasn't changed" from town meeting, calling for a reasonable and detailed override request that includes both town and school-side restructuring to share the burden with taxpayers.
-    key_speakers: ["Alec Sby (Finance Committee Chair)", "Alicia Benjamin (Finance Director)", "Molly Teets (Finance Committee Vice Chair, remote)"]
-  - topic: labor-personnel
-    topic_confidence: 0.92
-    start_seconds: 4429
-    end_seconds: 4617
-    headline: "Select Board unanimously approves statement calling for fair, sustainable MEA contract settlement"
-    dek: "The statement acknowledges teachers deserve competitive wages, notes the town's fiscal constraints across all bargaining units, and urges MEA and school committee to return students to classrooms."
-    summary: |
-      The board read and voted to approve a formal written statement titled "Statement of the Select Board on Teacher Strike and Contract Negotiations." Key points from the statement:
+      ### Revenue outlook
+      - Levy growth at 2.5% plus approximately $350,000 average new growth produces an estimated **$2.1–$2.3 million** annual revenue increase.
+      - Hotels and meals tax revenue was approved at town meeting and is now being tracked; local receipts expected to increase modestly.
+      - Investment income expected to decline as interest rates fall (two additional cuts projected in 2025).
+      - Free cash certified at $8.7 million most recently (down from $13.4 million when the Finance Committee chair joined); the town used $5.5 million of free cash to balance last year's budget, and $10.2 million in FY23.
       
-      > Marblehead's fiscal constraints are impacting our entire town, not just our schools. The teachers and staff of Marblehead Public Schools deserve competitive wages and improved working conditions.
+      ### Expense pressures
+      - **Health insurance**: ~6% annual increase assumed, approximately **$1 million per year**.
+      - **Pension**: Actuarial report shows ~8.6% annual growth, approximately **$500,000 per year**.
+      - Combined fixed cost increases: approximately **$1.5 million per year** before wages, utilities, or inflation.
+      - New trash and recycling contract expected to add pressure.
+      - Energy and utility costs growing significantly.
       
-      > Any contract must be economically sustainable for the town. Addressing this challenge will require long-term budgeting discipline and an override proposal that is achievable at the ballot box.
+      ### School staffing context
+      The Finance Committee chair noted that school enrollment has declined from approximately 2,293 to 2,617 students — roughly a 20% decline — over roughly the past decade, while the school budget has increased approximately 45% in aggregate and FTE count has remained essentially flat (245 to 245.8 FTEs). He described this as germane to mediation discussions. Other participants noted that fixed costs in schools are difficult to reduce proportionally with enrollment and that the new interim superintendent and school finance director are reviewing FTE-to-student ratios against peer communities.
       
-      > We strongly urge the MEA and the school committee to continue to work together to reach a fair and sustainable solution that will put our students and teachers back in the classroom.
+      ### Free cash and stabilization fund
+      - Financial policy target: free cash at 5% of operating budget; stabilization fund at 3–5%.
+      - Current combined free cash and stabilization is approximately 8.5% of budget, at the lower end of the DOR-recommended 8–12% range.
+      - Stabilization fund currently at approximately $500,000 (about 0.5% of budget).
+      - Strategy: reduce reliance on free cash for operating expenses and direct more toward capital.
       
-      The statement also references five bargaining units under negotiation for the school department alongside police and municipal union negotiations.
-    key_speakers: ["Select Board Chair (name not identified in transcript)"]
-  - topic: admin-housekeeping
+      ### Override conclusion
+      Both the Finance Committee chair and vice chair stated that an override should be considered this year. The Finance Director said the town "truly does need an override" to maintain service levels. The Finance Committee chair said any override request should be reasonable, detailed, and include some restructuring on both the town and school sides to share the burden with taxpayers.
+    key_speakers: ["Alec Sby (Finance Committee Chair)", "Alicia Benjamin (Finance Director)", "Molly Teets (Finance Committee Vice Chair, remote)", "Moses (Select Board member)", "Dan (Select Board member)"]
+  - topic: permits-zoning
     topic_confidence: 0.95
-    start_seconds: 4617
-    end_seconds: 4776
-    headline: "Consent agenda approved: minutes, OWL tech donation, Christmas Walk permits, Eagle Scout Abbott Hall use"
-    dek: "The board approved multiple routine consent items including three sets of meeting minutes and temporary parking restrictions for the December 6–7 Christmas Walk and Tree Lighting."
+    start_seconds: 1474
+    end_seconds: 1806
+    headline: "Shin Dynasty liquor license revocation hearing continued six months to May 2025"
+    dek: "The board continued a pending revocation hearing for Shin Dynasty LLC's all-malt beverage license at 1 Atlantic Avenue, requiring monthly status reports and setting a May 2025 deadline."
     summary: |
-      The board approved the following consent agenda items:
-      - Minutes of October 9, October 23, and November 4, 2024
-      - Accept donation of OWL Technology Equipment and authorize letter of appreciation
-      - Chamber of Commerce 53rd Annual Christmas Walk, Tree Lighting, and Parade, December 6–7, 2024
-      - Temporary parking restrictions for Christmas Walk/Parade, December 6–7, 2024
-      - Use of Abbott Hall, January 4, 2025, 9:30 AM–2:30 PM for Eagle Scout Court of Honor
-  - topic: admin-housekeeping
-    topic_confidence: 0.9
-    start_seconds: 4776
-    end_seconds: 4868
-    headline: "Stormwater contract change orders approved for Foster Architecture, Environmental Partners, and GPI"
-    dek: "Three change orders related to MDPW stormwater management consulting services were approved as consent agenda contract items."
-    summary: |
-      The board approved:
-      - Professional Service Supplement #1, Foster Architecture, Change Order 001 — MDPW-23-06 Stormwater Management Consulting Services, MS4 General Permit support
-      - Change Order 002 — Environmental Partners
-      - Change Order 001 — Greenman Peterson Inc. (GPI)
+      Attorney Michael Vito appeared on behalf of Shin Dynasty LLC and licensee Alex Lewis to respond to an outstanding license revocation notice. The license was originally granted in 2020 (applied for in 2019). Delays were attributed to COVID-19 causing the initial contractor to close, a subsequent basement flood requiring full electrical and plumbing renovation, and recent discoveries of a missing handicap-accessible entrance and a required firewall between Shin Dynasty and the adjacent pizza establishment. Counsel indicated these issues are being addressed and estimated the business could open within three to four months.
+      
+      The board continued the revocation hearing to **May 2025**, requiring the licensee to report monthly in person or in writing. The board also advised the licensee to maintain contact with Building Commissioner Steve Cummings, whose sign-off is required before any further license action.
+    key_speakers: ["Michael Vito (attorney for Shin Dynasty LLC)", "Alex Lewis (licensee)"]
   - topic: bonding-capital
-    topic_confidence: 0.95
-    start_seconds: 4868
+    topic_confidence: 0.93
+    start_seconds: 4776
     end_seconds: 5238
-    headline: "Board approves $425,000 design contract for Marblehead High School roof replacement project"
-    dek: "School Finance Director Mike Ping explained the bond-funded contract with Raymond Design Associates, noting actual replacement is now targeted for summer 2026 due to administrative turnover and lead times."
+    headline: "Board approves $425,000 design contract for Marblehead High School roof replacement"
+    dek: "Raymond Design Associates was selected through an RFP process to design the high school roof replacement; work is now targeted for summer 2026 due to procurement and scheduling constraints."
     summary: |
-      The board approved a contract with Raymond Design Associates (RDA) not to exceed **$425,000** for designer services for the Marblehead High School roof replacement. Key details:
+      School Department Finance Director Mike Ping explained that a prior town meeting warrant article (Article 11, FY23) authorized bonding for the Marblehead High School roof and two rooftop HVAC units on the field house. An OPM (Left Field) was already engaged; an RFP then selected Raymond Design Associates (RDA) to provide designer services.
       
-      - The bond was authorized at Town Meeting in FY23 (Article 11).
-      - OPM Left Field (which worked on the Brown School project) was previously hired; RDA was selected through an RFP process.
-      - The contract covers design, cost estimating, and bid document preparation. RDA will also assess HVAC rooftop units, insulation levels (via thermal imaging already completed), and provide scenario pricing.
-      - Full replacement now targeted for **summer 2026** — not summer 2025 — due to administrative turnover at the school department and lead times for materials and contractor availability.
-      - The roof is currently being patched as leaks arise, with active leaks affecting classroom learning environments.
-      - The existing bond covered the roof and two HVAC units on the field house; RDA may recommend replacing all rooftop units to preserve roof warranty.
+      The contract, reviewed by town counsel, is **not to exceed $425,000** and is funded from the previously authorized bond.
+      
+      Key points:
+      - The designer will conduct thermal imaging, cost estimating, and develop design scenarios including: roof only; roof with existing two HVAC units; roof with all rooftop HVAC units; and roof with added insulation.
+      - The roof is currently being patched but continues to develop new leaks, impacting classrooms.
+      - Due to administrative turnover and procurement timelines, staff do not expect construction to begin in summer 2025; the target is **summer 2026**, potentially with preparatory work during April 2026 vacation.
+      - The contractor noted salt air exposure on three sides accelerates equipment degradation.
+      
+      The board approved the contract and authorized the chair to sign.
     key_speakers: ["Mike Ping (School Department Finance Director)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.88
+    topic_confidence: 0.92
     start_seconds: 5238
-    end_seconds: 5442
-    headline: "Three resilience project consulting contracts approved for State Street Landing/Tucker's Wharf grant work"
-    dek: "Town planner Alex presented contracts totaling the $210,502 grant award for project management, engineering design, and coastal flood risk analysis, with work required by June 30, 2025."
+    end_seconds: 5633
+    headline: "Board approves three resilience project contracts totaling ~$223,000 funded by existing $210,502 grant"
+    dek: "Contracts with Salem Sound Coast Watch, Collins Engineering, and Woods Hole Group cover project management, engineering design, and coastal flood risk analysis for the State Street Landing and Tucker's Wharf Resilience Project."
     summary: |
-      The board approved three contracts under a previously accepted $210,502 grant for the State Street Landing and Harbor Master Tucker's Wharf Resilience Project, with a completion deadline of June 30, 2025:
+      Town staff (identified as Alex) presented three contracts to be executed under a previously approved $210,502 grant for the State Street Landing and Harbor Master Tucker's Wharf Resilience Project, with a grant completion deadline of June 30, 2025.
       
       | Contractor | Scope | Amount |
       |---|---|---|
-      | Salem Sound Coast Watch (Barbara Warm) | Project management, stakeholder engagement | $33,000 |
-      | Collins Engineering Inc. | Site survey, flood risk modeling, cost estimates, engineering/design drawings, near/long-term maintenance costs | $103,728 |
-      | Woods Hole Group | Project coordination, site data collection, coastal flood risk analysis, resilient design alternatives, public engagement | $86,157 |
+      | Salem Sound Coast Watch (Barbara Warm) | Project management and stakeholder engagement | $33,000 |
+      | Collins Engineering | Engineering/design drawings, cost estimates, near- and long-term maintenance costs | $103,728 |
+      | Woods Hole Group | Site data collection, coastal flood risk analysis, resilient design alternatives, public engagement | $86,157 |
       
-      A note was made that Collins Engineering's near/long-term maintenance task (~$12,000) was not originally included in the grant budget and will be covered from a separate funding pool, as confirmed with Finance Director Benjamin and grant coordinator Donna.
-    key_speakers: ["Alex (Town Planner, name partially identified)"]
+      Staff noted that approximately $12,000 of the Collins Engineering contract covers a near- and long-term maintenance cost component not originally included in the grant scope; that amount will be drawn from a separate funding pool. The team is the same group that worked on an earlier Commercial Street phase of the project.
+    key_speakers: ["Alex (town staff, planning/community development)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.93
-    start_seconds: 5442
-    end_seconds: 5729
-    headline: "Senior Tax Work-Off income eligibility raised to 500% above poverty; town meeting set for May 5, 2025"
-    dek: "The board approved expanded senior tax relief eligibility and voted to set the annual town meeting date, open the warrant, and set public and government submission deadlines."
-    summary: |
-      **Senior Tax Work-Off program (2025):**
-      At the request of Council on Aging Director Lisa Hooper, the board approved raising the income eligibility threshold from 400% to 500% above the 2024 federal poverty guidelines:
-      - Single person: $51,528 → $75,300 (increase of ~$23,000)
-      - Two-person household: $69,684 → $102,200
-      
-      **Annual Town Meeting:**
-      - Date: **Monday, May 5, 2025, 7:00 PM**, Marblehead Veterans Middle School Auditorium, 217 Pleasant Street
-      - Warrant opened
-      - Public submission deadline: **Friday, January 24, 2025, 12:00 noon**
-      - Town government boards and commissions deadline: **Friday, January 31, 2025, 12:00 noon**
-    key_speakers: ["Alicia Benjamin (Finance Director)"]
-  - topic: permits-zoning
-    topic_confidence: 0.92
-    start_seconds: 5633
-    end_seconds: 5683
-    headline: "Bubble Bar Boston approved for two one-day beer-and-wine licenses at Abbott Hall, December 7–8"
-    dek: "The polled vote approved licenses for 12 noon to 6 PM both days, subject to standard conditions including fee, proof of authorized purchase, and no overnight storage."
-    summary: "The board approved, by polled vote, two one-day beer-and-wine only liquor licenses for Bubble Bar Boston at Abbott Hall on December 7 and December 8, 2024, from 12 noon to 6:00 PM, subject to standard licensing conditions: payment of $50 fee, proof of authorized alcohol source, proper storage and disposal, liquor liability insurance, and no overnight storage of alcohol on the premises."
-  - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 5729
-    end_seconds: 6226
-    headline: "Board addresses committee vacancies, MBTA advisory board interest, holiday hours, and retirement board budget notice"
-    dek: "Letters of interest for Harris Street Cemeteries Oversight Committee and the MBTA Advisory Board were received; interview dates set for December 11 with a December 6 application deadline."
-    summary: |
-      Routine administrative matters:
-      
-      - **Fair Housing Committee alternate:** Letter of interest from Nisha Austin; board to confirm whether a vacancy exists before proceeding.
-      - **Harris Street Cemeteries Oversight Committee:** Letter of interest from Peter Kent for one at-large vacancy. Interview set for **December 11** board meeting; letter of interest deadline **December 6**.
-      - **MBTA Advisory Board:** Letter of interest from Judith Black. Same December 6 deadline / December 11 interview date set.
-      - **MS Society:** Acknowledged a thank-you letter from the National Multiple Sclerosis Society for annual walk use of town space; noted they will be uniting with Walk MS Boston going forward.
-      - **Retirement Board:** Received required statutory notice (Ch. 306, Acts of 1996) of the retirement board's 2025 calendar-year budget — no board action required.
-      - **Holiday hours:** Abbott Hall and Mary Alley Building — November 25–26: 8 AM–5 PM; November 27: 8 AM–2:30 PM; November 28–29: closed.
-  - topic: labor-personnel
     topic_confidence: 0.9
-    start_seconds: 6226
-    end_seconds: 6720
-    headline: "Board members make personal statements on strike, call for prioritizing student extracurricular participation"
-    dek: "One board member urged town and school leaders to allow student athletes and performers to participate in milestone events during the work stoppage, citing Beverly's approach as a comparable example."
+    start_seconds: 5633
+    end_seconds: 5729
+    headline: "Senior Tax Work-Off income eligibility raised to 500% above poverty; one-day liquor licenses approved"
+    dek: "The board approved expanding senior tax work-off eligibility from 400% to 500% above poverty and approved two one-day beer-and-wine licenses for Bubble Bar Boston at Abbott Hall for the Christmas Walk weekend."
     summary: |
-      During select board announcements, members made individual statements on the ongoing strike:
+      **Senior Tax Work-Off Program (2025):** At the request of Council on Aging Director Lisa Hooper, the board voted to increase income eligibility from 400% to 500% above the 2024 federal poverty guidelines. This raises the threshold for a single person from $51,528 to approximately $75,300, and for a two-person household from $69,684 to approximately $102,200. The change expands the number of seniors eligible for the $2,000 tax exemption.
       
-      - One board member (identity not confirmed by name in transcript) read a prepared statement acknowledging support for educator goals of fair pay while calling on town leaders and school administrators to minimize the strike's impact on students. Specifically referenced Beverly allowing extracurricular activities during its own work stoppage and urged Marblehead to do the same for students participating in milestone events.
+      **Bubble Bar Boston liquor licenses:** Two one-day beer-and-wine licenses approved for December 7 and December 8, 2024, 12 noon to 6:00 PM at Abbott Hall, subject to standard conditions (fee, authorized source documentation, liability insurance, no overnight storage). This was a polled vote.
+    key_speakers: ["Alicia Benjamin (Finance Director)", "Lisa Hooper (Council on Aging Director, referenced)"]
+  - topic: elections-procedural
+    topic_confidence: 0.97
+    start_seconds: 5729
+    end_seconds: 5841
+    headline: "Annual Town Meeting set for May 5, 2025; warrant opened and public deadline set for January 24"
+    dek: "The board formally set the Annual Town Meeting date, opened the warrant, and established deadlines for public and town-government article submissions."
+    summary: |
+      The board took three separate votes:
+      1. **Annual Town Meeting**: Monday, May 5, 2025 at 7:00 PM, Marblehead Veterans Middle School Auditorium, 217 Pleasant Street.
+      2. **Warrant opened** for the May 5, 2025 Annual Town Meeting.
+      3. **Warrant closed for general public**: Friday, January 24, 2025 at 12:00 noon.
+      4. **Warrant closed for town government boards and commissions**: Friday, January 31, 2025 at 12:00 noon.
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 5841
+    end_seconds: 6122
+    headline: "Board acknowledges letters of interest for committee vacancies and notes holiday hours"
+    dek: "Letters of interest from three residents were received for the Fair Housing Committee, Harris Street Cemeteries Oversight Committee, and MBTA Advisory Board; interviews tentatively set for December 11."
+    summary: |
+      **Committee appointments:**
+      - **Nisha Austin** — letter of interest for Fair Housing Committee alternate member; board to confirm whether a vacancy exists before scheduling interview.
+      - **Peter Kent** — letter of interest for Harris Street Cemeteries Oversight Committee (one at-large vacancy); interview to be held at the December 11 board meeting, with letters of interest due by December 6.
+      - **Judith Black** — letter of interest for MBTA Advisory Board (vacant since end of FY); letters due December 6, interview December 11.
       
-      - Another member, identifying as a fellow educator, called for competitive wages, valued employees, and an override to address the structural deficit, referencing a failed school override in 2023 and a failed general override.
+      **Holiday hours** noted for Abbott Hall and Mary Alley Building:
+      - Nov. 25: 8 AM–5 PM
+      - Nov. 26: 8 AM–5 PM
+      - Nov. 27: 8 AM–2:30 PM
+      - Nov. 28–29: Closed
       
-      - The board chair acknowledged Town Administrator Keer's intensive participation in negotiations (sessions running from mid-afternoon into late evening), disputed public characterizations of brief one-hour sessions, and encouraged civil discourse on social media.
+      The board also acknowledged a letter from the National Multiple Sclerosis Society expressing appreciation for the community's support of their annual walk and noting they are joining Walk MS Boston going forward. The board received notice of the Retirement Board's 2025 annual budget, a statutory reporting requirement under Chapter 306 of the Acts of 1996.
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 4429
+    end_seconds: 4776
+    headline: "Select Board approves joint statement calling for fair and sustainable teacher contract settlement"
+    dek: "The board unanimously approved a written statement acknowledging fiscal constraints, supporting competitive wages for all town employees, and urging the MEA and school committee to reach a negotiated agreement."
+    summary: |
+      The board voted to approve a formal statement titled "Statement of the Select Board on Teacher Strike and Contract Negotiations." Key points in the statement:
       
-      - Keer added, as a point of information, that the negotiating team has on multiple occasions offered to release the union's 15 negotiators from school duties for full-time negotiations if the remaining staff returned to classrooms; no positive response had been received as of the meeting.
-    key_speakers: ["Thatcher Keer (Town Administrator)", "Select Board members (names not confirmed from transcript)"]
+      > Marblehead's fiscal constraints are impacting our entire town, not just our schools. The teachers and staff of Marblehead Public Schools deserve competitive wages and improved working conditions.
+      
+      The statement noted that five school bargaining units are under negotiation, alongside police and municipal union contracts. It acknowledged that rising costs have outstripped revenues for several years, referenced the FY25 Finance Committee budget report, and said addressing the challenge will require long-term budgeting discipline and an override proposal that is achievable at the ballot box. It urged the MEA and school committee to continue working toward a fair and sustainable resolution.
+      
+      Following the vote, individual board members made additional remarks. One member called on town leaders to minimize the strike's impact on students' milestone events, citing other districts that have allowed extracurricular activities to continue. The town administrator noted that the school administration has offered to release the MEA's 15 negotiators from classroom duties for full-time bargaining if other staff return to the classroom, but had not yet received a positive response.
+    key_speakers: ["Thatcher Keer (Town Administrator)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

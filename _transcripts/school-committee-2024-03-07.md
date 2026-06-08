@@ -11,13 +11,14 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Glover School staff suspensions, athletic fee hikes, and budget cuts dominate School Committee meeting"
-  summary: "Marblehead educators testified en masse in support of Glover School colleagues placed on paid administrative leave, citing failed safety protocols and inadequate administrative support. The committee reviewed three athletic fee increase options projected to raise roughly $170,000, with the superintendent recommending a season-based fee structure. The committee also discussed a delayed special education staffing accountability report and set a timeline for the interim superintendent search."
+  headline: "Glover School safety incident dominates meeting as educators demand action on staffing and budget"
+  summary: "Dozens of Marblehead educators delivered public comment demanding support for Glover School staff placed on paid administrative leave following a student safety incident. Superintendent McGinnis reported receipt of independent investigator and DCF reports, and outlined plans to retrain all district staff on restraint policies. The committee also reviewed three proposed athletic-fee structures needed to close an approximately $170,000 gap in coach-stipend funding under reduced-service budget scenarios."
   decisions:
     - "Approved schedule of bills totaling $535,668.10"
-    - "Assigned school committee members to director of student services, director of finance and operations, and Glover School principal interview teams"
-    - "Set April 12 as application deadline for interim superintendent search, with deliberations April 24 and interviews targeting May 1–2"
+    - "Approved interim superintendent search advertisement with edits; applications due April 12, committee deliberation April 24, interviews tentatively May 1–2"
+    - "Assigned Allison and Jen to Director of Finance and Operations interview panel; Al and Brian (plus others) to Director of Student Services panel; Sarah to Glover School principal search"
   votes:
     - motion: "Approve schedule of bills totaling $535,668.10"
       result: "in favor (unanimous)"
@@ -27,139 +28,179 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 1
     end_seconds: 196
-    headline: "Commendations open meeting: teachers, hockey team, safety committee, and student leaders recognized"
-    dek: "Board members praised educators, the boys varsity hockey team's Final Four run, and Dr. McGinnis's improved safety committee process."
-    summary: "The chair opened with commendations for the Village School's Peter Pan production, the boys varsity ice hockey team advancing to the MIAA Division 3 Final Four, track athlete Laia Williams, and all teaching staff. A committee member also commended Dr. McGinnis for improved documentation and preparation at safety committee meetings."
-    key_speakers: ["Sarah Fox (Chair)", "Allison Taylor (School Committee Member)"]
-  - topic: public-comment
-    topic_confidence: 0.98
+    headline: "Committee opens with commendations: Village School Peter Pan, boys hockey, track star"
+    dek: "Chair and members praised Village School's Peter Pan production, boys varsity hockey's Final Four run, and a student track athlete named Laia Williams."
+    summary: "The chair opened the meeting at 7:04 PM with commendations. Members highlighted the Village School's production of Peter Pan (performances March 7–9), the boys varsity ice hockey team advancing to the MIAA Division 3 Final Four, and student track athlete Laia Williams. One member also commended Dr. McGinnis for improvements in the district safety committee meetings."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
     start_seconds: 196
-    end_seconds: 608
-    headline: "Student rep delivers activity update before public comment opens"
-    dek: "Student representative Kat provided a detailed update on MHS theater, DECA, sports, and upcoming events before the public comment period began."
-    summary: "The student representative reported that the MHS Theater Arts production of *Life of the Phoenix* advanced to the Massachusetts Drama Festival semifinals. She also noted DECA state championships, the National Honor Society blood drive, Marblehead's Got Talent semifinals, and several athletic updates including spring sports registration opening March 18."
+    end_seconds: 343
+    headline: "Student representative delivers update on MHS activities, athletics, and upcoming events"
+    dek: "Student rep Kat reported on theater, DECA state championships, NHS blood drive, and spring sports registration among other items."
+    summary: "The student representative provided a wide-ranging update covering: MHS Theater Arts advancing to the Massachusetts Drama Festival semifinals (March 9 in Framingham); DECA competing at state championships; NHS blood drive on March 14; Marblehead's Got Talent semifinals March 13 and finals March 27 at the Cabot Theater; sophomore semi-formal March 15; and spring sports starting March 18."
     key_speakers: ["Kat (Student Representative)"]
   - topic: public-comment
-    topic_confidence: 0.99
+    topic_confidence: 0.98
     start_seconds: 343
     end_seconds: 967
     featured: true
-    headline: "Educators from multiple schools demand reinstatement of Glover colleagues placed on paid administrative leave"
-    dek: "MEA president and roughly two dozen educators read a joint statement accusing the administration of failing safety protocols and unjustly disciplining Glover School staff."
+    headline: "Dozens of educators demand accountability for Glover School staff placed on administrative leave"
+    dek: "MEA representative and roughly 20 educators from multiple schools read statements calling the discipline of Glover colleagues unjust and citing failed safety policies and inadequate staffing."
     summary: |
-      MEA representative Jonathan Hillard read a detailed statement raising four specific concerns about the placement of Glover School employees on paid administrative leave:
+      MEA representative Jonathan Hillard (26 Rough Road) read a formal statement on behalf of the union raising four specific concerns:
       
-      1. Colleagues were placed on leave without just cause and were not allowed to ask or answer questions about the incident.
-      2. Colleagues were not permitted to view video of the incident until after being placed on leave.
-      3. Only one camera angle was used to determine the placement.
-      4. Staff had repeatedly requested an administration plan to support the student involved, but those requests were ignored.
+      1. Glover colleagues were placed on paid administrative leave without just cause and were not allowed to ask or answer questions about the incident.
+      2. Staff were not allowed to review video of the incident until after they were placed on leave.
+      3. Only one camera angle out of multiple was used in the determination.
+      4. Staff had repeatedly requested a support plan for the student involved, but those requests were ignored by administration.
       
-      The MEA also called on the school committee to return to the town to fully fund the FY25 budget, noting a projected loss of approximately 15% of total staff over 12 months and a projected 13% increase in elementary enrollment over 10 years.
+      The MEA also called on the school committee to return to the town and advocate for full FY25 budget funding, noting a projected loss of approximately 15% of total staff over 12 months and a projected 13% increase in elementary enrollment over the next 10 years.
       
-      More than 20 educators from Glover, Village, Brown, and other schools followed with brief statements of solidarity.
-    key_speakers: ["Jonathan Hillard (MEA Representative, 26 Rough Road)", "Sally CH (80 Garfield Street)", "Kristen Zaro (Glover School educator)", "Hannah Partica (Glover School educator)", "Diane Gora (Glover School educator)", "Lauren Catalano (Glover School educator)", "Linda Bruce", "Laura Wes", "Multiple Glover and Village School educators"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.9
+      Following Hillard, approximately 20 educators from Glover, Village, and Brown schools—including Kristen Zaro, Hannah Partica, Diane Gora, Lauren Catalano, Linda Bruce, Laura West, Sarah Colleen, Isabelle Nee, Laura Clark, Dana Trudeau, Lindsay Bark, Eliza Denim, Emily Perez, Carrie Bergon, Megan Bruit, and Holly Landry—each stated their names and read identical statements of solidarity with the Glover colleagues.
+    key_speakers: ["Jonathan Hillard (MEA Representative, 26 Rough Road)", "Kristen Zaro (Glover School educator)", "Hannah Partica (Glover School educator)", "Diane Gora (Glover School educator)", "Lauren Catalano (Glover School educator)", "Multiple educators (Glover, Village, Brown schools)"]
+  - topic: labor-personnel
+    topic_confidence: 0.92
     start_seconds: 967
-    end_seconds: 2262
-    headline: "Superintendent McGinnis outlines investigation findings, roofing delays, SPED audit timeline, and sports highlights"
-    dek: "Dr. McGinnis reported that independent investigator CIC and DCF reports have been received, a retraining plan is being developed, and the high school roof replacement is at least a year away."
+    end_seconds: 1893
+    headline: "Superintendent outlines retraining plan following receipt of CIC and DCF reports on Glover incident"
+    dek: "Dr. McGinnis confirmed receipt of the independent CIC investigator report and DCF report; a staff retraining plan on restraint policy will be distributed the following week."
     summary: |
-      Dr. McGinnis acknowledged the difficult climate and stated that a plan for retraining all district employees on restraint policy and regulations will be distributed the following week, along with a legally redacted CIC report. Key district updates included:
+      Superintendent McGinnis confirmed that both the independent investigator (CIC) report and the Massachusetts DCF report had been received and that staff and families were notified the prior evening. Key points she shared:
       
-      - **Special education audit**: RFP approximately 50% complete; anticipated contract award mid-May, work commencing June 1.
-      - **Roofing project**: OPM RFP to be advertised by end of month; architectural/engineering design contract expected mid-July; Phase 1 construction targeting summer 2025 (one year away). Separation from town projects caused by the school roof exceeding the ~$3M OPM threshold.
-      - **Air quality at MHS**: All recommendations from a February assessment are complete except one small sheet-rock patch.
-      - **Sports highlights**: Boys varsity hockey in MIAA Division 3 Final Four vs. Shahin Tech, March 9 at Stoneham Arena; winner advances to TD Garden March 17. Laia Williams named NEC Athlete of the Year for indoor track. Senior MA Roy qualified for National High School Gymnastics Championships.
-      - **Staffing searches**: Postings for permanent Director of Student Services and Glover School Principal to launch the following week; Director of Finance and Operations already posted with few candidates.
-    key_speakers: ["Theresa McGinnis (Superintendent)", "Allison Taylor (School Committee Member)", "Brian Oda (School Committee Member)"]
-  - topic: school-budget
-    topic_confidence: 0.98
-    start_seconds: 2421
-    end_seconds: 3871
-    headline: "Three athletic user-fee increase options presented; season-based fee structure recommended by superintendent"
-    dek: "To close an approximately $170,000 gap in athletic coach stipends, staff modeled three fee structures, with the current family cap of $800 potentially rising to between $2,680 and $3,743 depending on the option chosen."
+      - A plan will be distributed to staff the following week that includes retraining all employees on school committee restraint policy and applicable regulations, along with a legally redacted version of the CIC report.
+      - She plans to present changes and training updates at the next school committee meeting.
+      
+      Committee members responded at length. One member (Allison Taylor) expressed concern that the situation would deter educators from ever wanting to serve as safety advocates. Jen Schaffner (remote) noted the CIC report indicated administrative-level failures, not just classroom-level, and emphasized the committee's responsibility over policy and budget rather than personnel. A third member noted that under the Education Reform Act the committee does not have personnel purview and urged trust in the superintendent's process.
+      
+      Key findings cited from the CIC report by committee members:
+      - A safety care instructor was unaware of whether restraint policies existed.
+      - Lack of debriefs after restraint incidents was identified as a root cause; the report recommended mandatory debriefs involving all parties in a multidisciplinary chain.
+      - The student involved was not on an IEP, and no one had individual responsibility for him.
+      
+      The committee discussed the need to codify mandatory post-restraint debriefs into policy.
+    key_speakers: ["Dr. Theresa McGinnis (Superintendent)", "Allison Taylor (School Committee)", "Jen Schaffner (School Committee, remote)", "Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1893
+    end_seconds: 2421
+    headline: "Superintendent updates committee on SPED audit RFP, roofing project, air quality, and staffing searches"
+    dek: "McGinnis reported that the SPED audit RFP is 50% complete with a contract expected mid-May, the high school roof replacement OPM procurement is underway, and all air quality remediation recommendations are nearly complete."
     summary: |
-      Athletic Director Greg and Assistant Business Manager Emma presented three athletic fee models, each designed to generate roughly equivalent additional revenue:
+      District updates covered five areas:
       
-      | Option | Structure | HS Unlimited Fee | MS Unlimited Fee | Family Cap |
-      |--------|-----------|-----------------|-----------------|------------|
-      | 1 | Flat fee (unlimited) | $1,340 | $590 | ~$2,680 |
-      | 2 | Season-based (highest first season, reduced 2nd/3rd) | — | — | Higher |
-      | 3 | Per-sport fee (based on sport costs; hockey/football highest) | — | — | ~$3,743 |
+      | Item | Status |
+      |---|---|
+      | Special Education Audit | RFP ~50% complete; advertise end of month; responses due mid-April; contract mid-May; work by June 1 |
+      | Roof Replacement OPM RFP | Advertising end of month; responses due April; contract late May; design contract mid-July; Phase 1 construction summer 2026 |
+      | Air Quality (MHS) | Affirm assessment complete; all recommendations done except one small sheetrock patch |
+      | Sports highlights | Boys hockey MIAA D3 Final Four vs. Shawsheen Tech, March 9 at Stoneham Arena; Laia Williams NEC Indoor Track Athlete of the Year |
+      | Staffing searches | Director of Finance & Operations posted (few candidates); Director of Student Services and Glover principal searches starting the following week |
       
-      The superintendent recommended Option 2 (season-based) because more than half of student athletes participate in only one sport, making it the smallest departure from the current $495 flat fee for single-sport families.
-      
-      Committee members expressed concern about equity barriers, noting the family cap under these options would be 43–101% above the highest comparable district (Swampscott at approximately $1,843) and represent a 235–371% increase from the current $800 cap. A committee member noted that sports and activities serve as access points for students who might not otherwise engage academically.
-      
-      Middle school principal noted that without user fees to fund stipends, programs with insufficient enrollment could be eliminated. No vote was taken; the budget public hearing is scheduled for March 21 at the Marblehead Middle School (PVMS) at 7:00 PM.
-    key_speakers: ["Greg (Athletic Director)", "Emma (Assistant Business Manager)", "Mary Delly (Director of Finance and Operations, remote)", "Allison Taylor (School Committee Member)", "Jen Schaffner (School Committee Member, remote)", "Sarah Fox (Chair)", "Matt (Middle School Principal)"]
+      A committee member expressed frustration that the roof project will take another full year and that the SPED audit RFP took nearly a calendar year to begin. Administration explained Massachusetts public project law requires an OPM for projects over $1 million, extending the procurement timeline.
+    key_speakers: ["Dr. Theresa McGinnis (Superintendent)", "Allison Taylor (School Committee)"]
   - topic: school-budget
     topic_confidence: 0.95
+    start_seconds: 2421
+    end_seconds: 3871
+    headline: "Three athletic-fee options presented to close ~$170,000 gap; committee seeks deeper analysis before budget hearing"
+    dek: "Athletic Director Greg and Assistant Business Manager Emma presented three fee structures—flat, season-based, and per-sport—each generating comparable revenue; Dr. McGinnis recommended the season-based option but no vote was taken."
+    summary: |
+      Athletic Director Greg and Assistant Business Manager Emma Plessi presented a comparative analysis of athletic fee structures alongside peer districts in the Cape Ann and Northeastern conferences.
+      
+      **Current structure:** High school unlimited fee $495 (covers 1–3 seasons); family cap $800.
+      
+      **Three proposed options (all generating roughly equivalent revenue):**
+      
+      | Option | HS Unlimited / Season 1 | Family Cap | Notes |
+      |---|---|---|---|
+      | 1 – Flat fee | $1,340 | ~2× unlimited | Same structure as current; highest family cap |
+      | 2 – Season-based | Highest fee for season 1, reduced for seasons 2 & 3 | Based on 2 students × 3 seasons | Superintendent's recommendation; closest to current $495 for single-sport athletes |
+      | 3 – Per-sport | Varies by sport (hockey/football highest; tennis/cross country lowest) | Based on same methodology | Highest family cap; 371% increase vs. current cap per one member's calculation |
+      
+      Comparison context: Current family cap of $800 is among the lowest in the area; Swampscott and Triton are near $1,800.
+      
+      Committee members raised concerns:
+      - Option 3 family cap would be roughly 101% higher than Swampscott and a 371% increase for families.
+      - Approximately 706 individual athletes currently enrolled (will grow to ~800 with spring registrations).
+      - There are approximately $102,000 in additional extracurricular advisor stipends not included in the $170,000 athletic gap figure.
+      - Members asked for a deeper offline analysis with Emma and Mary Delly before the budget public hearing on March 21.
+      - Equity concerns were raised: high fees could deter participation and create access barriers.
+      - If insufficient students enroll in a given sport under Option 3, the program may not be fielded.
+      
+      No vote was taken. The matter will be further discussed at the March 21 public budget hearing at the PAC at Veterans Middle School, 7:00 PM.
+    key_speakers: ["Greg (Athletic Director, remote)", "Emma Plessi (Assistant Business Manager)", "Dr. Theresa McGinnis (Superintendent)", "Allison Taylor (School Committee)", "Jen Schaffner (School Committee, remote)", "Matt (Principal, Veterans Middle School)"]
+  - topic: school-budget
+    topic_confidence: 0.9
     start_seconds: 3871
     end_seconds: 6258
-    headline: "School committee debates delayed SPED staffing accountability report as $2.3M budget cut deadline approaches"
-    dek: "The interim director of student services found data inconsistencies in Aspen; a report is now expected by end of the following week, one week before the budget public hearing."
+    headline: "Special education staffing accountability report delayed; principals explain complex IEP-driven scheduling process"
+    dek: "Superintendent acknowledged data discrepancies in Aspen prevented delivery of the SPED staffing report; Veterans Middle School principal provided detailed account of how principals build staffing models from individual IEPs."
     summary: |
-      The special education staffing accountability report, requested since at least June and expected at both the prior budget workshop and this meeting, was delayed again due to data inaccuracies found in the Aspen student information system. The interim director of student services, who had been in the position for only about 10 days, is working with building principals to reconcile IEP minute records before producing the report.
+      Dr. McGinnis reported that interim Director of Student Services Ashley Bell began full-time approximately 10 days earlier and discovered data inaccuracies in the Aspen system when pulling the staffing accountability report. Corrections require direct input from special educators and team chairs; the report is now expected by end of the following week.
       
-      Middle school principal Matt explained the building-level staffing process in detail: principals work from a 10,000-foot view of teacher needs, then drill down to tutor/para support, and finally to contracted specialist services (OT/PT, SLP). He noted that class sizes and the student-teacher ratio are different metrics, with the ratio appearing low because of contractual prep periods and the need to fill all teaching slots with rotating staff.
+      Veterans Middle School principal Matt walked the committee through a multi-step staffing process:
+      1. Communication with sending school (Village) on incoming student needs
+      2. Program-level staffing (inclusion: two case managers per grade level)
+      3. Support personnel (tutors, counselors, psychologists)
+      4. Specialized services (OT, PT, SLP—shared with high school)
       
-      Committee members expressed frustration that the report has been delayed repeatedly and emphasized it is needed to make the case to the community and FinCom for adequate funding, not to audit individual student records. The committee is facing a projected $2.3 million budget gap and a public budget hearing on March 21.
+      He noted 706 current individual athletes and that the process of converting individual IEP service minutes into spreadsheet form is new and time-intensive, requiring staff who personally know students to validate data.
       
-      A committee member also asked about restoring a part-time librarian at the middle school; the principal indicated it would be his second priority after a part-time world language teacher, given Spanish class sizes of 24–26 students.
-    key_speakers: ["Theresa McGinnis (Superintendent)", "Matt (Veterans Middle School Principal)", "Jen Schaffner (School Committee Member)", "Allison Taylor (School Committee Member)", "Brian Oda (School Committee Member)", "Sarah Fox (Chair)"]
-  - topic: labor-personnel
+      Committee members reiterated that the data is needed to make the case to the public and the Finance Commission for adequate funding—not to audit administration. One member noted the district has lost approximately 33 positions in the prior year on top of the projected ~35 positions in the current $2.3 million reduction scenario. The permanent sub team (Tracy Meg and Phil Witt) was recognized for keeping the middle school library accessible on a small stipend after the librarian position was eliminated.
+    key_speakers: ["Dr. Theresa McGinnis (Superintendent)", "Matt (Principal, Veterans Middle School)", "Jen Schaffner (School Committee, remote)", "Allison Taylor (School Committee)", "Brian Oda (School Committee)"]
+  - topic: admin-housekeeping
     topic_confidence: 0.9
-    start_seconds: 2262
-    end_seconds: 2421
-    headline: "School committee members assigned to three simultaneous administrator search teams"
-    dek: "The committee assigned members to interview panels for the permanent Director of Student Services, Director of Finance and Operations, and Glover School Principal."
-    summary: |
-      Near the close of the meeting the committee assigned members to three concurrent administrator search panels:
-      
-      - **Director of Student Services**: Al Williams and Brian Oda
-      - **Director of Finance and Operations**: Allison Taylor and Jen Schaffner
-      - **Glover School Principal**: One committee member (Sarah Fox indicated willingness)
-      
-      The Director of Finance and Operations posting is already live but has attracted few candidates. The Director of Student Services and Glover Principal postings were to launch the following week.
-    key_speakers: ["Sarah Fox (Chair)", "Allison Taylor (School Committee Member)", "Jen Schaffner (School Committee Member)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.92
     start_seconds: 6258
-    end_seconds: 7047
-    headline: "Interim superintendent search timeline set: applications due April 12, interviews May 1–2"
-    dek: "The committee approved advertisement language and a search calendar coordinated around Passover and Town Meeting, with MASC's Glen facilitating."
+    end_seconds: 6305
+    headline: "Schedule of bills totaling $535,668.10 approved unanimously"
+    dek: "All five committee members voted in favor on a roll-call vote."
+    summary: "The committee voted 5–0 to approve the schedule of bills totaling $535,668.10. Roll call: Brian Oda – approved; Allison Taylor – approved; Al Williams – approved; Jen Schaffner – in favor; Sarah Fox – in favor."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.88
+    start_seconds: 6305
+    end_seconds: 6769
+    headline: "Interim superintendent search advertisement finalized; applications due April 12, interviews tentatively May 1–2"
+    dek: "Committee approved advertisement language with one change—'must' requirement for pre-K–12 experience softened to 'preferred candidate will have'—and set a key timeline."
     summary: |
-      The committee reviewed and revised a posting for an interim superintendent, updating the prior November advertisement. Key decisions:
+      The committee reviewed and approved the interim superintendent search advertisement, making the following changes from the draft:
       
-      - Applications due **April 12**
-      - Committee deliberates on finalists **April 24**
-      - Interviews tentatively **May 1 and May 2** (May 2 is a regular school committee meeting)
-      - Town Meeting is May 6–8, constraining scheduling
-      - Passover (April 22–30) was discussed; the first two and last two days are most significant, so April 24 deliberation was deemed acceptable
+      - Changed the pre-K–12 Massachusetts experience requirement from a mandatory qualification to a bolded preferred qualification: *"Preferred candidate will have experience leading a public school district."* ("in Massachusetts" language also softened)
+      - Applications due: **April 12**
+      - Committee deliberation on candidates: **April 24**
+      - Candidate interviews (public, hybrid): **tentatively May 1 and May 2** (May 2 is a regular school committee meeting)
       
-      The committee debated whether to require or merely prefer superintendent experience; consensus landed on adding a bolded "preferred" bullet: *Preferred candidate will have experience leading a pre-K through 12 public school district.* The phrase "in Massachusetts" was removed to avoid unnecessarily limiting the candidate pool.
-    key_speakers: ["Sarah Fox (Chair)", "Allison Taylor (School Committee Member)", "Jen Schaffner (School Committee Member)", "Al Williams (School Committee Member)"]
+      Passover (April 22–30) scheduling conflicts were navigated; the April 29–30 dates were avoided due to religious observance. Glen of MASC is coordinating the posting. The advertisement references a DEI and standard DESE job description.
+    key_speakers: ["Sarah Fox (Chair)", "Allison Taylor (School Committee)", "Jen Schaffner (School Committee, remote)", "Al Williams (School Committee)"]
+  - topic: labor-personnel
+    topic_confidence: 0.85
+    start_seconds: 6769
+    end_seconds: 8017
+    headline: "Interview panel assignments made for three open leadership searches"
+    dek: "Director of Finance & Operations: Allison and Jen; Director of Student Services: Al and Brian; Glover School principal: Sarah."
+    summary: |
+      The committee assigned members to the three concurrent leadership search interview panels:
+      
+      - **Director of Finance and Operations:** Allison Taylor and Jen Schaffner
+      - **Director of Student Services:** Al Williams and Brian Oda
+      - **Glover School Principal:** Sarah Fox
+      
+      The MEA bargaining subcommittee is scheduled for March 14 for its first meeting with the MEA to begin contract bargaining talks. The FY25 budget public hearing is confirmed for Thursday, March 21 at 7:00 PM at the PAC at Veterans Middle School.
+    key_speakers: ["Sarah Fox (Chair)", "Dr. Theresa McGinnis (Superintendent)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 7047
+    topic_confidence: 0.82
+    start_seconds: 8017
     end_seconds: 8530
-    headline: "Committee approves bills, discusses communications survey, kindergarten registration, and Student Opportunities Act funding"
-    dek: "A $535,668 schedule of bills passed unanimously; a draft community communications survey was introduced for deliberation at the March 21 meeting."
+    headline: "Committee discusses communications survey draft, addresses forum incident, and announces kindergarten registration opening Monday"
+    dek: "Brian Oda presented a short draft community survey on school committee communications; the item was deferred to the March 21 agenda for formal deliberation."
     summary: |
-      Routine items at the close of the meeting included:
+      Brian Oda shared a short draft survey seeking public input on school committee communications, including questions about: the value of prior Zoom forums, a monthly newsletter, a League of Women Voters forum, and informal 'coffee connections' with committee members. The committee agreed to form a communications subcommittee and place the item on the March 21 agenda. Members raised concerns about survey neutrality and suggested using AI tools or outside reviewers to refine questions.
       
-      - **Schedule of bills** of $535,668.10 approved 5–0.
-      - **Communications survey**: Brian Oda presented a draft short survey for parents, staff, and community members covering the community forum value, a monthly newsletter, League of Women Voters forum, and informal "coffee connections." The committee agreed to place it on the March 21 agenda for formal action.
-      - **Superintendent search correspondence**: The committee noted an email from community members David Harris and Amy Drinker to their ~780-person database expressing disagreement with the full-committee approach to the search.
-      - **Budget public hearing**: Confirmed for March 21, 7:00 PM at the Marblehead Middle School (PVMS/the "pack").
-      - **FinCom vote**: Penciled in for April 1.
-      - **MEA bargaining**: First bargaining session with MEA scheduled for March 14.
-      - **Kindergarten registration**: Opens Monday; staff urged early registration to support staffing models before Town Meeting.
-      - **Student Opportunities Act funding**: To be added to March 21 agenda.
-      - **Overnight trip vote**: Also to appear on March 21 agenda.
-    key_speakers: ["Sarah Fox (Chair)", "Brian Oda (School Committee Member)", "Al Williams (School Committee Member)", "Allison Taylor (School Committee Member)", "Theresa McGinnis (Superintendent)"]
+      Chair Fox read a prepared statement addressing an incident during the February 26 community forum in which one community member behaved in a manner the chair described as disrespectful, noting zero outreach had been received from the individual or from the Marblehead Democratic Town Committee or League of Women Voters.
+      
+      Dr. McGinnis announced kindergarten registration opens Monday, stressing the importance of early registration for staffing model accuracy, especially given the tight FY26 budget.
+    key_speakers: ["Brian Oda (School Committee)", "Sarah Fox (Chair)", "Dr. Theresa McGinnis (Superintendent)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

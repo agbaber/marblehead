@@ -11,155 +11,148 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board approves ARPA spending, eight contracts, and Marblehead 250 Committee"
-  summary: "The Marblehead Select Board held a 16-item meeting featuring a presentation from the Collins Center for Public Management on charter review, followed by votes approving three ARPA fund allocations totaling $208,100 and eight contracts covering payroll services, coastal resilience, Abbott Hall repairs, and other municipal needs. The board also established an ad hoc Marblehead 250 Committee to plan events commemorating the 250th anniversary of the American Revolution, and accepted a roughly $15,000 donation for a public safety drone. The meeting also recognized the retirement of Chief Procurement Officer and Town Planner Becky Curran after 36 years of service."
+  headline: "Select Board approves 8 contracts, ARPA allocations, drone donation, and charter review presentation"
+  summary: "The Marblehead Select Board heard a presentation from the Collins Center for Public Management on charter review processes and approved a wide range of contracts and appointments. The board allocated $208,100 in ARPA funds across three projects and accepted a $15,321 donation for a public safety drone. The meeting also marked the final official acts of town planner and Chief Procurement Officer Becky Curran after 36 years of service."
   decisions:
-    - "Approved appointment of Alexandra McCarran to Cultural Council, term expiring June 2025"
-    - "Approved establishment of Marblehead 250 Committee and authorized use of Town Celebration Trust Fund for donations"
+    - "Approved appointment of Alexandra McCarran to the Cultural Council (term to June 2025)"
+    - "Approved establishment of the Marblehead 250 Committee with named members"
     - "Approved use of Spirit of 76 image for Marblehead 250 Committee logo"
-    - "Approved use of Abbott Hall by Troop 79 BSA for Eagle Scout Court of Honor on March 16, 2024 with fee waiver"
+    - "Approved Abbott Hall use for Troop 79 Eagle Scout Court of Honor (March 16, 2024) with fee waiver"
     - "Approved reauthorization of revolving fund accounts for FY2025"
-    - "Approved minutes of January 24 meeting"
-    - "Approved updated flag policy and designated Town Administrator as designee for execution"
-    - "Approved ARPA funds of $100,000 for Gary School Playground and Park improvements"
-    - "Approved ARPA funds of $63,100 for school professional development (literacy program year two)"
-    - "Approved ARPA funds of $45,000 for Hobbs House window replacement"
-    - "Approved amendment to Woods Hole Group contract decreasing amount by $11,400"
-    - "Approved contract with Ivan Meyer for Lost at Sea Monument restoration, $10,500"
-    - "Approved contract with Rafael Construction Corp for Abbott Hall Brick Rentals project, $79,382"
-    - "Approved contract with EBI Consulting for capital needs assessment of municipal buildings, $20,600"
-    - "Approved contract with Tool Design for bike plan development, $79,763"
-    - "Approved three-year payroll services contract with Harper's Payroll Services, $81,632.64 for FY25"
-    - "Approved design development contract with Crowley Cuttrell for Gary School Park, $16,808.80"
-    - "Approved contract with Village Green Restoration Inc. for Old Burial Hill gravestone restoration, $9,900"
+    - "Approved updated flag policy and delegated execution to Town Administrator"
+    - "Approved $100,000 ARPA allocation for Gary School Playground and Park Improvements"
+    - "Approved $63,100 ARPA allocation for school professional development (literacy program year 2)"
+    - "Approved $45,000 ARPA allocation for Hobbs House window replacement"
+    - "Approved contract amendment decreasing Woods Hole Group Coastal Resilience contract by $11,400"
+    - "Approved $10,500 contract with Ivan Meyer for restoration of Lost at Sea Monument"
+    - "Approved $79,382 contract with Rafael Construction for Abbott Hall Brick Rentals project"
+    - "Approved $20,600 contract with EBI Consulting for capital needs assessments of municipal buildings"
+    - "Approved $79,763 contract with Tool Design for development of a bike plan"
+    - "Approved three-year payroll services contract with Harper's Payroll Services for $81,632.64 (FY25)"
+    - "Approved $16,808.80 design development contract with Crowley Cottrell for Gary School Park"
+    - "Approved $9,900 contract with Village Green Restoration for Old Burial Hill gravestone restoration"
     - "Approved private drain connection license agreement for 51 Ocean Avenue"
     - "Approved nine one-day liquor licenses for Marblehead Arts at King Hooper Mansion"
-    - "Approved appointment of Town Administrator as Chief Procurement Officer"
-    - "Approved acceptance of approximately $15,321 donation for public safety drone for Police and Harbor Master"
-    - "Approved letter of thanks to donor Biff Micho for drone donation"
-    - "Approved use of Abbott Hall for Marblehead School of Music recital on June 8, 2024"
+    - "Appointed Town Administrator as Chief Procurement Officer"
+    - "Accepted $15,321 donation for public safety drone for Police and Harbor Master departments"
+    - "Approved Abbott Hall use for Marblehead School of Music student recital (June 8, 2024)"
     - "Approved proclamation of June 2, 2024 as Acorn Gallery School of Art Day"
   votes:
     - motion: "Appoint Alexandra McCarran to Cultural Council"
       result: "in favor (unanimous)"
     - motion: "Establish Marblehead 250 Committee and authorize Town Celebration Trust Fund"
       result: "in favor (unanimous)"
-    - motion: "Approve use of Spirit of 76 image for Marblehead 250 logo"
+    - motion: "Approve use of Spirit of 76 image for Marblehead 250 Committee logo"
       result: "in favor (unanimous)"
     - motion: "Approve Abbott Hall use for Troop 79 Eagle Scout Court of Honor with fee waiver"
       result: "in favor (unanimous)"
     - motion: "Reauthorize revolving fund accounts for FY2025"
       result: "in favor (unanimous)"
-    - motion: "Approve January 24 meeting minutes"
+    - motion: "Update flag policy and designate Town Administrator as designee"
       result: "in favor (unanimous)"
-    - motion: "Approve updated flag policy and designate Town Administrator as designee"
+    - motion: "ARPA funds for Gary School Playground Park improvements ($100,000)"
       result: "in favor (unanimous)"
-    - motion: "Approve ARPA funds $100,000 for Gary School Playground"
+    - motion: "ARPA funds for school professional development ($63,100)"
       result: "in favor (unanimous)"
-    - motion: "Approve ARPA funds $63,100 for school professional development"
+    - motion: "ARPA funds for Hobbs House window replacement ($45,000)"
       result: "in favor (unanimous)"
-    - motion: "Approve ARPA funds $45,000 for Hobbs House window replacement"
+    - motion: "Amend Woods Hole Group contract to decrease by $11,400"
       result: "in favor (unanimous)"
-    - motion: "Amend Woods Hole Group contract decreasing by $11,400"
+    - motion: "Award contract to Ivan Meyer for Lost at Sea Monument restoration ($10,500)"
       result: "in favor (unanimous)"
-    - motion: "Award contract to Ivan Meyer for Lost at Sea Monument restoration, $10,500"
+    - motion: "Award contract to Rafael Construction for Abbott Hall Brick Rentals ($79,382)"
       result: "in favor (unanimous)"
-    - motion: "Award Abbott Hall Brick Rentals contract to Rafael Construction Corp, $79,382"
+    - motion: "Award contract to EBI Consulting for capital needs assessments ($20,600)"
       result: "in favor (unanimous)"
-    - motion: "Award capital needs assessment contract to EBI Consulting, $20,600"
+    - motion: "Award bike plan contract to Tool Design ($79,763)"
       result: "in favor (unanimous)"
-    - motion: "Award bike plan contract to Tool Design, $79,763"
+    - motion: "Award payroll services contract to Harper's Payroll Services ($81,632.64 FY25)"
       result: "in favor (unanimous)"
-    - motion: "Award payroll services contract to Harper's Payroll Services, $81,632.64 FY25"
+    - motion: "Award Gary School Park design contract to Crowley Cottrell ($16,808.80)"
       result: "in favor (unanimous)"
-    - motion: "Award Gary School Park design contract to Crowley Cuttrell, $16,808.80"
+    - motion: "Award Old Burial Hill gravestone restoration contract to Village Green Restoration ($9,900)"
       result: "in favor (unanimous)"
-    - motion: "Award Old Burial Hill gravestone restoration contract to Village Green Restoration, $9,900"
-      result: "in favor (unanimous)"
-    - motion: "Approve private drain connection license for 51 Ocean Avenue"
+    - motion: "Approve private drain connection license at 51 Ocean Avenue"
       result: "in favor (unanimous)"
     - motion: "Approve nine one-day liquor licenses for Marblehead Arts at King Hooper Mansion"
       result: "in favor (unanimous)"
     - motion: "Appoint Town Administrator as Chief Procurement Officer"
       result: "in favor (unanimous)"
-    - motion: "Accept approximately $15,321 drone donation"
+    - motion: "Accept $15,321 donation for public safety drone"
       result: "in favor (unanimous)"
-    - motion: "Send letter of thanks to Biff Micho for drone donation"
-      result: "in favor (unanimous)"
-    - motion: "Approve Abbott Hall use for Marblehead School of Music recital June 8, 2024"
+    - motion: "Approve Abbott Hall use for Marblehead School of Music recital"
       result: "in favor (unanimous)"
     - motion: "Proclaim June 2, 2024 as Acorn Gallery School of Art Day"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: admin-housekeeping
-    topic_confidence: 0.95
+    topic_confidence: 0.85
     start_seconds: 0
     end_seconds: 2705
-    headline: "Collins Center presents Charter Review 101 to Select Board"
-    dek: "UMass Boston's Collins Center for Public Management outlined the charter process, structure, and benefits for Marblehead, which is considering a special act charter."
+    featured: true
+    headline: "Collins Center presents charter review overview to Select Board"
+    dek: "The UMass Boston Collins Center for Public Management outlined charter basics, processes, and how they assist communities considering a special act charter."
     summary: |
-      Michael Ward, Anthony Wilson, and Mel Ner of the Collins Center for Public Management (UMass Boston) presented an overview of municipal charters to the Select Board and public. The presentation covered what a charter is, typical article structure, why a town might adopt one, and the two charter pathways under Massachusetts law.
+      Michael Ward, director of the Collins Center for Public Management at UMass Boston, along with team members Anthony Wilson and Mel Ner, presented a charter review overview to the Select Board. The presentation covered what a charter is, its typical structure (articles covering legislative branch, executive branch, elected officials, finance, administrative organization, elections, citizen relief mechanisms, and general provisions), and why a municipality might adopt one.
       
-      Key points included:
-      - Marblehead's active incorporation dates to 1649; the town is approaching its 375th anniversary.
-      - The **special act charter** route (typically initiated by the Select Board, followed by a committee process, then town meeting, legislature, governor, and voters) is the path Marblehead is pursuing, distinct from the home rule charter petition route.
-      - Typical charter articles cover the legislative branch (town meeting), executive branch (Select Board and town administrator/manager), elected officials, financial policies, administrative organization, elections, citizen relief mechanisms, general provisions, and transition provisions.
-      - The Collins Center emphasized a trend toward stronger town administrator/manager positions with clear delineation from policy-setting Select Boards, and a trend toward appointing (rather than electing) technical positions such as treasurer/collector and town clerk.
-      - A 12–18 month process is typical; most modern charters include an automatic 10-year review, with an optional first review at five years.
-      - Board members asked about the charter–bylaw relationship (charter controls in conflict), amendment processes, and how charters balance efficiency with public input.
-    key_speakers: ["Michael Ward (Director, Collins Center for Public Management, UMass Boston)", "Anthony Wilson (Collins Center, former Cambridge City Clerk)", "Mel Ner (Collins Center, former Brookline Town Administrator)", "Select Board Chair (unidentified)", "Alexa (Select Board member, unidentified surname)", "Brett (Select Board member, unidentified surname)"]
+      Two charter processes were described:
+      - **Home rule charter route**: initiated by citizen petition (15% of signatures), leads to an elected charter commission
+      - **Special act charter**: typically initiated by the Select Board, creates a committee that makes recommendations back to the board and town meeting; the draft then goes to the legislature and governor, and finally to voters
+      
+      The Collins Center noted that the special act route appears to be the path Marblehead is pursuing. A typical timeline is 12–18 months for a committee to complete its work. The presentation highlighted trends such as strengthening town administrator/manager positions and moving certain elected positions (treasurer, collector, clerk) to appointed roles as technical complexity has increased.
+      
+      Board members asked about the relationship between charter and bylaws (charter controls in conflicts), amendment processes, and the standard 10-year review cycle. The center noted that an initial five-year review after enactment is common, with 10-year reviews thereafter.
+    key_speakers: ["Michael Ward (Collins Center Director)", "Anthony Wilson (Collins Center, Charter Practice)", "Mel Ner (Collins Center, former Town Administrator of Brookline)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 2705
     end_seconds: 2845
     headline: "Alexandra McCarran appointed to Marblehead Cultural Council"
-    dek: "McCarran, a longtime resident with a creative-industry background, was unanimously appointed to the Cultural Council with a term expiring June 2025."
-    summary: "Alexandra McCarran introduced herself as a 32-year Marblehead resident, advertising creative director, author, and former film and television critic. The board unanimously appointed her to the Cultural Council, term expiring June 2025, and directed her to the town clerk's office to be sworn in."
-    key_speakers: ["Alexandra McCarran (appointee)", "Select Board Chair"]
+    dek: "A 32-year resident and creative director was unanimously appointed to fill a seat on the Cultural Council through June 2025."
+    summary: "Alexandra McCarran, a 32-year Marblehead resident with a background as an advertising agency creative director, author, and former film and television critic, was appointed to the Cultural Council with a term expiring June 2025. The vote was unanimous."
+    key_speakers: ["Alexandra McCarran (appointee)"]
   - topic: recreation-events
     topic_confidence: 0.85
     start_seconds: 2845
     end_seconds: 3295
-    featured: true
-    headline: "Select Board establishes Marblehead 250 Committee to mark Revolution anniversary"
-    dek: "The board created a 13-member ad hoc committee and authorized donation fundraising through the Town Celebration Trust Fund to plan events celebrating Marblehead's role in the American Revolution."
+    headline: "Marblehead 250 Committee established to celebrate Revolutionary-era anniversary"
+    dek: "The board formally created the Marblehead 250 Committee and authorized use of the Town Celebration Trust Fund and the Spirit of 76 image for the committee's logo."
     summary: |
-      Don Dahler and Ed Nelson presented the proposal for a Marblehead 250 Committee, building on earlier 350th anniversary programming and recent collaboration with the Boston Tea Party event recognizing a Marblehead participant. The committee, spearheaded in part by Lauren McCormick of the Marblehead Museum and Historical Society, will focus on 'the Spirit of 76' and seeks to leverage tourism, education, and cultural programming.
+      Donald Dohler and Edward Nelson presented a proposal to establish an ad hoc committee—the Marblehead 250 Committee—to celebrate Marblehead's connection to the American Revolution's 250th anniversary, framed as 'celebrating the spirit of '76.'
       
-      **Members approved:**
-      Judy Anderson, Jack Ridge, Donald Dahler, Larry Sands, Jim Murphy, Catherine Co., Pam Peterson, Edward Nelson, Lauren McCormick, Julia Ferrera, Lanning Levine, Nancy Schultz.
+      The committee was formed drawing on experience from the town's 350th anniversary celebration and recent collaboration with the Boston Tea Party Museum. The group includes representatives from private individuals, historical organizations, and businesses.
       
-      The board took two votes:
-      1. Establish the committee and authorize use of the Town Celebration Trust Fund for donor contributions.
-      2. Approve use of the Spirit of 76 painting image on the committee's logo.
+      The board approved two motions:
+      1. Establish the Marblehead 250 Committee with 13 named members and authorize use of the existing Town Celebration Trust Fund for donations.
+      2. Approve the use of an image of the Spirit of 76 painting for the committee's logo design.
       
-      Both passed unanimously.
-    key_speakers: ["Don Dahler (committee organizer, 7 Westminster Road)", "Ed Nelson (committee organizer, 28 August Avenue)", "Select Board Chair"]
-  - topic: recreation-events
-    topic_confidence: 0.8
-    start_seconds: 3295
-    end_seconds: 3403
-    headline: "Abbott Hall approved for Troop 79 Eagle Scout Court of Honor; letters of commendation authorized"
-    dek: "The board approved Abbott Hall use on March 16, 2024, for Andrew Barnett's Eagle Scout Court of Honor and voted to send commendation letters to two recent Eagle Scouts."
-    summary: "The Select Board unanimously approved use of Abbott Hall on Sunday, March 16, 2024 from 2:00 PM to 6:30 PM for a Troop 79 BSA Eagle Scout Court of Honor, with the rental fee waived, subject to standard rules and insurance requirements. A board member moved to send letters of commendation to two recently attained Eagle Scouts (Zoe and Katie), which also passed unanimously."
-    key_speakers: ["Select Board Chair", "Select Board member (unidentified)"]
+      Both votes were unanimous.
+    key_speakers: ["Donald Dohler (presenter)", "Edward Nelson (presenter)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
-    start_seconds: 3403
+    start_seconds: 3295
+    end_seconds: 3450
+    headline: "Abbott Hall approved for Troop 79 Eagle Scout Court of Honor; fee waived"
+    dek: "The board approved use of Abbott Hall for an Eagle Scout ceremony on March 16, 2024, and waived the rental fee; a letter of commendation for both recent Eagle Scouts was also approved."
+    summary: "The board approved a request from Andrew Barnett of Troop 79 BSA to use Abbott Hall on Sunday, March 16, 2024 from 2:00 PM to 6:30 PM for an Eagle Scout Court of Honor, subject to standard rules and a certificate of insurance. The rental fee was waived. A separate motion to send a letter of commendation to both recent Eagle Scouts (Zoe and Katie) was also approved unanimously. A resident during public comment later suggested the board invite Eagle Scouts to present their projects in person rather than only sending letters."
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 3450
     end_seconds: 3548
-    headline: "Revolving fund accounts reauthorized for FY2025 with no material changes"
-    dek: "The board reauthorized 12 revolving fund accounts totaling over $3.6 million for FY2025 under MGL Chapter 44, Section 53E½."
+    headline: "Revolving fund accounts reauthorized for FY2025 at existing levels"
+    dek: "The board unanimously reauthorized all revolving fund accounts for FY2025 with no material changes from the prior year."
     summary: |
-      The Town Administrator confirmed no material changes from the prior year. Accounts approved include:
+      The board reauthorized revolving fund accounts for FY2025 per MGL Chapter 44, Section 53E½. The Town Administrator confirmed the amounts were validated by the CFO and unchanged from the prior year. Key accounts included:
       
-      | Account | Cap |
+      | Account | Cap Amount |
       |---|---|
       | Animal Control | $20,000 |
       | Council on Aging | $250,000 |
-      | Board of Health Commercial Waste Disposal | $1,069,000* |
-      | Board of Health Vaccines | $10,000 |
+      | Board of Health – Commercial Waste Disposal | $1,069 (approx.) |
+      | Board of Health – Vaccines | $10,000 |
       | Highway Street Opening Fees | $150,000 |
       | Sump Pump Improvement | $10,000 |
       | Conservation Fines | $75,000 |
@@ -168,132 +161,120 @@ topic_segments:
       | MPS Special Ed | $500,000 |
       | MPS Transportation | $25,000 |
       | Hobbes Memorial Fund | $11,232 |
-      
-      *ASR audio ambiguous; approximately $1,060,000–$1,069,000.
-    key_speakers: ["Select Board Chair", "Thatcher (Town Administrator)"]
+    key_speakers: ["Town Administrator"]
   - topic: admin-housekeeping
-    topic_confidence: 0.85
+    topic_confidence: 0.9
     start_seconds: 3548
-    end_seconds: 3731
-    headline: "Flag policy updated to align with Supreme Court ruling; Town Administrator designated as designee"
-    dek: "Town counsel recommended revisions following a Supreme Court decision involving Boston's flag policy, clarifying that flags on town property constitute government speech."
-    summary: "The Town Administrator explained that town counsel Lisa Mead updated the flag policy in response to a Supreme Court decision on the City of Boston's flag practices. The revised policy designates flags raised on town property as government speech, not a public forum. Authority to review and decide on flag requests is delegated to the Town Administrator (revocable by the board at any time). The motion passed unanimously."
-    key_speakers: ["Thatcher (Town Administrator)", "Select Board Chair"]
+    end_seconds: 3640
+    headline: "Minutes of January 24 approved; updated flag policy adopted"
+    dek: "The board approved prior meeting minutes and adopted an updated flag policy designating flagpole displays as government speech, consistent with a recent Supreme Court ruling."
+    summary: "The board approved minutes of the January 24 meeting. The Town Administrator then explained that following a Supreme Court decision regarding the City of Boston's flag policy, town counsel updated Marblehead's flag policy to designate flags on town property as government speech rather than a public forum. The board approved the updated policy and delegated execution authority to the Town Administrator, who can have that authority revoked at any time by the board."
+    key_speakers: ["Town Administrator"]
   - topic: bonding-capital
-    topic_confidence: 0.88
+    topic_confidence: 0.8
     start_seconds: 3731
-    end_seconds: 4131
-    headline: "Board approves $208,100 in ARPA allocations for playground, schools, and Hobbs House"
-    dek: "Three ARPA expenditures were approved, leaving approximately $576,903 in unallocated ARPA funds; the town aims to commit all funds by June 30."
+    end_seconds: 4083
+    headline: "Board approves $208,100 in ARPA allocations for park, school literacy, and Hobbs House"
+    dek: "Three ARPA expenditures were approved, leaving approximately $576,903 in unallocated ARPA funds ahead of a June 30 internal allocation deadline."
     summary: |
-      The Town Administrator presented three ARPA fund recommendations from the advisory task force:
+      The board approved three ARPA fund allocations totaling $208,100:
       
-      1. **Gary School Playground and Park Improvements — $100,000**: Supplements a $10,000 developer donation and neighborhood fundraising; funds design facilitation and construction toward park build-out.
-      2. **School Professional Development (Wit & Wisdom literacy program, grades K–6) — $63,100**: Year two of a program whose first phase was previously ARPA-funded.
-      3. **Hobbs House Window Replacement — $45,000**: The Marblehead Counseling Center (lessee) had previously begun an interior reconfiguration project that was paused due to roof leaks; window replacement will accompany completed roof repairs and improve energy efficiency.
+      1. **Gary School Playground and Park Improvements – $100,000**: Supplements a $10,000 donation from the developer and neighborhood fundraising. Funds a consultant-led visioning process and construction toward park/playground improvements on town-retained land from the former Gary School redevelopment.
       
-      Total: $208,100. Remaining unallocated ARPA balance after approval: approximately $576,903. The town's internal goal is to commit all ARPA funds by June 30, 2024 (federal deadline is December 31, 2024). All three motions passed unanimously.
-    key_speakers: ["Thatcher (Town Administrator)", "Select Board Chair"]
+      2. **School Professional Development – $63,100**: Funds year two of the Wit and Wisdom literacy program (grades K–6) in Marblehead public schools, following a prior ARPA-funded phase one.
+      
+      3. **Hobbs House Window Replacement – $45,000**: The town-owned building is leased to Marblehead Counseling Center. A previously approved interior renovation was paused after roof leaks; following roof repairs using capital funds, this allocation addresses window replacement to improve energy efficiency and building integrity.
+      
+      Approval of these items leaves an unallocated ARPA balance of approximately $576,903. The internal goal is to commit all funds by June 30, ahead of the December 31 statutory deadline.
+    key_speakers: ["Town Administrator"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 4131
-    end_seconds: 5085
-    headline: "Eight contracts approved in final official acts led by retiring Town Planner Becky Curran"
-    dek: "Outgoing Chief Procurement Officer and Town Planner Becky Curran, retiring after 36 years, guided the board through eight contract approvals covering coastal resilience, historic preservation, Abbott Hall, buildings assessment, bike planning, payroll, a park, and Old Burial Hill."
+    end_seconds: 5171
+    headline: "Eight contracts approved in final official acts of retiring town planner Becky Curran"
+    dek: "Chief Procurement Officer Becky Curran, retiring after 36 years, led the board through eight contract votes on her last day; the Town Administrator was subsequently appointed CPO."
     summary: |
-      The board approved eight contracts in rapid succession, with outgoing Town Planner/Chief Procurement Officer Becky Curran presenting most items remotely on her final day of employment:
+      Outgoing town planner and Chief Procurement Officer Becky Curran joined via Zoom for her final official acts, presenting eight contract items:
       
       | Contract | Vendor | Amount | Purpose |
       |---|---|---|---|
-      | Woods Hole Group (amendment) | Woods Hole Group | −$11,400 | Decrease Coastal Resilience contract (permit consolidated; CZM grant funded) |
-      | Lost at Sea Monument restoration | Ivan Meyer / Building and Monument Conservation, Arlington | $10,500 | Restore marble monument at Old Burial Hill; funded by Gordon King Memorial Fund |
-      | Abbott Hall Brick Rentals | Rafael Construction Corp, Swampscott | $79,382 | Restore decorative/functional brick drainage system; add new period-appropriate sign |
-      | Capital needs assessment, municipal buildings | EBI Consulting, Burlington | $20,600 | Lifecycle assessment of six Select Board–owned buildings |
-      | Bike plan | Tool Design, Boston | $79,763 | Develop comprehensive bike plan with public engagement |
-      | Payroll services (3-year) | Harper's Payroll Services, Worcester | $81,632.64 (FY25) | Replace outdated internal payroll system; cost offset by reduction in Munis module pricing |
-      | Gary School Park design | Crowley Cuttrell, Boston | $16,808.80 | Design development (funded: $10,000 private donation + $6,000 ARPA) |
-      | Old Burial Hill gravestone restoration | Village Green Restoration Inc., East Falmouth | $9,900 | Next phase of gravestone restoration; funded by $10,000 citizen donation |
+      | Woods Hole Group amendment | Woods Hole Group | –$11,400 | Decrease to Coastal Resilience contract; permits combined |
+      | Lost at Sea Monument restoration | Ivan Meyer, Building & Monument Conservation (Arlington) | $10,500 | Restore marble monument at Old Burial Hill using Gordon King Memorial Fund |
+      | Abbott Hall Brick Rentals | Rafael Construction Corp (Swampscott) | $79,382 | Restore decorative/functional brick drainage and new sign at Abbott Hall |
+      | Municipal buildings capital needs assessment | EBI Consulting (Burlington) | $20,600 | Lifecycle assessment of six Select Board-managed buildings |
+      | Bike plan development | Tool Design (Boston) | $79,763 | Comprehensive bike plan per Complete Streets priorities and Local Rapid Recovery Plan recommendation |
+      | Payroll services (3-year) | Harper's Payroll Services (Worcester) | $81,632.64 (FY25) | Replace outdated in-house payroll system; cost offset by reduction in Munis payroll/HR modules |
+      | Gary School Park design development | Crowley Cottrell (Boston) | $16,808.80 | Funded by $10,000 private donations and $6,000 ARPA |
+      | Old Burial Hill gravestone restoration | Village Green Restoration (East Falmouth) | $9,900 | Funded by $10,000 citizen donation |
       
-      All passed unanimously. The board recognized Curran's 36-year career with remarks and a standing ovation.
-    key_speakers: ["Becky Curran (Town Planner / outgoing Chief Procurement Officer)", "Thatcher (Town Administrator)", "Select Board Chair"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.82
-    start_seconds: 5085
+      All votes were unanimous. Following Curran's retirement, the board unanimously appointed the Town Administrator as Chief Procurement Officer.
+    key_speakers: ["Becky Curran (retiring Town Planner/CPO)", "Town Administrator"]
+  - topic: trash-dpw
+    topic_confidence: 0.7
+    start_seconds: 5171
     end_seconds: 5226
-    headline: "Town Administrator appointed Chief Procurement Officer following Becky Curran's retirement"
-    dek: "The Select Board unanimously appointed the Town Administrator to fill the Chief Procurement Officer role vacated by Curran."
-    summary: "With Becky Curran's retirement effective February 23, 2024, the Select Board voted unanimously to appoint the Town Administrator as Chief Procurement Officer. The Town Administrator noted he had held the position previously."
-    key_speakers: ["Thatcher (Town Administrator)", "Select Board Chair"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 5226
-    end_seconds: 5271
-    headline: "Private drain connection license approved for 51 Ocean Avenue sump pump hookup"
-    dek: "The board approved a standard license agreement allowing a homeowner at 51 Ocean Avenue to connect a sump pump to the town drainage system."
-    summary: "The board unanimously approved a license agreement between the town and David Assa of 51 Ocean Avenue for a private connection to the town drainage system for sump pump discharge, authorizing the chair to sign."
-    key_speakers: ["Thatcher (Town Administrator)", "Select Board Chair"]
+    headline: "Private drain connection license approved for 51 Ocean Avenue"
+    dek: "The board approved a standard sump pump connection agreement allowing a homeowner to connect to the town drainage system."
+    summary: "The board approved a license agreement for a private connection to the town drainage system between the town and the property owner at 51 Ocean Avenue. The agreement allows a sump pump connection directly to town infrastructure rather than discharging across lawns or streets."
   - topic: permits-zoning
     topic_confidence: 0.9
-    start_seconds: 5271
+    start_seconds: 5226
     end_seconds: 5364
     headline: "Nine one-day liquor licenses approved for Marblehead Arts at King Hooper Mansion"
-    dek: "Monthly evening events from March through November 2024 at King Hooper Mansion were granted one-day licenses, with alcohol to be purchased from Cap's Importing and Distributing."
-    summary: "The board approved nine one-day liquor licenses for Marblehead Arts (contact: Jaji King Kendall) at King Hooper Mansion, 8 Hooper Street, for monthly events 6:30–9:00 PM on dates in March, April, May, June, July, August, September, October, and November 2024. Conditions include payment of the $50 fee, proof of purchase from an authorized source (Cap's Importing and Distributing), and compliance with MGL Chapter 138."
-    key_speakers: ["Select Board Chair"]
+    dek: "Monthly evening events from March through November 2024 at 8 Hooper Street were approved for liquor service, with alcohol purchased from Cap's Importing and Distributing."
+    summary: "The board approved nine one-day liquor licenses for Jaji King Kendall (Marblehead Arts) at King Hooper Mansion, 8 Hooper Street, for events from 6:30 PM to 9:00 PM on the following dates in 2024: March 14, April 18, May 16, June 20, July 18, August 15, September 19, October 17, and November 14. Conditions include a $50 fee, proof of authorized alcohol sourcing, and proper storage/disposal per MGL Chapter 138. Alcohol to be purchased from Cap's Importing and Distributing."
   - topic: public-safety
     topic_confidence: 0.95
     start_seconds: 5382
     end_seconds: 5752
-    headline: "Town accepts approximately $15,321 drone donation for Police and Harbor Master public safety use"
-    dek: "Resident Biff Micho donated funds for a thermal-imaging public safety drone and operator licensing; the police chief described the technology as a game changer for search and rescue."
+    headline: "Board accepts $15,321 gift for public safety drone for Police and Harbor Master"
+    dek: "An unsolicited donation from resident Biff Micho will fund a thermal-imaging drone and FAA Part 107 licensing for officers and Harbor Master personnel."
     summary: |
-      The Police/Harbor Master chief presented an unsolicited donation of approximately $15,321 from resident Biff Micho for the purchase of a public safety drone, operator training, and Part 107 licensing for two police officers and the Harbor Master.
+      The Police/Harbor Master Chief presented an unsolicited donation of approximately $15,321 from Marblehead resident Biff Micho for the purchase of a public safety drone and associated training and licensing.
       
-      Capabilities highlighted:
-      - Thermal (FLIR) imaging for daytime and nighttime operations
-      - High optical zoom for precise identification
-      - Search and rescue on land and water
-      - Pre/post-storm coastal damage documentation to support FEMA/MEMA grant claims potentially worth hundreds of thousands of dollars
+      Capabilities described include:
+      - Thermal/FLIR imaging for daytime and nighttime use
+      - Optical zoom for precision targeting
+      - Search and rescue applications on land and water
+      - Coastal documentation for FEMA/MEMA storm damage grant support
       
-      The board voted unanimously to accept the gift and to send a letter of thanks to Micho.
-    key_speakers: ["Police/Harbor Master Chief (unidentified by name)", "Select Board Chair", "Select Board member (unidentified)"]
-  - topic: recreation-events
-    topic_confidence: 0.75
+      Operators will obtain FAA Part 107 licensing through an online interactive training program. The board accepted the donation unanimously and approved a letter of thanks to the donor.
+    key_speakers: ["Police/Harbor Master Chief"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
     start_seconds: 5752
     end_seconds: 5892
-    headline: "Abbott Hall approved for Marblehead School of Music recital; Acorn Gallery Art Day proclaimed"
-    dek: "The board approved a June 8 recital at Abbott Hall and proclaimed June 2, 2024 as Acorn Gallery School of Art Day."
-    summary: |
-      Two routine items were approved unanimously:
-      1. Use of Abbott Hall on Saturday, June 8, 2024, 9:00 AM–8:00 PM for a student recital by the Marblehead School of Music (contact: Jennifer Spungen), subject to standard rules, fees, and insurance.
-      2. Proclamation of June 2, 2024 as Acorn Gallery School of Art Day in Marblehead, in honor of the gallery's upcoming celebration.
-    key_speakers: ["Select Board Chair", "Thatcher (Town Administrator)"]
+    headline: "Abbott Hall approved for Marblehead School of Music recital; Acorn Gallery proclaimed"
+    dek: "Standard facility use and a proclamation for Acorn Gallery School of Art Day on June 2, 2024 were approved."
+    summary: "The board approved use of Abbott Hall on Saturday, June 8, 2024 (9:00 AM to 8:00 PM) for a student recital by the Marblehead School of Music, subject to standard rules and a certificate of insurance. The board also approved a proclamation designating June 2, 2024 as Acorn Gallery School of Art Day in Marblehead in honor of the gallery's anniversary. A letter of interest from Steven Wolf to serve on the Harbor Plan Implementation Committee was noted for the record."
   - topic: public-comment
     topic_confidence: 0.95
     start_seconds: 5892
-    end_seconds: 6078
-    headline: "Resident raises concerns about snow-day closures and suggests board meet with Eagle Scouts"
-    dek: "One resident commented on town office snow-day closure policy and suggested the board invite Eagle Scouts to present their projects in person rather than sending only a letter."
+    end_seconds: 6125
+    headline: "Resident raises concerns about snow closure policy and Eagle Scout recognition practices"
+    dek: "One resident suggested revisiting the town's snowstorm closure decision-making process and asked the board to invite Eagle Scouts to present in person rather than only sending letters."
     summary: |
-      A single resident addressed the board during public comment, raising two points:
-      1. **Snow-day closure policy**: The resident asked the board to reconsider when the decision to close town offices is made, suggesting waiting until the morning of a storm rather than the prior evening, noting the cost implications.
-      2. **Eagle Scout recognition**: The resident suggested the board invite Eagle Scouts to appear in person to describe their projects, noting it is a significant achievement and that only a small percentage of scouts attain the rank. The board chair acknowledged the suggestion as well noted, indicating the practice had occurred in the past.
-    key_speakers: ["Resident (at mic, unidentified)"]
+      One resident spoke during the public comment period on two topics:
+      
+      1. **Snow closure policy**: The resident suggested the town reconsider how it decides to close offices during snowstorms, arguing decisions should wait until the morning of the storm and that the cost of closures is significant given budget constraints.
+      
+      2. **Eagle Scout recognition**: The resident noted that the board previously invited Eagle Scouts to attend a meeting and present their projects, and suggested resuming that practice as a positive community gesture given the difficulty of achieving that rank.
+    key_speakers: ["Resident (mic only)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
-    start_seconds: 6078
+    start_seconds: 6125
     end_seconds: 6392
-    headline: "Town Administrator reports officer termination, two police vacancies, and climate chief visit"
-    dek: "Officer Christopher Gallo's employment was terminated February 23; one resulting vacancy will be filled, one held vacant for budget reasons; Massachusetts Climate Chief Melissa Hoffer toured Marblehead for over five hours."
+    headline: "Town Administrator reports police officer termination, building capital needs, and climate chief visit"
+    dek: "The update included a police officer termination leaving two vacancies, a capital facilities assessment initiative, and a five-hour visit from Massachusetts Climate Chief Melissa Hoffer."
     summary: |
-      Town Administrator update items:
+      The Town Administrator provided updates on several items:
       
-      - **Police staffing**: A termination notice was delivered to Officer Christopher Gallo on February 23, 2024 (his last day). The department now has two vacancies. One will be filled via lateral transfer or civil service hire; the other will remain vacant due to budget constraints in the upcoming fiscal year.
-      - **Mary Alley water work**: A previously announced road closure for water work was delayed due to vendor availability; the board will be updated.
-      - **Facilities**: The capital needs assessment contract approved earlier in the meeting is intended to produce a serious capital plan for town buildings, which the Town Administrator described as past the point of deferral given recent flooding at Mary Alley.
-      - **Climate Chief visit**: On February 23, Massachusetts Climate Chief Melissa Hoffer visited Marblehead for over five hours, arranged by Representative Ginny Armini. Presentations and a walking tour covered storm damage, harbor resiliency efforts, and the town's net-zero planning work. The chief was described as impressed with Marblehead's efforts.
-      - **Traffic Safety Advisory Committee**: The first quarterly report from the committee, chaired by Gary Hebert, was included in the board packet and will be posted online.
-    key_speakers: ["Thatcher (Town Administrator)", "Select Board Chair"]
+      - **Traffic Safety Advisory Committee**: First quarterly report submitted; chair Gary Hebert commended for thoroughness.
+      - **Police staffing**: Officer Christopher Gallo's employment was terminated on February 23. The department now has two vacancies. One will be filled via lateral transfer or civil service; the second will remain vacant due to budget constraints.
+      - **Mary Alley water work**: A previously announced closure was delayed due to vendor availability; update forthcoming.
+      - **Facilities capital planning**: Following a significant flood at Mary Alley, the building assessment contract approved earlier in the meeting will help develop a serious capital plan for town facilities.
+      - **Climate Chief visit**: Massachusetts Climate Chief Melissa Hoffer visited Marblehead on February 23, arranged by Representative Ginny Armini. The five-hour visit included a walking tour of storm damage, briefings on coastal resiliency efforts, harbor resilience planning, and the town's Net Zero initiative. Town staff were commended for their presentations.
+    key_speakers: ["Town Administrator"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

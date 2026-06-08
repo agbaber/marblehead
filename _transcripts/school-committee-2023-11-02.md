@@ -11,24 +11,25 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "MEA raises morale alarm; committee tables Hopkins Field scoreboard donation over ad policy"
-  summary: "The Marblehead School Committee held its November 2023 meeting, which opened with extensive public comment from the Marblehead Education Association co-presidents and parents raising concerns about staff morale, FOIA requests, and flag removal at the high school. The committee approved FY23 and FY24 financial reports, a basketball overnight field trip, a basketball hoop donation to Veterans Middle School, and school improvement plans for Veterans Middle School and Marblehead High School. A vote to accept a scoreboard donation from Marblehead Youth Football at Hopkins Field was tabled pending receipt of a mockup, due to unresolved questions about whether a donor bank's name on the scoreboard would constitute advertising under district policy."
+  headline: "Marblehead School Committee hears MEA concerns, school improvement plans, and flag-policy update"
+  summary: "The Marblehead School Committee held its November 2023 meeting, which featured extended public comment from Marblehead Education Association co-presidents and community members about educator morale, FOIA requests, and diversity flags removed from the high school. The committee received FY23 closeout figures, FY24 first-quarter budget data, a vaping prevention program update, and school improvement plan presentations from Veterans Middle School and Marblehead High School. Several votes were taken on routine approvals, and the committee tabled a scoreboard donation request pending a design mockup."
   decisions:
     - "Approved schedule of bills totaling $105,084.84"
-    - "Approved minutes from August 11th meeting"
+    - "Approved minutes from August 11 meeting"
     - "Approved basketball overnight field trip to Springfield, February 10–11"
     - "Approved donation of basketball hoops to Veterans Middle School gymnasium from Friends of Marblehead Basketball"
-    - "Tabled scoreboard donation/fundraising approval pending mockup from Marblehead Youth Football"
-    - "Approved Veterans Middle School and Marblehead High School School Improvement Plans"
+    - "Tabled Village School scoreboard donation and naming request pending design mockup"
+    - "Approved Veterans Middle School and Marblehead High School School Improvement Plans as presented"
   votes:
     - motion: "Approve schedule of bills totaling $105,084.84"
       result: "in favor (unanimous)"
-    - motion: "Approve August 11th meeting minutes"
+    - motion: "Approve August 11 meeting minutes"
       result: "in favor (unanimous)"
     - motion: "Approve basketball overnight field trip"
       result: "in favor (unanimous)"
-    - motion: "Accept basketball hoop donation to Veterans Middle School gymnasium"
+    - motion: "Accept basketball hoop donation for Veterans School gymnasium"
       result: "in favor (unanimous)"
     - motion: "Table scoreboard donation motion pending mockup"
       result: "in favor (unanimous)"
@@ -39,148 +40,163 @@ topic_segments:
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 2
-    end_seconds: 545
-    headline: "Committee opens with accommodations, including farewell to interim superintendent Michelle Cresta"
-    dek: "Chair Sarah Fox, Megan Taylor, and Brian Ota offered commendations to staff, students, and outgoing interim superintendent Michelle Cresta at her final meeting."
+    end_seconds: 544
+    headline: "Committee opens with accommodations honoring outgoing Superintendent Michelle Cresta and staff"
+    dek: "Board members offered commendations to Superintendent Cresta on her last meeting, school nurses who aided accident victims, Village School staff, and the Brown School building committee."
     summary: |
-      Chair Sarah Fox commended school nurse staff (Jamie Tuff, Beth Sev, and Carla Rose) for rendering aid at two simultaneous accidents, the Village School newspaper launch, and all district staff. Fox offered a formal farewell to interim superintendent Michelle Cresta, who was praised for her conduct and student-focused leadership during a difficult period.
+      Chair Sarah Fox and member Megan Taylor offered multiple accommodations. Fox commended nurses and staff who rendered aid at two simultaneous traffic accidents, recognized the Village School's first student newspaper, and praised educators for continuing their work amid community challenges.
       
-      Megan Taylor congratulated the building committee for the Lucrecia and Joseph Brown Elementary School, which was selected as a model school by the Massachusetts School Building Authority, and commended high school students who had recently communicated with the committee.
+      Fox offered a formal commendation to Acting Superintendent Michelle Cresta, noting it was her final meeting in the role and praising her leadership focus on student needs. Taylor commended the Lucrecia and Joseph Brown Elementary School building committee after the school was selected for the MSBA's New Model Schools program, and also recognized high school students who had recently communicated with the committee. Brian Ota commended the Brown School principal and staff on completing their first evacuation drill with pre-K and kindergarten students.
       
-      Brian Ota commended Brown School principal Mary Maxfield and staff for conducting the school's first practice evacuation drill with pre-K and kindergarten students.
-      
-      Student representative Katt Piper reported on upcoming events including the Class of 2028 open house (November 8), the end of the quarter (November 9), and sports results including Marblehead students Mario O'Connell and Isaac Gross taking first place at the NEC Cross Country Championship.
-    key_speakers: ["Sarah Fox (School Committee Chair)", "Megan Taylor (School Committee Member)", "Brian Ota (School Committee Member)", "Katt Piper (Student Representative)", "Michelle Cresta (Interim Superintendent)"]
+      Student representative Katt Piper delivered a school report covering upcoming events including the Class of 2028 open house, Honor Society activities, sports championships, and cross-country results.
+    key_speakers: ["Sarah Fox (School Committee Chair)", "Megan Taylor (School Committee Member)", "Brian Ota (School Committee Member)", "Katt Piper (Student Representative)"]
   - topic: public-comment
-    topic_confidence: 0.98
+    topic_confidence: 0.97
     start_seconds: 545
     end_seconds: 2768
     featured: true
-    headline: "MEA co-presidents warn of all-time low morale; parents raise flag removal and safety concerns"
-    dek: "Marblehead Education Association leaders cited a 65% increase in FOIA requests over the prior year and called on the committee to enforce anti-harassment policies, while parents and community members spoke about the removal of diversity flags from the high school cafeteria."
+    headline: "MEA co-presidents and parents raise concerns about educator morale, FOIA requests, and diversity flags"
+    dek: "The Marblehead Education Association declared morale is at an all-time low, citing a 65% increase in FOIA requests over the prior year and an estimated $9,640 in combined legal fees and staff time costs; community members also spoke about a diversity flag removed from the high school."
     summary: |
-      MEA co-presidents Jonathan Hillard (26 Ralph Road) and Sally Shery (80 Garfield Street) delivered a prepared statement on behalf of the union representing teachers, coaches, paras, custodians, bus drivers, and cafeteria workers. They reported educator morale is at an all-time low, with members considering career changes, transfers, or early retirement. They cited increases in FOIA requests — 45 requests or amended requests since July 1, 2023, compared to 28 in all of the prior fiscal year (approximately a 65% increase) — with estimated legal fees of $5,640 and staff time costs of $4,000 related to those requests. They also noted a press request for all complaint records involving school community members since July 1, 2023, and stated MPS had calculated approximately 460,000 incoming emails since that date. The MEA called on the committee and administration to enforce handbook policies and end what they described as misuse of harassment-reporting systems.
+      MEA Co-presidents Jonathan Hillard (26 Ralph Road) and Sally Shery (80 Garfield Street) delivered a prepared statement on behalf of district educators. They reported that from July 1, 2022 through June 30, 2023 there were 28 FOIA requests, and from July 1, 2023 onward the district had received 45 requests or amended requests—approximately a 65% increase in four months over the entire prior school year. Legal fees related to FOIA requests since July 1, 2023 were estimated at $5,640, with staff time costs estimated at an additional $4,000. The union noted that a press outlet had subsequently filed a sweeping request for all complaints against anyone in the school community since July 1, 2023, and that Marblehead Public Schools had calculated approximately 460,000 incoming emails in that period. The MEA called on the committee and administration to enforce existing handbook policies and to stop what they characterized as misuse of anti-harassment complaint mechanisms.
       
-      A second speaker, who identified herself as a 1997 Marblehead staff member, echoed concerns about declining community trust and social media criticism of teachers, and welcomed the return of Dr. Teresa McGinnis.
+      A second educator speaker, identifying herself as having worked in Marblehead since 1997, echoed concerns about community trust and the climate around schools, welcoming back incoming Superintendent Dr. Theresa McGinnis.
       
-      Mary McCarrison (46 Pinecliff Drive) shared results of calls to 21 communities regarding flag policies, noting many had none, and argued that visible diversity flags are important for students of color and LGBTQ+ students in a predominantly white community. She commended Village School staff for an inclusive lesson prompted by her granddaughter's experience with teasing.
+      Chair Fox displayed the FOIA request document publicly and explained that the committee's flag-policy process was triggered by a Supreme Court case (*Shurtleff v. City of Boston*) establishing that without a governing policy, a public entity must permit all flags. She clarified the intent was legal compliance, not removal of existing flags.
       
-      Chris Rule (212 West Shore Drive) raised safety concerns about an unauthorized individual entering a school and removing items from a wall, asking whether access would be revoked. Chair Fox clarified that no one had broken in — people access buildings during evening events — and that operational decisions about access are made by administration, not the school committee.
-      
-      Four Marblehead High School students (Nina Johnson, Marin Potter, Paige Fletcher, and Callie Curtis) speaking on behalf of Team Harmony urged the committee to preserve existing pride, Juneteenth, and BLM flags in the high school cafeteria, and asked that students have a formal voice in any flag policy process.
-      
-      Chair Fox responded that the policy effort was triggered by a U.S. Supreme Court case (arising from Boston City Hall) requiring government entities to have a policy governing flag displays or else be required to allow all flags. She clarified the goal is compliance, not removal of existing flags.
-      
-      Nikia Bell (2 Green Hayes Street) and Tenia Cy (5 Park Street, Dorchester) both spoke about their children feeling unwelcome, with Cy describing a specific ongoing concern about a cafeteria worker's treatment of her Black son and expressing frustration that the issue had not been resolved despite multiple reports to teachers, the principal, and district administration.
-      
-      Cindy Tower Lowen, participating remotely, raised the safety issue of a parent removing a student-placed flag and called for the committee to acknowledge the seriousness of that action regardless of their views on flag policy.
-    key_speakers: ["Jonathan Hillard (MEA Co-President)", "Sally Shery (MEA Co-President)", "Mary McCarrison (Resident, 46 Pinecliff Drive)", "Chris Rule (Resident, 212 West Shore Drive)", "Nina Johnson (MHS Student)", "Marin Potter (MHS Student)", "Paige Fletcher (MHS Student)", "Callie Curtis (MHS Student)", "Nikia Bell (Resident, 2 Green Hayes Street)", "Tenia Cy (Resident, 5 Park Street Dorchester)", "Cindy Tower Lowen (Remote participant)", "Sarah Fox (School Committee Chair)"]
+      Resident Mary McCarrison (46 Pinecliff Drive) reported calling 21 communities about flag policies and urged the committee to allow diversity flags to remain, citing the town's demographic makeup. Four Marblehead High School students identifying as members of Team Harmony—Nina Johnson, Marin Potter, Paige Fletcher, and Callie Curtis—read a joint statement urging that the Pride, Juneteenth, and BLM flags currently in the cafeteria remain and that students be formally included in any policy process. Two additional speakers, Nikia Bell (2 Green Hayes Street) and a parent from Dorchester identifying her son as attending a Marblehead school, spoke about incidents of disrespect toward students of color and their concerns about the flag situation and school safety.
+    key_speakers: ["Jonathan Hillard (MEA Co-President, 26 Ralph Road)", "Sally Shery (MEA Co-President, 80 Garfield Street)", "Mary McCarrison (Resident, 46 Pinecliff Drive)", "Chris Rule (Resident, 212 West Shore Drive)", "Nina Johnson (MHS Student, 10 Spray Avenue)", "Marin Potter (MHS Student, 7 Emerald Ave)", "Paige Fletcher (MHS Student, 171 Beacon Street)", "Callie Curtis (MHS Student, 14 Shetland Road)", "Nikia Bell (Resident, 2 Green Hayes Street)", "Parent (Dorchester, student attends Marblehead school)", "Cindy Tower Lowen (Remote attendee)", "Sarah Fox (School Committee Chair)"]
   - topic: school-budget
-    topic_confidence: 0.9
+    topic_confidence: 0.92
     start_seconds: 2784
-    end_seconds: 3210
-    headline: "FY23 closed with $615K in one-time spending and $539K in prepaid tuitions; FY24 on pace"
-    dek: "Interim Superintendent Cresta reported FY23 is closed with surplus funds directed to one-time capital and maintenance costs, while FY24 spending is tracking slightly ahead of last year at 11.2% of the operating budget after one quarter."
+    end_seconds: 3209
+    headline: "FY23 closed with $615K in one-time spending and $539K in prepaid tuitions; FY24 on pace at 11.2% spent"
+    dek: "Acting Superintendent Cresta reported the district spent approximately $42.7 million in FY23 against an initial budget of approximately $43.98 million, used surplus vacancy savings for one-time capital and maintenance items, and noted the circuit-breaker revolving fund reached its maximum carryover."
     summary: |
-      Interim Superintendent Michelle Cresta presented the FY23 and FY24 financial reports. FY23 had an initial budget of approximately $43,982,000; actual spending came to approximately $42,676,000, with $1.3 million carried over in encumbrances. Surplus funds from vacancies were directed to one-time costs of $615,851 for maintenance equipment, paging systems, security cameras, door access systems, intercom systems, and furniture replacements. The district also prepaid out-of-district tuitions of $539,000.
+      Acting Superintendent Michelle Cresta presented FY23 and FY24 financial reports.
       
-      For FY24, the district had spent 11.2% of its operating budget through the first quarter, compared to 10.9% at the same point last year. Cresta noted continued difficulty filling substitute teacher, custodian, and lunch worker positions. She reported that the circuit breaker revolving fund had been brought to its maximum carry-over level for the first time after four years of effort, providing an additional budget cushion. Custodial cleaning contract services that had been used to fill gaps were discontinued this year due to budget cuts; the district recently posted on-call substitute custodian positions to address evening coverage gaps.
-    key_speakers: ["Michelle Cresta (Interim Superintendent)", "Jen Schaffner (School Committee Member)"]
+      **FY23 Closeout**
+      - Initial budget: approximately $43,982,000
+      - Total spending: approximately $42,676,000
+      - Carryover encumbrances: $1.3 million
+      - One-time expenditures from vacancy savings: $615,851 (maintenance equipment, paging systems, security cameras, door swipe access, intercom systems, furniture)
+      - Prepaid out-of-district tuitions: $539,000
+      - Circuit-breaker revolving fund reached maximum allowable carryover for the first time in approximately four years
+      
+      **FY24 First Quarter**
+      - 11.2% of operating budget spent as of Q1 (10.9% at same point in FY23)
+      - Staffing vacancies remain but are less severe than the prior year
+      - Out-of-district transportation and tuition costs tracking on budget
+      - Custodial cleaning service contract discontinued due to budget cuts; new on-call substitute custodian positions recently posted
+      - Safe Routes to School signs-and-lines grant awarded: $8,899 (applied by Police Chief Dennis King)
+      
+      A committee member noted that contracted custodial services cost approximately three to four times the rate of an employed custodian, limiting the district's ability to fill gaps.
+    key_speakers: ["Michelle Cresta (Acting Superintendent)", "Sarah Fox (School Committee Chair)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.88
     start_seconds: 3210
-    end_seconds: 3574
-    headline: "Committee approves schedule of bills, August minutes, and boys/girls basketball Springfield overnight trip"
-    dek: "Routine approvals included a $105,084.84 bill schedule, August 11 meeting minutes, and a boys and girls varsity basketball overnight trip to Springfield on February 10–11."
+    end_seconds: 3531
+    headline: "Committee approves schedule of bills, meeting minutes, and basketball overnight field trip"
+    dek: "Three routine votes were taken unanimously, including approval of a varsity boys and girls basketball overnight trip to Springfield in February."
     summary: |
-      The committee voted 5-0 to approve the schedule of bills totaling $105,084.84 and 5-0 to approve the August 11 meeting minutes.
+      The committee voted to approve:
+      1. Schedule of bills totaling $105,084.84 (5–0)
+      2. Minutes from the August 11 meeting (5–0)
+      3. Overnight basketball field trip to Springfield for varsity boys and girls teams, night of February 10 returning February 11 (5–0)
       
-      Athletic director Mike Giardi presented a request for a boys and girls varsity basketball overnight trip to Springfield, Massachusetts on February 10–11. The trip will include a visit to the Basketball Hall of Fame, a doubleheader on Saturday afternoon, attendance at a college athletic event, an overnight hotel stay, and a game on Sunday before returning. The committee approved the trip 5-0. Chair Fox noted that Giardi had recently been recognized as an outstanding educator through Harvard.
-    key_speakers: ["Mike Giardi (Athletic Director)", "Sarah Fox (School Committee Chair)", "Jen Schaffner (School Committee Member)", "Allison Taylor (School Committee Member)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.85
+      Coach Mike Giardi described the Springfield trip as including a visit to the Basketball Hall of Fame, two games, and attendance at a college athletic event. Chair Fox noted Giardi had recently been recognized as an outstanding educator through a Harvard program.
+    key_speakers: ["Michelle Cresta (Acting Superintendent)", "Mike Giardi (Basketball Coach)", "Sarah Fox (School Committee Chair)", "Jen Schaffner (School Committee Member)", "Allison Taylor (School Committee Member)"]
+  - topic: recreation-events
+    topic_confidence: 0.82
     start_seconds: 3432
     end_seconds: 4502
-    headline: "Basketball hoop donation approved; scoreboard donation tabled over advertising policy questions"
-    dek: "The committee approved a donation of new backboards, rims, and padding for Veterans Middle School's main gym from Friends of Marblehead Basketball, but tabled a Marblehead Youth Football scoreboard replacement at Hopkins Field pending a mockup and clarification on donor recognition signage."
+    headline: "Basketball hoop donation approved; scoreboard donation tabled pending design mockup"
+    dek: "Friends of Marblehead Basketball donated new backboards and rims for the Veterans Middle School main gymnasium; a Marblehead Youth Football proposal to replace the aging Hopkins Field scoreboard with National Grand Bank funding was tabled after questions arose about signage and district policy on advertising."
     summary: |
-      **Basketball Hoop Donation — Veterans Middle School**
-      Principal Matt Fox (Veterans Middle School) presented a donation offer from Friends of Marblehead Basketball for two new backboards, rims, and backboard padding for the Veterans Middle School main gym, at no cost to the district. The committee voted 5-0 to accept.
+      **Basketball Hoops – Veterans Middle School**
+      The Friends of Marblehead Basketball offered to donate two new backboards, rims, and padding for the Veterans Middle School main gymnasium at no cost to the district. The committee approved acceptance 5–0.
       
-      **Hopkins Field Scoreboard — Tabled**
-      Marblehead Youth Football Commissioner Jason Glass and board member Matt Martin requested approval for fundraising to replace the approximately 30-year-old scoreboard at Hopkins (Dr. Sanford Hopkins) Field, funded through a donation from National Grand Bank and Marblehead Youth Football general funds. The cost was stated to be under $10,000, not requiring a bid process.
-      
-      Discussion arose over district policy KCD (Public Gifts to Schools, adopted 2018), which states that gifts from businesses or special interest groups may not involve "extensive advertising or promotions." Committee members questioned whether including National Grand Bank's name on the scoreboard panel — similar to the existing "Marblehead Savings Bank" panel — would constitute prohibited advertising. Glass and community member Mafi noted that the bank's name would appear without website or phone number, analogous to the existing scoreboard.
-      
-      Because the letter submitted did not mention the bank name on the scoreboard and committee members felt they lacked sufficient information, the committee voted 5-0 to table the motion until a mockup is provided.
-    key_speakers: ["Matt Fox (Veterans Middle School Principal)", "Jason Glass (Marblehead Youth Football Commissioner)", "Matt Martin (Marblehead Youth Football Board)", "Jen Schaffner (School Committee Member)", "Allison Taylor (School Committee Member)", "Mafi (Remote participant)"]
+      **Village/Hopkins Field Scoreboard**
+      Marblehead Youth Football Commissioner Jason Glass and volunteer Matt Martin presented a request to fundraise for a replacement scoreboard at Hopkins Field. National Grand Bank was identified as a significant donor. The request raised a policy question: district policy KCD (adopted 2018) states that gifts from businesses may not involve extensive advertising or promotion. The existing scoreboard displays the name "Marblehead Savings Bank" at similar prominence to the memorial name. Committee members requested a design mockup to evaluate whether the proposed National Grand Bank signage would constitute advertising under policy KCD. The motion was tabled 5–0 pending receipt of the mockup.
+    key_speakers: ["Jason Glass (Marblehead Youth Football Commissioner)", "Matt Martin (Marblehead Youth Football Board)", "Jen Schaffner (School Committee Member)", "Sarah Fox (School Committee Chair)", "Mafi (remote attendee)"]
   - topic: public-safety
-    topic_confidence: 0.75
-    start_seconds: 4552
-    end_seconds: 5754
-    headline: "District presents vaping prevention update including new MGH-backed diversion program pilot"
-    dek: "High school administrators and counselor Gina described a new evidence-based I Decide diversion program piloted this year with MGH grant support, alongside vape detectors, electronic hall passes, and cell phone collection policies aimed at reducing in-school vaping."
+    topic_confidence: 0.78
+    start_seconds: 4573
+    end_seconds: 5813
+    headline: "High school administrators detail vape detector use, smart-pass restrictions, and MGH I-Decide diversion program"
+    dek: "Staff reported vape detectors in all multi-stall bathrooms, electronic hall-pass controls that prevent coordinated bathroom meetups, and a pilot evidence-based diversion program developed with Massachusetts General Hospital covering approximately 34% lifetime nicotine-use rate among students."
     summary: |
-      High school administration and school counselor Gina presented an update on vaping prevention and response. Key elements in place include:
+      High school administrators and school counselor Gina presented the district's multi-layered vaping prevention and response strategy.
       
-      - **Vape detectors** in all multi-stall bathrooms, sending text and email alerts to administrators when triggered
-      - **Smart Pass** electronic hall passes that prevent simultaneous hall passes to limit bathroom meetups
-      - **Cell phone collection** during class, reducing in-class texting that previously facilitated meetups
+      **Detection and Prevention**
+      - Vape detectors installed in all gang bathrooms; alerts sent via text and email to administrators
+      - SmartPass electronic hall-pass system limits simultaneous passes to prevent coordinated meetups
+      - Cell phone collection in classrooms has reduced hallway movement and bathroom visits during class time
       
-      Counselor Gina reported that approximately 34% of students have lifetime use of nicotine products and about 20% have used marijuana products, figures described as comparable to state averages.
+      **Student Data (Youth Risk Behavior Survey)**
+      - Approximately 34% of students reported lifetime use of nicotine products
+      - Approximately 20% reported lifetime use of marijuana products
+      - Rates are described as comparable to state averages
       
-      This year the district piloted the **MGH I Decide diversion program**, an evidence-based, drug-agnostic tier-two intervention for students with substance use infractions. The program consists of 3–4 sessions covering teen brain development, addiction, industry tactics, risk factors, communication, and core values. It is offered as a voluntary alternative to traditional discipline; students who decline proceed to progressive discipline including potential suspension. Parents are notified regardless. Currently only Gina is certified to facilitate the program. The program is part of an MGH grant shared by approximately 100 schools in Massachusetts, with data being collected on effectiveness.
+      **I-Decide Diversion Program (MGH Partnership – Pilot Year)**
+      - Tier 2 evidence-based intervention for students with substance use infractions
+      - Three to four sessions covering teen brain development, addiction, risk factors, mindfulness, and goal-setting
+      - Program is drug-agnostic (covers nicotine, marijuana, and other substances)
+      - Facilitated by a trained staff member; currently one certified facilitator in the district
+      - Students may decline, in which case progressive discipline (up to suspension) applies
+      - Parents notified in all cases
+      - Part of an MGH grant; approximately 100 Massachusetts schools are using the model
+      - Data collected at program start and end; committee requested follow-up reporting on effectiveness
       
-      Committee members asked about data collection on recidivism and long-term effectiveness, and Gina committed to reporting back as data becomes available. A committee member noted the cell phone policy appeared to be reducing vaping-related hall movement as an additional benefit.
-    key_speakers: ["Gina (School Counselor, MHS)", "Desi (MHS Assistant Principal)", "Jen Schaffner (School Committee Member)", "Sarah Fox (School Committee Chair)"]
+      Administrators noted that marijuana-related vaping incidents result in immediate parent contact and are handled through progressive discipline.
+    key_speakers: ["Desi (High School Assistant Principal, name approximate)", "Gina (School Counselor)", "Jen Schaffner (School Committee Member)", "Sarah Fox (School Committee Chair)"]
   - topic: school-budget
-    topic_confidence: 0.7
+    topic_confidence: 0.83
     start_seconds: 5813
     end_seconds: 7605
-    headline: "Veterans Middle School and Marblehead High School present school improvement plans; committee approves both"
-    dek: "Veterans Middle School Principal Matt Fox and MHS Principal Michelle Carlson presented improvement plans focused on vertical curriculum alignment, professional learning communities, peer observation, culturally responsive practices, and DEI student belonging data."
+    headline: "Veterans Middle School and MHS present school improvement plans; committee approves both 5–0"
+    dek: "VMS Principal Matt Fox and MHS Principal Michelle Carlson outlined goals centered on vertical curriculum alignment, professional learning communities, peer observation, and DEI belonging surveys; the committee approved both plans unanimously."
     summary: |
-      **Veterans Middle School — Principal Matt Fox**
+      **Veterans Middle School – Matt Fox, Principal**
       
-      Goal 1 (Teaching & Learning): MVMS departments will implement PLCs and hold multiple vertical alignment meetings with Village School and MHS to align standards, teaching practices, and assessments. The first meeting occurred October 25 with English, math, and multi-team teachers visiting Village; subsequent meetings will occur weekly 3–4 p.m. on Wednesdays.
+      *Goal 1 – Teaching & Learning:* MVMS departments will implement PLCs and vertical alignment meetings with Village Elementary and MHS, aligning state standards, teaching practices, and assessments. Initial meeting held October 25 on a half-day; subsequent meetings scheduled within the 3–4 p.m. Wednesday PD window.
       
-      Goal 2 (Teaching & Learning / Professional Culture): Continuation of advisory program work begun last year, including forming two active committees to develop a monthly SEL curriculum and a student engagement calendar tied to the advisory block.
+      *Goal 2 – Student Engagement:* Continuation of advisory program development, including a monthly SEL curriculum committee and a student engagement calendar building on the existing year-end spirit competition.
       
-      Goal 3 (Professional Culture): Following 12 teacher-led tier-one workshops last year, this year teachers will conduct peer observations, with a structured reflective document. Observations will encourage cross-team visits. Timeline: document development November–January, observations February–April.
+      *Goal 3 – Professional Culture:* Peer observation program building on 12 teacher-led tier-one practice workshops from FY23. Teachers will observe colleagues outside their co-planning teams, complete a reflective document, and share learning. Rollout begins November with observations targeting February–April.
       
-      Goal 4 (DEI): Using results from a student belonging survey conducted by the DEI committee at the end of last year, the school will analyze data and identify next steps, with findings woven into other goals.
+      *Goal 4 – DEI:* Analysis of student belonging survey data collected by the DEI committee at year-end; findings to inform advisory and tier-one instruction work.
       
-      **Marblehead High School — Principal Michelle Carlson**
+      **Marblehead High School – Michelle Carlson, Principal**
       
-      Goal 1 (Curriculum Alignment): MHS will update scope and sequence for each course fully aligned with Vets Middle School. MCAS item analysis in PLCs is already underway in English, math, and science. Teachers will develop common and project-based assessments with rubrics.
+      *Goal 1 – Curriculum Alignment:* MHS departments will update scope and sequence fully aligned with VMS; MCAS item analysis already underway in English, math, and science PLCs.
       
-      Goal 2 (Professional Learning): Following Smart Panel training in August, a December PD day will include breakout sessions with trainer-led Smart Panel instruction. A faculty survey on PD needs will inform additional offerings. Teachers attending outside conferences will present back to full staff.
+      *Goal 2 – Professional Development:* Smart panel technology training planned for December PD day; faculty survey on PD needs to be distributed; teachers attending external conferences will present learning back to staff.
       
-      Goal 3 (DEI / Culturally Responsive Practices): A school-based committee of teachers, administrators, social workers, and counselors will meet monthly. A student survey in Magic Block will be completed by January. Activities include ADL World of Difference training for Team Harmony students (second session scheduled) and women-in-leadership training for athletes, with a subsequent session open to all students including a planned boys' session.
+      *Goal 3 – DEI/Culturally Responsive Practice:* Monthly DEI PLC developing a student survey (by January); World of Difference/ADL training for Team Harmony (now renamed A World of Difference); women-in-leadership training for female athletes to be expanded to other students; follow-up survey to staff in May.
       
-      The committee voted 5-0 to approve both plans. Discussion touched on AI-assisted writing feedback being piloted in social studies, which the chair indicated would be scheduled as a future agenda presentation.
-    key_speakers: ["Matt Fox (Veterans Middle School Principal)", "Michelle Carlson (MHS Principal)", "Sarah Fox (School Committee Chair)", "Brian Ota (School Committee Member)", "Jen Schaffner (School Committee Member)"]
+      The committee discussed AI-assisted writing feedback being piloted in social studies, AI grading comparison checks by teachers, and student-led conferences as a future initiative. The committee voted 5–0 to approve both plans and requested mid-year status updates around February.
+    key_speakers: ["Matt Fox (Veterans Middle School Principal)", "Michelle Carlson (MHS Principal)", "Sarah Fox (School Committee Chair)", "Brian Ota (School Committee Member)", "Megan Taylor (School Committee Member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 7605
     end_seconds: 8466
-    headline: "Policy subcommittee updates flag/banner policy work; committee discusses superintendent search timeline"
-    dek: "Policy subcommittee chair Jen Schaffner reported a draft flag display policy is being developed with legal counsel, with student input planned; committee members raised the need to decide on a permanent superintendent search by the December meeting."
+    headline: "Policy subcommittee reports flag/display policy still in draft; committee discusses superintendent search timeline"
+    dek: "Policy subcommittee co-chair Jen Schaffner reported a draft display policy is being reviewed by legal counsel and will include student input before coming to the full committee; members also discussed initiating a permanent superintendent search process."
     summary: |
-      **Policy Subcommittee Update (Jen Schaffner and Allison Taylor)**
+      **Policy Subcommittee Update (Jen Schaffner)**
+      The subcommittee (Schaffner and Allison Taylor) met the prior week. Two items are in progress: (1) student electronic/email usage policy (follow-up questions outstanding), and (2) a flag/display policy. Schaffner noted Framingham has a three-page policy as a reference. The subcommittee expects to meet again the following week with a draft from district counsel. No policy was presented to the full committee. Schaffner emphasized the policy originated from a legal compliance need, not from a desire to remove existing displays, and referenced the *Shurtleff v. City of Boston* Supreme Court ruling. The committee discussed holding a student-input session, potentially aligned with student council meetings, and sending a survey accessible to Boston/METCO families. Incoming Superintendent Dr. Teresa McGinnis's input will be incorporated.
       
-      The subcommittee met the prior week and reviewed two items: student electronic usage policy (follow-up questions pending) and a flag/display policy. Schaffner explained the policy effort stemmed from the absence of any existing policy on non-statutory flag displays, not from a desire to remove existing flags. She referenced the Supreme Court case involving Boston City Hall flagpoles, which established that absent a governing policy, a public entity must permit all flag displays. A draft is being prepared with the district's attorney; several Massachusetts districts including Framingham have adopted similar policies. Schaffner anticipated a subcommittee meeting the following week and hoped to bring a draft to the full committee in due course. She noted the policy would cover all school buildings, not just the high school, and emphasized the need for student input, including from Boston-resident METCO families, potentially through a survey.
-      
-      Dr. Teresa McGinnis was noted as starting the following week as interim superintendent, and the committee agreed she would be involved in the policy process.
+      **Finance Subcommittee (Sarah Fox)**
+      Subcommittee reviewed FY23 closeout trends; out-of-district transportation identified as the most volatile budget line. Dr. McGinnis attended the subcommittee meeting and is described as ready to engage on budget immediately.
       
       **Safety Advisory Committee (Brian Ota)**
+      Committee met the prior Friday; ALICE protocol implementation is underway across all schools.
       
-      Ota reported that the Safety Advisory Committee met the prior Friday and that ALICE protocol implementation is progressing across all buildings.
-      
-      **Superintendent Search (Megan Taylor)**
-      
-      Taylor requested that setting priorities for Dr. McGinnis's interim role and a discussion about whether to conduct a permanent superintendent search be placed on an upcoming agenda. Chair Fox noted that McGinnis's contract already includes a provision for developing interim goals through MASC. Fox indicated the superintendent search discussion would be scheduled for a December meeting rather than the immediate next meeting. Fox reported that the search consultant had indicated a January start would keep the timeline on track for a process similar to the prior search.
-    key_speakers: ["Jen Schaffner (Policy Subcommittee Chair / School Committee Member)", "Allison Taylor (School Committee Member)", "Brian Ota (School Committee Member)", "Megan Taylor (School Committee Member)", "Sarah Fox (School Committee Chair)"]
+      **Committee Announcements**
+      - Brian Ota requested the committee resume holding meetings at school buildings, as it had done previously.
+      - Megan Taylor requested (a) the committee set formal priorities for Dr. McGinnis's interim role as provided in her contract via a MASC-facilitated process, and (b) a discussion of whether to conduct a permanent superintendent search, noting the prior search began in September with a candidate profile in October, interviews in December. Chair Fox indicated the search discussion would be placed on a December agenda, and noted consultants advised a January start would still be on schedule. Meeting adjourned at 9:21 p.m.
+    key_speakers: ["Jen Schaffner (School Committee Member, Policy Subcommittee)", "Sarah Fox (School Committee Chair)", "Brian Ota (School Committee Member)", "Megan Taylor (School Committee Member)", "Allison Taylor (School Committee Member)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

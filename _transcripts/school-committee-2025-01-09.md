@@ -11,240 +11,209 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "School Committee votes to declare Coffin School surplus and approves override placeholder warrant"
-  summary: "The Marblehead School Committee voted unanimously to transfer the Coffin School building and grounds to the Select Board as surplus property no longer needed for school purposes. The committee also approved two placeholder warrant articles — one for a Proposition 2½ override to supplement the school operating budget and one for a debt-exclusion override for capital repairs — both due to the Select Board by January 31. The committee heard a detailed MCAS high-needs subgroup data presentation and opened a preliminary discussion on converting the interim superintendent to a permanent appointment."
+  headline: "School committee votes 5-0 on Coffin School surplus transfer and two budget placeholder warrants"
+  summary: "The Marblehead School Committee approved transferring the Coffin School building and grounds to the Select Board as surplus property, no longer needed for school purposes. The committee also approved two Proposition 2½ placeholder warrant articles — one for a general operating budget override and one for a debt-exclusion capital override — both due to the Select Board by January 31. Additionally, the committee began a preliminary discussion on converting Superintendent John Du's interim contract to a permanent appointment, agreeing to schedule a workshop with MASC guidance within four weeks."
   decisions:
-    - "Approved transfer of Coffin School building and grounds to the Select Board as surplus property"
-    - "Approved placeholder Proposition 2½ override warrant article for school operating budget (FY2026)"
-    - "Approved placeholder debt-exclusion override warrant article for school building capital repairs"
+    - "Approved transfer of Coffin School building and grounds to Select Board as surplus property"
+    - "Approved placeholder Prop 2½ override warrant article for school operating budget (FY2026)"
+    - "Approved placeholder debt-exclusion override warrant article for school capital needs"
     - "Approved meeting minutes for December 5, 2024"
     - "Approved meeting minutes for December 19, 2024 (4-0, one abstention)"
+    - "Agreed to schedule a superintendent evaluation workshop with MASC within four weeks"
   votes:
     - motion: "Transfer Coffin School to Select Board as surplus property"
       result: "in favor (unanimous)"
-    - motion: "Placeholder Prop 2½ override warrant article for school budget"
+    - motion: "Prop 2½ placeholder override warrant for school operating budget"
       result: "in favor (unanimous)"
-    - motion: "Placeholder debt-exclusion override warrant article for capital repairs"
+    - motion: "Debt-exclusion placeholder override warrant for capital needs"
       result: "in favor (unanimous)"
     - motion: "Approve December 5, 2024 meeting minutes"
       result: "in favor (unanimous)"
     - motion: "Approve December 19, 2024 meeting minutes"
-      result: "in favor (4 to 0, 1 abstention)"
+      result: "in favor (4 to 0, one abstention)"
 
 topic_segments:
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 2
     end_seconds: 249
-    headline: "Committee opens with memorial for former principal Libby Moore and Eagle Scout commendation"
-    dek: "Chair requested a letter of condolence to the Moore family and recognized Tyler Erp whose Eagle Scout greenhouse project raised $100,000 for Marblehead High School."
-    summary: |
-      The chair called the meeting to order and the committee observed a moment of silence for Elizabeth 'Libby' Moore, a 28-year district employee who retired as principal of Marblehead Veterans Middle School. The committee unanimously consented to send a condolence letter to her family.
-      
-      The chair also recognized Tyler Erp, who received his Eagle Court of Honor for building a greenhouse at Marblehead High School. The project originally targeted $75,000 in fundraising but ultimately became a $100,000 project.
-    key_speakers: ["Chair (unnamed)", "Committee members"]
+    headline: "Committee opens with commendations, moment of silence for former principal Libby Moore"
+    dek: "Chair recognized former Marblehead Veterans Middle School principal Elizabeth 'Libby' Moore, who passed away after a 28-year career, and Eagle Scout Tyler Erp whose greenhouse project raised $100,000."
+    summary: "The meeting opened with a Pledge of Allegiance and commendations. The chair requested committee approval to send a letter of condolence to the family of Elizabeth 'Libby' Moore, a former guidance counselor and principal at Marblehead Veterans Middle School who had a 28-year career with the district and passed away late last month. The committee also recognized student Tyler Erp, who received his Eagle Court of Honor; his Eagle Scout project was the construction of a greenhouse at Marblehead High School, which ultimately became a $100,000 project after initially targeting $75,000."
+    key_speakers: ["Chair (School Committee)"]
   - topic: public-comment
     topic_confidence: 0.95
     start_seconds: 249
     end_seconds: 342
-    headline: "Student rep reports on Senior Show, TD Garden basketball game, and upcoming auditions"
-    dek: "Student representative Ella reported on winter sports records, the Hades Town musical auditions, and FAFSA deadlines."
-    summary: |
-      Student representative Ella provided updates including:
-      - Senior Show on Sunday January 12 at 3:00 PM; tickets $20 students / $25 non-students
-      - Varsity Girls Basketball playing at TD Garden Saturday at 11:30 AM
-      - Musical this year: *Hades Town*; auditions January 15 at 3:00 PM
-      - Parent yearbook dedications due February 15
-      - FAFSA now open
-      - Junior Seminars beginning the following week; junior parent/guardian night January 15 at 6:00 PM
-      
-      No public comment was received from attendees in the room or online.
-    key_speakers: ["Ella (student representative)"]
+    headline: "No public comment received; student rep Ella reports on upcoming school events"
+    dek: "No residents came forward during public comment; student representative Ella reported on the senior show, girls basketball at TD Garden, and other upcoming events."
+    summary: "No members of the public — in-person or online — came forward during the public comment period. Student representative Ella reported that classes had resumed smoothly, the senior show is January 12 at 3:00 PM ($20 students/$25 non-students), the varsity girls basketball team plays at TD Garden on Saturday at 11:30 AM, the musical this year will be *Hades Town* with auditions January 15, parent yearbook dedications are due February 15, and junior seminars begin the following week with a parent/guardian night on January 15 at 6:00 PM."
+    key_speakers: ["Ella (Student Representative)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 342
     end_seconds: 998
-    headline: "Superintendent reports on school safety committee, antisemitism investigation, DECA results, and athletics"
-    dek: "Superintendent described two new joint labor-management committees, an ongoing independent antisemitism investigation, and a proposed anti-discrimination committee."
+    headline: "Superintendent updates: joint safety committee formed, antisemitism investigation ongoing, DECA and athletics results shared"
+    dek: "Superintendent Du reported on new joint labor and safety committees, the status of an independent antisemitism investigation, a proposed anti-discrimination committee, and district athletic and DECA achievements."
     summary: |
-      Superintendent updates included:
+      Superintendent Du provided several updates:
       
-      **Joint Committees**
-      - A joint school safety committee (up to 10 union members, up to 10 administrators) held its first meeting; will present to the school committee in spring.
-      - A joint labor committee to review educator evaluation processes and contract language is being stood up, chaired by a staff member identified as Julia.
-      
-      **Antisemitism Investigation**
-      The independent investigation is ongoing; delays attributed to attorney involvement, the need to wait for school to start, and the teacher strike. Investigator Allison Ker has conducted multiple interviews. A working group is being formed — tentatively called an 'anti-discrimination committee' — with initial focus on antisemitism, including curriculum review and reporting mechanisms. A local rabbi offered to review curriculum materials.
-      
-      **DECA District 6 Results**
-      Marblehead High School placed third-highest in qualifying events among 14 schools at the January 7 District 6 DECA conference. Numerous individual and team first-place finishers qualified for the state conference in March.
-      
-      **Athletics Update**
-      Overall record as of the meeting: 21-14-2 (0.600 winning percentage). Girls Basketball plays at TD Garden Saturday.
-      
-      **MAGIC**
-      MARBLEHEAD is celebrating 20 years and over $2 million in donations to Marblehead Public Schools; celebration February 2 at the Masonic Temple.
-    key_speakers: ["Superintendent (John)", "Chair"]
+      - A joint school safety committee of up to 10 union members and up to 10 administrators held its first meeting; it will present to the school committee in spring.
+      - A joint labor committee to review educator evaluation processes and contract language was also established.
+      - The independent antisemitism investigation is ongoing; delays were attributed to the school year start, attorney involvement, and the teacher strike. The investigator (Allison Ker) has been conducting staff interviews.
+      - A working title of 'anti-discrimination committee' was proposed, with an initial focus on antisemitism, to include parents, educators, administrators, students, and local clergy. A local rabbi expressed willingness to review curricular materials.
+      - DECA District 6 competition results: Marblehead High School placed third highest among 14 schools in qualifying events, with numerous individual and team placements advancing to the state conference in March.
+      - Athletics update: Boys ice hockey 7-1-1; girls basketball 3-2 (playing TD Garden Saturday); overall record 21-14-2 (.600 winning percentage).
+      - MAGIC is celebrating its 20th anniversary and over $2 million donated to Marblehead Public Schools, with a celebration February 2 at the Masonic Temple.
+    key_speakers: ["Superintendent Du (Interim Superintendent)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 998
     end_seconds: 1152
-    headline: "Committee approves December 2024 meeting minutes; schedule of bills tabled to next meeting"
-    dek: "December 5 minutes passed 5-0; December 19 minutes passed 4-0 with one abstention after a member noted his name was incorrectly listed as attending."
-    summary: "The schedule of bills was tabled to the next meeting. The committee voted 5-0 to approve December 5, 2024 minutes and 4-0 with one abstention (Al Williams, who was not present at that meeting) to approve December 19, 2024 minutes, with a correction to remove Williams's name from the attendance list."
-    key_speakers: ["Chair", "Al Williams", "Allison Taylor", "Sarah Fox"]
+    headline: "Consent agenda: December meeting minutes approved; bills tabled to next meeting"
+    dek: "December 5 minutes approved 5-0; December 19 minutes approved 4-0 with one abstention after a member noted they were not present at that meeting."
+    summary: "The schedule of bills was tabled to the next meeting per the assistant superintendent's request. Meeting minutes from December 5, 2024 were approved 5-0. Minutes from December 19, 2024 were approved 4-0 with one abstention after a committee member (Al Williams) noted he was incorrectly listed as attending that meeting and requested the correction be made."
+    key_speakers: ["Chair (School Committee)", "Al Williams (School Committee Member)"]
   - topic: school-budget
-    topic_confidence: 0.92
+    topic_confidence: 0.88
     start_seconds: 1152
     end_seconds: 3620
-    headline: "Assistant Superintendent presents MCAS high-needs subgroup data; district cleared on all six special-ed compliance findings"
-    dek: "Lisa Marie Alito presented detailed MCAS achievement and growth data for high-needs students and reported that DESE approved the district's corrective action plan ahead of schedule."
+    headline: "Assistant Superintendent presents MCAS high-needs subgroup data; district cleared of all special education compliance findings ahead of schedule"
+    dek: "Assistant Superintendent Lisa Marie Alito presented 2024 MCAS performance data for high-needs students and announced the district received full approval on its corrective action plan from the Department of Education months ahead of the June 2025 deadline."
     summary: |
-      Assistant Superintendent Lisa Marie Alito presented MCAS 2024 data for high-needs student subgroups (students with disabilities, low-income students, and English language learners).
+      Assistant Superintendent Lisa Marie Alito presented a detailed analysis of 2024 MCAS results for high-needs student subgroups (students with disabilities, low-income students, and English language learners).
+      
+      **Key enrollment numbers (spring 2024 MCAS):**
+      | Subject | All Students | High Needs | Low Income | Students w/ Disabilities | ELL |
+      |---|---|---|---|---|---|
+      | ELA | 1,356 | 564 | 192 | 303 | 69 |
+      | Math | 1,362 | 565 | 191 | 303 | 71 |
+      | Science/Tech | 574 | 153 | 51 | 79 | 23 |
       
       **Key findings:**
-      | Subgroup | Notable trend |
-      |---|---|
-      | Grades 3–8 high needs, ELA & Math | Comparable to state; 2022–23 slightly above state |
-      | Grade 10 high needs, ELA | SGP dropped to 33.6 in 2024, below the 40–60 average range |
-      | Grade 10 high needs, Math | SGP 41.5; within average range |
-      | Special education | 'Not meeting' percentages below state average across ELA, math, and science |
-      | Low income, grade 10 | Students 'not meeting' ELA dropped from 25 in 2023 to 9 in 2024 |
+      - Most high-needs students fall in the "partially meeting" category, with many on the cusp of "meeting expectations."
+      - Grades 6–7 high-needs students showed the highest percentages not meeting in ELA.
+      - Grades 3–8 high-needs performance is comparable to state averages in 2024; in 2022–23 Marblehead was 3–5 percentage points above state in math.
+      - Grade 10 high-needs ELA student growth percentile (SGP) fell to 33.6 in 2024, slightly below the 40–60 average range — flagged for further investigation.
+      - Special education subgroup "not meeting" rates are below state averages across ELA, math, and science for multiple years.
+      - 8th grade high-needs math scores showed the strongest growth trend.
       
-      Comparable districts identified via DART: Bedford, Long Meadow, Nashoba, and Newburyport.
+      **Major announcement:** The district received a letter from the Department of Education approving full compliance in all six areas of its corrective action plan — well ahead of the scheduled June 2025 deadline. The committee praised the speed of this achievement.
       
-      **Corrective Action Plan:** DESE approved the district as compliant in all six previously identified areas of non-compliance — ahead of the June 2025 deadline. The committee praised this as a significant achievement.
+      **Academic Discoveries review** is nearly complete; final classroom observations scheduled for January 31, with a report expected in February.
       
-      **Academic Discoveries review** is nearly complete; final classroom observations scheduled for January 31 with a report expected in February.
-      
-      **Ongoing initiatives:** Landmark outreach consultation for language-based settings; Athena Learning K-12 consulting for therapeutic and ABA programs; reading profile tracker for special education; CPAC partnership.
-    key_speakers: ["Lisa Marie Alito (Assistant Superintendent)", "Sarah Fox", "Chair", "Superintendent (John)"]
+      **Upcoming work:** Landmark School Outreach Program is conducting its third visit to observe language-based settings. Athena Learning K-12 is being engaged to consult on therapeutic and ABA programs. A reading profile tracker has been implemented to identify specific reading difficulties for targeted instruction.
+    key_speakers: ["Lisa Marie Alito (Assistant Superintendent)", "Sarah Fox (School Committee Member)", "Allison Taylor (School Committee Member)", "Superintendent Du (Interim Superintendent)"]
   - topic: school-budget
     topic_confidence: 0.75
     start_seconds: 3620
-    end_seconds: 4840
-    headline: "Committee discusses post-MCAS competency determination framework; vote deferred to next meeting"
-    dek: "With MCAS no longer required for graduation, the superintendent presented draft competency determination options based on passing grades in English, math, and science courses."
+    end_seconds: 4980
+    headline: "Committee begins discussion on post-MCAS competency determination and new financial literacy graduation requirement"
+    dek: "With MCAS no longer used for competency determination, the committee discussed draft graduation requirements for the class of 2025 and a proposed financial literacy course as a future graduation requirement; no vote taken."
     summary: |
-      Superintendent presented a draft competency determination framework now that MCAS results are no longer used as the graduation competency requirement.
+      Superintendent Du distributed a draft document combining a new competency determination framework and updated graduation requirements now that MCAS scores no longer serve as the competency determination for high school diplomas.
       
-      **Proposed Option 1 (course-based):**
-      - English: passing grade in English 9 and English 10
-      - Math: passing grade in Algebra 1 and Geometry
-      - Science: passing grade in Biology and one additional lab science (Chemistry or Physics)
+      **Proposed competency determination (Option 1 — course-based):**
+      - English: Passing grade and credit in English 9 and English 10
+      - Math: Passing grade and credit in Algebra 1 and Geometry
+      - Science: Passing grade and credit in Biology plus one additional lab science (Chemistry or Physics)
       
-      **Option 2:** Portfolio pathway for students who cannot meet course requirements (currently one student identified as potentially needing this).
+      These align with the subjects measured by the 2023 MCAS. A portfolio option (Option 2) was noted for edge cases; approximately one student has been identified as potentially needing it.
       
-      **Special education:** The MCAS Alternate assessment remains available.
-      
-      Discussion focused on:
-      - Whether a 'passing grade' (as low as a D) sets a sufficient bar
-      - Whether to establish a separate interim standard for the current graduating class and a more rigorous standard going forward
-      - Addition of a personal financial literacy requirement for graduation (existing courses under review)
-      
-      No vote was taken; the item will return at the next meeting with a revised document uploaded to the committee's document portal.
-    key_speakers: ["Superintendent (John)", "Lisa Marie Alito (Assistant Superintendent)", "Sarah Fox", "Brian", "Allison Taylor", "Chair"]
+      **Key discussion points:**
+      - What constitutes a "passing grade" — a D/D-minus — was debated relative to rigor. Six or seven comparable districts reviewed by staff use the same "passing grade" language.
+      - Committee members asked whether the bar could be higher going forward, while accommodating the complexity of the current graduating class.
+      - The MCAS Alternative (now called the Alternative Assessment) remains available for students whose IEP teams determine it is appropriate.
+      - A financial literacy semester course was proposed as a future graduation requirement. Two existing courses in the program of studies were identified as potentially meeting this requirement. Implementation cannot occur for the current or next graduating class given timeline constraints.
+      - A vote is expected at the next meeting. Committee members asked for the draft to be posted online.
+    key_speakers: ["Superintendent Du (Interim Superintendent)", "Sarah Fox (School Committee Member)", "Al Williams (School Committee Member)", "Brian Ota (School Committee Member)", "Allison Taylor (School Committee Member)", "Lisa Marie Alito (Assistant Superintendent)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 4840
-    end_seconds: 5604
-    headline: "Preliminary 2025–26 school calendar presented; feedback focuses on January 2 return date and November PD day"
-    dek: "The draft calendar shows return to school on January 2 and a PD day on November 4 near Election Day, both of which drew committee concern about attendance and scheduling."
-    summary: |
-      Superintendent presented a preliminary 2025–26 school calendar for committee feedback before finalizing.
-      
-      Key discussion points:
-      - **January 2 return:** Multiple committee members and principals have flagged this date as likely to have low attendance given the holiday week; a calendar adjustment would be needed to replace the instructional day.
-      - **November 4 PD day:** Placed adjacent to a potential Election Day (November 3 early release/parent conference day) to accommodate a possible town-wide polling location at one of the school buildings. Committee members questioned whether coupling a half day with a full PD day creates a choppy week. Suggested alternatives included moving the PD day to October 3 or November 10.
-      - **Parent-teacher conferences:** Superintendent and committee discussed restructuring the conference model so one PD day is used for full professional development rather than conferences, potentially supplementing conferences with Zoom options spread over multiple weeks.
-      - **NEASC accreditation:** The high school is entering its NEASC review cycle, adding pressure to maximize PD time.
-      
-      The calendar will be revised and brought back to the next meeting for a vote.
-    key_speakers: ["Superintendent (John)", "Allison Taylor", "Sarah Fox", "Chair", "Julia (Assistant Superintendent Ferrera)"]
-  - topic: override
-    topic_confidence: 0.95
-    start_seconds: 5604
-    end_seconds: 7111
-    featured: true
-    headline: "Committee votes 5-0 to declare Coffin School surplus and approve two override placeholder warrants"
-    dek: "All three votes were unanimous; the Coffin School transfer goes to the Select Board, while two Prop 2½ warrant placeholders preserve options ahead of the January 31 warrant deadline."
-    summary: |
-      The committee took three votes:
-      
-      **1. Coffin School surplus declaration (5-0)**
-      Motion: Transfer care, custody, management and control of the Coffin School building and grounds to the Select Board, it being no longer needed for school purposes.
-      
-      Discussion noted:
-      - The Massachusetts Supreme Judicial Court's Milton ruling re-establishes state authority to sue municipalities over MBTA Communities (3A) zoning compliance, potentially bringing new residential units — and school-age children — to the north side of town where Coffin is the only available school land.
-      - Proceeds from any eventual sale would not go to the school department; town meeting (not the Select Board) will determine the property's ultimate disposition.
-      - The land sold in the previous comparable transaction (described as 'Gary') went for approximately $880,000.
-      
-      **2. Proposition 2½ operating override placeholder (5-0)**
-      Motion: To see if the town will vote to raise and appropriate or transfer a sum of money to supplement the school department's operating budget beginning in FY2026, contingent upon passage of a Proposition 2½ ballot question.
-      
-      The committee clarified this is a placeholder only; no funding amount has been determined. The warrant must be submitted to the Select Board by January 31. If unused, the committee would recommend indefinite postponement at town meeting. Any override revenue would flow to the schools only in the first year; subsequent years it becomes part of the general levy.
-      
-      **3. Debt-exclusion capital override placeholder (5-0)**
-      Motion: To see if the town will vote to raise and appropriate a sum for remodeling, reconstructing, and making extraordinary repairs to existing school buildings and infrastructure, including computer hardware and software.
-      
-      This placeholder has been used in prior years for items such as smart boards and security cameras; in some years it has not been used at all.
-    key_speakers: ["Chair", "Al Williams", "Sarah Fox", "Allison Taylor", "Brian (Ota)", "Jen Schaffner"]
-  - topic: labor-personnel
-    topic_confidence: 0.97
-    start_seconds: 7158
-    end_seconds: 8103
-    headline: "Committee opens preliminary discussion on converting interim superintendent to permanent appointment"
-    dek: "Superintendent expressed interest in a permanent contract effective July 1, 2025; committee agreed to schedule a workshop with MASC facilitator to design an evaluation and community-input process."
-    summary: |
-      The committee held a public preliminary discussion on whether to convert the superintendent's two-year interim contract to a permanent appointment.
-      
-      The superintendent noted he is the district's fifth superintendent in four years, stated he wants to remain in Marblehead, and suggested July 1, 2025 as a target effective date. He acknowledged that the superintendent job market opens in January and requested clarity on the committee's intentions.
-      
-      Committee discussion centered on:
-      - Conducting a formal, data-driven evaluation rather than relying solely on anecdotal feedback
-      - Incorporating community, staff, and student input mechanisms
-      - Doing a mid-cycle formative assessment against the October 2024 goals already established
-      - Ensuring the process is transparent
-      
-      **Next steps agreed upon:**
-      - Schedule a workshop (ideally within four weeks) facilitated by MASC representative Alicia to design the evaluation process and timeline
-      - Use a doodle-poll to find a date that works for all five committee members
-      - Allow time after the workshop for community feedback collection and evaluation, targeting completion by approximately April 2025
-      - Actual contract negotiation would occur in executive session; final contract vote would be in open session
-    key_speakers: ["Superintendent (John)", "Chair", "Sarah Fox", "Allison Taylor", "Brian", "Al Williams"]
-  - topic: school-budget
     topic_confidence: 0.85
-    start_seconds: 8103
-    end_seconds: 8520
-    headline: "Budget subcommittee outlines preliminary calendar targeting March 6 budget hearing and April 7 FinCom deadline"
-    dek: "Rough dates include a February 3 budget workshop, a mid-February community budget forum, and a March 6 formal budget hearing, with the Finance Committee warrant hearing penciled in for March 31."
+    start_seconds: 4980
+    end_seconds: 5604
+    headline: "Preliminary FY2026 school calendar presented; committee raises concerns about January 2 return and November schedule"
+    dek: "Superintendent Du shared a preliminary 2025–26 school calendar; committee members flagged the January 2 school day and the November 3–4 half-day/PD-day arrangement as likely low-attendance days needing revision."
     summary: |
-      The budget subcommittee presented a preliminary FY2026 budget calendar:
+      A preliminary 2025–26 school calendar was distributed. Key discussion points:
       
-      | Date (preliminary) | Event |
-      |---|---|
-      | February 3 | Budget workshop (school committee; one member noted a conflict) |
-      | Mid-February | Community budget forum (distinct from the required hearing) |
-      | March 6 | Formal budget hearing (required by MGL; requires newspaper posting weeks in advance) |
-      | March 31 | Finance Committee hearing on school budget |
-      | April 7 | Finance Committee warrant hearing deadline |
+      - **January 2 school day**: Multiple members objected to returning to school on Friday, January 2, noting low expected student attendance. However, the alternative — returning for only one Monday in late June before Juneteenth — was seen as equally awkward. The calendar currently needs a decision.
+      - **November 3–4 (half-day/PD)**: A half day on Monday November 3 followed by a PD day on Tuesday November 4 (Election Day) was flagged as choppy and potentially low-attendance. The November 4 placement was described as preemptive — the town has requested use of a school building as a single consolidated polling location for the entire town.
+      - **Conference model**: Discussion arose about replacing the conference half-day with a full PD day for teachers while shifting parent-teacher conferences to a hybrid Zoom/in-person model spread across Wednesday afternoons or evenings.
+      - **NEASC accreditation**: The High School is entering an NEASC review cycle, increasing the importance of staff PD time.
+      - The committee asked administrators to return with a revised calendar proposal at the next meeting.
+    key_speakers: ["Superintendent Du (Interim Superintendent)", "Allison Taylor (School Committee Member)", "Sarah Fox (School Committee Member)", "Brian Ota (School Committee Member)"]
+  - topic: override
+    topic_confidence: 0.97
+    start_seconds: 5604
+    end_seconds: 7158
+    featured: true
+    headline: "School committee votes 5-0 to transfer Coffin School to Select Board and approves two Prop 2½ placeholder warrant articles"
+    dek: "All three warrant articles — Coffin School surplus transfer, an operating override placeholder, and a debt-exclusion capital placeholder — passed unanimously; the Select Board warrant deadline is January 31."
+    summary: |
+      The committee acted on three warrant article motions ahead of the January 31 Select Board warrant deadline.
       
-      The committee noted that in recent years the school committee has voted its budget *before* the Finance Committee hears it — a change from prior practice. A community budget forum is a stated committee goal for the year and is separate from the legal budget hearing.
-    key_speakers: ["Chair", "Sarah Fox", "Superintendent (John)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 8520
+      **1. Coffin School surplus transfer (5-0)**
+      Motion: *To transfer the care, custody, management and control of the Coffin School building and grounds to the Select Board, it being no longer needed for school purposes.*
+      
+      Discussion included:
+      - A member noted that the 3A zoning law — following the state court ruling establishing that the state can sue municipalities to compel compliance — may revive development pressure, and the Coffin School lot is the only school-usable land on the north side of town.
+      - The proceeds from any future sale would go to the town general fund, not the school department, consistent with the precedent set by the former Gary School sale (which sold for approximately $880,000).
+      - Town meeting, not the Select Board, will ultimately decide the property's disposition.
+      
+      **2. Prop 2½ operating override placeholder (5-0)**
+      Motion: *To see if the town will vote to raise and appropriate or transfer from available funds a sum of money to supplement the school department's operating budget beginning in FY2026, contingent upon the passage of a Proposition 2½ ballot question.*
+      
+      This is a placeholder only. No dollar amount has been set. The committee noted the override money, if approved, would flow to the schools in year one; in subsequent years the levy simply grows at the standard rate and appropriation is subject to town meeting.
+      
+      **3. Debt-exclusion capital placeholder (5-0)**
+      Motion: *To see if the town will vote to raise and appropriate a sum of money for remodeling, reconstructing, and making extraordinary repairs to existing school buildings, infrastructure, and purchase of necessary equipment including computer hardware and software.*
+      
+      Described as a routine placeholder used for capital items (smart boards, security cameras, etc.) in prior years; whether it will be used depends on finance department projections.
+    key_speakers: ["Chair (School Committee)", "Al Williams (School Committee Member)", "Sarah Fox (School Committee Member)", "Allison Taylor (School Committee Member)", "Brian Ota (School Committee Member)", "Jen Schaffner (School Committee Member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 7158
+    end_seconds: 8145
+    headline: "Committee begins process to convert interim superintendent to permanent appointment, targeting July 1 effective date"
+    dek: "Superintendent Du expressed interest in a permanent contract, noting he is the fifth superintendent in four years; the full committee agreed to hold a workshop with MASC guidance within four weeks to design the evaluation and community-input process."
+    summary: |
+      In a preliminary public discussion, Superintendent Du stated his interest in moving from an interim to a permanent superintendent contract. He noted he has been with the district six months, cited the instability of having five superintendents in four years, and said permanency would benefit district continuity and his ability to implement a multi-year district improvement plan. He proposed a target of July 1, 2025 for a permanent contract to take effect.
+      
+      Committee members indicated broad support but emphasized the need for:
+      - A formal mid-cycle formative evaluation using measurable goals already established
+      - Community, staff, and student feedback mechanisms
+      - A transparent public process
+      
+      The committee agreed to:
+      1. Hold a workshop — facilitated by MASC's Alicia — within approximately four weeks to design the evaluation framework and feedback process
+      2. Use the goals subcommittee's existing work as a starting point
+      3. Conduct the full evaluation and feedback collection over approximately six to eight weeks following the workshop, with a public presentation of results before any contract negotiation
+      
+      Actual contract negotiation would occur in executive session with a final vote in open session.
+    key_speakers: ["Superintendent Du (Interim Superintendent)", "Sarah Fox (School Committee Member)", "Al Williams (School Committee Member)", "Brian Ota (School Committee Member)", "Allison Taylor (School Committee Member)", "Chair (School Committee)"]
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 8145
     end_seconds: 8754
-    headline: "Subcommittee updates cover CPAC meeting, communications outreach, policy work, and METCO enrollment"
-    dek: "Liaison reports touched on a productive CPAC session, a potential Marblehead TV budget segment, a planned superintendent newsletter, and METCO enrollment management."
+    headline: "Budget subcommittee outlines preliminary FY2026 calendar: budget forum in February, hearing March 6, FinCom hearing March 31"
+    dek: "The budget subcommittee roughed out key dates, including a February budget forum for community input, a March 6 budget hearing, and a Finance Committee hearing penciled in for March 31 with a warrant deadline of April 7."
     summary: |
-      - **CPAC:** Member reported a productive meeting; Lisa Marie Alito presented updates that were well received.
-      - **Communications subcommittee:** Met with Marblehead TV; discussions ongoing about a budget-focused segment and a school committee primer video. A superintendent newsletter is planned to launch in January.
-      - **Policy subcommittee:** Meeting the following Tuesday.
-      - **Central Council:** A productive meeting of PTO/PCC presidents was held that week.
-      - **METCO:** Superintendent meets weekly with METCO Director Kaia. Current enrollment period underway; some grade levels are near capacity. Funding from DESE is trending unfavorably for METCO districts. The superintendent offered to invite METCO executive director Millie to give a 'state of METCO' update to the committee in spring.
-    key_speakers: ["Al Williams", "Chair", "Superintendent (John)", "Jen Schaffner"]
+      The budget subcommittee reported on a preliminary FY2026 budget calendar, working backward from the Finance Committee's warrant hearing deadline of approximately April 7:
+      
+      | Milestone | Tentative Date |
+      |---|---|
+      | Budget workshop (school committee) | February 3 |
+      | Budget forum (community input) | Second week of February |
+      | Budget hearing (required by MGL) | March 6 |
+      | Finance Committee hearing | March 31 |
+      | Warrant deadline | ~April 7 |
+      
+      The budget hearing and a school committee vote on the budget are separate steps; the committee prefers to allow a few days between the hearing and vote to incorporate any feedback. The chair noted that the committee successfully changed the process so that the school committee now votes on its budget *before* the Finance Committee hearing, reversing a prior practice.
+      
+      Other subcommittee updates: CPAC meeting held; Lisa Marie Alito received positive feedback. Communications subcommittee met with Marblehead TV about potential programming including a budget-focused segment and a school committee primer. A policy subcommittee meeting is scheduled for the following Tuesday. The Central Council (PCO) meeting was productive. METCO Director Kaia meets weekly with the superintendent; enrollment period is underway.
+    key_speakers: ["Chair (School Committee)", "Sarah Fox (School Committee Member)", "Al Williams (School Committee Member)", "Superintendent Du (Interim Superintendent)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -11,249 +11,260 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Board approves police promotions, $4.9M bond note, and Mary Alley HVAC study"
-  summary: "The Marblehead Select Board met on April 23, 2025, approving promotions of a police officer to lieutenant and another to sergeant, both effective May 4, 2025. The board voted unanimously to sell $4,922,598 in general obligation bond anticipation notes at 4% interest due May 2026 for roadway, sidewalk, and building projects. An engineering presentation outlined a $5.75 million request for Article 33 to renovate Mary Alley municipal building, covering HVAC replacement, roof, ADA upgrades, elevator, fire sprinklers, and asbestos remediation. The board also voted to support most 2025 Annual Town Warrant articles."
+  headline: "Board approves $4.9M bond anticipation note and Mary Alley HVAC study at $5.75M ask"
+  summary: "The Select Board approved the sale of approximately $4.9 million in general obligation bond anticipation notes at 4% interest, rolling over existing debt and adding new borrowing for road, sidewalk, and fire station roof projects. The board also received a feasibility presentation on a $5.75 million package to overhaul the Mary Alley municipal building, covering HVAC replacement, roof, elevator modernization, ADA upgrades, fire sprinklers, and asbestos remediation. Two police officers were promoted, multiple town warrant articles were approved for town meeting, and a union representative opened the meeting with complaints about stalled contract negotiations."
   decisions:
+    - "Approved sale of $4,922,598 in general obligation bond anticipation notes at 4% due May 15, 2026"
     - "Approved promotion of Eric Statin to lieutenant effective May 4, 2025"
     - "Approved promotion of Andrew DeMar to sergeant effective May 4, 2025"
-    - "Approved sale of $4,922,598 general obligation bond anticipation notes at 4% interest"
     - "Approved automatic amusement device license for Rich Sha of Marblehead"
-    - "Approved support for Town Warrant articles (excluding Articles 19 and 21 held for collective bargaining amounts)"
-    - "Approved support for Articles 19 and 21 (police and fire collective bargaining, amounts TBD)"
-    - "Approved motion supporting continuation of sustainability coordinator position"
-    - "Approved World Ocean Day proclamation for June 8, 2025"
-    - "Approved Make-A-Wish Day proclamation for May 3, 2025"
-    - "Approved Marblehead Counseling Center Community Champions Day proclamation for May 1, 2025"
-    - "Approved outdoor dining applications for Elia Verna and The Landing"
-    - "Approved declaration of dog 'Wyatt' at 24 Main Street as a dangerous dog"
-    - "Approved letter of support for sewer lining project CDS funding to Congressman Moulton, Senator Markey, and Senator Warren"
-    - "Approved notification letter to state historic preservation officer regarding Franklin Street Firehouse preservation restriction in perpetuity"
-    - "Approved consent agenda items including meeting minutes and building rentals"
-    - "Approved contracts including July 4th fireworks ($52,500), stormwater catch basin cleaning ($117,479), road and sidewalk improvements ($1,182,293), and other DPW contracts"
+    - "Approved support for town warrant articles (except Articles 19 and 21 held separately; 20 not listed in final motion)"
+    - "Approved support for Articles 19 and 21 (collective bargaining for police and fire) in amounts to be determined, 3 in favor, 1 opposed"
+    - "Approved motion supporting the ongoing existence of the sustainability coordinator position"
+    - "Approved consent agenda items including meeting minutes and Old Townhouse rental applications"
+    - "Approved contracts including July 4th fireworks ($52,500), stormwater catch basin cleaning ($117,479), road and sidewalk improvements option year ($1,182,293), crack sealing ($73,188), pavement marking option year (not to exceed $48,625), and Elm Street Park change order (not to exceed $15,975)"
+    - "Approved proclamation for World Ocean Day, June 8, 2025"
+    - "Approved proclamation for Make-A-Wish Day, May 3, 2025"
+    - "Approved proclamation for Marblehead Counseling Center Community Champions Day, May 1, 2025"
+    - "Approved letters of support to Congressman Moulton, Senators Markey and Warren for sewer lining project CDS funding"
+    - "Approved notification letter to state historic preservation officer re: Franklin Street Firehouse preservation restriction in perpetuity"
+    - "Declared dog 'Wyatt' at 24 Main Street a dangerous dog under MGL Chapter 140"
     - "Approved letter of condolences to the Christiansen family"
   votes:
+    - motion: "Sale of $4,922,598 bond anticipation notes at 4%"
+      result: "in favor (unanimous)"
+    - motion: "Ratification of notice of sale and preliminary/final official statements"
+      result: "in favor (unanimous)"
+    - motion: "SEC Rule 15c2-12 disclosure undertaking authorization"
+      result: "in favor (unanimous)"
+    - motion: "Post-issuance tax compliance and continuing disclosure procedures"
+      result: "in favor (unanimous)"
+    - motion: "Authorization for board members and treasurer to execute related documents"
+      result: "in favor (unanimous)"
     - motion: "Promote Eric Statin to lieutenant"
       result: "in favor (unanimous)"
     - motion: "Promote Andrew DeMar to sergeant"
       result: "in favor (unanimous)"
-    - motion: "Sale of $4,922,598 bond anticipation notes at 4%"
+    - motion: "Automatic amusement device license for Rich Sha"
       result: "in favor (unanimous)"
-    - motion: "Ratify official statements for bond notes"
+    - motion: "Support town warrant articles except Articles 19 and 21"
       result: "in favor (unanimous)"
-    - motion: "Authorize SEC Rule 15c2-12 disclosure undertaking"
-      result: "in favor (unanimous)"
-    - motion: "Authorize post-issuance tax compliance procedures"
-      result: "in favor (unanimous)"
-    - motion: "Authorize execution of related bond certificates"
-      result: "in favor (unanimous)"
-    - motion: "Support Town Warrant articles except 19 and 21"
-      result: "in favor (unanimous)"
-    - motion: "Support Articles 19 and 21 (police and fire collective bargaining)"
+    - motion: "Support Articles 19 and 21 (collective bargaining police and fire)"
       result: "in favor (3 to 1)"
     - motion: "Support sustainability coordinator position"
       result: "in favor (unanimous)"
-    - motion: "Approve automatic amusement device license"
+    - motion: "Consent agenda items"
       result: "in favor (unanimous)"
-    - motion: "Approve outdoor dining applications (Elia Verna and The Landing)"
+    - motion: "Contracts and change orders"
       result: "in favor (unanimous)"
-    - motion: "Declare dog Wyatt a dangerous dog"
+    - motion: "World Ocean Day proclamation"
       result: "in favor (unanimous)"
-    - motion: "Send letters of support for sewer lining CDS funding"
+    - motion: "Make-A-Wish Day proclamation"
       result: "in favor (unanimous)"
-    - motion: "Authorize preservation restriction notification for Franklin Street Firehouse"
+    - motion: "Marblehead Counseling Center Community Champions Day proclamation"
+      result: "in favor (unanimous)"
+    - motion: "Letters of support for sewer lining CDS funding"
+      result: "in favor (unanimous)"
+    - motion: "Franklin Street Firehouse preservation restriction notification"
+      result: "in favor (unanimous)"
+    - motion: "Declare dog 'Wyatt' dangerous"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: public-comment
-    topic_confidence: 0.98
+    topic_confidence: 0.97
     start_seconds: 2
     end_seconds: 466
-    headline: "Union rep cites bad-faith bargaining complaints; resident raises hiring concerns"
-    dek: "A representative of the Marblehead Municipal Employees Union cited state labor complaints and urged the board to settle three open contracts before town meeting."
+    headline: "Union rep and resident raise concerns over stalled municipal contracts and new town hires"
+    dek: "A Marblehead Municipal Employees Union representative cited DLR complaints and urged the board to settle three unresolved contracts before town meeting."
     summary: |
-      A speaker on behalf of the Marblehead Municipal Employees Union stated that the Massachusetts Department of Labor Relations had issued pre-complaints finding credible information of surface bargaining and bad-faith bargaining by the town's bargaining team as of April 2024, with two additional complaints filed more recently. The speaker noted three unresolved municipal union contracts needing funding at the upcoming town meeting and cited MGL Chapter 150E Section 7BI regarding the employer's obligation to submit agreements to the legislative body within 30 days. The speaker requested the board settle contracts or call a special town meeting.
+      A representative of the Marblehead Municipal Employees Union addressed the board, stating that the Massachusetts Department of Labor Relations had issued pre-complaints after finding credible information supporting surface bargaining and bad faith bargaining by the town's bargaining team as of April 2024, with two additional complaints filed more recently. The speaker noted that three unresolved municipal union contracts require funding at town meeting, now approximately 10 days away, and cited MGL Chapter 150E Section 7B1 requiring the employer to submit agreements to the legislative body within 30 days of execution.
       
-      A second resident raised concerns about unfilled positions at the electric light department, a new position created at a substantial salary for a board member, and a $90,000 transfer station position. He urged a hiring freeze until existing contracts are settled and expressed concern about the financial burden on lower-paid town employees and older residents.
-    key_speakers: ["Resident (Jersey Street, on behalf of MMEU)", "Jordan Roosevelt (resident)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.92
+      A second resident, Jordan Roosevelt, raised concerns about new town positions being created — including a transfer station role reportedly paying approximately $90,000 — while existing contracts remain unsettled. He also commented on vacancies at the electric light department, and advocated for a hiring freeze until contracts are resolved.
+    key_speakers: ["Resident (Jersey Street, MMEU representative)", "Jordan Roosevelt (resident)"]
+  - topic: elections-procedural
+    topic_confidence: 0.95
     start_seconds: 466
-    end_seconds: 961
-    headline: "Town Administrator updates voting location plan and free cash certification status"
-    dek: "The elevator at Abbott Hall will not be upgraded until after July 4th, allowing it to serve as a polling place; free cash certification is ongoing with DLS ready to process."
+    end_seconds: 938
+    headline: "Polling location changes proposed: Abbott Hall available; high school to host four districts"
+    dek: "The town administrator reported the Abbott Hall elevator project is delayed past the 4th of July, keeping it available as a polling place, with a proposal to move four districts to the Marblehead High School field house."
     summary: |
-      The Town Administrator reported that the Old Townhouse lift, which overheats under heavy use, cannot serve as a polling place for the June election. The Abbott Hall elevator upgrade, originally scheduled to begin in June, has been delayed because the vendor cannot obtain parts in time; the state has agreed to allow work to begin after July 4th activities. The proposed polling arrangement is that districts one and two vote at Abbott Hall and districts three through six vote at Marblehead High School field house. A formal vote is planned for the next Select Board meeting before the 20-day-prior deadline.
+      The town administrator updated the board on polling location logistics for the upcoming June election. The Old Townhouse lift overheats under heavy use and is not viable as a polling place. Abbott Hall's elevator project — requiring parts not yet available — has been rescheduled to begin after the 4th of July, making Abbott Hall available for the election.
       
-      On free cash certification, the Town Administrator stated that reconciliation between the treasurer's records and accounting records is ongoing with assistance from CLA, and that the Department of Local Services is ready to process once the town submits. He expected certification before town meeting and noted a new software system would automate processes going forward.
+      The proposed plan, to be voted on at the next meeting (no later than May 21, the statutory 20-day deadline before the election), is for Districts 1 and 2 to vote at Abbott Hall and Districts 3, 4, 5, and 6 to vote at the Marblehead High School field house. The field house has been ADA-certified as a polling place. The town clerk and Chief Gilland were cited as coordinating the logistics.
+    key_speakers: ["Town Administrator"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 841
+    end_seconds: 961
+    headline: "Free cash certification still pending; finance staff working nights and weekends to reconcile accounts"
+    dek: "The town administrator reported that free cash certification is ongoing, with the Department of Local Services ready to process once accounting and treasurer records are reconciled."
+    summary: "The town administrator reported that free cash certification remains in progress due to reconciliation challenges between the accounting and treasurer's offices stemming from the old software system. Staff have been working evenings and weekends to resolve the discrepancies. The Department of Local Services is aware of the timeline and is ready to certify before town meeting. A new software system is expected to automate these processes beginning next fiscal year."
     key_speakers: ["Town Administrator"]
   - topic: public-safety
-    topic_confidence: 0.99
+    topic_confidence: 0.98
     start_seconds: 961
-    end_seconds: 1619
-    featured: true
-    headline: "Select Board approves police promotions of Eric Statin to lieutenant and Andrew DeMar to sergeant"
-    dek: "Chief King recommended both officers from a civil service list following a captain's retirement that created a chain of vacancies; promotions are effective May 4, 2025."
+    end_seconds: 1605
+    headline: "Board approves promotions of Eric Statin to lieutenant and Andrew DeMar to sergeant, effective May 4"
+    dek: "Police Chief King recommended both promotions from a civil service list following a captain's retirement that created a cascading vacancy."
     summary: |
-      Police Chief King explained that a captain's retirement created a provisional captain vacancy, which in turn opened a lieutenant slot and then a sergeant slot. Because a valid civil service list exists, the board could approve permanent promotions rather than provisionals. The chief described both candidates:
+      Chief King explained that a captain's retirement approximately one month prior created a chain of vacancies. John Lent was provisionally promoted to captain, opening a lieutenant slot; filling the lieutenant slot opens a sergeant position. Both Eric Statin (11 years as sergeant, cited for technology expertise and sound decision-making under pressure) and Andrew DeMar (9-year veteran, FTO, drone unit member) were at the top of the existing civil service list.
       
-      - **Eric Statin** (promoted to lieutenant): 11 years as sergeant, described as technically proficient in IT administration, certified boat captain, member of honor guard and bike unit, and a decisive supervisor who has handled serious incidents.
-      - **Andrew DeMar** (promoted to sergeant): nine-year veteran, FTO trainer for incoming officers, member of the drone unit certified as an FAA Part 107 pilot.
-      
-      Both officers grew up in Marblehead and are college graduates. A formal promotion ceremony with oath of office is planned for mid- to late June. Both motions passed unanimously.
-    key_speakers: ["Police Chief King", "Eric Statin (promoted to lieutenant)", "Andrew DeMar (promoted to sergeant)"]
+      The board approved both promotions unanimously, effective May 4, 2025. The chief noted a formal promotion ceremony with swearing-in is planned for mid-to-late summer.
+    key_speakers: ["Chief King (Police Chief)", "Town Administrator"]
   - topic: permits-zoning
-    topic_confidence: 0.85
+    topic_confidence: 0.88
     start_seconds: 1825
-    end_seconds: 1928
-    headline: "Board approves automatic amusement device license for arcade prize machine"
-    dek: "Chris Patel received approval for a Key Master prize arcade machine at a Marblehead location."
-    summary: "The board considered a licensing request from Rich Sha of Marblehead for an automatic amusement device — a Key Master arcade machine (model 3516, serial 130401164) where players can win prizes such as tablets. The applicant, Chris Patel, appeared online to answer questions. The motion passed unanimously."
+    end_seconds: 1974
+    headline: "Board approves automatic amusement device license for Key Master arcade machine at local business"
+    dek: "Chris Patel, appearing online, described the device as a Key Master prize-redemption arcade machine; the board approved the license unanimously."
+    summary: "The board considered a licensing request from Rich Sha of Marblehead for an automatic amusement device — a Key Master prize-redemption arcade machine (model 3516, serial number 130401640) — at a local business. Applicant Chris Patel confirmed the nature of the device online. The motion was approved unanimously."
     key_speakers: ["Chris Patel (applicant, online)"]
   - topic: bonding-capital
-    topic_confidence: 0.99
+    topic_confidence: 0.97
     start_seconds: 1974
-    end_seconds: 2446
-    headline: "Board approves $4.92M bond anticipation notes at 4% for roads, sidewalks, and building roofs"
-    dek: "The BAN rolls over $2,312,000 from the prior year and adds $2,610,598 in new borrowing for roadway, Mary Alley roof, and Franklin Street fire station roof projects."
+    end_seconds: 2453
+    featured: true
+    headline: "Board approves $4.9M bond anticipation note at 4%, adding $2.6M in new borrowing for roads and roofs"
+    dek: "The town rolled over $2.3M in existing BANs and added $2.6M for road/sidewalk repair, Mary Alley roof, and Franklin Street fire station roof at a 4% rate with a $25,893 premium."
     summary: |
-      Finance Director and Town Treasurer Tammy Ello presented the results of a competitive bid process for bond anticipation notes. Four bids were received; the winning bid was Fidelity Capital Markets at par plus a premium of $25,892.86 at an interest rate of 4%, payable May 15, 2026.
+      Town Treasurer Tammy Ello presented the results of a competitive BAN sale. Four bids were received; the successful bid came from Fidelity Capital Markets at 4% interest. The total note amount was $4,922,598, comprising:
       
       | Component | Amount |
       |---|---|
-      | Rollover from prior BAN | $2,312,000 |
-      | New money (roadway/sidewalk, Mary Alley roof, Franklin St. fire station roof/gutters) | $2,610,598 |
-      | **Total BAN** | **$4,922,598** |
+      | Rollover of existing BAN | $2,312,000 (approx.) |
+      | New borrowing | $2,610,598 |
       
-      The treasurer explained that short-term BANs are used until enough of the authorized funds will be spent to justify a long-term bond; only the interest payment (not principal) hits the tax rate during the BAN period. The existing weighted-average long-term borrowing cost was noted at approximately 3.47%. The board passed five related votes unanimously covering the sale, ratification of official statements, SEC Rule 15c2-12 disclosure undertaking, post-issuance tax compliance procedures, and authorization for execution of related documents.
-    key_speakers: ["Tammy Ello (Town Treasurer / Finance Director)"]
+      New money items include roadway and sidewalk repair, the Mary Alley roof replacement, and the Franklin Street fire station roof and gutter replacement. Notes are dated May 15, 2025 and payable May 15, 2026. A premium of $25,892.86 was received, to be applied against issuance costs.
+      
+      The treasurer explained that long-term bonding is deferred until enough project funds will be drawn down to justify it, using annual cash flow projections with department heads. The board approved all five required votes — note sale, ratification of official statements, SEC Rule 15c2-12 undertaking, post-issuance compliance procedures, and authorization of signatories — unanimously.
+    key_speakers: ["Town Treasurer (Tammy Ello)", "Finance Director (Alicia, referenced)", "Town Administrator"]
   - topic: bonding-capital
-    topic_confidence: 0.97
+    topic_confidence: 0.95
     start_seconds: 2453
     end_seconds: 4434
-    headline: "Mary Alley building renovation estimated at $5.75M for HVAC, roof, ADA, and life-safety upgrades"
-    dek: "Engineers from NV5 presented three HVAC options; the board reviewed a recommended VRF heat-pump system with phased construction and a full ADA compliance package for Article 33 at town meeting."
+    headline: "NV5 presents $5.75M Mary Alley building renovation package including HVAC, roof, ADA, and sprinklers"
+    dek: "Engineers recommended a VRF heat-pump system as the preferred option, projecting full electrification and a phased 14-month construction timeline; Capital Planning Committee review pending."
     summary: |
-      The Town Administrator provided context: Mary Alley was built as a municipal hospital in the 1950s and repurposed as municipal offices. Current problems include a failing 1950s steam heating system, window air conditioners driving up energy costs, space heaters creating fire risk, a non-functional elevator, and ADA deficiencies including round door knobs.
+      Town Administrator Brett Kear introduced the Mary Alley presentation, noting the 1950s-era former municipal hospital building has a failing steam heat system, window air conditioners that drive up costs, space heaters that pose fire risk, a non-functioning elevator, and significant ADA deficiencies. Engineers Dan Wal and Sean (NV5) walked through a feasibility study examining three HVAC options:
       
-      NV5 mechanical engineer Dan Wall presented three options:
-      
-      | Option | System | Estimated Cost |
+      | Option | Description | Est. Cost |
       |---|---|---|
-      | 1 | ~80 separate split units | Lowest |
-      | 2 | Chilled water / hot water hydronic with energy recovery | Higher |
-      | 2A | Option 2 plus geothermal wells | Highest; insufficient site for full load |
-      | **3 (recommended)** | **VRF heat-pump system (variable refrigerant flow)** | **~$5.75M total package** |
+      | Option 1 | ~80 individual split units | Lowest |
+      | Option 2 | Chilled water / hot water system (50-year life) | Highest |
+      | Option 2A | Option 2 + geothermal wells (insufficient site area) | Highest+ |
+      | Option 3 (recommended) | VRF variable refrigerant flow heat pump (25-yr life) | $6.2M total scope |
       
-      Option 3 eliminates fossil fuel use entirely, allows phased construction (approximately four phases moving staff within the building), and has an expected service life of approximately 25 years. The total $5.75M package for Article 33 includes:
-      - HVAC / VRF system
-      - Roof replacement with 5 inches of rigid insulation
-      - Elevator modernization (existing shaft retained)
-      - ADA upgrades (counters, hardware, drinking fountains, bathrooms)
-      - Fire sprinkler installation
-      - Fire alarm system replacement (currently 1980s-era)
-      - Asbestos remediation (steam pipe insulation, some ceiling/floor tile areas)
-      - Electrical service upgrade
+      Option 3 is recommended because it: supports phased construction (four phases, ~14 months total); achieves full electrification/zero fossil fuel; suits retrofit of the existing boomerang-shaped floor plan; and avoids full building shutdown.
       
-      The town already holds approximately $480,000 from a prior article, reducing the new ask to approximately $5,750,000. A grant of approximately $88,000–$92,000 from the state Disabilities Commission was noted as a possibility. Windows were not included in the $5.75M figure but are tracked separately under the capital plan. The Capital Planning Committee had not yet reviewed the project; a meeting was being scheduled. The board took no vote on the article itself — that will occur at town meeting.
-    key_speakers: ["Town Administrator (Brett Kear)", "Logan (Sustainability / Community Development staff)", "Dan Wall (NV5, mechanical engineer)", "Sean (NV5 engineer)"]
+      The $5.75M ask to town meeting (net of $480,000 already appropriated from a prior article) covers the HVAC system, roof replacement with 5 inches of rigid insulation, elevator modernization, ADA upgrades (counters, hardware, drinking fountains, accessible doors), fire sprinkler installation, 1980s fire alarm replacement, and asbestos remediation. Electrical service upgrades are included. Windows were noted as a separate capital plan item, with approximately half already replaced.
+      
+      Soft cost and contingency estimates were discussed: the engineers noted 15% design/OPM fees and a 10% construction contingency are more typical than the 30% and 15% initially shown. A $90,000 ADA grant (Deborah Beach program) and potential Mass Preservation Project Fund grants were cited as possible offsets.
+      
+      Capital Planning Committee review is scheduled for the following week before town meeting. Disabilities Commission chair has been in communication about the ADA scope.
+    key_speakers: ["Town Administrator (Brett Kear)", "Logan (Sustainability/Community Development staff)", "Dan Wal (NV5, mechanical engineer)", "Sean (NV5, engineer)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 4569
-    end_seconds: 5282
-    headline: "Board votes to support most 2025 Annual Town Warrant articles; Articles 19 and 21 pass 3-1"
-    dek: "Collective bargaining articles for police and fire (amounts TBD) passed on a 3-1 vote; all other listed articles passed unanimously; the board also voted to support the sustainability coordinator position."
+    end_seconds: 5480
+    headline: "Board votes to support most 2025 annual town meeting warrant articles; collective bargaining articles pass 3-1"
+    dek: "Articles covering capital, equipment, revolving funds, zoning, and other items were approved unanimously; collective bargaining articles for police and fire passed with one dissent."
     summary: |
-      The board voted to support the following articles on the 2025 Annual Town Warrant (selected figures):
+      The board reviewed the 2025 Annual Town Warrant articles and voted to support all articles except those on hold (Articles 19 and 21 — collective bargaining for police and fire — voted separately). Key amounts include:
       
-      | Article | Description | Amount |
-      |---|---|---|
-      | 4 | Unpaid bills | $26,688.72 |
-      | 5 | Departmental revolving funds | $5,199,535 |
-      | 6 | Equipment purchases | $301,741 |
-      | 7 | Lease-purchase | $491,218 |
-      | 8 | Capital improvements, public buildings | $1,236,958 |
-      | 9 | Walls and fences | $50,000 |
-      | 10 | Stormwater construction | $400,000 |
-      | 11 | Water/sewer construction | $1,236,000 / $1,599,000 |
-      | 12–15 | Pay scale reclassifications | 2% |
-      | 17 | Essex North Shore Ag/Tech | $627,323 |
-      | 33 | Mary Alley HVAC | $5,750,000 |
+      - Article 4: Unpaid bills — $26,689
+      - Article 5: Departmental revolving funds — $5,199,535
+      - Article 6: Equipment purchases — $301,741
+      - Article 7: Lease-purchase — $491,218
+      - Article 8: Capital improvements for public buildings — $1,236,958
+      - Article 9: Walls and fences — $50,000
+      - Article 10: Stormwater construction — $400,000
+      - Article 11: Water/sewer construction — $1,236,000 (water) + $1,599,000 (sewer)
+      - Article 17: Essex North Shore Agricultural and Technical — $627,323
+      - Article 33: Mary Alley HVAC — $5,750,000
       
-      Articles 19 and 21 (collective bargaining for police and fire, amounts TBD) passed 3 in favor, 1 opposed. The board also voted unanimously to support the continued existence of the sustainability coordinator position in response to a citizens' article (Article 47) proposing its elimination.
-    key_speakers: ["Town Administrator"]
+      Articles 19 and 21 (collective bargaining for police and fire, amounts to be determined) passed 3 to 1.
+      
+      The board also voted unanimously to support the continuation of the sustainability coordinator position in response to a citizen warrant article (Article 47) proposing to eliminate the role.
+    key_speakers: ["Town Administrator", "Finance Director"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 4787
+    end_seconds: 5008
+    headline: "Board supports sustainability coordinator position 4-0 ahead of town meeting citizen article seeking elimination"
+    dek: "Board members cited grant revenue, project management work, and ADA compliance contributions as justification; the citizen article is non-binding advisory."
+    summary: "A citizen warrant article (Article 47) proposes that town meeting vote to eliminate the sustainability coordinator position. Board members unanimously moved to support keeping the position, citing over $1 million in infrastructure-related grants, $92,000 in ADA grants, and contributions to the MBTA 3A zoning process. The town administrator explained the position was the first hire in the newly created Department of Community Development and Planning before the director was in place, leading to the coordinator taking on a broader portfolio than the title implies. The department is now fully staffed with a director, grant coordinator, and town planner, and roles are being aligned under new director Brendan."
+    key_speakers: ["Town Administrator (Brett Kear)", "Logan (Sustainability Coordinator)", "Select Board members"]
   - topic: admin-housekeeping
     topic_confidence: 0.88
     start_seconds: 5487
     end_seconds: 5715
-    headline: "Board approves consent agenda, fireworks contract, and multiple DPW/road contracts"
-    dek: "Contracts approved include July 4th fireworks ($52,500), stormwater catch basin cleaning ($117,479), and road/sidewalk improvements ($1,182,293)."
+    headline: "Board approves consent agenda, fireworks contract, road contracts, and Elm Street Park change order"
+    dek: "Contracts totaling over $1.4M for road, sidewalk, pavement maintenance, and stormwater work were approved alongside a $52,500 July 4th fireworks contract."
     summary: |
-      The board approved the consent agenda covering meeting minutes from March 12 through April 9, 2025, and two Old Townhouse rental events for Sustainable Marblehead.
+      The board approved the consent agenda including meeting minutes from March 12 through April 9, 2025, and Old Townhouse rental applications for Sustainable Marblehead events.
       
-      Contracts approved include:
+      Contracts approved:
       
-      | Contract | Vendor | Amount / Term |
+      | Item | Vendor | Amount |
       |---|---|---|
       | July 4th fireworks | Nic Pyrotechnical | $52,500 |
-      | Stormwater catch basin cleaning | BMC Corporation | $117,479 (May 2025–June 2026) |
-      | Road/sidewalk improvements (option year 1) | B&R Contracting | $1,182,293 (FY26) |
-      | Pavement crack sealing/seal coating (option year 1) | Indus | $73,188 (FY26) |
-      | Pavement marking (option year 2) | K5 | Not to exceed $48,625 |
-      | Elm Street Park change order #4 (well investigation) | — | Up to $15,975 ($5,675/day, max 3 days) |
-      | Private drain connection | Richard and Margaret Goldbar | Fee-based |
+      | Stormwater catch basin cleaning (14 months) | BMC Corporation | $117,479 |
+      | Road/sidewalk improvements option year (FY26) | BNR Contracting | $1,182,293 |
+      | Crack sealing/seal coating option year (FY26) | Indus | $73,188 |
+      | Pavement marking option year (FY26) | K5 | ≤$48,625 |
+      | Elm Street Park change order (well decommissioning) | — | ≤$15,975 |
+      
+      The fireworks contract is funded through the fireworks donation account.
     key_speakers: ["Town Administrator"]
   - topic: recreation-events
-    topic_confidence: 0.88
-    start_seconds: 5752
-    end_seconds: 5943
-    headline: "Board approves World Ocean Day, Make-A-Wish Day, and Counseling Center proclamations"
-    dek: "Three proclamations were approved covering environmental awareness, a local child's Make-A-Wish celebration on May 3, and mental health community champions."
+    topic_confidence: 0.85
+    start_seconds: 5715
+    end_seconds: 5910
+    headline: "Board approves World Ocean Day and Make-A-Wish Day proclamations; outdoor dining licenses for two restaurants"
+    dek: "Outdoor dining was approved for Elia Verna and The Landing for the 2025 season, and three proclamations were voted."
     summary: |
-      The board approved three proclamations:
-      1. **World Ocean Day** — June 8, 2025, requested by Sustainable Marblehead; to be formally read at an appropriate venue on that date.
-      2. **Make-A-Wish Day** — May 3, 2025, honoring a 9-year-old Marblehead resident named Sophia receiving a wish; festivities include a walk-and-roll event, open house from 1–4 PM, and participation from more than 14 local businesses.
-      3. **Marblehead Counseling Center Community Champions Day** — May 1, 2025, recognizing Ann Kat Disco (community champion) and Camilla Ferrera Gomez (scholarship winner) during Mental Health Awareness Month.
-  - topic: permits-zoning
-    topic_confidence: 0.87
-    start_seconds: 5991
-    end_seconds: 6078
-    headline: "Board approves outdoor dining licenses for Elia Verna and The Landing"
-    dek: "Both applications are subject to standard approvals from police, fire, building commissioner, and town administrator, continuing a process established last year."
-    summary: "The board approved temporary outdoor dining applications for Elia Verna at 261 Washington Street and The Landing at 81 Front Street. Both are conditioned on receipt of required forms, fees, insurance, and approvals from police, fire, the building commissioner, and town administrator. The Town Administrator noted this is the second year of the licensing process and both locations were well-vetted in the prior year."
-    key_speakers: ["Town Administrator"]
+      The board approved proclamations for World Ocean Day (June 8, 2025), Make-A-Wish Day (May 3, 2025) honoring 9-year-old Sophia as an upcoming wish recipient, and Marblehead Counseling Center Community Champions Day (May 1, 2025) honoring Ann Kat Disco and scholarship winner Camilla Ferrera Gomez.
+      
+      Outdoor dining applications were approved for Elia Verna (261 Washington Street) and The Landing (81 Front Street), subject to required forms, fees, insurance, and approvals from police, fire, building commissioner, and town administrator.
+    key_speakers: ["Select Board Chair"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 6134
+    start_seconds: 5910
     end_seconds: 6205
-    headline: "Board approves letters of support for federal sewer lining project funding"
-    dek: "FY25 CDS funding was awarded but not released by the current federal administration; Senator Markey requested reapplication for FY26."
-    summary: "At the request of the school facilities superintendent, the board authorized letters of support for congressional directed spending for the sewer lining project — part of a 10-year infiltration and inflow removal construction program — to Congressman Seth Moulton, Senator Ed Markey, and Senator Elizabeth Warren. The board authorized the chair to sign letters on behalf of the board."
+    headline: "Board authorizes support letters to federal delegation for sewer lining CDS funding after FY25 award not released"
+    dek: "Senator Markey requested resubmission for FY26 after the current administration declined to release the previously awarded FY25 funding."
+    summary: "Superintendent Chu requested that the board send letters of support to Congressman Seth Moulton's office and Senators Ed Markey and Elizabeth Warren for congressional directed spending for the town's sewer lining infiltration and inflow removal project. The town was awarded FY25 CDS funding but the current federal administration declined to disburse it; Senator Markey requested the town reapply for FY26. The board approved the letters unanimously and authorized the chair to sign."
+    key_speakers: ["Select Board Chair", "Town Administrator"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 6205
+    end_seconds: 6341
+    headline: "Board declares dog 'Wyatt' at 24 Main Street a dangerous dog under MGL Chapter 140"
+    dek: "Following a hearing and recommendation from the animal control officer, the board voted unanimously to impose conditions on the owner."
+    summary: "Following a prior hearing and recommendation from the assistant animal control officer, the board voted unanimously to declare the dog named Wyatt, residing at 24 Main Street, a dangerous dog under MGL Chapter 140, Section 157C(1)–(5), and to notify the owner in writing of the required compliance measures."
+    key_speakers: ["Select Board Chair"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
-    start_seconds: 6252
-    end_seconds: 6292
-    headline: "Board declares dog 'Wyatt' at 24 Main Street a dangerous dog"
-    dek: "Following an Animal Control officer hearing, the board voted to declare the dog dangerous and require owner compliance with MGL Chapter 140 Section 157C."
-    summary: "Following a hearing conducted by the Animal Control officer and a recommendation from the assistant town administrator, the board voted unanimously to declare the dog known as Wyatt, residing at 24 Main Street, a dangerous dog. The owner is required to comply with MGL Chapter 140, Section 157C, subsections 1 through 5, and will be notified in writing."
-  - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 6292
+    start_seconds: 6341
     end_seconds: 6687
-    headline: "Annuation Day revived for May 10; Franklin Street Firehouse preservation restriction extended in perpetuity"
-    dek: "Grant Coordinator Donna Terrell announced the return of the ancient boundary-walk tradition on May 10, and the board voted to extend a historic preservation restriction to support a window replacement grant."
+    headline: "Perambulation Day revived for May 10; Franklin Street Firehouse preservation restriction approved in perpetuity"
+    dek: "Grant Coordinator Donna Terrell announced the return of the annual boundary walk after a COVID hiatus; the board also authorized a preservation restriction amendment needed for a window replacement grant application."
     summary: |
-      **Annuation Day (May 10, 2025):** Grant Coordinator Donna Terrell described plans to restart the legally required select board boundary-walk tradition, suspended since COVID. The event begins at Chandler Hovey Park at 10 AM, will feature town historian Don Dolliver, and will split into two groups covering approximately 10 sites. Sustainable Marblehead is providing water. The last event drew over 100 participants.
+      Grant Coordinator Donna Terrell presented plans for the revival of Annual Perambulation Day on Saturday, May 10, 2025 at 10 a.m., starting at Chandler Hovey Park. Town historian Don Dolliver will give a brief presentation; Sustainable Marblehead will provide water. The event had not been held since before COVID.
       
-      **Franklin Street Firehouse Preservation Restriction:** Donna Terrell also explained that a pending Massachusetts Preservation Project Fund grant for 22 windows at the Franklin Street Fire Station requires the existing 10-year preservation restriction agreement (signed August 2022) to be extended to perpetuity. The board voted unanimously to authorize a notification letter to the State Historic Preservation Officer confirming the town's intention to record the restriction in perpetuity, and authorized the chair to sign on behalf of the board.
-    key_speakers: ["Donna Terrell (Grant Coordinator)"]
+      Separately, the board voted to authorize a notification letter to the state historic preservation officer confirming the town's intent to record a preservation restriction on the Franklin Street Firehouse in perpetuity (replacing a 10-year restriction signed in August 2022). This change is required to proceed with a Massachusetts Preservation Project Fund grant application for 22 windows at the firehouse.
+    key_speakers: ["Donna Terrell (Grant Coordinator)", "Logan (Community Development staff)", "Town Administrator (Brett Kear)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.75
     start_seconds: 6687
-    end_seconds: 6967
-    headline: "Board remembers Harry Christiansen, longtime select board member and Marine Corps Silver Star recipient"
-    dek: "Christiansen, who passed away Easter Sunday, was remembered as a longtime lawyer, select board member, and decorated Vietnam veteran."
-    summary: "Board members acknowledged the passing of Harry Christiansen, who died on Easter Sunday. He was described as a longtime Marblehead lawyer, long-serving select board member, and a Marine Corps tank commander who received the Silver Star in Vietnam for single-handedly suppressing an ambush. Board members who had served with him recalled his outspoken character and deep commitment to the community. His son Andrew Christiansen serves on the Planning Board. Visiting hours were noted for Friday May 2nd with services May 3rd. The board voted unanimously to send a letter of condolences to the Christiansen family."
+    end_seconds: 6961
+    headline: "Board honors passing of longtime select board member and Marine Corps veteran Harry Christiansen"
+    dek: "Two current board members who served alongside Christiansen shared remembrances; the board voted to send condolences to his family."
+    summary: "Board members noted the passing of Harry Christiansen on Easter Sunday. Christiansen was a long-serving select board member, a local attorney, and a Marine Corps tank commander and Silver Star recipient for actions in Vietnam. Two board members recalled serving alongside him. Visiting hours are May 2 and services on May 3. The board voted unanimously to send a letter of condolences to the Christiansen family."
+    key_speakers: ["Select Board members"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

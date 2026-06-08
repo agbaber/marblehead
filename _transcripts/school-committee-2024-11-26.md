@@ -11,11 +11,13 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
   headline: "Marblehead teachers strike ends; schools reopen Nov. 27 after tentative agreement"
-  summary: "The Marblehead School Committee and the Marblehead Education Association reached tentative agreements ending a strike of roughly 15-16 days. Schools will reopen Wednesday, November 27, 2024, which is an early release day. The four-year contract includes wage increases ranging from approximately 10.5% to 18% depending on unit and step, plus 12 weeks of paid parental leave and a joint safety committee. Officials noted the contract is not retroactive and that strike costs to the town were estimated at at least $20,000 per day, with a Prop 2½ override discussion expected to begin ahead of a May town meeting."
+  summary: "The Marblehead School Committee and Marblehead Education Association reached tentative agreements on November 26, 2024, ending a roughly 15-day teacher strike. Schools are set to reopen on Wednesday, November 27 — an early release day — with a soft-start plan for students. The four-year contract includes wage increases ranging from approximately 10.5% to 18% across five bargaining units, paid parental leave of up to 12 weeks, and a joint safety committee. Officials noted the contract is not retroactive to August, with forgone retroactivity offsetting strike costs estimated at least $20,000 per day."
   decisions:
-    - "Approved tentative agreements between Marblehead School Committee and Marblehead Education Association covering five bargaining units"
+    - "Approved tentative agreements with five MEA bargaining units covering a four-year term"
+    - "Approved school reopening for Wednesday, November 27, 2024"
 
 topic_segments:
   - topic: labor-personnel
@@ -23,33 +25,27 @@ topic_segments:
     start_seconds: 14
     end_seconds: 1118
     featured: true
-    headline: "Teachers strike ends; four-year contract ratified, schools reopen Nov. 27"
-    dek: "After roughly 15-16 days on strike, MEA and School Committee reached a tentative agreement covering wages, parental leave, and a joint safety committee."
+    headline: "Teacher strike ends; schools reopen Nov. 27 under four-year tentative agreement"
+    dek: "The School Committee and MEA reached a tentative agreement on November 26 after roughly 15 days on strike, with wage increases up to approximately 18% and new paid parental leave."
     summary: |
-      ### Settlement Announcement
+      School Committee Chair Jen Schaffner announced that the Marblehead School Committee and the Marblehead Education Association reached tentative agreements covering five bargaining units, ending a strike that lasted approximately 15 days. Schools will reopen on Wednesday, November 27, 2024 — an early release day — to allow a soft transition back for students.
       
-      School Committee Chair Jen Schaffner announced that the Marblehead School Committee and the Marblehead Education Association reached tentative agreements, ending the teacher strike. Schools will reopen for students on **Wednesday, November 27, 2024**, an early release day.
+      **Key contract terms:**
       
-      ### Contract Terms
+      | Provision | Detail |
+      |---|---|
+      | Contract length | Four years |
+      | Wage increases | Approximately 10.5%–18% (blended across steps, lanes, and units) |
+      | Paid parental leave | Up to 12 weeks (new) |
+      | Joint safety committee | New joint body to report recommendations to the School Committee |
+      | Retroactivity | None — contract effective date of ratification (Nov. 26, 2024) |
       
-      - **Duration:** Four years
-      - **Wage increases:** Approximately 10.5%–18% across five bargaining units (blended rate; varies by step and lane)
-      - **Paid parental leave:** Up to 12 weeks added for all units
-      - **Joint safety committee:** New committee to identify building safety concerns and report recommendations to the School Committee
-      - **Retroactivity:** Contract is **not** retroactive; it takes effect from the date of ratification
+      **Strike costs:** Town Administrator Thatcher Keer estimated strike costs at a minimum of $20,000 per day, covering police, student meals, and court filing fees (excluding attorney negotiating fees). In lieu of the union absorbing those costs in a return-to-work agreement, the parties agreed not to make the contract retroactive.
       
-      ### Strike Costs
+      **Override implications:** School Committee Chair Schaffner noted that funding the new contract will require a Proposition 2½ override. The budget process has already begun; a finance meeting was noted for approximately December 11. Officials indicated public forums and a transparent budget process would follow, with a town meeting vote anticipated in May and a ballot referendum in June.
       
-      Town Administrator Thatcher Keer estimated municipal strike costs at **at least $20,000 per day**, covering police presence, student meals, and court filing fees (not including negotiating attorney fees). In lieu of the union absorbing those costs in a return-to-work agreement, the committee declined to agree to retroactive pay.
-      
-      ### Path to Funding
-      
-      Officials noted that funding the new contract will require a **Proposition 2½ override**, with the budget process already underway. A key finance projection meeting was referenced for approximately December 11. Town meeting is scheduled for May, with a potential override ballot in June. Officials emphasized the community would need to advocate for the override, as the School Committee is legally prohibited from promoting it.
-      
-      ### How the Deal Came Together
-      
-      Chair Schaffner and fellow member Sarah Fox credited MEA bargaining leader Mike Giardi for focusing negotiations on local Marblehead needs. Town Administrator Thatcher Keer was credited with working daily throughout the process. State-level support — including outreach from Governor Healey, Lieutenant Governor, and Secretary of Education Patrick Tutwiler — was also acknowledged as a factor in expediting resolution.
-    key_speakers: ["Jen Schaffner (School Committee Chair, Bargaining Subcommittee)", "Sarah Fox (School Committee member)", "Thatcher Keer (Town Administrator)", "John Ou (Superintendent of Schools)"]
+      **State involvement:** Governor Healy publicly called on teachers to return to work on November 26. The Department of Labor Relations, the Secretary of Education, and the Governor's office were engaged throughout. Officials credited MEA bargaining leader Mike Giardi for helping focus negotiations on Marblehead-specific needs.
+    key_speakers: ["Jen Schaffner (School Committee Chair)", "Sarah Fox (School Committee Member)", "Thatcher Keer (Town Administrator)", "John Ou (Superintendent of Schools)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

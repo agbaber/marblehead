@@ -11,45 +11,75 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Marblehead School Committee presents best-and-final offer; teachers' strike continues amid contempt ruling"
-  summary: "School Committee bargaining subcommittee chairs Jen Schaffner and Sarah Fox held a press conference announcing a best-and-final contract offer to the Marblehead Education Association (MEA), which they said the union declined to accept. The committee stated the Superior Court found the union in contempt of an order to return to work, and that court-ordered fact-finding begun that morning was rejected by the MEA, which sought to use the fact-finder only as a mediator. The committee's offer would cost $6.4 million by end of year four, requiring a Proposition 2½ override estimated to add approximately $334.60 to the average tax bill; the union's latest proposal was described as carrying an $8 million price tag."
+  headline: "Marblehead School Committee describes impasse as teachers' strike enters fact-finding phase"
+  summary: "School Committee Bargaining Subcommittee chairs Jen Schaffner and Sarah Fox held a press conference describing the status of contract negotiations with the Marblehead Education Association. The committee's best-and-final offer would raise average teacher salary above $100,000 and top salary to $113,300, at a four-year cost of $6.4 million; the union's latest proposal carried an $8 million price tag. A court-ordered fact-finding session was held that morning, but the MEA declined to engage in fact-finding and insisted the appointee serve as a mediator instead."
 
 topic_segments:
   - topic: labor-personnel
     topic_confidence: 0.97
     start_seconds: 14
-    end_seconds: 967
+    end_seconds: 291
     featured: true
-    headline: "School Committee presents $6.4M best-and-final offer; MEA strike continues as fact-finding rejected"
-    dek: "Subcommittee chairs outlined contract terms, legal proceedings, and contempt order against the MEA at a press conference held away from school grounds due to safety concerns."
+    headline: "School Committee lays out best-and-final offer; MEA declines court-ordered fact-finding"
+    dek: "Committee offer would raise average teacher salary above $100K and top salary to $113,300; union proposal carries an $8M price tag the committee says is unaffordable."
     summary: |
-      School Committee Bargaining Subcommittee Chair Jen Schaffner and member Sarah Fox presented the committee's position at a press conference, explaining they had submitted a best-and-final offer during mediation. Key points included:
+      School Committee Bargaining Subcommittee chair Jen Schaffner and member Sarah Fox described the state of negotiations during a press conference held away from the public schools for safety reasons.
       
-      **Contract Offer Terms**
-      - Committee's proposal would cost **$6.4 million** by end of year four (up from an original $4.8 million offer, a 30% increase)
-      - Would raise average teacher salary to **more than $100,000** and top salary to **$113,300** over 184 working days
-      - Two-thirds of teachers would be at the top salary level
-      - Paraprofessionals, part-time staff offered **48–69% salary increases**
-      - New parental leave benefit: first 15 days paid by the school committee, up to 12 additional weeks covered by accrued sick time
-      - New sick leave banks for teachers and other bargaining units
-      - Proposal includes return of morning recess and a joint safety committee
+      **Committee's best-and-final offer highlights:**
+      - Average teacher salary raised to more than $100,000; top salary $113,300 over 184 working days
+      - Two-thirds of teachers would be at top salary, exceeding the top wages in the recently settled Gloucester contract
+      - Four-year cost: $6.4 million (up from $4.8 million in original offer; a 30% increase)
+      - Projected budget shortfall by end of year four: approximately $3.174 million, requiring a Prop 2½ override adding approximately $334.60 to the average tax bill
+      - Parental leave: first 15 days paid by school committee; up to 12 additional weeks covered by accrued sick time
+      - Paraprofessionals, part-time aides, and lunch/bus monitors offered 48–69% salary increases
+      - Morning recess time restored; joint safety committee created
       
-      **Fiscal Impact**
-      - Committee's offer leaves a **$3.174 million shortfall** by year four, requiring a Prop 2½ override adding approximately **$334.60** to the average tax bill
-      - Union's latest proposal carries an **$8 million** price tag and would create a **$4.7 million** budget gap
+      **Union's latest proposal:**
+      - Estimated cost: $8 million
+      - Projected budget gap: approximately $4.7 million, requiring a significantly larger override; committee states that if the override failed, school operations would be in jeopardy
       
-      **Legal Proceedings**
-      - Superior Court found the union and its officials in contempt of an order to return to work
-      - Court ordered fact-finding as of 6:00 PM the prior day; a 9:00 AM session occurred but the MEA stated it would only engage with the fact-finder as a mediator, not in a fact-finding capacity
-      - State-appointed mediator canceled a scheduled 1:00 PM mediation session
-      - The committee filed with the Commonwealth Employment Relations Board (CERB/SERB) naming four individual teachers who self-identified as strike leaders; SERB subsequently filed with the court
+      **Process status:**
+      - Superior Court found the union and its top officials in contempt of an order to return to work
+      - Court ordered fact-finding after mediation produced no agreement Sunday evening
+      - A fact-finding session was held the morning of the press conference, but the MEA declined to participate as required, insisting the appointee serve as a mediator instead
+      - The state-appointed mediator canceled a scheduled 1:00 PM mediation session
+      - Committee noted it has been in mediation for more than two weeks without resolution
+    key_speakers: ["Jen Schaffner (School Committee Chair, Bargaining Subcommittee)", "Sarah Fox (School Committee Member, Bargaining Subcommittee)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 291
+    end_seconds: 570
+    headline: "Committee says teachers can return immediately; pay withheld under state law during illegal strike"
+    dek: "Officials note it is illegal under Massachusetts law to pay employees engaged in an illegal strike, and some weekly-paid employees have already missed a paycheck."
+    summary: |
+      During the press conference Q&A, committee members addressed questions about the path forward and pay withholding.
       
-      **Pay Docking**
-      - Officials stated Massachusetts law prohibits paying employees engaged in an illegal strike; some employees on weekly pay cycles had already experienced withheld pay, with bi-weekly employees affected that week
+      - Committee members emphasized that schools are open and teachers can return at any time; the committee is not closing schools.
+      - The committee stated Massachusetts law prohibits a municipality from paying employees engaged in an illegal strike.
+      - Some employees on weekly pay cycles had already not received payment; those on bi-weekly cycles were expected to experience that during the current week.
+      - Committee members said they remain available around the clock for any updated proposal or acceptance of their offer.
+    key_speakers: ["Jen Schaffner (School Committee Chair, Bargaining Subcommittee)", "Sarah Fox (School Committee Member, Bargaining Subcommittee)"]
+  - topic: labor-personnel
+    topic_confidence: 0.93
+    start_seconds: 570
+    end_seconds: 967
+    headline: "Committee explains CERB filings naming four individual teachers; cites safety incident at school"
+    dek: "Officials say the Commonwealth Employment Relations Board, not the district, initiated court filings; a police escort was required after an incident outside a negotiation venue."
+    summary: |
+      The committee addressed questions about targeting four specific teachers in legal proceedings and about safety at negotiation venues.
       
-      **Safety**
-      - The press conference was held outside school buildings after committee members reported requiring a police escort to their vehicles the prior evening due to being surrounded by members of the public
+      **On the individual teacher filings:**
+      - The committee filed with the Commonwealth Employment Relations Board (CERB/SERB) to order four self-identified strike leaders to cease and desist and return to work.
+      - When those individuals defied the CERB order, CERB filed with the court and invited the district as a co-party; the committee characterized the filing as initiated by CERB, not the district.
+      - The committee stated this is not a lawsuit or restraining order but an order to return to work.
+      - A similar action naming the union president was reportedly taken in Beverly.
+      - The committee noted a timing issue: the MEA announced the strike vote at 4:30 PM on a holiday weekend, and the MTA would not accept service on behalf of individual teachers, requiring later individual service.
+      
+      **On safety:**
+      - The press conference was held outside a public school location because committee members were surrounded by a crowd — including teachers, neighbors, and students — the previous evening while trying to reach their car, requiring a police escort.
+      - The committee described the incident as "very unfortunate" and moved the press conference to protect the safety of all parties.
     key_speakers: ["Jen Schaffner (School Committee Chair, Bargaining Subcommittee)", "Sarah Fox (School Committee Member, Bargaining Subcommittee)"]
 ---
 

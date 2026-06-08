@@ -11,19 +11,20 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "School committee presents contract update amid educator testimony over wages and safety"
-  summary: "The Marblehead School Committee convened October 17, 2024, opening with extensive public comment from educators and parents urging settlement of the MEA collective bargaining agreement. The committee then presented a detailed update on negotiations, citing a union wage proposal totaling approximately $11.6 million over four years across five units, which they said would require either a Proposition 2½ override of roughly $7.6 million or layoffs of more than 75 staff. The board also approved the superintendent's evaluation goals, a vehicle disposition, bills totaling approximately $1.42 million, and the athletic handbook."
+  headline: "School committee presents contract-negotiation update amid teacher protests over wages and safety"
+  summary: "The Marblehead School Committee held its October 17, 2024 meeting, which opened with extensive public comment from Marblehead Education Association members and parents citing unsafe working conditions, low wages, and insufficient parental leave. The committee then presented a detailed contract-negotiation update, noting the MEA's proposals across all five units total approximately $11.6 million in budget increases over four years, which the committee said would require either a roughly $7.6 million Prop 2½ override or layoffs of more than 75 staff. The committee also unanimously approved the superintendent's three evaluation goals and the updated athletic handbook."
   decisions:
-    - "Approved bills totaling approximately $1,420,500.65 as of October 10th"
-    - "Approved minutes of July 15th"
-    - "Approved disposition of surplus plow truck vehicles"
-    - "Approved superintendent's evaluation goals (with minor recommended adjustments)"
+    - "Approved schedule of bills totaling approximately $1,042,500.65 as of October 10th"
+    - "Approved minutes of July 15th meeting"
+    - "Approved disposition of surplus plow-truck vehicles"
+    - "Approved superintendent's three administrative evaluation goals"
     - "Approved updated athletic handbook"
-    - "Tabled MCAS district overview presentation to a future meeting"
-    - "Tabled school committee goals draft to next meeting"
+    - "Tabled MCAS results presentation to a future meeting"
+    - "Tabled school committee goals presentation to next meeting"
   votes:
-    - motion: "Approve bills ~$1,420,500.65"
+    - motion: "Approve schedule of bills"
       result: "in favor (4 to 0)"
     - motion: "Approve July 15th minutes"
       result: "in favor (4 to 0)"
@@ -36,76 +37,75 @@ summary_card:
 
 topic_segments:
   - topic: public-comment
-    topic_confidence: 0.99
+    topic_confidence: 0.98
     start_seconds: 88
     end_seconds: 1834
     featured: true
-    headline: "Educators urge fair contract, cite safety injuries and below-minimum-wage paras"
-    dek: "Eight speakers — including the MEA co-president, classroom teachers, and parents — described teacher turnover, physical injuries to staff, inadequate parental leave, and wage scales they said fall below state minimum wage for some workers."
+    headline: "Over 700-signature petition delivered; teachers describe unsafe conditions and low pay"
+    dek: "MEA Co-President and multiple educators addressed the committee urging a fair contract, citing turnover exceeding 20%, below-minimum-wage paraprofessionals, physical assaults on staff, and inadequate parental leave."
     summary: |
-      The MEA co-president Jonathan Heller submitted a letter signed by over 700 people (70% Marblehead residents and educators) citing more than 20% teacher-unit turnover and calling for competitive wages, modern parental leave, and improved school safety. Individual educators described specific conditions:
+      Seven speakers addressed the committee during public comment, representing the Marblehead Education Association and individual educators:
       
-      - **Hannah Partica** (Glover School kindergarten teacher): 1,200 hours annually commuting because current salaries make living in Marblehead unaffordable.
-      - **Laura Gellan** (Village School therapeutic teacher, 8+ years): Has suffered a broken nose and multiple physical injuries; Village School has lost nine special-education staff since end of last year, with positions unfilled or filled by uncertified staff.
-      - **Jenny Wilkins** (teacher and parent of three MPS students): Broke her kneecap on the job; described a domino-effect staffing crisis in special education.
-      - **Allison Carey** (MHS social worker, reading statement for Kate Kelly): Described receiving only 21 paid days for a complicated maternity leave with a newborn requiring additional monitoring.
-      - **Megan Kelpin** (community member and MEA educator): Detailed salary-schedule caps on school nurses, arguing a proposal to remove inequitable caps would cost $0 under a non-retroactive contract.
-      - **Bill Shaw** (22-year Marblehead Veterans Middle School teacher): Said bargaining sessions are adversarial and that the school committee's attorney is driving strategy.
-      - **Michael Fu** (10-year MHS computer science/math teacher): Cited $403,000 in legal fees paid in the past 18 months; asked the committee to reconsider its approach to bargaining.
-      - **Alex Jimenez** (parent, 6 Legs Hill Road): Urged fair teacher compensation and offered to participate in fundraising or other activities to support school finances.
-    key_speakers: ["Jonathan Heller (MEA Co-President)", "Hannah Partica (Glover School kindergarten teacher)", "Laura Gellan (Village School therapeutic teacher)", "Jenny Wilkins (MHS teacher and parent)", "Allison Carey (MHS social worker)", "Megan Kelpin (MEA educator and parent)", "Bill Shaw (Marblehead Veterans Middle School teacher)", "Michael Fu (MHS computer science/math teacher)", "Alex Jimenez (parent)"]
+      - **Jonathan Heller** (MEA Co-President, 26 Ralph Road) read a letter signed by over 700 people — 70% Marblehead residents and educators — calling for competitive wages, modern parental leave, minimum-wage compliance for hourly workers, and a safety commitment.
+      - **Hannah Partica** (Glover School kindergarten teacher) described commuting 1,200 hours per year because she cannot afford to live closer on her current salary, and said she does not know how much longer she can stay.
+      - **Laura Gellan** (Village School therapeutic teacher) reported being hit, punched, kicked, spit on, and suffering a broken nose; stated Village School has lost nine special-ed staff since last year and cannot hire qualified replacements because McDonald's and Starbucks pay more than tutors and paraprofessionals.
+      - **Jenny Wilkins** (teacher and parent of three MPS students) corroborated the safety concerns, saying she broke her kneecap and that short-staffing creates a domino effect of crises.
+      - **Allison Carey** (MHS social worker, reading on behalf of Kate Kelly, Spanish teacher) described a complicated pregnancy with only 21 paid days of leave, during which her son was born with a cleft lip and she was diagnosed with cholestasis.
+      - **Megan Kelvin** (MEA educator/parent) detailed a contractual salary-schedule cap that limits school nurses to no higher than step 9 / lane M, creating a greater-than-$13,000 gap versus other Unit A members, and said a proposal to remedy it would cost the district $0 today.
+      - **Bill Shaw** (22-year Vets teacher, 17 Brookhouse Drive) expressed concern that bargaining sessions are adversarial and dominated by the school committee's outside legal counsel, Attorney Elizabeth Valerio, and urged the committee to work with teachers rather than against them.
+      - **Michael Fu** (MHS computer-science/math teacher, 43 Smith Street) cited $403,000 in legal fees paid over 18 months and asked the committee to reconsider its legal-counsel approach; he noted that educators rejected proposals for modern parental leave and bereavement leave including pregnancy loss.
+      - **Alex Jimenez** (parent, 6 Legs Hill Road) urged the committee to support salary increases and offered to participate in fundraising or other community efforts to help address the financial shortfall.
+    key_speakers: ["Jonathan Heller (MEA Co-President)", "Hannah Partica (Glover School kindergarten teacher)", "Laura Gellan (Village School therapeutic teacher)", "Jenny Wilkins (teacher and parent)", "Allison Carey (MHS social worker, reading for Kate Kelly)", "Megan Kelvin (MEA educator/parent)", "Bill Shaw (Vets teacher)", "Michael Fu (MHS teacher)", "Alex Jimenez (parent)"]
   - topic: admin-housekeeping
     topic_confidence: 0.92
     start_seconds: 1834
     end_seconds: 2528
-    headline: "Superintendent provides district update including fall athletics, attendance data, and MCAS preview"
-    dek: "Superintendent reviewed National Principals Month recognitions, Topsfield Fair achievements, athletics records, and attendance statistics, noting chronic absenteeism begins at 18 missed days."
+    headline: "Superintendent reports 20%+ teacher turnover, strong fall athletics, and attendance concerns"
+    dek: "Superintendent updates included recognition of National Principals Month, Topsfield Fair results, fall athletics records, and a data-driven warning about the cumulative impact of student absenteeism and tardiness."
     summary: |
-      The superintendent recognized the five building principals and shared district highlights:
+      Superintendent's district update covered:
       
-      - A Village School sunflower grown by fifth graders placed fourth (11.5 feet tall) at the Topsfield Fair.
-      - MHS Day of Service scheduled for October 23rd at roughly 10–12 community sites.
-      - Assistant Principal Dan Richards traveling to Washington D.C. to represent NASSP on school safety and mental health topics.
-      - Fall athletics composite record: 53 wins, 30 losses, 9 ties as of October 16, 2024. Boys cross-country undefeated (7–0); girls cross-country 4–3; both headed to MIAA Division 2 states November 9.
-      - Attendance rates for the first 30 days: Glover 97.5%, Brown 96.8%, Village 96.6%, Vets 96.4%, High School 96%. Superintendent noted chronic absenteeism is defined as missing 10% or 18 days.
-      - DEEP (Disruptive Equity Education Project) professional development ongoing district-wide under Dr. Esa Monte Jackson.
-      - MCAS district overview presentation tabled to a future meeting.
-    key_speakers: ["Superintendent (John, last name not clearly identified in transcript)"]
+      - **National Principals Month**: Recognition of principals Michelle Carlson (MHS), Matt Fox (Vets), Mary Maxwell Brown, Scott Williams (Village), and Frank Koski (Glover).
+      - **Topsfield Fair**: Village School fifth-graders' sunflower placed fourth at 11.5 feet tall; pumpkin head placed third at 13.5 inches across.
+      - **High School Day of Service**: Scheduled October 23rd, covering approximately 10–12 areas of town.
+      - **DEEP Initiative**: Continued professional development with Dr. Esa Monte Jackson on the Disruptive Equity Education Project.
+      - **MCAS**: District-wide results to be presented that evening; school-specific presentations scheduled for November 14th (elementary) and November 21st (secondary).
+      - **METCO Conference**: Superintendent, assistant superintendent, and METCO director attended a conference at Gillette Stadium focused on 13 commitments for METCO 2.0, including racial equity and equitable hiring practices.
+      - **Fall Athletics**: Overall record 53–30–9 as of October 16th. Boys cross-country undefeated; Will Saru and Nate Asah finished 1st and 2nd at the MSTCA Twilight Invitational. Both cross-country teams headed to MIAA Division 2 states on November 9th. Football team won three in a row (3–2 overall).
+      - **Attendance**: School-by-school rates ranged from 96.0% (MHS) to 97.5% (Glover). Superintendent framed that missing one day every two weeks equals nearly 1.5 years of missed instruction over 13 years.
+    key_speakers: ["Superintendent (name not stated in transcript)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.88
+    topic_confidence: 0.9
     start_seconds: 2528
-    end_seconds: 2773
-    headline: "Committee approves bills, July minutes, and surplus vehicle disposition 4–0"
-    dek: "Consent-agenda items passed unanimously; surplus plow trucks to be transferred to fire department for training purposes."
+    end_seconds: 2820
+    headline: "Committee approves bills, July minutes, and disposition of surplus plow trucks 4-0"
+    dek: "Routine consent-agenda items were approved after a brief disruption from audience members who objected to the committee not responding directly to public comment before proceeding."
     summary: |
-      The committee approved:
+      The chair called for votes on three consent-agenda items:
       
-      | Item | Amount / Detail | Vote |
-      |------|----------------|------|
-      | Schedule of bills | ~$1,420,500.65 as of October 10 | 4–0 |
-      | July 15 minutes | — | 4–0 |
-      | Disposition of surplus plow trucks | Transferred to fire department for training | 4–0 |
+      1. **Schedule of bills**: approximately $1,042,500.65 as of October 10th — approved 4–0 (member Al Williams was muted and unable to participate).
+      2. **Minutes of July 15th**: approved 4–0 (5–0 after Williams indicated support; chair noted the vote as 4–0 given the muting issue).
+      3. **Disposition of surplus plow trucks**: trucks described as having rotted frames with holes; some being transferred to the fire department for training purposes. Approved 4–0.
       
-      Note: Member Al Williams was inadvertently muted during the session; the chair acknowledged he should have been included and made him co-host for subsequent votes.
-    key_speakers: ["Jen Schaffner (Chair)", "Sarah Fox (member)", "Allison Taylor (member)", "Brian Oda (member)"]
+      A brief disruption occurred when several audience members who had spoken during public comment verbally objected to the committee proceeding without directly responding; the chair called a short recess before resuming.
+    key_speakers: ["Chair (Jen Schaffner)", "Sarah Fox (committee member)", "Brian Oda (committee member)", "Al Williams (committee member, remote)"]
   - topic: labor-personnel
     topic_confidence: 0.99
-    start_seconds: 2877
+    start_seconds: 2934
     end_seconds: 5573
-    headline: "School committee presents detailed contract negotiation update; union proposal would require ~$7.6M override or 75+ layoffs"
-    dek: "The bargaining subcommittee walked through a slide presentation showing union wage proposals totaling ~$11.6M over four years across five units, compared to the committee's own counterproposals, and explained the Proposition 2½ override process and its limitations."
+    headline: "Committee details contract gap: MEA proposals total ~$11.6M over 4 years; layoffs of 75+ possible without override"
+    dek: "The bargaining subcommittee presented an updated slide-deck showing the MEA's wage proposals range from 27% to 83% across five units, and that meeting them without new revenue would require cutting more than 15% of staff."
     summary: |
-      The school committee presented its second public update on ongoing negotiations with the Marblehead Education Association (MEA).
+      The school committee bargaining subcommittee (Sarah Fox and Jen Schaffner) provided an updated contract-negotiation presentation:
       
-      **Timeline context**
-      - Negotiations began March 14, 2024. The MEA declined an earlier December request to begin bargaining.
-      - The union's wage goals were presented in June but not confirmed as an official proposal until September 10, 2024.
-      - Custodians unit: the committee has filed for state mediation; the Department of Labor Relations took jurisdiction and requested an update by November 8.
+      **Background / Timeline**
+      - Negotiations began March 14, 2024. The school committee had requested bargaining in December 2023; the MEA declined, saying it was not ready.
+      - The MEA presented its wage goals in June 2024 but did not confirm its actual wage proposal until September 10, 2024 for the teachers unit.
       
-      **Union (MEA) proposals — all five units over four years**
+      **MEA Proposals (all five units, 4-year span)**
       
-      | Unit | % Increase | Cost |
-      |------|-----------|------|
+      | Unit | Proposed Increase | Approx. Cost |
+      |---|---|---|
       | Unit A (teachers) | 33.9% | ~$9.7M |
       | Custodians | 32% | ~$644K |
       | Tutors | 27.8% | ~$735K |
@@ -113,75 +113,90 @@ topic_segments:
       | Permanent substitutes | 52% | ~$85K |
       | **Total** | | **~$11.6M** |
       
-      The committee stated that factoring in ~$1M/year in projected new revenue, the union proposal would require either a ~$7.6M tax override or layoffs of more than 75 staff (~15% of workforce).
+      **Committee's Counterproposals**
+      - Unit A: 10.5% over 4 years for steps 1–10; 12% for step 11 (covers more than two-thirds of staff); proposed adding step 12.
+      - Tutors: Tentative agreement to rename to "instructional assistants" for recruiting clarity.
+      - Custodians: Reclassification in year one providing up to 16% increase; additional 4.5% over two following years; 20% increase in sick leave; 350%+ increase in night differential.
+      - Paraprofessionals: New Group F classification for pre-K, kindergarten, and special-ed paras; starting wage proposed to rise from ~$13.85 to $22.00 in year one, reaching $22.89 by end of contract.
+      - Permanent substitutes: Additional steps, faster advancement, 23% starting-wage increase over 3 years, 17% top-step increase over 3 years.
+      - Parental leave: Increased from 8 to 12 weeks (50% increase); 12 employer-paid days not drawn from accrued time.
+      - Safety committee: Proposed equal representation of administrators and all bargaining units.
       
-      **School committee counterproposals (selected highlights)**
-      - Unit A: 10.5% over four years for steps 1–10; 12% for step 11 (affecting more than two-thirds of staff); proposed adding step 12.
-      - Tutors: rename to "instructional assistants"; tentative agreement reached on this point.
-      - Paraprofessionals (pre-K, kindergarten, special ed): proposed new Group F; starting wage to rise from ~$13.85 to $22.00 in year one, reaching $22.89 by end of contract.
-      - Custodians: reclassification in year one providing up to 16% increase; 4.5% additional over following two years; 20% increase in sick leave; night differential increase of over 350% by contract end.
-      - Permanent substitutes: 23% wage increase for starting wages over three years; 17% for top steps.
-      - Parental leave: increased from 8 weeks maximum to 12 weeks; employer to provide 12 paid days not charged against accrued time.
-      - Safety committee: proposed modeled after Professional Development Advisory Committee with equal administrator/union representation and seats for all five bargaining units.
+      **Fiscal Impact**
+      - Accounting for expected new revenue of approximately $1M/year, the MEA proposals would require roughly a $7.6M override or layoffs of more than 75 employees (~15% of the workforce) to balance the budget.
+      - The structural deficit independent of this contract is estimated at $4–5M.
+      - The committee noted the town has failed to pass overrides historically, with the most recent override attempts failing by a 2-to-1 margin and by 400 votes respectively.
       
-      **Proposition 2½ override process explained**
-      The committee outlined that an override requires a warrant article, a two-thirds vote at town meeting, then a simple majority at the ballot. Critically, override funds are only guaranteed to the sponsoring department for the first year; subsequent years revert to the general fund for town meeting appropriation. The committee noted the town has rejected overrides in recent years, with the most recent attempt failing by approximately 400 votes.
+      **Prop 2½ Override Process**
+      - Requires a warrant article, two-thirds vote at town meeting, and a simple majority at the ballot.
+      - Revenue is guaranteed to the sponsoring entity only in year one; after that it reverts to the general fund subject to annual town meeting appropriation.
       
-      The committee also noted a structural deficit of approximately $4–5 million in the town's general finances, which would compound any school contract override request.
+      **Custodians**
+      - The school committee filed for a state mediator; the Department of Labor Relations has taken jurisdiction and requested an update by November 8th.
       
-      **Next steps**: Bargaining sessions scheduled for the following two Mondays. The committee committed to continuing public updates.
-    key_speakers: ["Sarah Fox (bargaining subcommittee member)", "Jen Schaffner (Chair)", "Allison Taylor (member)", "Brian Oda (member)"]
+      **Next Steps**
+      - Bargaining sessions scheduled for the following two Mondays.
+      - Wage tables and a glossary of bargaining terms to be posted on the school committee website.
+    key_speakers: ["Sarah Fox (bargaining subcommittee)", "Jen Schaffner (chair / bargaining subcommittee)", "Allison Taylor (committee member)", "Brian Oda (committee member)"]
   - topic: school-budget
-    topic_confidence: 0.9
+    topic_confidence: 0.88
     start_seconds: 5618
     end_seconds: 7853
-    headline: "Committee approves superintendent's three evaluation goals 5–0; SPED staffing and strategic plan among priorities"
-    dek: "Superintendent presented three goals covering district culture and staffing patterns, a new district improvement plan (strategic plan), and student voice in learning; all approved unanimously."
+    headline: "Committee approves superintendent's three evaluation goals 5-0, including staffing analysis and district improvement plan"
+    dek: "The goals subcommittee presented three superintendent evaluation goals covering school culture and staffing patterns, a new 2025–2028 District Improvement Plan, and expanding student voice in teaching and learning."
     summary: |
-      The superintendent presented three evaluation goals developed with a subcommittee (Allison Taylor and Brian Oda after multiple working sessions):
+      Following a goals subcommittee process with members Brian Oda and Allison Taylor, the superintendent presented three administrative evaluation goals:
       
-      **Goal 1 — Professional Practice: District-wide culture and staffing patterns**
-      Conduct a school-by-school, classroom-by-classroom staff and student analysis to inform staffing decisions, with particular attention to special education programming and caseloads. Surveys planned for November, January, and April. Special focus on BCBAs: district went from 4–5 BCBAs to one, now rebuilding to one per building.
+      **Goal 1 – Professional Practice: District-wide culture and staffing patterns**
+      - Conduct a teacher-by-teacher, classroom-by-classroom staffing analysis including step placement and student counts to inform programming decisions.
+      - Survey parents, staff, students, and community partners in fall, winter, and spring.
+      - Special emphasis on special-education programming and caseload equity; new assistant superintendent for special education (Lisa Marie) already working to restructure BCBA coverage (from one district-wide to one per building).
+      - Measurability concern raised: committee asked for clear benchmarks and periodic check-ins rather than end-of-year reporting.
       
-      **Goal 2 — District Improvement: Marblehead District Improvement Plan (DIP) 2025–2028**
-      Create a new strategic plan to replace the current "Plan for Success" (due for revision). Process: use existing plan as framework, filter through DESE template, gather sequential input from administrators, staff, parents/caregivers, and students electronically. Target: present to committee by mid-April 2025 so it can inform the town meeting budget cycle. School improvement plans at each building to align with the DIP going forward.
+      **Goal 2 – District Improvement: 2025–2028 District Improvement Plan (also referred to as Strategic Plan)**
+      - Massachusetts requires a district improvement plan in three-year increments; current "Plan for Success" runs through 2026 and will be revised.
+      - Process: superintendent will use existing plan as a framework, work with administrative team to identify what remains relevant, distribute electronically to principals, then all staff, then parents/caregivers/students for input, then bring to school committee for approval.
+      - Target timeline: complete by mid-April 2025 so it can inform the budget hearing and town meeting season.
+      - Each school improvement plan will align to the district improvement plan going forward.
       
-      **Goal 3 — Student Learning: Student voice in teaching and learning**
-      Establish grade-appropriate vehicles for student feedback (K–3, 4–6, 7–8, 9–12). Principals already initiating student leadership teams (e.g., Brown School). Superintendent plans to meet directly with student groups across schools.
+      **Goal 3 – Student Learning: Student voice in teaching and learning**
+      - Work with principals to establish grade-appropriate vehicles for student feedback (K–3, 4–6, 7–8, 9–12).
+      - Brown School principal has already established a student leadership team.
+      - Superintendent plans to meet directly with student groups across the district.
       
-      **Vote**: Approved 5–0 with a note that minor language adjustments (removing "state of flux" language per Al Williams' suggestion) to be handled by the subcommittee.
-    key_speakers: ["John (Superintendent, last name not clearly captured)", "Allison Taylor (goals subcommittee)", "Brian Oda (goals subcommittee)", "Sarah Fox (member)", "Al Williams (member, remote)", "Jen Schaffner (Chair)"]
+      **Vote**: Approved 5–0.
+    key_speakers: ["Superintendent", "Allison Taylor (goals subcommittee)", "Brian Oda (goals subcommittee)", "Sarah Fox (committee member)", "Al Williams (committee member, remote)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 8031
-    end_seconds: 8305
-    headline: "Athletic handbook approved 4–0; MCAS presentation tabled to future meeting"
-    dek: "Committee approved updated athletic handbook with new sportsmanship and student-athlete wellness provisions; MCAS overview deferred due to the late hour."
+    start_seconds: 7853
+    end_seconds: 8215
+    headline: "Athletic handbook approved 4-0; MCAS presentation tabled to future meeting"
+    dek: "The committee approved an updated student-athlete handbook that includes a mission statement, sportsmanship standards, and captain expectations, and deferred the district-wide MCAS results presentation."
     summary: |
-      The revised MHS athletic handbook, prepared by Athletic Director Kent Wheeler, was approved 4–0. Members noted enhancements including a revised mission statement, sportsmanship expectations, conflict-resolution procedures, team captain expectations, and a holistic student-athlete framework.
+      **Athletic Handbook**: The committee approved an updated handbook for student athletes. Changes were visible in a redline version distributed to members. Committee members praised Athletic Director Kent Wheeler for including a mission statement, sportsmanship discussion, conflict-resolution procedures, and an emphasis on the holistic student athlete. Approved 4–0 (Al Williams had logged off).
       
-      The MCAS district overview presentation by Assistant Superintendent Julia was tabled. The committee agreed to schedule a dedicated MCAS presentation at a future meeting so that the district-level overview and individual school presentations can be discussed with adequate time for questions.
-    key_speakers: ["Jen Schaffner (Chair)", "Brian Oda (member)", "Allison Taylor (member)"]
+      **MCAS Results**: A district-wide MCAS overview had been prepared by Assistant Superintendent Julia (last name not stated). Given the late hour (approximately 9:00 PM) and remaining agenda items, the committee voted to table the presentation to the next meeting so that questions and discussion could accompany the data. Individual school-level presentations by principals were already scheduled for November 14th (elementary) and November 21st (secondary).
+    key_speakers: ["Jen Schaffner (chair)", "Brian Oda (committee member)", "Allison Taylor (committee member)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.82
+    topic_confidence: 0.8
     start_seconds: 8380
-    end_seconds: 9289
-    headline: "Subcommittee updates cover SAC meetings, safety committee, communications consultant proposal, and request for joint meeting with Select Board"
-    dek: "The chair flagged a communications consultant proposal for next-meeting discussion; Brian Oda proposed a joint meeting with the Select Board and Finance Committee to address the district's chronic structural budget deficit."
+    end_seconds: 9290
+    headline: "Subcommittee updates; committee considers hiring communications firm and joint meeting with Select Board"
+    dek: "Liaisons reported on SAC meetings and the superintendent's safety committee; the chair introduced a proposal to engage a communications consulting firm and a member suggested a joint meeting with the Select Board and Finance Committee."
     summary: |
-      **Subcommittee and liaison updates:**
-      - Finance liaisons to meet with Finance Committee the following Thursday to establish the FY26 budget calendar and review FY25 year-end projections.
-      - Village School Advisory Council (SAC): met recently; featured a Title I presentation by Assistant Superintendent Julia; instructional coach funded by Title I showing strong results.
-      - Glover SAC: Brian Oda attended; described as lively; group already independently working on their school improvement plan, distinct from Brown School's.
-      - Superintendent's Safety Committee: all schools current on required drills; crossing-guard staffing shortages noted; police officers covering some posts.
-      - Communications subcommittee: draft newsletter format in progress.
+      **Subcommittee and liaison updates**:
+      - Finance liaisons to hold a joint meeting with Finance Committee the following Thursday to kick off the FY26 budget calendar and review FY25 year-end close projections.
+      - Village SAC (School Advisory Council) met October 10th; Title I instructional coach presentation highlighted strong results. Next meeting November 14th at Village School library.
+      - Glover SAC met October 17th; committee member Brian Oda reported an enthusiastic group already drafting its own school improvement plan distinct from Brown School's.
+      - Superintendent's safety committee: all schools are current on drills; crossing guard staffing remains a challenge, with police officers filling some positions. Chief has circulated a recruitment flyer; one committee member offered to share it more broadly.
+      - Communications subcommittee: working on a newsletter format; draft mock-up in progress.
       
-      **Communications consultant proposal:**
-      Chair described receiving a proposal from the firm Slowey McManus to assist with communications during the contract negotiation period, noting other North Shore districts use similar consultants. Committee members expressed reservations. Item to be placed on next meeting agenda for discussion and potential vote.
+      **Communications firm proposal**:
+      Chair Jen Schaffner introduced a contract proposal from communications firm Slowey McManus to assist with public communications during the collective bargaining period. She noted she has been receiving substantial media inquiries she cannot handle alone and that comparable North Shore districts are using similar consultants. The committee agreed to place the item on the next meeting agenda for formal discussion; multiple members expressed reservations. Upper cost limit will be included in the contract for review.
       
-      **Joint meeting request:**
-      Brian Oda proposed requesting a joint open meeting with the Select Board and Finance Committee to develop long-term strategies to address the structural budget deficit, which he described as a recurring problem across all town departments. Chair agreed to reach out informally to the chairs of both bodies and to place the item on the next agenda for a formal discussion.
-    key_speakers: ["Jen Schaffner (Chair)", "Sarah Fox (member)", "Brian Oda (member)", "Allison Taylor (member)"]
+      **Joint meeting proposal**:
+      Brian Oda suggested the school committee request a joint public meeting with the Select Board and Finance Committee to address the structural deficit collaboratively rather than pitting departments against each other annually. The chair will reach out informally to the chairs of both bodies; the item was placed on the next meeting agenda to formalize a potential request.
+    key_speakers: ["Jen Schaffner (chair)", "Sarah Fox (finance liaison)", "Allison Taylor (committee member)", "Brian Oda (committee member)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

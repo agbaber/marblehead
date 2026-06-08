@@ -11,227 +11,231 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Marblehead School Committee approves K–12 science curriculum renewal and multiple policy updates"
-  summary: "The June 5, 2025 Marblehead School Committee meeting featured approval of a comprehensive K–12 science curriculum overhaul estimated at $200,000, already budgeted in FY26. Multiple MASC-aligned policy updates were approved unanimously, and public comment focused almost entirely on the committee's recent 3–2 vote adopting a proclamation condemning MTA antisemitic curricular materials. The committee also heard a youth risk behavior survey summary showing positive trends in mental health and suicide attempt rates, and voted to rename the Brown School organic garden to honor two deceased community volunteers."
+  headline: "Marblehead School Committee approves K-12 science curriculum overhaul for FY26"
+  summary: "The school committee held its June 5 meeting, approving a comprehensive K-12 science curriculum update estimated at approximately $200,000, which was already included in the FY26 budget. The committee also approved a series of MASC policy updates, heard a detailed Youth Risk Survey presentation showing positive mental-health trends, and received public comment praising a recently passed anti-semitism proclamation. Additional actions included renaming the Brown School organic garden to honor two deceased community volunteers."
   decisions:
-    - "Approved schedule of bills totaling approximately $796,263"
-    - "Approved K–12 science curriculum adoption (Mystery Science K–4, McGraw Hill Inspire Science 5–8, updated AP and standard high school courses)"
+    - "Approved schedule of bills totaling $709,796.63"
+    - "Approved K-12 science curriculum adoption (Mystery Science K-4, McGraw Hill Inspire Science 5-8, updated high school texts)"
     - "Approved school committee operating protocols"
-    - "Approved eight MASC policy updates (IMG, IMGA, IHBG, CHA/CHC, IHBD, IHBF, IHBH, IJ, IKAB, IMB)"
-    - "Approved deletion of policy IHBG-R (superseded by adopted MASC homeschooling policy)"
-    - "Approved $6,000 donation from Massachusetts Marine Trades Association"
-    - "Approved $1,087.84 donation from Friends of the Marblehead Public Schools"
-    - "Approved use of MHS Field House as polling location for July 8, 2025 special election"
-    - "Approved renaming Brown School organic garden to Catherine R. Martin and Jeffrey St. George Organic Garden"
+    - "Approved MASC policy IMG (Animals in School)"
+    - "Approved MASC policy IMGA (Service Animals in School)"
+    - "Approved MASC policy IHBG (Homeschooling)"
+    - "Approved MASC policy CHA/CHC (Development and Dissemination of Procedures)"
+    - "Approved MASC policy IHBD (Compensatory Education)"
+    - "Approved MASC policy IHBF (Home Bound Instruction)"
+    - "Approved MASC policy IHBH (Alternative School Programs)"
+    - "Approved MASC policy IJ (Instructional Materials)"
+    - "Approved MASC policy IKAB (Student Progress Report to Parents and Guardians)"
+    - "Approved MASC policy IMB (Teaching About Controversial Issues)"
+    - "Deleted policy IHBG-R (superseded by adopted MASC homeschooling policy)"
+    - "Approved $6,000 cash donation from Massachusetts Marine Trades Association"
+    - "Approved $1,087.84 cash donation from Friends of the Marblehead Public Schools"
+    - "Approved use of Marblehead High School Field House as polling location for July 8, 2025 special election"
+    - "Approved renaming the Catherine R. Martin Organic Garden to the Catherine R. Martin and Jeffrey St. George Organic Garden"
   votes:
-    - motion: "Schedule of bills ~$796,263"
+    - motion: "Approve schedule of bills ($709,796.63)"
       result: "in favor (unanimous)"
-    - motion: "K–12 science curriculum adoption"
+    - motion: "Approve K-12 science curriculum"
       result: "in favor (unanimous)"
-    - motion: "School committee operating protocols"
+    - motion: "Approve school committee operating protocols"
       result: "in favor (unanimous)"
-    - motion: "Policy IMG – Animals in School"
+    - motion: "Approve MASC policy IMG"
       result: "in favor (unanimous)"
-    - motion: "Policy IMGA – Service Animals in School"
+    - motion: "Approve MASC policy IMGA"
       result: "in favor (unanimous)"
-    - motion: "Policy IHBG – Homeschooling"
+    - motion: "Approve MASC policy IHBG"
       result: "in favor (unanimous)"
-    - motion: "Policy CHA/CHC – Development and Dissemination of Procedures"
+    - motion: "Approve MASC policy CHA/CHC"
       result: "in favor (unanimous)"
-    - motion: "Policy IHBD – Compensatory Education"
+    - motion: "Approve MASC policy IHBD"
       result: "in favor (unanimous)"
-    - motion: "Policy IHBF – Home Bound Instruction"
+    - motion: "Approve MASC policy IHBF"
       result: "in favor (unanimous)"
-    - motion: "Policy IHBH – Alternative School Programs"
+    - motion: "Approve MASC policy IHBH"
       result: "in favor (4 to 0)"
-    - motion: "Policy IJ – Instructional Materials"
+    - motion: "Approve MASC policy IJ"
       result: "in favor (4 to 0)"
-    - motion: "Policy IKAB – Student Progress Reports"
+    - motion: "Approve MASC policy IKAB"
       result: "in favor (4 to 0)"
-    - motion: "Policy IMB – Teaching About Controversial Issues"
+    - motion: "Approve MASC policy IMB"
       result: "in favor (4 to 0)"
     - motion: "Delete policy IHBG-R"
       result: "in favor (4 to 0)"
     - motion: "Accept $6,000 donation from Massachusetts Marine Trades Association"
       result: "in favor (4 to 0)"
-    - motion: "Accept $1,087.84 donation from Friends of Marblehead Public Schools"
+    - motion: "Accept $1,087.84 donation from Friends of the Marblehead Public Schools"
       result: "in favor (4 to 0)"
-    - motion: "Approve Field House as polling location July 8, 2025"
+    - motion: "Approve Field House as July 8 polling location"
       result: "in favor (4 to 0)"
-    - motion: "Rename organic garden to Catherine R. Martin and Jeffrey St. George Organic Garden"
+    - motion: "Rename Catherine R. Martin Organic Garden"
       result: "in favor (4 to 0)"
 
 topic_segments:
-  - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 0
-    end_seconds: 162
-    headline: "Meeting opens with commendations, memorial for teacher Dave Fleming"
-    dek: "Chair Schaffner opened the June 5 meeting with commendations for staff and a tribute to longtime Marblehead teacher Dave Fleming."
-    summary: "The meeting was called to order at 6:02 PM. Committee members offered commendations to Jared Calovich for his work organizing senior activities, and to the committee for its antisemitism proclamation. A tribute was paid to recently deceased longtime Marblehead Junior High School social studies teacher Dave Fleming, remembered for running a popular outdoor mini-course that took students camping in Franconia Notch, NH."
-    key_speakers: ["Jen Schaffner (Chair)"]
   - topic: public-comment
-    topic_confidence: 0.98
+    topic_confidence: 0.97
     start_seconds: 162
     end_seconds: 1358
-    headline: "Residents thank three committee members for 3–2 vote approving MTA antisemitism proclamation"
-    dek: "Five speakers addressed the committee in support of the recent proclamation condemning MTA curricular materials as antisemitic, while one speaker called for greater mental health support including school social workers."
+    headline: "Residents praise 3-2 antisemitism proclamation vote; one speaker raises student mental health concerns"
+    dek: "Five speakers addressed the committee, four thanking three members for approving a proclamation against MTA curriculum materials and one urging expanded school mental health staffing."
     summary: |
-      Public comment was dominated by residents expressing gratitude to committee members Jen Schaffner, Sarah Fox, and Allison Taylor for voting to adopt a proclamation condemning Massachusetts Teachers Association curricular materials deemed antisemitic. Multiple speakers cited the proclamation as only the second such action by a Massachusetts school district, following Brookline.
+      Four community members — Kristen Binder, Karen Telmelka, Sarah Palladian, Carl Goodman (via Zoom), and Elm (West Shore Drive) — thanked committee members Jen Schaffner, Sarah Fox, and Allison Taylor for voting to approve a proclamation condemning Massachusetts Teachers Association curricular materials they described as antisemitic. Several speakers expressed disappointment that the vote was 3-2 rather than unanimous and called on the two dissenting members to reconsider.
       
-      Speakers criticized the 3–2 vote outcome and called on the two dissenting members (Brian Oda and Al Williams) to reconsider their positions. One speaker submitted a letter with over 60 community signatures. Speakers connected the issue to recent violent attacks on Jewish individuals nationally.
-      
-      One speaker, identified as Jonathan Heller, shifted focus to student mental health, citing a recent suicide of a 14-year-old student from a neighboring community and calling for the addition of school social workers and a formal committee proclamation on student mental health.
-    key_speakers: ["Kristen Binder (resident)", "Karen Telmelka (resident)", "Sarah Palladian (resident)", "Carl Goodman (resident, via Zoom)", "Jonathan Heller (resident, educator)", "Elm (resident, West Shore Drive)"]
+      A fifth speaker, Jonathan Heller (26 Ralph Road), a 19-year educator in the district, referenced a recent student suicide in a neighboring community and asked the committee to prioritize student mental health, specifically requesting the addition of school social workers and a formal committee proclamation on mental health. Committee Chair Schaffner asked the superintendent to provide a future report on mental health staffing levels.
+    key_speakers: ["Kristen Binder (resident)", "Karen Telmelka (resident)", "Sarah Palladian (resident)", "Carl Goodman (resident, via Zoom)", "Elm (resident, West Shore Drive)", "Jonathan Heller (resident, educator)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
+    topic_confidence: 0.85
     start_seconds: 1358
     end_seconds: 2097
-    headline: "Outgoing student rep Ella commended; new rep Will Shank introduced; superintendent lists graduating seniors' college destinations"
-    dek: "Superintendent Roberto read the full list of 25 student-athletes' college signings and senior class college destinations before noting upcoming school committee elections."
-    summary: "Outgoing student representative Ella was commended by the committee and superintendent for her year of service. Incoming student representative Will Shank was introduced. Superintendent Roberto read the names of 25 student-athletes and their college destinations from signing day, and then listed the colleges and universities the Class of 2025 will attend, a roster spanning roughly 80 institutions including Stanford, Yale, Cornell, Northwestern, and Vanderbilt among others. Graduation was scheduled for the following evening. The superintendent noted the upcoming school committee election and wished candidates Fox and Taylor well."
-    key_speakers: ["Superintendent Roberto (John)", "Ella (outgoing student representative)", "Will Shank (incoming student representative)"]
-  - topic: school-budget
-    topic_confidence: 0.82
-    start_seconds: 2097
-    end_seconds: 2659
-    headline: "District has expended $36.8M through 11 months with $1.87M unexpected balance; capital items under review"
-    dek: "Assistant Superintendent of Finance Mike Ling reported 96% of the budget committed through May 31, with discussions underway on prepaying special education tuitions and potentially restoring capital items cut mid-year."
+    headline: "Superintendent reads graduating senior college list; outgoing student rep Ella commended"
+    dek: "Superintendent Roberto listed colleges and universities for the graduating class, recognized 25 student-athlete signing day participants, and thanked the outgoing student representative."
     summary: |
-      Assistant Superintendent Mike Ling presented the 11th-month financial update. As of May 31, the district had expended $36.8 million with an additional $8 million encumbered (primarily salaries), representing approximately 96% of the budget. The unexpended balance was $1.87 million, down $580,000 from the prior month.
+      The superintendent provided a district update covering: a successful student-athlete signing day (25 athletes committing to colleges), the sixth-grade trip to Wellfleet Dale, the Culture Feast, and end-of-year events. He read an extensive list of colleges and universities that graduating seniors will attend, including Stanford, Yale, Cornell, and Northwestern, as well as students entering trade programs and the U.S. Marine Corps.
       
-      Ling and Superintendent Roberto discussed using year-end surplus funds to restore capital items removed from the budget after the town identified a $2 million projection shortfall. Items under consideration included approximately $30,000 for performing arts center (PAC) seat reupholstering and PAC ceiling/wall painting (bid already issued, aiming to commence before June 30). The Glover playground project cannot be completed before June 30 and will need to be addressed in the next budget cycle. The district is also exploring prepaying special education tuitions, targeting at minimum $900,000.
-    key_speakers: ["Mike Ling (Assistant Superintendent of Finance)", "Superintendent Roberto (John)"]
-  - topic: school-budget
-    topic_confidence: 0.75
-    start_seconds: 2659
-    end_seconds: 2749
-    headline: "Marblehead Light Department to assist with high school scoreboard installation at no cost"
-    dek: "The MLD agreed to provide lift equipment to remove the old scoreboard and install the new one, reducing the cost of a project funded partly through private donations."
-    summary: "The committee noted a collaborative effort among the schools, Parks and Recreation (Shelly Bedrosian), and the Marblehead Light Department to install a new high school scoreboard. The MLD agreed to provide lift equipment for the removal and installation. Private funding from various community organizations is also contributing to the project."
-    key_speakers: ["Mike Ling (Assistant Superintendent of Finance)", "Jen Schaffner (Chair)"]
+      Outgoing student representative Ella was formally commended by the committee chair. Incoming student representative Will Shank was introduced. The superintendent also noted that committee members Fox and Taylor have school committee elections on Tuesday.
+    key_speakers: ["Superintendent Roberto (Superintendent)", "Ella (outgoing student representative)", "Will Shank (incoming student representative)"]
   - topic: school-budget
     topic_confidence: 0.88
-    start_seconds: 2749
-    end_seconds: 4722
-    headline: "Youth risk survey shows positive mental health trends; alcohol use remains higher than comparable schools"
-    dek: "School counselor Gina Hart presented the fourth annual substance use and mental health survey, showing declining anxiety, depression, and suicide attempt rates, while regular alcohol use remains approximately four times higher than peer schools."
+    start_seconds: 2097
+    end_seconds: 2659
+    headline: "Finance director reports $1.87M unexpended balance at month 11; capital items discussed"
+    dek: "Assistant Superintendent of Finance Mike Ling reported the district has expended $36.8M of its budget with $8M encumbered, leaving approximately $1.87M unexpended through May 31."
     summary: |
-      Clinical social worker and high school counselor Gina Hart presented results of the annual substance use and risk-related factors survey administered by MGH. Key findings from the survey (conducted October 9, 84.5% response rate):
+      Mike Ling reported that through 11 months (May 31), the district had expended $36.8 million with an additional $8 million encumbered — approximately 96% of budget committed. The unexpended balance of $1.87 million was $580,000 less than at end of April.
+      
+      Discussion centered on three capital items removed from the budget during the year when the town identified a $2 million projection shortfall:
+      
+      | Capital Item | Status |
+      |---|---|
+      | PACS performing arts center seating (partial ~$30K of ~$140K) | Partially funded; remaining portion may be restored |
+      | PACS ceiling/wall painting | Bid awarded; contractor must begin before June 30 to use FY26 surplus funds |
+      | Glover School playground | Cannot expend before June 30; will need to return to town for next year |
+      
+      The superintendent and finance director indicated they would explore prepaying special education tuitions and other district needs before year-end close. The finance director also noted MLD (Marblehead Light Department) agreed to provide lift equipment at no cost for installing a new scoreboard, saving funds.
+    key_speakers: ["Mike Ling (Assistant Superintendent of Finance and Operations)", "Superintendent Roberto", "Jen Schaffner (Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.82
+    start_seconds: 2659
+    end_seconds: 4722
+    headline: "High school counselor presents Youth Risk Survey: positive mental health trends but alcohol use 4x state peers"
+    dek: "Clinical social worker Gina Hart presented the district's fourth annual substance use and mental health survey showing declining anxiety and depression rates but alcohol use among regular users significantly above comparison schools."
+    summary: |
+      Gina Hart, clinical social worker at the high school, presented results of the annual MGH-administered substance use and mental health survey (84.5% response rate, administered October 9).
       
       **Mental Health Trends (positive direction)**
       - Anxiety: declining trend over three years
       - Depression: 13% this year (down from prior years)
-      - Psychotic experiences: 8% (comparable to state data); committee noted this figure, approximately 56 students, as warranting attention
-      - Suicide attempts: decreased from 3% to 1%; suicidal plans remain approximately 8% (~56 students)
+      - Psychotic experiences (seeing/hearing things not there): 8% — comparable to state data; committee noted this is roughly 1-in-10 students
+      - Suicide attempts: decreased from 3% to 1%; approximately 10% reported having made a plan
       
       **Substance Use**
-      - Lifetime alcohol, nicotine, and cannabis use rates are broadly comparable to state data
-      - Regular alcohol use (1–3 days in past 30 days) is approximately four times higher than peer schools
+      - Lifetime alcohol, nicotine, and cannabis use comparable to state
+      - Regular alcohol use (1-3 days/past 30 days): approximately 4x higher than comparison schools
       - 7% of students reported first alcohol use at age 12 or younger (elementary school age)
-      - Age of first use data highlighted: 96% of adults with substance use disorders began before age 20
+      - Age of first use before 15 significantly elevates addiction risk (nearly 7x higher per CDC data)
+      - Prescription drug misuse increased approximately 1% year over year
       
-      **Other Findings**
-      - 70% of students believe peers use alcohol at higher rates than the data shows (social norms gap)
-      - Social media use remains high; Snapchat and Instagram predominant; Project Reboot presentation reached grades 7–12 this year
-      - 15% of students report talking to no one about mental health
+      **Social Media**
+      - Snapchat and Instagram are top platforms; students average 4-6 hours of screen time daily
+      - Project Reboot social media programming delivered to grades 7-12 this year
       
-      Committee members called for the addition of school social workers, QR-code-based anonymous reporting tools in schools, and expansion of dating violence/consent curriculum to earlier grades. Chair Schaffner requested a staffing adequacy report from the superintendent.
-    key_speakers: ["Gina Hart (school counselor/clinical social worker)", "Julia (Assistant Superintendent of Teaching and Learning)", "Superintendent Roberto (John)"]
+      Committee Chair Schaffner emphasized parental responsibility especially during graduation season given the elevated alcohol figures. Hart and Assistant Superintendent Ferrera noted the district adopted its first K-12 SEL curriculum this year and are expanding tiered mental health interventions.
+    key_speakers: ["Gina Hart (clinical social worker, high school)", "Julia Ferrera (Assistant Superintendent of Teaching and Learning)", "Jen Schaffner (Chair)"]
   - topic: school-budget
-    topic_confidence: 0.92
+    topic_confidence: 0.9
     start_seconds: 4722
     end_seconds: 6766
     featured: true
-    headline: "Committee unanimously approves K–12 science curriculum overhaul estimated at $200,000"
-    dek: "Following a year-long review process, the committee voted 5–0 to adopt new science curricula across all grade levels, including Mystery Science (K–4), McGraw Hill Inspire Science (5–8), and updated AP and standard high school courses."
+    headline: "Committee unanimously approves K-12 science curriculum overhaul within $200K FY26 budget"
+    dek: "Following a year-long review, the committee voted 5-0 to adopt new science curricula across all grade levels, including Mystery Science for K-4, McGraw Hill Inspire Science for grades 5-8, and updated Pearson and other publisher texts for high school."
     summary: |
-      Assistant Superintendent Julia Ferrera, with instructional coaches Angie Graziano and Emily Perez, presented the results of the district's first comprehensive K–12 science curriculum review in many years.
+      Assistant Superintendent Julia Ferrera, instructional coaches Angie Graziano and Emily Perez, and a district-wide teacher committee presented the results of a comprehensive science curriculum review — the first in many years — conducted across the 2024-25 school year.
       
-      **Recommendations approved:**
+      **Recommended Adoptions by Level**
       
-      | Grade Band | Curriculum | Notes |
+      | Level | Curriculum | Notes |
       |---|---|---|
-      | K–4 | Mystery Science | Replaces FOSS; phased rollout, FOSS used as stop-gap year 1 |
-      | 5–8 | McGraw Hill Inspire Science + No:AD (engineering, gr. 7–8) | First aligned curriculum across grades; domain-based by grade (earth science/life science/physical science) |
-      | 9–12 | Pearson, Savas, Cengage, Bedford Freeman Worth (by course) | Includes updated AP Biology, AP Environmental, AP Chemistry, AP Physics; brings AP courses into college board compliance (materials within 10 years) |
+      | K-4 | Mystery Science (primary) + FOSS (transition year) | Online access ~$5,100; materials TBD from existing FOSS kits |
+      | 5-8 | McGraw Hill Inspire Science (domain-based by grade) + NOADAM engineering (7-8) | First fully aligned 5-8 science sequence |
+      | 9-12 | Pearson (Biology, AP Biology, AP Chem, AP Physics), Savas, Ngage, Bedford Freeman Worth | ~$82,000 estimated; brings AP materials into compliance with College Board 10-year recency requirement |
       
-      **Budget:** Total estimated at $200,000, within the FY26 curriculum budget already approved. Estimates are preliminary; final negotiated pricing expected to remain within budget.
+      **Total estimated cost: ~$200,000**, already approved in the FY26 budget.
       
-      **Implementation:** Professional development planned for summer 2025 and October 2025. K–4 rollout will be phased by unit priority. Teachers across all levels were involved in the review process and expressed enthusiasm for the selections.
+      Key discussion points:
+      - K-4 rollout will be phased, with FOSS used as a bridge while teachers receive professional development
+      - Grades 5-8 will have an aligned, standards-based scope and sequence for the first time
+      - High school digital access allows students to review lab videos and text at home
+      - Committee member Fox raised a concern about lab block scheduling; Ferrera committed to collecting data from science educators on lab frequency and reporting back
+      - Finance director confirmed the $200,000 is within the approved budget envelope
       
-      Committee members raised concerns about lab time at the high school level, noting that the elimination of dedicated lab blocks in a prior schedule shift had reduced hands-on lab frequency. Assistant Superintendent Ferrera agreed to conduct data collection on the lab question and report back. Members also noted the importance of ensuring all consumable materials are fully funded, referencing past situations where curriculum kits were shared across classrooms.
-      
-      The vote was 5–0.
-    key_speakers: ["Julia Ferrera (Assistant Superintendent of Teaching and Learning)", "Angie Graziano (instructional coach)", "Emily Perez (instructional coach)", "Mike Ling (Assistant Superintendent of Finance)", "Jen Schaffner (Chair)", "Sarah Fox"]
+      The committee voted 5-0 to approve.
+    key_speakers: ["Julia Ferrera (Assistant Superintendent of Teaching and Learning)", "Angie Graziano (instructional coach)", "Emily Perez (instructional coach)", "Sarah Fox (committee member)", "Jen Schaffner (Chair)", "Mike Ling (Assistant Superintendent of Finance)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 6766
+    topic_confidence: 0.92
+    start_seconds: 6816
     end_seconds: 8507
-    headline: "Committee approves operating protocols and eight MASC policy updates in unanimous votes"
-    dek: "Following a policy subcommittee review, the committee adopted updated MASC-recommended versions of eight school policies and approved the district's operating protocols document."
+    headline: "Committee approves operating protocols and series of MASC policy updates"
+    dek: "Following a recess, the committee voted on school committee operating protocols and approved nine updated MASC policies covering animals, homeschooling, instruction, and student reporting."
     summary: |
-      The committee voted on a series of policy updates developed through a subcommittee process involving Chair Schaffner, Allison Taylor, Superintendent Roberto, and Assistant Superintendent Ferrera. All votes were unanimous (5–0 early in the session; 4–0 after Al Williams departed at approximately 8:24 PM).
+      The committee approved its school committee operating protocols (5-0), noting the original 2017 slim version could not be located and that the current version, while longer than desired, reflects significant work.
       
-      **Policies adopted (MASC updated versions replacing existing Marblehead versions):**
-      - IMG – Animals in School
-      - IMGA – Service Animals in School
-      - IHBG – Homeschooling (key change: removed language allowing the district to award a diploma to homeschooled students, which is not permitted under state law)
-      - CHA/CHC – Development and Dissemination of Procedures
-      - IHBD – Compensatory Education (cross-reference update)
-      - IHBF – Home Bound Instruction (clarifies 14-day cumulative threshold)
-      - IHBH – Alternative School Programs
-      - IJ – Instructional Materials (cross-reference update)
-      - IKAB – Student Progress Reports to Parents and Guardians
-      - IMB – Teaching About Controversial Issues and Controversial Speakers
+      The following MASC policies were adopted (all 5-0 or 4-0 after member Al Williams departed at approximately 8:24 PM):
       
-      **Deleted:** Policy IHBG-R (superseded by newly adopted MASC homeschooling policy)
+      - **IMG** – Animals in School
+      - **IMGA** – Service Animals in School
+      - **IHBG** – Homeschooling (removes erroneous diploma language)
+      - **CHA/CHC** – Development and Dissemination of Procedures
+      - **IHBD** – Compensatory Education (cross-reference update)
+      - **IHBF** – Home Bound Instruction (14-day cumulative threshold)
+      - **IHBH** – Alternative School Programs
+      - **IJ** – Instructional Materials (cross-reference update)
+      - **IKAB** – Student Progress Report to Parents and Guardians
+      - **IMB** – Teaching About Controversial Issues and Controversial Speakers
+      - **IHBG-R** – Deleted (superseded by adopted MASC homeschooling policy)
       
-      **Deferred to next meeting:** Policies IL (Evaluation of Instructional Programs, minor wording changes), IGB (Student Services Program), parent consent form for technology, and student email/internet posting guidelines.
-      
-      On policy IMB (controversial issues), committee members noted the policy memorializes existing state ethics requirements prohibiting teachers from using their position to advocate partisan views.
-    key_speakers: ["Jen Schaffner (Chair)", "Allison Taylor", "Superintendent Roberto (John)", "Julia Ferrera (Assistant Superintendent)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.8
+      Policies IL (Evaluation of Instructional Programs), IGB (Student Services Program), parent technology consent form, and student email/internet guidelines were deferred to the June 18 meeting for minor revisions.
+    key_speakers: ["Jen Schaffner (Chair)", "Sarah Fox (committee member)", "Allison Taylor (committee member)", "Superintendent Roberto"]
+  - topic: elections-procedural
+    topic_confidence: 0.95
     start_seconds: 8507
-    end_seconds: 8696
-    headline: "Committee accepts two donations totaling approximately $7,088 and approves Field House as July 8 polling site"
-    dek: "The committee accepted a $6,000 donation from the Massachusetts Marine Trades Association, an $1,087.84 donation from the Friends of Marblehead Public Schools, and approved the high school Field House as a polling location for the July 8, 2025 special election."
-    summary: "Three routine action items were approved by 4–0 votes: acceptance of a $6,000 cash donation from the Massachusetts Marine Trades Association (purpose to be confirmed by the business office), acceptance of a $1,087.84 donation from the Friends of the Marblehead Public Schools, and authorization for the Town of Marblehead to use the MHS Field House as a polling location for a July 8, 2025 special election (town-wide referendum)."
+    end_seconds: 8647
+    headline: "Committee approves High School Field House as polling location for July 8 special election"
+    dek: "The committee voted 4-0 to allow the town to use the Marblehead High School Field House for a special town-wide referendum on July 8, 2025."
+    summary: "The committee voted 4-0 to permit the Town of Marblehead to use the Marblehead High School Field House as a polling location for a special election scheduled for Tuesday, July 8, 2025. The chair noted it is a town-wide referendum; the full list of polling locations was not confirmed at the meeting."
     key_speakers: ["Jen Schaffner (Chair)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.78
-    start_seconds: 8696
+    topic_confidence: 0.9
+    start_seconds: 8647
     end_seconds: 9073
-    headline: "Brown School organic garden renamed to honor community volunteers Katie Martin and Jeff St. George"
-    dek: "On a motion by Sarah Fox, the committee voted 4–0 to amend the name of the organic garden to include Jeffrey St. George, who died in January 2025, less than eight months after his wife Katie."
+    headline: "Committee votes to rename Brown School organic garden to honor Katie Martin and Jeff St. George"
+    dek: "On a motion by Sarah Fox, the committee voted 4-0 to amend the garden name to the Catherine R. Martin and Jeffrey St. George Organic Garden, honoring both deceased community volunteers."
     summary: |
-      Committee member Sarah Fox presented a memo requesting the renaming of the Catherine R. Martin Organic Garden at Brown School to the **Catherine R. Martin and Jeffrey St. George Organic Garden**. Fox described Jeff St. George's extensive volunteer contributions to the district, including serving on the facilities subcommittee, driving the bobcat to clear the original garden site, and authoring the MSBA letter of interest that led to the Gary Building Project. A letter of support from community member Kristen Salby Pratt was read into the record.
+      Committee member Sarah Fox presented a memo requesting that the Catherine R. Martin Organic Garden at Brown School be renamed the Catherine R. Martin and Jeffrey St. George Organic Garden. Fox noted that Jeff St. George, who passed away in January 2025 less than eight months after his wife Katie, was instrumental in building the original garden, wrote the letter of interest that initiated the Gerry Building Project at the MSBA, and served for years on the district's facilities subcommittee.
       
-      Fox noted that the original ceramic garden sign, made collaboratively with students by local artist Kirsten Von, would be recreated with the participation of the St. George daughters if they wish. The committee voted 4–0 in favor.
+      A letter of support from Kristen Salby Pratt was read into the record. Fox noted that the artist who originally created the garden's ceramic sign, Kirsten Von, had been contacted and agreed to produce a new sign; the St. George daughters may participate in creating it. The committee voted 4-0 to approve.
     key_speakers: ["Sarah Fox (committee member)", "Jen Schaffner (Chair)"]
   - topic: labor-personnel
     topic_confidence: 0.72
     start_seconds: 9073
     end_seconds: 9444
-    headline: "Recess policy update deferred pending contract review; K–3 to receive two recesses, grades 4–6 TBD"
-    dek: "The policy subcommittee discussed a proposed recess policy but flagged a potential conflict with the current collective bargaining agreement before bringing a final recommendation to the full committee."
+    headline: "Recess policy discussion raises contract compliance concern for grades 4-6"
+    dek: "During subcommittee updates, a committee member flagged that a proposed single-recess policy for grades 4-6 may conflict with the current ratified MEA contract, which provides for a second morning recess at the elementary level."
     summary: |
-      Chair Schaffner reported that the policy subcommittee met on May 30 and discussed a recess policy. A survey of K–6 educators was conducted by Assistant Superintendent Ferrera. The emerging recommendation is that K–3 students receive two recesses and grades 4–6 receive one extended recess (potentially moving from 20 to 30 minutes at Village).
+      Committee member Allison Taylor raised a concern during subcommittee updates that a proposal to move grades 4-6 from two recesses to one extended recess (approximately 30 minutes vs. current 20 minutes) may conflict with language in the ratified MEA collective bargaining agreement, which provides for a second morning recess at the elementary level (K-6).
       
-      The Joint Labor-Management Committee (JLMC) met on June 5 to review the proposal. Committee member Allison Taylor raised a concern that the current ratified collective bargaining agreement requires a second morning recess at the elementary level (defined as K–6), and that a policy memorializing only one recess for grades 4–6 could conflict with the contract and create grievance exposure. Superintendent Roberto acknowledged the concern and committed to having legal counsel review whether an MOA amendment is needed. The final recess policy recommendation is expected at the June 18 meeting.
-    key_speakers: ["Jen Schaffner (Chair)", "Allison Taylor", "Julia Ferrera (Assistant Superintendent)", "Superintendent Roberto (John)"]
+      Superintendent Roberto acknowledged the concern, noted attorneys have been involved, and said he would seek further legal review. Taylor suggested a possible MOA in which the union relinquishes its contractual right to a second morning recess for grades 4-6. The recess policy is expected to come back to the committee at the June 18 meeting. The joint labor-management committee (JLMC) met the same day as the school committee meeting.
+    key_speakers: ["Allison Taylor (committee member)", "Superintendent Roberto", "Julia Ferrera (Assistant Superintendent of Teaching and Learning)"]
   - topic: public-comment
-    topic_confidence: 0.75
+    topic_confidence: 0.88
     start_seconds: 9444
     end_seconds: 9627
-    headline: "ADL and CAMERA letters commending committee's antisemitism proclamation read into the record"
-    dek: "Chair Schaffner read letters from the Anti-Defamation League of New England and CAMERA thanking the committee for its proclamation vote, noting all five members ultimately signed the resolution."
+    headline: "Chair reads ADL and CAMERA letters praising committee's antisemitism proclamation vote"
+    dek: "Letters from the Anti-Defamation League of New England and CAMERA (Committee for Accuracy in Middle East Reporting and Analysis) were read into the record commending the committee's 3-2 vote on the MTA curriculum proclamation."
     summary: |
-      Chair Schaffner read two letters of commendation into the record. The Anti-Defamation League of New England (letter dated May 20) and CAMERA (Committee for Accuracy in Middle East Reporting and Analysis, letter dated June 4) both thanked the committee for its vote adopting the proclamation condemning antisemitic MTA curricular materials. Both letters referenced recent violent attacks against Jewish individuals nationally.
+      Chair Schaffner read two letters of commendation received by the committee. The first, from the ADL New England dated May 20, expressed gratitude for the vote condemning MTA antisemitic teaching materials and connected the action to concerns about rising antisemitism following a shooting at the Capital Jewish Museum. The second, from CAMERA CEO Kurt Schwartz dated June 4, similarly praised the committee's moral clarity and offered organizational support going forward.
       
-      Schaffner noted for the record that while the vote was 3–2, all five committee members ultimately signed the resolution and proclamation.
+      The chair also noted for the record that while the vote on the proclamation was 3-2, all five members of the Marblehead School Committee subsequently signed the resolution.
     key_speakers: ["Jen Schaffner (Chair)"]
 ---
 

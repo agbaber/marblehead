@@ -11,188 +11,126 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
   headline: "Marblehead School Committee holds public forum on budget, superintendent search, and flag policy"
-  summary: "The Marblehead School Committee held a public forum on February 29, 2024, drawing approximately 156 in-person and online attendees. The committee decided to conduct the interim superintendent search as a full committee with the entire process open to the public. Topics included the FY25 school budget and potential cuts, a draft flag policy under legal review, special education concerns, and whether to pursue a Proposition 2½ override."
+  summary: "The Marblehead School Committee held a public forum attended by approximately 156 people in-person and online. The committee decided to conduct the interim superintendent search as a full committee with an entirely public process. Topics included school property disposition, the upcoming budget process (with a potential $2.3 million reduced-services scenario), the flag policy draft, special education funding concerns, and the possibility of a Proposition 2½ override."
   decisions:
-    - "Approved conducting the interim superintendent search as a full committee with all proceedings public"
-    - "Confirmed March 27 public forum date with a League of Women Voters state-level moderator"
+    - "Approved full-committee process for interim superintendent search, with all deliberations public"
+    - "Confirmed March 27th date for League of Women Voters-moderated public forum"
 
 topic_segments:
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 0
     end_seconds: 216
-    headline: "Committee decides to conduct interim superintendent search fully in public"
-    dek: "All five members agreed to use the full-committee model, making every application, interview, and deliberation open to the public."
-    summary: "The committee discussed two options for the interim superintendent search: a screening committee model (first-round applications private) or a full-committee model (everything public from the start). After brief discussion, all members expressed support for the full-committee approach for transparency and to allow the whole committee to participate. The chair noted the search is currently attracting only a handful of applicants."
+    headline: "School Committee chooses fully public process for interim superintendent search"
+    dek: "All members agreed to conduct the search as a full committee with applications and deliberations open to the public from the start."
+    summary: |
+      The committee discussed two options for the interim superintendent search: a screening-committee model (first-round applications private) or a full-committee model (entire process public). All five members indicated a preference for the full-committee approach for reasons of transparency and full participation. No formal vote was taken; consensus was reached by discussion.
+      
+      The committee also announced a public forum scheduled for March 27th, to be moderated by the vice president of the state League of Women Voters.
     key_speakers: ["Sarah Fox (Chair)", "Allison (committee member)", "Jen (committee member)", "Brian (committee member)"]
   - topic: public-comment
     topic_confidence: 0.95
     start_seconds: 216
-    end_seconds: 479
-    headline: "Forum opens with 156 attendees; March 27 League of Women Voters forum confirmed"
-    dek: "The chair outlined ground rules including one-minute question limits and confirmed a March 27 public forum moderated by the vice president of the state League of Women Voters."
-    summary: "The chair welcomed approximately 156 participants in person and online. She announced the March 27 public forum date in partnership with the League of Women Voters, with the state league vice president serving as moderator. Ground rules included one-minute question limits, a hard stop at 8:30 p.m. for questions requiring answers, and a reminder that public comment is available at weekly meetings."
-    key_speakers: ["Sarah Fox (Chair)"]
-  - topic: school-budget
-    topic_confidence: 0.9
-    start_seconds: 479
     end_seconds: 1085
-    headline: "Residents question school property sales and override plans amid budget pressure"
-    dek: "Committee members explained that proceeds from selling school buildings go to the town general fund, not the school budget, and discussed strategic reasons for retaining vacant school properties."
-    summary: |
-      A resident asked why the committee had not turned over vacant school properties (including Coffman school) to be sold to raise revenue. Committee members explained that school building deeds are held by the town, not the school department, and that any sale proceeds would go into the town general fund rather than the school budget. Members also cited NASDAQ enrollment projections showing approximately 100 additional students over 8–10 years and the pending MBTA overlay district zoning change (potentially allowing up to 900 new housing units) as reasons to retain facilities.
-      
-      A second resident asked how the committee would make the case for an override to the 75% of households without children in Marblehead schools. Members noted no override had been formally proposed, though a placeholder article is routinely placed on the warrant. They argued school quality protects property values for all homeowners regardless of whether they have school-age children.
-    key_speakers: ["Mary (resident, 46 Pine Cliff Drive)", "Rick Pitas (resident)", "Sarah Fox (Chair)", "Brian (committee member)", "Jen (committee member)", "Allison (committee member)"]
-  - topic: 40b-mbta
-    topic_confidence: 0.7
-    start_seconds: 856
-    end_seconds: 903
-    headline: "MBTA overlay district could allow up to 900 new housing units in Marblehead"
-    dek: "A committee member cited the pending MBTA Communities zoning overlay as a key reason not to dispose of school properties before understanding long-term enrollment impacts."
-    summary: "During discussion of vacant school properties, a committee member noted that town meeting will be asked to vote on an MBTA Communities overlay district that, if approved, would allow from a zoning standpoint up to approximately 900 new residential units to be built in Marblehead. The member emphasized this does not mean 900 units would be built immediately but that the possibility warrants caution before permanently disposing of school facilities."
-    key_speakers: ["Brian (committee member)"]
-  - topic: permits-zoning
-    topic_confidence: 0.55
-    start_seconds: 1109
-    end_seconds: 1343
-    headline: "Resident proposes ground-lease model for vacant school buildings to generate revenue"
-    dek: "A former HUD employee outlined a ground-lease structure that could generate an annual income stream without transferring title, and was directed to contact the town administrator."
-    summary: "A resident with 40 years of experience at the U.S. Department of Housing and Urban Development proposed that instead of selling vacant school properties, the town could use a ground lease, keeping title with the public entity while a developer pays a lease fee. He cited the Brick Bottom co-op in Boston as an example and noted that ground leases can be structured for affordable housing with deferred payments. A committee member explained that school building deeds are held by the town and any such arrangement would require the select board's authority after a town meeting vote. The resident was directed to contact the town administrator."
-    key_speakers: ["Rick Pitas (resident)", "Sarah Fox (Chair)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.75
-    start_seconds: 1389
-    end_seconds: 1559
-    headline: "Committee clarifies it has not voted to pursue a Prop 2½ override for FY25"
-    dek: "Members confirmed a placeholder override article is on the warrant as standard practice but that no decision to bring one forward has been made."
-    summary: "A resident pressed the committee on whether they were planning a Proposition 2½ override and asked what argument they would make to the 75% of households without school-age children. Committee members clarified that while a placeholder article appears on the town warrant every year as standard practice, the committee has not voted to pursue an override. They noted the budget process is just beginning following the first detailed budget presentation the prior evening, and that a budget hearing scheduled for March 21 would provide a community forum for input."
-    key_speakers: ["Rick Pitas (resident)", "Sarah Fox (Chair)", "Jen (committee member)", "Brian (committee member)"]
-  - topic: school-budget
-    topic_confidence: 0.95
-    start_seconds: 1559
-    end_seconds: 1931
     featured: true
-    headline: "School budget faces $2.3M gap; committee reviews level-services vs. reduced-services options"
-    dek: "The administration presented two budgets: one maintaining current services and one holding flat at this year's funding level, requiring approximately $2.3 million in cuts."
+    headline: "Residents question school property sales, override strategy, and home-value arguments at packed forum"
+    dek: "Over 156 attendees questioned the committee on why vacant school buildings have not been sold, whether an override is planned, and what arguments would persuade non-parent taxpayers."
     summary: |
-      Committee members described a three-and-a-half-hour budget presentation the prior evening covering every department and building. The administration presented two budget scenarios:
+      The forum drew questions on several interconnected financial topics:
       
-      | Scenario | Description |
-      |---|---|
-      | Level services | Funds same services as current year; requires additional revenue |
-      | Reduced services | Holds budget flat at current-year funding; requires approximately $2.3M in cuts to staff and programs |
+      **School property disposition:** A resident asked why Coffin School has not been sold. Committee members explained that school building deeds are held by the town, not the school department; proceeds from any sale would flow to the town general fund and not directly to the school budget. The committee also cited uncertainty about future enrollment (a projection of approximately 100 additional students over 8–10 years) and the pending MBTA overlay zoning change (potentially allowing up to 900 new units) as reasons to retain the property.
       
-      Members encouraged the public to review the budget materials posted online. A budget hearing open to the public was scheduled for March 21. Members emphasized the process is iterative and a decision on whether to pursue an override would come after the hearing.
+      **Ground lease concept:** A resident with 40 years of HUD experience described ground-lease financing as an alternative to outright sale, citing the Brick Bottom co-op in Boston as a model. Committee members noted that since deeds are in the town's name, any such arrangement would be the select board's authority; they referred the resident to Town Administrator Thatcher Keer.
       
-      The co-presidents of the Marblehead Education Association asked directly whether the committee would advocate for a fully funded needs-based budget rather than accepting cuts. Members responded that they would advocate for equitable treatment compared to town-side departments, gather more detailed data on cut impacts, and present options to the community — including potentially an override — after more information is available. One member noted approximately 30 positions were cut last year and potentially another 30 are at risk this year, representing a significant share of the roughly 425 total educators.
-    key_speakers: ["Sarah Fox (Chair)", "Brian (committee member)", "Jen (committee member)", "Allison (committee member)", "Jonathan Heller (MEA Co-President)", "Sally Shery (MEA Co-President)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.7
-    start_seconds: 1931
-    end_seconds: 2025
-    headline: "Committee notes free cash article on town warrant is a standard annual mechanism"
-    dek: "A member clarified that Article 19 appropriating approximately $7.1 million in free cash to reduce the tax levy is a routine annual town meeting article, not discretionary spending."
-    summary: "In response to a question about Article 19 on the town warrant — described as appropriating approximately $7.1 million to reduce the tax rate — a committee member explained this is the standard mechanism by which certified free cash is released at town meeting each year. Because the Department of Revenue does not recognize free cash as a recurring revenue stream, it must be appropriated through a separate article rather than through the regular budget. The member cautioned against disturbing the article because doing so would require an additional $7.1 million in cuts elsewhere."
-    key_speakers: ["Jen (committee member)"]
-  - topic: public-comment
-    topic_confidence: 0.9
-    start_seconds: 2025
-    end_seconds: 2579
-    headline: "High school senior and online student question flag policy and school inclusion"
-    dek: "Two students asked about the draft flag policy's vagueness regarding personal vehicles and school mascot flags, and whether student voices would be included in finalizing the policy."
-    summary: |
-      A Marblehead High School senior who moved from Texas asked about ambiguities in the draft flag policy, specifically whether the vehicle provision applied to personal student cars and why the school mascot (Magician) flag was not addressed. She presented a civics-project proposal for a flag policy that centers student voices and asked whether student input would be formally included in the process.
-      
-      An online participant (Sophia Weiner, 36 Mulford Street) asked whether the school committee could craft a flag policy different from the town's newly adopted policy, and inquired about steps toward a more inclusive school environment.
-      
-      Committee members responded that:
-      - The draft vehicle language was intended to apply only to school-owned vehicles and would be clarified.
-      - The Marblehead Magician flag and similar school/team flags would be incorporated.
-      - The prior evening, the Marblehead Select Board had adopted a town flag policy citing the same 2021 Supreme Court *Shurtleff* case; the school committee is checking with its attorney on the relationship between the two policies.
-      - DEI working groups exist at each school; a DEI coordinator had been requested in prior budgets but not approved.
-    key_speakers: ["Charlotte Horton (MHS senior, Old Town)", "Sophia Weiner (online, 36 Mulford Street)", "Jen (committee member)", "Allison (committee member)", "Sarah Fox (Chair)"]
-  - topic: public-comment
-    topic_confidence: 0.85
-    start_seconds: 2579
-    end_seconds: 3041
-    headline: "Resident raises out-of-district placement data and cell phone policy questions"
-    dek: "A parent asked the committee to obtain out-of-district placement data back to 2010 and consider removing cell phones from schools to address mental health concerns."
-    summary: "A resident (R. Dubois, Green Street) made two comments: first, noting the legal distinction in flag policy between district speech and student speech; second, asking for out-of-district placement data going back to 2010, arguing the current charts only go to 2019. She linked a possible spike in placements around 2019–2020 to early social media use by middle schoolers and asked whether the committee would consider a cell phone ban in schools. A committee member agreed to request the historical data, noting it would take more than 24 hours to compile."
-    key_speakers: ["R. Dubois (resident, Green Street)", "Sarah Fox (Chair)"]
-  - topic: labor-personnel
-    topic_confidence: 0.8
-    start_seconds: 3041
-    end_seconds: 3299
-    headline: "Resident expresses support; online commenter asks committee to self-assess performance A–F"
-    dek: "A League of Women Voters member challenged committee members to grade their own performance; members gave themselves B and B-minus grades across four areas of responsibility."
-    summary: |
-      A resident (Nicole Cohen) offered support for the committee's conduct. A League of Women Voters member (Kathy Hempel) then asked two questions: (1) whether Chair Fox had said she was uncomfortable with local league members moderating the forum, and (2) whether each committee member would self-assess their performance A through F.
-      
-      On the first question, Fox confirmed she had said that, explaining she wanted a state-level moderator who had not personally weighed in on the committee's performance to ensure neutrality, not because of any issue with the league as an organization.
-      
-      On self-assessments, members graded themselves across four responsibilities — budget leadership, superintendent search/hire, policy, and union relations:
-      
-      | Member | Self-grade | Notes |
-      |---|---|---|
-      | Sarah Fox | B | Strong budget transparency; union relations good; superintendent search harder than anticipated |
-      | Brian | B | Delayed permanent superintendent search; otherwise solid |
-      | Allison | B-minus | Acknowledged need to improve on superintendent process |
-      | Nelson | B | Noted flag policy is still a draft; highlighted transparent superintendent search process |
-      | New member | Incomplete | Too new to assess |
-      
-      Hempel responded that the town had given the committee an F and suggested more self-reflection.
-    key_speakers: ["Nicole Cohen (resident)", "Kathy Hempel (resident, League of Women Voters member)", "Sarah Fox (Chair)", "Brian (committee member)", "Allison (committee member)", "Nelson (committee member)"]
+      **Override and non-parent voters:** A resident noted that approximately 75% of Marblehead households have no children in public schools and asked what arguments the committee would make to those voters if an override is sought. Committee members clarified that no override has been formally voted on or decided, though a placeholder has appeared on the warrant as standard practice since at least 2019. Members argued that strong schools protect property values for all homeowners regardless of whether they have children in the district.
+    key_speakers: ["Mary (resident, 46 Pine Cliff Drive)", "Rick Pitas (resident, no children in district)", "Committee members"]
   - topic: school-budget
-    topic_confidence: 0.85
-    start_seconds: 3299
-    end_seconds: 3423
-    headline: "MEA co-presidents ask committee to advocate for fully funded budget rather than accept cuts"
-    dek: "Union co-presidents asked directly whether the committee would go back to the town to request full funding rather than treating the reduced allocation as a foregone conclusion."
-    summary: "Jonathan Heller and Sally Shery, co-presidents of the Marblehead Education Association, asked the school committee whether it would advocate to the town for a fully funded, needs-based budget or simply accept the cuts directed by the town. Committee members responded individually that they would advocate for equitable treatment, seek more detailed information about the depth of cuts at each school and grade level, and present options including a potential override to the community after the March 21 budget hearing. Members noted that last year's 30-position cut combined with up to another 30 this year could represent roughly 20% of the educator workforce."
-    key_speakers: ["Jonathan Heller (MEA Co-President)", "Sally Shery (MEA Co-President)", "Sarah Fox (Chair)", "Brian (committee member)", "Jen (committee member)", "Allison (committee member)"]
-  - topic: public-comment
+    topic_confidence: 0.92
+    start_seconds: 1745
+    end_seconds: 2025
+    headline: "Committee describes two-budget scenario: level-services vs. $2.3M reduced-services cut"
+    dek: "The administration presented a level-services budget and a reduced-services budget requiring approximately $2.3 million in cuts, with a budget hearing scheduled for March 21st."
+    summary: |
+      Committee members described the prior evening's three-and-a-half-hour budget presentation by the administration. Two budgets were prepared at the request of the Finance Commission:
+      
+      | Budget scenario | Description |
+      |---|---|
+      | Level-services | Same services as current year; higher cost |
+      | Reduced-services | Same dollar amount as current year; requires approximately $2.3 million in cuts to staff and programs |
+      
+      The budget hearing for community input was scheduled for March 21st. Members encouraged residents to review the detailed budget materials posted online.
+    key_speakers: ["Nelson (committee member)", "Brian (committee member)", "Jen (committee member)"]
+  - topic: permits-zoning
+    topic_confidence: 0.72
+    start_seconds: 903
+    end_seconds: 1039
+    headline: "Committee cites MBTA overlay district—up to 900 potential new units—as reason to retain school properties"
+    dek: "A pending MBTA Communities zoning article at town meeting could allow up to 900 additional housing units, influencing the committee's decision not to declare school buildings surplus."
+    summary: "Multiple committee members referenced the MBTA overlay district zoning change expected to come before town meeting. If approved, the zoning change would allow up to approximately 900 new residential units to be built in Marblehead. Members argued this potential population growth, combined with enrollment projections showing roughly 100 additional students over the next 8–10 years, warranted retaining existing school buildings rather than disposing of them for a one-time cash infusion."
+    key_speakers: ["Nelson (committee member)", "Jen (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2025
+    end_seconds: 2810
+    headline: "Flag policy draft under legal review; select board adopted town-wide flag policy the prior evening"
+    dek: "The policy subcommittee is awaiting attorney review of a draft flag policy, complicated by the select board's vote the previous night establishing a town-wide flag policy delegated to the town administrator."
+    summary: |
+      Committee members Jen and Allison, who serve on the policy subcommittee, explained the status of the draft flag policy:
+      
+      - The draft was prompted by a request from the high school principal and guided by the 2021 Supreme Court *Shurtleff v. Boston* decision, which requires government entities to either allow all flags without restriction or adopt a policy controlling what is displayed.
+      - The draft has gone through student listening sessions and has been submitted to the committee's attorney for review.
+      - The previous evening, the select board adopted a town-wide flag policy designating all flag display as government speech, delegated to the town administrator—a development the school committee was unaware of during its concurrent budget meeting.
+      - Committee members noted they need to determine how the town policy interacts with any school-specific policy, and whether a school exclusion clause in the town's policy is permissible.
+      - Student speakers Charlotte Horton and Sophia Weiner (online) asked for student voices in the policy-drafting process and raised questions about inclusion.
+      - Members clarified that language referring to "vehicles" in the draft was intended to cover only school-owned vehicles, not personal cars.
+    key_speakers: ["Jen (committee member)", "Allison (committee member)", "Charlotte Horton (student, in-person)", "Sophia Weiner (student, online)"]
+  - topic: school-budget
     topic_confidence: 0.88
     start_seconds: 3423
-    end_seconds: 5037
-    headline: "Special education costs, out-of-district placements, and committee oversight questioned by online caller"
-    dek: "An online participant asked each committee member about their understanding of IDEA and FAPE obligations given SPED's share of the budget and the department's recent upheaval."
+    end_seconds: 3692
+    headline: "Resident raises special education budget concerns; committee discusses legal obligations and ongoing audit"
+    dek: "A parent questioned committee members' familiarity with IDEA and FAPE requirements given the share of the budget devoted to special education and recent departmental upheaval."
     summary: |
-      An online participant (Carrie Power) asked each committee member about their familiarity with special education law — specifically FAPE (Free Appropriate Public Education) and IDEA — given that special education and out-of-district placements represent a significant portion of the budget and the department had experienced recent turmoil.
+      Carrie Power (online) asked each committee member about their understanding of special education law (IDEA, FAPE) and the budget implications of potential cuts. Key points from committee responses:
       
-      Members responded:
-      - Allison acknowledged she does not have a child in special education and deferred to colleagues and administrators, while noting the committee's legal obligation to fund IEPs.
-      - Brian, noting a background as a principal and special education teacher, said building-level staff understand IEP law well; the recent issues stemmed from leadership at the director and assistant director of pupil services level. He referenced a special education audit/survey in progress to assess the extent of problems.
-      - A member noted the committee had requested an RFP for an outside special education audit and was awaiting a response.
-      - Members cautioned against framing general education versus special education as competing interests, emphasizing all students must be served.
-      
-      Power noted that out-of-district placement costs had increased 14% and argued that teachers serving students in out-of-district placements are equally Marblehead educators and those students should be included in district activities.
-    key_speakers: ["Carrie Power (online)", "Allison (committee member)", "Brian (committee member)", "Sarah Fox (Chair)"]
-  - topic: public-comment
+      - Members acknowledged special education is a legally mandated obligation that cannot be reduced to meet budget targets the way discretionary programs can.
+      - The committee had previously requested an RFP for an outside audit of the special education department's processes and policies; members noted they had not yet received a response or updated information on that audit.
+      - Brian, a former principal and special education teacher, stated that building-level staff are well-versed in IEP administration and that the issues stemmed from the top of the pupil-services department.
+      - Members emphasized that out-of-district placements represent a significant cost driver and that those students remain part of the Marblehead district.
+    key_speakers: ["Carrie Power (parent, online)", "Brian (committee member)", "Allison (committee member)"]
+  - topic: labor-personnel
     topic_confidence: 0.85
-    start_seconds: 5037
-    end_seconds: 6022
-    headline: "Residents give supportive comments; speakers note double standard between school and select board scrutiny"
-    dek: "Several residents and the MEA co-presidents expressed support for the committee while one resident asked how to ensure equitable cuts between the school department and the town."
+    start_seconds: 5268
+    end_seconds: 5695
+    headline: "MEA co-presidents ask committee to advocate for fully funded needs-based budget rather than accept cuts"
+    dek: "Marblehead Education Association co-presidents Jonathan Heller and Sally Shery asked the school committee to publicly commit to seeking full funding rather than treating town-directed reductions as a foregone conclusion."
     summary: |
-      Multiple residents offered supportive comments:
-      - Tara Sge (32 Rowland Street) said the current committee inherited multiple generations of problems and called the failing-grade letter unfair.
-      - Joelle Een (43 Cedar Street), who administers a Facebook group of over 9,000 members, said the town as a whole did not give the committee an F — only the letter signers did — and expressed full trust in the current committee for the first time in decades.
-      - Greg Tido (60-year resident) noted that voters elected Fox and Allison with over 3,000 votes each and subsequently elected Jen and Brian, suggesting the electorate has expressed confidence.
-      - Megan Sweeney (23 Beacon Street) highlighted what she described as a double standard between scrutiny of the school committee and other town boards, and asked how the committee would work with the select board to ensure the schools receive adequate funding given that the schools face close to a $4.5 million shortfall.
+      MEA co-presidents asked whether the committee would advocate for a fully funded needs-based budget or simply accept the reduced-services scenario. Committee responses:
       
-      Committee members responded that they will pursue equitable belt-tightening between school and town departments and continue to advocate for school funding.
-    key_speakers: ["Tara Sge (resident, 32 Rowland Street)", "Joelle Een (resident, 43 Cedar Street)", "Greg Tido (resident)", "Megan Sweeney (resident, 23 Beacon Street)", "Brian (committee member)", "Jen (committee member)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 6022
+      - Multiple members said yes, they would advocate for full funding, though they noted the budget process is not yet complete.
+      - Members cited approximately 60 positions lost over two years (roughly 30 last year and potentially 30 more this year) out of a total educator workforce of approximately 425.
+      - Brian noted that two prior overrides did not pass and expressed caution about seeking another one without sufficient community support.
+      - Jen raised questions about Article 19 on the town warrant, which she understood relates to approximately $7.1 million in free cash to reduce the tax levy; another member clarified this is a standard annual mechanism to appropriate certified free cash.
+      - Members noted the school committee has the legal authority to bring its own budget request to the floor of town meeting independent of the select board.
+    key_speakers: ["Jonathan Heller (MEA co-president)", "Sally Shery (MEA co-president)", "Jen (committee member)", "Brian (committee member)", "Sarah Fox (Chair)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 5695
     end_seconds: 6784
-    headline: "Forum concludes at 8:54 p.m.; next public forum set for March 27 with league moderator"
-    dek: "The chair thanked attendees and adjourned, confirming the March 27 forum with a state League of Women Voters moderator and noting the March 21 budget hearing."
-    summary: "The chair thanked all attendees and committee members for their third meeting of the week. She confirmed the next public forum would be held March 27, moderated by the vice president of the state League of Women Voters. The March 21 budget hearing remains scheduled as the next major public budget event. The meeting was adjourned at 8:54 p.m."
-    key_speakers: ["Sarah Fox (Chair)"]
+    headline: "Residents offer range of views on committee performance, budget equity, and double-standard concerns"
+    dek: "Residents debated whether the committee deserves the failing grades in a widely circulated letter, praised transparency efforts, and urged equitable cuts across town departments."
+    summary: |
+      The final portion of public comment included:
+      
+      - **Megan Sweeney** raised the double standard between scrutiny of the school committee versus other town boards managing public funds, and asked how the community can ensure the select board treats school funding as a genuine priority.
+      - **Kathy Hempel** asked each committee member to self-grade A–F. Members gave themselves grades of B to B-minus, citing strong budget transparency, good labor relations, and work on superintendent hiring, while acknowledging the superintendent search started later than ideal.
+      - **Tara Sage** and **Joelle Eeen** expressed strong support for the committee, characterizing them as dealing with inherited multi-generational problems.
+      - **Greg Tido** (60-year resident, children and grandchildren through Marblehead schools) noted that voters elected the current majority with over 3,000 votes each and suggested critics allow the committee to govern until the next election.
+      - **Nicole Cohen** expressed confidence in the committee's budget process and said she believed the community would support the committee if an override were sought.
+    key_speakers: ["Megan Sweeney (resident, 23 Beacon Street)", "Kathy Hempel (resident, League of Women Voters member)", "Tara Sage (resident, parent)", "Joelle Eeen (resident, 43 Cedar Street)", "Greg Tido (resident, 60+ years)", "Nicole Cohen (resident)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

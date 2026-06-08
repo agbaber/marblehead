@@ -11,128 +11,121 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board approves FY2024 revolving funds, sponsors 7 warrant articles, and awards fuel station contract"
-  summary: "The Marblehead Select Board received a presentation on the draft Net Zero Roadmap from MAPC and the Green Marblehead Committee, and heard an assessment of the Franklin Street Firehouse estimating roughly $2.3 million in full renovation costs. The board approved FY2024 revolving fund authorizations totaling approximately $7.1 million, sponsored seven specific town meeting warrant articles, and awarded a contract for a new above-ground fuel station system for $805,825.12 funded by ARPA. Multiple routine licenses, appointments, and event approvals were also voted unanimously."
+  headline: "Select Board approves revolving funds, town meeting warrant articles, and multiple facility use requests"
+  summary: "The Select Board reviewed the Green Marblehead Committee's draft Net Zero Roadmap and a historic assessment of the Franklin Street Firehouse, estimated at approximately $2.3 million for full renovation. The board voted unanimously to authorize revolving fund accounts totaling over $7 million for FY2024 and to sponsor seven specific town meeting warrant articles for the 2023 Annual Town Meeting. Several routine facility use, licensing, and contract items were also approved unanimously."
   decisions:
-    - "Approved FY2024 revolving fund authorizations across 12 accounts"
-    - "Approved standard annual town meeting warrant articles"
-    - "Sponsored 7 specific FY2023 annual town meeting articles including Franklin Street Fire Station renovation"
-    - "Approved one-day liquor license for Marblehead Museum fundraiser at Old Townhouse"
-    - "Approved use of Old Townhouse for Marblehead Museum fundraiser"
+    - "Approved FY2024 revolving fund accounts totaling over $7 million across multiple departments"
+    - "Approved sponsoring standard town meeting warrant articles for 2023 Annual Town Meeting"
+    - "Approved sponsoring seven specific warrant articles including Franklin Street Fire Station Renovations and HR department creation"
+    - "Approved Marblehead Museum use of Old Townhouse and one-day liquor license for March 10 fundraiser"
+    - "Approved Abbott Hall use for June 23 wedding ceremony"
+    - "Approved appointment of Benjamin Leibowitz as Local Inspector"
+    - "Approved contract extension for Collins Center ADA Transition Plan to June 30, 2023"
     - "Approved one-day liquor license for Marblehead Little Theater Valentine's Day concert"
-    - "Approved use of Abbott Hall for Jeff Hunt wedding ceremony"
-    - "Approved use of Abbott Hall for Eagle Scout court of honor (fee waived)"
-    - "Approved appointment of Benjamin Leibowitz as local inspector"
-    - "Approved contract amendment extending ADA transition plan contract to June 30, 2023"
-    - "Awarded fuel station contract to CES Northeast LLC for $805,825.12"
-    - "Awarded engineering services contract to Haley Ward Inc. for up to $200,000 annually over three years"
+    - "Approved Abbott Hall use for Eagle Scout Court of Honor on April 30"
+    - "Approved minutes of January 18 and January 23, 2023"
+    - "Approved delegating OML complaint response to Town Counsel"
+    - "Approved contract with CES Northeast LLC for new fuel station system at $805,825.12"
+    - "Approved engineering services contract with Haley Ward Inc. at up to $200,000/year for three years"
     - "Approved wicked 10/20 Miler road race on March 26, 2023"
     - "Approved private drain connection license for 286 Ocean Avenue"
-    - "Approved use of Abbott Hall for Marblehead School of Music student recitals"
-    - "Approved minutes of January 18 and January 23, 2023"
-    - "Delegated response to open meeting law complaint by Alan Waller to Town Counsel"
-    - "Approved sending condolence letter to the family of David Cameron"
+    - "Approved Marblehead School of Music use of Abbott Hall on May 7"
+    - "Approved sending condolence letter to family of deceased DPW employee David Cameron"
   votes:
-    - motion: "FY2024 revolving fund authorizations"
+    - motion: "FY2024 revolving fund accounts authorization"
       result: "in favor (unanimous)"
-    - motion: "Standard annual town meeting warrant articles"
+    - motion: "Standard town meeting warrant articles"
       result: "in favor (unanimous)"
-    - motion: "Sponsor 7 specific 2023 annual town meeting articles"
+    - motion: "Seven specific town meeting warrant articles"
       result: "in favor (unanimous)"
-    - motion: "Marblehead Museum use of Old Townhouse (fee waived)"
+    - motion: "Marblehead Museum Old Townhouse use and fee waiver"
       result: "in favor (unanimous)"
-    - motion: "One-day liquor license for Marblehead Museum fundraiser"
+    - motion: "Marblehead Museum one-day liquor license"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall use for Jeff Hunt wedding"
+    - motion: "Abbott Hall wedding ceremony use"
       result: "in favor (unanimous)"
-    - motion: "Appoint Benjamin Leibowitz local inspector"
+    - motion: "Appointment of Benjamin Leibowitz as Local Inspector"
       result: "in favor (unanimous)"
-    - motion: "Amend ADA transition plan contract to June 30, 2023"
+    - motion: "Collins Center ADA contract extension"
       result: "in favor (unanimous)"
-    - motion: "One-day liquor license for Marblehead Little Theater"
+    - motion: "Marblehead Little Theater one-day liquor license"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall use for Eagle Scout court of honor (fee waived)"
+    - motion: "Eagle Scout Court of Honor Abbott Hall use and fee waiver"
       result: "in favor (unanimous)"
-    - motion: "Approve minutes January 18 and January 23, 2023"
+    - motion: "Approval of January 18 and January 23 minutes"
       result: "in favor (unanimous)"
     - motion: "Delegate OML complaint response to Town Counsel"
       result: "in favor (unanimous)"
-    - motion: "Award fuel station contract to CES Northeast LLC for $805,825.12"
+    - motion: "CES Northeast LLC fuel station contract at $805,825.12"
       result: "in favor (unanimous)"
-    - motion: "Award engineering services contract to Haley Ward Inc."
+    - motion: "Haley Ward engineering services contract"
       result: "in favor (unanimous)"
-    - motion: "Approve wicked 10/20 Miler road race March 26, 2023"
+    - motion: "Wicked 10/20 Miler road race approval"
       result: "in favor (unanimous)"
-    - motion: "Private drain connection license 286 Ocean Avenue"
+    - motion: "286 Ocean Avenue private drain connection license"
       result: "in favor (unanimous)"
-    - motion: "Abbott Hall use for Marblehead School of Music recitals"
+    - motion: "Marblehead School of Music Abbott Hall use"
       result: "in favor (unanimous)"
-    - motion: "Send condolence letter to David Cameron family"
+    - motion: "Condolence letter to David Cameron's family"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 0
-    end_seconds: 1225
-    headline: "Green Marblehead Committee presents draft Net Zero Roadmap with 73 actions targeting 2040"
-    dek: "MAPC senior clean energy specialist Brooks Winner walked the Select Board through the nearly complete roadmap, which includes over 70 emissions-reduction strategies and a recommendation to hire a sustainability coordinator."
+    end_seconds: 1205
+    headline: "Green Marblehead Committee presents draft Net Zero Roadmap with 73 actions"
+    dek: "MAPC senior clean energy specialist Brooks Winner presented a draft roadmap targeting Net Zero emissions by 2040, including over 70 community-wide strategies."
     summary: |
-      The Green Marblehead Committee, formed in 2020, presented a draft Net Zero Roadmap developed with support from the Metropolitan Area Planning Council (MAPC). The roadmap contains 73 actions across categories including buildings, transportation, clean energy systems, natural systems, and outreach.
+      The Green Marblehead Committee, working with the Metropolitan Area Planning Council (MAPC), presented a draft Net Zero Roadmap developed with state grant funding. The roadmap includes more than 73 actions across categories: implementing the roadmap, homes and businesses, mobility and transportation, clean energy systems, natural systems, and outreach and education.
       
-      Key actions discussed include:
-      - Hiring a sustainability coordinator
-      - Providing annual progress updates to the Select Board
-      - Expanding EV charging stations
-      - Increasing composting participation
-      - Advocating for community transit
-      - Implementing a public housing solar program
+      Key recommendations highlighted include hiring a sustainability coordinator, expanding public EV charging, advocating for transit, implementing a public housing solar program, and increasing composting participation. MAPC noted that some communities have found sustainability coordinator positions can pay for themselves through grant access and energy savings, and that federal funding through the Bipartisan Infrastructure Law may help with startup costs.
       
-      Board members asked about return-on-investment for specific actions and about potential federal funding through the Inflation Reduction Act and Bipartisan Infrastructure Law. The committee noted that a sustainability coordinator role could potentially pay for itself through grant access and energy savings, and that a shared regional position model (as used in Chelsea, Revere, and Winthrop) is under consideration.
-      
-      A public session was scheduled for February 15 to gather community feedback before the plan is finalized. The draft was published on the Green Marblehead Committee website the day of the meeting.
+      A public session was scheduled for February 15 to gather community feedback before the roadmap is finalized. The draft was published on the Green Marblehead Committee website on the day of the meeting.
     key_speakers: ["Brooks Winner (MAPC Senior Clean Energy Specialist)", "Thatcher (Green Marblehead Committee member)", "Alexa (Green Marblehead Committee member)"]
-  - topic: bonding-capital
+  - topic: public-safety
     topic_confidence: 0.9
-    start_seconds: 1225
+    start_seconds: 1205
     end_seconds: 3117
     featured: true
-    headline: "Franklin Street Firehouse assessment estimates $2.3M full renovation; article to be placed on town meeting warrant"
-    dek: "Architects Foster Architecture presented a detailed conditions assessment of the 1886 firehouse, identifying structural, mechanical, and accessibility needs, with the town planning a grant-and-fundraising strategy similar to the Fort Sewell restoration."
+    headline: "Franklin Street Firehouse full renovation estimated at approximately $2.3 million"
+    dek: "Architects Foster Architects presented a historic assessment of the 1886 firehouse identifying exterior, structural, mechanical, and accessibility needs, with a comprehensive renovation cost estimate of about $2.3 million in 2022 dollars."
     summary: |
-      Town Planner Becky Curran introduced architects Ryan Foster and Eric Christiansen of Foster Architecture, who presented findings from a Massachusetts Preservation Projects Fund-funded building assessment of the Franklin Street Fire Station, an 1886 wood-frame structure described as one of the oldest continuously operating fire stations in the Commonwealth.
+      Foster Architects (Ryan Foster and Eric Christiansen) presented findings from a Massachusetts Preservation Projects Fund (MPPF)-funded building assessment of the Franklin Street Fire Station, an 1886 wood-frame structure described as one of the oldest continuously operated fire stations in Massachusetts.
       
-      **Key findings:**
-      - No major structural deficiencies, but the building sways in strong winds due to widening of the front apparatus bay door over time; recommended fix is adding plywood shear wall reinforcement
-      - Chimney has loose bricks and lacks a vented cap, allowing water infiltration
-      - Exterior wood siding in varying condition; original clapboard siding still exists beneath later-added shingle siding on side elevations
-      - Most mechanical, electrical, plumbing, and fire protection systems recommended for full replacement
-      - Character-defining features such as a flagpole, missing window, small balcony, and a historic cupola on the hose tower were identified as restoration candidates (cupola listed as an alternate)
+      **Key existing conditions identified:**
+      - Chimney masonry deterioration and missing vented cap allowing water infiltration
+      - Deteriorated exterior wood siding (non-original shingle siding over original clapboard)
+      - Failed gutter seals and roof flashings causing water infiltration
+      - Structural instability due to widening of the apparatus bay door over time
+      - Aging mechanical, electrical, and plumbing systems recommended for full replacement
+      - Accessibility deficiencies that would be triggered once renovation costs exceed 30% of assessed building value ($371,900)
       
-      **Cost estimates (June 2022 dollars, with 4.5% escalation included):**
+      **Cost estimate breakdown (June 2022 dollars, with 4.5% escalation):**
       
       | Scope | Estimated Cost |
       |---|---|
-      | Exterior renovation only | ~$1.0 million |
+      | Exterior renovation only | ~$1 million |
       | Interior renovation | ~$1.1 million |
       | Ground floor accessible toilet room | ~$85,000 |
-      | **Total (full scope)** | **~$2.3 million** |
+      | **Total comprehensive project** | **~$2.3 million** |
       
-      Board members noted the estimates are dated and asked that escalation factors be updated before town meeting presentation. The Fire Chief emphasized the station's operational importance for downtown response times. Becky Curran outlined a funding strategy combining grants, the Assistants to Firefighters (AFG) grant for sprinkler installation, and fundraising (potentially auctioning decommissioned fire alarm boxes), modeled on the Fort Sewell restoration approach. A Franklin Street Fire Station renovation article was subsequently sponsored for the 2023 Annual Town Meeting warrant.
-    key_speakers: ["Ryan Foster (Foster Architecture)", "Eric Christiansen (Foster Architecture)", "Becky Curran (Town Planner)", "Fire Chief"]
+      The town planner noted a strategy similar to Fort Sewell — combining grant funding, community fundraising, and town appropriations. The fire chief noted that an AFG (Assistance to Firefighters Grant) could offset sprinkler system costs. Creative fundraising ideas include auctioning decommissioned fire alarm boxes. A town meeting warrant article for Franklin Street Fire Station Renovations was subsequently sponsored by the board.
+    key_speakers: ["Ryan Foster (Foster Architects)", "Eric Christiansen (Foster Architects)", "Becky (Town Planner)", "Fire Chief"]
   - topic: admin-housekeeping
-    topic_confidence: 0.95
+    topic_confidence: 0.9
     start_seconds: 3117
-    end_seconds: 3330
-    headline: "Select Board approves FY2024 revolving fund authorizations totaling approximately $7.1 million"
-    dek: "Twelve revolving fund accounts were authorized for fiscal year 2024, ranging from $3,744 for the Hobbs Memorial Fund to $1.5 million for Recreation and Parks."
+    end_seconds: 3739
+    headline: "Board unanimously authorizes FY2024 revolving fund accounts totaling over $7 million"
+    dek: "The Select Board voted to authorize 12 departmental revolving fund accounts for FY2024 under MGL Chapter 44 Section 53E½, with the largest being the Hobbs Memorial Fund at $3,744,000."
     summary: |
-      The Town Administrator explained that revolving funds are revenue accounts funded by fees, and that authorizing them offsets tax levy spending. Town meeting votes the maximum withdrawal amounts; additional withdrawals during the year require concurrent approval by the Select Board and Finance Committee.
+      The board authorized the following revolving fund accounts for FY2024:
       
-      **FY2024 revolving fund authorizations approved:**
-      
-      | Account | Authorized Amount |
+      | Department/Fund | Authorized Amount |
       |---|---|
       | Animal Control | $20,000 |
       | Council on Aging | $250,000 |
@@ -147,113 +140,93 @@ topic_segments:
       | Marblehead Public Schools Special Ed | $500,000 |
       | Hobbs Memorial Fund | $3,744,000 |
       
-      Vote: unanimous.
+      The town administrator explained that revolving fund revenues come from fees and, when used for related services, offset the tax levy rather than drawing from the general fund.
     key_speakers: ["Town Administrator"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.9
-    start_seconds: 3330
-    end_seconds: 4630
-    headline: "Board sponsors 7 specific warrant articles for 2023 Annual Town Meeting including HR department, electronic voting, and fire station renovation"
-    dek: "Articles cover administrative benefits update, a new HR department, electronic town meeting voting devices, physical exam bylaw revision, Franklin Street renovation, shade tree placement on private property, and a DPW reorganization to include the Tree Department."
-    summary: |
-      The Town Administrator summarized seven proposed warrant articles for the 2023 Annual Town Meeting:
-      
-      1. **Administrative Benefits Amendment** – Updates longevity pay, eliminates sick bonus (rolling it into longevity), and adjusts vacation accrual thresholds for non-union personnel.
-      2. **New Human Resources Department** – Establishes HR as a formal department; two existing payroll/benefits staff would transfer from Finance. Creates a Director of HR position to be filled if funding is available; otherwise, the Finance Director would serve as acting HR Director.
-      3. **Allow Use of Electronic Counting Devices at Town Meeting** – Changes bylaws to permit wireless clicker voting devices at future town meetings; bylaw change required before implementation.
-      4. **Amend General Bylaws – Physical Examinations** – Narrows mandatory pre-employment physical requirements to positions with physical demands (fire, police, DPW); removes the requirement for administrative and other roles. A board member suggested allowing physicals from the employee's own licensed provider rather than a town-designated doctor.
-      5. **Franklin Street Fire Station Renovations** – Places a renovation article on the warrant; strategy involves combining grants, fundraising, and a comprehensive project approach.
-      6. **Public Shade Trees – Protection and Fines** – Allows public trees to be placed on private property within 20 feet of the public way with owner permission, to expand tree replacement options during the sidewalk reconstruction program. Trees would remain public property with an easement.
-      7. **Department of Public Works** – Adds the Tree Department to the statutory definition of DPW (alongside Highway and Drains). The Drains Department name update to 'Stormwater' was deferred to allow time to update related bylaw references.
-      
-      Vote to sponsor all seven articles: unanimous.
-    key_speakers: ["Town Administrator", "Jack (Town Moderator)"]
-  - topic: recreation-events
-    topic_confidence: 0.92
-    start_seconds: 4676
-    end_seconds: 4752
-    headline: "Marblehead Museum approved to use Old Townhouse for March 10 fundraiser with one-day liquor license"
-    dek: "The board approved both the venue use (fee waived) and a one-day liquor license for the event; alcohol to be purchased from Cappy's Importing."
-    summary: "Lauren McCormick, Executive Director of the Marblehead Museum, requested use of the Old Townhouse on Friday, March 10, 2023 from 6–8 PM for a fundraising event. The board approved the request with the rental fee waived and also approved a one-day liquor license. Alcohol is to be purchased from Cappy's Importing. Both votes were unanimous."
-    key_speakers: ["Lauren McCormick (Marblehead Museum Executive Director)"]
-  - topic: recreation-events
-    topic_confidence: 0.9
-    start_seconds: 4752
-    end_seconds: 4905
-    headline: "Abbott Hall approved for June wedding; Little Theater receives liquor license for Valentine's concert"
-    dek: "Jeff Hunt received approval for a wedding ceremony at Abbott Hall on June 23, and Marblehead Little Theater received a one-day liquor license for a February 11 event."
-    summary: |
-      The board approved two additional event-related requests:
-      - **Jeff Hunt**: use of Abbott Hall on Friday, June 23, 2023, 3–5 PM for a wedding ceremony, subject to standard rules and certificate of insurance.
-      - **Marblehead Little Theater** (Andrew Barnett): one-day liquor license for Saturday, February 11, 2023, 6–11 PM at 12 School Street for a Valentine's Day concert. Alcohol to be purchased from Rumson's Rum.
-      
-      Both votes were unanimous.
-  - topic: admin-housekeeping
-    topic_confidence: 0.88
-    start_seconds: 4892
-    end_seconds: 5021
-    headline: "Board appoints local inspector, extends ADA contract, and approves Eagle Scout use of Abbott Hall"
-    dek: "Benjamin Leibowitz was appointed local inspector through June 2023; the ADA self-evaluation contract with the Collins Center was extended to June 30, 2023 at no additional cost."
-    summary: |
-      Three routine administrative actions were approved unanimously:
-      1. **Benjamin Leibowitz** appointed as local inspector, term expiring June 2023. The appointment satisfies state requirements; no hire vote was required.
-      2. **Collins Center ADA contract amendment**: extended the period for the ADA self-evaluation and transition plan to June 30, 2023 with no change in price.
-      3. **Eagle Scout court of honor**: Heather Rosado's request to use Abbott Hall on Sunday, April 30, 2023, 10 AM–2 PM for Xavier's Eagle Scout court of honor was approved with the rental fee waived. Xavier described his Eagle Scout project at Seaside Park, which involved trail improvements and invasive species removal.
-    key_speakers: ["Benjamin Leibowitz (appointee, not present)", "Xavier (Eagle Scout)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 5021
-    end_seconds: 5247
-    headline: "Board approves minutes, delegates OML complaint response to Town Counsel, and approves road race"
-    dek: "Minutes from two January meetings were approved; an open meeting law complaint from Alan Waller was delegated to Town Counsel for response."
+    start_seconds: 3739
+    end_seconds: 4730
+    headline: "Board sponsors seven specific FY2023 town meeting warrant articles including HR department and electronic voting"
+    dek: "In addition to standard recurring articles, the board voted to place seven new articles on the 2023 Annual Town Meeting warrant covering personnel, governance, the firehouse, and public trees."
     summary: |
-      The board took three additional actions:
-      1. **Minutes** of January 18 and January 23, 2023 approved unanimously.
-      2. **OML complaint**: An open meeting law complaint filed by Alan Waller on February 1, 2023 was delegated to Town Counsel for response. A draft response letter was noted as near-final with possible minor edits.
-      3. **Wicked 10/20 Miler road race**: Ashley Steves / BNS Fitness Companies approved to hold the race on Sunday, March 26, 2023. Start and finish at Salem Waterfront Hotel; last runners to exit Marblehead by 11:40 AM. Subject to Police and Recreation & Parks approval. FW Post Marblehead and the Alley Kastner Scholarship Foundation designated as beneficiary charities.
-  - topic: trash-dpw
-    topic_confidence: 0.88
-    start_seconds: 5247
-    end_seconds: 5500
-    headline: "Board awards $805,825 fuel station contract to CES Northeast LLC using ARPA funds"
-    dek: "The new above-ground fuel system replaces underground tanks installed in 1960 at the DPW yard; funding comes from previously approved American Rescue Plan Act allocations."
-    summary: |
-      The Town Administrator described the project to remove two underground storage tanks installed in 1960 and install a new above-ground fueling system. The new system will include modern key-card access, data tracking (mileage, vehicle usage), and a relocated FuelMaster control station. The transition is designed to minimize service disruption. Funding is from ARPA funds previously approved by the board.
+      After approving standard recurring articles, the board sponsored seven new warrant articles:
       
-      Contract awarded to **CES Northeast LLC**, 8 Airline Drive, Suite 110, Albany, NY 12205, in the amount of **$805,825.12**. Vote: unanimous.
+      1. **Administrative Benefit Amendment** – Updates non-union employee benefits including longevity pay, elimination of sick bonus (rolled into longevity), and vacation accrual schedule changes.
+      2. **Amend General Bylaws for New Human Resources Department** – Creates a formal HR department; two existing payroll/benefits staff would transfer; a Director of HR position would be created, potentially filled by the Finance Director initially.
+      3. **Allow Use of Electronic Counting Devices** – Amends bylaws to permit electronic clicker voting at future town meetings (not for immediate use).
+      4. **Amend General Bylaws – Physical Examinations** – Limits mandatory pre-employment physicals to positions with physical requirements (fire, police, DPW); removes requirement for administrative and other roles.
+      5. **Franklin Street Fire Station Renovations** – Places the comprehensive renovation project on the warrant.
+      6. **Public Shade Trees Protection and Fines** – Allows placement of public trees on private property within 20 feet of the public way with owner permission and easement, to support the sidewalk replacement program.
+      7. **Department of Public Works** – Adds the Tree Department formally to DPW (stormwater/drain language updates deferred to a future year).
+      
+      Town Moderator Jack Aftergees confirmed the electronic voting article is a prerequisite bylaw change before any voting system could be adopted.
+    key_speakers: ["Town Administrator", "Jack Aftergees (Town Moderator)"]
+  - topic: recreation-events
+    topic_confidence: 0.95
+    start_seconds: 4730
+    end_seconds: 5186
+    headline: "Board approves facility use and liquor licenses for Marblehead Museum, Abbott Hall wedding, Little Theater, and Eagle Scout ceremony"
+    dek: "Four separate facility and licensing requests were approved unanimously, including an Eagle Scout Court of Honor for Xavier Rosado whose project improved trails at Seaside."
+    summary: |
+      The board approved the following requests in sequence:
+      
+      - **Marblehead Museum**: Use of Old Townhouse on March 10, 2023 (6–8 PM) for a fundraising event; rental fee waived. One-day liquor license also approved (alcohol from Cappy's Importing).
+      - **Jeff Hunt**: Abbott Hall use on June 23, 2023 (3–5 PM) for a wedding ceremony.
+      - **Marblehead Little Theater**: One-day liquor license for a Valentine's Day concert on February 11, 2023 (6–11 PM) at 12 School Street (alcohol from Rumson's Rum).
+      - **Eagle Scout Xavier Rosado**: Abbott Hall use on April 30, 2023 (10 AM–2 PM) for Eagle Scout Court of Honor; rental fee waived. Xavier described his Eagle Scout project improving trails, removing invasive species, and re-graveling paths at the Seaside Conservancy area.
+    key_speakers: ["Xavier Rosado (Eagle Scout)", "Lauren McCormick (Marblehead Museum Executive Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 5186
+    end_seconds: 5430
+    headline: "Board approves minutes, delegates OML complaint response to Town Counsel"
+    dek: "Minutes from January 18 and January 23 were approved, and the board delegated response to an Open Meeting Law complaint filed by Alan Waller on February 1, 2023 to Town Counsel."
+    summary: "The board voted unanimously to approve meeting minutes from January 18 and January 23, 2023. It also voted to delegate the response to an Open Meeting Law complaint filed by Alan Waller on February 1, 2023, to Town Counsel. A draft response letter was noted as nearly final with possible minor tweaks before transmittal."
     key_speakers: ["Town Administrator"]
   - topic: trash-dpw
-    topic_confidence: 0.82
-    start_seconds: 5455
+    topic_confidence: 0.88
+    start_seconds: 5430
     end_seconds: 5633
-    headline: "Engineering services contract awarded to Haley Ward Inc. for drain construction projects at up to $200,000/year"
-    dek: "The three-year contract is funded from the $400,000 drain article approved at the prior year's town meeting."
-    summary: "The board awarded a professional engineering services contract for drain construction projects to **Haley Ward Incorporated**, 63 Great Road, Suite 200, Maynard, MA 01754. The contract covers a three-year period with an annual not-to-exceed cost of **$200,000**, funded from the drain article approved at the 2022 Annual Town Meeting. Haley Ward has served the town in this capacity for decades. Vote: unanimous."
+    headline: "Board awards $805,825 fuel station contract and $200,000/year engineering services contract"
+    dek: "CES Northeast LLC was awarded a contract to replace the town's 1960s-era underground fuel tanks with a new above-ground system funded by ARPA; Haley Ward Inc. received a three-year drain engineering services contract."
+    summary: |
+      **Municipal Fueling Station:** The board awarded a contract to CES Northeast LLC of Albany, NY in the amount of $805,825.12 to remove two underground storage tanks (installed circa 1960) and install a new above-ground fueling system with updated key-card tracking. The project is funded by American Rescue Plan Act (ARPA) funds previously appropriated. The fuel master station will be temporarily relocated to maintain continuous service during construction.
+      
+      **Engineering Services – DPW Drains:** The board awarded a three-year professional engineering services contract to Haley Ward Inc. (63 Great Road, Suite 200, Maynard, MA) at an annual not-to-exceed cost of $200,000, funded from the $400,000 drain article approved at the previous year's town meeting.
+    key_speakers: ["Town Administrator", "DPW representative"]
+  - topic: recreation-events
+    topic_confidence: 0.9
+    start_seconds: 5576
+    end_seconds: 5762
+    headline: "Board approves Wicked 10/20 Miler road race on March 26 and private drain connection at 286 Ocean Avenue"
+    dek: "The run by BNS Fitness will start and finish at Salem Waterfront Hotel with all runners exiting Marblehead by 11:40 AM; VFW Post and Alley Kastner Scholarship Foundation are designated beneficiaries."
+    summary: |
+      The board approved Ashley Steves/BNS Fitness to hold the Wicked 10/20 Miler road race on Sunday, March 26, 2023, subject to police and Recreation & Parks approval and required insurance. Start times begin at 8:00 AM with all runners out of Marblehead by 11:40 AM. The VFW Post in Marblehead and the Alley Kastner Scholarship Foundation are to be among the event's charity beneficiaries.
+      
+      The board also approved a private drain connection license agreement for 286 Ocean Avenue (QBW LLC), which had completed the required DPW approval process.
     key_speakers: ["Town Administrator"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 5576
-    end_seconds: 5822
-    headline: "Board approves private drain connection at 286 Ocean Avenue and Abbott Hall use for music recitals"
-    dek: "Two routine approvals rounded out the agenda before public comment."
+    start_seconds: 5762
+    end_seconds: 6012
+    headline: "Board approves Marblehead School of Music Abbott Hall use; DPW employee David Cameron memorialized"
+    dek: "Abbott Hall was approved for student recitals on May 7 and the board voted to send condolences to the family of DPW water and tree department employee David Cameron."
     summary: |
-      - **Private drain connection**: License agreement approved between the town and QBW LLC for a private connection to the town drainage system at 286 Ocean Avenue, following DPW review and sign-off. Vote: unanimous.
-      - **Marblehead School of Music**: Jennifer Spungeon's request to use Abbott Hall on Sunday, May 7, 2023, 9 AM–8 PM for student recitals (approximately 250 attendees across the day) was approved subject to standard rules and certificate of insurance. Vote: unanimous.
-  - topic: public-comment
-    topic_confidence: 0.9
-    start_seconds: 5822
-    end_seconds: 6136
-    headline: "No public comment; Town Administrator announces ClearGov launch and DPW employee David Cameron's passing"
-    dek: "All department heads now have access to the ClearGov budget software; DPW Director Amy announced the death of longtime water and tree department employee David Cameron."
+      Jennifer Spungeon of the Marblehead School of Music received approval to use Abbott Hall on Sunday, May 7, 2023 (9 AM–8 PM) for student recitals, subject to standard rules, fees, and insurance.
+      
+      The DPW's Amy delivered a tribute to David Cameron, a longtime employee who worked in both the water and tree departments, noting his dedication to Marblehead's infrastructure. The board voted unanimously to send a condolence letter from the board to his family.
+    key_speakers: ["Amy (DPW)", "Town Administrator"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 6012
+    end_seconds: 6160
+    headline: "Board reschedules February 22 meeting to March 1 due to quorum issues; ClearGov budget software update provided"
+    dek: "The town administrator reported that ClearGov budgeting software is now live for all department heads and the board rescheduled a meeting date due to an anticipated quorum problem."
     summary: |
-      No members of the public came forward during the public comment period.
+      The town administrator reported that ClearGov budgeting software has been activated for all department heads, with five years of budget and accounting data loaded. Department heads were sent login credentials to begin training via the ClearGov Training Academy. The administrator noted this year will involve some learning curve but expects full proficiency by the next fiscal year budget cycle, with a public transparency portal to be enabled in the future.
       
-      The Town Administrator provided two updates:
-      1. **ClearGov budgeting software**: All department heads now have access and login credentials. Five years of budget/accounting data have been loaded. Staff are working through the ClearGov Training Academy. The system is expected to be fully utilized by the next fiscal year cycle; a public-facing transparency module will be activated in the future.
-      2. **Employee passing**: DPW Director Amy announced the death of **David Cameron**, a longtime employee who worked in both the water and tree departments. The board voted unanimously to send a condolence letter to his family.
-      
-      The board also rescheduled the February 22 meeting (quorum unavailable) to **March 1, 2023**, leaving the March 8 and March 22 meetings unchanged.
-    key_speakers: ["Town Administrator", "Amy (DPW Director)", "Town Moderator Jack"]
+      The board also agreed to reschedule the February 22 Select Board meeting to March 1, 2023, due to an anticipated inability to constitute a quorum. The March 8 and March 22 meetings were left unchanged.
+    key_speakers: ["Town Administrator"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

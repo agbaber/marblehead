@@ -11,287 +11,257 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board renews Town Administrator Keer to 3-year contract; approves $198,750 MWRA zero-interest water loan"
-  summary: "The Select Board voted unanimously to approve a new three-year employment contract for Town Administrator Thatcher Keer, reflecting COLA adjustments and merit-based performance review. The board also approved a $198,750 zero-interest MWRA loan for water service inspection and lead line replacement, with annual principal payments of $19,875 from 2026 through 2035. Eight grant applications totaling approximately $2.5 million were authorized for signature, and the board continued a liquor license revocation hearing for Shin Dynasty to August 13th pending ADA and firewall construction progress. Board member Brett Murray's farewell remarks marked his final meeting after multiple terms of service."
+  headline: "Select Board renews Town Administrator Keer's contract; approves MWRA loan and multiple grants"
+  summary: "The Marblehead Select Board approved a new three-year employment contract for Town Administrator Thatcher Keer following an executive session. The board also approved a $198,750 interest-free MWRA water bond, accepted a $50,000 gift from Marblehead Youth Baseball for LED lighting at Gale's Field, and authorized letters of support for eight grant applications totaling roughly $2.5 million. The meeting was the final one for outgoing board member Brett Murray."
   decisions:
-    - "Approved $198,750 MWRA zero-interest 10-year water bond"
-    - "Continued Shin Dynasty license revocation hearing to August 13, 2025"
+    - "Approved $198,750 MWRA zero-interest water bond (10-year loan, $19,875 annual payments 2026–2035)"
+    - "Continued Shin Dynasty revocation hearing to August 13, 2025"
     - "Approved early voting hours for June 10, 2025 annual town election"
-    - "Approved special election polling hours of 2:00 PM to 8:00 PM for July 8, 2025"
-    - "Approved consent agenda items including April 23 minutes, bell ringing, Old Townhouse fee waiver, and Breast Friends Walk"
-    - "Approved contract amendments for Brighter Horizons Environmental (+$18,144) and multiple Granice & Sons change orders"
-    - "Accepted $135,000 MassWorks grant for Five Corners intersection redesign"
-    - "Approved temporary parking ban June 9–12 for street sweeping"
+    - "Approved polling hours of 2:00 PM to 8:00 PM for July 8, 2025 special referendum election"
+    - "Approved consent agenda including April 23 minutes, bell ringing July 4, Old Townhouse fee waiver, and Breast Friends Walk"
+    - "Approved contract amendments including Brighter Horizons Police Tank Removal increase of $18,144 and Granice & Sons storm sewer change orders"
+    - "Approved acceptance of $135,000 MassWorks grant for Five Corners intersection redesign"
+    - "Approved temporary parking ban for street sweeping June 9–12, 2025"
     - "Authorized letters of support for eight grant applications"
-    - "Accepted $50,000 gift from Marblehead Youth Baseball for Gales Field LED lighting upgrade"
+    - "Approved $50,000 gift from Marblehead Youth Baseball for Gale's Field LED lighting"
     - "Approved three-year employment contract for Town Administrator Thatcher Keer"
-    - "Approved outdoor dining application for Cafe Italia, 10 Bessom Street"
-    - "Released executive session minutes from six dates; held four additional dates"
+    - "Approved outdoor dining application for Café Italia at 10 Bessom Street"
+    - "Released select board executive session minutes dated February 26 2025, May 15 2024, May 23 2024, May 24 2023, June 28 2023, and November 2 2021"
+    - "Held select board executive session minutes dated March 12 2025, March 26 2025, November 13 2023, and November 23 2020"
   votes:
-    - motion: "Executive session for contract negotiations and minute review"
+    - motion: "Executive session (contract negotiations and minute review)"
       result: "in favor (unanimous)"
-    - motion: "MWRA $198,750 zero-interest water bond approval"
+    - motion: "$198,750 MWRA water bond approval"
       result: "in favor (unanimous)"
-    - motion: "Authorize chair to execute loan and financial assistance agreements"
+    - motion: "Authorization for board members and officials to execute bond documents"
       result: "in favor (unanimous)"
-    - motion: "Continue Shin Dynasty revocation hearing to August 13"
+    - motion: "Continue Shin Dynasty revocation hearing to August 13, 2025"
       result: "in favor (unanimous)"
-    - motion: "Early voting hours for June 10, 2025 election"
+    - motion: "Early voting hours for June 10, 2025 annual town election"
       result: "in favor (unanimous)"
-    - motion: "Special election polling hours 2:00 PM–8:00 PM July 8, 2025"
+    - motion: "Polling hours 2:00 PM–8:00 PM for July 8, 2025 special election"
       result: "in favor (unanimous)"
     - motion: "Consent agenda (minutes, bell ringing, fee waiver, Breast Friends Walk)"
       result: "in favor (unanimous)"
     - motion: "Contract amendments (Brighter Horizons and Granice & Sons change orders)"
       result: "in favor (unanimous)"
-    - motion: "Accept $135,000 MassWorks Five Corners grant"
+    - motion: "Accept $135,000 MassWorks grant for Five Corners intersection"
       result: "in favor (unanimous)"
-    - motion: "Temporary parking ban June 9–12 for street sweeping"
+    - motion: "Temporary parking ban for street sweeping June 9–12"
       result: "in favor (unanimous)"
     - motion: "Letters of support for eight grant applications"
       result: "in favor (unanimous)"
-    - motion: "Accept $50,000 gift from Marblehead Youth Baseball"
+    - motion: "Accept $50,000 gift from Marblehead Youth Baseball for Gale's Field lighting"
       result: "in favor (unanimous)"
-    - motion: "Approve three-year Town Administrator contract for Thatcher Keer"
+    - motion: "Three-year employment contract for Town Administrator Thatcher Keer"
       result: "in favor (unanimous)"
-    - motion: "Outdoor dining approval for Cafe Italia"
+    - motion: "Outdoor dining approval for Café Italia, 10 Bessom Street"
       result: "in favor (unanimous)"
-    - motion: "Release executive session minutes (six dates)"
+    - motion: "Release specified executive session minutes"
       result: "in favor (unanimous)"
-    - motion: "Hold executive session minutes (four dates)"
+    - motion: "Continue holding specified executive session minutes"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.95
     start_seconds: 81
     end_seconds: 131
     headline: "Board votes to enter executive session for Town Administrator contract negotiations"
-    dek: "The board voted unanimously to convene in executive session under MGL Chapter 30A for contract negotiations and review of executive session minutes."
-    summary: "The chair called for a motion to enter executive session under Massachusetts General Law Chapter 30A for the purposes of Town Administrator contract negotiations and to review executive session minutes where public discussion could have a detrimental effect on the negotiating position of the public body. All five members voted in favor."
-  - topic: public-comment
-    topic_confidence: 0.95
-    start_seconds: 131
-    end_seconds: 160
-    headline: "No public comment received at May 28 Select Board meeting"
-    dek: "The chair opened the public comment period and no members of the public or online attendees came forward."
-    summary: "Following the return from executive session, the chair opened the floor for public comment. No members of the audience or online participants offered comment."
+    dek: "The board unanimously approved entering executive session under MGL Chapter 30A for contract negotiations and review of executive session minutes."
+    summary: "At the opening of the May 28, 2025 meeting, the chair called for a vote to enter executive session under Massachusetts General Law Chapter 30A for the purposes of contract negotiations with the town administrator and to review executive session minutes where public discussion could be detrimental to the town's negotiating position. The vote was unanimous. The board subsequently reconvened in open session."
+    key_speakers: ["Chair (Newan)"]
   - topic: bonding-capital
-    topic_confidence: 0.95
+    topic_confidence: 0.97
     start_seconds: 160
     end_seconds: 374
-    headline: "Board approves $198,750 zero-interest MWRA water loan for service line inspection and lead replacement"
-    dek: "The 10-year loan, originally authorized at a 2021 Town Meeting, carries no interest and includes a 25% grant component for lead pipe replacement."
-    summary: |
-      The town's Finance Director and Treasurer presented a Massachusetts Water Resources Authority (MWRA) zero-interest loan of $198,750, approved at a 2021 Town Meeting. Annual principal payments of $19,875 are due on May 15 of each year from 2026 through 2035.
-      
-      The funds are designated for vacuum excavation of street lines for inspection of water services and replacement of up to 10 service lines as needed. A board member noted that the loan also comes with a 25% grant for replacement of lead piping. The board voted unanimously to approve the bond sale and authorize the Finance Director and Town Treasurer to execute the loan and financial assistance agreement with the MWRA.
-    key_speakers: ["Town Treasurer", "Finance Director (Candy)"]
+    headline: "Board approves $198,750 interest-free MWRA water bond for water line inspection and replacement"
+    dek: "The 10-year zero-interest loan, originally authorized at a 2021 town meeting, will fund vacuum excavation and inspection of water services with annual payments of $19,875 starting in 2026."
+    summary: "The town's finance director and treasurer presented a Massachusetts Water Resources Authority (MWRA) zero-interest 10-year loan for $198,750, previously authorized at a 2021 town meeting. Annual principal payments of $19,875 are due May 15 each year from 2026 through 2035. The funds will be used for vacuum excavation inspection of water service lines and replacement of up to 10 lines as needed. The board was also informed that a 25% grant is available for replacement of lead piping found during inspections. Two motions were approved: one authorizing the bond sale and loan agreement, and one authorizing board members, the town clerk, finance director, and treasurer to execute related documents."
+    key_speakers: ["Finance Director/Town Treasurer", "Candy (Finance staff)"]
   - topic: permits-zoning
     topic_confidence: 0.95
     start_seconds: 374
     end_seconds: 982
-    featured: true
-    headline: "Shin Dynasty license revocation hearing continued to August 13 as ADA and firewall work remains incomplete"
-    dek: "The wine and malt beverage license holder reported state-approved ADA entrance plans but no signed construction contract, with a contractor indicating a possible June start date."
+    headline: "Shin Dynasty liquor license revocation hearing continued to August 13 amid ongoing ADA and firewall delays"
+    dek: "The applicant reported state approval of an ADA entrance design in late March but ongoing difficulty securing a contractor to begin construction, expected to start in June."
     summary: |
-      The Select Board continued a revocation hearing originally opened November 13, 2024 for Shin Dynasty at 1 Atlantic Avenue. The licensee reported that after multiple rounds of state revisions, ADA-compliant entrance plans were approved in late March 2025. However, the landlord has not yet signed a contract with a contractor.
+      The Select Board continued a public hearing, originally opened November 13, 2024, on revocation of the wine and malt beverage license held by Shin Dynasty at 1 Atlantic Avenue. The licensee described a lengthy process to obtain state approval for an ADA-compliant entrance design, which was finalized at the end of March 2025 after multiple rounds of state revisions. A firewall issue, discovered in mid-October 2024, has prevented interior work from proceeding.
       
-      Key outstanding items include:
-      - **Firewall**: Discovered missing in mid-October 2024; must be completed before interior finish work can proceed
-      - **ADA entrance**: Plans approved by the state; landlord seeking contractor
-      - **ADA-compliant restroom**: Shell completed by licensee
-      - **Cosmetic work** (floors, walls, ceiling): Awaiting firewall completion
-      
-      A contractor named Doug Dubin indicated availability to begin in June, with an estimated two-to-three month completion timeline. The board noted the licensee has limited visibility into the landlord's contracting decisions. Members expressed a desire to see a signed contract and requested timely updates between now and the continued hearing date.
-      
-      The board voted unanimously to continue the hearing to **August 13, 2025**.
-    key_speakers: ["Licensee (Shin Dynasty)", "Board Chair"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.9
+      A contractor (identified as Doug Dubin) has indicated he could begin work in June, with a projected two-to-three month completion timeline. No signed contract was yet in place. The board agreed to continue the hearing to the August 13, 2025 meeting and requested timely updates from the licensee as developments occur.
+    key_speakers: ["Shin Dynasty licensee (mic only)", "Chair (Newan)"]
+  - topic: elections-procedural
+    topic_confidence: 0.98
     start_seconds: 1008
     end_seconds: 1226
-    headline: "Board approves early voting hours for June 10 election and sets July 8 special election polls at 2–8 PM"
-    dek: "The July 8 special referendum election hours are fixed by Chapter 405 of the Acts of 1954 and state law, requiring polls to open no earlier than 2 PM and close no later than 8 PM."
+    headline: "Board sets early voting hours for June 10 election and 2–8 PM polling hours for July 8 special referendum"
+    dek: "Early in-person voting for the June 10 annual town election runs June 2–6 at April Hall; the July 8 special referendum polling hours are fixed by a 1954 special act at 2:00–8:00 PM."
     summary: |
-      On recommendation of the Town Clerk and Board of Registrars, the board approved early in-person voting at Abbot Hall for the annual town election on June 10, 2025, with hours running Monday June 2 through Friday June 6 (8:30 AM–4:30 PM most days, 8:30 AM–5:30 PM Wednesday, and 8:30 AM–noon Friday).
+      On recommendation of the town clerk and Board of Registrars, the Select Board approved early voting hours at April Hall for the June 10, 2025 annual town election:
       
-      For the July 8, 2025 special referendum election, the board approved polling hours of **2:00 PM to 8:00 PM** at the polling location, as mandated by Chapter 405 of the Acts of 1954, which prohibits opening polls before 2 PM, and by MGL Chapter 54 Section 64, which prohibits polls remaining open past 8 PM.
-    key_speakers: ["Board Chair", "Town Clerk (Robin Misho, referenced)"]
+      | Date | Hours |
+      |------|-------|
+      | Monday, June 2 | 8:30 AM – 4:30 PM |
+      | Tuesday, June 3 | 8:30 AM – 4:30 PM |
+      | Wednesday, June 4 | 8:30 AM – 5:30 PM |
+      | Thursday, June 5 | 8:30 AM – 4:30 PM |
+      | Friday, June 6 | 8:30 AM – 12:00 PM |
+      
+      For the July 8, 2025 special referendum election, the board approved polling hours of 2:00 PM to 8:00 PM, as mandated by Chapter 405 of the Acts of 1954, which prohibits polls from opening before 2:00 PM. General Law Chapter 54, Section 64 prohibits polls from remaining open past 8:00 PM.
+    key_speakers: ["Chair (Newan)", "Robin Misho (Town Clerk, referenced)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1226
+    end_seconds: 1372
+    headline: "Board approves consent agenda including minutes, bell ringing, fee waiver, and Breast Friends Walk"
+    dek: "Routine consent items were approved in a single motion covering April 23 minutes, July 4 bell ringing, a fee waiver for Sustainable Marblehead at Old Townhouse, and the October 12 Breast Friends Walk."
+    summary: "The board approved a consent agenda covering: minutes of April 23, 2025; a request for church bells to ring on July 4 at 7:30–8:00 AM, noon–12:30 PM, and 6:00–6:30 PM; a fee waiver for Sustainable Marblehead (nonprofit) for use of the Old Townhouse on June 6, 2025; and the Breast Friends Walk on October 12, 2025 at Devereaux Beach, subject to standard approvals, insurance, and conditions prohibiting permanent street markings."
+    key_speakers: ["Chair (Newan)"]
   - topic: admin-housekeeping
     topic_confidence: 0.88
-    start_seconds: 1226
-    end_seconds: 1514
-    headline: "Consent agenda approved including minutes, bell ringing, fee waiver, and Breast Friends Walk; contract amendments approved for police tank removal and storm sewer work"
-    dek: "Contract changes included an $18,144 increase for Brighter Horizons Environmental for police station fuel tank soil remediation, and multiple Granice & Sons change orders for the Bessom/Beacon storm sewer extension, with a final balancing decrease of $82,874."
+    start_seconds: 1279
+    end_seconds: 1465
+    headline: "Board approves contract amendments for police tank removal and Bessom Street storm sewer project"
+    dek: "A soil contamination discovery at the police station tank site required an additional $18,144; four change orders for the Bessom Beacon Storm Sewer extension resulted in a net decrease to that contract."
     summary: |
-      The board approved routine consent agenda items:
-      - Minutes of April 23, 2025
-      - Bell ringing on July 4 (7:30–8 AM, noon–12:30 PM, 6–6:30 PM)
-      - Fee waiver for Sustainable Marblehead's use of Old Townhouse on June 6 (nonprofit)
-      - Breast Friends Walk on October 12, 2025 at Devereaux Beach, subject to standard approvals
+      The board approved several contract amendments:
       
-      Contract amendments approved:
-      | Amendment | Party | Change |
-      |---|---|---|
-      | Brighter Horizons Environmental – Police Tank Removal | +$18,144; extended to July 30, 2025 | Soil remediation after water in excavation exceeded contamination thresholds; funded outside ARPA through Finance Dept |
-      | Granice & Sons – Bessom/Beacon Storm Sewer (Change Order 1) | +$21,946.21 | |
-      | Granice & Sons – Bessom/Beacon Storm Sewer (Change Order 2) | +$19,440.49 | |
-      | Granice & Sons – Bessom/Beacon Storm Sewer (Change Order 3) | +$7,090.96 (additional video inspections) | |
-      | Granice & Sons – Bessom/Beacon Storm Sewer (Change Order 4) | -$82,874.45 (final balancing) | |
-    key_speakers: ["Town Administrator (Thatcher Keer)"]
-  - topic: bonding-capital
-    topic_confidence: 0.85
-    start_seconds: 1514
-    end_seconds: 1792
+      - **Brighter Horizons Environmental** (Police Tank Removal): increased by $18,144, extended to July 30, 2025. Additional contamination found in the excavation required further soil mitigation beyond the original ARPA-funded scope; additional funds were identified through the finance department.
+      - **Granice & Sons, Inc.** (Bessom Beacon Storm Sewer Extension, Contract 1807): four change orders totaling a net decrease:
+        - Change Order 1: +$21,946.21
+        - Change Order 2: +$19,440.49
+        - Change Order 3 (additional video inspections): +$7,090.97 (approximate)
+        - Change Order 4 (final balancing): -$82,874.45
+      
+      Funding is from stormwater construction articles.
+    key_speakers: ["Town Administrator (Keer)", "Board member (Grader/Greator)"]
+  - topic: trash-dpw
+    topic_confidence: 0.92
+    start_seconds: 1465
+    end_seconds: 1561
     headline: "Board accepts $135,000 MassWorks grant for Five Corners intersection redesign with $15,100 local match"
-    dek: "The grant will advance concept plans from a prior intersection study to 25% design, incorporating a potential mini roundabout, bicycle facilities, and stormwater management for the School Street parking lot."
-    summary: |
-      Director of Public Works (Brendan) presented a MassWorks Infrastructure Grant award of **$135,000** with a local match of **$15,100** to advance design of the Five Corners intersection. The intersection was identified in the town's Complete Streets prioritization plan and a prior 13-intersection study.
-      
-      Project scope for the 25% design phase includes:
-      - Mini roundabout and traffic calming
-      - Bicycle facilities
-      - Landscaping (vegetated and hardscape)
-      - Stormwater management for the School Street public parking lot
-      
-      Timeline: RFP anticipated by end of July; consultant hired by August; notice to proceed approximately September; design phase estimated at 12–18 months with multiple community engagement sessions.
-      
-      The Town Administrator noted this project is part of a broader strategy to connect business districts, improve pedestrian flow, and create a more attractive commercial environment. The board voted unanimously to accept the grant and authorize the chair to sign the state contract.
-    key_speakers: ["Brendan (Director of Public Works)", "Town Administrator (Thatcher Keer)"]
+    dek: "The grant will fund design work up to a 25% design phase for traffic calming, bicycle facilities, and stormwater improvements at the Five Corners intersection."
+    summary: "The board accepted a MassWorks Infrastructure Grant of $135,000 with a local match of $15,100 for redesign of the Five Corners intersection, identified in the town's Complete Streets prioritization plan and a prior intersection study. DPW staff indicated the work will advance preliminary designs to approximately the 25% design phase, incorporating a potential mini roundabout, bicycle facilities, landscaping, and stormwater management for the School Street public parking lot. The town plans to issue an RFP by end of July, hire a consultant by August, and begin community engagement — including approximately four public meetings — shortly after project kickoff around September. The design phase is expected to take 12–18 months."
+    key_speakers: ["Brendan (DPW staff)", "Town Administrator (Keer)"]
   - topic: trash-dpw
     topic_confidence: 0.85
     start_seconds: 1840
     end_seconds: 1887
-    headline: "Board approves temporary parking ban June 9–12 for downtown street sweeping"
-    dek: "The ban covers the downtown, Old Town, and Shipyard districts from 12:01 AM to 7:00 AM, with residents notified via Code Red, signage, and social media."
-    summary: "On request from DPW Director Amy McHugh, the board approved a temporary parking ban for street sweeping in the downtown, Old Town, and Shipyard districts from June 9–12, 2025, 12:01 AM to 7:00 AM. Notification to residents will be provided via temporary no-parking signs, targeted flyering, website updates, Code Red notifications, and the Marblehead Police Facebook page."
-    key_speakers: ["Amy McHugh (Director of Public Works, referenced)"]
+    headline: "Board approves temporary parking ban for downtown street sweeping June 9–12"
+    dek: "A midnight-to-7 AM parking ban covering the Old Town, downtown, and shipyard districts is planned June 9–12 with resident notification via Code Red and signage."
+    summary: "On request of DPW Director Amy McHugh, the board approved a temporary parking ban from 12:01 AM to 7:00 AM on June 9–12, 2025 in the downtown, Old Town, and shipyard districts for annual street sweeping. Residents and visitors will be notified through temporary no-parking signs, targeted flyering, website updates, Code Red notifications, and the Marblehead Police Facebook page."
+    key_speakers: ["Chair (Newan)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.88
+    topic_confidence: 0.87
     start_seconds: 1887
     end_seconds: 2835
-    headline: "Board authorizes letters of support for eight grant applications totaling approximately $2.5 million"
-    dek: "Applications span climate resilience, downtown parking study, Abbott Hall accessibility, vacant storefronts, MBTA catalyst funding for the rail trail, Coffin School reuse, Washington Street redesign, and Mary Alley HVAC accessibility improvements."
+    headline: "Board authorizes letters of support for eight grant applications totaling roughly $2.5 million"
+    dek: "Applications span climate resilience, downtown parking study, Abbott Hall renovation, vacant storefronts, MBTA catalyst funding, rail trail design, Washington Street redesign, and Mary Alley ADA improvements."
     summary: |
-      Sustainability Coordinator Logan Casey presented eight grant applications for board support:
+      Sustainable Coordinator Logan Casey presented eight grant applications for board authorization:
       
-      | Grant Program | Purpose | Request | Match |
-      |---|---|---|---|
-      | Accelerating Climate Resilience (MAPC) | Common space redesign at 3 public housing properties for extreme heat resilience | Up to $125,000 | ~$12,500 in-kind staff hours |
-      | Massachusetts Downtown Initiative | Comprehensive parking study of two business districts | $30,000 | None required |
-      | Underutilized Properties Program | Abbott Hall attic museum – stairways and ADA improvements | Up to $1,000,000 | ~$100,000 (Historical Commission private donations) |
-      | Massachusetts Vacant Storefront Program | Refundable tax credits for businesses occupying storefronts vacant 6+ months | Up to $50,000 | $2,500 in-kind staff |
-      | MBTA Community Catalyst Funding | Marblehead Rail Trail design (Y section near Village 13 electrical station) | ~$1,000,000 | $175,000 federal earmark (2022) |
-      | Real Estate Services Technical Assistance | Coffin School reuse study – community engagement and alternatives analysis | $50,000 | $5,000 from Finance Reserve Fund |
-      | MassWorks Infrastructure | Washington Street redesign, Five Corners to Hooper Street | TBD | 10% from Article 11 DPW funds |
-      | Municipal ADA Grant | Mary Alley HVAC building – elevator, restrooms, counters, doors | $250,000 | $50,000 from debt exclusion override (if passed) |
+      | Grant | Amount Requested | Match |
+      |-------|-----------------|-------|
+      | Accelerating Climate Resilience (MAPC) — housing authority common spaces | Up to $125,000 | ~$12,500 in-kind staff hours |
+      | Massachusetts Downtown Initiative — parking study | $30,000 | None required |
+      | Underutilized Properties Program — Abbott Hall attic/ADA | Up to $1,000,000 | ~$100,000 (Historical Commission museum fund) |
+      | Mass Vacant Storefront Program — business incentives | Up to $50,000 | $2,500 in-kind |
+      | MBTA Community Catalyst Funding — rail trail design | ~$1,000,000 | $175,000 federal earmark (2022) |
+      | Real Estate Services Technical Assistance — Coffin School reuse study | $50,000 | $5,000 from Finance Reserve Fund |
+      | MassWorks Infrastructure — Washington Street redesign (Five Corners to Hooper St.) | TBD | 10% from Article 11 DPW funds |
+      | Municipal ADA Grant — Mary Alley HVAC/accessibility improvements | $250,000 | $50,000 from debt exclusion override (if passed) |
       
-      A board member noted that eligibility for the MBTA Catalyst funding and potentially the Complete Streets-related grants depends on the MBTA 3A zoning remaining in effect; the repeal petition currently places that matter in abeyance until the July 14 state deadline and the July 8 ballot question.
-    key_speakers: ["Logan Casey (Sustainability/Community Development Coordinator)", "Brendan (DPW Director)", "Town Administrator (Thatcher Keer)"]
+      A board member noted that eligibility for several grants — specifically MBTA Community Catalyst Funding, MassWorks, and Complete Streets programs — depends on Marblehead maintaining compliance with MBTA 3A zoning, which remains in abeyance pending a July 8 referendum on a petition to repeal the town meeting vote.
+    key_speakers: ["Logan Casey (Sustainable Coordinator)", "Brendan (DPW)", "Town Administrator (Keer)"]
   - topic: recreation-events
-    topic_confidence: 0.92
-    start_seconds: 2835
+    topic_confidence: 0.95
+    start_seconds: 2881
     end_seconds: 3162
-    headline: "Board accepts $50,000 gift from Marblehead Youth Baseball to replace all 60 lights at Gales Field with LED fixtures"
-    dek: "Total project cost is approximately $78,000, combining the baseball donation, a $28,000 Rec & Parks revolving fund contribution, and a $21,000 electrician contract with Ham Electrical."
+    headline: "Board accepts $50,000 gift from Marblehead Youth Baseball to replace Gale's Field lighting with LED fixtures"
+    dek: "The $77,000–$78,000 total project combines the youth baseball donation, $28,000 from the Rec & Parks revolving fund, and $21,000 for electrical work by Ham Electrical; Marblehead Light will contribute pole inspection and installation labor."
     summary: |
-      Rec & Parks Director Shelly Bedrosian (attending via remote) described a public-private collaboration to replace 60 outdated lights at Gales Field. The existing lights lack replacement parts, fail frequently, and are not on reliable timers.
+      Rec & Parks Director Shelly Bedrosian (participating remotely) described a public-private collaboration to replace 60 aging lights at Gale's Field, for which replacement parts are no longer available. Project funding breakdown:
       
-      **Project budget:**
-      - Marblehead Youth Baseball donation: $50,000
-      - Rec & Parks revolving fund (approved by Rec & Parks board): up to $28,000
-      - Ham Electrical (Georgetown) electrician contract: $21,000
-      - **Total: approximately $78,000**
+      - Marblehead Youth Baseball donation: **$50,000**
+      - Rec & Parks revolving fund (approved by Rec & Parks board): up to **$28,000**
+      - Ham Electrical (Georgetown) for final connections: **$21,000**
+      - Marblehead Electric Light: contributing pole inspection, removal of old fixtures, and installation of new fixtures at no charge
       
-      Marblehead Electric Light will inspect poles, replace any needed poles, remove old fixtures, and install new fixtures at no additional cost. New lights are 8,500 lumens per fixture, LED, with separate timers for each zone. Work is phased: the majors field is targeted for completion before June 30; remainder by the last week of August, with full completion by September 1.
-      
-      The board voted unanimously to accept the $50,000 gift to be managed by the Rec & Parks department.
-    key_speakers: ["Shelly Bedrosian (Rec & Parks Director)", "Board Chair"]
+      Total project budget: approximately **$77,000–$78,000**. New fixtures are 8,500-lumen LED lights. Work is phased around summer programming; the majors field is targeted for completion before June 30, with the full project expected by September 1, in time for football season. New independent timers will be installed for each zone.
+    key_speakers: ["Shelly Bedrosian (Rec & Parks Director, remote)", "Chair (Newan)"]
   - topic: labor-personnel
     topic_confidence: 0.97
     start_seconds: 3162
-    end_seconds: 3622
+    end_seconds: 3535
+    featured: true
     headline: "Select Board unanimously approves new three-year contract for Town Administrator Thatcher Keer"
-    dek: "The contract includes a COLA adjustment in year one and merit-based performance review, and was developed with market comparables reviewed by board members and the HR director."
-    summary: |
-      The Select Board voted unanimously to approve a new three-year employment contract for Town Administrator Thatcher Keer, prepared by Town Counsel. The contract reflects a COLA adjustment in the first year, merit-based performance review, and market conditions analysis.
-      
-      Board members praised Keer's strategic reorganization of town departments, completion of three collective bargaining agreements (teachers union, police union, and MMEU) in a single year, recruitment of new department leadership, and management of the community development and planning function. Keer acknowledged the board's collaborative working relationship and expressed satisfaction with the team built over the prior three years.
-      
-      The contract was described as a renewal; the signed document will be released once executed. Board member Brett Murray, attending his final meeting, offered remarks praising the direction of the town and the working relationship with the board and administration.
-    key_speakers: ["Town Administrator (Thatcher Keer)", "Board Chair", "Board Member (Murray)", "Board Member (Grader, referenced)"]
+    dek: "The contract includes a cost-of-living adjustment in the first year and merit-based performance reviews, and was praised by board members for reflecting market conditions and Keer's record over his first three years."
+    summary: "Following an executive session earlier in the evening, the Select Board voted unanimously to approve a new three-year employment contract for Town Administrator Thatcher Keer. The chair noted the contract reflects a cost-of-living adjustment in the first year as well as merit-based performance reviews and consideration of market conditions. Board members credited Keer with strategic reorganization of town government, successful collective bargaining in a single year with the teachers union, police union, and MMEU, and building a strong professional staff including the HR director, community development/planning department, and finance office. Keer expressed appreciation for the board's collaborative working relationship and credited the team culture across town departments. The contract will be formally executed and released once signed."
+    key_speakers: ["Town Administrator (Thatcher Keer)", "Chair (Newan)", "Board member (Murray)", "Board member (Grader/Greator)"]
   - topic: permits-zoning
     topic_confidence: 0.88
     start_seconds: 3622
     end_seconds: 3716
-    headline: "Board approves 2025 temporary outdoor dining permit for Cafe Italia at 10 Bessom Street"
+    headline: "Board approves 2025 temporary outdoor dining application for Café Italia at 10 Bessom Street"
     dek: "Approval is subject to receipt of required forms, fees, insurance, and sign-off from police, fire, building commissioner, and town administrator."
-    summary: "The board approved a temporary outdoor dining application for Cafe Italia at 10 Bessom Street for the 2025 season, in accordance with the town's outdoor dining policy. A landlord support letter from the management company was included in the packet. Approval is conditioned on receipt of required forms, fees, insurance, and approvals from police, fire, building commissioner, and town administrator. The board conducted a roll-call vote; all members voted in favor."
+    summary: "The board approved a temporary outdoor dining application for Café Italia at 10 Bessom Street for the 2025 season in accordance with the town's temporary outdoor dining policy. A letter of support from the property management company (Rocket Management) was on file. Approval was conditioned on receipt of required forms, fees, insurance, and approvals from police, fire, building commissioner, and town administrator. The vote was taken as a polled vote and was unanimous."
+    key_speakers: ["Chair (Newan)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.85
+    topic_confidence: 0.9
     start_seconds: 3716
     end_seconds: 3775
-    headline: "Board releases six sets of executive session minutes; holds four additional sets"
-    dek: "On advice of Town Counsel, minutes from dates including May 2023 through November 2021 are made public; minutes from March 2025 and two earlier dates are held."
-    summary: |
-      On advice of Town Counsel, the board voted unanimously to release executive session minutes from: February 26, 2025; May 15, 2024; May 23, 2024; May 24, 2023; June 28, 2023; and November 2, 2021.
-      
-      The board also voted unanimously to continue holding executive session minutes from: March 12, 2025; March 26, 2025; November 13, 2023; and November 23, 2020.
+    headline: "Board releases six sets of executive session minutes; holds four pending further review"
+    dek: "Minutes from February 2025 through November 2021 were released; minutes from March 2025, November 2023, and November 2020 remain held on advice of town counsel."
+    summary: "On advice of town counsel, the board voted to make public six sets of executive session minutes: February 26, 2025; May 15, 2024; May 23, 2024; May 24, 2023; June 28, 2023; and November 2, 2021. The board also voted to continue holding four sets: March 12, 2025; March 26, 2025; November 13, 2023; and November 23, 2020."
+    key_speakers: ["Chair (Newan)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.82
+    topic_confidence: 0.88
     start_seconds: 3775
-    end_seconds: 4960
-    headline: "Town Administrator updates cover fiber loop expansion, Munis go-live, EV fleet transition, assessing improvements, and expiring ambulance contract"
-    dek: "Highlights include an $89,000 public infrastructure grant extending the municipal fiber loop to the Neck, a July 1 Munis software go-live, a draft employee home EV charging reimbursement policy, and an outgoing ambulance services contract with Atlantic Ambulance expiring June 30."
+    end_seconds: 4533
+    headline: "Town Administrator reports on fiber loop expansion, Munis go-live, EV fleet transition, and assessing office improvements"
+    dek: "Highlights include an $89,000 grant to extend the municipal fiber loop to the Neck, a July 1 Munis software go-live, a draft employee home EV charging policy, and a lighter-than-expected abatement season."
     summary: |
-      Town Administrator Keer provided a broad departmental update:
+      Town Administrator Keer presented a broad update drawn from a recent department head meeting:
       
       **Civic Engagement**
-      - Veteran Service Agent's first solo Memorial Day ceremony well received
-      - Citizen Police Academy completed; six graduates committed to police volunteer program
+      - Veterans Service Agent held her first independent Memorial Day ceremony; described as successful.
+      - Citizen Police Academy completed with six graduates committing to volunteer with the police department; interest in a second academy.
       
       **Technology Infrastructure**
-      - ARPA-funded $500,000 fiber loop installation underway through main Marblehead
-      - $89,000 public infrastructure grant received to extend fiber loop to the Neck
-      - Munis software: staff access established, training underway, **go-live July 1**
+      - $89,000 public infrastructure grant received to extend the ARPA-funded municipal fiber loop to the Neck, connecting remaining municipal infrastructure.
+      - Munis financial software: staff access established, training underway, go-live targeted for July 1.
       
       **Electric Vehicle Fleet Transition**
-      - Logan Casey leading EV transition plan with Mass Fleet Advisor technical assistance
-      - High-speed EV charger locations being assessed including DPW yard
-      - Draft employee home charging policy in development to reimburse authorized take-home vehicle employees for overnight Level 2 charging costs and charger installation
-      - Council on Aging exploring purchase of electric van
+      - Mass Fleet Advisor technical assistance agreement underway to develop an EV transition plan.
+      - Green Marblehead Implementation Committee assessing high-speed EV charger locations including the DPW yard.
+      - Draft employee home charging policy in development for employees authorized to take vehicles home; would cover cost of Level 2 charger installation and reimburse home electricity costs for overnight charging.
+      - Council on Aging exploring purchase of an electric van.
       
-      **Regulatory / Environmental**
-      - DCR floodplain permit approved; final revisions underway
-      - Gas leaf blower ban now in effect through Labor Day; enforcement approach is education-first
+      **Assessing Office**
+      - Current abatement season is very light; assistant/lead assessor proactively reviewing and correcting land value database issues that affected certain neighborhoods in prior years.
       
-      **Finance / Assessing**
-      - Current abatement season described as very light; Assessor proactively reviewing land value tables in areas with prior adjustment errors
+      **Environmental / Regulatory**
+      - DCR floodplain permit approved; final revisions underway.
+      - Gas leaf blower ban in effect from Memorial Day through Labor Day; enforcement approach is education-first.
       
-      **Public Safety**
-      - Atlantic Ambulance services contract expires **June 30, 2025**; town is evaluating the marketplace for ambulance service going forward
-      
-      **Community Development**
-      - Town Charter Committee public forums underway (three sessions scheduled May 28–30)
-    key_speakers: ["Town Administrator (Thatcher Keer)", "Logan Casey (Sustainability Coordinator)", "Fire Chief (referenced)", "Board Chair"]
-  - topic: public-safety
-    topic_confidence: 0.8
-    start_seconds: 4522
-    end_seconds: 4552
-    headline: "Atlantic Ambulance services contract set to expire June 30; town evaluating marketplace"
-    dek: "The board was informed the current contract expires at month's end and the town is engaging the marketplace to determine future ambulance service delivery."
-    summary: "The Town Administrator noted that the contract with Atlantic Ambulance for ambulance services expires June 30, 2025. The town is engaging the marketplace to evaluate options and make the best decision for Marblehead regarding provision of those services."
-    key_speakers: ["Town Administrator (Thatcher Keer)", "Fire Chief (referenced)"]
+      **Ambulance Contract**
+      - Atlantic Ambulance contract expires June 30; town is engaging the marketplace to evaluate options before renewal or replacement.
+    key_speakers: ["Town Administrator (Thatcher Keer)", "Board member (Murray)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.75
+    topic_confidence: 0.85
     start_seconds: 4552
     end_seconds: 4976
-    headline: "Board member Brett Murray recognized at his final Select Board meeting after multiple terms of service"
-    dek: "Murray reflected on eight years of service, two recent terms, and expressed confidence in the town's direction under current leadership."
-    summary: "Board Chair and fellow members recognized Brett Murray at his final meeting. Murray spoke about the significance of re-election as an affirmation of his record, praised the working relationship of the current board, and expressed confidence in Town Administrator Keer and the staff team. He thanked voters, his family, and colleagues for their support during his service."
-    key_speakers: ["Board Member (Murray)", "Board Chair", "Board Member (Fox, referenced)"]
+    headline: "Board member Brett Murray gives farewell remarks at his final meeting after multiple terms of service"
+    dek: "Murray, completing his second stint on the Select Board, thanked voters, colleagues, and his family; the board also noted upcoming Town Charter public forums."
+    summary: |
+      Board member Brett Murray's final meeting was acknowledged by the full board. Chair Newan highlighted Murray's contributions including availability, insight, and collaborative spirit. Other members noted his long history in Marblehead (family roots to the 1700s) and collegiality.
+      
+      Murray thanked Marblehead voters for multiple reelections, praised the direction of the town under Town Administrator Keer's leadership, and encouraged more residents to run for boards and committees. He thanked his family for supporting his service.
+      
+      Separately, the chair noted upcoming Town Charter Committee public forums: a Thursday noon-to-one session at the Judy Jacoby Center (Council on Aging) and a Friday 9–10 AM online webinar. A prior evening forum had approximately 25 online attendees and 15 in person. Draft A of the proposed charter is posted on the Charter Committee's website.
+    key_speakers: ["Board member (Brett Murray)", "Chair (Newan)", "Board member (Fox)", "Board member (Singer)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

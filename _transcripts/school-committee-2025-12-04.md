@@ -11,18 +11,22 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "School committee announces school start-time settlement, votes to release executive session minutes"
-  summary: "The Marblehead School Committee publicly disclosed a settlement agreement with the Marblehead Education Association that returns middle and high school start and end times to 2024–25 levels, resolving a prohibited practice charge. A committee member immediately moved to release the executive session minutes in which the 5-1 settlement vote occurred, and that motion passed 4-0. The committee also approved a memorial bench for a student, discussed declining enrollment data showing roughly a 3.8% average annual drop, and conducted a first reading of the competency determination policy required after MCAS was eliminated as a graduation requirement."
+  headline: "School committee reveals 5-1 vote approving start-time settlement with MEA"
+  summary: "The Marblehead School Committee disclosed in open session that it had voted 5-1 in executive session on November 20, 2025 to approve a settlement agreement with the Marblehead Education Association, returning middle and high school start and end times to 2024-25 levels. A member raised transparency concerns and the committee voted 4-0 to release the executive session minutes. The committee also received a first reading of a new competency determination policy required by the state after MCAS was eliminated as a graduation requirement, and voted to waive the third reading so the policy can be finalized at the December 18 meeting."
   decisions:
     - "Approved consent agenda including $403,727.82 in bills, November 20 meeting minutes, and five policy updates"
-    - "Approved memorial bench for student Savannah Gael to be placed at MVMS, funded entirely by community donations"
+    - "Approved placement of a community-funded memorial bench for student Savannah Gael at MVMS"
     - "Approved release of executive session minutes related to the school start-time settlement"
-    - "Approved policy EEAA (Walkers and Riders) update"
-    - "Approved policy EEAG (student transportation in private vehicles) update"
-    - "Approved creation of an ad hoc subcommittee to address Elevating Educator Voices and strategic planning goals"
-    - "Approved first reading of competency determination policy IIKF and waived third reading to place it on December 18 agenda"
-    - "Continued to executive session to discuss potential litigation by former administrator Jay Buckley and step-three lead teacher stipend grievance"
+    - "Approved policy EEAA (Walkers and Riders transportation policy update)"
+    - "Approved policy EEAG (student transportation in private vehicles)"
+    - "Approved ad hoc subcommittee for Elevating Educator Voices goal"
+    - "Approved combined ad hoc subcommittee for Elevating Educator Voices and Strategic Planning goals"
+    - "Approved first reading of competency determination policy IIKF"
+    - "Approved waiving third reading of competency determination policy; placed on December 18 agenda for vote"
+    - "Held second reading of five new E-section policies (ECAB, EFBA, EFE, EHAA, EHB)"
+    - "Approved moving January meeting dates to January 15 and January 29"
   votes:
     - motion: "Consent agenda approval"
       result: "in favor (4 to 0)"
@@ -30,231 +34,184 @@ summary_card:
       result: "in favor (4 to 0)"
     - motion: "Release executive session minutes on start-time settlement"
       result: "in favor (4 to 0)"
-    - motion: "Policy EEAA update"
+    - motion: "Policy EEAA approval"
       result: "in favor (4 to 0)"
-    - motion: "Policy EEAG update"
+    - motion: "Policy EEAG approval"
       result: "in favor (4 to 0)"
     - motion: "Ad hoc subcommittee for Elevating Educator Voices goal"
       result: "in favor (4 to 0)"
-    - motion: "Combined ad hoc subcommittee for Elevating Educator Voices and strategic planning goals"
+    - motion: "Combined ad hoc subcommittee for both strategic goals"
       result: "in favor (4 to 0)"
     - motion: "First reading of competency determination policy IIKF"
       result: "in favor (4 to 0)"
-    - motion: "Waive third reading and place competency determination policy on December 18 agenda"
+    - motion: "Waive third reading; place policy IIKF on December 18 agenda for vote"
       result: "in favor (4 to 0)"
-    - motion: "Enter executive session"
+    - motion: "Enter executive session (litigation, MEA grievance, bargaining strategy)"
       result: "in favor (4 to 0)"
 
 topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 112
+    end_seconds: 594
+    headline: "Residents praise MVMS intergenerational book event; another alleges bargaining violations"
+    dek: "Three speakers addressed the committee on topics ranging from a Holocaust-themed book discussion to alleged labor-law violations related to the school schedule change."
+    summary: |
+      **Reese Dalberg** (MVMS parent co-president and Task Force Against Discrimination member) thanked MVMS English teachers and administration for organizing an intergenerational discussion of the novel *When We Flew Away* at Abbott Public Library, attended by 33 students and community members including Council on Aging participants.
+      
+      **Sarah Cox** (46 C Street) alleged that the school committee's decision to change school start and end times constituted a breach of Massachusetts General Law and ethics law. She argued the change — which she calculated reduced instructional time by approximately 36 hours annually at the high school — amounted to more than $500,000 in additional teacher compensation and was made without a public vote to reopen collective bargaining.
+      
+      **Karen MCL** (11 Trager Road) urged the committee to fairly review a grievance filed by a teacher she said was removed from a lead teacher position approximately one month after speaking out about antisemitism in the schools. She characterized the removal as retaliation.
+    key_speakers: ["Reese Dalberg (MVMS parent co-president)", "Sarah Cox (resident)", "Karen MCL (resident, remote)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 594
+    end_seconds: 688
+    headline: "Student rep reports MHS football victory and acapella concert highlights"
+    dek: "The student representative summarized recent school events including the Thanksgiving Day football win over Swampscott and the Sing Free acapella concert."
+    summary: "The MHS student representative reported that the football team beat Swampscott on the final drive of the Thanksgiving Day game. Winter sports began their first week of practice. Multiple acapella groups — including the eighth-grade Lum Tones from MVMS — performed at the Sing Free concert. The representative also noted that MHS had switched back to its previous schedule, beginning at 7:55 a.m. and ending at 2:30 p.m."
+    key_speakers: ["Will (MHS student representative)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 30
-    end_seconds: 162
-    headline: "Meeting opens with Pledge of Allegiance and roof contract acknowledgment"
-    dek: "A committee member commended staff involved in securing the roof contract before opening public comment."
-    summary: "The meeting opened with the Pledge of Allegiance. A committee member thanked Ralph Wallace, Mark Leman, Brian Kin, Emina Maloney, Sam Alter, and Mike for their work in getting the roof contract signed."
-    key_speakers: ["Henry (committee member)"]
-  - topic: public-comment
-    topic_confidence: 0.99
-    start_seconds: 162
-    end_seconds: 594
-    headline: "Residents praise MVMS book event; raise concerns about start-time changes and teacher retaliation"
-    dek: "Three speakers addressed the committee on a student-community Holocaust literature event, alleged labor law violations tied to schedule changes, and a teacher grievance over antisemitism advocacy."
-    summary: |
-      **Reese Dalberg** (MVMS PCC co-president, Marblehead Task Force Against Discrimination) thanked MVMS English teachers and administration for facilitating an intergenerational discussion of *When We Flew Away*, a young adult novel about Anne Frank, held at the Abbott Public Library with 33 students and community members the week before Thanksgiving.
-      
-      **Sarah Cox (46 C Street)** alleged that the school committee's change to school start and end times constituted an unannounced reopening of collective bargaining in violation of Massachusetts General Law, arguing no public vote was taken to authorize bargaining. She calculated that reducing the high school dismissal time by 12 minutes per day over 180 days equals approximately 36 hours of lost instructional time and, at roughly 0.55% of compensation per day, an increase of over 3% to staff compensation totaling more than $500,000 in taxpayer funds without public disclosure.
-      
-      **Karen MCL (11 Trager Road)** spoke remotely about a teacher who she said was removed from a lead teacher position approximately one month after speaking out about antisemitism in Marblehead public schools. She urged the committee to review the teacher's grievance fairly and consider reinstatement.
-    key_speakers: ["Reese Dalberg (MVMS PCC co-president)", "Sarah Cox (resident, 46 C Street)", "Karen MCL (resident, 11 Trager Road, remote)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.9
-    start_seconds: 594
+    start_seconds: 688
     end_seconds: 1476
-    headline: "Superintendent updates committee on graduation framework, METCO visit, roof timeline, and anti-discrimination work"
-    dek: "Superintendent Todd provided a wide-ranging update including a possible April vacation roof start, a positive METCO presidential visit, student-led anti-discrimination coalitions, and staff shout-outs."
+    headline: "Superintendent updates committee on graduation framework, METCO visit, and anti-discrimination work"
+    dek: "Superintendent Todd outlined preliminary state graduation framework changes, a visit from new METCO president Dr. Candace Sumner, and ongoing anti-discrimination and MAGIC Coalition student efforts."
     summary: |
-      Superintendent Todd covered several topics:
+      The superintendent noted that Governor Healey's office released a preliminary graduation framework following the elimination of 10th-grade MCAS as a diploma requirement. Key proposed elements include end-of-course assessments, MyCap career plans, capstone projects or portfolios, financial literacy, and seals of distinction. A final framework is expected in June 2026; no immediate action is required by districts.
       
-      - **Graduation framework**: Governor Healy's office released a preliminary framework following elimination of 10th-grade MCAS as a graduation requirement. Proposed elements include end-of-course assessments, a capstone or portfolio, financial literacy, and seals of distinction. No action is required yet; a final framework is expected by June.
-      - **Roof update**: Contractors held a kickoff meeting and are exploring beginning work on the library and an adjoining roof section over April vacation if weather permits.
-      - **METCO**: New METCO President Dr. Candace Sumner visited Marblehead High School and met with students and staff; she was described as highly impressed.
-      - **Anti-discrimination committee**: The committee discussed Holocaust remembrance programming, the Commission on Combating Antisemitism report, and reporting mechanisms. The superintendent described a professional development opportunity titled *What Happens When a Swastika Shows Up at Your School*.
-      - **MAGIC Coalition**: Students formed the Marblehead Alliance for Growth, Inclusion, and Connection (MAGIC), a student-led group focused on addressing discrimination.
-      - **Student meetings**: The superintendent met with approximately 16–17 students of color who expressed wanting to feel heard and seen; discussions included creating a positive message to replace a removed Black Lives Matter banner.
-      - **Staff shout-outs**: Counselors, permanent substitutes, nurses, secretaries, and literacy staff across all buildings were recognized.
+      New METCO president Dr. Candace Sumner visited Marblehead High School and met with students, staff, and community members. The superintendent described the visit as highly positive.
+      
+      The anti-discrimination committee discussed Holocaust remembrance planning, the Commission on Combating Antisemitism report, and reporting mechanisms. Students formed the MAGIC Coalition (Marblehead Alliance for Growth, Inclusion and Connection) to lead peer discussions on discrimination. The superintendent also met separately with approximately 16–17 students of color who expressed a desire to be heard and to create a positive message to replace a removed banner.
+      
+      The superintendent's shout-outs recognized counselors, permanent substitutes, nurses, secretaries, and literacy support staff at MVMS, Village, Glover, and MHS, as well as the Abbot Public Library director for collaborating with third-grade classes on the Caldecott Award selection process.
     key_speakers: ["Todd (Superintendent)"]
   - topic: school-budget
-    topic_confidence: 0.95
+    topic_confidence: 0.92
     start_seconds: 1476
     end_seconds: 1817
-    headline: "Finance update shows $3.27M unencumbered balance; FY26 budget process under way with principal meetings"
-    dek: "The assistant superintendent reported a $65,000 decrease in unencumbered funds over one month and described ongoing budget process meetings with all building principals."
+    headline: "Finance director reports $3.27M unencumbered balance; budget process underway with principals"
+    dek: "The assistant superintendent for finance reported the FY26 budget remains healthy with a declining unencumbered balance, and described the early stages of the FY27 budget development process."
     summary: |
-      The assistant superintendent for finance reported:
+      Assistant Superintendent Mike reported that the unencumbered budget balance fell by approximately $65,000 over the prior month, from $3.34 million to $3.27 million, indicating accurate salary encumbrances. A negative budget line of approximately $227,000 was explained as a placeholder for anticipated staff retirements and will be redistributed between salary lines without requiring school committee approval.
       
-      - Unencumbered balance decreased from approximately $3.34 million to $3.27 million over one month, indicating salary encumbrances are approximately 99% accurate.
-      - A budget line showing negative $227,000 reflects anticipated retirements built into the budget at the start of the year; it will be redistributed after the Munis financial system conversion without requiring school committee approval.
-      - The budget subcommittee has met several times and is conducting individual meetings with all building principals to review staffing, resources, and efficiencies.
-      - A tentative calendar exists for budget presentations to the school committee; members agreed that budget documents should be released to the public simultaneously with their presentation at a school committee meeting.
+      The budget subcommittee has met several times. The administration is conducting one-on-one meetings with all building principals to review staffing and resources. A tentative budget calendar has been developed; the committee agreed that budget documents will be released to the public simultaneously with their presentation to the school committee.
     key_speakers: ["Mike (Assistant Superintendent for Finance)", "Todd (Superintendent)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 1817
     end_seconds: 1936
-    headline: "Consent agenda approved 4-0: $403,727 in bills, November minutes, and five policy updates"
-    dek: "The lower-than-usual bill schedule was explained by the absence of a town warrant the prior week."
-    summary: |
-      The committee approved the consent agenda 4-0. Items included:
-      - Schedule of bills totaling $403,727.82 (lower than usual because the town did not run a warrant the previous week)
-      - Minutes from the November 20, 2025 meeting
-      - Policy updates: EEB (Safety Program), EBB (First Aid), EBC (Emergency Plans), EEA (Student Transportation Services), and EEAE (School Bus Safety Program) — all minor MASC-recommended changes
-  - topic: admin-housekeeping
-    topic_confidence: 0.88
-    start_seconds: 1936
-    end_seconds: 2414
-    headline: "Committee approves 4-0 memorial bench for student Savannah Gael at MVMS entrance"
-    dek: "The bench, fully funded by community donations including an anonymous donor, will be placed between two trees at the original MVMS entrance."
-    summary: |
-      An instructional assistant and community member, Denning Jennings (identified as Ms. Jennings / Ms. J at MVMS), presented a proposal for a memorial bench honoring student Savannah Gael. She read tributes from two of Savannah's friends.
-      
-      Key details:
-      - The bench will be placed between two trees at the original MVMS entrance near the pickleball area.
-      - It will be inscribed: *In loving memory of Savannah Gael — donated by the Marblehead community.*
-      - Funding was fully raised through contributions from Glover, Brown, Village, MVMS, MHS communities, and an anonymous donor. No school budget funds are involved.
-      - The motion was approved 4-0.
-    key_speakers: ["Denning Jennings (MVMS instructional assistant, community member)"]
-  - topic: labor-personnel
-    topic_confidence: 0.98
-    start_seconds: 2414
-    end_seconds: 2913
-    featured: true
-    headline: "School committee discloses 5-1 vote approving MEA settlement that reverses secondary school schedule changes"
-    dek: "The chair read a statement revealing an executive session settlement that returns middle and high school times to 2024-25 levels; a member immediately moved to release the executive session minutes and the motion passed 4-0."
-    summary: |
-      The chair read a prepared statement disclosing the following:
-      
-      - In November 2024 the school committee and the Marblehead Education Association (MEA) signed a memorandum of agreement providing for new student arrival times beginning in the 2025–26 school year, intended to enable a second recess at the elementary level.
-      - After the change took effect in August 2025, the MEA filed a charge of prohibited practice with the Massachusetts Department of Labor.
-      - Through fall 2025, administrators determined that further discussion about the impact on secondary schedules was needed.
-      - The school committee, administration, and MEA leadership reached a settlement agreement that was **voted 5 to 1** in executive session on November 20, 2025. Town Administrator Thatcher Keys participated.
-      - Under the settlement: (1) the MEA dismissed its prohibited practice charge and withdrew a related grievance; (2) middle and high school start and end times revert to 2024–25 levels; (3) elementary school teachers may self-direct one PLC day per month from December 2025 through June 2026; (4) a working group will continue to address the impact of student start times on teacher prep time at the elementary level.
-      
-      A committee member immediately raised a point of order noting that the vote had not been formally released from executive session. Another member moved to release the full executive session minutes from all related meetings. That motion passed **4 to 0**.
-      
-      Debate ensued over whether the settlement constituted a contract change that required a public vote to reopen bargaining. The chair stated that legal counsel was involved and confirmed the process was appropriate. One member argued that reducing the high school dismissal time by seven minutes — which had been in the contract but, according to the superintendent, had not been operationalized before the 2025–26 school year — did not constitute a $500,000 cost. The opposing member maintained that the cost calculation was valid for the period during which the longer day was in effect.
-    key_speakers: ["Al (committee chair or member reading statement)", "Jen (committee member, made motion to release minutes)", "Kate (committee member)", "Henry (committee member)", "Todd (Superintendent)"]
-  - topic: school-budget
-    topic_confidence: 0.95
-    start_seconds: 2913
-    end_seconds: 3564
-    headline: "Enrollment down average 3.8% annually since 2019; district at 2,511 students vs. 2,754 in June"
-    dek: "The administration presented DESI October 1 enrollment data showing declines across every grade level, with further analysis on where students are going to be presented at the next meeting."
-    summary: |
-      Committee member Jen requested the topic be placed on the agenda after observing a drop of more than 200 students between June 7 (2,754 students) and the current enrollment report (2,511 students), including a 25-student decline in a single week.
-      
-      The administration presented October 1 DESI enrollment data from 2019 to 2025:
-      
-      | Grade | Average (2019–2025) | FY26 (current) |
-      |-------|---------------------|----------------|
-      | K | 160 | below average |
-      | 1 | 176 | below average |
-      | 2 | 191 | below average |
-      | 3 | 193 | below average |
-      | 4 | 184 | below average |
-      | 5 | 188 | below average |
-      | 6 | 191 | below average |
-      | 7 | 190 | ~170 (example cited) |
-      | 8 | 217 | below average |
-      | 9 | 222 | below average |
-      | 10 | 229 | below average |
-      | 11 | 231 | below average |
-      | 12 | 234 | below average |
-      
-      The **average annual enrollment decline from 2018–19 to 2024–25 is approximately -3.8% per year**. Every grade is below its historical average in the current year.
-      
-      Key points raised:
-      - The weekly enrollment reports also include preschool and testing-only students not captured in DESI K-12 data, which can inflate apparent losses.
-      - The administration will pull disaggregated data showing where departing students went (homeschool, private school, out-of-district move, etc.) for the next meeting.
-      - The superintendent noted the district is legally required to track where enrolled students go when they leave.
-      - The decline affects Chapter 70 state aid, which is formula-driven based on enrollment counts.
-      - The district uses enrollment trends to project staffing needs (e.g., sliding a teacher from one grade to the next).
-    key_speakers: ["Jen (committee member)", "Mike (Assistant Superintendent for Finance)", "Julia (Assistant Superintendent for Teaching and Learning)", "Todd (Superintendent)"]
+    headline: "Committee approves consent agenda including $403,727 in bills and five policy updates"
+    dek: "The school committee unanimously approved the consent agenda, which included a schedule of bills, November 20 meeting minutes, and MASC-recommended policy revisions."
+    summary: "The consent agenda included a schedule of bills totaling $403,727.82 (lower than usual because no town warrant was issued the prior week), minutes from the November 20, 2025 meeting, and updates to policies EEB, EBB, EBC, EEA, and EEAE. The committee noted the EEAE changes applied only to the MASC-recommended portion of the policy, leaving Marblehead-specific language intact. Approved 4-0."
   - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 3564
+    start_seconds: 1936
+    end_seconds: 2385
+    headline: "Committee approves community-funded memorial bench for MVMS student Savannah Gael"
+    dek: "An instructional assistant at MVMS presented a proposal for a memorial bench fully funded by community donations, to be placed at the school's original entrance."
+    summary: "MVMS instructional assistant and dance teacher Denning Jennings presented a proposal for a memorial bench honoring MVMS student Savannah Gael, who recently died. Friends' tributes were read aloud. The bench is to be placed between two trees near the original entrance of MVMS. The project was fully funded through donations from Glover, Brown, Village, MVMS, MHS communities and an anonymous donor. The inscription will read 'Donated by the Marblehead community, in loving memory of Savannah Gael.' Approved 4-0."
+    key_speakers: ["Denning Jennings (MVMS instructional assistant)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 2437
+    end_seconds: 2913
+    featured: true
+    headline: "Committee discloses 5-1 executive-session vote approving MEA settlement on school start times"
+    dek: "The chair announced in open session that the committee voted 5-1 in executive session to settle a prohibited practice charge filed by the MEA, reverting secondary school schedules to 2024-25 times; members then voted 4-0 to release the executive session minutes."
+    summary: |
+      The chair read a prepared statement disclosing that in November 2024, the school committee and the Marblehead Education Association (MEA) signed a memorandum of agreement providing for new student arrival times starting in the 2025-26 school year, intended to add a second elementary recess. After implementation, the MEA filed a prohibited practice charge with the Massachusetts Department of Labor.
+      
+      A settlement agreement was approved by the school committee in executive session on November 20, 2025, by a vote of 5-1, with Town Administrator Thatcher Keys participating. Under the settlement:
+      - The MEA dismissed its prohibited practice charge and a related grievance.
+      - Middle and high school start and end times will return to 2024-25 levels.
+      - Elementary school teachers may self-direct one PLC day per month from December through June.
+      - A group of administrators and educators will continue meeting to address elementary prep time impacts.
+      
+      A committee member raised a point of order, noting the vote results had not been formally released by committee vote. Another member moved to release the full executive session minutes; the motion passed 4-0.
+      
+      Debate followed regarding the impact of reverting the high school end time. One member characterized the 7-minute change as never having been operationalized prior to September 2025, disputing an estimate of $500,000 in additional compensation costs. Another member argued the change was a contract modification made without a public vote to reopen bargaining and constituted a breach of Massachusetts General Law.
+    key_speakers: ["Al (chair, School Committee)", "Jen (School Committee member)", "Kate (School Committee member)", "Henry (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 2960
+    end_seconds: 3564
+    headline: "District enrollment down approximately 243 students from June to December; annual average decline near 4%"
+    dek: "A committee member presented DESI October 1 enrollment data from 2019 to present showing consistent annual declines across all grade levels, prompting discussion about demographic analysis and budget implications."
+    summary: |
+      Committee member Jen raised concerns about enrollment decline, noting the district went from approximately 2,754 students on June 7 to 2,511 as of the current week — a drop of over 200 students. The most recent weekly report showed a 25-student decline in a single week.
+      
+      The administration presented October 1 DESI enrollment data from 2019 through 2025, comparing actual enrollment to grade-level averages. The data showed enrollment below average in every grade level in the most recently reported year. The average annual enrollment decline across all grades over the period was approximately 3.8% per year.
+      
+      The superintendent noted the administration can pull data on where departing students go (homeschool, private school, moved out of district) and committed to providing a more detailed analysis at the next meeting. The committee discussed implications for Chapter 70 state aid, which is formula-driven based on enrollment, and for the FY27 budget process.
+    key_speakers: ["Jen (School Committee member)", "Mike (Assistant Superintendent for Finance)", "Todd (Superintendent)", "Julia (Assistant Superintendent for Teaching and Learning)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 3984
     end_seconds: 4082
-    headline: "Committee approves policy updates EEAA and EEAG; conducts second reading of five new MASC-recommended policies"
-    dek: "Policy EEAA was renamed from 'Transportation of Regular Education Students' to 'Walkers and Riders'; EEAG on student transportation in private vehicles was also approved after brief discussion."
-    summary: |
-      - **Policy EEAA** (Walkers and Riders, formerly Transportation of Regular Education Students): approved 4-0. Changes update the title and refine language about transportation for students whose IEPs require it.
-      - **Policy EEAG** (Student Transportation in Private Vehicles): approved 4-0. Brief discussion noted that the policy requires background checks for adult non-student passengers and parental consent; operationalization was acknowledged as a practical challenge.
-      - **Second readings** (no vote; will be voted at next meeting): ECAB (Access to Buildings and Grounds), EFBA (School Food and Nutrition Meal Modifications), EFE (Civil Rights Complaint Policy for Child Nutrition Programs), EHAA (District Security Relating to Technology), EHB (Data and Records Retention). All are new MASC-recommended policies.
-    key_speakers: ["Kate (committee member)", "Henry (committee member)", "John (committee member)"]
-  - topic: school-budget
-    topic_confidence: 0.8
-    start_seconds: 4082
-    end_seconds: 4239
-    headline: "Ad hoc subcommittee formed to work on Elevating Educator Voices and strategic planning goals"
-    dek: "The committee voted 4-0 twice to establish a combined subcommittee for two previously approved school committee goals; membership will be determined at the next meeting when all five members are present."
-    summary: "Two school committee goals — Elevating Educator Voices (researching how other school committees use non-voting members) and Strategic Planning (developing a proposed long-term planning framework) — each required appointment of a member or subcommittee. The committee voted 4-0 to create an ad hoc subcommittee for the Elevating Educator Voices goal, then voted 4-0 again to combine both goals under one subcommittee. Membership appointments were deferred to the next meeting so that the absent fifth member could participate."
-    key_speakers: ["Jen (committee member)", "Kate (committee member)"]
-  - topic: school-budget
-    topic_confidence: 0.92
-    start_seconds: 4462
-    end_seconds: 7034
-    headline: "Committee completes first reading of competency determination policy replacing MCAS graduation requirement"
-    dek: "Debate centered on whether the passing grade for competency should remain at approximately 60 (a D) or be raised; the committee voted to waive the third reading and place the policy on the December 18 agenda."
-    summary: |
-      With MCAS eliminated as a graduation requirement, districts must submit a competency determination (CD) policy to DESE by year-end. The policy draft presented requires students to pass 10th-grade coursework in ELA, algebra 1, geometry, biology, and an additional lab science (and US history beginning in 2027) to demonstrate competency, consistent with 603 CMR 30-03 regulations.
-      
-      **Key policy provisions:**
-      - Passing grade in relevant 9th- and 10th-grade courses satisfies the competency requirement.
-      - Students who do not pass are placed on a proficiency plan demonstrating mastery through classroom work, projects, and assessments.
-      - Capstone or portfolio assessment is an alternative measure.
-      - Special provisions for students with disabilities (IEP team involvement), English language learners (case-by-case course determination), and late-enrolling ELL students (may use MCAS scores or transcript review).
-      - An appeals process runs from the high school principal to the superintendent.
-      
-      **Debate:**
-      One committee member argued that the district should define "passing grade" for competency purposes as 64 (a D, the low end of the D range), rather than 60 (D minus), or potentially higher, to establish a more rigorous standard. The superintendent and another member cautioned that changing the passing grade would affect the entire district's credit-awarding system, eligibility for sports, and prerequisites — not just the competency policy — and that such a change should be data-driven and educator-informed.
-      
-      The member moved to define passing as 64; that motion passed 4-0, with the understanding it applies to the competency context. The committee also voted 4-0 to waive the third reading and place the policy (IIKF) on the **December 18, 2025** agenda for a final vote. The administration agreed to bring comparative data from similar districts on grade scales and credit-awarding practices to the January meeting.
-      
-      The policy submission deadline to DESE is July 31.
-    key_speakers: ["Kate (committee member)", "Jen (committee member)", "Todd (Superintendent)", "Julia (Assistant Superintendent for Teaching and Learning)", "John (committee member)"]
+    headline: "Committee approves transportation policy EEAA; tables EEAG pending member question"
+    dek: "Policy EEAA was renamed from 'Transportation of Regular Education Students' to 'Walkers and Riders' and approved 4-0; EEAG on transportation in private vehicles was briefly tabled."
+    summary: "The committee voted 4-0 to approve policy EEAA, retitled 'Walkers and Riders,' incorporating MASC-recommended language refinements. Policy EEAG, governing student transportation in private vehicles — which includes a background check requirement for non-student adult passengers — was initially tabled pending a question from an absent member, then brought back and approved 4-0 after discussion about operational implications."
+    key_speakers: ["Kate (School Committee member)", "Henry (School Committee member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
-    start_seconds: 7034
+    start_seconds: 4129
+    end_seconds: 4239
+    headline: "Five new MASC-recommended E-section policies receive second reading; vote deferred"
+    dek: "Policies on building access, food nutrition, civil rights complaints, technology security, and data retention had their second reading with no vote taken; a final vote is expected at the next meeting."
+    summary: "The following new MASC-recommended policies completed a second reading before the full committee: ECAB (Access to Buildings and Grounds), EFBA (School Food and Nutrition Meal Modifications), EFE (Civil Rights Complaint Policy for Child Nutrition Programs), EHAA (District Security Relating to Technology), and EHB (Data and Records Retention). No vote was taken at the second reading; a third reading and vote are expected at a future meeting."
+    key_speakers: ["Kate (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 4239
+    end_seconds: 4713
+    headline: "Committee creates ad hoc subcommittee for Elevating Educator Voices and Strategic Planning goals"
+    dek: "Two previously approved school committee goals will be addressed by a single combined ad hoc subcommittee; membership to be determined at the next meeting when all five members are present."
+    summary: "The committee voted 4-0 to establish an ad hoc subcommittee for the Elevating Educator Voices goal (researching how other school committees use non-voting members) and then 4-0 to consolidate that subcommittee with work on the Strategic Planning goal (developing a proposed long-term planning framework for spring 2026). At least one member expressed interest in serving. Membership appointment was deferred until the full five-member committee is present."
+    key_speakers: ["Jen (School Committee member)", "Kate (School Committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.75
+    start_seconds: 4918
+    end_seconds: 7115
+    headline: "Competency determination policy receives first reading; committee waives third reading for December 18 vote"
+    dek: "The committee received a first reading of a new state-required competency determination policy and voted to place it on the December 18 agenda for a final vote, while agreeing to revisit the definition of a passing grade with administrator input in January."
+    summary: |
+      Following a deadlock in the policy subcommittee, the full committee received a first reading of proposed policy IIKF (Competency Determination), required under 603 CMR 30.03 after MCAS was eliminated as a graduation requirement.
+      
+      The policy requires students to earn a passing grade in specified 9th- and 10th-grade courses in ELA, mathematics, and science to demonstrate competency. U.S. History will be added as a requirement starting in 2027. Students who do not pass required courses will be placed on a proficiency plan using portfolios or equivalent measures. An appeals process is included. The policy must be submitted to DESE.
+      
+      The policy subcommittee had been deadlocked over whether the passing grade threshold — currently defined as the lowest passing letter grade (D, approximately 60–64 depending on the grading scale) — should be set higher, such as a 64 or 65. One member argued that the broader implications for credit-granting and student eligibility made such a change significant enough to warrant data analysis and administrator input before the committee acts. The superintendent and assistant superintendent noted that most comparable districts use a passing grade aligned to their standard credit-granting threshold.
+      
+      A motion to define a passing grade as 64 for all subjects was made and seconded but ultimately amended: the committee voted 4-0 to approve the first reading and direct the superintendent and assistant superintendent to bring comparison data from similar districts to a January meeting agenda item. The committee also voted 4-0 to waive the third reading and place the policy on the December 18 agenda for a final vote.
+    key_speakers: ["Kate (School Committee member)", "Jen (School Committee member)", "Todd (Superintendent)", "Julia (Assistant Superintendent for Teaching and Learning)", "Mike (Assistant Superintendent for Finance)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 7115
     end_seconds: 7397
-    headline: "January meeting dates shifted to the 15th and 29th; warrant article deadline confirmed as January 30"
-    dek: "Both the superintendent and committee chair indicated unavailability for the originally scheduled January 8 meeting, prompting a schedule change."
-    summary: "The committee agreed to move January meetings from the 8th and 22nd to the **15th and 29th**. The municipal warrant article submission deadline was confirmed as noon on Friday, January 30, making the January 29 meeting sufficient for any warrant article decisions. No formal vote on the schedule change was recorded in the transcript."
-    key_speakers: ["John (committee member)", "Al (committee chair)"]
+    headline: "January meetings moved to 15th and 29th; warrant article deadline confirmed as January 30"
+    dek: "The committee agreed to reschedule both January meetings due to scheduling conflicts for the chair and superintendent, with warrant article submissions due to the town by noon on January 30."
+    summary: "Due to conflicts for both the chair and the superintendent, the committee agreed to move the January 8 meeting to January 15 and the January 22 meeting to January 29. The town's deadline for municipal warrant article submissions was confirmed as noon on Friday, January 30, making the January 29 meeting the appropriate venue for any warrant article votes."
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 7397
     end_seconds: 7640
-    headline: "Subcommittee updates: METCO gala March 24, early education survey results, communications newsletter planned"
-    dek: "Subcommittee liaisons reported on a METCO fundraiser, a facilities survey showing demand for extended-day childcare, and a planned monthly school committee newsletter."
+    headline: "Subcommittee updates: early education survey results, METCO gala, and school newsletter launch"
+    dek: "The facilities subcommittee received 75 survey responses showing interest in early education with strong demand for extended-day childcare; communications subcommittee plans monthly newsletters."
     summary: |
-      - **METCO**: Annual gala scheduled for March 24; early bird tickets on sale. A member also mentioned attending the METCO conference the following day in Norwood.
-      - **Facilities**: A survey on early education (childcare) demand received approximately 75 responses, with a majority supportive. The strongest expressed need was for extended-day (7 a.m.–7 p.m.) childcare rather than a traditional half-day preschool. A more detailed proposal will be developed. The Veterans Middle School roof is also being assessed by administration.
-      - **Communications**: The subcommittee plans to send a newsletter on the second Friday of each month using a school account set up by the technology director. The first featured topic will be the budget roadmap; enrollment data was suggested as a future topic.
-    key_speakers: ["Henry (committee member)", "Jen (committee member)", "Melissa (committee member, absent)"]
-  - topic: labor-personnel
-    topic_confidence: 0.97
-    start_seconds: 7640
-    end_seconds: 7800
-    headline: "Committee votes 4-0 to enter executive session for litigation and lead teacher stipend grievance"
-    dek: "Three executive session purposes were cited: potential litigation by former administrator Jay Buckley, a step-three grievance hearing with the MEA over the lead teacher stipend, and strategy deliberation on that grievance."
-    summary: |
-      The committee voted 4-0 on a roll call to enter executive session for three purposes under Chapter 30A, Section 21A:
-      1. Discuss potential litigation by former administrator Jay Buckley (Purpose 3).
-      2. Conduct a collective bargaining session with the MEA to hear a step-three grievance regarding the lead teacher stipend (Purpose 2).
-      3. Discuss strategy and deliberate on the committee's response to that grievance (Purpose 3).
+      **Facilities subcommittee**: A survey on early education demand received 75 responses; most were supportive, with a small minority strongly opposed. Respondents most strongly expressed interest in extended-day childcare (approximately 7 a.m. to 7 p.m.) rather than a traditional half-day preschool. A more concrete proposal will be developed before a further survey is conducted. The Veterans Middle School roof is also being assessed.
       
-      The chair declared no intent to return to open session.
-    key_speakers: ["Al (committee chair)", "Kate (committee member)", "Henry (committee member)"]
+      **METCO liaison**: The annual METCO opportunity ball fundraiser is scheduled for March 24. The committee member also planned to attend the METCO conference the following day.
+      
+      **Communications subcommittee**: A school committee newsletter will be sent on the second Friday of each month using an existing district email account. The first issue will feature a budget roadmap; upcoming enrollment data may be a future topic.
+    key_speakers: ["Henry (School Committee member)", "Kate (School Committee member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 7640
+    end_seconds: 7779
+    headline: "Committee votes to enter executive session on former administrator litigation and lead teacher grievance"
+    dek: "The committee voted 4-0 to enter executive session to address potential litigation from a former administrator, a step-three MEA grievance on the lead teacher stipend, and related bargaining strategy."
+    summary: "The committee voted 4-0 to enter executive session for three purposes under Chapter 30A, Section 21A: (1) potential litigation involving former administrator Jay Buckley; (2) a step-three collective bargaining grievance filed by the MEA regarding the lead teacher stipend; and (3) deliberation on the committee's response to that grievance. The chair declared no intent to return to open session."
+    key_speakers: ["Al (chair, School Committee)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

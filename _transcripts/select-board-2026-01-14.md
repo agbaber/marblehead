@@ -11,17 +11,19 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Board denies private tree removal, continues Mary Alley tree hearing to March"
-  summary: "The Select Board denied a request to remove a public shade tree at 2 Thomas Circle, deferring to the Tree Warden's recommendation. A separate hearing on removing three pine trees near the Mary Alley building was continued to March 25 after board members sought more information on pruning options and upcoming renovation plans. The board also appointed Ramon Garcia to the Finance Committee and Susan Woods to the Cultural Council, and accepted a $5,809.04 donation to the Affordable Housing Trust Fund."
+  headline: "Select Board denies Thomas Circle tree removal; continues Mary Alley tree hearing to March"
+  summary: "The Marblehead Select Board held two public shade tree hearings on January 14, 2026. It unanimously denied a request to remove a linden tree at 2 Thomas Circle, deferring to the tree warden's recommendation. A separate hearing on removing three pine trees near the Mary Alley building was continued to March 25 pending further pruning evaluation and building renovation plans."
   decisions:
     - "Denied application to remove public shade tree at 2 Thomas Circle"
-    - "Continued public shade tree hearing for 7 Witcher Road trees to March 25, 2026"
-    - "Approved appointment of Ramon Garcia to Finance Committee (term to June 2028)"
-    - "Approved appointment of Susan Woods to Cultural Council (term to June 2028)"
-    - "Accepted $5,809.04 donation from Marblehead Ballot Question Committee to Affordable Housing Trust Fund"
-    - "Approved one-day liquor licenses for Marblehead Festival of Arts, Marblehead Arts Association, and New England Yankees"
+    - "Continued public shade tree hearing for Mary Alley trees to March 25, 2026"
+    - "Approved appointment of Ramon Garcia to Finance Committee (term expiring June 2028)"
+    - "Approved appointment of Susan Woods to Cultural Council (term expiring June 2028)"
+    - "Approved acceptance of $5,809.04 donation from Marblehead Ballot Question Committee to the Affordable Housing Trust Fund"
     - "Approved consent agenda items including event permits and minutes"
+    - "Approved multiple one-day liquor licenses for Marblehead Festival of Arts, Marblehead Arts Association, and New England Yankees"
+    - "Approved letter of gratitude to Marblehead Ballot Question Committee"
   votes:
     - motion: "Deny tree removal at 2 Thomas Circle"
       result: "in favor (unanimous)"
@@ -33,165 +35,165 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Accept $5,809.04 donation to Affordable Housing Trust Fund"
       result: "in favor (unanimous)"
-    - motion: "Approve one-day liquor licenses"
-      result: "in favor (unanimous)"
     - motion: "Approve consent agenda"
+      result: "in favor (unanimous)"
+    - motion: "Approve one-day liquor licenses"
       result: "in favor (unanimous)"
 
 topic_segments:
-  - topic: public-comment
+  - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 1
-    end_seconds: 48
-    headline: "No public comment received at January 14 meeting"
-    dek: "Chair called for public comment; no residents or online participants came forward."
-    summary: "The chair opened the January 14, 2026 meeting and invited public comment. No members of the public — in person or online — came forward, and the board moved directly to the administrator update."
-  - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 48
-    end_seconds: 626
-    headline: "Town adds OpenGov procurement platform; Village Street Bridge advances in TIP process"
-    dek: "Administrator Patrick briefed the board on technology upgrades, a bridge funding milestone, and ongoing historic building maintenance."
+    end_seconds: 188
+    headline: "Town implements OpenGov procurement platform and tracks permits for new-growth revenue"
+    dek: "The town administrator reported expansion of the OpenGov subscription to include online procurement bidding, and integration with the assessor's office to identify permits with new-growth revenue potential."
     summary: |
-      Town Administrator Patrick reported several updates:
+      Town Administrator Patrick reported two technology updates:
       
-      **Technology modernization:** The town has implemented the OpenGov platform for online procurement bidding, complementing the existing OpenGov permitting software. The assessing office now has access to permitting data to better track new growth revenue opportunities.
-      
-      **Village Street Bridge (Harold B. Breer Bridge):** The project has advanced to the TIP (Transportation Improvement Plan) construction funding stage. Estimated construction cost is $5.25 million, funded through state and federal gas-tax-derived funds. Construction is projected for the 2030–2031 timeframe. The project includes ADA-compliant trail access.
-      
-      **Historic building maintenance:** Work is underway or nearly complete on the Picket House (siding, gutters, new windows) and Franklin Street Fire Station (rotted trim, siding, and a 30-year-old boiler replacement). Abbott Hall's original entrance doors have been removed for full restoration, with one set to be returned before the other is sent out.
+      - **OpenGov procurement module**: All bidding and vendor responses will now be handled through an online portal managed by Chief Procurement Officer Allison Jenkins, improving record-keeping and compliance.
+      - **Permitting data for assessors**: The existing OpenGov permitting platform now gives the assessing office access to permit data, allowing staff to flag permits with potential new-growth revenue.
     key_speakers: ["Patrick (Town Administrator)"]
-  - topic: permits-zoning
+  - topic: bonding-capital
+    topic_confidence: 0.8
+    start_seconds: 188
+    end_seconds: 462
+    headline: "Village Street Bridge TIP application advances; construction estimated at $5.25M around 2030–31"
+    dek: "The town has submitted the Harold B. Breer (Village Street) Bridge for Transportation Improvement Program construction funding, with an estimated project cost of $5.25 million and a projected construction window around 2030–31."
+    summary: "The town has completed 25% design on the Village Street Bridge (officially the Harold B. Breer Bridge) and advanced it to the TIP construction-funding application stage. The estimated construction cost is $5.25 million, to be funded through a mix of federal and state gas-tax-derived buckets administered by the MPO. Construction is not expected until approximately 2030–31. The project also includes ADA-compliant trail access improvements connecting to the rail trail network."
+    key_speakers: ["Patrick (Town Administrator)"]
+  - topic: admin-housekeeping
     topic_confidence: 0.88
+    start_seconds: 462
+    end_seconds: 626
+    headline: "Superintendent reports exterior restorations at Pickett House, Franklin Street Fire Station, and Abbott Hall"
+    dek: "Building Commissioner Steve Cummings described ongoing envelope repairs at three historic town buildings, including a new boiler at the fire station and door restoration at Abbott Hall."
+    summary: |
+      Superintendent of Buildings Steve Cummings reported the following completed or near-complete projects:
+      
+      | Building | Work |
+      |---|---|
+      | Pickett House | New siding (3 sides), gutters, windows |
+      | Franklin Street Fire Station | Exterior siding and trim replacement; 30-year-old boiler replacement |
+      | Abbott Hall | Historic door removal and off-site full restoration (one set at a time) |
+      
+      The administrator highlighted a shift toward proactive infrastructure replacement before end-of-life failure.
+    key_speakers: ["Patrick (Town Administrator)", "Steve Cummings (Building Commissioner)"]
+  - topic: permits-zoning
+    topic_confidence: 0.85
     start_seconds: 626
     end_seconds: 2092
     featured: true
-    headline: "Board denies removal of linden tree at 2 Thomas Circle, deferring to Tree Warden"
-    dek: "Applicants cited safety, root damage, and nuisance concerns; the Tree Warden recommended retention and the board voted unanimously to deny."
+    headline: "Board unanimously denies removal of linden tree at 2 Thomas Circle, deferring to tree warden"
+    dek: "Applicants cited liability, root damage to the driveway, sap buildup, and snowplow obstruction, but the tree warden found the 22.5-inch-caliper linden healthy and noted town bylaws do not permit removal for hardscape or nuisance reasons."
     summary: |
-      Applicants Ren Sui and Kristen Horgan (2 Thomas Circle) requested removal of a public shade tree — a 22.5-inch caliper American basswood (linden), approximately 80 years old. They cited the tree's lean toward the street, snowplow clearance issues, root damage to the driveway, sticky aphid secretions coating vehicles, and the fall history of similar linden trees on the street.
+      Residents Ren Sui and Kristen Morgan (represented in part by a long-time neighbor) applied to remove a linden tree (Tilia americana basswood) in front of 2 Thomas Circle. Reasons cited included:
       
-      Tree Warden John Fulbert (ISA-certified arborist, Mass. Qualified Tree Warden) testified that:
-      - The lean has been present since at least 2007 (per Google Earth) and has not changed
-      - The tree exhibits reactionary wood and has self-corrected its growth toward light
-      - Town bylaws do not permit removal for sidewalk/hardscape reasons
-      - Compensation if approved: $6,250 cash to the town, or planting 12 two-inch caliper trees in town-designated locations (maintained for two years)
+      - An approximately 80-year-old tree with a lean toward the street
+      - Root damage cracking the driveway roughly halfway across
+      - Aphid honeydew coating parked vehicles
+      - Snowplow forced to make a wide arc, leaving ice buildup
+      - A grade differential making driveway entry difficult
       
-      A letter from Sustainable Marblehead's Urban Forestry Working Group stated the tree is healthy and provides habitat for 30+ species of cavity-nesting birds.
-      
-      Board members expressed sympathy for the applicants but agreed they were bound by the bylaw and the Tree Warden's expert recommendation. The board also noted a potential grading/driveway issue at the street edge that might be better addressed through DPW.
-      
-      **Vote: Unanimous to deny the removal application.**
-    key_speakers: ["John Fulbert (Tree Warden / ISA-certified arborist)", "Ren Sui (applicant)", "Kristen Horgan (applicant)", "Resident at mic (husband of applicant)"]
+      Tree Warden John Fulbert (ISA-certified) testified the tree's lean has been unchanged since at least 2007 per Google Earth, that the tree shows "reactionary wood" correcting its lean, and that bylaws do not allow removal for hardscape or nuisance issues. Compensation for removal would have been $6,250 or planting of 12 replacement trees. Sustainable Marblehead submitted a letter opposing removal. The board voted unanimously to deny the application and directed applicants to consult DPW about the driveway-grade issue on the public right-of-way.
+    key_speakers: ["John Fulbert (Tree Warden)", "Resident at mic (applicant representative)", "Bob (applicant's husband at mic)"]
   - topic: permits-zoning
     topic_confidence: 0.85
     start_seconds: 2138
     end_seconds: 4066
-    headline: "Mary Alley pine tree hearing continued to March 25 pending pruning review and renovation plans"
-    dek: "Building Commissioner sought removal of three pines near the newly roofed Mary Alley building; board continued the hearing for more information."
+    headline: "Mary Alley pine tree removal hearing continued to March 25 after split recommendations from building commissioner and tree warden"
+    dek: "Building Commissioner Cummings sought removal of three pine trees near the Mary Alley building to protect a new $450,000 EPDM roof and a $500,000 fiber optic hub; the tree warden recommended a more targeted approach and further pruning assessment."
     summary: |
-      Building Commissioner Steve Cummings requested removal of three trees (two white pines and one red pine) near the Mary Alley building, citing:
-      - Two white pines are approximately 11–12 feet from the building and 50–60 feet tall, with branches projecting over a new ~$450,000 EPDM rubber roof
-      - Pine sap dries out EPDM and reduces roof lifespan
-      - A $500,000 town fiber optic loop hub exits the building through the canopy of the third (more distant) tree
-      - A planned renovation will create a new public conference room entrance in that area, where root systems could interfere
-      - The fire inspector noted stairway cracking possibly caused by roots
+      The Town of Marblehead (applicant: Building Commissioner Steve Cummings) sought removal of three trees near the Mary Alley building:
       
-      Tree Warden John Fulbert testified:
-      - All three trees are in generally good health
-      - The red pine has a minor borer issue but it is not threatening overall health
-      - He attempted pruning on the closest white pine but branches still project over the roof
-      - He believed removing all three was "heavy-handed" and wanted to explore further pruning on the fiber-optic tree
-      - He recommended at minimum removing the middle white pine (closest to building)
+      1. **White pine** — approximately 11–12 feet from the building; branches project over the new EPDM rubber roof; considered the highest-risk tree.
+      2. **White pine (middle)** — approximately 23 feet from the building; fiber optic line runs through its canopy.
+      3. **Red pine** — nearest the building entrance; minor borer issue present but not threatening overall health.
       
-      Sustainable Marblehead and resident John Morgan submitted letters opposing removal, citing tree health and environmental benefits. One resident (Albert Jordan, Roosevelt Ave.) spoke in favor of removal, citing long experience with debris on that roof and the risk to the building investment.
+      Cummings noted the $450,000 EPDM roof is susceptible to pine sap degradation and that the Mary Alley building is the main hub for the town's fiber optic loop. Tree Warden Fulbert testified all three trees are in generally good health, and recommended removing only the closest white pine while exploring additional pruning on the fiber-optic tree before deciding. He cautioned that removing all three was "heavy-handed."
       
-      Board members expressed uncertainty about applying the bylaw consistently and wanted to see renovation plans before deciding on the red pine. They agreed more pruning on the fiber-optic tree should be explored first.
+      Letters opposing removal were submitted by Sustainable Marblehead and resident John Morgan. Public commenters included a resident who worked in the building and supported removal, and another who advocated for preserving the trees' environmental value.
       
-      **Vote: Unanimous to continue hearing to March 25, 2026.**
-    key_speakers: ["Steve Cummings (Building Commissioner)", "John Fulbert (Tree Warden)", "Albert Jordan (resident, Roosevelt Ave.)", "Don Warren (resident, 19 Grove St.)", "Patrick (Town Administrator)"]
+      The board continued the hearing unanimously to **March 25, 2026**, directing the tree warden and building commissioner to evaluate pruning options for the fiber-optic tree and to await further information on planned entrance renovation work that may affect the red pine.
+    key_speakers: ["Steve Cummings (Building Commissioner)", "John Fulbert (Tree Warden)", "Resident at mic (Jordan, Roosevelt Avenue)", "Resident at mic (Don Warren, 19 Grove)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.92
     start_seconds: 4073
     end_seconds: 4361
-    headline: "Ramon Garcia appointed to Finance Committee for unexpired term to June 2028"
-    dek: "Garcia, currently on the Housing Committee, has an accounting background and experience at PricewaterhouseCoopers and other firms."
-    summary: "Ramon Garcia, a current member of the Marblehead Housing Committee, was interviewed and appointed to the Finance Committee for an unexpired term expiring June 2028. Garcia holds a bachelor's degree in business with concentrations in accounting, information management systems, and business analytics from Salem State University, and is working toward CPA licensure. His career includes roles at Ernst & Young (internship), a hospitality consulting firm, Lynn Community Health Center, PricewaterhouseCoopers (biotech industry), and currently Catalent LLC. Board members noted his accounting background and civic engagement as strong qualifications. He will be sworn in by the Town Clerk."
-    key_speakers: ["Ramon Garcia (appointee)", "Patrick (Town Administrator)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.88
-    start_seconds: 4797
-    end_seconds: 4974
-    headline: "Susan Woods appointed to Cultural Council for term to June 2028"
-    dek: "Woods is an artist and 25-year Marblehead resident active with the Marblehead Arts Association."
-    summary: "Susan Woods was interviewed and appointed to the Marblehead Cultural Council for a term expiring June 2028. Woods is an artist and longtime member and volunteer of the Marblehead Arts Association, having participated in the Arts Festival for approximately 25 years. She also has a background working alongside scientists in the biotech and pharma industry. Board members found her well qualified without extensive questioning. She will be sworn in by the Town Clerk."
-    key_speakers: ["Susan Woods (appointee)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.87
-    start_seconds: 4974
-    end_seconds: 5021
-    headline: "Board accepts $5,809.04 donation from Marblehead Ballot Question Committee for Affordable Housing Trust Fund"
-    dek: "The donation represents remaining funds from the ballot question committee, directed to the town's Affordable Housing Trust Fund."
-    summary: "The board voted unanimously to accept a donation of $5,809.04 from the Marblehead Ballot Question Committee and deposit it into the Affordable Housing Trust Fund. The board also voted to send a letter of gratitude to the committee acknowledging the generous contribution."
-    key_speakers: ["Patrick (Town Administrator)"]
+    headline: "Ramon Garcia appointed to Finance Committee through June 2028"
+    dek: "Garcia, currently a Housing Committee member with accounting and auditing experience at PwC, Ernst & Young, and Catalent, was interviewed and unanimously appointed to fill an unexpired Finance Committee seat."
+    summary: "Ramon Garcia, a current Housing Committee member who moved to Marblehead three years ago, was interviewed for an unexpired Finance Committee term. He holds a bachelor's degree from Salem State with concentrations in accounting, information management systems, and business analytics, and has worked at Ernst & Young, PricewaterhouseCoopers, and Catalent (a subsidiary of Novo Holdings). The board approved his appointment unanimously; the term expires June 2028."
+    key_speakers: ["Ramon Garcia (applicant)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
+    start_seconds: 4797
+    end_seconds: 4973
+    headline: "Susan Woods appointed to Cultural Council through June 2028"
+    dek: "Woods, a Marblehead Arts Association member and artist with 25 years in town and prior biotech industry experience, was approved for a Cultural Council vacancy."
+    summary: "Susan Woods, an artist and 25-year Marblehead resident active in the Marblehead Arts Association and Arts Festival, was appointed to the Cultural Council. She previously worked alongside scientists in the biotech and pharmaceutical industry for approximately 10 years. The board approved her appointment unanimously; the term expires June 2028."
+    key_speakers: ["Susan Woods (applicant)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 4974
+    end_seconds: 5021
+    headline: "Board accepts $5,809.04 donation from Marblehead Ballot Question Committee to Affordable Housing Trust Fund"
+    dek: "The board voted to accept the residual funds from the now-closed ballot question committee and direct them to the town's Affordable Housing Trust Fund."
+    summary: "The Marblehead Ballot Question Committee (identified as the \"Yes\" committee) donated $5,809.04 in remaining funds to the Affordable Housing Trust Fund. The board voted unanimously to accept the donation and to send a letter of gratitude to the committee."
+    key_speakers: ["Patrick (Town Administrator)"]
+  - topic: recreation-events
+    topic_confidence: 0.85
     start_seconds: 5021
     end_seconds: 5161
-    headline: "Consent agenda approved including event permits, minutes, and bell ringing authorization"
-    dek: "Items included permits for the Miles for Mary 5K, Abbott Hall events, Marblehead Arts Festival, Black Cat road race, and Washington's Birthday bell ringing."
+    headline: "Board approves consent agenda including event permits for 5K, Black Cat race, Arts Festival, and Washington's Birthday bell ringing"
+    dek: "Consent items included permits for the Miles for Mary 5K (October 17, 2026), BNS Fitness Black Cat 10/20-mile run (March 29, 2026), and the traditional Washington's Birthday bell ringing on February 22, 2026."
     summary: |
-      The board approved a consent agenda including:
-      - Minutes from December 2 and 10, 2025, and January 7, 2026 (held)
-      - Miles for Mary 5K Walk/Run (October 17, 2026)
-      - Abbott Hall Community Center Charter Public School event (June 17, 2026)
-      - Abbott Hall Marblehead Little Theater (September 19, 2026)
-      - Abbott Hall Marblehead Festival of Arts (February 6, 2026)
-      - BNS Fitness Black Cat 10/20 Mile road race (March 29, 2026)
-      - Washington's Birthday bell ringing at Abbott Hall and town churches (February 22, 2026)
+      The board approved the following consent agenda items:
       
-      All events subject to standard conditions including Rec & Parks approval, certificate of liability insurance, police detail as needed, and no permanent markings in public ways.
+      - Minutes of December 2 and 10, 2025, and January 7, 2026 (held)
+      - Miles for Mary 5K Run/Walk (October 17, 2026) — subject to Rec & Parks approval and certificate of liability
+      - Abbott Hall Community Center Charter Public School use (June 17, 2026)
+      - Marblehead Little Theater at Abbott Hall (September 19, 2026)
+      - Marblehead Festival of Arts at Abbott Hall (February 6, 2026)
+      - BNS Fitness Black Cat 10/20-mile run (March 29, 2026) — subject to Rec & Parks approval and certificate of liability
+      - Washington's Birthday bell ringing at Abbott Hall and town churches (February 22, 2026) at customary holiday hours
   - topic: labor-personnel
     topic_confidence: 0.92
     start_seconds: 5161
     end_seconds: 5583
-    headline: "Compensation Committee reports 38 personnel classification actions in 2025; salary study shows town behind market"
-    dek: "Town Administrator presented the annual compensation committee report; an ongoing consultant study finds Marblehead salaries in the lower range of comparable communities."
+    headline: "Compensation Committee reports 38 personnel actions in 2025; salary study shows Marblehead below market midpoint"
+    dek: "Town Administrator Patrick presented the annual Compensation Committee report, noting that a consultant's market comparison found Marblehead salaries in the lower end of peer-community ranges, and the board will review options to adjust the target percentile ranking."
     summary: |
-      Town Administrator Patrick presented the 2025 Annual Compensation Committee Report as required by Town Bylaws Chapter 43. The Compensation Committee consists of the Town Administrator, CFO Alicia Benjamin, and Department Head Andrew Petty, supported by HR Director Tom Howard.
+      The 2025 Annual Compensation Committee report (required under Chapter 43 of the town bylaws) was presented by Town Administrator Patrick. The committee — comprising the town administrator, CFO Alicia Benjamin, and department head Andrew Petty, supported by HR Director Tom Howard — took 38 total actions during the year:
       
-      **2025 actions (38 total):**
       | Category | Count |
       |---|---|
       | Job description changes with grade changes | 10 |
       | Job description changes without grade changes | 12 |
-      | New positions created (replacing obsolete ones) | 3 |
-      | New hires above Grade 1 to secure candidates | 13 |
+      | New positions created (replacing obsolete roles) | 3 |
+      | New hires placed above grade one | 13 |
       
-      The administrator noted that approximately half of requests brought to the committee are denied or sent back for more information.
-      
-      **Market study findings:** A consultant is conducting a required triennial market analysis comparing Marblehead's pay grades to comparable communities. Preliminary results show Marblehead positions are within the market range but at the lower end. The board's existing policy targets the 50th percentile among comparables, but the administrator indicated the town may need to target a higher percentile given geographic factors. A full report with cost scenarios at various percentile targets will be brought back to the board. No action was required beyond receiving the report; Town Meeting will vote to formally accept all classification changes.
-    key_speakers: ["Patrick (Town Administrator)", "Alicia Benjamin (CFO, referenced)"]
+      A consultant engaged under the bylaw's three-year review requirement compared Marblehead salary grades against comparable communities. The analysis found Marblehead positions generally fall within peer ranges but at the lower end, and that the board's existing policy of targeting the 50th percentile may need upward adjustment given the town's geographic location and labor market. The administrator indicated he will return to the board with cost estimates for moving to various percentile targets (55th, 60th, 65th) on a phased basis.
+    key_speakers: ["Patrick (Town Administrator)"]
   - topic: permits-zoning
     topic_confidence: 0.88
     start_seconds: 5583
     end_seconds: 5676
-    headline: "Board approves one-day liquor licenses for Arts Festival, Arts Association, and New England Yankees events"
-    dek: "Licenses cover beer and wine at Abbott Hall and 8 Hooper Street through multiple 2026 dates."
+    headline: "Board approves one-day liquor licenses for Marblehead Festival of Arts, Arts Association, and New England Yankees events"
+    dek: "Multiple beer-and-wine-only one-day licenses were approved for events at Abbott Hall and the Arts Association through November 2026."
     summary: |
-      The board approved one-day liquor licenses for:
-      - **Marblehead Festival of Arts** at Abbott Hall, February 6, 2026 (5–7 PM, beer and wine only)
-      - **Marblehead Arts Association** at 8 Hooper Street, 11 dates throughout 2026 from February through November (6:30–9 PM each)
-      - **New England Yankees** at Abbott Hall, February 14, 2026 (7–10 PM, beer and wine only)
+      The board approved one-day liquor licenses (beer and wine only) for:
       
-      All licenses subject to standard conditions including $50 fee per license, proof of authorized alcohol source, and no overnight storage. Alcohol to be purchased from Kathy's Importing and Distribution Company and Martignetti's.
+      - **Marblehead Festival of Arts** at Abbott Hall — February 6, 2026, 5–7 PM
+      - **Marblehead Arts Association** at 8 Hooper Street — 11 dates from February through November 2026
+      - **New England Yankees** at Abbott Hall — February 14, 2026, 7–10 PM
+      
+      All approvals are subject to a $50 fee per event, proof of authorized alcohol source, proper storage and disposal, and liquor liability insurance. Alcohol must not be stored on premises overnight.
   - topic: admin-housekeeping
     topic_confidence: 0.82
     start_seconds: 5676
     end_seconds: 5832
-    headline: "Cemetery Commission vacancy opened after member moves out of town; interviews planned for February 11"
-    dek: "Jerry Tucker's resignation creates the commission's third appointment in as many years; applications accepted through February 6."
-    summary: "The board noted the resignation of Cemetery Commission member Jerry Tucker, who has moved out of town. Letters of interest will be accepted through February 6, 2026, with interviews planned for February 11 in coordination with the remaining commission members. Board members noted this is the third appointment to the three-member commission in approximately as many years, attributing recent turnover to moves out of town rather than other factors."
+    headline: "Cemetery Commission vacancy created by resignation of Jerry Tucker, who moved out of town"
+    dek: "The board announced it will advertise for applications through February 6 and conduct interviews on February 11 to fill the vacancy."
+    summary: "Cemetery Commissioner Jerry Tucker resigned after moving out of Marblehead. The board noted this is approximately the third appointment to the three-member commission in recent years. Applications will be accepted through February 6, 2026, with interviews scheduled for February 11 in coordination with remaining commission members."
     key_speakers: ["Patrick (Town Administrator)"]
 ---
 

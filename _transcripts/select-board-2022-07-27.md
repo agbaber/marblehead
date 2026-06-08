@@ -11,184 +11,182 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Board continues MBTA tree-removal hearing; approves two police hires and Housing Authority tenant rep"
-  summary: "The Select Board continued a public hearing on MBTA's request to remove two cherry trees on Pleasant Street to accommodate an ADA-compliant bus stop improvement, pending further review of design alternatives including pruning. The board approved conditional offers of employment to two police officer candidates and appointed Bill Cooper as tenant representative to the Marblehead Housing Authority. Several routine items were also approved, including a HarborFest event permit, a liquor license for the Marblehead Arts Association, and early voting hours for the state primary."
+  headline: "Board continues MBTA tree-removal hearing; approves two police officer hires"
+  summary: "The Select Board continued a public hearing on removing two cherry trees on Pleasant Street to accommodate an MBTA ADA bus stop improvement, directing further consultation with the town engineer and arborist on whether one tree can be retained through pruning. The board unanimously approved conditional offers of employment for two permanent full-time police officers. Additional actions included appointing a tenant representative to the Housing Authority, denying a curb cut appeal on Jersey Street, and approving several routine event and contract items."
   decisions:
     - "Continued public hearing on MBTA tree removal at Pleasant/Smith Street to August 15, 2022"
     - "Approved conditional offers of employment to Abigail Blank and Michael Farwell as permanent full-time police officers"
-    - "Appointed Bill Cooper as tenant representative to the Marblehead Housing Authority through June 2027"
+    - "Approved appointment of Bill Cooper as tenant representative to Marblehead Housing Authority through June 2027"
     - "Denied curb cut appeal at 87 Jersey Street as presented; directed applicant to work with DPW on alternatives"
     - "Approved minutes for June 22, June 30, and July 13, 2022"
-    - "Approved HarborFest event at State Street Landing on August 28, 2022"
-    - "Approved contract amendment for police station exterior painting (increase of $4,000)"
-    - "Approved contract extension with DNR General Construction for road base materials (third-year option)"
-    - "Approved Girl Scout bridging ceremony use of town property on September 18, 2022, with fee waived"
-    - "Approved one-day liquor license for Marblehead Arts Association fundraiser on July 28, 2022"
-    - "Approved early voting hours for state primary (August 30 – September 2, 2022)"
+    - "Approved use of State Street Landing for HarborFest event on August 28, 2022"
+    - "Approved contract amendment for police station exterior painting, increasing contract by $4,000"
+    - "Approved extension of tack coat/base layer paving contract with DNR General Construction for third year"
+    - "Approved use of Abbott Hall for Girl Scout bridging event on September 18, 2022, with fee waiver"
+    - "Approved one-day liquor license for Marblehead Arts Association jazz fundraiser on July 28, 2022"
+    - "Approved early voting hours for the September 2022 state primary"
   votes:
-    - motion: "Continue MBTA tree removal hearing to August 15"
+    - motion: "Continue tree removal public hearing to August 15, 2022"
       result: "in favor (unanimous)"
-    - motion: "Conditional offers of employment to Blank and Farwell"
+    - motion: "Conditional offers of employment to Abigail Blank and Michael Farwell"
       result: "in favor (unanimous)"
-    - motion: "Appoint Bill Cooper as MHA tenant representative"
+    - motion: "Appoint Bill Cooper as Housing Authority tenant representative"
       result: "in favor (unanimous)"
-    - motion: "Deny curb cut appeal at 87 Jersey Street"
+    - motion: "Deny curb cut appeal at 87 Jersey Street as presented"
       result: "in favor (unanimous)"
     - motion: "Approve meeting minutes"
       result: "in favor (unanimous)"
-    - motion: "Approve HarborFest event permit"
+    - motion: "Approve HarborFest use of State Street Landing"
       result: "in favor (unanimous)"
     - motion: "Amend police station painting contract by $4,000"
       result: "in favor (unanimous)"
-    - motion: "Extend road materials contract with DNR General Construction"
+    - motion: "Extend tack coat paving contract third year"
       result: "in favor (unanimous)"
-    - motion: "Approve Girl Scout bridging ceremony with fee waiver"
+    - motion: "Approve Girl Scout bridging event at Abbott Hall with fee waiver"
       result: "in favor (unanimous)"
     - motion: "Approve one-day liquor license for Marblehead Arts Association"
       result: "in favor (unanimous)"
-    - motion: "Approve early voting hours"
+    - motion: "Approve early voting hours for September 2022 primary"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: permits-zoning
-    topic_confidence: 0.85
+    topic_confidence: 0.82
     start_seconds: 1
     end_seconds: 2287
     featured: true
-    headline: "MBTA bus stop ADA upgrade triggers public hearing on removal of two cherry trees"
-    dek: "The board continued the hearing to August 15 after questions arose about whether pruning the farther tree could satisfy both ADA and safety requirements without full removal."
+    headline: "Board continues MBTA hearing on removing two Pleasant Street cherry trees for ADA bus stop"
+    dek: "MBTA and WSP presented a plan to remove two flowering cherry trees to create an ADA-compliant bus stop landing area; the board continued the hearing to August 15 after questions about whether one tree could be retained through pruning."
     summary: |
-      WSP USA representatives Katie Moulton and MBTA project manager Bindu presented a proposal to remove two flowering cherry trees (21.25-inch and 19-inch diameter) on Pleasant Street at the Smith Street intersection to enable an ADA-compliant bus stop improvement. The MBTA is investing approximately $150,000 in design and construction at this location.
+      WSP project manager Katie Moulton and MBTA project manager Bindu presented plans for bus stop ADA improvements at the Pleasant Street/Smith Street intersection, part of approximately $150,000 in MBTA-funded work. The existing bus stop is only 15 feet long and the bus partially blocks the Smith Street intersection; a minimum 50-foot stop is required for a 40-foot bus.
       
-      The existing bus stop is only 15 feet long and partially blocks the Smith Street intersection; the minimum required length is 50 feet for a 40-foot bus. Improvements include four new ADA-compliant curb ramps, elimination of the grass strip between curb and sidewalk, and new concrete surfacing to allow wheelchair egress from both bus doors.
+      Two flowering cherry trees — one approximately 21.25 inches and one approximately 19 inches in diameter — were identified for removal to allow the bus stop to be repositioned closer to the signalized intersection (at the town's request, due to safety concerns about an unsignalized mid-block crossing). The trees have low-hanging branches that do not provide adequate pedestrian head clearance.
       
-      A nearby resident, Teresa Charlton of 46 Smith Street, opposed removal of the second (farther) tree, which she said was planted 22 years ago at her own expense. She argued the first tree could potentially be removed, but the second should be pruned rather than removed.
+      A nearby resident, Teresa Charlton of 46 Smith Street, testified in opposition, arguing the first tree needs pruning not removal and that the second tree (planted by her family ~22 years ago) is not within the bus stop footprint and should be retained.
       
-      Town arborist John Fobert testified that the farther cherry tree could safely be reduced by up to one third and espaliered on one side, and that the root zone would likely survive if the concrete work did not encroach on it. WSP indicated the bus stop could be positioned to avoid impacting that tree's roots while still meeting the 50-foot minimum, but expressed uncertainty about what aggressive upward pruning would do to the tree's health.
+      Town arborist John Fobert stated that the farther cherry tree could be safely reduced by up to one-third and espaliered to achieve the required 8-foot head clearance without significant harm, as long as the root zone is not disturbed.
       
-      Board members questioned why the bus stop could not remain in the MBTA's original proposed location (farther from the intersection), which would avoid both trees. WSP explained the town (via engineer Charles Quigley) had requested the stop remain near the signalized intersection to prevent unsafe mid-block crossings. A board member noted there is nothing across the street to cross to, and the intersection itself is difficult for buses to pull over.
-      
-      The board voted unanimously to continue the hearing to August 15, 2022, directing staff to seek additional information and have the arborist assess whether espaliating the second tree is feasible.
-    key_speakers: ["Katie Moulton (WSP USA, project manager)", "Bindu (MBTA, project manager)", "Teresa Charlton (resident, 46 Smith Street)", "John Fobert (town arborist, 5 Crown Way)"]
-  - topic: labor-personnel
+      Board members questioned whether the original MBTA proposal — locating the stop beyond both trees where the street is wider — might actually be safer given the complexity of the intersection. The board continued the hearing to August 15, 2022 to allow further coordination with town engineer Charles Quigley and the arborist.
+    key_speakers: ["Katie Moulton (WSP project manager)", "Bindu (MBTA project manager)", "Teresa Charlton (resident, 46 Smith Street)", "John Fobert (town arborist, 5 Crown Way)"]
+  - topic: public-safety
     topic_confidence: 0.97
     start_seconds: 2334
     end_seconds: 2619
-    headline: "Board approves conditional police officer offers to Abigail Blank and Michael Farwell"
-    dek: "The two hires fill a retirement vacancy from June and one previously budgeted open slot, bringing the department to 32 officers."
+    headline: "Board approves conditional job offers to two new permanent full-time police officers"
+    dek: "The police chief requested and received unanimous approval for conditional offers of employment to Abigail Blank and Michael Farwell, filling one retirement vacancy and one budgeted open position."
     summary: |
-      The police chief requested conditional offers of employment for two permanent full-time police officers:
+      The police chief presented two candidates for permanent full-time police officer positions:
       
-      - **Abigail Blank** — lifelong Marblehead resident, Marblehead High School class of 2014, U.S. Navy veteran (2014–2019), B.S. from Salem State University (2021), also a personal trainer.
-      - **Michael Farwell** — Marblehead resident, Lynn Bvoke High School class of 2011, career in private security services currently in a supervisory role protecting banks.
+      - **Abigail Blank** — lifelong Marblehead resident, MHS Class of 2014, U.S. Navy veteran (2014–2019), B.S. from Salem State University Class of 2021.
+      - **Michael Farwell** — Marblehead resident, Lynn Vocational High School Class of 2011, background in private security including a current supervisory role protecting banks.
       
-      Offers are conditional on passing the Commonwealth of Massachusetts Physical Abilities Test, a complete physical examination, and a psychological examination. Both candidates completed federal background checks and interviews. The board voted unanimously to approve.
-    key_speakers: ["Police Chief (name not audible)", "Abigail Blank (candidate)", "Michael Farwell (candidate)"]
+      Federal background checks and interviews were completed on both candidates. The offers are conditional on passing the Commonwealth of Massachusetts Physical Abilities Test, a complete physical examination, and a psychological examination by physicians of the town's choosing, plus completion of the Police Academy. The positions fill a June retirement and one previously open budgeted slot, bringing the department to 32 officers.
+    key_speakers: ["Police Chief (unnamed in transcript)", "Abigail Blank (candidate)", "Michael Farwell (candidate)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.88
     start_seconds: 2631
     end_seconds: 3780
-    headline: "Bill Cooper appointed tenant representative to Marblehead Housing Authority through June 2027"
-    dek: "Cooper, a retired facilities professional and longtime Marblehead resident, was appointed unanimously and outlined priorities including preventive maintenance, fire safety drills, and forming a tenant organization."
+    headline: "Board appoints Bill Cooper as Marblehead Housing Authority tenant representative"
+    dek: "Following an interview, the board unanimously appointed Bill Cooper, a recently retired longtime Marblehead resident, to a five-year term as tenant representative on the MHA board through June 2027."
     summary: |
-      The board interviewed and appointed Bill Cooper as the tenant representative on the Marblehead Housing Authority (MHA) for a five-year term expiring June 2027. Cooper described himself as a retired facilities and maintenance professional with roughly 50 years of experience, including time at the Tower School.
+      Bill Cooper was interviewed for the tenant representative seat on the Marblehead Housing Authority, a position he sought after retiring three weeks prior. Cooper cited unaddressed health, safety, and maintenance issues at MHA properties, including inadequate lighting, insufficient maintenance staffing (5 staff for 307 units), and the need for fire evacuation drills.
       
-      He identified the following priorities:
-      - Preventive maintenance and addressing deferred repairs (e.g., broken outdoor lighting, inoperable laundry machines)
-      - Fire safety — noted no fire drills have been conducted in years at the elderly and family housing units
-      - Forming a formal tenant organization to improve engagement
-      - Exploring low-cost labor options such as Essex County Sheriff's work crews for exterior painting
-      - Improving quality-of-life details (e.g., raising washer pedestals for elderly residents)
+      He outlined priorities including:
+      - Forming a tenant organization
+      - Improving preventive maintenance
+      - Engaging town departments (DPW, fire) and potentially the Essex County Sheriff's work program for exterior maintenance
+      - Replacing failed outdoor photo-cell lighting
+      - Improving laundry room accessibility for elderly residents
       
-      He acknowledged the MHA is largely under state oversight, with one board member appointed by the Commonwealth and three elected by the town. Board members expressed enthusiasm for his advocacy energy while noting the importance of collaborative work within the state oversight structure. Cooper agreed to be sworn in before attending his first MHA meeting.
-    key_speakers: ["Bill Cooper (appointee, MHA tenant representative)"]
+      Board members expressed general support while noting the importance of working collaboratively with the state-appointed board member and within the MHA governance structure. Cooper was appointed unanimously to a term expiring June 2027.
+    key_speakers: ["Bill Cooper (appointee)"]
   - topic: permits-zoning
-    topic_confidence: 0.88
+    topic_confidence: 0.9
     start_seconds: 3792
-    end_seconds: 4427
+    end_seconds: 4455
     headline: "Board denies curb cut appeal at 87 Jersey Street; directs applicant to work with DPW on alternatives"
-    dek: "The proposed second curb cut would eliminate on-street parking, which town bylaws (§255-14) prohibit, and the driveway extension design extended beyond the width of the house."
+    dek: "The board denied a proposed second curb cut at 87 Jersey Street because the design as submitted would eliminate on-street parking, which is prohibited under town bylaws, and directed the homeowner to develop a compliant alternative with the DPW director."
     summary: |
-      A homeowner at 87 Jersey Street appealed the highway department's denial of a permit for a new curb cut, seeking to reconfigure the driveway approach for safety reasons. The property is located near Village Middle School, where traffic is heavy during school hours and the driveway grade makes maneuvering difficult.
+      A homeowner at 87 Jersey Street (across from Village/Middle School) appealed the DPW's denial of a permit for a new curb cut and expanded driveway. The homeowner described safety concerns about backing out during school hours with children and traffic present.
       
-      The board reviewed town bylaws §255-13 and §255-14. Members concluded:
-      1. **§255-14** prohibits any curb cut that reduces on-street parking — a firm requirement.
-      2. The proposed design extended the driveway beyond the edges of the house, which §255-13(G) may allow at board discretion, but only if parking is not reduced.
+      The board reviewed the relevant bylaws:
+      - **§255-13(G)** — allows discretionary approval of curb cuts within certain parameters
+      - **§255-14** — prohibits any reduction in on-street parking as a result of a new curb cut
       
-      The board voted unanimously to deny the appeal as presented and directed the applicant to work with the DPW director on alternative designs that improve safety without eliminating parking or requiring a second curb cut.
-    key_speakers: ["Resident/applicant (87 Jersey Street, name not captured)"]
+      The proposed design would eliminate on-street parking and would extend the driveway beyond the footprint of the house, both of which are problematic under the bylaws. The board denied the application as presented and recommended the homeowner work with the DPW director to develop a design that improves safety without reducing parking or violating §255-13.
+    key_speakers: ["Resident/homeowner (unnamed, 87 Jersey Street)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.95
+    topic_confidence: 0.92
     start_seconds: 4455
-    end_seconds: 5100
-    headline: "Board approves minutes, HarborFest, painting contract amendment, road materials extension, Girl Scout event, and liquor license"
-    dek: "Six routine items were approved unanimously in a consent-style block."
+    end_seconds: 5029
+    headline: "Board approves minutes, HarborFest, painting contract, paving contract, Girl Scout event, and arts liquor license"
+    dek: "The board moved through six routine consent-type items unanimously, covering meeting minutes, two event permits, two contract actions, and a one-day liquor license."
     summary: |
-      The board approved the following items unanimously:
+      Items approved in sequence:
       
       | Item | Detail |
       |---|---|
       | Meeting minutes | June 22, June 30, and July 13, 2022 |
-      | HarborFest 2022 | State Street Landing parking lot, Sunday August 28, 10 a.m.–close; applicant Melody Current / Harbor Moor; subject to police, harbormaster, and insurance requirements |
-      | Police station painting contract amendment | Increase of $4,000 to existing contract with John's Florist and Cone, Peabody, MA; within existing project budget |
-      | Road materials contract extension | Third-year renewal with DNR General Construction, Melrose, MA for furnishing/delivering/applying bituminous concrete base material |
-      | Girl Scout bridging ceremony | Arbor, Sunday September 18, 2022, 5–7 p.m.; Girl Scout Service Unit 396; fee waived |
-      | One-day liquor license | Marblehead Arts Association (James Murphy), King Hooper Mansion, 8 Hooper Street, Thursday July 28, 2022; alcohol purchased from Cappy's Importing |
-  - topic: admin-housekeeping
-    topic_confidence: 0.9
-    start_seconds: 4981
-    end_seconds: 5100
-    headline: "Board approves early voting hours for September 2022 state primary"
-    dek: "Early voting is scheduled Monday August 29 through Friday September 2, 2022 at the town clerk's office."
+      | HarborFest 2022 | Melody Current / Harbor More granted use of State Street Landing parking lot, Sunday August 28, 2022, subject to police, harbormaster, insurance, and waterfront access requirements |
+      | Police station painting change order | Contract with John's Painting (Peabody) increased by $4,000 to add stucco painting; within existing project budget |
+      | Tack coat paving contract extension | Third-year extension with DNR General Construction (Melrose) for furnishing and applying base course paving materials |
+      | Girl Scout bridging event | Marblehead Girl Scout Service Unit #396 granted use of Abbott Hall, Sunday September 18, 2022, 5–7 pm; fee waived |
+      | One-day liquor license | Marblehead Arts Association (James Murphy applicant), Thursday July 28, 2022, King-Hooper Mansion, 8 Hooper Street; alcohol to be purchased from Cappy's Importing |
+  - topic: elections-procedural
+    topic_confidence: 0.97
+    start_seconds: 5029
+    end_seconds: 5064
+    headline: "Board approves early voting schedule for September 2022 state primary"
+    dek: "The board unanimously approved early voting hours submitted by the town clerk for the September 2022 state primary, spanning August 29 through September 2."
     summary: |
-      On request from the town clerk, the board approved the following early voting schedule for the Massachusetts state primary:
+      Early voting hours approved per Massachusetts election law:
       
       | Date | Hours |
       |---|---|
-      | Monday, August 29 | 8:30 a.m. – 4:30 p.m. |
-      | Tuesday, August 30 | 8:30 a.m. – 5:30 p.m. (approx.) |
-      | Wednesday, August 31 | 8:30 a.m. – 5:30 p.m. |
-      | Thursday, September 1 | 8:30 a.m. – 4:30 p.m. |
-      | Friday, September 2 | 8:30 a.m. – 12:30 p.m. |
+      | Monday, August 29, 2022 | 8:30 am – 4:30 pm |
+      | Tuesday, August 30, 2022 | 8:30 am – 5:30 pm (approximate per ASR) |
+      | Wednesday, August 31, 2022 | 8:30 am – 5:30 pm |
+      | Thursday, September 1, 2022 | 8:30 am – 4:30 pm |
+      | Friday, September 2, 2022 | 8:30 am – 12:30 pm |
       
-      The item was added to the agenda on short notice due to the statutory deadline.
+      The item was added to the agenda late due to the timing of the town clerk's communication but required action before the board's next regular meeting.
   - topic: public-comment
-    topic_confidence: 0.82
-    start_seconds: 5101
+    topic_confidence: 0.85
+    start_seconds: 5064
     end_seconds: 5455
-    headline: "Marblehead News Group presents as nonprofit local news successor to the Marblehead Reporter"
-    dek: "Representatives introduced the 501(c)(3) organization, which launched at marbleheadnews.org with familiar local journalists and plans for a free print edition."
+    headline: "Marblehead News Group representatives present new nonprofit local news organization to board"
+    dek: "Representatives of the newly formed Marblehead News Group, a 501(c)(3) nonprofit, introduced their online and planned print publication to the board, citing the departure of the Marblehead Reporter from local coverage."
     summary: |
-      A representative of the Marblehead News Group, identified as Sarah (last name not captured), presented the new nonprofit news organization to the board. Key points:
+      A spokesperson for Marblehead News Group described the organization's mission: to provide objective, community-focused local journalism governed by a Marblehead-based board of directors rather than out-of-town corporations.
       
-      - **Mission:** Independent, community-governed, nonprofit local news for Marblehead
-      - **Format:** Online at marbleheadnews.org; Facebook, Twitter, Instagram; planned free print edition
-      - **Governance:** 501(c)(3) governed by a Marblehead-based board of directors, not an outside corporation
-      - **Key personnel:** Doug Doult (full-time editor), Chris Olson (former Marblehead Reporter editor, consulting editor), Pam Blender (lead freelance writer)
-      - **Board members** include a former AP New England bureau chief and Virginia Buckingham (former CEO of Massport, former Chief of Staff to two Massachusetts governors)
-      - **Funding:** Advertising, grants, and donations; eligible for nonprofit funding sources
+      Key details shared:
+      - **Platform:** Currently online at marbleheadnews.org, Facebook, Twitter, and Instagram; a free print edition is planned for broad distribution.
+      - **Nonprofit status:** Officially recognized as a 501(c)(3), enabling grant and donation funding in addition to advertising.
+      - **Journalists:** Doug Whynott (full-time editor), Chris Olsen (consulting editor, former Marblehead Reporter editor), and Lyn Bender (lead freelance writer).
+      - **Board:** Includes a former AP New England bureau chief and Virginia Buckingham, former CEO of Massport and former Chief of Staff to two Massachusetts Governors.
       
-      Board members expressed strong support and praised the initiative as a democratic public service.
-    key_speakers: ["Sarah (Marblehead News Group representative, last name not captured)"]
+      Board members expressed strong personal support for the initiative and encouraged residents to consider donating to the nonprofit.
+    key_speakers: ["Jessica Barnett (Marblehead News, presenter)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.88
-    start_seconds: 5511
+    topic_confidence: 0.8
+    start_seconds: 5475
     end_seconds: 6470
-    headline: "Town Administrator and Select Board chair outline FY2023 strategic budget planning process"
-    dek: "The board is building on its GFOA award-winning FY2022 strategic budget document and aims to start the FY2023 cycle earlier to spread the workload across departments."
+    headline: "Town administrator outlines FY2023 strategic budget planning process and timeline for department heads"
+    dek: "The chair and town administrator described plans to use the prior year's GFOA-award-winning strategic budget document as the foundation for FY2023 planning, with department heads directed to begin drafting accomplishment sections early to spread out the workload."
     summary: |
-      The Select Board chair and Town Administrator discussed the approach to the upcoming FY2023 strategic budget document, which follows the GFOA (Government Finance Officers Association) format used for FY2022 — the town's first submission, which received a GFOA award.
+      The chair highlighted the FY2022 strategic budget document — which received a Government Finance Officers Association (GFOA) presentation award — as the foundation for FY2023 planning. Board members were directed to review the select board section (pages 49–69) covering mission, org chart, accomplishments, goals, and budget figures.
       
-      Key elements of the process:
-      - Department heads have been asked to begin drafting accomplishment sections now, using last year's document as a template, to front-load work before the formal deadline crunch
-      - A department-head meeting included a one-hour discussion on distinguishing goals (outcomes) from tasks (activities), to improve the clarity of each department's submissions
-      - The Town Administrator is building internal tools to manage information flow and improve the quality of the public presentation
-      - The chair asked board members to review the Select Board section of the FY2022 document (pages 49–69) and submit input on goals for FY2023
-      - A board member asked how elected boards (Parks, Cemetery, etc.) would be integrated; the Town Administrator confirmed department staff report to those boards and will feed their budget information into the consolidated document
+      The town administrator described process improvements underway:
+      - An all-department-head meeting had already been held to kick off the cycle.
+      - Department heads were asked to begin drafting prior-year accomplishment sections immediately from last year's document to front-load the work.
+      - Emphasis was placed on distinguishing goals (outcomes) from tasks (means), using examples to clarify the difference.
+      - Internal tools are being built to manage information more efficiently.
+      - The administrator noted the town does not currently have a finance director, which adds complexity.
       
-      The chair noted the town's free cash is declining and framed the rigorous budget process as important to presenting a credible case for any resource needs going forward.
-    key_speakers: ["Select Board Chair", "Town Administrator"]
+      Board members asked about coordination with other elected boards (Recreation, Cemetery, etc.); the administrator confirmed that departmental staff reporting to those boards are included in the process, with the expectation that staff communicate with their respective boards.
+    key_speakers: ["Town Administrator (unnamed in transcript)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -11,20 +11,21 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "School committee votes 5-0 to name Brown School Organic Garden for Catherine Martin"
-  summary: "The Marblehead School Committee voted unanimously to name and dedicate the Brown School Organic Garden to Catherine Martin, a longtime volunteer who helped develop the garden curriculum. The bargaining subcommittee presented a public update on contract negotiations with the Marblehead Education Association, noting that the MEA's wage proposals across all units are unaffordable as presented, with the Unit A (teachers/nurses) proposal alone estimated to cost approximately $9.2 million additionally by the end of year three. The committee also approved $581,728.55 in bills and voted to move meeting start times to 6:00 PM beginning October 10."
+  headline: "School committee votes 5-0 to name Brown School garden for Catherine Martin; teacher contract gap detailed"
+  summary: "The Marblehead School Committee met September 19, 2024, approving a dedication of the Brown School Organic Garden to Catherine Martin and hearing a detailed briefing on stalled MEA contract negotiations. The bargaining subcommittee disclosed that the MEA's wage proposals — ranging from 39.5% to 171% increases across units — would require either a 14% tax override or the layoff of approximately 42% of staff. The committee also received a corrective-action update on special education tiered focused monitoring, noting 28 of 34 standards fully implemented with six partially implemented."
   decisions:
     - "Approved schedule of bills totaling $581,728.55"
-    - "Approved minutes of June 20, 2024 school committee meeting"
-    - "Approved naming the Brown School Organic Garden for Catherine Martin"
-    - "Approved moving meeting start time to 6:00 PM effective October 10"
+    - "Approved minutes of June 20, 2024 school committee meeting (4-0, one abstention)"
+    - "Approved naming and dedication of the Brown School Organic Garden to Catherine Martin (5-0)"
+    - "Approved moving school committee meeting start time to 6:00 PM effective October 10"
   votes:
-    - motion: "Approve schedule of bills ($581,728.55)"
+    - motion: "Approve schedule of bills totaling $581,728.55"
       result: "in favor (unanimous)"
-    - motion: "Approve minutes of June 20, 2024 meeting"
+    - motion: "Approve minutes of June 20, 2024 school committee meeting"
       result: "in favor (4 to 0, one abstention)"
-    - motion: "Name and dedicate Brown School Organic Garden to Catherine Martin"
+    - motion: "Name and dedicate the Brown School Organic Garden to Catherine Martin"
       result: "in favor (unanimous)"
     - motion: "Adjourn"
       result: "in favor (unanimous)"
@@ -33,163 +34,161 @@ topic_segments:
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 0
-    end_seconds: 167
-    headline: "School committee opens with Pledge of Allegiance, commendations for fall sports"
-    dek: "Committee members commended fall sports teams including an undefeated cross-country squad and the opening of the new turf field."
-    summary: "The meeting opened at 7:18 PM following executive session. Committee members offered commendations for fall sports: girls volleyball (5-2, best in NEC), boys soccer (5-2), boys cross-country (3-0 undefeated), and golf (7-2). The first home game on the new turf field was noted for Friday. Twelve team captains were attending the NEC Leadership Conference. A committee member also commended those involved in the new turf field, calling it 'phenomenal.'"
-    key_speakers: ["Committee Chair (unidentified)", "Superintendent (John)"]
+    end_seconds: 333
+    headline: "Committee opens with commendations for fall sports and new turf field"
+    dek: "Athletic records cited for volleyball, soccer, cross country, and golf; new turf field praised ahead of first home game."
+    summary: "The chair opened the public portion at 7:18 PM. Commendations were offered for fall sports — girls volleyball and boys soccer both at 5-2, boys cross country undefeated at 3-0, golf team at 7-2. The new high school turf field was highlighted ahead of its first home game Friday, and 12 captains were noted as attending the NEC Leadership Conference."
+    key_speakers: ["Superintendent (John Robilotta)", "School Committee Chair"]
   - topic: public-comment
-    topic_confidence: 0.97
+    topic_confidence: 0.98
     start_seconds: 167
     end_seconds: 333
-    headline: "Resident urges policy revision to allow memorials for Brook Yano and Catherine Martin"
-    dek: "Sally Shery of 80 Garfield Street asked the committee to revise its memorial policy so teachers could honor two educators."
-    summary: "Sally Shery, 80 Garfield Street, spoke to honor Catherine Martin for her service to schools and to remember Brooke Yano, a Glover educator who passed away in 2022. She stated that Glover teachers had requested memorials for Ms. Yano but were told such memorials violate school committee policy. She urged the committee to revise Policy FFA to allow memorials, promising that teachers would resubmit requests for both educators if the policy were updated."
+    headline: "Resident urges policy revision to allow memorials for deceased educators"
+    dek: "Sally Shery of 80 Garfield Street asked the committee to revise memorial policy FFA to honor both Catherine Martin and Brooke Yano."
+    summary: "Sally Shery addressed the committee, honoring Catherine Martin for her service and mourning the 2022 loss of Glover teacher Brooke Yano after more than 15 years of service. She noted that requests for memorials — a library, plaque, or bench — had been told they conflicted with school committee policy, and urged the committee to revise that policy so memorials could be established for both educators."
     key_speakers: ["Sally Shery (resident, 80 Garfield Street)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 333
     end_seconds: 838
-    headline: "Student rep and superintendent report on open house, composting, Wayfinder SEL launch, and 18 open positions"
-    dek: "Superintendent reported 18 open staff positions with four candidates near onboarding, and announced a community survey favored a 6:00 PM meeting start time by a wide margin."
+    headline: "Student rep raises parking shortage and contract uncertainty concerns; superintendent gives district update"
+    dek: "Student representative Ella Benedetto flagged a senior parking shortage and student anxiety over the teachers' contract situation; Superintendent Robilotta reported on composting, transportation, Wayfinder SEL launch, and 18 open positions."
     summary: |
-      Student representative Ella Benedetto reported a successful open house, strong fall sports results, concerns about senior parking, and student anxiety about the teacher contract situation.
+      Student representative Ella Benedetto reported that the 242-student senior class has created a parking shortage, with lots filling by 7:35 AM. She also conveyed that students are worried about teachers working without a contract and possible strike action.
       
-      Superintendent reported:
-      - Composting launched at all schools in partnership with Sustainable Marblehead, with some logistics still being worked through
-      - Transportation issues in the first two weeks have largely been resolved
-      - Wayfinder SEL curriculum launched; the program is used by Cambridge, Burlington, Brookline, Boston Public Schools, and many others
-      - 18 open staff positions remain; 4 candidates are in final onboarding
-      - A community survey on meeting start times drew 561 responses: 188 preferred 6:00 PM, 60 preferred 6:30 PM, 161 preferred 7:00 PM, and 157 had no preference
-    key_speakers: ["Ella Benedetto (student representative)", "Superintendent John (last name unclear from transcript)"]
+      Superintendent Robilotta reported composting is underway at all schools in partnership with the town and Sustainable Marblehead. Transportation was bumpy the first two weeks but has improved. The Wayfinder SEL curriculum officially launched; it is used by Cambridge, Burlington, Brookline, Boston Public Schools, and many others. Eighteen positions remain open, with four staff currently in onboarding.
+    key_speakers: ["Ella Benedetto (student representative)", "Superintendent John Robilotta"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1209
+    end_seconds: 1350
+    headline: "Committee approves bills of $581,728.55 and June 20 minutes 4-0"
+    dek: "Routine financial approvals completed by roll-call vote; Brian Oda abstained from minutes vote as he was absent that meeting."
+    summary: "The committee voted 5-0 to approve the schedule of bills totaling $581,728.55. Minutes of the June 20, 2024 school committee meeting were approved 4-0 with Brian Oda abstaining."
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 1350
+    end_seconds: 1476
+    headline: "Committee agrees to move meeting start time to 6:00 PM beginning October 10"
+    dek: "A community survey of 561 respondents favored 6:00 PM by the largest margin; the committee reached consensus without a formal vote."
+    summary: "Following a survey sent to school families and staff — 561 respondents — 188 chose 6:00 PM, 60 chose 6:30 PM, 161 chose to keep 7:00 PM, and 157 had no preference. The committee reached consensus to shift to 6:00 PM starting at the October 10 meeting, with no pilot period required."
+    key_speakers: ["Superintendent John Robilotta", "School Committee Chair"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
-    start_seconds: 838
-    end_seconds: 1350
-    headline: "Committee approves $581,728 in bills and June 20 minutes; approves 6 PM meeting start"
-    dek: "Routine approvals were followed by a consensus decision to move meeting start times to 6:00 PM effective October 10."
-    summary: |
-      The committee voted 5-0 to approve the schedule of bills totaling $581,728.55, and 4-0 (Brian Ota abstaining) to approve the June 20, 2024 meeting minutes.
-      
-      Following the superintendent's survey report, the committee reached consensus — without a formal vote — to move the regular meeting start time from 7:00 PM to 6:00 PM, effective at the October 10 meeting.
-    key_speakers: ["Committee Chair (unidentified)", "Allison Taylor", "Sarah Fox", "Brian Ota", "Al Williams", "Jen Schaffner"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.82
-    start_seconds: 1350
-    end_seconds: 2171
+    start_seconds: 1476
+    end_seconds: 2217
     headline: "Committee votes 5-0 to name Brown School Organic Garden for Catherine Martin"
-    dek: "Sarah Fox brought the dedication request, citing Martin's decade-long volunteer work designing and maintaining the garden curriculum."
+    dek: "Member Sarah Fox presented the request; policy FFA on memorials was reviewed and found to support the dedication."
     summary: |
-      Committee member Sarah Fox presented a request to name and dedicate the Brown School Organic Garden to Catherine Martin, a volunteer educator who helped design the garden program beginning around 2012-2013. Fox noted the garden helped bring the school into compliance with state science frameworks.
+      School committee member Sarah Fox described Catherine Martin's founding of the Brown School Organic Garden around 2012-2013, which helped bring the school into compliance with state science frameworks and later inspired garden programs district-wide. Fox proposed a simple, playful pottery-style sign matching existing garden markers reading something like 'Katie's Garden' with a phrase about hope.
       
-      Discussion also addressed a separate request by Glover teachers to memorialize educator Brooke Yano (who passed in 2022). Committee members noted they could find no record of that request ever reaching the committee for a vote, and encouraged teachers to resubmit it through proper channels (principal → superintendent → school committee).
+      The committee also discussed memorial policy FFA (updated June 23, 2022), acknowledging some contradictory language about permanent memorials, and encouraged the Glover teachers to formally resubmit a memorial request for Brooke Yano through the proper principal-to-superintendent channel.
       
-      The committee also noted some contradictory language in Policy FFA (Memorials), revised June 23, 2022, and suggested it may need to be cleaned up.
-      
-      The committee voted unanimously 5-0 to name and dedicate the Brown School Organic Garden to Catherine Martin. The planned recognition would be a pottery-style sign consistent with existing garden signage rather than a formal plaque.
-    key_speakers: ["Sarah Fox (committee member)", "Al Williams (committee member)", "Brian Ota (committee member)", "Allison Taylor (committee chair)"]
+      The vote to name and dedicate the Brown School Organic Garden to Catherine Martin passed 5-0.
+    key_speakers: ["Sarah Fox (school committee member)", "Al Williams (school committee member)", "Brian Ota (school committee member)"]
   - topic: school-budget
-    topic_confidence: 0.88
-    start_seconds: 2171
-    end_seconds: 4747
-    headline: "Special ed administrators present corrective action plan for state tiered-focus monitoring findings"
-    dek: "DESE found 28 of 34 special education standards implemented and 6 partially implemented; new tracking and compliance systems are now in place."
+    topic_confidence: 0.95
+    start_seconds: 2263
+    end_seconds: 4768
+    headline: "Special ed leaders present corrective action plan; 28 of 34 DESE standards fully implemented"
+    dek: "Assistant Superintendent Lisa Marie Elito and Assistant Director Victoria Ryan detailed six partially-implemented standards and new tracking, communication, and monitoring systems put in place since July."
     summary: |
-      Assistant Superintendent for Student Services Lisa Marie Elito and Assistant Director Victoria Ryan presented the district's corrective action plan in response to a state Tiered Focus Monitoring (TFM) review.
+      Assistant Superintendent of Student Services Lisa Marie Elito and Assistant Director Victoria Ryan presented the district's corrective action plan (CAP) following a tiered focused monitoring (TFM) review by DESE. Marblehead fully implemented 28 of 34 standards and partially implemented 6; none were rated 'not implemented.'
       
-      **Summary of findings:**
-      | Rating | Count |
-      |--------|-------|
-      | Implemented | 28 of 34 standards |
-      | Partially implemented | 6 of 34 standards |
-      | Not implemented | 0 |
+      **Areas of strength identified:**
+      - Transition services starting at age 14
+      - Least restrictive environment
+      - Parental consent processes
+      - Team composition and attendance
+      - Progress notes and multilingual communication
+      - Assistive technology supports
       
-      **Areas rated partially implemented:**
-      - SE 3: Determining specific learning disabilities (SLD)
-      - SE 7: Age of majority documentation (students turning 18)
-      - SE 12: Three-year reevaluation timelines
-      - SE 14: Annual review timelines and IEP revision procedures
-      - SE 18B: Parents receiving documentation at end of team meetings
-      - SE 22: Tracking and notification of missed services
+      **Six partially implemented standards:**
+      
+      | Standard | Issue |
+      |---|---|
+      | SE 3 | Specific learning disability (SLD) determination procedures |
+      | SE 7 | Age of majority documentation (17-year-olds) |
+      | SE 12 | Three-year reevaluation timelines |
+      | SE 14 | Annual review timelines and IEP revision process |
+      | SE 18B | End-of-meeting documentation provided to parents |
+      | SE 22 | Tracking and notification of missed services |
       
       **Corrective actions underway:**
-      - New district-wide IEP master tracker with color-coded deadlines
-      - Weekly Friday training sessions (8–10:30 AM) for all team chairs
-      - Twice-weekly after-school special ed staff meetings at each building
-      - Google Form for logging missed services, auto-populating to a shared spreadsheet
-      - End-of-meeting summary document for parents after every team meeting
+      - Master tracker built for each building tracking every IEP timeline
+      - Weekly Friday training sessions (8–10:30 AM) for team chairs
+      - Twice-weekly after-school special ed meetings building-by-building
+      - Google Form for staff to log missed services, auto-populating a shared spreadsheet
+      - End-of-meeting summary document provided to parents at every team meeting
       - Post-meeting parent feedback link sent after every team meeting
-      - DESE liaison has extended the October 18 corrective action deadline to November
+      - Letters issued to parents when compensatory services are owed
+      - DESE liaison extended the October 18 corrective action deadline to November
       
-      The committee also discussed the timeline of the independent special education audit contracted with Academic Discoveries. The completion date has moved from December to approximately February, with the scope unchanged. The firm is currently conducting staff and administrator interviews and will hold focus groups with parents and community members.
-      
-      Committee members commended Elito and Ryan for identifying and beginning to address compliance gaps — including the absence of any prior service-tracking system — shortly after joining the district.
-    key_speakers: ["Lisa Marie Elito (Assistant Superintendent, Student Services)", "Victoria Ryan (Assistant Director, Student Services)", "Superintendent John", "Sarah Fox (committee member)", "Allison Taylor (committee chair)", "Al Williams (committee member)"]
+      The committee was informed the previously commissioned independent audit by Academic Discoveries has been restructured: instead of reviewing outdated documents, it will evaluate the new systems. Interviews with staff are underway; focus groups and surveys are planned. The final report is now expected in February rather than December.
+    key_speakers: ["Lisa Marie Elito (Assistant Superintendent of Student Services)", "Victoria Ryan (Assistant Director of Student Services)", "Sarah Fox (school committee member)", "Brian Ota (school committee member)", "Superintendent John Robilotta"]
   - topic: labor-personnel
     topic_confidence: 0.99
-    start_seconds: 4792
+    start_seconds: 4839
     end_seconds: 6120
     featured: true
-    headline: "Bargaining subcommittee discloses MEA wage proposals: up to 39.5% for teachers, 67% for custodians"
-    dek: "The subcommittee presented detailed cost analysis showing MEA proposals would require either a 14% tax override or layoffs of 42% of staff."
+    headline: "Bargaining subcommittee: MEA wage proposals would require 14% override or 42% staff layoffs"
+    dek: "The school committee's bargaining subcommittee disclosed for the first time the full cost of the Marblehead Education Association's wage proposals across all units."
     summary: |
-      Committee Chair Allison Taylor and member Sarah Fox, as the bargaining subcommittee (along with Town Administrator Thatcher Keer), presented a public update on negotiations with the Marblehead Education Association (MEA).
+      School Committee Chair, Sarah Fox, and Town Administrator Thatcher Keer presented a detailed public update on MEA contract negotiations. Key disclosures:
       
-      **Timeline:**
-      - December: Subcommittee initiated bargaining in writing
-      - Mid-February: MEA agreed to commence bargaining March 14
-      - June: MEA presented wage "goals"
-      - September 10: MEA confirmed goals are their formal wage proposal
+      **MEA Wage Proposals (confirmed as of September 10, 2024):**
       
-      **MEA wage proposals:**
-      | Unit | Proposed increase | Estimated cost (end of year 3) |
-      |------|------------------|--------------------------------|
-      | Unit A (teachers & nurses) | 39.5% over 3 years | ~$9,207,499 |
-      | Custodians/maintenance/drivers | 67% over 3 years | ~$1,265,000 |
+      | Unit | Proposed Increase | Estimated Cost by End of Year 3 |
+      |---|---|---|
+      | Unit A (teachers & nurses) | 39.5% over 3 years | $9,207,499 |
+      | Custodians/maintenance/bus drivers | 67% over 3 years | $1,265,000 |
       | Tutors | 28.8%–41% (year 1) | Not yet costed |
       | Paraprofessionals | 113%–171% (year 1) | Not yet costed |
       | Permanent substitutes | 31.6%–41.8% (year 1) | Not yet costed |
       
-      The subcommittee also noted MEA proposals for increases to longevity benefits and earlier eligibility.
+      The MEA also proposed increases to the longevity benefit amount and earlier eligibility.
       
-      **Financial context:**
-      Marblehead collects $3,494 per capita in taxes — the lowest among comparable towns (Wayland $6,030, Swampscott, Hingham, Andover). New growth is approximately $450,000/year vs. Andover's $1.8 million and Wayland's $808,000. Salaries represent approximately 80% of the total school budget.
+      **Fiscal context provided:**
+      - Marblehead collects $3,494 per capita in taxes — the lowest among comparison towns (Wayland, Andover, Hingham, Swampscott)
+      - New growth is approximately $450,000/year, compared to $808,000 in Wayland and $1.8M in Andover
+      - Levy growth is capped at 2.5% under Proposition 2½
+      - Salaries represent approximately 80% of the total school budget
+      - The MEA proposals would require either a **14% tax override** or the **layoff of approximately 42% of staff**
       
-      The subcommittee stated that approving the MEA's full wage proposals would require either:
-      - A **14% tax override**, or
-      - Layoffs of approximately **42% of staff**
+      **Negotiations status:**
+      - Custodians unit: Declared impasse; district requested state mediator; MEA has objected to mediation; state investigation pending
+      - Other units (Unit A, tutors, paras, permanent subs): Bargaining ongoing; next session scheduled Monday, September 23 at 7:00 PM
+      - Bargaining began March 14 after MEA indicated readiness in mid-February
+      - Original goal was contract before town meeting; then before expiration (August 31); neither achieved
       
-      **Status by unit:**
-      - Custodians: Declared impasse; subcommittee has requested a state mediator; MEA has objected to mediation; state investigation pending
-      - All other units: Negotiations ongoing; next session scheduled Monday, September 23 at 7:00 PM
-      
-      **Other negotiated items discussed:**
-      - Parental leave: Committee offering 10 calendar days paid plus personal time up to 12 weeks with no physician documentation required beyond 8 weeks
-      - Safety advisory committee: Committee has proposed establishing one, modeled on existing professional development advisory committee language
-      - Elementary recess: State requires 900 hours of learning time; lunch and recess do not count; committee is obligated to comply with state law
-      - Athletic fees: Set by the committee annually; not subject to union negotiation
-      
-      A committee member noted that some activities previously not counted toward learning time under prior administration could be counted, and that restoring a second elementary recess remains a priority.
-      
-      The committee agreed to place a discussion of additional negotiating options, including input from the district's attorney Liz Valerio, on the next meeting agenda.
-    key_speakers: ["Allison Taylor (committee chair / subcommittee member)", "Sarah Fox (committee member / subcommittee member)", "Thatcher Keer (Town Administrator / subcommittee member)", "Brian Ota (committee member)", "Al Williams (committee member)"]
+      Committee members discussed whether to hold open bargaining sessions, with the subcommittee indicating that legal counsel has strongly advised against it; the question was placed on the agenda for the next full committee meeting.
+    key_speakers: ["School Committee Chair (Jen Schaffner)", "Sarah Fox (school committee member / subcommittee)", "Thatcher Keer (Town Administrator / subcommittee)", "Al Williams (school committee member)", "Brian Ota (school committee member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 6120
-    end_seconds: 7368
-    headline: "Subcommittee and liaison updates cover safety drills, website, METCO, and chronic absenteeism"
-    dek: "Committee discussed school advisory council liaison roles, communications subcommittee plans, and a request for regular attendance data."
+    end_seconds: 7184
+    headline: "Subcommittee and liaison updates cover safety drills, communications webpage, METCO, and SAC attendance"
+    dek: "Committee discussed fire drills, ALICE plans, website editing, METCO 2.0 outreach, and school advisory committee liaison roles."
     summary: |
-      Subcommittee and liaison updates included:
+      Subcommittee updates included:
+      - **District Safety Committee**: All principals have completed at least one fire drill; ALICE plans in progress.
+      - **Communications subcommittee** (Fox and Williams): Received tutorial on webpage editing; updating and merging the school committee FAQ; plan to present concrete proposals at the next meeting.
+      - **METCO**: Superintendent Robilotta met with METCO leadership; exploring having METCO director Millie present to the committee; attending a METCO event October 4 at Foxborough.
+      - **School Advisory Committees (SACs)**: Principals indicated that school committee liaison attendance sometimes changes meeting dynamics; committee discussed how to clarify the liaison role. Two SAC meetings already posted (Veterans Middle School and Brown School).
       
-      - **Safety**: All principals have completed at least one fire drill; ALICE plans in progress
-      - **Communications subcommittee** (Al Williams and Sarah Fox): Received tutorial on editing the school committee webpage; working to merge and update the FAQ document; plan to present proposals at the next meeting
-      - **METCO**: Superintendent reported meetings with METCO headquarters; invited Millie from METCO to present at a future school committee meeting; attending a METCO event at Foxborough on October 4
-      - **School Advisory Councils (SACs)**: Some principals and community members raised concerns that school committee liaison attendance changes meeting dynamics; committee discussed the issue and agreed to continue attending as observers at public meetings
-      - **Chronic absenteeism**: A committee member requested monthly attendance updates by school; superintendent noted absenteeism data will be part of upcoming MCAS accountability release; presented data showing cumulative impact of missing as little as 10 minutes per day
-      - **Budget update**: Committee requested a year-end budget close update and early-year salary vacancy savings report, likely at the second October meeting
-      - **Town Charter Committee**: Committee agreed to meet with the charter review committee on Tuesday, October 22; Allison Taylor, Al Williams, Sarah Fox, and Jen Schaffner plan to attend
-    key_speakers: ["Al Williams (committee member)", "Sarah Fox (committee member)", "Superintendent John", "Allison Taylor (committee chair)", "Brian Ota (committee member)"]
+      The committee also discussed a request from the town charter review committee to meet with elected boards; members Schaffner, Taylor, Fox, and Williams indicated interest in attending on Tuesday, October 22.
+    key_speakers: ["Brian Ota (school committee member)", "Al Williams (school committee member)", "Sarah Fox (school committee member)", "Superintendent John Robilotta", "School Committee Chair (Jen Schaffner)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 7184
+    end_seconds: 7368
+    headline: "Committee requests budget update for next meeting; chronic absenteeism data to be tracked monthly"
+    dek: "Member Fox requested year-end close status and salary savings from vacancies; superintendent to share absenteeism data monthly."
+    summary: |
+      Sarah Fox requested a budget update for the next meeting covering FY year-end close status, items paid down with surplus, and current salary savings from open positions. The superintendent noted the business office is still completing year-end reconciliation and the update may come at the second October meeting.
+      
+      The superintendent also committed to providing monthly chronic absenteeism data by school, noting MCAS accountability data including absenteeism figures would be released soon (currently embargoed). He shared a reference chart showing cumulative learning time lost from missing as little as one day every two weeks over 13 years.
+    key_speakers: ["Sarah Fox (school committee member)", "Superintendent John Robilotta"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

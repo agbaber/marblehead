@@ -11,146 +11,160 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Adam Smith appointed to Marblehead Light Commission after 8-candidate interview process"
-  summary: "The Select Board and Light Commission held a joint meeting on September 14, 2022 to fill a vacancy on the Marblehead Municipal Light Department commission. Eight candidates were interviewed with seven standardized questions; Adam Smith received a majority of votes in a second round of balloting and was appointed. The board also approved two common victualler licenses and several routine consent items."
+  headline: "Adam Smith appointed to Marblehead Light Commission vacancy after eight-candidate interview"
+  summary: "The Select Board and Light Commission held a joint meeting to fill a vacant seat on the Light Commission, interviewing eight candidates on seven standardized questions. After two rounds of voting, Adam Smith received a majority and was appointed. The meeting also included approval of two common victualler licenses and several routine consent-agenda items."
   decisions:
-    - "Approved common victualler license for Spitfire Tacos (Ryan Harrison) at 87 Pleasant Street"
+    - "Approved common victualler license for Spitfire Tacos (Ryan Harrison, 87 Pleasant Street)"
     - "Approved common victualler license for Blue Canoe Cafe (Heather Harrison)"
-    - "Appointed Adam Smith to the Marblehead Light Commission to fill vacant seat"
-    - "Approved use of Abbott Hall for Rotary Club 26th annual Holiday Pops concert, December 10, 2022"
-    - "Approved one-day liquor license for Rotary Club Holiday Pops concert"
-    - "Approved one-day liquor license for Lutheran Church fundraiser, October 2, 2022"
-    - "Approved amendment to archives architectural services contract increasing amount by $69,100"
-    - "Approved contract award to John Clemson for Devil neighborhood historic properties survey, $35,000"
-    - "Approved use of Abbott Hall for Marblehead High School art show, May 22–June 2, 2023"
+    - "Appointed Adam Smith to the Marblehead Light Commission vacancy"
+    - "Approved use of Abbot Hall for Rotary Club Pops Concert and one-day liquor license"
+    - "Approved one-day liquor license for First Lutheran Church fundraiser"
+    - "Approved contract amendment with Smith Group for archives architectural services (increase of $69,110)"
+    - "Awarded contract to John Clemson for historic properties survey of the Denver neighborhood in the amount of $35,000"
+    - "Approved use of Abbot Hall for Marblehead High School art show (May–June 2023)"
     - "Approved reappointment of Timothy Schoffmeyer as constable"
-    - "Approved use of Abbott Hall for Congressman's veteran town hall"
-    - "Approved use of Old Town House for Marblehead Improvement Association annual meeting, October 23, 2022"
-    - "Approved use of town for Marblehead High School All-Sports Booster door-to-door canvass, October 2022"
+    - "Approved use of Abbot Hall for Congressman's Veterans Town Hall"
   votes:
     - motion: "Common victualler license for Spitfire Tacos"
       result: "in favor (unanimous)"
-    - motion: "Common victualler license for Blue Canoe Cafe"
+    - motion: "Common victualler license for Blue Canue Cafe"
       result: "in favor (unanimous)"
-    - motion: "Place all eight candidate names in nomination for Light Commission vacancy"
+    - motion: "Place all eight candidates in nomination for Light Commission vacancy"
       result: "in favor (unanimous)"
-    - motion: "Appoint Adam Smith to Marblehead Light Commission"
-      result: "in favor (majority, second round)"
-    - motion: "Rotary Club use of Abbott Hall for Holiday Pops concert"
+    - motion: "Appointment of Adam Smith to Light Commission (second round)"
+      result: "in favor (majority)"
+    - motion: "Rotary Club use of Abbot Hall and one-day liquor license"
       result: "in favor (unanimous)"
-    - motion: "One-day liquor license for Rotary Club Holiday Pops"
+    - motion: "First Lutheran Church one-day liquor license"
       result: "in favor (unanimous)"
-    - motion: "One-day liquor license for Lutheran Church fundraiser"
+    - motion: "Contract amendment with Smith Group for archives architectural services"
       result: "in favor (unanimous)"
-    - motion: "Amend archives architectural services contract by $69,100"
-      result: "in favor (unanimous)"
-    - motion: "Contract award for Devil neighborhood historic survey, $35,000"
+    - motion: "Contract award to John Clemson for historic properties survey"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: public-comment
-    topic_confidence: 0.85
+    topic_confidence: 0.9
     start_seconds: 0
     end_seconds: 137
-    headline: "Coalition member condemns antisemitic and racist graffiti at Camp Shirley"
-    dek: "A coalition representative reported police-documented incidents of antisemitic and racist graffiti at the Recon Park building near Camp Shirley."
-    summary: "A member of the town's diversity coalition opened the meeting by describing recently documented antisemitic and racist graffiti at the Camp Shirley recreation building. She called on community organizations, faith communities, and parents to actively address hatred, stating that grassroots local action is essential. The Select Board chair echoed condemnation of the incidents."
-    key_speakers: ["Jackie (Coalition representative)", "Select Board Chair"]
+    headline: "Coalition member reports antisemitic and racist graffiti at Camp Shirley"
+    dek: "A coalition member urged the full community — especially faith communities — to condemn and educate against hate-based vandalism."
+    summary: "A speaker identified as Jackie, affiliated with the town's anti-hate coalition, reported that police had documented antisemitic and racist graffiti at the Recreation park building near Camp Shirley. She called on parents, churches, synagogues, and community organizations to address the behavior, noting that Chief King is also a coalition member and that police are working to identify perpetrators. A board member echoed the statement and called on communities of faith to respond."
+    key_speakers: ["Jackie (Coalition member)", "Board Chair"]
   - topic: permits-zoning
-    topic_confidence: 0.9
+    topic_confidence: 0.92
     start_seconds: 137
     end_seconds: 308
     headline: "Board approves common victualler licenses for Spitfire Tacos and Blue Canoe Cafe"
-    dek: "Two new food-service businesses received common victualler licenses: Spitfire Tacos at 87 Pleasant Street and Blue Canoe Cafe."
-    summary: "The board approved a common victualler license for Paving Our Restaurant Group LLC d/b/a Spitfire Tacos, 87 Pleasant Street, manager Ryan Harrison, seating capacity 12, operating Saturdays to 8 p.m., subject to receipt of complete application, inspections, and fees. A second license was approved for Blue Canoe Cafe, manager Heather Harrison, seating capacity 19, operating Monday through Sunday 6:30 a.m. to 2 p.m., subject to the same conditions."
-    key_speakers: ["Ryan Harrison (applicant, Spitfire Tacos)", "Heather Harrison (applicant, Blue Canoe Cafe)"]
+    dek: "Two new food-service establishments received common victualler licenses at 87 Pleasant Street."
+    summary: "The board approved a common victualler license for Panning Our Restaurant Group LLC d/b/a Spitfire Tacos at 87 Pleasant Street, managed by Ryan Harrison, with seating capacity of 12 and Saturday hours to 8 p.m. A second license was approved for Blue Canoe Cafe, managed by Heather Harrison, with seating capacity of 19 and hours Monday through Sunday 6:30 a.m. to 2 p.m. Both approvals were subject to receipt of completed applications and applicable inspections."
+    key_speakers: ["Ryan Harrison (Spitfire Tacos applicant)", "Heather Harrison (Blue Canoe Cafe applicant)"]
   - topic: admin-housekeeping
     topic_confidence: 0.95
     start_seconds: 308
-    end_seconds: 6154
+    end_seconds: 356
+    headline: "Joint Select Board and Light Commission meeting convened to fill vacant Light Commission seat"
+    dek: "Chairman Michael Hall of the Light Commission joined the Select Board to conduct a joint appointment process required under state law when a vacancy occurs between elections."
+    summary: "The chair explained that Mass law requires a joint meeting of the Select Board and Light Commission to fill a mid-term vacancy. Eight candidates were present and would be interviewed in alphabetical order using seven standardized questions. Candidates were asked to wait outside until called and could remain after their interview."
+    key_speakers: ["Michael Hall (Light Commission Chair)", "Select Board Chair"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 356
+    end_seconds: 6122
     featured: true
-    headline: "Adam Smith appointed to Marblehead Light Commission after 8-candidate joint interview"
-    dek: "The Select Board and Light Commission jointly interviewed eight candidates and, after two rounds of voting, appointed Adam Smith to the vacant Light Commission seat."
+    headline: "Adam Smith appointed to Light Commission after two-round vote among eight candidates"
+    dek: "The joint board interviewed Peter Barnett, James Falls, Christopher Hardin, Matthew Harrington, Igor Bidan, Adam Smith, Thomas (last name unclear), and Jim (last name unclear) before selecting Smith in the second round."
     summary: |
-      Chairman Michael Hall of the Light Commission joined the Select Board for a joint meeting to fill a vacancy on the Marblehead Municipal Light Department commission. Under Massachusetts General Law Chapter 164, a vacancy between elections requires a joint appointment process.
+      Eight candidates were interviewed with seven standardized questions covering: background, the commission/general-manager division of authority under MGL c.164, compatibility of low rates with decarbonization goals, most valuable skills, continued engagement if not selected, conflicts of interest, and budgetary experience.
       
-      Eight candidates were interviewed in alphabetical order with seven standardized questions covering: self-introduction and background; interpretation of the commission/general manager role split under MGL Ch. 164; compatibility of low rates with greenhouse-gas reduction goals; most valuable skills; plans if not selected; conflicts of interest; and budgetary experience. Candidates were asked to limit responses to approximately two minutes per question and were sequestered until their own interview.
+      **Candidate highlights:**
       
-      **Candidates interviewed:**
       | Candidate | Notable background |
       |---|---|
-      | Peter Barnett | Businessman; former finance committee chair and board chair of Marblehead Charter Public School; Boston Yacht Club rear commodore |
-      | James Falls | 21st-generation Marblehead native; 26-year Navy veteran; retired 2019 |
-      | Christopher Hardin | Energy and environmental professional; worked for large energy companies; MIT energy policy background |
-      | Matthew Harrington | Marblehead native; ran commercial fitness business (~$30M pre-COVID revenue); MIT Sloan MBA (May 2022) |
-      | Igor Bidan | Software engineer/program manager; emigrated from Soviet Union; program management experience with Amazon robotics |
-      | Adam Smith | 16 years at Google; project management and digital transformation background; father of three daughters in Marblehead schools |
-      | Thomas (last name unclear from ASR) | Master electrician license ~50 years; experience in industrial/medium-voltage electrical contracting; managed ~$100M budgets |
-      | Jim (last name unclear from ASR) | Engineer; former Marblehead School Building Committee; former Salem Housing Authority treasurer |
+      | Peter Barnett | Businessman; former board chair of Marblehead Charter Public School; finance committee experience; personal electrification projects |
+      | James Falls | 21st-generation Marblehead resident; 26 years military service (Navy); retired 2019 |
+      | Christopher Hardin | ~20 years in energy and environmental sector; policy advocate then energy-company roles; MIT/Tufts graduate |
+      | Matthew Harrington | Family commercial fitness business (pre-COVID ~$30M revenue); MBA from MIT Sloan; three sons in Marblehead schools |
+      | Igor Bidan | Software engineer turned program manager; Amazon robotics program; interest in grid resilience and roadmap development |
+      | Adam Smith | 16 years at Google; project management and OKR-based planning; knowledgeable about time-of-use rates and smart meters |
+      | Thomas (last name unclear) | Master electrician license ~50 years; industrial and government experience; currently managing budgets totaling ~$100M across projects |
+      | Jim (last name unclear) | Engineering background; GE wind turbines; former treasurer of Swampscott Housing Authority; school building committee |
       
-      **First round of voting** (combined Select Board + Light Commission):
-      - Adam Smith: 4 votes
-      - Thomas: 1 vote
-      - Jim (engineer): 1 vote
-      - (Remaining candidates: 0)
+      **First-round vote:** Adam Smith received 4 votes; Thomas received 1 vote; Jim (last candidate) received 1 vote. One vote was cast for an unresolved name. The candidate with the lowest vote total (1) was eliminated per the agreed runoff procedure.
       
-      The candidate with one vote (Jim) was eliminated under a drop-the-lowest-vote-getter procedure. A second round was held among the remaining candidates, and Adam Smith received a majority and was declared the appointee. The chair noted Smith will need to be sworn in and complete ethics training.
-    key_speakers: ["Michael Hall (Light Commission Chair)", "Select Board Chair", "Peter Barnett (candidate)", "James Falls (candidate)", "Christopher Hardin (candidate)", "Matthew Harrington (candidate)", "Igor Bidan (candidate)", "Adam Smith (candidate/appointee)", "Thomas (candidate)", "Jim (candidate, engineer)"]
+      **Second round:** Adam Smith received a majority and was declared the appointee. The chair noted Smith must be sworn in and complete ethics training.
+    key_speakers: ["Michael Hall (Light Commission Chair)", "Select Board Chair", "Peter Barnett (candidate)", "James Falls (candidate)", "Christopher Hardin (candidate)", "Matthew Harrington (candidate)", "Igor Bidan (candidate)", "Adam Smith (candidate, appointed)", "Thomas (candidate)", "Jim (candidate)"]
   - topic: recreation-events
-    topic_confidence: 0.88
-    start_seconds: 6154
-    end_seconds: 6401
-    headline: "Board approves Abbott Hall use and liquor license for Rotary Club Holiday Pops concert"
-    dek: "The Rotary Club of Marblehead received approval to use Abbott Hall and a one-day liquor license for its 26th Annual Holiday Pops concert on December 10, 2022."
-    summary: "The board approved a request from the Rotary Club of Marblehead to use Abbott Hall for setup and breakdown December 10–11, 2022 for the 26th Annual Holiday Pops concert, subject to usual regulations and fees. A separate vote approved a one-day liquor license for the event (6 p.m. to 11 p.m.), with conditions including a $50 licensing fee, proof of alcohol purchase from an authorized source, and compliance with MGL Chapter 138. A one-day liquor license for the Lutheran Church fundraiser on October 2, 2022 (12–4 p.m.) was also approved."
-    key_speakers: ["Select Board Chair"]
-  - topic: bonding-capital
-    topic_confidence: 0.75
-    start_seconds: 6585
-    end_seconds: 6709
-    headline: "Board amends archives architectural services contract by $69,100 for new building design"
-    dek: "After determining that renovating an existing space was unsuitable, the town redirected archives project efforts toward designing a new building near Mary Hall Community Center."
-    summary: "The board voted to amend the contract for archives architectural services with the Smith Group, increasing the contract amount by $69,100. The town administrator explained that the initial project scope—assessing a lower-level space in Abbott Hall—was determined unsuitable, and the architect's work is now being redirected to design a new archives building to be located between Abbott Hall and the Mary Hall Community Center."
-    key_speakers: ["Town Administrator"]
+    topic_confidence: 0.85
+    start_seconds: 6221
+    end_seconds: 6473
+    headline: "Board approves Rotary Club Pops Concert and liquor license at Abbot Hall for December 2022"
+    dek: "The Rotary Club's 26th annual Holiday Pops concert was approved for December 10–11, 2022, along with a one-day liquor license."
+    summary: "The board approved use of Abbot Hall for the Rotary Club of Marblehead's 26th annual Holiday Pops concert on December 10, 2022 (setup/breakdown December 11), and a one-day liquor license for the event from 6 p.m. to 11 p.m., subject to standard licensing conditions including proof of alcohol purchase from an authorized source and receipt of the $50 licensing fee."
+  - topic: recreation-events
+    topic_confidence: 0.8
+    start_seconds: 6396
+    end_seconds: 6538
+    headline: "One-day liquor license approved for First Lutheran Church fundraiser and Marblehead Improvement Association annual meeting"
+    dek: "Two additional event approvals were processed for October 2022."
+    summary: "The board approved a one-day liquor license for First Lutheran Church (Reverend James Dixie) for a fundraiser on Sunday, October 2, 2022, 12–4 p.m., with alcohol to be purchased from Merrimack Valley Distributing Company. The board also approved use of the Old Town House by the Marblehead Improvement Association on Sunday, October 23, 2022, 1–5 p.m. for their annual meeting at no cost, subject to usual regulations."
   - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 6709
-    end_seconds: 6882
-    headline: "Board approves Devil neighborhood historic survey contract, art show, constable reappointment, and veteran town hall"
-    dek: "Several routine consent items were approved including a $35,000 historic survey contract, use of Abbott Hall for the high school art show, constable reappointment, and a congressman's veteran town hall."
-    summary: "The board approved: (1) a contract award to John Clemson for a historic properties survey of the Devil neighborhood at $35,000, funded through available sources identified by the Historic Commission; (2) use of Abbott Hall for the Marblehead High School annual art show May 22–June 2, 2023; (3) reappointment of Timothy Schoffmeyer as constable for civil process service; and (4) use of Abbott Hall for a veteran town hall hosted by Congressman Seth Moulton on approximately October 2022."
-    key_speakers: ["Town Administrator", "Select Board Chair"]
+    start_seconds: 6538
+    end_seconds: 6800
+    headline: "Board approves archives contract amendment, historic properties survey, and high school art show"
+    dek: "Consent-agenda items included a $69,110 increase to the Smith Group architectural contract for a new archives building design and a $35,000 survey contract."
+    summary: "The board amended the archives architectural services contract with the Smith Group by $69,110 to redirect the project from assessing an existing low-level hall toward designing a new building to be located near Abbot Hall. A separate contract was awarded to John Clemson for a historic properties survey of the 'Denver neighborhood' in the amount of $35,000. The board also approved use of Abbot Hall for the annual Marblehead High School art show, May 22 through June 2023, including installation beginning May 15, 2023."
+    key_speakers: ["Town Administrator"]
   - topic: admin-housekeeping
-    topic_confidence: 0.88
-    start_seconds: 6882
-    end_seconds: 7127
-    headline: "Town administrator previews cloud-based budget software; Income Tax Commission vacancy timeline set"
-    dek: "The town administrator described a cloud-based budget platform under evaluation at an estimated $30,000–$40,000 annual subscription cost, and the board set an October 21 application deadline for two Income Tax Commission vacancies."
-    summary: |
-      The town administrator reported evaluating cloud-based budget management software that would centralize department-level budget input, provide public transparency via the web, support GFOA-compliant budget formatting, and allow scenario comparisons. Estimated cost is approximately $30,000–$40,000 annually including onboarding; the goal is to use the tool for the upcoming FY budget cycle. Board members asked about training burden (described as Excel-like) and potential extension to the Light Department.
-      
-      The board also set a deadline of Friday, October 21 for applications for two vacancies on the Income Tax Commission, with interviews scheduled for October 26.
-    key_speakers: ["Town Administrator", "Select Board members"]
-  - topic: public-safety
     topic_confidence: 0.8
-    start_seconds: 7056
+    start_seconds: 6785
+    end_seconds: 6882
+    headline: "Constable Timothy Schoffmeyer reappointed; Abbot Hall use approved for Veterans Town Hall"
+    dek: "Routine reappointment and facility-use approvals rounded out the consent agenda."
+    summary: "The board approved reappointment of Timothy Schoffmeyer as constable for civil process service. The board also approved use of Abbot Hall for Congressman Seth Moulton's Veterans Town Hall on Friday, October 2022, at 11:30 a.m., subject to usual rules, regulations, and fees."
+  - topic: admin-housekeeping
+    topic_confidence: 0.87
+    start_seconds: 6894
+    end_seconds: 7071
+    headline: "Town seeks applicants for two Income Commission vacancies; deadline set for October 21"
+    dek: "The board set October 21 as the application deadline and October 26 for interviews to fill two vacancies on an unspecified commission."
+    summary: "The chair proposed and the board agreed to set Friday, October 21 as the deadline to receive applications for two vacancies on what was referred to as the Income Commission, with interviews scheduled for October 26 to align with the board's next regular meeting cycle."
+    key_speakers: ["Select Board Chair"]
+  - topic: public-safety
+    topic_confidence: 0.88
+    start_seconds: 7071
     end_seconds: 7314
-    headline: "Town administrator updates board on Mary Alley Building vandalism cleanup and water main repair"
-    dek: "The town administrator described the response to a vandalism incident at the Mary Alley Municipal Building and a separate water main break, noting insurance is expected to cover most cleanup costs."
-    summary: |
-      The town administrator reported that a suspect entered the Mary Alley Municipal Building and caused significant damage, including broken doors, damaged rugs, and scattered papers. The building was closed for one day while it served as a crime scene; employees worked remotely or in the field. Property and liability insurance representatives documented the scene and most repair costs are expected to be covered by the town's insurance policy. Staff returned Tuesday and reorganized their offices to resume work.
-      
-      Separately, a water main break was quickly repaired; the system was chlorinated and restored. Residents were advised to run cold water before using hot water or doing laundry following the pressure disruption.
+    headline: "Town Administrator reports on vandalism incident at Mary Alley Municipal Building and water main repair"
+    dek: "A suspect verbally threatened staff and caused property damage at the municipal building; the town's insurance is expected to cover most repair costs."
+    summary: "The Town Administrator reported that a suspect entered the Mary Alley Municipal Building, verbally confronted staff, and caused significant damage including broken doors, damaged rugs, and scattered files. The building was closed for one day while police processed the scene and staff worked remotely. The town's property/liability insurer was on-site taking notes; most costs are expected to be covered by the insurance policy. A water main break was also quickly repaired; residents were advised to flush cold water before running hot water or doing laundry."
+    key_speakers: ["Town Administrator"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 7314
+    end_seconds: 7563
+    headline: "Town Administrator previews cloud-based budget software platform estimated at $30,000–$40,000 annually"
+    dek: "The administrator described a centralized, GFOA-compliant budgeting tool that would give the public, department heads, and the Finance Committee online access to budget information."
+    summary: "The Town Administrator described ongoing research into cloud-based budget-building software that would consolidate the current system of spreadsheets and emails across approximately 25–30 cost centers. Key features include scenario modeling, itemized sub-lines, public transparency via a website portal, and automatic GFOA-compliant budget document generation. The annual subscription plus onboarding cost was estimated at between $30,000 and $40,000 for a partial first year. The administrator has completed one vendor demonstration and has additional demonstrations pending, and indicated a goal of using the platform for the upcoming budget cycle."
+    key_speakers: ["Town Administrator"]
+  - topic: elections-procedural
+    topic_confidence: 0.75
+    start_seconds: 7563
+    end_seconds: 7663
+    headline: "Town Meeting approved gas-powered leaf blower restrictions and bylaw gender-neutral language updates"
+    dek: "The administrator reported that Town Meeting approved a summer ban on gas-powered leaf blowers (effective next Memorial Day) and gender-neutral pronoun updates to bylaws and zoning; candidate ballot order awaits special legislation."
+    summary: "Town Meeting approved a summer ban on gas-powered leaf blowers, though the approval came after the current season's end date so restrictions will take effect the following Memorial Day. Town Meeting also approved updating both general bylaws and zoning bylaws to use gender-neutral pronouns and nomenclature. The one remaining item — changing the order of candidate names on ballots — requires special legislation, which has been filed with the state senator's office."
     key_speakers: ["Town Administrator"]
   - topic: public-comment
-    topic_confidence: 0.8
+    topic_confidence: 0.85
     start_seconds: 8014
     end_seconds: 8158
-    headline: "Resident challenges omission of public comments from prior meeting minutes"
-    dek: "A resident argued that the town's practice of omitting public comments from meeting minutes unless the board engages with them amounts to censorship and asked the board to reconsider."
-    summary: "A resident (identified as Alan, 159 [street unclear]) stated that his comments and those of another resident from a prior meeting were not included in the official minutes. He said the town counsel's response—that comments not engaged with by the board are not recorded—was \"almost reprehensible\" and constituted censorship. He asked the board to take a vote on whether the counsel's letter supporting that policy should stand. The board chair acknowledged the comments but indicated the board would follow its counsel's guidance."
-    key_speakers: ["Resident at mic (Alan)"]
+    headline: "Resident challenges board's omission of public comments from prior meeting minutes"
+    dek: "A resident argued that town counsel's guidance that unacknowledged comments need not be recorded amounts to censorship of public participation."
+    summary: "A resident (identified as Alan, 159 [street unclear]) stated that two of the Light Commission candidates had referenced reading meeting minutes to stay informed, then challenged the board's response — via town counsel — that public comments not engaged by the board need not appear in the minutes. He argued this position constitutes censorship and asked the board to place a vote on the record regarding the letter sent in the board's name by town counsel. The chair indicated the board would follow its legal counsel's judgment."
+    key_speakers: ["Alan (resident, mic)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

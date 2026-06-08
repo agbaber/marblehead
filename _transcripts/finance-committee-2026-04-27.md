@@ -11,225 +11,185 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
   headline: "Finance Committee recommends three-tier Prop 2½ override up to $4.3M in year one"
-  summary: "The Marblehead Finance Committee voted unanimously to recommend a three-tier Proposition 2½ override of up to $4.3 million in fiscal year 2027, covering town and school operating budgets, and voted 7-2 to recommend a separate curbside trash collection override of approximately $2.19 million. The committee also heard presentations on the fire collective bargaining agreement (three-year COLA of 3/3/3.5%) and Essex Tech's new state-mandated lottery admissions process, which raised Marblehead's minimum seat allocation from roughly 10 to 39 students. A memorandum of understanding among the Finance Committee, Select Board, and School Committee governing override drawdowns was authorized for the FinCom chair to sign."
+  summary: "The Marblehead Finance Committee voted unanimously to recommend a three-tier Proposition 2½ override article for town meeting, authorizing up to $4.3 million in year-one appropriations across tiers ranging from $9M to $15M over three years. The committee also voted 7–2 to recommend a separate trash curbside-collection override of approximately $2.19M. The committee heard presentations on Essex Tech's new state-mandated lottery admissions system and its budget risk to Marblehead, the finalized three-year fire department collective bargaining agreement with a 3%/3%/3.5% COLA, and school department override plans including a zero draw in FY27 and a $4.4M draw in FY28."
   decisions:
-    - "Approved unpaid balances total of $60,182.20 (including $36.98 late school bill)"
-    - "Approved lease total of $510,682 (net reduction of approximately $13,000)"
+    - "Approved unpaid balances article at $60,182.20"
+    - "Approved lease article at $510,682"
     - "Approved recommendation to ratify Article 19 fire collective bargaining contract"
-    - "Approved recommendation in favor of curbside trash collection override of $2,186,516"
-    - "Approved recommendation in favor of three-year operating budget override up to $4.3M in year one"
-    - "Approved recommendation to adopt Article 31 (administrative bylaw amendment)"
-    - "Voted against recommending Article 39 (repeal of community development department)"
-    - "Approved authorizing FinCom chair to sign MOU with Select Board and School Committee"
+    - "Approved recommendation for override article (Article 29) up to $4.3M in year one, 7–0"
+    - "Approved recommendation for trash curbside collection override of $2,186,516, 7–2"
+    - "Approved recommendation for Article 31 administrative bylaw amendment"
+    - "Approved motion to recommend against Article 39 (repeal of community development department), 0–8"
+    - "Approved authorization for FinCom chair to sign MOU with Select Board and School Committee"
   votes:
-    - motion: "Unpaid balances $60,182.20"
+    - motion: "Unpaid balances at $60,182.20"
       result: "in favor (unanimous)"
-    - motion: "Lease total $510,682"
+    - motion: "Lease total at $510,682"
       result: "in favor (unanimous)"
-    - motion: "Recommend ratification of fire collective bargaining contract"
+    - motion: "Recommend Article 19 fire contract ratification"
       result: "in favor (unanimous)"
-    - motion: "Recommend curbside trash override of $2,186,516"
+    - motion: "Recommend trash curbside override of $2,186,516"
       result: "in favor (7 to 2)"
-    - motion: "Recommend operating budget override up to $4.3M year one"
+    - motion: "Recommend Article 29 override up to $4.3M year one"
       result: "in favor (unanimous)"
     - motion: "Recommend Article 31 administrative bylaw amendment"
       result: "in favor (unanimous)"
-    - motion: "Recommend Article 39 repeal of community development department"
+    - motion: "Recommend Article 39 (repeal community development dept.)"
       result: "in favor (0 to 8)"
     - motion: "Authorize FinCom chair to sign MOU"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: admin-housekeeping
-    topic_confidence: 0.85
+    topic_confidence: 0.9
     start_seconds: 0
     end_seconds: 143
-    headline: "FinCom approves updated unpaid balances and lease totals with minor adjustments"
-    dek: "A $36.98 late school bill raised the unpaid balances total to $60,182.20; a school bus lease addition offset by removal of community vehicles reduced the lease article by roughly $13,000 to $510,682."
-    summary: |
-      The committee voted unanimously on two housekeeping updates to previously approved articles:
-      
-      - **Unpaid balances** (Article 6): revised upward by $36.98 for a late school bill, bringing the total to **$60,182.20**.
-      - **Leases**: revised downward by approximately $13,000 due to removal of community vehicles and addition of one school bus lease, bringing the total to **$510,682**.
-    key_speakers: ["Finance Committee chair (unnamed)"]
+    headline: "Committee updates unpaid balances to $60,182 and lease total to $510,682"
+    dek: "A late school bill of $36.98 prompted a revised unpaid-balances vote; a bus lease addition and removal of community vehicles reduced the lease article by about $13,000."
+    summary: "The committee re-voted two previously approved articles with minor adjustments. Unpaid balances were revised upward by $36.98 to $60,182.20 to capture a late school bill. The lease article was reduced by approximately $13,000 to $510,682 after adding a school bus lease and removing community vehicles (police fleet lease ended this year). Both votes were unanimous."
+    key_speakers: ["Town Administrator (Alicia)", "FinCom Chair"]
   - topic: labor-personnel
     topic_confidence: 0.95
     start_seconds: 143
-    end_seconds: 2063
-    headline: "Fire department three-year contract ratified; COLA set at 3/3/3.5% over contract term"
-    dek: "The contract was finalized before town meeting for the first time in recent memory, with estimated costs of approximately $171,000 above budget already absorbed, and a sick bank provision to be funded from FinCom reserve if accessed."
+    end_seconds: 2563
+    headline: "Fire dept. three-year contract finalized at 3%/3%/3.5% COLA; FinCom recommends ratification"
+    dek: "The contract adds approximately $171,000 to the fire budget and includes a new sick bank; overtime structure was not materially changed due to binding arbitration constraints."
     summary: |
-      Town Administrator Thatcher (referenced but partially absent) provided contract highlights. Key terms:
+      Town Administrator Thatcher confirmed the fire department collective bargaining agreement was finalized on a three-year term with a 3%, 3%, and 3.5% COLA, consistent with the pattern of recently settled contracts. The estimated additional cost of approximately $171,000 was already built into the FY27 balanced budget projections.
       
-      | Year | COLA |
-      |------|------|
-      | FY27 | 3% |
-      | FY28 | 3% |
-      | FY29 | 3.5% |
+      A new sick bank provision was included; any draw-down costs above the existing budget would be funded through the FinCom reserve. Committee members questioned the overtime calculation methodology; the town administrator explained that public safety contracts are subject to binding arbitration through the Joint Labor Management Commission (JLMC), limiting the town's leverage. The overtime problem is more effectively addressed through staffing additions funded by an override than through contract language.
       
-      The 3% COLA was already built into the balanced budget projection. Additional provisions include small increases to education and longevity stipends, totaling an estimated **$171,000** above baseline. A new sick bank provision would draw from FinCom reserves if triggered, rather than requiring a budget adjustment.
-      
-      FinCom members questioned the overtime calculation methodology. Staff explained that under Joint Labor Management Commission (JLMC) binding arbitration, the town has limited leverage to resist prevailing patterns; reducing overtime structurally depends on staffing levels, which the override scenarios address. The committee voted unanimously to recommend ratification at town meeting.
-    key_speakers: ["Town Administrator (Thatcher, referenced)", "Finance Director (Alicia)"]
+      The committee voted unanimously to recommend ratification of Article 19.
+    key_speakers: ["Thatcher (Town Administrator)", "FinCom Chair"]
   - topic: school-budget
     topic_confidence: 0.97
     start_seconds: 336
     end_seconds: 2063
-    headline: "Essex Tech lottery raises Marblehead's minimum seat allocation from ~10 to 39, injecting budget risk"
-    dek: "A state-mandated lottery and inter-district equity proposal by larger sending communities increased Marblehead's minimum Essex Tech allocation nearly fourfold, with enrollment projections potentially adding over $2.5M in assessments during the override period."
+    featured: true
+    headline: "Essex Tech lottery overhaul could raise Marblehead's assessment from ~$750K to over $4M by FY32"
+    dek: "State-mandated elimination of merit-based admissions produced 28 Marblehead applicants for 39 allocated seats this year, up from a historical average of 10–17; a Finance Committee member warned the enrollment surge poses major multi-year budget risk."
     summary: |
-      Essex Tech Superintendent Dr. Heidi Riccio and School Committee Representative Mark Stroud briefed the Finance Committee on the new state-mandated vocational school lottery.
+      Essex Tech Superintendent Dr. Heidi Riccio and School Committee Representative Mark Stroud presented the impact of a new state-mandated vocational lottery on Marblehead's enrollment and assessment costs.
       
-      **Background:**
-      Essex Tech received 1,750 applicants for 427 seats for fall admission. Previously, admissions were merit-based (grades, interviews worth 40%, attendance, recommendations). DESE eliminated grades, teacher recommendations, and personal interviews as criteria.
+      **Background on the lottery:** DESE eliminated grades, teacher recommendations, and personal interviews as admissions criteria. The only permissible factors were attendance (fewer than 27 absences) and discipline, which Essex Tech opted not to use. The result was 1,750 applicants for 427 seats this year — students could apply by simply checking a box with no further investment.
       
-      **Equity proposal:** At a January legislative breakfast, superintendents from Danvers, Beverly, Peabody, and Salem proposed allocating seats based on total K–12 enrollment. Essex Tech countered with an eighth-grade enrollment basis and a 427-seat annual cap for three years. This left Marblehead with a **minimum target of 39 seats**.
+      **Seat allocation change:** Larger member communities (Danvers, Beverly, Peabody, Salem) proposed an allocation formula based on total K–12 enrollment. Essex Tech countered using eighth-grade enrollment per community. Under that formula, Marblehead received a minimum target of 39 seats — compared to a historical average of 10 acceptances per year. Danvers, which typically sends 60 students, was allocated 39 seats but had 132 applicants; Marblehead had 28 applicants for its 39 seats.
       
-      **Application data:**
-      - Historical Marblehead applicants: ~15–17 per year
-      - FY27 applicants: 28 (rose due to no-investment "check a box" process)
-      - After private school acceptances: down to 21, likely to decline further
-      - Net new students for Marblehead next year: estimated +15
-      - Over 50% of accepted Marblehead students have IEPs
+      **Current enrollment trajectory:** Of the 28 Marblehead applicants, 7 withdrew, leaving 21 accepted as of the meeting. Over 50% of accepted Marblehead students hold IEPs. The net new students entering the system represents a roughly 50% increase over current enrollment at Essex Tech from Marblehead.
       
-      **Financial risk flagged by FinCom:**
-      > "If we were to fill all of those slots, we would go from having an allotment of $750,000 to, in fiscal '32, it being over $4 million."
+      **Financial risk:** A FinCom member calculated that at the current trend of ~15 net new students per year from a base of 35, the Marblehead assessment could exceed $2.5M during the three-year override period, and in a worst-case scenario (full 39-seat fill rate) could reach over $4M by FY32 — compared to approximately $750,000 today. The FY27 assessment already rose over 9% year-over-year.
       
-      More conservatively, at 15 new students per year from a base of 35, the assessment could exceed $2.5M during the three-year override period. The FY27 Essex Tech article increased by over 9% year-over-year, while Marblehead's school budget was cut 3%.
+      **Legislative outlook:** State representatives are voting on Amendment 1580 to House Bill 5500 to restore merit-based admissions for vocational schools. The superintendent was not optimistic about its passage.
       
-      A state house amendment (1580 to HB 5500) would allow vocational schools to return to merit-based admissions; the superintendent was cautiously optimistic. Essex Tech also noted per-pupil costs billed to Marblehead ($23,000 per pupil in FY24 assessment basis) are below Marblehead's own per-pupil expenditure.
-    key_speakers: ["Dr. Heidi Riccio (Essex Tech Superintendent)", "Mark Stroud (Essex Tech School Committee Representative, Marblehead)", "Marie Zamierowski (Essex Tech Director of Business Operations)", "Finance Committee chair (unnamed)"]
+      The FinCom noted the assessment was already voted as part of the budget and this discussion was focused on future risk and calls for more community involvement in the admissions allocation process.
+    key_speakers: ["Dr. Heidi Riccio (Essex Tech Superintendent)", "Mark Stroud (Essex Tech School Committee Rep, Marblehead)", "Marie Zamierowski (Essex Tech Director of Business Operations)", "FinCom member (finance risk discussion)"]
   - topic: override
     topic_confidence: 0.99
-    start_seconds: 2563
+    start_seconds: 2597
     end_seconds: 8000
-    featured: true
-    headline: "FinCom unanimously recommends up to $4.3M year-one override; 7-2 for separate trash override"
-    dek: "After a detailed recap of $7.7M in budget cuts driving a balanced budget with 22 town-side and 18.25 school-side FTE reductions, the committee recommended a three-tier Proposition 2½ override and a separate curbside collection override to town meeting."
+    headline: "FinCom unanimously recommends three-tier Prop 2½ override up to $4.3M in year one; trash override passes 7–2"
+    dek: "Tier one ($9M over 3 years) restores 15 of 22 cut town positions; schools draw zero in year one but need $4.4M in year two due to contractual obligations and the end of a $1.5M SPED tuition prepayment."
     summary: |
-      ## Balanced Budget Recap
+      The Finance Committee received a full presentation on the three-tier Proposition 2½ override structure before voting.
       
-      Available revenue for FY27: **$96.5M** — down $600,000 from FY26's $97.1M.
+      **Balanced budget context:** Available revenue for FY27 is $96.5M — $600,000 less than FY26 — against level-service budget requests of $104.2M, producing a $7.7M deficit. Key cost drivers include $1.7M in health insurance increases, $1M trash contract increase, $500K pension increase, $1.8M school wage increases, and $1.5M town wage increases. The town side cut 22 positions (18 layoffs, 4 vacancies); the school side cut 18.25 FTEs (9.5 active positions, 8.75 vacancies/attrition).
       
-      Key revenue pressures:
-      - Prop 2½ levy growth: +$2.1M
-      - Local receipts (interest income decline): –$1.0M
-      - Free cash use: $5M (down $2M from prior year)
-      - Net state aid: +$200K
+      **Override tier structure (town side):**
       
-      Level-service budget requests totaled **$104.2M**, producing a **$7.7M deficit** driven by:
-      
-      | Driver | Amount |
-      |--------|--------|
-      | Less available revenue | $600K |
-      | Town wages (contractual) | $1.5M |
-      | School wages (contractual) | $1.8M |
-      | Pension | $500K |
-      | Health insurance | $1.7M |
-      | Trash contract | $1.0M |
-      | Out-of-district tuition/transportation | $300K |
-      | Other town costs | $300K |
-      
-      The deficit was split approximately **$4M town / $3.7M school** based on a 68/32 allocation methodology.
-      
-      ## Town-Side Cuts to Balance
-      - **Trash user fee** created: ~$2.2M
-      - **22 FTEs** cut (12% of general fund–funded positions); ~18 are actual layoffs, 4 vacant
-      - Stabilization reserve cut $250K; OPEB cut $250K; workers' comp cut $90K
-      
-      ## School-Side Cuts to Balance
-      - **18.25 FTEs** eliminated (22 positions); 9.5 FTEs are active employees (11 positions), 8.75 are vacancies/retirees/attrition
-      - **$1.5M prepayment** of out-of-district special education tuitions reduces FY27 budget but creates a ~$2M hole in FY28
-      - Salary shifted to revolving accounts (kindergarten/preschool 50% to revolving; special ed revolving)
-      - Level-funded all supplies and contracted services (no inflation adjustment)
-      - School budget dropped from $49.1M (FY26) to $47.6M (FY27)
-      
-      ## Three-Tier Override Structure
-      
-      ### Town Side
       | Tier | Total | FY27 | FY28 | FY29 |
       |------|-------|------|------|------|
-      | 1 – Partial Restore | $9M | $1.26M | $718K | $811K |
-      | 2 – Build | $12M | $2.8M | $1.0M | $1.0M |
-      | 3 – Invest | $15M | $4.3M | $1.2M | $1.0M |
+      | One (Partial Restore) | $9M | $1.26M | $718K | $811K |
+      | Two (Build) | $12M | $2.8M | $1M | $1M |
+      | Three (Invest) | $15M | $4.3M | $1.2M | $1M |
       
-      **Tier 1** restores 15 of 22 cut positions: library accreditation waiver, police SRO, DPW, Rec & Parks, COA, public buildings, finance, partial community development (director only).
+      Tier one restores 15 of 22 cut positions, brings back the police SRO, library accreditation waiver, DPW, Rec & Parks, COA, and partial community development. Tier two adds building maintenance ($450K), two firefighters, one police officer, IT director, budget analyst, part-time COA social worker, GIS position, and full library restoration. Tier three adds two more firefighters, one police officer, DPW foreman and HEO, grants writer, $60K mental health counseling, and $1M recurring capital.
       
-      **Tier 2** adds: $450K building maintenance budget, full library restore + part-time assistant, 2 firefighters + 1 police officer, IT director, budget analyst, part-time COA social worker, GIS position, special clerk, assistant planner, conservation agent.
+      **School side draws:**
+      - FY27: $0 (schools draw nothing from override)
+      - FY28: $4.4M (tier two) — driven by $1.5M SPED tuition prepayment unwinding plus contract escalation
+      - FY29: Additional draw for tier three
       
-      **Tier 3** adds on top: 2 more firefighters, 1 more police officer, DPW foreman + heavy equipment operator, grants writer, $60K mental health counseling, $1M recurring capital.
+      School Superintendent explained that without an override, the FY28 shortfall of $4.4M would require cutting approximately 60 positions (at average salary ~$72,500), or roughly 10–12% of the school workforce.
       
-      ### School Side
-      | Tier | FY27 | FY28 | FY29 |
-      |------|------|------|------|
-      | 1 | $0 | — | — |
-      | 2 | $0 | $4.4M | — |
-      | 3 | $0 | $5.7M | varies |
+      **Ballot mechanics:** At town meeting, voters authorize the Select Board to place the question on the ballot. Three separate yes/no questions appear on the ballot (one per tier). The highest tier achieving a majority yes vote is the amount that passes. Tiers are independent — a voter may vote yes on any combination.
       
-      School draws **$0 in year one**. FY28 need of ~$4.4M driven by: $1.5M prepayment reversal + ~$0.5M tuition inflation + contractual salary obligations (contract weighted toward end of term).
+      **Taxpayer impact (median assessed value $990,600):**
       
-      **Tier 2 school adds (FY28):** $150K technology lease (enabling $400K–$450K in device leasing on 3-year cycles); free full-day kindergarten (Marblehead currently one of ~10 MA communities still charging).
-      
-      **Tier 3 school adds (FY29):** $100K curriculum/professional development restoration; $500K post-graduate transition program for students without diplomas (life skills, job coaching), which could generate savings by reducing out-of-district placements costing $60K–$70K per student.
-      
-      ## Ballot Mechanics
-      Town meeting authorizes the Select Board to place the question on the ballot. Voters vote yes/no independently on each tier. The **highest tier receiving a majority yes** is the amount raised, regardless of relative vote counts among tiers. Town meeting appropriates each year's draw in successive annual budgets.
-      
-      Year-one authorization amount presented at town meeting: **up to $4.3M** (tier three maximum, town + school combined, school drawing $0).
-      
-      ## Taxpayer Impact (median home assessed at $990,600)
       | Tier | Year 1 | Year 2 | Year 3 | 3-Yr Total |
       |------|--------|--------|--------|------------|
-      | 1 – $9M | $130 | $533 | $256 | $919 |
-      | 2 – $12M | $208 | $76 | $274 | $1,230 |
-      | 3 – $15M | $430 | $720 | $380 | $1,538 |
+      | One | $130 | $533 | $256 | $919 |
+      | Two | $208 | $76 | $274 | $1,230 |
+      | Three | $430 | $720 | $380 | $1,538 |
       
       These amounts are permanent additions to the levy, growing at 2.5%/year thereafter.
       
-      ## Trash Override
-      Separate question: raise curbside collection cost of **$2,186,516** via override rather than user fee. One member stated preference for the user fee structure (preserves resident choice to opt out; avoids Prop 2½ constraint on a contract growing at ~5%/year). Voted **7 in favor, 2 against**.
-    key_speakers: ["Finance Committee chair (unnamed)", "Alicia (Finance Director)", "Thatcher (Town Administrator)", "School Superintendent (Steve, unnamed full name)", "Jack Attridge (resident, 67 Beach Street)", "Andrew Petty (DPW Director, referenced)"]
-  - topic: override
+      **MOU:** A Memorandum of Understanding between the Select Board, School Committee, and Finance Committee commits each board to draw only specified amounts per year, split approximately 62% schools / 38% town, with health insurance growth assumed at 6% in FY28–29. Quarterly public meetings are required. The FinCom voted unanimously to authorize the chair to sign.
+      
+      **Votes:**
+      - Trash curbside override ($2,186,516): 7 in favor, 2 against
+      - General government and school override up to $4.3M year one: unanimous
+    key_speakers: ["FinCom Chair", "Alicia (Town Finance Director)", "Thatcher (Town Administrator)", "School Superintendent (Steve)", "Jack Attridge (resident, 67 Beach Street)"]
+  - topic: trash-dpw
     topic_confidence: 0.92
-    start_seconds: 8000
-    end_seconds: 9262
-    headline: "FinCom authorizes chair to sign MOU governing three-year override drawdown commitments"
-    dek: "The memorandum of understanding among the Finance Committee, Select Board, and School Committee commits the three bodies to quarterly meetings, specified annual drawdown amounts, a 38/62 town-school revenue split, and a 6% health insurance growth assumption for FY28-29."
+    start_seconds: 6816
+    end_seconds: 7067
+    headline: "FinCom debates trash override vs. annual fee; DPW director prefers fee for flexibility"
+    dek: "The trash contract grows at 5% annually, which would outpace a 2.5% levy cap after three years; one member argued the annual fee preserves resident choice to opt out of curbside collection."
     summary: |
-      The MOU establishes a public commitment—though not legally binding—among the three governing bodies specifying:
+      The committee discussed whether the curbside trash collection cost of approximately $2.19M should be funded through a Prop 2½ override or an annual user fee authorized by the Board of Health.
       
-      - Annual override drawdown amounts by year and by town/school allocation
-      - A 38%/62% town-school revenue split methodology
-      - Health insurance growth assumption of **6%** for FY28 and FY29 (below the recent five-year average of ~7%)
-      - Quarterly joint meetings to monitor compliance
-      - If health insurance comes in below 6%, the savings go to stabilization rather than new spending
-      - State of town and school reporting requirements
+      DPW Director Andrew Petty was cited as preferring the fee because the contract escalates at 5% annually, which will permanently outgrow a levy constrained by Prop 2½ at 2.5%. A committee member noted that only about 20% of Massachusetts communities fund trash entirely through property taxes, and that Marblehead is among roughly 10% of communities offering residents a choice between curbside pickup and drop-off. The fee preserves that opt-out option; the override would eliminate it.
       
-      Staff noted town meeting retains the actual appropriation power to enforce commitments each year. The Select Board and School Committee previously took full votes to support the MOU. The Finance Committee voted unanimously to authorize the chair to sign on behalf of the committee.
-    key_speakers: ["Thatcher (Town Administrator)", "Finance Committee chair (unnamed)"]
+      Financial risk from opt-outs is mitigated by $250,000 in a waste revolving fund reserve, which the committee calculated covers opt-out rates up to approximately 15%. There is a one-time operational cost of approximately $76,000 for an additional staff position to administer the fee program.
+      
+      The trash override vote passed 7–2, with two members voting against on the grounds that the annual fee is the better long-term funding mechanism.
+    key_speakers: ["FinCom Chair", "FinCom member (Molly)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
+    topic_confidence: 0.85
     start_seconds: 8026
-    end_seconds: 8506
-    headline: "FinCom recommends Article 31 administrative bylaw update and declines to recommend Article 39"
-    dek: "Article 31 updates employee benefits unchanged for over 20 years at a nominal cost of $12,000; Article 39, which would repeal the community development department and eliminate all five positions, was voted against unanimously."
-    summary: |
-      **Article 31 – Administrative bylaw amendment:**
-      Adds three personal days and updates longevity stipends (increased by $750 per level) for a limited number of administrative positions. Benefits had not been updated in over 20 years. Estimated cost: **$12,000**, to be absorbed within existing budget or FinCom reserve. Voted unanimously to recommend adoption.
-      
-      **Article 39 – Repeal of community development department:**
-      Would repeal the department created by 2024 town meeting, eliminating all five positions. The balanced budget already eliminates three of the five; the remaining two are funded in the current budget and are not included in any override tier. The committee voted **0 in favor, 8 against** recommending the article, citing opposition to eliminating the town planner position.
-    key_speakers: ["Finance Director (Alicia)", "Finance Committee chair (unnamed)"]
-  - topic: public-comment
+    end_seconds: 8272
+    headline: "Article 40 — 250th anniversary Constitution resolution — presented; no FinCom recommendation"
+    dek: "Two residents presented a non-binding resolution supporting the U.S. Constitution to celebrate the country's 250th anniversary; FinCom declined to make a recommendation given no financial implications."
+    summary: "Two residents presented Article 40, a non-binding resolution affirming the town's support for the U.S. Constitution as part of the country's 250th anniversary celebrations. The article includes a series of whereas clauses and references the pledge of allegiance recited at town meeting. The FinCom chair noted there are no financial implications and the committee did not make a recommendation. The League of Women Voters is distributing 500 copies of the resolution."
+    key_speakers: ["Resident presenter (female)", "Resident presenter (male)"]
+  - topic: labor-personnel
+    topic_confidence: 0.8
+    start_seconds: 8381
+    end_seconds: 8541
+    headline: "Article 31 — administrative employee benefits update — recommended after 20-year gap"
+    dek: "The Select Board reversed an earlier indefinite postponement after a cost analysis showed only a $12,000 impact; three personal days and modest longevity increases are included."
+    summary: "Article 31 amends Chapter 43 of town bylaws to update benefits for administrative employees for the first time in over 20 years. Changes include three personal days (no cost) and longevity stipend increases of $750 per level for a limited number of positions. Total estimated cost is approximately $12,000, to be absorbed within existing budget lines or the FinCom reserve if needed. The Select Board had previously voted to indefinitely postpone the article but reversed that vote after receiving the cost analysis. The FinCom voted unanimously to recommend adoption."
+    key_speakers: ["Alicia (Town Finance Director)", "FinCom Chair"]
+  - topic: permits-zoning
     topic_confidence: 0.75
-    start_seconds: 8041
-    end_seconds: 8287
-    headline: "Residents present Article 40 supporting U.S. Constitution for town's 250th anniversary celebration"
-    dek: "Two residents asked the Finance Committee to support a non-binding resolution affirming the Constitution in the context of the country's 250th anniversary; the committee declined to make a formal recommendation given no financial implications."
-    summary: "Two residents presented Article 40, a resolution affirming support for the U.S. Constitution and the Declaration of Independence timed to the country's 250th anniversary. They described the article as a unifying, non-controversial gesture. The Finance Committee noted there are no financial implications and declined to make a formal recommendation, though members indicated they would be present to vote at town meeting. The League of Women Voters was noted as a distribution partner for printed copies."
-    key_speakers: ["Resident (female, unnamed)", "Resident (female, unnamed, co-sponsor)"]
+    start_seconds: 8541
+    end_seconds: 8765
+    headline: "FinCom votes 0–8 against recommending Article 39 to repeal community development department"
+    dek: "Article 39 would eliminate all five positions in the department; three are already cut in the balanced budget, but the remaining two — including the town planner — are not included in any override tier."
+    summary: "Article 39 proposes repealing the 2024 town meeting vote that created the community development department, thereby eliminating and defunding all five associated positions. The FinCom noted that three of the five positions are already eliminated in the FY27 balanced budget. The remaining two positions — including the town planner — are funded in the current budget but are not included in any override tier, meaning passage of this article would eliminate them permanently regardless of override outcome. The FinCom voted 0–8 against recommending the article."
+    key_speakers: ["FinCom Chair", "Alicia (Town Finance Director)"]
+  - topic: override
+    topic_confidence: 0.95
+    start_seconds: 8765
+    end_seconds: 9272
+    headline: "FinCom unanimously authorizes chair to sign three-board MOU governing override drawdown schedule"
+    dek: "The MOU commits all three boards to specific annual draw amounts, a 62/38 school-town revenue split, 6% health insurance growth assumptions, and quarterly public reporting."
+    summary: |
+      The Finance Committee voted unanimously to authorize its chair to sign a Memorandum of Understanding with the Select Board and School Committee governing the use of override funds if the ballot measure passes.
+      
+      Key MOU provisions:
+      - Annual draw amounts are fixed per tier for each of the three years
+      - Revenue split: approximately 62% to schools, 38% to town
+      - Health insurance growth assumed at 6% in FY28 and FY29; if actual growth is lower, the delta goes to stabilization rather than new spending
+      - If health insurance comes in above 6%, other budget lines must absorb the difference — no additional override draws
+      - Quarterly public meetings among the three boards are required
+      - Town administrator, superintendent, and select board chair have public reporting obligations
+      
+      The MOU is not legally binding but constitutes a public commitment by elected and appointed officials. Town meeting retains appropriation authority each year as the ultimate enforcement mechanism.
+    key_speakers: ["Thatcher (Town Administrator)", "FinCom Chair"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

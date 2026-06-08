@@ -11,44 +11,45 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Marblehead School Committee votes to pursue independent antisemitism investigation"
-  summary: "The Marblehead School Committee reorganized leadership, electing Jen Schaffner as chair and Allison Taylor as vice chair. Following roughly two hours of public comment on antisemitism allegations involving the high school World Language Department, the committee unanimously approved moving forward with an independent investigation, deferring selection of the specific firm to a follow-up meeting scheduled for June 26. The committee also approved a new school nutrition operations specialist position, the interim superintendent contract with John Radu, and several consent-agenda items."
+  headline: "School committee reorganizes, votes to approve independent antisemitism investigation"
+  summary: "The Marblehead School Committee held its first post-election meeting, reorganizing leadership with Jen Schaffner as chair and Allison Taylor as vice chair. A lengthy public comment session drew more than two hours of testimony about antisemitism allegations involving World Language Department teachers. The committee voted unanimously to approve moving forward with an independent investigation, deferring selection of a specific firm to a meeting scheduled for the following week."
   decisions:
-    - "Approved Jen Schaffner as chair (3-0 with 1 abstention)"
-    - "Approved Allison Taylor as vice chair (4-0)"
-    - "Approved Al Williams as secretary (3-0 with 1 abstention)"
-    - "Approved independent investigation into antisemitism allegations, pending further vetting of investigative firms (4-0)"
-    - "Approved creation of school nutrition operations specialist position (4-0)"
-    - "Approved interim superintendent contract with John Radu (4-0)"
-    - "Approved annual individual contract salary adjustments totaling $127,804 (4-0)"
-    - "Approved school improvement plans for Village, Brown, and Glover schools (4-0)"
-    - "Approved schedule of bills totaling $605,563.66 (4-0)"
-    - "Approved hiring of Madison Eski as Marblehead High School nurse (4-0)"
-    - "Approved six sets of meeting minutes (4-0)"
-    - "Continued executive session to next scheduled meeting"
+    - "Approved Jen Schaffner as School Committee chair"
+    - "Approved Allison Taylor as vice chair"
+    - "Approved Al Williams as secretary"
+    - "Approved independent investigation into antisemitism allegations (firm to be determined)"
+    - "Approved creation of School Nutrition Operations Specialist position"
+    - "Approved annual individual contract salary adjustments totaling $127,804"
+    - "Approved school improvement plans for Village, Brown, and Glover schools"
+    - "Approved schedule of bills totaling $605,563.66"
+    - "Approved minutes from six prior meetings"
+    - "Approved hiring of Madison Eski as Marblehead High School nurse"
+    - "Approved interim superintendent contract with John Radu"
+    - "Postponed executive session to next scheduled meeting"
   votes:
-    - motion: "Elect Jen Schaffner as chair"
-      result: "in favor (3 to 0, 1 abstention)"
-    - motion: "Elect Allison Taylor as vice chair"
+    - motion: "Jen Schaffner as chair"
+      result: "in favor (3 to 0, one abstention)"
+    - motion: "Allison Taylor as vice chair"
       result: "in favor (unanimous)"
-    - motion: "Elect Al Williams as secretary"
-      result: "in favor (3 to 0, 1 abstention)"
-    - motion: "Approve independent investigation, pending firm selection"
+    - motion: "Al Williams as secretary"
+      result: "in favor (3 to 0, one abstention)"
+    - motion: "Approve independent investigation pending further review of applicants"
       result: "in favor (unanimous)"
-    - motion: "Approve school nutrition operations specialist position"
+    - motion: "Create School Nutrition Operations Specialist position"
       result: "in favor (unanimous)"
-    - motion: "Approve interim superintendent contract with John Radu"
+    - motion: "Annual contract salary adjustments of $127,804"
       result: "in favor (unanimous)"
-    - motion: "Approve annual contract salary adjustments ($127,804)"
+    - motion: "Approve school improvement plans (Village, Brown, Glover)"
       result: "in favor (unanimous)"
-    - motion: "Approve Village, Brown, and Glover school improvement plans"
-      result: "in favor (unanimous)"
-    - motion: "Approve schedule of bills ($605,563.66)"
-      result: "in favor (unanimous)"
-    - motion: "Approve hire of Madison Eski as school nurse"
+    - motion: "Schedule of bills totaling $605,563.66"
       result: "in favor (unanimous)"
     - motion: "Approve six sets of meeting minutes"
+      result: "in favor (unanimous)"
+    - motion: "Hire Madison Eski as school nurse"
+      result: "in favor (unanimous)"
+    - motion: "Approve interim superintendent contract with John Radu"
       result: "in favor (unanimous)"
     - motion: "Postpone executive session to next meeting"
       result: "in favor (unanimous)"
@@ -57,121 +58,96 @@ topic_segments:
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 1
-    end_seconds: 352
-    headline: "Committee reorganizes: Schaffner elected chair, Taylor vice chair, Williams secretary"
-    dek: "The first meeting after annual town elections produced new leadership, with the outgoing chair seeking to postpone reorganization but the committee proceeding over that objection."
-    summary: "At the first post-election meeting, a motion to postpone reorganization until a full five-member committee could convene was not seconded. The committee elected Jen Schaffner as chair (3-0, one abstention), Allison Taylor as vice chair (4-0), and Al Williams as secretary (3-0, one abstention). Outgoing student representative Cat received a commendation for her service, and Interim Superintendent Dr. Teresa McGinnis was also recognized."
-    key_speakers: ["Jen Schaffner (incoming chair)", "Allison Taylor (vice chair)", "Al Williams (secretary)", "Sarah Fox (outgoing chair)"]
+    end_seconds: 350
+    headline: "School Committee reorganizes with new chair, vice chair, and secretary"
+    dek: "Jen Schaffner was elected chair, Allison Taylor vice chair, and Al Williams secretary at the first post-election meeting."
+    summary: "At the first meeting following annual town elections, the committee conducted its reorganization. A motion to postpone reorganization until a full five-member committee was present failed to receive a second. Jen Schaffner was elected chair 3–0 with one abstention; Allison Taylor was elected vice chair 4–0; Al Williams was elected secretary 3–0 with one abstention. Commendations were offered to outgoing student representative Cat and to interim Superintendent Dr. Teresa McGinnis."
+    key_speakers: ["Jen Schaffner (incoming chair)", "Allison Taylor (vice chair)", "Al Williams (secretary)"]
   - topic: public-comment
-    topic_confidence: 0.98
+    topic_confidence: 1
     start_seconds: 513
     end_seconds: 6724
     featured: true
-    headline: "Two-hour public comment on antisemitism allegations at Marblehead High School"
-    dek: "Roughly two dozen speakers addressed competing accounts of antisemitism in the World Language Department, with most — including the accused teacher and those who made allegations — calling for an independent investigation."
+    headline: "Two-hour public comment focuses on antisemitism allegations involving World Language Dept. teachers"
+    dek: "Residents, teachers, students, rabbis, and community members testified both in support of accused teachers and in support of an independent investigation into antisemitism at Marblehead High School."
     summary: |
-      Public comment ran approximately two hours and drew a standing-room crowd, with overflow routed to a separate auditorium. Speakers addressed allegations aired in a recent online webinar that accused members of the high school World Language Department, particularly teacher Candace Liney, of antisemitic conduct.
+      A large crowd — requiring overflow seating in the auditorium — signed up to speak during public comment, which extended well beyond the usual 15-minute limit.
       
-      **Speakers supporting the investigation and describing harm:**
-      - Spanish teacher Jit Kanes, who had made the initial webinar allegations, called for proactive steps to combat antisemitism.
-      - Mindy Greenberg, a Spanish teacher who stated she is leaving the district, described a hostile work environment and said district civil-rights grievance procedures were not followed after she first reported concerns in April 2022.
-      - Multiple Jewish community members — including parents, a rabbi, a student, and a Holocaust educator — urged the committee to use the IHRA definition of antisemitism in any investigation and to allow Jewish community organizations to vet the chosen investigative firm.
-      - Sophomore David McGinn described successfully challenging a history handout he considered antisemitic, and urged investigation of curriculum, incidents, and the selection process for the investigative agency.
+      **Speakers defending World Language Department teachers** included teacher Elmer Magana (18 years at MHS), French teacher Mary Francois, Spanish teacher Laura Alvarez, Latin teacher Dena Nguyen (read by proxy), clinical social worker Judy Louise, consultant Dr. Nicole Scher (read by proxy), school counselor Meredith Rearden, and Deacon John Whipple of the Marblehead Task Force Against Discrimination. They categorically denied antisemitism allegations and described accused teacher Candace Liney as a dedicated anti-discrimination advocate and longtime Team Harmony advisor.
       
-      **Speakers refuting the specific allegations against the World Language Department:**
-      - Candace Liney categorically denied the accusations, describing her 20-year record advocating for equity and noting the prior district investigation found no misconduct.
-      - Colleagues Elmer Magana, Mary Francois, Laura Alvarez, Andrea West (reading a statement from consultant Dr. Nicole Scher of Salem State University), and new Latin teacher Delena Nguyen all contested the characterizations made in the webinar.
-      - Clinical social worker Judy Louise, Meredith Rearden (a former MHS counselor), deacon John Whipple (a 35-year member of the Marblehead Task Force Against Discrimination), and musician Greg Colts all spoke to Liney's record fighting discrimination.
+      **Speakers alleging antisemitism and requesting an independent investigation** included teacher Mindy Greenberg, who stated she is leaving the district due to a hostile work environment and that district grievance procedures were not followed after her April 2022 complaint; teacher Jit Kanes; parent and Israeli-American Yael McGinn; sophomore David McGinn, who described identifying antisemitic content in a World Cultures class handout that was subsequently corrected; parent Deborah Noah; parent Sarah Palladian; parent Karen Taal; Lindsay Ne Parsec; Rabbi Yossi Lipski; Rabbi Michael Ragin (urging use of the IHRA definition of antisemitism); and antisemitism-summit organizer Nait Friedlander.
       
-      **Points of broad agreement:** Virtually all speakers, regardless of their position on the specific allegations, expressed support for an independent outside investigation.
-    key_speakers: ["Mindy Greenberg (MHS Spanish teacher, departing)", "Candace Liney (MHS Spanish teacher, subject of allegations)", "Jit Kanes (MHS teacher, webinar presenter)", "Mary Francois (MHS World Language teacher)", "Laura Alvarez (MHS World Language teacher)", "Elmer Magana (MHS World Language teacher)", "David McGinn (MHS student)", "Yael McGinn (parent)", "Rabbi Yossi Lipski", "Rabbi Michael Ragin (Congregation Shirat Hayam)", "Deborah Noah (parent)", "Sarah Palladian (parent)", "Karen Taal McL (parent)", "John Whipple (Marblehead Task Force Against Discrimination)", "Nait Friedlander (antisemitism summit organizer)", "Judy Louise (MHS clinical social worker)", "Meredith Rearden (former MHS counselor)", "Judith Drachman (resident)", "Ellan Tager (resident)"]
-  - topic: labor-personnel
+      **Other speakers** included resident Ellan Talguy and resident Judith Drachman, who argued that political activism — on any side — should be kept out of school; and Greg Colts, who provided context on the Israeli flag dispute.
+      
+      Many speakers called for: (1) an independent investigation conducted by an organization experienced in antisemitism; (2) use of the IHRA definition and examples; (3) Jewish community input in vetting the investigative organization; (4) investigation of antisemitic incidents involving both students and staff; and (5) a review of current curriculum for antisemitic content.
+    key_speakers: ["Mindy Greenberg (MHS Spanish teacher, departing)", "Candace Liney (MHS Spanish teacher, accused)", "Elmer Magana (MHS World Language teacher)", "Mary Francois (MHS World Language teacher)", "Laura Alvarez (MHS World Language teacher)", "Jit Kanes (MHS teacher)", "Yael McGinn (parent)", "David McGinn (MHS student)", "Deborah Noah (parent)", "Sarah Palladian (parent)", "Karen Taal (parent)", "Rabbi Yossi Lipski", "Rabbi Michael Ragin", "John Whipple (Task Force Against Discrimination)", "Nait Friedlander (antisemitism summit organizer)", "Judy Louise (MHS clinical social worker)", "Meredith Rearden (former MHS counselor)"]
+  - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 6965
     end_seconds: 7954
-    headline: "Committee votes 4-0 to pursue independent investigation, deferring firm selection to June 26 meeting"
-    dek: "After deliberation, the committee unanimously approved an independent investigation in principle while delaying the choice of investigative firm to allow more vetting, including assessment of IHRA experience."
-    summary: |
-      Following public comment, the committee moved the independent investigation agenda item forward. New chair Schaffner disclosed she had filed a conflict-of-interest disclosure form with the town clerk after attending the June 10 webinar that was the subject of much public comment. Committee members discussed three investigative firms recommended by school committee counsel Tom Costello (letter dated June 18). One firm, described as Kirker Paget, was noted by one member as having substantially more experience (described as hundreds of discrimination investigations vs. single digits or a dozen for the others) and for providing a detailed description of deliverables including texts, emails, social media, and video.
-      
-      Members expressed concern that none of the firms had been contacted prior to the meeting, that at least one lacked specific antisemitism investigation experience, and that community input on firm selection was warranted. The committee voted 4-0 to approve moving forward with an independent investigation pending further review of applicants, with a follow-up meeting set for June 26.
-    key_speakers: ["Jen Schaffner (chair)", "Sarah Fox", "Allison Taylor", "Al Williams", "Tom Costello (school committee counsel, via Zoom)"]
+    headline: "Committee votes unanimously to proceed with independent antisemitism investigation, firm TBD"
+    dek: "Following public comment, the committee debated vetting criteria for investigative firms and voted to approve an investigation in principle, deferring firm selection to a meeting the following week."
+    summary: "Committee attorney Tom Costello had submitted three candidate investigative firms on June 18th. Committee members expressed a desire to vet the firms further — particularly regarding experience with antisemitism investigations and the scope and format of their final reports. One member noted that a phone call with one firm revealed no antisemitism investigation experience. The committee voted 4–0 to approve an independent investigation pending further review of applicants, and agreed to hold a follow-up meeting on June 26th to select a firm. The committee also noted that Chair Schaffner had filed a disclosure form with the town clerk after attending a June 10th webinar that was the subject of much of the public comment."
+    key_speakers: ["Jen Schaffner (chair)", "Tom Costello (school committee attorney, via Zoom)", "Allison Taylor", "Al Williams", "Sarah Fox"]
   - topic: admin-housekeeping
     topic_confidence: 0.88
     start_seconds: 8002
-    end_seconds: 8446
-    headline: "Interim Superintendent McGinnis recognizes retirees representing 160 combined years of service"
-    dek: "Ten staff members retiring from the district were recognized, including Village School Principal Mandy Murphy, who is departing for a superintendent role in Danvers."
-    summary: |
-      Interim Superintendent Dr. Teresa McGinnis, assisted by Middle School Principal Matt Fox and Village School Principal Mandy Murphy, recognized ten retiring staff members with a combined 160 years of service: Robert Dillon (MHS English, 16 years), Mary Ellen Hart (Village School, 22 years), Henry Ottinger (MVMS engineering, 4 years), Joan Miller (MVMS SPED/interim AP, 21 years), John Payne (MHS marine tech, 16 years), Sue Pillsbury (speech-language pathologist, 22 years), Rachel Showerer (Glover literacy tutor, 14 years), Janice Ban (MHS business/DECA, 23 years), Harrick Wales (Village SPED, 23 years), and Principal Mandy Murphy (20+ years, departing for Danvers).
-      
-      McGinnis also introduced incoming leadership effective July 1: John Radu as interim superintendent, Lisa Maria Polito as assistant superintendent of student services, Mike Pifling as assistant superintendent of finance and operations, and Kelly Ferretti as HR manager.
-    key_speakers: ["Dr. Teresa McGinnis (interim superintendent)", "Matt Fox (MVMS principal)", "Mandy Murphy (Village School principal, retiring)"]
-  - topic: school-budget
+    end_seconds: 8400
+    headline: "Interim Superintendent McGinnis recognizes 10 retirees representing 160 combined years of service"
+    dek: "Retirees from Marblehead High School, Veterans Middle School, Village, and Glover schools were recognized, and incoming interim leadership was announced for July 1."
+    summary: "Dr. McGinnis and Principals Fox and Murphy recognized retiring staff including Robert Dillon (MHS English, 16 years), Mary Ellen Hart (Village, 22 years), Henry Ottinger (MVMS engineering, 4 years), Joan Miller (MVMS SPED/assistant principal, 21 years), John Payne (MHS marine tech, 16 years), Sue Pillsbury (SLP, 22 years), Rachel Showerer (Glover literacy tutor, 14 years), Janice Ban (MHS business, 23 years), Harrick Wales (SPED, 23 years), and Principal Mandy Murphy (Village, 20+ years). Dr. McGinnis also announced the incoming July 1 leadership team: interim superintendent John Radu, assistant superintendent of student services Lisa Maria Polito, assistant superintendent of finance and operations Mike Pifling, and HR manager Kelly Ferretti."
+    key_speakers: ["Dr. Teresa McGinnis (interim superintendent)", "Matt Fox (MVMS principal)", "Mandy Murphy (Village principal, retiring)"]
+  - topic: admin-housekeeping
     topic_confidence: 0.82
-    start_seconds: 8632
+    start_seconds: 8400
     end_seconds: 9044
-    headline: "Food services director reports record ~228,000 lunches served; new operations specialist position approved"
-    dek: "Director John Tito reported nearly 100,000 breakfasts and over 228,000 lunches served by a staff of 14, and the committee voted 4-0 to create a new nutrition operations specialist role funded from the revolving fund."
-    summary: |
-      Food Services Director John Tito reported a record year: approximately 100,000 breakfasts and 228,000 lunches served district-wide — described as enough to fill Gillette Stadium five times — with a staff of 14 and 11 vacancies. Highlights included new menu rotations, a partnership with local non-profit Jeff's Granola (donating ~$145 to the Marblehead Food Pantry), continuation of the half-day lunch pilot, and a capital upgrade to the Village School walk-in freezer/refrigerator to double capacity. The district is also joining the Metro North buying group.
-      
-      Interim finance director Mary Delay noted that the new nutrition operations specialist position could be funded within the school nutrition revolving fund. The committee also noted the school nutrition union had successfully decertified from its prior union, freeing the district to discuss wage schedule adjustments. The committee voted 4-0 to approve the new position.
-    key_speakers: ["John Tito (director of food services)", "Mary Delay (interim director of finance and operations)"]
+    headline: "School Nutrition Director reports record meal counts; committee approves new operations specialist position"
+    dek: "Food Services Director John Tito reported nearly 100,000 breakfasts and over 228,000 lunches served district-wide, and requested a new nutrition operations specialist position funded by the revolving fund."
+    summary: "John Tito reported record meal service — approximately 100,000 breakfasts and 228,000 lunches — with a staff of 14 covering 11 vacancies. Capital improvements included a new walk-in freezer and refrigerator at Village School. The department is joining the Metro North buying cooperative. The School Nutrition Union decertified from AFSB, allowing the district to adjust wage schedules. The committee voted 4–0 to approve creation of a Nutrition Operations Specialist position, funded from the school nutrition revolving fund."
+    key_speakers: ["John Tito (Director of Food Services)", "Mary Delay (interim Director of Finance and Operations)"]
   - topic: school-budget
     topic_confidence: 0.75
-    start_seconds: 9307
-    end_seconds: 9576
-    headline: "School improvement plans for Brown, Glover, and Village schools approved 4-0"
-    dek: "Assistant Superintendent Julia presented plans for Brown and Glover schools, noting 89% of K-3 students at or above grade-level reading; Village School Principal Murphy presented the Village plan."
-    summary: |
-      Assistant Superintendent Julia presented school improvement plans for Brown and Glover elementary schools in the absence of their principals. Goals for both schools focused on: (1) increasing student achievement and strengthening tier-one instruction using iReady and the new M-Class early literacy screener; (2) professional culture development through PLCs and faculty meetings; and (3) DEI goals centered on DCAP implementation. Brown and Glover reported ending the year with 89% of K–3 students at or above grade-level reading.
-      
-      Village School Principal Mandy Murphy presented a largely consistent plan continuing work on literacy and math curriculum alignment (Wit & Wisdom), professional learning communities, and DEI/PBIS initiatives. All three plans were approved 4-0.
-    key_speakers: ["Julia (assistant superintendent of teaching and learning)", "Mandy Murphy (Village School principal)"]
-  - topic: school-budget
-    topic_confidence: 0.72
-    start_seconds: 9771
-    end_seconds: 10004
-    headline: "FY24 unencumbered budget balance reported at ~$988K with final turnback expected under 1%"
-    dek: "Interim finance director Mary Delay reported the district prepaid $900K in SPED tuition and $300K in technology purchases, with a modest year-end surplus anticipated."
-    summary: "Interim Director of Finance and Operations Mary Delay reported an unencumbered balance of approximately $988,000 as of mid-afternoon on the meeting date, with two payrolls and three accounts payable warrants still pending. She anticipated a final year-end turnback of less than 1% of the total budget. She noted the district had prepaid $900,000 in special education out-of-district tuition and pre-purchased $300,000 in technology. Any surplus reverts to the town as free cash without a committee vote."
-    key_speakers: ["Mary Delay (interim director of finance and operations)"]
+    start_seconds: 9044
+    end_seconds: 9184
+    headline: "Committee approves $127,804 in annual contract salary adjustments"
+    dek: "A small additional increase of $8,162 was added to the previously approved May 16 salary adjustment total."
+    summary: "On the recommendation of interim Superintendent McGinnis and interim Finance Director Delay, the committee voted 4–0 to approve individual contract salary adjustments totaling $127,804, an increase of $8,162 over the amount approved at the May 16 meeting."
+    key_speakers: ["Dr. Teresa McGinnis (interim superintendent)", "Mary Delay (interim Director of Finance and Operations)"]
   - topic: school-budget
     topic_confidence: 0.78
-    start_seconds: 10053
-    end_seconds: 10480
-    headline: "DESE focused program review found 28 of 34 special education standards fully met; 6 partially met"
-    dek: "Interim Director of Student Services Patty presented results of a January DESE review, with no violations but six standards only partially implemented, most tied to staffing shortages."
-    summary: |
-      The interim director of student services presented results of a DESE focused program review conducted in January. Of 34 standards reviewed, 28 met all required elements and 6 were partially implemented; no violations were found. Partially-met standards included: SLD determination documentation inconsistencies, age-of-majority notice (SE7) not consistently sent in students' 17th year, reevaluations not always completed on time or with a signed parent waiver (SE12), annual review timeliness (SE14), IEP distribution speed (SE18B), and service delivery delays without written family notice.
-      
-      The presenter noted most issues stem from chronic understaffing and called for higher summer teaching pay (currently $33/hour), arguing the district is losing staff to neighboring districts. Incoming Assistant Superintendent of Student Services Lisa Maria Polito will continue remediation work with team chairs, including a training session already scheduled for June 25.
-    key_speakers: ["Patty (interim director of student services)", "Dr. Teresa McGinnis (interim superintendent)"]
-  - topic: labor-personnel
-    topic_confidence: 0.9
-    start_seconds: 11192
-    end_seconds: 11579
-    headline: "Committee approves two-year interim superintendent contract with John Radu; $50K termination-without-cause clause discussed"
-    dek: "The contract runs through approximately June 2026, with a successor agreement deadline of March 15, 2026, and includes a $50,000 termination-without-cause payment in lieu of paying out the full contract."
-    summary: "The committee approved a two-year interim superintendent contract with John Radu 4-0. Discussion focused on a $50,000 termination-without-cause clause, which counsel explained was first introduced several contracts ago on advice of prior counsel as protection against having to pay out the entire remaining contract value. Members noted this provision is not standard in most Massachusetts superintendent contracts but provides fiscal protection to the district. The contract includes an initial bank of 15 sick-leave days, with 1.25 days accruing per month after the first year, and requires notification of contract extension or non-renewal by March 15, 2026."
-    key_speakers: ["Jen Schaffner (chair)", "Sarah Fox", "Allison Taylor"]
+    start_seconds: 9184
+    end_seconds: 9576
+    headline: "Special education program review: 28 of 34 standards fully met; staffing and compliance gaps noted"
+    dek: "Interim Director Patty presented the results of the DESE focused program review, noting six partially met standards related to documentation, timelines, and service delivery, largely attributed to understaffing."
+    summary: "The focused program review conducted in January found 28 of 34 standards fully meeting all required elements, with 6 partially met and no violations. Areas of partial compliance included: SLD determination documentation inconsistency, age-18 rights notice (SE7), re-evaluation timelines (SE12), annual review timelines (SE14), IEP distribution timing (SE18B), and service delivery delays without written parent notice. The interim director noted significant difficulty filling special education positions for the coming year and recommended increasing summer teaching staff pay above $33/hour to remain competitive. No vote was required on this item."
+    key_speakers: ["Patty (interim Director of Student Services)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
+    start_seconds: 9576
+    end_seconds: 9771
+    headline: "School improvement plans for Village, Brown, and Glover schools approved 4–0"
+    dek: "Plans for all three schools largely continue prior-year goals focused on tier-one instruction, professional culture, and DEI, with 89% of K–3 students at or above grade-level reading."
+    summary: "Interim Assistant Superintendent Julia and Principal Murphy presented improvement plans for Brown, Glover, and Village schools in the absence of principals Maxfield, Richards, and the departing Murphy. Goals across all three schools centered on strengthening tier-one instruction through Wit & Wisdom literacy curriculum, professional learning communities, and DCAP implementation. A notable metric: 89% of K–3 students at Brown and Glover ended the year at or above grade-level reading. The committee voted 4–0 to approve all three plans."
+    key_speakers: ["Julia (assistant superintendent, teaching and learning)", "Mandy Murphy (Village principal)"]
+  - topic: school-budget
+    topic_confidence: 0.7
+    start_seconds: 9771
+    end_seconds: 9908
+    headline: "FY24 budget shows approximately $988,000 unencumbered balance with final surplus expected under 1%"
+    dek: "Interim finance director reported an unencumbered balance as of noon that day, with two payrolls and three AP warrants still pending; a small turnback to the town is anticipated."
+    summary: "Interim Finance Director Delay reported an unencumbered FY24 balance of approximately $988,000 as of the meeting date, with two payrolls and three accounts payable warrants yet to be processed. She indicated the district had also pre-paid $900,000 in special education tuition and pre-purchased $300,000 in technology. The final surplus is expected to be less than 1% of the total budget. Any remaining balance reverts to the town as free cash without a committee vote."
+    key_speakers: ["Mary Delay (interim Director of Finance and Operations)"]
+  - topic: labor-personnel
+    topic_confidence: 0.88
     start_seconds: 9908
-    end_seconds: 9959
-    headline: "Annual contract salary adjustments of $127,804 approved 4-0"
-    dek: "The total reflects an $8,162 increase over the May 16 vote, covering cumulative adjustments across multiple individual contracts."
-    summary: "The committee approved annual individual contract salary adjustments totaling $127,804, an increase of $8,162 from the $119,642 approved on May 16. The delta reflected cumulative adjustments across multiple positions rather than a single new hire."
-    key_speakers: ["Mary Delay (interim director of finance and operations)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 11050
     end_seconds: 11192
-    headline: "Madison Eski hired as permanent Marblehead High School nurse after long-term sub stint"
-    dek: "Eski has served at MHS since February; one licensure item is pending but submitted, and the committee approved the hire 4-0."
-    summary: "The committee voted 4-0 to approve the hiring of Madison Eski as school nurse at Marblehead High School, on the recommendation of Interim Superintendent McGinnis. Eski has been serving as a long-term substitute at MHS since February. One licensure item is pending but has been submitted to the relevant authority. The committee also noted the annual lead-nurse designation must be addressed at a future meeting."
-    key_speakers: ["Dr. Teresa McGinnis (interim superintendent)"]
+    headline: "Committee approves two-year interim superintendent contract with John Radu at $50,000 termination-without-cause cap"
+    dek: "The contract includes a $50,000 termination-without-cause provision, described as protective of the district relative to paying out the full remaining contract."
+    summary: |
+      The committee voted 4–0 to approve a two-year interim superintendent contract with John Radu effective July 1, 2024. The contract includes a $50,000 termination-without-cause provision, which committee attorney Costello explained is equivalent to approximately three months' compensation and protects the district from paying out the full remaining contract term if separation occurs. A successor agreement must be negotiated on or before March 15, 2026. The contract also provides Radu with a bank of 15 sick days at the start, with accrual of 1.25 days per month thereafter.
+      
+      Also approved under consent action: schedule of bills totaling $605,563.66; six sets of meeting minutes dating from February through May 2024; and the hiring of Madison Eski as school nurse at Marblehead High School.
+    key_speakers: ["Jen Schaffner (chair)", "Allison Taylor", "Sarah Fox", "Al Williams"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

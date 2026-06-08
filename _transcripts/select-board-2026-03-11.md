@@ -11,23 +11,23 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board directs staff to model multi-tier override options; advances Scenario B budget framework"
-  summary: "The Marblehead Select Board held an extended session on the FY27 budget, reviewing three deficit scenarios and directing Town Administrator Thatcher Kezer to develop a matrix of tiered Prop 2½ override options for presentation at the March 25 meeting. The board reached broad consensus to use Scenario B — which reduces the school allocation by $1.5 million and moves curbside trash collection to a fee-based model — as the planning baseline, while acknowledging legal review of the trash-fee authority is pending. Four residents spoke during public comment raising concerns about scare tactics, bundled overrides, and service cuts."
+  headline: "Select board directs staff to develop multi-tier override scenarios ahead of March 19 budget vote"
+  summary: "The Marblehead Select Board reviewed FY27 budget scenarios and directed Town Administrator Thatcher Kezer to develop a matrix of override options ranging from a one-year restorative override to multi-year invest/stabilize tiers. The board discussed but did not formally vote on whether to adopt Scenario B, which would reduce school allocation by $1.5 million and shift curbside trash collection to a fee-based program estimated at approximately $250 per household annually. Public comment included residents raising concerns about scare tactics, the spirit of a prior town meeting article on single-item overrides, and the value of senior services."
   decisions:
     - "Approved annual all-alcohol seasonal club license renewal for Dolphin Yacht Club"
     - "Approved local Sunday entertainment license renewal for Dolphin Yacht Club"
-    - "Approved Company of Heroes annual 5K Run/Walk on September 12, 2026"
-    - "Adopted Sustainable Purchasing Policy to maintain DEP SMRP grant eligibility"
+    - "Approved Company of Heroes 5K Run/Walk on September 12, 2026"
+    - "Approved adoption of Sustainable Purchasing Policy for DEP grant eligibility"
     - "Approved motion to send letter of appreciation to family of Bob Whitewood"
-    - "Directed Town Administrator to model tiered override options for March 25 presentation"
-    - "Directed Town Administrator to proceed with Scenario B as planning baseline"
+    - "Set April 3 deadline and April 8 interviews for Affordable Housing Trust Fund vacancy"
   votes:
-    - motion: "Renew all-alcohol seasonal club license — Dolphin Yacht Club"
+    - motion: "Dolphin Yacht Club all-alcohol seasonal club license renewal"
       result: "in favor (unanimous)"
-    - motion: "Renew local Sunday entertainment license — Dolphin Yacht Club"
+    - motion: "Dolphin Yacht Club local Sunday entertainment license renewal"
       result: "in favor (unanimous)"
-    - motion: "Approve Company of Heroes 5K, September 12, 2026"
+    - motion: "Company of Heroes 5K approval"
       result: "in favor (unanimous)"
     - motion: "Adopt Sustainable Purchasing Policy"
       result: "in favor (unanimous)"
@@ -38,156 +38,140 @@ topic_segments:
   - topic: public-comment
     topic_confidence: 0.98
     start_seconds: 0
-    end_seconds: 1169
-    headline: "Four residents challenge override approach, trash fee, and alleged scare tactics"
-    dek: "Speakers pressed the board on bundled overrides, the $250 trash fee estimate, senior center cuts, and what one called a decades-long march toward fiscal crisis."
+    end_seconds: 1124
+    headline: "Residents raise concerns over override scare tactics, trash fees, senior center cuts"
+    dek: "Four residents addressed the board on structural budget pressures, the spirit of a prior town meeting override article, and the consequences of cutting citizen-facing services."
     summary: |
-      **Nick Ward (Ralston Road)** argued that structural demographic pressure will make the budget problem progressively worse and urged the board to pursue economic growth as a "door number three" beyond tax increases or service cuts.
+      Four residents spoke during public comment:
       
-      **Albert Jordan (Malta Avenue)** criticized the proposed trash fee as moving money between pockets with no net savings, opposed any reduction to the Senior Center, and warned that cutting it would increase healthcare and emergency-response costs.
-      
-      **Tom McMahon (Shorewood Road)** argued that curbside trash and recycling should be the last service cut, challenged the $250/year cost estimate as inaccurate, and contended that a bundled general override directly contradicts Town Meeting Article 50 (FY25), which passed with overwhelming support and called for single-item override ballot questions. He quoted article sponsor John Prinval: *"The petition is about giving voters more control. It ensures they can approve override expenditures they support without having to accept others they oppose."*
-      
-      **Lee Blair (Marblehead Current)** noted a community narrative that scare tactics are being used to pressure voters toward a tax override and asked the board to address it.
-      
-      **Sarah Bass (Beach Street)** said the fiscal cliff has been publicly charted since 2019, called it disingenuous for anyone to claim surprise, warned that threatening the library jeopardizes future debt-exclusion overrides and the town's AAA bond rating, and argued that recent corrections to insurance accounting in revolving funds should show up as savings somewhere in departmental budgets.
+      - **Nick Ward (Ralston Road)** argued the town's demographic pressures will keep driving operating deficits and urged the board to consider economic growth as a third path beyond tax increases or service cuts.
+      - **Albert Jordan (Malta Avenue)** opposed cuts to the senior center, arguing reduced services would increase healthcare and emergency-response costs, and questioned moving trash costs from property taxes to fees as simply shifting money between pockets.
+      - **Tom McMahon (Shorewood Road)** called including curbside trash in an override scenario a "catastrophic mistake," and argued that bundling override items violates the spirit of Town Meeting Article 50, which passed with overwhelming support and called for single-item overrides.
+      - **Lee Blair (Marblehead Current)** noted a community narrative that scare tactics are being used and asked the board to address it.
+      - **Sarah Bass (Beach Street)** said the town's financial cliff has been visible since at least 2019, criticized a pattern of unmet commitments, and warned that threatening the library risks future debt-exclusion overrides and the town's AAA bond rating.
     key_speakers: ["Nick Ward (resident)", "Albert Jordan (resident)", "Tom McMahon (resident)", "Lee Blair (Marblehead Current)", "Sarah Bass (resident)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
-    start_seconds: 1169
+    topic_confidence: 0.92
+    start_seconds: 1170
     end_seconds: 1435
-    headline: "Town Administrator reports Army Corps permit for Shipyard project; EV grant denied over 3A non-compliance"
-    dek: "Kezer also noted the Coffman School engagement session scheduled for March 18 and window/heating upgrades completed at the Pickett House and Franklin Street Fire Station."
+    headline: "Town administrator updates: Army Corps permit received for shipyard; EV grant denied over 3A"
+    dek: "Kezer reported progress on harbor resilience and building upgrades, and noted the town was denied a $50,000 EV charging grant due to MBTA 3A non-compliance."
     summary: |
-      Town Administrator Thatcher Kezer provided updates on several active projects:
+      Town Administrator Thatcher Kezer provided updates on several projects:
       
-      - **Marblehead Shipyard Resilience Improvement Project**: Army Corps of Engineers general permit received; MassDEP Chapter 91 license application in progress; awaiting word on Federal Port Infrastructure Development Program grant.
-      - **Brown School EV Charging**: $50,000 grant request rejected by DEP due to the town's non-compliance with MBTA Section 3A zoning.
-      - **MBTA 3A**: Planning Board held a public hearing the previous evening; outcome not yet available.
-      - **Coffman School**: Community engagement meeting set for March 18, 6 PM at Abbott Hall, facilitated by UConn TAB program.
-      - **Five Corners Intersection Redesign**: Working with Apex Engineers; 50% design target by October 2026.
-      - **Facilities**: Pickett House — 20 new energy-efficient windows installed. Franklin Street Fire Station — 13 new windows installed; new hot water heating system fully operational.
+      - **Marblehead Shipyard Resilience Project**: Army Corps of Engineers general permit received; now awaiting MassDEP Chapter 91 license and a federal Port Infrastructure Development Program grant decision.
+      - **Brown School EV charging**: A $50,000 grant request was denied due to the town's non-compliance with MBTA Section 3A zoning.
+      - **MBTA 3A**: The Planning Board held a public hearing the prior evening.
+      - **Coffman School community engagement**: Meeting scheduled for March 18 at Abbott Hall, facilitated by UConn TAB program.
+      - **Five Corners redesign**: Moving forward with Apex Engineers; 50% design targeted by October 2026.
+      - **Facilities**: Pickett House received 20 new energy-efficient windows; Franklin Street Fire Station received 13 new windows and a new hot water heating system.
     key_speakers: ["Thatcher Kezer (Town Administrator)"]
   - topic: trash-dpw
     topic_confidence: 0.97
     start_seconds: 1435
     end_seconds: 2327
-    headline: "DPW Director details winter operations and new hot-box purchase; MEMA storm reimbursement pending county threshold"
-    dek: "A new four-ton dual-burner hot box purchased through a Chapter 90 fair-share grant is expected by end of week to accelerate pothole repairs after 102 reported locations since January 23."
+    headline: "DPW details historic snow-removal season; new 4-ton hot box on order for pothole repairs"
+    dek: "DPW Director Amy McCue outlined winter operations involving up to 53 employees and 45 vehicles, and announced a new hot-box asphalt patcher expected by end of the week."
     summary: |
-      DPW Director Amy McCue provided an extensive briefing:
+      DPW Director Amy McCue reported on winter and pothole operations:
       
-      **Snow Operations**
-      - Pre-treatment: ~11 people, 9 vehicles, 1 loader; runs 2–6 hours per event.
-      - Full plowing: approximately 45–53 pieces of equipment from DPW, Board of Health, Cemetery, Park & Rec, and Water & Sewer; one event exceeded 30 continuous hours, another exceeded 40.
-      - Snow removal (midnight–7 AM): up to 50 vehicles, 40–50 employees; employees worked 18.5-hour days over multiple consecutive nights.
-      - Approximately 1,500 tons of salt used this season.
+      **Snow operations**: Pre-treatment uses 11 people and 9 vehicles; full plowing mobilizes 47–53 employees and approximately 45 pieces of equipment from DPW, Board of Health, Cemetery, Park and Rec, and Water and Sewer. This season included one event exceeding 30 continuous hours and one exceeding 40 hours. Approximately 1,500 tons of salt have been used. Snow removal required up to 50 vehicles and 18.5-hour workdays for multiple consecutive nights.
       
-      **Potholes**
-      - First calls came in January 12; 102 locations reported since January 23.
-      - Existing 3-ton hot box (purchased 2015) went into maintenance January 20, coinciding with major storms.
-      - A new **4-ton dual-burner hot box** was purchased using a Chapter 90 fair-share grant; expected delivery by end of week. It can reheat unused asphalt, extending crew efficiency.
-      - Cold patch applied this week as a stopgap; hot-box crews expected next week.
+      **MEMA disaster reimbursement**: The town submitted approximately $362,000 in documented storm costs (DPW alone ~$332,000). Eligibility depends on Essex County collectively reaching a $13 million threshold.
       
-      **MEMA Storm Reimbursement**
-      - Town submitted an estimate of approximately $362,000 (DPW base ~$332,000 plus emergency response) for a blizzard that set historic records.
-      - Reimbursement depends on Essex County collectively reaching a ~$13 million damage threshold; outcome uncertain.
+      **Potholes**: 102 pothole locations reported since January 23. The existing 2015 three-ton hot box went into maintenance during the heaviest storm period. A new four-ton dual-burner hot box, purchased through the Chapter 90 Share Fair grant, is expected by end of the week and will allow asphalt to be reheated rather than wasted.
     key_speakers: ["Amy McCue (DPW Director)", "Thatcher Kezer (Town Administrator)"]
   - topic: override
     topic_confidence: 0.99
     start_seconds: 2327
     end_seconds: 10758
     featured: true
-    headline: "Board directs Scenario B planning baseline and orders tiered override matrix for March 25 review"
-    dek: "After a lengthy discussion of Prop 2½ mechanics, three deficit scenarios, and override structure options, the board directed staff to model restoration, stabilization, and investment tiers — on both one-year and multi-year bases — for presentation March 25."
+    headline: "Board directs staff to model multi-tier override scenarios; leans toward Scenario B with trash fee"
+    dek: "After a detailed overview of Prop 2½ override mechanics and a review of the FY27 budget gap, the board discussed but did not formally vote on a planning direction, with a majority expressing support for Scenario B and multi-tier override options to be presented on March 25."
     summary: |
-      ### Prop 2½ Overview (Town Administrator / Finance)
-      Sasha (Finance) briefed the board on levy mechanics and override types:
-      - **Automatic 2.5% increase**: generates approximately $2.2 million on Marblehead's ~$79 million levy.
-      - **New growth**: approximately $300,000 this year.
-      - **General operating override**: permanently raises the levy base.
-      - **Debt exclusion**: temporary levy increase tied to a bond's life; drops off when debt is retired.
-      - **Capital expenditure exclusion**: temporary increase for one-time capital purchases.
-      - **Tiered/pyramid override**: voters choose among escalating dollar amounts; the highest tier receiving a majority yes is the amount approved. Example: Melrose passed a $13.5 million top tier (out of $9.3M / $11.9M / $13.5M options). Stoneham passed $12.5M over $9.3M. Orleans used a multi-question, multi-year structure.
-      - **Multi-year draw**: an override can be authorized at a total amount but drawn incrementally across years as the budget requires.
+      **Override mechanics overview (Sasha, Town Administrator's office)**
       
-      ### Budget Scenarios Recap
-      The board reviewed three scenarios from the prior week:
+      The board received a detailed briefing on override types:
+      - **General operating override**: Permanently increases the levy; requires simple majority at town meeting to authorize the ballot question.
+      - **Debt exclusion**: Temporarily raises the levy to cover borrowing costs for capital projects; expires when debt is retired.
+      - **Capital expenditure exclusion**: Temporary levy increase for non-borrowed capital spending.
+      - **Multi-tier/tiered override**: Voters choose among tiers (e.g., restore, stabilize, invest); the highest tier receiving majority approval determines the levy increase. Melrose ($9.3M / $11.9M / $13.5M — all three passed; $13.5M approved), Stoneham ($9.3M / $12.5M — $12.5M prevailed), and Orleans (multi-question with per-year options) were cited as recent examples.
+      - **Multi-year draw**: An approved override authorizes a levy increase up to a ceiling; the board can choose to draw less in earlier years and phase in the full amount.
       
-      | Scenario | School reduction | Trash fee | Workforce reduction |
-      |---|---|---|---|
-      | A (red) | None | None | ~30% (~56 FTEs) |
-      | B-school only (blue) | $1.5M | None | ~21% (~40 FTEs) |
-      | B-full / Yellow | $1.5M | ~$2.0M fee | ~11% (~20.5 FTEs) |
+      **Budget gap summary**
       
-      The $1.5M school allocation reduction is based on proportional sharing of FY27 benefit-cost increases (healthcare, pension, OPEB) using actual FY26 active-participant data.
+      The town started with a ~$7 million townwide deficit ($5M municipal, $2M schools). Three scenarios were reviewed:
       
-      The curbside trash fee analysis:
-      - Cost of curbside collection, recycling, and disposal (excluding schools and municipal buildings): approximately **$2,037,000**.
-      - ~8,000 households → approximately **$250/year** per household.
-      - Survey: 10% of MA towns offer both curbside and transfer station (Marblehead's current setup); 46% transfer-station only; 41% curbside only.
-      - Average annual fee among towns charging one: **$238.74**; range ~$100–$432.
-      - Board of Health would set the final fee schedule; legal opinion from Town Counsel Lisa Mead requested on whether select board or Board of Health has authority.
+      | Scenario | Description | Staff reduction |
+      |---|---|---|
+      | A (red) | No school cut, no trash fee | ~30% (~56 positions) |
+      | B (blue/yellow) | Reduce school allocation by $1.5M + shift ~$2M trash to fee | ~11% (~20.5 positions) |
       
-      ### Board Discussion
-      **Aaron Noonan** argued Scenario B is justified: the town already imposes fees for kindergarten (~$4,000/child) and extracurricular sports (~$900/child); a curbside trash fee is within that norm. Decimating 21–30% of the workforce is not acceptable.
+      Key revenue drivers of the deficit: loss of ~$2M in free cash reliance, ~$1M decline in local receipts, ~$2M healthcare/pension cost increase, and ~$1.9M trash contract increase.
       
-      **Moses (board member)** preferred a cleaner approach: present Scenario A numbers with no trash fee, throw the full deficit to voters, and rely on a transparent restoration override. He expressed concern that the trash fee adds political complexity and may distract from the core message.
+      **Trash fee analysis**
       
-      **Jim (board member)** said he cannot close the library, Council on Aging, or parks, so Scenario A is a non-starter. He expressed reservations about the trash fee being insufficiently studied and said the $250 figure could rise significantly, but ultimately directed staff to plan for **Scenario B**.
+      Board of Health Director Andrew presented data: 10% of Massachusetts towns offer both curbside and transfer-station services (as Marblehead does); 46% have transfer-station only; 41% curbside only. Average annual household fee statewide is ~$238. The estimated cost of curbside collection and disposal for approximately 8,000 households is ~$2.037 million, yielding an estimated ~$250/year per household fee. Schools and municipal buildings are excluded from that calculation. New automated-cart contract (16,000 barrels at ~$904,000, financed over 5 years via waste revolving fund) is pending.
       
-      **Alexa (board member)** raised concern about reducing the Community Development department to just a town planner, noting active multi-million-dollar projects: $11M Port Infrastructure Development Program grant pending for the Shipyard, $175,000 rail-trail work ready, $150,000 Five Corners design underway, $100,000+ Green Communities grant at the finish line, and ongoing CCM grants for State Street landing.
+      **Board discussion**
       
-      **Board consensus**: Direct Thatcher to use **Scenario B** as the planning baseline for the balanced budget to be voted March 19, pending legal opinion on trash-fee authority.
+      - **Erin Noonan** expressed strong support for Scenario B, arguing the fee is consistent with other town fees (kindergarten, sports) and that an 11% staff reduction is far preferable to 21% or 30%.
+      - **Moses Grader** preferred keeping trash in the general fund and presenting a clean restorative override to voters, expressing concern the trash fee would distract from the core override message; favored a one-year restorative override with menu options.
+      - **Jim Falk** said he could not support Scenario A given its impact on the library, Council on Aging, and parks, but expressed concern that the trash fee has not been fully studied; ultimately directed staff to plan with Scenario B.
+      - **Alexa Ewing** raised concerns about decimating the Community Development department given multi-million-dollar projects in the pipeline (shipyard, Five Corners, Green Communities, State Street landing, rail trail).
+      - **Dan Zisson** noted both municipal and school staffing have declined significantly since FY18 and argued the deficit stems from a convergence of one-time cost drivers.
       
-      ### Override Structure Direction
-      The board discussed one-year vs. multi-year, and single vs. tiered options. Board members broadly agreed on multiple tiers. Aaron outlined a three-tier framework:
+      The board did not take a formal recorded vote on Scenario A vs. B, but the chair summarized a consensus to direct Thatcher to proceed with Scenario B planning, subject to a forthcoming legal opinion from Town Counsel Lisa Meade on the Board of Health's authority to impose the trash fee.
       
-      - **Tier 1 — Restore**: Avoid the severe cuts in the balanced budget; restore staffing; include $250,000 stabilization fund contribution per board policy.
-      - **Tier 2 — Stabilize** (3-year): Restore prior service-level cuts from years of level-funding attrition where appropriate; fund annual vehicle/building maintenance; address public safety staffing (return to ~32 police officers pre-FY25; review firefighter positions to reduce OT); implement compensation study salary corrections.
-      - **Tier 3 — Invest/Enhance**: Forward-looking improvements; fund $1M annual capital budget line; increase DPW capacity; restore lifeguards; modernize service offerings aligned with neighboring communities; gather department-head input on community needs.
+      **Override structure direction to staff**
       
-      Staff directed to build a matrix showing one-year and multi-year cost projections for each tier and present it at the **March 25 Select Board meeting**.
+      The board asked Thatcher to return on March 25 with a matrix of override options built around:
+      1. **Tier 1 (Restore)**: One-year restorative override covering staffing cuts needed for a balanced budget, including a $250,000 stabilization fund contribution.
+      2. **Tier 2 (Stabilize)**: Restore plus protect/sustain essential services through FY29; restore select prior-year cuts; fund annual vehicle/maintenance capital; review police and fire staffing levels toward 32 officers.
+      3. **Tier 3 (Invest/Enhance)**: Stabilize plus fund $1M annual capital line, implement the compensation study, increase DPW road capacity, and address other department-identified community needs.
       
-      **Key timeline**:
-      - March 19: Select Board votes on balanced (Scenario B) departmental budgets.
-      - March 25: Staff presents override tier matrix.
-      - March 28: Finance Committee reviews all departmental budgets.
-      - April 6: Warrant night.
-      - May 5 (approx.): Annual Town Meeting.
-    key_speakers: ["Sasha (Finance)", "Aaron Noonan (Select Board)", "Moses (Select Board)", "Jim (Select Board)", "Alexa (Select Board)", "Dan (Select Board)", "Thatcher Kezer (Town Administrator)", "Andrew (Board of Health / DPW — trash contract)", "Town Moderator"]
+      The board agreed that all tiers would be structured as a single town meeting article authorizing the select board to place questions on the ballot, with the actual question design to be determined at a future meeting.
+    key_speakers: ["Sasha (Town Administrator's office)", "Thatcher Kezer (Town Administrator)", "Erin Noonan (Select Board)", "Moses Grader (Select Board)", "Jim Falk (Select Board)", "Alexa Ewing (Select Board)", "Dan Zisson (Select Board)", "Andrew (Board of Health Director)", "Town Moderator"]
   - topic: permits-zoning
     topic_confidence: 0.95
-    start_seconds: 10758
+    start_seconds: 10802
     end_seconds: 10848
     headline: "Board renews Dolphin Yacht Club alcohol and Sunday entertainment licenses"
-    dek: "Both seasonal licenses for the Dolphin Yacht Club at 17 Alton Place, Manager Scott Kelly, were renewed unanimously subject to standard conditions."
+    dek: "Both license renewals passed unanimously, subject to standard conditions including tax compliance and department approvals."
     summary: |
-      The Select Board voted unanimously to renew:
-      1. All-alcohol seasonal club license — Dolphin Yacht Club, 17 Alton Place, Manager Scott Kelly — subject to taxes/fees paid, department approvals, and compliance with Chapter 304 of the Acts of 2004.
-      2. Local Sunday entertainment license — Dolphin Yacht Club, 17 Alton Place — subject to taxes/fees paid and Commonwealth DPS approval.
+      The board voted unanimously to renew:
+      - All-alcohol seasonal club license for Dolphin Yacht Club, 17 Alton Place, Manager Scott Kelly.
+      - Local Sunday entertainment license for Dolphin Yacht Club, 17 Alton Place.
+      
+      Both approvals were subject to all taxes and fees being paid, applicable department approvals, and compliance with Chapter 304 of the Acts of 2004.
   - topic: recreation-events
-    topic_confidence: 0.97
+    topic_confidence: 0.95
     start_seconds: 10848
     end_seconds: 10942
-    headline: "Board approves Company of Heroes annual 5K on September 12, 2026"
-    dek: "The race starts at the VFW on West Shore Drive, loops through town, and returns to the VFW; approximately 150 participants expected; proceeds fund service-dog training for veterans with PTSD."
-    summary: "The Select Board approved a request from Claudette Mason on behalf of Company of Heroes to hold the annual 5K Run/Walk/Rock on **Saturday, September 12, 2026**, starting at 9:00 AM at the VFW on West Shore Drive. Conditions: certificate of insurance naming the town as additionally insured; approval from Marblehead Police and Fire; police details as determined by Marblehead Police; no permanent street markings."
-  - topic: admin-housekeeping
-    topic_confidence: 0.93
+    headline: "Board approves Company of Heroes 5K on September 12, 2026"
+    dek: "The annual fundraiser for service-dog training for veterans with PTSD was approved to loop through town starting and ending at the VFW on West Shore Drive."
+    summary: "The board unanimously approved a request from Claudette Mason of Company of Heroes to hold the annual 5K Run/Walk/Rock on Saturday, September 12, 2026, starting at 9:00 AM at the VFW on West Shore Drive. Approximately 150 participants are expected. Conditions include certificate of insurance naming the town as additionally insured, police and fire approval, police details as required, and no permanent street markings."
+  - topic: trash-dpw
+    topic_confidence: 0.88
     start_seconds: 10942
+    end_seconds: 10988
+    headline: "Board adopts Sustainable Purchasing Policy to preserve DEP grant eligibility"
+    dek: "The policy update is required for continued access to the state's Sustainable Materials Recovery Program grants."
+    summary: "The board unanimously approved adopting a Sustainable Purchasing Policy, described as modest adjustments to existing reusable-purchasing guidelines. Adoption is required for the town to remain eligible to apply for Sustainable Materials Recovery Program (SMRP) grants through MassDEP. The policy includes \"wherever feasible\" language limiting its burden on town operations."
+    key_speakers: ["Thatcher Kezer (Town Administrator)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 10988
     end_seconds: 11174
-    headline: "Board adopts Sustainable Purchasing Policy, opens Affordable Housing Trust vacancy, and plans April 9 department-head forum"
-    dek: "The policy adoption preserves the town's eligibility for DEP Sustainable Materials Recovery Program grants; an Affordable Housing Trust Fund vacancy will accept applications through April 3."
+    headline: "Board sets April 3 application deadline for Affordable Housing Trust vacancy; plans April 9 community forum"
+    dek: "Board also voted to send a letter of appreciation to the family of recently deceased volunteer Bob Whitewood."
     summary: |
-      **Sustainable Purchasing Policy**: Adopted unanimously. Adoption is required to remain eligible for DEP Sustainable Materials Recovery Program (SMRP) grants. Policy requires sustainable purchasing "where feasible."
+      **Affordable Housing Trust Fund vacancy**: Applications due April 3; interviews at the April 8 select board meeting.
       
-      **Affordable Housing Trust Fund vacancy**: Applications due **April 3**; interviews at April 8 Select Board meeting.
+      **Bob Whitewood**: The board voted unanimously to send a letter of appreciation to the family of Bob Whitewood, recognizing his extensive volunteer contributions to the town.
       
-      **Recognition**: Board voted unanimously to send a letter of appreciation to the family of Bob Whitewood, noting his town-wide involvement.
-      
-      **Department-Head Community Forum**: Board member Aaron Noonan announced an event scheduled for **April 9, 10 AM–12 PM** at the Community Center. Department heads will present their operations, priorities, projects, and challenges, followed by Q&A. Superintendent and new Light Commissioner also being considered as invitees. To be posted as a Select Board meeting to allow member attendance. Town Administrator will be away; Noonan will facilitate.
-    key_speakers: ["Thatcher Kezer (Town Administrator)", "Aaron Noonan (Select Board)"]
+      **Community engagement forum**: Board member Alexa Ewing announced a department-head forum scheduled for April 9, 10 AM–12 PM at the Community Center, to be facilitated with assistance from Jamie Block and Lisa Hooper. Department heads will present summaries of their operations, priorities, and challenges, followed by Q&A with residents. The board discussed posting it as a select board meeting to allow member attendance. Town Administrator Kezer will be unavailable due to a prior commitment.
+    key_speakers: ["Alexa Ewing (Select Board)", "Erin Noonan (Select Board)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

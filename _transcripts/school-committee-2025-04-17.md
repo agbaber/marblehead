@@ -11,29 +11,30 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "School Committee advances flag/banner policy to third reading with new clarifying language"
-  summary: "The Marblehead School Committee held a second reading of a proposed flag and banner policy, agreeing to add language clarifying the policy does not apply to student artwork, sports banners, or personal attire, and to include recognition of heritage months. The committee also voted unanimously to not participate in the school choice program for 2025-26, approved a $6,969.44 senior class donation, approved the English 3D curriculum for English learners in grades 7-12, and approved a memorandum of understanding with Marblehead Recreation and Parks. A proclamation declaring April 2025 Sexual Assault Awareness Month was also approved."
+  headline: "School Committee advances flag/banner policy to third reading with planned additions"
+  summary: "The Marblehead School Committee held a second reading of a proposed flag and banner display policy, agreeing to add language clarifying the policy does not apply to student artwork, sports banners, or personal items, and to recognize heritage months. The committee voted unanimously on several other items: to not participate in the school choice program for 2025–26, to approve a $6,969.44 senior class donation for a graduation banner and water bubblers, to proclaim April 2025 as Sexual Assault Awareness Month, and to adopt the Houghton Mifflin Harcourt English 3D curriculum for grades 7–12. A memorandum of understanding with Recreation and Parks was also approved."
   decisions:
-    - "Approved not participating in school choice program for 2025-26 school year"
+    - "Approved motion not to participate in school choice program for 2025–26"
     - "Approved senior class donation of $6,969.44 for graduation banner and water bubblers"
     - "Approved Sexual Assault Awareness Month proclamation for April 2025"
+    - "Approved English 3D curriculum for English Learner Education grades 7–12"
     - "Approved schedule of bills for $958,360.52"
-    - "Approved English 3D curriculum for English learner education grades 7-12"
     - "Approved MOU with Marblehead Recreation and Parks Department through August 31, 2026"
-    - "Continued flag and banner policy IMDB to a third reading with additional clarifying language"
+    - "Continued flag and banner policy to third reading with planned language additions"
   votes:
-    - motion: "Not participate in school choice for 2025-26"
+    - motion: "Not participate in school choice 2025–26"
       result: "in favor (unanimous)"
-    - motion: "Approve senior class donation of $6,969.44"
+    - motion: "Approve senior class donation $6,969.44"
       result: "in favor (unanimous)"
     - motion: "Approve Sexual Assault Awareness Month proclamation"
       result: "in favor (unanimous)"
-    - motion: "Approve schedule of bills for $958,360.52"
+    - motion: "Approve English 3D curriculum grades 7–12"
       result: "in favor (unanimous)"
-    - motion: "Approve English 3D curriculum for grades 7-12"
+    - motion: "Approve schedule of bills $958,360.52"
       result: "in favor (unanimous)"
-    - motion: "Approve MOU with Recreation and Parks through August 31, 2026"
+    - motion: "Approve MOU with Recreation and Parks"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -41,182 +42,163 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 0
     end_seconds: 210
-    headline: "Student rep reports sports scores, musical success, and AP exam season"
-    dek: "Student representative Ella Ana provided updates including spring sports records, the Hades Town musical, and upcoming AP exams."
-    summary: "The meeting opened with the Pledge of Allegiance and a student representative update covering quarter three ending, senior projects launching, the school musical Hades Town, spring sports standings, and the upcoming AP exam period. Committee members offered commendations to Steve Ek (technology director) and Katie Freegan (Village School choral coordinator)."
-    key_speakers: ["Jen Schaffner (Chair)", "Ella Ana (Student Representative)", "Allison Taylor (Member, via Zoom)", "Sarah Fox (Member)"]
+    headline: "Student representative updates; commendations for technology director and Village School teacher"
+    dek: "Student rep Ella Ana reported on spring sports, the musical Hades Town, and AP exam season; committee members commended staff members for above-and-beyond work."
+    summary: "Student representative Ella Ana provided a school update including spring sports records, the end of quarter three, and upcoming AP exams. Committee member Allison Taylor commended technology director Steve Ek for contributions to professional development presentations. Another committee member praised Village School teacher Katie Freegan for coordinating the Northeast Treble Concert experience for students."
+    key_speakers: ["Ella Ana (student representative)", "Allison Taylor (committee member)", "Jen Schaffner (committee chair)"]
   - topic: public-comment
-    topic_confidence: 0.98
+    topic_confidence: 0.99
     start_seconds: 210
     end_seconds: 2032
-    headline: "Residents urge committee to table, revise, or abandon flag and banner policy"
-    dek: "Six speakers addressed the proposed flag and banner policy, raising concerns about First Amendment implications, scope of the policy, and lack of community input."
+    headline: "Six speakers address proposed flag and banner display policy at public comment"
+    dek: "Residents, a student, and an attorney urged the committee to table, narrow, or add viewpoint-neutrality language to the draft policy before its next reading."
     summary: |
-      Public comment focused almost entirely on the proposed flag and banner policy. Speakers included:
+      Six speakers addressed the committee during public comment, all focused on the proposed flag and banner policy.
       
-      - A middle school student (Kara) who argued that removing displays would affect student artwork and encouraged a student poll.
-      - Margaret Clark (29 Mulford Street) who questioned the urgency of the policy, the breadth of the language, and the absence of broad community notification.
-      - Nyla Dub (via Zoom) who proposed adding a viewpoint neutrality clause with three criteria: values-based, curriculum-based, and viewpoint neutral.
-      - Angus McQuilkin (39 Lane) who raised three points: language previously voted to be removed had not been removed; a prohibition on third-party petitions remained and was constitutionally questionable; and he asked what would happen when teachers refuse to comply.
-      - Erin Opperman (14 Anderson Street), identifying herself as a constitutional lawyer and queer mother of a Marblehead student, who argued the policy was premature and risked litigation under the First Amendment.
-      - Audrey House (12 Lincoln Park) who asked the committee to table the policy.
-      - Diane Gora (24 Nicholson Street) who asked what justification the committee had for removing enforcement from the administration.
-      - Jeanie Lambkin (via Zoom) who asked for clarification on the three-readings requirement and what accountability would look like if the policy were violated.
-      
-      The chair clarified in response to public comment that language regarding 'symbolic displays' had been previously voted to be struck, and that the town's flag policy routes requests through the town administrator rather than the select board.
-    key_speakers: ["Jen Schaffner (Chair)", "Margaret Clark (Resident)", "Nyla Dub (Resident, via Zoom)", "Angus McQuilkin (Resident)", "Erin Opperman (Resident)", "Audrey House (Resident)", "Diane Gora (Resident)", "Jeanie Lambkin (Resident, via Zoom)"]
-  - topic: school-budget
-    topic_confidence: 0.75
-    start_seconds: 2233
-    end_seconds: 2800
-    headline: "School Committee votes unanimously to opt out of school choice for 2025-26"
-    dek: "Superintendent explained the annual school choice opt-out process; the committee voted 4-0 to not participate, citing financial, logistical, and student-need concerns."
-    summary: "The committee held the required annual public hearing on school choice participation under MGL Chapter 76, Section 12B. Superintendent John recommended opting out for 2025-26. He explained that participating districts cannot review disciplinary records, IEPs, or 504 plans before accepting students, and that the state reimbursement rate for school choice students is $5,000 per pupil versus the substantially higher per-pupil allocation for resident students — a difference of more than $10,000. Marblehead has never participated in school choice. The committee voted 4-0 to opt out."
-    key_speakers: ["Jen Schaffner (Chair)", "Superintendent (John)", "Brian Oda (Member)", "Sarah Fox (Member)", "Allison Taylor (Member, via Zoom)"]
+      - A middle school student argued that removing symbolic displays would harm the educational environment and suggested a student poll.
+      - Margaret Clark (29 Mulford Street) raised procedural concerns including lack of broad parent notification, absence of approved meeting minutes, and argued the policy's scope was broader than its agenda description.
+      - Nyla (online) proposed adding explicit viewpoint-neutrality language with three criteria: values-based, curriculum-based, and viewpoint neutral.
+      - Angus McQuilkin (39 Lane) raised three concerns: language about symbolic displays had not been removed despite a prior committee motion; a prohibition on third-party petitions remains and may be unconstitutional; and teachers who refuse to comply may face discipline.
+      - Aaron Opperman (14 Anderson Street), identifying as a constitutional lawyer and queer parent, argued the policy is premature, legally problematic under the First Amendment, and that no flag policy was necessary.
+      - Audrey House (12 Lincoln Park) asked the committee to table the policy, arguing the existing legal framework does not require blanket suppression.
+      - Diane Gora (24 Nicholson Street) asked what justification the committee had for removing enforcement authority from school administration.
+    key_speakers: ["Student (unnamed middle schooler)", "Margaret Clark (resident)", "Nyla (resident, online)", "Angus McQuilkin (resident)", "Aaron Opperman (resident, attorney)", "Audrey House (resident)", "Diane Gora (resident)", "Jeanie Lambkin (resident, online)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
-    start_seconds: 2800
+    start_seconds: 2233
+    end_seconds: 2576
+    headline: "Committee votes unanimously not to participate in school choice for 2025–26"
+    dek: "Superintendent recommended opting out, citing fiscal pressures, inability to review student disciplinary or IEP records prior to enrollment, and the $5,000 per-pupil funding differential versus standard per-pupil aid."
+    summary: "The superintendent presented the annual school choice public hearing, recommending Marblehead not participate in the state school choice program for 2025–26. He noted that participating districts cannot review prospective students' disciplinary records, IEPs, or 504 plans prior to enrollment, and that the per-pupil reimbursement under school choice is approximately $5,000 compared to over $10,000 for resident students — a gap borne by local taxpayers. The committee noted that Marblehead has never participated in school choice. The committee also noted that a recent collective bargaining agreement extended to all staff units the ability to enroll their own children on a space-available basis. The committee voted 4–0 to opt out."
+    key_speakers: ["John (superintendent)", "Jen Schaffner (committee chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2788
     end_seconds: 3175
-    headline: "Senior class president presents $6,969.44 donation for graduation banner and water bubblers"
-    dek: "Class of 2025 president Jared Kach requested committee approval for donations to replace an outdated graduation banner and three water bottle filling stations."
-    summary: |
-      Senior class president Jared Kach presented a donation request totaling $6,969.44. The donation covers:
-      
-      | Item | Cost |
-      |---|---|
-      | New vinyl graduation banner with wind slits | $875.00 |
-      | Three water bottle bubblers (cafeteria, 1st floor A wing, 2nd floor A wing) | $6,094.44 |
-      
-      The banner will be produced by a local vendor; bubblers will be ordered and installed by the facilities department and reimbursed. The committee voted 4-0 to approve. The existing banner, donated by the class of 2017, will remain displayed in the school.
-    key_speakers: ["Jared Kach (Senior Class President)", "Jen Schaffner (Chair)", "Sarah Fox (Member)"]
+    headline: "Committee approves $6,969.44 senior class donation for banner and water bubblers"
+    dek: "Class of 2025 president Jared presented plans to replace the outdoor graduation banner and three water bubblers in high-traffic locations."
+    summary: "Senior class president Jared presented the Class of 2025's planned legacy donation. The donation covers a new vinyl graduation banner ($875) designed with wind slits for outdoor use, replacing a 2017 banner originally designed for indoor graduation, and three replacement water bottle filling stations in the cafeteria and A-wing floors ($6,094.44 total). The facilities department will order and install the bubblers and be reimbursed by the class. The committee voted 4–0 to approve the donation totaling $6,969.44."
+    key_speakers: ["Jared (senior class president, Class of 2025)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 3175
-    end_seconds: 3545
-    headline: "Superintendent reports middle school principal Matt Fox named finalist for Andover position"
-    dek: "Superintendent provided April district updates including a pending departure of the longtime middle school principal and various school events."
+    end_seconds: 3594
+    headline: "Superintendent reports middle school principal Matt Fox is finalist for Andover position"
+    dek: "Superintendent provided spring district updates including the departure of longtime middle school principal Matt Fox, Project Reboot, unified track, and kindergarten orientations."
     summary: |
-      The superintendent's April district update covered several items:
-      
-      - Middle school principal Matt Fox has been named a finalist for a principal position at West Middle School in Andover; the superintendent expressed gratitude for his years of service and noted the district will form a search committee.
-      - A Project Reboot presentation on device usage was held for parents and students with support from PTOs.
-      - The school musical Hades Town ran the previous weekend to strong reviews.
-      - Unified track had held three meets; the superintendent attended the Salem meet and praised the inclusivity of unified sports.
-      - The superintendent judged a culinary arts Chopped Challenge at the high school.
-      - Kindergarten orientations were held at Brown School and Glover School.
+      Superintendent updates included:
+      - Middle school principal Matt Fox was named finalist for a principal role at West Middle School in Andover; his departure is anticipated.
+      - Project Reboot, focused on device use, was brought to the district by Julia Ferrera with PTO/PCO support.
+      - The musical Hades Town ran successfully over the prior weekend.
+      - Unified track held three meets; the superintendent attended the Salem contest.
+      - Kindergarten orientations occurred at Brown and Glover schools.
+      - The superintendent judged a culinary arts chopped challenge at the high school.
+      - Third grade parents were welcomed to Village School for the grade four transition night.
       - Seventh graders held a poetry reading at the PACK.
-      - Earth Day service projects at Village School were highlighted.
-    key_speakers: ["Superintendent (John)", "Jen Schaffner (Chair)"]
+    key_speakers: ["John (superintendent)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 3545
+    topic_confidence: 0.75
+    start_seconds: 3779
     end_seconds: 3809
-    headline: "Committee approves schedule of bills totaling $958,360.52"
-    dek: "A routine vote approved the schedule of bills; the superintendent also discussed unified sports and the possibility of expanding toward a fully unified district designation."
-    summary: "Following the superintendent's update, committee members discussed unified sports programming. The superintendent noted Marblehead was one of the first fully unified districts in Massachusetts when he was in Swansea, and described the Special Olympics criteria for unified school and district designation. The committee voted 4-0 to approve the schedule of bills for $958,360.52."
-    key_speakers: ["Jen Schaffner (Chair)", "Superintendent (John)", "Brian Oda (Member)", "Sarah Fox (Member)", "Allison Taylor (Member, via Zoom)"]
+    headline: "Committee approves schedule of bills for $958,360.52"
+    dek: "Routine bill payment approved unanimously 4–0."
+    summary: "The committee voted 4–0 to approve the schedule of bills in the amount of $958,360.52."
+    key_speakers: ["Jen Schaffner (committee chair)"]
   - topic: public-safety
     topic_confidence: 0.72
-    start_seconds: 3809
+    start_seconds: 3864
     end_seconds: 5076
-    headline: "Committee unanimously approves Sexual Assault Awareness Month proclamation after Power Up presentation"
-    dek: "Megan Sweeney of Power Up presented on the organization's community efforts around gender violence and requested the committee adopt an April proclamation, which passed 4-0."
+    headline: "Committee unanimously approves Sexual Assault Awareness Month proclamation for April 2025"
+    dek: "Power Up founder Megan Sweeney presented to the committee, which became the third Marblehead board to approve the proclamation alongside recommendations for earlier YWCA consent programming and professional development."
     summary: |
-      Megan Sweeney, founder of Power Up, presented to the committee on the organization's 18-month effort to raise awareness about gender violence in Marblehead. She noted the Select Board and Board of Health had already approved similar proclamations, and that the Marblehead Police Department, District Attorney's office, HAWK (Healing Abuse Working for Change), Jane Doe Inc., and Essex County Commission on the Status of Women have expressed support.
+      Megan Sweeney, founder of Power Up, presented on the organization's work since October 2023 building community awareness around gender violence. She outlined steps taken including collaboration with the Marblehead Police Department, the Select Board, Board of Health, state legislators, and the Essex County Commission on the Status of Women. Sweeney highlighted existing district efforts including menstrual equity, YWCA consent programming, and the I AM Registration.
       
-      Sweeney outlined existing school district foundations — including free menstrual products, YWCA consent programming, and IAM Registration support — and proposed next steps:
-      - Expanding YWCA programming to earlier grades (noting survivors she spoke with were already assaulted before their senior-year program)
-      - Hosting student accountability pledge tabling events
-      - Including gender awareness workshops in professional development
-      - Sponsoring a feminist or gender equity student organization
+      Sweeney recommended the committee consider:
+      - Expanding YWCA consent programming to earlier grades, noting that several high school survivors she spoke with had already experienced assault before the senior-year program.
+      - A student accountability pledge tabling event.
+      - Gender awareness professional development.
+      - Sponsoring a feminist or gender equity student organization.
       
-      The chair read the proclamation declaring April 2025 Sexual Assault Awareness Month into the record. The committee voted 4-0 to approve. The chair committed to including a link to HAWK resources in the district newsletter.
-    key_speakers: ["Megan Sweeney (Power Up founder)", "Jen Schaffner (Chair)", "Allison Taylor (Member, via Zoom)", "Sarah Fox (Member)", "Superintendent (John)"]
+      The committee approved a proclamation declaring April 2025 Sexual Assault Awareness Month in Marblehead Public Schools by a vote of 4–0. Committee members also discussed revisiting a past parent-focused professional development session on identifying victims of sexual violence.
+    key_speakers: ["Megan Sweeney (Power Up founder)", "Sarah Fox (committee member)", "Allison Taylor (committee member)", "Jen Schaffner (committee chair)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.82
-    start_seconds: 5076
+    topic_confidence: 0.88
+    start_seconds: 5121
     end_seconds: 6542
     featured: true
-    headline: "Flag and banner policy headed to third reading with added heritage month and exclusion language"
-    dek: "The committee discussed revisions to the draft flag and banner policy, agreeing to add language explicitly excluding student artwork and personal items and to add recognition of heritage months."
+    headline: "Flag and banner policy advances to third reading with planned clarifying additions"
+    dek: "Committee agreed to add language excluding student artwork and personal items, to recognize heritage months without the word 'federally,' and to consult legal counsel before the next reading."
     summary: |
-      The committee held a second reading of proposed policy IMDB on flags and banners. The chair read the current draft, noting a prior motion to strike 'symbolic displays' language controls over the written draft. The policy as read states:
+      The committee conducted a second reading of proposed policy IMDB on flag and banner displays. The chair read the policy as amended by prior vote (removing language about "symbolic displays"):
       
-      1. US flag, Massachusetts flag, and POW/MIA flag shall be displayed.
-      2. Flags and banners reflecting the district's mission, vision, and values may be displayed as determined by the school committee; the superintendent may recommend additions.
-      3. The committee will not accept third-party requests.
+      > Flags with official legal status (US flag, Massachusetts flag, POW-MIA flag) shall be displayed. Additional flags and banners reflecting the district's mission, vision, and values may be displayed as determined by the school committee; the superintendent may recommend displays to the committee. The school committee will not accept third-party requests.
       
-      Key discussion points:
+      The chair noted that the prohibition on third-party requests reflects legal counsel's guidance based on the *Shurtleff v. Boston* case to avoid creating a public forum.
       
-      - **Allison Taylor** proposed adding explicit language stating the policy does not apply to sports banners, graduation banners, student artwork, personal attire, locker decorations, notebook covers, or personal items — arguing the word 'affixed' alone was insufficient to prevent public confusion.
-      - Taylor also proposed adding language recognizing heritage months (African American History Month, Women's History Month, Asian Pacific American Heritage Month, Pride Month, Hispanic Heritage Month, Native American Heritage Month), drawing on a suggestion from community member Cindy Schieffer.
-      - **Sarah Fox** requested the word 'federally' be removed from any heritage month language, citing concern that federal recognition status could change.
-      - **Brian Oda** supported both additions and noted that personal attire and items are already addressed in student handbooks.
-      - The superintendent expressed support for clearer delineation, noting it would help operationalize the policy.
-      - The chair noted the policy was drafted by legal counsel and that acting against counsel's recommendation could affect indemnification.
-      - The committee agreed to continue to a third reading. The chair will send proposed language to legal counsel before the next meeting.
-    key_speakers: ["Jen Schaffner (Chair)", "Allison Taylor (Member, via Zoom)", "Brian Oda (Member)", "Sarah Fox (Member)", "Superintendent (John)"]
+      Committee member Allison Taylor proposed two additions:
+      1. **Exclusion clause** explicitly stating the policy does not apply to sports banners, graduation banners, student artwork, personal attire, locker decorations, notebook covers, or personal items.
+      2. **Heritage months** — recognizing heritage months (African American History Month, Women's History Month, Asian Pacific American Heritage Month, Pride Month, Hispanic Heritage Month, Native American Heritage Month) by flying corresponding banners, removing the word "federally" to avoid the designations being affected by federal policy changes.
+      
+      The superintendent expressed support for greater explicitness in the policy. The chair agreed to send proposed language to legal counsel and bring a revised third reading at the next meeting. A fourth reading was noted as possible if the committee is not satisfied.
+    key_speakers: ["Jen Schaffner (committee chair)", "Allison Taylor (committee member)", "Sarah Fox (committee member)", "Brian Oda (committee member)", "John (superintendent)"]
   - topic: school-budget
-    topic_confidence: 0.88
+    topic_confidence: 0.9
     start_seconds: 6542
     end_seconds: 7207
-    headline: "Committee approves English 3D curriculum for English learner education in grades 7-12"
-    dek: "Assistant Superintendent Julia Ferrera presented the selection of Houghton Mifflin Harcourt's English 3D curriculum following a DESE tiered focus monitoring finding."
+    headline: "Committee approves English 3D curriculum for English Learner Education grades 7–12"
+    dek: "The Houghton Mifflin Harcourt English 3D program was selected following a DESE tiered focus monitoring finding and months of curriculum review; 117 EL students are currently enrolled."
     summary: |
-      Assistant Superintendent Julia Ferrera presented the results of a curriculum review process for the English Learner Education program in grades 7-12. A DESE tiered focus monitoring visit in January 2024 found the district did not consistently support an ESL curriculum for all English proficiency levels in the high school.
+      Assistant Superintendent Julia Ferrera presented the results of a curriculum review process launched after a DESE tiered focus monitoring finding that the district did not consistently support an ESL curriculum for all English proficiency levels in the high school.
       
-      After a multi-month review process that included comparison against DESE ratings, review rubrics, consultation with Beverly Public Schools, and teacher piloting of lessons, the district selected **Houghton Mifflin Harcourt's English 3D curriculum**.
+      The selected curriculum, Houghton Mifflin Harcourt's **English 3D**, will be implemented for grades 7–12 starting the 2025–26 school year. Key details:
+      - 117 English Learner students are currently enrolled district-wide.
+      - Teachers at the middle and high school levels were involved in the review and piloted lessons.
+      - The vendor quote includes professional development and both online and hard-copy materials.
+      - K–6 EL instruction is aligned to the Wit & Wisdom curriculum already in place; English 3D fills the gap for grades 7–12.
+      - The program is differentiated to support students from newcomer level through exit proficiency.
+      - Title III federal funding supports the EL coordinator stipend, professional development, and the English Learners Parent Advisory Council (ELPAC); the committee noted awareness that Title III funding could be at risk.
       
-      Key details:
-      - 117 English learner students currently enrolled district-wide
-      - Curriculum to be implemented in grades 7-12 at the start of the 2025-26 school year
-      - Professional development is included in the vendor quote
-      - K-6 EL integration continues through Wit and Wisdom alignment
-      - A newcomer curriculum addresses foundational literacy for new arrivals at any grade
-      - The district receives Title III federal funding for EL programming; a member noted concern about potential federal funding changes
-      - Program coordinator Shelly Burns (stipend-funded) was praised for her leadership
-      
-      The committee voted 4-0 to approve.
-    key_speakers: ["Julia Ferrera (Assistant Superintendent)", "Jen Schaffner (Chair)", "Allison Taylor (Member, via Zoom)", "Sarah Fox (Member)", "Superintendent (John)"]
-  - topic: labor-personnel
-    topic_confidence: 0.7
+      The committee voted 4–0 to approve the curriculum.
+    key_speakers: ["Julia Ferrera (assistant superintendent)", "Allison Taylor (committee member)", "Jen Schaffner (committee chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
     start_seconds: 7207
     end_seconds: 7532
-    headline: "Committee outlines timeline for superintendent evaluation and contract negotiation"
-    dek: "The committee discussed a proposed schedule for completing the superintendent's performance evaluation, with a workshop tentatively set for May 8 and a vote targeted for May 15."
-    summary: "The chair outlined a proposed timeline for the annual superintendent evaluation process. Stakeholder surveys have been sent out; committee member Allison Taylor is compiling a summary. The committee's own evaluation form will be sent to members to complete by approximately April 28. A workshop to compile results is tentatively scheduled for the evening of May 8, with presentation and vote at the May 15 meeting. An executive session for contract parameters would follow, with a subsequent open meeting to approve any negotiated contract. Member Al Williams was absent and had noted scheduling constraints that informed the May 8 date."
-    key_speakers: ["Jen Schaffner (Chair)", "Allison Taylor (Member, via Zoom)", "Sarah Fox (Member)"]
+    headline: "Committee sets tentative May 8 workshop date for superintendent evaluation process"
+    dek: "The committee discussed a timeline for compiling stakeholder survey results, completing individual evaluations, and scheduling an executive session for contract parameters."
+    summary: "The committee discussed scheduling a workshop to compile superintendent evaluation survey results and complete individual evaluations. The tentative plan is a workshop on or around May 8 (evening), presentation and vote at the May 15 meeting, followed by an executive session the next morning to discuss contract parameters, with a separate meeting called for formal contract approval. Member Al Williams was absent but noted as having schedule constraints through May 3."
+    key_speakers: ["Jen Schaffner (committee chair)", "Allison Taylor (committee member)", "Sarah Fox (committee member)"]
   - topic: recreation-events
     topic_confidence: 0.85
     start_seconds: 7532
-    end_seconds: 7950
-    headline: "Committee approves updated MOU with Recreation and Parks through August 2026"
-    dek: "The superintendent reported on updated coordination with Recreation and Parks for summer facility use; the MOU was approved 4-0 with only date changes from the prior version."
-    summary: "The superintendent reported meeting with Recreation and Parks Director Jamie Block to review the existing memorandum of understanding. No substantive changes were made; only the dates were updated to run from April 17, 2025 through August 31, 2026. The superintendent noted ongoing coordination around summer use of the Iff building (former library space) as a rain venue for rec programs, and the need to clear remaining library shelving and metal furniture. The superintendent indicated the library organization would be billed for the cost of dumpsters needed to remove items left behind. The committee voted 4-0 to approve the MOU."
-    key_speakers: ["Superintendent (John)", "Jen Schaffner (Chair)", "Sarah Fox (Member)"]
+    end_seconds: 7903
+    headline: "Committee approves MOU with Recreation and Parks through August 31, 2026"
+    dek: "Updated agreement retains prior terms with new dates; superintendent discussed plans to use the former Iff library space for rec programs during inclement weather."
+    summary: "The superintendent reported meeting with Recreation and Parks Director Jamie Block on a renewed memorandum of understanding covering facility use. The MOU runs from April 17, 2025 through August 31, 2026, with only dates changed from the prior agreement. The superintendent discussed a plan to use the former library space at the Iff building as a rain site for summer recreation programming, rather than routing children to Glover School. He also noted that the remaining library shelving and materials in that space will be removed — metal shelving via scrap dumpster at no cost, remaining debris via a dumpster to be billed to the library. The committee voted 4–0 to approve the MOU."
+    key_speakers: ["John (superintendent)", "Jen Schaffner (committee chair)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 7950
-    end_seconds: 8770
-    headline: "Communication subcommittee proposes office hours and possible town hall on school budget"
-    dek: "The communication subcommittee reported on plans for monthly office hours starting in late April or May, a potential town hall on the budget process, and review of MASC guidelines on school committee social media."
-    summary: |
-      Brian Oda reported on the communication subcommittee's recent discussions. Key proposals:
-      
-      - **Office hours**: Two committee members (not from the same subcommittee) would meet monthly for one hour in a public location to answer community questions. The committee expressed interest in starting in late April or early May.
-      - **Town hall**: Allison Taylor proposed a community forum focused on the budget process, citing persistent misinformation. The committee discussed targeting a date in the second week of May, after town meeting.
-      - **Facebook page**: The subcommittee discussed creating a school committee Facebook page for timely announcements. Questions arose about whether comments/replies should be allowed. The chair noted MASC guidance recommends no-comment pages to avoid open meeting law issues; Brian Oda agreed to consult MASC and legal counsel before proceeding.
-      
-      The chair also noted a policy subcommittee meeting would be scheduled for late the following week to review the recess policy and other protocol items.
-    key_speakers: ["Brian Oda (Member)", "Allison Taylor (Member, via Zoom)", "Jen Schaffner (Chair)", "Sarah Fox (Member)"]
-  - topic: bonding-capital
     topic_confidence: 0.75
-    start_seconds: 8555
-    end_seconds: 8770
-    headline: "Facilities subcommittee reports on roof sealant test patch and FinCom unanimous support for override article"
-    dek: "The facilities subcommittee chair reported that a roofing sealant vendor completed a test patch and FinCom voted unanimously to recommend the override article for HVAC and roof work."
-    summary: "The chair provided a facilities subcommittee update. An owner's project manager resident with MSBA roof project expertise has been advising the district. A roofing sealant vendor conducted a test patch at their own expense; results will be reviewed at a subcommittee meeting in approximately two weeks. The update also noted that the Finance Committee (FinCom) voted unanimously at the warrant hearing to recommend the town budget (which includes the school budget) and to recommend the override article funding the HVAC addition to the roof project. A capital request for playground equipment at Glover School and seat reupholstering at the PACK was also on the warrant. Superintendent confirmed he will speak at town meeting on the roof article."
-    key_speakers: ["Jen Schaffner (Chair)", "Superintendent (John)"]
+    start_seconds: 7903
+    end_seconds: 8696
+    headline: "Communication subcommittee proposes office hours and town hall forums; Facebook page discussion ongoing"
+    dek: "Committee discussed monthly office hours starting in late April or May, a budget town hall in early May, and deferred a decision on a Facebook page pending MASC guidance."
+    summary: |
+      The communication subcommittee reported on three proposals:
+      
+      1. **Office hours**: Two committee members (not from the same subcommittee) would meet monthly for one hour, open to the public. The committee discussed starting in late April or early May.
+      2. **Town hall forums**: A budget-focused community forum is being considered for early May, after town meeting. The committee expressed interest in making this a recurring quarterly event.
+      3. **Facebook page**: The subcommittee discussed a school committee Facebook page for timely announcements. A question arose about whether replies should be enabled. The chair noted MASC guidelines recommend no-commenting pages to avoid open-meeting deliberation issues; the committee agreed to seek current MASC guidance before deciding.
+      
+      The facilities subcommittee noted a meeting in approximately two weeks to review results of a test patch of roof sealant at the direction of a resident owner's project manager. The chair also reported that FinCom voted unanimously to recommend both the town operating budget and the override article for the HVAC/roof project, as well as capital items for Glover School playground equipment and PACK seating restoration.
+    key_speakers: ["Brian Oda (committee member)", "Allison Taylor (committee member)", "Sarah Fox (committee member)", "Jen Schaffner (committee chair)"]
+  - topic: override
+    topic_confidence: 0.7
+    start_seconds: 8651
+    end_seconds: 8741
+    headline: "FinCom voted unanimously to recommend override article for HVAC/roof project at town meeting"
+    dek: "The finance committee also unanimously recommended the town operating budget and capital articles for playground equipment and PACK seating."
+    summary: "Committee member Jen Schaffner reported that the Finance Committee (FinCom) voted unanimously at the warrant hearing to recommend the town operating budget (which includes the school budget), the Proposition 2½ override article to fund the HVAC addition to the roof project, and capital articles for Glover School playground equipment and restoration of seating at the PACK. The superintendent is prepared to speak at town meeting in support of the relevant articles."
+    key_speakers: ["Jen Schaffner (committee chair)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -11,49 +11,49 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board appoints four volunteers, hears stark multi-year budget deficit forecast"
-  summary: "The Marblehead Select Board held a joint session with the Water and Sewer Commission to appoint Greg Burt to that commission, then appointed Ramon Garcia to the Fair Housing Committee alternate seat and Tracy Lawrence as MBTA Advisory Board liaison, and Christopher Hardy to the Harris Street Cemetery Oversight Committee. Finance Director Alicia Benjamin, FinCom Chair Alec Goolsby, and Vice Chair Molly Teets presented a preliminary FY26–FY28 financial forecast showing a projected FY26 gap of approximately $1.9 million that grows substantially in FY27 and FY28, driven chiefly by salary contracts, insurance, pension, and a sharp increase in trash collection costs when the current contract expires. The board also approved ARPA revenue-loss fund allocations totaling $584,142 and renewed all 2025 business licenses."
+  headline: "Select Board fills Water & Sewer vacancy, receives detailed FY26–28 financial forecast showing structural gap"
+  summary: "The Marblehead Select Board held a joint session with the Water & Sewer Commission to appoint Greg Burt to fill a commission vacancy. The board also conducted multiple interviews for advisory committee vacancies, approving appointments for the Fair Housing Committee, MBTA Advisory Liaison, and Harris Street Cemetery Oversight Committee. Finance Director Alicia Benjamin and Finance Committee Chair Alec Goolsby presented a preliminary FY26–28 financial forecast showing a projected $1.9 million gap in FY26 growing substantially in FY27 and FY28, driven by salaries, health insurance, pension, and a major trash contract increase."
   decisions:
-    - "Approved appointment of Greg Burt to Water and Sewer Commission (term to June 2025)"
-    - "Approved appointment of Ramon Garcia as alternate member of Fair Housing Committee (term to June 2026)"
-    - "Approved appointment of Tracy Lawrence as MBTA Advisory Board liaison"
-    - "Approved appointment of Christopher Hardy as at-large member of Harris Street Cemetery Oversight Committee (term to June 2025)"
-    - "Approved Riptide RG Inc. Common Vic license at 116 Pleasant Street"
-    - "Approved Riptide RG Inc. transfer of all-alcoholic beverage license at 116 Pleasant Street"
-    - "Approved Elia Verna annual entertainment license for Thursday live music 6–9 PM"
-    - "Approved Java Sun Inc. Common Vic license at 35 Atlantic Avenue"
-    - "Approved ARPA revenue-loss fund allocations totaling $584,142"
-    - "Approved 2025 annual business license renewals for all Marblehead businesses"
-    - "Approved consent agenda including November 13 minutes, New Year's Eve extended hours, surplus copier, drain connection leases, Black Cat 10/20 miler permit, and Abbott Hall use for Remembrance Day"
-    - "Approved contracts: Raphael Construction (Swamp Scott Branch Crossing), CN Wood/Verron LLC (flail mower), Raphael Construction (Elm Street Park), Foster Architecture (Hobbs House windows), Richard D'Ambrosio Inc. (sidewalk/ADA repairs), McKay Plumbing and Heating (State Street heater)"
-    - "Approved one-day liquor license for Temple Emanuel, February 5, 2025"
+    - "Approved appointment of Greg Burt to Water & Sewer Commission (term to June 2025)"
+    - "Approved appointment of Ramon Garcia as alternate member, Fair Housing Committee (term to June 2026)"
+    - "Approved appointment of Tracy Lawrence as MBTA Advisory Liaison"
+    - "Approved appointment of Christopher Hardy to Harris Street Cemetery Oversight Committee at-large (term to June 2025)"
+    - "Approved Common Vic license and transfer of all-alcoholic beverage license for Riptide RG Inc. at 116 Pleasant Street"
+    - "Approved annual entertainment license for Elia Verna at 261 Washington Street"
+    - "Approved Common Vic license for Java Sun Inc. at 35 Atlantic Avenue"
+    - "Approved renewal of all 2025 business licenses in Marblehead"
+    - "Approved all consent agenda items including minutes, New Year's Eve extended hours, surplus copier declaration, drain connection lease agreements, Black Cat race permit, and Abbott Hall use request"
+    - "Approved ARPA revenue loss fund allocations totaling $584,142"
+    - "Approved contracts for Swamp Scott Branch Crossing, boom flail mower, Elm Street Park improvements, Hobbs House windows design, sidewalk repair/ADA improvements, and State Street heater"
+    - "Approved one-day liquor license for Temple Emanuel on February 5, 2025"
   votes:
-    - motion: "Appoint Greg Burt to Water and Sewer Commission"
+    - motion: "Appoint Greg Burt to Water & Sewer Commission"
       result: "in favor (unanimous)"
-    - motion: "Appoint Ramon Garcia as Fair Housing Committee alternate"
+    - motion: "Appoint Ramon Garcia as alternate member to Fair Housing Committee"
       result: "in favor (unanimous)"
-    - motion: "Appoint Tracy Lawrence as MBTA Advisory Board liaison"
+    - motion: "Appoint Tracy Lawrence as MBTA Advisory Liaison"
       result: "in favor (unanimous)"
     - motion: "Appoint Christopher Hardy to Harris Street Cemetery Oversight Committee"
       result: "in favor (4 to 1)"
-    - motion: "Approve Riptide RG Inc. Common Vic license"
+    - motion: "Approve Riptide RG Inc. Common Vic license at 116 Pleasant Street"
       result: "in favor (unanimous)"
-    - motion: "Approve Riptide RG Inc. alcoholic beverage license transfer"
+    - motion: "Approve Riptide RG Inc. transfer of all-alcoholic beverage license at 116 Pleasant Street"
       result: "in favor (unanimous)"
-    - motion: "Approve Elia Verna entertainment license"
+    - motion: "Approve Elia Verna annual entertainment license"
       result: "in favor (unanimous)"
     - motion: "Approve Java Sun Common Vic license"
       result: "in favor (unanimous)"
-    - motion: "Approve ARPA revenue-loss fund allocations"
+    - motion: "Renew all 2025 business licenses"
       result: "in favor (unanimous)"
-    - motion: "Approve 2025 annual license renewals"
+    - motion: "Approve consent agenda items"
       result: "in favor (unanimous)"
-    - motion: "Approve consent agenda"
+    - motion: "Approve ARPA revenue loss fund allocations"
       result: "in favor (unanimous)"
-    - motion: "Approve contracts batch"
+    - motion: "Approve contracts (Raphael Construction, CN Wood, Foster Architecture, D'Ambrosio, McKay Plumbing)"
       result: "in favor (unanimous)"
-    - motion: "Approve Temple Emanuel one-day liquor license"
+    - motion: "Approve one-day liquor license for Temple Emanuel"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -61,162 +61,128 @@ topic_segments:
     topic_confidence: 0.9
     start_seconds: 0
     end_seconds: 302
-    headline: "Greg Burt unanimously appointed to Water and Sewer Commission vacancy"
-    dek: "Burt, a retired assistant superintendent with 33-plus years at the department, was the sole applicant for a seat expiring June 2025."
-    summary: "In a joint session with the Water and Sewer Commission, the Select Board interviewed Greg Burt, who described more than 33 years of experience in the sewer and water department rising to assistant superintendent before retiring. Commissioners noted they had no meaningful questions given his direct background. The board voted unanimously to appoint him to the vacancy with a term expiring June 2025."
-    key_speakers: ["Greg Burt (applicant)", "Select Board Chair (Nunan)"]
+    headline: "Greg Burt unanimously appointed to Water & Sewer Commission vacancy"
+    dek: "Burt, a retired 33-year department veteran and lifelong Marblehead resident, was the sole applicant for the seat expiring June 2025."
+    summary: "The Select Board convened a joint session with the Water & Sewer Commission. Greg Burt, who worked for the town's water and sewer department for over 33 years and retired as assistant superintendent, was the sole applicant for the vacancy. Commissioners noted his deep institutional knowledge and familiarity with budget processes. The board voted unanimously to appoint him with a term expiring June 2025."
+    key_speakers: ["Greg Burt (applicant)", "Chair (Select Board)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 302
     end_seconds: 1896
-    headline: "Ramon Garcia appointed Fair Housing Committee alternate; two other finalists encouraged to seek other seats"
-    dek: "Three candidates — Nisha Austin, Ramon Garcia, and Caroline Morrissey — were interviewed; Garcia received all five votes with board members noting his personal experience and accounting background."
-    summary: |
-      The board interviewed three applicants for one alternate seat on the Fair Housing Committee with a term to June 2026. Nisha Austin highlighted her architecture, project management, and cultural council experience. Ramon Garcia, a senior accountant pursuing his CPA, described growing up in a family that relied on housing assistance and emphasized a mission to serve veterans and the elderly. Caroline Morrissey, who grew up in Marblehead and recently returned to raise her family, focused on understanding the changing demographics of homebuyers.
-      
-      All five board members voted for Garcia, citing his unique personal perspective and financial expertise. Board members expressed interest in placing Austin on the Housing Production Implementation Committee and finding a role for Morrissey elsewhere in town government.
-    key_speakers: ["Nisha Austin (applicant)", "Ramon Garcia (applicant)", "Caroline Morrissey (applicant)", "Dan Fox (Select Board)", "Brett Murray (Select Board)"]
+    headline: "Ramon Garcia appointed to Fair Housing Committee alternate seat after three-candidate interview"
+    dek: "Board interviewed Nisha Austin, Ramon Garcia, and Caroline Morrissey; Garcia received all five votes while board encouraged the other two candidates to pursue other committee openings."
+    summary: "The board interviewed three candidates for one alternate-member vacancy on the Fair Housing Committee: Nisha Austin (architecture/operations background), Ramon Garcia (accounting/CPA candidate), and Caroline Morrissey (consumer experience/marketing background). All were praised as qualified. The board voted unanimously for Garcia, citing his personal experience with affordable housing assistance and accounting expertise. Members expressed intent to recommend Austin for the Housing Production Implementation Committee and to find a suitable placement for Morrissey."
+    key_speakers: ["Nisha Austin (applicant, remote)", "Ramon Garcia (applicant)", "Caroline Morrissey (applicant)"]
   - topic: 40b-mbta
-    topic_confidence: 0.85
-    start_seconds: 1896
+    topic_confidence: 0.88
+    start_seconds: 1945
     end_seconds: 2910
-    headline: "Tracy Lawrence appointed MBTA Advisory Board liaison after Judith Black withdrew"
-    dek: "Lawrence, a former state transportation official with extensive MBTA and environmental policy experience, was appointed after the other applicant withdrew voluntarily."
-    summary: |
-      Two candidates were interviewed for the Select Board's liaison seat on the MBTA Advisory Board. Judith Black, who uses commuter rail and bus regularly and formerly chaired Sustainable Marblehead's transportation working group, outlined priorities including electrifying the bus fleet and creating lateral transit routes on the North Shore.
-      
-      Tracy Lawrence presented a decades-long career spanning the Secretary of Transportation's office, the Metropolitan Area Planning Council, Mass Development Finance Agency, and DCR. She described the MBTA's approximately $700 million annual operating deficit and $3 billion annual infrastructure maintenance deficit, and outlined specific Marblehead priorities including shuttle service to the Swampscott commuter rail station and increasing ridership on routes 441 and 442.
-      
-      After Lawrence's interview, Black voluntarily withdrew, and the board voted unanimously to appoint Lawrence. The board noted she should be sworn in at the Town Clerk's office.
+    headline: "Tracy Lawrence appointed MBTA Advisory Liaison after Judith Black withdrew"
+    dek: "Lawrence, a former state transportation and DCR official, outlined the MBTA's $700M operating and $3B infrastructure deficits and priorities for Marblehead including bus routes 441/442 and shuttle access to Swampscott station."
+    summary: "Two candidates were interviewed for the Select Board liaison seat on the MBTA Advisory Board. Judith Black, a transit user and former Sustainable Marblehead transportation chair, discussed lateral transit needs on the North Shore and electric bus conversion. Tracy Lawrence, who has worked for the Secretary of Transportation, Metropolitan Area Planning Council, Mass Development Finance Agency, and DCR, gave an extensive overview of MBTA finances including an approximately $700 million annual operating deficit and a $3 billion infrastructure/maintenance deficit. Black withdrew in favor of Lawrence after the interview. Lawrence was appointed unanimously."
     key_speakers: ["Judith Black (applicant)", "Tracy Lawrence (applicant)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 2910
     end_seconds: 3760
-    headline: "Christopher Hardy appointed to Harris Street Cemetery Oversight Committee 4-1 over Peter Kent"
-    dek: "Hardy, who discovered a personal family connection to the Harris Street burial ground while cleaning his attic, received four of five votes; Kent, a retired attorney recommended by the Unitarian Universalist Church, received one vote."
-    summary: |
-      The board interviewed Peter Kent, a longtime Marblehead resident and attorney with extensive nonprofit board experience including as chairman of the Mary Alley Hospital board, who was nominated by his Unitarian Universalist congregation. Christopher Hardy described discovering through attic research that his great-uncle's ancestors lived along Harris Street and were buried in local cemeteries, and outlined his project management background.
-      
-      After a roll-call vote of 4 to 1 in favor of Hardy (one vote for Kent), the board noted it had considered creating an alternate position but Kent declined the offer. Hardy was directed to be sworn in at the Town Clerk's office.
+    headline: "Christopher Hardy appointed to Harris Street Cemetery Oversight Committee 4-1"
+    dek: "Hardy, a project development manager with a personal ancestral connection to the Harris Street burial ground, edged out attorney Peter Kent; Kent declined an alternate position."
+    summary: "Peter Kent (retired attorney, long-time Unitarian Universalist Church board member) and Christopher Hardy (capital project manager, Glover Landing condo board) both interviewed for the single at-large vacancy with a term expiring June 2025. Hardy told a compelling story of discovering a family connection to Harris Street residents buried at the cemetery while cleaning out his attic. The vote was 4-1 for Hardy; Kent received one vote from a board member who favored the UU Church connection. Kent declined an offer to serve as alternate."
     key_speakers: ["Peter Kent (applicant)", "Christopher Hardy (applicant)"]
   - topic: permits-zoning
     topic_confidence: 0.95
     start_seconds: 3760
     end_seconds: 3949
     headline: "Riptide RG Inc. receives Common Vic and all-alcoholic beverage license transfer at 116 Pleasant Street"
-    dek: "New owner John Ketzer, previously of Mercy Tavern in Salem, plans to reopen the location as a low-key bar; no opposition or support speakers appeared at the public hearing."
-    summary: "The board opened and closed a public hearing on the application from Riptide RG Inc. for a Common Vic license and the transfer of an all-alcoholic beverage license at 116 Pleasant Street. Applicant John Ketzer stated he owned Mercy Tavern in Salem for four years with no issues and has 15-plus years in the restaurant industry. No one spoke in opposition or support. Both licenses were approved unanimously, with hours Monday–Saturday 9 AM–midnight and Sundays 11 AM–midnight, subject to standard conditions."
+    dek: "New owner John Ketzer, formerly of Mercy Tavern in Salem, plans to reopen the bar; no public opposition was raised."
+    summary: "John Ketzer appeared on behalf of Riptide RG Inc., which is under agreement to purchase the property and business at 116 Pleasant Street. Ketzer cited 15+ years in the restaurant industry and four years operating Mercy Tavern in Salem with no issues. The public hearing drew no opposition or support speakers. The board approved both the Common Vic license and the transfer of the all-alcoholic beverage license, with hours of Monday–Saturday 9 AM–midnight and Sunday 11 AM–midnight, subject to standard conditions."
     key_speakers: ["John Ketzer (applicant)"]
   - topic: permits-zoning
     topic_confidence: 0.9
     start_seconds: 3949
     end_seconds: 4080
-    headline: "Elia Verna granted annual entertainment license for Thursday live music; Java Sun receives Common Vic license"
-    dek: "Angelo Bato of Elia Verna at 261 Washington Street requested live music Thursdays 6–9 PM; German Ramirez of Java Sun at 35 Atlantic Avenue sought a standard food service license."
-    summary: "The board approved an annual entertainment license for Elia Verna at 261 Washington Street for Thursday live music from 6 to 9 PM, subject to no music being audible from the street. The board also approved a Common Vic license for Java Sun Inc. at 35 Atlantic Avenue, with hours Monday–Sunday 5 AM–7 PM."
+    headline: "Elia Verna and Java Sun receive annual entertainment license and Common Vic license respectively"
+    dek: "Elia Verna at 261 Washington Street approved for Thursday live music 6–9 PM; Java Sun at 35 Atlantic Avenue approved for daily 5 AM–7 PM food service."
+    summary: "Angelo Bato of Elia Verna requested an annual entertainment license for live music Thursdays 6–9 PM, responding to customer demand. The board approved the license subject to no music being audible from the street. German Ramirez (represented by his son as translator) of Java Sun at 35 Atlantic Avenue received a Common Vic license for Monday–Sunday 5 AM–7 PM operations."
     key_speakers: ["Angelo Bato (Elia Verna applicant)", "German Ramirez (Java Sun applicant)"]
   - topic: public-comment
     topic_confidence: 0.95
     start_seconds: 4080
     end_seconds: 4127
-    headline: "No public comment submitted"
-    dek: "The chair invited public comment; no members of the public in the room or online wished to speak."
-    summary: "The board invited public comment. No one in the room or online raised a hand to speak, and the chair proceeded directly to the Town Administrator update."
+    headline: "No public comment received at December 11 meeting"
+    dek: "Chair called for public comment; no in-person attendees or online participants raised their hand."
+    summary: "The chair invited public comment both in-person and online. No members of the public came forward to speak."
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.88
     start_seconds: 4127
     end_seconds: 4555
-    headline: "Building Commissioner now full-time Marblehead employee; Mary Alley renovations and document digitization underway"
-    dek: "Town Administrator described consolidating inspection staff in shared office space, reconfiguring the assessor's and HR offices, and a pending bid for wholesale digitizing of town documents."
-    summary: |
-      Town Administrator Thatcher reported that Building Commissioner Steve Cummings transitioned from a shared arrangement with Swampscott to full-time employment with Marblehead, which the administrator linked to improving new-growth revenue tracking.
-      
-      Renovations at Mary Alley are underway: walls are being removed to create a single large office for building/inspection staff, the assessor's office is being expanded across the hall to connect with support staff, and space is being freed for the HR director to work alongside payroll and finance staff. Two classrooms at the Eveleth School have been secured for document storage, with scanning stations planned. A bid has been issued for an outside firm to digitize town documents, starting with engineering documents and maps, using ARPA funding.
+    headline: "Town Administrator reports building commissioner now full-time Marblehead employee; Mary Alley renovation underway"
+    dek: "Steve Cummings transitions from shared arrangement with Swampscott to full-time Marblehead building commissioner; office walls are being reconfigured and documents moved to Eveleth School for digitization."
+    summary: "The Town Administrator reported that Building Commissioner Steve Cummings is now a full-time Marblehead employee, ending the shared arrangement with Swampscott. Renovations at Mary Alley are reconfiguring shared office spaces to consolidate inspection staff, expand the assessor's office, and co-locate HR with payroll and finance staff. Town documents are being relocated to two classrooms at the Eveleth School, with scanning stations being established there. The town is also out to bid for wholesale digitization of engineering documents and maps using ARPA funding."
     key_speakers: ["Town Administrator (Thatcher)"]
   - topic: school-budget
-    topic_confidence: 0.88
+    topic_confidence: 0.72
     start_seconds: 4555
     end_seconds: 9568
     featured: true
-    headline: "Preliminary FY26–FY28 forecast shows $1.9M gap in FY26 widening sharply through FY28"
-    dek: "Finance Director, FinCom Chair, and FinCom Vice Chair presented a detailed revenue-and-expense forecast identifying salary contracts, insurance, pension, and a doubling of trash costs as the primary drivers of a growing structural imbalance."
+    headline: "Preliminary FY26–28 forecast shows $1.9M gap in FY26, growing sharply through FY28 driven by salaries, insurance, pension, and trash contract"
+    dek: "Finance Director and Finance Committee presented a line-by-line three-year forecast; a $700M ARPA contract digitization bid, a trash contract jump from $2.2M to $3.1M, and health insurance increases of 12–30% from GIC are among the key pressures flagged."
     summary: |
-      ## Financial Forecast Overview
+      Finance Director Alicia Benjamin, Finance Committee Chair Alec Goolsby, and Vice Chair Molly Teets presented a preliminary three-year financial forecast for FY2026–2028.
       
-      Finance Director Alicia Benjamin, FinCom Chair Alec Goolsby, and FinCom Vice Chair Molly Teets presented a preliminary three-year financial forecast covering FY26–FY28.
+      **Key cost drivers (77–78% of budget):**
       
-      ### Key Revenue Lines
-      | Revenue | Notes |
+      | Line | Estimated Annual Growth |
       |---|---|
-      | Property tax levy | 2.5% growth of prior levy plus ~$300K estimated new growth annually |
-      | Debt exclusion property taxes | Offsets debt service expense; high school debt rolling off |
-      | State aid (net) | ~$6M net; estimated 1% annual growth |
-      | Local receipts | FY24 came in near $10M including ~$2M interest income windfall; estimated conservatively at $8–9M going forward |
-      | Hotels/meals tax | One quarter collected; budget estimate growing from $400K to $700K over three years |
-      | Free cash used in budget | ~$5.5M in FY25; policy goal is to reduce reliance |
+      | Salaries & wages | 4.18–4.41% |
+      | Insurance & benefits | ~6% (GIC Medicare plans up 12–30%) |
+      | Pension (PERAC schedule) | 8.6% |
+      | Utilities | ~4% |
+      | Trash collection/disposal | ~38% jump FY26→FY27 ($2.2M to $3.1M) |
       
-      ### Key Expense Drivers (77–78% of budget)
-      | Expense | Estimated Annual Growth |
-      |---|---|
-      | Salaries and wages | 4.18–4.41% (three contracts in negotiation) |
-      | Insurance and benefits | ~6%; GIC announced 12–30% increases on some Medicare supplement plans |
-      | Pension | 8.6% per PERAC actuarial schedule |
-      | Utilities | ~4% per year |
-      | Trash collection/disposal | From ~$2.2M (FY26) to ~$3.1M (FY27) when current 10-year contract expires; per-household cost estimated to rise from ~$127 to ~$203+ |
-      | Out-of-district SPED tuition | ~17% jump FY25 to FY26; transportation costs also rising |
+      **Revenue profile:** Property taxes fund 80% of the general fund (72% levy + 8% debt exclusion). State aid is approximately 8%; local receipts 7%; free cash 5%.
       
-      ### Projected Gap
-      The preliminary forecast shows a gap of approximately **$1.9 million in FY26**, widening substantially in FY27 and FY28, with a cumulative three-year deficit estimated at roughly $14 million under conservative assumptions.
+      **Projected gap:** Approximately $1.9 million in FY26, growing substantially in FY27 and FY28 primarily due to the trash contract renewal (current contractor is losing approximately $300,000/year), school salary contracts with back-loaded provisions, and out-of-district special education tuition (estimated jump from $3.7M to $4.4M in FY26).
       
-      ### Free Cash and Stabilization Fund
-      Free cash certified last year at $8.7M; approximately $2.2M was not appropriated and carries forward. A roughly $2M interest income windfall from FY24 may bring certification higher. The stabilization fund holds only ~$500,000 (approximately 0.5% of the operating budget), placing Marblehead in the bottom 10 municipalities statewide by that measure. DOR recommends combined free cash and stabilization balances of 8–12% of the operating budget. The board discussed shifting toward using free cash for one-time capital expenditures and building the stabilization fund rather than using free cash to balance operating budgets.
+      **Free cash:** Certified at $8.7M for FY25; $5.5M used in budget, $1M for capital, $2.2M unappropriated. A ~$2M windfall from interest income in FY24 may push next certification higher. DOR guidelines recommend 8–10% of budget in combined reserves; stabilization fund currently holds only $500,000 (0.5% of budget), ranking near the bottom statewide.
       
-      ### Debt Service
-      With the high school debt exclusion rolling off, debt service drops from approximately $11M to $9M before any new borrowings. Even if all currently authorized but unissued debt (roads, library, fire station, Brown School close-out, school roof/HVAC, etc.) were issued, projected debt service would remain below current levels. The board discussed sequencing future capital projects—particularly Mary Alley and the DPW facility—against the declining debt service curve.
+      **Debt service:** Current debt service is declining as high school debt rolls off (~$1.875M). Even if all authorized borrowings are issued plus the proposed $7.4M school roof/HVAC project, total debt service would remain below current levels through the forecast period.
       
-      ### Next Steps
-      A government finance specialist who advises Massachusetts municipalities is already working with the Finance Director and is expected to provide a multi-scenario report (including no-override and override scenarios) before Town Meeting. A CPA/specialist report is anticipated around the State of the Town presentation as a second phase.
-    key_speakers: ["Alicia Benjamin (Finance Director)", "Alec Goolsby (FinCom Chair)", "Molly Teets (FinCom Vice Chair)", "Andrew Petty (Director of Public Health)", "Mike (Assistant Superintendent of Finance and Operations, Schools)", "Thatcher (Town Administrator)"]
-  - topic: admin-housekeeping
+      **Trash contract:** Public Health Director Andrew Petty reported the current 10-year contract at approximately $127/household/year expires now; comparable communities suggest the next contract will be approximately $203/household, with recycling disposal costs rising from near-zero to $109–$119/ton (approximately 3,000 tons/year).
+      
+      Board members discussed the need for a headcount and productivity analysis across departments, accelerating stabilization fund contributions, and the possibility of retaining an independent Massachusetts municipal finance consultant (already engaged by the finance director) to model override and non-override scenarios before town meeting.
+    key_speakers: ["Alicia Benjamin (Finance Director)", "Alec Goolsby (Finance Committee Chair)", "Molly Teets (Finance Committee Vice Chair)", "Town Administrator (Thatcher)", "Andrew Petty (Director of Public Health)", "Mike (Assistant Superintendent of Finance, Public Schools)"]
+  - topic: bonding-capital
     topic_confidence: 0.88
+    start_seconds: 8724
+    end_seconds: 9068
+    headline: "Debt service presentation shows total borrowing stays below current levels even after all authorized projects"
+    dek: "Finance Director projects debt service peaking around $10.4M if all authorized amounts are issued, still below the current ~$11M, with the high school bond rolling off as the largest factor."
+    summary: "Finance Director Benjamin presented a debt service schedule through 2044 (extended to 2056 with new authorizations). Outstanding authorized-but-unissued borrowings include approximately $9.98M for roads and sidewalks, $1.62M for Brown School MSBA closeout (worst case), $7.4M for school roof/HVAC, $480K for Mary Alley roof, $131K for Franklin Street Fire Station, and smaller items. She noted a short-term bond anticipation note was issued in May at $2.3M and plans to issue another short-term BAN to capture anticipated further rate cuts before locking in long-term rates. If all authorized amounts are issued, estimated debt service would peak around $10.3–10.4M, still below the current level of approximately $11M."
+    key_speakers: ["Alicia Benjamin (Finance Director)", "Alec Goolsby (Finance Committee Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
     start_seconds: 9568
     end_seconds: 10204
-    headline: "Board approves $584,142 in ARPA revenue-loss fund allocations across 30-plus town and school projects"
-    dek: "With the federal December 31 commitment deadline approaching, the board voted to authorize specific expenditures from ARPA revenue-loss funds; a separate vote covering remaining ARPA balances and contract reallocations will be held before year-end."
-    summary: |
-      The Town Administrator explained that updated federal guidance requires a board vote to authorize ARPA revenue-loss fund expenditures. Finance Director Benjamin read a list of approximately 30 line items totaling $584,142, split roughly 54% to the schools and 46% to the town. Major items included $202,890 for school capital project shortfalls, $60,000 for Glover School HVAC, $35,000 for a police emergency generator, $32,600 for a school snow-removal truck, $33,562 for municipal software implementation consulting, $25,000 for a municipal charter technical assistance consultant, $20,600 for a buildings assessment, $20,333 for police department tank removal, $15,000 for codification of bylaws, $13,750 for a town website redesign, and smaller amounts for various repairs and equipment.
-      
-      The board voted unanimously to approve this list. A follow-up meeting before December 31 will address remaining ARPA funds, contract reallocations (including shifting rail-trail bridge funds to another trail segment), and contracts that came in under budget requiring reprogramming.
-    key_speakers: ["Alicia Benjamin (Finance Director)", "Thatcher (Town Administrator)"]
+    headline: "Board approves ARPA revenue-loss fund allocations totaling $584,142; remaining ARPA contracts to be voted at separate meeting before December 31"
+    dek: "Largest items include $202,890 for school capital project shortfalls and $60,000 for Glover School HVAC; full ARPA closeout requires a second special meeting before year-end."
+    summary: "The Town Administrator explained that all ARPA funds must be committed by December 31, 2024. Federal guidance requires a board vote to authorize expenditure of revenue-loss formula funds. The finance director read a list of 30+ line items totaling $584,142 (54% to schools, 46% to town) covering capital shortfalls, building renovations, vehicle purchases, technology, and consulting services. A separate meeting before December 31 is needed to authorize remaining ARPA project contracts and reallocations (e.g., the Swampscott Branch Crossing rail trail funds were reallocated from a bridge segment that could not be permitted in time). The board approved the revenue-loss fund list unanimously."
+    key_speakers: ["Alicia Benjamin (Finance Director)", "Town Administrator (Thatcher)"]
   - topic: permits-zoning
     topic_confidence: 0.85
     start_seconds: 10204
     end_seconds: 10299
-    headline: "All 2025 Marblehead business licenses renewed unanimously"
-    dek: "The full slate of annual license renewals was approved subject to payment of taxes and fees and receipt of required departmental approvals."
-    summary: "The board voted unanimously to renew all 2025 licenses for businesses in Marblehead as posted in the meeting packet, subject to all taxes and fees being paid, receipt of applicable departmental approvals, Department of Public Safety approval for Sunday entertainment, valid certificate of inspection, certificate of occupancy as appropriate, and compliance with Chapter 304 of the Acts of 2004."
+    headline: "Board renews all 2025 business licenses for Marblehead establishments"
+    dek: "Unanimous vote approves annual renewal contingent on payment of taxes/fees and receipt of required departmental approvals."
+    summary: "The board voted unanimously to renew all 2025 licenses for businesses in Marblehead, subject to payment of all outstanding taxes and fees, departmental approvals, valid certificates of inspection, certificates of occupancy as applicable, and compliance with Chapter 304 of the Acts of 2004."
   - topic: admin-housekeeping
-    topic_confidence: 0.85
+    topic_confidence: 0.88
     start_seconds: 10299
     end_seconds: 10805
-    headline: "Consent agenda, multiple DPW and parks contracts, and Temple Emanuel one-day liquor license approved"
-    dek: "Items included November 13 minutes, New Year's Eve extended hours, surplus copier declaration, drain connection leases, the Black Cat 10/20 miler permit, Abbott Hall use for Remembrance Day, and six capital/maintenance contracts."
-    summary: |
-      The board approved a consent agenda covering meeting minutes, New Year's Eve extended licensing hours, a surplus copier declaration, private drain connection lease agreements at 124 Front Street, 27 Prince Street, and 257 Washington Street, a permit for the Black Cat 10/20 miler on March 23, 2025, and use of Abbott Hall by the Task Force Against Discrimination for Remembrance Day on January 31, 2025.
-      
-      Six contracts were approved:
-      - Raphael Construction Corp. — Swampscott Branch Crossing (ARPA rail-trail funds)
-      - CN Wood/Verron LLC — trackless MT7 boom flail mower for rail trail maintenance
-      - Raphael Construction Corp. — Elm Street Park (Gary School playground) improvements
-      - Foster Architecture — Hobbs House windows and porch design
-      - Richard D'Ambrosio Inc. — FY24 sidewalk repair and ADA improvements
-      - McKay Plumbing and Heating — State Street restroom heater
-      
-      A one-day liquor license for Temple Emanuel (393 Atlantic Ave, February 5, 2025, 6:30–9 PM) was approved unanimously.
-      
-      The board noted that Abbott Hall elevator repair bids were not submitted by the deadline and the procurement will be reposted; if not resolved quickly the building could face access restrictions under a state compliance order.
-    key_speakers: ["Thatcher (Town Administrator)"]
+    headline: "Consent agenda, multiple contracts, and one-day liquor license approved; Abbott Hall elevator bid must be reposted"
+    dek: "Approved items include New Year's Eve extended hours, Black Cat race permit, ARPA-funded rail trail and sidewalk contracts; elevator repair contractor did not submit a bid by deadline."
+    summary: "The board approved the consent agenda (minutes of November 13, New Year's Eve extended hours, surplus copier, three private drain connection leases, Black Cat 10/20 Miler race on March 23 2025, and Abbott Hall use by the Task Force Against Discrimination on January 31 2025). Contracts approved included Raphael Construction for Swampscott Branch Crossing, CN Wood/Vermeer for a trackless boom flail mower for the rail trail, Raphael Construction for Elm Street Park (Gerry School playground), Foster Architecture for Hobbs House windows and porch design, Richard D'Ambrosio Inc. for FY24 sidewalk repair and ADA improvements, and McKay Plumbing & Heating for the State Street restroom heater. An Abbott Hall elevator repair contract could not be voted because the sole expected bidder did not submit; the procurement must be reposted with urgency due to a state compliance deadline. Temple Emanuel received a one-day liquor license for a February 5, 2025 event at 393 Atlantic Ave."
+    key_speakers: ["Town Administrator (Thatcher)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

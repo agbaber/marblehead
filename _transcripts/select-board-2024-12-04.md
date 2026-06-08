@@ -11,20 +11,21 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board approves single tax rate, hires police officer, reviews DPW sidewalk plan"
-  summary: "The Marblehead Select Board held its December 4, 2024 meeting, voting unanimously to maintain a single uniform property tax rate (residential factor of one) for FY2025 and declining to adopt residential, commercial, or open space exemptions. The board also approved a conditional offer of employment for a new police officer and reviewed comprehensive DPW presentations on a new sidewalk master plan and department reorganization. Additional actions included suspending the overnight parking ban in favor of a snow-emergency-based system and opening a process to fill a vacancy on the Water and Sewer Commission."
+  headline: "Select Board approves single tax rate, hires police recruit, reviews DPW sidewalk plan"
+  summary: "The Select Board held a classification hearing and voted to maintain a single uniform tax rate for FY25 with a residential factor of one, declining exemptions for residential, commercial, and open space classes. The board approved a conditional offer of employment to a police recruit and heard an extensive DPW presentation covering a new sidewalk master plan, pavement management updates, and departmental reorganization. The board also approved multiple contracts funded partly through ARPA and initiated a process to fill a vacancy on the Water and Sewer Commission following the passing of Tom Carroll."
   decisions:
-    - "Approved residential factor of one (single uniform tax rate) for FY2025"
+    - "Approved residential factor of one (single uniform tax rate for FY25)"
     - "Approved not adopting the residential exemption"
     - "Approved not adopting the small commercial exemption"
     - "Approved not adopting the open space discount"
-    - "Approved conditional offer of employment to Brandon Aire as full-time police officer"
-    - "Approved suspension of all-night parking ban in favor of declared snow emergency system"
-    - "Approved consent agenda including Chamber of Commerce and Historical Commission use of Old Townhouse and holiday hours"
-    - "Approved multiple contracts funded in part through ARPA funds"
-    - "Approved rail trail improvement project lawn signs on town property"
-    - "Approved process to fill Water and Sewer Commission vacancy left by passing of Tom Carroll"
+    - "Approved conditional offer of employment to Brandon Aire as permanent full-time police officer"
+    - "Approved suspension of all-night parking ban in favor of snow-emergency-based parking restrictions"
+    - "Approved consent agenda including facility use permits and holiday hours"
+    - "Approved multiple contracts totaling approximately $378,000 (generators, fuel tank removal, rail trail, outfall repairs, engineering services)"
+    - "Approved placement of rail trail improvement project signs on town property"
+    - "Approved accepting letters of interest to fill Water and Sewer Commission vacancy"
     - "Approved sending letter of condolence and appreciation to Tom Carroll's family"
   votes:
     - motion: "Not adopt residential exemption"
@@ -35,17 +36,17 @@ summary_card:
       result: "in favor (unanimous)"
     - motion: "Not adopt open space discount"
       result: "in favor (unanimous)"
-    - motion: "Conditional offer of employment to Brandon Aire as police officer"
+    - motion: "Conditional offer of employment to Brandon Aire"
       result: "in favor (unanimous)"
-    - motion: "Suspend overnight parking ban, implement snow-emergency-based system"
+    - motion: "Suspend all-night parking ban / implement snow emergency parking"
       result: "in favor (unanimous)"
-    - motion: "Consent agenda (holiday events, Old Townhouse use)"
+    - motion: "Consent agenda (facility use, holiday hours)"
       result: "in favor (unanimous)"
-    - motion: "Multiple ARPA-related contracts"
+    - motion: "Contracts (generators, fuel tanks, rail trail, outfall, engineering)"
       result: "in favor (unanimous)"
-    - motion: "Rail trail lawn signs on town property"
+    - motion: "Rail trail sign placement on town property"
       result: "in favor (unanimous)"
-    - motion: "Open letters of interest for Water and Sewer Commission vacancy"
+    - motion: "Accept letters of interest for Water and Sewer Commission vacancy"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -53,167 +54,153 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 2
     end_seconds: 232
-    headline: "Resident comments on library lights, energy grants, and teachers strike"
-    dek: "One resident praised a library lighting fix and raised concerns about the recent teachers strike and its impact on students."
+    headline: "Resident praises library lighting fix, criticizes teachers' strike conduct"
+    dek: "One resident thanked town staff for addressing library lights and urged financial penalties for any future public-employee strikes."
     summary: |
-      Albert Jordan of Roosevelt Avenue thanked town staff for addressing lights that had been on 24/7 at the library. He also noted a state grant of over $200,000 received by Peabody (PBD) for energy efficiency in public buildings, suggesting Marblehead could pursue similar funding.
+      Albert Jordan of Roosevelt Avenue thanked whoever resolved the issue of library lights remaining on around the clock, and noted that Peabody received a state grant of over $200,000 for energy efficiency in public buildings, suggesting Marblehead pursue similar funding.
       
-      The resident expressed strong disapproval of the recent teachers strike, criticizing the length of the work stoppage (11 days), protests near student athletic events, and what he characterized as select board members showing support for teachers before a contract was settled. He called for language in contracts that would forfeit pay for striking public employees and urged that protesters not gather near town meeting entrance doors.
-    key_speakers: ["Albert Jordan (Resident, Roosevelt Avenue)"]
+      He also expressed strong criticism of the recent teachers' strike, arguing that striking public employees should forfeit pay from day one, that teachers who caused 11 missed school days should work those days without compensation, and that union members should not picket near town meeting entrances.
+    key_speakers: ["Albert Jordan (resident, Roosevelt Avenue)"]
   - topic: admin-housekeeping
     topic_confidence: 0.92
     start_seconds: 270
     end_seconds: 1162
-    featured: true
-    headline: "Board votes to maintain single uniform property tax rate for FY2025"
-    dek: "Assessors presented FY2025 classification hearing options; board unanimously rejected all exemptions and adopted a residential factor of one."
+    headline: "Assessors present FY25 classification hearing; board votes single tax rate"
+    dek: "New assessor Todd Laramie and the Board of Assessors recommended — and the Select Board approved — a residential factor of one and no special exemptions for FY25."
     summary: |
-      New assessor Todd Laramie and the Board of Assessors presented the annual classification hearing for FY2025. The total taxable valuation of Marblehead is approximately $9.3 billion, of which 95% is residential.
+      Todd Laramie, newly hired in the Assessor's Office, and John Kelly presented the annual tax classification options. Key points:
       
-      The assessors recommended against adopting a residential exemption, small commercial exemption, or open space discount, and recommended maintaining a single uniform tax rate via a residential factor of one. Key points made:
+      - Total taxable valuation rose from approximately $8.2B to $8.4B; residential property comprises roughly 95% of total value.
+      - Apartment valuations saw a notable percentage increase, attributed to rising rental costs reflected in the Patriot Properties reassessment.
+      - The average single-family tax bill changed approximately 2.24%; condos approximately 2.1%; two-families approximately 8–10%.
+      - The board voted unanimously to maintain a single uniform tax rate (residential factor = 1) and declined to adopt the residential exemption, small commercial exemption, or open space discount, all as recommended by the assessors.
       
-      - A residential exemption would shift tax burden within the residential class from lower-value to higher-value properties, with little benefit given that nearly all parcels are owner-occupied.
-      - A commercial exemption would provide little relief since most Marblehead businesses are small.
-      - No vacant land parcels met the open space discount criteria.
-      - Only about 4% of total taxable valuation is commercial, industrial, or personal property, making a dual tax rate structure inappropriate.
-      
-      The board noted that average single-family tax bills increased approximately 2.24%, condos approximately 2.1%, and multi-family properties approximately 8–10% in FY2025. The tax rate change (a roughly 10-cent increase) was attributed to property value growth slowing relative to budget growth.
-      
-      All four motions (no residential exemption, factor of one, no commercial exemption, no open space discount) were approved unanimously. The board also discussed improvements to assessor-building department coordination for capturing new growth.
-    key_speakers: ["Todd Laramie (Assessor, new hire)", "John Kelly (Board of Assessors)", "Alicia (Town Administrator or staff)"]
+      Laramie described plans to conduct in-house new-growth field inspections alongside the building department rather than relying solely on contracted Patriot Properties, and noted software upgrade work underway to reduce manual-processing errors between the assessor database and tax bill files.
+    key_speakers: ["Todd Laramie (Assessor's Office)", "John Kelly (Board of Assessors)"]
   - topic: trash-dpw
     topic_confidence: 0.97
     start_seconds: 1507
-    end_seconds: 5730
-    headline: "DPW presents sidewalk master plan and department restructuring update"
-    dek: "Consultant Frank presented a completed sidewalk inventory and prioritization plan; DPW Director Amy described a staff reorganization completed within existing budget."
+    end_seconds: 5780
+    featured: true
+    headline: "DPW director presents sidewalk master plan and department reorganization update"
+    dek: "Consultant Frank Mee delivered a 72-mile sidewalk assessment; DPW Director Amy outlined restructuring, pavement management progress, and capital project updates."
     summary: |
-      **Sidewalk Master Plan (Frank, Apex/Environmental Partners)**
-      
-      The town's consultant presented the completed Marblehead Sidewalk Assessment and Improvement Plan. Key findings:
+      ### Sidewalk Master Plan (Consultant Presentation)
+      Consultant Frank Mee (Apex/Environmental Partners) presented the completed Marblehead Sidewalk Assessment and Improvement Plan:
       
       | Category | Finding |
       |---|---|
-      | Total sidewalk miles | Approximately 72 miles |
-      | Sidewalk material | 92% asphalt, 4% concrete |
-      | Sidewalks in poor/needs replacement | ~25% |
-      | Total curb ramps | 560 existing; ~550 potential locations identified |
-      | Curb ramps in poor condition | 15% |
-      | Structural maintenance points | 115 trip hazards |
+      | Total sidewalk mileage | ~72 miles |
+      | Material | 92% asphalt, 4% concrete |
+      | Condition (poor/replace) | ~25% |
+      | Curb ramps inventoried | 560 existing |
+      | Potential new curb ramp locations | ~550 |
+      | Structural maintenance points | 115 |
       | Obstruction points | 171 |
-      | Maintenance points | 138 |
+      | General maintenance points | 138 |
       
-      A pedestrian usage heat map weighted by proximity to schools, parks, business districts, and high-density areas was used to create a prioritized repair list. The plan is built in ArcGIS (Esri), which the town owns and can update. Planning-level cost estimates are included in appendices. The board noted the report is 132 pages and will be posted online.
+      A pedestrian usage heat map weighted schools, business districts, parks, and high-density areas to prioritize repairs. The data is housed in ArcGIS (Esri) so the town owns and can update it. Planning-level cost estimates are included in the 132-page report appendices.
       
-      **DPW Department Overview (Amy, DPW Director)**
+      ### DPW Departmental Reorganization
+      DPW Director Amy reported that the department restructured within its existing approved salary budget (23 positions before and after):
+      - Added an assistant director; split responsibilities between highway/tree and stormwater/utilities.
+      - Created a specialized Heavy Equipment Operator (HEO) classification requiring both HEO and CDL credentials to address a CDL shortage and provide a career ladder.
+      - Repositioned the town engineer under DPW; replaced a higher-grade staff engineer with an entry-level engineer.
+      - Created a construction division foreman to lead capital improvement and stormwater projects.
+      - Added a part-time clerk.
       
-      Amy presented a reorganization of the DPW completed within the approved FY2025 salary budget (total headcount remains at 23). Highlights:
-      - Four departments merged into DPW in 2021; employee structure has since been modernized.
-      - Two assistant directors created, one focused on highway/tree, one on stormwater/mechanics/utility coordination.
-      - New position: Construction Working Foreman to lead capital improvement projects.
-      - New classification: Specialized HEO (Heavy Equipment Operator with CDL), addressing a shortage of CDL holders.
-      - Town Engineer position restructured under DPW, paired with a new entry-level engineer.
-      - Part-time clerk added to handle increased administrative and GIS workload.
+      ### Pavement Management
+      - Article 11 (town meeting) authorized $12M over five years; approximately $2.2M/year is the chosen scenario to maintain and improve road conditions.
+      - DPW now coordinates with National Grid, municipal light, and water/sewer before paving to avoid repeated trench cuts (e.g., lessons from Atlantic Ave).
+      - Near-term focus streets: West Street (utilities complete, paving next), sections around Crestwood/Pine Cliff, Pleasant Street pending road diet design.
       
-      **Pavement Management**
-      - Article 11 allocated $12 million over five years; the selected scenario requires approximately $2.2 million/year ongoing.
-      - Streets are coordinated with National Grid, Municipal Light, and water/sewer capital plans before paving.
-      - West Street utilities complete; paving expected next year. Pleasant Street awaiting road diet design.
-      - GIS dashboard under development to show road ratings, utility age, and sidewalk conditions publicly.
-      
-      **Other DPW Updates**
-      - Snow program: 40+ employees from multiple departments; 35+ pieces of highway equipment.
-      - Reds Pond wall: Two options — approximately $300,000 for 20-year fix or approximately $1 million for full replacement; design underway.
-      - Rail trail: ~80% of design contracted to Toole; prototype section between Smith Street and Pleasant Street planned; December 9th public listening session scheduled.
-      - DPW facility: New fueling facility and roof replacement complete; storage yard nearly complete; electrical upgrade for mechanic garage to go out to bid; salt shed replacement (~$900,000 budgeted) under review for modular/Quonset hut design with truck wash.
-      - CDL training program in development; approximately 10–15 employees need CDLs.
-      - Town Administrator noted a need to explore a dedicated communications coordinator position.
-    key_speakers: ["Amy (DPW Director)", "Frank (Consultant, Apex/Environmental Partners)", "Thatcher (Town Administrator)"]
+      ### Other Capital Updates
+      - **Reds Pond wall**: Two repair options — ~$300,000 for a 20-year fix or ~$1M for full replacement; design underway.
+      - **Rail Trail**: ~80% to be designed by Tool Design; prototype section between Smith Street and Pleasant Street; ARPA funds committed; listening session December 9th.
+      - **DPW Facility**: New fueling facility and roof replacement complete; storage yard nearly complete; mechanic's garage electrical upgrade designed and going to bid; salt shed ($900,000 appropriated) exploring modular/Quonset hut options with integrated truck wash.
+      - **CDL Program**: DPW exploring building an in-house CDL training program accredited with the Federal Highway Administration; approximately 10–15 employees need CDLs.
+    key_speakers: ["Amy (DPW Director)", "Frank Mee (Apex/Environmental Partners consultant)", "Town Administrator (Thatcher)"]
   - topic: public-safety
     topic_confidence: 0.98
     start_seconds: 5826
     end_seconds: 6163
-    headline: "Board approves conditional employment offer to Brandon Aire as police officer"
-    dek: "Chief King recommended Aire, a Westfield State graduate currently working as a dispatcher in Beverly, for the next available police academy."
+    headline: "Select Board approves conditional employment offer to police recruit Brandon Aire"
+    dek: "Chief King recommended Brandon Aire, a Westfield State criminal justice graduate and current Beverly dispatcher, for the next available police academy starting January 6 or March 3, 2025."
     summary: |
-      Chief King presented Brandon Aire for a conditional offer of employment as a full-time police officer. Aire graduated from Westfield State University with a degree in Criminal Justice and currently works as a civilian dispatcher in Beverly. Prior experience includes work as a paraprofessional in Salem schools and at NFI, a juvenile residential facility.
+      Police Chief King introduced Brandon Aire, who holds a bachelor's degree in criminal justice from Westfield State University and currently works as a dispatcher in Beverly. Prior experience includes work as a paraprofessional in Salem schools and as staff at NFI, a juvenile residential facility.
       
-      The chief noted efforts to place Aire in a January 6, 2025 academy, describing it as a long shot, with a March 3 academy as the more likely start date.
-      
-      The board approved the conditional offer unanimously, contingent on successful completion of the Commonwealth physical abilities test, physical examination, and psychological examination. Effective date is January 6, 2025, or the first available academy date.
-    key_speakers: ["Chief King (Police Chief)", "Brandon Aire (Police Officer Candidate)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.88
-    start_seconds: 6163
-    end_seconds: 6402
-    headline: "Board votes to suspend overnight parking ban and implement snow-emergency system"
-    dek: "The annual vote replaces the all-night parking ban with a declared snow emergency prohibition from midnight to 7 AM; board discussed codifying the change at town meeting."
-    summary: |
-      The board voted to suspend Town of Marblehead Article 5, Section 8 (the all-night parking ban) and replace it with a snow-emergency-based system. Under the new system, on-street parking is prohibited from midnight to 7 AM only during declared snow emergencies. Declared emergencies are announced via the town website, CodeRED, social media, and MHTV.
-      
-      A board member suggested placing this on the town meeting warrant to codify it permanently, eliminating the need for an annual vote. The town administrator noted some operational considerations (e.g., summer street sweeping) that would need to be addressed in the wording. The board agreed to add it to a future agenda for warrant discussion.
-      
-      The board also voted to approve the annual Christmas tree bonfire at Riverhead Beach on Monday, January 6, 2025 at 6:00 PM, with curbside tree pickup from December 26 through January 10.
-    key_speakers: ["Thatcher (Town Administrator)"]
+      The board voted unanimously to approve a conditional offer of permanent full-time employment, contingent on successful completion of the Commonwealth's physical abilities test, a physical examination, and a psychological examination by physicians of the town's choosing. The effective start date is January 6, 2025, or the first available police academy date.
+    key_speakers: ["Chief King (Police Chief)", "Brandon Aire (recruit candidate)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
+    start_seconds: 6163
+    end_seconds: 6402
+    headline: "Board suspends all-night parking ban; adopts snow-emergency parking policy for FY25"
+    dek: "The annual vote suspends the standing overnight parking ban in favor of declared snow emergencies that prohibit parking from midnight to 7 AM."
+    summary: |
+      The board approved its annual suspension of Article 5, Section 8 (the all-night parking ban) and replaced it with a snow-emergency-based system: declared emergencies prohibit on-street parking midnight–7 AM on each day of the event. Violations are subject to ticketing and towing. Notification will occur via the town website, CodeRed, social media, MHTV, and other channels. The policy is revocable by the police chief, fire chief, town administrator, or DPW if it negatively impacts public health and safety.
+      
+      A board member requested that staff explore placing a permanent version of this policy on the town meeting warrant to avoid the annual re-vote.
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: recreation-events
+    topic_confidence: 0.88
+    start_seconds: 6338
+    end_seconds: 6402
+    headline: "Annual Christmas tree bonfire at Riverhead Beach set for January 6, 2025"
+    dek: "Curbside tree pickup runs December 26 through January 10; bonfire is scheduled for 6 PM on January 6."
+    summary: "The board announced the annual Christmas tree bonfire at Riverhead Beach on Monday, January 6, 2025 at 6:00 PM. Curbside tree pickup runs December 26 through January 3 (trees to be delivered to Riverhead Beach for the bonfire) and continues through January 10 (trees to go to the transfer station after the 10th). Trees must be free of lights, ornaments, stands, and plastic bags; garland, roping, and wreaths will not be collected."
+  - topic: admin-housekeeping
+    topic_confidence: 0.93
     start_seconds: 6402
     end_seconds: 6616
-    headline: "Board approves consent agenda and multiple ARPA-funded contracts totaling over $370,000"
-    dek: "Contracts include generator installation, underground tank removal, ocean outfall repairs, and rail trail prototype construction, with ARPA funds committed ahead of December 31 deadline."
+    headline: "Board approves consent agenda and approximately $378,000 in contracts, several ARPA-funded"
+    dek: "Contracts cover backup generators, underground fuel tank removal, outfall repairs, rail trail construction, and engineering services; ARPA deadline of December 31 drove urgency."
     summary: |
-      The board approved routine consent agenda items (Chamber of Commerce and Historical Commission use of the Old Townhouse, holiday hours at Abbott Hall and Mary Alley Hospital).
+      **Consent agenda** approved: Chamber of Commerce and Marblehead Historical Commission use of Old Townhouse; holiday hours at Abbott Hall and Mary Alley.
       
-      The board also approved the following contracts, several funded through ARPA:
+      **Contracts approved:**
       
       | Vendor | Scope | Amount |
       |---|---|---|
-      | Hansen Maureen Engineering | Kohler 50kW generator | $35,937.50 |
-      | Carlton Electrical Construction | Generator installation (Council on Aging & Police Dept.) | $67,750 |
+      | Hansen Maureen Engineering | Kohler 50 kW three-phase generator | $35,937.50 |
+      | Carlton Electrical Construction | Generators at Council on Aging & Police Dept. | $67,750 |
       | Brighter Horizons Environmental | Underground fuel tank removal | $26,000 |
-      | Rafael Construction | Ocean Ave Outfall Repairs | $76,300 |
-      | Rafael Construction | Rail Trail prototype construction | $143,395 |
-      | Collins Engineers | Regulatory permit/closeout for Shipyards Resilience Project | $9,900 + $19,500 |
-      | Municipal Local Cybersecurity Grant | Migration from .org to .gov domain | (grant) |
+      | Rafael Construction | Ocean Ave outfall repairs | $76,300 |
+      | Rafael Construction | Rail trail prototype construction | $143,395 |
+      | Collins Engineers | Permit coordination/closeout, Shipyards Resilience Project | $9,900 + $19,500 |
+      | (Grant) | Municipal cybersecurity grant (.org → .gov migration) | Grant |
       
-      The town administrator noted ARPA funds must be committed by December 31, 2024, and a comprehensive ARPA presentation is planned for the December 11 meeting. The Collins Engineers contract is funded from the state's ARPA allocation (not Marblehead's local allocation).
-    key_speakers: ["Thatcher (Town Administrator)"]
+      The Town Administrator noted that several contracts are funded through ARPA and must be committed by December 31, 2024. A comprehensive ARPA presentation is planned for the December 11 meeting. Collins Engineers funding comes from the state's ARPA allocation for the harbor project, not Marblehead's own ARPA allocation.
+    key_speakers: ["Town Administrator (Thatcher)"]
   - topic: recreation-events
-    topic_confidence: 0.85
+    topic_confidence: 0.82
     start_seconds: 6616
-    end_seconds: 6892
-    headline: "Board approves 20 lawn signs to publicize rail trail public engagement process"
-    dek: "Sustainability coordinator Logan Casey requested permission to place signs on town property as part of a grant-required environmental justice outreach effort."
+    end_seconds: 6927
+    headline: "Board approves placement of 20 rail trail outreach signs on town property"
+    dek: "Sustainability Coordinator Logan Casey requested signs to meet grant-required public engagement obligations, including outreach to two environmental justice census tracts."
     summary: |
-      Sustainability Coordinator Logan Casey presented a request to place 20 lawn signs around town advertising the ongoing rail trail design and public engagement process, including a public meeting scheduled for December 9.
+      Sustainability Coordinator Logan Casey presented a request to place approximately 20 lawn signs advertising the rail trail design public engagement process. Key details:
       
-      Eight of the 20 signs are targeted to Marblehead's two environmental justice census tracts (income-based tracts where at least 25% of households earn 65% or less of the state median income). The City of Salem will post its own copies for its EJ communities.
+      - Eight of the 20 signs (40%) will be located within Marblehead's two environmental justice census tracts (income-based; households with median income ≤65% of state median).
+      - Salem will post its own copies of the signs for engagement in its environmental justice communities.
+      - A public listening session is scheduled for December 9 in Abbott Hall.
+      - The outreach effort is a grant requirement and will be documented for the permitting process.
       
-      The town administrator noted the outreach is a requirement of the grant program and that documenting this engagement will be important during future permitting. The board approved the request unanimously, directing Casey to coordinate with relevant department heads at each site.
+      The board unanimously approved the request, with department heads to coordinate specific placement on their properties.
     key_speakers: ["Logan Casey (Sustainability Coordinator)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.91
     start_seconds: 6927
     end_seconds: 7199
-    headline: "Board opens process to fill Water and Sewer Commission vacancy following death of Tom Carroll"
-    dek: "Letters of interest due by Tuesday, December 10; joint interview session with the commission set for December 11."
+    headline: "Board opens process to fill Water and Sewer Commission vacancy after Tom Carroll's passing"
+    dek: "Letters of interest due Tuesday December 10; joint interview session with Water and Sewer Commission set for December 11."
     summary: |
-      The Water and Sewer Commission notified the Select Board of a vacancy created by the passing of Commissioner Tom Carroll. Under state law, the Select Board must act within seven days of notification.
+      Following the passing of Water and Sewer Commissioner Tom Carroll, the board initiated the appointment process under the applicable statutory timeline (board notifies Select Board within 30 days; Select Board acts within 7 days).
       
-      The board voted to accept letters of interest submitted to both the Select Board (Kyle Wiley, kwiley@marblehead.org) and the Water and Sewer Commission (water@marblehead.org) by Tuesday, December 10 at 4:00 PM. Applicants will be interviewed in a joint session on December 11 at 7:00 PM at Abbott Hall.
-      
-      The board also voted to send a letter of appreciation and condolences to Tom Carroll's spouse and family recognizing his long service to the commission.
-    key_speakers: ["Thatcher (Town Administrator)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.75
-    start_seconds: 7199
-    end_seconds: 7311
-    headline: "Board congratulates Marblehead football team and MHTV dedicates studio to Ed Bell"
-    dek: "Select board members offered announcements on the football team's Thanksgiving performance and Ed Bell's retirement recognition at the MHTV annual meeting."
-    summary: |
-      Board members offered several closing announcements:
-      - Congratulations to the Marblehead High School football team for their Thanksgiving Capstone game performance.
-      - The chair and a board member attended the MHTV annual meeting, at which the studio was dedicated to Ed Bell in recognition of his long service and retirement.
+      - Letters of interest must be submitted to both the Select Board (kwiley@marblehead.org) and the Water and Sewer Commission (water@marblehead.org) by Tuesday, December 10 at 4:00 PM.
+      - All applicants will be interviewed in joint session on December 11 at 7:00 PM at Abbott Hall.
+      - The board also voted to send a letter of appreciation and condolences to Tom Carroll's spouse and family recognizing his years of service.
+    key_speakers: ["Town Administrator (Thatcher)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

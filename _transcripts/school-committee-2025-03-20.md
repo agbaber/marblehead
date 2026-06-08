@@ -11,169 +11,172 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "School committee tables flag policy revision, approves $49.1M FY26 budget"
-  summary: "The Marblehead School Committee approved the FY26 school budget at approximately $49.1 million and voted to send the proposed flags-and-banners policy back to the policy subcommittee for additional legal clarification. Extensive public comment opposed the flag policy as drafted, with speakers citing First Amendment concerns and urging the committee to adopt a student-proposed alternative. The committee also approved a DECA overnight conference trip and a schedule-of-bills payment."
+  headline: "School committee votes 4-0 to approve $49.1M FY26 budget; flag policy sent back to subcommittee"
+  summary: "The Marblehead School Committee approved the FY26 school district operating budget at approximately $49,120,285 and referred the proposed flags-and-banners policy back to the policy subcommittee for further legal clarification. Extensive public comment opposed the draft flag policy, with speakers citing First Amendment concerns and student voice. The Brown School Leadership Council of third graders also presented to the committee."
   decisions:
     - "Approved FY26 school district budget of approximately $49,120,285"
     - "Approved schedule of bills totaling $973,745.11"
-    - "Approved DECA Career Development Conference overnight trip, April 25–30, 2025"
-    - "Returned proposed flags-and-banners policy (IMDB) to policy subcommittee for further legal clarification"
-    - "Approved motion to extend public comment period"
-    - "Approved motion to authorize chair to send note of gratitude to track coaches and athletes"
+    - "Approved overnight field trip for DECA Career Development Conference, April 25–30, 2025"
+    - "Referred proposed flags-and-banners policy back to policy subcommittee for attorney clarification on superintendent's role and review of alternative proposal"
+    - "Approved motion to send note of gratitude to boys and girls track coaches and student athletes"
   votes:
-    - motion: "Note of gratitude to track coaches and student athletes"
-      result: "in favor (5 to 0)"
-    - motion: "Approve schedule of bills totaling $973,745.11"
+    - motion: "Approve FY26 school district budget (~$49,120,285)"
       result: "in favor (4 to 0)"
-    - motion: "Approve FY26 budget of approximately $49,120,285"
+    - motion: "Approve schedule of bills ($973,745.11)"
+      result: "in favor (4 to 0)"
+    - motion: "Approve DECA overnight field trip (April 25–30, 2025)"
+      result: "in favor (4 to 0)"
+    - motion: "Refer flag policy back to subcommittee for further legal clarification"
       result: "in favor (4 to 0)"
     - motion: "Extend public comment period"
       result: "in favor (4 to 0)"
-    - motion: "Approve DECA overnight field trip April 25–30, 2025"
-      result: "in favor (4 to 0)"
-    - motion: "Return flag policy to subcommittee for legal clarification and review of alternative proposal"
-      result: "in favor (4 to 0)"
+    - motion: "Send note of gratitude to track coaches and student athletes"
+      result: "in favor (5 to 0)"
 
 topic_segments:
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 1
-    end_seconds: 191
-    headline: "Meeting opens; committee votes to commend track coaches for community kindness"
-    dek: "Coaches Nolan Ramo and Will Har and student athletes were recognized for purchasing a new bicycle for a school alumnus."
-    summary: "The chair called the meeting to order at 6:04 PM. A committee member recognized boys and girls track coaches and their student athletes for collectively purchasing a bicycle for a school alumnus whose bike had broken. The committee voted 5–0 to authorize the chair to send a note of gratitude."
+    end_seconds: 190
+    headline: "Committee opens meeting, recites Pledge, commends track coaches for buying bike for alumnus"
+    dek: "A motion passed 5-0 to send a note of gratitude to boys and girls track coaches Nolan Ramo and Will Har and student athletes who collectively purchased a new bicycle for an alumnus."
+    summary: "Chair Sarah Fox called the meeting to order at 6:04 PM with two members joining remotely. Under accommodations, a committee member commended the boys and girls track coaches and student athletes who, upon noticing an alumnus whose bike had broken, pooled resources to buy him a new one. The committee voted 5-0 to authorize the chair to send a formal note of gratitude."
     key_speakers: ["Sarah Fox (Chair)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
+    topic_confidence: 0.9
     start_seconds: 191
-    end_seconds: 1234
-    headline: "Brown School third-grade Leadership Council presents to school committee"
-    dek: "Nine third graders described the council's goals, community meetings, and kindness-and-justice wall, and received certificates from the superintendent."
-    summary: "Principal Mary Maxfield and school counselor Kara Elmer introduced the Brown School Leadership Council. Nine third-grade students — elected by their classmates after delivering speeches — presented on topics including teamwork, role modeling, community meetings, a kindness-and-justice wall, and a successful proposal to the PTO for a new podium. Students received certificates from the interim superintendent. The committee recessed briefly at 6:25 PM for photographs."
-    key_speakers: ["Mary Maxfield (Brown School Principal)", "Kara Elmer (Brown School Counselor)", "Superintendent (interim)"]
+    end_seconds: 1278
+    headline: "Brown School third-grade Leadership Council presents to school committee, receives certificates"
+    dek: "Nine third graders from the Brown School Leadership Council described their election process, community meetings, kindness and justice wall, and a successful PTO podium proposal."
+    summary: "Principal Mary Maxfield and counselor Kara Elmer introduced the Brown School Leadership Council, a new program in which third graders are elected by classmates to lead monthly all-school community meetings. Students June Gray, Jackson Crosby, Maggie Willard, Matthew, and others presented slides detailing their goals, teamwork practices, and initiatives including a kindness and justice wall and a successful proposal to the PTO for a new podium. Superintendent and committee members praised the program as a model of student voice. All nine presenting students received certificates."
+    key_speakers: ["Mary Maxfield (Brown School Principal)", "Kara Elmer (Brown School Counselor)"]
   - topic: public-comment
-    topic_confidence: 0.99
+    topic_confidence: 0.98
     start_seconds: 1279
-    end_seconds: 3584
-    headline: "Eight speakers urge committee to reject or substantially revise proposed flag policy"
-    dek: "Residents, parents, a high school junior, a retired social worker, and a lawyer argued the draft policy was legally flawed, unnecessarily restrictive, and harmful to students."
+    end_seconds: 3583
+    headline: "Residents overwhelmingly oppose proposed flag-and-banner policy during extended public comment"
+    dek: "Nine speakers — including a high school student, a retired clinical social worker, a lawyer, and several parents — urged the committee to reject or substantially revise the draft policy, citing First Amendment concerns, student wellbeing, and legal risk."
     summary: |
-      Public comment ran approximately 40 minutes, well beyond the standard 15-minute limit; the committee voted 4–0 to extend it. Eight individuals spoke, all opposing the proposed flags-and-banners policy as drafted:
+      Public comment ran well beyond the 15-minute limit and was extended by a 4-0 vote. Speakers included:
       
-      - **Kira Kay (Pickwick Road)** questioned why the policy had not changed since last summer despite student surveys, newspaper endorsements, and a state commissioner statement supporting inclusive school environments.
-      - **Liv Niles (MHS junior)** described a student-designed alternative policy vetted by GLBTQ Legal Advocates & Defenders (GLAD), noting a survey of 109 high school students found 103 believed students should have a voice in flag policy decisions.
-      - **Margaret Carter (Fer Street)** asked the committee to explain the specific legal grounds requiring a restrictive policy and questioned enforcement mechanisms.
-      - **Renee Ramirez-Keeny (Beverly Ave)** shared clinical social work anecdotes illustrating the developmental importance of inclusive symbols for children, and urged the committee to vote against the draft policy.
-      - **Brent Speed (Gerald Road, attorney)** argued the policy misapplied First Amendment law, that existing Supreme Court precedent already permits schools to regulate lewd or disruptive speech, and that the draft as written could suppress constitutionally protected speech.
-      - **Kathleen Terrin (Devereaux)** spoke remotely, citing the Tinker v. Des Moines precedent and expressing concern the policy signals distrust in educators.
-      - **Angus McLoan (Tyson Lane, educator and former legislative staffer)** argued the policy was crafted around a narrow political objective, would unconstitutionally prohibit public petition to the committee, and recommended indefinitely tabling the draft.
-      - **Jeanie Han (remote)** urged committee members to consider the long-term developmental needs of high school students and the legacy implications of the decision.
-      - **Henry (Mohawk Road)** linked the third graders' leadership presentation to the high school students' legally reviewed policy proposal and urged the committee to adopt the student version.
-      - **Megan Kaplan (Sapphire Ave, remote)** raised questions about whether the policy would affect student curriculum projects displaying flags and whether the committee was genuinely listening to student leaders.
-    key_speakers: ["Kira Kay (resident)", "Liv Niles (MHS junior)", "Margaret Carter (resident)", "Renee Ramirez-Keeny (resident)", "Brent Speed (resident, attorney)", "Kathleen Terrin (resident, remote)", "Angus McLoan (resident)", "Jeanie Han (resident, remote)", "Megan Kaplan (resident, remote)"]
+      - **Kira Kay (Pickwick Road)** questioned why the proposed policy had not changed despite community opposition, a student alternative, and a statement from the state Commissioner of Education emphasizing inclusive school environments.
+      - **Liv Niles (MHS junior)** described a student-authored alternative policy vetted by GLBTQ Legal Advocates & Defenders (GLAD), and reported that 103 of 109 students surveyed said students should have a voice in flag policy decisions.
+      - **Margaret Carter (Fer Street)** challenged the legal rationale, questioned enforcement practicality, and asked the committee to release the specific legal language requiring the restrictive approach.
+      - **Renee Ramirez-Keeny (Beverly Ave)** shared clinical stories from her career as a social worker to illustrate the developmental importance of symbols of inclusion for children.
+      - **Brent Speed (Gerald Road, attorney)** argued that longstanding Supreme Court precedent allows schools to regulate student speech without a blanket ban, and warned the current draft may itself expose the district to First Amendment claims.
+      - **Kathleen Terren (Devereaux Ave, remote)** expressed concern that the policy signals distrust in educators and does not support marginalized students.
+      - **Angus McLoan (Tyson Lane)** called the policy "policy by political objective," argued the third-party petition ban is unconstitutional, and recommended tabling the policy indefinitely or adopting the student-drafted alternative.
+      - **Jeanie Lampkin (remote)** urged the committee to consider long-term legacy and the developmental needs of high school students.
+      - **Henry Gusto (Mohawk Road)** connected the third graders' leadership presentation to the values at stake in the flag policy debate and urged adoption of the student policy.
+    key_speakers: ["Kira Kay (resident)", "Liv Niles (MHS student)", "Margaret Carter (resident)", "Renee Ramirez-Keeny (resident)", "Brent Speed (resident, attorney)", "Kathleen Terren (resident, remote)", "Angus McLoan (resident)", "Jeanie Lampkin (resident, remote)", "Henry Gusto (resident)", "Megan Kaplan (resident, remote)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 3816
+    end_seconds: 4470
+    headline: "Interim superintendent shares spring events, METCO update, Hadassah webinar, and anti-discrimination committee progress"
+    dek: "Superintendent updates included spring concert dates, student achievement highlights, METCO program status, a Hadassah antisemitism webinar, and a pending executive summary of the independent antisemitism investigation."
+    summary: |
+      Interim Superintendent John provided a wide-ranging update:
+      
+      - Spring performances: *Hades Town Teen Edition* April 11–13; all-town musical concerts for chorus (in progress), bands (March 25), strings (April 3), and jazz (April 16).
+      - Student highlights: Nate Assa placed sixth nationally in the 5,000-meter race at New Balance National Indoor Track; a student documentary selected for the Salem Film Festival.
+      - METCO program is active with more students enrolled for next year; current leadership transition underway after the president/CEO resigned.
+      - The superintendent participated in a Hadassah webinar on antisemitism, referencing student David McGinn's advocacy around curriculum materials.
+      - An anti-discrimination committee focused on antisemitism has been formed, including parents, administrators, teachers, and students.
+      - The executive summary of the independent antisemitism investigation and the Academic Discoveries special education report are both expected at the next meeting. The superintendent noted the 349-page Academic Discoveries draft report contains inaccuracies being addressed with the vendor, and that most issues identified have already been remediated by the special education director.
+    key_speakers: ["John (Interim Superintendent)", "Sarah Fox (Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 4979
+    end_seconds: 5241
+    featured: true
+    headline: "School committee approves FY26 budget of approximately $49.1 million in 4-0 vote"
+    dek: "The committee voted unanimously to bring the level-services FY26 operating budget to the town warrant, noting that higher-than-projected free cash figures announced in January made reductions unnecessary."
+    summary: |
+      The committee voted 4-0 to approve the FY26 Marblehead School District operating budget at **$49,120,285**.
+      
+      Chair Fox noted that through the fall and early winter the district had anticipated difficulty meeting its budget given town revenue projections, but in early-to-mid January those projections revised upward significantly — a development first announced publicly at the State of the Town and of which even FinCom was unaware until shortly before that event. The superintendent and administration characterized the resulting budget as a level-services budget.
+      
+      **Next steps in the budget calendar:**
+      | Date | Event |
+      |---|---|
+      | March 31 | FinCom votes the school budget |
+      | Early April | Warrant hearing; FinCom recommendation issued |
+      | First Monday (and likely Tuesday) of May | Town Meeting |
+      
+      The schedule of bills totaling **$973,745.11** was also approved 4-0 on a separate consent vote.
+    key_speakers: ["Sarah Fox (Chair)", "Jen Schaffner (committee member)", "John (Interim Superintendent)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
-    start_seconds: 3816
-    end_seconds: 4471
-    headline: "Interim superintendent highlights spring events, METCO program, antisemitism committee"
-    dek: "The superintendent noted upcoming performances, professional development, kindergarten registration, and an anti-discrimination committee focused on antisemitism."
-    summary: |
-      The interim superintendent provided a broad spring update including:
-      
-      - *Hades Town Teen Edition* performances April 11–13
-      - Student Nate Assa finished 6th nationally in the 5,000-meter race at New Balance National Indoor Track and Field
-      - A student documentary selected for screening at the Salem Film Festival on March 28
-      - All-town musical concerts in March and April
-      - METCO Advocacy Day at the State House; the METCO program was described as stable though its president/CEO has resigned
-      - A WELLN (Women's Educational Leadership Network) conference attended by approximately 14 district leaders
-      - Professional Development Day on March 19
-      - Kindergarten registration beginning March 24
-      - A Hadassah webinar on antisemitism in which the superintendent participated
-      - An anti-discrimination committee focused on antisemitism, including parents, administrators, teachers, and students
-      - A guest reading at Glover for Read Across America using the book *Be You* by Peter H. Reynolds
-      
-      The committee noted the executive summary of an independent antisemitism investigation and the Academic Discoveries special education report will both be presented at the next meeting.
-    key_speakers: ["Superintendent (interim)"]
-  - topic: school-budget
-    topic_confidence: 0.98
-    start_seconds: 4979
-    end_seconds: 5242
-    headline: "School committee approves FY26 budget of approximately $49.1 million, 4–0"
-    dek: "The budget, described as a level-services budget, will next go to FinCom on March 31 and then to the town warrant hearing in early April."
-    summary: "The committee voted 4–0 to approve the FY26 Marblehead School District operating budget of approximately $49,120,285. The chair noted that revenue projections had come in significantly higher than anticipated in early-to-mid January, enabling the district to move forward without reductions. FinCom is scheduled to vote the budget on March 31; the warrant hearing follows in the first week of April; town meeting begins the first Monday of May."
-    key_speakers: ["Sarah Fox (Chair)", "Jen Schaffner (committee member)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 5290
-    end_seconds: 5524
-    headline: "Committee approves DECA overnight trip to national conference in Orlando, April 25–30"
-    dek: "Three MHS students qualified for the national DECA Career Development Conference; fundraising and a grant reduced student cost to airfare only."
-    summary: "Business teacher Paul Gleason requested approval for a five-night overnight trip to the DECA Career Development Conference April 25–30, 2025. Three female students qualified for the national competition. Fundraising and a grant covered registration and lodging; students are responsible only for airfare. Chaperone arrangements include coordination with Beverly High School's DECA advisor. The committee voted 4–0 to approve."
-    key_speakers: ["Paul Gleason (MHS business teacher)"]
+    start_seconds: 5242
+    end_seconds: 5523
+    headline: "Committee approves DECA overnight field trip to national conference at Disney World, April 25–30"
+    dek: "Three MHS students qualified for the national DECA competition; fundraising and a grant reduced student costs to airfare and incidentals only."
+    summary: "Business teacher Paul Gleason requested approval for a five-night overnight trip (April 25–30, 2025, with April 30 as a travel day) to the DECA Career Development Conference in Orlando. Through fundraising and a grant, the registration fee and lodging are covered; students are responsible only for airfare and ride costs. Chaperone arrangements were made in coordination with Quabin Regional High School and the Beverly High School DECA advisor. The committee voted 4-0 to approve."
+    key_speakers: ["Paul Gleason (MHS Business Teacher)", "Sarah Fox (Chair)"]
   - topic: admin-housekeeping
     topic_confidence: 0.75
     start_seconds: 5524
-    end_seconds: 5570
-    headline: "Schedule of bills totaling approximately $973,745 approved 4–0"
-    dek: "No minutes were available for approval; they were postponed to a future meeting."
-    summary: "The committee voted 4–0 to approve a schedule of bills totaling $973,745.11. Meeting minutes were not available and their approval was postponed."
-    key_speakers: ["Sarah Fox (Chair)"]
-  - topic: permits-zoning
-    topic_confidence: 0.1
-    start_seconds: 5570
-    end_seconds: 8023
-    featured: true
-    headline: "Flag-and-banner policy sent back to subcommittee for additional legal clarification"
-    dek: "After committee debate over legal advice on government speech, the board voted 4–0 to have the subcommittee seek further guidance from counsel on whether the superintendent can serve as a conduit for flag requests."
+    end_seconds: 8022
+    headline: "Flag-and-banner policy sent back to subcommittee 4-0 for legal clarification on superintendent's role"
+    dek: "After debate over the legal brief from district counsel citing the Shurtleff decision and government-speech doctrine, the committee voted to have the policy subcommittee seek clarification on whether a superintendent-as-agent process would comply with counsel's advice."
     summary: |
-      The committee held its first reading of proposed policy IMDB (Flags and Banners). Subcommittee member Jen Schaffner summarized the legal brief from district counsel John Foskett, which argues that any displayed items in common areas of public school buildings constitute government speech under the *Shurtleff v. City of Boston* (2022) Supreme Court decision and a 2024 Eighth Circuit case. According to counsel, allowing third parties — including students, parents, or teachers — to formally request or influence flag decisions could forfeit the district's government-speech immunity and require acceptance of all flags under the First Amendment.
+      The committee held a first-reading discussion of the proposed Policy IMDB — Flags and Banners. Subcommittee member Jen Schaffner summarized the legal brief from district counsel John Foskett, which cited the *Shurtleff v. Boston* (2022) Supreme Court case and an Eighth Circuit 2024 decision. Counsel's position is that any flags or banners displayed in common areas of public school buildings constitute **government speech**, and that soliciting or accepting requests from teachers, students, or community members to determine what is displayed could forfeit the district's government-speech immunity, effectively opening displays to unrestricted First Amendment claims.
       
-      Key points of committee discussion:
+      Key committee positions:
       
-      - **Al Williams** opposed the policy as drafted, saying it inadequately addresses student voice, and suggested students' proposed policy be adapted so that student input flows through the superintendent to the committee for final approval.
-      - **Brian Oda** noted the committee has received significant email support for the current draft that has not been voiced publicly, citing concerns from community members with traditional religious values.
-      - **Sarah Fox (Chair)** expressed frustration that the debate has not addressed the underlying question of why certain student demographics do not feel they belong, and urged a more holistic approach through curriculum and community-building rather than relying on flags alone.
-      - **Interim Superintendent** stated he had not taken a public position, acknowledged the policy needs more work, and raised practical concerns about unintended consequences such as whether athletic banners or classroom educational flags would require committee approval.
+      - **Al Williams** opposed the policy as written, arguing it fails to address student voice; proposed a modified approach allowing the superintendent to vet requests and bring recommendations to the committee.
+      - **Brian Oda** noted the committee has received substantial email support for the current draft from community members who have not spoken publicly.
+      - **Sarah Fox** expressed concern that the debate has overshadowed the deeper question of why certain student populations do not feel a sense of belonging, and called for more holistic approaches including curriculum and community.
+      - **Jen Schaffner** clarified counsel's reasoning: once the committee adopts a policy asserting government-speech control, the genesis of flag decisions must come from the governing body, not from third-party petitions.
       
-      The key unresolved legal question is whether the superintendent, acting as the committee's agent, could receive and vet flag proposals before presenting a recommendation to the committee — without compromising government-speech immunity. The committee voted 4–0 to send the matter back to the policy subcommittee to obtain clarification from counsel on that specific question and to review Al Williams's alternative proposal.
-    key_speakers: ["Jen Schaffner (policy subcommittee member)", "Al Williams (committee member)", "Brian Oda (committee member)", "Sarah Fox (Chair)", "Superintendent (interim)"]
+      The committee voted **4-0** to refer the policy back to the subcommittee with direction to:
+      1. Obtain attorney clarification on whether the superintendent acting as agent/conduit would comply with the government-speech framework.
+      2. Review Al Williams's alternative proposal.
+      
+      Member Allison Taylor was not present for this portion of the meeting.
+    key_speakers: ["Jen Schaffner (policy subcommittee member)", "Al Williams (committee member)", "Brian Oda (committee member)", "Sarah Fox (Chair)", "John (Interim Superintendent)"]
   - topic: labor-personnel
-    topic_confidence: 0.8
-    start_seconds: 8069
+    topic_confidence: 0.85
+    start_seconds: 8023
     end_seconds: 8560
-    headline: "Committee sets superintendent evaluation timeline with workshop planned for May 8"
-    dek: "Staff, parent, and community surveys will go out mid-April; the committee aims to vote on a composite evaluation by May 15 and on contract action by late May."
+    headline: "Committee discusses superintendent evaluation timeline; workshop tentatively set for May 8"
+    dek: "The committee aligned on a schedule for the mid-cycle superintendent evaluation, including a community survey, a composite-development workshop, and a potential contract vote before the end of May."
     summary: |
-      The committee discussed a timeline for the interim superintendent's mid-cycle evaluation. Key dates discussed:
+      The committee discussed the timeline for the interim superintendent's evaluation. The agreed framework:
       
-      | Date | Activity |
+      | Date | Action |
       |---|---|
-      | April (first meeting) | Committee reviews draft survey questions from survey subcommittee |
-      | Mid-April | Surveys sent to staff, administrators, parents, and community |
+      | Survey subcommittee meeting (next day) | Finalize survey questions |
+      | April (first meeting) | Full committee reviews survey |
+      | Mid-April | Survey released to staff, parents, community |
       | ~May 13 | Survey deadline |
+      | May 1 | Regular business meeting |
       | May 8 (workshop) | Committee develops composite evaluation |
-      | May 15 (regular meeting) | Discussion and potential vote on composite evaluation |
-      | May 22 or late May | Potential vote on contract action |
-      | June 5 (if needed) | Follow-up meeting |
+      | May 15 | Regular meeting; potential vote to approve composite |
+      | May 22 or later | Potential vote on permanent contract |
       
-      The survey subcommittee (Brian Oda and one other) planned to meet the following day and expected draft questions to be ready for the full committee at the April meeting. The committee agreed to publish a formal schedule.
-    key_speakers: ["Sarah Fox (Chair)", "Jen Schaffner (committee member)", "Brian Oda (committee member)"]
+      Member Al Williams noted he would be traveling in June but could attend remotely under the town's 2019 warrant article allowing remote participation. The committee agreed to publish the schedule publicly.
+    key_speakers: ["Sarah Fox (Chair)", "Jen Schaffner (committee member)", "Brian Oda (committee member)", "Al Williams (committee member)", "John (Interim Superintendent)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 8560
+    topic_confidence: 0.82
+    start_seconds: 8561
     end_seconds: 9144
-    headline: "Subcommittee updates: newsletter readership exceeds 1,000; crossing guard shortage flagged"
-    dek: "The communications subcommittee reported strong newsletter engagement and is exploring informal town-hall style meetings; the police chief flagged a crossing guard shortage paying $21.33/hour."
+    headline: "Subcommittee updates: school newsletter reaching 1,000+ readers; revolving funds reviewed with FinCom; CPAC unsung heroes program restored"
+    dek: "Communications subcommittee reported 1,000+ newsletter readers and plans for community town halls; finance liaison reported a productive joint meeting with FinCom on revolving fund balances; CPAC announced the return of the Unsung Heroes awards."
     summary: |
-      Subcommittee and liaison updates included:
+      **Communications subcommittee (Al Williams & Brian Oda):** The March newsletter is in preparation. January and February newsletters each reached over 1,000 readers. A short reader survey will be included. The subcommittee is also exploring informal small-group coffee meetings (two non-subcommittee-paired members each) and a full town hall Q&A format.
       
-      - **Communications (Al Williams/Brian Oda):** The March school committee newsletter is nearly complete. January and February newsletters each reached over 1,000 readers. A short survey will accompany the March edition. The subcommittee is exploring small two-member informal community meetings and a larger town hall format, pending survey feedback.
-      - **Finance Liaison (Jen Schaffner):** A joint meeting with FinCom reviewed revolving fund balances as a tool to relieve pressure on other revenue streams. Mike (assistant superintendent of finance) walked through permissible uses of each fund.
-      - **Policy Subcommittee (Jen Schaffner):** Working on an operating protocol with consultant Alicia Mallon; draft expected within the next couple of meetings.
-      - **CPAC (Al Williams):** Funding secured for the Unsung Heroes awards program for special education educators.
-      - **Safety Advisory Committee (Al Williams):** The Marblehead Police Chief reported a shortage of crossing guards; positions pay $21.33/hour for up to 10 hours. Interested applicants can apply at the police department.
-    key_speakers: ["Al Williams (committee member)", "Jen Schaffner (committee member)", "Brian Oda (committee member)"]
+      **Finance liaison (Jen Schaffner):** A joint meeting with FinCom earlier in the week focused on revolving fund balances. The district has been drawing on revolving funds more heavily this year to offset budget pressure; Assistant Superintendent of Finance Mike reviewed what is and is not permissible under each fund's statutory purpose. Further analysis is underway.
+      
+      **Policy subcommittee:** Working on the committee's operating protocol following a meeting with Alicia Mallon; draft expected at an upcoming meeting.
+      
+      **CPAC liaison (Al Williams):** The Unsung Heroes program, which recognizes special education paraprofessionals, tutors, and teachers nominated by colleagues, has secured funding and will proceed this year.
+      
+      **Public safety note:** The chief of police reported a shortage of crossing guards. The position pays $21.33/hour for up to 10 hours. Interested residents can apply at the police department.
+    key_speakers: ["Al Williams (committee member)", "Brian Oda (committee member)", "Jen Schaffner (committee member)", "Sarah Fox (Chair)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

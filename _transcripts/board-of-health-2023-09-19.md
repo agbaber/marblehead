@@ -11,32 +11,33 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Board approves $231,480 Winter Street contract for transfer station construction documents"
-  summary: "The Marblehead Board of Health met on September 18, 2023 and approved a $231,480 contract with Winter Street Architects for construction drawings, engineering, and construction administration for the transfer station renovation. The board also approved placing a mailbox at the Mary Alley building to provide free fentanyl test strips and Narcan to residents without requiring a face-to-face visit. Additionally, the board approved updated facility sticker policies removing the Marblehead name and adding a license plate field, and heard presentations from Sustainable Marblehead and the Mental Health Task Force."
+  headline: "Board approves $231,480 transfer station construction contract, adds Narcan mailbox"
+  summary: "The Marblehead Board of Health approved a $231,480 contract with Winter Street Architects for transfer station construction documents and administration. The board also voted unanimously to install a public health mailbox at the Mary Alley building to dispense fentanyl test strips and Narcan without requiring face-to-face contact. Sustainable Marblehead's executive director presented composting and recycling education partnership proposals, and the board discussed facility sticker redesign for 2024."
   decisions:
     - "Approved minutes of July 11, 2023"
     - "Approved minutes of August 7, 2023"
-    - "Approved $10 refund for Alessandra Donovan (14 Lincoln Park)"
-    - "Approved $75 refund for Mr. Flynn (11 Glover Square)"
-    - "Approved $55 refund for Judy Carroll (8 Glendale Road)"
-    - "Approved $231,480 contract with Winter Street Architects for transfer station construction documents (Additional Services No. 12)"
-    - "Approved installation of a mailbox at Mary Alley building for fentanyl test strips and Narcan distribution"
-    - "Held motion to allow commercial trucks a visible 20% C&D line in trailers — motion made but not seconded"
+    - "Approved transfer station refund of $10 to Alessandra Donovan"
+    - "Approved transfer station refund of $75 to Mr. Flynn"
+    - "Approved transfer station refund of $55 to Judy Carroll"
+    - "Approved $231,480 contract with Winter Street Architects for transfer station construction documents and administration"
+    - "Approved installation of public health mailbox at Mary Alley building for fentanyl test strips and Narcan"
+    - "Changed February board meeting to Monday, February 5, 2024"
   votes:
     - motion: "Approve July 11, 2023 minutes"
       result: "in favor (unanimous)"
     - motion: "Approve August 7, 2023 minutes"
       result: "in favor (unanimous)"
-    - motion: "$10 refund to Alessandra Donovan"
+    - motion: "Refund $10 to Alessandra Donovan"
       result: "in favor (unanimous)"
-    - motion: "$75 refund to Mr. Flynn"
+    - motion: "Refund $75 to Mr. Flynn"
       result: "in favor (unanimous)"
-    - motion: "$55 refund to Judy Carroll"
+    - motion: "Refund $55 to Judy Carroll"
       result: "in favor (unanimous)"
-    - motion: "$231,480 contract with Winter Street Architects"
+    - motion: "Approve $231,480 Winter Street Architects contract (Additional Services No. 12)"
       result: "in favor (unanimous)"
-    - motion: "Install Narcan/fentanyl test strip mailbox at Mary Alley building"
+    - motion: "Install public health mailbox at Mary Alley building"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -44,150 +45,129 @@ topic_segments:
     topic_confidence: 0.9
     start_seconds: 0
     end_seconds: 197
-    headline: "Board approves meeting minutes for July 11 and August 7, 2023"
-    dek: "Both sets of minutes were approved unanimously after brief review."
-    summary: "The board opened the September 18, 2023 meeting and voted to approve minutes from July 11 and August 7, 2023. A brief camera adjustment was requested by John Caswell of MHTV to allow home viewers to see the board."
-    key_speakers: ["Board Chair (unnamed)", "John Caswell (MHTV)"]
+    headline: "Board approves minutes for July 11 and August 7, 2023 meetings"
+    dek: "Routine meeting opening; both sets of minutes approved unanimously."
+    summary: "The board convened at approximately 7:29 PM on September 18, 2023. Minutes from the July 11 and August 7, 2023 meetings were reviewed and approved by unanimous vote."
+    key_speakers: ["Board Chair (unnamed)"]
   - topic: trash-dpw
     topic_confidence: 0.95
     start_seconds: 197
-    end_seconds: 287
-    headline: "Three transfer station refunds totaling $140 approved unanimously"
-    dek: "Refunds were issued for a returned recycle bin, an unreceived bin number, and overcharged facility stickers."
+    end_seconds: 286
+    headline: "Three transfer station refunds totaling $140 approved"
+    dek: "Refunds issued for a returned recycle bin, an unreturned bin number, and overcharged facility stickers."
     summary: |
       The board approved three refund requests:
-      - **$10** to Alessandra Donovan (14 Lincoln Park) for purchasing the wrong size recyclable bin.
-      - **$75** to Mr. Flynn (11 Glover Square) for returning a large recycle bin without receiving a number.
-      - **$55** to Judy Carroll (8 Glendale Road) for being overcharged for facility stickers ($185 charged instead of $130).
-    key_speakers: ["Transfer Station Director (Andrew)"]
+      - **$10** to Alessandra Donovan (14 Lincoln Park) — purchased wrong-size recyclable bin
+      - **$75** to Mr. Flynn (11 Glover Square) — returned large recycle bin without taking a number
+      - **$55** to Judy Carroll (8 Glendale Road) — overcharged for facility stickers (charged $185, should have been $130)
+      
+      All three motions passed unanimously.
+    key_speakers: ["Andrew (Health Director)"]
   - topic: trash-dpw
     topic_confidence: 0.92
-    start_seconds: 287
-    end_seconds: 1435
-    headline: "Sustainable Marblehead proposes composting, recycling, and school outreach partnerships with Board of Health"
-    dek: "Executive Director Elaine Leahy outlined four collaboration areas; the board agreed to offer 50 free compost bins to new Black Earth subscribers using approximately $12,000 in DEP grant funds."
+    start_seconds: 311
+    end_seconds: 1045
+    headline: "Sustainable Marblehead proposes composting and recycling education partnerships with Board of Health"
+    dek: "Executive Director Elaine Leahy outlined four collaboration areas including 50 free compost bins funded by a ~$12,000 DEP grant."
     summary: |
-      Elaine Leahy, Executive Director of Sustainable Marblehead, presented four partnership opportunities:
+      Elaine Leahy, Executive Director of Sustainable Marblehead, presented four proposed partnership areas:
       
-      1. **Community composting** — Promoting Black Earth curbside compost pickup (~$100/year per household). The board agreed to fund 50 free bins (13-gallon at $29.50 or 4-gallon at $10) for new subscribers using ~$12,000 in annual DEP recycling dividend grant funds.
-      2. **School composting** — Expanding programs already underway at Marblehead High School and Veterans Middle School to all elementary schools.
-      3. **Recycling education** — Reducing the approximately 30% contamination rate in the recycling stream through curbside audits and promotion of the state's Recycle Smart tool.
-      4. **Mental health/outdoor activity** — Partnering on events encouraging walking, biking, and time outdoors.
+      1. **Community composting** — Offering 50 free Black Earth compost bins (13-gallon at $29.50 value, or 4-gallon at $10 value) to new subscribers, funded by the town's approximately $12,000 annual DEP recycling dividend grant.
+      2. **School composting** — Expanding composting programs currently operating at Marblehead High School and Veterans Middle School to elementary schools.
+      3. **Recycling education** — Annual holiday-season webinar with Andrew; potential curbside recycling audits by volunteers to address an estimated 30% contamination rate.
+      4. **Outdoor mental health** — Partnering on events encouraging walking and biking.
       
-      The board also discussed the upcoming Land and Sea Cleanup event on Saturday at 10:00 AM, co-organized by Sustainable Marblehead and SPUR, with bags and gloves provided by the Board of Health.
-    key_speakers: ["Elaine Leahy (Executive Director, Sustainable Marblehead)", "Andrew (Transfer Station/Health Director)"]
-  - topic: public-safety
-    topic_confidence: 0.75
+      Andrew noted that curbside Black Earth subscriptions cost just over $100 per year (~$2/week) and divert tonnage from the solid waste stream, reducing town costs. The board expressed enthusiasm for all four initiatives.
+    key_speakers: ["Elaine Leahy (Executive Director, Sustainable Marblehead)", "Andrew (Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
     start_seconds: 1435
-    end_seconds: 1949
-    headline: "Mental Health Task Force presents strategic plan with five pillars including community survey and legislative advocacy"
-    dek: "The task force outlined priorities in membership, community engagement, branding, legislative outreach, and subcommittee development."
-    summary: |
-      A board member presented an update from the Marblehead Mental Health Task Force, which met the previous Monday. Key elements of the strategic plan include:
-      
-      - **Membership**: Dr. Mark Labon leading outreach to ensure appropriate representation; formal proxies established for voting members.
-      - **Community engagement**: Plans for a community mental health survey in partnership with UMass Boston; review of existing data such as the high school Youth Risk Assessment.
-      - **Branding/marketing**: Website maintenance by Peter Schlack (Flat Rock Creative), social media team led by Kim Leventhal, magnets and brochures in production.
-      - **Legislative**: Engaging Select Board member Brett Murray, state representatives Jenny Armenia and Brendan Creighton, and Congressman Seth Moulton on mental health funding.
-      - **Council on Aging health fair**: Task force to table at the COA health fair the following Thursday.
-      
-      Dr. Toro's recent Marblehead Cares article framing mental health as a public health issue was highlighted.
-    key_speakers: ["Board Member (unnamed, presented task force update)", "Andrew (Health Director)"]
-  - topic: recreation-events
-    topic_confidence: 0.7
-    start_seconds: 1949
     end_seconds: 2092
-    headline: "Board supports reviving Town Bike Rodeo safety program for youth"
-    dek: "The board discussed partnering with the police department, schools, and Recreation and Parks to offer bicycle safety education, with instructor Tom Regan already engaged."
-    summary: "A board member raised concerns about children riding bikes unsafely — without helmets, texting while riding, or riding against traffic. The board discussed reviving a Bike Rodeo safety program in partnership with the Marblehead Police Department, schools, Park and Rec, and Marblehead Cycle. Instructor Tom Regan has agreed to participate and Recreation Director Dennis has initiated planning. No formal date has been set. Suggestions included offering ribbons and stickers to incentivize participation."
-    key_speakers: ["Board Member (Helene, unnamed in full)", "Andrew (Health Director)"]
+    headline: "Mental Health Task Force reports on strategic plan, upcoming health fair participation"
+    dek: "Task force outlines priorities including membership, community engagement, branding, and legislative advocacy; will table at Council on Aging health fair."
+    summary: |
+      A board member reported on the Marblehead Mental Health Task Force's recent meeting. Strategic priorities include:
+      
+      - **Membership** — Dr. Mark Labon leading recruitment to ensure appropriate representation; formal proxies planned for town-affiliated members.
+      - **Community engagement** — Speaker programs and a planned community survey; meeting with UMass Boston on survey design.
+      - **Branding/marketing** — Website (Marblehead Cares), social media managed by Kim Leventhal, and materials designed by Peter Schlack (Flat Rock Creative).
+      - **Legislative advocacy** — Engagement with Select Board member Brett Murray, state legislators Jenny Arciero and Brendan Crighton, and Congressman Seth Moulton.
+      
+      The task force will have a table at the Council on Aging health fair the following Thursday, 10 AM to 2 PM.
+    key_speakers: ["Board member (unnamed)", "Andrew (Health Director)"]
+  - topic: recreation-events
+    topic_confidence: 0.75
+    start_seconds: 1998
+    end_seconds: 2092
+    headline: "Board supports reviving town Bike Rodeo safety program for youth"
+    dek: "A partnership with police, schools, and Marblehead Cycle is in early planning stages; no date yet set."
+    summary: "A board member proposed reviving a Bike Rodeo safety program to address observed increases in children riding without helmets or riding unsafely. Discussions identified Tom Regan as a potential instructor and Dennis (DPW/transfer station staff) as having staff support. No formal date has been set. The board suggested offering ribbons and stickers as incentives, consistent with past programs."
+    key_speakers: ["Board member (unnamed)", "Andrew (Health Director)"]
   - topic: trash-dpw
     topic_confidence: 0.97
-    start_seconds: 2092
-    end_seconds: 3339
-    headline: "Board revises facility sticker design and debates stickless license-plate-reader system for transfer station"
-    dek: "Stickers for 2024 will drop the 'Marblehead' name and add a license plate field; a $60,000 stickless camera system remains under research for future years."
-    summary: |
-      The board had an extended discussion on facility sticker policy covering residential stickers ($80 first vehicle, $25 each additional), commercial stickers ($280), and staffing challenges.
-      
-      **Key decisions for 2024 stickers:**
-      - Remove the word 'Marblehead' from the sticker face (privacy concern for residents working in high-security environments).
-      - Add a printed license plate field so the sticker is tied to a specific vehicle and cannot easily be shared.
-      - Sticker must still be affixed to the vehicle.
-      
-      **Stickless system discussion:**
-      A license-plate-reader system was estimated at approximately $60,000 and explored with a company called Eagle Eye, which lacked experience with transfer station traffic patterns. A gate-based system was discussed but deemed infeasible given the facility's traffic flow. The board agreed to continue researching stickless options for future years.
-      
-      **Employee safety:**
-      Board members expressed concern about verbal abuse and physical altercations involving sticker-checking staff. Cameras are being made live shortly. The board discussed consequences for residents who mistreat employees and considered whether signage or cultural change could help.
-      
-      **Staffing:**
-      The facility sees approximately 1,100 cars on weekdays and 1,300 on weekends. One employee recently departed; interviews are underway. The director noted the need for additional staff in the upcoming budget cycle.
-      
-      **Separation of beach and transfer station stickers** was raised as a future town meeting article that could allow lower individual pricing for each.
-    key_speakers: ["Andrew (Transfer Station Director)", "Board Member (Tom, unnamed in full)", "Board Member (Joanne)", "Board Member (Helene)"]
-  - topic: bonding-capital
-    topic_confidence: 0.9
-    start_seconds: 3339
-    end_seconds: 3950
-    featured: true
-    headline: "Board unanimously approves $231,480 Winter Street Architects contract for transfer station construction documents"
-    dek: "The contract covers civil, structural, and MEP engineering, construction documents, and construction administration for the transfer station renovation."
-    summary: |
-      The board approved Additional Services No. 12 with Winter Street Architects in the amount of **$231,480** for the transfer station renovation project. The scope includes:
-      
-      | Line Item | Amount |
-      |---|---|
-      | Civil engineering | $19,000 |
-      | Goldman Milano structural engineering | included |
-      | Sullivan Engineering MEP (scale house pit, transaction hut) | $65,000 |
-      | Swap shop site plan (plumbing, HVAC, electrical) | included |
-      | Putnam Associates specifications | included |
-      | Architectural design, construction documents, construction admin, RFIs, shop drawings, punch list | included |
-      
-      DEP approval is still pending. The planning board approval period has passed and the ruling stands. The goal is to have foundations in before winter with construction proceeding through the slower winter period. The scale house, compactor, and concrete floor areas will be active construction zones while the facility remains open to residents.
-      
-      A public commenter, Barbara (last name unclear), raised questions about oversight, cost overruns relative to the earlier landfill closure project, and the role of the building superintendent. The director noted that an Owner's Project Manager (Jerry Smith) and the architects are responsible for oversight, and that underground construction carries inherently higher cost uncertainty than above-ground work.
-    key_speakers: ["Andrew (Transfer Station/Health Director)", "Jerry Smith (Owner's Project Manager)", "Board Member (Chair)", "Barbara (public commenter)"]
-  - topic: trash-dpw
-    topic_confidence: 0.85
-    start_seconds: 3950
+    start_seconds: 2138
     end_seconds: 4471
-    headline: "Motion to allow commercial trucks a visible 20% C&D fill line in trailers fails to receive a second"
-    dek: "The director opposed the change during the active construction period; one board member was open but wanted to observe operations before deciding."
+    featured: true
+    headline: "Board approves $231,480 transfer station construction contract; debates sticker system overhaul"
+    dek: "Winter Street Architects contract covers construction documents and administration; sticker redesign and potential license-plate reader system discussed for 2024."
     summary: |
-      A board member made a motion to allow commercial trucks to deposit construction and demolition (C&D) material into transfer station trailers up to a clearly marked 20% fill line, which would be monitored by staff. The rationale was to create an equal playing field for contractors who were unaware of the prior restriction.
+      ### Facility Stickers
+      The board discussed several changes to the facility sticker program for 2024:
+      - **Remove "Marblehead" branding** — Replace with "Facility Sticker" to protect residents who prefer not to advertise their town (e.g., employees at prisons).
+      - **Add license plate field** — Sticker will include a handwritten license plate number to prevent transfer between vehicles.
+      - **Sticker remains affixed to vehicle** — No change to placement requirement.
+      - **License-plate reader system** — A stickless automated system was discussed at an estimated cost of approximately $60,000. The board noted this is not feasible for the current year but agreed to continue researching it. One previously contacted vendor (Eagle Eye) was deemed unsuitable. An older vendor called Stickless System had been quoted at approximately $60,000.
+      - **Commercial stickers** — $280 per vehicle; allow recycling of commingled material and cardboard by Marblehead businesses or businesses located in Marblehead.
+      - **Employee safety** — Board expressed concern about verbal and physical abuse of transfer station staff enforcing sticker rules; discussed cameras (noted as going live shortly) and cultural expectations.
       
-      The transfer station director expressed concern that DEP scrutiny would increase and that the facility is already over capacity during construction. He recommended waiting until the new facility is complete before revisiting C&D sorting options, which would require a feasibility study, a town meeting appropriation, and additional staff.
+      ### Transfer Station Construction Contract
+      The board approved **Additional Services No. 12** — a contract with Winter Street Architects covering:
+      - Civil engineering (approximately $19,000)
+      - Structural engineering (Goldman Milano)
+      - MEP engineering (Sullivan Engineering) — scale house pit structure, transaction hut ($65,000)
+      - Swap shop site plan (plumbing, electrical, HVAC for scale house; swap shop is electrical only)
+      - Construction documents, construction administration, RFIs, shop drawings, field reports, punch list, and final affidavit
+      - Specifications (Putnam Associates), estimating (Levitt Bucknell)
       
-      Another board member said she needed to observe operations firsthand before deciding. The motion received no second and was not voted on.
-    key_speakers: ["Board Member (Tom)", "Andrew (Transfer Station Director)", "Board Member (Joanne)"]
+      **Total contract: $231,480.** Passed unanimously.
+      
+      ### Construction Timeline
+      The board is awaiting DEP approval. The goal is to have foundations in before winter and conduct construction during the slower winter period. The facility will remain operational throughout construction. The design targets net-zero energy, with solar panels planned in cooperation with the municipal light department.
+      
+      ### Commercial C&D Debate
+      A motion was made to allow commercial trucks to deposit construction and demolition (C&D) material up to an estimated 20% of trailer capacity (marked with a visible line), consistent with DEP guidelines. The motion did not receive a second and was left on the record without a vote. The director expressed preference for completing the new facility before revisiting C&D policy.
+    key_speakers: ["Andrew (Health Director)", "Board Chair (unnamed)", "Board members (unnamed)", "Barbara (resident commenter)", "Bob (resident commenter)"]
   - topic: public-safety
-    topic_confidence: 0.88
-    start_seconds: 4471
-    end_seconds: 4673
-    headline: "Board unanimously approves outdoor Narcan and fentanyl test strip mailbox at Mary Alley building"
-    dek: "A $15 black mailbox with a public health label will be stocked by the public health nurse to allow discreet, after-hours access to harm reduction supplies."
+    topic_confidence: 0.95
+    start_seconds: 4519
+    end_seconds: 4853
+    headline: "Board votes to install outdoor Narcan/fentanyl test strip mailbox at Mary Alley building"
+    dek: "A low-cost black mailbox with a public health label will allow 24/7 anonymous access to harm-reduction supplies."
     summary: |
-      The board unanimously approved installing a small mailbox on the exterior of the Mary Alley (health department) building to provide **free fentanyl test strips** and potentially **Narcan** without requiring a face-to-face appointment. Key points:
+      Andrew proposed placing a small black mailbox outside the Mary Alley (health department) building to provide anonymous, after-hours access to fentanyl test strips and potentially Narcan. The public health nurse will monitor and restock the mailbox.
       
-      - The public health nurse will monitor and restock the mailbox.
-      - The location was chosen over the fire station for its connection to public health oversight and lower visibility.
-      - Vandalism concerns were noted as a potential reason to reassess placement later.
-      - A board member shared a personal account of a friend who died from a street opioid laced with fentanyl, emphasizing that overdose risk affects all demographics in the community.
+      A board member described the firehouse as an alternative location due to lower vandalism risk, but the board voted to place it at Mary Alley to keep it under public health department oversight.
       
-      Narcan remains available through the health department; residents are encouraged to have it on hand. Other local sources include pharmacy dispensaries in Lynn.
-    key_speakers: ["Andrew (Health Director)", "Board Member (Tom)", "Board Member (Helene)"]
+      A board member gave personal testimony about losing a friend to an opioid overdose and urged the community to take fentanyl risks seriously regardless of a person's apparent health or social profile. Andrew noted that Narcan is also available through the health department and emphasized that fentanyl is increasingly found as an adulterant in other drugs.
+      
+      **Vote: unanimous in favor.**
+    key_speakers: ["Andrew (Health Director)", "Board member (unnamed)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 4673
-    end_seconds: 5605
-    headline: "Director's report covers fall leaf collection schedule, household hazardous waste day Nov. 18, and flu clinics"
-    dek: "Leaf bag pickup runs on seven dates from October through June; household hazardous waste day is November 18 at the transfer station; high-dose flu clinic for residents 65+ is September 26."
+    start_seconds: 4853
+    end_seconds: 5160
+    headline: "Board discusses website reorganization; Andrew previews proposed navigation structure"
+    dek: "A board member shared a color-coded site map proposal; Joanne in the finance department currently manages website updates."
+    summary: "Andrew and a board member discussed reorganizing the Board of Health website to reduce clutter, remove outdated content, and make navigation easier for first-time visitors. A color-coded structural map was shared showing proposed category groupings. Joanne in the town's finance department currently handles website changes. The board agreed to share the document and work toward incremental improvements."
+    key_speakers: ["Andrew (Health Director)", "Board member (unnamed)"]
+  - topic: trash-dpw
+    topic_confidence: 0.9
+    start_seconds: 5160
+    end_seconds: 5391
+    headline: "Fall/spring leaf and grass collection schedule announced; household hazardous waste day set for November 18"
+    dek: "Seven curbside leaf collection weeks scheduled; HHW event at transfer station costs $30–$60 depending on volume."
     summary: |
-      **Board of Health website redesign** — The director and a board member discussed reorganizing the BOH website for easier navigation. A draft taxonomy was shared; the board will work with town finance staffer Joanne on implementing changes.
-      
-      **Fall/Spring leaf and grass collection schedule** (leaf bags only, no plastic bags, no trash cans, no brush):
+      **Curbside leaf and grass collection weeks (leaf bags only; no plastic bags, trash cans, or brush):**
       - Week of October 23
       - Week of November 6
       - Week of November 27
@@ -196,35 +176,42 @@ topic_segments:
       - Week of May 13
       - Week of June 3
       
-      **Household Hazardous Waste Day — Saturday, November 18** at Marblehead Transfer Station (joint with Swampscott residents). Pricing:
-      | Quantity | Cost |
+      Collection occurs on residents' regular trash day; one-day delay if a legal holiday falls in that week.
+      
+      **Household Hazardous Waste Day: Saturday, November 18** at the Marblehead Transfer Station (shared with Swampscott residents).
+      
+      | Volume | Cost |
       |---|---|
       | 0–3 gallons/lbs | $30 |
       | 3–10 gallons/lbs | $40 |
       | 10–25 gallons/lbs | $60 |
       
-      Latex/acrylic paint (soap-and-water cleanup) is **non-hazardous** and can be disposed of dry in household trash.
-      
-      **Flu clinics:**
-      - High-dose flu clinic for residents 65+: **September 26, 9–11 AM** at the COA (pre-registration required).
-      - Employee flu clinic: **October 11, 3–6 PM** at the health department.
-      
-      The board discussed the state's $250,000 grant for a permanent household hazardous waste facility, noting that an estimated $1 million is needed to build such a facility, making the grant insufficient on its own.
-    key_speakers: ["Andrew (Health Director)", "Board Member (Tom)"]
+      Latex/acrylic paint (cleanup with soap and water) is non-hazardous and can be disposed of as household trash once fully dried. A second HHW event is planned for April.
+    key_speakers: ["Andrew (Health Director)"]
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 5391
+    end_seconds: 5486
+    headline: "High-dose flu clinic for residents 65+ set for September 26; employee clinic October 11"
+    dek: "Both events require pre-registration; employee clinic runs 3–6 PM in the board meeting room."
+    summary: |
+      - **Resident flu clinic (high-dose, age 65+):** September 26, 9–11 AM at the Council on Aging. Pre-registration required; call the COA or health department.
+      - **Employee flu clinic:** October 11, 3–6 PM in the Board of Health meeting room. Sign-up information to be distributed to town employees.
+    key_speakers: ["Andrew (Health Director)"]
   - topic: public-comment
-    topic_confidence: 0.92
+    topic_confidence: 0.95
     start_seconds: 5604
     end_seconds: 6313
-    headline: "Residents ask about overdose statistics, COVID trends, and transfer station construction oversight"
-    dek: "Two residents spoke during public comment on harm reduction resources, COVID booster guidance, and accountability for construction cost overruns."
+    headline: "Residents ask about Narcan access, COVID trends, and transfer station construction oversight"
+    dek: "One resident asked about overdose statistics and COVID booster guidance; another raised concerns about construction cost overruns."
     summary: |
-      **Resident 1 (Leelan, Westport Lane / Marblehead Current)** asked follow-up questions on harm reduction:
-      - Confirmed Narcan and fentanyl test strips are free.
-      - Asked about local overdose statistics (director indicated police chief can provide them).
-      - Asked about COVID trends: the director noted wastewater data suggests elevated activity potentially comparable to 2020 levels; free rapid tests are available through September 30 while supplies last; the board deferred to primary care physicians and forthcoming CDC/state guidance on the new booster.
+      **Resident (Leelan, Westport Lane / Marblehead Current)** asked:
+      - Whether Narcan and fentanyl test strips are free (confirmed: yes)
+      - Whether overdose statistics are available (Andrew said he can obtain them from the police chief)
+      - Whether COVID cases are increasing — Andrew noted wastewater data suggests levels comparable to 2020 in the region; rapid tests available free through September 30; new booster guidance deferred to primary care physicians and forthcoming CDC/state guidance.
       
-      **Resident 2 (Barbara, last name unclear)** raised concerns about construction oversight and cost overruns across town departments, referencing the prior landfill closure project. The director explained that the Owner's Project Manager and architects are responsible for oversight, and that underground construction carries unpredictable cost risks due to unknown subsurface conditions. The resident offered informal assistance with oversight and was welcomed to stay engaged.
-    key_speakers: ["Leelan (resident, Marblehead Current)", "Barbara (resident)", "Andrew (Health Director)"]
+      **Resident (Barbara/Bob)** raised concerns about construction cost overruns on town projects, referencing the landfill closure project and questioning contingency planning. Andrew explained that underground construction involves significant unknowns and that the 17-acre landfill contained more waste material than estimated. He noted that going forward, the transfer station project has an owner's project manager (Jerry Smith) and architect oversight. The resident offered informal assistance with construction monitoring.
+    key_speakers: ["Resident (Leelan)", "Resident (Bob/Barbara)", "Andrew (Health Director)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

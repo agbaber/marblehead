@@ -11,55 +11,57 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board approves Riptide Lounge liquor license transfer to new ownership"
-  summary: "The Marblehead Select Board held a public hearing and approved the transfer of the all-alcoholic beverage license for the Riptide Lounge at 116 Pleasant Street to Riptide Group Inc. The board also appointed Dan Albert as the town's MBTA Advisory Board designee, selected Dee (last name unclear) to the Disabilities Commission, and approved a series of routine licenses and contracts including a $49,000 fireworks contract and an $8,450 actuarial services contract."
+  headline: "Board approves Riptide liquor license transfer, appoints Dan Albert to MBTA Advisory Board"
+  summary: "The Marblehead Select Board held a public hearing and approved the transfer of the all-alcoholic beverage license from Riptide Lounge Inc. to Riptide Group Inc. at 116 Pleasant Street. The board also interviewed three candidates for the MBTA Advisory Board vacancy, selecting Dan Albert by polled vote. Additional appointments, contract approvals, and event-related motions were handled on a 14-item agenda."
   decisions:
-    - "Approved transfer of all-alcoholic beverage license from Riptide Lounge Inc. to Riptide Group Inc., 116 Pleasant Street"
-    - "Appointed Mark Philip to the Cultural Council (term expires June 2025)"
-    - "Appointed Dan Albert as MBTA Advisory Board designee (term expires June 2023)"
-    - "Appointed Dee (surname unclear) to the Disabilities Commission (term expires June 2024)"
+    - "Approved transfer of all-alcoholic beverage license to Riptide Group Inc., 116 Pleasant Street"
+    - "Approved common victualer license for Riptide Group Inc."
+    - "Appointed Mark Philip to Cultural Council (term to June 2025)"
+    - "Appointed Dan Albert as MBTA Advisory Board designee (term to June 2023)"
+    - "Appointed Dee (last name unclear) to Disabilities Commission (term to June 2024)"
     - "Approved Arbor Day Proclamation for April 28, 2023"
-    - "Approved Chamber of Commerce 'Celebrate Marblehead' outdoor business program, April 13–October 31, 2023"
-    - "Approved contract with Power Vision Entertainment Group Inc. for fireworks in the amount of $49,000"
+    - "Approved Chamber of Commerce 'Celebrate Marblehead' outdoor program, April 13 – October 31, 2023"
+    - "Approved contract with Power Vision Entertainment Group Inc. for fireworks, $49,000"
     - "Approved one-day liquor license for Bubble Bar Boston at Lee Mansion, May 13, 2023"
-    - "Approved renewal of all-alcohol seasonal club licenses for Eastern Yacht Club and Dolphin Yacht Club"
-    - "Approved renewal of Sunday entertainment license for Dolphin Yacht Club"
-    - "Approved actuarial services contract with Odyssey Advisors Inc. for $8,450"
-    - "Approved use of Abbott Hall Auditorium for Marblehead High School exhibit opening reception, May 23, 2023"
+    - "Renewed all-alcoholic seasonal club licenses for Eastern Yacht Club and Dolphin Yacht Club"
+    - "Renewed Sunday entertainment license for Dolphin Yacht Club"
+    - "Approved contract with Odyssey Advisors Inc. for OPEB actuarial services, $8,450"
+    - "Approved use of Abbott Hall for Marblehead High School exhibit opening reception, May 23, 2023"
     - "Approved preparation of select board message for 2023 Marblehead-Halifax Race book"
   votes:
-    - motion: "Approve common vic license for Riptide Group Inc."
+    - motion: "Approve common victualer license for Riptide Group Inc."
       result: "in favor (unanimous)"
-    - motion: "Approve transfer of all-alcoholic beverage license to Riptide Group Inc."
+    - motion: "Transfer all-alcoholic beverage license to Riptide Group Inc."
       result: "in favor (unanimous)"
     - motion: "Appoint Mark Philip to Cultural Council"
       result: "in favor (unanimous)"
-    - motion: "Place three MBTA Advisory Board candidates in nomination"
+    - motion: "Place three names in nomination for MBTA Advisory Board"
       result: "in favor (unanimous)"
-    - motion: "Appoint Dan Albert as MBTA Advisory Board designee"
+    - motion: "Appoint Dan Albert to MBTA Advisory Board (polled vote)"
       result: "in favor (unanimous)"
-    - motion: "Place two Disabilities Commission candidates in nomination"
+    - motion: "Place two names in nomination for Disabilities Commission"
       result: "in favor (unanimous)"
-    - motion: "Appoint Dee to Disabilities Commission"
+    - motion: "Appoint Dee to Disabilities Commission (polled vote)"
       result: "in favor (unanimous)"
     - motion: "Approve Arbor Day Proclamation"
       result: "in favor (unanimous)"
-    - motion: "Approve Celebrate Marblehead Chamber of Commerce program"
+    - motion: "Approve Chamber of Commerce Celebrate Marblehead program"
       result: "in favor (unanimous)"
-    - motion: "Approve $49,000 fireworks contract with Power Vision Entertainment Group Inc."
+    - motion: "Approve fireworks contract with Power Vision Entertainment Group Inc."
       result: "in favor (unanimous)"
     - motion: "Approve one-day liquor license for Bubble Bar Boston"
       result: "in favor (unanimous)"
-    - motion: "Renew all-alcohol seasonal club licenses for Eastern Yacht Club and Dolphin Yacht Club"
+    - motion: "Renew seasonal club licenses for Eastern Yacht Club and Dolphin Yacht Club"
       result: "in favor (unanimous)"
     - motion: "Renew Sunday entertainment license for Dolphin Yacht Club"
       result: "in favor (unanimous)"
-    - motion: "Approve actuarial services contract with Odyssey Advisors Inc. for $8,450"
+    - motion: "Approve OPEB actuarial contract with Odyssey Advisors Inc."
       result: "in favor (unanimous)"
-    - motion: "Approve Abbott Hall use for Marblehead High School opening reception"
+    - motion: "Approve Abbott Hall use for MHS exhibit opening reception"
       result: "in favor (unanimous)"
-    - motion: "Approve select board message for 2023 Halifax Race book"
+    - motion: "Approve select board message for Halifax Race book"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -68,134 +70,120 @@ topic_segments:
     start_seconds: 0
     end_seconds: 406
     featured: true
-    headline: "Select Board approves Riptide Lounge liquor license transfer to new ownership"
-    dek: "After a brief public hearing with two speakers in favor and none opposed, the board unanimously approved both a common vic license and the transfer of the all-alcoholic beverage license to Riptide Group Inc."
+    headline: "Board approves transfer of Riptide Lounge all-alcoholic license to new ownership"
+    dek: "Riptide Group Inc. will take over the 55-year-old Pleasant Street bar; new manager Michael Vinow plans improvements while maintaining its character."
     summary: |
-      The board opened a public hearing on the transfer of the all-alcoholic beverage license at 116 Pleasant Street from Riptide Lounge Inc. to Riptide Group Inc., with Michael (last name unclear from transcript, attorney Paul Lynch presenting) as the proposed manager.
+      The board opened a public hearing on the transfer of the all-alcoholic beverage license from Riptide Lounge Inc. to Riptide Group Inc. at 116 Pleasant Street. Attorney Paul Lynch confirmed all applications were complete and noted the application would proceed to the ABCC after the board's vote.
       
-      Two members of the public spoke in favor: a neighbor who said he knew one of the new owners from the 1980s, and a current family member of the existing ownership who noted the family had operated the Riptide for 55 years and was ready for new ownership. No one spoke in opposition.
+      Two members of the public spoke in favor: a longtime acquaintance of one of the new owners, and a daughter-in-law of the current owner who noted the family has operated the bar for 55 years and expressed confidence in the new team.
       
-      The board took two votes:
-      1. A regular vote to approve a common vic license for Riptide Group Inc. with hours Monday–Saturday 9 AM–midnight and Sunday 11 AM–midnight, seating capacity 45. **Unanimous.**
-      2. A polled vote to approve the license transfer, subject to ABCC approval, all inspection sign-offs, fees paid, and proof of TIPS or equivalent certification. **Unanimous.**
-      
-      The application will proceed to the ABCC for final review.
-    key_speakers: ["Paul Lynch (attorney for applicant)", "Michael (proposed manager/owner, last name unclear)", "Resident at mic (neighbor, supporter)", "Jamie Champa (current owner family member)"]
+      The board approved both a common victualer license (seating capacity 45, Monday–Saturday 9 AM–midnight, Sunday 11 AM–midnight) and the license transfer by unanimous polled vote, subject to ABCC approval, department sign-offs, paid fees, and proof of TIPS certification.
+    key_speakers: ["Paul Lynch (attorney for applicant)", "Michael Vinow (incoming manager)", "Jim (resident, 2 Mound Road)", "Jamie Champa (current owner's daughter-in-law)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.92
     start_seconds: 406
     end_seconds: 499
     headline: "Mark Philip appointed to Cultural Council through June 2025"
-    dek: "Philip, a creative director in advertising, was appointed unanimously after a brief interview."
-    summary: "Mark Philip, a creative director in advertising, appeared before the board and expressed interest in volunteering given his background in arts and culture. The board unanimously appointed him to the Cultural Council with a term expiring June 2025. He was directed to be sworn in with the town clerk before assuming duties."
+    dek: "A creative director in advertising, Philip was interviewed and unanimously appointed to the volunteer board."
+    summary: "Mark Philip, a creative director in advertising, was interviewed for a vacancy on the Cultural Council. Board members noted his professional background in arts and culture as a strong fit. He was unanimously appointed with a term expiring June 2025 and directed to be sworn in with the town clerk."
     key_speakers: ["Mark Philip (applicant)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.85
+    topic_confidence: 0.88
     start_seconds: 499
     end_seconds: 2432
-    headline: "Dan Albert selected from three candidates as MBTA Advisory Board designee"
-    dek: "Three candidates — Dan Albert, Chris Harding, and Ed McCarthy — interviewed for one vacancy; Albert prevailed on a unanimous polled vote after one round."
+    headline: "Dan Albert selected over two other qualified candidates for MBTA Advisory Board designee"
+    dek: "Three candidates — Albert, Chris Harding, and Ed McCarthy — were interviewed; Albert prevailed by unanimous polled vote on the first round."
     summary: |
-      The board conducted interviews for a single vacancy on the MBTA Advisory Board, which advises the MBTA and the governor. The chair described the primary role as advocating for continued bus service and monitoring MBTA initiatives, including affordable housing requirements under MBTA Communities (3A).
+      The board interviewed three candidates for a single MBTA Advisory Board designee vacancy (term to June 2023).
       
-      **Dan Albert** — holds a PhD in history with a focus on transportation and urban planning; has taught transportation studies at Salem State University. He described interest in obtaining ridership data, improving bus stop safety (specifically on Pleasant Street), and understanding the town's approximately $500,000 annual MBTA assessment relative to service received. He noted Marblehead's classification as a "Rapid Transit adjacent community" for 3A purposes.
+      **Dan Albert** holds a PhD in history and has taught transportation studies at Salem State University. He emphasized interest in bus ridership data, pedestrian safety at Marblehead bus stops (particularly on Boston Street), and the town's roughly $500,000 annual MBTA assessment. He expressed concern that Marblehead, now classified as a rapid-transit-adjacent community rather than a bus community under 3A, may receive diminished MBTA attention for bus service.
       
-      **Chris Harding** — public affairs manager with a background in infrastructure projects and a former state lobbyist present during the last major MBTA reform in the late 1990s. He emphasized coalition-building with neighboring communities and interest in the Rapid Transit and Clean Energy committees.
+      **Chris Harding** has a background as a public affairs manager for energy infrastructure projects and as a former State House lobbyist. He described the MBTA's chronic underfunding, its absorption of Big Dig debt, and the need for coalitions with neighboring communities. He expressed interest in the Rapid Transit and Clean Energy subcommittees.
       
-      **Ed McCarthy** — recently retired project manager and former finance manager with accounting background; estimated approximately 20,000 lifetime MBTA rides. He expressed interest in the budget committee and noted a reported 45% ridership decline. He raised the prospect of a free or express bus to Wonderland as a ridership-building measure.
+      **Ed McCarthy**, recently retired with a background in project management and finance, noted he has taken an estimated 20,000 MBTA rides. He favored the Budget subcommittee and suggested ideas including a free bus fare and an express service to Wonderland.
       
-      All three were placed in nomination unanimously. On the polled vote, all three board members selected Dan Albert, citing his academic background in transportation studies. Albert's term expires June 2023. He was directed to coordinate with the town office regarding swearing-in procedures for a designate position.
-    key_speakers: ["Dan Albert (candidate)", "Chris Harding (candidate)", "Ed McCarthy (candidate)"]
+      All three were placed in nomination by unanimous vote. In the polled vote, all three board members named Dan Albert, who was appointed on the first round.
+    key_speakers: ["Dan Albert (applicant)", "Chris Harding (applicant)", "Ed McCarthy (applicant)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 2597
-    end_seconds: 3042
-    headline: "Dee appointed to Disabilities Commission; Bridget (surname unclear) not selected"
-    dek: "Two candidates interviewed for one Disabilities Commission vacancy; Dee (last name unclear) was appointed unanimously on a polled vote."
+    end_seconds: 3058
+    headline: "Dee appointed to Disabilities Commission; second candidate Bridget (employment lawyer) narrowly missed"
+    dek: "One vacancy was filled from two interviewed candidates by polled vote; both were described as strong fits."
     summary: |
-      Two candidates were interviewed for a single Disabilities Commission vacancy with a term expiring June 2024.
+      The board interviewed two candidates for a Disabilities Commission vacancy (term to June 2024).
       
-      **Dee (last name unclear from transcript)** — works at a law firm and in real estate; described personal motivation stemming from advocacy for people with spinal cord injuries, including lobbying in Washington DC around 2005 for the Christopher and Dana Reeve Paralysis Act, and a desire to continue the work of late commission member Richard Ramos, a friend who passed away in December.
+      **Dee** (last name unclear from transcript), a real estate professional and law firm administrator, described her motivation as honoring a late friend, Richard Ramos, a former commission member who passed away in December. She has personal experience advocating for people with disabilities, including lobbying in Washington for the Christopher and Dana Reeve Paralysis Act.
       
-      **Bridget (last name unclear)** — recently retired employment lawyer who spent 12 years at a Boston company; noted that disability accommodation law was a significant part of her employment law practice.
+      **Bridget** (last name unclear), a retired employment lawyer with 12 years specializing in disability law, noted her interest in applying legal compliance expertise to help residents access services.
       
-      Both were placed in nomination unanimously. On the polled vote, Dee received the appointment. Bridget was encouraged to seek other volunteer opportunities in town.
-    key_speakers: ["Dee (candidate, last name unclear)", "Bridget (candidate, last name unclear)"]
+      In the polled vote, Dee received the appointment. Bridget was encouraged to seek other volunteer opportunities in town.
+    key_speakers: ["Dee (applicant)", "Bridget (applicant)"]
   - topic: recreation-events
-    topic_confidence: 0.88
+    topic_confidence: 0.85
     start_seconds: 3058
     end_seconds: 3203
-    headline: "Arbor Day Proclamation approved, designating April 28, 2023"
-    dek: "The board unanimously approved a proclamation from the town's tree warden declaring Friday, April 28, 2023 as Arbor Day."
-    summary: "Upon a request from the town tree warden (identified in the motion as Johnson Fobert), the chair read the full proclamation text referencing the 1646 first recorded public tree planting in Boston and the origins of Arbor Day in 1872. The board unanimously approved the proclamation."
-  - topic: recreation-events
+    headline: "Arbor Day Proclamation approved, designating April 28, 2023 as Arbor Day in Marblehead"
+    dek: "The proclamation was requested by the town's Tree Warden and adopted unanimously."
+    summary: "The board read and unanimously adopted the annual Arbor Day Proclamation, designating Friday, April 28, 2023 as Arbor Day. The proclamation referenced the first recorded public tree planting in the New World in 1646 in Boston and the national Arbor Day tradition dating to 1872."
+  - topic: permits-zoning
     topic_confidence: 0.85
     start_seconds: 3203
     end_seconds: 3456
-    headline: "Chamber of Commerce 'Celebrate Marblehead' outdoor business program approved for April–October 2023"
-    dek: "The annual program allowing sidewalk tables, outdoor entertainment, and restaurant seating was renewed unchanged from its 2013 formulation."
-    summary: |
-      The board approved the Chamber of Commerce's annual 'Celebrate Marblehead' program running April 13 through October 31, 2023. The authorization covers:
-      
-      - **Non-restaurant sidewalk tables/displays** with a minimum 36-inch unobstructed path of travel (48 inches preferred)
-      - **Outdoor entertainment** Thursday–Sunday, 11 AM–8 PM; solo unamplified performances only
-      - **Restaurant outdoor seating** 7 AM–10 PM; maximum 8 seats per establishment; no alcohol service outside
-      - **Small beautification projects** (e.g., flower pots)
-      
-      All businesses must provide a Certificate of Insurance and comply with ADA, fire, building, zoning, and health requirements. The chair noted the program has been in place since 2013 and is separate from the state emergency order (recently extended one year), and suggested the town may want to consider permanent by-laws to address outdoor dining going forward.
+    headline: "Board approves 'Celebrate Marblehead' outdoor program for April 13 – October 31, 2023"
+    dek: "The annual Chamber of Commerce program allows outdoor tables, entertainment, and restaurant seating under ADA and zoning rules unchanged since 2013."
+    summary: "The board unanimously approved the Chamber of Commerce's annual 'Celebrate Marblehead' program, running April 13 through October 31, 2023. Conditions include a 36-inch unobstructed sidewalk path, outdoor entertainment limited to solo acoustic performances Thursday–Sunday 11 AM–8 PM, restaurant outdoor seating 7 AM–10 PM (maximum eight seats per establishment), no outdoor alcohol service, and small beautification projects such as flower pots. The chair noted the state emergency order authorizing outdoor dining has been extended another year, and suggested the town consider permanent by-law changes."
+    key_speakers: ["Catherine Koch (Chamber of Commerce Executive Director, referenced in motion)"]
   - topic: recreation-events
-    topic_confidence: 0.85
+    topic_confidence: 0.9
     start_seconds: 3456
     end_seconds: 3516
     headline: "Board approves $49,000 fireworks contract with Power Vision Entertainment Group Inc."
-    dek: "The board unanimously authorized the chair to sign the fireworks contract for the town's annual display."
-    summary: "The board approved a contract with Power Vision Entertainment Group Inc. in the amount of $49,000 for the town's annual fireworks display and authorized the chair to sign on behalf of the board. The chair noted that staff member Alexandra has been responsible for organizing the event."
+    dek: "The contract covers the annual Fourth of July fireworks barge and display."
+    summary: "The board unanimously approved a contract with Power Vision Entertainment Group Inc. in the amount of $49,000 for the annual fireworks display and authorized the chair to sign on behalf of the board."
   - topic: permits-zoning
     topic_confidence: 0.9
     start_seconds: 3516
     end_seconds: 3631
-    headline: "One-day liquor license approved for Bubble Bar Boston at Lee Mansion, May 13"
-    dek: "Polled vote unanimously approved a one-day all-alcoholic license for a private event at Lee Mansion."
-    summary: "The board approved via polled vote a one-day all-alcoholic beverage license for Bubble Bar Boston at Lee Mansion on Saturday, May 13, 2023, from 10 AM to 2:30 PM. Conditions include payment of the $50 fee, proof of purchase from an authorized source, and compliance with MGL Chapter 138."
+    headline: "One-day liquor license approved for Bubble Bar Boston event at Lee Mansion, May 13"
+    dek: "The polled vote approved the license for a 10 AM–2:30 PM event subject to standard fee and sourcing requirements."
+    summary: "The board approved by polled vote a one-day all-alcoholic beverage license for Bubble Bar Boston at Lee Mansion on Saturday, May 13, 2023, from 10 AM to 2:30 PM. Conditions include payment of the $50 fee, proof of purchase from an authorized source, and compliance with Chapter 138."
   - topic: permits-zoning
     topic_confidence: 0.9
     start_seconds: 3631
     end_seconds: 3667
-    headline: "Seasonal all-alcohol club licenses renewed for Eastern Yacht Club and Dolphin Yacht Club"
-    dek: "Both seasonal club licenses and a Sunday entertainment license for Dolphin Yacht Club were renewed unanimously."
-    summary: "The board approved renewal of all-alcohol seasonal club licenses for the Eastern Yacht Club (pool license, 42–44 Foster Street, manager Jared Cheney) and the Dolphin Yacht Club (17 Hooper Street, manager Martin, first name unclear), subject to all taxes and fees being paid and required departmental approvals. The board also unanimously renewed Dolphin Yacht Club's local Sunday entertainment license."
+    headline: "Seasonal all-alcoholic club licenses renewed for Eastern Yacht Club and Dolphin Yacht Club"
+    dek: "Both renewals were approved by polled vote subject to taxes, fees, and department sign-offs."
+    summary: "The board renewed all-alcoholic seasonal club licenses for the Eastern Yacht Club (pool license, 42–44 Foster Street, manager Jared Cheney) and the Dolphin Yacht Club (17 Horsen Place, manager Martin, last name unclear), subject to paid taxes and fees and applicable department approvals. The Sunday entertainment license for Dolphin Yacht Club was also unanimously renewed."
   - topic: admin-housekeeping
     topic_confidence: 0.88
     start_seconds: 3667
     end_seconds: 3883
-    headline: "Board approves $8,450 actuarial services contract with Odyssey Advisors for OPEB valuation"
-    dek: "The contract supports the town's required GASB 74/75 OPEB actuarial valuation ahead of its annual audit."
-    summary: |
-      Parker (last name unclear), representing Odyssey Advisors Inc., explained that the contract covers the actuarial valuation of the town's Other Post-Employment Benefits (OPEB) obligation under GASB 74/75 — the present value of promised retiree healthcare benefits. He noted the town's OPEB liability is approximately $200 million. The firm serves roughly 135 Massachusetts municipalities. Town accountant Alicia (last name unclear) was unable to join due to connection issues but had submitted a letter in support.
-      
-      The board unanimously approved the contract in the amount of $8,450 and authorized the chair to sign.
-    key_speakers: ["Parker (Odyssey Advisors representative, last name unclear)"]
+    headline: "Board approves $8,450 OPEB actuarial contract with Odyssey Advisors Inc."
+    dek: "The contract fulfills an audit requirement; the town's OPEB liability was described as nearly $200 million."
+    summary: "Parker (actuary from Odyssey Advisors Inc.) briefed the board on the firm's OPEB (other post-employment benefits) actuarial valuation services, required under GASB 74/75 for the annual audit. He noted the town's OPEB liability is approximately $200 million. The town's auditor, Alicia, was unable to join due to connection difficulties but had submitted a letter. The board approved the contract for $8,450 and authorized the chair to sign."
+    key_speakers: ["Parker (Odyssey Advisors Inc., actuary)", "Alicia (town auditor, referenced)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 3883
+    end_seconds: 3974
+    headline: "Abbott Hall approved for Marblehead High School exhibit opening reception on May 23"
+    dek: "The event runs 4–8 PM and was approved subject to standard rules, fees, and regulations."
+    summary: "The board unanimously approved use of Abbott Hall Auditorium on Tuesday, May 23, 2023, from 4 to 8 PM for an opening reception for a Marblehead High School exhibit, as requested by instructor Shirley Huller White."
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 3974
     end_seconds: 4141
-    headline: "Abbott Hall approved for Marblehead High School art exhibit opening reception, May 23"
-    dek: "The board approved use of Abbott Hall Auditorium for an opening reception for a Marblehead High School student exhibit."
-    summary: "The board approved a request from Marblehead High School art instructor Shirley Huller White to use Abbott Hall Auditorium on Tuesday, May 23, 2023 from 4 to 8 PM for an opening reception for a student art exhibit. The chair noted that the broader exhibit had previously been approved and this vote covered the specific reception date."
-  - topic: recreation-events
-    topic_confidence: 0.8
-    start_seconds: 4051
-    end_seconds: 4141
-    headline: "Board approves select board greeting for 2023 Marblehead-Halifax Race book"
-    dek: "The board will prepare a traditional message for the Halifax Race program, continuing a practice dating to the race's founding in 1905."
-    summary: "The board approved a request from Kate Ferris Richardson to prepare a select board message for the 2023 Marblehead-Halifax Race book, continuing a tradition that dates to the race's first running in 1905. Board members noted the race has seen increased participation following the COVID period and that the board's photograph for the publication needs to be updated."
+    headline: "Board to prepare greeting for 2023 Marblehead-Halifax Race book, continuing tradition since 1905"
+    dek: "The motion authorized preparation of a select board message for the race program."
+    summary: "The board unanimously approved a request from Kate Ferris Richardson to prepare a message from the select board for the 2023 Marblehead-Halifax Race book, continuing a tradition dating to the race's founding in 1905. Members noted the race has seen growing participation following the COVID period."
   - topic: public-comment
-    topic_confidence: 0.95
+    topic_confidence: 0.9
     start_seconds: 4141
     end_seconds: 4206
-    headline: "No public comment; board adjourned"
-    dek: "No members of the public were present or online for the open public comment period."
-    summary: "The chair invited public comment; staff confirmed no one was present in the room or online. No board member announcements were made. The board voted unanimously to adjourn."
+    headline: "No public comments submitted; board adjourned"
+    dek: "No members of the public were present or online for the public comment period."
+    summary: "The chair opened the floor for public comment. No individuals were present in the room or online. The board offered no additional announcements and voted unanimously to adjourn."
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

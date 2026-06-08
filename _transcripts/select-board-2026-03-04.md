@@ -11,44 +11,45 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board previews FY27 budget with $7.7M gap; favors Scenario B with trash fee"
-  summary: "The Marblehead Select Board reviewed two FY27 budget scenarios showing a $7.7 million shortfall under current revenue projections. Scenario A would defund six departments and eliminate 56 positions; Scenario B would instead implement a curbside trash fee of approximately $254 per household per year and ask the schools for an additional $1.5 million in cuts, reducing position impacts to about 20.5 FTE. Board members expressed general consensus favoring Scenario B, with a formal budget vote expected March 19th and override options to be presented the following week."
+  headline: "Select Board reviews FY27 budget scenarios; 56 positions at risk under Scenario A"
+  summary: "The Select Board reviewed two FY27 budget scenarios on March 4, 2026. Scenario A would require $7.7 million in cuts and defund six departments, eliminating 56 positions. Scenario B pairs a proposed ~$2 million curbside trash fee with an additional $1.5 million reduction request to the schools, reducing impacted positions to approximately 20.5 FTE. Board members indicated consensus toward Scenario B pending final health-insurance rate data expected the following day from the GIC."
   decisions:
     - "Approved Municipal Energy Reduction Plan (unanimous)"
-    - "Continued liquor license revocation public hearing for 1 Atlantic Ave to April 8th (unanimous)"
-    - "Approved $5,000 donation from The Mariner to Council on Aging (unanimous)"
-    - "Approved $1,000 donation from Connections Program Inc. to Affordable Housing Trust Fund (unanimous)"
-    - "Approved proclamation declaring March 29th 2026 Superhero Day in honor of Super JJ (unanimous)"
-    - "Approved reserve fund transfer request of $53,460 for town meeting audio/visual equipment (unanimous)"
-    - "Approved consent agenda including meeting minutes and event permits (unanimous)"
-    - "Approved motorcycle safety awareness proclamation for March 22–April 30 (unanimous)"
-    - "Approved contract 26-52 for fire department compliance software with Brier LP (unanimous)"
-    - "Approved license agreement 26-53 for water-based activities at Riverhead Beach with Sub East (unanimous)"
-    - "Approved change order number 3 with Greenman Pedersen Inc. for Village Street Bridge, increasing contract by $55,000 (unanimous)"
-    - "Approved one-day liquor licenses for multiple events at Abbott Hall and other venues (unanimous)"
+    - "Continued liquor license revocation public hearing for 1 Atlantic Ave to April 8, 2026"
+    - "Approved $5,000 donation from The Mariner to Council on Aging"
+    - "Approved $1,000 donation from Connections Program Inc. to Affordable Housing Trust Fund"
+    - "Declared March 29, 2026 Superhero Day in honor of Super JJ / Make-A-Wish Foundation"
+    - "Approved reserve fund transfer request of $53,460 for town meeting audio/visual equipment"
+    - "Approved consent agenda items including meeting minutes, road race, arts festival, surplus declaration"
+    - "Approved motorcycle safety awareness proclamation for March 22–April 30, 2026"
+    - "Approved compliance software contract (Contract 26-52) with Briar LP"
+    - "Approved license agreement (26-53) for water-based activities at Riverhead Beach with Sub East"
+    - "Approved change order #3 with Greenman Peterson Inc. for Village Street Bridge, increasing contract by $55,000"
+    - "Approved one-day liquor licenses for Torian Presents, Temple Emanuel, and Marblehead Festival of Arts"
   votes:
-    - motion: "Continue liquor license revocation public hearing to April 8th"
+    - motion: "Continue liquor license revocation hearing to April 8"
       result: "in favor (unanimous)"
     - motion: "Approve Municipal Energy Reduction Plan"
       result: "in favor (unanimous)"
-    - motion: "Accept $5,000 donation from The Mariner to Council on Aging"
+    - motion: "Accept $5,000 donation from The Mariner to COA"
       result: "in favor (unanimous)"
     - motion: "Accept $1,000 donation from Connections Program Inc. to Affordable Housing Trust Fund"
       result: "in favor (unanimous)"
-    - motion: "Declare March 29th 2026 Superhero Day"
+    - motion: "Declare March 29, 2026 Superhero Day"
       result: "in favor (unanimous)"
-    - motion: "Authorize reserve fund transfer of $53,460 for town meeting AV equipment"
+    - motion: "Authorize reserve fund transfer request of $53,460 for town meeting AV"
       result: "in favor (unanimous)"
     - motion: "Approve consent agenda"
       result: "in favor (unanimous)"
     - motion: "Approve motorcycle safety awareness proclamation"
       result: "in favor (unanimous)"
-    - motion: "Approve contract 26-52 with Brier LP"
+    - motion: "Approve compliance software contract with Briar LP"
       result: "in favor (unanimous)"
-    - motion: "Approve license agreement 26-53 with Sub East"
+    - motion: "Approve water-based activities license agreement with Sub East"
       result: "in favor (unanimous)"
-    - motion: "Approve Village Street Bridge change order 3 ($55,000 increase)"
+    - motion: "Approve Village Street Bridge change order #3 increasing contract by $55,000"
       result: "in favor (unanimous)"
     - motion: "Approve one-day liquor licenses"
       result: "in favor (unanimous)"
@@ -58,98 +59,155 @@ topic_segments:
     topic_confidence: 0.95
     start_seconds: 3
     end_seconds: 563
-    headline: "Residents urge support for energy plan, raise concerns about trash fees and Public Works committee"
-    dek: "Four residents spoke during public comment on topics ranging from the Municipal Energy Reduction Plan and MMLD rate impacts to the proposed dissolution of the Public Works committee."
+    headline: "Residents urge support for energy plan and raise concerns about trash fees and override timing"
+    dek: "Four residents spoke during public comment on the energy reduction plan, municipal finances, and the proposed dissolution of the Public Works committee."
     summary: |
-      Four residents addressed the board before the budget presentation:
+      Four residents addressed the board during public comment:
       
-      - A resident from 7 Glover Square thanked the board in advance for supporting the Municipal Energy Reduction Plan and the town's net-zero-by-2040 goal.
-      - A resident identifying herself as chair of the light board noted that the town is MMLD's largest customer and that improving building efficiency would reduce peak demand costs, helping keep electric rates stable.
-      - Amy Chu of 30 H Brand spoke against a warrant article to dissolve the Public Works committee, noting it had been restructured and that department heads found it valuable.
-      - A resident expressed concern that proceeding with the energy plan before resolving MBTA Communities (3A) compliance could jeopardize grant eligibility.
-    key_speakers: ["Resident at mic (7 Glover Square)", "Resident at mic (light board chair)", "Amy Chu (Public Works committee)", "Jordan (resident)"]
+      - **Resident from 7 Glover Square** urged the board to support the Municipal Energy Reduction Plan and framed it as consistent with Marblehead's net-zero-by-2040 goal.
+      - **Resident from 6 Blue Court** (identified as chair of the light board) noted that town buildings are MMLD's largest customer and argued improved building envelopes would reduce peak demand costs, lowering rates for all residents.
+      - **Amy Chu (30 Hartland Branch)** expressed disappointment that a warrant article to dissolve the Public Works Committee was included, noting the committee had been productive and is advisory only.
+      - **Resident (Mr. Jordan)** raised concern about proceeding with the energy plan before knowing whether the town will comply with MBTA Communities 3A zoning, warning that non-compliance could result in MMLD rate assessments.
+    key_speakers: ["Resident (7 Glover Square)", "Resident (6 Blue Court, Light Board chair)", "Amy Chu (Public Works Committee)", "Mr. Jordan (resident)"]
   - topic: school-budget
-    topic_confidence: 0.97
+    topic_confidence: 0.92
     start_seconds: 563
-    end_seconds: 6277
+    end_seconds: 2069
     featured: true
-    headline: "FY27 budget gap of $7.7M; Scenario B with trash fee and school cut favored by board"
-    dek: "Town Administrator presented two balanced-budget scenarios: Scenario A eliminating 56 positions across six departments, and Scenario B using a curbside trash fee and additional school cuts to reduce impacts to about 20.5 FTE."
+    headline: "FY27 budget gap of $7.7M could eliminate 56 town positions under Scenario A; Scenario B cuts ~20.5 FTE"
+    dek: "Town Administrator and CFO presented two balanced-budget scenarios, with board members indicating consensus toward the less severe Scenario B pending GIC rate decision."
     summary: |
-      Town Administrator and Finance Director Alicia Benjamin presented the FY27 budget outlook showing a gap of approximately $7,736,211 under current projections (based on an 11% health insurance increase estimate, pending GIC vote the following day).
+      Town Administrator Thatcher and CFO Alicia Benjamin presented two FY27 budget scenarios:
       
-      **Scenario A** — Straightforward cuts to balance the budget:
-      - Total cuts of $7.7 million from requested budgets
-      - Town side: $5.7 million in cuts; School side: $1.9 million in cuts
-      - Would require defunding 6 departments entirely: Community Development & Planning, Cemetery, Health (except health agent), Council on Aging, Library, and Recreation & Parks
-      - 56 positions eliminated out of approximately 185–190 town positions
+      ### Scenario A — Straight cuts
+      - Total cuts required: **$7.7 million** (town side: $5.7M; school side: $1.9M)
+      - Would **defund six departments**: Community Development & Planning, Cemetery, Health (except mandated health agent), Council on Aging, Library, and Recreation & Parks
+      - **56 positions** eliminated from an active town workforce of approximately 185–190
+      - Position breakdown: 1 chief procurement officer, 1 police officer, 1 vacant firefighter, 2 public works, 6 cemetery, 3 health, 6 COA, 23 library, 8 recreation & parks, 5 community development & planning
       
-      **Scenario B** — Structural shifts to reduce service impacts:
-      - Implement a curbside trash fee covering approximately $2,037,184 of contractual trash/recycling costs
-      - Estimated $254/year (~$21/month or ~$64/quarter) per household based on ~8,000 households
-      - Opt-out option for residents who use the transfer station sticker program; discounts proposed for tax-exempt residents
-      - Board of Health would need to implement the fee structure; Select Board decision is to defund the line item
-      - Additional $1.5 million reduction requested from the schools, based on a proportional share of rising employee benefit costs (school workforce is ~66% of active GIC enrollees)
-      - Total cuts: $7.9 million; Town side ~$4.4 million; School side ~$3.4 million
-      - Reduces position impacts to approximately 20.5 FTE
+      ### Scenario B — Fee shift + additional school reduction
+      - Total cuts: **$7.9 million** (school side: $3.4M; town side: $4.4M)
+      - Proposes moving approximately **$2.04 million** in curbside trash/recycling costs to a Board of Health fee structure (~$254/year per household based on ~8,000 households; opt-out available; discounts for tax-exempt residents)
+      - Asks schools for an **additional $1.5 million** reduction (beyond the $1.9M already cut) to proportionally share rising employee benefit costs; schools carry ~62–66% of GIC active employee costs
+      - Reduces impacted positions to approximately **20.5 FTE**; all six departments remain open
+      - Leaves **$1.4 million** unfunded even under Scenario B, identified as a starting point for override discussion
       
-      **Key caveats noted:**
-      - GIC vote on health insurance rates was scheduled for the following day; projections carried at 11% blended rate, down from earlier 15% estimate
-      - Free cash not yet certified by DOR; approximately $5 million projected for budget use with no allocation to stabilization
-      - Even under Scenario B, approximately $1.4 million in items remain unfunded on the town side, which staff identified as a starting point for override discussions
-      - Library director noted via email that the staff-share model proposed in Scenario B was not sustainable; library operations would effectively close around December 1, 2026 absent an override
+      ### Health insurance caveat
+      GIC was scheduled to vote on rates the following day. Town had been carrying a 15% increase assumption, revised to 11%; a favorable GIC vote could shrink the gap further. Open enrollment April 1 adds additional variability.
       
-      **Board discussion:**
-      - All five board members expressed general support for proceeding with Scenario B
-      - Members emphasized the need for a formal policy/guideline on how revenue increases and deficits are split between municipal and school budgets going forward
-      - Multiple members called for a joint override with the school district rather than separate articles
-      - Override options (restore, stabilize, and capital tiers) to be presented the following Wednesday, March 11
-      - Formal budget vote expected March 19th
+      ### Board sentiment
+      All five board members signaled support for Scenario B as a working framework. Board members called for formal guidelines on how revenue increases and deficits are split between the town and schools going forward, and indicated a combined override with the schools for FY27.
+    key_speakers: ["Thatcher (Town Administrator)", "Alicia Benjamin (CFO)", "Dan Ziss (Select Board)", "Aaron Newman (Select Board, remote)", "Moses Grader (Select Board, remote)", "Select Board member (Singer)", "Select Board member (Noonan)"]
+  - topic: health-insurance
+    topic_confidence: 0.9
+    start_seconds: 813
+    end_seconds: 2034
+    headline: "GIC rate vote pending; town revised health-insurance increase assumption from 15% to 11%"
+    dek: "The GIC was expected to vote on FY27 rates the following day; removal of GLP-1 drug coverage from plans contributed to the lower projected blended rate increase."
+    summary: |
+      The town had been projecting a **15% blended health-insurance rate increase** for FY27 planning purposes, consistent with estimates from other communities (ranging up to 18%). Following GIC design changes — notably no longer covering GLP-1 drugs — the administration revised its working assumption to **11%**. The GIC's most recent public signal was a blended rate around 7.5%.
       
-      **Public questions raised:**
-      - Whether trash fees require town meeting approval (a resident cited the town's lack of a charter and referenced the town of Abington as a current test case; board noted they have a legal opinion from counsel)
-      - Whether Scenario A is a realistic option or primarily a framing device
-      - Concern about the library closing despite an existing debt exclusion bond on the building
-      - Calls for more transparency in how town-school budget splits are calculated and presented
-    key_speakers: ["Thatcher (Town Administrator)", "Alicia Benjamin (Finance Director)", "Aaron Newan (Select Board, remote)", "Moses Grader (Select Board, remote)", "Dan Zis (Select Board)", "Mark Singer (Select Board)", "Marlon Current (resident)", "Jordan (resident)", "Sarah (resident)", "Matt Hooks (resident)", "Eric (resident, library director)", "Jack (Finance Committee)"]
+      CFO Benjamin noted that the final number depends not just on the blended rate but on the specific plans Marblehead employees are enrolled in and their individual/family tier, as well as April 1 open enrollment shifts. The town carries approximately **eight active plans**.
+      
+      Employer-share split highlights:
+      - GIC active employees: ~66% school, ~34% town
+      - GIC retirees: ~70% school, ~30% town
+      - Life insurance: ~71% town, ~20% school
+      
+      The board noted that pension costs are also increasing at approximately **8.6%**, adding to the structural pressure. Board member Ziss noted discretionary budget after benefits is approximately $27 million out of the $47.8 million FY26 town-side budget.
+    key_speakers: ["Alicia Benjamin (CFO)", "Thatcher (Town Administrator)", "Dan Ziss (Select Board)"]
+  - topic: trash-dpw
+    topic_confidence: 0.95
+    start_seconds: 1599
+    end_seconds: 1801
+    headline: "Scenario B proposes $2M curbside trash fee of ~$254/year per household via Board of Health"
+    dek: "The Select Board would defund the trash line in the general fund, requiring the elected Board of Health to implement a fee structure to maintain service contracts."
+    summary: |
+      Under Scenario B, the town would remove approximately **$2,037,184** in curbside trash collection, disposal, and recycling costs from the general fund. This would require the **Board of Health** (an independently elected body) to implement a fee structure to fund those contractual obligations.
+      
+      Key parameters:
+      - ~**8,000 households** → approximately **$254/year** (~$21/month or ~$64/quarter) per household
+      - **Opt-out** available: residents could use the pay-per-bag sticker program instead
+      - **Discounts** proposed for residents who qualify for property tax exemptions through the assessor
+      - The fee would cover contractual costs only; employee benefits, billing system startup costs, and DPW operating expenses would not be included in the fee base
+      - Full cost if the entire waste function were fee-funded: ~$464/year (~$39/month)
+      - Danvers recently implemented a comparable system and has seen approximately 3% opt-out
+      
+      A resident questioned whether new fees require town meeting approval; a board member stated the Board of Health had received a legal opinion on the mechanism. Another resident raised the question of whether this constitutes a de facto new tax requiring town meeting authorization.
+    key_speakers: ["Thatcher (Town Administrator)", "Aaron Newman (Select Board, remote)", "Moses Grader (Select Board, remote)", "Resident (Sarah)", "Resident at mic"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 4290
+    end_seconds: 5721
+    headline: "Residents question Scenario A/B framing, trash fee legality, library closure, and school cut fairness"
+    dek: "Multiple residents offered extended comments challenging budget presentation transparency, the mechanics of the trash fee, and equity of cuts between town and schools."
+    summary: |
+      Extended public comment period during and after the budget presentation:
+      
+      - **John (32 Feet, marine industry)**: Suggested Scenario A was presented primarily to make Scenario B appear preferable; questioned whether other positions—such as the sustainability coordinator—were considered for elimination before front-line staff.
+      - **Mr. Jordan**: Opposed the trash fee, citing a failed attempt at a similar fee 15–20 years ago; raised concern about longevity benefit increases during a budget shortfall; questioned the proposal to protect public safety from cuts while threatening the COA and cemetery; noted he would not support a combined school/town override.
+      - **Matt Hooks**: Asked for an override option that goes beyond restoring cuts to actually improving service levels and infrastructure to where they were five or six years ago.
+      - **Eric (LY Washington)**: Noted the library had informed the board it could not sustain a reduced-hours staffing model and proposed instead operating through December 1, 2026 then closing pending an override. Challenged the budget's presentation transparency, arguing that moving trash costs to a fee is a revenue reassignment rather than a cut and inflates the apparent Scenario B town-side reduction. Argued schools are being asked to cut 44% more than the town side under Scenario B (when trash fee is excluded). Raised concern about the library bond still appearing on tax bills even if the library closes. Noted that in 1931 during the Great Depression, Marblehead opened a second library branch rather than closing the existing one. Asserted new fees require town meeting approval and suggested the board consult the town of Abington.
+      - **Jeff**: Called for broad public engagement and transparent town meeting presentation on capital and infrastructure implications of staffing cuts.
+    key_speakers: ["John (resident, 32 Feet)", "Mr. Jordan (resident)", "Matt Hooks (resident)", "Eric (resident, LY Washington)", "Jeff (resident)"]
+  - topic: override
+    topic_confidence: 0.92
+    start_seconds: 3215
+    end_seconds: 6277
+    headline: "Board signals consensus on Scenario B and previews tiered override options for March 12 presentation"
+    dek: "Board members outlined a three-tier override menu concept—restore, stabilize, and expand—and indicated they expect to present override scenarios at the following week's meeting."
+    summary: |
+      Following the budget presentation, board members discussed override strategy:
+      
+      - **Aaron Newman** outlined a preferred three-tier override menu:
+        - **Tier 1 (Restore)**: Return service levels to a baseline, addressing both FY27 cuts and attrition from prior years of level-funding
+        - **Tier 2 (Stabilize)**: Fund deferred maintenance on town assets and begin rebuilding the stabilization fund (currently approximately $250,000)
+        - **Tier 3 (Expand)**: Fund annual capital planning and service improvements
+      - **Moses Grader** emphasized the importance of establishing a formal policy for splitting revenue increases and deficits between the town and the schools to replace annual ad hoc negotiations.
+      - **Dan Ziss** expressed support for a combined town/school override, noting it would be unfair to ask the schools to take budget cuts and then run a separate override. He also emphasized that any health-insurance surplus should flow back to the schools proportionally.
+      - **Moses Grader** noted teacher contract negotiations for FY28 will likely create additional pressure, suggesting a multi-year override may be necessary.
+      - Board confirmed the **budget vote is scheduled for March 19**; override scenarios will be presented at the **next meeting (March 12)**.
+      - Town Meeting moderator, present in the room, clarified that override ballot questions cannot be combined at town meeting — an article can be split but not merged — consistent with prior advisor guidance that the ballot must mirror what town meeting votes.
+    key_speakers: ["Aaron Newman (Select Board, remote)", "Moses Grader (Select Board, remote)", "Dan Ziss (Select Board)", "Town Meeting Moderator"]
   - topic: permits-zoning
-    topic_confidence: 0.97
+    topic_confidence: 0.95
     start_seconds: 6912
     end_seconds: 7212
-    headline: "Liquor license revocation hearing for 1 Atlantic Ave continued to April 8th"
-    dek: "The licensee returned with nearly all required sign-offs; the board continued the public hearing to April 8th pending fire prevention and water/sewer approvals."
-    summary: "The board resumed a continued public hearing on the revocation of the liquor license at 1 Atlantic Avenue. The licensee (Mr. Lewis) presented a signature sheet showing approvals from finals on water, plumbing, building, and health departments. Remaining sign-offs needed were from fire prevention and water and sewer. The board voted unanimously to continue the public hearing to April 8th at 7:00 PM, noting the licensee may open his establishment once the final sign-offs are obtained."
-    key_speakers: ["Mr. Lewis (licensee)"]
+    headline: "Liquor license revocation hearing for 1 Atlantic Ave continued to April 8; nearly all sign-offs complete"
+    dek: "Applicant returned with sign-offs from nearly all departments; only fire prevention and water & sewer remain outstanding."
+    summary: |
+      The Select Board continued a public hearing on the revocation/re-issuance of the liquor license at **1 Atlantic Ave**. The applicant (Mr. Lewis / DD Construction) presented a signature sheet showing completed sign-offs from finals on water, plumbing, building, and health departments. Two sign-offs remained outstanding: **fire prevention** and **water and sewer**.
+      
+      The board noted the applicant is entitled to open his establishment once all sign-offs are obtained, independent of the open hearing. The board voted unanimously to **continue the public hearing to April 8, 2026** at 7:00 PM, at which point it expects to formally close the hearing.
+    key_speakers: ["Mr. Lewis (applicant)", "Select Board Chair (Fox)"]
   - topic: admin-housekeeping
     topic_confidence: 0.95
     start_seconds: 7212
-    end_seconds: 8540
-    headline: "Board approves energy plan, donations, Make-A-Wish proclamation, contracts, and consent agenda"
-    dek: "The board took up a series of routine and administrative items including the Municipal Energy Reduction Plan, two charitable donations, event proclamations, software and recreation contracts, a bridge change order, and one-day liquor licenses."
+    end_seconds: 8560
+    headline: "Board approves energy plan, donations, Make-A-Wish Day, AV transfer, and multiple routine items"
+    dek: "The board acted on the Municipal Energy Reduction Plan, two charitable donations, a Make-A-Wish proclamation, a reserve fund transfer for town meeting AV, consent agenda, contracts, and liquor licenses."
     summary: |
-      **Municipal Energy Reduction Plan** — Sustainability Coordinator Logan Casey presented the final plan covering 28 municipal buildings. The plan targets a 20% energy reduction over five years as required for Green Community designation, with full implementation potentially achieving a 45% reduction. The board voted unanimously to adopt the plan. A separate vote by the Municipal Light Board on a renewable energy charge is required before the town can apply for Green Community status.
+      **Municipal Energy Reduction Plan** (voted unanimously): Sustainability Coordinator Logan Casey presented the final plan, covering 28 energy-intensive municipal buildings. If fully implemented, projected to reduce municipal energy use by approximately 45%. Adoption is a prerequisite for Marblehead to apply for Green Community designation through the Department of Energy Resources, which would unlock grant funding. A separate vote by MMLD on a renewable energy charge is required before the Green Community application can be submitted; that is not a Select Board decision.
       
-      **Donations accepted:**
-      | Donor | Amount | Designated use |
-      |---|---|---|
-      | The Mariner (Marblehead) | $5,000 | Council on Aging / bocce court naming |
-      | Connections Program Inc. | $1,000 | Affordable Housing Trust Fund |
+      **Donations accepted (both unanimous)**:
+      - $5,000 from The Mariner to the Council on Aging, designated for the bocce court at VI Park
+      - $1,000 from Connections Program Inc. (25-year affordable housing nonprofit winding down) to the Affordable Housing Trust Fund
       
-      **Proclamations:**
-      - March 29th declared Superhero Day in honor of "Super JJ," a 4-year-old Make-A-Wish recipient, to include a community scavenger hunt.
-      - Motorcycle Safety Awareness Period proclaimed for March 22–April 30, 2026.
+      **Make-A-Wish / Super JJ**: Board unanimously declared **March 29, 2026 Superhero Day** in honor of 4-year-old JJ, who is undergoing treatment for a critical illness and whose wish is a superhero crime-solving scavenger hunt around Marblehead.
       
-      **Reserve fund transfer:** Authorized the town clerk to request $53,460 from the Finance Committee reserve fund for audio/visual upgrades to the Fieldhouse for the 2026 Annual Town Meeting.
+      **Reserve Fund Transfer**: Board authorized the town clerk to request **$53,460** from the Finance Committee reserve fund for audio/visual equipment upgrades at the Fieldhouse for town meeting (same systems used for school graduation).
       
-      **Contracts approved:**
-      - Contract 26-52: Fire department life safety compliance software with Brier LP (cost borne by inspected businesses)
+      **Consent agenda** approved: Minutes of January 8, February 9, and February 11, 2026; Lynch/Van Loo YMCA Hill to Harbor 5K/10K road race (May 17, 2026); Marblehead Festival of Arts (May 29, 2026); surplus desk chair at Abbott Hall.
+      
+      **Motorcycle Safety Awareness Proclamation**: Board approved preparation of a proclamation for March 22–April 30, 2026; town has 310 registered motorcycles in 2026.
+      
+      **Contracts approved**:
+      - Contract 26-52: Fire and life safety compliance software with Briar LP (cost borne by inspected businesses)
       - License agreement 26-53: Water-based recreational activities at Riverhead Beach with Sub East (vendor pays town)
-      - Change order 3: Village Street Bridge replacement with Greenman Pedersen Inc., increasing contract by $55,000 (funded by Chapter 90 state aid) and extending performance date
+      - Change Order #3: Village Street Bridge replacement with Greenman Peterson Inc., **+$55,000** (Chapter 90 funded) for additional pedestrian access ramp alignment design iterations; contract completion extended to March 31, 2026
       
-      **Consent agenda:** Approved minutes of January 8, February 9, and February 11, 2026; road race permit for Lynch Van Loo YMCA Hill to Harbor 5K/10K on May 17; Marblehead Festival of Arts permit for May 29; surplus disposal of one desk chair at Abbott Hall.
-      
-      **One-day liquor licenses:** Approved for Torian Presents at Abbott Hall (November 14), Temple Emanuel (April 30), and Marblehead Festival of Arts at Abbott Hall (May 29).
-    key_speakers: ["Logan Casey (Sustainability Coordinator)", "Thatcher (Town Administrator)", "Maggie (DPW/Engineering staff)"]
+      **One-day liquor licenses** approved: Torian Presents at Abbott Hall (November 14, 2026); Temple Emanuel (April 30, 2026); Marblehead Festival of Arts at Abbott Hall (May 29, 2026).
+    key_speakers: ["Logan Casey (Sustainability Coordinator)", "Thatcher (Town Administrator)", "Maggie (DPW/Engineering)", "Resident (Mariner representative)", "Select Board Chair (Fox)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

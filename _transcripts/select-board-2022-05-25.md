@@ -11,185 +11,188 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Board appoints interim Finance director and dual-role DPW/Water & Sewer superintendent"
-  summary: "The Select Board appointed Michael Kelly as interim Finance director effective May 26, 2022, pending hire of a permanent replacement. The board also appointed Amy (last name not clearly stated) as DPW director while retaining her role as Water and Sewer superintendent, with a $30,000 stipend effective May 26, 2022, increasing annually by cost-of-living adjustments beginning July 1, 2023. The board approved four ARPA fund allocations totaling $140,611 and approved an employment contract for incoming Town Administrator Patrick Heaser."
+  headline: "Board appoints interim Finance Director and DPW Director in dual-role arrangement"
+  summary: "The Select Board approved Michael Kelly (Kelly/Clements per ASR) as interim Finance Director and Amy as combined DPW and Water & Sewer Superintendent, effective May 26, 2022. The board also authorized an MOU with the Marblehead Water and Sewer Commission memorializing the dual-role structure, approved Amy's appointment with a $30,000 stipend increasing annually with cost-of-living adjustments starting July 1, 2023, and voted to allocate $140,611 in federal ARPA funds across four projects. Several budget transfers and routine licensing items were also approved."
   decisions:
-    - "Approved appointment of Michael Kelly as interim Finance director effective May 26, 2022"
-    - "Approved appointment of Amy as DPW director (dual role with Water & Sewer superintendent) effective May 26, 2022 with $30,000 stipend"
-    - "Approved MOU between the town and Marblehead Water and Sewer Commission for dual-role arrangement"
-    - "Approved home rule petition article from May 2, 2022 town meeting for submission to the General Court"
-    - "Approved budget transfer of $25,243 from police court overtime to emergency generator restoration"
-    - "Approved budget transfer of $156,000 from health insurance to fire EMT stipend"
-    - "Approved budget transfer of $17,923.40 from senior clerk to assessors other professional and technical"
+    - "Approved appointment of Michael Kelly as interim Finance Director effective May 26, 2022"
+    - "Approved appointment of Amy as DPW Director (dual role with Water & Sewer Superintendent) effective May 26, 2022 with $30,000 stipend"
+    - "Approved MOU between town and Marblehead Water and Sewer Commission for dual-role arrangement"
+    - "Approved $140,611 in ARPA fund allocations for four projects"
+    - "Approved employment contract for Patrick Heaser as Town Administrator"
+    - "Approved budget transfer of $25,243 from Court Overtime Police to Restoration and Maintenance Emergency Generator Police"
+    - "Approved budget transfer of $156,000 from Health Insurance to EMT Stipend Fire"
+    - "Approved budget transfer of $17,923.40 from Senior Clerk Assessors to Other Professional and Technical"
     - "Approved reserve fund transfer of $117,000 for property and casualty insurance premiums"
-    - "Approved amendment to lease agreement with Marblehead Community Counseling Center for HOPS building at 66 Fifteenth Avenue allowing rent credit for building upgrades through June 2023"
-    - "Approved ARPA fund allocations totaling $140,611 (tourist kiosk $54,000; rail trail grant match $28,000; rail trail construction management $8,000; hybrid technology $50,611)"
-    - "Approved employment contract for Town Administrator Patrick Heaser"
-    - "Approved making public specified executive session minutes"
-    - "Continued holding specified executive session minutes"
-    - "Approved one-day liquor license for Jamie Ray's/Hadley Baby Gear on June 18, 2022"
-    - "Approved donation account for Fort Beach steps repair"
-    - "Approved extension of private constable expiration dates to June 30, 2022"
+    - "Approved amendment to lease agreement with Marblehead Community Counseling Center for HOPS building at 66 Fifteenth Avenue"
+    - "Approved whole petition as passed at May 2, 2022 Town Meeting Article 39 for submission to General Court"
+    - "Approved one-day liquor license for Jamie Ray's owner for June 18, 2022 at 118 Washington Street and Crosby's parking lot"
+    - "Approved establishment of donation account for repairing steps at Fort Beach"
+    - "Approved extension of expiration date for private constables to serve civil process to June 30, 2022"
+    - "Approved release of certain executive session minutes to the public"
+    - "Held certain executive session minutes until deemed appropriate by counsel"
   votes:
-    - motion: "Appoint Michael Kelly as interim Finance director"
+    - motion: "Appoint Michael Kelly as interim Finance Director"
       result: "in favor (unanimous)"
-    - motion: "Authorize chair to sign MOU with Water and Sewer Commission for dual DPW/Water & Sewer role"
+    - motion: "Appoint Amy as DPW Director with $30,000 stipend"
       result: "in favor (unanimous)"
-    - motion: "Appoint Amy as DPW director with $30,000 stipend"
+    - motion: "Authorize chair to sign MOU with Water and Sewer Commission"
       result: "in favor (unanimous)"
-    - motion: "Adopt home rule petition from town meeting article 39"
+    - motion: "Approve ARPA fund allocations totaling $140,611"
       result: "in favor (unanimous)"
-    - motion: "Transfer $25,243 from police court overtime to emergency generator restoration"
+    - motion: "Approve Town Administrator employment contract for Patrick Heaser"
       result: "in favor (unanimous)"
-    - motion: "Transfer $156,000 from health insurance to fire EMT stipend"
+    - motion: "Budget transfer $25,243 police overtime to emergency generator"
       result: "in favor (unanimous)"
-    - motion: "Transfer $17,923.40 from senior clerk to assessors professional and technical"
+    - motion: "Budget transfer $156,000 health insurance to EMT stipend fire"
       result: "in favor (unanimous)"
-    - motion: "Transfer $117,000 from reserve fund for property and casualty insurance"
+    - motion: "Budget transfer $17,923.40 senior clerk to other professional and technical"
       result: "in favor (unanimous)"
-    - motion: "Amend lease with Marblehead Community Counseling Center for HOPS building"
+    - motion: "Reserve fund transfer of $117,000 for property and casualty insurance"
       result: "in favor (unanimous)"
-    - motion: "Approve ARPA allocations totaling $140,611"
+    - motion: "Amend lease with Marblehead Community Counseling Center"
       result: "in favor (unanimous)"
-    - motion: "Approve employment contract for Town Administrator Patrick Heaser"
+    - motion: "Adopt whole petition from Town Meeting Article 39"
       result: "in favor (unanimous)"
-    - motion: "Make public specified executive session minutes"
-      result: "in favor (unanimous)"
-    - motion: "Continue to hold specified executive session minutes"
-      result: "in favor (unanimous)"
-    - motion: "Approve one-day liquor license for Jamie Ray's/Hadley Baby Gear June 18, 2022"
+    - motion: "Approve one-day liquor license for June 18, 2022"
       result: "in favor (unanimous)"
     - motion: "Establish donation account for Fort Beach steps"
       result: "in favor (unanimous)"
-    - motion: "Extend private constable expiration dates to June 30, 2022"
+    - motion: "Extend private constable expiration date to June 30, 2022"
+      result: "in favor (unanimous)"
+    - motion: "Release specified executive session minutes to public"
+      result: "in favor (unanimous)"
+    - motion: "Continue holding specified executive session minutes"
       result: "in favor (unanimous)"
 
 topic_segments:
-  - topic: labor-personnel
-    topic_confidence: 0.95
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
     start_seconds: 6
     end_seconds: 175
-    headline: "Michael Kelly appointed interim Finance director effective May 26, 2022"
-    dek: "The Town Administrator recommended Kelly, the sitting Treasurer-Collector, to serve until a permanent Finance director is hired by the incoming Town Administrator."
-    summary: "The outgoing interim Town Administrator recommended that Michael Kelly, who had been serving as Treasurer-Collector, be appointed interim Finance director effective May 26, 2022. The rationale was to allow the incoming Town Administrator to have a hand in selecting the permanent hire. Kelly expressed appreciation for the opportunity and the board voted unanimously to approve the appointment."
-    key_speakers: ["John (interim Town Administrator)", "Michael Kelly (Treasurer-Collector / interim Finance director)"]
+    headline: "Board appoints Michael Kelly as interim Finance Director effective May 26, 2022"
+    dek: "The town administrator recommended Kelly, the sitting Treasurer-Collector, to serve until a permanent Finance Director is hired by the incoming Town Administrator."
+    summary: "The town administrator explained that with Finance Director Steve Pollis departing, it was important for the incoming permanent Town Administrator to have a hand in selecting a permanent replacement. Michael Kelly, who had been serving as Treasurer-Collector, expressed interest in the interim role. The board voted to appoint Kelly as interim Finance Director effective May 26, 2022 with no set term end date."
+    key_speakers: ["Town Administrator (interim)", "Michael Kelly (Treasurer-Collector / interim Finance Director)"]
   - topic: labor-personnel
-    topic_confidence: 0.95
-    start_seconds: 177
-    end_seconds: 1022
+    topic_confidence: 0.92
+    start_seconds: 187
+    end_seconds: 1060
     featured: true
-    headline: "Amy appointed dual-role DPW director and Water & Sewer superintendent with $30,000 stipend"
-    dek: "The board unanimously approved an MOU and appointment combining DPW and Water & Sewer leadership under one person, citing coordination benefits for upcoming infrastructure projects."
+    headline: "Amy appointed DPW Director in dual role with Water & Sewer Superintendent; $30K stipend approved"
+    dek: "Following DPW Director Rob Diver's departure, the board unanimously approved an MOU and dual appointment allowing the Water & Sewer Superintendent to also lead the DPW, citing coordination benefits with upcoming road and infrastructure projects."
     summary: |
-      Following the departure of the prior DPW director, the board approved a dual-role structure allowing the incumbent Water and Sewer superintendent (Amy) to also serve as DPW director. The arrangement is memorialized in a memorandum of understanding between the Select Board and the Marblehead Water and Sewer Commission, which supported the move unanimously.
+      The town administrator reported that after DPW Director Rob Diver left to work for the Town of Danvers, Water and Sewer Superintendent Amy approached him about assuming both roles. The administrator strongly supported the idea, noting Amy's extensive construction and engineering background, including a degree from Dartmouth's School of Engineering and experience with O'Connor Constructors and Turner Construction.
       
-      Key terms:
-      - Appointment effective May 26, 2022
-      - Additional stipend of $30,000, increasing annually by cost-of-living percentage applied to administrative pay scale, commencing July 1, 2023
-      - Arrangement is not permanent — terminable with 90 days notice by either board
-      - Amy plans to add a second assistant department head, funded within the existing department head budget line
+      The board discussed how Amy would report to both the Select Board (for DPW matters) and the elected Water and Sewer Commission, with the MOU establishing that the arrangement is personal to Amy and terminable by either party with 90 days' notice. Board members expressed enthusiasm about the coordination benefits, especially given the pending Prop 2½ override question on the June 21 ballot relating to road reconstruction projects.
       
-      Amy outlined her background: a mathematics degree from Wheaton College, an engineering degree from Dartmouth, 10 years with O'Connor Constructors, three years with Turner Construction, and 11 years as Marblehead Water and Sewer superintendent. She cited coordination of paving, water, sewer, and stormwater projects — including an anticipated Prop 2½ override vote on June 21 — as central to the role.
-    key_speakers: ["John (interim Town Administrator)", "Amy (Water & Sewer superintendent / incoming DPW director)", "Select Board members"]
+      Amy stated she planned to add a second assistant department head, funded within the existing department-head budget line, to ensure adequate operational coverage. The Water and Sewer Commission had voted unanimously in support.
+      
+      The board voted to:
+      - Authorize the chair to sign the MOU with the Marblehead Water and Sewer Commission
+      - Appoint Amy as DPW Director effective May 26, 2022 with a $30,000 stipend increasing annually by the cost-of-living percentage on the administrative pay scale commencing July 1, 2023
+    key_speakers: ["Town Administrator (interim)", "Amy (Water & Sewer Superintendent / incoming DPW Director)", "Select Board members"]
   - topic: admin-housekeeping
-    topic_confidence: 0.85
-    start_seconds: 1022
-    end_seconds: 1153
-    headline: "Home rule petition from May 2, 2022 town meeting adopted for submission to the General Court"
-    dek: "The board voted to adopt the home rule petition approved as article 39 at the May 2022 town meeting and submit it to the General Court."
-    summary: "The board voted unanimously to adopt the home rule petition as approved at the May 2, 2022 town meeting (article 39) and directed that it be submitted to the General Court. Discussion touched on routing to the appropriate legislative office, with staff noting it could be filed at minimum with the clerk of the House given the town's current lack of a state representative."
-    key_speakers: ["Select Board chair", "Board members"]
+    topic_confidence: 0.8
+    start_seconds: 1066
+    end_seconds: 1200
+    headline: "Board adopts Town Meeting Article 39 whole petition for submission to General Court"
+    dek: "The board voted to adopt the whole petition as approved at the May 2, 2022 Town Meeting and to submit it to the General Court via the Senate and/or House clerk."
+    summary: "The board voted to adopt the whole petition as passed under Article 39 at the May 2, 2022 Town Meeting and to submit it to the General Court. Discussion clarified that even without a current state representative, the petition could be filed with the clerk of the house at minimum."
+    key_speakers: ["Select Board members"]
   - topic: admin-housekeeping
-    topic_confidence: 0.9
-    start_seconds: 1153
-    end_seconds: 1391
-    headline: "Three inter-departmental budget transfers and a $117,000 reserve fund transfer approved"
-    dek: "Transfers covered police overtime to generator restoration, health insurance to fire EMT stipend, and assessor staff accounts, plus a reserve fund draw for higher-than-budgeted property and casualty insurance premiums."
+    topic_confidence: 0.82
+    start_seconds: 1200
+    end_seconds: 1390
+    headline: "Board approves three budget transfers and a $117,000 reserve fund transfer for insurance"
+    dek: "Transfers included $25,243 for emergency generator maintenance, $156,000 from health insurance to fire EMT stipends, $17,923 from assessors clerk, and $117,000 from the reserve fund for higher-than-projected property and casualty insurance premiums."
     summary: |
-      The board approved three budget transfers under MGL Chapter 44 §33b:
+      The board approved three intra-budget transfers under MGL Chapter 44 Section 33B:
       
-      | From | To | Amount |
-      |---|---|---|
-      | Police court overtime | Emergency generator restoration (police) | $25,243 |
-      | Health insurance TSF Finance | EMT stipend (fire) | $156,000 |
-      | Senior clerk – assessors | Other professional & technical – assessors | $17,923.40 |
+      | Transfer | Amount |
+      |---|---|
+      | Court overtime police → emergency generator restoration | $25,243 |
+      | Health insurance → EMT stipend fire | $156,000 |
+      | Senior clerk assessors → other professional/technical | $17,923.40 |
       
-      The board also approved a $117,000 reserve fund transfer under MGL Chapter 40 §6 to cover property and casualty insurance premiums that ran higher than budgeted, attributed in part to a high claims year. The FY23 budget was noted as having been increased to reflect the higher premium environment.
-    key_speakers: ["Interim Finance director / staff", "Select Board chair"]
+      The board also approved a $117,000 transfer from the reserve fund under MGL Chapter 40 Section 6 to cover property and casualty insurance premium shortfalls in FY22, attributed in part to higher-than-expected claims history. The FY23 budget was noted to have been increased to reflect projected premium increases going forward.
+    key_speakers: ["Town Administrator (interim)", "Select Board members"]
   - topic: admin-housekeeping
-    topic_confidence: 0.85
+    topic_confidence: 0.78
     start_seconds: 1391
     end_seconds: 1487
-    headline: "Lease amendment with Marblehead Community Counseling Center approved for HOPS building"
-    dek: "Monthly rent of $624 at 66 Fifteenth Avenue may be satisfied through building improvements from May 2021 through June 2023, after which original rent resumes."
-    summary: "The board amended its lease with the Marblehead Community Counseling Center for the HOPS building at 66 Fifteenth Avenue. The amendment allows the tenant's approximately $80,000 in building upgrades to be credited against rent obligations for the period May 2021 through June 2023; the original monthly rent of $624 resumes thereafter. Staff noted the rent would otherwise flow into a revolving fund for building maintenance."
-    key_speakers: ["John (interim Town Administrator)", "Select Board chair"]
+    headline: "Board amends lease with Marblehead Community Counseling Center for HOPS building"
+    dek: "The amendment allows the Community Counseling Center to credit approximately $80,000 in building upgrades against monthly rent of $624 through June 2023, after which standard rent resumes."
+    summary: "The board approved an amendment to the lease agreement for the HOPS building at 66 Fifteenth Avenue with the Marblehead Community Counseling Center. The amendment covers the period May 2021 through June 2023, allowing the center's approximately $80,000 in building improvements to be credited toward monthly rent of $624, after which the original rent terms resume. The town administrator noted the rent would otherwise go into a revolving fund for building improvements."
+    key_speakers: ["Town Administrator (interim)", "Select Board members"]
   - topic: admin-housekeeping
-    topic_confidence: 0.88
+    topic_confidence: 0.75
     start_seconds: 1487
-    end_seconds: 2499
-    headline: "Board approves $140,611 in ARPA fund allocations; working group process described"
-    dek: "Four projects — tourist kiosk, rail trail grant match, rail trail construction management, and hybrid meeting technology — received formal approval, with a broader ARPA allocation framework still in development."
+    end_seconds: 2500
+    headline: "Board approves $140,611 in ARPA fund allocations for four projects; working group process described"
+    dek: "A board member described a rigorous multi-step ARPA allocation process involving a resident survey and working-group scoring, with 70 submitted projects totaling approximately $18 million whittled down against a roughly $6 million budget."
     summary: |
-      The board formally approved use of federal ARPA funds for four projects totaling $140,611:
+      A board member described the ARPA working group's process in detail. The group included the town administrator, school superintendent, public health director, town planner, finance director, a board vice chair, and a resident at large. The group received approximately 70 project proposals totaling about $18 million and applied a quantitative scoring methodology against criteria promulgated by the Select Board, supplemented by a resident survey of approximately 344 respondents.
+      
+      The board approved four specific allocations totaling $140,611, driven in part by grant-matching deadlines:
       
       | Project | Amount |
       |---|---|
-      | Tourist kiosk | $54,000 |
+      | Tourist leave project | $54,000 |
       | Rail trail project grant match | $28,000 |
-      | Rail trail construction management | $8,000 |
+      | Construction management for rail trail | $8,000 |
       | Hybrid meeting technology | $50,611 |
+      | **Total** | **$140,611** |
       
-      A board member described the ARPA working group process: 70 projects totaling approximately $18 million were submitted; a resident survey of roughly 344 participants ranked projects; and a working group (including the board chair, interim Town Administrator, school superintendent, public health director, town planner, Finance director, and a resident at large) independently ranked projects against published criteria. A 60% overlap was noted between resident survey rankings and the working group rankings.
-      
-      The town has approximately $6 million in total ARPA funds, with a commitment deadline of December 2024 and a spending deadline of December 2026. Board members noted the working group had been less active during the recent administrative transition and planned to reconstitute it with the new Town Administrator.
-      
-      During public comment, a resident questioned the pace of transparency and disclosed having filed a complaint with the Secretary of the Commonwealth seeking information. Board members maintained the process is being conducted transparently within the allowed timeline.
-    key_speakers: ["Board member (ARPA working group lead)", "Resident at mic", "Select Board chair"]
+      A resident during public comment raised concerns about lack of public forums and transparency, and asked about remaining ARPA funds. Board members noted the town has until December 2024 to commit funds and December 2026 to spend them, and stated a comprehensive public presentation of the methodology and project rankings is planned once the new Town Administrator is fully installed.
+    key_speakers: ["Select Board member (ARPA working group lead)", "Resident at mic", "Town Administrator (interim)"]
   - topic: labor-personnel
     topic_confidence: 0.9
     start_seconds: 2499
     end_seconds: 2552
-    headline: "Employment contract for incoming Town Administrator Patrick Heaser approved"
-    dek: "The board voted unanimously to approve the contract presented between the town and Patrick Heaser as Town Administrator."
-    summary: "Without extended discussion, the board voted unanimously to approve the employment contract for Patrick Heaser as Town Administrator."
-    key_speakers: ["Select Board chair"]
+    headline: "Board approves employment contract for incoming Town Administrator Patrick Heaser"
+    dek: "The board voted to approve the employment contract between the town and Patrick Heaser as Town Administrator."
+    summary: "The board voted to approve the employment contract for Patrick Heaser as the new Town Administrator. No terms of the contract were discussed in the transcript."
+    key_speakers: ["Select Board members"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
     start_seconds: 2552
-    end_seconds: 2629
-    headline: "Executive session minutes released and held per Town Counsel review"
-    dek: "Minutes from six prior executive sessions were made public; minutes from three sessions were continued to be held on Town Counsel's advice."
-    summary: "On advice of Town Counsel, the board voted to make public executive session minutes from: January 25, 2022; September 8, 2021; August 25, 2021; December 4, 2020; and December 16, 2022 (as stated in the transcript). The board also voted to continue holding minutes from December 11, 2019; November 23, 2020; and November 2, 2021."
-    key_speakers: ["Select Board chair"]
-  - topic: permits-zoning
-    topic_confidence: 0.88
-    start_seconds: 2629
     end_seconds: 2710
-    headline: "One-day liquor license approved for baby gear pop-up event on June 18, 2022"
-    dek: "Jamie Ray's/Hadley Baby Gear received approval for a one-day license at 118 Washington Street and Crosby's parking lot from 10 AM to 5 PM."
-    summary: "The board approved a one-day all-alcohol license for an event at 118 Washington Street and Crosby's parking lot (109 Washington Street) on June 18, 2022, 10 AM to 5 PM, subject to standard conditions including a $50 fee, proof of authorized alcohol source, and Crosby's consent for parking lot use."
-    key_speakers: ["Select Board chair"]
-  - topic: recreation-events
-    topic_confidence: 0.75
-    start_seconds: 2710
-    end_seconds: 2760
-    headline: "Donation account established for Fort Beach steps repair; constable appointments extended"
-    dek: "The board created a donation account to fund step repairs at Fort Beach and extended private constable appointments to June 30, 2022."
-    summary: "The board voted to establish a donation account for the purpose of repairing steps at Fort Beach, with a board member noting that Bill Parr had offered to lead the repair effort. The board also extended the expiration date for private constables serving civil process to June 30, 2022, to align with the board's annual reappointment cycle."
-    key_speakers: ["Select Board chair", "Board members"]
-  - topic: public-comment
-    topic_confidence: 0.9
-    start_seconds: 2951
-    end_seconds: 3562
-    headline: "Resident questions ARPA transparency; board defends process and timeline"
-    dek: "A retired marketing researcher at the mic asked about public forums, the resident survey, and project criteria, and disclosed filing a complaint with the Secretary of the Commonwealth."
+    headline: "Board releases several executive session minutes and holds others; approves liquor license and routine items"
+    dek: "On advice of town counsel, certain executive session minutes from 2020–2022 were made public while others from 2019–2021 were continued to be held; a one-day liquor license and other routine items were also approved."
     summary: |
-      A resident identified as a recently retired marketing researcher raised several questions about the ARPA process: whether community forums had been held (noting most Massachusetts communities had already done so), whether the resident survey data was publicly available, and whether the criteria published on the town website could be shared in the meeting. The resident also disclosed having filed a complaint with the Secretary of the Commonwealth to obtain information about proposed ARPA projects.
+      Acting on advice of town counsel, the board voted to release executive session minutes from: May 19, 2022; January 25, 2022; September 8, 2021; August 25, 2021; December 4, 2020; and December 16, 2022. Minutes from December 11, 2019; November 23, 2020; and November 2, 2021 were voted to be held until deemed appropriate by counsel.
       
-      Board members responded that the process is being conducted deliberately given the December 2024 commitment deadline, that criteria are posted on the Marblehead town website, and that a formal public presentation is planned once the new Town Administrator and Finance director are in place. Board members stated the process is transparent and took issue with any implication to the contrary.
-    key_speakers: ["Resident at mic", "Board member (ARPA working group lead)", "Select Board chair"]
+      Additional approvals:
+      - One-day liquor license for Jamie Ray's (baby gear shop owner) on June 18, 2022, 10 AM–5 PM at 118 Washington Street and Crosby's parking lot, 109 Washington Street, subject to standard conditions including a $50 fee and Crosby's approval
+      - Establishment of a donation account for repairing steps at Fort Beach (a resident named Bill Parr was noted to have offered to lead the repair)
+      - Extension of private constables' expiration date to June 30, 2022
+    key_speakers: ["Select Board members"]
+  - topic: public-comment
+    topic_confidence: 0.85
+    start_seconds: 2710
+    end_seconds: 3562
+    headline: "Resident presses board on ARPA transparency and community involvement in allocation process"
+    dek: "A retired marketing researcher questioned why public forums had not been held, asked to see survey data and scoring criteria, and raised concerns about whether ARPA funds could have offset override spending on technology."
+    summary: |
+      A resident identified as a retired marketing researcher raised several questions about the ARPA process:
+      
+      1. **Public forums**: Asked why Marblehead had not held community forums while most Massachusetts communities already had. Board members responded that a full public presentation is planned and criteria are already posted on the town website.
+      2. **Transparency complaint**: Stated she had contacted the Secretary of the Commonwealth to obtain information about ARPA projects, which she felt was necessary because she could not get answers otherwise. Board members strongly disputed any lack of transparency and cited the transition in town administration as a factor in the pace.
+      3. **Technology spending and the override**: Asked why ARPA funds were not being used for the roughly $1.7 million in technology spending included in the override question, rather than using override revenue. A board member responded that much of the technology spending was on the school side and did not meet ARPA covid-impact criteria as defined by the working group.
+      4. **Shell game concern**: Asked for assurance that ARPA money would not be used to substitute for other spending. Board members rejected the framing as offensive and reiterated the structured, criteria-based process.
+      
+      Board members acknowledged the resident's research background and said the working group's survey, criteria, and methodology would be publicly presented once fully constituted with the new Town Administrator.
+    key_speakers: ["Resident at mic", "Select Board member (ARPA working group lead)", "Town Administrator (interim)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 2760
+    end_seconds: 3009
+    headline: "Board thanks outgoing interim Town Administrator; notes Memorial Day events"
+    dek: "Board members offered warm remarks to departing interim Town Administrator John as the meeting closed, and a member reminded the public of upcoming Memorial Day ceremonies."
+    summary: "Board members went around the table to thank interim Town Administrator John for his work over approximately five months, describing his performance as seamless and impactful. A board member also reminded the public of Memorial Day events including grave decoration on Saturday morning and a service at 8 AM on the land and 9 AM at the ocean. A board member gave a shout-out to the fire chief for a well-attended Park & Rec event."
+    key_speakers: ["Select Board members", "John (interim Town Administrator)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

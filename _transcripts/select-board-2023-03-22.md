@@ -11,58 +11,59 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Select Board adopts FY24 override statement; ~$2.5M override projected"
-  summary: "The Marblehead Select Board adopted a Statement of Intent for a FY24 operating override, with the Town Administrator presenting preliminary numbers showing a roughly $2.5 million structural deficit between a reduced budget of approximately $94.5 million and a level-services budget of just over $97 million. The board voted to pursue a single override addressing the structural deficit only, deferring a separate stabilization-fund override. Several appointments to the Cultural Council and Marblehead Forever Committee were also approved, along with routine consents including opioid settlement participation and speed-feedback sign MOU."
+  headline: "Select Board adopts FY24 override statement; ~$2.5M structural deficit identified"
+  summary: "The Marblehead Select Board unanimously adopted a statement of intent for a FY24 operating override, with the Town Administrator reporting a structural deficit of approximately $2.5 million — the delta between the reduced budget (~$94.5M) and the level-services budget (~$97M). The board decided not to pursue a separate stabilization fund override this year, deferring that to future planning. The board also appointed three members to the Cultural Council, one member to the Marblehead Forever Committee, and approved opioid settlement participation, among other routine items."
   decisions:
-    - "Adopted FY24 Select Board Statement of Intent for operating override (as amended)"
-    - "Approved appointment of Lauren Fogle Boyd to Cultural Council, term expiring June 2024"
-    - "Approved appointments of Kathy Barker and Marjorie Norman to Cultural Council, terms expiring June 2025"
-    - "Approved appointment of Meredith Riordan to Marblehead Forever Committee, term expiring June 2023"
-    - "Approved attestation of good moral character for Police Chief Dennis King"
+    - "Adopted Marblehead Select Board Statement of Intent for FY24 Operating Override (as amended)"
+    - "Approved Lauren Fogle Boyd to Marblehead Cultural Council, term expiring June 2024"
+    - "Approved Kathy Parker and Marjorie Norman to Marblehead Cultural Council, terms expiring June 2025"
+    - "Approved Meredith Reardon to Marblehead Forever Committee, term expiring June 2023"
+    - "Approved attestation of good moral character/fitness for employment for Police Chief Dennis King"
     - "Approved MOU with MassDOT for speed feedback signs in school zones"
-    - "Approved delegation of open meeting law complaint response to Town Counsel"
-    - "Approved amendment to Alkaline Utility contract extending period to July 31, 2023"
-    - "Proclaimed May 11, 2023 Rotary Club of Marblehead Day"
-    - "Approved use of Abbott Hall for Eagle Scout Court of Honor on May 13, 2023"
-    - "Awarded architectural services contract to Municipal Roast Derby Square Architects for $28,000"
+    - "Approved and delegated response to open meeting law complaint filed by Alan Walker to Town Counsel"
+    - "Approved contract amendment with Alkaline Utility for Pleasant Street work, extending end date to July 31, 2023"
+    - "Approved contract for architectural services with Municipal Roost at Derby Square Architects for DPW garage and police station roof projects at $28,000"
     - "Awarded semi-annual golf day at Tedesco Country Club to Marblehead Counseling Center"
-    - "Approved MS Walk on May 6, 2023"
-    - "Approved participation in national opioid settlement with Teva, Allergan, CVS, Walgreens, and Walmart"
+    - "Approved MS Walk on May 6, 2023 subject to standard conditions"
+    - "Approved opioid settlement participation (Teva, Allergan, CVS, Walgreens, Walmart)"
     - "Approved minutes of March 8, 2023"
-    - "Approved Festival of Arts 5K race/walk on May 13, 2023"
+    - "Proclaimed May 11, 2023 Rotary Club of Marblehead Day"
+    - "Approved Eagle Scout Court of Honor use of Abbott Hall, May 13, 2023, fees waived"
+    - "Approved Festival of Arts 5K race/walk on May 13, 2023 subject to standard conditions"
   votes:
-    - motion: "Adopt FY24 Select Board Statement of Intent for operating override (as amended)"
+    - motion: "Adopt FY24 Operating Override Statement of Intent (as amended)"
       result: "in favor (unanimous)"
     - motion: "Appoint Lauren Fogle Boyd to Cultural Council (term to June 2024)"
       result: "in favor (unanimous)"
-    - motion: "Appoint Kathy Barker and Marjorie Norman to Cultural Council (terms to June 2025)"
+    - motion: "Appoint Kathy Parker and Marjorie Norman to Cultural Council (terms to June 2025)"
       result: "in favor (unanimous)"
-    - motion: "Appoint Meredith Riordan to Marblehead Forever Committee"
+    - motion: "Appoint Meredith Reardon to Marblehead Forever Committee"
       result: "in favor (unanimous)"
-    - motion: "Attestation of good moral character for Police Chief"
+    - motion: "Authorize attestation for Police Chief recertification"
       result: "in favor (unanimous)"
-    - motion: "MOU with MassDOT for speed feedback signs"
+    - motion: "Approve MassDOT MOU for speed feedback signs"
       result: "in favor (unanimous)"
-    - motion: "Delegate open meeting law complaint response to Town Counsel"
+    - motion: "Approve and delegate open meeting law complaint response to Town Counsel"
       result: "in favor (4 to 1)"
-    - motion: "Amend Alkaline Utility contract to extend to July 31, 2023"
+    - motion: "Amend Alkaline Utility contract, extending to July 31, 2023"
       result: "in favor (unanimous)"
-    - motion: "Proclaim May 11, 2023 Rotary Club of Marblehead Day"
+    - motion: "Award architectural services contract to Derby Square Architects for $28,000"
       result: "in favor (unanimous)"
-    - motion: "Approve Abbott Hall use for Eagle Scout Court of Honor"
+    - motion: "Award semi-annual golf day to Marblehead Counseling Center"
       result: "in favor (unanimous)"
-    - motion: "Award architectural services contract for $28,000"
-      result: "in favor (unanimous)"
-    - motion: "Award Tedesco golf day to Marblehead Counseling Center"
-      result: "in favor (unanimous)"
-    - motion: "Approve MS Walk on May 6, 2023"
+    - motion: "Approve MS Walk May 6, 2023"
       result: "in favor (unanimous)"
     - motion: "Approve opioid settlement participation"
       result: "in favor (unanimous)"
     - motion: "Approve minutes of March 8, 2023"
       result: "in favor (unanimous)"
-    - motion: "Approve Festival of Arts 5K on May 13, 2023"
+    - motion: "Proclaim May 11, 2023 Rotary Club of Marblehead Day"
+      result: "in favor (unanimous)"
+    - motion: "Approve Eagle Scout Court of Honor use of Abbott Hall, fees waived"
+      result: "in favor (unanimous)"
+    - motion: "Approve Festival of Arts 5K race/walk May 13, 2023"
       result: "in favor (unanimous)"
 
 topic_segments:
@@ -70,179 +71,149 @@ topic_segments:
     topic_confidence: 0.85
     start_seconds: 0
     end_seconds: 841
-    headline: "Consultant presents draft Marblehead Harbor Plan for 60-day public review"
-    dek: "Consultant Emily from Ennis Associates summarized the two-year planning process covering harbor infrastructure, public access, resilience, and an estimated $6.5M in deferred maintenance costs."
-    summary: |
-      Consultant Emily (Ennis Associates) presented the draft Marblehead Harbor Plan, which also covers the West Shore. The plan emerged from a Harbor Plan Working Group that met seven times, two public workshops, a public survey, and an infrastructure inventory by Tighe & Bond updated to 2022 dollars.
-      
-      **Key findings and recommendations:**
-      - Estimated cost of deferred infrastructure repairs: approximately **$6.5 million** (2022 dollars), with additional costs anticipated for sea-level rise adaptation.
-      - Five major goals: address deferred maintenance, improve equitable public access, support a shifting harbor economy, address public safety, and plan for sea-level rise.
-      - Recommended a land-use plan for the Parker's Boatyard/Cliff Street Boatyard corridor and a reorganization of State Street Landing to better serve commercial fishermen and visitors.
-      - Recommended formation of an ongoing implementation committee.
-      - The infrastructure inventory was built as an interactive ArcGIS Story Map that the town can maintain and update.
-      
-      The draft plan is posted on the town's website; public comments are due **April 21, 2023**.
-    key_speakers: ["Emily (Ennis Associates, lead consultant)"]
+    headline: "Consultant presents draft Marblehead Harbor Plan for public review"
+    dek: "Consultant Emily Ennis outlined the planning process, key goals, estimated $6.5M in deferred maintenance costs, and opened a public comment period through April 21."
+    summary: "Consultant Emily Ennis of Ennis Associates presented the draft Marblehead Harbor Plan, which also covers the West Shore. The plan emerged from a Harbor Plan Working Group, stakeholder workshops, a public survey, and infrastructure inventory work by Tata & Howard. Key issues identified include approximately $6.5 million in deferred maintenance (updated to 2022 dollars), unequal public access, shifting commercial fishing economy, and sea-level rise. The plan recommends an implementation committee, land-use planning for the Parker's Boatyard/Cliff Street area and State Street Landing, and identifies federal/state resilience funding sources. A public comment period runs through April 21, 2023, with the draft plan and a Survey Monkey survey available on the town website."
+    key_speakers: ["Emily Ennis (Consultant, Ennis Associates)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
     start_seconds: 841
-    end_seconds: 1317
-    headline: "Board appoints three members to Cultural Council and one to Marblehead Forever Committee"
-    dek: "Informal interviews were conducted before unanimous votes appointing Lauren Fogle Boyd (term to June 2024), Kathy Barker, and Marjorie Norman (terms to June 2025) to the Cultural Council, and Meredith Riordan to the Marblehead Forever Committee."
-    summary: |
-      The Select Board conducted brief informal interviews with four applicants:
-      
-      | Appointee | Board | Term |
-      |---|---|---|
-      | Lauren Fogle Boyd | Cultural Council | June 2024 |
-      | Kathy Barker | Cultural Council | June 2025 |
-      | Marjorie Norman | Cultural Council | June 2025 |
-      | Meredith Riordan | Marblehead Forever Committee | June 2023 |
-      
-      A fourth Cultural Council applicant, Mark Phillip, was noted as unable to attend and will be interviewed at a future meeting.
-    key_speakers: ["Kathy Barker (applicant)", "Marjorie Norman (applicant)", "Lauren Fogle Boyd (applicant)", "Meredith Riordan (applicant)"]
+    end_seconds: 1309
+    headline: "Three residents appointed to Cultural Council; one to Marblehead Forever Committee"
+    dek: "Lauren Fogle Boyd, Kathy Parker, and Marjorie Norman were appointed to the Cultural Council; Meredith Reardon was appointed to the Marblehead Forever Committee."
+    summary: "The board conducted brief interviews and appointed three applicants to the Marblehead Cultural Council: Lauren Fogle Boyd (term to June 2024) and Kathy Parker and Marjorie Norman (terms to June 2025). A fourth applicant, Mark Phillip, was unable to attend and will return at the April 12 meeting. Meredith Reardon, a retired guidance counselor with 13 years at Marblehead public schools, was appointed to the Marblehead Forever Committee with a term expiring June 2023."
+    key_speakers: ["Lauren Fogle Boyd (applicant)", "Kathy Parker (applicant)", "Marjorie Norman (applicant)", "Meredith Reardon (applicant)"]
   - topic: public-safety
-    topic_confidence: 0.9
+    topic_confidence: 0.88
     start_seconds: 1317
     end_seconds: 1466
-    headline: "Board signs attestation of good moral character for Police Chief Dennis King"
-    dek: "As the appointing authority, the Select Board authorized the chair to sign a POST recertification attestation for Chief King, with the Town Administrator reporting the chief exceeds all required standards."
-    summary: "Pursuant to Massachusetts Peace Officer Standards and Training (POST) requirements, the Select Board, as appointing authority, voted to authorize the chair to sign an attestation of good moral character and fitness for employment for Police Chief Dennis King. The Town Administrator reported he had reviewed the chief's career and found he far exceeds the enumerated standards."
-    key_speakers: ["Town Administrator (Patrick Tocco)"]
+    headline: "Board authorizes attestation of fitness for Police Chief Dennis King under POST recertification"
+    dek: "As required by the state's Peace Officer Standards and Training reform, the board authorized the chair to sign an attestation of good moral character and fitness for employment for Chief King."
+    summary: "Under Massachusetts POST (Peace Officer Standards and Training) requirements, the appointing authority must attest to the fitness of the police chief. The Town Administrator reported reviewing the chief's career and stated he far exceeds the required standards. The board unanimously authorized the chair to sign the attestation."
+    key_speakers: ["Town Administrator (Patrick Bodkin)"]
   - topic: public-safety
     topic_confidence: 0.8
     start_seconds: 1466
     end_seconds: 1629
     headline: "Board approves MassDOT MOU for three solar-powered speed feedback signs in school zones"
-    dek: "The town was one of approximately 50 recipients of a MassDOT grant for radar speed-feedback signs; DPW crews will install them at pre-approved school-zone locations with no cost to the town beyond installation labor."
-    summary: "The Select Board approved a Memorandum of Agreement with MassDOT for the donation of approximately three solar-powered radar speed-feedback signs for installation in existing municipal school zones. The town applied competitively and was among roughly 50 awardees. MassDOT supplies all equipment; DPW is responsible for installation within 90 days of delivery."
-    key_speakers: ["Town Administrator (Patrick Tocco)"]
+    dek: "Marblehead was among approximately 50 communities awarded the signs through a MassDOT grant; DPW will handle installation at pre-approved school zone locations."
+    summary: "The board approved a memorandum of agreement with MassDOT for the donation and installation of three solar-powered speed feedback radar signs in municipal school zones. The town applied competitively and was one of roughly 50 awardees. MassDOT provides the equipment; the town's DPW is responsible for installation within 90 days of delivery. No additional cost beyond installation was identified."
+    key_speakers: ["Town Administrator (Patrick Bodkin)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 1629
+    end_seconds: 2079
+    headline: "Board votes 4-1 to delegate open meeting law complaint response to Town Counsel"
+    dek: "One board member dissented, preferring a more conciliatory tone acknowledging that a quorum attending a Finance Committee meeting without posting notice was a gray-area situation."
+    summary: "The board voted to approve and delegate the response to an open meeting law complaint filed by Alan Walker on March 9, 2023, to Town Counsel. One member voted against, stating she would have preferred a response that more explicitly acknowledged ambiguity in the situation — two select board members and the Town Administrator attended a Finance Committee meeting without posting a separate notice. The board noted they have since moved to post all such joint appearances to avoid recurrence under the hybrid meeting format."
+    key_speakers: ["Select Board member (Jackie)"]
   - topic: admin-housekeeping
     topic_confidence: 0.75
-    start_seconds: 1629
-    end_seconds: 2032
-    headline: "Board votes 4-1 to delegate open meeting law complaint response to Town Counsel"
-    dek: "A complaint filed March 9, 2023 by Alan Walker prompted discussion about quorum rules for select board members attending other boards' meetings; the board voted to delegate the response, with one member dissenting."
-    summary: "The Select Board voted to approve and delegate the response to an open meeting law complaint filed by Alan Walker on March 9, 2023 to Town Counsel. One member stated a preference for a response that more explicitly acknowledged the situation and committed to a policy, while others argued the legal response was appropriate and comprehensive. The board noted it has since begun posting notice when a quorum of members attends meetings of other public bodies. The discussion centered on a hybrid-meeting scenario in which two members and the Town Administrator were present at a Finance Committee meeting."
-  - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 2032
+    start_seconds: 2183
     end_seconds: 2244
-    headline: "Board approves contract extension for Pleasant Street utility work to July 31, 2023"
-    dek: "Weather delays prompted an amendment to the Alkaline Utility contract for Pleasant Street water main work, extending the completion date with no financial changes."
-    summary: "The board voted to amend the contract with Alkaline Utility for Pleasant Street utility work, extending the period of performance to July 31, 2023 due to weather-related delays. No financial changes were noted."
+    headline: "Alkaline Utility contract for Pleasant Street utility work extended to July 31, 2023"
+    dek: "Weather delays required an extension of the contract end date; no financial changes were made."
+    summary: "The board approved an amendment to the contract with Alkaline Utility for Pleasant Street utility work, extending the completion date to July 31, 2023, due to weather-related delays. No financial changes were associated with the extension."
   - topic: override
-    topic_confidence: 0.99
+    topic_confidence: 0.98
     start_seconds: 2244
-    end_seconds: 3018
+    end_seconds: 3002
     featured: true
-    headline: "Select Board unanimously adopts FY24 override statement; single ~$2.5M override planned"
-    dek: "The board voted unanimously to adopt a Statement of Intent committing to a single operating override to cover the FY24 structural deficit, deferring a separate stabilization-fund override to a future year."
+    headline: "Select Board unanimously adopts FY24 override statement; single ~$2.5M structural deficit override planned"
+    dek: "The board voted to pursue one operating override to cover the structural deficit and deferred a stabilization fund override to a future year."
     summary: |
-      The Select Board unanimously adopted the Marblehead Select Board Statement of Intent for a FY24 Operating Override. The document had been tabled at the previous meeting (March 8) and returned with revisions.
+      The Select Board unanimously adopted its Statement of Intent for a FY24 Operating Override. Key provisions include:
       
-      **Key elements of the statement:**
+      - The town will present a **reduced (no-override) budget** that eliminates the structural deficit through service cuts.
+      - Simultaneously, a **level-services budget** will be prepared, with the delta between the two representing the proposed override amount.
+      - A **single override** is proposed for FY24; a separate stabilization fund override is deferred to allow the new finance team time to develop a longer-term strategy.
+      - The override would cover all town departments **including the school department** (made explicit in the document).
+      - The override must pass at Annual Town Meeting (May 1, 2023) and at the Annual Town Election (June 2023).
       
-      - The structural deficit results from salary, benefits, and operational costs outpacing the 2.5% Prop 2½ levy cap, compounded by years of reliance on free cash that is no longer sufficient.
-      - FY24 is described as the first year since 2005 that available free cash cannot cover the gap between revenues and expenditures.
-      - The town will present two budgets: a **reduced (no-override) budget** with cuts, and a **level-services budget** showing the cost of maintaining current services.
-      - The override amount will equal the delta between those two budgets.
-      - **Single override only:** The board voted to defer a second override for stabilization-fund acceleration, citing taxpayer burden and the need to allow the newly installed finance team time to develop a longer-term strategy using the new ClearGov budgeting platform.
-      - Level services explicitly includes the school department.
-      - An override requires approval at Annual Town Meeting (May 1, 2023) and on the Annual Town Election ballot (June 2023).
-      
-      **Longer-term commitments stated in the document:**
-      - Multi-year budget plan using upgraded software and GFOA best practices
-      - Financial policies on free cash usage
-      - Public-facing FAQ and information page on the town website
-    key_speakers: ["Town Administrator (Patrick Tocco)"]
+      The statement also commits to completing a multi-year budget plan using the ClearGov platform, adopting GFOA best practices, and improving free cash management.
+    key_speakers: ["Select Board Chair", "Town Administrator (Patrick Bodkin)"]
   - topic: recreation-events
-    topic_confidence: 0.85
+    topic_confidence: 0.88
     start_seconds: 3018
     end_seconds: 3199
     headline: "Board proclaims May 11 Rotary Club Day; approves Eagle Scout Court of Honor at Abbott Hall"
-    dek: "The Rotary Club of Marblehead marks its 100th anniversary with a clock presentation at the Chamber of Commerce on May 11; three Eagle Scouts from Troop 79 will hold their Court of Honor at Abbott Hall on May 13."
-    summary: |
-      The board unanimously proclaimed **May 11, 2023** as Rotary Club of Marblehead Day in recognition of the club's 100th anniversary. A two-faced town clock will be presented at the Chamber of Commerce location near National Grand Bank at 11 a.m. that day.
-      
-      The board also approved a request from Troop 79 BSA to use Abbott Hall Auditorium on May 13, 2023 from 4–7 p.m. for an Eagle Scout Court of Honor for Christopher Vasquez, Tyler Callahan, and one other Scout. Fees were waived.
+    dek: "The Rotary Club of Marblehead marks its 100th anniversary on May 11 with a two-faced town clock presentation; Troop 79 will hold an Eagle Scout ceremony May 13."
+    summary: "The board proclaimed May 11, 2023 as Rotary Club of Marblehead Day in honor of the club's 100th anniversary. The Rotary Club will present a two-faced town clock at the Chamber of Commerce booth at 11 a.m. The board also approved a request from BSA Troop 79 to use Abbott Hall Auditorium on May 13, 2023, from 4–7 p.m. for an Eagle Scout Court of Honor for Christopher Vasquez, Tyler Callahan, and one other scout, with fees waived."
   - topic: bonding-capital
-    topic_confidence: 0.8
-    start_seconds: 3199
-    end_seconds: 3340
-    headline: "Board awards $28,000 architectural services contract for DPW garage and police station roof replacements"
-    dek: "Derby Square Architects of Salem will provide design and specifications for two roof replacement projects funded through the previously approved $12 million debt exclusion."
-    summary: "The board awarded a contract for architectural services to Derby Square Architects of Salem, MA in the amount of **$28,000** for design and specifications for DPW Garage and Police Station roof replacement projects. This is the first step in the procurement process before an RFP is issued to contractors. The projects are funded through the $12 million infrastructure debt exclusion approved at the prior year's override."
-    key_speakers: ["Town Administrator (Patrick Tocco)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.8
-    start_seconds: 3340
-    end_seconds: 3560
-    headline: "Board awards Tedesco golf day to Counseling Center; approves MS Walk and Festival of Arts 5K"
-    dek: "Routine event approvals included the semi-annual charity golf day, the National MS Society walk on May 6, and the Festival of Arts 5K on May 13, all subject to standard conditions."
-    summary: |
-      Three event approvals were voted unanimously:
-      
-      1. **Tedesco Country Club golf day** awarded to Marblehead Counseling Center (semi-annual tradition).
-      2. **MS Walk** – National Multiple Sclerosis Society, Saturday May 6, 2023; start and finish at Marblehead High School; subject to police/fire/school/Rec & Parks approvals and certificate of insurance.
-      3. **Festival of Arts 5K race/walk** – Saturday May 13, 2023, 8–10 a.m.; starts on Smith Street in front of the post office, finishes at the Community Center; subject to standard conditions.
-  - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 3560
-    end_seconds: 3756
-    headline: "Board opts into opioid settlement with Teva, Allergan, CVS, Walgreens, and Walmart"
-    dek: "Marblehead has received $154,138 from prior settlements and will now participate in a new ~$17 billion national settlement distributed through the Massachusetts Attorney General's office."
-    summary: "The board unanimously approved participation in a new national opioid settlement involving Teva, Allergan, CVS, Walgreens, and Walmart, which totals approximately $20 billion nationally (approximately $17 billion after fees and costs). Funds flow through the Massachusetts Attorney General's office and are restricted to health- and public-safety-related opioid remediation programs. Marblehead has previously received **$154,138.44** from earlier settlements. The board also approved the minutes of March 8, 2023."
-    key_speakers: ["Town Administrator (Patrick Tocco)"]
+    start_seconds: 3199
+    end_seconds: 3290
+    headline: "Board awards $28,000 architectural services contract for DPW garage and police station roof replacements"
+    dek: "Derby Square Architects of Salem will provide design and specifications for the two roof projects funded through last year's $12M debt exclusion."
+    summary: "The board awarded a $28,000 contract for architectural services to Derby Square Architects of Salem, Massachusetts, for design and specification work on roof replacement projects at the DPW garage and the police station. These projects are part of the $12 million infrastructure package approved by voters in the prior year's debt exclusion override. The architectural contract is the first step before competitive bidding for construction."
+    key_speakers: ["Town Administrator (Patrick Bodkin)"]
+  - topic: recreation-events
+    topic_confidence: 0.82
+    start_seconds: 3290
+    end_seconds: 3424
+    headline: "Golf day awarded to Marblehead Counseling Center; MS Walk approved for May 6"
+    dek: "Tedesco Country Club's semi-annual golf day benefit goes to the Counseling Center; the National MS Society's annual walk starts and ends at Marblehead High School."
+    summary: "The board approved two event-related items: (1) awarded the semi-annual golf day at Tedesco Country Club to the Marblehead Counseling Center, and (2) approved the National Multiple Sclerosis Society's annual walk on May 6, 2023, starting and ending at Marblehead High School, subject to approval from police, fire, schools, Recreation & Parks, police details, and receipt of required insurance."
+  - topic: public-safety
+    topic_confidence: 0.88
+    start_seconds: 3424
+    end_seconds: 3738
+    headline: "Board opts into national opioid settlement with Teva, Allergan, CVS, Walgreens, and Walmart"
+    dek: "Marblehead has received $154,138 from prior settlements; the new ~$17B national settlement distributes funds for health and public safety opioid-related programs."
+    summary: "The board voted to authorize the chair to sign participation in the national opioid settlement involving Teva, Allergan, CVS, Walgreens, and Walmart, which settled for approximately $20 billion (roughly $17 billion after fees). Marblehead has received $154,138.44 from prior opioid settlements. Proceeds are restricted to health and public safety programs addressing opioid epidemic impacts, administered through the police and health departments with required utilization reporting."
+    key_speakers: ["Town Administrator (Patrick Bodkin)"]
   - topic: admin-housekeeping
+    topic_confidence: 0.72
+    start_seconds: 3738
+    end_seconds: 3964
+    headline: "Board approves March 8 minutes; discusses possible policies and procedures guidelines"
+    dek: "A board member proposed developing a consolidated governance policy document; members expressed mixed views on its value, and no formal action was taken."
+    summary: "The board approved minutes from March 8, 2023. A discussion followed on whether to develop a consolidated select board policies and procedures document to help with member onboarding and governance consistency. One newer member advocated for consolidating statutes, local bylaws, and board practices into one reference. A longer-serving member expressed opposition, noting the existing statutory framework is sufficient and concern that codified rules could constrain board discretion. No motion was made; the discussion was exploratory."
+  - topic: recreation-events
+    topic_confidence: 0.85
+    start_seconds: 3964
+    end_seconds: 4705
+    headline: "Festival of Arts 5K approved for May 13; committee appointments and deadlines set"
+    dek: "The board also set April 7 and April 21 deadlines for letters of interest for the Disabilities Commission, MBTA Advisory Committee, and Task Force Against Discrimination."
+    summary: "The board approved the Festival of Arts 5K race/walk on May 13, 2023, starting on Smith Street and finishing at the Community Center (8–10 a.m.), subject to standard conditions. The board also set application deadlines: April 7 for the Disabilities Commission and MBTA Advisory Committee (interviews April 12), and April 21 for the Task Force Against Discrimination (interviews at the April 26 select board meeting). Current applicants on file include Dan Albert and Edward McCarthy for the MBTA Advisory Committee, Arnold Cohen, Rick Keller, and Bridget Duffy for the Task Force/Disabilities Commission."
+  - topic: public-comment
     topic_confidence: 0.6
-    start_seconds: 3756
-    end_seconds: 4638
-    headline: "Board discusses but takes no action on proposed Select Board policies and procedures document"
-    dek: "A board member proposed developing a consolidated policies and procedures document; members expressed mixed views, and no motion was made."
-    summary: |
-      One board member proposed developing a Marblehead-specific Select Board policies and procedures document, consolidating statutes, local bylaws, and practices into one reference for onboarding and governance clarity. Topics discussed included standard of conduct, meeting procedures, joint-meeting protocols, Town Administrator relations, and annual goal-setting.
-      
-      Other members expressed concern about codifying matters that should remain open for debate, overly restricting the Town Administrator's latitude, and the staff burden of the effort. One member with 18 years of service stated opposition to the initiative. No motion was made; the discussion was noted as informational.
+    start_seconds: 4705
+    end_seconds: 5216
+    headline: "Brief public comment; one resident raised a consideration related to the harbor plan process"
+    dek: "A resident commented on coordination with the harbor plan consultant; the chair acknowledged the input without taking action."
+    summary: "The board opened public comment. One resident (identified as Brad) raised a matter relating to consultant or resource use connected to the harbor plan; the chair responded that the broad letter of intent likely covers the matter and deferred to the Town Administrator's judgment. No other public comments were recorded."
+    key_speakers: ["Resident (Brad)"]
   - topic: override
     topic_confidence: 0.97
-    start_seconds: 4638
+    start_seconds: 5216
     end_seconds: 7228
-    headline: "Town Administrator presents preliminary FY24 budget numbers showing ~$2.5M override figure"
-    dek: "With free cash projected at $8 million (down from $10.2M), the delta between a reduced budget (~$94.5M) and a level-services budget (~$97M) yields an approximate $2.5 million override, split roughly evenly between town and schools."
+    headline: "Town Administrator presents detailed FY24 budget figures: ~$2.5M override, two new positions self-funded"
+    dek: "Revenues are projected at ~$94.5M net; the level-services budget runs ~$97M, yielding a ~$2.5M override; two new HR and sustainability positions are offset within existing budget lines."
     summary: |
-      Town Administrator Tocco presented preliminary FY24 budget numbers, cautioning that final figures will shift slightly as books close and state aid is finalized.
+      Town Administrator Patrick Bodkin provided a detailed budget update:
       
-      **Revenue side (preliminary):**
-      
-      | Item | Amount |
-      |---|---|
-      | Local receipts (3-yr avg × 95%) | $6,307,231 (~+$715K from FY23) |
-      | Free cash (estimated) | $8,000,000 (down from $10,200,000) |
-      | Municipal light, water/sewer, harbor transfers | ~$600K combined |
-      | **Total gross revenue** | ~$105,328,000 |
-      | Less debt exclusions (netted out) | — |
-      | **Net available revenues** | ~$94,545,000 |
+      **Revenue side:**
+      - Local receipts recalculated using a 3-year actual average × 95%, yielding **$6,307,231** (~$715K increase over FY23)
+      - Free cash estimate: **$8 million** (down from $10.2M last year)
+      - Total gross revenue: ~**$105,328,000**; net of debt exclusions: ~**$94,545,000**
       
       **Expenditure side:**
-      - Major cost drivers: health insurance up ~5.7% (GIC), energy costs up ~30–35%, salary step increases slightly above 2%.
-      - **Reduced (no-override) budget** increase over FY23: **$1.523 million**
-      - **Level-services budget** increase over FY23: **$4.046 million**
-      - Warrant articles estimated at **$1.688 million** (~$439K below prior year)
+      - Major cost drivers: health insurance (+5.7% GIC increase), energy costs (+30–35%), and above-CPI vendor increases
+      - **Reduced (no-override) budget**: $1.523M increase from FY23 — stays within revenues via cuts
+      - **Level-services budget**: just over $4,046,000 increase from FY23
+      - Warren articles estimated at **$1.688M** (~$439K less than prior year)
+      - **Proposed override amount: ~$2.522M** (delta between reduced and level-services budgets)
       
-      **Override calculation:**
-      - Delta between reduced and level-services budgets: approximately **$2.522 million**
-      - Town-side raw share: ~$1.388M; School-side raw share: ~$1.134M
-      - After adjusting for ~$976K of school-employee health/Medicare costs that appear on the town ledger, the effective split is approximately even.
+      **Override allocation:**
+      - Town side raw: ~$1.388M; School side raw: ~$1.134M
+      - After allocating ~$976K of school-related health insurance/Medicare costs that appear on the town ledger, the split is approximately even
       
-      **New positions proposed and self-funded:**
-      Two new positions are included in the level-services budget and structured to pay for themselves:
-      1. **HR Director** – salary/benefits offset against the health insurance account, expected to manage collective bargaining and benefit plan negotiations (two contracts plus the employee health committee expire in FY25).
-      2. **Sustainability Coordinator** – salary/benefits offset against energy line items across departments, expected to reduce energy costs and pursue federal/state climate grants (Inflation Reduction Act, Infrastructure Act).
-      
-      The Town Administrator noted the finance department is in the final stages of closing the FY23 books and that certified free cash should be available imminently.
-    key_speakers: ["Town Administrator (Patrick Tocco)", "Finance Director Alicia (last name not captured)"]
+      **New positions:**
+      - HR Director: salary/benefits cost offset by a deduction from the health insurance budget line
+      - Sustainability Coordinator: salary/benefits cost offset by deductions from energy budget lines across departments
+      - Both positions are described as cost-neutral in the proposed budgets
+    key_speakers: ["Town Administrator (Patrick Bodkin)", "Select Board member (Aaron)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

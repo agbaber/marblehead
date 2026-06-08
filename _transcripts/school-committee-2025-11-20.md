@@ -11,21 +11,22 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "School Committee awards $8.97M MHS roof/HVAC contract, $2.1M under budget"
-  summary: "The Marblehead School Committee voted unanimously to award the Marblehead High School roof and HVAC replacement contract to Homer Contracting Inc. of Arlington for $8,970,000, approximately $2.12 million under the $11,090,000 budget. The subcommittee unanimously declined the liquid-applied roofing alternate, finding no justification for the additional cost. The committee also approved the FY27 capital request priority list and voted on superintendent goals before entering executive session on two litigation matters."
+  headline: "School committee awards $8.97M MHS roof/HVAC contract, $2.1M under budget"
+  summary: "The Marblehead School Committee approved a contract with Homer Contracting Inc. of Arlington for the Marblehead High School roof and HVAC project at $8,970,000, approximately $2,120,000 under the $11,090,000 budget. The committee also approved two student field trips, accepted a $2,500 METCO donation, voted on the FY27 capital requests priority list, and approved superintendent goals. The meeting concluded with a vote to enter executive session on two litigation matters."
   decisions:
     - "Approved schedule of bills totaling $835,535.81 and November 6th meeting minutes"
-    - "Approved Innovation Career Pathways field trip to Landing School in Maine"
-    - "Approved speech and debate club trip to Emory University in Georgia"
+    - "Approved ICP Innovation Career Pathways field trip to Landing School in Maine"
+    - "Approved speech and debate club trip to Barclay Forum at Emory University"
     - "Approved award of MHS roof/HVAC contract to Homer Contracting Inc. for $8,970,000"
-    - "Approved FY27 capital request priority list"
-    - "Approved donation of $2,500 from Marblehead Female Humane Society to METCO donation fund"
+    - "Approved FY27 capital requests priority list"
+    - "Accepted $2,500 donation from Marblehead Female Humane Society to METCO Fund"
     - "Approved superintendent goals"
     - "Approved school committee goal on elevating educator voices (3-0 with one abstention)"
-    - "Approved entering executive session on two litigation matters"
+    - "Voted to enter executive session on two litigation matters"
   votes:
-    - motion: "Approve schedule of bills and meeting minutes"
+    - motion: "Approve bills and meeting minutes"
       result: "in favor (4 to 0)"
     - motion: "Approve field trip to Landing School, Maine"
       result: "in favor (4 to 0)"
@@ -33,166 +34,195 @@ summary_card:
       result: "in favor (4 to 0)"
     - motion: "Award MHS roof/HVAC contract to Homer Contracting Inc. for $8,970,000"
       result: "in favor (4 to 0)"
-    - motion: "Approve FY27 capital request priority list"
+    - motion: "Approve FY27 capital requests priority list"
       result: "in favor (4 to 0)"
-    - motion: "Accept $2,500 donation from Marblehead Female Humane Society"
+    - motion: "Accept $2,500 METCO donation from Marblehead Female Humane Society"
       result: "in favor (4 to 0)"
     - motion: "Approve superintendent goals"
       result: "in favor (4 to 0)"
-    - motion: "Approve school committee goal on elevating educator voices"
+    - motion: "Approve educator voices school committee goal"
       result: "in favor (3 to 0, one abstention)"
     - motion: "Enter executive session on two litigation matters"
       result: "in favor (4 to 0)"
 
 topic_segments:
   - topic: admin-housekeeping
-    topic_confidence: 0.9
+    topic_confidence: 0.85
     start_seconds: 0
     end_seconds: 566
-    headline: "Superintendent delivers fall update including substance abuse education overview and staff shout-outs"
-    dek: "Superintendent reported on substance use programming, a student belonging discussion with 16 high schoolers, and recognized staff across all district buildings."
+    headline: "Superintendent delivers fall update including substance abuse education report"
+    dek: "Superintendent outlined substance use programming philosophy, student preference for small-group discussions, and offered school-wide staff shout-outs."
     summary: |
-      The superintendent's update covered several areas:
+      The superintendent reported that high school students prefer to discuss substance use in small groups within regular classes rather than large assemblies. Programming spans grades 4–12 and includes featured speakers, focus groups, curricular lessons, data collection, and diversion counseling.
       
-      - **Substance abuse education**: Schools use small-group, classroom-based discussions rather than large assemblies, based on student feedback. Programming spans grades 4–12 and includes speakers, focus groups, data collection, and diversion counseling.
-      - **Student belonging**: The superintendent met with 16 high school students and the METCO director to discuss school culture shifts; conversations are expected to connect with the anti-discrimination committee and student-led Magic Coalition.
-      - **Staff recognition**: Counselors at Village School, a second-grade teacher at Brown School, the English department at Veterans Middle School, a nurse and custodian at Glover, and behavioral support staff district-wide were recognized.
+      The superintendent also shared staff recognitions from principals across all schools, including Village School counselors, a Brown School teacher who expanded a food drive, Veterans Middle School English staff who led an Alice Hoffman assembly, and a Glover School nurse and custodian. The superintendent closed with Thanksgiving wishes.
     key_speakers: ["Superintendent (Jennifer)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.95
+    topic_confidence: 0.9
     start_seconds: 566
     end_seconds: 680
-    headline: "Committee approves $835,535.81 in bills and November 6 meeting minutes 4-0"
-    dek: "A routine consent agenda covering bills and prior meeting minutes passed without significant discussion."
-    summary: "The committee voted 4–0 to approve the identified schedule of bills totaling $835,535.81 and the meeting minutes from November 6, 2025. A brief note was raised about language in the minutes referencing the Bell school process."
-    key_speakers: ["Chair (Madam Chairwoman)", "Henry (committee member)", "Melissa (committee member)"]
+    headline: "Committee approves bills totaling $835,535 and November 6 meeting minutes"
+    dek: "Consent agenda passed 4-0 with a minor note about Bell school process language in the minutes."
+    summary: "The chair called for a motion to approve the schedule of bills totaling $835,535.81 and meeting minutes from November 6, 2025. A committee member flagged that the minutes referenced a Bell school process under subcommittee updates. The motion passed 4-0."
   - topic: recreation-events
     topic_confidence: 0.75
     start_seconds: 680
     end_seconds: 1124
-    headline: "Committee approves two student field trips: marine technology visit to Maine and speech/debate tournament in Georgia"
-    dek: "An Innovation Career Pathways trip to a marine technology college in Maine and a speech and debate student's solo trip to Emory University were both approved unanimously."
+    headline: "Committee approves two field trips: marine career visit to Maine and debate tournament at Emory"
+    dek: "An Innovation Career Pathways group will tour the Landing School in Maine; a nationally-ranked sophomore will compete at Barclay Forum at Emory University."
     summary: |
-      **Trip 1 – Landing School, Arundel, Maine**: The ICP (Innovation Career Pathways) program director described the Landing School's programs in marine systems, diesel technology, wooden and composite boat building, and yacht design. A small group of seniors interested in the marine industry will attend an open house. The trip was approved 4–0.
+      The Innovation Career Pathways (ICP) program director described a trip to the Landing School in Arundel, Maine for seniors interested in marine systems, diesel technology, wooden and composite boat building, and yacht design. The school is described as the only one in the country offering a degree in yacht design.
       
-      **Trip 2 – Barclay Forum at Emory University, Georgia**: A sophomore who transferred from Alabama and is nationally ranked in speech and debate requested to attend a national circuit tournament she had previously competed in as a freshman. One staff advisor will accompany her, with chaperone costs covered by the high school budget. The trip was approved 4–0. The committee noted the student's participation is intended to help launch a new school speech and debate club.
-    key_speakers: ["Ryan (ICP program director/English teacher)", "Student (sophomore, speech and debate)", "Michelle (administrator)"]
+      A sophomore student who transferred from Alabama and is nationally ranked in speech and debate presented a request to attend the Barclay Forum national circuit tournament at Emory University in Georgia. The student noted she was the first freshman from her previous school to advance past preliminary rounds. The chaperone cost will come from the high school budget. Both trips passed 4-0.
+    key_speakers: ["ICP program director (Ryan)", "Student (Yvette, sophomore)", "Michelle (administrator)"]
   - topic: bonding-capital
-    topic_confidence: 0.97
+    topic_confidence: 0.95
     start_seconds: 1124
     end_seconds: 2911
     featured: true
-    headline: "School Committee awards $8.97M MHS roof/HVAC contract to Homer Contracting, $2.12M under budget"
-    dek: "The roof/HVAC subcommittee unanimously recommended—and the full committee approved 4-0—the low bid from Homer Contracting, rejecting the liquid-applied roofing alternate as unjustified in cost."
+    headline: "Committee awards $8.97M MHS roof/HVAC contract to Homer Contracting, $2.1M under budget"
+    dek: "The building subcommittee unanimously recommended the low bid and voted against a liquid-applied roofing alternative after finding it would cost more, not less, than traditional PVC membrane."
     summary: |
-      The MHS Roof/HVAC subcommittee presented its recommendation to award the general contractor bid to **Homer Contracting Inc. of Arlington, Massachusetts** at **$8,970,000**, against a budget of $11,090,000—approximately **$2,120,000 (roughly 19%) under budget**.
+      The MHS Roof/HVAC Subcommittee presented six general contractor bids. The low bidder, Homer Contracting Inc. of Arlington, MA, came in at **$8,970,000**, against a GC budget of **$11,090,000** — approximately **$2,120,000 (about 19%) under budget**.
       
-      **Bid structure**: All six general contractors used the same filed subcontractors (Takeway Roofing, Robert Irving for plumbing, A Monte for HVAC, and Systems for electrical), so price variation came from GC bids only. Approximately 70% of contract value is HVAC equipment; roughly 30% is roofing.
+      All GC bids used the same pre-qualified subcontractors: Cape Way Roofing (roofing), Robert Irving (plumbing), A. Monte (HVAC), and Systems (electrical), with those filed sub-bids fixed across all GC bids.
       
-      **Liquid-applied roof alternate rejected**: The subcommittee unanimously declined the liquid-applied roofing alternate. Community expert Mark Lieman and OPM representative Ralph Wallace explained that liquid-applied systems work best on roofs nearing end of life but in generally good condition; because the MHS roof has extensive damage, contractors priced it as a complication rather than a saving. Alternate bids varied widely—one roofing subcontractor added nearly $1.8M, another added $983,000, and a third offered a $157,000 credit.
+      The subcommittee voted unanimously **not** to include the liquid-applied roofing alternative. Community roofing expert Mark Leadman and OPM Ralph Wallace both explained that liquid-applied roofing is cost-effective only when a roof is in generally good condition nearing end of useful life — the MHS roof has extensive existing damage that made the application more complicated. The roofing sub-bids for the alternate varied widely:
       
-      **Bonding question**: A committee member noted a community question about whether the full $11M had been bonded and what happens to the $2.12M savings. The committee indicated the money had been bonded but not yet borrowed, and that the savings would need to reduce the debt exclusion; follow-up with town finance staff was noted as pending.
+      | Roofer | Base Bid | Alternate Add |
+      |---|---|---|
+      | Cape Way (low base) | lowest | +$1.8M (nearly double) |
+      | Greenwood | $2.9M | +$983,000 |
+      | Gibson | — | −$157,000 credit |
       
-      **Ongoing oversight**: The subcommittee will remain active through construction. Community volunteers with HVAC and roofing expertise offered to provide periodic on-site inspections and quarterly maintenance oversight to protect the town's investment. The committee also discussed connecting this work to the facilities subcommittee going forward.
+      Ralph Wallace noted that even Cape Way's base bid plus Gibson's credit for liquid-applied would still have been approximately $3.3M.
       
-      **Vote**: Approved 4–0.
-    key_speakers: ["Henry (committee member)", "Jen (committee member)", "Mark Lieman (community/roofing expert)", "Ralph Wallace (OPM)", "Brian Fin (community/HVAC expert)", "Mike (Director of Finance/Operations)"]
+      About 70% of the contract value relates to HVAC equipment; roughly 30% is for the roofing. The committee discussed the disposition of the ~$2.1M savings relative to the debt exclusion authorization and agreed to follow up with town finance staff. The subcommittee will remain active through construction, with community experts Mark Leadman (roofing) and Brian Fin (HVAC) offering ongoing oversight. Motion to award passed **4-0**.
+    key_speakers: ["Ralph Wallace (OPM/community expert)", "Mark Leadman (community roofing expert)", "Brian Fin (community HVAC expert)", "Henry (school committee member)", "Mike (facilities/finance director)"]
   - topic: bonding-capital
     topic_confidence: 0.88
     start_seconds: 2911
-    end_seconds: 4193
-    headline: "Committee approves FY27 capital request priority list totaling roughly $1.66M across three tiers"
-    dek: "Facilities Director Mike presented a tiered capital needs list; the committee voted 4-0 to approve it as submitted, with further prioritization to follow once town guidance on funding levels is received."
+    end_seconds: 4183
+    headline: "Committee approves FY27 capital requests priority list totaling roughly $1.66M across three tiers"
+    dek: "Tier 1 requests total approximately $935,000 and include bus cameras, Glover playground safety, Fieldhouse repairs, Veterans clock/bell system, and Village fence."
     summary: |
-      The committee reviewed and approved the FY27 capital request list for submission to the town. Items are ranked in three priority tiers:
+      Director of Finance/Operations Mike presented the district's FY27 capital request list to the committee for approval before submission to the town. He noted the list reflects needs even if not all items can be funded given the town's financial situation.
       
-      | Tier | Approximate Total |
-      |------|------------------|
-      | Priority 1 | ~$935,000 |
-      | Priority 2 | ~$629,000 |
-      | Priority 3 | ~$93,000 |
-      
-      **Priority 1 items** (safety and critical systems):
+      **Tier 1 (Priority 1) — ~$935,000 total:**
       - Bus camera system upgrade (hard drives failing)
-      - Glover playground rock hazard removal
-      - Fieldhouse painting (~$300,000), wall padding (~$28,000), and flooring (~$200,000)
+      - Glover playground safety (jagged rock removal from original construction)
+      - Fieldhouse painting (~$300K), padding (~$28K), and flooring (~$200K)
       - Veterans Middle School clock/bell/PA system replacement
-      - Village School Hopkins field fence repair
+      - Village School Hopkins Field fence repair
       
-      **Priority 2 items**: Brown School playground shade structure, Veterans MS expansion joint flooring repairs, Veterans MS gymnasium floor refinishing, Veterans and Village gymnasium lighting upgrades, Veterans MS staircase extension toward Pleasant Street (ADA review required), Performing Arts Center wall lighting and carpet.
+      **Tier 2 (Priority 2) — ~$629,000 total:**
+      - Brown School playground shade structure
+      - Veterans Middle School expansion joint/flooring repairs
+      - Veterans gymnasium floor refinishing (large and small gym)
+      - Veterans and Village gymnasium LED lighting upgrades
+      - Veterans stairway extension toward Pleasant Street (~$75K; ADA implications under review)
+      - Performing Arts Center wall sconces and carpet replacement
       
-      **Priority 3 items**: Seaside Park drainage (in coordination with Rec/Parks), snow removal equipment, Village field house/restroom refresh.
+      **Tier 3 (Priority 3) — ~$93,000 total:**
+      - Seaside Park drainage (matching funds with Rec & Park)
+      - Snow removal equipment
+      - Butch Field structure/restroom refresh
+      - Wireless access point licensing replacement
+      - Rolling stock: two aging school buses (2013, 2015 models)
       
-      The committee noted technology (wireless access point licensing) and rolling stock (two aging school buses, 2013 and 2015) as additional concerns. The committee agreed to approve the list and revisit sub-prioritization once town guidance on available funding is received.
-    key_speakers: ["Mike (Director of Finance/Operations)", "Jen (committee member)", "Melissa (committee member)"]
+      The superintendent flagged bus cameras, the Glover rocks, Veterans bell/clock, and technology as safety-related priorities. The committee was advised that the town may fund only one item; Mike indicated he would seek further guidance from the finance director. Motion to approve the priority list passed **4-0**.
+    key_speakers: ["Mike (facilities/finance director)", "Superintendent (Jennifer)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.92
-    start_seconds: 4193
+    topic_confidence: 0.9
+    start_seconds: 4183
     end_seconds: 4236
     headline: "Committee accepts $2,500 donation from Marblehead Female Humane Society to METCO fund"
-    dek: "A routine donation acceptance passed unanimously."
-    summary: "The committee voted 4–0 to accept a $2,500 donation from the Marblehead Female Humane Society to the Marblehead METCO Donation Fund."
-    key_speakers: ["Jen (committee member)", "Henry (committee member)"]
+    dek: "Motion passed 4-0 with no discussion."
+    summary: "The committee voted 4-0 to accept a $2,500 donation from the Marblehead Female Humane Society directed to the Marblehead METCO Donation Fund."
   - topic: public-safety
-    topic_confidence: 0.72
+    topic_confidence: 0.7
     start_seconds: 4236
-    end_seconds: 4982
-    headline: "School Committee member reports on cross-board collaboration around youth substance use and community safety"
-    dek: "Committee member Jen described informal meetings with leaders from the Board of Health, Recreation and Parks, Select Board, and DA's office to coordinate a community-wide response to youth substance abuse concerns."
+    end_seconds: 5015
+    headline: "School committee member updates on inter-board collaboration on youth substance use and safety"
+    dek: "Committee member Jen reported ongoing informal discussions with Board of Health, Rec & Park, Select Board, and DA's office around youth substance use, enforcement of town bylaws, and parent education."
     summary: |
-      Committee member Jen provided an update on informal cross-board conversations she has been facilitating following a student death over the summer. Participants have included representatives from the Board of Health, Rec and Parks (Chris Kennedy), Select Board (Erin Nunan, Alexa Singer), and the district attorney's office.
+      Committee member Jen described outreach to other town boards following a student death in summer 2025. She met with representatives from Recreation & Park (Chris Kennedy), Board of Health (McMahon), Select Board (Erin Nunan and Alexa Singer), and the District Attorney's office.
       
-      Key findings and discussion points:
-      - Town bylaws exist around serving minors alcohol and related conduct; fines are as low as $25 and have not been updated. Town records show five citations between 2009 and 2016, and none since 2017.
-      - Education efforts were discussed, including small-group classroom approaches already in use and the possibility of reviving a spring parent meeting focused on student safety.
-      - MIA (athletic association) rules and handbook consequences were noted as a model for consistent enforcement across extracurricular activities.
-      - The superintendent added that conversations with the ministerial association and with a Rotary Club member experienced in addiction counseling are ongoing.
-      - Committee members emphasized maintaining long-term commitment rather than reactive engagement following tragedies.
-    key_speakers: ["Jen (committee member)", "Superintendent (John)", "Tom (Board of Health)", "Alexa Singer (Select Board)"]
+      Key findings shared:
+      - Town bylaws include fines (as low as $25) for serving alcohol to minors; these have not been updated in years.
+      - The town clerk reported five citations for underage serving between 2009–2016; no citations since 2017.
+      - Discussion centered on enforcement of bylaws, substance use education, and counseling resources.
+      - A previously held spring parent meeting (discontinued around COVID) that included the police chief or DA's office on youth safety was discussed as a potential resumption.
+      
+      The superintendent noted ongoing plans to share more detailed programming information and described meeting with a group of 16 high school students through the METCO director to discuss school culture. Committee members also referenced MIA (athletic association) rules as a model for consistent consequences across extracurricular activities.
+    key_speakers: ["Jen (school committee member)", "Superintendent (John)", "Alexa Singer (Select Board)", "Chris McMahon (Board of Health)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
-    start_seconds: 4982
-    end_seconds: 5580
-    headline: "Superintendent goals approved 4-0; school committee goal on elevating educator voices approved 3-0 with one abstention"
-    dek: "The superintendent's 18-month goals, revised through two prior workshops, were approved, and a new school committee goal to study options for increasing educator participation was adopted."
-    summary: |
-      The superintendent's goals, described as 18-month goals, were approved 4–0 after revisions made following a November 3 workshop and November 6 meeting discussion.
-      
-      Separately, a school committee goal titled 'Elevating Educator Voices' was presented and approved 3–0 with one abstention. The goal calls for:
-      1. Working with the superintendent to hold productive sessions with educators.
-      2. Appointing an ad hoc subcommittee to research how other school committees increase educator and community participation at meetings, with a report back to the full committee by end of school year.
-      
-      Discussion clarified that the goal is exploratory—to gather information on options such as non-voting representatives—before any decisions are made. Concerns were noted about union leadership sitting on the committee and ensuring any such arrangement does not create conflicts.
-    key_speakers: ["Chair", "Henry (committee member)", "Melissa (committee member)", "Jen (committee member)"]
+    start_seconds: 5015
+    end_seconds: 5477
+    headline: "Committee approves revised superintendent goals on second revision"
+    dek: "Goals, framed as 18-month targets, were approved 4-0 after two prior rounds of committee feedback."
+    summary: "The superintendent presented a revised set of goals incorporating committee feedback from a November 3rd workshop and a November 6th meeting discussion. The superintendent described the goals as 18-month targets and noted the committee can revisit progress and adjust as needed. Motion to approve passed **4-0**."
+    key_speakers: ["Superintendent (John)"]
   - topic: admin-housekeeping
     topic_confidence: 0.8
+    start_seconds: 5477
+    end_seconds: 5580
+    headline: "Committee approves school committee goal on elevating educator voices, 3-0 with one abstention"
+    dek: "The goal calls for exploring non-voting educator representation and studying how other districts increase meeting participation, with a report back by end of school year."
+    summary: |
+      Committee member Melissa presented a refined draft of a school committee goal on elevating educator voices. The goal proposes working with the superintendent to hold productive educator sessions, appointing an ad hoc subcommittee to research how other districts incorporate non-voting representatives or increase educator participation at meetings, and reporting back to the committee by the end of the school year.
+      
+      Discussion focused on whether union leadership would typically serve as non-voting representatives (generally not recommended) and the exploratory nature of the goal. One committee member abstained. Motion passed **3-0 with one abstention**.
+    key_speakers: ["Melissa (school committee member)", "Henry (school committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
     start_seconds: 5580
     end_seconds: 6418
-    headline: "Subcommittee updates: budget analysis underway, S'more newsletter tool discussion tabled pending IT consultation"
-    dek: "The budget subcommittee is analyzing per-building staffing data; the communications subcommittee deferred a vote on a paid S'more newsletter plan pending a meeting with the technology director."
+    headline: "Communications subcommittee discusses Smore newsletter platform and database management"
+    dek: "No vote taken; committee directed subcommittee to meet with technology director to resolve how to manage community opt-in lists without individual members controlling a separate database."
     summary: |
-      **Budget subcommittee**: The subcommittee met and reviewed a per-building staffing and budget analysis prepared by the finance director. A joint finance/subcommittee meeting is scheduled for December 1st, with presentations from building administrators. A budget calendar working backwards from town meeting was described as forthcoming for community communication.
+      The communications subcommittee sought approval to purchase a Smore basic plan ($99/year) to send community newsletters. Discussion revealed the district may already have a Smore account from prior years. Committee members expressed concern that individual members should not control or manage a separate contact database; any list must be administered through the district.
       
-      **Policy subcommittee**: The first draft of an absenteeism determination policy was presented; a second draft is expected after Thanksgiving. Work on a naming policy is also underway. Several policy revisions are scheduled for December committee meetings.
+      Options discussed included:
+      - Using an existing or new district-linked Smore account
+      - Creating a school committee subcommittee email address that ties to the account
+      - Allowing community members to opt in via a link on the district website
+      - Having the district newsletter include a sign-up link for school committee updates
       
-      **Wellness subcommittee**: The wellness policy, which requires revision every three years, is being updated with stakeholder input. A revised draft will be brought back to the subcommittee.
-      
-      **Communications subcommittee / S'more discussion**: Committee member Melissa proposed approving a paid S'more basic plan ($99/year) or crow plan ($179/year, which includes translation services) to support community newsletters beyond the district's existing distribution list. Significant discussion ensued about data governance—members agreed that no individual committee member should manage a subscriber database, and that any list must be maintained through the district. The vote was deferred pending a meeting with the technology director to determine whether the existing district S'more account can be leveraged.
-    key_speakers: ["Melissa (committee member)", "Henry (committee member)", "Jen (committee member)", "Mike (Director of Finance/Operations)", "Julia (Assistant Superintendent, Teaching and Learning)"]
-  - topic: labor-personnel
-    topic_confidence: 0.9
+      The Crow plan ($179/year) was noted as the lowest tier that includes translation services. No vote was taken; the subcommittee was directed to meet with the technology director (Steven) to identify the right approach.
+    key_speakers: ["Melissa (communications subcommittee)", "Henry (school committee)", "Julia (assistant superintendent, Teaching and Learning)"]
+  - topic: school-budget
+    topic_confidence: 0.8
     start_seconds: 6418
-    end_seconds: 6761
-    headline: "Committee enters executive session 4-0 on two litigation matters: MTA labor case and Perry civil case"
-    dek: "Roll-call vote approved executive session without intent to return to open session on a teachers association labor dispute and a federal civil case."
+    end_seconds: 6522
+    headline: "Budget subcommittee reports second-round staffing analysis; December 1 joint meeting planned"
+    dek: "Building administrator consultations are underway, with a joint finance subcommittee meeting scheduled for December 1 ahead of spring town meeting budget milestones."
+    summary: "The budget subcommittee reported completing a second round of analysis of existing staffing broken down by building and category. The next step involves the superintendent and finance director meeting with building administrators. A joint finance subcommittee meeting is scheduled for December 1. The committee noted a calendar of budget milestones leading to town meeting was presented and may be shared more broadly with the community."
+    key_speakers: ["Mike (finance director)", "Superintendent (John)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 6522
+    end_seconds: 6646
+    headline: "Policy and wellness subcommittees report progress on attendance determination and wellness policies"
+    dek: "A first draft of the attendance determination policy was reviewed; wellness policy revision is underway with a revised draft expected after Thanksgiving."
     summary: |
-      The committee voted 4–0 by roll call to enter executive session on two matters:
+      The policy subcommittee received a first draft of the attendance determination policy from the superintendent and assistant superintendent; a second draft is expected after Thanksgiving. Work on the naming policy is also underway. Several policy revisions and new policies are expected before the committee in December.
       
-      1. **Marblehead School Committee v. Marblehead Teachers Association**, MUP-25-1555 (labor/litigation).
-      2. **Boyd Perry v. Marblehead Public Schools et al.**, Docket No. 1:24-CV-10606, U.S. District of Massachusetts (civil litigation).
+      The wellness subcommittee held its second meeting, gathering input for the required triennial policy revision. A revised draft will be brought back at the next meeting before going to the broader committee. Safety committee meetings with union/administrators are planned for December 11, with a community presentation expected in spring. The town-level safety committee will meet quarterly, with the next session anticipated in January.
+    key_speakers: ["Superintendent (John)"]
+  - topic: labor-personnel
+    topic_confidence: 0.85
+    start_seconds: 6646
+    end_seconds: 6761
+    headline: "Committee votes to enter executive session on two litigation matters"
+    dek: "Executive session covers an MTA labor complaint (MUP-25-1555) and a federal civil rights case (Boyd Perry v. Marblehead Public Schools, D. Mass. 1:24-cv-0606)."
+    summary: |
+      The committee voted 4-0 via roll call to enter executive session pursuant to M.G.L. c. 30A, §21A(3) (Purpose 3 — litigation) for two matters:
+      1. Marblehead School Committee v. Marblehead Teachers Association, MUP-25-1555
+      2. Boyd Perry v. Marblehead Public Schools et al., Docket No. 1:24-cv-0606, U.S. District Court, District of Massachusetts
       
-      The chair declared that open discussion would have a detrimental effect on the committee's litigating position. The committee did not intend to return to open session.
-    key_speakers: ["Chair", "Jen (committee member)", "Melissa (committee member)", "Henry (committee member)"]
+      The chair declared no intent to return to open session.
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

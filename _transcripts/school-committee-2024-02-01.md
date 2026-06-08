@@ -11,267 +11,188 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "School committee approves turf fundraising, director position, and Greece trip amid $2.3M budget cut outlook"
-  summary: "The Marblehead School Committee met on February 1, 2024, chaired by Vice Chair Jen Schaffner. The committee received a budget update projecting $2.3 million in required cuts for FY25, approved the Marblehead Boosters' Piper Field turf replacement fundraising effort (with approximately $792,000 raised toward a $954,000 goal), and voted to reclassify the assistant superintendent of finance and operations role to a director-level position with a salary range of $120,000–$150,000. A vote on superintendent search committee membership ended in a 2-2 tie and was tabled pending a fifth board member."
+  headline: "School committee approves $45.5M reduced-services budget framework, faces $2.3M in cuts"
+  summary: "The Marblehead School Committee heard that the district's level-services budget for FY25 is approximately $47.9M, requiring roughly $2.3M in cuts to reach a reduced-services budget of about $45.5M. The committee approved several action items including co-signing an anti-hate letter, approving the Piper Field turf fundraising effort, and approving two overnight field trips. A vote on superintendent search committee membership ended in a 2-2 tie and was tabled pending a fifth member."
   decisions:
-    - "Approved co-signing Dr. McGinnis's letter condemning swastika graffiti at Vets school"
+    - "Approved co-signing Dr. McGinnis's letter condemning antisemitic graffiti at Veterans Middle School"
     - "Approved schedule of bills totaling $762,430.73"
     - "Approved minutes of November 16, 2023 school committee meeting"
     - "Approved Marblehead Boosters to fundraise for Piper Field turf replacement"
     - "Approved DECA overnight field trip to Boston, March 7–9, 2024"
-    - "Approved Marblehead High School overnight trip to Greece, April 2025"
-    - "Approved director of finance and operations position with salary range of $120,000–$150,000"
-    - "Held vote on superintendent search committee membership (2-2 tie, no decision)"
+    - "Approved Marblehead High School trip to Greece, April 2025"
+    - "Approved Director of Finance and Operations position with salary range of $120,000–$150,000"
+    - "Held superintendent search committee membership vote (2-2 tie, no decision)"
   votes:
-    - motion: "Co-sign Dr. McGinnis's letter condemning swastika incident"
+    - motion: "Co-sign anti-hate letter with Dr. McGinnis"
       result: "in favor (unanimous)"
     - motion: "Approve schedule of bills ($762,430.73)"
       result: "in favor (unanimous)"
-    - motion: "Approve minutes of November 16, 2023"
+    - motion: "Approve November 16, 2023 minutes"
       result: "in favor (unanimous)"
     - motion: "Approve Boosters fundraising for Piper Field turf replacement"
       result: "in favor (unanimous)"
-    - motion: "Approve DECA overnight field trip to Boston"
+    - motion: "Approve DECA overnight field trip March 7–9, 2024"
       result: "in favor (unanimous)"
-    - motion: "Approve Greece trip for April 2025"
+    - motion: "Approve Greece trip April 2025"
       result: "in favor (unanimous)"
-    - motion: "Approve director of finance and operations position with salary range $120,000–$150,000"
+    - motion: "Approve Director of Finance and Operations position, salary $120K–$150K"
       result: "in favor (unanimous)"
-    - motion: "Approve superintendent search committee membership (chair and vice chair)"
+    - motion: "Approve chair's recommendation for superintendent search committee (Fox and Schaffner)"
       result: "in favor (2 to 2)"
 
 topic_segments:
-  - topic: public-comment
-    topic_confidence: 0.95
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
     start_seconds: 0
     end_seconds: 407
-    headline: "Resident urges board to prioritize superintendent search and budget over flag debate"
-    dek: "Mary McCarrison called on the committee to engage critics, involve METCO and CPAC in the superintendent search, and focus on the budget."
-    summary: |
-      Mary McCarrison (46 Pine Cliff Drive) addressed the committee during public comment, noting that the Director of Finance position had been posted but no superintendent search posting was visible. She urged the committee to broaden its search committee to include METCO and CPAC members, involve a student from the high school, and focus on the budget crisis rather than the flag issue. She also called on the committee to hold an open forum with residents as had been previously discussed.
-      
-      Commendations were also offered: one member commended teachers for continuing to show up despite community turmoil; Chair Sarah Fox (via Zoom) commended the METCO PCO for strong parent participation at their monthly meeting, noting attendance represented nearly 20% of METCO families.
-    key_speakers: ["Mary McCarrison (resident)", "Jen Schaffner (Vice Chair)", "Sarah Fox (Chair, remote)"]
+    headline: "Meeting called to order; commendations for teachers and METCO parent participation"
+    dek: "Vice Chair Jen Schaffner chairs in place of Chair Sarah Fox (remote); members commend teachers and METCO PCO turnout."
+    summary: "Jen Schaffner called the meeting to order at 7:01 PM. Commendations were offered to district teachers for continued dedication amid district turbulence, and to METCO families for approximately 20% parent participation at the monthly PCO meeting."
+    key_speakers: ["Jen Schaffner (Vice Chair)", "Sarah Fox (Chair, remote)", "Allison Taylor (member)"]
+  - topic: public-comment
+    topic_confidence: 0.99
+    start_seconds: 178
+    end_seconds: 407
+    headline: "Resident urges committee to prioritize superintendent search and budget over flag debate"
+    dek: "Mary McCarrison of 46 Pine Cliff Drive called on the committee to post the superintendent position, engage critics, and focus on the budget."
+    summary: "Mary McCarrison addressed the committee in person, noting that the Director of Finance position had been posted but no superintendent search posting was visible. She urged the committee to include METCO and CPAC representatives on any search committee, to engage more broadly with community critics, and to prioritize the budget given the upcoming end of the current superintendent's tenure."
+    key_speakers: ["Mary McCarrison (resident, 46 Pine Cliff Drive)"]
   - topic: admin-housekeeping
     topic_confidence: 0.85
     start_seconds: 407
     end_seconds: 547
-    headline: "Student rep reports on midterms, senior projects, and winter sports senior nights"
-    dek: "Student representative Kat Piper provided a mid-year update on high school activities, athletics, and upcoming events."
-    summary: |
-      Student representative Kat Piper reported that the second half of the school year began with midterms. Highlights included:
-      - Sophomore presentations on Essex Tech's after-dark program
-      - Senior project applications open; approved seniors begin projects at end of Q3
-      - High school acapella groups competed in Plymouth's E Voices Showcase
-      - Peer Mentor Program accepting applications from sophomores and juniors
-      - Student job board resource launched
-      - Freshman class partnering with Stowaway Suites for a Valentine's Day fundraiser
-      - Junior auction underway
-      - Senior show held the prior Sunday
-      - Winter sports senior nights underway, with championship season beginning
+    headline: "Student representative Kat Piper delivers high school activity update"
+    dek: "Piper reported on midterms, DECA, acapella, senior projects, and upcoming winter sports senior nights."
+    summary: "Student representative Kat Piper reported that second-semester midterms concluded the prior week, the senior project application window is open, acapella groups competed in Plymouth, and the Peer Mentor Program is accepting applications from current sophomores and juniors."
     key_speakers: ["Kat Piper (student representative)"]
   - topic: public-safety
-    topic_confidence: 0.9
+    topic_confidence: 0.85
     start_seconds: 547
     end_seconds: 1154
-    headline: "Committee unanimously votes to co-sign superintendent's letter condemning swastika found at Vets school"
-    dek: "A swastika drawing found in the Marblehead Veterans Middle School library prompted a public condemnation and a school committee co-signature vote."
+    headline: "Committee votes unanimously to co-sign anti-hate letter after swastika found at Veterans Middle School"
+    dek: "Superintendent McGinnis read letters from herself and Principal Fox condemning antisemitic graffiti discovered in the school library; the committee voted 4-0 to co-sign."
     summary: |
-      Superintendent Dr. McGinnis reported that a swastika was drawn on a wall in the library at Marblehead Veterans Middle School and was immediately removed. Police were notified and an investigation was opened. Dr. McGinnis read both her own district-wide letter and a letter from Principal Fox condemning the incident and outlining existing Holocaust education efforts at the school, including reading *Night* by Elie Wiesel, hosting Holocaust survivor guest speakers, and plans for staff professional development through an ADL conference.
+      Superintendent McGinnis reported that a swastika drawing was found on a library wall at Marblehead Veterans Middle School, was immediately removed, and that police were notified. She read both her own district-wide letter and Principal Matthew Fox's letter to the school community condemning the act, describing existing Holocaust education programming, and asking families to speak with their children.
       
-      All school committee members present expressed condemnation. Chair Sarah Fox (remote) moved that the committee co-sign Dr. McGinnis's letter, which passed 4-0 on a roll call vote.
-      
-      District updates also included:
-      - District offices returned to Widger
-      - New assistant principal Frank Kowalski starting at Marblehead High School on Monday, with over 20 years administrative experience including time at Swampscott High School
-      - Interviews for interim director of student services underway; interim appointment to run through June 30
-    key_speakers: ["Dr. McGinnis (Superintendent)", "Sarah Fox (Chair, remote)", "Jen Schaffner (Vice Chair)", "Brian Oda (committee member)"]
+      The committee discussed the incident and Sarah Fox moved that the committee co-sign the superintendent's letter. The motion passed 4-0.
+    key_speakers: ["Dr. McGinnis (Superintendent)", "Sarah Fox (Chair, remote)", "Jen Schaffner (Vice Chair)", "Brian Oda (member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1203
+    end_seconds: 1431
+    headline: "Draft FY25 school calendar presented; Good Friday half-day and unified last day require union vote"
+    dek: "Assistant Superintendent Herrera presented a second draft calendar proposing an early release on Good Friday and a common last day for students and staff, both subject to MEA ratification."
+    summary: "Assistant Superintendent Julia Herrera presented the second draft of the 2024–25 school calendar. Two items require MEA ratification under Article 7, Section B of the teacher contract: an early release on Good Friday (April 18, 2025), and moving the staff's final day to align with the students' last day (June 20), with an early release for students. The calendar is expected to return for a committee approval vote at the next meeting pending the union vote."
+    key_speakers: ["Julia Herrera (Assistant Superintendent)"]
   - topic: school-budget
     topic_confidence: 0.99
-    start_seconds: 1203
+    start_seconds: 1431
     end_seconds: 1947
     featured: true
-    headline: "District projects $2.3M in required FY25 cuts; finance forum scheduled for February 27"
-    dek: "Assistant Superintendent Cresta outlined three budget scenarios, with the reduced-services budget requiring $2.3 million in cuts affecting staffing."
+    headline: "District faces $2.3M in required cuts to reach $45.5M reduced-services FY25 budget"
+    dek: "Director of Finance Cresta detailed a level-services budget of $47.9M versus a funding-constrained target of $45.5M, with budget workshops and a public finance forum planned."
     summary: |
-      Assistant Superintendent Michelle Cresta presented a budget status update covering three budget scenarios for FY25:
+      Director of Finance Michelle Cresta presented a three-budget framework for FY25:
       
-      | Budget Scenario | Amount |
+      | Budget Type | Amount |
       |---|---|
-      | Level services (no new programs) | $47,935,000 |
-      | Current funding + projected revenue increase | ~$45,537,000 |
-      | Required cuts to reach reduced-services budget | ~$2.3 million |
+      | Level Services | ~$47,935,000 |
+      | Reduced Services (target) | ~$45,537,000 |
+      | Required Cuts | ~$2,300,000 |
       
-      **Key drivers of the $3.1M level-services increase over current funding:**
-      - Wages (steps + COLA): ~$1 million
-      - Tuitions (special ed placements): +$536,000 (using OSD FY25 projected rate of ~4.69%)
-      - Transportation: +$424,000
-      - Utilities: +$487,000 (schools are the town's single largest utility consumer)
-      - IT hardware replacement cycle (COVID-era devices): +$420,000
-      - Other (legal, copier, service contracts): +$191,000
+      The level-services budget increase of approximately $3.1M over current funding is driven by:
+      - Wages (steps + COLA): ~$1,000,000
+      - Tuition increases (OSD rate 4.69% for FY25): ~$536,000
+      - Transportation: ~$424,000
+      - Utilities: ~$487,000
+      - IT hardware replacement cycle: ~$420,000
+      - Other (legal, copiers, contracts): ~$191,000
       
-      The town's projected new revenue for FY26 is approximately $1.2–$1.5 million town-wide, with roughly $700,000 allocated to schools—bringing the reduced-services budget target to approximately $45,537,000 and requiring cuts of $2.3 million.
+      New town revenue for FY26 is estimated at $1.2–$1.5M total, with roughly half (~$700,000) allocated to schools, bringing the reduced-services budget to approximately $45,537,000. The district cut 33 positions totaling $1.5M last year; the current target of $2.3M is described as significantly larger. Staff represents 84% of the budget.
       
-      > "Last year we eliminated 33 staffing positions for a reduction of 1.5 million. We're looking at 2.3 million this year. So it is certainly significant."
-      
-      Staff represent 84% of the school budget. The leadership team will meet February 5, 8, and 13 to develop a recommended cut list. School committee budget workshops are scheduled for February 15 and February 26.
-      
-      A public finance forum was announced for February 27, to be co-led by Cresta and Town Finance Director Alicia Benjamin, covering how the budget and revenue are calculated, and implications of the assessment system for town and school funding.
-      
-      The school calendar draft for 2024-25 was presented by Assistant Superintendent Julia Herrera. Notable items include a proposed half-day on Good Friday (April 18) that would extend April vacation by a half day, and moving the staff last day to align with the student last day (June 20), both requiring MEA ratification votes before the next school committee meeting.
-    key_speakers: ["Michelle Cresta (Assistant Superintendent of Finance and Operations)", "Dr. McGinnis (Superintendent)", "Julia Herrera (Assistant Superintendent)", "Sarah Fox (Chair, remote)", "Brian Oda (committee member)"]
+      Next steps include leadership team budget collaboration February 5, 8, and 13; school committee budget workshops February 15 and 26; and a public finance forum tentatively set for February 27 co-hosted by Director of Finance Cresta and Town Finance Director Alicia Benjamin.
+    key_speakers: ["Michelle Cresta (Director of Finance/Assistant Superintendent)", "Dr. McGinnis (Superintendent)", "Sarah Fox (Chair, remote)", "Brian Oda (member)"]
   - topic: admin-housekeeping
     topic_confidence: 0.9
-    start_seconds: 1947
+    start_seconds: 2362
     end_seconds: 2487
-    headline: "Committee approves schedule of bills ($762,430) and November 2023 minutes"
-    dek: "Routine consent agenda items were approved unanimously on roll call votes."
-    summary: |
-      The committee approved two consent agenda items:
-      1. **Schedule of bills**: $762,430.73 — approved 4-0
-      2. **Minutes of November 16, 2023**: approved 4-0, with minor spelling corrections to be made by Allison Taylor and reviewed by Sarah Fox before filing
+    headline: "Committee approves schedule of bills ($762,430.73) and November 2023 minutes"
+    dek: "Both consent agenda items passed 4-0 with minor spelling corrections noted for the minutes."
+    summary: "The committee voted 4-0 to approve the schedule of bills totaling $762,430.73, and voted 4-0 to approve the minutes of the November 16, 2023 meeting with minor non-substantive corrections to be made offline."
     key_speakers: ["Jen Schaffner (Vice Chair)"]
   - topic: recreation-events
-    topic_confidence: 0.92
+    topic_confidence: 0.9
     start_seconds: 2487
     end_seconds: 3238
-    headline: "Boosters present Piper Field turf replacement plan; $792K raised toward ~$954K goal"
-    dek: "Athletic Director Greg Ky and civil engineer Meg Budzinski presented plans for replacing the 10-year-old synthetic turf at Piper Field; committee approved the fundraising effort 4-0."
+    headline: "Boosters have raised $792,193 of ~$954,000 needed to replace Piper Field turf; committee approves fundraising"
+    dek: "Athletic Director Greg Ky and Muffy Puckett presented the turf replacement project scope and cost; the committee voted 4-0 to approve the fundraising effort."
     summary: |
-      Athletic Director Greg Ky, Muffy Puckett (Marblehead Boosters), and civil engineer Meg Budzinski (Activ) presented a plan for replacing the synthetic turf surface at Piper Field at Marblehead High School.
+      Athletic Director Greg Ky and Muffy Puckett (Boosters), along with civil engineer Meg Budzinski (Activ), presented the Piper Field synthetic turf replacement project. Key details:
       
-      **Current conditions:** The field is approximately 10–11 years old, beyond its 8-year warranty, and used year-round by MHS athletics, youth soccer, lacrosse, flag football, adult men's soccer, and Parks and Rec programs.
+      - Estimated total project cost: approximately $954,000
+      - Funds raised to date: $792,193 from approximately 135 donors and three events
+      - Remaining gap: approximately $161,807
+      - A $200,000 placeholder will be sought at town meeting via the capital plan
+      - Timeline: bid out late February, bids returned mid-March, construction award spring, mobilization post-school-year, completion by approximately August 20 preseason
       
-      **Proposed improvements:**
-      - New monofilament carpet with resilient underlayment pad (improving concussion safety and consistent playability)
-      - Retain existing sub-base and drainage (in good condition)
-      - Add end zone graphics and branding
-      - Gate and fencing upgrades; netting replacement including new netting on wooded end
-      - Reuse a significant portion of existing rubber infill
-      - Old carpet to be repurposed, not landfilled
+      The new system will include a resilient underlayment pad below the carpet for improved and sustained impact attenuation. Existing rubber infill will be partially reused; removed carpet will be repurposed rather than landfilled. The committee raised questions about ARPA funding (previously declined) and sustainability concerns; the engineer addressed EPA studies on crumb rubber safety.
       
-      **Budget estimate:**
-      
-      | Item | Notes |
-      |---|---|
-      | Total estimated cost | ~$954,000 |
-      | Raised to date (135+ donors, 3 events) | ~$792,193 |
-      | Remaining gap | ~$161,807 |
-      
-      Boosters plan to request a $200,000 placeholder at Town Meeting. The committee discussed pursuing ARPA funds; Puckett noted a prior request was declined without explanation. Sarah Fox indicated she would make additional inquiries.
-      
-      Environmental and safety questions were addressed: the EPA completed a Phase 1 study finding no cause for concern with crumb rubber infill; PFAS are not used in carpet manufacturing; heat is less of a concern in New England than in southern climates.
-      
-      **Schedule:** Bid documents ready end of February; bids due mid-to-late March; contract award spring; field ready for preseason by approximately August 20, 2024.
-      
-      The committee voted 4-0 to approve the Boosters' fundraising effort.
-    key_speakers: ["Greg Ky (Athletic Director)", "Muffy Puckett (Marblehead Boosters)", "Meg Budzinski (Activ, civil engineer)", "Sarah Fox (Chair, remote)", "Jen Schaffner (Vice Chair)"]
+      The committee voted 4-0 to approve the Boosters to fundraise for the project.
+    key_speakers: ["Greg Ky (Athletic Director)", "Muffy Puckett (Marblehead Boosters)", "Meg Budzinski (Activ, civil engineer)", "Sarah Fox (Chair, remote)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.88
+    topic_confidence: 0.85
     start_seconds: 3238
-    end_seconds: 4152
-    headline: "DECA club overnight Boston trip (March 7–9) approved 4-0 for 30 competing students"
-    dek: "Advisor Janice Callahan presented the annual DECA state competition trip; committee discussed bed-sharing arrangements and parent notification."
+    end_seconds: 3903
+    headline: "Committee approves DECA overnight trip to Boston (March 7–9) and Greece trip (April 2025) 4-0"
+    dek: "Both high school overnight field trips were approved after discussion of sleeping arrangements, insurance coverage, and financial accessibility."
     summary: |
-      DECA advisor Janice Callahan (via Zoom) and Principal/Dr. Carlson presented a request to approve an overnight trip to Boston for the DECA state competition.
+      **DECA Trip (Boston, March 7–9, 2024):** 30 students will compete at the state DECA career and business conference at the Boston Marriott. The per-student cost after fundraising was approximately $396. Sleeping arrangements involve student-selected roommates in triples and quads with gender-separated rooms. The committee discussed bed-sharing practices and confirmed parents receive and sign detailed information packets. Vote: 4-0 approved.
       
-      **Details:**
-      - Dates: March 7–9, 2024 (depart after school March 7, return noon March 9)
-      - Location: Marriott Copley, Boston
-      - Students: 30 competing (34 qualified; 4 unable to attend)
-      - Grades: 10–12
-      - DECA is an international business organization; events cover entrepreneurship, marketing, finance, hospitality and tourism
-      - Winners advance to nationals in Anaheim, CA
-      - Chaperone ratio: 1 per 10 students
-      - Cost per student: approximately $396 after fundraising deductions
-      - Hotel: rooms of 3–4 students; quads (2 queen beds), triples (king + rollaway or pullout)
-      - Gender-separated rooms; students self-select roommates
-      - Parents complete full permission/health packets
-      
-      Committee members raised questions about bed-sharing arrangements; Callahan confirmed students share beds with close friends by mutual selection, with gender separation strictly maintained. One committee member noted this is standard practice and has been done since 2017 without incident, while others expressed the policy warrants continued attention.
-      
-      Vote: 4-0 approved.
-    key_speakers: ["Janice Callahan (DECA advisor, remote)", "Dr. Carlson (school administrator)", "Allison Taylor (committee member)", "Jen Schaffner (Vice Chair)"]
-  - topic: admin-housekeeping
-    topic_confidence: 0.87
-    start_seconds: 4152
-    end_seconds: 5756
-    headline: "MHS Greece trip for April 2025 approved 4-0; committee requests evacuation insurance documentation"
-    dek: "English teachers Rebecca Blumberg and Jen Billings proposed an overnight trip to Greece tied to study of ancient Greek literature, with $4,129 estimated cost per student."
-    summary: |
-      English teachers Rebecca Blumberg and Jen Billings proposed a Marblehead High School trip to Greece during April vacation 2025, described as the first such trip in school history.
-      
-      **Details:**
-      - Dates: April vacation 2025 (aligned to Boston Marathon week)
-      - Destination: Athens, Delphi, Corinth, island tour
-      - Eligible students: Rising grades 10, 11, 12 (approximately 30–36 students)
-      - Academic pairing: Students will read and discuss an ancient Greek tragedy (Antigone, Oedipus Rex, or The Odyssey) in a book-club format using magic block periods
-      - Tour operator: EF Tours
-      - Estimated cost: ~$4,129 per student
-        - Global travel protection insurance included in base cost (~$190)
-        - Optional upgrade to higher-tier insurance (+$400)
-        - $200 discount for first 48 hours of registration
-        - EF offers merit/financial aid scholarships; school also has some scholarship funds available
-      - Rooms: triples and quads; students self-select roommates; option to pay ~$70/night extra for a guaranteed double room with two individual beds
-      - Behavior contract in place (no alcohol, no drugs, no vaping, no tattoos/piercings, appropriate conduct)
-      
-      **Committee concerns raised:**
-      - Price point ($4,129) and accessibility for lower-income families — district should communicate financial aid options proactively
-      - Medical evacuation insurance coverage: both EF travel protection tiers include emergency evacuation coverage, but dollar amounts were not confirmed; committee member requested written documentation of coverage amounts prior to trip proceeding
-      - A past international trip tragedy was referenced as context for the insurance scrutiny
-      
-      Vote: 4-0 approved.
-    key_speakers: ["Rebecca Blumberg (MHS English teacher)", "Jen Billings (MHS English teacher)", "Sarah Fox (Chair, remote)", "Allison Taylor (committee member)", "Jen Schaffner (Vice Chair)"]
+      **Greece Trip (April 2025):** English teachers Rebecca Blumberg and Jen Billings proposed a trip for approximately 30–36 students in grades 10–12 to Greece over April vacation, paired with study of an ancient Greek tragedy. Cost per student: approximately $4,129. EF Tours will provide individual fundraising pages, monthly payment plans, and financial aid scholarships. The committee discussed the price point's potential exclusionary effect and received assurances that school scholarship funds are available. Members also requested documentation confirming medical evacuation insurance coverage, which the EF global travel protection plan was confirmed to include at both coverage levels. A behavior contract prohibiting alcohol, drugs, and other conduct violations was confirmed. Vote: 4-0 approved.
+    key_speakers: ["Janice Gallahan (DECA advisor, remote)", "Dr. Carlson", "Rebecca Blumberg (English teacher)", "Jen Billings (English teacher)", "Allison Taylor (member)", "Sarah Fox (Chair, remote)"]
   - topic: labor-personnel
     topic_confidence: 0.95
-    start_seconds: 5756
-    end_seconds: 6536
-    headline: "Committee approves reclassifying finance role from assistant superintendent to director, with $120K–$150K salary range"
-    dek: "Departing Assistant Superintendent Cresta explained the rationale for downgrading the role; committee approved position and salary range 4-0."
-    summary: |
-      Departing Assistant Superintendent Michelle Cresta recommended that her position be reclassified from Assistant Superintendent of Finance and Operations to Director of Finance and Operations upon her departure.
-      
-      **Rationale:**
-      - The assistant superintendent title was tailored to Cresta's specific licensure and expanded role; it was not originally planned as a permanent dual-assistant-superintendent structure
-      - The district already has an assistant superintendent of teaching and learning
-      - The director title may attract a broader candidate pool and reduce salary costs
-      - Core responsibilities (overseeing school lunch, facilities, transportation) remain the same
-      - HR manager and IT director to report directly to the superintendent going forward
-      - Superintendent McGinnis noted a separate future proposal to elevate the HR manager title to director of HR
-      
-      **Approved salary range:** $120,000–$150,000
-      
-      The search committee will be chaired by Assistant Superintendent Julia Herrera; interviews are tentatively scheduled for February 13 from 3–7 PM. Committee member Jen Schaffner volunteered to serve as the school committee representative on the interview panel.
-      
-      Vote on position and salary range: 4-0.
-    key_speakers: ["Michelle Cresta (Assistant Superintendent of Finance and Operations)", "Dr. McGinnis (Superintendent)", "Sarah Fox (Chair, remote)", "Brian Oda (committee member)", "Jen Schaffner (Vice Chair)"]
+    start_seconds: 6036
+    end_seconds: 6379
+    headline: "Committee approves Director of Finance and Operations position with $120K–$150K salary range"
+    dek: "The role is downgraded from Assistant Superintendent to Director, expected to broaden the candidate pool and reduce salary costs."
+    summary: "Superintendent McGinnis recommended converting the departing Assistant Superintendent for Finance and Operations role to a Director of Finance and Operations. Michelle Cresta explained that her prior promotion to Assistant Superintendent was tailored to her licensure and career trajectory, but a second assistant superintendent was never a long-term district plan. The director role will retain oversight of school lunch, facilities, and transportation; HR and IT will report directly to the superintendent. The committee approved the position and a salary range of $120,000–$150,000 by a 4-0 vote. Interviews are tentatively scheduled for February 13 from 3–7 PM, with Jen Schaffner volunteering as the school committee representative on the interview panel."
+    key_speakers: ["Dr. McGinnis (Superintendent)", "Michelle Cresta (outgoing Assistant Superintendent for Finance and Operations)", "Sarah Fox (Chair, remote)", "Brian Oda (member)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.82
-    start_seconds: 6536
+    topic_confidence: 0.9
+    start_seconds: 6583
+    end_seconds: 6719
+    headline: "School committee vacancy: applications due Monday; interviews set for February 7 at 6 PM"
+    dek: "Three applications received so far; joint select board/school committee interviews will be held at Abbott Hall on February 7."
+    summary: "Chair Fox reported that the Select Board approved the vacancy process the prior week. Applications are due by 3:00 PM on Monday (February 5). Three submissions have been received. A joint interview session with the Select Board is scheduled for Wednesday, February 7 at 6:00 PM at Abbott Hall."
+    key_speakers: ["Sarah Fox (Chair, remote)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 6719
+    end_seconds: 6945
+    headline: "Superintendent search committee vote deadlocks 2-2; decision deferred to fifth member"
+    dek: "Chair Fox recommended herself and Vice Chair Schaffner as school committee representatives on the superintendent screening committee, but the motion failed to achieve a majority."
+    summary: "Chair Fox recommended that she and Vice Chair Jen Schaffner serve as the school committee's representatives on the superintendent search screening committee, per committee policy requiring the chair to recommend and the full committee to approve. The motion passed on a 2-2 vote (Fox and Schaffner in favor; Taylor and Oda not in favor), which was insufficient for approval. The decision was deferred until the fifth committee seat is filled. Fox also noted she is pursuing a recruiting consultant to assist with candidate sourcing."
+    key_speakers: ["Sarah Fox (Chair, remote)", "Jen Schaffner (Vice Chair)", "Allison Taylor (member)", "Brian Oda (member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 6945
     end_seconds: 7642
-    headline: "Superintendent search committee vote ends 2-2; tabled pending fifth board member appointment"
-    dek: "A motion to place Chair Fox and Vice Chair Schaffner on the superintendent screening committee failed to achieve a majority, deadlocked at 2-2."
+    headline: "Subcommittee updates: METCO PCO engagement, flag/banner policy debrief scheduled, special ed report pending"
+    dek: "Members reported on the METCO PCO meeting, the flag and banner policy listening sessions, and the status of the independent special education investigation."
     summary: |
-      The committee discussed the superintendent search process. Chair Sarah Fox had recommended that she and Vice Chair Jen Schaffner serve as the two school committee representatives on the superintendent screening committee, per board policy requiring chair recommendation and full committee approval.
+      **METCO PCO:** Fox and Schaffner attended the monthly METCO PCO meeting. Fox apologized for a gap in committee liaison attendance at prior meetings. Parents discussed the flag policy (clarifying no ban is intended), gave positive feedback on school staff, and demonstrated civil dialogue across differing views on school flags.
       
-      A motion to approve this recommendation was made and seconded. On roll call:
-      - Sarah Fox: in favor
-      - Allison Taylor: not in favor
-      - Brian Oda: not in favor
-      - Jen Schaffner: in favor
+      **Flag/Banner Policy:** Schaffner reported that she and another member conducted listening sessions with MHS students. A debrief with administration is scheduled for the following day. A draft policy framework will be brought to a future committee meeting.
       
-      The motion failed 2-2. The committee agreed to revisit the matter once a fifth member is seated following the ongoing vacancy appointment process (applications due Monday by 3 PM; interviews at Abbott Hall on Wednesday, February 7 at 6 PM).
+      **Special Education Investigation:** Fox reported that the independent investigator (Attorney Bennett) expects to complete the final report before February break.
       
-      Separately, Fox noted she had been in contact with an executive recruiting consultant who has done superintendent search work. She indicated she would request a proposal for the committee to consider, to supplement standard postings.
+      **Finance Director Interview Panel:** Jen Schaffner volunteered as the school committee representative for the February 13 interview panel (3–7 PM).
       
-      **Subcommittee and liaison updates:**
-      - Brian Oda reported the superintendent safety committee is focused and functioning well; details remain confidential per safety protocols
-      - Sarah Fox reported attending the METCO PCO monthly meeting (her first), praising strong parent participation (~20% of METCO families). She noted school committee liaisons had not been regularly attending these meetings and apologized on behalf of the committee. Parents raised the flag policy discussion; the meeting was noted for civil, respectful disagreement between community members
-      - Policy subcommittee: Jen Schaffner reported a debrief meeting scheduled for the following day regarding student listening sessions on the flag/banner policy. She reiterated the goal is a mechanism to approve flags and symbols fairly, not to ban any specific flag
-      - Special education independent investigation: attorney's final report expected before February break
-      - Special ed survey (RFP): draft to be shared with committee within the week before distribution
-    key_speakers: ["Sarah Fox (Chair, remote)", "Jen Schaffner (Vice Chair)", "Allison Taylor (committee member)", "Brian Oda (committee member)"]
+      The meeting was adjourned at 9:08 PM.
+    key_speakers: ["Sarah Fox (Chair, remote)", "Jen Schaffner (Vice Chair)", "Brian Oda (member)", "Michelle Cresta (Director of Finance)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

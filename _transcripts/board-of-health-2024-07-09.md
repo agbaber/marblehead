@@ -11,135 +11,174 @@ ai_generated: true
 status: published
 source: vimeo-auto+llm
 
+
 summary_card:
-  headline: "Marblehead Board of Health reorganizes, elects Helene chair 2-1 amid board dispute"
-  summary: "The Marblehead Board of Health held its annual reorganization meeting, electing Helene as chair by a 2-1 vote after a contentious exchange in which member Tom McMahon read a prepared statement opposing her reappointment. The board also unanimously appointed two new vice-chair positions: Dr. Tom Zaro as Vice Chair of Community Health and Tom McMahon as Vice Chair of Environmental Protection. The meeting also featured a presentation by YWCA North Shore Rape Crisis Center on sexual assault services and prevention programs in Marblehead schools."
+  headline: "Marblehead Board of Health reorganizes, elects Helene chair 2-1 amid internal dispute"
+  summary: "The Board of Health held its annual reorganization meeting, electing the incumbent member as chair by a 2-1 vote after one member read a prepared statement opposing her reappointment. Two vice chair positions were created: one for Community Health and one for Environmental Protection. The board also received a presentation from YWCA North Shore Rape Crisis Center and heard updates on the transfer station construction project and the town's waste budget outlook."
   decisions:
-    - "Approved Helene as Board of Health Chair for the coming year (2-1)"
+    - "Approved Helene as Board of Health chair (2-1)"
     - "Approved Dr. Tom Zaro as Vice Chair of Community Health (unanimous)"
     - "Approved Tom McMahon as Vice Chair of Environmental Protection (unanimous)"
-    - "Approved motion for director to investigate January wellness fair venue availability (unanimous)"
+    - "Approved motion for director to investigate January wellness fair venue availability"
   votes:
-    - motion: "Elect Helene as Board of Health Chair"
+    - motion: "Elect Helene as Board of Health chair"
       result: "in favor (2 to 1)"
-    - motion: "Appoint Dr. Tom Zaro as Vice Chair of Community Health"
+    - motion: "Appoint Dr. Zaro as Vice Chair of Community Health"
       result: "in favor (unanimous)"
-    - motion: "Appoint Tom McMahon as Vice Chair of Environmental Protection"
+    - motion: "Appoint McMahon as Vice Chair of Environmental Protection"
       result: "in favor (unanimous)"
-    - motion: "Direct director to explore January wellness fair availability"
+    - motion: "Allow YWCA to present before reorganization vote"
+      result: "in favor (unanimous)"
+    - motion: "Director to explore January wellness fair availability"
       result: "in favor (unanimous)"
 
 topic_segments:
   - topic: public-comment
     topic_confidence: 0.85
-    start_seconds: 49
+    start_seconds: 3
     end_seconds: 1849
-    headline: "YWCA North Shore Rape Crisis Center presents services and school prevention programs"
-    dek: "Representatives from the YWCA North Shore Rape Crisis Center in Lynn described free, confidential sexual assault services and ongoing prevention presentations at Marblehead High School."
+    headline: "YWCA North Shore Rape Crisis Center presents services to Board of Health"
+    dek: "Representatives from the YWCA's Lynn-based North Shore Rape Crisis Center described free, confidential services for sexual assault survivors across 29 cities and towns, including school-based prevention programming at Marblehead High School."
     summary: |
-      Ella Serta, Director of Community Based Services, and Hannah Gagne, site director at the Lynn location (North Shore Rape Crisis Center), presented to the board. Their organization covers 29 cities and towns on the North Shore including Marblehead.
+      Director of Community Based Services Ella Serta and site director Hannah Gagne presented on the YWCA North Shore Rape Crisis Center's services. The organization provides:
       
-      **Services offered:**
-      - Free and confidential individual counseling for survivors ages 12 and up, including non-offending family members
-      - 24/7 hotline crisis support
-      - Hospital accompaniment at SANE-certified facilities (Salem Hospital, Beverly Hospital, Addison Gilbert, and Anna Jacques)
+      - Free, confidential individual counseling for survivors age 12 and up and non-offending family members
+      - 24/7/365 crisis hotline
+      - In-person hospital accompaniment for evidence collection (rape kits) at SANE-certified hospitals including Salem, Beverly, Addison Gilbert, and Anna Jacques
       - Court and police accompaniment
-      - Services for all genders and LGBTQ+ community members
+      - Prevention presentations in schools, including quarterly sessions at Marblehead High School with health teacher Carlos Selo, expanded this year from seniors to include freshmen
       
-      **Prevention work in Marblehead:**
-      - Hannah Gagne has presented in health teacher Carlos Selo's classes at Marblehead High School every quarter
-      - Presentations cover consent, healthy vs. unhealthy relationships, boundary-setting, bystander intervention, and sexual violence
-      - Program recently expanded from seniors to include freshmen
+      Topics covered in school presentations include consent, healthy vs. unhealthy relationships, bystander intervention, and sexual violence resources. The organization also works with inmates at Middleton and Essex Correctional Facility under PREA.
       
-      **Funding:** Primarily from the Massachusetts Department of Public Health; all services are free to clients.
-      
-      The board discussed adding YWCA information to the town's website and noted the organization is not yet listed there. A board member shared a personal account of a thwarted assault in Marblehead, underscoring that such incidents occur in the community.
+      Funding comes primarily from the Massachusetts Department of Public Health. The board discussed adding YWCA information to the town's redesigned website and noted the organization is not currently listed there.
     key_speakers: ["Ella Serta (YWCA Director of Community Based Services)", "Hannah Gagne (YWCA North Shore Rape Crisis Center site director)", "Andrew Petty (Director of Public Health)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.95
+    topic_confidence: 0.92
     start_seconds: 1852
     end_seconds: 3179
     featured: true
-    headline: "Board elects Helene chair 2-1 after McMahon reads prepared statement opposing her"
-    dek: "Member Tom McMahon read a detailed statement citing specific instances of what he called obstruction by Helene during the prior year, then the board voted 2-1 to re-elect her chair; two new vice-chair positions were created and filled unanimously."
+    headline: "Board elects Helene chair 2-1; new vice chair structure created amid internal dispute"
+    dek: "One board member read a prepared statement opposing the incumbent's reappointment as chair before the vote carried 2-1; two new vice chair roles were then established unanimously."
     summary: |
-      Director Andrew Petty chaired the reorganization portion. A motion was made to nominate Helene as chair for the coming year.
+      Director Andrew Petty chaired the reorganization portion. A motion to nominate Helene (last name not captured) as chair was made by the newly sworn-in member Dr. Tom Zaro, who cited her institutional knowledge of the town and board.
       
-      Before the vote, Tom McMahon read a prepared statement cataloguing grievances from the prior year, including disputes over: a new trailer for transfer station workers, website restructuring, bill transparency, a proposed debt-exclusion request on behalf of Marblehead Counseling Center, and the substance abuse speaker series. McMahon stated his preference was for Dr. Tom Zaro to serve as chair, and that neither he nor Zaro sought the title.
+      Before the vote, member Tom McMahon read a prepared statement cataloguing what he described as obstruction during the prior year, citing specific incidents including a disagreement over a worker trailer at the transfer station, website restructuring, budget transparency, and a proposal to seek additional funding for the Marblehead Counseling Center. He nominated Tom Zaro for chair instead.
       
-      Dr. Zaro responded, noting his newness to the community and Massachusetts public health governance as reasons he was not ready to chair, and endorsed Helene, calling for the board to move forward.
+      Dr. Zaro declined the chair nomination, stating he was not yet sufficiently familiar with the town's local governance structures. The vote for Helene as chair passed 2-1.
       
-      The vote to elect Helene as chair passed 2-1.
+      Following election of the chair, two new vice chair positions were created:
+      - **Vice Chair of Community Health**: Dr. Tom Zaro (unanimous)
+      - **Vice Chair of Environmental Protection**: Tom McMahon (unanimous)
       
-      **New vice-chair structure (both unanimous):**
-      | Position | Appointee |
-      |---|---|
-      | Vice Chair, Community Health | Dr. Tom Zaro |
-      | Vice Chair, Environmental Protection | Tom McMahon |
-      
-      Helene, in her remarks as new chair, declined to revisit specific past incidents, welcomed Dr. Zaro, and proposed addressing the two members as "Dr. Zaro" and "Mr. McMahon" to avoid confusion given both share the first name Tom. She also stated that board business should be conducted at the table rather than through press or social media.
-    key_speakers: ["Helene (Board of Health Chair)", "Tom McMahon (Board member)", "Dr. Tom Zaro (Board member)", "Andrew Petty (Director of Public Health)"]
+      The newly elected chair stated board business should be conducted at the meeting table and not through social media or press, and requested other members do the same. She also proposed addressing the two Toms by title and last name to avoid confusion.
+    key_speakers: ["Helene (Board Chair)", "Tom McMahon (Board Member, Vice Chair Environmental Protection)", "Dr. Tom Zaro (Board Member, Vice Chair Community Health)", "Andrew Petty (Director of Public Health)"]
   - topic: admin-housekeeping
-    topic_confidence: 0.88
+    topic_confidence: 0.8
     start_seconds: 3180
-    end_seconds: 3659
-    headline: "Board discusses meeting procedures, Robert's Rules, open meeting law, and bill-signing process"
-    dek: "Newly reorganized board addressed housekeeping matters including board meeting norms, the Open Meeting Law, bill-signing procedures, and a request for greater transparency with expenditures."
+    end_seconds: 3707
+    headline: "Board sets procedural norms; mental health task force liaison role assigned to Zaro"
+    dek: "The chair outlined meeting procedures under Robert's Rules and Open Meeting Law; Dr. Zaro will serve as liaison to the Mental Health Task Force, which resumes in August."
     summary: |
-      Chair Helene reviewed board operating procedures for the benefit of new member Dr. Zaro: meetings are held monthly on the second Tuesday, follow Robert's Rules, and must comply with the Massachusetts Open Meeting Law. Andrew Petty noted that ethics and board training courses through the Mass Board of Health Officers Association are required.
+      The chair reviewed procedural expectations: monthly meetings generally on the second Tuesday, agenda items submitted two weeks in advance, Robert's Rules of Order, and Massachusetts Open Meeting Law compliance. The director noted ethics renewal requirements from the Mass Boards of Health Association.
       
-      **Bill-signing discussion:** Dr. Zaro expressed discomfort signing DocuSign warrant approvals without sufficient context, referencing a prior $40,000 signature. Options discussed included: DocuSign with attachments, in-office review, or authorizing the chair alone to sign. The board agreed to a hybrid approach where invoices and descriptions would be accessible both digitally and in person. Tom McMahon reiterated his interest in posting expenditures publicly for community transparency.
+      On the mental health task force: the group meets under chair Mark Labone (described as a child psychologist and professor at Salem State University). Dr. Zaro will attend as board liaison. The board discussed logistics of posting board attendance at task force meetings per Open Meeting Law. The next fiscal year meeting is scheduled for August.
       
-      **Mental Health Task Force:** Helene reported she will serve as the board's liaison. The task force's first meeting of the fiscal year is scheduled for August, chaired by Mark Labone (psychologist and Salem State University professor). Rob Delaney is scheduled to speak August 10th at 6 p.m. at the PACT facility.
-    key_speakers: ["Helene (Board of Health Chair)", "Dr. Tom Zaro (Board member)", "Tom McMahon (Board member)", "Andrew Petty (Director of Public Health)"]
+      A wellness fair kickoff was noted; comedian and author Rob Delaney was mentioned as appearing August 10th at approximately 6 p.m. at a local venue to discuss personal experience with loss and addiction.
+    key_speakers: ["Helene (Board Chair)", "Andrew Petty (Director of Public Health)", "Dr. Tom Zaro (Board Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 3708
+    end_seconds: 3953
+    headline: "Board discusses mission statement revision and wellness fair planning"
+    dek: "The board agreed to postpone mission statement revision until September, after a planned department overview session; a motion passed to investigate January availability for a wellness fair."
+    summary: |
+      Dr. Zaro proposed delaying the mission statement discussion until after a full presentation by the director on the Department of Health's operations and its relationship to the Board of Health. The board agreed to schedule that for September.
+      
+      The chair noted the existing mission statement was rewritten in 2021 at the request of the former town administrator, and the distinction between the Board of Health and the Health Department was not clearly delineated at that time.
+      
+      The board voted unanimously to have the director contact the Recreation and Parks Department (Lisa Breton mentioned) to explore availability for a wellness fair in January.
+    key_speakers: ["Helene (Board Chair)", "Dr. Tom Zaro (Board Member)", "Andrew Petty (Director of Public Health)"]
+  - topic: public-safety
+    topic_confidence: 0.65
+    start_seconds: 3954
+    end_seconds: 4219
+    headline: "Substance abuse speaker event planned for early-to-mid November at high school auditorium"
+    dek: "Tom McMahon reported that speakers are available in early-to-mid November; the board discussed potentially including a theater group and using opioid settlement funds."
+    summary: |
+      McMahon reported that speakers he has been coordinating with are available in early-to-mid November. The board discussed using the Marblehead High School auditorium for an evening event, preferring it for its more intimate setting.
+      
+      A theater group called 'Drug Story Theater' was also discussed — the organization performs with former teenage addicts and has presented at Lincoln-Sudbury and is scheduled for Swampscott. They would potentially co-present with the board at no cost pending state funding approval; if not funded, cost would be approximately a few thousand dollars, potentially payable from opioid settlement funds.
+      
+      The board also noted a National Fentanyl Awareness Day in August (approximate date mentioned as August 21st) and discussed distributing outreach materials.
+    key_speakers: ["Tom McMahon (Board Member)", "Helene (Board Chair)", "Andrew Petty (Director of Public Health)"]
   - topic: trash-dpw
     topic_confidence: 0.97
-    start_seconds: 3660
-    end_seconds: 5950
-    headline: "Transfer station project targets October re-bid; value engineering underway on three small buildings"
-    dek: "Director Andrew Petty reported ongoing value engineering on the transfer station project, with a goal of returning the project to bid around October and a feasibility study for construction-demolition material handling expected in August."
+    start_seconds: 4244
+    end_seconds: 5132
+    headline: "Transfer station project pursues value engineering; October re-bid target set"
+    dek: "The director detailed value engineering efforts on three small buildings, prefabricated structure options from a Georgia vendor, and plans to re-bid the project around October with DCAM-certified contractors."
     summary: |
-      **Construction update:**
-      - A new compactor and waste oil tank have been purchased and are on site; the oil tank is in use
-      - Value engineering is underway with Winter Street Architects and Haley & Ward on three structures: the swap shop, the transaction hut (~10×10 ft, estimated at $138,000), and the control room
-      - A prefabricated building supplier in Georgia is being evaluated as a cost-saving alternative; stamped engineering plans and Mass building code compliance are being verified
-      - Project is targeted to go back out to bid around October to attract contractors finishing summer work
-      - Multiple local contractors have expressed interest; DCAM certification (60–90 day process) is a prerequisite being tracked
+      Director Petty provided an extensive transfer station construction update:
       
-      **Upcoming feasibility study:**
-      - A feasibility study for construction-demolition (C&D) material handling (asphalt, brick, concrete) is expected to come back to the board in August
-      - The board previously allocated approximately $100,000 for the study; the director expects it to come in closer to $50,000, leaving funds for license plate reader (LPR) cameras and associated software/fiber optic work
+      **Items already purchased/on site:**
+      - New compactor on site
+      - Waste oil tank on site and in use
       
-      **Budget outlook:**
-      - The town is requesting a flat budget submission by September 6th; a reduced budget scenario (1% increase in expenditures) was noted as unworkable for the waste department
-      - The curbside collection contract with Republic (10-year term) has two years remaining; significant cost increases are anticipated at renewal
-      - Fee review underway: commercial waste disposal rates, mattresses/white goods/tires, and facility/beach stickers are all under consideration
+      **Value engineering in progress:**
+      Three buildings — the swap shop, transaction hut (~10×10 ft), and control room — came in with estimates considered too high. The transaction hut alone was estimated at $138,000. The director is working with Winter Street Architect and Haley Ward engineers to explore pre-manufactured alternatives. A vendor in Georgia produces prefabricated security/transaction booths; cost is described as significantly lower. Engineer-stamped plans must be verified against Massachusetts Building Code.
       
-      **Flag disposal:** A new flag disposal container has been installed at the transfer station in the residential area for proper retirement of American flags.
-    key_speakers: ["Andrew Petty (Director of Public Health)", "Tom McMahon (Board member)", "Helene (Board of Health Chair)", "Resident at mic"]
-  - topic: public-safety
-    topic_confidence: 0.7
-    start_seconds: 5951
-    end_seconds: 6230
-    headline: "Board discusses surgeon general's warnings on social media and gun violence as public health issues"
-    dek: "Chair Helene raised Surgeon General Vivek Murphy's recent advisories declaring social media addiction and gun violence as public health concerns, suggesting the board consider community survey questions on youth mental health and social media."
-    summary: "Helene noted two recent Surgeon General advisories: one comparing social media platforms to cigarettes in terms of addictive design and mental health impacts on youth, and another formally declaring gun violence a public health crisis. She suggested adding questions to the community health survey (coordinated through the board's contact Gina) about youth social media use and mental health. Director Petty and board members agreed to discuss with police chief Dennis to assess local context. The board noted Marblehead has been among early adopters on prior public health measures (tobacco, turf, bags)."
-    key_speakers: ["Helene (Board of Health Chair)", "Andrew Petty (Director of Public Health)", "Tom McMahon (Board member)"]
+      **Procurement timeline:**
+      The project is targeted to go back out to bid around October, timed to attract general contractors finishing summer projects. Several local contractors have expressed interest; DCAM certification (60–90 day process minimum) is required and contractors are being tracked.
+      
+      **Upcoming:**
+      A feasibility study for construction/demolition (C&D) material handling is expected to come back to the board in August. Budget was set at $100,000; actual cost expected to be approximately half that. Items under evaluation include asphalt, brick, and concrete (ABC) and potential revenue streams.
+      
+      **License plate reader (LPR) system:**
+      Planned alongside C&D project; software would allow online sticker/fee payment. Fiber optic work needed from Green Street gate to residential area; to be done under existing town fiber contract.
+      
+      A community member suggested exploring the vocational school for construction of the small buildings and noted interest in the swap shop and in charging non-Marblehead residents more for disposal.
+    key_speakers: ["Andrew Petty (Director of Public Health)", "Helene (Board Chair)", "Tom McMahon (Board Member)", "Resident at mic"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 5132
+    end_seconds: 5556
+    headline: "Board discusses bill-signing process; seeks more transparency in expenditure review"
+    dek: "New member Dr. Zaro expressed discomfort signing DocuSign warrants without sufficient context; board discussed hybrid in-office and DocuSign options."
+    summary: |
+      The director explained the current process: bills are processed weekly via DocuSign, with invoice copies and budget codes attached. The board can alternatively authorize the chair alone to sign all bills.
+      
+      Dr. Zaro raised concern about signing a DocuSign for approximately $40,000 without sufficient ability to verify what was being authorized. He committed to coming into the office for a tutorial on the budget structure. McMahon suggested posting the bill spreadsheet publicly so the community can see expenditures, and noted he had previously asked for brief public discussion of bills at each meeting. The board discussed a hybrid model: DocuSign with attached invoices, with the option to review originals in-office. The director confirmed that items must be received before payment is made.
+    key_speakers: ["Andrew Petty (Director of Public Health)", "Dr. Tom Zaro (Board Member)", "Tom McMahon (Board Member)", "Helene (Board Chair)"]
+  - topic: trash-dpw
+    topic_confidence: 0.9
+    start_seconds: 5556
+    end_seconds: 5996
+    headline: "Bathing beach water quality data process explained; flat budget request flagged as unworkable for waste department"
+    dek: "The director noted waste collection contract has two years remaining and a flat-budget mandate would not be feasible; fee increases and contract data are under review for September submission."
+    summary: |
+      **Bathing beaches:** Water samples are taken Wednesdays, sent directly to a lab, and posted to the state website. The town website links to the state data. Five beaches covered: Devereux, Crocker Park, Gas House, Grace Oliver's, and Raki (spelling approximate per ASR).
+      
+      **Budget:** A flat budget submission is due September 6th. The director noted a 1% expenditure cap would not work for the waste department because costs are market- and trucking-driven. The only historical cut available in the health department budget has been the Marblehead Counseling Center line. Cutting a Saturday at the transfer station was described as not a viable cost-saving option.
+      
+      The collection contract with Republic Services has two years remaining on a 10-year deal; a significant cost increase is anticipated at renewal. The director is compiling data on comparable contracts across the state. Fee reviews will include commercial waste disposal rates, per-item fees (mattresses, tires, white goods), and facility/beach stickers.
+    key_speakers: ["Andrew Petty (Director of Public Health)", "Helene (Board Chair)", "Tom McMahon (Board Member)"]
   - topic: public-comment
-    topic_confidence: 0.92
-    start_seconds: 6231
+    topic_confidence: 0.9
+    start_seconds: 6043
     end_seconds: 7016
-    headline: "Residents comment on transfer station, opioid settlement funds, HAWK union pilot program, and board bills process"
-    dek: "Public comment included remarks on transfer station improvements, a question about opioid settlement fund status following a Supreme Court ruling, a plug for HAWK's new union liaison pilot program, and a clarification from the school committee vice chair on bill transparency practices."
+    headline: "Residents comment on social media health risks, opioid funds, HAWK union partnership, and transfer station"
+    dek: "Public comments addressed the surgeon general's social media and gun violence declarations, opioid settlement fund community input requirements, a HAWK-union liaison pilot program, and transfer station non-resident fees."
     summary: |
-      **Resident (in person):** Praised the new flag disposal bin; suggested exploring Essex County vocational school for prefabricated building construction; urged the board to charge non-Marblehead residents higher rates at the transfer station; advocated for preserving the swap shop in the project.
+      **Social media and gun violence (board member, not public):** The chair noted U.S. Surgeon General Vivek Murphy's statements comparing social media addiction to cigarettes and declaring gun violence a public health crisis. She suggested Andrew work with the school health coordinator to add related questions to student surveys.
       
-      **Resident (in person):** Asked about the status of opioid settlement funds following the Supreme Court's ruling vacating the Purdue Pharma/Sackler family settlement. Petty confirmed Marblehead has received approximately $110,000 to date, with several thousand spent on Narcan boxes. He agreed to check with town counsel and the accounting office regarding any spending freeze or repayment risk. The resident also urged the board to conduct a community survey on opioid fund priorities, noting that Lynn undertook such a process.
+      **Opioid settlement funds (resident):** A resident asked about the Supreme Court's reversal of the Purdue Pharma/Sackler settlement and whether the approximately $110,000 received by the town (with several thousand already spent on Narcan boxes) would need to be returned. The director said he would check with town counsel. The resident also noted that community input is required before spending opioid funds; the director referenced a committee established by the select board and mentioned a survey used by Swampscott as a potential model.
       
-      **Terry Toro (113 Jersey Street, president, Marblehead Municipal Employees Union):** Described a pilot program training union members as HAWK (domestic violence) liaisons; approximately 50 people trained across two sessions, resulting in at least 10 union members being connected to HAWK services. Program is being expanded to the state AFL-CIO level and potentially nationally.
+      **HAWK partnership (Terry Toro, 113 Jersey St.):** President of the Marblehead Municipal Employees Union described a pilot program training union members as HAWK domestic violence liaisons. Approximately 50 people trained across two sessions; at least 10 union members in domestic violence situations have been connected to HAWK services. Program is being expanded statewide through the AFL-CIO.
       
-      **Allison Taylor (285 West Shore Drive, School Committee Vice Chair, remote):** Clarified that the school committee publishes its schedule of bills online, discusses them in public meetings before the chair signs, and board members have full access — correcting a characterization made earlier in the meeting.
-    key_speakers: ["Terry Toro (Marblehead Municipal Employees Union president)", "Allison Taylor (School Committee Vice Chair)", "Andrew Petty (Director of Public Health)", "Resident at mic"]
+      **Transfer station (resident):** A resident praised the flag disposal bin, suggested engaging the vocational school for the prefab buildings, and urged stronger enforcement of non-resident disposal fees.
+      
+      **School committee clarification (Allison Taylor, 285 West Shore Dr., school committee vice chair, via phone):** Clarified that the school committee does provide bills online in meeting packets, votes on them in public session, and the chair signs by hand — responding to earlier discussion comparing board practices.
+    key_speakers: ["Helene (Board Chair)", "Terry Toro (113 Jersey St., Marblehead Municipal Employees Union president)", "Allison Taylor (285 West Shore Dr., school committee vice chair)", "Resident at mic", "Andrew Petty (Director of Public Health)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
