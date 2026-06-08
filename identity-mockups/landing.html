@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marblehead 101 — landing</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --c-fog:#F4F7FA; --c-surface:#FFFFFF; --c-border:#D8E1E8; --c-divider:#ECF1F5;
+    --c-text:#0F2A3D; --c-text-mid:#4A5C6A; --c-text-sub:#7A8A98; --c-navy:#1B3A57;
+    --c-buoy:#C8553D; --c-teal:#2F7D8E; --c-sage:#5B7553; --c-brass:#B8860B;
+    --font:"Libre Franklin", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html,body { margin:0; padding:0; }
+  body {
+    background: var(--c-fog);
+    color: var(--c-text);
+    font-family: var(--font);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  /* topbar */
+  .topbar {
+    background: var(--c-surface);
+    border-bottom: 1px solid var(--c-border);
+    padding: 14px 24px;
+    font-size: 13px;
+    color: var(--c-text-mid);
+  }
+  .topbar a { color: var(--c-text-mid); text-decoration: none; }
+  .topbar a:hover { color: var(--c-navy); }
+  .topbar .row { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .topbar .brand { font-weight: 700; color: var(--c-text); }
+
+  /* hero */
+  .hero {
+    padding: 64px 24px 48px;
+    background: var(--c-surface);
+    border-bottom: 1px solid var(--c-border);
+  }
+  .hero-inner { max-width: 760px; margin: 0 auto; }
+  .hero .eyebrow {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--c-buoy);
+    font-weight: 700;
+    margin: 0 0 14px;
+  }
+  .hero h1 {
+    font-size: 64px;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-weight: 900;
+    margin: 0 0 18px;
+    color: var(--c-text);
+  }
+  @media (max-width: 700px) { .hero h1 { font-size: 44px; } .hero { padding: 40px 20px 36px; } }
+  .hero .lede {
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--c-text-mid);
+    margin: 0 0 28px;
+    max-width: 640px;
+  }
+  @media (max-width: 700px) { .hero .lede { font-size: 18px; } }
+  .hero .meta {
+    display: flex; gap: 22px; flex-wrap: wrap;
+    font-size: 13px; color: var(--c-text-sub);
+    margin: 0 0 32px;
+  }
+  .hero .meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .hero .meta .num { font-weight: 800; color: var(--c-text); font-size: 18px; line-height: 1; }
+  .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 13px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    border: 1px solid transparent;
+  }
+  .btn.primary { background: var(--c-navy); color: #fff; border-color: var(--c-navy); }
+  .btn.primary:hover { background: #102842; }
+  .btn.secondary { background: var(--c-surface); color: var(--c-text); border-color: var(--c-border); }
+  .btn.secondary:hover { border-color: var(--c-navy); }
+
+  /* syllabus */
+  .syllabus {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+  @media (max-width: 700px) { .syllabus { padding: 40px 16px 64px; } }
+
+  .group { margin: 0 0 56px; }
+  .group:last-child { margin-bottom: 0; }
+  .group-head {
+    display: flex; align-items: baseline; gap: 16px;
+    margin: 0 0 20px;
+  }
+  .group-head .roman {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--c-buoy);
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+  }
+  .group-head h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    color: var(--c-text);
+  }
+  .group-head .desc {
+    color: var(--c-text-sub);
+    font-size: 14px;
+    margin: 0 0 0 0;
+    flex: 1;
+    text-align: right;
+  }
+  @media (max-width: 700px) {
+    .group-head { flex-wrap: wrap; gap: 6px 14px; }
+    .group-head h2 { font-size: 22px; }
+    .group-head .desc { text-align: left; flex-basis: 100%; font-size: 13px; margin-top: 4px; }
+  }
+  .group-rule {
+    height: 1px;
+    background: var(--c-border);
+    margin: 0 0 22px;
+  }
+
+  .chapters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  @media (max-width: 760px) { .chapters { grid-template-columns: 1fr; } }
+
+  .ch {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: 14px;
+    padding: 22px 24px;
+    text-decoration: none;
+    color: var(--c-text);
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    gap: 18px;
+    align-items: start;
+    transition: border-color 0.12s, transform 0.12s;
+  }
+  .ch:hover { border-color: var(--c-navy); transform: translateY(-1px); }
+  .ch .num {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--c-buoy);
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    padding-top: 2px;
+  }
+  .ch .body { min-width: 0; }
+  .ch .ttl {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 6px;
+    letter-spacing: -0.005em;
+  }
+  .ch .desc {
+    font-size: 14px;
+    color: var(--c-text-mid);
+    margin: 0;
+    line-height: 1.45;
+  }
+  .ch .read {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--c-text-sub);
+    font-weight: 700;
+    white-space: nowrap;
+    padding-top: 5px;
+  }
+  @media (max-width: 700px) {
+    .ch { padding: 18px 20px; gap: 14px; grid-template-columns: 32px 1fr; grid-template-rows: auto auto; }
+    .ch .num { font-size: 22px; padding-top: 1px; }
+    .ch .read { grid-column: 1 / -1; padding-top: 4px; }
+  }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="row">
+      <a class="brand" href="#">Marblehead Data</a>
+      <a href="#">All site sections →</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">A primer</p>
+      <h1>Marblehead 101</h1>
+      <p class="lede">How the town works, where the money goes, and how a resident takes part, in 8 short chapters.</p>
+      <div class="meta">
+        <span><span class="num">8</span> chapters</span>
+        <span><span class="num">~25</span> min total</span>
+        <span><span class="num">Plain</span> English</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="#">Start with Chapter 1 →</a>
+        <a class="btn secondary" href="#">Why this exists</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="syllabus">
+
+    <div class="group">
+      <div class="group-head">
+        <span class="roman">Part I</span>
+        <h2>How the town is structured</h2>
+        <p class="desc">Who actually runs what.</p>
+      </div>
+      <div class="group-rule"></div>
+      <div class="chapters">
+        <a class="ch" href="#">
+          <span class="num">01</span>
+          <div class="body">
+            <h3 class="ttl">What a Massachusetts town is</h3>
+            <p class="desc">Town Meeting, no mayor, and the form of government most Marbleheaders never learned.</p>
+          </div>
+          <span class="read">3 min</span>
+        </a>
+        <a class="ch" href="#">
+          <span class="num">02</span>
+          <div class="body">
+            <h3 class="ttl">The branches and who decides what</h3>
+            <p class="desc">Select Board, School Committee, Town Meeting, Town Admin, and how they actually interact.</p>
+          </div>
+          <span class="read">4 min</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="group-head">
+        <span class="roman">Part II</span>
+        <h2>Where the money flows</h2>
+        <p class="desc">$123M in, $123M out — and the gap in the middle.</p>
+      </div>
+      <div class="group-rule"></div>
+      <div class="chapters">
+        <a class="ch" href="#">
+          <span class="num">03</span>
+          <div class="body">
+            <h3 class="ttl">Where the money comes from</h3>
+            <p class="desc">Why 79% of town revenue is your property tax, and the law that decides that.</p>
+          </div>
+          <span class="read">4 min</span>
+        </a>
+        <a class="ch" href="#">
+          <span class="num">04</span>
+          <div class="body">
+            <h3 class="ttl">Where the money goes</h3>
+            <p class="desc">Schools, public safety, public works, benefits, debt, all sized to scale.</p>
+          </div>
+          <span class="read">4 min</span>
+        </a>
+        <a class="ch" href="#">
+          <span class="num">05</span>
+          <div class="body">
+            <h3 class="ttl">The annual budget cycle</h3>
+            <p class="desc">How August requests become a May vote, and where the public can speak.</p>
+          </div>
+          <span class="read">3 min</span>
+        </a>
+        <a class="ch" href="#">
+          <span class="num">06</span>
+          <div class="body">
+            <h3 class="ttl">Why structural deficits happen</h3>
+            <p class="desc">2.5% capped revenue meets 5–9% uncapped costs. The gap compounds.</p>
+          </div>
+          <span class="read">3 min</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="group-head">
+        <span class="roman">Part III</span>
+        <h2>How you take part</h2>
+        <p class="desc">From ballot to Town Meeting floor.</p>
+      </div>
+      <div class="group-rule"></div>
+      <div class="chapters">
+        <a class="ch" href="#">
+          <span class="num">07</span>
+          <div class="body">
+            <h3 class="ttl">Overrides and debt exclusions</h3>
+            <p class="desc">The tools, the difference, and what your ballot vote actually changes.</p>
+          </div>
+          <span class="read">4 min</span>
+        </a>
+        <a class="ch" href="#">
+          <span class="num">08</span>
+          <div class="body">
+            <h3 class="ttl">How a resident participates</h3>
+            <p class="desc">Town Meeting floor, public comment, FinCom hearings, where to find the docs.</p>
+          </div>
+          <span class="read">3 min</span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+</body>
+</html>
