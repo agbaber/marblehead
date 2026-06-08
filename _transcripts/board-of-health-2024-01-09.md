@@ -9,7 +9,82 @@ vimeo_url: "https://vimeo.com/901348599"
 duration_seconds: 3179
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Board of Health advances transfer station renovation bid, targeting January 17 release"
+  summary: "The Marblehead Board of Health heard updates on the transfer station renovation project, with bids scheduled to go out January 17 and open February 21. The base bid covers pit renovation, site work, and scale house foundation, totaling approximately $1.258 million, with five alternates ranked by priority. The board also received mental health task force updates and discussed website improvements and a planned team-building workshop."
+  decisions:
+    - "Approved adjournment of the January 2024 meeting"
+  votes:
+    - motion: "Motion to adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 449
+    headline: "Mental Health Task Force reports 10,354 website visits in 2023, plans collaborations"
+    dek: "Task force co-chair reported 5,742 unique visitors to the Marblehead Cares website in 2023 and outlined upcoming school and community partnerships."
+    summary: |
+      The chair opened the January 2024 meeting with New Year's greetings and noted the tobacco control representative would not attend due to an emergency, with her next appearance expected March 12.
+      
+      A mental health task force member (identified as Jolene) reported that the Marblehead Cares website received 5,742 unique visitors and 10,354 total visits in calendar year 2023. The task force recently met with the *Marblehead Current* editorial team, is planning articles on climate anxiety, digital-age mental health, and teletherapy, and is exploring bringing the Screenagers program to Marblehead. Co-chairs are meeting with Assistant Superintendent Julia Ferrari to explore school collaboration. A trauma-informed strength-based training program led by Charlie Stein is also under consideration.
+    key_speakers: ["Jolene (Mental Health Task Force co-chair)", "Peter Schlaak (website maintainer, mentioned)"]
+  - topic: trash-dpw
+    topic_confidence: 0.97
+    start_seconds: 449
+    end_seconds: 2790
+    featured: true
+    headline: "Transfer station renovation bid set for Jan. 17 release; total project budget $1.258M"
+    dek: "The base bid covers pit renovation, site work, and scale house foundation; five alternates ranked by priority with bids due back February 21."
+    summary: |
+      DPW/Health Director Andrew (last name not captured) briefed the board on the transfer station renovation procurement schedule:
+      
+      | Milestone | Date |
+      |---|---|
+      | Bid advertisement (Project Dog) | January 17, 2024 |
+      | Bids due | February 21, 2024 |
+      | Contract award discussion | March 12, 2024 meeting |
+      
+      **Base bid items** (must be completed):
+      1. Pit renovation (cladding, man shack, funnel/steel work installed by East Coast Compactor)
+      2. Site work (new scale pit, concrete pad, wing wall work, regrading)
+      3. Scale house foundation
+      
+      **Alternates in descending priority**:
+      1. New scale house
+      2. Transaction pad (residential transactions, online payment support)
+      3. Swap shed pad
+      4. Transaction Hutt building
+      5. Swap shed building
+      
+      Total construction budget is approximately $1.258 million, funded from recovered settlement funds (approximately $1.25 million) and up to $600,000 from the waste revolving account. The DEP permit had not yet arrived as of the meeting but is not required until construction begins. A resident (identified as Tom Zaro) raised questions about the procurement statute (39M vs. 149), filed sub-bids for electrical and roofing, and the source and certification of funds; the director indicated the CFO would certify fund availability at contract signing.
+      
+      The board also discussed that an additional transfer station staff member would be needed to manage the separated commercial and residential operations, though it would not by itself enable extended hours or Sunday service—at least three employees are needed to operate through the lunch hour safely.
+      
+      Board members and Tom Zaro described a site visit to the Wellesley transfer station, noting that Wellesley serves an effective population similar to Marblehead's (~20,000 households using the facility) and separates and bales recyclables for direct commodity sale, including redemption of bottles and cans. Potential future opportunities discussed included a bottle redemption shed and the pending state bottle bill increase to 10 cents, which would also cover nips.
+    key_speakers: ["Andrew (DPW/Health Director, first name only)", "Tom Zaro (resident/engineer, attended Wellesley site visit)", "Resident at mic (procurement questions)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2790
+    end_seconds: 3166
+    headline: "Board reviews upcoming meeting dates and plans team-building workshop"
+    dek: "Upcoming dates confirmed include State of the Town on January 24 and the next regular meeting February 5; a facilitated workshop with the Resolution Center in Beverly is under consideration."
+    summary: |
+      The director outlined the budget season calendar: State of the Town on January 24 at 6:00 PM (with budget materials to follow in mid-February), and regular meetings on February 5 and March 12. The town report is due February 9.
+      
+      The board discussed scheduling a 90-minute team-building workshop facilitated by Hannah Bowen, Executive Director of the Resolution Center in Beverly, focused on communication and collaboration. A potential venue is the Marblehead Municipal Light Building conference room. Scheduling will be determined via a Doodle poll. A resident commented that Marblehead was among the first communities to implement source-separated recycling decades ago, noting the parallels to the current discussion of returning to sorted streams.
+    key_speakers: ["Andrew (DPW/Health Director)", "Hannah Bowen (Resolution Center, Beverly — mentioned)", "Resident at mic"]
+  - topic: public-comment
+    topic_confidence: 0.75
+    start_seconds: 3041
+    end_seconds: 3158
+    headline: "Resident recalls Marblehead's early source-separated recycling program"
+    dek: "A resident noted Marblehead used source-separated glass, cans, and paper recycling when she bought her home 50 years ago before switching to commingled collection."
+    summary: "A resident (Ms. Devin) commented that roughly 50 years ago Marblehead used separate containers for green, clear, and brown glass, cans, and newspaper—predating commingled collection—and noted the current discussion of separation mirrors the town's original approach. Tom Zaro, joining by Zoom, elaborated on the Wellesley transfer station visit, emphasizing that the effective user population mirrors Marblehead's and that the baling operation for ~10,000 households was impressive even on a cold, rainy day."
+    key_speakers: ["Resident at mic (Ms. Devin)", "Tom Zaro (Zoom)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

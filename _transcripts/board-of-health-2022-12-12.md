@@ -9,7 +9,98 @@ vimeo_url: "https://vimeo.com/780814140"
 duration_seconds: 2670
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Board of Health raises mattress recycling fee to $35 and solid waste disposal fee to $280/ton"
+  summary: "The Marblehead Board of Health approved two solid waste fee increases: mattresses/box springs will rise to $35 per unit and non-residential solid waste disposal will increase from $210 to $280 per ton, both effective January 1. The board also voted to allocate $145,000 in American Rescue Plan funds to the Marblehead Counseling Center for technology infrastructure, interior buildout, exterior repairs, and staff retention bonuses. The board additionally approved a step increase for the Health Director on his 11-year anniversary with the town."
+  decisions:
+    - "Approved increase in mattress/box spring recycling fee to $35 per unit"
+    - "Approved increase in non-residential solid waste disposal fee to $280 per ton"
+    - "Approved allocation of $145,000 in ARP mental health funds to Marblehead Counseling Center"
+    - "Approved step increase for Health Director"
+    - "Approved fowl permit for residential chickens"
+    - "Approved minutes of November 15th meeting"
+  votes:
+    - motion: "Approve fowl permit"
+      result: "in favor (unanimous)"
+    - motion: "Increase mattress/box spring fee to $35 per unit"
+      result: "in favor (unanimous)"
+    - motion: "Increase solid waste disposal fee to $280 per ton"
+      result: "in favor (unanimous)"
+    - motion: "Allocate $145,000 ARP funds to Marblehead Counseling Center"
+      result: "in favor (unanimous)"
+    - motion: "Approve step increase for Health Director"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 0
+    end_seconds: 175
+    headline: "Board approves November 15 minutes and a residential fowl permit"
+    dek: "A resident received approval to keep hens (no roosters); the board noted it retains inspection rights."
+    summary: "The board opened by approving the November 15 meeting minutes and then considered a fowl permit application. The applicant has five chickens approximately 25 weeks old. The board confirmed all hens, no roosters, and noted it reserves the right to inspect if complaints arise. The permit was approved unanimously."
+    key_speakers: ["Board Chair (unnamed)", "Wayne Miller (board member)", "Dr. Todd Goldberg (board member)"]
+  - topic: trash-dpw
+    topic_confidence: 0.97
+    start_seconds: 182
+    end_seconds: 894
+    featured: true
+    headline: "Mattress fee raised to $35/unit; solid waste disposal fee raised to $280/ton effective Jan. 1"
+    dek: "The board approved both increases to align Marblehead's rates with comparable North Shore and state facilities and to cover rising recycling contractor costs."
+    summary: |
+      The Health Director presented two fee changes at the transfer station:
+      
+      **Mattress/box spring recycling fee**
+      The town has recycled mattresses since 2018 and since November 1, 2022 mattresses are banned from trash under state regulation. The current contractor (UTech) cost is approximately $18/unit plus a trucking fee totaling about $25/unit. The board voted to raise the resident fee to **$35 per unit** (each piece — mattress or box spring separately). Comparable facilities range from $25–$60; the new rate keeps Marblehead in the middle of the range.
+      
+      **Non-residential solid waste disposal fee**
+      This applies to construction/demolition material and cleanouts above normal household waste (under five cubic yards). The current rate is $210/ton. The board voted to raise it to **$280/ton**. Nearby Georgetown (Mellows facility) charges $300/ton; Marblehead will remain below that level. Non-residents pay a $20 minimum; residents pay by pound.
+      
+      Both increases take effect **January 1, 2023**. Transfer station stickers go on sale the following Monday at the facility and at the tax collector's office.
+      
+      The board also discussed the upcoming new transfer station facility design renderings, which will be posted on the town website. Security cameras are being installed at the facility through the current week. The final week of fall leaf collection for 2022 is underway; spring collection resumes in April.
+      
+      The board noted the current JRM recycling contract (curbside) runs four more years, with the town currently paying $95/ton for recyclables — a significant change from prior years when the town received revenue for that material.
+    key_speakers: ["Health Director (unnamed)", "Board Chair (unnamed)", "Wayne Miller (board member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 894
+    end_seconds: 1479
+    headline: "Board allocates $145,000 in ARP mental health funds to Marblehead Counseling Center"
+    dek: "The $200,000 ARP allocation earmarked for mental health was drawn on; the remaining ~$55,000 may go to the Marblehead Mental Health Task Force or Council on Aging."
+    summary: |
+      The board voted to allocate **$145,000** from a $200,000 American Rescue Plan fund designated for mental health to the Marblehead Counseling Center. The request comprised:
+      
+      | Item | Amount |
+      |---|---|
+      | Technology/workstations/cloud software | ~$50,000 |
+      | Interior buildout / new office opening | ~$15,000 |
+      | Exterior repairs and painting | ~$35,000 |
+      | Staff hiring and retention bonuses | ~$45,000 |
+      | **Total** | **$145,000** |
+      
+      One board member noted the lease clarifies the tenant (Counseling Center) is responsible for exterior building maintenance, which had been a concern. The board noted the town's annual operating contribution to the Counseling Center is currently $60,000 and may be increased toward $120,000 in upcoming budget discussions.
+      
+      The remaining approximately $55,000 of the ARP mental health fund has not yet been requested; the Marblehead Mental Health Task Force and the Council on Aging (which is interested in an aging-in-place survey study) were mentioned as potential future recipients. There is no spending deadline on the fund.
+    key_speakers: ["Board Chair (unnamed)", "Wayne Miller (board member)", "Michael Pellets (Counseling Center representative, audience)"]
+  - topic: labor-personnel
+    topic_confidence: 0.88
+    start_seconds: 2442
+    end_seconds: 2543
+    headline: "Board approves step increase for Health Director on his 11-year anniversary"
+    dek: "The director noted his 11-year anniversary with the town; the board voted a step increase effective January 1 and agreed to place a congratulatory letter in his personnel file."
+    summary: "The Health Director noted that December marks his 11-year anniversary with the Town of Marblehead. Per applicable pay schedule, the board voted to approve a step increase effective January 1, 2023, and voted to include a letter of congratulations in his personnel file."
+    key_speakers: ["Health Director (unnamed)", "Board Chair (unnamed)", "Wayne Miller (board member)", "Dr. Todd Goldberg (board member)"]
+  - topic: public-safety
+    topic_confidence: 0.72
+    start_seconds: 2226
+    end_seconds: 2442
+    headline: "COVID, RSV, and flu rates rising approximately 30%; test kits expiring end of January"
+    dek: "The Health Director reported roughly 30% increases across all three respiratory illnesses and noted the state has not confirmed whether test kit expiration dates will be extended."
+    summary: "The Health Director reported that COVID-19, RSV, and influenza case rates are each up approximately 30%, driven by holiday gatherings. The department is relying primarily on wastewater surveillance data rather than PCR test counts. Rapid test kits currently distributed free to residents are set to expire at the end of January; the state has not confirmed whether expiration dates will be extended or new supplies will arrive. Residents were encouraged to get booster and flu shots and to stay home when sick. The board noted the weekly COVID update reports have been discontinued; residents were directed to mass.gov for current data."
+    key_speakers: ["Health Director (unnamed)", "Board member (unnamed)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -9,7 +9,118 @@ vimeo_url: "https://vimeo.com/1187420684"
 duration_seconds: 4823
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Marblehead Board of Health sets curbside trash fee at $290.76/year, adopts new cart regulations"
+  summary: "The Board of Health held a public hearing on April 27 to adopt new curbside collection regulations governing town-issued 65-gallon trash and 95-gallon recycling carts for up to 4-unit residential properties. The board set the annual fee at $290.76 per eligible unit (assuming 6% opt-out), a reduced rate of $145 for low-income households, and $80/month for eligible downtown businesses. The board also awarded the solid-waste disposal contract to Waste Management over Republic Services, projecting approximately $102,000 in annual savings."
+  decisions:
+    - "Approved curbside collection regulations as amended"
+    - "Approved annual fee of $290.76 per eligible unit (6% opt-out assumption)"
+    - "Approved reduced low-income fee of $145 per year"
+    - "Approved business monthly curbside fee of $80"
+    - "Approved adjusted transfer station fees (mattresses/box springs $45 resident/$85 commercial; bulky items $5/$20/$40 by size)"
+    - "Approved award of disposal contract to Waste Management"
+  votes:
+    - motion: "Approve curbside collection regulations as amended"
+      result: "in favor (unanimous)"
+    - motion: "Set annual fee for eligible units at $290.76 (6% opt-out)"
+      result: "in favor (unanimous)"
+    - motion: "Set estimated reduced rate at $145"
+      result: "in favor (unanimous)"
+    - motion: "Set business monthly curbside fee at $80"
+      result: "in favor (unanimous)"
+    - motion: "Approve adjusted transfer station fees"
+      result: "in favor (unanimous)"
+    - motion: "Award disposal contract to Waste Management"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: trash-dpw
+    topic_confidence: 0.98
+    start_seconds: 3
+    end_seconds: 3193
+    featured: true
+    headline: "Board adopts curbside cart regulations; sets annual fee at $290.76 and low-income rate at $145"
+    dek: "New regulations govern town-issued 65-gallon trash and 95-gallon recycling carts for all eligible residential properties of up to four units, with program launch set for July 1."
+    summary: |
+      The Board of Health opened a public hearing and adopted new standalone curbside collection regulations. Key provisions include:
+      
+      - **Eligible properties**: Single-family through 4-unit residential (homes or condos); 5-unit-plus properties and large Marblehead Housing Authority complexes (~40 units/property) are ineligible.
+      - **Cart standards**: Each eligible unit receives one 65-gallon trash cart and one 95-gallon recycling cart, both owned by the town for 10 years. Carts must be labeled with the property address/unit number in 2–4-inch block lettering on the upper right corner of the front face.
+      - **Use rules**: Trash must be bagged in plastic bags; recycling must be loose (no bags), lightly cleaned, and limited to Recycle Smart-approved items. Nothing may be placed outside or on top of the cart with the lid open.
+      - **Opt-out**: Residents are automatically enrolled; opt-out requires a written form, disclosure of alternate disposal method, board/director approval, and return of both carts. Seasonal opt-outs are prohibited.
+      - **Downtown district**: Eligible small businesses may participate (fee-based only, not under override); 35-gallon trash carts available for constrained properties, paired with a 65-gallon recycling cart.
+      - **Funding**: The program is funded either through a Prop 2½ override article (ballot vote June 16, override amount $2,298,575) or through the fee structure adopted this evening.
+      - **Amendments adopted**: (1) Board described as "duly elected" not "duly appointed"; (2) cart labeling instructions added; (3) language clarifying that material outside the cart will not be collected and fines may be issued; (4) seasonal opt-out prohibition made explicit.
+      
+      **Fee schedule adopted (fee-based scenario):**
+      
+      | Scenario | Units | Annual rate/unit |
+      |---|---|---|
+      | 100% participation (8,000 units) | 8,000 | $273.31 |
+      | 6% opt-out (board-selected) | ~7,520 | $290.76 |
+      | Low-income (reduced) | ~120 households | $145.00 |
+      | Downtown business (monthly) | eligible small businesses | $80/month ($960/yr) |
+      
+      Total annual program expense: approximately $2,186,516. Billing will be quarterly (two paper bills per year, two coupons each); online payment not available in year one. Fees go into the general fund and do not roll over. Annual public hearing required to reset the fee each year.
+    key_speakers: ["Board member (chair)", "Andrew (DPW/Health Director)", "Resident at mic (street parking/collection concern)"]
+  - topic: trash-dpw
+    topic_confidence: 0.97
+    start_seconds: 3193
+    end_seconds: 4174
+    headline: "Transfer station bulky-item and mattress fees adjusted; disposal contract awarded to Waste Management"
+    dek: "The board approved updated transfer station fee schedules and selected Waste Management over Republic Services for a new five-year disposal contract projected to save roughly $102,000 annually."
+    summary: |
+      **Transfer station fee changes (approved):**
+      
+      | Item | Old resident rate | New resident rate | Old commercial rate | New commercial rate |
+      |---|---|---|---|---|
+      | Mattress | $40 | $45 | $80 | $85 |
+      | Box spring | $40 | $45 | $80 | $85 |
+      | Single chair (bulky) | weigh & pay | $5 flat | — | — |
+      | Medium item (dresser/loveseat) | weigh & pay | $20 flat | — | — |
+      | Large item (couch/sectional) | weigh & pay | $40 flat | — | — |
+      
+      The scale fee was not changed. Director noted future consideration of tiered scale fees (stickered vs. non-stickered vehicles) and separate C&D vs. MSW rates.
+      
+      **Disposal contract — Waste Management selected:**
+      
+      Republic Services was unable to beat Waste Management's bid. Five-year MSW rates (per ton):
+      
+      | FY | Rate |
+      |---|---|
+      | FY27 | $116.50 (vs. current $127) |
+      | FY28 | $122.32 |
+      | FY29 | $128.44 |
+      | FY30 | $134.86 |
+      | FY31 | $141.60 |
+      
+      C&D rates range from $123 (FY27) to $149.49 (FY31). The contract includes four dedicated trailers (two MSW, two C&D), removing the current 5-cubic-yard C&D load limit. Projected annual savings vs. Republic: approximately $54,000 on C&D alone; approximately $102,000 combined. Transition to new pricing begins immediately upon contract execution.
+    key_speakers: ["Andrew (DPW/Health Director)", "Board member (chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 4174
+    end_seconds: 4811
+    headline: "Transfer station construction complete; next meetings set for May 12 and May 26"
+    dek: "The director reported the transfer station reconstruction is substantially complete, reviewed departmental bills, and the board scheduled upcoming meetings and discussed town meeting participation."
+    summary: |
+      **Transfer station update:** Construction is complete and the facility is fully operational; remaining punch-list items include landscaping and line striping. The board discussed scheduling a tour of the new scale house. Two AED defibrillators ($1,500 each) will be ordered for the scale house area and the back of the facility.
+      
+      **Bills approved (selected items):**
+      - Republic Services (trash collection): $105,107.65
+      - Waste Management (trash disposal): $98,123.06
+      - AgrSource (compost grinding/removal): $24,000
+      - Black Earth Compost (food composting): $2,554.88
+      - Marblehead Counseling Center: $5,914.76
+      - Bonsai Logic (license plate reader): $3,780.52
+      - Utech (mattress recycling): $6,360
+      - A-1 Exterminators (rat control): $2,825
+      
+      **Upcoming meetings:** May 12 at 7:00 PM (regular); May 26 (alternate, replacing Memorial Day meeting).
+      
+      **Town meeting:** The director indicated he will present factual information on the trash override article but will not offer a recommendation; board members likewise stated they would not deliberate publicly on the override vote.
+    key_speakers: ["Andrew (DPW/Health Director)", "Board member (chair)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -9,7 +9,132 @@ vimeo_url: "https://vimeo.com/923028643"
 duration_seconds: 8643
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Marblehead Board of Health reviews tobacco regulation updates and approves $45K ARPA allocation to counseling center"
+  summary: "The Board of Health received a presentation from the KAN Tobacco Control director on proposed updates to tobacco regulations, including raising fines to state minimums ($1,000/$2,000/$5,000), adding a first-violation suspension, and banning blunt wraps. The board voted to approve both the waste and health department budgets on a level-funded basis, and unanimously approved allocating $45,000 in remaining ARPA funds to the Marblehead Counseling Center. Community members spoke about the need for a local substance abuse education and parent-support program."
+  decisions:
+    - "Approved waste department budget (level-funded, with waste revolving account set at approximately $1,062,069)"
+    - "Approved health department budget"
+    - "Approved allocation of $45,000 in remaining ARPA funds to Marblehead Counseling Center"
+  votes:
+    - motion: "Approve waste department budget"
+      result: "in favor (unanimous)"
+    - motion: "Approve health department budget"
+      result: "in favor (unanimous)"
+    - motion: "Allocate $45,000 ARPA funds to Marblehead Counseling Center"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 7
+    end_seconds: 2877
+    headline: "KAN Tobacco Control director presents proposed regulation updates to Board of Health"
+    dek: "Director Joyce Redford outlined changes required by state law effective June 2020 and additional local options including blunt wrap bans, cigar pricing minimums, and a cap of six tobacco permits."
+    summary: |
+      Joyce Redford, director of the KAN Tobacco Control collaborative (serving 16 municipalities including Marblehead), briefed the board on required and recommended updates to Marblehead's tobacco regulation:
+      
+      **State-mandated changes (effective June 1, 2020):**
+      - First violation fine raised from $100 to $1,000; board must set a suspension of 1–30 days (Redford recommends 3 days)
+      - Second violation: $2,000 fine + 7-day suspension (already in Marblehead's regulation)
+      - Third violation within 36 months: $5,000 fine + 30-day suspension
+      - 36-month tolling period retained
+      
+      **Recommended local additions:**
+      - Ban on blunt wraps (already adopted by surrounding communities)
+      - Prohibition on tobacco sales in educational institutions
+      - Minimum cigar/cigarillo pricing: $2.50 each, $5.00 for two or more
+      - Ban on adult-only tobacco retailers and smoking bars
+      - Simple cap of six tobacco permits
+      - Unified fine structure applying state-level amounts to all violations including local-only provisions
+      
+      Redford also presented two draft regulations addressing unlicensed cannabis sales and synthetic cannabinoids (Delta-8), noting that neither the CCC nor MDAR actively enforces these in non-licensed establishments, leaving local boards as the primary regulatory authority.
+      
+      No votes were taken; the board directed the town administrator to forward the draft language to town counsel for formatting before a public hearing.
+    key_speakers: ["Joyce Redford (KAN Tobacco Control Director)", "Andrew (Town Administrator / Board of Health Director)"]
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 2969
+    end_seconds: 6419
+    headline: "Community members share personal substance-abuse experiences, urge Board of Health to sponsor education program"
+    dek: "A board member proposed a resident-speaker series on substance abuse; community members with direct personal experience testified in support and offered to participate."
+    summary: |
+      A board member proposed that the Board of Health sponsor a community education program featuring residents sharing personal experiences with substance abuse, similar to a program run in Hingham. Three community members addressed the board:
+      
+      - **Laney Goodman**, now project director at Lynn Community Health Center, described her son's addiction beginning in high school and her creation of a parent support group called FOCUS (Families of Children Using Substances). She offered to serve as a resource for parents and described her ongoing work connecting families to treatment and recovery supports, including Learn to Cope.
+      - A **male resident** (name not clearly identified) described his daughter's heroin addiction from 1986–1996 and his family's experience navigating a system with far fewer resources than exist today. His daughter has been in recovery for 27 years; his other daughter is the Northeast regional director for Learn to Cope.
+      - **Barbara Beta**, a retired psychological warfare officer, described decades of Navy substance-abuse prevention work and argued that K–12 education is the most efficient prevention strategy, citing Admiral McRaven.
+      
+      The board discussion included a disagreement between two members about whether to make a formal motion to proceed. No motion was formally seconded or voted on. The board administrator noted that 25 opioid recovery boxes ("sandboxes") with Narcan and instructions have been installed in town buildings, with additional installations planned for schools.
+    key_speakers: ["Laney Goodman (Lynn Community Health Center / parent)", "Barbara Beta (retired Navy officer, resident)", "Tom (Board of Health member)", "Joanne (Board of Health member)", "Andrew (Town Administrator)"]
+  - topic: school-budget
+    topic_confidence: 0.55
+    start_seconds: 6733
+    end_seconds: 6968
+    headline: "Board approves $45,000 ARPA allocation to Marblehead Counseling Center for mental health services"
+    dek: "With the town level-funded and an override for an additional $60,000 not recommended by the finance director, the board redirected remaining ARPA funds to the counseling center."
+    summary: "The board administrator reported that the town's finance director and finance committee did not recommend pursuing an override vote for an additional $60,000 for mental health services. Instead, the board voted to allocate the remaining $45,000 in ARPA funds to the Marblehead Counseling Center, subject to a contract meeting town requirements. Members noted that opioid settlement funds may also be available for education programming. The board acknowledged this allocation is one-time and committed to reviewing the counseling center's funding annually."
+    key_speakers: ["Andrew (Town Administrator)", "Joanne (Board of Health member)", "Tom (Board of Health member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.7
+    start_seconds: 6968
+    end_seconds: 7154
+    headline: "Mental Health Task Force reports youth risk survey in progress; peer-to-peer programs under discussion"
+    dek: "The task force met virtually and discussed supporting schools with red wristband and purple project peer-education programs; next in-person meeting set for April 1."
+    summary: |
+      A board member reported on a recent virtual Mental Health Task Force meeting attended by Julia Ferra and Gina Hart from the schools. Key updates:
+      - The youth risk behavior survey is being processed and will be presented to the school committee before coming to the task force.
+      - The task force discussed supporting peer-to-peer programs ("red wristband" and "purple project") that equip students with tools for high-risk social situations.
+      - Task force members Melissa and Mark are preparing an article for the Marblehead Cares column.
+      - Gina Hart is expected to present to the Board of Health in May after her school committee presentation.
+      - Next task force meeting: April 1, in-person and virtual.
+    key_speakers: ["Joanne (Board of Health member / Task Force liaison)", "Andrew (Town Administrator)"]
+  - topic: trash-dpw
+    topic_confidence: 0.95
+    start_seconds: 7154
+    end_seconds: 8273
+    featured: true
+    headline: "Board approves level-funded waste and health budgets; advances Bonsai Logic sticker/license-plate system for transfer station"
+    dek: "The waste revolving account is set at approximately $1,062,069; a new transfer station operator position was added, and Andrew plans to visit Winchester in April to evaluate the Bonsai Logic management system."
+    summary: |
+      **Waste Budget (approved)**
+      - Trash disposal line level-funded at approximately $725,491; an additional ~$92,000 shifted to the waste revolving account
+      - Waste revolving account total: approximately $1,062,069, covering trash disposal (~$862,069), John Deere backhoe lease (~$27,000), feasibility study, and sticker/license-plate system implementation
+      - Grinding/compost removal increased by $60,000 due to higher trucking costs
+      - Other disposal increased to $180,000 (actual spend last year ~$177,000)
+      - Full diesel fuel costs now carried in budget
+      
+      **Sticker/License Plate System**
+      Andrew described plans to implement the Bonsai Logic system, currently used at Cape Cod transfer stations, Winchester, and Rockport. Features include:
+      - Online sticker purchase with documentation verification (tax bill, car registration)
+      - Combined transfer station and beach sticker processing
+      - Optional Worldwide Access license plate reader integration for tracking and flagging non-compliant vehicles
+      - Ability to notify police department if a flagged vehicle enters
+      
+      **Staffing**
+      A new transfer station operator/clerk position was authorized through the waste revolving account, bringing the facility to three scale-capable staff members and reducing the need for the board administrator or office staff to cover.
+      
+      **Security Cameras**
+      Cameras are now live 24/7 at the transfer station. Feed currently goes to the administrator's desk; software updates will extend it to the scale house and police department.
+      
+      **Health Department Budget (approved)**
+      - Minor salary increases per contracts
+      - $60,000 allocation to Marblehead Counseling Center maintained
+      - Minor travel line correction noted (state travel $1,732; local travel $1,632)
+      
+      **Finance Committee Presentation**
+      Budget review scheduled for March 25 (Monday, 7 p.m.). Board chair agreed to attend; administrator indicated he does most of the speaking and the meeting is non-confrontational.
+    key_speakers: ["Andrew (Town Administrator / DPW/Health Director)", "Joanne (Board of Health member)", "Tom (Board of Health member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.75
+    start_seconds: 8273
+    end_seconds: 8628
+    headline: "Transfer station renovation rebid underway; filed sub-bids due March 14, general contractor bids due March 21"
+    dek: "After initial bids were confused by unclear documentation, the project was rebid through Project Dog with clarified instructions; no bids have been opened yet."
+    summary: "The transfer station building renovation project was re-issued for bid after contractors found the original documentation unclear. Filed sub-bids (roofing, flashing/metal, windows, painting, plumbing, HVAC, electrical) are due March 14; general contractor bids are due March 21. Bids are submitted and opened through the online platform Project Dog rather than at town hall. The architects have responded to two minor questions and distributed answers to all bidders. A board member noted the bid document did not clearly indicate that bids would be opened via Zoom rather than in person."
+    key_speakers: ["Andrew (Town Administrator)", "Resident at mic (Steve)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
