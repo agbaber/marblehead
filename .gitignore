@@ -50,6 +50,10 @@ vendor/
 data/minutes/**/*.pdf
 data/.pass*_batch_state.json
 
+# Transcript LLM enrichment batch state (transient)
+data/.transcripts_enrich_state.json
+data/.transcripts_enrich_failures.log
+
 # Local PDF cache for schools-site scrape (committed text files only)
 data/schools/_pdfs/
 
