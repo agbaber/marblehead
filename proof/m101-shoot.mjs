@@ -11,7 +11,7 @@ for (const [label, path] of targets) {
   {
     const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });
     const page = await ctx.newPage();
-    await page.goto('http://localhost:5051' + path, { waitUntil: 'networkidle' });
+    await page.goto('http://localhost:8085' + path, { waitUntil: 'networkidle' });
     await page.waitForTimeout(400);
     await page.screenshot({ path: `proof/${label}-desktop.png` });
     await ctx.close();
@@ -20,7 +20,7 @@ for (const [label, path] of targets) {
   {
     const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
     const page = await ctx.newPage();
-    await page.goto('http://localhost:5051' + path, { waitUntil: 'networkidle' });
+    await page.goto('http://localhost:8085' + path, { waitUntil: 'networkidle' });
     await page.waitForTimeout(400);
     await page.screenshot({ path: `proof/${label}-mobile.png` });
     await ctx.close();
