@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B revised — Course (mobile-aware, "Chapter")</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --c-fog:#F4F7FA; --c-surface:#FFFFFF; --c-border:#D8E1E8; --c-divider:#ECF1F5;
+    --c-text:#0F2A3D; --c-text-mid:#4A5C6A; --c-text-sub:#7A8A98; --c-navy:#1B3A57;
+    --c-buoy:#C8553D; --c-teal:#2F7D8E; --c-sage:#5B7553;
+    --font:"Libre Franklin", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html,body { margin:0; padding:0; }
+  body {
+    background: var(--c-fog);
+    color: var(--c-text);
+    font-family: var(--font);
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  /* ---------- Sticky header (mobile-first) ---------- */
+  .stickybar {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--c-surface);
+    border-bottom: 1px solid var(--c-border);
+  }
+  .stickybar .row {
+    padding: 10px 16px;
+    display: flex; align-items: center; gap: 12px;
+    max-width: 1180px; margin: 0 auto;
+  }
+  .stickybar .brand {
+    font-size: 13px; font-weight: 700; color: var(--c-text);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .stickybar .brand .sep { color: var(--c-text-sub); margin: 0 6px; font-weight: 400; }
+  .stickybar .brand .scope { color: var(--c-text-mid); font-weight: 600; }
+  .stickybar .where {
+    flex: 1;
+    font-size: 12px;
+    color: var(--c-text-sub);
+    font-weight: 600;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .stickybar .toc-btn {
+    background: var(--c-navy); color: #fff;
+    border: 0;
+    padding: 7px 12px 7px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--font);
+    display: inline-flex; align-items: center; gap: 6px;
+    cursor: pointer;
+  }
+  .stickybar .toc-btn::before {
+    content: ""; width: 14px; height: 10px;
+    background:
+      linear-gradient(currentColor, currentColor) 0 0 / 100% 2px no-repeat,
+      linear-gradient(currentColor, currentColor) 0 50% / 100% 2px no-repeat,
+      linear-gradient(currentColor, currentColor) 0 100% / 100% 2px no-repeat;
+  }
+  .stickybar .track { height: 3px; background: var(--c-divider); }
+  .stickybar .fill { width: 37.5%; height: 100%; background: var(--c-buoy); }
+
+  /* ---------- Layout: single column mobile, two-column desktop ---------- */
+  .layout {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 16px 80px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  aside.syllabus { display: none; }
+  @media (min-width: 980px) {
+    .stickybar .toc-btn { display: none; }
+    .layout {
+      grid-template-columns: 240px 1fr;
+      gap: 56px;
+      padding: 32px 24px 80px;
+    }
+    aside.syllabus {
+      display: block;
+      position: sticky; top: 80px;
+      align-self: start;
+      font-size: 14px;
+    }
+  }
+  aside .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--c-text-sub);
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+  aside ol {
+    list-style: none; padding: 0; margin: 0;
+    counter-reset: lec;
+  }
+  aside li { counter-increment: lec; margin: 0; }
+  aside a {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 9px 10px;
+    text-decoration: none;
+    color: var(--c-text-mid);
+    border-radius: 6px;
+    line-height: 1.35;
+  }
+  aside a::before {
+    content: counter(lec, decimal-leading-zero);
+    font-variant-numeric: tabular-nums;
+    color: var(--c-text-sub);
+    font-weight: 700;
+    font-size: 12px;
+    padding-top: 2px;
+  }
+  aside li.done a::before { content: "✓"; color: var(--c-sage); }
+  aside li.cur a {
+    background: var(--c-navy);
+    color: #fff;
+    font-weight: 600;
+  }
+  aside li.cur a::before { color: rgba(255,255,255,0.7); }
+  aside a:hover:not([class*=cur]) { background: var(--c-divider); color: var(--c-text); }
+
+  main { min-width: 0; }
+  .chiprow {
+    display: flex; align-items: center; gap: 12px; margin: 0 0 18px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--c-navy);
+    color: #fff;
+    padding: 6px 14px 6px 8px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .chip .num {
+    background: #fff;
+    color: var(--c-navy);
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+  }
+  .chip-meta { font-size: 13px; color: var(--c-text-sub); }
+  h1 {
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    margin: 0 0 14px;
+  }
+  @media (min-width: 700px) { h1 { font-size: 42px; } }
+  .dek {
+    font-size: 19px;
+    color: var(--c-text-mid);
+    margin: 0 0 28px;
+    line-height: 1.5;
+    max-width: 640px;
+  }
+  .objectives {
+    background: var(--c-surface);
+    border-left: 3px solid var(--c-teal);
+    padding: 16px 20px;
+    margin: 0 0 32px;
+    border-radius: 0 8px 8px 0;
+  }
+  .objectives .label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--c-teal); font-weight: 700; margin: 0 0 10px;
+  }
+  .objectives ul { margin: 0; padding-left: 18px; color: var(--c-text-mid); font-size: 15px; }
+  .objectives li { margin: 4px 0; }
+  p { margin: 0 0 18px; max-width: 660px; }
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 36px 0 14px;
+    letter-spacing: -0.01em;
+  }
+  .stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin: 24px 0 32px;
+    max-width: 660px;
+  }
+  .stats .s {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .stats .v { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: var(--c-navy); line-height: 1; }
+  @media (min-width: 700px) { .stats .v { font-size: 30px; } }
+  .stats .l { font-size: 11px; color: var(--c-text-sub); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
+  a.inline { color: var(--c-teal); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+  /* dig in */
+  .digin {
+    margin: 40px 0 0;
+    padding: 24px 22px;
+    background: var(--c-surface);
+    border-radius: 14px;
+    border: 1px solid var(--c-border);
+  }
+  .digin-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--c-text-sub); font-weight: 700; margin: 0 0 14px;
+  }
+  .digin-grid {
+    display: grid; grid-template-columns: 1fr; gap: 10px;
+  }
+  @media (min-width: 700px) {
+    .digin-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  }
+  .digin-card {
+    background: var(--c-fog);
+    border-radius: 10px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: var(--c-text);
+    border: 1px solid transparent;
+  }
+  .digin-card:hover { border-color: var(--c-navy); }
+  .digin-card .tag {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--c-teal); font-weight: 700; margin: 0 0 6px;
+  }
+  .digin-card .ttl { font-size: 15px; font-weight: 700; line-height: 1.3; margin: 0 0 4px; }
+  .digin-card .desc { font-size: 13px; color: var(--c-text-mid); line-height: 1.4; margin: 0; }
+
+  /* pager */
+  .pagernav {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @media (min-width: 700px) {
+    .pagernav { grid-template-columns: 1fr 1fr; gap: 12px; }
+  }
+  .pagernav a {
+    text-decoration: none;
+    padding: 14px 18px;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: 10px;
+    color: var(--c-text);
+  }
+  .pagernav a:hover { border-color: var(--c-navy); }
+  .pagernav .dir { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-text-sub); font-weight: 700; margin-bottom: 4px; }
+  .pagernav .ttl { font-size: 15px; font-weight: 700; }
+  @media (min-width: 700px) { .pagernav .next { text-align: right; } }
+  .pagernav .next.primary { background: var(--c-navy); color: #fff; border-color: var(--c-navy); }
+  .pagernav .next.primary .dir { color: rgba(255,255,255,0.7); }
+
+  /* ---------- Mobile syllabus drawer ---------- */
+  .drawer-scrim {
+    position: fixed; inset: 0;
+    background: rgba(15,42,61,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.18s, visibility 0.18s;
+    z-index: 50;
+  }
+  .drawer {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--c-surface);
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -10px 30px rgba(15,42,61,0.18);
+    padding: 12px 0 24px;
+    transform: translateY(100%);
+    transition: transform 0.22s;
+    z-index: 60;
+    max-height: 80vh; overflow: auto;
+  }
+  .drawer::before {
+    content: "";
+    width: 38px; height: 4px;
+    background: var(--c-border);
+    border-radius: 2px;
+    display: block;
+    margin: 0 auto 14px;
+  }
+  .drawer .dlabel {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--c-text-sub); font-weight: 700;
+    padding: 0 24px 12px;
+    margin: 0;
+  }
+  .drawer ol {
+    list-style: none; padding: 0; margin: 0; counter-reset: lec;
+  }
+  .drawer li { counter-increment: lec; margin: 0; }
+  .drawer a {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 14px 24px;
+    text-decoration: none;
+    color: var(--c-text-mid);
+    font-size: 16px;
+    line-height: 1.3;
+    border-top: 1px solid var(--c-divider);
+  }
+  .drawer a::before {
+    content: counter(lec, decimal-leading-zero);
+    font-variant-numeric: tabular-nums;
+    color: var(--c-text-sub);
+    font-weight: 700;
+    font-size: 13px;
+    padding-top: 2px;
+    min-width: 24px;
+  }
+  .drawer li.done a::before { content: "✓"; color: var(--c-sage); }
+  .drawer li.cur a {
+    background: var(--c-fog);
+    color: var(--c-text);
+    font-weight: 700;
+  }
+  body.drawer-open .drawer-scrim { opacity: 1; visibility: visible; }
+  body.drawer-open .drawer { transform: translateY(0); }
+</style>
+</head>
+<body>
+  <div class="stickybar">
+    <div class="row">
+      <a class="brand" href="#"><span>How the Town Works</span></a>
+      <div class="where">Chapter 3 of 8 · 37%</div>
+      <button class="toc-btn" onclick="document.body.classList.toggle('drawer-open')">Chapters</button>
+    </div>
+    <div class="track"><div class="fill"></div></div>
+  </div>
+
+  <div class="layout">
+    <aside class="syllabus">
+      <div class="label">Chapters</div>
+      <ol>
+        <li class="done"><a href="#">What a MA town is</a></li>
+        <li class="done"><a href="#">Branches &amp; who decides</a></li>
+        <li class="cur"><a href="#">Where the money comes from</a></li>
+        <li><a href="#">Where the money goes</a></li>
+        <li><a href="#">The annual budget cycle</a></li>
+        <li><a href="#">Why structural deficits happen</a></li>
+        <li><a href="#">Overrides &amp; debt exclusions</a></li>
+        <li><a href="#">How a resident participates</a></li>
+      </ol>
+    </aside>
+    <main>
+      <div class="chiprow">
+        <span class="chip"><span class="num">3</span> Revenue</span>
+        <span class="chip-meta">4 min read</span>
+      </div>
+      <h1>Where the money comes from</h1>
+      <p class="dek">Most of what the town spends is paid by you, on the house you live in. The rest fills small gaps.</p>
+
+      <div class="objectives">
+        <div class="label">What you'll know after this</div>
+        <ul>
+          <li>The three sources that fund Marblehead's $123M budget</li>
+          <li>Why Proposition 2½ is the central constraint on revenue growth</li>
+          <li>Why state aid is small for towns like Marblehead</li>
+        </ul>
+      </div>
+
+      <p>Marblehead collects about $123 million a year to run itself. Roughly four-fifths is the property tax bill you pay twice a year. The rest is a mix of state aid, local fees, and smaller sources that change with the economy.</p>
+
+      <div class="stats">
+        <div class="s"><div class="v">79%</div><div class="l">Property tax</div></div>
+        <div class="s"><div class="v">11%</div><div class="l">State aid</div></div>
+        <div class="s"><div class="v">10%</div><div class="l">Fees &amp; other</div></div>
+      </div>
+
+      <h2>Why the cap matters</h2>
+      <p>Proposition 2½ — a 1980 state law — limits how much the property-tax pot can grow each year. The pot can rise 2.5%, plus new construction added to the tax rolls. Anything beyond that requires <a class="inline" href="#">an override</a>: a separate ballot vote.</p>
+      <p>That cap is the reason the budget conversation feels constrained. Costs that aren't capped — health insurance, special education, pensions — grow at 5–9% a year. Revenue that <em>is</em> capped grows at 2.5%. The gap compounds.</p>
+
+      <section class="digin">
+        <div class="digin-label">Go deeper on this chapter</div>
+        <div class="digin-grid">
+          <a class="digin-card" href="#">
+            <div class="tag">Tool</div>
+            <div class="ttl">Your tax bill, line by line</div>
+            <p class="desc">For a $1M house, with override scenarios mapped in.</p>
+          </a>
+          <a class="digin-card" href="#">
+            <div class="tag">Chart</div>
+            <div class="ttl">Cap vs. cost</div>
+            <p class="desc">Twenty years of capped revenue vs. uncapped costs.</p>
+          </a>
+          <a class="digin-card" href="#">
+            <div class="tag">Data</div>
+            <div class="ttl">State aid comparison</div>
+            <p class="desc">Why wealthy towns get less of the 11%.</p>
+          </a>
+        </div>
+      </section>
+
+      <nav class="pagernav">
+        <a class="prev" href="#">
+          <div class="dir">← Previous</div>
+          <div class="ttl">Branches and who decides</div>
+        </a>
+        <a class="next primary" href="#">
+          <div class="dir">Next chapter →</div>
+          <div class="ttl">Where the money goes</div>
+        </a>
+      </nav>
+    </main>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div class="drawer-scrim" onclick="document.body.classList.remove('drawer-open')"></div>
+  <nav class="drawer" aria-label="Chapters">
+    <p class="dlabel">All 8 chapters</p>
+    <ol>
+      <li class="done"><a href="#">What a MA town is</a></li>
+      <li class="done"><a href="#">Branches and who decides</a></li>
+      <li class="cur"><a href="#">Where the money comes from</a></li>
+      <li><a href="#">Where the money goes</a></li>
+      <li><a href="#">The annual budget cycle</a></li>
+      <li><a href="#">Why structural deficits happen</a></li>
+      <li><a href="#">Overrides and debt exclusions</a></li>
+      <li><a href="#">How a resident participates</a></li>
+    </ol>
+  </nav>
+</body>
+</html>
