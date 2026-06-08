@@ -1,0 +1,379 @@
+---
+slug: select-board-2022-12-07
+board: select-board
+board_display: "Select Board"
+date: 2022-12-07
+title: "Select Board: December 7, 2022"
+vimeo_id: 779281303
+vimeo_url: "https://vimeo.com/779281303"
+duration_seconds: 3809
+ai_generated: true
+status: published
+source: vimeo-auto+llm
+
+
+summary_card:
+  headline: "Marblehead Select Board renews 2023 business and liquor licenses, approves election-ballot lottery bill"
+  summary: "The Select Board held its regular meeting and unanimously approved a large slate of 2023 license renewals covering entertainment, common victuallers, package stores, and all-alcoholic licenses. The board also approved technical language revisions to Senate Bill 3027, which establishes a random lottery for ordering candidates' names on town election ballots. Additional routine items included designating DPW Director Amy McHugh as certified underground storage tank operator, authorizing a letter of support for a regional economic development grant, and approving holiday hours and New Year's Eve extended business hours."
+  decisions:
+    - "Approved 2023 lodging house, entertainment, and Sunday entertainment license renewals"
+    - "Approved 2023 common victualler license renewals"
+    - "Approved 2023 all-alcoholic, wine-and-malt, and package store license renewals"
+    - "Approved revisions to Senate Bill 3027 (candidate name lottery on election ballots)"
+    - "Approved designation of Amy McHugh as certified UST Class A/B operator"
+    - "Approved letter of support for FY23 REDO Grant application by North Shore Alliance for Economic Development"
+    - "Approved closure of Abbott Hall and Marblehead Town Hall on December 26, 2022 and January 2, 2023"
+    - "Approved restaurants remaining open until 1 AM on January 1, 2023"
+    - "Approved no-parking restriction on Smith Street near numbers 27 and 32"
+  votes:
+    - motion: "2023 lodging house and entertainment license renewals"
+      result: "in favor (unanimous)"
+    - motion: "2023 Sunday entertainment license renewals"
+      result: "in favor (unanimous)"
+    - motion: "2023 common victualler license renewals (with correction)"
+      result: "in favor (unanimous)"
+    - motion: "2023 all-alcoholic package store and wine-and-malt license renewals"
+      result: "in favor (unanimous)"
+    - motion: "2023 all-alcoholic common victualler and club license renewals"
+      result: "in favor (unanimous)"
+    - motion: "Senate Bill 3027 revisions"
+      result: "in favor (unanimous)"
+    - motion: "Designate Amy McHugh as certified UST operator"
+      result: "in favor (unanimous)"
+    - motion: "Letter of support for REDO Grant application"
+      result: "in favor (unanimous)"
+    - motion: "Holiday hours closure"
+      result: "in favor (unanimous)"
+    - motion: "New Year's Eve extended hours"
+      result: "in favor (unanimous)"
+    - motion: "No-parking restriction on Smith Street"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: permits-zoning
+    topic_confidence: 0.95
+    start_seconds: 270
+    end_seconds: 1285
+    featured: true
+    headline: "Select Board renews full slate of 2023 Marblehead business and liquor licenses"
+    dek: "Dozens of entertainment, common victualler, package store, and all-alcoholic licenses were renewed unanimously in a series of polled and regular votes."
+    summary: |
+      The board worked through a 13-item agenda beginning with an extensive set of 2023 license renewals. Categories included:
+      
+      - **Lodging house licenses**: Harbor Light Inn (two locations, manager Peter Conway)
+      - **Entertainment licenses**: Boston Yacht Club, Casa Corona, Corinthian Yacht Club, Eastern Yacht Club, Gary VFW Post, Headers Club, The Barrelman, Fenyang House, Harbor Light Inn, Mai Tai Lounge, Maddie's Sale Loft, Riptide Lounge, Tedesco Country Club, VFW Post 2005, The Landing, Terry's Old Fashioned Ice Cream, The Beacon (Warwick Entertainment), Three Cod Tavern, La Petite Contura
+      - **Sunday entertainment licenses**: subset of the above establishments
+      - **Common victualler licenses**: approximately 40 establishments including Amore Tequila Bar, Barnacle, Canoe Cafe, Cafe Italia, Cafe Vesuvius, Casa Corona, Driftwood, Dunkin Donuts, Five Corners Kitchen, The Hidden Door, The Landing, Riptide Lounge, Seoul Bistro, Sea Salt, Spitfire Tacos, Starbucks, Three Cod Tavern, Tony's Pizza, and others
+      - **All-alcoholic package store licenses**: Beach Bluff Liquors, Beacon Hill Import Co., Haley's Wine and Spirits, Shooby's Liquor Store, Village Liquors; wine-and-malt licenses for Crosby's Market, Little Harbor Lobster, Richdale of Marblehead
+      - **All-alcoholic common victualler and club licenses**: Barnacle, Cafe Italia, Fenyang House, Five Corners Kitchen, The Barrelman, The Hidden Door, Mai Tai Lounge, Maddie's Sale Loft, The Landing, Peculia, Riptide Lounge, Three Cod Tavern, Amore Tequila Bar, Casa Corona, The Beacon; wine-and-malt with cordials for Seoul Bistro, La Petite Contura, Junji's, Larose Thai, Sea Salt
+      - **Inn-holder, club, and fraternal licenses**: Harbor Light Inn, Boston Yacht Club, Corinthian Yacht Club, Tedesco Country Club, Eastern Yacht Club, Gary VFW, Headers Club, VFW Post 2005
+      - **Farmer series pouring permit**: Marblehead Brewing Company
+      - **Carry alcoholic beverage licenses**: Fresca's Pizza, The Little Store, Shooby's
+      
+      All votes were unanimous. One correction was noted: the manager name for Mai Tai Lounge was amended to Amanda Breen. The lodging house license for one applicant was postponed as the applicant was not present.
+    key_speakers: ["Town Administrator (Thatcher)", "Board Chair"]
+  - topic: elections-procedural
+    topic_confidence: 0.92
+    start_seconds: 1378
+    end_seconds: 1504
+    headline: "Board approves revised language for Senate Bill 3027 establishing candidate-name lottery"
+    dek: "The bill, originating from a town meeting article sponsored by the League of Women Voters, requires the town clerk to hold a random drawing to determine candidate order on election ballots."
+    summary: |
+      The board approved technical language revisions to Senate Bill 3027, a home rule petition establishing that the order of candidates' names on Marblehead town election ballots shall be determined by a random lottery conducted by the town clerk. Key provisions include:
+      
+      - A lottery must be held for each race after the candidate withdrawal deadline
+      - All qualified candidates or their representatives may attend
+      - The drawing begins no earlier than 6:00 PM the day after the last withdrawal date
+      - Incumbents seeking re-election shall be designated as such on the ballot
+      
+      The revised bill is to be forwarded to the office of Senator Crighton. The board noted this was a technical/grammatical amendment that does not affect the legislative intent.
+    key_speakers: ["Board Chair", "Bonnie Grenier (League of Women Voters, public comment)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1504
+    end_seconds: 1822
+    headline: "Board designates DPW Director McHugh as UST operator; approves REDO grant letter and holiday hours"
+    dek: "Several routine administrative items were dispatched, including a DPW designation, a regional grant letter, holiday closures, and a New Year's Eve extended-hours allowance."
+    summary: |
+      - **Christmas tree pickup and bonfire**: Annual tree burning at Riverhead Beach scheduled for Friday, January 6, 2023 at 6 PM; curbside pickup runs December 27, 2022 through January 13, 2023.
+      - **UST operator designation**: Amy McHugh, Director of Public Works, was designated as the certified Class A/B underground storage tank operator for the town's system on Tower Way following her passage of the required exam.
+      - **REDO Grant letter**: The board authorized the chair to sign a letter of support for the North Shore Alliance for Economic Development's FY23 REDO Grant application. The town has a pending request of approximately $13,000 from the Alliance to replace the visitor booth.
+      - **Holiday hours**: Abbott Hall and Marblehead Town Hall (Mary Alley) to be closed December 26, 2022 and January 2, 2023.
+      - **New Year's Eve extended hours**: Restaurants permitted to remain open until 1 AM on January 1, 2023.
+    key_speakers: ["Town Administrator (Thatcher)", "Board Chair"]
+  - topic: public-safety
+    topic_confidence: 0.85
+    start_seconds: 1822
+    end_seconds: 2064
+    headline: "No-parking restriction approved on Smith Street near rail-trail bump-out crosswalk"
+    dek: "The restriction removes existing parking spaces in the area of bump-outs installed for pedestrian safety where the rail trail crosses Smith Street."
+    summary: |
+      The Town Administrator explained that newly installed pedestrian bump-outs at the Smith Street rail-trail crossing serve two purposes: shortening the pedestrian crossing distance and providing traffic calming by narrowing the travel lane. The board approved a no-parking restriction on Smith Street in the area of numbers 27 and 32, with the exact location to be determined by the town engineer.
+      
+      A board member asked about signage and was told that flashing crosswalk lighting and appropriate signage would be installed upon project completion. The bump-outs are consistent with current traffic-management best practices.
+    key_speakers: ["Town Administrator (Thatcher)", "Board member"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 2090
+    end_seconds: 3094
+    headline: "Residents raise concerns about ballot petition timeline, traffic safety on Rockaway Avenue, and crosswalk construction"
+    dek: "Multiple residents addressed the board on topics including the pace of the home rule petition through the legislature, traffic enforcement gaps, and safety concerns at newly constructed bump-outs."
+    summary: |
+      **Bonnie Grenier (17 Sagamore Road / League of Women Voters):** Expressed concern that Senate Bill 3027 could languish in the legislature as a similar snow-emergency parking fine bill (Senate Bill 2288) has for over two years since a 2020 town meeting vote. She asked the board to use its influence to expedite the bill in time for the June 2023 town elections. The chair noted plans to meet with the state representative and would inquire directly.
+      
+      **Jim (Two Mile Road):** Expressed support for a proposed sustainability/energy coordinator position, noting that similar positions in other towns pay for themselves through energy-savings partnerships. Also flagged the West Shore Drive bump-out as a hazard that has already caused vehicle damage.
+      
+      **Resident (Tello's Road):** Delivered a detailed presentation on traffic safety concerns on Rockaway Avenue and Rock Cliff Road. Key points:
+      - Over six months ago two young children were nearly struck by a vehicle at the Rockaway/Rock Cliff intersection
+      - Police collected a seven-day speed study showing an average speed of 15 mph on Rock Cliff Road; Chief King determined no intervention was warranted
+      - The resident questioned the study methodology, noting that 18% of the 651 recorded trips were motorcycles and that approximately 100 vehicles per day were using the 300-foot block
+      - Argued that the police are asked to shoulder traffic safety responsibilities that require cross-departmental coordination including engineering and planning
+      - Called for a public-facing, comprehensive traffic safety process allowing residents to submit concerns and track responses across departments
+      - Also requested that meeting recordings be more prominently posted on the town website alongside agendas and minutes
+      
+      **Catherine Wilmington, age 10 (46 Speed Street):** Expressed concern about pedestrian safety at a bump-out between Pleasant Street and Village Street, noting tire marks in the grass and on the sidewalk.
+      
+      **Alan (online):** Raised concerns about the Smith Street / Devereaux bump-out construction, citing the loss of approximately six parking spaces, a post office exit radius too tight for safe egress, trucks already driving over the corner, and uncertainty about snow removal. Also asked about the status of a long-promised ADA-compliance fix at the Beach Street and Atlantic Avenue intersection.
+    key_speakers: ["Bonnie Grenier (League of Women Voters)", "Jim (Two Mile Road, resident)", "Resident at mic (Tello's Road)", "Catherine Wilmington (resident, age 10)", "Alan (online)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 3287
+    end_seconds: 3601
+    headline: "Town Administrator reports on joint appointment scheduling and $850 auction of surplus painting"
+    dek: "Thatcher updated the board on pending joint meetings for school committee and housing authority vacancies and noted the sale of a surplus painting from Abbott Hall for $850."
+    summary: |
+      - **Joint meeting scheduling**: Two joint meetings are being scheduled — one for the school committee vacancy and one for the housing authority vacancy. The school committee meeting was delayed because a select board member was unable to attend; the board's policy is to have all members present for appointment votes to avoid tied votes. The target is mid-to-late January 2023. All candidates have been notified.
+      - **Abbott Hall painting auction**: A painting found during Abbott Hall renovations and declared surplus by the board in September 2021 (at the request of the Marblehead Historical Commission chair) was sold at a Skinner auction for $850, exceeding expectations.
+      - **Sustainability coordinator**: The Green Marblehead Committee is discussing proposing a sustainability/energy coordinator position. The Town Administrator indicated the appropriate vehicle would be the budget process and that a preliminary update to the board may be provided in January.
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 3601
+    end_seconds: 3768
+    headline: "Board members offer holiday remarks; meeting adjourned"
+    dek: "Board members wished residents happy holidays and expressed support for LGBTQ community members and military service members overseas."
+    summary: "Board members offered closing remarks including holiday wishes, a statement of solidarity with the LGBTQ community in the context of recent national events, and acknowledgment of military service members overseas. The board confirmed a previously approved letter of condolence had been sent to a community family. The meeting was adjourned on a unanimous vote."
+    key_speakers: ["Board members"]
+---
+
+> Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
+> proper names and dollar figures occasionally misheard. Click any timecode to
+> jump to that moment in the source video.
+
+**[2:43](https://vimeo.com/779281303#t=163s)** Here you I think Aaron said she might be late, but she'd be joining us just hostages. Well, she did she did say that she would be late. Probably so I think I think we can probably smart. How do we have everybody online? It's going to be online. Well, you're all here. Okay. Yeah, I mean, I think we've given it a couple minutes. That's pretty good.
+
+**[3:13](https://vimeo.com/779281303#t=193s)** Okay. Thanks.
+
+**[3:21](https://vimeo.com/779281303#t=201s)** That you don't forget to turn on your mic.
+
+**[3:32](https://vimeo.com/779281303#t=212s)** Yeah, I know just don't breathe on us. Yeah, I know. I just choked recording in progress.
+
+**[3:39](https://vimeo.com/779281303#t=219s)** I just choked on my water, right?
+
+**[3:49](https://vimeo.com/779281303#t=229s)** Carl we all said yes. You said John's good how much you just turn your mic on this? Okay. All right, like to bring this meeting to order we have a it looks like a 13-point agenda tonight. Which includes a long list of license renews, I think at the agenda item number one is going to be postponed. I believe right the lodging house license will be done on another date. They're not here to prepare to know. That's okay. They're not here to to make their presentation approval of the minutes. There are none ready to approve and now we
+
+**[4:30](https://vimeo.com/779281303#t=270s)** we come to the tool to a long section of license for Mills. I think if you listen through the whole thing, you hear the vibrancy of Marblehead coming to life given given all the licenses here. So I'm just going to go ahead and start right in we're required to read all of them and I will read them as quickly as possible. The first motion is to renew the following 2023 licenses for businesses in the town of Marblehead subject to all taxes and fees to the town being paid and receipt of all applicable Department approvals lodging house licenses. Harbor Light in 54 Washington Street manager Peter Conway Harbor Light in 58 Washington Street manager, Peter Conway Entertainment licenses Boston Yacht Club One Front Street manager by Brian pelland
+
+**[5:17](https://vimeo.com/779281303#t=317s)** Casa Corona 33 Smith Street manager, Jose barakapamonis. Corinthian Yacht Club One Nathan Street manager David H Titus Eastern Yacht Club 47 Foster Street manager Jared tourney Gary number five vfa Inc. 210 Beacon Street manager art Dodge headers Club 62 Pleasant Street manager denser lutas The barrelman 259 Washington Street manager Benjamin Benjamin Newman fenyang for a athletic Avenue manager Lynn Quin Chen Harbor Light Inn, 58 Washington Street manager Peter Conway Mai Tai Lounge 8, bessem Street manager Amanda. Brain Matty sale Loft 15 State Street manager literate Loretta Lang Riptide Lounge
+
+**[6:04](https://vimeo.com/779281303#t=364s)** 116 Pleasant Street manager, George Champa Tedesco Country Club hundred Tedesco Street manager, Michelle McGillicuddy. chaplain Lyman Rollins post 2005 VFW 321 West Shore Drive manager Edward Preble The Landing 81 Front Street manager Robert simonelli Terry's Old Fashioned Ice Cream 22 Atlantic Avenue manager Carlos Rocha Warwick entertainment LLC doing business as the beacon 123 Pleasant Street Manager David Zion welcome. Seaside Restaurant Group LLC doing business as three Cod Tavern 141 Pleasant Street manager, Nino Percy La Petite contua to Atlantic Avenue manager Alexander Lewis neck run
+
+**[6:52](https://vimeo.com/779281303#t=412s)** Cafe 105 Ocean Ave manager George Marcos licensure second hand dealers Carmen's jewelry, 164 Pleasant Street manager Carmen pugliesi Lee antiques 235 Washington Street manager Jessica Lee sisters Consignment at one State Street manager Kathleen Doyle automatic Amusement device licenses Gary number five vfa Inc. 210 Beacon Street manager art judge for the following device golden tea golf live 2013 serial, number 14 - 17138 0l Matty sale law 15 State Street manager Loretta Lang for a CD player Riptide Lounge 116, Pleasant Street manager George Champa for
+
+**[7:39](https://vimeo.com/779281303#t=459s)** the following three devices Dynamo pool table serial number 53678 3D golf video game serial number 17216 CD player by Roe Ami serial number 403 1277 Captain lyman's Rawlings post tooth 2005 VFW 321 West Shore Drive manager Edward Preble for the following five video game devices Cherry 96 serial number m2653 Cherry 96 serial number 8135 Omega serial number 6257 bugs fever cereal number seven nine four seven players choice serial number 9470
+
+**[8:25](https://vimeo.com/779281303#t=505s)** movie theater license
+
+**[8:28](https://vimeo.com/779281303#t=508s)** Warwick entertainment LLC 123 Pleasant Street manager David Zion And we're going to take a regular vote from here. Do I have a motion? and the second all those in favor okay, unanimous motion to renew the following Sunday entertainment licenses subject to all fees to the town being paid and approved from an approval from the Commonwealth Department of Public Safety for Sunday entertainment. Boston Yacht Club One Front Street manager Brian peland Casa Corona 33 Smith Street manager at Jose bracamundes Corinthian Yacht Club one eight one Nahant Street Manager David H Titus Eastern Yacht Club 747 Foster Street manager Jared. Cherny Tedesco Country Club. 154 Tedesco
+
+**[9:16](https://vimeo.com/779281303#t=556s)** Street manager, Michael mckillicuddy fenyang for 48 Atlantic Avenue manager Ling Quin Chen Lupita to Atlantic Avenue manager Alexander Lewis Mattie sale Loft Inc. Doing business is Maddie sail off 15's State Street manager Loretta Lang My Thai Lounge Eight, bessem Street manager Amanda Breen the new Marvel head Landing doing business as the landing 81 Front Street manager Robert. Simonelli Riptide Lounge 116, Pleasant Street manager George a Champa Gary number five veterans farm and Association Inc. 210, Beacon Street manager art Dodge Warwick entertainment LLC doing business. X 123 Pleasant Street Manager David Zion chaplain Lyman Rollins
+
+**[10:04](https://vimeo.com/779281303#t=604s)** post 2005 VFW 321 West Shore Drive manager Edward Preble again. We'll take a vote here. So moved the second, please second all those in favor. Alright unanimous Motion to renew the following common Vic licenses subject to all taxes and fees to the town being paid and received of all applicable Department approvals. I'm orders Tequila Bar 169 Pleasant Street managers Jose Luis Sanchez. Barrelman. 259, Washington Street manager Benjamin, Newman, Barnacle 141, Front Street manager, JL sohegan sohegan Luke canoe Cafe 14 School Street manager Heather Harrison Cafe, Italia 10
+
+**[10:50](https://vimeo.com/779281303#t=650s)** School Street manager Donna. Oliviero Cafe, Vesuvius 18, bessem Street manager Bart Fredo. Casa Corona, 33 Smith Street manager Jose barracamontes Driftwood restaurant 63 Front Street manager Colleen Calvin drink station. 146 Washington Street, David Lang Dunkin Donuts. 161 Pleasant Street manager, Claudio Santos eatwell, kitchen 40 Atlantic Avenue manager Fernanda. Oliviera Evans, New York style deli Humphrey Street manager, even Madoff Evan Madoff, excuse me, fenyang house two 48 Atlantic Avenue manager Lane Queen Chen Fresca's Pizza and Pasta Atlantic Avenue manager, Claudio Arroyo.
+
+**[11:39](https://vimeo.com/779281303#t=699s)** Five Corners kitchen two to four School Street manager Barry Edelman hidden door 259 Washington Street manager Todd Horvath Imperial Mandarin 165 Pleasant Street manager who I've been new Java son 35 Atlantic Avenue manager, Maria Torres junies, 114 Pleasant Street manager chitra took some Boone. The Landing 81 Front Street manager Robert simonelli the petite Contour wine and cheese one Atlantic Avenue manager Alexander Lewis Mattie Saleh 15 State Street manager little red Lang Manhattan Sandwich Company 10 best street manager Michelle Goodman, Michael Goodwin Marblehead House of Pizza Seven, Atlantic Avenue manager dimitriatis. Amino's roast beef 27 Atlantic
+
+**[12:26](https://vimeo.com/779281303#t=746s)** Avenue manage the Leonard Noche mookies at mugford. 114 Washington Street manager Leticia Ferguson Muffin Shop. 126 Washington Street manager Louisa capasso Negron Cafe 105 Atlantic Avenue Manor manager George Marcos Peculia restaurant 261 Washington Street manager clevis or vasi plus Cafe 34 a Atlantic Avenue manager clevis, Rossi Riptide Lounge Inc. 116 Pleasant Street manager George a Champa Scooped by the Sea a scoop by sea salt 118 Washington Street manager, Scott. Brinkmann schuby's liquor store 16 Atlanta Avenue manager George shoebe sold
+
+**[13:13](https://vimeo.com/779281303#t=793s)** Bistro 10, bessem Street manager Huang seethy's Nguyen. Spitfire tacos 87 Pleasant Street manager Ryan Harriman Starbucks 89 Pleasant Street manager, Miki sketch Sea salt 126 Washington Street manager Scott Brinkman Terry's Old Fashioned Ice Cream 22 Atlantic Avenue manager Carlos, Rocha Larose Thai Asian Cuisine and bar 26 Hawk Street manager Paul Tran the little store Nine Green Street manager Matthew gateman mookies at mugford LLC. 114, Washington Street manager, Leticia Ferguson three-cod Tavern 141 Pleasant Street, you know Percy Tony's Pizza one School Street manager
+
+**[13:58](https://vimeo.com/779281303#t=838s)** Antonio progna. Village roast beef and seafood six Boston Street, sorry six bessem Street manager Stefano barbiero Warwick entertainment LLC 123 Pleasant Street, David Zion, and we'll take yes correction. The third one down should be my tie. From Mai Thai and it's Amanda green. On which page it's right where you just finished? Yeah, good. It's not a magnet. That's the one you oh might I got it. I apologize. Yes, and Amanda green is the manager time and Amanda
+
+**[14:45](https://vimeo.com/779281303#t=885s)** Okay. It does that is that the extent? Yes. So with that correction if I could have if we could move the motion so moved second. all those in favor alright unanimous
+
+**[15:04](https://vimeo.com/779281303#t=904s)** Okay, the most emotion now to renew the following license subject to all taxes and fees to the town being paid and receipt of all of applicable departmental approvements. all alcoholic Package Store licenses Central Plaza Liquors Inc. Doing business as Beach Bluff Liquors 260 Humphrey Street manager Rohit Kumar K Patel Beacon Hill import Company Inc. Woodfin Terrace manager Peter C Brown ABC ABC approval pending for new manager. Haley's Wine and Spirits 116 Washington Street manager Sean Patrick Ferguson DJ Colbert Inc. Doing business as shoobi's liquor store 16 Atlantic Avenue manage manager, George Hubie, Deanne
+
+**[15:52](https://vimeo.com/779281303#t=952s)** Liquors Corps doing business as Village Liquors 22, bessem Street manager. Santan Guin Wine and malt back. Excuse me wine and malt Package Store licensees. Crosby's Market 118, Washington Street manager Theresa, Clancy Little Harbor Lobster Company, three, Beacon Street manager Laura O'Keefe bapa convenience Inc. Doing business as Richdale of Marblehead 29 Smith Street part pytel because it says alcoholic content here. We're going to take a pulled vote. But in the meantime do I have? So moved and second. Okay and stuff Miss belt Becker.
+
+**[16:37](https://vimeo.com/779281303#t=997s)** In favor a singer in favor. It's noon in favor. Just a greater in favor.
+
+**[16:45](https://vimeo.com/779281303#t=1005s)** We continue on. Motions renewed The Following alcoholic beverages license subject to all taxes and fees to the town being paid receipt of all applicable Department approvals a valid certificate of inspection for 2019 2020 certificate of vacant occupancy as appropriate and compliance with chapter 304 of the acts of 2004 all common all Alcoholic Common Vic. Barnacle Corporation 141 Front Street manager JH The Egan Cafe Italian of Marblehead Inc. Doing business as Cafe Italia 10 School Street manager donut. Oliviera fan Yang Restaurant Inc. Doing businesses Fang Yang House to 48 Atlantic Avenue manager Ling Quin Chen food at
+
+**[17:30](https://vimeo.com/779281303#t=1050s)** five LLC doing business as Five Corners kitchen two to four School Street managers bear Edelman 257 Washington Street doing business as the barrel man 257 to 59 Washington Street manager Benjamin Newman Drexel Eng doing business as the hidden door. 259 Washington Street manager Todd Horvath My Thai Lounge Eight Bessemer Street. Manager Amanda Breen Mattie salehoff Inc doing business as Maddie's sale law 15 State Street Loretta Lange the new Marblehead Landing to doing business as the landing 81 Front Street manager Robert. Simonelli. Peculia Inc. 261, Washington Street manager clevisor vasi Riptide Lounge 116, Pleasant Street manager George a Champa Seaside Restaurant
+
+**[18:17](https://vimeo.com/779281303#t=1097s)** Group, LLC doing business S3, Todd katri 141, Pleasant Street manager Percy. Jdhe doing businesses Amore as Tequila Bar. 169 Pleasant Street manager. Jehose a Luis Sanchez. To the max Inc doing business as Cassie Casa Corona 33 Smith Street manager Jose brancamontes. Warwick entertainment LLC doing business as the beacon 123 Pleasant Street Manager David Zion The following are wine and malt with cordials common Vic licenses kitchen table Inc. Doing business as Seoul Bistro 9 big bessem street manager Huang
+
+**[19:03](https://vimeo.com/779281303#t=1143s)** CT this anguian the pity conquer One Atlantic Avenue manager, Alexander Lewis junjis 114 Pleasant Street manager chitra took some bone. Larose Thai Asian Cuisine and bar 26 Hawk Street manager Paul Tran Nine Lives Group Inc. Doing business at sea salt 126 126 Washington Street manager, Scott Brinkman. All alcoholic beverage in holders license Peter Conway doing business as Harbor Light in 58, Washington Street manager, Peter Conway. all alcohol club licenses lost in Yacht Club One Front Street Brian pelland
+
+**[19:51](https://vimeo.com/779281303#t=1191s)** Corinthian Yacht Club One Nahant Street Manager David H Titus Tedesco Country Club, 154 Tedesco Street manager, Michael mckillicuddy Eastern Yacht Club 47 Foster Street manager Jared Journey. And all alcohol fraternal Club licenses Gary five veteran farm and Association Inc. 210, Deacon Street manager art Dodge headers Club Inc. 262 Pleasant Street manager. denser bulutas all alcoholic veterans Club licenses Joplin Lyman Robins Rollins post doing business as 2005 Veterans of Foreign Wars Inc. 321 West Shore Drive manager Edward Preble Farmer series pouring permit Marblehead Brewing
+
+**[20:39](https://vimeo.com/779281303#t=1239s)** Company LLC doing businesses Marblehead Brewing Company 124 Pleasant Street manager, Tracy. Ma Stockton Carry, an alcoholic beverage license Fresca's Pizza and Pasta 50 Atlantic Avenue manager, Claudio. Araujo the little store 9 Green Street manager Matthew gaitman, DJ Cole Colbert doing business as shoobies 16 Atlantic Avenue manager George, shoebe. This again is a polled vote. Can I move the motion so moved? Sorry one of the permits. In particular it is there. I'm sorry, there's a criminal matter but there's been we've checked
+
+**[21:25](https://vimeo.com/779281303#t=1285s)** that there's been no, you know, we don't education. That's right so, correct. Correct corre. CT. No, thank you for checking. Okay, so I think we've had the motion the second if we get that's the singer in favor. Yes Noonan in favor doctor in favor in favor okay, so we These are business license motion motion to renew the following 2003 23 licenses for businesses in the town of Marblehead subject to all taxes and fees to the town being paid and second page. Oh I did these already. Oh, no kidding. Oh you so I just
+
+**[22:11](https://vimeo.com/779281303#t=1331s)** like a machine just like just like a machine. Yeah, no zero judgment on that one. All right, thank you. Okay, I think that brings that are long list of licenses, which is actually great to read. To you know, get familiar with the range of our of our local businesses. They're all fantastic. Okay, we move on to agenda item number four. Now if everybody remembers this has to do with Senate Bill 3027 which involves the order of candidates names which we passed at town meeting and what I will do because it's very self-explanatory. It's just read the the language from the Senate Bill 3027. I'll read it quickly, but I think you'll get the the gist of
+
+**[22:58](https://vimeo.com/779281303#t=1378s)** it. It's under section one. the order of candidates list on the town election ballot in the town of Marblehead Shelby determined by random drawing of names by the town clerk for each race prior to printing of the ballots the town clerk shall hold a lottery for each race where names of all qualified candidates shall be entered the order of the names drawn shall be the order in which the names appear on the ballot any candidate for re-election shall be designated as such on the ballot each candidate or each candidate representative shall have the opportunity to be present at the drawing the drawing shall be conducted by the town clerk or the assistant town clerk beginning not early then f*** then six o'clock in
+
+**[23:45](https://vimeo.com/779281303#t=1425s)** the afternoon of the day following the last day for candidates to withdraw their nomination papers and continuing until such time is all about positions have been determined so that recently self-explanatory on how that how that works and
+
+**[24:02](https://vimeo.com/779281303#t=1442s)** are any I'd like to move a motion if I could to approve the revisions to Senate bill number three zero two seven and act relating to the order of the candidate's names on the town of Marblehead election ballots as presented and a forward approval to the office of Senator crichtonous, and I have a second and any discussion at all. if I may I just wanted I know we have one of the supporters of the the article that was passed and so it just just wanted to point out that this is just really a technical change in terms of language like clerical.
+
+**[24:47](https://vimeo.com/779281303#t=1487s)** Yes, basically but you I read it you get you got a sense of it, right? It's essentially saying, okay. That is fine. And I think we just have a regular vote. So all those in favor.
+
+**[25:04](https://vimeo.com/779281303#t=1504s)** It's unanimous. Thank you. Okay, the next agenda item is really just an announcement for tree pickup and burning and I'm going to go ahead and read the letter from Jason Gilliland. Our fire chief and Amy mchughes the DPW the annual tree burning at Riverhead Beach is scheduled for Friday, January 6th, 2023. The Christmas tree pile will be set a light at 6pm residents are invited to attend. This community event trees will be picked up at curbside from Tuesday, December 27th, 2022 through January 6th, 2023 placed and we'll be placed at Rivers Head Beach for the community bonfire on
+
+**[25:50](https://vimeo.com/779281303#t=1550s)** Friday evening, January 6th, 2023. Christmas trees will continue to be picked up at curbside after January 6 until January 13th of 2023 after January 13th residents should bring trees to the town's transfer station for proper disposal all trees left curbside for pickup from December 27 until July 13 shall have lights ornaments and stands removed and not be in plastic bags any tree not meeting. These requirements will not be picked up in addition holiday wreaths roping and garlands will not be picked up. Okay, just just an announce mayor and announcement here. Amy McCue is not here, but this
+
+**[26:35](https://vimeo.com/779281303#t=1595s)** is simply to Designate Amy McHugh as a certified AV operator. And the reason we need that designation is because we have an underground fuel tank system. Right up at the up at Tower way, which according to state law. We need to have at least one person designated as a underground storage tank operator. So Amy McHugh. Congratulations past the UST Class A B operator exam has now a licensed operator. Pending both the board's acceptance and here it is when you're waiting for me to get to it. All right the motion here it is. If I could move the motion to designate Marblehead director of Public Works Amy
+
+**[27:22](https://vimeo.com/779281303#t=1642s)** McHugh as the certified AV operator for the towns underground storage tank system located on Tower way.
+
+**[27:32](https://vimeo.com/779281303#t=1652s)** all those in favor All right.
+
+**[27:39](https://vimeo.com/779281303#t=1659s)** Let's see. So this is a letter in of support for the redo Grant. Bachelor I don't know if you have a little just a little cut on that. I mean so this is Marblehead participates in the North Shore Alliance for economic development. Otherwise known as The Alliance Becky Carin is our representative and they deal with economic development housing issues and such. It's a regional collaborative that works together. So the alliance is applying for Grant programs at the state. And so this is the board authorizing the chair to sign a letter and support of that effort. The benefit to Marblehead in addition to supporting the regions. We applied to
+
+**[28:26](https://vimeo.com/779281303#t=1706s)** the alliance for grants for programs here locally. For example, we do have a pending request for about 13,000 to replace the visitor Booth. So so there are direct benefits Marblehead, but it's in support of the the regional efforts. for housing and economic development
+
+**[28:49](https://vimeo.com/779281303#t=1729s)** So do we have a we do have a do we got the motion? All right, let me go. Yeah, I'm sorry. Let me let me go and read the motion first. How about that? Okay motion to send a letter of support. For the fiscal year 23 redo Grant application being submitted by the North Shore Alliance for economic development the alliance for funding under the regional Economic Development organization grant program and authorizer chair to sign on behalf of the board. So
+
+**[29:17](https://vimeo.com/779281303#t=1757s)** those in favor
+
+**[29:20](https://vimeo.com/779281303#t=1760s)** Thank you. Holiday hours again. This is pretty much.
+
+**[29:27](https://vimeo.com/779281303#t=1767s)** Yeah, just to kind of. Announce the the motion to self-explanatory motion that Abbott Hall and Mary Ali will be closed on Monday, December 26th, 2022 and observance of Christmas Day and on Monday January to 2023 and observance of New Year's Day. Secondly, I was in favor. Thank you.
+
+**[29:55](https://vimeo.com/779281303#t=1795s)** And this next one is just a New Year's Eve extended business hours. If I could entertain a motion to move to allow restaurants in the town of Marblehead terrain open for business on Sunday, January. One two thousand twenty three until one am at their description. all those in favor All right.
+
+**[30:22](https://vimeo.com/779281303#t=1822s)** Now, this is one Thatcher. If you could give us a little color on this, this is a having to do with a No Parking sign on Smith Street. Yeah, so on Smith Street is one of the areas in which the new crosswalks is where the so-called rail trail cuts through in order to enhance pedestrian safety the the current best practice out there in the in the traffic management world is to have bump out. It shortens the distance the pedestrians have to cross the bump out also allows pedestrians to stand in a fairly safe spot and be visible to oncoming traffic. Now the particular motion here is that that area that's now been bumped out
+
+**[31:09](https://vimeo.com/779281303#t=1869s)** is currently designated as parking. Obviously. We want to restrict parking at the bump out area so that it's sort of a technicality of the board authorizing that change. I'll make one note in regard to you know in the backup material it rather than no parking any time or it may be no parking between signs because our engine our engineer will do the final location designation and then and then the appropriate signage but this authorizes the board is basically eliminating. Parking spaces that are now in that area of the bump up.
+
+**[31:54](https://vimeo.com/779281303#t=1914s)** Okay question about that. That's all right. Yeah, please um regarding signage are is there a is there plans to put up any signage around you know like Road Narrows and like notice and a lot of us are still getting used to yeah narrowing. So it I mean there's a number of these projects that have been recently completed. It is a change in the traffic pattern. And people who have been driving particular routes forever, right? Not necessarily gonna pay attention. So yeah, so I mean for the for these newly constructed pumpouts, there are signage and lighting that are to be installed part of
+
+**[32:40](https://vimeo.com/779281303#t=1960s)** the lighting is the flashing, you know, crosswalk lighting when when somebody approaches but they will be appropriate signage what exactly the sign say. I don't know the traffic folks figure that out. But when the projects are completed, they'll be a little more notification for drivers of the the pump out situation. It's really still see the signal light.
+
+**[33:06](https://vimeo.com/779281303#t=1986s)** Yeah Smith. Street yet. Say again are those in At Smith. I'm not sure what's finally installed at Smith Street on each of the sites, but In the projects are 100% complete they'll be in there. So again all the bump outs in the different areas are designed to they they do two things. Like I just describe make it safer for Pedestrian by more visibility short distance on the crosswalk. They also work as to the drivers as a traffic calming the fact that there's the roads narrow is a natural way to slow down the traffic in that in those areas where pedestrians across and so it like I said, it's it's the current best practice for traffic calming and pedestrian safety and that's what
+
+**[33:53](https://vimeo.com/779281303#t=2033s)** we're following. Thanks. Investing in our sidewalks. Yes. Okay, I'd like to entertain a motion to approve on recommendations of the chief of police chief the following parking regulations. No parking on Smith Street in the area of number 27 and 32 as shown on submitted plans exact location to be determined by the town engineer.
+
+**[34:24](https://vimeo.com/779281303#t=2064s)** all those in favor It's unanimous. Right. I don't think we have any correspondence. So I'd like to move to public comment if anybody has. Anything to say please come forward. If you could state your name, that would be great.
+
+**[34:50](https://vimeo.com/779281303#t=2090s)** Hello. Bonnie Grenier 17 Sagamore Road, and this regards the agenda item s 3027 and I'm a member of the League of Women Voters that sponsored the amendment which is now home the home rule petition, which is now this piece of legislation and I'm thrilled that this is just a technical grammatical Amendment. That was put forth. And I don't think is going doesn't affect the intent of the legislation. My bigger concern actually has to do with the process of getting a home rule petition through the legislature which can be very lengthy time-consuming and tedious and honestly, I don't understand the whole process
+
+**[35:38](https://vimeo.com/779281303#t=2138s)** of the legislative process in Massachusetts. So I'm not going to go there but what I will say is that town of Marblehead has two home rule petitions in front of the legislature in addition to ours you have Senate bill Always do it. The number on that one is 2288. Which has to do with? parking fines during snow emergencies and my understanding is that this was originated back in 2020. It came about as a result of town meeting in 2020. It is now two and a half year later two and a half years later and this bill is still languishing before the legislature now, I don't know how
+
+**[36:25](https://vimeo.com/779281303#t=2185s)** it doesn't matter to me if they bump up the fines for snow emergencies and but I do really care about our piece of legislation You know, if if this two and a half years for this piece of legislation two to eight eight, I'm concerned that our bill is going to run have the same fate. Our Hope really is that Whatever the process is there could be some intervention by somebody in town government that basically could try to expedite the process. It would be ideal if this piece of legislation could be enacted in time for Town elections in June of 2023. I don't know if there is a process now. But if you could inform me, I would appreciate it. Thank you.
+
+**[37:13](https://vimeo.com/779281303#t=2233s)** Thank you very much. I have the opportunity to meet with with our state rep in the next week or so. So I will ask her specifically about that. She may be able to help us and she's you know in the Congress there. But we could get more information. Have you spoken to our State Rep?
+
+**[37:32](https://vimeo.com/779281303#t=2252s)** I'm sorry. Yeah.
+
+**[37:35](https://vimeo.com/779281303#t=2255s)** to Jenny our meaning
+
+**[37:39](https://vimeo.com/779281303#t=2259s)** been in touch with Brendan crichton's office on a somewhat regular basis and I will continue to do so, you can go to the State website and follow these steps that are taking place. So I don't want to be the squeaky wheel. I think that's from the town should be the squeaky wheel. Thank you. Mr. Justin
+
+**[38:05](https://vimeo.com/779281303#t=2285s)** Jim says in Two Mile Road, I understand the Town Administrator Mr. Keizer. Hopefully he's going to talk about the sustainability or energy coordinator positioning in your report tonight or no. okay, I can add if you do or if you do it at a future meeting, I would just like to Speak and support of that because I was at a sustainable Marblehead meeting last night. In other towns that do this. It turns out to be a position that really pays for itself. I know when Winfield they do it they partner with Carrier energy and companies come in and in pay the capital for energy improvements and then you know split the difference. So anyhow, when you do I would be in full support of it. Any other thing is Select
+
+**[38:51](https://vimeo.com/779281303#t=2331s)** board member new and brought out the bump out of Westshore drive as someone that goes by they're all the time. I would really recommend when the signage goes in it goes out onto the edge because that bump out. Really sneaks up on it comes out of nowhere in the first time. There's a half of inch of snow, which can be any day.
+
+**[39:12](https://vimeo.com/779281303#t=2352s)** I think there's already been. Two cars that have they're under Carriage out and it's just going to happen again. Unfortunately, so if you have a sign there at least you know, what's here, I go by there all the time. It's like holy smokes. So anyhow, thank you. Thank you, Mr. Susan. Okay, do we have anybody?
+
+**[39:36](https://vimeo.com/779281303#t=2376s)** Missed okay, Mr. Albert. Are you there?
+
+**[39:41](https://vimeo.com/779281303#t=2381s)** Yes, I am. Thank you. We can hear you. Go ahead.
+
+**[39:48](https://vimeo.com/779281303#t=2388s)** so my name
+
+**[39:51](https://vimeo.com/779281303#t=2391s)** tell us to Road. I've been made aware of traffic safety concerns of residents the long Rockaway Avenue and Rock Cliff Road. And I want to preface the comment about to make my emphasizing. It's not a complaint about the Marvel head Police Department. It's not a complaint about Chief king or any of his officers. It is instead an object lesson on how we really expect. Police Department to do too much to do something that they're not equipped to do when it comes to traffic safety. So, let me tell you the story. More than six months ago two children aged four and five were nearly struck by a motor vehicle as the driver whipped around the corner from Rockaway onto Rockwell.
+
+**[40:38](https://vimeo.com/779281303#t=2438s)** Had adults not been there to pull them out of Harm's Way according to one parent like quote we would have had a tragedy. residents asking Dennis King for stop signing for Speed humps or reduce speed limit on Rockaway Avenue, really anything So in response Chief King directed Sergeant Finnegan who I understand handle such things to collect enforcement data of Rock Club. for seven days between July 15th and July 22nd data recorders measured the volume and speed of traffic on rockcliffe. The resulting data indicated an average speed just 15 miles an hour, which is well below the default speed limit on rock with 25
+
+**[41:24](https://vimeo.com/779281303#t=2484s)** miles. Chief King determined that the residents concerns were not supported by the evidence the Marblehead Police Department had collected. Rock Cliff Road did not get a stop sign or speed humps, and there was no need to reduce speeds on Rockaway Avenue. So do these residents concerns? In essence, he said no. Now it's interesting to me to just digress briefly the police could easily and immediately reduce. speeds on Rockaway Avenue without A single study or calling on any other department. And in fact, they could earn a bit of cash doing it. They could if they were so inclined issue
+
+**[42:10](https://vimeo.com/779281303#t=2530s)** citations to the vehicles parked. on Rockaway Avenues sidewalks There are a lot of vehicles routinely parked on the sidewalks. They must know that they drive by there. They must know that parking on a sidewalk violates CMR 700 505.5 those two. so issuing citations for violating that law which encourage those people to get their cars off the sidewalks. So I walked and move them onto the street where they belong. Those parked cars would in turn narrow the travel Lane which by the way is the same thing you talked about doing on Smith Street.
+
+**[42:55](https://vimeo.com/779281303#t=2575s)** on Westshore drop those bump out narrow the travel when you narrow the travel Lanes traffic slows and if I could just respond to the concerns about drivers hitting those currents. Guess what slow down? That's why they're there.
+
+**[43:14](https://vimeo.com/779281303#t=2594s)** Um, so you've got a proven way to reduce travel speeds independent of the person travel speed limit. so Am I criticizing the MPD for failing to issue those citations? Because if they did that they would anger residents and they would anger vehicle owners. And this is true throughout Marvel that I would suggest we could probably fund the entire town government on traffic violations below. But then we would essentially have a police force as an occupied. That's not what we want. We are driving technology. There are 20,000 residents in this town. There are 17,000 registered motor vehicles in London.
+
+**[44:04](https://vimeo.com/779281303#t=2644s)** So let me return though to this Rock Cliff Road speed enforcement study in Canada report showed average speed 15 miles an hour. No problem. But that's not looking at the real the data very carefully. I want to I have in front of me.
+
+**[44:27](https://vimeo.com/779281303#t=2667s)** The study and if you don't mind, I will.
+
+**[44:32](https://vimeo.com/779281303#t=2672s)** Is that all right? Okay, so I think everybody seeing what I'm saying, which is the the results of this study. And if you look you say that over the course of seven days there were 650 ones.
+
+**[44:48](https://vimeo.com/779281303#t=2688s)** again speed limits Fox but look at the right of that 651 number and you see most 119 motorcycle travel down rocket in Iraq Again, there's 17 vehicles in town. 0.7% 182 are motorcycles and yet here we have 18% of the trips down Rocklin made by motorcycles. So I don't know who like. Looks at this stuff and doesn't go wait a minute, right? But there's another Point here 651 vehicles in the course of seven days. Now those of you who are not familiar with the what I like to call Suburban Marblehead out
+
+**[45:34](https://vimeo.com/779281303#t=2734s)** here in Clifton. Brooklyn Road is a block long it runs between Rockaway Avenue, which runs all the way between Humphrey and Atlantic and another through Street, Clifton Avenue. It's 300 feet long. And yet somehow almost a hundred cars a day hundred drivers just feel the need to use that road. So the police did in the course study, the police concluded there was no need for enforcement, but the police did not. Take the next step which is to say wait a minute. Something's going on here. What's the origin of all this traffic where these people trying to get to and the reason they didn't is because it's not and therein
+
+**[46:21](https://vimeo.com/779281303#t=2781s)** lies the problem the public turns to the police. when they have a traffic safety concern and yet the police are only tasked with a small portion of improving Traffic Safety in town. They have a really critical but only partial they have a really critical role, but it's not comprehensive. We have Thatcher as our town manager. We have an engineering department. We have a planning department. We have these various departments and and the public could in theory contact each of them and hope for a response and as you know,
+
+**[47:07](https://vimeo.com/779281303#t=2827s)** After ignored emails and ignored phone calls. I finally just as an experiment sent a certified letter to every member of this board the head of the DPW the head of engineering, etc. Etc. I heard back. Thank you very much Aaron from Aaron. I heard back two years after I had initially emailed him from Chief King. Thank you very much Chief King. No word from DPW and so forth. So here is my bottom line my bottom line point. You have got to figure out a way. And other towns have done it. You don't have to reinvent the wheel. For the public to be able to present a traffic safety concern. to ask for traffic calming measures and then not only have the town respond in a comprehensive
+
+**[47:55](https://vimeo.com/779281303#t=2875s)** way across the Departments and with the oversight of this for an appointed for But also let citizens see where other people have had the same experience lakeshill Road 10 years ago. YMCA exactly the same story as we're see as we're seeing now on rock cliff and by the way. The police chief still doesn't want to do anything and doesn't understand the rules when it comes to reducing speed limits from 30 to 25 and establishing school safety zone. So again the bottom line, please come up with a process come up with a system that allows all of us to air. Our
+
+**[48:42](https://vimeo.com/779281303#t=2922s)** concerns see other people's concerns and have them responded to in a holistic that comprehensive way that doesn't put the police in a position that they don't want to be and thank you. Let's connect one last thing completely separate. I I had hoped last week to make public comment Moses probably remember and I felt really stupid that I wasn't there from the beginning the meeting. So I went to look for the the recording of the meeting and I can see the meeting minutes of course and all of that easily on the town's website and this is really I guess the question for Kyle or whoever handle such thing, but it would be wonderful that these recordings which are being done. Were were kind of posted the same way the meeting
+
+**[49:28](https://vimeo.com/779281303#t=2968s)** minutes and the agenda. so but what they separate I appreciate your listening to me.
+
+**[49:37](https://vimeo.com/779281303#t=2977s)** I hope Mr. Albert. Thank you. Sorrow as usual we've taken notes of a few questions and you know, appreciate your appreciate your input. Is there anybody else?
+
+**[49:54](https://vimeo.com/779281303#t=2994s)** I actually it's my 10 year old daughter asked we're listening to the meeting. She could make a comment. So I'll let her speak. Thank you, Sarah. your payment address Hi, my name is Catherine Wilmington. My address is 46 Speed Street, and I'm concerned about the vampire between Pleasant and Village. I feel unsafe as a kid walking home because
+
+**[50:24](https://vimeo.com/779281303#t=3024s)** I've seen tire marks in the grass and on the sidewalk and I feel like there's not enough space for some vehicles to turn.
+
+**[50:38](https://vimeo.com/779281303#t=3038s)** Okay, thank you. Well, thank you very much for registering that concern. I know they I know the construction is not quite finished. So hopefully we'll have a new we'll have better visibility on that and we'll be able to make that intersection safe. So, you know, that's Thatcher has taken note, and we will we will look into it. Thank you very much for your contribution. Thank you. Are there any other comments? know again unshare his screen Yeah.
+
+**[51:34](https://vimeo.com/779281303#t=3094s)** Okay, great someone with a hand. Okay, if there's I don't know who that Yahoo. It's that someone's appears to have their hand up.
+
+**[51:53](https://vimeo.com/779281303#t=3113s)** Yes. Alan we we see you. Can we hear you? Hello. Hello, go ahead. well further to the intersection at Beach Street, and what's actually it's a Smith Street and Devereaux Unfortunately, it's basically going to be it's a disaster over there the construction. There's insufficient now the exit from the post office. You can't come out of the post office without turning into the oncoming traffic because the radius is too small. The corner that she's talking about. There's already been at least two trucks of driven over that corner.
+
+**[52:35](https://vimeo.com/779281303#t=3155s)** now a part of the issue over there's which I which I wrote I wrote a letter to Thatcher and I believe to you as well with my reservations about the whole construction over there is because you've lost like six parking spaces over there. And that's a very heavily. That's a that's an area that has requires a lot of parking because of all the businesses and Piper field right adjacent to it. And on my experience when you haven't have an athletic event or something there people are parking all the way down to basic to Atlantic Avenue. So you have six valuable spaces that have been lost. And there's bump out. Restricts the flow so you can't you can't exit from
+
+**[53:20](https://vimeo.com/779281303#t=3200s)** the from the from the post office anymore. I can't I'm afraid to see what happens when it starts snowing because I can't Envision how the snow is going to be cleared. So I think the whole it was very ill-conceived how it was constructed. now on one of my favorite topics Which I've also said several letters that to Thatcher on. Is the intersection at Beach and Atlantic Avenue? if I went to somebody and said, please build me a intersection and make it at least ADA compliance. You possibly can show all the mistakes that could be made. You have here.
+
+**[54:07](https://vimeo.com/779281303#t=3247s)** Battery indicated that well Jason originally and now Patrick both indicated that it's supposed to be remedied what's been two years and it has not been remedy. So I guess the question is when is that going to be remedied and two? I think somebody should be rethinking the Smith Street. Situation because it's going to be a disaster this winter. And as you can see what the 10 year old girls already feeling unsafe.
+
+**[54:35](https://vimeo.com/779281303#t=3275s)** Thank you. Thank you for your for your input there. It's duly noted. Any others to their hand up Kyle? Okay.
+
+**[54:47](https://vimeo.com/779281303#t=3287s)** Okay good with that. I'd like to move to the town administrative administrators update and Thatcher. If you could also give us a sense of the calendar Logistics around. School committee and Housing Authority that sure and it is logistics. And John so there are now two joint meetings that need to be scheduled one obviously for the vacancy on the school committee. And the other one is the Housing Authority. So we're working the calendar on both. So for the school committee one again, there was you know an absence. We're trying to determine the dates that everyone is available. We starting with the board.
+
+**[55:34](https://vimeo.com/779281303#t=3334s)** I've had. You know numerous conversations with Sarah Fox in regard to this. We're trying to kneel down this board's availability dates and then kick it over to the school side to fill in rather than rather than trying to. Heard Nine Cats will do five and four on that. So Kyle's working the calendar. Got the dates out. Once we have everybody's final availability, which we may not have I don't know has that we will kick it over to the school side and then we'll start the process for the Housing Authority vacancy. So it looks like it's going to be sometime in January. And again, we it was impossible really to be able to kind of get everybody rallied up
+
+**[56:21](https://vimeo.com/779281303#t=3381s)** over the over the holidays in December. And the reason we did not do today tonight is because we had one member not able to attend for personal reasons. And in that situation, I think, you know the policy really is to Schedule a time when all the members can meet particularly when it comes to appointments and particularly when it comes to the situation when we have you know, we need that we need it odd number of votes. So we don't replicate the you know, the potential stalemate which would really waste everybody's time. So that's the rationale behind seeking another another date where everybody can be there and I'll add we've reached out to all the candidates and just told them to stand by so they're fully aware of
+
+**[57:11](https://vimeo.com/779281303#t=3431s)** Tonight was not the night and we will notify them all. We determine schedule. Yeah, I mean we do have I guess we've got some some visibility on some dates, but I won't I won't say for sure at this point kind of mid January end of January timeframe, you know, so I give us a little more time too. I think you know, we were moving a pace very quickly with the original right date. So You know.
+
+**[57:39](https://vimeo.com/779281303#t=3459s)** I think that's a See anything else? Well, I'll add I didn't have a lot because met just last week and a lot of the projects that I mentioned here and these updates are just ongoing making progress, but this board approved back in September September 8th and 2021 the
+
+**[58:03](https://vimeo.com/779281303#t=3483s)** River Rhine painting. So there was a painting that was found in the building when they were doing the Reconstruction. It had been crated for decades. It was determined not to be a Marblehead specific painting and so forth. So at the request of Chris Johnson chair the Marblehead historical commission this board authorized to Surplus it and put a he is happy to report that there was an auction his opponent's Skinner auction held the auction and we received 850 dollars for the painting which was actually better than what was expected. So it was a successful Priceless, but right right now prices, but it
+
+**[58:49](https://vimeo.com/779281303#t=3529s)** was better than expected. So
+
+**[58:52](https://vimeo.com/779281303#t=3532s)** that's the news update on that the last thing I mentioned just you know in the prompt as far as the sustainability coordinator. It is a topic of discussion at the green Marblehead committee. working on
+
+**[59:13](https://vimeo.com/779281303#t=3553s)** The discussion there as whether you know, whether to present now or whatever. I kind of push back we are rolling into budget season that it should be, you know, if it's going to be part of the request for the budget. That's the appropriate time. For for presentation, but it'll also be part of the larger context of a report. Coming out. We may give we're discussing giving sort of a preliminary update to this board as to the work rather than waiting till you know, the final final report just to keep the board informed as to the conversation and where we are on the project, so we'll talk about that for you know, January maybe time frame to add a brief presentation on that but sustainability coordinator is a
+
+**[1:00:01](https://vimeo.com/779281303#t=3601s)** closer to the top of the list of topics that those meetings and we're doing a lot of research to get a lot of information. So that's that meets I I make a living getting put on the spot. So I don't mind that's all I have for any updates pinning any questions we have So the last item on the on the on the agenda is Select board, you know any any public announcements any in comments? You might want to.
+
+**[1:00:33](https://vimeo.com/779281303#t=3633s)** Just I just I was just thinking because of the news and the last week.
+
+**[1:00:39](https://vimeo.com/779281303#t=3639s)** There'd been in the FBI had made an arrest because of the repeated attacks are bomb threats at the Children's hospital because of their transgender care and just in the wake of the Colorado shooting the rhetoric feels like in the last couple months has been on a national level, you know, I mean across the country just something to be aware of and we're lucky to live and very tolerant what I feel is very tolerant open-minded community and I guess just wanted to reiterate to those in that Community the lgbtq community that our board, you know stands in solidarity with with that community and you know that, you
+
+**[1:01:25](https://vimeo.com/779281303#t=3685s)** know condemn. condemn any hatred and and bigotry in that way Thank you. I don't have anything tonight Jackie just have everyone have a happy holiday and stay safe and enjoy. Yes. I'd like to say the same thing happy holidays to everybody. But I'd also like to make a special note to service members who are still overseas and particularly those who can't get home for the holidays. So if we could keep them in our prayers, that would be great. One more thing. Sorry. I just thought of this shouldn't we? Send a letter of condolence to the space family. Have we not did we not we haven't right? Gary's family Gatsby's I thought you I think yeah we voted last week. We did I think
+
+**[1:02:13](https://vimeo.com/779281303#t=3733s)** we did. Yes. Yeah we did. Okay. Yeah, we'll knows. I don't know we did we did. I remember because I didn't find I started jumping into the next thing and when Hadn't voted. So we had to like I had to start I just done that's great. Thank you. Skip the heartbeat there motion to adjourn. So moved second. I was in favor here by here by our journey, okay?
+
+**[1:02:48](https://vimeo.com/779281303#t=3768s)** Yeah, I just throwing a couple of jokes, right? I am impressed. Pronunciation for today, especially the the Indonesians so it's just cool, but who knows? Seattle, yeah, but sure.

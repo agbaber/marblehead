@@ -1,0 +1,578 @@
+---
+slug: select-board-2023-02-08
+board: select-board
+board_display: "Select Board"
+date: 2023-02-08
+title: "Select Board: February 8, 2023"
+vimeo_id: 797206782
+vimeo_url: "https://vimeo.com/797206782"
+duration_seconds: 6160
+ai_generated: true
+status: published
+source: vimeo-auto+llm
+
+
+summary_card:
+  headline: "Select Board approves revolving funds, town meeting warrant articles, and multiple facility use requests"
+  summary: "The Select Board reviewed the Green Marblehead Committee's draft Net Zero Roadmap and a historic assessment of the Franklin Street Firehouse, estimated at approximately $2.3 million for full renovation. The board voted unanimously to authorize revolving fund accounts totaling over $7 million for FY2024 and to sponsor seven specific town meeting warrant articles for the 2023 Annual Town Meeting. Several routine facility use, licensing, and contract items were also approved unanimously."
+  decisions:
+    - "Approved FY2024 revolving fund accounts totaling over $7 million across multiple departments"
+    - "Approved sponsoring standard town meeting warrant articles for 2023 Annual Town Meeting"
+    - "Approved sponsoring seven specific warrant articles including Franklin Street Fire Station Renovations and HR department creation"
+    - "Approved Marblehead Museum use of Old Townhouse and one-day liquor license for March 10 fundraiser"
+    - "Approved Abbott Hall use for June 23 wedding ceremony"
+    - "Approved appointment of Benjamin Leibowitz as Local Inspector"
+    - "Approved contract extension for Collins Center ADA Transition Plan to June 30, 2023"
+    - "Approved one-day liquor license for Marblehead Little Theater Valentine's Day concert"
+    - "Approved Abbott Hall use for Eagle Scout Court of Honor on April 30"
+    - "Approved minutes of January 18 and January 23, 2023"
+    - "Approved delegating OML complaint response to Town Counsel"
+    - "Approved contract with CES Northeast LLC for new fuel station system at $805,825.12"
+    - "Approved engineering services contract with Haley Ward Inc. at up to $200,000/year for three years"
+    - "Approved wicked 10/20 Miler road race on March 26, 2023"
+    - "Approved private drain connection license for 286 Ocean Avenue"
+    - "Approved Marblehead School of Music use of Abbott Hall on May 7"
+    - "Approved sending condolence letter to family of deceased DPW employee David Cameron"
+  votes:
+    - motion: "FY2024 revolving fund accounts authorization"
+      result: "in favor (unanimous)"
+    - motion: "Standard town meeting warrant articles"
+      result: "in favor (unanimous)"
+    - motion: "Seven specific town meeting warrant articles"
+      result: "in favor (unanimous)"
+    - motion: "Marblehead Museum Old Townhouse use and fee waiver"
+      result: "in favor (unanimous)"
+    - motion: "Marblehead Museum one-day liquor license"
+      result: "in favor (unanimous)"
+    - motion: "Abbott Hall wedding ceremony use"
+      result: "in favor (unanimous)"
+    - motion: "Appointment of Benjamin Leibowitz as Local Inspector"
+      result: "in favor (unanimous)"
+    - motion: "Collins Center ADA contract extension"
+      result: "in favor (unanimous)"
+    - motion: "Marblehead Little Theater one-day liquor license"
+      result: "in favor (unanimous)"
+    - motion: "Eagle Scout Court of Honor Abbott Hall use and fee waiver"
+      result: "in favor (unanimous)"
+    - motion: "Approval of January 18 and January 23 minutes"
+      result: "in favor (unanimous)"
+    - motion: "Delegate OML complaint response to Town Counsel"
+      result: "in favor (unanimous)"
+    - motion: "CES Northeast LLC fuel station contract at $805,825.12"
+      result: "in favor (unanimous)"
+    - motion: "Haley Ward engineering services contract"
+      result: "in favor (unanimous)"
+    - motion: "Wicked 10/20 Miler road race approval"
+      result: "in favor (unanimous)"
+    - motion: "286 Ocean Avenue private drain connection license"
+      result: "in favor (unanimous)"
+    - motion: "Marblehead School of Music Abbott Hall use"
+      result: "in favor (unanimous)"
+    - motion: "Condolence letter to David Cameron's family"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 0
+    end_seconds: 1205
+    headline: "Green Marblehead Committee presents draft Net Zero Roadmap with 73 actions"
+    dek: "MAPC senior clean energy specialist Brooks Winner presented a draft roadmap targeting Net Zero emissions by 2040, including over 70 community-wide strategies."
+    summary: |
+      The Green Marblehead Committee, working with the Metropolitan Area Planning Council (MAPC), presented a draft Net Zero Roadmap developed with state grant funding. The roadmap includes more than 73 actions across categories: implementing the roadmap, homes and businesses, mobility and transportation, clean energy systems, natural systems, and outreach and education.
+      
+      Key recommendations highlighted include hiring a sustainability coordinator, expanding public EV charging, advocating for transit, implementing a public housing solar program, and increasing composting participation. MAPC noted that some communities have found sustainability coordinator positions can pay for themselves through grant access and energy savings, and that federal funding through the Bipartisan Infrastructure Law may help with startup costs.
+      
+      A public session was scheduled for February 15 to gather community feedback before the roadmap is finalized. The draft was published on the Green Marblehead Committee website on the day of the meeting.
+    key_speakers: ["Brooks Winner (MAPC Senior Clean Energy Specialist)", "Thatcher (Green Marblehead Committee member)", "Alexa (Green Marblehead Committee member)"]
+  - topic: public-safety
+    topic_confidence: 0.9
+    start_seconds: 1205
+    end_seconds: 3117
+    featured: true
+    headline: "Franklin Street Firehouse full renovation estimated at approximately $2.3 million"
+    dek: "Architects Foster Architects presented a historic assessment of the 1886 firehouse identifying exterior, structural, mechanical, and accessibility needs, with a comprehensive renovation cost estimate of about $2.3 million in 2022 dollars."
+    summary: |
+      Foster Architects (Ryan Foster and Eric Christiansen) presented findings from a Massachusetts Preservation Projects Fund (MPPF)-funded building assessment of the Franklin Street Fire Station, an 1886 wood-frame structure described as one of the oldest continuously operated fire stations in Massachusetts.
+      
+      **Key existing conditions identified:**
+      - Chimney masonry deterioration and missing vented cap allowing water infiltration
+      - Deteriorated exterior wood siding (non-original shingle siding over original clapboard)
+      - Failed gutter seals and roof flashings causing water infiltration
+      - Structural instability due to widening of the apparatus bay door over time
+      - Aging mechanical, electrical, and plumbing systems recommended for full replacement
+      - Accessibility deficiencies that would be triggered once renovation costs exceed 30% of assessed building value ($371,900)
+      
+      **Cost estimate breakdown (June 2022 dollars, with 4.5% escalation):**
+      
+      | Scope | Estimated Cost |
+      |---|---|
+      | Exterior renovation only | ~$1 million |
+      | Interior renovation | ~$1.1 million |
+      | Ground floor accessible toilet room | ~$85,000 |
+      | **Total comprehensive project** | **~$2.3 million** |
+      
+      The town planner noted a strategy similar to Fort Sewell — combining grant funding, community fundraising, and town appropriations. The fire chief noted that an AFG (Assistance to Firefighters Grant) could offset sprinkler system costs. Creative fundraising ideas include auctioning decommissioned fire alarm boxes. A town meeting warrant article for Franklin Street Fire Station Renovations was subsequently sponsored by the board.
+    key_speakers: ["Ryan Foster (Foster Architects)", "Eric Christiansen (Foster Architects)", "Becky (Town Planner)", "Fire Chief"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 3117
+    end_seconds: 3739
+    headline: "Board unanimously authorizes FY2024 revolving fund accounts totaling over $7 million"
+    dek: "The Select Board voted to authorize 12 departmental revolving fund accounts for FY2024 under MGL Chapter 44 Section 53E½, with the largest being the Hobbs Memorial Fund at $3,744,000."
+    summary: |
+      The board authorized the following revolving fund accounts for FY2024:
+      
+      | Department/Fund | Authorized Amount |
+      |---|---|
+      | Animal Control | $20,000 |
+      | Council on Aging | $250,000 |
+      | Board of Health – Commercial Waste Disposal | $1,062,069 |
+      | Board of Health – Vaccines | $10,000 |
+      | Highway Street Opening Fees | $150,000 |
+      | Sump Pump Improvement | $10,300 |
+      | Conservation Fines | $75,000 |
+      | Storm Water and Erosion Control | $10,000 |
+      | Historical Commission Gift Shop | $25,000 |
+      | Recreation and Parks | $1,500,000 |
+      | Marblehead Public Schools Special Ed | $500,000 |
+      | Hobbs Memorial Fund | $3,744,000 |
+      
+      The town administrator explained that revolving fund revenues come from fees and, when used for related services, offset the tax levy rather than drawing from the general fund.
+    key_speakers: ["Town Administrator"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 3739
+    end_seconds: 4730
+    headline: "Board sponsors seven specific FY2023 town meeting warrant articles including HR department and electronic voting"
+    dek: "In addition to standard recurring articles, the board voted to place seven new articles on the 2023 Annual Town Meeting warrant covering personnel, governance, the firehouse, and public trees."
+    summary: |
+      After approving standard recurring articles, the board sponsored seven new warrant articles:
+      
+      1. **Administrative Benefit Amendment** – Updates non-union employee benefits including longevity pay, elimination of sick bonus (rolled into longevity), and vacation accrual schedule changes.
+      2. **Amend General Bylaws for New Human Resources Department** – Creates a formal HR department; two existing payroll/benefits staff would transfer; a Director of HR position would be created, potentially filled by the Finance Director initially.
+      3. **Allow Use of Electronic Counting Devices** – Amends bylaws to permit electronic clicker voting at future town meetings (not for immediate use).
+      4. **Amend General Bylaws – Physical Examinations** – Limits mandatory pre-employment physicals to positions with physical requirements (fire, police, DPW); removes requirement for administrative and other roles.
+      5. **Franklin Street Fire Station Renovations** – Places the comprehensive renovation project on the warrant.
+      6. **Public Shade Trees Protection and Fines** – Allows placement of public trees on private property within 20 feet of the public way with owner permission and easement, to support the sidewalk replacement program.
+      7. **Department of Public Works** – Adds the Tree Department formally to DPW (stormwater/drain language updates deferred to a future year).
+      
+      Town Moderator Jack Aftergees confirmed the electronic voting article is a prerequisite bylaw change before any voting system could be adopted.
+    key_speakers: ["Town Administrator", "Jack Aftergees (Town Moderator)"]
+  - topic: recreation-events
+    topic_confidence: 0.95
+    start_seconds: 4730
+    end_seconds: 5186
+    headline: "Board approves facility use and liquor licenses for Marblehead Museum, Abbott Hall wedding, Little Theater, and Eagle Scout ceremony"
+    dek: "Four separate facility and licensing requests were approved unanimously, including an Eagle Scout Court of Honor for Xavier Rosado whose project improved trails at Seaside."
+    summary: |
+      The board approved the following requests in sequence:
+      
+      - **Marblehead Museum**: Use of Old Townhouse on March 10, 2023 (6–8 PM) for a fundraising event; rental fee waived. One-day liquor license also approved (alcohol from Cappy's Importing).
+      - **Jeff Hunt**: Abbott Hall use on June 23, 2023 (3–5 PM) for a wedding ceremony.
+      - **Marblehead Little Theater**: One-day liquor license for a Valentine's Day concert on February 11, 2023 (6–11 PM) at 12 School Street (alcohol from Rumson's Rum).
+      - **Eagle Scout Xavier Rosado**: Abbott Hall use on April 30, 2023 (10 AM–2 PM) for Eagle Scout Court of Honor; rental fee waived. Xavier described his Eagle Scout project improving trails, removing invasive species, and re-graveling paths at the Seaside Conservancy area.
+    key_speakers: ["Xavier Rosado (Eagle Scout)", "Lauren McCormick (Marblehead Museum Executive Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 5186
+    end_seconds: 5430
+    headline: "Board approves minutes, delegates OML complaint response to Town Counsel"
+    dek: "Minutes from January 18 and January 23 were approved, and the board delegated response to an Open Meeting Law complaint filed by Alan Waller on February 1, 2023 to Town Counsel."
+    summary: "The board voted unanimously to approve meeting minutes from January 18 and January 23, 2023. It also voted to delegate the response to an Open Meeting Law complaint filed by Alan Waller on February 1, 2023, to Town Counsel. A draft response letter was noted as nearly final with possible minor tweaks before transmittal."
+    key_speakers: ["Town Administrator"]
+  - topic: trash-dpw
+    topic_confidence: 0.88
+    start_seconds: 5430
+    end_seconds: 5633
+    headline: "Board awards $805,825 fuel station contract and $200,000/year engineering services contract"
+    dek: "CES Northeast LLC was awarded a contract to replace the town's 1960s-era underground fuel tanks with a new above-ground system funded by ARPA; Haley Ward Inc. received a three-year drain engineering services contract."
+    summary: |
+      **Municipal Fueling Station:** The board awarded a contract to CES Northeast LLC of Albany, NY in the amount of $805,825.12 to remove two underground storage tanks (installed circa 1960) and install a new above-ground fueling system with updated key-card tracking. The project is funded by American Rescue Plan Act (ARPA) funds previously appropriated. The fuel master station will be temporarily relocated to maintain continuous service during construction.
+      
+      **Engineering Services – DPW Drains:** The board awarded a three-year professional engineering services contract to Haley Ward Inc. (63 Great Road, Suite 200, Maynard, MA) at an annual not-to-exceed cost of $200,000, funded from the $400,000 drain article approved at the previous year's town meeting.
+    key_speakers: ["Town Administrator", "DPW representative"]
+  - topic: recreation-events
+    topic_confidence: 0.9
+    start_seconds: 5576
+    end_seconds: 5762
+    headline: "Board approves Wicked 10/20 Miler road race on March 26 and private drain connection at 286 Ocean Avenue"
+    dek: "The run by BNS Fitness will start and finish at Salem Waterfront Hotel with all runners exiting Marblehead by 11:40 AM; VFW Post and Alley Kastner Scholarship Foundation are designated beneficiaries."
+    summary: |
+      The board approved Ashley Steves/BNS Fitness to hold the Wicked 10/20 Miler road race on Sunday, March 26, 2023, subject to police and Recreation & Parks approval and required insurance. Start times begin at 8:00 AM with all runners out of Marblehead by 11:40 AM. The VFW Post in Marblehead and the Alley Kastner Scholarship Foundation are to be among the event's charity beneficiaries.
+      
+      The board also approved a private drain connection license agreement for 286 Ocean Avenue (QBW LLC), which had completed the required DPW approval process.
+    key_speakers: ["Town Administrator"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 5762
+    end_seconds: 6012
+    headline: "Board approves Marblehead School of Music Abbott Hall use; DPW employee David Cameron memorialized"
+    dek: "Abbott Hall was approved for student recitals on May 7 and the board voted to send condolences to the family of DPW water and tree department employee David Cameron."
+    summary: |
+      Jennifer Spungeon of the Marblehead School of Music received approval to use Abbott Hall on Sunday, May 7, 2023 (9 AM–8 PM) for student recitals, subject to standard rules, fees, and insurance.
+      
+      The DPW's Amy delivered a tribute to David Cameron, a longtime employee who worked in both the water and tree departments, noting his dedication to Marblehead's infrastructure. The board voted unanimously to send a condolence letter from the board to his family.
+    key_speakers: ["Amy (DPW)", "Town Administrator"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 6012
+    end_seconds: 6160
+    headline: "Board reschedules February 22 meeting to March 1 due to quorum issues; ClearGov budget software update provided"
+    dek: "The town administrator reported that ClearGov budgeting software is now live for all department heads and the board rescheduled a meeting date due to an anticipated quorum problem."
+    summary: |
+      The town administrator reported that ClearGov budgeting software has been activated for all department heads, with five years of budget and accounting data loaded. Department heads were sent login credentials to begin training via the ClearGov Training Academy. The administrator noted this year will involve some learning curve but expects full proficiency by the next fiscal year budget cycle, with a public transparency portal to be enabled in the future.
+      
+      The board also agreed to reschedule the February 22 Select Board meeting to March 1, 2023, due to an anticipated inability to constitute a quorum. The March 8 and March 22 meetings were left unchanged.
+    key_speakers: ["Town Administrator"]
+---
+
+> Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
+> proper names and dollar figures occasionally misheard. Click any timecode to
+> jump to that moment in the source video.
+
+**[0:00](https://vimeo.com/797206782#t=0s)** Okay. Like that, I think he was going to come. If not, I'll go to well, I'll go to Becky and go to number two, okay? Okay, great. I think we're coming up on the secret. He's I think breakfast is signing on. Okay, perfect timing Brooks. Okay, I'd like to bring this meeting to order also want to announce that this meeting is being recorded and videotaped via zoom and we have a pretty long 21 22 agenda item I item agenda tonight and we'd like to start with the green Marblehead committee and Thatcher if you would start us off, that'd be great. Okay. Sure. So the green Marblehead committee, which was formed by the select board.
+
+**[0:45](https://vimeo.com/797206782#t=45s)** I think 2020 to focus on creating energy Baseline and and look at the municipal buildings learning from other communities for initiative and efforts to lower the carbon footprint. Of Marblehead, so it's already done some work in the in the past year. So the step that it's on now is developing a net zero roadmap. Um an action plan to help guide the community forward in the efforts. So we've been working closely with Metropolitan air Planning Commission. That's been helping us in Brooks winner is the the professional staff from the mapc that's working with the committee to
+
+**[1:31](https://vimeo.com/797206782#t=91s)** guide us through this whole process. So the intent tonight is we are we're soon to present a final plan. But before a final plan is presented, it's an opportunity for a check-in with the board to look at really a final draft and this would be followed on February 15th. We will have public session to allow the public to have a look at the final final draft version before we publish it as final so with that. I'm going to turn it over to Brooks. Who's unmute them. Yeah, can you all hear me? You know, we can hear you loud and clear Brooks? Okay. Yeah have some slides that I can bring up if that would be helpful, or I can just kind of
+
+**[2:19](https://vimeo.com/797206782#t=139s)** talk talk through with me. See if I can share my screen here. and
+
+**[2:26](https://vimeo.com/797206782#t=146s)** great. Okay. Well good evening everyone. Thanks for that introduction. Thatcher. A stetra said I'm Brooks winner. I'm a senior clean energy specialist with the clean energy department at the metropolitan area planning Council and just as a quick refresher napc is the regional planning Agency for the 101 cities of towns of greater Boston, including Marblehead and our clean energy department does a lot of local climate action planning throughout the region. So, you know NetZero road maps like this are a big part of the work that we do. And we've been working as Thatcher said with the green Marblehead committee over the last couple years first through the climate visioning
+
+**[3:13](https://vimeo.com/797206782#t=193s)** project that was completed in 2020. So some of you may want to tonight by 12 14 Remember the the climate Vision document that we produced back in 2020 that was adopted by the select board back. Then this is really an extension of that and sort of a an expansion of the vision that we laid out back in 2020. So after we wrapped up the vision, we went out and got a grant from the Massachusetts executive office of energy and environmental Affairs to work with four three other MLP communities Peabody IPS walk Ipswich and Belmont to to figure out what a local Net
+
+**[3:59](https://vimeo.com/797206782#t=239s)** Zero roadmap could look like for communities that are served by Municipal Utilities and through the project. We're producing greenhouse gas inventory to sort of establish a baseline of emissions. The communities are working against and then leading NetZero planning processes and and developing these net. road maps which basically sort of help chart a course for reaching Net Zero greenhouse gas emissions to to align these communities with the state's goal of achieving Net Zero by 2050 or or in marbleheads case a goal of reaching that Zero by 2040. um, so
+
+**[4:47](https://vimeo.com/797206782#t=287s)** we just published earlier today on the green Marblehead Committee website a draft a pretty well fleshed out draft of the Marblehead Net Zero roadmap. So this was developed by the committee with with support from mapc. It's summarizes. The greenhouse gas inventory that we conducted and the sort of the engagement process and Community input that we received into the plan including a workshop that we hosted in late 2021 and an input survey that we published on the website to to gather thoughts and and ideas from community members about what should go into the roadmap. And and the real core of it
+
+**[5:34](https://vimeo.com/797206782#t=334s)** is more than 70 actions or strategies that Marblehead. Can use to reduce its emissions and chart the course to achieving its Net Zero goal. And and the actions in the plan are are in the following categories implementing the roadmap. So how how you're going to get it done our homes in businesses or the sort of producing emissions from buildings. Getting around marbleheads mobility and transportation where our energy comes from or sort of Clean Energy Systems. There's a whole section on our natural systems or nature-based Solutions, like tree planting and composting and then there's an other actions section
+
+**[6:21](https://vimeo.com/797206782#t=381s)** that includes some some general actions, including Outreach and education teaching people about clean energy and and why this is important
+
+**[6:35](https://vimeo.com/797206782#t=395s)** So I'm not going to go through all 73 actions this evening. I know you have a big long agenda to get to but just wanted to give you a sample of what's in there and then would encourage you all to take a look at the draft that we published earlier today. So the actions of recommendations and in the plan include higher sustainability coordinator to oversee the plan and the implementation provide annual progress updates to the select board. Create and preserve efficient affordable housing and implement the strategies outlined in the Marblehead housing production plan. advocate for and adopt the new specialized stretch energy code expand public EV charging stations advocate for community and Regional Transit
+
+**[7:23](https://vimeo.com/797206782#t=443s)** needs coordinate with utilities to address major gas leaks and I was actually meeting with your representative armeni earlier today to talk about a bill that she's introduced that that would allow municipalities to have a little more leverage and in working with utilities Gas Utilities on that issue. Um Implement a public housing solar program significantly increase participation in composting programs and educate contractors and residents about clean energy and electrification. So that's just a short list of some of what's in the roadmap. And in addition to the the draft of the roadmap. There are
+
+**[8:11](https://vimeo.com/797206782#t=491s)** a couple of appendices including a summary table that does a good job sort of condensing. What is I think over a 30-page documents down into a few pages to give folks a sense of of the the full scope of of the actions and then we also included an appendix that outlines the greenhouse gas inventory methodology. So how we calculated that emissions Baseline using Maps greenhouse gas inventory tool.
+
+**[8:45](https://vimeo.com/797206782#t=525s)** So here's the plug section of my presentation. This is you can find the draft of the roadmap and the appendices on on the green Marblehead Committee website now and or visit mapc.ma slash Marblehead - roadmap and that'll take you to to this page here. And we're also going to be publishing an input form where folks can share their thoughts about what needs clarification anything that they think is missing from the plan and other feedback that they want to give so that'll be going up soon.
+
+**[9:28](https://vimeo.com/797206782#t=568s)** and and then I also yeah, that's your mentioned the public meeting that we're holding next Wednesday from 6 to 7:30. Also ones are on on Zoom. That'll be a chance for folks to hear a little bit more about what's in the roadmap and provide provide their thoughts and and ask any questions that they have so would yeah would encourage anybody interested to join us there and the registration info is is at that same mapc.ma/marblehead Dash roadmap or folks can scan the QR code there. and yeah, I just wanted to Extend my gratitude to the members of the green
+
+**[10:15](https://vimeo.com/797206782#t=615s)** Marblehead committee Thatcher and Alexa are here tonight and Becky current to won't name them all but it's been a real pleasure to work with the with this group. It's been a long a long process. A lot of work has gone into the roadmap also want to thank the various members of the community who have showed up to our meetings to provide their their thoughts and ask good questions. And with that if members of the select board have any questions I can take those now,
+
+**[10:48](https://vimeo.com/797206782#t=648s)** Questions, right Brooks. Would you mind going back to the recommendations that you had that slide? started with sustainability coordinator Yes, thank you. First of all, just thank you to those that participated in this roadmap and planning process. I mean, obviously this is the existential crisis that we find ourselves in and it's just wonderful that we have very passion passionate citizens activists on this and honestly subject matter volunteers and our in our community stepping forward to help us reach these goals. So sustainability coordinator Brooks, I've heard this mentioned a number of times. Obviously. This
+
+**[11:33](https://vimeo.com/797206782#t=693s)** has an impact for municipalities budget. Can you Could you please maybe give us some direct us to some towns that have this position and that maybe we could reach out to and how do towns monitor or do you know how to Town's monitor sort of the metrics for the performance of of a sustainability coordinator? And and is that something that like
+
+**[12:03](https://vimeo.com/797206782#t=723s)** you see as like I guess how important do you see that to achieving the goals and and the steps in the roadmap? Yeah, that's that's a great question. And it's actually one that we have been discussing both with the with the whole committee and Thatcher and Becky and Eileen Mathieu from sustainable Marblehead create a form sort of a sub subcommittee or working group of the committee to to discuss that that recommendation specifically. So yeah, I think there are a number of communities to point to and Eileen and Thatcher and Becky have connected with some of them already.
+
+**[12:48](https://vimeo.com/797206782#t=768s)** I so there are 70 73 actions in in the roadmap not all of them. Well, yeah, some of them are ones that mmld can do others implicate. Marblehead Public Schools, but what I think this is an important recommendation in or an action in in the roadmap because it's what we've seen from other communities is that it's very helpful to have a backstop or a quarter quarterback. I guess or Super Bowls coming up this weekend to implement these plans. So two things I'll note one is that there's some some really interesting research that the committee has has found
+
+**[13:35](https://vimeo.com/797206782#t=815s)** from a few different communities showing that these positions can often pay for themselves through Grant funds and or Energy savings that doesn't help with the startup costs of hiring that person obviously, but the good news there is that there there may also be Federal funding available coming soon through the bipartisan infrastructure law that Marblehead might be able to get access to That they could help with with some of those startup costs the other option that that we've talked about a little bit with the committee is the potential to to look at a shared position and and Regional collaboration collaboration with other communities in the area. And that's something that
+
+**[14:22](https://vimeo.com/797206782#t=862s)** mapc has worked with the number of communities most recently Chelsea Revere and Winthrop who are sharing a the north Suffolk office of resilience and sustainability to positions that are shared across those three communities and and we've seen that work really well as well. You and just my only other question is.
+
+**[14:47](https://vimeo.com/797206782#t=887s)** you know our
+
+**[14:51](https://vimeo.com/797206782#t=891s)** sorry.
+
+**[14:54](https://vimeo.com/797206782#t=894s)** If you had to so I guess the Green community the green committee are that we appoint will be prioritizing these these and actions in terms of in the reporting to us. Is that how we see this? I yeah, I mean that's I think that's a question and obviously maybe it's an input to their to their plan to the draft. That's great. I don't thank you. Thank you any thoughts. Yeah, the only thing Brooks thank you very much for the presentation. The only thing I would ask ad is you know, if there's any way to look at those 73 actions and to see if there is kind of energy saving return on investment and Roi similar to what we did with the but change swapping out all the street lights to LED. I think that was kind of you know
+
+**[15:40](https://vimeo.com/797206782#t=940s)** top of mind no brainer and you know, if we can identify those types of initiatives that might have a natural Roi that would be great and I think on a second level it's kind of you know, what what are the most likely to be funded from alternate sources, you know federal and state monies that would help kind of Orient. I think the town from a you know from a financial impact point of view. Let's say that that would be my only Thought and feedback on your on your presentation. Yeah, certainly and we can we I think we we've done some of that. We actually had a really great presentation at the committee a couple couple meetings ago. Now from from a member of sustainable Marblehead talking about the opportunities that
+
+**[16:27](https://vimeo.com/797206782#t=987s)** the the new the inflation reduction act and by bipartisan in infrastructure law present in terms of potential funding for local energy projects and climate action work.
+
+**[16:43](https://vimeo.com/797206782#t=1003s)** So yeah, we can we can certainly look for ways to work that and the only other thing that I'll note is that you know as as you see in. some of these actions do
+
+**[16:56](https://vimeo.com/797206782#t=1016s)** Do imply or or would require investments from the musical governments? And others are so the roadmap is a community-wide plan. And so The town of Marblehead the local government or mmld are not you know, you all are not on the hook for all of the Investments that are covered in this in this plan. Some of it's just about sharing information or passing passing ordinances or or policies that support the adoption of clean energy or emissions reductions and other in other
+
+**[17:42](https://vimeo.com/797206782#t=1062s)** areas. And so yeah, I don't you know, I think that's that's something we've talked a bunch with Joe kowalic and Lisa Wolf from mmld, you know the this it's it's really going to be a community-wide effort. And so, you know, the roadmap is a plan for the town but but it's a it's a team effort. No understood completely. Thank you Brooke. Yeah, I just like to thank you. Okay. There you go. Yeah, please. Go right ahead Alexa. Sorry. Yeah, no worries. Sorry. I was raising my hand, but I think it's a little blurry. I just wanted to jump in for a second. I'm just to add to a little bit to what Brooks had said in a couple of the items as well is that was one of the things that was you know being looked at in discussed was the ROI in
+
+**[18:29](https://vimeo.com/797206782#t=1109s)** regards to the same ability coordinator and what the effect of that is in access to Grants and the implementation and the ability to track those things with the Massachusetts clean energy and those types of plans and along with what are you know, any sort of state regulations or other things that we might be looking at? In the future, what are those things that are looking we're looking at that we might be, you know needing to Pivot to get in line with how do we afford that? How do we budget for that? What is the you know, what is the implementation of that? And how do you coordinate all of these items in some sort of a priority type fashion and also looking for what are those other funding sources? What are what is that availability and that's was part of the work and
+
+**[19:17](https://vimeo.com/797206782#t=1157s)** part of the conversation around, you know position such as sorry as the coordinator for How do we access this? How do we prioritize this? How do we make sure that as a town? We are planning in a way that we can put ourselves in a position that if there are those opportunities for additional funding sources work ready to go and can access them and we have the the people in place to make that happen. So that was definitely part of the overall conversation when these were addressed and looking at how do we implement this in the most, you know cost effective thoughtful way. All right Alexa. Thank you very much. I just also want to thank Becky for her consistent and persistent long
+
+**[20:05](https://vimeo.com/797206782#t=1205s)** term vision for this, you know, right from the grant making process. And with that. I think we should probably move the agenda forward. Thank you very much Brooks. Again. Thank you. Thanks for your time you back. Thanks for being here. Okay. Next on the agenda is the Franklin Street Firehouse?
+
+**[20:25](https://vimeo.com/797206782#t=1225s)** Okay, I'm not administrator if you let's if Brooks. I think Brooklyn is the unshare his screen. Thank you. All right about that. That's all right. Maybe shared a publicize that on the website that it's on February 15. Okay. Yeah. It's on the website. It's already up. Okay, great. So Becky, yep. So on. Becky cutting on the town planner and I am so Ryan. We have the Architects here today, um that are gonna do a presentation but a little background the town received a grant from massive Stewart commission through its mppf program to conduct a building assessment
+
+**[21:11](https://vimeo.com/797206782#t=1271s)** and a treatment report for the Franklin Street Fire Station building. It's a historic building and the town's benefited from this program before with several other of our historic assets Abbott Hall Fort Sewell and old Burial Hill and what these studies do is do an in-depth assessment of the building and then information on what work needs to be done and what priority and how much it will cost kind of like a master plan that goes a little further than that. And so we received the Grant and we issued a request for proposal to hire an architect that has particular expertise in historic structures, and we hired Foster architect. Sure, and Ryan Foster and Eric Christiansen are here
+
+**[21:56](https://vimeo.com/797206782#t=1316s)** tonight, and they're going to present an overview. We and then well, let me let them do that and then we can talk. further So are you able to share your screen here? I'm gonna share my screen. Let's see if it works.
+
+**[22:22](https://vimeo.com/797206782#t=1342s)** Thank you Becky. Hi, I'm Ryan Foster. I have worked on at all since 2012 through 2020 through All Phases also worked on Fort Sewell Eric Christian also worked on the restoration of Abbott Hall and Fort Sewell. So we are very well versed working with Marblehead. We did the assessment of the Franklin Street Firehouse back in last March and April of 2022. The firehouse is a wood structure is built in 1886 and it has been continuously used as a fire station since its instruction. So it is one of the oldest continuously operated fire stations in the Commonwealth. Um in that assessment we put together working with Chief the
+
+**[23:09](https://vimeo.com/797206782#t=1389s)** a schematic design and plan for moving forward tonight. We're going to go over a quick overview of the assessment kind of highlighting on the points of it and give you a summary of what's required and the cost estimate. So from there, I should say that we had Structural Engineers of structures North and our MEP and FP engineer was ggd Garcia galusia De Sosa with our costs estimators Alana this same group also worked on Abbott Hall. So hopefully I have been treating you well with the new windows and exterior restoration and from here. I'll let Eric kind of dive into some of the details of our assessment.
+
+**[23:55](https://vimeo.com/797206782#t=1435s)** Hello everyone. Thanks again for having us nice nice to virtually be there and what I would do I'm gonna basically briefly run through all of the major areas of the existing conditions of the firehouse and then at the end of that we'll go into the aad review and processment and Ryan will be discussing those items. So I just want to sort of I'll try to get through this brief links. I know you have a long agenda, but just sort of a splash page of images here showing the one great historic image of the firehouse and I'll show you another couple later in this presentation and it's really gives you an idea a couple of these photos of some of the areas of deterioration of the wood structure.
+
+**[24:44](https://vimeo.com/797206782#t=1484s)** Um, and I'll sort of go through each category very briefly. You can all see some of the photos of the various conditions, but there's a small amount of masonry at the base of the building and it is it's an okay shape. There's no structural issues, but all needs to be clean cut and repointed and as you can see there's some water loss. The biggest area of masonry concern is at the top of the chimney. There are loose bricks up there and also the fact that they chimney does not have a vented cap. It's allowing water to infiltrate down and not only penetrate and damage the masonry with an also seeps down and gets inside the building. So this is one of the Avenues for water infiltration into the firehouse. Um, obviously the exterior is wood and it's in varying conditions
+
+**[25:32](https://vimeo.com/797206782#t=1532s)** and there's been some collaborate replacement over time on the side elevations. There's a wood shingle siding, but that is not original to the building. It was all flowered citing to begin with. So the shingle sighting itself is not a historic representation of the original design of the firehouse. And as a matter of fact, if you look at this one photo here over time and they've added on to the different layers, they've never removed the previous layer. So the original siding is hiding underneath the Shingles on the sides. So there are some areas with some bigger deterioration. There's no structural damage here. But obviously this is aesthetically doesn't look good and it is starting to get into where the structure is and then there's just some sort of minor areas. And again,
+
+**[26:20](https://vimeo.com/797206782#t=1580s)** here's an image where you can see the original clever siding or some iteration of it hiding underneath the shingles As far as the you know, the decorative elements go somewhere in good condition and some are in bad condition a lot of the trim and things up on the top of the roof or in kind of rough shape as is the balcony on the front of the firehouse and then we have some gutter and wooden gutters. There are is where the seals and the connections are failing. That's where you start to see more of the water damage. and dovetailing into the wood situation is again the sort of exterior condition of the windows, which is Plus minus and varying areas. There's some
+
+**[27:05](https://vimeo.com/797206782#t=1625s)** still damage overall the windows again are in very in conditions. Some of the we would recommend, you know, restoring some of these original wood sash windows and some of them are in decent shape that they can be rehabilitated. Some windows would require more aggressive restoration and replacement of components and then there's a few windows that would probably need to be replaced in their entirety and let me just skip ahead to this one area and there's just a lot of a lot of Damages you can see on the interior and very repairs that have been done and on the upper levels on the third floor the windows have been replaced a
+
+**[27:51](https://vimeo.com/797206782#t=1671s)** number of years ago, but they used vinyl compression fitting jams on this and so these aren't necessarily historic representations of how these windows would work. We wanted to include this one side slide kind of in the middle is you know, as we went through the report part of the assessment was to develop a schematic level document indicating exactly what types of repairs, you know, we were producing the construction documents of what we would do and so just how this how are Observations translate into the actual working documents. I just want we just want to show you an example. So, you know restoring putting back the new painted wood shutters. And
+
+**[28:36](https://vimeo.com/797206782#t=1716s)** then this thing is side elevation you would recommend, you know, new collaborate siding to match the north elevation and then there's you know, further details of how some of these items of work and different Replacements that we would recommend. So as part of the report there is a full there's a set of schematic level design drawings for both the interior and exterior of the station. So we took our observations into that area and we're starting to develop how exactly we would rehabilitate the station itself. The roof was replaced not that long ago and it's in relatively good condition. It's it's not a major source of water infiltration other than where there's some deterioration of the wood elements that surround the roof the roof
+
+**[29:23](https://vimeo.com/797206782#t=1763s)** flashings are in poor condition. And again, those are the areas where there be water infiltration getting into the station. And then again the original wouldn't gutters some of the slices and areas are getting to deteriorate and obviously there's materials that have accumulated in there. And so the gutters and downspouts aren't exactly operating as as they should. Um before I go into the interior part of the station, I'm just going to give you a quick tour of the interior in the structural assessment. There are structural engineer noted that there were no major structural deficiencies. However at the firefighters have noted that the in the strong Breeze the firehouse sways a
+
+**[30:09](https://vimeo.com/797206782#t=1809s)** little bit and one of the main reasons that that is happening is that over the years the fire station main door has been widened and so as that door has widen you're taking away material that kind of creates the sheer wall of the structure that kind of keeps it and more compressed and more stable. And so one of the recommended structural repairs is that we would go back and remove that front siding and then put plywood on both interior exterior up through the first floor and that would help stabilize the station structurally from where the store has been widened over time. So in general the interior of the station is in varying conditions with the main room
+
+**[30:56](https://vimeo.com/797206782#t=1856s)** on the ground floor is the apparatus Bay or the fire truck and then there's a mechanical room with the hot water system in there and I'll touch more on that in a minute. And as you go upstairs, there's a great room for the firefighters and hanging out and small bathroom small kitchenette There's a dorm room that has a lot of different Furniture in there and kind of subdivides into different sleeping areas and then a desk.
+
+**[31:30](https://vimeo.com/797206782#t=1890s)** And then we go upstairs to the attic which will describe a little bit more later that was actually never finished at the beginning of the when it was built in 1886. So there are some still as yet unfinished spaces inside of the attic area as you can see, there's just here you can see the the wood framing members and there's just been installation put in here. It's some level of warm This is a photo of looking up into the hose Tower which isn't used anymore. and then again looking up and then this is in an into the roof hash looking up into the underside of the roof. And here's where you can see where the water has come in by the this is the masonry
+
+**[32:17](https://vimeo.com/797206782#t=1937s)** for the chimney on the inside of the attic you can start to see some of the deterioration there and then all the wood up in the attic felt dry to the touch but there's obviously been some water infiltration and damage in the past. And so, you know, there's evidence of that just from see water stain.
+
+**[32:38](https://vimeo.com/797206782#t=1958s)** Um for the mechanical electrical plumbing and Fire Protection are engineer ggd as to make out very long story short as recommended replacing most of the systems. If not all the systems in the building with modern, you know energy efficient everything ranging from hot water heater to a new boiler system. They recommend upgrading the panel electrical panel adding a better fire alarm system smoke detectors. CO detectors all the sort of modern code things that you would need when you're doing an interior upgrade to structure. um
+
+**[33:24](https://vimeo.com/797206782#t=2004s)** And then one other aspect I was going to mention and now I can't remember what it is. So I will move on and another part of what we are looking at in restoring the fire station. And this is something that you do when you're doing historic preservation is you look at the character defining features and you want to try to restore those or bring them back. And as you notice from this original photo, there was a flagpole in the middle of about me. There was a whole window and another small balcony here and then here's you can see how much wider the garage door has gotten from this photo but we've ranked the sort of character defining features and sort of
+
+**[34:10](https://vimeo.com/797206782#t=2050s)** in terms of level of importance and what we would do and we're doing a restoration like putting the flag pull back would be sort of a wish list item. So we would make that as an alternate to the design. It's not essential but if you want to really bring this station back to its original character, we want to put the fire the black hole back and so similar with the window, that's now missing and this small balcony that is over the man door.
+
+**[34:39](https://vimeo.com/797206782#t=2079s)** And then this is the great photo I found in on the Marblehead archives website that again shows the flagpole and balcony. But what it also shows is that at one point in time. There was a cupola on top of the hose Tower and I did extensive at research through the Marblehead messenger and the Marblehead historical archives. There's no mention anywhere when that cupola disappeared, but it would be very interesting and nice I think, you know to really bring the station back to its original character. He would include restoring and putting the cupola that And this is just another historic photo showing the front with all the guys out front and the historic Sun.
+
+**[35:25](https://vimeo.com/797206782#t=2125s)** For the interior, there's no photos of the original interior the most interesting photo we've seen is this one from when they were doing the renovations and believe in the 70s that looks like there may have been a stamped in ceiling whether that was originally or not. It could have been so that might be an interesting feature to restore and there's this other interesting feature that has the old Bell System. Which has all the addresses throughout town and then the number next to it. So when a fire would happen if any one of those locations the alarm pellet ring in Morse code the number and that way the firefighters would know so it's just an interesting artifact. It's still exists the station. It's it's not in great shape, but it'd be something interesting to maybe try to
+
+**[36:13](https://vimeo.com/797206782#t=2173s)** highlight or feature at some point.
+
+**[36:16](https://vimeo.com/797206782#t=2176s)** But what's interesting is in the Marblehead messenger the there was a very large full page story from 1886 about the opening ceremonies and they do describe the original interior. The first story was an engine room floor was hard Pine and the room is she with white wood, which is Shellac and varnish making a very pretty The second story is plastered and will be fitted up as the company's parlor which still is is a hard time floor and a white wood finish and stainbridge Cherry giving the room a very neat appearance. And then this is my favorite quote of all from the Marblehead messenger the third or upper story has not yet been finished it being Detention of the boys to use this room as a wolfing room or smoking in social games can be indulged.
+
+**[37:02](https://vimeo.com/797206782#t=2222s)** Ed and now the Upper Floor is mostly the workout so not as much loafing or smoking going on but so that's sort of the rundown of the basic character of the station and the features and the general conditions. I think in general, you know, the there's parts of the station that are in good shape and the parts of the station that aren't in good shape and certainly does need some some TLC in the coming years. And with that I'm going to turn that over to Ryan as we start to strategize about restoring the fire station.
+
+**[37:39](https://vimeo.com/797206782#t=2259s)** Once you start once the renovation kind of costs grows, it begins to trigger different things with the Massachusetts accessibility code. And so that is what I will let Ryan start to describe. Well, thank you. Very I just left right? Let me know when you want me to advance to the next one. So for accessibility and the maab. It's there is kind of three triggers for the scope. The first one is that if the work is less than 30% of the full and fair cash value of the building. It does not trigger you're allowed to do that work without being required to make accessibility upgrades. The building value currently is 371,900 so that
+
+**[38:26](https://vimeo.com/797206782#t=2306s)** puts that work only at 111,570. The second exception is for work that is on an accessible entrance and an accessible restroom only so those are two exemptions of scopes of work that can be performed. And the third is that there's a $500,000 or less exemption for repairs roof repairs replacement window repairs masonry any maintenance on the building? and this is a running total over any 36 year 36 month period so if any of those values are surpassed on the building accessibility requirements are triggered and required
+
+**[39:11](https://vimeo.com/797206782#t=2351s)** to be upgraded. Even have to the next. slide there So there's a number of different exemptions that we can work with historic buildings and existing buildings. We've gone through those and had the discussions about what could be utilized and what could not be utilized one of the main things. Is that for the upper level. If we are to make that fully accessible that would be only if the public goes there. So non-public space is do not need to be made fully accessible big item on. That is an elevator. But there is also the requirement in terms of the number of means of egress. So as soon as we're triggered to start making the upgrade we'd have to update the existing stair and require a second means of egress out of the second
+
+**[39:59](https://vimeo.com/797206782#t=2399s)** floor or install a sprinkler system. So in this current conceptual conceptual design, we are looking at doing the sprinkler system as an upgrade to the fire station. And so that's kind of like another big item that once you cross that line. It's a requirement to make that upgrade. So taking a look at really what makes sense in terms of scopes of work to be performed that is kind of how we're addressing. this work You know the next slide.
+
+**[40:30](https://vimeo.com/797206782#t=2430s)** That's going into the cost. Oh, no, that's just photos. So this these are the accessibility conditions in terms of upper in the center making that a an accessible entrance. It would be that front door. One thing to note on that is that goes right into the stair? So as soon as we make that if it is that door that becomes accessible we are if we modify the stair anything that we modify we're required to make fully compliant. Also, this is looking around back in the upper right being able to get down to the level on the back side. Let alone pass the building also looking at the stairs right now. None of the stairs are compliant as accessible stairs. So as soon as we cross that threshold we would be
+
+**[41:16](https://vimeo.com/797206782#t=2476s)** required to upgrade them. And if we hop to the cost estimate.
+
+**[41:23](https://vimeo.com/797206782#t=2483s)** We really looked at this basically from three standpoints. I should say four. There's a cyclical maintenance which is items. That should be done yearly regardless of a restoration that occurs or after the restoration and these will be maintenance items to keep the building in good shape. Then we looked at the exterior renovation only the exterior is renovated. Would we start to trigger any of those items and that's the bottom item price number four? It is just over 1 million dollars for the exterior renovation. So it does trigger those. With that we would then looked at the interior renovation and working with Chief and Becky going through what would be desired on the interior upgrading the
+
+**[42:08](https://vimeo.com/797206782#t=2528s)** bathrooms and the living quarters right. Now, there's very limited insulation or energy efficient elements inside the building the wind definitely blows through it and multiple areas. I know there's a little bit of snow and one of the most recent storms inside so upgrading all of those and that is one point just over one point one million dollars really interior renovations. And then we also looked at just doing a ground floor toilet room so that we could provide an accessible entrance to get to that ground floor toilet room. There is a number of people from the public that have asked to be able to utilize the fire station as a public toilet room. And if we keep that on the ground floor, we can keep all access from the public to that ground floor. And so we have that just shy of 85,000 for that.
+
+**[42:57](https://vimeo.com/797206782#t=2577s)** So in total if all of these are together, it's just about 2.3 million. It would be the full scope of work. next slide
+
+**[43:09](https://vimeo.com/797206782#t=2589s)** and so this right here is a breakdown. There's a full complete cost estimate itemized in the report goes into a very granular level of detail make sure that we can get the most accurate cost estimate and I'll note that this is in 2022. Value so as everyone knows the escalation and inflation keeps going up. So as the years go on there will be inflation that needs to be added to that number. And at this time Ryan, there is a small escalation contingency that was included.
+
+**[43:50](https://vimeo.com/797206782#t=2630s)** Next slide I believe that covers. All of our items and if they're want to open it up and see if there's any questions. Well, thank you very much for the for the presentation much much appreciated and thorough. Um, that's your perhaps. I can hand it over to you if there's any any additional comments you and Becky would like to to make or you you fire chief or whoever he's inspired chief for Becky because they're the they're the lead. Yeah, they've been working. So so as you know, we put article on town meeting. For this year in the event that we're ready the teeth and I have been strategizing for a while. We've identified some grants and kind of want to pursue the fort Sewell model that
+
+**[44:37](https://vimeo.com/797206782#t=2677s)** we did where it is some money from Grants and fundraising and some money from the town to give the best value to the taxpayers and I wish we could do it all in Grants, but I haven't found that Grant yet, but I have found a few and the chief has found a few and then he has some fundraising ideas as well. So we'll probably be back in the next month to tell you how we're doing with that and where we are with that and and chief. Do you want to add anything? No, it's you to piggyback at you. But so yeah, we have looked at different ways creative ways to try to make this happen. Is that historical Building inside this being fired houses together. And so I should come over the table. It's got some history to it. So this
+
+**[45:24](https://vimeo.com/797206782#t=2724s)** is something we want to do and obviously the price hasn't escaped us. So as far as the second means of egress as a sprinkler system is Mr. Foster mentioned there was an afg Grant assistant to firefighter Grant which we've been successful several times. It would allow us to put a full-fledged sprinkler system in that so that will offset that cost as well. Other ways I mean similar to Fort Seoul fundraising as you're all aware of most of you we decommission the Fireland boxes years ago. Those have been stored away. They do have significant value to them. One of the ideas is to try to put that along with Franklin Street auction them off and raise money that way a town historian Don dollar is in the
+
+**[46:10](https://vimeo.com/797206782#t=2770s)** Middle, he's been working out for a while. He's writing the history of My Blood Fire Department. We thought maybe inviting the public election on that is another way. So we're trying to be creative and recognizing that the cost is high. That's great. Thank you. And I'll put this full report which is about 400 pages on the website tomorrow. I'll probably put on the fire department and under Community projects that people want to look through it. It has a tremendous amount of History. This was just a brief overview of it, but it's a really interesting. I think people would like to read it. Thank you very much. Becky chief. Let's go around the table. Would you think this was very very? I like it a lot. right
+
+**[46:57](https://vimeo.com/797206782#t=2817s)** I love this building. I love my kids trick or treat outside of it Avery Halloween. It's great. I wanted to
+
+**[47:10](https://vimeo.com/797206782#t=2830s)** I guess I one of the potential concerns that stood out to me is that the cost estimates are seem kind of dated to me from last June just where we are and like, you know the economy and climate right now. So I guess I'm wondering is there a plan but between now and then to go revisit this estimate back from which was I think coming from the beginning of June last year?
+
+**[47:35](https://vimeo.com/797206782#t=2855s)** If we're going to if it's you know in terms of presenting it to the town. Because June it says these estimates are from June 3rd 2022.
+
+**[47:47](https://vimeo.com/797206782#t=2867s)** I guess it's a question. I was told to Becky. Okay, Becky. Yes. Okay. So I think they included an escalator in there of 4.5. Erica just said but yes, the price will continue to go up. But yeah, there is an escalator in there. So yeah later gets you to the end of 2022.
+
+**[48:10](https://vimeo.com/797206782#t=2890s)** And so we could add that another escalator by June. I mean, that's just yeah and in the when this was done back in June the current at that current Construction. And building an inflation rate that so that's a six-month escalation rate. Which is high and but inflation is in construction costs are high. So that's like for last year. It was a nine percent. Escalation rate over a 12-month period so I think the best way to look at it is when a date. Gets kind of chosen for that that rate can be determined then as to what is the most appropriate rate going forward like if this is something for 2024?
+
+**[48:57](https://vimeo.com/797206782#t=2937s)** We can take a look at and work with Alana to ask what the appropriate escalation is just so much about change it over that license last June. There's just been such. been very dynamic Obviously, I think that would be helpful in terms of presenting to the town this estimate if you could update or make that escalation Clause as current as possible, and I just wanted to one last thing, you know, obviously the building has enormous historical value, and I just wanted to allow the chief to speak to its operational significance in the town. if you'd like I mean because I think that there I think yeah. Well, yeah, I mean direct that to the chair normally but please if you could address that that would be very quick.
+
+**[49:44](https://vimeo.com/797206782#t=2984s)** So yes, Franklin Street is very significantly operation divided Brad within a town. As you know, we sit on a treasure in Old Town and response was critical. So frankly Street has played a key role in keeping downtown safe for many many years for your gross twice in size for every minute. So responses critical, so yes, we'll do everything we can to make sure that building stays there a long time ago. Well, thanks. Thank you. Alexa do you have anything?
+
+**[50:21](https://vimeo.com/797206782#t=3021s)** Yeah, I just want to say thank you for the presentation. That was great. And I love some of the creative creative fundraising ideas. I think those are are great. And I think that he would get some look support from some of those ideas. And I appreciate the brainstorming that's going on to to make this happen. I just have a quick yes or no does the the cost the exterior cost Ms. Estimates include the build out of the cupola. Just out of curiosity. Yes, so some of the you know, some of this cost, you know, it's the as Becky mentioned. It's sort of this cost is a full boat, like everything that we you know, and that was that was part of this exercise too is that you know, we did want to know, you know, we included everything what that cost and you know what when this project were to
+
+**[51:09](https://vimeo.com/797206782#t=3069s)** be we're forward, you know, we're gonna be nuancing the interior design. We're gonna be new on seeing some of our repairs and you know, and as I mentioned before like something like the cupola what is an ad alternate to the project school and so, you know, those are things that it's still bit it as an adult alternate and if the cost isn't something that the town was to do then that's then they don't have to do it. So, you know, the cost overall cost will be sort of manipulated and massage over time as we ratchet down and get more specific heading towards construction documents. Appreciate it. Thank you. Okay, I don't think there are any more questions. I want to thank you very much for your presentation. We're going to move on to the next agenda item. Thank you. Okay, next
+
+**[51:57](https://vimeo.com/797206782#t=3117s)** item on the agenda is revolving fund requests. These are disaster if you want to give an overview of sure. So these represent funds in various revolving fund accounts that are used to cover the cost of certain expenditures in the budget. I understand. These are pretty much standard funds at the town is used for some time. What the
+
+**[52:28](https://vimeo.com/797206782#t=3148s)** What gets authorizes the maximum amount of dollars that can be drawn from the revolving fund? Does not require any further appropriation so long as there are sufficient funds to cover that amount. So in others you can't authorize an amount over what's what's in there if According to life there's additional funds that need to be drawn during the course of the year that can be authorized by the select board in concurrence with the fin Comm. So so it's town meeting that does that will vote this as part of the budget process in any addition withdrawals can be done through the board in fincon. Thank you just by way of Refreshers. Well, these funds are actually a limit
+
+**[53:13](https://vimeo.com/797206782#t=3193s)** to what each of the Departments can raise for in terms of fees and so forth. So it's it's kind of and anything that is used. Vis-à-vis These funds has to be related to the fees to which it's charged. So and I might add it's not it's not anything that comes out of the out of the general fund of the general budget. Let's just say the critical the critical pieces, the these are revenues generated by fees. And when they're used in the budget for the related Services it actually offsets. Tax levy so you're using fee income rather than tax levy for those particular functions. So if we can maximize, you know part of the strategy is maximizing those options, it takes pressure off of the the tax
+
+**[53:59](https://vimeo.com/797206782#t=3239s)** levy side. So important piece of our strategy any points of clarification questions. If not, I'll move to the To the motion to authorize the following revolving funds accounts for fiscal year 2024 in accordance with the Mass General Law chapter 44 section 53 e and a half in the amounts below animal Control Department $20,000 Council on Aging 250,000 Board of Health commercial waste disposal 1 million. 62,069 dollars Board of Health vaccines. $10,000 Highway Street opening fees 150,000 sump pump Improvement 10,300 conservation fines, 75,000 storm and water and erosion control 10,000 historical
+
+**[54:45](https://vimeo.com/797206782#t=3285s)** commission gift shop 25,000 Recreation and Parks 1.5 million Marblehead Public Schools special ed. 500,000 Hobs memorial fund 3,744,000 in favor a role. It's a roll call because that's right. Thank you. Okay. Thank you. Thank you. and I try to rotate I'm going to pick on Miss belt Becker first. In favor. Okay, Miss singer. Today Miss Noonan favor Mr. Nice in favor, Mr. Greater in favor. Okay, unanimous right next is If you look at this real quick.
+
+**[55:30](https://vimeo.com/797206782#t=3330s)** Okay individual. Okay, next item on our agenda is a review of the revolving fund. Oh, sorry, the select board town meeting warrant articles. Now by way of introduction there's two parts to this one are the standard articles there's a lengthy 20 or so and then there's some proposed articles that are specifically focused on this year. So
+
+**[56:01](https://vimeo.com/797206782#t=3361s)** You know before making the motion we can probably divide the motion into two parts. We'll see how it goes. If you want to that your start out with the with the standard articles. So these are the standard articles that are presented at town meeting. That are repeated each year. I don't think I need to identify or go through. Any individual ones but again, these are standard there. There will be additional details provided the the ones with actual Appropriations in them that detail follows. This this allows them this basically puts them on the agenda or on the warrant for the town meeting. And then later in the process would be the actual details
+
+**[56:47](https://vimeo.com/797206782#t=3407s)** of the language in which the board would vote to. I guess recommended not recommended. Okay, any questions from the board on the standard articles before we proceed to emotion? on the timeline for the Capital Improvements for the things, you know, when does that process do we just because I know like we have a capital Improvement plan and fire station Franklin Street was on it. What is the process for for that coming to us? so right now
+
+**[57:22](https://vimeo.com/797206782#t=3442s)** so a worksheets gone out to all the department heads requesting operating budget needs capital budget needs and what I call Rolling Stock or vehicles and equipment needs. So there were three three separate worksheets with that. Right now my focus has been on compiling the operating side. So I have the the responses back from the department head. So as soon as I can compile sort of the operating budget and get that settled will convene a meeting of the folks that that have the capital review the projects and and then make make recommendations as to what what we think should go forward same thing with the Rolling Stock. So I don't have a definitive time because I'm trying to get through
+
+**[58:09](https://vimeo.com/797206782#t=3489s)** the big piece first the operating budget and then follow up with capital. Yeah, and if I can just follow up with that there's a distinction obviously between a you know, a capital project that's going to be funded by, you know, a dead exclusion override such as the station and then kind of the ongoing maintenance that appear in these articles. So there is a capital plan but it's more focused on kind of a maintenance plan rather than a straight capital outlay. Okay, just to make just to make that distinction in people's minds. Yeah, I guess, you know when when you come up for air from your immediate priority if It's possible to update the capital Improvement plan. That's out there on on the website before town meeting and perhaps I don't know if there's time but we could
+
+**[58:55](https://vimeo.com/797206782#t=3535s)** bring it out farther because it's kind of it's it's a little bit dated and so as you go through that when you come up for air when the time is appropriate if we could update that Capital Improvement plan and or you know come, you know, we have it maybe a subject of discussion here. That'd be great. no, and Which we should I'll say this so, you know, you know, I have some more information later on on the clear gov where we're implementing that that has an actual cap approval plan module in it, which we need to load information. We need to learn it going forward. So I'm sitting here right now given the the requirements and things that need to get done in the number of bodies that are
+
+**[59:42](https://vimeo.com/797206782#t=3582s)** sitting there doing it which are limited. Probably on the the spreadsheet side is provide the information necessary to for the decision-making that's immediately in front of us. And then for the longer term effort is work it through the clear Gulf start loading the information there. So what I don't want to do is do a whole a full-blown New Capital Improvement plan sort of the old spreadsheet PDF way, but to kind of even if it takes a little bit longer to get get started on that. To do it through the clear gulp because the benefit with that is it's designed to help us with the information. But at some point in the near future, we'll be able to turn on the transparency part of it where we can
+
+**[1:00:28](https://vimeo.com/797206782#t=3628s)** easily share all that information detail with the public. So it's worth the effort to wait to put it in the clear gov. Thank you for updating on that. Now just again to be clear on these on these articles specifically it's a standard amount pretty much every year that gets allocated. So it's you know, it's a little bit it's a different. Concept in the long-term capital. Oh, I seriously it's fine. It's fine. It's just it's just a distinction. That's why they're pretty standard. Right? So it's just like every year we kind of allocate a certain amount to ongoing maintenance. So that's what I think. Yeah. That's okay. That's I didn't understand it either. Oh, no, that's why I know my boss. I I try to be more articulate. So I think look I think with let's go ahead I would propose that we make a motion to sponsor these articles the standard articles right now. Okay, before
+
+**[1:01:14](https://vimeo.com/797206782#t=3674s)** we go over the second part. So the motion is to sponsor the following articles the place on the warrant for 2023 annual town meeting articles and numerical order report of town officers and committees assume liability Leestown property contracts. And because that's a three years departmental revolving funds purchase of equipment of several departments lease purchase Capital Improvements for public buildings walls and fences storm drainage construction proposal reclassification and pay schedule administrative proposed pay schedule and read classification traffic supervisors proposery classification and pay schedule. Seasonal and temporary Personnel compensation Town officers Essex North Shore Agricultural and Technical School District, secondly all the oh, yeah. We'll call vote again. So miss singer. In favor Ms. Noonan in favor, Mr.
+
+**[1:02:02](https://vimeo.com/797206782#t=3722s)** Knight is belt Becker in favor, Mr. Greater in favor. Thank you very much.
+
+**[1:02:09](https://vimeo.com/797206782#t=3729s)** I think again here. We have one two, three, four, five six seven specific articles for this year for 2023 annual town meeting. In fact, I think the best way to proceed per house would be to we do have in our packet a the actual language in for each of these articles. Hopefully, everybody's had a chance to review them. Again. This is just to outline the the sponsoring and that's right. If you do want to give a thumbnail on each of these I'll give a brief and again, the the actual language is provided. So the first item administrative benefit Amendment, so This is our Personnel benefits for the administrative Personnel or non-union Personnel benefits
+
+**[1:02:57](https://vimeo.com/797206782#t=3777s)** have for the union Personnel that's part of the the negotiation package every three years of contracts renewed. So what typically happens as a result is the the benefits on a three-year basis are updated at least have the opportunity to be updated updated every three years. So for the for the administrative folks some of the concerns there working with the the professional staff is that the non-union their benefits have not changed in a significant amount of time. So so some of the administrative folks that got together and put together proposal that we've we've worked on together, so
+
+**[1:03:41](https://vimeo.com/797206782#t=3821s)** Quickly speaking. What what are the benefits the employees, you know, they have longevity pay sick bonus vacation time bereavement time personal leave sick leave and floating holidays. So that's the list of benefits the ones that are being disgust. They're looking at updating longevity amounts the dollar amount based on the number of years of service. Looking at the sick bonus and actually what's under consideration to be worked out is actually eliminate the sick bonus. We I think we're post-cover. We don't want to pay people to stay to incentivize them to go to work when they're sick to get a bonus that to roll that sick bonus over into the longevity and and and do some up, you know additional update that and then looking at the vacation time in other words how many years of
+
+**[1:04:28](https://vimeo.com/797206782#t=3868s)** service before they hit another allotment of a vacation time. So so under consideration is getting 25 days of vacation currently is at the 15 year mark, and it would just move it down to the 10 year mark and given that these are administrative folks the ones where vacation time cost money or more on the public safety side where you're you have to fill positions when people are out and and these are not Just people would be out. So anyways, those are being considered. We're kind of massaging. You know, what the options are. So in time for the submittal, but that's what that's what's that's looking as the non-union updating a benefits keeping them somewhat comparable to to what's been
+
+**[1:05:15](https://vimeo.com/797206782#t=3915s)** happening with the Union folks the next one a man General bylaws for new human resources department. So this is something I've talked about a lot what this warrant would do is establish the existence of the department. Currently there are two employees that are under the finance department payroll and benefits. The concept would be that if this were to be approved those two would slide over so there's there's no no additional cost anything. They just have a new new label as the department the warrant would create a Director of Human Resources position. It's a it would be a subject a separate subject of discussion. Whether it we can fund it or
+
+**[1:06:02](https://vimeo.com/797206782#t=3962s)** not. If we can fund it through the budget great. We'll advertise and we'll go out and hire a professional HR person to consolidate and improve if we can hire currently. The financer is also kind of covers the HR. So I would just appoint the finance director as the HR Director and so it would be pretty much saying so this just allows us to establish the department and start consolidating those functions. Was the next item allow use of electronic counting devices. This is actually for town meeting and the time moderator and I and others are working on this and and
+
+**[1:06:43](https://vimeo.com/797206782#t=4003s)** The desire the desire was for this year, but it you know, it was determined that we have to we have to change the bylaws first to allow electronic voting. It's how meaning so a lot of towns are moving to devices that everybody who who shows up at town meeting gets a simple clicker device. It's all wired wirelessly connected together. So when it's a time time to vote in town meeting everybody clicks the the button options as to what they vote and very almost instantly the results can be tallied and provided which makes for a much more efficient Town meaning process. So we're not gonna be able to use a system this like that this year with this would be is changing the bylaw to
+
+**[1:07:31](https://vimeo.com/797206782#t=4051s)** allow that as an option for future Town meetings should have passed that sure if I could Mister the moderate Jack afterges here Mr. Moderator you have any comments thoughts on this
+
+**[1:07:44](https://vimeo.com/797206782#t=4064s)** No comments, just in the informational Gathering part of the process right now and most importantly what Thatcher said is that it allows us to change our bylaws so that it can be an option as to whether the town wants to proceed in this in this way our our bylaws restrict us right now to the way that we vote. And that is doing a great job in putting us in a position to consider a different form of Bodum. So thanks for reaching out though. Thank you.
+
+**[1:08:19](https://vimeo.com/797206782#t=4099s)** Thanks, Jack the next item in general bylaws for physical examinations. So as it stands now every new employee that is hired has to go through a physical. to to start employment and there's there's a cost to everyone and and as I understand this this is including summer help and part-time and you know affecting a lot of employees that as we bring in each year for different purposes what the the change would be is that rather than all employees are required to have this physical the bylaw would specify what positions would require the physicals and if you're
+
+**[1:09:07](https://vimeo.com/797206782#t=4147s)** not on the list would no longer require physical in in that those that are on the list are all those positions that are actually physical that would have physical requirements to them. So fire police Public Works those type of functions that that are physical in nature. We would maintain the requirement to get a physical as a condition of employment for those are more administrative and other functions. We would we would drop that requirement. So Um, the next item is the Franklin Street Fire Station Renovations, which was presented earlier and I think this the strategy on this is there's there are components of the building that have received some grant funding and we'll do some fundraising the question is would it be more efficient and
+
+**[1:09:55](https://vimeo.com/797206782#t=4195s)** effective to do it as a comprehensive building project utilize the grant money in the fundraising to help support it but but make it a whole comprehensive project rather than components of projects working on the same building. Next is the public shade shade trees protection of fines what that changes doing is it would allow to the placement of public trees? On private property with the permission of the private property owner. Within 20 feet of the public way. Why would we be interested in this as we've talked about we will be implementing a whole new sidewalk? replacement plan and strategy
+
+**[1:10:43](https://vimeo.com/797206782#t=4243s)** As as part of that there will be a number of trees that are going to have to be removed and taken out and so that you know, and I have learned in my short tenure trees are very important here Marblehead. So what this allows for would allow is to provide more options for the placement of public trees to replace the trees. That would be that are being replaced through the sidewalk program. It also allows, you know, one of the challenges for the life cycle of a sidewalk is trees that are in or next to the sidewalk The Roots grow. It just drops the sidewalks and so allowing for some setback more distance alleviates that and and improves the life cycle of
+
+**[1:11:31](https://vimeo.com/797206782#t=4291s)** of the new sidewalks. So creative strategy from from our DPW and tree folks to provide that option as we move forward very key great. Yeah, and the key thing they would be they would be retained as public trees. Continuously, so they wouldn't convert to be in private at any point. They would mean remain public.
+
+**[1:11:55](https://vimeo.com/797206782#t=4315s)** In the last one is Department of Public Works change. With that simply does is it includes the tree Department as part of Public Works, which so this little bit of cleanup on the organization of of the Department of Public Works. So that's been established. As a department, but it only identifies currently drains and Highway as part of the problem. We want to include trees. I will note in the in your backup material we currently because this is all draft being worked on the backup material. We list three department and store more to Department. We're probably gonna revert back keep it drains for this year because there is a much more comprehensive effort to look at.
+
+**[1:12:41](https://vimeo.com/797206782#t=4361s)** Updating the drains Department to be stormwater or storm sewer, whatever ends up being the more appropriate and because there was storm drain a drain language inserted in a various other places in bylaws. We we need the extra time to clean that all up so so for now we'll keep we'll keep it as drains, but it'll be treated apartment and Highway that makes up the public works department. So those are the items that are being proposed. Okay any discussion from the board? I do have just something to consider or discussion around the physical examinations. So I guess I I remember a few years ago when we had an interim superintendent and I first realized he raised it in
+
+**[1:13:28](https://vimeo.com/797206782#t=4408s)** a budget meeting that the schools were paying for every teacher to get a physical exam and last year the school Department's budget was like 12,000 because I asked about this. Why would we not? Amend this to to end at physical examination and perhaps Say by a licensed medical provider rather than by a reputable doctor to be designated by the word Board of selectment seems like why are we paying everyone's required to get an annual physical? Everyone is involved Insurance. Like is there a reason why? Why we wouldn't just accept somebody's own private doctor in the interest of saving money.
+
+**[1:14:07](https://vimeo.com/797206782#t=4447s)** So I'd like to make I mean, I guess I wouldn't first see if anybody had any thoughts on it and then a good point of clarification. Yeah. Yeah. I don't know what our budget I don't know what we spend on this. It just seems a little Antiquated frankly. Yeah, I don't have the articulate the details of it, but it is a sense that it is burdensome in. that everyone gets and that we put the bill for it when everyone has an entitled to it. So I don't know but as I mentioned there are certain positions that we would want to have that right no maintain the requirement but in you know, I would say amend submit to a physical examination. Or provide I would say provide a physical examination from a licensed medical provider. That would
+
+**[1:14:53](https://vimeo.com/797206782#t=4493s)** be something that I would consider amending this to say. just as terms of updating and saving the language is still open. I mean, it's still in draft Yeah. Okay. We'll note that. Okay. Awesome. See this is all gonna vote it though. Oh, so it's just that this is just to you know, just a sponsors. Okay, and the language is still being developed. Okay, so that was just one point and then just one other question or one other kind of thing to think about maintaining trees on private property private, you know in perpetuity. I just wanted to see like, you know just kind of is there some thought into that like do I mean I can imagine that that could be a little problematic. I
+
+**[1:15:38](https://vimeo.com/797206782#t=4538s)** mean, there's also like a assessment, you know assessed value to having a shade tree on your private property that they're like and inheriting and would we need some type of an easement to access such a tree? Yeah, and that's that's a component. We we need the owner's permission and that's part of the the easement for it. There is a my understanding a legal technicality as to why we can't have it revert to a private. Tree. So it has we the option is it's got to be okay public or not at all. I see I just yeah, it just seems like we're you know committing to maintaining a tree in perpetuity. On private property kind of raises it and eyebrow to me. But yeah I get thinking about it is what we're just putting one further back. We would be
+
+**[1:16:24](https://vimeo.com/797206782#t=4584s)** maintaining Atrium to perpetuity but rather than in our sidewalk a few feet back from the sidewalk, so it's not a big change in obligation. But as long as the documentation is in place as far as the easement so that as home sell and new owners come in that there's some clarity or documentation that the tree in their property is a public tree and we have the acts of the rights to maintain it. And to end to trim it or to cut. Yeah, whatever right? Thanks. Anybody else Alexa? That's great catcher, and I appreciate that and yeah everything. Thanks for the explanation. Okay, let's move to the motion.
+
+**[1:17:10](https://vimeo.com/797206782#t=4630s)** To sponsor the following articles to place on the warrant for 2023 annual town meeting administrative benefit Amendment amend General bylaws for new human resource for for the new human resource department allow the use of electronic County devices amend General bylaws physical examinations Franklin Street, Fire Station Renovations public shade trees protection and fines Department of Public Works. to move and roll call Oakley. Okay, just noon in favor. And as we said the language isn't finalized, correct? Right, and that's another vote. They'll come later. Okay your favorite there comes back to you. Yep, Mr. Knight in Fair this girl Becker.
+
+**[1:17:56](https://vimeo.com/797206782#t=4676s)** this singer Consider and Mr. Greater in favor Okay, see we are moving on now, too. Agenda by item five. We've received a letter from Lauren McCormick from from the Marblehead Museum to use the old townhouse. So I'll just go ahead the motion is self-explanatory. The motion is to is for the request from Marblehead Museum to use the old townhouse on Friday, March 10th, 2023 from 6PM to 8 PM for a fundraising event subject to the usual rules and regulations fees and receipt of the required Certificate of Insurance naming the town of Marblehead as an additional insured and to waive the rental fee for this
+
+**[1:18:43](https://vimeo.com/797206782#t=4723s)** event. mode any any discussion Thank you Lauren for being here.
+
+**[1:18:52](https://vimeo.com/797206782#t=4732s)** Okay. Is there a motion and so okay? Mr. Knight this belt Becker this singer
+
+**[1:19:06](https://vimeo.com/797206782#t=4746s)** in favor Just a greater in favor.
+
+**[1:19:12](https://vimeo.com/797206782#t=4752s)** Okay, that looks like we have there's another motion. again from Lauren McCormick And again the motion self-explanatory, which is to approve the request from Lauren McCormick executive director marble and museum for one day liquor license for for Friday, March 10, 2023 from 6PM to 8 PM for a fundraising event the old townhouse subject to the Fallen conditions delivery of and receipt by the licensing authority of the required $50 fee delivery of and receipt by the licensing authority of proof that the alcohol be purchased from an authorized Source proof that the applicant can receive proper delivery proper storage and disposal of all alcoholic beverages purchased all in accordance with the requirement of General law section 138 alcohol will be purchased from Cappy's importing.
+
+**[1:20:00](https://vimeo.com/797206782#t=4800s)** So amount second. Okay, hold up. Just belt Becca. in favor a singer Okay, Miss Noonan in favor. Just tonight in favor, Mr. Greater in favor. Thank you. Okay, agenda item six is a wedding at Abbott Hall. I received from Jeff Hunt. Congratulations, and the motion is also self expanded explanatory to request the request comes from Jeff Hunt to use Abbott Hall on Friday, June 23rd, 2023 from 3pm to 5pm for a wedding ceremony subject to the usual rules regulations fees and receipt of the required Certificate of Insurance. second
+
+**[1:20:46](https://vimeo.com/797206782#t=4846s)** Miss singer in favor, Ms. Noonan in favor, Mr. Knight in favor, Ms. Bill packer in favor, Mr. Greater in favor. Thank you. Next item is appointment of a local local inspector Benjamin Leibowitz. And I don't know if Mr. Lee was here. He's not here. Yep. So normally at the level of organization, it's not a requirement that you vote to hire the person. Yeah, it's a requirement to appoint him as an inspector of the town to meet state requirements. So all your voting is him as a as an inspector and the the resume is just a background
+
+**[1:21:32](https://vimeo.com/797206782#t=4892s)** of who fair enough. Yeah. Okay. So the motion is also explanatory. It's just the motion that we'll take a vote on is to a point Benjamin Leibowitz local inspector with the term to expire in June 2023.
+
+**[1:21:45](https://vimeo.com/797206782#t=4905s)** Noonan it's tonight. about Becca singer and Mr. Greater in favor agenda item eight is a motion to amend a contract and thatchered it. You want to give us a little background on this or It's pretty yeah, so explanatory. But yeah, so the Collins Center is doing the Ada. Transition plan that we've spoken about here. All this does is extends the end date of the contract. There's no no change in price or anything. It's just to extend out. the expiration date of the contract to June 30th 2023
+
+**[1:22:32](https://vimeo.com/797206782#t=4952s)** Okay questions from the board. Okay, I'd like to entertain a motion to amend the contract between Edward J Collins Jr. Center public management and the town for Ada self-evaluation and transition Prime by extending the period of the contract to June 30 2023 and authorized the chair to sign on behalf of the board.
+
+**[1:22:55](https://vimeo.com/797206782#t=4975s)** Okay, just tonight. Okay, just spell Becca Miss singer. It better Ms. Noonan in favor. Just a greater in favor. okay, agenda item 9 is one day liquor license from Marblehead Little Theater motion self-explanatory like to entertain the motion for the requests from Andrew Barnett Marblehead Little Theater for one day liquor license for Saturday, February 11th, 2023 from 6PM to 11 pm at 12 School Street for Valentine's Day concert subject to the following conditions delivery oven receipt by the licensing Authority that required fifty dollar fee delivery and of and receipt by the licensing authority of proof that the alcohol they purchased from authorized Source proof that
+
+**[1:23:41](https://vimeo.com/797206782#t=5021s)** the applicant can receive proper delivery proper storage and Disposal all alcoholic beverages purchased all in accordance with a requirement General law section 138 alcohol will be purchased from rumson's rum so moved just Okay, Miss pepper bell pepper. In favor. Yes singer. And better Miss Noonan in favor. Yes tonight in favor, Mr. Greater in favor. Thank you. All right. Next is an Eagle Scouts ceremony, and we're very pleased that you're able to join us tonight. Thank you Xavier. It's good to see you and and Mom, we haven't joined a table
+
+**[1:24:27](https://vimeo.com/797206782#t=5067s)** Yeah, if you'd like to if you wouldn't mind coming to the table, you know, sometimes you can share a little bit with you know, what you've been up to and we're always very proud of our of our Scouts. So feel free to say as much as you or as little as you'd like.
+
+**[1:24:48](https://vimeo.com/797206782#t=5088s)** Almost a year ago now back in May. So that was a really big deal. I worked closely with the Marblehead Conservancy for my project at Seaside improving some of the trails back there wood chipping re-graveling re taking out and improving the water bars because it got very muddy and Marshy in there. Back in there and removed a bunch of invasive species. So that was my main project and I'm at Hall is just a very meaningful place in Marblehead and it would be an honor to have my Eagle Court held here. Yeah, excellent. I don't know if there's anything congratulations. Yeah, quite an accomplishment it really is and thanks for your attention to the Seaside area because that that was definitely, you know needed some some, you
+
+**[1:25:34](https://vimeo.com/797206782#t=5134s)** know, determined and and loving touch that's that's really outstanding. So what I'd like to do is entertain a motion. For the request from Heather Rosado your mother to use Abbott Hall on Sunday, April 30th, 2023 from 10 AM to 2 PM for an Eagle Scout court of honor. Subject to the usual rules regulations and fees and receipt of the certificate of the required certificate of liability and to waive the rental fee for this event. So second. Okay, Miss singer. In favor Ms. Noon in favor just tonight in favor. It's Bill Becker in favor, Mr. Grayer in favor. Congratulations Xavier. Thank you. Thank you very much. Thanks for your service. That's great. Thanks for waiting.
+
+**[1:26:26](https://vimeo.com/797206782#t=5186s)** Hey. Like the next is a motion to approve the minutes of January 18th, 2023 and January 23 2023. Miss noon in favor. It's deny in favor, Ms. Belle Becker the singer. In favor, Mr. Greater in favor. Thank you. And the next is a is an oml complaint emanating from Alan Waller. This is simply a motion to delegate the responsibility the response. Of the open meeting law complaint filed by Mr. Waller to Our Town Council and you can see the letter to Mr. Waller from Town Council, which hopefully you have a chance to review motion is pretty self-explanatory, which
+
+**[1:27:13](https://vimeo.com/797206782#t=5233s)** is to approve and delegate the response to the open meeting law complaint filed by Alan Waller on February 1,023 to Town Council.
+
+**[1:27:27](https://vimeo.com/797206782#t=5247s)** Is a draft that sort of a final draft, but it may have some tweaks by the time it goes out. So no, thank you so much. You're aware that thank you for that clarification. Yeah. Miss Mooney In favor. Yeah tonight in favor. This belt Becker favor the singer. That's the greater in favor. Thank you. And item 13 is a contract Municipal fueling station. Factor, I think you know we got the design build scope of work and stuff like that. But perhaps you can give us a little background of that for the public, right? So this is this is the contract to remove the old fuel station the tanks and put in the new fuel station. The the existing
+
+**[1:28:14](https://vimeo.com/797206782#t=5294s)** system was installed in 1960. So I know exactly how old it is, huh? It's old. Yeah, and so it includes the removal of two underground tanks and it'll also be replacing relocating the fuel Master station, which is the sort of the brains the operation. It'll have a new modern up-to-date. So it'll have the the key cards and and have the Data Tracking mileage and vehicles and all all that stuff. That's just being relocated so that the tanks can remain operational until the new system is Fully operational also so should have no or minimal disruption to our our service during that the new tanks will
+
+**[1:29:01](https://vimeo.com/797206782#t=5341s)** be above ground. So it'll be environmentally safer to handle and with approval of the board. The the drawings are just ready to go. So we're ready to move on this project. So just the board authorizes And it's funded by the American Rescue plan act. Right that was part of the Opera funds that were presented here previously. exactly, right Okay. Do I have a emotional exactly in second? And he does any further discussion? No, okay, Mr. And I in favor this spell belt Becca. I haven't read the motion yet. Yeah, please. Yeah, it's fine. Yeah, I know we oh did we well you did right don't go again. Yeah and
+
+**[1:29:48](https://vimeo.com/797206782#t=5388s)** not read it but that's okay. Yes my mind somehow I checked it off in my mind. It's probably because I read it, you know, okay. So the motion is to Ward the contract for the new fuel station system and removal of underground storage tanks and existing fuel system fueling system at our way to CES Northeast LLC of eight Airline Drive sweet 110, Albany all the New York. One two, two zero five in the amount of 800 and 5,825 and 12 cents and authorize the chair to sign the contract on behalf of the board. So let's go ahead. Thank you. I appreciate it.
+
+**[1:30:30](https://vimeo.com/797206782#t=5430s)** I remember where I left I Mr. Now, you just felt better this singer. in favor this Noonan in favor, Mr. Greater in favor It's too early to get Punchy here. Okay. Number 14 is Engineering Services DPW.
+
+**[1:30:55](https://vimeo.com/797206782#t=5455s)** So again, I think that sure if you could give us a little background on this that would be great before we moved to the motion. Yeah, this is Engineering Services for our drain construction projects. So Haley Ward who has been serving this town in that capacity for decades. So they're very familiar with the projects and the community previous work. This is the funding is from the drain article of 400,000 that was approved that town meeting last year. Okay. I'll send I think I'd like to enter date a motion to award the contractor provide professional engineering service for a three-year period
+
+**[1:31:40](https://vimeo.com/797206782#t=5500s)** with annual not to exceed cost of $200,000 today Haley Ward Incorporated 63 Great Road, Suite 200 Maynard Mass. Zero one seven five four and authorized the chair to sign the contract on behalf of the board Ms. Beth Becker.
+
+**[1:32:03](https://vimeo.com/797206782#t=5523s)** in favor this singer
+
+**[1:32:09](https://vimeo.com/797206782#t=5529s)** there is Noonan in favor. Just tonight in favor, Mr. Greater in favor. Okay, so we're rounding the corner here item 15 letter of it. Let these are letters of interest to be noted, please from and Petrocelli moon for the MBTA advisory committee and Dan Albert also expressing interest to join the MBTA advisory committee. There is one vacancy for that. So we will you know, we will schedule appropriately the the opportunity to fill that vacancy also from the cultural Council. We have Catherine Barker. I was interested in in that and for the disabilities commission decaf where there is one vacancy.
+
+**[1:32:56](https://vimeo.com/797206782#t=5576s)** BNS Fitness, so this is of the black cat. run
+
+**[1:33:07](https://vimeo.com/797206782#t=5587s)** and the motion is pretty self-explanatory. To request to entertain a motion to for the request from Ashley Steves DNA BNS fit Fitness companies to hold the wicked 10 20 Miler on Sunday, March 26 2023 subject to approval the Marblehead Police and record police and Recreation and Parks subject of the required Certificate of Insurance naming. The town of Marblehead is additionally insured and police details all distances. We'll start and finish at Salem Waterfront Hotel start times begin at 8:00 am with the last Runners Runners exiting Marvel head by 11:40 am no permanent marketing she'll be made on the streets and any temporary marketing she'll be removed at the conclusion of
+
+**[1:33:53](https://vimeo.com/797206782#t=5633s)** the event the FW Post in Marvel head and the alley Kastner Scholarship Foundation shall be two of the Charities to benefit from this event.
+
+**[1:34:06](https://vimeo.com/797206782#t=5646s)** so moved second effect missing Okay, Miss Noonan in favor. It's tonight in favor. Can ask a quick question? That's not the weekend of the Little League parade is it?
+
+**[1:34:27](https://vimeo.com/797206782#t=5667s)** Perfect. Thank you. Excellent and the cheese working with them to finalize the path. So there's okay. You for Miss Health Becker in favor, Mr. Greater in favor. Next item is a private drain construction at 286, Ocean Avenue. And that's where you want to give us. Yeah, it's just it's a drain connection. It's gone through the approval process at the DPW level and all sign-offs. The interested departments. Okay. So the motion is entertained to entertain the license agreement for private connection to town drainage system as presented between the town and qbw LLC for 286, Ocean Avenue.
+
+**[1:35:13](https://vimeo.com/797206782#t=5713s)** some
+
+**[1:35:18](https://vimeo.com/797206782#t=5718s)** What singer?
+
+**[1:35:21](https://vimeo.com/797206782#t=5721s)** In favor miss doing in favor. It's tonight favor. It's the greater in favor. Okay, we now have a request for the use of Abbott Hall. And a very nice letter from Jonathan Jennifer spungeon. Owner of the Marblehead School of Music and the motion to entertain is the request from Jennifer spungeon Marblehead School of Music use Abbott Hall on Sunday May 7th 20203 for student recitals from 9 am to 8 PM subject to the usual rules regulations fees and receipt of the required certificate of liability second.
+
+**[1:36:02](https://vimeo.com/797206782#t=5762s)** And I just have a question is this going to take place upstairs? That is a good question. I'm assuming so I mean the stage is there right and they're talking about 250 people. So yeah.
+
+**[1:36:17](https://vimeo.com/797206782#t=5777s)** Yeah, it's Different people come in and out. Yeah. Yeah. But upstairs not here. Yeah presence. I don't think so. Yeah with the stage, right? That's a good question. Yeah. Yeah. Okay, I think that brings our agenda to oh we didn't vote. Yeah. Thank you, but Getting drunk. He got a he's got to just tell me to stop things. Here tonight his belt Becker in favor. That's the greater in favor. Okay, that brings our agenda to an end. We do have public comment at this point if anybody online or in the room would like to Comment on the agenda or our deliberations
+
+**[1:37:02](https://vimeo.com/797206782#t=5822s)** now is the time to do it.
+
+**[1:37:06](https://vimeo.com/797206782#t=5826s)** Any any hands up everybody? Okay, that's if you'd give your update that sure just two items one for me sort of an update on clear gov budgeting software. So we've we've turned it on and and all the department heads have access to it whether they know it or not. I I they generated the emails in which allows them to click into the system set up their passwords and start the process. So the first step for them for all of us is they have a whole clear gov Training Academy. It's training modules for all of us to learn the system come up the speed. So there's a lot of work to get to this point to
+
+**[1:37:53](https://vimeo.com/797206782#t=5873s)** Upload all we've loaded five years of budget information or accounting information into the system. So we're at the beginning of the journey as far as learning the system and and utilizing it and as I've said, We're going to leverage it as much as we can for this cycle. Knowing that you know it it's gonna be some bumps in the road, but we're gonna get through that this year. So that by the time we come around for the next fiscal year process, we should all be proficient and and highly utilized tools. So we're we're happy to have that. For the next amount. I'm going to turn it over to Amy for some some news from from her Department. Maybe
+
+**[1:38:39](https://vimeo.com/797206782#t=5919s)** Yeah, come up you want to join us? That'd be great. Amy. Thank you.
+
+**[1:38:46](https://vimeo.com/797206782#t=5926s)** It's with a heavy heart that I'm delivering the sad news of David Cameron's passing. Dave was a valued employee in both water and treat departments. And I'm sure many if not all Marvel headers. So I Dave hard at work where they're operating the tree Department back cold feel asleep, plowing marbleheads ancient ways and dead ends or when working with the water department Excavating during water break to maintaining a hydrant.
+
+**[1:39:13](https://vimeo.com/797206782#t=5953s)** I will miss Dave's dedication to the marbleheads infrastructure knowledge of the water system and his expertise. He used operating equipment to keep those around him safe.
+
+**[1:39:24](https://vimeo.com/797206782#t=5964s)** Thank you very much. Amy for that. Thanks. Yeah.
+
+**[1:39:33](https://vimeo.com/797206782#t=5973s)** That would yes, certainly. like to
+
+**[1:39:42](https://vimeo.com/797206782#t=5982s)** send a letter to the family. You know from from the flight, yeah. someone a second a singer
+
+**[1:39:56](https://vimeo.com/797206782#t=5996s)** In favor, it's good in favor. Listen, I in favor Ms. Belt Becker in favor, Mr. Greater in favor. Condolences to the family for their loss and and to the department as well in the town. Okay.
+
+**[1:40:12](https://vimeo.com/797206782#t=6012s)** Before we move to select board announcements. I think we should it appears that on the 22nd. We will not be able to constitute a quorum for the select cores meeting. So suggesting that we look at our calendars and potentially open up the following Wednesday, which is March 1 as a placeholder. And I don't suggest canceling or rearranging the meetings for March which are which are at the 8th and the 22nd of March. So maybe we can just reschedule the 22nd and give cause some flexibility in terms of schedule and youth nature, obviously. Okay, is that okay shouldn't be here.
+
+**[1:40:58](https://vimeo.com/797206782#t=6058s)** Okay, I'm assuming Alexa how are you from March one? Yeah, I can do the first that's fine. Okay. Yes. The March 1st is fine. Yeah, I'm available as well. Okay.
+
+**[1:41:14](https://vimeo.com/797206782#t=6074s)** Okay, so we'll just I think we should just probably open it and it's right on the you know, the next meetings right on the heels of that one. So maybe we can work it knowing that the Jackie is not going to be here. But I think we should probably put a date in there. Okay. Anyway, just to just to make sure okay, right? Thank you. And with that any any select board announcements. Alexa anything on your on your end I don't have any announcements. I just want to say thank you to Amy for coming tonight and reading that and just taking a moment to speak. That was really thoughtful. Thank you so much. Appreciate it.
+
+**[1:41:51](https://vimeo.com/797206782#t=6111s)** Here and I don't have anything. I hope you feel better.
+
+**[1:41:58](https://vimeo.com/797206782#t=6118s)** Thank you. I hope I hope no one else goes downhill. Let's just say that how's your daughter doing?
+
+**[1:42:08](https://vimeo.com/797206782#t=6128s)** Um Hopefully back to school next week. So
+
+**[1:42:14](https://vimeo.com/797206782#t=6134s)** yeah.
+
+**[1:42:16](https://vimeo.com/797206782#t=6136s)** Okay, I don't have anything except to say thank you Amy for for waiting so long to make them moving announcement. And with that like the motion to adjourn so moved second. Yes noon in favor. Yes tonight in favor. It's spelled Becker in favor the singer. In favor. Thanks greater in favor. Thank

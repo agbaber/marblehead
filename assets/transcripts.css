@@ -933,3 +933,176 @@
   margin: 0;
   font-size: 0.85rem;
 }
+
+/* Topic-page feed (new structure introduced 2026-06-08) */
+.topic-feed-count {
+  color: var(--c-text-mid);
+  font-size: 0.85rem;
+  margin: 0.75rem 0 1.25rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.topic-hits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin: 1rem 0 2rem;
+}
+
+.topic-hit {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+}
+
+.topic-hit-eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-text-mid);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: baseline;
+}
+
+.topic-hit-board { font-weight: 600; }
+.topic-hit-sep { opacity: 0.5; }
+
+.topic-hit-headline {
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.topic-hit-headline a {
+  color: var(--c-text);
+  text-decoration: none;
+}
+
+.topic-hit-headline a:hover {
+  color: var(--c-navy);
+  text-decoration: underline;
+}
+
+.topic-hit-dek {
+  margin: 0 0 0.6rem;
+  color: var(--c-text-mid);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.topic-hit-summary {
+  margin: 0.5rem 0 0.6rem;
+}
+
+.topic-hit-summary > summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--c-navy);
+  font-weight: 500;
+  list-style-position: outside;
+  padding: 0.15rem 0;
+}
+
+.topic-hit-summary[open] > summary {
+  color: var(--c-text-mid);
+}
+
+.topic-hit-summary-body {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--c-text);
+  border-left: 2px solid var(--c-divider);
+  padding-left: 0.85rem;
+}
+
+.topic-hit-summary-body p { margin: 0.4rem 0; }
+.topic-hit-summary-body p:first-child { margin-top: 0; }
+.topic-hit-summary-body p:last-child { margin-bottom: 0; }
+
+.topic-hit-summary-body table {
+  border-collapse: collapse;
+  margin: 0.6rem 0;
+  font-size: 0.92rem;
+}
+
+.topic-hit-summary-body th,
+.topic-hit-summary-body td {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--c-divider);
+}
+
+.topic-hit-summary-body th {
+  background: var(--c-divider);
+  font-weight: 600;
+}
+
+.topic-hit-summary-body blockquote {
+  margin: 0.6rem 0;
+  padding: 0.4rem 0.85rem;
+  border-left: 3px solid var(--c-divider);
+  color: var(--c-text-mid);
+  font-style: italic;
+}
+
+.topic-hit-actions {
+  margin: 0.7rem 0 0;
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
+}
+
+.topic-hit-link {
+  color: var(--c-navy);
+  text-decoration: none;
+}
+
+.topic-hit-link:hover {
+  text-decoration: underline;
+}
+
+/* Board filter is now <button>s instead of anchors for JS toggling */
+.board-filter button {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 12px;
+  background: var(--c-divider);
+  color: var(--c-text-mid);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.board-filter button:hover,
+.board-filter button.board-filter-active {
+  background: var(--c-navy);
+  color: var(--c-fog);
+}
+
+/* Whole-card-clickable pattern: the title anchor stretches to cover the
+   card, and topic chip links lift above it via z-index so they stay
+   independently clickable. */
+.meeting-card { position: relative; }
+
+.meeting-card .card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.meeting-card .card-topics a {
+  position: relative;
+  z-index: 1;
+}
+
+.meeting-card:hover {
+  border-color: var(--c-navy);
+}

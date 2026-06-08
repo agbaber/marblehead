@@ -1,0 +1,359 @@
+---
+slug: board-of-health-2023-04-11
+board: board-of-health
+board_display: "Board of Health"
+date: 2023-04-11
+title: "Board of Health: April 11, 2023"
+vimeo_id: 816928593
+vimeo_url: "https://vimeo.com/816928593"
+duration_seconds: 3342
+ai_generated: true
+status: published
+source: vimeo-auto+llm
+
+
+summary_card:
+  headline: "Board of Health approves $313,091 FY24 budget and sets $25 freon-appliance disposal fee"
+  summary: "The Marblehead Board of Health voted to ratify a revised FY24 operating budget of $313,091, up from a proposed $303,879 after the finance director identified additional funds, though mental health contract services were still reduced by approximately $1,188. The board also approved spending up to $1,488,200 from the waste revolving account and established a $25-per-unit fee for freon-containing appliances. A resident group presented the case for the board to publicly support an existing gas-powered leaf blower summer ban and a forthcoming enforcement article (Article 48) at town meeting."
+  decisions:
+    - "Approved revised FY24 Board of Health operating budget of $313,091"
+    - "Approved waste revolving account expenditures not to exceed $1,488,200 for FY24"
+    - "Approved $25 per-unit disposal fee for freon-containing appliances"
+    - "Approved appointment of Michelle Carlson to the Mental Health Task Force replacing Dan Bauer"
+    - "Approved allocation of $10,000 from ARPA funds for Mental Health Task Force promotional and speaker programming"
+  votes:
+    - motion: "Approve revised FY24 Board of Health budget of $313,091"
+      result: "in favor (unanimous)"
+    - motion: "Authorize spending of $1,488,200 from waste revolving account"
+      result: "in favor (unanimous)"
+    - motion: "Establish $25 fee per freon-containing appliance unit"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Michelle Carlson to Mental Health Task Force"
+      result: "in favor (unanimous)"
+    - motion: "Allocate $10,000 from ARPA budget for Mental Health Task Force"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 49
+    end_seconds: 1194
+    featured: true
+    headline: "Residents urge Board of Health to support gas-powered leaf blower summer ban and Article 48"
+    dek: "Advocates cited health data on air pollution and noise and asked the board to state publicly it will enforce the existing summer bylaw if Article 48 passes at town meeting."
+    summary: |
+      A resident group, led by a presenter identifying herself as Beatrice Stall, appeared before the board to request public support for the existing summer gas-powered leaf blower ban (Memorial Day to Labor Day) and for Article 48, which would add enforcement provisions. Key points raised:
+      
+      - The existing bylaw passed last year had no enforcement mechanism and was not approved by the Attorney General until September, after the summer season had ended.
+      - If Article 48 passes, enforcement would again not take effect until the Attorney General approves it, likely in September 2023.
+      - Fines would be issued to the homeowner, not the landscaper; violations must be witnessed by an authorized enforcer (police or health department).
+      - Health Director Andrew Petty confirmed the health department is authorized to issue fines and would respond when available; the police chief was described as on board with enforcement.
+      - Presenters cited data from the California Air Resources Board, Harvard Medical School, the American Lung Association, and other organizations on pollution, noise, and particulate matter hazards.
+      - The board noted that historically elected boards do not formally endorse citizen warrant articles, but confirmed the department will enforce the law if it passes.
+    key_speakers: ["Beatrice Stall (resident/co-sponsor)", "Andrew Petty (Health Director)", "Board member (chair)"]
+  - topic: school-budget
+    topic_confidence: 0.3
+    start_seconds: 1210
+    end_seconds: 1398
+    headline: "Board of Health ratifies revised FY24 operating budget of $313,091"
+    dek: "Finance director found additional funds, partially restoring a cut to mental health contract services that had reduced the budget from $303,879."
+    summary: |
+      Health Director Petty reported that after the finance committee meeting the finance director identified additional funds, raising the Board of Health budget from a proposed $303,879 to $313,091. The only remaining reduction from the prior year is approximately $1,188 in mental health psychological counseling contract services — a cut made because state grants restrict the board from reducing employee hours. The board noted it may revisit using ARPA funds to restore mental health spending after town meeting, depending on the outcome of the override vote. The finance committee had already taken its vote using the revised $313,091 figure.
+      
+      | Line | Amount |
+      |------|--------|
+      | Original proposed budget | $303,879 |
+      | Revised budget approved | $313,091 |
+      | Reduction in mental health contracts | ~$1,188 |
+    key_speakers: ["Andrew Petty (Health Director)"]
+  - topic: trash-dpw
+    topic_confidence: 0.95
+    start_seconds: 1445
+    end_seconds: 2692
+    headline: "Board approves $1,488,200 waste revolving account and new $25 freon-appliance disposal fee"
+    dek: "The board also voted to add a John Deere loader lease payment to the waste revolving account and established a new program to accept freon-containing appliances for recycling."
+    summary: |
+      **Waste Revolving Account**
+      The board voted to authorize up to $1,488,200 from the waste revolving account for FY24, an increase over the prior request. The additional amount covers a multi-year lease/short-term loan for a John Deere loader at the transfer station, as well as solid waste disposal and facility upgrades and repairs. Going forward, new lease vehicles will be incorporated directly into department budgets rather than the revolving account.
+      
+      **Freon Appliance Disposal Fee**
+      The board established a $25-per-unit fee for residents disposing of appliances containing freon (refrigerators, freezers, air conditioners, dehumidifiers). A vendor will be engaged to capture freon on-site before units are recycled as scrap metal; the vendor requires a minimum of 25 units per visit. Doors must be removed from refrigerators and freezers before drop-off. The health department noted this fills a gap — the transfer station had not previously been able to accept these items.
+      
+      **Transfer Station Update**
+      Health Director Petty reported a pre-application meeting with MassDEP is scheduled for the following Thursday to determine whether the reconstruction permit application would be treated as a new filing (potentially adding ~4 months) or a revised application. Architect and civil engineer will develop a firm schedule after that meeting. A resident during public comment noted concern about the pace of progress, referencing a prior timeline that projected construction completion approximately one year earlier.
+    key_speakers: ["Andrew Petty (Health Director)"]
+  - topic: health-insurance
+    topic_confidence: 0.3
+    start_seconds: 1662
+    end_seconds: 1760
+    headline: "Tobacco Control regulations for kratom and delta-8 products referred to Town Counsel"
+    dek: "The health director reported Town Counsel is drafting updated local tobacco control regulations to cover kratom and delta-8, regulated by the state through the Department of Agriculture."
+    summary: "Health Director Petty reported that, following a prior presentation by Tobacco Control officer Joyce Redford, he has referred to Town Counsel a request to incorporate kratom and delta-8 products into local tobacco control regulations. The goal is to allow the health department to conduct inspections and issue fines. Town Counsel is also drafting the updated regulations; a timeline was not given due to Town Counsel's workload around spring town meeting activities."
+    key_speakers: ["Andrew Petty (Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1760
+    end_seconds: 2307
+    headline: "Mental Health Task Force appoints new member and receives $10,000 ARPA allocation"
+    dek: "The board appointed Michelle Carlson to replace departing principal Dan Bauer and allocated $10,000 in ARPA funds for promotional materials, website maintenance, and speaker series programming."
+    summary: |
+      The Mental Health Task Force liaison reported on upcoming activities and presented a budget request:
+      
+      - **Healthy Kids Fair** (April 29, YMCA, 11 a.m.–1:30 p.m.): Task force will staff a mental health table with activities; subcommittee includes Mark Leban, Melissa, Susan, Terry, Kim, and Ali.
+      - **Monthly column in the Current**: First article to appear the Wednesday before the fair, introducing Marblehead Cares and available resources.
+      - **New member**: Michelle Carlson (replacing principal Dan Bauer) was appointed unanimously.
+      
+      **ARPA Budget Allocation ($10,000):**
+      
+      | Category | Amount |
+      |----------|--------|
+      | Promotion, advertising, and website maintenance | $2,500 |
+      | Adult/senior speaker series | $2,500 |
+      | Young adult speaker series | $5,000 |
+      | **Total** | **$10,000** |
+      
+      Approximately $45,000 in ARPA funds remains available to the health department after this allocation.
+    key_speakers: ["Joanne (Mental Health Task Force liaison)", "Andrew Petty (Health Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 2699
+    end_seconds: 3071
+    headline: "Health department reports on body art regulations, opioid kits, Narcan, and COVID-19 tests"
+    dek: "Director Petty outlined several public health programs including updated body art regulations in progress, opioid overdose rescue kits now available at the office, and approximately 1,000+ COVID-19 test kits available through at least September."
+    summary: |
+      Health Director Petty provided the following updates:
+      
+      - **Body art regulations**: The North Shore Public Health Coalition (Marblehead, Swampscott, Danvers, Beverly, Salem) is updating regulations to cover microblading and micro-pigmentation (permanent makeup); draft regulations near completion and will go to Town Counsel before board adoption.
+      - **Sun safety**: Mineral-based sunscreen and umbrellas to be provided to lifeguards and potentially camp staff and other town employees this summer.
+      - **Opioid overdose rescue kits**: 24 kits available at the health department at no charge; each kit includes two Narcan units, fentanyl test strips, gloves, and a CPR face shield.
+      - **State Behavioral Health Helpline**: Call or text 833-773-2445, available 24/7/365.
+      - **North Shore Mother Visiting Program**: One-time home visit by a nurse available to new mothers by request through the health department.
+      - **Diaper Drive**: Continues through April 28 at the health department entrance.
+      - **COVID-19 tests**: Remaining supply (several thousand kits, expiring approximately September) available at the office, no limit. After May 11, tests expected to be covered through insurance at pharmacies rather than distributed free by the town.
+    key_speakers: ["Andrew Petty (Health Director)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 3076
+    end_seconds: 3272
+    headline: "Residents raise concerns about transfer station design costs and construction timeline at public comment"
+    dek: "One resident warned of potential financial implications of the chosen transfer station design; a second noted that a one-year construction deadline set last year appears to have been missed."
+    summary: |
+      Two members of the public commented during the open public comment period:
+      
+      1. An in-person resident stated that after contacting MassDEP, he learned of significant financial and regulatory implications of the board's chosen transfer station design that he believes were not fully considered when the vote was taken. He urged the board to disclose these financial impacts — including a potential ongoing cost that could offset transfer station revenue — at town meeting rather than have a resident raise them from the floor.
+      
+      2. A remote participant (identified as Barbara's husband) recalled that approximately one year prior the board had determined it could proceed with transfer station upgrades using existing funds, with a projected completion of one year. He expressed concern that little visible progress had been made and asked what the prospects were for the project moving forward.
+    key_speakers: ["Resident (in-person)", "Resident (remote, identified as Barbara's husband)"]
+---
+
+> Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
+> proper names and dollar figures occasionally misheard. Click any timecode to
+> jump to that moment in the source video.
+
+**[0:49](https://vimeo.com/816928593#t=49s)** 7:30 so we'll call this order of April 11th. And the first animal agenda is to prove meeting minutes, but we need to push the best for our next meeting. Not quite ready. So we'll move right on to the people article discussion. And if you would like to come to the table board you can
+
+**[1:11](https://vimeo.com/816928593#t=71s)** Yeah, no. Yeah, I do.
+
+**[1:19](https://vimeo.com/816928593#t=79s)** I'm gonna go to all this but I thought oh here Andrew. Sorry, but it's two more advancing you.
+
+**[1:28](https://vimeo.com/816928593#t=88s)** It's from the agenda.
+
+**[1:33](https://vimeo.com/816928593#t=93s)** So we're here to talk about divorcement of the best part before our summer break. We don't mind if you might introducing yourself, so she still. Epic wrestling I go. I'm sponsor as Beatrice stall my middle name. Because it's been confusing people so.
+
+**[1:55](https://vimeo.com/816928593#t=115s)** I guess that kind of short-term goers to make sure that the summer break and Gaspard leaf blowers by law that was passed last year is not repealed at town meeting and that article 48 regarding enforcement has passed. That's our goal. Obviously. Also, I would love to we would love to have the Board of Health
+
+**[2:15](https://vimeo.com/816928593#t=135s)** support the existing by law and the article 48 publicly or it is so that I can say if it works that the Board of Health supports both existing bylaw and the enforcement article. So that's kind of a short term goals. The longer one is to if it passes to help educate residents so that they understand what the so they can learn the difference between gas powered and electric so that they're not calling for the body reason. That's kind of a longer term goal.
+
+**[2:50](https://vimeo.com/816928593#t=170s)** and that the Departments recognize Marblehead Town departments recognize the hazards of gas powered lawn equipment and share that information with the public or Incorporated whether planning documents or at meetings or another formats. And I think the green committee has been doing that already a little bit. They have something in there about lawn equipment and going Electric. I'm just a quick overview over 200 cities and towns including seven in Massachusetts four counties in one state have enacted legislation to restrict gas-powered leaf blowers. In 2021 the state of California passed a law that by 2024 no new gas-flowers can be sold. Several states have bills in progress organizations that are calling for guest hardly floor.
+
+**[3:38](https://vimeo.com/816928593#t=218s)** Restrictions are banned include Massachusetts Medical Society the American Academy of Pediatrics the American Public Health Association the American Lung Association. So there's more and more data coming out about the pollution. So the three big issues are pollution noise and particulate matter, which also applies not just a gas powered lowers for the particular matter, but for the electric ones as well. So just a few I'm not going to read all of this but just a few things. This is from the eye cancer school of medicine at Mount Sinai. Glbs are a major source of air pollutants that impact Health directly when inhaled and indirectly through acceleration of climate change. Glb combustion engines that two cycle at two stroke are extremely low efficient. And this is the baby that 30% of the gas and oil that they use is unburned and released directly
+
+**[4:26](https://vimeo.com/816928593#t=266s)** into the atmosphere the California area resources board estimates that operation of a gas-powered leaf blower for one hour releases emissions equivalent of driving a car 1100 miles. So this Falls obviously under the Board of Health because of the health issues not only from
+
+**[4:45](https://vimeo.com/816928593#t=285s)** The pollution but also from the noise levels. I'm not going to read all of these in the other thing about what they admit, you know in this exhaust is carbon monoxide formaldehyde Benzene nitrogen oxides hydrocarbons, and then the particulate matter. And they can reach speeds of 200 miles per hour sending the dust the pollen the pesticides the mold and heavy metals into this that are in the soil into the air where they can be briefed in. This is especially that for children because they breathe more air per pound of body weight per day than adults and thus inhale more of any of the police that are well into the air. Regarding the noise. This is from the magazine of Harvard Medical School noise pollution. Not only drives hearing loss tinnitus and
+
+**[5:30](https://vimeo.com/816928593#t=330s)** hypersensitivity to sound but can cause or exacerbate cardiovascular disease type 2 diabetes sleep disturbances stress mental health and cognition problems, including memory impairment and attention deficits. Childhood learning delays and low birth weight and there's more in there but just as more and more data coming out from scientific generals from medical associations saying it's a they're a hat. It's a hazard so
+
+**[5:56](https://vimeo.com/816928593#t=356s)** So that's why the kind of the long-term goal of helping to educate the public and ourselves about it. And that seems to fall under your purview, but the short term is can we say in like letters to the editor or when we're interviewed by the media that the Board of Health supports the existing by law. That's article. 48
+
+**[6:17](https://vimeo.com/816928593#t=377s)** I think historically elected boards don't support citizen articles. We're happy to have you here in get your message out and you know, you have another platform to discuss this with our meeting but I understand is that the historically that's not something that we would we would do can discuss that as a board, right? Yeah. One thing that I and I spoke with Andrew yesterday. He said that if this isn't his passes we will be enforcer. So I think you can say that that we will be thank you are seeing this and I think that's as good as being an endorsement, right? I think even if we answer allowed to
+
+**[7:03](https://vimeo.com/816928593#t=423s)** To endorse, so I think that would be helpful. Also if you want to take this time while you're on the screen, I know if there was a little clarification that needed to be made. Oh last night that both the Unleashed Chief and so Health director is aware of this. Yes, maybe explain. Yeah. So there's a point where my co-sponsor here. I had turned things over to her as a personal reasons and my family and some help problems. And so I was unaware of the agreement from the police chief. I'll let Kathy say what the process was. So when I spoke to Kyle. about submitting this warrant article and in terms of enforcement and I said,
+
+**[7:51](https://vimeo.com/816928593#t=471s)** well, I've talked to Andrew Petty and he said he's willing to enforce it. And she said well, she'll have Town Council. Looking into it and and Town Council looked into it because it was an existing bylaw already. That was just now going to be enforced. She said that she contacted the chief of police and he was on board with enforcing it. That's what I got from Town Council. And that's was the confusion yesterday that the finance committee meeting where I was I didn't know what the reaction was of the police department. I knew they had been contacted by either Town Castle or Canada administrators that was clarified because we wouldn't have put it in unless he had agreed just to talk about that a little bit more. So if you know during the band period if
+
+**[8:38](https://vimeo.com/816928593#t=518s)** there is somebody that is usually lower the it yes. Yeah, the gas powered leaf blower somebody could call into the police station and Report the violation on officer respond or if the officers are unavailable to respond. They can also contact our office and we would respond as long as we were in the office and able to do so most of the police department in my self and my inspector our authorized to issue funds and so we would do that. And it has to be witnessed by the enforcer. So it can't go based on a citizen complaint. And the fine goes to the homeowner not to the landscape. And we really tried this is this by law
+
+**[9:23](https://vimeo.com/816928593#t=563s)** was a compromise to make sure that the landscapers could use the gas powered blowers when they need it. No spring and fall. So and there's no some communities have like decibel levels that they limit. There's no limits here on this one. It's very mild and compromised solution here baby steps. He thought what you also explain that this would not happen. The enforcing wouldn't happen this year. If even voted right positively how that works. So after town meeting when the articles that are passed the town and Robin what's her position together has 30 days to get everything to the Attorney General's office in Massachusetts. Then the Attorney General's office has 90 days to approve all
+
+**[10:10](https://vimeo.com/816928593#t=610s)** of the articles. Which wouldn't happen until September so last year when the Bible passed it didn't wasn't a bylaw passed once it became a bylaw officially. It was until September in the summer was done that will happen this year as well. Even if enforcement has passed the Attorney General probably won't approve everything till September so officially enforcement won't be there even though in good faithful people should go by it. My love will be there. I love you. I will be there. So if the landscape is choose to do that without relying on the enforcement if they could citizens they would use the the electric will not quality to dates. It's a homeowner the homeowner are good. So someone okay that
+
+**[10:56](https://vimeo.com/816928593#t=656s)** I think that's key that the homeowner has to make these come again decision. Yeah, so last year's article the past had no enforcement which is why you're bringing this forward to officially make it not I did have no enforcement. It wasn't even approved by the Attorney General. That's the cover which was after it's we're doing this for the summer because people are home during the summer. They want their windows open. They want to be out in the yard and there's very little use for a leaf blower of any sort in the summertime. There's not tons of trees shedding leaves. So it's like it's like it's not really necessary to begin with and it's a real big nuisance people who want to enjoy their quiet surroundings, especially, you know what I live in the
+
+**[11:41](https://vimeo.com/816928593#t=701s)** old part of town, you know, all the houses are right next to each other so somebody blows it's blowing your way. It's just we're so tightly packed. It's Grand healthy. What was the reasoning to have the language of homeowner rather than the sorry the way what was the reasoning to have to go to the homeowner? You know, we went past their responsible really they hired the landscaper. It's not the landscapers fall to be doing what the homeowner asked them to do. There's communities that we looked at other communities and what they do. They look like 17. I almost across the country plus seven in Massachusetts how they enforce these things some did the landscaper some did the homeowner some did both so but we felt it was really the responsibility of the homeowner.
+
+**[12:28](https://vimeo.com/816928593#t=748s)** their property well, I think it's also a generous thing for you not to tax the landscape a twice once the once the so to speak text getting the electric lowest and then it would be another. Well, they don't have to get electric blowers for the summer. They're messing you don't okay, they don't even rollers, but it's asking them not to do that and then ask them to pay a fine too double win. Yeah, so we're not asking them to go out and buy electric blowers. We just asking them not to blow. Okay during the summer when it's really little yield and the windows are open and
+
+**[13:10](https://vimeo.com/816928593#t=790s)** And everything the fumes are just going all over its hot, you know, and they use Electric Blues. Yes. Yeah, if they can if they choose this summer season, the maid is the time. Yeah all year long Electric in all year long and gas except. And labor Memorial Day to Labor Day. It's a small window me. It's a baby step and I I really appreciate all the work that you have put together here. It's very compelling and I think that the
+
+**[13:39](https://vimeo.com/816928593#t=819s)** benefits of making some changes and proceeding with
+
+**[13:46](https://vimeo.com/816928593#t=826s)** examining this and
+
+**[13:50](https://vimeo.com/816928593#t=830s)** continuing to to build this conversation because your point in the long-term goal share this information with the public. I think that the more people understand some of these Challenges that arise from this practice and to invite homeowners to really evaluate this. and how they're their lawns are being cared for and impacts that I have is really really important conversation to continue having sustainable Marvel head is just said that they're in support of the existing by law and article 48 and I think they're long-term healthy again. It's more education of the residents.
+
+**[14:37](https://vimeo.com/816928593#t=877s)** And the fact that they are working on a net zero. policy, you know for the town and long guest-powered Lawn Equipment contributes such a high amount. of pollution compared to cars
+
+**[14:54](https://vimeo.com/816928593#t=894s)** and California said that by 2031 they have the California air resources board looks at these. What are they off-roads or Source Small Engines small off-road engines most of which are Lawn Equipment both residential commercial? They said that by
+
+**[15:15](https://vimeo.com/816928593#t=915s)** they think that by 2031 Small Engine emissions will be more than twice those from Passenger cars, which is pretty amazing The reason we chose gas powered leaf blowers as opposed to including. gas powered lawn mowers and all the other two stroke Small Engines is that the leaf blowers have the additional aspect of noise and it's something that the electric powered leaf blowers don't have is the low frequency noise that penetrates buildings and it goes for many houses down
+
+**[15:54](https://vimeo.com/816928593#t=954s)** in addition to the high frequency noise And these poor operators of the equipment? We one of our supporters has interviewed some of the landscapers. She speaks fluent Spanish and ask them why they were wearing ear protection where they aware that this loud noise right up next to their ears is going to end up with hearing damage. They said no we weren't aware and she said did your Boss tell you about this no. They're not being trained. They're not being protected. It's another aspect and some of these that you know at a hundred decibels and they say that over I know it is over 65 is an issue some say over 40 decibels is an issue. So they're allowed they're higher
+
+**[16:42](https://vimeo.com/816928593#t=1002s)** than what's healthy, especially when they're doing an eight hours a day without protection and most of the landscape owners are not informing their employees. about the risk They're really really are a lot of facet States. Yeah. I mean Ideally, I'd say ban them up better the whole year, but we can't do that. We just have to start with this and raise awareness. you know Robert has always been in the Forefront with their the plastic bags and would be one pesticides and with this smoking and smoking band before the Commonwealth did so here we go again.
+
+**[17:29](https://vimeo.com/816928593#t=1049s)** It's good. So I that I think that's all that we have to say. Yes. See them more questions. Do you have any questions for us? Have you considered going to to the Statehouse to try to you know talk to the representative Armenia or anybody like that to try to you know, because it's one thing to do at Marblehead, but real changes higher levels. So I wonder if it's have you gone been quite communities is probably doing that that Jamie Banks was involved early on with this who started like communities. I think they have been doing that, you know look into it. They have a really large team and they've promoted this in many other communities including Washington DC help them get their van in place.
+
+**[18:16](https://vimeo.com/816928593#t=1096s)** They have a lot more expertise on their boards.
+
+**[18:23](https://vimeo.com/816928593#t=1103s)** I will though suggested if it hasn't already if bill hasn't already been. filed about this I'm not sure. You know, I've looked I haven't there may have but I haven't seen it. But there was somebody representative in Lexington. She sponsored a bill that would be a grant to help landscapers transition from gas power to electric and I think California has something like that. That would be very helpful. Yeah.
+
+**[18:54](https://vimeo.com/816928593#t=1134s)** So she already has that bill going in the state.
+
+**[18:59](https://vimeo.com/816928593#t=1139s)** You provise why is way too? Take care of this and and proceed because I understand from the landscape or companies perspective. They're like, well if I can't use gas, I have to go out by these big expensive electric, you know blowers. Let's see. We're just starting with the little bit in the Summer where you don't really need blowers.
+
+**[19:25](https://vimeo.com/816928593#t=1165s)** Eventually, I think there's a life of the Growers and I'm sure that the landscape is replacing. Each year from what we hear from landscapers that they have to replace their gas powered leaf blowers frequently. So in the data suggests that electric leaf blowers are replaced that often they last longer. I've heard also that it could be longer depends on the lower on the gas card. It can be years.
+
+**[19:54](https://vimeo.com/816928593#t=1194s)** handsome as well like it on with your business you so we can say that you'll be enforcing it and All right. Thank you for listening. Yeah, thank you. Thank you for your hard work.
+
+**[20:10](https://vimeo.com/816928593#t=1210s)** To Donald our eyes can use to a role called please. Um his student or Kevin is playing music.
+
+**[20:21](https://vimeo.com/816928593#t=1221s)** Right. Can you repeat please just a quick budget up the so obviously I met with finance committee. Over a week ago those are budget. I'm obviously at that time we heard that there are some differences other budgets that were being proposed when we put our budget together one of the hardest things. I think this board had was that the fact that we needed to try to meet financial needs of the town and one of the things that we're only able to cut was the mental health Contract Services. Only reason why that's the area that we could cut is that we have rants from the state of Massachusetts and those grants dictate that we have to keep our present employees at the hours that they currently are at.
+
+**[21:07](https://vimeo.com/816928593#t=1267s)** If we choose or if we are have to reduce the hours of the employees, we lose grant funding because we're not honoring what we have there. So that was a really hard decision for the board. I did speak with the finance director after the meeting. I think we're all upset. You know that. Other departments for potency potentially proposing additional employees and we're cutting Mental Health Services and a very difficult time. The financer was able to find some money and so we went from a proposed or a health budget of 303,879 dollars and we've gone back up to 313,091. So now we are only reducing the
+
+**[21:53](https://vimeo.com/816928593#t=1313s)** mental health. psychological moral Counseling Services contracts for a total of 1,188 So obviously, you know, we can talk about this further. I think the board has a plan to like to discuss that you know, if this is the budget that we're going to be stuck with and there's no override that the board would like to make this whole using Ark of monies and potentially we'll have another meeting about that to see if the board wants to even increase the amount of money to Marvel accounts. So we can't just vote tonight the women hundred dollars. It's what you mean? Yeah, I would suggest that you wait until after town meeting and see exactly where we end up and then you can you
+
+**[22:39](https://vimeo.com/816928593#t=1359s)** know, the budget kicks in July 1st. So you have a little bit of time, but you can meet right after the vote and that we know what the override outcome is and you can make any kind of adjustment then. But a thousand to recover is a lot better than it's a lot better. Yeah. But why don't we just present the budget? We want this to still the budget that is that the peer Dam budget. This is the paired down budget. This is the budget that's going to get the town to have a balanced budget and meet the funds that we have in the 1100 would make it over and with the 100 would make it over.
+
+**[23:18](https://vimeo.com/816928593#t=1398s)** All right, so So I need to vote just that, you know to ratify this budget of 313,091 dollars. One of the question. You said the finance director found the money. Where was the money found so obviously, you know, it's a big moving piece, you know, and so obviously she was looking across I'm only looking at our budget and so I'm let me take it to see what's here, but she can look across the whole thing. So I'm not sure where she made cuts to find money for us. It could be another department it generally I don't you have to ask her that question. It could have been from the line item for supplies for you know something else. Yeah. And with this we prove the new budget tonight the revised budget the finance committee has to take another vote. Nobody. I took the vote last
+
+**[24:05](https://vimeo.com/816928593#t=1445s)** night. This is the number that they used, okay. So they're all right emotion here. We adjust the budget to the health department budget to 313,091 I second. I'm miscellaneously famous, Joe and Miller Dr. Toddler. On the other piece that came up with regarding our revolving accounts. Um when she was looking all of this, she also figured out that so several years ago. We had least a John Deere boater for the transfer station. It's a lease. So there's multiple years payment and after three years we owned the vehicle. It's not like a traditional lease that you and I entered into
+
+**[24:52](https://vimeo.com/816928593#t=1492s)** where we returned the vehicle. It's a it's a Short Term Loan essentially. And so we need to continue to make we have another payment on this vehicle this year. I'm actually think it's a little bit more than four you know than three years, so What would she like to she wanted us to do is to roll this into our waste revolving account? So our weights revolving count has gone up a little bit the requests. So now our total rest requests for the waste revolving account is one million 488,200 and this the Board of Health requests recommendations for the revolvement fund dedicated to waste disposal for fy24 expenditures from the fund by the Health Board of Health will be for the cost of
+
+**[25:37](https://vimeo.com/816928593#t=1537s)** waste Solid Waste Disposal lease payment of the John Deere Loader solid waste disposal facility upgrades and repairs the expenditures from the revolving fun are not to exceed 1 million 488,200. This said revolving fun is jointly supported by the Board of Health and the finance committee in an effort to stabilize payment of disposal costs to the town. So I just need a vote to ratify. This could I just didn't catch it? Where was this originally? So last year we had there was a vote on time meeting floor. So we have several different articles. We have a Rolling Stock article. It's approximately four hundred thousand dollars that allows us to buy equipment. We have a capital Improvement article roughly about
+
+**[26:25](https://vimeo.com/816928593#t=1585s)** four hundred thousand dollars and last year the added again an article to carry these least Vehicles. The least Vehicles need to be once. They're the agreement has been made they need to go into our budget. So these are now be shown once we lease a vehicle no same thing a short-term loan. They will now go into our budget rather than doing it in this way in the future.
+
+**[26:51](https://vimeo.com/816928593#t=1611s)** Efforts of doing it this week. Yes, that's correct. So with us, we're using our waste revolving account to pay for it other departments. They'll be moving it right into their budget.
+
+**[27:03](https://vimeo.com/816928593#t=1623s)** So I just need them emotion to approve the you know, the one million 488,200 from the waste revolved. It is an fy24 already. Good. Yes, I'll make a motion to authorize the spending a one million 488 To $200 Scholars or the door say, you know or these expenses you out of the way street always.
+
+**[27:35](https://vimeo.com/816928593#t=1655s)** Second I miss Joan Miller. Miscellaneously don't.
+
+**[27:42](https://vimeo.com/816928593#t=1662s)** and that's it for
+
+**[27:46](https://vimeo.com/816928593#t=1666s)** Budget update. Okay. Thank you. Obviously, you know, you know, we were we had the warrant hearing last night. And we were there to just after 11 o'clock. So again, you know, obviously it's gonna be a busy town meeting we expected to go at least two nights. So I 10 25 just after 11. We've been talking about Tobacco Control and Joyce Redford's presentation for a while. You were going to reach out to Town Council. So I have passed along to Town Council the The recommendation from Tobacco Control on Kratom and Delta at 8 which has been regulated by the state of Massachusetts through the Department of Agriculture. We asked the questions
+
+**[28:31](https://vimeo.com/816928593#t=1711s)** about you know, we feel that if we roll this into our local Tobacco Control regulations that will allow us to do inspections and also enforcement through fines and stuff like that. So we're looking to get our opinion on that as well as draft the regulations for us. So importance time. Yeah, so more next time I'll let you know when she's ready with that, you know, and then I can send out the draft and then we can start to discuss that since we're going to turn really Do you think it's after that where she's probably she's really busy last night. I talked to her today about this. And so yeah, she's really busy with all the town meetings all the spring activities. So it's gonna be a little bit before you. As soon as you know, I will catch up with her again and let you know but yeah, she said she's really busy at this. That's yeah we
+
+**[29:20](https://vimeo.com/816928593#t=1760s)** Hey Joanne, your turn mental health. Thank you so much. So we had our most recent meeting last night and we're fortunate to get a quorum because there were lots of conflicts for members at the meeting. We discussed our upcoming April 29th participation in the healthy kids there which will be held at the YMCA on that Saturday in the morning into the afternoon and we are participating offering a mental health component component to that and we have a subcommittee that we've got engaged for that including Mark. Leban Melissa Susan Terry Kim and Ali and the contributions that we have.
+
+**[30:07](https://vimeo.com/816928593#t=1807s)** Lending to the table have activities and different groups supporting the mental health of our community that are going to be engaging with the visitors to the table. So we want to put the word out and hopefully get lots of people that would have interest to participate and join us at that fair and it worked out really well. I should know we've been hoping to pull together a mental health fair locally and then instead of having to invent it and build it. We're very fortunate to be able to work with YMCA to partner with them and build a message. Yes, that will be from 11 o'clock until one o'clock in the afternoon. Yeah, sorry 1:30. I think it's going to school and then
+
+**[30:54](https://vimeo.com/816928593#t=1854s)** we in order to try and get the word out to make sure people are aware of it. We actually also have a partnership with the current and have been invited to have a mental health column on a monthly. Yeah, yes. I'm very excited about it. There's a great team working on that as well. We have another subcommittee and Susan is leaving that and the first articles going to be coming out that Wednesday prior to the 29th the fair so we have an article that we are writing introducing the community to Marblehead cares the mental health task force some of the resources that are available and that we've built and then we will be promoting this event also at that in that column are
+
+**[31:41](https://vimeo.com/816928593#t=1901s)** very first inaugural column, so
+
+**[31:45](https://vimeo.com/816928593#t=1905s)** other things let me to highlight. Well, we've got our budget for the task force that I would love to present and then also
+
+**[32:00](https://vimeo.com/816928593#t=1920s)** We're very sad to say goodbye to our principal. Dan Bauer has served on the task force since it was born and he of course has accepted a new role and he has been such an outstanding member of the task force and made great contributions. And he did say Michelle Carlson will look forward to working on the task force. So we're gonna hope to have her at our next meeting and welcome her and I just want to say the two new members are just doing a great job and It's a real vibrant vibrant. Year this year. There's a lot of Engagement. Which would you like us to appoint Michelle or is that because we that's a great question because we just want Michelle and replacement of
+
+**[32:46](https://vimeo.com/816928593#t=1966s)** Dan Bauer. May I may make that request then information? I make a motion to a point Michelle Carlson to the mental task force. the place of Dan Bauer So Hazlet. Oh, yes, I still in Illinois in favor, Dr. Tybelly here. Thank you excellence. And then to speak to the budget that we've put together for the task force. We have some funds from the arpa budget and what we would like to request include for promotion and advertising.
+
+**[33:25](https://vimeo.com/816928593#t=2005s)** To really engage and make sure people are aware of what the task force can bring and offer the community. We're requesting 2500 dollars that also includes hiring health and support with the website the Marblehead cares website so we would have monthly
+
+**[33:46](https://vimeo.com/816928593#t=2026s)** updates to the website and then consistent professional Maintenance of the website which will be very most welcome. And also we've got for adults senior speaker series 2500 dollar request and for young adult speaker series $5,000 request or you know for two years. We had speaker programming where we didn't have a budget but we were able to bring forward lots of local thought leaders and experts to speak to the community and now we're looking to hopefully potentially bring in someone from outside that may be able to speak to a topic. Relevant topic so that's a total of 7,500. It's
+
+**[34:32](https://vimeo.com/816928593#t=2072s)** a total of $10,000. That's the advertising. Oh the speaker series. Yeah, and that's oh sorry for speaker series. Yeah, fully. Sorry 7500 And you don't do these numbers and they make sense for what you need. They do. Yes, and I think you know, for example the promotional items that we're looking to purchase would be
+
+**[34:58](https://vimeo.com/816928593#t=2098s)** Not just for this year. This is something to really continue to support the task force and the work that we aim to do going forward indefinitely, you know. some of the things that we would provide would be we'd be able to use For decades potentially and then also the website is that the funding towards the website is something that will go on Beyond this year. and when you have the program to the healthy kids you might have to have a budget for that. Well, I think it would just include some brochures and we've got some magnets that we'd like to have. We already have a tablecloth. So so our branding is we have a preliminary branding and then we we actually are trying to figure out we've got
+
+**[35:46](https://vimeo.com/816928593#t=2146s)** so much available on our table already. We've got such an enthusiastic committee that's generated lots and lots of handouts and resources for people that they're already talking about. We're gonna have to build them up. Terry was saying, you know, we just can't have a whole table with black things for people to see we're gonna try and have for the year Andrew could the health department pay for the magnets and the particular brochures. No, we know the budget for that. You can't there's no place for it. No. Fortunately, but I have to say working with Peter schelk at locally. He found great deals. He's got great vendors where we can get I think you know over a thousand brochures for
+
+**[36:34](https://vimeo.com/816928593#t=2194s)** I think it goes. Sorry. I don't have that number with me. There's anything really somebody's gonna pay for. Yeah, but he's I think the more you buy the prices go down, you know go down significantly. So I was really impressed with we're trying to get you the money. Oh, thank you. Where are you gonna get? Let's go. You're gonna write the check. That's some real. Do you know if you a lot of funds she can use her promotional, you know only and there's an account it was to put these funds Yeah, we'll figure that out would have that with the science. Yeah, okay, but it's the Peter. Is that his name? Yes. He wants to 2500. No, he's going to send a monthly voice. Okay for service, so they may be some money in here. Yes. Okay
+
+**[37:20](https://vimeo.com/816928593#t=2240s)** indeed. Yes. Thank you, Helene. Appreciate you. I just want to go out in the street view. I appreciate that. I'm used to that. So that's your $10,000 from your performance to? To pay for promotional advertising and speaker series including adult senior speaker series and young adult speaker series young adult even potentially, you know. more Middle School potential Do you want to make motion you make your money? I need the motion. I'd like to make a motion to request $10,000 of the arpa budget. To support these really now your other hat. So instead of requesting it just to allocate
+
+**[38:06](https://vimeo.com/816928593#t=2286s)** it to allocate it, right? Yes. I'd like to allocate thank you to allocate that $10,000 for these conventional task force sedimental customers. I second that I'm just doing more in favor sign they sleeping doctor. Thank you. Good job.
+
+**[38:27](https://vimeo.com/816928593#t=2307s)** so one last question
+
+**[38:30](https://vimeo.com/816928593#t=2310s)** Mr. Petty, yeah How much? Money is left in the airport for usness. I never double check, but I believe it would be a total of $45,000. It's right. It's right. Yeah is left and that means we spend within two years. Yep. That's great.
+
+**[38:49](https://vimeo.com/816928593#t=2329s)** you
+
+**[38:53](https://vimeo.com/816928593#t=2333s)** Central Station update please. So just a really quick update on the transportation facility. So we are The Architects our civil and Engineering myself meeting with nasty EP this coming Thursday at 10 AM that's called a pre-application meeting. So what we're looking to talk and discuss with them is how they would like us to move forward with this application. Is it going to be a new application with them or is gonna be a revised application with them? Obviously we've gone through the process of posing the landfill doing some transfer station work. And will they allow us to continue on with that or are they gonna make us file a whole new application? That's really going to dictate timeline. If it's going to be a whole new application. Now, we're talking about potentially four months for them to this
+
+**[39:40](https://vimeo.com/816928593#t=2380s)** review. This application will also discuss with them timeline for that the Lesser application kind of the amendment, you know amended application. So that's really the biggest update. I have Jerry is continuing to work on the fence the gates. I make sure that we can potentially put that out to pay as soon as possible for the motorization of that green Street Gates and then also understanding costs associated with all the other fences and data transportation. Because that's the update. Once we have the information back from Master ep. The architect that point will feel comfortable to really at this point. We have a draft. Schedule he will be able to feel comfortable along
+
+**[40:26](https://vimeo.com/816928593#t=2426s)** with the civil engineer to put a true. Schedule together that will take us now through bidding. I mean through permitting to bidding and I'm warding the the contracts that the person that's gonna do the Reconstruction of the transfer station.
+
+**[40:44](https://vimeo.com/816928593#t=2444s)** Thank you. For yeah, we will need to do a report of town meeting so we can discuss that so I can work with shot Todd about it update at town meeting that we should give during that opening piece from you know, updates from committees and Boards. Okay good. So then there's a transfer station fee schedule update. Oh, yeah, so I attended the Mass recycling. Meeting several weeks ago I was able to speak with several vendors, you know able to speak with Republic that was there and some of our other vendors but there are a couple of vendors that I was looking to contact or connect with and one was that one was a Freon vendor. Um So currently we don't take AC
+
+**[41:32](https://vimeo.com/816928593#t=2492s)** units fridges freezers dehumidifiers because we can't handle the freon we can't in the state of Massachusetts. All that has to be captured. You can't just release that into the atmosphere, but we can hire somebody to come in. This vendor will come in remove all the freon from the units tag the units we can log all that stuff and all those units can then be recycled in our scrap metal bin. So we're looking to charge a fee of 25 dollars per unit. So that would be for AC's dehumidifiers refriggers freezers anything that contains Freon and that will allow us to bring the gender in to do this and then we can recycle all that material. With vendor come so he has to he's requiring that we have 25 units before he comes and so every time we
+
+**[42:20](https://vimeo.com/816928593#t=2540s)** collect the 25 units that they would want to get that $25 or so, you know, no he doesn't, you know, we need to make a little bit of money because we're moving the material around there's some you know, so it's a reasonable fee, okay. Great. Yeah, but that this you know, we definitely get stuck with AC units. We often have a lot of residence calling to say we're looking to get rid of AC units. So we feel this is a reasonable cost. It's actually now you haven't been able to take them. No, we haven't found any vendor that's been the hardest thing and so yeah. Luckily we're able to make this, you know connection and this contact and not be able to deal with us. So we will set up within towards the back in the recycling area. The most important thing is obviously that people come into the facility. You'll need
+
+**[43:07](https://vimeo.com/816928593#t=2587s)** to pay for it first. They'll get a sticker to stick on it just like TVs to say it's paid and then we'll explain to them where it's going to go in the back. Doing do you need to vote for that fee? Yes, I need a vote for that thing emotions and ask the question but $25, I think. I've been elsewhere where it's more is that the going rate? Yeah, so we do a survey of the surrounding Community surrounding areas and that's kind of going feet you see everything from no it's a little bit less to 20 all the way up to $50 per unit like that. The one thing we do one thing that is required that is if you are bringing a refrigerator or a freezer into the facility the doors have to be removed. Okay makes sense.
+
+**[43:54](https://vimeo.com/816928593#t=2634s)** That's the case. Yeah, that's when the case for everybody just need to remind everybody obviously, we'll put this up on our website and we can start this right away. Once the board establishes this fee. So I moved it. We established the fee of $25 per unit for Any items that have three on such as refrigerators freezes and air conditioners? I second I miss find Heasley favor Miss Julia Miller paper Dr. Toddles here. That's it for the fees. So we are taking a look at a couple other items propane tanks is another hard one to get rid of. Um, we have a really good contact with cmrk. They believe that they have a vendor that might be able to handle the propane tanks for us on that would be 20 pound tanks and like
+
+**[44:40](https://vimeo.com/816928593#t=2680s)** one pound tanks. So like the small camping tanks and the larger gas grills. We're also looking for a similar vendor to deal with fire extinguishers.
+
+**[44:52](https://vimeo.com/816928593#t=2692s)** And as soon as we have that, we'll come back to the board and set that up as well.
+
+**[44:59](https://vimeo.com/816928593#t=2699s)** You talking directors report Time Dr. Ricky's report time. Um, so obviously the board is aware that we have a North Shore Public Health Coalition that consists of Swampscott when bobblehead Danvers Beverly Salem and that small area and so we worked together on public health initiatives currently that we are working on body art regulations. We're working off an older set of body art regulations and new stuff that's coming about is microblading or micro pigmentation. So that's permanent makeup. We need to roll this into our you know, tattoo regulations really called body art regulations. Those are almost finished. Once those
+
+**[45:45](https://vimeo.com/816928593#t=2745s)** are completely will bring that to the board. We'll probably have that review by Town Council and we'll adopt those regulations. So that's something that we're working on for the summer. We're working on sun safety and we've done this in the past. We want to make sure all town. These are concern about you know, sun safety wearing sunscreen every day when they're outside. There's a high rate of cancer incidents with outdoor employees highly department and people like that. We're also going to be providing umbrellas to the lifeguards and I'll potentially handing out sunscreen. It's a mineral based sunscreen sort of organic sunscreen to All the staff and potentially other campers and other programs in the town of Marvel.
+
+**[46:28](https://vimeo.com/816928593#t=2788s)** Um going on with that. We've also been working on Narcan trading and opioid overdoys issues. So we now have we now offer an opioid overdose rescue kit in the health department. So if you have concerns about a family member our friend, you can come into the health department and get this kit it consists of two Narcan units instructions fentanyl test strips. So if you're worried about press pills or anything that stuff that people are taking you can test these pills and make sure that they're free of fentanyl, um, press so press pill is up home manufactured pill so A lot of the issues, you know came about by people taking medication. Um now a
+
+**[47:16](https://vimeo.com/816928593#t=2836s)** lot of times what they're doing is manufacturing that in the black market and they're called press pills. So they're pressed together. They're not manufactured. I'm gonna know what's in and you don't even know what's in them. So, you know to keep you safe and stuff like that. We recommend that you test them for Fentanyl. And so that's one of the items that's available. It has the instructions on how to do that. It comes with some natural gloves and also a face barrier Shield that if you have to give CPR that's in that as well. So we have we currently have 24 kids of the office. Um, you know, no questions asked, you know, please feel free to come to the office and we can provide this you know this for you. I just want to talk about state of Massachusetts has a new Behavioral Health
+
+**[48:03](https://vimeo.com/816928593#t=2883s)** helpline. So we have cards. There's more information. Just outside our office, but I want to make sure we talked about this, you know this number in the past. So you can call or text eight three three seven seven, three two, four four five. It's 24 hours a day seven days a week 365 days a year. And this is you know, if you're in need of some help, please reach out to the state of Massachusetts. There's a lot of different resources out there. But this is another one. Let's say this set up to try to alleviate, you know, some of the mental health that she's We also have a new program through the North Shore Public Health Services Coalition. We're doing a North Shore mother visiting program. So if
+
+**[48:50](https://vimeo.com/816928593#t=2930s)** you are a new mother and you can request a visit by a local nurse, they will come into your house that will give you some suggestions that can answer any questions for you. And if you need some help with something they can point you in the right direction. This is a one-time visit and you have to call to request these Services doesn't Salem Hospital do that. Yeah film Hospital might do some of that depending on the outpatient and stuff like that. But we're just we also offer that in the North Shore area for first delivery Salem, correct? Yep, patience that deliver sooner. They used to have it. I don't know if they still do the person. Yeah, so, you know, if if you're looking for something like that, please call the office and we can set that up and also just remind everybody that the diaper Drive continues until
+
+**[49:37](https://vimeo.com/816928593#t=2977s)** April 28th. And you can drop those off right at the outside of the health department. That's it. What could you tell us about the covid-19? So when the kids? Oh, yes, so I still have quite a few tests several thousand. So they sit just outside the health department, you know, please come and help yourself, you know, obviously we're not limiting the number that you take and so we want to encourage people to continue to test if you feel that you have covid and that's the best way to keep yourself the community and your family say Do we know what the situation is going to be after May 11th? We do not know what the situation so obviously um, I have at least another thousand caskets and we'll continue to pass those out until those are gone, but we're not sure exactly we do
+
+**[50:24](https://vimeo.com/816928593#t=3024s)** not believe that we'll be provided any more test kits. We believe that what's going to happen is that it's now gonna be part of your insurance so that you'll have to go and use your insurance at a pharmacy to get more tests along with that. I'd like to know about being vaccinations. They'll be charged you insurance after that nail. And so they've always been kind of charged to the insurance. If you didn't have insurance, you know, the shot was given to you at no costs, um in the future, you know, we will continue to have flu clinics which will most likely include covid shots boosters and stuff like that, but it's recommended that you go contact the pharmacy on boosters or if you need a covid child. Do you know the young expiration date on the kits that we have the kids that we have now, I believe expire in September so they certainly go through. Yeah,
+
+**[51:11](https://vimeo.com/816928593#t=3071s)** this is a new set and they have quite a you know. Good.
+
+**[51:16](https://vimeo.com/816928593#t=3076s)** Thank you. All right, so it's never public comment period And I will remind the public that it's a time to talk but not to have interaction with Board of Health and heal back and forth. No questions answered based on New State ruling the there is no time limit. There's only you people can speak for reasonable amount of time. We've determined that reasonable is four minutes. So whoever speech will have four minutes and if anybody has anything to say
+
+**[51:48](https://vimeo.com/816928593#t=3108s)** Okay. So what I was speaking about last time when I when I was point when I reached out to the dep to talk to them about the truck stuff. I found out more than I wanted to and I believe in all sincerity. That when you guys voted on your design you voted with the idea of traffic building. Costs things like that. I don't think you would any idea about the financial random applications of it, which there are major ones both for the designs. You choose one, that would be You know, it might turn into a Perpetual tax on the town and then remove all money that comes into the transfer station. And I mean that literally so I would say I would hope that it town meeting. When you provide an update on this you find out
+
+**[52:35](https://vimeo.com/816928593#t=3155s)** what those are and you inform the town that we went with this design. We're gonna lose out on XYZ and this is the reason because it'll look kind of foolish if I stand up and do it instead. Thank you. anyone else anyone in the audience enter? So I can't get to the gallery, but some people should be able to.
+
+**[53:02](https://vimeo.com/816928593#t=3182s)** Looks like there's eight people present.
+
+**[53:10](https://vimeo.com/816928593#t=3190s)** Response, yeah.
+
+**[53:14](https://vimeo.com/816928593#t=3194s)** Well, thank you.
+
+**[53:19](https://vimeo.com/816928593#t=3199s)** And so yeah, Barbara PC has a friendly, okay. I'll ask an unmute. The Barbara Barbara you can help me UPC.
+
+**[53:37](https://vimeo.com/816928593#t=3217s)** Um, hi, it's not Barbara, but it's Barbara's husband. If my memory serves me, correct about this time last year. This is in regard to the transfer station that the board had decided that they could proceed with the upgrades. Using existing funds to get it done and the timetable that was laid out at that time was the completion of construction by one one year later, which it is now. So I haven't kept track of what's Happening happening month to month, but it seems like there's very little progress. At this one year mark, and I'm just wondering what's the promise for it
+
+**[54:23](https://vimeo.com/816928593#t=3263s)** to happen ever?
+
+**[54:27](https://vimeo.com/816928593#t=3267s)** Thank you.
+
+**[54:32](https://vimeo.com/816928593#t=3272s)** the other hand Chase no. Okay. close public comments we have our next meeting date, which would be
+
+**[54:46](https://vimeo.com/816928593#t=3286s)** We tell meaning is the first we can May and then the second Tuesday is the night. So thank you. What's means well, sorry. Both things will be will be posted. Yes. So be a tummy May first probably second. maybe third fourth and fifth and then she have a regular schedule meeting May 9th as it would be free. Yeah.
+
+**[55:11](https://vimeo.com/816928593#t=3311s)** And we'll post the time meeting just to be official as well. Yeah, and you do it for three nights right now. No you just kidding. Well, it went to 11:30. Let's meet so at least two minutes. Yeah, we believe will be two nights priced. All right, so we have a motion to adjourn. So yeah, oh I could say that motion to adhere. Okay second Mr. And Miller in favor. I'm miscellaneously and doctor, okay.

@@ -1,0 +1,92 @@
+{%- comment -%}
+Renders the feed of (transcript, topic_segment) hits for one topic page.
+Caller sets page.topic_slug; this include reads it.
+{%- endcomment -%}
+
+{% assign seeds = site.data.topic_seeds | where: "slug", page.topic_slug %}
+{% assign topic = seeds[0] %}
+{% if topic.description %}
+<p class="page-intro">{{ topic.description }}</p>
+{% endif %}
+
+{%- comment -%}
+Collect every matching segment. Liquid lacks structured arrays, so we push 9
+parallel scalars per hit and step through them in groups of 9.
+{%- endcomment -%}
+{% assign hits = "" | split: "" %}
+{% for t in site.transcripts %}
+  {% for seg in t.topic_segments %}
+    {% if seg.topic == page.topic_slug %}
+      {% assign hits = hits | push: t.date | push: t.url | push: t.title | push: t.board_display | push: seg.start_seconds | push: seg.headline | push: seg.dek | push: seg.summary | push: t.vimeo_url %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% assign rows = hits.size | divided_by: 9 %}
+
+{% if rows == 0 %}
+<p class="topic-empty">No segments tagged with this topic yet. Check back as new meeting transcripts are published.</p>
+{% else %}
+<p class="topic-feed-count">{{ rows }} segment{% if rows != 1 %}s{% endif %} across the meeting corpus</p>
+
+<div class="topic-hits">
+  {%- comment -%}
+  Sort by date desc. Build a list of "YYYY-MM-DD|index" strings, sort, reverse,
+  then iterate.
+  {%- endcomment -%}
+  {% assign sortable = "" | split: "" %}
+  {% for i in (0..rows) %}
+    {% assign idx = i | times: 9 %}
+    {% if idx >= hits.size %}{% break %}{% endif %}
+    {% capture key %}{{ hits[idx] }}|{{ idx }}{% endcapture %}
+    {% assign sortable = sortable | push: key %}
+  {% endfor %}
+  {% assign sortable_sorted = sortable | sort | reverse %}
+
+  {% for k in sortable_sorted %}
+    {% assign parts = k | split: "|" %}
+    {% assign i0 = parts[1] | plus: 0 %}
+    {% assign i1 = i0 | plus: 1 %}
+    {% assign i2 = i0 | plus: 2 %}
+    {% assign i3 = i0 | plus: 3 %}
+    {% assign i4 = i0 | plus: 4 %}
+    {% assign i5 = i0 | plus: 5 %}
+    {% assign i6 = i0 | plus: 6 %}
+    {% assign i7 = i0 | plus: 7 %}
+    {% assign i8 = i0 | plus: 8 %}
+    {% assign t_date = hits[i0] %}
+    {% assign t_url = hits[i1] %}
+    {% assign t_title = hits[i2] %}
+    {% assign t_board = hits[i3] %}
+    {% assign s_start = hits[i4] %}
+    {% assign s_headline = hits[i5] %}
+    {% assign s_dek = hits[i6] %}
+    {% assign s_summary = hits[i7] %}
+    {% assign t_vimeo = hits[i8] %}
+
+    <article class="topic-hit">
+      <p class="topic-hit-eyebrow">
+        <span class="topic-hit-board">{{ t_board }}</span>
+        <span class="topic-hit-sep">&middot;</span>
+        <time>{{ t_date | date: "%B %-d, %Y" }}</time>
+      </p>
+      <h2 class="topic-hit-headline">
+        <a href="{{ t_url | relative_url }}">{{ s_headline | default: t_title }}</a>
+      </h2>
+      {% if s_dek %}<p class="topic-hit-dek">{{ s_dek }}</p>{% endif %}
+      {% if s_summary %}
+      <details class="topic-hit-summary">
+        <summary>Read the segment summary</summary>
+        <div class="topic-hit-summary-body">{{ s_summary | markdownify }}</div>
+      </details>
+      {% endif %}
+      <p class="topic-hit-actions">
+        <a href="{{ t_url | relative_url }}" class="topic-hit-link">Open meeting transcript &rarr;</a>
+        {% if t_vimeo and s_start %}
+        <a href="{{ t_vimeo }}#t={{ s_start }}s" rel="noopener" class="topic-hit-link">&#9654; Jump to this point in the video</a>
+        {% endif %}
+      </p>
+    </article>
+  {% endfor %}
+</div>
+{% endif %}

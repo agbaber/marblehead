@@ -1,0 +1,1175 @@
+---
+slug: town-meeting-2026-05-04
+board: town-meeting
+board_display: "Town Meeting"
+date: 2026-05-04
+title: "Town Meeting: May 4, 2026"
+vimeo_id: 1189445340
+vimeo_url: "https://vimeo.com/1189445340"
+duration_seconds: 13435
+ai_generated: true
+status: published
+source: vimeo-auto+llm
+
+
+summary_card:
+  headline: "Marblehead Town Meeting approves Prop 2½ override on June ballot, 1,227–159"
+  summary: "The 2026 Marblehead Annual Town Meeting, attended by approximately 1,200 residents, passed Article 29, placing a three-tier Proposition 2½ general override on the June 9th ballot by a vote of 1,227 to 159. The meeting also approved the FY2027 operating budget of approximately $96.5 million, which reflects $7.7 million in deficit-driven cuts including elimination of 43.5 FTE positions town-wide. Voters approved MBTA 3A rezoning compliance (Article 4) by a narrow 81–82 margin and passed 40 of 40 warrant articles, with 12 articles indefinitely postponed."
+  decisions:
+    - "Approved warrant reorder to take up budget and override articles first (1,023 to 225)"
+    - "Approved Article 23 FY2027 operating budget (~$96.5M general fund)"
+    - "Approved Article 22 use of $5.36M in free cash and light-department surplus to reduce tax rate"
+    - "Approved Article 29 three-tier Prop 2½ override appropriation to place override on June 9 ballot (1,227 to 159)"
+    - "Approved Article 4 MBTA 3A multifamily overlay district zoning (81 to 82)"
+    - "Approved Article 5 accessory dwelling unit zoning bylaw amendment (69 to 47)"
+    - "Approved Article 19 firefighters union collective bargaining agreement (Local 2043, FY2027–FY2029)"
+    - "Approved Article 30 rescission of $1,619,627 in unused Brown/Gerry School bond authorization"
+    - "Approved Article 32 mooring fee increase"
+    - "Approved Article 33 prohibition of cryptocurrency ATMs"
+    - "Approved Article 40 resolution affirming commitment to the Declaration of Independence and Constitution (amendment by Walter Haug failed)"
+    - "Indefinitely postponed Articles 8, 10, 24, 25, 26, 27, 28, 34, 37, 38, 39"
+  votes:
+    - motion: "Article 1 amendment (reorder warrant)"
+      result: "in favor (unanimous by electronic vote — specific count not announced)"
+    - motion: "Article 1 main motion as amended"
+      result: "in favor (1023 to 225)"
+    - motion: "Article 29 supplemental appropriation / override"
+      result: "in favor (1227 to 159)"
+    - motion: "Article 4 MBTA 3A zoning"
+      result: "in favor (81 to 82)"
+    - motion: "Article 5 ADU zoning bylaw amendment"
+      result: "in favor (69 to 47)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 23
+    end_seconds: 559
+    headline: "2026 Annual Town Meeting opens with 1,200 attendees, pledge, and land acknowledgement"
+    dek: "Moderator called the 377th Annual Town Meeting to order, reviewed electronic voting procedures, and received ceremonial remarks including a land acknowledgement and a statement from the Task Force Against Discrimination."
+    summary: "The moderator reported approximately 1,200 attendees. Ceremonial opening included a pledge of allegiance led by VFW Commander Ronnie Knight, a land acknowledgement by Diane Gora recognizing the Naumkeag band, and remarks by Joe Whipple on behalf of the Select Board's Task Force Against Discrimination. The moderator reviewed ground rules including two-minute speaker limits and electronic voting procedures."
+    key_speakers: ["Moderator (Jack Attridge)", "Diane Gora", "Joe Whipple (Task Force Against Discrimination)"]
+  - topic: elections-procedural
+    topic_confidence: 0.8
+    start_seconds: 586
+    end_seconds: 1271
+    headline: "Town meeting votes 1,023–225 to reorder warrant, taking budget articles first"
+    dek: "A motion by Matthew Hooks to move the budget and override articles to the front of the warrant passed over objections that doing so risked quorum for remaining business."
+    summary: "Matthew Hooks (Nana Pashman Street) moved to reorder the warrant so Articles 2, 22, 23, and 29 would be heard first while attendance was highest. Opponents including Peter Barnett and Sarah Fox argued the reorder jeopardized quorum for routine but necessary articles. The amendment passed by electronic vote and the main motion as amended passed 1,023 to 225."
+    key_speakers: ["Matthew Hooks", "Peter Barnett", "Sarah Fox (46 Beach Street)", "Rebecca Whitehill (Amherst Road)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1380
+    end_seconds: 2650
+    headline: "Article 2 reports: high school roof underway, three home-rule petitions signed into law"
+    dek: "Town officials updated the meeting on capital project progress including the MHS roof contract award, Mary Alley roof bids pending, transfer station improvements, and DPW road investments; Representative Armini reported three home-rule petitions signed by Governor Healey."
+    summary: |
+      **High School Roof:** General contractor Homer Contracting has been awarded and has begun work. The school committee chose the 'recover' option; project is currently on budget.
+      
+      **Mary Alley Roof:** Bids expected by Thursday of that week; no further detail available.
+      
+      **Transfer Station:** New scale house, truck scale relocation, retaining wall, and paving complete.
+      
+      **DPW Roads (2022 capital):** $12,475,000 allocated in 2022 for road and sidewalk improvements; future plan calls for $3M annually over three years. Commercial, West, and Mystic Streets cited as completed 'Total Streets' examples.
+      
+      **Home Rule Petitions signed into law:**
+      - Means-tested senior property tax exemption (signed May 29, 2026)
+      - Board of Health expansion from 3 to 5 members (signed Dec 18, 2025)
+      - Parking fines during snowstorms (signed Nov 12, 2025)
+      
+      **Retirement Board** reported annual COLA meeting: June 10, 2026, 4:00 PM, Mary Alley building.
+      
+      **Charter Committee** chair Amy Drinker reported draft charter to be submitted to Select Board in June 2026; memorialized committee member Sean Casey.
+    key_speakers: ["Michael Piffeling (Assistant Superintendent for Finance and Operations)", "Steve Cummings (Building Commissioner)", "Andrew Petty (Director of Public Health)", "Amy McCue (Director of Public Works)", "Rep. Jenny Armini", "Robert Peck (Retirement Board Chair)", "Amy Drinker (Charter Committee Chair)", "Alec Goolsby (Finance Committee Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2669
+    end_seconds: 2719
+    headline: "Article 22 approved: $5.36M in free cash and light-department surplus to reduce tax rate"
+    dek: "CFO Alicia Benjamin presented the annual tax-rate reduction article; town meeting approved it by hand vote."
+    summary: "Free cash was certified at $6.1 million for FY2026. The town is using $5 million to reduce the tax rate and balance the budget, plus $360,000 in surplus from the light department, for a total of $5,360,000 applied under Article 22."
+    key_speakers: ["Alicia Benjamin (CFO)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 2735
+    end_seconds: 6224
+    headline: "FY2027 budget approved with $7.7M deficit closed via cuts and new curbside fee"
+    dek: "Finance Committee Chair Goolsby detailed a $7.7 million structural deficit closed through 43.5 FTE eliminations, a new curbside trash fee, and a one-time school SPED prepayment, with S&P revising Marblehead's bond outlook to negative."
+    summary: |
+      **Revenue:** Total available FY2027 revenue is $96.5 million, down $600K year-over-year. Tax levy grows $2.1M; state aid up ~$200K; local receipts down ~$1M (interest income decline, conservative motor vehicle excise estimate); free cash use reduced by $2M.
+      
+      **Level-service cost:** $104.2M — $27.9M town operating, $51.3M schools, $25M shared employee benefits. Deficit: **$7.7 million**.
+      
+      **Deficit drivers:** Wages +$3.1M (collective bargaining), health insurance +$1.7M (~10% GIC increase), new curbside contract +$1M, pension +$500K, out-of-district SPED +$300K, other +$500K.
+      
+      **Cost accountability framework:** Finance Committee reallocated shared benefits; true town/school split is 38%/62% (vs. prior 49%/51% presentation). Town share of deficit: $4M; school share: $3.7M.
+      
+      **Town-side gap closure ($4M):**
+      - New curbside trash fee (Board of Health): ~$2.2M
+      - Department cuts totaling ~$2.4M, including:
+        - Library: $700K cut + $170K materials eliminated (8.25 FTEs; decertification risk)
+        - Other general government: $590K (OPEB $250K, stabilization $250K, workers comp $90K)
+        - Community Development & Planning: $300K (dept head, sustainability coordinator, grant coordinator positions cut)
+        - Meaningful reductions in DPW, finance, public buildings, cemetery, COA, town clerk, police, building inspection, Rec & Park
+      - Unemployment costs increased ~$600K due to eliminations
+      - 22 FTE town positions eliminated (~12% of workforce; ~18 currently filled, ~4 vacant)
+      
+      **School-side gap closure ($3.7M):**
+      - One-time $1.5M prepayment of FY2027 out-of-district SPED tuition using FY2026 funds
+      - $750K teacher/IA salary cuts; $450K from vacant positions
+      - $350K expenses shifted to revolving funds/grants
+      - ~$650K further reductions in substitutes, supplies, curriculum, technology, administration
+      - 18.25 FTE school positions eliminated (~4% workforce; 11 vacant, 11 layoffs)
+      
+      **Bond rating:** S&P affirmed AAA but revised outlook from stable to **negative**, citing budgetary stress. Reserves at ~2% vs. 5% policy target.
+      
+      **Debt service:** New bond issuance of $26.2M (net $24,975K after $1.5M premium) at 3.75% true interest cost. Total FY2027 debt service: $10,971,016. Total general fund debt outstanding: $146,297,626 through 2056.
+      
+      Finance Committee unanimously recommended yes on Article 23.
+    key_speakers: ["Alec Goolsby (Finance Committee Chair)", "Alicia Benjamin (CFO)", "Walter Casey (resident)", "Jack Buba (resident)", "Stacey Bell (resident)", "Thatcher Keiser (Town Administrator)", "Cindy Towerlowin (resident)", "Marta Bach (resident)", "Kate Thompson (resident)"]
+  - topic: health-insurance
+    topic_confidence: 0.9
+    start_seconds: 3278
+    end_seconds: 3326
+    headline: "GIC health insurance premiums up ~10% in FY2027, adding $1.7M to budget deficit"
+    dek: "Finance Committee highlighted five-year trend of rising GIC premiums as one of the largest cost pressures on Marblehead's budget, with FY2027 increase of approximately 10%."
+    summary: "The Finance Committee presented a dedicated slide on health insurance costs. Marblehead participates in the Group Insurance Commission (GIC). Over the last five years, premiums have grown significantly; the FY2027 increase is approximately 10%, contributing $1.7 million to the year's cost growth across active employees and retirees. The committee's insurance advisors confirmed GIC provides the lowest-cost coverage available to the town. Further cost reductions would require collective bargaining. The Finance Committee stated it encourages town negotiators to reference the structural deficit in ongoing contract talks."
+    key_speakers: ["Alec Goolsby (Finance Committee Chair)"]
+  - topic: trash-dpw
+    topic_confidence: 0.95
+    start_seconds: 5180
+    end_seconds: 5810
+    headline: "New annual curbside trash fee of ~$2.19M established by Board of Health; separate override question set for June ballot"
+    dek: "The Board of Health, under Select Board direction, established a new curbside collection fee projected at $2,186,516 annually; a separate override question to revert this cost to the tax levy will appear on the June 9 ballot regardless of Article 29's outcome."
+    summary: "The FY2027 budget includes a curbside collection line of $2,186,516 funded by the new Board of Health fee rather than the tax levy. A resident (Albert Jordan) objected to the fee structure and preference for keeping curbside costs on the tax rate. Town Administrator Keiser and Finance Director Benjamin explained the distinction between waste collection (transfer station) and curbside collection. The Select Board confirmed a separate ballot question on June 9 will give voters the option to fund curbside collection through a Prop 2½ override instead of the fee."
+    key_speakers: ["Andrew Petty (Director of Public Health)", "Albert Jordan (resident)", "Alicia Benjamin (CFO)"]
+  - topic: override
+    topic_confidence: 1
+    start_seconds: 6627
+    end_seconds: 8975
+    featured: true
+    headline: "Town meeting approves Article 29 override appropriation 1,227–159, placing three-tier Prop 2½ on June 9 ballot"
+    dek: "Select Board Chair Dan Fox and School Committee member Melissa Klukas presented a three-tier, three-year phased override totaling up to $4.3M in year-one draws; town meeting voted 1,227 to 159 to advance it to the June 9 ballot."
+    summary: |
+      **What Article 29 does:** Appropriates supplemental FY2027 funds contingent on passage of a Prop 2½ override at the June 9 ballot. Tonight's vote puts the tiers on the ballot; voters will choose a tier in June.
+      
+      **Three tiers (each builds on the prior):**
+      
+      | Tier | Year 1 draw | Full override | Year-1 tax increase (median home) |
+      |------|------------|--------------|-----------------------------------|
+      | Tier 1 – Partial Restore | $1,269,564 | ~$9M | ~$100s (not specified) |
+      | Tier 2 – Build | $2,805,236 | ~$12M | $280 yr 1; $676 yr 2; $274 yr 3 = $1,230 cumulative |
+      | Tier 3 – Invest | $4,296,718 | ~$16M+ | (not separately detailed) |
+      
+      **Tier 1 restores** (partial): 15 of 20.5 town FTEs cut, library accreditation-waiver staffing, COA nutritional coordinator, SRO, DPW heavy equipment operator/laborer, custodians, finance senior clerk, community development director. Schools: funds salary obligations for adjusted enrollment staffing in FY28–29 and returns revolving-fund positions to general fund.
+      
+      **Tier 2 adds:** COA social worker, full library restoration, GIS position, $450K building maintenance, 1 police officer, 2 firefighters, town clerk special clerk, IT director, budget analyst, assistant planner, conservation agent; schools: $150K technology leases and **free full-day kindergarten**.
+      
+      **Tier 3 adds:** specialized DPW equipment operator, foreman, 1 more police officer, 2 more firefighters, grant writer, $60K community mental health, $1.5M recurring capital (town + schools), $100K curriculum/PD, in-district 18–22 SPED program.
+      
+      **Ballot mechanics:** Four separate questions (tiers 1–3 plus curbside trash). Voters may vote yes/no on each independently. Highest-dollar tier with >50% yes votes prevails.
+      
+      **MOU:** Select Board, School Committee, and Finance Committee signed an MOU capping per-year tax increases and pledging not to seek another override for at least three years.
+      
+      **S&P context:** Bond outlook revised to negative; town reserves at ~2% vs. 5% policy target.
+      
+      **Vote:** 1,227 yes to 159 no.
+    key_speakers: ["Dan Fox (Select Board Chair)", "Melissa Klukas (School Committee)", "Bit Capola (resident)", "Dave Weber (resident)", "Bonnie Carey (resident)", "Carl Goodman (resident)", "Jean Lamkin (resident)", "Steve Silva (resident)"]
+  - topic: 40b-mbta
+    topic_confidence: 0.98
+    start_seconds: 9046
+    end_seconds: 10461
+    headline: "Article 4 MBTA 3A overlay district passes 81–82 with Tedesco golf course and Broughton Road sub-districts"
+    dek: "Town meeting narrowly approved a revised 3A multifamily overlay zoning plan focusing on the Tedesco Country Club parcel (780 units capacity) and Broughton Road (120 units), replacing the previously rejected plan."
+    summary: |
+      The revised 3A plan was developed by a working group after a prior referendum failure. It removed the Tioga Way and Pleasant Street sub-districts and added a Tedesco sub-district while retaining Broughton Road.
+      
+      **Sub-districts:**
+      - **Tedesco:** Two parcels (golf course + parking lot); capacity 780 units; 35-foot max height; mixed-use allowed; architectural guidelines for roof pitch, windows, clapboard siding, landscape plans.
+      - **Broughton Road:** All of Broughton Road; 120-unit capacity; 35-foot max height.
+      - Combined capacity of 900 units meets the state's 897-unit requirement.
+      
+      The plan received EOHLC preliminary approval in February 2026. Planning board voted 5–0 to recommend.
+      
+      **Key discussion points:**
+      - Tedesco ownership: The golf course owner has been consulted and is understood to be comfortable; sale is not required and development is not mandated — it is a zoning overlay only.
+      - A resident (Nick Ward) argued the plan is designed to avoid actual development, noting that property taxes rose anyway despite no new housing.
+      - The AG has an active lawsuit on hold pending this vote; failure to pass would likely resume legal action.
+      - 3A compliance would restore eligibility for future grant rounds; ~$4M in previously applied-for grants are likely unrecoverable.
+      
+      **Electronic vote result:** 81 yes to 82 no — article passed (two-thirds not required for this overlay).
+      
+      *Note: The vote result as read aloud was "81 to 82" — this appears to reflect the display as announced by the moderator; the article was declared passed.*
+    key_speakers: ["Brendan Callahan (Planning Board)", "Barton Height (Planning Board Vice Chair)", "Walter Casey (resident)", "Nick Ward (resident)", "Alexis Sol (resident)", "Carol Easthope (resident)", "Samantha Rosado (resident)"]
+  - topic: 40b-mbta
+    topic_confidence: 0.9
+    start_seconds: 10518
+    end_seconds: 10774
+    headline: "Article 5 ADU zoning bylaw amendment passes 69–47 to align with state law"
+    dek: "Planning board vice chair Barton Height explained the amendment addresses AG-requested adjustments after last year's ADU bylaw approval and adds oversight for ADUs on preexisting non-conforming lots."
+    summary: "The Attorney General reviewed and substantially approved Marblehead's 2025 ADU bylaw but requested further adjustments for consistency with the Massachusetts ADU law. This amendment implements those changes and adds site-plan review oversight for ADUs on preexisting non-conforming lots, which are prevalent in Marblehead. Planning board voted 5–0 to recommend. Electronic vote: 69 yes to 47 no."
+    key_speakers: ["Barton Height (Planning Board Vice Chair)", "Brendan Callahan (Planning Board)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 10800
+    end_seconds: 11393
+    headline: "Articles 6–13 pass: unpaid accounts, revolving funds, lease purchases, water/sewer construction"
+    dek: "Routine annual articles including $60,182 in unpaid FY2025 accounts, revolving fund caps totaling $4,272,898, a $510,682 lease purchase, and $4.5M in water/sewer construction were approved by hand vote; Articles 8 and 10 indefinitely postponed due to fiscal constraints."
+    summary: |
+      - **Article 6** – Unpaid accounts: $60,182.27 from FY2025; approved unanimously.
+      - **Article 7** – Revolving fund caps: $4,272,898 total (Park revolving $2M; commercial waste $1,367,598); approved.
+      - **Article 8** – Equipment purchase: Indefinitely postponed due to fiscal constraints.
+      - **Article 9** – Lease purchase: $510,682 ($274,605 from free cash; $236,077 from waste revolving fund); approved.
+      - **Article 10** – Capital improvements for public buildings: Indefinitely postponed.
+      - **Article 11** – Walls and fences: Standard maintenance article; approved.
+      - **Article 12** – Stormwater construction: $200,000 from general fund (resident noted this is below the $300,000 town meeting had previously approved per year); approved.
+      - **Article 13** – Water/sewer consent articles: $2.4M water construction, $2.1M sewer construction from retained earnings; approved.
+      - **Article 14** – MWRA interest-free loan authority: Up to $3.5M; requires two-thirds vote; approved.
+    key_speakers: ["Alicia Benjamin (CFO)", "Amy McCue (DPW Director/Water-Sewer Superintendent)", "Maggie Wheeler (Town Engineer)", "Susan Petoskey (resident)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 11393
+    end_seconds: 11849
+    headline: "Pay schedules for administrative, traffic supervisor, and seasonal staff approved; firefighters 3-year CBA ratified"
+    dek: "Articles 15–20 approved cost-of-living adjustments for non-union staff groups and ratified a new three-year firefighters union contract with 3%/3%/3.5% annual wage increases."
+    summary: |
+      - **Article 15** – Administrative pay schedule: Cost-of-living adjustment for non-union administrative staff, consistent with collective bargaining agreements.
+      - **Article 16** – Traffic supervisor pay schedule: Cost-of-living adjustment for crossing guards.
+      - **Article 17** – Seasonal and temporary pay schedule: Cost-of-living adjustment for summer recreation and parks staff.
+      - **Article 18** – Town Clerk compensation: 3% increase to $97,460.
+      - **Article 19** – Firefighters CBA (Local 2043): Three-year contract FY2027–FY2029; 3% wage increase years 1–2, 3.5% year 3; adds sick leave bank, adjusts detail pay, longevity/educational incentives, and cancer screening benefits. Additional FY2027 appropriation of $143,238 from free cash.
+      - **Article 20** – Salary bylaw ratification: Compensation committee actions May 2025–April 2026 ratified; 6 reclassifications, 4 new/restructured positions, 1 title change, 10 job description updates.
+      
+      All approved by hand vote.
+    key_speakers: ["Alexa Singer (Select Board)", "Thatcher Keiser (Town Administrator)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 11849
+    end_seconds: 12200
+    headline: "Essex Tech assessment of $749,000 approved; district serves 35 Marblehead students across 12 programs"
+    dek: "Marblehead representative Mark Strout reported Essex Tech is the second most affordable vocational school in the Commonwealth and has secured $4.6M in grants with $9M pending."
+    summary: "Essex Tech currently serves 1,926 students in 26 programs on a 166-acre Danvers campus. Marblehead's 35 enrolled students represent a 2.2865% participation share, yielding a $749,000 assessment covering operations, capital, and transportation. The school accepted 500 students in the class of 2030 from over 1,500 applicants. Article 21 approved by hand vote."
+    key_speakers: ["Mark Strout (Essex Tech School Committee Chair / Marblehead Representative)", "Jennifer Dolan (resident)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 12200
+    end_seconds: 12410
+    headline: "Articles 24–28 and 30 disposed of; Brown/Gerry School bond rescission of $1.62M approved"
+    dek: "Articles 24–28 were indefinitely postponed; Article 30 rescinded $1,619,627 in unused Brown/Gerry School bond authorization returned to taxpayers."
+    summary: |
+      - **Articles 24–28** (General Stabilization Fund, school capital, school technology, school capital needs, school supplemental appropriation): All indefinitely postponed.
+      - **Article 30** – Bond rescission: Brown/Gerry School project was authorized at $54,844,767; final cost was $53,225,140, leaving $1,619,627 to be rescinded. Additionally, the MSBA grant reimbursement exceeded the project cost by $641,030, saving taxpayers approximately $42,735 per year through 2040.
+    key_speakers: ["Alicia Benjamin (CFO)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 12337
+    end_seconds: 12778
+    headline: "Articles 31–36 approved: admin benefits update, mooring fee increase, crypto ATM ban, DPW bylaw changes"
+    dek: "Town meeting approved updated benefits for non-union administrative employees, a periodic mooring fee increase to fund harbor capital needs, and a ban on cryptocurrency ATMs as a consumer protection measure."
+    summary: |
+      - **Article 31** – Administrative benefit amendment: Non-union employees receive 3 personal days, accelerated vacation accrual, and $750/year longevity increase; total impact $11,650.
+      - **Article 32** – Mooring fee increase: Periodic increase (fourth since 2018) to sustain Harbor Enterprise Fund; 60% of harbor revenue comes from mooring fees; fund is saving toward seawall repairs along harbor from Parker's to Tucker's Wharf.
+      - **Article 33** – Crypto ATM ban: Prohibits cryptocurrency kiosks within Marblehead as a public safety/consumer protection measure; Chief Dennis King noted these kiosks are used in fraud schemes with near-irreversible transactions.
+      - **Articles 34, 37, 38, 39** – Indefinitely postponed (dissolve Public Works Committee, limit employment contracts to one year, restore select board one-year terms, repeal planning/community development dept).
+      - **Article 35** – Amend General Bylaws re: Public Works Committee: Updated mission statement adopted.
+      - **Article 36** – DPW bylaw housekeeping: Reflects three mechanics, stormwater engineering, and director title.
+    key_speakers: ["John Doub (Harbors and Waters Board Chair)", "Dennis King (Police Chief)", "Andrew Petty (Director of Public Health)", "Amy McCue (DPW Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 12861
+    end_seconds: 13391
+    headline: "Article 40 resolution affirming constitutional principles passes; anti-Trump amendment fails"
+    dek: "Town meeting approved a resolution affirming commitment to the Declaration of Independence and Constitution in the nation's 250th anniversary year; an amendment naming President Trump as a danger to the country was voted down."
+    summary: "Kate Wharton and Lynn Nadeau presented Article 40 as an advisory resolution affirming Marblehead's commitment to the Declaration of Independence, the US Constitution, separation of powers, and the rule of law in honor of the nation's 250th anniversary. A resident, Walter Haug, proposed an amendment naming President Trump as 'a clear and true danger' and calling for his removal from office. Multiple speakers opposed the amendment as inappropriate for town meeting. The amendment failed by show of hands; the main motion passed. The meeting dissolved after Article 40."
+    key_speakers: ["Kate Wharton (1 Martin Terrace)", "Lynn Nadeau", "Walter Haug (amendment proponent)", "Carol Easthope (resident)", "Nick Adams (resident)"]
+---
+
+> Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
+> proper names and dollar figures occasionally misheard. Click any timecode to
+> jump to that moment in the source video.
+
+**[0:23](https://vimeo.com/1189445340#t=23s)** Test, test. Could everybody find their seats please?
+
+**[0:47](https://vimeo.com/1189445340#t=47s)** With a quorum present, I hereby call the 2026 Marblehead annual town meeting to order. Thank you for coming.
+
+**[1:05](https://vimeo.com/1189445340#t=65s)** It's a pleasure to have Commander of the Marblehead Veterans of Foreign Wars, Chaplain Lyman Rollins Post 2005, Commander Ronnie Knight to lead us in pledge of allegiance.
+
+**[1:21](https://vimeo.com/1189445340#t=81s)** I ask everybody to please stand. If you have your hat on, please remove it. Put your right hand over your heart and repeat after me. I pledge allegiance to the flag of the United States of America, and to the republic for which it stands, one nation under God, indivisible, with liberty and justice for all. Thank you, good citizens of Marblehead. Thank you, Ronnie.
+
+**[1:49](https://vimeo.com/1189445340#t=109s)** Diane Gora.
+
+**[1:53](https://vimeo.com/1189445340#t=113s)** For the land acknowledgement, please.
+
+**[1:58](https://vimeo.com/1189445340#t=118s)** Thank you, Mr. Moderator. We acknowledge that the land on which we reside, now known as the town of Marblehead, is the ancestral homeland of the Naumkeag band of the Massachusetts and Pawtucket tribes. They lived here under the leadership of the great sachem, Nanipashmet. Since time immemorial, the Naumkeag people maintained this land and surrounding water with the utmost respect, preserving it for future generations and treating it as sacred ground for the burial of their dead. They had an organized and thriving community before the arrival of European settlers. The Naumkeag people suffered great loss of life during King Philip's War and the
+
+**[2:46](https://vimeo.com/1189445340#t=166s)** smallpox plagues, and the surviving members were dispossessed of the land. Although we are unaware of any Naumkeag descendants living in Marblehead today, we honor the Naumkeag people of the Massachusetts and Pawtucket tribes, past and present, as the original stewards of this land and pledge to include their history in the history of our town. Thank you. Thank you, Diane.
+
+**[3:21](https://vimeo.com/1189445340#t=201s)** Joe Whipple, for the Task Force Against Discrimination.
+
+**[3:32](https://vimeo.com/1189445340#t=212s)** Thank you, Mr. Moderator, for recognizing me to present this statement on behalf of the select board's Task Force Against Discrimination. In 1649, the general court of the colony of Massachusetts Bay established Marblehead as a town on this land we inhabit, and 127 years later, the Continental Congress adopted the Declaration of Independence, proclaiming that all people everywhere are created with an equal right to life, liberty, and the pursuit of happiness. Those who acknowledge this fundamental equality can rightly celebrate the 250th
+
+**[4:19](https://vimeo.com/1189445340#t=259s)** anniversary of the Declaration this year, and especially two months from today. In 1989, the Task Force Against Discrimination was created in response to anti-Semitic vandalism, and since then, we have been working against attitudes and expressions of bigotry and hate, whether on the basis of race, religion, orientation, gender identity, national origin, or other characteristics. These efforts have gained recognition of Marblehead as a No Place for Hate community. We remind all our fellow citizens that prejudice
+
+**[5:06](https://vimeo.com/1189445340#t=306s)** or bigotry against others in thought, word, or deed is contrary to our founding values as a nation, the values which make America great. We seek to work proactively to promote respect for all, and to react appropriately to incidents of hatred and bigotry. Hate crimes should be reported to the police. Other incidents of bigotry can be reported to the task force through the select board's office in Abbott Hall. This year, if town meeting finishes in two nights, in cooperation with the public schools, the police
+
+**[5:52](https://vimeo.com/1189445340#t=352s)** department, and the ministerial association, we invite everybody to an evening with David Schribman, a Pulitzer Prize-winning journalist originally from the North Shore.To take place on Wednesday evening at 7:00 PM in the high school auditorium. The topic, on which he is very knowledgeable, is portrayals of anti-Semitism. So I'd like to see you all there Wednesday evening. Thank you, Joe.
+
+**[6:33](https://vimeo.com/1189445340#t=393s)** As usual, I'm going to go through some details for the meeting, but I just got a report that we have 1,200 people that showed up tonight.
+
+**[6:44](https://vimeo.com/1189445340#t=404s)** Thank you.
+
+**[6:47](https://vimeo.com/1189445340#t=407s)** I can remember getting on the phone to try to get people to show up, so this is fantastic, and I can't tell you how much I appreciate you all being here.
+
+**[6:57](https://vimeo.com/1189445340#t=417s)** This lectern in front of me is for presentations and replies from town officials. The microphones that are mid-aisle on each side are for deliberation after a presentation. All comments and questions during the meeting go through the moderator. There's no back and forth between people, please. When you get up to the microphone, please state your name and address. If you have a subsidiary motion to a main motion during the meeting, I may request it to be in writing, and I have them right here next to me. So if I call you up, you can please come right up to the lectern up here. We have motions which I will adhere to a strict two-minute limit for individual speakers after a presentation is made tonight. Presentations are allowed 10 minutes
+
+**[7:45](https://vimeo.com/1189445340#t=465s)** for their initial presentations, unless additional time has been requested and granted. And if you plan to speak, please be prepared, as a great deal of information can be shared in the allotted time. Past practice is to check in with the assembly to see if they want to continue after an article which started after 10:00 PM. We'll see how far we are through the warrant and discuss at that point. The assembly deserves order, and I'll not tolerate catcalling or disruptions to the meeting. According to our bylaws, every voter speaking upon a subject shall confine their remarks to the question before the meeting, avoid personalities, and be seated when they are finished. I may not always allow a motion to call the question should I deem
+
+**[8:33](https://vimeo.com/1189445340#t=513s)** that the motion would restrict informed consideration of the meeting, or if it comes before an appropriate discussion has taken place. This is a widely used town meeting practice. On the other end, we will likely get to the point where I need to remind everyone of an old Marblehead town meeting saying that it appears that everything has been said, but not everybody has had a chance to say it.
+
+**[8:59](https://vimeo.com/1189445340#t=539s)** I will do my best to balance the conveyance of information with the budget of time. I hope you will join me in running this 377th annual town meeting of Marblehead's legislative body with respect and integrity.
+
+**[9:19](https://vimeo.com/1189445340#t=559s)** Ally Donovan, we have your license.
+
+**[9:25](https://vimeo.com/1189445340#t=565s)** Excuse me? I have my whole wallet. Oh, we have your whole wallet.
+
+**[9:31](https://vimeo.com/1189445340#t=571s)** Domino's?
+
+**[9:42](https://vimeo.com/1189445340#t=582s)** Detective Brady's right down here.
+
+**[9:46](https://vimeo.com/1189445340#t=586s)** Electronic voting.
+
+**[9:50](https://vimeo.com/1189445340#t=590s)** This is year three with our electronic voting system, and we've learned a lot of lessons from our meetings, and I've received some input from other moderators. We have 40 articles on this year's warrant, with 12 main motions for indefinite postponement from the sponsors of the articles. In the spirit of time, I will be calling for the indefinite postponement votes and some routine business votes by show of hand, sort of like the old days, if you guys remember that. And I'll make it very clear when I do.
+
+**[10:26](https://vimeo.com/1189445340#t=626s)** When I call for an electronic voting device vote, there will be an allotment of time to vote. Last year, it was three minutes with a full house, and we were able to process votes in 30 seconds on night four with lesser attendance. If you hit the wrong button or change your mind, you must do so within that time. A final tally will be announced, shown on the screen, and that tally will be available in the record of the minutes. So we're going to run a couple of test questions. And when I do that, once I ask the question and start the time, I want you to vote as quick as you can because that's going to give us a good read on how much time we're going to need when we call for an electronic vote.
+
+**[11:11](https://vimeo.com/1189445340#t=671s)** So here comes the first question.
+
+**[11:15](https://vimeo.com/1189445340#t=675s)** Team's ready. Will Marblehead beat Swampscott in the Thanksgiving Day game this year?
+
+**[11:24](https://vimeo.com/1189445340#t=684s)** Voting starts now.
+
+**[12:25](https://vimeo.com/1189445340#t=745s)** Okay, that was about a minute. So we're going to ask another question and test it again.
+
+**[12:32](https://vimeo.com/1189445340#t=752s)** What was the result? Excuse me? The result? Oh, what was the result? It's not-- It's still- Oh, but you...
+
+**[12:51](https://vimeo.com/1189445340#t=771s)** This is why we practice.
+
+**[12:55](https://vimeo.com/1189445340#t=775s)** Okay. We know the no buttons work.
+
+**[13:02](https://vimeo.com/1189445340#t=782s)** Question number two, will Marblehead beat Swampscott in the Powderpuff game this year? Voting starts now.
+
+**[14:06](https://vimeo.com/1189445340#t=846s)** Okay, we're going to go with a minute.
+
+**[14:13](https://vimeo.com/1189445340#t=853s)** And off we go. Article one. Sorry?
+
+**[14:21](https://vimeo.com/1189445340#t=861s)** Oh.
+
+**[14:23](https://vimeo.com/1189445340#t=863s)** Uh-oh.
+
+**[14:28](https://vimeo.com/1189445340#t=868s)** 173 people think we're going to lose the Powderpuff game.
+
+**[14:35](https://vimeo.com/1189445340#t=875s)** Okay. Now, article one. These articles are in numerical order. I have a motion. Do I have a second?
+
+**[14:47](https://vimeo.com/1189445340#t=887s)** Thank you.
+
+**[14:50](https://vimeo.com/1189445340#t=890s)** For notice, I've received a motion to amend article one. We will hear the main motion and deliberate, if any, followed by a presentation of the amendment and any deliberation. When it's time to vote, we'll vote on the amendment first. If that passes, we will amend the main motion, and we will vote on the amended main motion.
+
+**[15:13](https://vimeo.com/1189445340#t=913s)** Do we have any speakers for article one?
+
+**[15:19](https://vimeo.com/1189445340#t=919s)** Okay, I have an amended motion, a subsidiary motion for amendment, and the changes are on the screen and the amended motion reads, "To see if the town will vote to adopt an order requiring articles in the warrant to be taken up in the following order after article one, article two, article 22, article 23, article 29, and the remaining articles in numerical order starting with article three."
+
+**[15:49](https://vimeo.com/1189445340#t=949s)** Mr. Hooks. I'm sorry. The article's moved. Do I have a second? Second. Thank you. Mr. Hooks. Thank you, Mr. Moderator. Matthew Hooks, Nana Pashman Street. I want to start by thanking every single person in this room. While our views may differ, your presence here is a testament to how much this community cares about Marblehead. All of the town business before us tonight is important, and we respect the full warrant, but we also have to be honest about what this particular moment represents. The budget and override questions before us tonight are some of the most consequential decisions Marblehead has faced in many years. It will shape our schools, our infrastructure, our public safety, our services, the character of our town for
+
+**[16:35](https://vimeo.com/1189445340#t=995s)** years to come. Tonight's turnout speaks for itself. This community wants to have this conversation, and it deserves to have it fully, with robust debate, careful deliberation, and all the time it requires. Therefore, I am making a motion to reorder the warrant so that the articles pertaining to the budget and override and those necessary to precede them, that is articles two, 22, 23, and 29, are taken up first while this room is full and every voice can be heard. This is exactly the kind of decision that town meeting exists to make. Let's give it the full weight it deserves together tonight. I ask for your support of this motion. Thank you, Mr. Hooks.
+
+**[17:17](https://vimeo.com/1189445340#t=1037s)** Yes, sir.
+
+**[17:20](https://vimeo.com/1189445340#t=1040s)** Peter Barnett, 11 Hibbard Road. I strongly oppose this motion as it's unfair to the moderator who has to struggle for a quorum if all of the items that people care about are dealt with first, and then there's no one left to conduct the business of the town.
+
+**[17:43](https://vimeo.com/1189445340#t=1063s)** Thank you.
+
+**[17:48](https://vimeo.com/1189445340#t=1068s)** Any more speakers?
+
+**[17:52](https://vimeo.com/1189445340#t=1072s)** We used to have another mic at the front for us common folk to speak from. Sarah Fox, 46 Beach Street. I appreciate what Mr. Hooks said, but I concur with the last gentleman. All of our business at town meeting is incredibly important. Everything that happens tonight is necessary to make our town run, and when we move around the order, that really jeopardizes quorum, which makes us unable to get our town business done.I can remember in previous years having to be on the phone after we hit the popular items to get people here so we can do the other ones. They're not all exciting, folks, but they're all super
+
+**[18:39](https://vimeo.com/1189445340#t=1119s)** necessary, and they all make our town run. So I really encourage folks to keep the order. It's thought out for a reason, and it helps us maintain quorum so we can do all the business that needs to happen. Thank you.
+
+**[18:57](https://vimeo.com/1189445340#t=1137s)** We have another speaker. Yes. Rebecca Whitehill, Amherst Road. I think that, yes, all the articles are important, but these particular ones about getting an override done, people should be able to vote if they have to leave for the babysitter or things of that nature, which is equally important as the convenience of the moderator. I would suggest that, well, I for one, I can't speak for anyone else, but I would swear that I will remain until the bitter end to help make sure there is a quorum.
+
+**[19:37](https://vimeo.com/1189445340#t=1177s)** Thank you very much. We're going to go to a vote on the amendment. So we're voting now on whether to change the order of the articles. If you favor the amendment, vote yeah. We're going to do this with electronic voting devices. If you favor the article, vote yes. If you oppose, vote no. One-minute voting starts now.
+
+**[20:10](https://vimeo.com/1189445340#t=1210s)** Okay.
+
+**[21:11](https://vimeo.com/1189445340#t=1271s)** The amendment passes. Now we need to vote on the main motion as amended.
+
+**[21:19](https://vimeo.com/1189445340#t=1279s)** As many as favor Article 1 as amended, vote yes. If you oppose, vote no. 15-second voting starts now. I'm sorry, one-minute voting starts now.
+
+**[22:40](https://vimeo.com/1189445340#t=1360s)** The main motion on Article 1 passes as amended. 1023 to 225. On to Article 2, reports of town officers and committees. The article is moved. Do I have a second?
+
+**[23:00](https://vimeo.com/1189445340#t=1380s)** Did I hear a second? Thank you. Yeah, I second. A practice that I started was that we go over any outstanding capital projects in Marblehead that this body has voted on. I've asked the presentations to be pretty quick, but I think it's important that we know that progress is being made on what's been voted on here. The first topic that we're going to talk about is the school roof. Michael Piffeling,
+
+**[23:29](https://vimeo.com/1189445340#t=1409s)** Assistant Superintendent for Finance and Operations of the schools.
+
+**[23:39](https://vimeo.com/1189445340#t=1419s)** Thank you, Mr. Moderator, and thank you to the Marblehead community for supporting this project over the past several years. We appreciate your support as the students and staff and future students of Marblehead High School will have a roof over their head. To give you a quick update, the general contract or the general contractor contract has been awarded to Homer Contracting. They have already begun work on the high school roof. Based on the recommendation of the subcommittee that was put together by the school committee and the industry experts who have volunteered their time to assist us from the community, the school committee elected to use the recover option versus the restore option.
+
+**[24:23](https://vimeo.com/1189445340#t=1463s)** All HVAC equipment has been ordered and is expected to arrive on time for the summer project.To give you a little update, I told you they already started. Four small sections of the roof have already been replaced. That was done two weeks ago during April school break.
+
+**[24:45](https://vimeo.com/1189445340#t=1485s)** Between now and the end of the
+
+**[24:48](https://vimeo.com/1189445340#t=1488s)** school year, the contractors will continue to be on site. They will be replacing small rooftop exhaust fans and other mechanical devices on top of the roof. There should be no disruption to teaching and learning.
+
+**[25:07](https://vimeo.com/1189445340#t=1507s)** The day after school dismisses, which is currently June 23rd-- I'm getting the nods, good. The main roof and HVA work will commence at full speed.
+
+**[25:20](https://vimeo.com/1189445340#t=1520s)** The majority of the construction is expected to wrap up between August 30th and September 30th.
+
+**[25:28](https://vimeo.com/1189445340#t=1528s)** Throughout July and August, academic programs, athletic activities, and other events have been moved to other school buildings or other town buildings. There will be very limited access to Marblehead High School, its buildings, and its grounds. And just to wrap up, this project is currently on budget. Thank you very much. Thank you, Mike.
+
+**[25:56](https://vimeo.com/1189445340#t=1556s)** Mary Alley Roof. Do we have our building commissioner, Steve Cummings? Mr. Moderator, we have a question
+
+**[26:04](https://vimeo.com/1189445340#t=1564s)** on the presentation. Okay.
+
+**[26:09](https://vimeo.com/1189445340#t=1569s)** Just a quick one. Short. Now- I just want to know, it came in under $2 million under budget. Are we going to do it for $2 million under budget? Thank you, and that's a question that you can direct to the school committee. Mary Alley Roof, Steve Cummings, building commissioner.
+
+**[26:35](https://vimeo.com/1189445340#t=1595s)** Hi, Steve. Hi, good evening. Right now, currently, we are expecting all of our bids to be in this week, Wednesday or Thursday, so there's not a whole lot to report. The design is complete, but as of this Thursday, all the bids will be in to us, and then we can start the process. So there's not a whole lot to report to date.
+
+**[27:03](https://vimeo.com/1189445340#t=1623s)** Thank you.
+
+**[27:08](https://vimeo.com/1189445340#t=1628s)** Transfer station, Andrew Petty, Director of Public Health.
+
+**[27:22](https://vimeo.com/1189445340#t=1642s)** Good evening. Andrew Petty, Director of Public Health. I'd like to give a brief update on construction at the transfer station. We have completed the new scale house, which includes a control room, break room, and locker area. The large truck scale has been relocated to the permanent position in front of the compactor building, improving site efficiency. In the lower section, we installed a new concrete retaining wall, a concrete pad for trash trailers, and a steel wearing wall to enhance durability. Curbing and paving are now complete. In the coming weeks, we'll be striping the pavement and installing new gates. These improvements have allowed us to separate residential traffic from commercial weigh-and-pay operations, improving both safety and flow on site.
+
+**[28:10](https://vimeo.com/1189445340#t=1690s)** Looking ahead, we're evaluating additional upgrades, including a new swap shed, residing and roofing the compactor building, and adding a roll-up door. We continue to assess our operations to meet public needs, including reviewing construction and demolition disposal, and preparing for ongoing regulatory and capacity challenges in Massachusetts. Thank you. Thank you, Andrew.
+
+**[28:38](https://vimeo.com/1189445340#t=1718s)** The 2022 capital outlay, Amy McCue, Department of Public Works. Director of Public Works of the Department of Public Works. I don't have the slides.
+
+**[28:59](https://vimeo.com/1189445340#t=1739s)** There we go. Yeah.
+
+**[29:05](https://vimeo.com/1189445340#t=1745s)** It is a privilege to stand before you today and share the remarkable progress we've made on a journey that began back in 2022. For the last four years, we've shifted away from roadway projects that improved only paving without addressing the invisible infrastructure and sidewalk network, and towards projects with a holistic infrastructure vision, a plan that treats our streets not just as pavement, but as the lifeblood of our town.
+
+**[29:38](https://vimeo.com/1189445340#t=1778s)** In 2022, town meeting and the June vote approved funding for the capital improvement projects, including 12,475,000 allocated to road and sidewalk network improvements. These additional local resources supplemented Chapter 90 state funding for road and sidewalk network initiatives. This decision represented a notable advancement in our approach to capital improvement projects. It has become evident that road paving alone does not adequately address quality and safety concerns. Today, our investments follow a smarter, more deliberate strategy.
+
+**[30:21](https://vimeo.com/1189445340#t=1821s)** You may have noticed that some of our larger highway traffic areas remain in a pending state. I want to be very clear about why that is. For these larger projects, we are committed to the design process that addresses the street in its entirety. This means-Upgraded utilities. We are coordinating with water, sewer, and gas departments to ensure that when we finish a road, we don't have to dig it up again six months later to rehabilitate a system that was installed in the beginning of the 19th century. Safety for all roadway users. We are designing for vulnerable users, our children walking to school, our seniors, and our cyclists. This requires complex engineering for better
+
+**[31:09](https://vimeo.com/1189445340#t=1869s)** sight lines, ADA-compliant sidewalks, and traffic calming measures. Long-term value. Investing time and proper design for those major arteries helps ensure that substantial funding allocated is used efficiently, delivering maximum longevity and the benefit for citizens.
+
+**[31:31](https://vimeo.com/1189445340#t=1891s)** While the major projects undergo the rigorous design phase, we haven't stopped moving. Our investment in local roadway improvements is at an all-time high. We are successfully checking off neighborhood streets where utilities are already sound, providing relief and improved property values for residents across town. We are working smarter for streets with low road assessments where utility rehabilitation is already complete. We've streamlined the design process, taking on areas that do not require a consultant to reinvent the road and sidewalk layout for today's demands.
+
+**[32:18](https://vimeo.com/1189445340#t=1938s)** If you want to see the vision that Article 11 inspired, that we have completed, look no further than Commercial, West, and Mystic Streets. These projects serve as our total street standard. We didn't just pave the surface. We coordinated with every utility to ensure that prior to paving, pipes were upgraded. We looked at the sidewalks, acknowledged the importance of our tree canopy, parking needs, and ensured all pieces of the puzzle fit. The result is a safer, more beautiful, and more resilient neighborhood that will last for decades.
+
+**[32:55](https://vimeo.com/1189445340#t=1975s)** With Article 11 funding and the development of a capital plan for road and sidewalk network improvements, Marblehead will invest $3 million annually for the next three years, completing multiple projects that meet the Total Streets guidance for paving. We will continue with the smart design of high-traffic arteries, including Pleasant Street corridor and Village Street bridge replacement. Utilizing these cost estimates and plans, we will aggressively seek state and federal funding sources for the construction of these multimillion-dollar projects. We will reassess the completed projects to improve future design and construction enhancements, including careful consideration and feedback from residents and business that was collected throughout the project. The DPW will continue to
+
+**[33:42](https://vimeo.com/1189445340#t=2022s)** provide progress updates to the public through the Selectboard and Traffic Safety Advisory Committee meetings.
+
+**[33:50](https://vimeo.com/1189445340#t=2030s)** The DPW appreciates your continued patience as we move these larger, more complex designs toward completion. The investments we are making now, both in the visible pavement and the invisible utilities beneath, are building a stronger, safer, and more accessible community to us all. Thank you for your support and for your commitment to the long-term health of our town.
+
+**[34:16](https://vimeo.com/1189445340#t=2056s)** Thank you, Amy. It's not easy with a big project like that, but it's good to know that progress is being made. Now we're going to hear from Representative Jenny Armini on some home rule petitions that have cleared the State House, please.
+
+**[34:41](https://vimeo.com/1189445340#t=2081s)** Good evening, Marblehead. I bring greetings from Senator Brenda Crighton and the General Court. I am also here to report that since we met last year, three warrant articles approved by town meeting were passed as home rule petitions by the Massachusetts House and Senate, and signed into law by Her Excellency, Governor Maura T. Healey. House Bill 4225, an act authorizing the town of Marblehead to establish a means-tested senior citizen property tax exemption, was signed into law on May 29th, 2026. For seniors interested in this option, there will be a tax relief forum on Thursday, May 21st, from 1:00 p.m. to 3:00 p.m.
+
+**[35:29](https://vimeo.com/1189445340#t=2129s)** at the community center. House Bill 3912, an act increasing the membership of the Board of Health of the town of Marblehead from three to five members, was signed into law on December 18th, 2025. And Senate Bill 2528, an act authorizing the town of Marblehead relative to parking fines during snowstorms, was signed into law on November 12th, 2025. Thank you to everyone who contributed to this process. Thank you, Jenny.
+
+**[36:11](https://vimeo.com/1189445340#t=2171s)** We have a report from the Retirement Board from Robert Peck, please.
+
+**[36:30](https://vimeo.com/1189445340#t=2190s)** Thank you, Mr. Moderator. Robert Peck, 22 Tidewinds Terrace, chairman of the Retirement Board. As probably most of you are coming here from year to year, we have to report to town meeting as to the date, time, and location of our annual meeting to determine to what extent to offer cost of living increases to our town retirees. This year, it will be on Wednesday, June 10th, 2026, at 4:00 in the afternoon.The lower level conference room at the Mary Alley office building. Thank you. Thank you, Bob.
+
+**[37:07](https://vimeo.com/1189445340#t=2227s)** Charter Committee Chair, Amy Drinker.
+
+**[37:20](https://vimeo.com/1189445340#t=2240s)** Thank you, Mr. Moderator. You're welcome. Good evening. Amy Drinker, 30 Gregory Street, Chair of the Marblehead Town Charter Committee. Over the past two years, the Town Charter Committee has drafted charter language and met with town committees and department heads to gather input. This June, the committee will submit a summary memo and a draft C charter to the select board. They will decide next steps in the charter process. All charter committee documents are posted on the charter committees tab of the town's website. But mostly I'm here tonight because I want to take a moment to recognize a member of the charter committee who died in December of complications from cancer. Sean Casey was a quintessential Header, both a ship yarder and a park rat. Two years ago,
+
+**[38:08](https://vimeo.com/1189445340#t=2288s)** he put his Marblehead history project aside and stepped forward to serve on the charter committee. He became our Thomas Jefferson for his skilled drafting and meticulous revisions to charter language reflecting our committee's deliberations. To this day, we hear his voice when we read his footnotes and annotations. His professional expertise continues to guide us. Sean Casey was a talented, very decent person. We miss him, and we thank him for his lifetime of service to our town. Huzzah, Sean.
+
+**[38:43](https://vimeo.com/1189445340#t=2323s)** Thank you very much for that, Amy. Finance Committee Chair, Alec Goolsby with the Finance Committee report.
+
+**[39:02](https://vimeo.com/1189445340#t=2342s)** Thank you, Mr. Moderator. Alec Goolsby, Two Bradleys End, Chair of the Finance Committee. I'm speaking on Article two tonight to introduce our finance committee, discuss some of the work and processes we have advised on over the past year, provide an update on the town's reserve fund we administer, and to remind everyone of our role at town meeting. We currently have a full roster of nine members, most of whom have been on the committee for multiple years at this point. As chair, I am supported by Vice Chair Molly Tietz and Vice Chair Pat Franklin, as well as FinCom members Lindsay Dube, Ramon Garcia, Michael Janko, Eric Knight, Mike O'Neill, and Tim Shotmeyer.
+
+**[39:47](https://vimeo.com/1189445340#t=2387s)** Our finance committee advises the town and town meeting on financial matters. Our main responsibilities include the review and recommendation of the balanced budget included in Article 23. This long and detailed process represents 80% to 90% of our time spent and included the following steps this year. Establishing the budget calendar, which was finalized last August. Reviewing and advising on all draft department-level budgets submitted to us through a series of public liaison meetings between November and March. Voting on each individual budget during department-level budget hearings in March and April. Voting our recommendation on the town-wide balanced budget at the April warrant
+
+**[40:35](https://vimeo.com/1189445340#t=2435s)** hearing, and finally presenting the balanced budget to you tonight at town meeting. More to come on budget details when we get to Article 23. In addition to our budget responsibilities, we also make recommendations on all other warrant articles with financial implications. These recommendations were voted by our committee at the warrant hearing last month. We make no recommendations on articles without financial implications. All of our recommendations are included in the finance committee report, generally with comments where applicable. We encourage you all to follow along in your FinCom books tonight and consider our recommendations as you vote. In addition to these annual recurring responsibilities, we also
+
+**[41:23](https://vimeo.com/1189445340#t=2483s)** supported town leadership in a few additional advisory exercises this year, including a detailed three-year forecast presented in December revealing increasing deficits for fiscal year '27 through fiscal year '29. A detailed analysis of shared benefit costs between the town and school on both the fiscal year '26 and fiscal year '27 budgets, helping to establish a fresh cost accountability framework used to address the fiscal year '27 $7.7 million deficit presented by leadership during the State of the Town in January. An additional data analysis requested by leadership and
+
+**[42:08](https://vimeo.com/1189445340#t=2528s)** ultimately used in their development of a Proposition two and a half override request included in Article 29. More to come from town leadership regarding the override details when we get to Article 29. Lastly, we administer the town operating budget reserve fund. For the fiscal year '26 budget, this reserve account was funded at $444,000. As of tonight, we have approved three requests this year totaling $129,000, which leaves a balance of $315,000 for the remainder of the fiscal year ending June 30th. For the fiscal year '27 budget, the town has reduced the funding to this reserve account to $414,000, a $30,000 cut made to help address the current year deficit.
+
+**[42:56](https://vimeo.com/1189445340#t=2576s)** The allocation of funds from the FinCom reserve account is very transparent, as it requires both Select Board and FinCom approval in separate public meetings before being drawn uponWe make our recommendations to town meeting based on our own independent review of financial information presented to us. While we hope that our insight is a benefit to town meeting, and while we further believe that our recommendations are both thoughtful and thorough, it is ultimately up to town meeting to review what the proponents of the articles have presented, to weigh the arguments for and against each article, and to vote the most beneficial course of action for our town. There are many articles to review this year. Members of our committee will speak to some of these articles where we deem necessary. We appreciate the opportunity to serve the town
+
+**[43:44](https://vimeo.com/1189445340#t=2624s)** and look forward to an engaging and productive town meeting. Thank you. Thank you, Alec.
+
+**[43:54](https://vimeo.com/1189445340#t=2634s)** Folks, we're going to do a hand vote on this. So as many as favor article two, please raise your hands. Those opposed. It's a vote, and article two passes.
+
+**[44:10](https://vimeo.com/1189445340#t=2650s)** That's easier.
+
+**[44:13](https://vimeo.com/1189445340#t=2653s)** Article 22 is available funds appropriated to reduce the tax rate. The article's been moved. Do I have a second? Thank you. Vanessa. I'm sorry. Alicia Benjamin.
+
+**[44:29](https://vimeo.com/1189445340#t=2669s)** Our CFO.
+
+**[44:34](https://vimeo.com/1189445340#t=2674s)** Good evening, honorable residents of Marblehead. I'm pleased to present tonight on this. Every year, we reduce the tax rate by free cash. This year, it was certified at 6.1 million, and we're using $5 million to reduce the tax rate and balance the budget, and we're using 360,000 in surplus from the light department in a total of $5,360,000.
+
+**[45:00](https://vimeo.com/1189445340#t=2700s)** Thank you.
+
+**[45:03](https://vimeo.com/1189445340#t=2703s)** Seeing no speakers, we're going to go to another hand vote for this. As many as favor article 22, please raise your hands. Those opposed, please raise your hands. It's a vote, and Article 22 passes.
+
+**[45:19](https://vimeo.com/1189445340#t=2719s)** Article 23, expenses of several departments. This is our budget. Usually, Alec and I have a little bit more runway before we get to this, but let me explain the process.
+
+**[45:35](https://vimeo.com/1189445340#t=2735s)** Alec's going to speak first, and then I'm going to go through the budget. If you've been here before, you know how it goes. I'm going to list the budget by department line item. When doing so, anybody with a question on a department line item can yell, "Hold." Then we will review any items that you held so that you can get up and we can deliberate that. Then we're going to vote on the budget by silos as listed in the reading.
+
+**[46:03](https://vimeo.com/1189445340#t=2763s)** Right now, I'd like to call back up Finance Committee Chair Alec Goolsby for his report.
+
+**[46:11](https://vimeo.com/1189445340#t=2771s)** Thank you, Mr. Moderator. Alec Goolsby, Two Bradleys End, Chair of the Finance Committee. On behalf of the Finance Committee, I am pleased to present our recommendation on Article 23, the town's fiscal year 2027 general fund operating budget. Before I begin, I want to acknowledge that this has been the most challenging budget cycle in my nine years serving on this committee. We identified a $7.7 million deficit between what it would cost to maintain the services Marblehead provides today and the revenue available to pay for them. As large of a deficit this is, it is not something that is surprising to our committee. For the last four years, our committee has repeatedly referenced the structural budget deficit Marblehead has
+
+**[46:57](https://vimeo.com/1189445340#t=2817s)** faced, driven by rising costs outpacing annual recurring revenues. The multi-year projections we have facilitated over the past few years are in line with where we landed this year as well. Over the next several minutes, I will walk through how we got here and how town and school leadership, with our review and support, balanced this year's budget. Next slide, please.
+
+**[47:27](https://vimeo.com/1189445340#t=2847s)** Let's start with where we expect the money to come from. Our total available revenue for fiscal year '27 town and school budgets is forecast to be 96.5 million, a decrease of 600,000 from the fiscal year '26 budget. The revenue forecast assumes the tax levy will increase by $2.1 million, which reflects both the standard 2.5% increase allowed under Prop 2.5 and an estimate of new growth. Additionally, state aid is up about 200,000, in line with estimates. Offsetting those increases, local receipts are forecast to decline by approximately $1 million. This decrease is driven by two primary factors.
+
+**[48:13](https://vimeo.com/1189445340#t=2893s)** Interest income, which is expected to decline as interest rates and cash balances have come down, and motor vehicle excise taxes, which is a conservative estimate to reflect softening local economic conditions. Consistent with the Massachusetts DOR's recommendations on conservative revenue budgeting practices, the town forecasts local receipts at roughly 90% of its best estimate of actual collections, ensuring the budget doesn't rely on revenue it may not receive. Finally, the fiscal year '27 budget reduces the use of free cash to balance the operating budget by $2 million compared to last year. Free cash is effectively a budgetary surplus arising from
+
+**[49:00](https://vimeo.com/1189445340#t=2940s)** prior year revenue exceeding estimates or expenses coming in lower than expected. As it is a non-recurring revenue source, the DOR recommends the free cash be used primarily for one-time expendituresCapital projects or building reserves rather than ongoing operational costs. Last year, the town increased the use of free cash to balance the operating budget by $1.5 million in an effort to avoid service cuts and delay the need to seek an override. This year, certified free cash has come in lower than last year, primarily due to tighter budgeting practices, and the town is left with no option but to reduce the amount of free cash used to balance the budget. As you can see, this creates a significant headwind and is the largest driver of our
+
+**[49:49](https://vimeo.com/1189445340#t=2989s)** year-over-year revenue decline, almost entirely eliminating the revenue increase from the town's tax levy. Hold. Next slide, please. Hold. To understand the deficit, let's- Hold. Over here. Hold. Excuse me. Can I speak? In the middle of the presentation? I'm sorry, sir. Can I help you? I have a- You need to come up to the microphone, please, sir. Can I finish? We're in the middle of a report right now. I'm sorry. I have a question about the revenue. You're going to need to wait till the end of the report, sir. Okay. Okay. And I'm sorry, but even then, it's a question that...
+
+**[50:36](https://vimeo.com/1189445340#t=3036s)** I'll give you time to ask your question. How late? Go ahead, Alec. Okay.
+
+**[50:44](https://vimeo.com/1189445340#t=3044s)** So this is a new slide. To understand the deficit, let's first cover what we mean by a level service budget. Level service is the cost-- I'm sorry. I'm on the wrong slide. Yeah. Level service is the cost of providing the same services next year that we are providing this year, funding the same number of police officers, the same number of teachers, the same level of staff and hours at the library, and so on. It is not a wish list. It is the price tag on the status quo. That price tag for fiscal year '27 comes to $104.2 million, broken down roughly as 27.9 million for town operating departments, 51.3 million for the school department, and 25 million in shared employee benefits, the largest of which are
+
+**[51:32](https://vimeo.com/1189445340#t=3092s)** health insurance and pension. Subtracting the 104.2 million in level service expense from the 96.5 million in available revenue we just discussed, and you arrive at a deficit of $7.7 million. It is important for me to emphasize here that these level service budget requests underwent several rounds of review. Back in September, our finance director instructed town department heads and their respective boards to maintain their budgets at a level funding, adjusted solely for contractual obligations. Subsequently, each department engaged in numerous meetings with town leadership regarding these requests to ensure they were level and to adjust certain estimates throughout the process. In addition to this internal review process, our finance committee
+
+**[52:19](https://vimeo.com/1189445340#t=3139s)** liaison teams conducted many public liaison meetings throughout the fall and winter to examine these level service budgets, challenge them, and strive to comprehend and clarify them. Next slide, please.
+
+**[52:34](https://vimeo.com/1189445340#t=3154s)** So where did this $7.7 million deficit come from? Wages account for the largest piece, contributing about 3.1 million combined, roughly 1.3 million on the town side and 1.8 million on the school side. These figures reflect the cost of collective bargaining agreements. Health insurance adds another 1.7 million. The new five-year curbside collection contract adds one million. Pension contributions are up half a million dollars, following the schedule set by our retirement board to fully fund the town's pension liability by the state-imposed deadline of 2040. Out-of-district special education tuition and transportation expenses, which reflect the cost of educating Marblehead students whose needs
+
+**[53:19](https://vimeo.com/1189445340#t=3199s)** cannot be met within the district, add another 300,000. These are placements the town is legally obligated to provide. Other smaller items together account for about half a million dollars. Add those up and you reach 7.1 million in level service expense growth. Combine that with the 0.6 million net revenue reduction we just discussed, and you arrive at the full $7.7 million budget deficit. Next slide, please.
+
+**[53:52](https://vimeo.com/1189445340#t=3232s)** Health insurance deserves a slide of its own because it has become one of the largest cost pressures on Marblehead's budget. Marblehead participates at the Group Insurance Commission, which is the same plan used by the Commonwealth and many other Massachusetts municipalities. You can see from this chart that over the last five years, GIC premiums have grown significantly. For fiscal year '27, the increase is approximately 10%. When you combine the increase across active employees and retirees, health insurance alone contributes to 1.7 million of our fiscal year '27 cost growth. Rising healthcare costs are not a Marblehead-specific challenge. Municipalities across the state are struggling with the pressure these costs are
+
+**[54:38](https://vimeo.com/1189445340#t=3278s)** putting on their budgets. In February, our finance committee invited the town's insurance advisors to present their insurance outlook in a detailed presentation. Based on this presentation, it is our understanding that the GIC provides the lowest cost health insurance among carriers that would cover the town of Marblehead. Further, the advisors confirmed for our committee that other methods to reduce Marblehead's insurance expense would need to be negotiated as part of ongoing collective bargaining. As we have mentioned during contract years in the past, the finance committee encourages town representatives to reference our structural deficit, specifically the pressure health insurance costs are putting on our budget in its ongoing negotiations.Next slide, please.
+
+**[55:26](https://vimeo.com/1189445340#t=3326s)** I want to spend a few extra moments on this slide because it represents a material improvement to the revenue allocation and budget development process this year. Currently, from an accounting and presentational perspective, our budget has placed the entire shared benefits line, health insurance, pension, OPEB, and similar items, on the town side of the budget, even though a significant amount of those benefits are attributable to school employees and retirees. Working closely with town and school leadership, the finance committee helped reallocate the shared benefit costs to reflect the full cost of each side of the operation. When we recalculate last year's budget under this lens, the town school split of the balanced budget is 38% town to
+
+**[56:12](https://vimeo.com/1189445340#t=3372s)** 62% schools, rather than the 49% to 51% that appeared in last year's budget. Applying this same methodology to the fiscal year '27 budget, it was determined that $4 million of the $7.7 million deficit is attributable to town departments, and $3.7 million is attributable to the school department. The finance committee strongly supports this cost accountability framework. It aligns operating decisions to cost outcomes. It sets expectations for how future revenue will be allocated, and it gives both the town and the schools the information they need to forecast on a multi-year basis. We expect town and school leadership to apply this framework annually going forward.
+
+**[56:58](https://vimeo.com/1189445340#t=3418s)** Next slide, please.
+
+**[57:04](https://vimeo.com/1189445340#t=3424s)** Town leadership closed its $4 million share of the deficit through a combination of new revenue and cuts spread across nearly every department while prioritizing public safety and core infrastructure. The largest single item is a new annual fee for curbside waste and recycling, which has been established by the Board of Health under the direction of the Selectboard. This new fee is projected to raise approximately $2.2 million to support curbside collection. The costs related to the curbside collection that are associated with this newly implemented fee are included in this year's operating budget. However, they are no longer covered by the tax levy. In June, a separate $2.2 million override will be presented on the ballot for citizens to decide whether to revert these
+
+**[57:51](https://vimeo.com/1189445340#t=3471s)** costs back into the tax levy budget instead of being financed by the newly established fee. On top of that, departments absorbed roughly $2.4 million in budget cuts. The largest cuts are as follows. The library at a $700,000 cut with 8.25 FTEs, along with $170,000 in materials budget being eliminated. These cuts will result in the library being open fewer days of the week and put it at significant risk of being decertified by the state of Massachusetts, resulting in loss of state funding and our residents losing their borrowing privileges across the state. Other general government at a $590,000 cut, which includes the town's annual $250,000 contribution to
+
+**[58:40](https://vimeo.com/1189445340#t=3520s)** OPEB, its $250,000 contribution to stabilization, and $90,000 of its contribution to workers' comp. We want to be clear with residents about what this means. These items are short-term adjustments. They help balance this year's budget, but they do so at the expense of our long-term financial stability. Community development and planning at a $300,000 cut. Three of the five positions in this department have been cut from the balanced budget, including the department head position, the sustainability coordinator position, and the grant coordinator position. In addition to the most significant cuts described above, meaningful reductions across DPW, finance, public buildings, cemetery, Council on Aging, the town clerk, police,
+
+**[59:26](https://vimeo.com/1189445340#t=3566s)** building inspection, and Rec and Park have been made. Lastly, unemployment costs need to be increased by approximately $600,000 as a result of these cuts, which drives home the point that in order to close a defined dollar value budget gap, cuts in excess of that dollar value need to be made if positions are being eliminated. Altogether, the town side cuts represent the elimination of 22 FTE positions, about 12% of the town workforce. Approximately 18 of the FTEs eliminated are currently filled positions, while four are vacant. From the finance committee's perspective, the decision to move curbside collection costs out of the tax levy represents an executive decision made by town leadership to mitigate the impact of the
+
+**[1:00:14](https://vimeo.com/1189445340#t=3614s)** deficit on town operations. Absent the establishment of this new revenue source, the town was facing cuts of approximately 25% of its workforce rather than the 12% ultimately cut from this year's budget. Next slide, please.
+
+**[1:00:33](https://vimeo.com/1189445340#t=3633s)** Let's move to how the schools addressed their $3.7 million share of the deficit. The largest single line item is a one-time prepayment of $1.5 million of fiscal year '27 out of district tuition using fiscal year '26 funds while reducing their budget by the same amount. This decision protects student learning this year, but it is exactly that, a one-year solution. It also eliminates the need for the schools to request override funding for the fiscal year '27 budget. That being said, the $1.5 million will need to be returned to the fiscal year '28 school budget and coupled with wage increases attached to the most recent union contract will contribute to a significant school deficit in fiscal year
+
+**[1:01:19](https://vimeo.com/1189445340#t=3679s)** '28. In addition to the prepayment, the schools are cutting $750,000 in teacher and instructional assistant salaries, $450,000 of salaries from vacant positions350,000 in expenses shifted to revolving funds and grants, most of which will need to be returned to the general fund budget in future years. And approximately 650,000 in further reductions across substitutes, supplies, curriculum, technology, administration, and other operating lines. In total, 18.25 FTEs, about 4% of the school workforce, have been eliminated from this year's budget. This impacts 22 positions, 11 of which are vacant and 11 being impacted by layoffs.
+
+**[1:02:07](https://vimeo.com/1189445340#t=3727s)** The positions eliminated this year reflect the administration's ongoing work to right-size the school organization to current enrollment. These positions eliminated will not be restored under any override scenario. Next slide, please.
+
+**[1:02:25](https://vimeo.com/1189445340#t=3745s)** This slide summarizes the decrease in this year's budget compared to last year. Overall, the fiscal year '27 balanced budget, excluding debt service and enterprise funds, lands at 96.5 million, down 0.6% year over year, a drop of 600,000. Town operating budgets decreased year over year by 3.9%, a drop of $1 million. The school operating budget decreased by 3%, a drop of $1.5 million. Yet our shared employee benefit costs grew by 8.4%, from 22.5 million to 24.4 million. Hopefully, this helps drive home the significant challenge we face this year in balancing the budget.
+
+**[1:03:12](https://vimeo.com/1189445340#t=3792s)** Final slide, please.
+
+**[1:03:16](https://vimeo.com/1189445340#t=3796s)** Let me close with a few observations. What we are facing in Marblehead is a recurring structural deficit. Recurring expenses, wages, health insurance, pensions, contracted services, have been growing faster than recurring revenues for several years. For some time, the town has managed that gap with various solutions to combat the deficit. The meals and rooms tax, targeted fee increases, increased use of revolving funds, reliance on free cash, and deferred capital investment. Those solutions have kept budgets balanced over the years, but the town is out of options this year. Bond rating agencies are watching Marblehead as well. On April 10th, S&P affirmed Marblehead's AAA bond rating, a signal of longstanding financial strength, but revised our outlook
+
+**[1:04:03](https://vimeo.com/1189445340#t=3843s)** from stable to negative, citing budgetary stress. Our reserves currently sit at approximately 2% of the operating budget. Our own policy target is 5%. The path back to that target requires recurring revenue, not one-time fixes. On Article 23, the fiscal year '27 balanced budget, the Finance Committee unanimously recommends a yes vote. I want to thank the Select board and the School Committee for their collaboration, leadership, and their willingness to work together during such a challenging budget cycle. Thank you to our department heads, our municipal employees, our boards and committees, and to the residents who have shown up at meeting after meeting this budget season. Lastly, I'd like to thank our Finance Committee for all of the dedication and hard work that went into this most difficult budget season. Specifically, our Vice Chair, Molly Teets.
+
+**[1:04:52](https://vimeo.com/1189445340#t=3892s)** The time and effort put in by Molly in her role over the last few years is unprecedented. I can't thank you enough for your support.
+
+**[1:05:05](https://vimeo.com/1189445340#t=3905s)** With that, I will turn it over to our Finance Director, Alicia Benjamin, who will provide an update regarding debt service. Thank you. Thank you, Alec. Before I have Alicia start, folks, the Finance Committee is the financial bridge between the executive branch and this legislative body. Their sole responsibility is to make recommendations to town meeting, and they deserve our appreciation.
+
+**[1:05:40](https://vimeo.com/1189445340#t=3940s)** Alicia Benjamin. Just waiting for the presentation to be ready. Good evening, Marblehead. I'm going to go over Article 23's debt service.
+
+**[1:06:26](https://vimeo.com/1189445340#t=3986s)** Next slide. So I'm going to start with the debt service policy. The debt service ceiling is 15% of total general fund revenue. That equates to 14,948,169. There is a ceiling override provision that is provided by vote of the Select Board only in the case of an emergency or significant unforeseen circumstances that can only be addressed through a borrowing. Next slide. Debt service reductions. The Brown School/Gerry School bond rescission. So the project was authorized at 54,844,767, with a final cost of 53,225,140. It came under budget by 1,619,627, and
+
+**[1:07:14](https://vimeo.com/1189445340#t=4034s)** you will see this rescission via Article 30 of the warrant. The MSBA grant reimbursement that came in for the same project, the Brown School/Gerry School, exceeded the project by $641,030, which thereby saves you, the taxpayers, 42,735 per year through 2040In addition to that, bond premium and MSBA reimbursements received prior to 2016 will be reducing your debt service further by 66,059. I did do a presentation on this back at the 2024 town meeting on bond premium. Next slide.
+
+**[1:08:02](https://vimeo.com/1189445340#t=4082s)** As the Fin Comm chair stated, our new issuance, we kept the AAA bond rating with a negative outlook. We went out to market for 26.2 million. We received a bond premium of 1.5 million, bringing our borrowing down to 24,975, with a true interest cost of 3.75%.
+
+**[1:08:26](https://vimeo.com/1189445340#t=4106s)** Those projects for this borrowing include the Abbott Public Library, which was completed. It was borrowed except for a million dollars that was needed. That's why this million was borrowed. Road and sidewalk repair,
+
+**[1:08:41](https://vimeo.com/1189445340#t=4121s)** IT equipment and software for the town, Mary Alley building roof replacement, the Franklin Street Fire Station roof and gutter replacement, the Mary Alley building improvements, and the high school roof and HVAC units. Next slide. Total debt service was reduced from 11,496,957 to 10,971,016. Principal was reduced from 7,535,940 to 7 million ten, in interest, you only lost a minimum of a $1. My recommendation is no additional debt be borrowed until 2032, when debt service falls off again. The total general fund debt outstanding with the new issuance is
+
+**[1:09:26](https://vimeo.com/1189445340#t=4166s)** 146,297,626 through 2056. And I'm pleased to tell you all authorized debt by town meeting has been borrowed in full. There is nothing outstanding. Next slide.
+
+**[1:09:43](https://vimeo.com/1189445340#t=4183s)** This slide is just a smaller to show you the debt service through 2045, even though it goes through 2056. The reason for this slide is when you authorized the Mary Alley HVAC ADA improvements and the high school, we had stated we would not borrow more than what had been authorized before, and this graph just shows that. Next slide, please.
+
+**[1:10:08](https://vimeo.com/1189445340#t=4208s)** This is the full debt service schedule through 2056. And as you can see in 2032, it drops down to 10 million. It drops down significantly again in 2035 to 8.5. The reason it falls significantly in 2035 is my new issuance. The majority of those fall off in 2035. What's going out to 2056 is the Mary Alley HVAC and ADA, and the high school roof and HVAC that you approved. Those are the two that will go out to 2056.
+
+**[1:10:43](https://vimeo.com/1189445340#t=4243s)** Thank you. Thank you.
+
+**[1:10:51](https://vimeo.com/1189445340#t=4251s)** Okay, I'll go over the hold process one more time. I'm going to list the budget by departmental line item. While doing so, if anybody has a question, you can yell, "Hold." Then we will review any items that are held after I'm done. Then we'll vote on the budget by silos as listed in the reading.
+
+**[1:11:14](https://vimeo.com/1189445340#t=4274s)** And the budget always starts with the best icebreaker under general government, moderator, $100.
+
+**[1:11:24](https://vimeo.com/1189445340#t=4284s)** Nobody wants to hold that, I guess. Select board, $723,176.
+
+**[1:11:32](https://vimeo.com/1189445340#t=4292s)** Finance committee, $6,375. Reserve fund, $414,000. Finance department, $1,778,805. Assessor, $388,003. Town council, $278,000. Parking clerk, $8,400. Town clerk, $201,877.
+
+**[1:12:09](https://vimeo.com/1189445340#t=4329s)** Election and registration department, $132,200.
+
+**[1:12:17](https://vimeo.com/1189445340#t=4337s)** Planning board, $1,775. Public buildings department, $178,671.
+
+**[1:12:29](https://vimeo.com/1189445340#t=4349s)** Human resources department, $293,480. Community development and planning department, $203,682. Hold. Okay. Thank you.
+
+**[1:12:48](https://vimeo.com/1189445340#t=4368s)** Total general government, $4,608,544.
+
+**[1:12:55](https://vimeo.com/1189445340#t=4375s)** We'll address the holds after I'm done reading through the budget, folks. Public safety, police department, $5,216,914. Fire department, $6,016,967. Building inspection department, $633,330. Sealer of weights and measures, $2,100. Animal inspector, $2,400. Total public safety, $11,871,711.
+
+**[1:13:33](https://vimeo.com/1189445340#t=4413s)** Schools, school department, $47,620,287.Thank you.
+
+**[1:13:45](https://vimeo.com/1189445340#t=4425s)** Public works and facilities. Public works, which is highway, tree, and drains, $2,369,771. Snow removal, $105,000. Waste collection, $1,790,344.
+
+**[1:14:06](https://vimeo.com/1189445340#t=4446s)** Curbside collection, $2,186,516.
+
+**[1:14:14](https://vimeo.com/1189445340#t=4454s)** Thank you.
+
+**[1:14:18](https://vimeo.com/1189445340#t=4458s)** Cemetery department, $410,539. Total public works and facilities, $6,862,170. Human services. Health department, $339,320.
+
+**[1:14:40](https://vimeo.com/1189445340#t=4480s)** Thank you. Council on aging, $387,377. Veterans benefits, $154,872. Total human services, $881,569. Culture and recreation. Abbot Public Library, $857,633.
+
+**[1:15:09](https://vimeo.com/1189445340#t=4509s)** Recreation and park department, $1,003,034.
+
+**[1:15:16](https://vimeo.com/1189445340#t=4516s)** Memorial Day and Veterans Day, $9,500. Total culture and recreation is $1,870,167.
+
+**[1:15:28](https://vimeo.com/1189445340#t=4528s)** Debt service. Maturing bonds and interest. Total debt service, $10,971,016.
+
+**[1:15:38](https://vimeo.com/1189445340#t=4538s)** Other general government.
+
+**[1:15:44](https://vimeo.com/1189445340#t=4544s)** Total other general government is $24,965,092.
+
+**[1:15:58](https://vimeo.com/1189445340#t=4558s)** Enterprise funds. We start with sewer. Total sewer enterprise fund is $4,799,291.
+
+**[1:16:10](https://vimeo.com/1189445340#t=4570s)** Total water enterprise fund, $6,865,301. Total harbor enterprise fund is $1,669,500.
+
+**[1:16:25](https://vimeo.com/1189445340#t=4585s)** And now we are going to go back through the holds. And if you had a hold, you can come up to the microphones, please.
+
+**[1:16:36](https://vimeo.com/1189445340#t=4596s)** Hello.
+
+**[1:16:40](https://vimeo.com/1189445340#t=4600s)** The first hold was on community development and planning department. No, it was on revenue. Oh, I'm sorry. Sir, if you'd like to ask your question about revenue, go ahead. Walter Casey, 16 Gerald Road. I have an observation followed by a question. Every Thursday, I get the weekly newspaper, and on the back page, they have a listing of the homes for sale, and I do a number of calculations. One is the ratio of sales price to assessment, and the ratios are all over the place. So I'm not familiar with that in prior experiences.
+
+**[1:17:26](https://vimeo.com/1189445340#t=4646s)** Is there a rational, systematic methodology to calculate real estate taxes? Because I don't know how you can-
+
+**[1:17:38](https://vimeo.com/1189445340#t=4658s)** Do we have an- ... forecast. Alicia, is that something you could...? Because the numbers don't indicate that, I will just tell you. Thank you. We'll have our CFO give you her best answer. Good evening. So what we do is we follow Proposition two and a half. So we take the prior year's tax levy, we apply 2.5% plus new growth, and that's how we forecast our annual tax revenue. But that's how you forecast it. But the actual assessment, I don't under- So- The numbers that are in the- Are you talking about how they assess the value of your home? Well, not just mine. Anybody.
+
+**[1:18:24](https://vimeo.com/1189445340#t=4704s)** Oh, any home? That is done by the assessor's office. So you- I would say you should pose your question to the assessor's office.
+
+**[1:18:36](https://vimeo.com/1189445340#t=4716s)** Well, it's amazing that somebody up there doesn't know the answer to that. No, we know the answer to it. You're not asking an answer about a calculation that has to do with the budget. You're asking about how homes are done. But it's the fundamental foundation of the finances of the town. The fundamental foundation of the town is based on the tax levy. The tax levy is the assessment of all home values within the town- That's what I mean ... which is determined by the assessor's department. Okay. Sir, please don't interrupt, and we'll try to give another answer for you. Okay. The tax levy is capped under Massachusetts state law at 2.5% above last year's levy plus new growth.
+
+**[1:19:22](https://vimeo.com/1189445340#t=4762s)** That's the maximum amount of taxes the town of Marblehead can assess the next year without an operational- So the assessment that appears- The assessment is- ... irrelevant? The assessment is the apportionment of that tax across all taxpayers' value of their homes. But the ratios are all over the place. I'm just saying, it- We're talking about the budget available revenue. All right, never mind. Okay
+
+**[1:19:51](https://vimeo.com/1189445340#t=4791s)** Okay. Community Development and Planning Department hold. Mr. Buba? No, I'm Schools.
+
+**[1:20:01](https://vimeo.com/1189445340#t=4801s)** Oh, okay. I'm sorry. I didn't yet hold, but had a question about slide seven of the finance reports. No, I'm sorry. We're going through the budget right now. Yeah. No, I understand. Okay. Thank you. My question is the police department. Vlad Grankoff, 23 Cypress. Okay. You know what? I'll put a hold on the police department, and I'll let you speak at your time. Appreciate it. Now, did we have somebody hold the Community Development and Planning Department?
+
+**[1:20:33](https://vimeo.com/1189445340#t=4833s)** Okay, seeing no holds on that.
+
+**[1:20:38](https://vimeo.com/1189445340#t=4838s)** The next hold would be the police department. Yes, sir. Yes. I was Vlad Grankoff, 23 Cypress. Thank you. On slide seven of the finance reports, it had a 60,000 decrease in the police department, and that's the one that caught my eye because it has a $232,000 increase in the budget. Is it a typo, or am I not understanding something?
+
+**[1:21:05](https://vimeo.com/1189445340#t=4865s)** And I apologize for my ignorance. That's okay. Alec Colesby. So the cuts that I was showing on those two slides were from level service down to the balanced budget. So the balanced budget, as presented in the FinCon book, can still go up. It just would've gone up more if there was more available revenue to fund that level service. Thank you. No problem. Schools is next. Yes. Jack Buba, Five Palmer Road. Just a short question that I asked earlier. My understanding is the budget-- I'm sorry. The bid for this school roof at the high school came in about $2 million less, and I'm wondering, and I would like to hear from them, if we are now
+
+**[1:21:50](https://vimeo.com/1189445340#t=4910s)** managing to the $2 million less number, and if we've exceeded into the savings already through change orders.
+
+**[1:22:01](https://vimeo.com/1189445340#t=4921s)** Well, no better person to answer that question than Mike Piffeling. Good evening, Mr. Buba. Yes, there is currently a $2.6 million under budget on the roof project. However, we have not taken into consideration any contingencies. We already know that there are some roof fans that were not included in the budget. There's some potential ceiling work that needs to be done, interior ceiling work, drop ceiling work. So right now, we are at 2.6. We hope to come in as close to that as possible, but there's no guarantees. We're too early in the project. Yeah. I don't understand that. We voted for what we voted for, and the fact that it came in two million something less and you found some, quote, "other things" to spend it on is not my concern.
+
+**[1:22:47](https://vimeo.com/1189445340#t=4967s)** No. You need to come in at the $2 million level, because that's what we voted for, unless and until you find something that was broken that you didn't understand before. We did the same thing with the schools several years ago, and we had $15 million left, and by the end- Okay ... it was all gone. So I need to understand how you think you can spend this extra money on other things that weren't in there originally.
+
+**[1:23:16](https://vimeo.com/1189445340#t=4996s)** So, the budget was built, the projections were built based on estimates. The bids came in under estimate. Good for us. Absolutely. Does not mean in every public building project, in every building project, to my knowledge, there is always contingency for unforeseen circumstances. Correct. But there were contingencies in the bid. Correct. So- So the 2.6 million- So it's not a- The town authorized- Sorry. Excuse me, sir. The 2.6 million- Excuse me, sir ... is not a contingency. Excuse me, sir. The town authorized 13.8 million in borrowing. That's correct. Right now, we need 11.2. Correct. So we are not over budget. But we may get closer, because we need to replace roof drains that were not seen until
+
+**[1:24:02](https://vimeo.com/1189445340#t=5042s)** the roof can come off the building. Understood. Those are contingencies. Correct. I just want to point out, in your budget, you had a line item for contingencies. So you have to spend all of that before you start going into the savings that we have that don't belong to you. I don't understand your question. The budget was approved at $13.8 million. Correct. And in that budget, when you- The bids came in at $11.2 million. Correct. And your budget for those bids included a contingency line item. I know because I've been through this many times with the schools. So you have a line item for contingencies in your budget. It's currently sitting at $2.6 million. Correct. No, that's not the contingency. That's the savings. You guys think you can spend it because you got it, and I can't
+
+**[1:24:49](https://vimeo.com/1189445340#t=5089s)** stand that. I'll work with our owner's project manager to itemize out what the contingency originally was and- Just give us the two million back, unless you really need it for something that you didn't see, not something that you want now. Mr. Buba, I guarantee you, my intention is to come in as under budget as possible on this project. That's not the same thing. You can come in under budget and spend $2.0 million, and you'll still say you're under budget, and you spent $2 million of the dollars that rightfully belong to us. Why don't we wait until we see how that plays out, Mr. Buba? He- Okay. Mr. Piffeling got up and said that the bids came in 2.6 lower, not taking into consideration any possible contingencies.
+
+**[1:25:34](https://vimeo.com/1189445340#t=5134s)** Let it play out, and let's see what happens. Okay. For the record, the extra money between what we authorized based on your recommendations and what the bids came in is not contingency. It's our savings. Thank you. Understood. Thank you, Mike. We have a hold on curbside collection. Yeah. So I move to amend the health department line item by increasing- Excuse me. Name and address, please. Sorry. John Prindiville, 20 Stanley Road. I move to amend the health department line item by increasing it by $1.5 hundred thousand to be funded from the general stabilization fund. I have the motion in writing.
+
+**[1:26:20](https://vimeo.com/1189445340#t=5180s)** You're going to have to come down here and put what you want to do in writing.
+
+**[1:26:31](https://vimeo.com/1189445340#t=5191s)** Andrew Petty, Director of Public Health. The waste department holds curbside collection, not the health department.
+
+**[1:26:59](https://vimeo.com/1189445340#t=5219s)** I
+
+**[1:27:52](https://vimeo.com/1189445340#t=5272s)** move into adding $1.5 million to the budget and by taking that from the general stabilization fund, incurring a contract of 1,000 movement for $5 million, the differential on the contract of 1,000 dollars. So the old contract reflected that. Does that make sense? 1.5 million.
+
+**[1:28:36](https://vimeo.com/1189445340#t=5316s)** So the current contract right now is 1.5 million. I don't know that I see- Stabilization is like a two-third of the budget. Yeah. I'm making up numbers.
+
+**[1:29:05](https://vimeo.com/1189445340#t=5345s)** Bear with us for a minute, folks.
+
+**[1:29:39](https://vimeo.com/1189445340#t=5379s)** Bear
+
+**[1:31:00](https://vimeo.com/1189445340#t=5460s)** with us, folks.
+
+**[1:31:59](https://vimeo.com/1189445340#t=5519s)** Oh, I thought we were going to be talking about the override stuff.
+
+**[1:32:05](https://vimeo.com/1189445340#t=5525s)** Oh, wow. This meeting's long, and they haven't done anything yet. Just rearranging all the... What a waste of time.
+
+**[1:32:14](https://vimeo.com/1189445340#t=5534s)** Wow. It'll definitely be two nights.
+
+**[1:32:31](https://vimeo.com/1189445340#t=5551s)** This ain't quick and efficient, I'll tell you.
+
+**[1:33:32](https://vimeo.com/1189445340#t=5612s)** How you doing?
+
+**[1:33:36](https://vimeo.com/1189445340#t=5616s)** Good. In the same boat. There's no, yes. There's no amendment.
+
+**[1:33:48](https://vimeo.com/1189445340#t=5628s)** If you could find your seats, please.
+
+**[1:33:58](https://vimeo.com/1189445340#t=5638s)** Folks, Mr. Prendiville's motion was out of order. So we're going to move on. Question. And he understands that.
+
+**[1:34:08](https://vimeo.com/1189445340#t=5648s)** Next is the health department. Do we have health or? Question. Health department. Did we have a hold on the health department? Yes. I have a question. Okay. I'm sorry. Somebody's saying, "I have a question," I don't see them. Right here. Standing right here. Okay. Okay. Just- Albert Jordan, Roosevelt Avenue. I want to talk about curbside trash. Okay. Yes. Is this the time to do it? Because I'm- Yes, sir ... I'm confused. No, you're on. Okay. Thank you. I want to leave curbside trash on the tax rate. I don't want to hire more employees, okay, to collect fees. And I do not want to use the revolving fund. Last year, we appropriated 92,000
+
+**[1:34:57](https://vimeo.com/1189445340#t=5697s)** for an assistant at the health department, and we're adding employees, and there was a big raise of 45,000 coming out of the transfer fund. And apparently, finance committee approved this, and we don't have any money, and I'm trying to live in this town, okay, and I don't see a department head deserving a $45,000 raise in one whack and leaving out the rest of the hardworking department heads in town. I just want the public to be aware that these enterprise fundings things are... I have two pockets, and I'm not going to be getting a bill for $300 or $400 a year. I want it on the tax rate, and I will support the override for the tax rate, but I do not
+
+**[1:35:44](https://vimeo.com/1189445340#t=5744s)** want a separate bill coming in and hiring more employees. I thought we had employees now that we couldn't afford, and one employee isn't going to be able to collect all this money that they're talking about. They're ludicrous. Thank you, Mr. Jordan. Thank you. The next- Question. Question. Yes. Yes. Yeah. This is very basic. There's two lines here. One says waste collection, and the other says curbside collection. Could somebody explain what those mean? Yes. Mr. Petty. And please speak up when you get to the microphone because- Okay ... to me, you're a bit of a sea of people out here. Okay. So thank you for speaking up. Alexis. Andrew Petty, Director of Public Health. So the waste collection has expenses at the transfer station, which
+
+**[1:36:30](https://vimeo.com/1189445340#t=5790s)** also include the landfill monitoring expenses. Curbside collection is just the cost for curbside collection. So that would be trash collection, recycling collection, and processing, and then the disposal of the material for solid waste and for processing of the recycling material.
+
+**[1:36:50](https://vimeo.com/1189445340#t=5810s)** Thank you, Mr. Petty. Hi, quick question on the community development and planning. Okay. Stacey Bell, 38 Crestwood. Just a very quick question. It was mentioned in the proposal there's going to be a cut to, among the other full-time staff, the grant writer. I'm wondering how you're going to account for the loss of future grants or current grants we'll have to give up without that grant writer staff. How is that being factored into the budget?
+
+**[1:37:17](https://vimeo.com/1189445340#t=5837s)** Mr. Keiser.
+
+**[1:37:22](https://vimeo.com/1189445340#t=5842s)** Thank you. Good evening. Thatcher Keiser, Town Administrator. So the position in the budget is grant coordinator. As I've said many times, everybody that works for the town is a grant writer. The grant coordinator position, in addition to writing grants and specializing in it, the position was to help us to coordinate to meet the reporting requirements, timing requirements, all the regulatory requirements of any and all grants that we receive. Under the constrained budget scenario that we were faced, where we had to make choices and make cuts The plan in the current balanced budget is to move the regulatory tracking into the finance department
+
+**[1:38:10](https://vimeo.com/1189445340#t=5890s)** and have basically department heads and other key staff continue writing grants, managing grants on top of all their other duties. Ideally, we would like to have that position back in order to be much more efficient and allow our department heads and key staff to stay focused on their core function. But under the budget constraints we were faced with, we had to make these tough choices. And so what I take from that is that you're not factoring any less grants received, even though the loss of the position. Is that right? That is our desire. That will be challenging just based on workload as such, but our desire is to keep applying for any and all grants that we
+
+**[1:38:57](https://vimeo.com/1189445340#t=5937s)** hope to achieve. Thank you. Okay, I have that as the last hold. And now we're going to...
+
+**[1:39:07](https://vimeo.com/1189445340#t=5947s)** Sure. Go to the microphone.
+
+**[1:39:27](https://vimeo.com/1189445340#t=5967s)** Thank you, Jack. Cindy Towerlowin, 12 Trinity Road. The follow-up is, the finance director will take over that position or those responsibilities, but can you share with us exactly how many grants that position has already obtained? Because personally, I feel that this is one of the budget items that should not be cut in terms of the salary position. So could you share the numbers, the amount of money, and the type of grants that have been brought in because of that position? Yeah, and I don't have a printout of all the exact numbers, but within Community
+
+**[1:40:14](https://vimeo.com/1189445340#t=6014s)** Development and Planning Department, over the last year and a half or so when we've been tracking relative to the 3A question, they applied for nearly four million grants that we didn't receive.
+
+**[1:40:30](https://vimeo.com/1189445340#t=6030s)** I have the director right here with the numbers. You want to give the numbers? Sure. Okay. I don't know. Well, since the department's been created in fiscal year 2025, the department has secured 1.9 million in grant funds for the town, which is essentially a net gain for the community of 769,000. Or, I'm sorry, a net gain of 1.7 million for the town. So. Thank you. And so we're expecting the finance person to actually secure at least that, if not more, and especially if we're in compliance with 3A going forward. It's just another
+
+**[1:41:17](https://vimeo.com/1189445340#t=6077s)** position that I think needs to be reevaluated here, as opposed to chopping it off. Thank you.
+
+**[1:41:28](https://vimeo.com/1189445340#t=6088s)** Okay, we've covered all of the holds, and we're going to go to the vote on the silos. No. Oh. Yes, ma'am. Library hold, Marta Bach, 11 High Street. And your hold was on which department? The library. Okay. So I'm really confused. Is the library budget that we're voting on this really diminished funding that puts us- So we're voting on the budget, which- I'm asking if what we're voting on is the diminished projection that puts our library at risk. Yes, we're voting on the 2027 budget, which is from available funds. Article 29 is the article that would,
+
+**[1:42:16](https://vimeo.com/1189445340#t=6136s)** if passed here and at the ballot, would give additional funding back to the general fund of the town. But right now, we need to vote on a budget that's based on available funds. Thank you. Thank you. Okay, so we're going to go to-- Yes? May I just make one comment? Which part of the budget? Generally, on the whole thing. Is there a role? Sure. Okay. So, Kate Thompson, Bouvier Road. Just wanted to point out Article 23 obviously is the operating budget for the whole town, and building a balanced budget like this has been a months-long project on behalf of all of our department heads in
+
+**[1:43:03](https://vimeo.com/1189445340#t=6183s)** this town. They are the experts, they are competent professionals, and they have worked as a team to bring us what they think the best solution is for this incredibly difficult situation. And I just want to compel this room to understand and consider the fact that they are already stretched incredibly thin. Some of them are doing two to three jobs, and I think we should, as a group, respect their recommendation and vote yes on this budget and move on to talking about an override. Thank you. Okay. Now I'm going to go to the vote.
+
+**[1:43:44](https://vimeo.com/1189445340#t=6224s)** So we have 11 different sections to vote on the budget, folks. Seeing how we've had all of the deliberation, we're going to do a hand vote on each one. So I'm going to start with I have a motion that the sum of $4,608,544 is appropriated for general government. Do I have a second?
+
+**[1:44:06](https://vimeo.com/1189445340#t=6246s)** Thank you. If you favor the article, please raise your hand. Point of order. Okay, could you go to the microphone and explain your point of order, please?
+
+**[1:44:28](https://vimeo.com/1189445340#t=6268s)** John Dipiano, 6 Trager Road. As a point of order, Mr. Attridge, why are we not using our technology? Why are we going back to a hand vote? I'm sorry, that's- On particular articles, why are we carving out hand votes versus technology use? Because our bylaws allow me the right to choose the way that we vote. That's it.
+
+**[1:44:53](https://vimeo.com/1189445340#t=6293s)** And it's really not a point of order. Thank you. May I ask why you chose a hand vote on these particular articles versus the balance of articles? In the spirit of time. Well, in the spirit of- No, it's really not a debate, Mr. Dipiano, but thank you. I know that from experience, Mr. Attridge.
+
+**[1:45:14](https://vimeo.com/1189445340#t=6314s)** Okay. It's been moved, and I have a second. As many as favor the article, please raise your hand. Those opposed, the motion passes. I have a motion that the sum of $11,871,711 is appropriated for public safety. Do I have a second? Second. Thank you. If you favor the article, please raise your hand. Those opposed. The motion passes.
+
+**[1:45:48](https://vimeo.com/1189445340#t=6348s)** I have a motion that the sum of $47,620,287 is appropriated for the school department. Do I have a second? Second. Thank you. If you favor the article, please raise your hand. Those opposed. The motion passes. I have a motion that the sum of $6,862,170 is appropriated for public works and facilities. Do I have a second? Second. Thank you. If you favor the motion, please raise your hand. If you oppose, raise your hand. The motion passes. I have a motion that the sum of $881,569 is appropriated
+
+**[1:46:35](https://vimeo.com/1189445340#t=6395s)** for human services. Do I have a second? Second. Thank you. If you favor the motion, please raise your hand. If you oppose, please raise your hand. The motion passes. I have a motion that the sum of $1,870,167 is appropriated for culture and recreation. Do I have a second? Second. Thank you. If you favor the motion, please raise your hand. Those opposed. The motion passes. I have a motion that the sum of $11,496,009-- I
+
+**[1:47:17](https://vimeo.com/1189445340#t=6437s)** have a motion that the sum of $10,971,016 be appropriated for debt service. Do I have a second? Second. As many as favor the motion, please raise your hand. Those opposed. The motion passes. I have a motion for the sum of $24,965,092 is appropriated for other general government. Do I have a second? Second. Thank you. If you favor the motion, please raise your hand. Those opposed. The motion passes.
+
+**[1:47:58](https://vimeo.com/1189445340#t=6478s)** I have a motion that the sum of $4,799,291 is appropriated to the sewer department. Do I have a second? Second. If you favor the article, please raise your hand. If you oppose.
+
+**[1:48:15](https://vimeo.com/1189445340#t=6495s)** The motion passes. I have a motion that the sum of $6,865,301 is appropriated for the water department. Do I have a second? Second. Thank you. If you favor the motion, please raise your hand. Those opposed. The motion passes. I have a motion that the sum of $1,669,500 is appropriated for the harbor department. Do I have a second? Second. Thank you. If you favor the motion, please raise your hand. Those opposed. It's a vote, and the motion passes.
+
+**[1:48:56](https://vimeo.com/1189445340#t=6536s)** And to pay for appropriations in the amount of $122,984,648 to be raised, appropriated, transferred, or otherwise provided as follows. Raise and appropriate $87,869,977. Curbside trash fee or general property tax override, $2,186,516. Transfer $9,000 from the Conservation Commission fund to supplement the general fund. Transfer from the sewer fund $154,743 to the general fund for indirect costs. Transfer from the water fund $287,641 to the general
+
+**[1:49:42](https://vimeo.com/1189445340#t=6582s)** fund for indirect costs. Transfer from harbor fund $166,666 to the general fund for indirect costs. Sewer user fees, $4,799,291 to fund sewer budget. Water user fees, $6,865,301 to fund water budget. Transfer $550,000 from harbor retained earnings to fund the harbor budget.Harbor user fees, $1,119,500 to fund harbor budget. And that completes the budget article.
+
+**[1:50:27](https://vimeo.com/1189445340#t=6627s)** Article 29, supplemental appropriation and expense of several departments. I have a motion that the town raise and appropriate the following amounts contingent upon the passage of a Proposition 2.5 override so-called. Should this article pass, and the subsequent tier at the ballot passes, this town meeting will have made appropriations for FY 2027. Those appropriations are included in the motion and are as follows.
+
+**[1:50:59](https://vimeo.com/1189445340#t=6659s)** Tier one, general government $423,625. Public safety, $119,982. Public works and facilities, $259,286. Human services, $76,171. Culture and recreation, $356,183. Other general government, $34,317. Total first year tier one is $1,269,564. Tier two, general government, $1,180,302. Public safety, $333,464.
+
+**[1:51:48](https://vimeo.com/1189445340#t=6708s)** Public works and facilities, $329,286. Human services, $136,171. Culture and recreation, $973,941.
+
+**[1:52:06](https://vimeo.com/1189445340#t=6726s)** For a total of year one of tier two is $2,805,236. Tier three, general government, $1,250,302. Public safety, $546,946. Public works and facilities, $477,286. Human services, $196,171. Culture and recreation, $973,941. Other general government, $852,072. Tier three total year one, $4,296,718.
+
+**[1:52:51](https://vimeo.com/1189445340#t=6771s)** We're going to have a presentation. I believe Mr. Fox is going to come up, chair of the Selectboard. After the main presentation and we get into comments from the audience, we're going to have two-minute limits from the
+
+**[1:53:10](https://vimeo.com/1189445340#t=6790s)** debate after that. Mr. Fox. Mr. Moderator, point of order. Yes, sir. Please explain to me when the town ratified its bylaws to go back to a hand vote after we went to these two years ago. That's my first question. Okay. Can I answer that for you? Yes. I believe I have three ways at my disposal that I can
+
+**[1:53:38](https://vimeo.com/1189445340#t=6818s)** use for voting in the town, and the third was recently added with the electronic voting devices, and it allows me the latitude to use them or not. So your latitude allows the mob to just say, "We go to a hand vote when it benefits us." Yes or no?
+
+**[1:53:59](https://vimeo.com/1189445340#t=6839s)** Yeah. It's the moderator's discretion. It's your discretion. Yes. But then why the hell do we have these stupid clickers, Jack? Seriously, this is a serious question, and it's a fundamental question. The reason- We're all here-- Excuse me, sir. Yep. We're all here at town meeting. We've sat here with the clickers all night, just like we have suffered for the last three years with. And all of a sudden, when we're pushing overrides and we're pushing Prop 2.5, we're going to go back to the hand count, and there's not a single teller in the room to actually take the tally. Yes, there are tellers, by the way. Where? The tellers have been sworn in before the meeting. Okay. Where are they? I don't see them coming down the aisles counting the votes. You people are usurping the right of the voter.
+
+**[1:54:46](https://vimeo.com/1189445340#t=6886s)** Not only that, you shut down another citizen on the whole thing. This is fundamentally disgusting, and every one of you should be ashamed.
+
+**[1:54:58](https://vimeo.com/1189445340#t=6898s)** Okay, Mr. Fox.
+
+**[1:55:03](https://vimeo.com/1189445340#t=6903s)** Mr. Fox. Good evening. Question. Comment. Thanks on that. Good evening, everyone. Let's change the tone a little bit, hopefully. I'm Dan Fox from the Selectboard, and I will be presenting Article 29 with Melissa Klukas from the school committee. As we just heard from Finance Committee Chair Al Goolsby, Marblehead faced a $7.7 million deficit. Oh, not yet. All right. Take one. $7.7 million deficit in preparing the balanced budget. Creating the budget required cuts across the town, impacting all municipal departments and the schools, with 43 and a half positions eliminated and a significant reduction in services. This article is how we can fund the restoration
+
+**[1:55:51](https://vimeo.com/1189445340#t=6951s)** of positions, maintain quality municipal services, and invest in improvements. The Selectboard is proposing a multi-tier, multi-year Proposition 2.5 general override to address this deficit. There are two steps in passing Proposition 2.5 general override: one, the vote at town meeting tonight, and two, a town-wide vote at the ballot. Next slide, please.So why are we here tonight? We're simply here to get the override on the ballot. There will be no voting on tiers tonight. A yes vote on Article 29 puts the tiers on the June 9th ballot. The specific motion, as Jack just discussed, Mr.
+
+**[1:56:37](https://vimeo.com/1189445340#t=6997s)** Moderator, before town meeting, is to allocate or appropriate funding to the fiscal year '27 operating budget. In other words, you are voting on a budget that will be used if the override passes. Tonight, we will outline the full scope of the override the Selectboard is proposing. Again, tonight's vote is not on the tiers. It's just about the allocation of additional funds for expenses in fiscal year '27. In regards to the curbside trash collection, there will be a separate override question on the June 9th ballot related to curbside trash collection, regardless of whether or not this article passes tonight. Town meeting is not voting on curbside collection tonight.
+
+**[1:57:23](https://vimeo.com/1189445340#t=7043s)** The budget approved just before in Article 23 already funded curbside collection through a fee imposed by the health board. Again, regardless of what happens tonight, the Selectboard will be putting that override on the ballot on June 9th, and that gives the voters a chance to weigh in on how we pay for curbside collection. If you approve a curbside collection override, that will replace the fee. Next slide, please.
+
+**[1:57:56](https://vimeo.com/1189445340#t=7076s)** Marblehead has not passed a general override since 2005, and as Alec discussed before, the Finance Committee has warned the town meeting year after year that our revenue is not keeping pace with expenses. In confronting the budget, the Selectboard agreed that Marblehead needs an override to address these fiscal pressures that are driving a growing deficit in the operating budget. As you can see up here where the two lines meet, the blue line is available revenue, the red line is total expenses. In fiscal year '27, with the budget that you just passed, we are equal. However, if we do not have an override,
+
+**[1:58:43](https://vimeo.com/1189445340#t=7123s)** our expenses will continue to outgrow our revenue, and in two years, again, you will have a $7.7 million deficit without an override. Next slide, please.
+
+**[1:58:57](https://vimeo.com/1189445340#t=7137s)** In preparing an override proposal, the Selectboard wanted to balance competing needs and priorities, as well as a wide range of voter appetites for an increase in property taxes. We heard so many different options from citizens about what should be in the override that it was impossible to just land on one choice. We wanted to give voters the say when considering which needs to fund. Those options can be broken down into three categories. One, do we want to fund the bare minimum to keep our town government running and provide limited services to the community? Two, do we want to maintain services at roughly the level they are today? And three, do we want to bring back positions that have been cut in prior years due to budget pressures and invest
+
+**[1:59:43](https://vimeo.com/1189445340#t=7183s)** further in our community? This is where the tiers come into play. The tiers build on each other. Each tier includes items in the prior one. Tier one, partial restore. Return some of the positions and services that were cut in the budget, but not all of them. On the town side, in tier one, we'd be bringing back 15 out of the 20 and a half full-time employees that we'd be losing. Tier two, build. Funds the restoration of additional positions and services. Tier three, invest. Restores positions and services that were cut in prior years and makes additional investments into the town. Voting on a tiered override will give all Marblehead voters a say in the
+
+**[2:00:31](https://vimeo.com/1189445340#t=7231s)** solution to a challenge that impacts us all. Next slide, please.
+
+**[2:00:38](https://vimeo.com/1189445340#t=7238s)** Up here, as shown in this bar chart, each tier is implemented over three years, with funds being drawn down from the override as needed per year versus taking it all at once. This phased approach saves taxpayers money and allows them time to plan. This chart shows exactly how the override draws work across all three tiers and when your taxes will increase. I would think of each bar as representing a bucket. The red portion at the bottom is the first year's draw. The dark blue is the second year. The light blue is the third year, and the total height of each bar is a full override amount for that tier. So for example, in tier one, year one is 1.3 million, year two is
+
+**[2:01:24](https://vimeo.com/1189445340#t=7284s)** 5.3 million, year three is 2.4 million, totaling a total of nine million. A few things to note here. First, the first year draw is deliberately modest, with 1.3 million in tier one, 2.8 in tier two, and 4.3 million for tier three. And second, the bulk of the funding comes in the second year. That is intentional, because that is when the schools face a projected $4 million deficit. We have promised through a memorandum of understanding voted among the Selectboard, the School Committee, and the Finance Committee, that these are the maximum our override proposal will increase taxes per year. We have also promised that we will not come
+
+**[2:02:11](https://vimeo.com/1189445340#t=7331s)** back to you as the taxpayers for at least three years. So to summarize, one vote this spring, phased draws as discussed up here as money is needed, and a promise not to return for at least three years. Next slide, pleaseI know this is hard to see. However, tonight is about getting this on the ballot, and you can hopefully decide which tier you want at the time. So getting into the specifics of the three tiers, I'm going to explain them to you. Tier one, as discussed, is a partial restore. Restore restores a portion of the positions and services that were eliminated to balance the budget and funds the reduced level of services through year three. This is what the other tiers build on.
+
+**[2:02:57](https://vimeo.com/1189445340#t=7377s)** As you will see, there's a checkbox in tier one. If each tier after that continues on, those check boxes do not disappear, they continue on in each tier. Tier one does not bring back everything that was cut to balance the budget.
+
+**[2:03:13](https://vimeo.com/1189445340#t=7393s)** Instead, it funds the positions that are critical to provide a reduced version of the town services Marblehead is accustomed to. The value of some of these positions will be obvious to citizens. Tier one provides enough staffing and funding for the library to obtain an accreditation waiver. However, we'll still have reduced hours at the library under tier one. It funds the Council on Aging nutritional coordinator. This is a vital position for seniors who rely on the lunch program at the Council on Aging. It funds the positions of two custodians. So only two custodians we do have, both at Mary Alley and Abbott Hall. It funds the police department's student resource officer, or SRO, and this is a key position for successful community policing.
+
+**[2:04:01](https://vimeo.com/1189445340#t=7441s)** It funds key personnel at Department of Public Works, a heavy equipment operator, a laborer, and part-time clerk. These are the people who keep our streets plowed in the winter, fill the potholes, and maintain our infrastructure. It also funds behind-the-scenes positions that allow for efficient functioning of town government, such as a senior clerk in the finance department and the director of community development and planning. I'm going to now turn it over to Melissa from the school committee, who will explain the impact of tier one for the schools.
+
+**[2:04:38](https://vimeo.com/1189445340#t=7478s)** Thanks, Dan. The tier one request is different for the schools because, as Alec talked about earlier, the superintendent has not recommended restoring any of the 18.25 FTEs that were cut to balance this year's budget. Enrollment has declined in the Marblehead Public Schools, as it has in many communities across the Commonwealth due to demographic shifts. District leadership is working to ensure staffing levels in our schools adjust appropriately to that decline. The tier one override would fund salary obligations for that adjusted staffing level in FY28 and 29. As discussed, we project a $4 million operating deficit for the schools next year. This override will help prevent the
+
+**[2:05:24](https://vimeo.com/1189445340#t=7524s)** need to reduce another 30 to 50 positions in next year's budget, which would be on top of the 18.25 that are being cut this year and not returned to the budget. Also funded by tier one are positions that were moved out of the general fund and into revolving funds to reduce this year's budget. The revolving funds cannot support these positions long term, and tier one would return these positions to the general fund over FY28 and 29. To avoid deep staffing cuts in the near term, the schools are using $1.5 million in available funds to prepaid this year's out-of-district special education tuition, which is the cost of placing students who require specialized programs outside of Marblehead. This is a one-time option that reduces this year's budget gap
+
+**[2:06:12](https://vimeo.com/1189445340#t=7572s)** without additional taxpayer cost, and it buys time by spreading the override ask across two years rather than front-loading the full amount in year one. With that, I'm going to turn it back to Dan to talk about tier two.
+
+**[2:06:26](https://vimeo.com/1189445340#t=7586s)** Tier two is build. This tier, as I said before, includes everything that was funded in tier one, plus additional positions and services. Tier two restores positions to the budget, but it also brings back positions or services that have been eliminated over the past several years due to budget pressures. In particular, tier two funds a social worker at the Council on Aging, fully restores library staffing and services, a GIS position at the Department of Public Works. It funds $450,000 in building maintenance, one police officer, two firefighters. It restores a special clerk in the town clerk's office, an IT director and budget analyst in the finance department,
+
+**[2:07:13](https://vimeo.com/1189445340#t=7633s)** and it restores an assistant planner and conservation agent. On the school side, it funds $150,000 in annual technology leases for classroom instruction beginning in the second year. And importantly, full-day kindergarten. Marblehead is currently one of the only communities in Massachusetts that charges families for full-day kindergarten.
+
+**[2:07:39](https://vimeo.com/1189445340#t=7659s)** Melissa's going to talk about tier three as well as potential tax impacts.
+
+**[2:07:47](https://vimeo.com/1189445340#t=7667s)** Tier three is invest. Again, tier three includes everything in tiers one and two, and then makes further investments into town and school services. For the town side, tier three funds one specialized heavy equipment operator, one foreman, one additional police officer, two additional firefighters, one grant writer, $60,000 in community mental health needs, $1.5 million in recurring capital expenses across the town and school budgets, $100,000 in curriculum and professional development in the schools, and an in-district special education program for 18 to 22-year-olds who are entitled to educational programming and are currently being sent out of the district. Next slide, pleaseThis slide shows what
+
+**[2:08:34](https://vimeo.com/1189445340#t=7714s)** the override actually means for a typical Marblehead homeowner using the median assessed home value. Let's walk through tier two as an example, which is the $12 million option. The three bars show how the tax increase phases in over three years. In year one, your taxes would go up $280. In year two, another $676. In year three, another $274. So by year three, a median homeowner is paying $1,230 more per year than they are today. That number includes the Prop two and a half increase already, so this is the pure number that your taxes would increase. The reason that it phases in over three years rather than all
+
+**[2:09:21](https://vimeo.com/1189445340#t=7761s)** at once is intentional, so that families can plan for it and adjust gradually over time. With that, I'm going to turn it over to Dan to talk about how the voting on the override works. Thank you. Next slide, please.
+
+**[2:09:37](https://vimeo.com/1189445340#t=7777s)** So even though we aren't voting on this tonight, we have gotten a lot of questions about what this ballot will look like. So we would like to take a little time to explain that. As you can see on this slide, we have advisory language from the Elections Division of the Secretary of State's office. Questions one, two, and three are separate questions, and as I mentioned before, you will have a fourth one on trash. You may vote for or against each question individually. Each question requires a majority of those voting on that question to pass. If more than one question passes, the question with the highest dollar amount will prevail. Next slide, please.
+
+**[2:10:15](https://vimeo.com/1189445340#t=7815s)** Here is a sample ballot. Again, you'll be asked to vote on each question. So for instance, if you're opposed to the override, clearly you vote no on all of them. A voter who supports tier one would vote yes on question one and no on questions two and three. A voter who supports tier two would vote yes on questions one and two, and no on three. A voter who supports tier three would vote yes on them all. Only one tier will take effect, even if multiple tiers receive more than 50% yes votes. When the votes are tallied, the tier with the highest dollar value that gets more than 50% of yes votes is the one that takes effect. So up here, you will see that even though question one had a higher
+
+**[2:11:02](https://vimeo.com/1189445340#t=7862s)** majority, question three prevails because it's the highest dollar amount that had a majority. Next slide, please.
+
+**[2:11:12](https://vimeo.com/1189445340#t=7872s)** All right, back to the vote tonight. Back to why we're here.
+
+**[2:11:17](https://vimeo.com/1189445340#t=7877s)** So Jack has already done this motion. The one thing that I would like to point out here is that this motion accounts for voiding tiers that are not implemented. So if tier three passed, the allocations that you're looking up here would be voted for tier one and two. If tier two passed, their contingent allocations would disappear.
+
+**[2:11:46](https://vimeo.com/1189445340#t=7906s)** Next slide, please.
+
+**[2:11:49](https://vimeo.com/1189445340#t=7909s)** So what does this mean for Marbleheaders? A no vote tonight or at the ballot in June means that the cuts detailed in Article 23 presentation of the balanced budget will take effect. Among those, a library that is open three days, no school resource officer, increased overtime costs, 43 and a half positions lost across all departments, including schools, as well as other services. I want to be very clear here. A no vote tonight means that the cuts that we are outlining will go into effect July 1st. These are real people, real services that many of us depend on in this town. Furthermore, a no vote means a $4 million deficit for the
+
+**[2:12:36](https://vimeo.com/1189445340#t=7956s)** schools next year, plus a growing deficit in town expenses. In a fiscal '28 budget process, there'll be more cuts and reductions to our schools and town. A yes vote tonight advances a solution to the ballot on June 9th, where voters will have the opportunity to weigh on and which of these options they want. This vote is about deciding what Marblehead we want for us, for our children, and for the future. I ask you to vote yes on Article 29. Thank you.
+
+**[2:13:12](https://vimeo.com/1189445340#t=7992s)** Thank you, Mr. Fox. Thank you, Ms. Pookis.
+
+**[2:13:23](https://vimeo.com/1189445340#t=8003s)** We have a speaker.
+
+**[2:13:28](https://vimeo.com/1189445340#t=8008s)** Yes, ma'am. Hi, I'm Bit Capola. I live 30 Beverly Avenue. I want to come up here tonight and reiterate how deeply important this article is. Its outcome will affect every single Marbleheader, voter or non-voter, adult or child. This is a decision that deserves the full due process of a town-wide ballot vote in June, and not one to be decided upon by the only small percentage of people who are able to come here tonight, although this attendance is impressive. Whether you're here because of the Council on Aging, the library, park and recs, our other municipalities, or for me personally, the loss of $3.7 million from our school budget, Marblehead cannot be a strong and affluent town if our systems that support
+
+**[2:14:15](https://vimeo.com/1189445340#t=8055s)** us, that teach us, that care for us, that protect us, are gutted, crumbled, and depleted. It's time for a change. It's time to prioritize. It's time to dig ourselves out of the mud and set Marblehead up for thriving success in the future. Please support taking this to the ballot in June. Please allow the thousands of voters their right to have a say in their future. Thank you.
+
+**[2:14:43](https://vimeo.com/1189445340#t=8083s)** Folks, just a reminder, we do have a two-minute clock on speakers. Yes, sir. What she said.
+
+**[2:14:53](https://vimeo.com/1189445340#t=8093s)** I'll try to do this in less time than it took to win the Kentucky Derby on Saturday. Dave Weber, 11 Cliff Street in the Shipyard. I'm the parent of an MHS graduate and the grandparent of a young grandson who will be entering Marblehead Public Schools in the near future. Recently, I've been attending a lot of meetings of the select board, FinCom, and a number of the other committees. I guess retirement isn't as busy as I thought it might be. But as you've heard tonight, not just from Bit, but from the great presentation we just heard and from some of the other comments here, these issues are complex, tough choices. A lot of tough choices have already been made to get us to this point in our fiscal process. But while these issues are complicated, and the process is sometimes
+
+**[2:15:41](https://vimeo.com/1189445340#t=8141s)** hard to understand, Article 29 is actually pretty straightforward. As Chairman Fox has just said, a yes vote simply moves the decision of whether to approve an override forward to the June 9th ballot, while a no vote ends the process right here at town meeting and brings in to bear all of the cuts that have been discussed in the balanced budget portion of tonight's meeting. Throughout this spring, our school and town leaders have worked incredibly hard in collaboration, both with each other as well as the hundreds of volunteers who serve on the various boards, committees, and commissions that help shape the budgets. That hard work deserves the full consideration of as many residents
+
+**[2:16:29](https://vimeo.com/1189445340#t=8189s)** of Marblehead as possible, and that requires a yes vote right now on Article 29 to move the question forward to the town-wide ballot in June. And if the multi-tier, multi-year set of override options is still a little confusing to you, don't despair, as we are not voting on those tiers this evening at town meeting. We're- That's two minutes, sir. Thank you very much- Thank you ... for your consideration.
+
+**[2:16:59](https://vimeo.com/1189445340#t=8219s)** This microphone over here, please.
+
+**[2:17:04](https://vimeo.com/1189445340#t=8224s)** Bonnie Carey, 24 Shepherd Street. I grew up here, and the summertime, I was always at the Park and Rec. I was one of Sean Casey's park rats. I always went skating with But horn on every Sunday. I did town softball, and I was even a town Park and Rec counselor.
+
+**[2:17:28](https://vimeo.com/1189445340#t=8248s)** The town in Marblehead had volleyball for adults, and that's where I met my husband, Bruce. We have two kids. They both went through Marblehead school system. They went to college. They're still in college. Bruce has been a town employee for 11 years. His job is going to be eliminated unless the override passes. He works at Abbott Hall and is an essential worker. Thus, I would like to say thank you to the highway department for clearing the roads as I leave for work at 5:30 in the morning, as I'm an essential worker, too, and I work on weekends. Closing the COA is an outrage, as many programs, painting, exercising, playing cribbage, to name a few. Also, the COA van, who take the older people to doctor's
+
+**[2:18:16](https://vimeo.com/1189445340#t=8296s)** appointment, Market Basket, or special events. And for the safety of our town, we need firefighters and police to help us with medical emergencies, car accidents, or a fire. I will never forget Engine Two coming to my neighborhood and doing CPR on my neighbor. And then I had to call 911, and I lived down the street from the ambulance. The dispatcher stayed on the phone with me in case I had to do CPR. The fire and the police department got there before the ambulance.
+
+**[2:18:52](https://vimeo.com/1189445340#t=8332s)** What's going to happen if the override doesn't pass? Not enough people to plow, the park kids, no more Park and Rec summer programs. Nothing for the senior citizens.
+
+**[2:19:06](https://vimeo.com/1189445340#t=8346s)** And if we vote no, what happened to the town I grew up in? That's two minutes, ma'am. Okay. Thank you.
+
+**[2:19:17](https://vimeo.com/1189445340#t=8357s)** Yes, sir. Name and address, please. Hi. I'm Steve Silva, 19 Kenneth Road. I fully support this Article 29. I am concerned about how it's going to be on the ballot. I can see some confusion. Maybe I'm misinterpreting how it's going to be implemented, but I could see how someone might, for instance, vote for tier two, yes, but no on tier one. And if something like that happened, we might not get the
+
+**[2:19:55](https://vimeo.com/1189445340#t=8395s)** over 50% on tier one. Another example would be I vote for tier three, no on tier one, no on tier two. Again, I'm worried about this confusion. Am I misinterpreting how this is going to be on the ballot? Mr. Fox. I agree. It's confusing for a lot of people if you haven't been doing this non-stop. What I would recommend is that tonight is about getting it on the ballot. From tonight, we have five weeks to explain this, and I would recommend that you pass Article 29, and I promise you that you can call me or whoever. We will be educating over the next five weeks. We've been focusing on getting past Article 29 for
+
+**[2:20:40](https://vimeo.com/1189445340#t=8440s)** now. Thank you, Mr. Fox
+
+**[2:20:46](https://vimeo.com/1189445340#t=8446s)** I would recommend that we look at how, if you vote for tier three, it automatically votes yes for tier one and two. There's got to be a way to do that. Unfortunately, that's not allowed by law. So I understand what you're saying. However, we have had our legal counsel look at this and to talk to the office, and that is not allowed by law. We did look into all this. I do appreciate that. It would make it a lot easier. You're going to allow a lot of confusion. I think there's got to be a solution. Thank you. Thank you, sir.
+
+**[2:21:26](https://vimeo.com/1189445340#t=8486s)** Mr. Goodman.
+
+**[2:21:29](https://vimeo.com/1189445340#t=8489s)** Thank you. I'm going to let the speakers that are standing up finish up, and then we'll move forward with the vote. Mr. Goodman. Thank you, Mr. Moderator. Carl Goodman, 21 Amherst Road. First, and I'll warn you, there is a however, I want to commend the finance committee, the select, and the school committee for what was obviously very difficult work to come up with any possible solution.
+
+**[2:22:00](https://vimeo.com/1189445340#t=8520s)** Secondly, I appreciate the members of the select board and the school committee who offered to meet with those of us who had questions this week at Dunkin' Donuts, and I thought that that was important. I know I had a number of questions answered. Now, the however. I'm concerned about the structure of what is essentially three separate overrides for fiscal '27, '28, '29. What it does is it says we're going to give town government the ability to spend money at higher limits without having the opportunity to evaluate on a yearly basis what we think they've done
+
+**[2:22:48](https://vimeo.com/1189445340#t=8568s)** to deal with future problems. And as we increase this base, the very same problems that drive this budget shortfall, being uncontrollable expenses of retirees and pensions, et cetera, will be built on a bigger base so that you get almost a geometric increase. The MOU is lovely, but I can't really say thank you for a promise that you're not going to come back during this three-year cycle to ask for even more money. So you'll receive support, but I think that the town leaders need to pay attention to 2030 because, with this increase in this base, you may not find
+
+**[2:23:36](https://vimeo.com/1189445340#t=8616s)** the townspeople to be as willing to address the issue in this manner. Thank you. Thank you, Mr. Goodman. Good timing. Mr. Moderator, can I answer that? Mr. Fox. Mr. Goodman, thank you. I enjoyed meeting you at Dunkin' Donuts the other-- Am I doing something there? Other day as well. I hear what you're saying, and I think as you know, there are guardrails beyond the MOU, and the biggest guardrail is this here tonight. If we come forward with a budget that you don't think that we're doing our job, you can vote against it, or you can put holds on it. This select board and school committee and finance committee are going to work. We have already found efficiencies. We will continue to work on efficiencies for that. So I do appreciate your comments. They are well-heard, and we will
+
+**[2:24:23](https://vimeo.com/1189445340#t=8663s)** continue to work to stay within those. And if we don't, this is the group who can keep us in line. Thank you, Mr. Fox. Two more speakers over here. Thank you. This is Jean Lamkin from Devereux Street. I'm speaking to endorse a yes vote to place this article on the June 9th ballot so the voice of the town can be heard. Attending town meeting tonight gives us the privilege and the responsibility to make a decision for thousands of our neighbors. We might consider each of ourselves a representative for 12 or 13 of our neighbors who are not able to be here tonight. This override is a significant town decision. Town meeting and town election are the essential elements of our town governance. Over the past five
+
+**[2:25:11](https://vimeo.com/1189445340#t=8711s)** years, town election turnout has varied from a low of 20% to a high of 40%. While we may disagree on how to vote, let's unite to increase voter turnout. Find those 12 neighbors you're representing tonight and encourage them to make a plan to vote on June 9th. Let's move turnout from 20% to 40% to more like 60% or 80%. If we get everyone to turn out to vote, it would be a lovely way to celebrate our nation's 250th anniversary and honor our town's even longer history, realizing that I feel like we've been here since the first one, but I think this is the 377th town
+
+**[2:25:58](https://vimeo.com/1189445340#t=8758s)** meeting. So let's keep it going. So let's make democracy work for Marblehead by voting yes tonight and turning out on June 9th. Thank you.
+
+**[2:26:11](https://vimeo.com/1189445340#t=8771s)** Last speaker. Yes, ma'am. Yes. Llewellyn Finch. Whoops. Llewellyn Finch, 56 Elm Street. The thing I wanted to mention is I think something really needs to be done about the assessing. The gentleman who spoke earlier in the evening is absolutely correct. There's no rhyme or reason to the assessments the way they're done in this town. I've checked 85 streets at different levels of
+
+**[2:26:40](https://vimeo.com/1189445340#t=8800s)** valuations of houses and land, and they're insane. The historical district gets assessed very heavily. Tiny properties, small houses, and we get enormous assessments, and then you move up to the higher levels and the assessments are nowhere near as bad. I just want to give some examples. My house is 960 square feet. It's in the historical district. It's assessed at $205,000. Another house further uptown, 2,190 square feet, is assessed at $112,000. And it's the same type of house as mine, what they call an
+
+**[2:27:27](https://vimeo.com/1189445340#t=8847s)** old house. And then there's another house in a very luxurious part of town, 1,900 square feet, and it's only assessed $221,000. There's no rhyme or reason to this, and I think really the way we assess in this town needs to be looked at. Thank you. Thank you, ma'am. Okay, we're going to go to the vote. We are going to use our electronic voting devices.
+
+**[2:28:00](https://vimeo.com/1189445340#t=8880s)** Okay, going to the vote for Article 29. If you favor the article, vote yes. If you oppose, vote no. One-minute voting starts now.
+
+**[2:29:23](https://vimeo.com/1189445340#t=8963s)** Article 29 passes with a vote of 1,227 to 159.
+
+**[2:29:35](https://vimeo.com/1189445340#t=8975s)** We're back to Article Three.
+
+**[2:29:40](https://vimeo.com/1189445340#t=8980s)** This happened last year. These are consent articles. We're going to have two motions with consent articles. Folks, I need 300 people for a quorum, so don't everybody go away.
+
+**[2:29:54](https://vimeo.com/1189445340#t=8994s)** The consent articles are assume liability, which has to do with our assuming liability from the state with Chapter 91. Accept trust property, which there is no trust property to accept. For the town to authorize town officers to lease such property, contracts in excess of three years, and financial assistance to allow conservation to reach out for funds that they might be able to get. Article three, consent articles.
+
+**[2:30:28](https://vimeo.com/1189445340#t=9028s)** I have a motion. Do I have a second? Yes. Thank you. Do I have any speakers? We're going to go to a hand vote. All those in favor, raise your hand. Those opposed. It's a vote, and Article Three passes.
+
+**[2:30:46](https://vimeo.com/1189445340#t=9046s)** Article Four, amend zoning bylaw, 3A multifamily overlay district. This article's moved. Do I have a second? Yes. Thank you. Because any zoning change requires a public hearing of the planning board, I would like to invite Barton Hite, vice chair of the planning board, to give the report of the planning board's recommendation, and I think Brendan's going to do that.
+
+**[2:31:15](https://vimeo.com/1189445340#t=9075s)** I'm here to provide the planning board for the Article Four amended zoning bylaw for 3A multifamily overlay district. On March 10th, 2026, the planning board held a public hearing on Article Four, the 3A multifamily overlay district. The board opened the hearing for public comment. Following deliberation, the board voted unanimously 5 to 0 to recommend that Article Four be brought before a town meeting.
+
+**[2:31:50](https://vimeo.com/1189445340#t=9110s)** You don't have the presentation?
+
+**[2:33:21](https://vimeo.com/1189445340#t=9201s)** We good?
+
+**[2:33:27](https://vimeo.com/1189445340#t=9207s)** All right. Let's try this from the top. All right. Thank you all for being here tonight. This year, unlike previous years, we'll be giving a brief overview of Article 4, the 3A multifamily overlay district. The purpose of this article is to comply with the state's MBTA 3A rezoning requirements, which creates a zoning district in Marblehead that allows multifamily housing by right. I'll start with a brief introduction, walk you through the proposed zoning sub-districts, and then, if needed, open it up for discussion. Next slide, please.
+
+**[2:34:10](https://vimeo.com/1189445340#t=9250s)** Shortly after the referendum, the town formed a working group to develop a plan that brings us into compliance with MBTA 3A zoning. At the same time, the group focused on community concerns, zoning locations, density, and traffic to create a plan that complies with state requirements while respecting Marblehead's character. To address these concerns, the working group removed two of the original sub-districts, Tioga Way and the Pleasant Street sub-districts, and created a new district called the Tedesco sub-district, while retaining the Broughton Road sub-district from the previous plan. After several months of work, the group submitted the revised 3A plan to the Executive Office of Housing and Livable Communities, or the
+
+**[2:34:56](https://vimeo.com/1189445340#t=9296s)** EOHLC, for preliminary approval. In February, the plan received preliminary approval. Here, you can see the two 3A zoning districts in the revised plan, the Tedesco sub-district and the Broughton Road sub-district. The Tedesco sub-district was selected because it moves development away from the town's more congested roadways, shifting potential traffic impacts to the edge of town and addressing concerns raised in the previous plan. While this plan shares the same overall purpose and scope as the previous plan, it places a greater emphasis on maintaining the town's character and aesthetics.
+
+**[2:35:43](https://vimeo.com/1189445340#t=9343s)** Unlike the previous plan, which allowed mixed-use development in two sub-districts, Tioga and Broughton Road, this plan allows mixed-use development only in the Tedesco sub-district. Additionally, the plan includes specific architectural guidelines covering roof pitch, window types, clapboard siding, and the requirement to submit a landscape plan. These measures are designed to preserve Marblehead's visual identity. Excellent.
+
+**[2:36:20](https://vimeo.com/1189445340#t=9380s)** Here is the Tedesco sub-district. The Tedesco sub-district consists of two parcels, the Tedesco golf course parcel located in Marblehead and the parking lot parcel across the street from the Tedesco clubhouse. The town is required to zone for 897 units, and the Tedesco sub-district has a capacity of 780 units. The maximum building height is 35 feet, which is consistent with all town zoning districts except the shoreline districts. Next slide.
+
+**[2:37:00](https://vimeo.com/1189445340#t=9420s)** Here is the Broughton Road sub-district. The Broughton Road sub-district, retained from the previous plan, consists of all of Broughton Road and has a unit capacity of 120 units. Again, the building height here is also 35 feet. Combined, these two sub-districts meet the state's requirement of 897 units.
+
+**[2:37:26](https://vimeo.com/1189445340#t=9446s)** These two sub-districts make up the proposed 3A multifamily overlay district. This plan meets the state requirements, has been preliminarily approved by the EOHLC, and we feel it addresses the community concerns from the previous plan. Next slide. So as I mentioned at the beginning, this year's presentation is brief, and we're here to answer any questions you might have. Thank you.
+
+**[2:37:55](https://vimeo.com/1189445340#t=9475s)** Thank you, Mr. Callahan. Yes, sir.
+
+**[2:38:01](https://vimeo.com/1189445340#t=9481s)** Walter Casey, 16 Gerald Road. I have a couple of process questions. Has Tedesco agreed to this?
+
+**[2:38:11](https://vimeo.com/1189445340#t=9491s)** Yes.
+
+**[2:38:15](https://vimeo.com/1189445340#t=9495s)** Essentially, yes. They don't have to because it's a zoning overlay. No, but they haven't agreed, right? Excuse me? They have not agreed. They have agreed. They know about this. We've met with them, and we've answered all of their questions, and they, last I heard, are comfortable with what we're proposing. Okay, so how does this work?
+
+**[2:38:41](https://vimeo.com/1189445340#t=9521s)** You- Can you be more specific? I plan on. Thank you. Just relax. Okay.
+
+**[2:38:52](https://vimeo.com/1189445340#t=9532s)** They still own the property. Yes. And they will own it until a developer comes along? They will own it until they choose to sell it, if they choose to sell it. What happens if they choose not to sell? Nothing. What? Nothing would happen if they choose not to sell. So this is a zoning overlay. It's not a mandate to build. There's no requirement to build anything. All we're doing is creating a zone where you are allowed to build by right with this density. So if the golf course decides that they never want to sell it, then nothing will ever change. So what do we do then? Look for another 3A zone? No. We don't have to. That
+
+**[2:39:37](https://vimeo.com/1189445340#t=9577s)** is not what the 3A mandate is at this point. So this isn't a true mandate. I mean- It's a zoning mandate. It's not a construction mandate ... but it doesn't have to happen. Correct. All right. Thank you, sir.
+
+**[2:39:54](https://vimeo.com/1189445340#t=9594s)** Over here, please. Yes, ma'am. Yeah. Hi, Alexis Sol, Front Street. I got a couple of questions. It says that if the units are built 10% affordable, which is, that's sort of the 40B language, right? No, it's not. Under 3A, there is a maximum of 10% allowed and- A maximum? In its inception, yes. And it was up to each individual town to determine whether or not they wanted to include that. So can you change that and make... Because we need more affordable housing, not less. That would be something that would be done through a different project at a future date. It's not a part of 3A, and this compliance model is,
+
+**[2:40:40](https://vimeo.com/1189445340#t=9640s)** I guess, as close to approved as we could possibly get prior to town meeting and final review. So, I'm sorry. So you're saying the state law set a maximum of 10% affordable? Is that still correct? Yes. There's a maximum of 10% affordability. It's a bit of a confusing mandate, with a little bit of conflicting stuff in there. But yes, it's a maximum of 10%. The planning board has chosen to utilize that, and that's the story.
+
+**[2:41:18](https://vimeo.com/1189445340#t=9678s)** So Broten Road right now is affordable housing, correct? Yes. And they're going to tear down some of those buildings and build more, but only 10% of them will be affordable? That's a great question. The Broten Road project actually has nothing to do with 3A as it's currently designed. They're able to do that as a 40B as is. And, when you have a zoning overlay, you're able to build something that's by right within your zone. You're able to do 40B, you're able to go before the various boards in town to get special permits to go outside of the existing zoning, or in this case of a 3A district, you can also build something that's compliant with 3A.
+
+**[2:42:04](https://vimeo.com/1189445340#t=9724s)** It just provides an additional opportunity. It doesn't mean that it will be used at the time that something is developed or redeveloped.
+
+**[2:42:14](https://vimeo.com/1189445340#t=9734s)** Does that make sense? Well, kind of. I mean, in a very convoluted way. It sort of really
+
+**[2:42:25](https://vimeo.com/1189445340#t=9745s)** avoids the question of how do we house people, and that seems to me really important. Yeah, it's an interesting mandate. It doesn't really specifically address that. Thank you, ma'am. Ma'am, I don't think it's avoiding it here. It's just a different topic. So it definitely is a thing, though. And we are going to go to two minutes on speakers. Yes, sir, over here. Name and address. Just to clarify, are you treating this section as public comment or only questions and answers at the moment? Like, should I give public comment now, or are you going to- Yes, sir Okay. No problem. Okay, so Nick Ward, Rolleston Road. For those who are confused, I think our planning board member is being quite polite. The whole idea of the plan is a gimmick. This is a plan that is designed to block all development here in Marblehead just
+
+**[2:43:11](https://vimeo.com/1189445340#t=9791s)** so that those of you who are following, those of you who are uncertain about what the plan is designed to do are clear, that is what it is intended to do. Just so that we're clear, because it seems like some people are confused about what the goal is here. But for the last two years, I have been warned that if we allowed any new housing to be developed here in Marblehead, that my property taxes would be going up. Well, we didn't allow any new housing to be developed here, and I have a feeling, based on tonight's vote, my property taxes are going up anyway. Now, this plan takes off the board one of the options that we have to address the structural budget deficit that our own finance committee chair addressed earlier tonight, which is to grow our tax base. That leaves us with two alternatives.
+
+**[2:43:57](https://vimeo.com/1189445340#t=9837s)** One is cut services. That's fewer teachers, fewer first responders, fewer town staff that actually keep this place running. Or the other option, which I think is the one we're going to pursue, which is good by the way, I'm for the override, but is to raise our property taxes. Now, last year, 3A went down at the town-wide ballot by five points, which tells me that we need a five-point swing to get housing reform done in this town. Five points seems gettable to me. I don't know when we get it, but I hope we do, because I don't want to have to come back to town meeting every three years and be confronted with the choice of whether I would like my library to operate or whether I want to dig deeper and deeper into my pockets to pay more in property taxes.
+
+**[2:44:44](https://vimeo.com/1189445340#t=9884s)** Thank you, sir.
+
+**[2:44:47](https://vimeo.com/1189445340#t=9887s)** Yes, sir. Name and address please. Dave St. Clair. Thank you. 33 Baldwin. This is basically just to put zoning in place. There are no costs to this. This is what the town does for us all the time. But the gentleman that was on just prior to me brings up a great point. If we do build more houses, we bring in more revenue, it helps us in our tax base. It brings the money in so we don't have to have overrides all the time That's basically all I have to say. Thank you. Yes, sir. Rick Petoskey, 28 Brook House. My question concerns taxes, since that's what we've just been discussing for a great length. Is this property
+
+**[2:45:34](https://vimeo.com/1189445340#t=9934s)** get reassessed if it passes? Does the property at Tedesco Country Club get reassessed based on the permitted use under this zoning override? It does not. It does not? Correct. What is it currently paying in taxes? That's not information that I have as it's not relevant to the 3A. And why doesn't its tax assessment change because of the new permitted higher density use?
+
+**[2:46:12](https://vimeo.com/1189445340#t=9972s)** It's designated as chapter land, which means that they already have an incentivized tax rate, then a deferred tax payment in the event that they choose to sell the property. But 3A has no bearing on that. Obviously, if they were to sell the land and the land were to be developed, it would have a significant tax rate change. Not rate change, but a tax amount change, but that's not what we're doing right now or talking about really. I'm really confused here. You're telling me that you're going to increase the density use of that site and change the use to residential- No ... at a very high density, and you're not going to change the assessed
+
+**[2:46:58](https://vimeo.com/1189445340#t=10018s)** value at all? Nobody's changing the density of anything. We're providing a zoning district where by right, one could do that if they chose to, but as long as nobody chooses to move forward with any development on that property, which is not required, then there would be no change to the tax basis.
+
+**[2:47:19](https://vimeo.com/1189445340#t=10039s)** I'm just totally confused by that. Thank you, sir. Yes, ma'am. Name and address, please. Carol Easthope, 93 Farrell Court. Just adding a bit of information on Broughton Road. That is property that is owned by the Marblehead Housing Association, which actually is a state organization, not a local organization, but it is supervised by Marblehead Board of Directors. There is already a
+
+**[2:47:48](https://vimeo.com/1189445340#t=10068s)** building that's going to be happening at Broughton Road that is a multifamily, a large building, three stories. It will be mixed affordably to both senior housing as well as family housing, and that has been under development. It's been getting its various approvals for it. It's going to be density that is matched by the zoning, so it's going to happen at Broughton Road whether you change the zoning or not. It's going that way. The rest of the property, it's just going to be one building. The rest of the property will remain those
+
+**[2:48:34](https://vimeo.com/1189445340#t=10114s)** two side-by, two-family buildings that are already affordable housing for families. So, nothing is going to change in actuality by changing Broughton Road. It's just
+
+**[2:48:55](https://vimeo.com/1189445340#t=10135s)** smoke and mirrors to get the affordable housing thing that we need in town to get whatever money we want from the state. Thank you, ma'am. Yes, sir.
+
+**[2:49:09](https://vimeo.com/1189445340#t=10149s)** Hello. Hi.
+
+**[2:49:12](https://vimeo.com/1189445340#t=10152s)** So Tedesco, that's like a- Excuse me, could I have your name and address, please, sir? David. I live on 64 Bayview Road. Yeah. Thank you. Tedesco, that's like a golf course, yeah? Are you asking me if Tedesco- Yes ... is a golf course? Yeah, I'm asking you. Yeah. Last time I drove by. Okay. You don't have to get cute. So they're not going to build any houses there because it's a golf course. You can't have houses on a golf course. And in Broughton Road, they already got townhouses and all that nonsense. Yeah? Yes. So, this is a way to comply with 3A without doing any of the 3A stuff?
+
+**[2:49:51](https://vimeo.com/1189445340#t=10191s)** Yes, it is. We tried the other way, and it was rejected. So, but when we're preserving the character of Marblehead, it's like we're selfish. We're doing a bad thing. We're not doing any housing. Is that a question? Yeah, kind of. Are we kind of being p****s?
+
+**[2:50:17](https://vimeo.com/1189445340#t=10217s)** No, I- We voted last year- How many times can we- Let me just- Are we trying to do nothing? Because it seems like we're doing nothing. So- I'm not an expert on this. I didn't even know it was a golf course. I haven't driven by. But we're trying to make sure we build no houses? I don't get it. People live in houses. Sir, this is the plan before us tonight. So yeah, that's what we're voting on. Okay, I just want to make sure- Thank you ... we're voting on nothing substantive. Thank you. I was afraid- You're not missing anything. Okay, then. Thank you.
+
+**[2:50:56](https://vimeo.com/1189445340#t=10256s)** These will be the last three speakers over here. Yes, ma'am. Samantha Rosado. Name and address. Samantha Rosado, 3 Martin Terrace. I'm just wondering if we become compliant at some point with 3A, will we be able to recoup the $4 million in grants that were lost, or are those completely off the table now? We would not be able to recoup any grants that have a application window that's already closed, so likely no, but we would be eligible for the next round of grants. Thank you. And then if we don't become compliant, what is the next step that the attorney general might take? I think it's been paused right now in advance- Yeah ... of this meeting tonight. That's a great question. They would probably remove the stay and
+
+**[2:51:42](https://vimeo.com/1189445340#t=10302s)** pursue legal action against us. They've already filed the lawsuit, which is on hold, as you mentioned. Then we would have to defend our position against the state in a state court with state-appointed judges on a topic that no other town has been successful in appealing in any way whatsoever. So basically, we adopt this now, or we go into debt paying lawyers so that the state can tell us how we're going to adopt it later in a way that might be less beneficial or a little more harmful to the town. Thank you. Thank you. Last two speakers. Yes, sir. Name and address. Brian Lucas, Four Natural Avenue. My question's just really simple on Tedesco.
+
+**[2:52:28](https://vimeo.com/1189445340#t=10348s)** I just want to understand, when we put this into effect, I understand it's the golf course, but- Could you step up to the microphone, sir? Yeah, sorry. What is the governing body of the golf course, and who gets the... Ultimately, we're giving them the ability to make this decision. So how does the governing body of the Tedesco Golf Course work? I would imagine there's a board that makes decisions about whether or not they want to continue operating or close down and sell their property. Okay, so let me just ask the last question here, just so we understand. Because this is a very different plan from the last one. What would be an estimate, can you guess at what the value increase would be to that property? How many times more would it be worth with this put in place? I couldn't hear him. Can't hear the question. So I think you asked what would we guess the value would be
+
+**[2:53:17](https://vimeo.com/1189445340#t=10397s)** under 3A? Yeah. If they could take this and sell this and put it- We wouldn't. That's not our job here. But I think also one important thing to understand is that the current zoning over there does allow single family. Okay. And we're not here to make that determination, but that might be more valuable. Yeah, actually, that's more valuable to them. Thanks. So they actually could do that. All right, thank you. Thank you. Mr. Prendiville. Hi, John Prendiville, 20 Stanley Road. Can I call the question? You absolutely can. Good. Being the last speaker, yes. Okay. We are going to use our electronic voting devices, so get them ready. If you favor the article, vote yes. If you oppose, vote no. 15-second voting
+
+**[2:54:04](https://vimeo.com/1189445340#t=10444s)** starts now.
+
+**[2:54:21](https://vimeo.com/1189445340#t=10461s)** Article
+
+**[2:55:18](https://vimeo.com/1189445340#t=10518s)** 4 passes of a vote of 81 to 82. Article 5, amend zoning bylaw, accessory dwelling units. Once again, because any zoning change requires a public hearing of the planning board, Mr. Callahan is going to share the recommendation of the planning board and that they had a hearing on the topic. Mr. Callahan.
+
+**[2:55:43](https://vimeo.com/1189445340#t=10543s)** I'm here again to provide the planning board report for Article 5, amend the zoning bylaw accessory dwelling units. On March 10th, 2026, the planning board held a public hearing on Article 5, proposing an amendment to the town's accessory dwelling unit, known as the ADU zoning bylaw. The board opened the hearing for public comment. Following deliberation, the board voted five to zero to recommend that Article 5 be brought before town meeting. Planning board member Barton Height will provide a brief overview of the ADU zoning bylaw amendment. Thank you, Mr. Callahan. Mr. Height. Good evening, fellow residents. Barton Height, Alden Road, vice chairman of the planning board. I'm going to give- Mr. Height, hold on one second, please. Folks, if you leave, please quietly.
+
+**[2:56:29](https://vimeo.com/1189445340#t=10589s)** Thank you. Just a brief summary for everybody for context. Marblehead's approach to accessory dwelling units began with a town-developed plan by the planning board and approved at town meeting. Shortly after, the Massachusetts legislature enacted a statewide ADU law, which created a few conflicts with our local bylaw. The most important element of Marblehead's bylaw is the inclusion of site plan review. Where applicable, this process gives the town oversight to ensure that an ADU is appropriate in scale and design and that there is nothing out of character with the principal dwelling. At last year's town meeting, an updated bylaw was approved to align with the state requirements while preserving this local review
+
+**[2:57:17](https://vimeo.com/1189445340#t=10637s)** process. The attorney general subsequently reviewed and substantially approved the new bylaw, but encouraged certain further adjustments to ensure consistency with state law.By approving the current amendments, Marblehead will avoid potential future conflicts between bylaw provisions and the requirements of the Massachusetts ADU law. If these amendments are not approved, the potential for conflicts will continue to exist. Additionally, the amendments add oversight with respect to ADUs on preexisting non-conforming lots, which lots are prevalent in Marblehead. I urge you to support this amendment. Thank you very much. Thank you, Mr. Height.
+
+**[2:58:03](https://vimeo.com/1189445340#t=10683s)** Do we have any speakers? Go ahead. Okay. We'll go to the vote. We are going to use our electronic voting devices. If you favor the article, vote yes. If you oppose, vote no. One-minute voting starts now.
+
+**[2:59:27](https://vimeo.com/1189445340#t=10767s)** Article 5 passes, 69 to 47.
+
+**[2:59:34](https://vimeo.com/1189445340#t=10774s)** So I have 10:01 on my clock, and we probably have about an hour's worth of business left. We have twice the quorum that we need. And if I don't hear a motion to recess till tomorrow night, I'm going to keep going. Thank you. Okay. Article 6 is unpaid accounts. Motion.
+
+**[3:00:00](https://vimeo.com/1189445340#t=10800s)** It's up on the board? Yep. Unpaid accounts, Alicia Benjamin, CFO.
+
+**[3:00:10](https://vimeo.com/1189445340#t=10810s)** I'm sorry. The article's been moved. Do I have a second? Second. Thank you. Alicia.
+
+**[3:00:17](https://vimeo.com/1189445340#t=10817s)** Good evening, Marblehead. Every year we have this. These are invoices from fiscal year 2025 that need to be paid in fiscal year '26 with current funds, and by law, they cannot be paid without town meeting vote. They total 60,182.27 and are broken down on the screen by department.
+
+**[3:00:50](https://vimeo.com/1189445340#t=10850s)** Hold on one second. You're not allowed. This is a four-fifths vote that we need. I'm going to call for a hand vote, and if I see a unanimous vote, we're going to move right on. For the vote, if you favor Article 6, vote yes. I'm sorry. If you favor Article 6, raise your hands. Those opposed? Unanimous.
+
+**[3:01:17](https://vimeo.com/1189445340#t=10877s)** And the article passes. Article 7, departmental- Motion ... revolving funds. Motion The article is moved. Do I have a second? Second. Thank you. CFO Alicia Benjamin.
+
+**[3:01:32](https://vimeo.com/1189445340#t=10892s)** Good evening, Marblehead. Every year we have this. This is for voting the caps of the revolving funds that have been accepted under Master in Law, Chapter 44, Section 53 and a half. Essentially, they're just departmental revolving funds. Park revolving's at two million, and you can see on the screen. And the next largest is the commercial waste at 1,367,598. The total is 4,272,898, which is actually less than last year's cap. Thank you. As many as favor Article 7, please raise your hands. Those opposed? It's a vote, and Article 7 passes. Article 8, purchase of equipment of several departments. On this, I have a motion for indefinite postponement, but I do
+
+**[3:02:19](https://vimeo.com/1189445340#t=10939s)** have Mr. Keezer that wants to make a statement on this. Good evening. Jack said I had to make a statement on this. Given the current fiscal constraints, and we've been utilizing free cash in the past to fund these type of projects, due to the funding restrictions, we're recommending indefinite postponement on this. It will be the same response on Article 10. Thank you, Mr. Keezer. Seeing no speakers, we're going to go to the vote. It's going to be a hand vote. If you favor Article 8, please raise your hand. Those opposed? Article 8 passes.
+
+**[3:03:01](https://vimeo.com/1189445340#t=10981s)** Article 9, lease purchase. The article is moved. Do I have a second? Second. Thank you. Alicia Benjamin, CFO. This is our standard article, and it's the only capital article that's being funded. This is due to our contractual obligation to pay our recurring leases. We are asking for 274,605 to be appropriated from free cash and 236,077 to be transferred from the waste revolving fund, for a total of $510,682. Thank you, Alicia. Because this is a lease purchase, we need a two-thirds vote. It's a second year payment. Oh, I'm sorry. We don't because it's a second-year payment. So we just need a simple majority to the vote on Article 9.
+
+**[3:03:48](https://vimeo.com/1189445340#t=11028s)** If you favor Article 9, please raise your hands. Those opposed. Article 9 passes. Article 10, capital improvements for public buildings. I have a motion for indefinite postponement. See-- Oh, thank you. Thank you for the second. If you favor indefinite postponement for Article 10, please raise your hands. Those opposed. Article 10 passes as indefinite postponement. Article 11, walls and fences. This article is moved. Do I have a second? Thank you. Maggie Wheeler, town engineer. Good evening. Maggie Wheeler, town engineer. This is a standard article to fund the repair and maintenance of town-owned walls and fences in the public way.
+
+**[3:04:35](https://vimeo.com/1189445340#t=11075s)** Funds for this article may support both engineering services and construction repairs, of repairs. In some cases, that means evaluating conditions, and in others, it means stabilizing structures and fixing damaged sections. Many of these walls and fences support roads and sidewalks, so this work supports infrastructure and public safety. Thank you. Thank you, Maggie. Seeing no speakers, as many as favor Article 11, please raise your hands. Those opposed. It's a vote. Article 11 passes. Article 12, stormwater construction. The article is moved. Do I have a second? Thank you. Amy McHugh, director of public works. Amy McHugh, 38 Gingerbread Hill. This is a standard article that
+
+**[3:05:23](https://vimeo.com/1189445340#t=11123s)** appropriates funds to be used for the stormwater system improvements, including requirements of the town's stormwater MS4 permit. The amount to be approved is $200,000 from the general fund. Thank you, Amy. Yes, we have a speaker. Susan Petoskey, 28 Brookhouse Drive.
+
+**[3:05:46](https://vimeo.com/1189445340#t=11146s)** On this one, to the person who wanted to know about future town meeting accountability, this is drains. Am I correct? That this is the drain budget? Yes. This is actually money that was approved at the last or only general override, and it was approved to be $300,000 a year. And each year, there was to be an increase as a percent to cover inflation costs and things like that. So at $200,000, I was the person who stood up at town meeting and said, "If it
+
+**[3:06:33](https://vimeo.com/1189445340#t=11193s)** ever goes down, I will stand up and complain." And here I am saying this is not what town meeting voted for,
+
+**[3:06:43](https://vimeo.com/1189445340#t=11203s)** and that the drains should be getting the full 300,000 because that's what town meeting voted for. Thank you, ma'am.
+
+**[3:06:55](https://vimeo.com/1189445340#t=11215s)** Amy. Thank you. Okay, we're going to go to a vote on Article 12. We're going to do a hand vote. If you favor Article 12, please raise your hands. Those opposed. Article 12 passes.
+
+**[3:07:10](https://vimeo.com/1189445340#t=11230s)** Article 13, consent agenda articles for water and sewer. Amy's going to go through the three sub-motions that we have, and we're going to vote on them all together. The article is moved. Do I have a second? Thank you. Amy McHugh, superintendent of water and sewer. So these are also all standard articles. 13A is water department construction. It's essential upgrades and enhancements, including improvements to the water mains and related systems to ensure reliable services for the residents. The amount is $2.4 million to come out of the retained earnings from water and sewer rates, water rates. 13B is sewer department construction. Another standard article, essential upgrades in enhancing our sewer infrastructure,
+
+**[3:07:58](https://vimeo.com/1189445340#t=11278s)** which supports sanitary needs and environmental standards throughout the town. The amount is $2.1 million from retained earning rates. Article 13B, a standard article.
+
+**[3:08:11](https://vimeo.com/1189445340#t=11291s)** This item seeks authority for the Water and Sewer Commission alongside the Board of Selectmen to resolve any claims related to the construction activities, ensuring fair and efficient handling of such disputes.
+
+**[3:08:27](https://vimeo.com/1189445340#t=11307s)** All set. Thank you.
+
+**[3:08:30](https://vimeo.com/1189445340#t=11310s)** Seeing no speakers, if you favor Article 13, please raise your hands. Those opposed. Article 13 passes. Article 14, MWRA Local Water Systems Assistance Program. Amy McHugh, superintendent of water and sewer. The article's moved. Do I have a second? Thank you, Amy. This allows the opportunity for the town, through the Water and Sewer Commission, to secure an interest-free loan through the MWRA Local Assistance Program, supporting critical improvements to our water distribution network. We're looking to secure $3.5 million. It does not mean that the Water and Sewer Commission will be using this loan. It has to go through a lot more steps
+
+**[3:09:16](https://vimeo.com/1189445340#t=11356s)** before that would get approved or would become part of the system. Thank you, Amy. This vote requires two-thirds, so hold them high, folks. If you favor Article 14, please raise your hands. Those opposed. It's a vote, and Article 14 passes. Article 15, proposed reclassification and pay schedule for administrative. This article is moved. Do I have a second?Thank you. Somebody from the Select Board. Alexa Singer.
+
+**[3:09:53](https://vimeo.com/1189445340#t=11393s)** Hi, good evening. Article 15, the proposed reclassification and pay schedule. This is for administrative. To see if the town will vote to amend Chapter 121 of the bylaws, classification, and wage salary plan by changing certain job titles where indicated and reclassify certain positions in the administrative pay schedule. To strike out the pay schedule as it relates to administrative personnel, substitute in place thereof the new pay schedules, and to transfer from available funds and/or appropriate a sum of money to make said new pay schedules effective, or take any other action relative thereto. And this is sponsored by the Select Board. So basically, this is
+
+**[3:10:39](https://vimeo.com/1189445340#t=11439s)** for our non-union staff. It's their cost of living adjustment. This is consistent with our collective bargaining agreements that are in line with the union staff. So this is for the administrative salaries. Thank you, Alexa. We'll go to the vote. If you favor Article 15, please raise your hands. Those opposed? It's a vote, and Article 15 passes. Article 16, proposed reclassification and pay schedule for traffic supervisors, some of my favorite people. The article is moved. Do I have a second? Thank you. Alexa. Okay, this is for Article 16. This is proposed pay schedule and reclassification for our traffic supervisors.
+
+**[3:11:24](https://vimeo.com/1189445340#t=11484s)** To see if the town will vote to amend Chapter 121 of the bylaws classification and wage salary plan by changing certain job titles where indicated and reclassify certain positions in the traffic supervisor's pay schedule. To waive the pay schedule as it relates to traffic supervisor personnel, substitute in place thereof the new pay schedules, and to transfer from available funds and/or appropriate a sum of money to make said new pay schedules effective, or take any other action relative thereto. This is also sponsored by the Select Board. This is in line with our crossing guards and the same principle in ensuring their cost of living adjustment increase. Thank you.
+
+**[3:12:09](https://vimeo.com/1189445340#t=11529s)** Thank you very much. Seeing no speakers, we'll go to the vote. If you favor Article 16, please raise your hands. Those opposed? Article 16 passes. Great, thank you. Article 17, proposed reclassification and pay schedule, seasonal and temporary personnel. The article is moved. Do I have a second? It's moved. Do I have a second? Thank you. Sorry. Alexa. Okay, Article 17, proposed reclassification and pay schedule, seasonal and temporary personnel. To see if the town will vote to amend Chapter 121 of the bylaws classification and wage salary plan by changing certain job titles where indicated and reclassify certain positions in the seasonal and temporary personnel pay schedules.
+
+**[3:12:58](https://vimeo.com/1189445340#t=11578s)** Strike out the pay schedules as they relate to seasonal and temporary personnel, substitute in place thereof the new pay schedules, and to transfer from available funds and/or appropriate a sum of money to make said new pay schedules effective, or take any other action relative thereto. This is also sponsored by the Select Board. This is in line with our temporary seasonal employees, such as summer recreation, parks and rec, things of that nature, and this is the same for their cost of living increase. Thank you for considering. Thank you. We'll go to the vote. If you favor Article 17, please raise your hands. Those opposed? Article 17 passes. Article 18, compensation
+
+**[3:13:47](https://vimeo.com/1189445340#t=11627s)** of town officers. The article is moved. Do I have a second? Thank you. Thatcher Keezer, town administrator. Good evening again. This article covers the one full-time employee who's elected the town clerk in order to set the salary. It represents a 3% increase in line with the other increases recently presented, bringing the salary to $97,460. Thank you, Mr. Keezer. Seeing no speakers, we'll go to the vote. If you favor Article 18, please raise your hands. Those opposed? Article 18 passes. Article 19, collective bargaining fire. The article is moved. Do I have a second? Thank you. Mr. Keezer.
+
+**[3:14:34](https://vimeo.com/1189445340#t=11674s)** Yes. Thank you, Mr. Moderator. Article 19 funds the collective bargaining agreement with the firefighters union, Local 2043. We have entered into a new agreement, three-year contract, covering from July 1, 2026, through June 30, 2029. It includes annual wage increases of 3% in the first two years and 3.5 in the third. In addition to wages, the agreement includes targeted updates to compensation benefits, including adjustments to detail pay, enhancements to sick leave, and the creation of a sick leave bank, updated longevity and educational incentives, and health-related benefits, i.e., cancer screening. The amount before town meeting tonight is
+
+**[3:15:22](https://vimeo.com/1189445340#t=11722s)** $143,238, which represents the additional funding required for the first year of the agreement. Source of this would be from free cash. Thank you, Mr. Keezer. I see Firefighter Knowles over in the corner over here, too.
+
+**[3:15:39](https://vimeo.com/1189445340#t=11739s)** Seeing how we have no speakers, if you favor Article 19, please raise your hands. Those opposed? Article 19 passesArticle 20, ratification of salary bylaw. This article is moved. Do I have a second? Second. Thank you. Mr. Keezer. So this is a report of the compensation committee, which I am chair, the CFO and our health director are the other members. The compensation committee is actually a function of town meeting, which controls the classification schedule of employees, but the compensation committee is authorized under bylaw to take actions during the course of the year to be ratified under this article.
+
+**[3:16:25](https://vimeo.com/1189445340#t=11785s)** During the course of the past year, from May 2025 until April 2026, the committee took the following actions: six positions of reclassifications or changing the grades of a position based on additional responsibilities and such. Four new or restructured positions graded. And when we say new positions, all of the ones listed
+
+**[3:16:52](https://vimeo.com/1189445340#t=11812s)** were replacing obsolete positions where we've done a whole complete new job description by replacing obsolete positions. One title change, and 10 job description updates with no grade change.
+
+**[3:17:12](https://vimeo.com/1189445340#t=11832s)** Thank you, Mr. Keezer. I don't know if that's a speaker. No? Okay. Seeing no speakers, we'll go to the vote. If you favor Article 20, please raise your hands. Those opposed. Article 20 passes.
+
+**[3:17:29](https://vimeo.com/1189445340#t=11849s)** Article 21, Essex North Shore Agricultural and Technical School District. The article is moved. Do I have a second? Second. Thank you. We have Mark Strout, the Marblehead representative to Essex Tech and Essex Tech's school committee chairperson. Thank you. Thank you, Mr. Strout. I love this show right here. Hi, everybody. Mark Strout, 40 Maple Street. I'm the chairperson of the 20-member school committee for your Essex North Shore Agricultural and Technical School District. Each year, I like to give an update as to our progress at the school, and I promise to be brief. Essex Tech currently serves 1,926 students and offers 26 career, technical, and agricultural programs on our 166-acre Danvers campus, containing 16 buildings and close to one million square feet of shop and
+
+**[3:18:18](https://vimeo.com/1189445340#t=11898s)** classroom space. This year, we had over 1,500 students apply for next fall, and we recently accepted 500 members of the class of 2030. Tonight, I am most pleased to announce that of the 28 vocational technical schools serving the Commonwealth, Essex Tech is the second most affordable. I am also pleased to announce that our administration has this year secured $4.6 million to date in competitive grants with another $9 million pending, which will hopefully bring us a grand total of $13 million. We have been extremely fortunate to have continued support from our state leadership and private entities so that we may continue to provide exceptional career, technical, and agricultural
+
+**[3:19:06](https://vimeo.com/1189445340#t=11946s)** education on the North Shore. This year, 35 of our Marblehead students took advantage of the following career and technical education programs: arborist, biotechnology, carpentry, construction craft laborers, dental assisting, early education and care, engineering, design and media communications, electrical, HVAC and refrigeration, information technology services, landscaping and turf management, and veterinary sciences. As I do every year, I'd like to remind you of the services that you can avail yourselves of throughout the school year at our campus. You can make a reservation for lunch at our student-run Maple Street Bistro. You can visit our bakery. You can have your
+
+**[3:19:53](https://vimeo.com/1189445340#t=11993s)** dogs groomed and/or trained. You can make an appointment for an oil change, a tune-up, brakes, a new muffler, or get your electrical system checked out. You can have our cosmetology students give you a shampoo and a blowout, or maybe a relaxing manicure. And most importantly, our town administrators and any of our nonprofit organizations in Marblehead may submit applications for our construction academy students to complete on and off-campus projects. Last fall, we celebrated the grand opening of our beautiful Katherine Larkin Event Center that any of us here in the crowd can rent out for weddings, showers, private and/or community events. We take great pride in announcing that our event center was
+
+**[3:20:41](https://vimeo.com/1189445340#t=12041s)** funded by private donations and built totally by our students in collaboration with our corporate and union partners. And as I do every year, I'd like to thank the Marblehead business owners who have employed our students in their co-op positions over the years, and they are Marblehead Animal Hospital, Marblehead Gardens, Atlantic Veterinary Clinic, Bartlett and Steadman Plumbing, Whitmore Brothers Construction, Gilbert and Cole Building Supply, Herlihy Electric, MRW Mechanical, Eat Well Kitchens, Mark H. Driscoll Construction, and Shubee's Marketplace. I'd also like to give a huge shout-out to our carpentry, electrical, and plumbing students, who this year continued their work on the
+
+**[3:21:27](https://vimeo.com/1189445340#t=12087s)** renovation of the Stramski House, and specifically to our HVAC students, who this year installed the new mini-split HVAC system. Our goal is to continue to be the finest career technical agricultural high school of any district in the Commonwealth and to remain current to industry demands while meeting the high school demands of a college preparatory curriculum. Therefore, our Marblehead students and their families and the staff of Essex North Shore would greatly appreciate your support on this article, and we thank you for your continued support over the years. Thank you, Mr. Strout.Always a highlight. Seeing no speakers... Oh, yes, we do have a speaker. Yeah. Jennifer Dolan, 111 Elm Street.
+
+**[3:22:15](https://vimeo.com/1189445340#t=12135s)** Thank you. That was a fantastic summary. I have one quick question. Is that amount the Marblehead portion, or it says the Doug Gross operating and maintenance- No, everything is based on participation. So Marblehead has 35 students, so it's a 2.2865 participation. So it's that percentage of everything- Yeah ... of capital improvements, of transportation, et cetera. So yes, the $749,000 is Marblehead's portion. And don't forget that Marblehead built Essex Tech, along with the other 16 communities. Yep. Thank you. Thank you very much. I'm seeing no more speakers. I think that's the first question you've had.
+
+**[3:23:01](https://vimeo.com/1189445340#t=12181s)** I think so. We're going to go straight to the vote. As many as favor article 21, please raise your hands. Those opposed? Thank you. Article 21 passes. Thank you, Mr. Strout. Article 24, General Stabilization Fund.
+
+**[3:23:20](https://vimeo.com/1189445340#t=12200s)** Article 24 has been moved. Do I have a second? Thank you. I have a motion for indefinite postponement. We'll go straight to the vote. If you favor indefinite postponement on article 24, please raise your hands. Those opposed? Article 24 passes. Article 25, school building capital needs. The article is moved. Do I have a second? Thank you. I have a motion for indefinite postponement on article 25. As many as favor indefinite postponement, please raise your hands. Those opposed? It's a vote, and article 25 passes. Article 26, school buildings technology needs. The article has been moved. Do I have a second? Thank you. I have a motion for indefinite postponement. If you favor indefinite postponement on article 26, please raise your hands.
+
+**[3:24:08](https://vimeo.com/1189445340#t=12248s)** Those opposed? Article 26 passes. Article 27, school department capital needs. The article has been moved. Do I have a second? Thank you. I have a motion for indefinite postponement. As many as favor indefinite postponement for article 27, please raise your hands. Those opposed? Article 27 passes. Article 28, school department supplemental appropriation. The article has been moved. Do I have a second? Thank you. I have a motion for indefinite postponement on article 28. If you favor the article, please raise your hands. Those opposed? Article 28 passes. Article 30, rescind bond authorization. The article is moved. Do I have a second?
+
+**[3:24:56](https://vimeo.com/1189445340#t=12296s)** Thank you. Alicia Benjamin, CFO.
+
+**[3:25:10](https://vimeo.com/1189445340#t=12310s)** Good evening, Marblehead. This has to do with the Brown School from the authorization of 54844767, and it coming into 53225140 for a difference of 1,619,627. And when in discussion with the schools, they chose to rescind it back to the taxpayers. That's good.
+
+**[3:25:37](https://vimeo.com/1189445340#t=12337s)** Article 30, we'll go to the vote. If you favor article 30, please raise your hands. Those opposed? Article 30 passes. Article 31, administrative benefit amendment. The article is moved. Do I have a second? Alicia Benjamin, CFO. Good evening. This article is for the non-union administrative employees whose benefits have not been updated in about 20 years. To put them in par with the unions, they've asked for three personal days, which it comes at no cost. They asked for an accelerated week of vacation, and they asked for longevity increase of 750 per year, and the total is $11,650 impact.
+
+**[3:26:23](https://vimeo.com/1189445340#t=12383s)** Thank you. I don't see any speakers. We'll go straight to the vote. As many as favor article 31, please raise your hands. Those opposed? Article 31 passes. Article 32, mooring fees in Marblehead waters. This article is moved. Do I have a second? Thank you. John Doub, Chairman of the Harbors and Waters Board.
+
+**[3:26:48](https://vimeo.com/1189445340#t=12408s)** Good evening. As I think all of you know, the Harbor Department is an enterprise fund, which means it operates not through taxation, but from the user fees that we collect for the services we provide, of which the mooring fees are 60% of our revenue. So that's the largest revenue source. Periodically, we review from a long-range plan how our costs are increasing relative to the revenues, and every so often, it's time to raise the mooring fees. And that's working out to be about a four-year timeframe. In 2018, we raised the mooring fees. In 2022, we raised the mooring fees. This is the same increase that we've had the two previous times.
+
+**[3:27:33](https://vimeo.com/1189445340#t=12453s)** What it basically does is it provides the services of the department, pays for them. We also contribute 10% of our revenues to the town's budget. And the other major thing that it does, the difference between our revenues and our expenses is our surplus or free cash, and we basically use that for capital improvements. And those are either short-termWhich means in the current year or long term, maybe three to five years. For example, in this year's budget, we've had to allocate $550,000 to fund potential emergency repairs to Stramski's Pier and the Cliff Street building. Looking further out in the future, three to five years, we're faced with basically figuring out how
+
+**[3:28:20](https://vimeo.com/1189445340#t=12500s)** to repair the seawalls along the harbor from Parker's to Cliff Street to State Street and Tucker's Wharf. That requires a significant money. We're looking at it through a couple of ways, one of which is through grants. But even with grants, the town still has its matching portion, so we're talking about not the thousands, but the millions for that. So I encourage your vote on this. And in closing, I'd also like to acknowledge the contributions of Gary Gregory. Gary was the chairman of the Harbor and Waters Board for over 20 years until his retirement last year, and his leadership was significant in terms of the improvements of the harbor over the years. Thanks very much.
+
+**[3:29:09](https://vimeo.com/1189445340#t=12549s)** Thank you, Mr. Daub. Seeing no speakers, we'll go to the vote. If you favor Article 32, please raise your hands. Those opposed? Article 32 passes. Article 33, amend General Bylaws Part 1, Chapter 39, Prohibition of Cryptocurrency Automatic Teller Machines. The article is moved. Do I have a second? Second. Thank you. Chief Dennis King.
+
+**[3:29:43](https://vimeo.com/1189445340#t=12583s)** Thank you, Mr. Moderator. Good evening. Dennis King, your chief of police. I'm asking the town to support Article 33, this proposed bylaw prohibiting cryptocurrency automated teller machines, commonly known as Bitcoin ATMs or crypto kiosks within the town of Marblehead. This is not an article about banning cryptocurrency. It's not about telling residents what they may invest in. It is a narrow public safety measure, a consumer protection measure aimed at a specific device, a publicly accessible kiosk that lets cash be converted into cryptocurrency quickly, and in practical terms for a scam victim, often irreversibly. These kiosks have become a preferred tool for fraud
+
+**[3:30:30](https://vimeo.com/1189445340#t=12630s)** schemes because they combine cash urgency, limited consumer recourse, and the speed of cryptocurrency transfer. Once money is deposited and moved, recovery is extremely difficult. We're not the only community in the Commonwealth that has recognized the need, and problem, and have acted locally. Several in the area have done so as well. I think I'm almost the last article, so I'm going to skip most of my paragraphs. For Marblehead, this is a prudent prevention measure. It protects residents, supports law enforcement, and sends a clear message that our town is not going to
+
+**[3:31:15](https://vimeo.com/1189445340#t=12675s)** provide an easy cash to crypto portal for scammers. I respectfully ask the town meeting to support Article 33. Thank you, Chief.
+
+**[3:31:27](https://vimeo.com/1189445340#t=12687s)** Seeing no speakers, we'll go straight to the vote. If you favor Article 33, please raise your hands. Those opposed? Article 33 passes. Article 34 is dissolve Public Works Committee. I have a motion for indefinite postponement. The article is moved. Do I have a second? Second. Thank you. We'll go straight to the vote. If you favor indefinite postponement on Article 34, please raise your hands. Those opposed? Article 34 passes. Article 35, amend General Bylaw Public Works Committee. The article is moved. Do I have a second? Thank you. Andrew Petty, Director of Public Health. Good evening. Andrew Petty, 54 Evans Road, Director of Public Health and member of
+
+**[3:32:12](https://vimeo.com/1189445340#t=12732s)** the Public Works Committee. I'd like to read the Public Works Committee mission statement. The mission statement of the Public Works Committee is to promote efficient, effective, and responsible management of the town's public infrastructure and assets. We coordinate the efforts of multiple departments to ensure optimal use of equipment, workforce, and resources, and to encourage collaboration in planning, maintenance, and improvement of public ways, lands, and buildings. The committee is committed to providing thoughtful recommendations on projects, policies, and organizational structure to enhance service delivery, encourage public input, and support long-term well-being and prosperity of our community. Thank you.
+
+**[3:32:58](https://vimeo.com/1189445340#t=12778s)** Thank you, Mr. Petty. Seeing no speakers, we'll go straight to the vote. If you favor Article 35, please raise your hands. Those opposed? Article 35 passes. Article 36, amend certain bylaws related to the Department of Public Works housekeeping. The article is moved. Do I have a second? Second. Thank you. Amy McCue. Amy McCue, 38 Gingerbread Hill. This is strictly housekeeping. It just reflects the Department of Public Works that now has three mechanics, stormwater engineering, and it also has a director instead of a surveyor of highway. Thank you, Amy.
+
+**[3:33:36](https://vimeo.com/1189445340#t=12816s)** Seeing no speakers, we'll go straight to the vote. If you favor Article 36, please raise your hands. Those opposed? Article 36 passes. Article 37, limit municipal employment contracts to one calendar year. The article's moved. Do I have a second? Second. Thank you. I have a motion for indefinite postponement. We'll go straight to the vote. As many as favor indefinite postponement, please raise your hands.Those opposed? Article 37 passes. Article 38, restore elected terms of the select board to one calendar year. The article's moved. Do I have a second? Second. Thank you. I have a motion for indefinite postponement. Seeing no speakers, we'll go straight to the vote.
+
+**[3:34:21](https://vimeo.com/1189445340#t=12861s)** If you favor indefinite postponement for Article 38, please raise your hands. Those opposed? Article 38 passes. Article 39, repeal Article 34, Department of Planning and Community Development. The article is moved. Do I have a second? Second. Thank you. I have a motion for indefinite postponement, and we'll go straight to the vote. As many as favor indefinite postponement for Article 39, please raise your hand. Those opposed? Article 39 passes. Article 40. Article 40, resolution affirming the town of Marblehead's commitment to the Declaration of Independence and the Constitution. I feel like I'm being charged
+
+**[3:35:07](https://vimeo.com/1189445340#t=12907s)** here. This is an advisory motion. Did I get a second? Second. Thank you. I have received a subsidiary motion to amend Article 40. We'll hear the main motion and deliberate, if any, followed by a presentation of the amendment and any deliberation. When it's time to vote, we'll vote on the amendment first. If that passes, we will amend the main motion and then move to vote on the amended main motion. Speakers. Kate. Thank you so much for waiting through the whole evening to the very end. I'm Kate Wharton, One Martin Terrace, along with Lynn Nadeau, 10 Sur Three.
+
+**[3:35:54](https://vimeo.com/1189445340#t=12954s)** We have the ghost of George Washington with us tonight, and if he were here in truth, he would urge the citizens of Marblehead to cast a unanimous vote in support of this resolution, one that affirms a deep and enduring commitment to the Declaration of Independence and the US Constitution, documents which have sustained American democracy for nearly two and a half centuries. We reaffirm our dedication to the Constitution's core principles, such as the separation of powers, a system of enumerated checks and balances, the independence of the judiciary, the protections of free speech, free assembly, and other fundamental rights. These principles remain essential to the well-being of our nation and the integrity of its governance.
+
+**[3:36:41](https://vimeo.com/1189445340#t=13001s)** Therefore, we resolve that the town of Marblehead affirms its unwavering commitment to these founding principles and documents, to civic responsibility, to the rule of law, which protects the rights and welfare of all people. In doing so, we honor and celebrate the 250th anniversary of the United States of America. Thank you.
+
+**[3:37:09](https://vimeo.com/1189445340#t=13029s)** Mr. Haug, you're speaking to your amendment, correct? Yes, I am. Thank you. Seeing no other speakers, could you please present your amendment?
+
+**[3:37:19](https://vimeo.com/1189445340#t=13039s)** I thought it was going to be up on the board. The actual amendment, I was told, was going to be presented for the people to read it. All right. Let me just make this statement then. The Article 40, as well as my amendment to it, basically is asking the town to display a solidarity and make sure that our current government knows that we are not ready to have our constitutional rights tainted with or reversed. The current government we have out of Washington, this Mr. Trump, he does not want to govern. He wants to rule.
+
+**[3:38:07](https://vimeo.com/1189445340#t=13087s)** Whether he wants to do it as a dictator or as a authoritarian or as a king. Whatever methods he chooses, we want to make sure that he hears our voice. Mr. Trump, hands off our constitutional rights. Okay, thank you. So that's Mr. Haug's amendment.
+
+**[3:38:35](https://vimeo.com/1189445340#t=13115s)** And so what we're going to...
+
+**[3:38:40](https://vimeo.com/1189445340#t=13120s)** I thought I heard someone. Okay. So we're going to vote on the amendment first. As many as favor the amendment to Article 40, please raise your hands. Point of order. Point of order. Okay, please explain your point of order. You didn't raise the amendment. Okay. Mr. Moderator, through you, we haven't heard what the amendment is, and it's not posted up there like the proponent said it was. So what are we voting on? Okay, I'll read Mr. Haug's amendment. How's that?
+
+**[3:39:21](https://vimeo.com/1189445340#t=13161s)** I move to amend Article 40 as follows. Whereas President Trump has attempted to undermine the independence of the Federal Reserve Board. Whereas he has attempted to influence the decisions of the Supreme Court. Whereas he has tried to manipulate the decisions of multiple federal courts. Whereas he has embarked on an undeclared war in Iran, jeopardizing the lives of our soldiers and the livelihoods of us ordinary citizens. Whereas he has blatantly exhibited his desire to be a dictator and personally control many of our federal institutions. Think Putin, Russia, Kim Jong Un of North Korea. Resolve, we the people of the town of Marblehead hereby resolve to declare this president a clear and true danger to the well-being and safety of our country and us citizens, and we support any and
+
+**[3:40:08](https://vimeo.com/1189445340#t=13208s)** all legal attempts to remove him from office. Walter Haug.As many as favor that- Whoa. Oh, I'm sorry. We have a speaker to the amendment. Yes, this amendment's ridiculous because without getting political we have a presidential election every four years. To put something that's that ridiculously down a rabbit hole that mentions Kim Jong Un in our town bylaw is absurd. Let's not do this. Thank you. Just so you know, both the motion and the amendment are advisory only, so it doesn't change anything, but thank you for your comment. Over here. Yes, ma'am.
+
+**[3:40:54](https://vimeo.com/1189445340#t=13254s)** Yes. Carol East, Oak 93 Farrell Court. I'm originally from New York City. I lived other places. I have reveled in the town meeting form of government, and that it was essentially apolitical in many ways, and this amendment brings politics. I am no fan of Mr. Trump, but this amendment doesn't take a place in this meeting. Other forums are the better arena for his things, or to go out and physically go at the polls for elections on that. So I just don't want to really sully, as it was,
+
+**[3:41:40](https://vimeo.com/1189445340#t=13300s)** what town meeting is and what the town meeting form of government is. This is not a place for party politics. This is a place for a consensus of the residents, which is apolitical. Thank you. Thank you very much, ma'am. Yes, sir. Nick Adams, 15 Shetland Road. At the risk of being redundant here, I tend to agree. I think the power of this article is in its universality, that it's grounded in the fundamentals of our nation. If people find that applicable to today, that's great. That's the power of the article itself. The amendment, I think, limits the durability of it, the importance of it, and the callback to the fundamentals and the foundation of our nation. Thank you. Mr. Prendiville.
+
+**[3:42:26](https://vimeo.com/1189445340#t=13346s)** John Prendiville, 20 Staley Road. I'm going to just call to question this one, actually. Thank you. Yeah, I love when you call to question when you're the last guy up. It's great. Thank you very much. We're going to vote on the amendment first. If as many as favor the amendment to Article 40, please raise your hand. Those opposed? The amendment to Article 40 fails, so we go to the vote for the main motion on Article 40. As many as favor Article 40, please raise your hands. Those opposed? The main motion on Article 40 passes. The last motion I seek is to dissolve. Second. All in favor.
+
+**[3:43:11](https://vimeo.com/1189445340#t=13391s)** Thank you, everybody.

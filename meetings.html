@@ -26,17 +26,37 @@ description: AI-generated transcripts and summaries of public board and committe
 {% else %}
   {% assign boards = sorted | map: 'board' | uniq | sort %}
   {% if boards.size > 1 %}
-  <nav class="board-filter" aria-label="Filter by board">
-    <a href="#all" class="board-filter-active">All</a>
+  <nav class="board-filter" data-board-filter aria-label="Filter by board">
+    <button type="button" data-board-filter-target="all" class="board-filter-active">All</button>
     {% for b in boards %}
-      <a href="#{{ b }}">{{ b | replace: '-', ' ' }}</a>
+      <button type="button" data-board-filter-target="{{ b }}">{{ b | replace: '-', ' ' }}</button>
     {% endfor %}
   </nav>
   {% endif %}
 
-  <section class="meetings-feed">
+  <section class="meetings-feed" data-meetings-feed>
     {% for t in sorted %}
       {% include meeting-card.html card=t %}
     {% endfor %}
   </section>
+
+  <script>
+  (function () {
+    var nav = document.querySelector('[data-board-filter]');
+    if (!nav) return;
+    var feed = document.querySelector('[data-meetings-feed]');
+    if (!feed) return;
+    nav.addEventListener('click', function (e) {
+      var btn = e.target.closest('button[data-board-filter-target]');
+      if (!btn) return;
+      var target = btn.getAttribute('data-board-filter-target');
+      nav.querySelectorAll('button').forEach(function (b) { b.classList.remove('board-filter-active'); });
+      btn.classList.add('board-filter-active');
+      feed.querySelectorAll('.meeting-card').forEach(function (card) {
+        var board = card.getAttribute('data-board');
+        card.hidden = !(target === 'all' || board === target);
+      });
+    });
+  })();
+  </script>
 {% endif %}
