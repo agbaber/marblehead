@@ -1,0 +1,63 @@
+---
+title: "Marblehead 101"
+body_class: m101-landing
+scripts: [m101]
+og_title: "Marblehead 101"
+og_description: "How the town works, where the money goes, and how a resident takes part. 8 short chapters, ~25 min total."
+og_url: https://marbleheaddata.org/marblehead-101/
+---
+
+<link rel="stylesheet" href="{{ '/' | relative_url }}assets/m101.css">
+
+<header class="m101-hero">
+  <div class="m101-hero-inner">
+    <p class="eyebrow">A primer</p>
+    <h1>Marblehead 101</h1>
+    <p class="lede">How the town works, where the money goes, and how a resident takes part, in 8 short chapters.</p>
+    <div class="meta">
+      <span><span class="num">8</span> chapters</span>
+      <span><span class="num">~25</span> min total</span>
+    </div>
+    <div class="actions">
+      {%- assign first = site.data.marblehead_101.chapters | first -%}
+      <a class="m101-btn primary" href="{{ first.slug }}.html">Start with Chapter 1 &rarr;</a>
+      <a class="m101-btn secondary" href="#why">Why this exists</a>
+    </div>
+  </div>
+</header>
+
+<section class="m101-syllabus-page">
+  {%- for part in site.data.marblehead_101.parts -%}
+  <div class="m101-group">
+    <div class="m101-group-head">
+      <span class="roman">{{ part.roman }}</span>
+      <h2>{{ part.title }}</h2>
+      <p class="desc">{{ part.desc }}</p>
+    </div>
+    <div class="m101-group-rule"></div>
+    <div class="m101-chapters">
+      {%- for slug in part.chapters -%}
+        {%- for ch in site.data.marblehead_101.chapters -%}
+          {%- if ch.num == slug -%}
+          <a class="m101-ch" href="{{ ch.slug }}.html" data-chapter="{{ ch.num }}">
+            <span class="num">{{ ch.num }}</span>
+            <div class="body">
+              <h3 class="ttl">{{ ch.title }}</h3>
+              <p class="desc">{{ ch.dek }}</p>
+            </div>
+            <span class="read">{{ ch.read_time }} min</span>
+          </a>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+  {%- endfor -%}
+
+  <section id="why" style="margin-top: 64px; padding: 24px; background: var(--surface); border-radius: 14px; border: 1px solid var(--border); max-width: 760px;">
+    <h2 style="margin: 0 0 12px; font-size: 22px;">Why this exists</h2>
+    <p style="margin: 0; color: var(--text-muted); line-height: 1.6;">marbleheaddata.org publishes deep pages on each piece of town government and the FY27 override debate. A first-time resident has no single starting path through them. Marblehead 101 is that path: a guided ~25-minute read with exit ramps to the detailed pages. The site does not take a position on the override; this primer does not either.</p>
+  </section>
+</section>
+
+<script src="{{ '/' | relative_url }}assets/m101.js" defer></script>
