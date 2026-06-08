@@ -106,9 +106,13 @@
       list.appendChild(li);
     });
 
-    var notes = document.querySelector('.notes');
-    if (notes && notes.parentNode) {
-      notes.parentNode.insertBefore(section, notes);
+    // Where to put the sources section, in order of preference:
+    //   1. Before the first .notes block (methodology-footnote convention)
+    //   2. Before the m101 chapter pager (course chapter pages)
+    //   3. Appended to the document body (fallback)
+    var anchor = document.querySelector('.notes') || document.querySelector('.m101-pager');
+    if (anchor && anchor.parentNode) {
+      anchor.parentNode.insertBefore(section, anchor);
     } else {
       document.body.appendChild(section);
     }

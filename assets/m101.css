@@ -265,6 +265,71 @@
 .m101-pager .next.primary { background: var(--c-navy); color: #fff; border-color: var(--c-navy); }
 .m101-pager .next.primary .dir { color: rgba(255,255,255,0.7); }
 
+/* ---- Sources (auto-injected by assets/citations.js) ---- */
+.m101-main .sources-list {
+  margin: 48px 0 32px;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--border);
+  max-width: 660px;
+}
+.m101-main .sources-list-heading {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--c-buoy);
+  margin: 0 0 16px;
+}
+.m101-main .sources-list-ol {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  padding-left: 28px;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.m101-main .sources-list-ol li {
+  margin: 0 0 12px;
+  padding-left: 6px;
+  scroll-margin-top: 80px;
+}
+.m101-main .sources-list-ol li::marker {
+  color: var(--c-buoy);
+  font-weight: 700;
+}
+.m101-main .sources-list-ol li:target {
+  background: color-mix(in srgb, var(--c-teal) 14%, transparent);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-left: -8px;
+}
+.m101-main .sources-list-ol li a:not(.sources-backref) {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--c-text-faint, var(--border));
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  word-break: break-word;
+}
+.m101-main .sources-list-ol li a:not(.sources-backref):hover {
+  color: var(--c-buoy);
+  text-decoration-color: var(--c-buoy);
+}
+.m101-main .sources-list-ol .sources-backref {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 11px;
+  font-style: normal;
+  color: var(--text-subtle);
+  text-decoration: none;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.m101-main .sources-list-ol .sources-backref:hover {
+  background: var(--divider);
+  color: var(--text);
+}
+
 /* ---- Mobile drawer ---- */
 .m101-drawer-scrim {
   position: fixed; inset: 0;
