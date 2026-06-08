@@ -9,7 +9,66 @@ vimeo_url: "https://vimeo.com/820958333"
 duration_seconds: 2290
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Finance Committee votes indefinite postponement on Article 46; takes no recommendation on Articles 50, 51, 52"
+  summary: "The Finance Committee met for its second warrant review night, approving minutes from three prior meetings and disposing of several warrant articles. Article 46 was voted to indefinite postponement as it is no longer being brought forward. Articles 50, 51, and 52 each received a 'no recommendation' disposition, as members determined the articles were advisory in nature with no measurable financial impact on the town budget."
+  decisions:
+    - "Approved minutes for March 27, April 3, and April 10 meetings (with track-changes corrections)"
+    - "Voted indefinite postponement of Article 46"
+    - "No recommendation on Article 50 (pedestrian design standards for subdivisions)"
+    - "No recommendation on Article 51 (urging boards/committees to record meetings)"
+    - "No recommendation on Article 52 (urging select board to recommend hybrid/remote meeting options)"
+  votes:
+    - motion: "Approve meeting minutes for March 27, April 3, and April 10"
+      result: "in favor (unanimous)"
+    - motion: "Indefinite postponement of Article 46"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 0
+    end_seconds: 172
+    headline: "Finance Committee opens second warrant review night, approves minutes for three meetings"
+    dek: "Minutes from March 27, April 3, and April 10 were approved with minor track-changes corrections."
+    summary: "The chair opened the second warrant review meeting, noting it was intended to handle follow-up items from the prior session. The committee voted to approve minutes from March 27, April 3, and April 10, incorporating a track-changes version that corrected minor typographical errors including a reference to the Finance Committee on page two of the April 3 minutes."
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 172
+    end_seconds: 223
+    headline: "Article 46 voted to indefinite postponement as it will not be brought forward"
+    dek: "The committee voted unanimously to indefinitely postpone Article 46 since it is no longer being brought to Town Meeting."
+    summary: "The committee noted that Article 46, on which no recommendation had been made at the prior session, was no longer being brought forward by its petitioner. Following standard practice for articles not being brought to Town Meeting, the committee voted indefinite postponement."
+  - topic: permits-zoning
+    topic_confidence: 0.82
+    start_seconds: 223
+    end_seconds: 1801
+    featured: true
+    headline: "Finance Committee takes no recommendation on Article 50 adding pedestrian design guide reference to subdivision bylaws"
+    dek: "Petitioner Dan argued the article is advisory only, adding an AASHTO pedestrian facilities guide to subdivision street design standards at no cost to the town."
+    summary: |
+      Petitioner Dan presented Article 50, which would amend Chapter 258, Article 5, Section 17 of the town bylaws by inserting a reference to the AASHTO *Guide for the Planning, Design and Operation of Pedestrian Facilities* alongside the existing reference to the AASHTO *Policy on Geometric Design of Highways and Streets*. The article's 14-word addition would apply to developers planning subdivisions.
+      
+      The petitioner emphasized that the guides contain recommendations only, not regulations, and that all compliance costs fall on developers rather than the town. He noted that the Town Planner had already obtained a copy of the pedestrian guide and that the Planning Board expressed general support for the underlying goals but intended to recommend indefinite postponement at Town Meeting, citing insufficient time to review the article before the meeting.
+      
+      Finance Committee member Michael Janko raised a concern that even advisory additions impose indirect staff time costs on town employees. Other members countered that any such impact would be de minimis and not measurable in the town budget. The committee ultimately concluded that because the article is advisory and has no measurable financial impact, the appropriate disposition is **no recommendation**, which preserves the petitioner's ability to present the article on the Town Meeting floor.
+    key_speakers: ["Dan (petitioner)", "Michael Janko (Finance Committee member)", "Patrick Franklin (Finance Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1831
+    end_seconds: 2257
+    headline: "Articles 51 and 52 redrafted as urging resolutions; Finance Committee takes no recommendation on both"
+    dek: "Petitioner Lynn revised both articles from mandatory requirements to non-binding urging language, removing the financial implications that prompted concern at the prior meeting."
+    summary: |
+      Petitioner Lynn presented revised versions of Articles 51 and 52, substantially replacing the originally published language. As redrafted:
+      
+      - **Article 51** urges all town boards and committees subject to the Open Meeting Law to make best efforts to produce and post recordings of their meetings (video, transcript, audio, or other format) through the town website.
+      - **Article 52** urges the Select Board to recommend that all such boards and committees make best efforts to provide a hybrid or remote attendance option for both members and the public.
+      
+      A Finance Committee member who also serves on the Article 44 Study Committee — which had spent the prior year examining mandatory implementation of similar requirements — explained that the committee had determined mandatory implementation would carry significant costs. By converting the articles to non-binding urging language, those financial implications are removed. The committee agreed no recommendation was appropriate and that the merits discussion should occur at Town Meeting. Members expressed support for the goals behind the articles.
+    key_speakers: ["Lynn (petitioner)", "Patrick Franklin (Finance Committee / Article 44 Study Committee member)", "Katherine (Finance Committee / Article 44 Study Committee member)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

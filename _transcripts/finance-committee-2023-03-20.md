@@ -9,7 +9,97 @@ vimeo_url: "https://vimeo.com/810209521"
 duration_seconds: 3279
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Finance Committee checks budget liaison progress ahead of two scheduled department-vote nights"
+  summary: "The Finance Committee approved meeting minutes and a $8,770 reserve fund transfer for heating repairs at the Abbot School, then heard an update from the Town Administrator on the status of the FY24 balanced budget and level-services columns. Members confirmed liaison meeting progress with each department and discussed the structure of a potential Prop 2½ override aimed at addressing the structural deficit and beginning to build a stabilization fund."
+  decisions:
+    - "Approved November 14 and February 13 Finance Committee meeting minutes"
+    - "Approved reserve fund transfer of $8,770 to Library R&M line for Abbot School heating repairs"
+  votes:
+    - motion: "Approve November 14 and February 13 meeting minutes"
+      result: "in favor (unanimous)"
+    - motion: "Approve reserve fund transfer of $8,770"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 0
+    end_seconds: 100
+    headline: "Finance Committee approves November and February meeting minutes"
+    dek: "Chair called the meeting to order and the committee voted to approve two sets of prior meeting minutes."
+    summary: "The chair opened the meeting, describing it as the first of three budget review hearings. The committee voted unanimously to approve the November 14 and February 13 Finance Committee meeting minutes."
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 100
+    end_seconds: 362
+    featured: true
+    headline: "Finance Committee approves $8,770 reserve fund transfer for Abbot School heating"
+    dek: "The library, temporarily housed at the Abbot School during the main library construction, needs funds to cover outstanding and anticipated HVAC repair invoices."
+    summary: |
+      The committee was asked to approve a reserve fund transfer of $8,770 to cover heating system repairs at the Abbot School, where the library is temporarily located during the main library construction project.
+      
+      A presenter explained the heating system is old, parts are difficult to source, and there are approximately $3,000 in outstanding invoices with more anticipated. The request was described as a "not to exceed" figure, and any unused funds would remain in the reserve.
+      
+      The reserve fund began the year at $144,000; a prior transfer of approximately $28,433 for budget software had been approved in November, leaving over $100,000 remaining. The committee approved the transfer unanimously.
+    key_speakers: ["Kim (Library/presenter)", "Town Administrator (Thatcher)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 362
+    end_seconds: 1559
+    headline: "Town Administrator reports balanced budget and level-services columns near final; override range described as 'reasonable'"
+    dek: "Budget preparation is in a quality-control phase in Excel, with a balanced column and a level-services column whose difference would inform an override figure."
+    summary: |
+      Town Administrator Thatcher reported that he has met with all departments and is working in parallel on two budget columns: a balanced budget based on current known revenues, and a level-services budget reflecting the actual cost to maintain current programs and staffing.
+      
+      Key points:
+      - Governor's budget released March 1 showed a net gain of approximately $7,000–$8,000 to Marblehead via Cherry Sheet adjustments; final local aid numbers are not expected until June.
+      - The overall cut target for departments was approximately 4%; some departments were left unchanged where further cuts would effectively shut them down.
+      - Salary projections assume 2% increases for unionized and non-union staff plus applicable step increases.
+      - The difference between the two columns would define the potential override number; Thatcher described the figure as "reasonable and responsible" without providing specific dollar amounts.
+      - Free cash usage in the current year is approximately $10.5 million, representing about 10% of the operating budget; the plan is to reduce reliance gradually rather than eliminate it at once.
+      - A stabilization fund already holds approximately $500,000 from two prior contributions of $250,000 each.
+      
+      The committee confirmed that the cumulative department budgets, as vetted through liaison meetings, are consistent with available revenues.
+    key_speakers: ["Town Administrator (Thatcher)", "Finance Director (Alicia)"]
+  - topic: override
+    topic_confidence: 0.95
+    start_seconds: 1559
+    end_seconds: 2876
+    headline: "Committee discusses override structure: one-year structural deficit fix plus stabilization fund contribution"
+    dek: "The potential override has two components — addressing the FY24 structural deficit and beginning to build a stabilization reserve — though a multi-year fix was ruled out as too large."
+    summary: |
+      Committee members discussed the framework of the anticipated Prop 2½ override as described in a draft memo reviewed at a recent Select Board meeting.
+      
+      **Two objectives outlined:**
+      1. Address the current structural deficit (level services vs. balanced budget gap).
+      2. Begin funding a stabilization reserve to reduce reliance on free cash as a revenue source.
+      
+      **Key discussion points:**
+      - A multi-year (five-year) override was considered but deemed too large; the current approach targets one year with the possibility of reassessment.
+      - Free cash has been used as a direct revenue source at roughly $10.5 million annually, a level that declines each year; the stabilization fund is intended to replace this mechanism over time.
+      - Accessing the stabilization fund requires a two-thirds majority at Town Meeting, providing more fiscal discipline than the simple majority needed for free cash transfers.
+      - The override is not explicitly designed to address FY25, though the committee noted the override rolling forward and stabilization fund growth could provide some future relief.
+      - Committee members requested a dedicated Finance Committee presentation on the Article 31 override details before the warrant hearing, currently scheduled for April 10.
+      
+      **Upcoming schedule:**
+      - March 27: Budget vote night 1 (half of departments, Article 30)
+      - April 3: Budget vote night 2 (remaining departments, Article 30)
+      - April 10: Warrant hearing (Article 31 and all articles with financial implications)
+    key_speakers: ["Town Administrator (Thatcher)", "Finance Director (Alicia)", "Pat (Finance Committee member)", "Alex (Finance Committee member)", "Cam (Finance Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2876
+    end_seconds: 3277
+    headline: "Public comment addresses ClearGov rollout; committee confirms it will not delay budget hearings"
+    dek: "A resident asked whether department heads' use of ClearGov budgeting software would affect the Finance Committee's scheduled review process; the Town Administrator confirmed hearings will proceed using Excel."
+    summary: |
+      During public comment, a resident asked about the status of ClearGov, the new budget software system. The Town Administrator explained that department heads have logins and access to training modules but the system is not yet fully populated — expenditures are uploaded, revenues are at a summary level, and personnel data is still being built out.
+      
+      The Finance Director noted she will build a digital budget book for FY24 within ClearGov, but department participation in the system will come in the next budget cycle. The Finance Committee's upcoming department hearings will use Excel-based materials as in prior years. The meeting was adjourned shortly after.
+    key_speakers: ["Aaron (resident at mic)", "Town Administrator (Thatcher)", "Finance Director (Alicia)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -9,7 +9,265 @@ vimeo_url: "https://vimeo.com/1180849831"
 duration_seconds: 9094
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "FinCom approves $122.8M FY27 budget with $7.2M deficit and 22 town FTE cuts"
+  summary: "The Finance Committee held its annual warrant article hearing, voting recommendations on Articles 1 through 40 of the town meeting warrant. The committee approved a total operating budget of approximately $122.8 million, describing a $7.2 million structural deficit driven by declining free cash use, rising health insurance costs, and lower local receipts. Approximately 22 town-side FTE positions are being eliminated, with 18–19 currently occupied seats, and the schools have yet to identify $1.5 million of their required $3.2 million in cuts. Override articles (28 and 29) were tabled for a second warrant hearing on April 27."
+  decisions:
+    - "Approved minutes of three prior FinCom meetings"
+    - "Approved $80,723 reserve fund transfer for audiovisual equipment purchase for town meeting"
+    - "Approved consent article (Article 3)"
+    - "Approved recommendation to adopt MBTA 3A multifamily overlay district amendment (Article 4)"
+    - "No recommendation on ADU bylaw amendment (Article 5)"
+    - "Approved $60,145.29 appropriation for unpaid FY25 accounts (Article 6)"
+    - "Approved departmental revolving fund maximums for FY27 totaling $4,205,300, with commercial waste collection increased by $232,402 (Article 7)"
+    - "No recommendation on equipment purchase article — no requests (Article 8)"
+    - "Approved $524,067 for lease-purchase obligations (Article 9)"
+    - "No recommendation on capital improvements for public buildings — no requests (Article 10)"
+    - "Approved $25,000 for walls and fences (Article 11)"
+    - "Approved $200,000 for stormwater construction (Article 12)"
+    - "Approved $2.4M from water retained earnings and $2.1M from sewer retained earnings for construction, and adoption of claims article (Article 13)"
+    - "Approved MWRA local assistance program loan authorization (Article 14)"
+    - "Approved 3% COLA for administrative positions effective July 1, 2026 (Article 15)"
+    - "Approved 3% COLA for traffic supervisors effective July 1, 2026 (Article 16)"
+    - "Approved 3% COLA for seasonal and temporary personnel effective July 1, 2026 (Article 17)"
+    - "Approved town clerk compensation at $97,460 (Article 18)"
+    - "Tabled fire collective bargaining article — negotiations ongoing (Article 19)"
+    - "Approved ratification of Compensation Committee actions for calendar year 2025 (Article 20)"
+    - "Approved $749,920 for Essex Tech assessment (Article 21)"
+    - "Approved $5,360,000 appropriation from free cash ($5M) and electric light surplus ($360,000) to reduce tax rate (Article 22)"
+    - "Approved total operating budget of $122,762,030 (Article 23)"
+    - "No recommendation on general stabilization fund — no transfer requested (Article 24)"
+    - "No recommendation on school buildings capital, technology, and department capital articles — no requests (Articles 25–27)"
+    - "Tabled override articles for second warrant hearing April 27 (Articles 28–29)"
+    - "Approved rescission of $1,627,000 Brown School borrowing authorization (Article 30)"
+    - "Tabled administrative benefit amendments for April 27 hearing (Article 31)"
+    - "Approved mooring fee increase of $2 per float and 10A float fee increase from $6.50 to $12 (Article 32)"
+    - "No recommendation on cryptocurrency ATM prohibition bylaw (Article 33)"
+    - "No recommendation on dissolving Public Works Committee (Article 34)"
+    - "No recommendation on amending Public Works Committee bylaw (Article 35)"
+    - "No recommendation on DPW housekeeping article (Article 36)"
+    - "Tabled citizen petition articles 37–40 for April 27 hearing"
+  votes:
+    - motion: "Approve three prior FinCom meeting minutes"
+      result: "in favor (unanimous)"
+    - motion: "Approve $80,723 reserve fund transfer for AV equipment (Article 2/reserve fund)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend adoption of consent articles (Article 3)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend adoption of MBTA 3A overlay amendment (Article 4)"
+      result: "in favor (8 to 1)"
+    - motion: "Recommend $60,145.29 appropriation for unpaid accounts (Article 6)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend departmental revolving fund maximums at $4,205,300 (Article 7)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend $524,067 for lease-purchase obligations (Article 9)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend $25,000 for walls and fences (Article 11)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend $200,000 for stormwater construction (Article 12)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend water and sewer construction appropriations and claims article (Article 13)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend adoption of MWRA loan authorization (Article 14)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend 3% COLA for administrative positions (Article 15)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend 3% COLA for traffic supervisors (Article 16)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend 3% COLA for seasonal/temporary personnel (Article 17)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend town clerk compensation at $97,460 (Article 18)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend ratification of Compensation Committee actions (Article 20)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend $749,920 for Essex Tech assessment (Article 21)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend $5,360,000 appropriation from free cash and electric surplus (Article 22)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend total operating budget of $122,762,030 (Article 23)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend adoption of Brown School borrowing rescission (Article 30)"
+      result: "in favor (unanimous)"
+    - motion: "Recommend adoption of mooring fee increases (Article 32)"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 0
+    end_seconds: 344
+    headline: "FinCom approves $80,723 reserve fund transfer to purchase AV equipment for town meeting"
+    dek: "The purchase price is nearly identical to renting for one year; the schools are contributing $10,000 toward the $90,263 total."
+    summary: "The committee opened with approval of three prior meeting minutes, then voted unanimously to transfer $80,723 from the FY26 reserve fund for audiovisual equipment for town meeting. A vendor on the state contract list will supply equipment covering the field house and cafeteria, with setup included in year one. The schools are contributing $10,000, bringing the total purchase cost to $90,263 — roughly equivalent to what renting for one year would have cost."
+    key_speakers: ["Town Administrator (Thatcher)", "FinCom Chair"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 344
+    end_seconds: 699
+    headline: "Warrant article hearing opened; Article 3 consent article adopted unanimously"
+    dek: "The chair outlined procedures for the warrant hearing and noted override articles would be deferred to a second hearing on April 27."
+    summary: "The chair explained that articles without financial implications would receive no FinCom recommendation, and that override articles (28 and 29) would be heard at a second warrant hearing on April 27. A consent article covering various standard town authorizations (Article 3) was recommended for adoption unanimously."
+    key_speakers: ["FinCom Chair", "Town Administrator (Thatcher)"]
+  - topic: 40b-mbta
+    topic_confidence: 0.97
+    start_seconds: 699
+    end_seconds: 1135
+    headline: "FinCom recommends adoption of revised MBTA 3A overlay district 8-1, replacing three zones with two"
+    dek: "The revised article consolidates three prior sub-districts into two — Broughton Road and the Tedesco property near the Swampscott border — and the town has missed nearly $4 million in grants due to non-compliance."
+    summary: "The town administrator presented a revised MBTA 3A multifamily overlay district bylaw amendment (Article 4). The prior version had three zones (Tiger Way, Pleasant Street, Broughton Road); the new version replaces the first two with a single large zone at the Tedesco property on the Swampscott border, while retaining the Broughton Road site. The attorney general has held off on enforcement action while the article is on the warrant. The town has identified nearly $4 million in grants it was unable to receive due to non-compliance. The FinCom recommended adoption 8 to 1."
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: 40b-mbta
+    topic_confidence: 0.85
+    start_seconds: 1135
+    end_seconds: 1601
+    headline: "ADU bylaw amendment (Article 5) advances with no FinCom recommendation; technical state-law changes required"
+    dek: "The bylaw must be updated to stay compliant with subsequent state-level changes to the ADU law or risk defaulting to broader state rules."
+    summary: "The town administrator explained that after Marblehead adopted an ADU bylaw last year, the state made additional changes requiring a technical update to remain compliant. The amendment limits the scope of discretionary local review, aligns parking and procedural requirements with current state law, and removes a two-bedroom cap on ADUs (required by state). Local design and setback requirements are preserved where allowable. A resident commended the planning board for maximizing local protections. The FinCom made no recommendation, finding the financial implications immaterial."
+    key_speakers: ["Town Administrator (Thatcher)", "Resident at mic (67 Beach Street)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1601
+    end_seconds: 1712
+    headline: "FinCom approves $60,145 appropriation for unpaid FY25 accounts (Article 6)"
+    dek: "New purchase-order controls are expected to reduce future unpaid accounts; the total is lower than prior years."
+    summary: "Article 6 addresses unpaid accounts from fiscal year ending June 30, 2025, totaling $60,145.29, to be paid from FY26 funds. The town administrator noted this is lower than prior years and that a new purchase-order system has been implemented to minimize future occurrences. The FinCom recommended adoption unanimously."
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: trash-dpw
+    topic_confidence: 0.92
+    start_seconds: 1712
+    end_seconds: 2329
+    headline: "FinCom raises commercial waste collection revolving fund cap to $1.3M for FY27 to buffer curbside fee uncertainty"
+    dek: "The original proposed cap of $1,067,000 was increased by $232,402 as a precaution given uncertainty around the new curbside collection fee program."
+    summary: "Article 7 sets maximum expenditure amounts for departmental revolving funds in FY27. The DPW director explained that the waste collection revolving fund cap was proposed at $1,067,000 — down from $2 million in FY26 — because a large construction project drawing from that fund is winding down. After discussion about uncertainties related to the new annual curbside collection fee, the FinCom voted to increase the waste collection cap by $232,402 to $1.3 million. The total across all revolving funds was approved at $4,205,300."
+    key_speakers: ["DPW Director (Andrew)", "FinCom Chair"]
+  - topic: bonding-capital
+    topic_confidence: 0.88
+    start_seconds: 2329
+    end_seconds: 2461
+    headline: "FinCom approves $524,067 for lease-purchase obligations; no capital equipment requests filed (Articles 8–9)"
+    dek: "The lease-purchase article covers annual payments on existing equipment leases, funded from the waste revolving fund and free cash."
+    summary: "Article 8 (purchase of equipment) had no requests this year and received no recommendation. Article 9 appropriates $524,067 for annual lease-purchase payments: $236,077 from the waste revolving fund and $287,990 from free cash. The committee voted unanimously to approve Article 9."
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: trash-dpw
+    topic_confidence: 0.87
+    start_seconds: 2461
+    end_seconds: 3063
+    headline: "Walls/fences and stormwater articles cut in half to $25K and $200K respectively as budget pressures force reductions"
+    dek: "DPW staff noted that the cuts are manageable for FY27 but will reduce the pace of coastal seawall repairs and regulatory stormwater work in future years."
+    summary: "Article 11 (walls and fences) was reduced from its historical $50,000 to $25,000. The DPW director noted that a Woods Hole Group study identified several coastal seawalls needing repairs ranging from hundreds of thousands to over $1 million each, and that the reduced funding will limit progress. A debt exclusion override for seawalls was mentioned as a future option. Article 12 (stormwater construction) was reduced from $400,000 to $200,000; the DPW noted this covers only regulatory requirements and will slow paving projects. Both articles were approved unanimously."
+    key_speakers: ["DPW Director (Amy/Maggie)", "FinCom Chair"]
+  - topic: bonding-capital
+    topic_confidence: 0.88
+    start_seconds: 3063
+    end_seconds: 3784
+    headline: "FinCom approves $2.4M water and $2.1M sewer construction from retained earnings, plus MWRA 0% loan authorization of ~$3.5M"
+    dek: "Both enterprise funds face five-year capital backlogs exceeding $10 million each; the MWRA loan would fund a town-wide meter upgrade."
+    summary: "Article 13 appropriates water retained earnings ($2.4 million) and sewer retained earnings ($2.1 million) for construction projects, representing approximately 85% of estimated retained earnings for each. The DPW director described a five-year capital backlog of over $10 million for both water and sewer, including pump station upgrades, administrative order lining requirements, and a planned town-wide smart meter upgrade. Article 14 authorizes the Water and Sewer Commission to enter into a MWRA Local Assistance Program loan of approximately $3.5 million at 0% interest over 10 years, primarily in preparation for the meter project. Both articles were approved unanimously."
+    key_speakers: ["DPW Director (Amy)", "Town Administrator (Thatcher)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 3784
+    end_seconds: 4175
+    headline: "FinCom approves 3% COLA for administrative, traffic supervisor, and seasonal positions; fire union contract deferred"
+    dek: "Last year's admin COLA was 2%, below the approximately 3% given to union employees; Articles 15–17 align rates for FY27."
+    summary: "Articles 15, 16, and 17 set 3% cost-of-living increases effective July 1, 2026, for non-union administrative positions, traffic supervisors (crossing guards), and seasonal/temporary personnel respectively. The town administrator noted that union contracts negotiated last year came in around 3%, while admin positions received only 2%, creating a disparity this amendment addresses. Article 19 (fire collective bargaining agreement) was tabled as negotiations are still ongoing."
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 4044
+    end_seconds: 4855
+    headline: "FinCom approves town clerk salary at $97,460 and ratifies 38 Compensation Committee actions from calendar year 2025"
+    dek: "The Compensation Committee made 10 grade changes, 12 description updates, and 13 above-entry-step hires in 2025 amid a broader classification study."
+    summary: "Article 18 sets the elected town clerk's annual compensation at $97,460. Article 20 ratifies the Compensation Committee's 38 personnel actions from calendar year 2025, including 10 job description updates with grade changes (many in DPW reorganization), 12 description updates without grade changes, 3 new positions, and 13 hires above entry-level step one. The town administrator noted Marblehead's pay schedule remains below market, necessitating above-step hiring. An HR consultant is conducting an updated classification and compensation study. Both articles were approved unanimously."
+    key_speakers: ["Town Administrator (Thatcher)", "Library Director (Kim)", "DPW Director (Amy)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 4855
+    end_seconds: 5352
+    headline: "Essex Tech assessment rises to $749,920 for FY27; FinCom flags larger increases likely in future years due to lottery-based enrollment changes"
+    dek: "The state required Essex Tech to shift to a lottery admissions system, which increases the number of eligible Marblehead seats and will likely drive higher assessments in coming years."
+    summary: "Article 21 appropriates $749,920 for Marblehead's share of the Essex North Shore Agricultural and Technical School District assessment, a roughly 4.5% cost increase over FY26. The FinCom noted this year's number is not dramatically different from prior years, but warned that a recent state-mandated shift to a lottery admissions system will increase the number of Marblehead students attending Essex Tech and could significantly raise future assessments. The town administrator and CFO are scheduling a call with Essex Tech administrators to model the future fiscal impact. The article was approved unanimously."
+    key_speakers: ["Town Administrator (Thatcher)", "CFO (Alicia)", "Resident at mic (Jack)"]
+  - topic: override
+    topic_confidence: 0.95
+    start_seconds: 5352
+    end_seconds: 5690
+    headline: "Free cash use drops $2M to $5M for FY27; CFO warns town is cutting reliance on free cash as structural revenue shortfall grows"
+    dek: "Article 22 appropriates $5M in free cash and $360,000 in electric light surplus to reduce the tax rate, leaving an estimated $700K–$1.2M in unappropriated free cash."
+    summary: "Article 22 appropriates $5,360,000 — $5 million from free cash and $360,000 from the electric light surplus — for use by assessors in setting the tax rate. This represents a $2 million decline from the $7 million appropriated last year. Free cash is estimated at approximately $6 to $6.5 million but has not yet been certified by DOR. The CFO noted that three and a half years ago, $10 million in free cash was used to supplement the operating budget; the goal is to reduce that reliance to zero, with free cash reserved for capital and emergencies. The article was approved unanimously."
+    key_speakers: ["FinCom Chair", "CFO (Alicia)", "Town Administrator (Thatcher)"]
+  - topic: override
+    topic_confidence: 0.98
+    start_seconds: 5690
+    end_seconds: 7001
+    featured: true
+    headline: "FinCom approves $122.8M FY27 operating budget with $7.2M structural deficit, 22 town FTE cuts, and schools yet to identify $1.5M in savings"
+    dek: "Revenues are $600,000 lower than FY26 while expenses at level services rose; a curbside trash fee or override is expected to cover $2.2M of the gap."
+    summary: |
+      The FinCom chair delivered an extended overview of budget conditions before the committee voted unanimously to recommend a total operating appropriation of $122,762,030 (Article 23), of which $109,777,938 is raised from taxation and other available funds and $12,984,092 from enterprise funds.
+      
+      **Structural deficit**
+      Level-services expenses total approximately $103.8 million against available revenues of $96.5 million — a $7.2 million gap. Revenue is $600,000 lower than FY26, driven by:
+      - $2 million less free cash use
+      - $1 million decline in local receipts (lower investment balances and interest rates, excise tax estimates)
+      - Partially offset by Prop 2½ growth (+$2.2M), state aid increases, and higher enterprise fund indirect cost recoveries
+      
+      Health insurance rates have risen 5–12% annually for the past four years, and pension costs continue to climb.
+      
+      **Cost allocation methodology**
+      Approximately $12.5 million of "other general government" costs (pensions, health insurance, OPEB) were attributed to school employees and retirees, producing an adjusted split of roughly 62% schools / 38% town of the general fund budget.
+      
+      **Town-side cuts (~$4.1M share)**
+      The $2.2 million curbside trash collection cost was carved out of the general fund to be covered by a user fee or, if voters approve, an override. The remaining $1.8–1.9 million shortfall required approximately $2.5 million in gross cuts (to offset increased unemployment costs from layoffs). The town is eliminating approximately 22 FTEs from funded positions, of which 18–19 are currently occupied. Departments most affected include community planning and development, library (8.5 FTEs cut, with significant service reductions), public buildings, and finance.
+      
+      **School-side cuts (~$3.2M share)**
+      The school committee has identified approximately $1.7 million in cuts (14 FTEs, mostly through vacancies and attrition) but has not yet presented a plan for the remaining $1.5 million.
+      
+      **Override articles**
+      Articles 28 and 29 (Prop 2½ override articles for schools and town respectively) were tabled for the April 27 second warrant hearing.
+    key_speakers: ["FinCom Chair", "CFO (Alicia)", "Town Administrator (Thatcher)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 7001
+    end_seconds: 7292
+    headline: "FinCom approves rescission of $1.627M Brown School borrowing authorization; stabilization fund balance noted at 1.4% of budget"
+    dek: "The MSBA audit closed with $1.627M in unused borrowing authority; the committee voted to return it rather than reprogram the funds."
+    summary: "Article 24 (general stabilization fund) received no recommendation as no transfer was requested. The stabilization fund balance stands at approximately $1.5 million, or about 1.4% of the operating budget — below both the town's financial policy target of 3–5% and the state DOR recommendation of 5–7%. Articles 25–27 (school buildings capital and technology) had no requests and received no recommendation. Article 30 rescinds $1,627,000 in remaining Brown School borrowing authorization following the MSBA audit closeout. The FinCom recommended adoption unanimously."
+    key_speakers: ["FinCom Chair", "CFO (Alicia)"]
+  - topic: labor-personnel
+    topic_confidence: 0.82
+    start_seconds: 7292
+    end_seconds: 7654
+    headline: "Administrative benefit amendment article tabled to April 27 hearing amid budget constraints and layoffs"
+    dek: "Article 31 would align non-union employee benefits with those gained by unions over 25–30 years; the CFO declined to recommend it given the financial context."
+    summary: "Article 31 proposes amendments to the administrative benefit schedule to align non-union employee perks (vacation, personal days, longevity) with gains won by collective bargaining units over the past 25–30 years. The CFO stated she could not recommend it given current budget conditions and the fact that it was not factored into adopted departmental budgets. Some department heads opposed bringing it forward during a year with layoffs. Others supported at least a scaled-back version removing the longevity component. The committee tabled the article for further discussion at the April 27 hearing."
+    key_speakers: ["Town Administrator (Thatcher)", "CFO (Alicia)", "DPW Director (Amy)"]
+  - topic: public-safety
+    topic_confidence: 0.78
+    start_seconds: 7654
+    end_seconds: 8140
+    headline: "FinCom approves mooring fee increase of $2/float and 10A float permit fee doubling to $12"
+    dek: "The Harbor Board presented a four-year cost-revenue analysis showing the surplus declining without the increase; near-term capital needs include a $300,000 strand ski replacement and long-term seawall repairs estimated at $14M in 2023 dollars."
+    summary: "The Harbor and Waterfront Board chair and harbor master presented Article 32, which increases mooring fees by $2 per float and raises the annual 10A floating dock permit fee from $6.50 to $12 — in line with regional peers. Revenue increases are needed to sustain the harbor enterprise fund surplus used for equipment maintenance and capital repairs. Near-term needs include a replacement strand ski (~$300,000) and eventual seawall repairs at Parker's and Cliff Street estimated at $14 million (2023 dollars), with the harbor enterprise fund share estimated at approximately $2 million. The committee recommended adoption unanimously."
+    key_speakers: ["Harbor Board Chair (John Dowd)", "Harbor Master (Mark)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 8140
+    end_seconds: 8669
+    headline: "FinCom makes no recommendation on cryptocurrency ATM prohibition bylaw (Article 33)"
+    dek: "The article, brought by the police chief and sponsored by the Select Board, would prohibit crypto ATM machines in Marblehead to reduce scam risk."
+    summary: "Article 33 would amend the general bylaw to prohibit cryptocurrency ATMs in Marblehead. The town administrator described awareness of at least one machine currently or previously in town and noted many municipalities are taking similar action. A FinCom member with a law enforcement background cited elder fraud risks. The committee found no measurable financial implication and made no recommendation."
+    key_speakers: ["Town Administrator (Thatcher)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 8669
+    end_seconds: 9039
+    headline: "Articles to dissolve or amend Public Works Committee draw debate; no FinCom recommendation on either"
+    dek: "The town administrator argued the 1970-era committee is incompatible with modern town administration; DPW staff defended it as a valuable cross-departmental coordination body."
+    summary: "Articles 34 and 35 address the Public Works Committee, a body created in 1970 that went dormant and was recently reconstituted. Article 34 would dissolve the committee; Article 35 would amend it (reduce to quarterly meetings, add the town administrator, limit scope to public ways and buildings projects). The town administrator argued the committee creates a confusing management structure by having subordinates deliberate and make recommendations independently of the town administrator, complicating recruitment and coordination. DPW staff read a committee statement defending its value as a formal cross-departmental forum for infrastructure project coordination. The FinCom found no measurable financial implications and made no recommendation on either article. Citizen petition articles 37–40 were tabled for the April 27 second warrant hearing."
+    key_speakers: ["Town Administrator (Thatcher)", "DPW Director (Amy)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
