@@ -486,6 +486,71 @@ async function testStatsStrip(page) {
   }
 }
 
+// ── Marblehead 101 ──────────────────────────────────────────
+
+async function testM101Landing(page) {
+  console.log('\n── Marblehead 101 landing ──');
+  const resp = await page.goto(SITE + '/marblehead-101/');
+  resp.status() === 200
+    ? ok('Landing returns 200')
+    : fail('Landing', 'expected 200, got ' + resp.status());
+
+  const h1 = await page.$eval('.m101-hero h1', el => el.textContent.trim());
+  h1 === 'Marblehead 101'
+    ? ok('Landing h1 reads "Marblehead 101"')
+    : fail('Landing h1', `got "${h1}"`);
+
+  const cards = await page.$$('.m101-ch');
+  cards.length === 8
+    ? ok('Landing has 8 chapter cards')
+    : fail('Landing chapter cards', `expected 8, got ${cards.length}`);
+
+  const parts = await page.$$('.m101-group');
+  parts.length === 3
+    ? ok('Landing has 3 thematic parts')
+    : fail('Landing parts', `expected 3, got ${parts.length}`);
+}
+
+async function testM101ChapterPages(page) {
+  console.log('\n── Marblehead 101 chapters ──');
+  const slugs = [
+    ['01', '01-what-a-ma-town-is'],
+    ['02', '02-branches'],
+    ['03', '03-where-money-comes-from'],
+    ['04', '04-where-money-goes'],
+    ['05', '05-budget-cycle'],
+    ['06', '06-structural-deficit'],
+    ['07', '07-overrides'],
+    ['08', '08-participate'],
+  ];
+  for (const [num, slug] of slugs) {
+    const resp = await page.goto(`${SITE}/marblehead-101/${slug}.html`);
+    if (resp.status() !== 200) {
+      fail(`Chapter ${num} loads`, `${resp.status()} on ${slug}.html`);
+      continue;
+    }
+    ok(`Chapter ${num} returns 200`);
+    const chipNum = await page.$eval('.m101-chip .num', el => el.textContent.trim());
+    const expected = String(parseInt(num, 10));
+    chipNum === expected
+      ? ok(`Chapter ${num} chip shows "${expected}"`)
+      : fail(`Chapter ${num} chip`, `expected "${expected}", got "${chipNum}"`);
+    const cur = await page.$$eval('.m101-syllabus li.cur', els => els.map(e => e.dataset.chapter));
+    cur.length === 1 && cur[0] === num
+      ? ok(`Chapter ${num} sidebar marks correct current item`)
+      : fail(`Chapter ${num} sidebar`, `cur items: ${JSON.stringify(cur)}`);
+  }
+}
+
+async function testM101NavLink(page) {
+  console.log('\n── Marblehead 101 nav link ──');
+  await page.goto(SITE + '/');
+  const link = await page.$('a.nav-link[href*="/marblehead-101/"]');
+  link
+    ? ok('Primer nav link present on homepage')
+    : fail('Primer nav link', 'not found on homepage');
+}
+
 // ── Run ────────────────────────────────────────────────────────────────
 
 (async () => {
@@ -504,6 +569,9 @@ async function testStatsStrip(page) {
     await testGeneralGovernmentChart(page1);
     await testSchoolAgeVsEnrollment(page1);
     await testTownBudgetPageLoads(page1);
+    await testM101Landing(page1);
+    await testM101ChapterPages(page1);
+    await testM101NavLink(page1);
     await ctx1.close();
 
     // Interactive tests (fresh context so localStorage is clean)
