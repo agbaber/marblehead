@@ -2,6 +2,7 @@
   <div class="nav-inner">
     <a class="nav-brand" href="{{ '/' | relative_url }}"><img class="nav-logo" src="{{ '/' | relative_url }}favicon.svg" alt="" width="22" height="22"> MHD Data</a>
 
+    <a class="nav-link" href="{{ '/' | relative_url }}marblehead-101/"{% if page.url contains '/marblehead-101/' %} aria-current="page"{% endif %}>Primer</a>
     <a class="nav-link" href="{{ '/' | relative_url }}whats-on-the-ballot.html"{% if page.url == '/whats-on-the-ballot.html' %} aria-current="page"{% endif %}>Ballot</a>
     <a class="nav-link" href="{{ '/' | relative_url }}where-candidates-stand.html"{% if page.url == '/where-candidates-stand.html' %} aria-current="page"{% endif %}>Candidates</a>
     <a class="nav-link" href="{{ '/' | relative_url }}explore.html"{% if page.url == '/explore.html' or page.url == '/the-debate.html' %} aria-current="page"{% endif %}>Questions</a>

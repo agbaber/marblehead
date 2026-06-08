@@ -4278,3 +4278,8 @@ body.has-numbered-charts .chart-wrapper,
 body.has-numbered-charts .dollar-table {
   margin-top: 1rem;
 }
+
+@media (max-width: 400px) {
+  nav.site-nav .nav-brand { font-size: 0; }
+  .nav-brand .nav-logo { font-size: 14px; }
+}

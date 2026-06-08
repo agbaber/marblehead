@@ -1,0 +1,11 @@
+import { chromium } from '/home/claude/.npm/_npx/e41f203b7505f1fb/node_modules/playwright/index.mjs';
+const browser = await chromium.launch();
+const ctx = await browser.newContext({ viewport: { width: 375, height: 700 }, deviceScaleFactor: 2 });
+const page = await ctx.newPage();
+await page.goto('http://localhost:4001/', { waitUntil: 'networkidle' });
+await page.waitForTimeout(400);
+const navHeight = await page.$eval('.site-nav', el => el.getBoundingClientRect().height);
+const navInner = await page.$eval('.nav-inner', el => ({ scrollWidth: el.scrollWidth, clientWidth: el.clientWidth }));
+console.log(JSON.stringify({ navHeight, navInner }));
+await page.screenshot({ path: 'proof/nav-375.png' });
+await browser.close();
