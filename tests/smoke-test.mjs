@@ -514,14 +514,14 @@ async function testM101Landing(page) {
 async function testM101ChapterPages(page) {
   console.log('\n── Marblehead 101 chapters ──');
   const slugs = [
-    ['01', '01-what-a-ma-town-is'],
-    ['02', '02-branches'],
+    ['01', '01-how-the-town-is-run'],
+    ['02', '02-town-side-school-side'],
     ['03', '03-where-money-comes-from'],
     ['04', '04-where-money-goes'],
-    ['05', '05-budget-cycle'],
-    ['06', '06-structural-deficit'],
+    ['05', '05-how-the-budget-gets-made'],
+    ['06', '06-why-the-gap-keeps-coming-back'],
     ['07', '07-overrides'],
-    ['08', '08-participate'],
+    ['08', '08-how-to-take-part'],
   ];
   for (const [num, slug] of slugs) {
     const resp = await page.goto(`${SITE}/marblehead-101/${slug}.html`);

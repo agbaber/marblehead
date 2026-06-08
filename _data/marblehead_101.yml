@@ -33,11 +33,11 @@ parts:
 
 chapters:
   - num: "01"
-    slug: "01-what-a-ma-town-is"
-    title: "What a Massachusetts town is"
+    slug: "01-how-the-town-is-run"
+    title: "How the town is run"
     part: "Government"
     read_time: 3
-    dek: "Town Meeting, no mayor, and the form of government most Marbleheaders never learned."
+    dek: "Town Meeting is the legislature. The Select Board is the executive. There is no mayor."
     objectives:
       - "The 'town' form of MA government is Town Meeting plus Select Board, not mayor plus city council"
       - "Town Meeting is the legislature; every registered voter can attend and vote on the floor"
@@ -57,11 +57,11 @@ chapters:
         desc: "How marbleheaddata.org is built, sourced, and maintained."
 
   - num: "02"
-    slug: "02-branches"
-    title: "The branches and who decides what"
+    slug: "02-town-side-school-side"
+    title: "Town side, school side"
     part: "Government"
     read_time: 4
-    dek: "Select Board, School Committee, Town Meeting, Town Admin, and how they actually interact."
+    dek: "Marblehead has two governments. They share a tax pot. They share almost nothing else."
     objectives:
       - "School Committee is a constitutionally separate elected body (MGL c.71)"
       - "Town side: Select Board sets non-school policy and approves department budgets"
@@ -129,11 +129,11 @@ chapters:
         desc: "Visual of revenue sources mapping to spending categories."
 
   - num: "05"
-    slug: "05-budget-cycle"
-    title: "The annual budget cycle"
+    slug: "05-how-the-budget-gets-made"
+    title: "How the budget gets made"
     part: "Money"
     read_time: 3
-    dek: "How August requests become a May vote, and where the public can speak."
+    dek: "August requests, winter hearings, a May vote, and where the public can speak."
     objectives:
       - "Department requests start in August; FinCom hearings run through winter; Town Meeting votes in May"
       - "The FinCom report (April) is the most consequential public document of the cycle"
@@ -153,8 +153,8 @@ chapters:
         desc: "Meeting transcripts where residents spoke."
 
   - num: "06"
-    slug: "06-structural-deficit"
-    title: "Why structural deficits happen"
+    slug: "06-why-the-gap-keeps-coming-back"
+    title: "Why the gap keeps coming back"
     part: "Money"
     read_time: 3
     dek: "2.5% capped revenue meets 5-9% uncapped costs. The gap compounds."
@@ -201,11 +201,11 @@ chapters:
         desc: "How Marblehead's override pattern compares to other MA towns."
 
   - num: "08"
-    slug: "08-participate"
-    title: "How a resident participates"
+    slug: "08-how-to-take-part"
+    title: "How to take part"
     part: "Participation"
     read_time: 3
-    dek: "Town Meeting floor, public comment, FinCom hearings, where to find the docs."
+    dek: "Town Meeting floor, FinCom hearings, public comment, where to find the docs."
     objectives:
       - "Show up to Town Meeting in May; bring an ID; you can speak and vote on every article"
       - "Watch or attend FinCom and Select Board meetings; MHTV streams everything"
