@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How the Town Works — identity mockups</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#F4F7FA; --surface:#fff; --text:#0F2A3D; --mid:#4A5C6A; --sub:#7A8A98;
+    --navy:#1B3A57; --buoy:#C8553D; --border:#D8E1E8;
+    --font:"Libre Franklin", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:var(--font); padding:48px 24px 96px; line-height:1.55; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  h1 { font-size: 32px; letter-spacing:-0.02em; margin: 0 0 8px; }
+  .sub { color: var(--mid); margin: 0 0 36px; font-size: 16px; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  .opt {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 28px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .opt:hover { border-color: var(--navy); }
+  .opt-head { display: flex; align-items: baseline; gap: 14px; margin: 0 0 8px; }
+  .letter {
+    font-size: 28px; font-weight: 800; color: var(--buoy);
+  }
+  .opt-title { font-size: 22px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+  .opt-desc { color: var(--mid); margin: 0 0 18px; }
+  .opt-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .note { font-size: 13px; color: var(--sub); margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>How the Town Works — identity mockups</h1>
+  <p class="sub">Three visual directions for the 8-lecture explainer course. Same sample content (Lecture 3, "Where the money comes from") in each.</p>
+
+  <div class="grid">
+    <a class="opt" href="a-editorial.html">
+      <div class="opt-head"><span class="letter">A</span><h2 class="opt-title">Editorial / longread magazine</h2></div>
+      <p class="opt-desc">Serif body type, drop cap, kicker label, hairline rules. Restrained. Reads like a real article.</p>
+      <div class="opt-actions">
+        <span class="btn primary">Open mockup →</span>
+      </div>
+    </a>
+
+    <a class="opt" href="b-course.html">
+      <div class="opt-head"><span class="letter">B</span><h2 class="opt-title">Course / syllabus</h2></div>
+      <p class="opt-desc">Numbered chip, sticky progress bar, sidebar syllabus rail with checkmarks, "what you'll learn" box. Most class-like.</p>
+      <div class="opt-actions">
+        <span class="btn primary">Open mockup →</span>
+      </div>
+    </a>
+
+    <a class="opt" href="c-documentary.html">
+      <div class="opt-head"><span class="letter">C</span><h2 class="opt-title">Documentary / Upshot</h2></div>
+      <p class="opt-desc">Dark hero band with the revenue-mix viz embedded, big display type, accented rules. Most visual impact.</p>
+      <div class="opt-actions">
+        <span class="btn primary">Open mockup →</span>
+      </div>
+    </a>
+  </div>
+
+  <p class="note">These are throwaway mockups for design discussion only — not site code. They live under /proof/ and won't be linked from the navigation.</p>
+</div>
+</body>
+</html>

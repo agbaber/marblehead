@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C — Documentary</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --c-fog:#F4F7FA; --c-surface:#FFFFFF; --c-border:#D8E1E8; --c-divider:#ECF1F5;
+    --c-text:#0F2A3D; --c-text-mid:#4A5C6A; --c-text-sub:#7A8A98; --c-navy:#1B3A57;
+    --c-buoy:#C8553D; --c-teal:#2F7D8E; --c-sage:#5B7553; --c-brass:#B8860B;
+    --font:"Libre Franklin", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html,body { margin:0; padding:0; }
+  body {
+    background: var(--c-surface);
+    color: var(--c-text);
+    font-family: var(--font);
+    font-size: 18px;
+    line-height: 1.65;
+  }
+  .topnav {
+    border-bottom: 1px solid var(--c-border);
+    padding: 14px 32px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px;
+  }
+  .topnav .brand { font-weight: 700; }
+  .topnav .syllabus-link { color: var(--c-text-mid); text-decoration: none; }
+  .topnav .syllabus-link:hover { color: var(--c-buoy); }
+  .hero {
+    background: var(--c-navy);
+    color: #fff;
+    padding: 64px 32px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; right: -120px; top: -80px;
+    width: 480px; height: 480px;
+    background: radial-gradient(circle at center, rgba(200,85,61,0.18), transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner { max-width: 1080px; margin: 0 auto; position: relative; z-index: 2; }
+  .hero .kicker {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #FFB58F;
+    margin: 0 0 18px;
+    display: flex; gap: 14px; align-items: center;
+  }
+  .hero .kicker .sep { opacity: 0.4; }
+  .hero h1 {
+    font-size: 64px;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-weight: 900;
+    margin: 0 0 24px;
+    max-width: 800px;
+  }
+  .hero .dek {
+    font-size: 22px;
+    color: rgba(255,255,255,0.78);
+    margin: 0;
+    max-width: 700px;
+    line-height: 1.45;
+    font-weight: 400;
+  }
+  .heroviz {
+    margin-top: 48px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;
+    max-width: 900px;
+  }
+  .heroviz .label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em;
+    color: rgba(255,255,255,0.55); font-weight: 700; margin: 0 0 8px;
+  }
+  .heroviz .h-title {
+    font-size: 16px; font-weight: 600; color: #fff; margin: 0 0 16px;
+  }
+  .heroviz .bars { display: grid; gap: 10px; }
+  .heroviz .bar-row { display: grid; grid-template-columns: 110px 1fr 60px; gap: 12px; align-items: center; font-size: 13px; }
+  .heroviz .bar-row .lab { color: rgba(255,255,255,0.85); font-weight: 500; }
+  .heroviz .bar-row .pct { color: rgba(255,255,255,0.7); font-variant-numeric: tabular-nums; text-align: right; font-weight: 600; }
+  .heroviz .track { height: 14px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+  .heroviz .fill { height: 100%; border-radius: 3px; }
+  .heroviz .fill.r1 { width: 79%; background: linear-gradient(90deg, #C8553D, #E57B5F); }
+  .heroviz .fill.r2 { width: 11%; background: var(--c-brass); }
+  .heroviz .fill.r3 { width: 10%; background: var(--c-sage); }
+  .heroviz .note { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 14px; }
+
+  main { max-width: 700px; margin: 0 auto; padding: 64px 32px 96px; }
+  p { margin: 0 0 22px; }
+  p.lead {
+    font-size: 22px;
+    color: var(--c-text);
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 0 0 36px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--c-border);
+  }
+  h2 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 48px 0 16px;
+    position: relative;
+    padding-left: 16px;
+  }
+  h2::before {
+    content: ""; position: absolute; left: 0; top: 8px; bottom: 8px;
+    width: 4px; background: var(--c-buoy); border-radius: 2px;
+  }
+  a.inline { color: var(--c-text); border-bottom: 2px solid var(--c-buoy); text-decoration: none; padding-bottom: 1px; font-weight: 500; }
+  a.inline:hover { background: rgba(200,85,61,0.08); }
+
+  .miniviz {
+    margin: 32px 0;
+    background: var(--c-fog);
+    border-radius: 10px;
+    padding: 22px 24px;
+  }
+  .miniviz .mlabel { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--c-text-sub); font-weight: 700; margin: 0 0 8px; }
+  .miniviz .mtitle { font-size: 14px; font-weight: 600; margin: 0 0 14px; }
+  .miniviz .gap-bars { display: grid; gap: 8px; }
+  .miniviz .gap-row { display: grid; grid-template-columns: 130px 1fr 60px; gap: 12px; align-items: center; font-size: 13px; }
+  .miniviz .gap-row .l { color: var(--c-text-mid); }
+  .miniviz .gap-row .p { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .miniviz .gtrack { height: 10px; background: var(--c-divider); border-radius: 3px; overflow: hidden; }
+  .miniviz .gfill { height: 100%; border-radius: 3px; }
+  .miniviz .gfill.cap { width: 25%; background: var(--c-teal); }
+  .miniviz .gfill.cost { width: 85%; background: var(--c-buoy); }
+
+  .digin {
+    margin: 64px auto 0;
+    max-width: 1080px;
+    padding: 0 32px;
+  }
+  .digin h3 {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.22em;
+    color: var(--c-buoy); font-weight: 700; margin: 0 0 20px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .digin h3::after {
+    content: ""; flex: 1; height: 1px; background: var(--c-border);
+  }
+  .digin-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  }
+  .digin-card {
+    background: var(--c-fog);
+    border-radius: 12px;
+    padding: 24px 22px 20px;
+    text-decoration: none; color: inherit;
+    transition: background 0.15s;
+    position: relative;
+  }
+  .digin-card:hover { background: var(--c-divider); }
+  .digin-card .ttype {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em;
+    color: var(--c-teal); font-weight: 700; margin: 0 0 12px;
+  }
+  .digin-card .tt { font-size: 19px; font-weight: 800; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .digin-card .dd { font-size: 14px; color: var(--c-text-mid); line-height: 1.45; margin: 0 0 16px; }
+  .digin-card .arrow { color: var(--c-buoy); font-weight: 700; font-size: 13px; }
+
+  .footerwrap { background: var(--c-fog); margin-top: 64px; padding: 48px 32px; border-top: 1px solid var(--c-border); }
+  .pagernav {
+    max-width: 1080px; margin: 0 auto;
+    display: flex; justify-content: space-between; gap: 16px;
+  }
+  .pagernav a {
+    flex: 1; padding: 20px 24px;
+    background: var(--c-surface);
+    border-radius: 12px;
+    text-decoration: none; color: var(--c-text);
+    border: 1px solid var(--c-border);
+  }
+  .pagernav a:hover { border-color: var(--c-navy); }
+  .pagernav .dir { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--c-text-sub); font-weight: 700; margin-bottom: 6px; }
+  .pagernav .ttl { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; }
+  .pagernav .next { text-align: right; }
+</style>
+</head>
+<body>
+  <nav class="topnav">
+    <div class="brand">Marblehead Data · How the Town Works</div>
+    <a class="syllabus-link" href="#">All 8 lectures →</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="kicker">
+        <span>Lecture 03 of 08</span>
+        <span class="sep">/</span>
+        <span>Revenue</span>
+        <span class="sep">/</span>
+        <span>4 min read</span>
+      </div>
+      <h1>Where the money comes from</h1>
+      <p class="dek">Most of what the town spends is paid by you, on the house you live in. The rest fills small gaps.</p>
+
+      <div class="heroviz">
+        <div>
+          <div class="label">The $123M revenue mix</div>
+          <div class="h-title">FY27 proposed budget</div>
+          <p style="font-size:13px;color:rgba(255,255,255,0.65);margin:0;line-height:1.5;">Property tax dominates because Massachusetts law gives towns almost no other lever. Income and sales taxes belong to the state.</p>
+        </div>
+        <div>
+          <div class="bars">
+            <div class="bar-row"><span class="lab">Property tax</span><div class="track"><div class="fill r1"></div></div><span class="pct">79%</span></div>
+            <div class="bar-row"><span class="lab">State aid</span><div class="track"><div class="fill r2"></div></div><span class="pct">11%</span></div>
+            <div class="bar-row"><span class="lab">Fees &amp; other</span><div class="track"><div class="fill r3"></div></div><span class="pct">10%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <p class="lead">Marblehead collects about $123 million a year to run itself. Roughly four-fifths is the property tax bill you pay twice a year. The rest is a mix of state aid, local fees, and smaller sources that shift with the economy.</p>
+
+    <p>This concentration is a choice the state made for towns. Cities elsewhere lean on income or sales taxes; here, those belong to the state. What's left for the town is property — predictable, hard to dodge, and capped by law.</p>
+
+    <h2>Why the cap matters</h2>
+    <p>Proposition 2½ — a 1980 state law — limits how much the property-tax pot can grow each year. The pot can rise 2.5%, plus new construction added to the tax rolls. Anything beyond that requires <a class="inline" href="#">an override</a>: a separate ballot vote.</p>
+
+    <div class="miniviz">
+      <div class="mlabel">The structural gap</div>
+      <div class="mtitle">Capped revenue vs. uncapped costs, average annual growth</div>
+      <div class="gap-bars">
+        <div class="gap-row"><span class="l">Revenue cap (Prop 2½)</span><div class="gtrack"><div class="gfill cap"></div></div><span class="p">2.5%</span></div>
+        <div class="gap-row"><span class="l">Health insurance</span><div class="gtrack"><div class="gfill cost"></div></div><span class="p">8.5%</span></div>
+      </div>
+    </div>
+
+    <p>That gap is the reason the budget conversation feels constrained. Costs that aren't capped — health insurance, special education, pensions — grow at 5–9% a year. Revenue that <em>is</em> capped grows at 2.5%. The gap compounds.</p>
+  </main>
+
+  <section class="digin">
+    <h3>Go deeper</h3>
+    <div class="digin-grid">
+      <a class="digin-card" href="#">
+        <div class="ttype">Tool</div>
+        <div class="tt">Your tax bill, line by line</div>
+        <p class="dd">For a $1M house, with each override scenario mapped in.</p>
+        <span class="arrow">Open →</span>
+      </a>
+      <a class="digin-card" href="#">
+        <div class="ttype">Chart</div>
+        <div class="tt">Cap vs. cost over 20 years</div>
+        <p class="dd">Two decades of capped revenue against uncapped spending pressure.</p>
+        <span class="arrow">Open →</span>
+      </a>
+      <a class="digin-card" href="#">
+        <div class="ttype">Data</div>
+        <div class="tt">State aid comparison</div>
+        <p class="dd">Where the 11% comes from, and why wealthy towns get less.</p>
+        <span class="arrow">Open →</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="footerwrap">
+    <nav class="pagernav">
+      <a class="prev" href="#">
+        <div class="dir">← Lecture 02</div>
+        <div class="ttl">Branches and who decides</div>
+      </a>
+      <a class="next" href="#">
+        <div class="dir">Lecture 04 →</div>
+        <div class="ttl">Where the money goes</div>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

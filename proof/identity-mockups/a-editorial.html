@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A — Editorial</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --c-fog:#F4F7FA; --c-surface:#FFFFFF; --c-border:#D8E1E8; --c-divider:#ECF1F5;
+    --c-text:#0F2A3D; --c-text-mid:#4A5C6A; --c-text-sub:#7A8A98; --c-navy:#1B3A57;
+    --c-buoy:#C8553D; --c-teal:#2F7D8E; --c-brass:#B8860B; --c-sage:#5B7553;
+    --font-display:"Libre Franklin", system-ui, sans-serif;
+    --font-body:"Source Serif 4", Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html,body { margin:0; padding:0; }
+  body {
+    background: var(--c-fog);
+    color: var(--c-text);
+    font-family: var(--font-body);
+    font-size: 19px;
+    line-height: 1.65;
+  }
+  .topbar {
+    border-bottom: 1px solid var(--c-border);
+    background: var(--c-surface);
+    padding: 14px 24px;
+    font-family: var(--font-display);
+    font-size: 13px;
+    color: var(--c-text-mid);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .topbar .brand { font-weight: 700; color: var(--c-text); letter-spacing: -0.01em; }
+  .topbar .crumbs a { color: var(--c-text-mid); text-decoration: none; }
+  .topbar .crumbs a:hover { color: var(--c-teal); }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 24px 96px; }
+  .kicker {
+    font-family: var(--font-display);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--c-buoy);
+    font-weight: 700;
+    margin: 0 0 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .kicker .num { color: var(--c-text-sub); letter-spacing: 0.12em; }
+  .kicker .rule { flex: 1; height: 1px; background: var(--c-border); }
+  h1 {
+    font-family: var(--font-display);
+    font-size: 52px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    margin: 0 0 20px;
+    color: var(--c-text);
+  }
+  .dek {
+    font-family: var(--font-body);
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--c-text-mid);
+    font-style: italic;
+    margin: 0 0 40px;
+    font-weight: 400;
+  }
+  .meta {
+    font-family: var(--font-display);
+    font-size: 12px;
+    color: var(--c-text-sub);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--c-border);
+    display: flex; gap: 18px;
+  }
+  .meta span { display: inline-flex; align-items: center; gap: 6px; }
+  .meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--c-text-sub); }
+  p { margin: 0 0 22px; }
+  p.lead::first-letter {
+    font-family: var(--font-display);
+    float: left;
+    font-size: 72px;
+    line-height: 0.85;
+    font-weight: 800;
+    padding: 6px 10px 0 0;
+    color: var(--c-navy);
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 56px 0 16px;
+    color: var(--c-text);
+  }
+  .pullstat {
+    margin: 40px 0;
+    padding: 28px 0;
+    border-top: 1px solid var(--c-text);
+    border-bottom: 1px solid var(--c-text);
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .pullstat .stat { }
+  .pullstat .v {
+    font-family: var(--font-display);
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 800;
+    color: var(--c-navy);
+    letter-spacing: -0.02em;
+  }
+  .pullstat .l {
+    font-family: var(--font-display);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--c-text-sub);
+    margin-top: 8px;
+    font-weight: 600;
+  }
+  a.inline { color: var(--c-text); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--c-buoy); }
+  a.inline:hover { color: var(--c-buoy); }
+  .digin {
+    margin: 72px 0 0;
+    padding: 32px 0 0;
+    border-top: 2px solid var(--c-text);
+  }
+  .digin-label {
+    font-family: var(--font-display);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--c-text);
+    margin: 0 0 20px;
+  }
+  .digin-list { display: grid; gap: 0; }
+  .digin-item {
+    display: flex; gap: 20px; align-items: baseline;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--c-divider);
+    text-decoration: none; color: inherit;
+  }
+  .digin-item:hover .digin-title { color: var(--c-buoy); }
+  .digin-item .num {
+    font-family: var(--font-display);
+    font-size: 13px;
+    color: var(--c-text-sub);
+    font-weight: 600;
+    min-width: 28px;
+  }
+  .digin-item .body { flex: 1; }
+  .digin-title {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--c-text);
+    margin: 0 0 4px;
+  }
+  .digin-desc {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--c-text-mid);
+    margin: 0;
+    line-height: 1.4;
+  }
+  .digin-item .arrow {
+    font-family: var(--font-display);
+    color: var(--c-text-sub);
+    font-size: 18px;
+  }
+  .pagernav {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--c-border);
+    display: flex; justify-content: space-between; gap: 24px;
+  }
+  .pagernav a {
+    text-decoration: none; color: var(--c-text);
+    font-family: var(--font-display);
+    flex: 1; padding: 16px 20px;
+    border: 1px solid var(--c-border);
+    border-radius: 4px;
+    background: var(--c-surface);
+  }
+  .pagernav a:hover { border-color: var(--c-text); }
+  .pagernav .dir { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-text-sub); font-weight: 600; margin-bottom: 4px; }
+  .pagernav .ttl { font-size: 16px; font-weight: 600; }
+  .pagernav .next { text-align: right; }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">Marblehead Data · How the Town Works</div>
+    <div class="crumbs"><a href="#">Syllabus</a></div>
+  </div>
+  <main>
+    <div class="kicker">
+      <span>Lecture</span>
+      <span class="num">03 / 08</span>
+      <span class="rule"></span>
+      <span>Revenue</span>
+    </div>
+    <h1>Where the money comes from</h1>
+    <p class="dek">Most of what the town spends is paid by you, on the house you live in. The rest fills small gaps.</p>
+    <div class="meta">
+      <span>4 min read</span>
+      <span class="dot"></span>
+      <span>Updated June 2026</span>
+    </div>
+
+    <p class="lead">Marblehead collects about $123 million a year to run itself. Roughly four-fifths of that is the property tax bill you pay twice a year. The remaining fifth is a mix of state aid, local fees, and a handful of smaller sources that change with the economy.</p>
+
+    <p>This concentration is a choice the state of Massachusetts made for towns. Cities elsewhere lean on income or sales taxes; here, those belong to the state. What's left for the town is property — predictable, hard to dodge, and capped by law.</p>
+
+    <div class="pullstat">
+      <div class="stat"><div class="v">79%</div><div class="l">Property tax</div></div>
+      <div class="stat"><div class="v">11%</div><div class="l">State aid</div></div>
+      <div class="stat"><div class="v">10%</div><div class="l">Fees &amp; other</div></div>
+    </div>
+
+    <h2>Why the cap matters</h2>
+    <p>Proposition 2½ — a 1980 state law — limits how much the property-tax pot can grow each year. The pot can rise 2.5%, plus the value of any new construction added to the tax rolls. Anything beyond that requires <a class="inline" href="#">an override</a>: a separate ballot vote.</p>
+    <p>That cap is the reason the town's budget conversation feels constrained. Costs that aren't capped — health insurance, special education, pensions — grow at 5–9% a year. Revenue that <em>is</em> capped grows at 2.5%. The gap compounds.</p>
+
+    <section class="digin">
+      <div class="digin-label">Go deeper</div>
+      <div class="digin-list">
+        <a class="digin-item" href="#">
+          <span class="num">01</span>
+          <div class="body">
+            <div class="digin-title">Your actual tax bill, line by line</div>
+            <p class="digin-desc">What the $79% looks like for a $1M house, with the override scenarios mapped in.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="digin-item" href="#">
+          <span class="num">02</span>
+          <div class="body">
+            <div class="digin-title">Cap vs. cost — the structural gap</div>
+            <p class="digin-desc">Twenty years of revenue capped at 2.5% next to twenty years of spending pressure.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a class="digin-item" href="#">
+          <span class="num">03</span>
+          <div class="body">
+            <div class="digin-title">How Marblehead compares on state aid</div>
+            <p class="digin-desc">Where the 11% comes from, and why wealthy towns get less of it.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <nav class="pagernav">
+      <a class="prev" href="#">
+        <div class="dir">← Lecture 02</div>
+        <div class="ttl">Branches and who decides what</div>
+      </a>
+      <a class="next" href="#">
+        <div class="dir">Lecture 04 →</div>
+        <div class="ttl">Where the money goes</div>
+      </a>
+    </nav>
+  </main>
+</body>
+</html>
