@@ -9,7 +9,326 @@ vimeo_url: "https://vimeo.com/1082589920"
 duration_seconds: 14352
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Town Meeting Night 3 approves $119.5M FY26 budget and ADU zoning update"
+  summary: "Marblehead's 2025 Annual Town Meeting reconvened for a third night and worked through Articles 2–35, approving a $119,479,480 operating budget for FY26, three collective bargaining agreements, and an updated accessory dwelling unit zoning bylaw. Two amendments to the ADU article that would have allowed short-term rentals for owner-occupants were both defeated before the main article passed. The meeting lost quorum near the end and was adjourned to reconvene the following night."
+  decisions:
+    - "Approved Article 22 town-wide operating budget of approximately $119.5M"
+    - "Approved Article 19 police collective bargaining agreement ($140,000 from free cash)"
+    - "Approved Article 20 MMEU collective bargaining agreement ($140,000 from free cash)"
+    - "Approved Article 21 fire collective bargaining agreement ($150,000 from free cash)"
+    - "Approved Article 24 amended ADU zoning bylaw (rejected both short-term rental amendments)"
+    - "Approved Article 25 floodplain district bylaw update"
+    - "Approved Article 28 home rule petition for means-tested senior property tax exemption"
+    - "Approved Article 31 Coffin School property transfer to Select Board (229–86)"
+    - "Approved Article 32 Gary School Playground transfer to Recreation and Parks Commission"
+    - "Approved Article 18 — $7M free cash plus $360,000 electric surplus to reduce tax rate"
+    - "Approved Article 27 — $1M appropriation to general stabilization fund"
+    - "Held Article 35 indefinite postponement vote; meeting lost quorum and reconvened to next night"
+  votes:
+    - motion: "Article 2 Reports of Town Officers"
+      result: "in favor (407 to 21)"
+    - motion: "Article 3 Consent Articles"
+      result: "in favor (402 to 22)"
+    - motion: "Article 4 Unpaid Accounts"
+      result: "in favor (403 to 25)"
+    - motion: "Article 5 Departmental Revolving Funds"
+      result: "in favor (408 to 21)"
+    - motion: "Article 6 Purchase of Equipment"
+      result: "in favor (349 to 84)"
+    - motion: "Article 7 Lease Purchase"
+      result: "in favor (367 to 62)"
+    - motion: "Article 8 Capital Improvements for Public Buildings"
+      result: "in favor (383 to 49)"
+    - motion: "Article 9 Walls and Fences"
+      result: "in favor (392 to 36)"
+    - motion: "Article 10 Stormwater Construction"
+      result: "in favor (400 to 33)"
+    - motion: "Article 11 Water and Sewer Consent Articles"
+      result: "in favor (407 to 30)"
+    - motion: "Article 12 Administrative Pay Schedule"
+      result: "in favor (401 to 27)"
+    - motion: "Article 13 Traffic Supervisors Pay Schedule"
+      result: "in favor (409 to 28)"
+    - motion: "Article 14 Seasonal Personnel Pay Schedule"
+      result: "in favor (413 to 24)"
+    - motion: "Article 15 Compensation of Town Officers"
+      result: "in favor (381 to 54)"
+    - motion: "Article 16 Ratification of Salary Bylaw"
+      result: "in favor (370 to 78)"
+    - motion: "Article 17 Essex Tech Assessment"
+      result: "in favor (428 to 12)"
+    - motion: "Article 18 Free Cash to Reduce Tax Rate"
+      result: "in favor (406 to 28)"
+    - motion: "Article 19 Police Collective Bargaining"
+      result: "in favor (387 to 45)"
+    - motion: "Article 20 MMEU Collective Bargaining"
+      result: "in favor (402 to 35)"
+    - motion: "Article 21 Fire Collective Bargaining"
+      result: "in favor (418 to 20)"
+    - motion: "Article 22 Budget — General Government"
+      result: "in favor (396 to 38)"
+    - motion: "Article 22 Budget — Public Safety"
+      result: "in favor (402 to 28)"
+    - motion: "Article 22 Budget — Schools"
+      result: "in favor (373 to 52)"
+    - motion: "Article 22 Budget — Public Works and Facilities"
+      result: "in favor (394 to 21)"
+    - motion: "Article 22 Budget — Human Services"
+      result: "in favor (393 to 23)"
+    - motion: "Article 22 Budget — Culture and Recreation"
+      result: "in favor (395 to 18)"
+    - motion: "Article 22 Budget — Debt Service"
+      result: "in favor (392 to 20)"
+    - motion: "Article 22 Budget — Other General Government"
+      result: "in favor (391 to 26)"
+    - motion: "Article 22 Budget — Sewer Enterprise Fund"
+      result: "in favor (398 to 14)"
+    - motion: "Article 22 Budget — Water Enterprise Fund"
+      result: "in favor (388 to 13)"
+    - motion: "Article 22 Budget — Harbor Enterprise Fund"
+      result: "in favor (376 to 23)"
+    - motion: "Article 22 Appropriations $119,479,480"
+      result: "in favor (372 to 19)"
+    - motion: "Article 24 Amendment 1 (short-term rental for primary unit, owner-occupant)"
+      result: "in favor (55 to 324) — FAILED"
+    - motion: "Article 24 Amendment 2 (short-term rental for both units, owner-occupant)"
+      result: "in favor (59 to 322) — FAILED"
+    - motion: "Article 24 ADU Zoning Bylaw"
+      result: "in favor (313 to 46)"
+    - motion: "Article 25 Floodplain District Bylaw"
+      result: "in favor (315 to 23)"
+    - motion: "Article 26 Prudent Investor"
+      result: "in favor (281 to 42)"
+    - motion: "Article 27 General Stabilization Fund $1M"
+      result: "in favor (310 to 9)"
+    - motion: "Article 28 Home Rule Petition — Senior Tax Exemption"
+      result: "in favor (297 to 23)"
+    - motion: "Article 29 Adjusted Veterans Exemption Clause 22I"
+      result: "in favor (298 to 11)"
+    - motion: "Article 30 Optional Additional Veterans Exemption Clause 22J"
+      result: "in favor (292 to 18)"
+    - motion: "Article 31 Coffin School Reuse Transfer to Select Board"
+      result: "in favor (229 to 86)"
+    - motion: "Article 32 Gary School Playground Transfer to Recreation and Parks"
+      result: "in favor (299 to 9)"
+    - motion: "Article 35 Indefinite Postponement"
+      result: "in favor (259 to 22) — quorum lost"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 24
+    end_seconds: 2171
+    headline: "Article 2: Capital project updates, charter committee report, and finance committee overview"
+    dek: "Department heads updated town meeting on the MHS roof, transfer station, road paving plan, and charter committee progress before the Finance Committee presented its annual report."
+    summary: |
+      The moderator convened Night 3 of the 2025 Annual Town Meeting and moved through Article 2 (Reports of Town Officers and Committees).
+      
+      **School roof:** Mike Ling reported that the previously approved $5.36M is part of a $14M total need; design will follow the HVAC ballot vote, with construction expected June–October 2026.
+      
+      **Transfer station:** Board of Health Chair Helene Ley (retiring after 28 years) reported completion of the compactor replacement, new transaction hut, and traffic pole reconfiguration. FY26 work focuses on a new scale house and site work.
+      
+      **Roads and sidewalks:** DPW Director Amy McHugh presented a five-year capital improvement plan funded by the $12.495M override approved in June 2022. FY23–FY24 spending totaled $2,081,217. The plan maintains a ~$2.5M/year pace to hold the overall road rating while steadily improving sidewalks.
+      
+      **Charter committee:** Chair Amy Drinker reported 21 open-session meetings since June 2024. Draft language is posted online. Three public forums are planned for late May. A final draft is targeted for the Select Board in March 2026, with a town-wide vote to follow if approved at May 2026 town meeting.
+      
+      **Finance committee:** Vice-Chair Molly Teets reported a full nine-member roster, a FY26 reserve fund of $444,000 (one draw of $45,000 made in FY25), and noted that a new accounting system (Phase 2 of the ClearGov upgrade) is coming in the next few months.
+    key_speakers: ["Mike Ling (school facilities)", "Helene Ley (Board of Health Chair)", "Amy McHugh (DPW Director)", "Thatcher Kezer (Town Administrator)", "Amy Drinker (Charter Committee Chair)", "Molly Teets (Finance Committee Vice-Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2171
+    end_seconds: 3428
+    headline: "Articles 3–8 pass: consent items, unpaid bills, equipment, leases, and building improvements"
+    dek: "Town meeting approved routine capital and consent articles totaling roughly $1M in free cash plus lease-purchase items, with brief public comment on vehicle policy and police car markings."
+    summary: |
+      Articles 3 through 8 were addressed in sequence:
+      
+      | Article | Subject | Vote |
+      |---|---|---|
+      | 3 | Consent articles (trust, contracts, conservation) | 402–22 |
+      | 4 | Unpaid accounts ($28,669) | 403–25 |
+      | 5 | Departmental revolving funds | 408–21 |
+      | 6 | Equipment purchases (~$1M free cash + $29,917 waste revolving) | 349–84 |
+      | 7 | Lease-purchase vehicles (two-thirds vote required) | 367–62 |
+      | 8 | Public building improvements ($251,958) | 383–49 |
+      
+      A resident (Albert Jordan) raised questions about the town vehicle fleet — specifically the addition of electric pickup trucks at ~$70,000 each, the lack of decals on town vehicles, and the color of police cruisers. The moderator directed him to speak with department heads and the Select Board.
+      
+      Building improvements in Article 8 include: Glover HVAC cafeteria ($70,000), Glover School Playground ($60,000), Performing Arts Center seat reupholstering ($106,958), and police station flooring ($15,000).
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Albert Jordan (Resident, 64 Roosevelt Avenue)"]
+  - topic: trash-dpw
+    topic_confidence: 0.85
+    start_seconds: 3428
+    end_seconds: 3541
+    headline: "Article 9 ($50,000 walls/fences) and Article 10 ($400,000 stormwater) approved"
+    dek: "Annual appropriations for walls and fences maintenance and stormwater system construction both passed with strong margins."
+    summary: "Article 9 appropriated $50,000 for walls and fences maintenance (392–36). Article 10 appropriated $400,000 for stormwater construction, reconstruction, permitting, and maintenance, funded from the tax levy (400–33). DPW Director Amy McHugh briefly described Article 10 as a standard annual stormwater article."
+    key_speakers: ["Amy McHugh (DPW Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 3541
+    end_seconds: 4785
+    headline: "Articles 11–17 pass: water/sewer construction, pay schedules, salary bylaw ratification, Essex Tech"
+    dek: "Town meeting approved water and sewer capital articles, three 2% cost-of-living pay schedule articles, salary bylaw ratification including new DPW and community development positions, and the Essex Tech assessment."
+    summary: |
+      **Article 11** (water and sewer construction consent articles): Water at $1,236,000 and sewer at $1,599,000, both funded by enterprise rates (407–30).
+      
+      **Articles 12–14**: 2% cost-of-living pay schedule increases for administrative staff, traffic supervisors, and seasonal/temporary personnel — all passed with large margins.
+      
+      **Article 15**: Elected Town Clerk compensation at 2% increase (381–54).
+      
+      **Article 16** (Salary bylaw ratification): Town Administrator Kezer explained a compensation committee process that rescored positions in the DPW reorganization, created a new Assistant Engineer grade, formalized the Community Development and Planning Director position, created an Assistant Director of Waste position (unfunded this year), and created a Superintendent of Recreation position. Passed 370–78.
+      
+      **Article 17** (Essex Tech): School committee chair Mark Troub reported 1,836 students, 27 programs, fifth consecutive year at the state minimum assessment for Marblehead, and over $10M in competitive grants to date. Passed 428–12.
+    key_speakers: ["Amy Chu (Water and Sewer Superintendent)", "Alexa Singer (Select Board)", "Thatcher Kezer (Town Administrator)", "Mark Troub (Essex Tech School Committee Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.7
+    start_seconds: 4785
+    end_seconds: 5134
+    headline: "Essex Tech FY26 assessment approved; Marblehead at state minimum contribution for fifth straight year"
+    dek: "Town meeting voted 428–12 to fund the Essex Tech district assessment, with the chair reporting Marblehead has been at the state-mandated minimum for five consecutive years."
+    summary: "Essex Tech School Committee Chair Mark Troub reported that the school currently serves 1,836 students across 27 career and technical programs on a 165-acre Danvers campus. Over 1,500 students applied for the class of 2029, and 500 were accepted. Essex Tech is the third most affordable of 29 vocational schools in the Commonwealth. Marblehead has 32 enrolled students across a range of programs. Troub also announced the opening of the Catherine Larkin Event Center, funded entirely by private donations and built by students."
+    key_speakers: ["Mark Troub (Essex Tech School Committee Chair)"]
+  - topic: override
+    topic_confidence: 0.75
+    start_seconds: 5134
+    end_seconds: 5335
+    headline: "Article 18: $7M free cash plus $360,000 electric surplus appropriated to reduce the tax rate"
+    dek: "Finance Director Benjamin reported total of $7,360,000 will offset the general fund budget, with a separate $1M going to the stabilization fund."
+    summary: "Finance Director Alicia Benjamin presented Article 18, recommending $7 million from free cash plus an electric surplus of $360,000 (up from $330,000) to reduce the tax rate, for a total offset of $7,360,000. A resident asked why more was not going to savings; Benjamin noted a separate article would add $1M to the stabilization fund and that the Select Board has adopted a financial policy targeting reserves equal to 5% of the general fund. Article 18 passed 406–28."
+    key_speakers: ["Alicia Benjamin (Finance Director)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 5335
+    end_seconds: 5849
+    headline: "Three collective bargaining agreements ratified: police (3.5%), MMEU (3%), and fire (3%)"
+    dek: "Articles 19–21 appropriated a combined $430,000 from free cash to fund FY26 labor agreements with the police, general municipal employees, and firefighters."
+    summary: |
+      **Article 19 — Police ($140,000):** One-year agreement at 3.5% (2.5% COLA plus 1% for new POST requirements), with the $140,000 covering the gap above the 2% budgeted. Passed 387–45.
+      
+      **Article 20 — MMEU/Municipal Employees ($140,000):** Three-year agreement settling FY25 at 2% and FY26 at 3%. The $140,000 covers the difference above the 2% already in the budget. Passed 402–35.
+      
+      **Article 21 — Fire ($150,000):** One-year agreement at 3%. Fire contracts had not yet expired; this is a timely, forward-looking settlement. The slightly higher dollar amount reflects a larger workforce. Passed 418–20.
+      
+      The moderator noted all three contracts were settled and called for a round of applause.
+    key_speakers: ["Thatcher Kezer (Town Administrator)", "Molly Teets (Finance Committee Vice-Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.95
+    start_seconds: 5849
+    end_seconds: 8799
+    featured: true
+    headline: "Article 22: $119.5M FY26 operating budget approved in full, schools at $49.1M"
+    dek: "Town meeting voted section by section on a $119,479,480 budget, approving all line items including the $49.1M school department appropriation."
+    summary: |
+      Finance Committee Vice-Chair Molly Teets presented the FY26 balanced operating budget of **$119,479,480**, comprising:
+      - $96.9M general operating budget
+      - $9.3M previously approved debt service
+      - $13.3M enterprise fund expenses (water, sewer, harbor — funded by fees)
+      
+      **Revenue picture:** FY26 revenues are $5.6M (6%) above the prior year's forecast. Key drivers include ~3% tax levy growth (2.5% Prop 2½ limit plus ~0.5% new growth), a 25% increase in local receipts (interest income and hotel/meals tax), flat net state aid, and $1.5M more free cash utilization.
+      
+      **Expense drivers:** Salaries and wages up 4–4.5%; health insurance up 8–10%; pension assessment up 8–9%; utilities up 4–5%.
+      
+      **Outlook warning:** The Finance Committee noted recurring expenses are estimated to outpace recurring revenues under Prop 2½. Trash collection costs are expected to spike 35–40% when the current contract expires at the end of FY26. Free cash utilization is not expected to be a balancing option in future years.
+      
+      **Notable revenue:** Hotel/meals tax (adopted at last year's town meeting) generated approximately $575,000 year-to-date through March 31.
+      
+      **Budget sections voted:**
+      
+      | Section | Amount | Vote |
+      |---|---|---|
+      | General Government | $4,754,738 | 396–38 |
+      | Public Safety | $11,237,760 | 402–28 |
+      | Schools | $49,120,287 | 373–52 |
+      | Public Works & Facilities | $5,844,487 | 394–21 |
+      | Human Services | $898,026 | 393–23 |
+      | Culture & Recreation | $2,537,869 | 395–18 |
+      | Debt Service | $9,314,141 | 392–20 |
+      | Other General Government | $22,499,072 | 391–26 |
+      | Sewer Enterprise | $5,532,269 | 398–14 |
+      | Water Enterprise | $6,463,957 | 388–13 |
+      | Harbor Enterprise | $1,276,874 | 376–23 |
+      | **Total Appropriations** | **$119,479,480** | **372–19** |
+      
+      **Holds discussed:** Town Counsel explained the town council budget difference between a $2,000 salary line and $113,000 in legal services expenses. The new Community Development and Planning Department (five staff) was discussed at length; Town Administrator Kezer explained positions were funded by reallocating salaries from eliminated or restructured positions, including the retired town engineer's salary. Residents spoke in support of the sustainability coordinator role, noting approximately $700,000 in grants secured. A DPW resident hold addressed street signage and stop-line painting concerns.
+    key_speakers: ["Molly Teets (Finance Committee Vice-Chair)", "Thatcher Kezer (Town Administrator)", "Alicia Benjamin (Finance Director)", "Emily DeJoy (Resident, Riverside Drive)", "Albert Jordan (Resident, 64 Roosevelt Avenue)", "Jim Regis (Resident, 1 Lee Street)", "Eileen Haley (Green Marblehead Implementation Committee)", "Elaine Leahy (Resident, Ida Road)"]
+  - topic: 40b-mbta
+    topic_confidence: 0.95
+    start_seconds: 8799
+    end_seconds: 12082
+    headline: "Article 24: ADU zoning bylaw updated to comply with state law; two short-term rental amendments defeated"
+    dek: "Town meeting rejected both amendments that would have allowed owner-occupant short-term rentals in ADU properties, then approved the underlying bylaw update 313–46."
+    summary: |
+      Town Planner Alex Seidler presented Article 24, which updates Marblehead's accessory dwelling unit (ADU) bylaw to comply with the state's Affordable Homes Act signed in August 2024.
+      
+      **Key changes in the underlying bylaw:**
+      - Maximum ADU size reduced from 1,000 sq ft to 900 sq ft
+      - Parking requirement reduced to one space maximum (from two) for ADUs within a half-mile of a transit stop; one space maximum elsewhere
+      - Owner-occupancy requirement removed (now prohibited by state regulation)
+      - Site plan review before the Planning Board retained
+      - Short-term rentals (defined as 90 days or less) remain prohibited in both the accessory and principal dwelling units where an ADU exists
+      
+      **Amendment 1** (proposed by Yael McGinn, 165 West Shore Drive): Would have allowed short-term rentals of the principal dwelling unit only for owner-residents. Planning Board and Town Counsel raised legality concerns under state regulations prohibiting owner-occupancy requirements. **Failed 55–324.**
+      
+      **Amendment 2** (same proponent): Would have allowed short-term rentals of both units for owner-residents. **Failed 59–322.**
+      
+      Key exchange: Planning Board member Barton Height stated the amendments were "100% misinformation" and that the state's ADU law is specifically about creating housing, not short-term rentals. Town Counsel Adam Costa confirmed the state regulations explicitly prohibit owner-occupancy requirements and warned the AG's office would likely find the amendments in violation.
+      
+      **Main Article 24 vote: 313–46 (passed).**
+    key_speakers: ["Alex Seidler (Town Planner and Conservation Agent)", "Yael McGinn (Resident, 165 West Shore Drive — amendment proponent)", "Aaron Nunan (Select Board Chair)", "Barton Height (Planning Board member)", "Adam Costa (Town Counsel)"]
+  - topic: permits-zoning
+    topic_confidence: 0.85
+    start_seconds: 12082
+    end_seconds: 12611
+    headline: "Article 25: Floodplain district bylaw updated to maintain FEMA flood insurance eligibility"
+    dek: "Town Planner Seidler explained that failure to adopt the update would risk Marblehead residents losing access to subsidized FEMA flood insurance; article passed 315–23."
+    summary: |
+      Article 25 updates Marblehead's floodplain district bylaw to comply with new FEMA standards and terminology. The last update was in 2014. Key changes include: a new floodplain work permit requirement for any work in a flood zone; formal designation of the town engineer as floodplain administrator; and updated definitional language.
+      
+      Seidler noted that of the six FEMA map panels covering Marblehead, only one has been substantively redrawn — specifically for inland flooding near swamps bordering Salem. Residents concerned about whether their property is newly in a flood zone were directed to contact the town planner's office at 7 Widger Road.
+      
+      The Planning Board voted 5–0 to recommend the article. Passed 315–23.
+    key_speakers: ["Alex Seidler (Town Planner and Conservation Agent)", "Bill Walsh (Resident)"]
+  - topic: bonding-capital
+    topic_confidence: 0.75
+    start_seconds: 12611
+    end_seconds: 12935
+    headline: "Articles 26–27: Prudent investor authority and $1M stabilization fund contribution approved"
+    dek: "Town meeting gave the treasurer flexibility to invest beyond the state's legal list and added $1M to the general stabilization fund."
+    summary: |
+      **Article 26 (Prudent Investor, 281–42):** Adopts MGL Chapter 203C, allowing the town treasurer to invest trust funds in a broader range of equities beyond the outdated state legal list (which still lists Hewlett Packard but not Microsoft, Apple, or Google). Fiduciary responsibility is maintained. The treasurer's financial advisor is Bartholomew and Company of Rockland.
+      
+      **Article 27 (Stabilization Fund, 310–9):** Appropriates $1,000,000 to the general stabilization fund, continuing progress toward the Select Board's policy goal of building reserves equal to 5% of the general fund. Combined with prior contributions, the stabilization fund will exceed $1.5M.
+    key_speakers: ["Alicia Benjamin (Finance Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 12935
+    end_seconds: 13615
+    headline: "Articles 28–30 approved: senior means-tested tax exemption home rule petition and veterans exemption increases"
+    dek: "Town meeting approved a home rule petition for a new income-tested property tax exemption for qualifying seniors and two clauses expanding exemptions for disabled veterans."
+    summary: |
+      **Article 28 — Senior means-tested exemption (home rule petition, 297–23):** Select Board member Dan Fox presented this article. Qualifying criteria: age 65+ (or co-owner 60+), 10-year residency, assessed home value at or below the town mean (~$1.2M for FY25), income limits set annually by the Select Board, and mandatory filing for the state senior circuit breaker credit first. The program will be funded from the tax overlay. Year-one maximum exemption proposed at $2,000 per participant, with an estimated total cost of ~$200,000. As a home rule petition, it must still pass the state legislature and be signed by the governor before taking effect (approximately one year). A potential future expansion to include disabled persons was discussed but deferred for further study.
+      
+      **Article 29 — Clause 22I CPI adjustment for disabled veterans (298–11):** Allows the existing veterans exemption to increase annually based on CPI, similar to a provision passed last year for seniors.
+      
+      **Article 30 — Clause 22J additional veterans exemption (292–18):** Doubles the exemption amount for disabled veterans after the CPI adjustment is applied (e.g., $400 → $420 via Article 29, then doubled to $840 via Article 30). Combined expected annual cost of Articles 29 and 30 is approximately $60,000 from the overlay.
+    key_speakers: ["Dan Fox (Select Board)", "Alicia Benjamin (Finance Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 13615
+    end_seconds: 14258
+    headline: "Articles 31–35: Coffin School transferred to Select Board; quorum lost before full completion"
+    dek: "Town meeting authorized transfer of the Coffin School property to the Select Board for a reuse process (229–86), transferred the Gary School Playground to Recreation and Parks, and lost quorum during Article 35, adjourning to the following night."
+    summary: |
+      **Article 31 — Coffin School Reuse (229–86, two-thirds required):** Select Board member Moses Greater explained the school committee has declared the Coffin School surplus. The transfer to the Select Board enables a public reuse process modeled on the 2019 Gary School process, which may include sale under Chapter 30B procedures. Public speakers expressed support for retaining the land, using it for affordable senior housing, or simply holding it as open space pending clarity on MBTA Communities zoning impacts.
+      
+      **Article 32 — Gary School Playground transfer to Recreation and Parks Commission (299–9):** Brendan Callahan explained this transfers the retained playground parcel (separate from the sold school building) to the Recreation and Parks Commission. The Park on Elm Community Group has been partnering on improvements already underway.
+      
+      **Article 35 — Indefinite postponement of an Article 11 (2022) fire station windows appropriation:** The moderator called the vote and received 259 yes to 22 no, but noted the total clicker count indicated quorum had slipped below the required threshold. The moderator declared quorum lost, recorded Article 35 as passed (259–22), and called a motion to reconvene the following night at 7:00 PM to complete remaining business.
+    key_speakers: ["Moses Greater (Select Board)", "Brendan Callahan (Select Board / Recreation liaison)", "Pam Flynn (Resident, Turner Road)", "Patricia Ats (Resident, Village Street)", "Alexis Soul (Resident, Front Street)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

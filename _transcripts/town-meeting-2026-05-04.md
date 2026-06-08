@@ -9,7 +9,279 @@ vimeo_url: "https://vimeo.com/1189445340"
 duration_seconds: 13435
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Marblehead town meeting approves $7.7M override proposal for June ballot, 1,227-159"
+  summary: "The 2026 Marblehead Annual Town Meeting, attended by approximately 1,200 residents, approved a three-tier Proposition 2½ general override proposal (Article 29) by a vote of 1,227 to 159, placing the question on the June 9 ballot. The meeting also passed the FY27 balanced operating budget of approximately $96.5 million, which includes 43.5 FTE eliminations and a new curbside trash fee. Town meeting approved MBTA 3A zoning compliance (Article 4) and a range of routine warrant articles."
+  decisions:
+    - "Approved reordering of warrant articles to prioritize budget and override articles"
+    - "Approved Article 2 (reports of town officers and committees)"
+    - "Approved Article 22 (use of $5,360,000 in free cash and surplus to reduce tax rate)"
+    - "Approved Article 23 (FY27 general fund operating budget totaling approximately $122.9 million)"
+    - "Approved Article 29 (Proposition 2½ override appropriations for June 9 ballot)"
+    - "Approved Article 4 (MBTA 3A multifamily overlay district zoning amendment)"
+    - "Approved Article 5 (accessory dwelling unit zoning bylaw amendment)"
+    - "Approved Article 6 (unpaid accounts, $60,182)"
+    - "Approved Article 7 (departmental revolving fund caps totaling $4,272,898)"
+    - "Indefinitely postponed Article 8 (purchase of equipment)"
+    - "Approved Article 9 (lease purchase, $510,682)"
+    - "Indefinitely postponed Article 10 (capital improvements for public buildings)"
+    - "Approved Article 11 (walls and fences repairs)"
+    - "Approved Article 12 (stormwater construction, $200,000)"
+    - "Approved Article 13 (water and sewer consent articles)"
+    - "Approved Article 14 (MWRA interest-free loan authority, up to $3.5 million)"
+    - "Approved Articles 15, 16, 17 (pay schedule reclassifications)"
+    - "Approved Article 18 (town clerk salary, $97,460)"
+    - "Approved Article 19 (firefighters collective bargaining, $143,238 from free cash)"
+    - "Approved Article 20 (ratification of salary bylaw actions)"
+    - "Approved Article 21 (Essex Tech assessment, $749,000)"
+    - "Indefinitely postponed Articles 24, 25, 26, 27, 28 (stabilization and school capital/supplemental articles)"
+    - "Approved Article 30 (rescind $1,619,627 in unused Brown/Gerry School bond authorization)"
+    - "Approved Article 31 (administrative benefit amendment)"
+    - "Approved Article 32 (mooring fee increase)"
+    - "Approved Article 33 (prohibition of cryptocurrency ATMs)"
+    - "Indefinitely postponed Article 34 (dissolve Public Works Committee)"
+    - "Approved Article 35 (amend Public Works Committee bylaw)"
+    - "Approved Article 36 (DPW bylaw housekeeping amendments)"
+    - "Indefinitely postponed Articles 37, 38, 39"
+    - "Approved Article 40 main motion (resolution affirming commitment to Declaration of Independence and Constitution); rejected amendment naming President Trump"
+  votes:
+    - motion: "Amendment to reorder warrant (Article 1 amendment)"
+      result: "in favor (unanimous by electronic vote, exact tally not announced)"
+    - motion: "Article 1 as amended (warrant reorder)"
+      result: "in favor (1023 to 225)"
+    - motion: "Article 29 (Prop 2½ override appropriations for ballot)"
+      result: "in favor (1227 to 159)"
+    - motion: "Article 4 (MBTA 3A zoning)"
+      result: "in favor (81 to 82 — noted as passing)"
+    - motion: "Article 5 (ADU zoning bylaw amendment)"
+      result: "in favor (69 to 47)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 23
+    end_seconds: 559
+    headline: "Town meeting opens with pledge, land acknowledgement, and anti-discrimination statement"
+    dek: "Moderator welcomed approximately 1,200 attendees to the 377th Marblehead Annual Town Meeting."
+    summary: "The meeting opened with the Pledge of Allegiance led by VFW Commander Ronnie Knight, a land acknowledgement by Diane Gora recognizing the Naumkeag people, and a statement from the Task Force Against Discrimination read by Joe Whipple. The moderator outlined voting procedures, including the electronic voting system entering its third year."
+    key_speakers: ["Moderator (Jack Attridge)", "Diane Gora", "Joe Whipple (Task Force Against Discrimination)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 559
+    end_seconds: 1279
+    headline: "Town meeting votes 1,023-225 to reorder warrant, taking up budget articles first"
+    dek: "Resident Matthew Hooks moved to bring Articles 2, 22, 23, and 29 to the front of the warrant while the hall was full."
+    summary: "Matthew Hooks (Nana Pashman Street) moved to reorder the warrant so that budget and override articles would be addressed first. Supporters argued those present deserved to vote on consequential items; opponents raised quorum concerns for remaining articles. The amendment passed and the main motion as amended carried 1,023 to 225 via electronic vote."
+    key_speakers: ["Matthew Hooks (resident)", "Peter Barnett (resident)", "Sarah Fox (resident)", "Rebecca Whitehill (resident)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1380
+    end_seconds: 2649
+    headline: "Article 2 reports cover high school roof, transfer station, roads, home rule petitions, and finance committee"
+    dek: "Department heads and officials gave updates on capital projects and state-signed home rule petitions before FinCom Chair Alec Goolsby introduced the budget cycle."
+    summary: |
+      Reports included: the MHS roof project currently $2.6 million under the $13.8 million authorized budget with work beginning in earnest June 23; Mary Alley roof bids due by Thursday; transfer station upgrades completed. DPW Director Amy McCue reported $12,475,000 in road and sidewalk capital approved in 2022 is progressing with a holistic infrastructure approach.
+      
+      Representative Jenny Armini reported three home rule petitions signed into law: a means-tested senior property tax exemption, Board of Health expansion from 3 to 5 members, and a parking fine snowstorm act. Charter Committee Chair Amy Drinker noted a draft charter will be submitted to the Select Board in June and memorialized committee member Sean Casey.
+      
+      Finance Committee Chair Alec Goolsby described a $7.7 million structural deficit, a three-year forecast showing growing deficits, and a new cost-accountability framework splitting shared benefits 62% schools / 38% town. The FY26 reserve fund stands at $315,000 remaining of $444,000.
+    key_speakers: ["Mike Piffeling (Asst. Superintendent, Finance & Operations)", "Steve Cummings (Building Commissioner)", "Andrew Petty (Director of Public Health)", "Amy McCue (DPW Director)", "Rep. Jenny Armini", "Robert Peck (Retirement Board Chair)", "Amy Drinker (Charter Committee Chair)", "Alec Goolsby (Finance Committee Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 2763
+    end_seconds: 4243
+    headline: "FY27 balanced budget passes: $96.5M total, with 43.5 FTE cuts and new curbside trash fee"
+    dek: "Finance Committee Chair Goolsby and CFO Alicia Benjamin detailed how a $7.7M deficit was closed through cuts, a new trash fee, and one-time school prepayment."
+    summary: |
+      Finance Committee Chair Alec Goolsby presented the FY27 budget, explaining the $7.7 million deficit arose from:
+      - Wages: $3.1M (town $1.3M + schools $1.8M)
+      - Health insurance (GIC, ~10% increase): $1.7M
+      - New curbside collection contract: $1.0M
+      - Pension: $0.5M
+      - Out-of-district SPED tuition/transport: $0.3M
+      - Other: $0.5M
+      - Net revenue decline: $0.6M
+      
+      **Town side ($4M share):** Closed via a new $2.2M curbside waste fee established by the Board of Health, plus ~$2.4M in cuts including: library ($700K, 8.25 FTE, at risk of state decertification), community development and planning ($300K, 3 of 5 positions eliminated including dept. head, sustainability coordinator, grant coordinator), other general government ($590K). Total town side: 22 FTE eliminated (~12% of workforce).
+      
+      **School side ($3.7M share):** $1.5M one-time prepayment of FY27 out-of-district SPED tuition from FY26 funds; $750K in teacher/IA salary cuts; $450K from vacant positions; $350K shifted to revolving funds/grants; $650K in other reductions. 18.25 FTE eliminated (~4% of school workforce), 11 currently filled.
+      
+      S&P affirmed Marblehead's AAA bond rating but revised outlook from stable to negative. Town reserves at ~2% of operating budget vs. a 5% policy target.
+      
+      CFO Alicia Benjamin reported FY27 debt service reduced to $10,971,016. A $26.2M bond issuance received a $1.5M premium, bringing net borrowing to ~$24.975M at 3.75% true interest cost. Total general fund debt outstanding: $146,297,626 through 2056.
+    key_speakers: ["Alec Goolsby (Finance Committee Chair)", "Alicia Benjamin (CFO)", "Town Administrator (Thatcher Keiser)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 4251
+    end_seconds: 6536
+    headline: "Budget line-item holds addressed before all 11 budget silos pass by hand vote"
+    dek: "Residents questioned the curbside line, community development cuts, the police budget, and the high school roof savings before the moderator called hand votes on each silo."
+    summary: |
+      During the hold process, notable exchanges included:
+      - **High school roof:** Resident Jack Buba challenged whether the $2.6M in savings relative to the $13.8M authorization would be spent on items not in the original scope. Assistant Superintendent Piffeling confirmed the project is under budget but cited unforeseen contingencies (roof drains, interior ceilings). No resolution reached.
+      - **Community development:** Resident Stacey Bell asked about the impact of eliminating the grant coordinator. Town Administrator Keiser said grant-writing duties would shift to department heads. A follow-up speaker noted the department had secured $1.9M in grants since FY25 creation (net gain ~$1.7M).
+      - **Curbside collection:** An attempted amendment by John Prindiville to add $1.5M funded from stabilization was ruled out of order.
+      - **Library:** Clarification that Article 23 funds the reduced library budget; Article 29 override would restore funding.
+      
+      All 11 budget silos passed by hand vote. Total general fund operating budget: $96,529,648 raised/appropriated from multiple sources including $87,869,977 raise-and-appropriate, $2,186,516 curbside fee, and various enterprise fund transfers.
+    key_speakers: ["Jack Buba (resident)", "Mike Piffeling (Asst. Superintendent)", "Stacey Bell (resident)", "Cindy Towerlowin (resident)", "Albert Jordan (resident)", "Thatcher Keiser (Town Administrator)", "Andrew Petty (Director of Public Health)", "Marta Bach (resident)"]
+  - topic: override
+    topic_confidence: 0.99
+    start_seconds: 6627
+    end_seconds: 8975
+    featured: true
+    headline: "Selectboard's three-tier Prop 2½ override passes town meeting 1,227-159, heads to June 9 ballot"
+    dek: "Select Board Chair Dan Fox and School Committee member Melissa Klukas presented a three-tier, three-year override ranging from $9M to $18M total, which town meeting approved overwhelmingly."
+    summary: |
+      Select Board Chair Dan Fox and School Committee member Melissa Klukas presented Article 29, a multi-tier Proposition 2½ general override to address the structural deficit.
+      
+      **Three tiers (each builds on prior):**
+      
+      | Tier | Description | Year-1 Draw | Total Override |
+      |------|-------------|-------------|----------------|
+      | Tier 1 | Partial restore | $1.27M | ~$9M |
+      | Tier 2 | Build | $2.81M | ~$12M |
+      | Tier 3 | Invest | $4.30M | ~$18M |
+      
+      **Tier 1** restores 15 of 20.5 town FTEs cut, including library accreditation-waiver staffing (reduced hours), COA nutritional coordinator, SRO, DPW heavy equipment operator/laborer, and key finance/planning staff. Schools: funds FY28-29 salary obligations at adjusted staffing; returns revolving-fund positions to general fund.
+      
+      **Tier 2** adds: COA social worker, full library restoration, GIS position, $450K building maintenance, 1 police officer, 2 firefighters, IT director, assistant planner, conservation agent, $150K technology leases, and free full-day kindergarten.
+      
+      **Tier 3** adds: specialized DPW equipment operator/foreman, 1 more police officer, 2 more firefighters, grant writer, $60K community mental health, $1.5M recurring capital, $100K curriculum/PD, in-district 18-22 SPED program.
+      
+      **Tax impact (median assessed home, Tier 2 example):** Year 1 +$280, Year 2 +$676, Year 3 +$274 = $1,230/year by Year 3.
+      
+      A Memorandum of Understanding among the Select Board, School Committee, and Finance Committee commits to maximum draw amounts per year and no return for at least three years.
+      
+      A separate curbside trash override question ($2.2M) will also appear on the June 9 ballot regardless of Article 29's outcome. Ballot will present tiers as three separate yes/no questions; the highest-dollar tier receiving >50% yes votes prevails.
+      
+      **Vote: 1,227 yes to 159 no.**
+    key_speakers: ["Dan Fox (Select Board Chair)", "Melissa Klukas (School Committee)", "Alec Goolsby (Finance Committee Chair)", "Bit Capola (resident)", "Dave Weber (resident)", "Bonnie Carey (resident)", "Carl Goodman (resident)", "Jean Lamkin (resident)"]
+  - topic: 40b-mbta
+    topic_confidence: 0.98
+    start_seconds: 8980
+    end_seconds: 10543
+    headline: "Article 4 approves revised MBTA 3A overlay district at Tedesco golf course and Broughton Road"
+    dek: "A revised 3A plan focusing on Tedesco Country Club and Broughton Road received preliminary EOHLC approval and passed town meeting 81 to 82."
+    summary: |
+      The revised MBTA 3A multifamily overlay district plan, developed after a working group removed the Tioga Way and Pleasant Street sub-districts from a prior rejected plan, consists of two sub-districts:
+      
+      - **Tedesco sub-district:** Two parcels (Tedesco golf course + parking lot across from clubhouse), capacity 780 units, max height 35 ft, mixed-use allowed, architectural guidelines included.
+      - **Broughton Road sub-district:** All of Broughton Road, capacity 120 units, max height 35 ft.
+      
+      Combined capacity: 900 units, meeting the state-required 897. The plan received preliminary EOHLC approval in February 2026. Planning board voted 5-0 to recommend.
+      
+      Key discussion points:
+      - Tedesco ownership: zoning is an overlay only; no construction mandate; Tedesco representatives are aware and comfortable with the plan.
+      - Broughton Road: a 40B mixed-income senior/family building is already approved and proceeding independently of 3A.
+      - Affordability cap: state 3A law sets a **maximum** of 10% affordable units.
+      - Non-compliance risk: the AG's lawsuit is currently stayed pending tonight's vote; failure to comply would likely resume litigation in state court.
+      - Grant eligibility: compliance would restore eligibility for future grant rounds; prior rounds' ~$4M in lost grants are not recoverable.
+      
+      Passed electronically 81 to 82 (announced as passing).
+    key_speakers: ["Brendan Callahan (Planning Board)", "Barton Hite (Planning Board Vice Chair)", "Walter Casey (resident)", "Alexis Sol (resident)", "Nick Ward (resident)", "Carol Easthope (resident)", "Samantha Rosado (resident)"]
+  - topic: 40b-mbta
+    topic_confidence: 0.9
+    start_seconds: 10543
+    end_seconds: 10800
+    headline: "Article 5 amends ADU zoning bylaw to align with state law per AG guidance, passes 69-47"
+    dek: "The Attorney General had approved last year's ADU bylaw with caveats; this amendment addresses those and adds oversight for non-conforming lots."
+    summary: "Planning Board Vice Chair Barton Hite explained the amendment addresses conflicts between Marblehead's local ADU bylaw and the state ADU law identified after the AG's review of last year's bylaw. The AG encouraged further adjustments. The amendment also adds oversight for ADUs on preexisting non-conforming lots, which are prevalent in Marblehead. Passed electronically 69 to 47."
+    key_speakers: ["Barton Hite (Planning Board Vice Chair)", "Brendan Callahan (Planning Board)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 10800
+    end_seconds: 11393
+    headline: "Articles 6-13 pass, covering unpaid accounts, revolving funds, lease purchase, and water/sewer capital"
+    dek: "Routine annual articles including $60,182 in prior-year unpaid accounts, $510,682 lease purchase, and $4.5M in water/sewer retained-earnings capital were approved."
+    summary: |
+      - **Article 6:** $60,182.27 in FY25 unpaid accounts approved (4/5 vote required; passed unanimously).
+      - **Article 7:** Revolving fund caps totaling $4,272,898 approved (largest: Park $2M, commercial waste $1,367,598).
+      - **Article 8:** Purchase of equipment — indefinitely postponed due to fiscal constraints.
+      - **Article 9:** Lease purchase of $510,682 ($274,605 from free cash + $236,077 from waste revolving fund) approved.
+      - **Article 10:** Capital improvements for public buildings — indefinitely postponed.
+      - **Article 11:** Walls and fences repair — approved.
+      - **Article 12:** Stormwater construction, $200,000 from general fund, approved (note: a resident raised that prior town meeting had approved $300,000/year with inflation adjustments).
+      - **Article 13:** Water ($2.4M) and sewer ($2.1M) construction from retained earnings, plus claims-resolution authority — approved.
+    key_speakers: ["Alicia Benjamin (CFO)", "Maggie Wheeler (Town Engineer)", "Amy McCue (DPW Director / Superintendent Water & Sewer)", "Susan Petoskey (resident)"]
+  - topic: bonding-capital
+    topic_confidence: 0.85
+    start_seconds: 11356
+    end_seconds: 11393
+    headline: "Article 14 authorizes up to $3.5M MWRA interest-free loan for water distribution improvements"
+    dek: "The Water and Sewer Commission is authorized to seek the MWRA Local Water Systems Assistance Program loan; approval required a two-thirds vote."
+    summary: "Amy McCue explained the article authorizes the Water and Sewer Commission to secure an interest-free MWRA loan of up to $3.5 million for water distribution network improvements. Authorization does not commit the town to borrowing; further steps are required. Passed by hand vote with apparent two-thirds support."
+    key_speakers: ["Amy McCue (Superintendent Water & Sewer)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 11393
+    end_seconds: 11849
+    headline: "Pay schedules for administrative, traffic supervisor, and seasonal staff approved; firefighters' three-year CBA funded"
+    dek: "Articles 15-20 covered cost-of-living adjustments for non-union staff and a new 2026-2029 firefighters' collective bargaining agreement requiring $143,238 from free cash."
+    summary: |
+      - **Articles 15, 16, 17:** COLA adjustments for administrative, traffic supervisor (crossing guards), and seasonal/temporary staff approved, consistent with union contract increases.
+      - **Article 18:** Town Clerk salary set at $97,460 (3% increase).
+      - **Article 19:** Firefighters Local 2043 new three-year CBA (FY27-FY29): 3% wage increases in years 1-2, 3.5% in year 3; enhancements to detail pay, sick leave bank, longevity, educational incentives, and cancer screening. FY27 additional cost: $143,238 from free cash.
+      - **Article 20:** Ratification of compensation committee actions taken May 2025–April 2026: 6 reclassifications, 4 new/restructured positions graded, 1 title change, 10 job description updates.
+    key_speakers: ["Alexa Singer (Select Board)", "Thatcher Keiser (Town Administrator)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 11849
+    end_seconds: 12200
+    headline: "Article 21 approves Marblehead's $749,000 Essex Tech assessment; school serves 35 Marblehead students"
+    dek: "Essex Tech Chair Mark Strout reported the school is the second most affordable vocational school in Massachusetts and has secured $4.6M in competitive grants this year."
+    summary: "Mark Strout reported Essex Tech serves 1,926 students across 26 programs on its 166-acre Danvers campus. Marblehead's 35 students participate in programs including biotechnology, carpentry, electrical, HVAC, and veterinary sciences. The school secured $4.6M in grants with $9M pending. Marblehead's proportional assessment share is $749,000. Article 21 passed."
+    key_speakers: ["Mark Strout (Essex Tech School Committee Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 12200
+    end_seconds: 12408
+    headline: "Articles 24-28 indefinitely postponed; Article 30 rescinds $1.6M in unused Brown School bond authority"
+    dek: "Stabilization and school capital articles were postponed due to fiscal constraints; Brown/Gerry School project came in $1.6M under authorization."
+    summary: |
+      Articles 24 (General Stabilization Fund), 25, 26, 27, 28 (school capital and supplemental appropriations) were indefinitely postponed.
+      
+      Article 30 rescinded $1,619,627 in unused Brown/Gerry School bond authorization (project authorized at $54,844,767; final cost $53,225,140). CFO noted the MSBA reimbursement exceeded the project by $641,030, saving taxpayers $42,735/year through 2040.
+    key_speakers: ["Alicia Benjamin (CFO)"]
+  - topic: labor-personnel
+    topic_confidence: 0.8
+    start_seconds: 12383
+    end_seconds: 12408
+    headline: "Article 31 updates non-union administrative employee benefits for the first time in ~20 years"
+    dek: "Changes include 3 personal days, accelerated vacation accrual, and $750/year longevity increase at a total cost of $11,650."
+    summary: "CFO Alicia Benjamin presented Article 31 as an equity update for non-union administrative employees whose benefits had not been updated in approximately 20 years. Changes bring them in line with union staff: 3 personal days (no cost), accelerated vacation week, and $750/year longevity increase. Total budget impact: $11,650."
+    key_speakers: ["Alicia Benjamin (CFO)"]
+  - topic: recreation-events
+    topic_confidence: 0.75
+    start_seconds: 12408
+    end_seconds: 12583
+    headline: "Article 32 approves mooring fee increase to fund harbor operations and future seawall repairs"
+    dek: "Harbor Department Chair John Doub noted fees support 60% of harbor revenue and future capital needs including multi-million-dollar seawall repairs from Parker's to Tucker's Wharf."
+    summary: "Harbor and Waters Board Chair John Doub explained the periodic mooring fee increase (approximately every four years: 2018, 2022, now 2026) is needed to fund operations, the 10% general fund contribution, and capital reserves. Near-term capital includes $550,000 for potential emergency repairs to Stramski's Pier and Cliff Street building. Long-term capital includes seawall repairs along the harbor requiring millions of dollars, with grants being pursued. Article 32 passed."
+    key_speakers: ["John Doub (Harbor and Waters Board Chair)"]
+  - topic: public-safety
+    topic_confidence: 0.92
+    start_seconds: 12583
+    end_seconds: 12687
+    headline: "Article 33 bans cryptocurrency ATMs in Marblehead as consumer fraud prevention measure"
+    dek: "Police Chief Dennis King cited crypto kiosks as a preferred tool for scammers due to irreversible cash-to-crypto conversion."
+    summary: "Chief Dennis King requested the bylaw prohibiting Bitcoin ATMs/crypto kiosks as a public safety measure, noting these devices are used in fraud schemes because deposits are quickly converted and nearly impossible to recover. The measure does not restrict cryptocurrency ownership or investment. Several other Massachusetts communities have enacted similar prohibitions. Article 33 passed unanimously by hand vote."
+    key_speakers: ["Dennis King (Police Chief)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 12687
+    end_seconds: 13391
+    headline: "Remaining housekeeping articles pass; Article 40 constitutional resolution approved, partisan amendment rejected"
+    dek: "Articles 34-39 addressed DPW committee structure and employment bylaws; Article 40 affirming the Declaration of Independence and Constitution passed after an amendment naming President Trump as a danger failed."
+    summary: |
+      - **Article 34:** Dissolve Public Works Committee — indefinitely postponed.
+      - **Article 35:** Amend Public Works Committee bylaw (updated mission statement) — approved.
+      - **Article 36:** DPW bylaw housekeeping (updated titles, added mechanics, stormwater engineering) — approved.
+      - **Articles 37, 38, 39:** Limit municipal employment contracts to one year; restore elected Select Board terms to one year; repeal Community Development department — all indefinitely postponed.
+      - **Article 40:** Resolution affirming commitment to the Declaration of Independence and Constitution, proposed by Kate Wharton and Lynn Nadeau. An amendment by Walter Haug naming President Trump as 'a clear and true danger' and calling for his removal from office was rejected by hand vote. The main motion passed by hand vote.
+    key_speakers: ["Andrew Petty (Public Works Committee / Director of Public Health)", "Amy McCue (DPW Director)", "Kate Wharton (resident)", "Walter Haug (resident)", "Carol Easthope (resident)", "Nick Adams (resident)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
