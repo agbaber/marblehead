@@ -9,7 +9,199 @@ vimeo_url: "https://vimeo.com/1041072301"
 duration_seconds: 12847
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "School committee votes to use April vacation days and late-June days as strike makeup days"
+  summary: "The Marblehead School Committee voted 4-0 to designate April 23, 24, and 25 and June 23 and 24 as makeup days for the five remaining instructional days lost during the teacher strike. The committee also voted to suspend the attendance policy on those ten designated makeup days. Public comment focused on concerns about scheduling makeup days on Saturdays, which members of the Jewish community said would conflict with Shabbat observances."
+  decisions:
+    - "Approved five makeup days: April 23, 24, 25 and June 23, 24"
+    - "Approved suspension of attendance policy on the ten designated makeup days"
+    - "Approved making June 20 a full school day and June 24 a half day"
+    - "Approved schedule of bills totaling approximately $535,906.83"
+    - "Approved North Shore Educational Consortium annual plan"
+  votes:
+    - motion: "Makeup days: April 23, 24, 25 and June 23, 24"
+      result: "in favor (unanimous)"
+    - motion: "Suspend attendance policy on designated makeup days"
+      result: "in favor (unanimous)"
+    - motion: "June 20 full day, June 24 half day"
+      result: "in favor (unanimous)"
+    - motion: "Schedule of bills ~$535,906.83"
+      result: "in favor (unanimous)"
+    - motion: "North Shore Educational Consortium annual plan approval"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2
+    end_seconds: 311
+    headline: "Committee opens with commendations for performing arts staff, METCO director, and minutes secretary"
+    dek: "Chair Fox and members recognized multiple staff members before moving to public comment."
+    summary: "The chair commended performing arts staff for winter concerts across all schools, including the Veterans School musical. Member Brian Oda commended KJ Johnson, the METCO director, for building relationships with Boston-based students. A committee member recognized minutes secretary Allison McMahon for producing comprehensive minutes."
+    key_speakers: ["Sarah Fox (Chair)", "Brian Oda (member)"]
+  - topic: public-comment
+    topic_confidence: 0.98
+    start_seconds: 311
+    end_seconds: 1027
+    headline: "Jewish community members urge committee not to schedule makeup days on Saturdays"
+    dek: "Three residents and a rabbi spoke in person and online opposing Saturday makeup days as a violation of Shabbat observance."
+    summary: |
+      Four speakers addressed the committee on the proposed makeup days:
+      
+      - **Deborah Noah** (parent, ninth-grader at MHS) stated that including Saturday as a survey option was offensive, noting Sunday was excluded out of respect for the Christian Sabbath.
+      - **Yael** (parent, high school sophomore and eighth-grader at Vets) suggested that if weekend days must be used, they be split equally between Saturdays and Sundays, and raised concerns about what she characterized as an anti-Jewish agenda within teachers' unions.
+      - **Rabbi Michael Schwartz** asked the committee to consider both Saturdays and Sundays problematic on principle, and noted the impact on Bar and Bat Mitzvah preparations for 13-year-olds.
+      - **Janice Knight** (Director of Jewish Education, Congregation Shirat Hayam, Swamp Scott) stated that 40% of her Saturday school students are Marblehead residents and that losing five Saturdays would damage her program.
+    key_speakers: ["Deborah Noah (parent)", "Yael (parent, online)", "Rabbi Michael Schwartz (online)", "Janice Knight (Director of Jewish Education, Congregation Shirat Hayam)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1027
+    end_seconds: 1441
+    headline: "Superintendent reports 94 hires since July 1, antisemitism investigation ongoing, and roof leaks at the high school"
+    dek: "Superintendent Roberto provided district updates including hiring data, the status of an independent antisemitism investigation, and ongoing high school roof leaks."
+    summary: |
+      Superintendent Roberto highlighted several district updates:
+      
+      - **Hiring**: 94 staff hired since July 1, including six during and after the strike, countering a narrative that people do not want to work in Marblehead.
+      - **MCAS graduation requirement**: Now eliminated as a graduation requirement statewide; the district must determine a local competency determination process. Work has begun with administrators and a larger committee discussion is planned.
+      - **Antisemitism investigation**: The independent investigation by Allison Kerr is ongoing; multiple interviews completed, some subjects requested attorneys present, which has extended the timeline.
+      - **Roof leaks**: Recent storms have exacerbated known roof failures at the high school; the roofing company and maintenance staff are patching and remediating areas while roof replacement moves forward.
+      - **Attendance rumor**: Clarified that there is no rule that a makeup day does not count if fewer than 50% of students attend.
+    key_speakers: ["Superintendent Roberto (Superintendent)"]
+  - topic: school-budget
+    topic_confidence: 0.75
+    start_seconds: 1532
+    end_seconds: 1595
+    headline: "Committee approves schedule of bills totaling approximately $535,906"
+    dek: "A 4-0 vote approved the regular schedule of bills."
+    summary: "The committee voted unanimously to approve the schedule of bills totaling $535,906.83."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 1595
+    end_seconds: 1874
+    headline: "Committee approves North Shore Educational Consortium annual plan 4-0"
+    dek: "The committee voted to approve the 2023-24 annual plan for the North Shore Educational Consortium, which provides out-of-district special education placements."
+    summary: "The superintendent explained that the North Shore Educational Consortium (NSEC) is an educational collaborative providing specialized programming for students with special education needs that exceed what the district can provide in-house. The committee voted 4-0 to approve the 2023-24 annual plan as required by regulation."
+    key_speakers: ["Superintendent Roberto (Superintendent)", "Sarah Fox (Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.72
+    start_seconds: 1928
+    end_seconds: 3078
+    featured: true
+    headline: "Committee votes 4-0 to use April vacation days and June 23-24 as strike makeup days; Saturday makeup days rejected"
+    dek: "After a survey showing parents preferred April vacation over Saturdays by a wide margin, the committee voted unanimously to designate April 23, 24, 25 and June 23, 24 as the five remaining makeup days."
+    summary: |
+      Member Allison Taylor presented survey results from 1,424 parent responses and more than 300 staff responses:
+      
+      | Option | Parent Preference | Staff Preference |
+      |---|---|---|
+      | April vacation | ~43% (first choice) | Third choice |
+      | June | Second choice | Second choice (~43%) |
+      | Saturdays | Third choice (low) | First choice (~44%) |
+      
+      Key considerations discussed:
+      - Saturday makeup days were rejected; committee members cited religious observance (Shabbat), student fatigue, and additional custodial costs for weekend staffing.
+      - The original survey did not include Saturdays; they were added at the superintendent's request.
+      - Graduation is scheduled for June 6; state law requires graduation be no earlier than 12 days before the last day of school, which constrained June additions to June 23-24.
+      - Snow days would require revisiting the schedule; additional snow days cannot be waived because the makeup obligation stems from a strike, not weather.
+      - A configuration of three April days plus two June days preserves a four-day April weekend for families.
+      
+      **Vote**: Motion to designate April 23, 24, 25 and June 23, 24 as makeup days passed 4-0.
+      
+      The committee also voted 4-0 to:
+      - Suspend the attendance policy on the ten designated makeup days (Dec. 23, Feb. 18, 19, 21, April 23, 24, 25, June 23, 24).
+      - Make June 20 a full school day and June 24 a half day.
+    key_speakers: ["Allison Taylor (member)", "Sarah Fox (Chair)", "Superintendent Roberto (Superintendent)", "Brian Oda (member)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 4381
+    end_seconds: 6238
+    headline: "District MCAS presentation shows 60% ELA and 63% math meeting/exceeding proficiency, 21 points above state average in math"
+    dek: "Director of Teaching and Learning Julia Ferrera and all building principals presented 2024 MCAS data showing consistent performance above state averages with identified areas for growth."
+    summary: |
+      Director of Teaching and Learning Julia Ferrera presented district-wide MCAS data:
+      
+      **ELA**: 60% of students met or exceeded proficiency, 18 percentage points above the state average. Average scale score declined by one point from the prior year; student growth percentile declined 2.8 points.
+      
+      **Math**: 63% met or exceeded proficiency, 21 percentage points above the state average, continuing an upward trend four years into an evidence-based math curriculum.
+      
+      **Science**: 18 percentage points above state average on average; fifth- and eighth-grade tests were piloted for the first time in 2024, limiting year-over-year comparisons.
+      
+      **Accountability**: The district is not requiring assistance or intervention overall. One exception: Marblehead High School was placed in a targeted support category due to low MCAS participation among its Hispanic/Latino subgroup in tenth grade, described as a very small population.
+      
+      **Attendance**: Chronic absenteeism (18+ days) declined at non-high school levels, exceeding targets. The high school chronic absenteeism rate increased from the prior year, a concern that factors heavily into state accountability rankings.
+      
+      Committee members requested a future presentation disaggregating MCAS data specifically for high-needs subgroups (students with disabilities, low-income, and English learners) alongside student services audit findings to inform the upcoming budget cycle.
+    key_speakers: ["Julia Ferrera (Director of Teaching and Learning)", "Mary Maxfield (Brown/Lucrecia-Joseph Brown School Principal)", "Frank Kowalski (Glover School Interim Principal)", "Scott Williams (Village School Principal)", "Matt Fox (Marblehead Veterans Middle School Principal)", "Michelle Carlson (Marblehead High School Principal)"]
+  - topic: school-budget
+    topic_confidence: 0.92
+    start_seconds: 9448
+    end_seconds: 10533
+    headline: "CFO reports $3.8M unencumbered balance but flags $1.1M special-ed out-placement overrun; FY26 level-service budget in progress"
+    dek: "Finance Director Mike Bleich reported that unplanned out-of-district special education placements cost approximately $1.1M above budget, partially offset by $900K in prepayments made at year-end, and that a three-year town-wide projection shows a $14M structural deficit."
+    summary: |
+      Finance Director Mike Bleich reported on current FY25 finances and early FY26 budget preparation:
+      
+      **Current year finances**:
+      - After manually encumbering all salaries following new collective bargaining agreements, the district shows approximately $3.8M in unencumbered balances.
+      - Out-of-district special education tuitions are running approximately $1.1M over budget. A $900K prepayment at the end of FY24 is being drawn down, with an additional approximately $200K projected to be spent above that.
+      - The district will apply for state extraordinary relief through Circuit Breaker to recover some of that overage in the current year rather than waiting for reimbursement.
+      - ESSER funds are fully expended; ARPA funds must be committed by end of December 2024 and are being allocated toward one-time expenses including playground resurfacing, gymnasium equipment, and professional development.
+      
+      **FY26 budget**:
+      - A draft level-service budget has been prepared. Bleich noted he also plans a needs-based increased-services budget and a level-funded scenario.
+      - Out-of-district placement costs and transportation costs are projected to increase substantially.
+      - The state's projected out-of-district tuition rate increase is approximately 4.6-4.7%, down from an earlier projected 14%.
+      - The December 11 town-wide financial projection showed a $14M structural deficit over three years (without a recently identified interest income adjustment).
+      - The budget subcommittee plans to meet the first week back from winter break. No target number has been provided to the schools yet.
+    key_speakers: ["Mike Bleich (Finance Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 10545
+    end_seconds: 11752
+    headline: "Communications subcommittee presents draft school committee newsletter and proposes FAQ page updates"
+    dek: "Member Brian Oda presented a draft monthly newsletter in S'more format and outlined plans to update the school committee FAQ page and website."
+    summary: |
+      The communications subcommittee presented several initiatives:
+      
+      - **FAQ page**: An updated page has been drafted. Committee members noted that responses should reference Policy KE (chain of communication from teacher to principal to superintendent before school committee) and suggested a workshop format to refine language.
+      - **Website**: The committee agreed that only IT Director Steven should have administrative access to the school committee website, with members submitting change requests to him.
+      - **Newsletter**: A draft monthly newsletter in S'more format was demonstrated. It would include the district mission statement, monthly highlights, subcommittee updates, and links to relevant documents. The Marblehead Current and Marblehead Weekly have agreed to publish the newsletter. Analytical tools in S'more will allow tracking of which sections readers focus on.
+      - **Media relations**: Plans to reach out to MHTV for periodic interviews.
+      - **Public comment protocol**: The subcommittee recommended against responding immediately to public comments and suggested addressing recurring topics at future dedicated meetings.
+    key_speakers: ["Brian Oda (member)", "Allison Taylor (member)"]
+  - topic: bonding-capital
+    topic_confidence: 0.8
+    start_seconds: 11752
+    end_seconds: 11984
+    headline: "Facilities subcommittee to prepare Coffin School comprehensive closing study ahead of warrant deadline"
+    dek: "The committee discussed Policy FCB requirements for a closing study before voting to declare Coffin School surplus, targeting a vote at the second January meeting."
+    summary: |
+      The facilities subcommittee noted that Policy FCB requires a comprehensive closing study before any school building is retired. Because Coffin School is no longer housing students (students moved to Brown School), many checklist items will be marked not applicable, but the committee agreed the document should be completed for the record and to allow public comment.
+      
+      The chair stated that the committee intends to bring the closing study to a January meeting in time to place a surplus property article on the town warrant before the warrant closes at the end of January. A vote to declare Coffin School surplus would follow the closing study presentation.
+      
+      The high school roof project was also updated: left field and RDA presented roofing options at a recent facilities meeting (available on YouTube). Approximately $1.6M may remain from the Brown School MSBA closeout and could be repurposed toward the roof replacement cost overrun. The MSBA submitted the high school roof application in 2022; MSBA declined to engage in December 2022 because the roof was less than 25 years old.
+    key_speakers: ["Sarah Fox (Chair)", "Jen Schaffner (member)", "Mike Bleich (Finance Director)"]
+  - topic: labor-personnel
+    topic_confidence: 0.7
+    start_seconds: 11984
+    end_seconds: 12356
+    headline: "Negotiation subcommittee reports MOAs ratified; final contract documents being integrated"
+    dek: "The chair noted that memoranda of agreement are posted online and final contract documents are being prepared for signature without requiring additional votes."
+    summary: "The chair reported that memoranda of agreement for all settled collective bargaining units are posted on the district website. Final contract documents integrating the MOA terms are being prepared with MEA co-presidents; once complete they will be signed without a further school committee vote, as the substantive vote occurred with the MOA approvals."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: public-safety
+    topic_confidence: 0.65
+    start_seconds: 12356
+    end_seconds: 12450
+    headline: "Member reports positive safety advisory meeting; ALICE training offered; additional cameras installed"
+    dek: "Brian Oda attended the district safety advisory and reported confidence in current safety protocols, including new security cameras and an ALICE training invitation from Tower School."
+    summary: "Member Brian Oda reported attending the district safety advisory committee meeting, which included the chief of police. The chief expressed confidence in current preventive measures despite a national trend of increased school shootings post-COVID. Tower School offered an ALICE training session open to district staff. Additional security cameras have been installed to cover previously identified gaps, and Oda noted the image quality has improved substantially from cameras installed in a prior capital budget cycle."
+    key_speakers: ["Brian Oda (member)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

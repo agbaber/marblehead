@@ -9,7 +9,66 @@ vimeo_url: "https://vimeo.com/855794914"
 duration_seconds: 3372
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee retains NESDEC to conduct free interim superintendent search"
+  summary: "The Marblehead School Committee voted unanimously to retain NESDEC (New England School Development Corporation) to conduct an interim superintendent search at no cost to the district. The committee also voted to authorize the chair to approve the announcement letter in coordination with NESDEC consultant Carolyn Burke. Discussion focused on search timelines, screening committee composition, and whether to pursue a permanent superintendent search concurrently or after evaluating the interim hire."
+  decisions:
+    - "Approved retaining NESDEC to conduct interim superintendent search"
+    - "Approved authorizing the chair to work with Carolyn Burke to approve the interim superintendent announcement letter"
+  votes:
+    - motion: "Retain NESDEC to perform interim superintendent search"
+      result: "in favor (unanimous)"
+    - motion: "Enable the chair to work with Carolyn Burke to approve the announcement letter"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 8
+    end_seconds: 2234
+    featured: true
+    headline: "School Committee retains NESDEC for free interim superintendent search"
+    dek: "NESDEC executive director David DeRue and consultant Carolyn Burke outlined the interim search process, screening committee structure, and timing considerations for a subsequent permanent search."
+    summary: |
+      Vice Chair Jen Schaffner introduced NESDEC representatives David DeRue (executive director) and Carolyn Burke (consultant), who outlined how NESDEC would assist with an interim superintendent search at no cost to the district, given Marblehead's membership in good standing.
+      
+      **Interim search process:**
+      - NESDEC would post the position for 3–6 weeks (committee can shorten to 3–4 weeks given urgency)
+      - NESDEC would collect applications, verify certifications, and present candidates to a designated screening committee
+      - Screening committee recommended composition: two school committee members, one administrator, one teacher, one parent
+      - Screening committee would conduct initial interviews (in executive session to protect candidates' current employment) and forward finalists to the full school committee
+      
+      **Timing discussion:**
+      - Acting Superintendent Michelle Cresta (business manager/assistant superintendent of operations) is expected to serve through approximately October 31
+      - Target interim start date discussed as November 1–December 1
+      - Committee discussed whether to launch a permanent search immediately, in February, or after evaluating the interim hire over several months
+      - Key consideration: if the interim is a retired superintendent with no interest in the permanent role, a permanent search could begin sooner; if the interim is a non-retired candidate open to the permanent role, the committee favored allowing time to evaluate fit before launching a full search
+      - DeRue noted that a permanent search launched in February could yield a known candidate by May, though that person would likely not start until July 1
+      
+      **Votes (both unanimous, 4–0):**
+      1. Retain NESDEC to conduct interim superintendent search
+      2. Authorize chair to approve announcement letter in coordination with Carolyn Burke
+      
+      **Next steps:**
+      - NESDEC to send a draft scope of work and updated announcement letter (demographics/district description) to the chair for approval
+      - Committee members directed to refer any interested candidates to NESDEC rather than conducting outreach themselves
+      - Screening committee composition and selection process to be discussed at a future meeting/retreat
+    key_speakers: ["Sarah Fox (Chair)", "Jen Schaffner (Vice Chair)", "Allison Taylor (School Committee member)", "Brian Oda (School Committee member)", "David DeRue (NESDEC Executive Director)", "Carolyn Burke (NESDEC Consultant)"]
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 3126
+    end_seconds: 3358
+    headline: "Resident asks about permanent search costs and more accessible meeting scheduling"
+    dek: "Chris Pool of West Shore Drive asked whether permanent superintendent search costs would be publicly disclosed and whether regular meetings could be held at more accessible times."
+    summary: |
+      Chris Pool (West Shore Drive) raised two questions during public comment:
+      
+      1. **Search costs:** Asked whether cost information for the permanent superintendent search would be made public. Chair Fox explained that a request for proposals process would be used, as in the prior search, and that costs varied widely; no firm number could be given until proposals are received. She noted that if the interim becomes the permanent superintendent, there may be no additional cost.
+      
+      2. **Meeting scheduling:** Expressed concern that 9:30 a.m. and noon Friday meetings are not accessible for working members of the public. Chair Fox noted the committee has standing meetings on the first and third Thursday of each month during the school year; summer meetings were added on short notice due to the superintendent transition and were scheduled around the availability of outside professionals and attorneys.
+    key_speakers: ["Chris Pool (Resident, West Shore Drive)", "Sarah Fox (Chair)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

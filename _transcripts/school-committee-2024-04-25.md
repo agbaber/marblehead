@@ -9,7 +9,159 @@ vimeo_url: "https://vimeo.com/939386046"
 duration_seconds: 4427
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee hires new Assistant Superintendent of Student Services and advances interim superintendent search"
+  summary: "The Marblehead School Committee voted unanimously to hire Lisa Marie Ippolito as Assistant Superintendent of Student Services, upgrading the position from director level pending contract negotiations and a formal job description. The committee also selected five finalist candidates to interview for the interim superintendent position. Additional votes approved the amended 2024–25 school calendar, a schedule of bills totaling approximately $425,632, and accepted an $680,698 donation from the Marblehead All Sports Boosters for the Piper Field turf replacement."
+  decisions:
+    - "Approved amended 2024–25 school calendar to align with MEA contract"
+    - "Approved schedule of bills totaling $425,631.81"
+    - "Approved minutes for January 18, 2024 (with correction)"
+    - "Approved hiring of Lisa Marie Ippolito as Assistant Superintendent of Student Services, pending contract negotiations and job description approval"
+    - "Approved acceptance of $680,698 donation from Marblehead All Sports Boosters for Piper Field turf replacement"
+    - "Approved new user fee schedule for 2024–25 school year"
+  votes:
+    - motion: "Amend previously approved 2024–25 school calendar"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills totaling $425,631.81"
+      result: "in favor (unanimous)"
+    - motion: "Approve minutes for January 18, 2024"
+      result: "in favor (4 to 0, one abstention)"
+    - motion: "Hire Lisa Marie Ippolito as Assistant Superintendent of Student Services"
+      result: "in favor (unanimous)"
+    - motion: "Accept $680,698 donation from Marblehead All Sports Boosters for Piper Field"
+      result: "in favor (unanimous)"
+    - motion: "Approve new user fee schedule for 2024–25"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 0
+    end_seconds: 231
+    headline: "Committee opens with commendations including high school mold tour and honors scholars"
+    dek: "A committee member described a walkthrough of the high school during a storm to observe mold and leak conditions firsthand."
+    summary: |
+      A committee member reported personally touring Marblehead High School during a northeaster on April 4th with Superintendent McGinnis, Principal Michelle Carlson, and Facilities Director Todd Bloodgood. Leaks were active throughout the building and custodians were managing them with buckets and mops. A previously flagged mold room had been repaired — the wall was removed, dried, treated, and rebuilt — with no active leakage observed during the visit. The member stated that replacing the roof remains a priority.
+      
+      The committee also recognized 11 Marblehead students named to the North Shore Chamber of Commerce 2024 Honors Scholars, representing the top 5% of graduating seniors across more than 30 North Shore high schools.
+    key_speakers: ["Sarah Fox (Chair)", "Todd Bloodgood (Director of Facilities)", "Dr. Theresa McGinnis (Superintendent)"]
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 231
+    end_seconds: 372
+    headline: "Resident raises questions about $250,000 town allocation and comments on employee termination"
+    dek: "One resident questioned whether a $250,000 town contribution to the schools is contingent on a meals and hotel tax vote, and expressed concern about the termination of a district employee."
+    summary: |
+      A resident asked whether the reported $250,000 from the town to the school district is guaranteed or contingent on a local meals and hotel tax passing, and asked where the district would find the money if it does not materialize. The resident also referenced a $540,000 abatement figure affecting town finances.
+      
+      The same resident commented on the termination of a district employee, expressing personal knowledge of and support for that individual, and stated an intention to attend any resulting court proceedings.
+    key_speakers: ["Resident (mic only)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 372
+    end_seconds: 629
+    headline: "Superintendent provides staffing and procurement updates including roof OPM search"
+    dek: "Dr. McGinnis reported on multiple active principal and administrator searches and noted 12 firms have requested the RFP for the high school roof replacement project."
+    summary: |
+      Superintendent McGinnis acknowledged the Fund the Field campaign, noting the community raised more than $800,000 for the new turf field. She then provided updates on several open positions:
+      
+      - **Glover School Principal**: First-round interviews complete; finalist site visit scheduled for May 2nd.
+      - **Assistant Superintendent of Finance and Operations**: Interviews held that day; updates expected within two weeks.
+      - **Village School Principal**: Search starting the following week.
+      - **Assistant Director of Student Services** (0.5 FTE): Search in progress.
+      
+      For procurements, five firms submitted proposals for a special education program review (deadline that day); vendor selection targeted by May 15th. The OPM search for the Marblehead High School Roof Replacement Project had its RFP posted with a May 16th due date; 12 firms had already requested the RFP, with contract award targeted by May 30th.
+    key_speakers: ["Dr. Theresa McGinnis (Superintendent)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 629
+    end_seconds: 855
+    headline: "Committee updates include high school theatrical production and upcoming senior events"
+    dek: "The superintendent noted the high school musical 'The Prom' runs through the weekend and listed final senior events including graduation on May 31st."
+    summary: "The high school production of *The Prom* was announced as running Thursday through Sunday in the high school auditorium, with tickets priced at $20 for adults, $15 for seniors, and $5 for students. The girls lacrosse team dedicated their win against Salem to Heather Walker in support of Dana-Farber Cancer Institute brain cancer research. Final senior dates announced: last day of classes May 24th, Scholarship Night May 28th, Senior Prom May 29th, and Graduation May 31st."
+    key_speakers: ["Dr. Theresa McGinnis (Superintendent)", "Sarah Fox (Chair)"]
+  - topic: labor-personnel
+    topic_confidence: 0.95
+    start_seconds: 855
+    end_seconds: 933
+    headline: "Committee votes 5–0 to adopt amended 2024–25 school calendar aligned with MEA contract"
+    dek: "The previously approved calendar was amended after the MEA indicated it required their agreement under the current contract, adjusting teacher start and end days."
+    summary: "The school calendar approved earlier in the year was brought back after the Marblehead Education Association (MEA) indicated that the original version, which front-loaded professional development days, required union approval during active contract negotiations. The revised calendar shifts one professional development day from before the school year to after, keeping the change to teacher days rather than student days. The committee voted unanimously to amend the previously approved calendar."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 933
+    end_seconds: 1028
+    headline: "Committee approves bills totaling $425,631.81 and January 18 minutes"
+    dek: "Routine consent agenda items were approved by roll call, with one abstention on the minutes from a member not present at that meeting."
+    summary: "The schedule of bills totaling $425,631.81 was approved 5–0. Minutes from the January 18, 2024 meeting were approved 4–0 with one abstention (member was not present at that meeting). A typographical correction — changing 'CPACS' to 'CPAC' — was noted before the vote."
+    key_speakers: ["Sarah Fox (Chair)", "Al Williams", "Brian Oda", "Allison Taylor", "Jen Schaffner"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 1028
+    end_seconds: 1709
+    featured: true
+    headline: "Committee votes 5–0 to hire Lisa Marie Ippolito as Assistant Superintendent of Student Services"
+    dek: "The position was elevated from director to assistant superintendent level during the meeting itself, pending contract negotiations and a formal job description vote."
+    summary: |
+      Dr. McGinnis introduced Lisa Marie Ippolito as the finalist for Director of Student Services, noting her 30 years in education and three years as assistant superintendent in Newburyport Public Schools. During committee discussion, a member raised that comparable districts — including Swampscott, Reading, Andover, and Newton — staff this role at the assistant superintendent level, and proposed upgrading the title.
+      
+      The committee agreed, noting that the assistant director role had already been reduced to 0.5 FTE, effectively expanding the responsibilities of the top position. The motion was amended to hire Ippolito as **Assistant Superintendent of Student Services**, pending:
+      1. Successful contract negotiation
+      2. A future vote to formally create the role and approve a salary range with a job description
+      
+      The vote was unanimous, 5–0.
+    key_speakers: ["Dr. Theresa McGinnis (Superintendent)", "Lisa Marie Ippolito (Candidate)", "Sarah Fox (Chair)", "Jen Schaffner", "Allison Taylor", "Brian Oda", "Al Williams"]
+  - topic: recreation-events
+    topic_confidence: 0.85
+    start_seconds: 1709
+    end_seconds: 1839
+    headline: "Committee accepts $680,698 donation from Marblehead All Sports Boosters for Piper Field turf"
+    dek: "The Fund the Field campaign, led by community volunteers, raised the funds through hundreds of community donations."
+    summary: "The committee voted unanimously to accept a donation of $680,698 from the Marblehead All Sports Boosters designated for the Piper Field replacement and site improvement project. The broader Fund the Field campaign raised more than $800,000 total. The effort was led by Muffy Pickett and Victoria Dosh."
+    key_speakers: ["Sarah Fox (Chair)", "Mary July (Business Manager, referenced)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 1839
+    end_seconds: 1966
+    headline: "Committee approves updated user fee schedule for 2024–25 school year"
+    dek: "The fee schedule, described as Option 2 from a memo by the business manager, was framed as a means of sustaining staff positions through partially self-funded programs."
+    summary: "The committee voted 5–0 to approve a new user fee schedule for the 2024–25 school year. Members acknowledged the decision was not taken lightly and stated the goal is to work toward reducing fees in the future. The chair noted that families for whom fees present a barrier can reach out to principals, the athletic director, or coaches for assistance."
+    key_speakers: ["Sarah Fox (Chair)", "Jen Schaffner", "Mary July (Business Manager, referenced)"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 1966
+    end_seconds: 2545
+    headline: "Committee selects five finalists to interview for interim superintendent position"
+    dek: "Members each nominated up to five candidates; Barbara Cataldo, Thaddeus King, Jose Munoz, John Robo, and David Thompson each received at least three votes."
+    summary: |
+      The committee conducted an informal tally to select finalists from the applicant pool for the interim superintendent position. Each member nominated up to five candidates. Three candidates — Barbara Cataldo, Thaddeus King, and Jose Munoz — each received four nominations. John Robo and David Thompson each received three, bringing the final interview list to five.
+      
+      Interviews are planned to begin Thursday at 5:15 PM, with scheduling discussions around town meeting week and Passover observance constraining available nights. A public Google form for community feedback and links to candidate resumes were noted as available on the district website under the interim superintendent search quick link.
+    key_speakers: ["Sarah Fox (Chair)", "Al Williams", "Brian Oda", "Allison Taylor", "Jen Schaffner"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2545
+    end_seconds: 4430
+    headline: "Communication subcommittee presents draft community survey for review and edits"
+    dek: "Brian Oda and Allison Taylor shared a near-final draft survey on school committee communications, targeting distribution by May 10th and a deadline by May 10th to allow data presentation at the May 16th meeting."
+    summary: |
+      The communications subcommittee presented a draft community survey covering attendance and impressions of the two public forums held (Conversation with the Community on February 29th and the League of Women Voters forum), interest in a monthly newsletter, and interest in coffee chats with a school committee member. Key edits made during the meeting included:
+      
+      - Removing the word 'successful' from the introductory paragraph
+      - Correcting 'we have' to 'we have held' (grammar)
+      - Adding language clarifying the survey is anonymous
+      - Changing the deadline date to May 10, 2024
+      - Limiting coffee chat language to 'a member' (one person) to avoid open meeting law concerns
+      - Adjusting conditional display logic so follow-up forum questions only appear for those who attended
+      - Rewording the final open-text question to: 'Are there any other suggestions of how the school committee can continue to increase communication?'
+      
+      The survey will be administered through the district's technology director (Steven) to ensure the committee has no editing access, with raw data reported back for analysis. Distribution planned through the superintendent's newsletter, school newsletters, and the local newspaper (deadline Sunday night for Wednesday publication).
+      
+      The subcommittee also discussed future additions including an FAQ page and a school committee newsletter summarizing meeting actions.
+    key_speakers: ["Brian Oda", "Allison Taylor", "Sarah Fox (Chair)", "Lee (Reporter, Marblehead Reporter, referenced)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

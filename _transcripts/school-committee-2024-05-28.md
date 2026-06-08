@@ -9,7 +9,75 @@ vimeo_url: "https://vimeo.com/951344779"
 duration_seconds: 2565
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "School Committee approves Sick Leave Bank MOU; advances interim superintendent candidate to site visit"
+  summary: "The Marblehead School Committee voted unanimously to move interim superintendent candidate John Dew to a day-in-district site visit, scheduled for Monday, following positive feedback from school committee members who visited his current district. The committee also voted unanimously to approve a Sick Leave Bank MOU, after disclosing in open session that signature lines on a Google Doc version of the document had been added on October 5, 2023 — months after the purported June 16, 2023 signing date. The committee addressed correspondence from Marbleheaders for Change requesting that the Town Administrator be formally voted onto the bargaining subcommittee, explaining that this is not standard practice and that the Town Administrator has been consistently involved in strategy sessions."
+  decisions:
+    - "Approved moving interim superintendent candidate John Dew to a day-in-district site visit in Marblehead"
+    - "Approved the Sick Leave Bank MOU as presented, pending reformatting on district letterhead"
+    - "Voted to enter executive session to discuss collective bargaining strategy"
+  votes:
+    - motion: "Move John Dew to the next stage (day-in-district site visit)"
+      result: "in favor (unanimous)"
+    - motion: "Enter executive session pursuant to MGL Chapter 30A Section 21A, Purpose 3, collective bargaining strategy"
+      result: "in favor (unanimous)"
+    - motion: "Approve the Sick Leave Bank MOU"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1
+    end_seconds: 65
+    headline: "Chair opens meeting with commendation of graduating seniors"
+    dek: "No formal accommodations were presented; the chair congratulated seniors ahead of Friday graduation."
+    summary: "The chair called the meeting to order at 7:34 PM, noted no accommodations, and offered remarks commending graduating seniors, their families, and teachers. Graduation was noted as occurring that Friday."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 66
+    end_seconds: 240
+    headline: "Resident questions search committee composition and incoming superintendent candidate"
+    dek: "A resident raised concerns about a search committee member and the candidate's departure from his prior district; a committee member responded online."
+    summary: "A resident identified as Ms. McCarrison raised two concerns: whether the person who removed a Black Lives Matter flag served on a search committee, and whether the incoming superintendent candidate left his prior district due to conflict with that school committee. A committee member responded via teleconference, clarifying that it is Director Carlson's policy not to disclose search committee membership until a search concludes, and that this reflected administrative policy rather than a lack of transparency from the school committee."
+    key_speakers: ["Resident at mic (Ms. McCarrison)", "School Committee member (online)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 241
+    end_seconds: 1529
+    featured: true
+    headline: "School Committee unanimously advances interim superintendent candidate John Dew to Marblehead site visit"
+    dek: "Members who visited Dew's current district described strong staff relationships, inclusive programming, and 18 years of positive evaluations."
+    summary: |
+      Committee members reported on site visits to the district of interim superintendent candidate John Dew, conducted in two separate groups to avoid an open-meeting-law quorum. Brian Oda and Al reported that a veteran school committee member and an elementary principal in Dew's district described consistently proficient evaluations, no pink-slipping of employees, successful budget approvals with 4–8% annual increases over 17 years, and strong union relations. They noted that Dew's departure followed a deterioration in his relationship with newer school committee members, and that he had performed well professionally despite two significant personal losses.
+      
+      Jen Schaffner and Sarah Fox attended a 'Unified Games' field day at an elementary school, where they observed Dew greeted warmly and spontaneously by teachers and students. The district participates in a Special Olympics-affiliated unified schools program emphasizing inclusion across all aspects of school life. The district's director of special education spoke at length about Dew's open-door policy and his understanding of the systemic requirements for genuine inclusion — citing, for example, how providing an accessible swing requires coordinating with facilities on mulch depth.
+      
+      The committee voted 4–0 to advance Dew to a day-in-district visit in Marblehead, tentatively scheduled for the following Monday, with meetings for central office staff, a staff open session after school, and a community session. A feedback form would close Wednesday to allow review before the Thursday meeting.
+    key_speakers: ["Sarah Fox (Chair)", "Brian Oda (Committee member)", "Jen Schaffner (Committee member)", "Allison Taylor (Committee member, online)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 1529
+    end_seconds: 2215
+    headline: "Sick Leave Bank MOU approved after committee discloses signature lines were backdated"
+    dek: "Keystroke analysis of a Google Doc revealed that signature lines dated June 16, 2023 were added on October 5, 2023."
+    summary: |
+      Chair Fox described the history of the Sick Leave Bank: the school committee had agreed to pursue one, a meeting occurred on May 10, 2023 with Dr. Bucky, Michelle Cresta, and MEA presidents Jonathan Heller and Sally, and the parties were largely aligned. The committee was told a finalized version would be brought back for ratification, but that never occurred. The prior superintendent's departure created a gap in the process.
+      
+      Fox reported that after MEA presidents stated publicly they had signed the document on June 16, 2023, she investigated and found a Google Doc last edited in March 2024 by Anthony Peri. Using software ordinarily used to detect student AI use, the district's tech staff (Steven KK) reconstructed the document's keystroke history. The video playback showed that the signature lines bearing the date June 16, 2023 were added on October 5, 2023 — after the purported signing date.
+      
+      Fox emphasized these were two separate issues: (1) the question of the backdated document, and (2) the ratification of the Sick Leave Bank itself, whose content she said she had no reason to believe had been altered. The committee entered executive session to discuss collective bargaining strategy, then returned and voted 4–0 to approve the Sick Leave Bank MOU, with the only change being reformatting onto district letterhead.
+    key_speakers: ["Sarah Fox (Chair)", "Brian Oda (Committee member)", "Jen Schaffner (Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 2216
+    end_seconds: 2556
+    headline: "Committee addresses minutes backlog and responds to request to formally add Town Administrator to bargaining team"
+    dek: "The chair explained that Town Administrator Thatcher Keyes has been involved in bargaining strategy sessions and declined early proposal-reading sessions as not a good use of his time."
+    summary: "A committee member requested a plan to bring meeting minutes current by the June 20th meeting. The committee received correspondence from Marbleheaders for Change requesting a formal vote to add Town Administrator Thatcher Keyes to the bargaining subcommittee. Fox explained that Keyes had been invited to all proposal-presentation sessions but had consistently responded that attending those initial readings was not a good use of his time, while affirming his availability for caucuses and active negotiations. She noted he had participated in all intermittent strategy meetings with the school committee's attorney and full committee in executive session. A committee member clarified that subcommittee membership is not formally voted, and that subject-matter experts such as the facilities director attend as needed without a formal vote."
+    key_speakers: ["Sarah Fox (Chair)", "Brian Oda (Committee member)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

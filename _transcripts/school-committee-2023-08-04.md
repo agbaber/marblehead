@@ -9,7 +9,101 @@ vimeo_url: "https://vimeo.com/851718884"
 duration_seconds: 3503
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "School Policy Subcommittee discusses reinstating second recess and coach certification"
+  summary: "The Marblehead School Committee Policy Subcommittee met to discuss athletic coach certification, the wellness policy, recess scheduling, public complaints policy, and general policy manual oversight. The administration announced a directive requiring all coaches to obtain MIAA certification by mid-September. The committee heard public comment advocating for reinstatement of a second daily recess in elementary schools and agreed to schedule a follow-up meeting with school administrators to explore scheduling options."
+  decisions:
+    - "Held discussion on requiring MIAA certification for all coaches; administration directive issued separately"
+    - "Held discussion on updated wellness policy (ADF); referred to full School Committee for vote before school year start"
+    - "Held discussion on recess policy; follow-up meeting with administrators to be scheduled"
+    - "Held discussion on public complaints policy (KE); further research and draft language to follow"
+    - "Held discussion on MASC policy manual review; chair to contact MASC for cost and scope estimate"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 0
+    end_seconds: 425
+    headline: "Parents urge reinstatement of second daily recess for elementary students"
+    dek: "Two parents, including a Boston University education professor, described negative impacts of reduced recess time on young children."
+    summary: |
+      The chair opened the meeting and accepted public comment. Two speakers addressed the committee:
+      
+      - **Carla Strobel**, a parent of three Marblehead Public Schools students, advocated for reinstating two recesses in K–3 and asked the committee to clarify why the schedule was changed.
+      - **Naomi**, a professor at Boston University's College of Education and parent of an incoming first grader, described how her son struggled with limited physical activity during the prior school year, noting that his morning recess was often only five to ten minutes due to coat/transition time. She said the lack of movement caused her to consider whether he needed an IEP evaluation.
+    key_speakers: ["Carla Strobel (parent)", "Naomi (BU professor and parent)"]
+  - topic: school-budget
+    topic_confidence: 0.72
+    start_seconds: 425
+    end_seconds: 838
+    headline: "Administration directs all coaches to obtain MIAA certification by mid-September"
+    dek: "The superintendent's office issued a directive the prior day requiring MIAA certification for all coaches; cost of approximately $95 per coach to be covered by a donation account."
+    summary: |
+      The committee chair raised the idea of requiring MIAA certification for all athletic coaches by policy, noting the July 12 MIAA list showed approximately six certified Marblehead coaches out of roughly 28 positions.
+      
+      The administration confirmed a directive was issued the previous day requiring all coaches to obtain MIAA certification by mid-September. Certification costs (~$95 per coach) will be drawn from a district donation account. The chair asked whether this should also cover middle school coaches; the administration indicated it likely would but would confirm with the athletic director.
+      
+      The committee agreed to have the administration consult with the athletic director and high school principal and report back on whether adopting the MIAA handbook as the district's athletic handbook is appropriate.
+    key_speakers: ["Committee chair (Jen)", "Michelle (Superintendent/Administrator)", "Allison (committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.65
+    start_seconds: 838
+    end_seconds: 1170
+    headline: "Updated wellness policy referred to full School Committee for urgent vote"
+    dek: "A revised wellness policy must be adopted before the school year to satisfy state nutrition guidelines required for the free and reduced lunch program."
+    summary: |
+      The administration reported that a wellness committee convened last fall and drafted an updated wellness policy (ADF) to bring the district into compliance with state Department of Education nutrition guidelines. The committee voted to recommend the policy on June 12.
+      
+      One reference to a life-threatening allergy policy was removed pending a future separate policy. The administration noted the policy must be adopted before the school year starts to maintain eligibility for the free and reduced lunch program.
+      
+      The committee chair indicated she would consult with school committee counsel Sarah Fox about whether the school committee can waive multiple readings and adopt the policy at one meeting, and would place it on the next school committee agenda.
+    key_speakers: ["Michelle (Administrator)", "Committee chair (Jen)", "Allison (committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 1170
+    end_seconds: 2221
+    featured: true
+    headline: "Policy Subcommittee to pursue second daily recess; administration urges deliberate scheduling process"
+    dek: "Committee members expressed strong support for adding a second recess for K–6 students; administrators cautioned that school schedules and union obligations make immediate changes difficult."
+    summary: |
+      The committee chair reviewed recess policies from several districts including Lexington (two recess breaks codified in policy), Norwood (60 minutes of physical activity per day per Shape America guidelines), Wellesley (recess scheduled before lunch), and Newburyport (one recess, K–8). She noted many districts include a prohibition on withholding recess as punishment.
+      
+      Committee member Allison stated she had contacted DESE and MASC and found no statutory basis for excluding recess transition time from time-on-learning calculations. She expressed support for extending a second recess to K–6 given COVID-related learning loss and physical activity deficits.
+      
+      Assistant Superintendent for Teaching and Learning Julia noted:
+      - There is currently approximately a 20-minute midday recess
+      - Morning snack/break practices vary by teacher and classroom
+      - School schedules for the coming year have already been set and distributed
+      - Implementation of changes involves union negotiations and principal scheduling
+      
+      The committee agreed to schedule a follow-up open meeting with Julia and school building principals to discuss scheduling options for a second recess, aiming for the following week.
+    key_speakers: ["Committee chair (Jen)", "Allison (committee member)", "Michelle (Administrator)", "Julia (Assistant Superintendent, Teaching and Learning)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2221
+    end_seconds: 2510
+    headline: "Committee considers adding documentation requirements to public complaints policy (KE)"
+    dek: "The chair proposed amending policy KE to require memorialization and timestamping of complaints as they move through the chain of command from teacher to school committee."
+    summary: |
+      Policy KE currently directs complaints about instruction, discipline, or learning materials through a chain: teacher → building principal → superintendent → school committee. The chair proposed adding language requiring electronic documentation of complaints at each level, including timestamps for when complaints were received and responded to.
+      
+      The administration indicated no objection in principle but said further review was needed. The committee agreed to draft proposed language, consult MASC, and bring a proposed amendment back at a future policy subcommittee meeting.
+    key_speakers: ["Committee chair (Jen)", "Michelle (Administrator)", "Allison (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2510
+    end_seconds: 3496
+    headline: "Subcommittee plans MASC policy manual review and flags WIN block and AP testing for future discussion"
+    dek: "The committee discussed engaging MASC for a policy review, improving online accessibility of policies, and flagging WIN block consistency and AP exam costs as potential future policy topics."
+    summary: |
+      **Policy Manual Review:** The administration reported that MASC offers a policy review service and can also host district policies on its servers with automatic updates for an annual fee. The chair noted the last major review occurred around 2018 and took over a year. She agreed to contact MASC for a cost and scope estimate for an updated review.
+      
+      **WIN Block:** Allison raised concerns about inconsistent use of the WIN (What I Need) block — formerly called Response to Intervention (RTI) — noting variability in whether students received targeted academic support versus unstructured activity. Julia suggested this topic was better suited to the curriculum subcommittee, with policy referrals flowing from there as appropriate.
+      
+      **AP Testing Costs:** Allison raised the issue of students being required to take AP exams but having to pay the exam fee (approximately $100 per exam), noting financial burden on families with multiple AP students. The committee agreed to invite high school principal Michelle Carlson to a future meeting to review AP practices, with policy implications to follow if warranted.
+    key_speakers: ["Committee chair (Jen)", "Michelle (Administrator)", "Allison (committee member)", "Julia (Assistant Superintendent, Teaching and Learning)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

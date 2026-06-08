@@ -9,7 +9,132 @@ vimeo_url: "https://vimeo.com/1162602895"
 duration_seconds: 6163
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Marblehead schools propose level-funded $49.1M FY27 budget with 14.75 FTE reductions"
+  summary: "Superintendent Roberto and Assistant Superintendent of Finance Mike Ling presented a proposed FY27 school budget holding the town appropriation flat at approximately $49.1 million, the same as FY26. To bridge an estimated $2.56 million gap between level-service costs and level-funded revenues, the administration identified roughly 14.75 FTE positions to eliminate or leave vacant, including teachers at the elementary, middle, and high school levels, along with operational efficiencies. Committee members raised questions about the sustainability of revolving-fund offsets, special education cost pressures, and the possibility of further cuts if the town's overall fiscal picture worsens before Town Meeting in May."
+  decisions:
+    - "Approved consent agenda including bills totaling $320,620.66, FY2026-27 school committee meeting dates, and January 29 meeting minutes"
+    - "Held FY27 proposed budget presentation; public hearing scheduled for February 26"
+  votes:
+    - motion: "Consent agenda approval"
+      result: "in favor (unanimous)"
+    - motion: "Adjourn"
+      result: "in favor (5 to 0)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.72
+    start_seconds: 100
+    end_seconds: 454
+    headline: "Resident raises concerns about lack of document transparency ahead of meetings"
+    dek: "A speaker criticized the school committee for not posting meeting documents online in advance, calling it a transparency problem in a high-stakes budget year."
+    summary: "A resident speaking before the formal meeting opened argued that documents had not been made available online prior to the meeting, contrasting the practice with prior years. The speaker connected the concern to the current budget climate and the importance of public engagement."
+    key_speakers: ["Resident at mic"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 481
+    end_seconds: 1032
+    headline: "Superintendent highlights Black History Month events, Battle of the Books, and staff shout-outs"
+    dek: "Superintendent Roberto reported on district recognition by an education publication, Black History Month programming, and positive instructional data-team activity at Glover School."
+    summary: |
+      The superintendent's update covered several topics:
+      
+      - **Black History Month**: Theme for 2026 centers on a century of commemoration since Dr. Carter G. Woodson's founding in 1926. Junior Naima was recognized by METCO in its newsletter.
+      - **Battle of the Books**: Held at Veterans Middle School; the Shao Cheetos team won. Superintendent praised student attentiveness.
+      - **Glover Grade 1 Data Team**: Superintendent attended a data meeting led by Emily Perez focused on iReady assessment results.
+      - **Staff shout-outs**: Jenny Wilkins (Village), seventh-grade team at Vets, Kaia Johnson and Latoya Salters at MHS for METCO/Black History Month programming, and the Glover pre-K team.
+      - **National recognition**: An education publication contacted the district about featuring Marblehead in a "10 Most Influential School Districts in 2026" edition, citing a 99% graduation rate and strong MCAS performance.
+      
+      The consent agenda — bills totaling $320,620.66, FY2026-27 meeting dates, and January 29 minutes — was approved 5-0 after a brief note about a National Grid billing mix-up affecting utility credits between town and school accounts.
+    key_speakers: ["Superintendent Roberto"]
+  - topic: school-budget
+    topic_confidence: 0.98
+    start_seconds: 1033
+    end_seconds: 5757
+    featured: true
+    headline: "Schools propose level-funded $49.1M FY27 budget cutting 14.75 FTEs to close $2.56M gap"
+    dek: "Superintendent Roberto and finance chief Mike Ling presented a budget holding the town appropriation flat while eliminating or leaving vacant positions at every school level to offset rising contractual costs."
+    summary: |
+      ### FY27 Budget Overview
+      
+      The district was directed by the town to submit a **level-funded budget** — meaning the FY27 appropriation from the town would remain at the FY26 figure of approximately **$49.1 million**. If operated at level *service* (covering all contractual obligations), costs would rise by approximately **$2.56 million**, requiring the town appropriation to reach roughly **$50.7 million**.
+      
+      ### Budget Composition
+      - Salaries: ~80% of total budget
+      - Other major buckets: out-of-district tuitions, contracted services, utilities, technology, transportation, supplies
+      
+      ### Enrollment Context
+      | Year | Enrollment |
+      |------|------------|
+      | 2024-25 | 2,564 |
+      | 2025-26 (Oct. 1) | 2,394 |
+      | Feb. 3, 2026 | 2,435 |
+      
+      From FY2016-17 to FY2026-27 (proposed), licensed teaching FTEs would decline from 263.9 to approximately 212.35 — a ~20% reduction over 10 years — while enrollment fell from 3,144 to ~2,435 (~23%).
+      
+      A committee member added that between 2016 and 2025 the high-needs student population grew from 27% to 32% of enrollment, with a 34% increase in students with autism and a 48% increase in neurological or health-related disabilities.
+      
+      ### Offsets and Efficiencies (Round 1)
+      To bridge the gap, the administration identified multiple revenue and savings levers:
+      - Increased draws from pre-K/kindergarten revolving account (nearly doubled)
+      - Additional circuit breaker claim revenue (~$2M received this year; one year of reserve kept)
+      - Reduced retirement savings assumption
+      - Copier lease renegotiation and PaperCut monitoring software
+      - Level-funding all supply, PD, and technology lines
+      - Salary shifts: portions of assistant business manager, facilities admin assistant, and assistant director of student services moved to revolving/grant accounts
+      
+      ### Staff Reductions (Round 1 — less painful)
+      - Summer technology position eliminated
+      - HR assistant position (vacant) not filled
+      - Teacher-in-charge stipend at Glover eliminated
+      - 1.75 FTE EL teachers at Village not filled
+      - 1.0 FTE math intervention teacher at Veterans not filled
+      - 0.2 FTE reduction in an existing teacher position (already implemented)
+      
+      ### Staff Reductions (Round 2 — "the ones that hurt")
+      - 1.0 FTE elementary teacher
+      - 1.0 FTE teacher at Veterans
+      - 3.0 FTE teachers at Marblehead High School
+      - 0.4 FTE EL teacher at Glover
+      - 1.0 FTE gen-ed instructional assistant (elementary)
+      - 0.4 FTE speech-language pathologist (reduced from 1.0 to 0.6)
+      - 1.0 FTE special ed teacher at Village (vacant, not filled)
+      - 1.0 FTE BCBA coordinator (vacant, not filled)
+      - 1.0 FTE maintenance worker
+      - ~$100,000 cut to electricity/heating fuel line (~8% reduction)
+      
+      **Total proposed reductions: 14.75 FTEs plus one stipend** (9 filled positions eliminated or reduced; 5.7+ vacancies not refilled).
+      
+      ### Key Risks Flagged
+      - **Special ed revolving fund** (~$300K balance): committing ~$150K/year; likely sustainable for only one more year
+      - **Federal grants** (Title I–IV, IDEA, early childhood): total ~$932K in FY26; FY27 TBD; Title II mentor grant considered most at risk given state mandate
+      - **Out-of-district tuition rates**: collaborative rates may reach 10% increase vs. budgeted ~4%
+      - **Transportation**: stabilized after multi-year spikes of 39–49%; administration expressed confidence in current numbers
+      - **Utilities**: $100K cut is approximately 8% of that line and will be monitored closely
+      
+      ### Next Steps / Timeline
+      | Date | Event |
+      |------|-------|
+      | Feb. 26 | Public hearing on proposed budget |
+      | March | School committee vote on budget |
+      | March–April | Finance committee budget and warrant hearings |
+      | May | Town Meeting |
+      
+      The chair noted the town's overall budget deficit is a "moving target" and the committee may be asked to revisit the level-funded figure before Town Meeting.
+    key_speakers: ["Superintendent Roberto", "Mike Ling (Assistant Superintendent of Finance)", "Julia Ferrera (Assistant Superintendent of Teaching and Learning)", "Lisa Marie Polito (Assistant Superintendent of Student Services)", "John (School Committee Chair)", "Melissa (School Committee, budget subcommittee)", "Henry (School Committee member)", "Kate (School Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 5757
+    end_seconds: 6087
+    headline: "Communications subcommittee to send budget-focused newsletter Monday; roof project update shared"
+    dek: "A budget-focused school committee newsletter will be sent Monday and linked to the presentation; the high school roof project is on track with HVAC units ordered and delivery assured by June."
+    summary: |
+      The communications subcommittee (Melissa and one other member) reported a newsletter will go out Monday to avoid conflicting with school newsletters. It will include a budget update, links to the budget book and presentation video, and contact information for questions.
+      
+      On the high school roof project: all back-ordered HVAC units have been ordered with confirmed on-site delivery by June. A pre-inspection of existing equipment is scheduled for February vacation week. One to two small roof sections with no HVAC equipment may be replaced during April vacation week, weather permitting. Summer programming impacts were discussed: the special education summer program moves to Veterans; weight-room access continues with possible entry-point adjustments depending on crane staging. Piper Field remains available with minor possible exceptions.
+    key_speakers: ["Mike Ling (Assistant Superintendent of Finance)", "Superintendent Roberto"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -9,7 +9,47 @@ vimeo_url: "https://vimeo.com/1033697901"
 duration_seconds: 1150
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Marblehead teachers strike ends; schools reopen Nov. 27 after tentative agreement"
+  summary: "The Marblehead School Committee and the Marblehead Education Association reached tentative agreements ending a strike of roughly 15-16 days. Schools will reopen Wednesday, November 27, 2024, which is an early release day. The four-year contract includes wage increases ranging from approximately 10.5% to 18% depending on unit and step, plus 12 weeks of paid parental leave and a joint safety committee. Officials noted the contract is not retroactive and that strike costs to the town were estimated at at least $20,000 per day, with a Prop 2½ override discussion expected to begin ahead of a May town meeting."
+  decisions:
+    - "Approved tentative agreements between Marblehead School Committee and Marblehead Education Association covering five bargaining units"
+
+topic_segments:
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 14
+    end_seconds: 1118
+    featured: true
+    headline: "Teachers strike ends; four-year contract ratified, schools reopen Nov. 27"
+    dek: "After roughly 15-16 days on strike, MEA and School Committee reached a tentative agreement covering wages, parental leave, and a joint safety committee."
+    summary: |
+      ### Settlement Announcement
+      
+      School Committee Chair Jen Schaffner announced that the Marblehead School Committee and the Marblehead Education Association reached tentative agreements, ending the teacher strike. Schools will reopen for students on **Wednesday, November 27, 2024**, an early release day.
+      
+      ### Contract Terms
+      
+      - **Duration:** Four years
+      - **Wage increases:** Approximately 10.5%–18% across five bargaining units (blended rate; varies by step and lane)
+      - **Paid parental leave:** Up to 12 weeks added for all units
+      - **Joint safety committee:** New committee to identify building safety concerns and report recommendations to the School Committee
+      - **Retroactivity:** Contract is **not** retroactive; it takes effect from the date of ratification
+      
+      ### Strike Costs
+      
+      Town Administrator Thatcher Keer estimated municipal strike costs at **at least $20,000 per day**, covering police presence, student meals, and court filing fees (not including negotiating attorney fees). In lieu of the union absorbing those costs in a return-to-work agreement, the committee declined to agree to retroactive pay.
+      
+      ### Path to Funding
+      
+      Officials noted that funding the new contract will require a **Proposition 2½ override**, with the budget process already underway. A key finance projection meeting was referenced for approximately December 11. Town meeting is scheduled for May, with a potential override ballot in June. Officials emphasized the community would need to advocate for the override, as the School Committee is legally prohibited from promoting it.
+      
+      ### How the Deal Came Together
+      
+      Chair Schaffner and fellow member Sarah Fox credited MEA bargaining leader Mike Giardi for focusing negotiations on local Marblehead needs. Town Administrator Thatcher Keer was credited with working daily throughout the process. State-level support — including outreach from Governor Healey, Lieutenant Governor, and Secretary of Education Patrick Tutwiler — was also acknowledged as a factor in expediting resolution.
+    key_speakers: ["Jen Schaffner (School Committee Chair, Bargaining Subcommittee)", "Sarah Fox (School Committee member)", "Thatcher Keer (Town Administrator)", "John Ou (Superintendent of Schools)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

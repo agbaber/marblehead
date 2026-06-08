@@ -9,7 +9,48 @@ vimeo_url: "https://vimeo.com/1033263374"
 duration_seconds: 1024
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Marblehead School Committee presents best-and-final offer; teachers' strike continues amid contempt ruling"
+  summary: "School Committee bargaining subcommittee chairs Jen Schaffner and Sarah Fox held a press conference announcing a best-and-final contract offer to the Marblehead Education Association (MEA), which they said the union declined to accept. The committee stated the Superior Court found the union in contempt of an order to return to work, and that court-ordered fact-finding begun that morning was rejected by the MEA, which sought to use the fact-finder only as a mediator. The committee's offer would cost $6.4 million by end of year four, requiring a Proposition 2½ override estimated to add approximately $334.60 to the average tax bill; the union's latest proposal was described as carrying an $8 million price tag."
+
+topic_segments:
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 14
+    end_seconds: 967
+    featured: true
+    headline: "School Committee presents $6.4M best-and-final offer; MEA strike continues as fact-finding rejected"
+    dek: "Subcommittee chairs outlined contract terms, legal proceedings, and contempt order against the MEA at a press conference held away from school grounds due to safety concerns."
+    summary: |
+      School Committee Bargaining Subcommittee Chair Jen Schaffner and member Sarah Fox presented the committee's position at a press conference, explaining they had submitted a best-and-final offer during mediation. Key points included:
+      
+      **Contract Offer Terms**
+      - Committee's proposal would cost **$6.4 million** by end of year four (up from an original $4.8 million offer, a 30% increase)
+      - Would raise average teacher salary to **more than $100,000** and top salary to **$113,300** over 184 working days
+      - Two-thirds of teachers would be at the top salary level
+      - Paraprofessionals, part-time staff offered **48–69% salary increases**
+      - New parental leave benefit: first 15 days paid by the school committee, up to 12 additional weeks covered by accrued sick time
+      - New sick leave banks for teachers and other bargaining units
+      - Proposal includes return of morning recess and a joint safety committee
+      
+      **Fiscal Impact**
+      - Committee's offer leaves a **$3.174 million shortfall** by year four, requiring a Prop 2½ override adding approximately **$334.60** to the average tax bill
+      - Union's latest proposal carries an **$8 million** price tag and would create a **$4.7 million** budget gap
+      
+      **Legal Proceedings**
+      - Superior Court found the union and its officials in contempt of an order to return to work
+      - Court ordered fact-finding as of 6:00 PM the prior day; a 9:00 AM session occurred but the MEA stated it would only engage with the fact-finder as a mediator, not in a fact-finding capacity
+      - State-appointed mediator canceled a scheduled 1:00 PM mediation session
+      - The committee filed with the Commonwealth Employment Relations Board (CERB/SERB) naming four individual teachers who self-identified as strike leaders; SERB subsequently filed with the court
+      
+      **Pay Docking**
+      - Officials stated Massachusetts law prohibits paying employees engaged in an illegal strike; some employees on weekly pay cycles had already experienced withheld pay, with bi-weekly employees affected that week
+      
+      **Safety**
+      - The press conference was held outside school buildings after committee members reported requiring a police escort to their vehicles the prior evening due to being surrounded by members of the public
+    key_speakers: ["Jen Schaffner (School Committee Chair, Bargaining Subcommittee)", "Sarah Fox (School Committee Member, Bargaining Subcommittee)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

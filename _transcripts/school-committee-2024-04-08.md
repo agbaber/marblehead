@@ -9,7 +9,55 @@ vimeo_url: "https://vimeo.com/932505197"
 duration_seconds: 2641
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Finance Committee recommends FY25 school budget of $46,759,110 and revised town budget"
+  summary: "The Finance Committee met jointly with the School Committee to review the FY25 school budget, which was balanced in part by drawing approximately $1.4 million from revolving and reserve funds — including pre-K and kindergarten tuition accounts and roughly $600,000 in projected FY24 surplus — to restore positions from an earlier 36-position reduction down to approximately 3.7 FTE layoffs. The committee also re-voted the town's other general government budget at $250,000 less than the prior week's figure, with the reduction achieved by deferring OPEB funding for FY25. Both budgets were approved unanimously."
+  decisions:
+    - "Approved recommendation of FY25 school budget at $46,759,110"
+    - "Approved recommendation of revised FY25 other general government budget at $21,198,507"
+  votes:
+    - motion: "Recommend FY25 school budget of $46,759,110"
+      result: "in favor (unanimous)"
+    - motion: "Recommend FY25 other general government budget of $21,198,507"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: school-budget
+    topic_confidence: 0.97
+    start_seconds: 0
+    end_seconds: 2429
+    featured: true
+    headline: "FinCom recommends $46.76M FY25 school budget after revolving-fund maneuver"
+    dek: "Nearly $1.4M drawn from tuition revolving accounts and projected surplus reduced position eliminations from 36 to roughly 3.7 FTE."
+    summary: |
+      The joint Finance Committee and School Committee session focused on how the FY25 school budget was balanced after an earlier gap of approximately $2.3 million between level-services and the available general-fund allocation.
+      
+      **Key funding moves:**
+      
+      | Source | Approximate Amount |
+      |---|---|
+      | Pre-K / Kindergarten tuition revolving fund (full burdening of staff costs) | ~$800K (implied majority of $1.4M) |
+      | FY24 projected surplus pre-payment of out-of-district special ed tuition & technology | ~$600K |
+      | Town allocation increase | Included in total |
+      
+      - The school finance director explained that prior practice had only partially charged staff costs against tuition revolving accounts; fully burdening those accounts is consistent with practices in approximately 70–80% of comparable communities.
+      - The circuit-breaker reserve was left fully intact at 100%.
+      - A consultant (referred to as "Mary") noted that a 1% end-of-year surplus is typical for school budgets of this size; the current FY24 projection of roughly 2% surplus gave the committee confidence to pre-pay approximately $600,000 in recurring costs.
+      - School Committee voted to bring any financially material decisions before the full committee for the remainder of the term to safeguard the projected surplus.
+      - Participants flagged that the ~$1.2M of recurring costs funded by one-time or revolving-fund draws will need to flow back into the operating budget in FY26, potentially inflating the apparent year-over-year percentage increase.
+      - Discussion touched on paid kindergarten (Marblehead is one of two communities in the Commonwealth still charging tuition), potential mandatory pre-K at the state/federal level, and the desire to migrate budget data into ClearGov and Munis for improved forecasting.
+      - The Food Service director position was moved from the general fund to the food service revolving fund as part of the rebalancing.
+    key_speakers: ["Theresa (School administration, superintendent or assistant)", "Mary (School CFO / finance consultant)", "Sarah (School Committee Chair)", "Jen (School Committee member)", "Alec (Finance Committee member or CFO)", "Pat (Finance Committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 2429
+    end_seconds: 2605
+    headline: "FinCom re-votes town 'other general government' budget $250K lower to free funds for schools"
+    dek: "OPEB funding was deferred for FY25 to allow a $250,000 reallocation to the school budget; free cash usage held at $5.5M."
+    summary: "After the school budget vote, the Finance Committee re-voted the FY25 'other general government' line item at $21,198,507 — $250,000 below the figure approved the prior week. The reduction was achieved by not funding the OPEB (Other Post-Employment Benefits) contribution for FY25. The committee chair noted this is not best financial practice but will not cause significant short-term hardship. The total free cash used to balance the overall budget remained at $5.5 million. The meeting then adjourned."
+    key_speakers: ["Alec (Finance Committee chair or member)", "Alicia (Town CFO, referenced)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

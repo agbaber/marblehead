@@ -9,7 +9,78 @@ vimeo_url: "https://vimeo.com/1028979303"
 duration_seconds: 2126
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "Marblehead teachers strike; School Committee and MEA hold dueling press conferences"
+  summary: "Marblehead Education Association (MEA) teachers began an illegal work stoppage, prompting School Committee Chair Jen Schaffner, member Sarah Fox, and Town Administrator Thatcher Keyser to hold a press conference laying out the committee's bargaining position. MEA co-president Jonathan Heller and bargaining co-chair Michael Giardi then responded, disputing the committee's characterizations of Sunday mediation availability, wage competitiveness, and parental leave terms. The parties were scheduled to return to mediation at 3:00 PM at Marblehead High School. The committee's four-year offer would raise average teacher salary to approximately $100,000 and top-scale to $109,000; the union's counter-proposal was characterized by the committee as a 34% increase creating a roughly $7.5 million budget shortfall."
+
+topic_segments:
+  - topic: labor-personnel
+    topic_confidence: 0.98
+    start_seconds: 14
+    end_seconds: 1300
+    featured: true
+    headline: "School Committee presents its bargaining position as MEA teachers strike"
+    dek: "Chair Schaffner, member Fox, and Town Administrator Keyser outlined the committee's four-year contract offer and defended their weekend availability during mediation."
+    summary: |
+      School Committee Chair Jen Schaffner opened the press conference by characterizing the work stoppage as an illegal strike and stating the committee had twice offered to release the 15 union negotiators from duty with pay to continue mediation in exchange for canceling the strike — both offers were rejected.
+      
+      **Committee's stated contract offer:**
+      - Four-year agreement raising average teacher salary to approximately **$100,000** and top-scale salary to **$109,000** for 184 working days
+      - New parental leave benefit: 12 paid working days by the district for either parent (birth or adoption), followed by use of accrued sick leave up to 12 weeks
+      - Sick leave bank access extended to all bargaining units
+      
+      **Financial framing:**
+      Town Administrator Thatcher Keyser said the union's proposal would create a structural deficit and could decimate the school system if a Prop 2½ override failed, estimating roughly **75 staff layoffs** in that scenario. He noted Marblehead relies heavily on free cash (a one-time revenue source) and carries a AAA bond rating that would be at risk if one-time funds were used for recurring obligations. Free cash certification is expected to be approximately **$8 million** but was described as an inappropriate source for ongoing salary obligations.
+      
+      **Mediation timeline:**
+      - Friday: DLR hearing; mediator assigned
+      - Saturday Nov. 9: Fact-finding session; both sides present
+      - Sunday: No session scheduled or attended by mediator
+      - Monday (Veterans Day): ~10 AM–8 PM mediation session
+      - Tuesday: 3:00 PM session scheduled at Marblehead High School
+      
+      **Extracurriculars:** Superintendent John Du canceled all extracurricular activities; Schaffner cited safety concerns (most coaches are faculty) and equity (not all teams could proceed if only some were allowed).
+      
+      **Empty school buildings:** Schaffner confirmed the School Committee intends to discuss disposition of unused school buildings during the upcoming warrant season; any transfer would require a town meeting vote.
+    key_speakers: ["Jen Schaffner (School Committee Chair)", "Sarah Fox (School Committee member / bargaining subcommittee)", "Thatcher Keyser (Town Administrator)"]
+  - topic: labor-personnel
+    topic_confidence: 0.98
+    start_seconds: 1577
+    end_seconds: 2113
+    headline: "MEA co-president and bargaining co-chair dispute committee's account at same press conference"
+    dek: "Union leaders accused the School Committee of being unavailable Sunday, holding firm rather than negotiating, and misrepresenting wage rankings and parental leave terms."
+    summary: |
+      MEA Bargaining Co-Chair Michael Giardi (educator since 2001, coach since 1999) stated the mediator told the union they were ordered to the table Sunday but the committee was unavailable, and that the mediator declined to appear once the committee was not coming. He said the union worked until 8:30 PM Monday and accused the committee of walking out.
+      
+      MEA Co-President Jonathan Heller disputed several factual claims:
+      
+      **Wage rankings (union's claim):** Under the committee's four-year offer, Marblehead would rank among 14 North Shore communities as follows:
+      
+      | Year | Rank (of 14) |
+      |------|--------------|
+      | 1    | 12           |
+      | 2    | 12           |
+      | 3    | 13           |
+      | 4    | 13           |
+      
+      **Paraprofessional/tutor pay:** Heller stated the committee's offer would result in paras earning approximately **$21,351/year** and tutors **$28,836/year** at the end of four years.
+      
+      **Parental leave (union's comparison):**
+      
+      | District       | Total weeks | Employer-paid days |
+      |----------------|-------------|---------------------|
+      | Andover        | 12          | 40                  |
+      | Malden         | 12          | 30                  |
+      | North Andover  | 12          | 20                  |
+      | Salem          | 14          | 30                  |
+      | Marblehead (SC offer) | up to 12 (for most, ~6 weeks) | 12 |
+      
+      Heller argued the committee's 12-day paid figure is misleading: vacation days count against the clock, couples who both work in the district must split the benefit, and the practical result for most employees is approximately six weeks, not twelve.
+      
+      Giardi and Heller both stated the union supports coaches and advisors continuing extracurricular activities and that the school committee and superintendent are withholding those opportunities. Heller noted that student activity/athletic user fees have nearly doubled and that parents were filing for a court injunction the same morning.
+    key_speakers: ["Michael Giardi (MEA Bargaining Co-Chair)", "Jonathan Heller (MEA Co-President)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -9,7 +9,264 @@ vimeo_url: "https://vimeo.com/1080795096"
 duration_seconds: 12317
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "School committee approves flag/banner policy 4-1 and votes to seek expanded Piper Field lighting hours"
+  summary: "The Marblehead School Committee approved flag and banner policy IMDB on a 4-1 vote, adding language to cover both students and staff after extended debate. The committee also voted unanimously to authorize an application to the Planning Board to expand permitted light use and PA system access at Piper Field beyond the 2013 conditions. Additional items included approval of school improvement plans for Marblehead High School and Glover School, first reading of a recess policy requiring two daily recess periods for grades K-6, and a vote to name a playground structure at Glover School in memory of former teacher Brooke Yano."
+  decisions:
+    - "Approved flag and banner policy IMDB with amendment adding 'staff' alongside 'students'"
+    - "Approved application to Planning Board for expanded Piper Field lighting and PA use"
+    - "Approved school improvement plans for Marblehead High School and Glover School"
+    - "Approved naming of a Glover School playground structure in memory of Brooke Yano"
+    - "Approved schedule of bills for $595,088.79"
+    - "Approved increase to intramural hourly rate in accordance with June 2022 stipend agreement"
+    - "Continued recess policy to next meeting (first reading only)"
+    - "Continued operating protocols and code of ethics to next meeting"
+  votes:
+    - motion: "Approve flag and banner policy IMDB with edits"
+      result: "in favor (4 to 1)"
+    - motion: "Authorize Planning Board application for Piper Field lighting/PA relief"
+      result: "in favor (unanimous)"
+    - motion: "Approve school improvement plans for MHS and Glover School"
+      result: "in favor (unanimous)"
+    - motion: "Name Glover playground structure in memory of Brooke Yano"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills for $595,088.79"
+      result: "in favor (unanimous)"
+    - motion: "Approve increase to intramural hourly rate per June 2022 stipend agreement"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.97
+    start_seconds: 106
+    end_seconds: 2227
+    headline: "Residents urge school committee to drop or revise flag/banner policy at public comment"
+    dek: "Six speakers addressed the pending flag and banner policy, raising concerns about censorship, heritage month selection, METCO community impact, and staff rights."
+    summary: |
+      Multiple residents addressed the committee during public comment focused largely on the pending flag and banner policy (IMDB):
+      
+      - **Margaret Clark (29 Bamford St.)** argued that requiring superintendent approval undermines trust in administration, that pride and Black Lives Matter flags are not political in the same sense as electoral politics, and that restricting flags amounts to censorship.
+      - **Angus McQuilkin (39 Ty Lane)** contended no policy was ever needed, criticized the list of six heritage months as excluding others (Greek American, Jewish American, Arab American, Juneteenth), and noted the policy says nothing about teacher and staff free expression.
+      - **Chris Brule (online)** stated that cisgendered, heterosexual community members were also offended by earlier committee remarks framing the issue as one of 'traditional family values.'
+      - **Renee (last name unclear)** asked how 'viewpoint neutral' is defined and questioned whether any formulation could avoid giving offense to someone.
+      - **Cindy Tower Lowen (12 Trinity Road)** asked whether the committee had consulted METCO headquarters or other METCO districts before potentially removing the Black Lives Matter banner, noting over 50 Boston students attend Marblehead schools.
+      - **Mary McCarrison (Pinecliff Drive)** thanked teachers for a passion-project gallery event, raised questions about the book policy and the grading system, and warned that removing flags could invite legal action from GLAD and the NAACP.
+      - **Jeannie Lampkin (Devereux St.)** pointed out that a welcome mat recently gifted to the school contained activist symbols (pride, trans, BLM-adjacent imagery), suggested the committee adopt plain active voice in its policy, noted the Marblehead Housing Authority flag policy as a possible model, and asked that the tattered school flagpole flag be replaced.
+    key_speakers: ["Margaret Clark (resident, 29 Bamford St.)", "Angus McQuilkin (resident, 39 Ty Lane)", "Chris Brule (resident, online)", "Renee (resident, last name unclear)", "Cindy Tower Lowen (resident, 12 Trinity Road)", "Mary McCarrison (resident, Pinecliff Drive)", "Jeannie Lampkin (resident, Devereux St.)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2227
+    end_seconds: 2662
+    headline: "Student rep reports spring events; superintendent highlights principals, experiential learning"
+    dek: "Student representative Ella gave event updates and Superintendent Ou recognized school principals and recent district activities including a mock town meeting at Vets."
+    summary: |
+      **Student representative Ella** reported: a chopped-style cooking competition (April 11), cheerleading tryouts (June 9/11/12), Senior College Signing Day (May 29), the acappella spring concert 'Acapalooza' (May 9 at Vets, 7 PM), Junior Prom (May 16), senior lawn signs available via Google form, and upcoming AP exams.
+      
+      **Superintendent John Ou** recognized all district principals on National School Principals Day, noted recent international trips (Thailand and Greece), Earth Day planting activities at Glover and Brown schools, the grade 6 passion book project gallery at Village School, and a mock town meeting at Vets moderated by town moderator Jack Ridge in which students debated and voted on the sustainability article from the town meeting warrant.
+      
+      **Melissa Kalu**, speaking on behalf of PCO presidents, asked the committee to acknowledge the passing of former Glover School PCO President **Mira Kowalski**, who died unexpectedly. The committee observed a moment of silence.
+    key_speakers: ["Ella (student representative, MHS)", "John Ou (superintendent)", "Melissa Kalu (PCO president representative)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 2662
+    end_seconds: 2813
+    headline: "Schedule of bills approved; committee notes meeting-minutes backlog being addressed"
+    dek: "The committee approved $595,088.79 in bills unanimously and discussed a plan to post draft minutes while a replacement minute-taker is onboarded."
+    summary: |
+      The committee voted 5-0 to approve the schedule of bills totaling **$595,088.79**.
+      
+      Chair Schaffner noted that the prior minutes-taker had left the district and that draft minutes would be posted with a watermark pending formal approval, while the chair and secretary work with a new in-district staff member (Caitlin) to catch up on the backlog.
+    key_speakers: ["Jen Schaffner (chair)"]
+  - topic: recreation-events
+    topic_confidence: 0.95
+    start_seconds: 2813
+    end_seconds: 2862
+    headline: "Eight MHS seniors present senior project internships at school committee spotlight"
+    dek: "Students working in neuropsychology, golf management, boat detailing, finance, therapy dogs, law, journalism, and dementia arts programs described their fourth-quarter internship experiences."
+    summary: |
+      Superintendent Ou and Principal Carlson introduced the school spotlight on **senior project**, an optional fourth-quarter program requiring minimum GPA, attendance, and good conduct records. Approximately 165 seniors are currently placed. Eight students presented:
+      
+      | Student | Placement |
+      |---|---|
+      | Ava Salem | Essex Pediatric Neuropsychology (social media/website) |
+      | Jacob Hirschfield | Kerwood Country Club (golf management) |
+      | Shi Capic | Boat detailing company (local boatyards) |
+      | Jeremy Sorkin | Metro Credit Union (teller/intern — first HS intern in company history) |
+      | Lila McGovern | Therapy dog program at Village School (dogs Salty and Rudder) |
+      | Eva Ham | RN Law (medical malpractice attorney internship) |
+      | John Bender | Marblehead Current (journalism) |
+      | Aria Hoover | Dementia arts programs — Memory Café, OMA, Arts & Culture (Simmons University nursing-bound) |
+      
+      A senior project showcase is scheduled for **May 30th** at the high school.
+    key_speakers: ["Michelle Carlson (MHS principal)", "Ava Salem (student)", "Jacob Hirschfield (student)", "Shi Capic (student)", "Jeremy Sorkin (student)", "Lila McGovern (student)", "Eva Ham (student)", "John Bender (student)", "Aria Hoover (student)"]
+  - topic: recreation-events
+    topic_confidence: 0.92
+    start_seconds: 3920
+    end_seconds: 4476
+    headline: "Committee votes 5-0 to apply to Planning Board to expand Piper Field light and PA use"
+    dek: "The 2013 planning decision limits Piper Field to 12 lighted nights and PA use for football only; the committee approved pursuing relief to allow broader athletic scheduling."
+    summary: |
+      Superintendent Ou presented a request for the committee to authorize an application to the Planning Board seeking modification of a 2013 decision that restricts Piper Field to **12 lighted nights per year** and PA system use limited to football games.
+      
+      The proposed relief would extend lighting use to **10 PM on 12 nights** and **9 PM on other nights**, and allow PA use for all athletic contests. Rationale: new LED lighting has a significantly smaller light-spill footprint than prior fixtures; sub-varsity teams could use Piper Field at night, freeing other town fields for youth and adult recreational leagues.
+      
+      Discussion flagged:
+      - Committee member Fox noted the application should be narrowly drawn to lights and PA only, not reopening the full order of conditions.
+      - A **Title IX concern** was raised about restricting PA use to football only; the committee agreed equity in PA access is important.
+      - Fox suggested that if abutters push back primarily on the PA, the committee may need to prioritize the lighting request.
+      
+      Vote: **5-0 in favor** of authorizing the Planning Board application. A Planning Board hearing is anticipated at the June meeting.
+    key_speakers: ["John Ou (superintendent)", "Sarah Fox (committee member)", "Jen Schaffner (chair)"]
+  - topic: school-budget
+    topic_confidence: 0.87
+    start_seconds: 4476
+    end_seconds: 4519
+    headline: "School improvement plan presentations scheduled for MHS and Glover"
+    dek: "Committee transitions to school improvement plan presentations from MHS principal Carlson and Glover principal Kowalski."
+    summary: "Chair Schaffner noted that all school improvement plans are aligned with the current district Plan for Success, which is being replaced by a more comprehensive district improvement plan. Superintendent Ou noted that future plans will look significantly different as the DIP is developed."
+    key_speakers: ["John Ou (superintendent)", "Jen Schaffner (chair)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 4519
+    end_seconds: 4890
+    headline: "MHS school improvement plan: NEASC prep, curriculum docs, SEL, and student voice"
+    dek: "Principal Carlson presented four goals for MHS: NEASC accreditation preparation, written curriculum documentation, professional learning, and expanding student voice and belonging."
+    summary: |
+      **MHS Principal Michelle Carlson** presented four school-based improvement goals for 2024-25:
+      
+      1. **NEASC preparation** — The originally scheduled spring visit was postponed to next year after fall professional development days were lost; a faculty-authored report and committee formation are underway.
+      2. **Written curriculum documentation** — Scope and sequence documents to be completed for all courses ahead of the decennial NEASC visit in approximately three years.
+      3. **Professional learning** — Continued rollout of Wayfinder SEL program; expanding integration into 'magic blocks' and teacher training on best instructional practices.
+      4. **Student voice and belonging** — Student surveys, celebration of contributions, listening sessions, and opportunities for students to participate in school decisions.
+      
+      Committee member Schaffner recognized facilities coordinator Mike Lavender for his detailed NEASC-related facilities work.
+    key_speakers: ["Michelle Carlson (MHS principal)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 4930
+    end_seconds: 5381
+    headline: "Glover School improvement plan focuses on tier-1 instruction, professional culture, and METCO inclusion"
+    dek: "Newly permanent principal Frank Kowalski presented three improvement areas: teaching and learning, professional culture, and diversity, equity, and inclusion with a focus on the METCO community."
+    summary: |
+      **Glover School Principal Frank Kowalski** (presenting his first school improvement plan as permanent — not interim — principal) outlined three goal areas:
+      
+      1. **Teaching and learning** — Increase student achievement via common planning time for MTSS data meetings, focus on tier-1 foundational instruction, and a school-wide 'do now' silent reading period to be implemented in fall 2025.
+      2. **Professional culture** — Build a unified staff culture through celebratory recognition, shared accountability, and increased 'Club Fridays' community days.
+      3. **Diversity, equity, and inclusion** — Ensure inclusive practices for all students with added focus on the METCO community; biweekly meetings with the METCO director to ensure shared alignment.
+      
+      Committee member Fox noted that after-school planning meetings must be compensated, not voluntary, consistent with labor agreements. The committee voted **5-0** to approve both the MHS and Glover school improvement plans.
+    key_speakers: ["Frank Kowalski (Glover School principal)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 5519
+    end_seconds: 5748
+    headline: "Committee votes to name a Glover School playground structure in memory of Brooke Yano"
+    dek: "A preliminary vote authorized work to proceed on naming a play structure; specific structure, cost, and plaque details will return for a second vote."
+    summary: |
+      The committee voted **5-0** to approve naming a playground structure at the Glover School main playground in memory of **Brooke Yano**, a former kindergarten teacher described as beloved who passed away unexpectedly. The Glover main playground is already named after a different honoree (the former building), so a specific structure within the playground will be designated.
+      
+      Facilities director Mike Pip noted that town meeting funding has been requested for new playground surface and structures at Glover, and that the naming will be integrated into a broader playground planning process involving staff, students, and the community. The committee will see specific structure options, cost, donation sources, and proposed plaque language at a future meeting before final approval.
+    key_speakers: ["John Ou (superintendent)", "Mike Pip (assistant superintendent, business and operations)", "Frank Kowalski (Glover principal)", "Sally (facilities staff, present)"]
+  - topic: bonding-capital
+    topic_confidence: 0.82
+    start_seconds: 5886
+    end_seconds: 6704
+    headline: "Finance update: $2.46M balance remaining; free cash shortfall of ~$2.5M may cut school capital asks"
+    dek: "Assistant Superintendent Pip reported the district has expended $31.8M with $12.5M encumbered; a late town-side free cash reduction of approximately $2.5M may require capital ask reductions ahead of town meeting."
+    summary: |
+      **Assistant Superintendent Mike Pip** reported as of the prior afternoon:
+      - Expended: **$31.8 million**
+      - Encumbered: **$12.5 million**
+      - Current balance: **$2.46 million** (~$253,000 less than the prior month)
+      - Budget projections holding; salaries encumbered at a favorable pace.
+      - The school committee and Finance Committee both voted unanimously for the superintendent's proposed budget; town meeting is on **May 5**.
+      
+      **Free cash shortfall:** On Monday evening the district was notified that free cash projections were reduced by approximately **$2.5 million**. Chair Schaffner explained the town's plan: roughly $1.5M addressed through town-side mechanisms not directly affecting schools, and approximately $1M through capital reductions across departments including schools. Specific cuts had not been finalized.
+      
+      Discussion:
+      - Committee members expressed intent to use any FY25 operating **surplus** to offset reductions to FY26 capital asks (e.g., playground structures, HVAC at Glover, PAC painting/seats, special education van) rather than returning surplus to the town.
+      - The committee noted it is scheduled to meet at town meeting (**posted for 6:45 PM**) to vote on any needed amendment to its capital request figure.
+      - Superintendent Ou clarified that any surplus offset would follow standard end-of-year procedures, including prepayment of special education tuitions.
+    key_speakers: ["Mike Pip (assistant superintendent, business and operations)", "Jen Schaffner (chair)", "John Ou (superintendent)", "Sarah Fox (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 6704
+    end_seconds: 9403
+    featured: true
+    headline: "Flag/banner policy IMDB adopted 4-1 after debate; Al Williams votes against"
+    dek: "After 18 months of drafting, the committee approved policy IMDB governing government speech through flags and banners on school property, with a last-minute amendment to include staff alongside students."
+    summary: |
+      The committee conducted a third reading and voted **4-1** (Williams against) to adopt flag and banner policy **IMDB**.
+      
+      **Policy as adopted** (summarized):
+      - The school committee is the sole authority to determine that flags/banners on district property constitute the district's government speech.
+      - Exemptions: athletic banners, student artwork, locker decorations, notebook covers, personal items students **or staff** may bring to class or use during transportation.
+      - Positive affirmations promoting a welcoming environment or school values are permitted, provided they are not affiliated with a political or activist organization.
+      - All government speech shall be viewpoint neutral and limited to the district's educational mission, public service announcements, or messages of general civic unity.
+      - **Mandatory displays:** US flag, Massachusetts flag, POW/MIA flag.
+      - **Heritage month flags** (displayed during specified month): African American History (February), Women's History (March), Asian Pacific American Heritage (May), Pride (June), Hispanic Heritage (mid-September–mid-October), Native American Heritage (November).
+      - The committee will not accept third-party flag/banner requests directly; recommendations come from the superintendent.
+      - The superintendent, acting in their sole discretion for day-to-day operations, may recommend flags/banners to the committee for adoption as government speech.
+      
+      **Key amendment at the meeting:** 'Students' in the personal-items exemption was changed to 'students or staff' at the suggestion of committee members Williams and Taylor, consistent with existing collective bargaining agreement language.
+      
+      **Debate highlights:**
+      - **Al Williams** (no vote) stated he remains unconvinced a policy is necessary, that current state — flags already hanging — has not produced problems this school year, and that the policy creates more legal uncertainty than it resolves.
+      - **Jen Schaffner** argued that without a policy declaring government speech, any denial of a flag request would be a First Amendment violation under *Shurtleff v. Boston*, and that the $38,000 investigation triggered by the prior flag dispute illustrated real consequences.
+      - **Sarah Fox** raised a Title IX concern about the prior language limiting PA use to football and noted the superintendent's role as agent (rather than the committee as direct decision-maker) was an improvement committee members pushed for against initial legal drafts.
+      - **Brian Ota** expressed frustration at 18 months of effort with continued controversy, and noted the policy's growing complexity with each revision.
+      - Discussion of the select board's flag policy (passed roughly a year prior), which explicitly excluded the schools.
+    key_speakers: ["Jen Schaffner (chair)", "Al Williams (committee member)", "Sarah Fox (committee member)", "Brian Ota (committee member)", "Allison Taylor (committee member)", "John Ou (superintendent)"]
+  - topic: labor-personnel
+    topic_confidence: 0.9
+    start_seconds: 9451
+    end_seconds: 9542
+    headline: "Committee votes to extend COLA increases to intramural hourly staff per 2022 agreement"
+    dek: "A technical omission in the June 2022 MEA stipend COLA agreement left hourly intramural coaches uncovered; the committee voted 5-0 to correct this."
+    summary: "The committee voted **5-0** to codify in open session an agreement discussed in executive session: intramural staff compensated on an hourly basis (rather than stipend basis) will receive the same automatic COLA increases as stipend-based positions under the June 2022 agreement with the Marblehead Education Association (Unit A). The fiscal impact is minimal (a small number of employees) and costs come from user fees, not the operating budget."
+    key_speakers: ["Jen Schaffner (chair)", "Mike Pip (assistant superintendent, business and operations)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 9588
+    end_seconds: 10530
+    headline: "First reading of recess policy requiring two daily recesses totaling 35 minutes for K-6 continued"
+    dek: "Proposed policy would mandate two scheduled recess periods per school day starting in SY 2025-26; time-on-learning calculations and CBA implications sent for further review."
+    summary: |
+      Committee member Taylor presented a first reading of a proposed **recess policy** (first reading; no vote taken). Key provisions:
+      - **Effective SY 2025-26**, all K-6 students shall have **no fewer than two scheduled recess periods** per school day totaling a **minimum of 35 minutes**.
+      - One recess in the morning, one in the afternoon; each period minimum 15 minutes.
+      - Recess is in addition to PE and lunch; outdoor when weather permits.
+      - Recess shall not be withheld as punishment.
+      - Aligned with CDC, American Academy of Pediatrics, and Mass School Wellness Advisory Committee guidelines.
+      
+      **Background:** A second recess was removed by a prior administration; a subsequent district committee voted unanimously to recommend it be restored, but that recommendation was never implemented.
+      
+      **Concerns raised:**
+      - **Superintendent Ou** presented time-on-learning calculations. With a 20-minute lunch and two recesses of 15+20 minutes plus transition time, the district would fall below the state-required **900 hours** (roughly 892.6 hours). With the five-minute school-day extension added in recent CBA bargaining, the district reaches approximately 900 hours.
+      - **Jonathan (union representative present)** stated the five-minute extension was agreed to be discussed at a joint labor-management committee, not automatically implemented — the two sides have different understandings of that CBA language.
+      - Committee member Fox raised the possibility of amending the school calendar to accommodate the additional time.
+      
+      The committee agreed to continue offline discussion with legal counsel, the union, and administration before a second reading.
+    key_speakers: ["Allison Taylor (committee member)", "John Ou (superintendent)", "Sarah Fox (committee member)", "Brian Ota (committee member)", "Jonathan (union representative, present)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 10741
+    end_seconds: 12311
+    headline: "Operating protocols and code of ethics deferred; superintendent evaluation set for May 6"
+    dek: "Draft committee operating protocols and code of ethics were moved to the May 15 meeting; evaluation compilation is scheduled for the morning of May 6."
+    summary: |
+      **Operating protocols and code of ethics** — Two draft documents prepared by the policy subcommittee (Schaffner and Taylor) were deferred to the **May 15 meeting** at the committee's request given the late hour and a late-arriving attorney review. The chair noted she will incorporate attorney feedback before that meeting.
+      
+      **Superintendent evaluation** — Fillable evaluation forms (based on Sarah Fox's draft, made fillable by district staff) were sent to committee members. Superintendent Ou will provide supporting documentation on his three goals before the meeting. Schedule:
+      - **May 6, 10 AM** at Vidge Road: committee compiles evaluation.
+      - **May 15**: evaluation presented in open session.
+      
+      **Principal search** — Superintendent Ou noted four candidate interviews are scheduled in the coming weeks for the Vets principal vacancy (Matt Fox's departure). Committee members Brian Ota and Allison Taylor both expressed interest in serving on the interview committee; the two agreed to determine the representative offline.
+      
+      **Procedural concern** — Committee member Ota requested a return to Robert's Rules of Order norms, noting that cross-talk and back-and-forth with audience members had become disruptive; the chair agreed this would be addressed in the operating protocols discussion on May 15.
+    key_speakers: ["Jen Schaffner (chair)", "John Ou (superintendent)", "Brian Ota (committee member)", "Allison Taylor (committee member)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

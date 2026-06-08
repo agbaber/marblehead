@@ -9,7 +9,81 @@ vimeo_url: "https://vimeo.com/916919556"
 duration_seconds: 3481
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "School Committee agrees to hold public forum Thursday; defers superintendent search method vote"
+  summary: "The Marblehead School Committee met with League of Women Voters representatives to plan a public forum on school committee transparency. The committee agreed to proceed with a public question-and-answer forum on Thursday at 7:00 PM at the high school in hybrid format, while also committing to a later, League-moderated forum in March. The committee agreed to pursue an interim superintendent search rather than a permanent search, but deferred a vote on whether to use a screening committee or full committee process to Thursday's meeting."
+  decisions:
+    - "Approved holding a public Q&A forum on Thursday at 7:00 PM (high school, hybrid)"
+    - "Approved pursuing an interim superintendent search rather than a permanent search"
+    - "Continued vote on screening committee vs. full committee superintendent search process to Thursday"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.82
+    start_seconds: 0
+    end_seconds: 304
+    headline: "League of Women Voters outlines forum framework and recommends postponing from Thursday"
+    dek: "A League representative described the organization's moderated forum format and suggested delaying the event until late March to allow proper preparation."
+    summary: |
+      A League of Women Voters representative (identified as Mimi) described what the League could offer: a structured public forum with written and oral questions, an out-of-town moderator, time limits, and rules against personal attacks or rants. The League would moderate while the School Committee posts and opens the meeting, then hands it over.
+      
+      The League recommended against holding the forum on the upcoming Thursday for several reasons:
+      - Many residents with schoolchildren had been away during vacation week
+      - A farewell party for Becky Kern was scheduled the same night
+      - Over 750 residents had signed a letter calling for more transparency
+      - Their preferred out-of-town moderator (co-president of the state league and a lawyer) was unavailable before the March 5th elections
+      
+      The League suggested March 28th or another late-March date as an alternative.
+    key_speakers: ["Mimi (League of Women Voters representative)", "Sarah (School Committee Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 304
+    end_seconds: 2231
+    featured: true
+    headline: "School Committee agrees to hold Thursday public forum; League to plan second event in March"
+    dek: "After discussion of legal constraints and forum logistics with town counsel, the committee unanimously agreed to proceed with a Thursday hybrid public forum and work with the League on a later moderated event."
+    summary: |
+      Town counsel (identified as Liz) outlined the legal boundaries of what the School Committee can discuss publicly:
+      - **In scope:** superintendent hiring, school business administrator, special education director, school budget, policies under review
+      - **Out of scope:** hiring or discipline of principals, teachers, paraprofessionals, custodians; student privacy; personnel separation matters
+      
+      Counsel also clarified the distinction between a League of Women Voters forum (where questions can be pre-vetted and organized) and a school committee public comment session (governed by case law prohibiting viewpoint-based restrictions on speakers). She recommended keeping the interim superintendent out of the forum to avoid confusion over who can answer what.
+      
+      After deliberation, the committee reached consensus on the following:
+      - Hold a public question-and-answer forum **this Thursday at 7:00 PM**, high school, hybrid format
+      - Time limit for questions from the public: approximately **one minute**
+      - Topics to be framed at the outset; questions on off-limits matters (personnel, student privacy) would be acknowledged but not answered
+      - Work with the League to schedule a second, formally moderated forum in **late March** (avoiding Holy Thursday, March 28th)
+      
+      The chair noted the committee had already publicly announced a Thursday forum and felt canceling would appear disingenuous. Committee members expressed that holding the forum, even without a moderator, was preferable to waiting a month.
+    key_speakers: ["Sarah (School Committee Chair)", "Liz (Town Counsel)", "Mimi (League of Women Voters)", "Brian (School Committee member)", "Al (School Committee member)", "Allison (School Committee member)", "Jen (School Committee member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.85
+    start_seconds: 2231
+    end_seconds: 3438
+    headline: "Committee agrees on interim superintendent search; defers vote on screening vs. full-committee process"
+    dek: "Following a recommendation from MASC president Glen Kucher, the committee agreed to pursue an interim rather than permanent superintendent search, but remained divided on process transparency."
+    summary: |
+      The committee discussed a written recommendation from Glen Kucher, president of the Massachusetts Association of School Committees (MASC), suggesting an interim superintendent search rather than a permanent one. Reasons cited included:
+      - Late position in the hiring season for permanent searches
+      - Multiple simultaneous vacancies in the district
+      - The current interim superintendent not wishing to continue
+      
+      All five committee members agreed to pursue an **interim search**. MASC would assist at no additional cost beyond membership fees.
+      
+      The committee then debated whether to conduct the search as a **full committee** (all resumes publicly posted, all deliberations in open session) or via a **screening committee** (first-round applications kept confidential, minimum of two finalists brought forward to the full committee):
+      
+      | Option | Pros | Cons |
+      |---|---|---|
+      | Full committee | Greater public transparency; responsive to community calls | Candidates' identities public from the start; potential chilling effect on applicants |
+      | Screening committee | Candidate confidentiality in early rounds; precedent in prior searches | Adds a step; less visible to public |
+      
+      Kucher reportedly indicated the applicant pool would likely be small (possibly four to seven candidates) regardless of process, and did not strongly recommend one approach over the other, though he noted the full-committee approach might address community transparency concerns.
+      
+      The committee remained split (approximately 3 favoring screening committee, 2 undecided) and agreed to add this vote to **Thursday's meeting agenda** as the first item before opening the public forum.
+    key_speakers: ["Sarah (School Committee Chair)", "Brian (School Committee member)", "Al (School Committee member)", "Allison (School Committee member)", "Jen (School Committee member)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

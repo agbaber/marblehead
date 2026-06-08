@@ -9,7 +9,99 @@ vimeo_url: "https://vimeo.com/857710520"
 duration_seconds: 3557
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "School committee appoints interim superintendent search panel, reads absent member's critical letter"
+  summary: "The Marblehead School Committee approved a schedule of bills totaling $160,057.15, appointed Marietta Collins as Glover School nurse, and named Sarah Fox and Allison Taylor as school committee representatives on the interim superintendent search screening committee. The committee also heard a critical letter from absent member Megan Taylor alleging insufficient notice and exclusion from meetings, to which the chair and other members responded at length."
+  decisions:
+    - "Approved schedule of bills totaling $160,057.15"
+    - "Appointed Marietta Collins as school nurse for the Glover School"
+    - "Appointed Michelle Cresta as administrator representative on the interim superintendent search committee"
+    - "Appointed Sarah Fox and Allison Taylor as school committee representatives on the interim superintendent search screening committee"
+  votes:
+    - motion: "Approve schedule of bills ($160,057.15)"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Marietta Collins as Glover School nurse"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Michelle Cresta to interim superintendent search committee"
+      result: "in favor (unanimous)"
+    - motion: "Appoint Sarah Fox and Allison Taylor as school committee representatives on interim superintendent search committee"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 12
+    end_seconds: 307
+    headline: "District updates: back-to-school schedule, transportation registration, staffing note"
+    dek: "Administrator Michelle Cresta outlined the return-to-school timeline, transportation numbers, and a request for patience during the interim superintendent vacancy."
+    summary: "Cresta reported that new teacher orientation begins Monday, all teachers return Tuesday–Thursday for professional development, students return September 5th, and pre-K returns September 7th. Transportation registration opened August 15th with 139 regular bus riders and 32 paratransit riders; a small waitlist exists for the paratransit bus. MBTA passes for middle and high school students arrived and are available in the schools. Cresta noted the central admin office is operating short-staffed pending an interim superintendent hire and asked for public patience."
+    key_speakers: ["Michelle Cresta (administrator)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 307
+    end_seconds: 549
+    headline: "Committee approves $160,057 schedule of bills and appoints Glover School nurse"
+    dek: "Both votes passed 4-0; Marietta Collins, a former Lynn Public Schools nurse, was appointed as the Glover School nurse."
+    summary: "The committee voted unanimously to approve the schedule of bills totaling $160,057.15. It then considered the appointment of Marietta Collins as school nurse for the Glover School. Cresta noted Collins has school nursing experience with Lynn Public Schools and serves as a camp nurse at the JCC. A committee member explained that under the 1993 Education Reform Act, school nurses remain the one staff position still requiring school committee approval. Collins appeared via Zoom, confirmed she holds the appropriate DESE certifications, and the appointment passed 4-0."
+    key_speakers: ["Michelle Cresta (administrator)", "Marietta Collins (appointee, via Zoom)", "Jen Schaffner (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 549
+    end_seconds: 1439
+    featured: true
+    headline: "Committee sets interim superintendent search timeline; appoints Fox and Taylor to screening panel"
+    dek: "Applications close September 18th with interviews scheduled September 27–30; all four votes were unanimous."
+    summary: |
+      The chair reported that Marblehead has contracted with MASC (referred to as 'Nasdaq' in transcript) for the interim superintendent search at no cost. The job posting went live the week of August 14th.
+      
+      **Search timeline:**
+      | Date | Activity |
+      |------|----------|
+      | Sept 4 | Deadline for parent/staff letters of interest to serve on screening committee |
+      | Sept 18 | Applications close; first screening committee meeting (training, confidential link distributed) |
+      | Sept 20 | Screening committee selects interviewees and finalizes questions |
+      | Sept 27–29 (evenings) & Sept 30 (day) | Candidate interviews |
+      | ~Oct 5 | Full committee public interviews; offer anticipated within first two weeks of October |
+      
+      The committee voted 4-0 to appoint Michelle Cresta as the administrator representative, noting she is not a candidate for the position. A discussion followed about which two committee members would serve; all four present expressed interest. Brian Oda nominated Sarah Fox and Allison Taylor; the motion passed 4-0. The chair indicated the full-time superintendent search would follow, potentially as early as February, with separate screening committee members sought.
+    key_speakers: ["Sarah Fox (chair)", "Michelle Cresta (administrator)", "Brian Oda (committee member)", "Jen Schaffner (committee member)", "Allison Taylor (committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.6
+    start_seconds: 1439
+    end_seconds: 2132
+    headline: "Committee decides against forming a curriculum subcommittee after surveying 14 districts"
+    dek: "Brian Oda reported that most surveyed districts abandoned or never formed curriculum subcommittees, citing boundary conflicts with superintendent authority."
+    summary: |
+      Brian Oda contacted 14 districts: 3 did not respond; 2 (Salem, Winchester) have curriculum subcommittees; 2 (Hingham, Beverly) evolved theirs into different structures — Hingham into separate special education and general education subcommittees, Beverly into a broader 'curriculum, instruction, and student life' information-gathering committee that reports back to the full board. The remaining 7 dropped the idea or never had one, consistently citing boundary conflicts with the superintendent's operational role.
+      
+      The chair noted no formal action was needed since a curriculum subcommittee was never formally established in committee policy. A committee member suggested benchmarking against Hingham, which had higher student achievement scores, lower per-pupil expenditure, and recently passed an override, and proposed reaching out to Hingham's school committee chair.
+    key_speakers: ["Brian Oda (committee member)", "Allison Taylor (committee member)", "Sarah Fox (chair)"]
+  - topic: override
+    topic_confidence: 0.65
+    start_seconds: 2132
+    end_seconds: 2638
+    headline: "Chair proposes inviting state auditor to review district practices; committee to draft ARPA letter to Select Board"
+    dek: "Allison Taylor will draft a letter on ARPA funding transparency for committee review; the chair will contact the Select Board about requesting a state audit."
+    summary: |
+      After attending an event where State Auditor Diane DiZoglio spoke, the chair suggested requesting a state audit of district programs and practices to address community questions about transparency and efficiency, as part of a longer-term strategy toward a future override. No formal vote was taken; the chair indicated she would first discuss with the Select Board.
+      
+      Allison Taylor raised concerns about the distribution of ARPA funds, citing a lack of transparency from the ARPA committee and self-imposed rules limiting school access. The committee agreed Taylor would draft a formal letter from the school committee to the Select Board. Taylor also noted she would seek a detailed ARPA expenditure list from the Select Board. The chair suggested the committee request time on the Select Board's agenda rather than appearing only as public comment.
+    key_speakers: ["Sarah Fox (chair)", "Allison Taylor (committee member)", "Jen Schaffner (committee member)"]
+  - topic: labor-personnel
+    topic_confidence: 0.75
+    start_seconds: 2684
+    end_seconds: 3524
+    headline: "Chair reads absent member Megan Taylor's letter criticizing meeting scheduling; responds at length"
+    dek: "Taylor's letter alleged exclusionary scheduling on major votes; the chair disputed the characterization and cited policy compliance and potential open meeting law concerns."
+    summary: |
+      The chair read a written statement submitted by absent committee member Megan Taylor, which alleged that 60% of open meetings since the committee was seated in June had been scheduled without ensuring full participation, including votes on committee leadership, the budget, and the interim superintendent search. Taylor's letter stated these meetings were scheduled with knowledge she could not attend and characterized this as contrary to good-faith governance and transparency.
+      
+      The chair responded that the committee had complied with all Massachusetts open meeting law requirements (48-hour notice minimum), that members had gone to significant personal lengths to attend, and that non-responsiveness to scheduling requests by the absent member had contributed to the situation. The chair also stated she was considering whether to file an open meeting law complaint regarding a prior letter to the editor by Taylor in which Taylor stated she had intended to read certain opinions at a meeting — which the chair characterized as deliberating outside a public meeting — and regarding disclosure of executive session information. The chair indicated she had three days remaining to decide whether to file.
+      
+      Other committee members seconded the chair's points about representing all constituents, not specific stakeholders.
+    key_speakers: ["Sarah Fox (chair)", "Jen Schaffner (committee member)", "Allison Taylor (committee member)", "Brian Oda (committee member)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

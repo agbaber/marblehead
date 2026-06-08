@@ -9,7 +9,130 @@ vimeo_url: "https://vimeo.com/1063387894"
 duration_seconds: 3886
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "School committee unanimously names MHS Athletic Complex after Alex Kovich"
+  summary: "The Marblehead School Committee voted 3-0 to name the Marblehead High School Athletic Complex the Alexander W. Kovich Junior Athletic Complex, following an outpouring of community testimonials about the longtime athletic director. The meeting also featured a student spotlight from Glover School presenting a neuro-graphic art project tied to the district's Wayfinder social-emotional learning program. The finance director reported an unencumbered budget balance of approximately $2.89 million at the end of February, with a projection to prepay roughly $900,000 in out-of-district special education tuitions. Federal grant funding of approximately $976,000 was noted as a monitoring concern amid uncertainty at the federal level."
+  decisions:
+    - "Approved naming the Marblehead High School Athletic Complex the Alexander W. Kovich Junior Athletic Complex"
+  votes:
+    - motion: "Name the MHS Athletic Complex the Alexander W. Kovich Junior Athletic Complex"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 43
+    end_seconds: 185
+    headline: "Resident raises federal funding uncertainty and social media outreach questions"
+    dek: "A commenter asked about a roughly $947,000 federal funding line item and whether the committee would create its own Facebook page for public information."
+    summary: "A resident identified as Mr. Cantor participated remotely and raised two questions: (1) whether the approximately $947,000 federal funding line in the FY26/FY27 budget was at risk given current federal uncertainty, and (2) whether the committee had considered starting its own Facebook group to post agendas and materials in advance of meetings. The chair noted that both topics would be addressed later in the meeting during financial and communications updates."
+    key_speakers: ["Mr. Cantor (remote public commenter)", "Sarah Fox (Chair)"]
+  - topic: school-budget
+    topic_confidence: 0.8
+    start_seconds: 185
+    end_seconds: 279
+    headline: "Student representative reports on spring sports, hockey playoffs, and senior scholarships"
+    dek: "Student rep Ella delivered routine school updates including a playoff hockey loss and upcoming spring sports season."
+    summary: "The student representative, Ella, reported that the school play attended a Massachusetts Educational Theater Guild Drama Festival, that the boys hockey team had a playoff game against the number-one seed NACE, that spring sports begin March 17th, and that seniors had attended a scholarship meeting. The hockey team subsequently lost that game, as noted at the end of the meeting."
+    key_speakers: ["Ella (Student Representative)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 279
+    end_seconds: 929
+    headline: "Glover School students present neuro-graphic art lesson tied to Wayfinder SEL program"
+    dek: "Second- and third-grade students from Glover demonstrated a two-session art project connecting brain science and stress relief to the district's Wayfinder curriculum."
+    summary: "Art teacher Maggie Doin brought several Glover School students to the meeting to present neuro-graphic art, a technique in which students draw and smooth intersecting curved lines to release stress, mirroring neuronal connections. Students described thinking of something bothering them, drawing lines, smoothing intersections into \"hugs,\" and then adding color. The teacher noted this was her 28th year as an educator and 16th in Marblehead, and that the project intentionally connects to the district's Wayfinder social-emotional learning initiative. Committee members asked questions and presented the students with certificates."
+    key_speakers: ["Maggie Doin (Glover School art teacher)", "Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 791
+    end_seconds: 929
+    headline: "Superintendent previews upcoming school improvement plan spotlights and learning walks"
+    dek: "The superintendent noted that school spotlights and principal-led improvement plan presentations will continue over the next several meetings."
+    summary: "The superintendent provided a brief update noting that learning walks (also called instructional rounds) have been implemented across buildings, with administrators visiting schools outside their own to promote consistent instructional practices. No consent agenda items were brought forward as the committee had met the prior week."
+    key_speakers: ["Superintendent"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.92
+    start_seconds: 929
+    end_seconds: 1294
+    featured: true
+    headline: "Committee votes unanimously to name MHS Athletic Complex after Alex Kovich"
+    dek: "The 3-0 vote followed a week of community testimonials praising the former athletic director's decades of service to Marblehead schools."
+    summary: |
+      The committee voted 3-0 to rename the Marblehead High School Athletic Complex the **Alexander W. Kovich Junior Athletic Complex**. Chair Sarah Fox described the committee's inboxes being filled with testimonials from former students, colleagues, parents, and even opposing-team coaches and administrators from Swampscott. Member Allison Taylor was noted as absent due to a prior commitment but had expressed strong support.
+      
+      Mr. Kovich thanked coaches, parents, and student athletes, crediting them for Marblehead's success during his tenure, including multiple Globe championships, and emphasized his philosophy that students should be students first and also get involved in extracurricular activities. His son Joe spoke on behalf of the family, noting that Mr. Kovich continues to volunteer actively and is a role model to his eight children and twenty grandchildren.
+      
+      The committee noted that a formal unveiling ceremony will be planned once lettering is in place, and the family and press will be informed.
+    key_speakers: ["Sarah Fox (Chair)", "Brian Ota (committee member)", "Jen Schaffner (committee member)", "Alex Kovich (honoree)", "Joe Kovich (honoree's son)"]
+  - topic: school-budget
+    topic_confidence: 0.9
+    start_seconds: 1786
+    end_seconds: 2203
+    headline: "Finance director reports $2.89M unencumbered balance at end of February; prepay of ~$900K projected"
+    dek: "The district has expended roughly $23.9 million of its budget through February, with utilities and salaries tracking on target."
+    summary: |
+      Finance Director Mike reported the following at the end of February:
+      
+      | Line | Status |
+      |---|---|
+      | Expended to date | ~$23.9 million |
+      | Encumbered (primarily salaries) | ~$20 million |
+      | Unencumbered balance | ~$2.89 million |
+      | Month-over-month change (Jan to Feb) | +$51,000 |
+      
+      Gas expenditures stood at $208,000 against a $262,000 budget; electricity at $528,000 against $628,000. He expressed comfort with utilities through year-end.
+      
+      The finance director projected that the district would again be able to prepay approximately $900,000 in out-of-district special education tuitions, with a formal recommendation expected from the finance subcommittee in April or May.
+      
+      Out-of-district tuition overruns were attributed to placements committed in the prior year that were not fully budgeted, and to a 30–40% increase in special education instructional aide wages following contract settlement. The district is applying for Extraordinary Relief under circuit breaker to recoup some of those overruns.
+    key_speakers: ["Mike (Finance Director)", "Sarah Fox (Chair)", "Brian Ota (committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 2203
+    end_seconds: 2296
+    headline: "Muni financial system conversion on track for July 1 go-live for accounts payable"
+    dek: "The Munis software conversion is proceeding with accounts payable and general ledger targeted for July 1 and payroll/HR for January 1."
+    summary: "The finance director confirmed the Munis system conversion remains on schedule, with July 1 as the go-live date for accounts payable and general ledger, and January 1 as the projected go-live for payroll and human resources. Kristen Morello and consultant Mary Deli are leading the effort on the school side, with the town department also on track."
+    key_speakers: ["Mike (Finance Director)", "Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2296
+    end_seconds: 3082
+    headline: "Superintendent outlines progress on three evaluation goals including a new district improvement plan"
+    dek: "The superintendent described a comprehensive, multi-stakeholder district improvement plan process expected to be completed for approval around October of next school year."
+    summary: |
+      The superintendent presented progress on three annual evaluation goals:
+      
+      1. **Professional Practice Goal** – Establishing district-wide communication and staffing analysis. Progress includes newsletter communications, open stakeholder meetings, and reviews of special education programming for efficiencies.
+      
+      2. **District Improvement Goal** – Developing a new, comprehensive district improvement plan to replace the current District Plan for Success (through 2026). The superintendent has completed a first draft (~16–17 pages) expanding on six goal areas: curriculum/instruction, teacher quality/professional development, human resources, student support, leadership/governance/communication, and financial management. The draft will be reviewed by assistant superintendents, then principals, then sent as a Google survey to all staff, then parents, before being brought to the school committee for approval. Target for approval is approximately October of the upcoming school year, with implementation beginning in 2026–27.
+      
+      3. **Student Learning Goal** – Embedding student voice in teaching and learning across all schools. Progress includes principal-led student feedback initiatives, anti-discrimination committee student input, and the superintendent's own planned visits to school leadership groups.
+      
+      The committee noted that having this plan ready before anticipated override discussions would strengthen the district's ability to present a transparent, data-backed case to the public.
+    key_speakers: ["Superintendent", "Sarah Fox (Chair)", "Jen Schaffner (committee member)", "Brian Ota (committee member)"]
+  - topic: school-budget
+    topic_confidence: 0.88
+    start_seconds: 3405
+    end_seconds: 3689
+    headline: "Committee monitoring approximately $976K in federal grants amid funding uncertainty"
+    dek: "The finance subcommittee discussed federal grant risk but is awaiting guidance from DESE before taking action."
+    summary: "In response to the public commenter's question, the superintendent and finance director confirmed that approximately $976,000 in federal grant funding is in the budget. The current year's federal allocation was set by the prior year's federal government, and only about 15% can be carried forward to a future fiscal year, limiting the district's ability to proactively protect funds. The committee's position is to maintain status quo until DESE provides further guidance, which was expected within a week or two. Attorneys and state guidance will inform next steps. The finance director is also working to document which budget line items individual grants offset, to allow for clearer contingency planning."
+    key_speakers: ["Superintendent", "Mike (Finance Director)", "Sarah Fox (Chair)", "Jen Schaffner (committee member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 3689
+    end_seconds: 3870
+    headline: "Policy subcommittee to meet on flag policy and operating protocols; MASC to assist with superintendent evaluation"
+    dek: "The committee will also hold a posted meeting March 11 with a MASC representative to develop the superintendent evaluation process."
+    summary: |
+      Committee member Jen Schaffner noted the policy subcommittee is meeting the following day to discuss the flag policy and, with MASC representative Alicia Mallon, to begin reviewing school committee operating protocols—a stated committee goal for the year. A separate posted meeting is scheduled for March 11 with Alicia Mallon to develop the superintendent evaluation framework for the spring formative review.
+      
+      On communications, Jen Schaffner confirmed the committee has secured a school committee Facebook page with assistance from Steve Ek, and will work through the communications subcommittee to determine posting protocols before launching. The committee also noted an ongoing communications survey to assess how the school committee newsletter is being received.
+    key_speakers: ["Jen Schaffner (committee member)", "Sarah Fox (Chair)", "Brian Ota (committee member)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

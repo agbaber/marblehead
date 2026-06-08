@@ -9,7 +9,112 @@ vimeo_url: "https://vimeo.com/876199695"
 duration_seconds: 3692
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "School committee votes 5-0 to find no wrongdoing by Acting Superintendent Cresta"
+  summary: "The Marblehead School Committee met on October 19, 2023 and voted unanimously to dismiss a formal complaint filed against Acting Superintendent Michelle Cresta regarding her October 12 statement condemning Hamas terrorism and expressing support for Israel. Cresta waived her right to executive session, allowing the matter to be handled publicly. The meeting drew significant community attendance, with multiple residents offering public comment in support of Cresta's statement."
+  decisions:
+    - "Approved finding of no wrongdoing by Acting Superintendent Michelle Cresta in complaint filed October 12, 2023"
+    - "Approved schedule of bills totaling $863,449.14"
+    - "Approved meeting minutes from 9/21/23 and 10/5/23 pending amendment to attribute speaker names"
+    - "Approved interim superintendent contract pending correction of Columbus Day to Indigenous People's Day"
+  votes:
+    - motion: "Find no wrongdoing by Acting Superintendent Michelle Cresta in complaint brought by Kristy War on 10/12/23"
+      result: "in favor (unanimous)"
+    - motion: "Approve schedule of bills totaling $863,449.14"
+      result: "in favor (unanimous)"
+    - motion: "Approve minutes from 9/21/23 and 10/5/23"
+      result: "in favor (unanimous)"
+    - motion: "Approve interim superintendent contract as proposed"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 132
+    end_seconds: 1916
+    featured: true
+    headline: "Residents speak in support of Superintendent Cresta's statement condemning Hamas attack"
+    dek: "Multiple community members, many identifying as Jewish or Israeli, addressed the committee in support of Cresta's October 12 statement and described personal fears and family connections to the Israel-Hamas conflict."
+    summary: |
+      Chair Sarah Fox opened the meeting with a personal statement endorsing Superintendent Cresta's October 12 communication condemning Hamas terrorism and supporting Israel, noting the school committee had not formally met since the conflict began. Other committee members added brief statements of support.
+      
+      During public comment, six residents spoke:
+      
+      - **Brenda Kelly Kim** (86 Clifton Ave) called the complaint against Cresta a "waste of time" and urged support for Israel.
+      - **Miriam Kerrison** (46 Pine Cliff Drive) raised broader concerns about bullying in Marblehead schools and called for accountability and transparency from the committee.
+      - **Nicole Cohen** (40 Clifton Ave) expressed support for Cresta and the committee's process.
+      - An unidentified Israeli-American resident described waking to news of the October 7 attack, personal fears about her children's safety at school, and her family's connection to Holocaust survivors.
+      - **Avery Calovich** (MHS class of 2018) described antisemitism experienced personally in New York City and by a sibling currently enrolled at Marblehead High School, and called on the committee to act.
+      - **Asaf Magen** (165 West Shore Drive), who identified as Israeli, shared personal accounts of the conflict's toll on friends and family and offered historical context on Israeli statehood.
+      - **Karen Tom McCl** (Trigger Road) noted a community petition in support of Cresta's statement had reached 1,296 signatures at time of the meeting.
+    key_speakers: ["Sarah Fox (Chair)", "Brenda Kelly Kim (Resident)", "Miriam Kerrison (Resident)", "Nicole Cohen (Resident)", "Avery Calovich (Resident, MHS alum)", "Asaf Magen (Resident)", "Karen Tom McCl (Resident)"]
+  - topic: labor-personnel
+    topic_confidence: 0.92
+    start_seconds: 2079
+    end_seconds: 2594
+    headline: "Committee votes 5-0 to dismiss complaint against Acting Superintendent Cresta"
+    dek: "Cresta waived her right to executive session and read a public statement reaffirming her October 12 message before the committee voted unanimously to find no wrongdoing."
+    summary: |
+      Chair Fox explained that upon receiving the October 12 formal written complaint — filed by a person identified as Kristy War — she and Cresta consulted legal counsel and determined that district policy required the committee to review it. Cresta waived her right to have the matter heard in executive session.
+      
+      Cresta read a statement reaffirming her October 12 message as an effort to condemn terrorism and support staff, students, and the school community, and stated she does not believe it is a school administrator's role to opine on complex geopolitical matters.
+      
+      The committee moved, seconded, and voted unanimously (5-0) to find no wrongdoing by Acting Superintendent Michelle Cresta in the complaint brought on October 12, 2023.
+      
+      > **Motion:** Find no wrongdoing by Acting Superintendent Michelle Cresta in the complaint brought forward by Kristy War on 10/12/23.
+      > **Result:** 5-0 in favor (Megan – yes, Allison Taylor – yes, Brian – yes, Jen Schaffner – yes, Chair Fox – yes)
+    key_speakers: ["Sarah Fox (Chair)", "Michelle Cresta (Acting Superintendent)", "Allison Taylor (Committee Member)", "Jen Schaffner (Committee Member)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 2594
+    end_seconds: 2841
+    headline: "Veterans Middle School named one of America's Healthiest Schools for 2022-23"
+    dek: "Assistant Superintendent Julia Ferrera recognized two Vets staff members who received national awards from the Alliance for a Healthier Generation."
+    summary: |
+      Acting Superintendent Cresta noted upcoming dates: a half day on October 25 for pre-K through Grade 8, and school improvement plan presentations to the committee on November 2 and November 16.
+      
+      Assistant Superintendent for Teaching and Learning Julia Ferrera announced that Marblehead Veterans Middle School was named among 781 schools nationwide as an America's Healthiest School for the 2022-23 school year by the Alliance for a Healthier Generation. Two staff members received individual recognition:
+      
+      | Recipient | Award |
+      |---|---|
+      | Maura Darley Rocco | Enriching Health Education and Strengthening Social Emotional Health and Learning |
+      | Megan Kain (school nurse) | Supporting School Health Services |
+      
+      Ferrera credited principal Matt Fox for supporting the work.
+    key_speakers: ["Michelle Cresta (Acting Superintendent)", "Julia Ferrera (Assistant Superintendent for Teaching and Learning)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 2841
+    end_seconds: 3078
+    headline: "Committee approves schedule of bills totaling $863,449.14 and meeting minutes"
+    dek: "The committee also approved the interim superintendent contract with a minor amendment to replace Columbus Day with Indigenous People's Day."
+    summary: |
+      The committee voted unanimously (5-0) to approve a schedule of bills totaling $863,449.14.
+      
+      Minutes from September 21, 2023 and October 5, 2023 were approved 5-0 pending an amendment to attribute individual speakers to their remarks.
+      
+      The interim superintendent contract for Dr. McGinnis was approved 5-0 with a noted amendment to replace the holiday reference from Columbus Day to Indigenous People's Day. A Good Friday half-day provision was retained as consistent with the school calendar. The contract was based on former superintendent Bill Aldo's contract adapted with Dr. McGinnis's information.
+    key_speakers: ["Sarah Fox (Chair)", "Jen Schaffner (Committee Member)", "Allison Taylor (Committee Member)"]
+  - topic: school-budget
+    topic_confidence: 0.85
+    start_seconds: 3171
+    end_seconds: 3488
+    headline: "Town issues preliminary FY25 revenue forecast; schools asked to submit level-services and level-funded budgets"
+    dek: "Acting Superintendent Cresta reported the town's preliminary revenue projection shows only a slight increase over the current year, which she described as insufficient to cover fixed-cost growth."
+    summary: |
+      The finance subcommittee is scheduled to meet Wednesday, October 25 at 3:00 PM. Chair Fox noted the budgeting timeline laid out by town finance leadership (referred to as Alec and Alicia) is on track.
+      
+      Acting Superintendent Cresta reported that the town has released a preliminary FY25 revenue forecast showing a slight increase over the current year that would not cover fixed-cost or roll-forward expenses. The town has asked the school department to submit two budgets:
+      
+      - **Level services budget** — maintains current service levels
+      - **Level funding budget** — holds spending flat at the prior year's appropriation
+      
+      Cresta noted she met with town finance staff (Alicia) on October 19 and that all department heads will receive additional guidance at a meeting on Tuesday. She described the budget outlook as "challenging for the next few years."
+      
+      The committee discussed use of ClearGov budget software, cautioning members that comments entered in the shared living document could constitute deliberation and urging members to maintain separate personal notes.
+    key_speakers: ["Sarah Fox (Chair)", "Michelle Cresta (Acting Superintendent)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;

@@ -9,7 +9,72 @@ vimeo_url: "https://vimeo.com/873499985"
 duration_seconds: 2903
 ai_generated: true
 status: published
-source: vimeo-auto
+source: vimeo-auto+llm
+
+summary_card:
+  headline: "School committee votes 4-1 to offer interim superintendent role to Dr. Theresa McGinnis"
+  summary: "The Marblehead School Committee reviewed reference checks for two interim superintendent finalists — Dr. Theresa McGinnis and Dr. Janelle Pearson Campbell — before deliberating. A motion to retain acting interim Michelle in the role was withdrawn after Michelle herself addressed the committee and stated her career aspiration is not to serve as superintendent. The committee then voted 4-1 to offer the interim superintendent position to Dr. McGinnis, subject to successful contract negotiations, followed by a unanimous 5-0 vote of support for her through June 30, 2024."
+  decisions:
+    - "Approved offer of interim superintendent position to Dr. Theresa McGinnis, subject to contract negotiations"
+    - "Approved motion of full committee support for Dr. McGinnis through June 30, 2024"
+    - "Withdrew motion to retain acting interim in the superintendent role"
+  votes:
+    - motion: "Offer interim superintendent position to Dr. Theresa McGinnis subject to successful contract negotiations"
+      result: "in favor (4 to 1)"
+    - motion: "Motion of committee support for Dr. McGinnis as interim superintendent through June 30, 2024"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.95
+    start_seconds: 0
+    end_seconds: 218
+    headline: "Resident cites ADA complaint over board members' failure to speak audibly at meetings"
+    dek: "Larry McCarrison of 46 Drive addressed the committee, noting that an ADA complaint had been filed by Mary McCarrison over inability to hear board members, and warned of a potential open meeting law violation."
+    summary: |
+      The chair opened by informing the public that an Americans with Disabilities Act complaint had been filed by Mary McCarrison regarding the inability to hear board members during meetings. A technical conflict between amplification equipment and the Zoom/poly hybrid system was identified as the barrier, and the chair indicated that upcoming meetings might revert to either in-person only or Zoom only while a solution is sought.
+      
+      Larry McCarrison then addressed the committee in person, stating that he and others had repeatedly asked members to speak up and that the issue had been covered in the newspaper before the ADA complaint was filed. He noted he had also contacted the state about a potential open meeting law violation.
+    key_speakers: ["Larry McCarrison (resident)", "Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.82
+    start_seconds: 218
+    end_seconds: 265
+    headline: "Committee transitions from public comment to interim superintendent search deliberation"
+    dek: "The chair closed public comment and opened discussion on the interim superintendent search, inviting committee members to share reference check findings."
+    summary: "After closing public comment, the chair explained the meeting format: each committee member would share reference check feedback on the two interim superintendent finalists before moving to a vote."
+    key_speakers: ["Sarah Fox (Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.75
+    start_seconds: 265
+    end_seconds: 2094
+    featured: true
+    headline: "Committee votes 4-1 to offer interim superintendent role to Dr. Theresa McGinnis"
+    dek: "After extensive reference-check deliberation and a withdrawn motion to retain the acting interim, the committee selected Dr. McGinnis and voted unanimously to support her through June 30, 2024."
+    summary: |
+      Committee members shared reference feedback on the two finalists:
+      
+      **Dr. Theresa McGinnis** — References described her as data-driven, a consensus builder, a strong mentor, highly organized, and student-centered. A site visit to Watertown confirmed she is considered a "warm demander" who does not micromanage but achieves results. References stated she is ready to be a superintendent and would be missed in her current role.
+      
+      **Dr. Janelle Pearson Campbell** — References praised her as a good listener, problem solver, relationship builder, and effective communicator who quickly brought stability to a district experiencing turnover and a large budget deficit. She did not secure the permanent superintendency in that district after the interim term.
+      
+      During deliberation, one member moved to retain acting interim Michelle in the role, citing continuity and concern about further disruption. After Michelle herself addressed the committee — stating her career aspiration is not to serve as superintendent, that she feels stretched managing two roles, but that she would stay if asked — the motion was withdrawn.
+      
+      A subsequent motion to offer the interim superintendent position to Dr. Theresa McGinnis, subject to contract negotiations with the chair, was made and seconded.
+      
+      **Vote — Interim superintendent offer to Dr. McGinnis:**
+      | Member | Vote |
+      |---|---|
+      | Megan Taylor | No |
+      | Allison Taylor | In favor |
+      | Brian Oda | In favor |
+      | Jen Schaffner | In favor |
+      | Sarah Fox | In favor |
+      
+      Motion carried 4-1.
+      
+      A second motion for full committee support of Dr. McGinnis through June 30, 2024 passed 5-0.
+    key_speakers: ["Sarah Fox (Chair)", "Megan Taylor (committee member)", "Allison Taylor (committee member)", "Brian Oda (committee member)", "Jen Schaffner (committee member)", "Michelle (acting interim superintendent/finance director)"]
 ---
 
 > Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
