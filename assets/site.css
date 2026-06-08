@@ -4280,6 +4280,6 @@ body.has-numbered-charts .dollar-table {
 }
 
 @media (max-width: 400px) {
-  nav.site-nav .nav-brand { font-size: 0; }
+  nav.site-nav .nav-brand { font-size: 0 !important; }
   .nav-brand .nav-logo { font-size: 14px; }
 }
