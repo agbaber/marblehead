@@ -12,7 +12,8 @@ export const DEFAULT_BOARDS = [
 // Titles that look like board names but are actually member profiles, interviews,
 // or one-off content. Reject if these markers are present.
 const PROFILE_MARKERS = [
-  / - [A-Z][a-z]+ [A-Z][a-z]+/,           // "Select Board - Jim Full"
+  / - [A-Z][a-z]+ [A-Z][a-z]+$/,          // "Select Board - Jim Full" (anchored to end)
+  /^'?Headliner\b/i,                       // "'Headliner - Board of Health Updates" news segments
   /\binterview\b/i,
   /\bprofile\b/i,
   /\bnewest member\b/i,

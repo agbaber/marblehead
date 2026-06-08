@@ -38,3 +38,17 @@ test('boardForTitle returns null on board-member interview profiles', () => {
   assert.equal(boardForTitle('Select Board - Jim Full'), null);
   assert.equal(boardForTitle('School Committee - Sarah Fox'), null);
 });
+
+test('boardForTitle rejects Headliner news segments that mention a board', () => {
+  assert.equal(boardForTitle("'Headliner - Board of Health Updates"), null);
+  assert.equal(boardForTitle("'Headliner Town Meeting Preview - Article 34"), null);
+  assert.equal(boardForTitle("'Headliner - School Committee Election Results"), null);
+});
+
+test('boardForTitle accepts meeting subtitles that look like names mid-string', () => {
+  // "Finance Committee Meeting - Warrant Articles Overview 4.10.23" exists in
+  // the real corpus and used to be wrongly rejected by the unanchored
+  // profile-name regex.
+  const m = boardForTitle('Finance Committee Meeting - Warrant Articles Overview 4.10.23');
+  assert.equal(m?.slug, 'finance-committee');
+});
