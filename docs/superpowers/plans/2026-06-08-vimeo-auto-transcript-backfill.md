@@ -719,9 +719,11 @@ const outPath = outIndex >= 0 ? args[outIndex + 1] : 'data/vimeo_meetings.json';
 
 function enumerateChannel() {
   return new Promise((resolve, reject) => {
+    // Using '|' as separator; verified against the live channel during plan
+    // research. yt-dlp's --print does not interpret backslash escapes like \t.
     const proc = spawn(YT_DLP, [
       '--flat-playlist',
-      '--print', '%(id)s\t%(title)s',
+      '--print', '%(id)s|%(title)s',
       CHANNEL_URL,
     ]);
     let stdout = '';
@@ -748,14 +750,14 @@ function decode(s) {
 async function main() {
   console.error(`Enumerating ${CHANNEL_URL} via yt-dlp ...`);
   const raw = await enumerateChannel();
-  const lines = raw.split('\n').filter(l => l.includes('\t'));
+  const lines = raw.split('\n').filter(l => l.includes('|'));
   console.error(`Got ${lines.length} videos from channel.`);
 
   const meetings = [];
   for (const line of lines) {
-    const tab = line.indexOf('\t');
-    const vimeo_id = line.slice(0, tab).trim();
-    const raw_title = decode(line.slice(tab + 1).trim());
+    const sep = line.indexOf('|');
+    const vimeo_id = line.slice(0, sep).trim();
+    const raw_title = decode(line.slice(sep + 1).trim());
     const parsed = parseTitle(raw_title);
     if (parsed.valid) {
       meetings.push({
