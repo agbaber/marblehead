@@ -21,7 +21,6 @@
   text-decoration: none; white-space: nowrap;
 }
 .m101-stickybar .brand .scope { color: var(--text-muted); font-weight: 600; }
-.m101-stickybar .brand .sep { color: var(--text-subtle); margin: 0 6px; font-weight: 400; }
 .m101-stickybar .where {
   flex: 1;
   font-size: 12px;
@@ -469,3 +468,14 @@ body.m101-drawer-open .m101-drawer { transform: translateY(0); }
   .m101-ch .num { font-size: 22px; padding-top: 1px; }
   .m101-ch .read { grid-column: 1 / -1; padding-top: 4px; }
 }
+
+.m101-why {
+  margin-top: 64px;
+  padding: 24px;
+  background: var(--surface);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  max-width: 760px;
+}
+.m101-why h2 { margin: 0 0 12px; font-size: 22px; }
+.m101-why p { margin: 0; color: var(--text-muted); line-height: 1.6; }
