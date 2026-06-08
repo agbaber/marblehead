@@ -2,11 +2,13 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { KNOWN_TOPICS, isKnownTopic } from './topics.mjs';
 
-test('KNOWN_TOPICS contains the 11 in-use topics', () => {
+test('KNOWN_TOPICS contains the 13 topics matched 1:1 with /topics/ pages', () => {
   assert.deepEqual([...KNOWN_TOPICS].sort(), [
     '40b-mbta',
     'admin-housekeeping',
     'bonding-capital',
+    'elections-procedural',
+    'health-insurance',
     'labor-personnel',
     'override',
     'permits-zoning',

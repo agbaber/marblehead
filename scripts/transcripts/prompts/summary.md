@@ -34,9 +34,9 @@ The transcript is machine-generated from Vimeo auto-captioning. It has no speake
 }
 ```
 
-## Topic taxonomy (locked — use ONLY these 11 slugs)
+## Topic taxonomy (locked — use ONLY these 13 slugs)
 
-- `override` — Prop 2½ override, tier mechanics, MOU, levy capacity, three-year draw
+- `override` — Prop 2½ override mechanics specifically: tier sizes, MOU, levy capacity, three-year draw schedule, ballot question structure
 - `school-budget` — school operating budget, headcount, Essex Tech, FY27 cuts, SPED
 - `admin-housekeeping` — town administrator updates, grants, appointments, consent agenda, licensing, routine business that doesn't fit another bucket
 - `public-comment` — open public comment portion, named residents at the mic
@@ -47,6 +47,8 @@ The transcript is machine-generated from Vimeo auto-captioning. It has no speake
 - `public-safety` — police, fire, EMS, harbor master, emergency management
 - `labor-personnel` — collective bargaining, pay schedules, department-head contracts, HR
 - `40b-mbta` — Chapter 40B housing, MBTA Communities (3A), zoning compliance
+- `health-insurance` — health-insurance line item, GIC enrollment, premium-share, plan changes, GLP-1 coverage. Whenever the meeting discusses health-insurance costs or benefit design as a substantive topic (not just one line in a budget motion), tag it here in addition to or instead of `school-budget` / `labor-personnel`.
+- `elections-procedural` — town elections, ballot mechanics, polling locations, early voting, voter registration, election warrants, candidate filings, sample ballot. Override ballot questions can be tagged `override`; the *mechanics* of running the election go here.
 
 If a meeting segment doesn't fit, pick the closest bucket and lower `topic_confidence`. **Never invent a new topic slug.** A response with an unknown slug is rejected and re-queued.
 

@@ -1,6 +1,6 @@
-// Topic taxonomy for transcript summarization. Locked to the 11 topics
-// already in use across hand-crafted _transcripts/ POCs. New topics
-// require a deliberate addition here AND a stub topic page under topics/.
+// Topic taxonomy for transcript summarization. Must match the set of topic
+// pages under /topics/ — adding a slug here without a page leaves a dead
+// link; adding a page without a slug here leaves a permanently empty page.
 
 export const KNOWN_TOPICS = Object.freeze([
   'override',
@@ -14,6 +14,8 @@ export const KNOWN_TOPICS = Object.freeze([
   'public-safety',
   'labor-personnel',
   '40b-mbta',
+  'health-insurance',
+  'elections-procedural',
 ]);
 
 export function isKnownTopic(slug) {

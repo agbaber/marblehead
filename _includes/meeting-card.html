@@ -1,6 +1,6 @@
 {%- comment -%}Renders one summary card. Param: card.{%- endcomment -%}
 {%- assign c = include.card -%}
-<article class="meeting-card">
+<article class="meeting-card" data-board="{{ c.board }}">
   <header>
     <p class="card-board">{{ c.board_display }}</p>
     <h3><a href="{{ c.url | relative_url }}">{{ c.title }}</a></h3>

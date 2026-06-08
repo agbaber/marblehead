@@ -24,8 +24,13 @@ const FAIL_LOG = 'data/.transcripts_enrich_failures.log';
 const TRANSCRIPTS_DIR = '_transcripts';
 
 const subcommand = process.argv[2];
+const force = process.argv.includes('--force');
+const skipBoards = (() => {
+  const i = process.argv.indexOf('--skip-boards');
+  return i >= 0 && process.argv[i + 1] ? new Set(process.argv[i + 1].split(',')) : null;
+})();
 if (!['submit', 'poll', 'collect'].includes(subcommand)) {
-  console.error('Usage: enrich_batch.mjs submit|poll|collect');
+  console.error('Usage: enrich_batch.mjs submit|poll|collect [--force] [--skip-boards a,b]');
   process.exit(2);
 }
 
@@ -39,9 +44,19 @@ function listCandidates() {
   return readdirSync(TRANSCRIPTS_DIR)
     .filter(f => f.endsWith('.md') && f !== '.gitkeep')
     .map(f => ({ slug: f.replace(/\.md$/, ''), path: resolve(TRANSCRIPTS_DIR, f) }))
-    .filter(({ path }) => {
+    .filter(({ slug, path }) => {
       const text = readFileSync(path, 'utf8');
-      // Skip files that already have a summary_card (LLM-enriched or hand-crafted POCs).
+      // Always skip hand-crafted POCs. They are marked by a top-level
+      // `ingest:` block in their frontmatter and do NOT carry the
+      // `source: vimeo-auto+llm` flag that our pipeline writes.
+      if (/^ingest:/m.test(text)) return false;
+      if (skipBoards) {
+        const m = text.match(/^board: (\S+)$/m);
+        if (m && skipBoards.has(m[1])) return false;
+      }
+      // Default: skip files that already have a summary_card. With --force,
+      // re-enrich them (mergeFrontmatter strips prior summary_card / topic_segments).
+      if (force) return true;
       return !/^summary_card:/m.test(text);
     });
 }
@@ -62,7 +77,7 @@ async function submit() {
       custom_id: slug,
       params: {
         model: MODEL,
-        max_tokens: 8192,
+        max_tokens: 16384,
         system: [{ type: 'text', text: systemPrompt, cache_control: { type: 'ephemeral' } }],
         messages: [{ role: 'user', content: body }],
       },
