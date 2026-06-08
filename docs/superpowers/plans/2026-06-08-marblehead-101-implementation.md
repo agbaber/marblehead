@@ -1225,19 +1225,19 @@ Save the file. (`body_class: m101-chapter` sets a class on `<body>` so JS can de
 
 - [ ] **Step 6.2: Add `data-current-chapter` attribute to body via the default layout**
 
-The default Jekyll layout (`_layouts/default.html`) renders the `<body>` tag with `body_class`. We need to also expose `page.chapter` to the JS via `data-current-chapter`. Check the existing default layout:
-
-```bash
-grep -n "<body" _layouts/default.html
-```
-
-If the line looks like `<body class="{{ page.body_class }}">`, change it to:
+The default Jekyll layout (`_layouts/default.html`) renders the `<body>` tag. We need to also expose `page.chapter` to the JS via `data-current-chapter`. Current line 6 of `_layouts/default.html`:
 
 ```html
-<body class="{{ page.body_class }}"{% if page.chapter %} data-current-chapter="{{ page.chapter }}"{% endif %}>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% elsif layout.body_class %} class="{{ layout.body_class }}"{% endif %}{% if page.community_pulse == "off-sections" %} data-community-pulse="off-sections"{% endif %}>
 ```
 
-If the body tag is structured differently, add the conditional `data-current-chapter` attribute in the appropriate location. The attribute should be empty (omitted) on non-chapter pages.
+Replace with (one new conditional appended before the closing `>`):
+
+```html
+<body{% if page.body_class %} class="{{ page.body_class }}"{% elsif layout.body_class %} class="{{ layout.body_class }}"{% endif %}{% if page.community_pulse == "off-sections" %} data-community-pulse="off-sections"{% endif %}{% if page.chapter %} data-current-chapter="{{ page.chapter }}"{% endif %}>
+```
+
+Verify by building locally (`bundle exec jekyll build`) and confirming `_site/marblehead-101/03-where-money-comes-from.html` has `data-current-chapter="03"` on the body tag, and `_site/index.html` does not have the attribute.
 
 - [ ] **Step 6.3: Write Chapter 02**
 
@@ -1464,36 +1464,48 @@ git commit -m "Marblehead 101: add Primer nav link"
 
 ## Task 8: Add homepage featured card
 
-A new `.featured-card` on the homepage pointing to Marblehead 101. Same component the debate page uses (already in `assets/site.css` from PR #621).
+A new `.featured-card` on the homepage pointing to Marblehead 101. The component exists in `assets/site.css` (lines 3705-3752) but no element currently uses it on `index.html`. Insert it directly between the `.home-hero` and the first scroll-stop so it sits above-fold for first-time visitors without disrupting the existing scroll-stop sequence.
 
 **Files:**
 - Modify: `index.html`
 
 - [ ] **Step 8.1: Locate the insertion point**
 
-Open `index.html` and find the existing `.featured-card` for the debate page. Run:
+Run:
 ```bash
-grep -n "featured-card" index.html | head -5
+grep -n 'class="home-hero"\|class="home-stop' index.html | head -5
 ```
 
-The Marblehead 101 card goes just **above** the debate card, since the primer is the more general front door.
+Expected: `.home-hero` opens around line 543; first `.home-stop` opens around line 555. Insertion point is the blank/whitespace line between them. The exact insertion line may shift if the file has been edited; the rule is "after `</section>` of the home-hero, before `<section class="home-stop home-stop--tinted" id="deficit">`."
 
-- [ ] **Step 8.2: Insert the card**
+- [ ] **Step 8.2: Insert the featured card**
 
-Add the following markup directly above the existing `.featured-card` for the debate page:
+Insert the following markup at the insertion point (after the closing tag of `.home-hero`, before `<section class="home-stop home-stop--tinted" id="deficit">`). Class names must match the existing CSS in `assets/site.css` (`featured-card-eyebrow`, `featured-card-title`, `featured-card-desc`):
 
 ```html
+
 <a href="marblehead-101/" class="featured-card">
-  <span class="featured-eyebrow">New here?</span>
-  <h3 class="featured-title">Marblehead 101</h3>
-  <p class="featured-desc">A plain-English primer on how the town works, where the money goes, and how a resident takes part. 8 short chapters, ~25 min total.</p>
-  <span class="featured-cta">Start the primer &rarr;</span>
+  <div class="featured-card-eyebrow">New here?</div>
+  <h2 class="featured-card-title">Marblehead 101</h2>
+  <p class="featured-card-desc">A plain-English primer on how the town works, where the money goes, and how a resident takes part. 8 short chapters, ~25 min total.</p>
+  <span style="font-size: 0.875rem; font-weight: 600; color: var(--c-teal);">Start the primer &rarr;</span>
 </a>
+
 ```
 
-If the existing featured-card has a different class structure, mirror that structure exactly. The point is consistency with the debate-page card pattern.
+(The inline-style "Start the primer" link mimics the existing pattern used elsewhere on the homepage for "deep dive" inline CTAs. If a `.featured-card-cta` class is added to `assets/site.css` later, swap this inline style for the class.)
 
-- [ ] **Step 8.3: Commit**
+- [ ] **Step 8.3: Verify the homepage renders**
+
+Run:
+```bash
+bundle exec jekyll build
+grep -c 'featured-card' _site/index.html
+```
+
+Expected: 4 (one for the `<a>`, plus three for the child class names).
+
+- [ ] **Step 8.4: Commit**
 
 ```bash
 git add index.html
