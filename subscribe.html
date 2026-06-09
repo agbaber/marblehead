@@ -1,0 +1,61 @@
+---
+layout: page
+title: "Subscribe — Marblehead Data"
+permalink: /subscribe/
+body_class: subscribe-page
+worker_base: "https://marblehead-meeting-digest.workers.dev"
+turnstile_site_key: ""
+---
+
+<section class="subscribe-hero">
+  <h1>Friday morning, what's happening at Marblehead's board meetings.</h1>
+  <p>
+    You pick the boards and topics. We send you a digest of just those, with
+    deep-links into the source video. Unsubscribe with one click.
+  </p>
+  <p class="subscribe-default">
+    <strong>Default:</strong> Select Board, School Committee, Finance Committee.
+    Customize after you confirm.
+  </p>
+
+  <form id="subscribe-form" class="subscribe-form">
+    <label>
+      Your email
+      <input type="email" name="email" id="subscribe-email" required autocomplete="email">
+    </label>
+    <div class="cf-turnstile" data-sitekey="{{ site.turnstile_site_key }}"></div>
+    <button type="submit">Subscribe</button>
+    <p class="subscribe-msg" id="subscribe-msg" hidden></p>
+  </form>
+</section>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+(function () {
+  const form = document.getElementById('subscribe-form');
+  const msg = document.getElementById('subscribe-msg');
+  const WORKER = "{{ page.worker_base }}";
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    msg.hidden = false;
+    msg.textContent = 'Sending…';
+    const email = document.getElementById('subscribe-email').value;
+    const tokenInput = form.querySelector('[name="cf-turnstile-response"]');
+    const turnstileToken = tokenInput ? tokenInput.value : '';
+    try {
+      const r = await fetch(`${WORKER}/api/subscribe`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, turnstileToken })
+      });
+      if (!r.ok) {
+        const d = await r.json().catch(() => ({}));
+        msg.textContent = d.error || 'Something went wrong. Try again?';
+        return;
+      }
+      msg.textContent = 'Check your inbox — a confirmation link is on its way (24h expiry).';
+    } catch {
+      msg.textContent = 'Network error. Try again?';
+    }
+  });
+})();
+</script>
