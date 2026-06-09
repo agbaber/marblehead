@@ -3697,7 +3697,30 @@ blockquote.quote--mixed p {
   font-size: 0.875rem;
   color: var(--text-subtle);
   line-height: 1.55;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+.featured-card-meta {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+.featured-card-meta .dot {
+  color: var(--c-navy);
+  margin: 0 6px;
+}
+.featured-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--c-teal);
+  transition: gap 0.2s;
+}
+.featured-card:hover .featured-card-cta {
+  gap: 7px;
 }
 
 @media (max-width: 600px) {
