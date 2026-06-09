@@ -1,0 +1,3109 @@
+{
+  "as_of": "2026-06-01",
+  "fiscal_year": "FY26",
+  "checkbook_period_end": "2026-05-29",
+  "totals": {
+    "all_funds_revised_budget": 206063591.63,
+    "all_funds_actual": 140446487.84,
+    "budgeted_annual": {
+      "revised_budget": 127338097.88,
+      "actual": 118865422.1,
+      "original_budget": 123810031.12
+    },
+    "other_funds": {
+      "revised_budget": 78725493.75,
+      "actual": 21581065.74,
+      "original_budget": 42439750.53
+    },
+    "checkbook_total": 98488006.04,
+    "checkbook_row_count": 15561
+  },
+  "by_fund": [
+    {
+      "name": "GENERAL FUND - TOWN",
+      "revised_budget": 60614084.0,
+      "actual": 54823152.84,
+      "original_budget": 59561708.0
+    },
+    {
+      "name": "GENERAL FUND - SCHOOL",
+      "revised_budget": 49120287.0,
+      "actual": 37351226.39,
+      "original_budget": 49120287.0
+    },
+    {
+      "name": "WATER ENTERPRISE OPERATING",
+      "revised_budget": 6475995.0,
+      "actual": 5640290.15,
+      "original_budget": 6463957.0
+    },
+    {
+      "name": "SEWER ENTERPRISE OPERATING",
+      "revised_budget": 5544161.0,
+      "actual": 4988308.21,
+      "original_budget": 5532269.0
+    },
+    {
+      "name": "GENERAL FUND - TAX ARTICLES",
+      "revised_budget": 4305002.88,
+      "actual": 2304773.25,
+      "original_budget": 1854936.12
+    },
+    {
+      "name": "HARBOR ENTERPRISE OPERATING",
+      "revised_budget": 1278568.0,
+      "actual": 600029.15,
+      "original_budget": 1276874.0
+    },
+    {
+      "name": "ELECTRIC ENTERPRISE",
+      "revised_budget": 0.0,
+      "actual": 13157642.11,
+      "original_budget": 0.0
+    }
+  ],
+  "by_department": [
+    {
+      "name": "OTHER GOVERNMENTAL",
+      "revised_budget": 21851072.0,
+      "actual": 21119455.21,
+      "original_budget": 21851072.0
+    },
+    {
+      "name": "DISTRICTWIDE",
+      "revised_budget": 14574494.16,
+      "actual": 11417078.47,
+      "original_budget": 17832596.0
+    },
+    {
+      "name": "HIGH SCHOOL",
+      "revised_budget": 11158028.0,
+      "actual": 8436180.8,
+      "original_budget": 9105277.0
+    },
+    {
+      "name": "DEBT SERVICE",
+      "revised_budget": 9314141.0,
+      "actual": 9314044.58,
+      "original_budget": 9314141.0
+    },
+    {
+      "name": "VILLAGE SCHOOL",
+      "revised_budget": 7679662.0,
+      "actual": 5738294.59,
+      "original_budget": 7301893.0
+    },
+    {
+      "name": "WATER",
+      "revised_budget": 6475995.0,
+      "actual": 5640290.15,
+      "original_budget": 6463957.0
+    },
+    {
+      "name": "MIDDLE SCHOOL",
+      "revised_budget": 5857003.0,
+      "actual": 4345793.92,
+      "original_budget": 5569396.0
+    },
+    {
+      "name": "FIRE",
+      "revised_budget": 5752426.13,
+      "actual": 5025177.24,
+      "original_budget": 5586722.13
+    },
+    {
+      "name": "SEWER",
+      "revised_budget": 5544161.0,
+      "actual": 4988308.21,
+      "original_budget": 5532269.0
+    },
+    {
+      "name": "BROWN SCHOOL",
+      "revised_budget": 5476278.84,
+      "actual": 4129467.91,
+      "original_budget": 5227512.0
+    },
+    {
+      "name": "POLICE",
+      "revised_budget": 5302215.09,
+      "actual": 4838218.73,
+      "original_budget": 4988272.09
+    },
+    {
+      "name": "GLOVER SCHOOL",
+      "revised_budget": 4374821.0,
+      "actual": 3284410.7,
+      "original_budget": 4083613.0
+    },
+    {
+      "name": "PUBLIC WORKS",
+      "revised_budget": 3465281.69,
+      "actual": 2060483.47,
+      "original_budget": 2646763.87
+    },
+    {
+      "name": "WASTE COLLECTION",
+      "revised_budget": 3085898.09,
+      "actual": 2508696.19,
+      "original_budget": 2943402.09
+    },
+    {
+      "name": "STATE ASSESSMENTS",
+      "revised_budget": 2475615.0,
+      "actual": 1713450.0,
+      "original_budget": 2475615.0
+    },
+    {
+      "name": "FINANCE",
+      "revised_budget": 1972597.93,
+      "actual": 1710782.09,
+      "original_budget": 1942697.93
+    },
+    {
+      "name": "ABBOT LIBRARY",
+      "revised_budget": 1501292.0,
+      "actual": 1255359.89,
+      "original_budget": 1493292.0
+    },
+    {
+      "name": "INTERFUND TRANSFERS",
+      "revised_budget": 1296000.0,
+      "actual": 673624.0,
+      "original_budget": 648000.0
+    },
+    {
+      "name": "HARBOR",
+      "revised_budget": 1278568.0,
+      "actual": 600029.15,
+      "original_budget": 1276874.0
+    },
+    {
+      "name": "EDUCATION",
+      "revised_budget": 1275192.26,
+      "actual": 943249.27,
+      "original_budget": 254784.32
+    },
+    {
+      "name": "PARKS & RECREATION",
+      "revised_budget": 1133161.26,
+      "actual": 930823.73,
+      "original_budget": 1045002.26
+    },
+    {
+      "name": "PUBLIC BUILDINGS",
+      "revised_budget": 881311.65,
+      "actual": 470411.92,
+      "original_budget": 772111.65
+    },
+    {
+      "name": "SELECT BOARD",
+      "revised_budget": 720316.8,
+      "actual": 494767.25,
+      "original_budget": 720316.8
+    },
+    {
+      "name": "CEMETERY",
+      "revised_budget": 703243.0,
+      "actual": 533084.6,
+      "original_budget": 518043.0
+    },
+    {
+      "name": "BUILDING INSPECTION",
+      "revised_budget": 691113.0,
+      "actual": 540935.42,
+      "original_budget": 687313.0
+    },
+    {
+      "name": "COMMUNITY DEVELOP AND PLANNING",
+      "revised_budget": 495123.0,
+      "actual": 377623.97,
+      "original_budget": 494402.0
+    },
+    {
+      "name": "DRAINS",
+      "revised_budget": 434970.98,
+      "actual": 232269.56,
+      "original_budget": 434970.98
+    },
+    {
+      "name": "COUNCIL ON AGING",
+      "revised_budget": 426160.0,
+      "actual": 377499.0,
+      "original_budget": 423460.0
+    },
+    {
+      "name": "ASSESSORS",
+      "revised_budget": 395821.0,
+      "actual": 316922.33,
+      "original_budget": 394221.0
+    },
+    {
+      "name": "RESERVE FUND",
+      "revised_budget": 395739.0,
+      "actual": 0.0,
+      "original_budget": 444000.0
+    },
+    {
+      "name": "HEALTH",
+      "revised_budget": 335641.0,
+      "actual": 297441.85,
+      "original_budget": 326141.0
+    },
+    {
+      "name": "HUMAN RESOURCES",
+      "revised_budget": 296282.0,
+      "actual": 264762.55,
+      "original_budget": 294927.0
+    },
+    {
+      "name": "TOWN CLERK",
+      "revised_budget": 246233.0,
+      "actual": 207779.63,
+      "original_budget": 244733.0
+    },
+    {
+      "name": "VETERANS SERVICES",
+      "revised_budget": 148525.0,
+      "actual": 104691.57,
+      "original_budget": 148525.0
+    },
+    {
+      "name": "TOWN COUNSEL",
+      "revised_budget": 115000.0,
+      "actual": 90262.39,
+      "original_budget": 115000.0
+    },
+    {
+      "name": "SNOW REMOVAL",
+      "revised_budget": 105000.0,
+      "actual": 687053.81,
+      "original_budget": 105000.0
+    },
+    {
+      "name": "ELECTION & REGISTRATION",
+      "revised_budget": 71015.0,
+      "actual": 23708.65,
+      "original_budget": 71015.0
+    },
+    {
+      "name": "PARKING CLERK",
+      "revised_budget": 8400.0,
+      "actual": 0.0,
+      "original_budget": 8400.0
+    },
+    {
+      "name": "MEMORIAL & VETERANS DAY",
+      "revised_budget": 7550.0,
+      "actual": 212.5,
+      "original_budget": 7550.0
+    },
+    {
+      "name": "FINANCE COMMITTEE",
+      "revised_budget": 6375.0,
+      "actual": 6442.0,
+      "original_budget": 6375.0
+    },
+    {
+      "name": "PLANNING BOARD",
+      "revised_budget": 5775.0,
+      "actual": 5236.67,
+      "original_budget": 5775.0
+    },
+    {
+      "name": "ANIMAL INSPECTOR",
+      "revised_budget": 2400.0,
+      "actual": 2284.32,
+      "original_budget": 2400.0
+    },
+    {
+      "name": "SEALER OF WEIGHTS & MEASURES",
+      "revised_budget": 2100.0,
+      "actual": 1050.0,
+      "original_budget": 2100.0
+    },
+    {
+      "name": "MODERATOR",
+      "revised_budget": 100.0,
+      "actual": 0.0,
+      "original_budget": 100.0
+    },
+    {
+      "name": "ENGINEERING",
+      "revised_budget": 0.0,
+      "actual": 121.7,
+      "original_budget": 0.0
+    },
+    {
+      "name": "LIGHT",
+      "revised_budget": 0.0,
+      "actual": 13157642.11,
+      "original_budget": 0.0
+    }
+  ],
+  "by_category": [
+    {
+      "name": "PROFESSIONAL SALARY",
+      "revised_budget": 52610429.96,
+      "actual": 44645750.92,
+      "original_budget": 52634082.0
+    },
+    {
+      "name": "OTHER EXPENSE",
+      "revised_budget": 34987270.47,
+      "actual": 35240250.55,
+      "original_budget": 34515101.0
+    },
+    {
+      "name": "CONTRACTED SERVICES",
+      "revised_budget": 15066898.77,
+      "actual": 18900988.25,
+      "original_budget": 14399193.77
+    },
+    {
+      "name": "GOVERNMENTAL",
+      "revised_budget": 9314518.0,
+      "actual": 8297531.62,
+      "original_budget": 9314518.0
+    },
+    {
+      "name": "OTHER SALARIES",
+      "revised_budget": 6571310.04,
+      "actual": 5317954.94,
+      "original_budget": 6449488.0
+    },
+    {
+      "name": "CAPITAL",
+      "revised_budget": 3311275.11,
+      "actual": 1764177.46,
+      "original_budget": 1477347.35
+    },
+    {
+      "name": "SUPPLIES AND MATL",
+      "revised_budget": 2432352.53,
+      "actual": 1989131.7,
+      "original_budget": 2147014.0
+    },
+    {
+      "name": "OFU",
+      "revised_budget": 1600548.0,
+      "actual": 1347060.0,
+      "original_budget": 952548.0
+    },
+    {
+      "name": "CLERICAL SALARIES",
+      "revised_budget": 1442995.0,
+      "actual": 1361310.95,
+      "original_budget": 1920239.0
+    },
+    {
+      "name": "UNKNOWN",
+      "revised_budget": 500.0,
+      "actual": 1265.71,
+      "original_budget": 500.0
+    }
+  ],
+  "by_division": [
+    {
+      "name": "UNDEFINED",
+      "revised_budget": 49120287.0,
+      "actual": 37351226.39,
+      "original_budget": 49120287.0
+    },
+    {
+      "name": "SALARIES",
+      "revised_budget": 23167663.0,
+      "actual": 23806513.73,
+      "original_budget": 22737663.0
+    },
+    {
+      "name": "EXPENSES",
+      "revised_budget": 21072150.0,
+      "actual": 27438585.21,
+      "original_budget": 20424150.0
+    },
+    {
+      "name": "GROUP INSURANCE",
+      "revised_budget": 15200391.0,
+      "actual": 14553177.37,
+      "original_budget": 15200391.0
+    },
+    {
+      "name": "CONTRIBUTORY RETIREMENT",
+      "revised_budget": 5380625.0,
+      "actual": 5380625.0,
+      "original_budget": 5380625.0
+    },
+    {
+      "name": "MASS WATER RESOURCES AUTHORITY",
+      "revised_budget": 3448362.0,
+      "actual": 3195219.0,
+      "original_budget": 3448362.0
+    },
+    {
+      "name": "SOUTH ESSEX SEWER DISTRICT",
+      "revised_budget": 3267745.0,
+      "actual": 3267244.87,
+      "original_budget": 3267745.0
+    },
+    {
+      "name": "OTHER INSURANCE",
+      "revised_budget": 865056.0,
+      "actual": 840588.48,
+      "original_budget": 865056.0
+    },
+    {
+      "name": "ART 26 2022 ESSEX NS AGGIE & T",
+      "revised_budget": 627323.0,
+      "actual": 627323.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "PRINCIPAL ON LONG TERM MWRA",
+      "revised_budget": 625940.0,
+      "actual": 561490.0,
+      "original_budget": 625940.0
+    },
+    {
+      "name": "ART 14 DRAIN CONSTRUCTION",
+      "revised_budget": 434970.98,
+      "actual": 232269.56,
+      "original_budget": 434970.98
+    },
+    {
+      "name": "STORMWATER CONSTRUCTION",
+      "revised_budget": 400000.0,
+      "actual": 84622.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ART 8 2024 CAPITAL IMPROVEMENT",
+      "revised_budget": 316890.6,
+      "actual": 191234.35,
+      "original_budget": 227355.66
+    },
+    {
+      "name": "MEDICARE",
+      "revised_budget": 280000.0,
+      "actual": 281988.59,
+      "original_budget": 280000.0
+    },
+    {
+      "name": "ART 30 2024 CAPITAL TRANSFERS",
+      "revised_budget": 277426.21,
+      "actual": 18906.92,
+      "original_budget": 277426.21
+    },
+    {
+      "name": "HARBOR CAPITAL OUTLAYS",
+      "revised_budget": 200000.0,
+      "actual": -341454.04,
+      "original_budget": 200000.0
+    },
+    {
+      "name": "ART 11 2023 CAPITAL IMPROV",
+      "revised_budget": 185076.3,
+      "actual": 73150.0,
+      "original_budget": 185076.3
+    },
+    {
+      "name": "ATM25A42 43-CEM-CEMETERY IMPRO",
+      "revised_budget": 180000.0,
+      "actual": 95069.25,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ART 9 2023 PURCH OF EQUIPMENT",
+      "revised_budget": 171199.64,
+      "actual": 96375.0,
+      "original_budget": 171199.64
+    },
+    {
+      "name": "ART 11 2022 CAPITAL IMPROV",
+      "revised_budget": 143625.0,
+      "actual": 65025.0,
+      "original_budget": 143625.0
+    },
+    {
+      "name": "ATM25A7-DPW-INTERNATIONAL TRUC",
+      "revised_budget": 134210.0,
+      "actual": 67104.52,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ARTICLE WALLS & FENCES",
+      "revised_budget": 123291.82,
+      "actual": 42.31,
+      "original_budget": 0.0
+    },
+    {
+      "name": "Art 10 2021 BUILDING IMPROV",
+      "revised_budget": 116816.46,
+      "actual": 0.0,
+      "original_budget": 116816.46
+    },
+    {
+      "name": "LANDFILL MONITORING EXPENSE",
+      "revised_budget": 114600.0,
+      "actual": 51874.72,
+      "original_budget": 114600.0
+    },
+    {
+      "name": "ATM25A8-SCH-UPHOLSTER ART CENT",
+      "revised_budget": 106958.0,
+      "actual": 0.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ART 7 2024 LEASE PURCHASE",
+      "revised_budget": 106163.83,
+      "actual": 67104.52,
+      "original_budget": 106163.83
+    },
+    {
+      "name": "ATM25A6-DPW-F350 W PLOW",
+      "revised_budget": 85000.0,
+      "actual": 84265.3,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A6-PB-F-150 CREW CAB",
+      "revised_budget": 70000.0,
+      "actual": 57820.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A6-WASTE-F-150 CREW CAB",
+      "revised_budget": 70000.0,
+      "actual": 57820.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A8-SCH-GLOVER HVAC CAFE",
+      "revised_budget": 70000.0,
+      "actual": 0.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "VETERANS BENEFITS",
+      "revised_budget": 65000.0,
+      "actual": 34552.11,
+      "original_budget": 65000.0
+    },
+    {
+      "name": "ATM25A8-SCH-GLOVER PLAYGROUND",
+      "revised_budget": 60000.0,
+      "actual": 60000.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "STREET LIGHTING",
+      "revised_budget": 60000.0,
+      "actual": 52735.86,
+      "original_budget": 60000.0
+    },
+    {
+      "name": "PARK FACILITY",
+      "revised_budget": 50750.0,
+      "actual": 42105.54,
+      "original_budget": 50750.0
+    },
+    {
+      "name": "ATM25A9-WALLS AND FENCES",
+      "revised_budget": 50000.0,
+      "actual": 0.0,
+      "original_budget": 50000.0
+    },
+    {
+      "name": "SALARY RESERVE",
+      "revised_budget": 50000.0,
+      "actual": 4928.66,
+      "original_budget": 50000.0
+    },
+    {
+      "name": "PW MAINTAIN STREETS & SIDEWALK",
+      "revised_budget": 49526.0,
+      "actual": 33836.11,
+      "original_budget": 49526.0
+    },
+    {
+      "name": "ATM25A7-POL-2 FORD HYBRIDS",
+      "revised_budget": 45593.0,
+      "actual": 45592.35,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ART 10 2022 LEASE PURCHASE",
+      "revised_budget": 44050.66,
+      "actual": 0.0,
+      "original_budget": 44050.66
+    },
+    {
+      "name": "ATM25A7-DPW-BUCKET LIFT TRUCK",
+      "revised_budget": 39263.0,
+      "actual": 39262.94,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A7-P&R-WIDE AREA MOWER",
+      "revised_budget": 38306.0,
+      "actual": 38305.07,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A7-SCH-7D VAN",
+      "revised_budget": 34385.0,
+      "actual": 34385.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ART 6 2024 PURCHASE OF EQUIP",
+      "revised_budget": 34123.43,
+      "actual": 7735.0,
+      "original_budget": 34123.43
+    },
+    {
+      "name": "ART 10 2023 LEASE PURCHASE",
+      "revised_budget": 32531.56,
+      "actual": 0.0,
+      "original_budget": 32531.56
+    },
+    {
+      "name": "ATM25A7-SCH-LARGE BUS",
+      "revised_budget": 32207.0,
+      "actual": 32206.92,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A7-WASTE-BACKHOE LEASE",
+      "revised_budget": 29917.0,
+      "actual": 29916.06,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A7-WASTE-JD LOADER",
+      "revised_budget": 26079.0,
+      "actual": 26078.91,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A6-P&R-ELECTRIC MOWER",
+      "revised_budget": 25094.0,
+      "actual": 25094.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A7-POL-CRUISER",
+      "revised_budget": 25000.0,
+      "actual": 23759.97,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A7-DPW-F550 TRUCK W PLOW",
+      "revised_budget": 23953.0,
+      "actual": 23952.67,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A6-POL-RADAR REPLACEMENT",
+      "revised_budget": 21690.0,
+      "actual": 0.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A7-POL-FORD INTERCEPTOR",
+      "revised_budget": 21538.0,
+      "actual": 21537.25,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A7-P&R-F-450 DUMP TRUCK",
+      "revised_budget": 21159.0,
+      "actual": 21158.74,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A6-POL-PORTABLE RADIOS",
+      "revised_budget": 18861.0,
+      "actual": 40545.64,
+      "original_budget": 0.0
+    },
+    {
+      "name": "A41 2019 TRANS NETWORK FUND",
+      "revised_budget": 17388.8,
+      "actual": 0.0,
+      "original_budget": 17388.8
+    },
+    {
+      "name": "ATM25A7-FIRE-TRAIN VEHICLE",
+      "revised_budget": 15704.0,
+      "actual": 0.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ATM25A8-POL-FLOOR REPLCE",
+      "revised_budget": 15000.0,
+      "actual": 14234.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "TRAINING",
+      "revised_budget": 15000.0,
+      "actual": 5411.25,
+      "original_budget": 15000.0
+    },
+    {
+      "name": "A9 2022 PURCHASE OF EQUIP",
+      "revised_budget": 5327.52,
+      "actual": 0.0,
+      "original_budget": 5327.52
+    },
+    {
+      "name": "ART 8 2021 PURCH OF EQUIP",
+      "revised_budget": 3282.49,
+      "actual": 0.0,
+      "original_budget": 3282.49
+    },
+    {
+      "name": "ART 9 2021 LEASE PURCHASE",
+      "revised_budget": 2720.58,
+      "actual": 0.0,
+      "original_budget": 2720.58
+    },
+    {
+      "name": "SELECT BD EXP FY19",
+      "revised_budget": 2541.0,
+      "actual": 2541.0,
+      "original_budget": 2541.0
+    },
+    {
+      "name": "SELECT BD EXP FY18",
+      "revised_budget": 336.0,
+      "actual": 336.0,
+      "original_budget": 336.0
+    },
+    {
+      "name": "A15 20 DRAIN CONSTRUCTION",
+      "revised_budget": 0.0,
+      "actual": 0.0,
+      "original_budget": 0.0
+    }
+  ],
+  "by_object": [
+    {
+      "name": "PROFESSIONAL SALARIES",
+      "revised_budget": 29748964.96,
+      "actual": 21982417.94,
+      "original_budget": 30957452.0
+    },
+    {
+      "name": "HEALTH INSURANCE",
+      "revised_budget": 12447598.0,
+      "actual": 12587776.46,
+      "original_budget": 12447598.0
+    },
+    {
+      "name": "MATURING PRINCIPAL ON LTD",
+      "revised_budget": 6580940.0,
+      "actual": 6762656.64,
+      "original_budget": 6580940.0
+    },
+    {
+      "name": "RETIREMENT",
+      "revised_budget": 5756133.0,
+      "actual": 6387684.0,
+      "original_budget": 5756133.0
+    },
+    {
+      "name": "MASS WATER RESOURCE AUTHORITY",
+      "revised_budget": 3448362.0,
+      "actual": 3195219.0,
+      "original_budget": 3448362.0
+    },
+    {
+      "name": "SOUTH ESSEX SEWER DISTRICT",
+      "revised_budget": 3267745.0,
+      "actual": 3267244.87,
+      "original_budget": 3267745.0
+    },
+    {
+      "name": "INTEREST ON LONG-TERM DEBT",
+      "revised_budget": 3162141.0,
+      "actual": 3272440.16,
+      "original_budget": 3162141.0
+    },
+    {
+      "name": "INSTRUCTIONAL ASSISTANTS",
+      "revised_budget": 2706947.84,
+      "actual": 2173172.84,
+      "original_budget": 2386221.0
+    },
+    {
+      "name": "MEDEX INSURANCE TRANSFER",
+      "revised_budget": 2534769.0,
+      "actual": 2337950.63,
+      "original_budget": 2534769.0
+    },
+    {
+      "name": "OVERTIME",
+      "revised_budget": 2342597.0,
+      "actual": 2463972.54,
+      "original_budget": 2069795.0
+    },
+    {
+      "name": "DEPARTMENT HEAD",
+      "revised_budget": 2135197.0,
+      "actual": 1891196.22,
+      "original_budget": 2135197.0
+    },
+    {
+      "name": "FIREFIGHTER",
+      "revised_budget": 2071324.0,
+      "actual": 1663467.9,
+      "original_budget": 2071324.0
+    },
+    {
+      "name": "TUITION-PRIVATE SCHOOLS",
+      "revised_budget": 1973105.63,
+      "actual": 1805744.22,
+      "original_budget": 2454757.0
+    },
+    {
+      "name": "CHARTER SCHOOL ASSESSMENT",
+      "revised_budget": 1805693.0,
+      "actual": 1245074.0,
+      "original_budget": 1805693.0
+    },
+    {
+      "name": "PATROLMAN",
+      "revised_budget": 1545603.0,
+      "actual": 1468658.34,
+      "original_budget": 1395017.0
+    },
+    {
+      "name": "ASSISTANT DEPARTMENT HEAD",
+      "revised_budget": 1518009.0,
+      "actual": 1282395.73,
+      "original_budget": 1514909.0
+    },
+    {
+      "name": "OTHER SALARIES",
+      "revised_budget": 1502334.4,
+      "actual": 1361858.2,
+      "original_budget": 1422936.0
+    },
+    {
+      "name": "CUSTODIAN SALARY",
+      "revised_budget": 1429884.8,
+      "actual": 1177508.94,
+      "original_budget": 1429885.0
+    },
+    {
+      "name": "ELECTRICITY",
+      "revised_budget": 1413655.0,
+      "actual": 7716491.82,
+      "original_budget": 1413655.0
+    },
+    {
+      "name": "R&M BUILDING AND GROUNDS",
+      "revised_budget": 1191238.21,
+      "actual": 378212.61,
+      "original_budget": 1155238.21
+    },
+    {
+      "name": "PUPIL TRANSPORTATION",
+      "revised_budget": 1148760.0,
+      "actual": 1018242.7,
+      "original_budget": 1158760.0
+    },
+    {
+      "name": "INSURANCE PREMIUMS",
+      "revised_budget": 1057620.0,
+      "actual": 982708.82,
+      "original_budget": 1027979.0
+    },
+    {
+      "name": "TRASH COLLECTION",
+      "revised_budget": 1046293.0,
+      "actual": 784472.73,
+      "original_budget": 1046293.0
+    },
+    {
+      "name": "SECRETARY SALARIES",
+      "revised_budget": 1044501.0,
+      "actual": 915934.0,
+      "original_budget": 1724936.0
+    },
+    {
+      "name": "TUITION-RESIDENTIAL",
+      "revised_budget": 1026993.0,
+      "actual": 337031.52,
+      "original_budget": 1548227.0
+    },
+    {
+      "name": "MEDICARE",
+      "revised_budget": 878800.0,
+      "actual": 738447.64,
+      "original_budget": 321426.0
+    },
+    {
+      "name": "DRAINS IMPROVEMENTS",
+      "revised_budget": 834970.98,
+      "actual": 316891.56,
+      "original_budget": 434970.98
+    },
+    {
+      "name": "SENIOR CLERK",
+      "revised_budget": 805087.0,
+      "actual": 649182.03,
+      "original_budget": 824845.0
+    },
+    {
+      "name": "TRANSFER TO WORKERS COMP TF",
+      "revised_budget": 796000.0,
+      "actual": 398000.0,
+      "original_budget": 398000.0
+    },
+    {
+      "name": "HEALTH REIMB MEDICARE",
+      "revised_budget": 768657.0,
+      "actual": 777862.28,
+      "original_budget": 768657.0
+    },
+    {
+      "name": "LIEUTENANT",
+      "revised_budget": 721721.0,
+      "actual": 594611.07,
+      "original_budget": 721721.0
+    },
+    {
+      "name": "TRASH DISPOSAL",
+      "revised_budget": 716816.0,
+      "actual": 578684.67,
+      "original_budget": 716816.0
+    },
+    {
+      "name": "EDUCATIONAL SUPPLIES",
+      "revised_budget": 684445.36,
+      "actual": 544470.04,
+      "original_budget": 400234.0
+    },
+    {
+      "name": "SUBSTITUTES",
+      "revised_budget": 683000.0,
+      "actual": 357505.51,
+      "original_budget": 554000.0
+    },
+    {
+      "name": "HEAVY EQUIP OPERATOR",
+      "revised_budget": 672664.0,
+      "actual": 426237.83,
+      "original_budget": 668664.0
+    },
+    {
+      "name": "PROFESSIONAL SALARIES #2",
+      "revised_budget": 664147.0,
+      "actual": 420255.07,
+      "original_budget": 0.0
+    },
+    {
+      "name": "MOTOR VEHICLE",
+      "revised_budget": 660585.78,
+      "actual": 501645.02,
+      "original_budget": 184003.78
+    },
+    {
+      "name": "ASSISTANT DIVISION HEAD",
+      "revised_budget": 658650.0,
+      "actual": 589791.68,
+      "original_budget": 592043.0
+    },
+    {
+      "name": "GAS USED FOR HEAT",
+      "revised_budget": 647848.0,
+      "actual": 665890.89,
+      "original_budget": 647848.0
+    },
+    {
+      "name": "TUITION-REGIONAL DISTRICTS",
+      "revised_budget": 627323.0,
+      "actual": 627323.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "OTHER PROF & TECHNICAL",
+      "revised_budget": 612420.8,
+      "actual": 1076698.0,
+      "original_budget": 450321.8
+    },
+    {
+      "name": "CAPTAIN",
+      "revised_budget": 588457.0,
+      "actual": 431923.94,
+      "original_budget": 588457.0
+    },
+    {
+      "name": "TUITION-COLLABORATIVES",
+      "revised_budget": 584064.37,
+      "actual": 370625.74,
+      "original_budget": -418821.0
+    },
+    {
+      "name": "TELECOMMUNICATOR",
+      "revised_budget": 570784.0,
+      "actual": 483123.75,
+      "original_budget": 564484.0
+    },
+    {
+      "name": "INFORMATION TECHNOLOGY",
+      "revised_budget": 565807.0,
+      "actual": 545579.38,
+      "original_budget": 572807.0
+    },
+    {
+      "name": "MBTA",
+      "revised_budget": 519241.0,
+      "actual": 346120.0,
+      "original_budget": 519241.0
+    },
+    {
+      "name": "TRANSFER TO OPEB TRUST FUND",
+      "revised_budget": 511870.0,
+      "actual": 261870.0,
+      "original_budget": 261870.0
+    },
+    {
+      "name": "WALLS & FENCES",
+      "revised_budget": 503925.33,
+      "actual": 197111.66,
+      "original_budget": 312533.51
+    },
+    {
+      "name": "REPAIRS & MAINTENANCE",
+      "revised_budget": 448557.76,
+      "actual": 138675.0,
+      "original_budget": 448557.76
+    },
+    {
+      "name": "LEADER HEAVY EQUIP OPERATOR",
+      "revised_budget": 431825.0,
+      "actual": 258396.26,
+      "original_budget": 422725.0
+    },
+    {
+      "name": "STIPENDS",
+      "revised_budget": 428306.0,
+      "actual": 350511.78,
+      "original_budget": 428306.0
+    },
+    {
+      "name": "DIVISION HEAD",
+      "revised_budget": 421574.0,
+      "actual": 409391.06,
+      "original_budget": 421574.0
+    },
+    {
+      "name": "RESERVE FUND TRANSFER",
+      "revised_budget": 395739.0,
+      "actual": 0.0,
+      "original_budget": 444000.0
+    },
+    {
+      "name": "CLERICAL SALARIES",
+      "revised_budget": 385374.0,
+      "actual": 439769.82,
+      "original_budget": 189183.0
+    },
+    {
+      "name": "INCENTIVE",
+      "revised_budget": 371561.0,
+      "actual": 357093.01,
+      "original_budget": 371561.0
+    },
+    {
+      "name": "HOLIDAY",
+      "revised_budget": 347233.0,
+      "actual": 282121.98,
+      "original_budget": 347233.0
+    },
+    {
+      "name": "SARGENT",
+      "revised_budget": 331839.0,
+      "actual": 284495.03,
+      "original_budget": 331839.0
+    },
+    {
+      "name": "LEGAL SERVICES",
+      "revised_budget": 309800.0,
+      "actual": 339498.79,
+      "original_budget": 309800.0
+    },
+    {
+      "name": "EDUCATIONAL SOFTWARE",
+      "revised_budget": 306778.75,
+      "actual": 313016.53,
+      "original_budget": 347656.0
+    },
+    {
+      "name": "TRANSFER TO GENERAL FUND",
+      "revised_budget": 292678.0,
+      "actual": 661566.0,
+      "original_budget": 292678.0
+    },
+    {
+      "name": "STATION MECH/PIPEFITTER II",
+      "revised_budget": 289337.0,
+      "actual": 256834.68,
+      "original_budget": 282299.0
+    },
+    {
+      "name": "R&M MOTOR VEHICLES",
+      "revised_budget": 279355.0,
+      "actual": 320130.53,
+      "original_budget": 264355.0
+    },
+    {
+      "name": "COMPUTER RENTAL/LEASE",
+      "revised_budget": 265200.0,
+      "actual": 222461.39,
+      "original_budget": 265200.0
+    },
+    {
+      "name": "SPECIAL CLERK",
+      "revised_budget": 255805.0,
+      "actual": 296461.72,
+      "original_budget": 254305.0
+    },
+    {
+      "name": "GROUND IMPROVEMENTS",
+      "revised_budget": 240000.0,
+      "actual": 155069.25,
+      "original_budget": 0.0
+    },
+    {
+      "name": "WATER/SEWER",
+      "revised_budget": 238669.0,
+      "actual": 157231.56,
+      "original_budget": 238669.0
+    },
+    {
+      "name": "MECHANIC SUPERVISOR",
+      "revised_budget": 236661.0,
+      "actual": 220607.78,
+      "original_budget": 236661.0
+    },
+    {
+      "name": "SPECIAL LABOR 1",
+      "revised_budget": 229713.0,
+      "actual": 259644.39,
+      "original_budget": 228513.0
+    },
+    {
+      "name": "PARK",
+      "revised_budget": 225224.0,
+      "actual": 171519.02,
+      "original_budget": 225224.0
+    },
+    {
+      "name": "MECHANIC PIPEFITTER",
+      "revised_budget": 225012.0,
+      "actual": 170397.21,
+      "original_budget": 225012.0
+    },
+    {
+      "name": "GRINDING/COMPOST REMOVAL",
+      "revised_budget": 224600.0,
+      "actual": 178460.0,
+      "original_budget": 224600.0
+    },
+    {
+      "name": "BUILDING IMPROVEMENTS",
+      "revised_budget": 217525.09,
+      "actual": 16134.0,
+      "original_budget": 4132.15
+    },
+    {
+      "name": "MECHANIC",
+      "revised_budget": 206522.0,
+      "actual": 151441.4,
+      "original_budget": 206522.0
+    },
+    {
+      "name": "PUBLIC WORKS EQUIPMENT",
+      "revised_budget": 203473.99,
+      "actual": 130320.13,
+      "original_budget": 6047.99
+    },
+    {
+      "name": "UNEMPLOYMENT COMP SALARIES",
+      "revised_budget": 200000.0,
+      "actual": 169255.19,
+      "original_budget": 200000.0
+    },
+    {
+      "name": "INTEREST ON SHORT-TERM DEBT",
+      "revised_budget": 197000.0,
+      "actual": 196903.92,
+      "original_budget": 197000.0
+    },
+    {
+      "name": "GASOLINE UNLEADED",
+      "revised_budget": 194127.0,
+      "actual": 110834.15,
+      "original_budget": 194127.0
+    },
+    {
+      "name": "EQUIPMENT (REPLACEMENT)",
+      "revised_budget": 181335.52,
+      "actual": 100272.92,
+      "original_budget": 170151.52
+    },
+    {
+      "name": "OTHER DISPOSAL",
+      "revised_budget": 180000.0,
+      "actual": 193594.6,
+      "original_budget": 180000.0
+    },
+    {
+      "name": "LIBRARY MATERIALS",
+      "revised_budget": 173974.0,
+      "actual": 131121.16,
+      "original_budget": 195560.0
+    },
+    {
+      "name": "OTHER SALARIES - STIPENDS",
+      "revised_budget": 170036.0,
+      "actual": 105984.55,
+      "original_budget": 0.0
+    },
+    {
+      "name": "BLDG & EQUIP R&M SUPPLIES",
+      "revised_budget": 165262.0,
+      "actual": 86986.39,
+      "original_budget": 180262.0
+    },
+    {
+      "name": "WORKING FOREMAN",
+      "revised_budget": 165011.0,
+      "actual": 153649.72,
+      "original_budget": 165011.0
+    },
+    {
+      "name": "OTHER EQUIPMENT",
+      "revised_budget": 161451.0,
+      "actual": 114338.59,
+      "original_budget": 57500.0
+    },
+    {
+      "name": "R&M OTHER EQUIPMENT",
+      "revised_budget": 151948.0,
+      "actual": 113607.88,
+      "original_budget": 151948.0
+    },
+    {
+      "name": "LONGEVITY",
+      "revised_budget": 149354.0,
+      "actual": 137240.55,
+      "original_budget": 149354.0
+    },
+    {
+      "name": "SENIOR CLERK II",
+      "revised_budget": 143367.0,
+      "actual": 130967.56,
+      "original_budget": 141846.0
+    },
+    {
+      "name": "COMPUTER EQUIPMENT",
+      "revised_budget": 142535.55,
+      "actual": 80865.45,
+      "original_budget": 142535.55
+    },
+    {
+      "name": "CUSTODIAL SUPPLIES",
+      "revised_budget": 142256.0,
+      "actual": 110866.51,
+      "original_budget": 142256.0
+    },
+    {
+      "name": "ELECT PWR-PUMPING STATIONS",
+      "revised_budget": 141000.0,
+      "actual": 110857.89,
+      "original_budget": 141000.0
+    },
+    {
+      "name": "SPECIAL LABOR I",
+      "revised_budget": 136520.0,
+      "actual": 112351.39,
+      "original_budget": 129628.0
+    },
+    {
+      "name": "SCHEDULED OT",
+      "revised_budget": 135236.0,
+      "actual": 75910.94,
+      "original_budget": 131736.0
+    },
+    {
+      "name": "NIGHT DIFF",
+      "revised_budget": 132651.0,
+      "actual": 132835.82,
+      "original_budget": 132651.0
+    },
+    {
+      "name": "RETIREMENT INCENTIVE",
+      "revised_budget": 130000.0,
+      "actual": 0.0,
+      "original_budget": 130000.0
+    },
+    {
+      "name": "TAXES",
+      "revised_budget": 122796.0,
+      "actual": 121617.75,
+      "original_budget": 122796.0
+    },
+    {
+      "name": "TRAFFIC SUPERS",
+      "revised_budget": 122048.0,
+      "actual": 100179.46,
+      "original_budget": 122048.0
+    },
+    {
+      "name": "DIESEL FUEL",
+      "revised_budget": 118032.0,
+      "actual": 103535.67,
+      "original_budget": 118032.0
+    },
+    {
+      "name": "GENERAL LABOR IV",
+      "revised_budget": 116709.0,
+      "actual": 106542.29,
+      "original_budget": 116709.0
+    },
+    {
+      "name": "SEAS SENIOR HARBOR ASSISTANT",
+      "revised_budget": 113896.0,
+      "actual": 66857.83,
+      "original_budget": 113896.0
+    },
+    {
+      "name": "TELEPHONE",
+      "revised_budget": 113638.0,
+      "actual": 65904.95,
+      "original_budget": 113638.0
+    },
+    {
+      "name": "POSTAGE",
+      "revised_budget": 98743.0,
+      "actual": 68228.74,
+      "original_budget": 90278.0
+    },
+    {
+      "name": "IN-SERVICE TRAINING",
+      "revised_budget": 97049.0,
+      "actual": 32436.67,
+      "original_budget": 97049.0
+    },
+    {
+      "name": "MISC OTHER SUPPLIES",
+      "revised_budget": 96161.0,
+      "actual": 75824.21,
+      "original_budget": 96161.0
+    },
+    {
+      "name": "R&M FLOATS",
+      "revised_budget": 95000.0,
+      "actual": 73760.54,
+      "original_budget": 95000.0
+    },
+    {
+      "name": "WATER METERS",
+      "revised_budget": 95000.0,
+      "actual": 30339.32,
+      "original_budget": 95000.0
+    },
+    {
+      "name": "PLANNER",
+      "revised_budget": 94839.0,
+      "actual": 42949.48,
+      "original_budget": 94839.0
+    },
+    {
+      "name": "LIFE INSURANCE",
+      "revised_budget": 93424.0,
+      "actual": 62951.62,
+      "original_budget": 93424.0
+    },
+    {
+      "name": "SICK BONUS ANNUAL",
+      "revised_budget": 90100.0,
+      "actual": 29500.0,
+      "original_budget": 90100.0
+    },
+    {
+      "name": "TRANSP ATHLETIC DRIVERS",
+      "revised_budget": 87000.0,
+      "actual": 53479.78,
+      "original_budget": 77000.0
+    },
+    {
+      "name": "RENTALS AND LEASES",
+      "revised_budget": 82520.0,
+      "actual": 67564.4,
+      "original_budget": 82520.0
+    },
+    {
+      "name": "TELECOMMUNICATOR SUPERV",
+      "revised_budget": 81824.0,
+      "actual": 73761.28,
+      "original_budget": 81824.0
+    },
+    {
+      "name": "TECHNICAL SERVICES SUPERVISOR",
+      "revised_budget": 81501.0,
+      "actual": 56833.02,
+      "original_budget": 81501.0
+    },
+    {
+      "name": "HEAD PUBLIC SERVICES",
+      "revised_budget": 81059.0,
+      "actual": 0.0,
+      "original_budget": 81059.0
+    },
+    {
+      "name": "SUSTAINABILITY COORD",
+      "revised_budget": 79445.0,
+      "actual": 65755.15,
+      "original_budget": 79445.0
+    },
+    {
+      "name": "GRANT COORDINATOR",
+      "revised_budget": 79064.0,
+      "actual": 72160.92,
+      "original_budget": 79064.0
+    },
+    {
+      "name": "STAND BY PAY",
+      "revised_budget": 77480.0,
+      "actual": 156780.0,
+      "original_budget": 77480.0
+    },
+    {
+      "name": "SICK OWED RETIREMENT",
+      "revised_budget": 77000.0,
+      "actual": 170563.25,
+      "original_budget": 77000.0
+    },
+    {
+      "name": "WORKING FOREMAN/TREE SURGEON",
+      "revised_budget": 76710.0,
+      "actual": 69448.39,
+      "original_budget": 76710.0
+    },
+    {
+      "name": "PROGRAM MANAGER",
+      "revised_budget": 76407.0,
+      "actual": 69884.84,
+      "original_budget": 76407.0
+    },
+    {
+      "name": "SUPERIOR OT",
+      "revised_budget": 76095.0,
+      "actual": 134059.51,
+      "original_budget": 76095.0
+    },
+    {
+      "name": "CHILD LIBRARIAN",
+      "revised_budget": 73759.0,
+      "actual": 70109.02,
+      "original_budget": 73759.0
+    },
+    {
+      "name": "OTHER PURCHASED SERVICES",
+      "revised_budget": 72879.0,
+      "actual": 267338.33,
+      "original_budget": 78489.0
+    },
+    {
+      "name": "ACCOUNTING",
+      "revised_budget": 72000.0,
+      "actual": 8271.88,
+      "original_budget": 72000.0
+    },
+    {
+      "name": "YOUNG ADULT LIBRARIAN",
+      "revised_budget": 71834.0,
+      "actual": 56668.54,
+      "original_budget": 71834.0
+    },
+    {
+      "name": "WORKING FORMAN BLDG",
+      "revised_budget": 71543.0,
+      "actual": 60723.95,
+      "original_budget": 71543.0
+    },
+    {
+      "name": "FIELD CRAFTSMAN MECHANIC",
+      "revised_budget": 70983.0,
+      "actual": 29986.3,
+      "original_budget": 67383.0
+    },
+    {
+      "name": "PARK TURF SPECIALIST",
+      "revised_budget": 70922.0,
+      "actual": 64208.67,
+      "original_budget": 70922.0
+    },
+    {
+      "name": "IN-STATE TRAVEL",
+      "revised_budget": 70767.0,
+      "actual": 26008.07,
+      "original_budget": 83567.0
+    },
+    {
+      "name": "SEAS GROUNDS CARETAKER",
+      "revised_budget": 70052.0,
+      "actual": 57528.83,
+      "original_budget": 70052.0
+    },
+    {
+      "name": "PROFFESIONAL REIMBURSEMENT",
+      "revised_budget": 70000.0,
+      "actual": 12012.42,
+      "original_budget": 70000.0
+    },
+    {
+      "name": "WATER TECHNICIAN",
+      "revised_budget": 69773.0,
+      "actual": 64003.64,
+      "original_budget": 69773.0
+    },
+    {
+      "name": "TSA/403B MATCH",
+      "revised_budget": 68000.0,
+      "actual": 0.0,
+      "original_budget": 68000.0
+    },
+    {
+      "name": "OUTREACH WORKER",
+      "revised_budget": 67557.0,
+      "actual": 62048.71,
+      "original_budget": 67557.0
+    },
+    {
+      "name": "UNIFORMS/PROTECTIVE CLOTHING",
+      "revised_budget": 67045.0,
+      "actual": 47341.47,
+      "original_budget": 67045.0
+    },
+    {
+      "name": "SCHOOL CHOICE ASSESSMENT",
+      "revised_budget": 66431.0,
+      "actual": 66088.0,
+      "original_budget": 66431.0
+    },
+    {
+      "name": "VETERANS BENEFITS",
+      "revised_budget": 65000.0,
+      "actual": 34552.11,
+      "original_budget": 65000.0
+    },
+    {
+      "name": "TRANSPORTATION COORDINATOR",
+      "revised_budget": 64739.0,
+      "actual": 58420.77,
+      "original_budget": 64739.0
+    },
+    {
+      "name": "LIBRARY COORDINATOR",
+      "revised_budget": 64542.0,
+      "actual": 81210.96,
+      "original_budget": 64542.0
+    },
+    {
+      "name": "PROGRAM VOLUNTEER COORDINATOR",
+      "revised_budget": 64542.0,
+      "actual": 31995.86,
+      "original_budget": 64542.0
+    },
+    {
+      "name": "GIS FIELD TECHNICIAN",
+      "revised_budget": 64206.0,
+      "actual": 62108.49,
+      "original_budget": 64206.0
+    },
+    {
+      "name": "ADULT LIBRARIAN",
+      "revised_budget": 64123.0,
+      "actual": 52803.12,
+      "original_budget": 64123.0
+    },
+    {
+      "name": "LIBRARY TECH ADMIN",
+      "revised_budget": 63576.0,
+      "actual": 57574.31,
+      "original_budget": 63576.0
+    },
+    {
+      "name": "LABOR ATTORNEY",
+      "revised_budget": 63000.0,
+      "actual": 58907.77,
+      "original_budget": 63000.0
+    },
+    {
+      "name": "LIBRARY PARAPROFESSIONAL",
+      "revised_budget": 62196.0,
+      "actual": 56214.44,
+      "original_budget": 62196.0
+    },
+    {
+      "name": "WATER IMPROVEMENTS",
+      "revised_budget": 61200.0,
+      "actual": 2402.0,
+      "original_budget": 61200.0
+    },
+    {
+      "name": "STAFF ENGINEER",
+      "revised_budget": 61135.0,
+      "actual": 0.0,
+      "original_budget": 61135.0
+    },
+    {
+      "name": "BILLING TECH",
+      "revised_budget": 61000.0,
+      "actual": 57695.06,
+      "original_budget": 61000.0
+    },
+    {
+      "name": "PSYCHOLOGICAL COUNSELING",
+      "revised_budget": 60780.0,
+      "actual": 59019.39,
+      "original_budget": 60780.0
+    },
+    {
+      "name": "PRINTING/FORMS",
+      "revised_budget": 60538.0,
+      "actual": 49337.72,
+      "original_budget": 60538.0
+    },
+    {
+      "name": "STREET LIGHTING",
+      "revised_budget": 60000.0,
+      "actual": 52735.86,
+      "original_budget": 60000.0
+    },
+    {
+      "name": "VACATION PAY/BONUS",
+      "revised_budget": 60000.0,
+      "actual": 0.0,
+      "original_budget": 60000.0
+    },
+    {
+      "name": "GEN'L LABOR/NUTR COORD",
+      "revised_budget": 59118.0,
+      "actual": 53974.45,
+      "original_budget": 59118.0
+    },
+    {
+      "name": "BOOKS",
+      "revised_budget": 58548.95,
+      "actual": 36478.67,
+      "original_budget": 39102.0
+    },
+    {
+      "name": "LIBRARY TECH",
+      "revised_budget": 57857.0,
+      "actual": 37544.5,
+      "original_budget": 57857.0
+    },
+    {
+      "name": "APPRAISOR SERVICES",
+      "revised_budget": 57500.0,
+      "actual": 0.0,
+      "original_budget": 57500.0
+    },
+    {
+      "name": "ATHLETICS OFFICIALS SALARIES",
+      "revised_budget": 57120.0,
+      "actual": 57030.0,
+      "original_budget": 67120.0
+    },
+    {
+      "name": "UNIFORM ALLOWANCE",
+      "revised_budget": 55199.0,
+      "actual": 50991.52,
+      "original_budget": 55199.0
+    },
+    {
+      "name": "SENIOR LIBRARY ASSISTANT",
+      "revised_budget": 55000.0,
+      "actual": 50180.11,
+      "original_budget": 55000.0
+    },
+    {
+      "name": "MISC OFFICE SUPPLIES",
+      "revised_budget": 54440.0,
+      "actual": 120332.32,
+      "original_budget": 54440.0
+    },
+    {
+      "name": "OTHER MISC EXPENSE",
+      "revised_budget": 54352.0,
+      "actual": 271104.5,
+      "original_budget": 90993.0
+    },
+    {
+      "name": "LIBRARY TECH SVCS ASSISTANT",
+      "revised_budget": 53557.0,
+      "actual": 31327.6,
+      "original_budget": 53557.0
+    },
+    {
+      "name": "INSPECTOR OT",
+      "revised_budget": 53171.0,
+      "actual": 18110.21,
+      "original_budget": 53171.0
+    },
+    {
+      "name": "TRANSFER STATION OPERATOR",
+      "revised_budget": 53071.0,
+      "actual": 47588.75,
+      "original_budget": 53071.0
+    },
+    {
+      "name": "PROFESSIONAL & TECHNICAL",
+      "revised_budget": 50521.0,
+      "actual": 41472.48,
+      "original_budget": 67340.0
+    },
+    {
+      "name": "ATHLETICS MEDICAL SALARIES",
+      "revised_budget": 50388.0,
+      "actual": 17550.0,
+      "original_budget": 50388.0
+    },
+    {
+      "name": "UNUSED SICK-LEAVE BUYBACK",
+      "revised_budget": 50000.0,
+      "actual": 4928.66,
+      "original_budget": 50000.0
+    },
+    {
+      "name": "OFFICE ASSISTANT",
+      "revised_budget": 49068.0,
+      "actual": 13334.74,
+      "original_budget": 49068.0
+    },
+    {
+      "name": "NOBLE SERVICES",
+      "revised_budget": 48173.0,
+      "actual": 48173.0,
+      "original_budget": 48173.0
+    },
+    {
+      "name": "LANDSCAPING SUPPLIES",
+      "revised_budget": 47976.0,
+      "actual": 24279.06,
+      "original_budget": 47976.0
+    },
+    {
+      "name": "POLICE DEFIBR STIPEND",
+      "revised_budget": 47539.0,
+      "actual": 40767.41,
+      "original_budget": 47539.0
+    },
+    {
+      "name": "MOSQUITO CONTROL PROJECTS",
+      "revised_budget": 46138.0,
+      "actual": 30760.0,
+      "original_budget": 46138.0
+    },
+    {
+      "name": "TESTING SERVICES",
+      "revised_budget": 45655.0,
+      "actual": 9686.65,
+      "original_budget": 61755.0
+    },
+    {
+      "name": "DUES",
+      "revised_budget": 43796.0,
+      "actual": 69190.43,
+      "original_budget": 43796.0
+    },
+    {
+      "name": "R&M COMPUTER EQUIPMENT",
+      "revised_budget": 40391.0,
+      "actual": 39862.81,
+      "original_budget": 40391.0
+    },
+    {
+      "name": "TECHNOLOGY EQUIPMENT",
+      "revised_budget": 38140.0,
+      "actual": 30932.4,
+      "original_budget": 38140.0
+    },
+    {
+      "name": "TEMPORY LIBRARY ASSISTANT",
+      "revised_budget": 37306.0,
+      "actual": 25043.27,
+      "original_budget": 37306.0
+    },
+    {
+      "name": "SUBSCRIPTIONS",
+      "revised_budget": 36081.0,
+      "actual": 13620.31,
+      "original_budget": 36081.0
+    },
+    {
+      "name": "OFFICE SUPPLIES",
+      "revised_budget": 35897.22,
+      "actual": 30844.34,
+      "original_budget": 22250.0
+    },
+    {
+      "name": "MISC BLDG R&M SUPPLIES",
+      "revised_budget": 34615.0,
+      "actual": 13906.31,
+      "original_budget": 34615.0
+    },
+    {
+      "name": "CELLULAR PHONES",
+      "revised_budget": 33109.0,
+      "actual": 26475.58,
+      "original_budget": 33109.0
+    },
+    {
+      "name": "TEMP GENERAL CLERK",
+      "revised_budget": 33000.0,
+      "actual": 39529.15,
+      "original_budget": 33000.0
+    },
+    {
+      "name": "ADULT PAGE",
+      "revised_budget": 32103.0,
+      "actual": 24738.75,
+      "original_budget": 32103.0
+    },
+    {
+      "name": "LICENSE/PERMITS EXPENSE",
+      "revised_budget": 30295.0,
+      "actual": 18396.52,
+      "original_budget": 30295.0
+    },
+    {
+      "name": "ENGINEERING/ARCHITECTURAL",
+      "revised_budget": 30000.0,
+      "actual": 16773.75,
+      "original_budget": 30000.0
+    },
+    {
+      "name": "PAVEMENT MARKING SUPPLIES",
+      "revised_budget": 30000.0,
+      "actual": 0.0,
+      "original_budget": 30000.0
+    },
+    {
+      "name": "MECHANIC PIPEFITTER II",
+      "revised_budget": 29808.0,
+      "actual": 0.0,
+      "original_budget": 29808.0
+    },
+    {
+      "name": "BUS MONITOR",
+      "revised_budget": 27210.0,
+      "actual": 12455.29,
+      "original_budget": 0.0
+    },
+    {
+      "name": "STATION EQUIP & SUPPLIES",
+      "revised_budget": 27060.0,
+      "actual": 19726.1,
+      "original_budget": 27060.0
+    },
+    {
+      "name": "INSIDE DETAIL",
+      "revised_budget": 25359.0,
+      "actual": 141908.48,
+      "original_budget": 25359.0
+    },
+    {
+      "name": "TEMP OFFICER",
+      "revised_budget": 24429.0,
+      "actual": 23195.12,
+      "original_budget": 24429.0
+    },
+    {
+      "name": "R&M RADIO",
+      "revised_budget": 24410.0,
+      "actual": 31880.59,
+      "original_budget": 24410.0
+    },
+    {
+      "name": "MISC MEDICAL & SURGICAL",
+      "revised_budget": 23865.0,
+      "actual": 13022.85,
+      "original_budget": 25548.0
+    },
+    {
+      "name": "ATHLETICS CUSTODIAN",
+      "revised_budget": 23038.0,
+      "actual": 18564.4,
+      "original_budget": 23038.0
+    },
+    {
+      "name": "WORKERS COMP BILLS",
+      "revised_budget": 23000.0,
+      "actual": 0.0,
+      "original_budget": 23000.0
+    },
+    {
+      "name": "SEASONAL LABOR",
+      "revised_budget": 22834.0,
+      "actual": 6126.79,
+      "original_budget": 22834.0
+    },
+    {
+      "name": "TEMP DISPATCHER",
+      "revised_budget": 22730.0,
+      "actual": 25540.71,
+      "original_budget": 22730.0
+    },
+    {
+      "name": "VACATION OWED",
+      "revised_budget": 22700.0,
+      "actual": 7106.24,
+      "original_budget": 20000.0
+    },
+    {
+      "name": "TESTING SUPPLIES",
+      "revised_budget": 21404.0,
+      "actual": 11560.62,
+      "original_budget": 5304.0
+    },
+    {
+      "name": "COURT OT",
+      "revised_budget": 20400.0,
+      "actual": 7756.29,
+      "original_budget": 20400.0
+    },
+    {
+      "name": "INTERNET ACCESS",
+      "revised_budget": 20388.0,
+      "actual": 38345.7,
+      "original_budget": 20388.0
+    },
+    {
+      "name": "BALLOTS",
+      "revised_budget": 20000.0,
+      "actual": 0.0,
+      "original_budget": 20000.0
+    },
+    {
+      "name": "TEMP SPECIAL CLERK",
+      "revised_budget": 20000.0,
+      "actual": 1133.38,
+      "original_budget": 20000.0
+    },
+    {
+      "name": "MEDICAL/DOCTOR SERVICES",
+      "revised_budget": 19280.0,
+      "actual": 7140.0,
+      "original_budget": 19280.0
+    },
+    {
+      "name": "TIRES",
+      "revised_budget": 18710.0,
+      "actual": 19101.62,
+      "original_budget": 18710.0
+    },
+    {
+      "name": "SMALL EQUIPMENT",
+      "revised_budget": 18522.0,
+      "actual": 2569.61,
+      "original_budget": 18522.0
+    },
+    {
+      "name": "TRAINING SUPPLIES",
+      "revised_budget": 18000.0,
+      "actual": 14714.2,
+      "original_budget": 18000.0
+    },
+    {
+      "name": "EMPLOYEE TRAINING/SEMINARS",
+      "revised_budget": 17819.0,
+      "actual": 4938.16,
+      "original_budget": 0.0
+    },
+    {
+      "name": "OUT OF RANK",
+      "revised_budget": 17610.0,
+      "actual": 34188.38,
+      "original_budget": 17610.0
+    },
+    {
+      "name": "INJURY LEAVE BILLS",
+      "revised_budget": 16530.0,
+      "actual": 8042.1,
+      "original_budget": 16530.0
+    },
+    {
+      "name": "SPECIAL LICENSE STIPEND",
+      "revised_budget": 16500.0,
+      "actual": 11250.0,
+      "original_budget": 16500.0
+    },
+    {
+      "name": "SAFETY SUPPLIES/EQUIPMENT",
+      "revised_budget": 16100.0,
+      "actual": 4806.96,
+      "original_budget": 16100.0
+    },
+    {
+      "name": "SALT",
+      "revised_budget": 16085.0,
+      "actual": 145475.9,
+      "original_budget": 16085.0
+    },
+    {
+      "name": "ATHLETIC POLICE DUTY SALARY",
+      "revised_budget": 16000.0,
+      "actual": 4584.14,
+      "original_budget": 6000.0
+    },
+    {
+      "name": "IN-STATE CONFERENCE",
+      "revised_budget": 15690.0,
+      "actual": 2876.14,
+      "original_budget": 2040.0
+    },
+    {
+      "name": "GRASS SEED",
+      "revised_budget": 15450.0,
+      "actual": 14273.15,
+      "original_budget": 15450.0
+    },
+    {
+      "name": "SEAS HARBOR PUMPOUT ASSIST",
+      "revised_budget": 15430.0,
+      "actual": 3454.46,
+      "original_budget": 15430.0
+    },
+    {
+      "name": "MEDICAL & SURGICAL SUPPLIES",
+      "revised_budget": 15242.0,
+      "actual": 10291.61,
+      "original_budget": 13359.0
+    },
+    {
+      "name": "RMV NONRENEWAL SURCHARGE",
+      "revised_budget": 15200.0,
+      "actual": 10136.0,
+      "original_budget": 15200.0
+    },
+    {
+      "name": "DISPOSAL AREA MAINT SUPPLIES",
+      "revised_budget": 15000.0,
+      "actual": 12575.0,
+      "original_budget": 15000.0
+    },
+    {
+      "name": "PERM POLICE",
+      "revised_budget": 15000.0,
+      "actual": 6345.72,
+      "original_budget": 15000.0
+    },
+    {
+      "name": "R&M TRAFFIC CONTROL EQUIP",
+      "revised_budget": 15000.0,
+      "actual": 6109.48,
+      "original_budget": 15000.0
+    },
+    {
+      "name": "DOUBLE TIME",
+      "revised_budget": 14233.0,
+      "actual": 105118.28,
+      "original_budget": 14233.0
+    },
+    {
+      "name": "MISC CUSTODIAL SUPPLIES",
+      "revised_budget": 14175.0,
+      "actual": 9055.51,
+      "original_budget": 14175.0
+    },
+    {
+      "name": "R&M OFFICE EQUIPMENT",
+      "revised_budget": 13100.0,
+      "actual": 6603.76,
+      "original_budget": 13100.0
+    },
+    {
+      "name": "METRO AREA PLANNING COUNC",
+      "revised_budget": 12327.0,
+      "actual": 7182.0,
+      "original_budget": 12327.0
+    },
+    {
+      "name": "SIGNS",
+      "revised_budget": 12250.0,
+      "actual": 38395.86,
+      "original_budget": 12250.0
+    },
+    {
+      "name": "SMALL TOOLS",
+      "revised_budget": 12250.0,
+      "actual": 13221.03,
+      "original_budget": 12250.0
+    },
+    {
+      "name": "TREES & SHRUBS SUPPLIES",
+      "revised_budget": 12000.0,
+      "actual": 0.0,
+      "original_budget": 12000.0
+    },
+    {
+      "name": "CLEANING SUPPLIES",
+      "revised_budget": 11945.0,
+      "actual": 10193.17,
+      "original_budget": 11945.0
+    },
+    {
+      "name": "PROFESSIONAL DEVELOPMENT",
+      "revised_budget": 11866.0,
+      "actual": 1958.19,
+      "original_budget": 2500.0
+    },
+    {
+      "name": "PAPER & PRINTER SUPPLIES",
+      "revised_budget": 11730.0,
+      "actual": 11191.14,
+      "original_budget": 4080.0
+    },
+    {
+      "name": "TRAIN ACADEMY",
+      "revised_budget": 11400.0,
+      "actual": 0.0,
+      "original_budget": 11400.0
+    },
+    {
+      "name": "MATRON MONITOR",
+      "revised_budget": 11000.0,
+      "actual": 6466.04,
+      "original_budget": 11000.0
+    },
+    {
+      "name": "SEASONAL DOCENT",
+      "revised_budget": 10899.0,
+      "actual": 2264.58,
+      "original_budget": 10899.0
+    },
+    {
+      "name": "R&M VEHICLES NON-HIGHWAY",
+      "revised_budget": 10650.0,
+      "actual": 13616.56,
+      "original_budget": 10650.0
+    },
+    {
+      "name": "AIR POLUTION CONTROL",
+      "revised_budget": 10585.0,
+      "actual": 8090.0,
+      "original_budget": 10585.0
+    },
+    {
+      "name": "SEAS SUMMER CLERICAL",
+      "revised_budget": 10504.0,
+      "actual": 0.0,
+      "original_budget": 10504.0
+    },
+    {
+      "name": "COA TEMP SPECIAL CLERK",
+      "revised_budget": 10000.0,
+      "actual": 6627.47,
+      "original_budget": 10000.0
+    },
+    {
+      "name": "BOAT GASOLINE",
+      "revised_budget": 9800.0,
+      "actual": 4480.79,
+      "original_budget": 9800.0
+    },
+    {
+      "name": "STREET SWEEPER SUPPLIES",
+      "revised_budget": 9800.0,
+      "actual": 8676.71,
+      "original_budget": 9800.0
+    },
+    {
+      "name": "R&M ALARM EQUIPMENT",
+      "revised_budget": 9460.0,
+      "actual": 6650.11,
+      "original_budget": 9460.0
+    },
+    {
+      "name": "DUES AND MEMBERSHIPS",
+      "revised_budget": 8836.0,
+      "actual": 1150.0,
+      "original_budget": 1020.0
+    },
+    {
+      "name": "SEAS BEACH SUPERVISOR",
+      "revised_budget": 8710.0,
+      "actual": 7361.64,
+      "original_budget": 8710.0
+    },
+    {
+      "name": "R&M RESTROOMS",
+      "revised_budget": 8500.0,
+      "actual": 4656.41,
+      "original_budget": 8500.0
+    },
+    {
+      "name": "ADVERTISING",
+      "revised_budget": 8460.0,
+      "actual": 127428.05,
+      "original_budget": 8460.0
+    },
+    {
+      "name": "LEGAL NOTICES",
+      "revised_budget": 8350.0,
+      "actual": 3538.5,
+      "original_budget": 8350.0
+    },
+    {
+      "name": "LIBRARY SUPPLIES",
+      "revised_budget": 8075.0,
+      "actual": 6598.52,
+      "original_budget": 14195.0
+    },
+    {
+      "name": "CURBSIDE RECYCLING BINS",
+      "revised_budget": 8000.0,
+      "actual": 7900.0,
+      "original_budget": 8000.0
+    },
+    {
+      "name": "PAINT",
+      "revised_budget": 8000.0,
+      "actual": 8044.26,
+      "original_budget": 8000.0
+    },
+    {
+      "name": "STONE DUST",
+      "revised_budget": 8000.0,
+      "actual": 0.0,
+      "original_budget": 8000.0
+    },
+    {
+      "name": "OVERRIDE ELECTION SALARIES",
+      "revised_budget": 7500.0,
+      "actual": 2076.14,
+      "original_budget": 7500.0
+    },
+    {
+      "name": "TOWN ELECTION SALARIES",
+      "revised_budget": 7500.0,
+      "actual": 0.0,
+      "original_budget": 7500.0
+    },
+    {
+      "name": "PROSECUTOR",
+      "revised_budget": 7485.0,
+      "actual": 6296.06,
+      "original_budget": 7485.0
+    },
+    {
+      "name": "RENTAL-PHOTOCOPIER",
+      "revised_budget": 7200.0,
+      "actual": 3442.85,
+      "original_budget": 7200.0
+    },
+    {
+      "name": "IN-STATE TRAVEL PRINCIPAL",
+      "revised_budget": 7061.72,
+      "actual": 3733.72,
+      "original_budget": 4794.0
+    },
+    {
+      "name": "ELECTED OFFICIAL EXPENSES",
+      "revised_budget": 7050.0,
+      "actual": 4500.0,
+      "original_budget": 7050.0
+    },
+    {
+      "name": "CLERICAL PARA SALARIES",
+      "revised_budget": 7000.0,
+      "actual": 0.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "MEDICARE PENALTY",
+      "revised_budget": 6986.0,
+      "actual": 1542.0,
+      "original_budget": 6986.0
+    },
+    {
+      "name": "INSTRUCTIONAL EQUIPMENT",
+      "revised_budget": 6745.0,
+      "actual": 7484.52,
+      "original_budget": 16080.0
+    },
+    {
+      "name": "WREATHS & FLOWERS",
+      "revised_budget": 6350.0,
+      "actual": 5111.35,
+      "original_budget": 6350.0
+    },
+    {
+      "name": "OTHER CLERICAL SALARIES",
+      "revised_budget": 6120.0,
+      "actual": 5607.13,
+      "original_budget": 6120.0
+    },
+    {
+      "name": "FIRE PREVENTION OFFICER",
+      "revised_budget": 6000.0,
+      "actual": 5389.4,
+      "original_budget": 6000.0
+    },
+    {
+      "name": "MAPS",
+      "revised_budget": 6000.0,
+      "actual": 10797.27,
+      "original_budget": 6000.0
+    },
+    {
+      "name": "GROUNDSKEEPING SUPPLIES",
+      "revised_budget": 5600.0,
+      "actual": 1601.88,
+      "original_budget": 5600.0
+    },
+    {
+      "name": "EQUIPMENT (NEW)",
+      "revised_budget": 5100.0,
+      "actual": 0.0,
+      "original_budget": 5100.0
+    },
+    {
+      "name": "RENTAL-EQUIPMENT",
+      "revised_budget": 5090.0,
+      "actual": 0.0,
+      "original_budget": 5090.0
+    },
+    {
+      "name": "OIL FOR HEAT",
+      "revised_budget": 5080.0,
+      "actual": 4729.11,
+      "original_budget": 5080.0
+    },
+    {
+      "name": "R&M PLAYGROUND EQUIP",
+      "revised_budget": 5000.0,
+      "actual": 3060.95,
+      "original_budget": 5000.0
+    },
+    {
+      "name": "R&M SCALES",
+      "revised_budget": 5000.0,
+      "actual": 0.0,
+      "original_budget": 5000.0
+    },
+    {
+      "name": "FLAGS",
+      "revised_budget": 4900.0,
+      "actual": 588.2,
+      "original_budget": 4900.0
+    },
+    {
+      "name": "PHOTOCOPYING SUPPLIES",
+      "revised_budget": 4860.0,
+      "actual": 3176.98,
+      "original_budget": 4860.0
+    },
+    {
+      "name": "R&M BOAT",
+      "revised_budget": 4800.0,
+      "actual": 7937.98,
+      "original_budget": 4800.0
+    },
+    {
+      "name": "SMALL OFFICE EQUIPMENT",
+      "revised_budget": 4760.0,
+      "actual": 1225.62,
+      "original_budget": 4760.0
+    },
+    {
+      "name": "PRINTING SERVICES",
+      "revised_budget": 4590.0,
+      "actual": 1729.04,
+      "original_budget": 157428.0
+    },
+    {
+      "name": "R&M HAULING EQUIPMENT",
+      "revised_budget": 4500.0,
+      "actual": 677.45,
+      "original_budget": 4500.0
+    },
+    {
+      "name": "PUBLIC SAFETY EQUIPMENT",
+      "revised_budget": 4171.87,
+      "actual": 0.0,
+      "original_budget": 4171.87
+    },
+    {
+      "name": "FIRE MECHANIC",
+      "revised_budget": 4166.0,
+      "actual": 3727.92,
+      "original_budget": 4166.0
+    },
+    {
+      "name": "TELECOMMUNICATOR STIPEND",
+      "revised_budget": 4160.0,
+      "actual": 2048.0,
+      "original_budget": 4160.0
+    },
+    {
+      "name": "ANNUAL TOWN MEETING SALARIES",
+      "revised_budget": 4000.0,
+      "actual": 1965.06,
+      "original_budget": 4000.0
+    },
+    {
+      "name": "FIRE EMERGENCY MNGT STIPEND",
+      "revised_budget": 4000.0,
+      "actual": 3593.86,
+      "original_budget": 4000.0
+    },
+    {
+      "name": "FIRE EMT COORDINATOR",
+      "revised_budget": 4000.0,
+      "actual": 3516.02,
+      "original_budget": 4000.0
+    },
+    {
+      "name": "FIRE TRAINING OFFICER",
+      "revised_budget": 4000.0,
+      "actual": 3285.26,
+      "original_budget": 4000.0
+    },
+    {
+      "name": "HEALING ABUSE WORKING CHNG",
+      "revised_budget": 4000.0,
+      "actual": 4000.0,
+      "original_budget": 4000.0
+    },
+    {
+      "name": "TELEPHONE ANSWERING SERVICE",
+      "revised_budget": 4000.0,
+      "actual": 3845.95,
+      "original_budget": 4000.0
+    },
+    {
+      "name": "TOWN REPORT",
+      "revised_budget": 4000.0,
+      "actual": 3905.78,
+      "original_budget": 4000.0
+    },
+    {
+      "name": "FIREFIGHTING SUPPLIES",
+      "revised_budget": 3700.0,
+      "actual": 2000.0,
+      "original_budget": 3700.0
+    },
+    {
+      "name": "NIGHT MTG CLERICAL STIPEND",
+      "revised_budget": 3600.0,
+      "actual": 8000.0,
+      "original_budget": 3600.0
+    },
+    {
+      "name": "MOORING/BARGE SERVICE",
+      "revised_budget": 3500.0,
+      "actual": 8542.32,
+      "original_budget": 3500.0
+    },
+    {
+      "name": "R&M PASSIVE PARKS",
+      "revised_budget": 3500.0,
+      "actual": 0.0,
+      "original_budget": 3500.0
+    },
+    {
+      "name": "COMPUTER SUPPLIES",
+      "revised_budget": 3448.0,
+      "actual": 2023.83,
+      "original_budget": 3448.0
+    },
+    {
+      "name": "CONTAINER RENTAL",
+      "revised_budget": 3400.0,
+      "actual": 3672.0,
+      "original_budget": 3400.0
+    },
+    {
+      "name": "DEEDS",
+      "revised_budget": 3300.0,
+      "actual": 0.0,
+      "original_budget": 3300.0
+    },
+    {
+      "name": "MISC VEHICULAR SUPPLIES",
+      "revised_budget": 3250.0,
+      "actual": 15815.25,
+      "original_budget": 3250.0
+    },
+    {
+      "name": "MEDICAID SERVICES",
+      "revised_budget": 3200.0,
+      "actual": 790.69,
+      "original_budget": 3200.0
+    },
+    {
+      "name": "R&M FIRE EQUIPMENT",
+      "revised_budget": 3182.0,
+      "actual": 87.85,
+      "original_budget": 3182.0
+    },
+    {
+      "name": "RESIDENT BOOKS",
+      "revised_budget": 2800.0,
+      "actual": 0.0,
+      "original_budget": 2800.0
+    },
+    {
+      "name": "RENTAL-BUILDINGS",
+      "revised_budget": 2790.0,
+      "actual": 2140.0,
+      "original_budget": 2790.0
+    },
+    {
+      "name": "R&M GAS PUMPS",
+      "revised_budget": 2579.0,
+      "actual": 550.0,
+      "original_budget": 2579.0
+    },
+    {
+      "name": "FIRE PREVENTION SUPPLIES",
+      "revised_budget": 2243.0,
+      "actual": 1086.0,
+      "original_budget": 2243.0
+    },
+    {
+      "name": "MOTOR OIL & GREASE",
+      "revised_budget": 2200.0,
+      "actual": 1372.43,
+      "original_budget": 2200.0
+    },
+    {
+      "name": "R&M EMERGENCY GENERATOR",
+      "revised_budget": 2080.0,
+      "actual": 443.63,
+      "original_budget": 2080.0
+    },
+    {
+      "name": "BANDS & MARCHERS",
+      "revised_budget": 2000.0,
+      "actual": 0.0,
+      "original_budget": 2000.0
+    },
+    {
+      "name": "DER STIPEND",
+      "revised_budget": 2000.0,
+      "actual": 0.0,
+      "original_budget": 2000.0
+    },
+    {
+      "name": "SETTLEMENT CLAIMS",
+      "revised_budget": 2000.0,
+      "actual": 0.0,
+      "original_budget": 2000.0
+    },
+    {
+      "name": "GR BOS POLICE COUNCIL",
+      "revised_budget": 1976.0,
+      "actual": 0.0,
+      "original_budget": 1976.0
+    },
+    {
+      "name": "CLERICAL STIPEND",
+      "revised_budget": 1800.0,
+      "actual": 2200.0,
+      "original_budget": 1800.0
+    },
+    {
+      "name": "FINGER PHOTO",
+      "revised_budget": 1800.0,
+      "actual": 1066.02,
+      "original_budget": 1800.0
+    },
+    {
+      "name": "WARRANTS",
+      "revised_budget": 1800.0,
+      "actual": 125.0,
+      "original_budget": 1800.0
+    },
+    {
+      "name": "IN-STATE LOCAL TRAVEL",
+      "revised_budget": 1600.0,
+      "actual": 0.0,
+      "original_budget": 1600.0
+    },
+    {
+      "name": "INSPECTOR SUPPLIES",
+      "revised_budget": 1560.0,
+      "actual": 1646.8,
+      "original_budget": 1560.0
+    },
+    {
+      "name": "CHEMICALS",
+      "revised_budget": 1500.0,
+      "actual": 0.0,
+      "original_budget": 1500.0
+    },
+    {
+      "name": "LYNPAC",
+      "revised_budget": 1500.0,
+      "actual": 0.0,
+      "original_budget": 1500.0
+    },
+    {
+      "name": "SAND",
+      "revised_budget": 1500.0,
+      "actual": 1051.72,
+      "original_budget": 1500.0
+    },
+    {
+      "name": "BANKING SERVICES",
+      "revised_budget": 1400.0,
+      "actual": 3054.96,
+      "original_budget": 1400.0
+    },
+    {
+      "name": "R&M HVAC EQUIPMENT",
+      "revised_budget": 1300.0,
+      "actual": 2944.0,
+      "original_budget": 1300.0
+    },
+    {
+      "name": "R&M TELETYPE",
+      "revised_budget": 1300.0,
+      "actual": 839.5,
+      "original_budget": 1300.0
+    },
+    {
+      "name": "STATIONERY",
+      "revised_budget": 1300.0,
+      "actual": 0.0,
+      "original_budget": 1300.0
+    },
+    {
+      "name": "JUVENILE OFFICER",
+      "revised_budget": 1200.0,
+      "actual": 710.71,
+      "original_budget": 1200.0
+    },
+    {
+      "name": "R&M TELEPHONE",
+      "revised_budget": 1040.0,
+      "actual": 4282.81,
+      "original_budget": 1040.0
+    },
+    {
+      "name": "FLOAT SUPPLIES",
+      "revised_budget": 1000.0,
+      "actual": 134.27,
+      "original_budget": 1000.0
+    },
+    {
+      "name": "INDEMNIF OFFICER STIPEND",
+      "revised_budget": 1000.0,
+      "actual": 0.0,
+      "original_budget": 1000.0
+    },
+    {
+      "name": "LANDFILL MAINT SUPPLIES",
+      "revised_budget": 1000.0,
+      "actual": 0.0,
+      "original_budget": 1000.0
+    },
+    {
+      "name": "TELEPHONE/ALARM",
+      "revised_budget": 900.0,
+      "actual": 570.26,
+      "original_budget": 900.0
+    },
+    {
+      "name": "PAPER",
+      "revised_budget": 874.0,
+      "actual": 0.0,
+      "original_budget": 874.0
+    },
+    {
+      "name": "TUITION REIMBURSEMENT",
+      "revised_budget": 825.0,
+      "actual": 0.0,
+      "original_budget": 825.0
+    },
+    {
+      "name": "TEMP HEAVY EQUIP OPERATOR",
+      "revised_budget": 800.0,
+      "actual": 0.0,
+      "original_budget": 800.0
+    },
+    {
+      "name": "OTHER SUPPLIES",
+      "revised_budget": 714.0,
+      "actual": 0.0,
+      "original_budget": 714.0
+    },
+    {
+      "name": "REGISTER VOTERS SALARIES",
+      "revised_budget": 700.0,
+      "actual": 0.0,
+      "original_budget": 700.0
+    },
+    {
+      "name": "BOAT SUPPLIES",
+      "revised_budget": 600.0,
+      "actual": 0.0,
+      "original_budget": 600.0
+    },
+    {
+      "name": "VITAL STATISTICS",
+      "revised_budget": 600.0,
+      "actual": 0.0,
+      "original_budget": 600.0
+    },
+    {
+      "name": "VETERANARY SERVICES",
+      "revised_budget": 572.0,
+      "actual": 215.75,
+      "original_budget": 572.0
+    },
+    {
+      "name": "VEHICULAR SUPPLIES",
+      "revised_budget": 510.0,
+      "actual": 924.42,
+      "original_budget": 510.0
+    },
+    {
+      "name": "ELECTRONICS",
+      "revised_budget": 500.0,
+      "actual": 0.0,
+      "original_budget": 500.0
+    },
+    {
+      "name": "INSP OFFICER",
+      "revised_budget": 500.0,
+      "actual": 439.47,
+      "original_budget": 500.0
+    },
+    {
+      "name": "MISC WATERFRONT SUPPLIES",
+      "revised_budget": 500.0,
+      "actual": 0.0,
+      "original_budget": 500.0
+    },
+    {
+      "name": "OUT-OF-STATE TRAVEL",
+      "revised_budget": 500.0,
+      "actual": 10611.12,
+      "original_budget": 500.0
+    },
+    {
+      "name": "BOARD OR COMM SALARIES",
+      "revised_budget": 450.0,
+      "actual": 300.0,
+      "original_budget": 450.0
+    },
+    {
+      "name": "YVS OFFICER",
+      "revised_budget": 400.0,
+      "actual": 359.16,
+      "original_budget": 400.0
+    },
+    {
+      "name": "IN-STATE TRAVEL-TRAINING",
+      "revised_budget": 325.0,
+      "actual": 2847.33,
+      "original_budget": 325.0
+    },
+    {
+      "name": "FOOD & FOOD SVC SUPPLIES",
+      "revised_budget": 312.0,
+      "actual": 233.29,
+      "original_budget": 312.0
+    },
+    {
+      "name": "BOAT SMALL EQUIPMENT",
+      "revised_budget": 300.0,
+      "actual": 0.0,
+      "original_budget": 300.0
+    },
+    {
+      "name": "NARCOTIC OFFICER",
+      "revised_budget": 300.0,
+      "actual": 269.04,
+      "original_budget": 300.0
+    },
+    {
+      "name": "BELL RINGER STIPEND",
+      "revised_budget": 270.0,
+      "actual": 0.0,
+      "original_budget": 270.0
+    },
+    {
+      "name": "CONSTABLE",
+      "revised_budget": 250.0,
+      "actual": 1485.0,
+      "original_budget": 250.0
+    },
+    {
+      "name": "EMERG MNGT SUPPLIES",
+      "revised_budget": 202.0,
+      "actual": 0.0,
+      "original_budget": 202.0
+    },
+    {
+      "name": "DOG FOOD",
+      "revised_budget": 104.0,
+      "actual": 0.0,
+      "original_budget": 104.0
+    },
+    {
+      "name": "ASSISTANT ENGINEER",
+      "revised_budget": 0.0,
+      "actual": 31334.84,
+      "original_budget": 0.0
+    },
+    {
+      "name": "CHIEF PROCUREMENT OFFICER",
+      "revised_budget": 0.0,
+      "actual": 47240.76,
+      "original_budget": 0.0
+    },
+    {
+      "name": "COA CUSTODIAN",
+      "revised_budget": 0.0,
+      "actual": 342.55,
+      "original_budget": 0.0
+    },
+    {
+      "name": "CUSTODIAN OT",
+      "revised_budget": 0.0,
+      "actual": 14542.79,
+      "original_budget": 90688.0
+    },
+    {
+      "name": "DISPATCH DEFIBR STIPEND",
+      "revised_budget": 0.0,
+      "actual": 1690.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "ELECTRIC EQUIPMENT",
+      "revised_budget": 0.0,
+      "actual": 117200.82,
+      "original_budget": 0.0
+    },
+    {
+      "name": "EMERGENCY OVERTIME",
+      "revised_budget": 0.0,
+      "actual": 67.52,
+      "original_budget": 0.0
+    },
+    {
+      "name": "FIELD TRAINING OFFICER STIPEND",
+      "revised_budget": 0.0,
+      "actual": 3592.92,
+      "original_budget": 0.0
+    },
+    {
+      "name": "GENERAL CLERK",
+      "revised_budget": 0.0,
+      "actual": 1265.71,
+      "original_budget": 0.0
+    },
+    {
+      "name": "HAZMAT STIPEND",
+      "revised_budget": 0.0,
+      "actual": 5000.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "HOT TOP",
+      "revised_budget": 0.0,
+      "actual": 25862.06,
+      "original_budget": 0.0
+    },
+    {
+      "name": "INJURY PAYROLL",
+      "revised_budget": 0.0,
+      "actual": 246711.64,
+      "original_budget": 0.0
+    },
+    {
+      "name": "INTRAMURAL SALARIES",
+      "revised_budget": 0.0,
+      "actual": 0.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "LIGHT EXPEMPT",
+      "revised_budget": 0.0,
+      "actual": 1124241.04,
+      "original_budget": 0.0
+    },
+    {
+      "name": "LIGHT NONEXEMPT",
+      "revised_budget": 0.0,
+      "actual": 203445.12,
+      "original_budget": 0.0
+    },
+    {
+      "name": "LIGHT UNION",
+      "revised_budget": 0.0,
+      "actual": 1134580.74,
+      "original_budget": 0.0
+    },
+    {
+      "name": "LOCAL INSPECTORS",
+      "revised_budget": 0.0,
+      "actual": 98.14,
+      "original_budget": 0.0
+    },
+    {
+      "name": "OPERATIONAL SUPPORT PERSONNEL",
+      "revised_budget": 0.0,
+      "actual": 0.0,
+      "original_budget": 524212.0
+    },
+    {
+      "name": "OUTSIDE DETAIL",
+      "revised_budget": 0.0,
+      "actual": 16100.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "PER DIEM LIBRARIAN",
+      "revised_budget": 0.0,
+      "actual": 5475.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "POLICE POST STIPEND",
+      "revised_budget": 0.0,
+      "actual": 20323.93,
+      "original_budget": 0.0
+    },
+    {
+      "name": "PROF SALARY  STIPENDS",
+      "revised_budget": 0.0,
+      "actual": 16433.7,
+      "original_budget": 0.0
+    },
+    {
+      "name": "RENTAL-OFFICE EQUIP",
+      "revised_budget": 0.0,
+      "actual": 5420.47,
+      "original_budget": 0.0
+    },
+    {
+      "name": "R&M COPIER EQUIPMENT",
+      "revised_budget": 0.0,
+      "actual": -124.94,
+      "original_budget": 0.0
+    },
+    {
+      "name": "R&M WALLS AND FENCES",
+      "revised_budget": 0.0,
+      "actual": 94.06,
+      "original_budget": 0.0
+    },
+    {
+      "name": "SCHOOLS PCARD",
+      "revised_budget": 0.0,
+      "actual": -153.36,
+      "original_budget": 0.0
+    },
+    {
+      "name": "SEWER IMPROVEMENTS",
+      "revised_budget": 0.0,
+      "actual": 862.02,
+      "original_budget": 0.0
+    },
+    {
+      "name": "SMALL CUSTODIAL EQUIPMENT",
+      "revised_budget": 0.0,
+      "actual": 0.0,
+      "original_budget": 3876.0
+    },
+    {
+      "name": "SPECIALIZED HEAVY EQU OPERATOR",
+      "revised_budget": 0.0,
+      "actual": 57912.33,
+      "original_budget": 0.0
+    },
+    {
+      "name": "SPECIAL STIPEND",
+      "revised_budget": 0.0,
+      "actual": 3365.52,
+      "original_budget": 0.0
+    },
+    {
+      "name": "SPED SUPPLIES",
+      "revised_budget": 0.0,
+      "actual": 0.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "STRAIGHT TIME",
+      "revised_budget": 0.0,
+      "actual": 31964.6,
+      "original_budget": 0.0
+    },
+    {
+      "name": "TOWN ENGINEER",
+      "revised_budget": 0.0,
+      "actual": 103392.87,
+      "original_budget": 0.0
+    },
+    {
+      "name": "TRANSFER TO HARBOR FUND",
+      "revised_budget": 0.0,
+      "actual": 1694.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "TRANSFER TO SEWER FUND",
+      "revised_budget": 0.0,
+      "actual": 11892.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "TRANSFER TO WATER FUND",
+      "revised_budget": 0.0,
+      "actual": 12038.0,
+      "original_budget": 0.0
+    },
+    {
+      "name": "WATER EQUIPMENT",
+      "revised_budget": 0.0,
+      "actual": 724.72,
+      "original_budget": 0.0
+    },
+    {
+      "name": "WORKING FOREMAN CONSTRUCTION",
+      "revised_budget": 0.0,
+      "actual": 69735.09,
+      "original_budget": 0.0
+    },
+    {
+      "name": "WORKING FOREMAN MAINTENANCE",
+      "revised_budget": 0.0,
+      "actual": 84002.94,
+      "original_budget": 0.0
+    },
+    {
+      "name": "VACATION & RET. PAYOUT-OTHER",
+      "revised_budget": -181649.0,
+      "actual": -36281.5,
+      "original_budget": -182000.0
+    }
+  ]
+}
