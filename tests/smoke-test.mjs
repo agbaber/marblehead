@@ -24,62 +24,34 @@ async function testHomepageLoads(page) {
   console.log('\n── Homepage ──');
   const hero = await page.$('.home-hero');
   hero ? ok('Homepage renders .home-hero') : fail('Homepage', '.home-hero missing');
-  const stops = await page.$$('.home-stop');
-  stops.length >= 5
-    ? ok(`${stops.length} scroll-stops on homepage`)
-    : fail('Homepage scroll-stops', `expected >= 5, got ${stops.length}`);
-}
 
-async function testExplorePageLoads(page) {
-  console.log('\n── Explore page ──');
-  const explore = await page.$('.explore-stage');
-  explore ? ok('Explore page renders .explore-stage') : fail('Explore page', '.explore-stage missing');
-}
-
-async function testQuestionScreens(page) {
-  console.log('\n── Question screens ──');
-  const screens = await page.$$('.question-screen');
-  screens.length >= 10
-    ? ok(`${screens.length} question screens`)
-    : fail('Question count', `expected >= 10, got ${screens.length}`);
-
-  // Each screen should have exactly 3 answer cards inside .answers
-  const cardCounts = await page.$$eval('.question-screen', nodes =>
-    nodes.map(s => ({
-      topic: s.dataset.topic,
-      cards: s.querySelectorAll('.answers > .answer-card').length
-    }))
-  );
-  for (const { topic, cards } of cardCounts) {
-    cards === 3
-      ? ok(`${topic}: 3 answer cards`)
-      : fail(`${topic}: answer cards`, `expected 3, got ${cards}`);
+  const big = await page.$('.home-big');
+  if (big) {
+    const bigText = (await big.textContent()).trim();
+    bigText.length > 0
+      ? ok(`Hero number visible: ${bigText}`)
+      : fail('Hero number', 'home-big text empty');
+  } else {
+    fail('Hero number', '.home-big missing');
   }
+
+  const tiles = await page.$$('.home-tile');
+  tiles.length === 5
+    ? ok(`5 pillar tiles on homepage`)
+    : fail('Homepage tiles', `expected 5 .home-tile, got ${tiles.length}`);
+
+  const deeper = await page.$('.home-deeper');
+  deeper ? ok('Homepage has Checkbook CTA') : fail('Homepage CTA', '.home-deeper missing');
 }
 
-async function testUnsureButtons(page) {
-  console.log('\n── "Not sure yet" buttons ──');
-  const results = await page.evaluate(() => {
-    var screens = document.querySelectorAll('.question-screen');
-    var problems = [];
-    screens.forEach(function (s) {
-      var topic = s.dataset.topic;
-      var btn = s.querySelector('.unsure-btn');
-      if (!btn) {
-        problems.push(topic + ': no .unsure-btn found');
-        return;
-      }
-      // Must NOT be inside .answers
-      if (btn.closest('.answers')) {
-        problems.push(topic + ': .unsure-btn is inside .answers (should be outside)');
-      }
-    });
-    return { total: screens.length, problems: problems };
-  });
-
-  results.problems.length === 0
-    ? ok(`All ${results.total} questions have .unsure-btn outside .answers`)
-    : results.problems.forEach(p => fail('Unsure button', p));
+async function testCheckbookPageLoads(page) {
+  console.log('\n── Checkbook page ──');
+  const resp = await page.goto(`${SITE}/checkbook/`, { waitUntil: 'domcontentloaded' });
+  resp && resp.status() === 200
+    ? ok('Checkbook page returns 200')
+    : fail('Checkbook', `status ${resp ? resp.status() : 'no response'}`);
+  const h1 = await page.$('h1');
+  h1 ? ok('Checkbook page has an h1') : fail('Checkbook h1', 'missing');
 }
 
 async function testNavLinks(page) {
@@ -103,48 +75,6 @@ async function testNavLinks(page) {
     } catch (e) {
       fail(`Nav link ${url}`, e.message);
     }
-  }
-}
-
-// ── Interaction tests (modify local state via clicks) ──────────────────
-
-async function testAnswerOpensEvidence(page) {
-  console.log('\n── Answer → evidence ──');
-  // Close any auto-opened evidence first
-  await page.evaluate(() => {
-    document.querySelectorAll('.evidence.open').forEach(e => e.classList.remove('open'));
-  });
-
-  const card = page.locator('.answer-card[data-question="override"][data-answer="a"]');
-  await card.waitFor({ state: 'visible', timeout: 5000 });
-  await card.click();
-
-  try {
-    const panel = page.locator('.evidence[data-evidence="override-a"].open');
-    await panel.waitFor({ state: 'visible', timeout: 5000 });
-    const text = await panel.innerText();
-    text.length > 50
-      ? ok('Evidence panel opens with content')
-      : fail('Evidence panel', `content too short (${text.length} chars)`);
-  } catch {
-    fail('Evidence panel', 'did not open after clicking answer card');
-  }
-}
-
-async function testPickCommit(page) {
-  console.log('\n── Pick commit → distribution bar ──');
-  // Click "This resonates" to commit the pick
-  const resonates = page.locator('.evidence.open .evidence-action--yes');
-  try {
-    await resonates.waitFor({ state: 'visible', timeout: 3000 });
-    await resonates.click();
-
-    const dist = page.locator('.question-screen[data-topic="override"] .pick-distribution');
-    await dist.waitFor({ state: 'attached', timeout: 5000 });
-    ok('Pick distribution bar appeared after committing');
-  } catch {
-    // API might be slow or have no data -- warn, don't hard-fail
-    console.log('  WARN: pick distribution did not appear (API may be down)');
   }
 }
 
@@ -472,20 +402,6 @@ async function testGeneralGovernmentChart(page) {
     : fail('GG peer bar count', `expected 9, got ${bars}`);
 }
 
-async function testStatsStrip(page) {
-  console.log('\n── Stats strip ──');
-  // Navigate to explore page to see stats
-  await page.goto(SITE + '/explore.html', { waitUntil: 'networkidle' });
-  try {
-    const stats = page.locator('#exploreStats');
-    await stats.waitFor({ state: 'visible', timeout: 5000 });
-    ok('Stats strip visible');
-  } catch {
-    // Stats only show after a pick + if API returns data
-    console.log('  WARN: stats strip not visible (may need API data)');
-  }
-}
-
 // ── Marblehead 101 ──────────────────────────────────────────
 
 async function testM101Landing(page) {
@@ -562,10 +478,7 @@ async function testM101NavLink(page) {
     await page1.goto(SITE, { waitUntil: 'networkidle' });
     await testHomepageLoads(page1);
     await testNavLinks(page1);
-    await page1.goto(SITE + '/explore.html', { waitUntil: 'networkidle' });
-    await testExplorePageLoads(page1);
-    await testQuestionScreens(page1);
-    await testUnsureButtons(page1);
+    await testCheckbookPageLoads(page1);
     await testGeneralGovernmentChart(page1);
     await testSchoolAgeVsEnrollment(page1);
     await testTownBudgetPageLoads(page1);
@@ -573,15 +486,6 @@ async function testM101NavLink(page) {
     await testM101ChapterPages(page1);
     await testM101NavLink(page1);
     await ctx1.close();
-
-    // Interactive tests (fresh context so localStorage is clean)
-    const ctx2 = await browser.newContext({ viewport: { width: 1280, height: 800 } });
-    const page2 = await ctx2.newPage();
-    await page2.goto(SITE + '/explore?q=override', { waitUntil: 'networkidle' });
-    await testAnswerOpensEvidence(page2);
-    await testPickCommit(page2);
-    await testStatsStrip(page2);
-    await ctx2.close();
   } finally {
     await browser.close();
   }
