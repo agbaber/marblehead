@@ -1,0 +1,45 @@
+name = "marblehead-meeting-digest"
+main = "src/index.js"
+compatibility_date = "2026-06-09"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "meeting-digest"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "schema"
+
+[vars]
+ALLOWED_ORIGIN = "https://marbleheaddata.org"
+SITE_BASE_URL = "https://marbleheaddata.org"
+GITHUB_REPO = "agbaber/marblehead"
+GITHUB_BRANCH = "main"
+MAIL_FROM = "Marblehead Data <meetings@marbleheaddata.org>"
+MAIL_REPLY_TO = "agbaber@gmail.com"
+TURNSTILE_TEST_BYPASS_TOKEN = "TEST-OK"
+
+# Friday 7:00 AM ET == 11:00 UTC (EST) / 12:00 UTC (EDT).
+# Run at 11:00 and 12:00; the scheduled handler chooses one based on the
+# current ET hour, the other becomes a no-op. Keeps DST handling simple.
+[triggers]
+crons = ["0 11 * * 5", "0 12 * * 5"]
+
+[env.staging]
+name = "marblehead-meeting-digest-staging"
+
+[[env.staging.d1_databases]]
+binding = "DB"
+database_name = "meeting-digest-staging"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "schema"
+
+[env.staging.vars]
+ALLOWED_ORIGIN = "*"
+SITE_BASE_URL = "https://marbleheaddata.org"
+GITHUB_REPO = "agbaber/marblehead"
+GITHUB_BRANCH = "main"
+MAIL_FROM = "Marblehead Data (staging) <meetings@marbleheaddata.org>"
+MAIL_REPLY_TO = "agbaber@gmail.com"
+TURNSTILE_TEST_BYPASS_TOKEN = "TEST-OK"
+
+[env.staging.triggers]
+crons = []
