@@ -93,7 +93,7 @@ async function run() {
       const paretoText = await page.locator('#perf-pareto').innerText();
       if (!/top\s*10/i.test(paretoText) || !paretoText.includes('%')) throw new Error('pareto text: ' + paretoText);
       const overText = await page.locator('#perf-over-list').innerText();
-      if (!/light|snow/i.test(overText)) throw new Error('expected light/snow in over list: ' + overText.slice(0, 80));
+      if (!/snow/i.test(overText)) throw new Error('expected snow removal in over list: ' + overText.slice(0, 80));
       const cadenceBars = await page.locator('#perf-cadence-chart .cadence-bar').count();
       if (cadenceBars < 10) throw new Error('only ' + cadenceBars + ' cadence bars');
       ok('performance: ' + vendorBars + ' vendor bars, ' + cadenceBars + ' cadence bars, pareto + over panels populated');
