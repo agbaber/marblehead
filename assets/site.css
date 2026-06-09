@@ -4237,3 +4237,21 @@ body.has-numbered-charts .dollar-table {
   nav.site-nav .nav-inner > a.nav-brand { font-size: 0; }
   .nav-brand .nav-logo { font-size: 14px; }
 }
+
+/* Subscribe page */
+body.subscribe-page .subscribe-form { display: flex; flex-direction: column; gap: 0.8rem; max-width: 420px; margin: 1.5rem 0; }
+body.subscribe-page .subscribe-form label { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.9rem; }
+body.subscribe-page .subscribe-form input[type="email"] { padding: 0.5rem 0.75rem; font: inherit; border: 1px solid var(--c-border); border-radius: 4px; }
+body.subscribe-page .subscribe-form button { background: var(--c-navy); color: var(--c-fog); border: 0; padding: 0.55rem 1rem; border-radius: 4px; cursor: pointer; font-weight: 600; }
+body.subscribe-page .subscribe-msg { color: var(--c-text-mid); font-size: 0.9rem; }
+body.subscribe-page .subscribe-default { color: var(--c-text-mid); font-size: 0.9rem; }
+
+/* Preferences page */
+body.me-subscription-page .ms-pref fieldset { border: 1px solid var(--c-border); padding: 1rem; margin: 1rem 0; border-radius: 6px; }
+body.me-subscription-page .ms-pref legend { padding: 0 0.4rem; font-weight: 600; }
+body.me-subscription-page .ms-pref label { display: block; padding: 0.25rem 0; }
+body.me-subscription-page .ms-pref .ms-vol { color: var(--c-text-mid); font-size: 0.85rem; }
+body.me-subscription-page .ms-pref .ms-help { color: var(--c-text-mid); font-size: 0.85rem; margin: 0.25rem 0 0.5rem; }
+body.me-subscription-page .ms-pref .ms-unsub { background: transparent; color: var(--c-text-mid); border: 1px solid var(--c-border); }
+body.me-subscription-page .ms-pref button { font-family: inherit; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-navy); color: var(--c-fog); border: 0; font-weight: 600; }
