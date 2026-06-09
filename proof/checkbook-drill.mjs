@@ -42,5 +42,31 @@ await page.waitForTimeout(400);
 await page.screenshot({ path: 'proof/checkbook-drill-nested-3.png', clip: { x: 0, y: 200, width: 1280, height: 1200 } });
 console.log('saved checkbook-drill-nested-3.png');
 
+// Line-item drill: Fund -> Department -> Category (Salaries) -> line items
+await page.goto(URL, { waitUntil: 'networkidle' });
+await page.waitForSelector('.bva-row--drillable');
+// Open by_department breakdown
+await page.click('[data-breakdown="by_department"]');
+await page.waitForTimeout(300);
+// Find Police row (3rd or 4th by budget)
+const policeRow = page.locator('.bva-row--drillable').filter({ hasText: /police/i });
+if (await policeRow.count()) {
+  await policeRow.first().click();
+} else {
+  await page.locator('.bva-row--drillable').nth(3).click();
+}
+await page.waitForSelector('.drill-bar-row--click');
+// Click "Professional Salary" inside the category panel
+const profSalary = page.locator('.drill-bar-row--click').filter({ hasText: /professional salary/i });
+if (await profSalary.count()) {
+  await profSalary.first().click();
+  await page.waitForSelector('.drill-card--span');
+  await page.waitForTimeout(400);
+  await page.screenshot({ path: 'proof/checkbook-drill-lineitems.png', clip: { x: 0, y: 200, width: 1280, height: 1200 } });
+  console.log('saved checkbook-drill-lineitems.png');
+} else {
+  console.log('SKIPPED line-items (no Professional Salary row found)');
+}
+
 await ctx.close();
 await browser.close();

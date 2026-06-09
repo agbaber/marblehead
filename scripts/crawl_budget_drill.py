@@ -26,7 +26,10 @@ YEAR = 2026
 ENVELOPE = 'BUDGETED ANNUAL FUNDS'
 
 def fetch(child_entity, filters=None, retries=3):
-    params = {'year': YEAR, 'child_entity': child_entity}
+    # `limit=100` forces the API to return all rows rather than truncating to 15.
+    # Verified against Police x Professional Salary: 41 line items returned, summing
+    # to the published $4.88M total.
+    params = {'year': YEAR, 'child_entity': child_entity, 'limit': 100}
     if filters:
         params.update(filters)
     url = BASE + '?' + urllib.parse.urlencode(params)
@@ -64,6 +67,10 @@ def main():
         'by_department': {},
         'by_category': {},
         'by_division': {},
+        # Line items: (Department, Category) -> list of object rows
+        # Keyed as "DEPT||CATEGORY" since these are inherently two-axis.
+        'by_dept_category': {},
+        'by_fund_category': {},
     }
 
     DIMS_FROM_FUND = [
@@ -83,10 +90,27 @@ def main():
         ('by_department', 'org3'),
     ]
 
+    # Line-item crawl scope: every (dept, category) and (fund, category) combo.
+    # Only keep combos where both rollups have non-zero budget.
+    dept_cat_combos = []
+    fund_cat_combos = []
+    for dept in b['by_department']:
+        if (dept['revised_budget'] or 0) == 0: continue
+        for cat in b['by_category']:
+            if (cat['revised_budget'] or 0) == 0: continue
+            dept_cat_combos.append((dept['name'], cat['name']))
+    for fund in b['by_fund']:
+        if (fund['revised_budget'] or 0) == 0: continue
+        for cat in b['by_category']:
+            if (cat['revised_budget'] or 0) == 0: continue
+            fund_cat_combos.append((fund['name'], cat['name']))
+
     total_calls = (len(b['by_fund'])       * len(DIMS_FROM_FUND) +
                    len(b['by_department']) * len(DIMS_FROM_DEPT) +
                    len(b['by_category'])   * len(DIMS_FROM_CATEGORY) +
-                   len(b['by_division'])   * len(DIMS_FROM_DIVISION))
+                   len(b['by_division'])   * len(DIMS_FROM_DIVISION) +
+                   len(dept_cat_combos) +
+                   len(fund_cat_combos))
     done = 0
     print(f'Will make {total_calls} API calls. ETA ~{total_calls * 0.4:.0f}s.')
 
@@ -174,13 +198,42 @@ def main():
                 print(f'  {done}/{total_calls} ...')
             time.sleep(0.25)
 
+    # Line items: Department x Category -> positions/object detail
+    for dept, cat in dept_cat_combos:
+        try:
+            data = fetch('org6', {'org1': ENVELOPE, 'org3': dept, 'org5': cat})
+            items = norm(data.get('entities', []))
+            if items:  # only store non-empty combos
+                drill['by_dept_category'][dept + '||' + cat] = items
+        except Exception as e:
+            print(f'  ERR dept_cat=({dept},{cat}): {e}', file=sys.stderr)
+        done += 1
+        if done % 25 == 0:
+            print(f'  {done}/{total_calls} ...')
+        time.sleep(0.15)
+
+    # Line items: Fund x Category -> positions/object detail
+    for fund, cat in fund_cat_combos:
+        try:
+            data = fetch('org6', {'org1': ENVELOPE, 'org2': fund, 'org5': cat})
+            items = norm(data.get('entities', []))
+            if items:
+                drill['by_fund_category'][fund + '||' + cat] = items
+        except Exception as e:
+            print(f'  ERR fund_cat=({fund},{cat}): {e}', file=sys.stderr)
+        done += 1
+        if done % 25 == 0:
+            print(f'  {done}/{total_calls} ...')
+        time.sleep(0.15)
+
     out = 'data/budget_drill_FY26.json'
     with open(out, 'w') as f:
         json.dump(drill, f, indent=1)
     size_kb = os.path.getsize(out) / 1024
     print(f'\nWrote {out} ({size_kb:.0f} KB)')
     print(f'  {len(drill["by_fund"])} funds, {len(drill["by_department"])} departments, '
-          f'{len(drill["by_category"])} categories, {len(drill["by_division"])} divisions')
+          f'{len(drill["by_category"])} categories, {len(drill["by_division"])} divisions, '
+          f'{len(drill["by_dept_category"])} dept-cat combos, {len(drill["by_fund_category"])} fund-cat combos')
 
 if __name__ == '__main__':
     main()

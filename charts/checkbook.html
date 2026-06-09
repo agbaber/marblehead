@@ -416,6 +416,7 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
     border-radius: var(--radius-sm);
     padding: 12px 14px;
   }
+  .drill-card--span { grid-column: 1 / -1; }
   .drill-card-title {
     font-size: 10px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.7px; color: var(--text-subtle); margin-bottom: 10px;
@@ -786,8 +787,14 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
     department: ['by_category', 'by_division'],
     category:   ['by_fund', 'by_department'],
     division:   ['by_fund', 'by_department'],
+    // line-item dims are leaves; rendered specially in renderBvaExpand
+    dept_category: [],
+    fund_category: [],
   };
-  var DIM_LABEL = { fund: 'fund', department: 'department', category: 'category', division: 'division' };
+  var DIM_LABEL = {
+    fund: 'fund', department: 'department', category: 'category', division: 'division',
+    dept_category: 'category', fund_category: 'category',
+  };
 
   function drillDataFor(dim, key) {
     var bag = drill && drill['by_' + dim];
@@ -824,10 +831,23 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
       } else {
         rhs = '<strong>' + fmtMoney(a, { compact: true }) + '</strong><span class="dm">' + (pct || '—') + '</span>';
       }
-      var drillable = opts.targetDim && hasDrill(opts.targetDim, r.name);
+      // Determine effective drill target. If parent context is dept or fund and target is category,
+      // prefer the line-item compound dim if we have data for it.
+      var effDim = opts.targetDim;
+      var effKey = r.name;
+      if (opts.targetDim === 'category' && opts.contextDim) {
+        var prefix = opts.contextDim === 'department' ? 'dept' : opts.contextDim;
+        var compound = prefix + '_category';
+        var compoundKey = opts.contextKey + '||' + r.name;
+        if (drill && drill['by_' + compound] && drill['by_' + compound][compoundKey]) {
+          effDim = compound;
+          effKey = compoundKey;
+        }
+      }
+      var drillable = effDim && hasDrill(effDim, effKey);
       var rowClass = 'drill-bar-row' + (drillable ? ' drill-bar-row--click' : '');
       var attrs = drillable
-        ? ' data-drill-push-dim="' + opts.targetDim + '" data-drill-push-key="' + escapeHtml(r.name) + '"'
+        ? ' data-drill-push-dim="' + effDim + '" data-drill-push-key="' + escapeHtml(effKey) + '"'
         : '';
       return '<div class="' + rowClass + '"' + attrs + '>' +
         '<div class="drill-bar-name" title="' + escapeHtml(r.name) + (drillable ? ' (click to drill in)' : '') + '">' + escapeHtml(name) +
@@ -843,6 +863,10 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
 
   function dimDisplay(entry) {
     var key = entry.key;
+    if (entry.dim === 'dept_category' || entry.dim === 'fund_category') {
+      var parts = key.split('||');
+      return titleCase(parts[1] || key);
+    }
     if (entry.dim === 'division' && key === 'UNDEFINED') return 'School (not broken out)';
     return titleCase(key);
   }
@@ -872,15 +896,36 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
       html += '</div>';
     }
 
+    // Line-item leaf views (dd is an array, not an object)
+    if (current.dim === 'dept_category' || current.dim === 'fund_category') {
+      var lineItems = dd; // array
+      var total = lineItems.reduce(function (s, x) { return s + (x.revised_budget || 0); }, 0);
+      var actual = lineItems.reduce(function (s, x) { return s + (x.actual || 0); }, 0);
+      var pctOfRev = total > 0 ? Math.round(actual / total * 100) : null;
+      html += '<div class="drill-card drill-card--span">' +
+        '<div class="drill-card-title">' + lineItems.length + ' line items &middot; ' +
+          fmtMoney(total, { compact: true }) + ' budget &middot; ' +
+          fmtMoney(actual, { compact: true }) + ' actual' +
+          (pctOfRev !== null ? ' (' + pctOfRev + '% of revised)' : '') +
+        '</div>' +
+        renderMiniBars(lineItems, { limit: 50 }) +
+      '</div>';
+      html += '</div>';
+      return html;
+    }
+
     // Cross-tab panels
     var dims = SUB_DIMS[current.dim] || [];
     dims.forEach(function (subDimKey) {
       var items = dd[subDimKey] || [];
       if (items.length === 0) return;
       var targetDim = subDimKey.replace('by_', '');
+      // When showing categories inside a department/fund drill, prefer line-item targets
+      // for individual category rows (renderMiniBars handles the compound lookup).
+      var contextDim = (targetDim === 'category' && (current.dim === 'department' || current.dim === 'fund')) ? current.dim : null;
       html += '<div class="drill-card">' +
         '<div class="drill-card-title">By ' + targetDim + '</div>' +
-        renderMiniBars(items, { limit: 8, targetDim: targetDim }) +
+        renderMiniBars(items, { limit: 8, targetDim: targetDim, contextDim: contextDim, contextKey: current.key }) +
       '</div>';
     });
 
