@@ -1,0 +1,464 @@
+---
+title: "The 2026 Marblehead override: archive"
+permalink: /2026-override/
+scripts: [citations]
+og_title: "Marblehead 2026 override archive"
+og_description: "The FY27 override cycle in one place: the two ballot questions, the candidates, both sides of the debate, the result, and what came after."
+og_url: https://marbleheaddata.org/2026-override/
+---
+<style>
+  .archive-toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 14px 18px 12px;
+    margin: 18px 0 28px;
+  }
+  .archive-toc h2 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 8px;
+  }
+  .archive-toc ol {
+    margin: 0;
+    padding-left: 22px;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  .archive-toc li { margin: 4px 0; }
+  .archive-toc a { color: var(--text); }
+
+  .archive-section {
+    margin: 0 0 48px;
+    padding-top: 12px;
+  }
+  .archive-section h2 {
+    font-family: 'Libre Franklin', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0 0 14px;
+    line-height: 1.2;
+  }
+
+  .ballot-q-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 14px 0 18px;
+  }
+  @media (min-width: 700px) {
+    .ballot-q-list { grid-template-columns: 1fr 1fr; }
+  }
+  .ballot-q {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+  }
+  .ballot-q-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--c-teal);
+    margin: 0 0 4px;
+  }
+  .ballot-q h3 {
+    font-size: 16px;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+  .ballot-q p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .candidate-block {
+    margin: 12px 0 22px;
+  }
+  .candidate-block h3 {
+    font-size: 16px;
+    margin: 0 0 4px;
+    line-height: 1.3;
+  }
+  .candidate-block .race-meta {
+    font-size: 12px;
+    color: var(--text-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .candidate-block ul {
+    margin: 4px 0 0;
+    padding-left: 22px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+  .candidate-block ul li { margin: 4px 0; }
+  .candidate-block ul li strong { color: var(--text); }
+
+  .dividing-line {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    margin: 0 0 14px;
+  }
+  .dividing-line h3 {
+    font-size: 17px;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+  .dividing-line .dl-framing {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0 0 10px;
+    font-style: italic;
+  }
+  .dl-pair {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 0;
+  }
+  @media (min-width: 700px) {
+    .dl-pair { grid-template-columns: 1fr 1fr; }
+  }
+  .dl-side {
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    background: color-mix(in srgb, var(--text-subtle) 5%, var(--surface));
+    border: 1px solid var(--divider);
+  }
+  .dl-side-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 5px;
+  }
+  .dl-side p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .history-timeline {
+    margin: 14px 0 18px;
+  }
+  .history-event {
+    border-left: 3px solid var(--divider);
+    padding: 4px 0 10px 16px;
+    margin: 0 0 12px;
+  }
+  .history-event .year {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text);
+    margin: 0 0 2px;
+  }
+  .history-event p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .chart-embed-wrap {
+    margin: 18px 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .chart-embed-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 600px;
+    border: 0;
+  }
+
+  .stub-note {
+    background: color-mix(in srgb, var(--c-brass) 8%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c-brass) 32%, var(--border));
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+</style>
+
+<h1>The 2026 Marblehead override: archive</h1>
+
+<p class="page-lead">Marblehead voters considered four ballot questions on June 9, 2026: three operating override tiers and a curbside trash funding question. This page is the cycle's record. The ballot, the candidates, both sides of the debate, the result, and what followed, all in one URL.</p>
+
+<div class="archive-toc">
+  <h2>On this page</h2>
+  <ol>
+    <li><a href="#the-ballot">The ballot</a></li>
+    <li><a href="#the-candidates">The candidates</a></li>
+    <li><a href="#the-debate">The debate</a></li>
+    <li><a href="#override-history">Marblehead's override history</a></li>
+    <li><a href="#the-result">The result</a></li>
+    <li><a href="#what-happened-next">What happened next</a></li>
+  </ol>
+</div>
+
+<section class="archive-section" id="the-ballot">
+  <h2>1. The ballot</h2>
+
+  <p>Four ballot questions appeared at the Annual Town Election on June 9, 2026. Three were operating override tiers; one was a separate curbside trash funding question. If more than one override tier passed, the highest-dollar question would prevail. The trash question was independent.<sup class="cite" data-href="https://marbleheadma.gov/elections-voting/" data-source="Marblehead Town Clerk, Official Sample Ballot for Annual Town Election, June 9, 2026"></sup></p>
+
+  <div class="ballot-q-list">
+    <div class="ballot-q">
+      <p class="ballot-q-num">Question 1 &middot; Partial Restore</p>
+      <h3>$9,000,000 operating override</h3>
+      <p>For general government and the school department for the fiscal year beginning July 1, 2026.</p>
+    </div>
+    <div class="ballot-q">
+      <p class="ballot-q-num">Question 2 &middot; Build</p>
+      <h3>$12,000,000 operating override</h3>
+      <p>Same purpose, larger amount.</p>
+    </div>
+    <div class="ballot-q">
+      <p class="ballot-q-num">Question 3 &middot; Invest</p>
+      <h3>$15,000,000 operating override</h3>
+      <p>Same purpose, largest amount.</p>
+    </div>
+    <div class="ballot-q">
+      <p class="ballot-q-num">Question 4 &middot; Trash</p>
+      <h3>$2,298,575 trash funding</h3>
+      <p>Curbside trash, yard waste, recycling, and waste disposal contracts for FY27. Independent of the operating override.</p>
+    </div>
+  </div>
+
+  <p>Tier labels (Partial Restore, Build, Invest) were the Town Administrator's framing, not on the ballot itself. The three operating tiers came from a Town Meeting process that approved the spending side on May 4, 2026; the June 9 ballot decided whether the property tax levy ceiling would rise to fund it. Question 4 stood on its own: yes meant the cost was spread by home value through the tax levy, no meant the Board of Health's fallback flat fee of roughly $281 per household would apply.<sup class="cite" data-href="https://marbleheadma.gov/elections-voting/" data-source="Marblehead Town Clerk, Official Sample Ballot for Annual Town Election, June 9, 2026"></sup></p>
+
+  <p>Cost by home value at full phase-in (rough rule of thumb): every $1M of override adds about $34 per year to the bill of a $1M home. So Tier 1 ($9M) was about $306; Tier 2 ($12M) about $408; Tier 3 ($15M) about $510. Question 4 added roughly $78 per $1M of assessed value on top of whichever override tier passed.</p>
+</section>
+
+<section class="archive-section" id="the-candidates">
+  <h2>2. The candidates</h2>
+
+  <p>Six of the twelve elected bodies on the June 9 ballot were contested. Positions below are condensed from each candidate's published answers in the Marblehead Current's individual Q&amp;As (May 19-20, 2026) and the Marblehead Independent's 2026 voter guide.<sup class="cite" data-href="https://wdowd-arch.github.io/marblehead-voter-guide-2026/" data-source="Marblehead Independent 2026 Voter Guide, candidate questionnaire responses (last updated June 1, 2026)"></sup></p>
+
+  <div class="candidate-block">
+    <h3>Select Board</h3>
+    <p class="race-meta">Three candidates, two seats &middot; 3-year terms</p>
+    <ul>
+      <li><strong>Erin Marie Noonan</strong> (incumbent, attorney) backed all three override questions, with Tier 3 her preferred option.</li>
+      <li><strong>Rossana Ferrante</strong> (Recreation &amp; Park chair, attorney) supported Tier 2.</li>
+      <li><strong>Jennifer Schaeffner</strong> (School Committee, Housing Authority chair) called the finances "a genuine fiscal crisis" but did not endorse a tier.</li>
+    </ul>
+  </div>
+
+  <div class="candidate-block">
+    <h3>School Committee</h3>
+    <p class="race-meta">Three candidates, two seats</p>
+    <ul>
+      <li><strong>Melissa Marie Clucas</strong> (incumbent, CFO) backed Tier 3, warning FY27 was balanced only by a one-time $1.5M special-education prepayment.</li>
+      <li><strong>Ann-Marie Jordan</strong> (former educator) backed Tier 3 as a structural deficit fix.</li>
+      <li><strong>Sarah A. Fox</strong> (former two-term member) said the levy "needs to grow" but did not commit to a tier.</li>
+    </ul>
+  </div>
+
+  <div class="candidate-block">
+    <h3>Moderator</h3>
+    <p class="race-meta">Two candidates, one seat &middot; 1-year term</p>
+    <ul>
+      <li><strong>John Gregory Attridge</strong> (incumbent) sought another term, emphasizing efficiency and accommodations for Town Meeting.</li>
+      <li><strong>Peter Jaffe</strong> (lifelong resident, first-time candidate) focused on tighter warrant review and procedure.</li>
+    </ul>
+  </div>
+
+  <div class="candidate-block">
+    <h3>Recreation &amp; Park Commission</h3>
+    <p class="race-meta">Six candidates, five seats &middot; 1-year terms</p>
+    <ul>
+      <li><strong>Shelly Curran Bedrossian</strong> (incumbent): yes on Q1 and Q4, supported Reynolds turf.</li>
+      <li><strong>Larry J. Simpson</strong> (incumbent): Tier 2, lone no on turf.</li>
+      <li><strong>Karin Linnea Ernst</strong> (incumbent): undecided, supported turf.</li>
+      <li><strong>Kenneth S. Klaiman</strong>: "moderate" 2-4% override, opposed turf.</li>
+      <li><strong>Christopher E. Kennedy</strong> (incumbent): supported turf; no questionnaire response.</li>
+      <li><strong>Michael Ryan McCarthy</strong>: youth sports parent, no questionnaire response.</li>
+    </ul>
+  </div>
+
+  <div class="candidate-block">
+    <h3>Cemetery Commission (2-year unexpired)</h3>
+    <p class="race-meta">Two candidates, one seat</p>
+    <ul>
+      <li><strong>Sally Bull Sands</strong> (incumbent): backed Tier 1 to fund a cemetery laborer.</li>
+      <li><strong>Rose A. McCarthy</strong>: supported Question 1, citing Council on Aging.</li>
+    </ul>
+  </div>
+
+  <div class="candidate-block">
+    <h3>Housing Authority</h3>
+    <p class="race-meta">Two candidates, one seat</p>
+    <ul>
+      <li><strong>Jeffrey Richard Weeden</strong> (Lynn Housing Authority director): backed Tier 3 plus the trash question.</li>
+      <li><strong>Jean R. Eldridge</strong> (incumbent since 1994): ran on institutional knowledge; questionnaire response incomplete in the source.</li>
+    </ul>
+  </div>
+
+  <p>The other elected bodies (Assessors, regular-term Cemetery Commission, Board of Health, Library Trustees, Municipal Light Commissioner, Planning Board, and Water &amp; Sewer Commission) were uncontested.</p>
+</section>
+
+<section class="archive-section" id="the-debate">
+  <h2>3. The debate</h2>
+
+  <p>Six dividing lines ran through the FY27 override debate. Each one had a steelmanned version of both sides; together they were the historical record of how Marblehead residents disagreed in spring 2026.</p>
+
+  <div class="dividing-line">
+    <h3>1. Where does the cost pressure come from?</h3>
+    <p class="dl-framing">Both sides agreed costs were rising faster than revenue. They disagreed on whether the town chose those costs or they happened to it.</p>
+    <div class="dl-pair">
+      <div class="dl-side">
+        <p class="dl-side-label">For the override</p>
+        <p>Health insurance (set through the <abbr class="g" title="Group Insurance Commission">GIC</abbr>, +11% for FY27), pension obligations (+9%, <abbr class="g" title="Public Employee Retirement Administration Commission">PERAC</abbr>-certified), and excluded debt service were not negotiable inside a 12-week budget cycle. State aid had declined in real terms since 2002.</p>
+      </div>
+      <div class="dl-side">
+        <p class="dl-side-label">Against the override</p>
+        <p>Marblehead pays 83% of health premiums (top of an 8-town peer set); benefits extend to 20-hour part-time staff (a policy floor, not a state mandate); ACFR education FTE rose 9.6% even as enrollment fell 19%. These are policy choices, not external forces.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dividing-line">
+    <h3>2. Are the proposed reductions damage or discipline?</h3>
+    <p class="dl-framing">The no-override budget was published. Both sides read it and reached opposite conclusions.</p>
+    <div class="dl-pair">
+      <div class="dl-side">
+        <p class="dl-side-label">For the override</p>
+        <p>22 town positions removed, 14 school positions, library reduced 43%, OPEB trust contribution zeroed out. Once cut, programs require rehiring and rebuilding trust. Melrose and Stoneham both needed larger overrides after failed votes.</p>
+      </div>
+      <div class="dl-side">
+        <p class="dl-side-label">Against the override</p>
+        <p>"Reductions" are measured against an FY26 baseline that is itself the peak of accumulated growth. General Fund spending grew from $70.5M (FY15) to $106.2M (FY26). Staffing fell 12% because staffing had risen first.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dividing-line">
+    <h3>3. Is this a one-time reset or the start of annual asks?</h3>
+    <p class="dl-framing">If the override passes, does the problem go away for years, or does the same pressure rebuild immediately?</p>
+    <div class="dl-pair">
+      <div class="dl-side">
+        <p class="dl-side-label">For the override</p>
+        <p>The three tiers were designed as a multi-year correction. The FinCom three-year forecast named FY26, FY27, FY28 as the projected deficit years; the override was scoped to resolve that window.</p>
+      </div>
+      <div class="dl-side">
+        <p class="dl-side-label">Against the override</p>
+        <p>The cost drivers do not stop when the override passes. Melrose passed a $13.5M override the year after a $7.7M failed, 75% larger. Each successful override eventually invites the next.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dividing-line">
+    <h3>4. Do meaningful alternatives exist?</h3>
+    <p class="dl-framing">Override-or-cuts, or override-or-reform?</p>
+    <div class="dl-pair">
+      <div class="dl-side">
+        <p class="dl-side-label">For the override</p>
+        <p>Marblehead is at the extremes of every structural metric: 95.5% residential levy share, 0.54% five-year new growth. CIP shifts, commercial development, state aid, gateway-city status either do not exist here or do not scale within the FY27 fiscal year.</p>
+      </div>
+      <div class="dl-side">
+        <p class="dl-side-label">Against the override</p>
+        <p>Benefits reform is possible: <abbr class="g" title="Massachusetts General Laws">MGL</abbr> c.32B &sect;19 allows employer contributions from 50% to 99%; peer towns range from 50% (Hingham) to 83% (Marblehead/Brookline). Zoning is revisable over time. Three months is the wrong horizon to claim no alternatives exist.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dividing-line">
+    <h3>5. Can we trust the people asking?</h3>
+    <p class="dl-framing">In Marblehead this was also about who decides, what they tell residents, and whether residents believe them.</p>
+    <div class="dl-pair">
+      <div class="dl-side">
+        <p class="dl-side-label">For the override</p>
+        <p>FinCom reported balanced budgets without an override for sixteen consecutive years and predicted the FY27 vote in writing as far back as 2019. Past discipline is evidence of future discipline.</p>
+      </div>
+      <div class="dl-side">
+        <p class="dl-side-label">Against the override</p>
+        <p>Trust is about outcomes. The General Fund grew $35.7M over eleven years under the same boards now asking residents to fund the gap that growth created. Select Board member Moses Grader cast the lone dissent on the three-tier structure, distinguishing "transparent, specific" debt overrides from operating budgets with "too many discretionary components."</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dividing-line">
+    <h3>6. Has school staffing kept pace with enrollment?</h3>
+    <p class="dl-framing">Enrollment fell substantially. Different staffing counts told different stories.</p>
+    <div class="dl-pair">
+      <div class="dl-side">
+        <p class="dl-side-label">For the override</p>
+        <p>DESE classroom teacher FTE fell roughly 4% from FY15 to FY24 while enrollment fell 19%. Non-teaching growth tracked mandates: IDEA special education, out-of-district placements ($4.6M in FY26), English-learner and mental-health caseloads.</p>
+      </div>
+      <div class="dl-side">
+        <p class="dl-side-label">Against the override</p>
+        <p>The town's ACFR shows total education FTE rose from 490 to 537 (FY15-FY24), +9.6%. The ACFR uses a broader definition. The total town-side education cost footprint did not fall with enrollment.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>Both readings drew on the same primary sources. The choice between them depended on how readers weighted external pressure versus local discretion, documented warnings versus the absence of attempted reform, and whether past FinCom discipline was sufficient evidence of future spending discipline.</p>
+</section>
+
+<section class="archive-section" id="override-history">
+  <h2>4. Marblehead's override history</h2>
+
+  <p>Since 1988, Marblehead voted on 70 Proposition 2&frac12; questions. Debt exclusions passed 49 of 50 times. Operating overrides passed 6 of 19. The pattern: residents will fund specific capital projects (schools, library, sewers) but reject general operating asks.</p>
+
+  <div class="history-timeline">
+    <div class="history-event">
+      <p class="year">June 2022 &middot; School Department operating override</p>
+      <p>$3.1M asked, rejected 1,802 to 3,929 (-37.1% margin). Pre-vote threats included substantial school cuts; what actually got cut afterward was smaller than the initial framing because savings and one-time funds were found.</p>
+    </div>
+    <div class="history-event">
+      <p class="year">June 2023 &middot; General Government operating override</p>
+      <p>$2.5M asked, rejected 2,996 to 3,414 (-6.5% margin). Tighter loss than 2022. Reserves and one-time transfers covered the gap, an approach FinCom and the Town Administrator subsequently described as "unsustainable" in writing.</p>
+    </div>
+    <div class="history-event">
+      <p class="year">June 9, 2026 &middot; Three-tier operating override + Question 4 trash</p>
+      <p>$9M / $12M / $15M tiered structure, plus a $2.3M curbside trash question. See section 5 for the result.</p>
+    </div>
+  </div>
+
+  <p>Marblehead operating overrides since 1990: most were rejected by margins between 1% and 37%. The two passed in the 2000s were narrow (single-digit margins) and specific in scope (supplemental department budgets, library expenses). The 2022 and 2023 votes were the first general school and general government operating asks since the 2000s; both failed.</p>
+
+  <div class="chart-embed-wrap">
+    <iframe src="/charts/override_history.html" title="Marblehead override vote history chart" loading="lazy"></iframe>
+  </div>
+
+  <p style="font-size:13px;color:var(--text-muted);margin-top:8px;">
+    See the full interactive: <a href="/charts/override_history.html">override history chart</a>.
+  </p>
+</section>
+
+<section class="archive-section" id="the-result">
+  <h2>5. The result</h2>
+
+  <div class="stub-note">
+    Result to be filled in after the Town Clerk posts official numbers. Expected: vote totals by ballot question, turnout, per-precinct breakdown, and comparison to the 2022 and 2023 votes.
+  </div>
+</section>
+
+<section class="archive-section" id="what-happened-next">
+  <h2>6. What happened next</h2>
+
+  <div class="stub-note">
+    This section will be updated as decisions land. Watch <a href="/meetings/">/meetings/</a> for the Select Board and Finance Committee meetings that follow the vote.
+  </div>
+</section>
+
+<p class="source" style="margin-top:32px;">Sources: Marblehead Town Clerk's official June 9, 2026 sample ballot; the Marblehead Current and Marblehead Independent candidate Q&amp;As; Town of Marblehead FY27 Proposed Balanced Budget With No Override; Finance Committee Annual Reports 2016-2025; MA DOR debt exclusion and override vote records; PERAC and GIC documents cited throughout.</p>
