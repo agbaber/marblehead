@@ -5,31 +5,34 @@ og_title: "Marblehead FY26 Checkbook & Budget Explorer"
 og_description: "Every public vendor payment Marblehead made in FY26 (Jul 2025 to May 2026), plus budget-vs-actual by Fund, Department, Category, Division, and Object, and a performance read on variances, vendor concentration, and monthly cadence. 15,001 transactions, $98.07M after redacting 560 medical-claim rows."
 og_url: https://marbleheaddata.org/charts/checkbook.html
 ---
-<h1 class="h-center">Marblehead Town Checkbook</h1>
-<p class="subtitle h-center">Every vendor payment in FY26 plus the budget the town adopted to fund them. Sourced directly from the town's <a href="https://townofmarblehead-ma-oe.spending.socrata.com/">spending</a> and <a href="https://townofmarblehead-ma-ob.budget.socrata.com/">budget</a> portals.</p>
+<h1 class="h-center">Town checkbook</h1>
+<p class="subtitle h-center">FY26 spending, budget, and pacing &ndash; from the town's own portals.</p>
 
 <style>
   /* Hero stat card */
   .hero-card {
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
-    padding: 18px 18px 16px; margin: 0 0 16px;
+    border-radius: var(--radius-md);
+    padding: 22px 8px; margin: 0 0 8px;
   }
   .hero-row {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 14px;
+    display: grid; grid-template-columns: repeat(4, 1fr);
   }
-  .hero-stat { text-align: left; }
+  .hero-stat {
+    text-align: center; padding: 0 14px;
+    border-right: 1px solid var(--divider);
+  }
+  .hero-stat:last-child { border-right: none; }
   .hero-label {
-    font-size: 10px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.7px; color: var(--text-subtle); margin-bottom: 4px;
+    font-size: 10px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--text-subtle); margin-bottom: 8px;
   }
   .hero-value {
-    font-size: 22px; font-weight: 700; color: var(--c-navy);
-    font-variant-numeric: tabular-nums; line-height: 1.1;
+    font-size: 30px; font-weight: 700; color: var(--c-navy);
+    font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: -0.5px;
   }
   .hero-sub {
-    font-size: 11px; color: var(--text-muted); margin-top: 2px;
+    font-size: 11px; color: var(--text-muted); margin-top: 6px;
     font-variant-numeric: tabular-nums;
   }
   @media (prefers-color-scheme: dark) {
@@ -37,74 +40,94 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   }
   html[data-theme="dark"] .hero-value { color: var(--text); }
   html[data-theme="light"] .hero-value { color: var(--c-navy); }
-
-  /* Caveat note */
-  .checkbook-caveat {
-    background: color-mix(in srgb, var(--c-brass) 8%, var(--surface));
-    border-left: 3px solid var(--c-brass);
-    border-radius: var(--radius-sm);
-    padding: 10px 14px; margin: 0 0 16px;
-    font-size: 12.5px; color: var(--text-muted); line-height: 1.5;
+  @media (max-width: 600px) {
+    .hero-row { grid-template-columns: 1fr 1fr; }
+    .hero-stat { padding: 14px 8px; border-right: 1px solid var(--divider); border-bottom: 1px solid var(--divider); }
+    .hero-stat:nth-child(2n) { border-right: none; }
+    .hero-stat:nth-last-child(-n+2) { border-bottom: none; }
+    .hero-value { font-size: 24px; }
   }
-  .checkbook-caveat strong { color: var(--text); }
 
   /* Section heading */
-  .ck-section { margin: 28px 0 12px; }
+  .ck-section { margin: 36px 0 14px; }
   .ck-section h2 {
-    font-size: 17px; font-weight: 700; color: var(--text);
+    font-size: 18px; font-weight: 700; color: var(--text);
+    margin: 0; letter-spacing: -0.2px;
+  }
+  .ck-section p { font-size: 13px; color: var(--text-muted); margin: 4px 0 0; line-height: 1.5; }
+
+  /* Notes section */
+  .notes { margin: 48px 0 16px; padding-top: 28px; border-top: 1px solid var(--divider); }
+  .notes h2 {
+    font-size: 13px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--text-subtle); margin: 0 0 14px;
+  }
+  .notes-dl { margin: 0; }
+  .notes-dl dt {
+    font-size: 12.5px; font-weight: 600; color: var(--text);
     margin: 0 0 4px;
   }
-  .ck-section p { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+  .notes-dl dt:not(:first-child) { margin-top: 16px; }
+  .notes-dl dd {
+    font-size: 12.5px; color: var(--text-muted); line-height: 1.55;
+    margin: 0; padding: 0;
+  }
+  .notes-dl dd strong { color: var(--text); }
 
   /* Breakdown switcher */
   .breakdown-bar {
-    display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
-    margin: 0 0 14px;
-  }
-  .breakdown-label {
-    font-size: 11px; font-weight: 600; color: var(--text-subtle);
-    margin-right: 4px;
+    display: flex; flex-wrap: wrap; gap: 4px; align-items: center;
+    margin: 0 0 10px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 999px; padding: 4px;
+    width: fit-content;
   }
   .breakdown-btn {
-    font-size: 11px; font-weight: 500; padding: 4px 11px;
-    border: 1px solid var(--border); border-radius: 14px;
+    font-size: 12px; font-weight: 500; padding: 5px 14px;
+    border: none; border-radius: 999px;
     background: transparent; color: var(--text-muted); cursor: pointer;
-    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    transition: background 0.15s, color 0.15s;
     font-variant-numeric: tabular-nums;
   }
-  .breakdown-btn:hover { border-color: var(--c-teal); color: var(--c-teal); }
-  .breakdown-btn.active { background: var(--c-teal); color: #fff; border-color: var(--c-teal); }
-  .breakdown-meta { font-size: 11px; color: var(--text-subtle); margin-left: auto; font-variant-numeric: tabular-nums; }
+  .breakdown-btn:hover { color: var(--text); }
+  .breakdown-btn.active { background: var(--c-navy); color: #fff; }
+  html[data-theme="dark"] .breakdown-btn.active { background: var(--c-teal); }
+  .breakdown-meta { font-size: 11px; color: var(--text-subtle); margin-left: 8px; font-variant-numeric: tabular-nums; padding-right: 10px; }
+  @media (max-width: 600px) {
+    .breakdown-bar { width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+    .breakdown-meta { display: none; }
+  }
 
   /* Budget vs Actual bars */
   .bva-chart {
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius-md); padding: 14px 14px 18px;
-    margin: 0 0 12px;
+    border-radius: var(--radius-md); padding: 18px 18px 16px;
+    margin: 0 0 10px;
   }
   .bva-row {
     display: grid; grid-template-columns: 200px 1fr 110px;
-    align-items: center; gap: 10px;
-    padding: 5px 0; min-height: 28px;
+    align-items: center; gap: 14px;
+    padding: 7px 0; min-height: 30px;
   }
   .bva-name {
-    font-size: 12px; color: var(--text); font-weight: 500;
+    font-size: 12.5px; color: var(--text); font-weight: 500;
     overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    letter-spacing: -0.1px;
   }
-  .bva-bars { position: relative; height: 18px; }
+  .bva-bars { position: relative; height: 14px; }
   .bva-bar {
-    position: absolute; left: 0; top: 0; height: 100%;
+    position: absolute; left: 0; top: 0;
     border-radius: 2px;
   }
-  .bva-bar--budget { background: color-mix(in srgb, var(--c-navy) 22%, transparent); top: 0; height: 8px; }
-  .bva-bar--actual { background: var(--c-navy); top: 9px; height: 8px; }
+  .bva-bar--budget { background: color-mix(in srgb, var(--c-navy) 18%, transparent); top: 0; height: 14px; }
+  .bva-bar--actual { background: var(--c-navy); top: 3px; height: 8px; }
   .bva-bar--actual.bva-bar--over { background: var(--c-buoy); }
   .bva-bar--actual.bva-bar--negative { background: var(--text-subtle); opacity: 0.5; }
   .bva-amount {
-    font-size: 11px; color: var(--text-muted); text-align: right;
-    font-variant-numeric: tabular-nums; line-height: 1.3;
+    font-size: 11.5px; color: var(--text-muted); text-align: right;
+    font-variant-numeric: tabular-nums; line-height: 1.35;
   }
-  .bva-amount strong { color: var(--text); display: block; }
+  .bva-amount strong { color: var(--text); display: block; font-size: 12.5px; }
   .bva-axis {
     display: grid; grid-template-columns: 200px 1fr 110px; gap: 10px;
     margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--divider);
@@ -134,21 +157,22 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   .bva-pager-info { font-variant-numeric: tabular-nums; }
 
   .bva-legend {
-    display: flex; flex-wrap: wrap; gap: 12px;
-    font-size: 11px; color: var(--text-muted); margin: 0 0 10px;
+    display: flex; flex-wrap: wrap; gap: 14px; justify-content: flex-end;
+    font-size: 11px; color: var(--text-muted); margin: 0 0 8px;
   }
   .bva-legend-item { display: inline-flex; align-items: center; gap: 6px; }
   .bva-legend-swatch {
     display: inline-block; width: 14px; height: 8px; border-radius: 2px;
     background: var(--c-navy);
   }
-  .bva-legend-swatch--budget { background: color-mix(in srgb, var(--c-navy) 22%, transparent); }
+  .bva-legend-swatch--budget { background: color-mix(in srgb, var(--c-navy) 18%, transparent); }
   .bva-legend-swatch--over   { background: var(--c-buoy); }
 
   @media (max-width: 600px) {
-    .bva-row, .bva-axis { grid-template-columns: 105px 1fr 85px; gap: 6px; }
-    .bva-name { font-size: 11px; }
-    .bva-amount { font-size: 10px; }
+    .bva-row, .bva-axis { grid-template-columns: 110px 1fr 88px; gap: 8px; }
+    .bva-name { font-size: 11.5px; }
+    .bva-amount { font-size: 10.5px; }
+    .bva-amount strong { font-size: 11.5px; }
   }
 
   /* Filter bar (reused idiom from town_explorer) */
@@ -273,140 +297,122 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
 
   /* Performance section */
   .perf-grid {
-    display: grid; grid-template-columns: 1fr; gap: 14px;
-    margin: 0 0 14px;
+    display: grid; grid-template-columns: 1fr; gap: 12px;
+    margin: 0 0 12px;
   }
   @media (min-width: 700px) {
     .perf-grid--two { grid-template-columns: 1fr 1fr; }
   }
   .perf-card {
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius-md); padding: 14px 16px 12px;
+    border-radius: var(--radius-md); padding: 18px 20px;
   }
   .perf-card h3 {
-    font-size: 13px; font-weight: 700; color: var(--text);
-    margin: 0 0 2px; text-transform: uppercase; letter-spacing: 0.6px;
-  }
-  .perf-card .perf-card-sub {
-    font-size: 11px; color: var(--text-muted); margin: 0 0 10px;
+    font-size: 11px; font-weight: 700; color: var(--text-subtle);
+    margin: 0 0 14px; text-transform: uppercase; letter-spacing: 0.8px;
   }
   .perf-row {
-    display: grid; grid-template-columns: 1fr auto; gap: 8px;
-    align-items: baseline; padding: 4px 0;
-    border-bottom: 1px dotted var(--divider); font-size: 12.5px;
+    display: grid; grid-template-columns: 1fr auto; gap: 12px;
+    align-items: baseline; padding: 8px 0;
+    border-bottom: 1px solid var(--divider); font-size: 13px;
   }
-  .perf-row:last-child { border-bottom: none; }
-  .perf-row-name { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .perf-row-val  { color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .perf-row-val strong { color: var(--text); }
+  .perf-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .perf-row:first-child { padding-top: 0; }
+  .perf-row-name { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
+  .perf-row-val  { color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 12px; }
+  .perf-row-val strong { color: var(--text); font-size: 13.5px; font-weight: 700; margin-right: 8px; }
   .perf-row-val .over  { color: var(--c-buoy); font-weight: 600; }
   .perf-row-val .under { color: var(--c-teal); font-weight: 600; }
 
   .perf-meter {
-    display: grid; grid-template-columns: 1fr 200px auto; gap: 10px;
-    align-items: center; padding: 4px 0;
-    border-bottom: 1px dotted var(--divider); font-size: 12px;
+    display: grid; grid-template-columns: 1fr 150px auto; gap: 12px;
+    align-items: center; padding: 7px 0;
+    border-bottom: 1px solid var(--divider); font-size: 12.5px;
   }
-  .perf-meter:last-child { border-bottom: none; }
+  .perf-meter:last-child { border-bottom: none; padding-bottom: 0; }
+  .perf-meter:first-of-type { padding-top: 0; }
   .perf-meter-name { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .perf-meter-bar {
-    position: relative; height: 10px;
+    position: relative; height: 6px;
     background: color-mix(in srgb, var(--c-navy) 8%, transparent);
-    border-radius: 2px; overflow: hidden;
+    border-radius: 3px; overflow: hidden;
   }
   .perf-meter-bar-fill {
     position: absolute; left: 0; top: 0; height: 100%;
-    background: var(--c-navy); border-radius: 2px;
+    background: var(--c-navy); border-radius: 3px;
   }
-  .perf-meter-val { font-variant-numeric: tabular-nums; color: var(--text-muted); white-space: nowrap; }
+  .perf-meter-val { font-variant-numeric: tabular-nums; color: var(--text); white-space: nowrap; font-weight: 600; font-size: 12px; }
 
   /* Monthly cadence bar chart */
   .cadence {
-    display: grid; gap: 4px;
-    grid-template-columns: 50px 1fr 90px;
-    font-size: 11px; align-items: center;
+    display: grid; gap: 5px;
+    grid-template-columns: 48px 1fr 64px;
+    font-size: 12px; align-items: center;
   }
   .cadence-row { display: contents; }
-  .cadence-month { color: var(--text-muted); font-variant-numeric: tabular-nums; }
-  .cadence-bar-wrap { position: relative; height: 14px; background: color-mix(in srgb, var(--c-navy) 6%, transparent); border-radius: 2px; }
+  .cadence-month { color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 11.5px; }
+  .cadence-bar-wrap { position: relative; height: 10px; background: color-mix(in srgb, var(--c-navy) 6%, transparent); border-radius: 2px; }
   .cadence-bar {
     position: absolute; left: 0; top: 0; height: 100%;
     background: var(--c-navy); border-radius: 2px;
   }
-  .cadence-bar.cadence-bar--projected { background: color-mix(in srgb, var(--text-subtle) 40%, transparent); }
-  .cadence-val { color: var(--text-muted); text-align: right; font-variant-numeric: tabular-nums; }
+  .cadence-val { color: var(--text); text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; font-size: 11.5px; }
 
   .perf-pareto {
-    margin: 8px 0 4px; font-size: 12px; color: var(--text-muted);
+    margin: 0 0 14px; font-size: 12.5px; color: var(--text-muted);
     line-height: 1.55;
   }
   .perf-pareto strong { color: var(--text); }
 
-  .perf-note {
-    font-size: 11px; color: var(--text-muted); margin: 8px 0 0;
-    padding-top: 6px; border-top: 1px solid var(--divider); line-height: 1.5;
-  }
-
   /* Multi-fund vendor table */
   .multifund {
-    font-size: 12px; width: 100%; border-collapse: collapse;
+    font-size: 12.5px; width: 100%; border-collapse: collapse;
   }
   .multifund th, .multifund td {
-    text-align: left; padding: 5px 8px;
+    text-align: left; padding: 8px 10px;
     border-bottom: 1px solid var(--divider);
   }
+  .multifund tr:last-child td { border-bottom: none; }
   .multifund th {
-    font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.7px;
     color: var(--text-subtle); font-weight: 700;
+    padding-top: 0;
   }
-  .multifund td.numeric { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .multifund td.funds-list { color: var(--text-muted); font-size: 11px; }
+  .multifund td.numeric { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; }
+  .multifund td.funds-list { color: var(--text-muted); font-size: 11.5px; }
+  .multifund td.vendor-name { font-weight: 500; }
 </style>
-
-<div class="checkbook-caveat">
-  <strong>Two different "totals" appear on this page.</strong> The town runs two portals: a budget portal that tracks the appropriated <em>Revised Budget</em> ($206.06M for FY26) and the spending portal's <em>Actual</em> rollup ($140.45M booked through May 29), and a checkbook portal that lists vendor-payment transactions only ($98.07M of the $98.49M source, after redactions noted below). The gap between Actual and Checkbook is mostly payroll and inter-fund transfers, which don't flow through accounts payable.<sup class="cite"
-    data-href="https://townofmarblehead-ma-oe.spending.socrata.com/#!/year/All%20Years/explore/1-/segment2"
-    data-source="Town of Marblehead Spending Portal (Socrata), data exported 2026-06-01"></sup><sup class="cite"
-    data-href="https://townofmarblehead-ma-ob.budget.socrata.com/"
-    data-source="Town of Marblehead Budget Portal (Socrata), data fetched via fund_source_data API on 2026-06-01"></sup>
-</div>
-
-<div class="checkbook-caveat" style="border-left-color: var(--c-buoy); background: color-mix(in srgb, var(--c-buoy) 8%, var(--surface));">
-  <strong>What was redacted before publishing.</strong> The source checkbook export labels individual police/fire employees by surname under <em>111F INJURY LEAVE FUND</em> (e.g. "BURT INJURY" paid to Spaulding Rehab) and student initials under school out-of-district tuition lines (e.g. "Out of district tuition B. Dob..." paid to Northshore Education Consortium). The Description column has been dropped from the published dataset, and 560 medical-claim rows ($413,167.81) across the <em>111F Injury Leave Fund</em> (133 rows / $17,021.82) and <em>Workers Compensation Fund</em> (427 rows / $396,145.99) have been excluded entirely. The source portal still exposes this; aggregate totals for the excluded funds remain in the budget-vs-actual chart above so nothing is hidden, just de-identified.
-</div>
 
 <div class="hero-card" id="hero-card">
   <div class="hero-row">
     <div class="hero-stat">
-      <div class="hero-label">FY26 Adopted Budget</div>
-      <div class="hero-value">$206.06M</div>
-      <div class="hero-sub">All funds, revised</div>
+      <div class="hero-label">Adopted budget</div>
+      <div class="hero-value">$206.1M</div>
+      <div class="hero-sub">FY26, all funds</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-label">Portal Actual</div>
-      <div class="hero-value">$140.45M</div>
-      <div class="hero-sub">68.2% of revised</div>
+      <div class="hero-label">Spent</div>
+      <div class="hero-value">$140.4M</div>
+      <div class="hero-sub">68% of budget</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-label">Checkbook (AP, public)</div>
-      <div class="hero-value">$98.07M</div>
-      <div class="hero-sub">15,001 vendor payments (560 redacted)</div>
+      <div class="hero-label">Vendor payments</div>
+      <div class="hero-value">$98.1M</div>
+      <div class="hero-sub">15,001 checks (payroll excluded)</div>
     </div>
     <div class="hero-stat">
       <div class="hero-label">Through</div>
       <div class="hero-value">May 29</div>
-      <div class="hero-sub">~11 of 12 FY26 months</div>
+      <div class="hero-sub">11 of 12 months</div>
     </div>
   </div>
 </div>
 
 <div class="ck-section">
-  <h2>Budget vs. Actual: Budgeted Annual Funds</h2>
-  <p>Light bar is the FY26 Revised Budget. Dark bar is what the spending portal shows as Actual through May 29. Switch the breakdown to slice the $127.34M Budgeted Annual envelope different ways. (Non-annual funds &ndash; capital articles, OPEB, MLD &ndash; are excluded from this chart but appear in the transaction table below.)</p>
+  <h2>Budget vs actual</h2>
 </div>
 
 <div class="breakdown-bar">
-  <span class="breakdown-label">View by:</span>
   <button type="button" class="breakdown-btn active" data-breakdown="by_fund">Fund</button>
   <button type="button" class="breakdown-btn" data-breakdown="by_department">Department</button>
   <button type="button" class="breakdown-btn" data-breakdown="by_category">Category</button>
@@ -415,65 +421,50 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   <span class="breakdown-meta" id="breakdown-meta"></span>
 </div>
 
-<div class="bva-legend">
-  <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--budget"></span>Revised Budget</span>
-  <span class="bva-legend-item"><span class="bva-legend-swatch"></span>Actual through May 29</span>
-  <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--over"></span>Actual exceeds Revised</span>
-</div>
-
 <div class="bva-chart" id="bva-chart">
-  <div class="ck-loading">Loading budget data&hellip;</div>
+  <div class="ck-loading">Loading&hellip;</div>
 </div>
 
-<p style="font-size: 12px; color: var(--text-muted); margin: 0 0 8px;">
-  <strong>Why some bars over-run:</strong> The Light Department ($13.2M actual) runs as a self-supporting enterprise with no appropriation, so its actuals show against a $0 budget under the <em>Electric</em> fund and <em>Electricity</em> object. Snow removal ($687K actual vs. $105K budget) is intentionally under-budgeted by policy and topped up with year-end transfers. Capital-article rows whose <em>Original Budget</em> is $0 received mid-year appropriations and are at or near 100% of <em>Revised</em>. None of these is a runaway expense.
-</p>
+<div class="bva-legend">
+  <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--budget"></span>Budget</span>
+  <span class="bva-legend-item"><span class="bva-legend-swatch"></span>Spent</span>
+  <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--over"></span>Over budget</span>
+</div>
 
 <div class="ck-section">
-  <h2>Performance read</h2>
-  <p>At 91.7% of FY26 elapsed (11 of 12 months), here's what the data says about budget execution, vendor concentration, and monthly pacing.</p>
+  <h2>Where it stands at 92% of the year</h2>
 </div>
 
 <div class="perf-grid perf-grid--two">
-  <div class="perf-card" id="perf-over">
-    <h3>Biggest over-budget departments</h3>
-    <div class="perf-card-sub">Actual exceeds revised budget by this $</div>
+  <div class="perf-card">
+    <h3>Over budget</h3>
     <div id="perf-over-list" class="ck-loading">Loading&hellip;</div>
-    <p class="perf-note">The Light Department runs as a self-supporting enterprise outside the appropriation process, so its $13.16M pass-through shows as an "over-run" against $0 budget. Snow Removal is intentionally under-budgeted by town policy and topped up at year-end. Neither is a runaway expense.</p>
   </div>
-  <div class="perf-card" id="perf-under">
-    <h3>Biggest under-budget departments</h3>
-    <div class="perf-card-sub">Actual is below revised by this $ with one month left</div>
+  <div class="perf-card">
+    <h3>Under budget</h3>
     <div id="perf-under-list" class="ck-loading">Loading&hellip;</div>
-    <p class="perf-note">All five school buildings plus Districtwide are running 74&ndash;78% of revised at 92% of FY. Likely a mix of vacancy savings, end-of-year accrual timing, and conservative draw. The June checkbook close will narrow this gap.</p>
   </div>
 </div>
 
 <div class="perf-grid perf-grid--two">
-  <div class="perf-card" id="perf-concentration">
-    <h3>Vendor concentration</h3>
-    <div class="perf-card-sub">How concentrated are the town's vendor payments?</div>
+  <div class="perf-card">
+    <h3>Top vendors</h3>
     <p class="perf-pareto" id="perf-pareto">Loading&hellip;</p>
     <div id="perf-vendor-list"></div>
-    <p class="perf-note">Concentration here is mostly external obligations (state assessments, debt-service trustee, retirement system, regional wastewater) rather than discretionary procurement. The top 10 list rewards reading the line items, not just the totals.</p>
   </div>
-  <div class="perf-card" id="perf-cadence">
-    <h3>Monthly cadence</h3>
-    <div class="perf-card-sub">Monthly checkbook outflow over FY26 (Jul&ndash;May)</div>
+  <div class="perf-card">
+    <h3>Monthly spend</h3>
     <div id="perf-cadence-chart" class="ck-loading">Loading&hellip;</div>
-    <p class="perf-note">July is typically the largest month (beginning-of-year appropriation transfers and assessment payments). May is the most recent full month. June will close the year.</p>
   </div>
 </div>
 
-<div class="perf-card" id="perf-multifund" style="margin: 0 0 20px;">
-  <h3>Vendors that bill across multiple funds</h3>
-  <div class="perf-card-sub">A handful of vendors hit three or more funds in FY26. Useful for negotiated-rate analysis and cross-departmental procurement.</div>
+<div class="perf-card">
+  <h3>Vendors billing 3+ funds</h3>
   <div id="perf-multifund-table" class="ck-loading">Loading&hellip;</div>
 </div>
 
 <div class="ck-section">
-  <h2>Vendor payments &ndash; FY26 checkbook</h2>
-  <p>Every published accounts-payable transaction the town made in FY26 through May 29, 2026. Search by vendor name, filter by fund or division, set a date range, and sort by any column.</p>
+  <h2>Every payment</h2>
 </div>
 
 <div class="filter-bar">
@@ -541,13 +532,31 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   </div>
 </div>
 
-<div style="margin: 24px 0 12px;">
-  <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.55;">
-    <strong>About this data.</strong> The published checkbook table lists 15,001 individual vendor payments totaling $98,074,838.23 between July 1, 2025 and May 29, 2026, after redacting 560 medical-claim rows ($413,167.81) and the Description column. The source export also excludes payroll (paid through a separate payroll-system run that doesn't post to AP), inter-fund transfers, and intergovernmental remittances posted through the general ledger &ndash; that's why the spending portal's Actual ($140.4M) is higher than the checkbook total. About 1% of rows are credit/refund entries with negative amounts.
-  </p>
-  <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.55;">
-    <strong>Source files in the repo.</strong> <a href="../data/checkbook_FY26_2026-06-02.csv">checkbook_FY26_2026-06-02.csv</a> &ndash; redacted FY26 checkbook (Description column dropped; 111F + Workers Comp rows removed). <a href="../data/checkbook_redaction_disclosure.json">checkbook_redaction_disclosure.json</a> &ndash; what was removed and why. <a href="../data/budget_actual_FY26.json">budget_actual_FY26.json</a> &ndash; budget vs. actual rollups by Fund, Department, Category, Division, and Object, built from the budget portal's API and CSV exports. <a href="../data/checkbook_performance.json">checkbook_performance.json</a> &ndash; pre-rolled variance, vendor-concentration, multi-fund-vendor, and monthly-cadence aggregates used by the performance panels above.
-  </p>
+<div class="notes">
+  <h2>Notes</h2>
+
+  <dl class="notes-dl">
+    <dt>Three totals, three meanings</dt>
+    <dd><strong>$206.1M</strong> is what the town adopted for FY26. <strong>$140.4M</strong> is what the budget portal counts as spent so far (includes payroll and transfers). <strong>$98.1M</strong> is just vendor checks &ndash; what shows up on this page's transaction table.<sup class="cite"
+      data-href="https://townofmarblehead-ma-oe.spending.socrata.com/#!/year/All%20Years/explore/1-/segment2"
+      data-source="Town of Marblehead Spending Portal (Socrata), data exported 2026-06-01"></sup><sup class="cite"
+      data-href="https://townofmarblehead-ma-ob.budget.socrata.com/"
+      data-source="Town of Marblehead Budget Portal (Socrata), data fetched via fund_source_data API on 2026-06-01"></sup></dd>
+
+    <dt>Why some bars look over budget</dt>
+    <dd>The Light Department ($13.2M) is self-supporting and has no appropriation, so it shows up against a $0 budget. Snow Removal ($687K vs $105K) is intentionally under-budgeted and topped up at year-end. Neither is a runaway expense.</dd>
+
+    <dt>What we redacted</dt>
+    <dd>The town's source export tags <em>specific employees by surname</em> for medical claims under the 111F Injury Leave Fund (e.g., "BURT INJURY" paid to Spaulding Rehab) and lists <em>student initials</em> for out-of-district SpEd placements. We dropped the Description column entirely and pulled 560 rows ($413K) from the 111F and Workers Comp funds. The aggregate is still in the budget chart above.</dd>
+
+    <dt>Source files</dt>
+    <dd>
+      <a href="../data/checkbook_FY26_2026-06-02.csv">checkbook_FY26_2026-06-02.csv</a> &middot;
+      <a href="../data/budget_actual_FY26.json">budget_actual_FY26.json</a> &middot;
+      <a href="../data/checkbook_performance.json">checkbook_performance.json</a> &middot;
+      <a href="../data/checkbook_redaction_disclosure.json">checkbook_redaction_disclosure.json</a>
+    </dd>
+  </dl>
 </div>
 
 <script>
@@ -591,6 +600,21 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   function displayDivision(name) {
     if (name === 'UNDEFINED') return 'School (not broken out)';
     return name;
+  }
+  function titleCase(s) {
+    if (!s) return s;
+    // Preserve common acronyms; lowercase the rest.
+    var KEEP = { 'OPEB': 1, 'GIC': 1, 'MWRA': 1, 'ARPA': 1, 'IDEA': 1, 'METCO': 1, 'PERAC': 1, 'NSEC': 1, 'MA': 1, 'US': 1, 'USA': 1, 'IT': 1, 'HVAC': 1, 'HS': 1, 'MS': 1, 'PD': 1, 'FD': 1, 'OPM': 1, 'DPW': 1, 'NS': 1, 'ARTM': 1, 'ATM': 1, 'CO': 1, 'LTD': 1, 'A11': 1, 'A33': 1, 'A34': 1, 'A36': 1, 'AND': 1 };
+    return s.split(/(\s+|-|\/)/).map(function (w) {
+      if (!w.trim()) return w;
+      if (KEEP[w.toUpperCase()]) return w.toUpperCase();
+      if (/^\d/.test(w)) return w;
+      // Dotted acronym (U.S., E.E.) - keep all caps
+      if (/^[A-Z](\.[A-Z])+\.?$/i.test(w)) return w.toUpperCase();
+      // 'AND' as conjunction stays lowercase except at start (handled by KEEP+caller)
+      if (w.toLowerCase() === 'and' || w.toLowerCase() === 'of' || w.toLowerCase() === 'the' || w.toLowerCase() === 'in' || w.toLowerCase() === 'for') return w.toLowerCase();
+      return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+    }).join('');
   }
 
   // --- CSV parser (handles quoted fields with commas) ---
@@ -662,6 +686,7 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
       var negative = a < 0;
       var name = r.name;
       if (bvaBreakdown === 'by_division' && name === 'UNDEFINED') name = 'School (not broken out)';
+      else name = titleCase(name);
       html += '<div class="bva-row" title="' + escapeHtml(r.name) +
         ' &mdash; Revised: ' + fmtMoney(b, { cents: false }) +
         ', Actual: ' + fmtMoney(a, { cents: false }) +
@@ -849,12 +874,12 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
       .filter(function (r) { return r.delta > 5000; })
       .slice(0, 5);
     var overHost = document.getElementById('perf-over-list');
-    overHost.innerHTML = over.length === 0 ? '<p class="perf-note">No departments meaningfully over budget at the cutoff.</p>'
+    overHost.innerHTML = over.length === 0 ? '<p style="font-size:12.5px;color:var(--text-muted);margin:0;">Nothing over budget.</p>'
       : over.map(function (r) {
-        var pct = r.pct !== null ? Math.round(r.pct) + '%' : 'no budget';
-        return '<div class="perf-row"><div class="perf-row-name">' + escapeHtml(r.name) +
+        var pctLabel = r.pct !== null ? Math.round(r.pct) + '%' : 'no budget';
+        return '<div class="perf-row"><div class="perf-row-name">' + escapeHtml(titleCase(r.name)) +
           '</div><div class="perf-row-val"><strong>+' + fmtMoney(r.delta, { compact: true }) +
-          '</strong> <span class="over">' + pct + '</span></div></div>';
+          '</strong><span class="over">' + pctLabel + '</span></div></div>';
       }).join('');
 
     // Under budget (negative delta), top 5 by absolute size
@@ -865,27 +890,27 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
       .slice(0, 6);
     var underHost = document.getElementById('perf-under-list');
     underHost.innerHTML = under.map(function (r) {
-      var pct = r.pct !== null ? Math.round(r.pct) + '%' : 'no budget';
-      return '<div class="perf-row"><div class="perf-row-name">' + escapeHtml(r.name) +
+      var pctLabel = r.pct !== null ? Math.round(r.pct) + '%' : 'no budget';
+      return '<div class="perf-row"><div class="perf-row-name">' + escapeHtml(titleCase(r.name)) +
         '</div><div class="perf-row-val"><strong>' + fmtMoney(r.delta, { compact: true }) +
-        '</strong> <span class="under">' + pct + '</span></div></div>';
+        '</strong><span class="under">' + pctLabel + '</span></div></div>';
     }).join('');
 
     // Vendor concentration: top 10 vendors with bar meters
     var vc = perf.vendor_concentration;
     var paretoEl = document.getElementById('perf-pareto');
-    paretoEl.innerHTML = 'The <strong>top 10 vendors</strong> account for <strong>' +
-      fmtMoney(vc.top_10_amount, { compact: true }) + '</strong> &mdash; <strong>' +
-      vc.top_10_pct + '%</strong> of $' + (vc.total_payments / 1e6).toFixed(1) +
-      'M in published payments. Top 20: ' + vc.top_20_pct + '% &middot; Top 50: ' + vc.top_50_pct +
-      '% &middot; <strong>' + vc.total_vendors.toLocaleString() + '</strong> distinct vendors total.';
+    paretoEl.innerHTML = 'Top 10 = <strong>' + vc.top_10_pct + '%</strong> &middot; ' +
+      'Top 20 = <strong>' + vc.top_20_pct + '%</strong> &middot; ' +
+      'Top 50 = <strong>' + vc.top_50_pct + '%</strong> of ' +
+      vc.total_vendors.toLocaleString() + ' total vendors';
     var topVendors = vc.top_vendors.slice(0, 10);
     var vMax = topVendors[0] ? topVendors[0].amount : 1;
     var vList = document.getElementById('perf-vendor-list');
     vList.innerHTML = topVendors.map(function (v) {
       var pct = (v.amount / vMax) * 100;
+      var name = titleCase(v.name.replace(/\s+(INC|CORP|LLC|LLP|CO|CO\.)$/i, '').replace(/^MARBLEHEAD\s+/i, ''));
       return '<div class="perf-meter"><div class="perf-meter-name" title="' + escapeHtml(v.name) + '">' +
-        escapeHtml(v.name) + '</div>' +
+        escapeHtml(name) + '</div>' +
         '<div class="perf-meter-bar"><div class="perf-meter-bar-fill" style="width:' + pct.toFixed(1) + '%"></div></div>' +
         '<div class="perf-meter-val">' + fmtMoney(v.amount, { compact: true }) + '</div></div>';
     }).join('');
@@ -893,22 +918,24 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
     // Multi-fund vendors
     var mfHost = document.getElementById('perf-multifund-table');
     if (perf.multifund_vendors && perf.multifund_vendors.length) {
-      var mfHtml = '<table class="multifund"><thead><tr><th>Vendor</th><th class="numeric">Paid</th><th class="numeric">Txns</th><th class="numeric">Funds</th><th>Where</th></tr></thead><tbody>';
-      perf.multifund_vendors.slice(0, 12).forEach(function (v) {
+      var mfHtml = '<table class="multifund"><thead><tr><th>Vendor</th><th class="numeric">Funds</th><th class="numeric">Paid</th><th>Where</th></tr></thead><tbody>';
+      perf.multifund_vendors.slice(0, 10).forEach(function (v) {
         var fundLabel = v.funds.slice(0, 3).map(function (f) {
-          return f.replace('GENERAL FUND - ', '').replace(' ENTERPRISE OPERATING', ' ENT').replace(' CAPITAL ARTICLES', ' CAP').replace(' REVOLVING FUND', ' REV');
+          return f.replace('GENERAL FUND - ', '').replace(' ENTERPRISE OPERATING', ' Ent').replace(' CAPITAL ARTICLES', ' Cap').replace(' REVOLVING FUND', ' Rev');
+        }).map(function (s) {
+          return s.charAt(0) + s.slice(1).toLowerCase();
         }).join(', ');
-        if (v.funds.length > 3) fundLabel += ', +' + (v.funds.length - 3) + ' more';
-        mfHtml += '<tr><td>' + escapeHtml(v.name) + '</td>' +
-          '<td class="numeric">' + fmtMoney(v.amount, { compact: true }) + '</td>' +
-          '<td class="numeric">' + v.count + '</td>' +
+        if (v.funds.length > 3) fundLabel += ' + ' + (v.funds.length - 3) + ' more';
+        var name = titleCase(v.name.replace(/\s+(INC|CORP|LLC|LLP|CO|CO\.)$/i, ''));
+        mfHtml += '<tr><td class="vendor-name">' + escapeHtml(name) + '</td>' +
           '<td class="numeric">' + v.fund_count + '</td>' +
+          '<td class="numeric">' + fmtMoney(v.amount, { compact: true }) + '</td>' +
           '<td class="funds-list">' + escapeHtml(fundLabel) + '</td></tr>';
       });
       mfHtml += '</tbody></table>';
       mfHost.innerHTML = mfHtml;
     } else {
-      mfHost.innerHTML = '<p class="perf-note">No vendors hit 3+ funds.</p>';
+      mfHost.innerHTML = '<p style="font-size:12.5px;color:var(--text-muted);margin:0;">No vendors bill across 3 or more funds.</p>';
     }
 
     // Monthly cadence bar chart

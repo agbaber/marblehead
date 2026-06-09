@@ -91,7 +91,7 @@ async function run() {
       const vendorBars = await page.locator('#perf-vendor-list .perf-meter').count();
       if (vendorBars < 5) throw new Error('only ' + vendorBars + ' top-vendor bars');
       const paretoText = await page.locator('#perf-pareto').innerText();
-      if (!paretoText.includes('top 10') || !paretoText.includes('%')) throw new Error('pareto text: ' + paretoText);
+      if (!/top\s*10/i.test(paretoText) || !paretoText.includes('%')) throw new Error('pareto text: ' + paretoText);
       const overText = await page.locator('#perf-over-list').innerText();
       if (!/light|snow/i.test(overText)) throw new Error('expected light/snow in over list: ' + overText.slice(0, 80));
       const cadenceBars = await page.locator('#perf-cadence-chart .cadence-bar').count();
