@@ -312,11 +312,8 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
     font-size: 11px; font-weight: 700; color: var(--text-subtle);
     margin: 0 0 14px; text-transform: uppercase; letter-spacing: 0.8px;
   }
-  /* Variance card accent */
   .perf-card--over   { border-top: 2px solid var(--c-buoy); }
-  .perf-card--under  { border-top: 2px solid var(--c-teal); }
-  .perf-card--over h3   { color: var(--c-buoy); }
-  .perf-card--under h3  { color: var(--c-teal); }
+  .perf-card--over h3 { color: var(--c-buoy); }
 
   .perf-row {
     display: grid; grid-template-columns: 16px 1fr auto; gap: 10px;
@@ -329,14 +326,12 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   .perf-row-mark {
     width: 8px; height: 8px; border-radius: 999px;
     display: inline-block;
+    background: var(--c-buoy);
   }
-  .perf-row-mark--over  { background: var(--c-buoy); }
-  .perf-row-mark--under { background: var(--c-teal); }
   .perf-row-name { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
   .perf-row-val  { color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 12px; display: inline-flex; align-items: baseline; gap: 8px; }
   .perf-row-val strong { color: var(--text); font-size: 14px; font-weight: 700; letter-spacing: -0.2px; }
   .perf-row-val .over  { color: var(--c-buoy); font-weight: 600; font-size: 11.5px; }
-  .perf-row-val .under { color: var(--c-teal); font-weight: 600; font-size: 11.5px; }
 
   .perf-meter {
     display: grid; grid-template-columns: 1fr 150px auto; gap: 12px;
@@ -573,15 +568,9 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   <h2>Where it stands at 92% of the year</h2>
 </div>
 
-<div class="perf-grid perf-grid--two">
-  <div class="perf-card perf-card--over">
-    <h3>Over budget</h3>
-    <div id="perf-over-list" class="ck-loading">Loading&hellip;</div>
-  </div>
-  <div class="perf-card perf-card--under">
-    <h3>Under budget</h3>
-    <div id="perf-under-list" class="ck-loading">Loading&hellip;</div>
-  </div>
+<div class="perf-card perf-card--over">
+  <h3>Already over the full year's budget</h3>
+  <div id="perf-over-list" class="ck-loading">Loading&hellip;</div>
 </div>
 
 <div class="perf-grid perf-grid--two">
@@ -1341,36 +1330,22 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
 
   // --- Performance panels ---
   function renderPerf(perf) {
-    // Over budget (positive delta)
+    // Over budget: only departments that have already exceeded their full revised budget
+    // by a meaningful dollar amount. Excludes enterprise funds (Light, etc.) whose budget
+    // is tracked outside the BUDGETED ANNUAL FUNDS envelope and so come through as pct=null.
     var over = perf.budget_execution.by_department
-      .filter(function (r) { return r.delta > 5000; })
+      .filter(function (r) { return r.pct !== null && r.pct >= 100 && r.delta > 25000; })
       .slice(0, 5);
     var overHost = document.getElementById('perf-over-list');
-    overHost.innerHTML = over.length === 0 ? '<p style="font-size:12.5px;color:var(--text-muted);margin:0;">Nothing over budget.</p>'
+    overHost.innerHTML = over.length === 0 ? '<p style="font-size:12.5px;color:var(--text-muted);margin:0;">No department has exceeded its full-year budget yet.</p>'
       : over.map(function (r) {
-        var pctLabel = r.pct !== null ? Math.round(r.pct) + '%' : 'no budget';
+        var pctLabel = Math.round(r.pct) + '%';
         return '<div class="perf-row">' +
-          '<span class="perf-row-mark perf-row-mark--over"></span>' +
+          '<span class="perf-row-mark"></span>' +
           '<div class="perf-row-name">' + escapeHtml(titleCase(r.name)) + '</div>' +
           '<div class="perf-row-val"><strong>+' + fmtMoney(r.delta, { compact: true }) +
           '</strong><span class="over">' + pctLabel + '</span></div></div>';
       }).join('');
-
-    // Under budget (negative delta), top 5 by absolute size
-    var under = perf.budget_execution.by_department
-      .filter(function (r) { return r.delta < -50000; })
-      .slice()
-      .sort(function (a, b) { return a.delta - b.delta; })
-      .slice(0, 6);
-    var underHost = document.getElementById('perf-under-list');
-    underHost.innerHTML = under.map(function (r) {
-      var pctLabel = r.pct !== null ? Math.round(r.pct) + '%' : 'no budget';
-      return '<div class="perf-row">' +
-        '<span class="perf-row-mark perf-row-mark--under"></span>' +
-        '<div class="perf-row-name">' + escapeHtml(titleCase(r.name)) + '</div>' +
-        '<div class="perf-row-val"><strong>' + fmtMoney(r.delta, { compact: true }) +
-        '</strong><span class="under">' + pctLabel + '</span></div></div>';
-    }).join('');
 
     // Vendor concentration: top 10 vendors with bar meters
     var vc = perf.vendor_concentration;
