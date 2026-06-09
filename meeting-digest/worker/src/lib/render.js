@@ -1,5 +1,7 @@
 // meeting-digest/worker/src/lib/render.js
 
+import { emailShell } from './email-shell.js';
+
 function escapeHtml(s) {
   if (s == null) return '';
   return String(s)
@@ -40,11 +42,11 @@ function meetingHtml(m, env) {
   const t = m.transcript;
   const meetingUrl = `${env.SITE_BASE_URL}/meetings/${t.slug}/`;
   return `
-  <div style="margin: 0 0 32px;">
-    <p style="margin: 0 0 6px; font-size: 13px; color: #666;">${escapeHtml(t.board_display)} · ${escapeHtml(formatShortDate(t.date))}</p>
+  <div style="margin: 0 0 28px;">
+    <p class="mhd-muted" style="margin: 0 0 6px; font-size: 13px; color: #6c757d;">${escapeHtml(t.board_display)} · ${escapeHtml(formatShortDate(t.date))}</p>
     <h2 style="margin: 0 0 10px; font-size: 19px; line-height: 1.3; color: #1a1a1a; font-weight: 600;">${escapeHtml(t.summary_card?.headline || t.title)}</h2>
-    <p style="margin: 0 0 12px; color: #333; line-height: 1.55;">${escapeHtml(t.summary_card?.summary || '')}</p>
-    <p style="margin: 0; font-size: 14px;"><a href="${meetingUrl}" style="color: #1B3A57; text-decoration: none; font-weight: 500;">Read &amp; watch on marbleheaddata.org &rarr;</a></p>
+    <p class="mhd-body" style="margin: 0 0 12px; color: #2a3036; line-height: 1.55;">${escapeHtml(t.summary_card?.summary || '')}</p>
+    <p style="margin: 0; font-size: 14px;"><a class="mhd-link" href="${meetingUrl}" style="color: #1B3A57; text-decoration: none; font-weight: 500;">Read &amp; watch on marbleheaddata.org &rarr;</a></p>
   </div>`;
 }
 
@@ -63,21 +65,19 @@ export function renderHtml(matches, subscriber, env, weekEndingIso) {
   const manageUrl = `${env.SITE_BASE_URL}/me/subscription/?token=${encodeURIComponent(subscriber.manage_token)}`;
   const unsubUrl = `${env.SITE_BASE_URL}/api/unsubscribe?token=${encodeURIComponent(subscriber.manage_token)}`;
   const count = matches.length;
-  return `<!doctype html>
-<html><body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 28px 24px; color: #1a1a1a; line-height: 1.5;">
-  <p style="margin: 0 0 4px; font-size: 13px; color: #666;">Marblehead Data</p>
-  <h1 style="margin: 0 0 28px; font-size: 22px; font-weight: 600; color: #1a1a1a;">${count} ${count === 1 ? 'meeting' : 'meetings'} this week</h1>
+  return emailShell({ body: `
+  <h1 style="margin: 0 0 24px; font-size: 22px; font-weight: 600; color: #1a1a1a; line-height: 1.25;">${count} ${count === 1 ? 'meeting' : 'meetings'} this week</h1>
 
   ${matches.map(m => meetingHtml(m, env)).join('')}
 
-  <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 8px 0 16px;">
-  <p style="margin: 0 0 6px; font-size: 13px; color: #666;">
-    <a href="${manageUrl}" style="color: #1B3A57; text-decoration: none;">Manage subscription</a>
+  <hr class="mhd-hr" style="border: none; border-top: 1px solid #e5e5e5; margin: 8px 0 16px;">
+  <p style="margin: 0 0 6px; font-size: 13px; color: #6c757d;">
+    <a class="mhd-link" href="${manageUrl}" style="color: #1B3A57; text-decoration: none;">Manage subscription</a>
     &nbsp;·&nbsp;
-    <a href="${unsubUrl}" style="color: #1B3A57; text-decoration: none;">Unsubscribe</a>
+    <a class="mhd-link" href="${unsubUrl}" style="color: #1B3A57; text-decoration: none;">Unsubscribe</a>
   </p>
-  <p style="margin: 0; font-size: 12px; color: #999;">Summaries are AI-generated. Verify with the source video.</p>
-</body></html>`;
+  <p class="mhd-muted" style="margin: 0; font-size: 12px; color: #8a949c;">Summaries are AI-generated. Verify with the source video.</p>
+` });
 }
 
 export function renderText(matches, subscriber, env, weekEndingIso) {

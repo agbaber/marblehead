@@ -1,6 +1,10 @@
 import { normalizeEmail, isValidEmail, randomToken } from '../lib/email.js';
 import { DEFAULT_BOARDS_ON_SIGNUP } from '../lib/topics.js';
 import { sendMail } from '../lib/mail.js';
+import {
+  confirmEmailSubject, renderConfirmEmailHtml, renderConfirmEmailText,
+  manageEmailSubject,  renderManageEmailHtml,  renderManageEmailText
+} from '../lib/auth-emails.js';
 
 const CONFIRMATION_TTL_MS = 24 * 60 * 60 * 1000;
 
@@ -38,7 +42,7 @@ export async function handleSubscribe(request, env, corsHeaders) {
     if (existing.status === 'confirmed') {
       await sendMail(env, {
         to: email,
-        subject: '[MHD Data] Manage your subscription',
+        subject: manageEmailSubject(),
         html: renderManageEmailHtml(env, existing.manage_token),
         text: renderManageEmailText(env, existing.manage_token)
       });
@@ -62,33 +66,11 @@ export async function handleSubscribe(request, env, corsHeaders) {
 
   await sendMail(env, {
     to: email,
-    subject: '[MHD Data] Confirm your subscription',
+    subject: confirmEmailSubject(),
     html: renderConfirmEmailHtml(env, row.confirmation_token),
     text: renderConfirmEmailText(env, row.confirmation_token)
   });
   return jsonResp(200, { ok: true }, corsHeaders);
-}
-
-function renderConfirmEmailHtml(env, token) {
-  const url = `${env.SITE_BASE_URL}/subscribe/confirm/?token=${encodeURIComponent(token)}`;
-  return `<!doctype html><html><body style="font-family: sans-serif; max-width: 560px; margin: 0 auto; padding: 24px;">
-    <p>You asked to subscribe to Marblehead Data's meeting digest.</p>
-    <p><a href="${url}" style="background: #1a3a5c; color: #fff; padding: 10px 18px; text-decoration: none; border-radius: 4px;">Confirm subscription</a></p>
-    <p style="color: #666;">This link expires in 24 hours. If this wasn't you, ignore this email — no account was created.</p>
-  </body></html>`;
-}
-function renderConfirmEmailText(env, token) {
-  return `You asked to subscribe to Marblehead Data's meeting digest.\n\nConfirm: ${env.SITE_BASE_URL}/subscribe/confirm/?token=${token}\n\nThis link expires in 24 hours. If this wasn't you, ignore this email — no account was created.\n`;
-}
-function renderManageEmailHtml(env, manageToken) {
-  const url = `${env.SITE_BASE_URL}/me/subscription/?token=${encodeURIComponent(manageToken)}`;
-  return `<!doctype html><html><body style="font-family: sans-serif; max-width: 560px; margin: 0 auto; padding: 24px;">
-    <p>You're already subscribed to Marblehead Data. Here's your manage link:</p>
-    <p><a href="${url}">${url}</a></p>
-  </body></html>`;
-}
-function renderManageEmailText(env, manageToken) {
-  return `You're already subscribed. Manage: ${env.SITE_BASE_URL}/me/subscription/?token=${manageToken}\n`;
 }
 
 function jsonResp(status, body, corsHeaders) {
