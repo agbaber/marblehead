@@ -1,7 +1,7 @@
 # Town debt long-form page &ndash; design & handoff
 
-**Status:** Research complete, blocked on one primary source. Not yet built.
-**Date:** 2026-06-09
+**Status:** Built. ACFR fetched, page shipped as `town-debt.html`, data digest at `data/debt_summary.json`, browse card added under "History & background".
+**Date:** 2026-06-09 (design); 2026-06-08 build (this session). Unblocked because a follow-up session had network access to `marbleheadma.gov` and the user delivered the PDF locally.
 
 ## Goal
 
