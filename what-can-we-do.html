@@ -152,6 +152,47 @@ community_pulse: off-sections
     text-transform: uppercase;
     color: var(--text-subtle);
   }
+  .sb-head [data-sort] {
+    cursor: pointer;
+    user-select: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .sb-head [data-sort]:hover { color: var(--text); }
+  .sb-head [data-sort]:focus-visible {
+    outline: 2px solid var(--c-teal);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  .sb-head [data-sort]::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    opacity: 0;
+  }
+  .sb-head [data-sort][aria-sort="ascending"]::after {
+    border-bottom: 4px solid currentColor;
+    opacity: 1;
+  }
+  .sb-head [data-sort][aria-sort="descending"]::after {
+    border-top: 4px solid currentColor;
+    opacity: 1;
+  }
+  .sb.is-sorted .sb-group { display: none; }
   .sb-group {
     padding: 12px 16px 8px;
     font-size: 11px;
@@ -664,41 +705,39 @@ community_pulse: off-sections
 <!-- ============================================================ -->
 <section id="scoreboard" class="wcwd-stop">
   <p class="wcwd-eye">At a glance &middot; All 18 items</p>
-  <h2 class="wcwd-section-h2">The whole list, on one screen.</h2>
-  <p class="wcwd-section-lead">Skim the dollar range, the difficulty, and the timeline. Click any row to jump to the full card with the "Who pays?" and "In real dollars" detail.</p>
 
   <div class="sb">
-    <div class="sb-head">
-      <span class="sb-c-num">#</span>
-      <span class="sb-c-item">Item</span>
-      <span class="sb-c-money">Rough range</span>
-      <span class="sb-c-diff">Difficulty</span>
-      <span class="sb-c-time">Timeline</span>
+    <div class="sb-head" role="row">
+      <span class="sb-c-num"><button type="button" data-sort="num" aria-sort="none">#</button></span>
+      <span class="sb-c-item"><button type="button" data-sort="item" aria-sort="none">Item</button></span>
+      <span class="sb-c-money"><button type="button" data-sort="money" aria-sort="none">Rough range</button></span>
+      <span class="sb-c-diff"><button type="button" data-sort="diff" aria-sort="none">Difficulty</button></span>
+      <span class="sb-c-time"><button type="button" data-sort="time" aria-sort="none">Timeline</button></span>
     </div>
 
     <div class="sb-group">Revenue</div>
-    <a class="sb-row" data-cat="rev" href="#idea-01"><span class="sb-c-num">01</span><span class="sb-c-item">Room and short-term rental occupancy excise</span><span class="sb-c-money">$200K&ndash;$500K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
-    <a class="sb-row" data-cat="rev" href="#idea-02"><span class="sb-c-num">02</span><span class="sb-c-item">Community Impact Fee on professionally managed STRs</span><span class="sb-c-money">$20K&ndash;$75K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy if bundled</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
-    <a class="sb-row" data-cat="rev" href="#idea-03"><span class="sb-c-num">03</span><span class="sb-c-item">Increase MMLD contribution to town budget</span><span class="sb-c-money">$150K&ndash;$400K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">~12 months</span></a>
-    <a class="sb-row" data-cat="rev" href="#idea-04"><span class="sb-c-num">04</span><span class="sb-c-item">Boat excise compliance audit</span><span class="sb-c-money">$10K&ndash;$30K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
-    <a class="sb-row" data-cat="rev" href="#idea-05"><span class="sb-c-num">05</span><span class="sb-c-item">Mooring waitlist transfer fee</span><span class="sb-c-money">$25K&ndash;$100K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">1&ndash;2 years</span></a>
+    <a class="sb-row" data-cat="rev" data-money="350" data-diff="2" data-time="9" href="#idea-01"><span class="sb-c-num">01</span><span class="sb-c-item">Room and short-term rental occupancy excise</span><span class="sb-c-money">$200K&ndash;$500K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="rev" data-money="47.5" data-diff="1" data-time="9" href="#idea-02"><span class="sb-c-num">02</span><span class="sb-c-item">Community Impact Fee on professionally managed STRs</span><span class="sb-c-money">$20K&ndash;$75K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy if bundled</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="rev" data-money="275" data-diff="2" data-time="12" href="#idea-03"><span class="sb-c-num">03</span><span class="sb-c-item">Increase MMLD contribution to town budget</span><span class="sb-c-money">$150K&ndash;$400K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">~12 months</span></a>
+    <a class="sb-row" data-cat="rev" data-money="20" data-diff="1" data-time="9" href="#idea-04"><span class="sb-c-num">04</span><span class="sb-c-item">Boat excise compliance audit</span><span class="sb-c-money">$10K&ndash;$30K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="rev" data-money="62.5" data-diff="3" data-time="18" href="#idea-05"><span class="sb-c-num">05</span><span class="sb-c-item">Mooring waitlist transfer fee</span><span class="sb-c-money">$25K&ndash;$100K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">1&ndash;2 years</span></a>
 
     <div class="sb-group">Cost reduction</div>
-    <a class="sb-row" data-cat="cost" href="#idea-06"><span class="sb-c-num">06</span><span class="sb-c-item">Medicare Advantage for Medicare-eligible retirees</span><span class="sb-c-money">$300K&ndash;$900K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">2&ndash;3 years</span></a>
-    <a class="sb-row" data-cat="cost" href="#idea-07"><span class="sb-c-num">07</span><span class="sb-c-item">Energy Savings Performance Contract on buildings</span><span class="sb-c-money">$250K&ndash;$500K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">12&ndash;24 months</span></a>
-    <a class="sb-row" data-cat="cost" href="#idea-08"><span class="sb-c-num">08</span><span class="sb-c-item">Expand shared back-office services with schools</span><span class="sb-c-money">$100K&ndash;$300K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">3&ndash;5 years</span></a>
-    <a class="sb-row" data-cat="cost" href="#idea-09"><span class="sb-c-num">09</span><span class="sb-c-item">Inter-municipal staff sharing with neighbor towns</span><span class="sb-c-money">$50K&ndash;$150K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;2 years</span></a>
-    <a class="sb-row" data-cat="cost" href="#idea-10"><span class="sb-c-num">10</span><span class="sb-c-item">Move permits and inspections online</span><span class="sb-c-money">Cost-neutral</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">12&ndash;18 months</span></a>
-    <a class="sb-row" data-cat="cost" href="#idea-11"><span class="sb-c-num">11</span><span class="sb-c-item">Renegotiate the 83% premium share for active employees</span><span class="sb-c-money">$300K&ndash;$1.5M/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">3&ndash;6 years</span></a>
-    <a class="sb-row" data-cat="cost" href="#idea-12"><span class="sb-c-num">12</span><span class="sb-c-item">Spousal surcharge or carve-out on the health plan</span><span class="sb-c-money">$100K&ndash;$400K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">2&ndash;4 years</span></a>
-    <a class="sb-row" data-cat="cost" href="#idea-13"><span class="sb-c-num">13</span><span class="sb-c-item">Audit overtime patterns in police, fire, <abbr class="g" title="Department of Public Works">DPW</abbr></span><span class="sb-c-money">$50K&ndash;$300K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
-    <a class="sb-row" data-cat="cost" href="#idea-14"><span class="sb-c-num">14</span><span class="sb-c-item">Restructure part-time positions to avoid benefits</span><span class="sb-c-money">$20K&ndash;$100K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard in practice</span></span><span class="sb-c-time">no comparable</span></a>
-    <a class="sb-row" data-cat="cost" href="#idea-15"><span class="sb-c-num">15</span><span class="sb-c-item">Health-plan opt-out buyout for waiver-eligible staff</span><span class="sb-c-money">$300K&ndash;$650K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;3 years</span></a>
+    <a class="sb-row" data-cat="cost" data-money="600" data-diff="3" data-time="30" href="#idea-06"><span class="sb-c-num">06</span><span class="sb-c-item">Medicare Advantage for Medicare-eligible retirees</span><span class="sb-c-money">$300K&ndash;$900K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">2&ndash;3 years</span></a>
+    <a class="sb-row" data-cat="cost" data-money="375" data-diff="2" data-time="18" href="#idea-07"><span class="sb-c-num">07</span><span class="sb-c-item">Energy Savings Performance Contract on buildings</span><span class="sb-c-money">$250K&ndash;$500K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">12&ndash;24 months</span></a>
+    <a class="sb-row" data-cat="cost" data-money="200" data-diff="3" data-time="48" href="#idea-08"><span class="sb-c-num">08</span><span class="sb-c-item">Expand shared back-office services with schools</span><span class="sb-c-money">$100K&ndash;$300K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">3&ndash;5 years</span></a>
+    <a class="sb-row" data-cat="cost" data-money="100" data-diff="2" data-time="18" href="#idea-09"><span class="sb-c-num">09</span><span class="sb-c-item">Inter-municipal staff sharing with neighbor towns</span><span class="sb-c-money">$50K&ndash;$150K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;2 years</span></a>
+    <a class="sb-row" data-cat="cost" data-money="0" data-diff="1" data-time="15" href="#idea-10"><span class="sb-c-num">10</span><span class="sb-c-item">Move permits and inspections online</span><span class="sb-c-money">Cost-neutral</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">12&ndash;18 months</span></a>
+    <a class="sb-row" data-cat="cost" data-money="900" data-diff="3" data-time="54" href="#idea-11"><span class="sb-c-num">11</span><span class="sb-c-item">Renegotiate the 83% premium share for active employees</span><span class="sb-c-money">$300K&ndash;$1.5M/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">3&ndash;6 years</span></a>
+    <a class="sb-row" data-cat="cost" data-money="250" data-diff="3" data-time="36" href="#idea-12"><span class="sb-c-num">12</span><span class="sb-c-item">Spousal surcharge or carve-out on the health plan</span><span class="sb-c-money">$100K&ndash;$400K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">2&ndash;4 years</span></a>
+    <a class="sb-row" data-cat="cost" data-money="175" data-diff="1" data-time="9" href="#idea-13"><span class="sb-c-num">13</span><span class="sb-c-item">Audit overtime patterns in police, fire, <abbr class="g" title="Department of Public Works">DPW</abbr></span><span class="sb-c-money">$50K&ndash;$300K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="cost" data-money="60" data-diff="3" data-time="" href="#idea-14"><span class="sb-c-num">14</span><span class="sb-c-item">Restructure part-time positions to avoid benefits</span><span class="sb-c-money">$20K&ndash;$100K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard in practice</span></span><span class="sb-c-time">no comparable</span></a>
+    <a class="sb-row" data-cat="cost" data-money="475" data-diff="2" data-time="24" href="#idea-15"><span class="sb-c-num">15</span><span class="sb-c-item">Health-plan opt-out buyout for waiver-eligible staff</span><span class="sb-c-money">$300K&ndash;$650K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;3 years</span></a>
 
     <div class="sb-group">Governance and process</div>
-    <a class="sb-row" data-cat="gov" href="#idea-16"><span class="sb-c-num">16</span><span class="sb-c-item">Standing citizen Efficiency Commission (bylaw)</span><span class="sb-c-money">No direct $</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">6 mo bylaw, 1&ndash;2 yr findings</span></a>
-    <a class="sb-row" data-cat="gov" href="#idea-17"><span class="sb-c-num">17</span><span class="sb-c-item">Department-level zero-based / scoped review</span><span class="sb-c-money">$500K&ndash;$1.5M/cycle</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;2 years/cycle</span></a>
-    <a class="sb-row" data-cat="gov" href="#idea-18"><span class="sb-c-num">18</span><span class="sb-c-item">Formal performance audit of major cost centers</span><span class="sb-c-money">$30K&ndash;$400K cost</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy to commission</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="gov" data-money="" data-diff="2" data-time="18" href="#idea-16"><span class="sb-c-num">16</span><span class="sb-c-item">Standing citizen Efficiency Commission (bylaw)</span><span class="sb-c-money">No direct $</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">6 mo bylaw, 1&ndash;2 yr findings</span></a>
+    <a class="sb-row" data-cat="gov" data-money="1000" data-diff="2" data-time="18" href="#idea-17"><span class="sb-c-num">17</span><span class="sb-c-item">Department-level zero-based / scoped review</span><span class="sb-c-money">$500K&ndash;$1.5M/cycle</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;2 years/cycle</span></a>
+    <a class="sb-row" data-cat="gov" data-money="" data-diff="1" data-time="9" href="#idea-18"><span class="sb-c-num">18</span><span class="sb-c-item">Formal performance audit of major cost centers</span><span class="sb-c-money">$30K&ndash;$400K cost</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy to commission</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
   </div>
 </section>
 
@@ -1037,7 +1076,7 @@ community_pulse: off-sections
       <p class="idea-num">10 &middot; Operations</p>
       <h3 class="idea-title">Move building permits and inspections fully online</h3>
       <div class="idea-body">
-        <p>Building permits, inspection sign-offs, and zoning approvals still need <strong>paper forms and in-person counter visits</strong>. Modern permitting software (OpenGov, which the town already uses for procurement; Tyler; Energov) lets residents file, pay, and track everything online. The town adopted OpenGov for procurement bids in 2025; extending it to permitting is a natural next step.</p>
+        <p>Building permits, inspection sign-offs, and zoning approvals still need <strong>paper forms and in-person counter visits</strong> in many workflows, even though Marblehead has had permitting software in place since the Select Board awarded a 3-year, $44,420 contract to Viewpoint Government Solutions in April 2019.<sup class="cite" data-href="/meetings/select-board-2019-04-24/" data-source="Select Board minutes, 2019-04-24, Contract Permitting Software: 'Motion made and seconded to award a three year contract for permitting software to Viewpoint Government Solutions Inc. of Boston, MA in the amount of forty four thousand four hundred and twenty dollars ($44,420.00) and to authorize the Chair to sign the contract on behalf of the Board. All in favor.'"></sup> Modern permitting platforms (OpenGov, which the town already uses for procurement; Tyler; Energov) let residents file, pay, and track everything online. The town adopted OpenGov for procurement bids in 2025; extending it to permitting is a natural next step.</p>
         <p>Honest math: this is <strong>roughly cost-neutral in the short term and a small net savings long term</strong>, not a meaningful dollar play. A permitting platform for a town Marblehead's size typically costs $30K to $80K per year in licensing plus $30K to $80K one-time to implement. The savings come from a fraction of a full-time position recovered over a 1 to 2 year ramp, plus a small acceleration in when permit revenue hits the books. Real benefits beyond dollars: faster permit cycles for residents, better data and oversight, and less paper.</p>
         <p>The case for it is service quality and modernization, not budget savings. Worth noting that, even if the question framing on this page is about closing the deficit.</p>
       </div>
@@ -1327,7 +1366,8 @@ community_pulse: off-sections
       <h3 class="idea-title">Commission a formal performance audit of the major cost centers</h3>
       <div class="idea-body">
         <p>A <strong>performance audit</strong> is different from the annual financial audit Marblehead already has. A financial audit verifies that the books are accurate and follow accounting standards. A performance audit asks a different question: <strong>is the department achieving its goals efficiently, effectively, and economically?</strong> It's conducted against federal Generally Accepted Government Auditing Standards (the "Yellow Book"). Massachusetts cities and towns can engage the State Auditor's Division of Local Mandates, or outside firms like BerryDunn, Plante Moran, or ICMA Consulting.</p>
-        <p>Marblehead has had narrower, adjacent work. The 2024 CliftonLarsonAllen assessment of the town finance department was an operational review (15 of 23 recommendations implemented by March 2024). The annual Roselli, Clark &amp; Associates engagement is a financial audit, not a performance audit. <strong>The major operating cost centers, schools, police, fire, <abbr class="g" title="Department of Public Works">DPW</abbr>, have not been reviewed under performance-audit standards.</strong></p>
+        <p>Marblehead has had narrower, adjacent work. The 2024 CliftonLarsonAllen assessment of the town finance department was an operational review (15 of 23 recommendations implemented by March 2024); that engagement traces back to a 2021-04-22 Select Board vote awarding the firm a $15,000 contract.<sup class="cite" data-href="/meetings/select-board-2021-04-22/" data-source="Select Board minutes, 2021-04-22, Contract Operational Audit: 'Motion made and seconded to award a contract for an operational audit to Clifton Larson Associates of Lexington, MA in an amount not to exceed fifteen thousand dollars ($15,000.00) and authorize the Chair to sign on behalf of the Board.' Motion passed on a polled vote (Grader in favor, Nye in favor, Belf-Becker in favor). The firm later rebranded as CliftonLarsonAllen."></sup> The annual Roselli, Clark &amp; Associates engagement is a financial audit, not a performance audit. <strong>The major operating cost centers, schools, police, fire, <abbr class="g" title="Department of Public Works">DPW</abbr>, have not been reviewed under performance-audit standards.</strong></p>
+        <p>A broader independent audit reached the floor of the 2025 Annual Town Meeting as <strong>Article 46</strong>, which proposed appropriating $100,000 from free cash for an independent town audit. The sponsor moved indefinite postponement on the floor; the indefinite-postponement motion carried <strong>405 to 21</strong>, ending the article without a substantive vote on whether to commission the audit.<sup class="cite" data-href="/meetings/town-meeting-2025-05-08-article-46/" data-source="Town Meeting transcript, 2025-05-08, Article 46. Moderator: 'Article 46, appropriate funds for an independent audit. The main motion for this is indefinite postponement, by the sponsor.' Sponsor: 'Move.' Moderator: 'Do I have a second? Thank you. Seeing no speakers, we're going to go to a vote on the indefinite postponement of Article 46.' [Vote taken.] Moderator: 'Article 46 passes, 405 to 21.' Source: MHTV recording of the 2025 Annual Town Meeting, final session, May 8, 2025 (YouTube video ootpoCJlG6k), approximately 1:19:00 to 1:20:15. Tally is from the MHTV caption-track transcription; Town Clerk minutes are the official record."></sup></p>
         <p>What an audit would actually deliver: department-by-department findings on whether services achieve their goals at the lowest cost, with specific recommendations for changes. Cost depends entirely on scope: roughly $30K to $80K for a single-department review, $150K to $400K for a comprehensive town-wide audit. <strong>Honest read:</strong> Marblehead has had several recent assessments and the implementation track record has been uneven. An audit without a serious implementation commitment is a cost without the benefit.</p>
       </div>
       <div class="idea-guess">
@@ -1463,6 +1503,64 @@ community_pulse: off-sections
   </div>
 
   <p class="wcwd-prov-fine" style="margin-top:32px;">
-    <strong>Updates.</strong> 2026-06-02 (afternoon): Added four employee-benefit and personnel items after a reader flagged the gap: active-employee premium-share renegotiation (11, large lever), spousal surcharge or carve-out (12, moderate lever), overtime audit (13, smaller), and schedule fragmentation at benefit thresholds (14, listed but not recommended). Page is now 16 items, not 12. 2026-06-02 (morning): Initial draft, then several rounds of correction in response to readers. Reframed from "inventory of measures" to "list of questions" after a reader pointed out the original framing overstated what one person's research conversation can actually claim. Boat excise card rewritten to reflect that valuations are statutory; the only local lever is compliance. "Who pays?" boxes added to every card so the distributional tradeoff sits at the same visual weight as the dollar number. Idea 8 reframed from "combine" to "share" to respect the legal structure under <abbr class="g" title="Massachusetts General Laws">MGL</abbr> c. 71 &sect; 37, which gives the School Committee independent budget authority. Idea 9 updated to acknowledge the existing joint ambulance contract with Swampscott (2025-07-23). Idea 10 reframed honestly as roughly cost-neutral after a reader pointed out that the software cost was missing from the prior math. Zero-based budgeting card updated to reflect four prior School Committee discussions (2020-06-08, 2022-07-19, 2023-07-06, 2025-10-17), not two.
+    <strong>Updates.</strong> 2026-06-09: At-a-glance scoreboard columns are now sortable; click a column header to re-rank. Added Article 46 and Viewpoint receipts to ideas 18 and 10. 2026-06-02 (afternoon): Added four employee-benefit and personnel items after a reader flagged the gap: active-employee premium-share renegotiation (11, large lever), spousal surcharge or carve-out (12, moderate lever), overtime audit (13, smaller), and schedule fragmentation at benefit thresholds (14, listed but not recommended). Page is now 16 items, not 12. 2026-06-02 (morning): Initial draft, then several rounds of correction in response to readers. Reframed from "inventory of measures" to "list of questions" after a reader pointed out the original framing overstated what one person's research conversation can actually claim. Boat excise card rewritten to reflect that valuations are statutory; the only local lever is compliance. "Who pays?" boxes added to every card so the distributional tradeoff sits at the same visual weight as the dollar number. Idea 8 reframed from "combine" to "share" to respect the legal structure under <abbr class="g" title="Massachusetts General Laws">MGL</abbr> c. 71 &sect; 37, which gives the School Committee independent budget authority. Idea 9 updated to acknowledge the existing joint ambulance contract with Swampscott (2025-07-23). Idea 10 reframed honestly as roughly cost-neutral after a reader pointed out that the software cost was missing from the prior math. Zero-based budgeting card updated to reflect four prior School Committee discussions (2020-06-08, 2022-07-19, 2023-07-06, 2025-10-17), not two.
   </p>
 </section>
+
+<script>
+(function () {
+  var sb = document.querySelector('#scoreboard .sb');
+  if (!sb) return;
+  var rows = Array.prototype.slice.call(sb.querySelectorAll('.sb-row'));
+  rows.forEach(function (row, i) { row.dataset.initialOrder = i; });
+  var headButtons = sb.querySelectorAll('.sb-head [data-sort]');
+  var state = { key: null, dir: null };
+
+  function numeric(v) {
+    if (v === undefined || v === null || v === '') return null;
+    var n = parseFloat(v);
+    return isNaN(n) ? null : n;
+  }
+
+  function compareFor(key, dir) {
+    return function (a, b) {
+      var va, vb;
+      if (key === 'num') {
+        va = parseInt(a.dataset.initialOrder, 10);
+        vb = parseInt(b.dataset.initialOrder, 10);
+      } else if (key === 'item') {
+        va = a.querySelector('.sb-c-item').textContent.trim().toLowerCase();
+        vb = b.querySelector('.sb-c-item').textContent.trim().toLowerCase();
+      } else {
+        va = numeric(a.dataset[key]);
+        vb = numeric(b.dataset[key]);
+        if (va === null && vb === null) return 0;
+        if (va === null) return 1;
+        if (vb === null) return -1;
+      }
+      if (va < vb) return dir === 'descending' ? 1 : -1;
+      if (va > vb) return dir === 'descending' ? -1 : 1;
+      return parseInt(a.dataset.initialOrder, 10) - parseInt(b.dataset.initialOrder, 10);
+    };
+  }
+
+  function applySort(key, dir) {
+    state.key = key;
+    state.dir = dir;
+    var sorted = rows.slice().sort(compareFor(key, dir));
+    sorted.forEach(function (row) { sb.appendChild(row); });
+    sb.classList.add('is-sorted');
+    headButtons.forEach(function (btn) {
+      btn.setAttribute('aria-sort', btn.dataset.sort === key ? dir : 'none');
+    });
+  }
+
+  headButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var key = btn.dataset.sort;
+      var nextDir = (state.key === key && state.dir === 'ascending') ? 'descending' : 'ascending';
+      applySort(key, nextDir);
+    });
+  });
+})();
+</script>
