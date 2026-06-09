@@ -44,9 +44,9 @@ Questions · Browse · Subscribe`). Subscribe moves to a button inside
 
 ### Top-level pages: 50 → ~25
 
-**11 content pages + 4 infra pages + 9 primer chapters + 5 charts + 3 apps.**
+**12 content pages + 4 infra pages + 9 primer chapters + 5 charts + 3 apps.**
 
-#### The 11 content pages (top-level)
+#### The 12 content pages (top-level)
 
 | File | Role | Notes |
 |---|---|---|
@@ -56,7 +56,8 @@ Questions · Browse · Subscribe`). Subscribe moves to a button inside
 | `subscribe.html` | Signup permalink | Keep. Thin landing &mdash; shareable URL, not content. |
 | `checkbook.html` | Checkbook pillar landing | **Moved** from `/charts/checkbook.html` &rarr; `/checkbook/`. Add `permalink: /checkbook/`. Old URL 301s. |
 | `town-debt.html` | Featured data page | Already long-form, recently shipped. Linked from homepage + `/data/` hub. |
-| `town-finances.html` | Merged data page | Merge of `town-budget.html` (FY27 line-item explorer) + `where-has-the-money-gone.html` (FY15-FY26 historical analysis). **Implementer should reconsider:** these have different purposes (interactive tool vs. historical narrative). If the merge creates a Frankenstein, keep them split and update this spec. |
+| `town-budget.html` | FY27 line-item explorer | **Kept as separate page.** During execution, the planned merge with `where-has-the-money-gone.html` was reconsidered: the two have different purposes (interactive tool vs. historical narrative) and a merge would have been a Frankenstein. Both stay live as standalone pages and are linked from `/data/`. |
+| `where-has-the-money-gone.html` | FY15-FY26 historical analysis | **Kept as separate page.** See `town-budget.html` note. |
 | `inside-school-staffing.html` | School-side data | Already absorbed `town-school-admin.html` per earlier cycle; keep. |
 | `senior-tax-relief.html` | Live policy page | Probationary: H.4225 in committee. Re-evaluate Q1 2027 once bill resolves; either keep or fold into a primer note. |
 | `how-we-got-here.html` | Long-form narrative | Absorbs `what-has-the-town-done.html`, `why-not-elsewhere.html`, `fiscal-goals.html`. |
@@ -142,8 +143,6 @@ Total surviving chart files: 6 (5 in `/charts/` + 1 promoted).
 | `what-has-the-town-done.html` | `how-we-got-here.html` | The cost-control inventory as a section. |
 | `why-not-elsewhere.html` | `how-we-got-here.html` | The revenue-alternatives walkthrough as a section. |
 | `town-school-admin.html` | `inside-school-staffing.html` | Already done in prior cycle; verify. |
-| `town-budget.html` | `town-finances.html` (new merge) | Year-in-context section. |
-| `where-has-the-money-gone.html` | `town-finances.html` (new merge) | Historical trends section. |
 | `marblehead-voting-record.html` | `/2026-override/index.html` | History-of-overrides section, anchoring the chart. |
 | `topics.html` | `/meetings/` | Already a meetings sub-view; fix any standalone link. |
 | `branches.html` | `/me/` or `/verify/` | Verification-network internal; minor. |
