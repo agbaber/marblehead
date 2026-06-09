@@ -167,6 +167,19 @@ og_type: article
     background: var(--divider);
   }
 
+  /* seats-of-government 2x2 grid */
+  body.feature-article .seats {
+    max-width: var(--fa-maxw); margin: 30px auto 34px;
+    padding: 0 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 26px 24px;
+  }
+  body.feature-article .seats figure { margin: 0; }
+  body.feature-article .seats img {
+    width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top;
+    border-radius: var(--radius-sm); box-shadow: var(--shadow-md);
+    background: var(--divider);
+  }
+
   /* ---------- PULL QUOTE ---------- */
   body.feature-article .pull {
     max-width: var(--fa-maxw); margin: 36px auto;
@@ -265,8 +278,8 @@ og_type: article
     <p class="era">1629 &ndash; 1649 <span>The founding</span></p>
     <h2>A town born out of friction</h2>
     <p>There's a story behind the two founding dates you see around town. Marblehead was settled around 1629 as a fishing village under Salem, but its settlers were a very different crowd from Salem's Puritans. They arrived with no shared plan for how to worship or govern themselves.</p>
-    <p>It didn't go well. Early colonial court records show Marbleheaders being hauled into Salem over and over for drunkenness, foul language, and skipping church, all offenses under Puritan law. Twenty years of it ended on December 12, 1648, when a Salem town meeting voted, subject to the General Court's approval, to grant Marblehead its independence. The town was formally incorporated on May 2, 1649.</p>
-    <p>One footnote for anyone working with the town's records: because Marblehead was legally part of Salem until 1649, no public records were kept locally before then. The town's documented civic life begins with its independence.</p>
+    <p>It didn't go well. Early colonial court records show Marbleheaders being hauled into Salem over and over for drunkenness, foul language, and skipping church, all offenses under Puritan law. Thomas Gary was whipped for drunkenness in 1642. Twenty years of it ended on December 12, 1648, when a Salem town meeting voted, subject to the General Court's approval, to grant Marblehead its independence. The town was formally incorporated on May 2, 1649.</p>
+    <p>Because Marblehead was legally part of Salem until 1649, no public records were kept locally before then. The town's documented civic life begins with its independence.</p>
   </section>
 
   <div class="pull reveal">
@@ -280,16 +293,43 @@ og_type: article
     <p class="era">1638 &ndash; 1727 <span>Four seats of government</span></p>
     <h2>When the meeting house was the government</h2>
     <p>For the first century, church and town government shared a roof. The first meeting house went up on Old Burial Hill around 1638, serving as both place of worship and seat of town affairs, as was standard in early New England. A town meeting in September 1695 voted to build a replacement, and the Old Meeting House on Franklin Street was finished in 1696.</p>
-    <p>By 1727, Marblehead had grown into one of the wealthiest seaports in the colonies, and church and government had started to pull apart. Officials funded a dedicated civic building that year: the yellow Georgian Old Town House still sitting in the middle of Washington Street, designed by Nathan Bowen, with a town hall upstairs and a public market below. Counting from the beginning, Abbot Hall is the town's <em>fourth</em> seat of government: First Meeting House (1638), Old Meeting House (1696), Old Town House (1727), and finally Abbot Hall (1876).</p>
+    <p>By 1727, Marblehead had grown into one of the wealthiest seaports in the colonies, and church and government had started to pull apart. Officials funded a dedicated civic building that year: the yellow Georgian Old Town House still standing in the middle of Washington Street, designed by Nathan Bowen, with a town hall upstairs and a public market below. Counting from the beginning, Abbot Hall is the town's <em>fourth</em> seat of government: First Meeting House (1638), Old Meeting House (1696), Old Town House (1727), and finally Abbot Hall (1876).</p>
   </section>
+
+  <div class="seats reveal">
+    <figure>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Old_Burial_Hill.jpg?width=900"
+           alt="Old Burial Hill, Marblehead" loading="lazy"
+           onerror="this.closest('figure').style.display='none';">
+      <figcaption><b>First Meeting House, 1638.</b> No image of the building survives. It stood on Old Burial Hill, pictured.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Marblehead_Franklin_Meeting_House.jpg?width=900"
+           alt="The Franklin Street Meeting House, Marblehead, in an 1880 illustration" loading="lazy"
+           onerror="this.closest('figure').style.display='none';">
+      <figcaption><b>Old Meeting House, 1696.</b> Engraving from Samuel Roads' 1880 history of Marblehead. The building stood on Franklin Street until it was demolished in 1825.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Marblehead%20Old%20Town%20Hall.jpg?width=900"
+           alt="The Old Town House, Marblehead, modern color photograph" loading="lazy"
+           onerror="this.closest('figure').style.display='none';">
+      <figcaption><b>Old Town House, 1727.</b> The yellow Georgian building still sits in the middle of Washington Street.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Abbot_Hall_-_Mablehead,_Massachusetts.JPG?width=900"
+           alt="Abbot Hall, Marblehead, modern color photograph" loading="lazy"
+           onerror="this.closest('figure').style.display='none';">
+      <figcaption><b>Abbot Hall, 1876.</b> Town's fourth and current seat of government, its clock tower visible across the harbor.</figcaption>
+    </figure>
+  </div>
 
   <!-- 3 -->
   <section class="chapter reveal">
     <span class="dot"></span>
     <p class="era">1684 <span>A legal scare</span></p>
     <h2>The year the town's deed disappeared</h2>
-    <p>This one is genuinely strange. In 1684, Charles II revoked the Massachusetts Bay Company's charter and invalidated every land title that derived from it. Overnight, Marbleheaders had no legal documentation that they owned the ground under their own town, and the Naumkeag heirs of the sachem Nanepashemet could press a claim to it.</p>
-    <p>The town's solution was simply to buy a deed. On September 16, 1684, those heirs sold their roughly 3,700 acres, and that deed survives to this day. It now hangs in the Selectmen's room at Abbot Hall, a few feet from the Spirit of '76.</p>
+    <p>In 1684, Charles II revoked the Massachusetts Bay Company's charter and invalidated every land title that derived from it. Overnight, Marbleheaders had no legal documentation that they owned the ground under their own town.</p>
+    <p>The town's solution was to buy a deed from the original landowners. On September 16, 1684, descendants of the Naumkeag sachem Nanepashemet sold the town their roughly 3,700 acres. That deed survives to this day, hanging in the Selectmen's room at Abbot Hall a few feet from the Spirit of '76.</p>
   </section>
 
   <!-- 4 -->
@@ -297,10 +337,10 @@ og_type: article
     <span class="dot"></span>
     <p class="era">1773 &ndash; 1774 <span>The smallpox riot</span></p>
     <h2>The riot that out-burned the Tea Party</h2>
-    <p>Nothing captures the town's temper better than this. When smallpox struck in 1773, an August town meeting debated building a public inoculation hospital on a harbor island. The meeting voted the idea down, but agreed to let private parties fund one provided the selectmen could regulate it.</p>
+    <p>When smallpox struck in 1773, an August town meeting debated building a public inoculation hospital on a harbor island. The meeting voted the idea down, but agreed to let private parties fund one provided the selectmen could regulate it.</p>
     <p>The four proprietors were a who's-who of the town's coming revolutionary leadership: John Glover, his brother Jonathan Glover, Azor Orne, and Elbridge Gerry. They bought Cat Island, now Children's Island, on September 2, 1773, and opened what was called the Essex Hospital.</p>
     <p>It went badly. Furious townspeople rioted for days, blackening their faces, burning the boat that supplied the island, and smashing the proprietors' windows. In January, four men were caught stealing contaminated clothing from the island, apparently hoping to spread the disease and discredit the hospital. On the night of January 26, 1774, two Marbleheaders sailed out and burned the building to the ground.</p>
-    <p>What happened next is the part worth knowing. Samuel Adams brushed off the riots as a local quarrel bearing "no relation" to the Sons of Liberty. Gerry, a future U.S. vice president and the man whose name gave us <em>gerrymander</em>, defended his role in the hospital proudly for years afterward.</p>
+    <p>The proprietors closed the Essex Hospital under public pressure. None of them lost their political standing. Gerry, the man whose name gave us <em>gerrymander</em>, went on to sign the Declaration and serve as U.S. vice president. Glover commanded the Marblehead Regiment that rowed Washington's army across the Delaware on Christmas night, 1776.</p>
   </section>
 
   <div class="portraits reveal">
@@ -323,15 +363,15 @@ og_type: article
     <span class="dot"></span>
     <p class="era">1765 &ndash; 1776 <span>Revolution</span></p>
     <h2>The Cradle of Liberty on Washington Street</h2>
-    <p>The nickname is well earned. The Old Town House hosted protests against the Stamp Act and the Boston Port Act, and was a main meeting spot for the Sons of Liberty, where leaders like Gerry and Glover debated independence. Town meeting itself was a revolutionary tool: in 1771 a meeting appointed Deacon William Doliber to a committee of grievances, charged with corresponding with other towns to press the province's rights against the crown.</p>
-    <p>One more moment from 1774. After the Boston Port Bill shut Boston's harbor, Marblehead was designated the colony's official port of entry in Boston's place, a windfall for its merchants. They declined it, and instead invited the Boston merchants to use their wharves and warehouses for free.</p>
+    <p>The Old Town House hosted protests against the Stamp Act and the Boston Port Act. Sons of Liberty leaders like Gerry and Glover debated independence inside it. Town meeting itself was used to press the colonial cause: in 1771 a meeting appointed Deacon William Doliber to a committee of grievances, charged with corresponding with other towns about the province's rights.</p>
+    <p>In 1774, after the Boston Port Bill shut Boston's harbor, Marblehead was designated the colony's official port of entry in Boston's place. It was a windfall for the town's merchants. They declined it and invited the Boston merchants to use Marblehead's wharves and warehouses for free.</p>
     <figure class="plate">
       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Historic_American_Buildings_Survey_Arthur_C._Haskell%2C_Photographer_October%2C_1934_%28a%29_VIEW_FROM_SOUTHEAST_-_Town_House%2C_Market_Square%2C_Marblehead%2C_Essex_County%2C_MA_HABS_MASS%2C5-MARB%2C3-1.tif?width=1100"
            alt="The Old Town House, Marblehead, 1934" loading="lazy"
            onerror="this.closest('figure').style.display='none';">
       <figcaption><b>The Old Town House (1727)</b>, photographed for the Historic American Buildings Survey, 1934. "Marblehead's Cradle of Liberty," upstairs town hall and downstairs market, still in use as a public building nearly three centuries on.</figcaption>
     </figure>
-    <p>A darker note from the colonial record: the only Marbleheader executed in the 1692 witch trials, Wilmot Redd, was arrested by the town's own constable, James Smith, before being tried and hanged in Salem. A commemorative stone for her stands on Old Burial Hill, where the town's civic life had begun a half-century earlier.</p>
+    <p>The colonial record has a darker chapter too. The only Marbleheader executed in the 1692 witch trials, Wilmot Redd, was arrested by the town's own constable, James Smith, before being tried and hanged in Salem. A commemorative stone for her stands on Old Burial Hill, where the town's civic life had begun a half-century earlier.</p>
   </section>
 
   <!-- 6 -->
@@ -357,6 +397,7 @@ og_type: article
     <p class="era">2026 <span>Still in session</span></p>
     <h2>Four hundred years, same argument</h2>
     <p>The remarkable part is the continuity. The Old Town House is one of the oldest town halls in America still in continuous use, and Marblehead still runs on the same open town meeting form it has used since the 1600s. Every registered voter a legislator, every appropriation argued from the floor.</p>
+    <p>The arguments haven't stopped. Lately the town has split over a multimillion-dollar <a href="what-is-the-override.html">override</a> of Proposition 2&frac12; (the state cap on property-tax increases) and over whether to rezone for multifamily housing under the state's MBTA Communities law. Residents line up on both sides of each. They always have.</p>
     <p>The town that fled Puritan governance, bought back its own deed, and burned down a hospital it had voted to allow is recognizable today. <em>The override fight is just the 1773 town meeting with a moderator and a microphone.</em></p>
   </div>
 </section>
@@ -368,7 +409,11 @@ og_type: article
     <ul>
       <li><b>Hero, Marblehead panorama.</b> Library of Congress (LCCN 2007661011). <span class="pd">Public domain</span></li>
       <li><b>The Spirit of '76</b> by Archibald M. Willard (1876), <span class="pd">public domain</span>; photographed on exhibit in Abbot Hall by Tom Sulcer, released <span class="pd">CC0</span></li>
-      <li><b>Old Town House (1727).</b> Historic American Buildings Survey, Arthur C. Haskell, 1934. Library of Congress. <span class="pd">Public domain</span></li>
+      <li><b>Old Burial Hill</b>, Marblehead. Wikimedia Commons photograph. <span class="pd">CC BY-SA</span></li>
+      <li><b>Old Meeting House (1696).</b> Engraving from Samuel Roads, <em>The History and Traditions of Marblehead</em> (Houghton, Osgood, 1880). <span class="pd">Public domain</span></li>
+      <li><b>Old Town House (1727), modern view.</b> Wikimedia Commons photograph. <span class="pd">CC BY-SA</span></li>
+      <li><b>Old Town House (1727), 1934.</b> Historic American Buildings Survey, Arthur C. Haskell. Library of Congress. <span class="pd">Public domain</span></li>
+      <li><b>Abbot Hall (1876), modern view.</b> Wikimedia Commons photograph. <span class="pd">CC BY-SA</span></li>
       <li><b>Abbot Hall, stereoscopic view.</b> Robert N. Dennis Collection of Stereoscopic Views, New York Public Library. <span class="pd">Public domain</span></li>
       <li><b>Elbridge Gerry.</b> Drawing by James Barton Longacre, c. 1820, National Portrait Gallery. <span class="pd">Public domain</span></li>
       <li><b>Gen. John Glover.</b> Historical portrait via Wikimedia Commons. <span class="pd">Public domain</span></li>
@@ -377,6 +422,7 @@ og_type: article
     <ul>
       <li>Town of Marblehead, <b>"Our History"</b> &amp; Marblehead Historical Commission (Town Deed; Historic Places; About Abbot Hall)</li>
       <li><b>Marblehead Current</b>, "Was the town's founding in 1629 or 1649?"</li>
+      <li><b>Essex County Quarterly Court Records, 1642</b> (Thomas Gary, Marblehead, whipped for drunkenness)</li>
       <li>New England Historical Society &amp; Historic Ipswich, <b>the 1773&ndash;74 Marblehead smallpox / Essex Hospital riot</b></li>
       <li>Wikipedia: <b>Marblehead, Old Town House, Old Meeting House, Abbot Hall, Essex Hospital, Children's Island, John Glover, Elbridge Gerry</b></li>
       <li>Encyclop&aelig;dia Britannica, "Marblehead"; <b>Buildings of New England</b>, "Old Town House, 1727"</li>
