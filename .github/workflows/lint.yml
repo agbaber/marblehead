@@ -68,8 +68,6 @@ jobs:
             ':!community-pulse'
             ':!proof'
             ':!.github'
-            ':!data/is-the-board-trying.md'
-            ':!data/what-have-we-tried.md'
             ':!data/minutes_catalog*.md'
             ':!_transcripts/*.md'
           )
