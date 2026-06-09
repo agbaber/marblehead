@@ -1,0 +1,103 @@
+{
+  "source": "FY24 Town of Marblehead ACFR (data/town_docs/FY24_Town_of_Marblehead_ACFR.pdf)",
+  "as_of": "2024-06-30",
+  "outstanding_long_term_debt_total": 116507991,
+  "components": {
+    "governmental_general_obligation_bonds_principal": 101065000,
+    "governmental_unamortized_bond_premium": 7730557,
+    "governmental_direct_borrowings": 549347,
+    "water_mwra_notes": 3461580,
+    "municipal_light_mmwec_notes": 3701507
+  },
+  "credit_rating": "AAA stable (S&P)",
+  "legal_debt_limit": 475181000,
+  "legal_debt_margin_pct_of_limit_used": 12.46,
+  "bond_anticipation_notes_outstanding": 2300000,
+  "authorized_but_unissued": {
+    "total": 12232625,
+    "items": [
+      { "project": "Gerry School construction", "amount": 1619627 },
+      { "project": "Mary Alley building roof replacement", "amount": 480000 },
+      { "project": "Franklin Street Fire Station roof", "amount": 130598 },
+      { "project": "Roads and sidewalks", "amount": 8980000 },
+      { "project": "Water projects", "amount": 1022400 }
+    ]
+  },
+  "fy24_change": {
+    "regular_maturities": -8035853,
+    "issuance": 776653,
+    "premium_amortization": -1127190,
+    "net_change": -8386390
+  },
+  "outstanding_total_by_fiscal_year": [
+    { "fy": 2015, "outstanding": 74064865 },
+    { "fy": 2016, "outstanding": 82660432 },
+    { "fy": 2017, "outstanding": 78878404 },
+    { "fy": 2018, "outstanding": 73906636 },
+    { "fy": 2019, "outstanding": 76497250 },
+    { "fy": 2020, "outstanding": 86279104 },
+    { "fy": 2021, "outstanding": 118760783 },
+    { "fy": 2022, "outstanding": 119858632 },
+    { "fy": 2023, "outstanding": 124894381 },
+    { "fy": 2024, "outstanding": 116507991 }
+  ],
+  "go_bond_maturity_schedule": {
+    "note": "Governmental Activities general obligation bonds only (principal $101.07M as of 6/30/2024)",
+    "rows": [
+      { "year_ending_june_30": 2025, "principal": 7540000, "interest": 3453080 },
+      { "year_ending_june_30": 2026, "principal": 5955000, "interest": 3162146 },
+      { "year_ending_june_30": 2027, "principal": 6225000, "interest": 2889104 },
+      { "year_ending_june_30": 2028, "principal": 6500000, "interest": 2607573 },
+      { "year_ending_june_30": 2029, "principal": 6720000, "interest": 2316691 },
+      { "year_ending_june_30_range": "2030-2034", "principal": 34005000, "interest": 7501578 },
+      { "year_ending_june_30_range": "2035-2039", "principal": 24810000, "interest": 2716558 },
+      { "year_ending_june_30_range": "2040-2044", "principal": 9310000, "interest": 356025 }
+    ],
+    "principal_total": 101065000,
+    "interest_total": 25002755
+  },
+  "debt_exclusion_record": {
+    "source": "data/dor_debt_exclusion_all.csv (MA DOR), filtered to municipality == Marblehead",
+    "wins": 50,
+    "losses": 1,
+    "only_loss": {
+      "project": "Tucker's Wharf (remodel/reconstruction/repair)",
+      "vote_date": "2002-06-24",
+      "fiscal_year": 2003,
+      "department": "Culture and Recreation"
+    }
+  },
+  "fy24_excluded_debt_service": {
+    "source": "FY24 ACFR Schedule of Revenues, Expenditures and Changes in Fund Balance, Budget and Actual, Excluded Debt section",
+    "amount": 11001616,
+    "note": "Total Excluded Debt Services in the FY24 budgetary basis statement. Essentially all of the town's annual debt service is paid outside the Proposition 2.5 levy limit via voter-approved exclusions."
+  },
+  "appropriated_debt_service_recent": [
+    { "fy": 2024, "maturing_debt": 7540000, "interest": 3518075, "total": 11058075 },
+    { "fy": 2025, "maturing_debt": 5955000, "interest": 3359141, "total": 9314141 },
+    { "fy": 2026, "maturing_debt": 7251017, "interest": 3847381, "total": 11098398, "note": "FY27 Proposed Budget column" },
+    { "fy": 2027, "maturing_debt": 7251017, "interest": 3847381, "total": 11098398, "note": "FY27 Proposed Budget" }
+  ],
+  "peer_debt_service_share_fy24": {
+    "source": "data/peer_schedule_a_expenditures.csv (MA DLS Schedule A)",
+    "rows": [
+      { "town": "Arlington",  "debt_service": 23737977, "total_expenditures": 208917874, "share_pct": 11.36 },
+      { "town": "Marblehead", "debt_service": 11006139, "total_expenditures": 100501118, "share_pct": 10.95 },
+      { "town": "Brookline",  "debt_service": 35718059, "total_expenditures": 343426310, "share_pct": 10.40 },
+      { "town": "Swampscott", "debt_service":  7069094, "total_expenditures":  69829179, "share_pct": 10.12 },
+      { "town": "Wellesley",  "debt_service": 19140672, "total_expenditures": 190129964, "share_pct": 10.07 },
+      { "town": "Stoneham",   "debt_service":  8620334, "total_expenditures":  86847020, "share_pct":  9.93 },
+      { "town": "Winchester", "debt_service": 13504423, "total_expenditures": 138551510, "share_pct":  9.75 },
+      { "town": "Needham",    "debt_service": 20485124, "total_expenditures": 214855754, "share_pct":  9.53 },
+      { "town": "Lexington",  "debt_service": 23374202, "total_expenditures": 264827741, "share_pct":  8.83 },
+      { "town": "Natick",     "debt_service": 15724178, "total_expenditures": 185379533, "share_pct":  8.48 },
+      { "town": "Duxbury",    "debt_service":  6831188, "total_expenditures":  93229364, "share_pct":  7.33 },
+      { "town": "Easton",     "debt_service":  7014410, "total_expenditures":  96130612, "share_pct":  7.30 },
+      { "town": "Hingham",    "debt_service":  8599792, "total_expenditures": 126771556, "share_pct":  6.78 },
+      { "town": "Newton",     "debt_service": 25264712, "total_expenditures": 505333531, "share_pct":  5.00 },
+      { "town": "Framingham", "debt_service": 16155889, "total_expenditures": 337028721, "share_pct":  4.79 },
+      { "town": "Melrose",    "debt_service":  5213126, "total_expenditures": 111356400, "share_pct":  4.68 },
+      { "town": "Cohasset",   "debt_service":  1672052, "total_expenditures":  52976960, "share_pct":  3.16 }
+    ]
+  }
+}

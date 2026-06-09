@@ -101,6 +101,34 @@ Document links below point at the [primary source archive](archive), a GitHub re
 - Series 2015 General Obligation Municipal Purpose Loan Bonds, due 08/01/2035
 - Archived PDF contains the rating-action letter only. The supporting rationale (research update with reserve ratios, debt figures, and downgrade triggers) is referenced as an enclosure but is not included in the publicly distributed letter. Secondary coverage: Marblehead Independent, ["S&amp;P affirms Marblehead's AAA bond rating, shifts outlook to negative"](https://www.marbleheadindependent.com/s-p-affirms-marbleheads-aaa-bond-rating-shifts-outlook-to-negative/). That article paraphrases the rationale as citing a "~$7.7 million" FY27 structural deficit, which predates the $8,471,823 figure presented at the January 28, 2026 State of the Town; use the Town Administrator figure for site-wide deficit references.
 
+## Long-Term Debt Outstanding ($116.5M at 6/30/2024)
+- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 60 (Long-Term Debt note, summary of outstanding obligations)
+- 10-year trend: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 121, "Ratios of Outstanding Debt by Type"
+- Changes in long-term liabilities: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 59
+- Local copy of ACFR: `data/town_docs/FY24_Town_of_Marblehead_ACFR.pdf`
+- Structured digest used by `town-debt.html`: `data/debt_summary.json`
+
+## GO Bond Maturity Schedule (through FY2044)
+- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 61, "Payments on outstanding bond balances due in future years"
+- Governmental Activities general obligation bonds only: principal $101,065,000 + interest $25,002,755 = $126,067,755 total
+
+## Legal Debt Limit and Margin ($475.2M limit, 12.46% used FY24)
+- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 123, "Computation of Legal Debt Margin, Last Ten Fiscal Years"
+- Limit = 5% of equalized valuation per M.G.L. c. 44 § 10
+
+## Authorized But Unissued Debt ($12.23M at 6/30/2024)
+- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 59
+- Breakdown: roads/sidewalks $8.98M, Gerry School $1.62M, water projects $1.02M, Mary Alley roof $480K, Franklin St Fire Station roof $131K
+
+## Debt-Exclusion Ballot History (50 WIN / 1 LOSS, 1988&ndash;2025)
+- MA DOR Division of Local Services debt-exclusion file: `data/dor_debt_exclusion_all.csv`
+- Marblehead filtered: 51 rows. Only LOSS is the June 2002 Tucker's Wharf vote (Culture and Recreation).
+
+## Debt Service as % of Total Spending (peer comparison, FY24)
+- MA DLS Schedule A for 17 peer towns: `data/peer_schedule_a_expenditures.csv`
+- Calculation: `debt_service / total_expenditures` per (town, fiscal_year) row
+- FY24 Marblehead: $11,006,139 / $100,501,118 = 10.95%
+
 ## 2026 Annual Town Meeting Warrant (May 4, 2026)
 - [2026 Annual Town Meeting Warrant](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026_Annual_Town_Meeting_Warrant.pdf), posted February 26, 2026, signed by Town Administrator Thatcher Kezer
 - Article 28: School Department Supplemental Appropriation, contingent on Proposition 2&frac12; ballot question
