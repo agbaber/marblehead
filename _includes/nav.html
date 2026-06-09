@@ -3,11 +3,10 @@
     <a class="nav-brand" href="{{ '/' | relative_url }}"><img class="nav-logo" src="{{ '/' | relative_url }}favicon.svg" alt="" width="22" height="22"> MHD Data</a>
 
     <a class="nav-link" href="{{ '/' | relative_url }}marblehead-101/"{% if page.url contains '/marblehead-101/' %} aria-current="page"{% endif %}>Primer</a>
-    <a class="nav-link" href="{{ '/' | relative_url }}whats-on-the-ballot.html"{% if page.url == '/whats-on-the-ballot.html' %} aria-current="page"{% endif %}>Ballot</a>
-    <a class="nav-link" href="{{ '/' | relative_url }}where-candidates-stand.html"{% if page.url == '/where-candidates-stand.html' %} aria-current="page"{% endif %}>Candidates</a>
-    <a class="nav-link" href="{{ '/' | relative_url }}explore.html"{% if page.url == '/explore.html' or page.url == '/the-debate.html' %} aria-current="page"{% endif %}>Questions</a>
-    <a class="nav-link" href="{{ '/' | relative_url }}browse.html"{% if page.url == '/browse.html' %} aria-current="page"{% endif %}>Browse</a>
-    <a class="nav-link" href="{{ '/' | relative_url }}subscribe/"{% if page.url == '/subscribe/' %} aria-current="page"{% endif %}>Subscribe</a>
+    <a class="nav-link" href="{{ '/' | relative_url }}checkbook/"{% if page.url == '/checkbook/' %} aria-current="page"{% endif %}>Checkbook</a>
+    <a class="nav-link" href="{{ '/' | relative_url }}data/"{% if page.url == '/data/' %} aria-current="page"{% endif %}>Data</a>
+    <a class="nav-link" href="{{ '/' | relative_url }}meetings/"{% if page.url contains '/meetings/' %} aria-current="page"{% endif %}>Meetings</a>
+    <a class="nav-link" href="{{ '/' | relative_url }}what-can-we-do.html"{% if page.url == '/what-can-we-do.html' %} aria-current="page"{% endif %}>Act</a>
 
     <button class="search-toggle" aria-label="Search the site" title="Search (Ctrl/Cmd+K)">
       <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m17 17-3.5-3.5"/></svg>
