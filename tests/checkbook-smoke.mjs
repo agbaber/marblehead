@@ -99,6 +99,62 @@ async function run() {
       ok('performance: ' + vendorBars + ' vendor bars, ' + cadenceBars + ' cadence bars, pareto + over panels populated');
     } catch (e) { fail('performance-panels', e.message); }
 
+    // 6c. Drill: click a drillable row in BVA -> expand appears, click again -> collapses
+    try {
+      // The breakdown-switch test left the chart on Department view; flip back to Fund
+      await page.click('.breakdown-btn[data-breakdown="by_fund"]');
+      await page.waitForTimeout(200);
+      await page.locator('.bva-row--drillable').first().click();
+      await page.waitForSelector('.bva-expand', { timeout: 3000 });
+      await page.waitForSelector('.drill-card', { state: 'attached', timeout: 3000 });
+      const drillCards = await page.locator('.bva-expand .drill-card').count();
+      if (drillCards < 2) throw new Error('only ' + drillCards + ' drill cards');
+      const ctaCount = await page.locator('.drill-cta-btn').count();
+      if (ctaCount < 1) throw new Error('no CTA button');
+      // Click again to collapse
+      await page.locator('.bva-row--drillable').first().click();
+      await page.waitForTimeout(150);
+      const stillExpanded = await page.locator('.bva-expand').count();
+      if (stillExpanded !== 0) throw new Error('expand persisted after second click');
+      ok('drill expand+collapse on fund row (showed ' + drillCards + ' panels)');
+    } catch (e) { fail('drill-expand', e.message); }
+
+    // 6d. Drill CTA filters the transaction table to that fund
+    try {
+      await page.locator('.bva-row--drillable').first().click();
+      await page.waitForSelector('.drill-cta-btn', { state: 'attached', timeout: 3000 });
+      await page.locator('.drill-cta-btn').first().click();
+      await page.waitForTimeout(400);
+      const fundFilterValue = await page.locator('#f-fund').inputValue();
+      if (!fundFilterValue.includes('GENERAL FUND - TOWN')) throw new Error('fund filter set to: ' + fundFilterValue);
+      ok('drill CTA sets fund filter (' + fundFilterValue + ')');
+      await page.click('#reset-filters');
+      await page.waitForTimeout(150);
+    } catch (e) { fail('drill-cta', e.message); }
+
+    // 6e. Click top vendor card row -> sets vendor filter
+    try {
+      await page.locator('[data-perf-vendor]').first().click();
+      await page.waitForTimeout(300);
+      const v = await page.locator('#f-vendor').inputValue();
+      if (!v) throw new Error('vendor filter not set');
+      ok('click-to-filter on top vendor (' + v.slice(0, 30) + ')');
+      await page.click('#reset-filters');
+      await page.waitForTimeout(150);
+    } catch (e) { fail('perf-vendor-click', e.message); }
+
+    // 6f. Click monthly bar -> sets date range
+    try {
+      await page.locator('[data-perf-month]').first().click();
+      await page.waitForTimeout(300);
+      const min = await page.locator('#f-date-min').inputValue();
+      const max = await page.locator('#f-date-max').inputValue();
+      if (!min || !max) throw new Error('date range not set: ' + min + ' / ' + max);
+      ok('click-to-filter on month (' + min + ' to ' + max + ')');
+      await page.click('#reset-filters');
+      await page.waitForTimeout(150);
+    } catch (e) { fail('perf-month-click', e.message); }
+
     // 7. Vendor filter works
     try {
       await page.fill('#f-vendor', 'AMAZON');

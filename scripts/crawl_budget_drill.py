@@ -1,0 +1,132 @@
+#!/usr/bin/env python3
+"""
+Pre-fetch budget-portal cross-tab queries so the checkbook page can drill
+into any Fund or Department without making live cross-origin API calls.
+
+Source: https://townofmarblehead-ma-ob.budget.socrata.com/api/opex/chart_data.json
+Fields: org1=Fund Group, org2=Fund, org3=Department, org4=Division,
+        org5=Category, org6=Object.
+
+For each Fund in the Budgeted Annual envelope: pull dept/category/object
+breakdown.  For each Department: pull category/object/division breakdown.
+Writes data/budget_drill_FY26.json.
+"""
+import json, urllib.request, urllib.parse, time, sys, os, ssl
+
+# macOS bundled Python often can't validate Socrata's chain via the system store.
+# Build a context backed by certifi if available, otherwise fall back to unverified.
+try:
+    import certifi
+    SSL_CTX = ssl.create_default_context(cafile=certifi.where())
+except ImportError:
+    SSL_CTX = ssl._create_unverified_context()
+
+BASE = 'https://townofmarblehead-ma-ob.budget.socrata.com/api/opex/chart_data.json'
+YEAR = 2026
+ENVELOPE = 'BUDGETED ANNUAL FUNDS'
+
+def fetch(child_entity, filters=None, retries=3):
+    params = {'year': YEAR, 'child_entity': child_entity}
+    if filters:
+        params.update(filters)
+    url = BASE + '?' + urllib.parse.urlencode(params)
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(url, timeout=15, context=SSL_CTX) as r:
+                return json.loads(r.read())
+        except Exception as e:
+            if attempt == retries - 1:
+                raise
+            time.sleep(1.0)
+    return None
+
+def norm(entities):
+    return sorted(
+        [{
+            'name': r['key'],
+            'revised_budget': round(r.get('total', 0) or 0, 2),
+            'actual': round(r.get('secondary_total', 0) or 0, 2),
+            'original_budget': round(r.get('tertiary_total', 0) or 0, 2),
+        } for r in entities],
+        key=lambda x: -x['revised_budget']
+    )
+
+def main():
+    os.chdir(os.path.join(os.path.dirname(__file__), '..'))
+    b = json.load(open('data/budget_actual_FY26.json'))
+
+    drill = {
+        'as_of': '2026-06-08',
+        'fiscal_year': 'FY26',
+        'envelope': ENVELOPE,
+        'envelope_totals': b['totals']['budgeted_annual'],
+        'by_fund': {},
+        'by_department': {},
+    }
+
+    DIMS_FROM_FUND = [
+        ('by_department', 'org3'),
+        ('by_category',   'org5'),
+        ('by_object',     'org6'),
+    ]
+    DIMS_FROM_DEPT = [
+        ('by_category',   'org5'),
+        ('by_object',     'org6'),
+        ('by_division',   'org4'),
+    ]
+
+    total_calls = len(b['by_fund']) * len(DIMS_FROM_FUND) + len(b['by_department']) * len(DIMS_FROM_DEPT)
+    done = 0
+    print(f'Will make {total_calls} API calls. ETA ~{total_calls * 0.4:.0f}s.')
+
+    for fund in b['by_fund']:
+        name = fund['name']
+        drill['by_fund'][name] = {
+            'rollup': {
+                'revised_budget': fund['revised_budget'],
+                'actual': fund['actual'],
+                'original_budget': fund['original_budget'],
+            },
+        }
+        for dim, child in DIMS_FROM_FUND:
+            try:
+                data = fetch(child, {'org1': ENVELOPE, 'org2': name})
+                drill['by_fund'][name][dim] = norm(data.get('entities', []))
+            except Exception as e:
+                print(f'  ERR fund={name} dim={dim}: {e}', file=sys.stderr)
+                drill['by_fund'][name][dim] = []
+            done += 1
+            if done % 5 == 0:
+                print(f'  {done}/{total_calls} ...')
+            time.sleep(0.25)
+
+    for dept in b['by_department']:
+        name = dept['name']
+        drill['by_department'][name] = {
+            'rollup': {
+                'revised_budget': dept['revised_budget'],
+                'actual': dept['actual'],
+                'original_budget': dept['original_budget'],
+            },
+        }
+        for dim, child in DIMS_FROM_DEPT:
+            try:
+                data = fetch(child, {'org1': ENVELOPE, 'org3': name})
+                drill['by_department'][name][dim] = norm(data.get('entities', []))
+            except Exception as e:
+                print(f'  ERR dept={name} dim={dim}: {e}', file=sys.stderr)
+                drill['by_department'][name][dim] = []
+            done += 1
+            if done % 10 == 0:
+                print(f'  {done}/{total_calls} ...')
+            time.sleep(0.25)
+
+    out = 'data/budget_drill_FY26.json'
+    with open(out, 'w') as f:
+        json.dump(drill, f, indent=1)
+    size_kb = os.path.getsize(out) / 1024
+    print(f'\nWrote {out} ({size_kb:.0f} KB)')
+    print(f'  {len(drill["by_fund"])} funds, {len(drill["by_department"])} departments')
+
+if __name__ == '__main__':
+    main()
