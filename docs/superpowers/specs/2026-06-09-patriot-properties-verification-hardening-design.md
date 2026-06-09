@@ -368,9 +368,9 @@ Worker caches the result for 300s using the Cache API keyed by `Date.now() >> 8`
 
 12 is small enough that no automated migration is needed.
 
-**Path:** Wipe the existing `residents`, `passkey_credentials`, `recovery_keys`, `verified_votes`, `invites`, `branch_names`, `branch_name_votes` rows in production D1 after the new schema is deployed. The 12 affected people are personally known to the owner; a one-paragraph email goes out asking them to re-verify (they re-create from scratch — new passkey, new branch assignment). Their identity hashes change because the new normalized address is more specific.
+**Path:** Wipe the existing `residents`, `passkey_credentials`, `recovery_keys`, `verified_votes`, `invites`, `branch_names`, `branch_name_votes` rows in production D1 after the new schema is deployed. If the 12 are real users (not test data), a one-paragraph email goes out asking them to re-verify (they re-create from scratch — new passkey, new branch assignment). Their identity hashes change because the new normalized address is more specific. If they are test rows, skip the email.
 
-If wiping is uncomfortable, the alternative is to leave the 12 old rows in place with `account_number=NULL` and add a banner on the verified UI prompting them to re-link to a parcel. Either choice is small enough not to constrain the design. **Default to wipe.** Less code, no banner debt.
+If wiping is uncomfortable, the alternative is to leave the 12 old rows in place with `account_number=NULL` and add a banner on the verified UI prompting them to re-link to a parcel. Either choice is small enough not to constrain the design. **Default to wipe.** Less code, no banner debt. Confirm with owner whether the 12 are real or test before executing.
 
 ## 7. Rollout plan (PRs)
 
@@ -379,8 +379,8 @@ Five PRs, in order, each independently mergeable and reviewable:
 1. **`feat/parcels-scraper`** — `pull_parcels.mjs` + `data/PARCELS_README.md` + `data/parcels.json.example` + tests for the HTML parser (5-10 fixtures captured from PP). No data file yet, no worker changes.
 2. **`feat/parcels-data`** — adds `data/parcels.json` (the ~2.3 MB output from owner's local run). Single-file PR. Auto-generated; minimal review needed.
 3. **`feat/parcels-schema`** — `0006_parcels.sql` + `0007_review.sql` + `load_parcels.mjs` + admin scripts. Deployed to staging first; ship-blocking smoke test: load all parcels, query a known one round-trip.
-4. **`feat/verify-flow-parcels`** — `verify.html` + `assets/verify.js` + worker `handleRegister` changes + `/api/verify/parcels` endpoint + tests. Includes the voter-attestation checkbox. Toggled on in staging; owner manually verifies one self-registration end-to-end before merge.
-5. **`feat/verify-stats`** — `verified-stats.html` + `/api/verify/stats` endpoint + homepage card + `/admin/review.html`. Cap enforcement (`review_status` writes) lives here too, since it depends on the stats query joining on `review_status`.
+4. **`feat/verify-flow-parcels`** — `verify.html` + `assets/verify.js` + worker `handleRegister` changes + `/api/verify/parcels` endpoint + cap enforcement (writes `review_status='flagged'` at the 9th+ registration) + tests. Includes the voter-attestation checkbox. Toggled on in staging; owner manually verifies one self-registration end-to-end before merge.
+5. **`feat/verify-stats`** — `verified-stats.html` + `/api/verify/stats` endpoint + homepage card + `/admin/review.html` for approving/rejecting flagged rows. Stats queries exclude `review_status='rejected'` rows from all aggregates.
 
 After PR 5 merges: send the re-verify email to the 12 existing residents and wipe the production D1 verification tables in a maintenance window.
 
