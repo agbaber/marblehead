@@ -1,6 +1,6 @@
 import { chromium, devices } from 'playwright';
 
-const URL = 'http://localhost:4001/charts/checkbook.html';
+const URL = 'http://localhost:4000/checkbook/';
 
 async function run() {
   const browser = await chromium.launch();

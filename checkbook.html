@@ -677,6 +677,12 @@ og_url: https://marbleheaddata.org/checkbook/
     <dt>Why some bars look over budget</dt>
     <dd>The Light Department ($13.2M) is self-supporting and has no appropriation, so it shows up against a $0 budget. Snow Removal ($687K vs $105K) is intentionally under-budgeted and topped up at year-end. Neither is a runaway expense.</dd>
 
+    <dt>Why the state is the top vendor</dt>
+    <dd>$17.5M of FY26 checks went to "Commonwealth of MA," more than to any other payee. Most of it is health insurance: <strong>$12.8M</strong> booked under Group Insurance, the premiums the town pays the state's <abbr class="g" title="Group Insurance Commission">GIC</abbr> for employee and retiree coverage. The rest is state assessments and charges spread across town and enterprise funds. A sliver moves through agency funds such as "Due to Commonwealth - Firearms": firearms license fees the town collects and passes through to the state ($19,425 this year). "Due to" funds are pass-throughs the town holds briefly on the state's behalf, never the town's money to spend.</dd>
+
+    <dt>Vendor names are ledger labels</dt>
+    <dd>Names come straight from the town's accounts-payable ledger. "ONE TIME PAY" ($1.2M across 14 funds) is the ledger's bucket for one-off payees, not a company. "Marblehead Light Dept" appearing as a vendor is town and school departments paying the municipal Light Department for electricity.</dd>
+
     <dt>What we redacted</dt>
     <dd>The town's source export tags <em>specific employees by surname</em> for medical claims under the 111F Injury Leave Fund (e.g., "BURT INJURY" paid to Spaulding Rehab) and lists <em>student initials</em> for out-of-district SpEd placements. We dropped the Description column entirely and pulled 560 rows ($413K) from the 111F and Workers Comp funds. The aggregate is still in the budget chart above.</dd>
 
@@ -1372,10 +1378,11 @@ og_url: https://marbleheaddata.org/checkbook/
     if (perf.multifund_vendors && perf.multifund_vendors.length) {
       var mfHtml = '<table class="multifund"><thead><tr><th>Vendor</th><th class="numeric">Funds</th><th class="numeric">Paid</th><th>Where</th></tr></thead><tbody>';
       perf.multifund_vendors.slice(0, 10).forEach(function (v) {
+        // funds are sorted by dollars (descending) in the data, so the
+        // three shown are where the money actually went
         var fundLabel = v.funds.slice(0, 3).map(function (f) {
-          return f.replace('GENERAL FUND - ', '').replace(' ENTERPRISE OPERATING', ' Ent').replace(' CAPITAL ARTICLES', ' Cap').replace(' REVOLVING FUND', ' Rev');
-        }).map(function (s) {
-          return s.charAt(0) + s.slice(1).toLowerCase();
+          var s = f.name.replace('GENERAL FUND - ', '').replace(' ENTERPRISE OPERATING', ' Enterprise').replace(' CAPITAL ARTICLES', ' Capital').replace(' REVOLVING FUND', ' Revolving');
+          return titleCase(s) + ' ' + fmtMoney(f.amount, { compact: true });
         }).join(', ');
         if (v.funds.length > 3) fundLabel += ' + ' + (v.funds.length - 3) + ' more';
         var name = titleCase(v.name.replace(/\s+(INC|CORP|LLC|LLP|CO|CO\.)$/i, ''));
