@@ -1,0 +1,4174 @@
+{
+ "as_of": "2026-05-29",
+ "fy26_months_elapsed": 11,
+ "fy26_pct_elapsed": 91.7,
+ "budget_execution": {
+  "by_department": [
+   {
+    "name": "LIGHT",
+    "revised": 0,
+    "actual": 13157642.11,
+    "delta": 13157642.11,
+    "pct": null
+   },
+   {
+    "name": "SNOW REMOVAL",
+    "revised": 105000.0,
+    "actual": 687053.81,
+    "delta": 582053.81,
+    "pct": 654.336961904762
+   },
+   {
+    "name": "ENGINEERING",
+    "revised": 0,
+    "actual": 121.7,
+    "delta": 121.7,
+    "pct": null
+   },
+   {
+    "name": "FINANCE COMMITTEE",
+    "revised": 6375.0,
+    "actual": 6442.0,
+    "delta": 67.0,
+    "pct": 101.05098039215686
+   },
+   {
+    "name": "DEBT SERVICE",
+    "revised": 9314141.0,
+    "actual": 9314044.58,
+    "delta": -96.4199999999255,
+    "pct": 99.99896479986722
+   },
+   {
+    "name": "MODERATOR",
+    "revised": 100.0,
+    "actual": 0,
+    "delta": -100.0,
+    "pct": 0.0
+   },
+   {
+    "name": "ANIMAL INSPECTOR",
+    "revised": 2400.0,
+    "actual": 2284.32,
+    "delta": -115.67999999999984,
+    "pct": 95.18
+   },
+   {
+    "name": "PLANNING BOARD",
+    "revised": 5775.0,
+    "actual": 5236.67,
+    "delta": -538.3299999999999,
+    "pct": 90.6782683982684
+   },
+   {
+    "name": "DISTRICTWIDE",
+    "revised": 14574494.16,
+    "actual": 11417078.47,
+    "delta": -3157415.6899999995,
+    "pct": 78.33601869582829
+   },
+   {
+    "name": "HIGH SCHOOL",
+    "revised": 11158028.0,
+    "actual": 8436180.8,
+    "delta": -2721847.1999999993,
+    "pct": 75.60637775779017
+   },
+   {
+    "name": "VILLAGE SCHOOL",
+    "revised": 7679662.0,
+    "actual": 5738294.59,
+    "delta": -1941367.4100000001,
+    "pct": 74.7206659616009
+   },
+   {
+    "name": "MIDDLE SCHOOL",
+    "revised": 5857003.0,
+    "actual": 4345793.92,
+    "delta": -1511209.08,
+    "pct": 74.19825327048663
+   },
+   {
+    "name": "PUBLIC WORKS",
+    "revised": 3465281.69,
+    "actual": 2060483.47,
+    "delta": -1404798.22,
+    "pct": 59.46077849734635
+   },
+   {
+    "name": "BROWN SCHOOL",
+    "revised": 5476278.84,
+    "actual": 4129467.91,
+    "delta": -1346810.9299999997,
+    "pct": 75.40645811965265
+   },
+   {
+    "name": "GLOVER SCHOOL",
+    "revised": 4374821.0,
+    "actual": 3284410.7,
+    "delta": -1090410.2999999998,
+    "pct": 75.07531622436667
+   },
+   {
+    "name": "WATER",
+    "revised": 6475995.0,
+    "actual": 5640290.15,
+    "delta": -835704.8499999996,
+    "pct": 87.09534442197686
+   }
+  ],
+  "all_departments": [
+   {
+    "name": "OTHER GOVERNMENTAL",
+    "revised": 21851072.0,
+    "actual": 21119455.21,
+    "delta": -731616.7899999991,
+    "pct": 96.6518036735223
+   },
+   {
+    "name": "DISTRICTWIDE",
+    "revised": 14574494.16,
+    "actual": 11417078.47,
+    "delta": -3157415.6899999995,
+    "pct": 78.33601869582829
+   },
+   {
+    "name": "HIGH SCHOOL",
+    "revised": 11158028.0,
+    "actual": 8436180.8,
+    "delta": -2721847.1999999993,
+    "pct": 75.60637775779017
+   },
+   {
+    "name": "DEBT SERVICE",
+    "revised": 9314141.0,
+    "actual": 9314044.58,
+    "delta": -96.4199999999255,
+    "pct": 99.99896479986722
+   },
+   {
+    "name": "VILLAGE SCHOOL",
+    "revised": 7679662.0,
+    "actual": 5738294.59,
+    "delta": -1941367.4100000001,
+    "pct": 74.7206659616009
+   },
+   {
+    "name": "WATER",
+    "revised": 6475995.0,
+    "actual": 5640290.15,
+    "delta": -835704.8499999996,
+    "pct": 87.09534442197686
+   },
+   {
+    "name": "MIDDLE SCHOOL",
+    "revised": 5857003.0,
+    "actual": 4345793.92,
+    "delta": -1511209.08,
+    "pct": 74.19825327048663
+   },
+   {
+    "name": "FIRE",
+    "revised": 5752426.13,
+    "actual": 5025177.24,
+    "delta": -727248.8899999997,
+    "pct": 87.35752752725918
+   },
+   {
+    "name": "SEWER",
+    "revised": 5544161.0,
+    "actual": 4988308.21,
+    "delta": -555852.79,
+    "pct": 89.9740864307512
+   },
+   {
+    "name": "BROWN SCHOOL",
+    "revised": 5476278.84,
+    "actual": 4129467.91,
+    "delta": -1346810.9299999997,
+    "pct": 75.40645811965265
+   },
+   {
+    "name": "POLICE",
+    "revised": 5302215.09,
+    "actual": 4838218.73,
+    "delta": -463996.3599999994,
+    "pct": 91.2490091004588
+   },
+   {
+    "name": "GLOVER SCHOOL",
+    "revised": 4374821.0,
+    "actual": 3284410.7,
+    "delta": -1090410.2999999998,
+    "pct": 75.07531622436667
+   },
+   {
+    "name": "PUBLIC WORKS",
+    "revised": 3465281.69,
+    "actual": 2060483.47,
+    "delta": -1404798.22,
+    "pct": 59.46077849734635
+   },
+   {
+    "name": "WASTE COLLECTION",
+    "revised": 3085898.09,
+    "actual": 2508696.19,
+    "delta": -577201.8999999999,
+    "pct": 81.29549702660466
+   },
+   {
+    "name": "STATE ASSESSMENTS",
+    "revised": 2475615.0,
+    "actual": 1713450.0,
+    "delta": -762165.0,
+    "pct": 69.21310462248775
+   },
+   {
+    "name": "FINANCE",
+    "revised": 1972597.93,
+    "actual": 1710782.09,
+    "delta": -261815.83999999985,
+    "pct": 86.7273590822434
+   },
+   {
+    "name": "ABBOT LIBRARY",
+    "revised": 1501292.0,
+    "actual": 1255359.89,
+    "delta": -245932.1100000001,
+    "pct": 83.618635815018
+   },
+   {
+    "name": "INTERFUND TRANSFERS",
+    "revised": 1296000.0,
+    "actual": 673624.0,
+    "delta": -622376.0,
+    "pct": 51.97716049382716
+   },
+   {
+    "name": "HARBOR",
+    "revised": 1278568.0,
+    "actual": 600029.15,
+    "delta": -678538.85,
+    "pct": 46.92978003516434
+   },
+   {
+    "name": "EDUCATION",
+    "revised": 1275192.26,
+    "actual": 943249.27,
+    "delta": -331942.99,
+    "pct": 73.96918092962703
+   },
+   {
+    "name": "PARKS & RECREATION",
+    "revised": 1133161.26,
+    "actual": 930823.73,
+    "delta": -202337.53000000003,
+    "pct": 82.14397746001306
+   },
+   {
+    "name": "PUBLIC BUILDINGS",
+    "revised": 881311.65,
+    "actual": 470411.92,
+    "delta": -410899.73000000004,
+    "pct": 53.37634195576558
+   },
+   {
+    "name": "SELECT BOARD",
+    "revised": 720316.8,
+    "actual": 494767.25,
+    "delta": -225549.55000000005,
+    "pct": 68.68745113261275
+   },
+   {
+    "name": "CEMETERY",
+    "revised": 703243.0,
+    "actual": 533084.6,
+    "delta": -170158.40000000002,
+    "pct": 75.80375488984605
+   },
+   {
+    "name": "BUILDING INSPECTION",
+    "revised": 691113.0,
+    "actual": 540935.42,
+    "delta": -150177.57999999996,
+    "pct": 78.27018447055691
+   },
+   {
+    "name": "COMMUNITY DEVELOP AND PLANNING",
+    "revised": 495123.0,
+    "actual": 377623.97,
+    "delta": -117499.03000000003,
+    "pct": 76.26871908596449
+   },
+   {
+    "name": "DRAINS",
+    "revised": 434970.98,
+    "actual": 232269.56,
+    "delta": -202701.41999999998,
+    "pct": 53.3988635287807
+   },
+   {
+    "name": "COUNCIL ON AGING",
+    "revised": 426160.0,
+    "actual": 377499.0,
+    "delta": -48661.0,
+    "pct": 88.58151867843064
+   },
+   {
+    "name": "ASSESSORS",
+    "revised": 395821.0,
+    "actual": 316922.33,
+    "delta": -78898.66999999998,
+    "pct": 80.06708335333396
+   },
+   {
+    "name": "RESERVE FUND",
+    "revised": 395739.0,
+    "actual": 0,
+    "delta": -395739.0,
+    "pct": 0.0
+   },
+   {
+    "name": "HEALTH",
+    "revised": 335641.0,
+    "actual": 297441.85,
+    "delta": -38199.15000000002,
+    "pct": 88.61904534904853
+   },
+   {
+    "name": "HUMAN RESOURCES",
+    "revised": 296282.0,
+    "actual": 264762.55,
+    "delta": -31519.45000000001,
+    "pct": 89.36167232568971
+   },
+   {
+    "name": "TOWN CLERK",
+    "revised": 246233.0,
+    "actual": 207779.63,
+    "delta": -38453.369999999995,
+    "pct": 84.38334016967669
+   },
+   {
+    "name": "VETERANS SERVICES",
+    "revised": 148525.0,
+    "actual": 104691.57,
+    "delta": -43833.42999999999,
+    "pct": 70.48750715367784
+   },
+   {
+    "name": "TOWN COUNSEL",
+    "revised": 115000.0,
+    "actual": 90262.39,
+    "delta": -24737.61,
+    "pct": 78.48903478260868
+   },
+   {
+    "name": "SNOW REMOVAL",
+    "revised": 105000.0,
+    "actual": 687053.81,
+    "delta": 582053.81,
+    "pct": 654.336961904762
+   },
+   {
+    "name": "ELECTION & REGISTRATION",
+    "revised": 71015.0,
+    "actual": 23708.65,
+    "delta": -47306.35,
+    "pct": 33.38541153277477
+   },
+   {
+    "name": "PARKING CLERK",
+    "revised": 8400.0,
+    "actual": 0,
+    "delta": -8400.0,
+    "pct": 0.0
+   },
+   {
+    "name": "MEMORIAL & VETERANS DAY",
+    "revised": 7550.0,
+    "actual": 212.5,
+    "delta": -7337.5,
+    "pct": 2.814569536423841
+   },
+   {
+    "name": "FINANCE COMMITTEE",
+    "revised": 6375.0,
+    "actual": 6442.0,
+    "delta": 67.0,
+    "pct": 101.05098039215686
+   },
+   {
+    "name": "PLANNING BOARD",
+    "revised": 5775.0,
+    "actual": 5236.67,
+    "delta": -538.3299999999999,
+    "pct": 90.6782683982684
+   },
+   {
+    "name": "ANIMAL INSPECTOR",
+    "revised": 2400.0,
+    "actual": 2284.32,
+    "delta": -115.67999999999984,
+    "pct": 95.18
+   },
+   {
+    "name": "SEALER OF WEIGHTS & MEASURES",
+    "revised": 2100.0,
+    "actual": 1050.0,
+    "delta": -1050.0,
+    "pct": 50.0
+   },
+   {
+    "name": "MODERATOR",
+    "revised": 100.0,
+    "actual": 0,
+    "delta": -100.0,
+    "pct": 0.0
+   },
+   {
+    "name": "ENGINEERING",
+    "revised": 0,
+    "actual": 121.7,
+    "delta": 121.7,
+    "pct": null
+   },
+   {
+    "name": "LIGHT",
+    "revised": 0,
+    "actual": 13157642.11,
+    "delta": 13157642.11,
+    "pct": null
+   }
+  ],
+  "all_divisions": [
+   {
+    "name": "UNDEFINED",
+    "revised": 49120287.0,
+    "actual": 37351226.39,
+    "delta": -11769060.61,
+    "pct": 76.0403260469549
+   },
+   {
+    "name": "SALARIES",
+    "revised": 23167663.0,
+    "actual": 23806513.73,
+    "delta": 638850.7300000004,
+    "pct": 102.75751045757184
+   },
+   {
+    "name": "EXPENSES",
+    "revised": 21072150.0,
+    "actual": 27438585.21,
+    "delta": 6366435.210000001,
+    "pct": 130.2125564311188
+   },
+   {
+    "name": "GROUP INSURANCE",
+    "revised": 15200391.0,
+    "actual": 14553177.37,
+    "delta": -647213.6300000008,
+    "pct": 95.74212512033407
+   },
+   {
+    "name": "CONTRIBUTORY RETIREMENT",
+    "revised": 5380625.0,
+    "actual": 5380625.0,
+    "delta": 0.0,
+    "pct": 100.0
+   },
+   {
+    "name": "MASS WATER RESOURCES AUTHORITY",
+    "revised": 3448362.0,
+    "actual": 3195219.0,
+    "delta": -253143.0,
+    "pct": 92.65903637727129
+   },
+   {
+    "name": "SOUTH ESSEX SEWER DISTRICT",
+    "revised": 3267745.0,
+    "actual": 3267244.87,
+    "delta": -500.12999999988824,
+    "pct": 99.98469495018738
+   },
+   {
+    "name": "OTHER INSURANCE",
+    "revised": 865056.0,
+    "actual": 840588.48,
+    "delta": -24467.52000000002,
+    "pct": 97.17156808345355
+   },
+   {
+    "name": "ART 26 2022 ESSEX NS AGGIE & T",
+    "revised": 627323.0,
+    "actual": 627323.0,
+    "delta": 0.0,
+    "pct": 100.0
+   },
+   {
+    "name": "PRINCIPAL ON LONG TERM MWRA",
+    "revised": 625940.0,
+    "actual": 561490.0,
+    "delta": -64450.0,
+    "pct": 89.70348595712049
+   },
+   {
+    "name": "ART 14 DRAIN CONSTRUCTION",
+    "revised": 434970.98,
+    "actual": 232269.56,
+    "delta": -202701.41999999998,
+    "pct": 53.3988635287807
+   },
+   {
+    "name": "STORMWATER CONSTRUCTION",
+    "revised": 400000.0,
+    "actual": 84622.0,
+    "delta": -315378.0,
+    "pct": 21.1555
+   },
+   {
+    "name": "ART 8 2024 CAPITAL IMPROVEMENT",
+    "revised": 316890.6,
+    "actual": 191234.35,
+    "delta": -125656.24999999997,
+    "pct": 60.34711979465469
+   },
+   {
+    "name": "MEDICARE",
+    "revised": 280000.0,
+    "actual": 281988.59,
+    "delta": 1988.5900000000256,
+    "pct": 100.71021071428572
+   },
+   {
+    "name": "ART 30 2024 CAPITAL TRANSFERS",
+    "revised": 277426.21,
+    "actual": 18906.92,
+    "delta": -258519.29000000004,
+    "pct": 6.815116711575304
+   },
+   {
+    "name": "HARBOR CAPITAL OUTLAYS",
+    "revised": 200000.0,
+    "actual": -341454.04,
+    "delta": -541454.04,
+    "pct": -170.72701999999998
+   },
+   {
+    "name": "ART 11 2023 CAPITAL IMPROV",
+    "revised": 185076.3,
+    "actual": 73150.0,
+    "delta": -111926.29999999999,
+    "pct": 39.52423946231905
+   },
+   {
+    "name": "ATM25A42 43-CEM-CEMETERY IMPRO",
+    "revised": 180000.0,
+    "actual": 95069.25,
+    "delta": -84930.75,
+    "pct": 52.81625
+   },
+   {
+    "name": "ART 9 2023 PURCH OF EQUIPMENT",
+    "revised": 171199.64,
+    "actual": 96375.0,
+    "delta": -74824.64000000001,
+    "pct": 56.293926786294634
+   },
+   {
+    "name": "ART 11 2022 CAPITAL IMPROV",
+    "revised": 143625.0,
+    "actual": 65025.0,
+    "delta": -78600.0,
+    "pct": 45.27415143603133
+   },
+   {
+    "name": "ATM25A7-DPW-INTERNATIONAL TRUC",
+    "revised": 134210.0,
+    "actual": 67104.52,
+    "delta": -67105.48,
+    "pct": 49.99964235153864
+   },
+   {
+    "name": "ARTICLE WALLS & FENCES",
+    "revised": 123291.82,
+    "actual": 42.31,
+    "delta": -123249.51000000001,
+    "pct": 0.03431695630740142
+   },
+   {
+    "name": "Art 10 2021 BUILDING IMPROV",
+    "revised": 116816.46,
+    "actual": 0,
+    "delta": -116816.46,
+    "pct": 0.0
+   },
+   {
+    "name": "LANDFILL MONITORING EXPENSE",
+    "revised": 114600.0,
+    "actual": 51874.72,
+    "delta": -62725.28,
+    "pct": 45.265898778359514
+   },
+   {
+    "name": "ATM25A8-SCH-UPHOLSTER ART CENT",
+    "revised": 106958.0,
+    "actual": 0,
+    "delta": -106958.0,
+    "pct": 0.0
+   },
+   {
+    "name": "ART 7 2024 LEASE PURCHASE",
+    "revised": 106163.83,
+    "actual": 67104.52,
+    "delta": -39059.31,
+    "pct": 63.20845809726345
+   },
+   {
+    "name": "ATM25A6-DPW-F350 W PLOW",
+    "revised": 85000.0,
+    "actual": 84265.3,
+    "delta": -734.6999999999971,
+    "pct": 99.13564705882352
+   },
+   {
+    "name": "ATM25A6-PB-F-150 CREW CAB",
+    "revised": 70000.0,
+    "actual": 57820.0,
+    "delta": -12180.0,
+    "pct": 82.6
+   },
+   {
+    "name": "ATM25A6-WASTE-F-150 CREW CAB",
+    "revised": 70000.0,
+    "actual": 57820.0,
+    "delta": -12180.0,
+    "pct": 82.6
+   },
+   {
+    "name": "ATM25A8-SCH-GLOVER HVAC CAFE",
+    "revised": 70000.0,
+    "actual": 0,
+    "delta": -70000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "VETERANS BENEFITS",
+    "revised": 65000.0,
+    "actual": 34552.11,
+    "delta": -30447.89,
+    "pct": 53.15709230769231
+   },
+   {
+    "name": "ATM25A8-SCH-GLOVER PLAYGROUND",
+    "revised": 60000.0,
+    "actual": 60000.0,
+    "delta": 0.0,
+    "pct": 100.0
+   },
+   {
+    "name": "STREET LIGHTING",
+    "revised": 60000.0,
+    "actual": 52735.86,
+    "delta": -7264.139999999999,
+    "pct": 87.8931
+   },
+   {
+    "name": "PARK FACILITY",
+    "revised": 50750.0,
+    "actual": 42105.54,
+    "delta": -8644.46,
+    "pct": 82.96658128078818
+   },
+   {
+    "name": "ATM25A9-WALLS AND FENCES",
+    "revised": 50000.0,
+    "actual": 0,
+    "delta": -50000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "SALARY RESERVE",
+    "revised": 50000.0,
+    "actual": 4928.66,
+    "delta": -45071.34,
+    "pct": 9.85732
+   },
+   {
+    "name": "PW MAINTAIN STREETS & SIDEWALK",
+    "revised": 49526.0,
+    "actual": 33836.11,
+    "delta": -15689.89,
+    "pct": 68.31989258167427
+   },
+   {
+    "name": "ATM25A7-POL-2 FORD HYBRIDS",
+    "revised": 45593.0,
+    "actual": 45592.35,
+    "delta": -0.6500000000014552,
+    "pct": 99.99857434255259
+   },
+   {
+    "name": "ART 10 2022 LEASE PURCHASE",
+    "revised": 44050.66,
+    "actual": 0,
+    "delta": -44050.66,
+    "pct": 0.0
+   },
+   {
+    "name": "ATM25A7-DPW-BUCKET LIFT TRUCK",
+    "revised": 39263.0,
+    "actual": 39262.94,
+    "delta": -0.059999999997671694,
+    "pct": 99.99984718437206
+   },
+   {
+    "name": "ATM25A7-P&R-WIDE AREA MOWER",
+    "revised": 38306.0,
+    "actual": 38305.07,
+    "delta": -0.930000000000291,
+    "pct": 99.99757218190362
+   },
+   {
+    "name": "ATM25A7-SCH-7D VAN",
+    "revised": 34385.0,
+    "actual": 34385.0,
+    "delta": 0.0,
+    "pct": 100.0
+   },
+   {
+    "name": "ART 6 2024 PURCHASE OF EQUIP",
+    "revised": 34123.43,
+    "actual": 7735.0,
+    "delta": -26388.43,
+    "pct": 22.667709547369654
+   },
+   {
+    "name": "ART 10 2023 LEASE PURCHASE",
+    "revised": 32531.56,
+    "actual": 0,
+    "delta": -32531.56,
+    "pct": 0.0
+   },
+   {
+    "name": "ATM25A7-SCH-LARGE BUS",
+    "revised": 32207.0,
+    "actual": 32206.92,
+    "delta": -0.08000000000174623,
+    "pct": 99.99975160679355
+   },
+   {
+    "name": "ATM25A7-WASTE-BACKHOE LEASE",
+    "revised": 29917.0,
+    "actual": 29916.06,
+    "delta": -0.9399999999986903,
+    "pct": 99.99685797372732
+   },
+   {
+    "name": "ATM25A7-WASTE-JD LOADER",
+    "revised": 26079.0,
+    "actual": 26078.91,
+    "delta": -0.09000000000014552,
+    "pct": 99.99965489474289
+   },
+   {
+    "name": "ATM25A6-P&R-ELECTRIC MOWER",
+    "revised": 25094.0,
+    "actual": 25094.0,
+    "delta": 0.0,
+    "pct": 100.0
+   },
+   {
+    "name": "ATM25A7-POL-CRUISER",
+    "revised": 25000.0,
+    "actual": 23759.97,
+    "delta": -1240.0299999999988,
+    "pct": 95.03988000000001
+   },
+   {
+    "name": "ATM25A7-DPW-F550 TRUCK W PLOW",
+    "revised": 23953.0,
+    "actual": 23952.67,
+    "delta": -0.33000000000174623,
+    "pct": 99.99862230200809
+   },
+   {
+    "name": "ATM25A6-POL-RADAR REPLACEMENT",
+    "revised": 21690.0,
+    "actual": 0,
+    "delta": -21690.0,
+    "pct": 0.0
+   },
+   {
+    "name": "ATM25A7-POL-FORD INTERCEPTOR",
+    "revised": 21538.0,
+    "actual": 21537.25,
+    "delta": -0.75,
+    "pct": 99.99651778252391
+   },
+   {
+    "name": "ATM25A7-P&R-F-450 DUMP TRUCK",
+    "revised": 21159.0,
+    "actual": 21158.74,
+    "delta": -0.2599999999983993,
+    "pct": 99.99877120846922
+   },
+   {
+    "name": "ATM25A6-POL-PORTABLE RADIOS",
+    "revised": 18861.0,
+    "actual": 40545.64,
+    "delta": 21684.64,
+    "pct": 214.97078627856422
+   },
+   {
+    "name": "A41 2019 TRANS NETWORK FUND",
+    "revised": 17388.8,
+    "actual": 0,
+    "delta": -17388.8,
+    "pct": 0.0
+   },
+   {
+    "name": "ATM25A7-FIRE-TRAIN VEHICLE",
+    "revised": 15704.0,
+    "actual": 0,
+    "delta": -15704.0,
+    "pct": 0.0
+   },
+   {
+    "name": "ATM25A8-POL-FLOOR REPLCE",
+    "revised": 15000.0,
+    "actual": 14234.0,
+    "delta": -766.0,
+    "pct": 94.89333333333333
+   },
+   {
+    "name": "TRAINING",
+    "revised": 15000.0,
+    "actual": 5411.25,
+    "delta": -9588.75,
+    "pct": 36.075
+   },
+   {
+    "name": "A9 2022 PURCHASE OF EQUIP",
+    "revised": 5327.52,
+    "actual": 0,
+    "delta": -5327.52,
+    "pct": 0.0
+   },
+   {
+    "name": "ART 8 2021 PURCH OF EQUIP",
+    "revised": 3282.49,
+    "actual": 0,
+    "delta": -3282.49,
+    "pct": 0.0
+   },
+   {
+    "name": "ART 9 2021 LEASE PURCHASE",
+    "revised": 2720.58,
+    "actual": 0,
+    "delta": -2720.58,
+    "pct": 0.0
+   },
+   {
+    "name": "SELECT BD EXP FY19",
+    "revised": 2541.0,
+    "actual": 2541.0,
+    "delta": 0.0,
+    "pct": 100.0
+   },
+   {
+    "name": "SELECT BD EXP FY18",
+    "revised": 336.0,
+    "actual": 336.0,
+    "delta": 0.0,
+    "pct": 100.0
+   },
+   {
+    "name": "A15 20 DRAIN CONSTRUCTION",
+    "revised": 0,
+    "actual": 0,
+    "delta": 0,
+    "pct": null
+   }
+  ],
+  "all_objects": [
+   {
+    "name": "PROFESSIONAL SALARIES",
+    "revised": 29748964.96,
+    "actual": 21982417.94,
+    "delta": -7766547.02,
+    "pct": 73.89305130298557
+   },
+   {
+    "name": "HEALTH INSURANCE",
+    "revised": 12447598.0,
+    "actual": 12587776.46,
+    "delta": 140178.4600000009,
+    "pct": 101.1261486754312
+   },
+   {
+    "name": "MATURING PRINCIPAL ON LTD",
+    "revised": 6580940.0,
+    "actual": 6762656.64,
+    "delta": 181716.63999999966,
+    "pct": 102.7612565986014
+   },
+   {
+    "name": "RETIREMENT",
+    "revised": 5756133.0,
+    "actual": 6387684.0,
+    "delta": 631551.0,
+    "pct": 110.9717930423081
+   },
+   {
+    "name": "MASS WATER RESOURCE AUTHORITY",
+    "revised": 3448362.0,
+    "actual": 3195219.0,
+    "delta": -253143.0,
+    "pct": 92.65903637727129
+   },
+   {
+    "name": "SOUTH ESSEX SEWER DISTRICT",
+    "revised": 3267745.0,
+    "actual": 3267244.87,
+    "delta": -500.12999999988824,
+    "pct": 99.98469495018738
+   },
+   {
+    "name": "INTEREST ON LONG-TERM DEBT",
+    "revised": 3162141.0,
+    "actual": 3272440.16,
+    "delta": 110299.16000000015,
+    "pct": 103.48811643756557
+   },
+   {
+    "name": "INSTRUCTIONAL ASSISTANTS",
+    "revised": 2706947.84,
+    "actual": 2173172.84,
+    "delta": -533775.0,
+    "pct": 80.28129718229073
+   },
+   {
+    "name": "MEDEX INSURANCE TRANSFER",
+    "revised": 2534769.0,
+    "actual": 2337950.63,
+    "delta": -196818.3700000001,
+    "pct": 92.23525417898041
+   },
+   {
+    "name": "OVERTIME",
+    "revised": 2342597.0,
+    "actual": 2463972.54,
+    "delta": 121375.54000000004,
+    "pct": 105.18123859972502
+   },
+   {
+    "name": "DEPARTMENT HEAD",
+    "revised": 2135197.0,
+    "actual": 1891196.22,
+    "delta": -244000.78000000003,
+    "pct": 88.57244647683562
+   },
+   {
+    "name": "FIREFIGHTER",
+    "revised": 2071324.0,
+    "actual": 1663467.9,
+    "delta": -407856.1000000001,
+    "pct": 80.30940113666428
+   },
+   {
+    "name": "TUITION-PRIVATE SCHOOLS",
+    "revised": 1973105.63,
+    "actual": 1805744.22,
+    "delta": -167361.40999999992,
+    "pct": 91.51786871136748
+   },
+   {
+    "name": "CHARTER SCHOOL ASSESSMENT",
+    "revised": 1805693.0,
+    "actual": 1245074.0,
+    "delta": -560619.0,
+    "pct": 68.95269572402395
+   },
+   {
+    "name": "PATROLMAN",
+    "revised": 1545603.0,
+    "actual": 1468658.34,
+    "delta": -76944.65999999992,
+    "pct": 95.02170609140899
+   },
+   {
+    "name": "ASSISTANT DEPARTMENT HEAD",
+    "revised": 1518009.0,
+    "actual": 1282395.73,
+    "delta": -235613.27000000002,
+    "pct": 84.47879623902098
+   },
+   {
+    "name": "OTHER SALARIES",
+    "revised": 1502334.4,
+    "actual": 1361858.2,
+    "delta": -140476.19999999995,
+    "pct": 90.64947191517415
+   },
+   {
+    "name": "CUSTODIAN SALARY",
+    "revised": 1429884.8,
+    "actual": 1177508.94,
+    "delta": -252375.8600000001,
+    "pct": 82.34991658069237
+   },
+   {
+    "name": "ELECTRICITY",
+    "revised": 1413655.0,
+    "actual": 7716491.82,
+    "delta": 6302836.82,
+    "pct": 545.8539615394138
+   },
+   {
+    "name": "R&M BUILDING AND GROUNDS",
+    "revised": 1191238.21,
+    "actual": 378212.61,
+    "delta": -813025.6,
+    "pct": 31.749536476000046
+   },
+   {
+    "name": "PUPIL TRANSPORTATION",
+    "revised": 1148760.0,
+    "actual": 1018242.7,
+    "delta": -130517.30000000005,
+    "pct": 88.63841881681117
+   },
+   {
+    "name": "INSURANCE PREMIUMS",
+    "revised": 1057620.0,
+    "actual": 982708.82,
+    "delta": -74911.18000000005,
+    "pct": 92.91700421701556
+   },
+   {
+    "name": "TRASH COLLECTION",
+    "revised": 1046293.0,
+    "actual": 784472.73,
+    "delta": -261820.27000000002,
+    "pct": 74.97639093447054
+   },
+   {
+    "name": "SECRETARY SALARIES",
+    "revised": 1044501.0,
+    "actual": 915934.0,
+    "delta": -128567.0,
+    "pct": 87.69106013302046
+   },
+   {
+    "name": "TUITION-RESIDENTIAL",
+    "revised": 1026993.0,
+    "actual": 337031.52,
+    "delta": -689961.48,
+    "pct": 32.8173142368059
+   },
+   {
+    "name": "MEDICARE",
+    "revised": 878800.0,
+    "actual": 738447.64,
+    "delta": -140352.36,
+    "pct": 84.02908966772871
+   },
+   {
+    "name": "DRAINS IMPROVEMENTS",
+    "revised": 834970.98,
+    "actual": 316891.56,
+    "delta": -518079.42,
+    "pct": 37.95240404642566
+   },
+   {
+    "name": "SENIOR CLERK",
+    "revised": 805087.0,
+    "actual": 649182.03,
+    "delta": -155904.96999999997,
+    "pct": 80.63501584300828
+   },
+   {
+    "name": "TRANSFER TO WORKERS COMP TF",
+    "revised": 796000.0,
+    "actual": 398000.0,
+    "delta": -398000.0,
+    "pct": 50.0
+   },
+   {
+    "name": "HEALTH REIMB MEDICARE",
+    "revised": 768657.0,
+    "actual": 777862.28,
+    "delta": 9205.280000000028,
+    "pct": 101.19757967467935
+   },
+   {
+    "name": "LIEUTENANT",
+    "revised": 721721.0,
+    "actual": 594611.07,
+    "delta": -127109.93000000005,
+    "pct": 82.38794076935547
+   },
+   {
+    "name": "TRASH DISPOSAL",
+    "revised": 716816.0,
+    "actual": 578684.67,
+    "delta": -138131.32999999996,
+    "pct": 80.72987628624362
+   },
+   {
+    "name": "EDUCATIONAL SUPPLIES",
+    "revised": 684445.36,
+    "actual": 544470.04,
+    "delta": -139975.31999999995,
+    "pct": 79.54908774602549
+   },
+   {
+    "name": "SUBSTITUTES",
+    "revised": 683000.0,
+    "actual": 357505.51,
+    "delta": -325494.49,
+    "pct": 52.343412884333816
+   },
+   {
+    "name": "HEAVY EQUIP OPERATOR",
+    "revised": 672664.0,
+    "actual": 426237.83,
+    "delta": -246426.16999999998,
+    "pct": 63.3656372275014
+   },
+   {
+    "name": "PROFESSIONAL SALARIES #2",
+    "revised": 664147.0,
+    "actual": 420255.07,
+    "delta": -243891.93,
+    "pct": 63.277417499439125
+   },
+   {
+    "name": "MOTOR VEHICLE",
+    "revised": 660585.78,
+    "actual": 501645.02,
+    "delta": -158940.76,
+    "pct": 75.93942152372702
+   },
+   {
+    "name": "ASSISTANT DIVISION HEAD",
+    "revised": 658650.0,
+    "actual": 589791.68,
+    "delta": -68858.31999999995,
+    "pct": 89.54553708342823
+   },
+   {
+    "name": "GAS USED FOR HEAT",
+    "revised": 647848.0,
+    "actual": 665890.89,
+    "delta": 18042.890000000014,
+    "pct": 102.7850498882454
+   },
+   {
+    "name": "TUITION-REGIONAL DISTRICTS",
+    "revised": 627323.0,
+    "actual": 627323.0,
+    "delta": 0.0,
+    "pct": 100.0
+   },
+   {
+    "name": "OTHER PROF & TECHNICAL",
+    "revised": 612420.8,
+    "actual": 1076698.0,
+    "delta": 464277.19999999995,
+    "pct": 175.8101619017512
+   },
+   {
+    "name": "CAPTAIN",
+    "revised": 588457.0,
+    "actual": 431923.94,
+    "delta": -156533.06,
+    "pct": 73.39940556404291
+   },
+   {
+    "name": "TUITION-COLLABORATIVES",
+    "revised": 584064.37,
+    "actual": 370625.74,
+    "delta": -213438.63,
+    "pct": 63.45631732337995
+   },
+   {
+    "name": "TELECOMMUNICATOR",
+    "revised": 570784.0,
+    "actual": 483123.75,
+    "delta": -87660.25,
+    "pct": 84.64213257554522
+   },
+   {
+    "name": "INFORMATION TECHNOLOGY",
+    "revised": 565807.0,
+    "actual": 545579.38,
+    "delta": -20227.619999999995,
+    "pct": 96.42499650941045
+   },
+   {
+    "name": "MBTA",
+    "revised": 519241.0,
+    "actual": 346120.0,
+    "delta": -173121.0,
+    "pct": 66.65883472221955
+   },
+   {
+    "name": "TRANSFER TO OPEB TRUST FUND",
+    "revised": 511870.0,
+    "actual": 261870.0,
+    "delta": -250000.0,
+    "pct": 51.15947408521695
+   },
+   {
+    "name": "WALLS & FENCES",
+    "revised": 503925.33,
+    "actual": 197111.66,
+    "delta": -306813.67000000004,
+    "pct": 39.115251459973244
+   },
+   {
+    "name": "REPAIRS & MAINTENANCE",
+    "revised": 448557.76,
+    "actual": 138675.0,
+    "delta": -309882.76,
+    "pct": 30.915750961481525
+   },
+   {
+    "name": "LEADER HEAVY EQUIP OPERATOR",
+    "revised": 431825.0,
+    "actual": 258396.26,
+    "delta": -173428.74,
+    "pct": 59.83818908122503
+   },
+   {
+    "name": "STIPENDS",
+    "revised": 428306.0,
+    "actual": 350511.78,
+    "delta": -77794.21999999997,
+    "pct": 81.83676623722292
+   },
+   {
+    "name": "DIVISION HEAD",
+    "revised": 421574.0,
+    "actual": 409391.06,
+    "delta": -12182.940000000002,
+    "pct": 97.11013013136484
+   },
+   {
+    "name": "RESERVE FUND TRANSFER",
+    "revised": 395739.0,
+    "actual": 0,
+    "delta": -395739.0,
+    "pct": 0.0
+   },
+   {
+    "name": "CLERICAL SALARIES",
+    "revised": 385374.0,
+    "actual": 439769.82,
+    "delta": 54395.82000000001,
+    "pct": 114.11507263074311
+   },
+   {
+    "name": "INCENTIVE",
+    "revised": 371561.0,
+    "actual": 357093.01,
+    "delta": -14467.98999999999,
+    "pct": 96.10616022671917
+   },
+   {
+    "name": "HOLIDAY",
+    "revised": 347233.0,
+    "actual": 282121.98,
+    "delta": -65111.02000000002,
+    "pct": 81.24860828319889
+   },
+   {
+    "name": "SARGENT",
+    "revised": 331839.0,
+    "actual": 284495.03,
+    "delta": -47343.96999999997,
+    "pct": 85.73284936369745
+   },
+   {
+    "name": "LEGAL SERVICES",
+    "revised": 309800.0,
+    "actual": 339498.79,
+    "delta": 29698.78999999998,
+    "pct": 109.58643963847643
+   },
+   {
+    "name": "EDUCATIONAL SOFTWARE",
+    "revised": 306778.75,
+    "actual": 313016.53,
+    "delta": 6237.780000000028,
+    "pct": 102.03331554092323
+   },
+   {
+    "name": "TRANSFER TO GENERAL FUND",
+    "revised": 292678.0,
+    "actual": 661566.0,
+    "delta": 368888.0,
+    "pct": 226.03885498739226
+   },
+   {
+    "name": "STATION MECH/PIPEFITTER II",
+    "revised": 289337.0,
+    "actual": 256834.68,
+    "delta": -32502.320000000007,
+    "pct": 88.76662162115457
+   },
+   {
+    "name": "R&M MOTOR VEHICLES",
+    "revised": 279355.0,
+    "actual": 320130.53,
+    "delta": 40775.53000000003,
+    "pct": 114.5963129351542
+   },
+   {
+    "name": "COMPUTER RENTAL/LEASE",
+    "revised": 265200.0,
+    "actual": 222461.39,
+    "delta": -42738.609999999986,
+    "pct": 83.88438536953244
+   },
+   {
+    "name": "SPECIAL CLERK",
+    "revised": 255805.0,
+    "actual": 296461.72,
+    "delta": 40656.71999999997,
+    "pct": 115.89363773186605
+   },
+   {
+    "name": "GROUND IMPROVEMENTS",
+    "revised": 240000.0,
+    "actual": 155069.25,
+    "delta": -84930.75,
+    "pct": 64.61218749999999
+   },
+   {
+    "name": "WATER/SEWER",
+    "revised": 238669.0,
+    "actual": 157231.56,
+    "delta": -81437.44,
+    "pct": 65.87850118783754
+   },
+   {
+    "name": "MECHANIC SUPERVISOR",
+    "revised": 236661.0,
+    "actual": 220607.78,
+    "delta": -16053.220000000001,
+    "pct": 93.21678688081263
+   },
+   {
+    "name": "SPECIAL LABOR 1",
+    "revised": 229713.0,
+    "actual": 259644.39,
+    "delta": 29931.390000000014,
+    "pct": 113.02990688380719
+   },
+   {
+    "name": "PARK",
+    "revised": 225224.0,
+    "actual": 171519.02,
+    "delta": -53704.98000000001,
+    "pct": 76.15485916243384
+   },
+   {
+    "name": "MECHANIC PIPEFITTER",
+    "revised": 225012.0,
+    "actual": 170397.21,
+    "delta": -54614.79000000001,
+    "pct": 75.72805450375981
+   },
+   {
+    "name": "GRINDING/COMPOST REMOVAL",
+    "revised": 224600.0,
+    "actual": 178460.0,
+    "delta": -46140.0,
+    "pct": 79.45681211041851
+   },
+   {
+    "name": "BUILDING IMPROVEMENTS",
+    "revised": 217525.09,
+    "actual": 16134.0,
+    "delta": -201391.09,
+    "pct": 7.417075427942588
+   },
+   {
+    "name": "MECHANIC",
+    "revised": 206522.0,
+    "actual": 151441.4,
+    "delta": -55080.600000000006,
+    "pct": 73.32942737335489
+   },
+   {
+    "name": "PUBLIC WORKS EQUIPMENT",
+    "revised": 203473.99,
+    "actual": 130320.13,
+    "delta": -73153.85999999999,
+    "pct": 64.04756204957695
+   },
+   {
+    "name": "UNEMPLOYMENT COMP SALARIES",
+    "revised": 200000.0,
+    "actual": 169255.19,
+    "delta": -30744.809999999998,
+    "pct": 84.627595
+   },
+   {
+    "name": "INTEREST ON SHORT-TERM DEBT",
+    "revised": 197000.0,
+    "actual": 196903.92,
+    "delta": -96.0799999999872,
+    "pct": 99.95122842639594
+   },
+   {
+    "name": "GASOLINE UNLEADED",
+    "revised": 194127.0,
+    "actual": 110834.15,
+    "delta": -83292.85,
+    "pct": 57.093629428157854
+   },
+   {
+    "name": "EQUIPMENT (REPLACEMENT)",
+    "revised": 181335.52,
+    "actual": 100272.92,
+    "delta": -81062.59999999999,
+    "pct": 55.29689936091947
+   },
+   {
+    "name": "OTHER DISPOSAL",
+    "revised": 180000.0,
+    "actual": 193594.6,
+    "delta": 13594.600000000006,
+    "pct": 107.55255555555556
+   },
+   {
+    "name": "LIBRARY MATERIALS",
+    "revised": 173974.0,
+    "actual": 131121.16,
+    "delta": -42852.84,
+    "pct": 75.36825042822491
+   },
+   {
+    "name": "OTHER SALARIES - STIPENDS",
+    "revised": 170036.0,
+    "actual": 105984.55,
+    "delta": -64051.45,
+    "pct": 62.33065350866875
+   },
+   {
+    "name": "BLDG & EQUIP R&M SUPPLIES",
+    "revised": 165262.0,
+    "actual": 86986.39,
+    "delta": -78275.61,
+    "pct": 52.63544553496872
+   },
+   {
+    "name": "WORKING FOREMAN",
+    "revised": 165011.0,
+    "actual": 153649.72,
+    "delta": -11361.279999999999,
+    "pct": 93.11483476859118
+   },
+   {
+    "name": "OTHER EQUIPMENT",
+    "revised": 161451.0,
+    "actual": 114338.59,
+    "delta": -47112.41,
+    "pct": 70.81937553808896
+   },
+   {
+    "name": "R&M OTHER EQUIPMENT",
+    "revised": 151948.0,
+    "actual": 113607.88,
+    "delta": -38340.119999999995,
+    "pct": 74.7676047068734
+   },
+   {
+    "name": "LONGEVITY",
+    "revised": 149354.0,
+    "actual": 137240.55,
+    "delta": -12113.450000000012,
+    "pct": 91.88943717610508
+   },
+   {
+    "name": "SENIOR CLERK II",
+    "revised": 143367.0,
+    "actual": 130967.56,
+    "delta": -12399.440000000002,
+    "pct": 91.35125935536071
+   },
+   {
+    "name": "COMPUTER EQUIPMENT",
+    "revised": 142535.55,
+    "actual": 80865.45,
+    "delta": -61670.09999999999,
+    "pct": 56.73353068760741
+   },
+   {
+    "name": "CUSTODIAL SUPPLIES",
+    "revised": 142256.0,
+    "actual": 110866.51,
+    "delta": -31389.490000000005,
+    "pct": 77.9345053987178
+   },
+   {
+    "name": "ELECT PWR-PUMPING STATIONS",
+    "revised": 141000.0,
+    "actual": 110857.89,
+    "delta": -30142.11,
+    "pct": 78.6226170212766
+   },
+   {
+    "name": "SPECIAL LABOR I",
+    "revised": 136520.0,
+    "actual": 112351.39,
+    "delta": -24168.61,
+    "pct": 82.29665250512745
+   },
+   {
+    "name": "SCHEDULED OT",
+    "revised": 135236.0,
+    "actual": 75910.94,
+    "delta": -59325.06,
+    "pct": 56.13219852701944
+   },
+   {
+    "name": "NIGHT DIFF",
+    "revised": 132651.0,
+    "actual": 132835.82,
+    "delta": 184.82000000000698,
+    "pct": 100.1393280110968
+   },
+   {
+    "name": "RETIREMENT INCENTIVE",
+    "revised": 130000.0,
+    "actual": 0,
+    "delta": -130000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "TAXES",
+    "revised": 122796.0,
+    "actual": 121617.75,
+    "delta": -1178.25,
+    "pct": 99.04048177465063
+   },
+   {
+    "name": "TRAFFIC SUPERS",
+    "revised": 122048.0,
+    "actual": 100179.46,
+    "delta": -21868.539999999994,
+    "pct": 82.08201691137913
+   },
+   {
+    "name": "DIESEL FUEL",
+    "revised": 118032.0,
+    "actual": 103535.67,
+    "delta": -14496.330000000002,
+    "pct": 87.71830520536803
+   },
+   {
+    "name": "GENERAL LABOR IV",
+    "revised": 116709.0,
+    "actual": 106542.29,
+    "delta": -10166.710000000006,
+    "pct": 91.2888380501932
+   },
+   {
+    "name": "SEAS SENIOR HARBOR ASSISTANT",
+    "revised": 113896.0,
+    "actual": 66857.83,
+    "delta": -47038.17,
+    "pct": 58.70077087869635
+   },
+   {
+    "name": "TELEPHONE",
+    "revised": 113638.0,
+    "actual": 65904.95,
+    "delta": -47733.05,
+    "pct": 57.995520864499554
+   },
+   {
+    "name": "POSTAGE",
+    "revised": 98743.0,
+    "actual": 68228.74,
+    "delta": -30514.259999999995,
+    "pct": 69.09729297266642
+   },
+   {
+    "name": "IN-SERVICE TRAINING",
+    "revised": 97049.0,
+    "actual": 32436.67,
+    "delta": -64612.33,
+    "pct": 33.42298220486558
+   },
+   {
+    "name": "MISC OTHER SUPPLIES",
+    "revised": 96161.0,
+    "actual": 75824.21,
+    "delta": -20336.789999999994,
+    "pct": 78.85131186239744
+   },
+   {
+    "name": "R&M FLOATS",
+    "revised": 95000.0,
+    "actual": 73760.54,
+    "delta": -21239.460000000006,
+    "pct": 77.64267368421052
+   },
+   {
+    "name": "WATER METERS",
+    "revised": 95000.0,
+    "actual": 30339.32,
+    "delta": -64660.68,
+    "pct": 31.936126315789476
+   },
+   {
+    "name": "PLANNER",
+    "revised": 94839.0,
+    "actual": 42949.48,
+    "delta": -51889.52,
+    "pct": 45.28672803382575
+   },
+   {
+    "name": "LIFE INSURANCE",
+    "revised": 93424.0,
+    "actual": 62951.62,
+    "delta": -30472.379999999997,
+    "pct": 67.38270679910944
+   },
+   {
+    "name": "SICK BONUS ANNUAL",
+    "revised": 90100.0,
+    "actual": 29500.0,
+    "delta": -60600.0,
+    "pct": 32.74139844617092
+   },
+   {
+    "name": "TRANSP ATHLETIC DRIVERS",
+    "revised": 87000.0,
+    "actual": 53479.78,
+    "delta": -33520.22,
+    "pct": 61.47101149425287
+   },
+   {
+    "name": "RENTALS AND LEASES",
+    "revised": 82520.0,
+    "actual": 67564.4,
+    "delta": -14955.600000000006,
+    "pct": 81.87639360155113
+   },
+   {
+    "name": "TELECOMMUNICATOR SUPERV",
+    "revised": 81824.0,
+    "actual": 73761.28,
+    "delta": -8062.720000000001,
+    "pct": 90.1462651544779
+   },
+   {
+    "name": "TECHNICAL SERVICES SUPERVISOR",
+    "revised": 81501.0,
+    "actual": 56833.02,
+    "delta": -24667.980000000003,
+    "pct": 69.73291125262267
+   },
+   {
+    "name": "HEAD PUBLIC SERVICES",
+    "revised": 81059.0,
+    "actual": 0,
+    "delta": -81059.0,
+    "pct": 0.0
+   },
+   {
+    "name": "SUSTAINABILITY COORD",
+    "revised": 79445.0,
+    "actual": 65755.15,
+    "delta": -13689.850000000006,
+    "pct": 82.76814148152809
+   },
+   {
+    "name": "GRANT COORDINATOR",
+    "revised": 79064.0,
+    "actual": 72160.92,
+    "delta": -6903.080000000002,
+    "pct": 91.26899726803602
+   },
+   {
+    "name": "STAND BY PAY",
+    "revised": 77480.0,
+    "actual": 156780.0,
+    "delta": 79300.0,
+    "pct": 202.3489932885906
+   },
+   {
+    "name": "SICK OWED RETIREMENT",
+    "revised": 77000.0,
+    "actual": 170563.25,
+    "delta": 93563.25,
+    "pct": 221.51071428571427
+   },
+   {
+    "name": "WORKING FOREMAN/TREE SURGEON",
+    "revised": 76710.0,
+    "actual": 69448.39,
+    "delta": -7261.610000000001,
+    "pct": 90.533685308304
+   },
+   {
+    "name": "PROGRAM MANAGER",
+    "revised": 76407.0,
+    "actual": 69884.84,
+    "delta": -6522.1600000000035,
+    "pct": 91.46392346250998
+   },
+   {
+    "name": "SUPERIOR OT",
+    "revised": 76095.0,
+    "actual": 134059.51,
+    "delta": 57964.51000000001,
+    "pct": 176.1738747618109
+   },
+   {
+    "name": "CHILD LIBRARIAN",
+    "revised": 73759.0,
+    "actual": 70109.02,
+    "delta": -3649.979999999996,
+    "pct": 95.05147846364513
+   },
+   {
+    "name": "OTHER PURCHASED SERVICES",
+    "revised": 72879.0,
+    "actual": 267338.33,
+    "delta": 194459.33000000002,
+    "pct": 366.82491527051695
+   },
+   {
+    "name": "ACCOUNTING",
+    "revised": 72000.0,
+    "actual": 8271.88,
+    "delta": -63728.12,
+    "pct": 11.48872222222222
+   },
+   {
+    "name": "YOUNG ADULT LIBRARIAN",
+    "revised": 71834.0,
+    "actual": 56668.54,
+    "delta": -15165.46,
+    "pct": 78.88818665256007
+   },
+   {
+    "name": "WORKING FORMAN BLDG",
+    "revised": 71543.0,
+    "actual": 60723.95,
+    "delta": -10819.050000000003,
+    "pct": 84.87755615503963
+   },
+   {
+    "name": "FIELD CRAFTSMAN MECHANIC",
+    "revised": 70983.0,
+    "actual": 29986.3,
+    "delta": -40996.7,
+    "pct": 42.244340194130984
+   },
+   {
+    "name": "PARK TURF SPECIALIST",
+    "revised": 70922.0,
+    "actual": 64208.67,
+    "delta": -6713.330000000002,
+    "pct": 90.53420659315869
+   },
+   {
+    "name": "IN-STATE TRAVEL",
+    "revised": 70767.0,
+    "actual": 26008.07,
+    "delta": -44758.93,
+    "pct": 36.75169217290545
+   },
+   {
+    "name": "SEAS GROUNDS CARETAKER",
+    "revised": 70052.0,
+    "actual": 57528.83,
+    "delta": -12523.169999999998,
+    "pct": 82.12303717238623
+   },
+   {
+    "name": "PROFFESIONAL REIMBURSEMENT",
+    "revised": 70000.0,
+    "actual": 12012.42,
+    "delta": -57987.58,
+    "pct": 17.160600000000002
+   },
+   {
+    "name": "WATER TECHNICIAN",
+    "revised": 69773.0,
+    "actual": 64003.64,
+    "delta": -5769.360000000001,
+    "pct": 91.73124274432803
+   },
+   {
+    "name": "TSA/403B MATCH",
+    "revised": 68000.0,
+    "actual": 0,
+    "delta": -68000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "OUTREACH WORKER",
+    "revised": 67557.0,
+    "actual": 62048.71,
+    "delta": -5508.290000000001,
+    "pct": 91.8464555856536
+   },
+   {
+    "name": "UNIFORMS/PROTECTIVE CLOTHING",
+    "revised": 67045.0,
+    "actual": 47341.47,
+    "delta": -19703.53,
+    "pct": 70.61148482362593
+   },
+   {
+    "name": "SCHOOL CHOICE ASSESSMENT",
+    "revised": 66431.0,
+    "actual": 66088.0,
+    "delta": -343.0,
+    "pct": 99.483674790384
+   },
+   {
+    "name": "VETERANS BENEFITS",
+    "revised": 65000.0,
+    "actual": 34552.11,
+    "delta": -30447.89,
+    "pct": 53.15709230769231
+   },
+   {
+    "name": "TRANSPORTATION COORDINATOR",
+    "revised": 64739.0,
+    "actual": 58420.77,
+    "delta": -6318.230000000003,
+    "pct": 90.24045783839725
+   },
+   {
+    "name": "LIBRARY COORDINATOR",
+    "revised": 64542.0,
+    "actual": 81210.96,
+    "delta": 16668.960000000006,
+    "pct": 125.82653156084412
+   },
+   {
+    "name": "PROGRAM VOLUNTEER COORDINATOR",
+    "revised": 64542.0,
+    "actual": 31995.86,
+    "delta": -32546.14,
+    "pct": 49.57370394471817
+   },
+   {
+    "name": "GIS FIELD TECHNICIAN",
+    "revised": 64206.0,
+    "actual": 62108.49,
+    "delta": -2097.510000000002,
+    "pct": 96.73315577983365
+   },
+   {
+    "name": "ADULT LIBRARIAN",
+    "revised": 64123.0,
+    "actual": 52803.12,
+    "delta": -11319.879999999997,
+    "pct": 82.34661509910642
+   },
+   {
+    "name": "LIBRARY TECH ADMIN",
+    "revised": 63576.0,
+    "actual": 57574.31,
+    "delta": -6001.690000000002,
+    "pct": 90.55981817037876
+   },
+   {
+    "name": "LABOR ATTORNEY",
+    "revised": 63000.0,
+    "actual": 58907.77,
+    "delta": -4092.230000000003,
+    "pct": 93.50439682539682
+   },
+   {
+    "name": "LIBRARY PARAPROFESSIONAL",
+    "revised": 62196.0,
+    "actual": 56214.44,
+    "delta": -5981.559999999998,
+    "pct": 90.38272557720755
+   },
+   {
+    "name": "WATER IMPROVEMENTS",
+    "revised": 61200.0,
+    "actual": 2402.0,
+    "delta": -58798.0,
+    "pct": 3.92483660130719
+   },
+   {
+    "name": "STAFF ENGINEER",
+    "revised": 61135.0,
+    "actual": 0,
+    "delta": -61135.0,
+    "pct": 0.0
+   },
+   {
+    "name": "BILLING TECH",
+    "revised": 61000.0,
+    "actual": 57695.06,
+    "delta": -3304.9400000000023,
+    "pct": 94.58206557377049
+   },
+   {
+    "name": "PSYCHOLOGICAL COUNSELING",
+    "revised": 60780.0,
+    "actual": 59019.39,
+    "delta": -1760.6100000000006,
+    "pct": 97.1033070088845
+   },
+   {
+    "name": "PRINTING/FORMS",
+    "revised": 60538.0,
+    "actual": 49337.72,
+    "delta": -11200.279999999999,
+    "pct": 81.4987611087251
+   },
+   {
+    "name": "STREET LIGHTING",
+    "revised": 60000.0,
+    "actual": 52735.86,
+    "delta": -7264.139999999999,
+    "pct": 87.8931
+   },
+   {
+    "name": "VACATION PAY/BONUS",
+    "revised": 60000.0,
+    "actual": 0,
+    "delta": -60000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "GEN'L LABOR/NUTR COORD",
+    "revised": 59118.0,
+    "actual": 53974.45,
+    "delta": -5143.550000000003,
+    "pct": 91.29951960485808
+   },
+   {
+    "name": "BOOKS",
+    "revised": 58548.95,
+    "actual": 36478.67,
+    "delta": -22070.28,
+    "pct": 62.30456737482055
+   },
+   {
+    "name": "LIBRARY TECH",
+    "revised": 57857.0,
+    "actual": 37544.5,
+    "delta": -20312.5,
+    "pct": 64.89188862194722
+   },
+   {
+    "name": "APPRAISOR SERVICES",
+    "revised": 57500.0,
+    "actual": 0,
+    "delta": -57500.0,
+    "pct": 0.0
+   },
+   {
+    "name": "ATHLETICS OFFICIALS SALARIES",
+    "revised": 57120.0,
+    "actual": 57030.0,
+    "delta": -90.0,
+    "pct": 99.84243697478992
+   },
+   {
+    "name": "UNIFORM ALLOWANCE",
+    "revised": 55199.0,
+    "actual": 50991.52,
+    "delta": -4207.480000000003,
+    "pct": 92.37761553651333
+   },
+   {
+    "name": "SENIOR LIBRARY ASSISTANT",
+    "revised": 55000.0,
+    "actual": 50180.11,
+    "delta": -4819.889999999999,
+    "pct": 91.23656363636363
+   },
+   {
+    "name": "MISC OFFICE SUPPLIES",
+    "revised": 54440.0,
+    "actual": 120332.32,
+    "delta": 65892.32,
+    "pct": 221.03659074210142
+   },
+   {
+    "name": "OTHER MISC EXPENSE",
+    "revised": 54352.0,
+    "actual": 271104.5,
+    "delta": 216752.5,
+    "pct": 498.7939726229025
+   },
+   {
+    "name": "LIBRARY TECH SVCS ASSISTANT",
+    "revised": 53557.0,
+    "actual": 31327.6,
+    "delta": -22229.4,
+    "pct": 58.493941034785365
+   },
+   {
+    "name": "INSPECTOR OT",
+    "revised": 53171.0,
+    "actual": 18110.21,
+    "delta": -35060.79,
+    "pct": 34.06031483327377
+   },
+   {
+    "name": "TRANSFER STATION OPERATOR",
+    "revised": 53071.0,
+    "actual": 47588.75,
+    "delta": -5482.25,
+    "pct": 89.66997041698856
+   },
+   {
+    "name": "PROFESSIONAL & TECHNICAL",
+    "revised": 50521.0,
+    "actual": 41472.48,
+    "delta": -9048.519999999997,
+    "pct": 82.0895865085806
+   },
+   {
+    "name": "ATHLETICS MEDICAL SALARIES",
+    "revised": 50388.0,
+    "actual": 17550.0,
+    "delta": -32838.0,
+    "pct": 34.82972136222911
+   },
+   {
+    "name": "UNUSED SICK-LEAVE BUYBACK",
+    "revised": 50000.0,
+    "actual": 4928.66,
+    "delta": -45071.34,
+    "pct": 9.85732
+   },
+   {
+    "name": "OFFICE ASSISTANT",
+    "revised": 49068.0,
+    "actual": 13334.74,
+    "delta": -35733.26,
+    "pct": 27.176041411918156
+   },
+   {
+    "name": "NOBLE SERVICES",
+    "revised": 48173.0,
+    "actual": 48173.0,
+    "delta": 0.0,
+    "pct": 100.0
+   },
+   {
+    "name": "LANDSCAPING SUPPLIES",
+    "revised": 47976.0,
+    "actual": 24279.06,
+    "delta": -23696.94,
+    "pct": 50.606678339169584
+   },
+   {
+    "name": "POLICE DEFIBR STIPEND",
+    "revised": 47539.0,
+    "actual": 40767.41,
+    "delta": -6771.5899999999965,
+    "pct": 85.75571635919982
+   },
+   {
+    "name": "MOSQUITO CONTROL PROJECTS",
+    "revised": 46138.0,
+    "actual": 30760.0,
+    "delta": -15378.0,
+    "pct": 66.66955654774807
+   },
+   {
+    "name": "TESTING SERVICES",
+    "revised": 45655.0,
+    "actual": 9686.65,
+    "delta": -35968.35,
+    "pct": 21.21706275325813
+   },
+   {
+    "name": "DUES",
+    "revised": 43796.0,
+    "actual": 69190.43,
+    "delta": 25394.429999999993,
+    "pct": 157.9834459768015
+   },
+   {
+    "name": "R&M COMPUTER EQUIPMENT",
+    "revised": 40391.0,
+    "actual": 39862.81,
+    "delta": -528.1900000000023,
+    "pct": 98.6923076923077
+   },
+   {
+    "name": "TECHNOLOGY EQUIPMENT",
+    "revised": 38140.0,
+    "actual": 30932.4,
+    "delta": -7207.5999999999985,
+    "pct": 81.10225485055061
+   },
+   {
+    "name": "TEMPORY LIBRARY ASSISTANT",
+    "revised": 37306.0,
+    "actual": 25043.27,
+    "delta": -12262.73,
+    "pct": 67.12933576368413
+   },
+   {
+    "name": "SUBSCRIPTIONS",
+    "revised": 36081.0,
+    "actual": 13620.31,
+    "delta": -22460.690000000002,
+    "pct": 37.749258612566166
+   },
+   {
+    "name": "OFFICE SUPPLIES",
+    "revised": 35897.22,
+    "actual": 30844.34,
+    "delta": -5052.880000000001,
+    "pct": 85.92403534312685
+   },
+   {
+    "name": "MISC BLDG R&M SUPPLIES",
+    "revised": 34615.0,
+    "actual": 13906.31,
+    "delta": -20708.690000000002,
+    "pct": 40.17423082478694
+   },
+   {
+    "name": "CELLULAR PHONES",
+    "revised": 33109.0,
+    "actual": 26475.58,
+    "delta": -6633.419999999998,
+    "pct": 79.96490380259145
+   },
+   {
+    "name": "TEMP GENERAL CLERK",
+    "revised": 33000.0,
+    "actual": 39529.15,
+    "delta": 6529.1500000000015,
+    "pct": 119.78530303030304
+   },
+   {
+    "name": "ADULT PAGE",
+    "revised": 32103.0,
+    "actual": 24738.75,
+    "delta": -7364.25,
+    "pct": 77.0605550883095
+   },
+   {
+    "name": "LICENSE/PERMITS EXPENSE",
+    "revised": 30295.0,
+    "actual": 18396.52,
+    "delta": -11898.48,
+    "pct": 60.724608021125604
+   },
+   {
+    "name": "ENGINEERING/ARCHITECTURAL",
+    "revised": 30000.0,
+    "actual": 16773.75,
+    "delta": -13226.25,
+    "pct": 55.9125
+   },
+   {
+    "name": "PAVEMENT MARKING SUPPLIES",
+    "revised": 30000.0,
+    "actual": 0,
+    "delta": -30000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "MECHANIC PIPEFITTER II",
+    "revised": 29808.0,
+    "actual": 0,
+    "delta": -29808.0,
+    "pct": 0.0
+   },
+   {
+    "name": "BUS MONITOR",
+    "revised": 27210.0,
+    "actual": 12455.29,
+    "delta": -14754.71,
+    "pct": 45.77467842704888
+   },
+   {
+    "name": "STATION EQUIP & SUPPLIES",
+    "revised": 27060.0,
+    "actual": 19726.1,
+    "delta": -7333.9000000000015,
+    "pct": 72.89763488543976
+   },
+   {
+    "name": "INSIDE DETAIL",
+    "revised": 25359.0,
+    "actual": 141908.48,
+    "delta": 116549.48000000001,
+    "pct": 559.5980914073899
+   },
+   {
+    "name": "TEMP OFFICER",
+    "revised": 24429.0,
+    "actual": 23195.12,
+    "delta": -1233.880000000001,
+    "pct": 94.94911785173359
+   },
+   {
+    "name": "R&M RADIO",
+    "revised": 24410.0,
+    "actual": 31880.59,
+    "delta": 7470.59,
+    "pct": 130.60462925030726
+   },
+   {
+    "name": "MISC MEDICAL & SURGICAL",
+    "revised": 23865.0,
+    "actual": 13022.85,
+    "delta": -10842.15,
+    "pct": 54.56882463859208
+   },
+   {
+    "name": "ATHLETICS CUSTODIAN",
+    "revised": 23038.0,
+    "actual": 18564.4,
+    "delta": -4473.5999999999985,
+    "pct": 80.58164771247505
+   },
+   {
+    "name": "WORKERS COMP BILLS",
+    "revised": 23000.0,
+    "actual": 0,
+    "delta": -23000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "SEASONAL LABOR",
+    "revised": 22834.0,
+    "actual": 6126.79,
+    "delta": -16707.21,
+    "pct": 26.831873521940963
+   },
+   {
+    "name": "TEMP DISPATCHER",
+    "revised": 22730.0,
+    "actual": 25540.71,
+    "delta": 2810.709999999999,
+    "pct": 112.36564012318522
+   },
+   {
+    "name": "VACATION OWED",
+    "revised": 22700.0,
+    "actual": 7106.24,
+    "delta": -15593.76,
+    "pct": 31.30502202643172
+   },
+   {
+    "name": "TESTING SUPPLIES",
+    "revised": 21404.0,
+    "actual": 11560.62,
+    "delta": -9843.38,
+    "pct": 54.011493178845086
+   },
+   {
+    "name": "COURT OT",
+    "revised": 20400.0,
+    "actual": 7756.29,
+    "delta": -12643.71,
+    "pct": 38.02102941176471
+   },
+   {
+    "name": "INTERNET ACCESS",
+    "revised": 20388.0,
+    "actual": 38345.7,
+    "delta": 17957.699999999997,
+    "pct": 188.0797527957622
+   },
+   {
+    "name": "BALLOTS",
+    "revised": 20000.0,
+    "actual": 0,
+    "delta": -20000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "TEMP SPECIAL CLERK",
+    "revised": 20000.0,
+    "actual": 1133.38,
+    "delta": -18866.62,
+    "pct": 5.6669
+   },
+   {
+    "name": "MEDICAL/DOCTOR SERVICES",
+    "revised": 19280.0,
+    "actual": 7140.0,
+    "delta": -12140.0,
+    "pct": 37.03319502074689
+   },
+   {
+    "name": "TIRES",
+    "revised": 18710.0,
+    "actual": 19101.62,
+    "delta": 391.619999999999,
+    "pct": 102.09310529128808
+   },
+   {
+    "name": "SMALL EQUIPMENT",
+    "revised": 18522.0,
+    "actual": 2569.61,
+    "delta": -15952.39,
+    "pct": 13.873285822265416
+   },
+   {
+    "name": "TRAINING SUPPLIES",
+    "revised": 18000.0,
+    "actual": 14714.2,
+    "delta": -3285.7999999999993,
+    "pct": 81.74555555555555
+   },
+   {
+    "name": "EMPLOYEE TRAINING/SEMINARS",
+    "revised": 17819.0,
+    "actual": 4938.16,
+    "delta": -12880.84,
+    "pct": 27.712890734609125
+   },
+   {
+    "name": "OUT OF RANK",
+    "revised": 17610.0,
+    "actual": 34188.38,
+    "delta": 16578.379999999997,
+    "pct": 194.1418512208972
+   },
+   {
+    "name": "INJURY LEAVE BILLS",
+    "revised": 16530.0,
+    "actual": 8042.1,
+    "delta": -8487.9,
+    "pct": 48.651542649727766
+   },
+   {
+    "name": "SPECIAL LICENSE STIPEND",
+    "revised": 16500.0,
+    "actual": 11250.0,
+    "delta": -5250.0,
+    "pct": 68.18181818181817
+   },
+   {
+    "name": "SAFETY SUPPLIES/EQUIPMENT",
+    "revised": 16100.0,
+    "actual": 4806.96,
+    "delta": -11293.04,
+    "pct": 29.85689440993789
+   },
+   {
+    "name": "SALT",
+    "revised": 16085.0,
+    "actual": 145475.9,
+    "delta": 129390.9,
+    "pct": 904.4196456325769
+   },
+   {
+    "name": "ATHLETIC POLICE DUTY SALARY",
+    "revised": 16000.0,
+    "actual": 4584.14,
+    "delta": -11415.86,
+    "pct": 28.650875000000003
+   },
+   {
+    "name": "IN-STATE CONFERENCE",
+    "revised": 15690.0,
+    "actual": 2876.14,
+    "delta": -12813.86,
+    "pct": 18.331038878266412
+   },
+   {
+    "name": "GRASS SEED",
+    "revised": 15450.0,
+    "actual": 14273.15,
+    "delta": -1176.8500000000004,
+    "pct": 92.38284789644013
+   },
+   {
+    "name": "SEAS HARBOR PUMPOUT ASSIST",
+    "revised": 15430.0,
+    "actual": 3454.46,
+    "delta": -11975.54,
+    "pct": 22.387945560596243
+   },
+   {
+    "name": "MEDICAL & SURGICAL SUPPLIES",
+    "revised": 15242.0,
+    "actual": 10291.61,
+    "delta": -4950.389999999999,
+    "pct": 67.52138826925601
+   },
+   {
+    "name": "RMV NONRENEWAL SURCHARGE",
+    "revised": 15200.0,
+    "actual": 10136.0,
+    "delta": -5064.0,
+    "pct": 66.6842105263158
+   },
+   {
+    "name": "DISPOSAL AREA MAINT SUPPLIES",
+    "revised": 15000.0,
+    "actual": 12575.0,
+    "delta": -2425.0,
+    "pct": 83.83333333333334
+   },
+   {
+    "name": "PERM POLICE",
+    "revised": 15000.0,
+    "actual": 6345.72,
+    "delta": -8654.279999999999,
+    "pct": 42.3048
+   },
+   {
+    "name": "R&M TRAFFIC CONTROL EQUIP",
+    "revised": 15000.0,
+    "actual": 6109.48,
+    "delta": -8890.52,
+    "pct": 40.729866666666666
+   },
+   {
+    "name": "DOUBLE TIME",
+    "revised": 14233.0,
+    "actual": 105118.28,
+    "delta": 90885.28,
+    "pct": 738.5532213869177
+   },
+   {
+    "name": "MISC CUSTODIAL SUPPLIES",
+    "revised": 14175.0,
+    "actual": 9055.51,
+    "delta": -5119.49,
+    "pct": 63.88366843033509
+   },
+   {
+    "name": "R&M OFFICE EQUIPMENT",
+    "revised": 13100.0,
+    "actual": 6603.76,
+    "delta": -6496.24,
+    "pct": 50.41038167938932
+   },
+   {
+    "name": "METRO AREA PLANNING COUNC",
+    "revised": 12327.0,
+    "actual": 7182.0,
+    "delta": -5145.0,
+    "pct": 58.262350936967636
+   },
+   {
+    "name": "SIGNS",
+    "revised": 12250.0,
+    "actual": 38395.86,
+    "delta": 26145.86,
+    "pct": 313.43559183673466
+   },
+   {
+    "name": "SMALL TOOLS",
+    "revised": 12250.0,
+    "actual": 13221.03,
+    "delta": 971.0300000000007,
+    "pct": 107.92677551020408
+   },
+   {
+    "name": "TREES & SHRUBS SUPPLIES",
+    "revised": 12000.0,
+    "actual": 0,
+    "delta": -12000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "CLEANING SUPPLIES",
+    "revised": 11945.0,
+    "actual": 10193.17,
+    "delta": -1751.83,
+    "pct": 85.3341984093763
+   },
+   {
+    "name": "PROFESSIONAL DEVELOPMENT",
+    "revised": 11866.0,
+    "actual": 1958.19,
+    "delta": -9907.81,
+    "pct": 16.50252823192314
+   },
+   {
+    "name": "PAPER & PRINTER SUPPLIES",
+    "revised": 11730.0,
+    "actual": 11191.14,
+    "delta": -538.8600000000006,
+    "pct": 95.40613810741687
+   },
+   {
+    "name": "TRAIN ACADEMY",
+    "revised": 11400.0,
+    "actual": 0,
+    "delta": -11400.0,
+    "pct": 0.0
+   },
+   {
+    "name": "MATRON MONITOR",
+    "revised": 11000.0,
+    "actual": 6466.04,
+    "delta": -4533.96,
+    "pct": 58.782181818181826
+   },
+   {
+    "name": "SEASONAL DOCENT",
+    "revised": 10899.0,
+    "actual": 2264.58,
+    "delta": -8634.42,
+    "pct": 20.777869529314614
+   },
+   {
+    "name": "R&M VEHICLES NON-HIGHWAY",
+    "revised": 10650.0,
+    "actual": 13616.56,
+    "delta": 2966.5599999999995,
+    "pct": 127.85502347417841
+   },
+   {
+    "name": "AIR POLUTION CONTROL",
+    "revised": 10585.0,
+    "actual": 8090.0,
+    "delta": -2495.0,
+    "pct": 76.42890883325461
+   },
+   {
+    "name": "SEAS SUMMER CLERICAL",
+    "revised": 10504.0,
+    "actual": 0,
+    "delta": -10504.0,
+    "pct": 0.0
+   },
+   {
+    "name": "COA TEMP SPECIAL CLERK",
+    "revised": 10000.0,
+    "actual": 6627.47,
+    "delta": -3372.5299999999997,
+    "pct": 66.2747
+   },
+   {
+    "name": "BOAT GASOLINE",
+    "revised": 9800.0,
+    "actual": 4480.79,
+    "delta": -5319.21,
+    "pct": 45.72234693877551
+   },
+   {
+    "name": "STREET SWEEPER SUPPLIES",
+    "revised": 9800.0,
+    "actual": 8676.71,
+    "delta": -1123.2900000000009,
+    "pct": 88.53785714285713
+   },
+   {
+    "name": "R&M ALARM EQUIPMENT",
+    "revised": 9460.0,
+    "actual": 6650.11,
+    "delta": -2809.8900000000003,
+    "pct": 70.29714587737843
+   },
+   {
+    "name": "DUES AND MEMBERSHIPS",
+    "revised": 8836.0,
+    "actual": 1150.0,
+    "delta": -7686.0,
+    "pct": 13.014938886373924
+   },
+   {
+    "name": "SEAS BEACH SUPERVISOR",
+    "revised": 8710.0,
+    "actual": 7361.64,
+    "delta": -1348.3599999999997,
+    "pct": 84.51940298507463
+   },
+   {
+    "name": "R&M RESTROOMS",
+    "revised": 8500.0,
+    "actual": 4656.41,
+    "delta": -3843.59,
+    "pct": 54.781294117647064
+   },
+   {
+    "name": "ADVERTISING",
+    "revised": 8460.0,
+    "actual": 127428.05,
+    "delta": 118968.05,
+    "pct": 1506.2417257683214
+   },
+   {
+    "name": "LEGAL NOTICES",
+    "revised": 8350.0,
+    "actual": 3538.5,
+    "delta": -4811.5,
+    "pct": 42.377245508982035
+   },
+   {
+    "name": "LIBRARY SUPPLIES",
+    "revised": 8075.0,
+    "actual": 6598.52,
+    "delta": -1476.4799999999996,
+    "pct": 81.71541795665635
+   },
+   {
+    "name": "CURBSIDE RECYCLING BINS",
+    "revised": 8000.0,
+    "actual": 7900.0,
+    "delta": -100.0,
+    "pct": 98.75
+   },
+   {
+    "name": "PAINT",
+    "revised": 8000.0,
+    "actual": 8044.26,
+    "delta": 44.26000000000022,
+    "pct": 100.55324999999999
+   },
+   {
+    "name": "STONE DUST",
+    "revised": 8000.0,
+    "actual": 0,
+    "delta": -8000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "OVERRIDE ELECTION SALARIES",
+    "revised": 7500.0,
+    "actual": 2076.14,
+    "delta": -5423.860000000001,
+    "pct": 27.681866666666664
+   },
+   {
+    "name": "TOWN ELECTION SALARIES",
+    "revised": 7500.0,
+    "actual": 0,
+    "delta": -7500.0,
+    "pct": 0.0
+   },
+   {
+    "name": "PROSECUTOR",
+    "revised": 7485.0,
+    "actual": 6296.06,
+    "delta": -1188.9399999999996,
+    "pct": 84.11569806279225
+   },
+   {
+    "name": "RENTAL-PHOTOCOPIER",
+    "revised": 7200.0,
+    "actual": 3442.85,
+    "delta": -3757.15,
+    "pct": 47.81736111111111
+   },
+   {
+    "name": "IN-STATE TRAVEL PRINCIPAL",
+    "revised": 7061.72,
+    "actual": 3733.72,
+    "delta": -3328.0000000000005,
+    "pct": 52.87267124723155
+   },
+   {
+    "name": "ELECTED OFFICIAL EXPENSES",
+    "revised": 7050.0,
+    "actual": 4500.0,
+    "delta": -2550.0,
+    "pct": 63.829787234042556
+   },
+   {
+    "name": "CLERICAL PARA SALARIES",
+    "revised": 7000.0,
+    "actual": 0,
+    "delta": -7000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "MEDICARE PENALTY",
+    "revised": 6986.0,
+    "actual": 1542.0,
+    "delta": -5444.0,
+    "pct": 22.072716862296023
+   },
+   {
+    "name": "INSTRUCTIONAL EQUIPMENT",
+    "revised": 6745.0,
+    "actual": 7484.52,
+    "delta": 739.5200000000004,
+    "pct": 110.9639733135656
+   },
+   {
+    "name": "WREATHS & FLOWERS",
+    "revised": 6350.0,
+    "actual": 5111.35,
+    "delta": -1238.6499999999996,
+    "pct": 80.49370078740158
+   },
+   {
+    "name": "OTHER CLERICAL SALARIES",
+    "revised": 6120.0,
+    "actual": 5607.13,
+    "delta": -512.8699999999999,
+    "pct": 91.61977124183008
+   },
+   {
+    "name": "FIRE PREVENTION OFFICER",
+    "revised": 6000.0,
+    "actual": 5389.4,
+    "delta": -610.6000000000004,
+    "pct": 89.82333333333334
+   },
+   {
+    "name": "MAPS",
+    "revised": 6000.0,
+    "actual": 10797.27,
+    "delta": 4797.27,
+    "pct": 179.95450000000002
+   },
+   {
+    "name": "GROUNDSKEEPING SUPPLIES",
+    "revised": 5600.0,
+    "actual": 1601.88,
+    "delta": -3998.12,
+    "pct": 28.605000000000004
+   },
+   {
+    "name": "EQUIPMENT (NEW)",
+    "revised": 5100.0,
+    "actual": 0,
+    "delta": -5100.0,
+    "pct": 0.0
+   },
+   {
+    "name": "RENTAL-EQUIPMENT",
+    "revised": 5090.0,
+    "actual": 0,
+    "delta": -5090.0,
+    "pct": 0.0
+   },
+   {
+    "name": "OIL FOR HEAT",
+    "revised": 5080.0,
+    "actual": 4729.11,
+    "delta": -350.8900000000003,
+    "pct": 93.09271653543306
+   },
+   {
+    "name": "R&M PLAYGROUND EQUIP",
+    "revised": 5000.0,
+    "actual": 3060.95,
+    "delta": -1939.0500000000002,
+    "pct": 61.219
+   },
+   {
+    "name": "R&M SCALES",
+    "revised": 5000.0,
+    "actual": 0,
+    "delta": -5000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "FLAGS",
+    "revised": 4900.0,
+    "actual": 588.2,
+    "delta": -4311.8,
+    "pct": 12.004081632653062
+   },
+   {
+    "name": "PHOTOCOPYING SUPPLIES",
+    "revised": 4860.0,
+    "actual": 3176.98,
+    "delta": -1683.02,
+    "pct": 65.36995884773663
+   },
+   {
+    "name": "R&M BOAT",
+    "revised": 4800.0,
+    "actual": 7937.98,
+    "delta": 3137.9799999999996,
+    "pct": 165.37458333333333
+   },
+   {
+    "name": "SMALL OFFICE EQUIPMENT",
+    "revised": 4760.0,
+    "actual": 1225.62,
+    "delta": -3534.38,
+    "pct": 25.74831932773109
+   },
+   {
+    "name": "PRINTING SERVICES",
+    "revised": 4590.0,
+    "actual": 1729.04,
+    "delta": -2860.96,
+    "pct": 37.66971677559913
+   },
+   {
+    "name": "R&M HAULING EQUIPMENT",
+    "revised": 4500.0,
+    "actual": 677.45,
+    "delta": -3822.55,
+    "pct": 15.054444444444446
+   },
+   {
+    "name": "PUBLIC SAFETY EQUIPMENT",
+    "revised": 4171.87,
+    "actual": 0,
+    "delta": -4171.87,
+    "pct": 0.0
+   },
+   {
+    "name": "FIRE MECHANIC",
+    "revised": 4166.0,
+    "actual": 3727.92,
+    "delta": -438.0799999999999,
+    "pct": 89.48439750360058
+   },
+   {
+    "name": "TELECOMMUNICATOR STIPEND",
+    "revised": 4160.0,
+    "actual": 2048.0,
+    "delta": -2112.0,
+    "pct": 49.23076923076923
+   },
+   {
+    "name": "ANNUAL TOWN MEETING SALARIES",
+    "revised": 4000.0,
+    "actual": 1965.06,
+    "delta": -2034.94,
+    "pct": 49.1265
+   },
+   {
+    "name": "FIRE EMERGENCY MNGT STIPEND",
+    "revised": 4000.0,
+    "actual": 3593.86,
+    "delta": -406.1399999999999,
+    "pct": 89.8465
+   },
+   {
+    "name": "FIRE EMT COORDINATOR",
+    "revised": 4000.0,
+    "actual": 3516.02,
+    "delta": -483.98,
+    "pct": 87.90050000000001
+   },
+   {
+    "name": "FIRE TRAINING OFFICER",
+    "revised": 4000.0,
+    "actual": 3285.26,
+    "delta": -714.7399999999998,
+    "pct": 82.1315
+   },
+   {
+    "name": "HEALING ABUSE WORKING CHNG",
+    "revised": 4000.0,
+    "actual": 4000.0,
+    "delta": 0.0,
+    "pct": 100.0
+   },
+   {
+    "name": "TELEPHONE ANSWERING SERVICE",
+    "revised": 4000.0,
+    "actual": 3845.95,
+    "delta": -154.05000000000018,
+    "pct": 96.14874999999999
+   },
+   {
+    "name": "TOWN REPORT",
+    "revised": 4000.0,
+    "actual": 3905.78,
+    "delta": -94.2199999999998,
+    "pct": 97.6445
+   },
+   {
+    "name": "FIREFIGHTING SUPPLIES",
+    "revised": 3700.0,
+    "actual": 2000.0,
+    "delta": -1700.0,
+    "pct": 54.054054054054056
+   },
+   {
+    "name": "NIGHT MTG CLERICAL STIPEND",
+    "revised": 3600.0,
+    "actual": 8000.0,
+    "delta": 4400.0,
+    "pct": 222.22222222222223
+   },
+   {
+    "name": "MOORING/BARGE SERVICE",
+    "revised": 3500.0,
+    "actual": 8542.32,
+    "delta": 5042.32,
+    "pct": 244.06628571428573
+   },
+   {
+    "name": "R&M PASSIVE PARKS",
+    "revised": 3500.0,
+    "actual": 0,
+    "delta": -3500.0,
+    "pct": 0.0
+   },
+   {
+    "name": "COMPUTER SUPPLIES",
+    "revised": 3448.0,
+    "actual": 2023.83,
+    "delta": -1424.17,
+    "pct": 58.6957656612529
+   },
+   {
+    "name": "CONTAINER RENTAL",
+    "revised": 3400.0,
+    "actual": 3672.0,
+    "delta": 272.0,
+    "pct": 108.0
+   },
+   {
+    "name": "DEEDS",
+    "revised": 3300.0,
+    "actual": 0,
+    "delta": -3300.0,
+    "pct": 0.0
+   },
+   {
+    "name": "MISC VEHICULAR SUPPLIES",
+    "revised": 3250.0,
+    "actual": 15815.25,
+    "delta": 12565.25,
+    "pct": 486.62307692307695
+   },
+   {
+    "name": "MEDICAID SERVICES",
+    "revised": 3200.0,
+    "actual": 790.69,
+    "delta": -2409.31,
+    "pct": 24.7090625
+   },
+   {
+    "name": "R&M FIRE EQUIPMENT",
+    "revised": 3182.0,
+    "actual": 87.85,
+    "delta": -3094.15,
+    "pct": 2.7608422375864237
+   },
+   {
+    "name": "RESIDENT BOOKS",
+    "revised": 2800.0,
+    "actual": 0,
+    "delta": -2800.0,
+    "pct": 0.0
+   },
+   {
+    "name": "RENTAL-BUILDINGS",
+    "revised": 2790.0,
+    "actual": 2140.0,
+    "delta": -650.0,
+    "pct": 76.70250896057348
+   },
+   {
+    "name": "R&M GAS PUMPS",
+    "revised": 2579.0,
+    "actual": 550.0,
+    "delta": -2029.0,
+    "pct": 21.32609538580845
+   },
+   {
+    "name": "FIRE PREVENTION SUPPLIES",
+    "revised": 2243.0,
+    "actual": 1086.0,
+    "delta": -1157.0,
+    "pct": 48.417298261257244
+   },
+   {
+    "name": "MOTOR OIL & GREASE",
+    "revised": 2200.0,
+    "actual": 1372.43,
+    "delta": -827.5699999999999,
+    "pct": 62.38318181818182
+   },
+   {
+    "name": "R&M EMERGENCY GENERATOR",
+    "revised": 2080.0,
+    "actual": 443.63,
+    "delta": -1636.37,
+    "pct": 21.328365384615385
+   },
+   {
+    "name": "BANDS & MARCHERS",
+    "revised": 2000.0,
+    "actual": 0,
+    "delta": -2000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "DER STIPEND",
+    "revised": 2000.0,
+    "actual": 0,
+    "delta": -2000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "SETTLEMENT CLAIMS",
+    "revised": 2000.0,
+    "actual": 0,
+    "delta": -2000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "GR BOS POLICE COUNCIL",
+    "revised": 1976.0,
+    "actual": 0,
+    "delta": -1976.0,
+    "pct": 0.0
+   },
+   {
+    "name": "CLERICAL STIPEND",
+    "revised": 1800.0,
+    "actual": 2200.0,
+    "delta": 400.0,
+    "pct": 122.22222222222223
+   },
+   {
+    "name": "FINGER PHOTO",
+    "revised": 1800.0,
+    "actual": 1066.02,
+    "delta": -733.98,
+    "pct": 59.22333333333333
+   },
+   {
+    "name": "WARRANTS",
+    "revised": 1800.0,
+    "actual": 125.0,
+    "delta": -1675.0,
+    "pct": 6.944444444444445
+   },
+   {
+    "name": "IN-STATE LOCAL TRAVEL",
+    "revised": 1600.0,
+    "actual": 0,
+    "delta": -1600.0,
+    "pct": 0.0
+   },
+   {
+    "name": "INSPECTOR SUPPLIES",
+    "revised": 1560.0,
+    "actual": 1646.8,
+    "delta": 86.79999999999995,
+    "pct": 105.56410256410255
+   },
+   {
+    "name": "CHEMICALS",
+    "revised": 1500.0,
+    "actual": 0,
+    "delta": -1500.0,
+    "pct": 0.0
+   },
+   {
+    "name": "LYNPAC",
+    "revised": 1500.0,
+    "actual": 0,
+    "delta": -1500.0,
+    "pct": 0.0
+   },
+   {
+    "name": "SAND",
+    "revised": 1500.0,
+    "actual": 1051.72,
+    "delta": -448.28,
+    "pct": 70.11466666666666
+   },
+   {
+    "name": "BANKING SERVICES",
+    "revised": 1400.0,
+    "actual": 3054.96,
+    "delta": 1654.96,
+    "pct": 218.2114285714286
+   },
+   {
+    "name": "R&M HVAC EQUIPMENT",
+    "revised": 1300.0,
+    "actual": 2944.0,
+    "delta": 1644.0,
+    "pct": 226.46153846153845
+   },
+   {
+    "name": "R&M TELETYPE",
+    "revised": 1300.0,
+    "actual": 839.5,
+    "delta": -460.5,
+    "pct": 64.57692307692308
+   },
+   {
+    "name": "STATIONERY",
+    "revised": 1300.0,
+    "actual": 0,
+    "delta": -1300.0,
+    "pct": 0.0
+   },
+   {
+    "name": "JUVENILE OFFICER",
+    "revised": 1200.0,
+    "actual": 710.71,
+    "delta": -489.28999999999996,
+    "pct": 59.225833333333334
+   },
+   {
+    "name": "R&M TELEPHONE",
+    "revised": 1040.0,
+    "actual": 4282.81,
+    "delta": 3242.8100000000004,
+    "pct": 411.8086538461539
+   },
+   {
+    "name": "FLOAT SUPPLIES",
+    "revised": 1000.0,
+    "actual": 134.27,
+    "delta": -865.73,
+    "pct": 13.427
+   },
+   {
+    "name": "INDEMNIF OFFICER STIPEND",
+    "revised": 1000.0,
+    "actual": 0,
+    "delta": -1000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "LANDFILL MAINT SUPPLIES",
+    "revised": 1000.0,
+    "actual": 0,
+    "delta": -1000.0,
+    "pct": 0.0
+   },
+   {
+    "name": "TELEPHONE/ALARM",
+    "revised": 900.0,
+    "actual": 570.26,
+    "delta": -329.74,
+    "pct": 63.36222222222222
+   },
+   {
+    "name": "PAPER",
+    "revised": 874.0,
+    "actual": 0,
+    "delta": -874.0,
+    "pct": 0.0
+   },
+   {
+    "name": "TUITION REIMBURSEMENT",
+    "revised": 825.0,
+    "actual": 0,
+    "delta": -825.0,
+    "pct": 0.0
+   },
+   {
+    "name": "TEMP HEAVY EQUIP OPERATOR",
+    "revised": 800.0,
+    "actual": 0,
+    "delta": -800.0,
+    "pct": 0.0
+   },
+   {
+    "name": "OTHER SUPPLIES",
+    "revised": 714.0,
+    "actual": 0,
+    "delta": -714.0,
+    "pct": 0.0
+   },
+   {
+    "name": "REGISTER VOTERS SALARIES",
+    "revised": 700.0,
+    "actual": 0,
+    "delta": -700.0,
+    "pct": 0.0
+   },
+   {
+    "name": "BOAT SUPPLIES",
+    "revised": 600.0,
+    "actual": 0,
+    "delta": -600.0,
+    "pct": 0.0
+   },
+   {
+    "name": "VITAL STATISTICS",
+    "revised": 600.0,
+    "actual": 0,
+    "delta": -600.0,
+    "pct": 0.0
+   },
+   {
+    "name": "VETERANARY SERVICES",
+    "revised": 572.0,
+    "actual": 215.75,
+    "delta": -356.25,
+    "pct": 37.71853146853147
+   },
+   {
+    "name": "VEHICULAR SUPPLIES",
+    "revised": 510.0,
+    "actual": 924.42,
+    "delta": 414.41999999999996,
+    "pct": 181.25882352941176
+   },
+   {
+    "name": "ELECTRONICS",
+    "revised": 500.0,
+    "actual": 0,
+    "delta": -500.0,
+    "pct": 0.0
+   },
+   {
+    "name": "INSP OFFICER",
+    "revised": 500.0,
+    "actual": 439.47,
+    "delta": -60.52999999999997,
+    "pct": 87.894
+   },
+   {
+    "name": "MISC WATERFRONT SUPPLIES",
+    "revised": 500.0,
+    "actual": 0,
+    "delta": -500.0,
+    "pct": 0.0
+   },
+   {
+    "name": "OUT-OF-STATE TRAVEL",
+    "revised": 500.0,
+    "actual": 10611.12,
+    "delta": 10111.12,
+    "pct": 2122.224
+   },
+   {
+    "name": "BOARD OR COMM SALARIES",
+    "revised": 450.0,
+    "actual": 300.0,
+    "delta": -150.0,
+    "pct": 66.66666666666666
+   },
+   {
+    "name": "YVS OFFICER",
+    "revised": 400.0,
+    "actual": 359.16,
+    "delta": -40.839999999999975,
+    "pct": 89.79
+   },
+   {
+    "name": "IN-STATE TRAVEL-TRAINING",
+    "revised": 325.0,
+    "actual": 2847.33,
+    "delta": 2522.33,
+    "pct": 876.1015384615383
+   },
+   {
+    "name": "FOOD & FOOD SVC SUPPLIES",
+    "revised": 312.0,
+    "actual": 233.29,
+    "delta": -78.71000000000001,
+    "pct": 74.7724358974359
+   },
+   {
+    "name": "BOAT SMALL EQUIPMENT",
+    "revised": 300.0,
+    "actual": 0,
+    "delta": -300.0,
+    "pct": 0.0
+   },
+   {
+    "name": "NARCOTIC OFFICER",
+    "revised": 300.0,
+    "actual": 269.04,
+    "delta": -30.95999999999998,
+    "pct": 89.68
+   },
+   {
+    "name": "BELL RINGER STIPEND",
+    "revised": 270.0,
+    "actual": 0,
+    "delta": -270.0,
+    "pct": 0.0
+   },
+   {
+    "name": "CONSTABLE",
+    "revised": 250.0,
+    "actual": 1485.0,
+    "delta": 1235.0,
+    "pct": 594.0
+   },
+   {
+    "name": "EMERG MNGT SUPPLIES",
+    "revised": 202.0,
+    "actual": 0,
+    "delta": -202.0,
+    "pct": 0.0
+   },
+   {
+    "name": "DOG FOOD",
+    "revised": 104.0,
+    "actual": 0,
+    "delta": -104.0,
+    "pct": 0.0
+   },
+   {
+    "name": "ASSISTANT ENGINEER",
+    "revised": 0,
+    "actual": 31334.84,
+    "delta": 31334.84,
+    "pct": null
+   },
+   {
+    "name": "CHIEF PROCUREMENT OFFICER",
+    "revised": 0,
+    "actual": 47240.76,
+    "delta": 47240.76,
+    "pct": null
+   },
+   {
+    "name": "COA CUSTODIAN",
+    "revised": 0,
+    "actual": 342.55,
+    "delta": 342.55,
+    "pct": null
+   },
+   {
+    "name": "CUSTODIAN OT",
+    "revised": 0,
+    "actual": 14542.79,
+    "delta": 14542.79,
+    "pct": null
+   },
+   {
+    "name": "DISPATCH DEFIBR STIPEND",
+    "revised": 0,
+    "actual": 1690.0,
+    "delta": 1690.0,
+    "pct": null
+   },
+   {
+    "name": "ELECTRIC EQUIPMENT",
+    "revised": 0,
+    "actual": 117200.82,
+    "delta": 117200.82,
+    "pct": null
+   },
+   {
+    "name": "EMERGENCY OVERTIME",
+    "revised": 0,
+    "actual": 67.52,
+    "delta": 67.52,
+    "pct": null
+   },
+   {
+    "name": "FIELD TRAINING OFFICER STIPEND",
+    "revised": 0,
+    "actual": 3592.92,
+    "delta": 3592.92,
+    "pct": null
+   },
+   {
+    "name": "GENERAL CLERK",
+    "revised": 0,
+    "actual": 1265.71,
+    "delta": 1265.71,
+    "pct": null
+   },
+   {
+    "name": "HAZMAT STIPEND",
+    "revised": 0,
+    "actual": 5000.0,
+    "delta": 5000.0,
+    "pct": null
+   },
+   {
+    "name": "HOT TOP",
+    "revised": 0,
+    "actual": 25862.06,
+    "delta": 25862.06,
+    "pct": null
+   },
+   {
+    "name": "INJURY PAYROLL",
+    "revised": 0,
+    "actual": 246711.64,
+    "delta": 246711.64,
+    "pct": null
+   },
+   {
+    "name": "INTRAMURAL SALARIES",
+    "revised": 0,
+    "actual": 0,
+    "delta": 0,
+    "pct": null
+   },
+   {
+    "name": "LIGHT EXPEMPT",
+    "revised": 0,
+    "actual": 1124241.04,
+    "delta": 1124241.04,
+    "pct": null
+   },
+   {
+    "name": "LIGHT NONEXEMPT",
+    "revised": 0,
+    "actual": 203445.12,
+    "delta": 203445.12,
+    "pct": null
+   },
+   {
+    "name": "LIGHT UNION",
+    "revised": 0,
+    "actual": 1134580.74,
+    "delta": 1134580.74,
+    "pct": null
+   },
+   {
+    "name": "LOCAL INSPECTORS",
+    "revised": 0,
+    "actual": 98.14,
+    "delta": 98.14,
+    "pct": null
+   },
+   {
+    "name": "OPERATIONAL SUPPORT PERSONNEL",
+    "revised": 0,
+    "actual": 0,
+    "delta": 0,
+    "pct": null
+   },
+   {
+    "name": "OUTSIDE DETAIL",
+    "revised": 0,
+    "actual": 16100.0,
+    "delta": 16100.0,
+    "pct": null
+   },
+   {
+    "name": "PER DIEM LIBRARIAN",
+    "revised": 0,
+    "actual": 5475.0,
+    "delta": 5475.0,
+    "pct": null
+   },
+   {
+    "name": "POLICE POST STIPEND",
+    "revised": 0,
+    "actual": 20323.93,
+    "delta": 20323.93,
+    "pct": null
+   },
+   {
+    "name": "PROF SALARY  STIPENDS",
+    "revised": 0,
+    "actual": 16433.7,
+    "delta": 16433.7,
+    "pct": null
+   },
+   {
+    "name": "RENTAL-OFFICE EQUIP",
+    "revised": 0,
+    "actual": 5420.47,
+    "delta": 5420.47,
+    "pct": null
+   },
+   {
+    "name": "R&M COPIER EQUIPMENT",
+    "revised": 0,
+    "actual": -124.94,
+    "delta": -124.94,
+    "pct": null
+   },
+   {
+    "name": "R&M WALLS AND FENCES",
+    "revised": 0,
+    "actual": 94.06,
+    "delta": 94.06,
+    "pct": null
+   },
+   {
+    "name": "SCHOOLS PCARD",
+    "revised": 0,
+    "actual": -153.36,
+    "delta": -153.36,
+    "pct": null
+   },
+   {
+    "name": "SEWER IMPROVEMENTS",
+    "revised": 0,
+    "actual": 862.02,
+    "delta": 862.02,
+    "pct": null
+   },
+   {
+    "name": "SMALL CUSTODIAL EQUIPMENT",
+    "revised": 0,
+    "actual": 0,
+    "delta": 0,
+    "pct": null
+   },
+   {
+    "name": "SPECIALIZED HEAVY EQU OPERATOR",
+    "revised": 0,
+    "actual": 57912.33,
+    "delta": 57912.33,
+    "pct": null
+   },
+   {
+    "name": "SPECIAL STIPEND",
+    "revised": 0,
+    "actual": 3365.52,
+    "delta": 3365.52,
+    "pct": null
+   },
+   {
+    "name": "SPED SUPPLIES",
+    "revised": 0,
+    "actual": 0,
+    "delta": 0,
+    "pct": null
+   },
+   {
+    "name": "STRAIGHT TIME",
+    "revised": 0,
+    "actual": 31964.6,
+    "delta": 31964.6,
+    "pct": null
+   },
+   {
+    "name": "TOWN ENGINEER",
+    "revised": 0,
+    "actual": 103392.87,
+    "delta": 103392.87,
+    "pct": null
+   },
+   {
+    "name": "TRANSFER TO HARBOR FUND",
+    "revised": 0,
+    "actual": 1694.0,
+    "delta": 1694.0,
+    "pct": null
+   },
+   {
+    "name": "TRANSFER TO SEWER FUND",
+    "revised": 0,
+    "actual": 11892.0,
+    "delta": 11892.0,
+    "pct": null
+   },
+   {
+    "name": "TRANSFER TO WATER FUND",
+    "revised": 0,
+    "actual": 12038.0,
+    "delta": 12038.0,
+    "pct": null
+   },
+   {
+    "name": "WATER EQUIPMENT",
+    "revised": 0,
+    "actual": 724.72,
+    "delta": 724.72,
+    "pct": null
+   },
+   {
+    "name": "WORKING FOREMAN CONSTRUCTION",
+    "revised": 0,
+    "actual": 69735.09,
+    "delta": 69735.09,
+    "pct": null
+   },
+   {
+    "name": "WORKING FOREMAN MAINTENANCE",
+    "revised": 0,
+    "actual": 84002.94,
+    "delta": 84002.94,
+    "pct": null
+   },
+   {
+    "name": "VACATION & RET. PAYOUT-OTHER",
+    "revised": -181649.0,
+    "actual": -36281.5,
+    "delta": 145367.5,
+    "pct": null
+   }
+  ]
+ },
+ "vendor_concentration": {
+  "total_payments": 98074838.23,
+  "total_vendors": 2013,
+  "top_10_amount": 63593449.68,
+  "top_10_pct": 64.8,
+  "top_20_amount": 72931773.44,
+  "top_20_pct": 74.4,
+  "top_50_amount": 83403766.15,
+  "top_50_pct": 85.0,
+  "top_vendors": [
+   {
+    "name": "COMMONWEALTH OF MA",
+    "amount": 17515193.09,
+    "count": 328,
+    "fund_count": 14,
+    "funds": [
+     "DUE TO COMMONWEALTH-FIREARMS",
+     "EARL N REYNOLDS HISTORICAL FD",
+     "ELECTRIC ENTERPRISE",
+     "FIRE SAFE GRANT",
+     "GENERAL FUND - SCHOOL",
+     "GENERAL FUND - TOWN",
+     "HARBOR ENTERPRISE OPERATING",
+     "METCO (317)",
+     "SCHOOL LUNCH",
+     "SEWER ENTERPRISE OPERATING",
+     "SPED EC (262)",
+     "TITLE I, PART A  (305)",
+     "WATER CAPITAL ARTICLES",
+     "WATER ENTERPRISE OPERATING"
+    ]
+   },
+   {
+    "name": "U.S. BANK",
+    "amount": 14255001.23,
+    "count": 36,
+    "fund_count": 2,
+    "funds": [
+     "GENERAL FUND - SCHOOL",
+     "GENERAL FUND - TOWN"
+    ]
+   },
+   {
+    "name": "BERKSHIRE WIND POWER COOPERATIVE CORP",
+    "amount": 12923160.2,
+    "count": 236,
+    "fund_count": 1,
+    "funds": [
+     "ELECTRIC ENTERPRISE"
+    ]
+   },
+   {
+    "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
+    "amount": 6536597.57,
+    "count": 16,
+    "fund_count": 5,
+    "funds": [
+     "ELECTRIC ENTERPRISE",
+     "GENERAL FUND - TOWN",
+     "HARBOR ENTERPRISE OPERATING",
+     "SEWER ENTERPRISE OPERATING",
+     "WATER ENTERPRISE OPERATING"
+    ]
+   },
+   {
+    "name": "MASSACHUSETTS WATER RESOURCES AUTHORITY",
+    "amount": 3756709.0,
+    "count": 16,
+    "fund_count": 1,
+    "funds": [
+     "WATER ENTERPRISE OPERATING"
+    ]
+   },
+   {
+    "name": "SOUTH ESSEX SEWERAGE DISTRICT",
+    "amount": 3267244.87,
+    "count": 9,
+    "fund_count": 1,
+    "funds": [
+     "SEWER ENTERPRISE OPERATING"
+    ]
+   },
+   {
+    "name": "DELULIS BROTHERS CONSTRUCTION CO INC",
+    "amount": 1525193.65,
+    "count": 11,
+    "fund_count": 2,
+    "funds": [
+     "A34 2015 NEW TRANSF STATION",
+     "COMMERCIAL WASTE COLL REVOLV"
+    ]
+   },
+   {
+    "name": "MARBLEHEAD LIGHT DEPT",
+    "amount": 1360182.55,
+    "count": 839,
+    "fund_count": 11,
+    "funds": [
+     "A11 2022 CAPITAL IMPROVEMENT",
+     "ELECTRIC ENTERPRISE",
+     "GENERAL FUND - SCHOOL",
+     "GENERAL FUND - TOWN",
+     "HARBOR ENTERPRISE OPERATING",
+     "HIGH SCHOOL STUDENT ACTIVITY",
+     "MIDDLE SCHOOL STUDENT ACTIVITY",
+     "MOSES A PICKETT CHARITY",
+     "SEWER ENTERPRISE OPERATING",
+     "VILLAGE STUDENT ACTIVITY FUND",
+     "WATER ENTERPRISE OPERATING"
+    ]
+   },
+   {
+    "name": "D & R GENERAL CONTRACTING INC",
+    "amount": 1297918.2,
+    "count": 5,
+    "fund_count": 1,
+    "funds": [
+     "A11 2022 CAPITAL IMPROVEMENT"
+    ]
+   },
+   {
+    "name": "ONE TIME PAY",
+    "amount": 1156249.32,
+    "count": 674,
+    "fund_count": 14,
+    "funds": [
+     "ALL DAY KINDERGARTEN",
+     "ELECTRIC ENTERPRISE",
+     "GENERAL FUND - SCHOOL",
+     "GENERAL FUND - TOWN",
+     "HARBOR ENTERPRISE OPERATING",
+     "MARBLEHEAD FAMILY DONATION",
+     "MWRA PROJECT LWSAP26-3021",
+     "PARK REVOLVING FUND",
+     "PERPETUAL CARE DONATIONS",
+     "SALE OF CEMETERY LOTS",
+     "SCHOOL LUNCH",
+     "SCHOOL TUITION REVOLVING",
+     "SCHOOL USER FEES",
+     "SPED IDEA 94-142 (240)"
+    ]
+   },
+   {
+    "name": "N GRANESE & SONS INC",
+    "amount": 1151366.99,
+    "count": 6,
+    "fund_count": 3,
+    "funds": [
+     "GENERAL FUND - TOWN",
+     "SEWER CAPITAL ARTICLES",
+     "WATER CAPITAL ARTICLES"
+    ]
+   },
+   {
+    "name": "MIIA HEALTH BENEFITS TRUST",
+    "amount": 1076241.19,
+    "count": 25,
+    "fund_count": 3,
+    "funds": [
+     "ELECTRIC ENTERPRISE",
+     "GENERAL FUND - SCHOOL",
+     "GENERAL FUND - TOWN"
+    ]
+   },
+   {
+    "name": "MYERS CONTROLLED POWER LLC",
+    "amount": 1011083.82,
+    "count": 2,
+    "fund_count": 1,
+    "funds": [
+     "ELECTRIC ENTERPRISE"
+    ]
+   },
+   {
+    "name": "HOMER CONTRACTING IN",
+    "amount": 951900.0,
+    "count": 4,
+    "fund_count": 1,
+    "funds": [
+     "A11 2022 CAPITAL IMPROVEMENT"
+    ]
+   },
+   {
+    "name": "REPUBLIC SERVICES INC",
+    "amount": 905893.67,
+    "count": 24,
+    "fund_count": 2,
+    "funds": [
+     "ELECTRIC ENTERPRISE",
+     "GENERAL FUND - TOWN"
+    ]
+   },
+   {
+    "name": "RAYMOND DESIGN ASSOCIATES INC",
+    "amount": 898722.5,
+    "count": 8,
+    "fund_count": 1,
+    "funds": [
+     "A11 2022 CAPITAL IMPROVEMENT"
+    ]
+   },
+   {
+    "name": "WASTE MANAGEMENT OF MA INC.",
+    "amount": 889530.99,
+    "count": 30,
+    "fund_count": 2,
+    "funds": [
+     "COMMERCIAL WASTE COLL REVOLV",
+     "GENERAL FUND - TOWN"
+    ]
+   },
+   {
+    "name": "NICKS LUXURY TRANSPORTATION INC",
+    "amount": 858962.49,
+    "count": 27,
+    "fund_count": 3,
+    "funds": [
+     "CIRCUIT BREAKER",
+     "GENERAL FUND - SCHOOL",
+     "SPED IDEA 94-142 (240)"
+    ]
+   },
+   {
+    "name": "MDM ENGINEERING COMPANY INC",
+    "amount": 823141.27,
+    "count": 3,
+    "fund_count": 1,
+    "funds": [
+     "A11 2022 CAPITAL IMPROVEMENT"
+    ]
+   },
+   {
+    "name": "FISCHBACH & MOORE ELECTRIC GROUP LCC",
+    "amount": 771480.84,
+    "count": 9,
+    "fund_count": 1,
+    "funds": [
+     "ELECTRIC ENTERPRISE"
+    ]
+   },
+   {
+    "name": "ESSEX NS AGRIC & TECHN SCHOOL DISTR",
+    "amount": 627323.0,
+    "count": 3,
+    "fund_count": 1,
+    "funds": [
+     "GENERAL FUND - TAX ARTICLES"
+    ]
+   },
+   {
+    "name": "WILLIAM E MUNSON COMPANY INC",
+    "amount": 606445.0,
+    "count": 6,
+    "fund_count": 2,
+    "funds": [
+     "HARBOR CAPITAL ARTICLES",
+     "HARBOR ENTERPRISE OPERATING"
+    ]
+   },
+   {
+    "name": "NATIONAL GRID",
+    "amount": 547614.46,
+    "count": 210,
+    "fund_count": 4,
+    "funds": [
+     "ELECTRIC ENTERPRISE",
+     "GENERAL FUND - SCHOOL",
+     "GENERAL FUND - TOWN",
+     "SEWER ENTERPRISE OPERATING"
+    ]
+   },
+   {
+    "name": "LANDMARK SCHOOL",
+    "amount": 544928.39,
+    "count": 63,
+    "fund_count": 2,
+    "funds": [
+     "GENERAL FUND - SCHOOL",
+     "SPED IDEA 94-142 (240)"
+    ]
+   },
+   {
+    "name": "BOSTON HIGASHI SCHOOL INC",
+    "amount": 537483.6,
+    "count": 21,
+    "fund_count": 1,
+    "funds": [
+     "CIRCUIT BREAKER"
+    ]
+   },
+   {
+    "name": "RAFFAELE CONSTRUCTION",
+    "amount": 529501.4,
+    "count": 14,
+    "fund_count": 6,
+    "funds": [
+     "COVID 19 ARPA (FED)",
+     "EARL N REYNOLDS HISTORICAL FD",
+     "GENERAL FUND - TAX ARTICLES",
+     "GERRY PLAYGROUND DONATION",
+     "PARK REVOLVING FUND",
+     "PUBLIC IMPROVEMENT DONATION"
+    ]
+   },
+   {
+    "name": "RICHARD D AMBROSIA INC",
+    "amount": 529122.92,
+    "count": 6,
+    "fund_count": 3,
+    "funds": [
+     "A11 2022 CAPITAL IMPROVEMENT",
+     "CHAPTER 90",
+     "COVID 19 ARPA (FED)"
+    ]
+   },
+   {
+    "name": "PERFORMANCE FOODSERVICE NORTHCENTER FOODS",
+    "amount": 454639.59,
+    "count": 291,
+    "fund_count": 1,
+    "funds": [
+     "SCHOOL LUNCH"
+    ]
+   },
+   {
+    "name": "HALEY WARD, INC",
+    "amount": 434651.62,
+    "count": 90,
+    "fund_count": 9,
+    "funds": [
+     "A36 2019 MWRA LOAN",
+     "COMMERCIAL WASTE COLL REVOLV",
+     "GENERAL FUND - TAX ARTICLES",
+     "GENERAL FUND - TOWN",
+     "SEWER CAPITAL ARTICLES",
+     "SEWER ENTERPRISE OPERATING",
+     "WATER CAPITAL ARTICLES",
+     "WATER ENTERPRISE OPERATING",
+     "WATER LEAD SERVICE GRANT"
+    ]
+   },
+   {
+    "name": "NV5",
+    "amount": 433690.44,
+    "count": 9,
+    "fund_count": 2,
+    "funds": [
+     "A33 2025-ALLEY BLDG IMPROV",
+     "COVID 19 ARPA (FED)"
+    ]
+   }
+  ]
+ },
+ "multifund_vendors": [
+  {
+   "name": "COMMONWEALTH OF MA",
+   "amount": 17515193.09,
+   "count": 328,
+   "fund_count": 14,
+   "funds": [
+    "DUE TO COMMONWEALTH-FIREARMS",
+    "EARL N REYNOLDS HISTORICAL FD",
+    "ELECTRIC ENTERPRISE",
+    "FIRE SAFE GRANT",
+    "GENERAL FUND - SCHOOL",
+    "GENERAL FUND - TOWN",
+    "HARBOR ENTERPRISE OPERATING",
+    "METCO (317)",
+    "SCHOOL LUNCH",
+    "SEWER ENTERPRISE OPERATING",
+    "SPED EC (262)",
+    "TITLE I, PART A  (305)",
+    "WATER CAPITAL ARTICLES",
+    "WATER ENTERPRISE OPERATING"
+   ]
+  },
+  {
+   "name": "ONE TIME PAY",
+   "amount": 1156249.32,
+   "count": 674,
+   "fund_count": 14,
+   "funds": [
+    "ALL DAY KINDERGARTEN",
+    "ELECTRIC ENTERPRISE",
+    "GENERAL FUND - SCHOOL",
+    "GENERAL FUND - TOWN",
+    "HARBOR ENTERPRISE OPERATING",
+    "MARBLEHEAD FAMILY DONATION",
+    "MWRA PROJECT LWSAP26-3021",
+    "PARK REVOLVING FUND",
+    "PERPETUAL CARE DONATIONS",
+    "SALE OF CEMETERY LOTS",
+    "SCHOOL LUNCH",
+    "SCHOOL TUITION REVOLVING",
+    "SCHOOL USER FEES",
+    "SPED IDEA 94-142 (240)"
+   ]
+  },
+  {
+   "name": "MARBLEHEAD LIGHT DEPT",
+   "amount": 1360182.55,
+   "count": 839,
+   "fund_count": 11,
+   "funds": [
+    "A11 2022 CAPITAL IMPROVEMENT",
+    "ELECTRIC ENTERPRISE",
+    "GENERAL FUND - SCHOOL",
+    "GENERAL FUND - TOWN",
+    "HARBOR ENTERPRISE OPERATING",
+    "HIGH SCHOOL STUDENT ACTIVITY",
+    "MIDDLE SCHOOL STUDENT ACTIVITY",
+    "MOSES A PICKETT CHARITY",
+    "SEWER ENTERPRISE OPERATING",
+    "VILLAGE STUDENT ACTIVITY FUND",
+    "WATER ENTERPRISE OPERATING"
+   ]
+  },
+  {
+   "name": "HALEY WARD, INC",
+   "amount": 434651.62,
+   "count": 90,
+   "fund_count": 9,
+   "funds": [
+    "A36 2019 MWRA LOAN",
+    "COMMERCIAL WASTE COLL REVOLV",
+    "GENERAL FUND - TAX ARTICLES",
+    "GENERAL FUND - TOWN",
+    "SEWER CAPITAL ARTICLES",
+    "SEWER ENTERPRISE OPERATING",
+    "WATER CAPITAL ARTICLES",
+    "WATER ENTERPRISE OPERATING",
+    "WATER LEAD SERVICE GRANT"
+   ]
+  },
+  {
+   "name": "RAFFAELE CONSTRUCTION",
+   "amount": 529501.4,
+   "count": 14,
+   "fund_count": 6,
+   "funds": [
+    "COVID 19 ARPA (FED)",
+    "EARL N REYNOLDS HISTORICAL FD",
+    "GENERAL FUND - TAX ARTICLES",
+    "GERRY PLAYGROUND DONATION",
+    "PARK REVOLVING FUND",
+    "PUBLIC IMPROVEMENT DONATION"
+   ]
+  },
+  {
+   "name": "MARBLEHEAD CONTRIBUTORY RETIREMENT SYSTEM",
+   "amount": 6536597.57,
+   "count": 16,
+   "fund_count": 5,
+   "funds": [
+    "ELECTRIC ENTERPRISE",
+    "GENERAL FUND - TOWN",
+    "HARBOR ENTERPRISE OPERATING",
+    "SEWER ENTERPRISE OPERATING",
+    "WATER ENTERPRISE OPERATING"
+   ]
+  },
+  {
+   "name": "NATIONAL GRID",
+   "amount": 547614.46,
+   "count": 210,
+   "fund_count": 4,
+   "funds": [
+    "ELECTRIC ENTERPRISE",
+    "GENERAL FUND - SCHOOL",
+    "GENERAL FUND - TOWN",
+    "SEWER ENTERPRISE OPERATING"
+   ]
+  },
+  {
+   "name": "N GRANESE & SONS INC",
+   "amount": 1151366.99,
+   "count": 6,
+   "fund_count": 3,
+   "funds": [
+    "GENERAL FUND - TOWN",
+    "SEWER CAPITAL ARTICLES",
+    "WATER CAPITAL ARTICLES"
+   ]
+  },
+  {
+   "name": "MIIA HEALTH BENEFITS TRUST",
+   "amount": 1076241.19,
+   "count": 25,
+   "fund_count": 3,
+   "funds": [
+    "ELECTRIC ENTERPRISE",
+    "GENERAL FUND - SCHOOL",
+    "GENERAL FUND - TOWN"
+   ]
+  },
+  {
+   "name": "NICKS LUXURY TRANSPORTATION INC",
+   "amount": 858962.49,
+   "count": 27,
+   "fund_count": 3,
+   "funds": [
+    "CIRCUIT BREAKER",
+    "GENERAL FUND - SCHOOL",
+    "SPED IDEA 94-142 (240)"
+   ]
+  },
+  {
+   "name": "RICHARD D AMBROSIA INC",
+   "amount": 529122.92,
+   "count": 6,
+   "fund_count": 3,
+   "funds": [
+    "A11 2022 CAPITAL IMPROVEMENT",
+    "CHAPTER 90",
+    "COVID 19 ARPA (FED)"
+   ]
+  }
+ ],
+ "monthly_cadence": [
+  {
+   "month": "2025-07",
+   "amount": 17874687.91,
+   "count": 549
+  },
+  {
+   "month": "2025-08",
+   "amount": 8947580.47,
+   "count": 1256
+  },
+  {
+   "month": "2025-09",
+   "amount": 5796723.89,
+   "count": 1386
+  },
+  {
+   "month": "2025-10",
+   "amount": 7367620.33,
+   "count": 1754
+  },
+  {
+   "month": "2025-11",
+   "amount": 7107891.17,
+   "count": 1421
+  },
+  {
+   "month": "2025-12",
+   "amount": 8352545.25,
+   "count": 2103
+  },
+  {
+   "month": "2026-01",
+   "amount": 10189593.29,
+   "count": 1358
+  },
+  {
+   "month": "2026-02",
+   "amount": 7510267.34,
+   "count": 1156
+  },
+  {
+   "month": "2026-03",
+   "amount": 8072293.34,
+   "count": 1792
+  },
+  {
+   "month": "2026-04",
+   "amount": 6210863.14,
+   "count": 1291
+  },
+  {
+   "month": "2026-05",
+   "amount": 10644772.1,
+   "count": 935
+  }
+ ]
+}

@@ -22,7 +22,8 @@ async function run() {
       const t = msg.text();
       // Ignore third-party beacons that only fail when serving from localhost
       if (t.includes('cloudflareinsights.com')) return;
-      if (t.includes('ERR_FAILED') && t.includes('cdn-cgi')) return;
+      if (t.includes('cdn-cgi')) return;
+      if (t === 'Failed to load resource: net::ERR_FAILED') return; // beacon follow-up with no URL
       errors.push('console: ' + t);
     });
 
@@ -80,9 +81,23 @@ async function run() {
     // 6. Pager info shows total
     try {
       const info = await page.locator('#pager-info').innerText();
-      if (!info.includes('15,561') && !info.toLowerCase().includes('showing')) throw new Error('pager-info: ' + info);
+      if (!info.includes('15,001') && !info.toLowerCase().includes('showing')) throw new Error('pager-info: ' + info);
       ok('pager info: ' + info);
     } catch (e) { fail('pager-info', e.message); }
+
+    // 6b. Performance panels rendered
+    try {
+      await page.waitForSelector('#perf-vendor-list .perf-meter', { timeout: 8000 });
+      const vendorBars = await page.locator('#perf-vendor-list .perf-meter').count();
+      if (vendorBars < 5) throw new Error('only ' + vendorBars + ' top-vendor bars');
+      const paretoText = await page.locator('#perf-pareto').innerText();
+      if (!paretoText.includes('top 10') || !paretoText.includes('%')) throw new Error('pareto text: ' + paretoText);
+      const overText = await page.locator('#perf-over-list').innerText();
+      if (!/light|snow/i.test(overText)) throw new Error('expected light/snow in over list: ' + overText.slice(0, 80));
+      const cadenceBars = await page.locator('#perf-cadence-chart .cadence-bar').count();
+      if (cadenceBars < 10) throw new Error('only ' + cadenceBars + ' cadence bars');
+      ok('performance: ' + vendorBars + ' vendor bars, ' + cadenceBars + ' cadence bars, pareto + over panels populated');
+    } catch (e) { fail('performance-panels', e.message); }
 
     // 7. Vendor filter works
     try {

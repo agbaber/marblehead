@@ -3,12 +3,12 @@
  "fiscal_year": "FY26",
  "period_start": "2025-07-01",
  "period_end": "2026-05-29",
- "row_count": 15561,
- "total_amount": 98488006.04,
- "negative_count": 166,
- "negative_amount": -2558334.28,
- "unique_vendors": 2053,
- "unique_funds": 107,
+ "row_count": 15001,
+ "total_amount": 98074838.23,
+ "negative_count": 151,
+ "negative_amount": -2545601.51,
+ "unique_vendors": 2013,
+ "unique_funds": 105,
  "unique_divisions": 59,
  "by_fund": [
   {
@@ -105,11 +105,6 @@
    "name": "A33 2025-ALLEY BLDG IMPROV",
    "amount": 443923.44,
    "count": 9
-  },
-  {
-   "name": "WORKERS COMPENSATION FUND",
-   "amount": 396145.99,
-   "count": 427
   },
   {
    "name": "SEWER CAPITAL ARTICLES",
@@ -255,11 +250,6 @@
    "name": "DUE TO COMMONWEALTH-FIREARMS",
    "amount": 19425.0,
    "count": 4
-  },
-  {
-   "name": "111F INJURY LEAVE FUND",
-   "amount": 17021.82,
-   "count": 133
   },
   {
    "name": "SCHOOL TUITION REVOLVING",
@@ -550,8 +540,8 @@
  "by_division": [
   {
    "name": "UNDEFINED",
-   "amount": 35969914.35,
-   "count": 7243
+   "amount": 35556746.54,
+   "count": 6683
   },
   {
    "name": "EXPENSES",
@@ -847,8 +837,8 @@
  "top_vendors": [
   {
    "name": "COMMONWEALTH OF MA",
-   "amount": 17516382.02,
-   "count": 329
+   "amount": 17515193.09,
+   "count": 328
   },
   {
    "name": "U.S. BANK",
@@ -1099,58 +1089,58 @@
  "by_month": [
   {
    "month": "2025-07",
-   "amount": 17888545.43,
-   "count": 578
+   "amount": 17874687.91,
+   "count": 549
   },
   {
    "month": "2025-08",
-   "amount": 8969605.56,
-   "count": 1290
+   "amount": 8947580.47,
+   "count": 1256
   },
   {
    "month": "2025-09",
-   "amount": 5844505.98,
-   "count": 1473
+   "amount": 5796723.89,
+   "count": 1386
   },
   {
    "month": "2025-10",
-   "amount": 7400996.69,
-   "count": 1803
+   "amount": 7367620.33,
+   "count": 1754
   },
   {
    "month": "2025-11",
-   "amount": 7126216.01,
-   "count": 1435
+   "amount": 7107891.17,
+   "count": 1421
   },
   {
    "month": "2025-12",
-   "amount": 8371697.28,
-   "count": 2122
+   "amount": 8352545.25,
+   "count": 2103
   },
   {
    "month": "2026-01",
-   "amount": 10230740.48,
-   "count": 1430
+   "amount": 10189593.29,
+   "count": 1358
   },
   {
    "month": "2026-02",
-   "amount": 7538908.58,
-   "count": 1220
+   "amount": 7510267.34,
+   "count": 1156
   },
   {
    "month": "2026-03",
-   "amount": 8104086.73,
-   "count": 1836
+   "amount": 8072293.34,
+   "count": 1792
   },
   {
    "month": "2026-04",
-   "amount": 6245802.41,
-   "count": 1368
+   "amount": 6210863.14,
+   "count": 1291
   },
   {
    "month": "2026-05",
-   "amount": 10766900.89,
-   "count": 1006
+   "amount": 10644772.1,
+   "count": 935
   }
  ]
 }
