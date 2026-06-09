@@ -17,7 +17,15 @@ worker_base: "https://marblehead-meeting-digest.agbaber.workers.dev"
   const token = params.get('token');
   const msg = document.getElementById('confirm-msg');
   const WORKER = "{{ page.worker_base }}";
-  if (!token) { msg.textContent = 'No token in the URL. Did you click the link in the email?'; return; }
+  const ph = (event, props) => {
+    if (typeof posthog !== 'undefined') posthog.capture(event, props);
+  };
+  if (!token) {
+    msg.textContent = 'No token in the URL. Did you click the link in the email?';
+    ph('subscribe_confirm_landed', { has_token: false });
+    return;
+  }
+  ph('subscribe_confirm_landed', { has_token: true });
   location.replace(`${WORKER}/api/subscribe-confirm?token=${encodeURIComponent(token)}`);
 })();
 </script>

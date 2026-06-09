@@ -35,6 +35,9 @@ turnstile_site_key: "0x4AAAAAADEi6Ymsaf-lEIvW"
   const form = document.getElementById('subscribe-form');
   const msg = document.getElementById('subscribe-msg');
   const WORKER = "{{ page.worker_base }}";
+  const ph = (event, props) => {
+    if (typeof posthog !== 'undefined') posthog.capture(event, props);
+  };
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     msg.hidden = false;
@@ -50,11 +53,14 @@ turnstile_site_key: "0x4AAAAAADEi6Ymsaf-lEIvW"
       if (!r.ok) {
         const d = await r.json().catch(() => ({}));
         msg.textContent = d.error || 'Something went wrong. Try again?';
+        ph('subscribe_submit', { outcome: 'error', status: r.status, error: d.error || null });
         return;
       }
       msg.textContent = 'Check your inbox — a confirmation link is on its way (24h expiry).';
+      ph('subscribe_submit', { outcome: 'success' });
     } catch {
       msg.textContent = 'Network error. Try again?';
+      ph('subscribe_submit', { outcome: 'network_error' });
     }
   });
 })();
