@@ -1,0 +1,1481 @@
+---
+title: "Town checkbook"
+permalink: /checkbook/
+scripts: [citations]
+og_title: "Marblehead FY26 Checkbook & Budget Explorer"
+og_description: "FY26 spending, budget, and pacing for Marblehead. $206.1M adopted across all funds, $127.3M annual operating, $98.1M in vendor checks through May 29. Budget vs actual by Fund, Department, Category, Division, and Object."
+og_url: https://marbleheaddata.org/checkbook/
+---
+<h1 class="h-center">Town checkbook</h1>
+<p class="subtitle h-center">FY26 spending, budget, and pacing &ndash; from the town's own portals.</p>
+
+<style>
+  /* Hero stat card */
+  .hero-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 22px 8px; margin: 0 0 8px;
+  }
+  .hero-row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+  }
+  .hero-stat {
+    text-align: center; padding: 0 14px;
+    border-right: 1px solid var(--divider);
+  }
+  .hero-stat:last-child { border-right: none; }
+  .hero-label {
+    font-size: 10px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--text-subtle); margin-bottom: 8px;
+  }
+  .hero-value {
+    font-size: 30px; font-weight: 700; color: var(--c-navy);
+    font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: -0.5px;
+  }
+  .hero-sub {
+    font-size: 11px; color: var(--text-muted); margin-top: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (prefers-color-scheme: dark) {
+    .hero-value { color: var(--text); }
+  }
+  html[data-theme="dark"] .hero-value { color: var(--text); }
+  html[data-theme="light"] .hero-value { color: var(--c-navy); }
+  @media (max-width: 600px) {
+    .hero-row { grid-template-columns: 1fr 1fr; }
+    .hero-stat { padding: 14px 8px; border-right: 1px solid var(--divider); border-bottom: 1px solid var(--divider); }
+    .hero-stat:nth-child(2n) { border-right: none; }
+    .hero-stat:nth-last-child(-n+2) { border-bottom: none; }
+    .hero-value { font-size: 24px; }
+  }
+
+  /* Section heading */
+  .ck-section { margin: 36px 0 14px; }
+  .ck-section h2 {
+    font-size: 18px; font-weight: 700; color: var(--text);
+    margin: 0; letter-spacing: -0.2px;
+  }
+  .ck-section p { font-size: 13px; color: var(--text-muted); margin: 4px 0 0; line-height: 1.5; }
+
+  /* Notes section */
+  .notes { margin: 48px 0 16px; padding-top: 28px; border-top: 1px solid var(--divider); }
+  .notes h2 {
+    font-size: 13px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--text-subtle); margin: 0 0 14px;
+  }
+  .notes-dl { margin: 0; }
+  .notes-dl dt {
+    font-size: 12.5px; font-weight: 600; color: var(--text);
+    margin: 0 0 4px;
+  }
+  .notes-dl dt:not(:first-child) { margin-top: 16px; }
+  .notes-dl dd {
+    font-size: 12.5px; color: var(--text-muted); line-height: 1.55;
+    margin: 0; padding: 0;
+  }
+  .notes-dl dd strong { color: var(--text); }
+
+  /* Breakdown switcher */
+  .breakdown-bar {
+    display: flex; flex-wrap: wrap; gap: 4px; align-items: center;
+    margin: 0 0 10px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 999px; padding: 4px;
+    width: fit-content;
+  }
+  .breakdown-btn {
+    font-size: 12px; font-weight: 500; padding: 5px 14px;
+    border: none; border-radius: 999px;
+    background: transparent; color: var(--text-muted); cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    font-variant-numeric: tabular-nums;
+  }
+  .breakdown-btn:hover { color: var(--text); }
+  .breakdown-btn.active { background: var(--c-navy); color: #fff; }
+  html[data-theme="dark"] .breakdown-btn.active { background: var(--c-teal); }
+  .breakdown-meta { font-size: 11px; color: var(--text-subtle); margin-left: 8px; font-variant-numeric: tabular-nums; padding-right: 10px; }
+  @media (max-width: 600px) {
+    .breakdown-bar { width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+    .breakdown-meta { display: none; }
+  }
+
+  /* Budget vs Actual bars */
+  .bva-chart {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 18px 18px 16px;
+    margin: 0 0 10px;
+  }
+  .bva-row {
+    display: grid; grid-template-columns: 200px 1fr 110px;
+    align-items: center; gap: 14px;
+    padding: 7px 0; min-height: 30px;
+  }
+  .bva-name {
+    font-size: 12.5px; color: var(--text); font-weight: 500;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    letter-spacing: -0.1px;
+  }
+  .bva-bars { position: relative; height: 14px; }
+  .bva-bar {
+    position: absolute; left: 0; top: 0;
+    border-radius: 2px;
+  }
+  .bva-bar--budget { background: color-mix(in srgb, var(--c-navy) 18%, transparent); top: 0; height: 14px; }
+  .bva-bar--actual { background: var(--c-navy); top: 3px; height: 8px; }
+  .bva-bar--actual.bva-bar--over { background: var(--c-buoy); }
+  .bva-bar--actual.bva-bar--negative { background: var(--text-subtle); opacity: 0.5; }
+  .bva-amount {
+    font-size: 11.5px; color: var(--text-muted); text-align: right;
+    font-variant-numeric: tabular-nums; line-height: 1.35;
+  }
+  .bva-amount strong { color: var(--text); display: block; font-size: 12.5px; }
+  .bva-axis {
+    display: grid; grid-template-columns: 200px 1fr 110px; gap: 10px;
+    margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--divider);
+    font-size: 10px; color: var(--text-subtle); font-variant-numeric: tabular-nums;
+  }
+  .bva-axis-track {
+    position: relative; height: 12px;
+  }
+  .bva-axis-track span {
+    position: absolute; transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .bva-axis-track span:first-child { left: 0; transform: none; }
+  .bva-axis-track span:last-child { left: 100%; transform: translateX(-100%); }
+  .bva-pager {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--divider);
+    font-size: 11px; color: var(--text-muted);
+  }
+  .bva-pager button {
+    font-size: 11px; padding: 4px 10px; background: transparent;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    color: var(--text-muted); cursor: pointer;
+  }
+  .bva-pager button:hover:not(:disabled) { border-color: var(--c-teal); color: var(--c-teal); }
+  .bva-pager button:disabled { opacity: 0.4; cursor: not-allowed; }
+  .bva-pager-info { font-variant-numeric: tabular-nums; }
+
+  .bva-legend {
+    display: flex; flex-wrap: wrap; gap: 14px; justify-content: flex-end;
+    font-size: 11px; color: var(--text-muted); margin: 0 0 8px;
+  }
+  .bva-legend-item { display: inline-flex; align-items: center; gap: 6px; }
+  .bva-legend-swatch {
+    display: inline-block; width: 14px; height: 8px; border-radius: 2px;
+    background: var(--c-navy);
+  }
+  .bva-legend-swatch--budget { background: color-mix(in srgb, var(--c-navy) 18%, transparent); }
+  .bva-legend-swatch--over   { background: var(--c-buoy); }
+
+  @media (max-width: 600px) {
+    .bva-row, .bva-axis { grid-template-columns: 110px 1fr 88px; gap: 8px; }
+    .bva-name { font-size: 11.5px; }
+    .bva-amount { font-size: 10.5px; }
+    .bva-amount strong { font-size: 11.5px; }
+  }
+
+  /* Filter bar (reused idiom from town_explorer) */
+  .filter-bar {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 14px 16px 12px;
+    margin: 0 0 12px;
+  }
+  .filter-details > summary {
+    list-style: none; cursor: pointer; user-select: none;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-subtle);
+    padding: 2px 0;
+  }
+  .filter-details > summary::-webkit-details-marker { display: none; }
+  .filter-icon {
+    width: 13px; height: 13px; flex-shrink: 0;
+    color: var(--text-subtle); transition: color 0.15s;
+  }
+  .filter-details[open] > summary .filter-icon { color: var(--c-teal); }
+  .filter-details > summary:hover { color: var(--text); }
+  .filter-summary-status {
+    font-size: 11px; font-weight: 500; color: var(--text-muted);
+    text-transform: none; letter-spacing: 0; margin-left: auto;
+    font-variant-numeric: tabular-nums;
+  }
+  .filter-details[open] .filter-grid { margin-top: 12px; }
+  .filter-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px 16px;
+  }
+  .filter-group label {
+    display: block; font-size: 11px; font-weight: 600;
+    color: var(--text-muted); margin-bottom: 4px;
+  }
+  .filter-group input, .filter-group select {
+    width: 100%; padding: 5px 7px; font-size: 13px;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: var(--bg); color: var(--text);
+    font-family: inherit;
+  }
+  .filter-group input:focus, .filter-group select:focus {
+    outline: none; border-color: var(--c-teal);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--c-teal) 20%, transparent);
+  }
+  .filter-row { display: flex; align-items: center; gap: 4px; }
+  .filter-row .sep { font-size: 11px; color: var(--text-subtle); flex-shrink: 0; }
+  .filter-actions {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--divider);
+  }
+  .reset-btn {
+    font-size: 12px; color: var(--text-subtle); background: none;
+    border: none; cursor: pointer; text-decoration: underline; padding: 6px 8px;
+  }
+  .reset-btn:hover { color: var(--text); }
+
+  /* Transaction table */
+  .ck-table-wrap {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); overflow: hidden;
+  }
+  table.ck-table {
+    width: 100%; border-collapse: collapse; font-size: 12.5px;
+  }
+  table.ck-table thead th {
+    background: var(--bg-subtle, var(--bg));
+    text-align: left; padding: 8px 10px;
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--text-subtle);
+    border-bottom: 1px solid var(--divider);
+    cursor: pointer; user-select: none;
+    position: sticky; top: 0; z-index: 1;
+    white-space: nowrap;
+  }
+  table.ck-table thead th:hover { color: var(--text); }
+  table.ck-table thead th.numeric { text-align: right; }
+  table.ck-table thead th .sa { display: inline-block; width: 10px; color: var(--text-subtle); font-size: 9px; margin-left: 2px; }
+  table.ck-table thead th.sorted .sa { color: var(--c-teal); }
+  table.ck-table tbody td {
+    padding: 7px 10px; border-bottom: 1px solid var(--divider);
+    vertical-align: top;
+  }
+  table.ck-table tbody td.numeric {
+    text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+  table.ck-table tbody td.date { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--text-muted); }
+  table.ck-table tbody td.vendor { font-weight: 500; color: var(--text); }
+  table.ck-table tbody td.muted { color: var(--text-muted); }
+  table.ck-table tbody tr:hover { background: var(--bg); }
+  table.ck-table tbody td.negative { color: var(--c-buoy); }
+
+  .ck-table-pager {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 14px; border-top: 1px solid var(--divider);
+    background: var(--surface);
+    font-size: 12px; color: var(--text-muted);
+  }
+  .ck-table-pager button {
+    font-size: 11px; padding: 4px 11px; background: transparent;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    color: var(--text-muted); cursor: pointer; margin-left: 6px;
+  }
+  .ck-table-pager button:hover:not(:disabled) { border-color: var(--c-teal); color: var(--c-teal); }
+  .ck-table-pager button:disabled { opacity: 0.4; cursor: not-allowed; }
+  .ck-table-pager .pager-info { font-variant-numeric: tabular-nums; }
+
+  .ck-table-empty {
+    padding: 30px 14px; text-align: center;
+    color: var(--text-muted); font-size: 13px;
+  }
+  .ck-loading { padding: 20px 14px; color: var(--text-muted); font-size: 13px; text-align: center; }
+
+  @media (max-width: 600px) {
+    table.ck-table { font-size: 11.5px; }
+    table.ck-table thead th, table.ck-table tbody td { padding: 6px 7px; }
+    /* Hide division on phones */
+    table.ck-table .col-division { display: none; }
+  }
+
+  /* Performance section */
+  .perf-grid {
+    display: grid; grid-template-columns: 1fr; gap: 12px;
+    margin: 0 0 12px; align-items: start;
+  }
+  @media (min-width: 700px) {
+    .perf-grid--two { grid-template-columns: 1fr 1fr; }
+  }
+  .perf-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 18px 20px;
+    position: relative;
+  }
+  .perf-card h3 {
+    font-size: 11px; font-weight: 700; color: var(--text-subtle);
+    margin: 0 0 14px; text-transform: uppercase; letter-spacing: 0.8px;
+  }
+  .perf-card--over   { border-top: 2px solid var(--c-buoy); }
+  .perf-card--over h3 { color: var(--c-buoy); }
+
+  .perf-row {
+    display: grid; grid-template-columns: 16px 1fr auto; gap: 10px;
+    align-items: center; padding: 9px 0;
+    border-bottom: 1px solid var(--divider); font-size: 13px;
+    text-align: left;
+  }
+  .perf-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .perf-row:first-child { padding-top: 4px; }
+  .perf-row-mark {
+    width: 8px; height: 8px; border-radius: 999px;
+    display: inline-block;
+    background: var(--c-buoy);
+  }
+  .perf-row-name { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
+  .perf-row-val  { color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 12px; display: inline-flex; align-items: baseline; gap: 8px; }
+  .perf-row-val strong { color: var(--text); font-size: 14px; font-weight: 700; letter-spacing: -0.2px; }
+  .perf-row-val .over  { color: var(--c-buoy); font-weight: 600; font-size: 11.5px; }
+
+  .perf-meter {
+    display: grid; grid-template-columns: 1fr 150px auto; gap: 12px;
+    align-items: center; padding: 7px 8px;
+    border-bottom: 1px solid var(--divider); font-size: 12.5px;
+    border-radius: var(--radius-sm); margin: 0 -8px;
+    transition: background 0.12s;
+  }
+  .perf-meter:last-child { border-bottom: none; padding-bottom: 8px; }
+  .perf-meter:first-of-type { padding-top: 0; }
+  .perf-meter--click { cursor: pointer; }
+  .perf-meter--click:hover { background: color-mix(in srgb, var(--c-teal) 6%, transparent); }
+  .perf-meter-name { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .perf-meter-bar {
+    position: relative; height: 6px;
+    background: color-mix(in srgb, var(--c-navy) 8%, transparent);
+    border-radius: 3px; overflow: hidden;
+  }
+  .perf-meter-bar-fill {
+    position: absolute; left: 0; top: 0; height: 100%;
+    background: var(--c-navy); border-radius: 3px;
+  }
+  .perf-meter-val { font-variant-numeric: tabular-nums; color: var(--text); white-space: nowrap; font-weight: 600; font-size: 12px; }
+
+  /* Monthly cadence bar chart */
+  .cadence { display: flex; flex-direction: column; gap: 2px; font-size: 12px; }
+  .cadence-row {
+    display: grid; gap: 8px;
+    grid-template-columns: 48px 1fr 64px;
+    align-items: center; padding: 4px 6px;
+    border-radius: var(--radius-sm);
+    transition: background 0.12s;
+  }
+  .cadence-row--click { cursor: pointer; }
+  .cadence-row--click:hover { background: color-mix(in srgb, var(--c-teal) 6%, transparent); }
+  .cadence-month { color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 11.5px; }
+  .cadence-bar-wrap { position: relative; height: 10px; background: color-mix(in srgb, var(--c-navy) 6%, transparent); border-radius: 2px; }
+  .cadence-bar {
+    position: absolute; left: 0; top: 0; height: 100%;
+    background: var(--c-navy); border-radius: 2px;
+  }
+  .cadence-val { color: var(--text); text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; font-size: 11.5px; }
+
+  .perf-pareto {
+    margin: 0 0 14px; font-size: 12.5px; color: var(--text-muted);
+    line-height: 1.55;
+  }
+  .perf-pareto strong { color: var(--text); }
+
+  /* Multi-fund vendor table */
+  .multifund {
+    font-size: 12.5px; width: 100%; border-collapse: collapse;
+  }
+  .multifund th, .multifund td {
+    text-align: left; padding: 8px 10px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .multifund tr:last-child td { border-bottom: none; }
+  .multifund th {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.7px;
+    color: var(--text-subtle); font-weight: 700;
+    padding-top: 0;
+  }
+  .multifund td.numeric { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; }
+  .multifund td.funds-list { color: var(--text-muted); font-size: 11.5px; }
+  .multifund td.vendor-name { font-weight: 500; }
+  .multifund tr.multifund-row--click { cursor: pointer; transition: background 0.12s; }
+  .multifund tr.multifund-row--click:hover { background: color-mix(in srgb, var(--c-teal) 6%, transparent); }
+
+  /* BVA drillable row */
+  .bva-row--drillable { cursor: pointer; border-radius: var(--radius-sm); transition: background 0.12s; margin: 0 -6px; padding-left: 6px; padding-right: 6px; }
+  .bva-row--drillable:hover { background: color-mix(in srgb, var(--c-teal) 5%, transparent); }
+  .bva-row--expanded { background: color-mix(in srgb, var(--c-teal) 7%, transparent); }
+  .bva-caret { display: inline-block; width: 12px; color: var(--text-subtle); font-size: 10px; transition: color 0.12s; }
+  .bva-row--drillable:hover .bva-caret { color: var(--c-teal); }
+  .bva-row--expanded .bva-caret { color: var(--c-teal); }
+
+  /* BVA expand panel */
+  .bva-expand {
+    margin: 4px -6px 10px; padding: 14px 16px;
+    background: color-mix(in srgb, var(--c-navy) 4%, transparent);
+    border-radius: var(--radius-md);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  }
+  @media (max-width: 700px) {
+    .bva-expand { grid-template-columns: 1fr; }
+  }
+  .drill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+  }
+  .drill-card--span { grid-column: 1 / -1; }
+  .drill-card-title {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.7px; color: var(--text-subtle); margin-bottom: 10px;
+  }
+  .drill-bars { display: flex; flex-direction: column; gap: 2px; }
+  .drill-bar-row {
+    display: grid; grid-template-columns: 1fr 90px 80px; gap: 8px;
+    align-items: center; font-size: 12px;
+    padding: 4px 6px; border-radius: var(--radius-sm);
+    margin: 0 -6px;
+    transition: background 0.12s;
+  }
+  .drill-bar-row--click { cursor: pointer; }
+  .drill-bar-row--click:hover { background: color-mix(in srgb, var(--c-teal) 7%, transparent); }
+  .drill-bar-row--click:hover .drill-bar-caret { color: var(--c-teal); }
+  .drill-bar-name {
+    color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    font-weight: 500;
+  }
+  .drill-bar-caret { color: var(--text-subtle); font-size: 13px; font-weight: 400; margin-left: 2px; transition: color 0.12s; }
+  .drill-bar-track {
+    position: relative; height: 10px;
+    background: color-mix(in srgb, var(--c-navy) 5%, transparent);
+    border-radius: 2px;
+  }
+  .drill-bar { position: absolute; left: 0; top: 0; height: 100%; border-radius: 2px; }
+  .drill-bar--secondary { background: color-mix(in srgb, var(--c-navy) 18%, transparent); height: 10px; top: 0; }
+  .drill-bar--primary   { background: var(--c-navy); height: 6px; top: 2px; }
+  .drill-bar-val {
+    font-size: 11px; color: var(--text-muted); text-align: right;
+    font-variant-numeric: tabular-nums; white-space: nowrap;
+    display: flex; flex-direction: column; align-items: flex-end;
+  }
+  .drill-bar-val strong { color: var(--text); font-size: 12px; font-weight: 700; }
+  .drill-bar-val .dm { font-size: 10px; color: var(--text-subtle); }
+
+  .drill-months { display: flex; flex-direction: column; gap: 3px; }
+  .drill-month-row {
+    display: grid; grid-template-columns: 52px 1fr 56px; gap: 8px;
+    align-items: center; font-size: 11.5px; padding: 3px 6px;
+    border-radius: var(--radius-sm); cursor: pointer;
+    transition: background 0.12s;
+  }
+  .drill-month-row:hover { background: color-mix(in srgb, var(--c-teal) 8%, transparent); }
+  .drill-month-name { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+  .drill-month-bar-wrap { position: relative; height: 8px; background: color-mix(in srgb, var(--c-navy) 5%, transparent); border-radius: 2px; }
+  .drill-month-bar { position: absolute; left: 0; top: 0; height: 100%; background: var(--c-navy); border-radius: 2px; }
+  .drill-month-val { text-align: right; font-variant-numeric: tabular-nums; color: var(--text); font-weight: 600; }
+
+  .drill-empty { color: var(--text-subtle); font-size: 12px; margin: 0; }
+  .drill-cta { margin-top: 4px; }
+  .drill-cta--span { grid-column: 1 / -1; }
+
+  /* Breadcrumb */
+  .drill-crumbs {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 2px;
+    margin: 0 0 4px; font-size: 11.5px; color: var(--text-muted);
+    padding: 0;
+  }
+  .drill-crumb {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 4px 9px; border-radius: 999px;
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text-muted); font-weight: 500;
+  }
+  .drill-crumb-dim {
+    font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--text-subtle);
+  }
+  .drill-crumb-btn {
+    cursor: pointer; transition: background 0.12s, color 0.12s, border-color 0.12s;
+    font: inherit;
+  }
+  .drill-crumb-btn:hover { background: color-mix(in srgb, var(--c-teal) 10%, var(--surface)); color: var(--text); border-color: var(--c-teal); }
+  .drill-crumb--current {
+    background: var(--c-navy); color: #fff; border-color: var(--c-navy);
+  }
+  .drill-crumb--current .drill-crumb-dim { color: color-mix(in srgb, #fff 60%, transparent); }
+  html[data-theme="dark"] .drill-crumb--current { background: var(--c-teal); border-color: var(--c-teal); }
+  .drill-crumb-sep { color: var(--text-subtle); font-size: 13px; padding: 0 2px; }
+  .drill-cta-btn {
+    width: 100%; padding: 10px 14px;
+    background: var(--c-navy); color: #fff;
+    border: none; border-radius: var(--radius-sm);
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    transition: background 0.12s;
+  }
+  .drill-cta-btn:hover { background: var(--c-teal); }
+</style>
+
+<div class="hero-card" id="hero-card">
+  <div class="hero-row">
+    <div class="hero-stat">
+      <div class="hero-label">All funds</div>
+      <div class="hero-value">$206.1M</div>
+      <div class="hero-sub">FY26 adopted, every fund</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-label">Annual operating</div>
+      <div class="hero-value">$127.3M</div>
+      <div class="hero-sub">General + enterprise funds</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-label">Vendor payments</div>
+      <div class="hero-value">$98.1M</div>
+      <div class="hero-sub">15,001 checks, payroll excluded</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-label">Through</div>
+      <div class="hero-value">May 29</div>
+      <div class="hero-sub">11 of 12 months</div>
+    </div>
+  </div>
+</div>
+
+<div class="ck-section">
+  <h2>Budget vs actual</h2>
+</div>
+
+<div class="breakdown-bar">
+  <button type="button" class="breakdown-btn active" data-breakdown="by_fund">Fund</button>
+  <button type="button" class="breakdown-btn" data-breakdown="by_department">Department</button>
+  <button type="button" class="breakdown-btn" data-breakdown="by_category">Category</button>
+  <button type="button" class="breakdown-btn" data-breakdown="by_division">Division</button>
+  <button type="button" class="breakdown-btn" data-breakdown="by_object">Object</button>
+  <span class="breakdown-meta" id="breakdown-meta"></span>
+</div>
+
+<div class="bva-chart" id="bva-chart">
+  <div class="ck-loading">Loading&hellip;</div>
+</div>
+
+<div class="bva-legend">
+  <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--budget"></span>Budget</span>
+  <span class="bva-legend-item"><span class="bva-legend-swatch"></span>Spent</span>
+  <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--over"></span>Over budget</span>
+</div>
+
+<div class="ck-section">
+  <h2>Where it stands at 92% of the year</h2>
+</div>
+
+<div class="perf-card perf-card--over">
+  <h3>Already over the full year's budget</h3>
+  <div id="perf-over-list" class="ck-loading">Loading&hellip;</div>
+</div>
+
+<div class="perf-grid perf-grid--two">
+  <div class="perf-card">
+    <h3>Top vendors</h3>
+    <p class="perf-pareto" id="perf-pareto">Loading&hellip;</p>
+    <div id="perf-vendor-list"></div>
+  </div>
+  <div class="perf-card">
+    <h3>Monthly spend</h3>
+    <div id="perf-cadence-chart" class="ck-loading">Loading&hellip;</div>
+  </div>
+</div>
+
+<div class="perf-card">
+  <h3>Vendors billing 3+ funds</h3>
+  <div id="perf-multifund-table" class="ck-loading">Loading&hellip;</div>
+</div>
+
+<div class="ck-section">
+  <h2>Every payment</h2>
+</div>
+
+<div class="filter-bar">
+  <details class="filter-details" id="filter-details" open>
+    <summary>
+      <svg class="filter-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M5 5h14a1 1 0 0 1 .8 1.6L14 14v5a1 1 0 0 1-1.45.9l-2-1A1 1 0 0 1 10 18v-4L4.2 6.6A1 1 0 0 1 5 5z"/>
+      </svg>
+      <span>Filters</span>
+      <span class="filter-summary-status" id="filter-summary-status"></span>
+    </summary>
+    <div class="filter-grid">
+      <div class="filter-group">
+        <label for="f-vendor">Vendor</label>
+        <input type="text" id="f-vendor" placeholder="e.g. AMAZON, EVERSOURCE" autocomplete="off">
+      </div>
+      <div class="filter-group">
+        <label for="f-fund">Fund</label>
+        <select id="f-fund"><option value="">All funds</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="f-division">Division</label>
+        <select id="f-division"><option value="">All divisions</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="f-date-min">Date range</label>
+        <div class="filter-row">
+          <input type="date" id="f-date-min" min="2025-07-01" max="2026-05-29">
+          <span class="sep">to</span>
+          <input type="date" id="f-date-max" min="2025-07-01" max="2026-05-29">
+        </div>
+      </div>
+      <div class="filter-group">
+        <label for="f-amount-min">Min amount ($)</label>
+        <input type="number" id="f-amount-min" placeholder="0" min="0" step="100">
+      </div>
+    </div>
+    <div class="filter-actions">
+      <button type="button" class="reset-btn" id="reset-filters">Reset all filters</button>
+    </div>
+  </details>
+</div>
+
+<div class="ck-table-wrap">
+  <table class="ck-table" id="ck-table">
+    <thead>
+      <tr>
+        <th data-col="date" class="numeric col-date"><span class="lbl">Date</span><span class="sa"></span></th>
+        <th data-col="vendor" class="col-vendor"><span class="lbl">Vendor</span><span class="sa"></span></th>
+        <th data-col="fund" class="col-fund"><span class="lbl">Fund</span><span class="sa"></span></th>
+        <th data-col="division" class="col-division"><span class="lbl">Division</span><span class="sa"></span></th>
+        <th data-col="amount" class="numeric col-amount sorted"><span class="lbl">Amount</span><span class="sa">&#9660;</span></th>
+      </tr>
+    </thead>
+    <tbody id="ck-tbody">
+      <tr><td colspan="5" class="ck-loading">Loading transactions&hellip;</td></tr>
+    </tbody>
+  </table>
+  <div class="ck-table-pager">
+    <span class="pager-info" id="pager-info">&mdash;</span>
+    <div>
+      <button type="button" id="page-prev" disabled>&larr; Prev</button>
+      <button type="button" id="page-next" disabled>Next &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<div class="notes">
+  <h2>Notes</h2>
+
+  <dl class="notes-dl">
+    <dt>What "the budget" means</dt>
+    <dd><strong>$206.1M</strong> is every appropriation in every fund &ndash; including capital articles, the OPEB trust, the Larz Anderson trust, the Light Department pass-through, and 300+ small revolving and grant funds. <strong>$127.3M</strong> is the annual operating envelope (Town general fund $60.6M + School general fund $49.1M + Water $6.5M + Sewer $5.5M + Tax Articles $4.3M + Harbor $1.3M). The Light Department runs as a self-supporting enterprise outside the appropriation process. The Budget vs Actual chart above filters down to that $127.3M envelope.<sup class="cite"
+      data-href="https://townofmarblehead-ma-ob.budget.socrata.com/"
+      data-source="Town of Marblehead Budget Portal (Socrata), data fetched via fund_source_data API on 2026-06-01"></sup></dd>
+
+    <dt>Budget vs spent vs vendor payments</dt>
+    <dd>The budget portal also publishes an FY26 <em>actual</em> rollup of <strong>$140.4M</strong> through May 29, which includes payroll and inter-fund transfers. The <strong>$98.1M</strong> on this page is just vendor checks (the accounts-payable side). The gap between the two is mostly payroll.<sup class="cite"
+      data-href="https://townofmarblehead-ma-oe.spending.socrata.com/#!/year/All%20Years/explore/1-/segment2"
+      data-source="Town of Marblehead Spending Portal (Socrata), data exported 2026-06-01"></sup></dd>
+
+    <dt>Why some bars look over budget</dt>
+    <dd>The Light Department ($13.2M) is self-supporting and has no appropriation, so it shows up against a $0 budget. Snow Removal ($687K vs $105K) is intentionally under-budgeted and topped up at year-end. Neither is a runaway expense.</dd>
+
+    <dt>What we redacted</dt>
+    <dd>The town's source export tags <em>specific employees by surname</em> for medical claims under the 111F Injury Leave Fund (e.g., "BURT INJURY" paid to Spaulding Rehab) and lists <em>student initials</em> for out-of-district SpEd placements. We dropped the Description column entirely and pulled 560 rows ($413K) from the 111F and Workers Comp funds. The aggregate is still in the budget chart above.</dd>
+
+    <dt>Source files</dt>
+    <dd>
+      <a href="../data/checkbook_FY26_2026-06-02.csv">checkbook_FY26_2026-06-02.csv</a> &middot;
+      <a href="../data/budget_actual_FY26.json">budget_actual_FY26.json</a> &middot;
+      <a href="../data/checkbook_performance.json">checkbook_performance.json</a> &middot;
+      <a href="../data/checkbook_redaction_disclosure.json">checkbook_redaction_disclosure.json</a>
+    </dd>
+  </dl>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var CHECKBOOK_URL = '../data/checkbook_FY26_2026-06-02.csv';
+  var BUDGET_URL    = '../data/budget_actual_FY26.json';
+  var PERF_URL      = '../data/checkbook_performance.json';
+  var DRILL_URL     = '../data/budget_drill_FY26.json';
+  var TOTAL_ROW_COUNT = 15001;
+
+  // --- Utility ---
+  function fmtMoney(n, opts) {
+    opts = opts || {};
+    var neg = n < 0;
+    var a = Math.abs(n);
+    var s;
+    if (opts.compact && a >= 1e6) s = '$' + (a / 1e6).toFixed(a >= 10e6 ? 1 : 2) + 'M';
+    else if (opts.compact && a >= 1e3) s = '$' + (a / 1e3).toFixed(0) + 'K';
+    else s = '$' + a.toLocaleString('en-US', { minimumFractionDigits: opts.cents === false ? 0 : 2, maximumFractionDigits: opts.cents === false ? 0 : 2 });
+    return neg ? '-' + s : s;
+  }
+  function fmtDate(iso) {
+    if (!iso) return '';
+    var d = iso.slice(0, 10);
+    return d;
+  }
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+  function debounce(fn, wait) {
+    var t;
+    return function () {
+      var args = arguments, ctx = this;
+      clearTimeout(t);
+      t = setTimeout(function () { fn.apply(ctx, args); }, wait);
+    };
+  }
+  function displayDivision(name) {
+    if (name === 'UNDEFINED') return 'School (not broken out)';
+    return name;
+  }
+  function titleCase(s) {
+    if (!s) return s;
+    // Preserve common acronyms; lowercase the rest.
+    var KEEP = { 'OPEB': 1, 'GIC': 1, 'MWRA': 1, 'ARPA': 1, 'IDEA': 1, 'METCO': 1, 'PERAC': 1, 'NSEC': 1, 'MA': 1, 'US': 1, 'USA': 1, 'IT': 1, 'HVAC': 1, 'HS': 1, 'MS': 1, 'PD': 1, 'FD': 1, 'OPM': 1, 'OFU': 1, 'DPW': 1, 'NS': 1, 'ARTM': 1, 'ATM': 1, 'CO': 1, 'LTD': 1, 'A11': 1, 'A33': 1, 'A34': 1, 'A36': 1 };
+    return s.split(/(\s+|-|\/)/).map(function (w) {
+      if (!w.trim()) return w;
+      if (KEEP[w.toUpperCase()]) return w.toUpperCase();
+      if (/^\d/.test(w)) return w;
+      // Dotted acronym (U.S., E.E.) - keep all caps
+      if (/^[A-Z](\.[A-Z])+\.?$/i.test(w)) return w.toUpperCase();
+      // 'AND' as conjunction stays lowercase except at start (handled by KEEP+caller)
+      if (w.toLowerCase() === 'and' || w.toLowerCase() === 'of' || w.toLowerCase() === 'the' || w.toLowerCase() === 'in' || w.toLowerCase() === 'for') return w.toLowerCase();
+      return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+    }).join('');
+  }
+
+  // --- CSV parser (handles quoted fields with commas) ---
+  function parseCsv(text) {
+    var lines = [];
+    var i = 0, len = text.length;
+    var field = '', row = [], inQ = false;
+    while (i < len) {
+      var c = text.charCodeAt(i);
+      if (inQ) {
+        if (c === 34) { // "
+          if (i + 1 < len && text.charCodeAt(i + 1) === 34) { field += '"'; i += 2; continue; }
+          inQ = false; i++; continue;
+        }
+        field += text[i]; i++;
+      } else {
+        if (c === 34) { inQ = true; i++; continue; }
+        if (c === 44) { row.push(field); field = ''; i++; continue; }
+        if (c === 13) { i++; continue; }
+        if (c === 10) { row.push(field); lines.push(row); row = []; field = ''; i++; continue; }
+        field += text[i]; i++;
+      }
+    }
+    if (field.length || row.length) { row.push(field); lines.push(row); }
+    return lines;
+  }
+
+  // --- State ---
+  var rows = [];               // Parsed checkbook transactions
+  var budget = null;           // budget_actual_FY26.json
+  var perf = null;             // checkbook_performance.json (includes .drill)
+  var drill = null;            // budget_drill_FY26.json
+  var sortCol = 'amount';
+  var sortDesc = true;
+  var page = 0;
+  var pageSize = 50;
+
+  // --- Drill helpers ---
+  // Dimensions visible inside each level's expand panel
+  var SUB_DIMS = {
+    fund:       ['by_department', 'by_category'],
+    department: ['by_category', 'by_division'],
+    category:   ['by_fund', 'by_department'],
+    division:   ['by_fund', 'by_department'],
+    // line-item dims are leaves; rendered specially in renderBvaExpand
+    dept_category: [],
+    fund_category: [],
+  };
+  var DIM_LABEL = {
+    fund: 'fund', department: 'department', category: 'category', division: 'division',
+    dept_category: 'category', fund_category: 'category',
+  };
+
+  function drillDataFor(dim, key) {
+    var bag = drill && drill['by_' + dim];
+    return (bag && bag[key]) || null;
+  }
+  function hasDrill(dim, key) {
+    return !!drillDataFor(dim, key);
+  }
+
+  function renderMiniBars(items, opts) {
+    if (!items || items.length === 0) return '<p class="drill-empty">No data.</p>';
+    opts = opts || {};
+    var top = items.slice(0, opts.limit || 6);
+    var max = 0;
+    top.forEach(function (r) {
+      var v = Math.max(r.revised_budget || 0, r.actual || 0, r.amount || 0);
+      if (v > max) max = v;
+    });
+    if (max === 0) max = 1;
+    return '<div class="drill-bars">' + top.map(function (r) {
+      var b = r.revised_budget;
+      var a = r.actual;
+      var amt = r.amount;
+      var name = titleCase(r.name);
+      if (opts.targetDim === 'division' && r.name === 'UNDEFINED') name = 'School (not broken out)';
+      var primary = (amt !== undefined) ? amt : a;
+      var secondary = (amt !== undefined) ? null : b;
+      var primaryPct = Math.min(100, Math.max(0, (Math.abs(primary || 0) / max) * 100));
+      var secondaryPct = secondary !== null ? Math.min(100, Math.max(0, (secondary / max) * 100)) : 0;
+      var pct = (b > 0 && a !== undefined) ? Math.round(a / b * 100) + '%' : '';
+      var rhs = '';
+      if (amt !== undefined) {
+        rhs = '<strong>' + fmtMoney(amt, { compact: true }) + '</strong>' + (r.count ? '<span class="dm">' + r.count + ' txn' + (r.count === 1 ? '' : 's') + '</span>' : '');
+      } else {
+        rhs = '<strong>' + fmtMoney(a, { compact: true }) + '</strong><span class="dm">' + (pct || '—') + '</span>';
+      }
+      // Determine effective drill target. If parent context is dept or fund and target is category,
+      // prefer the line-item compound dim if we have data for it.
+      var effDim = opts.targetDim;
+      var effKey = r.name;
+      if (opts.targetDim === 'category' && opts.contextDim) {
+        var prefix = opts.contextDim === 'department' ? 'dept' : opts.contextDim;
+        var compound = prefix + '_category';
+        var compoundKey = opts.contextKey + '||' + r.name;
+        if (drill && drill['by_' + compound] && drill['by_' + compound][compoundKey]) {
+          effDim = compound;
+          effKey = compoundKey;
+        }
+      }
+      var drillable = effDim && hasDrill(effDim, effKey);
+      var rowClass = 'drill-bar-row' + (drillable ? ' drill-bar-row--click' : '');
+      var attrs = drillable
+        ? ' data-drill-push-dim="' + effDim + '" data-drill-push-key="' + escapeHtml(effKey) + '"'
+        : '';
+      return '<div class="' + rowClass + '"' + attrs + '>' +
+        '<div class="drill-bar-name" title="' + escapeHtml(r.name) + (drillable ? ' (click to drill in)' : '') + '">' + escapeHtml(name) +
+        (drillable ? ' <span class="drill-bar-caret">›</span>' : '') + '</div>' +
+        '<div class="drill-bar-track">' +
+          (secondary !== null ? '<div class="drill-bar drill-bar--secondary" style="width:' + secondaryPct.toFixed(1) + '%"></div>' : '') +
+          '<div class="drill-bar drill-bar--primary" style="width:' + primaryPct.toFixed(1) + '%"></div>' +
+        '</div>' +
+        '<div class="drill-bar-val">' + rhs + '</div>' +
+      '</div>';
+    }).join('') + '</div>';
+  }
+
+  function dimDisplay(entry) {
+    var key = entry.key;
+    if (entry.dim === 'dept_category' || entry.dim === 'fund_category') {
+      var parts = key.split('||');
+      return titleCase(parts[1] || key);
+    }
+    if (entry.dim === 'division' && key === 'UNDEFINED') return 'School (not broken out)';
+    return titleCase(key);
+  }
+
+  function renderBvaExpand(stack) {
+    if (!stack || stack.length === 0) return '';
+    var current = stack[stack.length - 1];
+    var dd = drillDataFor(current.dim, current.key);
+    if (!dd) return '<div class="bva-expand"><p class="drill-empty">No drill data for ' + escapeHtml(current.key) + '.</p></div>';
+
+    var html = '<div class="bva-expand">';
+
+    // Breadcrumb (only when nested beyond root)
+    if (stack.length > 1) {
+      html += '<div class="drill-crumbs drill-cta--span">';
+      stack.forEach(function (entry, i) {
+        var isLast = (i === stack.length - 1);
+        var label = dimDisplay(entry);
+        var dimLabel = '<span class="drill-crumb-dim">' + DIM_LABEL[entry.dim] + ':</span> ';
+        if (isLast) {
+          html += '<span class="drill-crumb drill-crumb--current">' + dimLabel + escapeHtml(label) + '</span>';
+        } else {
+          html += '<button type="button" class="drill-crumb drill-crumb-btn" data-drill-pop="' + (i + 1) + '">' + dimLabel + escapeHtml(label) + '</button>';
+          html += '<span class="drill-crumb-sep">&rsaquo;</span>';
+        }
+      });
+      html += '</div>';
+    }
+
+    // Line-item leaf views (dd is an array, not an object)
+    if (current.dim === 'dept_category' || current.dim === 'fund_category') {
+      var lineItems = dd; // array
+      var total = lineItems.reduce(function (s, x) { return s + (x.revised_budget || 0); }, 0);
+      var actual = lineItems.reduce(function (s, x) { return s + (x.actual || 0); }, 0);
+      var pctOfRev = total > 0 ? Math.round(actual / total * 100) : null;
+      html += '<div class="drill-card drill-card--span">' +
+        '<div class="drill-card-title">' + lineItems.length + ' line items &middot; ' +
+          fmtMoney(total, { compact: true }) + ' budget &middot; ' +
+          fmtMoney(actual, { compact: true }) + ' actual' +
+          (pctOfRev !== null ? ' (' + pctOfRev + '% of revised)' : '') +
+        '</div>' +
+        renderMiniBars(lineItems, { limit: 50 }) +
+      '</div>';
+      html += '</div>';
+      return html;
+    }
+
+    // Cross-tab panels
+    var dims = SUB_DIMS[current.dim] || [];
+    dims.forEach(function (subDimKey) {
+      var items = dd[subDimKey] || [];
+      if (items.length === 0) return;
+      var targetDim = subDimKey.replace('by_', '');
+      // When showing categories inside a department/fund drill, prefer line-item targets
+      // for individual category rows (renderMiniBars handles the compound lookup).
+      var contextDim = (targetDim === 'category' && (current.dim === 'department' || current.dim === 'fund')) ? current.dim : null;
+      html += '<div class="drill-card">' +
+        '<div class="drill-card-title">By ' + targetDim + '</div>' +
+        renderMiniBars(items, { limit: 8, targetDim: targetDim, contextDim: contextDim, contextKey: current.key }) +
+      '</div>';
+    });
+
+    // Checkbook vendor + monthly (only for fund level — checkbook is tagged by fund)
+    if (current.dim === 'fund' && perf && perf.drill && perf.drill.by_fund && perf.drill.by_fund[current.key]) {
+      var pd = perf.drill.by_fund[current.key];
+      if (pd.top_vendors && pd.top_vendors.length) {
+        html += '<div class="drill-card">' +
+          '<div class="drill-card-title">Top vendors (checkbook)</div>' +
+          renderMiniBars(pd.top_vendors, { limit: 6 }) +
+        '</div>';
+      }
+      if (pd.monthly && pd.monthly.length) {
+        var mMax = pd.monthly.reduce(function (s, m) { return Math.max(s, m.amount); }, 0) || 1;
+        var monthName = function (m) {
+          var p = m.split('-');
+          var names = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+          return names[parseInt(p[1], 10)] + " '" + p[0].slice(2);
+        };
+        var monthsHtml = '<div class="drill-months">';
+        pd.monthly.forEach(function (m) {
+          var pct = m.amount / mMax * 100;
+          monthsHtml += '<div class="drill-month-row" data-month="' + m.month + '" title="Click to filter table to this month">' +
+            '<div class="drill-month-name">' + monthName(m.month) + '</div>' +
+            '<div class="drill-month-bar-wrap"><div class="drill-month-bar" style="width:' + pct.toFixed(1) + '%"></div></div>' +
+            '<div class="drill-month-val">' + fmtMoney(m.amount, { compact: true }) + '</div>' +
+          '</div>';
+        });
+        monthsHtml += '</div>';
+        html += '<div class="drill-card">' +
+          '<div class="drill-card-title">Monthly cadence (checkbook)</div>' +
+          monthsHtml +
+        '</div>';
+      }
+      // CTA: see transactions for this fund
+      var ckCount = pd.monthly.reduce(function (s, m) { return s + m.count; }, 0);
+      html += '<div class="drill-cta drill-cta--span">' +
+        '<button type="button" class="drill-cta-btn" data-action="filter-fund" data-fund="' + escapeHtml(current.key) + '">' +
+        'See ' + ckCount.toLocaleString() + ' transactions for ' + escapeHtml(titleCase(current.key)) + ' &rarr;</button>' +
+      '</div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  // --- Budget vs Actual rendering ---
+  var bvaBreakdown = 'by_fund';
+  var bvaPage = 0;
+  var bvaPageSize = 15;
+  var drillStack = [];          // stack of { dim, key } entries; bottom = root, top = currently shown
+  function pushDrill(dim, key) {
+    var idx = -1;
+    for (var i = 0; i < drillStack.length; i++) {
+      if (drillStack[i].dim === dim && drillStack[i].key === key) { idx = i; break; }
+    }
+    if (idx >= 0) drillStack = drillStack.slice(0, idx + 1);
+    else drillStack.push({ dim: dim, key: key });
+    renderBva();
+  }
+  function popDrillTo(depth) {
+    drillStack = drillStack.slice(0, depth);
+    renderBva();
+  }
+  function clearDrill() {
+    drillStack = [];
+    renderBva();
+  }
+  function currentRootDim() {
+    return bvaBreakdown === 'by_fund' ? 'fund' :
+           bvaBreakdown === 'by_department' ? 'department' :
+           bvaBreakdown === 'by_category' ? 'category' :
+           bvaBreakdown === 'by_division' ? 'division' : null;
+  }
+
+  function renderBva() {
+    var host = document.getElementById('bva-chart');
+    if (!budget) { host.innerHTML = '<div class="ck-loading">Loading budget data&hellip;</div>'; return; }
+    var data = (budget[bvaBreakdown] || []).slice();
+    // Drop zero-everywhere rows
+    data = data.filter(function (r) {
+      return (r.revised_budget !== 0) || (r.actual !== 0) || (r.original_budget !== 0);
+    });
+    var totalRows = data.length;
+    var max = 0;
+    data.forEach(function (r) {
+      var v = Math.max(r.revised_budget || 0, r.actual || 0);
+      if (v > max) max = v;
+    });
+    if (max === 0) max = 1;
+    var totalPages = Math.max(1, Math.ceil(totalRows / bvaPageSize));
+    if (bvaPage >= totalPages) bvaPage = totalPages - 1;
+    var start = bvaPage * bvaPageSize;
+    var slice = data.slice(start, start + bvaPageSize);
+
+    var rootDim = currentRootDim();
+    var html = '';
+    slice.forEach(function (r) {
+      var b = r.revised_budget || 0;
+      var a = r.actual || 0;
+      var bPct = Math.min(100, Math.max(0, (b / max) * 100));
+      var aPct = Math.min(100, Math.max(0, (Math.abs(a) / max) * 100));
+      var pct = b > 0 ? Math.round((a / b) * 100) : null;
+      var over = b > 0 && a > b;
+      var negative = a < 0;
+      var name = r.name;
+      if (bvaBreakdown === 'by_division' && name === 'UNDEFINED') name = 'School (not broken out)';
+      else name = titleCase(name);
+      var drillable = rootDim && hasDrill(rootDim, r.name);
+      var isExpanded = drillable && drillStack.length > 0 && drillStack[0].dim === rootDim && drillStack[0].key === r.name;
+      var rowClass = 'bva-row' +
+        (drillable ? ' bva-row--drillable' : '') +
+        (isExpanded ? ' bva-row--expanded' : '');
+      html += '<div class="' + rowClass + '"' +
+        (drillable ? ' data-drill-key="' + escapeHtml(r.name) + '"' : '') +
+        ' title="' + escapeHtml(r.name) +
+        ' &mdash; Revised: ' + fmtMoney(b, { cents: false }) +
+        ', Actual: ' + fmtMoney(a, { cents: false }) +
+        (pct !== null ? ' (' + pct + '% of revised)' : ', no appropriation') +
+        (drillable ? ' (click to drill in)' : '') + '">';
+      html += '<div class="bva-name">' +
+        (drillable ? '<span class="bva-caret">' + (isExpanded ? '▾' : '▸') + '</span> ' : '') +
+        escapeHtml(name) + '</div>';
+      html += '<div class="bva-bars">';
+      html += '<div class="bva-bar bva-bar--budget" style="width:' + bPct.toFixed(2) + '%"></div>';
+      html += '<div class="bva-bar bva-bar--actual' +
+        (over ? ' bva-bar--over' : '') +
+        (negative ? ' bva-bar--negative' : '') +
+        '" style="width:' + aPct.toFixed(2) + '%"></div>';
+      html += '</div>';
+      html += '<div class="bva-amount"><strong>' + fmtMoney(a, { compact: true }) +
+        '</strong>' + (pct !== null ? pct + '% of ' + fmtMoney(b, { compact: true }) : 'no budget') + '</div>';
+      html += '</div>';
+      if (isExpanded) {
+        html += renderBvaExpand(drillStack);
+      }
+    });
+
+    // Axis
+    var midM = (max / 2);
+    function axisTick(v) {
+      if (v >= 1e6) return '$' + (v / 1e6).toFixed(v >= 10e6 ? 0 : 1) + 'M';
+      if (v >= 1e3) return '$' + Math.round(v / 1e3) + 'K';
+      return '$' + Math.round(v);
+    }
+    html += '<div class="bva-axis">';
+    html += '<div></div>';
+    html += '<div class="bva-axis-track"><span>$0</span><span>' + axisTick(midM) + '</span><span>' + axisTick(max) + '</span></div>';
+    html += '<div></div>';
+    html += '</div>';
+
+    if (totalRows > bvaPageSize) {
+      html += '<div class="bva-pager">' +
+        '<span class="bva-pager-info">Showing ' + (start + 1) + '&ndash;' + Math.min(start + bvaPageSize, totalRows) + ' of ' + totalRows + '</span>' +
+        '<div>' +
+        '<button type="button" id="bva-prev"' + (bvaPage === 0 ? ' disabled' : '') + '>&larr; Prev</button> ' +
+        '<button type="button" id="bva-next"' + (bvaPage >= totalPages - 1 ? ' disabled' : '') + '>Next &rarr;</button>' +
+        '</div></div>';
+    }
+    host.innerHTML = html;
+    var prev = document.getElementById('bva-prev');
+    var next = document.getElementById('bva-next');
+    if (prev) prev.addEventListener('click', function () { bvaPage--; renderBva(); });
+    if (next) next.addEventListener('click', function () { bvaPage++; renderBva(); });
+
+    // Meta line
+    var sumBudget = 0, sumActual = 0;
+    data.forEach(function (r) { sumBudget += r.revised_budget || 0; sumActual += r.actual || 0; });
+    var meta = document.getElementById('breakdown-meta');
+    meta.textContent = totalRows + ' rows · ' + fmtMoney(sumBudget, { compact: true }) + ' budgeted · ' + fmtMoney(sumActual, { compact: true }) + ' actual';
+  }
+
+  // --- Transaction table rendering ---
+  function applyFilters() {
+    var vendorQ = document.getElementById('f-vendor').value.trim().toUpperCase();
+    var fundQ = document.getElementById('f-fund').value;
+    var divQ = document.getElementById('f-division').value;
+    var dMin = document.getElementById('f-date-min').value;
+    var dMax = document.getElementById('f-date-max').value;
+    var aMin = parseFloat(document.getElementById('f-amount-min').value);
+    if (!Number.isFinite(aMin)) aMin = null;
+
+    var filtered = rows.filter(function (r) {
+      if (vendorQ && r.vendor.indexOf(vendorQ) === -1) return false;
+      if (fundQ && r.fund !== fundQ) return false;
+      if (divQ && r.division !== divQ) return false;
+      if (dMin && r.date < dMin) return false;
+      if (dMax && r.date > dMax) return false;
+      if (aMin !== null && Math.abs(r.amount) < aMin) return false;
+      return true;
+    });
+
+    // Sort
+    filtered.sort(function (a, b) {
+      var va = a[sortCol], vb = b[sortCol];
+      if (typeof va === 'string') { va = va.toLowerCase(); vb = vb.toLowerCase(); }
+      if (va < vb) return sortDesc ? 1 : -1;
+      if (va > vb) return sortDesc ? -1 : 1;
+      return 0;
+    });
+    return filtered;
+  }
+
+  function renderTable() {
+    var filtered = applyFilters();
+    var total = filtered.length;
+    var sumAmt = 0;
+    for (var i = 0; i < total; i++) sumAmt += filtered[i].amount;
+    var totalPages = Math.max(1, Math.ceil(total / pageSize));
+    if (page >= totalPages) page = totalPages - 1;
+    if (page < 0) page = 0;
+
+    var start = page * pageSize;
+    var slice = filtered.slice(start, start + pageSize);
+
+    var tbody = document.getElementById('ck-tbody');
+    if (slice.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5" class="ck-table-empty">No transactions match the current filters.</td></tr>';
+    } else {
+      var html = '';
+      for (var j = 0; j < slice.length; j++) {
+        var r = slice[j];
+        var negCls = r.amount < 0 ? ' negative' : '';
+        html += '<tr>' +
+          '<td class="date col-date">' + escapeHtml(r.date) + '</td>' +
+          '<td class="vendor col-vendor">' + escapeHtml(r.vendor) + '</td>' +
+          '<td class="muted col-fund">' + escapeHtml(r.fund) + '</td>' +
+          '<td class="muted col-division">' + escapeHtml(displayDivision(r.division)) + '</td>' +
+          '<td class="numeric col-amount' + negCls + '">' + fmtMoney(r.amount) + '</td>' +
+          '</tr>';
+      }
+      tbody.innerHTML = html;
+    }
+
+    document.getElementById('pager-info').textContent = total > 0
+      ? 'Showing ' + (start + 1) + '–' + Math.min(start + pageSize, total) + ' of ' + total.toLocaleString() + ' txns · ' + fmtMoney(sumAmt, { compact: true }) + ' filtered total'
+      : 'No matches';
+    document.getElementById('page-prev').disabled = page === 0;
+    document.getElementById('page-next').disabled = page >= totalPages - 1;
+
+    // Filter summary status
+    var activeFilters = [];
+    if (document.getElementById('f-vendor').value.trim()) activeFilters.push('vendor');
+    if (document.getElementById('f-fund').value) activeFilters.push('fund');
+    if (document.getElementById('f-division').value) activeFilters.push('division');
+    if (document.getElementById('f-date-min').value || document.getElementById('f-date-max').value) activeFilters.push('date');
+    if (document.getElementById('f-amount-min').value) activeFilters.push('amount');
+    var statusEl = document.getElementById('filter-summary-status');
+    if (activeFilters.length === 0) statusEl.textContent = total.toLocaleString() + ' of ' + TOTAL_ROW_COUNT.toLocaleString() + ' txns';
+    else statusEl.textContent = total.toLocaleString() + ' of ' + TOTAL_ROW_COUNT.toLocaleString() + ' · ' + activeFilters.length + ' filter' + (activeFilters.length === 1 ? '' : 's');
+  }
+
+  // --- Wire up ---
+  function init() {
+    // Breakdown buttons
+    Array.prototype.forEach.call(document.querySelectorAll('.breakdown-btn'), function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.breakdown-btn').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        bvaBreakdown = btn.getAttribute('data-breakdown');
+        bvaPage = 0;
+        drillStack = [];
+        renderBva();
+      });
+    });
+
+    // Filter inputs
+    var dRender = debounce(function () { page = 0; renderTable(); }, 150);
+    ['f-vendor', 'f-fund', 'f-division', 'f-date-min', 'f-date-max', 'f-amount-min'].forEach(function (id) {
+      var el = document.getElementById(id);
+      el.addEventListener('input', dRender);
+      el.addEventListener('change', dRender);
+    });
+
+    document.getElementById('reset-filters').addEventListener('click', function () {
+      ['f-vendor', 'f-fund', 'f-division', 'f-date-min', 'f-date-max', 'f-amount-min'].forEach(function (id) {
+        document.getElementById(id).value = '';
+      });
+      page = 0; renderTable();
+    });
+
+    // Sort headers
+    document.querySelectorAll('th[data-col]').forEach(function (th) {
+      th.addEventListener('click', function () {
+        var col = th.getAttribute('data-col');
+        if (col === sortCol) sortDesc = !sortDesc;
+        else { sortCol = col; sortDesc = (col === 'amount' || col === 'date'); }
+        document.querySelectorAll('th[data-col]').forEach(function (h) {
+          h.classList.remove('sorted');
+          h.querySelector('.sa').innerHTML = '';
+        });
+        th.classList.add('sorted');
+        th.querySelector('.sa').innerHTML = sortDesc ? '&#9660;' : '&#9650;';
+        page = 0; renderTable();
+      });
+    });
+
+    // Pager
+    document.getElementById('page-prev').addEventListener('click', function () { page--; renderTable(); });
+    document.getElementById('page-next').addEventListener('click', function () { page++; renderTable(); });
+
+    // BVA row click -> expand/collapse / drill / pop / cta (event-delegated to survive re-renders)
+    document.getElementById('bva-chart').addEventListener('click', function (e) {
+      // Breadcrumb pop
+      var crumb = e.target.closest('[data-drill-pop]');
+      if (crumb) {
+        popDrillTo(parseInt(crumb.dataset.drillPop, 10));
+        return;
+      }
+      // Push a nested drill from a panel row
+      var pushRow = e.target.closest('[data-drill-push-dim]');
+      if (pushRow) {
+        pushDrill(pushRow.dataset.drillPushDim, pushRow.dataset.drillPushKey);
+        return;
+      }
+      // Monthly cadence click -> filter table
+      var monthRow = e.target.closest('.drill-month-row');
+      if (monthRow && monthRow.dataset.month) {
+        applyTableFilter({ dateRange: monthOf(monthRow.dataset.month) });
+        scrollToTable();
+        return;
+      }
+      // CTA "see N transactions" -> filter table
+      var cta = e.target.closest('[data-action="filter-fund"]');
+      if (cta) {
+        applyTableFilter({ fund: cta.dataset.fund });
+        scrollToTable();
+        return;
+      }
+      // Top-level BVA chart row click -> toggle root drill
+      var row = e.target.closest('.bva-row--drillable');
+      if (!row) return;
+      var key = row.dataset.drillKey;
+      var rootDim = currentRootDim();
+      var isOpenAtRoot = drillStack.length > 0 && drillStack[0].dim === rootDim && drillStack[0].key === key;
+      if (isOpenAtRoot) clearDrill();
+      else drillStack = [{ dim: rootDim, key: key }], renderBva();
+    });
+
+    // Performance panel click delegation (vendor, month, multifund)
+    document.body.addEventListener('click', function (e) {
+      var v = e.target.closest('[data-perf-vendor]');
+      if (v) {
+        applyTableFilter({ vendor: v.dataset.perfVendor });
+        scrollToTable();
+        return;
+      }
+      var m = e.target.closest('[data-perf-month]');
+      if (m) {
+        applyTableFilter({ dateRange: monthOf(m.dataset.perfMonth) });
+        scrollToTable();
+        return;
+      }
+    });
+  }
+
+  function monthOf(yyyymm) {
+    var parts = yyyymm.split('-');
+    var y = parseInt(parts[0], 10), mo = parseInt(parts[1], 10);
+    var start = parts[0] + '-' + ('0' + mo).slice(-2) + '-01';
+    var end = new Date(y, mo, 0); // day 0 of next month = last day of this month
+    var endStr = end.getFullYear() + '-' + ('0' + (end.getMonth() + 1)).slice(-2) + '-' + ('0' + end.getDate()).slice(-2);
+    return { min: start, max: endStr };
+  }
+
+  function applyTableFilter(opts) {
+    // Reset everything first; opts is the new filter
+    ['f-vendor', 'f-fund', 'f-division', 'f-date-min', 'f-date-max', 'f-amount-min'].forEach(function (id) {
+      document.getElementById(id).value = '';
+    });
+    if (opts.vendor) document.getElementById('f-vendor').value = opts.vendor;
+    if (opts.fund) {
+      var sel = document.getElementById('f-fund');
+      // Match either exact fund name or option text
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].value === opts.fund) { sel.selectedIndex = i; break; }
+      }
+    }
+    if (opts.division) {
+      var dsel = document.getElementById('f-division');
+      for (var j = 0; j < dsel.options.length; j++) {
+        if (dsel.options[j].value === opts.division) { dsel.selectedIndex = j; break; }
+      }
+    }
+    if (opts.dateRange) {
+      document.getElementById('f-date-min').value = opts.dateRange.min;
+      document.getElementById('f-date-max').value = opts.dateRange.max;
+    }
+    page = 0; renderTable();
+    // Ensure filter panel is open so the user sees what was applied
+    var det = document.getElementById('filter-details');
+    if (det) det.open = true;
+  }
+
+  function scrollToTable() {
+    var t = document.getElementById('ck-table');
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // --- Performance panels ---
+  function renderPerf(perf) {
+    // Over budget: only departments that have already exceeded their full revised budget
+    // by a meaningful dollar amount. Excludes enterprise funds (Light, etc.) whose budget
+    // is tracked outside the BUDGETED ANNUAL FUNDS envelope and so come through as pct=null.
+    var over = perf.budget_execution.by_department
+      .filter(function (r) { return r.pct !== null && r.pct >= 100 && r.delta > 25000; })
+      .slice(0, 5);
+    var overHost = document.getElementById('perf-over-list');
+    overHost.innerHTML = over.length === 0 ? '<p style="font-size:12.5px;color:var(--text-muted);margin:0;">No department has exceeded its full-year budget yet.</p>'
+      : over.map(function (r) {
+        var pctLabel = Math.round(r.pct) + '%';
+        return '<div class="perf-row">' +
+          '<span class="perf-row-mark"></span>' +
+          '<div class="perf-row-name">' + escapeHtml(titleCase(r.name)) + '</div>' +
+          '<div class="perf-row-val"><strong>+' + fmtMoney(r.delta, { compact: true }) +
+          '</strong><span class="over">' + pctLabel + '</span></div></div>';
+      }).join('');
+
+    // Vendor concentration: top 10 vendors with bar meters
+    var vc = perf.vendor_concentration;
+    var paretoEl = document.getElementById('perf-pareto');
+    paretoEl.innerHTML = 'Top 10 = <strong>' + vc.top_10_pct + '%</strong> &middot; ' +
+      'Top 20 = <strong>' + vc.top_20_pct + '%</strong> &middot; ' +
+      'Top 50 = <strong>' + vc.top_50_pct + '%</strong> of ' +
+      vc.total_vendors.toLocaleString() + ' total vendors';
+    var topVendors = vc.top_vendors.slice(0, 10);
+    var vMax = topVendors[0] ? topVendors[0].amount : 1;
+    var vList = document.getElementById('perf-vendor-list');
+    vList.innerHTML = topVendors.map(function (v) {
+      var pct = (v.amount / vMax) * 100;
+      var name = titleCase(v.name.replace(/\s+(INC|CORP|LLC|LLP|CO|CO\.)$/i, '').replace(/^MARBLEHEAD\s+/i, ''));
+      return '<div class="perf-meter perf-meter--click" data-perf-vendor="' + escapeHtml(v.name) + '" title="Click to filter table">' +
+        '<div class="perf-meter-name">' + escapeHtml(name) + '</div>' +
+        '<div class="perf-meter-bar"><div class="perf-meter-bar-fill" style="width:' + pct.toFixed(1) + '%"></div></div>' +
+        '<div class="perf-meter-val">' + fmtMoney(v.amount, { compact: true }) + '</div></div>';
+    }).join('');
+
+    // Multi-fund vendors
+    var mfHost = document.getElementById('perf-multifund-table');
+    if (perf.multifund_vendors && perf.multifund_vendors.length) {
+      var mfHtml = '<table class="multifund"><thead><tr><th>Vendor</th><th class="numeric">Funds</th><th class="numeric">Paid</th><th>Where</th></tr></thead><tbody>';
+      perf.multifund_vendors.slice(0, 10).forEach(function (v) {
+        var fundLabel = v.funds.slice(0, 3).map(function (f) {
+          return f.replace('GENERAL FUND - ', '').replace(' ENTERPRISE OPERATING', ' Ent').replace(' CAPITAL ARTICLES', ' Cap').replace(' REVOLVING FUND', ' Rev');
+        }).map(function (s) {
+          return s.charAt(0) + s.slice(1).toLowerCase();
+        }).join(', ');
+        if (v.funds.length > 3) fundLabel += ' + ' + (v.funds.length - 3) + ' more';
+        var name = titleCase(v.name.replace(/\s+(INC|CORP|LLC|LLP|CO|CO\.)$/i, ''));
+        mfHtml += '<tr class="multifund-row--click" data-perf-vendor="' + escapeHtml(v.name) + '" title="Click to filter table to this vendor"><td class="vendor-name">' + escapeHtml(name) + '</td>' +
+          '<td class="numeric">' + v.fund_count + '</td>' +
+          '<td class="numeric">' + fmtMoney(v.amount, { compact: true }) + '</td>' +
+          '<td class="funds-list">' + escapeHtml(fundLabel) + '</td></tr>';
+      });
+      mfHtml += '</tbody></table>';
+      mfHost.innerHTML = mfHtml;
+    } else {
+      mfHost.innerHTML = '<p style="font-size:12.5px;color:var(--text-muted);margin:0;">No vendors bill across 3 or more funds.</p>';
+    }
+
+    // Monthly cadence bar chart
+    var monthly = perf.monthly_cadence;
+    var mMax = monthly.reduce(function (acc, m) { return Math.max(acc, m.amount); }, 0);
+    var cadHost = document.getElementById('perf-cadence-chart');
+    var monthName = function (m) {
+      var parts = m.split('-');
+      var names = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      return names[parseInt(parts[1], 10)] + ' ' + parts[0].slice(2);
+    };
+    var cadHtml = '<div class="cadence">';
+    monthly.forEach(function (m) {
+      var pct = m.amount / mMax * 100;
+      cadHtml += '<div class="cadence-row cadence-row--click" data-perf-month="' + m.month + '" title="Click to filter table to ' + monthName(m.month) + '" role="button" tabindex="0">' +
+        '<div class="cadence-month">' + monthName(m.month) + '</div>' +
+        '<div class="cadence-bar-wrap"><div class="cadence-bar" style="width:' + pct.toFixed(1) + '%"></div></div>' +
+        '<div class="cadence-val">' + fmtMoney(m.amount, { compact: true }) + '</div>' +
+        '</div>';
+    });
+    cadHtml += '</div>';
+    cadHost.innerHTML = cadHtml;
+  }
+
+  // --- Load data ---
+  function loadAll() {
+    init();
+    Promise.all([
+      fetch(BUDGET_URL).then(function (r) { return r.json(); }),
+      fetch(CHECKBOOK_URL).then(function (r) { return r.text(); }),
+      fetch(PERF_URL).then(function (r) { return r.json(); }),
+      fetch(DRILL_URL).then(function (r) { return r.json(); }).catch(function () { return null; })
+    ]).then(function (results) {
+      budget = results[0];
+      perf = results[2];
+      drill = results[3];
+      var lines = parseCsv(results[1]);
+      var header = lines.shift();
+      var idx = {};
+      header.forEach(function (h, i) { idx[h.trim().toLowerCase()] = i; });
+      rows = [];
+      for (var k = 0; k < lines.length; k++) {
+        var row = lines[k];
+        if (row.length < 5) continue;
+        var amount = parseFloat(row[idx.amount]);
+        if (!Number.isFinite(amount)) continue;
+        rows.push({
+          vendor: (row[idx.vendor] || '').trim(),
+          fund: (row[idx.fund] || '').trim(),
+          division: (row[idx.division] || '').trim(),
+          date: (row[idx.date] || '').slice(0, 10),
+          amount: amount
+        });
+      }
+      // Populate fund + division dropdowns
+      var funds = {}, divs = {};
+      for (var m = 0; m < rows.length; m++) {
+        funds[rows[m].fund] = (funds[rows[m].fund] || 0) + 1;
+        divs[rows[m].division] = (divs[rows[m].division] || 0) + 1;
+      }
+      var fSel = document.getElementById('f-fund');
+      Object.keys(funds).sort().forEach(function (f) {
+        var o = document.createElement('option');
+        o.value = f; o.textContent = f + ' (' + funds[f] + ')';
+        fSel.appendChild(o);
+      });
+      var dSel = document.getElementById('f-division');
+      Object.keys(divs).sort().forEach(function (d) {
+        var o = document.createElement('option');
+        o.value = d; o.textContent = displayDivision(d) + ' (' + divs[d] + ')';
+        dSel.appendChild(o);
+      });
+      renderBva();
+      renderTable();
+      renderPerf(perf);
+    }).catch(function (err) {
+      console.error('Checkbook load failed:', err);
+      document.getElementById('ck-tbody').innerHTML =
+        '<tr><td colspan="5" class="ck-table-empty">Could not load transaction data. Try reloading the page.</td></tr>';
+      document.getElementById('bva-chart').innerHTML =
+        '<div class="ck-loading">Could not load budget data.</div>';
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadAll);
+  } else {
+    loadAll();
+  }
+})();
+</script>
