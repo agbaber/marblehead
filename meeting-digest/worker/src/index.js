@@ -5,6 +5,8 @@ import { runScheduled } from './scheduled.js';
 import { handleSubscribe } from './handlers/subscribe.js';
 import { handleConfirm } from './handlers/confirm.js';
 import { handleGetSubscription, handlePreferencesUpdate } from './handlers/preferences.js';
+import { handleUnsubscribe } from './handlers/unsubscribe.js';
+import { handleMailEvent } from './handlers/mail-event.js';
 
 function cors(env, origin) {
   return {
@@ -37,6 +39,14 @@ export default {
 
     if (url.pathname === '/api/preferences-update' && request.method === 'POST') {
       return handlePreferencesUpdate(request, env, corsHeaders);
+    }
+
+    if (url.pathname === '/api/unsubscribe' && (request.method === 'POST' || request.method === 'GET')) {
+      return handleUnsubscribe(request, env, corsHeaders);
+    }
+
+    if (url.pathname === '/api/mail-event' && request.method === 'POST') {
+      return handleMailEvent(request, env, corsHeaders);
     }
 
     return new Response('Not Found', { status: 404, headers: corsHeaders });

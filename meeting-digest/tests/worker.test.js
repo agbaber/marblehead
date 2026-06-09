@@ -209,3 +209,37 @@ describe('POST /api/preferences-update', () => {
     expect(r.status).toBe(400);
   });
 });
+
+describe('POST /api/unsubscribe', () => {
+  it('one-click unsubscribes via token', async () => {
+    const row = await confirmedSubscriber('bye@example.com');
+    const r = await SELF.fetch('https://worker/api/unsubscribe', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token: row.manage_token })
+    });
+    expect(r.status).toBe(200);
+    const after = await env.DB.prepare('SELECT status, unsubscribed_at FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(after.status).toBe('unsubscribed');
+    expect(after.unsubscribed_at).toBeGreaterThan(0);
+  });
+  it('also accepts GET via List-Unsubscribe header for one-click compliance', async () => {
+    const row = await confirmedSubscriber('byeget@example.com');
+    const r = await SELF.fetch(`https://worker/api/unsubscribe?token=${row.manage_token}`);
+    expect(r.status).toBe(200);
+  });
+});
+
+describe('POST /api/mail-event', () => {
+  it('marks bounced subscriber on hard bounce', async () => {
+    const row = await confirmedSubscriber('bounced@example.com');
+    await env.DB.prepare('INSERT INTO delivery_log (id, subscriber_id, sent_at, n_meetings, provider_message_id, status) VALUES (?, ?, ?, ?, ?, ?)')
+      .bind('dl1', row.id, Date.now(), 1, 'pmid-1', 'queued').run();
+    const r = await SELF.fetch('https://worker/api/mail-event', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'email.bounced', data: { email_id: 'pmid-1' } })
+    });
+    expect(r.status).toBe(200);
+    const after = await env.DB.prepare('SELECT status FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(after.status).toBe('bounced');
+  });
+});
