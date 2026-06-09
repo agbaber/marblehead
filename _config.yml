@@ -38,6 +38,10 @@ defaults:
       layout: chart
       community_pulse: off-sections
   - scope:
+      path: "marblehead-101"
+    values:
+      community_pulse: off-sections
+  - scope:
       path: ""
       type: transcripts
     values:

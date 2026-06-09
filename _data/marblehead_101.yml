@@ -1,0 +1,225 @@
+# Marblehead 101 — chapter list
+# Used by: marblehead-101/index.html, _layouts/m101.html
+# Schema: chapters is an ordered array; each chapter has:
+#   num: zero-padded string, used in URLs and as the big visual number
+#   slug: matches the chapter filename (without .html)
+#   title: shown in card, pager, sidebar, drawer, page <h1>
+#   part: "Government" | "Money" | "Participation" (used by the chip)
+#   read_time: integer minutes (rendered as "N min")
+#   dek: one-sentence answer the chapter argues for (rendered under <h1>)
+#   objectives: 3-4 bullets for the "What you'll know after this" box
+#   dig_ins: 2-3 dig-in cards. Each has:
+#     tag: "Tool" | "Chart" | "Data" | "Page"
+#     href: existing site URL
+#     title: card title
+#     desc: one-sentence description
+
+parts:
+  - id: i
+    roman: "Part I"
+    title: "How the town is structured"
+    desc: "Who actually runs what."
+    chapters: ["01", "02"]
+  - id: ii
+    roman: "Part II"
+    title: "Where the money flows"
+    desc: "$123M in, $123M out, plus the gap in the middle."
+    chapters: ["03", "04", "05", "06"]
+  - id: iii
+    roman: "Part III"
+    title: "How you take part"
+    desc: "From ballot to Town Meeting floor."
+    chapters: ["07", "08"]
+
+chapters:
+  - num: "01"
+    slug: "01-how-the-town-is-run"
+    title: "How the town is run"
+    part: "Government"
+    read_time: 3
+    dek: "Town Meeting is the legislature. The Select Board is the executive. There is no mayor."
+    objectives:
+      - "The 'town' form of MA government is Town Meeting plus Select Board, not mayor plus city council"
+      - "Town Meeting is the legislature; every registered voter can attend and vote on the floor"
+      - "The Select Board is the executive; the Town Administrator is hired, not elected"
+    dig_ins:
+      - tag: "Page"
+        href: "meetings.html"
+        title: "All public meetings"
+        desc: "Live and archived video from Select Board, School Committee, FinCom."
+      - tag: "Page"
+        href: "info-guides.html"
+        title: "Resident guides"
+        desc: "Plain-English explainers on each town body."
+      - tag: "Page"
+        href: "about.html"
+        title: "About this site"
+        desc: "How marbleheaddata.org is built, sourced, and maintained."
+
+  - num: "02"
+    slug: "02-town-side-school-side"
+    title: "Town side, school side"
+    part: "Government"
+    read_time: 4
+    dek: "Marblehead has two governments. They share a tax pot. They share almost nothing else."
+    objectives:
+      - "School Committee is a constitutionally separate elected body (MGL c.71)"
+      - "Town side: Select Board sets non-school policy and approves department budgets"
+      - "FinCom is a 9-member appointed body that reviews everything before Town Meeting votes"
+    dig_ins:
+      - tag: "Page"
+        href: "town-school-admin.html"
+        title: "Why two sets of departments?"
+        desc: "The legal reason town and schools run parallel admin operations."
+      - tag: "Data"
+        href: "marblehead-voting-record.html"
+        title: "How members voted"
+        desc: "Voting record of current Select Board and School Committee."
+      - tag: "Page"
+        href: "topics/admin-housekeeping.html"
+        title: "Town administration topics"
+        desc: "Recent meeting transcripts touching admin and personnel."
+
+  - num: "03"
+    slug: "03-where-money-comes-from"
+    title: "Where the money comes from"
+    part: "Money"
+    read_time: 4
+    dek: "Most of what the town spends is paid by you, on the house you live in."
+    objectives:
+      - "Massachusetts towns get property tax, state aid, and local fees, almost nothing else"
+      - "Proposition 2½ caps the property-tax pot at 2.5% annual growth plus new construction"
+      - "State aid is small for wealthy towns; Marblehead included"
+    dig_ins:
+      - tag: "Chart"
+        href: "cap-vs-cost.html"
+        title: "Cap vs. cost over 20 years"
+        desc: "Capped revenue against uncapped spending pressure."
+      - tag: "Tool"
+        href: "your-true-cost.html"
+        title: "Your tax bill, line by line"
+        desc: "Calculator for a specific home value, with override scenarios."
+      - tag: "Chart"
+        href: "charts/per_capita_levy.html"
+        title: "Per-capita levy comparison"
+        desc: "How Marblehead's tax burden compares across MA towns."
+
+  - num: "04"
+    slug: "04-where-money-goes"
+    title: "Where the money goes"
+    part: "Money"
+    read_time: 4
+    dek: "Schools, public safety, public works, benefits, debt, all sized to scale."
+    objectives:
+      - "Schools are the largest single bucket of town spending"
+      - "Fixed costs (insurance, pensions, OPEB, debt) are a growing share of the rest"
+      - "Capital is separate from operating; capital is one-time, often debt-funded"
+    dig_ins:
+      - tag: "Tool"
+        href: "town-budget.html"
+        title: "Town budget explorer"
+        desc: "Every line item in the FY27 budget, filterable and sortable."
+      - tag: "Chart"
+        href: "where-has-the-money-gone.html"
+        title: "Where the money has gone"
+        desc: "Spending trends by category over the past decade."
+      - tag: "Chart"
+        href: "charts/budget_flow.html"
+        title: "Budget flow diagram"
+        desc: "Visual of revenue sources mapping to spending categories."
+
+  - num: "05"
+    slug: "05-how-the-budget-gets-made"
+    title: "How the budget gets made"
+    part: "Money"
+    read_time: 3
+    dek: "August requests, winter hearings, a May vote, and where the public can speak."
+    objectives:
+      - "Department requests start in August; FinCom hearings run through winter; Town Meeting votes in May"
+      - "The FinCom report (April) is the most consequential public document of the cycle"
+      - "Town Meeting can cut but cannot reallocate within the school bottom line"
+    dig_ins:
+      - tag: "Page"
+        href: "meetings.html"
+        title: "Live and archived meetings"
+        desc: "Watch FinCom and Select Board work the budget."
+      - tag: "Page"
+        href: "info-guides.html"
+        title: "Resident guides"
+        desc: "When and how to participate in the cycle."
+      - tag: "Page"
+        href: "topics/public-comment.html"
+        title: "Public comment moments"
+        desc: "Meeting transcripts where residents spoke."
+
+  - num: "06"
+    slug: "06-why-the-gap-keeps-coming-back"
+    title: "Why the gap keeps coming back"
+    part: "Money"
+    read_time: 3
+    dek: "2.5% capped revenue meets 5-9% uncapped costs. The gap compounds."
+    objectives:
+      - "Capped revenue grows 2.5% per year; uncapped costs grow 5-9%"
+      - "The gap compounds; reserves close it for a while, then run out"
+      - "'Structural' means the gap is built into the math, not caused by mismanagement"
+    dig_ins:
+      - tag: "Page"
+        href: "how-we-got-here.html"
+        title: "How we got here"
+        desc: "20 years of revenue-vs-cost trends in narrative form."
+      - tag: "Chart"
+        href: "charts/sustainability.html"
+        title: "Sustainability chart"
+        desc: "Visualization of structural pressure on the budget."
+      - tag: "Chart"
+        href: "charts/deficit_model.html"
+        title: "Deficit model"
+        desc: "Interactive multi-year projection of the gap."
+
+  - num: "07"
+    slug: "07-overrides"
+    title: "Overrides and debt exclusions"
+    part: "Participation"
+    read_time: 4
+    dek: "The tools, the difference, and what your ballot vote actually changes."
+    objectives:
+      - "An override permanently raises the property-tax pot"
+      - "A debt exclusion temporarily raises the levy for one specific bond"
+      - "Both require a separate ballot vote; Town Meeting cannot pass either"
+    dig_ins:
+      - tag: "Page"
+        href: "what-is-the-override.html"
+        title: "What an override actually is"
+        desc: "The legal mechanism in plain English."
+      - tag: "Chart"
+        href: "charts/override_history.html"
+        title: "Marblehead override history"
+        desc: "Every override vote since Proposition 2½ took effect."
+      - tag: "Chart"
+        href: "charts/override_landscape.html"
+        title: "Statewide override landscape"
+        desc: "How Marblehead's override pattern compares to other MA towns."
+
+  - num: "08"
+    slug: "08-how-to-take-part"
+    title: "How to take part"
+    part: "Participation"
+    read_time: 3
+    dek: "Town Meeting floor, FinCom hearings, public comment, where to find the docs."
+    objectives:
+      - "Show up to Town Meeting in May; bring an ID; you can speak and vote on every article"
+      - "Watch or attend FinCom and Select Board meetings; MHTV streams everything"
+      - "Run for office: no party affiliation, nomination papers in early spring"
+    dig_ins:
+      - tag: "Page"
+        href: "what-you-can-do.html"
+        title: "What you can do"
+        desc: "Concrete actions a resident can take this month."
+      - tag: "Page"
+        href: "info-guides.html"
+        title: "Resident guides"
+        desc: "How to file an article, contact a body, read the FinCom report."
+      - tag: "Page"
+        href: "meetings.html"
+        title: "All public meetings"
+        desc: "Calendar and archive of every public meeting."
