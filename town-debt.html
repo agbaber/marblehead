@@ -1,6 +1,7 @@
 ---
 title: "How has Marblehead managed its debt?"
 scripts: [citations]
+community_pulse: off-sections
 og_title: "How has Marblehead managed its debt?"
 og_description: "Marblehead owes $116.5M as of June 2024. Voters approved every dollar of it, one project at a time. Here is what we owe, when it gets paid off, how it compares to home values and income, and how it relates (and doesn't) to the operating override on the June 2026 ballot."
 og_url: https://marbleheaddata.org/town-debt.html
@@ -59,6 +60,32 @@ og_url: https://marbleheaddata.org/town-debt.html
   .project-cats th, .project-cats td { padding: 8px 10px; border-bottom: 1px solid color-mix(in srgb, var(--text-subtle) 30%, transparent); text-align: left; vertical-align: top; }
   .project-cats th { font-weight: 600; color: var(--text-muted); font-size: 13px; }
   .project-cats td.count { text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* Page-scoped: secondary expandables (mid-section detail tables).
+     Visually quieter than the body, with a caret on the summary.
+     Distinct from `.notes` so the auto-injected Sources block from
+     citations.js lands above the bottom methodology block, not above
+     these. */
+  details.more-detail { margin: 4px 0 16px; }
+  details.more-detail > summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-mid);
+    padding: 4px 0;
+  }
+  details.more-detail > summary::-webkit-details-marker { display: none; }
+  details.more-detail > summary::before {
+    content: "\25B8";
+    display: inline-block;
+    margin-right: 6px;
+    transition: transform 0.15s ease;
+  }
+  details.more-detail[open] > summary::before { transform: rotate(90deg); }
+  details.more-detail[open] > summary { padding-bottom: 8px; }
 </style>
 <h1>How has Marblehead managed its debt?</h1>
 
@@ -103,7 +130,7 @@ og_url: https://marbleheaddata.org/town-debt.html
 
 <p>Marblehead has had 51 of them on the ballot since 1988. Voters approved 50. Most were for school buildings (21 of the 51). The rest paid for storm drains, the transfer station, fire trucks, seawalls, Fort Sewall, Council on Aging, the Abbot Library renovation, and similar town capital projects. The lone rejection was a 2002 question on repairs to Tucker's Wharf; it has not been put back on the ballot since.</p>
 
-<details class="notes" style="margin-top: 4px;">
+<details class="more-detail" style="margin-top: 4px;">
   <summary>All 51 votes, grouped</summary>
   <table class="project-cats">
     <thead>
@@ -218,28 +245,25 @@ og_url: https://marbleheaddata.org/town-debt.html
 
 <p>That assumes voters do not approve more borrowing between now and then. When they do (and they have approved $12 million more borrowing that the town has not yet issued bonds for, the biggest piece being road and sidewalk work), the new payments get added on top of this schedule.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf" data-source="FY24 Town of Marblehead ACFR, authorized and unissued debt schedule (page 59). Total $12.23M: roads/sidewalks $8.98M, Gerry School $1.62M, water $1.02M, Mary Alley roof $480K, Franklin Street Fire Station roof $131K."></sup></p>
 
-<details class="notes" style="margin-top: 4px;">
-  <summary>Year-by-year payoff schedule (the table from the audited report)</summary>
-  <table class="schedule-table">
-    <thead>
-      <tr><th>Fiscal year</th><th>Principal</th><th>Interest</th><th>Total</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>FY25</td><td>$7,540,000</td><td>$3,453,080</td><td>$10,993,080</td></tr>
-      <tr><td>FY26</td><td>$5,955,000</td><td>$3,162,146</td><td>$9,117,146</td></tr>
-      <tr><td>FY27</td><td>$6,225,000</td><td>$2,889,104</td><td>$9,114,104</td></tr>
-      <tr><td>FY28</td><td>$6,500,000</td><td>$2,607,573</td><td>$9,107,573</td></tr>
-      <tr><td>FY29</td><td>$6,720,000</td><td>$2,316,691</td><td>$9,036,691</td></tr>
-      <tr><td>FY30&ndash;FY34 (5-year avg)</td><td>$6,801,000</td><td>$1,500,316</td><td>$8,301,316</td></tr>
-      <tr><td>FY35&ndash;FY39 (5-year avg)</td><td>$4,962,000</td><td>$543,312</td><td>$5,505,312</td></tr>
-      <tr><td>FY40&ndash;FY44 (5-year avg)</td><td>$1,862,000</td><td>$71,205</td><td>$1,933,205</td></tr>
-    </tbody>
-    <tfoot>
-      <tr><td>Total of all 20 years</td><td>$101,065,000</td><td>$25,002,755</td><td>$126,067,755</td></tr>
-    </tfoot>
-  </table>
-  <p class="caption">Governmental general-obligation bonds only. The audited report shows FY30&ndash;FY44 as three five-year blocks; the blocks are shown above as per-year averages so the numbers are comparable to the FY25&ndash;FY29 rows. Source: FY24 ACFR, page 61.</p>
-</details>
+<table class="schedule-table">
+  <thead>
+    <tr><th>Fiscal year</th><th>Principal</th><th>Interest</th><th>Total</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>FY25</td><td>$7,540,000</td><td>$3,453,080</td><td>$10,993,080</td></tr>
+    <tr><td>FY26</td><td>$5,955,000</td><td>$3,162,146</td><td>$9,117,146</td></tr>
+    <tr><td>FY27</td><td>$6,225,000</td><td>$2,889,104</td><td>$9,114,104</td></tr>
+    <tr><td>FY28</td><td>$6,500,000</td><td>$2,607,573</td><td>$9,107,573</td></tr>
+    <tr><td>FY29</td><td>$6,720,000</td><td>$2,316,691</td><td>$9,036,691</td></tr>
+    <tr><td>FY30&ndash;FY34 (5-year avg)</td><td>$6,801,000</td><td>$1,500,316</td><td>$8,301,316</td></tr>
+    <tr><td>FY35&ndash;FY39 (5-year avg)</td><td>$4,962,000</td><td>$543,312</td><td>$5,505,312</td></tr>
+    <tr><td>FY40&ndash;FY44 (5-year avg)</td><td>$1,862,000</td><td>$71,205</td><td>$1,933,205</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Total of all 20 years</td><td>$101,065,000</td><td>$25,002,755</td><td>$126,067,755</td></tr>
+  </tfoot>
+</table>
+<p class="caption">Governmental general-obligation bonds only. The audited report shows FY30&ndash;FY44 as three five-year blocks; those blocks are shown here as per-year averages so the numbers are comparable to the FY25&ndash;FY29 rows. Source: FY24 ACFR, page 61.</p>
 
 <h2 id="how-performed" data-stance-section="how-performed">How the debt has performed</h2>
 
@@ -256,7 +280,7 @@ og_url: https://marbleheaddata.org/town-debt.html
 
 <p>State law also caps how much a town can borrow at 5% of its equalized property value. For Marblehead at the end of FY24 that ceiling was about $475 million. The town was using about <strong>12%</strong> of it. A decade earlier the town was at 31% of the ceiling, so the headroom has more than doubled.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf" data-source="FY24 Town of Marblehead ACFR, Computation of Legal Debt Margin (page 123)"></sup></p>
 
-<details class="notes" style="margin-top: 4px;">
+<details class="more-detail" style="margin-top: 4px;">
   <summary>Year-by-year ratios, and a note on interest rates</summary>
   <table class="ratio-table">
     <thead>
