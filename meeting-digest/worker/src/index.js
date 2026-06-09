@@ -4,6 +4,7 @@
 import { runScheduled } from './scheduled.js';
 import { handleSubscribe } from './handlers/subscribe.js';
 import { handleConfirm } from './handlers/confirm.js';
+import { handleGetSubscription, handlePreferencesUpdate } from './handlers/preferences.js';
 
 function cors(env, origin) {
   return {
@@ -28,6 +29,14 @@ export default {
 
     if (url.pathname === '/api/subscribe-confirm' && request.method === 'GET') {
       return handleConfirm(request, env, corsHeaders);
+    }
+
+    if (url.pathname === '/api/me/subscription' && request.method === 'GET') {
+      return handleGetSubscription(request, env, corsHeaders);
+    }
+
+    if (url.pathname === '/api/preferences-update' && request.method === 'POST') {
+      return handlePreferencesUpdate(request, env, corsHeaders);
     }
 
     return new Response('Not Found', { status: 404, headers: corsHeaders });

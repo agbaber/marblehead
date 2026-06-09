@@ -136,3 +136,76 @@ describe('GET /api/subscribe-confirm', () => {
     expect(r.status).toBe(404);
   });
 });
+
+async function confirmedSubscriber(email, overrides = {}) {
+  await SELF.fetch('https://worker/api/subscribe', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, turnstileToken: 'TEST-OK' })
+  });
+  const row = await env.DB.prepare('SELECT * FROM subscriber WHERE email = ?').bind(email).first();
+  await env.DB.prepare(`UPDATE subscriber SET status='confirmed', confirmation_token=NULL, confirmation_expires=NULL, confirmed_at=? WHERE id=?`)
+    .bind(Date.now(), row.id).run();
+  if (overrides.boards || overrides.topics) {
+    await env.DB.prepare('UPDATE subscriber SET boards=?, topics=? WHERE id=?')
+      .bind(JSON.stringify(overrides.boards || []), JSON.stringify(overrides.topics || []), row.id).run();
+  }
+  return env.DB.prepare('SELECT * FROM subscriber WHERE id = ?').bind(row.id).first();
+}
+
+describe('GET /api/me/subscription', () => {
+  it("returns the subscriber's preferences and available options", async () => {
+    const row = await confirmedSubscriber('me@example.com');
+    const r = await SELF.fetch(`https://worker/api/me/subscription?token=${row.manage_token}`);
+    expect(r.status).toBe(200);
+    const data = await r.json();
+    expect(data.email).toBe('me@example.com');
+    expect(data.boards).toEqual(['select-board', 'school-committee', 'finance-committee']);
+    expect(data.topics).toEqual([]);
+    expect(data.available.boards.length).toBe(5);
+    const topicSlugs = data.available.topics.map(t => t.slug);
+    expect(topicSlugs).not.toContain('admin-housekeeping');
+    expect(topicSlugs).not.toContain('public-comment');
+  });
+  it('404s on unknown token', async () => {
+    const r = await SELF.fetch(`https://worker/api/me/subscription?token=bogus`);
+    expect(r.status).toBe(404);
+  });
+});
+
+describe('POST /api/preferences-update', () => {
+  it('updates boards and topics', async () => {
+    const row = await confirmedSubscriber('pref@example.com');
+    const r = await SELF.fetch('https://worker/api/preferences-update', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token: row.manage_token, boards: ['select-board'], topics: ['override'] })
+    });
+    expect(r.status).toBe(200);
+    const after = await env.DB.prepare('SELECT boards, topics FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(JSON.parse(after.boards)).toEqual(['select-board']);
+    expect(JSON.parse(after.topics)).toEqual(['override']);
+  });
+  it('rejects empty boards AND empty topics', async () => {
+    const row = await confirmedSubscriber('empty@example.com');
+    const r = await SELF.fetch('https://worker/api/preferences-update', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token: row.manage_token, boards: [], topics: [] })
+    });
+    expect(r.status).toBe(400);
+  });
+  it('rejects unknown board / topic slugs', async () => {
+    const row = await confirmedSubscriber('bad@example.com');
+    const r = await SELF.fetch('https://worker/api/preferences-update', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token: row.manage_token, boards: ['not-a-board'], topics: [] })
+    });
+    expect(r.status).toBe(400);
+  });
+  it('rejects subscribable=false topics (admin-housekeeping, public-comment)', async () => {
+    const row = await confirmedSubscriber('noisy@example.com');
+    const r = await SELF.fetch('https://worker/api/preferences-update', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token: row.manage_token, boards: ['select-board'], topics: ['admin-housekeeping'] })
+    });
+    expect(r.status).toBe(400);
+  });
+});
