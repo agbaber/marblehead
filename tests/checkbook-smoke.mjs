@@ -132,6 +132,32 @@ async function run() {
       await page.waitForTimeout(150);
     } catch (e) { fail('drill-cta', e.message); }
 
+    // 6g. Nested drill: click a category inside Fund drill -> breadcrumb appears + new sub-panels
+    try {
+      // Ensure we're at a clean by_fund root, collapsed
+      await page.click('.breakdown-btn[data-breakdown="by_department"]');
+      await page.waitForTimeout(150);
+      await page.click('.breakdown-btn[data-breakdown="by_fund"]');
+      await page.waitForTimeout(150);
+      await page.locator('.bva-row--drillable').first().click();
+      await page.waitForSelector('.drill-bar-row--click', { state: 'attached', timeout: 3000 });
+      const before = await page.locator('.drill-crumbs').count();
+      if (before !== 0) throw new Error('breadcrumb showed at root, expected none');
+      // Click the first drillable nested row
+      await page.locator('.drill-bar-row--click').first().click();
+      await page.waitForSelector('.drill-crumbs', { state: 'visible', timeout: 3000 });
+      const crumbCount = await page.locator('.drill-crumb').count();
+      if (crumbCount < 2) throw new Error('only ' + crumbCount + ' breadcrumb entries');
+      const cur = await page.locator('.drill-crumb--current').innerText();
+      ok('nested drill (' + crumbCount + '-crumb path; current=' + cur.replace(/\s+/g, ' ').slice(0, 40) + ')');
+      // Pop back to root
+      await page.locator('.drill-crumb-btn').first().click();
+      await page.waitForTimeout(200);
+      const after = await page.locator('.drill-crumbs').count();
+      if (after !== 0) throw new Error('breadcrumb still visible after pop');
+      ok('breadcrumb pop returns to root');
+    } catch (e) { fail('nested-drill', e.message); }
+
     // 6e. Click top vendor card row -> sets vendor filter
     try {
       await page.locator('[data-perf-vendor]').first().click();

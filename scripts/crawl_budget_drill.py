@@ -62,20 +62,31 @@ def main():
         'envelope_totals': b['totals']['budgeted_annual'],
         'by_fund': {},
         'by_department': {},
+        'by_category': {},
+        'by_division': {},
     }
 
     DIMS_FROM_FUND = [
         ('by_department', 'org3'),
         ('by_category',   'org5'),
-        ('by_object',     'org6'),
     ]
     DIMS_FROM_DEPT = [
         ('by_category',   'org5'),
-        ('by_object',     'org6'),
         ('by_division',   'org4'),
     ]
+    DIMS_FROM_CATEGORY = [
+        ('by_fund',       'org2'),
+        ('by_department', 'org3'),
+    ]
+    DIMS_FROM_DIVISION = [
+        ('by_fund',       'org2'),
+        ('by_department', 'org3'),
+    ]
 
-    total_calls = len(b['by_fund']) * len(DIMS_FROM_FUND) + len(b['by_department']) * len(DIMS_FROM_DEPT)
+    total_calls = (len(b['by_fund'])       * len(DIMS_FROM_FUND) +
+                   len(b['by_department']) * len(DIMS_FROM_DEPT) +
+                   len(b['by_category'])   * len(DIMS_FROM_CATEGORY) +
+                   len(b['by_division'])   * len(DIMS_FROM_DIVISION))
     done = 0
     print(f'Will make {total_calls} API calls. ETA ~{total_calls * 0.4:.0f}s.')
 
@@ -121,12 +132,55 @@ def main():
                 print(f'  {done}/{total_calls} ...')
             time.sleep(0.25)
 
+    for cat in b['by_category']:
+        name = cat['name']
+        drill['by_category'][name] = {
+            'rollup': {
+                'revised_budget': cat['revised_budget'],
+                'actual': cat['actual'],
+                'original_budget': cat['original_budget'],
+            },
+        }
+        for dim, child in DIMS_FROM_CATEGORY:
+            try:
+                data = fetch(child, {'org1': ENVELOPE, 'org5': name})
+                drill['by_category'][name][dim] = norm(data.get('entities', []))
+            except Exception as e:
+                print(f'  ERR cat={name} dim={dim}: {e}', file=sys.stderr)
+                drill['by_category'][name][dim] = []
+            done += 1
+            if done % 10 == 0:
+                print(f'  {done}/{total_calls} ...')
+            time.sleep(0.25)
+
+    for div in b['by_division']:
+        name = div['name']
+        drill['by_division'][name] = {
+            'rollup': {
+                'revised_budget': div['revised_budget'],
+                'actual': div['actual'],
+                'original_budget': div['original_budget'],
+            },
+        }
+        for dim, child in DIMS_FROM_DIVISION:
+            try:
+                data = fetch(child, {'org1': ENVELOPE, 'org4': name})
+                drill['by_division'][name][dim] = norm(data.get('entities', []))
+            except Exception as e:
+                print(f'  ERR div={name} dim={dim}: {e}', file=sys.stderr)
+                drill['by_division'][name][dim] = []
+            done += 1
+            if done % 10 == 0:
+                print(f'  {done}/{total_calls} ...')
+            time.sleep(0.25)
+
     out = 'data/budget_drill_FY26.json'
     with open(out, 'w') as f:
         json.dump(drill, f, indent=1)
     size_kb = os.path.getsize(out) / 1024
     print(f'\nWrote {out} ({size_kb:.0f} KB)')
-    print(f'  {len(drill["by_fund"])} funds, {len(drill["by_department"])} departments')
+    print(f'  {len(drill["by_fund"])} funds, {len(drill["by_department"])} departments, '
+          f'{len(drill["by_category"])} categories, {len(drill["by_division"])} divisions')
 
 if __name__ == '__main__':
     main()

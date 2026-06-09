@@ -420,15 +420,22 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
     font-size: 10px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.7px; color: var(--text-subtle); margin-bottom: 10px;
   }
-  .drill-bars { display: flex; flex-direction: column; gap: 6px; }
+  .drill-bars { display: flex; flex-direction: column; gap: 2px; }
   .drill-bar-row {
     display: grid; grid-template-columns: 1fr 90px 80px; gap: 8px;
     align-items: center; font-size: 12px;
+    padding: 4px 6px; border-radius: var(--radius-sm);
+    margin: 0 -6px;
+    transition: background 0.12s;
   }
+  .drill-bar-row--click { cursor: pointer; }
+  .drill-bar-row--click:hover { background: color-mix(in srgb, var(--c-teal) 7%, transparent); }
+  .drill-bar-row--click:hover .drill-bar-caret { color: var(--c-teal); }
   .drill-bar-name {
     color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     font-weight: 500;
   }
+  .drill-bar-caret { color: var(--text-subtle); font-size: 13px; font-weight: 400; margin-left: 2px; transition: color 0.12s; }
   .drill-bar-track {
     position: relative; height: 10px;
     background: color-mix(in srgb, var(--c-navy) 5%, transparent);
@@ -461,6 +468,34 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   .drill-empty { color: var(--text-subtle); font-size: 12px; margin: 0; }
   .drill-cta { margin-top: 4px; }
   .drill-cta--span { grid-column: 1 / -1; }
+
+  /* Breadcrumb */
+  .drill-crumbs {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 2px;
+    margin: 0 0 4px; font-size: 11.5px; color: var(--text-muted);
+    padding: 0;
+  }
+  .drill-crumb {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 4px 9px; border-radius: 999px;
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text-muted); font-weight: 500;
+  }
+  .drill-crumb-dim {
+    font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--text-subtle);
+  }
+  .drill-crumb-btn {
+    cursor: pointer; transition: background 0.12s, color 0.12s, border-color 0.12s;
+    font: inherit;
+  }
+  .drill-crumb-btn:hover { background: color-mix(in srgb, var(--c-teal) 10%, var(--surface)); color: var(--text); border-color: var(--c-teal); }
+  .drill-crumb--current {
+    background: var(--c-navy); color: #fff; border-color: var(--c-navy);
+  }
+  .drill-crumb--current .drill-crumb-dim { color: color-mix(in srgb, #fff 60%, transparent); }
+  html[data-theme="dark"] .drill-crumb--current { background: var(--c-teal); border-color: var(--c-teal); }
+  .drill-crumb-sep { color: var(--text-subtle); font-size: 13px; padding: 0 2px; }
   .drill-cta-btn {
     width: 100%; padding: 10px 14px;
     background: var(--c-navy); color: #fff;
@@ -745,8 +780,26 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   var pageSize = 50;
 
   // --- Drill helpers ---
+  // Dimensions visible inside each level's expand panel
+  var SUB_DIMS = {
+    fund:       ['by_department', 'by_category'],
+    department: ['by_category', 'by_division'],
+    category:   ['by_fund', 'by_department'],
+    division:   ['by_fund', 'by_department'],
+  };
+  var DIM_LABEL = { fund: 'fund', department: 'department', category: 'category', division: 'division' };
+
+  function drillDataFor(dim, key) {
+    var bag = drill && drill['by_' + dim];
+    return (bag && bag[key]) || null;
+  }
+  function hasDrill(dim, key) {
+    return !!drillDataFor(dim, key);
+  }
+
   function renderMiniBars(items, opts) {
     if (!items || items.length === 0) return '<p class="drill-empty">No data.</p>';
+    opts = opts || {};
     var top = items.slice(0, opts.limit || 6);
     var max = 0;
     top.forEach(function (r) {
@@ -759,6 +812,7 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
       var a = r.actual;
       var amt = r.amount;
       var name = titleCase(r.name);
+      if (opts.targetDim === 'division' && r.name === 'UNDEFINED') name = 'School (not broken out)';
       var primary = (amt !== undefined) ? amt : a;
       var secondary = (amt !== undefined) ? null : b;
       var primaryPct = Math.min(100, Math.max(0, (Math.abs(primary || 0) / max) * 100));
@@ -770,8 +824,14 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
       } else {
         rhs = '<strong>' + fmtMoney(a, { compact: true }) + '</strong><span class="dm">' + (pct || '—') + '</span>';
       }
-      return '<div class="drill-bar-row">' +
-        '<div class="drill-bar-name" title="' + escapeHtml(r.name) + '">' + escapeHtml(name) + '</div>' +
+      var drillable = opts.targetDim && hasDrill(opts.targetDim, r.name);
+      var rowClass = 'drill-bar-row' + (drillable ? ' drill-bar-row--click' : '');
+      var attrs = drillable
+        ? ' data-drill-push-dim="' + opts.targetDim + '" data-drill-push-key="' + escapeHtml(r.name) + '"'
+        : '';
+      return '<div class="' + rowClass + '"' + attrs + '>' +
+        '<div class="drill-bar-name" title="' + escapeHtml(r.name) + (drillable ? ' (click to drill in)' : '') + '">' + escapeHtml(name) +
+        (drillable ? ' <span class="drill-bar-caret">›</span>' : '') + '</div>' +
         '<div class="drill-bar-track">' +
           (secondary !== null ? '<div class="drill-bar drill-bar--secondary" style="width:' + secondaryPct.toFixed(1) + '%"></div>' : '') +
           '<div class="drill-bar drill-bar--primary" style="width:' + primaryPct.toFixed(1) + '%"></div>' +
@@ -781,81 +841,88 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
     }).join('') + '</div>';
   }
 
-  function renderBvaExpand(key) {
-    var dd = bvaBreakdown === 'by_fund' ? (drill && drill.by_fund && drill.by_fund[key]) :
-             bvaBreakdown === 'by_department' ? (drill && drill.by_department && drill.by_department[key]) : null;
-    if (!dd) return '<div class="bva-expand"><p class="drill-empty">No drill data available.</p></div>';
+  function dimDisplay(entry) {
+    var key = entry.key;
+    if (entry.dim === 'division' && key === 'UNDEFINED') return 'School (not broken out)';
+    return titleCase(key);
+  }
 
-    // Checkbook vendor + monthly for this slice (only when by_fund — checkbook has Fund, not Department)
-    var ckVendors = null, ckMonthly = null, ckCount = null, ckTotal = null;
-    if (bvaBreakdown === 'by_fund' && perf && perf.drill && perf.drill.by_fund && perf.drill.by_fund[key]) {
-      var pd = perf.drill.by_fund[key];
-      ckVendors = pd.top_vendors;
-      ckMonthly = pd.monthly;
-      ckTotal = ckMonthly.reduce(function (s, m) { return s + m.amount; }, 0);
-      ckCount = ckMonthly.reduce(function (s, m) { return s + m.count; }, 0);
-    }
+  function renderBvaExpand(stack) {
+    if (!stack || stack.length === 0) return '';
+    var current = stack[stack.length - 1];
+    var dd = drillDataFor(current.dim, current.key);
+    if (!dd) return '<div class="bva-expand"><p class="drill-empty">No drill data for ' + escapeHtml(current.key) + '.</p></div>';
 
     var html = '<div class="bva-expand">';
-    // Departments (only for by_fund)
-    if (bvaBreakdown === 'by_fund' && dd.by_department && dd.by_department.length) {
-      html += '<div class="drill-card">' +
-        '<div class="drill-card-title">By department</div>' +
-        renderMiniBars(dd.by_department, { limit: 8 }) +
-      '</div>';
-    }
-    // Categories
-    if (dd.by_category && dd.by_category.length) {
-      html += '<div class="drill-card">' +
-        '<div class="drill-card-title">By category</div>' +
-        renderMiniBars(dd.by_category, { limit: 7 }) +
-      '</div>';
-    }
-    // Divisions (only for by_department)
-    if (bvaBreakdown === 'by_department' && dd.by_division && dd.by_division.length) {
-      html += '<div class="drill-card">' +
-        '<div class="drill-card-title">By division</div>' +
-        renderMiniBars(dd.by_division, { limit: 7 }) +
-      '</div>';
-    }
-    // Top vendors (checkbook side, only when by_fund)
-    if (ckVendors && ckVendors.length) {
-      html += '<div class="drill-card">' +
-        '<div class="drill-card-title">Top vendors paid (from checkbook)</div>' +
-        renderMiniBars(ckVendors, { limit: 6 }) +
-      '</div>';
-    }
-    // Monthly cadence (checkbook side)
-    if (ckMonthly && ckMonthly.length) {
-      var mMax = ckMonthly.reduce(function (s, m) { return Math.max(s, m.amount); }, 0) || 1;
-      var monthName = function (m) {
-        var p = m.split('-');
-        var names = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        return names[parseInt(p[1], 10)] + " '" + p[0].slice(2);
-      };
-      var monthsHtml = '<div class="drill-months">';
-      ckMonthly.forEach(function (m) {
-        var pct = m.amount / mMax * 100;
-        monthsHtml += '<div class="drill-month-row" data-month="' + m.month + '" title="Click to filter table to this month">' +
-          '<div class="drill-month-name">' + monthName(m.month) + '</div>' +
-          '<div class="drill-month-bar-wrap"><div class="drill-month-bar" style="width:' + pct.toFixed(1) + '%"></div></div>' +
-          '<div class="drill-month-val">' + fmtMoney(m.amount, { compact: true }) + '</div>' +
-        '</div>';
+
+    // Breadcrumb (only when nested beyond root)
+    if (stack.length > 1) {
+      html += '<div class="drill-crumbs drill-cta--span">';
+      stack.forEach(function (entry, i) {
+        var isLast = (i === stack.length - 1);
+        var label = dimDisplay(entry);
+        var dimLabel = '<span class="drill-crumb-dim">' + DIM_LABEL[entry.dim] + ':</span> ';
+        if (isLast) {
+          html += '<span class="drill-crumb drill-crumb--current">' + dimLabel + escapeHtml(label) + '</span>';
+        } else {
+          html += '<button type="button" class="drill-crumb drill-crumb-btn" data-drill-pop="' + (i + 1) + '">' + dimLabel + escapeHtml(label) + '</button>';
+          html += '<span class="drill-crumb-sep">&rsaquo;</span>';
+        }
       });
-      monthsHtml += '</div>';
+      html += '</div>';
+    }
+
+    // Cross-tab panels
+    var dims = SUB_DIMS[current.dim] || [];
+    dims.forEach(function (subDimKey) {
+      var items = dd[subDimKey] || [];
+      if (items.length === 0) return;
+      var targetDim = subDimKey.replace('by_', '');
       html += '<div class="drill-card">' +
-        '<div class="drill-card-title">Monthly cadence (checkbook)</div>' +
-        monthsHtml +
+        '<div class="drill-card-title">By ' + targetDim + '</div>' +
+        renderMiniBars(items, { limit: 8, targetDim: targetDim }) +
       '</div>';
-    }
-    // CTA: see all transactions
-    if (bvaBreakdown === 'by_fund') {
+    });
+
+    // Checkbook vendor + monthly (only for fund level — checkbook is tagged by fund)
+    if (current.dim === 'fund' && perf && perf.drill && perf.drill.by_fund && perf.drill.by_fund[current.key]) {
+      var pd = perf.drill.by_fund[current.key];
+      if (pd.top_vendors && pd.top_vendors.length) {
+        html += '<div class="drill-card">' +
+          '<div class="drill-card-title">Top vendors (checkbook)</div>' +
+          renderMiniBars(pd.top_vendors, { limit: 6 }) +
+        '</div>';
+      }
+      if (pd.monthly && pd.monthly.length) {
+        var mMax = pd.monthly.reduce(function (s, m) { return Math.max(s, m.amount); }, 0) || 1;
+        var monthName = function (m) {
+          var p = m.split('-');
+          var names = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+          return names[parseInt(p[1], 10)] + " '" + p[0].slice(2);
+        };
+        var monthsHtml = '<div class="drill-months">';
+        pd.monthly.forEach(function (m) {
+          var pct = m.amount / mMax * 100;
+          monthsHtml += '<div class="drill-month-row" data-month="' + m.month + '" title="Click to filter table to this month">' +
+            '<div class="drill-month-name">' + monthName(m.month) + '</div>' +
+            '<div class="drill-month-bar-wrap"><div class="drill-month-bar" style="width:' + pct.toFixed(1) + '%"></div></div>' +
+            '<div class="drill-month-val">' + fmtMoney(m.amount, { compact: true }) + '</div>' +
+          '</div>';
+        });
+        monthsHtml += '</div>';
+        html += '<div class="drill-card">' +
+          '<div class="drill-card-title">Monthly cadence (checkbook)</div>' +
+          monthsHtml +
+        '</div>';
+      }
+      // CTA: see transactions for this fund
+      var ckCount = pd.monthly.reduce(function (s, m) { return s + m.count; }, 0);
       html += '<div class="drill-cta drill-cta--span">' +
-        '<button type="button" class="drill-cta-btn" data-action="filter-fund" data-fund="' + escapeHtml(key) + '">' +
-        'See ' + (ckCount !== null ? ckCount.toLocaleString() + ' transactions' : 'transactions') +
-        ' for ' + escapeHtml(titleCase(key)) + ' &rarr;</button>' +
+        '<button type="button" class="drill-cta-btn" data-action="filter-fund" data-fund="' + escapeHtml(current.key) + '">' +
+        'See ' + ckCount.toLocaleString() + ' transactions for ' + escapeHtml(titleCase(current.key)) + ' &rarr;</button>' +
       '</div>';
     }
+
     html += '</div>';
     return html;
   }
@@ -864,7 +931,30 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   var bvaBreakdown = 'by_fund';
   var bvaPage = 0;
   var bvaPageSize = 15;
-  var bvaExpanded = null;       // name of the row currently expanded (within current breakdown)
+  var drillStack = [];          // stack of { dim, key } entries; bottom = root, top = currently shown
+  function pushDrill(dim, key) {
+    var idx = -1;
+    for (var i = 0; i < drillStack.length; i++) {
+      if (drillStack[i].dim === dim && drillStack[i].key === key) { idx = i; break; }
+    }
+    if (idx >= 0) drillStack = drillStack.slice(0, idx + 1);
+    else drillStack.push({ dim: dim, key: key });
+    renderBva();
+  }
+  function popDrillTo(depth) {
+    drillStack = drillStack.slice(0, depth);
+    renderBva();
+  }
+  function clearDrill() {
+    drillStack = [];
+    renderBva();
+  }
+  function currentRootDim() {
+    return bvaBreakdown === 'by_fund' ? 'fund' :
+           bvaBreakdown === 'by_department' ? 'department' :
+           bvaBreakdown === 'by_category' ? 'category' :
+           bvaBreakdown === 'by_division' ? 'division' : null;
+  }
 
   function renderBva() {
     var host = document.getElementById('bva-chart');
@@ -886,7 +976,7 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
     var start = bvaPage * bvaPageSize;
     var slice = data.slice(start, start + bvaPageSize);
 
-    var canDrill = (bvaBreakdown === 'by_fund' || bvaBreakdown === 'by_department');
+    var rootDim = currentRootDim();
     var html = '';
     slice.forEach(function (r) {
       var b = r.revised_budget || 0;
@@ -899,11 +989,8 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
       var name = r.name;
       if (bvaBreakdown === 'by_division' && name === 'UNDEFINED') name = 'School (not broken out)';
       else name = titleCase(name);
-      var drillable = canDrill && (
-        (bvaBreakdown === 'by_fund'       && drill && drill.by_fund       && drill.by_fund[r.name]) ||
-        (bvaBreakdown === 'by_department' && drill && drill.by_department && drill.by_department[r.name])
-      );
-      var isExpanded = drillable && bvaExpanded === r.name;
+      var drillable = rootDim && hasDrill(rootDim, r.name);
+      var isExpanded = drillable && drillStack.length > 0 && drillStack[0].dim === rootDim && drillStack[0].key === r.name;
       var rowClass = 'bva-row' +
         (drillable ? ' bva-row--drillable' : '') +
         (isExpanded ? ' bva-row--expanded' : '');
@@ -928,7 +1015,7 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
         '</strong>' + (pct !== null ? pct + '% of ' + fmtMoney(b, { compact: true }) : 'no budget') + '</div>';
       html += '</div>';
       if (isExpanded) {
-        html += renderBvaExpand(r.name);
+        html += renderBvaExpand(drillStack);
       }
     });
 
@@ -1055,7 +1142,7 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
         btn.classList.add('active');
         bvaBreakdown = btn.getAttribute('data-breakdown');
         bvaPage = 0;
-        bvaExpanded = null;
+        drillStack = [];
         renderBva();
       });
     });
@@ -1095,25 +1182,42 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
     document.getElementById('page-prev').addEventListener('click', function () { page--; renderTable(); });
     document.getElementById('page-next').addEventListener('click', function () { page++; renderTable(); });
 
-    // BVA row click -> expand/collapse (event-delegated to survive re-renders)
+    // BVA row click -> expand/collapse / drill / pop / cta (event-delegated to survive re-renders)
     document.getElementById('bva-chart').addEventListener('click', function (e) {
+      // Breadcrumb pop
+      var crumb = e.target.closest('[data-drill-pop]');
+      if (crumb) {
+        popDrillTo(parseInt(crumb.dataset.drillPop, 10));
+        return;
+      }
+      // Push a nested drill from a panel row
+      var pushRow = e.target.closest('[data-drill-push-dim]');
+      if (pushRow) {
+        pushDrill(pushRow.dataset.drillPushDim, pushRow.dataset.drillPushKey);
+        return;
+      }
+      // Monthly cadence click -> filter table
       var monthRow = e.target.closest('.drill-month-row');
       if (monthRow && monthRow.dataset.month) {
         applyTableFilter({ dateRange: monthOf(monthRow.dataset.month) });
         scrollToTable();
         return;
       }
+      // CTA "see N transactions" -> filter table
       var cta = e.target.closest('[data-action="filter-fund"]');
       if (cta) {
         applyTableFilter({ fund: cta.dataset.fund });
         scrollToTable();
         return;
       }
+      // Top-level BVA chart row click -> toggle root drill
       var row = e.target.closest('.bva-row--drillable');
       if (!row) return;
       var key = row.dataset.drillKey;
-      bvaExpanded = (bvaExpanded === key) ? null : key;
-      renderBva();
+      var rootDim = currentRootDim();
+      var isOpenAtRoot = drillStack.length > 0 && drillStack[0].dim === rootDim && drillStack[0].key === key;
+      if (isOpenAtRoot) clearDrill();
+      else drillStack = [{ dim: rootDim, key: key }], renderBva();
     });
 
     // Performance panel click delegation (vendor, month, multifund)
