@@ -16,6 +16,7 @@ GITHUB_BRANCH = "main"
 MAIL_FROM = "Marblehead Data <meetings@marbleheaddata.org>"
 MAIL_REPLY_TO = "agbaber@gmail.com"
 TURNSTILE_TEST_BYPASS_TOKEN = "TEST-OK"
+MAIL_PROVIDER_API_KEY = "dev-placeholder"
 
 # Friday 7:00 AM ET == 11:00 UTC (EST) / 12:00 UTC (EDT).
 # Run at 11:00 and 12:00; the scheduled handler chooses one based on the

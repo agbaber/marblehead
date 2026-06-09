@@ -2,6 +2,7 @@
 // See docs/superpowers/specs/2026-06-09-meeting-digest-subscriptions-design.md
 
 import { runScheduled } from './scheduled.js';
+import { handleSubscribe } from './handlers/subscribe.js';
 
 function cors(env, origin) {
   return {
@@ -16,16 +17,15 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const origin = request.headers.get('Origin') || '';
+    const corsHeaders = cors(env, origin);
 
-    if (request.method === 'OPTIONS') {
-      return new Response(null, { status: 204, headers: cors(env, origin) });
+    if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: corsHeaders });
+
+    if (url.pathname === '/api/subscribe' && request.method === 'POST') {
+      return handleSubscribe(request, env, corsHeaders);
     }
 
-    // Routes will be wired up in Tasks 8-12.
-    return new Response(JSON.stringify({ ok: true, path: url.pathname }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json', ...cors(env, origin) }
-    });
+    return new Response('Not Found', { status: 404, headers: corsHeaders });
   },
 
   async scheduled(event, env, ctx) {
