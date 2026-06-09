@@ -101,3 +101,38 @@ describe('POST /api/subscribe', () => {
     expect(results.length).toBe(1);
   });
 });
+
+describe('GET /api/subscribe-confirm', () => {
+  async function createPending(email) {
+    const r = await SELF.fetch('https://worker/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, turnstileToken: 'TEST-OK' })
+    });
+    expect(r.status).toBe(200);
+    return env.DB.prepare('SELECT * FROM subscriber WHERE email = ?').bind(email).first();
+  }
+
+  it('flips status to confirmed and redirects to manage URL', async () => {
+    const row = await createPending('confirm-me@example.com');
+    const r = await SELF.fetch(`https://worker/api/subscribe-confirm?token=${row.confirmation_token}`, { redirect: 'manual' });
+    expect(r.status).toBe(302);
+    expect(r.headers.get('Location')).toMatch(/\/me\/subscription\/\?token=/);
+    const after = await env.DB.prepare('SELECT status, confirmed_at, confirmation_token FROM subscriber WHERE email = ?').bind('confirm-me@example.com').first();
+    expect(after.status).toBe('confirmed');
+    expect(after.confirmed_at).toBeGreaterThan(0);
+    expect(after.confirmation_token).toBeNull();
+  });
+
+  it('rejects an expired token', async () => {
+    const row = await createPending('expired@example.com');
+    await env.DB.prepare('UPDATE subscriber SET confirmation_expires = 1 WHERE id = ?').bind(row.id).run();
+    const r = await SELF.fetch(`https://worker/api/subscribe-confirm?token=${row.confirmation_token}`, { redirect: 'manual' });
+    expect(r.status).toBe(400);
+  });
+
+  it('rejects an unknown token', async () => {
+    const r = await SELF.fetch(`https://worker/api/subscribe-confirm?token=nope`, { redirect: 'manual' });
+    expect(r.status).toBe(404);
+  });
+});

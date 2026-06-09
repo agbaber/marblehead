@@ -3,6 +3,7 @@
 
 import { runScheduled } from './scheduled.js';
 import { handleSubscribe } from './handlers/subscribe.js';
+import { handleConfirm } from './handlers/confirm.js';
 
 function cors(env, origin) {
   return {
@@ -23,6 +24,10 @@ export default {
 
     if (url.pathname === '/api/subscribe' && request.method === 'POST') {
       return handleSubscribe(request, env, corsHeaders);
+    }
+
+    if (url.pathname === '/api/subscribe-confirm' && request.method === 'GET') {
+      return handleConfirm(request, env, corsHeaders);
     }
 
     return new Response('Not Found', { status: 404, headers: corsHeaders });
