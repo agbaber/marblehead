@@ -30,7 +30,7 @@ name = "marblehead-meeting-digest-staging"
 [[env.staging.d1_databases]]
 binding = "DB"
 database_name = "meeting-digest-staging"
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "4fac8b9d-f5e2-437f-8975-b84a05a6b225"
 migrations_dir = "schema"
 
 [env.staging.vars]

@@ -3,8 +3,8 @@ layout: page
 title: "Subscribe — Marblehead Data"
 permalink: /subscribe/
 body_class: subscribe-page
-worker_base: "https://marblehead-meeting-digest.workers.dev"
-turnstile_site_key: ""
+worker_base: "https://marblehead-meeting-digest-staging.agbaber.workers.dev"
+turnstile_site_key: "0x4AAAAAADEi6Ymsaf-lEIvW"
 ---
 
 <section class="subscribe-hero">
@@ -23,7 +23,7 @@ turnstile_site_key: ""
       Your email
       <input type="email" name="email" id="subscribe-email" required autocomplete="email">
     </label>
-    <div class="cf-turnstile" data-sitekey="{{ site.turnstile_site_key }}"></div>
+    <div class="cf-turnstile" data-sitekey="{{ page.turnstile_site_key }}"></div>
     <button type="submit">Subscribe</button>
     <p class="subscribe-msg" id="subscribe-msg" hidden></p>
   </form>
