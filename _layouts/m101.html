@@ -75,21 +75,6 @@ layout: default
 
     {{ content }}
 
-    {%- if current_ch.dig_ins -%}
-    <section class="m101-digin">
-      <div class="m101-digin-label">Go deeper on this chapter</div>
-      <div class="m101-digin-grid">
-        {%- for d in current_ch.dig_ins -%}
-        <a class="m101-digin-card" href="{{ '/' | relative_url }}{{ d.href }}">
-          <div class="tag">{{ d.tag }}</div>
-          <div class="ttl">{{ d.title }}</div>
-          <p class="desc">{{ d.desc }}</p>
-        </a>
-        {%- endfor -%}
-      </div>
-    </section>
-    {%- endif -%}
-
     <nav class="m101-pager" aria-label="Chapter navigation">
       {%- if prev_ch -%}
       <a class="prev" href="{{ '/' | relative_url }}marblehead-101/{{ prev_ch.slug }}.html">
