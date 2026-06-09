@@ -37,6 +37,9 @@ worker_base: "https://marblehead-meeting-digest.agbaber.workers.dev"
   const isFirst = params.get('first') === '1';
   const status = document.getElementById('ms-status');
   const form = document.getElementById('ms-form');
+  const ph = (event, props) => {
+    if (typeof posthog !== 'undefined') posthog.capture(event, props);
+  };
   if (!token) { status.textContent = 'Missing token in URL.'; return; }
 
   let data;
@@ -45,6 +48,8 @@ worker_base: "https://marblehead-meeting-digest.agbaber.workers.dev"
     if (!r.ok) { status.textContent = 'Subscription not found.'; return; }
     data = await r.json();
   } catch { status.textContent = 'Network error.'; return; }
+
+  ph('subscribe_preferences_view', { is_first: isFirst });
 
   status.textContent = isFirst
     ? `You're subscribed (${data.email}). Customize what you get below, or close the tab and we'll send the default Friday digest.`
@@ -67,9 +72,17 @@ worker_base: "https://marblehead-meeting-digest.agbaber.workers.dev"
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token, boards, topics })
       });
-      if (!r.ok) { msg.textContent = (await r.json()).error || 'Failed to save.'; return; }
+      if (!r.ok) {
+        msg.textContent = (await r.json()).error || 'Failed to save.';
+        ph('subscribe_preferences_save', { outcome: 'error', status: r.status, n_boards: boards.length, n_topics: topics.length });
+        return;
+      }
       msg.textContent = 'Saved.';
-    } catch { msg.textContent = 'Network error.'; }
+      ph('subscribe_preferences_save', { outcome: 'success', n_boards: boards.length, n_topics: topics.length });
+    } catch {
+      msg.textContent = 'Network error.';
+      ph('subscribe_preferences_save', { outcome: 'network_error', n_boards: boards.length, n_topics: topics.length });
+    }
   });
 
   document.getElementById('ms-unsubscribe').addEventListener('click', async () => {
@@ -79,8 +92,15 @@ worker_base: "https://marblehead-meeting-digest.agbaber.workers.dev"
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token })
       });
-      if (r.ok) { document.querySelector('.ms-pref').innerHTML = '<h1>You are unsubscribed.</h1>'; }
-    } catch {}
+      if (r.ok) {
+        document.querySelector('.ms-pref').innerHTML = '<h1>You are unsubscribed.</h1>';
+        ph('subscribe_unsubscribe', { outcome: 'success' });
+      } else {
+        ph('subscribe_unsubscribe', { outcome: 'error', status: r.status });
+      }
+    } catch {
+      ph('subscribe_unsubscribe', { outcome: 'network_error' });
+    }
   });
 })();
 </script>
