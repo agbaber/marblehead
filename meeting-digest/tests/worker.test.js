@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { env, fetchMock, SELF, applyD1Migrations } from 'cloudflare:test';
+import { runScheduled } from '../worker/src/scheduled.js';
 
 // Migration SQL split into individual statements for applyD1Migrations.
 // Each entry must be a non-empty string (no blanks, no semicolons trailing).
@@ -241,5 +242,20 @@ describe('POST /api/mail-event', () => {
     expect(r.status).toBe(200);
     const after = await env.DB.prepare('SELECT status FROM subscriber WHERE id = ?').bind(row.id).first();
     expect(after.status).toBe('bounced');
+  });
+});
+
+describe('runScheduled', () => {
+  it('skips silently when subscriber has zero matches', async () => {
+    await confirmedSubscriber('quiet@example.com', { boards: ['town-meeting'], topics: [] });
+    // Mock the GitHub Contents API to return zero recent files.
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([]));
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.ran).toBe(true);
+    expect(out.sent).toBe(0);
+    const log = await env.DB.prepare('SELECT count(*) AS n FROM delivery_log').first();
+    expect(log.n).toBe(0);
   });
 });
