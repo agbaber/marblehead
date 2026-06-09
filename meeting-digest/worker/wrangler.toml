@@ -16,7 +16,9 @@ GITHUB_BRANCH = "main"
 MAIL_FROM = "Marblehead Data <digest@meetings.marbleheaddata.org>"
 MAIL_REPLY_TO = "agbaber@gmail.com"
 TURNSTILE_TEST_BYPASS_TOKEN = "TEST-OK"
-MAIL_PROVIDER_API_KEY = "dev-placeholder"
+# MAIL_PROVIDER_API_KEY is a Worker secret set via `wrangler secret put` —
+# do NOT declare it as a var here, or `wrangler deploy` will overwrite the
+# secret with the placeholder string and the Worker will 401 on every send.
 
 # Friday 7:00 AM ET == 11:00 UTC (EST) / 12:00 UTC (EDT).
 # Run at 11:00 and 12:00; the scheduled handler chooses one based on the
