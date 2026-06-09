@@ -2,7 +2,7 @@
 title: "Town Checkbook"
 scripts: [citations]
 og_title: "Marblehead FY26 Checkbook & Budget Explorer"
-og_description: "Every public vendor payment Marblehead made in FY26 (Jul 2025 to May 2026), plus budget-vs-actual by Fund, Department, Category, Division, and Object, and a performance read on variances, vendor concentration, and monthly cadence. 15,001 transactions, $98.07M after redacting 560 medical-claim rows."
+og_description: "FY26 spending, budget, and pacing for Marblehead. $206.1M adopted across all funds, $127.3M annual operating, $98.1M in vendor checks through May 29. Budget vs actual by Fund, Department, Category, Division, and Object."
 og_url: https://marbleheaddata.org/charts/checkbook.html
 ---
 <h1 class="h-center">Town checkbook</h1>
@@ -386,19 +386,19 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
 <div class="hero-card" id="hero-card">
   <div class="hero-row">
     <div class="hero-stat">
-      <div class="hero-label">Adopted budget</div>
+      <div class="hero-label">All funds</div>
       <div class="hero-value">$206.1M</div>
-      <div class="hero-sub">FY26, all funds</div>
+      <div class="hero-sub">FY26 adopted, every fund</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-label">Spent</div>
-      <div class="hero-value">$140.4M</div>
-      <div class="hero-sub">68% of budget</div>
+      <div class="hero-label">Annual operating</div>
+      <div class="hero-value">$127.3M</div>
+      <div class="hero-sub">General + enterprise funds</div>
     </div>
     <div class="hero-stat">
       <div class="hero-label">Vendor payments</div>
       <div class="hero-value">$98.1M</div>
-      <div class="hero-sub">15,001 checks (payroll excluded)</div>
+      <div class="hero-sub">15,001 checks, payroll excluded</div>
     </div>
     <div class="hero-stat">
       <div class="hero-label">Through</div>
@@ -536,12 +536,15 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   <h2>Notes</h2>
 
   <dl class="notes-dl">
-    <dt>Three totals, three meanings</dt>
-    <dd><strong>$206.1M</strong> is what the town adopted for FY26. <strong>$140.4M</strong> is what the budget portal counts as spent so far (includes payroll and transfers). <strong>$98.1M</strong> is just vendor checks &ndash; what shows up on this page's transaction table.<sup class="cite"
-      data-href="https://townofmarblehead-ma-oe.spending.socrata.com/#!/year/All%20Years/explore/1-/segment2"
-      data-source="Town of Marblehead Spending Portal (Socrata), data exported 2026-06-01"></sup><sup class="cite"
+    <dt>What "the budget" means</dt>
+    <dd><strong>$206.1M</strong> is every appropriation in every fund &ndash; including capital articles, the OPEB trust, the Larz Anderson trust, the Light Department pass-through, and 300+ small revolving and grant funds. <strong>$127.3M</strong> is the annual operating envelope (Town general fund $60.6M + School general fund $49.1M + Water $6.5M + Sewer $5.5M + Tax Articles $4.3M + Harbor $1.3M). The Light Department runs as a self-supporting enterprise outside the appropriation process. The Budget vs Actual chart above filters down to that $127.3M envelope.<sup class="cite"
       data-href="https://townofmarblehead-ma-ob.budget.socrata.com/"
       data-source="Town of Marblehead Budget Portal (Socrata), data fetched via fund_source_data API on 2026-06-01"></sup></dd>
+
+    <dt>Budget vs spent vs vendor payments</dt>
+    <dd>The budget portal also publishes an FY26 <em>actual</em> rollup of <strong>$140.4M</strong> through May 29, which includes payroll and inter-fund transfers. The <strong>$98.1M</strong> on this page is just vendor checks (the accounts-payable side). The gap between the two is mostly payroll.<sup class="cite"
+      data-href="https://townofmarblehead-ma-oe.spending.socrata.com/#!/year/All%20Years/explore/1-/segment2"
+      data-source="Town of Marblehead Spending Portal (Socrata), data exported 2026-06-01"></sup></dd>
 
     <dt>Why some bars look over budget</dt>
     <dd>The Light Department ($13.2M) is self-supporting and has no appropriation, so it shows up against a $0 budget. Snow Removal ($687K vs $105K) is intentionally under-budgeted and topped up at year-end. Neither is a runaway expense.</dd>
