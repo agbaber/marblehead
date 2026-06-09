@@ -298,7 +298,7 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   /* Performance section */
   .perf-grid {
     display: grid; grid-template-columns: 1fr; gap: 12px;
-    margin: 0 0 12px;
+    margin: 0 0 12px; align-items: start;
   }
   @media (min-width: 700px) {
     .perf-grid--two { grid-template-columns: 1fr 1fr; }
@@ -306,23 +306,37 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
   .perf-card {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: var(--radius-md); padding: 18px 20px;
+    position: relative;
   }
   .perf-card h3 {
     font-size: 11px; font-weight: 700; color: var(--text-subtle);
     margin: 0 0 14px; text-transform: uppercase; letter-spacing: 0.8px;
   }
+  /* Variance card accent */
+  .perf-card--over   { border-top: 2px solid var(--c-buoy); }
+  .perf-card--under  { border-top: 2px solid var(--c-teal); }
+  .perf-card--over h3   { color: var(--c-buoy); }
+  .perf-card--under h3  { color: var(--c-teal); }
+
   .perf-row {
-    display: grid; grid-template-columns: 1fr auto; gap: 12px;
-    align-items: baseline; padding: 8px 0;
+    display: grid; grid-template-columns: 16px 1fr auto; gap: 10px;
+    align-items: center; padding: 9px 0;
     border-bottom: 1px solid var(--divider); font-size: 13px;
+    text-align: left;
   }
   .perf-row:last-child { border-bottom: none; padding-bottom: 0; }
-  .perf-row:first-child { padding-top: 0; }
+  .perf-row:first-child { padding-top: 4px; }
+  .perf-row-mark {
+    width: 8px; height: 8px; border-radius: 999px;
+    display: inline-block;
+  }
+  .perf-row-mark--over  { background: var(--c-buoy); }
+  .perf-row-mark--under { background: var(--c-teal); }
   .perf-row-name { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
-  .perf-row-val  { color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 12px; }
-  .perf-row-val strong { color: var(--text); font-size: 13.5px; font-weight: 700; margin-right: 8px; }
-  .perf-row-val .over  { color: var(--c-buoy); font-weight: 600; }
-  .perf-row-val .under { color: var(--c-teal); font-weight: 600; }
+  .perf-row-val  { color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 12px; display: inline-flex; align-items: baseline; gap: 8px; }
+  .perf-row-val strong { color: var(--text); font-size: 14px; font-weight: 700; letter-spacing: -0.2px; }
+  .perf-row-val .over  { color: var(--c-buoy); font-weight: 600; font-size: 11.5px; }
+  .perf-row-val .under { color: var(--c-teal); font-weight: 600; font-size: 11.5px; }
 
   .perf-meter {
     display: grid; grid-template-columns: 1fr 150px auto; gap: 12px;
@@ -560,11 +574,11 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
 </div>
 
 <div class="perf-grid perf-grid--two">
-  <div class="perf-card">
+  <div class="perf-card perf-card--over">
     <h3>Over budget</h3>
     <div id="perf-over-list" class="ck-loading">Loading&hellip;</div>
   </div>
-  <div class="perf-card">
+  <div class="perf-card perf-card--under">
     <h3>Under budget</h3>
     <div id="perf-under-list" class="ck-loading">Loading&hellip;</div>
   </div>
@@ -1335,8 +1349,10 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
     overHost.innerHTML = over.length === 0 ? '<p style="font-size:12.5px;color:var(--text-muted);margin:0;">Nothing over budget.</p>'
       : over.map(function (r) {
         var pctLabel = r.pct !== null ? Math.round(r.pct) + '%' : 'no budget';
-        return '<div class="perf-row"><div class="perf-row-name">' + escapeHtml(titleCase(r.name)) +
-          '</div><div class="perf-row-val"><strong>+' + fmtMoney(r.delta, { compact: true }) +
+        return '<div class="perf-row">' +
+          '<span class="perf-row-mark perf-row-mark--over"></span>' +
+          '<div class="perf-row-name">' + escapeHtml(titleCase(r.name)) + '</div>' +
+          '<div class="perf-row-val"><strong>+' + fmtMoney(r.delta, { compact: true }) +
           '</strong><span class="over">' + pctLabel + '</span></div></div>';
       }).join('');
 
@@ -1349,8 +1365,10 @@ og_url: https://marbleheaddata.org/charts/checkbook.html
     var underHost = document.getElementById('perf-under-list');
     underHost.innerHTML = under.map(function (r) {
       var pctLabel = r.pct !== null ? Math.round(r.pct) + '%' : 'no budget';
-      return '<div class="perf-row"><div class="perf-row-name">' + escapeHtml(titleCase(r.name)) +
-        '</div><div class="perf-row-val"><strong>' + fmtMoney(r.delta, { compact: true }) +
+      return '<div class="perf-row">' +
+        '<span class="perf-row-mark perf-row-mark--under"></span>' +
+        '<div class="perf-row-name">' + escapeHtml(titleCase(r.name)) + '</div>' +
+        '<div class="perf-row-val"><strong>' + fmtMoney(r.delta, { compact: true }) +
         '</strong><span class="under">' + pctLabel + '</span></div></div>';
     }).join('');
 
