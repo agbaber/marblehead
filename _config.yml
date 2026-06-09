@@ -14,7 +14,7 @@ turnstile_site_key: "0x4AAAAAADEi6Ymsaf-lEIvW"
 # transcript pages. Disabled until the verification network captures
 # email + a Friday-digest worker is deployed (see the design at
 # docs/superpowers/specs/2026-06-02-meeting-questions-and-subscriptions.md).
-transcripts_subscribe: false
+transcripts_subscribe: true
 
 plugins: []
 

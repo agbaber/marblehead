@@ -1,0 +1,58 @@
+// Cloudflare Worker for marbleheaddata.org meeting-digest subscriptions.
+// See docs/superpowers/specs/2026-06-09-meeting-digest-subscriptions-design.md
+
+import { runScheduled } from './scheduled.js';
+import { handleSubscribe } from './handlers/subscribe.js';
+import { handleConfirm } from './handlers/confirm.js';
+import { handleGetSubscription, handlePreferencesUpdate } from './handlers/preferences.js';
+import { handleUnsubscribe } from './handlers/unsubscribe.js';
+import { handleMailEvent } from './handlers/mail-event.js';
+
+function cors(env, origin) {
+  return {
+    'Access-Control-Allow-Origin': env.ALLOWED_ORIGIN === '*' ? (origin || '*') : env.ALLOWED_ORIGIN,
+    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Vary': 'Origin'
+  };
+}
+
+export default {
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+    const origin = request.headers.get('Origin') || '';
+    const corsHeaders = cors(env, origin);
+
+    if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: corsHeaders });
+
+    if (url.pathname === '/api/subscribe' && request.method === 'POST') {
+      return handleSubscribe(request, env, corsHeaders);
+    }
+
+    if (url.pathname === '/api/subscribe-confirm' && request.method === 'GET') {
+      return handleConfirm(request, env, corsHeaders);
+    }
+
+    if (url.pathname === '/api/me/subscription' && request.method === 'GET') {
+      return handleGetSubscription(request, env, corsHeaders);
+    }
+
+    if (url.pathname === '/api/preferences-update' && request.method === 'POST') {
+      return handlePreferencesUpdate(request, env, corsHeaders);
+    }
+
+    if (url.pathname === '/api/unsubscribe' && (request.method === 'POST' || request.method === 'GET')) {
+      return handleUnsubscribe(request, env, corsHeaders);
+    }
+
+    if (url.pathname === '/api/mail-event' && request.method === 'POST') {
+      return handleMailEvent(request, env, corsHeaders);
+    }
+
+    return new Response('Not Found', { status: 404, headers: corsHeaders });
+  },
+
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(runScheduled(event, env));
+  }
+};
