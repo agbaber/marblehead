@@ -289,11 +289,19 @@ og_url: https://marbleheaddata.org/checkbook/
   }
   .ck-loading { padding: 20px 14px; color: var(--text-muted); font-size: 13px; text-align: center; }
 
+  /* Description column stays hidden until the loaded CSV carries one */
+  table.ck-table .col-description { display: none; }
+  table.ck-table.has-desc .col-description {
+    display: table-cell; max-width: 240px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+
   @media (max-width: 600px) {
     table.ck-table { font-size: 11.5px; }
     table.ck-table thead th, table.ck-table tbody td { padding: 6px 7px; }
-    /* Hide division on phones */
+    /* Hide division + description on phones */
     table.ck-table .col-division { display: none; }
+    table.ck-table.has-desc .col-description { display: none; }
   }
 
   /* Performance section */
@@ -642,6 +650,7 @@ og_url: https://marbleheaddata.org/checkbook/
       <tr>
         <th data-col="date" class="numeric col-date"><span class="lbl">Date</span><span class="sa"></span></th>
         <th data-col="vendor" class="col-vendor"><span class="lbl">Vendor</span><span class="sa"></span></th>
+        <th data-col="description" class="col-description"><span class="lbl">Description</span><span class="sa"></span></th>
         <th data-col="fund" class="col-fund"><span class="lbl">Fund</span><span class="sa"></span></th>
         <th data-col="division" class="col-division"><span class="lbl">Division</span><span class="sa"></span></th>
         <th data-col="amount" class="numeric col-amount sorted"><span class="lbl">Amount</span><span class="sa">&#9660;</span></th>
@@ -684,7 +693,8 @@ og_url: https://marbleheaddata.org/checkbook/
     <dd>Names come straight from the town's accounts-payable ledger. "ONE TIME PAY" ($1.2M across 14 funds) is the ledger's bucket for one-off payees, not a company. "Marblehead Light Dept" appearing as a vendor is town and school departments paying the municipal Light Department for electricity.</dd>
 
     <dt>What we redacted</dt>
-    <dd>The town's source export tags <em>specific employees by surname</em> for medical claims under the 111F Injury Leave Fund (e.g., "BURT INJURY" paid to Spaulding Rehab) and lists <em>student initials</em> for out-of-district SpEd placements. We dropped the Description column entirely and pulled 560 rows ($413K) from the 111F and Workers Comp funds. The aggregate is still in the budget chart above.</dd>
+    <dd id="redact-note-nodesc">The town's source export tags <em>specific employees by surname</em> for medical claims under the 111F Injury Leave Fund (e.g., "BURT INJURY" paid to Spaulding Rehab) and lists <em>student initials</em> for out-of-district SpEd placements. We dropped the Description column entirely and pulled 560 rows ($413K) from the 111F and Workers Comp funds. The aggregate is still in the budget chart above.</dd>
+    <dd id="redact-note-desc" hidden>The town's source export tags <em>specific employees by surname</em> for medical claims under the 111F Injury Leave Fund (e.g., "BURT INJURY" paid to Spaulding Rehab) and lists <em>student initials</em> for out-of-district SpEd placements. We pulled the 111F and Workers Comp rows entirely (their aggregate is still in the budget chart above) and replaced the description with "[withheld]" on rows that identify a student or employee. Every other description appears as exported; the <a href="../data/checkbook_redaction_disclosure.json">disclosure file</a> counts exactly what was removed.</dd>
 
     <dt>Source files</dt>
     <dd>
@@ -782,6 +792,8 @@ og_url: https://marbleheaddata.org/checkbook/
 
   // --- State ---
   var rows = [];               // Parsed checkbook transactions
+  var hasDesc = false;         // True when the loaded CSV carries a Description column
+  var tableCols = 5;
   var budget = null;           // budget_actual_FY26.json
   var perf = null;             // checkbook_performance.json (includes .drill)
   var drill = null;            // budget_drill_FY26.json
@@ -1119,7 +1131,7 @@ og_url: https://marbleheaddata.org/checkbook/
     if (!Number.isFinite(aMin)) aMin = null;
 
     var filtered = rows.filter(function (r) {
-      if (vendorQ && r.vendor.indexOf(vendorQ) === -1) return false;
+      if (vendorQ && r.vendor.indexOf(vendorQ) === -1 && r.descU.indexOf(vendorQ) === -1) return false;
       if (fundQ && r.fund !== fundQ) return false;
       if (divQ && r.division !== divQ) return false;
       if (dMin && r.date < dMin) return false;
@@ -1153,7 +1165,7 @@ og_url: https://marbleheaddata.org/checkbook/
 
     var tbody = document.getElementById('ck-tbody');
     if (slice.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="5" class="ck-table-empty">No transactions match the current filters.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="' + tableCols + '" class="ck-table-empty">No transactions match the current filters.</td></tr>';
     } else {
       var html = '';
       for (var j = 0; j < slice.length; j++) {
@@ -1162,6 +1174,7 @@ og_url: https://marbleheaddata.org/checkbook/
         html += '<tr>' +
           '<td class="date col-date">' + escapeHtml(r.date) + '</td>' +
           '<td class="vendor col-vendor">' + escapeHtml(r.vendor) + '</td>' +
+          (hasDesc ? '<td class="muted col-description" title="' + escapeHtml(r.description) + '">' + escapeHtml(r.description) + '</td>' : '') +
           '<td class="muted col-fund">' + escapeHtml(r.fund) + '</td>' +
           '<td class="muted col-division">' + escapeHtml(displayDivision(r.division)) + '</td>' +
           '<td class="numeric col-amount' + negCls + '">' + fmtMoney(r.amount) + '</td>' +
@@ -1436,18 +1449,31 @@ og_url: https://marbleheaddata.org/checkbook/
       var idx = {};
       header.forEach(function (h, i) { idx[h.trim().toLowerCase()] = i; });
       rows = [];
+      var descCol = idx.description !== undefined;
       for (var k = 0; k < lines.length; k++) {
         var row = lines[k];
         if (row.length < 5) continue;
         var amount = parseFloat(row[idx.amount]);
         if (!Number.isFinite(amount)) continue;
+        var desc = descCol ? (row[idx.description] || '').trim() : '';
         rows.push({
           vendor: (row[idx.vendor] || '').trim(),
           fund: (row[idx.fund] || '').trim(),
           division: (row[idx.division] || '').trim(),
+          description: desc,
+          descU: desc.toUpperCase(),
           date: (row[idx.date] || '').slice(0, 10),
           amount: amount
         });
+        if (desc) hasDesc = true;
+      }
+      if (hasDesc) {
+        tableCols = 6;
+        document.getElementById('ck-table').classList.add('has-desc');
+        document.querySelector('label[for="f-vendor"]').textContent = 'Vendor or description';
+        var rn = document.getElementById('redact-note-nodesc');
+        var rd = document.getElementById('redact-note-desc');
+        if (rn && rd) { rn.hidden = true; rd.hidden = false; }
       }
       // Populate fund + division dropdowns
       var funds = {}, divs = {};
