@@ -156,6 +156,16 @@ All data compiled April 2026 from primary public sources. Every number is either
   - Snapshot captured 2026-04-17 (FY26 Q3). A later snapshot would include year-end payments and reclassifications.
 - **Confidence:** High for vendor identities and dollar amounts at the snapshot instant. Low for year-end interpretation (8-10 weeks of FY26 still to post).
 
+### Auditor Management Letter Findings (6 fiscal years, FY18-FY23)
+- **What it is:** Every internal-control comment in the Town's independent-auditor management letters, FY2018 through FY2023, as a finding-by-year matrix (23 rows). Each row records the finding, the year, its classification (current-year comment, prior-year comment, or material weakness), its status in that year's letter (Raised / Unresolved / Resolved / Ongoing / Carried), a one-line detail, and the source letter plus section/page. Tracks the cash-reconciliation material weakness from its FY2019 origin to its FY2023 resolution, plus accounts-receivable, OPEB-trust, internal-financial-statement, capital-asset, worker-comp, and payroll-withholding findings.
+- **File:** `auditor_management_letter_findings_FY18-23.csv`
+- **Source:** Management letters issued to the Select Board by the Town's outside auditor, FY2018-FY2023, published in the Town's Documents Center (uploaded May-June 2025). Raw <abbr class="g" title="Portable Document Format">PDF</abbr>s: `FY18_Management_Letter.pdf` through `FY23_Management_Letter.pdf` (gitignored; archived with the source set).
+- **Caveats:**
+  - The auditor's status labels apply only to **prior-year** comments. A current-year comment is "Raised"; its first Resolved/Unresolved verdict appears in the *following* year's letter. A material weakness that is current (FY18 SPED tuition, FY22 cash) is marked "Ongoing" until the next letter reports its status.
+  - **FY24 is not included.** The Town has not published an FY2024 management letter; only the FY2024 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> is posted. The FY24 audit was presented publicly to the Select Board on Oct 1, 2025, but that is a secondary source and is not in this file.
+  - The cash-reconciliation material weakness is marked **Resolved in the FY2023 letter** (month-end checklist). Do not describe it as ongoing past FY2023 without the FY2024 primary letter.
+- **Confidence:** High. Verbatim from the auditor's letters; statuses are the auditor's own.
+
 ### Town Payroll Headcount by Department (19 fiscal years, FY08-FY26)
 - **What it is:** Annual headcount of every paid Town employee, by department, from the Town's payroll system. One row per employee (any pay frequency: annual, weekly, on-call, seasonal). Dept-level subtotals labeled "Number of Employees".
 - **Source:** Public records request response, April 28, 2026 (<abbr class="g" title="Records Access Officer">RAO</abbr> Kyle A. Wiley). Raw file: `employee_count_FY2008-2026.xls`. Long-form <abbr class="g" title="Comma-Separated Values">CSV</abbr>: `town_employee_headcount_FY08-26.csv`. Schools/Town summary: `town_employee_headcount_summary_FY08-26.csv`.
