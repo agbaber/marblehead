@@ -570,7 +570,7 @@ og_url: https://marbleheaddata.org/checkbook/
 </div>
 
 <div class="perf-card perf-card--over">
-  <h3>Already over the full year's budget</h3>
+  <h3>Over the full-year budget</h3>
   <div id="perf-over-list" class="ck-loading">Loading&hellip;</div>
 </div>
 
@@ -1344,7 +1344,7 @@ og_url: https://marbleheaddata.org/checkbook/
       .filter(function (r) { return r.pct !== null && r.pct >= 100 && r.delta > 25000; })
       .slice(0, 5);
     var overHost = document.getElementById('perf-over-list');
-    overHost.innerHTML = over.length === 0 ? '<p style="font-size:12.5px;color:var(--text-muted);margin:0;">No department has exceeded its full-year budget yet.</p>'
+    overHost.innerHTML = over.length === 0 ? '<p style="font-size:12.5px;color:var(--text-muted);margin:0;">No department has exceeded its full-year budget.</p>'
       : over.map(function (r) {
         var pctLabel = Math.round(r.pct) + '%';
         return '<div class="perf-row">' +
