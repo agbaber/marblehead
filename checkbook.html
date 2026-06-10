@@ -760,6 +760,30 @@ og_url: https://marbleheaddata.org/checkbook/
   function canonVendor(v) {
     return (labels && labels.vendor_aliases && labels.vendor_aliases[v]) || v;
   }
+  // Compiled once after labels load; each entry is {re, replace}. The raw
+  // description is kept on the row so search + hover still see it.
+  var descPatterns = [];
+  function compileDescPatterns() {
+    descPatterns = [];
+    if (!labels || !Array.isArray(labels.description_patterns)) return;
+    labels.description_patterns.forEach(function (p) {
+      try { descPatterns.push({ re: new RegExp(p.match), replace: p.replace }); }
+      catch (e) { /* skip malformed entry */ }
+    });
+  }
+  function canonDescription(d) {
+    if (!d) return d;
+    for (var i = 0; i < descPatterns.length; i++) {
+      var m = descPatterns[i].re.exec(d);
+      if (m) {
+        return descPatterns[i].replace.replace(/\$(\d+)/g, function (_, n) {
+          var idx = Number(n);
+          return (idx >= 0 && idx < m.length && m[idx] !== undefined) ? m[idx] : '';
+        });
+      }
+    }
+    return d;
+  }
   function fundFamily(f) {
     return (labels && labels.fund_families && labels.fund_families[f]) || 'other';
   }
@@ -1231,7 +1255,7 @@ og_url: https://marbleheaddata.org/checkbook/
         html += '<tr>' +
           '<td class="date col-date">' + escapeHtml(r.date) + '</td>' +
           '<td class="vendor col-vendor" title="Ledger name: ' + escapeHtml(r.vendorRaw) + '">' + escapeHtml(titleCase(r.vendor)) + '</td>' +
-          (hasDesc ? '<td class="muted col-description" title="' + escapeHtml(r.description) + '">' + escapeHtml(r.description) + '</td>' : '') +
+          (hasDesc ? '<td class="muted col-description" title="' + escapeHtml(r.description === r.descriptionRaw ? r.description : 'Ledger description: ' + r.descriptionRaw) + '">' + escapeHtml(r.description) + '</td>' : '') +
           '<td class="muted col-fund" title="Ledger name: ' + escapeHtml(r.fund) + ' &middot; ' + escapeHtml(familyLabel(fundFamily(r.fund))) + '">' + escapeHtml(displayFund(r.fund)) + '</td>' +
           '<td class="muted col-division" title="Ledger name: ' + escapeHtml(r.division) + '">' + escapeHtml(displayDivision(r.division)) + '</td>' +
           '<td class="numeric col-amount' + negCls + '">' + fmtMoney(r.amount) + '</td>' +
@@ -1533,6 +1557,7 @@ og_url: https://marbleheaddata.org/checkbook/
       perf = results[2];
       drill = results[3];
       labels = results[4];
+      compileDescPatterns();
       var lines = parseCsv(results[1]);
       var header = lines.shift();
       var idx = {};
@@ -1544,19 +1569,23 @@ og_url: https://marbleheaddata.org/checkbook/
         if (row.length < 5) continue;
         var amount = parseFloat(row[idx.amount]);
         if (!Number.isFinite(amount)) continue;
-        var desc = descCol ? (row[idx.description] || '').trim() : '';
+        var descRaw = descCol ? (row[idx.description] || '').trim() : '';
+        var descCanon = canonDescription(descRaw);
         var ven = (row[idx.vendor] || '').trim();
         rows.push({
           vendor: canonVendor(ven),
           vendorRaw: ven,
           fund: (row[idx.fund] || '').trim(),
           division: (row[idx.division] || '').trim(),
-          description: desc,
-          descU: desc.toUpperCase(),
+          description: descCanon,
+          descriptionRaw: descRaw,
+          // Search matches both the alias and the raw ledger string so a query
+          // for "GIC" finds aliased rows and "666" still finds them by code.
+          descU: (descCanon === descRaw ? descRaw : descCanon + ' ' + descRaw).toUpperCase(),
           date: (row[idx.date] || '').slice(0, 10),
           amount: amount
         });
-        if (desc) hasDesc = true;
+        if (descRaw) hasDesc = true;
       }
       if (hasDesc) {
         tableCols = 6;

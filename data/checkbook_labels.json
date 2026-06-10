@@ -1,5 +1,5 @@
 {
- "_README": "Curated display annotations for the FY26 checkbook. vendor_aliases maps raw ledger vendor strings to a canonical raw string (merging spelling variants and repairing names the portal export doubled or truncated at 50 characters); the underlying CSV is unchanged and remains the source of record. vendor_notes are one-line identifications shown in the Top vendors card; each is verifiable from the funds the vendor is paid from in the CSV or from the page's Notes section. fund_labels and division_overrides re-format the ledger's own Town Meeting article codes (A11 2022 = Article 11, 2022 Annual Town Meeting); they add no information beyond expanding the code, except where marked. fund_families assigns each of the 105 funds to a family by name pattern, hand reviewed.",
+ "_README": "Curated display annotations for the FY26 checkbook. vendor_aliases maps raw ledger vendor strings to a canonical raw string (merging spelling variants and repairing names the portal export doubled or truncated at 50 characters); the underlying CSV is unchanged and remains the source of record. vendor_notes are one-line identifications shown in the Top vendors card; each is verifiable from the funds the vendor is paid from in the CSV or from the page's Notes section. fund_labels and division_overrides re-format the ledger's own Town Meeting article codes (A11 2022 = Article 11, 2022 Annual Town Meeting); they add no information beyond expanding the code, except where marked. description_patterns rewrites cryptic AP-side invoice strings into human-readable labels at render time (regex with $1/$2/... capture group refs); the raw ledger string stays in the CSV and on row hover. fund_families assigns each of the 105 funds to a family by name pattern, hand reviewed.",
  "as_of": "2026-06-10",
  "families": [
   {
@@ -81,6 +81,13 @@
   "SELECT BD EXP FY18": "Select Board Expenses FY18",
   "SELECT BD EXP FY19": "Select Board Expenses FY19"
  },
+ "description_patterns": [
+  {
+   "match": "^666[-]?0168[-]?(\\d{4})[-]?(\\d{2})[-]?(\\d{2})\\s?MB$",
+   "replace": "GIC monthly health-benefits invoice ($1-$2-$3 batch)",
+   "note": "Commonwealth GIC bills the town once a month for the employer share of state-pool health insurance, split across General Fund and each enterprise fund (sewer/water/electric/harbor) by employee assignment. Captures both the dashed (666-0168-2025-0709MB) and packed (666016820250903MB) AP-entry formats."
+  }
+ ],
  "fund_families": {
   "A11 2022 CAPITAL IMPROVEMENT": "capital",
   "A33 2025-ALLEY BLDG IMPROV": "capital",
