@@ -79,7 +79,28 @@
   "OTHER GOVERNMENTAL": "Catch-all department for general-government spending not assigned to a named department (Town Manager, Selectmen, Town Clerk, etc.).",
   "DISTRICTWIDE": "School-side catch-all for spending that isn't tied to one school building (health insurance, district administration, special education).",
   "STATE ASSESSMENTS": "Annual charges Marblehead owes the Commonwealth (MBTA, school choice tuition, charter school assessments, etc.).",
-  "UNKNOWN": "The town's accounting system did not classify these rows. Usually a data-entry gap, not a real budget category."
+  "UNKNOWN": "The town's accounting system did not classify these rows. Usually a data-entry gap, not a real budget category.",
+  "INTERFUND TRANSFERS": "Money moved from one town fund to another (e.g. general fund to OPEB trust), not new spending.",
+  "DEBT SERVICE": "Annual payments on the town's outstanding bonds (principal plus interest)."
+ },
+ "display_aliases": {
+  "OFU": "Inter-fund transfers (OFU)",
+  "OTHER GOVERNMENTAL": "Other governmental",
+  "OTHER EXPENSE": "Other expenses",
+  "OTHER SALARIES": "Other salaries",
+  "OTHER SALARIES - STIPENDS": "Other salaries (stipends)",
+  "STATE ASSESSMENTS": "State assessments",
+  "DISTRICTWIDE": "Districtwide (school)",
+  "GOVERNMENTAL": "General-government spending",
+  "UNKNOWN": "Unclassified",
+  "INTERFUND TRANSFERS": "Inter-fund transfers",
+  "DEBT SERVICE": "Debt service",
+  "PROFESSIONAL SALARY": "Professional salaries",
+  "CONTRACTED SERVICES": "Contracted services",
+  "SUPPLIES AND MATERIALS": "Supplies & materials",
+  "CAPITAL": "Capital outlay",
+  "SUPPLIES AND MATL": "Supplies & materials",
+  "CLERICAL SALARIES": "Clerical salaries"
  },
  "division_overrides": {
   "ART 26 2022 ESSEX NS AGGIE & T": "2022 ATM Art. 26: Essex North Shore Agricultural & Technical School",

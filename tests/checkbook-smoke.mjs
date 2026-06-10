@@ -134,15 +134,22 @@ async function run() {
 
     // 6g. Nested drill: click a category inside Fund drill -> breadcrumb appears + new sub-panels
     try {
-      // Ensure we're at a clean by_fund root, collapsed
+      // Ensure we're at a clean by_fund root, collapsed. Since #833 preserves
+      // drill state per breakdown, a prior test may have left the Fund tab
+      // with an open drill; press Escape to clear it before we re-open.
       await page.click('.breakdown-btn[data-breakdown="by_department"]');
       await page.waitForTimeout(150);
       await page.click('.breakdown-btn[data-breakdown="by_fund"]');
       await page.waitForTimeout(150);
+      // Defensively close any preserved drill so the next click reliably opens one.
+      await page.keyboard.press('Escape');
+      await page.waitForTimeout(150);
       await page.locator('.bva-row--drillable').first().click();
       await page.waitForSelector('.drill-bar-row--click', { state: 'attached', timeout: 3000 });
-      const before = await page.locator('.drill-crumbs').count();
-      if (before !== 0) throw new Error('breadcrumb showed at root, expected none');
+      // Since #831 the breadcrumb is always present once a drill is open
+      // (even at root depth), so we only require a single crumb at this point.
+      const beforeCrumbs = await page.locator('.drill-crumb').count();
+      if (beforeCrumbs !== 1) throw new Error('expected 1 breadcrumb entry at root drill, got ' + beforeCrumbs);
       // Click the first drillable nested row
       await page.locator('.drill-bar-row--click').first().click();
       await page.waitForSelector('.drill-crumbs', { state: 'visible', timeout: 3000 });
@@ -153,8 +160,10 @@ async function run() {
       // Pop back to root
       await page.locator('.drill-crumb-btn').first().click();
       await page.waitForTimeout(200);
-      const after = await page.locator('.drill-crumbs').count();
-      if (after !== 0) throw new Error('breadcrumb still visible after pop');
+      // With always-on breadcrumbs (#831), pop-to-root collapses the path
+      // back to exactly one crumb (the root entry) rather than hiding it.
+      const afterCrumbs = await page.locator('.drill-crumb').count();
+      if (afterCrumbs !== 1) throw new Error('after pop expected 1 crumb, got ' + afterCrumbs);
       ok('breadcrumb pop returns to root');
     } catch (e) { fail('nested-drill', e.message); }
 
