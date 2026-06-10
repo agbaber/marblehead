@@ -3,7 +3,7 @@ title: "The 2026 Marblehead override: archive"
 permalink: /2026-override/
 scripts: [citations]
 og_title: "Marblehead 2026 override archive"
-og_description: "The FY27 override cycle in one place: the two ballot questions, the candidates, both sides of the debate, the result, and what came after."
+og_description: "The FY27 override cycle in one place: the four ballot questions, the candidates, both sides of the debate, the result, and what came after."
 og_url: https://marbleheaddata.org/2026-override/
 ---
 <style>
@@ -196,6 +196,35 @@ og_url: https://marbleheaddata.org/2026-override/
     font-size: 14px;
     color: var(--text-muted);
     line-height: 1.55;
+  }
+  .result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 6px;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+  }
+  .result-table th,
+  .result-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--border);
+    text-align: right;
+  }
+  .result-table th:first-child,
+  .result-table td:first-child { text-align: left; }
+  .result-table thead th {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-subtle);
+    border-bottom: 2px solid var(--border);
+  }
+  .result-note {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin: 4px 0 16px;
+    line-height: 1.5;
   }
 </style>
 
@@ -417,7 +446,7 @@ og_url: https://marbleheaddata.org/2026-override/
 <section class="archive-section" id="override-history">
   <h2>4. Marblehead's override history</h2>
 
-  <p>Since 1988, Marblehead voted on 70 Proposition 2&frac12; questions. Debt exclusions passed 49 of 50 times. Operating overrides passed 6 of 19. The pattern: residents will fund specific capital projects (schools, library, sewers) but reject general operating asks.</p>
+  <p>Before the June 2026 vote, Marblehead had voted on 70 Proposition 2&frac12; questions since 1988. Debt exclusions passed 49 of 50 times. Operating overrides passed 6 of 19. The pattern: residents would fund specific capital projects (schools, library, sewers) but reject general operating asks.</p>
 
   <div class="history-timeline">
     <div class="history-event">
@@ -430,7 +459,7 @@ og_url: https://marbleheaddata.org/2026-override/
     </div>
     <div class="history-event">
       <p class="year">June 9, 2026 &middot; Three-tier operating override + Question 4 trash</p>
-      <p>$9M / $12M / $15M tiered structure, plus a $2.3M curbside trash question. See section 5 for the result.</p>
+      <p>$9M / $12M / $15M tiered structure, plus a $2.3M curbside trash question. All four passed; see <a href="#the-result">section 5</a>.</p>
     </div>
   </div>
 
@@ -448,16 +477,49 @@ og_url: https://marbleheaddata.org/2026-override/
 <section class="archive-section" id="the-result">
   <h2>5. The result</h2>
 
-  <div class="stub-note">
-    Result to be filled in after the Town Clerk posts official numbers. Expected: vote totals by ballot question, turnout, per-precinct breakdown, and comparison to the 2022 and 2023 votes.
-  </div>
+  <p>All four questions passed on June 9, 2026. Under the ballot structure, the highest-dollar override approved prevails, so the $15M Invest tier took effect, along with the trash question. 8,092 voters cast ballots, 47.5% of those registered.<sup class="cite" data-href="/data/town_docs/2026-06-09-Town-Election-Unofficial-Results.docx" data-source="Marblehead Town Clerk, Town Election Unofficial Results, June 9, 2026 (local copy)"></sup></p>
+
+  <table class="result-table">
+    <thead><tr><th>Question</th><th>Yes</th><th>No</th><th>Blanks</th><th>Yes share</th></tr></thead>
+    <tbody>
+      <tr><td>Q1: $9M override (Partial Restore)</td><td>5,312</td><td>2,653</td><td>127</td><td>66.7%</td></tr>
+      <tr><td>Q2: $12M override (Build)</td><td>4,928</td><td>2,988</td><td>136</td><td>62.3%</td></tr>
+      <tr><td>Q3: $15M override (Invest)</td><td>4,278</td><td>3,594</td><td>220</td><td>54.3%</td></tr>
+      <tr><td>Q4: $2.3M trash</td><td>5,326</td><td>2,580</td><td>186</td><td>67.4%</td></tr>
+    </tbody>
+  </table>
+  <p class="result-note">Yes share is yes votes as a percentage of yes plus no, excluding blanks. Tallies are unofficial pending certification. One quirk in the Clerk's sheet: the Question 2 precinct 4 column totals 1,240 ballots against the 1,280 reported for every other question.</p>
+
+  <p>Support narrowed as the dollar amount rose: 66.7% yes at $9M, 62.3% at $12M, 54.3% at $15M. Every tier passed in all six precincts. Precinct 6 had both the highest turnout (52.6%) and the strongest yes vote on every question.</p>
+
+  <table class="result-table">
+    <thead><tr><th>Turnout</th><th>P1</th><th>P2</th><th>P3</th><th>P4</th><th>P5</th><th>P6</th><th>Total</th></tr></thead>
+    <tbody>
+      <tr><td>Ballots cast</td><td>1,419</td><td>1,361</td><td>1,232</td><td>1,280</td><td>1,337</td><td>1,463</td><td>8,092</td></tr>
+      <tr><td>Of registered</td><td>48.1%</td><td>45.8%</td><td>44.9%</td><td>45.3%</td><td>48.3%</td><td>52.6%</td><td>47.5%</td></tr>
+    </tbody>
+  </table>
+
+  <p>Against the two recent failures: the 2022 school override drew 1,802 yes to 3,929 no (31.4% yes) and the 2023 general government override 2,996 yes to 3,414 no (46.7% yes). In 2026 the top tier cleared with 54.3% and the smallest with 66.7%. Votes cast on the override question grew from 5,731 in 2022 and 6,410 in 2023 to 7,872 in 2026 (Question 3, yes plus no).</p>
+
+  <h3>Contested races</h3>
+  <ul>
+    <li><strong>Select Board</strong> (two seats): Erin Marie Noonan (4,776) and Rossana Ferrante (4,323) elected; Jennifer Schaeffner (2,562).</li>
+    <li><strong>Moderator</strong>: John G. Attridge (5,038) over Peter Jaffe (2,082).</li>
+    <li><strong>School Committee</strong> (two seats): Melissa Marie Clucas (5,217) and Ann Marie Jordan (5,007) elected; Sarah A. Fox (1,892).</li>
+    <li><strong>Housing Authority</strong>: Jeffrey Richard Weeden (3,108) over Jean R. Eldridge (3,041), a 67-vote margin.</li>
+    <li><strong>Cemetery Commission, two-year unexpired term</strong>: Sally Bull Sands (3,605) over Rosa A. McCarthy (2,416).</li>
+    <li><strong>Recreation and Park Commission</strong> (five seats, six candidates): Christopher E. Kennedy (4,632), Shelly Curran Bedrossian (4,217), Larry J. Simpson (4,017), Michael Ryan McCarthy (3,951), and Karin Linnea Ernst (3,894) elected; Kenneth S. Klaiman (2,477).</li>
+  </ul>
 </section>
 
 <section class="archive-section" id="what-happened-next">
   <h2>6. What happened next</h2>
 
+  <p>With Question 3 approved, the FY27 budget adopted at the May 4 Town Meeting is funded as voted; the no-override contingency budget does not take effect. The override permanently raises the levy limit beginning with FY27 tax bills. Question 4 moves curbside trash collection onto the tax levy, so the Board of Health's fallback flat fee of roughly $281 per household does not apply.</p>
+
   <div class="stub-note">
-    This section will be updated as decisions land. Watch <a href="/meetings/">/meetings/</a> for the Select Board and Finance Committee meetings that follow the vote.
+    Implementation decisions land here as they happen. Watch <a href="/meetings/">/meetings/</a> for the Select Board and Finance Committee meetings that follow the vote.
   </div>
 </section>
 
