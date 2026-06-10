@@ -1,34 +1,86 @@
 ---
 title: "Marblehead Budget Data"
-community_pulse: "off-sections"
 scripts: [citations]
-og_title: "Marblehead Budget Data: the override in one page"
-og_description: "Two ballot questions, three override tiers, an $8.47M deficit. What's on the June 9 ballot, what it costs, why there's a gap, and what happens if it fails."
+og_title: "Marblehead Budget Data"
+og_description: "Open data on Marblehead's town and school finances. Spending, debt, meetings, and how to take part."
 og_url: https://marbleheaddata.org/
 ---
 <style>
-  /* === Scrolling infographic homepage === */
-
-  /* Full-viewport scroll-stops */
-  .home-hero,
-  .home-stop {
+  /* Hero block */
+  .home-hero {
     box-sizing: border-box;
-    min-height: clamp(540px, 92vh, 900px);
+    padding: 48px 0 32px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 56px 0;
-    position: relative;
   }
-  @media (max-width: 600px) {
-    .home-hero,
-    .home-stop {
-      min-height: auto;
-      padding: 48px 0 40px;
-    }
+  @media (min-width: 700px) {
+    .home-hero { padding: 64px 0 48px; }
   }
 
-  /* Alternating tint for visual rhythm */
+  .home-eye {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 18px;
+  }
+  .home-eye .dot { color: var(--c-buoy); margin: 0 6px; }
+
+  .home-big {
+    font-size: clamp(64px, 12vw, 144px);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin: 0 0 22px;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .home-big--cost { color: var(--c-buoy); }
+
+  .home-cap {
+    font-size: clamp(17px, 2.4vw, 22px);
+    line-height: 1.35;
+    color: var(--text);
+    margin: 0 0 14px;
+    max-width: 640px;
+    font-weight: 500;
+  }
+  .home-cap-sub {
+    font-size: clamp(13px, 1.6vw, 15px);
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0 0 22px;
+    max-width: 620px;
+  }
+
+  .home-deeper {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--c-teal);
+    border-radius: 999px;
+    padding: 10px 18px;
+    text-decoration: none;
+    align-self: flex-start;
+    transition: filter 0.15s ease, transform 0.12s ease;
+  }
+  .home-deeper:hover { filter: brightness(1.08); }
+  .home-deeper:active { transform: scale(0.98); }
+  .home-deeper::after {
+    content: "\2192";
+    transition: transform 0.15s ease;
+  }
+  .home-deeper:hover::after { transform: translateX(3px); }
+
+  /* Five-tile block */
+  .home-stop {
+    box-sizing: border-box;
+    padding: 40px 0;
+  }
   .home-stop--tinted {
     background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
     border-top: 1px solid color-mix(in srgb, var(--c-navy) 10%, transparent);
@@ -38,805 +90,93 @@ og_url: https://marbleheaddata.org/
     padding-left: calc(50vw - 50%);
     padding-right: calc(50vw - 50%);
   }
-
-  /* Eyebrow label */
-  .home-eye {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-    color: var(--text-subtle);
-    margin: 0 0 28px;
-  }
-  .home-eye .dot { color: var(--c-buoy); margin: 0 6px; }
-
-  /* Giant number */
-  .home-big {
-    font-size: clamp(64px, 12vw, 144px);
-    line-height: 0.98;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    margin: 0 0 32px;
-    color: var(--text);
-    font-variant-numeric: tabular-nums;
-  }
-  .home-big--cost { color: var(--c-buoy); }
-  .home-big--teal { color: var(--c-teal); }
-
-  /* One-line caption beneath the giant number */
-  .home-cap {
-    font-size: clamp(17px, 2.4vw, 22px);
-    line-height: 1.35;
-    color: var(--text);
-    margin: 0 0 28px;
-    max-width: 640px;
-    font-weight: 500;
-  }
-  .home-cap-sub {
-    font-size: clamp(13px, 1.6vw, 15px);
-    color: var(--text-muted);
-    line-height: 1.55;
-    margin: 16px 0 24px;
-    max-width: 620px;
-  }
-
-  /* Deep-dive button */
-  .home-deeper {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--c-teal);
-    text-decoration: none;
-    margin-top: 20px;
-    align-self: flex-start;
-  }
-  .home-deeper::after {
-    content: "\2192";
-    transition: transform 0.15s ease;
-  }
-  .home-deeper:hover::after { transform: translateX(3px); }
-
-  /* === Hero === */
-  .home-hero {
-    text-align: center;
-    align-items: center;
-  }
-  .home-hero h1 {
-    font-size: clamp(24px, 4vw, 38px);
-    line-height: 1.15;
-    margin: 0 0 8px;
-    max-width: 720px;
-    letter-spacing: -0.01em;
-    color: var(--text);
-  }
-  .home-countdown {
-    font-size: clamp(120px, 22vw, 240px);
-    line-height: 0.85;
-    font-weight: 800;
-    letter-spacing: -0.05em;
-    margin: 12px 0 4px;
-    color: var(--c-buoy);
-    font-variant-numeric: tabular-nums;
-  }
-  .home-countdown.is-text { font-size: clamp(48px, 8vw, 96px); }
-  .home-countdown-unit {
-    font-size: clamp(18px, 2.6vw, 24px);
-    color: var(--text);
-    font-weight: 600;
-    margin: 0 0 18px;
-    letter-spacing: 0.4px;
-  }
-  .home-date {
-    font-size: clamp(14px, 1.8vw, 17px);
-    color: var(--text-muted);
-    margin: 0 0 28px;
-  }
-  .home-date strong { color: var(--text); }
-  .home-cta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 0;
-  }
-  .home-cta a {
-    display: inline-block;
-    padding: 13px 22px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    line-height: 1;
-  }
-  .home-cta a.primary { background: var(--c-navy); color: #fff; }
-  .home-cta a.secondary {
-    background: var(--surface);
-    color: var(--text);
-    border: 1px solid var(--border);
-  }
-  .home-cta a:hover { filter: brightness(0.95); }
-
-  /* === Deficit driver list (horizontal bar per driver) === */
-  .driver-list {
-    list-style: none;
-    margin: 8px 0 16px;
-    padding: 0;
-    max-width: 760px;
-    width: 100%;
-  }
-  .driver-list li {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "label amt"
-      "bar bar"
-      "gloss gloss";
-    column-gap: 14px;
-    row-gap: 6px;
-    padding: 16px 0 18px;
-    border-bottom: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
-  }
-  .driver-list li:last-child { border-bottom: none; }
-  .driver-label {
-    grid-area: label;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1.3;
-  }
-  .driver-amt {
-    grid-area: amt;
-    font-size: 18px;
-    font-weight: 800;
-    font-variant-numeric: tabular-nums;
-    color: var(--c-buoy);
-    white-space: nowrap;
-  }
-  .driver-bar {
-    grid-area: bar;
-    height: 8px;
-    background: color-mix(in srgb, var(--text) 8%, transparent);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .driver-bar-fill {
-    height: 100%;
-    background: var(--c-buoy);
-    border-radius: 4px;
-  }
-  .driver-gloss {
-    grid-area: gloss;
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.5;
-    margin: 2px 0 0;
-  }
-
-  /* === Contested-races list (homepage candidates stop) === */
-  .race-list {
-    list-style: none;
-    margin: 8px 0 16px;
-    padding: 0;
-    max-width: 640px;
-    width: 100%;
-  }
-  .race-list li {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: 14px;
-    align-items: baseline;
-    padding: 14px 0;
-    border-bottom: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
-  }
-  .race-list li:last-child { border-bottom: none; }
-  .race-list-label {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1.3;
-  }
-  .race-list-count {
-    font-size: 15px;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
-    color: var(--text-muted);
-    white-space: nowrap;
-  }
-
-  /* === Cost slider === */
-  .cost-slider-wrap {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 22px 22px 24px;
-    margin: 4px 0 18px;
-    box-shadow: var(--shadow-sm);
-    max-width: 720px;
-    width: 100%;
-  }
-  .cost-slider-row {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 14px;
-    align-items: baseline;
-    margin: 0 0 12px;
-  }
-  .cost-slider-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    color: var(--text-subtle);
-  }
-  .cost-slider-value {
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--text);
-    font-variant-numeric: tabular-nums;
-  }
-  .cost-slider {
-    width: 100%;
-    accent-color: var(--c-teal);
-  }
-  .cost-tiers-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 22px 0 0;
-  }
-  .cost-tier {
-    text-align: center;
-    padding: 14px 6px 12px;
-    border-radius: 8px;
-    border-top: 4px solid var(--series-tier-1);
-    background: color-mix(in srgb, var(--c-fog) 60%, transparent);
-  }
-  .cost-tier[data-tier="1"] { border-top-color: var(--series-tier-1); }
-  .cost-tier[data-tier="2"] { border-top-color: var(--series-tier-2); }
-  .cost-tier[data-tier="3"] { border-top-color: var(--series-tier-3); }
-  .cost-tier-name {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    color: var(--text-subtle);
-    margin: 0 0 6px;
-  }
-  .cost-tier-num {
-    font-size: clamp(26px, 4.2vw, 40px);
-    font-weight: 800;
-    line-height: 1;
-    color: var(--text);
-    font-variant-numeric: tabular-nums;
-    margin: 0;
-  }
-  .cost-tier-unit {
-    font-size: 11px;
-    color: var(--text-muted);
-    margin: 4px 0 0;
-  }
-
-  /* === Ballot stop === */
-  .ballot-viz {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin: 8px 0 12px;
-    max-width: 760px;
-    width: 100%;
-  }
-  .ballot-bar {
-    display: flex;
-    align-items: stretch;
-    height: 56px;
-    border-radius: 8px;
-    overflow: hidden;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-sm);
-  }
-  .ballot-bar-fill {
-    background: var(--series-tier-1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 12px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 14px;
-    white-space: nowrap;
-    font-variant-numeric: tabular-nums;
-    min-width: clamp(80px, 18vw, 120px);
-    flex-shrink: 0;
-  }
-  .ballot-bar[data-tier="q1"] .ballot-bar-fill { background: var(--series-tier-1); }
-  .ballot-bar[data-tier="q2"] .ballot-bar-fill { background: var(--series-tier-2); }
-  .ballot-bar[data-tier="q3"] .ballot-bar-fill { background: var(--series-tier-3); }
-  .ballot-bar[data-tier="q4"] .ballot-bar-fill { background: var(--c-brass); }
-  .ballot-bar-label {
-    flex: 1;
-    min-width: 0;
-    padding: 0 14px;
-    font-size: 14px;
-    color: var(--text);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2px;
-    line-height: 1.25;
-  }
-  .ballot-bar-label strong { font-weight: 700; }
-  .ballot-bar-label .small {
-    font-size: 12px;
-    color: var(--text-muted);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  @media (max-width: 600px) {
-    .ballot-bar { height: auto; min-height: 56px; }
-    .ballot-bar-label { padding: 8px 12px; }
-    .ballot-bar-label .small { white-space: normal; }
-  }
-
-  /* === If-fails stop === */
-  .fails-row {
+  .home-tiles {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
-    margin: 8px 0 26px;
-    max-width: 760px;
-    width: 100%;
+    gap: 14px;
   }
   @media (min-width: 600px) {
-    .fails-row { grid-template-columns: repeat(3, 1fr); }
+    .home-tiles { grid-template-columns: 1fr 1fr; }
   }
-  .fails-stat .num {
-    font-size: clamp(48px, 9vw, 80px);
-    font-weight: 800;
-    line-height: 1;
-    color: var(--c-buoy);
-    letter-spacing: -0.03em;
-    font-variant-numeric: tabular-nums;
-    margin: 0 0 6px;
-  }
-  .fails-stat .label {
-    font-size: 14px;
-    color: var(--text);
-    line-height: 1.4;
-    margin: 0;
-  }
-  .fails-stat .label strong { font-weight: 700; display: block; }
-  .fails-bars {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    max-width: 620px;
-    width: 100%;
-  }
-  .fails-bar-row {
-    display: grid;
-    grid-template-columns: 130px 1fr 56px;
-    gap: 12px;
-    align-items: center;
-    font-size: 13px;
-  }
-  .fails-bar-name { color: var(--text); }
-  .fails-bar-track {
-    height: 10px;
-    background: var(--divider);
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  .fails-bar-fill {
-    height: 100%;
-    background: var(--c-buoy);
-    border-radius: 5px;
-  }
-  .fails-bar-pct {
-    text-align: right;
-    color: var(--text-muted);
-    font-variant-numeric: tabular-nums;
+  @media (min-width: 1000px) {
+    .home-tiles { grid-template-columns: repeat(3, 1fr); }
   }
 
-  /* === Debate stop === */
-  .debate-quote {
-    font-size: clamp(28px, 5vw, 46px);
-    line-height: 1.15;
-    font-weight: 700;
-    letter-spacing: -0.015em;
-    color: var(--text);
-    margin: 0;
-    max-width: 740px;
-  }
-  .debate-quote span {
-    color: var(--c-teal);
-  }
-  .debate-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-    margin: 28px 0 0;
-    max-width: 760px;
-    width: 100%;
-  }
-  @media (min-width: 720px) {
-    .debate-cards { grid-template-columns: 1fr 1fr; }
-  }
-  .debate-card {
-    display: block;
-    padding: 22px 24px;
+  .home-tile {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 24px 20px;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     text-decoration: none;
     color: var(--text);
-    box-shadow: var(--shadow-sm);
-    transition: border-color 0.15s ease, transform 0.15s ease;
+    transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+    min-height: 180px;
   }
-  .debate-card:hover {
+  .home-tile:hover {
     border-color: var(--c-teal);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
   }
-  .debate-card .card-eye {
+  .home-tile .tile-eye {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
     text-transform: uppercase;
     color: var(--c-teal);
     margin: 0 0 8px;
   }
-  .debate-card h3 {
-    font-size: 22px;
-    margin: 0 0 8px;
-    line-height: 1.2;
-    color: var(--text);
-  }
-  .debate-card p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--text-muted);
-    margin: 0;
-  }
-
-  /* === Tools (footer directory) === */
-  .home-tools {
-    min-height: auto;
-    padding: 56px 0 36px;
-  }
-  .home-tools h2 {
-    font-size: 22px;
-    margin: 0 0 14px;
-    color: var(--text);
-  }
-  .home-tools-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-  @media (min-width: 720px) {
-    .home-tools-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  .home-tools-grid a {
-    display: block;
-    padding: 12px 14px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    text-decoration: none;
-    color: var(--text-muted);
-    font-size: 13px;
-    line-height: 1.4;
-  }
-  .home-tools-grid a:hover { border-color: var(--c-teal); }
-  .home-tools-grid a strong {
-    color: var(--c-teal);
-    display: block;
+  .home-tile h3 {
+    font-family: 'Libre Franklin', system-ui, sans-serif;
     font-weight: 700;
-    margin-bottom: 2px;
+    font-size: 21px;
+    line-height: 1.2;
+    margin: 0 0 10px;
+    color: var(--text);
+  }
+  .home-tile p {
     font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
   }
 </style>
 
 <section class="home-hero">
-  <p class="home-eye">Marblehead, MA <span class="dot">&bull;</span> FY27 override</p>
-  <h1>Two ballot questions. Three tiers. One vote.</h1>
-  <div class="home-countdown" id="countdown">25</div>
-  <p class="home-countdown-unit" id="countdown-unit">days until the ballot</p>
-  <p class="home-date"><strong>Tuesday, June 9, 2026</strong> &middot; Annual Town Election</p>
-  <p class="home-cta">
-    <a class="primary" href="#ballot">See the ballot</a>
-    <a class="secondary" href="#cost">What does it cost me?</a>
-  </p>
+  <p class="home-eye">FY26 spending so far <span class="dot">&middot;</span> as of May 29</p>
+  <p class="home-big home-big--cost">$98.1M</p>
+  <p class="home-cap">paid out across departments, vendors, and capital projects this fiscal year.</p>
+  <p class="home-cap-sub">$127.3M annual operating budget. Drill into every line, by fund, department, category, division, or object.</p>
+  <a class="home-deeper" href="/checkbook/">Open the Checkbook</a>
 </section>
 
-<a href="marblehead-101/" class="featured-card">
-  <div class="featured-card-eyebrow">New here?</div>
-  <h2 class="featured-card-title">Marblehead 101</h2>
-  <p class="featured-card-desc">A plain-English primer on how the town works, where the money goes, and how a resident takes part.</p>
-  <p class="featured-card-meta">8 short chapters <span class="dot">&middot;</span> about 25 min total</p>
-  <span class="featured-card-cta">Start the primer &rarr;</span>
-</a>
-
-<section class="home-stop home-stop--tinted" id="deficit">
-  <p class="home-eye">FY27 budget &bull; the why</p>
-  <div class="home-big home-big--cost">$8.47M</div>
-  <p class="home-cap">The gap between FY27 revenue and expenses, after the levy grows 2.5% and one-time reserves run out.</p>
-
-  <ul class="driver-list" aria-label="Five drivers of the 8.47 million dollar FY27 gap, summing to 11.2 million in gross cost growth, offset by 2.7 million in revenue growth.">
-    <li>
-      <div class="driver-label">One-time reserves used up</div>
-      <div class="driver-amt">$4.0M</div>
-      <div class="driver-bar"><div class="driver-bar-fill" style="width: 100%;"></div></div>
-      <p class="driver-gloss">FY26 was balanced by drawing down $4M of "free cash" (prior-years' surplus the state certifies each fall). That source can't repeat in FY27.</p>
-    </li>
-    <li>
-      <div class="driver-label">Contracted raises and Essex Tech</div>
-      <div class="driver-amt">$3.2M</div>
-      <div class="driver-bar"><div class="driver-bar-fill" style="width: 80%;"></div></div>
-      <p class="driver-gloss">Annual step increases in negotiated salaries, plus the vocational-school assessment growing as more Marblehead students attend Essex North Shore Tech.</p>
-    </li>
-    <li>
-      <div class="driver-label">Health insurance premium up about 11%</div>
-      <div class="driver-amt">$1.7M</div>
-      <div class="driver-bar"><div class="driver-bar-fill" style="width: 41%;"></div></div>
-      <p class="driver-gloss">The town's share of the <abbr class="g" title="Group Insurance Commission">GIC</abbr> group insurance plan covering employees and retirees.</p>
-    </li>
-    <li>
-      <div class="driver-label">New trash contract and pension</div>
-      <div class="driver-amt">$1.3M</div>
-      <div class="driver-bar"><div class="driver-bar-fill" style="width: 33%;"></div></div>
-      <p class="driver-gloss">A new curbside trash and recycling contract starts FY27, plus the town's mandatory pension payment is up 9% on the actuary's fixed schedule.</p>
-    </li>
-    <li>
-      <div class="driver-label">Local fees and excise tax projected down</div>
-      <div class="driver-amt">$1.0M</div>
-      <div class="driver-bar"><div class="driver-bar-fill" style="width: 25%;"></div></div>
-      <p class="driver-gloss">Motor-vehicle excise tax, building-permit fees, and other non-property-tax local revenue is projected to drop in FY27.</p>
-    </li>
-  </ul>
-
-  <p class="home-cap-sub">Offset by $2.7M in levy growth (the 2.5% Prop 2&frac12; cap plus new construction) and other revenue. The remainder is the $8.47M gap.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026_State_of_the_Town.pdf" data-source="2026 State of the Town presentation, January 28, 2026"></sup></p>
-
-  <a class="home-deeper" href="no-override-budget.html#fy27-gap-calculated">Full deficit waterfall</a>
-</section>
-
-<section class="home-stop" id="cost">
-  <p class="home-eye">Year-3 cost &bull; at your home</p>
-  <div class="home-big home-big--teal" id="costNumber">$133</div>
-  <p class="home-cap"><span id="costTierLabel">Tier 2 ($12M, Build)</span> per month at a home assessed at <span id="costHomeLabel">$1,291,507</span> &bull; <span id="costAnnual">$1,590</span>/year.</p>
-
-  <div class="cost-slider-wrap">
-    <div class="cost-slider-row">
-      <span class="cost-slider-label">Your home value</span>
-      <span class="cost-slider-value" id="costHomeValue">$1,291,507</span>
-    </div>
-    <input type="range" class="cost-slider" id="costHomeSlider"
-           min="400000" max="5000000" step="10000" value="1291507"
-           aria-label="Adjust your assessed home value">
-
-    <div class="cost-tiers-row">
-      <div class="cost-tier" data-tier="1">
-        <p class="cost-tier-name">Tier 1 &middot; $9M</p>
-        <p class="cost-tier-num" id="tier1mo">$99</p>
-        <p class="cost-tier-unit">per month</p>
-      </div>
-      <div class="cost-tier" data-tier="2">
-        <p class="cost-tier-name">Tier 2 &middot; $12M</p>
-        <p class="cost-tier-num" id="tier2mo">$133</p>
-        <p class="cost-tier-unit">per month</p>
-      </div>
-      <div class="cost-tier" data-tier="3">
-        <p class="cost-tier-name">Tier 3 &middot; $15M</p>
-        <p class="cost-tier-num" id="tier3mo">$166</p>
-        <p class="cost-tier-unit">per month</p>
-      </div>
-    </div>
-  </div>
-
-  <a class="home-deeper" href="charts/override_calculator.html">Full calculator (year-by-year, share of income)</a>
-</section>
-
-<section class="home-stop home-stop--tinted" id="ballot">
-  <p class="home-eye">June 9 ballot</p>
-  <div class="home-big">4 questions <span style="color:var(--text-muted); font-weight:500;">/</span> 3 override tiers</div>
-  <p class="home-cap">Vote yes on each override tier you'd accept. If more than one passes, the highest dollar amount prevails. Question 4 (curbside trash) is independent.</p>
-
-  <div class="ballot-viz">
-    <div class="ballot-bar" data-tier="q1">
-      <div class="ballot-bar-fill" style="width: 36%;">Q1 &middot; $9M</div>
-      <div class="ballot-bar-label"><strong>Partial restore</strong><span class="small">restores most budget cuts</span></div>
-    </div>
-    <div class="ballot-bar" data-tier="q2">
-      <div class="ballot-bar-fill" style="width: 48%;">Q2 &middot; $12M</div>
-      <div class="ballot-bar-label"><strong>Build</strong><span class="small">restores cuts, partial reserves</span></div>
-    </div>
-    <div class="ballot-bar" data-tier="q3">
-      <div class="ballot-bar-fill" style="width: 60%;">Q3 &middot; $15M</div>
-      <div class="ballot-bar-label"><strong>Invest</strong><span class="small">restores cuts, rebuilds reserves, funds growth</span></div>
-    </div>
-    <div class="ballot-bar" data-tier="q4">
-      <div class="ballot-bar-fill" style="width: 9%;">Q4 &middot; $2.3M</div>
-      <div class="ballot-bar-label"><strong>Curbside trash</strong><span class="small">levy carve-out, or a ~$281/household flat fee</span></div>
-    </div>
-  </div>
-
-  <a class="home-deeper" href="whats-on-the-ballot.html">Sample ballot, candidates, and the 24 other races</a>
-</section>
-
-<section class="home-stop" id="candidates">
-  <p class="home-eye">June 9 ballot &bull; who's running</p>
-  <div class="home-big">6 contested races <span style="color:var(--text-muted); font-weight:500;">/</span> 18 candidates</div>
-  <p class="home-cap">Select Board, School Committee, Moderator, Recreation &amp; Park, Cemetery, and Housing Authority all have more candidates than seats this year.</p>
-
-  <ul class="race-list" aria-label="Six contested races in the June 9 election">
-    <li><span class="race-list-label">Select Board</span><span class="race-list-count">3 for 2 seats</span></li>
-    <li><span class="race-list-label">School Committee</span><span class="race-list-count">3 for 2 seats</span></li>
-    <li><span class="race-list-label">Moderator</span><span class="race-list-count">2 for 1 seat</span></li>
-    <li><span class="race-list-label">Recreation &amp; Park Commission</span><span class="race-list-count">6 for 5 seats</span></li>
-    <li><span class="race-list-label">Cemetery Commission</span><span class="race-list-count">2 for 1 seat</span></li>
-    <li><span class="race-list-label">Housing Authority</span><span class="race-list-count">2 for 1 seat</span></li>
-  </ul>
-
-  <a class="home-deeper" href="where-candidates-stand.html">Candidate positions and sample-ballot picker</a>
-</section>
-
-<section class="home-stop" id="fails">
-  <p class="home-eye">If the override fails</p>
-  <div class="home-big home-big--cost" style="font-size: clamp(48px, 9vw, 96px);">balanced by cuts</div>
-  <p class="home-cap">The town published a no-override budget that closes the $8.47M gap with staffing reductions, the <abbr class="g" title="Other Post-Employment Benefits">OPEB</abbr> retiree healthcare trust eliminated, and the library reduced by 43%.</p>
-
-  <div class="fails-row">
-    <div class="fails-stat">
-      <p class="num">&minus;22</p>
-      <p class="label"><strong>town positions</strong>~12% of general-fund headcount</p>
-    </div>
-    <div class="fails-stat">
-      <p class="num">&minus;18.25</p>
-      <p class="label"><strong>school <abbr class="g" title="Full-Time Equivalents">FTEs</abbr></strong>layoffs + unfilled + stipends</p>
-    </div>
-    <div class="fails-stat">
-      <p class="num">&minus;43%</p>
-      <p class="label"><strong>Abbot Library</strong>52 to 24 hours/week, decertification at risk</p>
-    </div>
-  </div>
-
-  <div class="fails-bars" aria-label="Department reductions in the no-override budget">
-    <div class="fails-bar-row">
-      <span class="fails-bar-name">Library</span>
-      <div class="fails-bar-track"><div class="fails-bar-fill" style="width: 100%;"></div></div>
-      <span class="fails-bar-pct">&minus;43%</span>
-    </div>
-    <div class="fails-bar-row">
-      <span class="fails-bar-name">Community Dev</span>
-      <div class="fails-bar-track"><div class="fails-bar-fill" style="width: 60%;"></div></div>
-      <span class="fails-bar-pct">&minus;59%</span>
-    </div>
-    <div class="fails-bar-row">
-      <span class="fails-bar-name"><abbr class="g" title="Other Post-Employment Benefits">OPEB</abbr> trust</span>
-      <div class="fails-bar-track"><div class="fails-bar-fill" style="width: 50%;"></div></div>
-      <span class="fails-bar-pct">&minus;100%</span>
-    </div>
-    <div class="fails-bar-row">
-      <span class="fails-bar-name">Public Buildings</span>
-      <div class="fails-bar-track"><div class="fails-bar-fill" style="width: 22%;"></div></div>
-      <span class="fails-bar-pct">&minus;38%</span>
-    </div>
-    <div class="fails-bar-row">
-      <span class="fails-bar-name">Town Clerk</span>
-      <div class="fails-bar-track"><div class="fails-bar-fill" style="width: 10%;"></div></div>
-      <span class="fails-bar-pct">&minus;18%</span>
-    </div>
-    <div class="fails-bar-row">
-      <span class="fails-bar-name">Council on Aging</span>
-      <div class="fails-bar-track"><div class="fails-bar-fill" style="width: 6%;"></div></div>
-      <span class="fails-bar-pct">&minus;9%</span>
-    </div>
-  </div>
-
-  <a class="home-deeper" href="no-override-budget.html">Full no-override budget (line by line)</a>
-</section>
-
-<section class="home-stop home-stop--tinted" id="debate">
-  <p class="home-eye">where reasonable people disagree</p>
-  <p class="debate-quote">Same gap.<br><span>Different reads.</span></p>
-  <p class="home-cap-sub">The $8.47M math is largely agreed: it's revenue minus expense, line by line. Whether the budget that produces it is bloated or the floor for the services Marblehead expects is the actual debate. The site presents the strongest version of each case.</p>
-
-  <div class="debate-cards">
-    <a class="debate-card" href="explore.html">
-      <p class="card-eye">15 questions &middot; 3 answers each</p>
-      <h3>Where do you stand?</h3>
-      <p>Walk the questions one by one. Pick the answer that fits, get a position you can review or share.</p>
+<section class="home-stop home-stop--tinted">
+  <div class="home-tiles">
+    <a class="home-tile" href="/marblehead-101/">
+      <div class="tile-eye">PRIMER</div>
+      <h3>How Marblehead's budget works</h3>
+      <p>Eight short chapters: how the town is run, where money comes from, where it goes, how the gap keeps reappearing.</p>
     </a>
-    <a class="debate-card" href="the-debate.html">
-      <p class="card-eye">6 dividing lines &middot; for &amp; against</p>
-      <h3>Both sides of the debate</h3>
-      <p>The strongest version of each side's case across the six tensions in the FY27 debate.</p>
+    <a class="home-tile" href="/checkbook/">
+      <div class="tile-eye">CHECKBOOK</div>
+      <h3>What the town is spending</h3>
+      <p>FY26 vendor checks and budget pacing, drill-down by department.</p>
+    </a>
+    <a class="home-tile" href="/data/">
+      <div class="tile-eye">DATA</div>
+      <h3>Charts, tables, and source documents</h3>
+      <p>The full catalog: debt, taxes, peer towns, school staffing, voting history.</p>
+    </a>
+    <a class="home-tile" href="/meetings/">
+      <div class="tile-eye">MEETINGS</div>
+      <h3>What the boards are actually talking about</h3>
+      <p>AI-generated summaries of every Select Board, School Committee, and Finance Committee meeting.</p>
+    </a>
+    <a class="home-tile" href="/what-can-we-do.html">
+      <div class="tile-eye">ACT</div>
+      <h3>Questions worth asking</h3>
+      <p>A working list of suggestions and questions for the town's finance staff and boards.</p>
     </a>
   </div>
 </section>
-
-<section class="home-stop home-tools" id="tools">
-  <h2>Data and tools</h2>
-  <div class="home-tools-grid">
-    <a href="charts/town_explorer.html"><strong>Town explorer</strong>Compare all 351 MA towns</a>
-    <a href="charts/deficit_model.html"><strong>Deficit model</strong>Adjust assumptions, see the gap</a>
-    <a href="charts/your_tax_bill.html"><strong>Tax bill split</strong>Where your tax dollars go</a>
-    <a href="charts/enrollment_vs_staffing.html"><strong>Enrollment vs. staffing</strong>School headcount over time</a>
-    <a href="charts/sustainability.html"><strong>Sustainability</strong>10 years of revenue vs. expenses, with tier projections to FY30</a>
-    <a href="browse.html"><strong>Browse all pages</strong>Every page on the site</a>
-  </div>
-</section>
-
-<script>
-  // Live countdown to June 9, 2026
-  (function () {
-    var el = document.getElementById('countdown');
-    var unit = document.getElementById('countdown-unit');
-    if (!el || !unit) return;
-    function update() {
-      var now = new Date();
-      var ballot = new Date(2026, 5, 9); // June 9, 2026 (month is 0-indexed)
-      var msPerDay = 24 * 60 * 60 * 1000;
-      var days = Math.ceil((ballot - now) / msPerDay);
-      if (days > 1) {
-        el.textContent = days;
-        el.classList.remove('is-text');
-        unit.textContent = 'days until the ballot';
-      } else if (days === 1) {
-        el.textContent = 'Tomorrow';
-        el.classList.add('is-text');
-        unit.textContent = 'is ballot day';
-      } else if (days === 0) {
-        el.textContent = 'Today';
-        el.classList.add('is-text');
-        unit.textContent = 'is ballot day';
-      } else {
-        el.textContent = 'Voted';
-        el.classList.add('is-text');
-        unit.textContent = 'see how it went';
-      }
-    }
-    update();
-  })();
-
-  // Interactive cost slider. Anchor numbers from the Town Administrator's
-  // override presentation FINAL (April 15, 2026), Year 3 annual cost at the
-  // average home of $1,291,507.
-  (function () {
-    var slider = document.getElementById('costHomeSlider');
-    if (!slider) return;
-    var homeValueEl = document.getElementById('costHomeValue');
-    var costNumberEl = document.getElementById('costNumber');
-    var costAnnualEl = document.getElementById('costAnnual');
-    var costHomeLabelEl = document.getElementById('costHomeLabel');
-    var t1 = document.getElementById('tier1mo');
-    var t2 = document.getElementById('tier2mo');
-    var t3 = document.getElementById('tier3mo');
-
-    var AVG = 1291507;
-    var Y3 = { 1: 1188, 2: 1590, 3: 1989 };
-
-    function dollars(n) {
-      return '$' + Math.round(n).toLocaleString('en-US');
-    }
-
-    function update() {
-      var v = parseInt(slider.value, 10);
-      var monthlyAt = function (tier) { return Math.round(Y3[tier] * (v / AVG) / 12); };
-      var annualAt = function (tier) { return Math.round(Y3[tier] * (v / AVG)); };
-      homeValueEl.textContent = dollars(v);
-      costHomeLabelEl.textContent = dollars(v);
-      t1.textContent = dollars(monthlyAt(1));
-      t2.textContent = dollars(monthlyAt(2));
-      t3.textContent = dollars(monthlyAt(3));
-      costNumberEl.textContent = dollars(monthlyAt(2));
-      costAnnualEl.textContent = dollars(annualAt(2));
-    }
-    slider.addEventListener('input', update);
-    update();
-  })();
-</script>
