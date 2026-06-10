@@ -2,7 +2,7 @@
 title: "What relief can seniors claim?"
 scripts: [citations, deep-dive]
 og_title: "What relief can seniors claim? (Marblehead)"
-og_description: "Calculator: enter your home value and income to see your Circuit Breaker credit, how the override affects you after relief, and what Article 28 would add. 418 Marblehead seniors claimed the credit in 2022, likely underclaimed."
+og_description: "Calculator: enter your home value and income to see your Circuit Breaker credit, how the adopted June 2026 override affects you after relief, and what Article 28 will add. 418 Marblehead seniors claimed the credit in 2022, likely underclaimed."
 og_url: https://marbleheaddata.org/senior-tax-relief.html
 ---
 <style>
@@ -791,14 +791,14 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
   </details>
 
   <h2 data-stance-section="override-connection" id="override-connection">5. The override connection</h2>
-  <p>For a qualifying Marblehead senior, the combination of the state Circuit Breaker ($2,820 max) and, once the Select Board adopts regulations under the newly enacted H.4225, the local Article 28 exemption (Select Board-set cap, first-year funded at $200,000 town-wide from the overlay) can exceed $4,000 per year in combined relief for households at the lower end of the income range. For a household receiving the full state credit and a modest local exemption, that is more than the roughly $1,500 per year an operating override is projected to add to a median bill.</p>
+  <p>For a qualifying Marblehead senior, the combination of the state Circuit Breaker ($2,820 max) and, once the Select Board adopts regulations under H.4225, the local Article 28 exemption (Select Board-set cap, first-year funded at $200,000 town-wide from the overlay) can exceed $4,000 per year in combined relief for households at the lower end of the income range. For a household receiving the full state credit and a modest local exemption, that is more than the roughly $1,900 per year the adopted $15M operating override adds to a median bill.</p>
 
-  <p>Two points worth holding in mind when reading the override debate:</p>
+  <p>Two points worth holding in mind now that the override has passed:</p>
 
   <div class="card">
     <h3>The Circuit Breaker formula absorbs part of the override</h3>
     <p>Because the credit equals the excess of your property tax over 10% of your income, every dollar the override adds to a qualifying senior's tax bill is a dollar added to the Circuit Breaker credit, up to the $2,820 cap. Seniors not yet at the cap are partially insulated from the override by the state formula itself.</p>
-    <p>In TY2022, the average Marblehead Circuit Breaker credit was $1,054, well below the $2,820 cap. Most claimants have room for the credit to grow if the override passes. But only 418 out of an estimated 1,158 eligible senior households actually claimed it. The insulation only works if you file.</p>
+    <p>In TY2022, the average Marblehead Circuit Breaker credit was $1,054, well below the $2,820 cap. Most claimants have room for the credit to grow now that the override has passed. But only 418 out of an estimated 1,158 eligible senior households actually claimed it. The insulation only works if you file.</p>
   </div>
 
   <div class="card">
@@ -837,17 +837,13 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
 
   <div class="read-next">
     <div class="read-next-label">Read next</div>
-    <a class="read-next-link" href="what-you-can-do.html">
-      <div class="read-next-title">What can you do? &rarr;</div>
-      <div class="read-next-desc">Beyond voting yes or no on the override: who decides what, when residents can input, and how to push for better oversight.</div>
+    <a class="read-next-link" href="/what-can-we-do.html">
+      <div class="read-next-title">What can residents do next? &rarr;</div>
+      <div class="read-next-desc">Concrete ideas residents can act on now that the override has passed: oversight, transparency, and how to push for better follow-through.</div>
     </a>
-    <a class="read-next-link" href="the-debate.html">
-      <div class="read-next-title">Both sides of the override debate &rarr;</div>
-      <div class="read-next-desc">The six tensions in the FY27 debate, with the strongest version of each side's case. A map of where the real disagreements are.</div>
-    </a>
-    <a class="read-next-link" href="what-is-the-override.html">
-      <div class="read-next-title">What is the override? &rarr;</div>
-      <div class="read-next-desc">The three-tier structure, what each tier funds, key terms, and history.</div>
+    <a class="read-next-link" href="/2026-override/">
+      <div class="read-next-title">The 2026 override archive &rarr;</div>
+      <div class="read-next-desc">The four ballot questions, the June 9 result, and the steelmanned arguments on both sides.</div>
     </a>
   </div>
 
@@ -876,9 +872,9 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
   var OVERRIDE_RATES = { 0: 0, 1: 1186.68, 2: 1587.17, 3: 1985.39 };
 
   var TIER_META = {
-    1: { label: 'Tier 1 ($9M), Partial Restore', swatch: 'var(--series-tier-1)' },
-    2: { label: 'Tier 2 ($12M), Build',         swatch: 'var(--series-tier-2)' },
-    3: { label: 'Tier 3 ($15M), Invest',    swatch: 'var(--series-tier-3)' },
+    1: { label: '$9M tier (comparison)',  swatch: 'var(--series-tier-1)' },
+    2: { label: '$12M tier (comparison)', swatch: 'var(--series-tier-2)' },
+    3: { label: 'Adopted $15M override',  swatch: 'var(--series-tier-3)' },
   };
 
   // === State ===
@@ -1112,14 +1108,14 @@ og_url: https://marbleheaddata.org/senior-tax-relief.html
 
     if (!base.cbEligible) {
       // Not eligible for CB at all
-      ohtml += '<div class="sr-override-note">You do not currently qualify for the Circuit Breaker, so the override cost is the same as for any homeowner. See the <a href="charts/override_calculator.html">override calculator</a> for the full breakdown.</div>';
+      ohtml += '<div class="sr-override-note">You do not currently qualify for the Circuit Breaker, so the override cost is the same as for any homeowner. See <a href="/2026-override/">the 2026 override archive</a> for the full breakdown of what the adopted $15M tier adds to a typical bill.</div>';
       elOverrideResults.innerHTML = ohtml;
       return;
     }
 
     if (!anyAbsorption) {
       // CB is already capped, no absorption possible
-      ohtml += '<div class="sr-override-note">Your Circuit Breaker credit is already at the $2,820 cap, so the override passes through at full cost, the same as for any homeowner. See the <a href="charts/override_calculator.html">override calculator</a>.</div>';
+      ohtml += '<div class="sr-override-note">Your Circuit Breaker credit is already at the $2,820 cap, so the override passes through at full cost, the same as for any homeowner. See <a href="/2026-override/">the 2026 override archive</a>.</div>';
       ohtml += '<div class="sr-override-note" style="margin-top:8px;">At a lower assessed value, the credit has room to grow and absorbs part or all of the override. Try a lower value above to see the effect.</div>';
       elOverrideResults.innerHTML = ohtml;
       return;
