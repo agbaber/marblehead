@@ -142,6 +142,7 @@ og_url: https://marbleheaddata.org/checkbook/
     white-space: nowrap;
   }
   .bva-axis-track span:first-child { left: 0; transform: none; }
+  .bva-axis-track span:nth-child(2) { left: 50%; }
   .bva-axis-track span:last-child { left: 100%; transform: translateX(-100%); }
   .bva-pager {
     display: flex; justify-content: space-between; align-items: center;
@@ -993,10 +994,17 @@ og_url: https://marbleheaddata.org/checkbook/
 
     // Cross-tab panels
     var dims = SUB_DIMS[current.dim] || [];
+    // Skip a sub-dim card whose only item echoes a parent already in the
+    // drill stack. Without this, drilling Fund > Dept > Division surfaces a
+    // "BY FUND" card with one row matching the parent fund and a "BY DEPT"
+    // card with one row matching the parent department - pure noise.
+    var parentKeys = {};
+    stack.slice(0, -1).forEach(function (s) { parentKeys[s.dim] = s.key; });
     dims.forEach(function (subDimKey) {
       var items = dd[subDimKey] || [];
       if (items.length === 0) return;
       var targetDim = subDimKey.replace('by_', '');
+      if (items.length === 1 && parentKeys[targetDim] === items[0].name) return;
       // When showing categories inside a department/fund drill, prefer line-item targets
       // for individual category rows (renderMiniBars handles the compound lookup).
       var contextDim = (targetDim === 'category' && (current.dim === 'department' || current.dim === 'fund')) ? current.dim : null;
