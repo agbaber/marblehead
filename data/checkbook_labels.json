@@ -1,5 +1,5 @@
 {
- "_README": "Curated display annotations for the FY26 checkbook. vendor_aliases maps raw ledger vendor strings to a canonical raw string (merging spelling variants and repairing names the portal export doubled or truncated at 50 characters); the underlying CSV is unchanged and remains the source of record. vendor_notes are one-line identifications shown in the Top vendors card; each is verifiable from the funds the vendor is paid from in the CSV or from the page's Notes section. fund_labels and division_overrides re-format the ledger's own Town Meeting article codes (A11 2022 = Article 11, 2022 Annual Town Meeting); they add no information beyond expanding the code, except where marked. description_patterns rewrites cryptic AP-side invoice strings into human-readable labels at render time (regex with $1/$2/... capture group refs); the raw ledger string stays in the CSV and on row hover. fund_families assigns each of the 105 funds to a family by name pattern, hand reviewed.",
+ "_README": "Curated display annotations for the FY26 checkbook. vendor_aliases maps raw ledger vendor strings to a canonical raw string (merging spelling variants and repairing names the portal export doubled or truncated at 50 characters); the underlying CSV is unchanged and remains the source of record. vendor_notes are one-line identifications shown in the Top vendors card; each is verifiable from the funds the vendor is paid from in the CSV or from the page's Notes section. fund_labels and division_overrides re-format the ledger's own Town Meeting article codes (A11 2022 = Article 11, 2022 Annual Town Meeting); they add no information beyond expanding the code, except where marked. description_patterns rewrites cryptic AP-side invoice strings into human-readable labels at render time (regex with $1/$2/... capture group refs); the raw ledger string stays in the CSV and on row hover. label_notes adds a short explanation shown on hover for opaque budget-portal labels (Other Expense, Other Governmental, Districtwide, OFU, etc.). fund_families assigns each of the 105 funds to a family by name pattern, hand reviewed.",
  "as_of": "2026-06-10",
  "families": [
   {
@@ -70,6 +70,16 @@
   "A34 2015 NEW TRANSF STATION": "2015 ATM Art. 34: New Transfer Station",
   "A35 2021 ABBOT LIBRARY RENOV": "2021 ATM Art. 35: Abbot Library Renovation",
   "A36 2019 MWRA LOAN": "2019 ATM Art. 36: MWRA Loan"
+ },
+ "label_notes": {
+  "OTHER EXPENSE": "Munis catch-all for spending that doesn't fit the named categories (Professional Salary, Contracted Services, etc.). Often the second-largest category in any fund.",
+  "OTHER SALARIES": "Compensation lines that aren't Professional or Clerical - usually part-time, overtime, stipends, and seasonal staff.",
+  "OFU": "Other Financing Uses - inter-fund transfers and other financing transactions, not operating spend.",
+  "GOVERNMENTAL": "Generic municipal-budget label for general-government spending that isn't broken out by department.",
+  "OTHER GOVERNMENTAL": "Catch-all department for general-government spending not assigned to a named department (Town Manager, Selectmen, Town Clerk, etc.).",
+  "DISTRICTWIDE": "School-side catch-all for spending that isn't tied to one school building (health insurance, district administration, special education).",
+  "STATE ASSESSMENTS": "Annual charges Marblehead owes the Commonwealth (MBTA, school choice tuition, charter school assessments, etc.).",
+  "UNKNOWN": "The town's accounting system did not classify these rows. Usually a data-entry gap, not a real budget category."
  },
  "division_overrides": {
   "ART 26 2022 ESSEX NS AGGIE & T": "2022 ATM Art. 26: Essex North Shore Agricultural & Technical School",

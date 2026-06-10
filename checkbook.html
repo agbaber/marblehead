@@ -497,10 +497,23 @@ og_url: https://marbleheaddata.org/checkbook/
 
   /* Breadcrumb */
   .drill-crumbs {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 2px;
+    display: flex; flex-wrap: nowrap; align-items: center; gap: 8px;
     margin: 0 0 4px; font-size: 11.5px; color: var(--text-muted);
     padding: 0;
   }
+  .drill-crumbs-trail {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 2px;
+    flex: 1 1 auto; min-width: 0;
+  }
+  .drill-close {
+    flex: 0 0 auto;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 999px;
+    background: transparent; border: 1px solid var(--border);
+    color: var(--text-muted); font-size: 18px; line-height: 1; cursor: pointer;
+    transition: background 0.12s, color 0.12s, border-color 0.12s;
+  }
+  .drill-close:hover { background: var(--surface); color: var(--text); border-color: var(--c-teal); }
   .drill-crumb {
     display: inline-flex; align-items: center; gap: 5px;
     padding: 4px 9px; border-radius: 999px;
@@ -566,7 +579,7 @@ og_url: https://marbleheaddata.org/checkbook/
   <button type="button" class="breakdown-btn" data-breakdown="by_department">Department</button>
   <button type="button" class="breakdown-btn" data-breakdown="by_category">Category</button>
   <button type="button" class="breakdown-btn" data-breakdown="by_division">Division</button>
-  <button type="button" class="breakdown-btn" data-breakdown="by_object">Object</button>
+  <button type="button" class="breakdown-btn" data-breakdown="by_object" title="Granular spend type - Professional Salaries, Health Insurance, etc. (called &quot;object code&quot; in municipal budgeting)">Line item</button>
   <span class="breakdown-meta" id="breakdown-meta"></span>
 </div>
 
@@ -965,9 +978,13 @@ og_url: https://marbleheaddata.org/checkbook/
       var attrs = drillable
         ? ' data-drill-push-dim="' + effDim + '" data-drill-push-key="' + escapeHtml(effKey) + '"'
         : '';
-      var nameTitle = drillable ? ' (click to drill in)' : (alreadyInStack ? ' (you are here)' : '');
+      var explainer = labels && labels.label_notes && labels.label_notes[r.name];
+      var titleParts = [r.name];
+      if (explainer) titleParts.push(explainer);
+      if (drillable) titleParts.push('(click to drill in)');
+      else if (alreadyInStack) titleParts.push('(you are here)');
       return '<div class="' + rowClass + '"' + attrs + '>' +
-        '<div class="drill-bar-name" title="' + escapeHtml(r.name) + nameTitle + '">' + escapeHtml(name) +
+        '<div class="drill-bar-name" title="' + escapeHtml(titleParts.join(' - ')) + '">' + escapeHtml(name) +
         (drillable ? ' <span class="drill-bar-caret">›</span>' : '') + '</div>' +
         '<div class="drill-bar-track">' +
           (secondary !== null ? '<div class="drill-bar drill-bar--secondary" style="width:' + secondaryPct.toFixed(1) + '%"></div>' : '') +
@@ -996,22 +1013,24 @@ og_url: https://marbleheaddata.org/checkbook/
 
     var html = '<div class="bva-expand">';
 
-    // Breadcrumb (only when nested beyond root)
-    if (stack.length > 1) {
-      html += '<div class="drill-crumbs drill-cta--span">';
-      stack.forEach(function (entry, i) {
-        var isLast = (i === stack.length - 1);
-        var label = dimDisplay(entry);
-        var dimLabel = '<span class="drill-crumb-dim">' + DIM_LABEL[entry.dim] + ':</span> ';
-        if (isLast) {
-          html += '<span class="drill-crumb drill-crumb--current">' + dimLabel + escapeHtml(label) + '</span>';
-        } else {
-          html += '<button type="button" class="drill-crumb drill-crumb-btn" data-drill-pop="' + (i + 1) + '">' + dimLabel + escapeHtml(label) + '</button>';
-          html += '<span class="drill-crumb-sep">&rsaquo;</span>';
-        }
-      });
-      html += '</div>';
-    }
+    // Breadcrumb + close button. Always shown so the reader can orient and
+    // escape without scrolling back up to the parent row.
+    html += '<div class="drill-crumbs drill-cta--span">';
+    html += '<div class="drill-crumbs-trail">';
+    stack.forEach(function (entry, i) {
+      var isLast = (i === stack.length - 1);
+      var label = dimDisplay(entry);
+      var dimLabel = '<span class="drill-crumb-dim">' + DIM_LABEL[entry.dim] + ':</span> ';
+      if (isLast) {
+        html += '<span class="drill-crumb drill-crumb--current">' + dimLabel + escapeHtml(label) + '</span>';
+      } else {
+        html += '<button type="button" class="drill-crumb drill-crumb-btn" data-drill-pop="' + (i + 1) + '">' + dimLabel + escapeHtml(label) + '</button>';
+        html += '<span class="drill-crumb-sep">&rsaquo;</span>';
+      }
+    });
+    html += '</div>';
+    html += '<button type="button" class="drill-close" data-drill-close="1" aria-label="Close drill-down" title="Close drill-down (Esc)">&times;</button>';
+    html += '</div>';
 
     // Line-item leaf views (dd is an array, not an object)
     if (current.dim === 'dept_category' || current.dim === 'fund_category') {
@@ -1163,9 +1182,11 @@ og_url: https://marbleheaddata.org/checkbook/
       var rowClass = 'bva-row' +
         (drillable ? ' bva-row--drillable' : '') +
         (isExpanded ? ' bva-row--expanded' : '');
+      var rowNote = labels && labels.label_notes && labels.label_notes[r.name];
       html += '<div class="' + rowClass + '"' +
         (drillable ? ' data-drill-key="' + escapeHtml(r.name) + '"' : '') +
         ' title="' + escapeHtml(r.name) +
+        (rowNote ? ' - ' + escapeHtml(rowNote) : '') +
         ' &mdash; Revised: ' + fmtMoney(b, { cents: false }) +
         ', Actual: ' + fmtMoney(a, { cents: false }) +
         (pct !== null ? ' (' + pct + '% of revised)' : ', no appropriation') +
@@ -1355,8 +1376,23 @@ og_url: https://marbleheaddata.org/checkbook/
     document.getElementById('page-prev').addEventListener('click', function () { page--; renderTable(); });
     document.getElementById('page-next').addEventListener('click', function () { page++; renderTable(); });
 
+    // Esc dismisses an open drill panel
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drillStack.length > 0) {
+        var focusInForm = document.activeElement && /^(input|textarea|select)$/i.test(document.activeElement.tagName);
+        if (focusInForm) return;
+        clearDrill();
+      }
+    });
+
     // BVA row click -> expand/collapse / drill / pop / cta (event-delegated to survive re-renders)
     document.getElementById('bva-chart').addEventListener('click', function (e) {
+      // Drill close (× button)
+      var close = e.target.closest('[data-drill-close]');
+      if (close) {
+        clearDrill();
+        return;
+      }
       // Breadcrumb pop
       var crumb = e.target.closest('[data-drill-pop]');
       if (crumb) {
