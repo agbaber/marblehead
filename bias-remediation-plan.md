@@ -6,7 +6,7 @@ title: Bias remediation plan
 
 # Bias remediation plan
 
-Remediation actions for every finding in the [April 11, 2026 bias audit](bias-audit.html). Each item maps to a numbered concern from that report.
+Remediation actions for every finding in the April 11, 2026 bias audit (the audit page itself has been folded into the [2026 override archive](/2026-override/) alongside the rest of the campaign-era record). Each item maps to a numbered concern from that report.
 
 ---
 
@@ -40,7 +40,7 @@ Remediation actions for every finding in the [April 11, 2026 bias audit](bias-au
 
 **Remediation:**
 
-- **3a. Add the counter-reading to the history page.** **Done.** The paragraph after the 2021 FinCom quote now presents both readings and links to [tension #5 on the debate page](the-debate.html#tension-5).
+- **3a. Add the counter-reading to the history page.** **Done.** The paragraph after the 2021 FinCom quote now presents both readings and links to [the 2026 override archive](/2026-override/), which records both sides of the tension.
 - **3b. Remove or qualify the editorial conclusion.** **Done.** The takeaway was changed from `takeaway--pos` to `takeaway--neutral` and rewritten: "Whether that history is evidence of fiscal discipline or of deferred structural reform is one of the central tensions in the debate."
 
 ---
@@ -63,7 +63,7 @@ Remediation actions for every finding in the [April 11, 2026 bias audit](bias-au
 **Remediation:**
 
 - **5a. Replace the undecided claim with a process commitment.** **Done.** The about page, debate page, and question-2-trash page now use: "The same editorial rules apply to both sides... the bias audit tests them. If you find a violation, report it." with links to the bias audit and a pre-filled GitHub issue.
-- **5b. Publish the bias audit and this remediation plan.** (Done. The audit is at [bias-audit.html](bias-audit.html) and you are reading the remediation plan.) The act of publishing criticism of the site and committing to fix it is stronger evidence of good faith than a neutrality claim.
+- **5b. Publish the bias audit and this remediation plan.** (Done. The audit was published in April 2026 alongside this remediation plan; the audit itself has since been folded into the [2026 override archive](/2026-override/), and you are reading the remediation plan.) The act of publishing criticism of the site and committing to fix it is stronger evidence of good faith than a neutrality claim.
 
 ---
 
