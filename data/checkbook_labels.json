@@ -98,7 +98,9 @@
   "PROFESSIONAL SALARY": "Professional salaries",
   "CONTRACTED SERVICES": "Contracted services",
   "SUPPLIES AND MATERIALS": "Supplies & materials",
-  "CAPITAL": "Capital outlay"
+  "CAPITAL": "Capital outlay",
+  "SUPPLIES AND MATL": "Supplies & materials",
+  "CLERICAL SALARIES": "Clerical salaries"
  },
  "division_overrides": {
   "ART 26 2022 ESSEX NS AGGIE & T": "2022 ATM Art. 26: Essex North Shore Agricultural & Technical School",
