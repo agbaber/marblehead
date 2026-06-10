@@ -331,6 +331,13 @@ og_url: https://marbleheaddata.org/checkbook/
   }
   .perf-card--over   { border-top: 2px solid var(--c-buoy); }
   .perf-card--over h3 { color: var(--c-buoy); }
+  /* Cluster the dot + name + amount on the left so a single-row alert
+     doesn't float apart at full container width. */
+  .perf-card--over .perf-row { grid-template-columns: 16px auto auto 1fr; gap: 14px; }
+  .perf-card-foot {
+    margin: 14px 0 0; font-size: 12px; color: var(--text-muted); line-height: 1.5;
+  }
+  .perf-card-foot:empty { display: none; }
 
   .perf-row {
     display: grid; grid-template-columns: 16px 1fr auto; gap: 10px;
@@ -664,12 +671,13 @@ og_url: https://marbleheaddata.org/checkbook/
 </div>
 
 <div class="ck-section">
-  <h2>Where it stands at 92% of the year</h2>
+  <h2>Where things stand</h2>
 </div>
 
 <div class="perf-card perf-card--over">
   <h3>Over the full-year budget</h3>
   <div id="perf-over-list" class="ck-loading">Loading&hellip;</div>
+  <p class="perf-card-foot" id="perf-over-foot"></p>
 </div>
 
 <div class="perf-card">
@@ -1851,6 +1859,27 @@ og_url: https://marbleheaddata.org/checkbook/
           '<div class="perf-row-val"><strong>+' + fmtMoney(r.delta, { compact: true }) +
           '</strong><span class="over">' + pctLabel + '</span></div></div>';
       }).join('');
+
+    // Footer: how many other departments are still within their budget?
+    // Uses all_departments (~44 with a revised budget), not just the by_department
+    // top-list, so the count reflects the full town picture.
+    var footHost = document.getElementById('perf-over-foot');
+    if (footHost) {
+      var allDepts = (perf.budget_execution.all_departments || []).filter(function (r) {
+        return r.pct !== null && (r.revised || 0) > 0;
+      });
+      var totalCount = allDepts.length;
+      var overCount = over.length;
+      var withinCount = totalCount - overCount;
+      if (totalCount === 0) {
+        footHost.textContent = '';
+      } else if (overCount === 0) {
+        footHost.textContent = 'All ' + totalCount + ' departments are tracking within their FY26 appropriations.';
+      } else {
+        footHost.textContent = 'The other ' + withinCount + ' of ' + totalCount +
+          ' departments are tracking within their FY26 appropriations. Overruns are typically reconciled through a supplemental appropriation at a Special Town Meeting.';
+      }
+    }
 
     // Vendor concentration: computed from the parsed CSV rows (with alias
     // merging applied) rather than the precomputed perf JSON, so variants
