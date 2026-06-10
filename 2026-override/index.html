@@ -136,56 +136,6 @@ og_url: https://marbleheaddata.org/2026-override/
   }
   .arc-section p { line-height: 1.6; }
 
-  /* ----- Ballot question tiles ----- */
-  .ballot-q-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-    margin: 18px 0 22px;
-  }
-  @media (min-width: 700px) {
-    .ballot-q-list { grid-template-columns: 1fr 1fr; }
-  }
-  .ballot-q {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 20px 22px 18px;
-    display: flex;
-    flex-direction: column;
-  }
-  .ballot-q-num {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.9px;
-    text-transform: uppercase;
-    color: var(--c-teal);
-    margin: 0 0 6px;
-  }
-  .ballot-q h3 {
-    font-size: 18px;
-    margin: 0 0 8px;
-    line-height: 1.3;
-    font-weight: 700;
-  }
-  .ballot-q p {
-    font-size: 13.5px;
-    color: var(--text-muted);
-    line-height: 1.55;
-    margin: 0 0 12px;
-  }
-  .ballot-q p.ballot-q-outcome {
-    margin: auto 0 0;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    color: var(--text-subtle);
-    border-top: 1px solid var(--divider);
-    padding-top: 10px;
-    font-variant-numeric: tabular-nums;
-  }
-  .ballot-q-outcome strong { color: var(--text); }
 
   /* ----- Candidate blocks ----- */
   .candidate-grid {
@@ -343,6 +293,13 @@ og_url: https://marbleheaddata.org/2026-override/
     color: var(--c-teal);
     margin: 0 0 2px;
   }
+  .result-meter-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 4px 0 0;
+    max-width: 520px;
+  }
   .result-meter-name {
     font-size: 16px;
     font-weight: 700;
@@ -490,47 +447,126 @@ og_url: https://marbleheaddata.org/2026-override/
   <p class="arc-cap">All four ballot questions passed. The $15M Invest tier governs FY27; the trash question moves curbside collection onto the tax levy.</p>
   <p class="arc-cap-sub">8,092 ballots cast, 47.5% turnout.</p>
   <nav class="arc-jump" aria-label="On this page">
-    <a href="#the-ballot">The ballot</a>
+    <a href="#the-result">The ballot &amp; result</a>
     <a href="#the-candidates">The candidates</a>
     <a href="#the-debate">The debate</a>
     <a href="#override-history">History</a>
-    <a href="#the-result">The result</a>
     <a href="#what-happened-next">What happened next</a>
   </nav>
 </section>
 
-<section class="arc-band arc-section" id="the-ballot">
-  <p class="arc-section-eye">The ballot</p>
-  <h2>Four questions, three override tiers and a trash carve-out</h2>
+<section class="arc-band arc-band--result arc-section" id="the-result">
+  <span id="the-ballot" aria-hidden="true"></span>
+  <p class="arc-section-eye">The ballot and the result</p>
+  <h2>All four questions passed; support narrowed as the dollar amount rose</h2>
 
   <p>Four ballot questions appeared at the Annual Town Election on June 9, 2026. Three were operating override tiers; one was a separate curbside trash funding question. If more than one override tier passed, the highest-dollar question would prevail. The trash question was independent.<sup class="cite" data-href="https://marbleheadma.gov/elections-voting/" data-source="Marblehead Town Clerk, Official Sample Ballot for Annual Town Election, June 9, 2026"></sup></p>
 
-  <div class="ballot-q-list">
-    <div class="ballot-q">
-      <p class="ballot-q-num">Question 1 &middot; Partial Restore</p>
-      <h3>$9,000,000 operating override</h3>
-      <p>For general government and the school department for the fiscal year beginning July 1, 2026.</p>
-      <p class="ballot-q-outcome"><span class="elected-chip">Passed</span> <strong>66.7%</strong> yes</p>
+  <div class="result-meters" role="list" aria-label="Yes share by ballot question">
+    <div class="result-meter" role="listitem">
+      <div class="result-meter-head">
+        <div>
+          <p class="result-meter-label">Q1 &middot; $9M Partial Restore</p>
+          <p class="result-meter-name">$9,000,000 operating override</p>
+          <p class="result-meter-desc">For general government and the school department for the fiscal year beginning July 1, 2026.</p>
+        </div>
+        <div class="result-meter-share">66.7%<span class="result-meter-share-sub">yes</span></div>
+      </div>
+      <div class="result-bar" aria-hidden="true">
+        <div class="result-bar-yes" style="width:66.7%"></div>
+        <div class="result-bar-no" style="width:33.3%"></div>
+      </div>
+      <div class="result-meter-counts">
+        <span><span class="swatch swatch-yes"></span><strong>5,312</strong>yes</span>
+        <span><span class="swatch swatch-no"></span><strong>2,653</strong>no</span>
+        <span><strong>127</strong>blanks</span>
+      </div>
     </div>
-    <div class="ballot-q">
-      <p class="ballot-q-num">Question 2 &middot; Build</p>
-      <h3>$12,000,000 operating override</h3>
-      <p>Same purpose, larger amount.</p>
-      <p class="ballot-q-outcome"><span class="elected-chip">Passed</span> <strong>62.3%</strong> yes</p>
+
+    <div class="result-meter" role="listitem">
+      <div class="result-meter-head">
+        <div>
+          <p class="result-meter-label">Q2 &middot; $12M Build</p>
+          <p class="result-meter-name">$12,000,000 operating override</p>
+          <p class="result-meter-desc">Same purpose, larger amount.</p>
+        </div>
+        <div class="result-meter-share">62.3%<span class="result-meter-share-sub">yes</span></div>
+      </div>
+      <div class="result-bar" aria-hidden="true">
+        <div class="result-bar-yes" style="width:62.3%"></div>
+        <div class="result-bar-no" style="width:37.7%"></div>
+      </div>
+      <div class="result-meter-counts">
+        <span><span class="swatch swatch-yes"></span><strong>4,928</strong>yes</span>
+        <span><span class="swatch swatch-no"></span><strong>2,988</strong>no</span>
+        <span><strong>136</strong>blanks</span>
+      </div>
     </div>
-    <div class="ballot-q">
-      <p class="ballot-q-num">Question 3 &middot; Invest</p>
-      <h3>$15,000,000 operating override</h3>
-      <p>Same purpose, largest amount.</p>
-      <p class="ballot-q-outcome"><span class="elected-chip">Passed</span> <strong>54.3%</strong> yes</p>
+
+    <div class="result-meter" role="listitem">
+      <div class="result-meter-head">
+        <div>
+          <p class="result-meter-label">Q3 &middot; $15M Invest &middot; takes effect</p>
+          <p class="result-meter-name">$15,000,000 operating override</p>
+          <p class="result-meter-desc">Same purpose, largest amount.</p>
+        </div>
+        <div class="result-meter-share">54.3%<span class="result-meter-share-sub">yes</span></div>
+      </div>
+      <div class="result-bar" aria-hidden="true">
+        <div class="result-bar-yes" style="width:54.3%"></div>
+        <div class="result-bar-no" style="width:45.7%"></div>
+      </div>
+      <div class="result-meter-counts">
+        <span><span class="swatch swatch-yes"></span><strong>4,278</strong>yes</span>
+        <span><span class="swatch swatch-no"></span><strong>3,594</strong>no</span>
+        <span><strong>220</strong>blanks</span>
+      </div>
     </div>
-    <div class="ballot-q">
-      <p class="ballot-q-num">Question 4 &middot; Trash</p>
-      <h3>$2,298,575 trash funding</h3>
-      <p>Curbside trash, yard waste, recycling, and waste disposal contracts for FY27. Independent of the operating override.</p>
-      <p class="ballot-q-outcome"><span class="elected-chip">Passed</span> <strong>67.4%</strong> yes</p>
+
+    <div class="result-meter" role="listitem">
+      <div class="result-meter-head">
+        <div>
+          <p class="result-meter-label">Q4 &middot; Trash</p>
+          <p class="result-meter-name">$2.3M curbside trash funding</p>
+          <p class="result-meter-desc">Curbside trash, yard waste, recycling, and waste disposal contracts for FY27. Independent of the operating override.</p>
+        </div>
+        <div class="result-meter-share">67.4%<span class="result-meter-share-sub">yes</span></div>
+      </div>
+      <div class="result-bar" aria-hidden="true">
+        <div class="result-bar-yes" style="width:67.4%"></div>
+        <div class="result-bar-no" style="width:32.6%"></div>
+      </div>
+      <div class="result-meter-counts">
+        <span><span class="swatch swatch-yes"></span><strong>5,326</strong>yes</span>
+        <span><span class="swatch swatch-no"></span><strong>2,580</strong>no</span>
+        <span><strong>186</strong>blanks</span>
+      </div>
     </div>
   </div>
+
+  <table class="visually-hidden">
+    <caption>Yes / no / blanks by ballot question</caption>
+    <thead><tr><th>Question</th><th>Yes</th><th>No</th><th>Blanks</th><th>Yes share</th></tr></thead>
+    <tbody>
+      <tr><td>Q1: $9M override (Partial Restore)</td><td>5,312</td><td>2,653</td><td>127</td><td>66.7%</td></tr>
+      <tr><td>Q2: $12M override (Build)</td><td>4,928</td><td>2,988</td><td>136</td><td>62.3%</td></tr>
+      <tr><td>Q3: $15M override (Invest)</td><td>4,278</td><td>3,594</td><td>220</td><td>54.3%</td></tr>
+      <tr><td>Q4: $2.3M trash</td><td>5,326</td><td>2,580</td><td>186</td><td>67.4%</td></tr>
+    </tbody>
+  </table>
+
+  <p class="result-note">Yes share is yes votes as a percentage of yes plus no, excluding blanks.<sup class="cite" data-href="/data/town_docs/2026-06-09-Town-Election-Unofficial-Results.docx" data-source="Marblehead Town Clerk, Town Election Unofficial Results, June 9, 2026 (local copy)"></sup> Tallies are unofficial pending certification. One quirk in the Clerk's sheet: the Question 2 precinct 4 column totals 1,240 ballots against the 1,280 reported for every other question.</p>
+
+  <p>Every tier passed in all six precincts. Precinct 6 had both the highest turnout (52.6%) and the strongest yes vote on every question.</p>
+
+  <table class="result-table">
+    <thead><tr><th>Turnout</th><th>P1</th><th>P2</th><th>P3</th><th>P4</th><th>P5</th><th>P6</th><th>Total</th></tr></thead>
+    <tbody>
+      <tr><td>Ballots cast</td><td>1,419</td><td>1,361</td><td>1,232</td><td>1,280</td><td>1,337</td><td>1,463</td><td>8,092</td></tr>
+      <tr><td>Of registered</td><td>48.1%</td><td>45.8%</td><td>44.9%</td><td>45.3%</td><td>48.3%</td><td>52.6%</td><td>47.5%</td></tr>
+    </tbody>
+  </table>
+
 
   <p>Tier labels (Partial Restore, Build, Invest) were the Town Administrator's framing, not on the ballot itself. The three operating tiers came from a Town Meeting process that approved the spending side on May 4, 2026; the June 9 ballot decided whether the property tax levy ceiling would rise to fund it. Question 4 stood on its own: yes meant the cost was spread by home value through the tax levy, no meant the Board of Health's fallback flat fee of roughly $281 per household would apply.<sup class="cite" data-href="https://marbleheadma.gov/elections-voting/" data-source="Marblehead Town Clerk, Official Sample Ballot for Annual Town Election, June 9, 2026"></sup></p>
 
@@ -733,123 +769,17 @@ og_url: https://marbleheaddata.org/2026-override/
     <div class="history-event">
       <p class="year">June 9, 2026</p>
       <h3>Three-tier operating override + Question 4 trash</h3>
-      <p>$9M / $12M / $15M tiered structure, plus a $2.3M curbside trash question. All four passed; see <a href="#the-result">section 5</a>.</p>
+      <p>$9M / $12M / $15M tiered structure, plus a $2.3M curbside trash question. All four passed (<a href="#the-result">full result</a>).</p>
     </div>
   </div>
 
   <p>Marblehead operating overrides since 1990: most were rejected by margins between 1% and 37%. The two passed in the 2000s were narrow (single-digit margins) and specific in scope (supplemental department budgets, library expenses). The 2022 and 2023 votes were the first general school and general government operating asks since the 2000s; both failed.</p>
 
+  <p>Against the two recent failures (31.4% yes in 2022, 46.7% in 2023), the top tier cleared with 54.3% and the smallest with 66.7%. Votes cast on the override question grew from 5,731 in 2022 to 6,410 in 2023 to 7,872 in 2026 (Question 3, yes plus no).</p>
+
   <p>Every override and debt exclusion vote since 1981, with amounts and margins: <a href="/charts/override_history.html">the override history chart</a>.</p>
 </section>
 
-<section class="arc-band arc-band--result arc-section" id="the-result">
-  <p class="arc-section-eye">The result</p>
-  <h2>All four questions passed; support narrowed as the dollar amount rose</h2>
-
-  <div class="result-meters" role="list" aria-label="Yes share by ballot question">
-    <div class="result-meter" role="listitem">
-      <div class="result-meter-head">
-        <div>
-          <p class="result-meter-label">Q1 &middot; $9M Partial Restore</p>
-          <p class="result-meter-name">$9,000,000 operating override</p>
-        </div>
-        <div class="result-meter-share">66.7%<span class="result-meter-share-sub">yes</span></div>
-      </div>
-      <div class="result-bar" aria-hidden="true">
-        <div class="result-bar-yes" style="width:66.7%"></div>
-        <div class="result-bar-no" style="width:33.3%"></div>
-      </div>
-      <div class="result-meter-counts">
-        <span><span class="swatch swatch-yes"></span><strong>5,312</strong>yes</span>
-        <span><span class="swatch swatch-no"></span><strong>2,653</strong>no</span>
-        <span><strong>127</strong>blanks</span>
-      </div>
-    </div>
-
-    <div class="result-meter" role="listitem">
-      <div class="result-meter-head">
-        <div>
-          <p class="result-meter-label">Q2 &middot; $12M Build</p>
-          <p class="result-meter-name">$12,000,000 operating override</p>
-        </div>
-        <div class="result-meter-share">62.3%<span class="result-meter-share-sub">yes</span></div>
-      </div>
-      <div class="result-bar" aria-hidden="true">
-        <div class="result-bar-yes" style="width:62.3%"></div>
-        <div class="result-bar-no" style="width:37.7%"></div>
-      </div>
-      <div class="result-meter-counts">
-        <span><span class="swatch swatch-yes"></span><strong>4,928</strong>yes</span>
-        <span><span class="swatch swatch-no"></span><strong>2,988</strong>no</span>
-        <span><strong>136</strong>blanks</span>
-      </div>
-    </div>
-
-    <div class="result-meter" role="listitem">
-      <div class="result-meter-head">
-        <div>
-          <p class="result-meter-label">Q3 &middot; $15M Invest &middot; takes effect</p>
-          <p class="result-meter-name">$15,000,000 operating override</p>
-        </div>
-        <div class="result-meter-share">54.3%<span class="result-meter-share-sub">yes</span></div>
-      </div>
-      <div class="result-bar" aria-hidden="true">
-        <div class="result-bar-yes" style="width:54.3%"></div>
-        <div class="result-bar-no" style="width:45.7%"></div>
-      </div>
-      <div class="result-meter-counts">
-        <span><span class="swatch swatch-yes"></span><strong>4,278</strong>yes</span>
-        <span><span class="swatch swatch-no"></span><strong>3,594</strong>no</span>
-        <span><strong>220</strong>blanks</span>
-      </div>
-    </div>
-
-    <div class="result-meter" role="listitem">
-      <div class="result-meter-head">
-        <div>
-          <p class="result-meter-label">Q4 &middot; Trash</p>
-          <p class="result-meter-name">$2.3M curbside trash funding</p>
-        </div>
-        <div class="result-meter-share">67.4%<span class="result-meter-share-sub">yes</span></div>
-      </div>
-      <div class="result-bar" aria-hidden="true">
-        <div class="result-bar-yes" style="width:67.4%"></div>
-        <div class="result-bar-no" style="width:32.6%"></div>
-      </div>
-      <div class="result-meter-counts">
-        <span><span class="swatch swatch-yes"></span><strong>5,326</strong>yes</span>
-        <span><span class="swatch swatch-no"></span><strong>2,580</strong>no</span>
-        <span><strong>186</strong>blanks</span>
-      </div>
-    </div>
-  </div>
-
-  <table class="visually-hidden">
-    <caption>Yes / no / blanks by ballot question</caption>
-    <thead><tr><th>Question</th><th>Yes</th><th>No</th><th>Blanks</th><th>Yes share</th></tr></thead>
-    <tbody>
-      <tr><td>Q1: $9M override (Partial Restore)</td><td>5,312</td><td>2,653</td><td>127</td><td>66.7%</td></tr>
-      <tr><td>Q2: $12M override (Build)</td><td>4,928</td><td>2,988</td><td>136</td><td>62.3%</td></tr>
-      <tr><td>Q3: $15M override (Invest)</td><td>4,278</td><td>3,594</td><td>220</td><td>54.3%</td></tr>
-      <tr><td>Q4: $2.3M trash</td><td>5,326</td><td>2,580</td><td>186</td><td>67.4%</td></tr>
-    </tbody>
-  </table>
-
-  <p class="result-note">Yes share is yes votes as a percentage of yes plus no, excluding blanks.<sup class="cite" data-href="/data/town_docs/2026-06-09-Town-Election-Unofficial-Results.docx" data-source="Marblehead Town Clerk, Town Election Unofficial Results, June 9, 2026 (local copy)"></sup> Tallies are unofficial pending certification. One quirk in the Clerk's sheet: the Question 2 precinct 4 column totals 1,240 ballots against the 1,280 reported for every other question.</p>
-
-  <p>Every tier passed in all six precincts. Precinct 6 had both the highest turnout (52.6%) and the strongest yes vote on every question.</p>
-
-  <table class="result-table">
-    <thead><tr><th>Turnout</th><th>P1</th><th>P2</th><th>P3</th><th>P4</th><th>P5</th><th>P6</th><th>Total</th></tr></thead>
-    <tbody>
-      <tr><td>Ballots cast</td><td>1,419</td><td>1,361</td><td>1,232</td><td>1,280</td><td>1,337</td><td>1,463</td><td>8,092</td></tr>
-      <tr><td>Of registered</td><td>48.1%</td><td>45.8%</td><td>44.9%</td><td>45.3%</td><td>48.3%</td><td>52.6%</td><td>47.5%</td></tr>
-    </tbody>
-  </table>
-
-  <p>Against the two recent failures (31.4% yes in 2022, 46.7% in 2023), the top tier cleared with 54.3% and the smallest with 66.7%. Votes cast on the override question grew from 5,731 in 2022 to 6,410 in 2023 to 7,872 in 2026 (Question 3, yes plus no).</p>
-
-</section>
 
 <section class="arc-band arc-section" id="what-happened-next">
   <p class="arc-section-eye">What happened next</p>
