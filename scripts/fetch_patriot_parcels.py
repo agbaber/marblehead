@@ -18,15 +18,19 @@ Source: https://marblehead.patriotproperties.com  (WebPro 4.4)
 import argparse
 import json
 import os
+import pathlib
 import subprocess
 import sys
 import time
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from patriot_parse import parse_summary  # noqa: E402
 
 BASE = "https://marblehead.patriotproperties.com"
 RAW_DIR = "data/patriot_raw"
 MANIFEST = os.path.join(RAW_DIR, "_manifest.json")
 JAR = "/tmp/patriot_jar.txt"
-UA = "marbleheaddata.org parcel ingest (civic data; contact dev@groma.com)"
+UA = "marbleheaddata.org civic-data parcel ingest (contact agbaber@gmail.com)"
 DELAY = 0.4          # seconds between parcels; be polite to the town's server
 GAP_STOP = 60        # consecutive non-parcels past the real max -> stop probing
 PRIME_BODY = "SearchSubmitted=yes&SearchTotalValue=2000000&SearchTotalValueThru=2010000"
@@ -55,10 +59,17 @@ def fetch_one(n):
 
 
 def classify(html):
-    if "Parcel ID" in html:
-        return "ok"
+    # The page always contains the literal label "Parcel ID"; a non-existent
+    # account renders a BLANK template (empty parcel id). Treat a parcel as real
+    # only when the parsed parcel_id is non-empty.
     if "Either no search has been executed" in html:
         return "error"   # session problem, not a clean gap
+    try:
+        rec = parse_summary(html)
+    except Exception:  # noqa: BLE001
+        return "error"
+    if rec.get("parcel_id") and rec.get("parcel_id") != "Old Parcel ID":
+        return "ok"
     return "gap"
 
 

@@ -289,7 +289,7 @@ BASE = "https://marblehead.patriotproperties.com"
 RAW_DIR = "data/patriot_raw"
 MANIFEST = os.path.join(RAW_DIR, "_manifest.json")
 JAR = "/tmp/patriot_jar.txt"
-UA = "marbleheaddata.org parcel ingest (civic data; contact dev@groma.com)"
+UA = "marbleheaddata.org civic-data parcel ingest (contact agbaber@gmail.com)"
 DELAY = 0.4          # seconds between parcels; be polite
 GAP_STOP = 60        # consecutive gaps above known max -> stop ceiling probe
 
