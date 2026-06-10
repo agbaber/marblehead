@@ -7,47 +7,126 @@ og_description: "The FY27 override cycle in one place: the four ballot questions
 og_url: https://marbleheaddata.org/2026-override/
 ---
 <style>
-  .archive-toc {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 14px 18px 12px;
-    margin: 18px 0 28px;
+  /* ----- Hero ----- */
+  .arc-hero {
+    box-sizing: border-box;
+    padding: 40px 0 28px;
+    display: flex;
+    flex-direction: column;
   }
-  .archive-toc h2 {
-    font-size: 11px;
+  @media (min-width: 700px) {
+    .arc-hero { padding: 56px 0 36px; }
+  }
+  .arc-eye {
+    font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.8px;
+    letter-spacing: 1.6px;
     text-transform: uppercase;
     color: var(--text-subtle);
+    margin: 0 0 18px;
+  }
+  .arc-eye .dot { color: var(--c-buoy); margin: 0 6px; }
+  .arc-big {
+    font-size: clamp(64px, 12vw, 144px);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin: 0 0 22px;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .arc-cap {
+    font-size: clamp(17px, 2.4vw, 22px);
+    line-height: 1.35;
+    color: var(--text);
+    margin: 0 0 12px;
+    max-width: 640px;
+    font-weight: 500;
+  }
+  .arc-cap-sub {
+    font-size: clamp(13px, 1.6vw, 15px);
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0 0 22px;
+    max-width: 620px;
+  }
+
+  /* ----- Compact jump-nav ----- */
+  .arc-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 8px;
+    margin: 0 0 14px;
+  }
+  .arc-jump a {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: color-mix(in srgb, var(--c-navy) 6%, var(--surface));
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 12px;
+    text-decoration: none;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+  }
+  .arc-jump a:hover {
+    color: var(--text);
+    border-color: var(--c-teal);
+    background: color-mix(in srgb, var(--c-teal) 8%, var(--surface));
+  }
+
+  /* ----- Section bands ----- */
+  .arc-band {
+    box-sizing: border-box;
+    padding: 44px 0;
+    margin: 0;
+  }
+  .arc-band--tinted {
+    background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
+    border-top: 1px solid color-mix(in srgb, var(--c-navy) 10%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--c-navy) 10%, transparent);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+  }
+  .arc-band--result {
+    background: color-mix(in srgb, var(--c-teal) 5%, var(--surface));
+    border-top: 1px solid color-mix(in srgb, var(--c-teal) 14%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--c-teal) 14%, transparent);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+  }
+
+  .arc-section-eye {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--c-teal);
     margin: 0 0 8px;
   }
-  .archive-toc ol {
-    margin: 0;
-    padding-left: 22px;
-    font-size: 14px;
-    color: var(--text-muted);
-  }
-  .archive-toc li { margin: 4px 0; }
-  .archive-toc a { color: var(--text); }
-
-  .archive-section {
-    margin: 0 0 48px;
-    padding-top: 12px;
-  }
-  .archive-section h2 {
+  .arc-section h2 {
     font-family: 'Libre Franklin', system-ui, sans-serif;
     font-weight: 700;
-    font-size: 28px;
-    margin: 0 0 14px;
-    line-height: 1.2;
+    font-size: clamp(26px, 3.4vw, 34px);
+    margin: 0 0 18px;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    color: var(--text);
   }
+  .arc-section p { line-height: 1.6; }
 
+  /* ----- Ballot question tiles ----- */
   .ballot-q-list {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin: 14px 0 18px;
+    gap: 14px;
+    margin: 18px 0 22px;
   }
   @media (min-width: 700px) {
     .ballot-q-list { grid-template-columns: 1fr 1fr; }
@@ -56,71 +135,110 @@ og_url: https://marbleheaddata.org/2026-override/
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
-    padding: 14px 16px;
+    padding: 20px 22px 18px;
+    display: flex;
+    flex-direction: column;
   }
   .ballot-q-num {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.9px;
     text-transform: uppercase;
     color: var(--c-teal);
-    margin: 0 0 4px;
+    margin: 0 0 6px;
   }
   .ballot-q h3 {
-    font-size: 16px;
-    margin: 0 0 6px;
+    font-size: 18px;
+    margin: 0 0 8px;
     line-height: 1.3;
+    font-weight: 700;
   }
   .ballot-q p {
     font-size: 13.5px;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.55;
+    margin: 0 0 12px;
+  }
+  .ballot-q-outcome {
+    margin-top: auto;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    border-top: 1px solid var(--divider);
+    padding-top: 10px;
+    font-variant-numeric: tabular-nums;
+  }
+  .ballot-q-outcome strong { color: var(--text); }
+
+  /* ----- Candidate blocks ----- */
+  .candidate-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 18px 0 16px;
+  }
+  @media (min-width: 760px) {
+    .candidate-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .candidate-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 20px 16px;
     margin: 0;
   }
-
-  .candidate-block {
-    margin: 12px 0 22px;
-  }
   .candidate-block h3 {
-    font-size: 16px;
+    font-size: 17px;
     margin: 0 0 4px;
     line-height: 1.3;
+    font-weight: 700;
   }
   .candidate-block .race-meta {
-    font-size: 12px;
-    color: var(--text-subtle);
+    font-size: 11px;
+    color: var(--c-teal);
     text-transform: uppercase;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.9px;
     font-weight: 700;
-    margin: 0 0 8px;
+    margin: 0 0 10px;
   }
   .candidate-block ul {
-    margin: 4px 0 0;
-    padding-left: 22px;
+    margin: 6px 0 0;
+    padding-left: 20px;
     font-size: 14px;
     line-height: 1.55;
     color: var(--text-muted);
   }
-  .candidate-block ul li { margin: 4px 0; }
+  .candidate-block ul li { margin: 5px 0; }
   .candidate-block ul li strong { color: var(--text); }
 
+  .candidate-note {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 14px 0 0;
+  }
+
+  /* ----- Debate (dividing lines) ----- */
   .dividing-line {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
-    padding: 16px 18px;
+    padding: 18px 20px 16px;
     margin: 0 0 14px;
   }
   .dividing-line h3 {
     font-size: 17px;
     margin: 0 0 6px;
     line-height: 1.3;
+    font-weight: 700;
   }
   .dividing-line .dl-framing {
     font-size: 13.5px;
     color: var(--text-muted);
     line-height: 1.5;
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     font-style: italic;
   }
   .dl-pair {
@@ -133,7 +251,7 @@ og_url: https://marbleheaddata.org/2026-override/
     .dl-pair { grid-template-columns: 1fr 1fr; }
   }
   .dl-side {
-    padding: 10px 12px;
+    padding: 12px 14px;
     border-radius: var(--radius-sm);
     background: color-mix(in srgb, var(--text-subtle) 5%, var(--surface));
     border: 1px solid var(--divider);
@@ -141,31 +259,38 @@ og_url: https://marbleheaddata.org/2026-override/
   .dl-side-label {
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--text-subtle);
-    margin: 0 0 5px;
+    margin: 0 0 6px;
   }
   .dl-side p {
     font-size: 13.5px;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.55;
     margin: 0;
   }
 
-  .history-timeline {
-    margin: 14px 0 18px;
-  }
+  /* ----- History timeline ----- */
+  .history-timeline { margin: 18px 0 12px; }
   .history-event {
-    border-left: 3px solid var(--divider);
-    padding: 4px 0 10px 16px;
-    margin: 0 0 12px;
+    border-left: 3px solid var(--c-teal);
+    padding: 4px 0 12px 18px;
+    margin: 0 0 14px;
   }
   .history-event .year {
     font-weight: 700;
+    font-size: 13px;
+    color: var(--c-teal);
+    margin: 0 0 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .history-event h3 {
     font-size: 16px;
-    color: var(--text);
-    margin: 0 0 2px;
+    margin: 0 0 6px;
+    line-height: 1.3;
+    font-weight: 700;
   }
   .history-event p {
     font-size: 14px;
@@ -174,65 +299,224 @@ og_url: https://marbleheaddata.org/2026-override/
     margin: 0;
   }
 
-
-  .stub-note {
-    background: color-mix(in srgb, var(--c-brass) 8%, var(--surface));
-    border: 1px solid color-mix(in srgb, var(--c-brass) 32%, var(--border));
-    border-radius: var(--radius-sm);
-    padding: 14px 16px;
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.55;
+  /* ----- Result meter bars ----- */
+  .result-meters {
+    margin: 22px 0 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
+  .result-meter {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px 18px 14px;
+  }
+  .result-meter-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 14px;
+    margin: 0 0 10px;
+    flex-wrap: wrap;
+  }
+  .result-meter-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--c-teal);
+    margin: 0 0 2px;
+  }
+  .result-meter-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+    color: var(--text);
+  }
+  .result-meter-share {
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .result-meter-share-sub {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-left: 4px;
+  }
+  .result-bar {
+    display: flex;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--c-navy) 8%, transparent);
+    margin: 0 0 10px;
+  }
+  .result-bar-yes {
+    background: var(--c-teal);
+    height: 100%;
+  }
+  .result-bar-no {
+    background: var(--c-navy);
+    height: 100%;
+    opacity: 0.55;
+  }
+  .result-meter-counts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .result-meter-counts span strong {
+    color: var(--text);
+    font-weight: 700;
+    margin-right: 4px;
+  }
+  .result-meter-counts .swatch {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .result-meter-counts .swatch-yes { background: var(--c-teal); }
+  .result-meter-counts .swatch-no  { background: var(--c-navy); opacity: 0.55; }
+
+  /* SR-only access for the underlying table */
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0);
+    white-space: nowrap; border: 0;
+  }
+
+  /* ----- Turnout + contested races ----- */
   .result-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 16px 0 6px;
+    margin: 14px 0 6px;
     font-size: 14px;
     font-variant-numeric: tabular-nums;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
   }
   .result-table th,
   .result-table td {
-    padding: 7px 10px;
-    border-bottom: 1px solid var(--border);
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--divider);
     text-align: right;
   }
+  .result-table tr:last-child td { border-bottom: none; }
   .result-table th:first-child,
   .result-table td:first-child { text-align: left; }
   .result-table thead th {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.8px;
     color: var(--text-subtle);
-    border-bottom: 2px solid var(--border);
+    background: color-mix(in srgb, var(--c-navy) 4%, transparent);
+    border-bottom: 1px solid var(--border);
   }
   .result-note {
     font-size: 12.5px;
     color: var(--text-muted);
-    margin: 4px 0 16px;
+    margin: 10px 0 18px;
+    line-height: 1.55;
+  }
+
+  .contested-list {
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @media (min-width: 760px) {
+    .contested-list { grid-template-columns: 1fr 1fr; }
+  }
+  .contested-list li {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-size: 13.5px;
+    color: var(--text-muted);
     line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+  }
+  .contested-list li strong { color: var(--text); }
+  .contested-list .race-name {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--c-teal);
+    margin: 0 0 6px;
+  }
+
+  .arc-h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 28px 0 10px;
+    line-height: 1.3;
+    color: var(--text);
+  }
+
+  /* ----- Stub note ----- */
+  .stub-note {
+    background: color-mix(in srgb, var(--c-brass) 8%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c-brass) 32%, var(--border));
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 14px 0 0;
+  }
+
+  /* ----- Mobile cleanups ----- */
+  @media (max-width: 600px) {
+    .arc-band { padding: 32px 0; }
+    .result-meter-head { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .result-meter-share { font-size: 22px; }
   }
 </style>
 
-<h1>The 2026 Marblehead override: archive</h1>
+<section class="arc-hero">
+  <p class="arc-eye">Marblehead <span class="dot">&middot;</span> June 9, 2026 <span class="dot">&middot;</span> Annual Town Election</p>
+  <p class="arc-big">4 of 4</p>
+  <p class="arc-cap">All four ballot questions passed. The $15M Invest tier governs FY27; the trash question moves curbside collection onto the tax levy.</p>
+  <p class="arc-cap-sub">8,092 ballots cast, 47.5% turnout. This page is the cycle's record: the ballot, the candidates, both sides of the debate, the override history, the result, and what followed.</p>
+  <nav class="arc-jump" aria-label="On this page">
+    <a href="#the-ballot">The ballot</a>
+    <a href="#the-candidates">The candidates</a>
+    <a href="#the-debate">The debate</a>
+    <a href="#override-history">History</a>
+    <a href="#the-result">The result</a>
+    <a href="#what-happened-next">What happened next</a>
+  </nav>
+</section>
 
-<p class="page-lead">Marblehead voters considered four ballot questions on June 9, 2026: three operating override tiers and a curbside trash funding question. This page is the cycle's record. The ballot, the candidates, both sides of the debate, the result, and what followed, all in one URL.</p>
-
-<div class="archive-toc">
-  <h2>On this page</h2>
-  <ol>
-    <li><a href="#the-ballot">The ballot</a></li>
-    <li><a href="#the-candidates">The candidates</a></li>
-    <li><a href="#the-debate">The debate</a></li>
-    <li><a href="#override-history">Marblehead's override history</a></li>
-    <li><a href="#the-result">The result</a></li>
-    <li><a href="#what-happened-next">What happened next</a></li>
-  </ol>
-</div>
-
-<section class="archive-section" id="the-ballot">
-  <h2>1. The ballot</h2>
+<section class="arc-band arc-section" id="the-ballot">
+  <p class="arc-section-eye">The ballot</p>
+  <h2>Four questions, three override tiers and a trash carve-out</h2>
 
   <p>Four ballot questions appeared at the Annual Town Election on June 9, 2026. Three were operating override tiers; one was a separate curbside trash funding question. If more than one override tier passed, the highest-dollar question would prevail. The trash question was independent.<sup class="cite" data-href="https://marbleheadma.gov/elections-voting/" data-source="Marblehead Town Clerk, Official Sample Ballot for Annual Town Election, June 9, 2026"></sup></p>
 
@@ -241,21 +525,25 @@ og_url: https://marbleheaddata.org/2026-override/
       <p class="ballot-q-num">Question 1 &middot; Partial Restore</p>
       <h3>$9,000,000 operating override</h3>
       <p>For general government and the school department for the fiscal year beginning July 1, 2026.</p>
+      <p class="ballot-q-outcome">Passed <strong>66.7%</strong> yes</p>
     </div>
     <div class="ballot-q">
       <p class="ballot-q-num">Question 2 &middot; Build</p>
       <h3>$12,000,000 operating override</h3>
       <p>Same purpose, larger amount.</p>
+      <p class="ballot-q-outcome">Passed <strong>62.3%</strong> yes</p>
     </div>
     <div class="ballot-q">
       <p class="ballot-q-num">Question 3 &middot; Invest</p>
       <h3>$15,000,000 operating override</h3>
-      <p>Same purpose, largest amount.</p>
+      <p>Same purpose, largest amount. As the highest-dollar tier approved, this is the one that takes effect.</p>
+      <p class="ballot-q-outcome">Passed <strong>54.3%</strong> yes &middot; governs FY27</p>
     </div>
     <div class="ballot-q">
       <p class="ballot-q-num">Question 4 &middot; Trash</p>
       <h3>$2,298,575 trash funding</h3>
       <p>Curbside trash, yard waste, recycling, and waste disposal contracts for FY27. Independent of the operating override.</p>
+      <p class="ballot-q-outcome">Passed <strong>67.4%</strong> yes</p>
     </div>
   </div>
 
@@ -264,76 +552,80 @@ og_url: https://marbleheaddata.org/2026-override/
   <p>Cost by home value at full phase-in (rough rule of thumb): every $1M of override adds about $34 per year to the bill of a $1M home. So Tier 1 ($9M) was about $306; Tier 2 ($12M) about $408; Tier 3 ($15M) about $510. Question 4 added roughly $78 per $1M of assessed value on top of whichever override tier passed.</p>
 </section>
 
-<section class="archive-section" id="the-candidates">
-  <h2>2. The candidates</h2>
+<section class="arc-band arc-band--tinted arc-section" id="the-candidates">
+  <p class="arc-section-eye">The candidates</p>
+  <h2>Six contested races on the same ballot</h2>
 
   <p>Six of the twelve elected bodies on the June 9 ballot were contested. Positions below are condensed from each candidate's published answers in the Marblehead Current's individual Q&amp;As (May 19-20, 2026) and the Marblehead Independent's 2026 voter guide.<sup class="cite" data-href="https://wdowd-arch.github.io/marblehead-voter-guide-2026/" data-source="Marblehead Independent 2026 Voter Guide, candidate questionnaire responses (last updated June 1, 2026)"></sup></p>
 
-  <div class="candidate-block">
-    <h3>Select Board</h3>
-    <p class="race-meta">Three candidates, two seats &middot; 3-year terms</p>
-    <ul>
-      <li><strong>Erin Marie Noonan</strong> (incumbent, attorney) backed all three override questions, with Tier 3 her preferred option.</li>
-      <li><strong>Rossana Ferrante</strong> (Recreation &amp; Park chair, attorney) supported Tier 2.</li>
-      <li><strong>Jennifer Schaeffner</strong> (School Committee, Housing Authority chair) called the finances "a genuine fiscal crisis" but did not endorse a tier.</li>
-    </ul>
+  <div class="candidate-grid">
+    <div class="candidate-block">
+      <h3>Select Board</h3>
+      <p class="race-meta">Three candidates, two seats &middot; 3-year terms</p>
+      <ul>
+        <li><strong>Erin Marie Noonan</strong> (incumbent, attorney) backed all three override questions, with Tier 3 her preferred option.</li>
+        <li><strong>Rossana Ferrante</strong> (Recreation &amp; Park chair, attorney) supported Tier 2.</li>
+        <li><strong>Jennifer Schaeffner</strong> (School Committee, Housing Authority chair) called the finances "a genuine fiscal crisis" but did not endorse a tier.</li>
+      </ul>
+    </div>
+
+    <div class="candidate-block">
+      <h3>School Committee</h3>
+      <p class="race-meta">Three candidates, two seats</p>
+      <ul>
+        <li><strong>Melissa Marie Clucas</strong> (incumbent, CFO) backed Tier 3, warning FY27 was balanced only by a one-time $1.5M special-education prepayment.</li>
+        <li><strong>Ann-Marie Jordan</strong> (former educator) backed Tier 3 as a structural deficit fix.</li>
+        <li><strong>Sarah A. Fox</strong> (former two-term member) said the levy "needs to grow" but did not commit to a tier.</li>
+      </ul>
+    </div>
+
+    <div class="candidate-block">
+      <h3>Moderator</h3>
+      <p class="race-meta">Two candidates, one seat &middot; 1-year term</p>
+      <ul>
+        <li><strong>John Gregory Attridge</strong> (incumbent) sought another term, emphasizing efficiency and accommodations for Town Meeting.</li>
+        <li><strong>Peter Jaffe</strong> (lifelong resident, first-time candidate) focused on tighter warrant review and procedure.</li>
+      </ul>
+    </div>
+
+    <div class="candidate-block">
+      <h3>Recreation &amp; Park Commission</h3>
+      <p class="race-meta">Six candidates, five seats &middot; 1-year terms</p>
+      <ul>
+        <li><strong>Shelly Curran Bedrossian</strong> (incumbent): yes on Q1 and Q4, supported Reynolds turf.</li>
+        <li><strong>Larry J. Simpson</strong> (incumbent): Tier 2, lone no on turf.</li>
+        <li><strong>Karin Linnea Ernst</strong> (incumbent): undecided, supported turf.</li>
+        <li><strong>Kenneth S. Klaiman</strong>: "moderate" 2-4% override, opposed turf.</li>
+        <li><strong>Christopher E. Kennedy</strong> (incumbent): supported turf; no questionnaire response.</li>
+        <li><strong>Michael Ryan McCarthy</strong>: youth sports parent, no questionnaire response.</li>
+      </ul>
+    </div>
+
+    <div class="candidate-block">
+      <h3>Cemetery Commission (2-year unexpired)</h3>
+      <p class="race-meta">Two candidates, one seat</p>
+      <ul>
+        <li><strong>Sally Bull Sands</strong> (incumbent): backed Tier 1 to fund a cemetery laborer.</li>
+        <li><strong>Rose A. McCarthy</strong>: supported Question 1, citing Council on Aging.</li>
+      </ul>
+    </div>
+
+    <div class="candidate-block">
+      <h3>Housing Authority</h3>
+      <p class="race-meta">Two candidates, one seat</p>
+      <ul>
+        <li><strong>Jeffrey Richard Weeden</strong> (Lynn Housing Authority director): backed Tier 3 plus the trash question.</li>
+        <li><strong>Jean R. Eldridge</strong> (incumbent since 1994): ran on institutional knowledge; questionnaire response incomplete in the source.</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="candidate-block">
-    <h3>School Committee</h3>
-    <p class="race-meta">Three candidates, two seats</p>
-    <ul>
-      <li><strong>Melissa Marie Clucas</strong> (incumbent, CFO) backed Tier 3, warning FY27 was balanced only by a one-time $1.5M special-education prepayment.</li>
-      <li><strong>Ann-Marie Jordan</strong> (former educator) backed Tier 3 as a structural deficit fix.</li>
-      <li><strong>Sarah A. Fox</strong> (former two-term member) said the levy "needs to grow" but did not commit to a tier.</li>
-    </ul>
-  </div>
-
-  <div class="candidate-block">
-    <h3>Moderator</h3>
-    <p class="race-meta">Two candidates, one seat &middot; 1-year term</p>
-    <ul>
-      <li><strong>John Gregory Attridge</strong> (incumbent) sought another term, emphasizing efficiency and accommodations for Town Meeting.</li>
-      <li><strong>Peter Jaffe</strong> (lifelong resident, first-time candidate) focused on tighter warrant review and procedure.</li>
-    </ul>
-  </div>
-
-  <div class="candidate-block">
-    <h3>Recreation &amp; Park Commission</h3>
-    <p class="race-meta">Six candidates, five seats &middot; 1-year terms</p>
-    <ul>
-      <li><strong>Shelly Curran Bedrossian</strong> (incumbent): yes on Q1 and Q4, supported Reynolds turf.</li>
-      <li><strong>Larry J. Simpson</strong> (incumbent): Tier 2, lone no on turf.</li>
-      <li><strong>Karin Linnea Ernst</strong> (incumbent): undecided, supported turf.</li>
-      <li><strong>Kenneth S. Klaiman</strong>: "moderate" 2-4% override, opposed turf.</li>
-      <li><strong>Christopher E. Kennedy</strong> (incumbent): supported turf; no questionnaire response.</li>
-      <li><strong>Michael Ryan McCarthy</strong>: youth sports parent, no questionnaire response.</li>
-    </ul>
-  </div>
-
-  <div class="candidate-block">
-    <h3>Cemetery Commission (2-year unexpired)</h3>
-    <p class="race-meta">Two candidates, one seat</p>
-    <ul>
-      <li><strong>Sally Bull Sands</strong> (incumbent): backed Tier 1 to fund a cemetery laborer.</li>
-      <li><strong>Rose A. McCarthy</strong>: supported Question 1, citing Council on Aging.</li>
-    </ul>
-  </div>
-
-  <div class="candidate-block">
-    <h3>Housing Authority</h3>
-    <p class="race-meta">Two candidates, one seat</p>
-    <ul>
-      <li><strong>Jeffrey Richard Weeden</strong> (Lynn Housing Authority director): backed Tier 3 plus the trash question.</li>
-      <li><strong>Jean R. Eldridge</strong> (incumbent since 1994): ran on institutional knowledge; questionnaire response incomplete in the source.</li>
-    </ul>
-  </div>
-
-  <p>The other elected bodies (Assessors, regular-term Cemetery Commission, Board of Health, Library Trustees, Municipal Light Commissioner, Planning Board, and Water &amp; Sewer Commission) were uncontested.</p>
+  <p class="candidate-note">The other elected bodies (Assessors, regular-term Cemetery Commission, Board of Health, Library Trustees, Municipal Light Commissioner, Planning Board, and Water &amp; Sewer Commission) were uncontested.</p>
 </section>
 
-<section class="archive-section" id="the-debate">
-  <h2>3. The debate</h2>
+<section class="arc-band arc-section" id="the-debate">
+  <p class="arc-section-eye">The debate</p>
+  <h2>Six dividing lines, both sides steelmanned</h2>
 
   <p>Six dividing lines ran through the FY27 override debate. Each one had a steelmanned version of both sides; together they were the historical record of how Marblehead residents disagreed in spring 2026.</p>
 
@@ -430,22 +722,26 @@ og_url: https://marbleheaddata.org/2026-override/
   <p>Both readings drew on the same primary sources. The choice between them depended on how readers weighted external pressure versus local discretion, documented warnings versus the absence of attempted reform, and whether past FinCom discipline was sufficient evidence of future spending discipline.</p>
 </section>
 
-<section class="archive-section" id="override-history">
-  <h2>4. Marblehead's override history</h2>
+<section class="arc-band arc-band--tinted arc-section" id="override-history">
+  <p class="arc-section-eye">History</p>
+  <h2>Marblehead's override record before June 2026</h2>
 
   <p>Before the June 2026 vote, Marblehead had voted on 70 Proposition 2&frac12; questions since 1988. Debt exclusions passed 49 of 50 times. Operating overrides passed 6 of 19. The pattern: residents would fund specific capital projects (schools, library, sewers) but reject general operating asks.</p>
 
   <div class="history-timeline">
     <div class="history-event">
-      <p class="year">June 2022 &middot; School Department operating override</p>
+      <p class="year">June 2022</p>
+      <h3>School Department operating override</h3>
       <p>$3.1M asked, rejected 1,802 to 3,929 (-37.1% margin). Pre-vote threats included substantial school cuts; what actually got cut afterward was smaller than the initial framing because savings and one-time funds were found.</p>
     </div>
     <div class="history-event">
-      <p class="year">June 2023 &middot; General Government operating override</p>
+      <p class="year">June 2023</p>
+      <h3>General Government operating override</h3>
       <p>$2.5M asked, rejected 2,996 to 3,414 (-6.5% margin). Tighter loss than 2022. Reserves and one-time transfers covered the gap, an approach FinCom and the Town Administrator subsequently described as "unsustainable" in writing.</p>
     </div>
     <div class="history-event">
-      <p class="year">June 9, 2026 &middot; Three-tier operating override + Question 4 trash</p>
+      <p class="year">June 9, 2026</p>
+      <h3>Three-tier operating override + Question 4 trash</h3>
       <p>$9M / $12M / $15M tiered structure, plus a $2.3M curbside trash question. All four passed; see <a href="#the-result">section 5</a>.</p>
     </div>
   </div>
@@ -455,12 +751,92 @@ og_url: https://marbleheaddata.org/2026-override/
   <p>Every override and debt exclusion vote since 1981, with amounts and margins: <a href="/charts/override_history.html">the override history chart</a>.</p>
 </section>
 
-<section class="archive-section" id="the-result">
-  <h2>5. The result</h2>
+<section class="arc-band arc-band--result arc-section" id="the-result">
+  <p class="arc-section-eye">The result</p>
+  <h2>All four questions passed; support narrowed as the dollar amount rose</h2>
 
   <p>All four questions passed on June 9, 2026. Under the ballot structure, the highest-dollar override approved prevails, so the $15M Invest tier took effect, along with the trash question. 8,092 voters cast ballots, 47.5% of those registered.<sup class="cite" data-href="/data/town_docs/2026-06-09-Town-Election-Unofficial-Results.docx" data-source="Marblehead Town Clerk, Town Election Unofficial Results, June 9, 2026 (local copy)"></sup></p>
 
-  <table class="result-table">
+  <div class="result-meters" role="list" aria-label="Yes share by ballot question">
+    <div class="result-meter" role="listitem">
+      <div class="result-meter-head">
+        <div>
+          <p class="result-meter-label">Q1 &middot; $9M Partial Restore</p>
+          <p class="result-meter-name">$9,000,000 operating override</p>
+        </div>
+        <div class="result-meter-share">66.7%<span class="result-meter-share-sub">yes</span></div>
+      </div>
+      <div class="result-bar" aria-hidden="true">
+        <div class="result-bar-yes" style="width:66.7%"></div>
+        <div class="result-bar-no" style="width:33.3%"></div>
+      </div>
+      <div class="result-meter-counts">
+        <span><span class="swatch swatch-yes"></span><strong>5,312</strong>yes</span>
+        <span><span class="swatch swatch-no"></span><strong>2,653</strong>no</span>
+        <span><strong>127</strong>blanks</span>
+      </div>
+    </div>
+
+    <div class="result-meter" role="listitem">
+      <div class="result-meter-head">
+        <div>
+          <p class="result-meter-label">Q2 &middot; $12M Build</p>
+          <p class="result-meter-name">$12,000,000 operating override</p>
+        </div>
+        <div class="result-meter-share">62.3%<span class="result-meter-share-sub">yes</span></div>
+      </div>
+      <div class="result-bar" aria-hidden="true">
+        <div class="result-bar-yes" style="width:62.3%"></div>
+        <div class="result-bar-no" style="width:37.7%"></div>
+      </div>
+      <div class="result-meter-counts">
+        <span><span class="swatch swatch-yes"></span><strong>4,928</strong>yes</span>
+        <span><span class="swatch swatch-no"></span><strong>2,988</strong>no</span>
+        <span><strong>136</strong>blanks</span>
+      </div>
+    </div>
+
+    <div class="result-meter" role="listitem">
+      <div class="result-meter-head">
+        <div>
+          <p class="result-meter-label">Q3 &middot; $15M Invest &middot; governs FY27</p>
+          <p class="result-meter-name">$15,000,000 operating override</p>
+        </div>
+        <div class="result-meter-share">54.3%<span class="result-meter-share-sub">yes</span></div>
+      </div>
+      <div class="result-bar" aria-hidden="true">
+        <div class="result-bar-yes" style="width:54.3%"></div>
+        <div class="result-bar-no" style="width:45.7%"></div>
+      </div>
+      <div class="result-meter-counts">
+        <span><span class="swatch swatch-yes"></span><strong>4,278</strong>yes</span>
+        <span><span class="swatch swatch-no"></span><strong>3,594</strong>no</span>
+        <span><strong>220</strong>blanks</span>
+      </div>
+    </div>
+
+    <div class="result-meter" role="listitem">
+      <div class="result-meter-head">
+        <div>
+          <p class="result-meter-label">Q4 &middot; Trash</p>
+          <p class="result-meter-name">$2.3M curbside trash funding</p>
+        </div>
+        <div class="result-meter-share">67.4%<span class="result-meter-share-sub">yes</span></div>
+      </div>
+      <div class="result-bar" aria-hidden="true">
+        <div class="result-bar-yes" style="width:67.4%"></div>
+        <div class="result-bar-no" style="width:32.6%"></div>
+      </div>
+      <div class="result-meter-counts">
+        <span><span class="swatch swatch-yes"></span><strong>5,326</strong>yes</span>
+        <span><span class="swatch swatch-no"></span><strong>2,580</strong>no</span>
+        <span><strong>186</strong>blanks</span>
+      </div>
+    </div>
+  </div>
+
+  <table class="visually-hidden">
+    <caption>Yes / no / blanks by ballot question</caption>
     <thead><tr><th>Question</th><th>Yes</th><th>No</th><th>Blanks</th><th>Yes share</th></tr></thead>
     <tbody>
       <tr><td>Q1: $9M override (Partial Restore)</td><td>5,312</td><td>2,653</td><td>127</td><td>66.7%</td></tr>
@@ -469,6 +845,7 @@ og_url: https://marbleheaddata.org/2026-override/
       <tr><td>Q4: $2.3M trash</td><td>5,326</td><td>2,580</td><td>186</td><td>67.4%</td></tr>
     </tbody>
   </table>
+
   <p class="result-note">Yes share is yes votes as a percentage of yes plus no, excluding blanks. Tallies are unofficial pending certification. One quirk in the Clerk's sheet: the Question 2 precinct 4 column totals 1,240 ballots against the 1,280 reported for every other question.</p>
 
   <p>Support narrowed as the dollar amount rose: 66.7% yes at $9M, 62.3% at $12M, 54.3% at $15M. Every tier passed in all six precincts. Precinct 6 had both the highest turnout (52.6%) and the strongest yes vote on every question.</p>
@@ -483,19 +860,38 @@ og_url: https://marbleheaddata.org/2026-override/
 
   <p>Against the two recent failures: the 2022 school override drew 1,802 yes to 3,929 no (31.4% yes) and the 2023 general government override 2,996 yes to 3,414 no (46.7% yes). In 2026 the top tier cleared with 54.3% and the smallest with 66.7%. Votes cast on the override question grew from 5,731 in 2022 and 6,410 in 2023 to 7,872 in 2026 (Question 3, yes plus no).</p>
 
-  <h3>Contested races</h3>
-  <ul>
-    <li><strong>Select Board</strong> (two seats): Erin Marie Noonan (4,776) and Rossana Ferrante (4,323) elected; Jennifer Schaeffner (2,562).</li>
-    <li><strong>Moderator</strong>: John G. Attridge (5,038) over Peter Jaffe (2,082).</li>
-    <li><strong>School Committee</strong> (two seats): Melissa Marie Clucas (5,217) and Ann Marie Jordan (5,007) elected; Sarah A. Fox (1,892).</li>
-    <li><strong>Housing Authority</strong>: Jeffrey Richard Weeden (3,108) over Jean R. Eldridge (3,041), a 67-vote margin.</li>
-    <li><strong>Cemetery Commission, two-year unexpired term</strong>: Sally Bull Sands (3,605) over Rosa A. McCarthy (2,416).</li>
-    <li><strong>Recreation and Park Commission</strong> (five seats, six candidates): Christopher E. Kennedy (4,632), Shelly Curran Bedrossian (4,217), Larry J. Simpson (4,017), Michael Ryan McCarthy (3,951), and Karin Linnea Ernst (3,894) elected; Kenneth S. Klaiman (2,477).</li>
+  <h3 class="arc-h3">Contested races</h3>
+  <ul class="contested-list">
+    <li>
+      <span class="race-name">Select Board (two seats)</span>
+      <strong>Erin Marie Noonan</strong> (4,776) and <strong>Rossana Ferrante</strong> (4,323) elected; Jennifer Schaeffner (2,562).
+    </li>
+    <li>
+      <span class="race-name">Moderator</span>
+      <strong>John G. Attridge</strong> (5,038) over Peter Jaffe (2,082).
+    </li>
+    <li>
+      <span class="race-name">School Committee (two seats)</span>
+      <strong>Melissa Marie Clucas</strong> (5,217) and <strong>Ann Marie Jordan</strong> (5,007) elected; Sarah A. Fox (1,892).
+    </li>
+    <li>
+      <span class="race-name">Housing Authority</span>
+      <strong>Jeffrey Richard Weeden</strong> (3,108) over Jean R. Eldridge (3,041), a 67-vote margin.
+    </li>
+    <li>
+      <span class="race-name">Cemetery Commission (2-year unexpired)</span>
+      <strong>Sally Bull Sands</strong> (3,605) over Rosa A. McCarthy (2,416).
+    </li>
+    <li>
+      <span class="race-name">Recreation and Park Commission (five seats, six candidates)</span>
+      <strong>Christopher E. Kennedy</strong> (4,632), <strong>Shelly Curran Bedrossian</strong> (4,217), <strong>Larry J. Simpson</strong> (4,017), <strong>Michael Ryan McCarthy</strong> (3,951), and <strong>Karin Linnea Ernst</strong> (3,894) elected; Kenneth S. Klaiman (2,477).
+    </li>
   </ul>
 </section>
 
-<section class="archive-section" id="what-happened-next">
-  <h2>6. What happened next</h2>
+<section class="arc-band arc-section" id="what-happened-next">
+  <p class="arc-section-eye">What happened next</p>
+  <h2>FY27 budget funded; implementation follows</h2>
 
   <p>With Question 3 approved, the FY27 budget adopted at the May 4 Town Meeting is funded as voted; the no-override contingency budget does not take effect. The override permanently raises the levy limit beginning with FY27 tax bills. Question 4 moves curbside trash collection onto the tax levy, so the Board of Health's fallback flat fee of roughly $281 per household does not apply.</p>
 
