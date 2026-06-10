@@ -159,9 +159,12 @@ og_url: https://marbleheaddata.org/checkbook/
   .bva-pager-info { font-variant-numeric: tabular-nums; }
 
   .bva-legend {
-    display: flex; flex-wrap: wrap; gap: 14px; justify-content: flex-end;
-    font-size: 11px; color: var(--text-muted); margin: 0 0 8px;
+    display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center;
+    justify-content: space-between;
+    font-size: 11px; color: var(--text-muted); margin: 0 0 10px;
   }
+  .bva-legend-caption { line-height: 1.45; }
+  .bva-legend-keys { display: inline-flex; flex-wrap: wrap; gap: 14px; }
   .bva-legend-item { display: inline-flex; align-items: center; gap: 6px; }
   .bva-legend-swatch {
     display: inline-block; width: 14px; height: 8px; border-radius: 2px;
@@ -169,6 +172,10 @@ og_url: https://marbleheaddata.org/checkbook/
   }
   .bva-legend-swatch--budget { background: color-mix(in srgb, var(--c-navy) 18%, transparent); }
   .bva-legend-swatch--over   { background: var(--c-buoy); }
+  @media (max-width: 600px) {
+    .bva-legend { gap: 8px; }
+    .bva-legend-caption { flex-basis: 100%; }
+  }
 
   @media (max-width: 600px) {
     .bva-row, .bva-axis { grid-template-columns: 110px 1fr 88px; gap: 8px; }
@@ -570,14 +577,17 @@ og_url: https://marbleheaddata.org/checkbook/
   <span class="breakdown-meta" id="breakdown-meta"></span>
 </div>
 
-<div class="bva-chart" id="bva-chart">
-  <div class="ck-loading">Loading&hellip;</div>
+<div class="bva-legend">
+  <span class="bva-legend-caption">Each bar: light backdrop is the revised budget, dark fill is what's been spent so far.</span>
+  <span class="bva-legend-keys">
+    <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--budget"></span>Budget</span>
+    <span class="bva-legend-item"><span class="bva-legend-swatch"></span>Spent</span>
+    <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--over"></span>Over budget</span>
+  </span>
 </div>
 
-<div class="bva-legend">
-  <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--budget"></span>Budget</span>
-  <span class="bva-legend-item"><span class="bva-legend-swatch"></span>Spent</span>
-  <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--over"></span>Over budget</span>
+<div class="bva-chart" id="bva-chart">
+  <div class="ck-loading">Loading&hellip;</div>
 </div>
 
 <div class="ck-section">
@@ -1027,6 +1037,7 @@ og_url: https://marbleheaddata.org/checkbook/
         '</div>' +
         renderMiniBars(lineItems, { limit: 50 }) +
       '</div>';
+      html += renderDrillTableCta(stack);
       html += '</div>';
       return html;
     }
@@ -1084,16 +1095,43 @@ og_url: https://marbleheaddata.org/checkbook/
           monthsHtml +
         '</div>';
       }
-      // CTA: see transactions for this fund
-      var ckCount = pd.monthly.reduce(function (s, m) { return s + m.count; }, 0);
-      html += '<div class="drill-cta drill-cta--span">' +
-        '<button type="button" class="drill-cta-btn" data-action="filter-fund" data-fund="' + escapeHtml(current.key) + '">' +
-        'See ' + ckCount.toLocaleString() + ' transactions for ' + escapeHtml(titleCase(current.key)) + ' &rarr;</button>' +
-      '</div>';
     }
 
+    html += renderDrillTableCta(stack);
     html += '</div>';
     return html;
+  }
+
+  // Build a "See N transactions" CTA tailored to the deepest filterable level
+  // in the drill stack. Division beats fund (it's narrower); category and
+  // department alone don't map to CSV columns so they fall back to the parent
+  // fund/division if one is in the stack.
+  function renderDrillTableCta(stack) {
+    var fundKey = null, divisionKey = null;
+    stack.forEach(function (s) {
+      if (s.dim === 'fund') fundKey = s.key;
+      if (s.dim === 'division' && s.key !== 'UNDEFINED') divisionKey = s.key;
+    });
+    if (!fundKey && !divisionKey) return '';
+    var attrs, count, displayKey, scope;
+    if (divisionKey) {
+      attrs = 'data-action="filter-division" data-division="' + escapeHtml(divisionKey) + '"';
+      count = rows ? rows.reduce(function (s, r) { return s + (r.division === divisionKey ? 1 : 0); }, 0) : 0;
+      displayKey = displayDivision(divisionKey);
+      scope = ' in ';
+    } else {
+      var pd = perf && perf.drill && perf.drill.by_fund && perf.drill.by_fund[fundKey];
+      count = pd ? pd.monthly.reduce(function (s, m) { return s + m.count; }, 0)
+                 : (rows ? rows.reduce(function (s, r) { return s + (r.fund === fundKey ? 1 : 0); }, 0) : 0);
+      attrs = 'data-action="filter-fund" data-fund="' + escapeHtml(fundKey) + '"';
+      displayKey = titleCase(fundKey);
+      scope = ' for ';
+    }
+    if (count === 0) return '';
+    return '<div class="drill-cta drill-cta--span">' +
+      '<button type="button" class="drill-cta-btn" ' + attrs + '>' +
+      'See ' + count.toLocaleString() + ' transactions' + scope + escapeHtml(displayKey) + ' &rarr;</button>' +
+    '</div>';
   }
 
   // --- Budget vs Actual rendering ---
@@ -1377,9 +1415,15 @@ og_url: https://marbleheaddata.org/checkbook/
         return;
       }
       // CTA "see N transactions" -> filter table
-      var cta = e.target.closest('[data-action="filter-fund"]');
-      if (cta) {
-        applyTableFilter({ fund: cta.dataset.fund });
+      var ctaFund = e.target.closest('[data-action="filter-fund"]');
+      if (ctaFund) {
+        applyTableFilter({ fund: ctaFund.dataset.fund });
+        scrollToTable();
+        return;
+      }
+      var ctaDiv = e.target.closest('[data-action="filter-division"]');
+      if (ctaDiv) {
+        applyTableFilter({ division: ctaDiv.dataset.division });
         scrollToTable();
         return;
       }
