@@ -484,9 +484,9 @@ scripts: [citations]
   var DEFAULTS = { popMin: 5000, popMax: 100000, incMin: '', incMax: '', eqvMin: '', eqvMax: 1000000, billMin: '', billMax: '', bpiMin: '', bpiMax: '', rpctMin: '', rpctMax: '', ngMin: '', ngMax: '', ceilMin: '', ceilMax: '' };
   var COL_LABELS = { n:'name', p:'population', ipc:'income per person', bill:'avg tax bill', bpi:'bill as % of income', ahv:'avg home value', rate:'tax rate', rpct:'homeowner share', lpc:'tax per person', esh:'school share', ceil:'levy as % of ceiling', ng:'new construction growth', density:'people per sq mi', lpsm:'levy per sq mi', ovr:'overrides passed', opr:'override pass rate', yso:'years since override', obase:'compounded operating-override base ($)' };
   var COL_EXPLAINERS = {
-    rate: 'Dollars of tax per $1,000 of assessed value. Marblehead\'s $9.05 is low because home values are high. A low rate does not mean a low bill. <a href="/charts/rate_value_schools.html">Rate vs. value explained</a>.',
+    rate: 'Dollars of tax per $1,000 of assessed value. Marblehead\'s $9.05 is low because home values are high. A low rate does not mean a low bill. <a href="/how-we-got-here.html">Structural background</a>.',
     bill: 'Average single-family property tax bill. Marblehead\'s $11,055 is high because home values are high, even though the rate is low.',
-    bpi: 'What share of resident income goes to property tax. Marblehead\'s 9.6% is among the lowest in the state. <a href="/charts/statewide_tax_burden.html">See the statewide chart</a>.',
+    bpi: 'What share of resident income goes to property tax. Marblehead\'s 9.6% is among the lowest in the state. <a href="/data/">See the all-towns data</a>.',
     ahv: 'Average assessed value of a single-family home, derived from the tax bill and rate. Marblehead\'s $1.22M average explains why a low rate produces a high bill.',
     rpct: 'What share of the town\'s total property tax comes from homeowners vs. commercial and industrial property. Marblehead\'s 95.5% means almost all tax revenue depends on homeowners. <a href="/how-we-got-here.html">Structural background</a>.',
     lpc: 'Total property tax collected divided by population. Shows the overall tax burden regardless of how it splits between residential and commercial.',
