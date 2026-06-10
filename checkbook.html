@@ -159,9 +159,12 @@ og_url: https://marbleheaddata.org/checkbook/
   .bva-pager-info { font-variant-numeric: tabular-nums; }
 
   .bva-legend {
-    display: flex; flex-wrap: wrap; gap: 14px; justify-content: flex-end;
-    font-size: 11px; color: var(--text-muted); margin: 0 0 8px;
+    display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center;
+    justify-content: space-between;
+    font-size: 11px; color: var(--text-muted); margin: 0 0 10px;
   }
+  .bva-legend-caption { line-height: 1.45; }
+  .bva-legend-keys { display: inline-flex; flex-wrap: wrap; gap: 14px; }
   .bva-legend-item { display: inline-flex; align-items: center; gap: 6px; }
   .bva-legend-swatch {
     display: inline-block; width: 14px; height: 8px; border-radius: 2px;
@@ -169,6 +172,10 @@ og_url: https://marbleheaddata.org/checkbook/
   }
   .bva-legend-swatch--budget { background: color-mix(in srgb, var(--c-navy) 18%, transparent); }
   .bva-legend-swatch--over   { background: var(--c-buoy); }
+  @media (max-width: 600px) {
+    .bva-legend { gap: 8px; }
+    .bva-legend-caption { flex-basis: 100%; }
+  }
 
   @media (max-width: 600px) {
     .bva-row, .bva-axis { grid-template-columns: 110px 1fr 88px; gap: 8px; }
@@ -455,6 +462,8 @@ og_url: https://marbleheaddata.org/checkbook/
   .drill-bar-row--click { cursor: pointer; }
   .drill-bar-row--click:hover { background: color-mix(in srgb, var(--c-teal) 7%, transparent); }
   .drill-bar-row--click:hover .drill-bar-caret { color: var(--c-teal); }
+  .drill-bar-row--here .drill-bar-name { color: var(--text-muted); font-style: italic; }
+  .drill-bar-row--here .drill-bar-name::after { content: ' · you are here'; font-size: 10.5px; opacity: 0.75; }
   .drill-bar-name {
     color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     font-weight: 500;
@@ -495,10 +504,23 @@ og_url: https://marbleheaddata.org/checkbook/
 
   /* Breadcrumb */
   .drill-crumbs {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 2px;
+    display: flex; flex-wrap: nowrap; align-items: center; gap: 8px;
     margin: 0 0 4px; font-size: 11.5px; color: var(--text-muted);
     padding: 0;
   }
+  .drill-crumbs-trail {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 2px;
+    flex: 1 1 auto; min-width: 0;
+  }
+  .drill-close {
+    flex: 0 0 auto;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 999px;
+    background: transparent; border: 1px solid var(--border);
+    color: var(--text-muted); font-size: 18px; line-height: 1; cursor: pointer;
+    transition: background 0.12s, color 0.12s, border-color 0.12s;
+  }
+  .drill-close:hover { background: var(--surface); color: var(--text); border-color: var(--c-teal); }
   .drill-crumb {
     display: inline-flex; align-items: center; gap: 5px;
     padding: 4px 9px; border-radius: 999px;
@@ -564,18 +586,21 @@ og_url: https://marbleheaddata.org/checkbook/
   <button type="button" class="breakdown-btn" data-breakdown="by_department">Department</button>
   <button type="button" class="breakdown-btn" data-breakdown="by_category">Category</button>
   <button type="button" class="breakdown-btn" data-breakdown="by_division">Division</button>
-  <button type="button" class="breakdown-btn" data-breakdown="by_object">Object</button>
+  <button type="button" class="breakdown-btn" data-breakdown="by_object" title="Granular spend type - Professional Salaries, Health Insurance, etc. (called &quot;object code&quot; in municipal budgeting)">Line item</button>
   <span class="breakdown-meta" id="breakdown-meta"></span>
+</div>
+
+<div class="bva-legend">
+  <span class="bva-legend-caption">Each bar: light backdrop is the revised budget, dark fill is what's been spent so far.</span>
+  <span class="bva-legend-keys">
+    <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--budget"></span>Budget</span>
+    <span class="bva-legend-item"><span class="bva-legend-swatch"></span>Spent</span>
+    <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--over"></span>Over budget</span>
+  </span>
 </div>
 
 <div class="bva-chart" id="bva-chart">
   <div class="ck-loading">Loading&hellip;</div>
-</div>
-
-<div class="bva-legend">
-  <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--budget"></span>Budget</span>
-  <span class="bva-legend-item"><span class="bva-legend-swatch"></span>Spent</span>
-  <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--over"></span>Over budget</span>
 </div>
 
 <div class="ck-section">
@@ -716,7 +741,7 @@ og_url: https://marbleheaddata.org/checkbook/
   </dl>
 </div>
 
-<div class="read-next" id="ck-keep-going">
+<div class="read-next">
   <div class="read-next-label">Keep going</div>
   <a class="read-next-link" href="/data/">
     <div class="read-next-title">All data and charts &rarr;</div>
@@ -921,6 +946,56 @@ og_url: https://marbleheaddata.org/checkbook/
   function hasDrill(dim, key) {
     return !!drillDataFor(dim, key);
   }
+  function drillStackContains(dim, key) {
+    if (!dim) return false;
+    for (var i = 0; i < drillStack.length; i++) {
+      if (drillStack[i].dim === dim && drillStack[i].key === key) return true;
+    }
+    return false;
+  }
+
+  // Top-vendor leaderboard for the current drill stack. At fund level we
+  // hand back the pre-computed perf payload (byte-identical to the legacy
+  // behavior). At division level (with or without a parent fund) we
+  // aggregate live from `rows` - division IS a CSV column.
+  //
+  // Intentionally NOT rendered at department or category level: generic
+  // division names like SALARIES, EXPENSES appear in 26 departments, and
+  // categories like "Professional Salaries" don't map to a CSV column at
+  // all. A naive aggregation would silently mix Police's vendors with Fire,
+  // DPW, etc. The user can drill one more level into a specific division
+  // to get accurate per-slice vendors.
+  function topVendorsForDrill(stack) {
+    if (!stack || stack.length === 0 || !rows || rows.length === 0) return [];
+    var fundKey = null, divisionKey = null;
+    var hasDeptOrCategory = false;
+    stack.forEach(function (s) {
+      if (s.dim === 'fund') fundKey = s.key;
+      else if (s.dim === 'division' && s.key !== 'UNDEFINED') divisionKey = s.key;
+      else if (s.dim === 'department' || s.dim === 'category' ||
+               s.dim === 'dept_category' || s.dim === 'fund_category') hasDeptOrCategory = true;
+    });
+    if (hasDeptOrCategory && !divisionKey) return [];
+    if (fundKey && !divisionKey) {
+      var pd = perf && perf.drill && perf.drill.by_fund && perf.drill.by_fund[fundKey];
+      return (pd && pd.top_vendors) ? pd.top_vendors : [];
+    }
+    if (!divisionKey) return [];
+    var byVendor = {};
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      if (fundKey && r.fund !== fundKey) continue;
+      if (r.division !== divisionKey) continue;
+      var key = r.vendorRaw;
+      if (!byVendor[key]) byVendor[key] = { name: r.vendor, amount: 0, count: 0 };
+      byVendor[key].amount += r.amount;
+      byVendor[key].count += 1;
+    }
+    var arr = [];
+    for (var k in byVendor) if (Object.prototype.hasOwnProperty.call(byVendor, k)) arr.push(byVendor[k]);
+    arr.sort(function (a, b) { return b.amount - a.amount; });
+    return arr;
+  }
 
   function renderMiniBars(items, opts) {
     if (!items || items.length === 0) return '<p class="drill-empty">No data.</p>';
@@ -962,13 +1037,23 @@ og_url: https://marbleheaddata.org/checkbook/
           effKey = compoundKey;
         }
       }
-      var drillable = effDim && hasDrill(effDim, effKey);
-      var rowClass = 'drill-bar-row' + (drillable ? ' drill-bar-row--click' : '');
+      // Rows whose (dim, key) is already in the drill stack are non-clickable so
+      // clicking them doesn't truncate the stack and feel like navigating "up."
+      var alreadyInStack = drillStackContains(effDim, effKey);
+      var drillable = effDim && hasDrill(effDim, effKey) && !alreadyInStack;
+      var rowClass = 'drill-bar-row' +
+        (drillable ? ' drill-bar-row--click' : '') +
+        (alreadyInStack ? ' drill-bar-row--here' : '');
       var attrs = drillable
         ? ' data-drill-push-dim="' + effDim + '" data-drill-push-key="' + escapeHtml(effKey) + '"'
         : '';
+      var explainer = labels && labels.label_notes && labels.label_notes[r.name];
+      var titleParts = [r.name];
+      if (explainer) titleParts.push(explainer);
+      if (drillable) titleParts.push('(click to drill in)');
+      else if (alreadyInStack) titleParts.push('(you are here)');
       return '<div class="' + rowClass + '"' + attrs + '>' +
-        '<div class="drill-bar-name" title="' + escapeHtml(r.name) + (drillable ? ' (click to drill in)' : '') + '">' + escapeHtml(name) +
+        '<div class="drill-bar-name" title="' + escapeHtml(titleParts.join(' - ')) + '">' + escapeHtml(name) +
         (drillable ? ' <span class="drill-bar-caret">›</span>' : '') + '</div>' +
         '<div class="drill-bar-track">' +
           (secondary !== null ? '<div class="drill-bar drill-bar--secondary" style="width:' + secondaryPct.toFixed(1) + '%"></div>' : '') +
@@ -997,22 +1082,24 @@ og_url: https://marbleheaddata.org/checkbook/
 
     var html = '<div class="bva-expand">';
 
-    // Breadcrumb (only when nested beyond root)
-    if (stack.length > 1) {
-      html += '<div class="drill-crumbs drill-cta--span">';
-      stack.forEach(function (entry, i) {
-        var isLast = (i === stack.length - 1);
-        var label = dimDisplay(entry);
-        var dimLabel = '<span class="drill-crumb-dim">' + DIM_LABEL[entry.dim] + ':</span> ';
-        if (isLast) {
-          html += '<span class="drill-crumb drill-crumb--current">' + dimLabel + escapeHtml(label) + '</span>';
-        } else {
-          html += '<button type="button" class="drill-crumb drill-crumb-btn" data-drill-pop="' + (i + 1) + '">' + dimLabel + escapeHtml(label) + '</button>';
-          html += '<span class="drill-crumb-sep">&rsaquo;</span>';
-        }
-      });
-      html += '</div>';
-    }
+    // Breadcrumb + close button. Always shown so the reader can orient and
+    // escape without scrolling back up to the parent row.
+    html += '<div class="drill-crumbs drill-cta--span">';
+    html += '<div class="drill-crumbs-trail">';
+    stack.forEach(function (entry, i) {
+      var isLast = (i === stack.length - 1);
+      var label = dimDisplay(entry);
+      var dimLabel = '<span class="drill-crumb-dim">' + DIM_LABEL[entry.dim] + ':</span> ';
+      if (isLast) {
+        html += '<span class="drill-crumb drill-crumb--current">' + dimLabel + escapeHtml(label) + '</span>';
+      } else {
+        html += '<button type="button" class="drill-crumb drill-crumb-btn" data-drill-pop="' + (i + 1) + '">' + dimLabel + escapeHtml(label) + '</button>';
+        html += '<span class="drill-crumb-sep">&rsaquo;</span>';
+      }
+    });
+    html += '</div>';
+    html += '<button type="button" class="drill-close" data-drill-close="1" aria-label="Close drill-down" title="Close drill-down (Esc)">&times;</button>';
+    html += '</div>';
 
     // Line-item leaf views (dd is an array, not an object)
     if (current.dim === 'dept_category' || current.dim === 'fund_category') {
@@ -1028,6 +1115,7 @@ og_url: https://marbleheaddata.org/checkbook/
         '</div>' +
         renderMiniBars(lineItems, { limit: 50 }) +
       '</div>';
+      html += renderDrillTableCta(stack);
       html += '</div>';
       return html;
     }
@@ -1054,15 +1142,22 @@ og_url: https://marbleheaddata.org/checkbook/
       '</div>';
     });
 
-    // Checkbook vendor + monthly (only for fund level — checkbook is tagged by fund)
+    // Top vendors - rendered at any drill level we can scope to a CSV slice.
+    // At fund level we hand back the pre-computed perf.drill payload (so the
+    // numbers exactly match the legacy behavior). At department/division, we
+    // aggregate live from the parsed rows. Categories alone can't be filtered
+    // and silently produce no card.
+    var vendorRows = topVendorsForDrill(stack);
+    if (vendorRows && vendorRows.length) {
+      html += '<div class="drill-card">' +
+        '<div class="drill-card-title">Top vendors (checkbook)</div>' +
+        renderMiniBars(vendorRows, { limit: 6 }) +
+      '</div>';
+    }
+
+    // Monthly cadence is pre-computed by fund only
     if (current.dim === 'fund' && perf && perf.drill && perf.drill.by_fund && perf.drill.by_fund[current.key]) {
       var pd = perf.drill.by_fund[current.key];
-      if (pd.top_vendors && pd.top_vendors.length) {
-        html += '<div class="drill-card">' +
-          '<div class="drill-card-title">Top vendors (checkbook)</div>' +
-          renderMiniBars(pd.top_vendors, { limit: 6 }) +
-        '</div>';
-      }
       if (pd.monthly && pd.monthly.length) {
         var mMax = pd.monthly.reduce(function (s, m) { return Math.max(s, m.amount); }, 0) || 1;
         var monthName = function (m) {
@@ -1085,16 +1180,43 @@ og_url: https://marbleheaddata.org/checkbook/
           monthsHtml +
         '</div>';
       }
-      // CTA: see transactions for this fund
-      var ckCount = pd.monthly.reduce(function (s, m) { return s + m.count; }, 0);
-      html += '<div class="drill-cta drill-cta--span">' +
-        '<button type="button" class="drill-cta-btn" data-action="filter-fund" data-fund="' + escapeHtml(current.key) + '">' +
-        'See ' + ckCount.toLocaleString() + ' transactions for ' + escapeHtml(titleCase(current.key)) + ' &rarr;</button>' +
-      '</div>';
     }
 
+    html += renderDrillTableCta(stack);
     html += '</div>';
     return html;
+  }
+
+  // Build a "See N transactions" CTA tailored to the deepest filterable level
+  // in the drill stack. Division beats fund (it's narrower); category and
+  // department alone don't map to CSV columns so they fall back to the parent
+  // fund/division if one is in the stack.
+  function renderDrillTableCta(stack) {
+    var fundKey = null, divisionKey = null;
+    stack.forEach(function (s) {
+      if (s.dim === 'fund') fundKey = s.key;
+      if (s.dim === 'division' && s.key !== 'UNDEFINED') divisionKey = s.key;
+    });
+    if (!fundKey && !divisionKey) return '';
+    var attrs, count, displayKey, scope;
+    if (divisionKey) {
+      attrs = 'data-action="filter-division" data-division="' + escapeHtml(divisionKey) + '"';
+      count = rows ? rows.reduce(function (s, r) { return s + (r.division === divisionKey ? 1 : 0); }, 0) : 0;
+      displayKey = displayDivision(divisionKey);
+      scope = ' in ';
+    } else {
+      var pd = perf && perf.drill && perf.drill.by_fund && perf.drill.by_fund[fundKey];
+      count = pd ? pd.monthly.reduce(function (s, m) { return s + m.count; }, 0)
+                 : (rows ? rows.reduce(function (s, r) { return s + (r.fund === fundKey ? 1 : 0); }, 0) : 0);
+      attrs = 'data-action="filter-fund" data-fund="' + escapeHtml(fundKey) + '"';
+      displayKey = titleCase(fundKey);
+      scope = ' for ';
+    }
+    if (count === 0) return '';
+    return '<div class="drill-cta drill-cta--span">' +
+      '<button type="button" class="drill-cta-btn" ' + attrs + '>' +
+      'See ' + count.toLocaleString() + ' transactions' + scope + escapeHtml(displayKey) + ' &rarr;</button>' +
+    '</div>';
   }
 
   // --- Budget vs Actual rendering ---
@@ -1102,6 +1224,10 @@ og_url: https://marbleheaddata.org/checkbook/
   var bvaPage = 0;
   var bvaPageSize = 15;
   var drillStack = [];          // stack of { dim, key } entries; bottom = root, top = currently shown
+  // Per-breakdown stash so switching breakdown tabs and switching back
+  // restores the drill the user had open before. Each entry is a copy of
+  // drillStack at the moment they switched away.
+  var drillStackByBreakdown = {};
   function pushDrill(dim, key) {
     var idx = -1;
     for (var i = 0; i < drillStack.length; i++) {
@@ -1164,9 +1290,11 @@ og_url: https://marbleheaddata.org/checkbook/
       var rowClass = 'bva-row' +
         (drillable ? ' bva-row--drillable' : '') +
         (isExpanded ? ' bva-row--expanded' : '');
+      var rowNote = labels && labels.label_notes && labels.label_notes[r.name];
       html += '<div class="' + rowClass + '"' +
         (drillable ? ' data-drill-key="' + escapeHtml(r.name) + '"' : '') +
         ' title="' + escapeHtml(r.name) +
+        (rowNote ? ' - ' + escapeHtml(rowNote) : '') +
         ' &mdash; Revised: ' + fmtMoney(b, { cents: false }) +
         ', Actual: ' + fmtMoney(a, { cents: false }) +
         (pct !== null ? ' (' + pct + '% of revised)' : ', no appropriation') +
@@ -1312,11 +1440,16 @@ og_url: https://marbleheaddata.org/checkbook/
     // Breakdown buttons
     Array.prototype.forEach.call(document.querySelectorAll('.breakdown-btn'), function (btn) {
       btn.addEventListener('click', function () {
+        var nextBreakdown = btn.getAttribute('data-breakdown');
+        if (nextBreakdown === bvaBreakdown) return;
         document.querySelectorAll('.breakdown-btn').forEach(function (b) { b.classList.remove('active'); });
         btn.classList.add('active');
-        bvaBreakdown = btn.getAttribute('data-breakdown');
+        // Stash whatever drill the user had on the current breakdown,
+        // then restore whatever they had on the new one (empty if none).
+        drillStackByBreakdown[bvaBreakdown] = drillStack.slice();
+        bvaBreakdown = nextBreakdown;
+        drillStack = (drillStackByBreakdown[nextBreakdown] || []).slice();
         bvaPage = 0;
-        drillStack = [];
         renderBva();
       });
     });
@@ -1356,8 +1489,23 @@ og_url: https://marbleheaddata.org/checkbook/
     document.getElementById('page-prev').addEventListener('click', function () { page--; renderTable(); });
     document.getElementById('page-next').addEventListener('click', function () { page++; renderTable(); });
 
+    // Esc dismisses an open drill panel
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drillStack.length > 0) {
+        var focusInForm = document.activeElement && /^(input|textarea|select)$/i.test(document.activeElement.tagName);
+        if (focusInForm) return;
+        clearDrill();
+      }
+    });
+
     // BVA row click -> expand/collapse / drill / pop / cta (event-delegated to survive re-renders)
     document.getElementById('bva-chart').addEventListener('click', function (e) {
+      // Drill close (× button)
+      var close = e.target.closest('[data-drill-close]');
+      if (close) {
+        clearDrill();
+        return;
+      }
       // Breadcrumb pop
       var crumb = e.target.closest('[data-drill-pop]');
       if (crumb) {
@@ -1378,9 +1526,15 @@ og_url: https://marbleheaddata.org/checkbook/
         return;
       }
       // CTA "see N transactions" -> filter table
-      var cta = e.target.closest('[data-action="filter-fund"]');
-      if (cta) {
-        applyTableFilter({ fund: cta.dataset.fund });
+      var ctaFund = e.target.closest('[data-action="filter-fund"]');
+      if (ctaFund) {
+        applyTableFilter({ fund: ctaFund.dataset.fund });
+        scrollToTable();
+        return;
+      }
+      var ctaDiv = e.target.closest('[data-action="filter-division"]');
+      if (ctaDiv) {
+        applyTableFilter({ division: ctaDiv.dataset.division });
         scrollToTable();
         return;
       }
