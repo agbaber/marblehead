@@ -10,6 +10,13 @@ og_url: https://marbleheaddata.org/checkbook/
 <p class="subtitle h-center">FY26 spending, budget, and pacing &ndash; from the town's own portals.</p>
 
 <style>
+  /* The default .page container caps at 760px (--page-max); the
+     checkbook is a data dashboard (KPIs + budget chart + ranked
+     vendors + a 15k-row table), so we widen it on desktop. Notes are
+     body text and stay narrow for readable line length (see .notes
+     rule below). */
+  .page { max-width: 1200px; }
+
   /* Hero stat card */
   .hero-card {
     background: var(--surface); border: 1px solid var(--border);
@@ -57,8 +64,8 @@ og_url: https://marbleheaddata.org/checkbook/
   }
   .ck-section p { font-size: 13px; color: var(--text-muted); margin: 4px 0 0; line-height: 1.5; }
 
-  /* Notes section */
-  .notes { margin: 48px 0 16px; padding-top: 28px; border-top: 1px solid var(--divider); }
+  /* Notes section. Body-text width even when the container is widened. */
+  .notes { max-width: 760px; margin: 48px auto 16px; padding-top: 28px; border-top: 1px solid var(--divider); }
   .notes h2 {
     font-size: 13px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.8px; color: var(--text-subtle); margin: 0 0 14px;
