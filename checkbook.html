@@ -454,6 +454,8 @@ og_url: https://marbleheaddata.org/checkbook/
   .drill-bar-row--click { cursor: pointer; }
   .drill-bar-row--click:hover { background: color-mix(in srgb, var(--c-teal) 7%, transparent); }
   .drill-bar-row--click:hover .drill-bar-caret { color: var(--c-teal); }
+  .drill-bar-row--here .drill-bar-name { color: var(--text-muted); font-style: italic; }
+  .drill-bar-row--here .drill-bar-name::after { content: ' · you are here'; font-size: 10.5px; opacity: 0.75; }
   .drill-bar-name {
     color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     font-weight: 500;
@@ -880,6 +882,13 @@ og_url: https://marbleheaddata.org/checkbook/
   function hasDrill(dim, key) {
     return !!drillDataFor(dim, key);
   }
+  function drillStackContains(dim, key) {
+    if (!dim) return false;
+    for (var i = 0; i < drillStack.length; i++) {
+      if (drillStack[i].dim === dim && drillStack[i].key === key) return true;
+    }
+    return false;
+  }
 
   function renderMiniBars(items, opts) {
     if (!items || items.length === 0) return '<p class="drill-empty">No data.</p>';
@@ -921,13 +930,19 @@ og_url: https://marbleheaddata.org/checkbook/
           effKey = compoundKey;
         }
       }
-      var drillable = effDim && hasDrill(effDim, effKey);
-      var rowClass = 'drill-bar-row' + (drillable ? ' drill-bar-row--click' : '');
+      // Rows whose (dim, key) is already in the drill stack are non-clickable so
+      // clicking them doesn't truncate the stack and feel like navigating "up."
+      var alreadyInStack = drillStackContains(effDim, effKey);
+      var drillable = effDim && hasDrill(effDim, effKey) && !alreadyInStack;
+      var rowClass = 'drill-bar-row' +
+        (drillable ? ' drill-bar-row--click' : '') +
+        (alreadyInStack ? ' drill-bar-row--here' : '');
       var attrs = drillable
         ? ' data-drill-push-dim="' + effDim + '" data-drill-push-key="' + escapeHtml(effKey) + '"'
         : '';
+      var nameTitle = drillable ? ' (click to drill in)' : (alreadyInStack ? ' (you are here)' : '');
       return '<div class="' + rowClass + '"' + attrs + '>' +
-        '<div class="drill-bar-name" title="' + escapeHtml(r.name) + (drillable ? ' (click to drill in)' : '') + '">' + escapeHtml(name) +
+        '<div class="drill-bar-name" title="' + escapeHtml(r.name) + nameTitle + '">' + escapeHtml(name) +
         (drillable ? ' <span class="drill-bar-caret">›</span>' : '') + '</div>' +
         '<div class="drill-bar-track">' +
           (secondary !== null ? '<div class="drill-bar drill-bar--secondary" style="width:' + secondaryPct.toFixed(1) + '%"></div>' : '') +
