@@ -454,45 +454,15 @@ og_url: https://marbleheaddata.org/2026-override/
     line-height: 1.55;
   }
 
-  .contested-list {
-    list-style: none;
-    margin: 14px 0 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  @media (min-width: 760px) {
-    .contested-list { grid-template-columns: 1fr 1fr; }
-  }
-  .contested-list li {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 12px 14px;
-    font-size: 13.5px;
-    color: var(--text-muted);
-    line-height: 1.5;
+  .race-tally {
+    font-size: 12px;
+    color: var(--text-subtle);
     font-variant-numeric: tabular-nums;
-  }
-  .contested-list li strong { color: var(--text); }
-  .contested-list .race-name {
-    display: block;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.9px;
-    text-transform: uppercase;
-    color: var(--c-teal);
-    margin: 0 0 6px;
+    border-top: 1px solid var(--divider);
+    margin: 12px 0 0;
+    padding-top: 10px;
   }
 
-  .arc-h3 {
-    font-size: 19px;
-    font-weight: 700;
-    margin: 28px 0 10px;
-    line-height: 1.3;
-    color: var(--text);
-  }
 
   /* ----- Stub note ----- */
   .stub-note {
@@ -518,7 +488,7 @@ og_url: https://marbleheaddata.org/2026-override/
   <p class="arc-eye">Marblehead <span class="dot">&middot;</span> June 9, 2026 <span class="dot">&middot;</span> Annual Town Election</p>
   <p class="arc-big">4 of 4</p>
   <p class="arc-cap">All four ballot questions passed. The $15M Invest tier governs FY27; the trash question moves curbside collection onto the tax levy.</p>
-  <p class="arc-cap-sub">8,092 ballots cast, 47.5% turnout. The ballot, the candidates, both sides of the debate, the override history, the result, and what followed.</p>
+  <p class="arc-cap-sub">8,092 ballots cast, 47.5% turnout.</p>
   <nav class="arc-jump" aria-label="On this page">
     <a href="#the-ballot">The ballot</a>
     <a href="#the-candidates">The candidates</a>
@@ -551,7 +521,7 @@ og_url: https://marbleheaddata.org/2026-override/
     <div class="ballot-q">
       <p class="ballot-q-num">Question 3 &middot; Invest</p>
       <h3>$15,000,000 operating override</h3>
-      <p>Same purpose, largest amount. As the highest-dollar tier approved, this is the one that takes effect.</p>
+      <p>Same purpose, largest amount.</p>
       <p class="ballot-q-outcome"><span class="elected-chip">Passed</span> <strong>54.3%</strong> yes</p>
     </div>
     <div class="ballot-q">
@@ -582,6 +552,7 @@ og_url: https://marbleheaddata.org/2026-override/
         <li><strong>Rossana Ferrante</strong> <span class="elected-chip">Elected</span> (Recreation &amp; Park chair, attorney) supported Tier 2.</li>
         <li><strong>Jennifer Schaeffner</strong> (School Committee, Housing Authority chair) called the finances "a genuine fiscal crisis" but did not endorse a tier.</li>
       </ul>
+      <p class="race-tally">Noonan 4,776 &middot; Ferrante 4,323 &middot; Schaeffner 2,562</p>
     </div>
 
     <div class="candidate-block">
@@ -592,6 +563,7 @@ og_url: https://marbleheaddata.org/2026-override/
         <li><strong>Ann-Marie Jordan</strong> <span class="elected-chip">Elected</span> (former educator) backed Tier 3 as a structural deficit fix.</li>
         <li><strong>Sarah A. Fox</strong> (former two-term member) said the levy "needs to grow" but did not commit to a tier.</li>
       </ul>
+      <p class="race-tally">Clucas 5,217 &middot; Jordan 5,007 &middot; Fox 1,892</p>
     </div>
 
     <div class="candidate-block">
@@ -601,6 +573,7 @@ og_url: https://marbleheaddata.org/2026-override/
         <li><strong>John Gregory Attridge</strong> <span class="elected-chip">Elected</span> (incumbent) sought another term, emphasizing efficiency and accommodations for Town Meeting.</li>
         <li><strong>Peter Jaffe</strong> (lifelong resident, first-time candidate) focused on tighter warrant review and procedure.</li>
       </ul>
+      <p class="race-tally">Attridge 5,038 &middot; Jaffe 2,082</p>
     </div>
 
     <div class="candidate-block">
@@ -614,6 +587,7 @@ og_url: https://marbleheaddata.org/2026-override/
         <li><strong>Christopher E. Kennedy</strong> <span class="elected-chip">Elected</span> (incumbent): supported turf; no questionnaire response.</li>
         <li><strong>Michael Ryan McCarthy</strong> <span class="elected-chip">Elected</span>: youth sports parent, no questionnaire response.</li>
       </ul>
+      <p class="race-tally">Kennedy 4,632 &middot; Bedrossian 4,217 &middot; Simpson 4,017 &middot; McCarthy 3,951 &middot; Ernst 3,894 &middot; Klaiman 2,477</p>
     </div>
 
     <div class="candidate-block">
@@ -623,6 +597,7 @@ og_url: https://marbleheaddata.org/2026-override/
         <li><strong>Sally Bull Sands</strong> <span class="elected-chip">Elected</span> (incumbent): backed Tier 1 to fund a cemetery laborer.</li>
         <li><strong>Rose A. McCarthy</strong>: supported Question 1, citing Council on Aging.</li>
       </ul>
+      <p class="race-tally">Sands 3,605 &middot; McCarthy 2,416</p>
     </div>
 
     <div class="candidate-block">
@@ -632,10 +607,11 @@ og_url: https://marbleheaddata.org/2026-override/
         <li><strong>Jeffrey Richard Weeden</strong> <span class="elected-chip">Elected</span> (Lynn Housing Authority director): backed Tier 3 plus the trash question.</li>
         <li><strong>Jean R. Eldridge</strong> (incumbent since 1994): ran on institutional knowledge; questionnaire response incomplete in the source.</li>
       </ul>
+      <p class="race-tally">Weeden 3,108 &middot; Eldridge 3,041</p>
     </div>
   </div>
 
-  <p class="candidate-note">The other elected bodies (Assessors, regular-term Cemetery Commission, Board of Health, Library Trustees, Municipal Light Commissioner, Planning Board, and Water &amp; Sewer Commission) were uncontested.</p>
+  <p class="candidate-note">The other elected bodies (Assessors, regular-term Cemetery Commission, Board of Health, Library Trustees, Municipal Light Commissioner, Planning Board, and Water &amp; Sewer Commission) were uncontested. Vote totals are the Town Clerk's unofficial results.<sup class="cite" data-href="/data/town_docs/2026-06-09-Town-Election-Unofficial-Results.docx" data-source="Marblehead Town Clerk, Town Election Unofficial Results, June 9, 2026 (local copy)"></sup></p>
 </section>
 
 <section class="arc-band arc-section" id="the-debate">
@@ -770,8 +746,6 @@ og_url: https://marbleheaddata.org/2026-override/
   <p class="arc-section-eye">The result</p>
   <h2>All four questions passed; support narrowed as the dollar amount rose</h2>
 
-  <p>All four questions passed on June 9, 2026. Under the ballot structure, the highest-dollar override approved prevails, so the $15M Invest tier took effect, along with the trash question. 8,092 voters cast ballots, 47.5% of those registered.<sup class="cite" data-href="/data/town_docs/2026-06-09-Town-Election-Unofficial-Results.docx" data-source="Marblehead Town Clerk, Town Election Unofficial Results, June 9, 2026 (local copy)"></sup></p>
-
   <div class="result-meters" role="list" aria-label="Yes share by ballot question">
     <div class="result-meter" role="listitem">
       <div class="result-meter-head">
@@ -814,7 +788,7 @@ og_url: https://marbleheaddata.org/2026-override/
     <div class="result-meter" role="listitem">
       <div class="result-meter-head">
         <div>
-          <p class="result-meter-label">Q3 &middot; $15M Invest &middot; governs FY27</p>
+          <p class="result-meter-label">Q3 &middot; $15M Invest &middot; takes effect</p>
           <p class="result-meter-name">$15,000,000 operating override</p>
         </div>
         <div class="result-meter-share">54.3%<span class="result-meter-share-sub">yes</span></div>
@@ -861,9 +835,9 @@ og_url: https://marbleheaddata.org/2026-override/
     </tbody>
   </table>
 
-  <p class="result-note">Yes share is yes votes as a percentage of yes plus no, excluding blanks. Tallies are unofficial pending certification. One quirk in the Clerk's sheet: the Question 2 precinct 4 column totals 1,240 ballots against the 1,280 reported for every other question.</p>
+  <p class="result-note">Yes share is yes votes as a percentage of yes plus no, excluding blanks.<sup class="cite" data-href="/data/town_docs/2026-06-09-Town-Election-Unofficial-Results.docx" data-source="Marblehead Town Clerk, Town Election Unofficial Results, June 9, 2026 (local copy)"></sup> Tallies are unofficial pending certification. One quirk in the Clerk's sheet: the Question 2 precinct 4 column totals 1,240 ballots against the 1,280 reported for every other question.</p>
 
-  <p>Support narrowed as the dollar amount rose: 66.7% yes at $9M, 62.3% at $12M, 54.3% at $15M. Every tier passed in all six precincts. Precinct 6 had both the highest turnout (52.6%) and the strongest yes vote on every question.</p>
+  <p>Every tier passed in all six precincts. Precinct 6 had both the highest turnout (52.6%) and the strongest yes vote on every question.</p>
 
   <table class="result-table">
     <thead><tr><th>Turnout</th><th>P1</th><th>P2</th><th>P3</th><th>P4</th><th>P5</th><th>P6</th><th>Total</th></tr></thead>
@@ -873,35 +847,8 @@ og_url: https://marbleheaddata.org/2026-override/
     </tbody>
   </table>
 
-  <p>Against the two recent failures: the 2022 school override drew 1,802 yes to 3,929 no (31.4% yes) and the 2023 general government override 2,996 yes to 3,414 no (46.7% yes). In 2026 the top tier cleared with 54.3% and the smallest with 66.7%. Votes cast on the override question grew from 5,731 in 2022 and 6,410 in 2023 to 7,872 in 2026 (Question 3, yes plus no).</p>
+  <p>Against the two recent failures (31.4% yes in 2022, 46.7% in 2023), the top tier cleared with 54.3% and the smallest with 66.7%. Votes cast on the override question grew from 5,731 in 2022 to 6,410 in 2023 to 7,872 in 2026 (Question 3, yes plus no).</p>
 
-  <h3 class="arc-h3">Contested races</h3>
-  <ul class="contested-list">
-    <li>
-      <span class="race-name">Select Board (two seats)</span>
-      <strong>Erin Marie Noonan</strong> (4,776) and <strong>Rossana Ferrante</strong> (4,323) elected; Jennifer Schaeffner (2,562).
-    </li>
-    <li>
-      <span class="race-name">Moderator</span>
-      <strong>John G. Attridge</strong> (5,038) over Peter Jaffe (2,082).
-    </li>
-    <li>
-      <span class="race-name">School Committee (two seats)</span>
-      <strong>Melissa Marie Clucas</strong> (5,217) and <strong>Ann Marie Jordan</strong> (5,007) elected; Sarah A. Fox (1,892).
-    </li>
-    <li>
-      <span class="race-name">Housing Authority</span>
-      <strong>Jeffrey Richard Weeden</strong> (3,108) over Jean R. Eldridge (3,041), a 67-vote margin.
-    </li>
-    <li>
-      <span class="race-name">Cemetery Commission (2-year unexpired)</span>
-      <strong>Sally Bull Sands</strong> (3,605) over Rosa A. McCarthy (2,416).
-    </li>
-    <li>
-      <span class="race-name">Recreation and Park Commission (five seats, six candidates)</span>
-      <strong>Christopher E. Kennedy</strong> (4,632), <strong>Shelly Curran Bedrossian</strong> (4,217), <strong>Larry J. Simpson</strong> (4,017), <strong>Michael Ryan McCarthy</strong> (3,951), and <strong>Karin Linnea Ernst</strong> (3,894) elected; Kenneth S. Klaiman (2,477).
-    </li>
-  </ul>
 </section>
 
 <section class="arc-band arc-section" id="what-happened-next">
