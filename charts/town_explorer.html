@@ -329,7 +329,7 @@ scripts: [citations]
         <span class="sep">to</span>
         <input type="text" inputmode="numeric" id="f-bill-max" value="" placeholder="any" aria-label="Max tax bill">
       </div>
-      <div class="lever-note">Marblehead: $11,055. Rate ($9.05) times home value. An override changes this.</div>
+      <div class="lever-note">Marblehead: $11,055 (FY26, pre-vote). Rate ($9.05) times home value. The June 2026 override raised the levy; an adopted bill is projected at $12,991 once FY27 numbers are published.</div>
     </div>
     <div class="filter-group">
       <label>Bill % of Income</label>
@@ -375,11 +375,11 @@ scripts: [citations]
   </div>
   </details>
   <div class="tier-bar">
-    <span class="tier-label">Override tier:</span>
-    <button type="button" class="tier-btn" data-tier="0">Current</button>
-    <button type="button" class="tier-btn" data-tier="1">Tier 1 ($9M)</button>
-    <button type="button" class="tier-btn" data-tier="2">Tier 2 ($12M)</button>
-    <button type="button" class="tier-btn" data-tier="3">Tier 3 ($15M)</button>
+    <span class="tier-label">View:</span>
+    <button type="button" class="tier-btn active" data-tier="3">Adopted ($15M)</button>
+    <button type="button" class="tier-btn" data-tier="2">If $12M tier only</button>
+    <button type="button" class="tier-btn" data-tier="1">If $9M tier only</button>
+    <button type="button" class="tier-btn" data-tier="0">Pre-vote (FY26)</button>
     <span class="tier-from" id="tier-from"></span>
   </div>
 </div>
@@ -447,21 +447,21 @@ scripts: [citations]
 
 <div class="read-next">
   <div class="read-next-label">Read next</div>
-  <a class="read-next-link" href="../charts/deficit_model.html">
-    <div class="read-next-title">Project the gap forward &rarr;</div>
-    <div class="read-next-desc">Adjust revenue and expense growth assumptions, toggle tiers, see when the next override hits.</div>
+  <a class="read-next-link" href="../2026-override/">
+    <div class="read-next-title">The 2026 override archive &rarr;</div>
+    <div class="read-next-desc">All four ballot questions, the June 9 result, what passed, and what came next.</div>
   </a>
-  <a class="read-next-link" href="../why-not-elsewhere.html">
-    <div class="read-next-title">Why do some MA towns run overrides and others don't? &rarr;</div>
-    <div class="read-next-desc">Residential share of levy, new growth, and override history grouped into four structural archetypes across 21 peer towns.</div>
+  <a class="read-next-link" href="../how-we-got-here.html">
+    <div class="read-next-title">How Marblehead got here &rarr;</div>
+    <div class="read-next-desc">The structural drivers of the FY27 gap: residential tax base, fixed costs, override history.</div>
   </a>
-  <a class="read-next-link" href="../charts/four_town_rates.html">
-    <div class="read-next-title">Four North Shore towns &rarr;</div>
-    <div class="read-next-desc">Focused comparison of Marblehead, Swampscott, Melrose, and Stoneham on tax rate and average bill.</div>
+  <a class="read-next-link" href="../charts/override_history.html">
+    <div class="read-next-title">Marblehead's override vote history &rarr;</div>
+    <div class="read-next-desc">35 years of ballot questions, with 2026's four passes alongside 14 peer towns.</div>
   </a>
-  <a class="read-next-link" href="../charts/override_calculator.html">
-    <div class="read-next-title">What does the override cost me? &rarr;</div>
-    <div class="read-next-desc">Year-by-year monthly and annual cost for each tier at your home value, plus share of household income.</div>
+  <a class="read-next-link" href="../data/">
+    <div class="read-next-title">All data and charts &rarr;</div>
+    <div class="read-next-desc">Hub for every dataset, chart, and methodology page on the site.</div>
   </a>
 </div>
 
@@ -484,20 +484,20 @@ scripts: [citations]
   var DEFAULTS = { popMin: 5000, popMax: 100000, incMin: '', incMax: '', eqvMin: '', eqvMax: 1000000, billMin: '', billMax: '', bpiMin: '', bpiMax: '', rpctMin: '', rpctMax: '', ngMin: '', ngMax: '', ceilMin: '', ceilMax: '' };
   var COL_LABELS = { n:'name', p:'population', ipc:'income per person', bill:'avg tax bill', bpi:'bill as % of income', ahv:'avg home value', rate:'tax rate', rpct:'homeowner share', lpc:'tax per person', esh:'school share', ceil:'levy as % of ceiling', ng:'new construction growth', density:'people per sq mi', lpsm:'levy per sq mi', ovr:'overrides passed', opr:'override pass rate', yso:'years since override', obase:'compounded operating-override base ($)' };
   var COL_EXPLAINERS = {
-    rate: 'Dollars of tax per $1,000 of assessed value. Marblehead\'s $9.05 is low because home values are high. A low rate does not mean a low bill. <a href="/charts/rate_value_schools.html">Rate vs. value explained</a>.',
+    rate: 'Dollars of tax per $1,000 of assessed value. Marblehead\'s $9.05 is low because home values are high. A low rate does not mean a low bill. <a href="/how-we-got-here.html">Structural background</a>.',
     bill: 'Average single-family property tax bill. Marblehead\'s $11,055 is high because home values are high, even though the rate is low.',
-    bpi: 'What share of resident income goes to property tax. Marblehead\'s 9.6% is among the lowest in the state. <a href="/charts/statewide_tax_burden.html">See the statewide chart</a>.',
+    bpi: 'What share of resident income goes to property tax. Marblehead\'s 9.6% is among the lowest in the state. <a href="/data/">See the all-towns data</a>.',
     ahv: 'Average assessed value of a single-family home, derived from the tax bill and rate. Marblehead\'s $1.22M average explains why a low rate produces a high bill.',
-    rpct: 'What share of the town\'s total property tax comes from homeowners vs. commercial and industrial property. Marblehead\'s 95.5% means almost all tax revenue depends on homeowners. <a href="/why-not-elsewhere.html">Structural comparison</a>.',
+    rpct: 'What share of the town\'s total property tax comes from homeowners vs. commercial and industrial property. Marblehead\'s 95.5% means almost all tax revenue depends on homeowners. <a href="/how-we-got-here.html">Structural background</a>.',
     lpc: 'Total property tax collected divided by population. Shows the overall tax burden regardless of how it splits between residential and commercial.',
     esh: 'Education spending as a share of total general-fund spending. Source: <abbr class="g" title="Massachusetts Department of Revenue">DOR</abbr> Schedule A, most recent year filed.',
     ceil: 'Total property tax levied as a share of the absolute Proposition 2&frac12; ceiling (2.5% of total assessed property value). Marblehead\'s 36.2% is below the 25th percentile statewide; most towns use a larger share of their ceiling. Towns near 80%+ are mostly Western Mass cities with low property values relative to service obligations. An override raises the levy, increasing this percentage modestly.',
-    ng: 'Revenue from new construction as a share of total levy. This is how the tax base grows without an override vote. Marblehead\'s 0.38% is among the lowest in the state. <a href="/why-not-elsewhere.html#new-growth">New growth explained</a>.',
+    ng: 'Revenue from new construction as a share of total levy. This is how the tax base grows without an override vote. Marblehead\'s 0.38% is among the lowest in the state. <a href="/how-we-got-here.html">Structural background</a>.',
     density: 'Residents per square mile of land area. Marblehead packs 4,698 people into 4.38 sq mi, making it one of the densest non-city communities in the state. Dense towns have less room to grow the tax base through new construction.',
     lpsm: 'Total property tax collected per square mile. Marblehead collects $19.3M per sq mi, reflecting high property values on limited land. Compare to towns with similar density to see whether Marblehead is taxing its land more or less intensively.',
-    ovr: 'Votes passed since 1990. Use the dropdown to switch between all overrides (permanent), operating only, or debt exclusions (temporary, project-specific). Marblehead: 6 overrides (3 operating), 50 debt exclusions.',
+    ovr: 'Votes passed since 1990. Use the dropdown to switch between all overrides (permanent), operating only, or debt exclusions (temporary, project-specific). Marblehead: 10 overrides (7 operating, four of which were the June 9, 2026 ballot questions), 50 debt exclusions.',
     opr: 'Pass rate: wins divided by total votes. Marblehead passes 98% of debt exclusions but only 23% of operating overrides. The dropdown switches between vote types.',
-    yso: 'Years since the town last passed. Marblehead last passed an operating override in FY2006 (21 years ago) but passed a debt exclusion in FY2026 (1 year ago). The dropdown switches between vote types.',
+    yso: 'Years since the town last passed. Marblehead most recently passed operating overrides on June 9, 2026 (all four FY2027 ballot questions; the $15M tier governs). The dropdown switches between vote types.',
     obase: 'Compounded current-day dollar value of all winning operating overrides since 1980. Marblehead: $8.25M, rank 58 of 351. Each override permanently raised the levy limit and grows 2.5%/yr; this is the dollar amount of recurring tax authority those past votes still buy today. Underrides subtract; debt exclusions excluded since they don\'t permanently raise the limit. Operating-override only, so this column does not toggle with the vote-type dropdown.'
   };
   // Cohort presets: each sets filter ranges (not hardcoded town lists)
@@ -521,12 +521,12 @@ scripts: [citations]
   // Marblehead FY26 actual levy $84.4M / ceiling $233.1M = 36.2%.
   // Each tier adds its dollar amount to the levy; ceiling is unchanged.
   var TIERS = {
-    0: { label: 'Current', rate: 9.05, bill: 11055, ceil: 36.2 },
-    1: { label: 'Tier 1 ($9M)', rate: 9.46, bill: 12217, ceil: 40.1 },
-    2: { label: 'Tier 2 ($12M)', rate: 9.76, bill: 12604, ceil: 41.4 },
-    3: { label: 'Tier 3 ($15M)', rate: 10.06, bill: 12991, ceil: 42.6 }
+    0: { label: 'Pre-vote (FY26)', rate: 9.05, bill: 11055, ceil: 36.2 },
+    1: { label: 'If $9M tier only', rate: 9.46, bill: 12217, ceil: 40.1 },
+    2: { label: 'If $12M tier only', rate: 9.76, bill: 12604, ceil: 41.4 },
+    3: { label: 'Adopted ($15M)', rate: 10.06, bill: 12991, ceil: 42.6 }
   };
-  var activeTier = 0;
+  var activeTier = 3;
   // Compute per-sq-mi metrics from area
   DATA.forEach(function (t) {
     if (t.area > 0) {
