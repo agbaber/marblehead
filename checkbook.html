@@ -1101,6 +1101,10 @@ og_url: https://marbleheaddata.org/checkbook/
   var bvaPage = 0;
   var bvaPageSize = 15;
   var drillStack = [];          // stack of { dim, key } entries; bottom = root, top = currently shown
+  // Per-breakdown stash so switching breakdown tabs and switching back
+  // restores the drill the user had open before. Each entry is a copy of
+  // drillStack at the moment they switched away.
+  var drillStackByBreakdown = {};
   function pushDrill(dim, key) {
     var idx = -1;
     for (var i = 0; i < drillStack.length; i++) {
@@ -1311,11 +1315,16 @@ og_url: https://marbleheaddata.org/checkbook/
     // Breakdown buttons
     Array.prototype.forEach.call(document.querySelectorAll('.breakdown-btn'), function (btn) {
       btn.addEventListener('click', function () {
+        var nextBreakdown = btn.getAttribute('data-breakdown');
+        if (nextBreakdown === bvaBreakdown) return;
         document.querySelectorAll('.breakdown-btn').forEach(function (b) { b.classList.remove('active'); });
         btn.classList.add('active');
-        bvaBreakdown = btn.getAttribute('data-breakdown');
+        // Stash whatever drill the user had on the current breakdown,
+        // then restore whatever they had on the new one (empty if none).
+        drillStackByBreakdown[bvaBreakdown] = drillStack.slice();
+        bvaBreakdown = nextBreakdown;
+        drillStack = (drillStackByBreakdown[nextBreakdown] || []).slice();
         bvaPage = 0;
-        drillStack = [];
         renderBva();
       });
     });
