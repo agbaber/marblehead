@@ -85,9 +85,9 @@ scripts: [citations]
 <p class="subtitle h-center">Marblehead and 13 peer towns, FY1990 to FY2027. Every Prop 2&frac12; operating override ballot question from the DOR Municipal Databank.</p>
 
 <ul class="tldr">
-  <li><strong>19 override votes</strong> in Marblehead since 1991; 6 passed, 13 did not</li>
-  <li><strong>Last significant operating override:</strong> FY2006, $2.73M (passed 3,869 to 3,456)</li>
-  <li>Peer towns like Arlington, Brookline, Needham, and Wellesley have passed overrides more recently and more frequently</li>
+  <li><strong>23 override votes</strong> in Marblehead since 1991; 10 passed, 13 did not</li>
+  <li><strong>Most recent operating overrides:</strong> all four FY2027 ballot questions passed on June 9, 2026 (the $15M tier governs FY27)<sup class="cite" data-source="Marblehead Town Clerk, Town Election Unofficial Results, June 9, 2026 (local copy)" data-href="/data/town_docs/2026-06-09-Town-Election-Unofficial-Results.docx"></sup></li>
+  <li>Peer towns like Arlington, Brookline, Needham, and Wellesley have also passed overrides repeatedly over the same period</li>
 </ul>
 
 <h2>Marblehead: 35 years of override votes</h2>
@@ -98,7 +98,7 @@ scripts: [citations]
   <span><span class="oh-legend-dot oh-legend-dot-fail"></span> Did not pass</span>
 </div>
 
-<svg class="oh-svg" id="oh-mh-chart" viewBox="0 0 880 340" role="img" aria-label="Marblehead override vote history, FY1991 to FY2024">
+<svg class="oh-svg" id="oh-mh-chart" viewBox="0 0 880 340" role="img" aria-label="Marblehead override vote history, FY1991 to FY2027">
   <g id="oh-mh-grid"></g>
   <g id="oh-mh-stems"></g>
   <g id="oh-mh-callouts"></g>
@@ -148,7 +148,11 @@ scripts: [citations]
     {fy:2006, win:true, yes:3869, no:3456, amt:2730167, desc:"Town Departments"},
     {fy:2012, win:false, yes:2531, no:3567, amt:667793, desc:"Old Town House"},
     {fy:2023, win:false, yes:1802, no:3929, amt:3051093, desc:"School Operating"},
-    {fy:2024, win:false, yes:2996, no:3414, amt:2472056, desc:"General Operating"}
+    {fy:2024, win:false, yes:2996, no:3414, amt:2472056, desc:"General Operating"},
+    {fy:2027, win:true, yes:5312, no:2653, amt:9000000, desc:"Q1 $9M Operating Override"},
+    {fy:2027, win:true, yes:4928, no:2988, amt:12000000, desc:"Q2 $12M Operating Override"},
+    {fy:2027, win:true, yes:4278, no:3594, amt:15000000, desc:"Q3 $15M Operating Override (governs)"},
+    {fy:2027, win:true, yes:5326, no:2580, amt:2298575, desc:"Q4 Trash Operating Override"}
   ];
 
   // === All peer votes (from peer_override_history.csv) ===
@@ -159,7 +163,7 @@ scripts: [citations]
     {t:"Framingham",fy:1991,w:1},{t:"Framingham",fy:1991,w:0},{t:"Framingham",fy:1991,w:0},{t:"Framingham",fy:1991,w:0},{t:"Framingham",fy:1991,w:0},{t:"Framingham",fy:1991,w:1},{t:"Framingham",fy:1992,w:0},{t:"Framingham",fy:1992,w:0},{t:"Framingham",fy:1992,w:1},{t:"Framingham",fy:2003,w:1},
     {t:"Hingham",fy:1990,w:0},{t:"Hingham",fy:1990,w:0},{t:"Hingham",fy:1991,w:1},{t:"Hingham",fy:1992,w:0},{t:"Hingham",fy:1992,w:0},{t:"Hingham",fy:1994,w:1},{t:"Hingham",fy:2005,w:1},{t:"Hingham",fy:2010,w:1},{t:"Hingham",fy:2024,w:1},
     {t:"Lexington",fy:1991,w:1},{t:"Lexington",fy:1993,w:1},{t:"Lexington",fy:1996,w:1},{t:"Lexington",fy:1996,w:1},{t:"Lexington",fy:1996,w:1},{t:"Lexington",fy:1996,w:1},{t:"Lexington",fy:2001,w:1},{t:"Lexington",fy:2004,w:0},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2005,w:1},{t:"Lexington",fy:2007,w:1},{t:"Lexington",fy:2007,w:1},{t:"Lexington",fy:2007,w:0},{t:"Lexington",fy:2007,w:0},{t:"Lexington",fy:2008,w:1},
-    {t:"Marblehead",fy:1991,w:0},{t:"Marblehead",fy:1992,w:0},{t:"Marblehead",fy:1992,w:0},{t:"Marblehead",fy:1992,w:0},{t:"Marblehead",fy:1996,w:0},{t:"Marblehead",fy:1997,w:0},{t:"Marblehead",fy:2001,w:0},{t:"Marblehead",fy:2002,w:1},{t:"Marblehead",fy:2004,w:1},{t:"Marblehead",fy:2005,w:0},{t:"Marblehead",fy:2005,w:1},{t:"Marblehead",fy:2005,w:0},{t:"Marblehead",fy:2005,w:1},{t:"Marblehead",fy:2005,w:0},{t:"Marblehead",fy:2005,w:1},{t:"Marblehead",fy:2006,w:1},{t:"Marblehead",fy:2012,w:0},{t:"Marblehead",fy:2023,w:0},{t:"Marblehead",fy:2024,w:0},
+    {t:"Marblehead",fy:1991,w:0},{t:"Marblehead",fy:1992,w:0},{t:"Marblehead",fy:1992,w:0},{t:"Marblehead",fy:1992,w:0},{t:"Marblehead",fy:1996,w:0},{t:"Marblehead",fy:1997,w:0},{t:"Marblehead",fy:2001,w:0},{t:"Marblehead",fy:2002,w:1},{t:"Marblehead",fy:2004,w:1},{t:"Marblehead",fy:2005,w:0},{t:"Marblehead",fy:2005,w:1},{t:"Marblehead",fy:2005,w:0},{t:"Marblehead",fy:2005,w:1},{t:"Marblehead",fy:2005,w:0},{t:"Marblehead",fy:2005,w:1},{t:"Marblehead",fy:2006,w:1},{t:"Marblehead",fy:2012,w:0},{t:"Marblehead",fy:2023,w:0},{t:"Marblehead",fy:2024,w:0},{t:"Marblehead",fy:2027,w:1},{t:"Marblehead",fy:2027,w:1},{t:"Marblehead",fy:2027,w:1},{t:"Marblehead",fy:2027,w:1},
     {t:"Melrose",fy:1991,w:0},{t:"Melrose",fy:1991,w:0},{t:"Melrose",fy:1991,w:0},{t:"Melrose",fy:1991,w:0},{t:"Melrose",fy:1991,w:0},{t:"Melrose",fy:1993,w:1},{t:"Melrose",fy:2003,w:0},{t:"Melrose",fy:2016,w:0},{t:"Melrose",fy:2020,w:1},{t:"Melrose",fy:2025,w:0},{t:"Melrose",fy:2026,w:1},
     {t:"Natick",fy:1991,w:0},{t:"Natick",fy:1992,w:0},{t:"Natick",fy:2001,w:1},{t:"Natick",fy:2009,w:1},{t:"Natick",fy:2026,w:1},
     {t:"Needham",fy:1990,w:0},{t:"Needham",fy:1991,w:0},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1992,w:1},{t:"Needham",fy:1997,w:0},{t:"Needham",fy:1997,w:0},{t:"Needham",fy:1997,w:0},{t:"Needham",fy:1997,w:0},{t:"Needham",fy:1997,w:0},{t:"Needham",fy:1997,w:1},{t:"Needham",fy:1997,w:1},{t:"Needham",fy:1997,w:1},{t:"Needham",fy:1997,w:1},{t:"Needham",fy:1997,w:1},{t:"Needham",fy:1998,w:0},{t:"Needham",fy:2003,w:0},{t:"Needham",fy:2003,w:0},{t:"Needham",fy:2003,w:0},{t:"Needham",fy:2004,w:1},{t:"Needham",fy:2004,w:1},{t:"Needham",fy:2007,w:1},{t:"Needham",fy:2007,w:0},{t:"Needham",fy:2008,w:1},{t:"Needham",fy:2010,w:1},{t:"Needham",fy:2015,w:1},
@@ -178,7 +182,7 @@ scripts: [citations]
   var mPH = mH - mmT - mmB;
   var mBaseline = mmT + mPH * 0.45; // 45% from top = where y=0 sits
 
-  var fyMin = 1990, fyMax = 2025;
+  var fyMin = 1990, fyMax = 2027;
   function mxScale(fy) { return mmL + ((fy - fyMin) / (fyMax - fyMin)) * mPW; }
 
   // Find max margin for scaling
@@ -194,8 +198,8 @@ scripts: [citations]
   // Amount to radius (log scale, clamped)
   function amtToR(amt) {
     if (amt <= 0) return 3;
-    var minAmt = 500, maxAmt = 3100000;
-    var t = (Math.log(Math.max(amt, minAmt)) - Math.log(minAmt)) / (Math.log(maxAmt) - Math.log(minAmt));
+    var minAmt = 500, maxAmt = 15000000;
+    var t = (Math.log(Math.max(Math.min(amt, maxAmt), minAmt)) - Math.log(minAmt)) / (Math.log(maxAmt) - Math.log(minAmt));
     return 3 + t * 7;
   }
 
@@ -223,6 +227,10 @@ scripts: [citations]
     gridHtml += '<line class="oh-grid" x1="' + x + '" y1="' + mmT + '" x2="' + x + '" y2="' + (mmT + mPH) + '"/>';
     gridHtml += '<text class="oh-tick" x="' + x + '" y="' + (mmT + mPH + 16) + '" text-anchor="middle">FY' + (yr % 100 < 10 ? '0' : '') + (yr % 100) + '</text>';
   }
+  // FY27 tick at the right edge (the 2026 vote year)
+  var fy27x = mxScale(2027);
+  gridHtml += '<line class="oh-grid" x1="' + fy27x + '" y1="' + mmT + '" x2="' + fy27x + '" y2="' + (mmT + mPH) + '"/>';
+  gridHtml += '<text class="oh-tick" x="' + fy27x + '" y="' + (mmT + mPH + 16) + '" text-anchor="middle">FY27</text>';
   // Baseline
   gridHtml += '<line class="oh-axis-base" x1="' + mmL + '" y1="' + mBaseline + '" x2="' + (mmL + mPW) + '" y2="' + mBaseline + '"/>';
   gridHtml += '<text class="oh-label" x="' + (mmL - 6) + '" y="' + (mBaseline - 6) + '" text-anchor="end">Passed</text>';
@@ -254,7 +262,6 @@ scripts: [citations]
   var fy06margin = fy06v.yes - fy06v.no;
   var fy06y = mBaseline - marginToH(fy06margin) - amtToR(fy06v.amt) - 4;
   calloutsHtml += '<text class="oh-callout" x="' + fy06x + '" y="' + fy06y + '" text-anchor="middle">FY06: $2.73M</text>';
-  calloutsHtml += '<text class="oh-callout" x="' + fy06x + '" y="' + (fy06y - 11) + '" text-anchor="middle">Last operating override</text>';
 
   // FY2023/24 losses
   var fy23x = mxScale(2023);
@@ -262,6 +269,15 @@ scripts: [citations]
   var fy23margin = fy23v.no - fy23v.yes;
   var fy23y = mBaseline + marginToH(fy23margin) + amtToR(fy23v.amt) + 14;
   calloutsHtml += '<text class="oh-callout-fail" x="' + ((fy23x + mxScale(2024)) / 2) + '" y="' + fy23y + '" text-anchor="middle">FY23, FY24: did not pass</text>';
+
+  // FY2027: all four passed June 9, 2026
+  var fy27x2 = mxScale(2027);
+  // largest FY27 entry by amount is the $15M (mhVotes[21]); use its stem top for placement
+  var fy27v = mhVotes[21];
+  var fy27margin = fy27v.yes - fy27v.no;
+  var fy27y = mBaseline - marginToH(fy27margin) - amtToR(fy27v.amt) - 4;
+  calloutsHtml += '<text class="oh-callout" x="' + fy27x2 + '" y="' + fy27y + '" text-anchor="middle">FY27: all four passed</text>';
+  calloutsHtml += '<text class="oh-callout" x="' + fy27x2 + '" y="' + (fy27y - 11) + '" text-anchor="middle">June 9, 2026</text>';
 
   document.getElementById('oh-mh-callouts').innerHTML = calloutsHtml;
 
