@@ -19,6 +19,15 @@ description: AI-generated transcripts and summaries of public board and committe
   video on MHTV.
 </p>
 
+<aside class="meetings-cta">
+  <p class="meetings-cta-lede">
+    <strong>Get a Friday email digest.</strong>
+    Pick the boards you care about and get a weekly recap with
+    deep-links into the source video.
+  </p>
+  <a class="meetings-cta-btn" href="{{ '/subscribe/' | relative_url }}">Subscribe</a>
+</aside>
+
 {% assign sorted = site.transcripts | sort: 'date' | reverse %}
 
 {% if sorted.size == 0 %}
