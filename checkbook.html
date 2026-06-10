@@ -938,6 +938,49 @@ og_url: https://marbleheaddata.org/checkbook/
     return false;
   }
 
+  // Top-vendor leaderboard for the current drill stack. At fund level we
+  // hand back the pre-computed perf payload (byte-identical to the legacy
+  // behavior). At division level (with or without a parent fund) we
+  // aggregate live from `rows` - division IS a CSV column.
+  //
+  // Intentionally NOT rendered at department or category level: generic
+  // division names like SALARIES, EXPENSES appear in 26 departments, and
+  // categories like "Professional Salaries" don't map to a CSV column at
+  // all. A naive aggregation would silently mix Police's vendors with Fire,
+  // DPW, etc. The user can drill one more level into a specific division
+  // to get accurate per-slice vendors.
+  function topVendorsForDrill(stack) {
+    if (!stack || stack.length === 0 || !rows || rows.length === 0) return [];
+    var fundKey = null, divisionKey = null;
+    var hasDeptOrCategory = false;
+    stack.forEach(function (s) {
+      if (s.dim === 'fund') fundKey = s.key;
+      else if (s.dim === 'division' && s.key !== 'UNDEFINED') divisionKey = s.key;
+      else if (s.dim === 'department' || s.dim === 'category' ||
+               s.dim === 'dept_category' || s.dim === 'fund_category') hasDeptOrCategory = true;
+    });
+    if (hasDeptOrCategory && !divisionKey) return [];
+    if (fundKey && !divisionKey) {
+      var pd = perf && perf.drill && perf.drill.by_fund && perf.drill.by_fund[fundKey];
+      return (pd && pd.top_vendors) ? pd.top_vendors : [];
+    }
+    if (!divisionKey) return [];
+    var byVendor = {};
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      if (fundKey && r.fund !== fundKey) continue;
+      if (r.division !== divisionKey) continue;
+      var key = r.vendorRaw;
+      if (!byVendor[key]) byVendor[key] = { name: r.vendor, amount: 0, count: 0 };
+      byVendor[key].amount += r.amount;
+      byVendor[key].count += 1;
+    }
+    var arr = [];
+    for (var k in byVendor) if (Object.prototype.hasOwnProperty.call(byVendor, k)) arr.push(byVendor[k]);
+    arr.sort(function (a, b) { return b.amount - a.amount; });
+    return arr;
+  }
+
   function renderMiniBars(items, opts) {
     if (!items || items.length === 0) return '<p class="drill-empty">No data.</p>';
     opts = opts || {};
@@ -1083,15 +1126,22 @@ og_url: https://marbleheaddata.org/checkbook/
       '</div>';
     });
 
-    // Checkbook vendor + monthly (only for fund level — checkbook is tagged by fund)
+    // Top vendors - rendered at any drill level we can scope to a CSV slice.
+    // At fund level we hand back the pre-computed perf.drill payload (so the
+    // numbers exactly match the legacy behavior). At department/division, we
+    // aggregate live from the parsed rows. Categories alone can't be filtered
+    // and silently produce no card.
+    var vendorRows = topVendorsForDrill(stack);
+    if (vendorRows && vendorRows.length) {
+      html += '<div class="drill-card">' +
+        '<div class="drill-card-title">Top vendors (checkbook)</div>' +
+        renderMiniBars(vendorRows, { limit: 6 }) +
+      '</div>';
+    }
+
+    // Monthly cadence is pre-computed by fund only
     if (current.dim === 'fund' && perf && perf.drill && perf.drill.by_fund && perf.drill.by_fund[current.key]) {
       var pd = perf.drill.by_fund[current.key];
-      if (pd.top_vendors && pd.top_vendors.length) {
-        html += '<div class="drill-card">' +
-          '<div class="drill-card-title">Top vendors (checkbook)</div>' +
-          renderMiniBars(pd.top_vendors, { limit: 6 }) +
-        '</div>';
-      }
       if (pd.monthly && pd.monthly.length) {
         var mMax = pd.monthly.reduce(function (s, m) { return Math.max(s, m.amount); }, 0) || 1;
         var monthName = function (m) {
