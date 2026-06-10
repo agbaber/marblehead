@@ -258,12 +258,57 @@ og_url: https://marbleheaddata.org/town-budget.html
     #tb-sources h2 { font-size: 16px; }
     #tb-sources ul { font-size: 13px; padding-left: 18px; }
   }
+
+  /* Scenario badge */
+  .tb-scenario-badge { margin: 4px 0 12px; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; font-size: 13px; }
+  .tb-badge-pill { display: inline-block; background: color-mix(in srgb, var(--c-coral, #c54) 18%, transparent); color: var(--text); border-radius: 999px; padding: 3px 10px; font-weight: 600; font-size: 12px; }
+  .tb-badge-note { color: var(--text-muted); font-size: 12px; }
+  @media (max-width: 700px) {
+    .tb-scenario-badge { gap: 4px; }
+    .tb-badge-note { font-size: 11px; }
+  }
+
+  /* Override tiers section */
+  .tb-tiers-section { margin: 24px 0 32px; padding: 0; }
+  .tb-tiers-section h2 { font-size: 20px; margin: 0 0 8px; }
+  .tb-tiers-lead { color: var(--text-muted); font-size: 14px; line-height: 1.5; margin: 0 0 14px; }
+  .tb-tiers-table-wrap {
+    background: var(--surface); border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm); overflow: hidden;
+  }
+  .tb-tiers-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .tb-tiers-table th, .tb-tiers-table td {
+    padding: 8px 12px; border-bottom: 1px solid var(--border-faint, #eee);
+    font-size: 13px;
+  }
+  .tb-tiers-table thead th {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-subtle); text-align: right;
+  }
+  .tb-tiers-table thead th:first-child { text-align: left; }
+  .tb-tier-sub { display: block; font-size: 10px; font-weight: 500; color: var(--text-muted); margin-top: 2px; letter-spacing: 0; text-transform: none; }
+  .tb-tiers-table .tb-num { text-align: right; }
+  .tb-tiers-cat-row td { font-weight: 700; background: color-mix(in srgb, var(--c-teal) 6%, transparent); padding-top: 12px; padding-bottom: 4px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-subtle); }
+  .tb-tiers-cat-total td { font-weight: 600; background: color-mix(in srgb, var(--text-subtle) 4%, transparent); }
+  .tb-tiers-grand-total td { font-weight: 700; background: color-mix(in srgb, var(--c-teal) 10%, transparent); border-top: 2px solid var(--c-teal); }
+  .tb-tiers-footnote { font-size: 12px; color: var(--text-muted); margin: 12px 0 0; line-height: 1.5; }
+  @media (max-width: 700px) {
+    .tb-tiers-section h2 { font-size: 16px; }
+    .tb-tiers-lead { font-size: 13px; }
+    .tb-tiers-table th, .tb-tiers-table td { padding: 8px 8px; font-size: 12px; }
+    .tb-tiers-table th:first-child, .tb-tiers-table td:first-child { width: 50%; }
+  }
 </style>
 
 <h1>Marblehead's town budget, line by line</h1>
 
+<p class="tb-scenario-badge">
+  <span class="tb-badge-pill">FY27 No-Override scenario</span>
+  <span class="tb-badge-note">If Question 2 trash override fails. Override-funded items are listed below the budget tree-table.</span>
+</p>
+
 <p class="tb-lead">
-  Every line item in the FY27 proposed budget, grouped by function. Click any
+  Every line item in the FY27 proposed No-Override budget, grouped by function. Click any
   row to drill in. Function-level history goes back to FY02 from <abbr title="Department of Revenue">DOR</abbr> Schedule A.
 </p>
 
@@ -336,6 +381,29 @@ og_url: https://marbleheaddata.org/town-budget.html
 <div class="tb-table-wrap">
   <div id="tb-table"></div>
 </div>
+
+<section id="tb-override-tiers" class="tb-tiers-section">
+  <h2>Override scenarios: what each tier would fund</h2>
+  <p class="tb-tiers-lead">
+    The budget above is the No-Override baseline. If voters approve an override, these items get added back to the budget. Three tiers are on the table: $9M (Tier 1), $12M (Tier 2), $15M (Tier 3). The columns show how much each tier adds for that line. Source: town-side override line items as published by the Select Board.
+  </p>
+  <div class="tb-tiers-table-wrap">
+    <table id="tb-tiers-table" class="tb-tiers-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th class="tb-num">Tier 1<br><span class="tb-tier-sub">$9M</span></th>
+          <th class="tb-num">Tier 2<br><span class="tb-tier-sub">$12M</span></th>
+          <th class="tb-num">Tier 3<br><span class="tb-tier-sub">$15M</span></th>
+        </tr>
+      </thead>
+      <tbody><tr><td colspan="4">Loading...</td></tr></tbody>
+    </table>
+  </div>
+  <p class="tb-tiers-footnote">
+    The schools have their own override-funded list (not shown here). The negative "Offset" line is a reduction to the unemployment account that the override allows. Tier totals also include shared/structural items not itemized at this granularity.
+  </p>
+</section>
 
 <section id="tb-sources">
   <h2>Sources &amp; methodology</h2>
@@ -1176,6 +1244,55 @@ og_url: https://marbleheaddata.org/town-budget.html
     }
   }
 
+  function fmtTierAmount(n) {
+    if (n === 0) return '-';
+    if (n < 0) return '(' + fmtMillions(Math.abs(n)).replace(/^\$/, '$') + ')';
+    return fmtMillions(n);
+  }
+
+  function renderOverrideTiers() {
+    if (!data.meta || !data.meta.override_tiers || !data.meta.override_tiers.length) {
+      return;
+    }
+    // Preserve CSV order; group by category as encountered.
+    var byCategory = [];
+    var categoryIdx = {};
+    data.meta.override_tiers.forEach(function (item) {
+      if (categoryIdx[item.category] === undefined) {
+        categoryIdx[item.category] = byCategory.length;
+        byCategory.push({ name: item.category, items: [] });
+      }
+      byCategory[categoryIdx[item.category]].items.push(item);
+    });
+
+    var bodyHtml = '';
+    var grandT1 = 0, grandT2 = 0, grandT3 = 0;
+    byCategory.forEach(function (cat) {
+      var t1 = 0, t2 = 0, t3 = 0;
+      bodyHtml += '<tr class="tb-tiers-cat-row"><td colspan="4">' + cat.name + '</td></tr>';
+      cat.items.forEach(function (it) {
+        t1 += it.tier_1; t2 += it.tier_2; t3 += it.tier_3;
+        bodyHtml += '<tr>' +
+          '<td>' + it.description + '</td>' +
+          '<td class="tb-num">' + fmtTierAmount(it.tier_1) + '</td>' +
+          '<td class="tb-num">' + fmtTierAmount(it.tier_2) + '</td>' +
+          '<td class="tb-num">' + fmtTierAmount(it.tier_3) + '</td>' +
+          '</tr>';
+      });
+      bodyHtml += '<tr class="tb-tiers-cat-total"><td>' + cat.name + ' subtotal</td>' +
+        '<td class="tb-num">' + fmtTierAmount(t1) + '</td>' +
+        '<td class="tb-num">' + fmtTierAmount(t2) + '</td>' +
+        '<td class="tb-num">' + fmtTierAmount(t3) + '</td></tr>';
+      grandT1 += t1; grandT2 += t2; grandT3 += t3;
+    });
+    bodyHtml += '<tr class="tb-tiers-grand-total"><td>Town-side override total</td>' +
+      '<td class="tb-num">' + fmtTierAmount(grandT1) + '</td>' +
+      '<td class="tb-num">' + fmtTierAmount(grandT2) + '</td>' +
+      '<td class="tb-num">' + fmtTierAmount(grandT3) + '</td></tr>';
+
+    document.getElementById('tb-tiers-table').querySelector('tbody').innerHTML = bodyHtml;
+  }
+
   function renderAll() {
     renderStats();
     renderFunctionChips();
@@ -1184,6 +1301,7 @@ og_url: https://marbleheaddata.org/town-budget.html
     renderActiveChips();
     renderFilterCount();
     renderTable();
+    renderOverrideTiers();
     serializeURLState();
   }
 
