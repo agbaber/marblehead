@@ -313,13 +313,6 @@ og_url: https://marbleheaddata.org/checkbook/
   }
 
   /* Performance section */
-  .perf-grid {
-    display: grid; grid-template-columns: 1fr; gap: 12px;
-    margin: 0 0 12px; align-items: start;
-  }
-  @media (min-width: 700px) {
-    .perf-grid--two { grid-template-columns: 1fr 1fr; }
-  }
   .perf-card {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: var(--radius-md); padding: 18px 20px;
@@ -351,9 +344,9 @@ og_url: https://marbleheaddata.org/checkbook/
   .perf-row-val .over  { color: var(--c-buoy); font-weight: 600; font-size: 11.5px; }
 
   .perf-meter {
-    display: grid; grid-template-columns: 1fr 150px auto; gap: 12px;
-    align-items: center; padding: 7px 8px;
-    border-bottom: 1px solid var(--divider); font-size: 12.5px;
+    display: grid; grid-template-columns: minmax(0, 1fr) 220px auto; gap: 16px;
+    align-items: center; padding: 9px 8px;
+    border-bottom: 1px solid var(--divider); font-size: 13px;
     border-radius: var(--radius-sm); margin: 0 -8px;
     transition: background 0.12s;
   }
@@ -361,10 +354,21 @@ og_url: https://marbleheaddata.org/checkbook/
   .perf-meter:first-of-type { padding-top: 0; }
   .perf-meter--click { cursor: pointer; }
   .perf-meter--click:hover { background: color-mix(in srgb, var(--c-teal) 6%, transparent); }
-  .perf-meter-name { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .perf-meter--click:hover .perf-meter-title::after { color: var(--c-teal); }
+  .perf-meter-name {
+    color: var(--text); min-width: 0;
+    line-height: 1.35; word-break: break-word;
+  }
+  .perf-meter--click .perf-meter-title::after {
+    content: ' ›'; color: var(--text-subtle); font-weight: 400;
+    transition: color 0.12s;
+  }
   .perf-vendor-note {
-    display: block; font-weight: 400; font-size: 10.5px;
-    color: var(--text-muted); overflow: hidden; text-overflow: ellipsis;
+    display: block; font-weight: 400; font-size: 11px;
+    color: var(--text-muted); line-height: 1.4; margin-top: 2px;
+  }
+  @media (max-width: 600px) {
+    .perf-meter { grid-template-columns: minmax(0, 1fr) 90px auto; gap: 10px; font-size: 12.5px; }
   }
   .perf-meter-bar {
     position: relative; height: 6px;
@@ -661,16 +665,15 @@ og_url: https://marbleheaddata.org/checkbook/
   <div id="perf-over-list" class="ck-loading">Loading&hellip;</div>
 </div>
 
-<div class="perf-grid perf-grid--two">
-  <div class="perf-card">
-    <h3>Top vendors</h3>
-    <p class="perf-pareto" id="perf-pareto">Loading&hellip;</p>
-    <div id="perf-vendor-list"></div>
-  </div>
-  <div class="perf-card">
-    <h3>Monthly spend</h3>
-    <div id="perf-cadence-chart" class="ck-loading">Loading&hellip;</div>
-  </div>
+<div class="perf-card">
+  <h3>Top vendors</h3>
+  <p class="perf-pareto" id="perf-pareto">Loading&hellip;</p>
+  <div id="perf-vendor-list"></div>
+</div>
+
+<div class="perf-card">
+  <h3>Monthly spend</h3>
+  <div id="perf-cadence-chart" class="ck-loading">Loading&hellip;</div>
 </div>
 
 <div class="perf-card">
@@ -1867,7 +1870,7 @@ og_url: https://marbleheaddata.org/checkbook/
       var note = (labels && labels.vendor_notes && labels.vendor_notes[v.name])
         ? '<span class="perf-vendor-note">' + escapeHtml(labels.vendor_notes[v.name]) + '</span>' : '';
       return '<div class="perf-meter perf-meter--click" data-perf-vendor="' + escapeHtml(v.name) + '" title="Click to filter table">' +
-        '<div class="perf-meter-name">' + escapeHtml(name) + note + '</div>' +
+        '<div class="perf-meter-name"><span class="perf-meter-title">' + escapeHtml(name) + '</span>' + note + '</div>' +
         '<div class="perf-meter-bar"><div class="perf-meter-bar-fill" style="width:' + pct.toFixed(1) + '%"></div></div>' +
         '<div class="perf-meter-val">' + fmtMoney(v.amount, { compact: true }) + '</div></div>';
     }).join('');
