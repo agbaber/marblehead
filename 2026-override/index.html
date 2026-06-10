@@ -50,8 +50,21 @@ og_url: https://marbleheaddata.org/2026-override/
     margin: 0 0 14px;
     max-width: 620px;
   }
-  .arc-cap-sub strong { color: var(--text); }
-  .arc-cap-sub:last-of-type { margin-bottom: 22px; }
+  .elected-chip {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--c-teal);
+    border: 1px solid color-mix(in srgb, var(--c-teal) 45%, transparent);
+    background: color-mix(in srgb, var(--c-teal) 9%, var(--surface));
+    border-radius: 999px;
+    padding: 1px 8px;
+    margin-left: 6px;
+    vertical-align: 1px;
+    white-space: nowrap;
+  }
 
   /* ----- Compact jump-nav ----- */
   .arc-jump {
@@ -527,25 +540,25 @@ og_url: https://marbleheaddata.org/2026-override/
       <p class="ballot-q-num">Question 1 &middot; Partial Restore</p>
       <h3>$9,000,000 operating override</h3>
       <p>For general government and the school department for the fiscal year beginning July 1, 2026.</p>
-      <p class="ballot-q-outcome">Passed <strong>66.7%</strong> yes</p>
+      <p class="ballot-q-outcome"><span class="elected-chip">Passed</span> <strong>66.7%</strong> yes</p>
     </div>
     <div class="ballot-q">
       <p class="ballot-q-num">Question 2 &middot; Build</p>
       <h3>$12,000,000 operating override</h3>
       <p>Same purpose, larger amount.</p>
-      <p class="ballot-q-outcome">Passed <strong>62.3%</strong> yes</p>
+      <p class="ballot-q-outcome"><span class="elected-chip">Passed</span> <strong>62.3%</strong> yes</p>
     </div>
     <div class="ballot-q">
       <p class="ballot-q-num">Question 3 &middot; Invest</p>
       <h3>$15,000,000 operating override</h3>
       <p>Same purpose, largest amount. As the highest-dollar tier approved, this is the one that takes effect.</p>
-      <p class="ballot-q-outcome">Passed <strong>54.3%</strong> yes &middot; governs FY27</p>
+      <p class="ballot-q-outcome"><span class="elected-chip">Passed</span> <strong>54.3%</strong> yes &middot; governs FY27</p>
     </div>
     <div class="ballot-q">
       <p class="ballot-q-num">Question 4 &middot; Trash</p>
       <h3>$2,298,575 trash funding</h3>
       <p>Curbside trash, yard waste, recycling, and waste disposal contracts for FY27. Independent of the operating override.</p>
-      <p class="ballot-q-outcome">Passed <strong>67.4%</strong> yes</p>
+      <p class="ballot-q-outcome"><span class="elected-chip">Passed</span> <strong>67.4%</strong> yes</p>
     </div>
   </div>
 
@@ -565,8 +578,8 @@ og_url: https://marbleheaddata.org/2026-override/
       <h3>Select Board</h3>
       <p class="race-meta">Three candidates, two seats &middot; 3-year terms</p>
       <ul>
-        <li><strong>Erin Marie Noonan</strong> (incumbent, attorney) backed all three override questions, with Tier 3 her preferred option.</li>
-        <li><strong>Rossana Ferrante</strong> (Recreation &amp; Park chair, attorney) supported Tier 2.</li>
+        <li><strong>Erin Marie Noonan</strong> <span class="elected-chip">Elected</span> (incumbent, attorney) backed all three override questions, with Tier 3 her preferred option.</li>
+        <li><strong>Rossana Ferrante</strong> <span class="elected-chip">Elected</span> (Recreation &amp; Park chair, attorney) supported Tier 2.</li>
         <li><strong>Jennifer Schaeffner</strong> (School Committee, Housing Authority chair) called the finances "a genuine fiscal crisis" but did not endorse a tier.</li>
       </ul>
     </div>
@@ -575,8 +588,8 @@ og_url: https://marbleheaddata.org/2026-override/
       <h3>School Committee</h3>
       <p class="race-meta">Three candidates, two seats</p>
       <ul>
-        <li><strong>Melissa Marie Clucas</strong> (incumbent, <abbr class="g" title="Chief Financial Officer">CFO</abbr>) backed Tier 3, warning FY27 was balanced only by a one-time $1.5M special-education prepayment.</li>
-        <li><strong>Ann-Marie Jordan</strong> (former educator) backed Tier 3 as a structural deficit fix.</li>
+        <li><strong>Melissa Marie Clucas</strong> <span class="elected-chip">Elected</span> (incumbent, <abbr class="g" title="Chief Financial Officer">CFO</abbr>) backed Tier 3, warning FY27 was balanced only by a one-time $1.5M special-education prepayment.</li>
+        <li><strong>Ann-Marie Jordan</strong> <span class="elected-chip">Elected</span> (former educator) backed Tier 3 as a structural deficit fix.</li>
         <li><strong>Sarah A. Fox</strong> (former two-term member) said the levy "needs to grow" but did not commit to a tier.</li>
       </ul>
     </div>
@@ -585,7 +598,7 @@ og_url: https://marbleheaddata.org/2026-override/
       <h3>Moderator</h3>
       <p class="race-meta">Two candidates, one seat &middot; 1-year term</p>
       <ul>
-        <li><strong>John Gregory Attridge</strong> (incumbent) sought another term, emphasizing efficiency and accommodations for Town Meeting.</li>
+        <li><strong>John Gregory Attridge</strong> <span class="elected-chip">Elected</span> (incumbent) sought another term, emphasizing efficiency and accommodations for Town Meeting.</li>
         <li><strong>Peter Jaffe</strong> (lifelong resident, first-time candidate) focused on tighter warrant review and procedure.</li>
       </ul>
     </div>
@@ -594,12 +607,12 @@ og_url: https://marbleheaddata.org/2026-override/
       <h3>Recreation &amp; Park Commission</h3>
       <p class="race-meta">Six candidates, five seats &middot; 1-year terms</p>
       <ul>
-        <li><strong>Shelly Curran Bedrossian</strong> (incumbent): yes on Q1 and Q4, supported Reynolds turf.</li>
-        <li><strong>Larry J. Simpson</strong> (incumbent): Tier 2, lone no on turf.</li>
-        <li><strong>Karin Linnea Ernst</strong> (incumbent): undecided, supported turf.</li>
+        <li><strong>Shelly Curran Bedrossian</strong> <span class="elected-chip">Elected</span> (incumbent): yes on Q1 and Q4, supported Reynolds turf.</li>
+        <li><strong>Larry J. Simpson</strong> <span class="elected-chip">Elected</span> (incumbent): Tier 2, lone no on turf.</li>
+        <li><strong>Karin Linnea Ernst</strong> <span class="elected-chip">Elected</span> (incumbent): undecided, supported turf.</li>
         <li><strong>Kenneth S. Klaiman</strong>: "moderate" 2-4% override, opposed turf.</li>
-        <li><strong>Christopher E. Kennedy</strong> (incumbent): supported turf; no questionnaire response.</li>
-        <li><strong>Michael Ryan McCarthy</strong>: youth sports parent, no questionnaire response.</li>
+        <li><strong>Christopher E. Kennedy</strong> <span class="elected-chip">Elected</span> (incumbent): supported turf; no questionnaire response.</li>
+        <li><strong>Michael Ryan McCarthy</strong> <span class="elected-chip">Elected</span>: youth sports parent, no questionnaire response.</li>
       </ul>
     </div>
 
@@ -607,7 +620,7 @@ og_url: https://marbleheaddata.org/2026-override/
       <h3>Cemetery Commission (2-year unexpired)</h3>
       <p class="race-meta">Two candidates, one seat</p>
       <ul>
-        <li><strong>Sally Bull Sands</strong> (incumbent): backed Tier 1 to fund a cemetery laborer.</li>
+        <li><strong>Sally Bull Sands</strong> <span class="elected-chip">Elected</span> (incumbent): backed Tier 1 to fund a cemetery laborer.</li>
         <li><strong>Rose A. McCarthy</strong>: supported Question 1, citing Council on Aging.</li>
       </ul>
     </div>
@@ -616,7 +629,7 @@ og_url: https://marbleheaddata.org/2026-override/
       <h3>Housing Authority</h3>
       <p class="race-meta">Two candidates, one seat</p>
       <ul>
-        <li><strong>Jeffrey Richard Weeden</strong> (Lynn Housing Authority director): backed Tier 3 plus the trash question.</li>
+        <li><strong>Jeffrey Richard Weeden</strong> <span class="elected-chip">Elected</span> (Lynn Housing Authority director): backed Tier 3 plus the trash question.</li>
         <li><strong>Jean R. Eldridge</strong> (incumbent since 1994): ran on institutional knowledge; questionnaire response incomplete in the source.</li>
       </ul>
     </div>
