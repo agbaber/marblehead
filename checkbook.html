@@ -3,7 +3,7 @@ title: "Town checkbook"
 permalink: /checkbook/
 scripts: [citations]
 og_title: "Marblehead FY26 Checkbook & Budget Explorer"
-og_description: "FY26 spending, budget, and pacing for Marblehead. $206.1M adopted across all funds, $127.3M annual operating, $98.1M in vendor checks through May 29. Budget vs actual by Fund, Department, Category, Division, and Object."
+og_description: "FY26 spending, budget, and pacing for Marblehead. $206.1M adopted across all funds, $127.3M annual operating, $99.9M in vendor checks through Jun 9. Budget vs actual by Fund, Department, Category, Division, and Object."
 og_url: https://marbleheaddata.org/checkbook/
 ---
 <h1 class="h-center">Town checkbook</h1>
@@ -543,12 +543,12 @@ og_url: https://marbleheaddata.org/checkbook/
     </div>
     <div class="hero-stat">
       <div class="hero-label">Vendor payments</div>
-      <div class="hero-value">$98.1M</div>
-      <div class="hero-sub">15,001 checks, payroll excluded</div>
+      <div class="hero-value">$99.9M</div>
+      <div class="hero-sub">15,364 checks, payroll excluded</div>
     </div>
     <div class="hero-stat">
       <div class="hero-label">Through</div>
-      <div class="hero-value">May 29</div>
+      <div class="hero-value">Jun 9</div>
       <div class="hero-sub">11 of 12 months</div>
     </div>
   </div>
@@ -687,9 +687,9 @@ og_url: https://marbleheaddata.org/checkbook/
       data-source="Town of Marblehead Budget Portal (Socrata), data fetched via fund_source_data API on 2026-06-01"></sup></dd>
 
     <dt>Budget vs spent vs vendor payments</dt>
-    <dd>The budget portal also publishes an FY26 <em>actual</em> rollup of <strong>$140.4M</strong> through May 29, which includes payroll and inter-fund transfers. The <strong>$98.1M</strong> on this page is just vendor checks (the accounts-payable side). The gap between the two is mostly payroll.<sup class="cite"
+    <dd>The budget portal also publishes an FY26 <em>actual</em> rollup of <strong>$140.4M</strong> through May 29, which includes payroll and inter-fund transfers. The <strong>$99.9M</strong> on this page is just vendor checks (the accounts-payable side). The gap between the two is mostly payroll.<sup class="cite"
       data-href="https://townofmarblehead-ma-oe.spending.socrata.com/#!/year/All%20Years/explore/1-/segment2"
-      data-source="Town of Marblehead Spending Portal (Socrata), data exported 2026-06-01"></sup></dd>
+      data-source="Town of Marblehead Spending Portal (Socrata), data exported 2026-06-10"></sup></dd>
 
     <dt>Why some bars look over budget</dt>
     <dd>The Light Department ($13.2M) is self-supporting and has no appropriation, so it shows up against a $0 budget. Snow Removal ($687K vs $105K) is intentionally under-budgeted and topped up at year-end. Neither is a runaway expense.</dd>
@@ -706,7 +706,7 @@ og_url: https://marbleheaddata.org/checkbook/
 
     <dt>Source files</dt>
     <dd>
-      <a href="../data/checkbook_FY26_2026-06-02.csv">checkbook_FY26_2026-06-02.csv</a> &middot;
+      <a href="../data/checkbook_FY26_2026-06-09.csv">checkbook_FY26_2026-06-09.csv</a> &middot;
       <a href="../data/budget_actual_FY26.json">budget_actual_FY26.json</a> &middot;
       <a href="../data/checkbook_performance.json">checkbook_performance.json</a> &middot;
       <a href="../data/checkbook_redaction_disclosure.json">checkbook_redaction_disclosure.json</a> &middot;
@@ -719,12 +719,12 @@ og_url: https://marbleheaddata.org/checkbook/
 (function () {
   'use strict';
 
-  var CHECKBOOK_URL = '../data/checkbook_FY26_2026-06-02.csv';
+  var CHECKBOOK_URL = '../data/checkbook_FY26_2026-06-09.csv';
   var BUDGET_URL    = '../data/budget_actual_FY26.json';
   var PERF_URL      = '../data/checkbook_performance.json';
   var DRILL_URL     = '../data/budget_drill_FY26.json';
   var LABELS_URL    = '../data/checkbook_labels.json';
-  var TOTAL_ROW_COUNT = 15001;
+  var TOTAL_ROW_COUNT = 15364;
 
   // --- Utility ---
   function fmtMoney(n, opts) {

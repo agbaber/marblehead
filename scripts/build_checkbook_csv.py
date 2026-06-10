@@ -81,14 +81,29 @@ INITIALS_ALLOW = {
     "MR", "MS", "DR", "IT", "AV", "EL",
 }
 
+# Run on desc.upper(): catches trailing initials and the literal STUDENT keyword.
 STUDENT_DESC_RES = [
-    # placement/tuition keyword plus a trailing 1-3 letter token that
-    # reads as initials rather than a word
     re.compile(
         r"\b(TUITION|PLACEMENT|OOD|OUT[- ]OF[- ]DISTRICT|RESIDENTIAL)\b"
-        r".*\b[A-Z]{1,3}\b\s*$"
+        r".*\b[A-Z]{1,3}\b[\s.]*$"
     ),
     re.compile(r"\bSTUDENT\b\s+[A-Z]"),
+]
+
+# Run on raw desc (case-sensitive): catches truncated student first names
+# at the end of an OOD/tuition line. Munis' description column truncates
+# at 30 chars, so e.g. "Out of district tuition Williamson" lands in the
+# export as "Out of district tuition Willia". The pattern requires a
+# Title-case trailing token (initial cap, 2+ lowercase) so all-caps boiler-
+# plate like "TUITION FY26 INVOICE" or "RESIDENTIAL CIRCUIT BREAKER" is
+# left alone, while real student first names get masked. Over-masking
+# Title-case program names ("Day tuition Riverview Circuit") is fine:
+# vendor + fund + amount still convey what the spend was for.
+STUDENT_DESC_RES_RAW = [
+    re.compile(
+        r"\b(?i:tuition|placement|OOD|out[- ]of[- ]district|residential)\b"
+        r".*\b[A-Z][a-z]{2,}\b[\s.]*$"
+    ),
 ]
 
 # Masked in any fund. The injury funds are dropped outright, but injury
@@ -116,6 +131,9 @@ def mask_reason(fund: str, desc: str) -> str | None:
         for rx in STUDENT_DESC_RES:
             if rx.search(desc.upper()):
                 return "placement/tuition pattern in student-related fund"
+        for rx in STUDENT_DESC_RES_RAW:
+            if rx.search(desc):
+                return "placement/tuition pattern in student-related fund"
     return None
 
 
@@ -131,6 +149,10 @@ def selftest() -> None:
         ("GENERAL FUND - TOWN", "ELECTRIC SVC 5/20", False),
         ("WATER ENTERPRISE OPERATING", "HYDRANT REPAIR J.D.", False),
         ("GENERAL FUND - SCHOOL", "TUITION FY26 INVOICE", False),
+        # Munis 30-char truncation of a student first name on an OOD row
+        ("GENERAL FUND - SCHOOL", "Out of district tuition Willia", True),
+        # Program/school name after "tuition" — over-mask is acceptable
+        ("CIRCUIT BREAKER", "Day tuition Riverview Circuit", True),
     ]
     failures = []
     for fund, desc, expect_masked in cases:
