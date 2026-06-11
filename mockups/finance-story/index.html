@@ -1,0 +1,92 @@
+---
+layout: default
+title: "Finance-story scrollytelling mockups"
+body_class: "fs-mockup fs-index"
+sitemap: false
+robots: noindex
+---
+
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/mockups/finance-story/shared.css' | relative_url }}">
+
+<style>
+  .fs-index .wrap { max-width: 980px; margin: 0 auto; padding: 56px 24px 80px; }
+  .fs-index .eye { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--text-subtle); margin: 0 0 12px; }
+  .fs-index h1 { font-family: 'Libre Franklin', sans-serif; font-size: clamp(34px, 4.4vw, 52px); letter-spacing: -0.02em; line-height: 1.05; margin: 0 0 18px; }
+  .fs-index p.lede { font-size: 18px; line-height: 1.5; color: var(--text-muted); max-width: 720px; margin: 0 0 36px; }
+
+  .fs-index .grid { display: grid; gap: 22px; grid-template-columns: 1fr; margin-top: 32px; }
+  @media (min-width: 800px) { .fs-index .grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+  .fs-index .card { display: flex; flex-direction: column; padding: 22px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); text-decoration: none; color: var(--text); transition: border-color 0.15s, transform 0.12s; }
+  .fs-index .card:hover { border-color: var(--c-teal); transform: translateY(-1px); }
+  .fs-index .card .badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; align-self: flex-start; margin-bottom: 12px; }
+  .fs-index .card .badge.a { background: rgba(27, 58, 87, 0.12); color: var(--c-navy); }
+  .fs-index .card .badge.b { background: rgba(91, 117, 83, 0.14); color: var(--c-sage); }
+  .fs-index .card .badge.c { background: rgba(108, 74, 110, 0.13); color: var(--c-plum); }
+  .fs-index .card h2 { font-family: 'Libre Franklin', sans-serif; font-size: 22px; margin: 0 0 10px; line-height: 1.2; }
+  .fs-index .card .arc { font-size: 13px; color: var(--text-subtle); margin: 0 0 12px; }
+  .fs-index .card .arc strong { color: var(--text-muted); }
+  .fs-index .card p { font-size: 14px; line-height: 1.5; color: var(--text-muted); margin: 0 0 14px; }
+  .fs-index .card .read { font-size: 12px; color: var(--c-teal); font-weight: 700; margin-top: auto; }
+  .fs-index .card .read::after { content: " →"; }
+
+  .fs-index .note { margin-top: 56px; padding: 16px 20px; background: color-mix(in srgb, var(--c-brass) 8%, var(--surface)); border-left: 3px solid var(--c-brass); font-size: 13px; color: var(--text-muted); border-radius: var(--radius-sm); }
+  .fs-index .note strong { color: var(--text); }
+
+  .fs-index .arc-table { width: 100%; margin-top: 36px; border-collapse: collapse; font-size: 13px; }
+  .fs-index .arc-table th, .fs-index .arc-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; text-align: left; }
+  .fs-index .arc-table th { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-subtle); border-bottom: 1px solid var(--text-faint); }
+  .fs-index .arc-table td.lead { font-weight: 700; color: var(--text); }
+</style>
+
+<div class="wrap">
+  <p class="eye">Brainstorming &middot; not linked from production nav</p>
+  <h1>Three ways to tell the same story.</h1>
+  <p class="lede">Each mockup is a working scrollytelling page: a pinned visualization with seven scroll-stops, the visualization morphing as the reader scrolls. Same source material, three different arcs and design treatments. Pick the one closest to what you want; the design can be refined from there.</p>
+
+  <div class="grid">
+    <a class="card" href="{{ '/mockups/finance-story/arc-stack.html' | relative_url }}">
+      <span class="badge a">Mockup A</span>
+      <h2>The Dollar Journey</h2>
+      <p class="arc"><strong>Arc:</strong> $1 &rarr; 3 shapes &rarr; per-FTE stack &rarr; people grid &rarr; org &rarr; boards &rarr; trajectory</p>
+      <p><strong>Design:</strong> editorial / magazine. Navy + buoy palette, Libre Franklin headlines, generous whitespace. The closest to the existing town-history feature.</p>
+      <p class="read">Open mockup A</p>
+    </a>
+
+    <a class="card" href="{{ '/mockups/finance-story/arc-people.html' | relative_url }}">
+      <span class="badge b">Mockup B</span>
+      <h2>The Workforce</h2>
+      <p class="arc"><strong>Arc:</strong> 1,020 people &rarr; categories &rarr; per-FTE cost &rarr; 80% of budget &rarr; org &rarr; boards above &rarr; trajectory</p>
+      <p><strong>Design:</strong> humanizing / illustrative. Sage + teal palette, warmer surface, larger body text, sans-serif headlines. Leads with people, walks back to numbers.</p>
+      <p class="read">Open mockup B</p>
+    </a>
+
+    <a class="card" href="{{ '/mockups/finance-story/arc-time.html' | relative_url }}">
+      <span class="badge c">Mockup C</span>
+      <h2>Twenty Years</h2>
+      <p class="arc"><strong>Arc:</strong> trajectory &rarr; 3 forces &rarr; stack &rarr; composition &rarr; today &rarr; org &rarr; roster</p>
+      <p><strong>Design:</strong> dashboard / dataroom. Plum + buoy palette, denser layout, smaller panels, more numbers visible. Closest to a financial briefing.</p>
+      <p class="read">Open mockup C</p>
+    </a>
+  </div>
+
+  <table class="arc-table">
+    <thead>
+      <tr><th>Step</th><th>Mockup A — Dollar Journey</th><th>Mockup B — Workforce</th><th>Mockup C — Twenty Years</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="lead">1</td><td>A single dollar</td><td>1,020 people</td><td>FY05-26 trajectory</td></tr>
+      <tr><td class="lead">2</td><td>Splits 80/15/5</td><td>By category</td><td>3 small multiples</td></tr>
+      <tr><td class="lead">3</td><td>Per-FTE stack</td><td>Per-FTE stack</td><td>Per-FTE stack</td></tr>
+      <tr><td class="lead">4</td><td>~1,020 grid</td><td>80% of budget</td><td>Composition stream</td></tr>
+      <tr><td class="lead">5</td><td>Two-pillar org</td><td>Two-pillar org</td><td>FY26 snapshot</td></tr>
+      <tr><td class="lead">6</td><td>Boards perimeter</td><td>Boards above</td><td>Two-pillar org</td></tr>
+      <tr><td class="lead">7</td><td>20-year stream</td><td>20-year stream</td><td>Boards roster</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <strong>Numbers in these mockups are approximations.</strong> The arcs and visual treatments are the only thing being chosen here. Final figures will be derived from FY26/FY27 budget and primary sources per site convention before anything lands in production.
+  </div>
+</div>
