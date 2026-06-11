@@ -211,6 +211,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .fs-reveal { opacity: 1; transform: none; transition: none; }
+  .fs-progress-fill { transition: none; }
 }
 
 /* ---------- Sticky bottom progress bar ---------- */
@@ -226,6 +227,8 @@
 @media (prefers-color-scheme: dark) {
   .fs-progress { background: rgba(20,32,44,0.92); border-top-color: rgba(255,255,255,0.08); }
 }
+[data-theme="dark"] .fs-progress { background: rgba(20,32,44,0.92); border-top-color: rgba(255,255,255,0.08); }
+[data-theme="light"] .fs-progress { background: rgba(255,255,255,0.92); border-top-color: rgba(15,42,61,0.08); }
 .fs-progress-bar {
   flex: 1; height: 4px; background: #E7DFCF;
   border-radius: 999px; overflow: hidden;
@@ -234,6 +237,8 @@
 @media (prefers-color-scheme: dark) {
   .fs-progress-bar { background: #2E3F4D; }
 }
+[data-theme="dark"] .fs-progress-bar { background: #2E3F4D; }
+[data-theme="light"] .fs-progress-bar { background: #E7DFCF; }
 .fs-progress-fill {
   height: 100%; background: var(--fs-buoy);
   width: 0%; border-radius: 999px;
@@ -252,3 +257,4 @@
   outline-offset: 2px;
 }
 .fs-progress-cta::after { content: '\2192'; }
+.fs:has(.fs-progress) { padding-bottom: 76px; }

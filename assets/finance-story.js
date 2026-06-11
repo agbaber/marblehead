@@ -28,7 +28,7 @@
       requestAnimationFrame(tickProgress);
     }
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', tickProgress);
+    window.addEventListener('resize', onScroll);
     tickProgress();
   }
 })();
