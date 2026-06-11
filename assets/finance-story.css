@@ -197,3 +197,18 @@
     radial-gradient(ellipse 40% 50% at 50% 30%, #5B7553 0%, transparent 60%),
     linear-gradient(180deg, #C8D4DC 0%, #93A4B0 50%, #5B7553 100%);
 }
+
+/* ---------- Reveal on view ---------- */
+.fs-reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(.2,.7,.2,1), transform 0.9s cubic-bezier(.2,.7,.2,1);
+}
+.fs-reveal.in-view { opacity: 1; transform: translateY(0); }
+.fs-reveal.d1 { transition-delay: 0.1s; }
+.fs-reveal.d2 { transition-delay: 0.25s; }
+.fs-reveal.d3 { transition-delay: 0.4s; }
+.fs-reveal.d4 { transition-delay: 0.55s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fs-reveal { opacity: 1; transform: none; transition: none; }
+}
