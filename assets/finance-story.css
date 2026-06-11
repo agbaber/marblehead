@@ -1,2 +1,51 @@
-/* Finance-story shared design system. Loaded only on finance-story pages
-   via _layouts/finance-story.html. */
+/* Finance-story shared design system. */
+
+.fs {
+  --fs-cream: #FAF6EE;
+  --fs-navy:  #0E2440;
+  --fs-navy-deep: #0A1B30;
+  --fs-teal:  #2F7D8E;
+  --fs-teal-light: #94C3CF;
+  --fs-buoy:  #C8553D;
+  --fs-buoy-light: #E97056;
+  --fs-ink:   #0F2A3D;
+  --fs-mute:  #4A5C6A;
+  --fs-faint: #93A4B0;
+
+  --fs-radius: 14px;
+  --fs-radius-sm: 8px;
+  --fs-shadow-sm: 0 1px 2px rgba(15,42,61,0.06), 0 1px 3px rgba(15,42,61,0.05);
+  --fs-shadow-md: 0 6px 14px rgba(15,42,61,0.08), 0 16px 36px rgba(15,42,61,0.12);
+
+  --fs-serif: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  --fs-sans:  'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
+
+  background: var(--fs-cream);
+  color: var(--fs-ink);
+  font-family: var(--fs-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  .fs {
+    --fs-cream: #14202C;
+    --fs-ink:   #E6ECF1;
+    --fs-mute:  #B7D1E2;
+    --fs-faint: #7A8A98;
+  }
+}
+[data-theme="dark"] .fs {
+  --fs-cream: #14202C;
+  --fs-ink:   #E6ECF1;
+  --fs-mute:  #B7D1E2;
+  --fs-faint: #7A8A98;
+}
+[data-theme="light"] .fs {
+  --fs-cream: #FAF6EE;
+  --fs-ink:   #0F2A3D;
+  --fs-mute:  #4A5C6A;
+  --fs-faint: #93A4B0;
+}
+
+.fs * { box-sizing: border-box; }
+.fs h1, .fs h2, .fs h3 { font-family: var(--fs-serif); font-weight: 400; }
+.fs em { font-style: italic; }
