@@ -26,6 +26,31 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Also available for:** Swampscott, Melrose, Stoneham (separate files)
 - **Confidence:** High. Official state data.
 
+### Parcel Assessments (`parcels.csv`, 8,805 parcels, FY2025)
+- **What it is:** Parcel-level FY2025 assessed values and property
+  characteristics for every Marblehead parcel. A point-in-time snapshot, not a
+  time series, so it is a standalone CSV (not part of `MASTER_DATA.csv`).
+- **Source:** MassGIS Standardized Assessors' Parcels (Level 3), the statewide
+  authoritative assessor extract, via the "Massachusetts Property Tax Parcels"
+  ArcGIS feature service (`TOWN_ID=168`). Pulled 2026-06-10. See
+  [MassGIS Property Tax Parcels](https://www.mass.gov/info-details/massgis-data-property-tax-parcels).
+- **Columns:** loc_id, map_par_id, prop_id, site_addr, city, zip, use_code,
+  zoning, total_val, bldg_val, land_val, other_val, fy, lot_size, lot_units,
+  year_built, style, stories, num_rooms, units, bld_area, res_area, ls_date,
+  ls_price, ls_book, ls_page.
+- **Vintage caveat:** MassGIS publishes the prior fiscal year's certified
+  values; this snapshot is **FY2025**. The town's live FY2026 revaluation runs
+  roughly 20% higher on a sample of waterfront parcels, so use `fy` and don't
+  present these as current-year values without noting the vintage.
+- **De-identification:** owner names and mailing addresses (`OWNER1`,
+  `OWN_ADDR`, etc.) are deliberately excluded from this committed CSV. The data
+  is public record, but the bulk owner list is kept out of the public repo; it
+  exists only in the gitignored `data/parcels_raw/parcels_full.csv`.
+- **Refresh:** `python3 scripts/fetch_massgis_parcels.py`
+- **Confidence:** High. Statewide standardized dataset; `use_code` is the MA DOR
+  state class code (101 = single family). Town-wide total assessed value in this
+  snapshot is $9.30B across 8,805 parcels.
+
 ### Total FTE (24 data points, FY01-FY24)
 - **What it is:** Full-time equivalent employees across all town departments. Part-time employees counted as fractions (e.g., 20 hrs/wk = 0.5 FTE).
 - **Source:** ACFR Statistical Section, "Full-time Equivalent Town Employees by Function"

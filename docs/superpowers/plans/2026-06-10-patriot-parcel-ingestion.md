@@ -2,7 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Ingest every Marblehead parcel from the town's Patriot Properties WebPro assessor database into a committed, de-identified `data/parcels.csv` (plus a gitignored full CSV that retains owner/mailing for local verification).
+**Goal:** Ingest every Marblehead parcel into a committed, de-identified `data/parcels.csv` (plus a gitignored full CSV that retains owner/mailing for local verification).
+
+> **Source pivot (2026-06-10):** Tasks 1-4 below targeted the Patriot Properties WebPro scrape. That got the IP rate-limited (403) after ~7,000 requests (~2% coverage), so the shipped pipeline uses **MassGIS Standardized Assessors' Parcels** instead (`scripts/fetch_massgis_parcels.py`, `scripts/massgis_parcels.py`, `data/test_massgis_parcels.py`). Same de-identification design, FY2025 vintage, ~5 paged API requests for all 8,805 parcels. The WebPro tasks are kept below as the original record.
 
 **Architecture:** Two-stage pipeline. Stage 1 (`fetch_patriot_parcels.py`) drives the session-stateful ASP app via curl + a cookie jar, caching each parcel's raw `summary-bottom.asp` HTML to a gitignored dir. Stage 2 (`build_patriot_parcels.py`) parses the cache into two CSVs. A pure parser function is unit-tested against a committed scrubbed fixture (TDD); the network fetcher is validated by a small dry run.
 

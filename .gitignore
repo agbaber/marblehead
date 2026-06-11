@@ -61,6 +61,6 @@ data/schools/_pdfs/
 data/town_docs/annual_reports/*.pdf
 _site_test/
 
-# Local raw cache for Patriot Properties parcel scrape (committed CSV only).
-# Raw HTML and the full CSV contain owner names + mailing addresses (PII).
-data/patriot_raw/
+# Local raw cache + full CSV for the parcel dataset (committed CSV is de-identified).
+# The full file contains owner names + mailing addresses (public record, kept local).
+data/parcels_raw/

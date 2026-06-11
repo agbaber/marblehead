@@ -1,7 +1,19 @@
 # Patriot Properties parcel ingestion — design
 
 **Date:** 2026-06-10
-**Status:** Approved (brainstorming) — pending implementation plan
+**Status:** Implemented, but with a source change (see below).
+
+> **Source pivot (2026-06-10).** The WebPro scraping approach described below
+> got the IP rate-limited (403) after ~7,000 requests, covering only ~2% of
+> parcels, and is hard on the town's small server. The shipped implementation
+> instead pulls the same data from **MassGIS Standardized Assessors' Parcels**
+> (the "Massachusetts Property Tax Parcels" ArcGIS feature service, `TOWN_ID=168`)
+> in ~5 paged requests: `scripts/fetch_massgis_parcels.py` +
+> `scripts/massgis_parcels.py` -> `data/parcels.csv` (de-identified) and the
+> gitignored full CSV. The two-stage / de-identification design and the
+> committed-vs-gitignored split below all still hold; only the fetch mechanism
+> and the FY vintage (FY2025 from MassGIS vs live FY2026 on WebPro) changed.
+> The WebPro mechanics are retained below as the original research record.
 
 ## Goal
 
