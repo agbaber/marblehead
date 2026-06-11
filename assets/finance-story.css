@@ -212,3 +212,43 @@
 @media (prefers-reduced-motion: reduce) {
   .fs-reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* ---------- Sticky bottom progress bar ---------- */
+.fs-progress {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  z-index: 90;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(15,42,61,0.08);
+  display: flex; align-items: center; gap: 20px;
+}
+@media (prefers-color-scheme: dark) {
+  .fs-progress { background: rgba(20,32,44,0.92); border-top-color: rgba(255,255,255,0.08); }
+}
+.fs-progress-bar {
+  flex: 1; height: 4px; background: #E7DFCF;
+  border-radius: 999px; overflow: hidden;
+  position: relative;
+}
+@media (prefers-color-scheme: dark) {
+  .fs-progress-bar { background: #2E3F4D; }
+}
+.fs-progress-fill {
+  height: 100%; background: var(--fs-buoy);
+  width: 0%; border-radius: 999px;
+  transition: width 0.18s linear;
+}
+.fs-progress-cta {
+  background: var(--fs-navy); color: #fff;
+  padding: 8px 16px; border-radius: 999px; font-size: 13px;
+  font-weight: 600; text-decoration: none; letter-spacing: 0.3px;
+  display: inline-flex; align-items: center; gap: 6px;
+  white-space: nowrap;
+}
+.fs-progress-cta:hover, .fs-progress-cta:focus-visible {
+  filter: brightness(1.15);
+  outline: 2px solid var(--fs-teal-light);
+  outline-offset: 2px;
+}
+.fs-progress-cta::after { content: '\2192'; }
