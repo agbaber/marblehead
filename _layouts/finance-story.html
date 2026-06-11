@@ -4,8 +4,10 @@ layout: default
 <div class="fs">
   {{ content }}
   {%- if page.progress_cta_url and page.progress_cta_label -%}
-  <div class="fs-progress" aria-hidden="true">
-    <div class="fs-progress-bar"><div class="fs-progress-fill" id="fs-progress-fill"></div></div>
+  <div class="fs-progress">
+    <div class="fs-progress-bar" aria-hidden="true">
+      <div class="fs-progress-fill" id="fs-progress-fill"></div>
+    </div>
     <a class="fs-progress-cta" href="{{ page.progress_cta_url | relative_url }}">{{ page.progress_cta_label }}</a>
   </div>
   {%- endif -%}
