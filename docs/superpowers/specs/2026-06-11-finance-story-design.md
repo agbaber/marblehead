@@ -67,7 +67,7 @@ Seven chapters, ~one viewport per scene within each chapter, ~2-4 scenes per cha
 **What it teaches:**
 - 80¢ / 15¢ / 5¢ split between compensation, set bills, and discretionary.
 - "Set bills" = debt service, OPEB, state assessments (Essex Tech, MBTA, charter).
-- The discretionary 5¢ is the annual choice space.
+- The annual choice space is bigger than the 5¢: it's the 5¢ supplies/contracts/programs slice *plus* staffing decisions (which positions to fund, freeze, or cut) *plus* capital scope and timing. Once you hire, the stack on that hire is locked. Whether to hire at all is the annual lever.
 
 **Headline number:** $99,750 = the loaded cost of a $75K hire.
 
