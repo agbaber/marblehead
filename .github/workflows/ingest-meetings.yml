@@ -1,0 +1,188 @@
+name: Ingest meetings
+
+# Daily auto-ingest of new MHTV meeting videos.
+#
+# Steps:
+#   1. Refresh data/vimeo_meetings.json from the marbleheadtv channel
+#      (yt-dlp --flat-playlist).
+#   2. Download the en-x-autogen VTT for any meeting that has no
+#      _transcripts/<slug>.md yet and write the stub markdown file.
+#   3. LLM-enrich each new transcript with summary_card + topic_segments
+#      via scripts/transcripts/enrich_one.mjs (Anthropic Messages API).
+#   4. Open a PR labeled `auto-meetings` with auto-merge enabled. The
+#      smoke + Secret-scan + Content-guardrails required checks gate the
+#      merge; if any fails, the PR stays open for inspection.
+#
+# Required repo secrets:
+#   INGEST_PAT         Personal access token with `repo` scope. Used for
+#                      checkout and gh CLI so that the bot's commits and PR
+#                      trigger downstream workflows. The default GITHUB_TOKEN
+#                      cannot be used here: PRs and pushes authored by it do
+#                      not fire pull_request / push events (GitHub's
+#                      recursion guard), which would block auto-merge forever
+#                      since required status checks would never run.
+#   ANTHROPIC_API_KEY  Used by scripts/transcripts/enrich_one.mjs.
+#
+# Manual trigger: `gh workflow run ingest-meetings.yml`.
+
+on:
+  schedule:
+    # 11:00 UTC = 6am ET (EST) / 7am ET (EDT). MHTV typically uploads within
+    # ~24h of a meeting, so a morning run picks up yesterday's recording in
+    # time for the Friday digest cron in meeting-digest/worker.
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: ingest-meetings
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INGEST_PAT }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install yt-dlp
+        run: |
+          pip install --user yt-dlp
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Install Node deps
+        env:
+          # Playwright is a dep but only used by the legacy pull_meetings.mjs
+          # script; this pipeline does not need browser binaries.
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+        run: npm install
+
+      - name: Skip if an open auto-meetings PR already exists
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+        run: |
+          set -euo pipefail
+          gh label create auto-meetings \
+            --color 8e44ad \
+            --description "Daily auto-ingest of meeting transcripts" \
+            2>/dev/null || true
+          open_count=$(gh pr list --label auto-meetings --state open --json number --jq 'length')
+          if [ "$open_count" -gt 0 ]; then
+            echo "An auto-meetings PR is already open (likely failed CI on a prior run). Skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Refresh Vimeo index
+        if: steps.gate.outputs.skip == 'false'
+        run: node scripts/transcripts/pull_vimeo.mjs
+
+      - name: Backfill new transcripts
+        if: steps.gate.outputs.skip == 'false'
+        # --limit caps per-run work so a one-off backlog (e.g. yt-dlp outage
+        # caught up) does not balloon LLM spend or PR size.
+        run: node scripts/transcripts/backfill_auto.mjs --limit 25
+
+      - name: Enrich new transcripts with LLM summary cards
+        if: steps.gate.outputs.skip == 'false'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -eu
+          shopt -s nullglob
+          enriched=0
+          failed=0
+          for f in _transcripts/*.md; do
+            # Already enriched on a previous run.
+            if grep -q '^summary_card:' "$f"; then continue; fi
+            # Hand-crafted entries (frontmatter starts with `ingest:`) are
+            # author-owned and never enriched by the pipeline.
+            if grep -q '^ingest:' "$f"; then continue; fi
+            echo "Enriching $f"
+            if node scripts/transcripts/enrich_one.mjs "$f"; then
+              enriched=$((enriched + 1))
+            else
+              echo "  enrichment failed; transcript will retry on the next run"
+              failed=$((failed + 1))
+            fi
+          done
+          echo "Enriched: $enriched. Failed: $failed."
+
+      - name: Detect changes
+        if: steps.gate.outputs.skip == 'false'
+        id: changes
+        run: |
+          set -euo pipefail
+          git add _transcripts/
+          # Only attach the Vimeo index refresh if we actually added transcripts;
+          # otherwise data/vimeo_meetings.json would churn daily on last_updated
+          # alone and create noisy no-op PRs.
+          if git diff --cached --quiet -- _transcripts/; then
+            echo "No transcript changes. Done."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git add data/vimeo_meetings.json
+          new_files=$(git diff --cached --name-only --diff-filter=A -- _transcripts/ || true)
+          {
+            echo "changed=true"
+            echo "new_files<<EOF"
+            echo "$new_files"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Commit, push, open PR, enable auto-merge
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+        run: |
+          set -euo pipefail
+          today=$(date -u +%Y-%m-%d)
+          branch="bot/meetings-${today}-$(date -u +%H%M)"
+          git config user.name "marblehead-bot"
+          git config user.email "noreply@marbleheaddata.org"
+          git checkout -b "$branch"
+          git commit -m "Auto-ingest meeting transcripts (${today})"
+          git push -u origin "$branch"
+
+          cat > /tmp/pr-body.md <<EOF
+          Daily auto-ingest of MHTV meeting transcripts.
+
+          **Newly added \`_transcripts/\` files:**
+
+          \`\`\`
+          ${{ steps.changes.outputs.new_files }}
+          \`\`\`
+
+          **Pipeline:**
+          1. \`scripts/transcripts/pull_vimeo.mjs\` refreshed the Vimeo channel index.
+          2. \`scripts/transcripts/backfill_auto.mjs\` downloaded the \`en-x-autogen\` VTT for each new meeting and wrote the stub markdown.
+          3. \`scripts/transcripts/enrich_one.mjs\` added \`summary_card\` + \`topic_segments\` to each.
+
+          Auto-merge is enabled. The PR will land as soon as the required checks (smoke, Secret scan, Content guardrails) pass. If a check fails, this PR stays open for inspection and the next daily run is skipped (gated on the \`auto-meetings\` label) so the failure does not get buried.
+          EOF
+
+          gh pr create \
+            --title "Auto-ingest meetings (${today})" \
+            --body-file /tmp/pr-body.md \
+            --label auto-meetings \
+            --base main \
+            --head "$branch"
+
+          gh pr merge "$branch" --auto --squash --delete-branch
