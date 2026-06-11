@@ -193,6 +193,18 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Caveats:** SY 2020 missing from source. SY 2007 and SY 2008 have anomalous `total_cnt` values; for non-<abbr class="g" title="Marblehead Public Schools">MPS</abbr> calculations, sum the individual non-`loc_pub` category counts rather than subtracting from `total_cnt`.
 - **Confidence:** High for individual category counts.
 
+### Open Budget Portal, FY2026 (1,506 operating + 85 revenue leaf rows)
+- **What it is:** Every nonzero line item in the Town's adopted FY2026 budget, both the operating (expenditure) side and the revenue side, captured at the deepest org level (org6). Each row carries its full hierarchy path: org1 (fund group) through org6 (account line), plus the budget amount and the two trailing comparison series the portal returns.
+- **Source:** Town of Marblehead Open Budget portal, a Socrata OpenBudget front end, `https://townofmarblehead-ma-ob.budget.socrata.com/#!/year/2026`. Pulled from its per-branch JSON API (`/api/opex/chart_data.json`, `/api/revenue/chart_data.json`) by crawling the org hierarchy. Snapshot 2026-06-10.
+- **Files:** `open_budget_FY2026_opex.csv` (operating, $206,063,591.63), `open_budget_FY2026_revenue.csv` (revenue, $119,436,756.56).
+- **Build script:** `build_open_budget_data.py` (re-runnable; recrawls and reconciles).
+- **Reconciliation:** Leaf-row totals equal the portal's published grand totals to the penny for both branches, confirming complete capture with no double-counted rollups.
+- **Cross-check:** GENERAL FUND - SCHOOL totals $49,120,287, matching the FY26 budget book School Grand Total exactly. NOTE the portal's GENERAL FUND - TOWN ($60,614,084) does not match the budget book Town Grand Total ($57,086,093); the portal carries GENERAL FUND - TAX ARTICLES ($4,305,003) as its own fund and scopes the Town fund differently. Treat the two as different cuts, not a discrepancy to resolve.
+- **Provenance caveat:** This is a secondary presentation. The primary source remains the FinCom report and budget book; the portal mirrors those figures for interactive browsing. The CSV records the portal as-is and is not asserted to override the budget book where the two differ.
+- **Gap, FY2027:** The portal lists FY2027 as an available year, but every FY2027 dollar value is $0 (an empty placeholder; the FY27 budget was not loaded into the portal as of the snapshot). Only FY2026 was ingested. The FY27 proposed budget lives separately in `town_budget_FY27.json` and `budgets/FY27_Proposed_Budget_No_Override`.
+- **Column caveat:** `prior_secondary_usd` and `prior_tertiary_usd` are the two comparison series the API returns alongside the budget amount. Their exact definition (prior-year actual vs partial-year actual vs re-stated adopted) is not documented by the portal, and `prior_tertiary_usd` equals the budget amount in most rows. Use them only with that uncertainty in mind.
+- **Confidence:** High for the FY2026 adopted figures and the hierarchy; the portal is the Town's own published budget. Medium-low for the two undocumented comparison columns.
+
 ## What We Don't Have (identified gaps)
 
 1. **<abbr class="g" title="Group Insurance Commission">GIC</abbr> premium rates FY12-FY18** - not publicly available online.
