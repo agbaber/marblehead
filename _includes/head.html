@@ -27,7 +27,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600;700&display=swap" rel="stylesheet">
 {% if page.layout == "finance-story" or page.url contains '/finance-story/' %}
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,300;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ '/' | relative_url }}assets/finance-story.css">
 {% endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
@@ -41,6 +40,7 @@
 <link rel="stylesheet" href="{{ '/' | relative_url }}assets/site.css">
 {% if page.body_class == "explore-page" %}<link rel="stylesheet" href="{{ '/' | relative_url }}assets/explore.css">{% endif %}
 {% if page.collection == "transcripts" or page.body_class == "transcripts-page" %}<link rel="stylesheet" href="{{ '/' | relative_url }}assets/transcripts.css">{% endif %}
+{% if page.layout == "finance-story" or page.url contains '/finance-story/' %}<link rel="stylesheet" href="{{ '/' | relative_url }}assets/finance-story.css">{% endif %}
 <script defer src="{{ '/' | relative_url }}assets/analytics.js"></script>
 <script defer src="{{ '/' | relative_url }}assets/search.js"></script>
 {% if page.scripts contains "citations" %}<script defer src="{{ '/' | relative_url }}assets/citations.js"></script>
