@@ -21,7 +21,9 @@ async function shoot(ctx, urlPath, label, sceneNum) {
   if (sceneNum !== undefined) {
     // Scroll to scene N
     await page.evaluate((n) => {
-      const sel = document.querySelector(`[data-scene="${n}"]`);
+      // Be specific: match scene sections (.narr-scene or .expl-scene),
+      // not the fixed-positioned indicator dots that share the attr.
+      const sel = document.querySelector(`.narr-scene[data-scene="${n}"], .expl-scene[data-scene="${n}"]`);
       if (sel) sel.scrollIntoView({ behavior: 'instant', block: 'start' });
     }, sceneNum);
     await page.waitForTimeout(900); // let animation play

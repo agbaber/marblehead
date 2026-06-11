@@ -16,12 +16,10 @@ robots: noindex
   .fs-narr { background: var(--bg); }
 
   .narr-stage {
-    display: grid;
-    grid-template-columns: 1fr;
     position: relative;
   }
   @media (min-width: 900px) {
-    .narr-stage { grid-template-columns: 1.05fr 0.95fr; }
+    .narr-stage { display: grid; grid-template-columns: 1.05fr 0.95fr; }
   }
 
   .narr-pin {
@@ -32,14 +30,16 @@ robots: noindex
     padding: 8px 16px;
     background: var(--surface);
     border-right: 1px solid var(--border);
-    z-index: 1;
+    z-index: 5;
   }
   @media (max-width: 899px) {
     .narr-pin {
       top: 44px;
       height: 55vh;
+      width: 100%;
       border-right: none;
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 6px 14px rgba(15, 42, 61, 0.06);
     }
   }
 
@@ -47,8 +47,21 @@ robots: noindex
   .narr-canvas svg { width: 100%; height: 100%; display: block; overflow: visible; }
 
   .narr-scenes {
-    position: relative; z-index: 2;
+    position: relative; z-index: 1;
     padding: 0 28px; max-width: 620px;
+  }
+  @media (max-width: 899px) {
+    .narr-scenes {
+      padding: 0 20px;
+      max-width: 100%;
+    }
+    .narr-scene {
+      min-height: 60vh !important;
+      padding: 5vh 0 8vh !important;
+    }
+    .narr-intro {
+      padding: 8vh 0 4vh !important;
+    }
   }
 
   .narr-intro { padding: 18vh 0 6vh; }
