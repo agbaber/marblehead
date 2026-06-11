@@ -205,6 +205,19 @@ All data compiled April 2026 from primary public sources. Every number is either
 - **Column caveat:** `prior_secondary_usd` and `prior_tertiary_usd` are the two comparison series the API returns alongside the budget amount. Their exact definition (prior-year actual vs partial-year actual vs re-stated adopted) is not documented by the portal, and `prior_tertiary_usd` equals the budget amount in most rows. Use them only with that uncertainty in mind.
 - **Confidence:** High for the FY2026 adopted figures and the hierarchy; the portal is the Town's own published budget. Medium-low for the two undocumented comparison columns.
 
+### Open Expenditures (checkbook) Portal, FY2026 snapshot (dated)
+- **What it is:** Actual cash paid out year to date, FY2026, from the Town's Socrata Open Expenditures (checkbook) portal. This is spending ACTUALS, a different measure from the adopted budget above. Captured as two orthogonal cuts of the same grand total.
+- **Source:** `https://townofmarblehead-ma-oe.spending.socrata.com/#!/year/2026`, the checkbook sibling of the Open Budget portal. Pulled from its `/api/chart_data.json` by crawling the org hierarchy (by_account) and the vendor dimension crossed with department (by_vendor). FY2026 is the only year the portal carries.
+- **Files:**
+  - `open_spending_FY2026_by_account_snapshot_2026-06-11.csv` (268 org6 leaf rows) - department > ... > account structure, parallels `open_budget_FY2026_opex.csv` for budget-vs-actual comparison.
+  - `open_spending_FY2026_by_vendor_snapshot_2026-06-11.csv` (2,412 rows) - one row per (department, vendor); group by vendor for the flat 2,062-vendor "where the money went" list with department attribution.
+- **Build script:** `build_open_spending_data.py` (re-runnable; recrawls and reconciles).
+- **Reconciliation:** Both cuts independently total $100,370,353.89 to the penny, matching the portal grand total, confirming complete capture with no double counting.
+- **DATED SNAPSHOT, not a final figure:** The checkbook is year-to-date and grows every time the Town uploads, so these files are complete only as of the snapshot date (2026-06-11). Re-run the build script for a fresh cut. Drift is real: between the 2026-04-17 vendor snapshot and 2026-06-11, e.g. COMMONWEALTH OF MA went $15.9M to $17.5M and U.S. BANK $9.1M to $14.3M.
+- **Supersedes:** `open_finance_vendor_payments_FY26_snapshot_2026-04-17.csv`, which held only a top-N vendor ranking. The by_vendor file is the full vendor list plus department attribution; keep the April file only as a historical point-in-time.
+- **Vendor count caveat:** the portal reports 2,065 vendors; the grouped by_vendor file has 2,062, a 3-vendor difference (likely net-zero or differently aggregated entries). Dollar totals still reconcile exactly.
+- **Confidence:** High for the snapshot-date actuals; this is the Town's own published checkbook. The figures change with each upload, so always read them with the snapshot date attached.
+
 ## What We Don't Have (identified gaps)
 
 1. **<abbr class="g" title="Group Insurance Commission">GIC</abbr> premium rates FY12-FY18** - not publicly available online.
