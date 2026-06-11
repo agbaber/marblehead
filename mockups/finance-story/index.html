@@ -42,32 +42,60 @@ robots: noindex
 
 <div class="wrap">
   <p class="eye">Brainstorming &middot; not linked from production nav</p>
-  <h1>Three ways to tell the same story.</h1>
-  <p class="lede">Each mockup is a working scrollytelling page: a pinned visualization with seven scroll-stops, the visualization morphing as the reader scrolls. Same source material, three different arcs and design treatments. Pick the one closest to what you want; the design can be refined from there.</p>
+  <h1>Mockups for the budget-narrative scrollytelling.</h1>
+  <p class="lede">Live, working mockups for evaluating the arc and the motion model. The top section (v3 and v4) are the latest attempts; v1 and v2 below are earlier iterations kept for comparison.</p>
 
+  <h2 style="font-family:'Libre Franklin',sans-serif; font-size:22px; margin:40px 0 18px;">Current: narrative-motion + explainer</h2>
+  <div class="grid" style="grid-template-columns: repeat(2, 1fr);">
+    <a class="card" href="{{ '/mockups/finance-story/arc-narrative.html' | relative_url }}">
+      <span class="badge a">Mockup v3</span>
+      <h2>Choreographed narrative motion</h2>
+      <p class="arc"><strong>Motion:</strong> every transition makes an argument. The dollar cuts. The stack builds. One stack multiplies into 1,020 dots. Dots split into pillars. Boards drop in from above. Time axis draws itself.</p>
+      <p><strong>Style:</strong> r2d3.us-style data narrative. Vanilla JS scroll engine that works on every screen size, including mobile.</p>
+      <p class="read">Open Mockup v3</p>
+    </a>
+
+    <a class="card" href="{{ '/mockups/finance-story/arc-explainer.html' | relative_url }}">
+      <span class="badge c">Mockup v4</span>
+      <h2>Lottie-style explainer video</h2>
+      <p class="arc"><strong>Motion:</strong> five scene cards. Each plays its own short motion-graphic when it scrolls into view. Town Hall, dollar streams, stacking salaries, two organizations, twenty-year trend.</p>
+      <p><strong>Style:</strong> Vox / Bloomberg explainer aesthetic. Illustrative, linear, video-like. Replay button on each scene.</p>
+      <p class="read">Open Mockup v4</p>
+    </a>
+  </div>
+
+  <h2 style="font-family:'Libre Franklin',sans-serif; font-size:18px; margin:48px 0 14px; color: var(--text-muted);">Earlier iterations (for comparison)</h2>
   <div class="grid">
     <a class="card" href="{{ '/mockups/finance-story/arc-stack.html' | relative_url }}">
-      <span class="badge a">Mockup A</span>
-      <h2>The Dollar Journey</h2>
+      <span class="badge a">v1 A</span>
+      <h2>Dollar Journey (discrete)</h2>
       <p class="arc"><strong>Arc:</strong> $1 &rarr; 3 shapes &rarr; per-FTE stack &rarr; people grid &rarr; org &rarr; boards &rarr; trajectory</p>
-      <p><strong>Design:</strong> editorial / magazine. Navy + buoy palette, Libre Franklin headlines, generous whitespace. The closest to the existing town-history feature.</p>
-      <p class="read">Open mockup A</p>
+      <p><strong>Style:</strong> editorial. Discrete state changes between scroll-stops (fade between fixed frames). The first attempt.</p>
+      <p class="read">Open v1 A</p>
     </a>
 
     <a class="card" href="{{ '/mockups/finance-story/arc-people.html' | relative_url }}">
-      <span class="badge b">Mockup B</span>
-      <h2>The Workforce</h2>
-      <p class="arc"><strong>Arc:</strong> 1,020 people &rarr; categories &rarr; per-FTE cost &rarr; 80% of budget &rarr; org &rarr; boards above &rarr; trajectory</p>
-      <p><strong>Design:</strong> humanizing / illustrative. Sage + teal palette, warmer surface, larger body text, sans-serif headlines. Leads with people, walks back to numbers.</p>
-      <p class="read">Open mockup B</p>
+      <span class="badge b">v1 B</span>
+      <h2>Workforce (discrete)</h2>
+      <p class="arc"><strong>Arc:</strong> people grid &rarr; categories &rarr; per-FTE cost &rarr; 80% of budget &rarr; org &rarr; boards above &rarr; trajectory</p>
+      <p><strong>Style:</strong> humanizing, sage palette. Same discrete model as v1 A.</p>
+      <p class="read">Open v1 B</p>
     </a>
 
     <a class="card" href="{{ '/mockups/finance-story/arc-time.html' | relative_url }}">
-      <span class="badge c">Mockup C</span>
-      <h2>Twenty Years</h2>
+      <span class="badge c">v1 C</span>
+      <h2>Twenty Years (discrete)</h2>
       <p class="arc"><strong>Arc:</strong> trajectory &rarr; 3 forces &rarr; stack &rarr; composition &rarr; today &rarr; org &rarr; roster</p>
-      <p><strong>Design:</strong> dashboard / dataroom. Plum + buoy palette, denser layout, smaller panels, more numbers visible. Closest to a financial briefing.</p>
-      <p class="read">Open mockup C</p>
+      <p><strong>Style:</strong> dashboard / dataroom. Same discrete model.</p>
+      <p class="read">Open v1 C</p>
+    </a>
+
+    <a class="card" href="{{ '/mockups/finance-story/arc-continuous.html' | relative_url }}">
+      <span class="badge a">v2</span>
+      <h2>Continuous (rejected)</h2>
+      <p class="arc"><strong>Arc:</strong> same as v1 A.</p>
+      <p><strong>Style:</strong> first continuous-motion attempt. Motion not narratively meaningful; mobile engine broken. Kept here for the comparison v3 supersedes.</p>
+      <p class="read">Open v2</p>
     </a>
   </div>
 
