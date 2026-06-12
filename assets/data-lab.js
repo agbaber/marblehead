@@ -223,9 +223,11 @@
       var t = rows[i][0], desc = rows[i][1], n = rows[i][2];
       html += '<li>' +
               '<button class="lab-table-pick" type="button" data-table="' + escapeHtml(t) + '">' +
-              '<code>' + escapeHtml(t) + '</code>' +
-              ' <span class="lab-table-desc">' + escapeHtml(desc || '') +
-              ' &middot; ' + Number(n).toLocaleString() + ' rows</span>' +
+              '<span class="lab-table-row1">' +
+                '<code>' + escapeHtml(t) + '</code>' +
+                '<span class="lab-table-count">' + Number(n).toLocaleString() + '</span>' +
+              '</span>' +
+              '<span class="lab-table-desc">' + escapeHtml(desc || '') + '</span>' +
               '</button></li>';
     }
     $('lab-table-list').innerHTML = html;
@@ -235,12 +237,11 @@
     var html = '';
     for (var i = 0; i < EXAMPLES.length; i++) {
       var e = EXAMPLES[i];
-      html += '<li>' +
-              '<button class="lab-example" type="button" data-example="' + i + '">' +
+      html += '<button class="lab-example-chip" type="button"' +
+              ' data-example="' + i + '"' +
+              ' title="' + escapeHtml(e.note) + '">' +
               escapeHtml(e.label) +
-              '</button>' +
-              '<span class="lab-example-note">' + escapeHtml(e.note) + '</span>' +
-              '</li>';
+              '</button>';
     }
     $('lab-example-list').innerHTML = html;
   }
