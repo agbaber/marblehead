@@ -96,6 +96,15 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('All 5 operating schools appear as chart rows')
     : fail('chart rows', `expected 5 building labels, got ${JSON.stringify(barLabels)}`);
 
+  const tableRows = await page.$$('.sbm-table tbody tr');
+  tableRows.length >= 14
+    ? ok(`Itemized table has ${tableRows.length} rows`)
+    : fail('Itemized table', `expected >= 14 rows, got ${tableRows.length}`);
+
+  body.includes('Tennis Courts')
+    ? ok('Tennis Courts (HS item) appears in table')
+    : fail('Tennis Courts', 'missing');
+
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
