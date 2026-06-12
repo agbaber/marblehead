@@ -66,60 +66,6 @@ og_url: https://marbleheaddata.org/data/
     margin: 0;
   }
 
-  /* Compact chart tiles. */
-  .tool-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin: 0 0 28px;
-  }
-  @media (min-width: 600px) {
-    .tool-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (min-width: 900px) {
-    .tool-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  .tool-tile {
-    display: block;
-    padding: 14px 16px 13px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    text-decoration: none;
-    color: var(--text);
-    transition: border-color 0.15s, transform 0.15s;
-  }
-  .tool-tile:hover {
-    border-color: var(--c-teal);
-    transform: translateY(-1px);
-  }
-  .tool-tile-head {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 10px;
-    margin: 0 0 4px;
-  }
-  .tool-tile-name {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--c-teal);
-    line-height: 1.2;
-  }
-  .tool-tile-kind {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    color: var(--text-subtle);
-    white-space: nowrap;
-  }
-  .tool-tile-desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.45;
-    margin: 0;
-  }
 </style>
 
 <div class="hero">
@@ -152,30 +98,6 @@ og_url: https://marbleheaddata.org/data/
     </a>
   </div>
 </section>
-
-<p class="section-label">Charts</p>
-<div class="tool-grid">
-  <a class="tool-tile" href="/charts/town_explorer.html">
-    <div class="tool-tile-head"><span class="tool-tile-name">Town explorer</span><span class="tool-tile-kind">Interactive</span></div>
-    <p class="tool-tile-desc">Compare Marblehead against all 351 Massachusetts towns on rate, levy, and burden.</p>
-  </a>
-  <a class="tool-tile" href="/charts/budget_flow.html">
-    <div class="tool-tile-head"><span class="tool-tile-name">Budget flow</span><span class="tool-tile-kind">Interactive</span></div>
-    <p class="tool-tile-desc">Sankey-style flow from FY27 revenue sources to expense categories, defaulting to the adopted $15M override view.</p>
-  </a>
-  <a class="tool-tile" href="/charts/enrollment_vs_staffing.html">
-    <div class="tool-tile-head"><span class="tool-tile-name">Enrollment vs staffing</span><span class="tool-tile-kind">Chart</span></div>
-    <p class="tool-tile-desc">Student enrollment down 21% from FY14 peak; three staffing measures tell different stories.</p>
-  </a>
-  <a class="tool-tile" href="/charts/general_government_over_time.html">
-    <div class="tool-tile-head"><span class="tool-tile-name">General government over time</span><span class="tool-tile-kind">Chart</span></div>
-    <p class="tool-tile-desc">22 years of general government spending. 3.3% of the FY24 budget, lowest among nine peer towns.</p>
-  </a>
-  <a class="tool-tile" href="/charts/override_history.html">
-    <div class="tool-tile-head"><span class="tool-tile-name">Override history</span><span class="tool-tile-kind">Chart</span></div>
-    <p class="tool-tile-desc">Every Prop 2&frac12; override vote in Marblehead since 1988: ask, result, margin.</p>
-  </a>
-</div>
 
 <p class="section-label">School &amp; staffing</p>
 <div class="question-list">
@@ -215,11 +137,6 @@ og_url: https://marbleheaddata.org/data/
     <span class="tag tag-charts">Interactive</span>
   </a>
 
-  <a class="question" href="/charts/general_government_over_time.html">
-    <h2>General government spending over time</h2>
-    <p>Marblehead's general government spending grew 92% over 22 years. In FY24 it was 3.3% of the budget, the lowest share among nine wealthy MA suburbs.</p>
-    <span class="tag tag-charts">Chart</span>
-  </a>
 </div>
 
 <p class="section-label">Debt &amp; taxes</p>
