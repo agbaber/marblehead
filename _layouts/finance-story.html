@@ -1,15 +1,22 @@
 ---
 layout: default
 ---
-<div class="fs">
-  {{ content }}
-  {%- if page.progress_cta_url and page.progress_cta_label -%}
-  <div class="fs-progress">
-    <div class="fs-progress-bar" aria-hidden="true">
-      <div class="fs-progress-fill" id="fs-progress-fill"></div>
-    </div>
-    <a class="fs-progress-cta" href="{{ page.progress_cta_url | relative_url }}">{{ page.progress_cta_label }}</a>
+{% include nav.html %}
+
+{%- assign progress_pct = page.progress_pct | default: 14 -%}
+{%- assign position = page.chapter_num | default: 1 -%}
+{%- assign total = 7 -%}
+
+<div class="fs-stickybar">
+  <div class="row">
+    <a class="brand" href="{{ '/finance-story/' | relative_url }}"><span class="scope">Finance story</span></a>
+    <div class="where">Chapter {{ position }} of {{ total }} &middot; {{ progress_pct }}%</div>
   </div>
-  {%- endif -%}
+  <div class="track"><div class="track-inner"><div class="fill" style="width: {{ progress_pct }}%;"></div></div></div>
 </div>
+
+<div class="fs-chapter">
+  {{ content }}
+</div>
+
 <script defer src="{{ '/assets/finance-story.js' | relative_url }}"></script>
