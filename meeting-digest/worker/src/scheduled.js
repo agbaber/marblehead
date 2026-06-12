@@ -5,35 +5,61 @@ import { renderHtml, renderText, renderSubject } from './lib/render.js';
 import { sendMail } from './lib/mail.js';
 import { randomToken } from './lib/email.js';
 
-// Only run on the cron hour that corresponds to 7 AM ET.
-// EST (Nov–Mar): UTC = ET + 5  ⇒  11 UTC == 6 AM ET, 12 UTC == 7 AM ET
-// EDT (Mar–Nov): UTC = ET + 4  ⇒  11 UTC == 7 AM ET, 12 UTC == 8 AM ET
-// We schedule both 11 and 12 UTC, and run when the ET hour equals 7.
-function isSevenAmEasternTime(nowMs = Date.now()) {
+// Backup crons fire 30 minutes after the primary slot, so we never want to
+// re-send within the same morning. Five days is well past that and well
+// short of next Monday's primary fire (7 days), so the next legitimate
+// digest still goes out.
+const IDEMPOTENCY_WINDOW_MS = 5 * 24 * 60 * 60 * 1000;
+
+function getEtHour(nowMs) {
   const fmt = new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/New_York', hour12: false, hour: '2-digit'
   });
-  const hour = parseInt(fmt.format(new Date(nowMs)), 10);
-  return hour === 7;
+  return parseInt(fmt.format(new Date(nowMs)), 10);
+}
+
+// Only run on the cron firing whose ET hour equals 7.
+// EST (Nov–Mar): 12 UTC == 7 AM ET (and 12:30 UTC == 7:30 AM ET)
+// EDT (Mar–Nov): 11 UTC == 7 AM ET (and 11:30 UTC == 7:30 AM ET)
+function isSevenAmEasternTime(nowMs = Date.now()) {
+  return getEtHour(nowMs) === 7;
 }
 
 export async function runScheduled(event, env, opts = {}) {
   const now = opts.now ?? Date.now();
+  const scheduledTime = event && event.scheduledTime ? event.scheduledTime : now;
+  const cron = event && event.cron ? event.cron : 'manual';
+  console.log(`[digest] cron fire: cron=${cron} scheduledTime=${new Date(scheduledTime).toISOString()} now=${new Date(now).toISOString()}`);
+
   const skipGuard = opts.skipTimeGuard === true;
   if (!skipGuard && !isSevenAmEasternTime(now)) {
+    console.log(`[digest] skip: not 7am ET (et_hour=${getEtHour(now)})`);
     return { ok: true, ran: false, reason: 'not 7 AM ET' };
   }
 
-  // 1. Fetch recent transcripts (one network read, shared across subscribers).
+  // 1. Pick confirmed subscribers who haven't been emailed in IDEMPOTENCY_WINDOW_MS.
+  //    A backup cron landing 30 min after the primary therefore sees zero rows
+  //    for anyone already sent and the loop is a fast no-op — and we skip the
+  //    GitHub round trip entirely in that case.
+  const idempotencyCutoff = now - IDEMPOTENCY_WINDOW_MS;
+  const { results: subs } = await env.DB.prepare(
+    'SELECT id, email, manage_token, boards, topics FROM subscriber WHERE status = ? AND (last_sent_at IS NULL OR last_sent_at < ?)'
+  ).bind('confirmed', idempotencyCutoff).all();
+  console.log(`[digest] eligible subscribers (confirmed, not sent in last 5d): count=${subs.length}`);
+
+  if (subs.length === 0) {
+    return { ok: true, ran: true, sent: 0, skipped: 0, errored: 0, transcripts: 0 };
+  }
+
+  // 2. Fetch recent transcripts (one network read, shared across subscribers).
   let transcripts;
   try {
     transcripts = await fetchRecentTranscripts(env, now);
   } catch (e) {
+    console.log(`[digest] transcript fetch failed: ${e.message}`);
     return { ok: false, error: `transcript fetch failed: ${e.message}` };
   }
-
-  // 2. For each confirmed subscriber, filter and send.
-  const { results: subs } = await env.DB.prepare('SELECT id, email, manage_token, boards, topics FROM subscriber WHERE status = ?').bind('confirmed').all();
+  console.log(`[digest] fetched transcripts in last 7 days: count=${transcripts.length}`);
 
   const weekEnding = new Date(now).toISOString().slice(0, 10);
   let sent = 0, skipped = 0, errored = 0;
@@ -68,5 +94,6 @@ export async function runScheduled(event, env, opts = {}) {
     }
   }
 
+  console.log(`[digest] done: sent=${sent} skipped=${skipped} errored=${errored} transcripts=${transcripts.length}`);
   return { ok: true, ran: true, sent, skipped, errored, transcripts: transcripts.length };
 }

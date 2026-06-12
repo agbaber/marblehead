@@ -2,6 +2,9 @@ name = "marblehead-meeting-digest"
 main = "src/index.js"
 compatibility_date = "2026-06-09"
 
+[observability]
+enabled = true
+
 [[d1_databases]]
 binding = "DB"
 database_name = "meeting-digest"
@@ -21,10 +24,14 @@ TURNSTILE_TEST_BYPASS_TOKEN = "TEST-OK"
 # secret with the placeholder string and the Worker will 401 on every send.
 
 # Monday 7:00 AM ET == 11:00 UTC (EST) / 12:00 UTC (EDT).
-# Run at 11:00 and 12:00; the scheduled handler chooses one based on the
-# current ET hour, the other becomes a no-op. Keeps DST handling simple.
+# We schedule four firings (11:00, 11:30, 12:00, 12:30 UTC). The handler
+# guard accepts any whose ET hour equals 7, so EDT keeps 11:00 + 11:30 and
+# EST keeps 12:00 + 12:30. The :30 fires give us a cheap retry if
+# Cloudflare's best-effort cron misses the :00 slot. Per-subscriber
+# idempotency in scheduled.js skips anyone already sent in the last 5
+# days, so the retry never double-delivers.
 [triggers]
-crons = ["0 11 * * 1", "0 12 * * 1"]
+crons = ["0 11 * * 1", "30 11 * * 1", "0 12 * * 1", "30 12 * * 1"]
 
 [env.staging]
 name = "marblehead-meeting-digest-staging"
