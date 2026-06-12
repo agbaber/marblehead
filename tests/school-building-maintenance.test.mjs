@@ -57,6 +57,24 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Aug 31 2025 deliverable referenced')
     : fail('Aug 31 deliverable', 'not found in body');
 
+  // Section 2: BCG investment
+  h2s.some(t => t.toLowerCase().includes('major investment')) ||
+  h2s.some(t => t.toLowerCase().includes('brown opened'))
+    ? ok('Section 2 h2 about the BCG investment')
+    : fail('Section 2 h2', `not found in ${JSON.stringify(h2s)}`);
+
+  body.includes('Lucretia and Joseph Brown')
+    ? ok('Full Brown School name referenced')
+    : fail('Brown School name', 'missing');
+
+  body.includes('Gilbane')
+    ? ok('Contractor (Gilbane) referenced')
+    : fail('Gilbane', 'missing');
+
+  body.includes('October 13, 2021') || body.includes('October 13 2021')
+    ? ok('Brown opening date referenced')
+    : fail('Brown opening date', 'missing');
+
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
