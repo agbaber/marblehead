@@ -21,42 +21,16 @@ progress_cta_label: Open the checkbook
   </div>
 </section>
 
-<section id="general-fund" class="fs-section bg-cream">
-  <div class="fs-wrap">
-    <div class="fs-grid">
-      <div class="fs-reveal">
-        <p class="fs-eye">Bucket 1 of 4</p>
-        <h2 class="fs-h2">Your tax bill mostly goes into the <em>General Fund</em>.</h2>
-        <p class="fs-body">This is the big one. About <strong>$109.78&nbsp;million</strong> a year.<sup class="cite" data-source="FY27 Proposed Budget - No Override, General Fund total appropriation." data-href="https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override"></sup> It pays for teachers, police, firefighters, road crews, the library, town hall, and everything else that comes with running them: health insurance, retirement, loan payments on old projects.</p>
-        <p class="fs-body">The money comes from three places. Most of it (about three quarters) is your property tax. A chunk comes from the state. The rest is small stuff like permit fees and license fees.</p>
-        <p class="fs-body">There's a rule called Proposition 2&frac12; that caps how fast this bucket can grow. The property-tax part can only go up about 2.5% a year, plus whatever new construction adds. That's it. When people talk about "the town budget," this is usually what they mean.</p>
-      </div>
-      <div class="fs-reveal d2">
-        <svg viewBox="0 0 460 360" class="fs-buckets" id="fs-buckets" role="img" aria-label="Four buckets of town money. General Fund highlighted.">
-          <g class="bucket bucket-gf" data-active>
-            <rect x="20" y="40" width="200" height="280" rx="10" fill="var(--fs-navy)"/>
-            <text x="120" y="80" font-size="11" font-weight="700" letter-spacing="1.4" fill="rgba(255,255,255,0.7)" text-anchor="middle" style="text-transform:uppercase;">General Fund</text>
-            <text x="120" y="180" font-size="36" font-weight="700" fill="#fff" text-anchor="middle">$109.78M</text>
-            <text x="120" y="208" font-size="12" fill="rgba(255,255,255,0.78)" text-anchor="middle">levy &middot; state aid &middot; receipts</text>
-          </g>
-          <g class="bucket bucket-ef">
-            <rect x="240" y="100" width="80" height="220" rx="8" fill="var(--fs-teal)" fill-opacity="0.35"/>
-            <text x="280" y="130" font-size="9" font-weight="700" letter-spacing="1.2" fill="rgba(255,255,255,0.5)" text-anchor="middle" style="text-transform:uppercase;">Enterprise</text>
-            <text x="280" y="215" font-size="18" font-weight="700" fill="rgba(255,255,255,0.4)" text-anchor="middle">$13M</text>
-          </g>
-          <g class="bucket bucket-cb">
-            <rect x="330" y="160" width="60" height="160" rx="6" fill="#B8860B" fill-opacity="0.3"/>
-            <text x="360" y="185" font-size="9" font-weight="700" letter-spacing="1.2" fill="rgba(184,134,11,0.55)" text-anchor="middle" style="text-transform:uppercase;">Capital</text>
-            <text x="360" y="250" font-size="14" font-weight="700" fill="rgba(184,134,11,0.6)" text-anchor="middle">~$8M</text>
-          </g>
-          <g class="bucket bucket-sr">
-            <rect x="400" y="220" width="40" height="100" rx="4" fill="#6C4A6E" fill-opacity="0.3"/>
-            <text x="420" y="240" font-size="8" font-weight="700" letter-spacing="1" fill="rgba(108,74,110,0.6)" text-anchor="middle" style="text-transform:uppercase;">Restricted</text>
-          </g>
-        </svg>
-      </div>
-    </div>
+<section id="general-fund" class="fs-section fs-reveal">
+  <p class="fs-eye">Bucket 1 of 4</p>
+  <h2>Your tax bill mostly goes into the <em>General Fund</em>.</h2>
+  <p>This is the big one. About <strong>$109.78&nbsp;million</strong> a year.<sup class="cite" data-source="FY27 Proposed Budget - No Override, General Fund total appropriation." data-href="https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override"></sup> It pays for teachers, police, firefighters, road crews, the library, town hall, and everything else that comes with running them: health insurance, retirement, loan payments on old projects.</p>
+  <p>The money comes from three places. Most of it (about three quarters) is your property tax. A chunk comes from the state. The rest is small stuff like permit fees and license fees.</p>
+  <p>There's a rule called Proposition 2&frac12; that caps how fast this bucket can grow. The property-tax part can only go up about 2.5% a year, plus whatever new construction adds. That's it. When people talk about "the town budget," this is usually what they mean.</p>
+  <div class="fs-chart-host" data-fs-chart="general_fund" data-fs-data="{{ '/data/finance-story/general-fund-FY27.json' | relative_url }}">
+    <p class="fs-chart-loading">Loading chart&hellip;</p>
   </div>
+  <p class="fs-chart-caption">FY27 Proposed Budget, by function. &ldquo;Fixed costs&rdquo; bundles health insurance, pensions, OPEB, debt service. <a href="{{ '/marblehead-101/04-where-money-goes.html' | relative_url }}">Drill into the categories &rarr;</a></p>
 </section>
 
 <section id="enterprise" class="fs-section bg-navy">

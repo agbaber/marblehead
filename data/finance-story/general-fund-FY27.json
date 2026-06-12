@@ -1,0 +1,9 @@
+[
+  { "category": "Schools",              "amount": 47600000 },
+  { "category": "Fixed costs",          "amount": 25000000 },
+  { "category": "Public safety",        "amount": 11900000 },
+  { "category": "Public works",         "amount": 6900000 },
+  { "category": "Town admin",           "amount": 4600000 },
+  { "category": "Culture & recreation", "amount": 1900000 },
+  { "category": "Human services",       "amount": 900000 }
+]
