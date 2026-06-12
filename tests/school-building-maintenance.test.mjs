@@ -46,68 +46,54 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('FY27 key stat present')
     : fail('FY27 key stat', 'missing');
 
-  // Section 1: tracking gap
+  // Three top-level sections: Know / Don't Know / Find Out
   const h2s = await page.$$eval('h2', els => els.map(e => e.textContent.trim()));
-  h2s.some(t => t.toLowerCase().includes("nobody maps them") || t.toLowerCase().includes("doesn't know"))
-    ? ok('Section 1 h2 leads with claim about tracking gap')
-    : fail('Section 1 h2', `not found in ${JSON.stringify(h2s)}`);
+  h2s.some(t => t.toLowerCase().includes("what we know"))
+    ? ok('Section "Here\'s what we know" present')
+    : fail('Know section', `not found in ${JSON.stringify(h2s)}`);
+  h2s.some(t => t.toLowerCase().includes("what we don't know") || t.toLowerCase().includes("what we dont know"))
+    ? ok('Section "Here\'s what we don\'t know" present')
+    : fail('Don\'t-know section', `not found in ${JSON.stringify(h2s)}`);
+  h2s.some(t => t.toLowerCase().includes("find out"))
+    ? ok('Section "Here\'s how we\'ll find out" present')
+    : fail('Find-out section', `not found in ${JSON.stringify(h2s)}`);
 
+  // Body content checks
   const body = await page.textContent('body');
-  body.includes('Aug')
-    ? ok('Aug 31 2025 deliverable referenced')
-    : fail('Aug 31 deliverable', 'not found in body');
-
-  // Section 2: BCG investment
-  h2s.some(t => t.toLowerCase().includes('major investment')) ||
-  h2s.some(t => t.toLowerCase().includes('brown opened'))
-    ? ok('Section 2 h2 about the BCG investment')
-    : fail('Section 2 h2', `not found in ${JSON.stringify(h2s)}`);
 
   body.includes('Lucretia and Joseph Brown')
     ? ok('Full Brown School name referenced')
-    : fail('Brown School name', 'missing');
+    : fail('Brown name', 'missing');
 
-  body.includes('Gilbane')
-    ? ok('Contractor (Gilbane) referenced')
-    : fail('Gilbane', 'missing');
+  body.includes('EBI Consulting')
+    ? ok('EBI Consulting (firm name) referenced')
+    : fail('EBI Consulting', 'missing');
 
-  body.includes('October 13, 2021') || body.includes('October 13 2021')
-    ? ok('Brown opening date referenced')
-    : fail('Brown opening date', 'missing');
+  body.includes('Aug')
+    ? ok('Aug 31 2025 deliverable referenced (in don\'t-know list)')
+    : fail('Aug 31 deliverable', 'missing');
 
-  // Section 3: 2021 baseline scope
-  h2s.some(t => t.toLowerCase().includes('2021 baseline'))
-    ? ok('Section 3 h2 about the 2021 baseline')
-    : fail('Section 3 h2', `not found in ${JSON.stringify(h2s)}`);
-
+  // Brown-gap callout
   const brownGap = await page.$('.sbm-brown-gap');
-  brownGap ? ok('Brown-gap callout present (.sbm-brown-gap)') : fail('Brown-gap callout', 'missing');
+  brownGap ? ok('Brown-gap callout present (.sbm-brown-gap)') : fail('Brown-gap', 'missing');
 
-  // Section 4: backlog chart
+  // Backlog bar chart still visible
   const barChart = await page.$('svg.sbm-bar-chart');
-  barChart ? ok('Bar chart SVG present') : fail('Bar chart SVG', 'missing .sbm-bar-chart');
+  barChart ? ok('Bar chart SVG present') : fail('Bar chart SVG', 'missing');
 
   const caveatBanner = await page.$('.sbm-caveat-banner');
   caveatBanner ? ok('Bar chart caveat banner present') : fail('caveat banner', 'missing');
 
-  // Building rows shown in chart
   const barLabels = await page.$$eval('svg.sbm-bar-chart text', els => els.map(e => e.textContent.trim()));
   ['High School', 'Veterans', 'Village', 'Glover', 'Brown'].every(b => barLabels.some(l => l.includes(b)))
     ? ok('All 5 operating schools appear as chart rows')
     : fail('chart rows', `expected 5 building labels, got ${JSON.stringify(barLabels)}`);
 
-  const tableRows = await page.$$('.deep-dive .sbm-table tbody tr');
-  tableRows.length >= 14
-    ? ok(`Itemized (deep-dive) table has ${tableRows.length} rows`)
-    : fail('Itemized table', `expected >= 14 rows, got ${tableRows.length}`);
-
-  body.includes('Tennis Courts')
-    ? ok('Tennis Courts (HS item) appears in table')
-    : fail('Tennis Courts', 'missing');
-
-  h2s.some(t => t.toLowerCase().includes('former school buildings'))
-    ? ok('Section 5 h2 about former school buildings')
-    : fail('Section 5 h2', `not found in ${JSON.stringify(h2s)}`);
+  // Former-buildings cards
+  const cards = await page.$$('.sbm-cards .sbm-card');
+  cards.length === 4
+    ? ok(`Former-buildings card grid has ${cards.length} cards`)
+    : fail('cards count', `expected 4, got ${cards.length}`);
 
   body.includes('Harborlight Homes')
     ? ok('Coffin Adaptive Reuse / Harborlight reference present')
@@ -117,42 +103,27 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Eveleth building referenced')
     : fail('Eveleth', 'missing');
 
+  // Sarah Fox blockquote
   body.includes('buckets and mops')
     ? ok('Sarah Fox walking-tour direct quote present')
     : fail('walking-tour quote', 'missing');
 
-  body.includes('weep holes') || body.includes('drainage holes')
-    ? ok('Veterans D-wing contractor-error detail present')
-    : fail('Veterans D-wing', 'missing');
+  const blockquote = await page.$('blockquote.quote');
+  blockquote ? ok('blockquote.quote pattern used (site quote class)') : fail('blockquote.quote', 'missing');
 
-  h2s.some(t => t.toLowerCase().includes('paid for') || t.toLowerCase().includes('how it gets paid'))
-    ? ok('Section 7 h2 about funding')
-    : fail('Section 7 h2', `not found in ${JSON.stringify(h2s)}`);
-
+  // Funding facts
   body.includes('$500K') || body.includes('$500,000')
     ? ok('$500K/yr building capital fund (Tier 3) referenced')
     : fail('building capital fund', 'missing');
-
-  body.includes('1.0 maintenance') || body.includes('maintenance position')
-    ? ok('FY27 maintenance-position cut referenced')
-    : fail('maintenance cut', 'missing');
-
-  h2s.some(t => t.toLowerCase().includes("actually moving") || t.toLowerCase().includes("what's moving") || t.toLowerCase().includes("what is moving"))
-    ? ok('Section 8 h2 about what is moving')
-    : fail('Section 8 h2', `not found in ${JSON.stringify(h2s)}`);
 
   body.includes('summer 2026')
     ? ok('Summer 2026 HS roof construction referenced')
     : fail('summer 2026 roof', 'missing');
 
-  h2s.some(t => t.toLowerCase().includes('open questions') || t.toLowerCase().includes('questions to ask'))
-    ? ok('Section 9 h2 about open questions')
-    : fail('Section 9 h2', `not found in ${JSON.stringify(h2s)}`);
-
-  // Replaced the SVG dual-track timeline with a building-age table.
-  body.includes('2002') && body.includes('2014') && body.includes('2021')
-    ? ok('Operating-school construction years present (2002 / 2014 / 2021)')
-    : fail('Building years', 'missing one of 2002, 2014, 2021');
+  // Glover HVAC ambiguity (the new finding worth flagging)
+  body.includes('Glover') && (body.includes('condenser') || body.includes('20%'))
+    ? ok('Glover HVAC scope ambiguity surfaced')
+    : fail('Glover HVAC', 'condenser/20% scope ambiguity not on page');
 
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
