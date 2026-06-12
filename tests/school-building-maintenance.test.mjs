@@ -117,6 +117,14 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Eveleth building referenced')
     : fail('Eveleth', 'missing');
 
+  body.includes('buckets and mops')
+    ? ok('Sarah Fox walking-tour direct quote present')
+    : fail('walking-tour quote', 'missing');
+
+  body.includes('weep holes') || body.includes('drainage holes')
+    ? ok('Veterans D-wing contractor-error detail present')
+    : fail('Veterans D-wing', 'missing');
+
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
