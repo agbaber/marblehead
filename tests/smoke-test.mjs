@@ -377,26 +377,16 @@ async function testTownBudgetPageLoads(page) {
   }
 }
 
-async function testGeneralGovernmentChart(page) {
-  console.log('\n── General Government Over Time chart ──');
-  await page.goto(SITE + '/charts/general_government_over_time.html', { waitUntil: 'domcontentloaded' });
-  const h1 = await page.$('h1');
-  const h1Text = h1 ? (await h1.textContent()).trim() : '';
-  /general government/i.test(h1Text)
-    ? ok(`H1 reads: ${h1Text}`)
-    : fail('GG chart H1', `unexpected H1: ${h1Text}`);
+async function testGeneralGovernmentPeerChart(page) {
+  console.log('\n── General Government peer chart (in where-has-money-gone) ──');
+  await page.goto(SITE + '/where-has-the-money-gone.html', { waitUntil: 'domcontentloaded' });
 
-  const h2Count = (await page.$$('h2')).length;
-  h2Count >= 3
-    ? ok(`${h2Count} H2 sections`)
-    : fail('GG chart H2 count', `expected >= 3, got ${h2Count}`);
+  const cardHeading = await page.$('h3:has-text("General government did not grow faster")');
+  cardHeading
+    ? ok('Salvaged GG card present')
+    : fail('GG card', 'missing "General government did not grow faster" H3');
 
-  const charts = (await page.$$('svg.chart')).length;
-  charts >= 3
-    ? ok(`${charts} SVG charts`)
-    : fail('GG chart SVG count', `expected >= 3, got ${charts}`);
-
-  const bars = (await page.$$('svg.chart rect.data-bar')).length;
+  const bars = (await page.$$('svg rect.data-bar.s-marblehead, svg rect.data-bar.s-neutral')).length;
   bars === 9
     ? ok(`${bars} peer bars`)
     : fail('GG peer bar count', `expected 9, got ${bars}`);
@@ -479,7 +469,7 @@ async function testM101NavLink(page) {
     await testHomepageLoads(page1);
     await testNavLinks(page1);
     await testCheckbookPageLoads(page1);
-    await testGeneralGovernmentChart(page1);
+    await testGeneralGovernmentPeerChart(page1);
     await testSchoolAgeVsEnrollment(page1);
     await testTownBudgetPageLoads(page1);
     await testM101Landing(page1);
