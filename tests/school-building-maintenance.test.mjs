@@ -46,6 +46,17 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('FY27 key stat present')
     : fail('FY27 key stat', 'missing');
 
+  // Section 1: tracking gap
+  const h2s = await page.$$eval('h2', els => els.map(e => e.textContent.trim()));
+  h2s.some(t => t.toLowerCase().includes("can't tell you"))
+    ? ok('Section 1 h2 leads with claim about tracking gap')
+    : fail('Section 1 h2', `not found in ${JSON.stringify(h2s)}`);
+
+  const body = await page.textContent('body');
+  body.includes('Aug')
+    ? ok('Aug 31 2025 deliverable referenced')
+    : fail('Aug 31 deliverable', 'not found in body');
+
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
