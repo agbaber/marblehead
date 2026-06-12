@@ -38,6 +38,13 @@ og_url: https://marbleheaddata.org/school-building-maintenance.html
   /* Leader line from a dot up/down to its label, kept thin and muted */
   .sbm-timeline .sbm-tl-leader { stroke: var(--chart-grid-minor); stroke-width: 1; fill: none; }
   .sbm-timeline .sbm-tl-track-label { fill: var(--chart-axis); font-weight: 600; }
+  /* Global `* { padding: 0 }` reset zeroes default list padding; restore
+     an indent so bullets/numbers sit inside the reading column rather than
+     spilling into the margin. Scope tight so we don't conflict with site
+     defaults on classed lists. */
+  h2 + ul, h2 + ol, p + ul, p + ol { padding-left: 22px; list-style: disc; }
+  p + ol, h2 + ol { list-style: decimal; }
+  h2 + ul li, h2 + ol li, p + ul li, p + ol li { margin-bottom: 6px; line-height: 1.55; }
   .sbm-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0 16px; }
   .sbm-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--text); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
   .sbm-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); }
@@ -218,9 +225,12 @@ og_url: https://marbleheaddata.org/school-building-maintenance.html
 
 <h2 id="when-it-bites">What deferred maintenance looks like when it bites</h2>
 
-<p>In April 2024, then-chair Sarah Fox walked the high school during a Northeaster to see the leaks firsthand. Her report two weeks later at the School Committee meeting:<sup class="cite" data-href="_transcripts/school-committee-2024-04-25.md" data-source="Marblehead School Committee transcript, 4/25/2024, commendations segment. Sarah Fox first-person account of an April 4 2024 walking tour of Marblehead High School with Todd Bloodgood and Theresa McGinnis during a Northeaster."></sup></p>
+<p>In April 2024, then-chair Sarah Fox walked the high school during a Northeaster to see the leaks firsthand. Her report two weeks later at the School Committee meeting:</p>
 
-<blockquote>"As we walked, I was shown classrooms that had leaks and how they were being mitigated. As our walk continued, if teachers noticed us, they would pop out of their classrooms to report new leaks or leaks that were stopped, but it started up again. The custodians were everywhere with buckets and mops trying to keep up with the leaks &hellip; what is clear to me is that the continued priority must be made to move forward with a new replacement roof."</blockquote>
+<blockquote class="quote">
+  <p>"As we walked, I was shown classrooms that had leaks and how they were being mitigated. As our walk continued, if teachers noticed us, they would pop out of their classrooms to report new leaks or leaks that were stopped, but it started up again. The custodians were everywhere with buckets and mops trying to keep up with the leaks &hellip; what is clear to me is that the continued priority must be made to move forward with a new replacement roof."</p>
+  <footer>Marblehead School Committee meeting, April 25, 2024. <a href="_transcripts/school-committee-2024-04-25.md">Transcript</a>.</footer>
+</blockquote>
 
 <p>Veterans Middle School got hit a different way in February 2026. A roofing subcontractor wrapped the new membrane over the drainage holes. The next rain ran under the roof and flooded the classrooms below. Insurance covered the new ceiling tiles, lighting, outlets, sprinklers, smoke detectors, pull stations, and horn strobes. The district refused to pay the contractor until everything was fixed. A classroom or two had to be relocated. MHTV (Marblehead's community TV station), which records its programming from the D-wing, still hasn't moved back in.<sup class="cite" data-href="data/schools/sc-meetings-fy26/facilities-subcommittee-minutes-2-13-2026.txt" data-source="Marblehead Public Schools Facilities Subcommittee minutes, 2/13/2026: Veterans D-wing contractor-caused flood; insurance scope; MHTV displaced."></sup></p>
 
