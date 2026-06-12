@@ -137,11 +137,11 @@ Worker URL (instead of staging), commit, push, merge the PR.
 In the Resend dashboard → Webhooks: add the production Worker's
 `/api/mail-event` endpoint. Subscribe to `email.bounced` and
 `email.complained` events. This drives the subscriber-status updates on
-bounce/spam complaint so the Friday cron stops sending to bad addresses.
+bounce/spam complaint so the Monday cron stops sending to bad addresses.
 
-### 10. Trigger the first Friday digest manually
+### 10. Trigger the first Monday digest manually
 
-To test the cron without waiting for Friday morning, use the Cloudflare
+To test the cron without waiting for Monday morning, use the Cloudflare
 dashboard → Workers & Pages → marblehead-meeting-digest → Triggers →
 "Send Test" on the scheduled trigger.
 

@@ -31,7 +31,7 @@ export function renderConfirmEmailHtml(env, token) {
   const url = `${env.SITE_BASE_URL}/subscribe/confirm/?token=${encodeURIComponent(token)}`;
   return emailShell({ body: `
   <h1 style="margin: 0 0 14px; font-size: 22px; font-weight: 600; color: #1a1a1a;">Confirm your subscription</h1>
-  <p style="margin: 0 0 18px;">You'll get a short summary of meetings of the Select Board, School Committee, and Finance Committee each Friday morning. You can add Board of Health and Town Meeting after you confirm.</p>
+  <p style="margin: 0 0 18px;">You'll get a short summary of meetings of the Select Board, School Committee, and Finance Committee each Monday morning. You can add Board of Health and Town Meeting after you confirm.</p>
   <p style="margin: 0 0 28px;">${button(url, 'Confirm subscription')}</p>
   <p class="mhd-muted" style="margin: 0 0 4px; font-size: 13px; color: #6c757d;">This link expires in 24 hours.</p>
   <p class="mhd-muted" style="margin: 0; font-size: 13px; color: #6c757d;">If this wasn't you, ignore this email. Nothing happens until you click.</p>
@@ -44,7 +44,7 @@ export function renderConfirmEmailText(env, token) {
 Confirm your subscription
 
 You'll get a short summary of meetings of the Select Board, School
-Committee, and Finance Committee each Friday morning. You can add
+Committee, and Finance Committee each Monday morning. You can add
 Board of Health and Town Meeting after you confirm.
 
 Confirm: ${url}

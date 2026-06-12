@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// Send a sample Friday digest to a single email, using real transcripts from
+// Send a sample Monday digest to a single email, using real transcripts from
 // _transcripts/. Bypasses D1, the 7-AM-ET guard, and the 7-day window so you
-// can preview what subscribers will receive without waiting for a real Friday.
+// can preview what subscribers will receive without waiting for a real Monday.
 //
 // Usage (from repo root):
 //   RESEND_API_KEY=re_... node meeting-digest/tools/send-sample-digest.mjs you@example.com

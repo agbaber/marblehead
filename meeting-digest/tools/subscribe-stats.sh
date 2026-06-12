@@ -38,7 +38,7 @@ run "Pending-confirmation older than 24h" \
    WHERE status='pending_confirmation'
      AND created_at < strftime('%s','now','-1 day');"
 
-run "Friday digest sends (last 8 weeks)" \
+run "Monday digest sends (last 8 weeks)" \
   "SELECT date(sent_at,'unixepoch') AS day,
           COUNT(*) AS sends,
           SUM(n_meetings) AS total_meetings,
