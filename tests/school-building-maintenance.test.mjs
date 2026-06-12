@@ -32,6 +32,20 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
   const pageLead = await page.$('.page-lead');
   pageLead ? ok('.page-lead present') : fail('.page-lead', 'missing');
 
+  // Key stats
+  const keyStatLabels = await page.$$eval('.key-stats .key-stat-label', els => els.map(e => e.textContent.trim()));
+  keyStatLabels.length === 4
+    ? ok('4 key stats present')
+    : fail('key stats count', `expected 4, got ${keyStatLabels.length}`);
+
+  const keyStatValues = await page.$$eval('.key-stats .key-stat-value', els => els.map(e => e.textContent.trim()));
+  keyStatValues.includes('$42M')
+    ? ok('$42M key stat present')
+    : fail('$42M key stat', 'missing');
+  keyStatValues.includes('FY27')
+    ? ok('FY27 key stat present')
+    : fail('FY27 key stat', 'missing');
+
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
