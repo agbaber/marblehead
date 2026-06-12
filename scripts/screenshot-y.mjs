@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const [, , outFile, y] = process.argv;
+const browser = await chromium.launch();
+const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });
+const page = await ctx.newPage();
+await page.goto('http://localhost:4000/school-building-maintenance.html', { waitUntil: 'networkidle' });
+await page.evaluate((yval) => window.scrollTo(0, yval), Number(y));
+await page.waitForTimeout(300);
+await page.screenshot({ path: outFile });
+await browser.close();

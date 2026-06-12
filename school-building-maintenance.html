@@ -1,0 +1,227 @@
+---
+title: "School building maintenance"
+scripts: [citations, deep-dive]
+og_title: "School building maintenance"
+og_description: "The only comprehensive condition assessment of Marblehead's school buildings was done in 2021. The district has no central record of what's been fixed since."
+og_url: https://marbleheaddata.org/school-building-maintenance.html
+---
+<style>
+  /* Page-scoped styles. Mirror inside-school-staffing.html conventions. */
+  .sbm-caveat-banner {
+    background: color-mix(in srgb, var(--c-brass) 12%, transparent);
+    border-left: 3px solid var(--c-brass);
+    padding: 10px 14px;
+    margin: 12px 0 16px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .sbm-brown-gap {
+    background: color-mix(in srgb, var(--c-buoy) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--c-buoy) 25%, transparent);
+    padding: 12px 14px;
+    margin: 12px 0;
+    border-radius: 4px;
+  }
+  .sbm-bar-chart { max-width: 720px; }
+  /* Series colors flow through `color:` so currentColor cascades to fill */
+  .sbm-bar-chart .sbm-bar-row--hs      { color: var(--c-navy); }
+  .sbm-bar-chart .sbm-bar-row--vets    { color: var(--c-buoy); }
+  .sbm-bar-chart .sbm-bar-row--village { color: var(--c-teal); }
+  .sbm-bar-chart .sbm-bar-row--glover  { color: var(--c-brass); }
+  .sbm-italic { font-style: italic; }
+
+  /* Former-buildings cards: one per closed-or-demolished school site. Grid
+     collapses to single column on mobile. */
+  .sbm-cards { display: grid; gap: 16px; margin: 16px 0 20px;
+               grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .sbm-card { background: var(--surface); border: 1px solid var(--border);
+              border-left: 4px solid var(--c-buoy); border-radius: 6px;
+              padding: 14px 16px 12px; display: flex; flex-direction: column; }
+  .sbm-card--demolished { border-left-color: var(--c-brass); opacity: 0.92; }
+  .sbm-card h3 { margin: 0 0 4px; font-size: 1.05rem; font-weight: 700;
+                 color: var(--text); line-height: 1.2; }
+  .sbm-card-meta { font-size: 0.78rem; color: var(--text-muted);
+                   margin: 0 0 10px; line-height: 1.45; }
+  .sbm-card-meta strong { color: var(--text); }
+  .sbm-card p { font-size: 0.875rem; line-height: 1.5; color: var(--text-muted);
+                margin: 0 0 8px; }
+  .sbm-card ul { font-size: 0.875rem; line-height: 1.45; color: var(--text-muted);
+                 padding-left: 18px; list-style: disc; margin: 0 0 8px; }
+  .sbm-card ul li { margin-bottom: 3px; }
+  .sbm-card-cite { font-size: 0.72rem; color: var(--text-subtle);
+                   margin-top: auto; padding-top: 8px;
+                   border-top: 1px solid var(--divider); line-height: 1.4; }
+  .sbm-card-cite a { color: var(--text-muted); }
+
+  /* Global `* { padding: 0 }` reset zeroes default list padding; restore
+     an indent so bullets/numbers sit inside the reading column rather than
+     spilling into the margin. Scope tight so we don't conflict with site
+     defaults on classed lists. */
+  h2 + ul, h2 + ol, p + ul, p + ol { padding-left: 22px; list-style: disc; }
+  p + ol, h2 + ol { list-style: decimal; }
+  h2 + ul li, h2 + ol li, p + ul li, p + ol li { margin-bottom: 6px; line-height: 1.55; }
+  .sbm-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0 16px; }
+  .sbm-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--text); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .sbm-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); }
+  .sbm-table td:nth-child(3) { text-align: right; white-space: nowrap; }
+  @media (max-width: 600px) {
+    .sbm-table { font-size: 13px; }
+    .sbm-table td, .sbm-table th { padding: 6px 6px; }
+  }
+</style>
+
+<h1>School building maintenance</h1>
+<p class="page-lead">
+  Marblehead schools have no real preventative maintenance program. Repairs happen when things break, not on a schedule. The only comprehensive condition assessment on record was done in 2021 by EBI Consulting.<sup class="cite" data-href="/meetings/select-board-2024-02-28/" data-source="Select Board meeting, 2/28/2024 (EBI Consulting contract approval)"></sup> It flagged roughly $5M+ in known problems. Plenty have been fixed since, but the district doesn't keep a central list of what's been done. FY27 is the year the school facilities team is finally trying to buy maintenance-tracking software.
+</p>
+
+<div class="key-stats">
+  <div class="key-stat">
+    <div class="key-stat-value">$55M</div>
+    <div class="key-stat-label">2019 vote to build Brown<sup class="cite" data-href="data/marblehead_prop25_votes.csv" data-source="MA DOR Debt Exclusion record, 6/18/2019 (&quot;Bonds For New Gerry School&quot;)"></sup></div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">2021</div>
+    <div class="key-stat-label">last full building check<sup class="cite" data-href="https://resources.finalsite.net/images/v1741690835/marbleheadschoolsorg/apdgujai29xc5kwrlxsu/capital_facilities_plan.pdf" data-source="Marblehead Public Schools Capital Facilities Plan (2021 EBI)"></sup></div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">1 of 5</div>
+    <div class="key-stat-label">schools left out of the 2021 check<sup class="cite" data-href="https://resources.finalsite.net/images/v1741690835/marbleheadschoolsorg/apdgujai29xc5kwrlxsu/capital_facilities_plan.pdf" data-source="Marblehead Public Schools Capital Facilities Plan (2021 EBI)"></sup></div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">FY27</div>
+    <div class="key-stat-label">first year tracking software is budgeted<sup class="cite" data-href="https://resources.finalsite.net/images/v1773771966/marbleheadschoolsorg/mu7arqhkjquayxneajte/72425facsubminutes.pdf" data-source="Facilities Subcommittee minutes, 7/24/2025"></sup></div>
+  </div>
+</div>
+
+<h2 id="known">Here's what we know</h2>
+
+<p>The town made a major investment in 2019. Voters approved a $54.8 million <a href="prop25-story.html">debt exclusion</a> to build the Lucretia and Joseph Brown Elementary School, replacing three older buildings.<sup class="cite" data-href="data/marblehead_prop25_votes.csv" data-source="MA DOR Debt Exclusion record, 6/18/2019 (&quot;Bonds For New Gerry School&quot;)"></sup> Brown opened in October 2021. The five operating school buildings now are Brown, Glover, Village, Veterans Middle, and the high school.</p>
+
+<p>EBI Consulting checked eight buildings in 2021 (the four older operating ones plus four buildings being closed) and flagged roughly $5M of problems. Brown wasn't checked because it was brand new at the time.<sup class="cite" data-href="https://resources.finalsite.net/images/v1741690835/marbleheadschoolsorg/apdgujai29xc5kwrlxsu/capital_facilities_plan.pdf" data-source="Marblehead Public Schools Capital Facilities Plan (2021 EBI)"></sup></p>
+
+<div class="sbm-brown-gap">
+  <strong>There is no condition assessment of Brown on record.</strong> Brown's FY27 budget is $5,554,252, the largest of the three elementary schools.<sup class="cite" data-href="https://resources.finalsite.net/images/v1770394283/marbleheadschoolsorg/abvvnuezygg1rsgil17k/2026Budgetpacket.pdf" data-source="FY27 Superintendent's Proposed Budget packet (Feb 2026)"></sup>
+</div>
+
+<p>Plenty has been done since 2021. The Director of Facilities reports to the School Committee each fall on summer projects, and several 2021 items show up in those updates:</p>
+
+<ul>
+  <li><strong>Village security cameras</strong> updated (2023)<sup class="cite" data-href="/meetings/school-committee-2023-09-21/" data-source="School Committee meeting, 9/21/2023 (summer 2023 facilities report)"></sup></li>
+  <li><strong>Veterans security cameras</strong> ~95% complete (2023)<sup class="cite" data-href="/meetings/school-committee-2023-09-21/" data-source="School Committee meeting, 9/21/2023 (summer 2023 facilities report)"></sup></li>
+  <li><strong>High school card-access elevators and new fire alarm system</strong> (2023)<sup class="cite" data-href="/meetings/school-committee-2023-09-21/" data-source="School Committee meeting, 9/21/2023 (summer 2023 facilities report)"></sup></li>
+  <li><strong>Veterans gym wall padding, PAC seat reupholstery, mini-splits</strong> (summer 2025)<sup class="cite" data-href="/meetings/school-committee-2025-09-19/" data-source="School Committee meeting, 9/19/2025 (summer 2025 facilities report)"></sup></li>
+  <li><strong>HS fire doors and new entrance doors, Glover HVAC finalization</strong> (summer 2025)<sup class="cite" data-href="/meetings/school-committee-2025-09-19/" data-source="School Committee meeting, 9/19/2025 (summer 2025 facilities report)"></sup></li>
+  <li><strong>HS roof and HVAC replacement</strong> in flight: design contract 2024, three small sections done April 2026 vacation, full project summer 2026.<sup class="cite" data-href="/meetings/school-committee-2024-12-05/" data-source="School Committee meeting, 12/5/2024 (HS roof design contract)"></sup></li>
+</ul>
+
+<p>Most of the 2021 backlog dollars sit at the four buildings that aren't schools anymore. Only about $1M of the $5M sits at the four operating schools EBI checked.</p>
+
+<div class="sbm-caveat-banner">
+  These numbers are from 2021. Some items on this list have been addressed since (see above); this is the snapshot in time, not a current backlog.
+</div>
+
+<div class="chart-wrapper">
+  <svg class="chart sbm-bar-chart" viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="2021 EBI dollar-tagged backlog by currently operating school. High School around $779K, Veterans $175K, Village $50K, Glover $0, Brown not assessed.">
+    <!-- 5 rows × 32px each. Bars start at x=150, max width 460 for $1M (scale: ~$2.17/px). -->
+    <!-- Row 1: High School -->
+    <text class="tick-label" x="0" y="30" font-size="13">High School</text>
+    <rect class="sbm-bar-row sbm-bar-row--hs" x="150" y="20" width="358" height="14" fill="currentColor"/>
+    <text class="tick-label" x="518" y="30" font-size="12">$779K</text>
+    <!-- Row 2: Veterans -->
+    <text class="tick-label" x="0" y="62" font-size="13">Veterans Middle</text>
+    <rect class="sbm-bar-row sbm-bar-row--vets" x="150" y="52" width="80" height="14" fill="currentColor"/>
+    <text class="tick-label" x="240" y="62" font-size="12">$175K</text>
+    <!-- Row 3: Village -->
+    <text class="tick-label" x="0" y="94" font-size="13">Village Elementary</text>
+    <rect class="sbm-bar-row sbm-bar-row--village" x="150" y="84" width="23" height="14" fill="currentColor"/>
+    <text class="tick-label" x="183" y="94" font-size="12">$50K</text>
+    <!-- Row 4: Glover -->
+    <text class="tick-label" x="0" y="126" font-size="13">Glover Elementary</text>
+    <rect class="sbm-bar-row sbm-bar-row--glover" x="150" y="116" width="2" height="14" fill="currentColor"/>
+    <text class="tick-label" x="160" y="126" font-size="12">$0</text>
+    <!-- Row 5: Brown -->
+    <text class="tick-label" x="0" y="158" font-size="13">Brown Elementary</text>
+    <text class="tick-label sbm-italic" x="155" y="158" font-size="12">not assessed in 2021</text>
+    <!-- Axis -->
+    <line class="axis-base" x1="150" y1="180" x2="610" y2="180"/>
+    <text class="tick-label" x="150" y="200">$0</text>
+    <text class="tick-label" x="380" y="200" text-anchor="middle">$500K</text>
+    <text class="tick-label" x="610" y="200" text-anchor="end">$1M</text>
+  </svg>
+</div>
+
+<p class="caption">Items with price tags only. The 2021 plan flagged plenty of other issues without putting a dollar amount on them. The high-school roof, which is the biggest active project in the district right now, was one of those: noted as "persistent leaks &mdash; maintenance issue" but not priced.<sup class="cite" data-href="https://resources.finalsite.net/images/v1741690835/marbleheadschoolsorg/apdgujai29xc5kwrlxsu/capital_facilities_plan.pdf" data-source="Marblehead Public Schools Capital Facilities Plan (2021 EBI)"></sup></p>
+
+<p>The former buildings aren't really "deferred maintenance" at this point. They're decisions about what to do with empty buildings:</p>
+
+<div class="sbm-cards">
+  <article class="sbm-card">
+    <h3>Coffin</h3>
+    <p class="sbm-card-meta"><strong>Built</strong> 1949 (annex 1963) &middot; <strong>Closed</strong> Oct 2021<br><strong>2021 items:</strong> roof $750K, windows $600K, plumbing $250K, electrical $200K, HVAC $150K</p>
+    <p>Now in "Adaptive Reuse" — basically, deciding what an old building should become next. Five town departments pitched ideas last fall:</p>
+    <ul>
+      <li>Cemetery Department &mdash; burial space</li>
+      <li>Light Department &mdash; battery storage</li>
+      <li>Recreation &amp; Parks &mdash; dog park</li>
+      <li>Housing Authority &mdash; partnership</li>
+      <li>Community Development &mdash; boat storage</li>
+    </ul>
+    <p>The most ambitious outside proposal is from Harborlight Homes: 40 units of affordable housing, $28&ndash;32 million, keeping the original building and tearing down the annex. Community meeting #3 was May 20, 2026.</p>
+    <p class="sbm-card-cite"><a href="https://marbleheadma.gov/coffin-school-adaptive-reuse/">Town Coffin Adaptive Reuse page</a><sup class="cite" data-href="https://resources.finalsite.net/images/v1741690835/marbleheadschoolsorg/apdgujai29xc5kwrlxsu/capital_facilities_plan.pdf" data-source="Marblehead Public Schools Capital Facilities Plan (2021 EBI)"></sup></p>
+  </article>
+
+  <article class="sbm-card">
+    <h3>Eveleth</h3>
+    <p class="sbm-card-meta"><strong>Built</strong> early 20th c. &middot; <strong>Closed</strong> 2021<br><strong>Current:</strong> boiler condemned Nov 2025</p>
+    <p>Closed before BCG, then briefly reopened in 2019&ndash;2020 as swing space for kindergarteners while Bell was being closed down.<sup class="cite" data-href="/meetings/" data-source="School Committee meetings, 2020–2021 (Brown opening &amp; Bell demolition)"></sup> Went dark again when Brown opened.</p>
+    <p>The Facilities Subcommittee has been talking to Park &amp; Recreation about reusing the building for early education and after-school programs.<sup class="cite" data-href="https://resources.finalsite.net/images/v1773772039/marbleheadschoolsorg/mnbn4dk4tvqwsj3bhuzb/SCminutes-2_13_26FacilitiesSubcommittee1.pdf" data-source="Facilities Subcommittee minutes, 2/13/2026"></sup></p>
+    <p class="sbm-card-cite">Boiler condemned per facilities subcommittee, Nov 5 2025.<sup class="cite" data-href="https://resources.finalsite.net/images/v1773772163/marbleheadschoolsorg/bxdxwyev0ltqknovdyyz/SCminutes-11_5_25FacilitiesSubcommittee1.pdf" data-source="Facilities Subcommittee minutes, 11/5/2025"></sup></p>
+  </article>
+
+  <article class="sbm-card">
+    <h3>Gerry</h3>
+    <p class="sbm-card-meta"><strong>Built</strong> 1906 &middot; <strong>Closed</strong> Jan 2018<br><strong>2021 items:</strong> roof $750K, exterior brick $250K, boiler $175K, HVAC $150K</p>
+    <p>The oldest of the elementaries. Students were moved out in January 2018 after a steam pipe leak, then consolidated into Brown when it opened.</p>
+    <p>Future use is undetermined as of the most recent meeting minutes on record.</p>
+    <p class="sbm-card-cite"><sup class="cite" data-href="https://resources.finalsite.net/images/v1741690835/marbleheadschoolsorg/apdgujai29xc5kwrlxsu/capital_facilities_plan.pdf" data-source="Marblehead Public Schools Capital Facilities Plan (2021 EBI)"></sup></p>
+  </article>
+
+  <article class="sbm-card sbm-card--demolished">
+    <h3>Bell (Upper &amp; Lower)</h3>
+    <p class="sbm-card-meta"><strong>Built</strong> 1970 / 1958 &middot; <strong>Demolished</strong> 2020<br><strong>Pre-demolition 2021 items:</strong> roof $1M, HVAC $200K, boiler $175K (no longer applicable)</p>
+    <p>Torn down to make room for Brown. The buildings no longer exist.</p>
+    <p>The 2025&ndash;26 minutes still reference a "Bell School Evaluation Process," but it's not clear what's being evaluated. The notes mention services for 18&ndash;22-year-old students, so the process may be planning a program for one of the other vacant buildings.<sup class="cite" data-href="https://resources.finalsite.net/images/v1770324212/marbleheadschoolsorg/hbrhsxcenhkwr9bipzo5/SchoolCommitteeMinutes11-6-25.pdf" data-source="School Committee minutes, 11/6/2025"></sup></p>
+  </article>
+</div>
+
+<p>The money for all this comes from two pots. Big projects like the high school roof go in the capital plan. Everything reactive comes out of the operating budget. In March 2026 alone, surprise HVAC repairs at Brown and Glover, plus bus and elevator repairs, pulled about $614,000 out of the operating reserve in a single month.<sup class="cite" data-href="/meetings/school-committee-2026-04-09/" data-source="School Committee meeting, 4/9/2026 (FY27 budget hearing)"></sup> Voters added a third pot on June 9, 2026.<sup class="cite" data-href="2026-override/index.html" data-source="June 9 2026 override results (marbleheaddata.org)"></sup> The school side of the override includes a new <strong>building capital fund of $500,000 a year, every year</strong>, per the Tier 3 breakdown the Assistant Superintendent of Finance presented at the FY27 budget hearing.<sup class="cite" data-href="/meetings/school-committee-2026-04-09/" data-source="School Committee meeting, 4/9/2026 (FY27 budget hearing)"></sup></p>
+
+<p>The maintenance-tracking software is supposed to land in FY27. It would barcode every asset, schedule routine work, and finally track which jobs have been done.<sup class="cite" data-href="https://resources.finalsite.net/images/v1773771966/marbleheadschoolsorg/mu7arqhkjquayxneajte/72425facsubminutes.pdf" data-source="Facilities Subcommittee minutes, 7/24/2025"></sup></p>
+
+<p>What does it actually look like to live with the older systems? In April 2024, then-chair Sarah Fox walked the high school during a nor'easter and described what she saw two weeks later at the School Committee meeting:</p>
+
+<blockquote class="quote">
+  <p>"As we walked, I was shown classrooms that had leaks and how they were being mitigated. As our walk continued, if teachers noticed us, they would pop out of their classrooms to report new leaks or leaks that were stopped, but it started up again. The custodians were everywhere with buckets and mops trying to keep up with the leaks &hellip; what is clear to me is that the continued priority must be made to move forward with a new replacement roof."</p>
+  <footer>Marblehead School Committee meeting, April 25, 2024. <a href="/meetings/school-committee-2024-04-25/">Transcript</a>.</footer>
+</blockquote>
+
+<h2 id="unknown">Here's what we don't know</h2>
+
+<ol>
+  <li><strong>Brown's condition.</strong> Brown opened in 2021 and was never part of the EBI inspection. Five years later, the largest elementary school in town still hasn't been formally checked over.</li>
+  <li><strong>Glover's HVAC scope.</strong> The CFO told the School Committee that Glover's HVAC was "only about 20% of the building, 'cause that's all that was designed for," and that the system "never really functioned properly from the start when it was built."<sup class="cite" data-href="/meetings/school-committee-2025-09-19/" data-source="School Committee meeting, 9/19/2025 (summer 2025 facilities report)"></sup> What the original 2014 design called for has not been made public. Was the building designed for only 20% AC coverage from the start, or was the install scoped down from something larger?</li>
+  <li><strong>The August 31, 2025 building-status document.</strong> The Facilities Subcommittee asked for one; eleven subsequent meetings have not mentioned it.<sup class="cite" data-href="https://resources.finalsite.net/images/v1773772099/marbleheadschoolsorg/rdnoutavzafjvtswgehp/SCminutes-9_5_25FacilitiesSubcommittee1.pdf" data-source="Facilities Subcommittee &amp; School Committee meetings, Sept 2025–Feb 2026"></sup></li>
+  <li><strong>The maintenance-tracking software timing.</strong> "Target FY27" but it hasn't been bought yet.</li>
+  <li><strong>How the $500K/year capital fund gets spent.</strong> The override added the line; the district hasn't said where the first round will go.</li>
+  <li><strong>What the "Bell School Evaluation Process" is evaluating.</strong> Bell was torn down in 2020. The notes mention services for 18&ndash;22-year-old students. The actual subject of the evaluation isn't clear from the minutes.<sup class="cite" data-href="https://resources.finalsite.net/images/v1770324212/marbleheadschoolsorg/hbrhsxcenhkwr9bipzo5/SchoolCommitteeMinutes11-6-25.pdf" data-source="School Committee minutes, 11/6/2025"></sup></li>
+</ol>
+
+<h2 id="find-out">Here's how we'll find out</h2>
+
+<ol>
+  <li><strong>Watch the meetings.</strong> The Facilities Subcommittee and the School Committee both meet about monthly. <a href="/meetings/">Recent recordings and summaries</a> are searchable.</li>
+  <li><strong>Ask the Assistant Superintendent of Finance and Operations or the Director of Facilities about Glover.</strong> What was the 2014 HVAC design intent, and what changed between design and install?</li>
+  <li><strong>Track the FY28 budget.</strong> That's when the first $500K capital fund allocation should appear with line items.</li>
+  <li><strong>Attend the Facilities Subcommittee.</strong> Agendas are posted at <a href="https://www.marbleheadschools.org/school-committee">marbleheadschools.org/school-committee</a>; public comment is on every agenda.</li>
+</ol>

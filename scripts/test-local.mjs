@@ -27,11 +27,22 @@ const server = spawn(
 let exitCode = 1;
 try {
   await waitOn({ resources: [URL], timeout: 15000, interval: 200 });
-  const test = spawn('node', ['tests/smoke-test.mjs'], {
-    stdio: 'inherit',
-    env: { ...process.env, SITE: URL },
-  });
-  exitCode = await new Promise(resolve => test.on('exit', code => resolve(code ?? 1)));
+
+  const suites = [
+    'tests/smoke-test.mjs',
+    'tests/school-building-maintenance.test.mjs',
+  ];
+
+  let aggregate = 0;
+  for (const suite of suites) {
+    const test = spawn('node', [suite], {
+      stdio: 'inherit',
+      env: { ...process.env, SITE: URL },
+    });
+    const code = await new Promise(resolve => test.on('exit', c => resolve(c ?? 1)));
+    if (code !== 0) aggregate = code;
+  }
+  exitCode = aggregate;
 } catch (err) {
   console.error('Local server failed to come up:', err.message);
 } finally {
