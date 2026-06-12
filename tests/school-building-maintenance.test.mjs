@@ -48,7 +48,7 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
 
   // Section 1: tracking gap
   const h2s = await page.$$eval('h2', els => els.map(e => e.textContent.trim()));
-  h2s.some(t => t.toLowerCase().includes("doesn't know"))
+  h2s.some(t => t.toLowerCase().includes("nobody maps them") || t.toLowerCase().includes("doesn't know"))
     ? ok('Section 1 h2 leads with claim about tracking gap')
     : fail('Section 1 h2', `not found in ${JSON.stringify(h2s)}`);
 
@@ -149,12 +149,10 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Section 9 h2 about open questions')
     : fail('Section 9 h2', `not found in ${JSON.stringify(h2s)}`);
 
-  const timeline = await page.$('svg.sbm-timeline');
-  timeline ? ok('Timeline SVG present') : fail('Timeline SVG', 'missing .sbm-timeline');
-
-  body.includes('1906') && body.includes('2014') && body.includes('FY27')
-    ? ok('Timeline endpoint years (1906, 2014, FY27) present')
-    : fail('Timeline years', 'missing one of 1906, 2014, FY27');
+  // Replaced the SVG dual-track timeline with a building-age table.
+  body.includes('2002') && body.includes('2014') && body.includes('2021')
+    ? ok('Operating-school construction years present (2002 / 2014 / 2021)')
+    : fail('Building years', 'missing one of 2002, 2014, 2021');
 
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
