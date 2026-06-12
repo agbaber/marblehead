@@ -9,11 +9,12 @@ baseurl: ""
 # TURNSTILE_SECRET secret on the Pages project). Used by feedback.html.
 turnstile_site_key: "0x4AAAAAADEi6Ymsaf-lEIvW"
 
+# Meeting-digest Worker base URL. Public; referenced by subscribe.html and the
+# inline subscribe form on meetings.html.
+digest_worker_base: "https://marblehead-meeting-digest.agbaber.workers.dev"
+
 # Feature flags. Flip to true once the backing endpoint exists.
-# transcripts_subscribe: shows the "Log in to subscribe" CTA on
-# transcript pages. Disabled until the verification network captures
-# email + a Friday-digest worker is deployed (see the design at
-# docs/superpowers/specs/2026-06-02-meeting-questions-and-subscriptions.md).
+# transcripts_subscribe: shows the Subscribe CTA on transcript pages.
 transcripts_subscribe: true
 
 plugins: []

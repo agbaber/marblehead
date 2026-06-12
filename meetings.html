@@ -19,14 +19,62 @@ description: AI-generated transcripts and summaries of public board and committe
   video on MHTV.
 </p>
 
-<aside class="meetings-cta">
+<aside class="meetings-cta" aria-label="Subscribe to the Friday digest">
   <p class="meetings-cta-lede">
     <strong>Get a Friday email digest.</strong>
-    Pick the boards you care about and get a weekly recap with
-    deep-links into the source video.
+    Pick the boards you care about and get a weekly recap with deep-links
+    into the source video.
   </p>
-  <a class="meetings-cta-btn" href="{{ '/subscribe/' | relative_url }}">Subscribe</a>
+  <form id="meetings-cta-form" class="meetings-cta-form">
+    <label for="meetings-cta-email" class="visually-hidden">Your email</label>
+    <input type="email" name="email" id="meetings-cta-email" required autocomplete="email" placeholder="you@example.com">
+    <div class="cf-turnstile" data-sitekey="{{ site.turnstile_site_key }}"></div>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="meetings-cta-msg" id="meetings-cta-msg" hidden></p>
+  <p class="meetings-cta-fine">
+    Customize boards and topics after you confirm, or
+    <a href="{{ '/subscribe/' | relative_url }}">visit the full subscribe page</a>.
+  </p>
 </aside>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+(function () {
+  const form = document.getElementById('meetings-cta-form');
+  if (!form) return;
+  const msg = document.getElementById('meetings-cta-msg');
+  const WORKER = "{{ site.digest_worker_base }}";
+  const ph = (event, props) => {
+    if (typeof posthog !== 'undefined') posthog.capture(event, props);
+  };
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    msg.hidden = false;
+    msg.textContent = 'Sending…';
+    const email = document.getElementById('meetings-cta-email').value;
+    const tokenInput = form.querySelector('[name="cf-turnstile-response"]');
+    const turnstileToken = tokenInput ? tokenInput.value : '';
+    try {
+      const r = await fetch(`${WORKER}/api/subscribe`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, turnstileToken })
+      });
+      if (!r.ok) {
+        const d = await r.json().catch(() => ({}));
+        msg.textContent = d.error || 'Something went wrong. Try again?';
+        ph('subscribe_submit', { outcome: 'error', status: r.status, error: d.error || null, source: 'meetings' });
+        return;
+      }
+      msg.textContent = 'Check your inbox — a confirmation link is on its way (24h expiry).';
+      ph('subscribe_submit', { outcome: 'success', source: 'meetings' });
+    } catch {
+      msg.textContent = 'Network error. Try again?';
+      ph('subscribe_submit', { outcome: 'network_error', source: 'meetings' });
+    }
+  });
+})();
+</script>
 
 {% assign sorted = site.transcripts | sort: 'date' | reverse %}
 

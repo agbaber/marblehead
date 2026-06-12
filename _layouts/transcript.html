@@ -24,15 +24,15 @@ layout: default
       {% endif %}
     </header>
 
-    {%- comment -%} ─── LOGIN TO SUBSCRIBE CTA ─── {%- endcomment -%}
+    {%- comment -%} ─── SUBSCRIBE CTA ─── {%- endcomment -%}
     {% if site.transcripts_subscribe %}
     <aside class="ms-subscribe" aria-label="Subscribe to meeting summaries">
       <div class="ms-subscribe-copy">
         <p class="ms-subscribe-lead"><strong>Get this in your inbox.</strong></p>
-        <p class="ms-subscribe-body">A Friday digest of meetings that match the boards and topics you care about. Verified residents only.</p>
+        <p class="ms-subscribe-body">A Friday digest of meetings that match the boards and topics you care about.</p>
       </div>
-      <a class="ms-subscribe-btn" href="{{ '/verify.html' | relative_url }}?next=subscribe">
-        Log in to subscribe&nbsp;&rarr;
+      <a class="ms-subscribe-btn" href="{{ '/subscribe/' | relative_url }}">
+        Subscribe&nbsp;&rarr;
       </a>
     </aside>
     {% endif %}
