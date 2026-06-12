@@ -145,6 +145,10 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Summer 2026 HS roof construction referenced')
     : fail('summer 2026 roof', 'missing');
 
+  h2s.some(t => t.toLowerCase().includes('open questions') || t.toLowerCase().includes('questions to ask'))
+    ? ok('Section 9 h2 about open questions')
+    : fail('Section 9 h2', `not found in ${JSON.stringify(h2s)}`);
+
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
