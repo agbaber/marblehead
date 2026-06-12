@@ -20,11 +20,11 @@ TURNSTILE_TEST_BYPASS_TOKEN = "TEST-OK"
 # do NOT declare it as a var here, or `wrangler deploy` will overwrite the
 # secret with the placeholder string and the Worker will 401 on every send.
 
-# Friday 7:00 AM ET == 11:00 UTC (EST) / 12:00 UTC (EDT).
+# Monday 7:00 AM ET == 11:00 UTC (EST) / 12:00 UTC (EDT).
 # Run at 11:00 and 12:00; the scheduled handler chooses one based on the
 # current ET hour, the other becomes a no-op. Keeps DST handling simple.
 [triggers]
-crons = ["0 11 * * 5", "0 12 * * 5"]
+crons = ["0 11 * * 1", "0 12 * * 1"]
 
 [env.staging]
 name = "marblehead-meeting-digest-staging"
