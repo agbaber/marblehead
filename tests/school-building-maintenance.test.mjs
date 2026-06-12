@@ -91,14 +91,14 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
   caveatBanner ? ok('Bar chart caveat banner present') : fail('caveat banner', 'missing');
 
   // Building rows shown in chart
-  const barLabels = await page.$$eval('.sbm-bar-label', els => els.map(e => e.textContent.trim()));
+  const barLabels = await page.$$eval('svg.sbm-bar-chart text', els => els.map(e => e.textContent.trim()));
   ['High School', 'Veterans', 'Village', 'Glover', 'Brown'].every(b => barLabels.some(l => l.includes(b)))
     ? ok('All 5 operating schools appear as chart rows')
     : fail('chart rows', `expected 5 building labels, got ${JSON.stringify(barLabels)}`);
 
-  const tableRows = await page.$$('.sbm-table tbody tr');
+  const tableRows = await page.$$('.deep-dive .sbm-table tbody tr');
   tableRows.length >= 14
-    ? ok(`Itemized table has ${tableRows.length} rows`)
+    ? ok(`Itemized (deep-dive) table has ${tableRows.length} rows`)
     : fail('Itemized table', `expected >= 14 rows, got ${tableRows.length}`);
 
   body.includes('Tennis Courts')
