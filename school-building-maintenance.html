@@ -73,6 +73,52 @@ og_url: https://marbleheaddata.org/school-building-maintenance.html
 
 <p>Brown consolidated students from three former elementary schools: Elbridge Gerry (built 1906), L.H. Coffin (1949 with a 1963 annex), and Malcolm L. Bell (Upper Bell 1970, Lower Bell 1958). Construction of the new building required demolition of both Bell School buildings on the same site in 2020.<sup class="cite" data-href="data/minutes/school_committee/2020-03-24.txt" data-source="Marblehead School Committee minutes, March 2020: 'demolition of the Upper Bell site' and the Lower Bell foundation removal scheduled for blasting; abatement preceded demolition."></sup> Coffin and Gerry went vacant when Brown opened in October 2021.</p>
 
+<svg class="sbm-timeline" viewBox="0 0 820 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two-track timeline. Top track: school construction dates (1906 Gerry through 2021 Brown). Bottom track: preventative-maintenance program events (2018 BCG plan, 2019 $42M override, 2020 Bell demolition, 2021 EBI assessment, 2025 written-status target, 2026 Veterans D-wing flood, FY27 CMMS RFP target).">
+  <!-- Top track: construction -->
+  <text x="10" y="20" font="12px sans-serif" fill="var(--text-muted, var(--text))">Construction</text>
+  <line x1="100" y1="40" x2="800" y2="40" stroke="var(--border)" stroke-width="1"/>
+  <!-- Year markers; x position scaled linearly 1906 (x=100) → 2026 (x=800), 120 years → 700 px (~5.83 px/year) -->
+  <g font="11px sans-serif" fill="var(--text)">
+    <!-- 1906 Gerry -->
+    <circle cx="100" cy="40" r="4" fill="var(--c-navy)"/>
+    <text x="100" y="60" text-anchor="middle">1906 Gerry</text>
+    <!-- 1949 Coffin (x=100 + (1949-1906)*5.83 = 350) -->
+    <circle cx="350" cy="40" r="4" fill="var(--c-navy)"/>
+    <text x="350" y="60" text-anchor="middle">1949 Coffin</text>
+    <!-- 1970 Upper Bell (x=100 + (1970-1906)*5.83 = 473) -->
+    <circle cx="473" cy="40" r="4" fill="var(--c-navy)"/>
+    <text x="473" y="60" text-anchor="middle">1970 Upper Bell</text>
+    <!-- 2002 HS (x=100 + (2002-1906)*5.83 = 660) -->
+    <circle cx="660" cy="40" r="4" fill="var(--c-navy)"/>
+    <text x="660" y="60" text-anchor="middle">2002 HS</text>
+    <!-- 2014 Glover (x=100 + (2014-1906)*5.83 = 730) -->
+    <circle cx="730" cy="40" r="4" fill="var(--c-navy)"/>
+    <text x="730" y="60" text-anchor="middle">2014 Glover</text>
+    <!-- 2021 Brown (x=100 + (2021-1906)*5.83 = 771) -->
+    <circle cx="771" cy="40" r="4" fill="var(--c-navy)"/>
+    <text x="771" y="60" text-anchor="middle">2021 Brown</text>
+  </g>
+  <!-- Bottom track: PM events -->
+  <text x="10" y="110" font="12px sans-serif" fill="var(--text-muted, var(--text))">PM program</text>
+  <line x1="100" y1="130" x2="800" y2="130" stroke="var(--border)" stroke-width="1"/>
+  <g font="11px sans-serif" fill="var(--text)">
+    <!-- 2018 BCG plan (x=100 + (2018-1906)*5.83 = 753) -->
+    <circle cx="753" cy="130" r="4" fill="var(--c-buoy)"/>
+    <text x="745" y="150" text-anchor="middle">2018 plan</text>
+    <!-- 2019 override (x=100 + (2019-1906)*5.83 = 759) -->
+    <circle cx="759" cy="130" r="4" fill="var(--c-buoy)"/>
+    <text x="765" y="166" text-anchor="middle">2019 $42M override</text>
+    <!-- 2020 Bell demolition (x=100 + (2020-1906)*5.83 = 765) -->
+    <circle cx="765" cy="130" r="4" fill="var(--c-buoy)"/>
+    <!-- 2021 EBI compiled (x=771, coincides with Brown opening) -->
+    <circle cx="771" cy="130" r="4" fill="var(--c-buoy)"/>
+    <!-- 2026 Veterans D-wing + FY27 CMMS (x=800) -->
+    <circle cx="800" cy="130" r="4" fill="var(--c-brass)"/>
+    <text x="795" y="120" text-anchor="end">2026 D-wing flood &middot; FY27 CMMS target</text>
+  </g>
+</svg>
+<p class="caption">Construction dates from the 2021 Capital Facilities Plan. PM-program events from minutes and transcripts cited above.<sup class="cite" data-href="data/schools/capital-facilities/capital-facilities-plan.txt" data-source="Marblehead Public Schools Capital Facilities Plan: building-year column."></sup></p>
+
 <h2 id="baseline">The 2021 baseline, and what it didn't cover</h2>
 
 <p>The 2021 EBI assessment is the only comprehensive condition inventory on record. It covers eight buildings: the high school, Veterans Middle School, Village Elementary, and Glover Elementary (the four schools still operating today), plus the four buildings that had just closed or were about to (Coffin, Gerry, Upper Bell, Lower Bell).<sup class="cite" data-href="data/schools/capital-facilities/capital-facilities-plan.txt" data-source="Marblehead Public Schools Capital Facilities Plan, derived from 2021 EBI assessments. Building rows: HS, Veterans, Village, Glover, Coffin, Gerry, Upper Bell, Lower Bell."></sup></p>

@@ -149,6 +149,13 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Section 9 h2 about open questions')
     : fail('Section 9 h2', `not found in ${JSON.stringify(h2s)}`);
 
+  const timeline = await page.$('svg.sbm-timeline');
+  timeline ? ok('Timeline SVG present') : fail('Timeline SVG', 'missing .sbm-timeline');
+
+  body.includes('1906') && body.includes('2014') && body.includes('FY27')
+    ? ok('Timeline endpoint years (1906, 2014, FY27) present')
+    : fail('Timeline years', 'missing one of 1906, 2014, FY27');
+
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
