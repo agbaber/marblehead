@@ -53,17 +53,6 @@ og_url: https://marbleheaddata.org/school-building-maintenance.html
                    border-top: 1px solid var(--divider); line-height: 1.4; }
   .sbm-card-cite a { color: var(--text-muted); }
 
-  /* Stylized Marblehead schools map: rough peninsula outline + 9 markers.
-     Operating schools in navy, former in brass. */
-  .sbm-map { max-width: 560px; margin: 12px auto 6px; display: block; }
-  .sbm-map .sbm-map-coast { fill: color-mix(in srgb, var(--c-teal) 12%, transparent);
-                            stroke: color-mix(in srgb, var(--c-teal) 40%, transparent);
-                            stroke-width: 1.2; }
-  .sbm-map .sbm-map-water { fill: color-mix(in srgb, var(--c-buoy) 6%, transparent); }
-  .sbm-map .sbm-map-op  { fill: var(--c-navy); }
-  .sbm-map .sbm-map-fmr { fill: var(--c-brass); }
-  .sbm-map .sbm-map-label { font: 10px sans-serif; fill: var(--text-muted); }
-  .sbm-map .sbm-map-key { font: 11px sans-serif; fill: var(--text-muted); }
   /* Global `* { padding: 0 }` reset zeroes default list padding; restore
      an indent so bullets/numbers sit inside the reading column rather than
      spilling into the margin. Scope tight so we don't conflict with site
@@ -147,7 +136,7 @@ og_url: https://marbleheaddata.org/school-building-maintenance.html
 <p>The 2021 assessment looked at eight buildings: the high school, Veterans Middle, Village, Glover, plus four older buildings that were closed or about to close (Coffin, Gerry, Upper Bell, Lower Bell).<sup class="cite" data-href="https://resources.finalsite.net/images/v1741690835/marbleheadschoolsorg/apdgujai29xc5kwrlxsu/capital_facilities_plan.pdf" data-source="Marblehead Public Schools Capital Facilities Plan (2021 EBI)"></sup> Brown is missing. It opened the same fall the report was compiled, and assessors seem to have focused on the buildings being closed instead of the new one. Nobody has done a new assessment since.</p>
 
 <div class="sbm-brown-gap">
-  <strong>The biggest elementary school by budget has never been formally inspected.</strong> Brown's FY27 budget is $5,554,252.<sup class="cite" data-href="https://resources.finalsite.net/images/v1770394283/marbleheadschoolsorg/abvvnuezygg1rsgil17k/2026Budgetpacket.pdf" data-source="FY27 Superintendent's Proposed Budget packet (Feb 2026)"></sup>
+  <strong>There is no condition assessment of Brown on record.</strong> The 2021 EBI report doesn't include it (Brown was brand new), and no follow-up assessment has been published since. Brown's FY27 budget is $5,554,252, the largest of the three elementary schools.<sup class="cite" data-href="https://resources.finalsite.net/images/v1770394283/marbleheadschoolsorg/abvvnuezygg1rsgil17k/2026Budgetpacket.pdf" data-source="FY27 Superintendent's Proposed Budget packet (Feb 2026)"></sup>
 </div>
 
 <h2 id="operating-backlog">What 2021 identified at operating schools</h2>
@@ -219,44 +208,6 @@ og_url: https://marbleheaddata.org/school-building-maintenance.html
 <h2 id="former-buildings">The former school buildings carry most of the 2021 dollars</h2>
 
 <p>Most of the 2021 dollars are at buildings that aren't schools anymore. They aren't really "deferred maintenance" at this point. They're decisions about what to do with empty buildings.</p>
-
-<svg class="chart sbm-map" viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized map of Marblehead with school locations. Operating schools (navy markers): Brown Elementary on Baldwin Road, Glover Elementary on Maple Street, Village Elementary on West Shore Drive, Veterans Middle School and Marblehead High School clustered on Pleasant Street. Former school buildings (brass markers): Coffin and Eveleth in the Old Town area, Gerry near Atlantic Avenue, Bell site is now Brown.">
-  <!-- water background -->
-  <rect class="sbm-map-water" x="0" y="0" width="560" height="360"/>
-  <!-- Stylized Marblehead peninsula outline (rough; not cartographically precise) -->
-  <path class="sbm-map-coast" d="M 40 100 Q 90 70 160 80 Q 230 95 280 130 Q 320 165 380 175 Q 430 185 470 220 Q 490 250 470 290 Q 430 320 360 320 Q 300 320 250 305 Q 200 290 165 280 Q 130 270 100 250 Q 70 230 55 195 Q 45 160 40 130 Z"/>
-
-  <!-- Operating schools (navy) -->
-  <g>
-    <circle class="sbm-map-op" cx="155" cy="155" r="6"/>
-    <text class="sbm-map-label" x="155" y="146" text-anchor="middle">Brown</text>
-    <circle class="sbm-map-op" cx="220" cy="145" r="6"/>
-    <text class="sbm-map-label" x="220" y="136" text-anchor="middle">Glover</text>
-    <circle class="sbm-map-op" cx="140" cy="225" r="6"/>
-    <text class="sbm-map-label" x="140" y="245" text-anchor="middle">Village</text>
-    <circle class="sbm-map-op" cx="310" cy="225" r="6"/>
-    <text class="sbm-map-label" x="310" y="245" text-anchor="middle">Veterans</text>
-    <circle class="sbm-map-op" cx="345" cy="215" r="6"/>
-    <text class="sbm-map-label" x="365" y="208" text-anchor="start">High School</text>
-  </g>
-  <!-- Former school buildings (brass) -->
-  <g>
-    <circle class="sbm-map-fmr" cx="200" cy="190" r="5"/>
-    <text class="sbm-map-label" x="190" y="183" text-anchor="end">Coffin</text>
-    <circle class="sbm-map-fmr" cx="245" cy="180" r="5"/>
-    <text class="sbm-map-label" x="255" y="173" text-anchor="start">Eveleth</text>
-    <circle class="sbm-map-fmr" cx="280" cy="265" r="5"/>
-    <text class="sbm-map-label" x="280" y="285" text-anchor="middle">Gerry</text>
-  </g>
-  <!-- Key -->
-  <g transform="translate(40, 330)">
-    <circle class="sbm-map-op" cx="6" cy="-3" r="5"/>
-    <text class="sbm-map-key" x="18" y="1">Operating</text>
-    <circle class="sbm-map-fmr" cx="106" cy="-3" r="5"/>
-    <text class="sbm-map-key" x="118" y="1">Closed or demolished</text>
-  </g>
-</svg>
-<p class="caption">Approximate locations; the outline is stylized, not surveyed. Bell School stood on the Brown site before being demolished in 2020.</p>
 
 <div class="sbm-cards">
   <article class="sbm-card">
