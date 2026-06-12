@@ -48,7 +48,7 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
 
   // Section 1: tracking gap
   const h2s = await page.$$eval('h2', els => els.map(e => e.textContent.trim()));
-  h2s.some(t => t.toLowerCase().includes("can't tell you"))
+  h2s.some(t => t.toLowerCase().includes("doesn't know"))
     ? ok('Section 1 h2 leads with claim about tracking gap')
     : fail('Section 1 h2', `not found in ${JSON.stringify(h2s)}`);
 
