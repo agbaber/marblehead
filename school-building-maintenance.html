@@ -23,21 +23,47 @@ og_url: https://marbleheaddata.org/school-building-maintenance.html
     border-radius: 4px;
   }
   .sbm-bar-chart { max-width: 720px; }
-  .sbm-timeline { max-width: 820px; }
   /* Series colors flow through `color:` so currentColor cascades to fill */
   .sbm-bar-chart .sbm-bar-row--hs      { color: var(--c-navy); }
   .sbm-bar-chart .sbm-bar-row--vets    { color: var(--c-buoy); }
   .sbm-bar-chart .sbm-bar-row--village { color: var(--c-teal); }
   .sbm-bar-chart .sbm-bar-row--glover  { color: var(--c-brass); }
-  .sbm-timeline .sbm-tl-construction   { color: var(--c-navy); }
-  .sbm-timeline .sbm-tl-pm-event       { color: var(--c-buoy); }
-  .sbm-timeline .sbm-tl-pm-event--late { color: var(--c-brass); }
   .sbm-italic { font-style: italic; }
-  /* Track-axis baseline in the timeline picks up the standard chart grid color */
-  .sbm-timeline .sbm-tl-axis { stroke: var(--chart-grid-major); stroke-width: 1; fill: none; }
-  /* Leader line from a dot up/down to its label, kept thin and muted */
-  .sbm-timeline .sbm-tl-leader { stroke: var(--chart-grid-minor); stroke-width: 1; fill: none; }
-  .sbm-timeline .sbm-tl-track-label { fill: var(--chart-axis); font-weight: 600; }
+
+  /* Former-buildings cards: one per closed-or-demolished school site. Grid
+     collapses to single column on mobile. */
+  .sbm-cards { display: grid; gap: 16px; margin: 16px 0 20px;
+               grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .sbm-card { background: var(--surface); border: 1px solid var(--border);
+              border-left: 4px solid var(--c-buoy); border-radius: 6px;
+              padding: 14px 16px 12px; display: flex; flex-direction: column; }
+  .sbm-card--demolished { border-left-color: var(--c-brass); opacity: 0.92; }
+  .sbm-card h3 { margin: 0 0 4px; font-size: 1.05rem; font-weight: 700;
+                 color: var(--text); line-height: 1.2; }
+  .sbm-card-meta { font-size: 0.78rem; color: var(--text-muted);
+                   margin: 0 0 10px; line-height: 1.45; }
+  .sbm-card-meta strong { color: var(--text); }
+  .sbm-card p { font-size: 0.875rem; line-height: 1.5; color: var(--text-muted);
+                margin: 0 0 8px; }
+  .sbm-card ul { font-size: 0.875rem; line-height: 1.45; color: var(--text-muted);
+                 padding-left: 18px; list-style: disc; margin: 0 0 8px; }
+  .sbm-card ul li { margin-bottom: 3px; }
+  .sbm-card-cite { font-size: 0.72rem; color: var(--text-subtle);
+                   margin-top: auto; padding-top: 8px;
+                   border-top: 1px solid var(--divider); line-height: 1.4; }
+  .sbm-card-cite a { color: var(--text-muted); }
+
+  /* Stylized Marblehead schools map: rough peninsula outline + 9 markers.
+     Operating schools in navy, former in brass. */
+  .sbm-map { max-width: 560px; margin: 12px auto 6px; display: block; }
+  .sbm-map .sbm-map-coast { fill: color-mix(in srgb, var(--c-teal) 12%, transparent);
+                            stroke: color-mix(in srgb, var(--c-teal) 40%, transparent);
+                            stroke-width: 1.2; }
+  .sbm-map .sbm-map-water { fill: color-mix(in srgb, var(--c-buoy) 6%, transparent); }
+  .sbm-map .sbm-map-op  { fill: var(--c-navy); }
+  .sbm-map .sbm-map-fmr { fill: var(--c-brass); }
+  .sbm-map .sbm-map-label { font: 10px sans-serif; fill: var(--text-muted); }
+  .sbm-map .sbm-map-key { font: 11px sans-serif; fill: var(--text-muted); }
   /* Global `* { padding: 0 }` reset zeroes default list padding; restore
      an indent so bullets/numbers sit inside the reading column rather than
      spilling into the margin. Scope tight so we don't conflict with site
@@ -194,32 +220,83 @@ og_url: https://marbleheaddata.org/school-building-maintenance.html
 
 <p>Most of the 2021 dollars are at buildings that aren't schools anymore. They aren't really "deferred maintenance" at this point. They're decisions about what to do with empty buildings.</p>
 
-<table class="sbm-table">
-  <thead><tr><th>Former school</th><th>Built</th><th>Out of school use</th><th>2021 dollar items</th></tr></thead>
-  <tbody>
-    <tr><td>Coffin School</td><td>1949 (annex 1963)</td><td>October 2021 (Brown opened)</td><td>roof $750K, windows $600K, plumbing $250K, electrical $200K, HVAC $150K</td></tr>
-    <tr><td>Elbridge Gerry School</td><td>1906</td><td>January 2018 (steam pipe leak)</td><td>roof $750K, exterior brick $250K, boiler $175K, HVAC $150K</td></tr>
-    <tr><td>Upper Bell School</td><td>1970</td><td>2020 (demolished for Brown)</td><td>roof $1M, HVAC $200K, boiler $175K &mdash; building no longer exists</td></tr>
-    <tr><td>Lower Bell School</td><td>1958</td><td>2020 (demolished for Brown)</td><td>plumbing $200K, HVAC $100K, boiler $100K &mdash; building no longer exists</td></tr>
-  </tbody>
-</table>
-<p class="caption">Itemized in the 2021 EBI plan.<sup class="cite" data-href="data/schools/capital-facilities/capital-facilities-plan.txt" data-source="Marblehead Public Schools Capital Facilities Plan, Coffin/Gerry/Upper Bell/Lower Bell rows."></sup></p>
+<svg class="chart sbm-map" viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized map of Marblehead with school locations. Operating schools (navy markers): Brown Elementary on Baldwin Road, Glover Elementary on Maple Street, Village Elementary on West Shore Drive, Veterans Middle School and Marblehead High School clustered on Pleasant Street. Former school buildings (brass markers): Coffin and Eveleth in the Old Town area, Gerry near Atlantic Avenue, Bell site is now Brown.">
+  <!-- water background -->
+  <rect class="sbm-map-water" x="0" y="0" width="560" height="360"/>
+  <!-- Stylized Marblehead peninsula outline (rough; not cartographically precise) -->
+  <path class="sbm-map-coast" d="M 40 100 Q 90 70 160 80 Q 230 95 280 130 Q 320 165 380 175 Q 430 185 470 220 Q 490 250 470 290 Q 430 320 360 320 Q 300 320 250 305 Q 200 290 165 280 Q 130 270 100 250 Q 70 230 55 195 Q 45 160 40 130 Z"/>
 
-<p><strong>Coffin.</strong> Vacant since Brown opened in October 2021. The Select Board took over from the School Committee and is figuring out what to do with the building. The Town calls this process "Adaptive Reuse," which is just a formal way of saying "deciding what an old building should be used for next." Five town departments pitched ideas last fall:</p>
+  <!-- Operating schools (navy) -->
+  <g>
+    <circle class="sbm-map-op" cx="155" cy="155" r="6"/>
+    <text class="sbm-map-label" x="155" y="146" text-anchor="middle">Brown</text>
+    <circle class="sbm-map-op" cx="220" cy="145" r="6"/>
+    <text class="sbm-map-label" x="220" y="136" text-anchor="middle">Glover</text>
+    <circle class="sbm-map-op" cx="140" cy="225" r="6"/>
+    <text class="sbm-map-label" x="140" y="245" text-anchor="middle">Village</text>
+    <circle class="sbm-map-op" cx="310" cy="225" r="6"/>
+    <text class="sbm-map-label" x="310" y="245" text-anchor="middle">Veterans</text>
+    <circle class="sbm-map-op" cx="345" cy="215" r="6"/>
+    <text class="sbm-map-label" x="365" y="208" text-anchor="start">High School</text>
+  </g>
+  <!-- Former school buildings (brass) -->
+  <g>
+    <circle class="sbm-map-fmr" cx="200" cy="190" r="5"/>
+    <text class="sbm-map-label" x="190" y="183" text-anchor="end">Coffin</text>
+    <circle class="sbm-map-fmr" cx="245" cy="180" r="5"/>
+    <text class="sbm-map-label" x="255" y="173" text-anchor="start">Eveleth</text>
+    <circle class="sbm-map-fmr" cx="280" cy="265" r="5"/>
+    <text class="sbm-map-label" x="280" y="285" text-anchor="middle">Gerry</text>
+  </g>
+  <!-- Key -->
+  <g transform="translate(40, 330)">
+    <circle class="sbm-map-op" cx="6" cy="-3" r="5"/>
+    <text class="sbm-map-key" x="18" y="1">Operating</text>
+    <circle class="sbm-map-fmr" cx="106" cy="-3" r="5"/>
+    <text class="sbm-map-key" x="118" y="1">Closed or demolished</text>
+  </g>
+</svg>
+<p class="caption">Approximate locations; the outline is stylized, not surveyed. Bell School stood on the Brown site before being demolished in 2020.</p>
 
-<ul>
-  <li>Cemetery Department &mdash; burial space</li>
-  <li>Light Department &mdash; battery storage</li>
-  <li>Recreation &amp; Parks &mdash; dog park</li>
-  <li>Housing Authority &mdash; partnership</li>
-  <li>Community Development &mdash; boat storage</li>
-</ul>
+<div class="sbm-cards">
+  <article class="sbm-card">
+    <h3>Coffin</h3>
+    <p class="sbm-card-meta"><strong>Built</strong> 1949 (annex 1963) &middot; <strong>Closed</strong> Oct 2021<br><strong>2021 items:</strong> roof $750K, windows $600K, plumbing $250K, electrical $200K, HVAC $150K</p>
+    <p>Now in "Adaptive Reuse" — basically, deciding what an old building should become next. Five town departments pitched ideas last fall:</p>
+    <ul>
+      <li>Cemetery Department &mdash; burial space</li>
+      <li>Light Department &mdash; battery storage</li>
+      <li>Recreation &amp; Parks &mdash; dog park</li>
+      <li>Housing Authority &mdash; partnership</li>
+      <li>Community Development &mdash; boat storage</li>
+    </ul>
+    <p>The most ambitious outside proposal is from Harborlight Homes: 40 units of affordable housing, $28&ndash;32 million, keeping the original building and tearing down the annex. Community meeting #3 was May 20, 2026.</p>
+    <p class="sbm-card-cite"><a href="https://marbleheadma.gov/coffin-school-adaptive-reuse/">Town Coffin Adaptive Reuse page</a><sup class="cite" data-href="data/schools/capital-facilities/capital-facilities-plan.txt" data-source="Marblehead Public Schools Capital Facilities Plan, Coffin School row: roof $750K, windows $600K, plumbing $250K, electrical $200K, HVAC $150K."></sup></p>
+  </article>
 
-<p>Three outside groups also responded. The most ambitious is from Harborlight Homes: 40 units of affordable housing, $28&ndash;32 million, keeping the original 1949 building and tearing down the 1963 annex. Community meeting #3 was May 20, 2026.<sup class="cite" data-href="https://marbleheadma.gov/coffin-school-adaptive-reuse/" data-source="Town of Marblehead, Coffin School Adaptive Reuse page (marbleheadma.gov/coffin-school-adaptive-reuse), retrieved June 2026. Lists EOI/RFI timeline, all five EOI responses, three RFI responses including Harborlight Homes 40-unit affordable housing proposal."></sup></p>
+  <article class="sbm-card">
+    <h3>Eveleth</h3>
+    <p class="sbm-card-meta"><strong>Built</strong> early 20th c. &middot; <strong>Closed</strong> 2021<br><strong>Current:</strong> boiler condemned Nov 2025</p>
+    <p>Closed before BCG, then briefly reopened in 2019&ndash;2020 as swing space for kindergarteners while Bell was being closed down.<sup class="cite" data-href="data/minutes/school_committee/2020-04-02.cleaned.txt" data-source="Marblehead School Committee minutes, spring 2020: 'the Bell will be closed and we will begin prepping the Village School to accept the 3rd graders and the Eveleth School for Kindergarteners.' Donna Zaeske named principal of 'Eveleth and Village 3rd Grade.'"></sup> Went dark again when Brown opened.</p>
+    <p>The Facilities Subcommittee has been talking to Park &amp; Recreation about reusing the building for early education and after-school programs.<sup class="cite" data-href="data/schools/sc-meetings-fy26/facilities-subcommittee-minutes-2-13-2026.txt" data-source="Marblehead Public Schools Facilities Subcommittee minutes, 2/13/2026: Eveleth Site Discussion with Park and Recreation; joint survey and possible joint feasibility study under consideration."></sup></p>
+    <p class="sbm-card-cite">Boiler condemned per facilities subcommittee, Nov 5 2025.<sup class="cite" data-href="data/schools/sc-meetings-fy26/facilities-subcommittee-minutes-11-05-2025.txt" data-source="Marblehead Public Schools Facilities Subcommittee minutes, 11/5/2025: Eveleth boiler condemned and shut down."></sup></p>
+  </article>
 
-<p><strong>Eveleth.</strong> Has a stranger history. The district had stopped using it as a regular school, then reopened it briefly in 2019&ndash;2020 as swing space for kindergarteners while Bell was being closed down. When Brown opened in October 2021, Eveleth went dark again.<sup class="cite" data-href="data/minutes/school_committee/2020-04-02.cleaned.txt" data-source="Marblehead School Committee minutes, spring 2020: 'the Bell will be closed and we will begin prepping the Village School to accept the 3rd graders and the Eveleth School for Kindergarteners.' Donna Zaeske named principal of 'Eveleth and Village 3rd Grade.'"></sup> Its boiler was condemned in November 2025.<sup class="cite" data-href="data/schools/sc-meetings-fy26/facilities-subcommittee-minutes-11-05-2025.txt" data-source="Marblehead Public Schools Facilities Subcommittee minutes, 11/5/2025: Eveleth boiler condemned and shut down."></sup> The Facilities Subcommittee has been talking to Park &amp; Recreation about reusing the building for early education and after-school programs.<sup class="cite" data-href="data/schools/sc-meetings-fy26/facilities-subcommittee-minutes-2-13-2026.txt" data-source="Marblehead Public Schools Facilities Subcommittee minutes, 2/13/2026: Eveleth Site Discussion with Park and Recreation; joint survey and possible joint feasibility study under consideration."></sup></p>
+  <article class="sbm-card">
+    <h3>Gerry</h3>
+    <p class="sbm-card-meta"><strong>Built</strong> 1906 &middot; <strong>Closed</strong> Jan 2018<br><strong>2021 items:</strong> roof $750K, exterior brick $250K, boiler $175K, HVAC $150K</p>
+    <p>The oldest of the elementaries. Students were moved out in January 2018 after a steam pipe leak, then consolidated into Brown when it opened.</p>
+    <p>Future use is undetermined as of the most recent meeting minutes on record.</p>
+    <p class="sbm-card-cite"><sup class="cite" data-href="data/schools/capital-facilities/capital-facilities-plan.txt" data-source="Marblehead Public Schools Capital Facilities Plan, Gerry School row: roof $750K, brick $250K, boiler $175K, HVAC $150K."></sup></p>
+  </article>
 
-<p><strong>Bell.</strong> The 2025&ndash;26 minutes reference a "Bell School Evaluation Process," but the Bell buildings were torn down in 2020. It's not clear what's being evaluated. The notes mention services for 18&ndash;22-year-old students, so this may be a program being planned for one of the other vacant buildings.<sup class="cite" data-href="data/schools/sc-meetings-fy26/minutes-11-6-2025.txt" data-source="Marblehead School Committee minutes, 11/6/2025: 'Bell School Evaluation Process' — needs assessment, business plan, services for 18-22 year old students."></sup></p>
+  <article class="sbm-card sbm-card--demolished">
+    <h3>Bell (Upper &amp; Lower)</h3>
+    <p class="sbm-card-meta"><strong>Built</strong> 1970 / 1958 &middot; <strong>Demolished</strong> 2020<br><strong>Pre-demolition 2021 items:</strong> roof $1M, HVAC $200K, boiler $175K (no longer applicable)</p>
+    <p>Torn down to make room for Brown. The buildings no longer exist.</p>
+    <p>The 2025&ndash;26 minutes still reference a "Bell School Evaluation Process," but it's not clear what's being evaluated. The notes mention services for 18&ndash;22-year-old students, so the process may be planning a program for one of the other vacant buildings.<sup class="cite" data-href="data/schools/sc-meetings-fy26/minutes-11-6-2025.txt" data-source="Marblehead School Committee minutes, 11/6/2025: 'Bell School Evaluation Process' — needs assessment, business plan, services for 18-22 year old students."></sup></p>
+  </article>
+</div>
 
 <h2 id="when-it-bites">What deferred maintenance looks like when it bites</h2>
 
