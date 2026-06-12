@@ -105,6 +105,18 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Tennis Courts (HS item) appears in table')
     : fail('Tennis Courts', 'missing');
 
+  h2s.some(t => t.toLowerCase().includes('former school buildings'))
+    ? ok('Section 5 h2 about former school buildings')
+    : fail('Section 5 h2', `not found in ${JSON.stringify(h2s)}`);
+
+  body.includes('Harborlight Homes')
+    ? ok('Coffin Adaptive Reuse / Harborlight reference present')
+    : fail('Harborlight Homes', 'missing');
+
+  body.includes('Eveleth')
+    ? ok('Eveleth building referenced')
+    : fail('Eveleth', 'missing');
+
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
