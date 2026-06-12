@@ -125,6 +125,18 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Veterans D-wing contractor-error detail present')
     : fail('Veterans D-wing', 'missing');
 
+  h2s.some(t => t.toLowerCase().includes('paid for') || t.toLowerCase().includes('how it gets paid'))
+    ? ok('Section 7 h2 about funding')
+    : fail('Section 7 h2', `not found in ${JSON.stringify(h2s)}`);
+
+  body.includes('$500K') || body.includes('$500,000')
+    ? ok('$500K/yr building capital fund (Tier 3) referenced')
+    : fail('building capital fund', 'missing');
+
+  body.includes('1.0 maintenance') || body.includes('maintenance position')
+    ? ok('FY27 maintenance-position cut referenced')
+    : fail('maintenance cut', 'missing');
+
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
