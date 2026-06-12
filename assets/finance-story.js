@@ -25,7 +25,12 @@
   chartBuilders.general_fund = (Plot, data, host) => {
     return Plot.plot({
       marginLeft: 160,
-      x: { tickFormat: (d) => '$' + (d / 1e6).toFixed(0) + 'M', label: null },
+      marginRight: 64,
+      x: {
+        tickFormat: (d) => '$' + (d / 1e6).toFixed(0) + 'M',
+        label: null,
+        domain: [0, 55e6]
+      },
       y: { label: null },
       marks: [
         Plot.barX(data, {
