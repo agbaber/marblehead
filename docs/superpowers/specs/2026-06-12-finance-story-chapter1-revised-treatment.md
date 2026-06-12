@@ -2,8 +2,17 @@
 
 **Date:** 2026-06-12
 **Owner:** Andrew Baber
-**Status:** Draft (awaiting user review)
+**Status:** Approved 2026-06-12. Refactor plan: `docs/superpowers/plans/2026-06-12-finance-story-chapter1-refactor.md`.
 **Supersedes:** `2026-06-11-finance-story-design.md` for Chapter 1's treatment; the conceptual arc and chapter list are unchanged.
+
+## Locked decisions (2026-06-12)
+
+1. **Real charts** for all 4 sections, sourced from existing data where available; §4 (grant capture) data lift accepted as part of scope.
+2. **Hero diagram: scroll-by**, not pinned. Buckets reappear in §5 where the "they don't mix" argument needs them.
+3. **Top sticky bar: copy m101** (Chapter X of N + percentage + Chapters button).
+4. **Syllabus rail: deferred** until Chapter 3 lands.
+5. **Path A: refactor in place** on `finance-story-ch1-impl`.
+6. **Adopt Observable Plot** lazy-loaded on finance-story routes. Hand-roll SVG for the §5 blocked-arrows custom viz.
 
 ## Why revise
 
