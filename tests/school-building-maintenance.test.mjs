@@ -83,6 +83,19 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
   const brownGap = await page.$('.sbm-brown-gap');
   brownGap ? ok('Brown-gap callout present (.sbm-brown-gap)') : fail('Brown-gap callout', 'missing');
 
+  // Section 4: backlog chart
+  const barChart = await page.$('svg.sbm-bar-chart');
+  barChart ? ok('Bar chart SVG present') : fail('Bar chart SVG', 'missing .sbm-bar-chart');
+
+  const caveatBanner = await page.$('.sbm-caveat-banner');
+  caveatBanner ? ok('Bar chart caveat banner present') : fail('caveat banner', 'missing');
+
+  // Building rows shown in chart
+  const barLabels = await page.$$eval('.sbm-bar-label', els => els.map(e => e.textContent.trim()));
+  ['High School', 'Veterans', 'Village', 'Glover', 'Brown'].every(b => barLabels.some(l => l.includes(b)))
+    ? ok('All 5 operating schools appear as chart rows')
+    : fail('chart rows', `expected 5 building labels, got ${JSON.stringify(barLabels)}`);
+
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
