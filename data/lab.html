@@ -1,0 +1,229 @@
+---
+layout: page
+title: "Data Lab"
+permalink: /data/lab/
+og_title: "Marblehead Data Lab — query the data with SQL"
+og_description: "Every Marblehead and statewide fiscal dataset behind this site, queryable from your browser with SQL. No login. The full database is downloadable."
+og_type: website
+og_url: https://marbleheaddata.org/data/lab/
+---
+<style>
+  .lab-intro p { color: var(--text-muted); }
+  .lab-intro code { background: var(--surface-alt, var(--surface)); padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+
+  .lab-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 18px 0 24px;
+  }
+  @media (min-width: 900px) {
+    .lab-grid { grid-template-columns: 260px 1fr; }
+  }
+
+  .lab-tables {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    align-self: start;
+  }
+  .lab-tables h2 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 10px;
+  }
+  .lab-tables ul { list-style: none; padding: 0; margin: 0; }
+  .lab-tables li { margin: 0 0 10px; }
+  .lab-tables button.lab-table-pick {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    padding: 4px 0;
+    color: var(--text);
+    cursor: pointer;
+    font: inherit;
+  }
+  .lab-tables button.lab-table-pick code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--c-teal);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .lab-tables .lab-table-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin: 2px 0 0;
+  }
+  .lab-tables button.lab-table-pick:hover code { text-decoration: underline; }
+
+  .lab-main { min-width: 0; }
+
+  details.lab-examples { margin: 0 0 14px; }
+  details.lab-examples summary {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    padding: 6px 0;
+  }
+  details.lab-examples ol { margin: 8px 0 0; padding-left: 22px; }
+  details.lab-examples li { margin: 0 0 8px; }
+  details.lab-examples button.lab-example {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    text-align: left;
+    color: var(--c-teal);
+    cursor: pointer;
+    font: inherit;
+    text-decoration: underline;
+  }
+  details.lab-examples .lab-example-note {
+    display: block;
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  #lab-sql {
+    width: 100%;
+    min-height: 130px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    color: var(--text);
+    resize: vertical;
+    box-sizing: border-box;
+  }
+  #lab-sql:focus { outline: 2px solid var(--c-teal); outline-offset: -1px; }
+
+  .lab-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  #lab-run {
+    background: var(--c-teal);
+    color: white;
+    border: 0;
+    padding: 9px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+  }
+  #lab-run:hover { filter: brightness(1.05); }
+  #lab-run:disabled { opacity: 0.5; cursor: wait; }
+  #lab-export {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    font-size: 13px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+  }
+  #lab-export:hover { border-color: var(--c-teal); }
+  #lab-export:disabled { opacity: 0.4; cursor: not-allowed; }
+  #lab-status { font-size: 12px; color: var(--text-muted); }
+  #lab-status.lab-error { color: #c0392b; }
+
+  #lab-results {
+    margin: 14px 0 0;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+  }
+  #lab-results table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+  }
+  #lab-results thead th {
+    text-align: left;
+    background: var(--surface-alt, var(--surface));
+    border-bottom: 1px solid var(--border);
+    padding: 8px 12px;
+    position: sticky;
+    top: 0;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  #lab-results td {
+    padding: 6px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    max-width: 480px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #lab-results tbody tr:hover { background: var(--surface-alt, var(--surface)); }
+  #lab-results .lab-num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .lab-empty { padding: 18px; color: var(--text-muted); font-size: 13px; }
+
+  .lab-download {
+    margin: 20px 0 0;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+  .lab-download h2 { margin: 0 0 6px; font-size: 16px; }
+  .lab-download p { margin: 0; font-size: 13px; color: var(--text-muted); }
+</style>
+
+<div class="hero">
+  <h1>Data Lab</h1>
+</div>
+
+<div class="lab-intro">
+  <p>Every dataset behind marbleheaddata.org &ndash; town financials, statewide DOR records, the meeting-minutes catalog &ndash; in one SQLite database, queryable from your browser. No login, no signup, no rate limit. Results stay in your browser.</p>
+  <p>Type SQL into the box below and click <strong>Run</strong>. Click a table on the left to drop a starter <code>SELECT</code> into the editor. The full database is downloadable below for use in Python, R, DB Browser, or anywhere else SQLite is supported.</p>
+</div>
+
+<div class="lab-grid">
+  <aside class="lab-tables" aria-label="Available tables">
+    <h2>Tables</h2>
+    <ul id="lab-table-list"><li>Loading&hellip;</li></ul>
+  </aside>
+
+  <main class="lab-main">
+    <details class="lab-examples">
+      <summary>Example queries</summary>
+      <ol id="lab-example-list"></ol>
+    </details>
+
+    <label for="lab-sql" class="visually-hidden">SQL</label>
+    <textarea id="lab-sql" spellcheck="false" autocomplete="off" autocapitalize="off">SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;</textarea>
+
+    <div class="lab-actions">
+      <button id="lab-run" type="button" disabled>Loading database&hellip;</button>
+      <button id="lab-export" type="button" disabled>Export results as CSV</button>
+      <span id="lab-status" aria-live="polite"></span>
+    </div>
+
+    <div id="lab-results"><div class="lab-empty">Results will appear here.</div></div>
+  </main>
+</div>
+
+<section class="lab-download">
+  <h2>Download the database</h2>
+  <p><a href="{{ '/assets/data/marbleheaddata.sqlite' | relative_url }}" download>marbleheaddata.sqlite</a> &ndash; ~1.4&nbsp;MB. Open with <a href="https://sqlitebrowser.org/" rel="noopener">DB Browser for SQLite</a>, the <code>sqlite3</code> CLI, Python's <code>sqlite3</code> module, R's <code>DBI</code>, or anything else that reads SQLite. Every table has a row in <code>_meta</code> with its source citation.</p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-wasm.js"></script>
+<script src="{{ '/assets/data-lab.js' | relative_url }}"></script>
