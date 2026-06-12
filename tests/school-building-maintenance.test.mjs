@@ -39,9 +39,9 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     : fail('key stats count', `expected 4, got ${keyStatLabels.length}`);
 
   const keyStatValues = await page.$$eval('.key-stats .key-stat-value', els => els.map(e => e.textContent.trim()));
-  keyStatValues.includes('$42M')
-    ? ok('$42M key stat present')
-    : fail('$42M key stat', 'missing');
+  keyStatValues.includes('$55M')
+    ? ok('$55M key stat present')
+    : fail('$55M key stat', 'missing');
   keyStatValues.includes('FY27')
     ? ok('FY27 key stat present')
     : fail('FY27 key stat', 'missing');
