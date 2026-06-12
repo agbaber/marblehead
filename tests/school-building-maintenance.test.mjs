@@ -75,6 +75,14 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Brown opening date referenced')
     : fail('Brown opening date', 'missing');
 
+  // Section 3: 2021 baseline scope
+  h2s.some(t => t.toLowerCase().includes('2021 baseline'))
+    ? ok('Section 3 h2 about the 2021 baseline')
+    : fail('Section 3 h2', `not found in ${JSON.stringify(h2s)}`);
+
+  const brownGap = await page.$('.sbm-brown-gap');
+  brownGap ? ok('Brown-gap callout present (.sbm-brown-gap)') : fail('Brown-gap callout', 'missing');
+
   await browser.close();
   console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
