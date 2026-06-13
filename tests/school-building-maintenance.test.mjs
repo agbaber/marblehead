@@ -51,9 +51,9 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
   h2s.some(t => t.toLowerCase().includes("what we know"))
     ? ok('Section "Here\'s what we know" present')
     : fail('Know section', `not found in ${JSON.stringify(h2s)}`);
-  h2s.some(t => t.toLowerCase().includes("what we don't know") || t.toLowerCase().includes("what we dont know"))
-    ? ok('Section "Here\'s what we don\'t know" present')
-    : fail('Don\'t-know section', `not found in ${JSON.stringify(h2s)}`);
+  h2s.some(t => t.toLowerCase().includes("open questions") || t.toLowerCase().includes("what we don't know"))
+    ? ok('Open-questions section present')
+    : fail('Open-questions section', `not found in ${JSON.stringify(h2s)}`);
   h2s.some(t => t.toLowerCase().includes("find out"))
     ? ok('Section "Here\'s how we\'ll find out" present')
     : fail('Find-out section', `not found in ${JSON.stringify(h2s)}`);
