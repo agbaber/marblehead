@@ -258,4 +258,53 @@ describe('runScheduled', () => {
     const log = await env.DB.prepare('SELECT count(*) AS n FROM delivery_log').first();
     expect(log.n).toBe(0);
   });
+
+  it('skips subscribers whose last_sent_at is within the idempotency window', async () => {
+    const row = await confirmedSubscriber('recent@example.com', { boards: ['select-board'], topics: [] });
+    // Mark as just-sent (1 hour ago) — well inside the 5-day window. The
+    // eligible-subscriber query should filter this row out before the
+    // handler ever reaches the GitHub transcript fetch.
+    const oneHourAgoMs = Date.now() - 60 * 60 * 1000;
+    await env.DB.prepare('UPDATE subscriber SET last_sent_at = ? WHERE id = ?').bind(oneHourAgoMs, row.id).run();
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.ran).toBe(true);
+    expect(out.sent).toBe(0);
+    expect(out.transcripts).toBe(0);
+    const log = await env.DB.prepare('SELECT count(*) AS n FROM delivery_log').first();
+    expect(log.n).toBe(0);
+  });
+
+  it('sends to subscribers whose last_sent_at is older than the idempotency window', async () => {
+    const row = await confirmedSubscriber('stale@example.com', { boards: ['select-board'], topics: [] });
+    // Mark as sent 6 days ago — outside the 5-day window.
+    const sixDaysAgoMs = Date.now() - 6 * 24 * 60 * 60 * 1000;
+    await env.DB.prepare('UPDATE subscriber SET last_sent_at = ? WHERE id = ?').bind(sixDaysAgoMs, row.id).run();
+    // Mock a matching transcript with valid frontmatter so the matcher sees it.
+    const fakeTranscriptMd = `---
+slug: select-board-${new Date().toISOString().slice(0, 10)}
+board: select-board
+board_display: "Select Board"
+date: ${new Date().toISOString().slice(0, 10)}
+title: "Select Board"
+vimeo_url: "https://vimeo.com/0"
+summary_card:
+  headline: "Test headline"
+  summary: "Test summary"
+topic_segments:
+---
+`;
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([
+        { type: 'file', name: `select-board-${new Date().toISOString().slice(0, 10)}.md`, download_url: 'https://example.com/sb.md' }
+      ]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/sb.md', method: 'GET' })
+      .reply(200, fakeTranscriptMd);
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.ran).toBe(true);
+    expect(out.sent).toBe(1);
+    const log = await env.DB.prepare('SELECT count(*) AS n FROM delivery_log').first();
+    expect(log.n).toBe(1);
+  });
 });
