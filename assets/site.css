@@ -4269,6 +4269,17 @@ body.subscribe-page .subscribe-form button { background: var(--c-navy); color: v
 body.subscribe-page .subscribe-msg { color: var(--c-text-mid); font-size: 0.9rem; }
 body.subscribe-page .subscribe-default { color: var(--c-text-mid); font-size: 0.9rem; }
 
+/* Inline subscribe CTA on /meetings/ */
+body.transcripts-page .meetings-cta { background: var(--c-fog); border: 1px solid var(--c-border); border-radius: 6px; padding: 1.25rem 1.5rem; margin: 1.5rem 0 2rem; }
+body.transcripts-page .meetings-cta-lede { margin: 0 0 0.85rem; }
+body.transcripts-page .meetings-cta-form { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin: 0; }
+body.transcripts-page .meetings-cta-form input[type="email"] { flex: 1 1 240px; min-width: 0; padding: 0.5rem 0.75rem; font: inherit; border: 1px solid var(--c-border); border-radius: 4px; }
+body.transcripts-page .meetings-cta-form button { background: var(--c-navy); color: var(--c-fog); border: 0; padding: 0.55rem 1.1rem; border-radius: 4px; cursor: pointer; font: inherit; font-weight: 600; }
+body.transcripts-page .meetings-cta-form .cf-turnstile { flex: 0 0 auto; }
+body.transcripts-page .meetings-cta-msg { color: var(--c-text-mid); font-size: 0.9rem; margin: 0.6rem 0 0; }
+body.transcripts-page .meetings-cta-fine { color: var(--c-text-mid); font-size: 0.85rem; margin: 0.7rem 0 0; }
+body.transcripts-page .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
 /* Preferences page */
 body.me-subscription-page .ms-pref fieldset { border: 1px solid var(--c-border); padding: 1rem; margin: 1rem 0; border-radius: 6px; }
 body.me-subscription-page .ms-pref legend { padding: 0 0.4rem; font-weight: 600; }
