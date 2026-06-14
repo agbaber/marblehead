@@ -21,9 +21,55 @@
     --bg: #f4f6f8;
     --border: #d9dde2;
     --divider: #ecedf1;
+    --subbucket-bg: #f8f4ea;
+    --subbucket-border: #d5cdb3;
+    --subbucket-ballot-bg: #eaf4f3;
     --radius: 10px;
     --radius-sm: 6px;
     --max: 1080px;
+  }
+  /* Dark mode (auto via OS, or forced via data-theme on the html element) */
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) {
+      --c-navy: #e6edf6;
+      --c-navy-2: #8aaad6;
+      --c-teal: #4cbab1;
+      --c-teal-2: #4cbab1;
+      --c-sand: #d6b06b;
+      --c-slate: #97a3b0;
+      --c-mist: #4a5663;
+      --c-spark: #e08363;
+      --text: #e6edf6;
+      --text-muted: #b6c0cc;
+      --text-subtle: #8a96a3;
+      --surface: #15202b;
+      --bg: #0c161f;
+      --border: #2a3744;
+      --divider: #1f2a36;
+      --subbucket-bg: #2a2316;
+      --subbucket-border: #4a3d20;
+      --subbucket-ballot-bg: #122826;
+    }
+  }
+  html[data-theme="dark"] {
+    --c-navy: #e6edf6;
+    --c-navy-2: #8aaad6;
+    --c-teal: #4cbab1;
+    --c-teal-2: #4cbab1;
+    --c-sand: #d6b06b;
+    --c-slate: #97a3b0;
+    --c-mist: #4a5663;
+    --c-spark: #e08363;
+    --text: #e6edf6;
+    --text-muted: #b6c0cc;
+    --text-subtle: #8a96a3;
+    --surface: #15202b;
+    --bg: #0c161f;
+    --border: #2a3744;
+    --divider: #1f2a36;
+    --subbucket-bg: #2a2316;
+    --subbucket-border: #4a3d20;
+    --subbucket-ballot-bg: #122826;
   }
   * { box-sizing: border-box; }
   html, body { background: var(--bg); }
@@ -133,7 +179,7 @@
   /* sub-bucket inside Town Meeting card */
   .subbucket {
     grid-column: 1 / -1; margin: 14px 0 0; padding: 14px 14px;
-    background: #f8f4ea; border-left: 3px solid var(--c-sand);
+    background: var(--subbucket-bg); border-left: 3px solid var(--c-sand);
     border-radius: 0 6px 6px 0; font-size: 12.5px;
   }
   .subbucket h4 { margin: 0 0 4px; font-size: 13px; color: var(--text); font-weight: 700; }
@@ -144,7 +190,38 @@
   .subbucket .barrow .bar { background: var(--surface); border-radius: 4px; height: 10px; position: relative; border: 1px solid var(--border); }
   .subbucket .barrow .bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--c-sand); border-radius: 3px; }
   .subbucket .barrow .dollars { text-align: right; font-variant-numeric: tabular-nums; color: var(--text); font-weight: 600; }
-  .subbucket footer { margin-top: 10px; padding-top: 8px; border-top: 1px dotted #d5cdb3; color: var(--text-subtle); font-size: 11px; }
+  .subbucket footer { margin-top: 10px; padding-top: 8px; border-top: 1px dotted var(--subbucket-border); color: var(--text-subtle); font-size: 11px; }
+
+  /* Project status panel inside the Ballot card */
+  .projects { grid-column: 1 / -1; margin: 14px 0 0; display: grid; gap: 10px; }
+  .project {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px 14px;
+    display: grid; grid-template-columns: 1fr auto; gap: 4px 14px;
+  }
+  .project .pname { font-size: 13.5px; font-weight: 700; color: var(--c-navy); margin: 0; }
+  .project .pmeta { font-size: 11.5px; color: var(--text-subtle); margin: 2px 0 0; }
+  .project .pstatus {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 999px; align-self: start; white-space: nowrap;
+  }
+  .pstatus.active   { background: rgba(46,155,148,0.16); color: var(--c-teal-2); border: 1px solid rgba(46,155,148,0.4); }
+  .pstatus.wrapping { background: rgba(156,122,58,0.16); color: var(--c-sand); border: 1px solid rgba(156,122,58,0.4); }
+  .pstatus.closing  { background: rgba(90,103,118,0.16); color: var(--c-slate); border: 1px solid rgba(90,103,118,0.4); }
+  .project .pnote { grid-column: 1 / -1; font-size: 12px; color: var(--text-muted); margin: 6px 0 0; line-height: 1.5; }
+  .project .pnote b { color: var(--text); font-weight: 600; }
+  .project .pnote .v { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--text); }
+
+  /* Theme toggle (tiny corner button) */
+  .theme-toggle {
+    position: fixed; top: 10px; right: 14px;
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text-muted); font-size: 11px; font-weight: 600;
+    padding: 5px 10px; border-radius: 999px; cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    z-index: 10;
+  }
+  .theme-toggle:hover { color: var(--text); }
 
   /* news */
   .news {
@@ -203,6 +280,8 @@
 </style>
 </head>
 <body>
+
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
 
 <div class="nav"><strong>MHD Data</strong> &middot; sketch v2 &middot; <em>checkbook reframed &mdash; real numbers</em></div>
 
@@ -272,8 +351,63 @@
         <h3 class="title">Voted by you, at the ballot</h3>
         <div class="amt">$6.73M<small>6.7% of FY26 spend</small></div>
         <p class="who"><b>Who chose this:</b> Marblehead voters at past ballot elections, approving debt exclusions to fund specific capital projects outside Proposition 2&frac12;.</p>
-        <details open>
-          <summary>What's in this bucket (3 funds)</summary>
+
+        <!-- PROJECT STATUS: derived from ledger activity per fund -->
+        <div class="projects" aria-label="Project status (from ledger activity)">
+          <h4 style="margin: 4px 0 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-subtle);">Project status &mdash; inferred from FY26 ledger activity</h4>
+
+          <article class="project">
+            <div>
+              <h5 class="pname">A11 2022 Capital Improvement (omnibus)</h5>
+              <p class="pmeta">Ballot 6/21/2022 WIN &middot; roofs, roads/sidewalks, smart panels, HVAC, salt shed, HS boiler</p>
+            </div>
+            <span class="pstatus active">Active &middot; last paid 18d ago</span>
+            <p class="pnote">FY26 spend: <span class="v">$4.94M</span> across <b>84 payments</b> to multiple GCs &mdash; D&amp;R General Contracting ($1.30M), Homer Contracting ($0.95M), Raymond Design Associates ($0.90M), MDM Engineering ($0.82M). Pattern says: bundle of sub-projects all in heavy execution. First FY26 payment Aug 12, 2025; most recent May 27, 2026.</p>
+          </article>
+
+          <article class="project">
+            <div>
+              <h5 class="pname">A34 2015 New Transfer Station + drainage</h5>
+              <p class="pmeta">Ballot 6/16/2015 WIN &middot; transfer-station construction + drainage pipe replacement</p>
+            </div>
+            <span class="pstatus active">Active &middot; last paid 26d ago</span>
+            <p class="pnote">FY26 spend: <span class="v">$1.33M</span> across <b>42 payments</b>, with <b>$1.25M (94%) to Delulis Brothers Construction</b>. Eleven years after the bond, the project is still drawing down &mdash; most recent payment May 19, 2026. Worth a separate question to the Town Administrator on which scope is still active vs. what's been closed out.</p>
+          </article>
+
+          <article class="project">
+            <div>
+              <h5 class="pname">A33 2025 Mary Alley Building Improv + HVAC</h5>
+              <p class="pmeta">Ballot 6/10/2025 WIN &middot; town's most recent debt exclusion</p>
+            </div>
+            <span class="pstatus active">Active &middot; design phase</span>
+            <p class="pnote">FY26 spend: <span class="v">$0.44M</span> across <b>9 payments</b>, almost entirely (<b>$0.41M, 92%</b>) to NV5 &mdash; an OPM/design firm. First FY26 payment Sep 29 2025 (Sep is right after the June ballot). No GC yet, so this is in design / owner's-rep phase, pre-construction.</p>
+          </article>
+
+          <article class="project">
+            <div>
+              <h5 class="pname">A35 2021 Abbot Public Library Renovation</h5>
+              <p class="pmeta">Ballot 6/22/2021 WIN &middot; ~$8.5M bond, the library reopened in 2023</p>
+            </div>
+            <span class="pstatus closing">Closing out</span>
+            <p class="pnote">FY26 spend: <span class="v">$16,747</span> across <b>5 payments</b> &mdash; safe &amp; lock, electrical service, landscaping, small equipment. Building is operational; these are punch-list / warranty close-outs. Last payment Jan 28, 2026 (no activity in 4+ months). The big project is done.</p>
+          </article>
+
+          <article class="project">
+            <div>
+              <h5 class="pname">A36 2019 MWRA Loan project</h5>
+              <p class="pmeta">Ballot 6/18/2019 cycle &middot; MWRA borrowing for water-system work</p>
+            </div>
+            <span class="pstatus wrapping">Engineering phase</span>
+            <p class="pnote">FY26 spend: <span class="v">$0.24M</span> across <b>6 payments</b>, <b>100% to Haley Ward</b> (engineering firm). New activity this fiscal year &mdash; first FY26 payment Jan 27, 2026, last Mar 19, 2026. Looks like design/study work, not construction yet.</p>
+          </article>
+
+          <p style="margin: 8px 0 0; font-size: 11px; color: var(--text-subtle); line-height: 1.5;">
+            Status labels are inferred from <b>last-payment-date freshness</b>, <b>vendor mix</b> (GC vs. engineering firm vs. punch-list), and <b>row count</b>. Original bond authorization amounts and project budgets are not in the ledger; cross-checking against Town Meeting article text and bond issuance docs would let us add &ldquo;X% of authorization spent&rdquo; on each project.
+          </p>
+        </div>
+
+        <details>
+          <summary>What's in this bucket (top funds by FY26 spend)</summary>
           <ul class="items">
             <li>
               <span><span class="name">A11 2022 Capital Improvement</span>
@@ -290,9 +424,19 @@
                 <span class="src">Ballot June 10, 2025 &mdash; debt exclusion WIN. Mary Alley Building improvements + HVAC.</span></span>
               <span class="dollars">$0.44M</span>
             </li>
+            <li>
+              <span><span class="name">A36 2019 MWRA Loan project</span>
+                <span class="src">Engineering work this fiscal year (Haley Ward).</span></span>
+              <span class="dollars">$0.24M</span>
+            </li>
+            <li>
+              <span><span class="name">A35 2021 Abbot Library Renovation</span>
+                <span class="src">Closing-out punch-list spend; the building reopened in 2023.</span></span>
+              <span class="dollars">$0.02M</span>
+            </li>
           </ul>
         </details>
-        <div class="subbucket" style="background: #eaf4f3; border-left-color: var(--c-teal);">
+        <div class="subbucket" style="background: var(--subbucket-ballot-bg); border-left-color: var(--c-teal);">
           <h4>Caveat: this is a floor, not a ceiling.</h4>
           <p>FY26 also paid <b>$14.24M to U.S. Bank in bond service</b> across many bond series (Abbot Library 2021, Fort Sewall 2019, Gerry School 2016, Pleasant St 2012, and others). Some of that debt service traces to ballot-approved exclusions and some to in-levy Town Meeting articles; the ledger doesn't split bond-by-bond, so we can't apportion it cleanly here. Sits inside the Town Meeting bucket below.</p>
         </div>
@@ -314,7 +458,7 @@
             <div class="barrow"><span class="lbl">Bond debt service (past borrowing, U.S. Bank)</span><span class="bar"><i style="width: 32%"></i></span><span class="dollars">$14.24M</span></div>
             <div class="barrow"><span class="lbl">Pension assessment (PERAC actuarial)</span><span class="bar"><i style="width: 12%"></i></span><span class="dollars">$5.38M</span></div>
             <div class="barrow"><span class="lbl">State assessments (Cherry Sheet, formula)</span><span class="bar"><i style="width: 8%"></i></span><span class="dollars">$3.35M</span></div>
-            <div class="barrow" style="margin-top: 4px; border-top: 1px solid #d5cdb3; padding-top: 6px;"><span class="lbl" style="font-weight: 700; color: var(--c-navy);">Remaining discretionary vendor spend</span><span class="bar"><i style="width: 14%; background: var(--c-teal);"></i></span><span class="dollars" style="color: var(--c-teal);">$6.28M</span></div>
+            <div class="barrow" style="margin-top: 4px; border-top: 1px solid var(--subbucket-border); padding-top: 6px;"><span class="lbl" style="font-weight: 700; color: var(--c-navy);">Remaining discretionary vendor spend</span><span class="bar"><i style="width: 14%; background: var(--c-teal);"></i></span><span class="dollars" style="color: var(--c-teal);">$6.28M</span></div>
           </div>
           <footer>Ledger excludes payroll &mdash; the largest discretionary line in any operating budget is salaries, and those are paid via a separate payroll system. So the 14.3% &ldquo;discretionary&rdquo; here is vendor spend only, not all budget choice.</footer>
         </div>
@@ -440,5 +584,34 @@
   </section>
 
 </main>
+
+<script>
+  (function () {
+    var html = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    var saved = null;
+    try { saved = localStorage.getItem('mhd-sketch-theme'); } catch (e) {}
+    if (saved === 'dark' || saved === 'light') html.setAttribute('data-theme', saved);
+
+    function label() {
+      var resolved = html.getAttribute('data-theme');
+      if (!resolved) {
+        resolved = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      btn.textContent = resolved === 'dark' ? 'Light' : 'Dark';
+    }
+    label();
+    btn.addEventListener('click', function () {
+      var current = html.getAttribute('data-theme');
+      if (!current) {
+        current = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      var next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      try { localStorage.setItem('mhd-sketch-theme', next); } catch (e) {}
+      label();
+    });
+  })();
+</script>
 </body>
 </html>
