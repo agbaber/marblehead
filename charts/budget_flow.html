@@ -185,15 +185,15 @@ title: "Where the Money Goes"
 
 <div class="sankey-intro">
   <h1>Where the Money Goes</h1>
-  <p class="sankey-fy">FY26 general fund: revenue sources flow to spending categories. Override tiers show the full annual amount at phase-in (FY29). Click any node to isolate its flows.</p>
-  <p class="sankey-sibling"><a href="your_tax_bill.html">Want the same flow scaled to your household? Try <strong>Where your tax dollars go</strong> &rarr;</a></p>
+  <p class="sankey-fy">FY26 general fund: revenue sources flow to spending categories. The adopted $15M override (passed June 9, 2026) shows the full annual amount at phase-in (FY29). Lower tiers shown for comparison only; the contingency tab shows what the no-override budget would have cut. Click any node to isolate its flows.</p>
+  <p class="sankey-sibling"><a href="../checkbook.html">See how the town spends day to day? Open the <strong>Checkbook</strong> &rarr;</a></p>
 </div>
 
 <div class="tabs">
-  <button class="tab active" data-tier="none">No override</button>
-  <button class="tab" data-tier="t1">Tier 1 ($9M)</button>
-  <button class="tab" data-tier="t2">Tier 2 ($12M)</button>
-  <button class="tab" data-tier="t3">Tier 3 ($15M)</button>
+  <button class="tab" data-tier="none">Contingency (not adopted)</button>
+  <button class="tab" data-tier="t1">If $9M tier only</button>
+  <button class="tab" data-tier="t2">If $12M tier only</button>
+  <button class="tab active" data-tier="t3">Adopted ($15M)</button>
 </div>
 
 <div class="sankey-wrap" id="sankeyWrap"></div>
@@ -209,21 +209,22 @@ title: "Where the Money Goes"
 <div class="notes">
   <p>Town department totals from the FY26 Proposed Budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1234/FY26-Budget" data-source="FY26 Proposed Budget, Town of Marblehead"></sup> School total from FY26 School Committee approved budget.<sup class="cite" data-href="https://www.marbleheadma.gov/DocumentCenter/View/1235/FY26-School-Budget" data-source="FY26 School Committee Approved Budget"></sup> Override line items and no-override cuts from the Town Administrator's April 8, 2026 override presentation.<sup class="cite" data-href="https://vimeo.com/1181632658" data-source="Select Board meeting, April 8 2026 (Vimeo 1181632658), Town Administrator override presentation"></sup> No-override school reduction from the FY27 Proposed Balanced Budget.<sup class="cite" data-href="https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf" data-source="FY27 Proposed Budget, page 2, Item 101"></sup></p>
   <p>Healthcare grouping includes health insurance transfer ($11.8M), Medex ($2.5M), insurance premiums ($0.9M), Medicare reimbursement ($0.7M), and Medicare tax ($0.3M). "General government" is the sum of all remaining town departments not shown separately. General fund revenue does not have line-item earmarking; proportional ribbons are illustrative. Override amounts show the full annual commitment at phase-in (FY29). The override phases in over three years: town-side items begin in FY27, school items (special ed, kindergarten fee, technology) begin in FY28. The school share shown is the total override minus identified town-side line items; it includes COLA/step salary increases, the amounts of which are set through collective bargaining.</p>
+  <p>Figures are from the FY27 Proposed Budget (No Override), published before the June 9 vote; the adopted budget adds the override funding. This page will be updated when the town publishes adopted FY27 numbers.</p>
 </div>
 
 <div class="read-next">
   <div class="read-next-label">Read next</div>
-  <a class="read-next-link" href="your_tax_bill.html">
-    <div class="read-next-title">Where your tax dollars go &rarr;</div>
-    <div class="read-next-desc">Enter your home value and see exactly how your tax bill splits across schools, public safety, and six other categories.</div>
+  <a class="read-next-link" href="../2026-override/">
+    <div class="read-next-title">The 2026 override archive &rarr;</div>
+    <div class="read-next-desc">All four ballot questions, the June 9 result, and what passed.</div>
   </a>
-  <a class="read-next-link" href="sustainability.html">
-    <div class="read-next-title">Revenue vs. expenses over time &rarr;</div>
-    <div class="read-next-desc">Ten years of actuals and three years of projections, with the same override tier toggle.</div>
+  <a class="read-next-link" href="../town-debt.html">
+    <div class="read-next-title">Town debt and what the override is doing &rarr;</div>
+    <div class="read-next-desc">How the post-vote levy interacts with debt service, exclusions, and remaining capacity.</div>
   </a>
-  <a class="read-next-link" href="../no-override-budget.html">
-    <div class="read-next-title">What's in the no-override budget? &rarr;</div>
-    <div class="read-next-desc">The specific cuts if the override fails: 22 town positions, 18 school FTEs, the library reduced 43%.</div>
+  <a class="read-next-link" href="../data/">
+    <div class="read-next-title">All data and charts &rarr;</div>
+    <div class="read-next-desc">Hub for every dataset, chart, and methodology page on the site.</div>
   </a>
 </div>
 
@@ -334,7 +335,7 @@ title: "Where the Money Goes"
   };
 
   var tierLabels = { t1: 'Tier 1 ($9M)', t2: 'Tier 2 ($12M)', t3: 'Tier 3 ($15M)' };
-  var tierShort  = { t1: 'Tier 1', t2: 'Tier 2', t3: 'Tier 3' };
+  var tierShort  = { t1: '$9M tier', t2: '$12M tier', t3: 'Adopted $15M override' };
 
   /* ══════════════════════════════════════════════════════
      HELPERS
@@ -845,13 +846,18 @@ title: "Where the Money Goes"
     var totalRestored = 0;
     rightNodes.forEach(function (n) { totalCuts += n.cut; totalRestored += n.restored; });
     if (tier === 'none') {
-      captionEl.textContent = 'Without an override, the FY27 budget cuts ' + fmt(totalCuts) +
-        ' across seven departments. The library loses 43% of its budget, community development loses 59%, and schools absorb a $1.5M special education reduction. Red hatched ribbons show the shortfall flowing from Property Tax to each affected category.';
+      captionEl.textContent = 'Contingency that did not take effect: had the override failed, the FY27 budget would have cut ' + fmt(totalCuts) +
+        ' across seven departments. The library would have lost 43% of its budget, community development 59%, and schools would have absorbed a $1.5M special education reduction. Red hatched ribbons show the shortfall flowing from Property Tax to each affected category. The June 9, 2026 vote passed all four questions, so this scenario is shown for comparison only.';
+    } else if (tier === 't3') {
+      var schoolAdd = 0;
+      rightNodes.forEach(function (n) { if (n.id === 'schools') schoolAdd = n.add; });
+      captionEl.textContent = tierShort[tier] + ' (' + fmt(ov.total) + '/year at full phase-in) restored all contingency cuts and added new capacity. Schools receive ' + fmt(schoolAdd) +
+        ' (' + Math.round(schoolAdd / ov.total * 100) + '% of the override). The override phases in over three years (FY27-FY29); amounts shown are the annual steady state. Town budget figures shown are from the pre-vote FY27 Proposed Budget (No Override); the adopted budget will be published by the town and this page updated when it is.';
     } else {
       var schoolAdd = 0;
       rightNodes.forEach(function (n) { if (n.id === 'schools') schoolAdd = n.add; });
-      captionEl.textContent = tierShort[tier] + ' (' + fmt(ov.total) + '/year at full phase-in) restores all no-override cuts and adds new capacity. Schools receive ' + fmt(schoolAdd) +
-        ' (' + Math.round(schoolAdd / ov.total * 100) + '% of the override). The override phases in over three years (FY27-FY29); amounts shown are the annual steady state.';
+      captionEl.textContent = tierShort[tier] + ' (' + fmt(ov.total) + '/year at full phase-in) is shown for comparison; the adopted $15M tier governs FY27. Schools at this tier would receive ' + fmt(schoolAdd) +
+        ' (' + Math.round(schoolAdd / ov.total * 100) + '% of the override). The override phases in over three years (FY27-FY29).';
     }
   }
 
@@ -866,6 +872,6 @@ title: "Where the Money Goes"
     });
   });
 
-  render('none', null);
+  render('t3', null);
 })();
 </script>

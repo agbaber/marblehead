@@ -1,0 +1,1656 @@
+---
+title: "What can we do?"
+og_title: "What can Marblehead do? A working list of questions worth asking."
+og_description: "Twelve questions worth asking the town's finance staff. Assembled by one resident, not by a feasibility study. Dollar figures are rough guesses."
+og_url: https://marbleheaddata.org/what-can-we-do.html
+sitemap: false
+scripts: [citations]
+---
+<style>
+  /* === Scrolling stops, homepage-style === */
+  .wcwd-hero,
+  .wcwd-stop {
+    box-sizing: border-box;
+    padding: 64px 0 56px;
+    position: relative;
+  }
+  .wcwd-hero { padding-top: 48px; padding-bottom: 32px; }
+  @media (max-width: 600px) {
+    .wcwd-hero,
+    .wcwd-stop { padding: 44px 0 36px; }
+  }
+
+  .wcwd-stop--tinted {
+    background: color-mix(in srgb, var(--c-navy) 4%, var(--surface));
+    border-top: 1px solid color-mix(in srgb, var(--c-navy) 10%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--c-navy) 10%, transparent);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+  }
+
+  /* Eyebrow label */
+  .wcwd-eye {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 22px;
+  }
+  .wcwd-eye .dot { color: var(--c-buoy); margin: 0 6px; }
+
+  /* Hero */
+  .wcwd-hero h1 {
+    font-size: clamp(40px, 7vw, 84px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+    margin: 0 0 20px;
+    max-width: 780px;
+  }
+  .wcwd-hero-sub {
+    font-size: clamp(17px, 2.2vw, 22px);
+    line-height: 1.45;
+    color: var(--text-muted);
+    margin: 0 0 28px;
+    max-width: 680px;
+    font-weight: 500;
+  }
+  .wcwd-hero-sub strong { color: var(--text); font-weight: 700; }
+
+  /* Jump-nav chips */
+  .wcwd-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 6px;
+  }
+  .wcwd-jump a {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .wcwd-jump a:hover {
+    border-color: var(--c-teal);
+    transform: translateY(-1px);
+  }
+  .wcwd-jump a[data-cat="rev"]:hover { border-color: var(--c-teal); }
+  .wcwd-jump a[data-cat="cost"]:hover { border-color: var(--c-navy); }
+  .wcwd-jump a[data-cat="gov"]:hover { border-color: var(--c-brass); }
+
+  /* Provenance stop text */
+  .wcwd-prov-h {
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+    margin: 0 0 18px;
+    max-width: 760px;
+  }
+  .wcwd-prov-body {
+    font-size: clamp(15px, 1.9vw, 18px);
+    line-height: 1.55;
+    color: var(--text);
+    margin: 0 0 14px;
+    max-width: 680px;
+  }
+  .wcwd-prov-body strong { font-weight: 700; }
+  .wcwd-prov-fine {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 14px 0 0;
+    max-width: 640px;
+  }
+
+  /* Section title */
+  .wcwd-section-h2 {
+    font-size: clamp(28px, 4.4vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    margin: 0 0 12px;
+    max-width: 740px;
+  }
+  .wcwd-section-lead {
+    font-size: clamp(15px, 1.9vw, 18px);
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 0 0 32px;
+    max-width: 640px;
+  }
+
+  /* Scoreboard: all 18 items on one screen */
+  .sb {
+    max-width: 980px;
+    margin: 0 0 8px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .sb-head {
+    display: grid;
+    grid-template-columns: 36px 1fr 140px 130px 130px;
+    gap: 12px;
+    padding: 11px 16px;
+    background: color-mix(in srgb, var(--c-navy) 6%, var(--surface));
+    border-bottom: 1px solid var(--border);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+  }
+  .sb-head [data-sort] {
+    cursor: pointer;
+    user-select: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .sb-head [data-sort]:hover { color: var(--text); }
+  .sb-head [data-sort]:focus-visible {
+    outline: 2px solid var(--c-teal);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  .sb-head [data-sort]::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    opacity: 0;
+  }
+  .sb-head [data-sort][aria-sort="ascending"]::after {
+    border-bottom: 4px solid currentColor;
+    opacity: 1;
+  }
+  .sb-head [data-sort][aria-sort="descending"]::after {
+    border-top: 4px solid currentColor;
+    opacity: 1;
+  }
+  .sb.is-sorted .sb-group { display: none; }
+  .sb-group {
+    padding: 12px 16px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    background: color-mix(in srgb, var(--c-fog) 35%, transparent);
+    border-top: 1px solid var(--border);
+  }
+  .sb-row {
+    display: grid;
+    grid-template-columns: 36px 1fr 140px 130px 130px;
+    gap: 12px;
+    padding: 11px 16px;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text);
+    border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+    transition: background 0.12s;
+  }
+  .sb-row:first-of-type { border-top: none; }
+  .sb-row:hover {
+    background: color-mix(in srgb, var(--c-fog) 50%, transparent);
+  }
+  .sb-c-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-subtle);
+    font-variant-numeric: tabular-nums;
+  }
+  .sb-row[data-cat="rev"] .sb-c-num { color: var(--c-teal); }
+  .sb-row[data-cat="cost"] .sb-c-num { color: var(--c-navy); }
+  .sb-row[data-cat="gov"] .sb-c-num { color: var(--c-brass); }
+  .sb-c-item {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--text);
+  }
+  .sb-c-money {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .sb-c-time {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .sb-pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    line-height: 1.2;
+  }
+  .sb-pill-easy {
+    background: color-mix(in srgb, var(--c-teal) 14%, transparent);
+    color: var(--c-teal);
+  }
+  .sb-pill-med {
+    background: color-mix(in srgb, var(--c-brass) 18%, transparent);
+    color: var(--c-brass);
+  }
+  .sb-pill-hard {
+    background: color-mix(in srgb, var(--c-buoy) 14%, transparent);
+    color: var(--c-buoy);
+  }
+  @media (max-width: 720px) {
+    .sb-head { display: none; }
+    .sb-row {
+      grid-template-columns: 36px 1fr;
+      grid-template-areas:
+        "num item"
+        ".   money"
+        ".   diff"
+        ".   time";
+      row-gap: 4px;
+      padding: 14px 16px;
+    }
+    .sb-c-num { grid-area: num; }
+    .sb-c-item { grid-area: item; }
+    .sb-c-money { grid-area: money; }
+    .sb-c-diff { grid-area: diff; }
+    .sb-c-time { grid-area: time; }
+  }
+
+  /* Scoreboard totals block, sits below the table */
+  .sb-totals {
+    max-width: 980px;
+    margin: 12px 0 8px;
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--c-fog) 25%, var(--surface));
+  }
+  .sb-totals-eye {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 10px;
+  }
+  .sb-totals-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .sb-totals-list li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--text);
+    padding: 6px 0;
+    border-bottom: 1px dashed color-mix(in srgb, var(--border) 50%, transparent);
+  }
+  .sb-totals-list li:last-child { border-bottom: 0; }
+  .sb-totals-list li.is-grand {
+    font-weight: 700;
+    border-bottom: 0;
+    padding-top: 10px;
+    border-top: 2px solid var(--border);
+    margin-top: 4px;
+  }
+  .sb-totals-label { color: var(--text); }
+  .sb-totals-val {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .sb-totals-list li.is-gov .sb-totals-val {
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .sb-totals-note {
+    margin: 14px 0 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--text-muted);
+  }
+  .sb-totals-note strong { color: var(--text); font-weight: 700; }
+
+  /* Idea grid: 1-column at all widths so each card gets full reading width
+     and side panels (Rough Guess / Difficulty / Who Pays) sit cleanly.
+     Larger gap restores card-as-unit rhythm at desktop widths where
+     internal box spacing would otherwise read as similar to inter-card gap. */
+  .idea-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin: 0 0 8px;
+    max-width: 880px;
+  }
+  @media (max-width: 600px) {
+    .idea-grid { gap: 32px; }
+  }
+  /* Allow rough-guess / difficulty / who-pays panels to flow side-by-side
+     on desktop while staying stacked on mobile */
+  @media (min-width: 720px) {
+    .idea-panels {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin: 0 0 14px;
+    }
+    .idea-panels > div { margin: 0 !important; }
+  }
+
+  /* Idea card */
+  .idea {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 32px 28px;
+    box-shadow: 0 1px 2px rgba(15, 42, 61, 0.04), 0 4px 12px rgba(15, 42, 61, 0.05);
+    border-top: 6px solid var(--c-teal);
+  }
+  @media (max-width: 600px) {
+    .idea { padding: 24px 22px 22px; }
+  }
+  .idea[data-cat="rev"] { border-top-color: var(--c-teal); }
+  .idea[data-cat="cost"] { border-top-color: var(--c-navy); }
+  .idea[data-cat="gov"] { border-top-color: var(--c-brass); }
+
+  .idea-num {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 10px;
+  }
+  .idea[data-cat="rev"] .idea-num { color: var(--c-teal); }
+  .idea[data-cat="cost"] .idea-num { color: var(--c-navy); }
+  .idea[data-cat="gov"] .idea-num { color: var(--c-brass); }
+
+  .idea-title {
+    font-size: clamp(22px, 2.6vw, 30px);
+    line-height: 1.18;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 18px;
+    letter-spacing: -0.012em;
+  }
+
+  /* Status pill row sits right under title */
+
+  /* Body prose: the main content of each card */
+  .idea-body {
+    margin: 0 0 18px;
+  }
+  .idea-body p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0 0 12px;
+  }
+  .idea-body p:last-child { margin-bottom: 0; }
+  .idea-body p strong { font-weight: 700; }
+
+  /* Number presentation: rough-guess box */
+  .idea-guess {
+    background: color-mix(in srgb, var(--c-fog) 50%, transparent);
+    border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+    padding: 14px 16px 15px;
+    margin: 0 0 18px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .idea-guess-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 4px;
+  }
+  .idea-guess-num {
+    font-size: clamp(26px, 4vw, 32px);
+    font-weight: 800;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+  }
+  .idea[data-cat="rev"] .idea-guess-num { color: var(--c-teal); }
+  .idea[data-cat="cost"] .idea-guess-num { color: var(--c-navy); }
+  .idea[data-cat="gov"] .idea-guess-num { color: var(--c-brass); }
+  .idea-guess-cap {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 6px 0 0;
+  }
+
+  /* Difficulty + timeline: how hard, how long.
+     Lighter treatment than .idea-guess — supporting info, not the headline. */
+  .idea-odds {
+    background: transparent;
+    border: none;
+    border-left: 3px solid var(--c-brass);
+    padding: 4px 0 4px 16px;
+    margin: 0 0 18px;
+    border-radius: 0;
+  }
+  .idea-odds-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--c-brass);
+    margin: 0 0 6px;
+  }
+  .idea-odds p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--text);
+    margin: 0 0 6px;
+  }
+  .idea-odds p:last-child { margin-bottom: 0; }
+  .idea-odds p strong { font-weight: 700; }
+
+  /* "Who pays?" block: explicit distributional fact.
+     Lighter treatment than .idea-guess — supporting info, not the headline. */
+  .idea-catch {
+    background: transparent;
+    border: none;
+    border-left: 3px solid var(--c-buoy);
+    padding: 4px 0 4px 16px;
+    margin: 0 0 18px;
+    border-radius: 0;
+  }
+  .idea-catch-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--c-buoy);
+    margin: 0 0 6px;
+  }
+  .idea-catch p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--text);
+    margin: 0 0 8px;
+  }
+  .idea-catch p:last-child { margin-bottom: 0; }
+  .idea-catch p strong { font-weight: 700; }
+
+  /* Research details (expandable) */
+  .idea-research {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px dashed var(--border);
+  }
+  .idea-research summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .idea-research summary::-webkit-details-marker { display: none; }
+  .idea-research summary::before {
+    content: "+";
+    display: inline-block;
+    width: 14px;
+    text-align: center;
+    color: var(--text-muted);
+    font-weight: 700;
+  }
+  .idea-research[open] summary::before { content: "\2212"; }
+  .idea-research summary:hover { color: var(--text); }
+  .idea-research ul {
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .idea-research li {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    padding: 5px 0 5px 22px;
+    position: relative;
+  }
+  .idea-research li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid var(--text-subtle);
+    border-radius: 3px;
+    background: transparent;
+  }
+
+  /* Cautions stop */
+  .cautions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 0;
+    max-width: 760px;
+  }
+  @media (min-width: 720px) {
+    .cautions { grid-template-columns: 1fr 1fr; }
+  }
+  .caution {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--c-buoy);
+  }
+  .caution-h {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .caution-p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* Procedural paths */
+  .paths-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 0;
+    max-width: 880px;
+  }
+  @media (min-width: 720px) {
+    .paths-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  .path {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 22px 20px;
+  }
+  .path-eye {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--c-teal);
+    margin: 0 0 8px;
+  }
+  .path[data-p="atm"] .path-eye { color: var(--c-navy); }
+  .path[data-p="atm-only"] .path-eye { color: var(--c-buoy); }
+  .path-h {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--text);
+    margin: 0 0 10px;
+  }
+  .path-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .path-list li {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    padding: 4px 0 4px 18px;
+    position: relative;
+  }
+  .path-list li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--text-subtle);
+  }
+
+  /* Closing stop */
+  .wcwd-close-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 18px 0 6px;
+    max-width: 740px;
+  }
+  @media (min-width: 600px) {
+    .wcwd-close-cards { grid-template-columns: 1fr 1fr; }
+  }
+  .wcwd-close-card {
+    display: block;
+    padding: 20px 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .wcwd-close-card:hover {
+    border-color: var(--c-teal);
+    transform: translateY(-2px);
+  }
+  .wcwd-close-card-eye {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--c-teal);
+    margin: 0 0 6px;
+  }
+  .wcwd-close-card h3 {
+    font-size: 18px;
+    margin: 0 0 6px;
+    line-height: 1.25;
+  }
+  .wcwd-close-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .wcwd-draft {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: color-mix(in srgb, var(--c-brass) 18%, transparent);
+    color: var(--c-brass);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin: 0 0 16px;
+  }
+  .wcwd-draft::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--c-brass);
+  }
+</style>
+
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<section class="wcwd-hero">
+  <span class="wcwd-draft">Draft &middot; Working list &middot; Updated 2026-06-02</span>
+  <h1>What can we do?</h1>
+  <p class="wcwd-hero-sub">
+    Eighteen <strong>questions worth asking the town's finance staff</strong>, drawn from one resident's reading of the public record. Not a feasibility study. The dollar figures below are rough guesses; the "have we tried this" answers came from one research pass and have already missed at least one item.
+  </p>
+  <nav class="wcwd-jump" aria-label="Page sections">
+    <a href="#revenue" data-cat="rev">5 revenue ideas</a>
+    <a href="#cost" data-cat="cost">10 cost reductions</a>
+    <a href="#governance" data-cat="gov">3 governance changes</a>
+    <a href="#scoreboard">At a glance</a>
+    <a href="#cautions">Cautions</a>
+    <a href="#paths">How adoption happens</a>
+  </nav>
+</section>
+
+<!-- ============================================================ -->
+<!-- PROVENANCE -->
+<!-- ============================================================ -->
+<section class="wcwd-stop wcwd-stop--tinted">
+  <p class="wcwd-eye">About this page</p>
+  <h2 class="wcwd-prov-h">A working list, not a finance study.</h2>
+  <p class="wcwd-prov-body">
+    The twelve ideas below came up over the course of one resident's research conversation, against what's available in the public record. The dollar ranges are <strong>order-of-magnitude guesses</strong>, not validated forecasts. The "have we tried this" answers came from one read of annual reports and Select Board minutes, and the first pass already missed the meals tax that the town adopted in 2023.
+  </p>
+  <p class="wcwd-prov-body">
+    No <abbr class="g" title="Chief Financial Officer">CFO</abbr>, Finance Committee member, retiree group, <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> commissioner, or town counsel has reviewed any of this. <strong>Treat each item as a starting question, not a recommendation.</strong> Some may turn out to be naive. Some may have been studied and rejected for reasons not surfaced here. The point is to make the questions visible so they can be asked of the people who'd actually know.
+  </p>
+  <p class="wcwd-prov-fine">
+    Send corrections to the email at the bottom of this page. Updates are logged there too.
+  </p>
+</section>
+
+<!-- ============================================================ -->
+<!-- SCOREBOARD: all 18 at a glance -->
+<!-- ============================================================ -->
+<section id="scoreboard" class="wcwd-stop">
+  <p class="wcwd-eye">At a glance &middot; All 18 items</p>
+
+  <div class="sb">
+    <div class="sb-head" role="row">
+      <span class="sb-c-num"><button type="button" data-sort="num" aria-sort="none">#</button></span>
+      <span class="sb-c-item"><button type="button" data-sort="item" aria-sort="none">Item</button></span>
+      <span class="sb-c-money"><button type="button" data-sort="money" aria-sort="none">Rough range</button></span>
+      <span class="sb-c-diff"><button type="button" data-sort="diff" aria-sort="none">Difficulty</button></span>
+      <span class="sb-c-time"><button type="button" data-sort="time" aria-sort="none">Timeline</button></span>
+    </div>
+
+    <div class="sb-group">Revenue</div>
+    <a class="sb-row" data-cat="rev" data-money="350" data-diff="2" data-time="9" href="#idea-01"><span class="sb-c-num">01</span><span class="sb-c-item">Room and short-term rental occupancy excise</span><span class="sb-c-money">$200K&ndash;$500K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="rev" data-money="47.5" data-diff="1" data-time="9" href="#idea-02"><span class="sb-c-num">02</span><span class="sb-c-item">Community Impact Fee on professionally managed STRs</span><span class="sb-c-money">$20K&ndash;$75K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy if bundled</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="rev" data-money="275" data-diff="2" data-time="12" href="#idea-03"><span class="sb-c-num">03</span><span class="sb-c-item">Increase MMLD contribution to town budget</span><span class="sb-c-money">$150K&ndash;$400K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">~12 months</span></a>
+    <a class="sb-row" data-cat="rev" data-money="20" data-diff="1" data-time="9" href="#idea-04"><span class="sb-c-num">04</span><span class="sb-c-item">Boat excise compliance audit</span><span class="sb-c-money">$10K&ndash;$30K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="rev" data-money="62.5" data-diff="3" data-time="18" href="#idea-05"><span class="sb-c-num">05</span><span class="sb-c-item">Mooring waitlist transfer fee</span><span class="sb-c-money">$25K&ndash;$100K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">1&ndash;2 years</span></a>
+
+    <div class="sb-group">Cost reduction</div>
+    <a class="sb-row" data-cat="cost" data-money="600" data-diff="3" data-time="30" href="#idea-06"><span class="sb-c-num">06</span><span class="sb-c-item">Medicare Advantage for Medicare-eligible retirees</span><span class="sb-c-money">$300K&ndash;$900K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">2&ndash;3 years</span></a>
+    <a class="sb-row" data-cat="cost" data-money="375" data-diff="2" data-time="18" href="#idea-07"><span class="sb-c-num">07</span><span class="sb-c-item">Energy Savings Performance Contract on buildings</span><span class="sb-c-money">$250K&ndash;$500K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">12&ndash;24 months</span></a>
+    <a class="sb-row" data-cat="cost" data-money="200" data-diff="3" data-time="48" href="#idea-08"><span class="sb-c-num">08</span><span class="sb-c-item">Expand shared back-office services with schools</span><span class="sb-c-money">$100K&ndash;$300K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">3&ndash;5 years</span></a>
+    <a class="sb-row" data-cat="cost" data-money="100" data-diff="2" data-time="18" href="#idea-09"><span class="sb-c-num">09</span><span class="sb-c-item">Inter-municipal staff sharing with neighbor towns</span><span class="sb-c-money">$50K&ndash;$150K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;2 years</span></a>
+    <a class="sb-row" data-cat="cost" data-money="0" data-diff="1" data-time="15" href="#idea-10"><span class="sb-c-num">10</span><span class="sb-c-item">Move permits and inspections online</span><span class="sb-c-money">Cost-neutral</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">12&ndash;18 months</span></a>
+    <a class="sb-row" data-cat="cost" data-money="900" data-diff="3" data-time="54" href="#idea-11"><span class="sb-c-num">11</span><span class="sb-c-item">Renegotiate the 83% premium share for active employees</span><span class="sb-c-money">$300K&ndash;$1.5M/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">3&ndash;6 years</span></a>
+    <a class="sb-row" data-cat="cost" data-money="250" data-diff="3" data-time="36" href="#idea-12"><span class="sb-c-num">12</span><span class="sb-c-item">Spousal surcharge or carve-out on the health plan</span><span class="sb-c-money">$100K&ndash;$400K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard</span></span><span class="sb-c-time">2&ndash;4 years</span></a>
+    <a class="sb-row" data-cat="cost" data-money="175" data-diff="1" data-time="9" href="#idea-13"><span class="sb-c-num">13</span><span class="sb-c-item">Audit overtime patterns in police, fire, <abbr class="g" title="Department of Public Works">DPW</abbr></span><span class="sb-c-money">$50K&ndash;$300K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+    <a class="sb-row" data-cat="cost" data-money="60" data-diff="3" data-time="" href="#idea-14"><span class="sb-c-num">14</span><span class="sb-c-item">Restructure part-time positions to avoid benefits</span><span class="sb-c-money">$20K&ndash;$100K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-hard">Hard in practice</span></span><span class="sb-c-time">no comparable</span></a>
+    <a class="sb-row" data-cat="cost" data-money="475" data-diff="2" data-time="24" href="#idea-15"><span class="sb-c-num">15</span><span class="sb-c-item">Health-plan opt-out buyout for waiver-eligible staff</span><span class="sb-c-money">$300K&ndash;$650K/yr</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;3 years</span></a>
+
+    <div class="sb-group">Governance and process</div>
+    <a class="sb-row" data-cat="gov" data-money="" data-diff="2" data-time="18" href="#idea-16"><span class="sb-c-num">16</span><span class="sb-c-item">Standing citizen Efficiency Commission (bylaw)</span><span class="sb-c-money">No direct $</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">6 mo bylaw, 1&ndash;2 yr findings</span></a>
+    <a class="sb-row" data-cat="gov" data-money="1000" data-diff="2" data-time="18" href="#idea-17"><span class="sb-c-num">17</span><span class="sb-c-item">Department-level zero-based / scoped review</span><span class="sb-c-money">$500K&ndash;$1.5M/cycle</span><span class="sb-c-diff"><span class="sb-pill sb-pill-med">Medium</span></span><span class="sb-c-time">1&ndash;2 years/cycle</span></a>
+    <a class="sb-row" data-cat="gov" data-money="" data-diff="1" data-time="9" href="#idea-18"><span class="sb-c-num">18</span><span class="sb-c-item">Formal performance audit of major cost centers</span><span class="sb-c-money">$30K&ndash;$400K cost</span><span class="sb-c-diff"><span class="sb-pill sb-pill-easy">Easy to commission</span></span><span class="sb-c-time">6&ndash;12 months</span></a>
+  </div>
+
+  <div class="sb-totals">
+    <p class="sb-totals-eye">Naive totals &middot; sum of low ends and high ends</p>
+    <ul class="sb-totals-list">
+      <li>
+        <span class="sb-totals-label">Revenue (5 items)</span>
+        <span class="sb-totals-val">$405K to $1.1M / yr</span>
+      </li>
+      <li>
+        <span class="sb-totals-label">Cost reduction (10 items, one cost-neutral)</span>
+        <span class="sb-totals-val">$1.5M to $4.8M / yr</span>
+      </li>
+      <li class="is-gov">
+        <span class="sb-totals-label">Governance and process (3 items)</span>
+        <span class="sb-totals-val">not summed</span>
+      </li>
+      <li class="is-grand">
+        <span class="sb-totals-label">Revenue + cost ceiling</span>
+        <span class="sb-totals-val">$1.9M to $5.9M / yr</span>
+      </li>
+    </ul>
+    <p class="sb-totals-note"><strong>Read this before quoting the number.</strong> These add the low ends together and the high ends together as if each item were independent. Several items overlap and would not all stack at full size: items 06, 11, 12, and 15 all touch the same health-insurance line; item 07 (energy contract) overlaps with line items a zero-based review (17) would also touch; items 13 and 18 could find some of the same overtime dollars. Item 17 is per audit cycle, not annual. Item 18 is a cost, not a saving. The combined number is a ceiling, not an estimate.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- REVENUE -->
+<!-- ============================================================ -->
+<section id="revenue" class="wcwd-stop">
+  <p class="wcwd-eye">Revenue <span class="dot">&bull;</span> 5 questions</p>
+  <h2 class="wcwd-section-h2">How can the town make more money?</h2>
+  <p class="wcwd-section-lead">Local-option taxes, fee structures, and existing assets the town might be able to monetize more aggressively. A couple of these have been on a Town Meeting warrant and narrowly lost.</p>
+
+  <div class="idea-grid">
+
+    <!-- Idea 1: Room/STR Excise -->
+    <div class="idea" data-cat="rev" id="idea-01">
+      <p class="idea-num">01 &middot; Local option tax</p>
+      <h3 class="idea-title">Adopt the room and short-term rental occupancy excise</h3>
+      <div class="idea-body">
+        <p>A local tax on overnight stays in hotels, inns, B&amp;Bs, and Airbnb-style rentals. Massachusetts lets each town add up to 6% on top of the state's 5.7% lodging tax. <strong>Most residents never pay it; visitors do.</strong></p>
+        <p>Marblehead voted on this at the 2023 Annual Town Meeting as Article 25. It lost by three votes: <strong>391 Yes, 394 No</strong>. Hasn't been on a warrant since.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$200K to $500K</span>
+        <span class="idea-guess-cap">per year, at the 6% cap. Range depends on hotel and <abbr class="g" title="Short-Term Rental">STR</abbr> inventory we haven't actually counted.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Medium.</strong> One Town Meeting vote. Failed in 2023 by three votes, so the political case has to be remade.</p>
+        <p><strong>6 to 12 months</strong> to first revenue. One Annual or Special Town Meeting plus the state-quarter activation lag after acceptance.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Visitors pay.</strong> Hotels, inns, and Airbnb hosts collect and remit. The lodging industry argues it suppresses bookings at the margin; data on this is mixed.</p>
+        <p>Worth noting: visitors use the harbor, beaches, parking, and emergency services without paying property tax. One argument is that this tax makes their use of town services more equitable. Another is that it makes visiting Marblehead more expensive without obvious benefit. Reasonable people disagree.</p>
+        <p><strong>In real dollars:</strong> a $250-a-night Airbnb stay for a weekend ($500 total) would cost an extra $30 with the 6 percent excise. A 5-night hotel stay at $200 a night ($1,000 total) would cost an extra $60. The state's 5.7 percent excise already applies on top.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Active <abbr class="g" title="Short-Term Rental">STR</abbr> listing count and revenue from AirDNA or the state <abbr class="g" title="Short-Term Rental">STR</abbr> registry</li>
+          <li>Licensed hotel and B&amp;B room inventory from the Building and Health Departments</li>
+          <li>Comparable annual room excise collections from Salem, Rockport, Manchester, Cohasset, Nahant (<abbr class="g" title="Department of Revenue">DOR</abbr> Schedule A)</li>
+          <li><abbr class="g" title="Division of Local Services">DLS</abbr> technical-assistance memo, if the <abbr class="g" title="Chief Financial Officer">CFO</abbr> requests one</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 2: Community Impact Fee -->
+    <div class="idea" data-cat="rev" id="idea-02">
+      <p class="idea-num">02 &middot; Local option tax</p>
+      <h3 class="idea-title">Community Impact Fee on professionally managed short-term rentals</h3>
+      <div class="idea-body">
+        <p>A separate small fee that <strong>only applies to people running 2 or more short-term rentals as a business</strong>. Doesn't touch a homeowner renting out their own place occasionally. Most of the proceeds have to go to affordable housing under state law.</p>
+        <p>Usually bundled with the room excise above when towns adopt it. Wasn't presented separately at the 2023 Annual Town Meeting.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$20K to $75K</span>
+        <span class="idea-guess-cap">per year. Small, because it only applies to commercial operators with 2+ units.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Easy if bundled with 01.</strong> Same vote, same statutory family. On its own, similar effort but a narrower constituency to convince.</p>
+        <p><strong>6 to 12 months</strong> if adopted with the room excise. Same activation lag.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Commercial Airbnb operators with 2 or more properties.</strong> Homeowners renting their own place occasionally are unaffected. Small commercial operators sometimes exit at this margin; large operators absorb it. Targeted at investor-class STR operators specifically.</p>
+        <p><strong>In real dollars:</strong> on the same $500 Airbnb weekend, an additional $15 if the host runs 2 or more rentals, on top of the local room excise and state excise. A homeowner renting out their own place occasionally pays nothing extra.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Count of professionally managed <abbr class="g" title="Short-Term Rental">STR</abbr> units in Marblehead from the state <abbr class="g" title="Department of Revenue">DOR</abbr> registry</li>
+          <li>Average rent per night for those units from AirDNA</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 3: MMLD PILOT -->
+    <div class="idea" data-cat="rev" id="idea-03">
+      <p class="idea-num">03 &middot; Existing asset</p>
+      <h3 class="idea-title">Have the town-owned electric company contribute more to the town budget</h3>
+      <div class="idea-body">
+        <p><strong>Marblehead owns its electric company.</strong> Most towns buy power from National Grid or Eversource; we have our own utility (the Marblehead Municipal Light Department, or <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr>). The utility pays a flat contribution to the town's general fund every year, called a "payment in lieu of taxes" because the utility itself isn't taxed directly.</p>
+        <p>That payment just rose from <strong>$330,000 to $360,000</strong> in the FY27 budget. The first increase in years. Towns with their own utilities, including Wellesley, Belmont, and Concord, often contribute materially more relative to utility revenue.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$150K to $400K</span>
+        <span class="idea-guess-cap">per year of additional headroom. Heavily dependent on peer-utility comparisons we haven't actually run.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Medium.</strong> Requires Light Commission alignment and a defensible peer-utility comparison. Ratepayer optics are real.</p>
+        <p><strong>12 months.</strong> Negotiated and incorporated in the next annual budget cycle.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Electric ratepayers.</strong> A bigger contribution from <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> means slightly higher electric rates to fund it. Whether that's a con depends on you.</p>
+        <p>Big house with central AC, electric heat, and EV charging? Your electric bill is large; a <abbr class="g" title="Payment In Lieu Of Taxes">PILOT</abbr> increase costs you. Senior in an older smaller home with modest electric use but a high property tax bill? You'd come out ahead, because the cost is shifting from your tax bill toward heavier electric consumers. Renters who pay their own electric directly: you'd pay a bit more. Functionally this is a <strong>shift from a property-value tax base to a consumption-based one</strong>, not new money.</p>
+        <p><strong>In real dollars:</strong> a $200K increase in <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr>'s annual contribution, spread across roughly 7,000 to 8,000 ratepayers, works out to an extra $2 to $3 a month on the typical residential electric bill. A high-usage household with central air conditioning and EV charging feels it more, maybe $4 to $6 a month.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li><abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> annual operating revenue and net position from the most recent <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr></li>
+          <li><abbr class="g" title="Payment In Lieu Of Taxes">PILOT</abbr>-to-revenue ratios from Wellesley, Belmont, Concord, Hingham, Mansfield, Reading</li>
+          <li>Posture of the Light Commission on a further increase</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 4: Boat Excise (rewritten honestly) -->
+    <div class="idea" data-cat="rev" id="idea-04">
+      <p class="idea-num">04 &middot; Existing asset</p>
+      <h3 class="idea-title">Audit the boat excise rolls for compliance</h3>
+      <div class="idea-body">
+        <p>Massachusetts taxes recreational boats at <strong>$10 per $1,000 of valuation</strong> under state law (G.L. c. 60B). Marblehead has historically collected around <strong>$150,000 a year</strong> from about 2,000 to 2,300 boats, roughly flat from the mid-2000s through the latest annual reports.</p>
+        <p>The valuations themselves are set by a state formula based on length and age, so a town can't "revalue" boats locally. What a town <em>can</em> do is audit for compliance: identifying boats moored or stored here on July 1 that aren't on the excise rolls. The state's valuation table is also famously low (a brand-new 25-foot boat is valued at around $11,000, far below market), but that's a state legislature issue, not a local one.</p>
+        <p>Honest read: this is small money, possibly not worth the audit cost. Including it because compliance is the only local lever and because there may be undertaxed boats stored or moored here without being registered to Marblehead.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$10K to $30K</span>
+        <span class="idea-guess-cap">per year, optimistically. Possibly less. Genuinely uncertain whether the audit pays for itself.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Easy.</strong> Within the Assessor's existing authority; no vote, no bargaining.</p>
+        <p><strong>6 to 12 months.</strong> Cross-reference Harbormaster and commercial-yard rolls against the excise commitment, then bill.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Boat owners whose vessels are kept in Marblehead but somehow not on the rolls here.</strong> Some are non-residents; some are residents who weren't being caught. Every Massachusetts boat owner pays excise to <em>some</em> town anyway, so this isn't new tax, just correctly-allocated tax. The boat-owning community is small but vocal.</p>
+        <p><strong>In real dollars:</strong> a 25-foot powerboat assessed at $11,000 under the state schedule owes about $110 a year. A 40-foot sailboat assessed at $25,000 owes $250. Boats currently moored or stored in Marblehead but not on the town's excise rolls would start receiving bills at these rates.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Current boat excise commitment and collections from the Assessor (2024, 2025 figures)</li>
+          <li>Roster of boats moored or stored in Marblehead on July 1 (Harbormaster + commercial yards)</li>
+          <li>Cross-reference: which of those boats are not on the Marblehead excise commitment</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 5: Mooring Waitlist -->
+    <div class="idea" data-cat="rev" id="idea-05">
+      <p class="idea-num">05 &middot; Existing asset</p>
+      <h3 class="idea-title">Mooring waitlist transfer fee</h3>
+      <div class="idea-body">
+        <p>Mooring permits in Marblehead Harbor are scarce; <strong>the waitlist is decades long</strong>. When someone gives up their mooring, the next person on the list gets it at the standard annual fee. A transfer fee would put a price on the handoff itself, recognizing that a usable mooring spot has real economic value to the person stepping into it.</p>
+        <p>Politically charged because long-time families view waitlist position as a kind of inheritance. Mooring fees themselves were raised at the 2022 Annual Town Meeting, but the transfer mechanism wasn't.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$25K to $100K</span>
+        <span class="idea-guess-cap">per year, depending entirely on waitlist turnover. Could be way off either direction.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Hard.</strong> Politically charged because of generational waitlist expectations. May require a bylaw amendment.</p>
+        <p><strong>1 to 2 years.</strong> Public process to size the fee, possible Town Meeting vote, then implementation.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Whoever gets to the front of a decades-long waitlist.</strong> Long-time Marblehead families view waitlist position as something to pass to children. Putting a price on the handoff disrupts that social expectation. Progressive in tax incidence (it falls on people receiving a scarce asset) but contentious on cultural grounds, especially with families who've waited two or three generations.</p>
+        <p><strong>In real dollars:</strong> if the fee were set at $5,000 (a typical mid-range number among towns that have adopted similar fees), the next family on a 30-year waitlist pays $5,000 once to accept the mooring assignment, on top of the standard $10-per-foot annual fee.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Waitlist length, average wait time, and annual turnover from the Harbormaster</li>
+          <li>Whether a transfer fee is allowed under current bylaws or would need an amendment</li>
+        </ul>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- COST REDUCTION -->
+<!-- ============================================================ -->
+<section id="cost" class="wcwd-stop wcwd-stop--tinted">
+  <p class="wcwd-eye">Cost reduction <span class="dot">&bull;</span> 10 questions</p>
+  <h2 class="wcwd-section-h2">How can the town spend less?</h2>
+  <p class="wcwd-section-lead">Structural cost work and procurement moves that might be available within existing board authority. Several can begin without any Town Meeting vote.</p>
+
+  <div class="idea-grid">
+
+    <!-- Idea 6: Medicare Advantage -->
+    <div class="idea" data-cat="cost" id="idea-06">
+      <p class="idea-num">06 &middot; Retiree benefits</p>
+      <h3 class="idea-title">Switch retiree health coverage from the state <abbr class="g" title="Group Insurance Commission">GIC</abbr> to a Group Medicare Advantage plan</h3>
+      <div class="idea-body">
+        <p>Retirees over 65 get most of their health coverage from <strong>federal Medicare</strong>. The town pays for a supplemental plan on top, currently through the state's <abbr class="g" title="Group Insurance Commission">GIC</abbr>. Switching that supplemental layer to a different style of coverage, called "Group Medicare Advantage," can cost the town significantly less per retiree.</p>
+        <p>It also changes how retirees access care: <strong>more network restrictions and more prior-authorization paperwork</strong>. Real money on the table, real tradeoffs for retirees. Other Massachusetts cities and towns have done it (Boston, Saugus) and others have studied it. Marblehead has not, per the town's own published list of cost-control measures.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$300K to $900K</span>
+        <span class="idea-guess-cap">per year of town-side savings. Almost certainly the largest dollar item on this page, but needs a real actuarial study before believing it.</span>
+      </div>
+      <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Hard.</strong> Requires an actuarial study, retiree consultation, a competitive carrier procurement, and Public Employee Committee bargaining. Politically the most sensitive item on the page.</p>
+        <p><strong>2 to 3 years.</strong> The pipeline has four roughly sequential phases: an actuarial feasibility study (3 to 6 months), Public Employee Committee consultation under <abbr class="g" title="Massachusetts General Laws">MGL</abbr> c. 32B &sect; 21 to 23 with retiree associations and active unions (3 to 6 months), a competitive carrier procurement to underwrite a Group Medicare Advantage plan (3 to 6 months), and implementation with retiree communications, enrollment support, and a January 1 plan-year start (6 to 12 months). Savings show in the budget the fiscal year after the transition lands.</p>
+      </div>
+      <div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Retirees.</strong> Specifically: retirees with out-of-network specialists, retirees who travel or live part-time in other states, retirees with chronic conditions that involve prior-authorization paperwork. Some retirees may have to switch doctors.</p>
+        <p>This is the item on the page where the cost falls most clearly on a defined group. The town saves real money; some retirees pay in friction, switched providers, or out-of-pocket for care that was previously covered. The decision is not easily reversible. <strong>This one deserves a full feasibility study and retiree consultation before adopting.</strong></p>
+        <p><strong>In real dollars:</strong> a retiree share of <abbr class="g" title="Group Insurance Commission">GIC</abbr> Medicare Indemnity coverage today is roughly $70 to $100 a month. Under a Group Medicare Advantage plan, that might drop to $40 to $60 a month, saving the retiree $300 to $600 a year. But a single visit to an out-of-network specialist that's currently free could cost $150 to $400 out of pocket, and prior-authorization paperwork on a planned procedure could delay it by weeks.</p>
+        <p><strong>In real dollars:</strong> a retiree share of <abbr class="g" title="Group Insurance Commission">GIC</abbr> Medicare Indemnity coverage today is roughly $70 to $100 a month. Under a Group Medicare Advantage plan, that might drop to $40 to $60 a month, saving the retiree $300 to $600 a year. But a single visit to an out-of-network specialist that's currently free could cost $150 to $400 out of pocket, and prior-authorization paperwork on a planned procedure could delay it by weeks.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>FY25 retiree census split by Medicare-eligible (post-65) vs. pre-65, via <abbr class="g" title="Public Records Request">PRR</abbr> to <abbr class="g" title="Chief Financial Officer">CFO</abbr></li>
+          <li>Current enrollment distribution by <abbr class="g" title="Group Insurance Commission">GIC</abbr> plan for post-65 retirees</li>
+          <li>Town vs. retiree premium share by hire date</li>
+          <li>Informal carrier quotes from Tufts, Blue Cross MA, Aetna, Humana for an equivalent Group Medicare Advantage plan</li>
+          <li>Quotes from 2-3 actuarial firms (Segal, Aon, Mercer) for a feasibility study</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 7: ESPC -->
+    <div class="idea" data-cat="cost" id="idea-07">
+      <p class="idea-num">07 &middot; Energy</p>
+      <h3 class="idea-title">Energy Savings Performance Contract on schools and town buildings</h3>
+      <div class="idea-body">
+        <p>Hire a private energy-services company to audit our schools and town buildings, install efficiency upgrades (lighting, heating, controls), and <strong>get paid only out of the energy savings over time</strong>. The town fronts no money. If the projected savings don't materialize, the energy company eats the loss, not us.</p>
+        <p>The state has a pre-vetted procurement process for this through the Department of Energy Resources. Used by hundreds of Massachusetts towns. <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> received a federal grid-resilience grant recently, but that's a separate thing, not a buildings-side energy contract.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$250K to $500K</span>
+        <span class="idea-guess-cap">per year of avoided energy cost, plus $2M to $4M of deferred building maintenance funded from those savings rather than from town capital.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Medium.</strong> No political vote needed. The hard work is the investment-grade audit and selecting an energy company, both slow.</p>
+        <p><strong>12 to 24 months</strong> from RFP to first energy-bill savings. Bigger maintenance benefits show up across the contract life.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>The town, over 10 to 20 years, through the savings stream.</strong> "No upfront cost" is true but slightly misleading: the energy company is financing the upgrades at their margin and capital cost. Over the contract life, the town pays full retail for the upgrades plus the energy company's spread, not the wholesale cost.</p>
+        <p>The "guaranteed savings" usually has carve-outs (weather adjustments, utility-rate changes, occupancy variations). It's a real tool with a real track record, but the energy company is a for-profit entity and the contract reflects that. Long-term lock-in is the trade for zero upfront capex.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Five-year electric load profiles per municipal and school building from <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr></li>
+          <li>Five-year heating fuel and oil consumption from <abbr class="g" title="Department of Public Works">DPW</abbr> and the school facilities director</li>
+          <li>Department of Energy Resources Green Communities preliminary energy assessment (free)</li>
+          <li>Indicative scope from 2 or 3 pre-qualified energy companies (Ameresco, Honeywell, Trane, ENGIE, Schneider)</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 8: Shared back office -->
+    <div class="idea" data-cat="cost" id="idea-08">
+      <p class="idea-num">08 &middot; Operations</p>
+      <h3 class="idea-title">Expand shared back-office services between town and schools</h3>
+      <div class="idea-body">
+        <p>Marblehead's town side and school side currently run separate finance, <abbr class="g" title="Information Technology">IT</abbr>, <abbr class="g" title="Human Resources">HR</abbr>, and procurement teams. There's no legal barrier to sharing them. What state law (<abbr class="g" title="Massachusetts General Laws">MGL</abbr> c. 71 &sect; 37) does say is that the School Committee retains <strong>final approval over its own budget</strong> within the lump sum Town Meeting appropriates, and that school employees report to the superintendent rather than the town administrator. The two structures can't be merged into one, but the services can be shared by agreement.</p>
+        <p>Many other Massachusetts towns share: combined <abbr class="g" title="Information Technology">IT</abbr>, joint procurement, shared payroll processing, sometimes a unified facilities team. Wellesley runs a single Director of Finance &amp; Administration serving both sides. <strong>The barrier in Marblehead is political, not legal:</strong> both the Select Board and the School Committee have to want to share, and so far both sides have largely run parallel operations.</p>
+        <p>The question has been raised locally. In December 2025 the School Committee discussed shared services with town departments for facilities and maintenance.<sup class="cite" data-href="/meetings/school-committee-2025-12-01/" data-source="School Committee minutes, 2025-12-01, FY27 School Department Budget Planning and Reporting: 'Deeper analysis of custodial and maintenance staffing planned but not yet completed. Committee suggested exploring shared services with town departments and a permanent building committee for large capital projects oversight.' (quote_verified=true in catalog)"></sup> In January 2024 the Select Board reported "implementing cost sharing collaboratives."<sup class="cite" data-href="/meetings/select-board-2024-01-24/" data-source="Select Board minutes, 2024-01-24, FY2025 State of the Town: 'The Board recently adopted financial policies enacting best practices and advice from the Department of Revenue as well as implementing cost sharing collaboratives and is pursuing organization and operational reviews and exploring a town charter.' (quote_verified=true in catalog)"></sup> The 2024 CliftonLarsonAllen assessment of the town finance department produced 23 recommendations, 15 implemented by March 2024. A formal joint structure assessment hasn't been published.</p>
+        <p><strong>Realistic read:</strong> the most likely move in 24 to 36 months is incremental sharing on facilities or maintenance, since that's the area the School Committee has actually named. A unified Director of Finance role on the Wellesley model is politically heavy and unlikely in this window: supervisor authority is hard to resolve when the Select Board and the School Committee disagree, separate union contracts add friction, and neither side has had a forcing function until the current deficit. Treat the rough guess above as the optimistic end of what's realistic.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$100K to $300K</span>
+        <span class="idea-guess-cap">per year over a 24-36 month window, from incremental shared functions, not from a wholesale combine.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Hard.</strong> Requires Select Board and School Committee alignment plus union conversations on any role moves.</p>
+        <p><strong>3 to 5 years</strong> for material savings. Union contracts and political cost make layoffs slow and expensive; natural attrition (roughly 4 to 8 percent of staff per year through retirement and voluntary departures) is the rate that's available. An early-retirement incentive program can compress the timeline to 18 to 24 months at a cost of roughly $30K to $80K per employee accepting, eating into year-one savings.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Back-office staff in roles that get reorganized.</strong> Most savings come through attrition: when someone retires, the position is restructured rather than refilled. No one is laid off, but workloads on remaining staff get heavier during transition. Service quality often dips for a year or two while systems consolidate.</p>
+        <p>School-side staff sometimes feel the move is a takeover by the town side. The legal structure (school committee budget autonomy) means any shared service has to be a formal agreement, not a merger.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Headcount and salary for finance, <abbr class="g" title="Information Technology">IT</abbr>, <abbr class="g" title="Human Resources">HR</abbr>, and procurement on each side</li>
+          <li>List of software systems run separately by each side</li>
+          <li>The original CliftonLarsonAllen Finance Department Assessment report</li>
+          <li>Select Board and School Committee posture on a joint working group</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 9: IMA -->
+    <div class="idea" data-cat="cost" id="idea-09">
+      <p class="idea-num">09 &middot; Regional</p>
+      <h3 class="idea-title">Expand inter-municipal sharing with neighbor towns</h3>
+      <div class="idea-body">
+        <p>State law (G.L. c. 40 &sect; 4A) lets two or more towns formally share a service or a staff member, with cost split between them. Marblehead has <strong>one recent example</strong>: the Select Board approved a joint ambulance services contract with Swampscott and Beauport Ambulance Services in July 2025, providing one fully staffed ALS ambulance plus additional coverage, with cost-sharing and a 6-month opt-out clause.<sup class="cite" data-href="/meetings/select-board-2025-07-23/" data-source="Select Board minutes, 2025-07-23, Ambulance Contract: 'This is a joint contract, approved by Swampscott the night before, which will provide enhanced competitiveness and include provisions for response times, performance oversight, and a 6-month notification period for municipalities to opt out. Beauport, which has experience serving multiple towns, will provide one fully staffed ALS ambulance and additional BLS coverage, with new co-branded vehicles.' Motion approved unanimously; contract begins August 15. (quote_verified flag not yet set in catalog)"></sup> The model works locally.</p>
+        <p>Beyond ambulance, the natural candidates are staff roles where the workload is well under one full-time position for either town alone: assistant assessor, alternate building inspector, veterans agent, joint procurement officer. Each shared role saves the town roughly half a full-time position relative to going alone. Slow to set up but the legal mechanism is well-trodden.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$50K to $150K</span>
+        <span class="idea-guess-cap">per year per shared role. Depends entirely on which role and which neighbor.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Medium.</strong> Needs a willing partner town. The legal mechanism is well-trodden; the hard part is matching workloads and supervisory comfort.</p>
+        <p><strong>1 to 2 years</strong> per shared role, from initial conversation to a functioning shared employee.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>The shared employee, and any Marblehead resident who needs them quickly.</strong> The shared role now has two bosses. Marblehead-specific tasks compete with the neighbor's priorities. Slower response on issues that aren't urgent to both towns. Marblehead also has less unilateral authority over hiring, firing, and discipline of that role.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Current cost of each candidate role on the Marblehead side</li>
+          <li>Posture from Swampscott and Salem on a shared-services partnership</li>
+          <li>Existing shared-services precedents elsewhere on the North Shore for reference</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 10: Permitting -->
+    <div class="idea" data-cat="cost" id="idea-10">
+      <p class="idea-num">10 &middot; Operations</p>
+      <h3 class="idea-title">Move building permits and inspections fully online</h3>
+      <div class="idea-body">
+        <p>Building permits, inspection sign-offs, and zoning approvals still need <strong>paper forms and in-person counter visits</strong> in many workflows, even though Marblehead has had permitting software in place since the Select Board awarded a 3-year, $44,420 contract to Viewpoint Government Solutions in April 2019.<sup class="cite" data-href="/meetings/select-board-2019-04-24/" data-source="Select Board minutes, 2019-04-24, Contract Permitting Software: 'Motion made and seconded to award a three year contract for permitting software to Viewpoint Government Solutions Inc. of Boston, MA in the amount of forty four thousand four hundred and twenty dollars ($44,420.00) and to authorize the Chair to sign the contract on behalf of the Board. All in favor.'"></sup> Modern permitting platforms (OpenGov, which the town already uses for procurement; Tyler; Energov) let residents file, pay, and track everything online. The town adopted OpenGov for procurement bids in 2025; extending it to permitting is a natural next step.</p>
+        <p>Honest math: this is <strong>roughly cost-neutral in the short term and a small net savings long term</strong>, not a meaningful dollar play. A permitting platform for a town Marblehead's size typically costs $30K to $80K per year in licensing plus $30K to $80K one-time to implement. The savings come from a fraction of a full-time position recovered over a 1 to 2 year ramp, plus a small acceleration in when permit revenue hits the books. Real benefits beyond dollars: faster permit cycles for residents, better data and oversight, and less paper.</p>
+        <p>The case for it is service quality and modernization, not budget savings. Worth noting that, even if the question framing on this page is about closing the deficit.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">Roughly cost-neutral</span>
+        <span class="idea-guess-cap">Gross savings $50K to $100K per year; software and licensing $30K to $80K per year. Net somewhere between break-even and $40K per year positive after a 1 to 2 year payback. Modest.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Easy</strong> as procurement; harder as a workflow change. Extends an existing OpenGov footprint.</p>
+        <p><strong>12 to 18 months.</strong> Procurement, configuration, training, transition. Resident-side benefits show up first.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>The town up front, in software acquisition, training, and a transition year.</strong> Older residents and people without reliable internet face a learning curve and may need help getting their permits through. Inspectional Services will need to staff a help line at the counter during transition. Net financial win is small and slow; the case for doing it has to rest on service quality, not savings.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Current permit volume and average cycle time</li>
+          <li>Vendor quotes for the OpenGov permitting module, Energov, or Tyler</li>
+          <li>Current Inspectional Services staffing baseline</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 11: Premium split for active employees -->
+    <div class="idea" data-cat="cost" id="idea-11">
+      <p class="idea-num">11 &middot; Benefits</p>
+      <h3 class="idea-title">Renegotiate the 83% health-insurance premium share for active employees</h3>
+      <div class="idea-body">
+        <p>Marblehead pays <strong>83% of the health insurance premium</strong> for active employees; the employee pays 17%. Across eight Massachusetts peer towns surveyed for FY2026, that 83% share is tied with Brookline for the highest; the median is 78%, and Wellesley (78%), Winchester (75%), Natick (75%), and Hingham (50%) all pay less.<sup class="cite" data-href="/how-we-got-here.html" data-source="Peer-town FY26 premium splits compiled from primary rate sheets, collective bargaining agreements, and Public Employee Committee agreements for Brookline, Stoneham, Melrose, Wellesley, Winchester, Natick, and Hingham. Per-town data in data/peer_premium_splits.csv."></sup> Marblehead's 83% applies flat across every plan, so the town absorbs the full cost differential when an employee picks a more expensive plan. <a href="/how-we-got-here.html">How we got here</a> covers the structural cost drivers in more detail.</p>
+        <p>Moving from 83/17 to 75/25 on the most-enrolled plans would shift roughly <strong>$1.3 million a year</strong> from the town to employees at current <abbr class="g" title="Group Insurance Commission">GIC</abbr> family-plan rates and estimated enrollment, on the order of $150,000 to $200,000 for each percentage point of share.<sup class="cite" data-href="/data/" data-source="Estimated from current GIC family plan rates and estimated Marblehead enrollment: moving from 83/17 to 75/25 on the most-enrolled plans would shift roughly $1.3M per year from the town to employees."></sup></p>
+        <p>The catch is well-documented and important: <strong>unions almost always trade premium-share concessions for wage increases</strong>, so net savings come in materially smaller than the headline. Hingham bargains a flat 50/50 split, and its teachers earn about $16,000 more in base salary than Marblehead's ($107,109 vs. $90,696) at nearly the same per-pupil spending, a structure that shifts compensation out of insurance (growing 8 to 11% a year) and into salary (growing 2 to 3%).<sup class="cite" data-href="/data/" data-source="DESE teacher salary and per-pupil spending data: Hingham average teacher salary $107,109 vs. Marblehead $90,696 at comparable per-pupil spending."></sup> Whether the trade nets out depends on whether wage growth or health-cost growth dominates over time.</p>
+        <p>This is bargained item-by-item with each union. Police, fire, <abbr class="g" title="Department of Public Works">DPW</abbr>, school staff, and town hall all sit in different bargaining units; each contract cycle is a separate opportunity. None has been moved publicly.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$300K to $1.5M</span>
+        <span class="idea-guess-cap">per year, net of likely wage offset, over a multi-year bargaining horizon. The full range is wide because the wage-offset assumption dominates the math.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Hard.</strong> Multi-union bargaining. A concession in one contract sets precedent for the others; sequencing matters.</p>
+        <p><strong>3 to 6 years.</strong> Marblehead has separate contracts for police, fire, <abbr class="g" title="Department of Public Works">DPW</abbr>, school custodial, teachers, and town clerical, each running roughly 3 years on its own clock. The premium share is a bargained term that can't be changed unilaterally; you can only move it at contract opening (or by a voluntary mid-contract reopener, which unions rarely grant without offsetting concessions). The first union to accept a new split sets precedent for the rest, so sequencing matters. Savings ramp in as each unit moves, partially counter-flowing with the wage increases unions trade for the concession.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Active employees, through higher premium contributions, partially offset by wage increases over time.</strong> A flat percentage-point change hits lower-paid employees harder than higher-paid ones in absolute terms, since the same percentage of a smaller premium is still a meaningful chunk of a smaller paycheck. The wage offset typically lands on base salary, which then compounds in pensions, so the long-run distributional effects favor higher-tenure employees.</p>
+        <p><strong>In real dollars:</strong> an employee with $25,000 annual total premium currently pays 17 percent, or $4,250 out of pocket. At a 78/22 split, they'd pay $5,500, about $100 a month more. Where peer towns have moved the split, unions have generally bargained offsetting base-salary increases, so the employee's net loss is smaller than the premium change alone, and the town's net savings are smaller too.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Current Marblehead 83% rate confirmed across all bargaining units (some may already be lower)</li>
+          <li>The year each peer town last moved its split. The FY2026 snapshot across eight towns is already compiled (Brookline, Stoneham, Melrose, Wellesley, Winchester, Natick, Hingham); the historical trajectory is not.</li>
+          <li>Hingham's actual contract-by-contract savings net of wage trade</li>
+          <li>Status of current active contracts and their open dates</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 12: Spousal surcharge / carve-out -->
+    <div class="idea" data-cat="cost" id="idea-12">
+      <p class="idea-num">12 &middot; Benefits</p>
+      <h3 class="idea-title">Add a spousal surcharge or carve-out on the health plan</h3>
+      <div class="idea-body">
+        <p>The mechanism: <strong>if a town employee's spouse has access to coverage through their own employer</strong>, the spouse either (a) pays a monthly surcharge of around $50 to $150 to stay on Marblehead's plan, or (b) is excluded and must use their own employer's coverage. The first version is called a "spousal surcharge"; the second is called a "spousal carve-out."</p>
+        <p>The equity argument is clean: <strong>the town probably shouldn't subsidize spouses whose own employer offers comparable coverage</strong>. The mechanism is common among large private employers (Boeing, Walmart) and appears in some public-sector plans elsewhere, but this research pass turned up no Massachusetts municipality that has adopted a working-spouse surcharge or carve-out, and whether a town can lawfully surcharge or exclude an eligible spouse under the state municipal-insurance statute (<abbr class="g" title="Massachusetts General Laws">MGL</abbr> c. 32B, the law governing town and city employee group insurance) is not well established.<sup class="cite" data-href="https://www.mass.gov/info-details/coverage-and-eligibility-for-municipal-group-insurance" data-source="Coverage and Eligibility for Municipal Group Insurance, Mass.gov (MGL c. 32B framework). A web research pass in June 2026 found no named Massachusetts municipality that has adopted a working-spouse surcharge or carve-out; the statute's footing for a town to surcharge or exclude an eligible spouse is unsettled."></sup> The cleaner, clearly-permitted version of this lever in Massachusetts is the voluntary <a href="#idea-15">opt-out buyout in idea 15</a>. Either version requires annual attestation from employees about spouse employment and coverage availability, which carries an administrative cost.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$100K to $400K</span>
+        <span class="idea-guess-cap">per year, depending on how many town employees have spouses with their own employer-offered coverage. Highly dependent on the actual demographics, which we haven't seen.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Hard.</strong> Bargained item plus annual attestation infrastructure to administer.</p>
+        <p><strong>2 to 4 years.</strong> Same multi-union dynamic as item 11: bargained term, can only move at contract opening, sequencing matters for precedent. Lands faster than the premium-split fight because the concession is narrower (it changes the cost of covering a spouse, not the cost of the employee's own coverage), so the wage-offset demand tends to be smaller. Add 6 to 12 months for <abbr class="g" title="Human Resources">HR</abbr> to stand up the annual attestation, verification, and audit process before the first surcharge collections.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Couples where both spouses have full-time jobs with benefits.</strong> Some of those spouses are on Marblehead's plan specifically because it's better than the alternative; for them, the surcharge or carve-out is a real loss. Couples where only one spouse works in benefited employment are unaffected. Bargained with unions; takes a contract cycle.</p>
+        <p><strong>In real dollars:</strong> a town employee whose spouse has access to coverage through their own employer pays an extra $50 to $150 a month, or $600 to $1,800 a year, to keep that spouse on Marblehead's plan instead of moving them to the spouse's plan.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Town-side estimate of how many covered spouses have access to their own employer's plan</li>
+          <li>Whether a Chapter 32B municipality may lawfully surcharge or exclude an eligible spouse, ideally a town counsel or Division of Local Services opinion. A June 2026 web pass found no Massachusetts municipal precedent and no clear statutory authority, which is the open question here.</li>
+          <li>Implementation cost of annual attestation and audit</li>
+          <li>Union posture in current bargaining</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 13: Overtime audit -->
+    <div class="idea" data-cat="cost" id="idea-13">
+      <p class="idea-num">13 &middot; Personnel</p>
+      <h3 class="idea-title">Audit overtime patterns in police, fire, and <abbr class="g" title="Department of Public Works">DPW</abbr></h3>
+      <div class="idea-body">
+        <p>Overtime in public-safety and public-works departments is typically the largest discretionary personnel-cost variable in a town budget. Marblehead's police, fire, and <abbr class="g" title="Department of Public Works">DPW</abbr> all run material overtime. The honest accounting is more complicated than it sounds:</p>
+        <p><strong>Some overtime is reimbursed and isn't on the town's tab</strong>, police details paid for by Eversource, utility contractors, or developers; some fire mutual-aid time. <strong>Some overtime is structural, not discretionary</strong>, minimum-staffing rules in fire contracts, court appearances, sick coverage, mandatory training. <strong>Some overtime is genuinely cheaper than hiring</strong>, overtime is 1.5x wage with no benefits add-on; a new full-time hire is 1x wage plus roughly 40% in benefits and pension cost, so the breakeven is real.</p>
+        <p>An audit can find: shift-assignment patterns that drive avoidable overtime, departments where adding one position would actually save money over current overtime, and reimbursable details that are being miscoded. A formal review hasn't been surfaced in the public record.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$50K to $300K</span>
+        <span class="idea-guess-cap">per year of net savings, after accounting for non-discretionary overtime. Smaller than several other items on this page. Not a silver bullet, but real money.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Easy to commission.</strong> Within Town Administrator authority and standard procurement.</p>
+        <p><strong>6 to 12 months</strong> for the audit and report. Implementation of any recommendations a further 1 to 2 years, depending on which department.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Public-safety and public-works employees who currently earn meaningful overtime income.</strong> For many of them, overtime is not a windfall, it's a planned portion of household income, often used to compensate for relatively modest base salaries. Cutting it can feel like a pay cut even when the policy is sound. Also: if the audit recommends additional hiring rather than less coverage, the upfront cost shows before the savings.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Five-year overtime totals by department, broken out by category (detail, court, minimum-staffing, sick coverage, training)</li>
+          <li>Reimbursement rate on detail work</li>
+          <li>Marginal cost of an additional full-time hire (wages plus benefits)</li>
+          <li>Comparable overtime ratios from peer-town public safety departments</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 14: Schedule fragmentation (caution) -->
+    <div class="idea" data-cat="cost" id="idea-14">
+      <p class="idea-num">14 &middot; Benefits</p>
+      <h3 class="idea-title">Restructure part-time positions to avoid benefit eligibility</h3>
+      <div class="idea-body">
+        <p>The mechanism: in Massachusetts, employees become eligible for town-paid health insurance once they work <strong>20 or more hours per week on a regular basis</strong>. Some employers structure part-time jobs at 18 or 19 hours specifically to stay below that threshold and avoid the benefit cost.</p>
+        <p>Considerations that limit its use as a primary cost-reduction lever:</p>
+        <ul style="font-size:14.5px;line-height:1.6;color:var(--text);margin:0 0 12px 18px;padding:0;">
+          <li>Federal Affordable Care Act lookback rules require averaging hours over a 6 to 12 month measurement period, which constrains how strictly hours can be capped.</li>
+          <li>The dollar impact in Marblehead is probably small; the town doesn't have many marginal positions at 20 to 25 hours where it could be applied.</li>
+          <li>The positions where it would apply (school cafeteria, library aides, Council on Aging assistants, custodial) tend to be the lowest-paid in the town's payroll. Removing benefit access narrows the value of those jobs to workers, with downstream effects on turnover and recruiting.</li>
+          <li>Comparable MA towns generally pursue benefit-cost reduction through the bargained levers above (Medicare Advantage, premium split, spousal surcharge) rather than through schedule restructuring.</li>
+        </ul>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$20K to $100K</span>
+        <span class="idea-guess-cap">per year, optimistically, before turnover and recruiting costs. Materially smaller lever than items 06, 11, or 12.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Hard in practice.</strong> ACA lookback rules constrain it; reputational and recruiting costs are real. Few MA towns use it as a primary lever.</p>
+        <p><strong>No comparable timeline.</strong> Few MA municipalities use this as a structured cost-reduction program, so there's no representative implementation pace to cite.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Low-wage workers in part-time roles.</strong> Many of these positions are held by retirees supplementing pensions, students, or second-earners in families with primary jobs elsewhere. Losing benefit eligibility means losing health coverage or paying for it elsewhere. Turnover in affected positions tends to rise; recruiting difficulty follows.</p>
+        <p><strong>In real dollars:</strong> a school cafeteria worker scheduled at 22 hours a week today (roughly $22,000 in salary plus $22,000 in benefits) restructured to 18 hours would lose access to town health insurance. Replacement coverage on the <abbr class="g" title="Affordable Care Act">ACA</abbr> marketplace typically costs $400 to $800 a month with higher deductibles and copays.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Count of current Marblehead part-time positions at 20 to 25 hours/week</li>
+          <li>ACA lookback compliance constraints in Marblehead's plan design</li>
+          <li>Historical turnover rates in affected positions</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 15: Health-plan opt-out buyout -->
+    <div class="idea" data-cat="cost" id="idea-15">
+      <p class="idea-num">15 &middot; Benefits</p>
+      <h3 class="idea-title">Pay employees to waive coverage when they have access through a spouse</h3>
+      <div class="idea-body">
+        <p>The mechanism: <strong>if a town employee has access to health coverage through a spouse's employer, they can choose to waive Marblehead's plan in exchange for a fixed annual cash payment</strong>, typically $1,500 to $5,000. The town saves the difference between its premium share (around $15,000 to $23,000 per family plan at 83%) and the buyout payment &ndash; net savings of $13,000 to $20,000 per employee who opts out.</p>
+        <p>This is the <strong>carrot version</strong> of the spousal surcharge in <a href="#idea-12">idea 12</a>. Where the surcharge raises the price for dual-coverage families, the opt-out incentive pays them to leave entirely. The two can run in parallel. Massachusetts municipalities already do this: Grafton runs a town opt-out program, paid monthly through payroll to employees who document other coverage,<sup class="cite" data-href="https://www.grafton-ma.gov/198/Health-Insurance-Opt-out-Program" data-source="Town of Grafton, MA, Health Insurance Opt-out Program. Incentive offered to enrollees who had town coverage for the prior 12 months and provide written documentation of alternative coverage; payment is taxable income paid monthly through payroll."></sup> and Boston pays roughly $1,000 to $1,500 a year to waive an individual plan and $1,500 to $2,500 to waive a family plan.<sup class="cite" data-href="https://www.boston.gov/sites/default/files/imce-uploads/2019-05/city_of_boston_opt-out_program_fy20.pdf" data-source="City of Boston Opt-Out Program (FY20 program document): $1,000 or $1,500 annually to waive an individual plan; $1,500 or $2,500 annually to waive a family plan, for employees covered under another medical plan."></sup> The state's own <abbr class="g" title="Group Insurance Commission">GIC</abbr> buy-out pays 25 percent of the premium to waive coverage, but that program is limited to state employees, so towns adopt their own.<sup class="cite" data-href="https://www.mass.gov/info-details/health-insurance-buy-out-program" data-source="Massachusetts Health Insurance Buy-Out Program, Mass.gov: eligible state employees and retirees receive 25% of the full-cost monthly premium in lieu of coverage for a 12-month period; municipal members are not eligible for the state program."></sup> Uptake is typically 5 to 15 percent of eligible employees with spouses on benefited employment elsewhere.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Rough guess</span>
+        <span class="idea-guess-num">$180K to $630K</span>
+        <span class="idea-guess-cap">per year, sized at 10 to 30 opt-outs (5 to 15 percent of roughly 200 dual-eligible town employees) at $18K to $21K net savings each. Highly sensitive to the actual demographics and the buyout amount chosen. Politically easier than idea 12 because the lever is voluntary and accretive.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Medium.</strong> Still bargained, but the trade is cleaner than the premium-split fight: the lever is voluntary and shared.</p>
+        <p><strong>1 to 3 years.</strong> Bargained the same way as items 11 and 12, but lands faster because the trade is voluntary and accretive: the buyout pays employees to waive coverage they have through a spouse, so no one loses access to anything. Uptake then builds over time: year 1 captures the most eager waivers, year 2 the next tranche as employees who initially declined see colleagues take it, year 3 reaches steady-state. Savings start in year 1 but compound through year 3.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Almost nobody directly &ndash; that's why it works.</strong> Employees who opt out get cash and keep coverage through their spouse. Employees who keep town coverage are unaffected. The town saves real money. The catch is administrative: to keep the cash from counting against the <abbr class="g" title="Affordable Care Act">ACA</abbr> affordability test (and untaxed for employees who decline it), the buyout has to be structured as an "eligible opt-out arrangement" through a Section 125 plan, meaning the payment is conditioned on proof of other coverage rather than offered unconditionally.<sup class="cite" data-href="https://www.irs.gov/pub/irs-drop/n-15-87.pdf" data-source="IRS Notice 2015-87, Q&A on opt-out payments: an 'unconditional' opt-out payment is treated like a salary-reduction contribution and counts toward the employee's required contribution for ACA affordability; an 'eligible opt-out arrangement' (conditioned on proof of other coverage) is excluded from that calculation."></sup> The amount also has to be high enough to drive uptake but low enough to keep the net savings worth it. Bargained with unions, but typically less contentious than the spousal surcharge.</p>
+        <p><strong>In real dollars:</strong> an employee whose spouse covers them on a strong employer plan could accept an annual buyout of, say, $5,000 to waive the town's coverage entirely. The town saves roughly $20,000 (the cost of insuring them) net of the buyout. The employee gets $5,000 of cash for a benefit they were doubling up on.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Town-side estimate of how many employees have spouses with their own employer-offered coverage</li>
+          <li>Actual uptake rates from Massachusetts towns that run these programs (Grafton and Boston both do; their published participation rates aren't collected here yet)</li>
+          <li>Recommended buyout amount that drives uptake without eroding savings</li>
+          <li>Confirm the "eligible opt-out arrangement" structure with the town's benefits counsel (the federal rule is identified; Marblehead-specific plan design is not)</li>
+          <li>Union posture in current bargaining</li>
+        </ul>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- GOVERNANCE -->
+<!-- ============================================================ -->
+<section id="governance" class="wcwd-stop">
+  <p class="wcwd-eye">Governance and process <span class="dot">&bull;</span> 3 questions</p>
+  <h2 class="wcwd-section-h2">How can the town make decisions differently?</h2>
+  <p class="wcwd-section-lead">These don't generate dollars themselves. They're the structures that decide whether the items above get pursued or shelved.</p>
+
+  <div class="idea-grid">
+
+    <!-- Idea 16: Efficiency Commission -->
+    <div class="idea" data-cat="gov" id="idea-16">
+      <p class="idea-num">16 &middot; Bylaw</p>
+      <h3 class="idea-title">Create a standing citizen Efficiency and Shared Services Commission</h3>
+      <div class="idea-body">
+        <p>Create a <strong>permanent citizen commission, written into the town bylaws</strong>, whose only job is to find cost savings and shared-service opportunities and report to the Select Board, School Committee, and Finance Committee annually before each budget cycle.</p>
+        <p>Without formal standing in the bylaws, advisory groups tend to get politely ignored. With formal standing and a reporting deadline tied to the budget, they're harder to brush aside. The CliftonLarsonAllen assessment in 2024 was a one-time consulting engagement, not a recurring body.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Indirect, not direct</span>
+        <span class="idea-guess-num">No direct dollars</span>
+        <span class="idea-guess-cap">The commission itself produces no revenue. What it produces is recommendations. Peer-town efficiency commissions have surfaced anywhere from nothing to several million per year, depending heavily on composition and authority.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Medium.</strong> The bylaw vote is easy; the commission's quality, composition, and forcing-function are what determine impact.</p>
+        <p><strong>6 months</strong> to adopt the bylaw at the next Town Meeting. <strong>1 to 2 years</strong> for the first set of substantive findings.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Department staff who get audited, and residents who serve on the commission.</strong> Commission seats become contested; the commission's quality depends entirely on membership. Recommendations land on already-busy department heads who can implement them or quietly ignore them. Done well, it produces real savings; done poorly, it produces friction without much else.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Sample bylaw language from peer towns that have stood up similar bodies</li>
+          <li>Composition appropriate to Marblehead (size, terms, appointing authority)</li>
+          <li>Reporting cadence and forcing function tied to the budget cycle</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 17: Zero-Based Budgeting -->
+    <div class="idea" data-cat="gov" id="idea-17">
+      <p class="idea-num">17 &middot; Budget process</p>
+      <h3 class="idea-title">Rebuild the top three department budgets from $0 once every few years</h3>
+      <div class="idea-body">
+        <p>Most departments build next year's budget by <strong>starting with last year's number and adding inflation</strong>. "Zero-based budgeting" starts from $0 and forces every line to be re-justified from scratch. It's a heavy lift, but done once every few years per department, it resets baselines and uncovers spending that nobody currently remembers approving.</p>
+        <p>Schools, Police, and Fire account for about 70% of operating, so they're the natural targets. Zero-based budgeting has come up at School Committee at least four times: a 2020-06-08 commitment to develop a zero-based budget for FY22,<sup class="cite" data-href="/meetings/school-committee-2020-06-08/" data-source="School Committee minutes, 2020-06-08, Public Hearing on the Proposed FY21 School Budget: 'Mr. McAlduff stated the School Committee would need to meet and possibly include the town finance side and write down what definition of a zero based budget we would be using as there are several varying definitions.' (quote_verified=true in catalog)"></sup> a 2022-07-19 overview by the Finance Director proposing an October start with intensive staffing review,<sup class="cite" data-href="/meetings/school-committee-2022-07-19/" data-source="School Committee minutes, 2022-07-19, Zero Based Budget Presentation by Michelle Cresta: 'Assistant Superintendent of Finance and Operations, Michelle Cresta gave an overview of what a zero based budgeting approach would entail. It was explained that the process was created to justify costs based on need in every salary line. Ms. Cresta also provided recommendations for planning for the FY24 budgeting season including beginning the process in October while incorporating an intensive overview of staffing levels, which was last completed some time ago.' (quote_verified=true in catalog)"></sup> a 2023-07-06 proposal to work with an outside consultant on staffing specifically,<sup class="cite" data-href="/meetings/school-committee-2023-07-06/" data-source="School Committee minutes, 2023-07-06, FY24 Budget Discussions: 'Ms. Schaeffner mentioned working with administration to look at a zero-based budgeting for staffing specifically. She also recommended bringing in an outside consultant to complete the process. It was recommended that the discussion be continued at a meeting in August.' (quote_verified=true in catalog)"></sup> and a 2025-10-17 request for a zero-based approach examining staffing against enrollment projections.<sup class="cite" data-href="/meetings/school-committee-2025-10-17/" data-source="School Committee minutes, 2025-10-17, FY27 Budget Planning Discussion and Staffing Analysis: 'Committee requested zero-based budgeting approach examining staffing needs by building based on enrollment projections. Superintendent noted current process already considers contractual obligations and service requirements. Enrollment declined 800 students over eight years, requiring staffing justification. Level funding with contractual increases estimated to require $1.7 million in cuts. Potential elimination of approximately 30 professional staff positions (10% of staff).' (quote_verified flag not yet set in catalog)"></sup> No published board action in the catalog of 331 minute-level entries (FY19&ndash;present) constitutes a formal zero-based exercise. The most recent attempt &ndash; the Oct 17, 2025 request, with methodology development promised for an Oct 28 meeting &ndash; was overtaken at the next School Committee meeting on Oct 30, 2025, where the Budget Subcommittee instead directed all departments to prepare level-service budgets.<sup class="cite" data-href="/meetings/school-committee-2025-10-30/" data-source="School Committee minutes, 2025-10-30, Budget Subcommittee Report: 'Budget subcommittee met twice with finance committee liaison; all departments directed to prepare level service budgets and laid out a timeline (December preliminary information).' The Oct 30 minutes (data/minutes/school_committee/2025-10-30.cleaned.txt) contain no mention of zero-based budgeting, methodology, or the school-by-school staffing breakdowns the Superintendent had committed to on Oct 17."></sup></p>
+        <p>A three-year operating forecast for FY26 through FY28 exists, but that's a different exercise from zero-based budgeting on an individual department.</p>
+        <p><strong>Honest read on the label:</strong> strict line-by-line zero-based budgeting is rare in Massachusetts municipal practice. What towns actually run under the "ZBB" label is usually a scoped department review (often staffing-focused), not a full rebuild from $0. Marblehead's own four School Committee discussions are consistent with this; the 2022-07-19 entry explicitly noted "current staffing would not be adequate to fully implement zero-based budgeting." The term does more rhetorical work than methodological work. The lever is real; the label is loose.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Indirect, not direct</span>
+        <span class="idea-guess-num">$500K to $1.5M</span>
+        <span class="idea-guess-cap">per cycle of potential reallocation, declining over time as baselines reset. Highly speculative until tried locally.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Medium.</strong> School Committee has discussed it four times without adopting; needs management capacity and a willing department.</p>
+        <p><strong>1 to 2 years per cycle.</strong> What ships under the ZBB label is usually a scoped staffing review on that timeframe, not a full rebuild.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>Department staff.</strong> The exercise is several weeks of line-by-line justification work on top of their regular duties. Demoralizing if framed as "we don't trust your judgment." Some departments learn to game zero-based budgeting by reorganizing line items rather than rethinking spending. Done as a partnership it produces real reallocations; done as an audit it just produces friction.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>What MA municipalities have actually implemented under the zero-based label, and whether any has run line-by-line rather than scoped to staffing review</li>
+          <li>Departmental appetite from Schools, Police, Fire</li>
+          <li>Resource cost of running it (typically a quarter of one staff person's time per major department)</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Idea 18: Performance audit -->
+    <div class="idea" data-cat="gov" id="idea-18">
+      <p class="idea-num">18 &middot; Audit</p>
+      <h3 class="idea-title">Commission a formal performance audit of the major cost centers</h3>
+      <div class="idea-body">
+        <p>A <strong>performance audit</strong> is different from the annual financial audit Marblehead already has. A financial audit verifies that the books are accurate and follow accounting standards. A performance audit asks a different question: <strong>is the department achieving its goals efficiently, effectively, and economically?</strong> It's conducted against federal Generally Accepted Government Auditing Standards (the "Yellow Book"). Massachusetts cities and towns can engage the State Auditor's Division of Local Mandates, or outside firms like BerryDunn, Plante Moran, or ICMA Consulting.</p>
+        <p>Marblehead has had narrower, adjacent work. The 2024 CliftonLarsonAllen assessment of the town finance department was an operational review (15 of 23 recommendations implemented by March 2024); that engagement traces back to a 2021-04-22 Select Board vote awarding the firm a $15,000 contract.<sup class="cite" data-href="/meetings/select-board-2021-04-22/" data-source="Select Board minutes, 2021-04-22, Contract Operational Audit: 'Motion made and seconded to award a contract for an operational audit to Clifton Larson Associates of Lexington, MA in an amount not to exceed fifteen thousand dollars ($15,000.00) and authorize the Chair to sign on behalf of the Board.' Motion passed on a polled vote (Grader in favor, Nye in favor, Belf-Becker in favor). The firm later rebranded as CliftonLarsonAllen."></sup> The annual Roselli, Clark &amp; Associates engagement is a financial audit, not a performance audit. <strong>The major operating cost centers, schools, police, fire, <abbr class="g" title="Department of Public Works">DPW</abbr>, have not been reviewed under performance-audit standards.</strong></p>
+        <p>A broader independent audit reached the floor of the 2025 Annual Town Meeting as <strong>Article 46</strong>, which proposed appropriating $100,000 from free cash for an independent town audit. The sponsor moved indefinite postponement on the floor; the indefinite-postponement motion carried <strong>405 to 21</strong>, ending the article without a substantive vote on whether to commission the audit.<sup class="cite" data-href="/meetings/town-meeting-2025-05-08-article-46/" data-source="Town Meeting transcript, 2025-05-08, Article 46. Moderator: 'Article 46, appropriate funds for an independent audit. The main motion for this is indefinite postponement, by the sponsor.' Sponsor: 'Move.' Moderator: 'Do I have a second? Thank you. Seeing no speakers, we're going to go to a vote on the indefinite postponement of Article 46.' [Vote taken.] Moderator: 'Article 46 passes, 405 to 21.' Source: MHTV recording of the 2025 Annual Town Meeting, final session, May 8, 2025 (YouTube video ootpoCJlG6k), approximately 1:19:00 to 1:20:15. Tally is from the MHTV caption-track transcription; Town Clerk minutes are the official record."></sup></p>
+        <p>What an audit would actually deliver: department-by-department findings on whether services achieve their goals at the lowest cost, with specific recommendations for changes. Cost depends entirely on scope: roughly $30K to $80K for a single-department review, $150K to $400K for a comprehensive town-wide audit. <strong>Honest read:</strong> Marblehead has had several recent assessments and the implementation track record has been uneven. An audit without a serious implementation commitment is a cost without the benefit.</p>
+      </div>
+      <div class="idea-guess">
+        <span class="idea-guess-label">Indirect, not direct</span>
+        <span class="idea-guess-num">$30K to $400K cost</span>
+        <span class="idea-guess-cap">up front, depending on scope. Savings surfaced are indirect and depend on what gets implemented after the report. The CliftonLarsonAllen review surfaced 23 recommendations; about two-thirds went forward.</span>
+      </div>
+            <div class="idea-odds">
+        <span class="idea-odds-label">Difficulty &amp; timeline</span>
+        <p><strong>Easy to commission, medium to implement.</strong> The audit itself is procurement; the harder work is sustaining attention on the recommendations.</p>
+        <p><strong>6 to 12 months</strong> for a town-wide audit and report. Implementation of accepted recommendations a further 1 to 2 years.</p>
+      </div>
+<div class="idea-catch">
+        <span class="idea-catch-label">Who pays?</span>
+        <p><strong>The town up front in audit fees, and department staff during the engagement.</strong> An audit takes time from the staff being audited; institutional defensiveness is common. A weak follow-through process turns the spend into shelfware. The failure mode is well-known: detailed recommendations land, are partially implemented, and the rest fade. Pairing an audit with a structured implementation commitment (a Town Meeting reporting requirement, a sunset clause, or a follow-up engagement) is what determines whether it matters.</p>
+      </div>
+      <details class="idea-research">
+        <summary>What we'd need to firm this up</summary>
+        <ul>
+          <li>Scope decisions: town-wide vs. targeted to one or two departments</li>
+          <li>Vendor quotes from BerryDunn, Plante Moran, ICMA Consulting, and the State Auditor's office</li>
+          <li>Implementation track record on prior assessments (CliftonLarsonAllen and others)</li>
+          <li>Funding path: existing administrative budget vs. Town Meeting appropriation</li>
+        </ul>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CAUTIONS -->
+<!-- ============================================================ -->
+<section id="cautions" class="wcwd-stop wcwd-stop--tinted">
+  <p class="wcwd-eye">Cautions</p>
+  <h2 class="wcwd-section-h2">None of this is free money.</h2>
+  <p class="wcwd-section-lead">Several items carry real downsides that deserve to sit on the page next to the upside.</p>
+
+  <div class="cautions">
+    <div class="caution">
+      <p class="caution-h">Cost-shifts aren't new money.</p>
+      <p class="caution-p">Several of the revenue ideas above (the room excise, the <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> contribution, the mooring transfer fee) shift <em>who</em> pays rather than finding money that wasn't there before. That's not necessarily bad, but it's a different argument from "found money." Worth being honest about which item is which.</p>
+    </div>
+    <div class="caution">
+      <p class="caution-h">"No Town Meeting needed" doesn't mean easy.</p>
+      <p class="caution-p">Several items above can begin at the next board meeting. That doesn't mean they're fast or politically simple. Medicare Advantage requires retiree negotiation; an energy contract needs an investment-grade audit; shared back office crosses the town/school line. Months of work, even when no vote is needed.</p>
+    </div>
+    <div class="caution">
+      <p class="caution-h">The ranges are estimates, not forecasts.</p>
+      <p class="caution-p">Every dollar number on this page is order-of-magnitude. A careful study might show the real number is half what's listed; some items might also turn out larger than estimated. The point of publishing this is to make the questions askable, not to project confidence we don't have.</p>
+    </div>
+    <div class="caution">
+      <p class="caution-h">One resident's draft, not a finance committee output.</p>
+      <p class="caution-p">Some items on this page may be naive, or already studied and rejected for reasons not captured here. The "Who pays?" boxes on each card name the most obvious tradeoffs, but every item carries more nuance than fits on a card. Treat each one as a starting question.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PROCEDURAL PATHS -->
+<!-- ============================================================ -->
+<section id="paths" class="wcwd-stop">
+  <p class="wcwd-eye">How adoption happens</p>
+  <h2 class="wcwd-section-h2">Most of these don't need a Town Meeting vote.</h2>
+  <p class="wcwd-section-lead">Three procedural paths. Two of the eighteen items need a vote at Town Meeting; the rest can begin at the next board meeting or in the next bargaining cycle.</p>
+
+  <div class="paths-grid">
+
+    <div class="path" data-p="board">
+      <p class="path-eye">Path A &middot; Board or bargaining</p>
+      <h3 class="path-h">No Town Meeting required.</h3>
+      <ul class="path-list">
+        <li>Medicare Advantage migration (06)</li>
+        <li>Energy Savings Performance Contract on buildings (07)</li>
+        <li>Town/school shared back office (08)</li>
+        <li>Inter-municipal agreement with neighbor town (09)</li>
+        <li>Permitting modernization (10)</li>
+        <li>Active-employee premium-share renegotiation (11)</li>
+        <li>Spousal surcharge or carve-out (12)</li>
+        <li>Overtime audit (13)</li>
+        <li>Health-plan opt-out buyout (15)</li>
+        <li>Performance audit of major cost centers (18, may need appropriation if scope is large)</li>
+        <li>Boat excise compliance audit (04)</li>
+        <li>Further <abbr class="g" title="Marblehead Municipal Light Department">MMLD</abbr> contribution discussion (03)</li>
+      </ul>
+      <p class="caution-p" style="margin-top:12px;font-size:12px;">Items 06, 11, 12, 15 require collective bargaining with each affected union. Years, not weeks, but no Town Meeting vote needed.</p>
+    </div>
+
+    <div class="path" data-p="atm">
+      <p class="path-eye">Path B &middot; Town Meeting needed</p>
+      <h3 class="path-h">Either Annual or Special Town Meeting works.</h3>
+      <ul class="path-list">
+        <li>Room and short-term rental excise (01)</li>
+        <li>Community Impact Fee (02)</li>
+        <li>Efficiency Commission bylaw (16)</li>
+        <li>Mooring waitlist transfer fee, if it requires a bylaw amendment (05)</li>
+      </ul>
+      <p class="caution-p" style="margin-top:12px;font-size:12px;">A Special Town Meeting can be called by the Select Board or by petition of 200 voters. Once warned, 10 voters can add an article.</p>
+    </div>
+
+    <div class="path" data-p="atm-only">
+      <p class="path-eye">Path C &middot; Annual Town Meeting only</p>
+      <h3 class="path-h">Locked to the Annual Town Meeting.</h3>
+      <ul class="path-list">
+        <li>The fiscal-year operating budget itself</li>
+        <li>Officer elections at the annual town election</li>
+      </ul>
+      <p class="caution-p" style="margin-top:12px;font-size:12px;">Override ballot questions can go on Special Town Meeting warrants. Only the budget appropriation must wait for Annual Town Meeting.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CLOSE -->
+<!-- ============================================================ -->
+<section class="wcwd-stop wcwd-stop--tinted">
+  <p class="wcwd-eye">Companion pages and corrections</p>
+  <h2 class="wcwd-section-h2">Help us tighten this.</h2>
+  <p class="wcwd-section-lead">Every range above is an estimate. If a primary source contradicts something on this page, if a "have we tried this" answer is wrong or incomplete, or if you've worked on one of these items and can sharpen the picture, please write.</p>
+
+  <div class="wcwd-close-cards">
+    <a class="wcwd-close-card" href="how-we-got-here.html">
+      <p class="wcwd-close-card-eye">Reference</p>
+      <h3>How Marblehead got here</h3>
+      <p>The structural drivers behind the FY27 gap and the cost-control measures the town already took, with the explicit list of what hadn't been studied.</p>
+    </a>
+    <a class="wcwd-close-card" href="/meetings/">
+      <p class="wcwd-close-card-eye">Watch the boards</p>
+      <h3>Recent meetings &amp; transcripts</h3>
+      <p>Watch the boards act on these ideas (or not). Recent Select Board, FinCom, and School Committee meetings with AI summaries and transcripts.</p>
+    </a>
+    <a class="wcwd-close-card" href="mailto:agbaber@gmail.com?subject=what-can-we-do.html correction">
+      <p class="wcwd-close-card-eye">Send a correction</p>
+      <h3>Email the maintainer</h3>
+      <p>If a number is wrong or a primary source contradicts a claim, send the citation. Updates are logged below.</p>
+    </a>
+  </div>
+
+  <p class="wcwd-prov-fine" style="margin-top:32px;">
+    <strong>Updates.</strong> 2026-06-09 (afternoon): Added a totals block under the scoreboard, with the overlap caveats spelled out. Section headings rephrased ("How can the town make more money / spend less / make decisions differently"). 2026-06-09: At-a-glance scoreboard columns are now sortable; click a column header to re-rank. Added Article 46 and Viewpoint receipts to ideas 18 and 10. 2026-06-02 (afternoon): Added four employee-benefit and personnel items after a reader flagged the gap: active-employee premium-share renegotiation (11, large lever), spousal surcharge or carve-out (12, moderate lever), overtime audit (13, smaller), and schedule fragmentation at benefit thresholds (14, listed but not recommended). Page is now 16 items, not 12. 2026-06-02 (morning): Initial draft, then several rounds of correction in response to readers. Reframed from "inventory of measures" to "list of questions" after a reader pointed out the original framing overstated what one person's research conversation can actually claim. Boat excise card rewritten to reflect that valuations are statutory; the only local lever is compliance. "Who pays?" boxes added to every card so the distributional tradeoff sits at the same visual weight as the dollar number. Idea 8 reframed from "combine" to "share" to respect the legal structure under <abbr class="g" title="Massachusetts General Laws">MGL</abbr> c. 71 &sect; 37, which gives the School Committee independent budget authority. Idea 9 updated to acknowledge the existing joint ambulance contract with Swampscott (2025-07-23). Idea 10 reframed honestly as roughly cost-neutral after a reader pointed out that the software cost was missing from the prior math. Zero-based budgeting card updated to reflect four prior School Committee discussions (2020-06-08, 2022-07-19, 2023-07-06, 2025-10-17), not two.
+  </p>
+</section>
+
+<script>
+(function () {
+  var sb = document.querySelector('#scoreboard .sb');
+  if (!sb) return;
+  var rows = Array.prototype.slice.call(sb.querySelectorAll('.sb-row'));
+  rows.forEach(function (row, i) { row.dataset.initialOrder = i; });
+  var headButtons = sb.querySelectorAll('.sb-head [data-sort]');
+  var state = { key: null, dir: null };
+
+  function numeric(v) {
+    if (v === undefined || v === null || v === '') return null;
+    var n = parseFloat(v);
+    return isNaN(n) ? null : n;
+  }
+
+  function compareFor(key, dir) {
+    return function (a, b) {
+      var va, vb;
+      if (key === 'num') {
+        va = parseInt(a.dataset.initialOrder, 10);
+        vb = parseInt(b.dataset.initialOrder, 10);
+      } else if (key === 'item') {
+        va = a.querySelector('.sb-c-item').textContent.trim().toLowerCase();
+        vb = b.querySelector('.sb-c-item').textContent.trim().toLowerCase();
+      } else {
+        va = numeric(a.dataset[key]);
+        vb = numeric(b.dataset[key]);
+        if (va === null && vb === null) return 0;
+        if (va === null) return 1;
+        if (vb === null) return -1;
+      }
+      if (va < vb) return dir === 'descending' ? 1 : -1;
+      if (va > vb) return dir === 'descending' ? -1 : 1;
+      return parseInt(a.dataset.initialOrder, 10) - parseInt(b.dataset.initialOrder, 10);
+    };
+  }
+
+  function applySort(key, dir) {
+    state.key = key;
+    state.dir = dir;
+    var sorted = rows.slice().sort(compareFor(key, dir));
+    sorted.forEach(function (row) { sb.appendChild(row); });
+    sb.classList.add('is-sorted');
+    headButtons.forEach(function (btn) {
+      btn.setAttribute('aria-sort', btn.dataset.sort === key ? dir : 'none');
+    });
+  }
+
+  headButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var key = btn.dataset.sort;
+      var nextDir = (state.key === key && state.dir === 'ascending') ? 'descending' : 'ascending';
+      applySort(key, nextDir);
+    });
+  });
+})();
+</script>

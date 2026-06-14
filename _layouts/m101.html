@@ -1,0 +1,119 @@
+---
+layout: default
+---
+{% include nav.html %}
+
+{%- assign current = page.chapter -%}
+{%- assign chapters = site.data.marblehead_101.chapters -%}
+{%- assign total = chapters | size -%}
+
+{%- comment -%} Find the current chapter's index and metadata {%- endcomment -%}
+{%- assign idx = 0 -%}
+{%- for ch in chapters -%}
+  {%- if ch.num == current -%}
+    {%- assign current_ch = ch -%}
+    {%- assign current_idx = forloop.index0 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign position = current_idx | plus: 1 -%}
+{%- assign progress_pct = position | times: 100 | divided_by: total -%}
+
+{%- comment -%} Prev/next neighbors {%- endcomment -%}
+{%- if current_idx > 0 -%}
+  {%- assign prev_idx = current_idx | minus: 1 -%}
+  {%- assign prev_ch = chapters[prev_idx] -%}
+{%- endif -%}
+{%- assign next_idx = current_idx | plus: 1 -%}
+{%- if next_idx < total -%}
+  {%- assign next_ch = chapters[next_idx] -%}
+{%- endif -%}
+
+<link rel="stylesheet" href="{{ '/' | relative_url }}assets/m101.css">
+
+<div class="m101-stickybar">
+  <div class="row">
+    <a class="brand" href="{{ '/' | relative_url }}marblehead-101/"><span class="scope">Marblehead 101</span></a>
+    <div class="where">Chapter {{ position }} of {{ total }} &middot; {{ progress_pct }}%</div>
+    <button class="toc-btn" type="button" aria-label="Show chapters">Chapters</button>
+  </div>
+  <div class="track"><div class="fill" style="width: {{ progress_pct }}%;"></div></div>
+</div>
+
+<div class="m101-layout">
+  <aside class="m101-syllabus" aria-label="Course chapters">
+    <div class="label">Chapters</div>
+    <ol>
+      {%- for ch in chapters -%}
+        {%- assign li_class = "" -%}
+        {%- if ch.num == current -%}{%- assign li_class = "cur" -%}{%- endif -%}
+        <li class="{{ li_class }}" data-chapter="{{ ch.num }}">
+          <a href="{{ '/' | relative_url }}marblehead-101/{{ ch.slug }}.html">{{ ch.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ol>
+  </aside>
+
+  <main class="m101-main">
+    <div class="m101-chiprow">
+      <span class="m101-chip"><span class="num">{{ position }}</span> {{ current_ch.part }}</span>
+      <span class="meta">{{ current_ch.read_time }} min read</span>
+    </div>
+    <h1>{{ current_ch.title }}</h1>
+    <p class="m101-dek">{{ current_ch.dek }}</p>
+
+    {%- if current_ch.objectives -%}
+    <div class="m101-objectives">
+      <div class="label">What you'll know after this</div>
+      <ul>
+        {%- for obj in current_ch.objectives -%}
+        <li>{{ obj }}</li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endif -%}
+
+    {{ content }}
+
+    <nav class="m101-pager" aria-label="Chapter navigation">
+      {%- if prev_ch -%}
+      <a class="prev" href="{{ '/' | relative_url }}marblehead-101/{{ prev_ch.slug }}.html">
+        <div class="dir">&larr; Previous</div>
+        <div class="ttl">{{ prev_ch.title }}</div>
+      </a>
+      {%- else -%}
+      <a class="prev" href="{{ '/' | relative_url }}marblehead-101/">
+        <div class="dir">&larr; Back to</div>
+        <div class="ttl">Syllabus</div>
+      </a>
+      {%- endif -%}
+      {%- if next_ch -%}
+      <a class="next primary" href="{{ '/' | relative_url }}marblehead-101/{{ next_ch.slug }}.html">
+        <div class="dir">Next chapter &rarr;</div>
+        <div class="ttl">{{ next_ch.title }}</div>
+      </a>
+      {%- else -%}
+      <a class="next primary" href="{{ '/' | relative_url }}marblehead-101/">
+        <div class="dir">Done &rarr;</div>
+        <div class="ttl">Back to the syllabus</div>
+      </a>
+      {%- endif -%}
+    </nav>
+  </main>
+</div>
+
+<div class="m101-drawer-scrim" aria-hidden="true"></div>
+<nav class="m101-drawer" aria-label="All chapters">
+  <p class="dlabel">All {{ total }} chapters</p>
+  <ol>
+    {%- for ch in chapters -%}
+      {%- assign li_class = "" -%}
+      {%- if ch.num == current -%}{%- assign li_class = "cur" -%}{%- endif -%}
+      <li class="{{ li_class }}" data-chapter="{{ ch.num }}">
+        <a href="{{ '/' | relative_url }}marblehead-101/{{ ch.slug }}.html">{{ ch.title }}</a>
+      </li>
+    {%- endfor -%}
+  </ol>
+</nav>
+
+<script src="{{ '/' | relative_url }}assets/m101.js" defer></script>

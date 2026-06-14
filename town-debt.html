@@ -1,0 +1,369 @@
+---
+title: "How has Marblehead managed its debt?"
+scripts: [citations]
+og_title: "How has Marblehead managed its debt?"
+og_description: "Marblehead owes $116.5M as of June 2024. Voters approved every dollar of it, one project at a time. Here is what we owe, when it gets paid off, how it compares to home values and income, and how it relates (and doesn't) to the operating override voters passed in June 2026."
+og_url: https://marbleheaddata.org/town-debt.html
+---
+<style>
+  /* Page-scoped: bare bullet lists.
+     The global `* { padding: 0 }` reset in site.css zeros default list
+     padding, and the safety-net rule only targets `.container > ul`.
+     Explainer pages render under `.page`, so without this scope a bare
+     <ul> on this page has bullets clipped at the left edge. */
+  .page > ul:not([class]),
+  .page > ol:not([class]) {
+    margin: 0 0 16px;
+    padding-left: 22px;
+    color: var(--text-muted);
+  }
+  .page > ul:not([class]) { list-style: disc; }
+  .page > ol:not([class]) { list-style: decimal; }
+  .page > ul:not([class]) li,
+  .page > ol:not([class]) li {
+    margin: 4px 0;
+    line-height: 1.6;
+  }
+  .page > ul:not([class]) li strong,
+  .page > ol:not([class]) li strong { color: var(--text); }
+
+  /* Page-scoped: debt outstanding trend SVG.
+     Uses svg.chart base styles so the tick-labels follow the theme
+     (light/dark) automatically. */
+  svg.chart.debt-trend { width: 100%; height: auto; max-height: 320px; }
+  svg.chart.debt-trend .data-fill { fill: var(--c-navy); opacity: 0.12; stroke: none; }
+  svg.chart.debt-trend .data-line { stroke: var(--c-navy); stroke-width: 2; fill: none; }
+  svg.chart.debt-trend .data-dot  { fill: var(--c-navy); }
+
+  /* Page-scoped: peer comparison horizontal bars */
+  .peer-bars { display: grid; grid-template-columns: minmax(110px, max-content) 1fr 70px; gap: 6px 12px; align-items: center; margin: 14px 0 18px; font-variant-numeric: tabular-nums; font-size: 14px; }
+  .peer-bars .town { color: var(--text); }
+  .peer-bars .town.is-mh { font-weight: 600; }
+  .peer-bars .bar-track { background: color-mix(in srgb, var(--text-subtle) 18%, transparent); border-radius: 3px; height: 16px; position: relative; }
+  .peer-bars .bar-fill { background: var(--c-teal); height: 100%; border-radius: 3px; }
+  .peer-bars .bar-fill.is-mh { background: var(--c-navy); }
+  .peer-bars .pct { color: var(--text-muted); text-align: right; }
+
+  /* Page-scoped: data tables */
+  .schedule-table, .ratio-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; margin: 14px 0 18px; font-size: 14px; }
+  .schedule-table th, .schedule-table td,
+  .ratio-table th, .ratio-table td { padding: 8px 10px; border-bottom: 1px solid color-mix(in srgb, var(--text-subtle) 30%, transparent); text-align: right; }
+  .schedule-table th:first-child, .schedule-table td:first-child,
+  .ratio-table th:first-child, .ratio-table td:first-child { text-align: left; }
+  .schedule-table thead th, .ratio-table thead th { font-weight: 600; color: var(--text-muted); font-size: 13px; }
+  .schedule-table tfoot td { font-weight: 600; border-top: 2px solid var(--text-subtle); border-bottom: none; }
+  .ratio-table tr.is-flat td { color: var(--text-mid); }
+
+  /* Project category table */
+  .project-cats { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0 18px; }
+  .project-cats th, .project-cats td { padding: 8px 10px; border-bottom: 1px solid color-mix(in srgb, var(--text-subtle) 30%, transparent); text-align: left; vertical-align: top; }
+  .project-cats th { font-weight: 600; color: var(--text-muted); font-size: 13px; }
+  .project-cats td.count { text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* Page-scoped: secondary expandables (mid-section detail tables).
+     Visually quieter than the body, with a caret on the summary.
+     Distinct from `.notes` so the auto-injected Sources block from
+     citations.js lands above the bottom methodology block, not above
+     these. */
+  details.more-detail { margin: 4px 0 16px; }
+  details.more-detail > summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-mid);
+    padding: 4px 0;
+  }
+  details.more-detail > summary::-webkit-details-marker { display: none; }
+  details.more-detail > summary::before {
+    content: "\25B8";
+    display: inline-block;
+    margin-right: 6px;
+    transition: transform 0.15s ease;
+  }
+  details.more-detail[open] > summary::before { transform: rotate(90deg); }
+  details.more-detail[open] > summary { padding-bottom: 8px; }
+</style>
+<h1>How has Marblehead managed its debt?</h1>
+
+<p class="page-lead">The town owes about $116 million. Voters approved every dollar of it at the ballot, project by project. The town has had 51 of those ballot questions since 1988, and voters have said yes to 50 of them.</p>
+
+<div class="key-stats">
+  <div class="key-stat">
+    <div class="key-stat-value">$116.5M</div>
+    <div class="key-stat-label">Owed on June 30, 2024</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">50&thinsp;/&thinsp;51</div>
+    <div class="key-stat-label">Borrowing votes approved since 1988</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">~$11M&thinsp;/&thinsp;yr</div>
+    <div class="key-stat-label">Annual payment (FY24&ndash;FY27 budgets)</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">AAA</div>
+    <div class="key-stat-label">Credit rating (S&amp;P, stable)</div>
+  </div>
+</div>
+
+<nav class="page-toc" aria-label="On this page">
+  <span class="page-toc-label">On this page</span>
+  <a href="#where-it-came-from">Where the debt came from</a>
+  <a href="#how-exclusion-works">How a borrowing vote works</a>
+  <a href="#what-we-pay-now">What we pay each year</a>
+  <a href="#how-performed">How the debt has performed</a>
+  <a href="#how-we-compare">How Marblehead compares</a>
+  <a href="#what-this-means">How this relates to the operating override</a>
+</nav>
+
+<div class="takeaway takeaway--neutral">
+  Voters approve borrowing one project at a time. The added tax to pay off that project runs only as long as the bonds do, then comes off the tax bill. That was a separate decision from the operating override Marblehead passed in June 2026.
+</div>
+
+<h2 id="where-it-came-from" data-stance-section="where-it-came-from">Where the debt came from</h2>
+
+<p>Big things the town builds, schools, fire trucks, seawalls, libraries, get paid for by borrowing. The town can't borrow without asking voters. That question on the ballot is called a <strong>debt exclusion</strong>.<sup class="cite" data-href="https://www.mass.gov/info-details/proposition-2-12-and-tax-rate-process" data-source="MA DOR Division of Local Services, Proposition 2½ debt exclusion votes file (downloaded as data/dor_debt_exclusion_all.csv); Marblehead filtered to 51 votes 1988-2025"></sup></p>
+
+<p>Marblehead has had 51 of them on the ballot since 1988. Voters approved 50. Most were for school buildings (21 of the 51). The rest paid for storm drains, the transfer station, fire trucks, seawalls, Fort Sewall, Council on Aging, the Abbot Library renovation, and similar town capital projects. The lone rejection was a 2002 question on repairs to Tucker's Wharf; it has not been put back on the ballot since.</p>
+
+<details class="more-detail" style="margin-top: 4px;">
+  <summary>All 51 votes, grouped</summary>
+  <table class="project-cats">
+    <thead>
+      <tr><th>What kind of project</th><th>Examples</th><th class="count">Votes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Schools</td><td>The high school (build and convert), Village School, Glover, the new Elbridge Gerry School, the high school roof and HVAC, plus many smaller repair and computer-equipment rounds</td><td class="count">21</td></tr>
+      <tr><td>Public works</td><td>Storm drains, the transfer station, Ocean Avenue causeway, seawalls and fences, salt shed, Green Street remediation, sewers</td><td class="count">12</td></tr>
+      <tr><td>General town buildings</td><td>Fort Sewall, Old Town House and Abbot Hall tower, Lead Mills land, Mary Alley HVAC, Robinson Farm parcels</td><td class="count">7</td></tr>
+      <tr><td>Public safety</td><td>Four fire pumper trucks, the quint fire truck, equipment for police and inspectors</td><td class="count">6</td></tr>
+      <tr><td>Library and recreation</td><td>The Abbot Public Library renovation (2023), an earlier library remodel, and the lone losing vote, the 2002 Tucker's Wharf repair</td><td class="count">3</td></tr>
+      <tr><td>Council on Aging</td><td>Construction of the Council on Aging building</td><td class="count">1</td></tr>
+      <tr><td>FY24 capital bundle</td><td>Roof replacements, road and sidewalk work, smart panels, HVAC, salt shed, and the high-school boiler, packaged together as one ballot question</td><td class="count">1</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2"><strong>Total</strong></td><td class="count"><strong>51</strong></td></tr></tfoot>
+  </table>
+  <p class="caption">Source: MA DOR debt-exclusion file, filtered to Marblehead. These are individual ballot questions; <a href="/charts/override_history.html">the override history chart</a> shows operating overrides alongside this debt-exclusion record.</p>
+</details>
+
+<h2 id="how-exclusion-works" data-stance-section="how-exclusion-works">How a borrowing vote works, start to finish</h2>
+
+<p>A debt exclusion is written into <a href="/2026-override/">Proposition 2&frac12;</a>, the 1980 state law that caps property tax growth. It works in four steps:<sup class="cite" data-href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter59/Section21C" data-source="M.G.L. c. 59 § 21C, &quot;Proposition 2½&quot; (see (k), excluded debt service)"></sup></p>
+
+<ol>
+  <li><strong>The town puts a specific project on the ballot.</strong> Bonds for a named project, up to a stated dollar amount. (Town Meeting also has to vote on it. The ballot question is the part that lets the cost go on top of the Prop 2.5 tax cap.)</li>
+  <li><strong>Voters say yes or no.</strong> Simple majority at a town-wide election.</li>
+  <li><strong>If yes, the town issues bonds and does the work.</strong> The annual repayment on those bonds gets added to property tax bills as a separate, temporary line on top of the normal levy.</li>
+  <li><strong>When the bonds are fully paid off, the surcharge comes off the tax bill.</strong> Older bonds keep rolling off as new ones get added, which is why the total stays in roughly the same range year after year instead of just climbing.</li>
+</ol>
+
+<p>The practical effect: in fiscal year 2023, the town's audited books showed $11.00 million of debt service, and $11.00 million of it was on the "excluded" side. In other words, every dollar of the annual debt payment came from the voter-approved exclusion surcharge, not from the regular operating-budget levy.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf" data-source="FY24 Town of Marblehead ACFR (audited annual report, or ACFR), Schedule of Revenues, Expenditures and Changes in Fund Balance, Budget and Actual, Excluded Debt section (page 95)"></sup></p>
+
+<div class="takeaway takeaway--neutral">
+  A debt exclusion is a one-time, project-specific tax surcharge that voters approve and that ends when the bonds for that project are paid off. The operating override Marblehead passed in June 2026 is different: a permanent increase in the tax cap, not tied to any single project.
+</div>
+
+<h2 id="what-we-pay-now" data-stance-section="what-we-pay-now">What we pay each year</h2>
+
+<p>The annual debt payment has bounced between $5 million and $13 million over the last twelve years. Audited figures run through FY24; FY25, FY26, and FY27 are budgeted.</p>
+
+<svg class="chart debt-trend" viewBox="0 0 720 280" role="img" aria-label="Marblehead annual debt payment, FY2015 actual through FY2027 budgeted">
+  <line class="grid-minor" x1="60" y1="240" x2="700" y2="240"/>
+  <line class="grid-minor" x1="60" y1="175.7" x2="700" y2="175.7"/>
+  <line class="grid-minor" x1="60" y1="111.4" x2="700" y2="111.4"/>
+  <text class="tick-label" x="50" y="244" text-anchor="end">$0</text>
+  <text class="tick-label" x="50" y="179.7" text-anchor="end">$5M</text>
+  <text class="tick-label" x="50" y="115.4" text-anchor="end">$10M</text>
+  <!-- Actual line (FY15-FY24): solid -->
+  <polyline class="data-line" points="60,169.3 113.3,163.2 166.7,152.3 220,147.9 273.3,153.5 326.7,150.6 380,140.2 433.3,77.0 486.7,110.0 540,98.4"/>
+  <!-- Budget line (FY24-FY27): dashed -->
+  <polyline class="data-line data-line--dashed" points="540,98.4 593.3,97.4 646.7,120.3 700,97.3"/>
+  <!-- Data dots -->
+  <circle class="data-dot" cx="60"    cy="169.3" r="3"/>
+  <circle class="data-dot" cx="113.3" cy="163.2" r="3"/>
+  <circle class="data-dot" cx="166.7" cy="152.3" r="3"/>
+  <circle class="data-dot" cx="220"   cy="147.9" r="3"/>
+  <circle class="data-dot" cx="273.3" cy="153.5" r="3"/>
+  <circle class="data-dot" cx="326.7" cy="150.6" r="3"/>
+  <circle class="data-dot" cx="380"   cy="140.2" r="3"/>
+  <circle class="data-dot" cx="433.3" cy="77.0"  r="3"/>
+  <circle class="data-dot" cx="486.7" cy="110.0" r="3"/>
+  <circle class="data-dot" cx="540"   cy="98.4"  r="3"/>
+  <circle class="data-dot" cx="593.3" cy="97.4"  r="3"/>
+  <circle class="data-dot" cx="646.7" cy="120.3" r="3"/>
+  <circle class="data-dot" cx="700"   cy="97.3"  r="3"/>
+  <!-- Annotation: where actual gives way to budget -->
+  <line class="annotation-line" x1="540" y1="60" x2="540" y2="240"/>
+  <text class="annotation" x="535" y="55" text-anchor="end">audited &larr;</text>
+  <text class="annotation" x="545" y="55" text-anchor="start">&rarr; budgeted</text>
+  <!-- x axis -->
+  <line class="axis-base" x1="60" y1="240" x2="700" y2="240"/>
+  <text class="tick-label tick-label--major" x="60"    y="260" text-anchor="middle">FY15</text>
+  <text class="tick-label tick-label--minor" x="113.3" y="260" text-anchor="middle">FY16</text>
+  <text class="tick-label tick-label--minor" x="166.7" y="260" text-anchor="middle">FY17</text>
+  <text class="tick-label tick-label--minor" x="220"   y="260" text-anchor="middle">FY18</text>
+  <text class="tick-label tick-label--minor" x="273.3" y="260" text-anchor="middle">FY19</text>
+  <text class="tick-label tick-label--major" x="326.7" y="260" text-anchor="middle">FY20</text>
+  <text class="tick-label tick-label--minor" x="380"   y="260" text-anchor="middle">FY21</text>
+  <text class="tick-label tick-label--minor" x="433.3" y="260" text-anchor="middle">FY22</text>
+  <text class="tick-label tick-label--minor" x="486.7" y="260" text-anchor="middle">FY23</text>
+  <text class="tick-label tick-label--major" x="540"   y="260" text-anchor="middle">FY24</text>
+  <text class="tick-label tick-label--minor" x="593.3" y="260" text-anchor="middle">FY25</text>
+  <text class="tick-label tick-label--minor" x="646.7" y="260" text-anchor="middle">FY26</text>
+  <text class="tick-label tick-label--major" x="700"   y="260" text-anchor="middle">FY27</text>
+  <text class="end-label" x="700" y="93" text-anchor="end">$11.1M</text>
+</svg>
+<p class="caption">Solid line: actual debt payments from each year's audited annual report (DLS Schedule A). Dashed line: budgeted payments from the FY2027 Proposed Budget for FY25, FY26, and FY27.<sup class="cite" data-href="https://dlsgateway.dor.state.ma.us/reports/rdPage.aspx?rdReport=ScheduleA.ScheduleAByEntity_main" data-source="MA DLS Schedule A reports for Marblehead, FY2015-FY2024 (data/peer_schedule_a_expenditures.csv)"></sup><sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY27_Proposed_Budget_No_Override.pdf" data-source="FY2027 Proposed Budget (No Override), page 4, Total Debt Service line, for FY24 actual, FY25 budget, FY26 budget, FY27 proposed"></sup></p>
+
+<p>FY22's $12.7 million counts a refinancing of older bonds at lower rates, which the audit records as a one-time payment even though residents did not actually pay more that year. Otherwise, payments grew gradually through FY21 (when the new Gerry School bonds came on), stepped up again with the FY24 capital bundle, and are budgeted to hold in the $9&ndash;11 million band through FY27.</p>
+
+<p>From the April 7, 2025 Finance Committee meeting:</p>
+
+<blockquote class="quote">
+  <p>"When you issue debt, maybe you issue it for a 15-year or 20-year. Eventually that annual payment will roll off. When that happens, the roll off would result in a reduced tax bill. The balancing act is when things roll off, do we need other things to roll on because of need?"</p>
+  <footer>Marblehead Finance Committee meeting, April 7, 2025. <a href="https://vimeo.com/1073542272#t=12417s">Vimeo recording (1:13:45)</a>.</footer>
+</blockquote>
+
+<p>The same meeting noted that the Select Board has adopted a policy of keeping total debt payments below 15% of general fund revenue. Marblehead has run around 9&ndash;10% recently, well under the policy.<sup class="cite" data-href="https://vimeo.com/1073542272#t=12618s" data-source="Marblehead Finance Committee meeting, April 7, 2025 (Vimeo recording, ~3:30:18). Finance Director on the Select Board's 15% debt-to-revenue policy and Marblehead's actual ratio."></sup></p>
+
+<h3>What we owe and how long it takes to pay off</h3>
+
+<p>The $116.5 million the town owes at the end of FY24 is mostly general-obligation bonds it sold to fund voter-approved projects. (A smaller share, about $7 million combined, is what the Water and Municipal Light departments owe on past projects of their own. Those get paid from water and electric rates, not from property taxes.)<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf" data-source="FY24 Town of Marblehead ACFR, Long-Term Debt note (pages 58-62). Governmental general-obligation bonds = $108.8M; Water (MWRA) = $3.5M; Municipal Light (MMWEC) = $3.7M; small direct-borrowing = $0.5M."></sup></p>
+
+<p>The audited report lays out exactly how much is due each year until the current bonds are paid off, in FY2044. The annual payment is highest right now and gradually steps down through the 2030s and 2040s:</p>
+
+<ul>
+  <li>FY25 through FY29: roughly $9 to $11 million per year</li>
+  <li>FY30 through FY34: about $8 million per year</li>
+  <li>FY35 through FY39: about $5.5 million per year</li>
+  <li>FY40 through FY44: about $2 million per year</li>
+</ul>
+
+<p>That assumes voters do not approve more borrowing between now and then. When they do (and they have approved $12 million more borrowing that the town has not yet issued bonds for, the biggest piece being road and sidewalk work), the new payments get added on top of this schedule.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf" data-source="FY24 Town of Marblehead ACFR, authorized and unissued debt schedule (page 59). Total $12.23M: roads/sidewalks $8.98M, Gerry School $1.62M, water $1.02M, Mary Alley roof $480K, Franklin Street Fire Station roof $131K."></sup></p>
+
+<table class="schedule-table">
+  <thead>
+    <tr><th>Fiscal year</th><th>Principal</th><th>Interest</th><th>Total</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>FY25</td><td>$7,540,000</td><td>$3,453,080</td><td>$10,993,080</td></tr>
+    <tr><td>FY26</td><td>$5,955,000</td><td>$3,162,146</td><td>$9,117,146</td></tr>
+    <tr><td>FY27</td><td>$6,225,000</td><td>$2,889,104</td><td>$9,114,104</td></tr>
+    <tr><td>FY28</td><td>$6,500,000</td><td>$2,607,573</td><td>$9,107,573</td></tr>
+    <tr><td>FY29</td><td>$6,720,000</td><td>$2,316,691</td><td>$9,036,691</td></tr>
+    <tr><td>FY30&ndash;FY34 (5-year avg)</td><td>$6,801,000</td><td>$1,500,316</td><td>$8,301,316</td></tr>
+    <tr><td>FY35&ndash;FY39 (5-year avg)</td><td>$4,962,000</td><td>$543,312</td><td>$5,505,312</td></tr>
+    <tr><td>FY40&ndash;FY44 (5-year avg)</td><td>$1,862,000</td><td>$71,205</td><td>$1,933,205</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Total of all 20 years</td><td>$101,065,000</td><td>$25,002,755</td><td>$126,067,755</td></tr>
+  </tfoot>
+</table>
+<p class="caption">Governmental general-obligation bonds only. The audited report shows FY30&ndash;FY44 as three five-year blocks; those blocks are shown here as per-year averages so the numbers are comparable to the FY25&ndash;FY29 rows. Source: FY24 ACFR, page 61.</p>
+
+<h2 id="how-performed" data-stance-section="how-performed">How the debt has performed</h2>
+
+<p>The dollar amount Marblehead owed went up by 57% over the last decade, from $74 million to $116 million. But total personal income in town grew by 66% and total assessed home values grew by 72%.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf" data-source="FY24 ACFR, Ratios of Outstanding Debt by Type (page 121) and Ratios of General Bonded Debt Outstanding (page 122). 2015 vs 2024."></sup> So even as the debt grew, it shrank as a share of the local economy.</p>
+
+<p>The two ratios bond rating agencies watch most closely:</p>
+
+<ul>
+  <li><strong>Debt as a share of resident income.</strong> 6.3% in 2015. 6.0% in 2024. Held in roughly the same band the whole decade.</li>
+  <li><strong>Debt as a share of total home values.</strong> 1.39% in 2015. 1.19% in 2024. Actually shrank.</li>
+</ul>
+
+<p>Standard &amp; Poor's, the agency that rates municipal bonds, has held Marblehead at <strong>AAA</strong> (the highest possible) since at least 2015.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf" data-source="FY24 Town of Marblehead ACFR, Management Discussion and Analysis credit rating section (page 26)"></sup> In April 2026 S&amp;P reaffirmed AAA but moved the outlook from stable to negative, citing the FY27 operating budget gap.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026-04-10_SP_Rating_Letter.pdf" data-source="S&amp;P Global Ratings letter to Finance Director Aleesha Benjamin, April 10, 2026 (reference 40447311). AAA rating affirmed; outlook revised from stable to negative."></sup></p>
+
+<p>State law also caps how much a town can borrow at 5% of its equalized property value. For Marblehead at the end of FY24 that ceiling was about $475 million. The town was using about <strong>12%</strong> of it. A decade earlier the town was at 31% of the ceiling, so the headroom has more than doubled.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf" data-source="FY24 Town of Marblehead ACFR, Computation of Legal Debt Margin (page 123)"></sup></p>
+
+<details class="more-detail" style="margin-top: 4px;">
+  <summary>Year-by-year ratios, and a note on interest rates</summary>
+  <table class="ratio-table">
+    <thead>
+      <tr><th>Fiscal year</th><th>Debt owed</th><th>As % of resident income</th><th>As % of home values</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>FY15</td><td>$74.1M</td><td>6.34%</td><td>1.39%</td></tr>
+      <tr><td>FY18</td><td>$73.9M</td><td>5.80%</td><td>1.23%</td></tr>
+      <tr><td>FY21</td><td>$118.8M</td><td>8.38%</td><td>1.57%</td></tr>
+      <tr><td>FY22</td><td>$119.9M</td><td>6.97%</td><td>1.53%</td></tr>
+      <tr><td>FY23</td><td>$124.9M</td><td>6.49%</td><td>1.48%</td></tr>
+      <tr><td>FY24</td><td>$116.5M</td><td>6.02%</td><td>1.19%</td></tr>
+    </tbody>
+  </table>
+  <p class="caption">"Resident income" is the U.S. Census personal income total for Marblehead. "Home values" is total assessed value of all property in town. Source: FY24 ACFR, pages 121 and 122.</p>
+  <p>The town's bonds currently carry interest rates between 2% and 5%. Most were issued between 2015 and 2021, when interest rates were at historic lows, so the locked-in cost of carrying that debt is favorable by today's standards. The town has also done several rounds of <strong>refunding</strong> (the municipal version of refinancing a mortgage) to swap older higher-cost bonds for newer lower-cost ones.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf" data-source="FY24 ACFR Long-Term Debt note (page 60) for current coupon ranges 2.00%-5.00%; Schedule of Revenues, Expenditures and Changes in Fund Balance (page 126) for refunding bond issuances in FY15, FY16, FY17, FY20, FY21."></sup></p>
+</details>
+
+<h2 id="how-we-compare" data-stance-section="how-we-compare">How Marblehead compares</h2>
+
+<p>Of the seventeen peer towns the site uses elsewhere, Marblehead's debt payments were the <strong>second-largest share</strong> of total town spending in FY24, at 10.95%. The Gerry School bonds were issued recently and the FY24 capital bundle is new, so the town is paying off newer debt than most of its peers.<sup class="cite" data-href="https://dlsgateway.dor.state.ma.us/reports/rdPage.aspx?rdReport=ScheduleA.ScheduleAByEntity_main" data-source="MA DLS Schedule A reports for the 17 peer towns, FY2024 (downloaded as data/peer_schedule_a_expenditures.csv). Share is debt service / total expenditures."></sup></p>
+
+<div class="peer-bars" aria-label="FY2024 debt service share of total expenditures, 17 peer towns">
+  <span class="town">Arlington</span>   <div class="bar-track"><div class="bar-fill" style="width: 91.3%;"></div></div> <span class="pct">11.4%</span>
+  <span class="town is-mh">Marblehead</span><div class="bar-track"><div class="bar-fill is-mh" style="width: 88.0%;"></div></div> <span class="pct">11.0%</span>
+  <span class="town">Brookline</span>   <div class="bar-track"><div class="bar-fill" style="width: 83.6%;"></div></div> <span class="pct">10.4%</span>
+  <span class="town">Swampscott</span>  <div class="bar-track"><div class="bar-fill" style="width: 81.3%;"></div></div> <span class="pct">10.1%</span>
+  <span class="town">Wellesley</span>   <div class="bar-track"><div class="bar-fill" style="width: 80.9%;"></div></div> <span class="pct">10.1%</span>
+  <span class="town">Stoneham</span>    <div class="bar-track"><div class="bar-fill" style="width: 79.8%;"></div></div> <span class="pct">9.9%</span>
+  <span class="town">Winchester</span>  <div class="bar-track"><div class="bar-fill" style="width: 78.3%;"></div></div> <span class="pct">9.7%</span>
+  <span class="town">Needham</span>     <div class="bar-track"><div class="bar-fill" style="width: 76.6%;"></div></div> <span class="pct">9.5%</span>
+  <span class="town">Lexington</span>   <div class="bar-track"><div class="bar-fill" style="width: 70.9%;"></div></div> <span class="pct">8.8%</span>
+  <span class="town">Natick</span>      <div class="bar-track"><div class="bar-fill" style="width: 68.1%;"></div></div> <span class="pct">8.5%</span>
+  <span class="town">Duxbury</span>     <div class="bar-track"><div class="bar-fill" style="width: 58.9%;"></div></div> <span class="pct">7.3%</span>
+  <span class="town">Easton</span>      <div class="bar-track"><div class="bar-fill" style="width: 58.7%;"></div></div> <span class="pct">7.3%</span>
+  <span class="town">Hingham</span>     <div class="bar-track"><div class="bar-fill" style="width: 54.5%;"></div></div> <span class="pct">6.8%</span>
+  <span class="town">Newton</span>      <div class="bar-track"><div class="bar-fill" style="width: 40.2%;"></div></div> <span class="pct">5.0%</span>
+  <span class="town">Framingham</span>  <div class="bar-track"><div class="bar-fill" style="width: 38.5%;"></div></div> <span class="pct">4.8%</span>
+  <span class="town">Melrose</span>     <div class="bar-track"><div class="bar-fill" style="width: 37.6%;"></div></div> <span class="pct">4.7%</span>
+  <span class="town">Cohasset</span>    <div class="bar-track"><div class="bar-fill" style="width: 25.4%;"></div></div> <span class="pct">3.2%</span>
+</div>
+<p class="caption">FY2024 debt payments as a percentage of total town spending. Source: each town's state Schedule A filing. Peer median: 9.5%. FY24 is the latest year all towns have reported.</p>
+
+<p>A higher share is not "worse-managed." Towns that just finished a school project pay more on debt than towns that have not built one in fifteen years. Recency, not management.</p>
+
+<h2 id="what-this-means" data-stance-section="what-this-means">How this relates to the operating override</h2>
+
+<p>The June 2026 override raised the operating budget. It was a different decision from debt:</p>
+
+<ul>
+  <li><strong>The debt payment is paid out of its own separate tax.</strong> The operating override vote did not change the debt payment.</li>
+  <li><strong>Cutting the operating budget would not free up money for debt.</strong> Debt was never on the operating side to begin with.</li>
+  <li><strong>The forward schedule is contractual.</strong> The town's flexibility on existing debt is mostly refinancing. Future borrowing is a separate vote each time.</li>
+</ul>
+
+<p>The payoff schedule from FY2030 onward depends on whether voters approve more borrowing between now and then. Each new project is its own ballot question.</p>
+
+<div class="read-next">
+  <div class="read-next-label">Read next</div>
+  <a class="read-next-link" href="where-has-the-money-gone.html">
+    <div class="read-next-title">Where has Marblehead's money gone? &rarr;</div>
+    <div class="read-next-desc">A ten-year general fund spending walkthrough. Debt payments are one of six categories that grew the most.</div>
+  </a>
+  <a class="read-next-link" href="/2026-override/">
+    <div class="read-next-title">The 2026 override archive &rarr;</div>
+    <div class="read-next-desc">The four ballot questions Marblehead passed on June 9, 2026, and how the operating override differs from a debt exclusion.</div>
+  </a>
+  <a class="read-next-link" href="/charts/override_history.html">
+    <div class="read-next-title">Marblehead's Prop 2&frac12; vote history &rarr;</div>
+    <div class="read-next-desc">35 years of operating-override ballot questions with 2026's four passes shown alongside 14 peer towns.</div>
+  </a>
+</div>
+
+<details class="notes">
+  <summary>Sources and methodology</summary>
+  <p>The outstanding debt total, the maturity schedule, the authorized-but-unissued list, the legal debt limit, and the credit rating all come from the <a href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf">FY24 Annual Comprehensive Financial Report</a> (the audited annual report, abbreviated <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>) for the Town of Marblehead, audited by Roselli, Clark &amp; Associates and dated March 2025. Specific pages used: Management Discussion and Analysis (pages 25 to 26), Long-Term Debt note (pages 58 to 62), Changes in Long-Term Liabilities (page 59), Ratios of Outstanding Debt by Type (page 121), Ratios of General Bonded Debt Outstanding (page 122), and Computation of Legal Debt Margin (page 123). A local copy of the ACFR is in <a href="data/town_docs/FY24_Town_of_Marblehead_ACFR.pdf"><code>data/town_docs/FY24_Town_of_Marblehead_ACFR.pdf</code></a>.</p>
+
+  <p>The 51-vote debt-exclusion ballot history is from the Massachusetts <a href="https://www.mass.gov/orgs/division-of-local-services">Department of Revenue, Division of Local Services</a> debt-exclusion file, filtered to <code>municipality == "Marblehead"</code>. The file shows 50 wins and 1 loss for Marblehead between 1988 and 2025; the single loss was a June 2002 vote on bonds for Tucker's Wharf. The file is in <a href="data/dor_debt_exclusion_all.csv"><code>data/dor_debt_exclusion_all.csv</code></a>.</p>
+
+  <p>The recent-years debt-service table (FY24 actual through FY27 proposed) comes from the <a href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY27_Proposed_Budget_No_Override.pdf">FY2027 Proposed Budget</a> "Total Debt Service" line. The April 7, 2025 Finance Committee meeting quote and the reference to the Select Board's 15%-of-revenue policy come from the <a href="https://vimeo.com/1073542272">official Vimeo recording</a> of that meeting at the timestamps noted in the page citations.</p>
+
+  <p>The peer comparison uses <a href="https://dlsgateway.dor.state.ma.us/reports/rdPage.aspx?rdReport=ScheduleA.ScheduleAByEntity_main">Schedule A</a> filings for the seventeen-town peer set used elsewhere on the site (Marblehead's North Shore peers plus the larger Route 9 / Route 128 towns). Schedule A reports a "Debt Service" total and a total expenditures number for each town and fiscal year; the chart divides the first by the second. The data file is <a href="data/peer_schedule_a_expenditures.csv"><code>data/peer_schedule_a_expenditures.csv</code></a>. FY2024 is the most recent year with complete Schedule A data for the full peer set as of June 2026.</p>
+
+  <p>A structured digest of the debt figures used on this page is in <a href="data/debt_summary.json"><code>data/debt_summary.json</code></a> for anyone who wants to reuse the numbers programmatically.</p>
+
+  <p>This page was built in June 2026 and will be rechecked when the FY25 ACFR is published, expected early 2027.</p>
+</details>

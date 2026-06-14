@@ -1058,14 +1058,6 @@ html[data-theme="dark"] .page.page--home::before { filter: invert(1); opacity: 0
 .tag-data   { background: var(--tag-data-bg);  color: var(--tag-data-fg); }
 .tag-action { background: var(--tag-action-bg); color: var(--tag-action-fg); }
 
-/* Inline pill for doc-page bullets (what-have-we-tried) */
-body.doc-page .page li .tag {
-  display: inline-block; font-size: 0.625rem; font-weight: 700;
-  padding: 2px 8px; border-radius: 100px;
-  letter-spacing: 0.3px; text-transform: uppercase;
-  vertical-align: 2px; margin-right: 4px;
-}
-
 /* ── Card background sparklines ─────────────────────────────
    Faint chart silhouettes behind homepage cards with a Chart tag.
    The shape is the actual data from the linked chart, at ~12%
@@ -1547,44 +1539,6 @@ body.doc-page .page table:not(.data) th {
 }
 
 /* ==========================================================================
-   Catalog entries (is-the-board-trying / what-have-we-tried)
-   ========================================================================== */
-.catalog-entries { margin-top: 40px; border-top: 1px solid var(--divider); padding-top: 12px; }
-.catalog-lead { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 20px; }
-
-.catalog-card {
-  border: 1px solid var(--divider);
-  border-radius: 6px;
-  padding: 14px 16px;
-  margin-bottom: 14px;
-  scroll-margin-top: 80px;
-}
-.catalog-card:target { outline: 2px solid var(--accent); outline-offset: 2px; }
-
-.catalog-card-head {
-  display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline;
-  margin-bottom: 8px; font-size: 0.8125rem;
-}
-.catalog-body  { font-weight: 700; color: var(--text); }
-.catalog-date  { color: var(--text-muted); }
-.catalog-topic { color: var(--text-muted); font-style: italic; }
-
-.catalog-what    { font-size: 0.875rem; line-height: 1.55; margin: 0 0 6px; }
-.catalog-outcome { font-size: 0.8125rem; line-height: 1.5; color: var(--text-muted); margin: 0 0 6px; }
-.catalog-quote {
-  font-size: 0.8125rem; line-height: 1.5;
-  border-left: 3px solid var(--divider);
-  margin: 8px 0; padding: 4px 12px;
-  color: var(--text-muted); font-style: italic;
-}
-.catalog-minutes-link { font-size: 0.8125rem; }
-
-@media (max-width: 600px) {
-  .catalog-card { padding: 10px 12px; }
-  .catalog-what { font-size: 0.8125rem; }
-}
-
-/* ==========================================================================
    Chart SVG — reusable classes
    Colors propagate via `color` + `currentColor` for theme compatibility.
    ========================================================================== */
@@ -1820,6 +1774,28 @@ svg.chart .s-tier-3     { color: var(--series-tier-3); }
 .legend-item.s-tier-2     { color: var(--series-tier-2); }
 .legend-item.s-tier-3     { color: var(--series-tier-3); }
 .legend-item span.legend-text { color: var(--text-muted); }
+
+/* Capacity-vs-draw chart legend (what-is-the-override.html): block swatches
+   instead of the default 3px line swatch, so the solid "draw" and the
+   ghosted "unused capacity" read as filled areas. */
+.cap-draw-legend .legend-swatch {
+  width: 14px; height: 14px; border-radius: 2px;
+  box-sizing: border-box;
+}
+.cap-draw-legend .legend-swatch--draw { background: var(--series-tier-3); }
+.cap-draw-legend .legend-swatch--cap {
+  background: var(--chart-grid-major);
+  border: 1.5px dashed var(--c-text-sub);
+}
+.cap-draw-legend .legend-swatch--ref {
+  height: 0; border-radius: 0; background: none;
+  border-top: 2px dashed var(--c-text-sub);
+}
+/* Dashed $15M reference line in the capacity chart. */
+svg.chart .cap-ref-line {
+  stroke: var(--c-text-sub); stroke-width: 1.25;
+  stroke-dasharray: 6 4; fill: none;
+}
 
 /* ==========================================================================
    Override calculator — specific styles
@@ -3081,6 +3057,16 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
 }
 .vote-chart-yes { background: var(--c-teal); }
 .vote-chart-no  { background: var(--text-subtle); }
+.vote-chart-pending {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.6875rem;
+  font-style: italic;
+  letter-spacing: 0.4px;
+}
 
 @media (max-width: 600px) {
   .vote-chart-row {
@@ -3092,6 +3078,7 @@ button.ballot-oval[aria-pressed="true"] .ballot-oval-fill ellipse {
   .vote-chart-bar { height: 24px; }
   .vote-chart-yes,
   .vote-chart-no { font-size: 0.625rem; }
+  .vote-chart-pending { font-size: 0.625rem; }
 }
 
 /* ==========================================================================
@@ -3710,7 +3697,30 @@ blockquote.quote--mixed p {
   font-size: 0.875rem;
   color: var(--text-subtle);
   line-height: 1.55;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+.featured-card-meta {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+.featured-card-meta .dot {
+  color: var(--c-navy);
+  margin: 0 6px;
+}
+.featured-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--c-teal);
+  transition: gap 0.2s;
+}
+.featured-card:hover .featured-card-cta {
+  gap: 7px;
 }
 
 @media (max-width: 600px) {
@@ -4245,6 +4255,40 @@ body.has-numbered-charts .chart-wrapper,
 body.has-numbered-charts .dollar-table {
   margin-top: 1rem;
 }
+
+@media (max-width: 400px) {
+  nav.site-nav .nav-inner > a.nav-brand { font-size: 0; }
+  .nav-brand .nav-logo { font-size: 14px; }
+}
+
+/* Subscribe page */
+body.subscribe-page .subscribe-form { display: flex; flex-direction: column; gap: 0.8rem; max-width: 420px; margin: 1.5rem 0; }
+body.subscribe-page .subscribe-form label { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.9rem; }
+body.subscribe-page .subscribe-form input[type="email"] { padding: 0.5rem 0.75rem; font: inherit; border: 1px solid var(--c-border); border-radius: 4px; }
+body.subscribe-page .subscribe-form button { background: var(--c-navy); color: var(--c-fog); border: 0; padding: 0.55rem 1rem; border-radius: 4px; cursor: pointer; font-weight: 600; }
+body.subscribe-page .subscribe-msg { color: var(--c-text-mid); font-size: 0.9rem; }
+body.subscribe-page .subscribe-default { color: var(--c-text-mid); font-size: 0.9rem; }
+
+/* Inline subscribe CTA on /meetings/ */
+body.transcripts-page .meetings-cta { background: var(--c-fog); border: 1px solid var(--c-border); border-radius: 6px; padding: 1.25rem 1.5rem; margin: 1.5rem 0 2rem; }
+body.transcripts-page .meetings-cta-lede { margin: 0 0 0.85rem; }
+body.transcripts-page .meetings-cta-form { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin: 0; }
+body.transcripts-page .meetings-cta-form input[type="email"] { flex: 1 1 240px; min-width: 0; padding: 0.5rem 0.75rem; font: inherit; border: 1px solid var(--c-border); border-radius: 4px; }
+body.transcripts-page .meetings-cta-form button { background: var(--c-navy); color: var(--c-fog); border: 0; padding: 0.55rem 1.1rem; border-radius: 4px; cursor: pointer; font: inherit; font-weight: 600; }
+body.transcripts-page .meetings-cta-form .cf-turnstile { flex: 0 0 auto; }
+body.transcripts-page .meetings-cta-msg { color: var(--c-text-mid); font-size: 0.9rem; margin: 0.6rem 0 0; }
+body.transcripts-page .meetings-cta-fine { color: var(--c-text-mid); font-size: 0.85rem; margin: 0.7rem 0 0; }
+body.transcripts-page .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* Preferences page */
+body.me-subscription-page .ms-pref fieldset { border: 1px solid var(--c-border); padding: 1rem; margin: 1rem 0; border-radius: 6px; }
+body.me-subscription-page .ms-pref legend { padding: 0 0.4rem; font-weight: 600; }
+body.me-subscription-page .ms-pref label { display: block; padding: 0.25rem 0; }
+body.me-subscription-page .ms-pref .ms-vol { color: var(--c-text-mid); font-size: 0.85rem; }
+body.me-subscription-page .ms-pref .ms-help { color: var(--c-text-mid); font-size: 0.85rem; margin: 0.25rem 0 0.5rem; }
+body.me-subscription-page .ms-pref .ms-unsub { background: transparent; color: var(--c-text-mid); border: 1px solid var(--c-border); }
+body.me-subscription-page .ms-pref button { font-family: inherit; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-navy); color: var(--c-fog); border: 0; font-weight: 600; }
 
 /* === Org chart (/org-chart.html) === */
 

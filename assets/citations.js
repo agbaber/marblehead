@@ -106,9 +106,16 @@
       list.appendChild(li);
     });
 
+    // Where to put the sources section, in order of preference:
+    //   1. Before the first .notes block (methodology-footnote convention)
+    //   2. Appended inside the m101 chapter column, after the pager (course pages)
+    //   3. Appended to the document body (fallback)
     var notes = document.querySelector('.notes');
+    var m101Main = document.querySelector('.m101-main');
     if (notes && notes.parentNode) {
       notes.parentNode.insertBefore(section, notes);
+    } else if (m101Main) {
+      m101Main.appendChild(section);
     } else {
       document.body.appendChild(section);
     }

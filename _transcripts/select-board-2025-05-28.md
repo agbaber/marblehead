@@ -1,0 +1,521 @@
+---
+slug: select-board-2025-05-28
+board: select-board
+board_display: "Select Board"
+date: 2025-05-28
+title: "Select Board: May 28, 2025"
+vimeo_id: 1088616089
+vimeo_url: "https://vimeo.com/1088616089"
+duration_seconds: 4983
+ai_generated: true
+status: published
+source: vimeo-auto+llm
+
+
+summary_card:
+  headline: "Select Board renews Town Administrator Keer's contract; approves MWRA loan and multiple grants"
+  summary: "The Marblehead Select Board approved a new three-year employment contract for Town Administrator Thatcher Keer following an executive session. The board also approved a $198,750 interest-free MWRA water bond, accepted a $50,000 gift from Marblehead Youth Baseball for LED lighting at Gale's Field, and authorized letters of support for eight grant applications totaling roughly $2.5 million. The meeting was the final one for outgoing board member Brett Murray."
+  decisions:
+    - "Approved $198,750 MWRA zero-interest water bond (10-year loan, $19,875 annual payments 2026–2035)"
+    - "Continued Shin Dynasty revocation hearing to August 13, 2025"
+    - "Approved early voting hours for June 10, 2025 annual town election"
+    - "Approved polling hours of 2:00 PM to 8:00 PM for July 8, 2025 special referendum election"
+    - "Approved consent agenda including April 23 minutes, bell ringing July 4, Old Townhouse fee waiver, and Breast Friends Walk"
+    - "Approved contract amendments including Brighter Horizons Police Tank Removal increase of $18,144 and Granice & Sons storm sewer change orders"
+    - "Approved acceptance of $135,000 MassWorks grant for Five Corners intersection redesign"
+    - "Approved temporary parking ban for street sweeping June 9–12, 2025"
+    - "Authorized letters of support for eight grant applications"
+    - "Approved $50,000 gift from Marblehead Youth Baseball for Gale's Field LED lighting"
+    - "Approved three-year employment contract for Town Administrator Thatcher Keer"
+    - "Approved outdoor dining application for Café Italia at 10 Bessom Street"
+    - "Released select board executive session minutes dated February 26 2025, May 15 2024, May 23 2024, May 24 2023, June 28 2023, and November 2 2021"
+    - "Held select board executive session minutes dated March 12 2025, March 26 2025, November 13 2023, and November 23 2020"
+  votes:
+    - motion: "Executive session (contract negotiations and minute review)"
+      result: "in favor (unanimous)"
+    - motion: "$198,750 MWRA water bond approval"
+      result: "in favor (unanimous)"
+    - motion: "Authorization for board members and officials to execute bond documents"
+      result: "in favor (unanimous)"
+    - motion: "Continue Shin Dynasty revocation hearing to August 13, 2025"
+      result: "in favor (unanimous)"
+    - motion: "Early voting hours for June 10, 2025 annual town election"
+      result: "in favor (unanimous)"
+    - motion: "Polling hours 2:00 PM–8:00 PM for July 8, 2025 special election"
+      result: "in favor (unanimous)"
+    - motion: "Consent agenda (minutes, bell ringing, fee waiver, Breast Friends Walk)"
+      result: "in favor (unanimous)"
+    - motion: "Contract amendments (Brighter Horizons and Granice & Sons change orders)"
+      result: "in favor (unanimous)"
+    - motion: "Accept $135,000 MassWorks grant for Five Corners intersection"
+      result: "in favor (unanimous)"
+    - motion: "Temporary parking ban for street sweeping June 9–12"
+      result: "in favor (unanimous)"
+    - motion: "Letters of support for eight grant applications"
+      result: "in favor (unanimous)"
+    - motion: "Accept $50,000 gift from Marblehead Youth Baseball for Gale's Field lighting"
+      result: "in favor (unanimous)"
+    - motion: "Three-year employment contract for Town Administrator Thatcher Keer"
+      result: "in favor (unanimous)"
+    - motion: "Outdoor dining approval for Café Italia, 10 Bessom Street"
+      result: "in favor (unanimous)"
+    - motion: "Release specified executive session minutes"
+      result: "in favor (unanimous)"
+    - motion: "Continue holding specified executive session minutes"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: admin-housekeeping
+    topic_confidence: 0.95
+    start_seconds: 81
+    end_seconds: 131
+    headline: "Board votes to enter executive session for Town Administrator contract negotiations"
+    dek: "The board unanimously approved entering executive session under MGL Chapter 30A for contract negotiations and review of executive session minutes."
+    summary: "At the opening of the May 28, 2025 meeting, the chair called for a vote to enter executive session under Massachusetts General Law Chapter 30A for the purposes of contract negotiations with the town administrator and to review executive session minutes where public discussion could be detrimental to the town's negotiating position. The vote was unanimous. The board subsequently reconvened in open session."
+    key_speakers: ["Chair (Newan)"]
+  - topic: bonding-capital
+    topic_confidence: 0.97
+    start_seconds: 160
+    end_seconds: 374
+    headline: "Board approves $198,750 interest-free MWRA water bond for water line inspection and replacement"
+    dek: "The 10-year zero-interest loan, originally authorized at a 2021 town meeting, will fund vacuum excavation and inspection of water services with annual payments of $19,875 starting in 2026."
+    summary: "The town's finance director and treasurer presented a Massachusetts Water Resources Authority (MWRA) zero-interest 10-year loan for $198,750, previously authorized at a 2021 town meeting. Annual principal payments of $19,875 are due May 15 each year from 2026 through 2035. The funds will be used for vacuum excavation inspection of water service lines and replacement of up to 10 lines as needed. The board was also informed that a 25% grant is available for replacement of lead piping found during inspections. Two motions were approved: one authorizing the bond sale and loan agreement, and one authorizing board members, the town clerk, finance director, and treasurer to execute related documents."
+    key_speakers: ["Finance Director/Town Treasurer", "Candy (Finance staff)"]
+  - topic: permits-zoning
+    topic_confidence: 0.95
+    start_seconds: 374
+    end_seconds: 982
+    headline: "Shin Dynasty liquor license revocation hearing continued to August 13 amid ongoing ADA and firewall delays"
+    dek: "The applicant reported state approval of an ADA entrance design in late March but ongoing difficulty securing a contractor to begin construction, expected to start in June."
+    summary: |
+      The Select Board continued a public hearing, originally opened November 13, 2024, on revocation of the wine and malt beverage license held by Shin Dynasty at 1 Atlantic Avenue. The licensee described a lengthy process to obtain state approval for an ADA-compliant entrance design, which was finalized at the end of March 2025 after multiple rounds of state revisions. A firewall issue, discovered in mid-October 2024, has prevented interior work from proceeding.
+      
+      A contractor (identified as Doug Dubin) has indicated he could begin work in June, with a projected two-to-three month completion timeline. No signed contract was yet in place. The board agreed to continue the hearing to the August 13, 2025 meeting and requested timely updates from the licensee as developments occur.
+    key_speakers: ["Shin Dynasty licensee (mic only)", "Chair (Newan)"]
+  - topic: elections-procedural
+    topic_confidence: 0.98
+    start_seconds: 1008
+    end_seconds: 1226
+    headline: "Board sets early voting hours for June 10 election and 2–8 PM polling hours for July 8 special referendum"
+    dek: "Early in-person voting for the June 10 annual town election runs June 2–6 at April Hall; the July 8 special referendum polling hours are fixed by a 1954 special act at 2:00–8:00 PM."
+    summary: |
+      On recommendation of the town clerk and Board of Registrars, the Select Board approved early voting hours at April Hall for the June 10, 2025 annual town election:
+      
+      | Date | Hours |
+      |------|-------|
+      | Monday, June 2 | 8:30 AM – 4:30 PM |
+      | Tuesday, June 3 | 8:30 AM – 4:30 PM |
+      | Wednesday, June 4 | 8:30 AM – 5:30 PM |
+      | Thursday, June 5 | 8:30 AM – 4:30 PM |
+      | Friday, June 6 | 8:30 AM – 12:00 PM |
+      
+      For the July 8, 2025 special referendum election, the board approved polling hours of 2:00 PM to 8:00 PM, as mandated by Chapter 405 of the Acts of 1954, which prohibits polls from opening before 2:00 PM. General Law Chapter 54, Section 64 prohibits polls from remaining open past 8:00 PM.
+    key_speakers: ["Chair (Newan)", "Robin Misho (Town Clerk, referenced)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 1226
+    end_seconds: 1372
+    headline: "Board approves consent agenda including minutes, bell ringing, fee waiver, and Breast Friends Walk"
+    dek: "Routine consent items were approved in a single motion covering April 23 minutes, July 4 bell ringing, a fee waiver for Sustainable Marblehead at Old Townhouse, and the October 12 Breast Friends Walk."
+    summary: "The board approved a consent agenda covering: minutes of April 23, 2025; a request for church bells to ring on July 4 at 7:30–8:00 AM, noon–12:30 PM, and 6:00–6:30 PM; a fee waiver for Sustainable Marblehead (nonprofit) for use of the Old Townhouse on June 6, 2025; and the Breast Friends Walk on October 12, 2025 at Devereaux Beach, subject to standard approvals, insurance, and conditions prohibiting permanent street markings."
+    key_speakers: ["Chair (Newan)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 1279
+    end_seconds: 1465
+    headline: "Board approves contract amendments for police tank removal and Bessom Street storm sewer project"
+    dek: "A soil contamination discovery at the police station tank site required an additional $18,144; four change orders for the Bessom Beacon Storm Sewer extension resulted in a net decrease to that contract."
+    summary: |
+      The board approved several contract amendments:
+      
+      - **Brighter Horizons Environmental** (Police Tank Removal): increased by $18,144, extended to July 30, 2025. Additional contamination found in the excavation required further soil mitigation beyond the original ARPA-funded scope; additional funds were identified through the finance department.
+      - **Granice & Sons, Inc.** (Bessom Beacon Storm Sewer Extension, Contract 1807): four change orders totaling a net decrease:
+        - Change Order 1: +$21,946.21
+        - Change Order 2: +$19,440.49
+        - Change Order 3 (additional video inspections): +$7,090.97 (approximate)
+        - Change Order 4 (final balancing): -$82,874.45
+      
+      Funding is from stormwater construction articles.
+    key_speakers: ["Town Administrator (Keer)", "Board member (Grader/Greator)"]
+  - topic: trash-dpw
+    topic_confidence: 0.92
+    start_seconds: 1465
+    end_seconds: 1561
+    headline: "Board accepts $135,000 MassWorks grant for Five Corners intersection redesign with $15,100 local match"
+    dek: "The grant will fund design work up to a 25% design phase for traffic calming, bicycle facilities, and stormwater improvements at the Five Corners intersection."
+    summary: "The board accepted a MassWorks Infrastructure Grant of $135,000 with a local match of $15,100 for redesign of the Five Corners intersection, identified in the town's Complete Streets prioritization plan and a prior intersection study. DPW staff indicated the work will advance preliminary designs to approximately the 25% design phase, incorporating a potential mini roundabout, bicycle facilities, landscaping, and stormwater management for the School Street public parking lot. The town plans to issue an RFP by end of July, hire a consultant by August, and begin community engagement — including approximately four public meetings — shortly after project kickoff around September. The design phase is expected to take 12–18 months."
+    key_speakers: ["Brendan (DPW staff)", "Town Administrator (Keer)"]
+  - topic: trash-dpw
+    topic_confidence: 0.85
+    start_seconds: 1840
+    end_seconds: 1887
+    headline: "Board approves temporary parking ban for downtown street sweeping June 9–12"
+    dek: "A midnight-to-7 AM parking ban covering the Old Town, downtown, and shipyard districts is planned June 9–12 with resident notification via Code Red and signage."
+    summary: "On request of DPW Director Amy McHugh, the board approved a temporary parking ban from 12:01 AM to 7:00 AM on June 9–12, 2025 in the downtown, Old Town, and shipyard districts for annual street sweeping. Residents and visitors will be notified through temporary no-parking signs, targeted flyering, website updates, Code Red notifications, and the Marblehead Police Facebook page."
+    key_speakers: ["Chair (Newan)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.87
+    start_seconds: 1887
+    end_seconds: 2835
+    headline: "Board authorizes letters of support for eight grant applications totaling roughly $2.5 million"
+    dek: "Applications span climate resilience, downtown parking study, Abbott Hall renovation, vacant storefronts, MBTA catalyst funding, rail trail design, Washington Street redesign, and Mary Alley ADA improvements."
+    summary: |
+      Sustainable Coordinator Logan Casey presented eight grant applications for board authorization:
+      
+      | Grant | Amount Requested | Match |
+      |-------|-----------------|-------|
+      | Accelerating Climate Resilience (MAPC) — housing authority common spaces | Up to $125,000 | ~$12,500 in-kind staff hours |
+      | Massachusetts Downtown Initiative — parking study | $30,000 | None required |
+      | Underutilized Properties Program — Abbott Hall attic/ADA | Up to $1,000,000 | ~$100,000 (Historical Commission museum fund) |
+      | Mass Vacant Storefront Program — business incentives | Up to $50,000 | $2,500 in-kind |
+      | MBTA Community Catalyst Funding — rail trail design | ~$1,000,000 | $175,000 federal earmark (2022) |
+      | Real Estate Services Technical Assistance — Coffin School reuse study | $50,000 | $5,000 from Finance Reserve Fund |
+      | MassWorks Infrastructure — Washington Street redesign (Five Corners to Hooper St.) | TBD | 10% from Article 11 DPW funds |
+      | Municipal ADA Grant — Mary Alley HVAC/accessibility improvements | $250,000 | $50,000 from debt exclusion override (if passed) |
+      
+      A board member noted that eligibility for several grants — specifically MBTA Community Catalyst Funding, MassWorks, and Complete Streets programs — depends on Marblehead maintaining compliance with MBTA 3A zoning, which remains in abeyance pending a July 8 referendum on a petition to repeal the town meeting vote.
+    key_speakers: ["Logan Casey (Sustainable Coordinator)", "Brendan (DPW)", "Town Administrator (Keer)"]
+  - topic: recreation-events
+    topic_confidence: 0.95
+    start_seconds: 2881
+    end_seconds: 3162
+    headline: "Board accepts $50,000 gift from Marblehead Youth Baseball to replace Gale's Field lighting with LED fixtures"
+    dek: "The $77,000–$78,000 total project combines the youth baseball donation, $28,000 from the Rec & Parks revolving fund, and $21,000 for electrical work by Ham Electrical; Marblehead Light will contribute pole inspection and installation labor."
+    summary: |
+      Rec & Parks Director Shelly Bedrosian (participating remotely) described a public-private collaboration to replace 60 aging lights at Gale's Field, for which replacement parts are no longer available. Project funding breakdown:
+      
+      - Marblehead Youth Baseball donation: **$50,000**
+      - Rec & Parks revolving fund (approved by Rec & Parks board): up to **$28,000**
+      - Ham Electrical (Georgetown) for final connections: **$21,000**
+      - Marblehead Electric Light: contributing pole inspection, removal of old fixtures, and installation of new fixtures at no charge
+      
+      Total project budget: approximately **$77,000–$78,000**. New fixtures are 8,500-lumen LED lights. Work is phased around summer programming; the majors field is targeted for completion before June 30, with the full project expected by September 1, in time for football season. New independent timers will be installed for each zone.
+    key_speakers: ["Shelly Bedrosian (Rec & Parks Director, remote)", "Chair (Newan)"]
+  - topic: labor-personnel
+    topic_confidence: 0.97
+    start_seconds: 3162
+    end_seconds: 3535
+    featured: true
+    headline: "Select Board unanimously approves new three-year contract for Town Administrator Thatcher Keer"
+    dek: "The contract includes a cost-of-living adjustment in the first year and merit-based performance reviews, and was praised by board members for reflecting market conditions and Keer's record over his first three years."
+    summary: "Following an executive session earlier in the evening, the Select Board voted unanimously to approve a new three-year employment contract for Town Administrator Thatcher Keer. The chair noted the contract reflects a cost-of-living adjustment in the first year as well as merit-based performance reviews and consideration of market conditions. Board members credited Keer with strategic reorganization of town government, successful collective bargaining in a single year with the teachers union, police union, and MMEU, and building a strong professional staff including the HR director, community development/planning department, and finance office. Keer expressed appreciation for the board's collaborative working relationship and credited the team culture across town departments. The contract will be formally executed and released once signed."
+    key_speakers: ["Town Administrator (Thatcher Keer)", "Chair (Newan)", "Board member (Murray)", "Board member (Grader/Greator)"]
+  - topic: permits-zoning
+    topic_confidence: 0.88
+    start_seconds: 3622
+    end_seconds: 3716
+    headline: "Board approves 2025 temporary outdoor dining application for Café Italia at 10 Bessom Street"
+    dek: "Approval is subject to receipt of required forms, fees, insurance, and sign-off from police, fire, building commissioner, and town administrator."
+    summary: "The board approved a temporary outdoor dining application for Café Italia at 10 Bessom Street for the 2025 season in accordance with the town's temporary outdoor dining policy. A letter of support from the property management company (Rocket Management) was on file. Approval was conditioned on receipt of required forms, fees, insurance, and approvals from police, fire, building commissioner, and town administrator. The vote was taken as a polled vote and was unanimous."
+    key_speakers: ["Chair (Newan)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.9
+    start_seconds: 3716
+    end_seconds: 3775
+    headline: "Board releases six sets of executive session minutes; holds four pending further review"
+    dek: "Minutes from February 2025 through November 2021 were released; minutes from March 2025, November 2023, and November 2020 remain held on advice of town counsel."
+    summary: "On advice of town counsel, the board voted to make public six sets of executive session minutes: February 26, 2025; May 15, 2024; May 23, 2024; May 24, 2023; June 28, 2023; and November 2, 2021. The board also voted to continue holding four sets: March 12, 2025; March 26, 2025; November 13, 2023; and November 23, 2020."
+    key_speakers: ["Chair (Newan)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 3775
+    end_seconds: 4533
+    headline: "Town Administrator reports on fiber loop expansion, Munis go-live, EV fleet transition, and assessing office improvements"
+    dek: "Highlights include an $89,000 grant to extend the municipal fiber loop to the Neck, a July 1 Munis software go-live, a draft employee home EV charging policy, and a lighter-than-expected abatement season."
+    summary: |
+      Town Administrator Keer presented a broad update drawn from a recent department head meeting:
+      
+      **Civic Engagement**
+      - Veterans Service Agent held her first independent Memorial Day ceremony; described as successful.
+      - Citizen Police Academy completed with six graduates committing to volunteer with the police department; interest in a second academy.
+      
+      **Technology Infrastructure**
+      - $89,000 public infrastructure grant received to extend the ARPA-funded municipal fiber loop to the Neck, connecting remaining municipal infrastructure.
+      - Munis financial software: staff access established, training underway, go-live targeted for July 1.
+      
+      **Electric Vehicle Fleet Transition**
+      - Mass Fleet Advisor technical assistance agreement underway to develop an EV transition plan.
+      - Green Marblehead Implementation Committee assessing high-speed EV charger locations including the DPW yard.
+      - Draft employee home charging policy in development for employees authorized to take vehicles home; would cover cost of Level 2 charger installation and reimburse home electricity costs for overnight charging.
+      - Council on Aging exploring purchase of an electric van.
+      
+      **Assessing Office**
+      - Current abatement season is very light; assistant/lead assessor proactively reviewing and correcting land value database issues that affected certain neighborhoods in prior years.
+      
+      **Environmental / Regulatory**
+      - DCR floodplain permit approved; final revisions underway.
+      - Gas leaf blower ban in effect from Memorial Day through Labor Day; enforcement approach is education-first.
+      
+      **Ambulance Contract**
+      - Atlantic Ambulance contract expires June 30; town is engaging the marketplace to evaluate options before renewal or replacement.
+    key_speakers: ["Town Administrator (Thatcher Keer)", "Board member (Murray)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 4552
+    end_seconds: 4976
+    headline: "Board member Brett Murray gives farewell remarks at his final meeting after multiple terms of service"
+    dek: "Murray, completing his second stint on the Select Board, thanked voters, colleagues, and his family; the board also noted upcoming Town Charter public forums."
+    summary: |
+      Board member Brett Murray's final meeting was acknowledged by the full board. Chair Newan highlighted Murray's contributions including availability, insight, and collaborative spirit. Other members noted his long history in Marblehead (family roots to the 1700s) and collegiality.
+      
+      Murray thanked Marblehead voters for multiple reelections, praised the direction of the town under Town Administrator Keer's leadership, and encouraged more residents to run for boards and committees. He thanked his family for supporting his service.
+      
+      Separately, the chair noted upcoming Town Charter Committee public forums: a Thursday noon-to-one session at the Judy Jacoby Center (Council on Aging) and a Friday 9–10 AM online webinar. A prior evening forum had approximately 25 online attendees and 15 in person. Draft A of the proposed charter is posted on the Charter Committee's website.
+    key_speakers: ["Board member (Brett Murray)", "Chair (Newan)", "Board member (Fox)", "Board member (Singer)"]
+---
+
+> Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
+> proper names and dollar figures occasionally misheard. Click any timecode to
+> jump to that moment in the source video.
+
+**[0:06](https://vimeo.com/1088616089#t=6s)** Well, I, I appreciate it. It was really good. Even, you Know, I put some, I Complimented him on it. I know. Which, when I get a compliment from them, it's like a Major, major breakthrough. Yeah.
+
+**[0:20](https://vimeo.com/1088616089#t=20s)** The best we should. Well, that's an awfully big compliment. Wait till, you know, Harry Gave, Harry gave me a lot to think about, though. I'll tell you right now. I'll tell you right now. Wait till next year, The Shortt thing.
+
+**[0:34](https://vimeo.com/1088616089#t=34s)** Oh, yeah, I know. That's right. Yeah. Well, ebbs and flows a little bit, right. Especially now. Yeah. Well, so many of the, the World War II vets are, So is the screen gonna be off? It's just, well, I just, not why it's coming out on there, but when Patrick gets here Oh, okay. Should we wait for Him or do you wanna just go into, Oh, yeah. Okay. All right. I'm gonna just put a sign up. Okay, your Honor. So I can call us to order. Yes. Okay. Okay. It is Wednesday, May 28th, um, 2025 at seven o'clock. And I'm gonna call us to order. Our first, um, uh, order of Business is an executive session, and I, uh, do need a motion to go into executive session under general Law chapter 30 A
+
+**[1:21](https://vimeo.com/1088616089#t=81s)** for the purposes of contract negotiations, town administrator for the town administrator, and under Massachusetts General Law, chapter 30 a section 21 7 to review executive session minutes where the public discussion on the same may have a detrimental effect on the negotiating position of the public body. Votes may be taken, and if there are, there are votes, they will rebel be released at a time deemed appropriate by town council. The board will reconvene an open session. And so, um, this, uh, so I need the motion. So moved. Second. Okay. And, um, vote yes. Vote. Ms. Singer In favor, Mr. Murray? In favor, Mr. Greater in favor, Mr. Fox? In favor, Ms. In favor. Okay. So, okay. Thank you. Okay. So, uh, we are now back and, uh, ready for public comment. If anybody in the audience has any public comment, just come to the mic or raise your hand online.
+
+**[2:08](https://vimeo.com/1088616089#t=128s)** Any public comment tonight?
+
+**[2:11](https://vimeo.com/1088616089#t=131s)** I don't see anyone here. Okay. And I will, uh, take town administrator update out of order. We'll come to that at the end. Um, we'll go forward and we will, I will ask our treasurer and finance director to come, um, to the table and present this MWRA loan agreement here. It's tab four.
+
+**[2:40](https://vimeo.com/1088616089#t=160s)** Do do that without literature. Right.
+
+**[2:45](https://vimeo.com/1088616089#t=165s)** Okay. We Honor sub Board. We're here tonight about a MWA zero interest 10 year loan for the town. Um, it had been prior approved at a town meeting, what you were said, 2021. 2021. Oh, I wanted that long ago. Yeah. Yep. I'll let you step into, I'm just give a quick introduction and then I'm gonna turn over to Candy. Well done. Um, I can't speak to exactly what they're doing with it, but we do have a member of the audience who can, if you have questions, uh, but this is a loan for, uh, 1 9 8 7 50. Uh, they chose this because they are getting, um, grant funds, I understand. To offset some of the borrowing, so, uh, should they need them.
+
+**[3:30](https://vimeo.com/1088616089#t=210s)** But again, it is an interest free annual payments of 19 8 75, starting in 26, going through 2035. Great. Are they still interest free? I'm curious. You know, 2021 was a little while ago. Are they still interest? They just paid principal. Yeah, principal. Okay. The next program. Yeah, definitely. So this will show up in the next budget, Like the first, So it's built into her, um, water enterprise fund. She builds those. Okay. So it worn by the, okay. Yeah. For, for the vacuum excavation of the street line for inspection of water services and the replacement of 10 service lines, should they find, find any that require replacing.
+
+**[4:17](https://vimeo.com/1088616089#t=257s)** Okay. Um, are we all set, everybody? Yeah, I think, no, it's clear. Okay. And, um, so I'll ask for a motion that the sale of the $198,750 water bond of the town dated June 16th, 2025 to the Massachusetts Water Resources Authority, uh, is hereby approved, and the finance director and town treasurer are authorized to execute on behalf of the town a loan agreement and a financial assistant agreement with the authority, with respect to the bond. And the bond shall be payable without interest on May 15th of the years. And in the principal amounts. And it's, um, years 26, 20, 26, 27, 20 28, 29, and 2030.
+
+**[5:02](https://vimeo.com/1088616089#t=302s)** And the, um, installments are all $19,875 On the other sides was 10 years close to 3 35. Oh, and it continues. Yes, correct. Okay. I didn't have it on the other side. No, no. On the right hand column. Oh, right. Oh, sorry. Oh, yeah. I see. And then, um, so it's years 2026 through 2035, and the installments are 19,875, uh, dollars. So moved. Second. I, this was in favor. Okay. I would just say that this also, Madam Chair comes with a 25% grant for replacement of, uh, lead, lead piping. Right. Which is, we find, which is great. Yeah. 25%. That's good. Yep. And also, uh, we require a motion that each member
+
+**[5:48](https://vimeo.com/1088616089#t=348s)** of the select board, the town clerk, the finance director, and the town treasurer be and hereby are authorized to take any and all such actions and execute and deliver such certificates, receipts, or other documents as may be determined by them or any of them to be necessary or convenient to carry into effect the provisions of the foregoing vote. So Second, All those in favor? Great. Okay. Thank you both. Thank you much. Thank you.
+
+**[6:14](https://vimeo.com/1088616089#t=374s)** All right. And, um, we are next. We have a, um, public hearing that we had continued for, uh, shin Dynasty at one Atlantic Avenue. It was the revocation hearing. Um, uh, yes, please. Come on. Come on up, sir. And, um, this is a public hearing, which has been continued from November 13th, 2024 on the revocation of the wine and malt beverage license held by Shin Dynasty at one Atlantic Avenue. And, um, we do have the letter from the landlord here, and we are now at the six month extension. And, um, why don't you, uh, per, um, just give us an update on the challenges that, uh, you've had. Yes. So, And where you're going.
+
+**[6:59](https://vimeo.com/1088616089#t=419s)** The initial challenge was the a DA compliant entrance. Right. Um, There was not a good place to put in the entrance. So my, uh, landlord hired an architect to see they could put in or, um, see variance for the entrance. Aaron, do you wanna turn your microphone Off? Oh, sorry. There you go. Thank you. Can we just pull it closer to you? Sure. So in December, he, um, I believe sent a proposal to the town, and the town seemed okay with it. Then he sent the proposal over to the state, and the state had revisions, and then they had revisions again in February. Then they had revisions again in March. And then finally at the end of March, they, uh, approved the revisions for the a DA compliant entrance.
+
+**[7:48](https://vimeo.com/1088616089#t=468s)** Since that time, my landlord has had a difficult time finding a contractor. Um, I met with one last week that she's supposed to receive an estimate from, um, in, in just the, uh,
+
+**[8:03](https://vimeo.com/1088616089#t=483s)** in just the best way to get everything done. I told him I would hire him to complete our work as well, so he could just do it all in one go. Um, if she, uh, approves. Um, so we're just waiting back to hear from him to see if she's okay with his estimate. Um, and he said he's ready to go sometime in, in June. He looked at the scope of the work, and he believes that it would take two to three months to, to complete. So, I mean, uh, I wish I could do more to accelerate the process. Um, we're still committed to do this, um, if you guys would allow it. Okay. Recording in progress. Sorry, Is the firewall done? Sorry. No, that's part of the work that,
+
+**[8:49](https://vimeo.com/1088616089#t=529s)** Sorry. Oh, should I,
+
+**[9:18](https://vimeo.com/1088616089#t=558s)** And the aada a compliant restroom is all completed. Um, You've been through a lot. Yeah, But, so the restroom's completed, but there's, we still have floors, walls, ceiling. Yeah. They still need the, uh, a DA like toilet and stuff in the, in the restroom. But the, um, it is aada a compliant and everything. So, So the shell, the frame of the shell of the restaurant? Yes. So is, is the landlord responsible for the firewall and the aada a and you're responsible for the cosmetic? Yes. That's where we're at right now. So when you say two to three months, is that the, that's not just for the, that's including all the Cosmetic, it's the entirety of, of the work according To the, once we secure, Once we secure the contractor. Contractor, yeah. Do you have an indication right now that the pricing for the con for the, uh, landlord is acceptable,
+
+**[10:07](https://vimeo.com/1088616089#t=607s)** Or, I don't know. They've kept me very much out of the loop in terms of their business dealing, saying that they can only speak to it to each other, and, um, just to keep myself and the contractors, um, on our, our own. Okay. So you don't have visibility into that Piece? I, I do not. Um, okay. Well, he, he kind of indicated that it wasn't all too much work that he needed to do for her, so Okay. Whatever that means. I, I don't know. But it feels like the bigger thresholds were obviously the a DA and the firewall like that. Will that happen first and then the cosmetics? I understand that the firewall is the first thing that needs to happen. Sure. Um, because we got stopped when, uh, the firewall was found to not be present. Mm-hmm. And my other contractor, um, told me
+
+**[10:55](https://vimeo.com/1088616089#t=655s)** that he cannot continue until the firewall is put in. Um, the inspections were almost all complete except for the building department, which they said, uh, there's no firewall. We cannot sign off on this. So until that signed off, then the walls can go up, and then the rest of the work can commence. Okay. So there's one contractor that has been out, but hasn't put in an estimate on it yet For her? Yes. Correct. Okay. For her. Okay. So, um,
+
+**[11:34](https://vimeo.com/1088616089#t=694s)** I don't know how it, how, I mean, I, does the board wanna proceed? Any thoughts? Looks like I would love to see a signed contract or see that that is moving forward Mm-hmm. At, yeah, at some point. I mean, it seems to clue him. So how you gone through this and that you're at the will of somebody else, but to see that the a DA and the firewall are done. 'cause then it's Into your hands. Yes. If I, if I'm understanding it correctly. Yeah. Uh, as, uh, from my understanding, the a DA, um, ramp and whatever, uh, design that they have to redo can happen, um, in at the same time as, as my work. But the firewall needs to be completed before, before they do anything Else, which just fine. Now, you've, you've, uh, reached out to a lot of contractors. How, how, what's the environment like there? What's your, what's your sense of, um, what's happening?
+
+**[12:21](https://vimeo.com/1088616089#t=741s)** It's, is, is the project not big enough, or is it, uh, Uh, from what I understand, it's, it's a busy season. Um, my, the contractor that I worked with currently, he said he probably wouldn't be able to get around to it until August if he were to, um, do my landlord's work and complete my work because, you know, he's not gonna stop doing his projects. Um, my landlord gave me the indication that she's spoken to like a dozen different contractors. And this one, um, his name's Doug Dubin. Uh, I don't know if you're familiar with him, but he said he'd be able to do the work and he'd be able to start, um, sometime in June. So time, so timing wise, it's, So if we gave an extension to August,
+
+**[13:08](https://vimeo.com/1088616089#t=788s)** two months or something mm-hmm. Um, you, you would expect that at that time, you know, that, uh, that you could be moving, moving along? I mean, I, I would very much hope to be able to show you guys significant progress by that point. Um, okay. I think a contractor, if you could let us know when the contract comes in, I, I will send in any updates I have as I, as I get them. Yeah. I just, you know, the last update I think I sent you guys was the, um, variance approval, and then just been waiting on my, my landlord to find a contractor. And she's said she's been very much trying to find one. Okay. Yeah. She needs to get it started too. Yeah. So, I mean,
+
+**[13:53](https://vimeo.com/1088616089#t=833s)** I'm thinking we could do an extension to August. Um, Do you think construction in June is what you're saying? Um, The contractors said that he could likely start in June. Okay. Um, but they don't have a signed contract yet, so I don't have a signed contract, like if it fee at least starting. Right. I think that's, so August sounds, sounds, sounds fair. Give you A little leeway here. Yeah. Yeah. To at least give you double the time to start. Mm-hmm. But, and Then if you, either way, would you think like a two week, um, update, update in two weeks about where you're at with it? Like, do you have a con or does the landlord have a contractor and Yeah. I'm happy to provide whatever, whatever information I can, I just keep us up to date would be great.
+
+**[14:39](https://vimeo.com/1088616089#t=879s)** Yeah. Thoughts? I think that's fair based on the situation. Yeah. It's a tough time for contractors and, um, sorry, go through this 'cause gonna open up your business, and I know I, I, I honestly thought that we'd be opening up in November of last year. Mm-hmm. Um, When it was revealed that there wasn't a firewall, everything.
+
+**[15:03](https://vimeo.com/1088616089#t=903s)** When did we find out about the firewall issue? Um, it was the middle of October. Middle Of October. Okay. Um, okay. So things came to like the grinding halt back then middle of October? Yeah. Okay. All right. So, I mean, I'm thinking I, we propose a, you know, a 12 week, August 20th, um, extension to continue the hearing and, um, request that you provide us, um, updates in a timely manner between now and then. Absolutely. Okay. So through manager chair August, what, Like, we could continue the hearing to our meeting on August 20th.
+
+**[15:49](https://vimeo.com/1088616089#t=949s)** So not 60 days, but basically 90 is What you're saying. Oh, right. I'm confused About just making sure the time here. I think I heard, thought I heard you say 60. I did. So like the end of say two months, but so Like the end of, so you have August schedule, August 13th is the first August meeting. I go split the difference. August 13th is our first August meeting. Yeah, I'll do that. That, yeah. That sounds okay. Just hopefully we can see some progress for you, for your faith. Listen, we want to see it happen much hope so. Yeah. I'm sure it's going. It's, can only imagine the stress on you.
+
+**[16:22](https://vimeo.com/1088616089#t=982s)** Okay. Um, so then I'll ask for a motion to continue this public hearing to August 13th. So moved second. Uh, all those in favor? Okay. Good luck. Thank you. Thank you for all your patience and everything with this appreciated. No, best of luck. Um,
+
+**[16:48](https://vimeo.com/1088616089#t=1008s)** Okay. Um, early voting hours. The, um, let's see, we need to vote the, let's see, hold on. Uh, yeah, the Board of Registrars held its meeting, and we have a letter here from, um, Robin Misho, our town clerk, requesting the following hours for early voting. Um, I can read them in the motion. Uh, we, I need a motion on recommendation by town clerk and board of registrars to hold early in person voting at April Hall for the annual town election on June 10th, 2025, and the special referendum election on July 8th, 2025. Similar Early voting hours for June 10th, 2025. Oh, sorry. Oh, no, I'll read them. Um, election r as follows.
+
+**[17:33](https://vimeo.com/1088616089#t=1053s)** Monday, June 2nd, eight 30 to four 30. Tuesday, June 3rd, 8:30 AM to 4:30 PM Wednesday, June 4th, same time, eight 30 to five 30, no, eight 30 to 5:30 PM on Wednesday, June 4th, Thursday, June 5th, 8:30 AM to 4:30 PM Friday, June 6th, 8:30 AM to 12:00 PM And, um, so, uh, and then the hours, she just noted that there, that the, um, special referendum election will be voted on once the, once that's confirmed. So this is really, this is for the June 10th election. Alright, so moved Second. All in favor. Okay, great.
+
+**[18:22](https://vimeo.com/1088616089#t=1102s)** Okay. And now we have to approve. Moving on to agenda night item, uh, number seven on the special election. Uh, we need to approve the voting hours at the polling location. Um, which, and we also, it's in here, um, is the legal, uh, memo from town council. And people have asked specifically, but around the voting hours, they are set forth in the act as 2:00 PM They open at 2:00 PM So that is why, um, you know, that's why it's different. It's, it's, it's explicitly stated in chapter 4 0 5 of the acts of 1954 that the polls will not open before 2:00 PM So 2:00 PM
+
+**[19:09](https://vimeo.com/1088616089#t=1149s)** and then it said to 8:00 PM And, uh,
+
+**[19:15](https://vimeo.com/1088616089#t=1155s)** so, um, her suggestion is that, that it ends at precisely 8:00 PM because there is state law that says, uh, polls cannot be open past 8:00 PM And, um, the special acts of 1954 said the polls shall in no case be kept open at, no, sorry, um, no,
+
+**[19:37](https://vimeo.com/1088616089#t=1177s)** no sooner than 8:00 PM no sooner than 8:00 PM Right. So it's like, one says you can't close it a minute before 8:00 PM and one says you can't, but then this new state law supersedes it and says it can't be open a minute past 8:00 PM So, so the recommendation is from 2:00 PM to 8:00 PM So I need a motion to vote the following hours for voting at the polling location for this special election on July 8th, 2025, in accordance with chapter 4 0 5 of the acts of 1954 and general laws chapter 54, section 64 from 2:00 PM to 8:00 PM So moved. Second. All in favor? Okay. Great. Brings us to consent agenda items. And, um, I, I'm gonna ask for a motion to approve the following consent agenda items, except those put on hold the minutes of April 23rd, 2025,
+
+**[20:26](https://vimeo.com/1088616089#t=1226s)** uh, bell ringing on July 4th, requesting that church bells throughout the town be wrong on Friday, July 4th at the usual hours 7:30 AM to 8:00 AM 12 noon to 12:30 PM six o'clock to 6:30 PM Um, the old townhouse, sustainable marble has requested to waive the fee for June 6th, 2025. Uh, it's a, it's a nonprofit organization. And also finally, breast friends walk October 12th, 2025, subject to approval from the police, fire, rec, and park, and receipt of the required forms, fees, police detail as required, and certificate of liability naming the town as additionally insured. No permanent marking shall be made on the streets, and all temporary marking shall be removed at the end of the event. And the event will start at nine 30 at Debra Beach. So
+
+**[21:14](https://vimeo.com/1088616089#t=1274s)** Moved. Second. All those in favor?
+
+**[21:19](https://vimeo.com/1088616089#t=1279s)** And, um, now we have, uh, contracts, sorry, you for this, this week's contracts. Is there anything, Mr. Geezer, that you wanted to draw our attention to? So the, the first item, um, to amend the contract for Brighter Horizons is dealing with the, um, tank removal behind the police station, which provide the fuel to the generator that's been replaced. Um, there was, um, uh, water in the hole that had to be tested, found to exceed whatever levels. So there's some more mitigation of the soils in order to, um, clear that up. Um, all the others are public works, water sewer project adjustments.
+
+**[22:06](https://vimeo.com/1088616089#t=1326s)** Okay. And then the, um, the, the, the police tank is funded through the, um, finance department's Fund. Right? We had to Yep. Identify additional funds for that. The tank initial project was arpa, and then once we had the, the additional contamination, we had to Yeah. Find funds to, to address that. And the other ones are funded through sewer and, um, construction articles. Yep. Storm water And Storm stormwater. Okay. Okay. Sewer, it said not sewer. Hold on. Funding is from stormwater construction articles. Yes. Um, so I need a motion
+
+**[22:52](https://vimeo.com/1088616089#t=1372s)** to approve the following consent agenda items, contracts with the town, except those put on hold and authorize the chair to sign on behalf of the board amending contract 2024 dash 0 6 9 between the town and Brighter Horizons Environmental for the Police Tank Removal project by increasing the amount by $18,144, and by extending the contract until July 30th, 2025. Um, next, change. Order number one, to amend the contract between the town and, uh, north Gran and Grannys and Sons, incorporated it's contract 180 7 bes, uh, MDPW 23 dash oh eight bessam Beacon Storm Sewer extension, and increasing the contract amount of by $21,946 and 21 cents.
+
+**[23:39](https://vimeo.com/1088616089#t=1419s)** Change order number two, to amend the contract between the town and, and Granice and Sons, incorporated contract 180 7, uh, MDPW dash 23 dash zero eight SEM Beacon Storm Sewer extension, and increasing the contract amount by $19,440 and 49 cents. Change order number three, to amend the contract between the town and, and Granice and Sons, incorporated contract 180 7 Beam Beacon storm sewer extension by adding additional video inspections and increasing the contract amount by 7,900 and, sorry, 7,090 $97, $97 and 96 cents. And, um, change order number four to amend the contract
+
+**[24:25](https://vimeo.com/1088616089#t=1465s)** between the town and, and Granice and Sons contract, 180 7 Bessam Beacon Storm sewer extension as a final balancing change order by decreasing the contract amount by 82,874 and 45 cents. So moved. All in favor. Okay, great. Okay, that brings us to the five quarters intersection Grant. I, um, noticed that, um, we have Brendan here. Did you wanna, um, tell us, I mean, I think we know about it, but good for the public to hear about this and it's great. Um, it's a, it's a nice, uh, great, great grant, um, that you guys have secured for us. So It's a, uh, it is, it's a state Mass Works grant, mass Works infrastructure grant. We were able to receive $135,000, uh, with a local match
+
+**[25:14](https://vimeo.com/1088616089#t=1514s)** of $15,100. Um, and, uh, the plan is to, uh, they, we, this was identified in the town's co complete Streets prioritization plan mm-hmm. As well included in this town when the town did an intersection study through, I think it was like 13 different intersections in the town. Um, so the, the concept plans were developed during that intersection study phase. So this, this work, uh, this design work will advance those preliminary designs up to about the 25% design phase. Um, uh, it's, it, some of the design features will include a mini roundabout traffic, calming bicycle facilities, um, uh, landscaping, vegetated landscaping, as well
+
+**[26:01](https://vimeo.com/1088616089#t=1561s)** as hardscape landscaping. Um, it will also, uh, there's also a component of the project includes stormwater management for the school street, uh, public parking lot. Um, and so, um, we're anticipating, um, once we execute the contract, which will ultimately happen shortly after this meeting, ideally, um, we'll be able to go out and hire a consultant to do the design work for this project. Um, hopefully get out, issue the RFP by the end of July, hire somebody by August, kind of kick off notice of proceed, or, you know, around September. September. And, uh, I think we're anticipating this design phase, um, to be about 12 to 18 months of work. Uh, we'll also include community engagement.
+
+**[26:47](https://vimeo.com/1088616089#t=1607s)** Um, so we'll be, you know, meeting not only with the community, but the business owners that abut this intersection. Um, so, uh, it's kind of the beginning of the design phase, you know, no shovel in the ground anytime soon, but it, it's kick it is kicking off this project for doing the improvements in this area. So it's a great project and needed. Um, Questions? Yes, Madam Chair, if I could ask, uh, in terms of the community engagement, is that you, when do you guys, are you gonna put out the initial plan or are you gonna wait until the, the final designs get done? I think how, when will you start that, do you think? Um, probably shortly after we kick off. After they, after they do probably the initial survey, making sure with the existing conditions plan, uh, what that looks like with the preliminary design plans.
+
+**[27:33](https://vimeo.com/1088616089#t=1653s)** Uh, and then, you know, then we'll go out for the get, we'll get that initial feedback, you know, be before we advance to the 25%. So, we'll, we'll meet with, I believe there's four public meetings, uh, scheduled through the process. So it's, it's on a one and done. It's, um, for, you know, so we'll get initial feedback, show the plans, make some tweaks, show the plans, finalize, and then that'll most likely be the, you know, one more final presentation. So there's a, you know, a decent amount of engagement. Good. Yeah. That's, that's important. Mm-hmm. Yep. If I can add, yeah. So this is, I'm really excited because this is one project in a much
+
+**[28:19](https://vimeo.com/1088616089#t=1699s)** bigger picture where we've had conversations, the various folks here, and now having, uh, Brendan and the whole team there of looking at how we connect in this area, the different business sectors of this area, to create a, a continuous flow connection so that from the business community sense, we people come in, it's one, you know, initially it's a traffic safety issue, but it's designed in a way to make it a much more attractive area for foot traffic, foot for foot traffic for people. Sort of a little bit more plaza space. And to, to think about connecting the different parts of the, the layout of the business sector and tie 'em together.
+
+**[29:06](https://vimeo.com/1088616089#t=1746s)** So when people come in, they say, this place is cool. We're gonna stay here. We're gonna spend some money, we're gonna hit the businesses. Um, and, and what I'm excited is having a community development planning department and a whole team, we can actually start implementing sort of that, that vision for the community to, to start tying all these components together. 'cause there's, there's more to come follow on that, that we'll be talking about that extends beyond, uh, this into other areas. Exciting. Great. Okay. Thanks, Brenda. Awesome. Thank you, Brenda. Yep. Um, I'll need a motion to accept the grant from the Executive Office of Economic Development for the Five Corners intersection and the amount of $135,000.
+
+**[29:52](https://vimeo.com/1088616089#t=1792s)** And authorize the chair to sign the state contract on behalf of the board to release funds to initiate the redesign project for the Five Corners intersection. So Moved. Second. Second. All those in favor? Perfect. Kyle gets to choose Jinx, Kyle gets to choose. Okay. And street sweeping. Next, we have, um, a request from Director of Public Works to, um, put up some, uh, no parking signs around the, uh, areas of downtown Old Town and shipyard districts. So, um, Let's see. So it's pretty straightforward. Um, there'll be a code code red notification, and, um, this is coming up soon in June.
+
+**[30:40](https://vimeo.com/1088616089#t=1840s)** So I need a motion to approve the request from Amy McHugh, director of Public Works for Temporary Parking ban for Street Sweeping from June 9th to the 12th of 2025 from 12:01 AM to 7:00 AM as presented, and to send notification to residents and visitors via temporary, no parking signs, targeted flyering website updates, code red notifications, and the Marblehead Police Facebook page. So moved. Second. All those in favor? Great. Okay. And, um, we have a request from the community development and planning department to send, uh, various letters of support for all these, the following, um, projects. There's lots of them. We've got, um, them here.
+
+**[31:27](https://vimeo.com/1088616089#t=1887s)** I can read them that they're in the, the, um, prepared motion. Oh, did you wanna come up and speak to it, Logan? Okay, great. I dunno if you Jumped over. I didn't see you over there. If we're in 12, right? We're in 12, I think. Yeah, we're in 12. Yeah. Don't look at the 1 0 9 because public comment. Yeah. So Logan Casey, our sustainable coordinator. Good Evening. Good evening. Um, yeah, I have a couple of, oh, one Second. I do have some handouts as well.
+
+**[32:04](https://vimeo.com/1088616089#t=1924s)** Um, I have some handouts if anybody from the public just wants to see the document I'm presenting to the select board. But, um, uh, yeah, I just, uh, the community development planning department has been working way on grants. You know, the June, um, season, kind of the end of the state fiscal year, beginning the next one, um, is a big time for closeout of grants, but also kind of putting in new applications. So, um, we have, I think, eight letters, um, today. Um, I'm happy to quickly run through kind of a summary of each one really quick and kind of give the amount and kind of where the matching funds would come from. Um, and this is kind of available in your packet as, uh, Kyle was able to get it in very last minute. But, um, the first one is an Accelerating Climate Resilience grant. Um, that's from the Metropolitan Area Planning
+
+**[32:50](https://vimeo.com/1088616089#t=1970s)** Council, a state organization. Um, we're working with, uh, sustainable Marblehead and, uh, Marblehead Housing Authority, as well as the, uh, rotary Club, um, to put a proposal together to, uh, look at redesigning, um, some common spaces at three public housing properties, new Ferrell Court, um, powder House Court slash Green Street, and Barnard Hawks, which are, um, housing for Seniors, disabled Persons and Families. Um, these are, uh, this grant is kind of looking for projects that are, um, going to serve populations that are disproportionately affected by the, um, effects of climate change. And, um, in this project, we're looking to, uh, address the impacts of extreme heat. Um, the current common areas, they don't really have a ton
+
+**[33:38](https://vimeo.com/1088616089#t=2018s)** of trees, a lot of planting. So, um, part of this would be working, um, with sustainable Marblehead, the Housing Authority, um, and the Rotary Club to kind of engage the residents and the public on how we, um, build more resilient, um, comment spaces, and also listen to some community feedback about what they want for those comment spaces. Um, the grant funding request, where the maximum this is we're looking at right now is $125,000. Um, this is, uh, maybe subject to change as we're kind of still working out the, the final numbers, but, um, we're looking to bring about 12,500, uh, dollars in matching funds through in kind staff hours, um, through our community development and planning department, um, as well as the Marblehead Housing Authority has volunteered their
+
+**[34:24](https://vimeo.com/1088616089#t=2064s)** staff time to help, um, manage the, the architect if we've got the landscape architect. Um, so they would kind of help with the, the lead on this project in implementing it. Um, so that's the first one. Uh, the next one's the Massachusetts Downtown Initiative. Um, this is a grant that looks to, um, you know, fund technical assistance to kind of help, um, downtown's thrive and get more data on what's going on down there. Um, you know, one big thing that I've kind of come in and seen is we don't have a lot of parking data and understanding of what the parking demand looks like in town. Um, so we're requesting $30,000, um, from this grant, um, to do a comprehensive parking study of the current parking, um, in the two business district areas in town, so kind
+
+**[35:11](https://vimeo.com/1088616089#t=2111s)** of the more downtown area, um, and then the old historic district, uh, along kind of Washington Street. Um, so we're looking to kind of get an idea of both public parking availability as well as private. Um, and from those kind of recommendations or from that data, kind of come up with some recommendations for future goals and steps to take. Um, that grant is about $30,000. There's no grant funding or matching funds required. Um, so, uh, we'd love that, your support on that one. Um, the next one is the Underutilized Properties Program. Um, this is a program for, uh, helping build up underutilized properties. Um, and one project that, um, Donna ll our grant coordinator had been working with the Historical Commission on, um,
+
+**[35:57](https://vimeo.com/1088616089#t=2157s)** is the historic commission's, uh, uh, Abbott Hall kind of attic, um, museum project that they're kind of aiming to get done in the next couple of years. Um, we, uh, Donna and I approached the historical commission, um, and asked if they'd be interested in kind of applying for, um, funds to start that project. So, um, we would be completing the two stairways that would be necessary to connect the third to the fourth floor, um, for all the fire code reasons and to make it so you can access it and, uh, the stairways aren't awkward. Um, as well as, uh, kind of completing all of the accessibility improvements that were outlined in the town's, uh, 2023 a DA transition plan.
+
+**[36:42](https://vimeo.com/1088616089#t=2202s)** Um, again, going back to trying to get all of those items checked off and, um, finished up kind of with, uh, how we've been doing with the a d municipal, a DA grants. Um, so, uh, the maximum grant funding request is about a million dollars. Uh, we are expecting to request about up to that amount. Um, we are just kind of, again, finalizing the scope and, uh, numbers on that. Um, we, uh, or the historical commission, um, has a, at museum fund, um, and they have about a hundred thousand dollars in private, uh, donations so far collected. Um, so they have, um, said they would be willing to use that as matching funds for this project. Um, and if it went forwarded, um, you know, get the attic space into a place where it's publicly accessible,
+
+**[37:28](https://vimeo.com/1088616089#t=2248s)** and then kind of the next step they can take is kind of fundraise to really renovate the attic and get it in shape for their kind of exhibits that they have planned. Um, uh, the Massachusetts Vacant Storefront Program, um, is another program through the community one stop that we're considering. Um, and it's a program that offers refundable tax credits to businesses that, um, inhabit, uh, uh, vacant storefronts. So, um, to qualify, basically it's, it's looking to fund, um, you know, businesses that are occupying, uh, storefronts that have been vacant for more than six months. Um, I have done a little research on the streets myself and I, I know of about two, um, business storefronts that are, um, kind of in this qualifier.
+
+**[38:14](https://vimeo.com/1088616089#t=2294s)** So, um, if we were awarded this funding, um, we're seeking up to $50,000, which is the maximum amount. Um, our community development and planning department would kind of establish an outreach program to, uh, educate businesses. Um, and also, um, probably the people who have the vacant buildings on the fact that this funding is available, um, and that if, uh, you know, businesses come pull out a lease in the space, they might have access, um, to some of these refundable tax credits. Um, so, uh, the maximum request is $50,000, and we're gonna try to match it about 5% with $2,500 and in kind, um, staff hours, uh, in kind of the administration and building the outreach materials for this program if we're awarded.
+
+**[39:00](https://vimeo.com/1088616089#t=2340s)** Um, the next item is the, uh, MBTA Community Catalyst Funding Program. Um, so because we passed, uh, MB uh, uh, the three A overlay at town meeting, we're now eligible for this program. Um, so this program is to kind of stimulate, um, uh, capital improvements, um, and design, uh, within or, uh, adjacent to MBTA overlay District Zones. Um, so we kind of did some work shopping within the community development department, and one project that we're really working on with, um, ARPO funds as well as, uh, federal funding right now is the, is the marble head rail trail design. Um, we have, uh, you know, significant portions, um,
+
+**[39:46](https://vimeo.com/1088616089#t=2386s)** underway, kind of getting up to construction ready level design. Um, and we would like to use this catalyst funding to kind of keep supporting that design process. Um, we are looking to, uh, get a section of the rail trail, um, kind of the y where the Village 13 electrical station is, um, uh, design, get that design underway. We currently, um, have $175,000 in federal earmark funds that were awarded in 2022. Um, so we're looking to kind of use those as matching funds and ask for, um, about a million dollars. Again, this is kind of, we're waiting for the final numbers here. Mm-hmm. Um, but, you know, in the range of a million dollars for, um, kind of more state support
+
+**[40:32](https://vimeo.com/1088616089#t=2432s)** to continue our design process and can continue that long. Um, the Real Estate Services technical assistant grant, um, this is for the Coffin School Reuse study. Uh, obviously very popular topic, uh, town meeting. It was, um, transferred back to the select board to kind of consider its future use. Um, and this grant would kind of give us the full opportunity, um, to kind of get a full range of understanding for what the future of this property could look like. Um, we would request $50,000, which is the maximum amount for this grant, um, to hire a con, a qualified consultant to kind of run the community engagement process, get an overview of the current property and building, um, you know, lay out alternatives for,
+
+**[41:17](https://vimeo.com/1088616089#t=2477s)** you know, if the building's still viable as it's condemned, you know, how, you know, you might, uh, subdivide the property if that's a, an option. Um, so we'd be providing, um, $5,000 in matching funds, um, a 10% request, and that would come from the Fin Reserve fund. If we are awarded, we'd go to the committee and make that request for these funds, um, you know, hopefully get this coffin school reuse study underway and, and get some help with the, uh, engagement effort on that. That's really, that's really great, Logan. Yeah. And then the second to last one, I promise I'm almost done. That's great. Uh, is the MathWorks grant, and kind of, as Brendan was mentioned earlier, with the, we were awarded last year, um, infrastructure funding to kind of start the design of the Five Corners intersection, which has, uh,
+
+**[42:04](https://vimeo.com/1088616089#t=2524s)** been identified as kind of one of those priority intersections in town. Um, we have also identified in working with our, uh, uh, DPW, um, that Washington Street is, you know, at the age where, where we got most of the utilities under it replaced, and we're kind of looking to, um, redo that street and also reevaluate kind of its current layout. Um, so this project would propose again, to kind of what we're doing with the last one, um, hire a consultant to, uh, conduct a, a comprehensive redesign, um, of the Washington Street, kind of from five corners intersections, starting there all the way out to Hooper Street, which is kind of where Lee Manchin sits. Um, it would be in a line with the Complete Streets principles that the town adopted as a policy in 2018.
+
+**[42:51](https://vimeo.com/1088616089#t=2571s)** Um, and it would, uh, you know, mostly seek to improve the safety and accessibility for, um, you know, pedestrians, cyclists, and motorists. Basically everybody who traverses Washington Street. Um, the grant funding request is TBD. We're working with, uh, DPW on that. Um, and there's a 10% match recommended, which, uh, we are hopefully looking to fund with some of the Article 11 money from, uh, that DPW was, uh, awarded by town meeting. Um, and the, the final one is our, our next year's municipal a DA grant. Um, we, uh, at the community development department, we're working with, uh, rec and Park, um, as well as our building department to kind of wrap up this current a DA grant at Devereaux Beach. Um, but we're also starting
+
+**[43:36](https://vimeo.com/1088616089#t=2616s)** to look at next year as well too. And, uh, with town meeting, uh, approving the request for the ballot, uh, to get the Mary Alley HVAC improvements project underway, um, we thought it would be a good idea. And we went to the Disabilities Commission and they thought it was a good idea too, um, to ask to kind of support that larger project and, uh, work on the accessibility improvements that are needed for that building. Um, kind of as a reminder that includes repairing the elevator that is currently non-functional, um, as well as creating, you know, fully accessible restrooms in the basement. Um, and, uh, bringing, you know, the counters that people interact with the various departments with, as well as all the fixtures and doors, um, into full compliance with the, the current building code of today. Um, the grant funding request would be
+
+**[44:23](https://vimeo.com/1088616089#t=2663s)** for the maximum amount, $250,000. Um, and we would be supporting that with $50,000, um, and we'd be kind of getting that funding from the debt exclusion override if that was passed at the June ballot. So, um, yeah, that is the, the five minute pitch of eight grants for you guys. Um, it's obviously, yeah, very busy month. As I kind of mentioned at the beginning, I'm happy to answer any questions. Basically two and a half million dollars. Right. I'll kind of, I didn't do the math, but I was caught up with a three. Yeah. But let Me, well, including the matching. Yeah. So let me, let me, uh, clarify and emphasize something here. So we're eligible for these grant programs currently because the mbt a zoning deadline was extended to July 14th.
+
+**[45:10](https://vimeo.com/1088616089#t=2710s)** Mm-hmm. That's why we're in the, we're in the game now, as you know, town meeting passed mbt, the, the MBT A three A. Great, but with the filing of the petition for the, the repeal question, it puts that matter into obeyance. Right? So we're not passed yet. Yeah. But the deadline hasn't arrived until July 14th. If the, the initial petition, uh, referendum, if they were to succeed to repeal the acts of town meeting, all this goes away. It's, and it's not just the dollars, it's the improvements to the community that these dollars bring. And so I want to clarify that we're only eligible
+
+**[45:56](https://vimeo.com/1088616089#t=2756s)** because the deadline has yet passed, but we have to get through that ballot question in order to put in place Yep. A compliance. So for clarification, every one of these grants falls Yes. Under those Restrictions with all explicitly Fast Works infrastructure, complete Streets.
+
+**[46:17](https://vimeo.com/1088616089#t=2777s)** Good job. Thank you. Thank you. Great. That's, it's not just me, I'm the only one presenting, but team, it's, it's, yeah. Our Town planner take full credit grant coordinator and yeah, our, our lovely director as well. Awesome. So, Thank you, Logan. Yes. Alright, I think we hopeful we got these grants. Okay. So, um, we've got it. I'll ask for a motion on recommendation of community development development planning department to send letters to support to those town projects and authorize the chair to sign on behalf of the board. Uh, should I just read the titles now that we've gone through 'em all? Accelerating Climate Resilience grant, the Massachusetts Downtown Initiative, the Underutilized Property Programs, the Mass Vacant Storefront Program, MBTA Community Catalyst Funding, real Estate Service, technical Assistance, mass Works Infrastructure grant,
+
+**[47:05](https://vimeo.com/1088616089#t=2825s)** and municipal, a DA grant. So Moved. Second. Uh, all in favor? Okay.
+
+**[47:15](https://vimeo.com/1088616089#t=2835s)** Okay. And, um, next and on the agenda is a letter from Marblehead Youth Baseball. And I actually, I met with, um, Shelly, uh, Ian. Um, I met with Shelly Bedrosian this morning and actually got kind of an update from her on, they've got a lot going on with the Lars Anderson project. That's, they've, they've got kind of phased out in three different phases. Um, that's for the Green Street area, but she was also, uh, updating me on all the goings on, uh, they're gonna be updating all the lighting down at Gaels and Marblehead Youth Baseball is kicking in a $50,000 donation to do that. And, uh, which is wonderful.
+
+**[48:01](https://vimeo.com/1088616089#t=2881s)** This is, I guess the, the, the lights and the, the lighting down there is, is really defunct and you can't buy replacement materials for it anymore. And, um, the money, so they, uh, Marblehead Light owns the poles, so they're working with Marblehead Light Youth Baseball, and, um, and I, and they're using, utilizing some of the revolving fund. And I think she had just signed on. I just thought she might wanna she her hand's raised. Okay. You wanna Yeah. Yeah. Shelly A minute. Um,
+
+**[48:38](https://vimeo.com/1088616089#t=2918s)** Suzanne? Yep, I'm here. Great. We can hear you. All right. Perfect. No thanks. Sorry, this's the last minute. I wasn't sure it got on the agenda this quickly, but, um, yes. Uh, we're doing a really very efficient private public collaboration. Um, uh, there's 60 lights at GREs right now that obviously if you lived here more than a little bit of time, they haven't been caught. There's no replacement parts. Last year they went out on powder puff a bunch of times. They go out on football all the time, they're not on timers. Uh, it's kind of a, a safety issue. Um, and a lot of people don't know that Marble Hughes Baseball is a tremendous steward of that park and the amount that they raise privately to donate for refurbishments,
+
+**[49:24](https://vimeo.com/1088616089#t=2964s)** and they take care of most of the upkeep. Um, they really are wonderful partners. So Jeff Morrison and John Lauler, their president approached us a few months ago that they would like to be active partners in replacing the lights. So we started, um, working on a procurement process, um, and bringing in our other town departments to see how we could, um, be efficient and say, you know, let's not pay for things twice. So, uh, electric light, and Joe Koalas and his group have been, um, wonderful in this process. And they are inspecting the poles. Um, they are replacing any poles that are needed. They're gonna be donating, donating is really the, probably the wrong term, but contributing. Um, they're gonna take the current lights down, they're gonna put the new lights up.
+
+**[50:11](https://vimeo.com/1088616089#t=3011s)** Um, so all we have to actually have to hire for is an electrician to do the final connections. Um, and so Ham Electrical outta Georgetown won that bid for $21,000. Um, so electric light is, um, excuse me, baseball's contributing 50 and, um, rec Park, uh, passed a motion last week to, um, donate up to $28,000 outta their revolving fund. And the budget right now is $77,000 all in. And we really just grinded this down, um, to get the best possible value for the town. So without any change orders, um, we're at $78,000 to fix and improve the entire park down there. And that's really just a lot of people with an ore in the water paddling in the right direction.
+
+**[50:58](https://vimeo.com/1088616089#t=3058s)** So, um, it's gonna have to work in separate parts because we have programming down there all summer long and we can't have people down there working. Um, but we're trying to get the first segment done, which is the majors field prior to June 30th, and then the rest of it'll be done the last week of August. So by September one, the whole project be, should be completed. That's great. So have it ready for the football practices. Yep. And I think you, you'd said that they, um, all three of those zones would be on different, separate timers, which will be great, right? Yes. Timers that Yes. That's not an, I mean, there's a timer now, but it's, you know, it's 50 years old. It works when it wanna works.
+
+**[51:43](https://vimeo.com/1088616089#t=3103s)** 50 years. Okay. Shelley, and I'm assuming the, the lighting is gonna be a better quality and brighter. Yeah, it's 8,500 lumens per light. Um, actually Jeff Morrison, um, and John Lawler did a significant amount of research prior to us getting involved and what lights they wanted, but they are, um, the top of the line. I mean, they're 8,500 lumens per light, and there's gonna be 60 lights down there. Awesome. LED? Yep. Yeah. Oh, I'm sorry, yes. LED of course. Yep. Thank you, Shelly. All right, you're welcome. Okay. So we need a motion to accept as a gift of the town, $50,000 from Marblehead Youth Baseball to be managed by the Rec and Parks department. This gift is to upgrade the existing lighting as discussed
+
+**[52:29](https://vimeo.com/1088616089#t=3149s)** with new LED lamps and install new timers, schedules, playground on the baseball and football fields. So, moved second. All In favor? Okay. Thank you. Marblehead Youth Baseball.
+
+**[52:42](https://vimeo.com/1088616089#t=3162s)** And that brings us to a very exciting, um, uh, article is Our Town Administrator Contract, and, um, which has been prepared by council. And, uh, we're really happy to, to have this, um, going in and that you, you, you'd like to stay despite all the hours you're putting. I'm just curious what happened in executive sessions if I wasn't there. I don't know. We can't tell you. I know you have a pretty good indication. Yeah. So, uh, so, um, we'll do I need a, um, a motion? Um, I'll ask for the motion and then we can just speak to it, um, before we vote.
+
+**[53:29](https://vimeo.com/1088616089#t=3209s)** Motion to approve the employment contract as prepared by town council between the town and Thatcher Keer town administrator. So moved Second. Okay. Yeah. Um, and, um, do anybody wanna comment on just, I just, it's, this is, um, we are just really happy, uh, to be able, like I said, to renew the contract and that it's something that, you know, um, is mutually, um, uh, agreeable and, uh, so that, um, that reflective of, uh, cola in the first year as well as, uh, merit-based performance, uh, review and, uh, changes in market conditions and, um, anything, anything else. And just, so you we're just really pleased to be able
+
+**[54:15](https://vimeo.com/1088616089#t=3255s)** to continue your strategic thinking and visioning and all the hard work that you've put in to the, to the, to the town of Marblehead. Um, and, and you've really left like a big footprint here with a lot of different, uh, initiatives that you've started. And I, it was Brett that said, you know, it's been a while since we've had a town administrator that didn't just plug and play was his words. And that is, you know, thinking creatively about strategically reorganizing, um, within the financial constraints that we have, as well as, uh, what the emerging and new modern needs of the town are. Um, so it's been, Yeah, I would just, I would just add Thatcher that you're, you know, one of the reasons why I say I've never been more optimistic about the town, right?
+
+**[55:00](https://vimeo.com/1088616089#t=3300s)** You've really, uh, been able to bring a le level of sophistication and strategy around how to kind of restructure the town without an override making use of the resources that we have. And I think, you know, along with, with hiring a and, and keeping a fantastic team that works overtime, so we're, we're, we're super pleased and we think that's gonna be reflected in your, in your, in your package. And, uh, we're really pleased that you're gonna, you know, finish out your career. It seems like with us at least as a town administrator, As as, as a full-time employee. As a Employee somewhere. That's right. Anyway, so, yeah. Um, yeah. So, um, anybody else? I'd just like to thank Mr. Greater and Ms.
+
+**[55:46](https://vimeo.com/1088616089#t=3346s)** Nunan as well as our HR director and everybody else involved in the process. 'cause I know there was a lot of work looking out the different comps to come up with this. This wasn't just an arbitrary, you know, determination. This is on the facts and figures and, and taking a lot into consideration. So I wanna thank all the parties involved. Okay. Alright. Thank you. Okay, so ready to vote. How long does it last? Oh, oh, sorry. It's a three year, three year contract for your contract.
+
+**[56:11](https://vimeo.com/1088616089#t=3371s)** Once it's all signed, it will be released 20 more years. It's a renewal, Technically not ratified now, which is, so we're speaking generally to it. Um, 'cause we have to sign it. Um, all those in favor?
+
+**[56:27](https://vimeo.com/1088616089#t=3387s)** Two hands.
+
+**[56:34](https://vimeo.com/1088616089#t=3394s)** Let, lemme I caught one. I can't believe it's been three years. I know It went so fast. Yeah, it's, it's gone by fast. Uh, I am having fun doing this. It doesn't look like it sometimes, but I'm having fun doing this. Um, and I, I've said it, I think here, I've said it in other places, one of the things I'm most proud of in the last three years is the team that we built and the collaboration between the team and, and, and the working together. And everyone's vision is towards making Marvel head better, make it work and make it better. Not just showing up for a job. That's how I feel. And I think that's the sense I get from, from the folks here. Um, what's also very important to me as, you know,
+
+**[57:21](https://vimeo.com/1088616089#t=3441s)** my background in municipal government, primarily cities, bigger communities, being a mayor, working for a mayor, right? Uh, it came with some trepidation to work for a, a select board mm-hmm. Of five different personalities working hand in hand. Um, um, that trepidation is gone. And what's really important is having a really good board, being able to work with every member. Um, and, um, it's, it's, it's important in general to have that good working relationship and, and making things work well. It's even more important when the wheels are falling off the wagon and all hell is breaking loose and having a board that's solid that works with you to say,
+
+**[58:10](https://vimeo.com/1088616089#t=3490s)** okay, let's, let's work this through that. That's the more, more important parts of the relationship. And I'm, I feel lucky and pleased to have a board present and, and, and past of the people that have been on it that I've been able to work with everybody and everybody's just been so cooperative working with me. So thank, thank you also. Gotcha. Yeah, I mean, you've just been like such grace under, under fire and pressure. It's, it's like reassuring as you know, my second year, um, as the chair and I, it's just been, it's you're constant professional, um, a great leader for the town and we're really lucky to have such a seasoned and experienced, um, uh, leader in town.
+
+**[58:55](https://vimeo.com/1088616089#t=3535s)** And I know you just this year went, went through three really grueling, and I say grueling 'cause I think both sides would agree. Grueling, collective bargaining, negotiation sets and, you know, that, that we resolved and that was a, in one year it was an enormous task, um, between the teachers union, the police union and MMEU and uh, just the, the long hours that you put in to the job. And again, you've, you, you've brought a lot of great talent to the town with our HR director and the community planning, um, development and planning department, um, and obviously our, our finance office. So Yeah, Thatcher, I really appreciate how, not only did you make the transition from mayor to, to, but you also came to Marblehead with, with, with, with, its,
+
+**[59:43](https://vimeo.com/1088616089#t=3583s)** with its culture and particularities and you've been, you've been really, uh, great at, at working around that and uh, and bringing change that will have a lasting meaning to the bottom line as well as I think to morale, you know, across the town. So, congratulations. I don't want to dose this, but we need a successful July 4th.
+
+**[1:00:04](https://vimeo.com/1088616089#t=3604s)** I mean this, we need good weather. This is it between the weather, weather and the fire. This is it. Working On an approved plan. Alright, perfect. Yeah, there is a temporary resignation in there that is just for that one. Read the fine print.
+
+**[1:00:22](https://vimeo.com/1088616089#t=3622s)** Okay. Alright. All good stuff. Thanks. Um, we're Getting on here. Uh, let's see. We have the, um, cafe alia's request for outdoor dining. Uh, and, um, you, you have the, uh, you know, their, their new location on Bessam Street. There's a letter from the, um, from, uh, rocket uh, management Company in support of it. And, um, I'll just read the, uh, motion I'm requesting is to approve the following application for 2025 temporary Outdoor dining in accordance with the town's policy on temporary outdoor dining. Kathy Italia 10 Beam Street and subject to receipt of the required forms, fees, insurance, and approval from police, fire building commissioner and town administrator. So moved. Second.
+
+**[1:01:09](https://vimeo.com/1088616089#t=3669s)** Okay. I think we need a pulled vote here. Oh, please. Alright, Ms. Singer? In favor? Mr. Murray? In favor, Mr. Grader? In favor, Mr. Fox? In favor, Ms. No In favor. And, um, Uh, Next we will, uh, wanna release some executive session minutes and, um, and hold those. So I'm asking for a motion on advice from town council after review of our executive session minutes. The board shall make public the following, select board executive minutes. February 26th, 2025. May 15th, 2024. May 23rd, 2024. May 24th, 2023. June 28th, 2023. November 2nd, 2021.
+
+**[1:01:56](https://vimeo.com/1088616089#t=3716s)** All, um, can I have the motion and the second please? So moved. Second. And also I, a poll vote. No, I'm sorry. It's not, oh, that was just for executive session. Okay, so, um, those in favor. Okay. Unanimous. And, um, secondly, we just need a motion on advice from town Council left a review of our executive session minutes. The board shall continue to hold until deemed appropriate by counsel. The following, select board executive session minutes. March 12th, 2025. March 26th, 2025. November 13th, 2023. November 23rd. 2020. So moved second. Um, those in favor everyone? Great. And I did, um,
+
+**[1:02:41](https://vimeo.com/1088616089#t=3761s)** do we have any town administrator updates this week? Okay, great. I just moved them to the end. Three Pages. Okay. Wow. I'm gonna go faster than Logan, though. It seems a Little quick.
+
+**[1:02:55](https://vimeo.com/1088616089#t=3775s)** I'm not gonna be as thorough though. I, I really like Logan's. It's a favorite part of my favorite part of the meeting so far for me. So I, I have package. So one, uh, um, one, I had the benefit of having a large department head meeting the other day where we go around the table. So I, I've sort of peeled off from that and that's why it's three pages. So I'll, I will move quickly. Uh, as far as civic engagement community program, start with, uh, ra a veteran service agent. Her first, uh, on her own in Marblehead, uh, Memorial Day. And, uh, She unfortunately all did it. She did a great job. She really did. I, I heard she picked a outstanding speaker also.
+
+**[1:03:42](https://vimeo.com/1088616089#t=3822s)** She, yeah. And she's got, you know, runny, runny Knight at her, at her back as well. Yes. So all good, a great team. Um, and the other community, uh, citizen Police Academy and Volunteer program. Very successful program. So successful. There's some interest in, uh, academy version 2.0, but we'll see, we'll see how that goes. But, uh, the response from the, the residents who go through the Citizen Police Academy, and that's six of the graduates have committed to volunteer with the police department. Um, so engaged, so that's outstanding Job chief in the department. Yeah. Uh, technology infrastructure upgrades. So if you remember from the arpa, we, we allocated a half million dollars to put a new fiber loop,
+
+**[1:04:28](https://vimeo.com/1088616089#t=3868s)** uh, through the main part of Marblehead. It's for the municipal, uh, technology services. Uh, we talked about going way back, the Article 44 town meeting. You know, we want all meetings, video, all, all that, which creates a ton of bandwidth on the infrastructure. This is how we're improving it. So we've talked about how we've used ARPA through the work of the community development planning department. Logan, Logan, Casey, once again, kind leading the effort. Uh, we're receiving an $89,000 grant from the public infrastructure project to extend our loop out to the neck. So we had to, we, we didn't have enough in the first round to do the neck, but it will connect the rest of the municipal infrastructure on the neck into our
+
+**[1:05:17](https://vimeo.com/1088616089#t=3917s)** robust, redundant, um, uh, fiber loop, uh, services Chief Gillans been sort of heading up with, with our IT folks as we're also connecting the loop into our individual buildings, uh, new switches to accommodate that. Um, this is probably the biggest technological upgrades to our basic infrastructure, probably since it was first put in. Hmm. So great work from a lot of folks to, to do that. Um, muni software ongoing. So, um, the, um, the staff access to Munis has been established training. It will be ensuing as we're getting ready to go live on July one to July one.
+
+**[1:06:04](https://vimeo.com/1088616089#t=3964s)** Okay. Yeah. For July to, um, switch over to Munis, right. July one, just checking, um, access and building improvements. Uh, Logan's, Logan's hit those in, in his presentation of, of the work we're doing that, uh, the next category, electric vehicle transition and policy planning, a number of efforts to electrify the fleet and the infrastructure to support that. Um, so Logan's working on the EV transition plan. Uh, he's entered into a technical assistance agreement with Mass Fleet Advisor to develop the plan. Um, this plan will identify opportunities for fleet electrification, design charging infrastructure, and support the, the town sustainability goals.
+
+**[1:06:49](https://vimeo.com/1088616089#t=4009s)** In addition, uh, green Marblehead implementation committee is coordinated with departments, um, to, to assess LO locations for high speed EV charges, including the DPW yard. Uh, so this is to support the municipal fleet. So, um, one of the challenges of going to EV vehicles, um, that you gotta replace the, you gotta have gas stations for them. Mm-hmm. Right? And so, so you mean, so building that infrastructure, um, and you want to be able to basically charge overnight. You're either fast charger or, or charge overnight, which follows on to, we've, we've got a draft that we started an employee home charging policy. And what is this for? So a number of our employees are authorized
+
+**[1:07:35](https://vimeo.com/1088616089#t=4055s)** to take home vehicles. They're 24 7 on call. Right? Um, and we want them to be using electric vehicles. One of the challenges is that if they're only charging when they're at the office, but they're in their vehicles bouncing all over the place, they never actually get the opportunity to really charge up. So they're always playing catch up on having the vehicle charge. So what we're trying to establish is a policy that those employees that are authorized to take vehicles home, that we cover the cost of their installation of a charter, which basically is a two 20 circuit, right? A dryer plug, be it in the garage or such. Right? And you wanna have 60 amp, you know, on your box. And, and that, but also that when they plug in at home
+
+**[1:08:24](https://vimeo.com/1088616089#t=4104s)** their home electricity, that um, we have a way to calculate so we can reimburse the employees for the electrical cost of charging. So it is just like employees, um, getting mileage, you know, the IRS 52 cents a mile, whatever it is sort of thing. There'll be document documentation requirements and such. But we need to do that because again, the challenge is, um, the, the way at the level two charging, if you charge overnight when you're not using the vehicle, you start the day every morning with a full charge, you can go all day uninterrupted. And that's our productivity issue for the use of our vehicles. We want to go to electric vehicles for our work fleet.
+
+**[1:09:10](https://vimeo.com/1088616089#t=4150s)** They need to be productive all day, which means they need to be able to charge overnight. So these are efforts to, to address those challenges. Um, Real quick question. I dunno whether you can answer it or not, but if we, if we looked at a relative cost, uh, basis, just outta curiosity, you know, in that, you know, not just for the transition, but the operating levels, uh, compared to what our current fleet is doing. I, I, I don't know. I mean, I think that's part of the evaluation that, that, that goes on. Yeah. Okay. Right. And, and, and part of our carbon footprint evaluation is Right, right, right. Calculating the baseline of Yep. What it is now. I'm Just, I'm just curious what we're, you know, what we're paying for if we are for that, uh, compliance. So yeah, I, here's the metric I have from being a, an owner of an electric vehicle.
+
+**[1:09:56](https://vimeo.com/1088616089#t=4196s)** It, um, charging it an electric vehicle is about one third of the cost of a gas vehicle as far as your fuel costs, As far as putting Yeah. What you're paying on, on the, all that, right? Yeah. That's a big number. Yeah. About a third of the cost. That's, and again, that's a general number, but that's, that's the experience in Okay. POV. Okay. Got it. Um, and then we have procurement efforts for the, the, the, like the F four 50 fleet that we're working on as well as Council on Aging is exploring purchase an electric van and they want in on the game electrification. So, uh, takeaway here on all of these is there's a lot of effort that's going on sustainability efforts, um, to electrify the fleet bot that brings challenges
+
+**[1:10:43](https://vimeo.com/1088616089#t=4243s)** to, to migrate to that. And this is the work to do that. Uh, regulatory environmental compliance, floodplain permitting. So we've got DCR approval, um, uh, for the, uh, the floodplain permit and final revisions underway with assistance from our consultant to ensure regulatory compliance, community risk reduction. So, um, our town engineer over there is, um, uh, doing those things. Look, um, a reminder for the community since Memorial Day is now passed, leaf blower regulations mm-hmm. Gas leaf blowers are prohibited, um, until Labor Day. So reminder folks, I think we did well last year
+
+**[1:11:29](https://vimeo.com/1088616089#t=4289s)** and working with the chief on the signage, signage boards, uh, their effort that when the calls came in, uh, the approach is to educate, um, those who cooperate. Um, and I think, I think it went well last year. So we're hoping as this becomes sort of the, the norm, uh, it'll be, I have quick question on that. Is that, does that, I forget, does this apply to property owners themselves or just the landscaping? So if there's a violation, it goes to the landowner, right. But is the landowner themselves banned from the leafblower also? Yes. Okay. Yeah. No electric leafblower, right, right. You use electric, you can't use gas. Okay. Right. No matter who you are, including, Yes. You can use electric,
+
+**[1:12:15](https://vimeo.com/1088616089#t=4335s)** you municipal. Yeah. And we've, It's been a while since we Yep, Yep. And a whole town meeting that we buy without it. Yeah. So, Um, Need to brush up. So next, finance property valuation, uh, good news, uh, uh, the current abatement season, very light. Good. And, and I, I tell you there was a concern given, you know, the last couple years, but, but, um, uh, Todd and assessing office has been outstanding. He's, he's beaten the street, he's personally out there good to hear following up and that's great. And working the issues, and he'll be working. And also, you know, looking at the, the land value database, that's where we had some problems. Yep. So, uh, big turnaround in the assessing office
+
+**[1:13:05](https://vimeo.com/1088616089#t=4385s)** to, to get that settled. Is there, well, I'm just curious, is there any proactive adjustments that might take place given that there's a new valuation mechanism in terms of, you know, if there was someone who did not do an abatement? Yeah. So, Or, or, or does that just stay in place? Pretty Much. So, so individual properties is based on an abatement process, right? Yep. A hundred percent. You have to say, Hey, this looks wrong. Okay. And you engage with the assessing office And then, and then maybe the use of the, of the valuation. Yeah. And then the assessor, the, the, the, well here we call it assistant assessor or else is a chief assessor, lead assessor with their work is the macro database where the, the, the valuations are applied.
+
+**[1:13:50](https://vimeo.com/1088616089#t=4430s)** And that's where there were some problems with the tables, where some neighborhoods, there were some types of weird adjustments that affected certain neighborhoods that hit, you know, lamb. So, so he's, look, he works at it from a macro sense and working with the patriot who, who's contracted to, to do that, as well as his effort in the, in the staff to work individually with homeowners who are coming in and saying, I think something's wrong. Yeah. I, I guess my point is, is there a proactive element? Uh, yeah. You know, to reach out to homeowners who may have been there where their land may have been overvalued, I Reached out directly to homeowners, but he said that he's looking in those areas where those land values were adjusted to correct those Land values. That's outstanding.
+
+**[1:14:36](https://vimeo.com/1088616089#t=4476s)** I'm really glad to hear that. Okay, great. And you know, with the, the, the warrant article of the past last year, where now Alicia is very much tied into Yeah. Working side by side, so that, you know, the coordination that goes on there. That concludes my, my Update. Thank you. Okay. Do have, oh, you got the ambulance? Oh, I'm sorry. Did I leave one off? Alright, chief. So, um, you know, coming soon, um, so our ambulance service contract expires the end of June, June 30th. Okay. June 30th. Um, so Atlantic Ambulance, you know, do expire. Mm-hmm. We're engaging the marketplace. We want to take a look around, um, and evaluate
+
+**[1:15:22](https://vimeo.com/1088616089#t=4522s)** and make the best decision for Marblehead as to, um, how we provide those services.
+
+**[1:15:33](https://vimeo.com/1088616089#t=4533s)** Thank you. And, uh, we are at select board announcements on the agenda longer Than me. Longer than me. I asked Logan how I did. He said longer than me, I was timing it and not as eloquent.
+
+**[1:15:52](https://vimeo.com/1088616089#t=4552s)** Um, any, uh, select board announcements tonight? Um, well, I have two. Um, we, Moses and I attended the public forum for the Town charter last night, and it was, they did a fabulous job. It's gonna be recorded, so everybody should check it out and, or it was recorded and I, it will be posted if it's not already. Um, and you can see draft a on the town, charter Town Charter Committees website is up as well. It, um, we had about 25 people online. Would you say last night and then about maybe, yeah, It was pretty 15 or so in person, and I just wanted to plug that tomorrow noon to one. Uh, it will, the Council on Aging is gonna sponsor the
+
+**[1:16:38](https://vimeo.com/1088616089#t=4598s)** second form at the Judy Jacoby Center. It's gonna be, again, the brief charter overview and public comment. And then Friday, uh, from nine to 10:00 AM online webinar will be the third public forum. So please, uh, try to check those out or at least go to the website if, um, the Town Charter Committee's website and along the left hand side of the page, uh, is a really tons and tons of resources and documents that they posted.
+
+**[1:17:10](https://vimeo.com/1088616089#t=4630s)** And then lastly, this is select board member Brett Murray's last, uh, meeting with this board. And I just wanted to, you know, just take a minute to say what a pleasure it's been to serve with you and, um, you've just been, um, just not really great to have at the table. And I think I, I really appreciate actually all of this board's dynamic and how we all work together. I think it's been really special. Um, and, but Brett, um, just, you know, best wishes that I'm glad that you can have some more free time, um, and on your plate and, and thank you for all the service that you've given to the town. You've can add a lot of insight, valuable insight and, um, contributions.
+
+**[1:17:57](https://vimeo.com/1088616089#t=4677s)** And, you know, if I've ever needed something, you know, a hand to, you know, can you help me with this or run this down, um, you know, it's easy to get your attention. You always grab, pick up my phone, pick up the phone if I call. And, um, so it's been, it's been really great. And, um, it's just been a pleasure to serve with you. We thank you very much for your service. Appreciate you stepping up a second time. Yeah. And, uh, you know, it's been, it's been fun working with you. We didn't agree on everything, but that doesn't matter really, really. But we respectfully disagreed. And, and, and, you know, and that's right. Trust me, my wife and I don't agree on everything, but she's always right. We've Been properly trained. Yeah, that's right. But thank you. All right.
+
+**[1:18:44](https://vimeo.com/1088616089#t=4724s)** It's been, it's been great being a colleague. Yeah. Brett, I would, uh, it's good to spend some time with you. I think last time we spent much time together was what, 1992 when we were playing soccer together in high school. So, uh, that's great. Yeah. So it's true. But, uh, thank you, thank you for helping me adjust, being on the board all your advice and, and anytime I had any questions or anything always there, so I appreciate it. Thank you. Thank you for all your time, Mark. I agree. Yeah. This is, uh, you know, my second final farewell and, uh, I feel like those rock bands, I'm doing that farewell tour, you know, and you just never go away. Um, no, but it's, you know, first and foremost, I, I wanna thank you know, the voters of Marblehead for entrusting me. And, and I think, you know,
+
+**[1:19:29](https://vimeo.com/1088616089#t=4769s)** winning the election the first time you, you get a little bit of a, we're gonna put some, we're gonna put a little blind faith in you, but to get reelected, I think that's something, you know, special because you know, you have a record to run on. And, and so when you get reelected, I think that's, you know, it's just, it's even more special. And to have done that as many times as I have you, you know, I just, I can't thank the, you know, citizens, you know, enough. Um, and, and to go back to what Ms. Newnan said, you, you know, about, you know, you know, this board, you know, for the past two years. And, uh, and then Mr. Nile last year was the only difference. Um, but I, I would say of all, you know, the eight years I've sat on this is, these past two years have meant the most to me. This town has just moved in a great direction. You know, having a leader like Thatcher
+
+**[1:20:15](https://vimeo.com/1088616089#t=4815s)** and the team that he's created, and it's just, you know, it is just wonderful, um, to see where this, this town is gonna be heading and it's gonna be heading in a, in a great direction. And, and so that's, you know, part of the reason why I can, you know, I'm, I'm happy to step back and let other people come on because, you know, I, it's, it's just, it's wonderful to sit in this seat, but until you sit in this seat, you don't understand the full picture and the work that goes behind the scenes and, and the hard work that Thatcher and the folks at Witcher Road do. Um, you talk to them, I mean, they, they really care about this town and, and they do hard work and tower away, excuse me, I forgot Tower away. And, and I have to say that, 'cause you know, again, my father was a DPW director for many years, so I have to say, you know, you know, tower away. Um, so it's just, it's a special town.
+
+**[1:21:01](https://vimeo.com/1088616089#t=4861s)** You know, again, my, my family's been here, the maternal side since the 17 hundreds people fought in the Civil War. You, you know, so I, I, I have a long history here, so that's part of the reason why I served. And, um, um, but again, serving with the five and, and you, Mr. Thatcher, you know, it's just been a wonderful two years. So, so thank you to all and thank you to assistance, but most of all, I wanna thank my family for allowing me to do this. Um, you know, because we all serve here and you don't see the work behind, you know, that we, we have to read, you know, before we come, we have to talk to certain members. They'll break an open meeting law or, or public officials to get information before we make decisions. It's not like we just come here, we open the book and make, so there's a lot of prep work. So in, in doing so, you are taking time away from your family, um, but you're also doing great to the family. And, um, and so my youngest son said,
+
+**[1:21:47](https://vimeo.com/1088616089#t=4907s)** I had a few moments in class and I googled your name dad, and guess what came up? A picture of you and me and Alex and Travis all sitting, I was, you know, where Ms. You know, Ms. Newan was sitting and, and we were all around your Slack board table. It was great. So it's those type of moments that really just mean it and say, you know what, this is worth it. You know, so for him to Google my name, to see it out there and to see that I gave back to our town. So, so again, to anybody that is stepping up in this next election, congratulations. It's, it's tough to run. Um, you know, unfortunately, there's, there's not enough seats for everybody, but I wish everybody well. And, um, and I hope more people do step up to Run because it is such a great group. And I do want to see more people sit here in the different boards and committees, you know, in town. So, so volunteer time is just a great group. So, uh, so thank you to everybody.
+
+**[1:22:33](https://vimeo.com/1088616089#t=4953s)** Well said.
+
+**[1:22:40](https://vimeo.com/1088616089#t=4960s)** Fair with longer than Thatcher and Logan combined, Ask my brother about the toast I gave at his wedding.
+
+**[1:22:56](https://vimeo.com/1088616089#t=4976s)** Okay. Um, can we have a motion to adjourn the meeting? So move All in favor. Great.

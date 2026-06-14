@@ -1,0 +1,317 @@
+---
+slug: select-board-2025-04-09
+board: select-board
+board_display: "Select Board"
+date: 2025-04-09
+title: "Select Board: April 9, 2025"
+vimeo_id: 1074131178
+vimeo_url: "https://vimeo.com/1074131178"
+duration_seconds: 2663
+ai_generated: true
+status: published
+source: vimeo-auto+llm
+
+
+summary_card:
+  headline: "Select Board approves rail trail contracts, library sign, and entertainment licenses"
+  summary: "The Marblehead Select Board approved a change order extending the Rail Trail Swamp Scott Branch early construction project deadline to October 30, 2025, and approved entertainment and liquor licenses for Eastern Yacht Club and Marblehead Arts Association. The board authorized a national public library directional sign for Abbott Library, deferring final location to DPW review. The Town Administrator reported that free cash certification is in progress with an outside accounting firm assisting, and announced that June elections will be consolidated to the high school field house due to elevator accessibility issues at Abbott Hall and the Old Town House."
+  decisions:
+    - "Approved Eastern Yacht Club seasonal entertainment license for live music and DJs at pool, Sunday–Saturday 1–10 PM"
+    - "Approved Abbott Library national public library sign, subject to DPW and Town Administrator review for location"
+    - "Approved consent agenda items including events at Abbott Hall for Pride Committee, Marblehead Museum, and Festival of Arts on the Avenue"
+    - "Approved declaration of Abbott Library large computer table as surplus"
+    - "Approved welcome letter from Select Board for 2025 Marblehead to Halifax Ocean Race"
+    - "Approved contracts with MGT Impact Solutions for Employee Classification Study ($78,780) and with MAPC for Town Comprehensive Plan ($143,000)"
+    - "Approved one-day liquor licenses for Coastline Marine Services and Marblehead Arts Association"
+    - "Approved change order extending Rail Trail Swamp Scott Branch Early Construction Project to October 30, 2025 with no cost increase"
+    - "Approved option years two and three for pavement management support services with APEX/Environmental Partners at up to $100,000 each"
+    - "Approved Northshore Medical Center lease alteration for air handler replacement totaling $54,930"
+  votes:
+    - motion: "Eastern Yacht Club entertainment license"
+      result: "in favor (unanimous)"
+    - motion: "Abbott Library national public library sign"
+      result: "in favor (unanimous)"
+    - motion: "Consent agenda — events and surplus declaration"
+      result: "in favor (unanimous)"
+    - motion: "Halifax Race welcome letter"
+      result: "in favor (unanimous)"
+    - motion: "MGT Impact Solutions and MAPC contracts"
+      result: "in favor (unanimous)"
+    - motion: "One-day liquor licenses — Coastline Marine Services and Marblehead Arts Association"
+      result: "in favor (unanimous)"
+    - motion: "Rail Trail and pavement management change orders"
+      result: "in favor (unanimous)"
+    - motion: "Northshore Medical Center air handler alteration"
+      result: "in favor (unanimous)"
+
+topic_segments:
+  - topic: public-comment
+    topic_confidence: 0.9
+    start_seconds: 0
+    end_seconds: 11
+    headline: "No public comment submitted at opening of meeting"
+    dek: "Chair confirmed no members of the public online or in person wished to speak."
+    summary: "The chair invited online attendees to raise their hand for public comment. No one came forward and the meeting moved directly to the Town Administrator update."
+  - topic: elections-procedural
+    topic_confidence: 0.95
+    start_seconds: 11
+    end_seconds: 337
+    featured: true
+    headline: "June elections to consolidate at high school field house due to elevator failures at Abbott Hall and Old Town House"
+    dek: "Elevator accessibility issues at both traditional polling locations are forcing a consolidation to the MHS field house, with a formal vote expected at the next meeting."
+    summary: |
+      Town Administrator Keer explained that both current polling locations — Abbott Hall and the Old Town House — will be unavailable for the June election. At the Old Town House, the elevator overheats under heavy Election Day use and has trapped voters. At Abbott Hall, mandatory safety-compliance upgrades are scheduled for June and cannot be postponed.
+      
+      Chief Gillin and Town Clerk Robin Michoud coordinated with the schools; the School Committee voted to allow use of the high school field house as a single consolidated polling location. The date is expected to coincide with a professional day so students will not be present.
+      
+      A formal Select Board vote is anticipated at the next meeting, pending a site survey for ADA compliance certification required by the Secretary of the Commonwealth, which must be completed at least 20 days before the election. Board members noted the consolidation mirrors a broader trend and referenced a successful similar arrangement during COVID, suggesting it could become a permanent change if it goes well.
+    key_speakers: ["Town Administrator Keer", "Board Chair (Madam Chair)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 337
+    end_seconds: 570
+    headline: "Free cash certification in progress; outside accounting firm engaged to meet town meeting deadline"
+    dek: "CFO Alicia Benjamin has brought in an outside accounting firm to help reconcile revenue accounts and finalize certification before town meeting."
+    summary: |
+      The Town Administrator reported that expenditure reconciliation is complete but revenue account reconciliation on the accounting side remains in progress. Legacy software and staffing turnover in the Treasurer-Collector's office have contributed to ongoing delays. The town is working closely with the Department of Local Services (DLS), which is awaiting final submission. CFO Alicia Benjamin engaged an outside accounting firm to accelerate the process and meet the town meeting deadline.
+      
+      The Town Administrator also highlighted the annual employee benefits fair, which drew approximately 250 attendees — more than double last year's turnout — and was organized by HR benefits coordinator Amanda Elli (name approximate per ASR).
+    key_speakers: ["Town Administrator Keer"]
+  - topic: permits-zoning
+    topic_confidence: 0.95
+    start_seconds: 570
+    end_seconds: 674
+    headline: "Eastern Yacht Club approved for seasonal entertainment license at pool for live music and DJs"
+    dek: "General Manager Jared Horney requested a license to add solo acoustic and light amplified music at the club's seasonal pool area."
+    summary: "Jared Horney, General Manager of Eastern Yacht Club at 42–44 Foster Street, requested a seasonal, annual, and Sunday entertainment license for live music and DJs at the pool, Sunday through Saturday, 1:00 PM to 10:00 PM. The club already holds a seasonal liquor license and an entertainment license for the clubhouse. The board unanimously approved the application, subject to receipt of all fees, forms, and Department of Public Safety approval. Music is not to be audible from the street."
+    key_speakers: ["Jared Horney (Eastern Yacht Club General Manager)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.8
+    start_seconds: 674
+    end_seconds: 1626
+    headline: "Abbott Library national public library sign approved with location deferred to DPW review"
+    dek: "After extended discussion about sign clutter and wayfinding value, the board approved one sign subject to DPW and Town Administrator approval of placement."
+    summary: |
+      Abbott Library Director Kim (last name approximate) requested permission to erect national public library signs at two locations: the intersection of Burial/Bubier Road and Atlantic Avenue, and on Lafayette Street at the town entrance. The signs are already purchased.
+      
+      The board engaged in extended discussion about sign proliferation, referencing past efforts in the 1990s to reduce roadside signage in town. Members expressed concern that the Lafayette Street sign would serve more as an advertisement than a wayfinding tool given its distance from the library, while generally supporting the Bubier/Atlantic location as a functional directional sign.
+      
+      The library director indicated she had no strong preference on location if the board preferred only one sign. The board ultimately approved a motion to authorize one national public library directional sign with final location to be determined by the Town Administrator and DPW Director, avoiding a prescriptive vote on placement.
+    key_speakers: ["Kim (Abbott Library Director)", "Board Chair (Madam Chair)", "Town Administrator Keer"]
+  - topic: recreation-events
+    topic_confidence: 0.9
+    start_seconds: 1626
+    end_seconds: 1765
+    headline: "Consent agenda approved including Pride Committee, Museum, and Festival of Arts events at Abbott Hall"
+    dek: "The board approved use of Abbott Hall for three community events in spring and summer 2025, and declared a surplus library table."
+    summary: |
+      The board approved the following consent agenda items:
+      
+      | Event | Date | Time |
+      |---|---|---|
+      | Marblehead Pride Committee at Abbott Hall | Saturday, June 21, 2025 | 2:00–4:00 PM |
+      | Marblehead Museum at Abbott Hall | Saturday, April 26, 2025 | 10:00 AM–2:00 PM |
+      | Festival of Arts on the Avenue | Sunday, July 6, 2025 | 2:00–5:00 PM |
+      
+      The board also declared Abbott Library's large computer table as surplus in accordance with town policy.
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 1765
+    end_seconds: 1904
+    headline: "Select Board approves welcome letter for 40th Marblehead to Halifax Ocean Race starting July 6"
+    dek: "The board voted to submit a message for the race program book, continuing a tradition dating to the race's founding in 1905."
+    summary: "The board approved a welcome letter from the Select Board for inclusion in the 2025 Marblehead to Halifax Ocean Race program book. Kate Ferris Richardson, Vice Commodore of the Boston Yacht Club and U.S. Chair of the race, was present and requested a current board photograph to accompany the letter. The board agreed to provide a photo. The 2025 race, starting July 6, is the 40th biennial running of the event."
+    key_speakers: ["Kate Ferris Richardson (Vice Commodore, Boston Yacht Club / U.S. Chair, Marblehead to Halifax Ocean Race)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.88
+    start_seconds: 1904
+    end_seconds: 2046
+    headline: "Board awards $78,780 employee classification study contract and $143,000 MAPC comprehensive plan contract"
+    dek: "Both contracts advance previously budgeted initiatives: a town-wide employee classification study and the start of a comprehensive planning process backed by a $130,000 state grant."
+    summary: |
+      The board approved two contracts:
+      
+      1. **MGT Impact Solutions, LLC (Tampa, FL)** — Employee Classification Study Project: **$78,780**. Funded through the operating budget.
+      2. **Metropolitan Area Planning Council (MAPC)** — Town Comprehensive Plan: **$143,000**. The town previously received a $130,000 grant and is providing a $13,000 local match.
+      
+      Both contracts were unanimously approved.
+    key_speakers: ["Town Administrator Keer"]
+  - topic: permits-zoning
+    topic_confidence: 0.9
+    start_seconds: 2046
+    end_seconds: 2152
+    headline: "One-day liquor licenses approved for Coastline Marine Services and Marblehead Arts Association events"
+    dek: "Three separate one-day licenses covering events in May were approved unanimously by roll call vote."
+    summary: |
+      The board approved one-day liquor licenses for three events:
+      
+      | Applicant | Location | Date | Hours |
+      |---|---|---|---|
+      | Coastline Marine Services | 9 Sewall Street | May 3, 2025 | 12:00–4:00 PM |
+      | Marblehead Arts Association | 8 Hooper Street | May 8, 2025 | 2:00–5:00 PM |
+      | Marblehead Arts Association | 8 Hooper Street | May 17, 2025 | 5:00–9:00 PM |
+      
+      Standard conditions apply including proof of purchase from authorized sources, liquor liability insurance for events on town property, and no unattended alcohol. The vote was taken as a roll call: Fox, Murray, Singer, Grader, and Nunan all in favor.
+  - topic: trash-dpw
+    topic_confidence: 0.82
+    start_seconds: 2152
+    end_seconds: 2503
+    headline: "Rail trail early construction deadline extended to October 2025; historic curb preservation under discussion"
+    dek: "DPW Director Amy explained that contractor Rafael Construction received a deadline extension on the Swamp Scott branch section while a historic railroad curb question is resolved."
+    summary: |
+      DPW Director Amy (last name not captured) outlined two concurrent rail trail construction projects awarded to Rafael Construction:
+      
+      1. **Prototype/Showcase section** (Smith Street to Pleasant Street) — grant-funded with a hard June 30, 2025 completion deadline.
+      2. **Early Construction section** (Rockaway to Clifton) — a historic granite curb from the original Clifton railroad station needs disposition guidance before work can proceed.
+      
+      To protect the grant deadline on the first project, the town is extending the Swamp Scott branch project deadline from June 30 to **October 30, 2025** with no additional cost. DPW is working with Pat Franklin and railroad history stakeholders on whether to remove or reset the historic curb.
+      
+      The board also approved option years two and three of the pavement management support services contract with APEX/Environmental Partners of Quincy, each at a cost not to exceed **$100,000**, covering periods through March 31, 2026.
+    key_speakers: ["Amy (DPW Director)"]
+  - topic: admin-housekeeping
+    topic_confidence: 0.85
+    start_seconds: 2503
+    end_seconds: 2597
+    headline: "Northshore Medical Center approved to replace air handler unit at town-owned building for $54,930"
+    dek: "The lease requires board approval for tenant improvements exceeding $25,000; the board approved the work unanimously."
+    summary: "Under the terms of the lease between the town and Northshore Medical Center executed March 6, 2023, the tenant must obtain Select Board approval for building alterations exceeding $25,000. The medical center proposed replacing an existing air handler unit at a total cost of **$54,930**. The board unanimously approved the request."
+    key_speakers: ["Town Administrator Keer"]
+  - topic: 40b-mbta
+    topic_confidence: 0.92
+    start_seconds: 2597
+    end_seconds: 2646
+    headline: "Planning Board unanimously recommends adoption of MBTA Communities 3A compliance plan"
+    dek: "A board member reported that the Planning Board voted unanimously to advance the MBTA 3A zoning compliance plan following approximately two years of work."
+    summary: "A Select Board member reported that the Planning Board voted unanimously the prior evening to recommend adoption of Marblehead's MBTA Communities Chapter 3A compliance plan. Planning Board member Mark Leman chaired the meeting. The recommendation now moves forward through the required adoption process. The member acknowledged the Planning Board's approximately two years of work on the compliance effort."
+    key_speakers: ["Select Board member (name not captured)"]
+---
+
+> Transcript captured from MHTV's Vimeo auto-captioning. No speaker labels;
+> proper names and dollar figures occasionally misheard. Click any timecode to
+> jump to that moment in the source video.
+
+**[0:00](https://vimeo.com/1074131178#t=0s)** Okay. So if there's anybody online that wishes to make public comment, just raise your hand and, um, I'm happy to call on you.
+
+**[0:11](https://vimeo.com/1074131178#t=11s)** We're good online. Okay. So, seeing no public comment this evening, I will move us forward to our next agenda item, which is our Town Administrator update. And I will hand it over to Mr. Keer for, um, his updates. All right. I don't think I got to you two, My update. So, uh, three items on, on the update. Um, first items are preview of coming vote. Um, it's gonna be necessary to change our voting location, um, for this June. So, um, the main reasons we need to, so we have polling at the old townhouse. Mm-hmm. And we are polling here. Uh, the change, what's precipitating the change in both
+
+**[0:57](https://vimeo.com/1074131178#t=57s)** cases are the elevators. So it, the, the buildings have to be fully accessible. So at the old townhouse, um, there were issues at the last election and ongoing that, uh, if the elevator gets frequent use, which it does during, on election day, it overheats Oh. And people get trapped in the elevator. So The elevator room is air condition, and the elevator's not an elevator to lift. It's not made for right. For, for massive Use. It's not built for the that capacity. So that's an issue here at Abbott Hall. The elevator here has required maintenance and, uh, there's some, uh, uh, mandatory upgrades for safety compliance reasons that have to be done. And it, it's on a deadline that it has
+
+**[1:44](https://vimeo.com/1074131178#t=104s)** to be scheduled, which is in June. Mm-hmm. So both these buildings will not be accessible under the law, uh, for, for election day. So Chief Gillin and, and Robin Michoud, uh, working together, uh, approached the schools and coordinated the schools and received a, uh, a vote by the school committee to allow the use of the, um, uh, the, the field house. The field house. Thank you, um, for voting on that. So there'll be one location at the field house for the elections, and then in coordination with the schools. I think that'll be a, I think it's gonna be a professional day for the teachers. Okay. So that it won't be kids at the schools,
+
+**[2:31](https://vimeo.com/1074131178#t=151s)** which I'll tell you from the other communities I've worked, that's the way a a, you know, communities have gone in addition to the elevators. I mean, that's, those are particular problems that are affecting the US now here. But in general, the challenges with the multiple locations is finding enough volunteers and poll workers to cover it all, plus the logistics of being dispersed that more and more communities are just consolidating to a single voting place. So all your volunteers are one place, and all the logistics of moving ballots and, and, and coverage and check-ins, all that simplifies the whole process. But for this June outta necessity, because of the accessibility of these two buildings.
+
+**[3:17](https://vimeo.com/1074131178#t=197s)** Um, so the boat will come probably at next meeting. Um, part of the steps is, uh, there has to be a site survey done for a DA compliance through the, the, the Secretary of the Commonwealth to, to certify. Yeah. The, these sites work. And then, um, that has to be done before the vote. And then the vote has to be scheduled at least 20 days before the election. So probably next meeting, we'll, we'll meet the timing, and then the clerk's office will have given notice to all the voters of the change of location. Yeah. So I've been through this in Bury, uh, you know, it's, it's a bit of a project to do it, but it it works. Yeah. It is, it is way mu much more commonplace now
+
+**[4:03](https://vimeo.com/1074131178#t=243s)** to have a high school field house be the central polling place for all the reasons that you stated. And I would, would just, I think that we should see how it goes, because I think that potentially, I've personally heard feedback from voters that, uh, you know, having so many multiple polling places and the parking situation, it, they, there is a great parking setup at the high school. And it, it is true that there's a lot of towns that, that move to this direction and for the reasons that you stated. And I'm wondering, you know, like if we can, you know, see how this goes and potentially, even though we're doing this out of a necessity now, find that if it works well, um, and it works well for, you know, public safety and parking and, and the clerk and, and volunteers, we could consider, you know,
+
+**[4:50](https://vimeo.com/1074131178#t=290s)** making this more of a permanent thing. Right. Depending on how it goes. We Did it during covid and it worked fine. That's right. We did. So, So the COA will not be used either. So this is for all precincts. Yeah. Co The co a's right there, right there. So you might as well consolidate. Makes sense. I know that this and yeah. The parking is better and Yeah. Okay. So I think that, so it went well. Yeah. Yeah. From your perspective in covid And then, uh, the building commission, I are gonna do the measurements for the state and get those sent in, and that, that said, okay. Yeah. Well, maybe it's something that the schools would, we can talk about it and if it goes well, yep. Maybe they'd consider like, this is a nice community effort and we can coordinate that going on.
+
+**[5:37](https://vimeo.com/1074131178#t=337s)** And more and more people are, are doing early voting Voting and early voting is a thing. So Yeah. Things are changing. Okay. All right. So anyways, that'll be coming. I, we wanted to kind of get that out there for, it comes before the board, uh, next, uh, sort of update on certification of free cash. 'cause we know we, we need to get this done before town meeting. Um, basically, uh, all of our expenditures have been fully reconciled and documented on the expenditure side. Um, we are on the revenue accounts. Um, we have finalized reconciliation of the revenues relative to the bank accounts. So we've accounted that, uh, that we have the funds that are in the bank. Uh, it's, it's on the accounting side
+
+**[6:22](https://vimeo.com/1074131178#t=382s)** that we're still trying to get through and, and, and process and, and clear out all the adjustments that, that occurred during the year. Um, so we're pushing to get that done. Um, part of the, the challenge for this year as well as past years, um, we, we have the, the legacy software system, soft, right. Um, you know, the, the, the Treasury's office had to implement, um, QuickBooks and things. Basically, we, we still have too much of a manual process in order to keep up and reconcile. And then that's compounded when we have turnover and staff, as we've talked about, um, mainly in the treasure collector's office. So we've, we feel like, you know,
+
+**[7:08](https://vimeo.com/1074131178#t=428s)** we're always playing catch up mm-hmm. In the reconciliations. So, um, we're working with DLS 'cause they are anxiously waiting for us to finalize. Um, we know we're, you know, getting close to deadline. Um, um, Alicia Benjamin, our CFO has brought in an accounting firm for extra help to, to, to make sure we get these transactions done and, and get everything certified in time for town meeting. So we'll continue to work with DLS, keep them happy. Uh, we'll keep the full court press. And again, what's being reconciled is just the revenues, um, on the accounting side to reconcile with what's been done on the treasurer's side. So, uh, we'll provide any, any updates as necessary.
+
+**[7:56](https://vimeo.com/1074131178#t=476s)** Uh, and finally, uh, today we had a very successful town employee benefits Fair. Um, so this is the annual event for town employees, town school retirees to come in, and all the vendors who provide the various health insurance, iCare, all the, all the benefits as employees or retirees that we offer. And this is the, the re-enrollment of, you know, the opportunity to change plans. Um, so, uh, Amanda Elli, who is our benefits coordinator in our HR department, organized the whole thing with the vendors and everything. And, uh, I went and visited, I hit it right at the quiet time.
+
+**[8:42](https://vimeo.com/1074131178#t=522s)** Uh, they got slammed in the morning, I guess I got slammed in the afternoon. I, I did a quick visit right in the middle. Um, but it's been reported as one of the busiest municipal fairs, uh, in quite some in years. They had over or had approximately 250 attendees, more than doubled in last year's Wow. Numbers. Um, so we're planning for next year, but, uh, special thanks to Amanda Ally. Uh, I, I was on the email exchange. She coordinated the whole thing, worked with all the vendors. There was a lot of swag, uh, there. And so it was a very successful event. So thanks to our HR department and Amanda in particular Awesome. Our employees benefit from all the information they got today. Great. That concludes my report.
+
+**[9:30](https://vimeo.com/1074131178#t=570s)** Any comments? Awesome. All right. Thank you for that. Um, we'll move right into our, uh, license and, and our Sunday and entertainment license. Um, and an application from Jared Horney, if you would. Jared, if you would come join us at the table, that would be great. Welcome, Jared. Nice to see you all again. Welcome back. Thank you. Good feedback. Okay. So anything Of course. No worries. Um, so it just, if you just wanna introduce like the application. Sure. So I'm Jared Horney. I'm the general manager at the Eastern Yacht Club. What we're looking to do is expand our member services and have an entertainment license down at the pool. So we have our seasonal liquor license down there. We do have an entertainment license in the, in the clubhouse, but we wanted to offer just, you know, um, solo acoustic and some, some light amplified music down at the pool, just to,
+
+**[10:17](https://vimeo.com/1074131178#t=617s)** you know, elevate what we do down there. Great. Okay. Um, any questions from the boards?
+
+**[10:27](https://vimeo.com/1074131178#t=627s)** It seems fine. I mean, the pool's right on the water and, you know, um, but you, there's a lot of parties and everything and Yeah. It lends itself so well to Yeah. You know, to a little bit of music, so, yeah. Um, okay. So I just need a motion to approve the request from Eastern Yacht Club at 42 dash 44 Foster Street for seasonal, annual and Sunday entertainment license for live music and DJs Sunday through Saturday, one to 10:00 PM 1:00 PM to 10:00 PM and subject to receipt of all fees, forms, and approval from the Department of Public Safety for Entertainment on Sundays. Music is not to be heard from the street. So moved. Second. Okay. Um, all those in favor. Okay. It's unanimous and thank you. Thank You so much. Your luck. I appreciate it. Okay. And that brings us to Abbott Library.
+
+**[11:14](https://vimeo.com/1074131178#t=674s)** And Kim can join us at the table and, um, talk to us about the na the signage. Yes. They're requesting. Yes. So this is the national library sign that you'll see in many towns. I don't know if I, if Marblehead has ever had one. Um, but it's a quick and easy way for people to know that there's a library in our town and sort of how to get there. So there's two locations that I'm proposing. One of them would be at ER, road and Atlantic. Mm-hmm. And the other one would be on Lafayette as you're coming into town. So those are the two locations. The one on BIA Road would have an arrow pointing toward the library. And the other one, um, we don't have the right arrow.
+
+**[12:01](https://vimeo.com/1074131178#t=721s)** We have a arrow that doesn't really work. So we thought maybe just the sign. So it's like, as you're driving, it would be sort of this way instead of this way. Yeah. So, and what are the dimensions of the sign? The Dimensions? Well, I roughly Question. I think it's about roughly, you know, I can get you that in information. Oh, No worries. No worries. If means, Well, it's, it's a significant, it's not here. It has to be visible from a passing car. Yeah. Yeah. So, um, I can show you a picture of it so you can kind of, Amy's got an idea. Yeah. Sitting by my Desk. I think it is that Big. Is that big? So it's like two, two by three basically. Yeah. Yeah. Okay. So that somebody will measure Amy's hands. Yeah. The, uh, I'm just curious. Yeah. Box pretty big, but this is what it looks like.
+
+**[12:48](https://vimeo.com/1074131178#t=768s)** Oh, yeah. Oh, that's what that means On the left side. And then below it you put the library directional. Yeah. And we only right now, unless I order another sign, I only have the one directional sign. So I'd have to get a different type of arrow for pointing forward as opposed to pointing left. And do they sit on telephone poles that exist or, yeah. What They can use existing poles or we could get one if necessary. But that's, you know, kind of up for discussion as to how that happens. Is it, so the booby road one, would that be dual-sided? Because would you just say it from one direction or both? Wouldn't you want to see it from both directions? If you're gonna put it at Blue Road, You could. I've only seen these, I feel like it might be a lot.
+
+**[13:35](https://vimeo.com/1074131178#t=815s)** Oh, would you put it in from outcoming incoming to town that direction? It's Just an incoming going towards the library, right. Is from out of town. Yeah. It might be too much to have, you know what I'm saying? Yeah. You might have that. Um, I can show you the picture. Right. But I didn't know if it'd be on both sides, you know what I mean? Yeah. Because This would be internal. So I think she's just talking about the people coming. Oh, signage for out of town only. Yeah. Right. But I mean, I could add two more signs if that's what everybody wants. I'm No, I just was in, I was just curious like trying to visualize what it's gonna Be. Yeah. So really it's all incoming toward the point that was Right. 'cause if you're driving away from the library having a sign, You know, you were, you were thinking, yeah, if you're out coming out of town, you don't have That. The idea being that people
+
+**[14:21](https://vimeo.com/1074131178#t=861s)** would come to town looking for our library. Okay. But you could do one going toward Vie Road, and then you could have another one. You could add a completely different sign. You could have three if you want Two. Sounds good. Yeah. Another one You, you're And the location sound. Oh, yeah. What you have sounds, I think the locations look good too. I think you have to go with what you've presented because Yes. Right. The vote here is to authorize placement. I couldn't tell. Sorry. I couldn't tell. Like what I gotta say, This is where it's gonna go. They double sided or, yeah. Um, This is single sided. Yeah. So, so that, that one with the, with the picture mm-hmm. Goes with the sign, right? Yeah. Whichever direction. Could you stand it upright so it's straight ahead.
+
+**[15:06](https://vimeo.com/1074131178#t=906s)** Um, you won't be able to read library then. I'd have to get a slightly different version Of that. Okay. That's No worries. No worries. We're sign specialists, as you can tell. Yeah. Well, we wanna be anyway. We're not succeeding. Right. Well, I think This is a big deal, getting new sign on the streets, I mean, professionals. Exactly. So I, what is, I guess, what is the value of having the sign on Lafayette coming into town? And I'm just gonna say this because I'm mindful of the fact that historically
+
+**[15:38](https://vimeo.com/1074131178#t=938s)** We've gone through a period of time where the signs became like, like, um, pollution signs. Like to what? That level. And I've talked to a form, like former town administrator, Tony Saso, they went through a whole thing to like really reduce signage in town. Yes. And I just, I'm trying to find the value add of, 'cause I don't, I I respect that and I don't want us to get back to that. What is the value add of having the sign at Lafayette? Mm-hmm. That's just the library. Library. No direction. I mean, I guess I'm wondering if we need that. I don't know. It's, it's a good question. I had really thought of just because it was two different roads coming in and there that,
+
+**[16:24](https://vimeo.com/1074131178#t=984s)** because they both lead to the same place, so to avoid confusion. And it's right after the main live main Marblehead sign. So it's, it would be like, you see the Marblehead sign, then you see library. Um, I, I'm just wary. I, I just Too much. There's a lot of signs and I think, I'm not sure that we're attracting people with it. Is it just noise? And I'm just, I'm mindful of that. I, you know. No, I understand. Yeah. Um, so I just put that out to the board to chew on so it's Not gonna get one more. So is the, is the concept people are coming, they're looking for the library and this is pointing 'em in the direction Yeah. For Booby Road, but not necessarily because You're across, you're like, look, that's what I'm trying to write,
+
+**[17:11](https://vimeo.com/1074131178#t=1031s)** You know? Right. Like Get used to the hospital signs, for instance, when you're looking for 'em. Mm-hmm. So it's Like, I think it makes sense to have it on the Booby air sign for sure. You know, I mean, if you're coming from Swamp, Scott, 'cause I've also visited a Swamp, Scott, I know there's a lot of interchange between Swamp Scott Marblehead. You're coming to pick up a book that you've held at Marblehead that you didn't have. You know, I think most people know there's a library in a town like Marblehead. I don't think we need a sign. That's my opinion. A sign to add to that, to the polls. Because we have to be mindful of when you diffuse messages, when you have too many. So you're saying that maybe one sign is enough rather than two? That's my personal opinion on it. But I'm just, I'm just mindful of the efforts that we went through in the nineties to kind of clean up a lot
+
+**[17:59](https://vimeo.com/1074131178#t=1079s)** of signage that we just frankly didn't use a lot of discretion on it and just went through. Well, on, on that note, you know, in the library itself, we're also mindful of overs signing, you know, we don't wanna have too many signs because then people don't, they don't absorb it. So we've tried to keep it fairly minimal. So I understand the Point, 'cause the board has authorized, just since I've been here, we've authorized the Purple Heart City. We've authorized, um, the, um, a new signage at the, uh, was called the Indian Monument down by the, um, the beach. You know what I'm about? Yep, yep. I do. And there's been a couple, like one maybe other that it's escaping me and I'm just, I don't personally wanna just put a sign up to put a sign up because we, somebody asked for it.
+
+**[18:46](https://vimeo.com/1074131178#t=1126s)** Like you And all due respect, I think It makes, I mean, I guess my question is, I, but I, and I I, I do think that, you know, coming into town on Boober Road, that makes sense. It's a directional, I'm, I'm less inclined to favor a sign just that says we have a library at the beginning Of town. So what do you think about having the double-sided approach then at Vivie Road? 'cause then I do, then We do have, I think that most people in town know where our library is, right? Mm-hmm. Like, um, So you're thinking just that One point? I, I, yeah. Okay. Okay. I mean, I'm looking at it subject to the review approval by Tom Ra and DPW director. So we're, you know, I, I think I'm fine with the motion. I know it hasn't been officially made. Looking at the written one, I'm fine with that because the two of them, or the three of them get to decide,
+
+**[19:34](https://vimeo.com/1074131178#t=1174s)** and they may only want one, or maybe they're gonna have to come back to us with another idea. But I'm fine with letting the three of them because I just don't, I think sitting at the table without physically going to these locations to, to look at it is, is gonna be much help. So I, I'm fine with the motion, the way it's presented as written.
+
+**[19:54](https://vimeo.com/1074131178#t=1194s)** Yeah. I, I wonder whether it's really a direct a, a case of, I think it just affirms that you're heading towards a library, right? For and I, I would think you'd want to be somewhere where there's the, you know, max, you're In the Vicinity and I, well, well, or, or just a maximum kind of volume so people kind of, you know, if you're coming from out of town, especially if you're visiting, you know that you get it. Oh wow. There's a library. Okay. And that's really the kinda the, and then you, you know, you're roughly going in the right direction, right? Yeah. It's more like way finding. And I don't feel like putting it at Lafayette. It's too remote from the location and, Okay. Well, I just don't know. Well, is there, well, I wonder though, 'cause there's a lot of volume that comes over Lafayette, right? But there's not really serving a way, finding purpose. Do you know what I mean? Because Yes, there's no, it's too remote.
+
+**[20:41](https://vimeo.com/1074131178#t=1241s)** So like, I think when you're within a vicinity of it, it's calling attention and it is a busy road and you don't, you want people to know and not be like, distracted. We've had it's traffic issues on that road. And so I, I understand the way finding issue and, and I think it's a reasonable request on as regards to Boober and Pleasant. Is It, it's on Boober and Atlantic, right? Yes. Atlantic. So it's actually like, Oh yeah, but that makes sense because swamps have people come through Atlantic because If you're on Boob air and you can't find the library, it's right behind you. Right, right. So, well that's, it's almost like, hey, you're one street over. Go that way. Right. I have no problem with it on Boob Air Road as a way finding, personally, my opinion is that's Atlantic. We're just, I, I just,
+
+**[21:30](https://vimeo.com/1074131178#t=1290s)** I don't think it's needed at the Lafayette. That's just my opinion. Just because I know like we have to be mindful of, of signs. 'cause it gets kind of nutty. Do you Feel strong let's you, do you feel strongly about this one way or another? Um, actually to be honest, no. If you decide you just want one sign, I am perfectly fine with that. I just, I would love to have one sign. That would be wonderful. And if you think that it's too much sign clutter on Lafayette, I'm completely fine. I just don't think it adds value, like to the wayfinding mission, which is real. Mm-hmm. And I appreciate that. For the Swamp Scott connection, What do you see the value of it as? I mean, what's your, what's kind, your motive? Well, I think that, you know, it's the national library sign. It has more, it carries a lot of weight in itself.
+
+**[22:18](https://vimeo.com/1074131178#t=1338s)** You're supporting libraries by putting that sign up. It's awareness that we have a library that this town, It's kind of an advertisement as well, isn't It? Yes. Towards the library. Yeah. It's very subtle, but I think it has a great deal of meaning, Right? Yes. See, so yeah, it's, it's not just wayfinding, it's also a, I'm driving in the Marblehead. Wow, okay. There's a library here. You can see that. Yeah. Just a reminder that there's a library, right? Mm-hmm. And to go to it And having, sorry, through the chair, um, having the sign, you know, on with Atlantic, um, do you think that that would provide the awareness that you're looking for as well as the direction? You know, I think I'm considering all these variables and thinking about traffic flow
+
+**[23:03](https://vimeo.com/1074131178#t=1383s)** and all of the other things that are coming up, right? Anytime you are adding a sign, you are, you know, taking people's awareness away from where they are. If it's not, you know, depending on what, where the, what their point of focus is, right? Mm-hmm. And if the initial mission of this is to provide the acknowledgement that we have this great facility, and also here's the location of this facility, I don't see how that sign, you know, that sign is really not taking both purposes in my mind. Um, so sort was curious to see, you know, do you think that you're getting that awareness, that recognition with that sign on Atlantic? Like it's serving all of the things that I hear you saying are your priorities. Yeah. Where do you get the biggest bang for your buck, do you think? If You, I mean, and if you, if that is the location,
+
+**[23:49](https://vimeo.com/1074131178#t=1429s)** then that is fine. I think through, I think the question is, if you could choose one location, if we decide on one, where do you, where do you get the biggest bang for your buck? Would you prefer it on Atlantic? Or do you think that you're having more from people coming in town from Lafayette, I think is what I'm here asked. Well, it's, I don't know, exact traffic flow numbers, you know? Fair. I feel like there's only a couple of access points in the town. So, uh, it sort of depends really. I don't really know if I have a good answer for that, but I Yeah, that's fair. I think that, um, you know, if you're around town and you're using that street, you see it. So yeah. I have a follow up through the chair. Um, to, and I don't know if this is, this might be, um,
+
+**[24:34](https://vimeo.com/1074131178#t=1474s)** the town administrator to weigh in our DPW, but is there a possibility for a two-tiered approach? Meaning do we need to vote and execute and put both signs? And is there a, you know, some sort of cost benefit analysis of, you know, um, that you, you, you're saving money if you're ordering and putting in both signs at the same time? Or is it possible to put in one sign, assess and then perhaps, you know, maybe in six months say, you know what, we really, um, feel strongly about implementing a second sign as opposed to doing them both immediately at the same time. So is that a possibility? And, you know, for Thatcher, is that a cost concern issue or is that something that they're really wouldn't impact us? They exist, correct. Purchased them already. They're Already on Amy's desk.
+
+**[25:20](https://vimeo.com/1074131178#t=1520s)** So I think what I'm hearing, sure. Put one up in the optimum spot, see how it runs. If it's determined, it'd be useful for another sign. Um, and then what we do is before we come here, we sit down with queue and we nail it down. I'm just thinking that might give you the opportunity, okay, this time seems like it meets both of your needs. Great. Let's place it. And then perhaps this amount of time to come back and revisit and say, you know what, maybe we've decided this might be a better option. Or, you know, maybe we add some sort of location dynamic to it somehow. Maybe there's something that you come across in the meantime that then allows that to serve two purposes instead of one. And so you're getting more out of
+
+**[26:06](https://vimeo.com/1074131178#t=1566s)** what you're looking forward to. And I'm sure, like, I I, I am sure that our DPW director, like I, you know, I trust her like knowledge about signage and her feelings on it. And, you know, it seemed like a big sign the way it was kind of presented. And I, um, you know, DPW is putting up a lot of signs and so I'm sure that like there is a mindfulness around it. So do are, this was just literally, I didn't even anticipate this discussion, but, Well, I think the public library is a special place. Yes, absolutely. It is a special place too, right? So I think it has a special, Are are folks in, are you folks following along with me around the one sign and so I can amend the motion? Is that okay? Mm-hmm. Okay. Um, so I'm, I'm gonna, um, ask for a motion to approve the request from Kimberly, grad director
+
+**[26:53](https://vimeo.com/1074131178#t=1613s)** of Abbott Public Library to direct a national public library sign, um, subject to review and approval by the town administrator in DPW.
+
+**[27:06](https://vimeo.com/1074131178#t=1626s)** I'm not gonna even get into as it provides more liberty if I say it that way. So we're not determining location, we're gonna let DPW and can decide Per our discussion. That's we Understand. I like that. What our idea. I just wanna make sure I said perfect. Second. Okay. Okay. All those in favor? Okay. Thank you Ken. Thanks Tim. Thank you for time and discussion. Thank you very much. I really didn't anticipate this discuss. I didn't expection. I was like, wait a minute. Let's stop. Okay. Um, so next we have votes of the board, uh, you know, just general consent, uh, agenda items. We are going to, um, pause on minutes. We're gonna postpone on those. And, um, but, uh, going forward on the others,
+
+**[27:52](https://vimeo.com/1074131178#t=1672s)** accept those put on hold. I need a motion to approve the following consent agenda items. Abbott Hall Marblehead Pride Committee for Saturday, June 21st, 2025 from two to 4:00 PM Abbott Hall, Marblehead Marble Marblehead Museum, Saturday, April 26th from 10:00 AM to 2:00 PM the Festival of Arts on the Avenue, Sunday, July 6th, 2025, two to 5:00 PM and, um, declaring Abbott Library public library's large computer table as surplus item according to our, um, policy. Okay, So moved. Second. Second. All those in favor? Okay, great. And now we have, um, the welcome letter. We've been asked from the, um, Halifax race. I love that we're talking about the summer, the weather is not.
+
+**[28:37](https://vimeo.com/1074131178#t=1717s)** Um, but so they have asked us to, uh, send some words a greeting to, for them to incorporate in the Halifax race. And we need to vote on the language and approval that's present, like proposed here. And, um, it's in our packet. You can read the message. It's from all of us. And, um, this is the Halifax race starting July 6th, 2025. The 40th bi biennial. So it's a, it's a mile marker Marblehead to Halifax Ocean Race. And, um, this would be our message. It. This has been running, um, I think we had covid, we had a year hiatus, but it's been 120 years, um, that we've been, that it's been running. And, um, so anyway, so if you, uh, approve
+
+**[29:25](https://vimeo.com/1074131178#t=1765s)** of the message in our packet as presented, um, or if there's any comments, I'll make the motion. We can have a second and discuss it if anybody wants anything changed. Can I have a motion to approve the request from Jay Watt rear Commodore to prepare a message from the select board for the 2025 Marble Head to Halifax race book, as has been the tradition since the start of the race in 1905 and as presented in our packet. So Moved second. Does anybody have any changes to it that they'd like to make? Okay. All right. All those in favor? Is it? Question, is it possible we take a photo of all five of you? 'cause it seems like in the past that's what they've done. Okay. To include in the letter. Don't we have a picture that was taken when we were all Srn? Are you with the Halifax Re?
+
+**[30:10](https://vimeo.com/1074131178#t=1810s)** I am. Oh. Oh, okay. Do you wanna come on up? Sorry, I didn't know you were here. I may, I may have dressed differently. Sorry. No, no worries At all. We made eye contact with Nice to have you Very Much introduce yourself. My name is Kate Ferris Richardson. I'm the Vice Comm of the Boston Yacht Club and the United States Chair of the Marblehead to Halifax Ocean Race. Great. Okay. Awesome. Um, and yes, uh, generally there is a picture that is included with, we do have a 2023 picture, but, um, I believe the board has, has changed since then. Great. Yeah, we're happy to do that for Beautiful, Wonderful. Adam Chair, can I suggest we just use the picture that we took, that we used throughout town? Or do we, do we have that? Did You do that? I don't, yeah, you stood up by the, we Stood up there. Sure. We'll dig it up and, or I'm Happy. If not, we'll get you one. Fantastic. That'd be lovely. When do you need it? By?
+
+**[30:57](https://vimeo.com/1074131178#t=1857s)** As soon as possible. Or Publishing. Publishing deadline is, is fast approaching. You guys wanna do time? Okay, Great. Well thank you for doing that. You don't like outfit? I'm happy, I'm happy to have a picture. I just wasn't prepared. I might have had a different outfit. Absolutely. I'm happy to take picture if there's a already a PR photo ready to go. We'll take One. There A go. Maybe we should do the formal one at least. I think it's from the swearing in. If you can't have it, you're gonna have to get cleaned up. We'll come back. I'll, Yeah, fine. Dan's gotta shave it. Well, let's go take a photo. Let's just in case. No, that's alright. That's all Right. We do have one. We'll get it. Okay. Did we vote it? No, not yet. No. Okay. Thank you. Seconded it. Seconded. Okay. All those in favor? Okay.
+
+**[31:44](https://vimeo.com/1074131178#t=1904s)** Thank you for being here. Thank You. Thank you for waiting. It's great. It's such a great event. Thank you. Sorry I didn't, I didn't put the do together either, so. Oh, No, no, it's okay. Thank you. Um, okay, so that brings us to our consent agenda items. These are contracts and, um, I will, I think we're the, I in talking to our town administrator, we're gonna hold on the fireworks. That's just not ready yet for primetime. And, um, uh, is there any, are the, of the other two contracts, did you wanna speak to them? I just point out which information book about the MAPC contract, which will initiate our town comprehensive plan project. Brenda Callahan is, yeah. Back here.
+
+**[32:30](https://vimeo.com/1074131178#t=1950s)** I've mentioned how we've received the $130,000 grant. Yeah, we're matching it with 13,000. This is the rubber meeting the road to get the work done. Great. I did have a question about the, um, 78,000 for the classification study, the employee classification study. Yep. What is the funding source for that? Did we budget for that? The classification study? We budget That was in the budget, right? For Last year, right? I Believe so. For this year. I think we included it, right? We were planning on doing, we knew right? I knew we, yeah, we knew we were programming for this year, so, Okay. I just wanted to, I I was 95% sure we did that. Okay. So can I have a motion to approve the following consent agenda items, contracts with the town, um, unless any put on hold and authorize the chair to sign on behalf of the board award a contract 2025 dash 0 1 2 MGT
+
+**[33:18](https://vimeo.com/1074131178#t=1998s)** Impact Solutions, LLC of Tampa, Florida for the Employee Classification Study Project in the amount of $78,780 and award a contract to Metropolitan Area Planning Committee for assistance in creating a town comprehensive plan in the amount of $143,000. So moved. Second. Second. Okay. Seconded by Brett. Um, uh, all those in favor? Great. Okay. Moving right along. We have a one day liquor license request from the Marblehead Arts Association for Coastline Marine Services. And, um, you know, we need a motion to approve the request. It's a one day liquor license from the following Coastline Marine Services of nine Sewell Street, May 3rd, 2025, 12:00 PM to 4:00 PM Marblehead Arts Association,
+
+**[34:06](https://vimeo.com/1074131178#t=2046s)** eight Hooper Street has two requests. So are they sponsoring it? Sorry, I'll fi lemme finish reading up. Marblehead Arts Association eight Hooper Street, two requests May 8th, 2025. Two to 5:00 PM May 17th, 2025. Five to 9:00 PM subject to our usual conditions. Delivery of and receipt by the licensing authority of the required fee of $50. Delivery of and receipt by licensing authority of proof that the alcohol will be purchased from an authorized source. Proof the applicant can receive proper delivery, provide proper storage and disposal in accordance with the law. Liquor liability insurance for all held events held on town properties, alcohol is not allowed to be left unattended to or stored on premises. Can I have a motion a second and then I'll have a discussion.
+
+**[34:53](https://vimeo.com/1074131178#t=2093s)** So move Moved by, uh, Mr. Brader. Second. Second. Second by Ms. Singer. Um, I'm confused. So who's hosting it? These Are two separate events. They're Two separate events. Okay. We Need two different thoughts. So why are they Okay, I think we'll just do One is I guess we can do it together, right? I mean, Well, it's, It's just not usually presented to Me the same Hold on. One for Coastline and one is for Marwood. Two separate. Okay. We just usually vote them separately, but it's fine to vote together. There's no reason why not. We can't. Okay. Sorry. Thank you. Sorry for the confusion. Yeah, I mean you can, yeah. This Is a roll call Vote. Yeah, roll call vote. But you can, We can bundle it up. It's fine. By the way, the conditions are the same. Doesn't happen. Yeah, it's great. I I don't have Kyle here to bail me out, so
+
+**[35:40](https://vimeo.com/1074131178#t=2140s)** It's great. I'm fine with it. All Right. So we'll call, uh, Mr. Fox. In favor? Mr. Murray? In favor, Ms. Singer? In favor, Mr. Grader? In favor, Ms. Nunan In favor.
+
+**[35:52](https://vimeo.com/1074131178#t=2152s)** Okay. So, um, now we have some contracts here and I know we have our DPW director here for the rail trail, um, project. Um, um, Amy would, did you wanna speak to the change order request for the rail trail?
+
+**[36:18](https://vimeo.com/1074131178#t=2178s)** Um, So we have two construction projects that are gonna happen on the rail trail. One is the prototype or showcase I've been told has a new name between um, Smith and Pleasant Street. Um, that one has some funding that the work has to be done by June 30th. So that contract has a June 30th completion date. Okay. We also put out an early construction, uh, project, which is from Rockaway to Clifton. That section. Um, both those sections were ones that didn't require a lot of permitting 'cause they don't have any wetlands and they were all, they were pretty simple, great areas for us to do. Um, that one has one piece of curb that runs all the way down, just about all the way down it.
+
+**[37:06](https://vimeo.com/1074131178#t=2226s)** That is the existing, the last piece of existing curb, I believe it's the last piece for the rails, the rail, the old railroad. Um, it's where the Clifton station was and how you came out and the curb was where you stepped off to get onto the, I believe so we've gone back and forth to try to figure out the contract calls for it to be removed and not replaced. Um, so I'll be working with the contractor hopefully to just reset it at the correct elevation for the new rail trail. So there'll be a line down the center of the rail trail that will be where the curb is. Um, I still have to meet with the historic people to make sure they're So what Group is that? I guess in my question, is it our historical commission? Like who is Holding a lot of our, the rail, the railroad people who really are into it? Okay. So there's a railroad historical
+
+**[37:53](https://vimeo.com/1074131178#t=2273s)** Commission interested residents who, who, who want from her original components of the Okay. And right now I've only really been speaking with Pat Franklin who has a piece of the Marblehead historical section. So Okay. We're still trying to get all that ironed out. So to get all that ironed out, the contractor who got that, um, both of those projects is Rafael Construction. Mm-hmm. They both had a deadline of June 30th, 2025. Um, I have offered him relief on the swamp, got one so that we can get the answer for the, uh, railroad and then he can concentrate on the prototype and make sure that he meets that deadline and we don't lose that funding. Yeah. Do you really think it's gonna take that, that this is gonna be a delay of June 30th to October 30th?
+
+**[38:40](https://vimeo.com/1074131178#t=2320s)** Are we just covering our bases? No, I just covered our bases. We need to come back. Right. Okay. I'm like, I'm hoping this isn't setting us Back. No, but he also, he won quite a few contracts this year, so he just finished 2 97. Ocean has like another week. Uh, the outfall there. He's the Elm Street playground. Yep. He's, and both of these projects, so I've see I've, That name sounded wrong to Give him a little bit of extra time there. I, I don't, I don't actually know where the Elm Street playground stands, but, okay. Thank you. Sounds Like a good solution though, right? Yes. So, and it, I don't see any cost increases anywhere. Okay. The other thing is once we do the section, um, from Pleasant to Smith, you know, we'll see how much we interrupt that passing of people up and down the rail trail too. So that might slow us down on the next start.
+
+**[39:26](https://vimeo.com/1074131178#t=2366s)** Yep. Okay. And since you're here, the, the following two change orders just relate to Article 11 from 2022, right? Yeah, so, uh, it's funded Article 11 and Chapter 90. So they're, they're fully funded. Okay. It's just a three year contract that was put out, uh, with option years and we have to vote each option year. Option year two was actually, um, I incorrectly voted it last year. We didn't actually put in option year two, so it didn't get released correctly, but the time got changed and that was in change order one. So this is really just a paperwork Yep. Claim not reshuffled. We do this routinely. Yep. Yeah. Okay. Thank you so much. Thank you. Okay, great. Thank you Amy. So I need a motion to approve the following consent agenda items for contracts and authorize, um, the chair to sign on behalf
+
+**[40:11](https://vimeo.com/1074131178#t=2411s)** of the board change order number one to amend contract 2024 dash 0 7 1 Marblehead Rail Trail Swamp Scott Branch Early Construction Project Rehabilitation project between the town and Rafael Construction Corporation of Swamp Scott Mass to extend the time of performance to October 30th, 2025 with no additional cost increase change order number two to approve option year two of the contract pavement management support services between the town and Apex DBA environmental partners of Quincy Math contract performance time to be March 31st, 2024 through March 31st. 2020. That's not right, right. March 21st, 2025.
+
+**[40:50](https://vimeo.com/1074131178#t=2450s)** We are, we increased. Which, which one are you on? Change order number two. Two.
+
+**[40:58](https://vimeo.com/1074131178#t=2458s)** It's already passed. We're extending It. 2026. They're extending it. Is that what we're trying to change it to? Does it say 2022? Yes. 2026. 2026. March 31st, 2026. Is that right? I wanna make sure that's right. 2026. Okay. At a cost not to exceed $100,000 and no sense a change order number three to approve option year three of the contract payment management support services between the town of Apac, DBA and Via Mental partners of Quincy Mass contract performance. Time to be March 31st, 2025 through March 31st, 2026 at a cost not to exceed $100,000 and no cents. So moved. Second. Second. Um, all those in favor? Okay.
+
+**[41:43](https://vimeo.com/1074131178#t=2503s)** And we have, um, a, uh, request from our, uh, tenant at Northshore Medical Center. I'm gonna turn this over to Mr. Keer. So Yeah, so anytime there that the lease, um, needs to make improvements to the building over 25,000. They need our permission. It's part of the, the lease agreement with them. So, um, they're, they're making, um, $54,930 improvements, um, for alterations, installation of equipment, um, air handle. So they're making improvements to the building they exceed. So it just requires, uh, the board's permission for them to do so. Uh, we are happy. Um, it's for the air handlers.
+
+**[42:32](https://vimeo.com/1074131178#t=2552s)** We are happy when they make improvements to that building, so. Great. Perfect. Okay. So that said, can we have a motion to approve the request from Northshore Medical Center to make alterations in accordance with the lease agreement between the Town and Shore Medical Center executed on March 6th, 2023 under section 17 alterations and installation of equipment, the estimate for the replacement of the existing air handle unit and air handler unit totals $54,930. So moved. Move by Mr. Graders. I have a second, second, second from Ms. Singer. All those in favor? Okay. Wonderful. And that concludes our regular agenda and, um, we have just a select board announcements,
+
+**[43:17](https://vimeo.com/1074131178#t=2597s)** so I'll open it to the board if anybody would like to make any announcements this evening. All set, Madam Chair? Um, I would just like to, um, AP Apris the board that the planning board last night did vote, um, unanimously to move forward and recommend adoption of MBTs, our, our compliance plan for the mbt A three A, um, zoning board. And, and I actually, I thought, um, mark Leman, uh, planning board member chaired the meeting and I thought he did an excellent job, uh, last night. And I know that those, um, that board has worked really tirelessly on this now it's been two years. And so I just, I wanted to acknowledge their efforts in that. And I also wanted to update the board that, um, that,
+
+**[44:06](https://vimeo.com/1074131178#t=2646s)** that did, um, that they have recommended that last, uh, last night. So that's my update. Okay. So looks like we just need a motion to adjourn. So moved second. Okay. All those in favor? Great.

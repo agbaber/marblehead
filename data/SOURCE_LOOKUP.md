@@ -101,12 +101,46 @@ Document links below point at the [primary source archive](archive), a GitHub re
 - Series 2015 General Obligation Municipal Purpose Loan Bonds, due 08/01/2035
 - Archived PDF contains the rating-action letter only. The supporting rationale (research update with reserve ratios, debt figures, and downgrade triggers) is referenced as an enclosure but is not included in the publicly distributed letter. Secondary coverage: Marblehead Independent, ["S&amp;P affirms Marblehead's AAA bond rating, shifts outlook to negative"](https://www.marbleheadindependent.com/s-p-affirms-marbleheads-aaa-bond-rating-shifts-outlook-to-negative/). That article paraphrases the rationale as citing a "~$7.7 million" FY27 structural deficit, which predates the $8,471,823 figure presented at the January 28, 2026 State of the Town; use the Town Administrator figure for site-wide deficit references.
 
+## Long-Term Debt Outstanding ($116.5M at 6/30/2024)
+- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 60 (Long-Term Debt note, summary of outstanding obligations)
+- 10-year trend: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 121, "Ratios of Outstanding Debt by Type"
+- Changes in long-term liabilities: [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 59
+- Local copy of ACFR: `data/town_docs/FY24_Town_of_Marblehead_ACFR.pdf`
+- Structured digest used by `town-debt.html`: `data/debt_summary.json`
+
+## GO Bond Maturity Schedule (through FY2044)
+- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 61, "Payments on outstanding bond balances due in future years"
+- Governmental Activities general obligation bonds only: principal $101,065,000 + interest $25,002,755 = $126,067,755 total
+
+## Legal Debt Limit and Margin ($475.2M limit, 12.46% used FY24)
+- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 123, "Computation of Legal Debt Margin, Last Ten Fiscal Years"
+- Limit = 5% of equalized valuation per M.G.L. c. 44 § 10
+
+## Authorized But Unissued Debt ($12.23M at 6/30/2024)
+- [FY24 ACFR](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY24_ACFR.pdf) page 59
+- Breakdown: roads/sidewalks $8.98M, Gerry School $1.62M, water projects $1.02M, Mary Alley roof $480K, Franklin St Fire Station roof $131K
+
+## Debt-Exclusion Ballot History (50 WIN / 1 LOSS, 1988&ndash;2025)
+- MA DOR Division of Local Services debt-exclusion file: `data/dor_debt_exclusion_all.csv`
+- Marblehead filtered: 51 rows. Only LOSS is the June 2002 Tucker's Wharf vote (Culture and Recreation).
+
+## Debt Service as % of Total Spending (peer comparison, FY24)
+- MA DLS Schedule A for 17 peer towns: `data/peer_schedule_a_expenditures.csv`
+- Calculation: `debt_service / total_expenditures` per (town, fiscal_year) row
+- FY24 Marblehead: $11,006,139 / $100,501,118 = 10.95%
+
 ## 2026 Annual Town Meeting Warrant (May 4, 2026)
 - [2026 Annual Town Meeting Warrant](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026_Annual_Town_Meeting_Warrant.pdf), posted February 26, 2026, signed by Town Administrator Thatcher Kezer
 - Article 28: School Department Supplemental Appropriation, contingent on Proposition 2&frac12; ballot question
 - Article 29: Supplemental Appropriation and Expenses of Several Departments, contingent on Proposition 2&frac12; ballot question
 - Both override-contingent appropriations are written as "a sum of money" in the warrant; tier-specific amounts are set by motion on the floor.
 - Article 30 rescinds $1,619,627 of unused borrowing authority from the 2019 Gerry Elementary School authorization.
+
+## 2026 Annual Town Meeting Results (May 4, 2026)
+- Source: moderator's announcements from the floor, May 4 ATM (attended). Town Clerk minutes will be the documented form of the same record once posted.
+- **Article 29 (override authorization):** 1,227 in favor, 159 against, 1,386 total cast (88.5% yes). Vote taken with the Meridia ARS clicker (electronic, secret per voter).
+- **Article 4 (3A multifamily overlay):** 881 in favor, 82 against, 963 total cast (91.5% yes).
+- **Article 1 amendment (article reordering):** 1,023-225 (1,248 total).
 
 ## Revenue and Expense Projections
 - [2026 State of the Town](https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2026_State_of_the_Town.pdf), pages 13-29
@@ -124,7 +158,7 @@ Document links below point at the [primary source archive](archive), a GitHub re
 Extracted into:
 - `data/override_town_line_items.csv` has every town-side item funded at each tier (slide 6)
 - `data/override_school_items.csv` has school-side items by tier and fiscal year (slides 7-9)
-- `data/override_draws_schedule.csv` has the year-by-year draw schedule per tier (slides 10-12)
+- `data/override_draws_schedule.csv` has the year-by-year draw schedule per tier. Values reconciled to the **signed FY27-29 Override Framework MOU** (dated April 7, 2026; `marbleheadma.gov/wp-content/uploads/2026/05/SB-SC-FinCom-FY27-29-Override-Framework-MOU.pdf`), Override Structure section, which supersedes the April 8 presentation draft (slides 10-12). FY27 draws and the $9M/$12M/$15M totals match the presentation; the FY28/FY29 splits differ by up to ~$85K per tier.
 - `data/override_tax_impact_asf.csv` has the annual and monthly tax impact on the average single-family home ($1,291,507) per tier per year (April 8 slides 13-15)
 - `data/override_tax_impact_median.csv` has the phase-in schedule on the **median** single-family home ($998,600) per tier per year (April 15 FINAL slide 7)
 - `data/override_tax_impact_by_home_value.csv` has the steady-state (fully-phased) annual tax increase by home value from $500K to $1.5M, plus tier 3 monthly cost (April 15 FINAL slide 9)
@@ -170,6 +204,15 @@ Caveats:
 - FY26 <abbr class="g" title="Group Insurance Commission">GIC</abbr> sheet covers 11 months only (July 2025 through May 2026 invoice dates).
 - <abbr class="g" title="Group Insurance Commission">GIC</abbr> invoice totals are the full premium (employer + employee share). This is not the same number as the Town's "Group Insurance" budget line, which represents the Town's own appropriation. Compare with care.
 
+## FY26 Checkbook and Adopted Budget (Socrata portals, June 2026)
+
+The town runs two Socrata-hosted portals that publish FY26 spending data. The latest refresh was on 2026-06-10; the published CSVs are bundled into this repo so the checkbook tool can render without hitting the live API.
+
+- [Spending portal](https://townofmarblehead-ma-oe.spending.socrata.com/#!/year/All%20Years/explore/1-/segment2) &ndash; vendor-payment detail. `scripts/fetch_checkbook_export.py` pulls the full FY-to-date ledger from `/api/checkbook_data.csv?year=2026` (the same endpoint the portal's UI export button hits; open, no session required as of 2026-06-10) and pipes it through `scripts/build_checkbook_csv.py`, which drops the two medical-claim funds, masks student/employee-identifying descriptions, and regenerates `data/checkbook_redaction_disclosure.json`. The 2026-06-10 pull produced `data/checkbook_FY26_2026-06-09.csv` (15,364 rows, $99,931,420.37 total, covering 2025-07-01 through 2026-06-09; 565 rows / $438,934 dropped, 313 descriptions masked). Columns: Vendor, Fund, Division, Description, Date, Amount. Excludes payroll, inter-fund transfers, and intergovernmental remittances posted through the GL. The raw export carries PII (employee surnames on medical claims, truncated student first names on out-of-district SpEd placements) and must never be committed; the fetch script writes it under `/tmp/` by default.
+- [Budget portal](https://townofmarblehead-ma-ob.budget.socrata.com/) &ndash; revised/actual/original budget by Fund Group, Fund, Department, Category, Division, and Object. The `fund_source_data.json` endpoint (no cookie required, no CORS) gave the 317-fund all-funds rollup ($206,063,591.63) saved as `data/budget_FY26_by_fund.json`. The portal's CSV-export buttons on the Budgeted Annual Funds view gave five drill-downs (by Fund / Department / Category / Division / Object) for the $127,338,097.88 Budgeted Annual envelope; these and the top-level Adopted Budget rollup were merged via `scripts/build_budget_actual.py` into `data/budget_actual_FY26.json`.
+
+The checkbook total ($98.5M) and the budget portal's Actual rollup ($140.4M) intentionally don't match: the checkbook is AP-only, while Actual includes payroll runs, transfers, and intergovernmental remittances. The Electric Light Department ($13.16M of Actual) runs as a self-supporting enterprise with no appropriation, so it appears with $0 Revised Budget. Used by `charts/checkbook.html`.
+
 ## Household Income Distribution (ACS 2020&ndash;2024, table B19001)
 - Source: US Census Bureau, ACS 2020&ndash;2024 5-year estimates, table B19001, Marblehead town, Essex County, MA (FIPS 25-009-38400)
 - API endpoint: `https://api.census.gov/data/2024/acs/acs5?get=NAME,B19001_001E,...,B19001_017E&for=county%20subdivision:38400&in=state:25%20county:009`
@@ -212,6 +255,45 @@ Scraper: `pull_schedule_a.mjs` in the repo root. It uses Playwright to submit th
 DLS's definition of General Fund scope follows the [Uniform Massachusetts Accounting System (UMAS)](https://www.mass.gov/service-details/uniform-municipal-accounting-system-umas). Schedule A totals reflect the government-wide general fund and do not match ACFR governmental-fund totals one-to-one (different fund groupings, different reporting period boundaries). Use these CSVs for cross-town comparison; use ACFRs for single-town historical detail.
 
 Note on the `general_government` category: Schedule A's `general_government` is a state-standardized definition that lets all 351 Massachusetts municipalities be compared on the same line. It does not always match a town's internal budget grouping. For Marblehead in FY27, the local "general government" category in the town budget (~$6.89M) is roughly twice the Schedule A value (~$3.31M FY24) because some functions Marblehead groups under general government locally (notably facilities and shared services) are categorized elsewhere by Schedule A. Used by `charts/general_government_over_time.html`.
+
+## Annual Town Reports, 2006&ndash;2025 (full corpus)
+
+Plain-text extracts of every Annual Town Report published by the Town, covering calendar years 2006 through 2025 (20 reports total). Pulled from [marbleheadma.gov/document/annual-town-reports](https://marbleheadma.gov/document/annual-town-reports/) and extracted with `pdftotext -layout`.
+
+- `data/town_docs/annual_reports/Annual-Report-YYYY.txt` &ndash; one text file per calendar year, ~14k&ndash;30k lines each
+- `data/town_docs/annual_reports/manifest.csv` &ndash; year, source PDF URL, file sizes, page count, extraction method, extraction date
+- `data/town_docs/annual_reports/README.md` &ndash; provenance and citation pattern
+
+PDFs themselves are gitignored; URLs in the manifest let any future session re-fetch a specific year.
+
+What's in each report (shape varies year to year, but typically):
+
+- Department writeups: Selectmen, Police, Fire, <abbr class="g" title="Department of Public Works">DPW</abbr>, Schools, Library, Recreation, Health, <abbr class="g" title="Council on Aging">COA</abbr>, Building, Community Development, etc.
+- Town Meeting warrants and **voted results** (Annual + any Specials), article by article
+- Election warrants and tallies (annual local, state primary, state election, presidential primary)
+- Employee rosters with annual salaries (the report's "Compensation" or "Salaries Paid" appendix)
+- Vital statistics: births, marriages, deaths
+- Boards and committees with member names
+- Town Treasurer's financial summary
+
+Treat as **secondary** for any audited financial figure &ndash; the <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> is the audited primary source. Use the ATR for narrative context, town meeting article history, and historical employee/department rosters.
+
+Caveats:
+- `pdftotext -layout` preserves table columns at the cost of leading whitespace. Most queries are fine; if you need paragraph-flow text, re-extract from the PDF without `-layout`.
+- 2012 and 2022 extracts are 4&ndash;5&times; larger than other years because those PDFs use unusually wide column layouts, not because they contain more content.
+- Citation pattern: *Marblehead Annual Town Report YYYY, [Department Name], page N* (use the PDF page number from the report's table of contents).
+
+## Marblehead Free Cash, FY2004&ndash;FY2024
+
+`data/marblehead_free_cash.csv` joins two series for Marblehead in one file:
+
+- **Certified free cash** (FY2004&ndash;FY2024): the unreserved fund balance certified by the Department of Revenue at the end of each prior fiscal year and made available to appropriate during that fiscal year. Pulled from the [<abbr class="g" title="Department of Revenue">DOR</abbr> <abbr class="g" title="Division of Local Services">DLS</abbr> Gateway Certified Free Cash report](https://dlsgateway.dor.state.ma.us/reports/rdPage.aspx?rdReport=FreeCash2) (community: Marblehead, all years).
+- **Appropriated free cash** (FY2015&ndash;FY2024): the portion of the certified pool actually drawn into the operating budget that year. From `data/general_fund_budgetary_FY15-24.csv`, which traces each year to its <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> original budget schedule.
+- **Cushion**: certified minus appropriated. The unspent portion that rolled forward.
+
+Pre-FY2015 appropriated values are not in this CSV because the matching <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>-derived series only covers FY15 onward. The certified series alone for FY04&ndash;FY14 is still useful for trend context.
+
+Caveats per the underlying CSV's `notes` column: appropriated values for FY15&ndash;FY19 are total budgeted fund balance use (slightly broader than pure operating free cash). FY20 onward is specifically operating (use of free cash to reduce the tax rate) per the post-FY20 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> schedule format. FY22 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> captures pre-amendment original $8,792,102; the <abbr class="g" title="Finance Committee">FinCom</abbr> 2022 report shows an amended total of $8,950,000 after a $142,102 collective bargaining supplemental.
 
 ## Marblehead Independent & Current Articles (referenced across site)
 - ["Marblehead advances $122.8M budget built on cuts, defers override decisions"](https://www.marbleheadindependent.com/marblehead-advances-122-8m-budget-built-on-cuts-defers-override-decisions/) (Marblehead Independent)

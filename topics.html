@@ -1,0 +1,65 @@
+---
+layout: page
+title: Topics
+permalink: /topics/
+body_class: transcripts-page
+description: Topic pages aggregate every mention across meetings, with timestamped quotes and one-click jumps to the source video.
+---
+
+<p class="page-intro">
+  Topic pages aggregate every mention across meetings. Click in to see
+  every time it came up, who said what, and a one-click jump to the
+  source video.
+</p>
+
+{%- comment -%}
+Build a slug -> count map by walking every transcript's topic_segments.
+We can't do dictionary-style assigns in Liquid, so we capture a
+delimited string and re-split per topic.
+{%- endcomment -%}
+{% capture all_tagged %}{% for tx in site.transcripts %}{% for seg in tx.topic_segments %}{{ seg.topic }} {% endfor %}{% endfor %}{% endcapture %}
+{% assign tagged_array = all_tagged | split: " " %}
+
+{% assign seeds = site.data.topic_seeds %}
+
+{% assign active_count = 0 %}
+{% for t in seeds %}
+  {% assign matches = tagged_array | where_exp: "x", "x == t.slug" %}
+  {% if matches.size > 0 %}{% assign active_count = active_count | plus: 1 %}{% endif %}
+{% endfor %}
+
+{% if active_count > 0 %}
+<h2 class="topic-section-h">With mentions</h2>
+<ul class="topic-index">
+{% for t in seeds %}
+  {% assign matches = tagged_array | where_exp: "x", "x == t.slug" %}
+  {% if matches.size > 0 %}
+  <li>
+    <h3>
+      <a href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}">{{ t.title }}</a>
+      <span class="topic-count">{{ matches.size }}</span>
+    </h3>
+    <p>{{ t.description }}</p>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
+{% endif %}
+
+{% assign empty_count = seeds.size | minus: active_count %}
+{% if empty_count > 0 %}
+<h2 class="topic-section-h topic-section-h-empty">Future topics{% if active_count > 0 %} (no mentions yet){% endif %}</h2>
+<ul class="topic-index topic-index-empty">
+{% for t in seeds %}
+  {% assign matches = tagged_array | where_exp: "x", "x == t.slug" %}
+  {% if matches.size == 0 %}
+  <li class="empty">
+    <h3>
+      <a href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}">{{ t.title }}</a>
+    </h3>
+    <p>{{ t.description }}</p>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
+{% endif %}

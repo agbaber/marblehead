@@ -1,0 +1,17 @@
+{
+  "name": "meeting-digest",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Weekly board-meeting digest subscriptions for marbleheaddata.org",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "worker:dev": "wrangler dev worker/src/index.js",
+    "worker:deploy": "wrangler deploy worker/src/index.js"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.0",
+    "@cloudflare/vitest-pool-workers": "^0.12.0",
+    "wrangler": "^4.100.0"
+  }
+}

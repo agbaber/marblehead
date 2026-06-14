@@ -1,0 +1,55 @@
+name = "marblehead-meeting-digest"
+main = "src/index.js"
+compatibility_date = "2026-06-09"
+
+[observability]
+enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "meeting-digest"
+database_id = "43e9c7d3-7137-4204-84b8-214615a9c7d2"
+migrations_dir = "schema"
+
+[vars]
+ALLOWED_ORIGIN = "https://marbleheaddata.org"
+SITE_BASE_URL = "https://marbleheaddata.org"
+GITHUB_REPO = "agbaber/marblehead"
+GITHUB_BRANCH = "main"
+MAIL_FROM = "Marblehead Data <digest@meetings.marbleheaddata.org>"
+MAIL_REPLY_TO = "agbaber@gmail.com"
+TURNSTILE_TEST_BYPASS_TOKEN = "TEST-OK"
+# MAIL_PROVIDER_API_KEY is a Worker secret set via `wrangler secret put` —
+# do NOT declare it as a var here, or `wrangler deploy` will overwrite the
+# secret with the placeholder string and the Worker will 401 on every send.
+
+# Monday 7:00 AM ET == 11:00 UTC (EST) / 12:00 UTC (EDT).
+# We schedule four firings (11:00, 11:30, 12:00, 12:30 UTC). The handler
+# guard accepts any whose ET hour equals 7, so EDT keeps 11:00 + 11:30 and
+# EST keeps 12:00 + 12:30. The :30 fires give us a cheap retry if
+# Cloudflare's best-effort cron misses the :00 slot. Per-subscriber
+# idempotency in scheduled.js skips anyone already sent in the last 5
+# days, so the retry never double-delivers.
+[triggers]
+crons = ["0 11 * * 1", "30 11 * * 1", "0 12 * * 1", "30 12 * * 1"]
+
+[env.staging]
+name = "marblehead-meeting-digest-staging"
+
+[[env.staging.d1_databases]]
+binding = "DB"
+database_name = "meeting-digest-staging"
+database_id = "4fac8b9d-f5e2-437f-8975-b84a05a6b225"
+migrations_dir = "schema"
+
+[env.staging.vars]
+ALLOWED_ORIGIN = "*"
+SITE_BASE_URL = "https://worktree-feat-digest.marbleheaddata-preview.pages.dev"
+GITHUB_REPO = "agbaber/marblehead"
+GITHUB_BRANCH = "main"
+MAIL_FROM = "Marblehead Data (staging) <digest@meetings.marbleheaddata.org>"
+MAIL_REPLY_TO = "agbaber@gmail.com"
+TURNSTILE_TEST_BYPASS_TOKEN = "TEST-OK"
+
+[env.staging.triggers]
+crons = []

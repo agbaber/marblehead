@@ -1,0 +1,31 @@
+---
+layout: page
+title: "Confirming your subscription"
+permalink: /subscribe/confirm/
+body_class: subscribe-confirm-page
+worker_base: "https://marblehead-meeting-digest.agbaber.workers.dev"
+---
+
+<section class="subscribe-hero">
+  <h1>Confirming your subscription…</h1>
+  <p id="confirm-msg">One moment.</p>
+</section>
+
+<script>
+(function () {
+  const params = new URLSearchParams(location.search);
+  const token = params.get('token');
+  const msg = document.getElementById('confirm-msg');
+  const WORKER = "{{ page.worker_base }}";
+  const ph = (event, props) => {
+    if (typeof posthog !== 'undefined') posthog.capture(event, props);
+  };
+  if (!token) {
+    msg.textContent = 'No token in the URL. Did you click the link in the email?';
+    ph('subscribe_confirm_landed', { has_token: false });
+    return;
+  }
+  ph('subscribe_confirm_landed', { has_token: true });
+  location.replace(`${WORKER}/api/subscribe-confirm?token=${encodeURIComponent(token)}`);
+})();
+</script>

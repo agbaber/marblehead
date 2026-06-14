@@ -1,0 +1,259 @@
+---
+layout: home
+title: "Data"
+permalink: /data/
+body_class: data-page
+og_title: "Marblehead Budget Data - data hub"
+og_description: "Every chart, calculator, and source document on marbleheaddata.org, organized by topic."
+og_type: website
+og_url: https://marbleheaddata.org/data/
+---
+<style>
+  /* Featured row at the top of the data hub. */
+  .data-featured {
+    margin: 0 0 32px;
+  }
+  .data-featured h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 12px;
+  }
+  .data-featured-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 700px) {
+    .data-featured-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .data-featured-tile {
+    display: block;
+    padding: 20px 22px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .data-featured-tile:hover {
+    border-color: var(--c-teal);
+    transform: translateY(-1px);
+  }
+  .data-featured-tile .tile-eye {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--c-teal);
+    margin-bottom: 6px;
+  }
+  .data-featured-tile h3 {
+    font-family: 'Libre Franklin', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+  .data-featured-tile p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+</style>
+
+<div class="hero">
+  <h1>Data</h1>
+  <p>Charts, tables, and source documents behind every claim on marbleheaddata.org, organized by topic. Every number cites a primary source &ndash; <a href="#data-sources">see all sources</a>.</p>
+</div>
+
+<section class="data-featured">
+  <h2>Featured</h2>
+  <div class="data-featured-grid">
+    <a class="data-featured-tile" href="/2026-override/">
+      <div class="tile-eye">2026 OVERRIDE</div>
+      <h3>What passed on June 9</h3>
+      <p>All four ballot questions passed; the $15M operating tier governs FY27. The full campaign record, candidates, and result.</p>
+    </a>
+    <a class="data-featured-tile" href="/checkbook/">
+      <div class="tile-eye">SPENDING</div>
+      <h3>Town Checkbook</h3>
+      <p>FY26 spending, budget, and pacing. Drill into every department, vendor, and line item.</p>
+    </a>
+    <a class="data-featured-tile" href="/town-debt.html">
+      <div class="tile-eye">DEBT</div>
+      <h3>Town Debt</h3>
+      <p>How Marblehead's debt was incurred, managed, and compared to peers. $116.5M outstanding, AAA rating.</p>
+    </a>
+    <a class="data-featured-tile" href="/charts/town_explorer.html">
+      <div class="tile-eye">COMPARE</div>
+      <h3>Town Explorer</h3>
+      <p>Compare Marblehead against all 351 MA towns on rate, levy, override history, and dozens of fiscal measures.</p>
+    </a>
+  </div>
+</section>
+
+<p class="section-label">School &amp; staffing</p>
+<div class="question-list">
+  <a class="question" href="/inside-school-staffing.html">
+    <h2>What are all those school positions?</h2>
+    <p>430 school staff broken down by role: which are legally mandated, how Marblehead compares to peer towns by category, and what options exist.</p>
+  </a>
+
+  <a class="question" href="/school-building-maintenance.html">
+    <h2>How are the school buildings being maintained?</h2>
+    <p>The 2021 EBI assessment is the only comprehensive condition baseline; the district has no central record of what's been fixed since. FY27 is the first year a maintenance-tracking system is budgeted.</p>
+  </a>
+
+  <a class="question" href="/charts/enrollment_vs_staffing.html">
+    <h2>Did enrollment drive the budget?</h2>
+    <p>Student enrollment down 21% from its FY14 peak. Three staffing measures tell different stories: one up, two down.</p>
+    <span class="tag tag-charts">Chart</span>
+  </a>
+</div>
+
+<p class="section-label">Budget &amp; spending</p>
+<div class="question-list">
+  <a class="question" href="/checkbook/">
+    <h2>Where is the town actually spending in FY26?</h2>
+    <p>Every vendor payment Marblehead made between July 1, 2025 and May 29, 2026, plus a budget-vs-actual view by Fund, Department, Category, Division, and Object.</p>
+    <span class="tag tag-charts">Interactive</span>
+  </a>
+
+  <a class="question" href="/town-budget.html">
+    <h2>FY27 proposed budget line-by-line (pre-vote proposal)</h2>
+    <p>Every line in the town's FY27 Proposed Budget (No Override), with year-over-year change. The interactive explorer. The adopted budget adds the override funding once the town publishes it.</p>
+  </a>
+
+  <a class="question" href="/where-has-the-money-gone.html">
+    <h2>Where has Marblehead's money gone?</h2>
+    <p>A ten-year walkthrough of how the town has actually spent the tax levy, who has been checking the books, and where the biggest line-item changes landed.</p>
+  </a>
+
+  <a class="question" href="/charts/budget_flow.html">
+    <h2>Where the money goes (Sankey)</h2>
+    <p>Sankey-style flow chart from FY27 revenue sources to expense categories, defaulting to the adopted $15M override view.</p>
+    <span class="tag tag-charts">Interactive</span>
+  </a>
+
+</div>
+
+<p class="section-label">Debt &amp; taxes</p>
+<div class="question-list">
+  <a class="question" href="/town-debt.html">
+    <h2>How has Marblehead managed its debt?</h2>
+    <p>$116.5M outstanding, 50 of 51 voter-approved exclusions since 1988, AAA credit rating. Where the debt came from, how an exclusion works, and the forward payoff schedule through FY2044.</p>
+  </a>
+
+  <a class="question" href="/senior-tax-relief.html">
+    <span class="tag tag-charts">Calculator</span>
+    <h2>What relief can seniors claim?</h2>
+    <p>Circuit Breaker credit by income and home value. Only 418 of an estimated 1,158 eligible seniors claimed the credit in 2022.</p>
+  </a>
+</div>
+
+<p class="section-label">Peer towns</p>
+<div class="question-list">
+  <a class="question" href="/charts/town_explorer.html">
+    <h2>How does Marblehead compare to all 351 MA communities?</h2>
+    <p>Sortable, filterable table of every Massachusetts municipality by population, income, property wealth, and tax burden. Define your own peer group instead of relying on a curated set.</p>
+    <span class="tag tag-charts">Interactive</span>
+  </a>
+
+  <a class="question" href="/charts/override_history.html">
+    <h2>Override vote history</h2>
+    <p>Marblehead's Prop 2&frac12; override votes with the ask, the result, and the margin.</p>
+    <span class="tag tag-charts">Chart</span>
+  </a>
+
+  <a class="question" href="/data/case_studies.html">
+    <h2>What happened in towns that voted no?</h2>
+    <p>What happened in four Massachusetts towns after override votes failed: two came back with larger asks, two absorbed years of cuts without returning.</p>
+  </a>
+</div>
+
+<p class="section-label">Background &amp; history</p>
+<div class="question-list">
+  <a class="question" href="/how-we-got-here.html">
+    <h2>How did we get here?</h2>
+    <p>Seven years of <abbr class="g" title="Finance Committee">FinCom</abbr> warnings, in their own words. From "pleased to report no override needed" in 2016 to "significant budgetary challenges ahead" in 2025.</p>
+  </a>
+
+  <a class="question" href="/2026-override/">
+    <h2>The 2026 override: archive</h2>
+    <p>The FY27 override cycle in one place. The ballot questions, the candidates, both sides of the debate, the result, and what came after.</p>
+  </a>
+
+  <a class="question" href="/town-history.html">
+    <h2>Four hundred years, same argument</h2>
+    <p>Marblehead's long-running pattern of contested town meetings, from the 1600s deed buyback through Prop 2&frac12; debates today. Context for why fiscal arguments take the shape they do here.</p>
+  </a>
+</div>
+
+<p class="section-label">Get involved</p>
+<div class="question-list">
+  <a class="question" href="/what-can-we-do.html">
+    <h2>What can residents do?</h2>
+    <p>Beyond voting yes or no on an override: who decides what, when residents can input, and how to push for better oversight of the town budget.</p>
+  </a>
+
+  <a class="question" href="/verify.html">
+    <h2>Join the verification network</h2>
+    <p>Verified Marblehead residents can cast deduplicated votes on ballot questions and sign correction requests. Two-sided invite handshake via an existing neighbor.</p>
+  </a>
+</div>
+
+<p class="section-label">About</p>
+<div class="question-list">
+  <a class="question" href="/about.html">
+    <h2>Who made this?</h2>
+    <p>Who builds marbleheaddata.org, why, the editorial stance, and how to contribute.</p>
+  </a>
+</div>
+
+<div class="data-section" id="data-sources">
+  <h2>Data &amp; Sources</h2>
+  <div class="data-links">
+    <a class="data-link" href="/data/master-data.html">
+      <div>
+        <div class="data-link-title">Annual Rollup (FY01&ndash;FY27)</div>
+        <div class="data-link-desc">Tax levy, revenue, staffing, benefits, enrollment, year by year</div>
+      </div>
+      <span class="data-link-badge">TABLE</span>
+    </a>
+    <a class="data-link" href="/data/DATA_CATALOG.html">
+      <div>
+        <div class="data-link-title">Data Catalog</div>
+        <div class="data-link-desc">What every field means and where it came from</div>
+      </div>
+      <span class="data-link-badge">MD</span>
+    </a>
+    <a class="data-link" href="/data/SOURCE_LOOKUP.html">
+      <div>
+        <div class="data-link-title">Source Lookup</div>
+        <div class="data-link-desc">Trace any number to its specific document and page</div>
+      </div>
+      <span class="data-link-badge">MD</span>
+    </a>
+    <a class="data-link" href="/data/changelog.html">
+      <div>
+        <div class="data-link-title">Changelog</div>
+        <div class="data-link-desc">How budget and override numbers have shifted over time</div>
+      </div>
+      <span class="data-link-badge">PAGE</span>
+    </a>
+    <a class="data-link" href="/data/case_studies.html">
+      <div>
+        <div class="data-link-title">Case Studies</div>
+        <div class="data-link-desc">What happened after four MA towns voted no</div>
+      </div>
+      <span class="data-link-badge">MD</span>
+    </a>
+  </div>
+</div>

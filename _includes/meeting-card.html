@@ -1,0 +1,35 @@
+{%- comment -%}Renders one summary card. Param: card.{%- endcomment -%}
+{%- assign c = include.card -%}
+{%- comment -%}
+Suppress topic chips that appear on essentially every meeting — they're
+noise on the card index, but the topic pages themselves stay populated.
+{%- endcomment -%}
+{%- assign noisy_topics = "admin-housekeeping,public-comment" | split: "," -%}
+<article class="meeting-card" data-board="{{ c.board }}">
+  <header>
+    <p class="card-board">{{ c.board_display }}</p>
+    <h3><a class="card-link" href="{{ c.url | relative_url }}">{{ c.title }}</a></h3>
+    <p class="card-date"><time datetime="{{ c.date }}">{{ c.date | date: "%B %-d, %Y" }}</time></p>
+  </header>
+  {% if c.summary_card.headline %}
+    <p class="card-headline"><strong>{{ c.summary_card.headline }}</strong></p>
+  {% endif %}
+  {% if c.summary_card.summary %}
+    <p class="card-summary">{{ c.summary_card.summary | truncate: 280 }}</p>
+  {% endif %}
+  {% if c.topic_segments and c.topic_segments.size > 0 %}
+    {% assign seen_topics = "" | split: "" %}
+    {% for seg in c.topic_segments %}
+      {% unless seen_topics contains seg.topic or noisy_topics contains seg.topic %}
+        {% assign seen_topics = seen_topics | push: seg.topic %}
+      {% endunless %}
+    {% endfor %}
+    {% if seen_topics.size > 0 %}
+      <ul class="card-topics">
+        {% for slug in seen_topics %}
+          <li><a href="{{ '/topics/' | append: slug | append: '/' | relative_url }}">{{ slug }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+</article>

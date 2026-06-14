@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-04-24T00:06:11.604Z",
-  "video_count": 61,
+  "video_count": 62,
   "meeting_count": 13,
   "community_count": 48,
   "pdf_count": 0,
@@ -11,6 +11,50 @@
     "Finance Committee": 3
   },
   "videos": [
+    {
+      "id": "ootpoCJlG6k",
+      "title": "Marblehead Annual Town Meeting 5-8-25",
+      "board": "Town Meeting",
+      "date": "2025-05-08",
+      "duration_min": 158,
+      "description": "Final session of the 2025 Annual Town Meeting.",
+      "url": "https://www.youtube.com/watch?v=ootpoCJlG6k",
+      "thumbnail": null,
+      "upload_date": "2025-05-09",
+      "plays": 0,
+      "summary": {
+        "summary": "At the May 8, 2025 Annual Town Meeting, Article 46, which proposed appropriating up to $100,000 from free cash to fund an independent town audit, was indefinitely postponed at the request of its own sponsor, Philip A. Mancuso, Jr. The motion to indefinitely postpone carried 405 to 21 with no debate and no speakers recorded. No funds were appropriated and no independent audit was established.",
+        "topics": [
+          {
+            "title": "Article 46: Appropriate Funds for an Independent Audit (Indefinitely Postponed)",
+            "detail": "The article, sponsored by Philip A. Mancuso, Jr. and others, originally proposed appropriating up to $100,000 from free cash to establish an independent audit of town departments. The auditor would have been selected by the Finance Committee, published findings to voters at the 2026 Annual Town Meeting, and the authorization would have been subject to annual reauthorization. The sponsor moved indefinite postponement; there was no debate and no speakers were recorded before the vote.",
+            "vote": "Motion to indefinitely postpone, moved by the sponsor. Passed 405 to 21."
+          }
+        ],
+        "public_comment_themes": [],
+        "key_numbers": [
+          {
+            "label": "Maximum appropriation proposed in Article 46 (not approved)",
+            "value": "$100,000"
+          },
+          {
+            "label": "Vote in favor of indefinite postponement",
+            "value": "405"
+          },
+          {
+            "label": "Votes opposed to indefinite postponement",
+            "value": "21"
+          }
+        ],
+        "action_items": [
+          "No action items. The article was indefinitely postponed; no funds were appropriated and no independent audit was established.",
+          "Confirm final vote tally against Town Clerk's official minutes."
+        ],
+        "override_relevant": false,
+        "override_details": ""
+      },
+      "transcript_file": "data/town_meeting_2025-05-08_transcript.txt"
+    },
     {
       "id": "1185678252",
       "title": "REV250 Marblehead Revolutionary Near Miss by Judy Anderson",
@@ -57,7 +101,177 @@
       "url": "https://vimeo.com/1185906675",
       "thumbnail": "https://i.vimeocdn.com/video/2149469798-e7d9b3fa9733d9133dcc063157cc1330baa81f35617366feea32946ebc850902-d_640?region=us",
       "upload_date": "2026-04-23 10:23:39",
-      "plays": 8
+      "plays": 8,
+      "summary": {
+        "summary": "The Marblehead Select Board met on April 22, 2026 with Chair Pro Tem Alexa Singer presiding. The board approved a $24,975,000 general obligation bond issue covering seven municipal projects, ratified a three-year collective bargaining agreement with the firefighters union, and reviewed town-owned building inventory and deferred maintenance needs in the context of the upcoming budget override vote. The board also approved several routine items and authorized participation in a national opioid remnant defendants settlement.",
+        "topics": [
+          {
+            "title": "Town Administrator Update",
+            "detail": "Two items reported: (1) Marblehead Rail Trail was selected as one of 10 statewide 'signature trails' for the Commonwealth's 2026 Mass Trails 10 campaign, led by DCR in partnership with MassDOT and Mass Office of Travel and Tourism. The designation is expected to strengthen future grant applications. (2) The town received a Fiscal Year 2026 Firefighter Safety Equipment Grant of $17,230 for purchasing firefighter safety equipment.",
+            "vote": null
+          },
+          {
+            "title": "Upcoming Community Forums on Budget and Override",
+            "detail": "The town administrator announced a public Q&A forum on Monday, April 27, 2026 at 6:00 PM at the Jacoby Community Center (Community Center), running until 7:30 PM when a FinCom warrant hearing begins. Town administrator, Alicia, and a school representative will attend. Additional informal sessions are planned at Dunkin' Donuts: April 29 from 3:00–4:00 PM and April 30 from 9:00–11:00 AM, hosted jointly by Select Board and School Committee members. These events will be posted as Select Board meetings. The town moderator and administrator also gave a well-attended presentation at the Council on Aging covering all warrant articles; budget and override questions were the most frequently raised topics.",
+            "vote": null
+          },
+          {
+            "title": "General Obligation Bond Issue – $24,975,000",
+            "detail": "The board approved the sale of a $24,975,000 general obligation bond (Municipal Purpose Loan of 2026), dated May 14, 2026, to Oppenheimer & Company Incorporated at a price of $26,402,202. The town received 10 competitive bids. A bond premium of approximately $1.5 million covered issuance costs and reduced the amount borrowed from $26.2 million to $24,975,000. True interest cost is 3.752%. Outstanding debt increases from $90.16 million (as of June 30, 2026) to approximately $115,133,575. Total interest cost on the new issue is $15,366,972 through final maturity in 2056. Average annual debt service is approximately $1.86 million/year through FY2041. Seven projects funded: Roads and Sidewalks ($9,098,250), High School Roof and HVAC ($8,441,005), Mary Ellis HVAC and ADA Improvements ($5,637,450), Abbott Public Library Renovations ($941,050), Mary Ellis Building Roof Replacement ($451,550), Franklin Street Fire Station Roof and Gutter Replacement ($123,450), IT Equipment and Software ($281,750). The board passed six separate motions to approve and confirm the sale, term bond redemption schedules, official statements, continuing disclosure undertaking, post-issuance tax compliance procedures, and authorization for officials to execute related documents.",
+            "vote": "Six separate motions, each approved unanimously 4-0 (Zisson, Grader/Graner, Fox, Singer/Sankey all in favor)"
+          },
+          {
+            "title": "FY Budget and Override Discussion – Town Buildings and Capital Needs",
+            "detail": "The board reviewed a presentation of all town-owned buildings (21+), including administrative, public safety, public works, community, historic, and storage structures. Buildings highlighted include Mary Alley Building, Abbot Hall, Police Station, Central Fire Station, Franklin Street Fire Station, DPW facilities, Jacoby Community Center, Hobbs House, Abbott Public Library, Old Powder House, Ilko Building, Old Town House, and Vine Street Garage. Twenty-eight maintenance projects were completed in 2025–2026. Upcoming priority capital needs identified include: fire alarm system at Abbott Hall, elevator and fire escape at the Old Town House, and a new heating system at Central Fire Station. Under Tier 2 override funding, a dedicated maintenance technician position would be created and approximately $200,000–$300,000 (after salary) would be directed toward priority projects, with $450,000 allocated to rail trail work also in Tier 2. Tier 3 funding would allow additional capital projects. The board noted that the buildings maintenance warrant article is not funded in the proposed budget absent the override. Staff committed to releasing more detailed department-by-department override impact information before upcoming forums.",
+            "vote": null
+          },
+          {
+            "title": "Collective Bargaining – Firefighters Union (IAFF Local 2043)",
+            "detail": "The board ratified a new three-year collective bargaining agreement with the International Association of Firefighters, AFL-CIO Local 2043, covering July 1, 2026 through June 30, 2029. COLAs: 3% effective July 1, 2026; 3% effective July 1, 2027; 3.5% effective July 1, 2028, consistent with other town collective bargaining agreements. Additional changes include: modest increases to the good service award (longevity) amounts, expanded education benefit eligibility to include certified trade positions (apprentice, journeyman, and master equivalent to associate's, bachelor's, and master's degrees respectively), and creation of a jointly managed sick bank for firefighters who exhaust paid time off due to extended leave. Salary increases subject to town meeting approval.",
+            "vote": "Approved unanimously 4-0 (Grader, Fox, Zisson, Singer all in favor)"
+          },
+          {
+            "title": "NEMLEC Memorandum of Understanding Renewal",
+            "detail": "The board approved renewal of the Interagency Mutual Aid Assistance program with the Northeastern Massachusetts Law Enforcement Council (NEMLEC), a coalition of regional police departments for joint response to significant events including terrorism, natural disasters, and search and rescue operations. The renewal includes updated language from the prior agreement. Under the MOU, the local police chief retains top command authority while NEMLEC specialty team captains make tactical decisions in consultation with the chief.",
+            "vote": "Approved unanimously 4-0 (Fox, Zisson, Grady, Singer all in favor)"
+          },
+          {
+            "title": "Consent Agenda",
+            "detail": "Approved: Minutes from March 11, 2026 and March 28, 2026. Marblehead Rotary 5K race permit for November 1, 2026 at 11:00 AM, starting and finishing at Crocker Park, subject to police and fire approval, required insurance, and no permanent road markings. Declaration of surplus property: Recreation and Parks Department John Deere Gator, to be disposed of per town surplus equipment policy.",
+            "vote": "Approved unanimously 4-0"
+          },
+          {
+            "title": "National Opioid Settlement – Remnant Defendants",
+            "detail": "The board authorized the town administrator to execute all documents necessary to participate in the national opioid settlement with remaining 'remnant defendants.' The settlement is part of a $94 million nationwide distribution; Marblehead's share will be a nominal one-time payment of undetermined amount. Funds will be deposited into the town's existing opioid settlement fund and restricted to eligible uses including mental health services, addiction services, and addiction education.",
+            "vote": "Approved unanimously 4-0 (Zisson, Grady, Fox, Singh all in favor)"
+          },
+          {
+            "title": "Cultural Council – Resignation",
+            "detail": "The board acknowledged receipt of a resignation letter from Cultural Council member Mark Phillip. The board thanked him for his service and noted that the town website will be used to solicit applications for open positions on the council.",
+            "vote": null
+          },
+          {
+            "title": "Chair Pro Tem Appointment",
+            "detail": "At the start of the meeting, Alexa Singer was appointed Chair Pro Tem due to the absence of the regular chair. Dan Fox participated remotely. All votes required roll call poll votes.",
+            "vote": "Approved 4-0 (Zisson, Grader, Fox, Singer all in favor)"
+          }
+        ],
+        "public_comment_themes": [
+          "No members of the public appeared for public comment at this meeting"
+        ],
+        "key_numbers": [
+          {
+            "label": "General obligation bond issued",
+            "value": "$24,975,000"
+          },
+          {
+            "label": "Bond premium received (reduced borrowing amount)",
+            "value": "~$1,500,000"
+          },
+          {
+            "label": "Original borrowing amount before premium offset",
+            "value": "$26,200,000"
+          },
+          {
+            "label": "True interest cost on bond",
+            "value": "3.752%"
+          },
+          {
+            "label": "Total interest cost through 2056",
+            "value": "$15,366,972"
+          },
+          {
+            "label": "Average annual debt service through FY2041",
+            "value": "~$1,860,000"
+          },
+          {
+            "label": "Town outstanding debt prior to bond (as of June 30, 2026)",
+            "value": "$90,160,000"
+          },
+          {
+            "label": "Town outstanding debt after bond",
+            "value": "~$115,133,575"
+          },
+          {
+            "label": "Roads and sidewalks (bond project)",
+            "value": "$9,098,250"
+          },
+          {
+            "label": "High school roof and HVAC (bond project)",
+            "value": "$8,441,005"
+          },
+          {
+            "label": "Mary Ellis HVAC and ADA improvements (bond project)",
+            "value": "$5,637,450"
+          },
+          {
+            "label": "Abbott Public Library renovations (bond project)",
+            "value": "$941,050"
+          },
+          {
+            "label": "Mary Ellis building roof replacement (bond project)",
+            "value": "$451,550"
+          },
+          {
+            "label": "Franklin Street Fire Station roof and gutters (bond project)",
+            "value": "$123,450"
+          },
+          {
+            "label": "IT equipment and software (bond project)",
+            "value": "$281,750"
+          },
+          {
+            "label": "Firefighter Safety Equipment Grant (FY26)",
+            "value": "$17,230"
+          },
+          {
+            "label": "Nationwide opioid remnant defendants settlement pool",
+            "value": "$94,000,000"
+          },
+          {
+            "label": "Firefighters union COLA Year 1 (FY2027)",
+            "value": "3%"
+          },
+          {
+            "label": "Firefighters union COLA Year 2 (FY2028)",
+            "value": "3%"
+          },
+          {
+            "label": "Firefighters union COLA Year 3 (FY2029)",
+            "value": "3.5%"
+          },
+          {
+            "label": "Tier 2 override allocation for rail trail",
+            "value": "$450,000"
+          },
+          {
+            "label": "Estimated remaining Tier 2 funds after salary for building projects",
+            "value": "$200,000–$300,000"
+          },
+          {
+            "label": "Town-owned buildings requiring maintenance",
+            "value": "21+"
+          },
+          {
+            "label": "Maintenance projects completed in 2025–2026",
+            "value": "28"
+          }
+        ],
+        "action_items": [
+          "Town administrator to publish and advertise April 27 public forum (6:00–7:30 PM, Jacoby Community Center) on budget and town meeting warrant articles",
+          "Post April 29 (3:00–4:00 PM) and April 30 (9:00–11:00 AM) Dunkin' Donuts sessions as official Select Board meetings",
+          "Release updated department-by-department documentation explaining override tier impacts before community forums",
+          "Work with schools to provide override-related information for public forums",
+          "Finalize and distribute warrant article motions language, including override question, as soon as possible",
+          "Post open Cultural Council positions on town website and accept applications",
+          "Town treasurer to execute bond closing documents with Oppenheimer & Company by May 14, 2026",
+          "Town administrator to execute opioid remnant defendants settlement participation documents",
+          "Town treasurer to establish or update post-issuance federal tax compliance and continuing disclosure procedures for new bond"
+        ],
+        "override_relevant": true,
+        "override_details": "The override was a central topic. The board reviewed all town-owned buildings (21+) and 28 completed maintenance projects to illustrate where override funds would be directed. Under Tier 2 override funding, a dedicated municipal buildings maintenance technician would be hired and approximately $200,000–$300,000 in residual funds (after salary) would address highest-priority capital needs including the Abbott Hall fire alarm system, an elevator and fire escape at the Old Town House, and a new heating system at Central Fire Station; $450,000 in Tier 2 is also allocated to rail trail work. Tier 3 would fund additional building projects across the 21+ town-owned structures. The board noted that the buildings maintenance warrant article and a maintenance technician position are not funded in the base budget and depend on override passage. The board also discussed staffing impacts across departments (DPW heavy equipment operator, Council on Aging nutritionist, police SRO, four additional firefighters) and committed to releasing more detailed explanatory materials before the April 27 forum and town meeting. The exact language of the override motion and how waste collection will be parsed within it were noted as still being finalized. Community forums on April 27, 29, and 30 are intended to answer public questions about the override and budget."
+      },
+      "transcript_file": "data/select_board_2026-04-22_transcript.txt"
     },
     {
       "id": "1185004651",
