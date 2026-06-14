@@ -100,3 +100,22 @@ export async function handleClaimRelease(request, env) {
   ).bind(now, payload.sub).run();
   return jsonResponse({ ok: true });
 }
+
+/**
+ * GET /api/me/pre
+ * Used by the verify-me claim form to display the FB name without
+ * exposing the JWT to JS (the cookie is HttpOnly).
+ */
+export async function handleMePre(request, env) {
+  const token = extractJWT(request);
+  if (!token) return jsonResponse({ error: 'unauthenticated' }, 401);
+  const payload = await verifyJWT(token, env.JWT_SECRET);
+  if (!payload || !payload.pre_resident) {
+    return jsonResponse({ error: 'forbidden — not a pre-resident session' }, 403);
+  }
+  return jsonResponse({
+    fb_user_id: payload.fb_user_id,
+    fb_display_name: payload.fb_display_name,
+    fb_profile_url: payload.fb_profile_url,
+  });
+}

@@ -165,3 +165,35 @@ describe('handleClaimRelease', () => {
     expect(res.status).toBe(401);
   });
 });
+
+import { handleMePre } from '../worker/src/profile.js';
+
+describe('handleMePre', () => {
+  it('returns the pre_resident metadata from the JWT', async () => {
+    const jwt = await signJWT({
+      pre_resident: true,
+      fb_user_id: '999',
+      fb_display_name: 'John Smith',
+      fb_profile_url: 'https://facebook.com/john',
+    }, JWT_SECRET);
+    const env = { JWT_SECRET, DB: makeDb() };
+    const req = new Request('https://x/api/me/pre', {
+      headers: { Authorization: `Bearer ${jwt}` },
+    });
+    const res = await handleMePre(req, env);
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    expect(body.fb_display_name).toBe('John Smith');
+    expect(body.fb_user_id).toBe('999');
+  });
+
+  it('returns 403 when the session is already a full resident', async () => {
+    const jwt = await bearer('abc123');
+    const env = { JWT_SECRET, DB: makeDb() };
+    const req = new Request('https://x/api/me/pre', {
+      headers: { Authorization: `Bearer ${jwt}` },
+    });
+    const res = await handleMePre(req, env);
+    expect(res.status).toBe(403);
+  });
+});
