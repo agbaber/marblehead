@@ -1,0 +1,36 @@
+---
+title: "Who runs Marblehead?"
+scripts: [citations]
+og_title: "Who runs Marblehead?"
+og_description: "The two parallel administrations that run Marblehead, the elected boards above them, and the levers residents actually have."
+og_url: https://marbleheaddata.org/org-chart.html
+---
+<h1>Who runs Marblehead?</h1>
+
+<p class="page-lead">Marblehead is run by two parallel administrations, overseen by elected boards, all answerable to the town's registered voters. This page is a snapshot of that structure as of {{ site.data.org_chart.key_stats.snapshot }}.</p>
+
+<div class="key-stats">
+  <div class="key-stat">
+    <div class="key-stat-value">{{ site.data.org_chart.key_stats.town_departments }}</div>
+    <div class="key-stat-label">Town departments</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">{{ site.data.org_chart.key_stats.school_buildings }}</div>
+    <div class="key-stat-label">School buildings</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">{{ site.data.org_chart.key_stats.elected_seats }}</div>
+    <div class="key-stat-label">Elected board seats</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">{% if site.data.org_chart.key_stats.registered_voters %}{{ site.data.org_chart.key_stats.registered_voters }}{% else %}<span title="{{ site.data.org_chart.key_stats.registered_voters_null_reason }}">&ndash;</span>{% endif %}</div>
+    <div class="key-stat-label">Registered voters</div>
+  </div>
+</div>
+
+<nav class="page-toc" aria-label="On this page">
+  <span class="page-toc-label">On this page</span>
+  <a href="#the-chart">The two administrations</a>
+  <a href="#boards-above">The boards above them</a>
+  <a href="#your-role">Your role</a>
+</nav>
