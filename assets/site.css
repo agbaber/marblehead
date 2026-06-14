@@ -4456,11 +4456,27 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 
 .org-card details > ul {
   margin: 6px 0 0;
-  padding-left: 16px;
+  padding: 0;
+  list-style: none;
   font-size: 0.75rem;
   color: var(--c-text-mid);
   text-transform: none;
   letter-spacing: 0;
+}
+
+.org-card details > ul > li {
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 2px;
+  line-height: 1.35;
+}
+
+.org-card details > ul > li::before {
+  content: "\2022"; /* bullet, drawn inside the card padding */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--c-text-sub);
 }
 
 .org-cluster-header {
