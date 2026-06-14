@@ -34,3 +34,105 @@ og_url: https://marbleheaddata.org/org-chart.html
   <a href="#boards-above">The boards above them</a>
   <a href="#your-role">Your role</a>
 </nav>
+
+<h2 id="the-chart">The two administrations</h2>
+
+<p>State law makes the school committee an independent employer, so the town and schools each run their own administrative operation. The boxes below are point-in-time as of {{ site.data.org_chart.key_stats.snapshot }}. Click a department to see the named roles beneath the head. <abbr class="g" title="Full-Time Equivalent">FTE</abbr> figures are mostly FY26 headcount (includes part-time) where granular FTE is not published; hover the count for the basis.</p>
+
+<div class="org-chart">
+
+  <div class="org-column">
+    <div class="org-column-label">Town</div>
+    <div class="org-root">
+      <span class="org-root-title">{{ site.data.org_chart.town.head.title }}</span>
+      <span class="org-card-fte">{{ site.data.org_chart.town.head.fte }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span>
+      <sup class="cite" data-href="{{ site.data.org_chart.town.head.source_url }}" data-source="{{ site.data.org_chart.town.head.source_label }}"></sup>
+      {% if site.data.org_chart.town.head.note %}<p class="org-card-note">{{ site.data.org_chart.town.head.note }}</p>{% endif %}
+    </div>
+    <div class="org-grid">
+      {% for dept in site.data.org_chart.town.departments %}
+      <div class="org-card">
+        <span class="org-card-dept">{{ dept.name }}</span>
+        <span class="org-card-head">{{ dept.head_title }}</span>
+        <span class="org-card-fte">
+          {% if dept.fte %}
+            <span{% if dept.fte_basis %} title="{{ dept.fte_basis }}"{% endif %}>{{ dept.fte }}</span>
+            <abbr class="g" title="Full-Time Equivalent">FTE</abbr>
+          {% else %}
+            <span title="{{ dept.fte_null_reason }}">&ndash;</span>
+          {% endif %}
+        </span>
+        <sup class="cite" data-href="{{ dept.source_url }}" data-source="{{ dept.source_label }}"></sup>
+        {% if dept.staff and dept.staff.size > 0 %}
+        <details>
+          <summary>staff</summary>
+          <ul>
+            {% for role in dept.staff %}<li>{{ role }}</li>{% endfor %}
+          </ul>
+        </details>
+        {% endif %}
+        {% if dept.note %}<p class="org-card-note">{{ dept.note }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="org-column">
+    <div class="org-column-label">Schools</div>
+    <div class="org-root">
+      <span class="org-root-title">{{ site.data.org_chart.schools.head.title }}</span>
+      <span class="org-card-fte">{{ site.data.org_chart.schools.head.fte }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span>
+      <sup class="cite" data-href="{{ site.data.org_chart.schools.head.source_url }}" data-source="{{ site.data.org_chart.schools.head.source_label }}"></sup>
+      {% if site.data.org_chart.schools.head.note %}<p class="org-card-note">{{ site.data.org_chart.schools.head.note }}</p>{% endif %}
+    </div>
+
+    <h3>Central office</h3>
+    <div class="org-grid">
+      {% for dept in site.data.org_chart.schools.central_office %}
+      <div class="org-card">
+        <span class="org-card-dept">{{ dept.name }}</span>
+        <span class="org-card-head">{{ dept.head_title }}</span>
+        <span class="org-card-fte">
+          {% if dept.fte %}
+            <span{% if dept.fte_basis %} title="{{ dept.fte_basis }}"{% endif %}>{{ dept.fte }}</span>
+            <abbr class="g" title="Full-Time Equivalent">FTE</abbr>
+          {% else %}
+            <span title="{{ dept.fte_null_reason }}">&ndash;</span>
+          {% endif %}
+        </span>
+        <sup class="cite" data-href="{{ dept.source_url }}" data-source="{{ dept.source_label }}"></sup>
+        {% if dept.staff and dept.staff.size > 0 %}
+        <details>
+          <summary>staff</summary>
+          <ul>
+            {% for role in dept.staff %}<li>{{ role }}</li>{% endfor %}
+          </ul>
+        </details>
+        {% endif %}
+        {% if dept.note %}<p class="org-card-note">{{ dept.note }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <h3>Buildings</h3>
+    <div class="org-grid">
+      {% for school in site.data.org_chart.schools.buildings %}
+      <div class="org-card">
+        <span class="org-card-dept">{{ school.name }}</span>
+        <span class="org-card-head">{{ school.head_title }}</span>
+        <span class="org-card-fte">
+          {% if school.fte %}
+            <span{% if school.fte_basis %} title="{{ school.fte_basis }}"{% endif %}>{{ school.fte }}</span>
+            <abbr class="g" title="Full-Time Equivalent">FTE</abbr>
+          {% else %}
+            <span title="{{ school.fte_null_reason }}">&ndash;</span>
+          {% endif %}
+        </span>
+        <sup class="cite" data-href="{{ school.source_url }}" data-source="{{ school.source_label }}"></sup>
+        {% if school.note %}<p class="org-card-note">{{ school.note }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
