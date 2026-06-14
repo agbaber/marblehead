@@ -4245,3 +4245,204 @@ body.has-numbered-charts .chart-wrapper,
 body.has-numbered-charts .dollar-table {
   margin-top: 1rem;
 }
+
+/* === Org chart (/org-chart.html) === */
+
+.org-chart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 32px 0;
+}
+
+.org-column {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.org-column-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #6b6b6b;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.org-root {
+  background: #f7f5ee;
+  border: 2px solid #2c3e50;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.org-root::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -24px;
+  width: 2px;
+  height: 24px;
+  background: #2c3e50;
+}
+
+.org-root-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: block;
+}
+
+.org-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  position: relative;
+}
+
+.org-grid::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: #2c3e50;
+}
+
+.org-card {
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 0.875rem;
+}
+
+.org-card-dept {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.org-card-head {
+  color: #4a4a4a;
+  font-size: 0.8125rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.org-card-fte {
+  font-size: 0.75rem;
+  color: #6b6b6b;
+}
+
+.org-card-note {
+  font-size: 0.75rem;
+  color: #6b6b6b;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+.org-card details {
+  margin-top: 8px;
+}
+
+.org-card details > summary {
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: #2c3e50;
+  list-style: none;
+}
+
+.org-card details > summary::before {
+  content: "\25B8  ";
+  display: inline-block;
+}
+
+.org-card details[open] > summary::before {
+  content: "\25BE  ";
+}
+
+.org-card details > ul {
+  margin: 8px 0 0;
+  padding-left: 16px;
+  font-size: 0.8125rem;
+  color: #4a4a4a;
+}
+
+/* Boards section */
+
+.board-section {
+  margin: 48px 0;
+}
+
+.board-emphasized {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.board-card {
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 14px;
+  font-size: 0.875rem;
+}
+
+.board-card-emphasized {
+  background: #f7f5ee;
+  border: 2px solid #2c3e50;
+  padding: 16px;
+}
+
+.board-card-name {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.board-card-meta {
+  font-size: 0.75rem;
+  color: #6b6b6b;
+  margin-bottom: 8px;
+}
+
+.board-card-decides {
+  margin: 0;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .org-chart {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .org-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .org-grid::before {
+    display: none;
+  }
+
+  .org-root::after {
+    display: none;
+  }
+
+  .board-emphasized {
+    grid-template-columns: 1fr;
+  }
+}
