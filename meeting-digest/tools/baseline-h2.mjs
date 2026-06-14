@@ -18,9 +18,11 @@
 import { execSync } from 'node:child_process';
 
 function pullSubscriberCount() {
-  // wrangler d1 execute against the meeting-digest DB. Requires the
-  // user to be logged into wrangler.
-  const cmd = `cd meeting-digest/worker && npx wrangler d1 execute meeting-digest --command "SELECT COUNT(*) as n FROM subscriber WHERE status = 'confirmed'" --json`;
+  // wrangler d1 execute against the production meeting-digest DB.
+  // Requires CLOUDFLARE_API_TOKEN in the environment. --remote is
+  // critical: without it, wrangler queries the local sqlite DB which
+  // has no subscriber table.
+  const cmd = `cd meeting-digest/worker && npx wrangler d1 execute meeting-digest --command "SELECT COUNT(*) as n FROM subscriber WHERE status = 'confirmed'" --remote --json`;
   try {
     const out = execSync(cmd, { encoding: 'utf8' });
     const parsed = JSON.parse(out);
