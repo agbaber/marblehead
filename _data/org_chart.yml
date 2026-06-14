@@ -37,6 +37,12 @@ key_stats:
     figure. Leaving null until the Town Clerk publishes a current count.
 
 town:
+  cluster_order:
+    - "Administration & Finance"
+    - "Public Safety"
+    - "Public Works"
+    - "Land Use & Health"
+    - "Community Services"
   head:
     title: "Town Administrator"
     fte: 1
@@ -50,6 +56,7 @@ town:
       services.
   departments:
     - name: "Finance"
+      cluster: "Administration & Finance"
       head_title: "Finance Director"
       fte: 9
       fte_basis: "FY2026 headcount (includes PT)"
@@ -66,6 +73,7 @@ town:
         has no dedicated IT department, so IT effectively reports through
         Finance.
     - name: "Assessors' Office"
+      cluster: "Administration & Finance"
       head_title: "Assistant Assessor"
       fte: 3
       fte_basis: "FY2026 headcount"
@@ -74,6 +82,7 @@ town:
       source_url: "https://marbleheadma.gov/assessors-office/"
       source_label: "Town of Marblehead, Assessor's Office page"
     - name: "Town Clerk"
+      cluster: "Administration & Finance"
       head_title: "Town Clerk"
       fte: 3
       fte_basis: "FY2026 headcount"
@@ -82,6 +91,7 @@ town:
       source_label: "Town of Marblehead, Town Clerk page"
       note: "Town Clerk is an elected position (3-year term)."
     - name: "Elections and Registration"
+      cluster: "Administration & Finance"
       head_title: "Town Clerk (election operations)"
       fte: 25
       fte_basis: "FY2026 headcount (includes poll workers and seasonal election staff)"
@@ -92,6 +102,7 @@ town:
         The high headcount reflects poll workers paid during election cycles,
         not year-round staff.
     - name: "Human Resources"
+      cluster: "Administration & Finance"
       head_title: "Director of Human Resources"
       fte: 3
       fte_basis: "FY2026 headcount"
@@ -103,6 +114,7 @@ town:
         Department created January 2024 (first HR director in town history;
         previously HR was handled informally out of the Select Board office).
     - name: "Community Development and Planning"
+      cluster: "Land Use & Health"
       head_title: "Director of Community Development & Planning"
       fte: 5
       fte_basis: "FY2026 headcount"
@@ -118,6 +130,7 @@ town:
         Grant Coordinator positions. As of the snapshot date, the
         department page still lists those roles.
     - name: "Public Buildings"
+      cluster: "Public Works"
       head_title: "Superintendent of Public Buildings"
       fte: 6
       fte_basis: "FY2026 headcount"
@@ -127,6 +140,7 @@ town:
         Town Administrator page lists Superintendent of Public Buildings
         among reporting positions; headcount from FY26 employee roster.
     - name: "Police Department"
+      cluster: "Public Safety"
       head_title: "Chief of Police"
       fte: 68
       fte_basis: "FY2026 headcount (sworn + civilian)"
@@ -139,6 +153,7 @@ town:
       source_url: "https://marbleheadma.gov/police/"
       source_label: "Town of Marblehead, Police Department page"
     - name: "Fire Department"
+      cluster: "Public Safety"
       head_title: "Fire Chief"
       fte: 40
       fte_basis: "FY2026 headcount"
@@ -149,6 +164,7 @@ town:
       source_url: "https://marbleheadma.gov/fire/"
       source_label: "Town of Marblehead, Fire Department page"
     - name: "Building Inspection"
+      cluster: "Land Use & Health"
       head_title: "Building Commissioner"
       fte: 10
       fte_basis: "FY2026 headcount"
@@ -160,6 +176,7 @@ town:
       source_url: "https://marbleheadma.gov/building-inspection/"
       source_label: "Town of Marblehead, Building Inspection Department"
     - name: "Department of Public Works"
+      cluster: "Public Works"
       head_title: "Director of Public Works"
       fte: null
       fte_null_reason: >-
@@ -177,6 +194,7 @@ town:
       source_url: "https://marbleheadma.gov/dpw/"
       source_label: "Town of Marblehead, Department of Public Works"
     - name: "Highway Department"
+      cluster: "Public Works"
       head_title: "Highway Superintendent"
       fte: 22
       fte_basis: "FY2026 headcount"
@@ -184,6 +202,7 @@ town:
       source_url: "https://marbleheadma.gov/highway/"
       source_label: "Town of Marblehead, Highway Department"
     - name: "Water Department"
+      cluster: "Public Works"
       head_title: "Water Superintendent"
       fte: 17
       fte_basis: "FY2026 headcount"
@@ -195,6 +214,7 @@ town:
         Water and Sewer share the same elected commission (Board of Water &
         Sewer Commissioners, 5 members, 3-year staggered terms).
     - name: "Sewer Department"
+      cluster: "Public Works"
       head_title: "Sewer Superintendent"
       fte: 10
       fte_basis: "FY2026 headcount"
@@ -202,6 +222,7 @@ town:
       source_url: "https://marbleheadma.gov/sewer/"
       source_label: "Town of Marblehead, Sewer Department"
     - name: "Cemetery Department"
+      cluster: "Public Works"
       head_title: "Cemetery Superintendent"
       fte: 9
       fte_basis: "FY2026 headcount"
@@ -209,6 +230,7 @@ town:
       source_url: "https://marbleheadma.gov/cemetery/"
       source_label: "Town of Marblehead, Cemetery Department"
     - name: "Health Department"
+      cluster: "Land Use & Health"
       head_title: "Director of Public Health"
       fte: 3
       fte_basis: "FY2026 headcount"
@@ -217,6 +239,7 @@ town:
       source_url: "https://marbleheadma.gov/health/"
       source_label: "Town of Marblehead, Health Department"
     - name: "Council on Aging"
+      cluster: "Community Services"
       head_title: "Executive Director, Council on Aging"
       fte: 12
       fte_basis: "FY2026 headcount (includes PT outreach, food services, transportation)"
@@ -230,6 +253,7 @@ town:
       source_url: "https://marbleheadma.gov/coa/"
       source_label: "Town of Marblehead, Council on Aging"
     - name: "Veterans Services"
+      cluster: "Community Services"
       head_title: "Veterans Agent"
       fte: 1
       fte_basis: "FY2026 headcount"
@@ -237,6 +261,7 @@ town:
       source_url: "https://marbleheadma.gov/veterans-services/"
       source_label: "Town of Marblehead, Veterans Services"
     - name: "Abbot Public Library"
+      cluster: "Community Services"
       head_title: "Library Director"
       fte: 27
       fte_basis: "FY2026 headcount (includes PT)"
@@ -247,6 +272,7 @@ town:
         Library is governed by an elected six-member Board of Trustees,
         separate from the Select Board's appointed boards.
     - name: "Recreation & Parks"
+      cluster: "Community Services"
       head_title: "Superintendent, Recreation & Parks"
       fte: 26
       fte_basis: "FY2026 headcount (Park + Park Revolving Fund seasonal staff)"
@@ -258,6 +284,7 @@ town:
         The Superintendent is appointed annually by the elected Recreation
         & Parks Commission (5 members, 1-year terms).
     - name: "Harbormaster"
+      cluster: "Public Safety"
       head_title: "Harbormaster"
       fte: 17
       fte_basis: "FY2026 headcount (includes seasonal)"
@@ -270,6 +297,7 @@ town:
         Reports jointly to the Town Administrator and the appointed Harbors
         & Waters Board.
     - name: "Marblehead Municipal Light Department"
+      cluster: "Public Works"
       head_title: "General Manager, Marblehead Municipal Light Department"
       fte: null
       fte_null_reason: >-
@@ -284,6 +312,7 @@ town:
       source_url: "https://marbleheadelectric.com/"
       source_label: "Marblehead Municipal Light Department (operates marbleheadelectric.com)"
     - name: "Select Board Office"
+      cluster: "Administration & Finance"
       head_title: "Executive Assistant to the Select Board"
       fte: 6
       fte_basis: "FY2026 headcount (SELECTMEN line)"
