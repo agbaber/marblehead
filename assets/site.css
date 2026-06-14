@@ -4301,8 +4301,8 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 }
 
 .org-column-header {
-  background: #2c3e50;
-  color: #fff;
+  background: var(--c-navy);
+  color: var(--c-fog);
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -4317,8 +4317,8 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 }
 
 .org-root {
-  background: #f7f5ee;
-  border: 2px solid #2c3e50;
+  background: var(--c-divider);
+  border: 2px solid var(--c-navy);
   border-top: none;
   border-radius: 0 0 6px 6px;
   padding: 18px;
@@ -4334,7 +4334,7 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   bottom: -32px;
   width: 2px;
   height: 32px;
-  background: #2c3e50;
+  background: var(--c-navy);
   transform: translateX(-1px);
 }
 
@@ -4347,14 +4347,14 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 
 .org-root .org-card-fte {
   display: block;
-  color: #4a4a4a;
+  color: var(--c-text-mid);
 }
 
 .org-cluster {
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--c-border);
   border-radius: 6px;
   padding: 12px;
-  background: #fafaf7;
+  background: var(--c-divider);
   margin-bottom: 16px;
   position: relative;
 }
@@ -4366,7 +4366,7 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   top: -16px;
   width: 2px;
   height: 16px;
-  background: #2c3e50;
+  background: var(--c-navy);
   transform: translateX(-1px);
 }
 
@@ -4378,7 +4378,7 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: #2c3e50;
+  color: var(--c-navy);
   font-weight: 700;
   margin: 0 0 12px;
   padding: 0;
@@ -4392,8 +4392,8 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 }
 
 .org-card {
-  background: #fff;
-  border: 1px solid #d0d0d0;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
   border-radius: 4px;
   padding: 10px;
   font-size: 0.8125rem;
@@ -4411,7 +4411,7 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 }
 
 .org-card-head {
-  color: #4a4a4a;
+  color: var(--c-text-mid);
   font-size: 0.75rem;
   display: block;
   margin-bottom: 4px;
@@ -4420,12 +4420,12 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 
 .org-card-fte {
   font-size: 0.6875rem;
-  color: #6b6b6b;
+  color: var(--c-text-sub);
 }
 
 .org-card-note {
   font-size: 0.6875rem;
-  color: #6b6b6b;
+  color: var(--c-text-sub);
   font-style: italic;
   margin: 6px 0 0;
   line-height: 1.4;
@@ -4439,7 +4439,7 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 .org-card details > summary {
   cursor: pointer;
   font-size: 0.6875rem;
-  color: #2c3e50;
+  color: var(--c-navy);
   list-style: none;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -4458,9 +4458,44 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   margin: 6px 0 0;
   padding-left: 16px;
   font-size: 0.75rem;
-  color: #4a4a4a;
+  color: var(--c-text-mid);
   text-transform: none;
   letter-spacing: 0;
+}
+
+.org-cluster-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0 12px;
+  gap: 12px;
+}
+
+.org-cluster-total {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.org-independent {
+  margin: 32px 0;
+  padding: 16px;
+  border: 1px dashed var(--c-border);
+  border-radius: 6px;
+  background: transparent;
+}
+
+.org-independent h3 {
+  margin: 0 0 8px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--c-text-mid);
+}
+
+.org-independent .org-card {
+  max-width: 360px;
 }
 
 /* Boards section */
@@ -4483,16 +4518,16 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 }
 
 .board-card {
-  background: #fff;
-  border: 1px solid #d0d0d0;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
   border-radius: 4px;
   padding: 14px;
   font-size: 0.875rem;
 }
 
 .board-card-emphasized {
-  background: #f7f5ee;
-  border: 2px solid #2c3e50;
+  background: var(--c-divider);
+  border: 2px solid var(--c-navy);
   padding: 16px;
 }
 
@@ -4504,7 +4539,7 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 
 .board-card-meta {
   font-size: 0.75rem;
-  color: #6b6b6b;
+  color: var(--c-text-sub);
   margin-bottom: 8px;
 }
 

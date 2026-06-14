@@ -50,10 +50,15 @@ og_url: https://marbleheaddata.org/org-chart.html
     </div>
 
     {% for cluster_name in site.data.org_chart.town.cluster_order %}
+    {% assign cluster_depts = site.data.org_chart.town.departments | where: "cluster", cluster_name %}
+    {% assign cluster_total = 0 %}
+    {% for d in cluster_depts %}{% if d.fte %}{% assign cluster_total = cluster_total | plus: d.fte %}{% endif %}{% endfor %}
     <div class="org-cluster">
-      <span class="org-cluster-name">{{ cluster_name }}</span>
+      <div class="org-cluster-header">
+        <span class="org-cluster-name">{{ cluster_name }}</span>
+        <span class="org-cluster-total">{{ cluster_total }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span>
+      </div>
       <div class="org-cluster-grid">
-        {% assign cluster_depts = site.data.org_chart.town.departments | where: "cluster", cluster_name %}
         {% for dept in cluster_depts %}
         <div class="org-card">
           <span class="org-card-dept">{{ dept.name }}</span>
@@ -91,8 +96,13 @@ og_url: https://marbleheaddata.org/org-chart.html
       {% if site.data.org_chart.schools.head.note %}<p class="org-card-note">{{ site.data.org_chart.schools.head.note }}</p>{% endif %}
     </div>
 
+    {% assign co_total = 0 %}
+    {% for d in site.data.org_chart.schools.central_office %}{% if d.fte %}{% assign co_total = co_total | plus: d.fte %}{% endif %}{% endfor %}
     <div class="org-cluster">
-      <span class="org-cluster-name">Central Office</span>
+      <div class="org-cluster-header">
+        <span class="org-cluster-name">Central Office</span>
+        <span class="org-cluster-total">{{ co_total }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span>
+      </div>
       <div class="org-cluster-grid">
         {% for dept in site.data.org_chart.schools.central_office %}
         <div class="org-card">
@@ -122,7 +132,10 @@ og_url: https://marbleheaddata.org/org-chart.html
     </div>
 
     <div class="org-cluster">
-      <span class="org-cluster-name">School Buildings</span>
+      <div class="org-cluster-header">
+        <span class="org-cluster-name">School Buildings</span>
+        <span class="org-cluster-total" title="Per-building FTE not published; total district FTE is shown on the Superintendent card.">&ndash;</span>
+      </div>
       <div class="org-cluster-grid">
         {% for school in site.data.org_chart.schools.buildings %}
         <div class="org-card">
@@ -146,6 +159,23 @@ og_url: https://marbleheaddata.org/org-chart.html
   </div>
 
 </div>
+
+{% if site.data.org_chart.town.independent_enterprises %}
+<aside class="org-independent">
+  <h3>Independent enterprise</h3>
+  {% for ent in site.data.org_chart.town.independent_enterprises %}
+  <div class="org-card">
+    <span class="org-card-dept">{{ ent.name }}</span>
+    <span class="org-card-head">{{ ent.head_title }}</span>
+    <span class="org-card-fte">
+      {% if ent.headcount_approx %}<span{% if ent.headcount_approx_basis %} title="{{ ent.headcount_approx_basis }}"{% endif %}>~{{ ent.headcount_approx }} employees</span>{% else %}<span title="{{ ent.fte_null_reason }}">&ndash;</span>{% endif %}
+      <sup class="cite" data-href="{{ ent.source_url }}" data-source="{{ ent.source_label }}"></sup>
+    </span>
+    {% if ent.note %}<p class="org-card-note">{{ ent.note }}</p>{% endif %}
+  </div>
+  {% endfor %}
+</aside>
+{% endif %}
 
 <section class="board-section">
   <h2 id="boards-above">The boards above them</h2>

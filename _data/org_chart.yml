@@ -19,7 +19,7 @@
 
 key_stats:
   snapshot: "2026-06-14"
-  town_departments: 23
+  town_departments: 21
   school_buildings: 5
   elected_seats: 39
   # Sum across elected boards: Select Board 5 + Town Moderator 1 + Town Clerk 1
@@ -81,26 +81,20 @@ town:
         - "Board of Assessors (3 members)"
       source_url: "https://marbleheadma.gov/assessors-office/"
       source_label: "Town of Marblehead, Assessor's Office page"
-    - name: "Town Clerk"
+    - name: "Town Clerk + Elections"
       cluster: "Administration & Finance"
       head_title: "Town Clerk"
       fte: 3
-      fte_basis: "FY2026 headcount"
-      staff: []
+      fte_basis: "FY2026 headcount (year-round)"
+      staff:
+        - "Assistant Town Clerk"
+        - "Election workers (~25, seasonal)"
       source_url: "https://marbleheadma.gov/town-clerk/"
-      source_label: "Town of Marblehead, Town Clerk page"
-      note: "Town Clerk is an elected position (3-year term)."
-    - name: "Elections and Registration"
-      cluster: "Administration & Finance"
-      head_title: "Town Clerk (election operations)"
-      fte: 25
-      fte_basis: "FY2026 headcount (includes poll workers and seasonal election staff)"
-      staff: []
-      source_url: "https://marbleheadma.gov/elections/"
-      source_label: "Town of Marblehead, Elections and Registration Office"
+      source_label: "Town of Marblehead, Town Clerk + Elections pages"
       note: >-
-        The high headcount reflects poll workers paid during election cycles,
-        not year-round staff.
+        Town Clerk is an elected position (3-year term). Elections are
+        administered by the Town Clerk's office; ~25 poll workers are paid
+        during election cycles but are not year-round staff.
     - name: "Human Resources"
       cluster: "Administration & Finance"
       head_title: "Director of Human Resources"
@@ -296,21 +290,6 @@ town:
       note: >-
         Reports jointly to the Town Administrator and the appointed Harbors
         & Waters Board.
-    - name: "Marblehead Municipal Light Department"
-      cluster: "Public Works"
-      head_title: "General Manager, Marblehead Municipal Light Department"
-      fte: null
-      fte_null_reason: >-
-        The Light Department is a separate enterprise governed by an
-        elected Light Commission and is not in the General Fund headcount
-        roster the same way other town departments are. FY26 town payroll
-        rows tagged to Light operations sum to roughly 16-18 people across
-        multiple line items (594 Underground, 593 Overhead, Meter, Admin,
-        Distribution Mgmt), but the official MMLD organizational total is
-        not published on the town site.
-      staff: []
-      source_url: "https://marbleheadelectric.com/"
-      source_label: "Marblehead Municipal Light Department (operates marbleheadelectric.com)"
     - name: "Select Board Office"
       cluster: "Administration & Finance"
       head_title: "Executive Assistant to the Select Board"
@@ -323,6 +302,29 @@ town:
         Administrative office that supports the five elected Select Board
         members. The Town Administrator is also organizationally housed
         here.
+  independent_enterprises:
+    - name: "Marblehead Municipal Light Department"
+      head_title: "General Manager"
+      fte: null
+      fte_basis: null
+      fte_null_reason: >-
+        MMLD is a separate municipal enterprise governed by the elected
+        Light Commission; its workforce is funded by electricity rates,
+        not the General Fund, and does not appear in the town's General
+        Fund headcount roster.
+      headcount_approx: 17
+      headcount_approx_basis: >-
+        FY26 town payroll rows tagged to Light operations sum to roughly
+        16-18 people across multiple line items (594 Underground, 593
+        Overhead, Meter, Admin, Distribution Mgmt). MMLD does not publish
+        an official organizational total on its site.
+      source_url: "https://marbleheadelectric.com/"
+      source_label: "Marblehead Municipal Light Department (operates marbleheadelectric.com)"
+      note: >-
+        A separate municipal enterprise governed by the elected
+        Marblehead Light Commission (3 members, 3-year terms). Funded
+        by electricity rates rather than property taxes. Not subject to
+        Select Board oversight or Town Meeting appropriation.
 
 schools:
   head:
