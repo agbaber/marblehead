@@ -153,14 +153,12 @@ export async function handleFbCallback(req, env) {
   const jwt = await signJWT(payload, env.JWT_SECRET);
   const redirect = (existing && !existing.revoked_at) ? '/profile' : '/verify-me#claim';
 
-  return new Response(null, {
-    status: 302,
-    headers: {
-      Location: redirect,
-      'Set-Cookie': [
-        `${SESSION_COOKIE}=${jwt}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=86400`,
-        `${STATE_COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`,
-      ].join(', '),
-    },
-  });
+  // Set-Cookie can't be comma-joined into one header; use Headers.append
+  // so each cookie ships as its own Set-Cookie line.
+  const headers = new Headers({ Location: redirect });
+  headers.append('Set-Cookie',
+    `${SESSION_COOKIE}=${jwt}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=86400`);
+  headers.append('Set-Cookie',
+    `${STATE_COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`);
+  return new Response(null, { status: 302, headers });
 }
