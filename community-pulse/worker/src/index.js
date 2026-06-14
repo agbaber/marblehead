@@ -10,6 +10,7 @@ import { handleVerify } from './verify.js';
 import { serveVerifyPage, serveBranchesPage } from './pages.js';
 import { STREETS } from './streets.js';
 import { handleFbStart, handleFbCallback } from './fb.js';
+import { handleClaimAddress } from './claim.js';
 
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 const RATE_LIMIT_MAX = 5; // per section per window per ip
@@ -55,6 +56,10 @@ export async function handleRequest(request, env) {
   }
   if (url.pathname === '/api/auth/fb/callback' && request.method === 'GET') {
     return handleFbCallback(request, env);
+  }
+
+  if (url.pathname === '/api/claim/address' && request.method === 'POST') {
+    return handleClaimAddress(request, env);
   }
 
   // Street list for address typeahead.
