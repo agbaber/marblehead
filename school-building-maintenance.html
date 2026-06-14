@@ -23,11 +23,25 @@ og_url: https://marbleheaddata.org/school-building-maintenance.html
   .sbm-bar-chart .sbm-bar-row--glover  { color: var(--c-brass); }
   .sbm-italic { font-style: italic; }
 
-  /* Operating-school location map (Mapbox Static Images). */
+  /* Operating-school location map (Mapbox Static Images).
+     Two <img> tags (light + dark) are CSS-swapped based on color scheme:
+     - default: light visible
+     - @media prefers-color-scheme dark: dark visible
+     - html[data-theme=...] (manual toggle) wins over system */
   .sbm-school-map-wrap { margin: 16px 0 22px; }
-  .sbm-school-map { display: block; max-width: 100%; height: auto;
-                    border-radius: 6px; border: 1px solid var(--border);
-                    margin: 0 auto; }
+  .sbm-school-map { max-width: 100%; height: auto; margin: 0 auto;
+                    border-radius: 8px; border: 1px solid var(--border);
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .sbm-school-map--light { display: block; }
+  .sbm-school-map--dark  { display: none; }
+  @media (prefers-color-scheme: dark) {
+    .sbm-school-map--light { display: none; }
+    .sbm-school-map--dark  { display: block; }
+  }
+  html[data-theme="light"] .sbm-school-map--light { display: block; }
+  html[data-theme="light"] .sbm-school-map--dark  { display: none; }
+  html[data-theme="dark"]  .sbm-school-map--light { display: none; }
+  html[data-theme="dark"]  .sbm-school-map--dark  { display: block; }
   .sbm-school-map-legend { font-size: 0.8125rem; text-align: center;
                            margin: 8px 0 0; color: var(--text-muted); }
 
@@ -83,9 +97,14 @@ og_url: https://marbleheaddata.org/school-building-maintenance.html
 <h2 id="schools">The 5 operating schools</h2>
 
 <div class="sbm-school-map-wrap">
-  <img class="sbm-school-map"
+  <img class="sbm-school-map sbm-school-map--light"
        src="https://api.mapbox.com/styles/v1/mapbox/light-v11/static/pin-s-1+1B3A57(-70.86837,42.49185),pin-s-2+1B3A57(-70.86223,42.49806),pin-s-3+1B3A57(-70.8666,42.50317),pin-s-4+1B3A57(-70.879751,42.490166),pin-s-5+1B3A57(-70.87134,42.496745)/auto/720x360@2x?access_token={{ site.mapbox_token }}&amp;padding=40"
        alt="Map of Marblehead with the 5 operating schools pinned: 1 Marblehead High School (2 Humphrey St), 2 Veterans Middle (217 Pleasant St), 3 Village Elementary (93 Village St), 4 Glover Elementary (9 Maple St), 5 Brown Elementary (40 Baldwin Rd)"
+       width="720" height="360" loading="lazy" />
+  <img class="sbm-school-map sbm-school-map--dark"
+       src="https://api.mapbox.com/styles/v1/mapbox/dark-v11/static/pin-s-1+B8860B(-70.86837,42.49185),pin-s-2+B8860B(-70.86223,42.49806),pin-s-3+B8860B(-70.8666,42.50317),pin-s-4+B8860B(-70.879751,42.490166),pin-s-5+B8860B(-70.87134,42.496745)/auto/720x360@2x?access_token={{ site.mapbox_token }}&amp;padding=40"
+       alt=""
+       aria-hidden="true"
        width="720" height="360" loading="lazy" />
   <p class="sbm-school-map-legend">1 High School &middot; 2 Veterans Middle &middot; 3 Village &middot; 4 Glover &middot; 5 Brown</p>
 </div>
