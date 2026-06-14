@@ -1,0 +1,12 @@
+import { chromium, devices } from 'playwright';
+const browser = await chromium.launch();
+const ctx = await browser.newContext({ ...devices['iPhone 13'] });
+const page = await ctx.newPage();
+const url = process.argv[2];
+const out = process.argv[3];
+await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+await page.evaluate(() => document.fonts.ready);
+const h = Math.min(parseInt(process.argv[4] || '2000', 10), 16000);
+await page.setViewportSize({ width: 390, height: h });
+await page.screenshot({ path: out });
+await browser.close();
