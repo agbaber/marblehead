@@ -10,6 +10,7 @@ migrations_dir = "schema"
 
 [vars]
 ALLOWED_ORIGIN = "https://marbleheaddata.org"
+FB_APP_ID = "TODO_SET_IN_DASHBOARD"
 
 [dev]
 port = 8787
@@ -29,3 +30,4 @@ migrations_dir = "schema"
 [env.staging.vars]
 ALLOWED_ORIGIN = "*"
 JWT_SECRET = "staging-secret-not-for-production"
+FB_APP_ID = "TODO_SET_IN_DASHBOARD"

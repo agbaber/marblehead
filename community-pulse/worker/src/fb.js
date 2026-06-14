@@ -57,3 +57,110 @@ export async function fetchMe(accessToken) {
     picture_url: data.picture?.data?.url || null,
   };
 }
+
+import { signJWT } from './jwt.js';
+
+const STATE_COOKIE = 'fb_oauth_state';
+const SESSION_COOKIE = 'verify_jwt';
+
+function randomState() {
+  const bytes = crypto.getRandomValues(new Uint8Array(32));
+  return Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function readCookie(req, name) {
+  const header = req.headers.get('Cookie') || '';
+  const m = header.match(new RegExp(`(?:^|;\\s*)${name}=([^;]+)`));
+  return m ? decodeURIComponent(m[1]) : null;
+}
+
+function originOf(req) {
+  const url = new URL(req.url);
+  return `${url.protocol}//${url.host}`;
+}
+
+/**
+ * GET /api/auth/fb/start
+ */
+export async function handleFbStart(req, env) {
+  const state = randomState();
+  const redirectUri = `${originOf(req)}/api/auth/fb/callback`;
+  const url = buildAuthorizeUrl({
+    appId: env.FB_APP_ID, redirectUri, state,
+  });
+  return new Response(null, {
+    status: 302,
+    headers: {
+      Location: url,
+      'Set-Cookie': `${STATE_COOKIE}=${state}; ` +
+                    `Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=600`,
+    },
+  });
+}
+
+/**
+ * GET /api/auth/fb/callback?code=...&state=...
+ */
+export async function handleFbCallback(req, env) {
+  const url = new URL(req.url);
+  const code = url.searchParams.get('code');
+  const state = url.searchParams.get('state');
+  const cookieState = readCookie(req, STATE_COOKIE);
+
+  if (!code || !state || !cookieState || cookieState !== state) {
+    return new Response('Invalid OAuth state', { status: 400 });
+  }
+
+  const redirectUri = `${originOf(req)}/api/auth/fb/callback`;
+  const accessToken = await exchangeCode({
+    appId: env.FB_APP_ID,
+    appSecret: env.FB_APP_SECRET,
+    redirectUri,
+    code,
+  });
+  if (!accessToken) {
+    return new Response('OAuth exchange failed', { status: 502 });
+  }
+
+  const me = await fetchMe(accessToken);
+  if (!me) {
+    return new Response('OAuth profile fetch failed', { status: 502 });
+  }
+
+  // Look up an existing resident keyed by fb_user_id (covers return logins).
+  // If none, the session is "pre_resident" — pending a claim.
+  const existing = await env.DB.prepare(
+    'SELECT identity_hash, branch_root, revoked_at FROM residents WHERE fb_user_id = ?'
+  ).bind(me.fb_user_id).first();
+
+  let payload;
+  if (existing && !existing.revoked_at) {
+    payload = {
+      sub: existing.identity_hash,
+      branch: existing.branch_root,
+      auth_source: 'self_serve',
+    };
+  } else {
+    payload = {
+      pre_resident: true,
+      fb_user_id: me.fb_user_id,
+      fb_display_name: me.display_name,
+      fb_profile_url: me.profile_url,
+      auth_source: 'self_serve',
+    };
+  }
+
+  const jwt = await signJWT(payload, env.JWT_SECRET);
+  const redirect = (existing && !existing.revoked_at) ? '/profile' : '/verify-me#claim';
+
+  return new Response(null, {
+    status: 302,
+    headers: {
+      Location: redirect,
+      'Set-Cookie': [
+        `${SESSION_COOKIE}=${jwt}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=86400`,
+        `${STATE_COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`,
+      ].join(', '),
+    },
+  });
+}

@@ -68,3 +68,59 @@ describe('exchangeCode + fetchMe', () => {
     });
   });
 });
+
+import { handleFbStart, handleFbCallback } from '../worker/src/fb.js';
+
+function makeMockDb() {
+  return {
+    prepare(sql) {
+      return {
+        bind: (...args) => ({
+          async first() { return null; },
+          async run() { return {}; },
+        }),
+      };
+    },
+  };
+}
+function mockEnv(over = {}) {
+  return {
+    FB_APP_ID: 'APP123',
+    FB_APP_SECRET: 'SECRET',
+    JWT_SECRET: 'jwt-secret',
+    DB: makeMockDb(),
+    ...over,
+  };
+}
+
+describe('handleFbStart', () => {
+  it('returns 302 with state cookie and FB authorize URL', async () => {
+    const req = new Request('https://x.example/api/auth/fb/start');
+    const res = await handleFbStart(req, mockEnv());
+    expect(res.status).toBe(302);
+    const loc = res.headers.get('Location');
+    expect(loc.startsWith('https://www.facebook.com/')).toBe(true);
+    const cookie = res.headers.get('Set-Cookie');
+    expect(cookie).toMatch(/fb_oauth_state=/);
+    expect(cookie).toMatch(/HttpOnly/);
+    expect(cookie).toMatch(/Secure/);
+  });
+});
+
+describe('handleFbCallback', () => {
+  beforeEach(() => { vi.restoreAllMocks(); });
+
+  it('rejects callback with missing state cookie', async () => {
+    globalThis.fetch = vi.fn();
+    const req = new Request('https://x.example/api/auth/fb/callback?code=C&state=S');
+    const res = await handleFbCallback(req, mockEnv());
+    expect(res.status).toBe(400);
+  });
+
+  it('rejects callback with mismatched state', async () => {
+    const req = new Request('https://x.example/api/auth/fb/callback?code=C&state=OTHER',
+      { headers: { Cookie: 'fb_oauth_state=ORIGINAL' } });
+    const res = await handleFbCallback(req, mockEnv());
+    expect(res.status).toBe(400);
+  });
+});
