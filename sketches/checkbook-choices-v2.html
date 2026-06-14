@@ -90,12 +90,12 @@
   .h1 { font-size: 30px; font-weight: 700; color: var(--c-navy); margin: 0 0 6px; letter-spacing: -0.4px; }
   .sub { font-size: 15px; color: var(--text-muted); max-width: 640px; margin: 0 auto 16px; }
   .freshness {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 12px; color: var(--text-muted);
+    display: inline-flex; align-items: center; gap: 8px; flex-wrap: nowrap;
+    font-size: 12px; color: var(--text-muted); white-space: nowrap;
     background: var(--surface); border: 1px solid var(--border);
-    padding: 6px 12px; border-radius: 999px;
+    padding: 6px 14px; border-radius: 999px;
   }
-  .freshness .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--c-teal-2); }
+  .freshness .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--c-teal-2); flex: none; }
   .freshness em { font-style: normal; color: var(--c-spark); font-weight: 600; }
 
   .totals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
@@ -221,7 +221,8 @@
   .unaccounted .lede h3 { margin: 0 0 4px; font-size: 16px; color: var(--c-navy); font-weight: 700; }
   .unaccounted .lede p { margin: 0; font-size: 13.5px; color: var(--text-muted); }
   .unaccounted .lede strong { color: var(--text); }
-  .unaccounted-grid { display: grid; gap: 10px; margin: 14px 0 0; }
+  .unaccounted-grid { display: grid; gap: 12px; margin: 14px 0 0; grid-template-columns: repeat(2, 1fr); }
+  .unaccounted-grid .gap.full { grid-column: 1 / -1; }
   .gap {
     border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px;
     background: var(--bg);
@@ -274,7 +275,9 @@
   .moved li { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; border-bottom: 1px dotted var(--divider); }
   .moved li:last-child { border-bottom: none; }
   .moved li .v { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--text); }
-  .moved li .src { color: var(--text-subtle); font-size: 11px; }
+  .moved li .src { color: var(--text-subtle); font-size: 11px; display: block; margin-top: 2px; }
+  .moved li > span:first-child { flex: 1; min-width: 0; }
+  .moved li > span.v { white-space: nowrap; align-self: flex-start; }
 
   .table-disclosure {
     margin: 28px 0 0;
@@ -294,16 +297,52 @@
   .notes p { font-size: 12.5px; color: var(--text-muted); line-height: 1.55; margin: 0 0 10px; }
   .notes code { background: var(--divider); padding: 1px 5px; border-radius: 3px; font-size: 11.5px; }
 
+  /* ===== mobile (<= 720px) ===== */
   @media (max-width: 720px) {
-    .totals { grid-template-columns: 1fr 1fr; }
-    .totals .stat { border-bottom: 1px solid var(--divider); padding: 10px 8px; }
-    .totals .stat:nth-child(2) { border-right: none; }
-    .totals .stat:nth-last-child(-n+2) { border-bottom: none; }
-    .totals .val { font-size: 20px; }
+    .page { padding: 18px 14px 60px; }
     .h1 { font-size: 24px; }
+    .sub { font-size: 14px; padding: 0 4px; }
+    .freshness { font-size: 11.5px; padding: 5px 12px; white-space: normal; gap: 6px; }
+
+    /* Stats: stack 1-per-row with left-aligned label + right-aligned value */
+    .totals { grid-template-columns: 1fr; padding: 6px 6px; }
+    .totals .stat {
+      display: grid; grid-template-columns: 1fr auto; align-items: baseline;
+      gap: 0 14px; text-align: left;
+      border-right: none; border-bottom: 1px solid var(--divider);
+      padding: 12px 14px;
+    }
+    .totals .stat:last-child { border-bottom: none; }
+    .totals .lbl { margin: 0; text-align: left; grid-column: 1; grid-row: 1; }
+    .totals .val { font-size: 22px; grid-column: 2; grid-row: 1 / span 2; text-align: right; }
+    .totals .ctx { margin: 2px 0 0; text-align: left; grid-column: 1; grid-row: 2; }
+
     .stack-bar { height: 22px; }
     .stack-bar .seg { font-size: 10px; }
-    .subbucket .barrow { grid-template-columns: 1fr 60px 64px; }
+    .subbucket .barrow { grid-template-columns: 1fr 56px 64px; gap: 8px; }
+    .subbucket .barrow .lbl { font-size: 11.5px; }
+    .subbucket .barrow .dollars { font-size: 11.5px; }
+
+    /* Choice card: stack title above amount on mobile */
+    .choice { grid-template-columns: 1fr; padding: 14px 16px; }
+    .choice .amt { text-align: left; font-size: 16px; padding-top: 2px; }
+    .choice .amt small { display: inline-block; margin: 0 0 0 8px; font-size: 11px; }
+
+    /* Project status cards: same — stack header */
+    .project { grid-template-columns: 1fr; gap: 6px 0; }
+    .project .pstatus { justify-self: start; }
+
+    /* What we can't fully account for: 1-col on mobile, header stack */
+    .unaccounted { padding: 14px 16px; }
+    .unaccounted-grid { grid-template-columns: 1fr; }
+    .gap { grid-template-columns: 1fr; padding: 12px 14px; }
+    .gap .gamt { text-align: left; font-size: 15px; padding-top: 2px; }
+    .gap .gamt small { display: inline-block; margin: 0 0 0 8px; font-size: 10.5px; }
+  }
+
+  /* ===== tighten desktop density a hair ===== */
+  @media (min-width: 721px) {
+    .choice-list { gap: 16px; }
   }
 </style>
 </head>
@@ -612,7 +651,7 @@
 
     <div class="unaccounted-grid">
 
-      <article class="gap">
+      <article class="gap full">
         <h4 class="gname">Long-tail funds not yet mapped to a vote</h4>
         <div class="gamt">$2.22M<small>2.2% of ledger &middot; 88 funds</small></div>
         <p class="gdesc">Each tail fund is classified into a bucket by regex (METCO and Chapter 90 &rarr; state grants; Larz Anderson and Shattuck &rarr; trusts; etc.) but doesn't have a per-fund vote citation in the provenance JSON yet. Largest unmapped funds: <b>METCO ($276K)</b>, <b>A36 2019 MWRA Loan ($240K)</b>, <b>High School Student Activity ($178K)</b>, <b>Larz Anderson Fund ($154K)</b>, <b>Chapter 90 + Fair Share ($169K combined)</b>.</p>
@@ -626,7 +665,7 @@
         <p class="gfix">Fix: pull the town's bond schedule (in the ACFR notes or from the Town Accountant) and join on payment date + amount.</p>
       </article>
 
-      <article class="gap">
+      <article class="gap full">
         <h4 class="gname">Negative rows that look like prior-year reconciliations</h4>
         <div class="gamt">$-2.56M<small>153 rows total</small></div>
         <p class="gdesc">Six big negatives on Jul 25, 2025 to <b>Commonwealth of MA</b> (-$945K, -$291K, -$212K, -$53K, -$23K, -$17K, all carrying the same invoice ID <code>666-0168-2025-0709MB</code>) sum to <b>-$1.54M</b> &mdash; almost certainly a year-end insurance / GIC credit reconciling FY25 charges into FY26 books. Plus -$382K SESD and -$320K MWRA negatives the same week. The other 145 negative rows are small voids and reissues.</p>
