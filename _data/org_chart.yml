@@ -28,13 +28,11 @@ key_stats:
   # Commission 5 + Library Trustees 6 = 39. Housing Authority adds 5 more
   # (4 elected + 1 governor-appointed) but is a separate authority, not a
   # town board, so it is not counted in this total.
-  registered_voters: null
-  registered_voters_null_reason: >-
-    Town Clerk's Elections page does not publish a current registered-voter
-    figure. Best available derived estimate is ~17,100 (the Council on Aging
-    Information Guide notes 51% of registered voters, 8,720, are age 55+ as
-    of March 2026), but that is a secondary derivation, not a primary
-    figure. Leaving null until the Town Clerk publishes a current count.
+  registered_voters: 17040
+  registered_voters_source_url: "https://www.marbleheadindependent.com/2026-election-polls-open-until-8-p-m-heres-everything-on-marbleheads-ballot/"
+  registered_voters_source_label: >-
+    Marblehead Independent, June 9, 2026 election coverage: 'Marblehead's
+    17,040 registered voters.'
 
 town:
   cluster_order:

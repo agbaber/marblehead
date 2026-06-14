@@ -23,7 +23,7 @@ og_url: https://marbleheaddata.org/org-chart.html
     <div class="key-stat-label">Elected board seats</div>
   </div>
   <div class="key-stat">
-    <div class="key-stat-value">{% if site.data.org_chart.key_stats.registered_voters %}{{ site.data.org_chart.key_stats.registered_voters }}{% else %}<span title="{{ site.data.org_chart.key_stats.registered_voters_null_reason }}">&ndash;</span>{% endif %}</div>
+    <div class="key-stat-value">{% assign rv = site.data.org_chart.key_stats.registered_voters %}{% if rv %}{% assign rv_k = rv | divided_by: 1000 %}{% assign rv_r = rv | modulo: 1000 | prepend: "00" | slice: -3, 3 %}{{ rv_k }},{{ rv_r }}<sup class="cite" data-href="{{ site.data.org_chart.key_stats.registered_voters_source_url }}" data-source="{{ site.data.org_chart.key_stats.registered_voters_source_label }}"></sup>{% else %}<span title="{{ site.data.org_chart.key_stats.registered_voters_null_reason }}">&ndash;</span>{% endif %}</div>
     <div class="key-stat-label">Registered voters</div>
   </div>
 </div>
