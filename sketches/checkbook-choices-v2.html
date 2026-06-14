@@ -212,6 +212,34 @@
   .project .pnote b { color: var(--text); font-weight: 600; }
   .project .pnote .v { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--text); }
 
+  /* "What we can't account for" panel */
+  .unaccounted {
+    margin: 36px 0 0;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 18px 20px;
+  }
+  .unaccounted .lede h3 { margin: 0 0 4px; font-size: 16px; color: var(--c-navy); font-weight: 700; }
+  .unaccounted .lede p { margin: 0; font-size: 13.5px; color: var(--text-muted); }
+  .unaccounted .lede strong { color: var(--text); }
+  .unaccounted-grid { display: grid; gap: 10px; margin: 14px 0 0; }
+  .gap {
+    border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px;
+    background: var(--bg);
+    display: grid; grid-template-columns: 1fr auto; gap: 4px 12px;
+  }
+  .gap .gname { font-size: 13px; font-weight: 700; color: var(--c-navy); margin: 0; }
+  .gap .gamt { font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); text-align: right; }
+  .gap .gamt small { display: block; font-size: 10.5px; color: var(--text-subtle); font-weight: 500; margin-top: 1px; }
+  .gap .gdesc { grid-column: 1 / -1; font-size: 12px; color: var(--text-muted); margin: 4px 0 0; line-height: 1.55; }
+  .gap .gdesc b { color: var(--text); }
+  .gap .gfix { grid-column: 1 / -1; font-size: 11.5px; color: var(--c-teal-2); margin: 6px 0 0; font-weight: 600; }
+  .accountedfor {
+    margin: 12px 0 0; padding: 10px 12px;
+    background: rgba(46,155,148,0.10); border: 1px solid rgba(46,155,148,0.3);
+    border-radius: 6px; font-size: 12.5px; color: var(--text-muted);
+  }
+  .accountedfor b { color: var(--c-teal); }
+
   /* Theme toggle (tiny corner button) */
   .theme-toggle {
     position: fixed; top: 10px; right: 14px;
@@ -574,6 +602,62 @@
     <summary>Every payment (the raw ledger)</summary>
     <p>Same 15,364 rows the live page shows today, with filters by vendor, fund, division, and date. Useful for looking up a specific vendor or check. Hidden by default so it doesn't compete with the framing above.</p>
   </details>
+
+  <!-- What we can't fully account for -->
+  <section class="unaccounted">
+    <div class="lede">
+      <h3>What we can't fully account for</h3>
+      <p>Of the $99.93M paid through Jun 9, <strong>$97.71M (97.8%)</strong> sits in a top-20 fund that maps to a named authorizing vote. The remaining tail is small but worth naming explicitly so the bucket totals aren't read as more precise than they are.</p>
+    </div>
+
+    <div class="unaccounted-grid">
+
+      <article class="gap">
+        <h4 class="gname">Long-tail funds not yet mapped to a vote</h4>
+        <div class="gamt">$2.22M<small>2.2% of ledger &middot; 88 funds</small></div>
+        <p class="gdesc">Each tail fund is classified into a bucket by regex (METCO and Chapter 90 &rarr; state grants; Larz Anderson and Shattuck &rarr; trusts; etc.) but doesn't have a per-fund vote citation in the provenance JSON yet. Largest unmapped funds: <b>METCO ($276K)</b>, <b>A36 2019 MWRA Loan ($240K)</b>, <b>High School Student Activity ($178K)</b>, <b>Larz Anderson Fund ($154K)</b>, <b>Chapter 90 + Fair Share ($169K combined)</b>.</p>
+        <p class="gfix">Fix: extend <code>checkbook_fund_provenance.json</code> to all 108 funds (or at least the top ~50, which would cover ~99.5%).</p>
+      </article>
+
+      <article class="gap">
+        <h4 class="gname">Bond debt service we can't split bond-by-bond</h4>
+        <div class="gamt">$14.24M<small>U.S. Bank, 36 rows</small></div>
+        <p class="gdesc">Annual bond payments cross many series &mdash; Abbot Library 2021, Fort Sewall 2019, Gerry School 2016, Pleasant St 2012, and others. Some traces to ballot-approved debt exclusions; some to in-levy Town Meeting capital articles. The ledger description column carries invoice numbers like "3189884", not bond series.</p>
+        <p class="gfix">Fix: pull the town's bond schedule (in the ACFR notes or from the Town Accountant) and join on payment date + amount.</p>
+      </article>
+
+      <article class="gap">
+        <h4 class="gname">Negative rows that look like prior-year reconciliations</h4>
+        <div class="gamt">$-2.56M<small>153 rows total</small></div>
+        <p class="gdesc">Six big negatives on Jul 25, 2025 to <b>Commonwealth of MA</b> (-$945K, -$291K, -$212K, -$53K, -$23K, -$17K, all carrying the same invoice ID <code>666-0168-2025-0709MB</code>) sum to <b>-$1.54M</b> &mdash; almost certainly a year-end insurance / GIC credit reconciling FY25 charges into FY26 books. Plus -$382K SESD and -$320K MWRA negatives the same week. The other 145 negative rows are small voids and reissues.</p>
+        <p class="gfix">Fix: footnote tied to the Town Accountant's year-end close-out memo. Not a data-quality problem &mdash; it's how municipal accounting handles prior-year credits.</p>
+      </article>
+
+      <article class="gap">
+        <h4 class="gname">&ldquo;ONE TIME PAY&rdquo; placeholder vendor</h4>
+        <div class="gamt">$1.16M<small>676 rows</small></div>
+        <p class="gdesc">Munis' catch-all for one-off payments where the recipient isn't in the vendor master. The single biggest row is <b>$733K to "ONE TIME PAY"</b> with description <em>"Contract 190 Water Main Improv"</em> &mdash; that's the actual water-main contractor, just not yet in the vendor file. The rest is a mix of <b>real-estate tax refunds</b>, tuition reimbursements, and small misc disbursements.</p>
+        <p class="gfix">Fix: at minimum, surface the description column as the de-facto vendor for ONE TIME PAY rows so they're searchable and not just anonymous.</p>
+      </article>
+
+      <article class="gap">
+        <h4 class="gname">Interfund transfers (the town paying itself)</h4>
+        <div class="gamt">$1.37M<small>"Town of Marblehead" as vendor, 863 rows</small></div>
+        <p class="gdesc">When money moves between funds (GF-School &rarr; HS Student Activity, or Town &rarr; Enterprise for shared services), the ledger records both sides as outflows. These rows are <em>not external spend</em>; they're internal economic shuffles. Naively summed in the buckets, they create modest double-counting (roughly 1.4% of the total).</p>
+        <p class="gfix">Fix: tag interfund-transfer rows and exclude from "external spend" totals; show them in a separate "internal movement" line.</p>
+      </article>
+
+      <article class="gap">
+        <h4 class="gname">PII-redacted descriptions</h4>
+        <div class="gamt">313 rows<small>amounts &amp; vendor preserved</small></div>
+        <p class="gdesc">The redaction script masks descriptions on out-of-district SpEd placements (student initials in the original ledger) and any rows in the two medical-claim funds (111F Injury Leave, Workers Compensation). For these rows we know the vendor and the dollars but intentionally don't show <em>what for</em>.</p>
+        <p class="gfix">Won't change &mdash; this is the privacy gate. Disclosed in the existing redaction note.</p>
+      </article>
+
+    </div>
+
+    <p class="accountedfor"><b>Bottom line:</b> the $99.93M total is fully present in the ledger and bucketed; what's incomplete is the per-fund vote citations on the 2.2% long tail, the per-bond split on the $14.24M debt service, and the cosmetic mislabeling of ~$2.5M of interfund transfers and ONE-TIME-PAY catch-all rows. No dollars are missing from the published checkbook; the gaps are about how cleanly each dollar traces back to the vote that authorized it.</p>
+  </section>
 
   <!-- methodology notes -->
   <section class="notes">
