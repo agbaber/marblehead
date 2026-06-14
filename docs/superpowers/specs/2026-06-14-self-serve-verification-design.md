@@ -116,7 +116,7 @@ CREATE INDEX idx_residents_fb_user_id ON residents(fb_user_id);
 
 -- CHECK constraints (added inline if D1 supports; otherwise enforced in Worker)
 --   auth_source  IN ('invite', 'self_serve', 'recovered')
---   claim_source IN ('vouched', 'assessor_match', 'self_serve_vouched')
+--   claim_source IN ('vouched', 'assessor_match')
 
 -- Engagement: one row per (resident, target). State is overwriting, no history.
 CREATE TABLE engagement (
@@ -206,6 +206,9 @@ Existing endpoints (`/api/verify/register`, `/api/verify/passkey/*`, `/api/verif
 ## Match algorithm
 
 ```python
+TRUST_MARKERS = {'TR', 'TRS', 'TRUST', 'TRUSTEE', 'TRUSTEES',
+                 'LLC', 'LP', 'INC', 'CORP', 'EST', 'ESTATE'}
+
 def match(fb_display_name: str, owner_name: str) -> MatchResult:
     fb = tokenize(fb_display_name)        # ['john', 'smith']
     own = tokenize(owner_name)            # ['smith', 'john', 'a', 'smith', 'jane', 'm']
@@ -216,44 +219,52 @@ def match(fb_display_name: str, owner_name: str) -> MatchResult:
     fb_first = fb[0]
     fb_last  = fb[-1]
 
+    # Owner-record convention is "LASTNAME FIRSTNAME MIDDLE" with co-owners
+    # joined by '&' or 'AND' or '/'. Trust/LLC/estate records never
+    # auto-verify; they fall through to vouching where a human can sort it out.
+    if any(tok.upper() in TRUST_MARKERS for tok in own):
+        return MatchResult('name_mismatch')
+
     if fb_last not in own:
         return MatchResult('name_mismatch')
 
-    # Owner-record convention is "LASTNAME FIRSTNAME MIDDLE", possibly joined
-    # with '&' or 'AND' or '/' for co-owners. We look for the user's first
-    # initial in the token immediately following any occurrence of their
-    # last name. Trust/LLC keywords ('TR','TRUST','LLC','TRUSTEE','EST')
-    # in the owner string short-circuit to name_mismatch — those records
-    # never auto-verify.
-    if has_trust_or_entity_marker(own):
-        return MatchResult('name_mismatch')
+    # Find the set of given-name tokens on the deed: the token directly
+    # following each occurrence of the surname token.
+    given_tokens = [own[i + 1] for i, tok in enumerate(own)
+                    if tok == fb_last and i + 1 < len(own)]
 
-    for i, token in enumerate(own):
-        if token == fb_last and i + 1 < len(own):
-            adjacent = own[i + 1]
-            if adjacent.startswith(fb_first[0]):
-                return MatchResult('match')
+    # Two-pass match. First try full first-name; fall back to initial only
+    # when the deed token is itself a single letter (an initial).
+    for gt in given_tokens:
+        if gt == fb_first:
+            return MatchResult('match')                  # full-name match
+        if len(gt) == 1 and gt == fb_first[0]:
+            return MatchResult('match')                  # deed-initial match
+        if len(fb_first) == 1 and gt.startswith(fb_first):
+            return MatchResult('match')                  # user-initial match
 
-    # Same surname, no first-initial match. Collect the other given-name
-    # tokens that follow occurrences of fb_last as alternatives.
-    alternatives = []
-    for i, token in enumerate(own):
-        if token == fb_last and i + 1 < len(own):
-            alternatives.append(own[i + 1].upper())
-    return MatchResult('first_initial_mismatch', alternatives=alternatives)
+    # Surname matches; no given-name match. Surface the alternatives the
+    # user could plausibly claim under via the vouch path.
+    return MatchResult('first_initial_mismatch',
+                       alternatives=[gt.upper() for gt in given_tokens])
 ```
 
 ### Cases
 
 | FB display name | Owner record | Result |
 |---|---|---|
-| `John Smith` | `SMITH JOHN A & SMITH JANE M` | `match` |
-| `Jane Smith` | `SMITH JOHN A & SMITH JANE M` | `match` |
-| `Jane Smith` | `SMITH JOHN A` | `first_initial_mismatch`, alternatives=`['JOHN']` |
-| `John Smith` | `JOHNSON JOHN` | `name_mismatch` (surname tokens differ) |
-| `John Smith` | `SMITH FAMILY TRUST` | `name_mismatch` (trust marker present) |
-| `J. Smith` | `SMITH JOHN A` | `match` |
+| `John Smith` | `SMITH JOHN A & SMITH JANE M` | `match` (JOHN == JOHN) |
+| `Jane Smith` | `SMITH JOHN A & SMITH JANE M` | `match` (JANE == JANE) |
+| `Mike Smith` | `SMITH JOHN A` | `first_initial_mismatch`, alternatives=`['JOHN']` |
+| `Mike Smith` | `SMITH JOHN A & SMITH JANE M` | `first_initial_mismatch`, alternatives=`['JOHN', 'JANE']` |
+| `John Smith` | `JOHNSON JOHN` | `name_mismatch` (surname token mismatch) |
+| `John Smith` | `SMITH FAMILY TRUST` | `name_mismatch` (trust marker) |
+| `J. Smith` | `SMITH JOHN A` | `match` (user initial 'j' starts 'john') |
+| `John Smith` | `SMITH J` | `match` (deed initial matches 'j' of John) |
+| `Jane Smith` | `SMITH J` | `match` (ambiguous initial; deed-initial fallback accepts) |
 | `Andrew Baber` | (address not present) | `no_match` |
+
+The `SMITH J` ambiguity is unavoidable: an initial-only deed can be claimed by any household member sharing that initial. In practice fewer than ~1% of MA assessor records use initial-only first names, and the failure mode (some Smith in the household claims a Smith parcel) is the household equivalent of "anyone in the family can sign for a package" — survivable.
 
 The algorithm intentionally rejects all trust, LLC, and "owner of record" rows. Most such records are owned by named adults who can still take the vouch path; auto-approving anything off a trust opens the door to anyone with the surname claiming a multi-million-dollar trust property.
 
@@ -316,21 +327,25 @@ The address autocomplete on `/verify-me.html` ships with the same normalized for
      │   [Skip — continue to profile]         │
      └────────────────────────────────────────┘
 
-   first_initial_mismatch:
+   first_initial_mismatch (example: signed in as "Mike Smith",
+                            deed reads "SMITH JOHN A & SMITH JANE M"):
      ┌──────────────────────────────────────────────────┐
      │ 12 State St is on record for the SMITH household │
-     │ but the named owner is JOHN. Are you a household │
-     │ member?                                          │
-     │  [Yes — ask Jane Smith (JOHN) to vouch for me]   │
+     │ but the named owners are JOHN and JANE — not     │
+     │ Mike. Are you a member of this household?        │
+     │  [Yes — request a vouch                          │
+     │   (your verifier will see JOHN, JANE SMITH       │
+     │    as the named owners)]                         │
      │  [I typed the wrong address]                     │
      └──────────────────────────────────────────────────┘
      "Yes" pre-fills the vouch flow with the requester's name and address
-     and pins JOHN SMITH as the verifier-reference name. The request lands
-     in the existing verifier dashboard for any opted-in verifier (default
-     Andrew); the verifier sees the assessor signal as 'name_mismatch
-     within household' and confirms via FB DM. NB: the alternatives list
-     surfaces the assessor first-name tokens (JOHN), not full owner strings,
-     to keep PII exposure minimal.
+     and surfaces the deed's given-name tokens (JOHN, JANE) as the
+     verifier-reference. The request lands in the existing verifier
+     dashboard for any opted-in verifier (default Andrew); the verifier
+     sees the assessor signal as `first_initial_mismatch` with the
+     alternatives list and confirms via FB DM. NB: the alternatives
+     surfaces only the assessor first-name tokens, not full owner
+     strings or co-owner records, to keep PII exposure minimal.
 
    name_mismatch:
      ┌─────────────────────────────────────────────────┐
