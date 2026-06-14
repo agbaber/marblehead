@@ -136,3 +136,44 @@ og_url: https://marbleheaddata.org/org-chart.html
   </div>
 
 </div>
+
+<section class="board-section">
+  <h2 id="boards-above">The boards above them</h2>
+
+  <p>Every administrator on the chart above answers to one or more elected or appointed boards. Three of them &ndash; Select Board, School Committee, and Finance Committee &ndash; drive the override debate and the overall budget. The rest set policy in their own domains.</p>
+
+  <div class="board-emphasized">
+    {% for board in site.data.org_chart.boards.emphasized %}
+    <div class="board-card board-card-emphasized">
+      <a href="{{ board.source_url }}" class="board-card-name">{{ board.name }}</a>
+      <div class="board-card-meta">
+        {% if board.seats %}{{ board.seats }} seats{% else %}<span title="{{ board.seats_null_reason }}">&ndash; seats</span>{% endif %} &middot;
+        {% if board.term_years %}{{ board.term_years }}-year terms{% else %}<span title="{{ board.term_years_null_reason }}">&ndash; terms</span>{% endif %} &middot;
+        {% if board.kind == "elected" %}elected{% else %}appointed{% if board.appointed_by %} by {{ board.appointed_by }}{% endif %}{% endif %} &middot;
+        {{ board.cadence }}
+      </div>
+      <p class="board-card-decides">{{ board.decides }}</p>
+      {% if board.note %}<p class="org-card-note">{{ board.note }}</p>{% endif %}
+      <sup class="cite" data-href="{{ board.source_url }}" data-source="{{ board.source_label }}"></sup>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h3>Other boards and committees</h3>
+  <div class="board-grid">
+    {% for board in site.data.org_chart.boards.other %}
+    <div class="board-card">
+      <a href="{{ board.source_url }}" class="board-card-name">{{ board.name }}</a>
+      <div class="board-card-meta">
+        {% if board.seats %}{{ board.seats }} seats{% else %}<span title="{{ board.seats_null_reason }}">&ndash; seats</span>{% endif %} &middot;
+        {% if board.term_years %}{{ board.term_years }}-year terms{% else %}<span title="{{ board.term_years_null_reason }}">&ndash; terms</span>{% endif %} &middot;
+        {% if board.kind == "elected" %}elected{% else %}appointed{% if board.appointed_by %} by {{ board.appointed_by }}{% endif %}{% endif %} &middot;
+        {{ board.cadence }}
+      </div>
+      <p class="board-card-decides">{{ board.decides }}</p>
+      {% if board.note %}<p class="org-card-note">{{ board.note }}</p>{% endif %}
+      <sup class="cite" data-href="{{ board.source_url }}" data-source="{{ board.source_label }}"></sup>
+    </div>
+    {% endfor %}
+  </div>
+</section>
