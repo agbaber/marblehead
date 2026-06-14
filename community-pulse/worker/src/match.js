@@ -64,3 +64,65 @@ export function normalizeAddress(s) {
     .join(' ');
   return out;
 }
+
+const TRUST_MARKERS = new Set([
+  'tr', 'trs', 'trust', 'trustee', 'trustees',
+  'llc', 'lp', 'inc', 'corp', 'est', 'estate',
+]);
+
+/**
+ * Match a Facebook display name against a Marblehead assessor owner string.
+ *
+ * Returns one of:
+ *   { status: 'match' }
+ *   { status: 'first_initial_mismatch', alternatives: string[] }
+ *   { status: 'name_mismatch' }
+ *
+ * "first_initial_mismatch" means the surname matched but the first name did
+ * not — the alternatives list contains the deed's other given-name tokens,
+ * uppercased.
+ *
+ * @param {string} fbDisplayName
+ * @param {string} ownerName
+ * @returns {{status: string, alternatives?: string[]}}
+ */
+export function matchOwner(fbDisplayName, ownerName) {
+  const fb = tokenize(fbDisplayName);
+  const own = tokenize(ownerName);
+
+  if (fb.length < 2 || own.length < 2) {
+    return { status: 'name_mismatch' };
+  }
+
+  // Reject any trust/LLC/estate record.
+  if (own.some(t => TRUST_MARKERS.has(t))) {
+    return { status: 'name_mismatch' };
+  }
+
+  const fbFirst = fb[0];
+  const fbLast = fb[fb.length - 1];
+
+  if (!own.includes(fbLast)) {
+    return { status: 'name_mismatch' };
+  }
+
+  // Given-name tokens are the tokens immediately following each occurrence
+  // of the surname token on the deed.
+  const givens = [];
+  for (let i = 0; i < own.length; i++) {
+    if (own[i] === fbLast && i + 1 < own.length) {
+      givens.push(own[i + 1]);
+    }
+  }
+
+  for (const gt of givens) {
+    if (gt === fbFirst) return { status: 'match' };
+    if (gt.length === 1 && gt === fbFirst[0]) return { status: 'match' };
+    if (fbFirst.length === 1 && gt.startsWith(fbFirst)) return { status: 'match' };
+  }
+
+  return {
+    status: 'first_initial_mismatch',
+    alternatives: givens.map(g => g.toUpperCase()),
+  };
+}

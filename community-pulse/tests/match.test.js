@@ -64,3 +64,42 @@ describe('normalizeAddress', () => {
     expect(normalizeAddress(once)).toBe(once);
   });
 });
+
+import { matchOwner } from '../worker/src/match.js';
+
+describe('matchOwner', () => {
+  const cases = [
+    // [label, fb_name, owner_name, expectedStatus, expectedAlternatives?]
+    ['full match on first co-owner',
+     'John Smith', 'SMITH JOHN A & SMITH JANE M', 'match'],
+    ['full match on second co-owner',
+     'Jane Smith', 'SMITH JOHN A & SMITH JANE M', 'match'],
+    ['surname matches, first name does not — surface alternatives',
+     'Mike Smith', 'SMITH JOHN A', 'first_initial_mismatch', ['JOHN']],
+    ['surname matches, first name does not — multiple alternatives',
+     'Mike Smith', 'SMITH JOHN A & SMITH JANE M', 'first_initial_mismatch',
+     ['JOHN', 'JANE']],
+    ['surname tokens differ',
+     'John Smith', 'JOHNSON JOHN', 'name_mismatch'],
+    ['trust marker rejects all',
+     'John Smith', 'SMITH FAMILY TRUST', 'name_mismatch'],
+    ['LLC marker rejects all',
+     'John Smith', 'SMITH PROPERTIES LLC', 'name_mismatch'],
+    ['user-initial-only matches full deed first name',
+     'J. Smith', 'SMITH JOHN A', 'match'],
+    ['deed-initial-only matches full FB first name',
+     'John Smith', 'SMITH J', 'match'],
+    ['both initials ambiguous — accepted',
+     'Jane Smith', 'SMITH J', 'match'],
+    ['empty FB name -> mismatch',
+     '', 'SMITH JOHN', 'name_mismatch'],
+    ['single-token FB name -> mismatch',
+     'Madonna', 'SMITH JOHN', 'name_mismatch'],
+  ];
+
+  it.each(cases)('%s', (_label, fb, owner, status, alts) => {
+    const res = matchOwner(fb, owner);
+    expect(res.status).toBe(status);
+    if (alts !== undefined) expect(res.alternatives).toEqual(alts);
+  });
+});
