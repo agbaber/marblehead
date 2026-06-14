@@ -4,7 +4,8 @@
       "Bash(*)",
       "WebFetch",
       "WebSearch",
-      "mcp__happy__change_title"
+      "mcp__happy__change_title",
+      "mcp__claude_ai_PostHog__exec"
     ]
   }
 }
