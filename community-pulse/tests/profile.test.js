@@ -140,3 +140,28 @@ describe('handleProfilePost', () => {
     expect(env.DB.residents.get('abc123').public_identity).toBe(1);
   });
 });
+
+import { handleClaimRelease } from '../worker/src/profile.js';
+
+describe('handleClaimRelease', () => {
+  it('soft-deletes the resident and returns 200', async () => {
+    const env = { JWT_SECRET, DB: makeDb({
+      'abc123': { identity_hash: 'abc123', revoked_at: null },
+    }) };
+    const jwt = await bearer('abc123');
+    const req = new Request('https://x/api/claim', {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${jwt}` },
+    });
+    const res = await handleClaimRelease(req, env);
+    expect(res.status).toBe(200);
+    expect(typeof env.DB.residents.get('abc123').revoked_at).toBe('number');
+  });
+
+  it('returns 401 without a JWT', async () => {
+    const env = { JWT_SECRET, DB: makeDb() };
+    const req = new Request('https://x/api/claim', { method: 'DELETE' });
+    const res = await handleClaimRelease(req, env);
+    expect(res.status).toBe(401);
+  });
+});

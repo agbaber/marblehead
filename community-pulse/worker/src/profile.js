@@ -84,3 +84,19 @@ export async function handleProfilePost(request, env) {
 
   return jsonResponse({ ok: true });
 }
+
+/**
+ * DELETE /api/claim
+ * Soft-deletes the authenticated resident (sets revoked_at). Engagement
+ * rows are left in place; they become unattributable.
+ */
+export async function handleClaimRelease(request, env) {
+  const { status, payload } = await authn(request, env);
+  if (status !== 200) return jsonResponse({ error: 'unauthenticated' }, status);
+
+  const now = Math.floor(Date.now() / 1000);
+  await env.DB.prepare(
+    'UPDATE residents SET revoked_at = ? WHERE identity_hash = ?'
+  ).bind(now, payload.sub).run();
+  return jsonResponse({ ok: true });
+}
