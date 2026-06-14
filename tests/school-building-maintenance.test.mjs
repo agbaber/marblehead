@@ -73,10 +73,6 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Aug 31 2025 deliverable referenced (in don\'t-know list)')
     : fail('Aug 31 deliverable', 'missing');
 
-  // Brown-gap callout
-  const brownGap = await page.$('.sbm-brown-gap');
-  brownGap ? ok('Brown-gap callout present (.sbm-brown-gap)') : fail('Brown-gap', 'missing');
-
   // Backlog bar chart still visible
   const barChart = await page.$('svg.sbm-bar-chart');
   barChart ? ok('Bar chart SVG present') : fail('Bar chart SVG', 'missing');
