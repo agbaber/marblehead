@@ -35,12 +35,34 @@ async function fetchSelf() {
 
 function show(el) { el.hidden = false; }
 
-async function init() {
-  const isClaimStep = location.hash === '#claim';
+/**
+ * The FB callback redirects here with `#token=<jwt>&claim=1`. Consume
+ * the fragment: stash the JWT in localStorage and clear the hash so the
+ * token doesn't linger in the URL bar / history.
+ *
+ * Returns { token, claim } extracted from the fragment, or null if the
+ * fragment didn't carry an OAuth handoff.
+ */
+function consumeOAuthFragment() {
+  if (!location.hash || !location.hash.includes('token=')) return null;
+  const params = new URLSearchParams(location.hash.slice(1));
+  const token = params.get('token');
+  const claim = params.get('claim') === '1';
+  if (!token) return null;
+  setSessionJwt(token);
+  // Clear the fragment without reloading; keep `#claim` as a state hint
+  // for backward compat with bookmarks pointing at /verify-me#claim.
+  const cleanHash = claim ? '#claim' : '';
+  history.replaceState(null, '', location.pathname + location.search + cleanHash);
+  return { token, claim };
+}
 
-  // The FB callback sets verify_jwt as HttpOnly so JS cannot read it.
-  // We re-fetch /api/profile to check whether the session is already a
-  // full resident. If so, redirect to /profile.
+async function init() {
+  const oauth = consumeOAuthFragment();
+  const isClaimStep = (oauth && oauth.claim) || location.hash === '#claim';
+
+  // If we already have a JWT (just consumed, or from a prior session),
+  // check whether it's a full-resident JWT. If so, head to /profile.
   const profile = await fetchSelf();
   if (profile && profile.identity_hash) {
     location.href = '/profile.html';
@@ -65,15 +87,16 @@ async function init() {
     datalist.appendChild(opt);
   }
 
-  // Fetch the FB display name from /api/me/pre. The verify_jwt cookie
-  // is HttpOnly, so we authenticate via credentials:'include' (the cookie
-  // travels automatically on same-origin and cross-origin-with-credentials).
-  const preRes = await fetch(`${VERIFY_API}/api/me/pre`, {
-    credentials: 'include',
-  });
-  if (preRes.ok) {
-    const meta = await preRes.json();
-    document.getElementById('claim-fb-name').textContent = meta.fb_display_name || '';
+  // Fetch the FB display name from /api/me/pre using Authorization: Bearer.
+  const jwt = readSessionJwt();
+  if (jwt) {
+    const preRes = await fetch(`${VERIFY_API}/api/me/pre`, {
+      headers: { Authorization: `Bearer ${jwt}` },
+    });
+    if (preRes.ok) {
+      const meta = await preRes.json();
+      document.getElementById('claim-fb-name').textContent = meta.fb_display_name || '';
+    }
   }
 
   document.getElementById('claim-form').addEventListener('submit', onSubmit);
@@ -87,10 +110,13 @@ async function onSubmit(e) {
   const result = document.getElementById('claim-result');
   result.textContent = 'Checking...';
 
+  const jwt = readSessionJwt();
   const res = await fetch(`${VERIFY_API}/api/claim/address`, {
     method: 'POST',
-    credentials: 'include',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      ...(jwt ? { Authorization: `Bearer ${jwt}` } : {}),
+    },
     body: JSON.stringify({ claimed_address }),
   });
 

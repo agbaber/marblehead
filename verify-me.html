@@ -22,9 +22,22 @@ permalink: /verify-me.html
       spouse not on the deed), we will route you to a neighbor who can
       confirm.
     </p>
-    <a href="/api/auth/fb/start" class="btn btn--primary">
+    <a id="fb-start-link"
+       href="https://marblehead-community-pulse.agbaber.workers.dev/api/auth/fb/start"
+       class="btn btn--primary">
       Continue with Facebook
     </a>
+    <script>
+      // The community-pulse Worker lives at a different origin than the
+      // Pages-hosted site, so the OAuth start URL must be absolute. Switch
+      // to localhost in local dev.
+      (function(){
+        if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+          document.getElementById('fb-start-link').href =
+            'http://localhost:8787/api/auth/fb/start';
+        }
+      })();
+    </script>
     <p class="verify-door__note">
       <a href="/privacy.html#facebook-sign-in">What we receive from Facebook</a>
     </p>
