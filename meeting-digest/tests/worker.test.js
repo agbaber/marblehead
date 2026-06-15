@@ -40,8 +40,15 @@ const MIGRATION_0001 = {
   ]
 };
 
+const MIGRATION_0002 = {
+  name: '0002_drip_week_index',
+  queries: [
+    `ALTER TABLE subscriber ADD COLUMN drip_week_index INTEGER NOT NULL DEFAULT 0`
+  ]
+};
+
 beforeEach(async () => {
-  await applyD1Migrations(env.DB, [MIGRATION_0001]);
+  await applyD1Migrations(env.DB, [MIGRATION_0001, MIGRATION_0002]);
   // Clean slate between tests.
   await env.DB.prepare('DELETE FROM delivery_log').run();
   await env.DB.prepare('DELETE FROM subscriber').run();
