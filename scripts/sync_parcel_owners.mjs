@@ -18,9 +18,14 @@ import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
 
 const ABBREVIATIONS = {
-  ST: 'STREET', AVE: 'AVENUE', RD: 'ROAD', DR: 'DRIVE', LN: 'LANE',
-  CT: 'COURT', PL: 'PLACE', BLVD: 'BOULEVARD', TER: 'TERRACE',
-  HWY: 'HIGHWAY', PKWY: 'PARKWAY', CIR: 'CIRCLE', SQ: 'SQUARE',
+  // 3-letter forms (also typed by humans)
+  AVE: 'AVENUE', BLVD: 'BOULEVARD', CIR: 'CIRCLE', HWY: 'HIGHWAY',
+  PKWY: 'PARKWAY', TER: 'TERRACE',
+  // 2-letter forms (used heavily by MassGIS Standardized Assessors' Parcels)
+  AV: 'AVENUE', BV: 'BOULEVARD', CR: 'CIRCLE',
+  CT: 'COURT', DR: 'DRIVE', LN: 'LANE', PL: 'PLACE',
+  RD: 'ROAD', SQ: 'SQUARE', ST: 'STREET',
+  TR: 'TERRACE', WY: 'WAY',
 };
 
 // Local copy of normalizeAddress so the script has no worker-side import.
@@ -66,11 +71,13 @@ export function buildRow(r) {
 
 function parseArgs(argv) {
   const args = { csv: 'data/parcels_raw/parcels_full.csv',
-                 db: 'community-pulse-staging', remote: false };
+                 db: 'community-pulse-staging', env: 'staging', remote: false };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--csv') args.csv = argv[++i];
     else if (a === '--db') args.db = argv[++i];
+    else if (a === '--env') args.env = argv[++i];
+    else if (a === '--prod') { args.db = 'community-pulse'; args.env = ''; }
     else if (a === '--remote') args.remote = true;
   }
   return args;
@@ -92,10 +99,26 @@ function main() {
   const args = parseArgs(process.argv);
   const csvPath = resolve(args.csv);
   const csv = readFileSync(csvPath, 'utf-8');
-  const rows = parseCsv(csv).map(buildRow).filter(Boolean);
-  console.log(`Read ${rows.length} parcel rows from ${csvPath}`);
+  const raw = parseCsv(csv).map(buildRow).filter(Boolean);
+  // Dedupe by address_normalized: multi-unit buildings share a site_addr in
+  // MassGIS, but parcel_owners has a unique PRIMARY KEY on address. First
+  // occurrence wins. A claim-side mismatch in a multi-unit only affects
+  // the FB display name -> assessor name match, which falls through to the
+  // vouch path anyway.
+  const seen = new Set();
+  const rows = [];
+  let dropped = 0;
+  for (const r of raw) {
+    if (seen.has(r.address_normalized)) { dropped++; continue; }
+    seen.add(r.address_normalized);
+    rows.push(r);
+  }
+  console.log(
+    `Read ${raw.length} parcel rows from ${csvPath}; ` +
+    `${rows.length} unique addresses, ${dropped} duplicates dropped.`);
 
-  const wranglerArgs = ['wrangler', 'd1', 'execute', args.db, '--env', 'staging'];
+  const wranglerArgs = ['-y', 'wrangler@4', 'd1', 'execute', args.db];
+  if (args.env) wranglerArgs.push('--env', args.env);
   if (args.remote) wranglerArgs.push('--remote');
   else wranglerArgs.push('--local');
   wranglerArgs.push('--command');

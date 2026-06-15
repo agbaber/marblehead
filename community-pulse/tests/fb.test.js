@@ -49,13 +49,12 @@ describe('exchangeCode + fetchMe', () => {
     expect(token).toBeNull();
   });
 
-  it('fetches the user profile', async () => {
+  it('fetches the user profile (public_profile scope)', async () => {
     globalThis.fetch = vi.fn().mockResolvedValueOnce({
       ok: true,
       json: async () => ({
         id: '123456',
         name: 'John Smith',
-        link: 'https://facebook.com/john.smith',
         picture: { data: { url: 'https://cdn.fb/john.jpg' } },
       }),
     });
@@ -63,9 +62,16 @@ describe('exchangeCode + fetchMe', () => {
     expect(me).toEqual({
       fb_user_id: '123456',
       display_name: 'John Smith',
-      profile_url: 'https://facebook.com/john.smith',
+      // public_profile returns an app-scoped id, not a profile id;
+      // facebook.com/<id> would 404. profile_url stays null until/unless
+      // we ship the user_link permission via FB App Review.
+      profile_url: null,
       picture_url: 'https://cdn.fb/john.jpg',
     });
+    // Confirm we did NOT request the `link` field, which would error
+    // the whole /me call.
+    const calledUrl = new URL(fetch.mock.calls[0][0]);
+    expect(calledUrl.searchParams.get('fields')).not.toContain('link');
   });
 });
 

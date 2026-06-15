@@ -18,19 +18,15 @@ export function tokenize(s) {
 }
 
 const ABBREVIATIONS = {
-  ST: 'STREET',
-  AVE: 'AVENUE',
-  RD: 'ROAD',
-  DR: 'DRIVE',
-  LN: 'LANE',
-  CT: 'COURT',
-  PL: 'PLACE',
-  BLVD: 'BOULEVARD',
-  TER: 'TERRACE',
-  HWY: 'HIGHWAY',
-  PKWY: 'PARKWAY',
-  CIR: 'CIRCLE',
-  SQ: 'SQUARE',
+  // 3-letter forms (also typed by humans)
+  AVE: 'AVENUE', BLVD: 'BOULEVARD', CIR: 'CIRCLE', HWY: 'HIGHWAY',
+  PKWY: 'PARKWAY', TER: 'TERRACE',
+  // 2-letter forms (used heavily by MassGIS Standardized Assessors' Parcels).
+  // MUST stay in sync with scripts/sync_parcel_owners.mjs ABBREVIATIONS.
+  AV: 'AVENUE', BV: 'BOULEVARD', CR: 'CIRCLE',
+  CT: 'COURT', DR: 'DRIVE', LN: 'LANE', PL: 'PLACE',
+  RD: 'ROAD', SQ: 'SQUARE', ST: 'STREET',
+  TR: 'TERRACE', WY: 'WAY',
 };
 
 /**
