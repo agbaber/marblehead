@@ -357,7 +357,7 @@
   <section class="hero">
     <div class="crumb">Home / Checkbook</div>
     <h1 class="h1">What we paid, and the choices we made</h1>
-    <p class="sub">Every fund in the FY26 ledger traces back to a specific vote &mdash; ballot, Town Meeting, contract, or rate-setting board. Same dollars, sorted by who said yes.</p>
+    <p class="sub">Every fund in the FY26 ledger traces back to a specific vote &mdash; ballot, Town Meeting, contract, or rate-setting board.</p>
     <span class="freshness"><span class="dot"></span> Snapshot: Jun 9, 2026 &middot; <em>5 days old</em> &middot; weekly cadence</span>
   </section>
 
@@ -388,7 +388,7 @@
   <section>
     <div class="lede" style="margin-top: 36px;">
       <h2>Of the $99.9M paid so far, here's who chose to spend it</h2>
-      <p>Top-20 funds cover 97.8% of the ledger; the bar below classifies each by its authorizing power.</p>
+      <p>Top-20 funds cover 97.8% of the ledger.</p>
     </div>
 
     <div class="stack-wrap">
@@ -505,7 +505,7 @@
         </details>
         <div class="subbucket" style="background: var(--subbucket-ballot-bg); border-left-color: var(--c-teal);">
           <h4>Caveat: this is a floor, not a ceiling.</h4>
-          <p>FY26 also paid <b>$14.24M to U.S. Bank in bond service</b> across many bond series (Abbot Library 2021, Fort Sewall 2019, Gerry School 2016, Pleasant St 2012, and others). Some of that debt service traces to ballot-approved exclusions and some to in-levy Town Meeting articles; the ledger doesn't split bond-by-bond, so we can't apportion it cleanly here. Sits inside the Town Meeting bucket below.</p>
+          <p>FY26 also paid <b>$14.24M to U.S. Bank in bond service</b> across many bond series (Abbot Library 2021, Fort Sewall 2019, Gerry School 2016, Pleasant St 2012, and others). Some of that debt service traces to ballot-approved exclusions and some to in-levy Town Meeting articles; the ledger doesn't split bond-by-bond, so it can't be apportioned cleanly without an external debt schedule.</p>
         </div>
       </article>
 
@@ -639,14 +639,14 @@
   <!-- collapsed table -->
   <details class="table-disclosure">
     <summary>Every payment (the raw ledger)</summary>
-    <p>Same 15,364 rows the live page shows today, with filters by vendor, fund, division, and date. Useful for looking up a specific vendor or check. Hidden by default so it doesn't compete with the framing above.</p>
+    <p>The full ledger of 15,364 rows, filterable by vendor, fund, division, and date. Useful for looking up a specific vendor or check.</p>
   </details>
 
   <!-- What we can't fully account for -->
   <section class="unaccounted">
     <div class="lede">
       <h3>What we can't fully account for</h3>
-      <p>Of the $99.93M paid through Jun 9, <strong>$97.71M (97.8%)</strong> sits in a top-20 fund that maps to a named authorizing vote. The remaining tail is small but worth naming explicitly so the bucket totals aren't read as more precise than they are.</p>
+      <p>Of the $99.93M paid through Jun 9, <strong>$97.71M (97.8%)</strong> sits in a top-20 fund that maps to a named authorizing vote. The remaining 2.2% is bucketed but with caveats.</p>
     </div>
 
     <div class="unaccounted-grid">
@@ -702,8 +702,7 @@
   <section class="notes">
     <h3>About this sketch</h3>
     <p>All bucket totals are real, computed from the <code>checkbook_FY26_2026-06-09.csv</code> ledger. Fund-to-vote provenance is in <code>data/checkbook_fund_provenance.json</code> (top 20 funds, 97.8% of paid spend). Vote citations cross-reference <code>data/dor_debt_exclusion_all.csv</code> (MA DOR Proposition 2&frac12; Debt Exclusion Votes) for the ballot bucket.</p>
-    <p>The carve-out inside the Town Meeting card is the substantive finding: only <b>14.3% of vendor checks out of General Fund &mdash; Town</b> are actually subject to year-to-year Town Meeting discretion. The other 85.7% (GIC + pension + bond debt + state assessments) is set by outside boards or prior contracts. Payroll, the largest discretionary line, is paid via a separate system and isn't in the ledger &mdash; that's a real limitation of using the ledger alone.</p>
-    <p>Things that change vs. today's live <code>/checkbook/</code>: the 5-toggle &ldquo;Budget vs actual&rdquo; section is gone, replaced by the choice-bucketed stacked bar plus the Snow Removal callout. &ldquo;Top vendors&rdquo; ranked-bar list is gone (it mixes apples and oranges &mdash; Commonwealth of MA is GIC + Cherry Sheet, Berkshire Wind is Light Dept wholesale, neither is &ldquo;a vendor we paid for services&rdquo; in the resident's sense). The 15,364-row data table is demoted to a disclosure below the fold.</p>
+    <p>Only <b>14.3% of vendor checks out of General Fund &mdash; Town</b> are subject to year-to-year Town Meeting discretion. The other 85.7% (GIC + pension + bond debt + state assessments) is set by outside boards or prior contracts. Payroll, the largest discretionary line, is paid via a separate system and isn't in the ledger.</p>
   </section>
 
 </main>
