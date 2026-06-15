@@ -21,13 +21,15 @@ key_stats:
   snapshot: "2026-06-14"
   town_departments: 21
   school_buildings: 5
-  elected_seats: 39
+  elected_seats: 41
   # Sum across elected boards: Select Board 5 + Town Moderator 1 + Town Clerk 1
   # + School Committee 5 + Planning Board 5 + Cemetery Commission 3
-  # + Light Commission 3 + Water & Sewer Commission 5 + Recreation & Park
-  # Commission 5 + Library Trustees 6 = 39. Housing Authority adds 5 more
-  # (4 elected + 1 governor-appointed) but is a separate authority, not a
-  # town board, so it is not counted in this total.
+  # + Light Commission 5 + Water & Sewer Commission 5 + Recreation & Park
+  # Commission 5 + Library Trustees 6 = 5 + 1 + 1 + 5 + 5 + 3 + 5 + 5 + 5 + 6
+  # = 41. Housing Authority adds 5 more (4 elected + 1 governor-appointed)
+  # but is a separate authority, not a town board, so it is not counted in
+  # this total. (Light Commission corrected from 3 to 5 seats per the 2025
+  # Town Annual Report MMLD chapter, page 245.)
   registered_voters: 17040
   registered_voters_source_url: "https://www.marbleheadindependent.com/2026-election-polls-open-until-8-p-m-heres-everything-on-marbleheads-ballot/"
   registered_voters_source_label: >-
@@ -422,26 +424,67 @@ town:
   independent_enterprises:
     - name: "Marblehead Municipal Light Department"
       head_title: "General Manager"
-      fte: null
-      fte_basis: null
-      fte_null_reason: >-
-        MMLD is a separate municipal enterprise governed by the elected
-        Light Commission; its workforce is funded by electricity rates,
-        not the General Fund, and does not appear in the town's General
-        Fund headcount roster.
-      headcount_approx: 17
-      headcount_approx_basis: >-
-        FY26 town payroll rows tagged to Light operations sum to roughly
-        16-18 people across multiple line items (594 Underground, 593
-        Overhead, Meter, Admin, Distribution Mgmt). MMLD does not publish
-        an official organizational total on its site.
-      source_url: "https://marbleheadelectric.com/"
-      source_label: "Marblehead Municipal Light Department (operates marbleheadelectric.com)"
+      fte: 19
+      fte_basis: "CY2025 year-end roster from Town Annual Report 2025, MMLD chapter (pp. 244-245)"
+      governance:
+        body: "Marblehead Light Commission (Board of Commissioners)"
+        members_elected: 5
+        term_years: 3
+      divisions:
+        - name: "Office of the General Manager"
+          head_title: "General Manager"
+          positions:
+            - title: "General Manager"
+              count: 1
+        - name: "Business & Administration"
+          head_title: "Business Manager"
+          positions:
+            - title: "Business Manager"
+              count: 1
+            - title: "Business Administrator"
+              count: 1
+            - title: "Customer Service"
+              count: 1
+        - name: "Information Systems & Technology"
+          head_title: "Information and Systems Technology Manager"
+          positions:
+            - title: "Information and Systems Technology Manager"
+              count: 1
+        - name: "Technical Operations"
+          head_title: "Manager of Technical Operations"
+          positions:
+            - title: "Manager of Technical Operations"
+              count: 1
+            - title: "Energy Programs Manager"
+              count: 1
+            - title: "Senior Meter Technician"
+              count: 1
+            - title: "Senior Substation and Power Operations Specialist"
+              count: 1
+            - title: "Fleet Mechanic & Facilities Operations Specialist"
+              count: 1
+        - name: "Distribution / Line Operations"
+          head_title: "Distribution Manager"
+          positions:
+            - title: "Distribution Manager"
+              count: 1
+            - title: "Crew Leader"
+              count: 3
+            - title: "Lineworker"
+              count: 5
+      source_url: "https://marbleheadma.gov/wp-content/uploads/2026/05/Annual-Report-2025.pdf"
+      source_label: >-
+        Town of Marblehead 2025 Annual Report, MMLD chapter (pp. 244-245):
+        named year-end MMLD Team roster (24 listed minus 5 marked
+        "Departed MMLD in 2025" = 19 employees, distributed across
+        five functional divisions inferred from job titles since MMLD
+        does not publish a formal organizational chart).
       note: >-
         A separate municipal enterprise governed by the elected
-        Marblehead Light Commission (3 members, 3-year terms). Funded
+        Marblehead Light Commission (5 members, 3-year terms). Funded
         by electricity rates rather than property taxes. Not subject to
-        Select Board oversight or Town Meeting appropriation.
+        Select Board oversight or Town Meeting appropriation; the
+        Light Commission approves the MMLD operating budget directly.
 
 schools:
   head:
@@ -777,20 +820,20 @@ boards:
       source_label: "Town of Marblehead, Cemetery Commission"
     - name: "Light Commission"
       kind: "elected"
-      seats: 3
+      seats: 5
       term_years: 3
       decides: >-
         Governs the Marblehead Municipal Light Department; sets electric
-        rates, approves the MMLD budget, and oversees long-range planning
-        for the town's municipal electric utility.
+        rates, approves the MMLD operating budget directly (not subject to
+        Select Board oversight or Town Meeting appropriation), and oversees
+        long-range planning for the town's municipal electric utility.
       cadence: "Monthly meetings"
       source_url: "https://marbleheadelectric.com/"
       source_label: >-
-        Marblehead Municipal Light Department; seat count and term
-        confirmed by 2025-05-06 Select Board election warrant
-        (2 three-year seats and 1 one-year unexpired seat on the 2025
-        ballot, consistent with a 3-member commission on staggered
-        3-year terms)
+        Town of Marblehead 2025 Annual Report, MMLD chapter (page 245)
+        signs out with five commissioners (Chair, Vice Chair, Secretary,
+        and two Members); the 2024 MMLD Annual Report likewise lists five.
+        The earlier "3 seats" figure on this page was incorrect.
     - name: "Board of Water & Sewer Commissioners"
       kind: "elected"
       seats: 5
