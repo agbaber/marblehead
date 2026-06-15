@@ -4,27 +4,311 @@ title: Your profile
 permalink: /profile.html
 ---
 
-<div class="page">
-<h1>Profile</h1>
+<style>
+  .pf-eye {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--c-sage);
+    margin: 32px 0 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pf-eye-check {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--c-sage);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+  }
+  .pf-name {
+    font-size: clamp(34px, 5.4vw, 52px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+  .pf-address {
+    font-size: clamp(18px, 2.4vw, 22px);
+    color: var(--text);
+    margin: 0 0 6px;
+    font-weight: 500;
+  }
+  .pf-source {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0 0 32px;
+  }
+  .pf-source .dot { color: var(--c-buoy); margin: 0 6px; }
+
+  /* Sections ----------------------------------------------------- */
+  .pf-section {
+    border-top: 1px solid var(--border);
+    padding: 24px 0;
+    max-width: 580px;
+  }
+  .pf-section h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 14px;
+  }
+
+  /* Identity ----------------------------------------------------- */
+  .pf-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 18px;
+    align-items: start;
+    margin: 0 0 14px;
+  }
+  @media (max-width: 540px) {
+    .pf-row { grid-template-columns: 1fr; gap: 4px; }
+  }
+  .pf-row-label {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 600;
+    padding-top: 8px;
+  }
+  .pf-row-value { font-size: 15px; color: var(--text); }
+
+  .pf-input {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 360px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font: inherit;
+    font-size: 15px;
+    color: var(--text);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .pf-input:focus {
+    outline: none;
+    border-color: var(--c-teal);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-teal) 18%, transparent);
+  }
+  .pf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--c-navy);
+    border: none;
+    border-radius: 999px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 6px;
+    transition: filter 0.15s ease, transform 0.12s ease;
+  }
+  .pf-btn:hover { filter: brightness(1.1); }
+  .pf-btn:active { transform: scale(0.98); }
+  .pf-btn--ghost {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+  .pf-btn--ghost:hover { color: var(--text); border-color: var(--text-muted); }
+  .pf-saved {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+    color: var(--c-sage);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .pf-saved.show { opacity: 1; }
+
+  /* Toggle ------------------------------------------------------- */
+  .pf-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .pf-toggle input { position: absolute; opacity: 0; pointer-events: none; }
+  .pf-toggle-slider {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    border-radius: 999px;
+    background: var(--border);
+    transition: background 0.15s ease;
+    flex-shrink: 0;
+  }
+  .pf-toggle-slider::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: transform 0.18s ease;
+  }
+  .pf-toggle input:checked + .pf-toggle-slider {
+    background: var(--c-teal);
+  }
+  .pf-toggle input:checked + .pf-toggle-slider::after {
+    transform: translateX(16px);
+  }
+  .pf-toggle-help {
+    display: block;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 6px 0 0;
+    line-height: 1.45;
+    max-width: 460px;
+  }
+
+  /* Sign-in methods --------------------------------------------- */
+  .pf-method {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--divider);
+    font-size: 15px;
+  }
+  .pf-method:last-child { border-bottom: none; }
+  .pf-method-icon {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--c-divider);
+    color: var(--text-muted);
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .pf-method-icon--fb { background: #1877F2; color: #fff; }
+  .pf-method-name { font-weight: 600; color: var(--text); flex: 1; }
+  .pf-method-state { font-size: 13px; color: var(--text-muted); }
+  .pf-method-state--on { color: var(--c-sage); font-weight: 700; }
+
+  /* Danger zone -------------------------------------------------- */
+  .pf-danger {
+    margin-top: 32px;
+    padding: 18px 20px;
+    border: 1px solid color-mix(in srgb, var(--c-buoy) 30%, var(--border));
+    border-radius: 8px;
+    max-width: 580px;
+    background: color-mix(in srgb, var(--c-buoy) 3%, var(--surface));
+  }
+  .pf-danger h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--c-buoy);
+    margin: 0 0 6px;
+  }
+  .pf-danger p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0 0 14px;
+    line-height: 1.45;
+  }
+  .pf-danger-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--c-buoy);
+    background: transparent;
+    border: 1px solid var(--c-buoy);
+    border-radius: 999px;
+    padding: 8px 18px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .pf-danger-btn:hover {
+    background: var(--c-buoy);
+    color: #fff;
+  }
+
+  /* Signed-out state -------------------------------------------- */
+  .pf-signedout {
+    max-width: 480px;
+    padding: 32px 0;
+  }
+  .pf-signedout h1 {
+    font-size: clamp(28px, 4vw, 36px);
+    margin: 0 0 12px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .pf-signedout p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0 0 22px;
+  }
+  .pf-signin {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--c-navy);
+    border-radius: 999px;
+    padding: 12px 22px;
+    text-decoration: none;
+    transition: filter 0.15s ease, transform 0.12s ease;
+  }
+  .pf-signin:hover { filter: brightness(1.1); color: #fff; }
+  .pf-signin:active { transform: scale(0.98); }
+  .pf-signin::after { content: '\2192'; transition: transform 0.15s ease; }
+  .pf-signin:hover::after { transform: translateX(3px); }
+
+  /* Loading skeleton -------------------------------------------- */
+  .pf-skeleton {
+    display: inline-block;
+    height: 1em;
+    background: var(--c-divider);
+    border-radius: 4px;
+    animation: pf-pulse 1.4s ease-in-out infinite;
+  }
+  @keyframes pf-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
+</style>
 
 <div id="profile-root">
-  <p>Loading...</p>
+  <div class="pf-signedout">
+    <p class="pf-eye"><span class="pf-skeleton" style="width: 80px"></span></p>
+    <h1><span class="pf-skeleton" style="width: 220px"></span></h1>
+    <p><span class="pf-skeleton" style="width: 280px"></span></p>
+  </div>
 </div>
 
 <script type="module" src="/assets/community-pulse/profile.js"></script>
-</div>
-
-<style>
-  #profile-root .verified-badge {
-    display: inline-block; padding: 0.25rem 0.75rem;
-    background: var(--success-bg, #d1fae5); color: var(--success, #065f46);
-    border-radius: 4px; font-weight: 600;
-  }
-  #profile-root .danger-zone { margin-top: 2rem; padding-top: 1rem;
-                               border-top: 1px solid var(--rule); }
-  #profile-root .danger-zone button {
-    background: transparent; color: var(--danger, #991b1b);
-    border: 1px solid var(--danger, #991b1b); padding: 0.5rem 1rem;
-    border-radius: 4px; cursor: pointer;
-  }
-</style>
