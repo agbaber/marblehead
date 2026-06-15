@@ -1,0 +1,231 @@
+# Marblehead Municipal Light Department (MMLD) staffing enrichment.
+#
+# Purpose: replace the FY26-payroll-derived `headcount_approx: 17` in
+# _data/org_chart.yml with a primary-source roster count.
+#
+# Primary source: the MMLD chapter of the 2025 Town of Marblehead Annual
+# Report (printed pages 244 - 245, PDF pages 248 - 249), which publishes a
+# named "MMLD Team" roster for calendar year 2025 with markers for who
+# joined (+) and who departed (*). This is the most detailed MMLD
+# headcount disclosure in any primary document; the standalone MMLD
+# annual reports on marbleheadelectric.com (2010 - 2024) name only a
+# handful of employees in their "Employee Recognition" section and do
+# NOT publish a roster, headcount total, or org chart.
+#
+# Editorial rules: this file lists titles + counts only, not personal
+# names. Names are present in the source but are not propagated into
+# our data so the org chart stays a structural artifact, not a directory.
+
+source:
+  primary:
+    url: "https://marbleheadma.gov/wp-content/uploads/2026/05/Annual-Report-2025.pdf"
+    title: "Town of Marblehead 2025 Annual Report, MMLD chapter (pages 244-245)"
+    fiscal_year: "CY2025"
+    accessed: "2026-06-15"
+    note: >-
+      MMLD reports on a calendar-year basis. The 2025 town report
+      MMLD chapter is the source of the named roster and the
+      year-end staffing total. PDF was downloaded into the calm-garden
+      worktree at data/town_docs/annual_reports/Annual-Report-2025.txt;
+      the roster section starts at line 11935 of that text file.
+  supplemental:
+    - url: "https://marbleheadelectric.com/pdfs/annual-reports/2024-MMLD-Annual-Report-to-Town-ACC.pdf"
+      title: "MMLD 2024 Annual Report to the Town"
+      fiscal_year: "CY2024"
+      accessed: "2026-06-15"
+      note: >-
+        Used for prior-year context (130th annual report, 2024 operating
+        budget, customer/meter count of 10,300, commissioner roster).
+        Does not publish a staffing roster or headcount total.
+    - url: "https://marbleheadelectric.com/meetings-annual-reports.html"
+      title: "MMLD Meetings & Annual Reports index"
+      accessed: "2026-06-15"
+      note: >-
+        Index page links 2010 - 2024 MMLD annual reports. There is no
+        2025 standalone MMLD annual report on the MMLD site as of
+        access date; the 2025 reporting appears only in the town's
+        2025 annual report.
+
+mmld:
+  # Headcount basis: 24 distinct names on the roster, minus 5 marked
+  # "* Departed MMLD in 2025" = 19 year-end employees. The 19 includes
+  # the 6 marked "+ Joined MMLD in 2025."
+  total_employees: 19
+  employees_basis: >-
+    Year-end 2025 headcount from the named "MMLD Team" roster in the
+    Town of Marblehead 2025 Annual Report MMLD chapter (printed page
+    245). Calculated as 24 listed individuals minus 5 marked
+    "* Departed MMLD in 2025." All 19 remaining positions are
+    full-time; the roster does not flag any role as part-time or
+    seasonal. (For comparison: the prior `headcount_approx: 17` in
+    _data/org_chart.yml was a payroll-line approximation derived from
+    FY26 town payroll rows tagged to Light operations and undercounts
+    the actual staff by two.)
+
+  governance:
+    body: "Marblehead Light Commission (Board of Commissioners)"
+    members_elected: 5
+    term_years: 3
+    members_basis: >-
+      The 2025 Town Report MMLD chapter (page 245) signs out with
+      five commissioners: Chair, Vice Chair, Secretary, and two
+      Members. The 2024 MMLD Annual Report likewise lists five.
+      NOTE: the current _data/org_chart.yml says "3 members, 3-year
+      terms"; per primary sources that should be 5 members.
+    note: >-
+      Funded by electricity rates, not the General Fund. Not subject
+      to Select Board oversight or Town Meeting appropriation; the
+      Light Commission approves the MMLD operating budget directly.
+
+  head:
+    title: "General Manager"
+    name_redacted: true
+    transition_note: >-
+      In 2025 the Light Commission ran a search and named a new
+      General Manager (joined mid-2025) following the departure of
+      the prior GM in late 2025. The 2025 year-end org head is the
+      newly-appointed GM. We track the title, not the incumbent.
+
+  # Divisions reflect the functional groupings implied by titles on the
+  # 2025 roster. MMLD does NOT publish a formal organizational chart
+  # in any primary source we located, so these groupings are inferred
+  # from job titles. Where a title clearly maps to a function (e.g.
+  # "Distribution Manager" + "Crew Leader" + "Lineworker" all sit in
+  # line/distribution operations), the grouping is unambiguous. Other
+  # specialist roles ("Senior Meter Technician", "Energy Programs
+  # Manager") could be grouped differently if MMLD published an org
+  # chart; document this constraint here rather than overclaim.
+  divisions:
+    - name: "Office of the General Manager"
+      head_title: "General Manager"
+      positions:
+        - title: "General Manager"
+          count: 1
+      year_end_count: 1
+
+    - name: "Business & Administration"
+      head_title: "Business Manager"
+      positions:
+        - title: "Business Manager"
+          count: 1
+        - title: "Business Administrator"
+          count: 1
+        - title: "Customer Service"
+          count: 1
+      year_end_count: 3
+      note: >-
+        Combined finance, admin, and customer service. The 2024
+        annual report references a "Finance Manager" role (Matt
+        Barrett, who is listed as Business Manager in the 2025
+        roster), suggesting the title was renamed in 2025.
+
+    - name: "Information Systems & Technology"
+      head_title: "Information and Systems Technology Manager"
+      positions:
+        - title: "Information and Systems Technology Manager"
+          count: 1
+      year_end_count: 1
+      note: >-
+        New function: the 2024 annual report explicitly notes Chris
+        Dunbar was hired in 2024 as the FIRST IT/Systems Technology
+        Manager at MMLD. As of year-end 2025 this remains a
+        one-person function.
+
+    - name: "Technical Operations"
+      head_title: "Manager of Technical Operations"
+      positions:
+        - title: "Manager of Technical Operations"
+          count: 1
+        - title: "Energy Programs Manager"
+          count: 1
+        - title: "Senior Meter Technician"
+          count: 1
+        - title: "Senior Substation and Power Operations Specialist"
+          count: 1
+        - title: "Fleet Mechanic & Facilities Operations Specialist"
+          count: 1
+      year_end_count: 5
+      note: >-
+        Specialist/technical staff covering substations, metering,
+        fleet/facilities, and energy programs (rebates, NextZero,
+        scheduled EV charging). Three of these five roles were
+        filled by new hires in 2025 (Energy Programs Manager,
+        Senior Substation/Power Operations Specialist, Fleet
+        Mechanic & Facilities Operations Specialist). Two prior
+        Substation and Power Operations Specialists departed in
+        2025.
+
+    - name: "Distribution / Line Operations"
+      head_title: "Distribution Manager"
+      positions:
+        - title: "Distribution Manager"
+          count: 1
+        - title: "Crew Leader"
+          count: 3
+        - title: "Lineworker"
+          count: 5
+      year_end_count: 9
+      note: >-
+        Line crew that does pole replacements, storm response, and
+        overhead/underground line maintenance. The 2023 MMLD report
+        identifies "Working Foreman" Greg Chane as promoted to
+        Distribution Manager; "Crew Leader" appears to be the 2025
+        rename of "Working Foreman." First Class/Second Class
+        Lineman titles in older reports (2023) are flattened to
+        "Lineworker" in 2025. Two lineworkers departed and two
+        joined during 2025, plus a longtime Lineworker (Paul
+        Camarda, 25-year veteran recognized in the 2024 report)
+        departed.
+
+  # Sanity check: 1 + 3 + 1 + 5 + 9 = 19, matches the total above.
+  division_total_check: 19
+
+  # Financial context. MMLD reports on a calendar year, so "2025
+  # operating budget" = CY2025, which spans roughly half of FY25 and
+  # half of FY26 in town-fiscal-year terms.
+  finances:
+    operating_budget_2025_usd: 21681000
+    operating_budget_2025_basis: >-
+      "The Board voted to approve the 2025 department operating and
+      maintenance budget of $21,681,000" (MMLD 2024 Annual Report,
+      December section). The 2025 town report STATEMENT OF INCOME
+      shows actual CY2025 operating revenue of $21,772,332 and total
+      expenses of $20,798,560.
+    customer_meters: 10300
+    customer_meters_basis: >-
+      "MMLD provides electrical service to 10,300 meters, which puts
+      us in APPA's 7,300-14,000 meter count category." (MMLD 2024
+      Annual Report, April section). The 2025 town report does not
+      restate the meter count.
+    pilot_to_town_2025_usd: 360000
+    pilot_to_town_2025_basis: >-
+      Statement of Surplus, 2025 town report (MMLD chapter):
+      "Payment in Lieu of Taxes (PILOT) (360,000.00)" deducted from
+      surplus during CY2025. The CY2024 PILOT was $330,000.
+
+  pension_and_benefits:
+    own_pension_fund: false
+    system: "Marblehead Contributory Retirement System (PERAC-supervised)"
+    basis: >-
+      MMLD employees participate in the town's PERAC-supervised
+      contributory retirement system administered by the Marblehead
+      Retirement Board, not a separate MMLD-only pension fund. The
+      2025 MMLD balance sheet shows a $6.6M Net Pension Liability
+      and $4.0M OPEB Liability, both of which are MMLD's share of
+      the broader town/PERAC obligations. MMLD funds its pension and
+      OPEB contributions out of electric rates (the 2024 income
+      statement shows $935K in Employee's Pensions & Benefits).
+
+# What MMLD does NOT publish (documented so a later reader doesn't
+# repeat the search):
+#   - No formal organizational chart in any annual report from
+#     2010-2024, nor on marbleheadelectric.com /about-us or any
+#     subpage we located.
+#   - No total headcount or FTE total in the standalone MMLD
+#     annual reports. The named "MMLD Team" roster in the 2025
+#     TOWN annual report (not MMLD's own report) is the only
+#     primary disclosure of MMLD staff in roster form.
+#   - No FTE breakdown by division or department. All roles on
+#     the roster are presented identically; we treat all 19 as
+#     full-time because the report does not flag any as part-time
+#     or seasonal.

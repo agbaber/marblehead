@@ -4514,6 +4514,54 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   max-width: 360px;
 }
 
+.org-independent .org-divisions {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--c-border);
+}
+
+.org-independent .org-divisions-title {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--c-text-sub);
+  margin: 0 0 8px;
+}
+
+.org-independent .org-division {
+  margin-bottom: 8px;
+}
+
+.org-independent .org-division-name {
+  font-weight: 600;
+  font-size: 0.8125rem;
+}
+
+.org-independent .org-division-head {
+  font-size: 0.75rem;
+  color: var(--c-text-mid);
+}
+
+.org-independent .org-division-positions {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+  color: var(--c-text-mid);
+}
+
+.org-independent .org-division-positions li {
+  position: relative;
+  padding-left: 10px;
+}
+
+.org-independent .org-division-positions li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: var(--c-text-sub);
+}
+
 /* Boards section */
 
 .board-section {

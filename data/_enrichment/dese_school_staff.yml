@@ -1,0 +1,456 @@
+# DESE EPIMS school staffing for Marblehead Public Schools, SY2025-26.
+#
+# Source: Massachusetts Department of Elementary and Secondary Education
+# (DESE) Education Personnel Information Management System (EPIMS),
+# accessed via the Education-to-Career Hub Socrata API.
+#
+# Endpoint:
+#   https://educationtocareer.data.mass.gov/resource/j5ue-xkfn.json
+#     ?$where=dist_code='01680000' AND sy='2026'
+#
+# Mirrored on the public DESE School and District Profiles site at
+# https://profiles.doe.mass.edu/profiles/general.aspx?orgcode=01680000
+# (teacher FTE on the per-school Teacher Data pages matches the
+# Instructional Staff totals below to one decimal place).
+#
+# School year notation: DESE reports use sy=2026 to mean the 2025-26
+# school year (FY26). The district total of 430.2 FTE here matches
+# data/dese_total_educator_fte.csv and the Marblehead rows in
+# data/dese_peer_staffing_SY2026.csv, both of which trace to the same
+# EPIMS extract.
+#
+# FTE basis: EPIMS reports educator full-time equivalents. Per-school
+# rows cover staff assigned to a specific building; district-only rows
+# (Superintendent, Assistant Superintendents, Business Official,
+# district-wide administrators, Information Services district team,
+# School Resource Officer, district health staff, etc.) sit at the
+# district level and are not allocated to a school. The five buildings
+# sum to 397.7 FTE; the remaining 32.5 FTE is the district-only layer.
+#
+# Role labels are reported verbatim from EPIMS (e.g. 'Teacher - support
+# content instruction', 'Tutor', 'School Adjustment Counselor --
+# Non-Special Education') so they cross-reference cleanly with the
+# state taxonomy. EPIMS-reported 'Tutor' headcounts in Marblehead
+# include staff funded under tutoring/intervention lines and are not
+# directly comparable to one-to-one private tutoring.
+#
+# accessed: 2026-06-15
+# fiscal_year: 'FY26 (SY2025-26)'
+# source_url: 'https://profiles.doe.mass.edu/profiles/general.aspx?orgcode=01680000'
+
+source:
+  url: "https://profiles.doe.mass.edu/profiles/general.aspx?orgcode=01680000"
+  socrata_api: "https://educationtocareer.data.mass.gov/resource/j5ue-xkfn.json"
+  socrata_dataset: "j5ue-xkfn (EPIMS Staffing Demographics by Race and Gender)"
+  fiscal_year: "FY26 (SY2025-26)"
+  accessed: "2026-06-15"
+
+district:
+  org_code: "01680000"
+  name: "Marblehead Public Schools"
+  total_fte: 430.2
+  by_category:
+    - category: "Administrators"
+      category_fte: 26.0
+      roles:
+        - role: "Deputy/Associate/Vice-/Assistant Principal"
+          fte: 5.0
+        - role: "Principal/headmaster/headmistress/head of school"
+          fte: 5.0
+        - role: "School Special Education Administrator"
+          fte: 5.0
+        - role: "Other District Wide Administrators"
+          fte: 3.0
+        - role: "Other School Administrator/Coordinator"
+          fte: 2.0
+        - role: "Assistant/Associate/ Vice Superintendents"
+          fte: 1.0
+        - role: "Human Resources Director"
+          fte: 1.0
+        - role: "School Business Official"
+          fte: 1.0
+        - role: "Special Education Administrator"
+          fte: 1.0
+        - role: "Superintendent of Schools"
+          fte: 1.0
+        - role: "Supervisor/Director/Coordinator: Technology"
+          fte: 1.0
+    - category: "Instructional Staff"
+      category_fte: 233.7
+      roles:
+        - role: "Teacher"
+          fte: 169.0
+        - role: "Co-teacher"
+          fte: 29.3
+        - role: "Teacher - support content instruction"
+          fte: 26.4
+        - role: "Instructional Coach"
+          fte: 5.5
+        - role: "Long Term Substitute Teacher"
+          fte: 3.5
+    - category: "Instructional Support Staff"
+      category_fte: 90.8
+      roles:
+        - role: "Tutor"
+          fte: 73.5
+        - role: "School Counselor"
+          fte: 12.0
+        - role: "Librarians and Media Center Directors"
+          fte: 3.5
+        - role: "School Resource Officer"
+          fte: 1.0
+        - role: "Pathways Coordinator"
+          fte: 0.8
+    - category: "Instructional Support and Special Education Shared Staff"
+      category_fte: 11.1
+      roles:
+        - role: "School Psychologist -- Special Education"
+          fte: 5.1
+        - role: "School Adjustment Counselor -- Non-Special Education"
+          fte: 3.0
+        - role: "School Social Worker -- Non-Special Education"
+          fte: 2.0
+        - role: "School Adjustment Counselor -- Special Education"
+          fte: 1.0
+    - category: "Special Education Related Staff"
+      category_fte: 19.3
+      roles:
+        - role: "Speech Pathologist"
+          fte: 7.8
+        - role: "Other Related Special Education Staff"
+          fte: 5.5
+        - role: "Occupational Therapist"
+          fte: 4.0
+        - role: "Physical Therapist"
+          fte: 2.0
+    - category: "Medical/Health Services"
+      category_fte: 6.8
+      roles:
+        - role: "School Nurse -- Non-Special Education"
+          fte: 5.8
+        - role: "Psychiatrist"
+          fte: 1.0
+    - category: "Office/Clerical/Administrative Support"
+      category_fte: 27.3
+      roles:
+        - role: "Administrative Clerks and Secretaries"
+          fte: 18.9
+        - role: "Information Services & Technical Support"
+          fte: 5.4
+        - role: "Other Administrative Support Personnel"
+          fte: 2.0
+        - role: "Special Education Administrative Clerks and Secretaries"
+          fte: 1.0
+    - category: "Paraprofessional"
+      category_fte: 14.1
+      roles:
+        - role: "Paraprofessional"
+          fte: 14.1
+
+per_school:
+  - name: "Marblehead High School"
+    org_code: "01680505"
+    total_fte: 118.3
+    by_category:
+      - category: "Administrators"
+        category_fte: 6.0
+        roles:
+          - role: "Deputy/Associate/Vice-/Assistant Principal"
+            fte: 2.0
+          - role: "Other School Administrator/Coordinator"
+            fte: 2.0
+          - role: "Principal/headmaster/headmistress/head of school"
+            fte: 1.0
+          - role: "School Special Education Administrator"
+            fte: 1.0
+      - category: "Instructional Staff"
+        category_fte: 78.5
+        roles:
+          - role: "Teacher"
+            fte: 70.6
+          - role: "Co-teacher"
+            fte: 5.8
+          - role: "Teacher - support content instruction"
+            fte: 1.1
+          - role: "Long Term Substitute Teacher"
+            fte: 1.0
+      - category: "Instructional Support Staff"
+        category_fte: 16.6
+        roles:
+          - role: "Tutor"
+            fte: 9.8
+          - role: "School Counselor"
+            fte: 5.0
+          - role: "Librarians and Media Center Directors"
+            fte: 1.0
+          - role: "Pathways Coordinator"
+            fte: 0.8
+      - category: "Instructional Support and Special Education Shared Staff"
+        category_fte: 6.0
+        roles:
+          - role: "School Adjustment Counselor -- Non-Special Education"
+            fte: 2.0
+          - role: "School Psychologist -- Special Education"
+            fte: 2.0
+          - role: "School Social Worker -- Non-Special Education"
+            fte: 2.0
+      - category: "Special Education Related Staff"
+        category_fte: 1.4
+        roles:
+          - role: "Speech Pathologist"
+            fte: 1.4
+      - category: "Medical/Health Services"
+        category_fte: 0.8
+        roles:
+          - role: "School Nurse -- Non-Special Education"
+            fte: 0.8
+      - category: "Office/Clerical/Administrative Support"
+        category_fte: 4.6
+        roles:
+          - role: "Administrative Clerks and Secretaries"
+            fte: 3.6
+          - role: "Special Education Administrative Clerks and Secretaries"
+            fte: 1.0
+      - category: "Paraprofessional"
+        category_fte: 4.4
+        roles:
+          - role: "Paraprofessional"
+            fte: 4.4
+  - name: "Marblehead Veterans Middle School"
+    org_code: "01680300"
+    total_fte: 59.3
+    by_category:
+      - category: "Administrators"
+        category_fte: 3.0
+        roles:
+          - role: "Deputy/Associate/Vice-/Assistant Principal"
+            fte: 1.0
+          - role: "Principal/headmaster/headmistress/head of school"
+            fte: 1.0
+          - role: "School Special Education Administrator"
+            fte: 1.0
+      - category: "Instructional Staff"
+        category_fte: 37.6
+        roles:
+          - role: "Teacher"
+            fte: 32.9
+          - role: "Co-teacher"
+            fte: 3.0
+          - role: "Teacher - support content instruction"
+            fte: 1.2
+          - role: "Long Term Substitute Teacher"
+            fte: 0.5
+      - category: "Instructional Support Staff"
+        category_fte: 9.4
+        roles:
+          - role: "Tutor"
+            fte: 6.8
+          - role: "School Counselor"
+            fte: 2.0
+          - role: "Librarians and Media Center Directors"
+            fte: 0.6
+      - category: "Instructional Support and Special Education Shared Staff"
+        category_fte: 1.0
+        roles:
+          - role: "School Psychologist -- Special Education"
+            fte: 1.0
+      - category: "Special Education Related Staff"
+        category_fte: 2.0
+        roles:
+          - role: "Other Related Special Education Staff"
+            fte: 1.0
+          - role: "Speech Pathologist"
+            fte: 1.0
+      - category: "Medical/Health Services"
+        category_fte: 1.0
+        roles:
+          - role: "School Nurse -- Non-Special Education"
+            fte: 1.0
+      - category: "Office/Clerical/Administrative Support"
+        category_fte: 3.3
+        roles:
+          - role: "Administrative Clerks and Secretaries"
+            fte: 2.3
+          - role: "Information Services & Technical Support"
+            fte: 1.0
+      - category: "Paraprofessional"
+        category_fte: 2.0
+        roles:
+          - role: "Paraprofessional"
+            fte: 2.0
+  - name: "Brown Elementary School"
+    org_code: "01680030"
+    total_fte: 76.5
+    by_category:
+      - category: "Administrators"
+        category_fte: 3.0
+        roles:
+          - role: "Deputy/Associate/Vice-/Assistant Principal"
+            fte: 1.0
+          - role: "Principal/headmaster/headmistress/head of school"
+            fte: 1.0
+          - role: "School Special Education Administrator"
+            fte: 1.0
+      - category: "Instructional Staff"
+        category_fte: 38.2
+        roles:
+          - role: "Teacher"
+            fte: 27.0
+          - role: "Teacher - support content instruction"
+            fte: 7.1
+          - role: "Co-teacher"
+            fte: 3.1
+          - role: "Long Term Substitute Teacher"
+            fte: 1.0
+      - category: "Instructional Support Staff"
+        category_fte: 23.1
+        roles:
+          - role: "Tutor"
+            fte: 21.1
+          - role: "School Counselor"
+            fte: 2.0
+      - category: "Instructional Support and Special Education Shared Staff"
+        category_fte: 0.6
+        roles:
+          - role: "School Adjustment Counselor -- Non-Special Education"
+            fte: 0.5
+          - role: "School Psychologist -- Special Education"
+            fte: 0.1
+      - category: "Special Education Related Staff"
+        category_fte: 5.6
+        roles:
+          - role: "Speech Pathologist"
+            fte: 2.6
+          - role: "Occupational Therapist"
+            fte: 1.0
+          - role: "Other Related Special Education Staff"
+            fte: 1.0
+          - role: "Physical Therapist"
+            fte: 1.0
+      - category: "Office/Clerical/Administrative Support"
+        category_fte: 3.0
+        roles:
+          - role: "Administrative Clerks and Secretaries"
+            fte: 3.0
+      - category: "Paraprofessional"
+        category_fte: 2.0
+        roles:
+          - role: "Paraprofessional"
+            fte: 2.0
+  - name: "Glover Elementary School"
+    org_code: "01680020"
+    total_fte: 62.4
+    by_category:
+      - category: "Administrators"
+        category_fte: 2.0
+        roles:
+          - role: "Principal/headmaster/headmistress/head of school"
+            fte: 1.0
+          - role: "School Special Education Administrator"
+            fte: 1.0
+      - category: "Instructional Staff"
+        category_fte: 25.8
+        roles:
+          - role: "Teacher"
+            fte: 20.8
+          - role: "Teacher - support content instruction"
+            fte: 3.0
+          - role: "Co-teacher"
+            fte: 2.0
+      - category: "Instructional Support Staff"
+        category_fte: 19.8
+        roles:
+          - role: "Tutor"
+            fte: 18.8
+          - role: "Librarians and Media Center Directors"
+            fte: 1.0
+      - category: "Instructional Support and Special Education Shared Staff"
+        category_fte: 1.0
+        roles:
+          - role: "School Adjustment Counselor -- Special Education"
+            fte: 1.0
+      - category: "Special Education Related Staff"
+        category_fte: 4.8
+        roles:
+          - role: "Occupational Therapist"
+            fte: 2.0
+          - role: "Other Related Special Education Staff"
+            fte: 1.0
+          - role: "Physical Therapist"
+            fte: 1.0
+          - role: "Speech Pathologist"
+            fte: 0.8
+      - category: "Medical/Health Services"
+        category_fte: 3.0
+        roles:
+          - role: "School Nurse -- Non-Special Education"
+            fte: 2.0
+          - role: "Psychiatrist"
+            fte: 1.0
+      - category: "Office/Clerical/Administrative Support"
+        category_fte: 1.0
+        roles:
+          - role: "Administrative Clerks and Secretaries"
+            fte: 1.0
+      - category: "Paraprofessional"
+        category_fte: 5.0
+        roles:
+          - role: "Paraprofessional"
+            fte: 5.0
+  - name: "Village Elementary School"
+    org_code: "01680016"
+    total_fte: 81.2
+    by_category:
+      - category: "Administrators"
+        category_fte: 3.0
+        roles:
+          - role: "Deputy/Associate/Vice-/Assistant Principal"
+            fte: 1.0
+          - role: "Principal/headmaster/headmistress/head of school"
+            fte: 1.0
+          - role: "School Special Education Administrator"
+            fte: 1.0
+      - category: "Instructional Staff"
+        category_fte: 49.1
+        roles:
+          - role: "Teacher"
+            fte: 17.7
+          - role: "Co-teacher"
+            fte: 15.4
+          - role: "Teacher - support content instruction"
+            fte: 14.0
+          - role: "Instructional Coach"
+            fte: 1.0
+          - role: "Long Term Substitute Teacher"
+            fte: 1.0
+      - category: "Instructional Support Staff"
+        category_fte: 20.9
+        roles:
+          - role: "Tutor"
+            fte: 17.0
+          - role: "School Counselor"
+            fte: 3.0
+          - role: "Librarians and Media Center Directors"
+            fte: 0.9
+      - category: "Instructional Support and Special Education Shared Staff"
+        category_fte: 2.5
+        roles:
+          - role: "School Psychologist -- Special Education"
+            fte: 2.0
+          - role: "School Adjustment Counselor -- Non-Special Education"
+            fte: 0.5
+      - category: "Medical/Health Services"
+        category_fte: 2.0
+        roles:
+          - role: "School Nurse -- Non-Special Education"
+            fte: 2.0
+      - category: "Office/Clerical/Administrative Support"
+        category_fte: 3.0
+        roles:
+          - role: "Administrative Clerks and Secretaries"
+            fte: 3.0
+      - category: "Paraprofessional"
+        category_fte: 0.7
+        roles:
+          - role: "Paraprofessional"
+            fte: 0.7
