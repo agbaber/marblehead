@@ -170,10 +170,26 @@ og_url: https://marbleheaddata.org/org-chart.html
     <span class="org-card-dept">{{ ent.name }}</span>
     <span class="org-card-head">{{ ent.head_title }}</span>
     <span class="org-card-fte">
-      {% if ent.headcount_approx %}<span{% if ent.headcount_approx_basis %} title="{{ ent.headcount_approx_basis }}"{% endif %}>~{{ ent.headcount_approx }} employees</span>{% else %}<span title="{{ ent.fte_null_reason }}">&ndash;</span>{% endif %}
+      {% if ent.fte %}<span{% if ent.fte_basis %} title="{{ ent.fte_basis }}"{% endif %}>{{ ent.fte }} employees</span>{% else %}<span title="{{ ent.fte_null_reason }}">&ndash;</span>{% endif %}
       <sup class="cite" data-href="{{ ent.source_url }}" data-source="{{ ent.source_label }}"></sup>
     </span>
     {% if ent.note %}<p class="org-card-note">{{ ent.note }}</p>{% endif %}
+    {% if ent.divisions and ent.divisions.size > 0 %}
+    <div class="org-divisions">
+      <p class="org-divisions-title">{{ ent.divisions.size }} divisions / {{ ent.fte }} employees</p>
+      {% for div in ent.divisions %}
+      <div class="org-division">
+        <span class="org-division-name">{{ div.name }}</span>
+        {% if div.head_title %}<span class="org-division-head"> &ndash; {{ div.head_title }}</span>{% endif %}
+        {% if div.positions and div.positions.size > 0 %}
+        <ul class="org-division-positions">
+          {% for pos in div.positions %}<li>{{ pos.title }}{% if pos.count and pos.count > 1 %} (&times;{{ pos.count }}){% endif %}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
   </div>
   {% endfor %}
 </aside>
