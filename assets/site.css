@@ -4289,3 +4289,291 @@ body.me-subscription-page .ms-pref .ms-help { color: var(--c-text-mid); font-siz
 body.me-subscription-page .ms-pref .ms-unsub { background: transparent; color: var(--c-text-mid); border: 1px solid var(--c-border); }
 body.me-subscription-page .ms-pref button { font-family: inherit; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
 body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-navy); color: var(--c-fog); border: 0; font-weight: 600; }
+
+/* === Org chart (/org-chart.html) === */
+
+.org-chart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 32px 0;
+  align-items: start;
+}
+
+.org-column-header {
+  background: var(--c-navy);
+  color: var(--c-fog);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 10px 16px;
+  border-radius: 4px 4px 0 0;
+  text-align: center;
+}
+
+.org-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.org-root {
+  background: var(--c-divider);
+  border: 2px solid var(--c-navy);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  padding: 18px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.org-root::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+  width: 2px;
+  height: 32px;
+  background: var(--c-navy);
+  transform: translateX(-1px);
+}
+
+.org-root-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.org-root .org-card-fte {
+  display: block;
+  color: var(--c-text-mid);
+}
+
+.org-cluster {
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  padding: 12px;
+  background: var(--c-divider);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.org-cluster::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -16px;
+  width: 2px;
+  height: 16px;
+  background: var(--c-navy);
+  transform: translateX(-1px);
+}
+
+.org-cluster:not(:first-child)::before {
+  display: none;
+}
+
+.org-cluster-name {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--c-navy);
+  font-weight: 700;
+  margin: 0 0 12px;
+  padding: 0;
+  display: block;
+}
+
+.org-cluster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.org-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 0.8125rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 80px;
+}
+
+.org-card-dept {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+  line-height: 1.2;
+  font-size: 0.8125rem;
+}
+
+.org-card-head {
+  color: var(--c-text-mid);
+  font-size: 0.75rem;
+  display: block;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.org-card-fte {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+}
+
+.org-card-note {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  font-style: italic;
+  margin: 6px 0 0;
+  line-height: 1.4;
+}
+
+.org-card details {
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.org-card details > summary {
+  cursor: pointer;
+  font-size: 0.6875rem;
+  color: var(--c-navy);
+  list-style: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.org-card details > summary::before {
+  content: "\25B8  ";
+  display: inline-block;
+}
+
+.org-card details[open] > summary::before {
+  content: "\25BE  ";
+}
+
+.org-card details > ul {
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+  color: var(--c-text-mid);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.org-card details > ul > li {
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 2px;
+  line-height: 1.35;
+}
+
+.org-card details > ul > li::before {
+  content: "\2022"; /* bullet, drawn inside the card padding */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--c-text-sub);
+}
+
+.org-cluster-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0 12px;
+  gap: 12px;
+}
+
+.org-cluster-total {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.org-independent {
+  margin: 32px 0;
+  padding: 16px;
+  border: 1px dashed var(--c-border);
+  border-radius: 6px;
+  background: transparent;
+}
+
+.org-independent h3 {
+  margin: 0 0 8px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--c-text-mid);
+}
+
+.org-independent .org-card {
+  max-width: 360px;
+}
+
+/* Boards section */
+
+.board-section {
+  margin: 48px 0;
+}
+
+.board-emphasized {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.board-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  padding: 14px;
+  font-size: 0.875rem;
+}
+
+.board-card-emphasized {
+  background: var(--c-divider);
+  border: 2px solid var(--c-navy);
+  padding: 16px;
+}
+
+.board-card-name {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.board-card-meta {
+  font-size: 0.75rem;
+  color: var(--c-text-sub);
+  margin-bottom: 8px;
+}
+
+.board-card-decides {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .org-chart {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .org-cluster-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .board-emphasized {
+    grid-template-columns: 1fr;
+  }
+}

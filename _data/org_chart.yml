@@ -1,0 +1,844 @@
+# Marblehead organizational chart data.
+#
+# Sources:
+#   - Town department list: marbleheadma.gov navigation (accessed 2026-06-14)
+#   - Town head counts: data/town_employee_headcount_FY08-26.csv (FY2026 column),
+#     derived from data/employee_count_FY2008-2026.xls (town payroll system).
+#     These are HEADCOUNT (including PT and seasonal), not FTE. FTE-only
+#     numbers at department granularity are not published in primary sources;
+#     ACFR FTE schedules (data/fte_employees_FY15-24.csv) bucket by category.
+#   - School central office + buildings: marbleheadschools.org/administration
+#     and marbleheadschools.org/schools (accessed 2026-06-14), cross-checked
+#     against the FY27 budget packet personnel pages
+#     (data/schools/sc-meetings-fy26/agenda-and-materials-2-5-2026-fy27-budget-packet.txt).
+#   - School total FTE: data/dese_total_educator_fte.csv (DESE EPIMS, SY2026 = 430.2).
+#   - Boards: each board's marbleheadma.gov page (URLs below).
+#
+# IMPORTANT: roles only, no personal names. The page rendered from this file
+# is descriptive of the structure, not a staff directory.
+
+key_stats:
+  snapshot: "2026-06-14"
+  town_departments: 21
+  school_buildings: 5
+  elected_seats: 39
+  # Sum across elected boards: Select Board 5 + Town Moderator 1 + Town Clerk 1
+  # + School Committee 5 + Planning Board 5 + Cemetery Commission 3
+  # + Light Commission 3 + Water & Sewer Commission 5 + Recreation & Park
+  # Commission 5 + Library Trustees 6 = 39. Housing Authority adds 5 more
+  # (4 elected + 1 governor-appointed) but is a separate authority, not a
+  # town board, so it is not counted in this total.
+  registered_voters: 17040
+  registered_voters_source_url: "https://www.marbleheadindependent.com/2026-election-polls-open-until-8-p-m-heres-everything-on-marbleheads-ballot/"
+  registered_voters_source_label: >-
+    Marblehead Independent, June 9, 2026 election coverage: 'Marblehead's
+    17,040 registered voters.'
+
+town:
+  cluster_order:
+    - "Administration & Finance"
+    - "Public Safety"
+    - "Public Works"
+    - "Land Use & Health"
+    - "Community Services"
+  head:
+    title: "Town Administrator"
+    fte: 1
+    source_url: "https://marbleheadma.gov/town-administrator/"
+    source_label: "Town of Marblehead, Town Administrator page (accessed June 2026)"
+    note: >-
+      Chief Administrative Officer; appointed by the Select Board. Oversees
+      daily operations of building inspections, community development &
+      planning, council on aging, finance, fire, harbormaster, human
+      resources, police, public works, public buildings, and veterans
+      services.
+  departments:
+    - name: "Finance"
+      cluster: "Administration & Finance"
+      head_title: "Finance Director / CFO"
+      fte: 9
+      fte_basis: "FY2026 headcount (includes PT)"
+      staff:
+        - "Town Accountant"
+        - "Treasurer / Tax Collector"
+        - "Assistant Treasurer / Collector"
+        - "Chief Assessor"
+        - "Administrative Assessor"
+        - "Senior Clerk, Assessor"
+        - "Payroll Administrator"
+        - "Administrative Clerk, Payroll"
+        - "IT & Communications Specialist"
+        - "Accounting Assistant"
+        - "Accounting & Website Assistant"
+        - "Retirement Administrator"
+        - "Senior Clerk, Treasurer / Collector (×2)"
+      source_url: "https://marbleheadma.gov/finance-department/"
+      source_label: "Town of Marblehead, Finance Department page; FY26 headcount from data/town_employee_headcount_FY08-26.csv; staff roster from Annual Report 2025 (Financial Services Department Staff list)"
+      note: >-
+        Finance Director also serves as Chief Financial Officer; the town
+        has no dedicated IT department, so IT effectively reports through
+        Finance.
+    - name: "Assessors' Office"
+      cluster: "Administration & Finance"
+      head_title: "Chief Assessor"
+      fte: 3
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Administrative Assessor"
+        - "Senior Clerk"
+      source_url: "https://marbleheadma.gov/assessors-office/"
+      source_label: "Town of Marblehead, Assessor's Office page; staff roster from Annual Report 2025 (Financial Services Department, assessing positions)"
+      note: >-
+        Assessing operations roll up under the Finance Director / CFO in
+        the Financial Services Department. The elected three-member Board
+        of Assessors sets policy; see Boards section.
+    - name: "Town Clerk + Elections"
+      cluster: "Administration & Finance"
+      head_title: "Town Clerk"
+      fte: 3
+      fte_basis: "FY2026 headcount (year-round)"
+      staff:
+        - "Assistant Town Clerk"
+        - "Election workers (~25, seasonal)"
+      source_url: "https://marbleheadma.gov/town-clerk/"
+      source_label: "Town of Marblehead, Town Clerk + Elections pages"
+      note: >-
+        Town Clerk is an elected position (3-year term). Elections are
+        administered by the Town Clerk's office; ~25 poll workers are paid
+        during election cycles but are not year-round staff.
+    - name: "Human Resources"
+      cluster: "Administration & Finance"
+      head_title: "Director of Human Resources"
+      fte: 3
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Payroll Administrator"
+        - "Benefits Coordinator"
+      source_url: "https://marbleheadma.gov/hr/"
+      source_label: "Town of Marblehead, Human Resources Department; staff roster from Annual Report 2025 (Human Resources Department Staff list)"
+      note: >-
+        Department created January 2024 (first HR director in town history;
+        previously HR was handled informally out of the Select Board office).
+    - name: "Community Development and Planning"
+      cluster: "Land Use & Health"
+      head_title: "Director of Community Development & Planning"
+      fte: 5
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Town Planner"
+        - "Sustainability Coordinator"
+        - "Grant Coordinator"
+        - "Senior Clerk"
+      source_url: "https://marbleheadma.gov/development-planning/"
+      source_label: "Town of Marblehead, Community Development & Planning; staff roster from Annual Report 2025 (Community Development and Planning Department Staff list)"
+      note: >-
+        Department created at May 2024 Town Meeting; the FY27 proposed
+        budget reduces this line by 58.8% and eliminates the Director and
+        Grant Coordinator positions. As of the snapshot date, the
+        department page still lists those roles.
+    - name: "Public Buildings"
+      cluster: "Public Works"
+      head_title: "Superintendent of Public Buildings"
+      fte: 6
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Public Buildings Maintenance (×2)"
+      source_url: "https://marbleheadma.gov/town-administrator/"
+      source_label: >-
+        Town Administrator page lists Superintendent of Public Buildings
+        among reporting positions; headcount from FY26 employee roster;
+        named maintenance positions from Annual Report 2025 (Building
+        Commissioner & Inspectional Services personnel list, "Public
+        Buildings" lines).
+      note: >-
+        Building Commissioner doubles as Superintendent of Public
+        Buildings (per Annual Report 2025 appointed officials). The
+        remaining headcount on this line is custodial / maintenance
+        staff not named individually in primary sources.
+    - name: "Police Department"
+      cluster: "Public Safety"
+      head_title: "Chief of Police"
+      fte: 68
+      fte_basis: "FY2026 headcount (sworn + civilian)"
+      staff:
+        - "Acting Captain"
+        - "Lieutenant (×4)"
+        - "Sergeant (×4)"
+        - "Patrol Officer (×21)"
+        - "E-911 Dispatcher (×12)"
+        - "Administrative Assistant"
+        - "Facilities"
+        - "Special Police Officer"
+        - "Animal Control Officer (×2)"
+        - "Animal Inspector"
+        - "School Traffic Supervisor (×16, PT)"
+      source_url: "https://marbleheadma.gov/police/"
+      source_label: "Town of Marblehead, Police Department page; staff roster from Annual Report 2025 (Police Department Personnel 2025 list)"
+    - name: "Fire Department"
+      cluster: "Public Safety"
+      head_title: "Fire Chief"
+      fte: 40
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Fire Prevention Officer (Captain)"
+        - "Captain (×4, includes Acting)"
+        - "Lieutenant (×4, includes Acting)"
+        - "Firefighter (×33, all certified EMTs)"
+        - "Administrative Assistant"
+        - "Department Chaplain"
+      source_url: "https://marbleheadma.gov/fire/"
+      source_label: "Town of Marblehead, Fire Department page; staff roster from Annual Report 2025 (Fire Department Personnel list)"
+    - name: "Building Inspection"
+      cluster: "Land Use & Health"
+      head_title: "Building Commissioner"
+      fte: 10
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Local Inspector"
+        - "Building Inspector"
+        - "Assistant Wire Inspector"
+        - "Plumbing and Gas Inspector"
+        - "Senior Clerk"
+      source_url: "https://marbleheadma.gov/building-inspection/"
+      source_label: "Town of Marblehead, Building Inspection Department; staff roster from Annual Report 2025 (Building Commissioner & Inspectional Services list)"
+    - name: "Department of Public Works"
+      cluster: "Public Works"
+      head_title: "Director of Public Works"
+      fte: null
+      fte_null_reason: >-
+        DPW is an umbrella over Highway, Tree, Stormwater, and the Town
+        Engineer in the town directory but is also tightly coupled to the
+        elected-commission Water & Sewer departments. The headcount CSV
+        breaks these out separately (Highway 22, Sewer 10, Water 17,
+        Cemetery 9, etc.) rather than under a single "DPW" line. See
+        constituent departments below for per-line counts.
+      staff:
+        - "Town Engineer"
+        - "Assistant Engineer"
+        - "Assistant Director, Highway / Tree / Snow Operations"
+        - "Assistant Director, Storm Sewer / Mechanics / Utility Coordinator"
+        - "Tree Warden"
+        - "Senior Clerk II"
+        - "General Clerk"
+      source_url: "https://marbleheadma.gov/dpw/"
+      source_label: "Town of Marblehead, Department of Public Works; staff roster from Annual Report 2025 (DPW personnel listing under Director Amy McHugh)"
+    - name: "Highway Department"
+      cluster: "Public Works"
+      head_title: "Assistant Director (Highway, Tree, Snow Operations)"
+      fte: 22
+      fte_basis: "FY2026 headcount (covers Highway, Storm Sewer, Tree, and Mechanics divisions)"
+      staff:
+        - "Working Foreman, Construction"
+        - "Working Foreman, Maintenance"
+        - "Lead Heavy Equipment Operator (×2)"
+        - "Specialized Heavy Equipment Operator"
+        - "Heavy Equipment Operator (×2)"
+        - "Special Laborer I (×2)"
+        - "Tree Division Foreman"
+        - "Tree Division Lead Heavy Equipment Operator"
+        - "Tree Division Specialized Heavy Equipment Operator"
+        - "Mechanic Supervisor"
+        - "Mechanic (×2)"
+      source_url: "https://marbleheadma.gov/highway/"
+      source_label: "Town of Marblehead, Highway Department; staff roster from Annual Report 2025 (Highway / Storm Sewer, Tree, and Mechanics divisions personnel list)"
+    - name: "Water Department"
+      cluster: "Public Works"
+      head_title: "Working Foreman, Water"
+      fte: 17
+      fte_basis: "FY2026 headcount (includes shared office and field-support staff with Sewer)"
+      staff:
+        - "Water Technician"
+        - "Mechanic Pipefitter II (×2)"
+        - "Mechanic Pipefitter I"
+        - "Heavy Equipment Operator"
+        - "Special Laborer (×2)"
+        - "Office Manager (shared with Sewer)"
+        - "Billing Technician (shared with Sewer)"
+        - "Special Clerk (×2, shared with Sewer)"
+        - "GIS / Field Technician (shared with Sewer)"
+        - "Part-Time General Clerk (×3, shared with Sewer)"
+      source_url: "https://marbleheadma.gov/water/"
+      source_label: "Town of Marblehead, Water Department; staff roster from Annual Report 2025 (Water Department Employees + Water & Sewer Commission Administration office staff)"
+      note: >-
+        Water and Sewer share the same elected commission (Board of Water &
+        Sewer Commissioners, 5 members, 3-year staggered terms) and a
+        combined office and field-support staff under a single
+        administration line.
+    - name: "Sewer Department"
+      cluster: "Public Works"
+      head_title: "Working Foreman, Sewer"
+      fte: 10
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Mechanic Supervisor (×2)"
+        - "Station Mechanic Pipefitter II (×2)"
+        - "Mechanic Pipefitter I (×2)"
+        - "Heavy Equipment Operator"
+      source_url: "https://marbleheadma.gov/sewer/"
+      source_label: "Town of Marblehead, Sewer Department; staff roster from Annual Report 2025 (Sewer Department Employees list)"
+      note: >-
+        Office and administrative staff are shared with the Water
+        Department under the joint Water & Sewer Commission office; see
+        the Water Department entry for that shared list.
+    - name: "Cemetery Department"
+      cluster: "Public Works"
+      head_title: "Cemetery Superintendent"
+      fte: 9
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Senior Clerk"
+        - "Mechanic / Foreman"
+        - "Heavy Equipment Operator"
+        - "General Labor IV (×2)"
+      source_url: "https://marbleheadma.gov/cemetery/"
+      source_label: "Town of Marblehead, Cemetery Department; staff roster from Annual Report 2025 (Cemetery Department employees list)"
+      note: >-
+        Superintendent is appointed by the elected Cemetery Commission
+        (3 members, 3-year staggered terms). FY26 headcount line of 9
+        includes seasonal labor not named individually.
+    - name: "Health Department"
+      cluster: "Land Use & Health"
+      head_title: "Director of Public Health"
+      fte: 3
+      fte_basis: "FY2026 headcount (Health Office; Transfer Station counted separately)"
+      staff:
+        - "Public Health Nurse (LPN)"
+        - "Health Inspector"
+        - "Senior Clerk"
+      source_url: "https://marbleheadma.gov/health/"
+      source_label: "Town of Marblehead, Health Department; staff roster from Annual Report 2025 (Health Office Staff list)"
+      note: >-
+        The Board of Health also oversees the Transfer Station, which has
+        its own crew (Assistant Waste Director, Heavy Equipment Operators,
+        Special Clerk, Transfer Station Operators).
+    - name: "Council on Aging"
+      cluster: "Community Services"
+      head_title: "Council on Aging Director"
+      fte: 12
+      fte_basis: "FY2026 headcount (includes PT outreach, food services, transportation)"
+      staff:
+        - "Program Manager"
+        - "Outreach Coordinator"
+        - "Transportation Coordinator"
+        - "Nutrition Coordinator / General Laborer"
+        - "Volunteer Coordinator"
+        - "Part-Time Custodian"
+        - "Part-Time Van Driver (×4)"
+      source_url: "https://marbleheadma.gov/coa/"
+      source_label: "Town of Marblehead, Council on Aging; staff roster from Annual Report 2025 (COA Staff list)"
+    - name: "Veterans Services"
+      cluster: "Community Services"
+      head_title: "Veterans' Agent & Director of Veterans' Services"
+      fte: 1
+      fte_basis: "FY2026 headcount"
+      staff: []
+      source_url: "https://marbleheadma.gov/veterans-services/"
+      source_label: "Town of Marblehead, Veterans Services; Annual Report 2025 confirms a single-position office (Veteran Service Officer also serves as Veterans' Graves Officer and Flag Officer)"
+      note: >-
+        Single-position office. The Veterans' Agent also serves as the
+        town's Flag Officer and Veterans' Graves Officer per Annual
+        Report 2025 appointed officials.
+    - name: "Abbot Public Library"
+      cluster: "Community Services"
+      head_title: "Library Director"
+      fte: 27
+      fte_basis: "FY2026 headcount (includes PT)"
+      staff:
+        - "Assistant Director"
+        - "Technical Services Supervisor"
+        - "Children's Librarian"
+        - "Teen Librarian"
+        - "Adult Librarian"
+        - "Marketing and Communications Coordinator"
+        - "Library Circulation Supervisor"
+        - "Senior Clerk"
+        - "Media Specialist"
+        - "Library Technical Assistant"
+        - "Technology Resource Specialist"
+        - "Children's Senior Library Assistant"
+        - "PT Senior Library Assistant (×2)"
+        - "PT Library Assistant (×3 temp)"
+        - "Custodian"
+        - "PT Custodian"
+        - "Page (×4)"
+      source_url: "https://abbotlibrary.org/"
+      source_label: "Abbot Public Library; FY26 headcount from town payroll roster; staff roster from Annual Report 2025 (Abbot Public Library Staff list)"
+      note: >-
+        Library is governed by an elected six-member Board of Trustees,
+        separate from the Select Board's appointed boards.
+    - name: "Recreation & Parks"
+      cluster: "Community Services"
+      head_title: "Superintendent of Parks"
+      fte: 26
+      fte_basis: "FY2026 headcount (Park + Park Revolving Fund seasonal staff)"
+      staff:
+        - "Superintendent of Recreation"
+        - "Recreation Supervisor"
+        - "Working Foreman, Building and Grounds"
+        - "Mechanic Maintenance Craftsman"
+        - "Turf Specialist"
+        - "Maintenance / Groundskeeper (×4)"
+        - "Recreation Customer Service & Community Engagement Coordinator"
+        - "PT and seasonal instructors / office staff (~50)"
+      source_url: "https://marbleheadma.gov/recreation-parks/"
+      source_label: "Town of Marblehead, Recreation & Parks Department; staff roster from Annual Report 2025 (Recreation & Parks Department Staff list)"
+      note: >-
+        The Superintendent is appointed annually by the elected Recreation
+        & Parks Commission (5 members, 1-year terms).
+    - name: "Harbormaster"
+      cluster: "Public Safety"
+      head_title: "Harbormaster"
+      fte: 17
+      fte_basis: "FY2026 headcount (includes seasonal)"
+      staff:
+        - "Deputy Harbormaster"
+        - "Assistant Harbormaster"
+        - "Office Manager"
+        - "Clerk"
+        - "Seasonal Assistant Harbormaster (×10)"
+        - "CVA Pump-out Crew (×2)"
+      source_url: "https://marbleheadma.gov/harbormaster/"
+      source_label: "Town of Marblehead, Harbormaster; staff roster from Annual Report 2025 (Harbormaster Personnel list + Seasonal Assistants list)"
+      note: >-
+        Reports jointly to the Town Administrator and the appointed Harbors
+        & Waters Board.
+    - name: "Select Board Office"
+      cluster: "Administration & Finance"
+      head_title: "Town Administrator"
+      fte: 6
+      fte_basis: "FY2026 headcount (SELECTMEN line)"
+      staff:
+        - "Chief Procurement Officer"
+        - "Administrative Aide"
+        - "Town Counsel (contracted)"
+        - "Parking Clerk / Hearing Clerk"
+      source_url: "https://marbleheadma.gov/selectboard-office/"
+      source_label: "Town of Marblehead, Select Board Office; staff roster from Annual Report 2025 (Select Board narrative + Appointed Officials list)"
+      note: >-
+        Administrative office that supports the five elected Select Board
+        members. The Town Administrator is also organizationally housed
+        here, along with the town's Chief Procurement Officer and
+        Administrative Aide.
+  independent_enterprises:
+    - name: "Marblehead Municipal Light Department"
+      head_title: "General Manager"
+      fte: null
+      fte_basis: null
+      fte_null_reason: >-
+        MMLD is a separate municipal enterprise governed by the elected
+        Light Commission; its workforce is funded by electricity rates,
+        not the General Fund, and does not appear in the town's General
+        Fund headcount roster.
+      headcount_approx: 17
+      headcount_approx_basis: >-
+        FY26 town payroll rows tagged to Light operations sum to roughly
+        16-18 people across multiple line items (594 Underground, 593
+        Overhead, Meter, Admin, Distribution Mgmt). MMLD does not publish
+        an official organizational total on its site.
+      source_url: "https://marbleheadelectric.com/"
+      source_label: "Marblehead Municipal Light Department (operates marbleheadelectric.com)"
+      note: >-
+        A separate municipal enterprise governed by the elected
+        Marblehead Light Commission (3 members, 3-year terms). Funded
+        by electricity rates rather than property taxes. Not subject to
+        Select Board oversight or Town Meeting appropriation.
+
+schools:
+  head:
+    title: "Superintendent of Schools"
+    fte: 1
+    source_url: "https://www.marbleheadschools.org/administration"
+    source_label: "Marblehead Public Schools, Administration page (accessed June 2026)"
+    note: >-
+      District total FTE (all roles, all buildings): 430.2 in SY2026 per
+      DESE EPIMS (data/dese_total_educator_fte.csv).
+  central_office:
+    - name: "Finance & Operations"
+      head_title: "Assistant Superintendent for Finance & Operations"
+      fte: 4
+      fte_basis: "FY27 budget packet personnel pages (Asst Supt F&O + Asst Business Manager + AP Clerk + Payroll Coordinator)"
+      staff:
+        - "Assistant Business Manager"
+        - "Accounts Payable Clerk"
+        - "Payroll Coordinator"
+      source_url: "https://www.marbleheadschools.org/administration"
+      source_label: >-
+        Marblehead Public Schools Administration page; FY27 budget packet
+        personnel organization (data/schools/sc-meetings-fy26/
+        agenda-and-materials-2-5-2026-fy27-budget-packet.txt, "Central
+        Office / Districtwide" section)
+    - name: "Teaching & Learning"
+      head_title: "Assistant Superintendent for Teaching & Learning"
+      fte: 6
+      fte_basis: "FY27 budget packet (Asst Supt T&L + Registrar + 4 Instructional Coaches)"
+      staff:
+        - "Registrar"
+        - "Instructional Coach (4 positions)"
+      source_url: "https://www.marbleheadschools.org/administration"
+      source_label: "Marblehead Public Schools Administration page; FY27 budget packet personnel pages"
+    - name: "Student Services"
+      head_title: "Assistant Superintendent for Student Services"
+      fte: 16
+      fte_basis: >-
+        FY27 budget packet (Asst Supt + Associate Director + Clerical +
+        4 BCBA + 2 OT + 2 PT + 3 COTA + 1 PT Asst + 1 ABA Coord + 1 Lead
+        Nurse)
+      staff:
+        - "Associate Director of Student Services"
+        - "Board Certified Behavior Analyst (BCBA, 4 positions)"
+        - "Occupational Therapist (2)"
+        - "Physical Therapist (2)"
+        - "Certified Occupational Therapist Assistant (3)"
+        - "Physical Therapist Assistant"
+        - "ABA Program Coordinator"
+        - "Lead Nurse"
+      source_url: "https://www.marbleheadschools.org/administration"
+      source_label: "Marblehead Public Schools Administration page; FY27 budget packet personnel pages"
+    - name: "Human Resources"
+      head_title: "Human Resources Manager"
+      fte: 2
+      fte_basis: "FY27 budget packet (HR Manager + HR Assistant)"
+      staff:
+        - "Human Resources Assistant"
+      source_url: "https://www.marbleheadschools.org/administration"
+      source_label: "Marblehead Public Schools Administration page; FY27 budget packet personnel pages"
+    - name: "Educational Technology / IT"
+      head_title: "Director of Educational Technology"
+      fte: 7
+      fte_basis: >-
+        FY27 budget packet (Director + Network Specialist + Data Specialist
+        0.8 + 4 Computer Support Specialists, one at 0.6 FTE)
+      staff:
+        - "Network Specialist"
+        - "Data Specialist"
+        - "Computer Support Specialist (4 positions)"
+      source_url: "https://www.marbleheadschools.org/administration"
+      source_label: "Marblehead Public Schools Administration page; FY27 budget packet personnel pages"
+    - name: "Facilities & Transportation"
+      head_title: "Director of Facilities"
+      fte: 7
+      fte_basis: >-
+        FY27 budget packet (Director + Admin Asst + Maintenance Supervisor +
+        Electrician + 3 Maintenance Workers); excludes custodial/bus-driver
+        crews counted at building level
+      staff:
+        - "Administrative Assistant, Facilities / Transportation"
+        - "Maintenance Supervisor"
+        - "Maintenance Electrician"
+        - "Maintenance Worker (3 positions)"
+        - "Transportation Coordinator"
+        - "Director of Food Services"
+      source_url: "https://www.marbleheadschools.org/administration"
+      source_label: "Marblehead Public Schools Administration page; FY27 budget packet personnel pages"
+      note: >-
+        Director of Facilities position was listed as TBD on the
+        Administration page as of June 2026.
+  buildings:
+    - name: "Marblehead High School"
+      abbreviation: "MHS"
+      head_title: "Principal"
+      fte: 125
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Assistant Principal (×2)"
+        - "Athletics Director"
+        - "Assistant Athletics Director"
+      source_url: "https://mhs.marbleheadschools.org"
+      source_label: "Marblehead High School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (HIGH SCHOOL line)"
+    - name: "Marblehead Veterans Middle School"
+      abbreviation: "MVMS"
+      head_title: "Principal"
+      fte: 65
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Assistant Principal"
+      source_url: "https://mvms.marbleheadschools.org"
+      source_label: "Marblehead Veterans Middle School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (VETERANS MIDDLE SCHOOL line)"
+    - name: "Brown Elementary School"
+      abbreviation: "Brown"
+      head_title: "Principal"
+      fte: 88
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Assistant Principal"
+        - "Special Education Team Chair"
+      source_url: "https://brown.marbleheadschools.org"
+      source_label: "Brown Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (BROWN SCHOOL line)"
+      note: >-
+        Bell, Coffin, Eveleth, and Gerry are former elementary buildings,
+        no longer operating as schools. Marblehead currently operates
+        three elementary buildings: Brown, Glover, and Village.
+    - name: "Glover Elementary School"
+      abbreviation: "Glover"
+      head_title: "Principal"
+      fte: 66
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Special Education Team Chair"
+      source_url: "https://glover.marbleheadschools.org"
+      source_label: "Glover Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (GLOVER SCHOOL line)"
+    - name: "Village Elementary School"
+      abbreviation: "Village"
+      head_title: "Principal"
+      fte: 90
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Assistant Principal"
+      source_url: "https://village.marbleheadschools.org"
+      source_label: "Village Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (VILLAGE SCHOOL line)"
+
+boards:
+  emphasized:
+    - name: "Select Board"
+      kind: "elected"
+      seats: 5
+      term_years: 3
+      decides: >-
+        Sets town policy, signs the warrant for Town Meeting, hires and
+        evaluates the Town Administrator, makes most non-school appointments
+        to boards and committees, and represents the town in
+        intergovernmental matters.
+      cadence: "Typically meets twice monthly (Wednesday evenings)"
+      override_role: >-
+        Votes to place a Proposition 2 1/2 override or debt-exclusion
+        question on the ballot, and authors the override warrant article.
+        For the FY27 cycle, the Select Board placed the structured
+        three-tier override package before voters.
+      source_url: "https://marbleheadma.gov/selectboard-office/"
+      source_label: "Town of Marblehead, Select Board Office"
+    - name: "School Committee"
+      kind: "elected"
+      seats: 5
+      term_years: 3
+      decides: >-
+        Hires and evaluates the Superintendent, sets school district policy,
+        votes the school operating budget request that goes to Town Meeting,
+        and acts as the employer of record for collective bargaining with
+        teacher and staff unions. Under MGL c.71 sec.34 the committee
+        controls expenditures within the appropriated lump sum.
+      cadence: "Generally 1st and 3rd Thursday each month at 6 pm"
+      override_role: >-
+        Sets the school department's budget request, which is the largest
+        single driver of the FY27 deficit. School Committee members
+        publicly advocate for the override but cannot place it on the
+        ballot themselves; that is the Select Board's role.
+      source_url: "https://www.marbleheadschools.org/school-committee"
+      source_label: "Marblehead Public Schools, School Committee page; member count and term from /school-committee/committee-subcommittee-members"
+    - name: "Finance Committee"
+      kind: "appointed"
+      appointed_by: "Select Board"
+      seats: 9
+      term_years: 3
+      decides: >-
+        Reviews all town department budgets and warrant articles requiring
+        town funds, holds public hearings, and publishes written
+        recommendations (favor / opposed / table) to Town Meeting voters.
+        Functions in an advisory capacity for all financial matters.
+      cadence: "Meets through the budget cycle; cadence not formally published"
+      override_role: >-
+        Issues a recommendation on the override warrant article. The
+        FinCom's analysis of revenue, fixed costs, and reserve levels is
+        the most-cited fiscal source in the override debate.
+      source_url: "https://marbleheadma.gov/finance-committee/"
+      source_label: >-
+        Town of Marblehead, Finance Committee page; appointing-authority
+        verified by recent Select Board minutes
+        (data/minutes/select_board/2026-01-14.cleaned.txt and others
+        confirm Select Board appointments)
+      note: >-
+        In many Massachusetts towns the Finance Committee is appointed by
+        the Town Moderator. In Marblehead it is appointed by the Select
+        Board, per the Finance Committee's official page and consistent
+        with recent Select Board minutes that record FinCom appointments.
+  other:
+    - name: "Town Moderator"
+      kind: "elected"
+      seats: 1
+      term_years: 1
+      decides: >-
+        Presides over Annual and Special Town Meetings, decides questions
+        of order, and declares votes. May appoint residents to special
+        committees at the request of Town Meeting.
+      cadence: "Active at Town Meetings and called Special Town Meetings"
+      source_url: "https://marbleheadma.gov/moderator/"
+      source_label: "Town of Marblehead, Town Moderator page"
+    - name: "Town Clerk"
+      kind: "elected"
+      seats: 1
+      term_years: 3
+      decides: >-
+        Custodian of town records, conducts town elections, certifies
+        votes, records vital statistics, and prepares the ballot for town
+        elections.
+      cadence: "Office function; not a deliberative board"
+      source_url: "https://marbleheadma.gov/town-clerk/"
+      source_label: "Town of Marblehead, Town Clerk page"
+    - name: "Planning Board"
+      kind: "elected"
+      seats: 5
+      term_years: null
+      term_years_null_reason: >-
+        Marblehead's Town Planning Board page describes a five-member
+        elected board including a Chair and Associate Member but does
+        not publish term length on its page. Statutory default under
+        MGL c.41 sec.81A is 5 years.
+      decides: >-
+        Approves land divisions, nonresidential buildings over 700 sq ft,
+        residential construction over 500 sq ft in shoreline/harbor
+        districts, smart growth special permits, wireless communication
+        special permits, and incentive zoning special permits.
+      cadence: "Monthly meetings"
+      source_url: "https://marbleheadma.gov/town-planning-board/"
+      source_label: "Town of Marblehead, Town Planning Board"
+    - name: "Board of Health"
+      kind: "appointed"
+      appointed_by: "Select Board"
+      seats: 3
+      term_years: null
+      term_years_null_reason: "Term length not published on the Board of Health page."
+      decides: >-
+        Enforces state and local health regulations, licenses food
+        establishments, oversees septic and tobacco regulations, and
+        responds to public health emergencies.
+      cadence: "Second Tuesday of each month at 7:30 pm (Mary Alley Municipal Building)"
+      source_url: "https://marbleheadma.gov/board-of-health/"
+      source_label: "Town of Marblehead, Board of Health"
+    - name: "Board of Assessors"
+      kind: "appointed"
+      appointed_by: "Select Board"
+      seats: 3
+      term_years: null
+      term_years_null_reason: "Term length not specified on the Board of Assessors page."
+      decides: >-
+        Sets and certifies property valuations, classifies real and
+        personal property, and rules on abatement applications.
+      cadence: "Monthly meetings during the abatement cycle"
+      source_url: "https://marbleheadma.gov/board-of-assessors/"
+      source_label: "Town of Marblehead, Board of Assessors"
+    - name: "Zoning Board of Appeals"
+      kind: "appointed"
+      appointed_by: "Select Board"
+      seats: 5
+      term_years: 5
+      decides: >-
+        Hears variance requests, special permit applications, and appeals
+        of Building Commissioner decisions. May grant relief only when
+        proposed changes will not adversely affect the neighborhood.
+      cadence: "Monthly hearings"
+      source_url: "https://marbleheadma.gov/zoning-board-of-appeals/"
+      source_label: "Town of Marblehead, Zoning Board of Appeals (5 members + 4 alternates, 5-year staggered terms)"
+    - name: "Conservation Commission"
+      kind: "appointed"
+      appointed_by: "Select Board"
+      seats: 7
+      term_years: 3
+      decides: >-
+        Manages and protects town conservation lands and administers
+        wetlands protection laws and stormwater guidelines for
+        construction projects affecting wetlands.
+      cadence: "Second Thursday of each month at 7 pm (Zoom)"
+      source_url: "https://marbleheadma.gov/conservation-commission/"
+      source_label: "Town of Marblehead, Conservation Commission"
+    - name: "Historical Commission"
+      kind: "appointed"
+      appointed_by: "Select Board"
+      seats: 7
+      term_years: 3
+      decides: >-
+        Identifies, evaluates, and protects historic resources; reviews
+        demolition requests under the town's demolition delay bylaw;
+        nominates properties to historic registers.
+      cadence: "Monthly meetings"
+      source_url: "https://marbleheadma.gov/historical-commission/"
+      source_label: "Town of Marblehead, Historical Commission"
+    - name: "Recreation & Park Commission"
+      kind: "elected"
+      seats: 5
+      term_years: 1
+      decides: >-
+        Oversees the Recreation & Parks Department, appoints the
+        Superintendent annually, sets fees and policies for town
+        recreation programs and park use.
+      cadence: "Monthly meetings"
+      source_url: "https://marbleheadma.gov/recreation-parks/"
+      source_label: >-
+        Town of Marblehead, Recreation & Parks Department; election
+        warrant in Select Board minutes 2025-05-06 confirms 5 seats for
+        1-year terms
+    - name: "Cemetery Commission"
+      kind: "elected"
+      seats: 3
+      term_years: 3
+      decides: >-
+        Oversees town cemeteries, sets policies for burials and lot
+        sales, and appoints the Cemetery Superintendent.
+      cadence: "Quarterly or as needed"
+      source_url: "https://marbleheadma.gov/cemetery-commission/"
+      source_label: "Town of Marblehead, Cemetery Commission"
+    - name: "Light Commission"
+      kind: "elected"
+      seats: 3
+      term_years: 3
+      decides: >-
+        Governs the Marblehead Municipal Light Department; sets electric
+        rates, approves the MMLD budget, and oversees long-range planning
+        for the town's municipal electric utility.
+      cadence: "Monthly meetings"
+      source_url: "https://marbleheadelectric.com/"
+      source_label: >-
+        Marblehead Municipal Light Department; seat count and term
+        confirmed by 2025-05-06 Select Board election warrant
+        (2 three-year seats and 1 one-year unexpired seat on the 2025
+        ballot, consistent with a 3-member commission on staggered
+        3-year terms)
+    - name: "Board of Water & Sewer Commissioners"
+      kind: "elected"
+      seats: 5
+      term_years: 3
+      decides: >-
+        Governs the Water and Sewer departments; sets water and sewer
+        rates, approves capital projects, and protects the public water
+        distribution system.
+      cadence: "Monthly meetings"
+      source_url: "https://marbleheadma.gov/water-sewer-commission/"
+      source_label: "Town of Marblehead, Water & Sewer Commission"
+    - name: "Abbot Public Library Board of Trustees"
+      kind: "elected"
+      seats: 6
+      term_years: 3
+      decides: >-
+        Sets library policy, hires the Library Director, approves the
+        library budget and oversees library operations and the trust
+        funds that support the library.
+      cadence: "Monthly meetings"
+      source_url: "https://abbotlibrary.org/"
+      source_label: "Abbot Public Library; six elected trustees on staggered 3-year terms"
+    - name: "Harbors & Waters Board"
+      kind: "appointed"
+      appointed_by: "Select Board"
+      seats: 5
+      term_years: null
+      term_years_null_reason: "Term length not specified on the Harbors & Waters Board page."
+      decides: >-
+        Recommends and implements programs for the efficient and
+        equitable utilization of Marblehead's harbors and public
+        waterfront areas. The Harbormaster reports to this board and
+        to the Town Administrator.
+      cadence: "Monthly meetings"
+      source_url: "https://marbleheadma.gov/harbors-waters-board/"
+      source_label: >-
+        Town of Marblehead, Harbors & Waters Board (5 regular members +
+        3 alternates, appointed by Select Board)
+    - name: "Council on Aging Board"
+      kind: "appointed"
+      appointed_by: "Select Board"
+      seats: null
+      seats_null_reason: "Council on Aging page references the board but does not list current member count."
+      term_years: null
+      term_years_null_reason: "Term length not published on the COA page."
+      decides: >-
+        Advises the Council on Aging department on programs and policies
+        serving Marblehead residents age 55 and older.
+      cadence: "Monthly meetings"
+      source_url: "https://marbleheadma.gov/coa/"
+      source_label: "Town of Marblehead, Council on Aging"

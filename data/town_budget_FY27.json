@@ -1,12 +1,266 @@
 {
   "meta": {
-    "generated_at": "2026-05-02T22:47:52+00:00",
+    "generated_at": "2026-05-03T01:06:46+00:00",
     "source_doc": "FY27 Proposed Budget \u2014 No Override",
     "source_pdf_url": "https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override",
     "school_packet_url": "https://www.marbleheadschools.org/school-committee/files/fy27-proposed-budget-packet",
     "history_source": "DOR Schedule A function-level expenditures FY02-FY24",
     "total_general_fund": 109777938,
-    "total_with_enterprise": 122762030
+    "total_with_enterprise": 122762030,
+    "override_tiers": [
+      {
+        "category": "Public Safety",
+        "description": "Restore Police Department School Resource Officer Cut",
+        "tier_1": 65482,
+        "tier_2": 65482,
+        "tier_3": 65482
+      },
+      {
+        "category": "Public Safety",
+        "description": "Increase Police Department Staffing",
+        "tier_1": 0,
+        "tier_2": 65482,
+        "tier_3": 130964
+      },
+      {
+        "category": "Public Safety",
+        "description": "Restore Police Department Equipment Cut",
+        "tier_1": 2000,
+        "tier_2": 2000,
+        "tier_3": 2000
+      },
+      {
+        "category": "Public Safety",
+        "description": "Increase Fire Department Staffing",
+        "tier_1": 0,
+        "tier_2": 148000,
+        "tier_3": 444000
+      },
+      {
+        "category": "Public Safety",
+        "description": "Restore Inspections Other Technical Subscriptions & Maintenance Cuts",
+        "tier_1": 52500,
+        "tier_2": 52500,
+        "tier_3": 52500
+      },
+      {
+        "category": "Public Works",
+        "description": "Restore Department of Public Works Staffing Cuts",
+        "tier_1": 140594,
+        "tier_2": 140594,
+        "tier_3": 140594
+      },
+      {
+        "category": "Public Works",
+        "description": "Restore Department of Public Works Hot Top Cuts",
+        "tier_1": 60000,
+        "tier_2": 60000,
+        "tier_3": 60000
+      },
+      {
+        "category": "Public Works",
+        "description": "Increase Department of Public Works Staffing GIS position",
+        "tier_1": 0,
+        "tier_2": 70000,
+        "tier_3": 70000
+      },
+      {
+        "category": "Public Works",
+        "description": "Restore Cemetery Laborer Cut",
+        "tier_1": 58692,
+        "tier_2": 58692,
+        "tier_3": 58692
+      },
+      {
+        "category": "Recreation Library Parks",
+        "description": "Restore Abbot Library Staffing cuts for accreditation",
+        "tier_1": 311183,
+        "tier_2": 311183,
+        "tier_3": 311183
+      },
+      {
+        "category": "Recreation Library Parks",
+        "description": "Restore Abbot Library Staffing Cuts",
+        "tier_1": 0,
+        "tier_2": 218980,
+        "tier_3": 218980
+      },
+      {
+        "category": "Recreation Library Parks",
+        "description": "Restore Abbot Library Materials",
+        "tier_1": 0,
+        "tier_2": 168400,
+        "tier_3": 168400
+      },
+      {
+        "category": "Recreation Library Parks",
+        "description": "Increase Abbot Library Staffing 1 PT Custodian and 1 PT Assistant",
+        "tier_1": 0,
+        "tier_2": 38378,
+        "tier_3": 38378
+      },
+      {
+        "category": "Recreation Library Parks",
+        "description": "Restore Recreation and Parks Groundskeeper Staffing Cut",
+        "tier_1": 45000,
+        "tier_2": 45000,
+        "tier_3": 45000
+      },
+      {
+        "category": "Recreation Library Parks",
+        "description": "Increase Recreation and Parks Staffing 1 PT Senior Clerk",
+        "tier_1": 0,
+        "tier_2": 27000,
+        "tier_3": 27000
+      },
+      {
+        "category": "Recreation Library Parks",
+        "description": "Increase Recreation and Parks Maintenance",
+        "tier_1": 0,
+        "tier_2": 15000,
+        "tier_3": 15000
+      },
+      {
+        "category": "General Government",
+        "description": "Restore Finance Staffing Cut",
+        "tier_1": 68287,
+        "tier_2": 68287,
+        "tier_3": 68287
+      },
+      {
+        "category": "General Government",
+        "description": "Restore Finance Technology and Training Cut",
+        "tier_1": 58361,
+        "tier_2": 58361,
+        "tier_3": 58361
+      },
+      {
+        "category": "General Government",
+        "description": "Restore Finance Committee Reserve Fund Cut",
+        "tier_1": 26000,
+        "tier_2": 26000,
+        "tier_3": 26000
+      },
+      {
+        "category": "General Government",
+        "description": "Increase Finance Staffing - IT Director",
+        "tier_1": 0,
+        "tier_2": 150000,
+        "tier_3": 150000
+      },
+      {
+        "category": "General Government",
+        "description": "Increase Finance Staffing - Budget Analyst",
+        "tier_1": 0,
+        "tier_2": 70000,
+        "tier_3": 70000
+      },
+      {
+        "category": "General Government",
+        "description": "Restore HR Other Technical Advertising Subscriptions Cuts",
+        "tier_1": 11000,
+        "tier_2": 11000,
+        "tier_3": 11000
+      },
+      {
+        "category": "General Government",
+        "description": "Restore Community Development and Planning Staffing Cut",
+        "tier_1": 137423,
+        "tier_2": 307975,
+        "tier_3": 307975
+      },
+      {
+        "category": "General Government",
+        "description": "Increase Community Development Staffing - Grant Writer",
+        "tier_1": 0,
+        "tier_2": 0,
+        "tier_3": 70000
+      },
+      {
+        "category": "General Government",
+        "description": "Restore Town Clerk Special Clerk Staffing Cut",
+        "tier_1": 0,
+        "tier_2": 66125,
+        "tier_3": 66125
+      },
+      {
+        "category": "General Government",
+        "description": "Restore Public Buildings Custodians Staffing Cuts",
+        "tier_1": 122554,
+        "tier_2": 122554,
+        "tier_3": 122554
+      },
+      {
+        "category": "General Government",
+        "description": "Increase Public Buildings Maintenance",
+        "tier_1": 0,
+        "tier_2": 450000,
+        "tier_3": 450000
+      },
+      {
+        "category": "Health and Human Services",
+        "description": "Restore Council on Aging Staffing Cuts",
+        "tier_1": 76171,
+        "tier_2": 76171,
+        "tier_3": 76171
+      },
+      {
+        "category": "Health and Human Services",
+        "description": "Increase Council on Aging Staffing - PT Social Worker",
+        "tier_1": 0,
+        "tier_2": 45000,
+        "tier_3": 45000
+      },
+      {
+        "category": "Health and Human Services",
+        "description": "Increase Council on Aging Maintenance",
+        "tier_1": 0,
+        "tier_2": 15000,
+        "tier_3": 15000
+      },
+      {
+        "category": "Health and Human Services",
+        "description": "Increase Health Department for Mental Health Psychological Counseling",
+        "tier_1": 0,
+        "tier_2": 0,
+        "tier_3": 60000
+      },
+      {
+        "category": "Other General Government",
+        "description": "Restore Town Portion of OPEB Transfer",
+        "tier_1": 96771,
+        "tier_2": 96771,
+        "tier_3": 96771
+      },
+      {
+        "category": "Other General Government",
+        "description": "Restore Stabilization Transfer",
+        "tier_1": 250000,
+        "tier_2": 250000,
+        "tier_3": 250000
+      },
+      {
+        "category": "Other General Government",
+        "description": "Restore Workers Comp and Section 111F Transfer",
+        "tier_1": 97662,
+        "tier_2": 97662,
+        "tier_3": 97662
+      },
+      {
+        "category": "Recurring Capital",
+        "description": "Recurring Capital funding Leases Equipment and Buildings Articles",
+        "tier_1": 0,
+        "tier_2": 0,
+        "tier_3": 1000000
+      },
+      {
+        "category": "Offset",
+        "description": "Reduction to Unemployment with Restoration of Positions",
+        "tier_1": -410116,
+        "tier_2": -692361,
+        "tier_3": -692361
+      }
+    ]
   },
   "rows": [
     {

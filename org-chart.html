@@ -1,0 +1,250 @@
+---
+title: "Who runs Marblehead?"
+scripts: [citations]
+og_title: "Who runs Marblehead?"
+og_description: "The two parallel administrations that run Marblehead, the elected boards above them, and the levers residents actually have."
+og_url: https://marbleheaddata.org/org-chart.html
+---
+<h1>Who runs Marblehead?</h1>
+
+<p class="page-lead">Marblehead is run by two parallel administrations, overseen by elected boards, all answerable to the town's registered voters.</p>
+
+<div class="key-stats">
+  <div class="key-stat">
+    <div class="key-stat-value">{{ site.data.org_chart.key_stats.town_departments }}</div>
+    <div class="key-stat-label">Town departments</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">{{ site.data.org_chart.key_stats.school_buildings }}</div>
+    <div class="key-stat-label">School buildings</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">{{ site.data.org_chart.key_stats.elected_seats }}</div>
+    <div class="key-stat-label">Elected board seats</div>
+  </div>
+  <div class="key-stat">
+    <div class="key-stat-value">{% assign rv = site.data.org_chart.key_stats.registered_voters %}{% if rv %}{% assign rv_k = rv | divided_by: 1000 %}{% assign rv_r = rv | modulo: 1000 | prepend: "00" | slice: -3, 3 %}{{ rv_k }},{{ rv_r }}<sup class="cite" data-href="{{ site.data.org_chart.key_stats.registered_voters_source_url }}" data-source="{{ site.data.org_chart.key_stats.registered_voters_source_label }}"></sup>{% else %}<span title="{{ site.data.org_chart.key_stats.registered_voters_null_reason }}">&ndash;</span>{% endif %}</div>
+    <div class="key-stat-label">Registered voters</div>
+  </div>
+</div>
+
+<nav class="page-toc" aria-label="On this page">
+  <span class="page-toc-label">On this page</span>
+  <a href="#the-chart">The two administrations</a>
+  <a href="#boards-above">The boards above them</a>
+  <a href="#your-role">Your role</a>
+</nav>
+
+<h2 id="the-chart">The two administrations</h2>
+
+<p>State law makes the school committee an independent employer, so the town and schools each run their own administrative operation. The town side is grouped into five functional clusters; schools have a leaner two-cluster structure (Central Office + Buildings) because they serve a single mission. The boxes below are point-in-time as of {{ site.data.org_chart.key_stats.snapshot }}. Click a department to see the named roles beneath the head. <abbr class="g" title="Full-Time Equivalent">FTE</abbr> figures are mostly FY26 headcount (includes part-time) where granular FTE is not published; hover the count for the basis.</p>
+
+<div class="org-chart">
+
+  <div class="org-column">
+    <div class="org-column-header">Town</div>
+    <div class="org-root">
+      <span class="org-root-title">{{ site.data.org_chart.town.head.title }}</span>
+      <span class="org-card-fte">{{ site.data.org_chart.town.head.fte }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr><sup class="cite" data-href="{{ site.data.org_chart.town.head.source_url }}" data-source="{{ site.data.org_chart.town.head.source_label }}"></sup></span>
+      {% if site.data.org_chart.town.head.note %}<p class="org-card-note">{{ site.data.org_chart.town.head.note }}</p>{% endif %}
+    </div>
+
+    {% for cluster_name in site.data.org_chart.town.cluster_order %}
+    {% assign cluster_depts = site.data.org_chart.town.departments | where: "cluster", cluster_name %}
+    {% assign cluster_total = 0 %}
+    {% for d in cluster_depts %}{% if d.fte %}{% assign cluster_total = cluster_total | plus: d.fte %}{% endif %}{% endfor %}
+    <div class="org-cluster">
+      <div class="org-cluster-header">
+        <span class="org-cluster-name">{{ cluster_name }}</span>
+        <span class="org-cluster-total">{{ cluster_total }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span>
+      </div>
+      <div class="org-cluster-grid">
+        {% for dept in cluster_depts %}
+        <div class="org-card">
+          <span class="org-card-dept">{{ dept.name }}</span>
+          <span class="org-card-head">{{ dept.head_title }}</span>
+          <span class="org-card-fte">
+            {% if dept.fte %}
+              <span{% if dept.fte_basis %} title="{{ dept.fte_basis }}"{% endif %}>{{ dept.fte }}</span>
+              <abbr class="g" title="Full-Time Equivalent">FTE</abbr>
+            {% else %}
+              <span title="{{ dept.fte_null_reason }}">&ndash;</span>
+            {% endif %}
+            <sup class="cite" data-href="{{ dept.source_url }}" data-source="{{ dept.source_label }}"></sup>
+          </span>
+          {% if dept.staff and dept.staff.size > 0 %}
+          <details>
+            <summary>staff</summary>
+            <ul>
+              {% for role in dept.staff %}<li>{{ role }}</li>{% endfor %}
+            </ul>
+          </details>
+          {% endif %}
+          {% if dept.note %}<p class="org-card-note">{{ dept.note }}</p>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="org-column">
+    <div class="org-column-header">Schools</div>
+    <div class="org-root">
+      <span class="org-root-title">{{ site.data.org_chart.schools.head.title }}</span>
+      <span class="org-card-fte">{{ site.data.org_chart.schools.head.fte }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr><sup class="cite" data-href="{{ site.data.org_chart.schools.head.source_url }}" data-source="{{ site.data.org_chart.schools.head.source_label }}"></sup></span>
+      {% if site.data.org_chart.schools.head.note %}<p class="org-card-note">{{ site.data.org_chart.schools.head.note }}</p>{% endif %}
+    </div>
+
+    {% assign co_total = 0 %}
+    {% for d in site.data.org_chart.schools.central_office %}{% if d.fte %}{% assign co_total = co_total | plus: d.fte %}{% endif %}{% endfor %}
+    <div class="org-cluster">
+      <div class="org-cluster-header">
+        <span class="org-cluster-name">Central Office</span>
+        <span class="org-cluster-total">{{ co_total }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span>
+      </div>
+      <div class="org-cluster-grid">
+        {% for dept in site.data.org_chart.schools.central_office %}
+        <div class="org-card">
+          <span class="org-card-dept">{{ dept.name }}</span>
+          <span class="org-card-head">{{ dept.head_title }}</span>
+          <span class="org-card-fte">
+            {% if dept.fte %}
+              <span{% if dept.fte_basis %} title="{{ dept.fte_basis }}"{% endif %}>{{ dept.fte }}</span>
+              <abbr class="g" title="Full-Time Equivalent">FTE</abbr>
+            {% else %}
+              <span title="{{ dept.fte_null_reason }}">&ndash;</span>
+            {% endif %}
+            <sup class="cite" data-href="{{ dept.source_url }}" data-source="{{ dept.source_label }}"></sup>
+          </span>
+          {% if dept.staff and dept.staff.size > 0 %}
+          <details>
+            <summary>staff</summary>
+            <ul>
+              {% for role in dept.staff %}<li>{{ role }}</li>{% endfor %}
+            </ul>
+          </details>
+          {% endif %}
+          {% if dept.note %}<p class="org-card-note">{{ dept.note }}</p>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% assign sb_total = 0 %}
+    {% for d in site.data.org_chart.schools.buildings %}{% if d.fte %}{% assign sb_total = sb_total | plus: d.fte %}{% endif %}{% endfor %}
+    <div class="org-cluster">
+      <div class="org-cluster-header">
+        <span class="org-cluster-name">School Buildings</span>
+        <span class="org-cluster-total" title="FY26 headcount sum across the five operating buildings.">{{ sb_total }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span>
+      </div>
+      <div class="org-cluster-grid">
+        {% for school in site.data.org_chart.schools.buildings %}
+        <div class="org-card">
+          <span class="org-card-dept">{{ school.name }}</span>
+          <span class="org-card-head">{{ school.head_title }}</span>
+          <span class="org-card-fte">
+            {% if school.fte %}
+              <span{% if school.fte_basis %} title="{{ school.fte_basis }}"{% endif %}>{{ school.fte }}</span>
+              <abbr class="g" title="Full-Time Equivalent">FTE</abbr>
+            {% else %}
+              <span title="{{ school.fte_null_reason }}">&ndash;</span>
+            {% endif %}
+            <sup class="cite" data-href="{{ school.source_url }}" data-source="{{ school.source_label }}"></sup>
+          </span>
+          {% if school.note %}<p class="org-card-note">{{ school.note }}</p>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% if site.data.org_chart.town.independent_enterprises %}
+<aside class="org-independent">
+  <h3>Independent enterprise</h3>
+  {% for ent in site.data.org_chart.town.independent_enterprises %}
+  <div class="org-card">
+    <span class="org-card-dept">{{ ent.name }}</span>
+    <span class="org-card-head">{{ ent.head_title }}</span>
+    <span class="org-card-fte">
+      {% if ent.headcount_approx %}<span{% if ent.headcount_approx_basis %} title="{{ ent.headcount_approx_basis }}"{% endif %}>~{{ ent.headcount_approx }} employees</span>{% else %}<span title="{{ ent.fte_null_reason }}">&ndash;</span>{% endif %}
+      <sup class="cite" data-href="{{ ent.source_url }}" data-source="{{ ent.source_label }}"></sup>
+    </span>
+    {% if ent.note %}<p class="org-card-note">{{ ent.note }}</p>{% endif %}
+  </div>
+  {% endfor %}
+</aside>
+{% endif %}
+
+<section class="board-section">
+  <h2 id="boards-above">The boards above them</h2>
+
+  <p>Every administrator on the chart above answers to one or more elected or appointed boards. Three of them &ndash; Select Board, School Committee, and Finance Committee &ndash; drive the override debate and the overall budget. The rest set policy in their own domains.</p>
+
+  <div class="board-emphasized">
+    {% for board in site.data.org_chart.boards.emphasized %}
+    <div class="board-card board-card-emphasized">
+      <a href="{{ board.source_url }}" class="board-card-name">{{ board.name }}</a>
+      <div class="board-card-meta">
+        {% if board.seats %}{{ board.seats }} seats{% else %}<span title="{{ board.seats_null_reason }}">&ndash; seats</span>{% endif %} &middot;
+        {% if board.term_years %}{{ board.term_years }}-year terms{% else %}<span title="{{ board.term_years_null_reason }}">&ndash; terms</span>{% endif %} &middot;
+        {% if board.kind == "elected" %}elected{% else %}appointed{% if board.appointed_by %} by {{ board.appointed_by }}{% endif %}{% endif %} &middot;
+        {{ board.cadence }}
+      </div>
+      <p class="board-card-decides">{{ board.decides }}</p>
+      {% if board.note %}<p class="org-card-note">{{ board.note }}</p>{% endif %}
+      <sup class="cite" data-href="{{ board.source_url }}" data-source="{{ board.source_label }}"></sup>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h3>Other boards and committees</h3>
+  <div class="board-grid">
+    {% for board in site.data.org_chart.boards.other %}
+    <div class="board-card">
+      <a href="{{ board.source_url }}" class="board-card-name">{{ board.name }}</a>
+      <div class="board-card-meta">
+        {% if board.seats %}{{ board.seats }} seats{% else %}<span title="{{ board.seats_null_reason }}">&ndash; seats</span>{% endif %} &middot;
+        {% if board.term_years %}{{ board.term_years }}-year terms{% else %}<span title="{{ board.term_years_null_reason }}">&ndash; terms</span>{% endif %} &middot;
+        {% if board.kind == "elected" %}elected{% else %}appointed{% if board.appointed_by %} by {{ board.appointed_by }}{% endif %}{% endif %} &middot;
+        {{ board.cadence }}
+      </div>
+      <p class="board-card-decides">{{ board.decides }}</p>
+      {% if board.note %}<p class="org-card-note">{{ board.note }}</p>{% endif %}
+      <sup class="cite" data-href="{{ board.source_url }}" data-source="{{ board.source_label }}"></sup>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="voter-role-section">
+  <h2 id="your-role">Your role</h2>
+
+  <p>The voters of Marblehead elect the boards, fund the budget, and have the last word on overrides and bylaws. Here are the levers, plainly.</p>
+
+  <h3>Vote</h3>
+  <ul>
+    <li><strong>Annual town election (early May)</strong> &ndash; picks Select Board, School Committee, Town Moderator, Light Commission, and the other elected seats.</li>
+    <li><strong>Town Meeting</strong> &ndash; every registered voter is a member; you vote directly on the budget, overrides, and bylaws.</li>
+    <li><strong>Ballot questions</strong> &ndash; overrides, debt exclusions, and charter changes appear on the May ballot.</li>
+  </ul>
+
+  <h3>Show up</h3>
+  <ul>
+    <li><strong>Public comment</strong> &ndash; most boards take comment at the start of the meeting.</li>
+    <li><strong>Town Meeting attendance</strong> &ndash; quorum matters; this is the only body that can approve the budget.</li>
+    <li><strong>Run for a seat</strong> &ndash; most boards have at least one seat up every May. Nomination papers open in late winter through the Town Clerk.</li>
+  </ul>
+
+  <h3>Ask</h3>
+  <ul>
+    <li><strong>Public records request</strong> &ndash; <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleX/Chapter66/Section10"><abbr class="g" title="Massachusetts General Laws">MGL</abbr> c.66 &sect;10</a> gives you the right to request town and school records.</li>
+    <li><strong>Email or call elected reps directly</strong> &ndash; Select Board and School Committee members publish email addresses on their respective official sites.</li>
+    <li><strong>File a citizen petition</strong> &ndash; 10 registered voters can put an article on the Town Meeting warrant.</li>
+  </ul>
+
+  <p><em>This page is a point-in-time snapshot as of {{ site.data.org_chart.key_stats.snapshot }} and will go stale after the next May election.</em></p>
+</section>
