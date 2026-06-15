@@ -14,7 +14,14 @@ regexes = [
   # URL-restricted in the Mapbox dashboard to marbleheaddata.org +
   # *.marbleheaddata-preview.pages.dev + localhost. Secret tokens (sk.*)
   # are still caught by gitleaks' default Mapbox rule.
-  '''mapbox_token:\s*"pk\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+"''',
+  '''pk\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+''',
+]
+
+stopwords = [
+  # Same allowance via substring: public Mapbox tokens always begin with
+  # "pk.eyJ" (JWT header for the well-known JSON payload). Belt-and-braces
+  # alongside the regex above.
+  '''pk.eyJ''',
 ]
 
 paths = [
