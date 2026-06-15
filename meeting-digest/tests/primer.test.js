@@ -197,3 +197,32 @@ describe('fetchPrimers', () => {
     expect(out[0].filename).toBe('01-alt.md');
   });
 });
+
+import { pickPrimer } from '../worker/src/lib/primer.js';
+
+describe('pickPrimer', () => {
+  const primers = [
+    { week_index: 1, title: 'A' },
+    { week_index: 2, title: 'B' },
+    { week_index: 3, title: 'C' }
+  ];
+
+  it('returns primer week 1 when dripWeekIndex is 0', () => {
+    expect(pickPrimer(primers, 0)?.title).toBe('A');
+  });
+  it('returns primer week 2 when dripWeekIndex is 1', () => {
+    expect(pickPrimer(primers, 1)?.title).toBe('B');
+  });
+  it('returns null when the next index does not exist', () => {
+    expect(pickPrimer(primers, 3)).toBeNull();
+  });
+  it('returns null when the primer list is empty', () => {
+    expect(pickPrimer([], 0)).toBeNull();
+  });
+  it('tolerates non-contiguous week_index values', () => {
+    const sparse = [{ week_index: 1, title: 'A' }, { week_index: 3, title: 'C' }];
+    expect(pickPrimer(sparse, 0)?.title).toBe('A');
+    expect(pickPrimer(sparse, 1)).toBeNull();   // looking for week 2 — not present
+    expect(pickPrimer(sparse, 2)?.title).toBe('C');
+  });
+});

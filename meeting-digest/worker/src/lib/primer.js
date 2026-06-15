@@ -103,3 +103,8 @@ export async function fetchPrimers(env) {
   }
   return out;
 }
+
+export function pickPrimer(primers, dripWeekIndex) {
+  const target = dripWeekIndex + 1;
+  return primers.find(p => p.week_index === target) || null;
+}
