@@ -146,8 +146,11 @@ export async function handleClaimAddress(request, env) {
 
     // ON CONFLICT: a user who first joined via invite-handshake now also
     // signing in with FB lands on the same identity_hash. Don't fail --
-    // attach the FB credentials to the existing row and preserve their
-    // branch_root, invites_remaining, original claim_source, etc.
+    // attach the FB credentials to the existing row, preserve their
+    // branch_root + invites_remaining, and upgrade claim_source to
+    // 'assessor_match' (a live FB+assessor match is stronger than a
+    // historical vouch). auth_source stays as it was; it records how
+    // they FIRST came in, not how they're currently authed.
     await env.DB.prepare(
       'INSERT INTO residents (' +
       '  identity_hash, fb_user_id, display_name, fb_profile_url, ' +
@@ -156,6 +159,7 @@ export async function handleClaimAddress(request, env) {
       'ON CONFLICT(identity_hash) DO UPDATE SET ' +
       '  fb_user_id = excluded.fb_user_id, ' +
       '  fb_profile_url = excluded.fb_profile_url, ' +
+      '  claim_source = excluded.claim_source, ' +
       '  display_name = COALESCE(residents.display_name, excluded.display_name)'
     ).bind(
       hash, payload.fb_user_id, payload.fb_display_name,
