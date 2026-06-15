@@ -71,7 +71,7 @@
       "amount_fy26": 43914648,
       "share": 0.439,
       "bucket": "town_meeting",
-      "authorized_by": "Annual Town Meeting representatives",
+      "authorized_by": "Registered voters at Annual Town Meeting (Open Town Meeting; no delegates)",
       "authorized_when": "Annual Town Meeting, May 2025 (FY26 omnibus budget article)",
       "vote_source": "data/2025_FinCom_Report.pdf (transmittal letter); Town Clerk's published warrant and minutes",
       "one_line": "Year-to-year operating budget for every General Fund Town department (DPW, Fire, Police, Library, Council on Aging, Town Clerk, Finance, etc.)",
@@ -92,7 +92,7 @@
       "amount_fy26": 8066631,
       "share": 0.081,
       "bucket": "town_meeting",
-      "authorized_by": "Annual Town Meeting representatives",
+      "authorized_by": "Registered voters at Annual Town Meeting (Open Town Meeting; no delegates)",
       "authorized_when": "Annual Town Meeting, May 2025 (school appropriation article)",
       "vote_source": "data/2025_FinCom_Report.pdf; School Committee FY26 budget book",
       "one_line": "Year-to-year operating budget for Marblehead Public Schools (vendor spend; teacher salaries paid via payroll, not in ledger)."
@@ -132,7 +132,7 @@
       "amount_fy26": 2305312,
       "share": 0.023,
       "bucket": "town_meeting",
-      "authorized_by": "Annual Town Meeting representatives",
+      "authorized_by": "Registered voters at Annual Town Meeting (Open Town Meeting; no delegates)",
       "authorized_when": "ATM capital articles, each year as adopted",
       "vote_source": "Town Clerk's annual warrant and minutes",
       "one_line": "Capital articles funded inside the levy (no debt exclusion); each individual article voted at Town Meeting."
