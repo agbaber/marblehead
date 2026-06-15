@@ -495,6 +495,14 @@ schools:
     note: >-
       District total FTE (all roles, all buildings): 430.2 in SY2026 per
       DESE EPIMS (data/dese_total_educator_fte.csv).
+  district_only_fte: 32.5
+  district_only_basis: >-
+    DESE EPIMS roles not assigned to a specific building (Superintendent,
+    Assistant Superintendents, Business Official, district administrators,
+    Information Services district team, School Resource Officer, district
+    health staff). The five buildings sum to 397.7 FTE; the remaining
+    32.5 FTE is the district-only layer. Sources: data/_enrichment/
+    dese_school_staff.yml.
   central_office:
     - name: "Finance & Operations"
       head_title: "Assistant Superintendent for Finance & Operations"
@@ -581,32 +589,90 @@ schools:
       abbreviation: "MHS"
       head_title: "Principal"
       fte: 125
-      fte_basis: "FY2026 headcount"
+      fte_basis: "FY2026 town payroll headcount (includes PT, custodial, food service)"
+      dese_fte: 118.3
+      dese_fte_basis: "DESE EPIMS educator FTE, SY2025-26 (excludes non-educator support)"
+      org_code: "01680505"
+      dese_role_breakdown:
+        - category: "Administrators"
+          fte: 6.0
+        - category: "Instructional Staff"
+          fte: 78.5
+        - category: "Instructional Support Staff"
+          fte: 16.6
+        - category: "Instructional Support and Special Education Shared Staff"
+          fte: 6.0
+        - category: "Special Education Related Staff"
+          fte: 1.4
+        - category: "Medical/Health Services"
+          fte: 0.8
+        - category: "Office/Clerical/Administrative Support"
+          fte: 4.6
+        - category: "Paraprofessional"
+          fte: 4.4
       staff:
         - "Assistant Principal (×2)"
         - "Athletics Director"
         - "Assistant Athletics Director"
       source_url: "https://mhs.marbleheadschools.org"
-      source_label: "Marblehead High School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (HIGH SCHOOL line)"
+      source_label: "Marblehead High School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (HIGH SCHOOL line); DESE FTE from EPIMS profile, SY2025-26"
     - name: "Marblehead Veterans Middle School"
       abbreviation: "MVMS"
       head_title: "Principal"
       fte: 65
-      fte_basis: "FY2026 headcount"
+      fte_basis: "FY2026 town payroll headcount (includes PT, custodial, food service)"
+      dese_fte: 59.3
+      dese_fte_basis: "DESE EPIMS educator FTE, SY2025-26 (excludes non-educator support)"
+      org_code: "01680300"
+      dese_role_breakdown:
+        - category: "Administrators"
+          fte: 3.0
+        - category: "Instructional Staff"
+          fte: 37.6
+        - category: "Instructional Support Staff"
+          fte: 9.4
+        - category: "Instructional Support and Special Education Shared Staff"
+          fte: 1.0
+        - category: "Special Education Related Staff"
+          fte: 2.0
+        - category: "Medical/Health Services"
+          fte: 1.0
+        - category: "Office/Clerical/Administrative Support"
+          fte: 3.3
+        - category: "Paraprofessional"
+          fte: 2.0
       staff:
         - "Assistant Principal"
       source_url: "https://mvms.marbleheadschools.org"
-      source_label: "Marblehead Veterans Middle School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (VETERANS MIDDLE SCHOOL line)"
+      source_label: "Marblehead Veterans Middle School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (VETERANS MIDDLE SCHOOL line); DESE FTE from EPIMS profile, SY2025-26"
     - name: "Brown Elementary School"
       abbreviation: "Brown"
       head_title: "Principal"
       fte: 88
-      fte_basis: "FY2026 headcount"
+      fte_basis: "FY2026 town payroll headcount (includes PT, custodial, food service)"
+      dese_fte: 76.5
+      dese_fte_basis: "DESE EPIMS educator FTE, SY2025-26 (excludes non-educator support)"
+      org_code: "01680030"
+      dese_role_breakdown:
+        - category: "Administrators"
+          fte: 3.0
+        - category: "Instructional Staff"
+          fte: 38.2
+        - category: "Instructional Support Staff"
+          fte: 23.1
+        - category: "Instructional Support and Special Education Shared Staff"
+          fte: 0.6
+        - category: "Special Education Related Staff"
+          fte: 5.6
+        - category: "Office/Clerical/Administrative Support"
+          fte: 3.0
+        - category: "Paraprofessional"
+          fte: 2.0
       staff:
         - "Assistant Principal"
         - "Special Education Team Chair"
       source_url: "https://brown.marbleheadschools.org"
-      source_label: "Brown Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (BROWN SCHOOL line)"
+      source_label: "Brown Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (BROWN SCHOOL line); DESE FTE from EPIMS profile, SY2025-26"
       note: >-
         Bell, Coffin, Eveleth, and Gerry are former elementary buildings,
         no longer operating as schools. Marblehead currently operates
@@ -615,20 +681,58 @@ schools:
       abbreviation: "Glover"
       head_title: "Principal"
       fte: 66
-      fte_basis: "FY2026 headcount"
+      fte_basis: "FY2026 town payroll headcount (includes PT, custodial, food service)"
+      dese_fte: 62.4
+      dese_fte_basis: "DESE EPIMS educator FTE, SY2025-26 (excludes non-educator support)"
+      org_code: "01680020"
+      dese_role_breakdown:
+        - category: "Administrators"
+          fte: 2.0
+        - category: "Instructional Staff"
+          fte: 25.8
+        - category: "Instructional Support Staff"
+          fte: 19.8
+        - category: "Instructional Support and Special Education Shared Staff"
+          fte: 1.0
+        - category: "Special Education Related Staff"
+          fte: 4.8
+        - category: "Medical/Health Services"
+          fte: 3.0
+        - category: "Office/Clerical/Administrative Support"
+          fte: 1.0
+        - category: "Paraprofessional"
+          fte: 5.0
       staff:
         - "Special Education Team Chair"
       source_url: "https://glover.marbleheadschools.org"
-      source_label: "Glover Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (GLOVER SCHOOL line)"
+      source_label: "Glover Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (GLOVER SCHOOL line); DESE FTE from EPIMS profile, SY2025-26"
     - name: "Village Elementary School"
       abbreviation: "Village"
       head_title: "Principal"
       fte: 90
-      fte_basis: "FY2026 headcount"
+      fte_basis: "FY2026 town payroll headcount (includes PT, custodial, food service)"
+      dese_fte: 81.2
+      dese_fte_basis: "DESE EPIMS educator FTE, SY2025-26 (excludes non-educator support)"
+      org_code: "01680016"
+      dese_role_breakdown:
+        - category: "Administrators"
+          fte: 3.0
+        - category: "Instructional Staff"
+          fte: 49.1
+        - category: "Instructional Support Staff"
+          fte: 20.9
+        - category: "Instructional Support and Special Education Shared Staff"
+          fte: 2.5
+        - category: "Medical/Health Services"
+          fte: 2.0
+        - category: "Office/Clerical/Administrative Support"
+          fte: 3.0
+        - category: "Paraprofessional"
+          fte: 0.7
       staff:
         - "Assistant Principal"
       source_url: "https://village.marbleheadschools.org"
-      source_label: "Village Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (VILLAGE SCHOOL line)"
+      source_label: "Village Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (VILLAGE SCHOOL line); DESE FTE from EPIMS profile, SY2025-26"
 
 boards:
   emphasized:
