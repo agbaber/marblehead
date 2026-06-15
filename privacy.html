@@ -25,6 +25,36 @@ og_url: https://marbleheaddata.org/privacy.html
 <p>The rest of the Marblehead Budget Data site uses Cloudflare Web Analytics for basic, privacy-friendly traffic measurement. Cloudflare Web Analytics does not use cookies, does not track individual users across sites, and does not collect personal data. It records aggregate page views and referrer information only.</p>
 <p>The site also uses PostHog to track anonymous usage events: which table-of-contents links visitors click, whether the tax calculator is used (yes or no, not the values entered), and how far down a page visitors scroll. PostHog does not collect names, emails, or device identifiers. No personal profiles are created. The data helps the author understand which sections are actually being read so the site can improve over time.</p>
 
+<h2 id="facebook-sign-in">Facebook sign-in</h2>
+<p>
+  Marbleheaddata.org offers Facebook as an optional way to sign in and
+  claim your address as a verified resident. When you sign in with
+  Facebook we receive:
+</p>
+<ul>
+  <li>Your Facebook user ID, a stable identifier we use to recognize you
+    on return visits.</li>
+  <li>Your Facebook display name, used to match against the assessor
+    record for your claimed address, and as your editable default
+    display name on the site.</li>
+  <li>Your Facebook profile URL, stored so a human verifier can DM you
+    in the fallback case where your name does not match the assessor
+    record.</li>
+  <li>Your profile picture URL.</li>
+</ul>
+<p>
+  We do not receive your friends list, posts, photos, or email at this
+  time. Your Facebook access token is used only to fetch the data above
+  and is then discarded. We never store it. You can sign out at any
+  time from your profile page, which clears your session and stops the
+  site from showing you as signed in.
+</p>
+<p>
+  Your claimed address is visible only to you on your own profile page.
+  It is never shown to other users, never published, and never returned
+  by any public endpoint.
+</p>
+
 <h2>Questions</h2>
 <p>If something on this page is unclear or you want to verify any claim above, the full source code for the community pulse feature (front-end widget and server-side Worker) is published at <a href="https://github.com/agbaber/marblehead">github.com/agbaber/marblehead</a> under the <code>community-pulse/</code> and <code>assets/community-pulse/</code> directories. You can read the code and confirm these claims for yourself.</p>
 
