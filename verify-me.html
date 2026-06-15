@@ -44,49 +44,34 @@ permalink: /verify-me.html
     max-width: 580px;
   }
 
-  /* Primary CTA card --------------------------------------------- */
-  .vm-primary {
-    box-sizing: border-box;
-    max-width: 460px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 22px 22px 20px;
-    margin: 0 0 18px;
-    position: relative;
-  }
-  .vm-primary::before {
-    content: 'RECOMMENDED';
-    position: absolute;
-    top: -8px;
-    left: 18px;
-    background: var(--c-buoy);
-    color: #fff;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.4px;
-    padding: 3px 8px;
-    border-radius: 3px;
-  }
+  /* Primary CTA --------------------------------------------------- */
+  .vm-primary { margin: 0 0 14px; }
   .vm-fb {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    font-size: 15px;
+    gap: 12px;
+    font-size: 17px;
     font-weight: 700;
     color: #fff;
     background: #1877F2;
     border-radius: 999px;
-    padding: 12px 22px;
+    padding: 15px 22px 15px 16px;
     text-decoration: none;
-    transition: filter 0.15s ease, transform 0.12s ease;
+    box-shadow: 0 1px 2px rgba(24, 119, 242, 0.20),
+                0 10px 28px -8px rgba(24, 119, 242, 0.50);
+    transition: filter 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
   }
-  .vm-fb:hover { filter: brightness(1.08); color: #fff; }
+  .vm-fb:hover {
+    filter: brightness(1.06);
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(24, 119, 242, 0.25),
+                0 14px 32px -8px rgba(24, 119, 242, 0.60);
+  }
   .vm-fb:active { transform: scale(0.98); }
   .vm-fb-mark {
     display: inline-flex;
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
     align-items: center;
     justify-content: center;
     background: #fff;
@@ -95,18 +80,26 @@ permalink: /verify-me.html
     font-family: Georgia, 'Times New Roman', serif;
     font-style: italic;
     border-radius: 50%;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 1;
   }
+  .vm-fb-arrow {
+    margin-left: 2px;
+    transition: transform 0.15s ease;
+    opacity: 0.85;
+  }
+  .vm-fb:hover .vm-fb-arrow { transform: translateX(3px); opacity: 1; }
   .vm-primary-note {
-    margin: 14px 0 0;
+    margin: 12px 0 0;
     font-size: 13px;
     color: var(--text-subtle);
+    max-width: 460px;
   }
   .vm-primary-note a {
     color: var(--text-muted);
     text-decoration: underline;
     text-decoration-color: var(--border);
+    text-decoration-thickness: 1px;
     text-underline-offset: 3px;
   }
   .vm-primary-note a:hover { color: var(--link); text-decoration-color: var(--link); }
@@ -368,7 +361,8 @@ permalink: /verify-me.html
      href="https://marblehead-community-pulse.agbaber.workers.dev/api/auth/fb/start"
      class="vm-fb">
     <span class="vm-fb-mark" aria-hidden="true">f</span>
-    Continue with Facebook
+    <span>Continue with Facebook</span>
+    <span class="vm-fb-arrow" aria-hidden="true">&rarr;</span>
   </a>
   <p class="vm-primary-note">
     <a href="/privacy.html#facebook-sign-in">What we receive from Facebook</a>
