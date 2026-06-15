@@ -45,9 +45,10 @@ export async function exchangeCode({ appId, appSecret, redirectUri, code }) {
  */
 export async function fetchMe(accessToken) {
   const url = new URL(`https://graph.facebook.com/${FB_API_VERSION}/me`);
-  // `link` was removed from public_profile in Graph API v17. Requesting
-  // it fails the whole /me call. Stick to fields the public_profile
-  // scope still returns; synthesize profile_url from the FB user id.
+  // `link` was removed from public_profile in Graph API v17. The id we
+  // get from /me is an app-scoped ID (ASID), not a public profile id, so
+  // facebook.com/<id> 404s. Store profile_url as null until/unless we
+  // ever ship the user_link permission via FB App Review (Phase 3+).
   url.searchParams.set('fields', 'id,name,picture.type(large)');
   url.searchParams.set('access_token', accessToken);
   const res = await fetch(url.toString());
@@ -56,7 +57,7 @@ export async function fetchMe(accessToken) {
   return {
     fb_user_id: data.id,
     display_name: data.name,
-    profile_url: `https://facebook.com/${data.id}`,
+    profile_url: null,
     picture_url: data.picture?.data?.url || null,
   };
 }

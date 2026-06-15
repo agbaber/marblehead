@@ -53,8 +53,11 @@ function render(profile) {
   const name = profile.display_name || 'verified resident';
   const publicNow = profile.public_identity === 1;
   const claimDesc = describeClaimSource(profile);
+  // Facebook returns an app-scoped ID, not a public profile ID, so we
+  // can't link to the user's FB profile without the user_link permission
+  // (FB App Review). Just acknowledge the sign-in for now.
   const fbBadge = profile.has_facebook
-    ? `<li>Facebook <a href="${escapeHtml(profile.fb_profile_url || '#')}" rel="noopener">view profile</a></li>` : '';
+    ? '<li>Facebook (signed in)</li>' : '';
   const pkBadge = profile.has_passkey
     ? '<li>Passkey installed</li>'
     : '<li>No passkey yet. <a href="/verify.html#add-passkey">Add one</a> for faster sign-in.</li>';

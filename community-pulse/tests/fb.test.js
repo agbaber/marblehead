@@ -62,8 +62,10 @@ describe('exchangeCode + fetchMe', () => {
     expect(me).toEqual({
       fb_user_id: '123456',
       display_name: 'John Smith',
-      // public_profile no longer returns `link`; synthesized from id.
-      profile_url: 'https://facebook.com/123456',
+      // public_profile returns an app-scoped id, not a profile id;
+      // facebook.com/<id> would 404. profile_url stays null until/unless
+      // we ship the user_link permission via FB App Review.
+      profile_url: null,
       picture_url: 'https://cdn.fb/john.jpg',
     });
     // Confirm we did NOT request the `link` field, which would error
