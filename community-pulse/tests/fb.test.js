@@ -123,4 +123,38 @@ describe('handleFbCallback', () => {
     const res = await handleFbCallback(req, mockEnv());
     expect(res.status).toBe(400);
   });
+
+  it('redirects to SITE_URL with the JWT in the URL fragment', async () => {
+    // Stub FB token exchange + profile fetch.
+    globalThis.fetch = vi.fn()
+      .mockResolvedValueOnce({ ok: true, json: async () => ({ access_token: 'FBT' }) })
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          id: '777',
+          name: 'Jane Doe',
+          link: 'https://facebook.com/jane',
+          picture: { data: { url: 'https://cdn.fb/j.jpg' } },
+        }),
+      });
+
+    const env = mockEnv({ SITE_URL: 'https://marbleheaddata.org' });
+    const req = new Request(
+      'https://x.example/api/auth/fb/callback?code=C&state=ABC',
+      { headers: { Cookie: 'fb_oauth_state=ABC' } });
+    const res = await handleFbCallback(req, env);
+
+    expect(res.status).toBe(302);
+    const loc = res.headers.get('Location');
+    // New-user path: lands on /verify-me.html with the claim flag and a token.
+    expect(loc.startsWith('https://marbleheaddata.org/verify-me.html#')).toBe(true);
+    expect(loc).toMatch(/token=/);
+    expect(loc).toMatch(/claim=1/);
+    // No session cookie set; only the OAuth state cookie is cleared.
+    const setCookies = res.headers.getSetCookie
+      ? res.headers.getSetCookie()
+      : [res.headers.get('Set-Cookie')];
+    expect(setCookies.some(c => c && c.startsWith('fb_oauth_state=;'))).toBe(true);
+    expect(setCookies.some(c => c && c.startsWith('verify_jwt='))).toBe(false);
+  });
 });

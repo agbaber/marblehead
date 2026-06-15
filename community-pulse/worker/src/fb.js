@@ -61,7 +61,6 @@ export async function fetchMe(accessToken) {
 import { signJWT } from './jwt.js';
 
 const STATE_COOKIE = 'fb_oauth_state';
-const SESSION_COOKIE = 'verify_jwt';
 
 function randomState() {
   const bytes = crypto.getRandomValues(new Uint8Array(32));
@@ -151,13 +150,20 @@ export async function handleFbCallback(req, env) {
   }
 
   const jwt = await signJWT(payload, env.JWT_SECRET);
-  const redirect = (existing && !existing.revoked_at) ? '/profile' : '/verify-me#claim';
 
-  // Set-Cookie can't be comma-joined into one header; use Headers.append
-  // so each cookie ships as its own Set-Cookie line.
+  // The site lives at a different origin than the Worker. Hand the JWT
+  // to the site via the URL fragment (never sent to any server) so the
+  // browser script can stash it in localStorage and use Authorization:
+  // Bearer for the subsequent API calls. Fragments are cleared by the
+  // client right after they're consumed; see assets/community-pulse/claim.js.
+  const siteUrl = env.SITE_URL || originOf(req);
+  const path = (existing && !existing.revoked_at) ? '/profile.html' : '/verify-me.html';
+  const claimFlag = (existing && !existing.revoked_at) ? '' : '&claim=1';
+  const redirect = `${siteUrl}${path}#token=${encodeURIComponent(jwt)}${claimFlag}`;
+
+  // Clear the OAuth state cookie; no session cookie needed (token rides
+  // in the fragment instead).
   const headers = new Headers({ Location: redirect });
-  headers.append('Set-Cookie',
-    `${SESSION_COOKIE}=${jwt}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=86400`);
   headers.append('Set-Cookie',
     `${STATE_COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`);
   return new Response(null, { status: 302, headers });

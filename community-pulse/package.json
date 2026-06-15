@@ -10,9 +10,12 @@
     "worker:deploy": "wrangler deploy worker/src/index.js"
   },
   "devDependencies": {
-    "vitest": "^3.2.0",
     "@cloudflare/vitest-pool-workers": "^0.12.0",
     "fake-indexeddb": "^5.0.2",
+    "vitest": "^3.2.0",
     "wrangler": "^3.60.0"
+  },
+  "dependencies": {
+    "@passwordless-id/webauthn": "^2.4.0"
   }
 }

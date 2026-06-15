@@ -11,6 +11,7 @@ migrations_dir = "schema"
 [vars]
 ALLOWED_ORIGIN = "https://marbleheaddata.org"
 FB_APP_ID = "1024901246889499"
+SITE_URL = "https://marbleheaddata.org"
 
 [dev]
 port = 8787
@@ -30,6 +31,7 @@ migrations_dir = "schema"
 [env.staging.vars]
 ALLOWED_ORIGIN = "*"
 FB_APP_ID = "1024901246889499"
+SITE_URL = "https://marbleheaddata.org"
 # JWT_SECRET is set via `wrangler secret put JWT_SECRET --env staging`.
 # A dev-grade value used to live here; removed once self-serve
 # verification (which signs real session JWTs) shipped to staging.
