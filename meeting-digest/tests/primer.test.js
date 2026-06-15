@@ -1,5 +1,6 @@
-import { describe, it, expect } from 'vitest';
-import { parsePrimer } from '../worker/src/lib/primer.js';
+import { describe, it, expect, beforeEach } from 'vitest';
+import { parsePrimer, fetchPrimers } from '../worker/src/lib/primer.js';
+import { fetchMock } from 'cloudflare:test';
 
 describe('parsePrimer', () => {
   it('parses a valid primer markdown into a primer object', () => {
@@ -89,5 +90,110 @@ Text with <angle> and & ampersand.
 `;
     const p = parsePrimer('04-x.md', md);
     expect(p.body_paragraphs[0]).toBe('Text with <angle> and & ampersand.');
+  });
+});
+
+const ENV = { GITHUB_REPO: 'agbaber/marblehead', GITHUB_BRANCH: 'main' };
+
+function primerMd(weekIndex, title) {
+  return `---
+week_index: ${weekIndex}
+title: "${title}"
+link_url: /x/
+link_label: "Read"
+---
+Body for ${title}.
+`;
+}
+
+describe('fetchPrimers', () => {
+  beforeEach(() => {
+    fetchMock.activate();
+    fetchMock.disableNetConnect();
+  });
+
+  it('returns an empty array when the directory is empty', async () => {
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/agbaber\/marblehead\/contents\/_primers\?ref=main/, method: 'GET' })
+      .reply(200, JSON.stringify([]));
+    const out = await fetchPrimers(ENV);
+    expect(out).toEqual([]);
+  });
+
+  it('parses files and sorts by week_index ascending', async () => {
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/agbaber\/marblehead\/contents\/_primers\?ref=main/, method: 'GET' })
+      .reply(200, JSON.stringify([
+        { type: 'file', name: '03-debt.md',    download_url: 'https://example.com/p3.md' },
+        { type: 'file', name: '01-welcome.md', download_url: 'https://example.com/p1.md' },
+        { type: 'file', name: '02-org.md',     download_url: 'https://example.com/p2.md' }
+      ]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/p1.md', method: 'GET' }).reply(200, primerMd(1, 'Welcome'));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/p2.md', method: 'GET' }).reply(200, primerMd(2, 'Org chart'));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/p3.md', method: 'GET' }).reply(200, primerMd(3, 'Debt'));
+
+    const out = await fetchPrimers(ENV);
+    expect(out.map(p => p.week_index)).toEqual([1, 2, 3]);
+    expect(out[0].title).toBe('Welcome');
+  });
+
+  it('skips files that fail to parse', async () => {
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/agbaber\/marblehead\/contents\/_primers\?ref=main/, method: 'GET' })
+      .reply(200, JSON.stringify([
+        { type: 'file', name: '01-welcome.md', download_url: 'https://example.com/p1.md' },
+        { type: 'file', name: '02-bad.md',     download_url: 'https://example.com/p2.md' }
+      ]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/p1.md', method: 'GET' }).reply(200, primerMd(1, 'Welcome'));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/p2.md', method: 'GET' }).reply(200, 'no frontmatter');
+
+    const out = await fetchPrimers(ENV);
+    expect(out.length).toBe(1);
+    expect(out[0].week_index).toBe(1);
+  });
+
+  it('throws when the directory listing fails (caller decides retry)', async () => {
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/agbaber\/marblehead\/contents\/_primers\?ref=main/, method: 'GET' })
+      .reply(404, '');
+    await expect(fetchPrimers(ENV)).rejects.toThrow(/_primers listing failed: 404/);
+  });
+
+  it('ignores non-markdown files in the directory', async () => {
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/agbaber\/marblehead\/contents\/_primers\?ref=main/, method: 'GET' })
+      .reply(200, JSON.stringify([
+        { type: 'file', name: '01-welcome.md', download_url: 'https://example.com/p1.md' },
+        { type: 'file', name: 'README.txt',    download_url: 'https://example.com/r.txt' },
+        { type: 'dir',  name: 'archived',      download_url: null }
+      ]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/p1.md', method: 'GET' }).reply(200, primerMd(1, 'Welcome'));
+
+    const out = await fetchPrimers(ENV);
+    expect(out.length).toBe(1);
+  });
+
+  it('when two files share a week_index, alphabetically-first filename wins', async () => {
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/agbaber\/marblehead\/contents\/_primers\?ref=main/, method: 'GET' })
+      .reply(200, JSON.stringify([
+        { type: 'file', name: '01-welcome.md', download_url: 'https://example.com/pw.md' },
+        { type: 'file', name: '01-alt.md',     download_url: 'https://example.com/pa.md' }
+      ]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/pw.md', method: 'GET' }).reply(200, primerMd(1, 'Welcome'));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/pa.md', method: 'GET' }).reply(200, primerMd(1, 'Alt'));
+
+    const out = await fetchPrimers(ENV);
+    expect(out.length).toBe(1);
+    expect(out[0].title).toBe('Alt');
+    expect(out[0].filename).toBe('01-alt.md');
   });
 });
