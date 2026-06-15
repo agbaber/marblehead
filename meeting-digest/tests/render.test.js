@@ -103,3 +103,61 @@ describe('renderText', () => {
     expect(text).toMatch(/\/api\/unsubscribe\?token=mtok(?!.*utm_source)/);
   });
 });
+
+const PRIMER_1 = {
+  filename: '01-welcome.md',
+  week_index: 1,
+  title: 'What this site is',
+  link_url: '/about/',
+  link_label: 'About marbleheaddata.org',
+  body_paragraphs: ['First para.', 'Second para.']
+};
+
+describe('renderHtml with primer', () => {
+  it('omits the primer card when primer is null', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-15', null, 0);
+    expect(html).not.toMatch(/Site primer/);
+  });
+
+  it('renders the primer card when primer is provided', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-15', PRIMER_1, 4);
+    expect(html).toContain('Site primer · 1 of 4');
+    expect(html).toContain('What this site is');
+    expect(html).toContain('First para.');
+    expect(html).toContain('Second para.');
+    expect(html).toContain('About marbleheaddata.org');
+  });
+
+  it('UTM-tags the primer link with per-week campaign', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-15', PRIMER_1, 4);
+    expect(html).toMatch(/href="https:\/\/marbleheaddata\.org\/about\/\?utm_source=digest&utm_medium=email&utm_campaign=primer-week-1"/);
+  });
+
+  it('HTML-escapes primer body content', () => {
+    const angry = { ...PRIMER_1, body_paragraphs: ['<script>alert(1)</script>'] };
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-15', angry, 4);
+    expect(html).toContain('&lt;script&gt;alert(1)&lt;/script&gt;');
+    expect(html).not.toContain('<script>alert(1)</script>');
+  });
+
+  it('renders primer total of N when maxPrimerIndex is N', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-15', PRIMER_1, 7);
+    expect(html).toContain('Site primer · 1 of 7');
+  });
+});
+
+describe('renderText with primer', () => {
+  it('omits the primer block when primer is null', () => {
+    const text = renderText([SB_MATCH], SUB, ENV, '2026-06-15', null, 0);
+    expect(text).not.toMatch(/SITE PRIMER/);
+  });
+
+  it('appends the primer block with a separator when primer is provided', () => {
+    const text = renderText([SB_MATCH], SUB, ENV, '2026-06-15', PRIMER_1, 4);
+    expect(text).toMatch(/\n---\n\nSITE PRIMER · 1 of 4\n/);
+    expect(text).toContain('What this site is');
+    expect(text).toContain('First para.');
+    expect(text).toContain('Second para.');
+    expect(text).toMatch(/About marbleheaddata\.org: https:\/\/marbleheaddata\.org\/about\/\?utm_source=digest&utm_medium=email&utm_campaign=primer-week-1/);
+  });
+});

@@ -11,6 +11,36 @@ function withUtm(url) {
   return url.includes('?') ? `${url}&${UTM_QUERY}` : `${url}?${UTM_QUERY}`;
 }
 
+function withPrimerUtm(url, weekIndex, env) {
+  const PRIMER_QUERY = `utm_source=digest&utm_medium=email&utm_campaign=primer-week-${weekIndex}`;
+  // Primer link_url may be a path (/about/) or full URL. Resolve against SITE_BASE_URL.
+  const absolute = url.startsWith('http') ? url : `${env.SITE_BASE_URL}${url}`;
+  return absolute.includes('?') ? `${absolute}&${PRIMER_QUERY}` : `${absolute}?${PRIMER_QUERY}`;
+}
+
+function primerHtml(primer, maxPrimerIndex, env) {
+  const linkUrl = withPrimerUtm(primer.link_url, primer.week_index, env);
+  const bodyHtml = primer.body_paragraphs.map(p =>
+    `<p class="mhd-body" style="margin: 0 0 12px; color: #2a3036; line-height: 1.55;">${escapeHtml(p)}</p>`
+  ).join('');
+  return `
+  <hr class="mhd-hr" style="border: 0; border-top: 1px solid #e3e8ee; margin: 8px 0 24px;">
+  <div style="margin: 0 0 8px;">
+    <p class="mhd-muted" style="margin: 0 0 6px; font-size: 13px; color: #6c757d;">Site primer · ${primer.week_index} of ${maxPrimerIndex}</p>
+    <h2 style="margin: 0 0 10px; font-size: 19px; line-height: 1.3; color: #1a1a1a; font-weight: 600;">${escapeHtml(primer.title)}</h2>
+    ${bodyHtml}
+    <p style="margin: 0; font-size: 14px;"><a class="mhd-link" href="${linkUrl}" style="color: #1B3A57; text-decoration: none; font-weight: 500;">${escapeHtml(primer.link_label)} &rarr;</a></p>
+  </div>`;
+}
+
+function primerText(primer, maxPrimerIndex, env) {
+  const linkUrl = withPrimerUtm(primer.link_url, primer.week_index, env);
+  const body = primer.body_paragraphs.join('\n\n');
+  // Returns a block that begins with `---\n\n` and ends with `\n\n` so the
+  // existing renderText footer's `---` separator stays one blank line below.
+  return `---\n\nSITE PRIMER · ${primer.week_index} of ${maxPrimerIndex}\n\n${primer.title}\n\n${body}\n\n${primer.link_label}: ${linkUrl}\n\n`;
+}
+
 function escapeHtml(s) {
   if (s == null) return '';
   return String(s)
@@ -70,7 +100,7 @@ ${t.summary_card?.summary || ''}
   ${meetingUrl}`;
 }
 
-export function renderHtml(matches, subscriber, env, weekEndingIso) {
+export function renderHtml(matches, subscriber, env, weekEndingIso, primer = null, maxPrimerIndex = 0) {
   const manageUrl = `${env.SITE_BASE_URL}/me/subscription/?token=${encodeURIComponent(subscriber.manage_token)}`;
   const unsubUrl = `${env.SITE_BASE_URL}/api/unsubscribe?token=${encodeURIComponent(subscriber.manage_token)}`;
   const count = matches.length;
@@ -78,6 +108,7 @@ export function renderHtml(matches, subscriber, env, weekEndingIso) {
   <h1 style="margin: 0 0 24px; font-size: 22px; font-weight: 600; color: #1a1a1a; line-height: 1.25;">${count} ${count === 1 ? 'meeting' : 'meetings'} this week</h1>
 
   ${matches.map(m => meetingHtml(m, env)).join('')}
+  ${primer ? primerHtml(primer, maxPrimerIndex, env) : ''}
 
   <hr class="mhd-hr" style="border: none; border-top: 1px solid #e5e5e5; margin: 8px 0 16px;">
   <p style="margin: 0 0 6px; font-size: 13px; color: #6c757d;">
@@ -89,7 +120,7 @@ export function renderHtml(matches, subscriber, env, weekEndingIso) {
 ` });
 }
 
-export function renderText(matches, subscriber, env, weekEndingIso) {
+export function renderText(matches, subscriber, env, weekEndingIso, primer = null, maxPrimerIndex = 0) {
   const manageUrl = `${env.SITE_BASE_URL}/me/subscription/?token=${subscriber.manage_token}`;
   const unsubUrl = `${env.SITE_BASE_URL}/api/unsubscribe?token=${subscriber.manage_token}`;
   const count = matches.length;
@@ -99,7 +130,7 @@ ${count} ${count === 1 ? 'meeting' : 'meetings'} this week
 
 ${body}
 
----
+${primer ? primerText(primer, maxPrimerIndex, env) : ''}---
 Manage subscription: ${manageUrl}
 Unsubscribe: ${unsubUrl}
 
