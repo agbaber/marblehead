@@ -474,10 +474,12 @@ async function testVerifyMePageLoads(page) {
     ? ok('verify-me h1 is "Verify yourself"')
     : fail('verify-me h1', `expected "Verify yourself", got "${h1Text}"`);
 
-  const fbCta = await page.$('a.btn--primary[href="/api/auth/fb/start"]');
+  // CTA must point at the Worker host (absolute), not the site (relative
+  // would 404 because the site and Worker are at different origins).
+  const fbCta = await page.$('a.btn--primary[href*="/api/auth/fb/start"]');
   fbCta
     ? ok('verify-me FB CTA present')
-    : fail('verify-me FB CTA', 'missing a[href="/api/auth/fb/start"]');
+    : fail('verify-me FB CTA', 'missing a[href*="/api/auth/fb/start"]');
 
   const inviteFallback = await page.$('a.btn--secondary[href="/verify.html"]');
   inviteFallback
