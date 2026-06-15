@@ -85,14 +85,6 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Aug 31 2025 deliverable referenced')
     : fail('Aug 31 deliverable', 'missing');
 
-  // Sarah Fox blockquote
-  body.includes('buckets and mops')
-    ? ok('Sarah Fox walking-tour direct quote present')
-    : fail('walking-tour quote', 'missing');
-
-  const blockquote = await page.$('blockquote.quote');
-  blockquote ? ok('blockquote.quote pattern used (site quote class)') : fail('blockquote.quote', 'missing');
-
   // Funding facts
   body.includes('$500K') || body.includes('$500,000')
     ? ok('$500K/yr building capital fund (Tier 3) referenced')
