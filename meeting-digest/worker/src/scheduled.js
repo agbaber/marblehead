@@ -4,6 +4,7 @@ import { matchTranscripts } from './lib/matcher.js';
 import { renderHtml, renderText, renderSubject } from './lib/render.js';
 import { sendMail } from './lib/mail.js';
 import { randomToken } from './lib/email.js';
+import { fetchPrimers, pickPrimer } from './lib/primer.js';
 
 // Backup crons fire 30 minutes after the primary slot, so we never want to
 // re-send within the same morning. Five days is well past that and well
@@ -43,7 +44,7 @@ export async function runScheduled(event, env, opts = {}) {
   //    GitHub round trip entirely in that case.
   const idempotencyCutoff = now - IDEMPOTENCY_WINDOW_MS;
   const { results: subs } = await env.DB.prepare(
-    'SELECT id, email, manage_token, boards, topics FROM subscriber WHERE status = ? AND (last_sent_at IS NULL OR last_sent_at < ?)'
+    'SELECT id, email, manage_token, boards, topics, drip_week_index FROM subscriber WHERE status = ? AND (last_sent_at IS NULL OR last_sent_at < ?)'
   ).bind('confirmed', idempotencyCutoff).all();
   console.log(`[digest] eligible subscribers (confirmed, not sent in last 5d): count=${subs.length}`);
 
@@ -61,6 +62,18 @@ export async function runScheduled(event, env, opts = {}) {
   }
   console.log(`[digest] fetched transcripts in last 7 days: count=${transcripts.length}`);
 
+  let primers = [];
+  let maxPrimerIndex = 0;
+  try {
+    primers = await fetchPrimers(env);
+    maxPrimerIndex = primers.length > 0 ? primers[primers.length - 1].week_index : 0;
+    console.log(`[digest] fetched primers: count=${primers.length} max_week_index=${maxPrimerIndex}`);
+  } catch (e) {
+    console.log(`[digest] primers fetch failed (continuing without primer block): ${e.message}`);
+    primers = [];
+    maxPrimerIndex = 0;
+  }
+
   const weekEnding = new Date(now).toISOString().slice(0, 10);
   let sent = 0, skipped = 0, errored = 0;
 
@@ -72,9 +85,11 @@ export async function runScheduled(event, env, opts = {}) {
     const matches = matchTranscripts(transcripts, subscription);
     if (matches.length === 0) { skipped += 1; continue; }
 
+    const primer = pickPrimer(primers, s.drip_week_index || 0);
+
     const subject = renderSubject(matches);
-    const html = renderHtml(matches, { manage_token: s.manage_token, email: s.email }, env, weekEnding);
-    const text = renderText(matches, { manage_token: s.manage_token, email: s.email }, env, weekEnding);
+    const html = renderHtml(matches, { manage_token: s.manage_token, email: s.email }, env, weekEnding, primer, maxPrimerIndex);
+    const text = renderText(matches, { manage_token: s.manage_token, email: s.email }, env, weekEnding, primer, maxPrimerIndex);
     const unsubMailto = `mailto:unsub@marbleheaddata.org?subject=unsubscribe`;
     const unsubHttp = `${env.SITE_BASE_URL}/api/unsubscribe?token=${encodeURIComponent(s.manage_token)}`;
 
@@ -83,7 +98,15 @@ export async function runScheduled(event, env, opts = {}) {
         to: s.email, subject, html, text,
         headers: { listUnsubscribe: `<${unsubHttp}>, <${unsubMailto}>` }
       });
-      await env.DB.prepare('UPDATE subscriber SET last_sent_at = ? WHERE id = ?').bind(now, s.id).run();
+      if (primer) {
+        await env.DB.prepare(
+          'UPDATE subscriber SET last_sent_at = ?, drip_week_index = drip_week_index + 1 WHERE id = ?'
+        ).bind(now, s.id).run();
+      } else {
+        await env.DB.prepare(
+          'UPDATE subscriber SET last_sent_at = ? WHERE id = ?'
+        ).bind(now, s.id).run();
+      }
       await env.DB.prepare('INSERT INTO delivery_log (id, subscriber_id, sent_at, n_meetings, provider_message_id, status) VALUES (?, ?, ?, ?, ?, ?)')
         .bind(randomToken(), s.id, now, matches.length, result.id || null, 'queued').run();
       sent += 1;

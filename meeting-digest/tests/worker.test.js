@@ -145,6 +145,46 @@ describe('GET /api/subscribe-confirm', () => {
   });
 });
 
+function primersDirResponse(filenames) {
+  return JSON.stringify(filenames.map(name => ({
+    type: 'file', name, download_url: `https://example.com/primers/${name}`
+  })));
+}
+
+function primerMdFile(weekIndex, title) {
+  return `---
+week_index: ${weekIndex}
+title: "${title}"
+link_url: /p${weekIndex}/
+link_label: "Read"
+---
+Body for ${title}.
+`;
+}
+
+function stubGithubPrimers(filenames, weekTitlePairs) {
+  fetchMock.get('https://api.github.com')
+    .intercept({ path: /\/repos\/.*\/contents\/_primers\?ref=.*/, method: 'GET' })
+    .reply(200, primersDirResponse(filenames));
+  for (const [name, [w, t]] of weekTitlePairs) {
+    fetchMock.get('https://example.com')
+      .intercept({ path: `/primers/${name}`, method: 'GET' })
+      .reply(200, primerMdFile(w, t));
+  }
+}
+
+function stubGithubPrimersEmpty() {
+  fetchMock.get('https://api.github.com')
+    .intercept({ path: /\/repos\/.*\/contents\/_primers\?ref=.*/, method: 'GET' })
+    .reply(200, '[]');
+}
+
+function stubGithubPrimersFail() {
+  fetchMock.get('https://api.github.com')
+    .intercept({ path: /\/repos\/.*\/contents\/_primers\?ref=.*/, method: 'GET' })
+    .reply(500, '');
+}
+
 async function confirmedSubscriber(email, overrides = {}) {
   await SELF.fetch('https://worker/api/subscribe', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -259,6 +299,7 @@ describe('runScheduled', () => {
     fetchMock.get('https://api.github.com')
       .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
       .reply(200, JSON.stringify([]));
+    stubGithubPrimersEmpty();
     const out = await runScheduled({}, env, { skipTimeGuard: true });
     expect(out.ran).toBe(true);
     expect(out.sent).toBe(0);
@@ -308,10 +349,124 @@ topic_segments:
     fetchMock.get('https://example.com')
       .intercept({ path: '/sb.md', method: 'GET' })
       .reply(200, fakeTranscriptMd);
+    stubGithubPrimers(['01-welcome.md'], [['01-welcome.md', [1, 'Welcome']]]);
     const out = await runScheduled({}, env, { skipTimeGuard: true });
     expect(out.ran).toBe(true);
     expect(out.sent).toBe(1);
     const log = await env.DB.prepare('SELECT count(*) AS n FROM delivery_log').first();
     expect(log.n).toBe(1);
+    const after = await env.DB.prepare('SELECT drip_week_index FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(after.drip_week_index).toBe(1);
+  });
+
+  it('new subscriber gets primer 1 and drip_week_index bumps to 1', async () => {
+    const row = await confirmedSubscriber('new@example.com', { boards: ['select-board'], topics: [] });
+    stubGithubPrimers(
+      ['01-welcome.md', '02-org.md'],
+      [['01-welcome.md', [1, 'Welcome']], ['02-org.md', [2, 'Org']]]
+    );
+    const today = new Date().toISOString().slice(0, 10);
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([{ type: 'file', name: `select-board-${today}.md`, download_url: 'https://example.com/sb.md' }]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/sb.md', method: 'GET' })
+      .reply(200, `---
+slug: select-board-${today}
+board: select-board
+board_display: "Select Board"
+date: ${today}
+title: "Select Board"
+vimeo_url: "https://vimeo.com/0"
+summary_card:
+  headline: "Test"
+  summary: "Test"
+topic_segments:
+---
+`);
+
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.sent).toBe(1);
+    const after = await env.DB.prepare('SELECT drip_week_index FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(after.drip_week_index).toBe(1);
+  });
+
+  it('subscriber at week 4 with no week 5 primer gets digest only and index stays', async () => {
+    const row = await confirmedSubscriber('done@example.com', { boards: ['select-board'], topics: [] });
+    await env.DB.prepare('UPDATE subscriber SET drip_week_index = 4 WHERE id = ?').bind(row.id).run();
+    stubGithubPrimers(
+      ['01-welcome.md', '02-org.md', '03-debt.md', '04-spending.md'],
+      [
+        ['01-welcome.md', [1, 'A']],
+        ['02-org.md',     [2, 'B']],
+        ['03-debt.md',    [3, 'C']],
+        ['04-spending.md',[4, 'D']]
+      ]
+    );
+    const today = new Date().toISOString().slice(0, 10);
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([{ type: 'file', name: `select-board-${today}.md`, download_url: 'https://example.com/sb.md' }]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/sb.md', method: 'GET' })
+      .reply(200, `---
+slug: select-board-${today}
+board: select-board
+board_display: "Select Board"
+date: ${today}
+title: "Select Board"
+vimeo_url: "https://vimeo.com/0"
+summary_card:
+  headline: "Test"
+  summary: "Test"
+topic_segments:
+---
+`);
+
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.sent).toBe(1);
+    const after = await env.DB.prepare('SELECT drip_week_index FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(after.drip_week_index).toBe(4);  // unchanged — no primer to send
+  });
+
+  it('does not bump drip_week_index when there are zero meeting matches', async () => {
+    const row = await confirmedSubscriber('quiet@example.com', { boards: ['town-meeting'], topics: [] });
+    stubGithubPrimers(['01-welcome.md'], [['01-welcome.md', [1, 'Welcome']]]);
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, '[]');
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.sent).toBe(0);
+    const after = await env.DB.prepare('SELECT drip_week_index FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(after.drip_week_index).toBe(0);
+  });
+
+  it('when _primers/ fetch fails, sends digest without primer and does not bump', async () => {
+    const row = await confirmedSubscriber('p-fail@example.com', { boards: ['select-board'], topics: [] });
+    stubGithubPrimersFail();
+    const today = new Date().toISOString().slice(0, 10);
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([{ type: 'file', name: `select-board-${today}.md`, download_url: 'https://example.com/sb.md' }]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/sb.md', method: 'GET' })
+      .reply(200, `---
+slug: select-board-${today}
+board: select-board
+board_display: "Select Board"
+date: ${today}
+title: "Select Board"
+vimeo_url: "https://vimeo.com/0"
+summary_card:
+  headline: "Test"
+  summary: "Test"
+topic_segments:
+---
+`);
+
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.sent).toBe(1);
+    const after = await env.DB.prepare('SELECT drip_week_index FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(after.drip_week_index).toBe(0);
   });
 });
