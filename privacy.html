@@ -57,10 +57,51 @@ og_url: https://marbleheaddata.org/privacy.html
   by any public endpoint.
 </p>
 
+<h2 id="data-deletion">Deleting your data</h2>
+<p>
+  You can delete the data tied to your verified identity at any time:
+</p>
+<ul>
+  <li>Open your <a href="/profile.html">profile page</a> while signed in.</li>
+  <li>Scroll to the "Release this claim" section and click
+    "Release and sign out".</li>
+  <li>This soft-deletes your resident row (sets a revoked-at timestamp),
+    ends your session, and stops the site from recognizing you on
+    return visits.</li>
+</ul>
+<p>
+  If you want a full hard-delete of your row in the database (rather
+  than the soft-delete flag), or if you have lost access to your
+  account and cannot reach the profile page, open an issue at
+  <a href="https://github.com/agbaber/marblehead/issues">our GitHub issues page</a>
+  and we will remove it manually.
+</p>
+<p>
+  Engagement rows (which ideas you have backed or repped) are left in
+  place after a release. They become unattributable because the
+  resident row they pointed to is revoked, but the count remains. If
+  you want those removed as well, mention that in the GitHub issue.
+</p>
+
+<h2>How long we keep your data</h2>
+<p>
+  Verified-resident rows are kept for as long as the claim is active.
+  After a release, the row is soft-deleted and retained for audit
+  purposes only; it is not used for any public surface.
+</p>
+
+<h2>Children's privacy</h2>
+<p>
+  This site is intended for residents 18 or older. We do not knowingly
+  collect personal information from anyone under 13. If you believe a
+  child under 13 has signed in or claimed an address, please contact us
+  via the GitHub issues page above and we will remove the record.
+</p>
+
 <h2>Questions</h2>
 <p>If something on this page is unclear or you want to verify any claim above, the full source code for the community pulse feature (front-end widget and server-side Worker) is published at <a href="https://github.com/agbaber/marblehead">github.com/agbaber/marblehead</a> under the <code>community-pulse/</code> and <code>assets/community-pulse/</code> directories. You can read the code and confirm these claims for yourself.</p>
 
-<p class="notes">Last updated: April 12, 2026.</p>
+<p class="notes">Last updated: June 15, 2026.</p>
 
 <div class="read-next">
   <div class="read-next-label">Read next</div>
