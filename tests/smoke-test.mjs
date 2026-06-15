@@ -457,6 +457,66 @@ async function testM101NavLink(page) {
     : fail('Primer nav link', 'not found on homepage');
 }
 
+// ── Self-serve verification pages ──────────────────────────
+
+async function testVerifyMePageLoads(page) {
+  console.log('\n── /verify-me.html ──');
+  const resp = await page.goto(`${SITE}/verify-me.html`, { waitUntil: 'domcontentloaded' });
+  if (resp.status() !== 200) {
+    fail('verify-me.html load', `HTTP ${resp.status()}`);
+    return;
+  }
+  ok('verify-me.html returns 200');
+
+  const h1 = await page.$('h1');
+  const h1Text = h1 ? (await h1.textContent()).trim() : '';
+  h1Text === 'Verify yourself'
+    ? ok('verify-me h1 is "Verify yourself"')
+    : fail('verify-me h1', `expected "Verify yourself", got "${h1Text}"`);
+
+  const fbCta = await page.$('a.btn--primary[href="/api/auth/fb/start"]');
+  fbCta
+    ? ok('verify-me FB CTA present')
+    : fail('verify-me FB CTA', 'missing a[href="/api/auth/fb/start"]');
+
+  const inviteFallback = await page.$('a.btn--secondary[href="/verify.html"]');
+  inviteFallback
+    ? ok('verify-me invite fallback link present')
+    : fail('verify-me invite fallback', 'missing /verify.html link');
+}
+
+async function testProfilePageLoads(page) {
+  console.log('\n── /profile.html ──');
+  const resp = await page.goto(`${SITE}/profile.html`, { waitUntil: 'domcontentloaded' });
+  if (resp.status() !== 200) {
+    fail('profile.html load', `HTTP ${resp.status()}`);
+    return;
+  }
+  ok('profile.html returns 200');
+
+  // Controller renders a "sign in" prompt when no JWT in localStorage.
+  // Wait briefly for it to run.
+  await page.waitForSelector('#profile-root a[href="/verify-me.html"]', { timeout: 5000 })
+    .then(() => ok('profile signed-out state renders sign-in link'))
+    .catch(() => fail('profile signed-out state', 'no /verify-me.html link rendered after 5s'));
+}
+
+async function testTermsPageLoads(page) {
+  console.log('\n── /terms.html ──');
+  const resp = await page.goto(`${SITE}/terms.html`, { waitUntil: 'domcontentloaded' });
+  if (resp.status() !== 200) {
+    fail('terms.html load', `HTTP ${resp.status()}`);
+    return;
+  }
+  ok('terms.html returns 200');
+
+  const h1 = await page.$('h1');
+  const h1Text = h1 ? (await h1.textContent()).trim() : '';
+  h1Text === 'Terms of Use'
+    ? ok('terms h1 is "Terms of Use"')
+    : fail('terms h1', `expected "Terms of Use", got "${h1Text}"`);
+}
+
 // ── Run ────────────────────────────────────────────────────────────────
 
 (async () => {
@@ -475,6 +535,9 @@ async function testM101NavLink(page) {
     await testM101Landing(page1);
     await testM101ChapterPages(page1);
     await testM101NavLink(page1);
+    await testVerifyMePageLoads(page1);
+    await testProfilePageLoads(page1);
+    await testTermsPageLoads(page1);
     await ctx1.close();
   } finally {
     await browser.close();

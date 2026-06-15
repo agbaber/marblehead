@@ -9,6 +9,9 @@
 import { handleVerify } from './verify.js';
 import { serveVerifyPage, serveBranchesPage } from './pages.js';
 import { STREETS } from './streets.js';
+import { handleFbStart, handleFbCallback } from './fb.js';
+import { handleClaimAddress } from './claim.js';
+import { handleProfileGet, handleProfilePost, handleClaimRelease, handleMePre } from './profile.js';
 
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 const RATE_LIMIT_MAX = 5; // per section per window per ip
@@ -47,6 +50,30 @@ export async function handleRequest(request, env) {
   if (url.pathname.startsWith('/api/verify/')) {
     const verifyResponse = await handleVerify(request, env, url);
     if (verifyResponse) return verifyResponse;
+  }
+
+  if (url.pathname === '/api/auth/fb/start' && request.method === 'GET') {
+    return handleFbStart(request, env);
+  }
+  if (url.pathname === '/api/auth/fb/callback' && request.method === 'GET') {
+    return handleFbCallback(request, env);
+  }
+
+  if (url.pathname === '/api/claim/address' && request.method === 'POST') {
+    return handleClaimAddress(request, env);
+  }
+
+  if (url.pathname === '/api/profile') {
+    if (request.method === 'GET') return handleProfileGet(request, env);
+    if (request.method === 'POST') return handleProfilePost(request, env);
+  }
+
+  if (url.pathname === '/api/claim' && request.method === 'DELETE') {
+    return handleClaimRelease(request, env);
+  }
+
+  if (url.pathname === '/api/me/pre' && request.method === 'GET') {
+    return handleMePre(request, env);
   }
 
   // Street list for address typeahead.

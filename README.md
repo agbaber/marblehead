@@ -35,6 +35,16 @@ All data is drawn from publicly available documents:
 - [FY2027 Proposed Budget](https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf)
 - [2026 State of the Town Presentation](https://marbleheadma.gov/wp-content/uploads/2026/02/2026-State-of-the-Town-Presenation-Final.pdf)
 
+### Self-serve verification (Phase 1)
+
+A second door at <https://marbleheaddata.org/verify-me.html> lets new
+residents claim verification by signing in with Facebook and matching
+their name against the FY2025 Marblehead assessor record. The existing
+invite-link flow at `/verify.html` remains as the fallback for renters,
+recent buyers, and spouses not on the deed.
+
+Setup notes for operators: `community-pulse/README.md`.
+
 ## Corrections Welcome
 
 If you find an error, please open an issue or submit a pull request. Every number should be traceable to a primary source. If it's not, that's a bug.

@@ -2,9 +2,22 @@
   "permissions": {
     "allow": [
       "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Grep(*)",
+      "Glob(*)",
+      "TodoWrite",
+      "Agent(*)",
+      "Task(*)",
+      "ToolSearch",
       "WebFetch",
       "WebSearch",
-      "mcp__happy__change_title"
+      "Skill",
+      "ScheduleWakeup",
+      "AskUserQuestion",
+      "mcp__happy__change_title",
+      "mcp__claude_ai_PostHog__exec"
     ]
   }
 }

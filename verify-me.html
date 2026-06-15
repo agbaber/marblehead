@@ -1,0 +1,82 @@
+---
+layout: page
+title: Verify yourself as a Marblehead resident
+permalink: /verify-me.html
+---
+
+<div class="page">
+<h1>Verify yourself</h1>
+
+<p class="lead">
+  Marbleheaddata.org lets verified residents back ideas and weigh in on
+  the town's open questions. You have two ways to verify.
+</p>
+
+<section class="verify-doors">
+  <div class="verify-door verify-door--primary">
+    <h2>Sign in with Facebook and claim your address</h2>
+    <p>
+      We will check your name against the FY2025 Marblehead assessor
+      record for the address you claim. If your name matches the named
+      owner, you are verified on the spot. If not (renter, recent buyer,
+      spouse not on the deed), we will route you to a neighbor who can
+      confirm.
+    </p>
+    <a href="/api/auth/fb/start" class="btn btn--primary">
+      Continue with Facebook
+    </a>
+    <p class="verify-door__note">
+      <a href="/privacy.html#facebook-sign-in">What we receive from Facebook</a>
+    </p>
+  </div>
+
+  <div class="verify-door verify-door--secondary">
+    <h2>Have an invite from a neighbor?</h2>
+    <p>
+      Some Marbleheaders are already verified and can vouch for you with
+      a one-time invite link. If a neighbor sent you one, use it here.
+    </p>
+    <a href="/verify.html" class="btn btn--secondary">
+      Open an invite link
+    </a>
+  </div>
+</section>
+
+<section id="claim-form-section" hidden>
+  <h2>Claim your address</h2>
+  <p>
+    Signed in as <strong id="claim-fb-name"></strong>. Pick the
+    Marblehead address you live at.
+  </p>
+  <form id="claim-form">
+    <label>
+      Street
+      <input list="streets" id="claim-street" name="street" required autocomplete="off">
+      <datalist id="streets"></datalist>
+    </label>
+    <label>
+      House number
+      <input id="claim-number" name="number" required autocomplete="off">
+    </label>
+    <button type="submit" class="btn btn--primary">Claim this address</button>
+  </form>
+  <div id="claim-result"></div>
+</section>
+
+<script type="module" src="/assets/community-pulse/claim.js"></script>
+</div>
+
+<style>
+  .verify-doors { display: grid; gap: 1.5rem; margin: 2rem 0; }
+  @media (min-width: 720px) {
+    .verify-doors { grid-template-columns: 1fr 1fr; }
+  }
+  .verify-door { padding: 1.5rem; border: 1px solid var(--rule);
+                  border-radius: 6px; }
+  .verify-door--primary { border-color: var(--accent); }
+  .verify-door__note { font-size: 0.875rem; color: var(--muted);
+                       margin-top: 0.75rem; }
+  #claim-result { margin-top: 1.5rem; }
+  #claim-result .ok { color: var(--success); }
+  #claim-result .err { color: var(--danger); }
+</style>
