@@ -1,0 +1,30 @@
+---
+layout: page
+title: Your profile
+permalink: /profile.html
+---
+
+<div class="page">
+<h1>Profile</h1>
+
+<div id="profile-root">
+  <p>Loading...</p>
+</div>
+
+<script type="module" src="/assets/community-pulse/profile.js"></script>
+</div>
+
+<style>
+  #profile-root .verified-badge {
+    display: inline-block; padding: 0.25rem 0.75rem;
+    background: var(--success-bg, #d1fae5); color: var(--success, #065f46);
+    border-radius: 4px; font-weight: 600;
+  }
+  #profile-root .danger-zone { margin-top: 2rem; padding-top: 1rem;
+                               border-top: 1px solid var(--rule); }
+  #profile-root .danger-zone button {
+    background: transparent; color: var(--danger, #991b1b);
+    border: 1px solid var(--danger, #991b1b); padding: 0.5rem 1rem;
+    border-radius: 4px; cursor: pointer;
+  }
+</style>
