@@ -717,6 +717,23 @@
   line-height: 1.55;
 }
 
+.page-intro-ai {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8125rem;
+  color: var(--c-text-mid);
+  opacity: 0.85;
+}
+
+.meetings-cta-link {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .page-intro { margin: 0 0 0.75rem; font-size: 0.9rem; line-height: 1.45; }
+  .page-intro-ai { font-size: 0.75rem; }
+}
+
 .board-filter {
   display: flex;
   flex-wrap: wrap;
@@ -754,6 +771,31 @@
   border-radius: 6px;
   padding: 0.85rem 1.1rem;
   margin: 1rem 0 0;
+}
+
+@media (max-width: 600px) {
+  body.transcripts-page .meetings-cta {
+    background: transparent;
+    border: 0;
+    border-left: 0;
+    padding: 0;
+    margin: 0.5rem 0 0.75rem;
+    display: block;
+  }
+  body.transcripts-page .meetings-cta-lede,
+  body.transcripts-page .meetings-cta-form,
+  body.transcripts-page .meetings-cta-fine { display: none; }
+  body.transcripts-page .meetings-cta-link {
+    display: inline-block;
+    background: var(--c-teal);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 100px;
+  }
+  body.transcripts-page .meetings-cta-link:hover { filter: brightness(1.08); }
 }
 
 .meetings-cta-lede {
