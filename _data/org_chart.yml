@@ -537,46 +537,33 @@ schools:
     - name: "Marblehead High School"
       abbreviation: "MHS"
       head_title: "Principal"
-      sub_heads:
-        - "Assistant Principal (2)"
+      fte: 125
+      fte_basis: "FY2026 headcount"
+      staff:
+        - "Assistant Principal (×2)"
         - "Athletics Director"
         - "Assistant Athletics Director"
-      fte: null
-      fte_null_reason: >-
-        Per-building FTE totals are not published as summary numbers in
-        the FY27 budget packet (the document lists individuals with FTE
-        codes but does not sum them). DESE-reported district total is
-        430.2 FTE across all five buildings (SY2026); the high school is
-        the largest. Headcount CSV shows MHS = 125 employees in FY26
-        (data/town_employee_headcount_FY08-26.csv, HIGH SCHOOL line).
       source_url: "https://mhs.marbleheadschools.org"
-      source_label: "Marblehead High School site; FY26 headcount from town payroll roster"
+      source_label: "Marblehead High School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (HIGH SCHOOL line)"
     - name: "Marblehead Veterans Middle School"
       abbreviation: "MVMS"
       head_title: "Principal"
-      sub_heads:
+      fte: 65
+      fte_basis: "FY2026 headcount"
+      staff:
         - "Assistant Principal"
-      fte: null
-      fte_null_reason: >-
-        Per-building FTE totals not published as summary. FY26 headcount =
-        65 (VETERANS MIDDLE SCHOOL line in data/town_employee_headcount_FY08-26.csv).
       source_url: "https://mvms.marbleheadschools.org"
-      source_label: "Marblehead Veterans Middle School site"
+      source_label: "Marblehead Veterans Middle School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (VETERANS MIDDLE SCHOOL line)"
     - name: "Brown Elementary School"
       abbreviation: "Brown"
       head_title: "Principal"
-      sub_heads:
+      fte: 88
+      fte_basis: "FY2026 headcount"
+      staff:
         - "Assistant Principal"
         - "Special Education Team Chair"
-      fte: null
-      fte_null_reason: >-
-        Per-building FTE totals not published as summary. FY26 headcount =
-        88 (BROWN SCHOOL line). FY27 budget packet labels this line
-        "Brown (Bell, Coffin, Eveleth) School Expenses" confirming Brown
-        is the consolidated elementary that absorbed the former Bell,
-        Coffin, and Eveleth buildings.
       source_url: "https://brown.marbleheadschools.org"
-      source_label: "Brown Elementary School site"
+      source_label: "Brown Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (BROWN SCHOOL line)"
       note: >-
         Bell, Coffin, Eveleth, and Gerry are former elementary buildings,
         no longer operating as schools. Marblehead currently operates
@@ -584,23 +571,21 @@ schools:
     - name: "Glover Elementary School"
       abbreviation: "Glover"
       head_title: "Principal"
-      sub_heads:
+      fte: 66
+      fte_basis: "FY2026 headcount"
+      staff:
         - "Special Education Team Chair"
-      fte: null
-      fte_null_reason: >-
-        Per-building FTE totals not published as summary. FY26 headcount = 66.
       source_url: "https://glover.marbleheadschools.org"
-      source_label: "Glover Elementary School site"
+      source_label: "Glover Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (GLOVER SCHOOL line)"
     - name: "Village Elementary School"
       abbreviation: "Village"
       head_title: "Principal"
-      sub_heads:
+      fte: 90
+      fte_basis: "FY2026 headcount"
+      staff:
         - "Assistant Principal"
-      fte: null
-      fte_null_reason: >-
-        Per-building FTE totals not published as summary. FY26 headcount = 90.
       source_url: "https://village.marbleheadschools.org"
-      source_label: "Village Elementary School site"
+      source_label: "Village Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (VILLAGE SCHOOL line)"
 
 boards:
   emphasized:

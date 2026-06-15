@@ -131,10 +131,12 @@ og_url: https://marbleheaddata.org/org-chart.html
       </div>
     </div>
 
+    {% assign sb_total = 0 %}
+    {% for d in site.data.org_chart.schools.buildings %}{% if d.fte %}{% assign sb_total = sb_total | plus: d.fte %}{% endif %}{% endfor %}
     <div class="org-cluster">
       <div class="org-cluster-header">
         <span class="org-cluster-name">School Buildings</span>
-        <span class="org-cluster-total" title="Per-building FTE not published; total district FTE is shown on the Superintendent card.">&ndash;</span>
+        <span class="org-cluster-total" title="FY26 headcount sum across the five operating buildings.">{{ sb_total }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span>
       </div>
       <div class="org-cluster-grid">
         {% for school in site.data.org_chart.schools.buildings %}
