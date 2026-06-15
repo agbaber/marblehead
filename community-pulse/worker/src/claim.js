@@ -25,11 +25,23 @@ export async function identityHash(displayName, claimedAddress) {
     .map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
-function jsonResponse(body, status = 200) {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: { 'Content-Type': 'application/json' },
-  });
+function jsonResponse(body, statusOrEnv, env) {
+  if (statusOrEnv && typeof statusOrEnv === "object") {
+    env = statusOrEnv;
+    statusOrEnv = 200;
+  }
+  const status = statusOrEnv;
+  // Mirror the CORS shape used by /api/streets etc. so the browser can
+  // read responses from cross-origin XHR. Without these headers, fetch()
+  // in the page on marbleheaddata.org throws a CORS error on every 4xx
+  // and breaks the claim.js / profile.js controllers.
+  const headers = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': (env && env.ALLOWED_ORIGIN) || '*',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  };
+  return new Response(JSON.stringify(body), { status: status || 200, headers });
 }
 
 // 24-hour windows for claim attempts. Spec: 5 per FB account, 20 per IP.
@@ -84,15 +96,15 @@ async function checkClaimBucket(env, bucketKey, sectionId, max) {
  */
 export async function handleClaimAddress(request, env) {
   const token = extractJWT(request);
-  if (!token) return jsonResponse({ error: 'unauthenticated' }, 401);
+  if (!token) return jsonResponse({ error: 'unauthenticated' }, 401, env);
 
   const payload = await verifyJWT(token, env.JWT_SECRET);
   if (!payload || !payload.pre_resident) {
-    return jsonResponse({ error: 'forbidden — claim already finalized' }, 403);
+    return jsonResponse({ error: 'forbidden — claim already finalized' }, 403, env);
   }
 
   const { claimed_address } = await request.json();
-  if (!claimed_address) return jsonResponse({ error: 'missing claimed_address' }, 400);
+  if (!claimed_address) return jsonResponse({ error: 'missing claimed_address' }, 400, env);
 
   // Rate limit: 5 attempts per FB account per 24h, 20 per IP per 24h.
   const fbOk = await checkClaimBucket(
@@ -100,7 +112,7 @@ export async function handleClaimAddress(request, env) {
   if (!fbOk) {
     return jsonResponse({
       error: 'rate limited -- too many claim attempts from this account today',
-    }, 429);
+    }, 429, env);
   }
   const clientIp = request.headers.get('CF-Connecting-IP') ||
                    request.headers.get('X-Forwarded-For') || 'unknown';
@@ -109,7 +121,7 @@ export async function handleClaimAddress(request, env) {
   if (!ipOk) {
     return jsonResponse({
       error: 'rate limited -- too many claim attempts from this network today',
-    }, 429);
+    }, 429, env);
   }
 
   const normalized = normalizeAddress(claimed_address);
@@ -121,7 +133,7 @@ export async function handleClaimAddress(request, env) {
     return jsonResponse({
       status: 'no_match',
       vouch_link: '/verify-me#vouch',
-    });
+    }, env);
   }
 
   const result = matchOwner(payload.fb_display_name, parcel.owner_name);
@@ -151,7 +163,7 @@ export async function handleClaimAddress(request, env) {
     return jsonResponse({
       status: 'match',
       session_jwt: newJwt,
-    });
+    }, env);
   }
 
   if (result.status === 'first_initial_mismatch') {
@@ -159,11 +171,11 @@ export async function handleClaimAddress(request, env) {
       status: 'first_initial_mismatch',
       alternatives: result.alternatives,
       vouch_link: '/verify-me#vouch',
-    });
+    }, env);
   }
 
   return jsonResponse({
     status: 'name_mismatch',
     vouch_link: '/verify-me#vouch',
-  });
+  }, env);
 }
