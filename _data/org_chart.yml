@@ -19,7 +19,7 @@
 
 key_stats:
   snapshot: "2026-06-14"
-  town_departments: 23
+  town_departments: 22
   school_buildings: 5
   elected_seats: 41
   # Sum across elected boards: Select Board 5 + Town Moderator 1 + Town Clerk 1
@@ -421,58 +421,40 @@ town:
         Presentation, the FY27 balanced budget reduces the Superintendent
         to part-time and cuts 1 laborer (~18% salary appropriation
         reduction). Tier 1 restores 1 laborer.
-    - name: "Waste Collection"
+    - name: "Solid Waste"
       cluster: "Public Works"
       head_title: "Assistant Director of Waste"
-      fte: 7
-      fte_basis: "FY2026 headcount (Transfer Station crew: 1 head + 1 clerk + 1 special clerk + 1 crew leader + 2 HEO + 2 transfer station operators)"
-      fy27_salary_total: 577999
+      fte: 8
+      fte_basis: "FY2026 headcount (Transfer Station crew + curbside billing clerk)"
+      fy27_salary_total: 646999
       fy27_position_summary:
         continuing: 5
-        new: 0
-        eliminated: 0
-        reduced: 0
-      staff:
-        - "Senior Clerk"
-        - "Special Clerk"
-        - "Crew Leader Operator (Leader HEO)"
-        - "Heavy Equipment Operator (×2)"
-        - "Transfer Station Operator (×2)"
-      source_url: "https://marbleheadma.gov/dpw/"
-      source_label: "FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, WASTE COLLECTION cost center); Article 20 of 2026 ATM warrant reclassifies the Assistant Director of Waste."
-      note: >-
-        Operates the town transfer station. Historically nested under the
-        Health Department in the org chart; broken out as its own cost
-        center in MUNIS. The Board of Health continues to provide
-        policy oversight.
-    - name: "Curbside Collection"
-      cluster: "Public Works"
-      head_title: "(operationally managed by DPW)"
-      fte: 1
-      fte_basis: "FY27 budget detail; one Senior Clerk salary line. Truck operators and hauler costs flow through Expenses, not Salaries."
-      fy27_salary_total: 69000
-      fy27_position_summary:
-        continuing: 0
         new: 1
         eliminated: 0
         reduced: 0
       staff:
-        - "Senior Clerk (new in FY27)"
+        - "Senior Clerk (transfer station)"
+        - "Special Clerk"
+        - "Crew Leader Operator (Leader HEO)"
+        - "Heavy Equipment Operator (×2)"
+        - "Transfer Station Operator (×2)"
+        - "Senior Clerk (curbside billing, new in FY27)"
       source_url: "https://marbleheadma.gov/dpw/"
-      source_label: "FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, CURBSIDE COLLECTION cost center)"
+      source_label: "FY27 MUNIS budget detail (data/_enrichment/fy27_personnel.yml, WASTE COLLECTION + CURBSIDE COLLECTION cost centers); Article 20 of 2026 ATM warrant reclassifies the Assistant Director of Waste."
       note: >-
-        Brand-new General Fund cost center in FY27, established to fund
-        curbside trash pickup. Article 23 of the 2026 ATM warrant moves
-        these costs into the General Fund with a corresponding annual
-        fee on the revenue side. Question 2 of the June 9 2026 ballot
-        approved the override carve-out for this department. Only one
-        Senior Clerk salary line; everything else (truck operators,
-        hauler contract) flows through the Expense side.
+        Operates the town transfer station with 7 staff. Curbside pickup
+        is a contracted service (private hauler); only the billing/admin
+        clerk is a town employee. Historically nested under the Health
+        Department; broken out as its own cost center in MUNIS. The Board
+        of Health continues to provide policy oversight. Article 23 of
+        the 2026 ATM warrant moved curbside costs into the General Fund
+        with a corresponding annual fee; Question 2 of the June 9 2026
+        ballot approved the override carve-out.
     - name: "Health Department"
       cluster: "Land Use & Health"
       head_title: "Director of Public Health"
       fte: 3
-      fte_basis: "FY2026 headcount (Health Office; Waste Collection and Curbside Collection broken out separately in FY27)"
+      fte_basis: "FY2026 headcount (Health Office; Solid Waste broken out separately under Public Works)"
       fy27_salary_total: 254339
       fy27_position_summary:
         continuing: 3
@@ -488,9 +470,9 @@ town:
         The Director of Public Health line in MUNIS shows a stipend-sized
         dollar amount ($42,604), suggesting a shared-position or stipend
         arrangement; worth verifying with HR. The Board of Health also
-        oversees Waste Collection (transfer station crew) and Curbside
-        Collection, which are broken out as separate FY27 cost centers
-        under the Public Works cluster.
+        provides policy oversight for Solid Waste (transfer station crew
+        + curbside billing), which is broken out as its own FY27 cost
+        center under the Public Works cluster.
     - name: "Council on Aging"
       cluster: "Community Services"
       head_title: "Council on Aging Director"
