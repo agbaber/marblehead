@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { handleClaimAddress } from '../worker/src/claim.js';
+import { handleClaimAddress, identityHash } from '../worker/src/claim.js';
 import { signJWT } from '../worker/src/jwt.js';
 
 const JWT_SECRET = 'jwt-secret';
@@ -7,8 +7,9 @@ const JWT_SECRET = 'jwt-secret';
 function makeMockDb(initial = {}) {
   const parcels = new Map(Object.entries(initial.parcels || {}));
   const residents = new Map(Object.entries(initial.residents || {}));
+  const rateLimits = new Map(); // key: `${ip_hash}|${section_id}|${window_start}`
   return {
-    parcels, residents,
+    parcels, residents, rateLimits,
     prepare(sql) {
       return {
         bind: (...args) => ({
@@ -23,6 +24,11 @@ function makeMockDb(initial = {}) {
               }
               return null;
             }
+            if (sql.startsWith('SELECT count FROM rate_limits')) {
+              const key = `${args[0]}|${args[1]}|${args[2]}`;
+              const entry = rateLimits.get(key);
+              return entry ? { count: entry } : null;
+            }
             return null;
           },
           async run() {
@@ -34,6 +40,15 @@ function makeMockDb(initial = {}) {
                 auth_source: 'self_serve', claim_source: 'assessor_match',
                 public_identity: 0,
               });
+            }
+            if (sql.startsWith('INSERT INTO rate_limits')) {
+              // SQL literal sets count=1; bind args are (ip_hash, section_id, window_start).
+              const key = `${args[0]}|${args[1]}|${args[2]}`;
+              rateLimits.set(key, 1);
+            }
+            if (sql.startsWith('UPDATE rate_limits')) {
+              const key = `${args[0]}|${args[1]}|${args[2]}`;
+              rateLimits.set(key, (rateLimits.get(key) || 0) + 1);
             }
             return {};
           },
@@ -134,5 +149,66 @@ describe('handleClaimAddress', () => {
     });
     const res = await handleClaimAddress(req, env);
     expect(res.status).toBe(401);
+  });
+});
+
+describe('rate limiting', () => {
+  let env;
+  beforeEach(() => {
+    env = { JWT_SECRET, DB: makeMockDb({
+      parcels: { '12 STATE STREET': { owner_name: 'SMITH JOHN A' } },
+    }) };
+  });
+
+  it('returns 429 after 5 attempts from the same FB account', async () => {
+    const jwt = await preResidentJwt({ fb_display_name: 'Alice Jones' }); // mismatch
+    // Five mismatch attempts succeed (each returns 200 with name_mismatch).
+    for (let i = 0; i < 5; i++) {
+      const r = await postClaim({ claimed_address: '12 State St' }, env, jwt);
+      expect(r.status).toBe(200);
+    }
+    // Sixth hits the per-FB cap.
+    const sixth = await postClaim({ claimed_address: '12 State St' }, env, jwt);
+    expect(sixth.status).toBe(429);
+  });
+
+  it('429 message references the account vs the network bucket', async () => {
+    const jwt = await preResidentJwt({ fb_display_name: 'Alice Jones' });
+    for (let i = 0; i < 5; i++) {
+      await postClaim({ claimed_address: '12 State St' }, env, jwt);
+    }
+    const r = await postClaim({ claimed_address: '12 State St' }, env, jwt);
+    const body = await r.json();
+    expect(body.error).toMatch(/account/);
+  });
+});
+
+// Cross-door invariant: the self-serve identity hash MUST equal the hash
+// the invite-handshake side produces (verify.html line ~347), so the same
+// person lands on the same residents row regardless of which door they use.
+describe('identityHash contract', () => {
+  // Same recipe verify.html uses, computed independently here.
+  async function inviteSideHash(name, address) {
+    const enc = new TextEncoder();
+    const input =
+      name.toLowerCase().trim() + ':' +
+      address.toLowerCase().trim() + ':' +
+      'marblehead-verify-salt';
+    const digest = await crypto.subtle.digest('SHA-256', enc.encode(input));
+    return Array.from(new Uint8Array(digest))
+      .map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  it('matches the invite-handshake recipe for the same name + address', async () => {
+    const cases = [
+      ['Andrew Baber', '12 State Street'],
+      ['  Jane Smith ', '5 Beacon Avenue'],
+      ['JOHN SMITH', '99 Solo Lane'],
+    ];
+    for (const [name, addr] of cases) {
+      const self = await identityHash(name, addr);
+      const invite = await inviteSideHash(name, addr);
+      expect(self).toBe(invite);
+    }
   });
 });
