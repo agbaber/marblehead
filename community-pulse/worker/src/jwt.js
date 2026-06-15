@@ -71,14 +71,20 @@ export async function verifyJWT(token, secret) {
 }
 
 /**
- * Extract a JWT from the Authorization: Bearer header.
+ * Extract a JWT from either the Authorization: Bearer header or the
+ * verify_jwt HttpOnly cookie set by /api/auth/fb/callback. Bearer takes
+ * precedence so explicit clients can override the cookie.
+ *
  * @param {Request} request
  * @returns {string|null}
  */
 export function extractJWT(request) {
   const auth = request.headers.get('Authorization') || '';
-  if (!auth.startsWith('Bearer ')) return null;
-  return auth.slice(7);
+  if (auth.startsWith('Bearer ')) return auth.slice(7);
+  const cookie = request.headers.get('Cookie') || '';
+  const m = cookie.match(/(?:^|;\s*)verify_jwt=([^;\s]+)/);
+  if (m) return decodeURIComponent(m[1]);
+  return null;
 }
 
 /**
