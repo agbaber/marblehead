@@ -7,7 +7,7 @@ export default defineWorkersConfig({
         extends: true,
         test: {
           name: 'unit',
-          include: ['tests/email.test.js', 'tests/topics.test.js', 'tests/transcripts.test.js', 'tests/matcher.test.js', 'tests/render.test.js'],
+          include: ['tests/email.test.js', 'tests/topics.test.js', 'tests/transcripts.test.js', 'tests/matcher.test.js', 'tests/render.test.js', 'tests/primer.test.js'],
           environment: 'node'
         }
       },

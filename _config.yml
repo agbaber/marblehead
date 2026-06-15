@@ -29,6 +29,8 @@ collections:
   transcripts:
     output: true
     permalink: /meetings/:path/
+  primers:
+    output: false
 
 defaults:
   - scope:
