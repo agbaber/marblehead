@@ -143,21 +143,35 @@ export async function handleClaimAddress(request, env) {
     // so it collides with an invite-handshake hash for the same person.
     const hash = await identityHash(payload.fb_display_name, claimed_address);
     const now = Math.floor(Date.now() / 1000);
+
+    // ON CONFLICT: a user who first joined via invite-handshake now also
+    // signing in with FB lands on the same identity_hash. Don't fail --
+    // attach the FB credentials to the existing row and preserve their
+    // branch_root, invites_remaining, original claim_source, etc.
     await env.DB.prepare(
       'INSERT INTO residents (' +
       '  identity_hash, fb_user_id, display_name, fb_profile_url, ' +
       '  auth_source, claim_source, public_identity, created_at) ' +
-      'VALUES (?, ?, ?, ?, \'self_serve\', \'assessor_match\', 0, ?)'
+      'VALUES (?, ?, ?, ?, \'self_serve\', \'assessor_match\', 0, ?) ' +
+      'ON CONFLICT(identity_hash) DO UPDATE SET ' +
+      '  fb_user_id = excluded.fb_user_id, ' +
+      '  fb_profile_url = excluded.fb_profile_url, ' +
+      '  display_name = COALESCE(residents.display_name, excluded.display_name)'
     ).bind(
       hash, payload.fb_user_id, payload.fb_display_name,
       payload.fb_profile_url, now
     ).run();
 
+    // Look up the (now-current) row to find the right branch_root for the JWT.
+    const row = await env.DB.prepare(
+      'SELECT branch_root FROM residents WHERE identity_hash = ?'
+    ).bind(hash).first();
+
     // Mint a full-resident JWT so subsequent calls authenticate against
     // /api/profile etc. Front-end stores this in localStorage as verify_jwt
     // mirroring the existing invite-handshake convention.
     const newJwt = await signJWT({
-      sub: hash, branch: null, auth_source: 'self_serve',
+      sub: hash, branch: row ? row.branch_root : null, auth_source: 'self_serve',
     }, env.JWT_SECRET);
 
     return jsonResponse({
