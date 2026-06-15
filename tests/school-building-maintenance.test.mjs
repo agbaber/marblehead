@@ -32,68 +32,46 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
   const pageLead = await page.$('.page-lead');
   pageLead ? ok('.page-lead present') : fail('.page-lead', 'missing');
 
-  // Key stats
-  const keyStatLabels = await page.$$eval('.key-stats .key-stat-label', els => els.map(e => e.textContent.trim()));
-  keyStatLabels.length === 4
-    ? ok('4 key stats present')
-    : fail('key stats count', `expected 4, got ${keyStatLabels.length}`);
-
-  const keyStatValues = await page.$$eval('.key-stats .key-stat-value', els => els.map(e => e.textContent.trim()));
-  keyStatValues.includes('$55M')
-    ? ok('$55M key stat present')
-    : fail('$55M key stat', 'missing');
-  keyStatValues.includes('FY27')
-    ? ok('FY27 key stat present')
-    : fail('FY27 key stat', 'missing');
-
-  // Three top-level sections: Know / Don't Know / Find Out
+  // Three top-level sections after restructure: Schools / Former / Open / Find
   const h2s = await page.$$eval('h2', els => els.map(e => e.textContent.trim()));
-  h2s.some(t => t.toLowerCase().includes("what we know"))
-    ? ok('Section "Here\'s what we know" present')
-    : fail('Know section', `not found in ${JSON.stringify(h2s)}`);
-  h2s.some(t => t.toLowerCase().includes("what we don't know") || t.toLowerCase().includes("what we dont know"))
-    ? ok('Section "Here\'s what we don\'t know" present')
-    : fail('Don\'t-know section', `not found in ${JSON.stringify(h2s)}`);
+  h2s.some(t => t.toLowerCase().includes("5 operating schools"))
+    ? ok('Section "The 5 operating schools" present')
+    : fail('Schools section', `not found in ${JSON.stringify(h2s)}`);
+  h2s.some(t => t.toLowerCase().includes("former school"))
+    ? ok('Section "Four former school buildings" present')
+    : fail('Former section', `not found in ${JSON.stringify(h2s)}`);
+  h2s.some(t => t.toLowerCase().includes("open questions") || t.toLowerCase().includes("what we don't know"))
+    ? ok('Open-questions section present')
+    : fail('Open-questions section', `not found in ${JSON.stringify(h2s)}`);
   h2s.some(t => t.toLowerCase().includes("find out"))
-    ? ok('Section "Here\'s how we\'ll find out" present')
+    ? ok('"Find out" section present')
     : fail('Find-out section', `not found in ${JSON.stringify(h2s)}`);
+
+  // Hero: 5 operating-school cards
+  const schoolCards = await page.$$('.sbm-school-cards .sbm-card');
+  schoolCards.length === 5
+    ? ok(`Hero: 5 operating-school cards present`)
+    : fail('school cards count', `expected 5, got ${schoolCards.length}`);
+
+  const schoolCardHeadings = await page.$$eval('.sbm-school-cards .sbm-card h3', els => els.map(e => e.textContent.trim()));
+  ['Marblehead High School', 'Veterans Middle School', 'Village Elementary', 'Glover Elementary', 'Lucretia and Joseph Brown'].every(
+    name => schoolCardHeadings.some(h => h.includes(name))
+  )
+    ? ok('All 5 expected school names appear as card headings')
+    : fail('school card headings', `got ${JSON.stringify(schoolCardHeadings)}`);
+
+  // Former-buildings cards
+  const formerCards = await page.$$('.sbm-cards .sbm-card');
+  formerCards.length === 4
+    ? ok(`Former-buildings card grid has ${formerCards.length} cards`)
+    : fail('former cards count', `expected 4, got ${formerCards.length}`);
 
   // Body content checks
   const body = await page.textContent('body');
 
-  body.includes('Lucretia and Joseph Brown')
-    ? ok('Full Brown School name referenced')
-    : fail('Brown name', 'missing');
-
   body.includes('EBI Consulting')
     ? ok('EBI Consulting (firm name) referenced')
     : fail('EBI Consulting', 'missing');
-
-  body.includes('Aug')
-    ? ok('Aug 31 2025 deliverable referenced (in don\'t-know list)')
-    : fail('Aug 31 deliverable', 'missing');
-
-  // Brown-gap callout
-  const brownGap = await page.$('.sbm-brown-gap');
-  brownGap ? ok('Brown-gap callout present (.sbm-brown-gap)') : fail('Brown-gap', 'missing');
-
-  // Backlog bar chart still visible
-  const barChart = await page.$('svg.sbm-bar-chart');
-  barChart ? ok('Bar chart SVG present') : fail('Bar chart SVG', 'missing');
-
-  const caveatBanner = await page.$('.sbm-caveat-banner');
-  caveatBanner ? ok('Bar chart caveat banner present') : fail('caveat banner', 'missing');
-
-  const barLabels = await page.$$eval('svg.sbm-bar-chart text', els => els.map(e => e.textContent.trim()));
-  ['High School', 'Veterans', 'Village', 'Glover', 'Brown'].every(b => barLabels.some(l => l.includes(b)))
-    ? ok('All 5 operating schools appear as chart rows')
-    : fail('chart rows', `expected 5 building labels, got ${JSON.stringify(barLabels)}`);
-
-  // Former-buildings cards
-  const cards = await page.$$('.sbm-cards .sbm-card');
-  cards.length === 4
-    ? ok(`Former-buildings card grid has ${cards.length} cards`)
-    : fail('cards count', `expected 4, got ${cards.length}`);
 
   body.includes('Harborlight Homes')
     ? ok('Coffin Adaptive Reuse / Harborlight reference present')
@@ -102,6 +80,10 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
   body.includes('Eveleth')
     ? ok('Eveleth building referenced')
     : fail('Eveleth', 'missing');
+
+  body.includes('Aug')
+    ? ok('Aug 31 2025 deliverable referenced')
+    : fail('Aug 31 deliverable', 'missing');
 
   // Sarah Fox blockquote
   body.includes('buckets and mops')
@@ -120,7 +102,7 @@ function fail(name, detail) { failed++; console.log(`  FAIL: ${name} — ${detai
     ? ok('Summer 2026 HS roof construction referenced')
     : fail('summer 2026 roof', 'missing');
 
-  // Glover HVAC ambiguity (the new finding worth flagging)
+  // Glover HVAC ambiguity (now in the Glover card and Open Questions)
   body.includes('Glover') && (body.includes('condenser') || body.includes('20%'))
     ? ok('Glover HVAC scope ambiguity surfaced')
     : fail('Glover HVAC', 'condenser/20% scope ambiguity not on page');

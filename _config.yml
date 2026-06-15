@@ -17,6 +17,12 @@ digest_worker_base: "https://marblehead-meeting-digest.agbaber.workers.dev"
 # transcripts_subscribe: shows the Subscribe CTA on transcript pages.
 transcripts_subscribe: true
 
+# Mapbox public token for Static Images API (school-building-maintenance map).
+# Public tokens (pk.*) are designed to be exposed in client code; this one is
+# URL-restricted to marbleheaddata.org and preview domains in the Mapbox
+# dashboard.
+mapbox_token: "pk.eyJ1IjoiYWdiYWJlciIsImEiOiJjbXFkNzNtcTUweGIwMnBvZ3ByanN3N2oxIn0.mkfdAEIhSUxXH-TeblpX5w"
+
 plugins: []
 
 collections:
