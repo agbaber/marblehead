@@ -50,13 +50,21 @@ See docs/social/baseline-2026-06-12.md for the starting metric snapshot.
 
 ## Month 3 checkpoint (mid-September)
 
-Targets, measured against April 2026 baseline:
+Targets, measured against April 2026 baseline. All metrics auto-pull
+from D1 or PostHog. Nothing manual:
 
 - Email subscribers: at least 100 active.
-- Facebook page followers: at least 200.
 - Monthly site traffic: at or above April baseline (462 visitors).
+- FB-driven traffic: at or above the April share of 26 percent (about
+  120 visitors / month).
 - Channel mix: email plus Facebook drive at least 40 percent of
   traffic.
 
 If short on reach, add op-eds. If short on email growth, run a
 one-time FB push for digest signup.
+
+Note on what is NOT a target: Facebook page follower count. Followers
+are a vanity metric here. No decision in this plan depends on it, and
+the thing we actually care about (does FB drive traffic) is in the
+FB-driven-traffic line above. If a Graph API token gets wired up
+later, it becomes free signal; until then, do not track manually.
