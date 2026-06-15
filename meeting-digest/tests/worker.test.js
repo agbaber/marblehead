@@ -469,4 +469,126 @@ topic_segments:
     const after = await env.DB.prepare('SELECT drip_week_index FROM subscriber WHERE id = ?').bind(row.id).first();
     expect(after.drip_week_index).toBe(0);
   });
+
+  it('subscriber at week 3 receives primer 4 and drip_week_index bumps to 4', async () => {
+    const row = await confirmedSubscriber('mid@example.com', { boards: ['select-board'], topics: [] });
+    await env.DB.prepare('UPDATE subscriber SET drip_week_index = 3 WHERE id = ?').bind(row.id).run();
+    stubGithubPrimers(
+      ['01-welcome.md', '02-org.md', '03-debt.md', '04-spending.md'],
+      [
+        ['01-welcome.md', [1, 'A']],
+        ['02-org.md',     [2, 'B']],
+        ['03-debt.md',    [3, 'C']],
+        ['04-spending.md',[4, 'D']]
+      ]
+    );
+    const today = new Date().toISOString().slice(0, 10);
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([{ type: 'file', name: `select-board-${today}.md`, download_url: 'https://example.com/sb.md' }]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/sb.md', method: 'GET' })
+      .reply(200, `---
+slug: select-board-${today}
+board: select-board
+board_display: "Select Board"
+date: ${today}
+title: "Select Board"
+vimeo_url: "https://vimeo.com/0"
+summary_card:
+  headline: "Test"
+  summary: "Test"
+topic_segments:
+---
+`);
+
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.sent).toBe(1);
+    const after = await env.DB.prepare('SELECT drip_week_index FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(after.drip_week_index).toBe(4);
+  });
+
+  it('when subscribers target-week primer file is malformed, digest sends without primer and index stays', async () => {
+    const row = await confirmedSubscriber('malformed@example.com', { boards: ['select-board'], topics: [] });
+    // Subscriber starts at drip_week_index = 0 (default), so target is week 1.
+    // _primers/ has 01-welcome.md (malformed) and 02-org.md (valid).
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_primers\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([
+        { type: 'file', name: '01-welcome.md', download_url: 'https://example.com/primers/01-welcome.md' },
+        { type: 'file', name: '02-org.md',     download_url: 'https://example.com/primers/02-org.md' }
+      ]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/primers/01-welcome.md', method: 'GET' })
+      .reply(200, 'totally not a primer');
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/primers/02-org.md', method: 'GET' })
+      .reply(200, primerMdFile(2, 'Org'));
+
+    const today = new Date().toISOString().slice(0, 10);
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([{ type: 'file', name: `select-board-${today}.md`, download_url: 'https://example.com/sb.md' }]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/sb.md', method: 'GET' })
+      .reply(200, `---
+slug: select-board-${today}
+board: select-board
+board_display: "Select Board"
+date: ${today}
+title: "Select Board"
+vimeo_url: "https://vimeo.com/0"
+summary_card:
+  headline: "Test"
+  summary: "Test"
+topic_segments:
+---
+`);
+
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.sent).toBe(1);
+    const after = await env.DB.prepare('SELECT drip_week_index FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(after.drip_week_index).toBe(0);
+  });
+
+  it('does not bump drip_week_index when Resend send fails', async () => {
+    const row = await confirmedSubscriber('fail@example.com', { boards: ['select-board'], topics: [] });
+    // The beforeEach registers a persist()ed 200 stub. Clear it so we can
+    // install a one-shot 500 for this test only.
+    fetchMock.get('https://api.resend.com').cleanMocks();
+    fetchMock.get('https://api.resend.com')
+      .intercept({ path: '/emails', method: 'POST' })
+      .reply(500, JSON.stringify({ message: 'send failed' }));
+
+    stubGithubPrimers(['01-welcome.md'], [['01-welcome.md', [1, 'Welcome']]]);
+    const today = new Date().toISOString().slice(0, 10);
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([{ type: 'file', name: `select-board-${today}.md`, download_url: 'https://example.com/sb.md' }]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/sb.md', method: 'GET' })
+      .reply(200, `---
+slug: select-board-${today}
+board: select-board
+board_display: "Select Board"
+date: ${today}
+title: "Select Board"
+vimeo_url: "https://vimeo.com/0"
+summary_card:
+  headline: "Test"
+  summary: "Test"
+topic_segments:
+---
+`);
+
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.errored).toBe(1);
+    expect(out.sent).toBe(0);
+    // drip_week_index stays at 0 — failure branch does not update it
+    const after = await env.DB.prepare('SELECT drip_week_index FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(after.drip_week_index).toBe(0);
+    // last_sent_at stays NULL — failure branch does not update it either
+    const afterFull = await env.DB.prepare('SELECT last_sent_at FROM subscriber WHERE id = ?').bind(row.id).first();
+    expect(afterFull.last_sent_at).toBeNull();
+  });
 });
