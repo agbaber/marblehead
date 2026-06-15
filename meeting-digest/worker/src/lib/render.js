@@ -2,6 +2,15 @@
 
 import { emailShell } from './email-shell.js';
 
+// Apply to editorial outbound links only (meeting pages). Skips the
+// manage/unsubscribe links: those go to internal Worker routes that
+// don't render as $pageview events on marbleheaddata.org, so the UTM
+// would be noise, not signal.
+const UTM_QUERY = 'utm_source=digest&utm_medium=email&utm_campaign=weekly';
+function withUtm(url) {
+  return url.includes('?') ? `${url}&${UTM_QUERY}` : `${url}?${UTM_QUERY}`;
+}
+
 function escapeHtml(s) {
   if (s == null) return '';
   return String(s)
@@ -40,7 +49,7 @@ export function renderSubject(matches) {
 
 function meetingHtml(m, env) {
   const t = m.transcript;
-  const meetingUrl = `${env.SITE_BASE_URL}/meetings/${t.slug}/`;
+  const meetingUrl = withUtm(`${env.SITE_BASE_URL}/meetings/${t.slug}/`);
   return `
   <div style="margin: 0 0 28px;">
     <p class="mhd-muted" style="margin: 0 0 6px; font-size: 13px; color: #6c757d;">${escapeHtml(t.board_display)} · ${escapeHtml(formatShortDate(t.date))}</p>
@@ -52,7 +61,7 @@ function meetingHtml(m, env) {
 
 function meetingText(m, env) {
   const t = m.transcript;
-  const meetingUrl = `${env.SITE_BASE_URL}/meetings/${t.slug}/`;
+  const meetingUrl = withUtm(`${env.SITE_BASE_URL}/meetings/${t.slug}/`);
   return `${t.board_display} · ${formatShortDate(t.date)}
 ${t.summary_card?.headline || t.title}
 

@@ -1,0 +1,271 @@
+{
+  "_meta": {
+    "schema_version": 1,
+    "snapshot": "checkbook_FY26_2026-06-09.csv",
+    "fy26_paid_total": 99931420,
+    "coverage_top_20_funds": 0.978,
+    "buckets": [
+      "ballot",
+      "town_meeting",
+      "ratepayer",
+      "state_fed",
+      "revolving",
+      "other"
+    ],
+    "bucket_labels": {
+      "ballot": "Voted at the ballot — capital debt exclusions",
+      "town_meeting": "Voted at Town Meeting — annual budget articles",
+      "ratepayer": "Paid by ratepayers, not the property-tax levy",
+      "state_fed": "State & federal restricted grants",
+      "revolving": "Revolving funds (paid by users of the service)",
+      "other": "Trust, donation, and small fundraising funds"
+    },
+    "bucket_totals_fy26": {
+      "ballot": 6725271,
+      "town_meeting": 54286591,
+      "ratepayer": 31248357,
+      "state_fed": 5150330,
+      "revolving": 1280626,
+      "other": 1240245
+    },
+    "ballot_caveat": "Captures direct project spend in the A-numbered capital funds. Annual debt-service bond payments on the same ballot-approved projects are paid out of GENERAL FUND - TOWN ($14.2M to U.S. Bank in FY26 across many bond series) and cannot be split bond-by-bond without an external debt schedule. So 'ballot' is a floor, not a ceiling, on what voters directly authorized.",
+    "tm_carve_out": {
+      "fund": "GENERAL FUND - TOWN",
+      "total_paid_fy26": 43914648,
+      "contractually_fixed": {
+        "insurance_division_total": 14666994,
+        "pension_division_total": 5380625,
+        "us_bank_debt_service": 14236643,
+        "commonwealth_cherry_sheet": 3350185,
+        "subtotal": 37634447,
+        "share_of_gf_town": 0.857
+      },
+      "discretionary_vendor_spend": 6280202,
+      "discretionary_share_of_gf_town": 0.143,
+      "qualifier": "Ledger is vendor checks only; payroll (the largest discretionary line in any operating budget) is paid through a separate payroll system and does not appear in these rows. The 14.3% discretionary figure is therefore for vendor spend only, not total budget choice."
+    },
+    "snapshot_diff_jun02_to_jun09": {
+      "new_rows": 1181,
+      "new_amount": 3216765,
+      "edited_or_removed_rows": 837,
+      "top_movers": [
+        {"vendor": "TOWN OF MARBLEHEAD", "delta": 1369895, "rows": 863, "note": "interfund / payroll-adjacent transfers"},
+        {"vendor": "BERKSHIRE WIND POWER COOPERATIVE CORP", "delta": 1045707, "rows": 24, "note": "Light Dept wholesale, ratepayer not tax"},
+        {"vendor": "BOSTON HIGASHI SCHOOL INC", "delta": 154653, "rows": 6, "note": "out-of-district SpEd placement"},
+        {"vendor": "MELMARK NEW ENGLAND", "delta": 100378, "rows": 4, "note": "out-of-district SpEd placement"},
+        {"vendor": "PRO AV SYSTEMS INC", "delta": 80263, "rows": 2, "note": "capital / IT"},
+        {"vendor": "RIVERVIEW SCHOOL", "delta": 62793, "rows": 6, "note": "out-of-district SpEd placement"},
+        {"vendor": "TYLER EQUIPMENT CORPORATION", "delta": 62734, "rows": 1, "note": "equipment"}
+      ]
+    },
+    "snow_removal_overrun": {
+      "amount_over": 582000,
+      "share_over": 6.54,
+      "note": "Identified by the live page; will need a supplemental appropriation at a Special Town Meeting to close out FY26 books."
+    }
+  },
+
+  "funds": [
+    {
+      "name": "GENERAL FUND - TOWN",
+      "amount_fy26": 43914648,
+      "share": 0.439,
+      "bucket": "town_meeting",
+      "authorized_by": "Annual Town Meeting representatives",
+      "authorized_when": "Annual Town Meeting, May 2025 (FY26 omnibus budget article)",
+      "vote_source": "data/2025_FinCom_Report.pdf (transmittal letter); Town Clerk's published warrant and minutes",
+      "one_line": "Year-to-year operating budget for every General Fund Town department (DPW, Fire, Police, Library, Council on Aging, Town Clerk, Finance, etc.)",
+      "see_carve_out": true
+    },
+    {
+      "name": "ELECTRIC ENTERPRISE",
+      "amount_fy26": 19499712,
+      "share": 0.195,
+      "bucket": "ratepayer",
+      "authorized_by": "Marblehead Municipal Light Board",
+      "authorized_when": "Annual MLD budget + rate-setting",
+      "vote_source": "MLD board minutes; rate filings",
+      "one_line": "Light Department wholesale power purchases (Berkshire Wind, etc.) and operations; self-funded by electric rates."
+    },
+    {
+      "name": "GENERAL FUND - SCHOOL",
+      "amount_fy26": 8066631,
+      "share": 0.081,
+      "bucket": "town_meeting",
+      "authorized_by": "Annual Town Meeting representatives",
+      "authorized_when": "Annual Town Meeting, May 2025 (school appropriation article)",
+      "vote_source": "data/2025_FinCom_Report.pdf; School Committee FY26 budget book",
+      "one_line": "Year-to-year operating budget for Marblehead Public Schools (vendor spend; teacher salaries paid via payroll, not in ledger)."
+    },
+    {
+      "name": "A11 2022 CAPITAL IMPROVEMENT",
+      "amount_fy26": 4937160,
+      "share": 0.049,
+      "bucket": "ballot",
+      "authorized_by": "Marblehead voters",
+      "authorized_when": "Ballot, June 21 2022 — debt exclusion passed",
+      "vote_source": "MA DOR Proposition 2½ Debt Exclusion Votes (6/21/2022): \"Roof Replacements, Road & Sidewalk Improvements, Smart Panels, HVAC, Salt Shed, HS Boiler\"",
+      "one_line": "Article 11 of the 2022 Annual Town Meeting, omnibus capital, repaid via voter-approved debt exclusion outside Prop 2½."
+    },
+    {
+      "name": "WATER ENTERPRISE OPERATING",
+      "amount_fy26": 4442040,
+      "share": 0.044,
+      "bucket": "ratepayer",
+      "authorized_by": "Water & Sewer Commission",
+      "authorized_when": "Annual operating budget + rate-setting",
+      "vote_source": "Water & Sewer Commission minutes; rate filings",
+      "one_line": "Water Enterprise day-to-day operations; self-funded by water rates."
+    },
+    {
+      "name": "SEWER ENTERPRISE OPERATING",
+      "amount_fy26": 3879522,
+      "share": 0.039,
+      "bucket": "ratepayer",
+      "authorized_by": "Water & Sewer Commission",
+      "authorized_when": "Annual operating budget + rate-setting",
+      "vote_source": "Water & Sewer Commission minutes; rate filings",
+      "one_line": "Sewer Enterprise day-to-day operations; self-funded by sewer rates."
+    },
+    {
+      "name": "GENERAL FUND - TAX ARTICLES",
+      "amount_fy26": 2305312,
+      "share": 0.023,
+      "bucket": "town_meeting",
+      "authorized_by": "Annual Town Meeting representatives",
+      "authorized_when": "ATM capital articles, each year as adopted",
+      "vote_source": "Town Clerk's annual warrant and minutes",
+      "one_line": "Capital articles funded inside the levy (no debt exclusion); each individual article voted at Town Meeting."
+    },
+    {
+      "name": "CIRCUIT BREAKER",
+      "amount_fy26": 1768306,
+      "share": 0.018,
+      "bucket": "state_fed",
+      "authorized_by": "Massachusetts Department of Elementary and Secondary Education",
+      "authorized_when": "Annual state SpEd reimbursement formula",
+      "vote_source": "DESE Special Education Circuit Breaker program rules",
+      "one_line": "State reimbursement for out-of-district SpEd placements above a per-pupil threshold. Restricted to SpEd costs."
+    },
+    {
+      "name": "A34 2015 NEW TRANSF STATION",
+      "amount_fy26": 1327441,
+      "share": 0.013,
+      "bucket": "ballot",
+      "authorized_by": "Marblehead voters",
+      "authorized_when": "Ballot, June 16 2015 — debt exclusion passed",
+      "vote_source": "MA DOR Proposition 2½ Debt Exclusion Votes (6/16/2015): \"Bonds To Pay For Repair And Replacement Of Drainage Pipe And Construction Of New Xfer Station\"",
+      "one_line": "Article 34 of the 2015 Annual Town Meeting, transfer station construction + drainage, repaid via voter-approved debt exclusion outside Prop 2½."
+    },
+    {
+      "name": "COVID 19 ARPA (FED)",
+      "amount_fy26": 1187886,
+      "share": 0.012,
+      "bucket": "state_fed",
+      "authorized_by": "US Congress (federal)",
+      "authorized_when": "American Rescue Plan Act, March 2021 (sunsetting)",
+      "vote_source": "ARPA allocation to Marblehead; Select Board acceptances",
+      "one_line": "Federal pandemic-recovery allocation. Restricted to ARPA-eligible categories; expires."
+    },
+    {
+      "name": "WATER CAPITAL ARTICLES",
+      "amount_fy26": 1011200,
+      "share": 0.010,
+      "bucket": "ratepayer",
+      "authorized_by": "Town Meeting / Water & Sewer Commission",
+      "authorized_when": "Annual Town Meeting capital articles, repaid via water rates",
+      "vote_source": "Town Clerk's annual warrant and minutes",
+      "one_line": "Water-system capital projects (mains, tanks, treatment) authorized at Town Meeting but repaid via water-rate revenue, not tax levy."
+    },
+    {
+      "name": "SCHOOL LUNCH",
+      "amount_fy26": 874173,
+      "share": 0.009,
+      "bucket": "state_fed",
+      "authorized_by": "USDA + DESE (federal + state)",
+      "authorized_when": "Annual USDA National School Lunch Program reimbursement",
+      "vote_source": "USDA reimbursement claims, DESE pass-through",
+      "one_line": "Federal/state reimbursement for the school meal program. Restricted to food-service operations."
+    },
+    {
+      "name": "MWRA PROJECT LWSAP26-3021",
+      "amount_fy26": 733600,
+      "share": 0.007,
+      "bucket": "ratepayer",
+      "authorized_by": "MWRA (project funding) + Marblehead Water/Sewer Commission",
+      "authorized_when": "MWRA Local Water System Assistance Program",
+      "vote_source": "MWRA grant/loan agreement; Town acceptance",
+      "one_line": "MWRA-funded water-main lining or replacement work; repaid through water rates and MWRA grant credits, not tax levy."
+    },
+    {
+      "name": "SPED IDEA 94-142 (240)",
+      "amount_fy26": 703084,
+      "share": 0.007,
+      "bucket": "state_fed",
+      "authorized_by": "US Congress (federal IDEA Part B)",
+      "authorized_when": "Annual federal IDEA entitlement",
+      "vote_source": "Federal IDEA Part B grant award; School Committee acceptance",
+      "one_line": "Federal entitlement supporting students with disabilities. Restricted to IDEA-eligible activities."
+    },
+    {
+      "name": "COMMERCIAL WASTE COLL REVOLV",
+      "amount_fy26": 690758,
+      "share": 0.007,
+      "bucket": "revolving",
+      "authorized_by": "Town Meeting (annual revolving fund authorization)",
+      "authorized_when": "Annual Town Meeting revolving-fund article (MGL c.44 §53E½)",
+      "vote_source": "Town Clerk's annual warrant; revolving-fund authorization",
+      "one_line": "Commercial trash collection paid for by participating businesses, not the tax levy."
+    },
+    {
+      "name": "HARBOR CAPITAL ARTICLES",
+      "amount_fy26": 605741,
+      "share": 0.006,
+      "bucket": "ratepayer",
+      "authorized_by": "Town Meeting / Harbors & Waters Board",
+      "authorized_when": "Annual Town Meeting harbor capital articles",
+      "vote_source": "Town Clerk's annual warrant and minutes",
+      "one_line": "Harbor capital projects (floats, piers, dredging) repaid via mooring/waterways fees, not tax levy."
+    },
+    {
+      "name": "PARK REVOLVING FUND",
+      "amount_fy26": 484276,
+      "share": 0.005,
+      "bucket": "revolving",
+      "authorized_by": "Town Meeting (annual revolving fund authorization)",
+      "authorized_when": "Annual Town Meeting revolving-fund article (MGL c.44 §53E½)",
+      "vote_source": "Town Clerk's annual warrant",
+      "one_line": "Recreation program fees fund Park Dept program expenses; not from the tax levy."
+    },
+    {
+      "name": "HARBOR ENTERPRISE OPERATING",
+      "amount_fy26": 479912,
+      "share": 0.005,
+      "bucket": "ratepayer",
+      "authorized_by": "Town Meeting + Harbors & Waters Board",
+      "authorized_when": "Annual harbor enterprise budget article",
+      "vote_source": "Town Clerk's annual warrant; H&W board minutes",
+      "one_line": "Harbor day-to-day operations; self-funded by mooring and waterways fees."
+    },
+    {
+      "name": "A33 2025-ALLEY BLDG IMPROV",
+      "amount_fy26": 443923,
+      "share": 0.004,
+      "bucket": "ballot",
+      "authorized_by": "Marblehead voters",
+      "authorized_when": "Ballot, June 10 2025 — debt exclusion passed",
+      "vote_source": "MA DOR Proposition 2½ Debt Exclusion Votes (6/10/2025): \"Mary Alley Building Improvement & HVAC\"",
+      "one_line": "Article 33 of the 2025 Annual Town Meeting, Mary Alley Building improvements + HVAC, repaid via voter-approved debt exclusion outside Prop 2½."
+    },
+    {
+      "name": "SEWER CAPITAL ARTICLES",
+      "amount_fy26": 356764,
+      "share": 0.004,
+      "bucket": "ratepayer",
+      "authorized_by": "Town Meeting + Water & Sewer Commission",
+      "authorized_when": "Annual Town Meeting sewer capital articles",
+      "vote_source": "Town Clerk's annual warrant; W&S Commission minutes",
+      "one_line": "Sewer-system capital projects authorized at Town Meeting, repaid via sewer rates."
+    }
+  ]
+}

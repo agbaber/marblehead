@@ -67,6 +67,12 @@ describe('renderHtml', () => {
     expect(html).not.toContain('Matching segments');
     expect(html).not.toContain('12:34');
   });
+  it('adds UTM params to editorial meeting links but not to manage/unsubscribe', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-12');
+    expect(html).toContain('/meetings/select-board-2026-06-10/?utm_source=digest&utm_medium=email&utm_campaign=weekly');
+    expect(html).not.toContain('/me/subscription/?token=mtok&utm_source');
+    expect(html).not.toContain('/api/unsubscribe?token=mtok&utm_source');
+  });
   it('escapes HTML in user-influenced fields', () => {
     const evil = {
       transcript: { ...SB_MATCH.transcript, summary_card: { headline: '<script>alert(1)</script>', summary: 'x' } },
@@ -88,5 +94,12 @@ describe('renderText', () => {
     expect(text).toContain('Jun 10');
     expect(text).not.toContain('<');
     expect(text).not.toContain('&gt;');
+  });
+  it('adds UTM params to editorial meeting links in text version', () => {
+    const text = renderText([SB_MATCH], SUB, ENV, '2026-06-12');
+    expect(text).toContain('/meetings/select-board-2026-06-10/?utm_source=digest&utm_medium=email&utm_campaign=weekly');
+    // Manage/unsubscribe links stay clean (no UTM appended).
+    expect(text).toMatch(/\/me\/subscription\/\?token=mtok(?!.*utm_source)/);
+    expect(text).toMatch(/\/api\/unsubscribe\?token=mtok(?!.*utm_source)/);
   });
 });
