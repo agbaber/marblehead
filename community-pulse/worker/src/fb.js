@@ -45,7 +45,10 @@ export async function exchangeCode({ appId, appSecret, redirectUri, code }) {
  */
 export async function fetchMe(accessToken) {
   const url = new URL(`https://graph.facebook.com/${FB_API_VERSION}/me`);
-  url.searchParams.set('fields', 'id,name,link,picture.type(large)');
+  // `link` was removed from public_profile in Graph API v17. Requesting
+  // it fails the whole /me call. Stick to fields the public_profile
+  // scope still returns; synthesize profile_url from the FB user id.
+  url.searchParams.set('fields', 'id,name,picture.type(large)');
   url.searchParams.set('access_token', accessToken);
   const res = await fetch(url.toString());
   if (!res.ok) return null;
@@ -53,7 +56,7 @@ export async function fetchMe(accessToken) {
   return {
     fb_user_id: data.id,
     display_name: data.name,
-    profile_url: data.link || `https://facebook.com/${data.id}`,
+    profile_url: `https://facebook.com/${data.id}`,
     picture_url: data.picture?.data?.url || null,
   };
 }
