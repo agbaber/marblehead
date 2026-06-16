@@ -1,0 +1,29 @@
+# _data/in_play.yml
+#
+# 3-5 editorially curated open questions of town government. Every entry
+# must link to an explainer page that exists. Update when an item moves
+# (decided, dropped, scope changes).
+
+- title: FY27 budget
+  summary: "All four override questions passed June 9, 2026. The $15M Invest tier governs FY27; implementation follows."
+  link: /2026-override/
+  link_text: see the results
+  updated: "2026-06-16"
+
+- title: MBTA Article 4
+  summary: "Marblehead's 3A zoning passed Town Meeting 881-82 on May 4, 2026. Buildout proceeds; the SHI stands at 3.9%."
+  link: /topics/40b-mbta/
+  link_text: housing and 3A
+  updated: "2026-05-05"
+
+- title: School staffing
+  summary: "FY27 reduces staffing by 18.25 FTE (layoffs, unfilled positions, stipends). Roughly 50 positions cut over FY25 to FY27."
+  link: /topics/school-budget/
+  link_text: school budget feed
+  updated: "2026-06-10"
+
+- title: Glover HVAC scope
+  summary: "CFO says the system was designed for about 20% of the building. Residents who watched the install dispute that."
+  link: /school-building-maintenance.html
+  link_text: school buildings
+  updated: "2026-04-09"
