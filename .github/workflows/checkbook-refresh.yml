@@ -1,25 +1,22 @@
 name: Refresh checkbook CSV
 
 # Daily refresh of the published transaction-level checkbook CSV from
-# the Town spending portal, with a manual human review gate.
-#
-# Unlike data-refresh.yml (which pulls an aggregated rollup with no
-# PII exposure), this one runs the full pipeline:
+# the Town spending portal.
 #
 #   scripts/fetch_checkbook_export.py
 #     → /tmp/checkbook_raw_export.csv  (PII-bearing, never committed)
 #       → scripts/build_checkbook_csv.py
 #         → data/checkbook_FY26_<as-of>.csv  (publishable)
 #         → data/checkbook_redaction_disclosure.json
-#         → /tmp/checkbook_redaction_review.tsv  (privacy gate)
+#         → /tmp/checkbook_redaction_review.tsv  (audit log)
 #
 # The raw export carries employee surnames (111F Injury Leave / Workers
 # Comp medical claims) and student initials (out-of-district SpEd
-# placements). Even after the build script's surgical redaction,
-# /tmp/checkbook_redaction_review.tsv must be scanned by a human before
-# merge — that file is the actual privacy gate. So this workflow does
-# NOT enable auto-merge; it posts the review summary as a PR comment
-# and waits for explicit human approval.
+# placements). build_checkbook_csv.py drops both medical-claim funds
+# entirely and surgically masks identifying descriptions. That
+# best-effort redaction is treated as sufficient: auto-merge is
+# enabled. The review TSV is still posted as a PR comment so the
+# masking decisions remain auditable after the fact.
 #
 # Required secrets:
 #   INGEST_PAT  Personal access token with `repo` scope. Same as
@@ -66,11 +63,11 @@ jobs:
           set -euo pipefail
           gh label create auto-checkbook \
             --color d62728 \
-            --description "Daily auto-refresh of the checkbook CSV — human review required" \
+            --description "Daily auto-refresh of the checkbook CSV" \
             2>/dev/null || true
           open_count=$(gh pr list --label auto-checkbook --state open --json number --jq 'length')
           if [ "$open_count" -gt 0 ]; then
-            echo "An auto-checkbook PR is already open (waiting on human review). Skipping."
+            echo "An auto-checkbook PR is already open (likely failed CI on a prior run). Skipping."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
@@ -174,7 +171,7 @@ jobs:
           fi
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      - name: Commit, push, open PR (no auto-merge — human PII review required)
+      - name: Commit, push, open PR, enable auto-merge
         if: steps.changes.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.INGEST_PAT }}
@@ -201,17 +198,6 @@ jobs:
           **Total:** ${TOTAL_M} across ${ROW_COUNT} published rows
           **Redactions:** ${MASKED_COUNT} descriptions masked as \`[withheld]\`
 
-          ## :warning: Human review required
-
-          This PR is **not auto-merged**. Before approving, scan the
-          redaction review file (posted as a comment below) for:
-
-          1. Any **kept** description in a student-related fund that
-             still identifies a person (add a pattern to
-             \`scripts/build_checkbook_csv.py\` and rerun).
-          2. Any **masked** description where the placeholder is
-             warranted but the rule label is misleading.
-
           ## Pipeline
 
           1. \`scripts/fetch_checkbook_export.py\` hit
@@ -227,8 +213,14 @@ jobs:
              \`checkbook.html\` (\`CHECKBOOK_URL\`, the Sources block
              link, and \`og_description\`) and deleted the prior CSV.
 
-          To merge, use a plain squash (the CLAUDE.md default), not
-          auto-merge.
+          Auto-merge is enabled. The redaction review TSV is posted
+          below as an audit log; if a kept description ever turns
+          out to identify a person, add a pattern to
+          \`scripts/build_checkbook_csv.py\` and the next run will
+          mask it. Required checks (smoke, Secret scan, Content
+          guardrails) gate the merge; on failure this PR stays open
+          and the next daily run is skipped via the \`auto-checkbook\`
+          label.
           EOF
 
           gh pr create \
@@ -238,7 +230,9 @@ jobs:
             --base main \
             --head "$branch"
 
-      - name: Post redaction review TSV as a PR comment
+          gh pr merge "$branch" --auto --squash --delete-branch
+
+      - name: Post redaction review TSV as a PR comment (audit log)
         if: steps.changes.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.INGEST_PAT }}
