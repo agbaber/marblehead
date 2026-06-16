@@ -4529,6 +4529,16 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   color: var(--c-text-sub);
 }
 
+.org-card-source {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 10px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--c-border);
+}
+
 .org-cluster-header {
   display: flex;
   justify-content: space-between;
@@ -4747,11 +4757,56 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 @media (max-width: 700px) {
   .org-chart {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
 
+  /* Two-column cluster grids on mobile so users see more at a glance */
   .org-cluster-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .org-cluster {
+    padding: 8px;
+  }
+
+  .org-cluster-name {
+    font-size: 0.6875rem;
+  }
+
+  /* Compact mobile cards */
+  .org-card > summary {
+    padding: 8px 18px 8px 8px;
+    min-height: 0;
+  }
+
+  .org-card > summary::after {
+    top: 8px;
+    right: 6px;
+    font-size: 0.625rem;
+  }
+
+  .org-card-dept {
+    font-size: 0.75rem;
+    line-height: 1.15;
+  }
+
+  .org-card-head {
+    font-size: 0.6875rem;
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+
+  .org-card-num {
+    font-size: 1.25rem;
+  }
+
+  .org-card-body {
+    padding: 8px;
+  }
+
+  .org-card-fte {
+    margin-top: 2px;
   }
 
   .board-emphasized {

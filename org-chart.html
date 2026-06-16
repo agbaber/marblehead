@@ -71,7 +71,6 @@ og_url: https://marbleheaddata.org/org-chart.html
               {% else %}
                 <span class="org-card-num" title="{{ dept.fte_null_reason }}">&ndash;</span>
               {% endif %}
-              <sup class="cite" data-href="{{ dept.source_url }}" data-source="{{ dept.source_label }}"></sup>
             </span>
           </summary>
           <div class="org-card-body">
@@ -81,6 +80,7 @@ og_url: https://marbleheaddata.org/org-chart.html
             </ul>
             {% endif %}
             {% if dept.note %}<p class="org-card-note">{{ dept.note }}</p>{% endif %}
+            <p class="org-card-source">Source<sup class="cite" data-href="{{ dept.source_url }}" data-source="{{ dept.source_label }}"></sup></p>
           </div>
         </details>
         {% endfor %}
@@ -117,7 +117,6 @@ og_url: https://marbleheaddata.org/org-chart.html
               {% else %}
                 <span class="org-card-num" title="{{ dept.fte_null_reason }}">&ndash;</span>
               {% endif %}
-              <sup class="cite" data-href="{{ dept.source_url }}" data-source="{{ dept.source_label }}"></sup>
             </span>
           </summary>
           <div class="org-card-body">
@@ -127,6 +126,7 @@ og_url: https://marbleheaddata.org/org-chart.html
             </ul>
             {% endif %}
             {% if dept.note %}<p class="org-card-note">{{ dept.note }}</p>{% endif %}
+            <p class="org-card-source">Source<sup class="cite" data-href="{{ dept.source_url }}" data-source="{{ dept.source_label }}"></sup></p>
           </div>
         </details>
         {% endfor %}
@@ -154,7 +154,6 @@ og_url: https://marbleheaddata.org/org-chart.html
               {% else %}
                 <span class="org-card-num" title="{{ school.fte_null_reason }}">&ndash;</span>
               {% endif %}
-              <sup class="cite" data-href="{{ school.source_url }}" data-source="{{ school.source_label }}"></sup>
             </span>
           </summary>
           <div class="org-card-body">
@@ -171,6 +170,7 @@ og_url: https://marbleheaddata.org/org-chart.html
             </ul>
             {% endif %}
             {% if school.note %}<p class="org-card-note">{{ school.note }}</p>{% endif %}
+            <p class="org-card-source">Source<sup class="cite" data-href="{{ school.source_url }}" data-source="{{ school.source_label }}"></sup></p>
           </div>
         </details>
         {% endfor %}
@@ -191,11 +191,11 @@ og_url: https://marbleheaddata.org/org-chart.html
       <span class="org-card-head">{{ ent.head_title }}</span>
       <span class="org-card-fte">
         {% if ent.fte %}<span class="org-card-num"{% if ent.fte_basis %} title="{{ ent.fte_basis }}"{% endif %}>{{ ent.fte }}</span> <span class="org-card-num-sub">employees</span>{% else %}<span class="org-card-num" title="{{ ent.fte_null_reason }}">&ndash;</span>{% endif %}
-        <sup class="cite" data-href="{{ ent.source_url }}" data-source="{{ ent.source_label }}"></sup>
       </span>
     </summary>
     <div class="org-card-body">
       {% if ent.note %}<p class="org-card-note">{{ ent.note }}</p>{% endif %}
+      <p class="org-card-source">Source<sup class="cite" data-href="{{ ent.source_url }}" data-source="{{ ent.source_label }}"></sup></p>
       {% if ent.divisions and ent.divisions.size > 0 %}
       <p class="org-card-sublist-label">{{ ent.divisions.size }} divisions / {{ ent.fte }} employees</p>
       <div class="org-divisions">
