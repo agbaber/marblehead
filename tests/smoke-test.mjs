@@ -25,14 +25,25 @@ async function testHomepageLoads(page) {
   const hero = await page.$('.home-hero');
   hero ? ok('Homepage renders .home-hero') : fail('Homepage', '.home-hero missing');
 
-  const big = await page.$('.home-big');
-  if (big) {
-    const bigText = (await big.textContent()).trim();
-    bigText.length > 0
-      ? ok(`Hero number visible: ${bigText}`)
-      : fail('Hero number', 'home-big text empty');
-  } else {
-    fail('Hero number', '.home-big missing');
+  // Zone 1: top fold has 3 KPIs
+  const kpis = await page.$$('.dashboard-kpi');
+  kpis.length === 3
+    ? ok(`Top fold shows 3 KPIs`)
+    : fail('Top fold KPIs', `expected 3 .dashboard-kpi, got ${kpis.length}`);
+
+  // KPI labels are present and non-empty
+  for (const kpi of kpis) {
+    const label = await kpi.$('.dashboard-kpi-label');
+    const value = await kpi.$('.dashboard-kpi-value');
+    if (label && value) {
+      const labelText = (await label.textContent()).trim();
+      const valueText = (await value.textContent()).trim();
+      labelText.length > 0 && valueText.length > 0
+        ? ok(`KPI rendered: ${labelText} = ${valueText}`)
+        : fail('KPI text', 'label or value empty');
+    } else {
+      fail('KPI structure', '.dashboard-kpi-label or .dashboard-kpi-value missing');
+    }
   }
 
   const tiles = await page.$$('.home-tile');

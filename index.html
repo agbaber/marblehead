@@ -27,31 +27,42 @@ og_url: https://marbleheaddata.org/
   }
   .home-eye .dot { color: var(--c-buoy); margin: 0 6px; }
 
-  .home-big {
-    font-size: clamp(64px, 12vw, 144px);
-    line-height: 0.98;
+  .dashboard-kpis {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 0 0 32px;
+  }
+  @media (min-width: 600px) {
+    .dashboard-kpis { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .dashboard-kpi {
+    display: flex;
+    flex-direction: column;
+  }
+  .dashboard-kpi-value {
+    font-size: clamp(40px, 7vw, 64px);
+    line-height: 1.0;
     font-weight: 800;
-    letter-spacing: -0.04em;
-    margin: 0 0 22px;
+    letter-spacing: -0.03em;
+    margin: 0 0 6px;
     color: var(--text);
     font-variant-numeric: tabular-nums;
   }
-  .home-big--cost { color: var(--c-buoy); }
-
-  .home-cap {
-    font-size: clamp(17px, 2.4vw, 22px);
-    line-height: 1.35;
-    color: var(--text);
-    margin: 0 0 14px;
-    max-width: 640px;
-    font-weight: 500;
-  }
-  .home-cap-sub {
-    font-size: clamp(13px, 1.6vw, 15px);
+  .dashboard-kpi-pct {
+    font-size: 0.55em;
+    font-weight: 600;
     color: var(--text-muted);
-    line-height: 1.55;
-    margin: 0 0 22px;
-    max-width: 620px;
+    letter-spacing: 0;
+  }
+  .dashboard-kpi-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: lowercase;
+    letter-spacing: 0.3px;
+    margin: 0;
   }
 
   .home-deeper {
@@ -144,10 +155,34 @@ og_url: https://marbleheaddata.org/
 </style>
 
 <section class="home-hero">
-  <p class="home-eye">FY26 spending so far <span class="dot">&middot;</span> as of May 29</p>
-  <p class="home-big home-big--cost">$98.1M</p>
-  <p class="home-cap">paid out across departments, vendors, and capital projects this fiscal year.</p>
-  <p class="home-cap-sub">$127.3M annual operating budget. Drill into every line, by fund, department, category, division, or object.</p>
+  <p class="home-eye">
+    Town of Marblehead
+    <span class="dot">&middot;</span>
+    {{ site.data.dashboard.fiscal_year }} in progress
+    <span class="dot">&middot;</span>
+    as of {{ site.data.dashboard.as_of_date | date: "%B %-d" }}
+  </p>
+
+  <div class="dashboard-kpis">
+    <div class="dashboard-kpi">
+      <p class="dashboard-kpi-value">${{ site.data.dashboard.operating_budget_millions }}M</p>
+      <p class="dashboard-kpi-label">operating budget</p>
+    </div>
+    <div class="dashboard-kpi">
+      <p class="dashboard-kpi-value">
+        ${{ site.data.dashboard.spent_so_far_millions }}M
+        <span class="dashboard-kpi-pct">
+          ({{ site.data.dashboard.spent_so_far_millions | times: 100 | divided_by: site.data.dashboard.operating_budget_millions | round }}%)
+        </span>
+      </p>
+      <p class="dashboard-kpi-label">spent so far</p>
+    </div>
+    <div class="dashboard-kpi">
+      <p class="dashboard-kpi-value">${{ site.data.dashboard.reserves_millions }}M</p>
+      <p class="dashboard-kpi-label">reserves</p>
+    </div>
+  </div>
+
   <a class="home-deeper" href="/checkbook/">Open the Checkbook</a>
 </section>
 
