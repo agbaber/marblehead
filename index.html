@@ -295,6 +295,35 @@ og_url: https://marbleheaddata.org/
   </div>
 </section>
 
+<section class="home-stop dashboard-revenue">
+  <div class="dashboard-section-head">
+    <h2>Where it comes from</h2>
+    <p class="dashboard-section-sub">{{ site.data.dashboard.fiscal_year }} budget</p>
+  </div>
+
+  {% assign max_rev = 0 %}
+  {% for row in site.data.dashboard.revenue %}
+    {% if row.amount_millions > max_rev %}{% assign max_rev = row.amount_millions %}{% endif %}
+  {% endfor %}
+
+  <div class="dashboard-rows">
+    {% for row in site.data.dashboard.revenue %}
+      <div class="dashboard-row">
+        <p class="dashboard-row-label">{{ row.label }}</p>
+        <p class="dashboard-row-amount">${{ row.amount_millions }}M</p>
+        <div class="dashboard-row-bar" aria-hidden="true">
+          <span class="dashboard-row-bar-fill" style="width: {{ row.amount_millions | times: 100.0 | divided_by: max_rev }}%"></span>
+        </div>
+        {% if row.why_link %}
+          <a class="dashboard-row-why" href="{{ row.why_link }}">{{ row.why_text | default: "why?" }} <span class="arrow">&rarr;</span></a>
+        {% else %}
+          <span class="dashboard-row-why dashboard-row-why--blank"></span>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
 <section class="home-stop home-stop--tinted">
   <div class="home-tiles">
     <a class="home-tile" href="/marblehead-101/">

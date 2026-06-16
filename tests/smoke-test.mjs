@@ -76,6 +76,17 @@ async function testDashboardSpending(page) {
   }
 }
 
+async function testDashboardRevenue(page) {
+  console.log('\n── Dashboard: Where it comes from ──');
+  const section = await page.$('.dashboard-revenue');
+  section ? ok('Revenue section present') : fail('Revenue section', '.dashboard-revenue missing');
+
+  const rows = await page.$$('.dashboard-revenue .dashboard-row');
+  rows.length >= 3 && rows.length <= 6
+    ? ok(`${rows.length} revenue rows rendered`)
+    : fail('Revenue rows', `expected 3-6 .dashboard-row, got ${rows.length}`);
+}
+
 async function testCheckbookPageLoads(page) {
   console.log('\n── Checkbook page ──');
   const resp = await page.goto(`${SITE}/checkbook/`, { waitUntil: 'domcontentloaded' });
@@ -562,6 +573,7 @@ async function testTermsPageLoads(page) {
     await page1.goto(SITE, { waitUntil: 'networkidle' });
     await testHomepageLoads(page1);
     await testDashboardSpending(page1);
+    await testDashboardRevenue(page1);
     await testNavLinks(page1);
     await testCheckbookPageLoads(page1);
     await testGeneralGovernmentPeerChart(page1);
