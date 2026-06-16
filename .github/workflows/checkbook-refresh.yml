@@ -1,0 +1,272 @@
+name: Refresh checkbook CSV
+
+# Daily refresh of the published transaction-level checkbook CSV from
+# the Town spending portal.
+#
+#   scripts/fetch_checkbook_export.py
+#     → /tmp/checkbook_raw_export.csv  (PII-bearing, never committed)
+#       → scripts/build_checkbook_csv.py
+#         → data/checkbook_FY26_<as-of>.csv  (publishable)
+#         → data/checkbook_redaction_disclosure.json
+#         → /tmp/checkbook_redaction_review.tsv  (audit log)
+#
+# The raw export carries employee surnames (111F Injury Leave / Workers
+# Comp medical claims) and student initials (out-of-district SpEd
+# placements). build_checkbook_csv.py drops both medical-claim funds
+# entirely and surgically masks identifying descriptions. That
+# best-effort redaction is treated as sufficient: auto-merge is
+# enabled. The review TSV is still posted as a PR comment so the
+# masking decisions remain auditable after the fact.
+#
+# Required secrets:
+#   INGEST_PAT  Personal access token with `repo` scope. Same as
+#               ingest-meetings.yml and data-refresh.yml — bot-authored
+#               PRs from GITHUB_TOKEN do not fire required checks.
+#
+# Manual trigger: `gh workflow run checkbook-refresh.yml`.
+
+on:
+  schedule:
+    # 10:30 UTC = 5:30am ET (EST) / 6:30am ET (EDT). Sits 30 minutes
+    # after data-refresh.yml so the two don't hit the portal at the
+    # exact same instant.
+    - cron: '30 10 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: checkbook-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INGEST_PAT }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Skip if an open auto-checkbook PR already exists
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+        run: |
+          set -euo pipefail
+          gh label create auto-checkbook \
+            --color d62728 \
+            --description "Daily auto-refresh of the checkbook CSV" \
+            2>/dev/null || true
+          open_count=$(gh pr list --label auto-checkbook --state open --json number --jq 'length')
+          if [ "$open_count" -gt 0 ]; then
+            echo "An auto-checkbook PR is already open (likely failed CI on a prior run). Skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch + redact spending-portal export
+        if: steps.gate.outputs.skip == 'false'
+        run: python3 scripts/fetch_checkbook_export.py
+
+      - name: Refresh checkbook.html references
+        if: steps.gate.outputs.skip == 'false'
+        id: refresh
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import csv, datetime, json, re, sys
+          from pathlib import Path
+
+          disclosure = json.loads(Path('data/checkbook_redaction_disclosure.json').read_text())
+          as_of = disclosure['as_of']  # e.g. "2026-06-11"
+          new_csv = Path(f'data/checkbook_FY26_{as_of}.csv')
+          if not new_csv.exists():
+              sys.exit(f'expected {new_csv} after build, not found')
+
+          with new_csv.open(newline='') as f:
+              rows = list(csv.DictReader(f))
+          total = sum(float(r['Amount']) for r in rows)
+
+          # "Jun 9" / "Jul 14" — abbreviated month, non-zero-padded day.
+          as_of_dt = datetime.date.fromisoformat(as_of)
+          human_date = as_of_dt.strftime('%b ') + str(as_of_dt.day)
+          total_M = f"${total / 1_000_000:.1f}M"
+
+          html_path = Path('checkbook.html')
+          html = html_path.read_text()
+
+          # Three programmatic spots. og_description carries the
+          # human-language total + as-of date, the other two carry the
+          # CSV filename. Each is matched by a tight regex so we never
+          # over-rewrite.
+          replacements = [
+              # Source files <a href="..."> link
+              (
+                  r'data/checkbook_FY26_\d{4}-\d{2}-\d{2}\.csv">checkbook_FY26_\d{4}-\d{2}-\d{2}\.csv',
+                  f'data/checkbook_FY26_{as_of}.csv">checkbook_FY26_{as_of}.csv',
+              ),
+              # JS CHECKBOOK_URL constant
+              (
+                  r"var CHECKBOOK_URL = '\.\./data/checkbook_FY26_\d{4}-\d{2}-\d{2}\.csv';",
+                  f"var CHECKBOOK_URL = '../data/checkbook_FY26_{as_of}.csv';",
+              ),
+              # og_description "$X.XM in vendor checks through Mon D"
+              (
+                  r'\$\d+(?:\.\d+)?M in vendor checks through [A-Z][a-z]+ \d+',
+                  f'{total_M} in vendor checks through {human_date}',
+              ),
+          ]
+
+          for pattern, replacement in replacements:
+              new_html, n = re.subn(pattern, replacement, html, count=1)
+              if n == 0:
+                  sys.exit(f'pattern not matched (manual edit upstream?): {pattern}')
+              html = new_html
+
+          html_path.write_text(html)
+
+          # Drop superseded CSV(s). The new file's name is keyed on the
+          # max payment date in the data; if the as-of date moved, the
+          # old CSV is now orphaned and should not be shipped.
+          for old in Path('data').glob('checkbook_FY26_*.csv'):
+              if old != new_csv:
+                  old.unlink()
+                  print(f'removed {old}')
+
+          print(f'as_of={as_of} total={total_M} rows={len(rows):,}')
+          # Surface fields for downstream steps via the env file.
+          with open('refresh.env', 'w') as f:
+              f.write(f'AS_OF={as_of}\n')
+              f.write(f'AS_OF_HUMAN={human_date}\n')
+              f.write(f'TOTAL_M={total_M}\n')
+              f.write(f'ROW_COUNT={len(rows)}\n')
+              f.write(f'MASKED_COUNT={disclosure["description_masking"]["masked_row_count"]}\n')
+          PY
+
+          # Re-export the simple key=value file as step outputs.
+          while IFS='=' read -r k v; do
+            echo "$k=$v" >> "$GITHUB_OUTPUT"
+          done < refresh.env
+          rm refresh.env
+
+      - name: Detect changes
+        if: steps.gate.outputs.skip == 'false'
+        id: changes
+        run: |
+          set -euo pipefail
+          git add -A data/ checkbook.html
+          if git diff --cached --quiet; then
+            echo "No checkbook changes. Done."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit, push, open PR, enable auto-merge
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+          AS_OF: ${{ steps.refresh.outputs.AS_OF }}
+          AS_OF_HUMAN: ${{ steps.refresh.outputs.AS_OF_HUMAN }}
+          TOTAL_M: ${{ steps.refresh.outputs.TOTAL_M }}
+          ROW_COUNT: ${{ steps.refresh.outputs.ROW_COUNT }}
+          MASKED_COUNT: ${{ steps.refresh.outputs.MASKED_COUNT }}
+        run: |
+          set -euo pipefail
+          today=$(date -u +%Y-%m-%d)
+          branch="bot/checkbook-refresh-${today}-$(date -u +%H%M)"
+          git config user.name "marblehead-bot"
+          git config user.email "noreply@marbleheaddata.org"
+          git checkout -b "$branch"
+          git commit -m "Refresh checkbook FY26 through ${AS_OF}"
+          git push -u origin "$branch"
+
+          cat > /tmp/pr-body.md <<EOF
+          Daily refresh of the published checkbook CSV from the Town
+          spending portal.
+
+          **As-of:** ${AS_OF_HUMAN} (latest payment date in the export)
+          **Total:** ${TOTAL_M} across ${ROW_COUNT} published rows
+          **Redactions:** ${MASKED_COUNT} descriptions masked as \`[withheld]\`
+
+          ## Pipeline
+
+          1. \`scripts/fetch_checkbook_export.py\` hit
+             \`/api/checkbook_data.csv?year=2026\` on the portal and
+             wrote the raw export to \`/tmp/\` (never committed).
+          2. \`scripts/build_checkbook_csv.py\` dropped rows in the two
+             medical-claim funds (111F Injury Leave, Workers Comp),
+             masked descriptions matching the student/employee
+             identifying patterns, and wrote
+             \`data/checkbook_FY26_${AS_OF}.csv\` +
+             \`data/checkbook_redaction_disclosure.json\`.
+          3. This workflow bumped the CSV filename in three places in
+             \`checkbook.html\` (\`CHECKBOOK_URL\`, the Sources block
+             link, and \`og_description\`) and deleted the prior CSV.
+
+          Auto-merge is enabled. The redaction review TSV is posted
+          below as an audit log; if a kept description ever turns
+          out to identify a person, add a pattern to
+          \`scripts/build_checkbook_csv.py\` and the next run will
+          mask it. Required checks (smoke, Secret scan, Content
+          guardrails) gate the merge; on failure this PR stays open
+          and the next daily run is skipped via the \`auto-checkbook\`
+          label.
+          EOF
+
+          gh pr create \
+            --title "Refresh checkbook CSV through ${AS_OF}" \
+            --body-file /tmp/pr-body.md \
+            --label auto-checkbook \
+            --base main \
+            --head "$branch"
+
+          gh pr merge "$branch" --auto --squash --delete-branch
+
+      - name: Post redaction review TSV as a PR comment (audit log)
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+          AS_OF: ${{ steps.refresh.outputs.AS_OF }}
+        run: |
+          set -euo pipefail
+          pr=$(gh pr list --label auto-checkbook --state open --json number,headRefName \
+                 --jq ".[] | select(.headRefName | startswith(\"bot/checkbook-refresh-\")) | .number" \
+                 | head -1)
+          if [ -z "$pr" ]; then
+            echo "Could not find the auto-checkbook PR we just opened."
+            exit 1
+          fi
+
+          # The review TSV is in /tmp and can be ~hundreds of lines.
+          # Inline it directly if small; otherwise split into the
+          # MASKED section + a tail of KEPT. The privacy concern is
+          # mostly in the KEPT section.
+          tsv=/tmp/checkbook_redaction_review.tsv
+          line_count=$(wc -l < "$tsv")
+
+          {
+            echo "## Redaction review (\`/tmp/checkbook_redaction_review.tsv\`)"
+            echo ""
+            echo "Total lines: ${line_count}"
+            echo ""
+            echo "<details>"
+            echo "<summary>Full TSV</summary>"
+            echo ""
+            echo '```tsv'
+            cat "$tsv"
+            echo '```'
+            echo ""
+            echo "</details>"
+          } > /tmp/review-comment.md
+
+          gh pr comment "$pr" --body-file /tmp/review-comment.md
