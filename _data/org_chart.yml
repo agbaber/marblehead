@@ -77,26 +77,26 @@ town:
           fy26: 213842
           fy27: 307161
           status: "continuing"
-          pool_count: null
+          pool_count: 2
           note: "Net dollar increase reflects a position shifted in from the eliminated Asst Department Head line. The two Division Head roles are Treasurer/Collector and Town Accountant."
         - title: "Assistant Department Head"
           fy26: 306326
           fy27: 0
           status: "eliminated"
-          pool_count: null
-          note: "Eliminated as a separate object code; functions consolidated into Division Head and Assistant Division Head. Reclassification, not a layoff."
+          pool_count: 3
+          note: "Eliminated as a separate object code; functions consolidated into Division Head and Assistant Division Head. FY26 funded 3 positions (Asst Treasurer/Tax Collector + 2 Asst Acct). Reclassification, not a layoff."
         - title: "Assistant Division Head"
           fy26: 0
           fy27: 197376
           status: "new"
-          pool_count: null
-          note: null
+          pool_count: 2
+          note: "FY27 reorganization places the two Asst Accountants here."
         - title: "Senior Clerk"
           fy26: 133166
           fy27: 150858
           status: "continuing"
-          pool_count: null
-          note: "Override Presentation narrates a Senior Clerk cut here; the MUNIS dollar figure went up. Likely affects a Treasurer/Collector sub-pool that stays funded as a line."
+          pool_count: 2
+          note: "FY26 roster: 2 Senior Clerks. Override Presentation narrates a Senior Clerk cut here; the MUNIS dollar figure went up. Likely affects a Treasurer/Collector sub-pool that stays funded as a line."
       source_url: "https://marbleheadma.gov/finance-department/"
       source_label: "Town of Marblehead, Finance Department page; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, FINANCE cost center)"
       note: >-
@@ -448,7 +448,11 @@ town:
         Override Tier 1 restores SRO; Tier 2 adds +1 officer (to 30 total);
         Tier 3 adds +1 more plus restores SRO (to 32-33). MUNIS dollar
         figures are not a clean headcount indicator because OT and
-        incentive lines absorb some slack.
+        incentive lines absorb some slack. FY26 roster headcount of 68
+        also includes 3 dog officers (Dog Officer + 2 Asst Dog Officer),
+        a Perm Intern, a Special Labor I, and a Monitor whose hours
+        roll into other MUNIS pool lines; positions listed here sum to
+        62.
     - name: "Fire Department"
       cluster: "Public Safety"
       head_title: "Fire Chief"
@@ -796,7 +800,10 @@ town:
         (3 members, 3-year staggered terms). Per the Override
         Presentation, the FY27 balanced budget reduces the Superintendent
         to part-time and cuts 1 laborer (~18% salary appropriation
-        reduction). Tier 1 restores 1 laborer.
+        reduction). Tier 1 restores 1 laborer. FY26 roster headcount of
+        9 includes 1 Lead HEO and 3 seasonal laborers funded under a
+        separate cemetery seasonal cost center not enumerated in the
+        FY27 personnel detail; positions listed here sum to 6.
     - name: "Solid Waste"
       cluster: "Public Works"
       head_title: "Assistant Director of Waste"
@@ -954,7 +961,11 @@ town:
       note: >-
         Per the FY27 Override Presentation: the no-override budget cuts
         the Nutrition Coordinator/Labor and the Temporary Clerk. Override
-        Tier 1 restores both; Tier 2 adds 1 PT Social Worker.
+        Tier 1 restores both; Tier 2 adds 1 PT Social Worker. FY26 roster
+        headcount of 12 includes 3 chauffeurs, a temp chauffeur, a temp
+        laborer, and a volunteer coordinator funded through PT/expense
+        lines not enumerated in the FY27 personnel salary detail;
+        positions listed here sum to 6.
     - name: "Veterans Services"
       cluster: "Community Services"
       head_title: "Veterans' Agent & Director of Veterans' Services"
@@ -1019,8 +1030,8 @@ town:
           fy26: 57857
           fy27: 39230
           status: "reduced"
-          pool_count: null
-          note: "Reduced ~32%; likely PT hours cut."
+          pool_count: 2
+          note: "FY26 roster: 2 Library Technical Assistants. Reduced ~32%; likely PT hours cut."
         - title: "Library Tech Admin"
           fy26: 63576
           fy27: 0
@@ -1031,14 +1042,14 @@ town:
           fy26: 55000
           fy27: 58388
           status: "continuing"
-          pool_count: null
-          note: null
+          pool_count: 2
+          note: "FY26 roster: 2 Senior Library Assistants (SR LIBRARY ASST + SENIOR LIBRARY ASSISTANT)."
         - title: "Coordinator of Circulation"
           fy26: 64542
           fy27: 40603
           status: "reduced"
-          pool_count: null
-          note: "Reduced ~37%; likely PT hours cut."
+          pool_count: 2
+          note: "FY26 roster: 2 Library Circulation Supervisors. Reduced ~37%; likely PT hours cut."
         - title: "Library Tech Service Assistant"
           fy26: 53557
           fy27: 35779
@@ -1180,7 +1191,10 @@ town:
         for 187 public trash barrels. Tier 1 restores 1 Groundskeeper.
         MUNIS shows the Groundskeeper pool reduced ~17% rather than a
         clean elimination, suggesting the cut is implemented via
-        partial-year or PT-hour reductions.
+        partial-year or PT-hour reductions. FY26 roster headcount of 26
+        includes ~10 seasonal Parking Gate / Beach Attendant positions
+        funded through a separate cost center not enumerated here;
+        positions listed here sum to 18.
     - name: "Harbormaster"
       cluster: "Public Safety"
       head_title: "Harbormaster"
