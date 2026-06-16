@@ -47,9 +47,16 @@ async function testHomepageLoads(page) {
   }
 
   const tiles = await page.$$('.home-tile');
-  tiles.length === 6
-    ? ok(`6 pillar tiles on homepage (incl. 2026 override archive)`)
-    : fail('Homepage tiles', `expected 6 .home-tile, got ${tiles.length}`);
+  tiles.length === 4
+    ? ok(`4 go-deeper tiles on homepage`)
+    : fail('Homepage tiles', `expected 4 .home-tile, got ${tiles.length}`);
+
+  // Verify the expected four hrefs are present (order doesn't matter)
+  const expectedTiles = ['/marblehead-101/', '/meetings/', '/charts/town_explorer.html', '/data/'];
+  for (const href of expectedTiles) {
+    const t = await page.$(`a.home-tile[href="${href}"]`);
+    t ? ok(`Tile present: ${href}`) : fail(`Tile ${href}`, 'missing');
+  }
 
   const deeper = await page.$('.home-deeper');
   deeper ? ok('Homepage has Checkbook CTA') : fail('Homepage CTA', '.home-deeper missing');
