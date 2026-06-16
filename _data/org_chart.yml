@@ -295,14 +295,13 @@ town:
     - name: "Department of Public Works"
       cluster: "Public Works"
       head_title: "Director of Public Works"
-      fte: null
-      fte_null_reason: >-
-        DPW is an umbrella over Highway, Tree, Stormwater, and the Town
-        Engineer in the town directory but is also tightly coupled to the
-        elected-commission Water & Sewer departments. The headcount CSV
-        breaks these out separately (Highway 22, Sewer 10, Water 17,
-        Cemetery 9, etc.) rather than under a single "DPW" line. See
-        constituent departments below for per-line counts.
+      fte: 11
+      fte_basis: >-
+        FY26 DPW central staff (Director + 3 Assistant Directors + Senior
+        Clerk + Mechanic Supervisor + 2 Mechanics + Town Engineer + Staff
+        Engineer + Tree Foreman). Excludes the HEO/Laborer pool, which is
+        funded under DPW in MUNIS but whose people show up under Highway
+        in the payroll roster (Highway = 22).
       fy27_salary_total: 1868711
       fy27_position_summary:
         continuing: 4
