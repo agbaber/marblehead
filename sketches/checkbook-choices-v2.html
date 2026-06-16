@@ -89,6 +89,26 @@
   .crumb { font-size: 12px; color: var(--text-subtle); margin-bottom: 18px; }
   .h1 { font-size: 30px; font-weight: 700; color: var(--c-navy); margin: 0 0 6px; letter-spacing: -0.4px; }
   .sub { font-size: 15px; color: var(--text-muted); max-width: 640px; margin: 0 auto 16px; }
+
+  /* Finding-led hero replaces the 4-stat panel */
+  .finding {
+    font-size: 17px; line-height: 1.55; color: var(--text);
+    max-width: 720px; margin: 18px auto 12px;
+  }
+  .finding strong {
+    color: var(--c-navy); font-weight: 700;
+    font-variant-numeric: tabular-nums; letter-spacing: -0.2px;
+  }
+  .findinglinks {
+    font-size: 12px; color: var(--text-subtle);
+    margin: 0 auto 4px;
+  }
+
+  /* Link defaults — substance underlined; can-be-followed affordance */
+  a { color: var(--c-navy-2); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: var(--c-teal); }
+  .crumb a { color: var(--text-subtle); }
+  .findinglinks a { color: var(--text-muted); }
   .freshness {
     display: inline-flex; align-items: center; gap: 8px; flex-wrap: nowrap;
     font-size: 12px; color: var(--text-muted); white-space: nowrap;
@@ -120,8 +140,11 @@
   }
   .stack-bar .seg { position: relative; display: flex; align-items: center; justify-content: center;
                     color: #fff; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums;
-                    border-right: 1px solid rgba(255,255,255,0.35); }
+                    border-right: 1px solid rgba(255,255,255,0.35); text-decoration: none;
+                    transition: opacity 0.15s; }
+  .stack-bar .seg:hover { opacity: 0.85; cursor: pointer; }
   .stack-bar .seg:last-child { border-right: none; }
+  .stack-bar .seg.other { color: var(--text); }
   .stack-bar .seg.ballot { background: var(--c-teal); }
   .stack-bar .seg.tm     { background: var(--c-navy-2); }
   .stack-bar .seg.enter  { background: var(--c-sand); }
@@ -357,31 +380,17 @@
   <section class="hero">
     <div class="crumb">Home / Checkbook</div>
     <h1 class="h1">What we paid, and the choices we made</h1>
-    <p class="sub">Every fund in the FY26 ledger traces back to a specific vote &mdash; ballot, Town Meeting, contract, or rate-setting board.</p>
-    <span class="freshness"><span class="dot"></span> Snapshot: Jun 9, 2026 &middot; <em>5 days old</em> &middot; weekly cadence</span>
-  </section>
-
-  <section class="totals">
-    <div class="stat">
-      <div class="lbl">All funds adopted</div>
-      <div class="val">$206.1M</div>
-      <div class="ctx">FY26, every fund</div>
-    </div>
-    <div class="stat">
-      <div class="lbl">Annual operating</div>
-      <div class="val">$127.3M</div>
-      <div class="ctx">General + enterprise</div>
-    </div>
-    <div class="stat">
-      <div class="lbl">Paid so far</div>
-      <div class="val">$99.9M</div>
-      <div class="ctx">15,364 checks, Jul 1 &ndash; Jun 9</div>
-    </div>
-    <div class="stat">
-      <div class="lbl">Through</div>
-      <div class="val">Jun 9</div>
-      <div class="ctx">11 of 12 months</div>
-    </div>
+    <p class="finding">
+      Of every <strong>$100</strong> the town paid out of <a href="#bucket-tm">General Fund &mdash; Town</a> this fiscal year,
+      only <strong>$14</strong> was actually a <a href="#tm-carveout">Town Meeting choice</a>.
+      The other <strong>$86</strong> was set by outside boards or prior contracts &mdash;
+      <a href="#tm-carveout">insurance, pension, bond debt, and state assessments</a>.
+    </p>
+    <p class="findinglinks">
+      <a href="/data/checkbook_FY26_2026-06-09.csv">snapshot, Jun 9 (CSV)</a>
+      &middot; <a href="/data/checkbook_fund_provenance.json">fund &rarr; vote mapping</a>
+      &middot; <a href="#about">how this is computed</a>
+    </p>
   </section>
 
   <!-- the bucketed view -->
@@ -392,13 +401,13 @@
     </div>
 
     <div class="stack-wrap">
-      <div class="stack-bar" role="img" aria-label="Choice bucket distribution">
-        <div class="seg ballot"  style="flex: 6.7"  title="Ballot 6.7%"><span style="padding:0 4px">6.7%</span></div>
-        <div class="seg tm"      style="flex: 54.3" title="Town Meeting 54.3%">Town Meeting&nbsp;&middot;&nbsp;54.3%</div>
-        <div class="seg enter"   style="flex: 31.3" title="Ratepayer 31.3%">Ratepayer&nbsp;&middot;&nbsp;31.3%</div>
-        <div class="seg grant"   style="flex: 5.2"  title="State/fed 5.2%">5.2%</div>
-        <div class="seg rev"     style="flex: 1.3"  title="Revolving 1.3%"></div>
-        <div class="seg other"   style="flex: 1.2"  title="Other 1.2%"></div>
+      <div class="stack-bar" role="navigation" aria-label="Jump to a bucket">
+        <a class="seg ballot" href="#bucket-ballot" style="flex: 6.7" title="Ballot — $6.73M, 6.7% of FY26 spend"><span style="padding:0 4px">6.7%</span></a>
+        <a class="seg tm"     href="#bucket-tm"     style="flex: 54.3" title="Town Meeting — $54.29M, 54.3% of FY26 spend">Town Meeting&nbsp;&middot;&nbsp;54.3%</a>
+        <a class="seg enter"  href="#bucket-ratepayer" style="flex: 31.3" title="Ratepayer — $31.25M, 31.3% of FY26 spend">Ratepayer&nbsp;&middot;&nbsp;31.3%</a>
+        <a class="seg grant"  href="#bucket-statefed" style="flex: 5.2" title="State / federal grants — $5.15M, 5.2%">5.2%</a>
+        <a class="seg rev"    href="#bucket-revolving" style="flex: 1.3" title="Revolving funds — $1.28M, 1.3%"></a>
+        <a class="seg other"  href="#bucket-other" style="flex: 1.2" title="Trusts &amp; donations — $1.24M, 1.2%"></a>
       </div>
       <div class="stack-legend">
         <span><i class="sw-ballot"></i> Ballot &mdash; you voted directly</span>
@@ -413,7 +422,7 @@
     <div class="choice-list">
 
       <!-- BALLOT -->
-      <article class="choice">
+      <article class="choice" id="bucket-ballot">
         <span class="accent ballot"></span>
         <h3 class="title">Voted by you, at the ballot</h3>
         <div class="amt">$6.73M<small>6.7% of FY26 spend</small></div>
@@ -426,50 +435,50 @@
           <article class="project">
             <div>
               <h5 class="pname">A11 2022 Capital Improvement (omnibus)</h5>
-              <p class="pmeta">Ballot 6/21/2022 passed &middot; roofs, roads/sidewalks, smart panels, HVAC, salt shed, HS boiler</p>
+              <p class="pmeta"><a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes">Ballot 6/21/2022 passed</a> &middot; roofs, roads/sidewalks, smart panels, HVAC, salt shed, HS boiler</p>
             </div>
             <span class="pstatus active">Active &middot; last paid 18d ago</span>
-            <p class="pnote">FY26 spend: <span class="v">$4.94M</span> across <b>84 payments</b> to multiple GCs &mdash; D&amp;R General Contracting ($1.30M), Homer Contracting ($0.95M), Raymond Design Associates ($0.90M), MDM Engineering ($0.82M). Pattern says: bundle of sub-projects all in heavy execution. First FY26 payment Aug 12, 2025; most recent May 27, 2026.</p>
+            <p class="pnote">FY26 spend: <span class="v">$4.94M</span> across <b>84 payments</b> to multiple GCs &mdash; D&amp;R General Contracting ($1.30M), Homer Contracting ($0.95M), Raymond Design Associates ($0.90M), MDM Engineering ($0.82M). Pattern says: bundle of sub-projects all in heavy execution. First FY26 payment Aug 12, 2025; most recent May 27, 2026. <a href="/checkbook/?fund=A11+2022+CAPITAL+IMPROVEMENT" class="moreafford">see all 84 rows &rarr;</a></p>
           </article>
 
           <article class="project">
             <div>
               <h5 class="pname">A34 2015 New Transfer Station + drainage</h5>
-              <p class="pmeta">Ballot 6/16/2015 passed &middot; transfer-station construction + drainage pipe replacement</p>
+              <p class="pmeta"><a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes">Ballot 6/16/2015 passed</a> &middot; transfer-station construction + drainage pipe replacement</p>
             </div>
             <span class="pstatus active">Active &middot; last paid 26d ago</span>
-            <p class="pnote">FY26 spend: <span class="v">$1.33M</span> across <b>42 payments</b>, with <b>$1.25M (94%) to Delulis Brothers Construction</b>. Eleven years after the bond, the project is still drawing down &mdash; most recent payment May 19, 2026. Worth a separate question to the Town Administrator on which scope is still active vs. what's been closed out.</p>
+            <p class="pnote">FY26 spend: <span class="v">$1.33M</span> across <b>42 payments</b>, with <b>$1.25M (94%) to Delulis Brothers Construction</b>. Eleven years after the bond, the project is still drawing down &mdash; most recent payment May 19, 2026. Worth a separate question to the Town Administrator on which scope is still active vs. what's been closed out. <a href="/checkbook/?fund=A34+2015+NEW+TRANSF+STATION" class="moreafford">see all 42 rows &rarr;</a></p>
           </article>
 
           <article class="project">
             <div>
               <h5 class="pname">A33 2025 Mary Alley Building Improv + HVAC</h5>
-              <p class="pmeta">Ballot 6/10/2025 passed &middot; town's most recent debt exclusion</p>
+              <p class="pmeta"><a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes">Ballot 6/10/2025 passed</a> &middot; town's most recent debt exclusion</p>
             </div>
             <span class="pstatus active">Active &middot; design phase</span>
-            <p class="pnote">FY26 spend: <span class="v">$0.44M</span> across <b>9 payments</b>, almost entirely (<b>$0.41M, 92%</b>) to NV5 &mdash; an OPM/design firm. First FY26 payment Sep 29 2025 (Sep is right after the June ballot). No GC yet, so this is in design / owner's-rep phase, pre-construction.</p>
+            <p class="pnote">FY26 spend: <span class="v">$0.44M</span> across <b>9 payments</b>, almost entirely (<b>$0.41M, 92%</b>) to NV5 &mdash; an OPM/design firm. First FY26 payment Sep 29 2025 (Sep is right after the June ballot). No GC yet, so this is in design / owner's-rep phase, pre-construction. <a href="/checkbook/?fund=A33+2025-ALLEY+BLDG+IMPROV" class="moreafford">see all 9 rows &rarr;</a></p>
           </article>
 
           <article class="project">
             <div>
               <h5 class="pname">A35 2021 Abbot Public Library Renovation</h5>
-              <p class="pmeta">Ballot 6/22/2021 passed &middot; ~$8.5M bond, the library reopened in 2023</p>
+              <p class="pmeta"><a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes">Ballot 6/22/2021 passed</a> &middot; ~$8.5M bond, the library reopened in 2023</p>
             </div>
             <span class="pstatus closing">Closing out</span>
-            <p class="pnote">FY26 spend: <span class="v">$16,747</span> across <b>5 payments</b> &mdash; safe &amp; lock, electrical service, landscaping, small equipment. Building is operational; these are punch-list / warranty close-outs. Last payment Jan 28, 2026 (no activity in 4+ months). The big project is done.</p>
+            <p class="pnote">FY26 spend: <span class="v">$16,747</span> across <b>5 payments</b> &mdash; safe &amp; lock, electrical service, landscaping, small equipment. Building is operational; these are punch-list / warranty close-outs. Last payment Jan 28, 2026 (no activity in 4+ months). The big project is done. <a href="/checkbook/?fund=A35+2021+ABBOT+LIBRARY+RENOV" class="moreafford">see all 5 rows &rarr;</a></p>
           </article>
 
           <article class="project">
             <div>
               <h5 class="pname">A36 2019 MWRA Loan project</h5>
-              <p class="pmeta">Ballot 6/18/2019 cycle &middot; MWRA borrowing for water-system work</p>
+              <p class="pmeta"><a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes">Ballot 6/18/2019 cycle</a> &middot; MWRA borrowing for water-system work</p>
             </div>
             <span class="pstatus wrapping">Engineering phase</span>
-            <p class="pnote">FY26 spend: <span class="v">$0.24M</span> across <b>6 payments</b>, <b>100% to Haley Ward</b> (engineering firm). New activity this fiscal year &mdash; first FY26 payment Jan 27, 2026, last Mar 19, 2026. Looks like design/study work, not construction yet.</p>
+            <p class="pnote">FY26 spend: <span class="v">$0.24M</span> across <b>6 payments</b>, <b>100% to Haley Ward</b> (engineering firm). New activity this fiscal year &mdash; first FY26 payment Jan 27, 2026, last Mar 19, 2026. Looks like design/study work, not construction yet. <a href="/checkbook/?fund=A36+2019+MWRA+LOAN" class="moreafford">see all 6 rows &rarr;</a></p>
           </article>
 
           <p style="margin: 8px 0 0; font-size: 11px; color: var(--text-subtle); line-height: 1.5;">
-            Status labels are inferred from <b>last-payment-date freshness</b>, <b>vendor mix</b> (GC vs. engineering firm vs. punch-list), and <b>row count</b>. Original bond authorization amounts and project budgets are not in the ledger; cross-checking against Town Meeting article text and bond issuance docs would let us add &ldquo;X% of authorization spent&rdquo; on each project.
+            Status labels are inferred from <b>last-payment-date freshness</b>, <b>vendor mix</b> (GC vs. engineering firm vs. punch-list), and <b>row count</b>. Original bond authorization amounts and project budgets are not in the ledger; cross-checking against <a href="/data/dor_debt_exclusion_all.csv">DOR Prop 2&frac12; ballot history</a> and bond issuance docs would let us add &ldquo;X% of authorization spent&rdquo; on each project.
           </p>
         </div>
 
@@ -510,21 +519,21 @@
       </article>
 
       <!-- TOWN MEETING -->
-      <article class="choice">
+      <article class="choice" id="bucket-tm">
         <span class="accent tm"></span>
         <h3 class="title">Voted at Town Meeting (this year's annual budget)</h3>
         <div class="amt">$54.29M<small>54.3% of FY26 spend</small></div>
-        <p class="who"><b>Who chose this:</b> the voters who showed up to the May 2025 Annual Town Meeting and approved each article. Marblehead runs Open Town Meeting under MGL c.39 &mdash; any registered voter can attend and vote, no delegates. Covers <b>General Fund &mdash; Town</b>, <b>General Fund &mdash; School</b>, and <b>General Fund &mdash; Tax Articles</b> (in-levy capital).</p>
+        <p class="who"><b>Who chose this:</b> the voters who showed up to the May 2025 Annual Town Meeting and approved each article. Marblehead runs Open Town Meeting under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter39">MGL c.39</a> &mdash; any registered voter can attend and vote, no delegates. Covers <b>General Fund &mdash; Town</b>, <b>General Fund &mdash; School</b>, and <b>General Fund &mdash; Tax Articles</b> (in-levy capital).</p>
 
         <!-- The honesty box: the carve-out inside this bucket -->
-        <div class="subbucket">
+        <div class="subbucket" id="tm-carveout">
           <h4>Choice qualifier: 85.7% of GF&nbsp;&ndash;&nbsp;Town vendor spend is already locked in</h4>
           <p>Town Meeting votes the appropriation but doesn't set the price. Inside <b>General Fund &mdash; Town</b> ($43.91M paid through Jun 9), four contractually fixed lines account for <b>$37.63M</b>:</p>
           <div class="bars">
-            <div class="barrow"><span class="lbl">GIC + insurance (state board sets premiums)</span><span class="bar"><i style="width: 33%"></i></span><span class="dollars">$14.67M</span></div>
-            <div class="barrow"><span class="lbl">Bond debt service (past borrowing, U.S. Bank)</span><span class="bar"><i style="width: 32%"></i></span><span class="dollars">$14.24M</span></div>
-            <div class="barrow"><span class="lbl">Pension assessment (PERAC actuarial)</span><span class="bar"><i style="width: 12%"></i></span><span class="dollars">$5.38M</span></div>
-            <div class="barrow"><span class="lbl">State assessments (Cherry Sheet, formula)</span><span class="bar"><i style="width: 8%"></i></span><span class="dollars">$3.35M</span></div>
+            <div class="barrow"><span class="lbl"><a href="https://www.mass.gov/orgs/group-insurance-commission">GIC + insurance</a> (state board sets premiums)</span><span class="bar"><i style="width: 33%"></i></span><span class="dollars">$14.67M</span></div>
+            <div class="barrow"><span class="lbl"><a href="/checkbook/?vendor=U.S.+BANK">Bond debt service</a> (past borrowing, U.S. Bank)</span><span class="bar"><i style="width: 32%"></i></span><span class="dollars">$14.24M</span></div>
+            <div class="barrow"><span class="lbl"><a href="https://www.mass.gov/orgs/public-employee-retirement-administration-commission">Pension assessment</a> (PERAC actuarial)</span><span class="bar"><i style="width: 12%"></i></span><span class="dollars">$5.38M</span></div>
+            <div class="barrow"><span class="lbl"><a href="https://www.mass.gov/lists/cherry-sheets">State assessments</a> (Cherry Sheet, formula)</span><span class="bar"><i style="width: 8%"></i></span><span class="dollars">$3.35M</span></div>
             <div class="barrow" style="margin-top: 4px; border-top: 1px solid var(--subbucket-border); padding-top: 6px;"><span class="lbl" style="font-weight: 700; color: var(--c-navy);">Remaining discretionary vendor spend</span><span class="bar"><i style="width: 14%; background: var(--c-teal);"></i></span><span class="dollars" style="color: var(--c-teal);">$6.28M</span></div>
           </div>
           <footer>Ledger excludes payroll &mdash; the largest discretionary line in any operating budget is salaries, and those are paid via a separate payroll system. So the 14.3% &ldquo;discretionary&rdquo; here is vendor spend only, not all budget choice.</footer>
@@ -553,7 +562,7 @@
       </article>
 
       <!-- ENTERPRISE -->
-      <article class="choice">
+      <article class="choice" id="bucket-ratepayer">
         <span class="accent enter"></span>
         <h3 class="title">Paid by ratepayers, not your tax bill</h3>
         <div class="amt">$31.25M<small>31.3% of FY26 spend</small></div>
@@ -574,7 +583,7 @@
       </article>
 
       <!-- STATE / FED -->
-      <article class="choice">
+      <article class="choice" id="bucket-statefed">
         <span class="accent grant"></span>
         <h3 class="title">State &amp; federal restricted grants</h3>
         <div class="amt">$5.15M<small>5.2% of FY26 spend</small></div>
@@ -591,7 +600,7 @@
       </article>
 
       <!-- REVOLVING -->
-      <article class="choice">
+      <article class="choice" id="bucket-revolving">
         <span class="accent rev"></span>
         <h3 class="title">Revolving funds (paid by users of the service)</h3>
         <div class="amt">$1.28M<small>1.3% of FY26 spend</small></div>
@@ -606,7 +615,7 @@
       </article>
 
       <!-- OTHER -->
-      <article class="choice">
+      <article class="choice" id="bucket-other">
         <span class="accent other"></span>
         <h3 class="title">Trusts, donations, and small fundraising funds</h3>
         <div class="amt">$1.24M<small>1.2% of FY26 spend</small></div>
@@ -617,21 +626,21 @@
   </section>
 
   <!-- NEWS: Snow Removal overrun -->
-  <aside class="news">
+  <aside class="news" id="snow-overrun">
     <div class="tag">A choice still to be made</div>
     <h3>Snow Removal is +$582K over its FY26 appropriation (654% overrun)</h3>
-    <p>Town Meeting voted the original snow appropriation last May; this winter cost more than planned. Under MA law, an overrun has to be closed by a <b>supplemental appropriation at a Special Town Meeting</b>. The vote isn't &ldquo;should we have plowed&rdquo; &mdash; the plowing already happened. It's about which other line gets reduced, or whether free cash absorbs it.</p>
+    <p>Town Meeting voted the original snow appropriation last May; this winter cost more than planned. Under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section33B">MGL c.44 &sect;33B</a>, an overrun has to be closed by a <b>supplemental appropriation at a Special Town Meeting</b>. The vote isn't &ldquo;should we have plowed&rdquo; &mdash; the plowing already happened. It's about which other line gets reduced, or whether <a href="/where-has-the-money-gone.html#free-cash">free cash</a> absorbs it. <a href="/checkbook/?division=SNOW">see the Snow Removal line in the live ledger &rarr;</a></p>
   </aside>
 
   <!-- WHAT MOVED panel -->
-  <section class="moved">
+  <section class="moved" id="what-moved">
     <h3>What moved since the last snapshot (Jun 2 &rarr; Jun 9)</h3>
-    <p><b>+$3.22M</b> in new payments across <b>1,181</b> new ledger rows. <b>837</b> prior rows were edited or reversed (normal end-of-month reconciliation). The motion concentrated in fewer than 10 vendors.</p>
+    <p><b>+$3.22M</b> in new payments across <b>1,181</b> new ledger rows. <b>837</b> prior rows were edited or reversed (normal end-of-month reconciliation). The motion concentrated in fewer than 10 vendors. <span class="src" style="display: block; margin-top: 6px;">Sources: <a href="/data/checkbook_FY26_2026-06-09.csv">Jun 9 snapshot</a> vs. the Jun 2 snapshot (in <a href="https://github.com/agbaber/marblehead/commits/main/data">commit history</a>).</span></p>
     <ul>
-      <li><span><span class="name">Town of Marblehead</span><span class="src">interfund / payroll-adjacent transfers, 863 rows</span></span><span class="v">+$1.37M</span></li>
-      <li><span><span class="name">Berkshire Wind Power Cooperative</span><span class="src">Light Dept wholesale, ratepayer not tax</span></span><span class="v">+$1.05M</span></li>
-      <li><span><span class="name">Boston Higashi School</span><span class="src">out-of-district SpEd tuition placement</span></span><span class="v">+$0.15M</span></li>
-      <li><span><span class="name">Melmark New England</span><span class="src">out-of-district SpEd tuition placement</span></span><span class="v">+$0.10M</span></li>
+      <li><span><span class="name"><a href="/checkbook/?vendor=TOWN+OF+MARBLEHEAD">Town of Marblehead</a></span><span class="src">interfund / payroll-adjacent transfers, 863 rows</span></span><span class="v">+$1.37M</span></li>
+      <li><span><span class="name"><a href="/checkbook/?vendor=BERKSHIRE+WIND">Berkshire Wind Power Cooperative</a></span><span class="src">Light Dept wholesale, ratepayer not tax</span></span><span class="v">+$1.05M</span></li>
+      <li><span><span class="name"><a href="/checkbook/?vendor=BOSTON+HIGASHI">Boston Higashi School</a></span><span class="src">out-of-district SpEd tuition placement</span></span><span class="v">+$0.15M</span></li>
+      <li><span><span class="name"><a href="/checkbook/?vendor=MELMARK">Melmark New England</a></span><span class="src">out-of-district SpEd tuition placement</span></span><span class="v">+$0.10M</span></li>
       <li><span><span class="name">Pro AV Systems, Tyler Equipment, TDS, others</span><span class="src">capital + IT</span></span><span class="v">+$0.20M</span></li>
     </ul>
   </section>
@@ -654,21 +663,21 @@
       <article class="gap full">
         <h4 class="gname">Long-tail funds not yet mapped to a vote</h4>
         <div class="gamt">$2.22M<small>2.2% of ledger &middot; 88 funds</small></div>
-        <p class="gdesc">Each tail fund is classified into a bucket by regex (METCO and Chapter 90 &rarr; state grants; Larz Anderson and Shattuck &rarr; trusts; etc.) but doesn't have a per-fund vote citation in the provenance JSON yet. Largest unmapped funds: <b>METCO ($276K)</b>, <b>A36 2019 MWRA Loan ($240K)</b>, <b>High School Student Activity ($178K)</b>, <b>Larz Anderson Fund ($154K)</b>, <b>Chapter 90 + Fair Share ($169K combined)</b>.</p>
-        <p class="gfix">Fix: extend <code>checkbook_fund_provenance.json</code> to all 108 funds (or at least the top ~50, which would cover ~99.5%).</p>
+        <p class="gdesc">Each tail fund is classified into a bucket by regex (METCO and Chapter 90 &rarr; state grants; Larz Anderson and Shattuck &rarr; trusts; etc.) but doesn't have a per-fund vote citation in the provenance JSON yet. Largest unmapped funds: <b><a href="/checkbook/?fund=METCO">METCO ($276K)</a></b>, <b><a href="/checkbook/?fund=A36+2019+MWRA+LOAN">A36 2019 MWRA Loan ($240K)</a></b>, <b><a href="/checkbook/?fund=HIGH+SCHOOL+STUDENT+ACTIVITY">High School Student Activity ($178K)</a></b>, <b><a href="/checkbook/?fund=LARZ+ANDERSON">Larz Anderson Fund ($154K)</a></b>, <b><a href="/checkbook/?fund=CHAPTER+90">Chapter 90 + Fair Share ($169K combined)</a></b>.</p>
+        <p class="gfix">Fix: extend <a href="/data/checkbook_fund_provenance.json"><code>checkbook_fund_provenance.json</code></a> to all 108 funds (or at least the top ~50, which would cover ~99.5%).</p>
       </article>
 
       <article class="gap">
         <h4 class="gname">Bond debt service we can't split bond-by-bond</h4>
         <div class="gamt">$14.24M<small>U.S. Bank, 36 rows</small></div>
-        <p class="gdesc">Annual bond payments cross many series &mdash; Abbot Library 2021, Fort Sewall 2019, Gerry School 2016, Pleasant St 2012, and others. Some traces to ballot-approved debt exclusions; some to in-levy Town Meeting capital articles. The ledger description column carries invoice numbers like "3189884", not bond series.</p>
-        <p class="gfix">Fix: pull the town's bond schedule (in the ACFR notes or from the Town Accountant) and join on payment date + amount.</p>
+        <p class="gdesc">Annual bond payments cross many series &mdash; Abbot Library 2021, Fort Sewall 2019, Gerry School 2016, Pleasant St 2012, and others. Some traces to ballot-approved <a href="/data/dor_debt_exclusion_all.csv">debt exclusions</a>; some to in-levy Town Meeting capital articles. The ledger description column carries invoice numbers like "3189884", not bond series.</p>
+        <p class="gfix">Fix: pull the town's bond schedule (in the ACFR notes or from the Town Accountant) and join on payment date + amount. <a href="/checkbook/?vendor=U.S.+BANK">see all 36 U.S. Bank rows &rarr;</a></p>
       </article>
 
       <article class="gap full">
         <h4 class="gname">Negative rows that look like prior-year reconciliations</h4>
         <div class="gamt">$-2.56M<small>153 rows total</small></div>
-        <p class="gdesc">Six big negatives on Jul 25, 2025 to <b>Commonwealth of MA</b> (-$945K, -$291K, -$212K, -$53K, -$23K, -$17K, all carrying the same invoice ID <code>666-0168-2025-0709MB</code>) sum to <b>-$1.54M</b> &mdash; almost certainly a year-end insurance / GIC credit reconciling FY25 charges into FY26 books. Plus -$382K SESD and -$320K MWRA negatives the same week. The other 145 negative rows are small voids and reissues.</p>
+        <p class="gdesc">Six big negatives on Jul 25, 2025 to <b><a href="/checkbook/?vendor=COMMONWEALTH+OF+MA">Commonwealth of MA</a></b> (-$945K, -$291K, -$212K, -$53K, -$23K, -$17K, all carrying the same invoice ID <code>666-0168-2025-0709MB</code>) sum to <b>-$1.54M</b> &mdash; almost certainly a year-end insurance / <a href="https://www.mass.gov/orgs/group-insurance-commission">GIC</a> credit reconciling FY25 charges into FY26 books. Plus -$382K SESD and -$320K <a href="https://www.mwra.com/">MWRA</a> negatives the same week. The other 145 negative rows are small voids and reissues.</p>
         <p class="gfix">Fix: footnote tied to the Town Accountant's year-end close-out memo. Not a data-quality problem &mdash; it's how municipal accounting handles prior-year credits.</p>
       </article>
 
