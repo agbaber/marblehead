@@ -37,7 +37,7 @@ og_url: https://marbleheaddata.org/org-chart.html
 
 <h2 id="the-chart">The two administrations</h2>
 
-<p>State law makes the school committee an independent employer, so the town and schools each run their own administrative operation. The town side is grouped into five functional clusters; schools have a leaner two-cluster structure (Central Office + Buildings) because they serve a single mission. <strong>Click any card</strong> to reveal its staff, notes, and budget context. Town counts are mostly FY26 headcount (includes part-time); school buildings show both town payroll headcount and the <abbr class="g" title="Massachusetts Department of Elementary and Secondary Education">DESE</abbr> educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (SY2025-26 EPIMS). Hover any number for its basis.</p>
+<p>State law makes the school committee an independent employer, so the town and schools each run their own administrative operation. The town side is grouped into five functional clusters; schools have a leaner two-cluster structure (Central Office + Buildings) because they serve a single mission. <strong>Click any card</strong> to reveal its positions, FY27 salary appropriations, and budget notes. Town counts are mostly FY26 headcount (includes part-time); school buildings show both town payroll headcount and the <abbr class="g" title="Massachusetts Department of Elementary and Secondary Education">DESE</abbr> educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (SY2025-26 EPIMS). Hover any number for its basis.</p>
 
 <div class="org-chart">
 
@@ -74,7 +74,21 @@ og_url: https://marbleheaddata.org/org-chart.html
             </span>
           </summary>
           <div class="org-card-body">
-            {% if dept.staff and dept.staff.size > 0 %}
+            {% if dept.positions and dept.positions.size > 0 %}
+              {% if dept.fy27_salary_total %}
+              <p class="org-card-salary"><span class="org-card-salary-label">FY27 salaries</span> <span class="org-card-salary-amount">${{ dept.fy27_salary_total | divided_by: 1000 }}K</span></p>
+              {% endif %}
+              <ul class="org-card-positions">
+                {% for pos in dept.positions %}
+                <li>
+                  <span class="org-card-pos-title">{{ pos.title }}{% if pos.pool_count and pos.pool_count > 1 %} (&times;{{ pos.pool_count }}){% endif %}</span>
+                  {% if pos.status == "new" %}<span class="org-card-pos-flag flag-new">new in FY27</span>{% elsif pos.status == "eliminated" %}<span class="org-card-pos-flag flag-eliminated">eliminated</span>{% elsif pos.status == "reduced" %}<span class="org-card-pos-flag flag-reduced">reduced</span>{% endif %}
+                  {% if pos.fy27 and pos.fy27 > 0 %}<span class="org-card-pos-dollar">${{ pos.fy27 | divided_by: 1000 }}K</span>{% elsif pos.status == "eliminated" %}<span class="org-card-pos-dollar">(was ${{ pos.fy26 | divided_by: 1000 }}K)</span>{% endif %}
+                  {% if pos.note %}<p class="org-card-pos-note">{{ pos.note }}</p>{% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            {% elsif dept.staff and dept.staff.size > 0 %}
             <ul class="org-card-staff">
               {% for role in dept.staff %}<li>{{ role }}</li>{% endfor %}
             </ul>
@@ -120,7 +134,21 @@ og_url: https://marbleheaddata.org/org-chart.html
             </span>
           </summary>
           <div class="org-card-body">
-            {% if dept.staff and dept.staff.size > 0 %}
+            {% if dept.positions and dept.positions.size > 0 %}
+              {% if dept.fy27_salary_total %}
+              <p class="org-card-salary"><span class="org-card-salary-label">FY27 salaries</span> <span class="org-card-salary-amount">${{ dept.fy27_salary_total | divided_by: 1000 }}K</span></p>
+              {% endif %}
+              <ul class="org-card-positions">
+                {% for pos in dept.positions %}
+                <li>
+                  <span class="org-card-pos-title">{{ pos.title }}{% if pos.pool_count and pos.pool_count > 1 %} (&times;{{ pos.pool_count }}){% endif %}</span>
+                  {% if pos.status == "new" %}<span class="org-card-pos-flag flag-new">new in FY27</span>{% elsif pos.status == "eliminated" %}<span class="org-card-pos-flag flag-eliminated">eliminated</span>{% elsif pos.status == "reduced" %}<span class="org-card-pos-flag flag-reduced">reduced</span>{% endif %}
+                  {% if pos.fy27 and pos.fy27 > 0 %}<span class="org-card-pos-dollar">${{ pos.fy27 | divided_by: 1000 }}K</span>{% elsif pos.status == "eliminated" %}<span class="org-card-pos-dollar">(was ${{ pos.fy26 | divided_by: 1000 }}K)</span>{% endif %}
+                  {% if pos.note %}<p class="org-card-pos-note">{{ pos.note }}</p>{% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            {% elsif dept.staff and dept.staff.size > 0 %}
             <ul class="org-card-staff">
               {% for role in dept.staff %}<li>{{ role }}</li>{% endfor %}
             </ul>
@@ -158,10 +186,17 @@ og_url: https://marbleheaddata.org/org-chart.html
           </summary>
           <div class="org-card-body">
             {% if school.dese_role_breakdown and school.dese_role_breakdown.size > 0 %}
-            <p class="org-card-sublist-label">Roles (<abbr class="g" title="Massachusetts Department of Elementary and Secondary Education">DESE</abbr>)</p>
-            <ul class="org-card-staff">
-              {% for cat in school.dese_role_breakdown %}<li>{{ cat.category }} ({{ cat.fte }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr>)</li>{% endfor %}
-            </ul>
+            <p class="org-card-sublist-label">Roles (<abbr class="g" title="Massachusetts Department of Elementary and Secondary Education">DESE</abbr> EPIMS, SY26)</p>
+            {% for cat in school.dese_role_breakdown %}
+            <div class="org-dese-category">
+              <p class="org-dese-cat-header"><span>{{ cat.category }}</span> <span class="org-dese-cat-total">{{ cat.category_fte }} <abbr class="g" title="Full-Time Equivalent">FTE</abbr></span></p>
+              {% if cat.roles and cat.roles.size > 0 %}
+              <ul class="org-dese-roles">
+                {% for r in cat.roles %}<li><span>{{ r.role }}</span> <span class="org-dese-role-fte">{{ r.fte }}</span></li>{% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+            {% endfor %}
             {% endif %}
             {% if school.staff and school.staff.size > 0 %}
             <p class="org-card-sublist-label">Named administrators</p>
