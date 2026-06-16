@@ -4391,15 +4391,56 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   gap: 8px;
 }
 
+/* org-card is now a <details>; collapse by default, expand on click */
 .org-card {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
   border-radius: 4px;
-  padding: 10px;
   font-size: 0.8125rem;
-  display: flex;
-  flex-direction: column;
-  min-height: 80px;
+  position: relative;
+}
+
+.org-card > summary {
+  display: block;
+  cursor: pointer;
+  padding: 10px 22px 10px 10px;
+  list-style: none;
+  position: relative;
+  min-height: 70px;
+}
+
+.org-card > summary::-webkit-details-marker {
+  display: none;
+}
+
+.org-card > summary::after {
+  content: "\25B8"; /* right-pointing triangle */
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  color: var(--c-text-faint);
+  font-size: 0.75rem;
+  transition: transform 0.15s ease;
+}
+
+.org-card[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.org-card > summary:hover {
+  background: var(--c-divider);
+}
+
+.org-card[open] {
+  background: var(--c-divider);
+}
+
+.org-card[open] > summary {
+  border-bottom: 1px solid var(--c-border);
+}
+
+.org-card-body {
+  padding: 10px;
 }
 
 .org-card-dept {
@@ -4431,48 +4472,36 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   line-height: 1.4;
 }
 
-.org-card details {
-  margin-top: auto;
-  padding-top: 6px;
-}
-
-.org-card details > summary {
-  cursor: pointer;
+.org-card-sublist-label {
   font-size: 0.6875rem;
-  color: var(--c-navy);
-  list-style: none;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: var(--c-text-sub);
+  margin: 8px 0 4px;
+  font-weight: 600;
 }
 
-.org-card details > summary::before {
-  content: "\25B8  ";
-  display: inline-block;
+.org-card-sublist-label:first-child {
+  margin-top: 0;
 }
 
-.org-card details[open] > summary::before {
-  content: "\25BE  ";
-}
-
-.org-card details > ul {
-  margin: 6px 0 0;
+.org-card-staff {
+  margin: 0;
   padding: 0;
   list-style: none;
   font-size: 0.75rem;
   color: var(--c-text-mid);
-  text-transform: none;
-  letter-spacing: 0;
 }
 
-.org-card details > ul > li {
+.org-card-staff > li {
   position: relative;
   padding-left: 10px;
   margin-bottom: 2px;
   line-height: 1.35;
 }
 
-.org-card details > ul > li::before {
-  content: "\2022"; /* bullet, drawn inside the card padding */
+.org-card-staff > li::before {
+  content: "\2022";
   position: absolute;
   left: 0;
   top: 0;
@@ -4515,21 +4544,38 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 }
 
 .org-independent .org-divisions {
-  margin-top: 12px;
-  padding-top: 10px;
+  margin-top: 4px;
+}
+
+/* Each division is a nested <details>. Compact summary, click reveals positions. */
+.org-independent .org-division {
+  margin-bottom: 4px;
   border-top: 1px dashed var(--c-border);
 }
 
-.org-independent .org-divisions-title {
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--c-text-sub);
-  margin: 0 0 8px;
+.org-independent .org-division > summary {
+  cursor: pointer;
+  padding: 6px 22px 6px 0;
+  list-style: none;
+  position: relative;
 }
 
-.org-independent .org-division {
-  margin-bottom: 8px;
+.org-independent .org-division > summary::-webkit-details-marker {
+  display: none;
+}
+
+.org-independent .org-division > summary::after {
+  content: "\25B8";
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  color: var(--c-text-faint);
+  font-size: 0.75rem;
+  transition: transform 0.15s ease;
+}
+
+.org-independent .org-division[open] > summary::after {
+  transform: rotate(90deg);
 }
 
 .org-independent .org-division-name {
@@ -4543,7 +4589,7 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 }
 
 .org-independent .org-division-positions {
-  margin: 4px 0 0;
+  margin: 4px 0 8px;
   padding: 0;
   list-style: none;
   font-size: 0.75rem;
@@ -4581,18 +4627,76 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   gap: 12px;
 }
 
+/* board-card is now a <details>; collapse by default */
 .board-card {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
   border-radius: 4px;
-  padding: 14px;
   font-size: 0.875rem;
+}
+
+.board-card > summary {
+  display: block;
+  cursor: pointer;
+  padding: 14px 28px 14px 14px;
+  list-style: none;
+  position: relative;
+}
+
+.board-card > summary::-webkit-details-marker {
+  display: none;
+}
+
+.board-card > summary::after {
+  content: "\25B8";
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  color: var(--c-text-faint);
+  font-size: 0.75rem;
+  transition: transform 0.15s ease;
+}
+
+.board-card[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.board-card > summary:hover {
+  background: var(--c-divider);
+}
+
+.board-card[open] {
+  background: var(--c-divider);
+}
+
+.board-card[open] > summary {
+  border-bottom: 1px solid var(--c-border);
+}
+
+.board-card-body {
+  padding: 14px;
 }
 
 .board-card-emphasized {
   background: var(--c-divider);
   border: 2px solid var(--c-navy);
+}
+
+.board-card-emphasized > summary {
+  padding: 16px 32px 16px 16px;
+}
+
+.board-card-emphasized > summary::after {
+  top: 16px;
+  right: 12px;
+}
+
+.board-card-emphasized .board-card-body {
   padding: 16px;
+}
+
+.board-card-emphasized[open] {
+  background: var(--c-fog);
 }
 
 .board-card-name {
@@ -4604,11 +4708,19 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 .board-card-meta {
   font-size: 0.75rem;
   color: var(--c-text-sub);
-  margin-bottom: 8px;
 }
 
 .board-card-decides {
-  margin: 0;
+  margin: 0 0 8px;
+}
+
+.board-card-link {
+  margin: 8px 0 0;
+  font-size: 0.8125rem;
+}
+
+.board-card-link a {
+  color: var(--c-navy);
 }
 
 @media (max-width: 700px) {
