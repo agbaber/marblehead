@@ -69,7 +69,7 @@ spending:
     amount_millions: 14.9
     cite: "FY26 Budget Summary, Town_Grand_Total $57,086,093 minus the five named town categories above ($42,141,489) = $14,944,604; data/FY26_budget_summary.json."
     why_link: /checkbook/
-    why_text: drill in
+    why_text: what's in here?
     notes: "Public Works, Library, Finance, Rec & Park, Select Board, Community Development, Waste, Cemetery, COA, Health, HR, Public Buildings, Town Clerk, Veterans, Town Counsel, Reserve Fund, Snow & Ice, Medicare Tax, and other smaller departments. The Checkbook lets you drill all the way down."
 
 revenue:
