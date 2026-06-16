@@ -33,6 +33,7 @@ operating_budget_cite: "FY26 budget portal, Budgeted Annual envelope $127,338,09
 
 spent_so_far_millions: 98.1
 spent_so_far_cite: "Open Finance vendor payments, all funds, FY26 through 2026-05-29; data/checkbook_FY26_summary.json total_amount $98,074,838.23."
+spent_so_far_pct: 77  # $98.1M / $127.3M = 77.06%, rounded for display. Keep in sync when either parent value changes.
 
 reserves_millions: 12.6
 reserves_cite: "FY24 ACFR page 18, Financial Highlights: Unassigned Fund Balance in the General Fund of $12,645,810 (11.7% of General Fund expenditures). Total General Fund balance was $21.3M (19.7% of expenditures)."

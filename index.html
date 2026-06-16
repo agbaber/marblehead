@@ -172,7 +172,7 @@ og_url: https://marbleheaddata.org/
       <p class="dashboard-kpi-value">
         ${{ site.data.dashboard.spent_so_far_millions }}M
         <span class="dashboard-kpi-pct">
-          ({{ site.data.dashboard.spent_so_far_millions | times: 100 | divided_by: site.data.dashboard.operating_budget_millions | round }}%)
+          ({{ site.data.dashboard.spent_so_far_pct }}%)
         </span>
       </p>
       <p class="dashboard-kpi-label">spent so far</p>
