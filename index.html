@@ -87,6 +87,86 @@ og_url: https://marbleheaddata.org/
   }
   .home-deeper:hover::after { transform: translateX(3px); }
 
+  /* Zone 2: Where it's going (spending breakdown) */
+  .dashboard-section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0 0 22px;
+  }
+  .dashboard-section-head h2 {
+    font-family: 'Libre Franklin', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: clamp(20px, 3vw, 26px);
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--text);
+  }
+  .dashboard-section-sub {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin: 0;
+  }
+
+  .dashboard-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .dashboard-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  @media (min-width: 700px) {
+    .dashboard-row {
+      grid-template-columns: 180px 110px 1fr 140px;
+      align-items: center;
+      gap: 18px;
+    }
+  }
+  .dashboard-row-label {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text);
+  }
+  .dashboard-row-amount {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .dashboard-row-bar {
+    position: relative;
+    height: 10px;
+    background: color-mix(in srgb, var(--c-navy) 6%, transparent);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .dashboard-row-bar-fill {
+    display: block;
+    height: 100%;
+    background: color-mix(in srgb, var(--c-navy) 40%, transparent);
+    border-radius: 5px;
+  }
+  .dashboard-row-why {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .dashboard-row-why:hover { color: var(--c-teal); }
+  .dashboard-row-why .arrow { transition: transform 0.15s; display: inline-block; }
+  .dashboard-row-why:hover .arrow { transform: translateX(2px); }
+  .dashboard-row-why--blank { visibility: hidden; }
+
   /* Five-tile block */
   .home-stop {
     box-sizing: border-box;
@@ -184,6 +264,35 @@ og_url: https://marbleheaddata.org/
   </div>
 
   <a class="home-deeper" href="/checkbook/">Open the Checkbook</a>
+</section>
+
+<section class="home-stop dashboard-spending">
+  <div class="dashboard-section-head">
+    <h2>Where it's going</h2>
+    <p class="dashboard-section-sub">{{ site.data.dashboard.fiscal_year }} budget</p>
+  </div>
+
+  {% assign max_spend = 0 %}
+  {% for row in site.data.dashboard.spending %}
+    {% if row.amount_millions > max_spend %}{% assign max_spend = row.amount_millions %}{% endif %}
+  {% endfor %}
+
+  <div class="dashboard-rows">
+    {% for row in site.data.dashboard.spending %}
+      <div class="dashboard-row">
+        <p class="dashboard-row-label">{{ row.label }}</p>
+        <p class="dashboard-row-amount">${{ row.amount_millions }}M</p>
+        <div class="dashboard-row-bar" aria-hidden="true">
+          <span class="dashboard-row-bar-fill" style="width: {{ row.amount_millions | times: 100.0 | divided_by: max_spend }}%"></span>
+        </div>
+        {% if row.why_link %}
+          <a class="dashboard-row-why" href="{{ row.why_link }}">{{ row.why_text | default: "why?" }} <span class="arrow">&rarr;</span></a>
+        {% else %}
+          <span class="dashboard-row-why dashboard-row-why--blank"></span>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
 </section>
 
 <section class="home-stop home-stop--tinted">

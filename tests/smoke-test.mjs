@@ -55,6 +55,27 @@ async function testHomepageLoads(page) {
   deeper ? ok('Homepage has Checkbook CTA') : fail('Homepage CTA', '.home-deeper missing');
 }
 
+async function testDashboardSpending(page) {
+  console.log('\n── Dashboard: Where it\'s going ──');
+  const section = await page.$('.dashboard-spending');
+  section ? ok('Spending section present') : fail('Spending section', '.dashboard-spending missing');
+
+  const rows = await page.$$('.dashboard-spending .dashboard-row');
+  rows.length >= 4 && rows.length <= 8
+    ? ok(`${rows.length} spending rows rendered`)
+    : fail('Spending rows', `expected 4-8 .dashboard-row, got ${rows.length}`);
+
+  // Each row has a label, amount, and bar
+  for (const row of rows) {
+    const label = await row.$('.dashboard-row-label');
+    const amount = await row.$('.dashboard-row-amount');
+    const bar = await row.$('.dashboard-row-bar');
+    label && amount && bar
+      ? ok(`Spending row complete: ${(await label.textContent()).trim()}`)
+      : fail('Spending row', 'missing .dashboard-row-label, -amount, or -bar');
+  }
+}
+
 async function testCheckbookPageLoads(page) {
   console.log('\n── Checkbook page ──');
   const resp = await page.goto(`${SITE}/checkbook/`, { waitUntil: 'domcontentloaded' });
@@ -540,6 +561,7 @@ async function testTermsPageLoads(page) {
     const page1 = await ctx1.newPage();
     await page1.goto(SITE, { waitUntil: 'networkidle' });
     await testHomepageLoads(page1);
+    await testDashboardSpending(page1);
     await testNavLinks(page1);
     await testCheckbookPageLoads(page1);
     await testGeneralGovernmentPeerChart(page1);
