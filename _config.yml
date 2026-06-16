@@ -23,6 +23,11 @@ transcripts_subscribe: true
 # dashboard.
 mapbox_token: "pk.eyJ1IjoiYWdiYWJlciIsImEiOiJjbXFkNzNtcTUweGIwMnBvZ3ByanN3N2oxIn0.mkfdAEIhSUxXH-TeblpX5w"
 
+# Backing and reps widget on what-can-we-do.html. Set to "off" to hide the
+# "Who's behind this" panels site-wide without removing the data. Quoted so
+# YAML keeps it a string (bare on/off parse as booleans).
+engagement_widget: "on"
+
 plugins: []
 
 collections:
