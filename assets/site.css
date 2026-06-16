@@ -4558,6 +4558,145 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   white-space: nowrap;
 }
 
+/* Position-level salary detail inside org cards. */
+
+.org-card-salary {
+  font-size: 0.75rem;
+  color: var(--c-text-mid);
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--c-border);
+}
+
+.org-card-salary-label {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  margin-right: 6px;
+}
+
+.org-card-salary-amount {
+  font-weight: 700;
+  color: var(--c-text);
+  font-feature-settings: "tnum";
+}
+
+.org-card-positions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8125rem;
+}
+
+.org-card-positions > li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--c-border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.org-card-positions > li:last-child {
+  border-bottom: none;
+}
+
+.org-card-pos-title {
+  flex: 1 1 auto;
+  min-width: 50%;
+}
+
+.org-card-pos-dollar {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--c-text-mid);
+  font-feature-settings: "tnum";
+}
+
+.org-card-pos-flag {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.flag-new {
+  background: var(--c-sage);
+  color: var(--c-fog);
+}
+
+.flag-eliminated {
+  background: var(--c-buoy);
+  color: var(--c-fog);
+}
+
+.flag-reduced {
+  background: var(--c-brass);
+  color: var(--c-fog);
+}
+
+.org-card-pos-note {
+  flex-basis: 100%;
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  font-style: italic;
+  margin: 4px 0 0;
+}
+
+/* DESE role breakdown (school buildings). */
+
+.org-dese-category {
+  margin: 8px 0 12px;
+}
+
+.org-dese-cat-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.org-dese-cat-total {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.org-dese-roles {
+  margin: 0;
+  padding-left: 12px;
+  list-style: none;
+  font-size: 0.75rem;
+  color: var(--c-text-mid);
+}
+
+.org-dese-roles > li {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+  border-bottom: 1px solid var(--c-divider);
+  gap: 8px;
+}
+
+.org-dese-roles > li:last-child {
+  border-bottom: none;
+}
+
+.org-dese-role-fte {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  font-feature-settings: "tnum";
+  white-space: nowrap;
+}
+
 .org-independent {
   margin: 32px 0;
   padding: 16px;
