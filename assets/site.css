@@ -4391,15 +4391,60 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   gap: 8px;
 }
 
+/* org-card is now a <details>; collapse by default, expand on click */
 .org-card {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
   border-radius: 4px;
-  padding: 10px;
   font-size: 0.8125rem;
-  display: flex;
-  flex-direction: column;
-  min-height: 80px;
+  position: relative;
+}
+
+.org-card > summary {
+  display: block;
+  cursor: pointer;
+  padding: 10px 22px 10px 10px;
+  list-style: none;
+  position: relative;
+  min-height: 70px;
+}
+
+.org-card > summary::-webkit-details-marker {
+  display: none;
+}
+
+.org-card > summary::after {
+  content: "\25B8"; /* right-pointing triangle */
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  color: var(--c-text-faint);
+  font-size: 0.75rem;
+  transition: transform 0.15s ease;
+}
+
+.org-card[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.org-card > summary:hover {
+  background: var(--c-divider);
+}
+
+.org-card[open] {
+  background: var(--c-divider);
+}
+
+.org-cluster-grid > .org-card[open] {
+  grid-column: 1 / -1;
+}
+
+.org-card[open] > summary {
+  border-bottom: 1px solid var(--c-border);
+}
+
+.org-card-body {
+  padding: 10px;
 }
 
 .org-card-dept {
@@ -4421,6 +4466,27 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 .org-card-fte {
   font-size: 0.6875rem;
   color: var(--c-text-sub);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.org-card-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--c-text);
+  line-height: 1;
+  font-feature-settings: "tnum";
+}
+
+.org-card-num-sub {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+}
+
+.org-root .org-card-num {
+  font-size: 2rem;
 }
 
 .org-card-note {
@@ -4431,52 +4497,50 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   line-height: 1.4;
 }
 
-.org-card details {
-  margin-top: auto;
-  padding-top: 6px;
-}
-
-.org-card details > summary {
-  cursor: pointer;
+.org-card-sublist-label {
   font-size: 0.6875rem;
-  color: var(--c-navy);
-  list-style: none;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: var(--c-text-sub);
+  margin: 8px 0 4px;
+  font-weight: 600;
 }
 
-.org-card details > summary::before {
-  content: "\25B8  ";
-  display: inline-block;
+.org-card-sublist-label:first-child {
+  margin-top: 0;
 }
 
-.org-card details[open] > summary::before {
-  content: "\25BE  ";
-}
-
-.org-card details > ul {
-  margin: 6px 0 0;
+.org-card-staff {
+  margin: 0;
   padding: 0;
   list-style: none;
   font-size: 0.75rem;
   color: var(--c-text-mid);
-  text-transform: none;
-  letter-spacing: 0;
 }
 
-.org-card details > ul > li {
+.org-card-staff > li {
   position: relative;
   padding-left: 10px;
   margin-bottom: 2px;
   line-height: 1.35;
 }
 
-.org-card details > ul > li::before {
-  content: "\2022"; /* bullet, drawn inside the card padding */
+.org-card-staff > li::before {
+  content: "\2022";
   position: absolute;
   left: 0;
   top: 0;
   color: var(--c-text-sub);
+}
+
+.org-card-source {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 10px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--c-border);
 }
 
 .org-cluster-header {
@@ -4491,6 +4555,145 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   font-size: 0.6875rem;
   color: var(--c-text-sub);
   letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* Position-level salary detail inside org cards. */
+
+.org-card-salary {
+  font-size: 0.75rem;
+  color: var(--c-text-mid);
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--c-border);
+}
+
+.org-card-salary-label {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  margin-right: 6px;
+}
+
+.org-card-salary-amount {
+  font-weight: 700;
+  color: var(--c-text);
+  font-feature-settings: "tnum";
+}
+
+.org-card-positions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8125rem;
+}
+
+.org-card-positions > li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--c-border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.org-card-positions > li:last-child {
+  border-bottom: none;
+}
+
+.org-card-pos-title {
+  flex: 1 1 auto;
+  min-width: 50%;
+}
+
+.org-card-pos-dollar {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--c-text-mid);
+  font-feature-settings: "tnum";
+}
+
+.org-card-pos-flag {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.flag-new {
+  background: var(--c-sage);
+  color: var(--c-fog);
+}
+
+.flag-eliminated {
+  background: var(--c-buoy);
+  color: var(--c-fog);
+}
+
+.flag-reduced {
+  background: var(--c-brass);
+  color: var(--c-fog);
+}
+
+.org-card-pos-note {
+  flex-basis: 100%;
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  font-style: italic;
+  margin: 4px 0 0;
+}
+
+/* DESE role breakdown (school buildings). */
+
+.org-dese-category {
+  margin: 8px 0 12px;
+}
+
+.org-dese-cat-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.org-dese-cat-total {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.org-dese-roles {
+  margin: 0;
+  padding-left: 12px;
+  list-style: none;
+  font-size: 0.75rem;
+  color: var(--c-text-mid);
+}
+
+.org-dese-roles > li {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+  border-bottom: 1px solid var(--c-divider);
+  gap: 8px;
+}
+
+.org-dese-roles > li:last-child {
+  border-bottom: none;
+}
+
+.org-dese-role-fte {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+  font-feature-settings: "tnum";
   white-space: nowrap;
 }
 
@@ -4515,21 +4718,38 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 }
 
 .org-independent .org-divisions {
-  margin-top: 12px;
-  padding-top: 10px;
+  margin-top: 4px;
+}
+
+/* Each division is a nested <details>. Compact summary, click reveals positions. */
+.org-independent .org-division {
+  margin-bottom: 4px;
   border-top: 1px dashed var(--c-border);
 }
 
-.org-independent .org-divisions-title {
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--c-text-sub);
-  margin: 0 0 8px;
+.org-independent .org-division > summary {
+  cursor: pointer;
+  padding: 6px 22px 6px 0;
+  list-style: none;
+  position: relative;
 }
 
-.org-independent .org-division {
-  margin-bottom: 8px;
+.org-independent .org-division > summary::-webkit-details-marker {
+  display: none;
+}
+
+.org-independent .org-division > summary::after {
+  content: "\25B8";
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  color: var(--c-text-faint);
+  font-size: 0.75rem;
+  transition: transform 0.15s ease;
+}
+
+.org-independent .org-division[open] > summary::after {
+  transform: rotate(90deg);
 }
 
 .org-independent .org-division-name {
@@ -4543,7 +4763,7 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 }
 
 .org-independent .org-division-positions {
-  margin: 4px 0 0;
+  margin: 4px 0 8px;
   padding: 0;
   list-style: none;
   font-size: 0.75rem;
@@ -4581,18 +4801,81 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   gap: 12px;
 }
 
+/* board-card is now a <details>; collapse by default */
 .board-card {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
   border-radius: 4px;
-  padding: 14px;
   font-size: 0.875rem;
+}
+
+.board-card > summary {
+  display: block;
+  cursor: pointer;
+  padding: 14px 28px 14px 14px;
+  list-style: none;
+  position: relative;
+}
+
+.board-card > summary::-webkit-details-marker {
+  display: none;
+}
+
+.board-card > summary::after {
+  content: "\25B8";
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  color: var(--c-text-faint);
+  font-size: 0.75rem;
+  transition: transform 0.15s ease;
+}
+
+.board-card[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.board-card > summary:hover {
+  background: var(--c-divider);
+}
+
+.board-card[open] {
+  background: var(--c-divider);
+}
+
+.board-card[open] > summary {
+  border-bottom: 1px solid var(--c-border);
+}
+
+.board-grid > .board-card[open],
+.board-emphasized > .board-card[open] {
+  grid-column: 1 / -1;
+}
+
+.board-card-body {
+  padding: 14px;
 }
 
 .board-card-emphasized {
   background: var(--c-divider);
   border: 2px solid var(--c-navy);
+}
+
+.board-card-emphasized > summary {
+  padding: 16px 32px 16px 16px;
+}
+
+.board-card-emphasized > summary::after {
+  top: 16px;
+  right: 12px;
+}
+
+.board-card-emphasized .board-card-body {
   padding: 16px;
+}
+
+.board-card-emphasized[open] {
+  background: var(--c-fog);
 }
 
 .board-card-name {
@@ -4604,21 +4887,74 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 .board-card-meta {
   font-size: 0.75rem;
   color: var(--c-text-sub);
-  margin-bottom: 8px;
 }
 
 .board-card-decides {
-  margin: 0;
+  margin: 0 0 8px;
+}
+
+.board-card-link {
+  margin: 8px 0 0;
+  font-size: 0.8125rem;
+}
+
+.board-card-link a {
+  color: var(--c-navy);
 }
 
 @media (max-width: 700px) {
   .org-chart {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
 
+  /* Two-column cluster grids on mobile so users see more at a glance */
   .org-cluster-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .org-cluster {
+    padding: 8px;
+  }
+
+  .org-cluster-name {
+    font-size: 0.6875rem;
+  }
+
+  /* Compact mobile cards */
+  .org-card > summary {
+    padding: 8px 18px 8px 8px;
+    min-height: 0;
+  }
+
+  .org-card > summary::after {
+    top: 8px;
+    right: 6px;
+    font-size: 0.625rem;
+  }
+
+  .org-card-dept {
+    font-size: 0.75rem;
+    line-height: 1.15;
+  }
+
+  .org-card-head {
+    font-size: 0.6875rem;
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+
+  .org-card-num {
+    font-size: 1.25rem;
+  }
+
+  .org-card-body {
+    padding: 8px;
+  }
+
+  .org-card-fte {
+    margin-top: 2px;
   }
 
   .board-emphasized {

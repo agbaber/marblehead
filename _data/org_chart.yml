@@ -66,11 +66,37 @@ town:
         new: 1
         eliminated: 1
         reduced: 0
-      staff:
-        - "Division Head (Treasurer/Collector and Town Accountant)"
-        - "Assistant Department Head (eliminated in FY27)"
-        - "Assistant Division Head (new in FY27)"
-        - "Senior Clerk"
+      positions:
+        - title: "Finance Director / CFO"
+          fy26: 162927
+          fy27: 168000
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Division Head (Treasurer/Collector and Town Accountant)"
+          fy26: 213842
+          fy27: 307161
+          status: "continuing"
+          pool_count: 2
+          note: "Net dollar increase reflects a position shifted in from the eliminated Asst Department Head line. The two Division Head roles are Treasurer/Collector and Town Accountant."
+        - title: "Assistant Department Head"
+          fy26: 306326
+          fy27: 0
+          status: "eliminated"
+          pool_count: 3
+          note: "Eliminated as a separate object code; functions consolidated into Division Head and Assistant Division Head. FY26 funded 3 positions (Asst Treasurer/Tax Collector + 2 Asst Acct). Reclassification, not a layoff."
+        - title: "Assistant Division Head"
+          fy26: 0
+          fy27: 197376
+          status: "new"
+          pool_count: 2
+          note: "FY27 reorganization places the two Asst Accountants here."
+        - title: "Senior Clerk"
+          fy26: 133166
+          fy27: 150858
+          status: "continuing"
+          pool_count: 2
+          note: "FY26 roster: 2 Senior Clerks. Override Presentation narrates a Senior Clerk cut here; the MUNIS dollar figure went up. Likely affects a Treasurer/Collector sub-pool that stays funded as a line."
       source_url: "https://marbleheadma.gov/finance-department/"
       source_label: "Town of Marblehead, Finance Department page; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, FINANCE cost center)"
       note: >-
@@ -94,9 +120,25 @@ town:
         new: 0
         eliminated: 0
         reduced: 0
-      staff:
-        - "Senior Clerk II (Administrative Assessor)"
-        - "Senior Clerk"
+      positions:
+        - title: "Chief Assessor"
+          fy26: 117428
+          fy27: 120951
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Senior Clerk II (Administrative Assessor)"
+          fy26: 70923
+          fy27: 73766
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Senior Clerk"
+          fy26: 68345
+          fy27: 71085
+          status: "continuing"
+          pool_count: null
+          note: null
       source_url: "https://marbleheadma.gov/assessors-office/"
       source_label: "Town of Marblehead, Assessor's Office page; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, ASSESSOR cost center)"
       note: >-
@@ -114,14 +156,55 @@ town:
         new: 2
         eliminated: 0
         reduced: 1
-      staff:
-        - "Special Clerk (×2, reduced)"
-        - "Board / Commission (Election Commissioners)"
-        - "Register of Voters"
-        - "Town Election poll workers (pool)"
-        - "Override Election poll workers (pool)"
-        - "State Primary poll workers (pool, new in FY27)"
-        - "November Election poll workers (pool, new in FY27)"
+      positions:
+        - title: "Town Clerk"
+          fy26: 93048
+          fy27: 97460
+          status: "continuing"
+          pool_count: null
+          note: "Elected position; Article 18 of 2026 ATM warrant sets FY27 compensation at $97,460."
+        - title: "Special Clerk"
+          fy26: 128398
+          fy27: 66125
+          status: "reduced"
+          pool_count: 2
+          note: "FY26 had 2 Special Clerks; ~48% dollar drop matches the Override Presentation cut from 3 to 2 employees."
+        - title: "Board / Commission (Election Commissioners)"
+          fy26: 450
+          fy27: 450
+          status: "continuing"
+          pool_count: null
+          note: "Stipend line (Elections cost center)."
+        - title: "Register of Voters"
+          fy26: 700
+          fy27: 700
+          status: "continuing"
+          pool_count: null
+          note: "Stipend line (Elections cost center)."
+        - title: "Town Election poll workers"
+          fy26: 7500
+          fy27: 7500
+          status: "continuing"
+          pool_count: null
+          note: "Pool line (Elections cost center); paid only during election cycles."
+        - title: "Override Election poll workers"
+          fy26: 7500
+          fy27: 7500
+          status: "continuing"
+          pool_count: null
+          note: "Pool line (Elections cost center)."
+        - title: "State Primary poll workers"
+          fy26: 0
+          fy27: 15000
+          status: "new"
+          pool_count: null
+          note: "Pool line (Elections cost center); presidential cycle."
+        - title: "November Election poll workers"
+          fy26: 0
+          fy27: 10000
+          status: "new"
+          pool_count: null
+          note: "Pool line (Elections cost center); presidential cycle."
       source_url: "https://marbleheadma.gov/town-clerk/"
       source_label: "Town of Marblehead, Town Clerk + Elections pages; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, TOWN CLERK + ELECTIONS cost centers)"
       note: >-
@@ -142,10 +225,31 @@ town:
         new: 1
         eliminated: 1
         reduced: 0
-      staff:
-        - "Payroll Manager"
-        - "Benefits Coordinator (new in FY27)"
-        - "Senior Clerk (eliminated in FY27)"
+      positions:
+        - title: "HR Director"
+          fy26: 117428
+          fy27: 120500
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Payroll Manager"
+          fy26: 98247
+          fy27: 104655
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Benefits Coordinator"
+          fy26: 0
+          fy27: 74336
+          status: "new"
+          pool_count: null
+          note: "Position existed in FY26 under a different object code; reclassified per Article 20 of 2026 ATM warrant."
+        - title: "Senior Clerk"
+          fy26: 64252
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
       source_url: "https://marbleheadma.gov/hr/"
       source_label: "Town of Marblehead, Human Resources Department; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, HUMAN RESOURCES cost center)"
       note: >-
@@ -165,12 +269,37 @@ town:
         new: 0
         eliminated: 3
         reduced: 0
-      staff:
-        - "Director, CD&P (eliminated in FY27)"
-        - "Town Planner"
-        - "Town Planner / Conservation Agent"
-        - "Sustainability Coordinator (eliminated in FY27)"
-        - "Grant Coordinator (eliminated in FY27)"
+      positions:
+        - title: "Director, CD&P"
+          fy26: 127950
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
+        - title: "Town Planner"
+          fy26: 94839
+          fy27: 97048
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Town Planner / Conservation Agent"
+          fy26: 70923
+          fy27: 76423
+          status: "continuing"
+          pool_count: null
+          note: "Title clarified per Article 20 of 2026 ATM warrant."
+        - title: "Sustainability Coordinator"
+          fy26: 79445
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
+        - title: "Grant Coordinator"
+          fy26: 79064
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
       source_url: "https://marbleheadma.gov/development-planning/"
       source_label: "Town of Marblehead, Community Development & Planning; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, COMMUNITY DEVELOPMENT cost center)"
       note: >-
@@ -191,9 +320,19 @@ town:
         new: 0
         eliminated: 1
         reduced: 0
-      staff:
-        - "Special Labor I (Custodian) (×2, eliminated in FY27)"
-        - "Seasonal Docent, Fort Sewall (×3)"
+      positions:
+        - title: "Special Labor I (Custodian)"
+          fy26: 118282
+          fy27: 0
+          status: "eliminated"
+          pool_count: 2
+          note: "Both custodians eliminated; FY26 served Mary Alley and Abbot Hall."
+        - title: "Seasonal Docent (Fort Sewall)"
+          fy26: 10899
+          fy27: 11226
+          status: "continuing"
+          pool_count: 3
+          note: "FY26 filled count: 1 year-round, 2 seasonal."
       source_url: "https://marbleheadma.gov/town-administrator/"
       source_label: "Town Administrator page lists Superintendent of Public Buildings among reporting positions; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, PUBLIC BUILDINGS cost center)"
       note: >-
@@ -215,20 +354,91 @@ town:
         new: 0
         eliminated: 0
         reduced: 0
-      staff:
-        - "Assistant Department Head #2 (Acting Captain)"
-        - "Captain (×1)"
-        - "Lieutenant (×4)"
-        - "Sergeant (×4)"
-        - "Patrolman (×20)"
-        - "Senior Clerk"
-        - "Telecommunicator / E-911 Dispatcher (×8)"
-        - "Telecommunicator Supervisor"
-        - "Special I (Special Police Officer) (×1)"
-        - "Temporary Officer (pool)"
-        - "Temporary Dispatcher (pool)"
-        - "Traffic Supervisor (×17, PT)"
-        - "Animal Inspector (stipend)"
+      positions:
+        - title: "Chief of Police"
+          fy26: 185712
+          fy27: 195750
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Acting Captain (Assistant Department Head #2)"
+          fy26: 75937
+          fy27: 80881
+          status: "continuing"
+          pool_count: null
+          note: "MUNIS labels this Asst Dept Head; Annual Report 2025 maps it to Acting Captain."
+        - title: "Captain"
+          fy26: 116653
+          fy27: 118000
+          status: "continuing"
+          pool_count: 1
+          note: null
+        - title: "Lieutenant"
+          fy26: 391893
+          fy27: 408344
+          status: "continuing"
+          pool_count: 4
+          note: null
+        - title: "Sergeant"
+          fy26: 331839
+          fy27: 341641
+          status: "continuing"
+          pool_count: 4
+          note: null
+        - title: "Patrolman"
+          fy26: 1395017
+          fy27: 1434570
+          status: "continuing"
+          pool_count: 20
+          note: "Override Presentation: SRO eliminated under no-override; cut appears as reduced Patrolman headcount (FY27 staffing falls to ~29 officers vs ~33 historical). Patrol Officer + Detective titles roll into this MUNIS pool."
+        - title: "Senior Clerk"
+          fy26: 68344
+          fy27: 71085
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Telecommunicator / E-911 Dispatcher"
+          fy26: 564484
+          fy27: 557496
+          status: "continuing"
+          pool_count: 8
+          note: "FY26 filled count combines E-911 Dispatch / Dispatcher / Telecommunicator titles."
+        - title: "Telecommunicator Supervisor"
+          fy26: 81824
+          fy27: 85105
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Special I (Special Police Officer)"
+          fy26: 59141
+          fy27: 61512
+          status: "continuing"
+          pool_count: 1
+          note: null
+        - title: "Temporary Officer"
+          fy26: 24429
+          fy27: 24198
+          status: "continuing"
+          pool_count: null
+          note: "Pool line."
+        - title: "Temporary Dispatcher"
+          fy26: 22730
+          fy27: 28227
+          status: "continuing"
+          pool_count: null
+          note: "Pool line."
+        - title: "Traffic Supervisor"
+          fy26: 122048
+          fy27: 122000
+          status: "continuing"
+          pool_count: 17
+          note: "All part-time school traffic supervisors; Annual Report 2025 lists 16 PT supervisors."
+        - title: "Animal Inspector"
+          fy26: 2400
+          fy27: 2400
+          status: "continuing"
+          pool_count: 1
+          note: "Stipend-only line (separate MUNIS cost center); PT appointment under Police."
       source_url: "https://marbleheadma.gov/police/"
       source_label: "Town of Marblehead, Police Department page; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, POLICE + ANIMAL INSPECTOR cost centers)"
       note: >-
@@ -238,7 +448,11 @@ town:
         Override Tier 1 restores SRO; Tier 2 adds +1 officer (to 30 total);
         Tier 3 adds +1 more plus restores SRO (to 32-33). MUNIS dollar
         figures are not a clean headcount indicator because OT and
-        incentive lines absorb some slack.
+        incentive lines absorb some slack. FY26 roster headcount of 68
+        also includes 3 dog officers (Dog Officer + 2 Asst Dog Officer),
+        a Perm Intern, a Special Labor I, and a Monitor whose hours
+        roll into other MUNIS pool lines; positions listed here sum to
+        62.
     - name: "Fire Department"
       cluster: "Public Safety"
       head_title: "Fire Chief"
@@ -250,11 +464,37 @@ town:
         new: 0
         eliminated: 0
         reduced: 0
-      staff:
-        - "Assistant Department Head #2 (administrative captain / deputy chief)"
-        - "Captain (×4)"
-        - "Lieutenant (×3)"
-        - "Firefighter (×30)"
+      positions:
+        - title: "Fire Chief"
+          fy26: 145290
+          fy27: 151719
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Administrative Captain / Deputy Chief (Assistant Department Head #2)"
+          fy26: 66442
+          fy27: 71936
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Captain"
+          fy26: 471804
+          fy27: 504600
+          status: "continuing"
+          pool_count: 4
+          note: null
+        - title: "Lieutenant"
+          fy26: 329828
+          fy27: 345732
+          status: "continuing"
+          pool_count: 3
+          note: null
+        - title: "Firefighter"
+          fy26: 2071324
+          fy27: 2244087
+          status: "continuing"
+          pool_count: 30
+          note: "FY26 filled count combines Fire Fighter and Firefighter titles. 'Down 1 full shift' in the Override Presentation refers to staffing per shift, not a single position."
       source_url: "https://marbleheadma.gov/fire/"
       source_label: "Town of Marblehead, Fire Department page; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, FIRE cost center)"
       note: >-
@@ -276,13 +516,49 @@ town:
         new: 3
         eliminated: 2
         reduced: 0
-      staff:
-        - "Local Inspectors (×2, new in FY27)"
-        - "Assistant Department Head (eliminated in FY27)"
-        - "Assistant Department Head #2 (eliminated in FY27)"
-        - "Electrical Inspectors (×2, new in FY27)"
-        - "Plumbing Inspectors (×2, new in FY27)"
-        - "Senior Clerk"
+      positions:
+        - title: "Building Commissioner"
+          fy26: 129428
+          fy27: 132508
+          status: "continuing"
+          pool_count: null
+          note: "Also serves as Superintendent of Public Buildings."
+        - title: "Assistant Department Head"
+          fy26: 282620
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: "MUNIS reorg; functions distributed across the new Local / Electrical / Plumbing Inspector pool lines."
+        - title: "Assistant Department Head #2"
+          fy26: 109036
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
+        - title: "Local Inspectors"
+          fy26: 0
+          fy27: 122437
+          status: "new"
+          pool_count: 2
+          note: "FY26 filled count: 2 Local Building Inspectors."
+        - title: "Electrical Inspectors"
+          fy26: 0
+          fy27: 145000
+          status: "new"
+          pool_count: 2
+          note: "FY26 filled count: 1 Head + 1 Assistant Electrical Inspector."
+        - title: "Plumbing Inspectors"
+          fy26: 0
+          fy27: 106388
+          status: "new"
+          pool_count: 2
+          note: "FY26 filled count: 1 Plumbing Inspector + 1 Assistant. Plumbing & Gas Inspector also functions as Assistant Wire Inspector per Annual Report 2025."
+        - title: "Senior Clerk"
+          fy26: 68345
+          fy27: 70813
+          status: "continuing"
+          pool_count: null
+          note: null
       source_url: "https://marbleheadma.gov/building-inspection/"
       source_label: "Town of Marblehead, Building Inspection Department; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, BUILDING INSPECTIONS cost center)"
       note: >-
@@ -295,37 +571,116 @@ town:
     - name: "Department of Public Works"
       cluster: "Public Works"
       head_title: "Director of Public Works"
-      fte: null
-      fte_null_reason: >-
-        DPW is an umbrella over Highway, Tree, Stormwater, and the Town
-        Engineer in the town directory but is also tightly coupled to the
-        elected-commission Water & Sewer departments. The headcount CSV
-        breaks these out separately (Highway 22, Sewer 10, Water 17,
-        Cemetery 9, etc.) rather than under a single "DPW" line. See
-        constituent departments below for per-line counts.
+      fte: 11
+      fte_basis: >-
+        FY26 DPW central staff (Director + 3 Assistant Directors + Senior
+        Clerk + Mechanic Supervisor + 2 Mechanics + Town Engineer + Staff
+        Engineer + Tree Foreman). Excludes the HEO/Laborer pool, which is
+        funded under DPW in MUNIS but whose people show up under Highway
+        in the payroll roster (Highway = 22).
       fy27_salary_total: 1868711
       fy27_position_summary:
         continuing: 4
         new: 5
         eliminated: 2
         reduced: 5
-      staff:
-        - "Department Head (DPW Director) (reduced)"
-        - "Assistant Department Head / Assistant Directors (×3, reduced)"
-        - "Senior Clerk (reduced)"
-        - "Special Clerk (new in FY27)"
-        - "Town Engineer (new in FY27)"
-        - "Assistant Engineer (new in FY27)"
-        - "Mechanic Supervisor"
-        - "Mechanic (×2)"
-        - "Staff Engineer (eliminated in FY27)"
-        - "Lead Heavy Equipment Operator (×2, reduced)"
-        - "Special Labor I (eliminated in FY27)"
-        - "Heavy Equipment Operator (×2, reduced)"
-        - "Foreman / Tree Surgeon"
-        - "Specialized Heavy Equipment Operator (×3, new in FY27)"
-        - "Working Foreman, Construction (new in FY27)"
-        - "Working Foreman, Maintenance (new in FY27)"
+      positions:
+        - title: "DPW Director"
+          fy26: 119023
+          fy27: 33448
+          status: "reduced"
+          pool_count: null
+          note: "Override Presentation: 'Reduce dept. head to part time.' ~72% dollar drop is consistent with a switch from FT to PT, day-to-day operations devolved to Assistant Directors."
+        - title: "Assistant Directors"
+          fy26: 325461
+          fy27: 300788
+          status: "reduced"
+          pool_count: 3
+          note: "FY26 had three Assistant Director roles (Highway/Tree/Snow, Storm Sewer/Mechanics/Utility, Asst Director-Utility Coord); FY27 retains a smaller pool."
+        - title: "Senior Clerk"
+          fy26: 90922
+          fy27: 73767
+          status: "reduced"
+          pool_count: 1
+          note: null
+        - title: "Special Clerk"
+          fy26: 0
+          fy27: 67031
+          status: "new"
+          pool_count: null
+          note: "Article 20 of 2026 ATM warrant introduces 'Special Clerk (DPW)' as a new position grading."
+        - title: "Town Engineer"
+          fy26: 0
+          fy27: 123609
+          status: "new"
+          pool_count: null
+          note: "New separate object code in FY27. FY26 had a Town Engineer position funded under a different line."
+        - title: "Assistant Engineer"
+          fy26: 0
+          fy27: 73988
+          status: "new"
+          pool_count: null
+          note: null
+        - title: "Mechanic Supervisor"
+          fy26: 74355
+          fy27: 78841
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Mechanic"
+          fy26: 141844
+          fy27: 142787
+          status: "continuing"
+          pool_count: 2
+          note: null
+        - title: "Staff Engineer"
+          fy26: 61135
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
+        - title: "Lead Heavy Equipment Operator"
+          fy26: 352275
+          fy27: 214660
+          status: "reduced"
+          pool_count: 2
+          note: "Pool line ~39% reduction; one position eliminated, remainder shifted into the new Working Foreman lines."
+        - title: "Special Labor I"
+          fy26: 45000
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: "Override Presentation: 'No Laborer.'"
+        - title: "Heavy Equipment Operator"
+          fy26: 359863
+          fy27: 189874
+          status: "reduced"
+          pool_count: 2
+          note: "Pool line ~47% reduction. The eliminated HEO is one of the three positions in the '2.5 positions cut' narrative."
+        - title: "Foreman / Tree Surgeon"
+          fy26: 76710
+          fy27: 79786
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Specialized Heavy Equipment Operator"
+          fy26: 0
+          fy27: 138508
+          status: "new"
+          pool_count: 3
+          note: "New object code; absorbs the FY26 Specialized HEO pool previously billed against Heavy Equipment Operator."
+        - title: "Working Foreman, Construction"
+          fy26: 0
+          fy27: 83004
+          status: "new"
+          pool_count: null
+          note: null
+        - title: "Working Foreman, Maintenance"
+          fy26: 0
+          fy27: 72595
+          status: "new"
+          pool_count: null
+          note: null
       source_url: "https://marbleheadma.gov/dpw/"
       source_label: "Town of Marblehead, Department of Public Works; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, PUBLIC WORKS cost center)"
       note: >-
@@ -407,12 +762,37 @@ town:
         new: 0
         eliminated: 0
         reduced: 2
-      staff:
-        - "Department Head (Cemetery Superintendent) (reduced)"
-        - "Senior Clerk"
-        - "Mechanic"
-        - "Heavy Equipment Operator"
-        - "General Labor IV (×2, reduced)"
+      positions:
+        - title: "Cemetery Superintendent"
+          fy26: 112593
+          fy27: 59978
+          status: "reduced"
+          pool_count: null
+          note: "Reduced ~47%; consistent with the 'reduce to part time' narrative."
+        - title: "Senior Clerk"
+          fy26: 65691
+          fy27: 71086
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Mechanic"
+          fy26: 64678
+          fy27: 70391
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Heavy Equipment Operator"
+          fy26: 65691
+          fy27: 71086
+          status: "continuing"
+          pool_count: 1
+          note: null
+        - title: "General Labor IV"
+          fy26: 116709
+          fy27: 66125
+          status: "reduced"
+          pool_count: 2
+          note: "Pool line ~43% reduction is the 'Cut 1 laborer' narrative."
       source_url: "https://marbleheadma.gov/cemetery/"
       source_label: "Town of Marblehead, Cemetery Department; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, CEMETERY cost center)"
       note: >-
@@ -420,7 +800,10 @@ town:
         (3 members, 3-year staggered terms). Per the Override
         Presentation, the FY27 balanced budget reduces the Superintendent
         to part-time and cuts 1 laborer (~18% salary appropriation
-        reduction). Tier 1 restores 1 laborer.
+        reduction). Tier 1 restores 1 laborer. FY26 roster headcount of
+        9 includes 1 Lead HEO and 3 seasonal laborers funded under a
+        separate cemetery seasonal cost center not enumerated in the
+        FY27 personnel detail; positions listed here sum to 6.
     - name: "Solid Waste"
       cluster: "Public Works"
       head_title: "Assistant Director of Waste"
@@ -432,13 +815,49 @@ town:
         new: 1
         eliminated: 0
         reduced: 0
-      staff:
-        - "Senior Clerk (transfer station)"
-        - "Special Clerk"
-        - "Crew Leader Operator (Leader HEO)"
-        - "Heavy Equipment Operator (×2)"
-        - "Transfer Station Operator (×2)"
-        - "Senior Clerk (curbside billing, new in FY27)"
+      positions:
+        - title: "Assistant Director of Waste"
+          fy26: 98640
+          fy27: 98640
+          status: "continuing"
+          pool_count: null
+          note: "Article 20 of 2026 ATM warrant reclassifies this title on the Administrative Pay Scale."
+        - title: "Senior Clerk (transfer station)"
+          fy26: 31941
+          fy27: 38506
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Special Clerk"
+          fy26: 62330
+          fy27: 66377
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Crew Leader Operator (Leader HEO)"
+          fy26: 70450
+          fy27: 77011
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Heavy Equipment Operator"
+          fy26: 124472
+          fy27: 133080
+          status: "continuing"
+          pool_count: 2
+          note: "FY26 filled count includes 1 Specialized HEO + 1 HEO equivalent under this MUNIS line."
+        - title: "Transfer Station Operator"
+          fy26: 53071
+          fy27: 58000
+          status: "continuing"
+          pool_count: 2
+          note: null
+        - title: "Senior Clerk (curbside billing)"
+          fy26: 0
+          fy27: 69000
+          status: "new"
+          pool_count: null
+          note: "Curbside billing cost center; brand-new General Fund line in FY27 funded via the new annual fee (Article 23). Hauler contract and truck operators flow through Expense, not Salary."
       source_url: "https://marbleheadma.gov/dpw/"
       source_label: "FY27 MUNIS budget detail (data/_enrichment/fy27_personnel.yml, WASTE COLLECTION + CURBSIDE COLLECTION cost centers); Article 20 of 2026 ATM warrant reclassifies the Assistant Director of Waste."
       note: >-
@@ -461,9 +880,25 @@ town:
         new: 0
         eliminated: 0
         reduced: 0
-      staff:
-        - "Health Inspector / Public Health Nurse (×2)"
-        - "Senior Clerk"
+      positions:
+        - title: "Director of Public Health (stipend portion)"
+          fy26: 42604
+          fy27: 42604
+          status: "continuing"
+          pool_count: null
+          note: "Dollar amount unusually low for a director; likely a stipend or shared-position arrangement. Worth verifying with HR."
+        - title: "Health Inspector + Public Health Nurse"
+          fy26: 155917
+          fy27: 161707
+          status: "continuing"
+          pool_count: 2
+          note: "One MUNIS line funds both the Health Inspector and Public Health Nurse positions per the FY26 roster."
+        - title: "Senior Clerk"
+          fy26: 31942
+          fy27: 38506
+          status: "continuing"
+          pool_count: null
+          note: null
       source_url: "https://marbleheadma.gov/health/"
       source_label: "Town of Marblehead, Health Department; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, HEALTH cost center)"
       note: >-
@@ -484,18 +919,53 @@ town:
         new: 0
         eliminated: 2
         reduced: 0
-      staff:
-        - "Program Manager"
-        - "Transportation Coordinator"
-        - "Outreach Worker"
-        - "Temporary Special Clerk (eliminated in FY27)"
-        - "General Laborer / Nutrition Coordinator (eliminated in FY27)"
+      positions:
+        - title: "COA Director"
+          fy26: 111330
+          fy27: 116978
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Program Manager"
+          fy26: 76407
+          fy27: 79480
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Transportation Coordinator"
+          fy26: 64739
+          fy27: 70813
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Outreach Worker"
+          fy26: 67557
+          fy27: 74647
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Temporary Special Clerk"
+          fy26: 10000
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
+        - title: "General Laborer / Nutrition Coordinator"
+          fy26: 59118
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
       source_url: "https://marbleheadma.gov/coa/"
       source_label: "Town of Marblehead, Council on Aging; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, COUNCIL ON AGING cost center)"
       note: >-
         Per the FY27 Override Presentation: the no-override budget cuts
         the Nutrition Coordinator/Labor and the Temporary Clerk. Override
-        Tier 1 restores both; Tier 2 adds 1 PT Social Worker.
+        Tier 1 restores both; Tier 2 adds 1 PT Social Worker. FY26 roster
+        headcount of 12 includes 3 chauffeurs, a temp chauffeur, a temp
+        laborer, and a volunteer coordinator funded through PT/expense
+        lines not enumerated in the FY27 personnel salary detail;
+        positions listed here sum to 6.
     - name: "Veterans Services"
       cluster: "Community Services"
       head_title: "Veterans' Agent & Director of Veterans' Services"
@@ -507,7 +977,13 @@ town:
         new: 0
         eliminated: 0
         reduced: 0
-      staff: []
+      positions:
+        - title: "Veterans' Agent"
+          fy26: 78225
+          fy27: 80572
+          status: "continuing"
+          pool_count: null
+          note: "Single-position office. Also serves as Flag Officer and Veterans' Graves Officer per Annual Report 2025."
       source_url: "https://marbleheadma.gov/veterans-services/"
       source_label: "Town of Marblehead, Veterans Services; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, VETERANS SERVICES cost center)"
       note: >-
@@ -525,24 +1001,115 @@ town:
         new: 1
         eliminated: 6
         reduced: 7
-      staff:
-        - "Assistant Department Head (Assistant Director) (new in FY27)"
-        - "Program Volunteer Coordinator (eliminated in FY27)"
-        - "Senior Clerk"
-        - "Library Technician (reduced)"
-        - "Library Tech Admin (eliminated in FY27)"
-        - "Senior Library Assistant"
-        - "Coordinator of Circulation (reduced)"
-        - "Library Tech Service Assistant (reduced)"
-        - "Technical Services Supervisor (reduced)"
-        - "Adult Librarian (reduced)"
-        - "Children's Librarian (reduced)"
-        - "Young Adult Librarian (eliminated in FY27)"
-        - "Library Para-Professional (eliminated in FY27)"
-        - "Special Labor I (Custodian) (×2, reduced)"
-        - "Temporary Library Assistant (eliminated in FY27)"
-        - "Head of Public Services (eliminated in FY27)"
-        - "Adult Page (×4, reduced)"
+      positions:
+        - title: "Library Director"
+          fy26: 116447
+          fy27: 119940
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Assistant Director (Assistant Department Head)"
+          fy26: 0
+          fy27: 93080
+          status: "new"
+          pool_count: null
+          note: "New explicit object code in FY27; FY26 payroll did not list an Assistant Director as a separate title."
+        - title: "Program Volunteer Coordinator"
+          fy26: 64542
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
+        - title: "Senior Clerk"
+          fy26: 68345
+          fy27: 71085
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Library Technician"
+          fy26: 57857
+          fy27: 39230
+          status: "reduced"
+          pool_count: 2
+          note: "FY26 roster: 2 Library Technical Assistants. Reduced ~32%; likely PT hours cut."
+        - title: "Library Tech Admin"
+          fy26: 63576
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
+        - title: "Senior Library Assistant"
+          fy26: 55000
+          fy27: 58388
+          status: "continuing"
+          pool_count: 2
+          note: "FY26 roster: 2 Senior Library Assistants (SR LIBRARY ASST + SENIOR LIBRARY ASSISTANT)."
+        - title: "Coordinator of Circulation"
+          fy26: 64542
+          fy27: 40603
+          status: "reduced"
+          pool_count: 2
+          note: "FY26 roster: 2 Library Circulation Supervisors. Reduced ~37%; likely PT hours cut."
+        - title: "Library Tech Service Assistant"
+          fy26: 53557
+          fy27: 35779
+          status: "reduced"
+          pool_count: null
+          note: "Article 20 of 2026 ATM warrant updates the job description."
+        - title: "Technical Services Supervisor"
+          fy26: 81501
+          fy27: 75573
+          status: "reduced"
+          pool_count: null
+          note: "New position grading per Article 20 of 2026 ATM warrant."
+        - title: "Adult Librarian"
+          fy26: 64123
+          fy27: 41646
+          status: "reduced"
+          pool_count: null
+          note: "Reduced ~35%; likely PT hours cut."
+        - title: "Children's Librarian"
+          fy26: 73759
+          fy27: 40429
+          status: "reduced"
+          pool_count: null
+          note: "Reduced ~45%; likely PT hours cut."
+        - title: "Young Adult Librarian"
+          fy26: 71834
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
+        - title: "Library Para-Professional"
+          fy26: 62196
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
+        - title: "Special Labor I (Custodian)"
+          fy26: 84628
+          fy27: 39368
+          status: "reduced"
+          pool_count: 2
+          note: "Pool line ~53% reduction."
+        - title: "Temporary Library Assistant"
+          fy26: 37306
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
+        - title: "Head of Public Services"
+          fy26: 81059
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: null
+        - title: "Adult Page"
+          fy26: 32103
+          fy27: 5955
+          status: "reduced"
+          pool_count: 4
+          note: "Pool line ~81% reduction."
       source_url: "https://abbotlibrary.org/"
       source_label: "Abbot Public Library; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, LIBRARY cost center)"
       note: >-
@@ -566,14 +1133,55 @@ town:
         new: 0
         eliminated: 0
         reduced: 1
-      staff:
-        - "Assistant Department Head #2 (Superintendent of Recreation)"
-        - "Park Maintenance Groundskeeper (×11, reduced)"
-        - "Field Craftsman Mechanic"
-        - "Park Turf Specialist"
-        - "Working Foreman, Building & Grounds"
-        - "Seasonal Beach Supervisor"
-        - "Seasonal Grounds Caretaker"
+      positions:
+        - title: "Superintendent of Parks"
+          fy26: 117427
+          fy27: 112543
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Superintendent of Recreation (Assistant Department Head #2)"
+          fy26: 98591
+          fy27: 89600
+          status: "continuing"
+          pool_count: null
+          note: "Article 20 of 2026 ATM warrant reclassifies this title on the Administrative Pay Scale."
+        - title: "Park Maintenance Groundskeeper"
+          fy26: 225224
+          fy27: 185828
+          status: "reduced"
+          pool_count: 11
+          note: "Pool reduced ~17%; consistent with the 'Cut Groundskeeper' narrative (one of several positions on the line) via PT-hour reductions rather than a clean elimination."
+        - title: "Field Craftsman Mechanic"
+          fy26: 67383
+          fy27: 61767
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Park Turf Specialist"
+          fy26: 70922
+          fy27: 73767
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Working Foreman, Building & Grounds"
+          fy26: 71543
+          fy27: 68635
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Seasonal Beach Supervisor"
+          fy26: 8710
+          fy27: 8972
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Seasonal Grounds Caretaker"
+          fy26: 70052
+          fy27: 72154
+          status: "continuing"
+          pool_count: null
+          note: null
       source_url: "https://marbleheadma.gov/recreation-parks/"
       source_label: "Town of Marblehead, Recreation & Parks Department; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, RECREATION & PARKS cost center)"
       note: >-
@@ -583,7 +1191,10 @@ town:
         for 187 public trash barrels. Tier 1 restores 1 Groundskeeper.
         MUNIS shows the Groundskeeper pool reduced ~17% rather than a
         clean elimination, suggesting the cut is implemented via
-        partial-year or PT-hour reductions.
+        partial-year or PT-hour reductions. FY26 roster headcount of 26
+        includes ~10 seasonal Parking Gate / Beach Attendant positions
+        funded through a separate cost center not enumerated here;
+        positions listed here sum to 18.
     - name: "Harbormaster"
       cluster: "Public Safety"
       head_title: "Harbormaster"
@@ -612,12 +1223,43 @@ town:
         new: 1
         eliminated: 1
         reduced: 1
-      staff:
-        - "Assistant Department Head (eliminated in FY27)"
-        - "Assistant Department Head #2"
-        - "Chief Procurement Officer (new in FY27)"
-        - "Senior Clerk (reduced)"
-        - "Town Counsel (stipend; contracted)"
+      positions:
+        - title: "Town Administrator"
+          fy26: 207732
+          fy27: 223176
+          status: "continuing"
+          pool_count: null
+          note: "MUNIS labels this as Dept Head in the Select Board cost center."
+        - title: "Assistant Town Administrator (Assistant Department Head)"
+          fy26: 136807
+          fy27: 0
+          status: "eliminated"
+          pool_count: null
+          note: "Position eliminated in FY27 balanced budget. The secondary Asst Dept Head (#2) line remains funded."
+        - title: "Assistant Department Head #2"
+          fy26: 86120
+          fy27: 93210
+          status: "continuing"
+          pool_count: null
+          note: null
+        - title: "Chief Procurement Officer"
+          fy26: 0
+          fy27: 120487
+          status: "new"
+          pool_count: null
+          note: "New budget line in FY27. Position itself existed in FY26 (per payroll roster) but moved from a different cost center per Article 20 of 2026 ATM warrant."
+        - title: "Senior Clerk"
+          fy26: 64259
+          fy27: 56121
+          status: "reduced"
+          pool_count: null
+          note: "Reduced ~12.7%. Article 20 of 2026 ATM warrant reclassifies this position."
+        - title: "Town Counsel (stipend; contracted)"
+          fy26: 2000
+          fy27: 2000
+          status: "continuing"
+          pool_count: null
+          note: "Separate Town Counsel cost center; contracted role, not salaried. Bulk of cost flows through Expense ($276K FY27 vs $113K FY26)."
       source_url: "https://marbleheadma.gov/selectboard-office/"
       source_label: "Town of Marblehead, Select Board Office; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, SELECT BOARD + TOWN COUNSEL cost centers)"
       note: >-
@@ -801,21 +1443,49 @@ schools:
       org_code: "01680505"
       dese_role_breakdown:
         - category: "Administrators"
-          fte: 6.0
+          category_fte: 6.0
+          roles:
+            - { role: "Assistant Principal", fte: 2.0 }
+            - { role: "Other School Administrator/Coordinator", fte: 2.0 }
+            - { role: "Principal", fte: 1.0 }
+            - { role: "School Special Education Administrator", fte: 1.0 }
         - category: "Instructional Staff"
-          fte: 78.5
+          category_fte: 78.5
+          roles:
+            - { role: "Teacher", fte: 70.6 }
+            - { role: "Co-teacher", fte: 5.8 }
+            - { role: "Teacher (support content instruction)", fte: 1.1 }
+            - { role: "Long Term Substitute Teacher", fte: 1.0 }
         - category: "Instructional Support Staff"
-          fte: 16.6
+          category_fte: 16.6
+          roles:
+            - { role: "Tutor", fte: 9.8 }
+            - { role: "School Counselor", fte: 5.0 }
+            - { role: "Librarian / Media Center Director", fte: 1.0 }
+            - { role: "Pathways Coordinator", fte: 0.8 }
         - category: "Instructional Support and Special Education Shared Staff"
-          fte: 6.0
+          category_fte: 6.0
+          roles:
+            - { role: "School Adjustment Counselor", fte: 2.0 }
+            - { role: "School Psychologist (SpEd)", fte: 2.0 }
+            - { role: "School Social Worker", fte: 2.0 }
         - category: "Special Education Related Staff"
-          fte: 1.4
+          category_fte: 1.4
+          roles:
+            - { role: "Speech Pathologist", fte: 1.4 }
         - category: "Medical/Health Services"
-          fte: 0.8
+          category_fte: 0.8
+          roles:
+            - { role: "School Nurse", fte: 0.8 }
         - category: "Office/Clerical/Administrative Support"
-          fte: 4.6
+          category_fte: 4.6
+          roles:
+            - { role: "Administrative Clerks and Secretaries", fte: 3.6 }
+            - { role: "SpEd Administrative Clerks and Secretaries", fte: 1.0 }
         - category: "Paraprofessional"
-          fte: 4.4
+          category_fte: 4.4
+          roles:
+            - { role: "Paraprofessional", fte: 4.4 }
       staff:
         - "Assistant Principal (×2)"
         - "Athletics Director"
@@ -832,21 +1502,46 @@ schools:
       org_code: "01680300"
       dese_role_breakdown:
         - category: "Administrators"
-          fte: 3.0
+          category_fte: 3.0
+          roles:
+            - { role: "Assistant Principal", fte: 1.0 }
+            - { role: "Principal", fte: 1.0 }
+            - { role: "School Special Education Administrator", fte: 1.0 }
         - category: "Instructional Staff"
-          fte: 37.6
+          category_fte: 37.6
+          roles:
+            - { role: "Teacher", fte: 32.9 }
+            - { role: "Co-teacher", fte: 3.0 }
+            - { role: "Teacher (support content instruction)", fte: 1.2 }
+            - { role: "Long Term Substitute Teacher", fte: 0.5 }
         - category: "Instructional Support Staff"
-          fte: 9.4
+          category_fte: 9.4
+          roles:
+            - { role: "Tutor", fte: 6.8 }
+            - { role: "School Counselor", fte: 2.0 }
+            - { role: "Librarian / Media Center Director", fte: 0.6 }
         - category: "Instructional Support and Special Education Shared Staff"
-          fte: 1.0
+          category_fte: 1.0
+          roles:
+            - { role: "School Psychologist (SpEd)", fte: 1.0 }
         - category: "Special Education Related Staff"
-          fte: 2.0
+          category_fte: 2.0
+          roles:
+            - { role: "Other Related Special Education Staff", fte: 1.0 }
+            - { role: "Speech Pathologist", fte: 1.0 }
         - category: "Medical/Health Services"
-          fte: 1.0
+          category_fte: 1.0
+          roles:
+            - { role: "School Nurse", fte: 1.0 }
         - category: "Office/Clerical/Administrative Support"
-          fte: 3.3
+          category_fte: 3.3
+          roles:
+            - { role: "Administrative Clerks and Secretaries", fte: 2.3 }
+            - { role: "Information Services & Technical Support", fte: 1.0 }
         - category: "Paraprofessional"
-          fte: 2.0
+          category_fte: 2.0
+          roles:
+            - { role: "Paraprofessional", fte: 2.0 }
       staff:
         - "Assistant Principal"
       source_url: "https://mvms.marbleheadschools.org"
@@ -861,19 +1556,43 @@ schools:
       org_code: "01680030"
       dese_role_breakdown:
         - category: "Administrators"
-          fte: 3.0
+          category_fte: 3.0
+          roles:
+            - { role: "Assistant Principal", fte: 1.0 }
+            - { role: "Principal", fte: 1.0 }
+            - { role: "School Special Education Administrator", fte: 1.0 }
         - category: "Instructional Staff"
-          fte: 38.2
+          category_fte: 38.2
+          roles:
+            - { role: "Teacher", fte: 27.0 }
+            - { role: "Teacher (support content instruction)", fte: 7.1 }
+            - { role: "Co-teacher", fte: 3.1 }
+            - { role: "Long Term Substitute Teacher", fte: 1.0 }
         - category: "Instructional Support Staff"
-          fte: 23.1
+          category_fte: 23.1
+          roles:
+            - { role: "Tutor", fte: 21.1 }
+            - { role: "School Counselor", fte: 2.0 }
         - category: "Instructional Support and Special Education Shared Staff"
-          fte: 0.6
+          category_fte: 0.6
+          roles:
+            - { role: "School Adjustment Counselor", fte: 0.5 }
+            - { role: "School Psychologist (SpEd)", fte: 0.1 }
         - category: "Special Education Related Staff"
-          fte: 5.6
+          category_fte: 5.6
+          roles:
+            - { role: "Speech Pathologist", fte: 2.6 }
+            - { role: "Occupational Therapist", fte: 1.0 }
+            - { role: "Other Related Special Education Staff", fte: 1.0 }
+            - { role: "Physical Therapist", fte: 1.0 }
         - category: "Office/Clerical/Administrative Support"
-          fte: 3.0
+          category_fte: 3.0
+          roles:
+            - { role: "Administrative Clerks and Secretaries", fte: 3.0 }
         - category: "Paraprofessional"
-          fte: 2.0
+          category_fte: 2.0
+          roles:
+            - { role: "Paraprofessional", fte: 2.0 }
       staff:
         - "Assistant Principal"
         - "Special Education Team Chair"
@@ -893,21 +1612,45 @@ schools:
       org_code: "01680020"
       dese_role_breakdown:
         - category: "Administrators"
-          fte: 2.0
+          category_fte: 2.0
+          roles:
+            - { role: "Principal", fte: 1.0 }
+            - { role: "School Special Education Administrator", fte: 1.0 }
         - category: "Instructional Staff"
-          fte: 25.8
+          category_fte: 25.8
+          roles:
+            - { role: "Teacher", fte: 20.8 }
+            - { role: "Teacher (support content instruction)", fte: 3.0 }
+            - { role: "Co-teacher", fte: 2.0 }
         - category: "Instructional Support Staff"
-          fte: 19.8
+          category_fte: 19.8
+          roles:
+            - { role: "Tutor", fte: 18.8 }
+            - { role: "Librarian / Media Center Director", fte: 1.0 }
         - category: "Instructional Support and Special Education Shared Staff"
-          fte: 1.0
+          category_fte: 1.0
+          roles:
+            - { role: "School Adjustment Counselor (SpEd)", fte: 1.0 }
         - category: "Special Education Related Staff"
-          fte: 4.8
+          category_fte: 4.8
+          roles:
+            - { role: "Occupational Therapist", fte: 2.0 }
+            - { role: "Other Related Special Education Staff", fte: 1.0 }
+            - { role: "Physical Therapist", fte: 1.0 }
+            - { role: "Speech Pathologist", fte: 0.8 }
         - category: "Medical/Health Services"
-          fte: 3.0
+          category_fte: 3.0
+          roles:
+            - { role: "School Nurse", fte: 2.0 }
+            - { role: "Psychiatrist", fte: 1.0 }
         - category: "Office/Clerical/Administrative Support"
-          fte: 1.0
+          category_fte: 1.0
+          roles:
+            - { role: "Administrative Clerks and Secretaries", fte: 1.0 }
         - category: "Paraprofessional"
-          fte: 5.0
+          category_fte: 5.0
+          roles:
+            - { role: "Paraprofessional", fte: 5.0 }
       staff:
         - "Special Education Team Chair"
       source_url: "https://glover.marbleheadschools.org"
@@ -922,19 +1665,42 @@ schools:
       org_code: "01680016"
       dese_role_breakdown:
         - category: "Administrators"
-          fte: 3.0
+          category_fte: 3.0
+          roles:
+            - { role: "Assistant Principal", fte: 1.0 }
+            - { role: "Principal", fte: 1.0 }
+            - { role: "School Special Education Administrator", fte: 1.0 }
         - category: "Instructional Staff"
-          fte: 49.1
+          category_fte: 49.1
+          roles:
+            - { role: "Teacher", fte: 17.7 }
+            - { role: "Co-teacher", fte: 15.4 }
+            - { role: "Teacher (support content instruction)", fte: 14.0 }
+            - { role: "Instructional Coach", fte: 1.0 }
+            - { role: "Long Term Substitute Teacher", fte: 1.0 }
         - category: "Instructional Support Staff"
-          fte: 20.9
+          category_fte: 20.9
+          roles:
+            - { role: "Tutor", fte: 17.0 }
+            - { role: "School Counselor", fte: 3.0 }
+            - { role: "Librarian / Media Center Director", fte: 0.9 }
         - category: "Instructional Support and Special Education Shared Staff"
-          fte: 2.5
+          category_fte: 2.5
+          roles:
+            - { role: "School Psychologist (SpEd)", fte: 2.0 }
+            - { role: "School Adjustment Counselor", fte: 0.5 }
         - category: "Medical/Health Services"
-          fte: 2.0
+          category_fte: 2.0
+          roles:
+            - { role: "School Nurse", fte: 2.0 }
         - category: "Office/Clerical/Administrative Support"
-          fte: 3.0
+          category_fte: 3.0
+          roles:
+            - { role: "Administrative Clerks and Secretaries", fte: 3.0 }
         - category: "Paraprofessional"
-          fte: 0.7
+          category_fte: 0.7
+          roles:
+            - { role: "Paraprofessional", fte: 0.7 }
       staff:
         - "Assistant Principal"
       source_url: "https://village.marbleheadschools.org"
