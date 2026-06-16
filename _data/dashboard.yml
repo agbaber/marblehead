@@ -1,0 +1,95 @@
+# _data/dashboard.yml
+#
+# Top-fold KPIs and spending/revenue rollups for the homepage dashboard.
+# Every numeric value carries a `cite` pointing to the primary source.
+# Buckets are rolled up from the line-item budget; see `notes` on each
+# bucket where it combines multiple line items.
+#
+# Scope choice for the spending pie:
+#   The canonical operating-budget headline used elsewhere on the site
+#   ($127.3M, per checkbook.html and the FY26 budget portal Budgeted
+#   Annual envelope of $127,338,097.88) includes enterprise funds
+#   (Water $6.5M, Sewer $5.5M, Tax Articles $4.3M, Harbor $1.3M) on top
+#   of the General Fund Town + School total of $106.2M. The six
+#   spending buckets below sum to that $106.2M Town+School General
+#   Fund total (the "tax-supported" envelope) because that is the slice
+#   the FY26_budget_summary.json rollup represents. Enterprise funds
+#   are self-supporting from user fees and are surfaced in `/checkbook/`
+#   rather than in this dashboard rollup. The headline KPI keeps the
+#   $127.3M figure so it matches the rest of the site.
+#
+# Scope choice for the revenue side:
+#   Numbers are the FY26 projected revenue line items presented by Town
+#   CFO Thatcher Kezer at the State of the Town presentation, Jan 28
+#   2026. The revenue total ($103.3M) lines up with the general-fund
+#   operating revenue framing (does not include enterprise-fund
+#   receipts), parallel to the spending-bucket scope above.
+
+fiscal_year: FY26
+as_of_date: "2026-05-29"
+
+operating_budget_millions: 127.3
+operating_budget_cite: "FY26 budget portal, Budgeted Annual envelope $127,338,097.88 (Town general fund + School general fund + Water + Sewer + Tax Articles + Harbor); data/budget_actual_FY26.json totals.budgeted_annual.revised_budget."
+
+spent_so_far_millions: 98.1
+spent_so_far_cite: "Open Finance vendor payments, all funds, FY26 through 2026-05-29; data/checkbook_FY26_summary.json total_amount $98,074,838.23."
+
+reserves_millions: 12.6
+reserves_cite: "FY24 ACFR page 17, Financial Highlights: Unassigned Fund Balance in the General Fund of $12,645,810 (11.7% of General Fund expenditures). Total General Fund balance was $21.3M (19.7% of expenditures)."
+
+spending:
+  - label: Schools
+    amount_millions: 49.1
+    cite: "FY26 Budget Summary, School_Grand_Total $49,120,287; data/FY26_budget_summary.json."
+    why_link: /topics/school-budget/
+    why_text: why so much?
+  - label: Health and insurance
+    amount_millions: 16.0
+    cite: "FY26 Budget Summary, Health_Insurance_Transfer $11,828,487 + Medex_Insurance_Transfer $2,534,769 + Medicare_Reimbursement $730,651 + Insurance_Premiums $865,056 = $15,958,963; data/FY26_budget_summary.json."
+    why_link: /topics/health-insurance/
+    why_text: why up?
+    notes: "Rolls up four line items from FY26_budget_summary.json Town_Key_Items: Health_Insurance_Transfer (GIC active and retiree), Medex_Insurance_Transfer (Medicare-eligible retirees), Medicare_Reimbursement (federal Medicare reimbursements), and Insurance_Premiums (property and liability)."
+  - label: Public safety
+    amount_millions: 11.2
+    cite: "FY26 Budget Summary, Fire $5,561,260 + Police $4,987,087 + Inspections $689,413 = $11,237,760; data/FY26_budget_summary.json."
+    why_link: null
+    notes: "Rolls up Fire, Police, and Inspections from FY26_budget_summary.json Town_Key_Items. No dedicated explainer yet."
+  - label: Debt service
+    amount_millions: 9.3
+    cite: "FY26 Budget Summary, Debt_Service $9,314,141; data/FY26_budget_summary.json."
+    why_link: /town-debt.html
+    why_text: which projects?
+  - label: Pensions and OPEB
+    amount_millions: 5.6
+    cite: "FY26 Budget Summary, Pension_Contribution $5,380,625 + OPEB_Trust_Transfer $250,000 = $5,630,625; data/FY26_budget_summary.json."
+    why_link: null
+    notes: "Town pension contribution is the PERAC-required appropriation to the Marblehead Contributory Retirement System. OPEB transfer is a discretionary contribution to the OPEB Trust Fund (much smaller than the actuarially-determined contribution)."
+  - label: Everything else
+    amount_millions: 14.9
+    cite: "FY26 Budget Summary, Town_Grand_Total $57,086,093 minus the five named town categories above ($42,141,489) = $14,944,604; data/FY26_budget_summary.json."
+    why_link: /checkbook/
+    why_text: drill in
+    notes: "Public Works, Library, Finance, Rec & Park, Select Board, Community Development, Waste, Cemetery, COA, Health, HR, Public Buildings, Town Clerk, Veterans, Town Counsel, Reserve Fund, Snow & Ice, Medicare Tax, and other smaller departments. The Checkbook lets you drill all the way down."
+
+revenue:
+  - label: Property taxes
+    amount_millions: 75.4
+    cite: "State of the Town presentation, Jan 28 2026 (Town CFO Thatcher Kezer), FY26 projected levy $75,365,013 against levy limit $75,652,398; data/state_of_town_financials.json."
+    why_link: /2026-override/
+    why_text: override impact
+    notes: "Marblehead levies just under its Prop 2.5 limit each year; the FY26 levy limit per DOR (data/marblehead_levy.csv) is $75,652,398."
+  - label: State aid
+    amount_millions: 9.0
+    cite: "State of the Town presentation, Jan 28 2026, FY26 projected state aid: town $1,642,836 + school $7,316,696 = $8,959,532; data/state_of_town_financials.json. Cross-checks against Cherry Sheet FY26 total receipts of $9,212,154 (data/cherry_sheet_FY26.csv); the State of the Town figure excludes some smaller line items."
+    why_link: null
+    notes: "Roughly 80% of state aid is Chapter 70 school aid ($7,006,279 on the cherry sheet); the rest is mostly Unrestricted General Government Aid (UGGA, $1,417,584). The cherry sheet also assesses charges back against the town (MBTA $519,178, charter sends $1,827,544, etc.); FY26 net aid after charges is $6,682,086."
+  - label: Local receipts
+    amount_millions: 8.9
+    cite: "State of the Town presentation, Jan 28 2026, FY26 projected local receipts $8,881,283; data/state_of_town_financials.json."
+    why_link: null
+    notes: "Motor vehicle excise, meals tax, building permits, fees, fines, and investment income."
+  - label: Free cash and transfers
+    amount_millions: 9.0
+    cite: "State of the Town presentation, Jan 28 2026, FY26 use of free cash: $7,000,000 to levy + $2,000,000 to capital = $9,000,000; data/state_of_town_financials.json."
+    why_link: null
+    notes: "Free cash is the prior-year operating surplus certified by DOR. Marblehead has appropriated $7M to $10M of free cash per year as a recurring revenue source since FY18, which the Finance Committee has flagged as not structurally sustainable."
