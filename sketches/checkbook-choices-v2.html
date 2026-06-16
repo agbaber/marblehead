@@ -240,6 +240,51 @@
   .subbucket footer { margin-top: 10px; padding-top: 8px; border-top: 1px dotted var(--subbucket-border); color: var(--text-subtle); font-size: 11px; }
   .subbucket .barwhen { font-size: 11.5px; color: var(--text-subtle); margin: 4px 0 8px; padding-left: 8px; line-height: 1.45; }
 
+  /* Carve-out: one stacked bar (parts-of-a-whole) + text rows below */
+  .cstack {
+    display: flex; height: 32px; border-radius: var(--radius-sm); overflow: hidden;
+    border: 1px solid var(--subbucket-border); background: var(--surface); margin: 10px 0 6px;
+  }
+  .cstack .cseg {
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums;
+    border-right: 1px solid rgba(255,255,255,0.35); padding: 0 4px; white-space: nowrap; overflow: hidden;
+  }
+  .cstack .cseg:last-child { border-right: none; }
+  .cstack .cseg.fixed     { background: var(--c-sand); }
+  .cstack .cseg.fixed.a   { background: #8a6c34; }
+  .cstack .cseg.fixed.b   { background: #9c7a3a; }
+  .cstack .cseg.fixed.c   { background: #ad8c4a; }
+  .cstack .cseg.fixed.d   { background: #c0a05c; }
+  .cstack .cseg.remainder { background: var(--c-teal); }
+  .cstack-brackets {
+    display: grid; grid-template-columns: 85.7fr 14.3fr; gap: 4px;
+    font-size: 10.5px; font-weight: 600; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.5px;
+    margin: 0 0 14px;
+  }
+  .cstack-brackets span { padding: 0 4px; }
+  .cstack-brackets .b-locked    { color: var(--c-sand); border-top: 2px solid var(--c-sand); padding-top: 3px; text-align: center; }
+  .cstack-brackets .b-remainder { color: var(--c-teal); border-top: 2px solid var(--c-teal); padding-top: 3px; text-align: center; }
+
+  /* Text-only rows beneath the bar */
+  .cnotes { display: grid; gap: 10px; margin: 0; }
+  .crow {
+    display: grid; grid-template-columns: auto 1fr auto; gap: 6px 12px;
+    align-items: baseline; padding: 6px 0; border-bottom: 1px dotted var(--subbucket-border);
+  }
+  .crow:last-child { border-bottom: none; }
+  .crow .cswatch { width: 10px; height: 10px; border-radius: 2px; align-self: center; }
+  .crow .cswatch.fixed     { background: var(--c-sand); }
+  .crow .cswatch.fixed.a   { background: #8a6c34; }
+  .crow .cswatch.fixed.b   { background: #9c7a3a; }
+  .crow .cswatch.fixed.c   { background: #ad8c4a; }
+  .crow .cswatch.fixed.d   { background: #c0a05c; }
+  .crow .cswatch.remainder { background: var(--c-teal); }
+  .crow .clbl { font-size: 12.5px; color: var(--text); font-weight: 600; }
+  .crow .clbl a { color: var(--text); }
+  .crow .cdol { font-size: 12.5px; color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .crow .csub { grid-column: 2 / -1; font-size: 11.5px; color: var(--text-subtle); line-height: 1.5; margin-top: 1px; }
+
   /* Project status panel inside the Ballot card */
   .projects { grid-column: 1 / -1; margin: 14px 0 0; display: grid; gap: 10px; }
   .project {
@@ -559,21 +604,55 @@
         <div class="whenset"><span class="whentag">When set</span><span><b>Annual cycle, May 2025 for FY26.</b> But the package TM voted on was mostly already locked: CBAs that set wages were signed in prior years; bond debt service was scheduled when the bonds were issued; GIC premiums get set by the state board; state assessments come in by formula. See the <a href="#tm-carveout">choice qualifier</a> below for the carve-out.</span></div>
         <!-- The honesty box: the carve-out inside this bucket -->
         <div class="subbucket" id="tm-carveout">
-          <h4>Choice qualifier: 85.7% of GF&nbsp;&ndash;&nbsp;Town vendor spend is already locked in</h4>
-          <p>Town Meeting votes the appropriation but doesn't set the price. Inside <b>General Fund &mdash; Town</b> ($43.91M paid through Jun 9), four contractually fixed lines account for <b>$37.63M</b>:</p>
-          <div class="bars">
-            <div class="barrow"><span class="lbl"><a href="https://www.mass.gov/orgs/group-insurance-commission">GIC + insurance</a> (state board sets premiums)</span><span class="bar"><i style="width: 33%"></i></span><span class="dollars">$14.67M</span></div>
-            <div class="barwhen">Premiums reset every fiscal year by the state GIC board. The town's choice to use GIC at all, and the 83/17 employer/employee split, were settled in earlier rounds of collective bargaining.</div>
-            <div class="barrow"><span class="lbl"><a href="/checkbook/?vendor=U.S.+BANK">Bond debt service</a> (past borrowing, U.S. Bank)</span><span class="bar"><i style="width: 32%"></i></span><span class="dollars">$14.24M</span></div>
-            <div class="barwhen">Each bond series locked in when issued (mostly 2008&ndash;2024). Excluded-debt series authorized by ballot vote on the date the project was approved; in-levy series authorized via Town Meeting article.</div>
-            <div class="barrow"><span class="lbl"><a href="https://www.mass.gov/orgs/public-employee-retirement-administration-commission">Pension assessment</a> (PERAC actuarial)</span><span class="bar"><i style="width: 12%"></i></span><span class="dollars">$5.38M</span></div>
-            <div class="barwhen">PERAC framework dates to 1945. The FY26 dollar amount was set by the 2024 actuarial valuation of the Marblehead Retirement System &mdash; no local discretion in any single budget year.</div>
-            <div class="barrow"><span class="lbl"><a href="https://www.mass.gov/lists/cherry-sheets">State assessments</a> (Cherry Sheet, formula)</span><span class="bar"><i style="width: 8%"></i></span><span class="dollars">$3.35M</span></div>
-            <div class="barwhen">Recalculated each fall by state DLS via long-standing formulas (MBTA assessment, charter school tuition, state retirement, etc.). Town Meeting cannot alter the amount, only acknowledge it.</div>
-            <div class="barrow" style="margin-top: 4px; border-top: 1px solid var(--subbucket-border); padding-top: 6px;"><span class="lbl" style="font-weight: 700; color: var(--c-navy);">Remaining vendor checks</span><span class="bar"><i style="width: 14%; background: var(--c-teal);"></i></span><span class="dollars" style="color: var(--c-teal);">$6.28M</span></div>
-            <div class="barwhen">Mostly recurring multi-year contracts &mdash; trash hauling (Republic Services, Waste Management), IT (Tyler / Munis itself, Future Technologies), fuel, road salt, outside legal counsel, outside audit. Signed by the Town Administrator with Select Board approval in earlier years; not actually re-decided at Annual Town Meeting.</div>
+          <h4>Choice qualifier: 85.7% of GF&nbsp;&ndash;&nbsp;Town vendor spend was already locked in before Town Meeting opened</h4>
+          <p>Inside <b>General Fund &mdash; Town</b> ($43.91M paid through Jun 9), four contractually fixed lines &mdash; insurance premiums, bond debt, pension, and state assessments &mdash; account for <b>$37.63M (86%)</b>. The remaining <b>$6.28M (14%)</b> is mostly multi-year vendor contracts.</p>
+
+          <div class="cstack" role="img" aria-label="Composition of GF–Town vendor spend: 86% contractually fixed, 14% remaining vendor checks">
+            <div class="cseg fixed a"   style="flex: 33.4">GIC&nbsp;33%</div>
+            <div class="cseg fixed b"   style="flex: 32.4">Debt&nbsp;32%</div>
+            <div class="cseg fixed c"   style="flex: 12.3">Pension&nbsp;12%</div>
+            <div class="cseg fixed d"   style="flex: 7.6">State&nbsp;8%</div>
+            <div class="cseg remainder" style="flex: 14.3">Vendor&nbsp;14%</div>
           </div>
-          <footer>Ledger excludes payroll &mdash; the largest discretionary line in any operating budget is salaries, and those are paid via a separate payroll system. So the 14.3% &ldquo;discretionary&rdquo; here is vendor spend only, not all budget choice.</footer>
+          <div class="cstack-brackets">
+            <span class="b-locked">85.7% locked in before TM opened</span>
+            <span class="b-remainder">14.3% remaining</span>
+          </div>
+
+          <div class="cnotes">
+            <div class="crow">
+              <span class="cswatch fixed a"></span>
+              <span class="clbl"><a href="https://www.mass.gov/orgs/group-insurance-commission">GIC + insurance</a></span>
+              <span class="cdol">$14.67M &middot; 33%</span>
+              <p class="csub">Premiums reset every fiscal year by the state GIC board. The town's choice to use GIC at all, and the 83/17 employer/employee split, were settled in earlier rounds of collective bargaining.</p>
+            </div>
+            <div class="crow">
+              <span class="cswatch fixed b"></span>
+              <span class="clbl"><a href="/checkbook/?vendor=U.S.+BANK">Bond debt service</a> (U.S. Bank)</span>
+              <span class="cdol">$14.24M &middot; 32%</span>
+              <p class="csub">Each bond series locked in when issued (mostly 2008&ndash;2024). Excluded-debt series authorized by ballot vote on the date the project was approved; in-levy series via Town Meeting article.</p>
+            </div>
+            <div class="crow">
+              <span class="cswatch fixed c"></span>
+              <span class="clbl"><a href="https://www.mass.gov/orgs/public-employee-retirement-administration-commission">Pension assessment</a> (PERAC)</span>
+              <span class="cdol">$5.38M &middot; 12%</span>
+              <p class="csub">PERAC framework dates to 1945. The FY26 dollar amount was set by the 2024 actuarial valuation of the Marblehead Retirement System &mdash; no local discretion in any single budget year.</p>
+            </div>
+            <div class="crow">
+              <span class="cswatch fixed d"></span>
+              <span class="clbl"><a href="https://www.mass.gov/lists/cherry-sheets">State assessments</a> (Cherry Sheet)</span>
+              <span class="cdol">$3.35M &middot; 8%</span>
+              <p class="csub">Recalculated each fall by state DLS via long-standing formulas (MBTA assessment, charter school tuition, state retirement, etc.). Town Meeting cannot alter the amount, only acknowledge it.</p>
+            </div>
+            <div class="crow">
+              <span class="cswatch remainder"></span>
+              <span class="clbl" style="color: var(--c-teal);">Remaining vendor checks</span>
+              <span class="cdol" style="color: var(--c-teal);">$6.28M &middot; 14%</span>
+              <p class="csub">Mostly recurring multi-year contracts &mdash; trash hauling (Republic Services, Waste Management), IT (Tyler / Munis itself, Future Technologies), fuel, road salt, outside legal counsel, outside audit. Signed by the Town Administrator with Select Board approval in earlier years; not actually re-decided at Annual Town Meeting.</p>
+            </div>
+          </div>
+
+          <footer>Ledger excludes payroll &mdash; the largest discretionary line in any operating budget is salaries, and those are paid via a separate payroll system. So the 14% &ldquo;remaining&rdquo; here is vendor spend only, not all budget choice.</footer>
         </div>
 
         <details>
