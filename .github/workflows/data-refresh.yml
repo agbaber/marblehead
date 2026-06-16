@@ -1,0 +1,148 @@
+name: Refresh upstream data
+
+# Daily snapshot of upstream Socrata/OpenGov datasets.
+#
+# Today this runs scripts/fetch_town_spending.py against the Town of
+# Marblehead Open Finance portal (chart_data.json endpoint), which
+# updates nightly from MUNIS. Two CSVs land under data/town_spending/
+# along with snapshot_meta.json; the workflow opens a labeled PR with
+# auto-merge enabled when those files change.
+#
+# Adding a new fetcher: add another `Refresh ...` step before
+# "Detect changes" and include its output paths in the `git add`
+# below. Annual sources (DESE Socrata datasets in scripts/fetch_dese_*)
+# can be gated on `if: github.event.schedule == '0 6 1 * *'` so they
+# only run on the monthly tick.
+#
+# Required secrets:
+#   INGEST_PAT  Personal access token with `repo` scope. The default
+#               GITHUB_TOKEN cannot be used because PRs authored by it
+#               do not fire pull_request events (GitHub recursion
+#               guard) and so would never satisfy required status
+#               checks for auto-merge.
+#
+# Manual trigger: `gh workflow run data-refresh.yml`.
+
+on:
+  schedule:
+    # 10:00 UTC = 5am ET (EST) / 6am ET (EDT). Town portal feeds from
+    # MUNIS at end-of-business-day, so a pre-dawn run captures the
+    # prior business day's transactions before anyone visits the site.
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INGEST_PAT }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Skip if an open auto-data PR already exists
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+        run: |
+          set -euo pipefail
+          gh label create auto-data \
+            --color 1f77b4 \
+            --description "Daily auto-refresh of upstream Socrata datasets" \
+            2>/dev/null || true
+          open_count=$(gh pr list --label auto-data --state open --json number --jq 'length')
+          if [ "$open_count" -gt 0 ]; then
+            echo "An auto-data PR is already open (likely failed CI on a prior run). Skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Refresh Town spending portal snapshot
+        if: steps.gate.outputs.skip == 'false'
+        run: python3 scripts/fetch_town_spending.py
+
+      - name: Detect changes
+        if: steps.gate.outputs.skip == 'false'
+        id: changes
+        run: |
+          set -euo pipefail
+          git add data/town_spending/
+          # snapshot_meta.json bumps every day because of snapshot_date,
+          # so only treat the run as "changed" when one of the CSV
+          # payloads actually moved. Otherwise we'd open a no-op PR
+          # every morning.
+          if git diff --cached --quiet -- 'data/town_spending/*.csv'; then
+            echo "No data changes. Done."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit, push, open PR, enable auto-merge
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+        run: |
+          set -euo pipefail
+          today=$(date -u +%Y-%m-%d)
+          branch="bot/data-refresh-${today}-$(date -u +%H%M)"
+          git config user.name "marblehead-bot"
+          git config user.email "noreply@marbleheaddata.org"
+          git checkout -b "$branch"
+          git commit -m "Refresh Town spending snapshot (${today})"
+          git push -u origin "$branch"
+
+          # Build a diff summary for the PR body so a reviewer can see
+          # what actually moved without opening the file diff.
+          diff_summary=$(git diff HEAD~1 -- 'data/town_spending/*.csv' \
+            | grep -E '^[+-]' \
+            | grep -vE '^[+-][+-][+-]' \
+            | head -40 \
+            || true)
+
+          cat > /tmp/pr-body.md <<EOF
+          Daily snapshot from the Town of Marblehead Open Finance portal
+          (\`townofmarblehead-ma-oe.spending.socrata.com\`, fed nightly from MUNIS).
+
+          **Changed files:** \`data/town_spending/*.csv\`
+
+          <details>
+          <summary>First 40 lines of diff</summary>
+
+          \`\`\`diff
+          ${diff_summary}
+          \`\`\`
+
+          </details>
+
+          Pipeline: \`scripts/fetch_town_spending.py\` hits \`chart_data.json\`
+          for the current fiscal year, sorts by label, and writes deterministic
+          CSVs so day-over-day diffs are clean.
+
+          Auto-merge is enabled. Required checks (smoke, Secret scan, Content
+          guardrails) gate the merge; on failure this PR stays open and the
+          next daily run is skipped via the \`auto-data\` label.
+          EOF
+
+          gh pr create \
+            --title "Refresh Town spending data (${today})" \
+            --body-file /tmp/pr-body.md \
+            --label auto-data \
+            --base main \
+            --head "$branch"
+
+          gh pr merge "$branch" --auto --squash --delete-branch
