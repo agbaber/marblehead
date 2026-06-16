@@ -4462,6 +4462,27 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 .org-card-fte {
   font-size: 0.6875rem;
   color: var(--c-text-sub);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.org-card-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--c-text);
+  line-height: 1;
+  font-feature-settings: "tnum";
+}
+
+.org-card-num-sub {
+  font-size: 0.6875rem;
+  color: var(--c-text-sub);
+}
+
+.org-root .org-card-num {
+  font-size: 2rem;
 }
 
 .org-card-note {
