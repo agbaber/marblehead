@@ -167,6 +167,59 @@ og_url: https://marbleheaddata.org/
   .dashboard-row-why:hover .arrow { transform: translateX(2px); }
   .dashboard-row-why--blank { visibility: hidden; }
 
+  /* What's in play cards */
+  .in-play-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 800px) {
+    .in-play-cards { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .in-play-card {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 24px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  }
+  .in-play-card:hover {
+    border-color: var(--c-teal);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+  .in-play-title {
+    font-family: 'Libre Franklin', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+  .in-play-marker {
+    color: var(--c-buoy);
+    margin-right: 6px;
+  }
+  .in-play-summary {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0 0 12px;
+    flex: 1;
+  }
+  .in-play-cta {
+    font-size: 13px;
+    color: var(--c-teal);
+    font-weight: 600;
+    margin: 0;
+  }
+  .in-play-cta .arrow { transition: transform 0.15s; display: inline-block; }
+  .in-play-card:hover .in-play-cta .arrow { transform: translateX(3px); }
+
   /* Five-tile block */
   .home-stop {
     box-sizing: border-box;
@@ -320,6 +373,25 @@ og_url: https://marbleheaddata.org/
           <span class="dashboard-row-why dashboard-row-why--blank"></span>
         {% endif %}
       </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="home-stop dashboard-in-play">
+  <div class="dashboard-section-head">
+    <h2>What's in play</h2>
+  </div>
+
+  <div class="in-play-cards">
+    {% for item in site.data.in_play %}
+      <a class="in-play-card" href="{{ item.link }}">
+        <p class="in-play-title">
+          <span class="in-play-marker" aria-hidden="true">&#9670;</span>
+          {{ item.title }}
+        </p>
+        <p class="in-play-summary">{{ item.summary }}</p>
+        <p class="in-play-cta">{{ item.link_text | default: "read more" }} <span class="arrow">&rarr;</span></p>
+      </a>
     {% endfor %}
   </div>
 </section>

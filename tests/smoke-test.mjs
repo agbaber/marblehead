@@ -87,6 +87,29 @@ async function testDashboardRevenue(page) {
     : fail('Revenue rows', `expected 3-6 .dashboard-row, got ${rows.length}`);
 }
 
+async function testDashboardInPlay(page) {
+  console.log('\n── Dashboard: What\'s in play ──');
+  const section = await page.$('.dashboard-in-play');
+  section ? ok('In-play section present') : fail('In-play section', '.dashboard-in-play missing');
+
+  const cards = await page.$$('.dashboard-in-play .in-play-card');
+  cards.length >= 3 && cards.length <= 5
+    ? ok(`${cards.length} in-play cards rendered`)
+    : fail('In-play cards', `expected 3-5 .in-play-card, got ${cards.length}`);
+
+  // Every card must link somewhere (card-as-link OR a nested link)
+  for (const card of cards) {
+    const href = await card.evaluate(el => {
+      if (el.tagName === 'A' && el.getAttribute('href')) return el.getAttribute('href');
+      const inner = el.querySelector('a[href]');
+      return inner ? inner.getAttribute('href') : null;
+    });
+    href
+      ? ok(`In-play card has link: ${href}`)
+      : fail('In-play card', 'no link found');
+  }
+}
+
 async function testCheckbookPageLoads(page) {
   console.log('\n── Checkbook page ──');
   const resp = await page.goto(`${SITE}/checkbook/`, { waitUntil: 'domcontentloaded' });
@@ -574,6 +597,7 @@ async function testTermsPageLoads(page) {
     await testHomepageLoads(page1);
     await testDashboardSpending(page1);
     await testDashboardRevenue(page1);
+    await testDashboardInPlay(page1);
     await testNavLinks(page1);
     await testCheckbookPageLoads(page1);
     await testGeneralGovernmentPeerChart(page1);
