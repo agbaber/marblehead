@@ -111,13 +111,17 @@ Capital              $[X.X]M  █              FY26 list
 
 **Why-link policy:**
 - Link to the most specific available explainer.
-- Health insurance → `/healthcare/` (exists).
+- Health insurance → `/topics/health-insurance/` (exists, topic-feed page).
+- Schools → `/topics/school-budget/` (exists).
+- Debt service → `/town-debt.html` (exists) or `/topics/bonding-capital/`.
+- Capital → `/topics/bonding-capital/` (exists).
 - Override impact (if surfaced on a revenue row) → `/2026-override/`
-  (exists).
-- Schools, Town services, Debt, Pensions, Capital: most do not have
-  dedicated explainers yet. For the first cut, link to the relevant
-  /data/ chart or omit the why-text entirely. Do not invent
-  destinations. Do not link to "coming soon" pages.
+  (exists, directory).
+- MBTA / 40B → `/topics/40b-mbta/` (exists).
+- Town services, Pensions, Free cash: no current dedicated explainer.
+  For the first cut, link to a relevant `/charts/*` page if one fits,
+  or omit the why-link entirely. Do not invent destinations or link to
+  "coming soon" pages.
 
 **Styling:**
 - Bars use a muted neutral token from the existing palette. Must NOT
