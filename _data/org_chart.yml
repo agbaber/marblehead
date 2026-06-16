@@ -115,7 +115,7 @@ town:
         eliminated: 0
         reduced: 1
       staff:
-        - "Special Clerk (×2, reduced)"
+        - "Special Clerk (×2, reduced in FY27)"
         - "Board / Commission (Election Commissioners)"
         - "Register of Voters"
         - "Town Election poll workers (pool)"
@@ -309,18 +309,18 @@ town:
         eliminated: 2
         reduced: 5
       staff:
-        - "Department Head (DPW Director) (reduced)"
-        - "Assistant Department Head / Assistant Directors (×3, reduced)"
-        - "Senior Clerk (reduced)"
+        - "Department Head (DPW Director) (reduced in FY27)"
+        - "Assistant Department Head / Assistant Directors (×3, reduced in FY27)"
+        - "Senior Clerk (reduced in FY27)"
         - "Special Clerk (new in FY27)"
         - "Town Engineer (new in FY27)"
         - "Assistant Engineer (new in FY27)"
         - "Mechanic Supervisor"
         - "Mechanic (×2)"
         - "Staff Engineer (eliminated in FY27)"
-        - "Lead Heavy Equipment Operator (×2, reduced)"
+        - "Lead Heavy Equipment Operator (×2, reduced in FY27)"
         - "Special Labor I (eliminated in FY27)"
-        - "Heavy Equipment Operator (×2, reduced)"
+        - "Heavy Equipment Operator (×2, reduced in FY27)"
         - "Foreman / Tree Surgeon"
         - "Specialized Heavy Equipment Operator (×3, new in FY27)"
         - "Working Foreman, Construction (new in FY27)"
@@ -407,11 +407,11 @@ town:
         eliminated: 0
         reduced: 2
       staff:
-        - "Department Head (Cemetery Superintendent) (reduced)"
+        - "Department Head (Cemetery Superintendent) (reduced in FY27)"
         - "Senior Clerk"
         - "Mechanic"
         - "Heavy Equipment Operator"
-        - "General Labor IV (×2, reduced)"
+        - "General Labor IV (×2, reduced in FY27)"
       source_url: "https://marbleheadma.gov/cemetery/"
       source_label: "Town of Marblehead, Cemetery Department; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, CEMETERY cost center)"
       note: >-
@@ -528,20 +528,20 @@ town:
         - "Assistant Department Head (Assistant Director) (new in FY27)"
         - "Program Volunteer Coordinator (eliminated in FY27)"
         - "Senior Clerk"
-        - "Library Technician (reduced)"
+        - "Library Technician (reduced in FY27)"
         - "Library Tech Admin (eliminated in FY27)"
         - "Senior Library Assistant"
-        - "Coordinator of Circulation (reduced)"
-        - "Library Tech Service Assistant (reduced)"
-        - "Technical Services Supervisor (reduced)"
-        - "Adult Librarian (reduced)"
-        - "Children's Librarian (reduced)"
+        - "Coordinator of Circulation (reduced in FY27)"
+        - "Library Tech Service Assistant (reduced in FY27)"
+        - "Technical Services Supervisor (reduced in FY27)"
+        - "Adult Librarian (reduced in FY27)"
+        - "Children's Librarian (reduced in FY27)"
         - "Young Adult Librarian (eliminated in FY27)"
         - "Library Para-Professional (eliminated in FY27)"
-        - "Special Labor I (Custodian) (×2, reduced)"
+        - "Special Labor I (Custodian) (×2, reduced in FY27)"
         - "Temporary Library Assistant (eliminated in FY27)"
         - "Head of Public Services (eliminated in FY27)"
-        - "Adult Page (×4, reduced)"
+        - "Adult Page (×4, reduced in FY27)"
       source_url: "https://abbotlibrary.org/"
       source_label: "Abbot Public Library; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, LIBRARY cost center)"
       note: >-
@@ -567,7 +567,7 @@ town:
         reduced: 1
       staff:
         - "Assistant Department Head #2 (Superintendent of Recreation)"
-        - "Park Maintenance Groundskeeper (×11, reduced)"
+        - "Park Maintenance Groundskeeper (×11, reduced in FY27)"
         - "Field Craftsman Mechanic"
         - "Park Turf Specialist"
         - "Working Foreman, Building & Grounds"
@@ -615,7 +615,7 @@ town:
         - "Assistant Department Head (eliminated in FY27)"
         - "Assistant Department Head #2"
         - "Chief Procurement Officer (new in FY27)"
-        - "Senior Clerk (reduced)"
+        - "Senior Clerk (reduced in FY27)"
         - "Town Counsel (stipend; contracted)"
       source_url: "https://marbleheadma.gov/selectboard-office/"
       source_label: "Town of Marblehead, Select Board Office; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, SELECT BOARD + TOWN COUNSEL cost centers)"

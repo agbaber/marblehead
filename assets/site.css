@@ -4435,6 +4435,10 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   background: var(--c-divider);
 }
 
+.org-cluster-grid > .org-card[open] {
+  grid-column: 1 / -1;
+}
+
 .org-card[open] > summary {
   border-bottom: 1px solid var(--c-border);
 }
@@ -4702,6 +4706,11 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 
 .board-card[open] > summary {
   border-bottom: 1px solid var(--c-border);
+}
+
+.board-grid > .board-card[open],
+.board-emphasized > .board-card[open] {
+  grid-column: 1 / -1;
 }
 
 .board-card-body {
