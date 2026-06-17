@@ -256,6 +256,7 @@
   .cstack .cseg.fixed.b   { background: #9c7a3a; }
   .cstack .cseg.fixed.c   { background: #ad8c4a; }
   .cstack .cseg.fixed.d   { background: #c0a05c; }
+  .cstack .cseg.admin     { background: #6f8d8a; }
   .cstack .cseg.remainder { background: var(--c-teal); }
   .cstack-brackets {
     display: grid; grid-template-columns: 85.7fr 14.3fr; gap: 4px;
@@ -265,6 +266,15 @@
   .cstack-brackets span { padding: 0 4px; }
   .cstack-brackets .b-locked    { color: var(--c-sand); border-top: 2px solid var(--c-sand); padding-top: 3px; text-align: center; }
   .cstack-brackets .b-remainder { color: var(--c-teal); border-top: 2px solid var(--c-teal); padding-top: 3px; text-align: center; }
+  .cstack-brackets3 {
+    display: grid; grid-template-columns: 85.7fr 10.1fr 4.2fr; gap: 4px;
+    font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
+    margin: 0 0 14px;
+  }
+  .cstack-brackets3 span { padding: 0 4px; text-align: center; }
+  .cstack-brackets3 .b-locked    { color: var(--c-sand);  border-top: 2px solid var(--c-sand);  padding-top: 3px; }
+  .cstack-brackets3 .b-admin     { color: #6f8d8a;        border-top: 2px solid #6f8d8a;        padding-top: 3px; }
+  .cstack-brackets3 .b-remainder { color: var(--c-teal);  border-top: 2px solid var(--c-teal);  padding-top: 3px; }
 
   /* Text-only rows beneath the bar */
   .cnotes { display: grid; gap: 10px; margin: 0; }
@@ -279,6 +289,7 @@
   .crow .cswatch.fixed.b   { background: #9c7a3a; }
   .crow .cswatch.fixed.c   { background: #ad8c4a; }
   .crow .cswatch.fixed.d   { background: #c0a05c; }
+  .crow .cswatch.admin     { background: #6f8d8a; }
   .crow .cswatch.remainder { background: var(--c-teal); }
   .crow .clbl { font-size: 12.5px; color: var(--text); font-weight: 600; }
   .crow .clbl a { color: var(--text); }
@@ -600,23 +611,25 @@
         <span class="accent tm"></span>
         <h3 class="title">Ratified at Town Meeting (this year's annual budget package)</h3>
         <div class="amt">$54.29M<small>54.3% of FY26 spend</small></div>
-        <p class="who"><b>What actually happened at TM:</b> voters who showed up to the May 2025 Annual Town Meeting approved the omnibus budget article (one dollar amount per department) and a handful of capital articles. Marblehead runs Open Town Meeting under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter39">MGL c.39</a>: any registered voter can attend and vote, no delegates. TM's authority is to ratify (or amend on the floor, rarely) the FinCom-recommended package. Granular wage scales, position counts, and vendor selection happen upstream of the warrant.</p>
-        <div class="whenset"><span class="whentag">When set</span><span><b>Annual cycle, May 2025 for FY26.</b> But the package TM voted on was mostly already locked: CBAs that set wages were signed in prior years; bond debt service was scheduled when the bonds were issued; GIC premiums get set by the state board; state assessments come in by formula. See the <a href="#tm-carveout">choice qualifier</a> below for the carve-out.</span></div>
+        <p class="who"><b>What actually happened at Town Meeting:</b> voters who showed up to the May 2025 Annual Town Meeting approved the omnibus budget article (one dollar amount per department) and a handful of capital articles. Marblehead runs Open Town Meeting under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter39">MGL c.39</a>: any registered voter can attend and vote, no delegates. Town Meeting's authority is to ratify (or amend on the floor, rarely) the FinCom-recommended package. Granular wage scales, position counts, and vendor selection happen upstream of the warrant.</p>
+        <div class="whenset"><span class="whentag">When set</span><span><b>Annual cycle, May 2025 for FY26.</b> But the package Town Meeting voted on was mostly already locked: CBAs that set wages were signed in prior years; bond debt service was scheduled when the bonds were issued; GIC premiums get set by the state board; state assessments come in by formula. See the <a href="#tm-carveout">choice qualifier</a> below for the carve-out.</span></div>
         <!-- The honesty box: the carve-out inside this bucket -->
         <div class="subbucket" id="tm-carveout">
-          <h4>Choice qualifier: 85.7% of GF&nbsp;&ndash;&nbsp;Town vendor spend was already locked in before Town Meeting opened</h4>
-          <p>Inside <b>General Fund &ndash; Town</b> ($43.91M paid through Jun 9), four contractually fixed lines (insurance premiums, bond debt, pension, state assessments) account for <b>$37.63M (86%)</b>. The remaining <b>$6.28M (14%)</b> is mostly multi-year vendor contracts.</p>
+          <h4>Choice qualifier: essentially none of this $43.91M was a fresh Town Meeting decision this year</h4>
+          <p>Inside <b>General Fund &ndash; Town</b>, <b>$37.63M (86%)</b> was set by outside boards or past ballots, <b>$4.43M (10%)</b> is multi-year contracts the Town Administrator signed in prior years (trash, IT/SaaS, dental, deferred-comp admin, audit, legal), and <b>$1.85M (4%)</b> is recurring professional services, refunds, commodities, and interfund transfers. The portion that was actually a fresh choice at the May 2025 Annual Town Meeting: close to zero.</p>
 
-          <div class="cstack" role="img" aria-label="Composition of GF–Town vendor spend: 86% contractually fixed, 14% remaining vendor checks">
+          <div class="cstack" role="img" aria-label="Composition of GF-Town vendor spend by what locked it in">
             <div class="cseg fixed a"   style="flex: 33.4">GIC&nbsp;33%</div>
             <div class="cseg fixed b"   style="flex: 32.4">Debt&nbsp;32%</div>
             <div class="cseg fixed c"   style="flex: 12.3">Pension&nbsp;12%</div>
             <div class="cseg fixed d"   style="flex: 7.6">State&nbsp;8%</div>
-            <div class="cseg remainder" style="flex: 14.3">Vendor&nbsp;14%</div>
+            <div class="cseg admin"     style="flex: 10.1">Admin contracts&nbsp;10%</div>
+            <div class="cseg remainder" style="flex: 4.2">Other&nbsp;4%</div>
           </div>
-          <div class="cstack-brackets">
-            <span class="b-locked">85.7% locked in before TM opened</span>
-            <span class="b-remainder">14.3% remaining</span>
+          <div class="cstack-brackets3">
+            <span class="b-locked">85.7% outside boards / past ballots</span>
+            <span class="b-admin">10.1% Town Administrator contracts</span>
+            <span class="b-remainder">4.2% other recurring</span>
           </div>
 
           <div class="cnotes">
@@ -645,14 +658,20 @@
               <p class="csub">Recalculated each fall by state DLS via long-standing formulas (MBTA assessment, charter school tuition, state retirement, etc.). Town Meeting cannot alter the amount, only acknowledge it.</p>
             </div>
             <div class="crow">
+              <span class="cswatch admin"></span>
+              <span class="clbl">Town Administrator multi-year contracts</span>
+              <span class="cdol">$4.43M &middot; 10%</span>
+              <p class="csub">Trash hauling (Republic Services $895K, Waste Management $546K), Munis SaaS via Tyler Technologies ($204K), Future Technologies IT ($226K), Altus Dental ($396K), Voya deferred-comp admin ($312K), outside legal Mead Talerman &amp; Costa ($166K), outside audit CliftonLarsonAllen ($116K), and others. Signed in prior years by the Town Administrator with Select Board approval; Town Meeting did not choose these line by line.</p>
+            </div>
+            <div class="crow">
               <span class="cswatch remainder"></span>
-              <span class="clbl" style="color: var(--c-teal);">Remaining vendor checks</span>
-              <span class="cdol" style="color: var(--c-teal);">$6.28M &middot; 14%</span>
-              <p class="csub">Mostly recurring multi-year contracts, trash hauling (Republic Services, Waste Management), IT (Tyler / Munis itself, Future Technologies), fuel, road salt, outside legal counsel, outside audit. Signed by the Town Administrator with Select Board approval in earlier years; not actually re-decided at Annual Town Meeting.</p>
+              <span class="clbl" style="color: var(--c-teal);">Other recurring (refunds, commodities, transfers)</span>
+              <span class="cdol" style="color: var(--c-teal);">$1.85M &middot; 4%</span>
+              <p class="csub">Real-estate tax refunds owed back to overpaying property owners ($268K), interfund transfers where the town pays itself ($229K), commodity purchases like fuel and road salt within existing appropriations ($386K), and small professional services. None of this is a discretionary year-to-year choice either, structurally speaking.</p>
             </div>
           </div>
 
-          <footer>Ledger excludes payroll, the largest discretionary line in any operating budget is salaries, and those are paid via a separate payroll system. So the 14% &ldquo;remaining&rdquo; here is vendor spend only, not all budget choice.</footer>
+          <footer>Ledger excludes payroll. The actual fresh annual decision at Town Meeting is the departmental appropriation level (which mostly drives staffing and salaries, paid through payroll), not these vendor checks.</footer>
         </div>
 
         <details>
@@ -660,17 +679,17 @@
           <ul class="items">
             <li>
               <span><span class="name">General Fund &ndash; Town</span>
-                <span class="src">ATM 2025 omnibus budget article. Operating budget for every General Fund Town department (DPW, Fire, Police, Library, Council on Aging, Town Clerk, Finance, etc.).</span></span>
+                <span class="src">2025 Annual Town Meeting omnibus budget article. Operating budget for every General Fund Town department (DPW, Fire, Police, Library, Council on Aging, Town Clerk, Finance, etc.).</span></span>
               <span class="dollars">$43.91M</span>
             </li>
             <li>
               <span><span class="name">General Fund &ndash; School</span>
-                <span class="src">ATM 2025 school appropriation. Year-to-year MPS vendor spend (teacher salaries paid via payroll, not in ledger).</span></span>
+                <span class="src">2025 Annual Town Meeting school appropriation. Year-to-year MPS vendor spend (teacher salaries paid via payroll, not in ledger).</span></span>
               <span class="dollars">$8.07M</span>
             </li>
             <li>
               <span><span class="name">General Fund &ndash; Tax Articles</span>
-                <span class="src">In-levy capital articles voted at Town Meeting (no debt exclusion). Each article carries its own ATM vote.</span></span>
+                <span class="src">In-levy capital articles voted at Town Meeting (no debt exclusion). Each article carries its own Annual Town Meeting vote.</span></span>
               <span class="dollars">$2.31M</span>
             </li>
           </ul>
@@ -690,11 +709,11 @@
             <li><span><span class="name">Electric Enterprise</span><span class="src">Municipal Light Board operating budget. Largest vendor: Berkshire Wind Power wholesale.</span></span><span class="dollars">$19.50M</span></li>
             <li><span><span class="name">Water Enterprise Operating</span><span class="src">Water &amp; Sewer Commission operating budget.</span></span><span class="dollars">$4.44M</span></li>
             <li><span><span class="name">Sewer Enterprise Operating</span><span class="src">Water &amp; Sewer Commission operating budget.</span></span><span class="dollars">$3.88M</span></li>
-            <li><span><span class="name">Water Capital Articles</span><span class="src">ATM-authorized water capital projects, repaid via water rates.</span></span><span class="dollars">$1.01M</span></li>
+            <li><span><span class="name">Water Capital Articles</span><span class="src">Town Meeting authorized water capital projects, repaid via water rates.</span></span><span class="dollars">$1.01M</span></li>
             <li><span><span class="name">MWRA Project LWSAP26-3021</span><span class="src">MWRA Local Water System Assistance Program funding.</span></span><span class="dollars">$0.73M</span></li>
-            <li><span><span class="name">Harbor Capital Articles</span><span class="src">ATM-authorized harbor capital, repaid via mooring/waterways fees.</span></span><span class="dollars">$0.61M</span></li>
+            <li><span><span class="name">Harbor Capital Articles</span><span class="src">Town Meeting authorized harbor capital, repaid via mooring/waterways fees.</span></span><span class="dollars">$0.61M</span></li>
             <li><span><span class="name">Harbor Enterprise Operating</span><span class="src">Harbors &amp; Waters Board operating budget.</span></span><span class="dollars">$0.48M</span></li>
-            <li><span><span class="name">Sewer Capital Articles</span><span class="src">ATM-authorized sewer capital, repaid via sewer rates.</span></span><span class="dollars">$0.36M</span></li>
+            <li><span><span class="name">Sewer Capital Articles</span><span class="src">Town Meeting authorized sewer capital, repaid via sewer rates.</span></span><span class="dollars">$0.36M</span></li>
           </ul>
         </details>
       </article>
@@ -727,8 +746,8 @@
         <details>
           <summary>What's in this bucket (top 2 funds)</summary>
           <ul class="items">
-            <li><span><span class="name">Commercial Waste Collection Revolving</span><span class="src">ATM-authorized; fees from participating businesses.</span></span><span class="dollars">$0.69M</span></li>
-            <li><span><span class="name">Park Revolving Fund</span><span class="src">ATM-authorized; recreation program fees.</span></span><span class="dollars">$0.48M</span></li>
+            <li><span><span class="name">Commercial Waste Collection Revolving</span><span class="src">Town Meeting authorized; fees from participating businesses.</span></span><span class="dollars">$0.69M</span></li>
+            <li><span><span class="name">Park Revolving Fund</span><span class="src">Town Meeting authorized; recreation program fees.</span></span><span class="dollars">$0.48M</span></li>
           </ul>
         </details>
       </article>
