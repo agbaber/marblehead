@@ -1567,6 +1567,83 @@ og_url: https://marbleheaddata.org/checkbook/
     meta.textContent = totalRows + ' rows · ' + fmtMoney(sumBudget, { compact: true }) + ' budgeted · ' + fmtMoney(sumActual, { compact: true }) + ' actual';
   }
 
+  // --- URL parameter parsing for shareable filter links ---
+  //
+  // Reading: on initial load, after the f-fund/f-division dropdowns are
+  // populated from the CSV, copy any `?fund=...&vendor=...&division=...`
+  // values from the URL onto the matching filter input/select. If a
+  // requested value isn't an existing option (typo, stale link), the
+  // select stays on its default empty value and that filter just isn't
+  // applied — the table shows the unfiltered result rather than a
+  // confusing "0 rows" empty.
+  //
+  // Writing: each time a filter changes, syncUrl() replaces the URL's
+  // query string with the active filter values via history.replaceState
+  // so users can share their view by copying the URL. No page reload, no
+  // history-entry spam.
+  var URL_PARAM_TO_FIELD = {
+    'vendor':     'f-vendor',
+    'family':     'f-family',
+    'fund':       'f-fund',
+    'division':   'f-division',
+    'date_min':   'f-date-min',
+    'date_max':   'f-date-max',
+    'amount_min': 'f-amount-min',
+  };
+  var FIELD_TO_URL_PARAM = Object.keys(URL_PARAM_TO_FIELD).reduce(function (m, k) {
+    m[URL_PARAM_TO_FIELD[k]] = k; return m;
+  }, {});
+
+  function applyUrlParams() {
+    var params;
+    try { params = new URLSearchParams(window.location.search); }
+    catch (e) { return; }
+    var anyApplied = false;
+    Object.keys(URL_PARAM_TO_FIELD).forEach(function (param) {
+      if (!params.has(param)) return;
+      var raw = params.get(param);
+      if (raw === null || raw === '') return;
+      var el = document.getElementById(URL_PARAM_TO_FIELD[param]);
+      if (!el) return;
+      if (el.tagName === 'SELECT') {
+        // Only set if the option exists; otherwise leave default
+        var found = false;
+        for (var i = 0; i < el.options.length; i++) {
+          if (el.options[i].value === raw) { found = true; break; }
+        }
+        if (found) { el.value = raw; anyApplied = true; }
+      } else {
+        el.value = raw;
+        anyApplied = true;
+      }
+    });
+    if (anyApplied) {
+      // Bring the filters panel into view so users see they landed in a
+      // pre-filtered state rather than wonder why the table looks small.
+      var filtersPanel = document.querySelector('.ck-filters') || document.getElementById('f-vendor');
+      if (filtersPanel) {
+        setTimeout(function () {
+          filtersPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }
+
+  function syncUrl() {
+    var params = new URLSearchParams();
+    Object.keys(FIELD_TO_URL_PARAM).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var v = el.value;
+      if (typeof v === 'string') v = v.trim();
+      if (v) params.set(FIELD_TO_URL_PARAM[id], v);
+    });
+    var qs = params.toString();
+    var newUrl = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
+    try { history.replaceState(null, '', newUrl); }
+    catch (e) { /* sandboxed environments may block this; harmless */ }
+  }
+
   // --- Transaction table rendering ---
   function applyFilters() {
     var vendorQ = document.getElementById('f-vendor').value.trim().toUpperCase();
@@ -1671,7 +1748,7 @@ og_url: https://marbleheaddata.org/checkbook/
     });
 
     // Filter inputs
-    var dRender = debounce(function () { page = 0; renderTable(); }, 150);
+    var dRender = debounce(function () { page = 0; renderTable(); syncUrl(); }, 150);
     ['f-vendor', 'f-family', 'f-fund', 'f-division', 'f-date-min', 'f-date-max', 'f-amount-min'].forEach(function (id) {
       var el = document.getElementById(id);
       el.addEventListener('input', dRender);
@@ -1682,7 +1759,7 @@ og_url: https://marbleheaddata.org/checkbook/
       ['f-vendor', 'f-family', 'f-fund', 'f-division', 'f-date-min', 'f-date-max', 'f-amount-min'].forEach(function (id) {
         document.getElementById(id).value = '';
       });
-      page = 0; renderTable();
+      page = 0; renderTable(); syncUrl();
     });
 
     // Sort headers
@@ -2046,6 +2123,7 @@ og_url: https://marbleheaddata.org/checkbook/
         dSel.appendChild(o);
       });
       renderBva();
+      applyUrlParams();
       renderTable();
       renderPerf(perf);
     }).catch(function (err) {
