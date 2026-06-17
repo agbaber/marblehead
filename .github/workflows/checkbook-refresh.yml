@@ -152,6 +152,11 @@ jobs:
               f.write(f'MASKED_COUNT={disclosure["description_masking"]["masked_row_count"]}\n')
           PY
 
+      - name: Rebuild choice-bucketed view JSON for the /sketches/ page
+        if: steps.gate.outputs.skip == 'false'
+        run: |
+          python3 scripts/build_checkbook_view.py
+
           # Re-export the simple key=value file as step outputs.
           while IFS='=' read -r k v; do
             echo "$k=$v" >> "$GITHUB_OUTPUT"
