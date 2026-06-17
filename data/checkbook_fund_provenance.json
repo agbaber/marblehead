@@ -13,8 +13,8 @@
       "other"
     ],
     "bucket_labels": {
-      "ballot": "Voted at the ballot — capital debt exclusions",
-      "town_meeting": "Voted at Town Meeting — annual budget articles",
+      "ballot": "Voted at the ballot, capital debt exclusions",
+      "town_meeting": "Voted at Town Meeting, annual budget articles",
       "ratepayer": "Paid by ratepayers, not the property-tax levy",
       "state_fed": "State & federal restricted grants",
       "revolving": "Revolving funds (paid by users of the service)",
@@ -103,7 +103,7 @@
       "share": 0.049,
       "bucket": "ballot",
       "authorized_by": "Marblehead voters",
-      "authorized_when": "Ballot, June 21 2022 — debt exclusion passed",
+      "authorized_when": "Ballot, June 21 2022, debt exclusion passed",
       "vote_source": "MA DOR Proposition 2½ Debt Exclusion Votes (6/21/2022): \"Roof Replacements, Road & Sidewalk Improvements, Smart Panels, HVAC, Salt Shed, HS Boiler\"",
       "one_line": "Article 11 of the 2022 Annual Town Meeting, omnibus capital, repaid via voter-approved debt exclusion outside Prop 2½."
     },
@@ -153,7 +153,7 @@
       "share": 0.013,
       "bucket": "ballot",
       "authorized_by": "Marblehead voters",
-      "authorized_when": "Ballot, June 16 2015 — debt exclusion passed",
+      "authorized_when": "Ballot, June 16 2015, debt exclusion passed",
       "vote_source": "MA DOR Proposition 2½ Debt Exclusion Votes (6/16/2015): \"Bonds To Pay For Repair And Replacement Of Drainage Pipe And Construction Of New Xfer Station\"",
       "one_line": "Article 34 of the 2015 Annual Town Meeting, transfer station construction + drainage, repaid via voter-approved debt exclusion outside Prop 2½."
     },
@@ -253,7 +253,7 @@
       "share": 0.004,
       "bucket": "ballot",
       "authorized_by": "Marblehead voters",
-      "authorized_when": "Ballot, June 10 2025 — debt exclusion passed",
+      "authorized_when": "Ballot, June 10 2025, debt exclusion passed",
       "vote_source": "MA DOR Proposition 2½ Debt Exclusion Votes (6/10/2025): \"Mary Alley Building Improvement & HVAC\"",
       "one_line": "Article 33 of the 2025 Annual Town Meeting, Mary Alley Building improvements + HVAC, repaid via voter-approved debt exclusion outside Prop 2½."
     },
