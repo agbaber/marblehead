@@ -3,7 +3,7 @@ title: "Town checkbook"
 permalink: /checkbook/
 scripts: [citations]
 og_title: "Marblehead FY26 Checkbook & Budget Explorer"
-og_description: "FY26 spending, budget, and pacing for Marblehead. $206.1M adopted across all funds, $127.3M annual operating, $101.1M in vendor checks through Jun 11. Budget vs actual by Fund, Department, Category, Division, and Object."
+og_description: "Where each FY26 dollar Marblehead paid came from, and who voted on it. Choice buckets (ballot vs Town Meeting vs ratepayer vs state/federal vs revolving vs trusts) plus a filterable ledger of all transactions."
 og_url: https://marbleheaddata.org/checkbook/
 ---
 <h1 class="h-center">Town checkbook</h1>
@@ -617,85 +617,775 @@ og_url: https://marbleheaddata.org/checkbook/
     transition: background 0.12s;
   }
   .drill-cta-btn:hover { background: var(--c-teal); }
+
+  /* ===== Choice-bucketed view (cutover from /sketches/checkbook-choices-v2) ===== */
+  /* Finding-led hero replaces the 4-stat panel */
+    .finding {
+      font-size: 17px; line-height: 1.55; color: var(--text);
+      max-width: 720px; margin: 18px auto 12px;
+    }
+    .finding strong {
+      color: var(--c-navy); font-weight: 700;
+      font-variant-numeric: tabular-nums; letter-spacing: -0.2px;
+    }
+    .findinglinks {
+      font-size: 12px; color: var(--text-subtle);
+      margin: 0 auto 4px;
+    }
+  
+    /* Link defaults, substance underlined; can-be-followed affordance */
+    a { color: var(--c-navy-2); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+    a:hover { color: var(--c-teal); }
+    .crumb a { color: var(--text-subtle); }
+    .findinglinks a { color: var(--text-muted); }
+  
+    /* "When was this set" annotation row inside bucket cards + carve-out bars */
+    .whenset {
+      grid-column: 1 / -1;
+      display: flex; align-items: flex-start; gap: 8px;
+      margin: 6px 0 0; padding: 8px 10px;
+      background: var(--divider); border-radius: 6px;
+      font-size: 11.5px; color: var(--text-muted); line-height: 1.5;
+    }
+    .whenset b { color: var(--text); font-weight: 600; }
+    .whenset .whentag {
+      flex: none; font-size: 9.5px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+      color: var(--text-subtle); padding: 2px 6px; border: 1px solid var(--border); border-radius: 3px;
+      margin-top: 1px;
+    }
+    .whenset.tight { padding: 4px 8px; font-size: 11px; margin: 4px 0 0; }
+    .subbucket .barrow .whenset-inline {
+      display: block; font-size: 10.5px; color: var(--text-subtle); margin-top: 1px; font-weight: 500;
+    }
+    .project .pwhen {
+      font-size: 11px; color: var(--text-subtle); margin: 4px 0 0; font-style: italic;
+    }
+    .freshness {
+      display: inline-flex; align-items: center; gap: 8px; flex-wrap: nowrap;
+      font-size: 12px; color: var(--text-muted); white-space: nowrap;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 6px 14px; border-radius: 999px;
+    }
+    .freshness .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--c-teal-2); flex: none; }
+    .freshness em { font-style: normal; color: var(--c-spark); font-weight: 600; }
+  
+    .totals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+              background: var(--surface); border: 1px solid var(--border);
+              border-radius: var(--radius); padding: 18px 8px; margin: 22px 0 0; }
+    .totals .stat { text-align: center; padding: 0 12px; border-right: 1px solid var(--divider); }
+    .totals .stat:last-child { border-right: none; }
+    .totals .lbl { font-size: 10px; font-weight: 600; text-transform: uppercase;
+                   letter-spacing: 0.8px; color: var(--text-subtle); margin-bottom: 6px; }
+    .totals .val { font-size: 24px; font-weight: 700; color: var(--c-navy);
+                   font-variant-numeric: tabular-nums; letter-spacing: -0.3px; line-height: 1; }
+    .totals .ctx { font-size: 11px; color: var(--text-subtle); margin-top: 6px; }
+  
+    .lede { margin: 42px 0 14px; }
+    .lede h2 { font-size: 20px; margin: 0 0 4px; color: var(--c-navy); font-weight: 700; letter-spacing: -0.2px; }
+    .lede p { margin: 0; font-size: 13.5px; color: var(--text-muted); }
+  
+    .stack-wrap { margin: 18px 0 10px; }
+    .stack-bar {
+      display: flex; height: 28px; border-radius: var(--radius-sm); overflow: hidden;
+      border: 1px solid var(--border); background: var(--surface);
+    }
+    .stack-bar .seg { position: relative; display: flex; align-items: center; justify-content: center;
+                      color: #fff; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums;
+                      border-right: 1px solid rgba(255,255,255,0.35); text-decoration: none;
+                      transition: opacity 0.15s; }
+    .stack-bar .seg:hover { opacity: 0.85; cursor: pointer; }
+    .stack-bar .seg:last-child { border-right: none; }
+    .stack-bar .seg.other { color: var(--text); }
+    .stack-bar .seg.ballot { background: var(--c-teal); }
+    .stack-bar .seg.tm     { background: var(--c-navy-2); }
+    .stack-bar .seg.enter  { background: var(--c-sand); }
+    .stack-bar .seg.grant  { background: var(--c-slate); }
+    .stack-bar .seg.rev    { background: var(--c-teal-2); }
+    .stack-bar .seg.other  { background: var(--c-mist); color: var(--text); }
+  
+    .stack-legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; font-size: 11.5px; color: var(--text-muted); }
+    .stack-legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .stack-legend i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+    .sw-ballot { background: var(--c-teal); }
+    .sw-tm     { background: var(--c-navy-2); }
+    .sw-enter  { background: var(--c-sand); }
+    .sw-grant  { background: var(--c-slate); }
+    .sw-rev    { background: var(--c-teal-2); }
+    .sw-other  { background: var(--c-mist); }
+  
+    .choice-list { display: grid; gap: 14px; margin: 22px 0 0; }
+    .choice {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 18px 20px;
+      display: grid; grid-template-columns: 1fr auto; gap: 6px 18px;
+    }
+    .choice .accent { grid-column: 1 / -1; height: 3px; border-radius: 2px; margin-bottom: 12px; }
+    .accent.ballot { background: var(--c-teal); }
+    .accent.tm     { background: var(--c-navy-2); }
+    .accent.enter  { background: var(--c-sand); }
+    .accent.grant  { background: var(--c-slate); }
+    .accent.rev    { background: var(--c-teal-2); }
+    .accent.other  { background: var(--c-mist); }
+    .choice .title { font-size: 15px; font-weight: 700; color: var(--c-navy); margin: 0; }
+    .choice .amt { font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--c-navy); text-align: right; line-height: 1.15; }
+    .choice .amt small { display: block; font-size: 11px; color: var(--text-subtle); font-weight: 500; margin-top: 2px; }
+    .choice .who { grid-column: 1 / -1; font-size: 13px; color: var(--text-muted); margin: 0; }
+    .choice .when { grid-column: 1 / -1; font-size: 12.5px; color: var(--text-muted); margin: 6px 0 0; padding-left: 10px; border-left: 2px solid var(--divider); }
+    .choice .when b { color: var(--text); font-weight: 600; }
+    .choice .who b { color: var(--text); font-weight: 600; }
+    .choice details { grid-column: 1 / -1; margin-top: 10px; border-top: 1px solid var(--divider); padding-top: 12px; }
+    .choice summary {
+      list-style: none; cursor: pointer;
+      font-size: 12px; color: var(--c-navy-2); font-weight: 600;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .choice summary::after { content: "↓"; font-size: 10px; opacity: 0.7; transition: transform 0.2s; }
+    .choice details[open] summary::after { transform: rotate(180deg); }
+    .choice .items { margin: 12px 0 0; padding: 0; list-style: none; font-size: 12.5px; }
+    .choice .items li {
+      display: flex; justify-content: space-between; gap: 12px;
+      padding: 8px 0; border-bottom: 1px dotted var(--divider);
+    }
+    .choice .items li:last-child { border-bottom: none; }
+    .choice .items .name { color: var(--text); font-weight: 500; }
+    .choice .items .src { color: var(--text-subtle); font-size: 11px; display: block; margin-top: 2px; max-width: 480px; }
+    .choice .items .src a { color: var(--c-navy-2); }
+    .choice .items .dollars { font-variant-numeric: tabular-nums; color: var(--text); font-weight: 600; white-space: nowrap; align-self: flex-start; }
+  
+    /* sub-bucket inside Town Meeting card */
+    .subbucket {
+      grid-column: 1 / -1; margin: 14px 0 0; padding: 14px 14px;
+      background: var(--subbucket-bg); border-left: 3px solid var(--c-sand);
+      border-radius: 0 6px 6px 0; font-size: 12.5px;
+    }
+    .subbucket h4 { margin: 0 0 4px; font-size: 13px; color: var(--text); font-weight: 700; }
+    .subbucket p { margin: 0 0 8px; color: var(--text-muted); line-height: 1.55; }
+    .subbucket .bars { display: grid; gap: 4px; margin-top: 8px; }
+    .subbucket .barrow { display: grid; grid-template-columns: 1fr 90px 70px; align-items: center; gap: 10px; font-size: 12px; }
+    .subbucket .barrow .lbl { color: var(--text); font-weight: 500; }
+    .subbucket .barrow .bar { background: var(--surface); border-radius: 4px; height: 10px; position: relative; border: 1px solid var(--border); }
+    .subbucket .barrow .bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--c-sand); border-radius: 3px; }
+    .subbucket .barrow .dollars { text-align: right; font-variant-numeric: tabular-nums; color: var(--text); font-weight: 600; }
+    .subbucket footer { margin-top: 10px; padding-top: 8px; border-top: 1px dotted var(--subbucket-border); color: var(--text-subtle); font-size: 11px; }
+    .subbucket .barwhen { font-size: 11.5px; color: var(--text-subtle); margin: 4px 0 8px; padding-left: 8px; line-height: 1.45; }
+  
+    /* Carve-out: one stacked bar (parts-of-a-whole) + text rows below */
+    .cstack {
+      display: flex; height: 32px; border-radius: var(--radius-sm); overflow: hidden;
+      border: 1px solid var(--subbucket-border); background: var(--surface); margin: 10px 0 6px;
+    }
+    .cstack .cseg {
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums;
+      border-right: 1px solid rgba(255,255,255,0.35); padding: 0 4px; white-space: nowrap; overflow: hidden;
+    }
+    .cstack .cseg:last-child { border-right: none; }
+    .cstack .cseg.fixed     { background: var(--c-sand); }
+    .cstack .cseg.fixed.a   { background: #8a6c34; }
+    .cstack .cseg.fixed.b   { background: #9c7a3a; }
+    .cstack .cseg.fixed.c   { background: #ad8c4a; }
+    .cstack .cseg.fixed.d   { background: #c0a05c; }
+    .cstack .cseg.admin     { background: #6f8d8a; }
+    .cstack .cseg.remainder { background: var(--c-teal); }
+    .cstack-brackets {
+      display: grid; grid-template-columns: 85.7fr 14.3fr; gap: 4px;
+      font-size: 10.5px; font-weight: 600; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.5px;
+      margin: 0 0 14px;
+    }
+    .cstack-brackets span { padding: 0 4px; }
+    .cstack-brackets .b-locked    { color: var(--c-sand); border-top: 2px solid var(--c-sand); padding-top: 3px; text-align: center; }
+    .cstack-brackets .b-remainder { color: var(--c-teal); border-top: 2px solid var(--c-teal); padding-top: 3px; text-align: center; }
+    .cstack-brackets3 {
+      display: grid; grid-template-columns: 85.7fr 10.1fr 4.2fr; gap: 4px;
+      font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
+      margin: 0 0 14px;
+    }
+    .cstack-brackets3 span { padding: 0 4px; text-align: center; }
+    .cstack-brackets3 .b-locked    { color: var(--c-sand);  border-top: 2px solid var(--c-sand);  padding-top: 3px; }
+    .cstack-brackets3 .b-admin     { color: #6f8d8a;        border-top: 2px solid #6f8d8a;        padding-top: 3px; }
+    .cstack-brackets3 .b-remainder { color: var(--c-teal);  border-top: 2px solid var(--c-teal);  padding-top: 3px; }
+  
+    /* Text-only rows beneath the bar */
+    .cnotes { display: grid; gap: 10px; margin: 0; }
+    .crow {
+      display: grid; grid-template-columns: auto 1fr auto; gap: 6px 12px;
+      align-items: baseline; padding: 6px 0; border-bottom: 1px dotted var(--subbucket-border);
+    }
+    .crow:last-child { border-bottom: none; }
+    .crow .cswatch { width: 10px; height: 10px; border-radius: 2px; align-self: center; }
+    .crow .cswatch.fixed     { background: var(--c-sand); }
+    .crow .cswatch.fixed.a   { background: #8a6c34; }
+    .crow .cswatch.fixed.b   { background: #9c7a3a; }
+    .crow .cswatch.fixed.c   { background: #ad8c4a; }
+    .crow .cswatch.fixed.d   { background: #c0a05c; }
+    .crow .cswatch.admin     { background: #6f8d8a; }
+    .crow .cswatch.remainder { background: var(--c-teal); }
+    .crow .clbl { font-size: 12.5px; color: var(--text); font-weight: 600; }
+    .crow .clbl a { color: var(--text); }
+    .crow .cdol { font-size: 12.5px; color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .crow .csub { grid-column: 2 / -1; font-size: 11.5px; color: var(--text-subtle); line-height: 1.5; margin-top: 1px; }
+  
+    /* Project status panel inside the Ballot card */
+    .projects { grid-column: 1 / -1; margin: 14px 0 0; display: grid; gap: 10px; }
+    .project {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 14px;
+      display: grid; grid-template-columns: 1fr auto; gap: 4px 14px;
+    }
+    .project .pname { font-size: 13.5px; font-weight: 700; color: var(--c-navy); margin: 0; }
+    .project .pmeta { font-size: 11.5px; color: var(--text-subtle); margin: 2px 0 0; }
+    .project .pstatus {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 999px; align-self: start; white-space: nowrap;
+    }
+    .pstatus.active   { background: rgba(46,155,148,0.16); color: var(--c-teal-2); border: 1px solid rgba(46,155,148,0.4); }
+    .pstatus.wrapping { background: rgba(156,122,58,0.16); color: var(--c-sand); border: 1px solid rgba(156,122,58,0.4); }
+    .pstatus.closing  { background: rgba(90,103,118,0.16); color: var(--c-slate); border: 1px solid rgba(90,103,118,0.4); }
+    .project .pnote { grid-column: 1 / -1; font-size: 12px; color: var(--text-muted); margin: 6px 0 0; line-height: 1.5; }
+    .project .pnote b { color: var(--text); font-weight: 600; }
+    .project .pnote .v { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--text); }
+  
+    /* "What we can't account for" panel */
+    .unaccounted {
+      margin: 36px 0 0;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 20px;
+    }
+    .unaccounted .lede h3 { margin: 0 0 4px; font-size: 16px; color: var(--c-navy); font-weight: 700; }
+    .unaccounted .lede p { margin: 0; font-size: 13.5px; color: var(--text-muted); }
+    .unaccounted .lede strong { color: var(--text); }
+    .unaccounted-grid { display: grid; gap: 12px; margin: 14px 0 0; grid-template-columns: repeat(2, 1fr); }
+    .unaccounted-grid .gap.full { grid-column: 1 / -1; }
+    .gap {
+      border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px;
+      background: var(--bg);
+      display: grid; grid-template-columns: 1fr auto; gap: 4px 12px;
+    }
+    .gap .gname { font-size: 13px; font-weight: 700; color: var(--c-navy); margin: 0; }
+    .gap .gamt { font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); text-align: right; }
+    .gap .gamt small { display: block; font-size: 10.5px; color: var(--text-subtle); font-weight: 500; margin-top: 1px; }
+    .gap .gdesc { grid-column: 1 / -1; font-size: 12px; color: var(--text-muted); margin: 4px 0 0; line-height: 1.55; }
+    .gap .gdesc b { color: var(--text); }
+    .gap .gfix { grid-column: 1 / -1; font-size: 11.5px; color: var(--c-teal-2); margin: 6px 0 0; font-weight: 600; }
+    .accountedfor {
+      margin: 12px 0 0; padding: 10px 12px;
+      background: rgba(46,155,148,0.10); border: 1px solid rgba(46,155,148,0.3);
+      border-radius: 6px; font-size: 12.5px; color: var(--text-muted);
+    }
+    .accountedfor b { color: var(--c-teal); }
+  
+    /* Theme toggle (tiny corner button) */
+    /* news */
+    .news {
+      margin: 36px 0 0;
+      background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--c-spark);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+    }
+    .news .tag { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--c-spark); }
+    .news h3 { margin: 4px 0 6px; font-size: 16px; color: var(--c-navy); font-weight: 700; }
+    .news p { margin: 0; font-size: 13.5px; color: var(--text-muted); }
+    .news p b { color: var(--text); }
+  
+    .moved {
+      margin: 28px 0 0;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 16px 18px;
+    }
+    .moved h3 { margin: 0 0 6px; font-size: 14px; color: var(--c-navy); font-weight: 700; }
+    .moved p { margin: 0 0 10px; font-size: 12.5px; color: var(--text-muted); }
+    .moved ul { margin: 0; padding: 0; list-style: none; font-size: 12.5px; }
+    .moved li { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; border-bottom: 1px dotted var(--divider); }
+    .moved li:last-child { border-bottom: none; }
+    .moved li .v { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--text); }
+    .moved li .src { color: var(--text-subtle); font-size: 11px; display: block; margin-top: 2px; }
+    .moved li > span:first-child { flex: 1; min-width: 0; }
+    .moved li > span.v { white-space: nowrap; align-self: flex-start; }
+  
+    .table-disclosure {
+      margin: 28px 0 0;
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 16px 18px;
+    }
+    .table-disclosure summary {
+      list-style: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; font-size: 14px; color: var(--c-navy); font-weight: 600;
+    }
+    .table-disclosure summary::after { content: "Show 15,364 rows →"; font-size: 12px; color: var(--text-subtle); font-weight: 500; }
+    .table-disclosure p { font-size: 12.5px; color: var(--text-muted); margin: 10px 0 0; }
+  
+    .notes { margin: 48px auto 0; max-width: 760px; padding-top: 24px; border-top: 1px solid var(--divider); }
+    .notes h3 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-subtle); margin: 0 0 12px; }
+    .notes p { font-size: 12.5px; color: var(--text-muted); line-height: 1.55; margin: 0 0 10px; }
+    .notes code { background: var(--divider); padding: 1px 5px; border-radius: 3px; font-size: 11.5px; }
+  
+    /* ===== mobile (<= 720px) ===== */
+    @media (max-width: 720px) {
+      .page { padding: 18px 14px 60px; }
+      .h1 { font-size: 24px; }
+      .sub { font-size: 14px; padding: 0 4px; }
+      .freshness { font-size: 11.5px; padding: 5px 12px; white-space: normal; gap: 6px; }
+  
+      /* Stats: stack 1-per-row with left-aligned label + right-aligned value */
+      .totals { grid-template-columns: 1fr; padding: 6px 6px; }
+      .totals .stat {
+        display: grid; grid-template-columns: 1fr auto; align-items: baseline;
+        gap: 0 14px; text-align: left;
+        border-right: none; border-bottom: 1px solid var(--divider);
+        padding: 12px 14px;
+      }
+      .totals .stat:last-child { border-bottom: none; }
+      .totals .lbl { margin: 0; text-align: left; grid-column: 1; grid-row: 1; }
+      .totals .val { font-size: 22px; grid-column: 2; grid-row: 1 / span 2; text-align: right; }
+      .totals .ctx { margin: 2px 0 0; text-align: left; grid-column: 1; grid-row: 2; }
+  
+      .stack-bar { height: 22px; }
+      .stack-bar .seg { font-size: 10px; }
+      .subbucket .barrow { grid-template-columns: 1fr 56px 64px; gap: 8px; }
+      .subbucket .barrow .lbl { font-size: 11.5px; }
+      .subbucket .barrow .dollars { font-size: 11.5px; }
+  
+      /* Choice card: stack title above amount on mobile */
+      .choice { grid-template-columns: 1fr; padding: 14px 16px; }
+      .choice .amt { text-align: left; font-size: 16px; padding-top: 2px; }
+      .choice .amt small { display: inline-block; margin: 0 0 0 8px; font-size: 11px; }
+  
+      /* Project status cards: same, stack header */
+      .project { grid-template-columns: 1fr; gap: 6px 0; }
+      .project .pstatus { justify-self: start; }
+  
+      /* What we can't fully account for: 1-col on mobile, header stack */
+      .unaccounted { padding: 14px 16px; }
+      .unaccounted-grid { grid-template-columns: 1fr; }
+      .gap { grid-template-columns: 1fr; padding: 12px 14px; }
+      .gap .gamt { text-align: left; font-size: 15px; padding-top: 2px; }
+      .gap .gamt small { display: inline-block; margin: 0 0 0 8px; font-size: 10.5px; }
+    }
+  
+    /* ===== tighten desktop density a hair ===== */
+    @media (min-width: 721px) {
+      .choice-list { gap: 16px; }
+    }
 </style>
 
-<div class="hero-card" id="hero-card">
-  <div class="hero-row">
-    <div class="hero-stat">
-      <div class="hero-label">All funds</div>
-      <div class="hero-value">$206.1M</div>
-      <div class="hero-sub">FY26 adopted, every fund</div>
+<!-- ===== Choice-bucketed view (data-driven via /assets/checkbook-view.js) ===== -->
+<section class="hero">
+    <div class="crumb">Home / Checkbook</div>
+    <h1 class="h1">What we paid, and the choices we made</h1>
+    <p class="finding">
+      Through <span data-fill="snapshot.last_payment|date">Jun 9</span>, Marblehead has paid <strong data-fill="snapshot.total_paid|usd">$99.9M</strong> to vendors in FY26.
+      Inside <a href="#bucket-tm">General Fund &ndash; Town</a> alone, <strong data-fill="gf_town_carveout.fixed_total|usd">$37.6M</strong>
+      went to four <a href="#tm-carveout">line items</a> the town can't meaningfully alter in a single year:
+      state-set insurance premiums, <abbr class="g" title="Public Employee Retirement Administration Commission">PERAC</abbr> pension, bond debt service, and Cherry Sheet assessments.
+      The rest is bucketed below by the authorization that put it on the books, and tagged with <em>when</em> that authorization was made.
+    </p>
+    <p class="findinglinks">
+      <span data-freshness>Snapshot: Jun 9, 2026 &middot; weekly cadence</span>
+      &middot; <a href="/data/checkbook_view.json">view <abbr class="g" title="JavaScript Object Notation (data file)">JSON</abbr></a>
+      &middot; <a href="/data/checkbook_fund_provenance.json">fund &rarr; vote mapping</a>
+      &middot; <a href="#about">how this is computed</a>
+    </p>
+  </section>
+
+  <!-- the bucketed view -->
+  <section>
+    <div class="lede" style="margin-top: 36px;">
+      <h2>Of the <span data-fill="snapshot.total_paid|usd">$99.9M</span> paid so far, here's what put each dollar on the books</h2>
+      <p>Six kinds of authorization, sorted by share of FY26 spend.</p>
     </div>
-    <div class="hero-stat">
-      <div class="hero-label">Annual operating</div>
-      <div class="hero-value">$127.3M</div>
-      <div class="hero-sub">General + enterprise funds</div>
+
+    <div class="stack-wrap">
+      <div class="stack-bar" role="navigation" aria-label="Jump to a bucket">
+        <a class="seg ballot" href="#bucket-ballot" data-flex-from="buckets[key:ballot].share" style="flex: 6.7"><span style="padding:0 4px" data-fill="buckets[key:ballot].share|pct-tight">6.7%</span></a>
+        <a class="seg tm"     href="#bucket-tm"     data-flex-from="buckets[key:town_meeting].share" style="flex: 54.3">Town Meeting&nbsp;&middot;&nbsp;<span data-fill="buckets[key:town_meeting].share|pct">54.3%</span></a>
+        <a class="seg enter"  href="#bucket-ratepayer" data-flex-from="buckets[key:ratepayer].share" style="flex: 31.3">Ratepayer&nbsp;&middot;&nbsp;<span data-fill="buckets[key:ratepayer].share|pct">31.3%</span></a>
+        <a class="seg grant"  href="#bucket-statefed" data-flex-from="buckets[key:state_fed].share" style="flex: 5.2"><span data-fill="buckets[key:state_fed].share|pct-tight">5.2%</span></a>
+        <a class="seg rev"    href="#bucket-revolving" data-flex-from="buckets[key:revolving].share" style="flex: 1.3"></a>
+        <a class="seg other"  href="#bucket-other" data-flex-from="buckets[key:other].share" style="flex: 1.2"></a>
+      </div>
+      <div class="stack-legend">
+        <span><i class="sw-ballot"></i> Ballot, you voted directly</span>
+        <span><i class="sw-tm"></i> Town Meeting, you, in person, if you went</span>
+        <span><i class="sw-enter"></i> Ratepayer, not your tax bill</span>
+        <span><i class="sw-grant"></i> State / federal grants</span>
+        <span><i class="sw-rev"></i> Revolving (user fees)</span>
+        <span><i class="sw-other"></i> Trusts &amp; donations</span>
+      </div>
     </div>
-    <div class="hero-stat">
-      <div class="hero-label">Vendor payments</div>
-      <div class="hero-value">$99.9M</div>
-      <div class="hero-sub">15,364 checks, payroll excluded</div>
+
+    <div class="choice-list">
+
+      <!-- BALLOT -->
+      <article class="choice" id="bucket-ballot">
+        <span class="accent ballot"></span>
+        <h3 class="title">Voted by you, at the ballot</h3>
+        <div class="amt"><span data-fill="buckets[key:ballot].amount|usd">$6.73M</span><small><span data-fill="buckets[key:ballot].share|pct">6.7%</span> of FY26 spend</small></div>
+        <p class="who"><b>Who chose this:</b> Marblehead voters at past ballot elections, approving debt exclusions to fund specific capital projects outside Proposition 2&frac12;.</p>
+        <div class="whenset"><span class="whentag">When set</span><span><b>Past ballot elections (2015&ndash;2025).</b> Once a debt exclusion passes, the bond term locks payments in for 10&ndash;30 years. FY26 is the year on the amortization schedule, not the year of the decision.</span></div>
+
+        <!-- PROJECT STATUS: rendered from ballot_projects[] in checkbook_view.json -->
+        <!-- Template used by checkbook-view.js to clone one card per project. -->
+        <template class="project-template">
+          <article class="project">
+            <div>
+              <h5 class="pname"></h5>
+              <p class="pmeta"></p>
+            </div>
+            <span class="pstatus"></span>
+            <p class="pnote"></p>
+            <p class="pwhen"></p>
+          </article>
+        </template>
+        <div class="projects" aria-label="Project status (from ledger activity)">
+          <h4 style="margin: 4px 0 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-subtle);">Project status, inferred from FY26 ledger activity</h4>
+          <!-- The .projects-list container is wiped and rebuilt from JSON.
+               The 5 hardcoded cards below are the fallback that displays
+               if checkbook_view.json is unavailable. -->
+          <div class="projects-list">
+
+          <article class="project">
+            <div>
+              <h5 class="pname">A11 2022 Capital Improvement (omnibus)</h5>
+              <p class="pmeta"><a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes">Ballot 6/21/2022 passed</a> &middot; roofs, roads/sidewalks, smart panels, <abbr class="g" title="Heating, Ventilation, and Air Conditioning">HVAC</abbr>, salt shed, HS boiler</p>
+            </div>
+            <span class="pstatus active">Active &middot; last paid 18d ago</span>
+            <p class="pnote">FY26 spend: <span class="v">$4.94M</span> across <b>84 payments</b> to multiple GCs: D&amp;R General Contracting ($1.30M), Homer Contracting ($0.95M), Raymond Design Associates ($0.90M), MDM Engineering ($0.82M). Pattern says: bundle of sub-projects all in heavy execution. First FY26 payment Aug 12, 2025; most recent May 27, 2026.</p>
+            <p class="pwhen">Decision sealed 6/21/2022 at the ballot. Municipal capital bonds in MA typically run 10&ndash;20 years; debt service on these will appear in U.S. Bank rows through the late 2030s.</p>
+          </article>
+
+          <article class="project">
+            <div>
+              <h5 class="pname">A34 2015 New Transfer Station + drainage</h5>
+              <p class="pmeta"><a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes">Ballot 6/16/2015 passed</a> &middot; transfer-station construction + drainage pipe replacement</p>
+            </div>
+            <span class="pstatus active">Active &middot; last paid 26d ago</span>
+            <p class="pnote">FY26 spend: <span class="v">$1.33M</span> across <b>42 payments</b>, with <b>$1.25M (94%) to Delulis Brothers Construction</b>. Eleven years after the bond, the project is still drawing down. Most recent payment May 19, 2026. Worth a separate question to the Town Administrator on which scope is still active vs. what's been closed out.</p>
+            <p class="pwhen">Decision sealed 6/16/2015 at the ballot. Eleven fiscal years on, construction draws are still moving, either a phased build-out or a scope amendment under the original authorization.</p>
+          </article>
+
+          <article class="project">
+            <div>
+              <h5 class="pname">A33 2025 Mary Alley Building Improv + HVAC</h5>
+              <p class="pmeta"><a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes">Ballot 6/10/2025 passed</a> &middot; town's most recent debt exclusion</p>
+            </div>
+            <span class="pstatus active">Active &middot; design phase</span>
+            <p class="pnote">FY26 spend: <span class="v">$0.44M</span> across <b>9 payments</b>, almost entirely (<b>$0.41M, 92%</b>) to NV5 (an <abbr class="g" title="Owner's Project Manager (the owner's representative on a construction project)">OPM</abbr>/design firm). First FY26 payment Sep 29 2025 (Sep is right after the June ballot). No <abbr class="g" title="General Contractor">GC</abbr> yet, so this is in design / owner's-rep phase, pre-construction.</p>
+            <p class="pwhen">Decision sealed 6/10/2025 at the ballot, the town's most recent debt exclusion. Bond is in pre-issuance design phase; debt service will start showing in U.S. Bank rows once construction draws begin.</p>
+          </article>
+
+          <article class="project">
+            <div>
+              <h5 class="pname">A35 2021 Abbot Public Library Renovation</h5>
+              <p class="pmeta"><a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes">Ballot 6/22/2021 passed</a> &middot; ~$8.5M bond, the library reopened in 2023</p>
+            </div>
+            <span class="pstatus closing">Closing out</span>
+            <p class="pnote">FY26 spend: <span class="v">$16,747</span> across <b>5 payments</b>: safe &amp; lock, electrical service, landscaping, small equipment. Building is operational; these are punch-list / warranty close-outs. Last payment Jan 28, 2026 (no activity in 4+ months). The big project is done.</p>
+            <p class="pwhen">Decision sealed 6/22/2021 at the ballot. Project fund essentially closed; bond debt service on the $8.5M continues in U.S. Bank rows for the remainder of the amortization term (typically 20 years).</p>
+          </article>
+
+          <article class="project">
+            <div>
+              <h5 class="pname">A36 2019 <abbr class="g" title="Massachusetts Water Resources Authority">MWRA</abbr> Loan project</h5>
+              <p class="pmeta"><a href="https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes">Ballot 6/18/2019 cycle</a> &middot; MWRA borrowing for water-system work</p>
+            </div>
+            <span class="pstatus wrapping">Engineering phase</span>
+            <p class="pnote">FY26 spend: <span class="v">$0.24M</span> across <b>6 payments</b>, <b>100% to Haley Ward</b> (engineering firm). New activity this fiscal year (first FY26 payment Jan 27, 2026, last Mar 19, 2026). Looks like design/study work, not construction yet.</p>
+            <p class="pwhen">Decision sealed 6/18/2019 cycle. MWRA loan repayment is via water rates rather than the property-tax levy, so this one shows up in the Ratepayer bucket on the bond-service side.</p>
+          </article>
+
+          </div>
+          <p style="margin: 8px 0 0; font-size: 11px; color: var(--text-subtle); line-height: 1.5;">
+            Status labels are inferred from <b>last-payment-date freshness</b>, <b>vendor mix</b> (GC vs. engineering firm vs. punch-list), and <b>row count</b>. Original bond authorization amounts and project budgets are not in the ledger; cross-checking against <a href="/data/dor_debt_exclusion_all.csv"><abbr class="g" title="Department of Revenue">DOR</abbr> Prop 2&frac12; ballot history</a> and bond issuance docs would let us add &ldquo;X% of authorization spent&rdquo; on each project.
+          </p>
+        </div>
+
+        <details>
+          <summary>What's in this bucket (top funds by FY26 spend)</summary>
+          <ul class="items">
+            <li>
+              <span><span class="name">A11 2022 Capital Improvement</span>
+                <span class="src">Ballot June 21, 2022, debt exclusion passed. Roof replacements, road/sidewalk improvements, smart panels, HVAC, salt shed, HS boiler. <em>(DOR Prop 2&frac12; Debt Exclusion Votes)</em></span></span>
+              <span class="dollars">$4.94M</span>
+            </li>
+            <li>
+              <span><span class="name">A34 2015 New Transfer Station</span>
+                <span class="src">Ballot June 16, 2015, debt exclusion passed. Bonds for transfer station construction + drainage pipe replacement.</span></span>
+              <span class="dollars">$1.33M</span>
+            </li>
+            <li>
+              <span><span class="name">A33 2025 Mary Alley Bldg Improv</span>
+                <span class="src">Ballot June 10, 2025, debt exclusion passed. Mary Alley Building improvements + HVAC.</span></span>
+              <span class="dollars">$0.44M</span>
+            </li>
+            <li>
+              <span><span class="name">A36 2019 MWRA Loan project</span>
+                <span class="src">Engineering work this fiscal year (Haley Ward).</span></span>
+              <span class="dollars">$0.24M</span>
+            </li>
+            <li>
+              <span><span class="name">A35 2021 Abbot Library Renovation</span>
+                <span class="src">Closing-out punch-list spend; the building reopened in 2023.</span></span>
+              <span class="dollars">$0.02M</span>
+            </li>
+          </ul>
+        </details>
+        <div class="subbucket" style="background: var(--subbucket-ballot-bg); border-left-color: var(--c-teal);">
+          <h4>Caveat: this is a floor, not a ceiling.</h4>
+          <p>FY26 also paid <b>$14.24M to U.S. Bank in bond service</b> across many bond series (Abbot Library 2021, Fort Sewall 2019, Gerry School 2016, Pleasant St 2012, and others). Some of that debt service traces to ballot-approved exclusions and some to in-levy Town Meeting articles; the ledger doesn't split bond-by-bond, so it can't be apportioned cleanly without an external debt schedule.</p>
+        </div>
+      </article>
+
+      <!-- TOWN MEETING -->
+      <article class="choice" id="bucket-tm">
+        <span class="accent tm"></span>
+        <h3 class="title">Ratified at Town Meeting (this year's annual budget package)</h3>
+        <div class="amt"><span data-fill="buckets[key:town_meeting].amount|usd">$54.29M</span><small><span data-fill="buckets[key:town_meeting].share|pct">54.3%</span> of FY26 spend</small></div>
+        <p class="who"><b>What actually happened at Town Meeting:</b> voters who showed up to the May 2025 Annual Town Meeting approved the omnibus budget article (one dollar amount per department) and a handful of capital articles. Marblehead runs Open Town Meeting under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter39"><abbr class="g" title="Massachusetts General Laws">MGL</abbr> c.39</a>: any registered voter can attend and vote, no delegates. Town Meeting's authority is to ratify (or amend on the floor, rarely) the <abbr class="g" title="Finance Committee">FinCom</abbr>-recommended package. Granular wage scales, position counts, and vendor selection happen upstream of the warrant.</p>
+        <div class="whenset"><span class="whentag">When set</span><span><b>Annual cycle, May 2025 for FY26.</b> But the package Town Meeting voted on was mostly already locked: CBAs that set wages were signed in prior years; bond debt service was scheduled when the bonds were issued; <abbr class="g" title="Group Insurance Commission">GIC</abbr> premiums get set by the state board; state assessments come in by formula. See the <a href="#tm-carveout">choice qualifier</a> below for the carve-out.</span></div>
+        <!-- The honesty box: the carve-out inside this bucket -->
+        <div class="subbucket" id="tm-carveout">
+          <h4>Choice qualifier: essentially none of this <span data-fill="gf_town_carveout.total|usd">$43.91M</span> was a fresh Town Meeting decision this year</h4>
+          <p>Inside <b>General Fund &ndash; Town</b>, <b><span data-fill="gf_town_carveout.fixed_total|usd">$37.63M</span> (<span data-fill="gf_town_carveout.fixed_share|pct">86%</span>)</b> was set by outside boards or past ballots, <b><span data-fill="gf_town_carveout.admin_contracts_total|usd">$4.43M</span> (<span data-fill="gf_town_carveout.admin_contracts_share|pct">10%</span>)</b> is multi-year contracts the Town Administrator signed in prior years (trash, <abbr class="g" title="Information Technology">IT</abbr>/SaaS, dental, deferred-comp admin, audit, legal), and <b><span data-fill="gf_town_carveout.other_recurring_total|usd">$1.85M</span> (<span data-fill="gf_town_carveout.other_recurring_share|pct">4%</span>)</b> is recurring professional services, refunds, commodities, and interfund transfers. The portion that was actually a fresh choice at the May 2025 Annual Town Meeting: close to zero.</p>
+
+          <div class="cstack" role="img" aria-label="Composition of GF-Town vendor spend by what locked it in">
+            <div class="cseg fixed a"   data-flex-from="gf_town_carveout.segments[key:gic_insurance].share" style="flex: 33.4">GIC&nbsp;<span data-fill="gf_town_carveout.segments[key:gic_insurance].share|pct-tight">33%</span></div>
+            <div class="cseg fixed b"   data-flex-from="gf_town_carveout.segments[key:debt_us_bank].share" style="flex: 32.4">Debt&nbsp;<span data-fill="gf_town_carveout.segments[key:debt_us_bank].share|pct-tight">32%</span></div>
+            <div class="cseg fixed c"   data-flex-from="gf_town_carveout.segments[key:pension].share" style="flex: 12.3">Pension&nbsp;<span data-fill="gf_town_carveout.segments[key:pension].share|pct-tight">12%</span></div>
+            <div class="cseg fixed d"   data-flex-from="gf_town_carveout.segments[key:cherry_sheet].share" style="flex: 7.6">State&nbsp;<span data-fill="gf_town_carveout.segments[key:cherry_sheet].share|pct-tight">8%</span></div>
+            <div class="cseg admin"     data-flex-from="gf_town_carveout.admin_contracts_share" style="flex: 10.1">Admin&nbsp;<span data-fill="gf_town_carveout.admin_contracts_share|pct-tight">10%</span></div>
+            <div class="cseg remainder" data-flex-from="gf_town_carveout.other_recurring_share" style="flex: 4.2"><span data-fill="gf_town_carveout.other_recurring_share|pct-tight">4%</span></div>
+          </div>
+          <div class="cstack-brackets3">
+            <span class="b-locked"><span data-fill="gf_town_carveout.fixed_share|pct">85.7%</span> outside boards / past ballots</span>
+            <span class="b-admin"><span data-fill="gf_town_carveout.admin_contracts_share|pct">10.1%</span> Town Administrator contracts</span>
+            <span class="b-remainder"><span data-fill="gf_town_carveout.other_recurring_share|pct">4.2%</span> other recurring</span>
+          </div>
+
+          <div class="cnotes">
+            <div class="crow">
+              <span class="cswatch fixed a"></span>
+              <span class="clbl"><a href="https://www.mass.gov/orgs/group-insurance-commission">GIC + insurance</a></span>
+              <span class="cdol"><span data-fill="gf_town_carveout.segments[key:gic_insurance].amount|usd">$14.67M</span> &middot; <span data-fill="gf_town_carveout.segments[key:gic_insurance].share|pct-tight">33%</span></span>
+              <p class="csub">Premiums reset every fiscal year by the state GIC board. The town's choice to use GIC at all, and the 83/17 employer/employee split, were settled in earlier rounds of collective bargaining.</p>
+            </div>
+            <div class="crow">
+              <span class="cswatch fixed b"></span>
+              <span class="clbl">Bond debt service (U.S. Bank)</span>
+              <span class="cdol"><span data-fill="gf_town_carveout.segments[key:debt_us_bank].amount|usd">$14.24M</span> &middot; <span data-fill="gf_town_carveout.segments[key:debt_us_bank].share|pct-tight">32%</span></span>
+              <p class="csub">Each bond series locked in when issued (mostly 2008&ndash;2024). Excluded-debt series authorized by ballot vote on the date the project was approved; in-levy series via Town Meeting article.</p>
+            </div>
+            <div class="crow">
+              <span class="cswatch fixed c"></span>
+              <span class="clbl"><a href="https://www.mass.gov/orgs/public-employee-retirement-administration-commission">Pension assessment</a> (PERAC)</span>
+              <span class="cdol"><span data-fill="gf_town_carveout.segments[key:pension].amount|usd">$5.38M</span> &middot; <span data-fill="gf_town_carveout.segments[key:pension].share|pct-tight">12%</span></span>
+              <p class="csub">PERAC framework dates to 1945. The FY26 dollar amount was set by the 2024 actuarial valuation of the Marblehead Retirement System, no local discretion in any single budget year.</p>
+            </div>
+            <div class="crow">
+              <span class="cswatch fixed d"></span>
+              <span class="clbl"><a href="https://www.mass.gov/lists/cherry-sheets">State assessments</a> (Cherry Sheet)</span>
+              <span class="cdol"><span data-fill="gf_town_carveout.segments[key:cherry_sheet].amount|usd">$3.35M</span> &middot; <span data-fill="gf_town_carveout.segments[key:cherry_sheet].share|pct-tight">8%</span></span>
+              <p class="csub">Recalculated each fall by state <abbr class="g" title="Division of Local Services">DLS</abbr> via long-standing formulas (<abbr class="g" title="Massachusetts Bay Transportation Authority">MBTA</abbr> assessment, charter school tuition, state retirement, etc.). Town Meeting cannot alter the amount, only acknowledge it.</p>
+            </div>
+            <div class="crow">
+              <span class="cswatch admin"></span>
+              <span class="clbl">Town Administrator multi-year contracts</span>
+              <span class="cdol"><span data-fill="gf_town_carveout.admin_contracts_total|usd">$4.43M</span> &middot; <span data-fill="gf_town_carveout.admin_contracts_share|pct-tight">10%</span></span>
+              <p class="csub">Trash hauling (Republic Services $895K, Waste Management $546K), Munis SaaS via Tyler Technologies ($204K), Future Technologies IT ($226K), Altus Dental ($396K), Voya deferred-comp admin ($312K), outside legal Mead Talerman &amp; Costa ($166K), outside audit CliftonLarsonAllen ($116K), and others. Signed in prior years by the Town Administrator with Select Board approval; Town Meeting did not choose these line by line.</p>
+            </div>
+            <div class="crow">
+              <span class="cswatch remainder"></span>
+              <span class="clbl" style="color: var(--c-teal);">Other recurring (refunds, commodities, transfers)</span>
+              <span class="cdol" style="color: var(--c-teal);"><span data-fill="gf_town_carveout.other_recurring_total|usd">$1.85M</span> &middot; <span data-fill="gf_town_carveout.other_recurring_share|pct-tight">4%</span></span>
+              <p class="csub">Real-estate tax refunds owed back to overpaying property owners ($268K), interfund transfers where the town pays itself ($229K), commodity purchases like fuel and road salt within existing appropriations ($386K), and small professional services. None of this is a discretionary year-to-year choice either, structurally speaking.</p>
+            </div>
+          </div>
+
+          <footer>Ledger excludes payroll. The actual fresh annual decision at Town Meeting is the departmental appropriation level (which mostly drives staffing and salaries, paid through payroll), not these vendor checks.</footer>
+        </div>
+
+        <details>
+          <summary>What's in this bucket (3 funds)</summary>
+          <ul class="items">
+            <li>
+              <span><span class="name">General Fund &ndash; Town</span>
+                <span class="src">2025 Annual Town Meeting omnibus budget article. Operating budget for every General Fund Town department (<abbr class="g" title="Department of Public Works">DPW</abbr>, Fire, Police, Library, Council on Aging, Town Clerk, Finance, etc.).</span></span>
+              <span class="dollars">$43.91M</span>
+            </li>
+            <li>
+              <span><span class="name">General Fund &ndash; School</span>
+                <span class="src">2025 Annual Town Meeting school appropriation. Year-to-year <abbr class="g" title="Marblehead Public Schools">MPS</abbr> vendor spend (teacher salaries paid via payroll, not in ledger).</span></span>
+              <span class="dollars">$8.07M</span>
+            </li>
+            <li>
+              <span><span class="name">General Fund &ndash; Tax Articles</span>
+                <span class="src">In-levy capital articles voted at Town Meeting (no debt exclusion). Each article carries its own Annual Town Meeting vote.</span></span>
+              <span class="dollars">$2.31M</span>
+            </li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- ENTERPRISE -->
+      <article class="choice" id="bucket-ratepayer">
+        <span class="accent enter"></span>
+        <h3 class="title">Paid by ratepayers, not your tax bill</h3>
+        <div class="amt"><span data-fill="buckets[key:ratepayer].amount|usd">$31.25M</span><small><span data-fill="buckets[key:ratepayer].share|pct">31.3%</span> of FY26 spend</small></div>
+        <p class="who"><b>Who chose this:</b> the Municipal Light Board, Water &amp; Sewer Commission, and Harbors &amp; Waters Board set rates and budgets for the self-funded utility enterprises. Town Meeting accepts the rate schedules but residents pay through utility bills, not the property-tax levy.</p>
+        <div class="whenset"><span class="whentag">When set</span><span><b>Continuous, by appointed boards.</b> Each enterprise's rates are reset on its own board's schedule (typically annual). Wholesale power supply contracts (Berkshire Wind, etc.) are signed for multi-year terms. Capital articles get a Town Meeting vote when they come up but are repaid from rates, not the levy.</span></div>
+        <details>
+          <summary>What's in this bucket (top 8 funds)</summary>
+          <ul class="items">
+            <li><span><span class="name">Electric Enterprise</span><span class="src">Municipal Light Board operating budget. Largest vendor: Berkshire Wind Power wholesale.</span></span><span class="dollars">$19.50M</span></li>
+            <li><span><span class="name">Water Enterprise Operating</span><span class="src">Water &amp; Sewer Commission operating budget.</span></span><span class="dollars">$4.44M</span></li>
+            <li><span><span class="name">Sewer Enterprise Operating</span><span class="src">Water &amp; Sewer Commission operating budget.</span></span><span class="dollars">$3.88M</span></li>
+            <li><span><span class="name">Water Capital Articles</span><span class="src">Town Meeting authorized water capital projects, repaid via water rates.</span></span><span class="dollars">$1.01M</span></li>
+            <li><span><span class="name">MWRA Project LWSAP26-3021</span><span class="src">MWRA Local Water System Assistance Program funding.</span></span><span class="dollars">$0.73M</span></li>
+            <li><span><span class="name">Harbor Capital Articles</span><span class="src">Town Meeting authorized harbor capital, repaid via mooring/waterways fees.</span></span><span class="dollars">$0.61M</span></li>
+            <li><span><span class="name">Harbor Enterprise Operating</span><span class="src">Harbors &amp; Waters Board operating budget.</span></span><span class="dollars">$0.48M</span></li>
+            <li><span><span class="name">Sewer Capital Articles</span><span class="src">Town Meeting authorized sewer capital, repaid via sewer rates.</span></span><span class="dollars">$0.36M</span></li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- STATE / FED -->
+      <article class="choice" id="bucket-statefed">
+        <span class="accent grant"></span>
+        <h3 class="title">State &amp; federal restricted grants</h3>
+        <div class="amt"><span data-fill="buckets[key:state_fed].amount|usd">$5.15M</span><small><span data-fill="buckets[key:state_fed].share|pct">5.2%</span> of FY26 spend</small></div>
+        <p class="who"><b>Who chose this:</b> outside government. The state or federal program defines the use; Marblehead's School Committee or Select Board accepts the funds. Cannot be redirected to general operations.</p>
+        <div class="whenset"><span class="whentag">When set</span><span><b>By state/federal calendar.</b> Circuit Breaker and <abbr class="g" title="Individuals with Disabilities Education Act">IDEA</abbr> recur annually by formula. <abbr class="g" title="American Rescue Plan Act">ARPA</abbr> was a one-time 2021 federal allocation now sunsetting. School Lunch reimburses against meals actually served. Marblehead doesn't decide the size; it accepts and spends per the program rules.</span></div>
+        <details>
+          <summary>What's in this bucket (top 4 funds)</summary>
+          <ul class="items">
+            <li><span><span class="name">Circuit Breaker</span><span class="src">MA <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> <abbr class="g" title="Special Education">SpEd</abbr> reimbursement formula. Restricted to SpEd costs.</span></span><span class="dollars">$1.77M</span></li>
+            <li><span><span class="name">COVID-19 ARPA (Federal)</span><span class="src">American Rescue Plan Act allocation, March 2021. Sunsetting.</span></span><span class="dollars">$1.19M</span></li>
+            <li><span><span class="name">School Lunch</span><span class="src"><abbr class="g" title="United States Department of Agriculture">USDA</abbr> National School Lunch Program reimbursement.</span></span><span class="dollars">$0.87M</span></li>
+            <li><span><span class="name"><abbr class="g" title="Special Education">SPED</abbr> IDEA Part B (entitlement)</span><span class="src">Federal IDEA Part B entitlement, restricted to disability supports.</span></span><span class="dollars">$0.70M</span></li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- REVOLVING -->
+      <article class="choice" id="bucket-revolving">
+        <span class="accent rev"></span>
+        <h3 class="title">Revolving funds (paid by users of the service)</h3>
+        <div class="amt"><span data-fill="buckets[key:revolving].amount|usd">$1.28M</span><small><span data-fill="buckets[key:revolving].share|pct">1.3%</span> of FY26 spend</small></div>
+        <p class="who"><b>Who chose this:</b> Town Meeting authorizes each revolving fund under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section53E1~2">MGL c.44 &sect;53E&frac12;</a>. The dollars come from program fees, not tax revenue, and can only be spent on that program.</p>
+        <div class="whenset"><span class="whentag">When set</span><span><b>Re-authorized at each Annual Town Meeting.</b> Each revolving fund's spending cap and purpose has to be renewed annually by vote. The actual cash comes in as participating businesses or recreation users pay fees.</span></div>
+        <details>
+          <summary>What's in this bucket (top 2 funds)</summary>
+          <ul class="items">
+            <li><span><span class="name">Commercial Waste Collection Revolving</span><span class="src">Town Meeting authorized; fees from participating businesses.</span></span><span class="dollars">$0.69M</span></li>
+            <li><span><span class="name">Park Revolving Fund</span><span class="src">Town Meeting authorized; recreation program fees.</span></span><span class="dollars">$0.48M</span></li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- OTHER -->
+      <article class="choice" id="bucket-other">
+        <span class="accent other"></span>
+        <h3 class="title">Trusts, donations, and small fundraising funds</h3>
+        <div class="amt"><span data-fill="buckets[key:other].amount|usd">$1.24M</span><small><span data-fill="buckets[key:other].share|pct">1.2%</span> of FY26 spend</small></div>
+        <p class="who"><b>Who chose this:</b> original donors, donor families, and people contributing to specific causes (Larz Anderson Fund, Shattuck Memorial Fund, Pickett Charity, Glover/Village student activities, fireworks, youth baseball, opioid settlement, etc.). Each fund has its own donor-restricted purpose.</p>
+        <div class="whenset"><span class="whentag">When set</span><span><b>At the time of each original gift</b>, the older charitable trusts (Larz Anderson, Pickett) date from the 19th and early 20th century and are donor-restricted in perpetuity. Activity funds and donation accounts get topped up continuously by current contributors.</span></div>
+      </article>
+
     </div>
-    <div class="hero-stat">
-      <div class="hero-label">Through</div>
-      <div class="hero-value">Jun 9</div>
-      <div class="hero-sub">11 of 12 months</div>
+  </section>
+
+  <!-- NEWS: Snow Removal overrun -->
+  <aside class="news" id="snow-overrun">
+    <div class="tag">A choice still to be made</div>
+    <h3>Snow Removal is +$582K over its FY26 appropriation (654% overrun)</h3>
+    <p>Town Meeting voted the original snow appropriation last May; this winter cost more than planned. Under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section33B">MGL c.44 &sect;33B</a>, an overrun has to be closed by a <b>supplemental appropriation at a Special Town Meeting</b>. The vote isn't &ldquo;should we have plowed&rdquo;, the plowing already happened. It's about which other line gets reduced, or whether <a href="/where-has-the-money-gone.html#free-cash">free cash</a> absorbs it. see the Snow Removal line in the live ledger &rarr;</p>
+  </aside>
+
+  <!-- WHAT MOVED panel -->
+  <section class="moved" id="what-moved">
+    <h3>What moved since the last snapshot (Jun 2 &rarr; Jun 9)</h3>
+    <p><b>+$3.22M</b> in new payments across <b>1,181</b> new ledger rows. <b>837</b> prior rows were edited or reversed (normal end-of-month reconciliation). The motion concentrated in fewer than 10 vendors. <span class="src" style="display: block; margin-top: 6px;">Sources: <a href="/data/checkbook_FY26_2026-06-09.csv">Jun 9 snapshot</a> vs. the Jun 2 snapshot (in <a href="https://github.com/agbaber/marblehead/commits/main/data">commit history</a>).</span></p>
+    <ul>
+      <li><span><span class="name">Town of Marblehead</span><span class="src">interfund / payroll-adjacent transfers, 863 rows</span></span><span class="v">+$1.37M</span></li>
+      <li><span><span class="name">Berkshire Wind Power Cooperative</span><span class="src">Light Dept wholesale, ratepayer not tax</span></span><span class="v">+$1.05M</span></li>
+      <li><span><span class="name">Boston Higashi School</span><span class="src">out-of-district SpEd tuition placement</span></span><span class="v">+$0.15M</span></li>
+      <li><span><span class="name">Melmark New England</span><span class="src">out-of-district SpEd tuition placement</span></span><span class="v">+$0.10M</span></li>
+      <li><span><span class="name">Pro AV Systems, Tyler Equipment, TDS, others</span><span class="src">capital + IT</span></span><span class="v">+$0.20M</span></li>
+    </ul>
+  </section>
+
+  <!-- collapsed table -->
+  <details class="table-disclosure">
+    <summary>Every payment (the raw ledger)</summary>
+    <p>The full ledger of 15,364 rows, filterable by vendor, fund, division, and date. Useful for looking up a specific vendor or check.</p>
+  </details>
+
+  <!-- What we can't fully account for -->
+  <section class="unaccounted">
+    <div class="lede">
+      <h3>What we can't fully account for</h3>
+      <p>Of the $99.93M paid through Jun 9, <strong>$97.71M (97.8%)</strong> sits in a top-20 fund that maps to a named authorizing vote. The remaining 2.2% is bucketed but with caveats.</p>
     </div>
-  </div>
-</div>
 
-<div class="ck-section">
-  <h2>Budget vs actual</h2>
-</div>
+    <div class="unaccounted-grid">
 
-<div class="breakdown-bar">
-  <button type="button" class="breakdown-btn active" data-breakdown="by_fund">Fund</button>
-  <button type="button" class="breakdown-btn" data-breakdown="by_department">Department</button>
-  <button type="button" class="breakdown-btn" data-breakdown="by_category">Category</button>
-  <button type="button" class="breakdown-btn" data-breakdown="by_division">Division</button>
-  <button type="button" class="breakdown-btn" data-breakdown="by_object" title="Granular spend type - Professional Salaries, Health Insurance, etc. (called &quot;object code&quot; in municipal budgeting)">Line item</button>
-  <span class="breakdown-meta" id="breakdown-meta"></span>
-</div>
+      <article class="gap full">
+        <h4 class="gname">Long-tail funds not yet mapped to a vote</h4>
+        <div class="gamt">$2.22M<small>2.2% of ledger &middot; 88 funds</small></div>
+        <p class="gdesc">Each tail fund is classified into a bucket by regex (<abbr class="g" title="Metropolitan Council for Educational Opportunity">METCO</abbr> and Chapter 90 &rarr; state grants; Larz Anderson and Shattuck &rarr; trusts; etc.) but doesn't have a per-fund vote citation in the provenance <abbr class="g" title="JavaScript Object Notation (data file)">JSON</abbr> yet. Largest unmapped funds: <b>METCO ($276K)</b>, <b>A36 2019 MWRA Loan ($240K)</b>, <b>High School Student Activity ($178K)</b>, <b>Larz Anderson Fund ($154K)</b>, <b>Chapter 90 + Fair Share ($169K combined)</b>.</p>
+        <p class="gfix">Fix: extend <a href="/data/checkbook_fund_provenance.json"><code>checkbook_fund_provenance.json</code></a> to all 108 funds (or at least the top ~50, which would cover ~99.5%).</p>
+      </article>
 
-<div class="bva-legend">
-  <span class="bva-legend-caption">Each bar: light backdrop is the revised budget, dark fill is what's been spent so far.</span>
-  <span class="bva-legend-keys">
-    <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--budget"></span>Budget</span>
-    <span class="bva-legend-item"><span class="bva-legend-swatch"></span>Spent</span>
-    <span class="bva-legend-item"><span class="bva-legend-swatch bva-legend-swatch--over"></span>Over budget</span>
-  </span>
-</div>
+      <article class="gap">
+        <h4 class="gname">Bond debt service we can't split bond-by-bond</h4>
+        <div class="gamt">$14.24M<small>U.S. Bank, 36 rows</small></div>
+        <p class="gdesc">Annual bond payments cross many series, Abbot Library 2021, Fort Sewall 2019, Gerry School 2016, Pleasant St 2012, and others. Some traces to ballot-approved <a href="/data/dor_debt_exclusion_all.csv">debt exclusions</a>; some to in-levy Town Meeting capital articles. The ledger description column carries invoice numbers like "3189884", not bond series.</p>
+        <p class="gfix">Fix: pull the town's bond schedule (in the <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> notes or from the Town Accountant) and join on payment date + amount.</p>
+      </article>
 
-<div class="bva-chart" id="bva-chart">
-  <div class="ck-loading">Loading&hellip;</div>
-</div>
+      <article class="gap full">
+        <h4 class="gname">Negative rows that look like prior-year reconciliations</h4>
+        <div class="gamt">$-2.56M<small>153 rows total</small></div>
+        <p class="gdesc">Six big negatives on Jul 25, 2025 to <b>Commonwealth of MA</b> (-$945K, -$291K, -$212K, -$53K, -$23K, -$17K, all carrying the same invoice ID <code>666-0168-2025-0709MB</code>) sum to <b>-$1.54M</b>, almost certainly a year-end insurance / <a href="https://www.mass.gov/orgs/group-insurance-commission">GIC</a> credit reconciling FY25 charges into FY26 books. Plus -$382K <abbr class="g" title="South Essex Sewerage District">SESD</abbr> and -$320K <a href="https://www.mwra.com/">MWRA</a> negatives the same week. The other 145 negative rows are small voids and reissues.</p>
+        <p class="gfix">Fix: footnote tied to the Town Accountant's year-end close-out memo. Not a data-quality problem, it's how municipal accounting handles prior-year credits.</p>
+      </article>
 
-<div class="ck-section">
-  <h2>Where things stand</h2>
-</div>
+      <article class="gap">
+        <h4 class="gname">&ldquo;ONE TIME PAY&rdquo; placeholder vendor</h4>
+        <div class="gamt">$1.16M<small>676 rows</small></div>
+        <p class="gdesc">Munis' catch-all for one-off payments where the recipient isn't in the vendor master. The single biggest row is <b>$733K to "ONE TIME PAY"</b> with description <em>"Contract 190 Water Main Improv"</em>, that's the actual water-main contractor, just not yet in the vendor file. The rest is a mix of <b>real-estate tax refunds</b>, tuition reimbursements, and small misc disbursements.</p>
+        <p class="gfix">Fix: at minimum, surface the description column as the de-facto vendor for ONE TIME PAY rows so they're searchable and not just anonymous.</p>
+      </article>
 
-<div class="perf-card perf-card--over">
-  <h3>Over the full-year budget</h3>
-  <div id="perf-over-list" class="ck-loading">Loading&hellip;</div>
-  <p class="perf-card-foot" id="perf-over-foot"></p>
-</div>
+      <article class="gap">
+        <h4 class="gname">Interfund transfers (the town paying itself)</h4>
+        <div class="gamt">$1.37M<small>"Town of Marblehead" as vendor, 863 rows</small></div>
+        <p class="gdesc">When money moves between funds (<abbr class="g" title="General Fund">GF</abbr>-School &rarr; HS Student Activity, or Town &rarr; Enterprise for shared services), the ledger records both sides as outflows. These rows are <em>not external spend</em>; they're internal economic shuffles. Naively summed in the buckets, they create modest double-counting (roughly 1.4% of the total).</p>
+        <p class="gfix">Fix: tag interfund-transfer rows and exclude from "external spend" totals; show them in a separate "internal movement" line.</p>
+      </article>
 
-<div class="perf-card">
-  <h3>Top vendors</h3>
-  <p class="perf-pareto" id="perf-pareto">Loading&hellip;</p>
-  <div id="perf-vendor-list"></div>
-</div>
+      <article class="gap">
+        <h4 class="gname"><abbr class="g" title="Personally Identifiable Information">PII</abbr>-redacted descriptions</h4>
+        <div class="gamt">313 rows<small>amounts &amp; vendor preserved</small></div>
+        <p class="gdesc">The redaction script masks descriptions on out-of-district SpEd placements (student initials in the original ledger) and any rows in the two medical-claim funds (111F Injury Leave, Workers Compensation). For these rows we know the vendor and the dollars but intentionally don't show <em>what for</em>.</p>
+        <p class="gfix">Won't change, this is the privacy gate. Disclosed in the existing redaction note.</p>
+      </article>
 
-<div class="perf-card">
-  <h3>Monthly spend</h3>
-  <div id="perf-cadence-chart" class="ck-loading">Loading&hellip;</div>
-</div>
+    </div>
 
-<div class="perf-card">
-  <h3>Vendors billing 3+ funds</h3>
-  <div id="perf-multifund-table" class="ck-loading">Loading&hellip;</div>
-</div>
+    <p class="accountedfor"><b>Bottom line:</b> the $99.93M total is fully present in the ledger and bucketed; what's incomplete is the per-fund vote citations on the 2.2% long tail, the per-bond split on the $14.24M debt service, and the cosmetic mislabeling of ~$2.5M of interfund transfers and ONE-TIME-PAY catch-all rows. No dollars are missing from the published checkbook; the gaps are about how cleanly each dollar traces back to the vote that authorized it.</p>
+  </section>
 
+  <!-- methodology notes -->
+  <section class="notes">
+    <h3>About this sketch</h3>
+    <p>All bucket totals are real, computed from the <code>checkbook_FY26_2026-06-09.csv</code> ledger. Fund-to-vote provenance is in <code>data/checkbook_fund_provenance.json</code> (top 20 funds, 97.8% of paid spend). Vote citations cross-reference <code>data/dor_debt_exclusion_all.csv</code> (MA DOR Proposition 2&frac12; Debt Exclusion Votes) for the ballot bucket.</p>
+    <p>Only <b>14.3% of vendor checks out of General Fund &ndash; Town</b> are subject to year-to-year Town Meeting discretion. The other 85.7% (GIC + pension + bond debt + state assessments) is set by outside boards or prior contracts. Payroll, the largest discretionary line, is paid via a separate system and isn't in the ledger.</p>
+  </section>
+
+<hr style="margin: 60px auto 20px; border: none; border-top: 1px solid var(--divider); max-width: 760px;">
+
+<!-- ===== Raw transaction ledger (filterable, paginated) ===== -->
 <div class="ck-section">
   <h2>Every payment</h2>
 </div>
@@ -824,6 +1514,7 @@ og_url: https://marbleheaddata.org/checkbook/
   </a>
 </div>
 
+<script src="/assets/checkbook-view.js"></script>
 <script>
 (function () {
   'use strict';
@@ -1470,6 +2161,7 @@ og_url: https://marbleheaddata.org/checkbook/
 
   function renderBva() {
     var host = document.getElementById('bva-chart');
+    if (!host) return;  // Cutover: BVA chart removed in favor of choice-bucketed view; this function is now a no-op
     if (!budget) { host.innerHTML = '<div class="ck-loading">Loading budget data&hellip;</div>'; return; }
     var data = (budget[bvaBreakdown] || []).slice();
     // Drop zero-everywhere rows
@@ -1792,7 +2484,10 @@ og_url: https://marbleheaddata.org/checkbook/
     });
 
     // BVA row click -> expand/collapse / drill / pop / cta (event-delegated to survive re-renders)
-    document.getElementById('bva-chart').addEventListener('click', function (e) {
+    // Cutover: bva-chart removed in favor of the choice-bucketed view; guard so this is a no-op
+    // when the chart DOM is absent.
+    var bvaChartEl = document.getElementById('bva-chart');
+    if (bvaChartEl) bvaChartEl.addEventListener('click', function (e) {
       // Drill close (× button)
       var close = e.target.closest('[data-drill-close]');
       if (close) {
@@ -1920,6 +2615,10 @@ og_url: https://marbleheaddata.org/checkbook/
   }
 
   function renderPerf(perf) {
+    // Cutover: perf cards (over budget, top vendors, monthly spend, multifund) replaced
+    // by the choice-bucketed view at the top of the page. This function is now a no-op
+    // when the perf-card DOM targets are gone.
+    if (!document.getElementById('perf-over-list')) return;
     // Over budget: only departments that have already exceeded their full revised budget
     // by a meaningful dollar amount. Excludes enterprise funds (Light, etc.) whose budget
     // is tracked outside the BUDGETED ANNUAL FUNDS envelope and so come through as pct=null.
