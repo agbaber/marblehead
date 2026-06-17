@@ -171,7 +171,7 @@ jobs:
           fi
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      - name: Commit, push, open PR, enable auto-merge
+      - name: Commit, push, open PR, post audit comment, enable auto-merge
         if: steps.changes.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.INGEST_PAT }}
@@ -223,37 +223,23 @@ jobs:
           label.
           EOF
 
-          gh pr create \
+          # Capture the PR URL so the audit-log comment can be posted
+          # without re-querying. Re-querying after `gh pr merge --auto`
+          # races against auto-merge actually firing: by the time the
+          # comment step runs, the PR can already be MERGED and a
+          # `--state open` lookup returns nothing.
+          pr_url=$(gh pr create \
             --title "Refresh checkbook CSV through ${AS_OF}" \
             --body-file /tmp/pr-body.md \
             --label auto-checkbook \
             --base main \
-            --head "$branch"
+            --head "$branch")
 
-          gh pr merge "$branch" --auto --squash --delete-branch
-
-      - name: Post redaction review TSV as a PR comment (audit log)
-        if: steps.changes.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.INGEST_PAT }}
-          AS_OF: ${{ steps.refresh.outputs.AS_OF }}
-        run: |
-          set -euo pipefail
-          pr=$(gh pr list --label auto-checkbook --state open --json number,headRefName \
-                 --jq ".[] | select(.headRefName | startswith(\"bot/checkbook-refresh-\")) | .number" \
-                 | head -1)
-          if [ -z "$pr" ]; then
-            echo "Could not find the auto-checkbook PR we just opened."
-            exit 1
-          fi
-
-          # The review TSV is in /tmp and can be ~hundreds of lines.
-          # Inline it directly if small; otherwise split into the
-          # MASKED section + a tail of KEPT. The privacy concern is
-          # mostly in the KEPT section.
+          # Build the audit-log comment. The TSV can run to a few
+          # hundred lines; wrap in <details> so it's collapsed by
+          # default but inspectable.
           tsv=/tmp/checkbook_redaction_review.tsv
           line_count=$(wc -l < "$tsv")
-
           {
             echo "## Redaction review (\`/tmp/checkbook_redaction_review.tsv\`)"
             echo ""
@@ -269,4 +255,9 @@ jobs:
             echo "</details>"
           } > /tmp/review-comment.md
 
-          gh pr comment "$pr" --body-file /tmp/review-comment.md
+          # Post the audit-log comment BEFORE enabling auto-merge so
+          # we're guaranteed to win the race against the PR going
+          # MERGED. gh pr comment accepts a PR URL just like a number.
+          gh pr comment "$pr_url" --body-file /tmp/review-comment.md
+
+          gh pr merge "$pr_url" --auto --squash --delete-branch
