@@ -512,9 +512,25 @@
         <p class="who"><b>Who chose this:</b> Marblehead voters at past ballot elections, approving debt exclusions to fund specific capital projects outside Proposition 2&frac12;.</p>
         <div class="whenset"><span class="whentag">When set</span><span><b>Past ballot elections (2015&ndash;2025).</b> Once a debt exclusion passes, the bond term locks payments in for 10&ndash;30 years. FY26 is the year on the amortization schedule, not the year of the decision.</span></div>
 
-        <!-- PROJECT STATUS: derived from ledger activity per fund -->
+        <!-- PROJECT STATUS: rendered from ballot_projects[] in checkbook_view.json -->
+        <!-- Template used by checkbook-view.js to clone one card per project. -->
+        <template class="project-template">
+          <article class="project">
+            <div>
+              <h5 class="pname"></h5>
+              <p class="pmeta"></p>
+            </div>
+            <span class="pstatus"></span>
+            <p class="pnote"></p>
+            <p class="pwhen"></p>
+          </article>
+        </template>
         <div class="projects" aria-label="Project status (from ledger activity)">
           <h4 style="margin: 4px 0 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-subtle);">Project status, inferred from FY26 ledger activity</h4>
+          <!-- The .projects-list container is wiped and rebuilt from JSON.
+               The 5 hardcoded cards below are the fallback that displays
+               if checkbook_view.json is unavailable. -->
+          <div class="projects-list">
 
           <article class="project">
             <div>
@@ -566,6 +582,7 @@
             <p class="pwhen">Decision sealed 6/18/2019 cycle. MWRA loan repayment is via water rates rather than the property-tax levy, so this one shows up in the Ratepayer bucket on the bond-service side.</p>
           </article>
 
+          </div>
           <p style="margin: 8px 0 0; font-size: 11px; color: var(--text-subtle); line-height: 1.5;">
             Status labels are inferred from <b>last-payment-date freshness</b>, <b>vendor mix</b> (GC vs. engineering firm vs. punch-list), and <b>row count</b>. Original bond authorization amounts and project budgets are not in the ledger; cross-checking against <a href="/data/dor_debt_exclusion_all.csv"><abbr class="g" title="Department of Revenue">DOR</abbr> Prop 2&frac12; ballot history</a> and bond issuance docs would let us add &ldquo;X% of authorization spent&rdquo; on each project.
           </p>

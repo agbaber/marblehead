@@ -112,6 +112,120 @@
       + ' · ' + (days === 0 ? 'fresh today' : days + ' days old');
   }
 
+  // --- Status chip label per inferred project status ----------------------
+  var STATUS_LABEL = {
+    'active':      'Active',
+    'wrapping':    'Wrapping',
+    'engineering': 'Engineering phase',
+    'closing':     'Closing out',
+    'unknown':     'Status unknown',
+  };
+
+  function renderBallotProjects(view) {
+    var list = document.querySelector('.projects-list');
+    var tmpl = document.querySelector('.project-template');
+    if (!list || !tmpl || !view.ballot_projects) return;
+    list.innerHTML = '';  // wipe hardcoded fallback
+    view.ballot_projects.forEach(function (p) {
+      var node = tmpl.content.cloneNode(true);
+      var pname = node.querySelector('.pname');
+      var pmeta = node.querySelector('.pmeta');
+      var pstatus = node.querySelector('.pstatus');
+      var pnote = node.querySelector('.pnote');
+      var pwhen = node.querySelector('.pwhen');
+
+      pname.textContent = p.display || p.fund_id;
+
+      // Ballot link + purpose
+      var ballotLink = document.createElement('a');
+      ballotLink.href = 'https://dls-gw.dor.state.ma.us/reports/rdpage.aspx?rdreport=votes.prop2_5.debtexclusionvotes';
+      ballotLink.textContent = 'Ballot ' + (p.ballot_date ? p.ballot_date.replace(/^(\d+)-(\d+)-(\d+)$/, '$2/$3/$1') : '') + ' passed';
+      pmeta.innerHTML = '';
+      pmeta.appendChild(ballotLink);
+      if (p.purpose) {
+        pmeta.appendChild(document.createTextNode(' · ' + p.purpose));
+      }
+
+      // Status chip
+      pstatus.className = 'pstatus ' + p.status;
+      var statusText = STATUS_LABEL[p.status] || p.status;
+      if (p.days_since_last_paid !== null && p.days_since_last_paid !== undefined) {
+        statusText += ' · last paid ' + fmtDaysAgo(p.days_since_last_paid);
+      }
+      pstatus.textContent = statusText;
+
+      // Note: FY26 spend + payment count + top vendors + first/last dates
+      var noteParts = [];
+      noteParts.push('FY26 spend: <span class="v">' + fmtUsd(p.amount) + '</span>');
+      noteParts.push(' across <b>' + fmtInt(p.row_count) + ' payments</b>');
+      if (p.top_vendors && p.top_vendors.length) {
+        var topVendor = p.top_vendors[0];
+        var topShare = Math.round(topVendor.share * 100);
+        if (p.top_vendors.length === 1 || topShare >= 90) {
+          noteParts.push(', <b>' + topShare + '% to ' + topVendor.name + '</b>');
+        } else {
+          var lead = p.top_vendors.slice(0, 4).map(function (v) {
+            return v.name + ' (' + fmtUsd(v.amount) + ')';
+          }).join(', ');
+          noteParts.push(' to multiple vendors: ' + lead + '.');
+        }
+      }
+      if (p.first_paid && p.last_paid) {
+        noteParts.push(' First FY26 payment ' + fmtDate(p.first_paid) + '; most recent ' + fmtDate(p.last_paid) + '.');
+      }
+      pnote.innerHTML = noteParts.join('');
+
+      // When-set context line
+      pwhen.textContent = p.context || '';
+      if (!p.context) pwhen.style.display = 'none';
+
+      list.appendChild(node);
+    });
+  }
+
+  function renderWhatMoved(view) {
+    var section = document.querySelector('#what-moved');
+    if (!section) return;
+    if (!view.what_moved) {
+      // No prior snapshot available — hide the section rather than show
+      // stale hardcoded numbers that pretend to be live
+      section.style.display = 'none';
+      return;
+    }
+    var w = view.what_moved;
+    var lede = section.querySelector('p');
+    var ul = section.querySelector('ul');
+    var srcLine = section.querySelector('p .src');
+
+    // Heading
+    var h3 = section.querySelector('h3');
+    if (h3) {
+      h3.textContent = 'What moved since the last snapshot ('
+        + fmtDate(w.prior_snapshot_date) + ' → ' + fmtDate(w.current_snapshot_date) + ')';
+    }
+    if (lede) {
+      var lineHtml =
+        '<b>' + fmtUsd(w.new_amount) + '</b> in new payments across <b>'
+        + fmtInt(w.new_rows) + '</b> new ledger rows. <b>'
+        + fmtInt(w.edited_or_removed_rows) + '</b> prior rows were edited or reversed (normal end-of-month reconciliation). The motion concentrated in fewer than 10 vendors.';
+      // Preserve a sources line if present
+      lede.innerHTML = lineHtml +
+        '<span class="src" style="display: block; margin-top: 6px;">Sources: ' +
+        '<a href="/data/checkbook_view.json">current view JSON</a> derived from the latest checkbook CSV snapshot.</span>';
+    }
+    if (ul) {
+      ul.innerHTML = '';
+      w.top_movers.slice(0, 8).forEach(function (m) {
+        var li = document.createElement('li');
+        li.innerHTML =
+          '<span><span class="name">' + m.vendor + '</span>'
+          + '<span class="src">' + fmtInt(m.rows) + ' new ' + (m.rows === 1 ? 'row' : 'rows') + '</span></span>'
+          + '<span class="v">+' + fmtUsd(m.delta) + '</span>';
+        ul.appendChild(li);
+      });
+    }
+  }
+
   function init() {
     fetch('/data/checkbook_view.json', { cache: 'no-store' })
       .then(function (r) {
@@ -124,6 +238,8 @@
         });
         setSegmentFlex(view);
         refreshFreshness(view);
+        renderBallotProjects(view);
+        renderWhatMoved(view);
         document.documentElement.setAttribute('data-view-loaded', 'true');
       })
       .catch(function (err) {
