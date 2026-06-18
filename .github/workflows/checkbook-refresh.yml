@@ -104,10 +104,13 @@ jobs:
           html_path = Path('checkbook.html')
           html = html_path.read_text()
 
-          # Three programmatic spots. og_description carries the
-          # human-language total + as-of date, the other two carry the
-          # CSV filename. Each is matched by a tight regex so we never
-          # over-rewrite.
+          # Six programmatic spots. The page-header hero block exposes
+          # the same three numbers a second time in a different shape
+          # (totals at the top of the page vs. og_description and
+          # source-files at the bottom). Each pattern is tight enough
+          # that we never over-rewrite, but the head-vs-body redundancy
+          # means every refresh edits both ends of the file.
+          row_count = f"{len(rows):,}"
           replacements = [
               # Source files <a href="..."> link
               (
@@ -123,6 +126,25 @@ jobs:
               (
                   r'\$\d+(?:\.\d+)?M in vendor checks through [A-Z][a-z]+ \d+',
                   f'{total_M} in vendor checks through {human_date}',
+              ),
+              # Hero block: "Vendor payments" value ($X.XM). Anchored on
+              # the preceding hero-label so we don't collide with other
+              # M-suffix dollar values elsewhere on the page.
+              (
+                  r'(<div class="hero-label">Vendor payments</div>\s*<div class="hero-value">)\$\d+(?:\.\d+)?M(</div>)',
+                  rf'\g<1>{total_M}\g<2>',
+              ),
+              # Hero block: "X,XXX checks, payroll excluded" sub.
+              (
+                  r'<div class="hero-sub">\d{1,3}(?:,\d{3})* checks, payroll excluded</div>',
+                  f'<div class="hero-sub">{row_count} checks, payroll excluded</div>',
+              ),
+              # Hero block: "Through" value (Mon D). Anchored on the
+              # preceding "Through" label so we don't catch the
+              # "11 of 12 months" sub or any other Mon D string.
+              (
+                  r'(<div class="hero-label">Through</div>\s*<div class="hero-value">)[A-Z][a-z]+ \d+(</div>)',
+                  rf'\g<1>{human_date}\g<2>',
               ),
           ]
 
