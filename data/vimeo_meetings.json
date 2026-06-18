@@ -1,8 +1,16 @@
 {
-  "last_updated": "2026-06-11T20:53:04.614Z",
+  "last_updated": "2026-06-18T12:12:16.806Z",
   "channel_url": "https://vimeo.com/marbleheadtv",
-  "total_videos": 2790,
+  "total_videos": 2804,
   "meetings": [
+    {
+      "vimeo_id": "1202245419",
+      "title": "Marblehead Board of Health Meeting: 6-16-26",
+      "board_slug": "board-of-health",
+      "board_display": "Board of Health",
+      "date": "2026-06-16",
+      "raw_title": "Marblehead Board of Health Meeting: 6-16-26"
+    },
     {
       "vimeo_id": "1200515418",
       "title": "Marblehead Select Board Meeting: 6-10-26",
