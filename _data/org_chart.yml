@@ -48,12 +48,7 @@ town:
     fte: 1
     source_url: "https://marbleheadma.gov/town-administrator/"
     source_label: "Town of Marblehead, Town Administrator page (accessed June 2026)"
-    note: >-
-      Chief Administrative Officer; appointed by the Select Board. Oversees
-      daily operations of building inspections, community development &
-      planning, council on aging, finance, fire, harbormaster, human
-      resources, police, public works, public buildings, and veterans
-      services.
+    note: "Hired by the Select Board. Runs the day-to-day operations of every town function below."
   departments:
     - name: "Finance"
       cluster: "Administration & Finance"
@@ -1339,10 +1334,8 @@ schools:
     title: "Superintendent of Schools"
     fte: 1
     source_url: "https://www.marbleheadschools.org/administration"
-    source_label: "Marblehead Public Schools, Administration page (accessed June 2026)"
-    note: >-
-      District total FTE (all roles, all buildings): 430.2 in SY2026 per
-      DESE EPIMS (data/dese_total_educator_fte.csv).
+    source_label: "Marblehead Public Schools, Administration page (accessed June 2026); district total 430 FTE from data/dese_total_educator_fte.csv (DESE EPIMS, SY2026)"
+    note: "Oversees ~430 staff across the five buildings."
   district_only_fte: 32.5
   district_only_basis: >-
     DESE EPIMS roles not assigned to a specific building (Superintendent,
