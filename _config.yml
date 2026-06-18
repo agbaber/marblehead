@@ -68,6 +68,7 @@ exclude:
   - community-pulse/
   - node_modules/
   - vendor/
+  - og-cards/
   - Gemfile
   - Gemfile.lock
   - proof/

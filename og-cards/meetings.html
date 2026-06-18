@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="_shared.css">
+  <style>
+    .stack {
+      position: relative;
+      width: 100%;
+      max-width: 920px;
+      height: 260px;
+    }
+    .meeting {
+      position: absolute;
+      width: 700px;
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: 14px;
+      padding: 22px 26px;
+      box-shadow: 0 6px 22px rgba(15,42,61,.10);
+    }
+    .meeting.back  { top: 0;   left: 120px; opacity: 0.4; }
+    .meeting.mid   { top: 28px; left: 76px; opacity: 0.65; }
+    .meeting.front { top: 60px; left: 30px; }
+    .title { font-size: 22px; font-weight: 700; color: var(--c-text); margin-bottom: 8px; }
+    .meta  { font-size: 15px; color: var(--c-sub); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 10px; }
+    .snip  { font-size: 17px; color: var(--c-mid); line-height: 1.35; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header class="card-mark">marbleheaddata.org</header>
+    <h1 class="card-headline">Every public meeting, transcribed.</h1>
+    <div class="card-visual">
+      <div class="stack">
+        <div class="meeting back"><div class="title">Finance Committee</div></div>
+        <div class="meeting mid"><div class="title">School Committee</div></div>
+        <div class="meeting front">
+          <div class="meta">Select Board &middot; Jun 4, 2026</div>
+          <div class="title">Override implementation, FY27 hiring plan, dock revenue</div>
+          <div class="snip">AI summary above; full transcript with timestamps below. Search across every meeting on the site.</div>
+        </div>
+      </div>
+    </div>
+    <footer class="card-foot">/meetings &middot; sourced from MHTV video</footer>
+  </main>
+</body>
+</html>

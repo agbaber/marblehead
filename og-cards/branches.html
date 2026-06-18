@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="_shared.css">
+  <style>
+    svg { width: 100%; max-width: 1060px; height: 340px; }
+    .edge { stroke: var(--c-border); stroke-width: 2.5; }
+    .node circle { fill: var(--c-teal); stroke: var(--c-navy); stroke-width: 2.5; }
+    .node rect { fill: var(--c-surface); stroke: var(--c-border); stroke-width: 1.5; rx: 8; }
+    .node text { fill: var(--c-text); font-weight: 700; font-size: 17px; text-anchor: middle; dominant-baseline: middle; }
+    .node .dot { fill: var(--c-teal); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header class="card-mark">marbleheaddata.org</header>
+    <h1 class="card-headline">How Marblehead residents verify each other.</h1>
+    <div class="card-visual">
+      <svg viewBox="0 0 1060 340">
+        <!-- edges -->
+        <line class="edge" x1="200" y1="100" x2="420" y2="60"/>
+        <line class="edge" x1="200" y1="100" x2="390" y2="220"/>
+        <line class="edge" x1="420" y1="60"  x2="620" y2="130"/>
+        <line class="edge" x1="390" y1="220" x2="620" y2="130"/>
+        <line class="edge" x1="620" y1="130" x2="840" y2="70"/>
+        <line class="edge" x1="620" y1="130" x2="820" y2="250"/>
+        <line class="edge" x1="200" y1="100" x2="390" y2="220"/>
+        <line class="edge" x1="840" y1="70"  x2="820" y2="250"/>
+
+        <!-- nodes with pill labels -->
+        <g class="node">
+          <circle cx="200" cy="100" r="10"/>
+          <rect x="80" y="70" width="240" height="38" rx="8" ry="8"/>
+          <text x="200" y="89">Glover's Regiment</text>
+        </g>
+        <g class="node">
+          <circle cx="420" cy="60" r="10"/>
+          <rect x="310" y="30" width="220" height="38" rx="8" ry="8"/>
+          <text x="420" y="49">Mugford's Prize</text>
+        </g>
+        <g class="node">
+          <circle cx="390" cy="220" r="10"/>
+          <rect x="280" y="190" width="220" height="38" rx="8" ry="8"/>
+          <text x="390" y="209">Devereux Runners</text>
+        </g>
+        <g class="node">
+          <circle cx="620" cy="130" r="10"/>
+          <rect x="510" y="100" width="220" height="38" rx="8" ry="8"/>
+          <text x="620" y="119">Gerry's Signers</text>
+        </g>
+        <g class="node">
+          <circle cx="840" cy="70" r="10"/>
+          <rect x="720" y="40" width="240" height="38" rx="8" ry="8"/>
+          <text x="840" y="59">Goodwin's Head Post</text>
+        </g>
+        <g class="node">
+          <circle cx="820" cy="250" r="10"/>
+          <rect x="700" y="220" width="240" height="38" rx="8" ry="8"/>
+          <text x="820" y="239">Lee Mansion Circle</text>
+        </g>
+      </svg>
+    </div>
+    <footer class="card-foot">/branches &middot; named for Marblehead Revolutionary War figures</footer>
+  </main>
+</body>
+</html>
