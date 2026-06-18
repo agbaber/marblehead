@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="_shared.css">
+  <style>
+    .schools {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      width: 100%;
+      max-width: 1060px;
+    }
+    .sch {
+      border: 1px solid var(--c-border);
+      border-radius: 12px;
+      padding: 18px 16px;
+      background: var(--c-surface);
+      text-align: center;
+    }
+    .sch .name { font-weight: 700; font-size: 21px; color: var(--c-text); }
+    .sch .yr   { margin-top: 8px; font-size: 17px; color: var(--c-sub); line-height: 1.35; }
+    .sch.active { border-color: var(--c-buoy); border-width: 2px; }
+    .sch.active .name { color: var(--c-buoy); }
+    .sch.active .yr   { color: var(--c-buoy); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header class="card-mark">marbleheaddata.org</header>
+    <h1 class="card-headline">5 schools, by condition.</h1>
+    <div class="card-visual">
+      <div class="schools">
+        <div class="sch active"><div class="name">High School</div><div class="yr">Built 2002. $8.97M roof &amp; HVAC underway.</div></div>
+        <div class="sch"><div class="name">Veterans Middle</div><div class="yr">Built 2004</div></div>
+        <div class="sch"><div class="name">Village</div><div class="yr">Built 2010</div></div>
+        <div class="sch"><div class="name">Glover</div><div class="yr">Built 2014. HVAC covers ~20% of building.</div></div>
+        <div class="sch"><div class="name">Brown</div><div class="yr">Built 2021</div></div>
+      </div>
+    </div>
+    <footer class="card-foot">/school-building-maintenance</footer>
+  </main>
+</body>
+</html>
