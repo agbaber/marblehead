@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-06-11",
+    "date": "2026-06-17",
     "fiscal_year": "FY26",
-    "row_count": 15729,
-    "total_paid": 101087908.87,
+    "row_count": 15732,
+    "total_paid": 101203657.29,
     "first_payment": "2025-07-01",
-    "last_payment": "2026-06-11",
-    "source_file": "checkbook_FY26_2026-06-11.csv"
+    "last_payment": "2026-06-17",
+    "source_file": "checkbook_FY26_2026-06-17.csv"
   },
   "buckets": [
     {
@@ -42,14 +42,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 54482708.59,
+      "amount": 54548699.88,
       "share": 0.539,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 44025242.84,
-          "row_count": 5991
+          "amount": 44091772.64,
+          "row_count": 5992
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -58,8 +58,8 @@
         },
         {
           "name": "GENERAL FUND - TAX ARTICLES",
-          "amount": 2313042.04,
-          "row_count": 85
+          "amount": 2312503.53,
+          "row_count": 86
         }
       ]
     },
@@ -67,7 +67,7 @@
       "key": "ratepayer",
       "label": "Paid by ratepayers, not your tax bill",
       "amount": 31968869.38,
-      "share": 0.3162,
+      "share": 0.3159,
       "fund_count": 9,
       "top_funds": [
         {
@@ -116,7 +116,7 @@
       "key": "state_fed",
       "label": "State & federal restricted grants",
       "amount": 5306732.54,
-      "share": 0.0525,
+      "share": 0.0524,
       "fund_count": 26,
       "top_funds": [
         {
@@ -208,9 +208,9 @@
     {
       "key": "other",
       "label": "Trusts, donations, and small fundraising funds",
-      "amount": 1269027.64,
-      "share": 0.0126,
-      "fund_count": 71,
+      "amount": 1318784.77,
+      "share": 0.013,
+      "fund_count": 72,
       "top_funds": [
         {
           "name": "HIGH SCHOOL STUDENT ACTIVITY",
@@ -256,19 +256,19 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 44025242.84,
+    "total": 44091772.64,
     "fixed_total": 37637937.65,
-    "fixed_share": 0.8549,
+    "fixed_share": 0.8536,
     "admin_contracts_total": 2760923.9,
-    "admin_contracts_share": 0.0627,
-    "other_recurring_total": 3626381.29,
-    "other_recurring_share": 0.0824,
+    "admin_contracts_share": 0.0626,
+    "other_recurring_total": 3692911.09,
+    "other_recurring_share": 0.0838,
     "segments": [
       {
         "key": "gic_insurance",
         "label": "GIC + insurance",
         "amount": 14670476.27,
-        "share": 0.3332,
+        "share": 0.3327,
         "row_count": 676,
         "top_vendors": [
           {
@@ -309,7 +309,7 @@
         "key": "debt_us_bank",
         "label": "Bond debt service (U.S. Bank)",
         "amount": 14236642.58,
-        "share": 0.3234,
+        "share": 0.3229,
         "row_count": 32,
         "top_vendors": [
           {
@@ -322,7 +322,7 @@
         "key": "pension",
         "label": "Pension assessment (PERAC)",
         "amount": 5380625.0,
-        "share": 0.1222,
+        "share": 0.122,
         "row_count": 1,
         "top_vendors": [
           {
@@ -335,7 +335,7 @@
         "key": "cherry_sheet",
         "label": "State assessments (Cherry Sheet)",
         "amount": 3350193.8,
-        "share": 0.0761,
+        "share": 0.076,
         "row_count": 123,
         "top_vendors": [
           {
@@ -348,7 +348,7 @@
         "key": "admin_contracts",
         "label": "Town Administrator multi-year contracts",
         "amount": 2760923.9,
-        "share": 0.0627,
+        "share": 0.0626,
         "row_count": 242,
         "top_vendors": [
           {
@@ -388,9 +388,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 3626381.29,
-        "share": 0.0824,
-        "row_count": 4917,
+        "amount": 3692911.09,
+        "share": 0.0838,
+        "row_count": 4918,
         "top_vendors": [
           {
             "name": "ONE TIME PAY",
@@ -439,7 +439,7 @@
       "row_count": 86,
       "first_paid": "2025-08-12",
       "last_paid": "2026-06-02",
-      "days_since_last_paid": 9,
+      "days_since_last_paid": 15,
       "status": "active",
       "top_vendors": [
         {
@@ -479,7 +479,7 @@
       "row_count": 42,
       "first_paid": "2025-11-05",
       "last_paid": "2026-05-19",
-      "days_since_last_paid": 23,
+      "days_since_last_paid": 29,
       "status": "active",
       "top_vendors": [
         {
@@ -519,7 +519,7 @@
       "row_count": 10,
       "first_paid": "2025-09-29",
       "last_paid": "2026-06-02",
-      "days_since_last_paid": 9,
+      "days_since_last_paid": 15,
       "status": "engineering",
       "top_vendors": [
         {
@@ -544,7 +544,7 @@
       "row_count": 5,
       "first_paid": "2025-08-27",
       "last_paid": "2026-01-28",
-      "days_since_last_paid": 134,
+      "days_since_last_paid": 140,
       "status": "closing",
       "top_vendors": [
         {
