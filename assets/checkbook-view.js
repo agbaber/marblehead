@@ -109,7 +109,7 @@
     today.setHours(0, 0, 0, 0);
     var days = Math.round((today - snap) / 86400000);
     chip.textContent = 'Snapshot: ' + fmtDate(view.snapshot.date)
-      + ' · ' + (days === 0 ? 'fresh today' : days + ' days old');
+      + ' · ' + (days === 0 ? 'fresh today' : days === 1 ? '1 day old' : days + ' days old');
   }
 
   // --- Status chip label per inferred project status ----------------------
