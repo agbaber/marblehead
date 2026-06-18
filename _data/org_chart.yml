@@ -93,17 +93,8 @@ town:
           pool_count: 2
           note: "FY26 roster: 2 Senior Clerks. Override Presentation narrates a Senior Clerk cut here; the MUNIS dollar figure went up. Likely affects a Treasurer/Collector sub-pool that stays funded as a line."
       source_url: "https://marbleheadma.gov/finance-department/"
-      source_label: "Town of Marblehead, Finance Department page; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, FINANCE cost center)"
-      note: >-
-        Finance Director also serves as Chief Financial Officer; the town
-        has no dedicated IT department, so IT effectively reports through
-        Finance. The FY27 budget consolidates the Assistant Department
-        Head line into a Division Head / Assistant Division Head split;
-        not a layoff per se. Note: the Override Presentation narrates a
-        Senior Clerk cut in Finance, but the MUNIS Senior Clerk dollar
-        figure went UP year-over-year. The cut likely affects a
-        multi-clerk Treasurer/Collector sub-pool that stays funded as a
-        line; worth verifying with HR.
+      source_label: "Town of Marblehead, Finance Department page; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, FINANCE cost center)"
+      note: "Finance Director also serves as CFO. Town has no separate IT department, so IT reports through Finance."
     - name: "Assessors' Office"
       cluster: "Administration & Finance"
       head_title: "Chief Assessor"
@@ -135,11 +126,8 @@ town:
           pool_count: null
           note: null
       source_url: "https://marbleheadma.gov/assessors-office/"
-      source_label: "Town of Marblehead, Assessor's Office page; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, ASSESSOR cost center)"
-      note: >-
-        Assessing operations roll up under the Finance Director / CFO in
-        the Financial Services Department. The elected three-member Board
-        of Assessors sets policy; see Boards section.
+      source_label: "Town of Marblehead, Assessor's Office page; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, ASSESSOR cost center)"
+      note: "Reports up through the Finance Director / CFO. The elected Board of Assessors (3 members) sets policy."
     - name: "Town Clerk + Elections"
       cluster: "Administration & Finance"
       head_title: "Town Clerk"
@@ -201,14 +189,8 @@ town:
           pool_count: null
           note: "Pool line (Elections cost center); presidential cycle."
       source_url: "https://marbleheadma.gov/town-clerk/"
-      source_label: "Town of Marblehead, Town Clerk + Elections pages; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, TOWN CLERK + ELECTIONS cost centers)"
-      note: >-
-        Town Clerk is an elected position (3-year term); Article 18 of
-        the 2026 ATM warrant sets FY27 compensation at $97,460. Per the
-        FY27 Override Presentation, the office goes from 3 employees to
-        2 ("Cut 1 special clerk"). Election poll workers are paid only
-        during election cycles. The new State Primary and November
-        Election lines reflect the presidential cycle.
+      source_label: "Town of Marblehead, Town Clerk + Elections pages; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, TOWN CLERK + ELECTIONS cost centers); Town Clerk compensation set by Article 18 of the 2026 Town Meeting warrant"
+      note: "Town Clerk is elected (3-year term). FY27 no-override budget drops the office from 3 employees to 2."
     - name: "Human Resources"
       cluster: "Administration & Finance"
       head_title: "Director of Human Resources"
@@ -246,13 +228,8 @@ town:
           pool_count: null
           note: null
       source_url: "https://marbleheadma.gov/hr/"
-      source_label: "Town of Marblehead, Human Resources Department; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, HUMAN RESOURCES cost center)"
-      note: >-
-        Department created January 2024 (first HR director in town history;
-        previously HR was handled informally out of the Select Board
-        office). The Benefits Coordinator appears as a new FY27 budget
-        line (position existed in FY26 under a different object code per
-        Article 20 of the 2026 ATM warrant).
+      source_label: "Town of Marblehead, Human Resources Department; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, HUMAN RESOURCES cost center)"
+      note: "Created January 2024. Marblehead's first dedicated HR department — previously handled informally out of the Select Board office."
     - name: "Community Development and Planning"
       cluster: "Land Use & Health"
       head_title: "Director of Community Development & Planning"
@@ -296,14 +273,8 @@ town:
           pool_count: null
           note: null
       source_url: "https://marbleheadma.gov/development-planning/"
-      source_label: "Town of Marblehead, Community Development & Planning; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, COMMUNITY DEVELOPMENT cost center)"
-      note: >-
-        Department created at May 2024 Town Meeting. The FY27 balanced
-        (no-override) budget cuts the salary appropriation ~61% and
-        eliminates three of the five professional roles (Director,
-        Sustainability Coordinator, Grant Coordinator). Tier 1 of the
-        override restores Director only; Tier 2 adds Assistant Planner
-        and Conservation Agent; Tier 3 adds Grant Writer.
+      source_label: "Town of Marblehead, Community Development & Planning; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, COMMUNITY DEVELOPMENT cost center)"
+      note: "Created at the May 2024 Town Meeting. FY27 no-override budget eliminates the Director, Sustainability Coordinator, and Grant Coordinator (~61% cut)."
     - name: "Public Buildings"
       cluster: "Public Works"
       head_title: "Superintendent of Public Buildings"
@@ -329,15 +300,8 @@ town:
           pool_count: 3
           note: "FY26 filled count: 1 year-round, 2 seasonal."
       source_url: "https://marbleheadma.gov/town-administrator/"
-      source_label: "Town Administrator page lists Superintendent of Public Buildings among reporting positions; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, PUBLIC BUILDINGS cost center)"
-      note: >-
-        Building Commissioner doubles as Superintendent of Public
-        Buildings (per Annual Report 2025 appointed officials); that
-        salary sits in the Building Inspection cost center, not here.
-        FY27 cuts both Special Labor Custodians that serviced Mary Alley
-        and Abbot Hall, an ~86% drop in this cost center's salary line.
-        Function continues through the Building Commissioner's office and
-        seasonal docents.
+      source_label: "Town Administrator page lists Superintendent of Public Buildings among reporting positions; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, PUBLIC BUILDINGS cost center); Building Commissioner / Superintendent dual role per Annual Report 2025"
+      note: "Building Commissioner doubles as Superintendent (salary sits in Building Inspection). FY27 no-override budget cuts both custodians for Mary Alley and Abbot Hall."
     - name: "Police Department"
       cluster: "Public Safety"
       head_title: "Chief of Police"
@@ -435,19 +399,8 @@ town:
           pool_count: 1
           note: "Stipend-only line (separate MUNIS cost center); PT appointment under Police."
       source_url: "https://marbleheadma.gov/police/"
-      source_label: "Town of Marblehead, Police Department page; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, POLICE + ANIMAL INSPECTOR cost centers)"
-      note: >-
-        Per the FY27 Override Presentation, the School Resource Officer
-        is eliminated under the no-override budget; the cut shows up as
-        reduced Patrolman headcount rather than a separate MUNIS line.
-        Override Tier 1 restores SRO; Tier 2 adds +1 officer (to 30 total);
-        Tier 3 adds +1 more plus restores SRO (to 32-33). MUNIS dollar
-        figures are not a clean headcount indicator because OT and
-        incentive lines absorb some slack. FY26 roster headcount of 68
-        also includes 3 dog officers (Dog Officer + 2 Asst Dog Officer),
-        a Perm Intern, a Special Labor I, and a Monitor whose hours
-        roll into other MUNIS pool lines; positions listed here sum to
-        62.
+      source_label: "Town of Marblehead, Police Department page; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, POLICE + ANIMAL INSPECTOR cost centers)"
+      note: "FY27 no-override budget eliminates the School Resource Officer; staffing falls to ~29 officers (vs ~33 historical)."
     - name: "Fire Department"
       cluster: "Public Safety"
       head_title: "Fire Chief"
@@ -491,15 +444,8 @@ town:
           pool_count: 30
           note: "FY26 filled count combines Fire Fighter and Firefighter titles. 'Down 1 full shift' in the Override Presentation refers to staffing per shift, not a single position."
       source_url: "https://marbleheadma.gov/fire/"
-      source_label: "Town of Marblehead, Fire Department page; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, FIRE cost center)"
-      note: >-
-        Salary appropriation up ~8% in FY27 reflecting the IAFF Local 2043
-        collective bargaining agreement; Article 19 of the 2026 ATM
-        warrant requests an additional $143,238 from free cash to fully
-        fund the post-balanced-budget contract. Per the Override
-        Presentation, no staff cuts (down 1 full shift; OT-containment
-        strategy). Tier 1 adds 0; Tier 2 +2 firefighters; Tier 3 +4
-        firefighters.
+      source_label: "Town of Marblehead, Fire Department page; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, FIRE cost center); IAFF Local 2043 contract funded via Article 19 of the 2026 Town Meeting warrant"
+      note: "FY27 no-override budget keeps headcount flat but cuts one full shift, relying on overtime containment. Salary line up ~8% to fund the firefighter union contract."
     - name: "Building Inspection"
       cluster: "Land Use & Health"
       head_title: "Building Commissioner"
@@ -555,14 +501,8 @@ town:
           pool_count: null
           note: null
       source_url: "https://marbleheadma.gov/building-inspection/"
-      source_label: "Town of Marblehead, Building Inspection Department; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, BUILDING INSPECTIONS cost center)"
-      note: >-
-        FY27 MUNIS reorg of this department: the two Assistant Department
-        Head lines are eliminated and three new object codes for inspector
-        specialties (Local, Electrical, Plumbing) are created. Net
-        inspector count and net dollars roughly preserved despite the
-        restructure (~2% salary reduction). Building Commissioner also
-        serves as Superintendent of Public Buildings.
+      source_label: "Town of Marblehead, Building Inspection Department; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, BUILDING INSPECTIONS cost center)"
+      note: "FY27 budget reorganizes inspector lines (Local, Electrical, Plumbing); net count and dollars roughly preserved. Building Commissioner also serves as Superintendent of Public Buildings."
     - name: "Department of Public Works"
       cluster: "Public Works"
       head_title: "Director of Public Works"
@@ -677,17 +617,8 @@ town:
           pool_count: null
           note: null
       source_url: "https://marbleheadma.gov/dpw/"
-      source_label: "Town of Marblehead, Department of Public Works; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, PUBLIC WORKS cost center)"
-      note: >-
-        Major MUNIS reorg of DPW in FY27. Per the Override Presentation:
-        the Director is reduced to part-time, with 2.5 positions cut
-        (Laborer, Heavy Equipment Operator, PT Clerk) plus the asphalt
-        program. Tier 1 restores 1 PT General Clerk, 1 HEO, 1 Laborer,
-        and asphalt; Tier 2 adds 1 GIS position; Tier 3 adds 1 Foreman
-        and 1 Specialized HEO. Net dollars roughly flat because the
-        existing positions are replaced by new specialty lines (Town
-        Engineer, Assistant Engineer, Specialized HEO, Working Foreman
-        Construction, Working Foreman Maintenance).
+      source_label: "Town of Marblehead, Department of Public Works; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, PUBLIC WORKS cost center)"
+      note: "FY27 no-override budget: Director cut to part-time, 2.5 operating positions cut, asphalt program eliminated. New engineering and foreman lines replace the eliminated ones; net dollars roughly flat."
     - name: "Highway Department"
       cluster: "Public Works"
       head_title: "Assistant Director (Highway, Tree, Snow Operations)"
@@ -725,11 +656,7 @@ town:
         - "Part-Time General Clerk (×3, shared with Sewer)"
       source_url: "https://marbleheadma.gov/water/"
       source_label: "Town of Marblehead, Water Department; staff roster from Annual Report 2025 (Water Department Employees + Water & Sewer Commission Administration office staff)"
-      note: >-
-        Water and Sewer share the same elected commission (Board of Water &
-        Sewer Commissioners, 5 members, 3-year staggered terms) and a
-        combined office and field-support staff under a single
-        administration line.
+      note: "Water and Sewer share an elected commission (5 members, 3-year staggered terms) and a combined office staff."
     - name: "Sewer Department"
       cluster: "Public Works"
       head_title: "Working Foreman, Sewer"
@@ -742,10 +669,7 @@ town:
         - "Heavy Equipment Operator"
       source_url: "https://marbleheadma.gov/sewer/"
       source_label: "Town of Marblehead, Sewer Department; staff roster from Annual Report 2025 (Sewer Department Employees list)"
-      note: >-
-        Office and administrative staff are shared with the Water
-        Department under the joint Water & Sewer Commission office; see
-        the Water Department entry for that shared list.
+      note: "Office and administrative staff are shared with the Water Department under the joint commission."
     - name: "Cemetery Department"
       cluster: "Public Works"
       head_title: "Cemetery Superintendent"
@@ -789,16 +713,8 @@ town:
           pool_count: 2
           note: "Pool line ~43% reduction is the 'Cut 1 laborer' narrative."
       source_url: "https://marbleheadma.gov/cemetery/"
-      source_label: "Town of Marblehead, Cemetery Department; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, CEMETERY cost center)"
-      note: >-
-        Superintendent is appointed by the elected Cemetery Commission
-        (3 members, 3-year staggered terms). Per the Override
-        Presentation, the FY27 balanced budget reduces the Superintendent
-        to part-time and cuts 1 laborer (~18% salary appropriation
-        reduction). Tier 1 restores 1 laborer. FY26 roster headcount of
-        9 includes 1 Lead HEO and 3 seasonal laborers funded under a
-        separate cemetery seasonal cost center not enumerated in the
-        FY27 personnel detail; positions listed here sum to 6.
+      source_label: "Town of Marblehead, Cemetery Department; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, CEMETERY cost center)"
+      note: "Superintendent is appointed by the elected Cemetery Commission. FY27 no-override budget reduces the Superintendent to part-time and cuts 1 laborer."
     - name: "Solid Waste"
       cluster: "Public Works"
       head_title: "Assistant Director of Waste"
@@ -854,16 +770,8 @@ town:
           pool_count: null
           note: "Curbside billing cost center; brand-new General Fund line in FY27 funded via the new annual fee (Article 23). Hauler contract and truck operators flow through Expense, not Salary."
       source_url: "https://marbleheadma.gov/dpw/"
-      source_label: "FY27 MUNIS budget detail (data/_enrichment/fy27_personnel.yml, WASTE COLLECTION + CURBSIDE COLLECTION cost centers); Article 20 of 2026 ATM warrant reclassifies the Assistant Director of Waste."
-      note: >-
-        Operates the town transfer station with 7 staff. Curbside pickup
-        is a contracted service (private hauler); only the billing/admin
-        clerk is a town employee. Historically nested under the Health
-        Department; broken out as its own cost center in MUNIS. The Board
-        of Health continues to provide policy oversight. Article 23 of
-        the 2026 ATM warrant moved curbside costs into the General Fund
-        with a corresponding annual fee; Question 2 of the June 9 2026
-        ballot approved the override carve-out.
+      source_label: "FY27 budget detail (data/_enrichment/fy27_personnel.yml, WASTE COLLECTION + CURBSIDE COLLECTION cost centers); Article 20 of 2026 Town Meeting warrant reclassifies the Assistant Director of Waste; Article 23 of 2026 Town Meeting moved curbside costs to the General Fund with a corresponding annual fee"
+      note: "Town runs the transfer station with 7 staff; curbside pickup is a contracted hauler. Question 2 on the June 9, 2026 ballot approved an override carve-out for trash costs."
     - name: "Health Department"
       cluster: "Land Use & Health"
       head_title: "Director of Public Health"
@@ -895,14 +803,8 @@ town:
           pool_count: null
           note: null
       source_url: "https://marbleheadma.gov/health/"
-      source_label: "Town of Marblehead, Health Department; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, HEALTH cost center)"
-      note: >-
-        The Director of Public Health line in MUNIS shows a stipend-sized
-        dollar amount ($42,604), suggesting a shared-position or stipend
-        arrangement; worth verifying with HR. The Board of Health also
-        provides policy oversight for Solid Waste (transfer station crew
-        + curbside billing), which is broken out as its own FY27 cost
-        center under the Public Works cluster.
+      source_label: "Town of Marblehead, Health Department; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, HEALTH cost center)"
+      note: "The Director of Public Health is paid a stipend, not a full salary — likely a shared position. The Board of Health also oversees Solid Waste."
     - name: "Council on Aging"
       cluster: "Community Services"
       head_title: "Council on Aging Director"
@@ -952,15 +854,8 @@ town:
           pool_count: null
           note: null
       source_url: "https://marbleheadma.gov/coa/"
-      source_label: "Town of Marblehead, Council on Aging; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, COUNCIL ON AGING cost center)"
-      note: >-
-        Per the FY27 Override Presentation: the no-override budget cuts
-        the Nutrition Coordinator/Labor and the Temporary Clerk. Override
-        Tier 1 restores both; Tier 2 adds 1 PT Social Worker. FY26 roster
-        headcount of 12 includes 3 chauffeurs, a temp chauffeur, a temp
-        laborer, and a volunteer coordinator funded through PT/expense
-        lines not enumerated in the FY27 personnel salary detail;
-        positions listed here sum to 6.
+      source_label: "Town of Marblehead, Council on Aging; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, COUNCIL ON AGING cost center)"
+      note: "FY27 no-override budget cuts the Nutrition Coordinator and Temporary Clerk."
     - name: "Veterans Services"
       cluster: "Community Services"
       head_title: "Veterans' Agent & Director of Veterans' Services"
@@ -980,11 +875,8 @@ town:
           pool_count: null
           note: "Single-position office. Also serves as Flag Officer and Veterans' Graves Officer per Annual Report 2025."
       source_url: "https://marbleheadma.gov/veterans-services/"
-      source_label: "Town of Marblehead, Veterans Services; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, VETERANS SERVICES cost center)"
-      note: >-
-        Single-position office. The Veterans' Agent also serves as the
-        town's Flag Officer and Veterans' Graves Officer per Annual
-        Report 2025 appointed officials.
+      source_label: "Town of Marblehead, Veterans Services; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, VETERANS SERVICES cost center); additional roles per Annual Report 2025 appointed officials"
+      note: "Single-position office. The Veterans' Agent also serves as Flag Officer and Veterans' Graves Officer."
     - name: "Abbot Public Library"
       cluster: "Community Services"
       head_title: "Library Director"
@@ -1106,17 +998,8 @@ town:
           pool_count: 4
           note: "Pool line ~81% reduction."
       source_url: "https://abbotlibrary.org/"
-      source_label: "Abbot Public Library; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, LIBRARY cost center)"
-      note: >-
-        Library is governed by an elected six-member Board of Trustees,
-        separate from the Select Board's appointed boards. Per the FY27
-        Override Presentation: the no-override budget cuts the salary
-        appropriation ~42%, opens the library only 3 days/week with no
-        evenings or weekends, cuts 8.5 positions, and loses MBLC
-        certification. Tier 1 restores 4 positions; Tier 3 fully restores
-        all 8.5 plus adds 1 PT Librarian. Several lines show 30-50%
-        dollar reductions, consistent with PT-hour cuts rather than
-        full eliminations.
+      source_label: "Abbot Public Library; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, LIBRARY cost center)"
+      note: "Governed by the elected Board of Trustees (6 members), separate from Select Board oversight. FY27 no-override budget cuts the library ~42%, opens it 3 days/week, and loses state certification."
     - name: "Recreation & Parks"
       cluster: "Community Services"
       head_title: "Superintendent of Parks"
@@ -1178,18 +1061,8 @@ town:
           pool_count: null
           note: null
       source_url: "https://marbleheadma.gov/recreation-parks/"
-      source_label: "Town of Marblehead, Recreation & Parks Department; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, RECREATION & PARKS cost center)"
-      note: >-
-        The Superintendent is appointed annually by the elected Recreation
-        & Parks Commission (5 members, 1-year terms). Per the FY27
-        Override Presentation: 1 Groundskeeper cut and no trash pickup
-        for 187 public trash barrels. Tier 1 restores 1 Groundskeeper.
-        MUNIS shows the Groundskeeper pool reduced ~17% rather than a
-        clean elimination, suggesting the cut is implemented via
-        partial-year or PT-hour reductions. FY26 roster headcount of 26
-        includes ~10 seasonal Parking Gate / Beach Attendant positions
-        funded through a separate cost center not enumerated here;
-        positions listed here sum to 18.
+      source_label: "Town of Marblehead, Recreation & Parks Department; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, RECREATION & PARKS cost center)"
+      note: "Superintendent is appointed annually by the elected Recreation & Parks Commission. FY27 no-override budget cuts 1 Groundskeeper and ends pickup for the town's 187 public trash barrels."
     - name: "Harbormaster"
       cluster: "Public Safety"
       head_title: "Harbormaster"
@@ -1204,9 +1077,7 @@ town:
         - "CVA Pump-out Crew (×2)"
       source_url: "https://marbleheadma.gov/harbormaster/"
       source_label: "Town of Marblehead, Harbormaster; staff roster from Annual Report 2025 (Harbormaster Personnel list + Seasonal Assistants list)"
-      note: >-
-        Reports jointly to the Town Administrator and the appointed Harbors
-        & Waters Board.
+      note: "Reports jointly to the Town Administrator and the appointed Harbors & Waters Board."
     - name: "Select Board Office"
       cluster: "Administration & Finance"
       head_title: "Town Administrator"
@@ -1256,14 +1127,8 @@ town:
           pool_count: null
           note: "Separate Town Counsel cost center; contracted role, not salaried. Bulk of cost flows through Expense ($276K FY27 vs $113K FY26)."
       source_url: "https://marbleheadma.gov/selectboard-office/"
-      source_label: "Town of Marblehead, Select Board Office; FY27 position lines from MUNIS budget detail (data/_enrichment/fy27_personnel.yml, SELECT BOARD + TOWN COUNSEL cost centers)"
-      note: >-
-        Administrative office that supports the five elected Select Board
-        members. The FY27 balanced budget eliminates one Assistant
-        Department Head line; the Chief Procurement Officer position
-        appears as a new FY27 budget line (reclassified per Article 20
-        of the 2026 Town Meeting warrant; the position existed in FY26
-        under a different cost center).
+      source_label: "Town of Marblehead, Select Board Office; FY27 position lines from FY27 budget detail (data/_enrichment/fy27_personnel.yml, SELECT BOARD + TOWN COUNSEL cost centers); Chief Procurement Officer reclassified per Article 20 of the 2026 Town Meeting warrant"
+      note: "Administrative office supporting the five elected Select Board members. FY27 no-override budget eliminates one Assistant Town Administrator line."
   independent_enterprises:
     - name: "Marblehead Municipal Light Department"
       head_title: "General Manager"
@@ -1322,12 +1187,7 @@ town:
         "Departed MMLD in 2025" = 19 employees, distributed across
         five functional divisions inferred from job titles since MMLD
         does not publish a formal organizational chart).
-      note: >-
-        A separate municipal enterprise governed by the elected
-        Marblehead Light Commission (5 members, 3-year terms). Funded
-        by electricity rates rather than property taxes. Not subject to
-        Select Board oversight or Town Meeting appropriation; the
-        Light Commission approves the MMLD operating budget directly.
+      note: "A separate municipal enterprise governed by the elected Light Commission (5 members, 3-year terms). Funded by electricity rates, not property taxes; budget set by the commission directly."
 
 schools:
   head:
@@ -1335,7 +1195,7 @@ schools:
     fte: 1
     source_url: "https://www.marbleheadschools.org/administration"
     source_label: "Marblehead Public Schools, Administration page (accessed June 2026); district total 430 FTE from data/dese_total_educator_fte.csv (DESE EPIMS, SY2026)"
-    note: "Oversees ~430 staff across the five buildings."
+    note: "Oversees about 430 staff across the five school buildings."
   district_only_fte: 32.5
   district_only_basis: >-
     DESE EPIMS roles not assigned to a specific building (Superintendent,
@@ -1422,9 +1282,7 @@ schools:
         - "Director of Food Services"
       source_url: "https://www.marbleheadschools.org/administration"
       source_label: "Marblehead Public Schools Administration page; FY27 budget packet personnel pages"
-      note: >-
-        Director of Facilities position was listed as TBD on the
-        Administration page as of June 2026.
+      note: "Director of Facilities was listed as TBD on the Administration page as of June 2026."
   buildings:
     - name: "Marblehead High School"
       abbreviation: "MHS"
@@ -1591,10 +1449,7 @@ schools:
         - "Special Education Team Chair"
       source_url: "https://brown.marbleheadschools.org"
       source_label: "Brown Elementary School site; FY26 headcount from data/town_employee_headcount_FY08-26.csv (BROWN SCHOOL line); DESE FTE from EPIMS profile, SY2025-26"
-      note: >-
-        Bell, Coffin, Eveleth, and Gerry are former elementary buildings,
-        no longer operating as schools. Marblehead currently operates
-        three elementary buildings: Brown, Glover, and Village.
+      note: "Marblehead operates three elementary buildings: Brown, Glover, and Village. Bell, Coffin, Eveleth, and Gerry are former elementaries no longer in use as schools."
     - name: "Glover Elementary School"
       abbreviation: "Glover"
       head_title: "Principal"
@@ -1757,11 +1612,7 @@ boards:
         verified by recent Select Board minutes
         (data/minutes/select_board/2026-01-14.cleaned.txt and others
         confirm Select Board appointments)
-      note: >-
-        In many Massachusetts towns the Finance Committee is appointed by
-        the Town Moderator. In Marblehead it is appointed by the Select
-        Board, per the Finance Committee's official page and consistent
-        with recent Select Board minutes that record FinCom appointments.
+      note: "In most Massachusetts towns the Finance Committee is appointed by the Town Moderator. In Marblehead it is appointed by the Select Board."
   other:
     - name: "Town Moderator"
       kind: "elected"
