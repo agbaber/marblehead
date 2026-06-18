@@ -8,6 +8,11 @@
     <a class="nav-link" href="{{ '/' | relative_url }}meetings/"{% if page.url contains '/meetings/' %} aria-current="page"{% endif %}>Meetings</a>
     <a class="nav-link" href="{{ '/' | relative_url }}what-can-we-do.html"{% if page.url == '/what-can-we-do.html' %} aria-current="page"{% endif %}>Act</a>
     <a class="nav-link" href="{{ '/' | relative_url }}subscribe/"{% if page.url == '/subscribe/' %} aria-current="page"{% endif %}>Subscribe</a>
+    <a class="nav-link nav-account" id="nav-account"
+       href="{{ '/' | relative_url }}verify-me.html"
+       data-href-signedin="{{ '/' | relative_url }}profile.html"
+       data-href-signedout="{{ '/' | relative_url }}verify-me.html"
+       {% if page.url == '/verify-me.html' or page.url == '/profile.html' %} aria-current="page"{% endif %}>Sign in</a>
 
     <button class="search-toggle" aria-label="Search the site" title="Search (Ctrl/Cmd+K)">
       <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m17 17-3.5-3.5"/></svg>
@@ -24,6 +29,22 @@
   <button class="search-modal-close" aria-label="Close search" type="button">&times;</button>
   <div id="search"></div>
 </dialog>
+<script>
+  // Swap the nav "Sign in" link to "Profile" when the user is verified.
+  // Pages-served HTML is identical for everyone; the swap is client-side
+  // so the static-cache stays warm.
+  (function () {
+    try {
+      var el = document.getElementById('nav-account');
+      if (!el) return;
+      if (localStorage.getItem('verify_jwt')) {
+        el.textContent = 'Profile';
+        var href = el.getAttribute('data-href-signedin');
+        if (href) el.setAttribute('href', href);
+      }
+    } catch (e) { /* localStorage blocked; leave default */ }
+  })();
+</script>
 <script>
   // Theme toggle + lighthouse beam sweep
   (function () {
