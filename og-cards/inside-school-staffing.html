@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="_shared.css">
+  <style>
+    .dots {
+      display: grid;
+      grid-template-columns: repeat(43, 1fr);
+      gap: 5px;
+      width: 100%;
+      max-width: 720px;
+    }
+    .dot {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+    .dot.teacher  { background: var(--c-navy); }
+    .dot.paratut  { background: var(--c-teal); }
+    .dot.admin    { background: var(--c-plum); }
+    .dot.sped     { background: var(--c-brass); }
+    .dot.support  { background: #93A4B0; }
+    .ratio {
+      display: inline-block;
+      margin-left: 40px;
+      vertical-align: middle;
+      font-variant-numeric: tabular-nums;
+    }
+    .ratio .big { font-size: 96px; font-weight: 800; color: var(--c-buoy); line-height: 1; }
+    .ratio .lbl { font-size: 22px; color: var(--c-mid); margin-top: 8px; max-width: 240px; }
+    .row { display: flex; align-items: center; }
+    .legend {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      font-size: 18px;
+      color: var(--c-mid);
+    }
+    .legend span::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: -1px;
+    }
+    .legend .teacher::before { background: var(--c-navy); }
+    .legend .paratut::before { background: var(--c-teal); }
+    .legend .admin::before   { background: var(--c-plum); }
+    .legend .sped::before    { background: var(--c-brass); }
+    .legend .support::before { background: #93A4B0; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header class="card-mark">marbleheaddata.org</header>
+    <h1 class="card-headline">What 430 school positions actually do.</h1>
+    <div class="card-visual">
+      <div class="row">
+        <div>
+          <div class="dots" id="dots"></div>
+          <div class="legend">
+            <span class="teacher">Teachers 169</span>
+            <span class="paratut">Paras + tutors 88</span>
+            <span class="support">Co-teachers + support 82</span>
+            <span class="admin">Admin + clerical 53</span>
+            <span class="sped">SPED + counselors 38</span>
+          </div>
+        </div>
+        <div class="ratio">
+          <div class="big">5.6</div>
+          <div class="lbl">Marblehead students per staff. Melrose: 7.8.</div>
+        </div>
+      </div>
+      <script>
+        const dots = document.getElementById('dots');
+        const buckets = [
+          ['teacher', 169],
+          ['paratut',  88],
+          ['support',  82],
+          ['admin',    53],
+          ['sped',     38],
+        ];
+        for (const [cls, n] of buckets) {
+          for (let i = 0; i < n; i++) {
+            const d = document.createElement('div');
+            d.className = 'dot ' + cls;
+            dots.appendChild(d);
+          }
+        }
+      </script>
+    </div>
+    <footer class="card-foot">/inside-school-staffing &middot; DESE EPIMS 2025-26</footer>
+  </main>
+</body>
+</html>
