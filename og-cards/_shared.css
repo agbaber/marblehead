@@ -1,0 +1,83 @@
+/* og-cards/_shared.css
+   Shared shell for OG cards. Each card HTML imports this, then sets
+   only the bespoke visual block. Card body is fixed 1200x630.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800&display=swap');
+
+:root {
+  --c-fog:     #F4F7FA;
+  --c-surface: #FFFFFF;
+  --c-border:  #D8E1E8;
+  --c-text:    #0F2A3D;
+  --c-mid:     #4A5C6A;
+  --c-sub:     #7A8A98;
+  --c-navy:    #1B3A57;
+  --c-buoy:    #C8553D;
+  --c-teal:    #2F7D8E;
+  --c-brass:   #B8860B;
+  --c-sage:    #5B7553;
+  --c-plum:    #6C4A6E;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 1200px;
+  height: 630px;
+  overflow: hidden;
+  background: var(--c-fog);
+  font-family: 'Libre Franklin', system-ui, -apple-system, sans-serif;
+  color: var(--c-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  width: 1200px;
+  height: 630px;
+  padding: 56px 64px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 28px;
+}
+
+.card-mark {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--c-navy);
+}
+
+.card-mark::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--c-buoy);
+  vertical-align: middle;
+  transform: translateY(-2px);
+}
+
+.card-headline {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--c-text);
+  max-width: 1000px;
+}
+
+.card-visual {
+  align-self: end;
+}
+
+.card-foot {
+  font-size: 18px;
+  color: var(--c-sub);
+  letter-spacing: 0.04em;
+}
