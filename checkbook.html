@@ -687,6 +687,17 @@ og_url: https://marbleheaddata.org/checkbook/
       --subbucket-border: #4a3d20;
       --subbucket-ballot-bg: #122826;
     }
+    /* Choice-view section lede (was <h1> in the standalone sketch; demoted here
+       to <h2> so it doesn't compete with the page's existing <h1>"Town checkbook"). */
+    .choice-view .choice-lede-h {
+      font-size: 22px; font-weight: 700; color: var(--c-navy);
+      margin: 36px auto 6px; max-width: 720px; padding: 0 16px; text-align: center;
+      letter-spacing: -0.2px;
+    }
+    /* Hide the section's centered hero text wrapper from desktop; we use a
+       compact section start instead of duplicating the page-title block. */
+    .choice-view .hero { padding: 8px 0 16px; }
+
     /* Finding-led hero replaces the 4-stat panel */
     .finding {
       font-size: 17px; line-height: 1.55; color: var(--text);
@@ -1066,8 +1077,7 @@ og_url: https://marbleheaddata.org/checkbook/
      .choice-view so it doesn't collide with the existing page styles. -->
 <div class="choice-view">
 <section class="hero">
-    <div class="crumb">Home / Checkbook</div>
-    <h1 class="h1">What we paid, and the choices we made</h1>
+    <h2 class="choice-lede-h">What we paid, and the choices we made</h2>
     <p class="finding">
       Through <span data-fill="snapshot.last_payment|date">Jun 9</span>, Marblehead has paid <strong data-fill="snapshot.total_paid|usd">$99.9M</strong> to vendors in FY26.
       Inside <a href="#bucket-tm">General Fund &ndash; Town</a> alone, <strong data-fill="gf_town_carveout.fixed_total|usd">$37.6M</strong>
