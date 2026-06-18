@@ -1,0 +1,1263 @@
+# FY27 Town Personnel Enrichment
+#
+# Funded salary lines per department for FY27, extracted from the MUNIS
+# account-level budget detail published by the Town of Marblehead. This file
+# is enrichment input for the org-chart page; the controller integrates it
+# into _data/org_chart.yml later. DO NOT consume directly without reading
+# the caveats below.
+#
+# ---------------------------------------------------------------------------
+# SOURCES (every number is traceable)
+# ---------------------------------------------------------------------------
+#
+# Primary source for FY27 funded positions and salary appropriations:
+#   "FY '27 Proposed Budget vs. FY '26 w/ Acct Details" (MUNIS export)
+#   https://marbleheadma.gov/wp-content/uploads/2026/05/FY27-Proposed-Budget-vs-FY26-w-Acct-Details.xlsx
+#   Single sheet "FY27 BUDGET ACCT DETAILS", 692 rows, account-object level
+#   (MUNIS org / object / description columns). FY26 budgeted vs FY27 proposed.
+#
+# Cross-walk source for FY26 filled-position counts and titles:
+#   /home/claude/marblehead/.dev/worktree/calm-garden/data/employee_count_FY2008-2026.xls
+#   Sheet "FY2026", 1106 rows, dept # / name / title / pay-frequency columns.
+#   "Frequency" is pay periods per year (53/52 = year-round; 26 = half-year;
+#   42/39/22 = academic year; 4 = quarterly; 2-3 = seasonal). Frequency is
+#   NOT FTE. Headcount-per-title is the only FTE proxy this file offers.
+#
+# Editorial/cuts narrative source (NOT a position roster, but corroborates
+# the FY26-to-FY27 deltas below):
+#   "FY27 Override Presentation FINAL" (2026-04-15 Select Board)
+#   https://marbleheadma.gov/wp-content/uploads/2025/10/2026-04-15-Override-Presentation-FINAL.pdf
+#   Page "Loss of Town Services by Department" and the Tier 1/2/3 comparison
+#   matrix.
+#
+# Summary appropriations source (department totals match MUNIS Excel totals):
+#   "Proposed FY27 Balanced Budget With No Override"
+#   https://marbleheadma.gov/wp-content/uploads/2026/04/PROPOSED-FY27-BALANCED-BUDGET-WITH-NO-OVERRIDE.pdf
+#   8 pages. Department-level appropriation table (Mass. General Laws c.41
+#   sec.60 required estimate). No personnel detail.
+#
+# ---------------------------------------------------------------------------
+# WHAT THIS FILE DOES NOT CONTAIN
+# ---------------------------------------------------------------------------
+#
+# 1. No explicit FTE counts. The Town of Marblehead does not publish an FY27
+#    "Personnel Detail" or "Authorized Positions" schedule. The MUNIS Excel
+#    is the closest published artifact, and it lists salary OBJECTS (one row
+#    per pay code per department), not positions. For singleton roles
+#    ("Department Head", "Senior Clerk") one object = one position. For
+#    bargaining-unit pool lines (Firefighters, Patrolmen, HEOs, Groundskeepers,
+#    Park Maintenance) one object can fund many positions. Headcount per pool
+#    is shown below as "fy26_filled_count" from the FY26 payroll roster,
+#    flagged as a BASELINE not an FY27 authorization.
+#
+# 2. No water, sewer, harbormaster, or MMLD positions. These are enterprise
+#    funds whose salaries do not appear in the General Fund MUNIS Excel.
+#    Enterprise fund appropriations show up only as lump-sum totals in the
+#    FY27 balanced budget appropriation table.
+#
+# 3. No school positions. The schools appropriation is a single lump sum
+#    line in the General Fund; building-level personnel come from the FY27
+#    school budget packet (data/schools/sc-meetings-fy26/ ...) and are
+#    already represented in _data/org_chart.yml.
+#
+# 4. No individual salary band detail. The MUNIS Excel shows budgeted dollars
+#    per object code, which for multi-position lines is the pool total, not
+#    a per-position range. The Town's Classification & Pay Schedule (Town
+#    Bylaws Chapter 121) sets per-grade ranges but is not published as a
+#    standalone document on marbleheadma.gov; it lives only in the bylaws.
+#
+# ---------------------------------------------------------------------------
+# HOW TO READ THE departments LIST
+# ---------------------------------------------------------------------------
+#
+# matches_org_chart_name: the name in _data/org_chart.yml > town > departments
+#   to join against. Some MUNIS departments don't have a matching org_chart
+#   entry (e.g. CURBSIDE COLLECTION is brand new in FY27); those are flagged.
+#
+# positions[]: one row per MUNIS object code in the 5110xx (named-role) range,
+#   plus selected 511xxx pool lines (Firefighters, Patrolmen, etc.). Stipends,
+#   longevity, holiday pay, overtime, and similar line items are excluded
+#   from positions[] (they're employment costs, not positions) but rolled
+#   into fy27_salary_total.
+#
+# Each position row:
+#   munis_object  - 6-digit MUNIS object code (e.g. 511003 = Department Head)
+#   title         - description as printed in the MUNIS Excel
+#   fy26_amount   - FY26 budgeted dollars for this line
+#   fy27_amount   - FY27 proposed dollars for this line
+#   status        - "continuing" | "eliminated" | "new" | "reduced" | "added"
+#                   Computed from fy27_amount vs fy26_amount; an explicit
+#                   --100% delta = eliminated, $0->$ = new, < -10% = reduced.
+#   fy26_filled_count - For pool lines, the count of FY26 filled positions
+#                       with this title from the FY2026 employee roster.
+#                       Singleton lines (Dept Head etc.) are 1 by definition.
+#   note          - free-text note when the line needs context (e.g. shared
+#                   with another dept, partial-year reduction).
+#
+# fy27_salary_total - sum of all 51xxxx and 517xxx and 519xxx object lines
+#   in this department in the MUNIS Excel. This is the Town's published FY27
+#   salary appropriation for the department (matches the "Salaries" column
+#   of the FY27 Balanced Budget appropriation table).
+#
+
+source:
+  primary:
+    url: "https://marbleheadma.gov/wp-content/uploads/2026/05/FY27-Proposed-Budget-vs-FY26-w-Acct-Details.xlsx"
+    title: "FY27 Proposed Budget vs FY26 w/ Acct Details"
+    publisher: "Town of Marblehead Finance Department (MUNIS export)"
+    sheet: "FY27 BUDGET ACCT DETAILS"
+    accessed: "2026-06-15"
+    fiscal_year: "FY27"
+  cross_walk:
+    url: "(local) data/employee_count_FY2008-2026.xls"
+    title: "Employee Earnings History FY2008-2026"
+    sheet: "FY2026"
+    publisher: "Town of Marblehead payroll system (MUNIS export)"
+    note: >-
+      Used only to derive fy26_filled_count for multi-position pool lines.
+      Frequency column is pay periods per year, not FTE.
+  narrative:
+    url: "https://marbleheadma.gov/wp-content/uploads/2025/10/2026-04-15-Override-Presentation-FINAL.pdf"
+    title: "FY27 Override Presentation FINAL (Select Board, 2026-04-15)"
+    pages: "Loss of Town Services by Department; Tier 1/2/3 Comparison"
+    note: >-
+      Confirms position-level cuts in the FY27 balanced (no-override) budget
+      and what Tier 1/2/3 override votes would restore or add. Useful for
+      narrative context; counts are not perfectly aligned with the MUNIS
+      account lines because the presentation buckets several cuts together.
+
+# Headline figure published by the town for the no-override FY27 personnel cut.
+# Source: FinCom Report 2026, page on FY27 reductions, and Override Presentation
+# "FTE Summary: Cuts 21.5 Positions" line. Used as a sanity check, NOT as a
+# per-position substitute.
+fy27_headline:
+  town_position_cuts: 22
+  town_position_cuts_basis: >-
+    FinCom Report 2026 (FY27 page): "The reduction of 22 FTEs, representing a
+    12% reduction in the total Town workforce funded by the General Fund."
+    The Override Presentation rounds this to "21.5 positions cut."
+  school_position_cuts: 18.25
+  school_position_cuts_basis: >-
+    FinCom Report 2026: "18.25 FTEs, representing a 4% reduction in School
+    department headcount." Schools are a lump-sum appropriation and not broken
+    out in this enrichment file.
+
+departments:
+
+  # ------------------------------------------------------------------------
+  - munis_name: "SELECT BOARD"
+    matches_org_chart_name: "Select Board Office"
+    fy26_salary_total: 503888
+    fy27_salary_total: 502714
+    positions:
+      - munis_object: "511004"
+        title: "Department Head (Town Administrator)"
+        fy26_amount: 207732
+        fy27_amount: 223176
+        status: "continuing"
+        note: >-
+          Town Administrator. MUNIS labels this as DEPT HEAD in the Select
+          Board cost center.
+      - munis_object: "511005"
+        title: "Assistant Department Head"
+        fy26_amount: 136807
+        fy27_amount: 0
+        status: "eliminated"
+        note: >-
+          Position eliminated in FY27 balanced budget. The MUNIS-labeled
+          "Assistant Town Administrator" role; the secondary asst-dept-head
+          (#2) line remains funded.
+      - munis_object: "511006"
+        title: "Assistant Department Head #2"
+        fy26_amount: 86120
+        fy27_amount: 93210
+        status: "continuing"
+      - munis_object: "511008"
+        title: "Chief Procurement Officer"
+        fy26_amount: 0
+        fy27_amount: 120487
+        status: "new"
+        note: >-
+          New budget line in FY27. The position itself existed in FY26
+          (per FY26 payroll roster) but appears to have been moved from a
+          different cost center in FY27. Article 20 of the 2026 Town
+          Meeting warrant ratifies the reclassification.
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 64259
+        fy27_amount: 56121
+        status: "reduced"
+        note: >-
+          Reduced ~12.7%. Article 20 of 2026 ATM warrant reclassifies this
+          position.
+
+  # ------------------------------------------------------------------------
+  - munis_name: "FINANCE"
+    matches_org_chart_name: "Finance"
+    fy26_salary_total: 841786
+    fy27_salary_total: 847395
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Finance Director / CFO)"
+        fy26_amount: 162927
+        fy27_amount: 168000
+        status: "continuing"
+      - munis_object: "511004"
+        title: "Division Head"
+        fy26_amount: 213842
+        fy27_amount: 307161
+        status: "continuing"
+        note: >-
+          Net dollar increase reflects shift of a position into this line
+          from 511005 (see eliminated row below). Division heads in Finance
+          are the Treasurer/Collector and the Town Accountant.
+      - munis_object: "511005"
+        title: "Assistant Department Head"
+        fy26_amount: 306326
+        fy27_amount: 0
+        status: "eliminated"
+        note: >-
+          Eliminated as a separate object code; functions consolidated
+          into 511004 Division Head and 511006 Assistant Division Head.
+          Not a layoff per se; reclassification.
+      - munis_object: "511006"
+        title: "Assistant Division Head"
+        fy26_amount: 0
+        fy27_amount: 197376
+        status: "new"
+        note: >-
+          New line in FY27. Companion to the 511005 elimination above.
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 133166
+        fy27_amount: 150858
+        status: "continuing"
+        note: >-
+          Override Presentation narrates a Senior Clerk cut in Finance;
+          the dollar figure here increased, so the cut may be a Treasurer
+          office sub-line (multi-clerk pool) where one of two positions
+          went unfilled but the line stayed funded. Worth verifying.
+
+  # ------------------------------------------------------------------------
+  - munis_name: "ASSESSOR"
+    matches_org_chart_name: "Assessors' Office"
+    fy26_salary_total: 258696
+    fy27_salary_total: 268802
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Chief Assessor)"
+        fy26_amount: 117428
+        fy27_amount: 120951
+        status: "continuing"
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 68345
+        fy27_amount: 71085
+        status: "continuing"
+      - munis_object: "511019"
+        title: "Senior Clerk II (Administrative Assessor)"
+        fy26_amount: 70923
+        fy27_amount: 73766
+        status: "continuing"
+
+  # ------------------------------------------------------------------------
+  - munis_name: "HUMAN RESOURCES"
+    matches_org_chart_name: "Human Resources"
+    fy26_salary_total: 279927
+    fy27_salary_total: 299491
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (HR Director)"
+        fy26_amount: 117428
+        fy27_amount: 120500
+        status: "continuing"
+      - munis_object: "511005"
+        title: "Payroll Manager"
+        fy26_amount: 98247
+        fy27_amount: 104655
+        status: "continuing"
+      - munis_object: "511006"
+        title: "Benefits Coordinator"
+        fy26_amount: 0
+        fy27_amount: 74336
+        status: "new"
+        note: >-
+          New line in FY27 budget (position existed in FY26 payroll under
+          a different object code; reclassified). Per Article 20 of the
+          2026 ATM warrant.
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 64252
+        fy27_amount: 0
+        status: "eliminated"
+
+  # ------------------------------------------------------------------------
+  - munis_name: "TOWN CLERK"
+    matches_org_chart_name: "Town Clerk + Elections"
+    fy26_salary_total: 231396
+    fy27_salary_total: 173785
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Town Clerk)"
+        fy26_amount: 93048
+        fy27_amount: 97460
+        status: "continuing"
+        note: >-
+          Town Clerk is an elected position; Article 18 of the 2026 ATM
+          warrant sets the FY27 compensation at $97,460.
+      - munis_object: "511020"
+        title: "Special Clerk"
+        fy26_amount: 128398
+        fy27_amount: 66125
+        status: "reduced"
+        fy26_filled_count: 2
+        note: >-
+          FY26 had 2 Special Clerks; FY27 dollar drop ~48% is consistent
+          with the Override Presentation's "Cut 1 special clerk reducing
+          the office from 3 employees to 2 employees" line.
+
+  # ------------------------------------------------------------------------
+  - munis_name: "ELECTIONS"
+    matches_org_chart_name: "Town Clerk + Elections"
+    fy26_salary_total: 16150
+    fy27_salary_total: 49150
+    note: >-
+      Elections is a separate MUNIS cost center under the Town Clerk org
+      chart line. FY27 net increase driven by State Primary and November
+      Election salaries (presidential cycle). 25 PT election workers in the
+      org chart are paid only during election cycles and roll into these
+      lines rather than appearing as authorized positions.
+    positions:
+      - munis_object: "511002"
+        title: "Board / Commission"
+        fy26_amount: 450
+        fy27_amount: 450
+        status: "continuing"
+      - munis_object: "511030"
+        title: "Register of Voters"
+        fy26_amount: 700
+        fy27_amount: 700
+        status: "continuing"
+      - munis_object: "511031"
+        title: "Town Election (poll workers, pool line)"
+        fy26_amount: 7500
+        fy27_amount: 7500
+        status: "continuing"
+      - munis_object: "511032"
+        title: "Override Election (poll workers, pool line)"
+        fy26_amount: 7500
+        fy27_amount: 7500
+        status: "continuing"
+      - munis_object: "511040"
+        title: "State Primary (poll workers, pool line)"
+        fy26_amount: 0
+        fy27_amount: 15000
+        status: "new"
+      - munis_object: "511041"
+        title: "November Election (poll workers, pool line)"
+        fy26_amount: 0
+        fy27_amount: 10000
+        status: "new"
+
+  # ------------------------------------------------------------------------
+  - munis_name: "COMMUNTY DEVELOPMENT"
+    matches_org_chart_name: "Community Development and Planning"
+    fy26_salary_total: 456696
+    fy27_salary_total: 177946
+    note: >-
+      Largest single-department salary reduction in the FY27 balanced budget
+      (~61% drop). Three of the five professional roles eliminated. Override
+      Presentation specifies "Director, Sustainability Coordinator, and
+      Grants Coordinator" cut. Tier 1 of override restores Director only;
+      Tier 2 adds Assistant Planner and Conservation Agent; Tier 3 adds
+      Grant Writer.
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Director, CD&P)"
+        fy26_amount: 127950
+        fy27_amount: 0
+        status: "eliminated"
+      - munis_object: "511019"
+        title: "Senior Clerk II / Conservation Agent"
+        fy26_amount: 70923
+        fy27_amount: 76423
+        status: "continuing"
+        note: >-
+          Title clarified per Article 20 of 2026 ATM warrant: "Town Planner
+          / Conservation Agent (Community Development & Planning)."
+      - munis_object: "511100"
+        title: "Sustainability Coordinator"
+        fy26_amount: 79445
+        fy27_amount: 0
+        status: "eliminated"
+      - munis_object: "511101"
+        title: "Planner (Town Planner)"
+        fy26_amount: 94839
+        fy27_amount: 97048
+        status: "continuing"
+      - munis_object: "511102"
+        title: "Grant Coordinator"
+        fy26_amount: 79064
+        fy27_amount: 0
+        status: "eliminated"
+
+  # ------------------------------------------------------------------------
+  - munis_name: "BUILDING INSPECTIONS"
+    matches_org_chart_name: "Building Inspection"
+    fy26_salary_total: 600754
+    fy27_salary_total: 588471
+    note: >-
+      Net salary reduction ~2%. Major MUNIS reorg: two Asst Dept Head lines
+      eliminated, three new object codes for inspector specialties created.
+      Net inspector count and dollars roughly preserved despite the
+      restructure.
+    positions:
+      - munis_object: "511001"
+        title: "Local Inspectors (pool line)"
+        fy26_amount: 0
+        fy27_amount: 122437
+        status: "new"
+        fy26_filled_count: 2
+        note: >-
+          FY26 filled count from payroll: 2x LOCAL BLDG INSPECTOR. Pool
+          line in FY27 covering both.
+      - munis_object: "511003"
+        title: "Department Head (Building Commissioner)"
+        fy26_amount: 129428
+        fy27_amount: 132508
+        status: "continuing"
+        note: "Also serves as Superintendent of Public Buildings."
+      - munis_object: "511005"
+        title: "Assistant Department Head"
+        fy26_amount: 282620
+        fy27_amount: 0
+        status: "eliminated"
+        note: >-
+          MUNIS reorg; functions distributed across the new 511001 /
+          511009 / 511010 inspector pool lines.
+      - munis_object: "511006"
+        title: "Assistant Department Head #2"
+        fy26_amount: 109036
+        fy27_amount: 0
+        status: "eliminated"
+      - munis_object: "511009"
+        title: "Electrical Inspectors (pool line)"
+        fy26_amount: 0
+        fy27_amount: 145000
+        status: "new"
+        fy26_filled_count: 2
+        note: >-
+          FY26 filled count: 1x HEAD ELECTRICAL INSPECTOR + 1x ASST
+          ELECTRIC INSP.
+      - munis_object: "511010"
+        title: "Plumbing Inspectors (pool line)"
+        fy26_amount: 0
+        fy27_amount: 106388
+        status: "new"
+        fy26_filled_count: 2
+        note: >-
+          FY26 filled count: 1x PLMG INSPECTOR + 1x ASST PLMG INSP. The
+          Plumbing & Gas Inspector also functions as Assistant Wire
+          Inspector per Annual Report 2025.
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 68345
+        fy27_amount: 70813
+        status: "continuing"
+
+  # ------------------------------------------------------------------------
+  - munis_name: "PUBLIC BUILDINGS"
+    matches_org_chart_name: "Public Buildings"
+    fy26_salary_total: 136931
+    fy27_salary_total: 18976
+    note: >-
+      Severe salary line reduction (~86% drop). FY26 had 2 Special Labor I
+      custodians funded ($118K) servicing Mary Alley and Abbot Hall, both
+      eliminated in FY27. Override Presentation: "Cut 2 Special Labor
+      Custodians that service Mary Alley and Abbot Hall." Public Buildings
+      function continues through the Building Commissioner's office (whose
+      salary is in BUILDING INSPECTIONS, not here) and seasonal docents.
+    positions:
+      - munis_object: "511048"
+        title: "Special Labor I (Custodian, pool line)"
+        fy26_amount: 118282
+        fy27_amount: 0
+        status: "eliminated"
+        fy26_filled_count: 2
+        note: "Both custodians eliminated; FY26 served Mary Alley and Abbot Hall."
+      - munis_object: "511095"
+        title: "Seasonal Docent (Fort Sewall, pool line)"
+        fy26_amount: 10899
+        fy27_amount: 11226
+        status: "continuing"
+        fy26_filled_count: 3
+        note: >-
+          Fort Rangers / seasonal docents at Fort Sewall. FY26 filled
+          count: 3 (1 year-round, 2 seasonal).
+
+  # ------------------------------------------------------------------------
+  - munis_name: "POLICE"
+    matches_org_chart_name: "Police Department"
+    fy26_salary_total: 4763160
+    fy27_salary_total: 4988616
+    note: >-
+      Large workforce; most lines are bargaining-unit pools. Override
+      Presentation: "School Resource Officer eliminated" under no-override
+      FY27. The MUNIS data does not flag SRO as a separately object-coded
+      line; the cut shows up as reduced PATROLMAN headcount (FY26 had 20
+      Patrolmen funded; FY27 dollar increase is ~3% wage growth on a smaller
+      base). Override tiers restore SRO (Tier 1), add +1 officer to 30 total
+      (Tier 2), and add +1 more to 31 plus restore SRO to 32-33 (Tier 3).
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Chief of Police)"
+        fy26_amount: 185712
+        fy27_amount: 195750
+        status: "continuing"
+      - munis_object: "511006"
+        title: "Assistant Department Head #2"
+        fy26_amount: 75937
+        fy27_amount: 80881
+        status: "continuing"
+        note: >-
+          MUNIS labels this asst-dept-head; in the Annual Report 2025 this
+          maps to the Acting Captain role.
+      - munis_object: "511011"
+        title: "Captain (pool line)"
+        fy26_amount: 116653
+        fy27_amount: 118000
+        status: "continuing"
+        fy26_filled_count: 1
+      - munis_object: "511012"
+        title: "Lieutenant (pool line)"
+        fy26_amount: 391893
+        fy27_amount: 408344
+        status: "continuing"
+        fy26_filled_count: 4
+      - munis_object: "511013"
+        title: "Sergeant (pool line)"
+        fy26_amount: 331839
+        fy27_amount: 341641
+        status: "continuing"
+        fy26_filled_count: 4
+      - munis_object: "511014"
+        title: "Patrolman (pool line)"
+        fy26_amount: 1395017
+        fy27_amount: 1434570
+        status: "continuing"
+        fy26_filled_count: 20
+        note: >-
+          FY26 filled: 20 (incl. 1 Patrol Officer + 19 Patrolman titles).
+          Override Presentation narrates FY27 staffing falling to 29
+          officers with no SRO (vs ~33 historical); MUNIS dollars are not
+          a clean indicator of headcount because OT and incentive lines
+          absorb part of the slack.
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 68344
+        fy27_amount: 71085
+        status: "continuing"
+      - munis_object: "511027"
+        title: "Telecommunicator (E-911 Dispatcher, pool line)"
+        fy26_amount: 564484
+        fy27_amount: 557496
+        status: "continuing"
+        fy26_filled_count: 8
+        note: >-
+          FY26 filled count combines E-911 DISPATCH / DISPATCHER /
+          TELECOMMUNICATOR titles (8 total).
+      - munis_object: "511035"
+        title: "Telecommunicator Supervisor"
+        fy26_amount: 81824
+        fy27_amount: 85105
+        status: "continuing"
+      - munis_object: "511048"
+        title: "Special I (Special Police Officer)"
+        fy26_amount: 59141
+        fy27_amount: 61512
+        status: "continuing"
+        fy26_filled_count: 1
+      - munis_object: "511061"
+        title: "Temporary Officer (pool line)"
+        fy26_amount: 24429
+        fy27_amount: 24198
+        status: "continuing"
+      - munis_object: "511070"
+        title: "Temporary Dispatcher (pool line)"
+        fy26_amount: 22730
+        fy27_amount: 28227
+        status: "continuing"
+      - munis_object: "511201"
+        title: "Traffic Supervisor (pool line)"
+        fy26_amount: 122048
+        fy27_amount: 122000
+        status: "continuing"
+        fy26_filled_count: 17
+        note: >-
+          FY26 filled count combines TRAFFIC SUPER / SUPERS / SUPERVISOR
+          / MATRON titles (17 total). All part-time; cross-reference Annual
+          Report 2025 lists 16 PT School Traffic Supervisors.
+
+  # ------------------------------------------------------------------------
+  - munis_name: "ANIMAL INSPECTOR"
+    matches_org_chart_name: "Police Department"
+    fy26_salary_total: 2400
+    fy27_salary_total: 2400
+    note: "Stipend-only line; part-time appointment under Police."
+    positions:
+      - munis_object: "511003"
+        title: "Animal Inspector (stipend)"
+        fy26_amount: 2400
+        fy27_amount: 2400
+        status: "continuing"
+        fy26_filled_count: 1
+
+  # ------------------------------------------------------------------------
+  - munis_name: "FIRE"
+    matches_org_chart_name: "Fire Department"
+    fy26_salary_total: 5277689
+    fy27_salary_total: 5714512
+    note: >-
+      Salary appropriation up ~8%, reflecting the IAFF Local 2043 collective
+      bargaining agreement. Article 19 of 2026 ATM warrant requests an
+      additional $143,238 from free cash to fully fund the post-balanced-
+      budget contract. Override Presentation: "No staff cuts to contain
+      overtime expense; currently down 1 full shift." Tier 1: no FF added.
+      Tier 2: +2 firefighters. Tier 3: +4 firefighters total.
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Fire Chief)"
+        fy26_amount: 145290
+        fy27_amount: 151719
+        status: "continuing"
+      - munis_object: "511006"
+        title: "Assistant Department Head #2"
+        fy26_amount: 66442
+        fy27_amount: 71936
+        status: "continuing"
+        note: "Maps to an administrative captain or deputy chief role."
+      - munis_object: "511011"
+        title: "Captain (pool line)"
+        fy26_amount: 471804
+        fy27_amount: 504600
+        status: "continuing"
+        fy26_filled_count: 4
+      - munis_object: "511012"
+        title: "Lieutenant (pool line)"
+        fy26_amount: 329828
+        fy27_amount: 345732
+        status: "continuing"
+        fy26_filled_count: 3
+      - munis_object: "511016"
+        title: "Firefighter (pool line)"
+        fy26_amount: 2071324
+        fy27_amount: 2244087
+        status: "continuing"
+        fy26_filled_count: 30
+        note: >-
+          FY26 filled count combines FIRE FIGHTER + FIREFIGHTER titles
+          (5 + 25 = 30). The "down 1 full shift" phrasing in the Override
+          Presentation refers to staffing per shift, not a single position.
+
+  # ------------------------------------------------------------------------
+  - munis_name: "HEALTH"
+    matches_org_chart_name: "Health Department"
+    fy26_salary_total: 238560
+    fy27_salary_total: 254339
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Director of Public Health, stipend portion)"
+        fy26_amount: 42604
+        fy27_amount: 42604
+        status: "continuing"
+        note: >-
+          Dollar amount unusually low for a director; likely a stipend or
+          shared-position arrangement. Worth verifying with HR.
+      - munis_object: "511006"
+        title: "Assistant Department Head #2 (Health Inspector + Public Health Nurse, pool)"
+        fy26_amount: 155917
+        fy27_amount: 161707
+        status: "continuing"
+        fy26_filled_count: 2
+        note: >-
+          One MUNIS line funds both the Health Inspector and Public Health
+          Nurse positions per the FY26 roster.
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 31942
+        fy27_amount: 38506
+        status: "continuing"
+
+  # ------------------------------------------------------------------------
+  - munis_name: "PUBLIC WORKS"
+    matches_org_chart_name: "Department of Public Works"
+    fy26_salary_total: 1851836
+    fy27_salary_total: 1868711
+    note: >-
+      Major MUNIS reorg of DPW in FY27. Multiple FY26 lines (Staff Engineer,
+      Special Labor I, plus partial reductions in Leader HEO / HEO) replaced
+      by a set of new specialty lines (Town Engineer, Assistant Engineer,
+      Specialized HEO, Working Foreman Construction, Working Foreman
+      Maintenance). Net dollars roughly flat. The Override Presentation
+      reports "2.5 positions cut & Asphalt Cut" and lists No Laborer, Heavy
+      Equipment Operator, and PT Clerk; Tier 1 restores 1 PT General Clerk,
+      1 HEO, 1 Laborer, and asphalt; Tier 2 adds 1 GIS position; Tier 3
+      adds 1 Foreman and 1 Specialized HEO.
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (DPW Director)"
+        fy26_amount: 119023
+        fy27_amount: 33448
+        status: "reduced"
+        note: >-
+          Override Presentation: "Reduce dept. head to part time." Dollar
+          drop ~72% is consistent with a switch from full-time DPW
+          Director to part-time, with day-to-day operations devolved to
+          the Assistant Directors (511005 pool).
+      - munis_object: "511005"
+        title: "Assistant Department Head (Assistant Directors, pool line)"
+        fy26_amount: 325461
+        fy27_amount: 300788
+        status: "reduced"
+        fy26_filled_count: 3
+        note: >-
+          Three Assistant Director roles in FY26 (Highway/Tree/Snow,
+          Storm Sewer/Mechanics/Utility, plus an Assistant Director-
+          Utility Coord); FY27 retains a smaller pool.
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 90922
+        fy27_amount: 73767
+        status: "reduced"
+        fy26_filled_count: 1
+      - munis_object: "511020"
+        title: "Special Clerk"
+        fy26_amount: 0
+        fy27_amount: 67031
+        status: "new"
+        note: >-
+          Article 20 of 2026 ATM warrant introduces "Special Clerk (DPW)"
+          as a new position grading.
+      - munis_object: "511400"
+        title: "Town Engineer"
+        fy26_amount: 0
+        fy27_amount: 123609
+        status: "new"
+        note: >-
+          New separate object code in FY27. FY26 had a Town Engineer
+          position in the FY26 payroll roster but funded under a
+          different line.
+      - munis_object: "511401"
+        title: "Mechanic Supervisor"
+        fy26_amount: 74355
+        fy27_amount: 78841
+        status: "continuing"
+      - munis_object: "511402"
+        title: "Mechanic (pool line)"
+        fy26_amount: 141844
+        fy27_amount: 142787
+        status: "continuing"
+        fy26_filled_count: 2
+      - munis_object: "511403"
+        title: "Staff Engineer"
+        fy26_amount: 61135
+        fy27_amount: 0
+        status: "eliminated"
+      - munis_object: "511404"
+        title: "Lead Heavy Equipment Operator (pool line)"
+        fy26_amount: 352275
+        fy27_amount: 214660
+        status: "reduced"
+        fy26_filled_count: 2
+        note: >-
+          Pool line ~39% reduction; likely a position eliminated and
+          remainder shifted into the new Working Foreman lines.
+      - munis_object: "511405"
+        title: "Special Labor I"
+        fy26_amount: 45000
+        fy27_amount: 0
+        status: "eliminated"
+        note: "Override Presentation: 'No Laborer'."
+      - munis_object: "511406"
+        title: "Heavy Equipment Operator (pool line)"
+        fy26_amount: 359863
+        fy27_amount: 189874
+        status: "reduced"
+        fy26_filled_count: 2
+        note: >-
+          Pool line ~47% reduction. The eliminated HEO is one of the
+          three positions in the "2.5 positions cut" narrative.
+      - munis_object: "511407"
+        title: "Foreman / Tree Surgeon"
+        fy26_amount: 76710
+        fy27_amount: 79786
+        status: "continuing"
+      - munis_object: "511444"
+        title: "Assistant Engineer"
+        fy26_amount: 0
+        fy27_amount: 73988
+        status: "new"
+      - munis_object: "511452"
+        title: "Specialized Heavy Equipment Operator (pool line)"
+        fy26_amount: 0
+        fy27_amount: 138508
+        status: "new"
+        fy26_filled_count: 3
+        note: >-
+          New object code; absorbs the FY26 SPECIALIZED HEO pool that was
+          previously billed against 511406. Article 20 of 2026 ATM
+          warrant updates the Mechanic job description (DPW).
+      - munis_object: "511464"
+        title: "Working Foreman, Construction"
+        fy26_amount: 0
+        fy27_amount: 83004
+        status: "new"
+      - munis_object: "511465"
+        title: "Working Foreman, Maintenance"
+        fy26_amount: 0
+        fy27_amount: 72595
+        status: "new"
+
+  # ------------------------------------------------------------------------
+  - munis_name: "WASTE COLLECTION"
+    matches_org_chart_name: null
+    matches_org_chart_note: >-
+      Maps to the "Transfer Station" function the org chart currently nests
+      under Health Department (per the org chart note: "The Board of Health
+      also oversees the Transfer Station, which has its own crew"). Worth
+      revisiting whether this should be a standalone Solid Waste line in
+      the org chart now that CURBSIDE COLLECTION is also funded.
+    fy26_salary_total: 544798
+    fy27_salary_total: 577999
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Assistant Director of Waste)"
+        fy26_amount: 98640
+        fy27_amount: 98640
+        status: "continuing"
+        note: >-
+          Article 20 of 2026 ATM warrant reclassifies "Assistant Director
+          of Waste (Solid Waste Department)" on the Administrative Pay
+          Scale.
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 31941
+        fy27_amount: 38506
+        status: "continuing"
+      - munis_object: "511020"
+        title: "Special Clerk"
+        fy26_amount: 62330
+        fy27_amount: 66377
+        status: "continuing"
+        note: >-
+          Article 20 updates the "Special Clerk (Water & Sewer Department)
+          [actually Waste]" job description (no grade change). The MUNIS
+          shows FY26 Temp Special Clerk (Solid Waste) job description
+          update.
+      - munis_object: "511404"
+        title: "Crew Leader Operator (Leader HEO)"
+        fy26_amount: 70450
+        fy27_amount: 77011
+        status: "continuing"
+      - munis_object: "511406"
+        title: "Heavy Equipment Operator (pool line)"
+        fy26_amount: 124472
+        fy27_amount: 133080
+        status: "continuing"
+        fy26_filled_count: 2
+        note: >-
+          FY26 filled count includes 1 SPECIALIZED HEO + 1 HEO equivalent
+          under this MUNIS line for Waste.
+      - munis_object: "511409"
+        title: "Transfer Station Operator (pool line)"
+        fy26_amount: 53071
+        fy27_amount: 58000
+        status: "continuing"
+        fy26_filled_count: 2
+
+  # ------------------------------------------------------------------------
+  - munis_name: "CURBSIDE COLLECTION"
+    matches_org_chart_name: null
+    matches_org_chart_note: >-
+      Brand-new General Fund cost center in FY27, established to fund
+      curbside trash pickup costs that were previously charged through a
+      different mechanism. Article 23 narrative: "Waste Curbside Collection
+      costs are included in FY27 General Fund expenses with a corresponding
+      increase in Revenue from the implementation of an Annual Fee."
+      Salary line is one Senior Clerk; everything else (truck operators,
+      hauler contract) flows through the Expense side, not salaries.
+    fy26_salary_total: 0
+    fy27_salary_total: 69000
+    positions:
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 0
+        fy27_amount: 69000
+        status: "new"
+
+  # ------------------------------------------------------------------------
+  - munis_name: "CEMETERY"
+    matches_org_chart_name: "Cemetery Department"
+    fy26_salary_total: 459670
+    fy27_salary_total: 375206
+    note: >-
+      Salary appropriation cut ~18%. Override Presentation: "Reduce dept.
+      head to part time; Cut 1 laborer." Tier 1 restores 1 laborer.
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Cemetery Superintendent)"
+        fy26_amount: 112593
+        fy27_amount: 59978
+        status: "reduced"
+        note: "Reduced ~47%; consistent with the 'reduce to part time' narrative."
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 65691
+        fy27_amount: 71086
+        status: "continuing"
+      - munis_object: "511402"
+        title: "Mechanic"
+        fy26_amount: 64678
+        fy27_amount: 70391
+        status: "continuing"
+      - munis_object: "511406"
+        title: "Heavy Equipment Operator"
+        fy26_amount: 65691
+        fy27_amount: 71086
+        status: "continuing"
+        fy26_filled_count: 1
+      - munis_object: "511410"
+        title: "General Labor IV (pool line)"
+        fy26_amount: 116709
+        fy27_amount: 66125
+        status: "reduced"
+        fy26_filled_count: 2
+        note: >-
+          Pool line ~43% reduction is the "Cut 1 laborer" narrative.
+
+  # ------------------------------------------------------------------------
+  - munis_name: "COUNCIL ON AGING"
+    matches_org_chart_name: "Council on Aging"
+    fy26_salary_total: 397201
+    fy27_salary_total: 351118
+    note: >-
+      Override Presentation: "No Nutrition Coordinator/Labor and Temporary
+      Clerk." Tier 1 restores both. Tier 2 adds 1 PT Social Worker.
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (COA Director)"
+        fy26_amount: 111330
+        fy27_amount: 116978
+        status: "continuing"
+      - munis_object: "511501"
+        title: "Program Manager"
+        fy26_amount: 76407
+        fy27_amount: 79480
+        status: "continuing"
+      - munis_object: "511502"
+        title: "Transportation Coordinator"
+        fy26_amount: 64739
+        fy27_amount: 70813
+        status: "continuing"
+      - munis_object: "511503"
+        title: "Outreach Worker"
+        fy26_amount: 67557
+        fy27_amount: 74647
+        status: "continuing"
+      - munis_object: "511505"
+        title: "Temporary Special Clerk"
+        fy26_amount: 10000
+        fy27_amount: 0
+        status: "eliminated"
+      - munis_object: "511506"
+        title: "General Laborer / Nutrition Coordinator"
+        fy26_amount: 59118
+        fy27_amount: 0
+        status: "eliminated"
+
+  # ------------------------------------------------------------------------
+  - munis_name: "VETERANS SERVICES"
+    matches_org_chart_name: "Veterans Services"
+    fy26_salary_total: 78725
+    fy27_salary_total: 80572
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Veterans' Agent)"
+        fy26_amount: 78225
+        fy27_amount: 80572
+        status: "continuing"
+        note: >-
+          Single-position office. Also serves as Flag Officer and
+          Veterans' Graves Officer per Annual Report 2025.
+
+  # ------------------------------------------------------------------------
+  - munis_name: "LIBRARY"
+    matches_org_chart_name: "Abbot Public Library"
+    fy26_salary_total: 1148878
+    fy27_salary_total: 666755
+    note: >-
+      Library salary appropriation cut ~42%. Override Presentation: "Open
+      only 3 days/week; No Evenings and No Weekends; 8.5 positions cut.
+      Loses certification." Tier 1 restores 4 positions; Tier 3 fully
+      restores all 8.5 positions plus adds 1 PT Librarian. The MUNIS Excel
+      shows 7 eliminated lines and several others reduced by 30-50%
+      (consistent with cuts to PT hours rather than full eliminations).
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Library Director)"
+        fy26_amount: 116447
+        fy27_amount: 119940
+        status: "continuing"
+      - munis_object: "511005"
+        title: "Assistant Department Head"
+        fy26_amount: 0
+        fy27_amount: 93080
+        status: "new"
+        note: >-
+          New explicit object code in FY27 (Asst Director). FY26 payroll
+          did not list an Assistant Director as a separate title; appears
+          to be a promotion/restructure of an existing role.
+      - munis_object: "511007"
+        title: "Program Volunteer Coordinator"
+        fy26_amount: 64542
+        fy27_amount: 0
+        status: "eliminated"
+      - munis_object: "511018"
+        title: "Senior Clerk"
+        fy26_amount: 68345
+        fy27_amount: 71085
+        status: "continuing"
+      - munis_object: "511601"
+        title: "Library Technician"
+        fy26_amount: 57857
+        fy27_amount: 39230
+        status: "reduced"
+        note: "Reduced ~32%; likely PT hours cut."
+      - munis_object: "511602"
+        title: "Library Tech Admin"
+        fy26_amount: 63576
+        fy27_amount: 0
+        status: "eliminated"
+      - munis_object: "511603"
+        title: "Senior Library Assistant"
+        fy26_amount: 55000
+        fy27_amount: 58388
+        status: "continuing"
+      - munis_object: "511604"
+        title: "Coordinator of Circulation"
+        fy26_amount: 64542
+        fy27_amount: 40603
+        status: "reduced"
+        note: "Reduced ~37%; likely PT hours cut."
+      - munis_object: "511605"
+        title: "Library Tech Service Assistant"
+        fy26_amount: 53557
+        fy27_amount: 35779
+        status: "reduced"
+        note: >-
+          Article 20 of 2026 ATM warrant updates the job description for
+          this title (Abbot Public Library).
+      - munis_object: "511606"
+        title: "Technical Services Supervisor"
+        fy26_amount: 81501
+        fy27_amount: 75573
+        status: "reduced"
+        note: "New position grading per Article 20 of 2026 ATM warrant."
+      - munis_object: "511607"
+        title: "Adult Librarian"
+        fy26_amount: 64123
+        fy27_amount: 41646
+        status: "reduced"
+        note: "Reduced ~35%; likely PT hours cut."
+      - munis_object: "511608"
+        title: "Children's Librarian"
+        fy26_amount: 73759
+        fy27_amount: 40429
+        status: "reduced"
+        note: "Reduced ~45%; likely PT hours cut."
+      - munis_object: "511609"
+        title: "Young Adult Librarian"
+        fy26_amount: 71834
+        fy27_amount: 0
+        status: "eliminated"
+      - munis_object: "511610"
+        title: "Library Para-Professional"
+        fy26_amount: 62196
+        fy27_amount: 0
+        status: "eliminated"
+      - munis_object: "511611"
+        title: "Special Labor I (Custodian, pool line)"
+        fy26_amount: 84628
+        fy27_amount: 39368
+        status: "reduced"
+        fy26_filled_count: 2
+        note: >-
+          Pool line ~53% reduction. Article 20 of 2026 ATM warrant
+          updates Full-Time and Part-Time Custodian / General Laborer I
+          job descriptions (Abbot Public Library).
+      - munis_object: "511612"
+        title: "Temporary Library Assistant"
+        fy26_amount: 37306
+        fy27_amount: 0
+        status: "eliminated"
+      - munis_object: "511613"
+        title: "Head of Public Services"
+        fy26_amount: 81059
+        fy27_amount: 0
+        status: "eliminated"
+      - munis_object: "511614"
+        title: "Adult Page (pool line)"
+        fy26_amount: 32103
+        fy27_amount: 5955
+        status: "reduced"
+        fy26_filled_count: 4
+        note: "Pool line ~81% reduction."
+
+  # ------------------------------------------------------------------------
+  - munis_name: "RECREATION & PARKS"
+    matches_org_chart_name: "Recreation & Parks"
+    fy26_salary_total: 749527
+    fy27_salary_total: 702216
+    note: >-
+      Override Presentation: "Cut Groundskeeper; No trash pick up for 187
+      public trash barrels." Tier 1 restores 1 Groundskeeper. MUNIS shows
+      most lines reduced by ~5-10% rather than a clean position elimination,
+      suggesting the cut is implemented via partial-year or PT-hour
+      reductions on the Park Maint Groundskeeper pool.
+    positions:
+      - munis_object: "511003"
+        title: "Department Head (Superintendent of Parks)"
+        fy26_amount: 117427
+        fy27_amount: 112543
+        status: "continuing"
+      - munis_object: "511006"
+        title: "Assistant Department Head #2 (Superintendent of Recreation)"
+        fy26_amount: 98591
+        fy27_amount: 89600
+        status: "continuing"
+        note: >-
+          Article 20 of 2026 ATM warrant reclassifies "Superintendent of
+          Recreation (Recreation & Parks)" on the Administrative Pay Scale.
+      - munis_object: "511651"
+        title: "Park Maintenance Groundskeeper (pool line)"
+        fy26_amount: 225224
+        fy27_amount: 185828
+        status: "reduced"
+        fy26_filled_count: 11
+        note: >-
+          FY26 filled count combines PARK MAINT / GRND (6) + PARK MAINT /
+          GROUNDS (5). Pool reduced ~17%, consistent with the "Cut
+          Groundskeeper" narrative (one of several positions on the line).
+      - munis_object: "511652"
+        title: "Field Craftsman Mechanic"
+        fy26_amount: 67383
+        fy27_amount: 61767
+        status: "continuing"
+      - munis_object: "511653"
+        title: "Park Turf Specialist"
+        fy26_amount: 70922
+        fy27_amount: 73767
+        status: "continuing"
+      - munis_object: "511654"
+        title: "Working Foreman, Building & Grounds"
+        fy26_amount: 71543
+        fy27_amount: 68635
+        status: "continuing"
+      - munis_object: "511655"
+        title: "Seasonal Beach Supervisor"
+        fy26_amount: 8710
+        fy27_amount: 8972
+        status: "continuing"
+      - munis_object: "511656"
+        title: "Seasonal Grounds Caretaker"
+        fy26_amount: 70052
+        fy27_amount: 72154
+        status: "continuing"
+        note: >-
+          Article 20 of 2026 ATM warrant introduces a new "Customer
+          Service & Community Engagement Coordinator (Recreation &
+          Parks)" position grading; not yet visible as a separate object
+          line in the MUNIS detail.
+
+  # ------------------------------------------------------------------------
+  - munis_name: "MODERATOR"
+    matches_org_chart_name: null
+    matches_org_chart_note: >-
+      Town Moderator is an elected officer represented in the org chart
+      under boards.other, not as a department. No staff line.
+    fy26_salary_total: 0
+    fy27_salary_total: 0
+    positions: []
+
+  # ------------------------------------------------------------------------
+  - munis_name: "FINANCE COMMITTEE"
+    matches_org_chart_name: null
+    matches_org_chart_note: >-
+      FinCom is an appointed advisory board with no staff. Stipend-only
+      cost center; no salary positions to enumerate.
+    fy26_salary_total: 0
+    fy27_salary_total: 0
+    positions: []
+
+  # ------------------------------------------------------------------------
+  - munis_name: "TOWN COUNSEL"
+    matches_org_chart_name: "Select Board Office"
+    fy26_salary_total: 2000
+    fy27_salary_total: 2000
+    note: >-
+      Town Counsel is a contracted role, not a salaried position. The $2,000
+      MUNIS line is a stipend; the bulk of Town Counsel cost flows through
+      the Expense side ($276K FY27 vs $113K FY26, +144%).
+    positions:
+      - munis_object: "511003"
+        title: "Town Counsel (stipend; contracted)"
+        fy26_amount: 2000
+        fy27_amount: 2000
+        status: "continuing"
+
+  # ------------------------------------------------------------------------
+  - munis_name: "PLANNING BOARD"
+    matches_org_chart_name: null
+    matches_org_chart_note: >-
+      Planning Board is an elected board (in boards.other on the org chart),
+      not a department. The board's clerical stipend is funded under the
+      Community Development & Planning cost center (PCD-ZN BRD CLERICAL
+      STIPEND, object 511108).
+    fy26_salary_total: 0
+    fy27_salary_total: 0
+    positions: []
+
+# ---------------------------------------------------------------------------
+# DEPARTMENTS NOT COVERED BY THIS FILE (and why)
+# ---------------------------------------------------------------------------
+#
+# Water Department, Sewer Department, Marblehead Municipal Light Department,
+# and Harbormaster are enterprise funds with their own appropriations,
+# governed by separate elected commissions (Water & Sewer Commission, Light
+# Commission, Harbors & Waters Board respectively). Their personnel detail
+# does not appear in the General Fund MUNIS Excel and would need to be
+# pulled from:
+#   - Water/Sewer: the Water & Sewer Commission's own budget submission
+#     (typically published only as part of the Annual Report or commission
+#     minutes; no standalone PDF on marbleheadma.gov as of 2026-06-15).
+#   - MMLD: Light Department budget posted by the Light Commission; not
+#     covered on marbleheadma.gov (separate site, marbleheadelectric.com).
+#   - Harbormaster: enterprise fund; staff appears in the FY26 payroll
+#     roster (dept 652 HARBORMASTER, 17 employees including seasonal)
+#     but not in the General Fund MUNIS Excel.
+#
+# Schools (Admin & Systemwide, all 5 buildings, Revolving Fund, Grants):
+# School Department is a single lump-sum appropriation in the General Fund
+# MUNIS Excel. Building-level personnel detail comes from the FY27 school
+# budget packet (data/schools/sc-meetings-fy26/agenda-and-materials-
+# 2-5-2026-fy27-budget-packet.txt) and is already reflected in
+# _data/org_chart.yml > schools > buildings and > central_office.
+#
+# Parking Clerk: appears in the FY27 appropriation table as an expense-only
+# line ($8,400 FY26 = FY27). No MUNIS salary lines; the Parking Clerk
+# function rolls into the Select Board Office org-chart entry.
+#
+# Sealer of Weights and Measures: appropriation table line, $1,200 FY27
+# (continuing); not a salaried position with a MUNIS personnel object.
+# Listed in the FY26 payroll roster as a stipend role under Dept 241
+# (Building Commissioner).

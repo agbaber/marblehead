@@ -154,7 +154,15 @@ All data compiled April 2026 from primary public sources. Every number is either
   - "Commonwealth of MA" ($15.94M, rank 1) aggregates unrelated state charges (MBTA assessment, charter school tuition, state retirement, etc.). The Cherry Sheet / FY27 Proposed Budget breaks these out line by line.
   - Only FY26 is available in the spending portal; earlier fiscal years return zero. For multi-year vendor trends, this file is insufficient.
   - Snapshot captured 2026-04-17 (FY26 Q3). A later snapshot would include year-end payments and reclassifications.
+  - Superseded for ongoing analysis by `data/town_spending/` (refreshed daily by `.github/workflows/data-refresh.yml`). This dated file is kept as a fixed Q3 reference point.
 - **Confidence:** High for vendor identities and dollar amounts at the snapshot instant. Low for year-end interpretation (8-10 weeks of FY26 still to post).
+
+### FY26 Open Finance rollup (daily, automated)
+- **Files:** `town_spending/department_totals.csv`, `town_spending/vendor_totals.csv`, `town_spending/snapshot_meta.json`
+- Year-to-date FY26 totals broken down by department (9 rows) and by vendor (~2,000 rows), refreshed daily at 10:00 UTC by `.github/workflows/data-refresh.yml`. Department sum equals vendor sum (built-in sanity check). Day-over-day diffs in the git log show which departments and vendors took new payments since the previous business day.
+- **Source:** Same portal as the dated snapshot above (`townofmarblehead-ma-oe.spending.socrata.com/api/chart_data.json`). The `chart_data.json` endpoint only exposes current-FY rollups by a single dimension; date filters and parent/child drilldown are silently ignored. So this is an aggregate sidecar to the richer `checkbook_FY26_*.csv` transaction ledger, not a replacement.
+- **Caveats:** All the FY26 vendor-snapshot caveats above apply (Berkshire Wind, Commonwealth of MA, current-FY only). The "UNDEFINED" department bucket is non-trivial ($13M+) and is the ledger's catch-all for payments not yet mapped to a department code at posting time.
+- **Confidence:** High for current-day totals. Day-to-day deltas are useful for "what got paid yesterday?" provenance, not for trend lines (no historical years available).
 
 ### Auditor Management Letter Findings (6 fiscal years, FY18-FY23)
 - **What it is:** Every internal-control comment in the Town's independent-auditor management letters, FY2018 through FY2023, as a finding-by-year matrix (23 rows). Each row records the finding, the year, its classification (current-year comment, prior-year comment, or material weakness), its status in that year's letter (Raised / Unresolved / Resolved / Ongoing / Carried), a one-line detail, and the source letter plus section/page. Tracks the cash-reconciliation material weakness from its FY2019 origin to its FY2023 resolution, plus accounts-receivable, OPEB-trust, internal-financial-statement, capital-asset, worker-comp, and payroll-withholding findings.
