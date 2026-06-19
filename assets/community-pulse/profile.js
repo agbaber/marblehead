@@ -143,15 +143,12 @@ function renderProfile(root, profile) {
           <span class="pf-method-name">Facebook</span>
           <span class="pf-method-state pf-method-state--on">Connected</span>
         </div>` : ''}
-      <div class="pf-method">
-        <span class="pf-method-icon" aria-hidden="true">&#x1F511;</span>
-        <span class="pf-method-name">Passkey</span>
-        <span class="pf-method-state">
-          ${profile.has_passkey
-            ? '<span class="pf-method-state--on">Connected</span>'
-            : '<a href="/verify.html#add-passkey">Add for faster sign-in</a>'}
-        </span>
-      </div>
+      ${profile.has_passkey ? `
+        <div class="pf-method">
+          <span class="pf-method-icon" aria-hidden="true">&#x1F511;</span>
+          <span class="pf-method-name">Passkey</span>
+          <span class="pf-method-state pf-method-state--on">Connected</span>
+        </div>` : ''}
     </section>
 
     <div class="pf-danger">
