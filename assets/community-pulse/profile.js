@@ -154,16 +154,33 @@ function renderProfile(root, profile) {
   document.getElementById('pf-save-name').addEventListener('click', async () => {
     const v = nameInput.value.trim();
     const r = await postProfile({ display_name: v });
-    if (r.ok) showSaved();
+    if (r.ok) {
+      showSaved();
+      track('verify_display_name_saved', { is_empty: v.length === 0 });
+    }
   });
   const toggle = document.getElementById('pf-public-toggle');
   toggle.addEventListener('change', async (e) => {
-    await postProfile({ public_identity: e.target.checked ? 1 : 0 });
+    const value = e.target.checked ? 1 : 0;
+    await postProfile({ public_identity: value });
     e.target.parentElement.querySelector('.pf-toggle-label').textContent =
       e.target.checked ? 'On' : 'Off';
+    track('verify_public_identity_changed', { value });
   });
   document.getElementById('pf-release').addEventListener('click', async () => {
-    if (confirm('Release this claim and sign out?')) await releaseClaim();
+    if (confirm('Release this claim and sign out?')) {
+      track('verify_claim_released');
+      await releaseClaim();
+    }
+  });
+
+  track('verify_profile_viewed', {
+    state: 'signed_in',
+    claim_source: profile.claim_source,
+    auth_source: profile.auth_source,
+    has_facebook: !!profile.has_facebook,
+    has_passkey: !!profile.has_passkey,
+    public_identity: profile.public_identity === 1,
   });
 }
 
