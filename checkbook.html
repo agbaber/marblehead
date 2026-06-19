@@ -238,6 +238,12 @@ og_url: https://marbleheaddata.org/checkbook/
   }
   .filter-row { display: flex; align-items: center; gap: 4px; }
   .filter-row .sep { font-size: 11px; color: var(--text-subtle); flex-shrink: 0; }
+  /* Date range needs ~2 columns of room: native <input type="date">
+     widgets have a min-content width (~120px in Chromium) and two of
+     them plus a "to" separator overflow a single 180px grid cell.
+     Span two cells, and let the inputs flex-shrink to share the row. */
+  .filter-group--date { grid-column: span 2; }
+  .filter-row input[type="date"] { width: auto; flex: 1 1 0; min-width: 0; }
   .filter-actions {
     display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
     margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--divider);
@@ -727,7 +733,7 @@ og_url: https://marbleheaddata.org/checkbook/
         <label for="f-division">Division</label>
         <select id="f-division"><option value="">All divisions</option></select>
       </div>
-      <div class="filter-group">
+      <div class="filter-group filter-group--date">
         <label for="f-date-min">Date range</label>
         <div class="filter-row">
           <input type="date" id="f-date-min" min="2025-07-01" max="2026-05-29">
