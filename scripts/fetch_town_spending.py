@@ -32,6 +32,8 @@ import datetime as dt
 import json
 import os
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -39,6 +41,41 @@ from pathlib import Path
 PORTAL = "https://townofmarblehead-ma-oe.spending.socrata.com"
 OUT_DIR = Path("data/town_spending")
 USER_AGENT = "marbleheaddata.org daily-refresh (https://marbleheaddata.org)"
+
+# Total backoff window 5 + 15 + 45 = 65s across 4 attempts. The portal's
+# observed transient failures are HTTP 503 and TLS read timeouts that
+# clear within seconds, so a short backoff is enough; longer would
+# make a real outage slower to fail without buying additional success
+# rate.
+RETRY_BACKOFFS = (5, 15, 45)
+
+
+def urlopen_with_retry(req, *, timeout: int):
+    """urlopen() that retries transient errors with exponential backoff.
+
+    Retries on HTTP 5xx, HTTP 429, and any URLError / TimeoutError /
+    OSError (covers DNS, connect, reset, and socket-level timeouts).
+    Other HTTPErrors (4xx other than 429) are raised immediately —
+    those are caller bugs, not upstream blips.
+    """
+    last_err = None
+    attempts = len(RETRY_BACKOFFS) + 1
+    for i in range(attempts):
+        try:
+            return urllib.request.urlopen(req, timeout=timeout)
+        except urllib.error.HTTPError as e:
+            if e.code < 500 and e.code != 429:
+                raise
+            last_err = e
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            last_err = e
+        if i < attempts - 1:
+            wait = RETRY_BACKOFFS[i]
+            print(f"  portal fetch failed ({last_err}); retrying in {wait}s "
+                  f"(attempt {i + 2}/{attempts})", file=sys.stderr, flush=True)
+            time.sleep(wait)
+    assert last_err is not None
+    raise last_err
 
 
 def current_fiscal_year(today: dt.date) -> int:
@@ -54,7 +91,7 @@ def fetch(child_entity: str, year: int, limit: int) -> dict:
     })
     url = f"{PORTAL}/api/chart_data.json?{qs}"
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=60) as resp:
+    with urlopen_with_retry(req, timeout=60) as resp:
         return json.loads(resp.read().decode())
 
 
