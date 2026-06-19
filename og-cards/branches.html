@@ -4,29 +4,34 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="_shared.css">
   <style>
-    svg { width: 100%; max-width: 1060px; height: 300px; margin-top: 8px; }
-    .node rect {
-      fill: var(--bg-lift);
-      stroke: var(--c-teal);
-      stroke-width: 2;
-      rx: 8;
+    .roster {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px 28px;
+      margin-top: 26px;
+      max-width: 1056px;
     }
-    .node text {
-      fill: var(--text);
+    .chip {
+      background: var(--bg-lift);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--c-teal);
+      border-radius: 4px;
+      padding: 16px 22px;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.005em;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .chip .num {
+      font-size: 14px;
       font-weight: 700;
-      font-size: 17px;
-      text-anchor: middle;
-      dominant-baseline: middle;
-      font-family: 'Libre Franklin', sans-serif;
-    }
-    .node circle {
-      fill: var(--c-teal);
-      stroke: var(--bg-base);
-      stroke-width: 2;
-    }
-    .edge {
-      stroke: var(--rule);
-      stroke-width: 2;
+      letter-spacing: 0.16em;
+      color: var(--text-sub);
+      font-variant-numeric: tabular-nums;
     }
   </style>
 </head>
@@ -36,31 +41,24 @@
       <span class="mark"></span>
       <span>Tool</span>
       <span class="sep">/</span>
-      <span>Verification network</span>
+      <span>Neighborhood branches</span>
     </header>
 
     <div>
-      <h1 class="card-headline">How Marblehead residents <em>verify each other.</em></h1>
-      <svg viewBox="0 0 1060 300">
-        <line class="edge" x1="120" y1="100" x2="320" y2="60"/>
-        <line class="edge" x1="120" y1="100" x2="280" y2="220"/>
-        <line class="edge" x1="320" y1="60" x2="540" y2="140"/>
-        <line class="edge" x1="280" y1="220" x2="540" y2="140"/>
-        <line class="edge" x1="540" y1="140" x2="780" y2="60"/>
-        <line class="edge" x1="540" y1="140" x2="800" y2="240"/>
-
-        <g class="node"><rect x="20" y="76" width="200" height="48"/><circle cx="120" cy="100" r="4"/><text x="120" y="100">Glover's Regiment</text></g>
-        <g class="node"><rect x="220" y="36" width="200" height="48"/><circle cx="320" cy="60" r="4"/><text x="320" y="60">Mugford's Prize</text></g>
-        <g class="node"><rect x="180" y="196" width="200" height="48"/><circle cx="280" cy="220" r="4"/><text x="280" y="220">Devereux Runners</text></g>
-        <g class="node"><rect x="440" y="116" width="200" height="48"/><circle cx="540" cy="140" r="4"/><text x="540" y="140">Gerry's Signers</text></g>
-        <g class="node"><rect x="680" y="36" width="200" height="48"/><circle cx="780" cy="60" r="4"/><text x="780" y="60">Goodwin's Head Post</text></g>
-        <g class="node"><rect x="700" y="216" width="200" height="48"/><circle cx="800" cy="240" r="4"/><text x="800" y="240">Lee Mansion Circle</text></g>
-      </svg>
+      <h1 class="card-headline">See who's verified <em>in your neighborhood.</em></h1>
+      <div class="roster">
+        <div class="chip"><span>Glover's Regiment</span><span class="num">01</span></div>
+        <div class="chip"><span>The Hannah Crew</span><span class="num">02</span></div>
+        <div class="chip"><span>Mugford's Prize</span><span class="num">03</span></div>
+        <div class="chip"><span>Fort Sewall Watch</span><span class="num">04</span></div>
+        <div class="chip"><span>Old North Company</span><span class="num">05</span></div>
+        <div class="chip"><span>Powder House Hill</span><span class="num">06</span></div>
+      </div>
     </div>
 
     <footer class="card-foot">
       <span class="url">marbleheaddata.org/branches</span>
-      <span>Each branch named for a Marblehead Revolutionary War figure</span>
+      <span>Branch names drawn from Marblehead's Revolutionary War history</span>
     </footer>
   </main>
 </body>
