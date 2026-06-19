@@ -6,58 +6,112 @@ entity: vendors
 entity_label: Vendor payments
 ---
 
-<input type="search" class="browse-search" placeholder="search vendors, departments, descriptions...">
+<div class="browse-list-view">
+  <input type="search" class="browse-search" placeholder="search vendors, departments, descriptions...">
 
-<div class="browse-filters"></div>
-<p class="browse-row-count"></p>
+  <div class="browse-filters"></div>
+  <p class="browse-row-count"></p>
 
-<div class="browse-table-wrap">
-  <table class="browse-table">
-    <thead><tr></tr></thead>
-    <tbody></tbody>
-  </table>
+  <div class="browse-table-wrap">
+    <table class="browse-table">
+      <thead><tr></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <button class="browse-load-more">Load more</button>
+
+  <p class="browse-footnote">
+    Source: <code>marbleheaddata.sqlite</code> &rarr; <code>vendor_payments</code>,
+    ingested from the Marblehead Open Finance vendor checks export.
+    Department is the source CSV's Division when present, otherwise
+    falls back to Fund. The label "Unattributed" marks rows with neither.
+  </p>
 </div>
 
-<button class="browse-load-more">Load more</button>
-
-<p class="browse-footnote">
-  Source: <code>marbleheaddata.sqlite</code> &rarr; <code>vendor_payments</code>,
-  ingested from the Marblehead Open Finance vendor checks export.
-  Department is the source CSV's Division when present, otherwise
-  falls back to Fund. The label "Unattributed" marks rows with neither.
-</p>
+<div class="browse-detail-view">
+  <div class="detail-header"></div>
+  <div class="detail-body"></div>
+  <p class="browse-footnote">
+    <a href="/browse/vendors/">&larr; back to all vendors</a>
+  </p>
+</div>
 
 <script src="/assets/browse.js" defer></script>
 <script>
 window.addEventListener("DOMContentLoaded", function () {
-  window.Browse.renderListView({
-    table: "vendor_payments",
-    columns: [
-      { column: "payment_date", label: "Date", format: "date" },
-      { column: "vendor", label: "Vendor", linkTemplate: "/browse/vendors/#{slug}" },
-      { column: "department", label: "Department", linkTemplate: "/browse/dept/#{slug}" },
-      { column: "fund", label: "Fund" },
-      { column: "amount", label: "Amount", format: "money" },
-    ],
-    filters: [
-      {
-        column: "fiscal_year",
-        label: "FY",
-        multi: true,
-        valuesFrom: "distinct",
+  window.Browse.mountListAndDetail(
+    {
+      table: "vendor_payments",
+      columns: [
+        { column: "payment_date", label: "Date", format: "date" },
+        { column: "vendor", label: "Vendor", linkTemplate: "/browse/vendors/#{slug}" },
+        { column: "department", label: "Department", linkTemplate: "/browse/dept/#{slug}" },
+        { column: "fund", label: "Fund" },
+        { column: "amount", label: "Amount", format: "money" },
+      ],
+      filters: [
+        { column: "fiscal_year", label: "FY", multi: true, valuesFrom: "distinct" },
+        { column: "department", label: "Dept", multi: true, valuesFrom: "distinct", topN: 12 },
+      ],
+      searchColumns: ["vendor", "department", "category", "fund"],
+      defaultSortColumn: "payment_date",
+      defaultSortDesc: true,
+      pageSize: 100,
+    },
+    {
+      headerQuery: {
+        keyColumn: "vendor",
+        allSql: "SELECT vendor, department, fund, payment_date, amount FROM vendor_payments",
+        render: function (rows) {
+          var vendor = rows[0].vendor;
+          var total = 0;
+          var depts = {};
+          var funds = {};
+          var first = rows[0].payment_date;
+          var last = rows[0].payment_date;
+          for (var i = 0; i < rows.length; i++) {
+            total += Number(rows[i].amount) || 0;
+            if (rows[i].department) depts[rows[i].department] = true;
+            if (rows[i].fund) funds[rows[i].fund] = true;
+            if (rows[i].payment_date < first) first = rows[i].payment_date;
+            if (rows[i].payment_date > last) last = rows[i].payment_date;
+          }
+          var fmtMoney = function (n) {
+            return "$" + Math.round(n).toLocaleString();
+          };
+          var deptList = Object.keys(depts).sort().join(", ");
+          var fundList = Object.keys(funds).sort().join(", ");
+          return (
+            '<h2>' + (vendor ? vendor.replace(/</g, "&lt;") : "(unnamed)") + '</h2>' +
+            '<dl class="detail-header-grid">' +
+              '<div><dt>Total paid</dt><dd>' + fmtMoney(total) + '</dd></div>' +
+              '<div><dt>Payments</dt><dd>' + rows.length + '</dd></div>' +
+              '<div><dt>First payment</dt><dd>' + first + '</dd></div>' +
+              '<div><dt>Last payment</dt><dd>' + last + '</dd></div>' +
+              '<div><dt>Departments</dt><dd>' + (deptList || "(none)") + '</dd></div>' +
+              '<div><dt>Funds</dt><dd>' + (fundList || "(none)") + '</dd></div>' +
+            '</dl>'
+          );
+        },
       },
-      {
-        column: "department",
-        label: "Dept",
-        multi: true,
-        valuesFrom: "distinct",
-        topN: 12,
-      },
-    ],
-    searchColumns: ["vendor", "department", "category", "fund"],
-    defaultSortColumn: "payment_date",
-    defaultSortDesc: true,
-    pageSize: 100,
-  });
+      sections: [
+        {
+          heading: "All payments",
+          className: "detail-section detail-payments",
+          sql: "SELECT payment_date, department, fund, category, amount, vendor FROM vendor_payments ORDER BY payment_date DESC",
+          filterBySlug: "vendor",
+          columns: [
+            { column: "payment_date", label: "Date", format: "date" },
+            { column: "department", label: "Department", linkTemplate: "/browse/dept/#{slug}" },
+            { column: "fund", label: "Fund" },
+            { column: "category", label: "Description" },
+            { column: "amount", label: "Amount", format: "money" },
+          ],
+          emptyMessage: "No payments to this vendor.",
+        },
+      ],
+    }
+  );
 });
 </script>

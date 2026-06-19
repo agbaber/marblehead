@@ -486,7 +486,7 @@
     var list = document.querySelector(".browse-list-view");
     var detail = document.querySelector(".browse-detail-view");
     if (list) list.style.display = isDetail ? "none" : "";
-    if (detail) detail.style.display = isDetail ? "" : "none";
+    if (detail) detail.style.display = isDetail ? "block" : "none";
   }
 
   /* Router: on initial paint and on hashchange, decide which view runs. */
