@@ -7,77 +7,83 @@
     .bar {
       width: 100%;
       max-width: 1060px;
-      height: 88px;
+      height: 72px;
       display: flex;
-      border-radius: 12px;
+      border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 1px 3px rgba(15,42,61,.10);
+      box-shadow: 0 4px 18px rgba(0,0,0,.35);
+      margin-top: 22px;
     }
     .seg {
       display: flex;
       align-items: center;
-      padding: 0 18px;
-      color: white;
+      padding: 0 16px;
+      color: var(--text);
       font-weight: 700;
-      font-size: 21px;
-      white-space: nowrap;
-      overflow: hidden;
+      font-size: 18px;
+      letter-spacing: 0.02em;
     }
-    .seg.schools  { background: var(--c-buoy); flex: 47.6; }
-    .seg.other    { background: var(--c-navy); flex: 25.0; }
-    .seg.safety   { background: var(--c-teal); flex: 11.9; }
-    .seg.water    { background: var(--c-sage); flex: 6.9; }
-    .seg.works    { background: var(--c-plum); flex: 6.9; }
-    .seg.rest     { background: #93A4B0;        flex: 24.5; }
+    .seg.schools  { background: var(--c-buoy); }
+    .seg.town     { background: var(--c-teal); }
+    .seg.benefits { background: var(--c-brass); color: #0A1A24; }
+    .seg.debt     { background: var(--c-sage); color: #0A1A24; }
+    .seg.other    { background: #44606E; }
 
     .legend {
-      margin-top: 22px;
+      margin-top: 18px;
       display: flex;
       gap: 28px;
-      font-size: 21px;
-      color: var(--c-mid);
       flex-wrap: wrap;
+      font-size: 17px;
+      color: var(--text-mid);
     }
     .legend span::before {
       content: "";
       display: inline-block;
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
       margin-right: 8px;
-      border-radius: 3px;
-      vertical-align: -2px;
+      border-radius: 2px;
+      vertical-align: -1px;
     }
-    .legend .schools::before { background: var(--c-buoy); }
-    .legend .other::before   { background: var(--c-navy); }
-    .legend .safety::before  { background: var(--c-teal); }
-    .legend .water::before   { background: var(--c-sage); }
-    .legend .works::before   { background: var(--c-plum); }
-    .legend .rest::before    { background: #93A4B0; }
+    .legend .schools::before  { background: var(--c-buoy); }
+    .legend .town::before     { background: var(--c-teal); }
+    .legend .benefits::before { background: var(--c-brass); }
+    .legend .debt::before     { background: var(--c-sage); }
+    .legend .other::before    { background: #44606E; }
   </style>
 </head>
 <body>
   <main class="card">
-    <header class="card-mark">marbleheaddata.org</header>
-    <h1 class="card-headline">$122.76M, line by line.</h1>
-    <div class="card-visual">
+    <header class="card-eyebrow">
+      <span class="mark"></span>
+      <span>Tool</span>
+      <span class="sep">/</span>
+      <span>Town budget</span>
+    </header>
+
+    <div>
+      <h1 class="card-headline"><em>$122.76M</em>, line by line.</h1>
       <div class="bar">
-        <div class="seg schools">Schools $47.6M</div>
-        <div class="seg other">Benefits &amp; debt</div>
-        <div class="seg safety">Safety</div>
-        <div class="seg water">Water</div>
-        <div class="seg works">DPW</div>
-        <div class="seg rest">Other</div>
+        <div class="seg schools"  style="flex: 47.6">Schools $47.6M</div>
+        <div class="seg town"     style="flex: 28">Town departments</div>
+        <div class="seg benefits" style="flex: 18">Benefits</div>
+        <div class="seg debt"     style="flex: 10">Debt</div>
+        <div class="seg other"    style="flex: 19">Other</div>
       </div>
       <div class="legend">
-        <span class="schools">Schools $47.6M</span>
-        <span class="other">Benefits &amp; debt $25.0M</span>
-        <span class="safety">Public safety $11.9M</span>
-        <span class="water">Water $6.9M</span>
-        <span class="works">Public works $6.9M</span>
-        <span class="rest">Other $24.5M</span>
+        <span class="schools">Schools</span>
+        <span class="town">Town departments</span>
+        <span class="benefits">Benefits</span>
+        <span class="debt">Debt</span>
+        <span class="other">Other</span>
       </div>
     </div>
-    <footer class="card-foot">/town-budget &middot; FY27 Proposed (No Override) + Enterprise</footer>
+
+    <footer class="card-foot">
+      <span class="url">marbleheaddata.org/town-budget</span>
+      <span>FY27 Proposed (No Override)</span>
+    </footer>
   </main>
 </body>
 </html>

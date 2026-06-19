@@ -5,40 +5,76 @@
   <link rel="stylesheet" href="_shared.css">
   <style>
     .ledger {
-      width: 100%;
-      max-width: 1060px;
-      border-collapse: collapse;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 24px;
+      row-gap: 0;
+      max-width: 1020px;
       font-variant-numeric: tabular-nums;
     }
-    .ledger td {
-      padding: 14px 20px;
-      border-top: 1px solid var(--c-border);
-      font-size: 26px;
-      color: var(--c-mid);
+    .ledger .row {
+      display: contents;
     }
-    .ledger td.amt { text-align: right; font-weight: 700; color: var(--c-text); }
-    .ledger tr.total td {
-      border-top: 3px solid var(--c-navy);
-      color: var(--c-navy);
-      font-weight: 800;
-      font-size: 30px;
+    .ledger .cat {
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--text-mid);
+      padding: 16px 0;
+      border-top: 1px solid var(--rule);
+    }
+    .ledger .amt {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+      padding: 16px 0;
+      border-top: 1px solid var(--rule);
+      text-align: right;
+    }
+    .ledger .row.first .cat,
+    .ledger .row.first .amt {
+      border-top-color: transparent;
+    }
+    .ledger .row.summary .cat {
+      color: var(--c-buoy);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 18px;
+      padding-top: 22px;
+      border-top: 2px solid var(--c-buoy);
+    }
+    .ledger .row.summary .amt {
+      color: var(--text);
+      font-weight: 700;
+      padding-top: 22px;
+      border-top: 2px solid var(--c-buoy);
     }
   </style>
 </head>
 <body>
   <main class="card">
-    <header class="card-mark">marbleheaddata.org</header>
-    <h1 class="card-headline">Every check the town wrote.</h1>
-    <div class="card-visual">
-      <table class="ledger">
-        <tr><td>Schools</td><td class="amt">$37.4M</td></tr>
-        <tr><td>Light Department</td><td class="amt">$13.2M</td></tr>
-        <tr><td>Public Safety</td><td class="amt">$9.9M</td></tr>
-        <tr><td>Debt Service</td><td class="amt">$9.3M</td></tr>
-        <tr class="total"><td colspan="2">FY26 vendor checks, every line traceable</td></tr>
-      </table>
+    <header class="card-eyebrow">
+      <span class="mark"></span>
+      <span>Tool</span>
+      <span class="sep">/</span>
+      <span>Checkbook</span>
+    </header>
+
+    <div>
+      <h1 class="card-headline">FY26: <em>every check the town wrote.</em></h1>
+      <div class="ledger">
+        <div class="row first"><div class="cat">Schools</div><div class="amt">$37.4M</div></div>
+        <div class="row"><div class="cat">Light Department</div><div class="amt">$13.2M</div></div>
+        <div class="row"><div class="cat">Public Safety</div><div class="amt">$9.9M</div></div>
+        <div class="row"><div class="cat">Debt Service</div><div class="amt">$9.3M</div></div>
+        <div class="row summary"><div class="cat">Every line, every vendor</div><div class="amt"></div></div>
+      </div>
     </div>
-    <footer class="card-foot">/checkbook</footer>
+
+    <footer class="card-foot">
+      <span class="url">marbleheaddata.org/checkbook</span>
+      <span>FY26, refreshed nightly</span>
+    </footer>
   </main>
 </body>
 </html>

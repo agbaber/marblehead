@@ -3,62 +3,25 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="_shared.css">
-  <style>
-    .compare {
-      display: grid;
-      grid-template-columns: auto auto 1fr;
-      gap: 28px;
-      align-items: center;
-      width: 100%;
-    }
-    .stack {
-      font-variant-numeric: tabular-nums;
-      text-align: right;
-    }
-    .stack .num { font-size: 72px; font-weight: 800; color: var(--c-navy); line-height: 1; }
-    .stack .lbl { font-size: 22px; color: var(--c-mid); margin-top: 6px; letter-spacing: 0.03em; }
-    .arrow {
-      font-size: 56px;
-      color: var(--c-buoy);
-      font-weight: 700;
-    }
-    .deltas {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px 24px;
-      font-size: 22px;
-      color: var(--c-mid);
-      max-width: 580px;
-    }
-    .deltas b { color: var(--c-text); font-variant-numeric: tabular-nums; }
-  </style>
 </head>
 <body>
   <main class="card">
-    <header class="card-mark">marbleheaddata.org</header>
-    <h1 class="card-headline">Marblehead's GF grew $35.7M in a decade.</h1>
-    <div class="card-visual">
-      <div class="compare">
-        <div class="stack">
-          <div class="num">$70.5M</div>
-          <div class="lbl">FY15</div>
-        </div>
-        <div class="arrow">&rarr;</div>
-        <div class="stack" style="text-align:left">
-          <div class="num">$106.2M</div>
-          <div class="lbl">FY26</div>
-        </div>
-      </div>
-      <div class="deltas" style="margin-top: 36px">
-        <div><b>Schools</b> nearly half of growth</div>
-        <div><b>Health insurance</b></div>
-        <div><b>Public safety</b></div>
-        <div><b>Debt service</b></div>
-        <div><b>Pensions</b></div>
-        <div><b>Everything else</b></div>
-      </div>
+    <header class="card-eyebrow">
+      <span class="mark"></span>
+      <span>Tool</span>
+      <span class="sep">/</span>
+      <span>Where the money went</span>
+    </header>
+
+    <div>
+      <h1 class="card-headline">Marblehead's general&nbsp;fund grew <em>$35.7M</em> in a decade.</h1>
+      <p class="card-subhead">$70.5M in FY15 to $106.2M in FY26. Six categories explain nearly all of the growth. Schools alone are nearly half.</p>
     </div>
-    <footer class="card-foot">/where-has-the-money-gone</footer>
+
+    <footer class="card-foot">
+      <span class="url">marbleheaddata.org/where-has-the-money-gone</span>
+      <span>Source: town ACFRs, FY15–FY26</span>
+    </footer>
   </main>
 </body>
 </html>

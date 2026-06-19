@@ -3,69 +3,25 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="_shared.css">
-  <style>
-    .calc {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 32px;
-      align-items: center;
-      width: 100%;
-      max-width: 1060px;
-    }
-    .inputs {
-      background: var(--c-surface);
-      border: 1px solid var(--c-border);
-      border-radius: 14px;
-      padding: 22px 26px;
-      box-shadow: 0 1px 3px rgba(15,42,61,.10);
-    }
-    .field { margin-bottom: 18px; }
-    .field:last-child { margin-bottom: 0; }
-    .field .l { font-size: 18px; color: var(--c-sub); text-transform: uppercase; letter-spacing: 0.05em; }
-    .field .v { font-size: 36px; font-weight: 700; color: var(--c-text); font-variant-numeric: tabular-nums; }
-    .credit {
-      text-align: center;
-      padding: 22px 24px;
-      border-radius: 14px;
-      background: var(--c-navy);
-      color: white;
-    }
-    .credit .amt {
-      font-size: 76px;
-      font-weight: 800;
-      line-height: 1;
-      font-variant-numeric: tabular-nums;
-    }
-    .credit .lbl {
-      margin-top: 10px;
-      font-size: 20px;
-      letter-spacing: 0.04em;
-    }
-  </style>
 </head>
 <body>
   <main class="card">
-    <header class="card-mark">marbleheaddata.org</header>
-    <h1 class="card-headline">Two senior tax breaks worth claiming.</h1>
-    <div class="card-visual">
-      <div class="calc">
-        <div class="inputs">
-          <div class="field">
-            <div class="l">Home assessed value</div>
-            <div class="v">$725,000</div>
-          </div>
-          <div class="field">
-            <div class="l">Household income</div>
-            <div class="v">$48,000</div>
-          </div>
-        </div>
-        <div class="credit">
-          <div class="amt">$2,820</div>
-          <div class="lbl">Circuit Breaker max</div>
-        </div>
-      </div>
+    <header class="card-eyebrow">
+      <span class="mark"></span>
+      <span>Tool</span>
+      <span class="sep">/</span>
+      <span>Senior tax relief</span>
+    </header>
+
+    <div>
+      <h1 class="card-headline">Two senior tax breaks <em>worth claiming.</em></h1>
+      <p class="card-subhead">The state Circuit Breaker refunds up to $2,820 a year. Marblehead's local exemption (Chapter 67 of 2026) stacks on top, pending Select Board implementation.</p>
     </div>
-    <footer class="card-foot">/senior-tax-relief &middot; plus Article 28 (Chapter 67 of 2026), pending implementation</footer>
+
+    <footer class="card-foot">
+      <span class="url">marbleheaddata.org/senior-tax-relief</span>
+      <span>Calculator inside</span>
+    </footer>
   </main>
 </body>
 </html>
