@@ -194,3 +194,38 @@ def test_meetings_ingest():
         assert dupes is None, f"Duplicate slug found: {dupes}"
     finally:
         conn.close()
+
+
+def test_topics_ingest():
+    """topics ingest scans topics/*.html front-matter."""
+    conn = _open_memory_db()
+    try:
+        n = build_sqlite_db.build_topics(conn)
+        assert n >= 10, f"Expected at least 10 topic rows, got {n}"
+
+        cols = [
+            row[1]
+            for row in conn.execute("PRAGMA table_info(topics)").fetchall()
+        ]
+        assert cols == [
+            "slug",
+            "title",
+            "description",
+            "page_url",
+            "meeting_count",
+        ], f"Unexpected schema: {cols}"
+
+        # Known row: health-insurance
+        row = conn.execute(
+            "SELECT title, page_url FROM topics WHERE slug = 'health-insurance'"
+        ).fetchone()
+        assert row is not None, "Expected health-insurance topic row"
+        assert "Health insurance" in row[0]
+        assert row[1] == "/topics/health-insurance/"
+
+        # Slug uniqueness (PRIMARY KEY)
+        n_rows = conn.execute("SELECT COUNT(*) FROM topics").fetchone()[0]
+        n_distinct = conn.execute("SELECT COUNT(DISTINCT slug) FROM topics").fetchone()[0]
+        assert n_rows == n_distinct, "Slug collision"
+    finally:
+        conn.close()

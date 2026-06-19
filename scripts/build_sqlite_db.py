@@ -25,6 +25,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 TRANSCRIPTS_DIR = ROOT / "_transcripts"
+TOPICS_DIR = ROOT / "topics"
 OUT_DIR = ROOT / "assets" / "data"
 OUT_PATH = OUT_DIR / "marbleheaddata.sqlite"
 
@@ -466,6 +467,52 @@ def build_meetings(conn: sqlite3.Connection) -> int:
     return len(payload)
 
 
+def build_topics(conn: sqlite3.Connection) -> int:
+    """Ingest every topics/*.html front-matter into a topics table."""
+    conn.execute('DROP TABLE IF EXISTS "topics"')
+    conn.execute(
+        """CREATE TABLE topics (
+            slug TEXT PRIMARY KEY,
+            title TEXT,
+            description TEXT,
+            page_url TEXT,
+            meeting_count INTEGER
+        )"""
+    )
+
+    payload: list[tuple] = []
+    for html in sorted(TOPICS_DIR.glob("*.html")):
+        fm = _parse_frontmatter(html)
+        slug = fm.get("topic_slug") or html.stem
+        title = fm.get("title", "")
+        page_url = fm.get("permalink", f"/topics/{slug}/")
+        payload.append((slug, title, "", page_url, 0))
+
+    conn.executemany(
+        """INSERT INTO topics (
+            slug, title, description, page_url, meeting_count
+        ) VALUES (?, ?, ?, ?, ?)""",
+        payload,
+    )
+
+    today = date.today().isoformat()
+    conn.execute(
+        'INSERT OR REPLACE INTO _meta '
+        '("table", description, source, row_count, csv_name, last_updated) '
+        "VALUES (?, ?, ?, ?, ?, ?)",
+        (
+            "topics",
+            "The site's topic-feed pages: slug, title, page URL. "
+            "description and meeting_count populate in later phases.",
+            "topics/*.html front-matter.",
+            len(payload),
+            "topics/*.html",
+            today,
+        ),
+    )
+    return len(payload)
+
+
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     if OUT_PATH.exists():
@@ -497,6 +544,8 @@ def main() -> None:
         print(f"  {'budget_lines':32s} {n_bl:>7,} rows  (FY*_budget_summary.json)")
         n_m = build_meetings(conn)
         print(f"  {'meetings':32s} {n_m:>7,} rows  (_transcripts/*.md)")
+        n_t = build_topics(conn)
+        print(f"  {'topics':32s} {n_t:>7,} rows  (topics/*.html)")
         conn.commit()
         conn.execute("VACUUM")
     finally:
