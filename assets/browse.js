@@ -62,6 +62,13 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
+  /* Slugify a string: lowercase, non-alphanumerics to hyphens, collapsed. */
+  function slugify(s) {
+    return String(s == null ? "" : s)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
 
   /* Build a WHERE clause + binding list from active filters and the
      current search term. Returns { sql: "...", params: [...] }. */
@@ -120,6 +127,9 @@
         var cell;
         if (col.linkColumn && row[col.linkColumn]) {
           cell = '<a href="' + escapeHtml(row[col.linkColumn]) + '">' + formatted + "</a>";
+        } else if (col.linkTemplate && value != null && value !== "") {
+          var href = col.linkTemplate.replace(/\{slug\}/g, slugify(value));
+          cell = '<a href="' + escapeHtml(href) + '">' + formatted + "</a>";
         } else {
           cell = formatted;
         }
