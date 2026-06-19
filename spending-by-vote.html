@@ -468,11 +468,11 @@ og_url: https://marbleheaddata.org/spending-by-vote/
         <a class="seg other"  href="#bucket-other" data-flex-from="buckets[key:other].share" style="flex: 1.2"></a>
       </div>
       <div class="stack-legend">
-        <span><i class="sw-ballot"></i> Ballot, you voted directly</span>
+        <span><i class="sw-ballot"></i> Debt exclusions (voted at the ballot)</span>
         <span><i class="sw-tm"></i> Town Meeting, you, in person, if you went</span>
         <span><i class="sw-enter"></i> Ratepayer, not your tax bill</span>
         <span><i class="sw-grant"></i> State / federal grants</span>
-        <span><i class="sw-rev"></i> Revolving (user fees)</span>
+        <span><i class="sw-rev"></i> Revolving (recreation / trash fees)</span>
         <span><i class="sw-other"></i> Trusts &amp; donations</span>
       </div>
     </div>
@@ -482,7 +482,7 @@ og_url: https://marbleheaddata.org/spending-by-vote/
       <!-- BALLOT -->
       <article class="choice" id="bucket-ballot">
         <span class="accent ballot"></span>
-        <h3 class="title">Voted by you, at the ballot</h3>
+        <h3 class="title">Debt exclusions (voted at the ballot)</h3>
         <div class="amt"><span data-fill="buckets[key:ballot].amount|usd">$6.73M</span><small><span data-fill="buckets[key:ballot].share|pct">6.7%</span> of FY26 spend</small></div>
         <p class="who"><b>Who chose this:</b> Marblehead voters at past ballot elections, approving debt exclusions to fund specific capital projects outside Proposition 2&frac12;.</p>
         <div class="whenset"><span class="whentag">When set</span><span><b>Past ballot elections (2015&ndash;2025).</b> Once a debt exclusion passes, the bond term locks payments in for 10&ndash;30 years. FY26 is the year on the amortization schedule, not the year of the decision.</span></div>
@@ -609,7 +609,7 @@ og_url: https://marbleheaddata.org/spending-by-vote/
         <!-- The honesty box: the carve-out inside this bucket -->
         <div class="subbucket" id="tm-carveout">
           <h4>Choice qualifier: essentially none of this <span data-fill="gf_town_carveout.total|usd">$43.91M</span> was a fresh Town Meeting decision this year</h4>
-          <p>Inside <b>General Fund &ndash; Town</b>, <b><span data-fill="gf_town_carveout.fixed_total|usd">$37.63M</span> (<span data-fill="gf_town_carveout.fixed_share|pct">86%</span>)</b> was set by outside boards or past ballots, <b><span data-fill="gf_town_carveout.admin_contracts_total|usd">$4.43M</span> (<span data-fill="gf_town_carveout.admin_contracts_share|pct">10%</span>)</b> is multi-year contracts the Town Administrator signed in prior years (trash, <abbr class="g" title="Information Technology">IT</abbr>/SaaS, dental, deferred-comp admin, audit, legal), and <b><span data-fill="gf_town_carveout.other_recurring_total|usd">$1.85M</span> (<span data-fill="gf_town_carveout.other_recurring_share|pct">4%</span>)</b> is recurring professional services, refunds, commodities, and interfund transfers. The portion that was actually a fresh choice at the May 2025 Annual Town Meeting: close to zero.</p>
+          <p>Inside <b>General Fund &ndash; Town</b>, <b><span data-fill="gf_town_carveout.fixed_total|usd">$37.63M</span> (<span data-fill="gf_town_carveout.fixed_share|pct">86%</span>)</b> was set by outside boards or past ballots, <b><span data-fill="gf_town_carveout.admin_contracts_total|usd">$4.43M</span> (<span data-fill="gf_town_carveout.admin_contracts_share|pct">10%</span>)</b> is multi-year contracts the Town Administrator signed in prior years (trash, <abbr class="g" title="Information Technology">IT</abbr>/SaaS, dental, deferred-comp admin, audit, legal), and <b><span data-fill="gf_town_carveout.other_recurring_total|usd">$1.85M</span> (<span data-fill="gf_town_carveout.other_recurring_share|pct">4%</span>)</b> is recurring professional services, refunds, commodities, and interfund transfers. The portion that was actually a fresh choice at the May 2025 Annual Town Meeting was close to zero. Town Meeting could in principle add new spending from the floor, but adding to a balanced budget requires either cutting another line, drawing on Free Cash or Stabilization, or authorizing a new revenue source, and none of that happened materially in May 2025.</p>
 
           <div class="cstack" role="img" aria-label="Composition of GF-Town vendor spend by what locked it in">
             <div class="cseg fixed a"   data-flex-from="gf_town_carveout.segments[key:gic_insurance].share" style="flex: 33.4">GIC&nbsp;<span data-fill="gf_town_carveout.segments[key:gic_insurance].share|pct-tight">33%</span></div>
@@ -732,7 +732,7 @@ og_url: https://marbleheaddata.org/spending-by-vote/
       <!-- REVOLVING -->
       <article class="choice" id="bucket-revolving">
         <span class="accent rev"></span>
-        <h3 class="title">Revolving funds (paid by users of the service)</h3>
+        <h3 class="title">Revolving funds: recreation programs, commercial trash, similar fee-funded services</h3>
         <div class="amt"><span data-fill="buckets[key:revolving].amount|usd">$1.28M</span><small><span data-fill="buckets[key:revolving].share|pct">1.3%</span> of FY26 spend</small></div>
         <p class="who"><b>Who chose this:</b> Town Meeting authorizes each revolving fund under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section53E1~2">MGL c.44 &sect;53E&frac12;</a>. The dollars come from program fees, not tax revenue, and can only be spent on that program.</p>
         <div class="whenset"><span class="whentag">When set</span><span><b>Re-authorized at each Annual Town Meeting.</b> Each revolving fund's spending cap and purpose has to be renewed annually by vote. The actual cash comes in as participating businesses or recreation users pay fees.</span></div>
@@ -769,7 +769,6 @@ og_url: https://marbleheaddata.org/spending-by-vote/
     <h3>What moved since the last snapshot (Jun 2 &rarr; Jun 9)</h3>
     <p><b>+$3.22M</b> in new payments across <b>1,181</b> new ledger rows. <b>837</b> prior rows were edited or reversed (normal end-of-month reconciliation). The motion concentrated in fewer than 10 vendors. <span class="src" style="display: block; margin-top: 6px;">Sources: <a href="/data/checkbook_FY26_2026-06-09.csv">Jun 9 snapshot</a> vs. the Jun 2 snapshot (in <a href="https://github.com/agbaber/marblehead/commits/main/data">commit history</a>).</span></p>
     <ul>
-      <li><span><span class="name">Town of Marblehead</span><span class="src">interfund / payroll-adjacent transfers, 863 rows</span></span><span class="v">+$1.37M</span></li>
       <li><span><span class="name">Berkshire Wind Power Cooperative</span><span class="src">Light Dept wholesale, ratepayer not tax</span></span><span class="v">+$1.05M</span></li>
       <li><span><span class="name">Boston Higashi School</span><span class="src">out-of-district SpEd tuition placement</span></span><span class="v">+$0.15M</span></li>
       <li><span><span class="name">Melmark New England</span><span class="src">out-of-district SpEd tuition placement</span></span><span class="v">+$0.10M</span></li>
