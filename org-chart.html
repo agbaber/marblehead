@@ -46,8 +46,9 @@ og_url: https://marbleheaddata.org/org-chart.html
     <div class="org-column-header">Town</div>
     <div class="org-root">
       <span class="org-root-title">{{ site.data.org_chart.town.head.title }}</span>
-      <span class="org-card-fte"><span class="org-card-num">{{ site.data.org_chart.town.head.fte }}</span><sup class="cite" data-href="{{ site.data.org_chart.town.head.source_url }}" data-source="{{ site.data.org_chart.town.head.source_label }}"></sup></span>
+      <span class="org-card-fte"><span class="org-card-num">{{ site.data.org_chart.town.head.fte }}</span></span>
       {% if site.data.org_chart.town.head.note %}<p class="org-card-note">{{ site.data.org_chart.town.head.note }}</p>{% endif %}
+      <p class="org-card-source">Source<sup class="cite" data-href="{{ site.data.org_chart.town.head.source_url }}" data-source="{{ site.data.org_chart.town.head.source_label }}"></sup></p>
     </div>
 
     {% for cluster_name in site.data.org_chart.town.cluster_order %}
@@ -108,8 +109,9 @@ og_url: https://marbleheaddata.org/org-chart.html
     <div class="org-column-header">Schools</div>
     <div class="org-root">
       <span class="org-root-title">{{ site.data.org_chart.schools.head.title }}</span>
-      <span class="org-card-fte"><span class="org-card-num">{{ site.data.org_chart.schools.head.fte }}</span><sup class="cite" data-href="{{ site.data.org_chart.schools.head.source_url }}" data-source="{{ site.data.org_chart.schools.head.source_label }}"></sup></span>
+      <span class="org-card-fte"><span class="org-card-num">{{ site.data.org_chart.schools.head.fte }}</span></span>
       {% if site.data.org_chart.schools.head.note %}<p class="org-card-note">{{ site.data.org_chart.schools.head.note }}</p>{% endif %}
+      <p class="org-card-source">Source<sup class="cite" data-href="{{ site.data.org_chart.schools.head.source_url }}" data-source="{{ site.data.org_chart.schools.head.source_label }}"></sup></p>
     </div>
 
     {% assign co_total = 0 %}
