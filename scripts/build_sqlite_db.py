@@ -15,6 +15,7 @@ Usage:
 from __future__ import annotations
 
 import csv
+import json
 import re
 import sqlite3
 from dataclasses import dataclass
@@ -285,6 +286,90 @@ def build_vendor_payments(conn: sqlite3.Connection) -> int:
     return len(payload)
 
 
+def _humanize_key(snake: str) -> str:
+    """'Health_Insurance_Transfer' -> 'Health Insurance Transfer'."""
+    return snake.replace("_", " ").strip()
+
+
+def build_budget_lines(conn: sqlite3.Connection) -> int:
+    """Ingest every FY*_budget_summary.json in data/ into a budget_lines table.
+
+    Each JSON's top-level key (e.g. 'FY26_Budget') names the fiscal year.
+    Town_Key_Items and School_Key_Items flatten to long-form rows.
+    *_Grand_Total and Combined_Total are skipped (derived from rows).
+    """
+    conn.execute('DROP TABLE IF EXISTS "budget_lines"')
+    conn.execute(
+        """CREATE TABLE budget_lines (
+            id INTEGER PRIMARY KEY,
+            fiscal_year TEXT,
+            department TEXT,
+            line_item TEXT,
+            fund TEXT,
+            amount REAL,
+            budget_phase TEXT
+        )"""
+    )
+    conn.execute("CREATE INDEX bl_dept ON budget_lines(department)")
+    conn.execute("CREATE INDEX bl_fy ON budget_lines(fiscal_year)")
+
+    payload: list[tuple] = []
+    json_files = sorted(DATA_DIR.glob("FY*_budget_summary.json"))
+    for jf in json_files:
+        with jf.open(encoding="utf-8") as f:
+            data = json.load(f)
+        for top_key, payload_dict in data.items():
+            # top_key like 'FY26_Budget'
+            m = re.match(r"^FY(\d{2})_Budget$", top_key)
+            if not m:
+                continue
+            fy = f"FY{m.group(1)}"
+            for section, dept in (
+                ("Town_Key_Items", "Town"),
+                ("School_Key_Items", "Schools"),
+            ):
+                items = payload_dict.get(section, {}) or {}
+                for raw_key, amount in items.items():
+                    if not isinstance(amount, (int, float)):
+                        continue
+                    line_item = _humanize_key(raw_key)
+                    payload.append(
+                        (
+                            fy,
+                            dept,
+                            line_item,
+                            "General Fund",
+                            float(amount),
+                            "adopted",
+                        )
+                    )
+
+    conn.executemany(
+        """INSERT INTO budget_lines (
+            fiscal_year, department, line_item, fund, amount, budget_phase
+        ) VALUES (?, ?, ?, ?, ?, ?)""",
+        payload,
+    )
+
+    today = date.today().isoformat()
+    file_list = ", ".join(p.name for p in json_files) or "none"
+    conn.execute(
+        'INSERT OR REPLACE INTO _meta '
+        '("table", description, source, row_count, csv_name, last_updated) '
+        "VALUES (?, ?, ?, ?, ?, ?)",
+        (
+            "budget_lines",
+            "Marblehead general fund appropriated budget by department "
+            "and line item, flattened from the FY*_budget_summary.json files.",
+            f"data/{file_list}; adopted budget figures.",
+            len(payload),
+            "FY*_budget_summary.json",
+            today,
+        ),
+    )
+    return len(payload)
+
+
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     if OUT_PATH.exists():
@@ -312,6 +397,8 @@ def main() -> None:
             print(f"  {ds.table:32s} {n:>7,} rows  ({ds.csv_name})")
         n_vp = build_vendor_payments(conn)
         print(f"  {'vendor_payments':32s} {n_vp:>7,} rows  ({_latest_checkbook_csv().name})")
+        n_bl = build_budget_lines(conn)
+        print(f"  {'budget_lines':32s} {n_bl:>7,} rows  (FY*_budget_summary.json)")
         conn.commit()
         conn.execute("VACUUM")
     finally:

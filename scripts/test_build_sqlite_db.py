@@ -96,3 +96,51 @@ def test_vendor_payments_ingest():
         assert meta[2] == n, f"_meta row_count {meta[2]} != n {n}"
     finally:
         conn.close()
+
+
+def test_budget_lines_ingest():
+    """budget_lines ingest flattens FY*_budget_summary.json into long-form rows."""
+    conn = _open_memory_db()
+    try:
+        n = build_sqlite_db.build_budget_lines(conn)
+        assert n >= 35, f"Expected at least 35 budget_lines rows, got {n}"
+
+        cols = [
+            row[1]
+            for row in conn.execute("PRAGMA table_info(budget_lines)").fetchall()
+        ]
+        assert cols == [
+            "id",
+            "fiscal_year",
+            "department",
+            "line_item",
+            "fund",
+            "amount",
+            "budget_phase",
+        ], f"Unexpected schema: {cols}"
+
+        # Known row: Health insurance transfer in FY26
+        hi = conn.execute(
+            "SELECT amount FROM budget_lines "
+            "WHERE fiscal_year = 'FY26' "
+            "AND department = 'Town' "
+            "AND line_item LIKE 'Health Insurance%'"
+        ).fetchone()
+        assert hi is not None, "Expected Health Insurance Transfer row for FY26"
+        assert 11_000_000 < hi[0] < 13_000_000, (
+            f"Expected ~$11.8M for Health Insurance Transfer, got {hi[0]}"
+        )
+
+        # Grand totals NOT included as rows
+        grand = conn.execute(
+            "SELECT COUNT(*) FROM budget_lines WHERE line_item LIKE '%Grand_Total%'"
+        ).fetchone()[0]
+        assert grand == 0, "Grand totals should be filtered out"
+
+        # _meta row
+        meta = conn.execute(
+            "SELECT row_count FROM _meta WHERE \"table\" = 'budget_lines'"
+        ).fetchone()
+        assert meta is not None and meta[0] == n
+    finally:
+        conn.close()
