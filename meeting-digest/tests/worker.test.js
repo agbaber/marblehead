@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { env, fetchMock, SELF, applyD1Migrations } from 'cloudflare:test';
 import { runScheduled } from '../worker/src/scheduled.js';
 import * as renderModule from '../worker/src/lib/render.js';
+import * as adminStatsModule from '../worker/src/lib/admin-stats.js';
 import { vi } from 'vitest';
 
 vi.mock('../worker/src/lib/render.js', async (importOriginal) => {
@@ -10,6 +11,14 @@ vi.mock('../worker/src/lib/render.js', async (importOriginal) => {
     ...actual,
     renderHtml: vi.fn(actual.renderHtml),
     renderText: vi.fn(actual.renderText)
+  };
+});
+
+vi.mock('../worker/src/lib/admin-stats.js', async (importOriginal) => {
+  const actual = await importOriginal();
+  return {
+    ...actual,
+    fetchSubscriberStats: vi.fn(actual.fetchSubscriberStats)
   };
 });
 
@@ -676,5 +685,40 @@ topic_segments:
     // last_sent_at stays NULL — failure branch does not update it either
     const afterFull = await env.DB.prepare('SELECT last_sent_at FROM subscriber WHERE id = ?').bind(row.id).first();
     expect(afterFull.last_sent_at).toBeNull();
+  });
+
+  it('fetches subscriber stats exactly once per cron, not per subscriber', async () => {
+    // Three confirmed subscribers — all should receive the digest, but
+    // fetchSubscriberStats should fire only once.
+    await confirmedSubscriber('one@example.com', { boards: ['select-board'], topics: [] });
+    await confirmedSubscriber('two@example.com', { boards: ['select-board'], topics: [] });
+    await confirmedSubscriber('three@example.com', { boards: ['select-board'], topics: [] });
+    env.ADMIN_EMAIL = 'one@example.com';
+
+    stubGithubPrimersEmpty();
+    const today = new Date().toISOString().slice(0, 10);
+    fetchMock.get('https://api.github.com')
+      .intercept({ path: /\/repos\/.*\/contents\/_transcripts\?ref=.*/, method: 'GET' })
+      .reply(200, JSON.stringify([{ type: 'file', name: `select-board-${today}.md`, download_url: 'https://example.com/sb.md' }]));
+    fetchMock.get('https://example.com')
+      .intercept({ path: '/sb.md', method: 'GET' })
+      .reply(200, `---
+slug: select-board-${today}
+board: select-board
+board_display: "Select Board"
+date: ${today}
+title: "Select Board"
+vimeo_url: "https://vimeo.com/0"
+summary_card:
+  headline: "Test"
+  summary: "Test"
+topic_segments:
+---
+`);
+
+    adminStatsModule.fetchSubscriberStats.mockClear();
+    const out = await runScheduled({}, env, { skipTimeGuard: true });
+    expect(out.sent).toBe(3);
+    expect(adminStatsModule.fetchSubscriberStats.mock.calls.length).toBe(1);
   });
 });

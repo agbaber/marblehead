@@ -47,7 +47,6 @@ function weekOfLabel(weekEndingIso) {
   if (typeof weekEndingIso !== 'string' || weekEndingIso.length < 10) return '';
   const mi = parseInt(weekEndingIso.slice(5, 7), 10) - 1;
   const d = parseInt(weekEndingIso.slice(8, 10), 10);
-  const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   if (Number.isNaN(mi) || Number.isNaN(d) || mi < 0 || mi > 11) return '';
   return `${MONTHS[mi]} ${d}`;
 }
@@ -171,7 +170,7 @@ export function renderHtml(matches, subscriber, env, weekEndingIso, primer = nul
   ${adminStats ? adminStatsHtml(adminStats, weekEndingIso) : ''}
 
   <hr class="mhd-hr" style="border: none; border-top: 1px solid #e5e5e5; margin: 8px 0 16px;">
-  <p style="margin: 0 0 8px; font-size: 13px; color: #6c757d;">Got a question or correction? Just reply to this email.</p>
+  <p class="mhd-muted" style="margin: 0 0 8px; font-size: 13px; color: #6c757d;">Got a question or correction? Just reply to this email.</p>
   <p style="margin: 0 0 6px; font-size: 13px; color: #6c757d;">
     <a class="mhd-link" href="${manageUrl}" style="color: #1B3A57; text-decoration: none;">Manage subscription</a>
     &nbsp;·&nbsp;
