@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="_shared.css">
+  <style>
+    .tree { width: 100%; max-width: 1060px; }
+    .row { display: flex; justify-content: center; gap: 80px; margin-bottom: 18px; }
+    .pill {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--c-text);
+      box-shadow: 0 1px 2px rgba(15,42,61,.06);
+    }
+    .pill.voters { background: var(--c-navy); color: white; border-color: var(--c-navy); }
+    .pill.board  { background: var(--c-teal); color: white; border-color: var(--c-teal); }
+    .branches { display: flex; gap: 10px; flex-wrap: wrap; max-width: 480px; justify-content: center; }
+    .leaf {
+      background: var(--c-fog);
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      padding: 7px 12px;
+      font-size: 17px;
+      color: var(--c-mid);
+    }
+    .col { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .label { font-size: 18px; color: var(--c-sub); letter-spacing: 0.05em; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header class="card-mark">marbleheaddata.org</header>
+    <h1 class="card-headline">Two parallel governments run Marblehead.</h1>
+    <div class="card-visual">
+      <div class="tree">
+        <div class="row"><div class="pill voters">Registered voters</div></div>
+        <div class="row">
+          <div class="col">
+            <div class="label">Town side</div>
+            <div class="pill board">Select Board</div>
+            <div class="branches">
+              <div class="leaf">Admin &amp; Finance</div>
+              <div class="leaf">Public Safety</div>
+              <div class="leaf">Public Works</div>
+              <div class="leaf">Land Use &amp; Health</div>
+              <div class="leaf">Community Services</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="label">School side</div>
+            <div class="pill board">School Committee</div>
+            <div class="branches">
+              <div class="leaf">Central Office</div>
+              <div class="leaf">Buildings</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="card-foot">/org-chart</footer>
+  </main>
+</body>
+</html>

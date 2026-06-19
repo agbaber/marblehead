@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="_shared.css">
+  <style>
+    .tally {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      width: 100%;
+      max-width: 980px;
+      align-items: end;
+    }
+    .tally-num {
+      font-size: 128px;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--c-navy);
+      font-variant-numeric: tabular-nums;
+    }
+    .tally-num .sub {
+      display: block;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--c-mid);
+      letter-spacing: 0.04em;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+    .tally .no .tally-num { color: var(--c-buoy); }
+    .label-row { display: flex; align-items: baseline; gap: 14px; }
+    .check { font-size: 52px; color: var(--c-sage); }
+    .x     { font-size: 52px; color: var(--c-buoy); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header class="card-mark">marbleheaddata.org</header>
+    <h1 class="card-headline">$116.5M of debt. Voters approved every dollar.</h1>
+    <div class="card-visual">
+      <div class="tally">
+        <div class="yes">
+          <div class="label-row"><span class="check">&#10003;</span><span class="tally-num">50<span class="sub">yes votes</span></span></div>
+        </div>
+        <div class="no">
+          <div class="label-row"><span class="x">&#10007;</span><span class="tally-num">1<span class="sub">no vote (Tucker's Wharf, 2002)</span></span></div>
+        </div>
+      </div>
+    </div>
+    <footer class="card-foot">/town-debt &middot; 51 ballot questions since 1988</footer>
+  </main>
+</body>
+</html>

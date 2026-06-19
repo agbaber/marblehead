@@ -10,6 +10,7 @@
     "transcripts:backfill": "node scripts/transcripts/backfill_auto.mjs",
     "dev": "bundle exec jekyll serve --port 4000",
     "build": "bundle exec jekyll build && npx pagefind --site _site",
+    "og:build": "node scripts/og-build.mjs",
     "preview:search": "npm run build && npx serve _site -p 4001",
     "smoke:local": "SITE=http://localhost:4000 node tests/smoke-test.mjs",
     "test:parser": "cd data && python3 -m pytest -v",

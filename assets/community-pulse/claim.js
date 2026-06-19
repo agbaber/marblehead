@@ -27,6 +27,7 @@ function consumeOAuthFragment() {
   setJwt(token);
   const cleanHash = claim ? '#claim' : '';
   history.replaceState(null, '', location.pathname + location.search + cleanHash);
+  track('verify_oauth_returned', { claim_intent: claim });
   return { token, claim };
 }
 
@@ -60,6 +61,16 @@ async function fetchPreResident() {
     if (!res.ok) return null;
     return res.json();
   } catch (e) { return null; }
+}
+
+// --- PostHog event helper --------------------------------------------
+
+function track(event, props) {
+  try {
+    if (window.posthog && window.posthog.capture) {
+      window.posthog.capture(event, props || {});
+    }
+  } catch (e) { /* analytics never blocks the user */ }
 }
 
 // --- DOM helpers ------------------------------------------------------
@@ -227,6 +238,8 @@ async function onSubmit(e) {
   submit.disabled = true;
   submitText.textContent = 'Checking';
   result.innerHTML = `<p class="vm-loading">Matching against the assessor record</p>`;
+  // Track the submit -- count attempts independently of result.
+  track('verify_claim_submitted');
 
   let res;
   try {
@@ -243,6 +256,7 @@ async function onSubmit(e) {
     submit.disabled = false;
     submitText.textContent = 'Claim this address';
     result.innerHTML = renderGenericError('network');
+    track('verify_claim_result', { status: 'network_error' });
     return;
   }
 
@@ -251,14 +265,20 @@ async function onSubmit(e) {
 
   if (res.status === 429) {
     result.innerHTML = renderRateLimit();
+    track('verify_claim_result', { status: 'rate_limited' });
     return;
   }
   if (!res.ok) {
     result.innerHTML = renderGenericError(res.status);
+    track('verify_claim_result', { status: 'http_error', http_status: res.status });
     return;
   }
 
   const body = await res.json();
+  track('verify_claim_result', {
+    status: body.status,
+    had_alternatives: !!(body.alternatives && body.alternatives.length),
+  });
   switch (body.status) {
     case 'match':
       if (body.session_jwt) setJwt(body.session_jwt);
@@ -284,6 +304,13 @@ async function onSubmit(e) {
 async function init() {
   const oauth = consumeOAuthFragment();
   const isClaimStep = (oauth && oauth.claim) || location.hash === '#claim';
+
+  // Wire FB CTA click tracking on the landing.
+  const fbLink = document.getElementById('fb-start-link');
+  if (fbLink && !fbLink.__verifyTracked) {
+    fbLink.__verifyTracked = true;
+    fbLink.addEventListener('click', () => track('verify_fb_start_clicked'));
+  }
 
   const profile = await fetchSelf();
   if (profile && profile.identity_hash) {
