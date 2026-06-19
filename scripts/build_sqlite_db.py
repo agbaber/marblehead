@@ -249,15 +249,23 @@ def build_vendor_payments(conn: sqlite3.Connection) -> int:
                 amount = float(amount_str) if amount_str else None
             except ValueError:
                 amount = None
+            division = (row.get("Division") or "").strip()
+            fund = (row.get("Fund") or "").strip()
+            if division and division != "UNDEFINED":
+                department = division
+            elif fund:
+                department = fund
+            else:
+                department = "Unattributed"
             payload.append(
                 (
                     payment_date or None,
                     fiscal_year or None,
                     (row.get("Vendor") or "").strip() or None,
-                    (row.get("Division") or "").strip() or None,
+                    department,
                     (row.get("Description") or "").strip() or None,
                     amount,
-                    (row.get("Fund") or "").strip() or None,
+                    fund or None,
                     path.name,
                 )
             )

@@ -94,6 +94,35 @@ def test_vendor_payments_ingest():
         ).fetchone()
         assert meta is not None, "Expected _meta row for vendor_payments"
         assert meta[2] == n, f"_meta row_count {meta[2]} != n {n}"
+
+        # Backfill: rows where Division was empty/UNDEFINED in the CSV
+        # should now have department derived from fund.
+        undefined_rows = conn.execute(
+            "SELECT COUNT(*) FROM vendor_payments WHERE department = 'UNDEFINED'"
+        ).fetchone()[0]
+        assert undefined_rows == 0, (
+            f"Expected no UNDEFINED department after backfill, got {undefined_rows}"
+        )
+
+        # Electric Enterprise should be a visible department now
+        # (it was UNDEFINED before the backfill).
+        ee_total = conn.execute(
+            "SELECT ROUND(SUM(amount), 0) FROM vendor_payments "
+            "WHERE department = 'ELECTRIC ENTERPRISE' AND fiscal_year = 'FY26'"
+        ).fetchone()[0]
+        assert ee_total is not None and ee_total > 5_000_000, (
+            f"Expected Electric Enterprise to surface as a department, got total {ee_total}"
+        )
+
+        # Genuinely tagless rows become 'Unattributed' (single label).
+        unattributed = conn.execute(
+            "SELECT COUNT(*) FROM vendor_payments WHERE department = 'Unattributed'"
+        ).fetchone()[0]
+        # We expect some Unattributed rows (the rows with both Division
+        # and Fund empty), but not millions.
+        assert unattributed >= 0 and unattributed < n // 4, (
+            f"Unexpected Unattributed count {unattributed}"
+        )
     finally:
         conn.close()
 
