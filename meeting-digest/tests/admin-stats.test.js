@@ -113,6 +113,16 @@ describe('fetchSubscriberStats', () => {
     expect(stats.bounced).toEqual({ n: 1, n_new: 0 });
   });
 
+  it('counts complained rows but never marks them new', async () => {
+    const now = Date.now();
+    await insertRow({
+      id: 'a', email: 'a@x', status: 'complained',
+      created_at: now - 2 * DAY_MS
+    });
+    const stats = await fetchSubscriberStats(env, now);
+    expect(stats.complained).toEqual({ n: 1, n_new: 0 });
+  });
+
   it('aggregates a mixed table correctly', async () => {
     const now = Date.now();
     // 2 confirmed (one new, one old)

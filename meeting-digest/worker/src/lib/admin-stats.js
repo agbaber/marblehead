@@ -21,6 +21,7 @@ export async function fetchSubscriberStats(env, nowMs) {
     SELECT
       status,
       COUNT(*) AS n,
+      -- bounced and complained have no transition timestamp column, so they fall to ELSE 0 (never new)
       SUM(CASE
         WHEN status = 'confirmed'             AND confirmed_at    > ? THEN 1
         WHEN status = 'pending_confirmation'  AND created_at      > ? THEN 1
