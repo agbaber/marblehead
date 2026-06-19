@@ -111,6 +111,7 @@ export function renderHtml(matches, subscriber, env, weekEndingIso, primer = nul
   ${primer ? primerHtml(primer, maxPrimerIndex, env) : ''}
 
   <hr class="mhd-hr" style="border: none; border-top: 1px solid #e5e5e5; margin: 8px 0 16px;">
+  <p style="margin: 0 0 8px; font-size: 13px; color: #6c757d;">Got a question or correction? Just reply to this email.</p>
   <p style="margin: 0 0 6px; font-size: 13px; color: #6c757d;">
     <a class="mhd-link" href="${manageUrl}" style="color: #1B3A57; text-decoration: none;">Manage subscription</a>
     &nbsp;·&nbsp;
@@ -131,6 +132,8 @@ ${count} ${count === 1 ? 'meeting' : 'meetings'} this week
 ${body}
 
 ${primer ? primerText(primer, maxPrimerIndex, env) : ''}---
+Got a question or correction? Just reply to this email.
+
 Manage subscription: ${manageUrl}
 Unsubscribe: ${unsubUrl}
 

@@ -161,3 +161,22 @@ describe('renderText with primer', () => {
     expect(text).toMatch(/About marbleheaddata\.org: https:\/\/marbleheaddata\.org\/about\/\?utm_source=digest&utm_medium=email&utm_campaign=primer-week-1/);
   });
 });
+
+describe('renderHtml footer reply prompt', () => {
+  it('includes "Got a question or correction? Just reply to this email." in the HTML footer', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-15');
+    expect(html).toContain('Got a question or correction? Just reply to this email.');
+  });
+});
+
+describe('renderText footer reply prompt', () => {
+  it('includes "Got a question or correction? Just reply to this email." above the manage line in the text footer', () => {
+    const text = renderText([SB_MATCH], SUB, ENV, '2026-06-15');
+    expect(text).toContain('Got a question or correction? Just reply to this email.');
+    // Reply prompt must come before "Manage subscription" line
+    const replyIdx = text.indexOf('Got a question or correction?');
+    const manageIdx = text.indexOf('Manage subscription:');
+    expect(replyIdx).toBeGreaterThan(-1);
+    expect(manageIdx).toBeGreaterThan(replyIdx);
+  });
+});
