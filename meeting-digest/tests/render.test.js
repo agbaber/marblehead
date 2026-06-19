@@ -161,3 +161,104 @@ describe('renderText with primer', () => {
     expect(text).toMatch(/About marbleheaddata\.org: https:\/\/marbleheaddata\.org\/about\/\?utm_source=digest&utm_medium=email&utm_campaign=primer-week-1/);
   });
 });
+
+describe('renderHtml footer reply prompt', () => {
+  it('includes "Got a question or correction? Just reply to this email." in the HTML footer', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-15');
+    expect(html).toContain('Got a question or correction? Just reply to this email.');
+  });
+});
+
+describe('renderText footer reply prompt', () => {
+  it('includes "Got a question or correction? Just reply to this email." above the manage line in the text footer', () => {
+    const text = renderText([SB_MATCH], SUB, ENV, '2026-06-15');
+    expect(text).toContain('Got a question or correction? Just reply to this email.');
+    // Reply prompt must come before "Manage subscription" line
+    const replyIdx = text.indexOf('Got a question or correction?');
+    const manageIdx = text.indexOf('Manage subscription:');
+    expect(replyIdx).toBeGreaterThan(-1);
+    expect(manageIdx).toBeGreaterThan(replyIdx);
+  });
+});
+
+const SAMPLE_STATS = {
+  confirmed:            { n: 2, n_new: 0 },
+  pending_confirmation: { n: 4, n_new: 1 },
+  unsubscribed:         { n: 0, n_new: 0 },
+  bounced:              { n: 0, n_new: 0 },
+  complained:           { n: 0, n_new: 0 }
+};
+
+const STATS_WITH_COMPLAINT = {
+  ...SAMPLE_STATS,
+  complained: { n: 1, n_new: 0 }
+};
+
+describe('renderHtml with adminStats', () => {
+  it('omits the admin block when adminStats is null', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-22', null, 0, null);
+    expect(html).not.toMatch(/Admin · subscriber snapshot/);
+  });
+
+  it('renders the admin block when adminStats is provided', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-22', null, 0, SAMPLE_STATS);
+    expect(html).toContain('Admin · subscriber snapshot');
+    expect(html).toContain('Confirmed: 2 (+0)');
+    expect(html).toContain('Pending: 4 (+1)');
+    expect(html).toContain('Unsubscribed: 0 (+0)');
+    expect(html).toContain('Bounced: 0');
+    // No delta on Bounced line
+    expect(html).not.toMatch(/Bounced: 0 \(\+/);
+  });
+
+  it('omits the Complained line when complained count is 0', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-22', null, 0, SAMPLE_STATS);
+    expect(html).not.toContain('Complained');
+  });
+
+  it('renders the Complained line when complained count is > 0', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-22', null, 0, STATS_WITH_COMPLAINT);
+    expect(html).toContain('Complained: 1');
+    // Complained line, like Bounced, has no delta
+    expect(html).not.toMatch(/Complained: 1 \(\+/);
+  });
+
+  it('includes a "week of …" label derived from weekEndingIso', () => {
+    const html = renderHtml([SB_MATCH], SUB, ENV, '2026-06-22', null, 0, SAMPLE_STATS);
+    expect(html).toMatch(/Admin · subscriber snapshot \(week of Jun 22\)/);
+  });
+});
+
+describe('renderText with adminStats', () => {
+  it('omits the admin block when adminStats is null', () => {
+    const text = renderText([SB_MATCH], SUB, ENV, '2026-06-22', null, 0, null);
+    expect(text).not.toMatch(/Admin · subscriber snapshot/);
+  });
+
+  it('renders the admin block when adminStats is provided', () => {
+    const text = renderText([SB_MATCH], SUB, ENV, '2026-06-22', null, 0, SAMPLE_STATS);
+    expect(text).toContain('Admin · subscriber snapshot (week of Jun 22)');
+    expect(text).toContain('Confirmed: 2 (+0)');
+    expect(text).toContain('Pending: 4 (+1)');
+    expect(text).toContain('Unsubscribed: 0 (+0)');
+    expect(text).toContain('Bounced: 0');
+  });
+
+  it('places the admin block after the primer (when present) and before the footer in text', () => {
+    const PRIMER_2 = {
+      filename: '02-org-chart.md',
+      week_index: 2,
+      title: 'Who runs the town',
+      link_url: '/org-chart/',
+      link_label: 'See the org chart',
+      body_paragraphs: ['Para1.']
+    };
+    const text = renderText([SB_MATCH], SUB, ENV, '2026-06-22', PRIMER_2, 6, SAMPLE_STATS);
+    const primerIdx = text.indexOf('SITE PRIMER · 2 of 6');
+    const adminIdx = text.indexOf('Admin · subscriber snapshot');
+    const manageIdx = text.indexOf('Manage subscription:');
+    expect(primerIdx).toBeGreaterThan(-1);
+    expect(adminIdx).toBeGreaterThan(primerIdx);
+    expect(manageIdx).toBeGreaterThan(adminIdx);
+  });
+});
