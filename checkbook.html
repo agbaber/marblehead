@@ -771,7 +771,12 @@ og_url: https://marbleheaddata.org/checkbook/
     .stack-bar .seg { position: relative; display: flex; align-items: center; justify-content: center;
                       color: #fff; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums;
                       border-right: 1px solid rgba(255,255,255,0.35); text-decoration: none;
-                      transition: opacity 0.15s; }
+                      transition: opacity 0.15s;
+                      /* Belt-and-braces: force segments to fill the bar height even if a child
+                         has minimal intrinsic height. Without this, narrow segments with short
+                         spans were collapsing on mobile (showed as a thin colored line with
+                         white bar background above and below). */
+                      align-self: stretch; min-height: 100%; }
     .stack-bar .seg:hover { opacity: 0.85; cursor: pointer; }
     .stack-bar .seg:last-child { border-right: none; }
     .stack-bar .seg.other { color: var(--text); }
@@ -1102,7 +1107,7 @@ og_url: https://marbleheaddata.org/checkbook/
 
     <div class="stack-wrap">
       <div class="stack-bar" role="navigation" aria-label="Jump to a bucket">
-        <a class="seg ballot" href="#bucket-ballot" data-flex-from="buckets[key:ballot].share" style="flex: 6.7"><span style="padding:0 4px" data-fill="buckets[key:ballot].share|pct-tight">6.7%</span></a>
+        <a class="seg ballot" href="#bucket-ballot" data-flex-from="buckets[key:ballot].share" style="flex: 6.7"><span data-fill="buckets[key:ballot].share|pct-tight">6.7%</span></a>
         <a class="seg tm"     href="#bucket-tm"     data-flex-from="buckets[key:town_meeting].share" style="flex: 54.3">Town Meeting&nbsp;&middot;&nbsp;<span data-fill="buckets[key:town_meeting].share|pct">54.3%</span></a>
         <a class="seg enter"  href="#bucket-ratepayer" data-flex-from="buckets[key:ratepayer].share" style="flex: 31.3">Ratepayer&nbsp;&middot;&nbsp;<span data-fill="buckets[key:ratepayer].share|pct">31.3%</span></a>
         <a class="seg grant"  href="#bucket-statefed" data-flex-from="buckets[key:state_fed].share" style="flex: 5.2"><span data-fill="buckets[key:state_fed].share|pct-tight">5.2%</span></a>
