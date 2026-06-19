@@ -69,6 +69,21 @@
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-+|-+$/g, "");
   }
+  /* Render a comma-joined tag string as a row of inline chip links.
+     Each chip links to /topics/<tag>/. Returns HTML (already escaped). */
+  function fmtTagChips(s) {
+    if (s == null || s === "") return "";
+    var tags = String(s).split(",").filter(function (t) { return t !== ""; });
+    if (tags.length === 0) return "";
+    var html = "";
+    for (var i = 0; i < tags.length; i++) {
+      var tag = tags[i];
+      html +=
+        '<a class="browse-tag" href="/topics/' + encodeURIComponent(tag) + '/">' +
+        escapeHtml(tag) + "</a>";
+    }
+    return html;
+  }
 
   /* Build a WHERE clause + binding list from active filters and the
      current search term. Returns { sql: "...", params: [...] }. */
@@ -120,12 +135,15 @@
         var formatted;
         if (col.format === "money") formatted = fmtMoney(value);
         else if (col.format === "moneyRound") formatted = fmtMoneyRound(value);
+        else if (col.format === "tags") formatted = fmtTagChips(value);
         else formatted = escapeHtml(fmtText(value));
         var classes = [];
         if (col.format === "money" || col.format === "moneyRound") classes.push("is-numeric");
         if (col.format === "date") classes.push("is-date");
         var cell;
-        if (col.linkColumn && row[col.linkColumn]) {
+        if (col.format === "tags") {
+          cell = formatted;
+        } else if (col.linkColumn && row[col.linkColumn]) {
           cell = '<a href="' + escapeHtml(row[col.linkColumn]) + '">' + formatted + "</a>";
         } else if (col.linkTemplate && value != null && value !== "") {
           var href = col.linkTemplate.replace(/\{slug\}/g, slugify(value));
