@@ -8,7 +8,24 @@ const VERIFY_API = (location.hostname === 'localhost')
 const JWT_KEY = 'verify_jwt';
 
 function readJwt() { return localStorage.getItem(JWT_KEY); }
+function setJwt(jwt) { localStorage.setItem(JWT_KEY, jwt); }
 function clearJwt() { localStorage.removeItem(JWT_KEY); }
+
+/**
+ * The FB callback redirects returning users straight to
+ * /profile.html#token=<jwt>. Pull the JWT out, stash it in localStorage
+ * so subsequent /api/profile calls can authenticate via Bearer, and
+ * strip the fragment so the token does not linger in the URL bar.
+ */
+function consumeOAuthFragment() {
+  if (!location.hash || !location.hash.includes('token=')) return false;
+  const params = new URLSearchParams(location.hash.slice(1));
+  const token = params.get('token');
+  if (!token) return false;
+  setJwt(token);
+  history.replaceState(null, '', location.pathname + location.search);
+  return true;
+}
 
 function track(event, props) {
   try {
@@ -186,6 +203,9 @@ function renderProfile(root, profile) {
 
 async function init() {
   const root = document.getElementById('profile-root');
+  // Consume any OAuth JWT in the URL fragment first (returning users
+  // land here via the FB callback's redirect to /profile.html#token=...).
+  consumeOAuthFragment();
   const profile = await fetchProfile();
   if (!profile || !profile.identity_hash) {
     renderSignedOut(root);
