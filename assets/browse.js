@@ -267,15 +267,27 @@
       // Fill in dynamic filter values from the DB.
       config.filters.forEach(function (filter) {
         if (filter.valuesFrom === "distinct") {
-          var stmt = db.prepare(
-            'SELECT DISTINCT "' + filter.column + '" AS v FROM "' +
-            config.table + '" WHERE "' + filter.column +
-            '" IS NOT NULL ORDER BY "' + filter.column + '"'
-          );
+          var stmt;
+          if (filter.topN) {
+            // Top-N by row count, descending.
+            stmt = db.prepare(
+              'SELECT "' + filter.column + '" AS v, COUNT(*) AS c FROM "' +
+              config.table + '" WHERE "' + filter.column +
+              '" IS NOT NULL GROUP BY "' + filter.column +
+              '" ORDER BY c DESC LIMIT ' + filter.topN
+            );
+          } else {
+            // All distinct values, alphabetical.
+            stmt = db.prepare(
+              'SELECT DISTINCT "' + filter.column + '" AS v FROM "' +
+              config.table + '" WHERE "' + filter.column +
+              '" IS NOT NULL ORDER BY "' + filter.column + '"'
+            );
+          }
           var vals = [];
           while (stmt.step()) vals.push(stmt.getAsObject().v);
           stmt.free();
-          filter.values = filter.topN ? vals.slice(0, filter.topN) : vals;
+          filter.values = vals;
         }
       });
 
