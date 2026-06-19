@@ -381,6 +381,39 @@ def build_budget_lines(conn: sqlite3.Connection) -> int:
     return len(payload)
 
 
+def _harvest_topic_tags(path: Path) -> str:
+    """Return comma-joined sorted distinct topic slugs from a transcript's
+    topic_segments block.
+
+    Returns '' if the block is absent. The transcript's front-matter format
+    is stable indented YAML; we don't load PyYAML.
+    """
+    seen: set[str] = set()
+    in_segments = False
+    with path.open(encoding="utf-8") as f:
+        for line in f:
+            line_rstripped = line.rstrip("\n")
+            stripped = line_rstripped.strip()
+            if not in_segments:
+                if stripped == "topic_segments:":
+                    in_segments = True
+                continue
+            # Inside topic_segments: lines look like
+            #   "  - topic: public-comment"  (we want public-comment)
+            # The block ends at the closing "---" or at the next top-level key
+            # (no leading whitespace on the line).
+            if line_rstripped == "---":
+                break
+            if line and not line[0].isspace() and ":" in line:
+                # Top-level key like "summary_card:" closes the segments block.
+                break
+            if stripped.startswith("- topic:"):
+                slug = stripped.split(":", 1)[1].strip()
+                if slug:
+                    seen.add(slug)
+    return ",".join(sorted(seen))
+
+
 def _parse_frontmatter(path: Path) -> dict[str, str]:
     """Read a Jekyll front-matter block. Returns flat dict of key:value strings.
 
@@ -445,7 +478,7 @@ def build_meetings(conn: sqlite3.Connection) -> int:
                 slug,
                 1,                      # has_transcript
                 0,                      # has_digest (future phase)
-                "",                     # topic_tags (future phase)
+                _harvest_topic_tags(md), # topic_tags from transcript front-matter
                 f"/transcripts/{slug}/",
             )
         )

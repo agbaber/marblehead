@@ -221,6 +221,28 @@ def test_meetings_ingest():
             "GROUP BY slug HAVING c > 1 LIMIT 1"
         ).fetchone()
         assert dupes is None, f"Duplicate slug found: {dupes}"
+
+        # Phase 1c: topic_tags populated from topic_segments[].topic
+        select_board_2026_04_15 = conn.execute(
+            "SELECT topic_tags FROM meetings WHERE slug = 'select-board-2026-04-15'"
+        ).fetchone()
+        assert select_board_2026_04_15 is not None, "Select Board 2026-04-15 row missing"
+        tags = select_board_2026_04_15[0]
+        # Should contain at least 'override' since the file has that topic_segment.
+        assert "override" in tags, (
+            f"Expected 'override' in topic_tags, got: {tags!r}"
+        )
+        # Sorted, comma-joined, no spaces.
+        if tags:
+            parts = tags.split(",")
+            assert parts == sorted(parts), f"Topic tags not sorted: {tags!r}"
+            assert " " not in tags, f"Topic tags contain spaces: {tags!r}"
+
+        # At least one meeting somewhere should have non-empty topic_tags.
+        with_tags = conn.execute(
+            "SELECT COUNT(*) FROM meetings WHERE topic_tags != ''"
+        ).fetchone()[0]
+        assert with_tags > 0, "Expected at least one meeting with non-empty topic_tags"
     finally:
         conn.close()
 
