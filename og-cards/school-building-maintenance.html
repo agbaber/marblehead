@@ -7,38 +7,52 @@
     .schools {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-      width: 100%;
+      gap: 14px;
+      margin-top: 22px;
       max-width: 1060px;
     }
     .sch {
-      border: 1px solid var(--c-border);
-      border-radius: 12px;
-      padding: 18px 16px;
-      background: var(--c-surface);
+      background: var(--bg-lift);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 18px 14px;
       text-align: center;
     }
-    .sch .name { font-weight: 700; font-size: 21px; color: var(--c-text); }
-    .sch .yr   { margin-top: 8px; font-size: 17px; color: var(--c-sub); line-height: 1.35; }
-    .sch.active { border-color: var(--c-buoy); border-width: 2px; }
+    .sch .name { font-weight: 700; font-size: 21px; color: var(--text); }
+    .sch .yr   { margin-top: 10px; font-size: 16px; color: var(--text-sub); line-height: 1.35; }
+    .sch.active {
+      background: linear-gradient(180deg, rgba(226,107,82,0.18) 0%, rgba(226,107,82,0.06) 100%);
+      border-color: var(--c-buoy);
+    }
     .sch.active .name { color: var(--c-buoy); }
-    .sch.active .yr   { color: var(--c-buoy); font-weight: 600; }
+    .sch.active .yr   { color: var(--text-mid); font-weight: 500; }
+    .sch.active .yr strong { color: var(--text); font-weight: 700; }
   </style>
 </head>
 <body>
   <main class="card">
-    <header class="card-mark">marbleheaddata.org</header>
-    <h1 class="card-headline">5 schools, by condition.</h1>
-    <div class="card-visual">
+    <header class="card-eyebrow">
+      <span class="mark"></span>
+      <span>Tool</span>
+      <span class="sep">/</span>
+      <span>School buildings</span>
+    </header>
+
+    <div>
+      <h1 class="card-headline">Five schools, <em>by condition.</em></h1>
       <div class="schools">
-        <div class="sch active"><div class="name">High School</div><div class="yr">Built 2002. $8.97M roof &amp; HVAC underway.</div></div>
+        <div class="sch active"><div class="name">High School</div><div class="yr"><strong>$8.97M</strong><br>roof &amp; HVAC underway</div></div>
         <div class="sch"><div class="name">Veterans Middle</div><div class="yr">Built 2004</div></div>
         <div class="sch"><div class="name">Village</div><div class="yr">Built 2010</div></div>
         <div class="sch"><div class="name">Glover</div><div class="yr">Built 2014</div></div>
         <div class="sch"><div class="name">Brown</div><div class="yr">Built 2021</div></div>
       </div>
     </div>
-    <footer class="card-foot">/school-building-maintenance</footer>
+
+    <footer class="card-foot">
+      <span class="url">marbleheaddata.org/school-building-maintenance</span>
+      <span>2021 EBI assessment + meeting record</span>
+    </footer>
   </main>
 </body>
 </html>
