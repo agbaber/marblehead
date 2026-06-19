@@ -1,0 +1,61 @@
+---
+title: "Browse: Budget lines"
+permalink: /browse/budget/
+layout: browse
+entity: budget
+entity_label: Budget lines
+---
+
+<input type="search" class="browse-search" placeholder="search budget lines...">
+
+<div class="browse-filters"></div>
+<p class="browse-row-count"></p>
+
+<div class="browse-table-wrap">
+  <table class="browse-table">
+    <thead><tr></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<p class="browse-footnote">
+  Source: <code>marbleheaddata.sqlite</code> &rarr; <code>budget_lines</code>,
+  flattened from <code>data/FY*_budget_summary.json</code>.
+  Department totals here can differ from grand totals because some
+  sub-items overlap in the source. See <code>_meta</code> for the cite.
+</p>
+
+<script src="/assets/browse.js" defer></script>
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+  window.Browse.renderListView({
+    table: "budget_lines",
+    columns: [
+      { column: "fiscal_year", label: "FY", format: "date" },
+      { column: "department", label: "Department", linkTemplate: "/browse/dept/#{slug}" },
+      { column: "line_item", label: "Line item" },
+      { column: "fund", label: "Fund" },
+      { column: "amount", label: "Amount", format: "moneyRound" },
+      { column: "budget_phase", label: "Phase" },
+    ],
+    filters: [
+      {
+        column: "fiscal_year",
+        label: "FY",
+        multi: false,
+        valuesFrom: "distinct",
+      },
+      {
+        column: "department",
+        label: "Dept",
+        multi: false,
+        valuesFrom: "distinct",
+      },
+    ],
+    searchColumns: ["line_item", "department"],
+    defaultSortColumn: "amount",
+    defaultSortDesc: true,
+    pageSize: 0,
+  });
+});
+</script>

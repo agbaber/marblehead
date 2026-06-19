@@ -1,0 +1,54 @@
+---
+title: "Browse: Meetings"
+permalink: /browse/meetings/
+layout: browse
+entity: meetings
+entity_label: Meetings
+---
+
+<input type="search" class="browse-search" placeholder="search meetings...">
+
+<div class="browse-filters"></div>
+<p class="browse-row-count"></p>
+
+<div class="browse-table-wrap">
+  <table class="browse-table">
+    <thead><tr></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<button class="browse-load-more">Load more</button>
+
+<p class="browse-footnote">
+  Source: <code>marbleheaddata.sqlite</code> &rarr; <code>meetings</code>.
+  Rows are scanned from <code>_transcripts/*.md</code> front-matter
+  at build time. Click a row's title to open the existing transcript page.
+</p>
+
+<script src="/assets/browse.js" defer></script>
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+  window.Browse.renderListView({
+    table: "meetings",
+    columns: [
+      { column: "meeting_date", label: "Date", format: "date" },
+      { column: "board", label: "Board" },
+      { column: "title", label: "Title", linkColumn: "url" },
+      { column: "topic_tags", label: "Topics", format: "tags" },
+    ],
+    filters: [
+      {
+        column: "board",
+        label: "Board",
+        multi: true,
+        valuesFrom: "distinct",
+      },
+    ],
+    searchColumns: ["title"],
+    defaultSortColumn: "meeting_date",
+    defaultSortDesc: true,
+    pageSize: 50,
+  });
+});
+</script>

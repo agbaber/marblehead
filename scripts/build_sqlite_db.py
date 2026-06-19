@@ -28,6 +28,7 @@ TRANSCRIPTS_DIR = ROOT / "_transcripts"
 TOPICS_DIR = ROOT / "topics"
 OUT_DIR = ROOT / "assets" / "data"
 OUT_PATH = OUT_DIR / "marbleheaddata.sqlite"
+COUNTS_PATH = ROOT / "_data" / "browse_counts.yml"
 
 
 @dataclass
@@ -249,15 +250,23 @@ def build_vendor_payments(conn: sqlite3.Connection) -> int:
                 amount = float(amount_str) if amount_str else None
             except ValueError:
                 amount = None
+            division = (row.get("Division") or "").strip()
+            fund = (row.get("Fund") or "").strip()
+            if division and division != "UNDEFINED":
+                department = division
+            elif fund:
+                department = fund
+            else:
+                department = "Unattributed"
             payload.append(
                 (
                     payment_date or None,
                     fiscal_year or None,
                     (row.get("Vendor") or "").strip() or None,
-                    (row.get("Division") or "").strip() or None,
+                    department,
                     (row.get("Description") or "").strip() or None,
                     amount,
-                    (row.get("Fund") or "").strip() or None,
+                    fund or None,
                     path.name,
                 )
             )
@@ -372,6 +381,39 @@ def build_budget_lines(conn: sqlite3.Connection) -> int:
     return len(payload)
 
 
+def _harvest_topic_tags(path: Path) -> str:
+    """Return comma-joined sorted distinct topic slugs from a transcript's
+    topic_segments block.
+
+    Returns '' if the block is absent. The transcript's front-matter format
+    is stable indented YAML; we don't load PyYAML.
+    """
+    seen: set[str] = set()
+    in_segments = False
+    with path.open(encoding="utf-8") as f:
+        for line in f:
+            line_rstripped = line.rstrip("\n")
+            stripped = line_rstripped.strip()
+            if not in_segments:
+                if stripped == "topic_segments:":
+                    in_segments = True
+                continue
+            # Inside topic_segments: lines look like
+            #   "  - topic: public-comment"  (we want public-comment)
+            # The block ends at the closing "---" or at the next top-level key
+            # (no leading whitespace on the line).
+            if line_rstripped == "---":
+                break
+            if line and not line[0].isspace() and ":" in line:
+                # Top-level key like "summary_card:" closes the segments block.
+                break
+            if stripped.startswith("- topic:"):
+                slug = stripped.split(":", 1)[1].strip()
+                if slug:
+                    seen.add(slug)
+    return ",".join(sorted(seen))
+
+
 def _parse_frontmatter(path: Path) -> dict[str, str]:
     """Read a Jekyll front-matter block. Returns flat dict of key:value strings.
 
@@ -436,7 +478,7 @@ def build_meetings(conn: sqlite3.Connection) -> int:
                 slug,
                 1,                      # has_transcript
                 0,                      # has_digest (future phase)
-                "",                     # topic_tags (future phase)
+                _harvest_topic_tags(md), # topic_tags from transcript front-matter
                 f"/transcripts/{slug}/",
             )
         )
@@ -513,6 +555,22 @@ def build_topics(conn: sqlite3.Connection) -> int:
     return len(payload)
 
 
+def update_meeting_counts(conn: sqlite3.Connection) -> None:
+    """Populate topics.meeting_count via LIKE join on meetings.topic_tags.
+
+    The ',,' bookends on both sides prevent prefix-match collisions
+    (e.g. 'override' must not match 'override-prep' if such a slug existed).
+    Run AFTER both build_meetings and build_topics have populated their tables.
+    """
+    conn.execute(
+        "UPDATE topics SET meeting_count = ("
+        "  SELECT COUNT(*) FROM meetings "
+        "  WHERE (',' || meetings.topic_tags || ',') "
+        "        LIKE ('%,' || topics.slug || ',%')"
+        ")"
+    )
+
+
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     if OUT_PATH.exists():
@@ -546,8 +604,21 @@ def main() -> None:
         print(f"  {'meetings':32s} {n_m:>7,} rows  (_transcripts/*.md)")
         n_t = build_topics(conn)
         print(f"  {'topics':32s} {n_t:>7,} rows  (topics/*.html)")
+        update_meeting_counts(conn)
+        print(f"  {'topics.meeting_count':32s} populated via JOIN")
         conn.commit()
         conn.execute("VACUUM")
+        # Emit row counts for the /browse/ index page cards.
+        counts = {}
+        for entity in ("vendor_payments", "budget_lines", "meetings", "topics"):
+            n = conn.execute(f'SELECT COUNT(*) FROM "{entity}"').fetchone()[0]
+            counts[entity] = n
+        COUNTS_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with COUNTS_PATH.open("w", encoding="utf-8") as f:
+            f.write("# Auto-generated by scripts/build_sqlite_db.py. Do not edit.\n")
+            for k, v in counts.items():
+                f.write(f"{k}: {v}\n")
+        print(f"\nWrote {COUNTS_PATH.relative_to(ROOT)}")
     finally:
         conn.close()
     size_kb = OUT_PATH.stat().st_size / 1024

@@ -1,0 +1,45 @@
+---
+title: "Browse: Topics"
+permalink: /browse/topics/
+layout: browse
+entity: topics
+entity_label: Topics
+---
+
+<input type="search" class="browse-search" placeholder="search topics...">
+
+<div class="browse-filters"></div>
+<p class="browse-row-count"></p>
+
+<div class="browse-table-wrap">
+  <table class="browse-table">
+    <thead><tr></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<p class="browse-footnote">
+  Source: <code>marbleheaddata.sqlite</code> &rarr; <code>topics</code>.
+  The Meetings tagged column populates in Phase 1c once
+  meetings.topic_tags is wired. For now, click a topic title to see
+  its existing feed.
+</p>
+
+<script src="/assets/browse.js" defer></script>
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+  window.Browse.renderListView({
+    table: "topics",
+    columns: [
+      { column: "title", label: "Topic", linkColumn: "page_url" },
+      { column: "slug", label: "Slug" },
+      { column: "meeting_count", label: "Meetings tagged" },
+    ],
+    filters: [],
+    searchColumns: ["title", "slug"],
+    defaultSortColumn: "title",
+    defaultSortDesc: false,
+    pageSize: 0,
+  });
+});
+</script>

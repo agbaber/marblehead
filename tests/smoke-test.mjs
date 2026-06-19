@@ -519,6 +519,98 @@ async function testTermsPageLoads(page) {
     : fail('terms h1', `expected "Terms of Use", got "${h1Text}"`);
 }
 
+// ── /browse/ ───────────────────────────────────────────────────────────
+
+async function testBrowseIndex(page) {
+  console.log('\n── /browse/ ──');
+  const res = await page.goto(`${SITE}/browse/`, { waitUntil: 'domcontentloaded' });
+  res && res.status() === 200 ? ok('/browse/ → 200') : fail('/browse/', `status ${res ? res.status() : 'no response'}`);
+  const cards = await page.$$('.browse-card');
+  cards.length === 4 ? ok('4 entity cards') : fail('Browse cards', `expected 4, got ${cards.length}`);
+}
+
+async function testBrowseEntity(page, slug, minRows) {
+  console.log(`\n── /browse/${slug}/ ──`);
+  const res = await page.goto(`${SITE}/browse/${slug}/`, { waitUntil: 'networkidle' });
+  res && res.status() === 200 ? ok(`/browse/${slug}/ → 200`) : fail(`/browse/${slug}/`, `status ${res ? res.status() : 'no response'}`);
+
+  // Shell.
+  const breadcrumb = await page.$('.browse-breadcrumb');
+  breadcrumb ? ok('Breadcrumb present') : fail('Breadcrumb', 'missing');
+  const search = await page.$('.browse-search');
+  search ? ok('Search input present') : fail('Search input', 'missing');
+  const navItems = await page.$$('.browse-nav-item');
+  navItems.length === 5 ? ok('Left nav has 5 entities') : fail('Left nav', `got ${navItems.length}`);
+
+  // Wait for sql.js to load and render rows.
+  try {
+    await page.waitForSelector('.browse-table tbody tr', { timeout: 15000 });
+  } catch (_) {
+    fail(`${slug} table`, 'no rows rendered within 15s');
+    return;
+  }
+  const rows = await page.$$('.browse-table tbody tr');
+  rows.length >= minRows
+    ? ok(`${rows.length} rows rendered (>= ${minRows})`)
+    : fail(`${slug} rows`, `expected at least ${minRows}, got ${rows.length}`);
+}
+
+async function testVendorDetail(page) {
+  console.log('\n── /browse/vendors/#<slug> (detail) ──');
+  await page.goto(`${SITE}/browse/vendors/#hilltop-securities-inc`, { waitUntil: 'networkidle' });
+  try {
+    await page.waitForSelector('.detail-header h2', { timeout: 15000 });
+  } catch (_) {
+    fail('vendor detail', 'no header rendered within 15s');
+    return;
+  }
+  const header = (await page.textContent('.detail-header h2')).trim();
+  header.length > 0
+    ? ok(`Vendor detail header rendered: "${header}"`)
+    : fail('vendor detail header', 'empty');
+  const rows = await page.$$('.detail-payments tbody tr');
+  rows.length > 0
+    ? ok(`${rows.length} payment rows in vendor detail`)
+    : fail('vendor detail payments', 'none');
+}
+
+async function testDeptDetail(page) {
+  console.log('\n── /browse/dept/#<slug> (detail) ──');
+  await page.goto(`${SITE}/browse/dept/#electric-enterprise`, { waitUntil: 'networkidle' });
+  try {
+    await page.waitForSelector('.detail-header h2', { timeout: 15000 });
+  } catch (_) {
+    fail('dept detail', 'no header rendered within 15s');
+    return;
+  }
+  const header = (await page.textContent('.detail-header h2')).trim();
+  /ELECTRIC ENTERPRISE/i.test(header)
+    ? ok(`Dept detail header reads "${header}"`)
+    : fail('dept detail header', `expected ELECTRIC ENTERPRISE, got "${header}"`);
+  const vendorRows = await page.$$('.detail-top-vendors tbody tr');
+  vendorRows.length > 0
+    ? ok(`${vendorRows.length} top-vendor rows`)
+    : fail('dept detail top vendors', 'none');
+}
+
+async function testTopicMeetingCounts(page) {
+  console.log('\n── /browse/topics/ meeting_count > 0 ──');
+  await page.goto(`${SITE}/browse/topics/`, { waitUntil: 'networkidle' });
+  try {
+    await page.waitForSelector('.browse-table tbody tr', { timeout: 10000 });
+  } catch (_) {
+    fail('topics counts', 'no rows rendered');
+    return;
+  }
+  const counts = await page.$$eval('.browse-table tbody tr td:nth-child(3)', els =>
+    els.map(e => parseInt((e.textContent || '0').trim(), 10) || 0)
+  );
+  const nonZero = counts.filter(c => c > 0).length;
+  nonZero > 0
+    ? ok(`${nonZero}/${counts.length} topics have non-zero meeting_count`)
+    : fail('topics counts', 'all zero');
+}
+
 // ── Run ────────────────────────────────────────────────────────────────
 
 (async () => {
@@ -540,6 +632,14 @@ async function testTermsPageLoads(page) {
     await testVerifyMePageLoads(page1);
     await testProfilePageLoads(page1);
     await testTermsPageLoads(page1);
+    await testBrowseIndex(page1);
+    await testBrowseEntity(page1, 'topics', 10);
+    await testBrowseEntity(page1, 'meetings', 30);
+    await testBrowseEntity(page1, 'budget', 30);
+    await testBrowseEntity(page1, 'vendors', 50);
+    await testVendorDetail(page1);
+    await testDeptDetail(page1);
+    await testTopicMeetingCounts(page1);
     await ctx1.close();
   } finally {
     await browser.close();
