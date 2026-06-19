@@ -223,3 +223,36 @@ Rationale: internal links help readers explore the site; external links take the
   rule is against rhetorical "beat inflation" framings that imply waste without
   analytical support, not against honest disclosure that a number is
   inflation-adjusted.
+- No sort-by-backing, "trending," "most backed," "popular," or "featured"
+  treatment of ideas. Ideas stay in editorial order; backing is a layer on top,
+  never a re-ranking signal.
+- No advocacy verbs on engagement copy ("support," "vote for," "champions,"
+  "leads"). Backing is residents endorsing in their own name, not the site
+  endorsing. See "Backing and reps wording rules" below.
+
+## Backing and reps wording rules
+
+The "Who's behind this" panel on `what-can-we-do.html` lets verified residents
+back ideas in their own name. The line we hold: *verified residents endorse
+ideas in their own name; the site itself never endorses an idea.* Word the
+engagement UI accordingly.
+
+| Use | Avoid |
+|-----|-------|
+| "Backed by N verified residents" | "N residents support this" / "N votes for this" |
+| "X says they'll talk to others about this" | "X is leading this" / "X champions this" |
+| "Who's behind this" (panel header) | "Endorsements" / "Supporters" / "Trending" |
+| "Be the first to back this" | "Be the first to support this idea" |
+
+Counts read as "N verified residents," never "N Marbleheaders" or "N voters,"
+because the verified network is a self-selected sample, not a town poll.
+
+### Engagement panel (page component)
+
+The backing panel (`.idea-engage`, `assets/community-pulse/engagement.css`)
+sits *below* the editorial content of an idea card, with lighter typography and
+only a subtle `data-cat` border accent. Reading a card top to bottom, the
+editorial substance (rough guess, difficulty, who pays, research) always lands
+before the backing data. The panel is gated by the `engagement_widget` flag in
+`_config.yml` (`on` by default; set to `off` to hide site-wide without removing
+the underlying data).
