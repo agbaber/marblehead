@@ -278,5 +278,25 @@ def test_topics_ingest():
         n_rows = conn.execute("SELECT COUNT(*) FROM topics").fetchone()[0]
         n_distinct = conn.execute("SELECT COUNT(DISTINCT slug) FROM topics").fetchone()[0]
         assert n_rows == n_distinct, "Slug collision"
+
+        # Phase 1c: also populate meetings + run the JOIN so meeting_count gets values.
+        build_sqlite_db.build_meetings(conn)
+        build_sqlite_db.update_meeting_counts(conn)
+
+        # Phase 1c: meeting_count populated via JOIN against meetings.topic_tags.
+        # At least one topic with known transcripts should have meeting_count > 0.
+        override = conn.execute(
+            "SELECT meeting_count FROM topics WHERE slug = 'override'"
+        ).fetchone()
+        assert override is not None, "override topic row missing"
+        assert override[0] > 0, (
+            f"Expected override meeting_count > 0, got {override[0]}"
+        )
+
+        # Total meeting_count across all topics should be > 0.
+        total = conn.execute(
+            "SELECT SUM(meeting_count) FROM topics"
+        ).fetchone()[0]
+        assert total > 0, f"Expected total meeting_count > 0, got {total}"
     finally:
         conn.close()

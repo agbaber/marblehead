@@ -555,6 +555,22 @@ def build_topics(conn: sqlite3.Connection) -> int:
     return len(payload)
 
 
+def update_meeting_counts(conn: sqlite3.Connection) -> None:
+    """Populate topics.meeting_count via LIKE join on meetings.topic_tags.
+
+    The ',,' bookends on both sides prevent prefix-match collisions
+    (e.g. 'override' must not match 'override-prep' if such a slug existed).
+    Run AFTER both build_meetings and build_topics have populated their tables.
+    """
+    conn.execute(
+        "UPDATE topics SET meeting_count = ("
+        "  SELECT COUNT(*) FROM meetings "
+        "  WHERE (',' || meetings.topic_tags || ',') "
+        "        LIKE ('%,' || topics.slug || ',%')"
+        ")"
+    )
+
+
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     if OUT_PATH.exists():
@@ -588,6 +604,8 @@ def main() -> None:
         print(f"  {'meetings':32s} {n_m:>7,} rows  (_transcripts/*.md)")
         n_t = build_topics(conn)
         print(f"  {'topics':32s} {n_t:>7,} rows  (topics/*.html)")
+        update_meeting_counts(conn)
+        print(f"  {'topics.meeting_count':32s} populated via JOIN")
         conn.commit()
         conn.execute("VACUUM")
         # Emit row counts for the /browse/ index page cards.
