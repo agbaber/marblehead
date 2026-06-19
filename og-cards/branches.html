@@ -3,37 +3,6 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="_shared.css">
-  <style>
-    .roster {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px 28px;
-      margin-top: 26px;
-      max-width: 1056px;
-    }
-    .chip {
-      background: var(--bg-lift);
-      border: 1px solid var(--rule);
-      border-left: 3px solid var(--c-teal);
-      border-radius: 4px;
-      padding: 16px 22px;
-      font-size: 26px;
-      font-weight: 600;
-      color: var(--text);
-      letter-spacing: 0.005em;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 18px;
-    }
-    .chip .num {
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      color: var(--text-sub);
-      font-variant-numeric: tabular-nums;
-    }
-  </style>
 </head>
 <body>
   <main class="card">
@@ -41,24 +10,17 @@
       <span class="mark"></span>
       <span>Tool</span>
       <span class="sep">/</span>
-      <span>Neighborhood branches</span>
+      <span>Verification branches</span>
     </header>
 
     <div>
-      <h1 class="card-headline">See who's verified <em>in your neighborhood.</em></h1>
-      <div class="roster">
-        <div class="chip"><span>Glover's Regiment</span><span class="num">01</span></div>
-        <div class="chip"><span>The Hannah Crew</span><span class="num">02</span></div>
-        <div class="chip"><span>Mugford's Prize</span><span class="num">03</span></div>
-        <div class="chip"><span>Fort Sewall Watch</span><span class="num">04</span></div>
-        <div class="chip"><span>Old North Company</span><span class="num">05</span></div>
-        <div class="chip"><span>Powder House Hill</span><span class="num">06</span></div>
-      </div>
+      <h1 class="card-headline">Marblehead's <em>verification network.</em></h1>
+      <p class="card-subhead">Verified residents organize into neighborhood branches. Each branch carries a name from Marblehead's Revolutionary War history: Glover's Regiment, Mugford's Prize, Fort Sewall Watch.</p>
     </div>
 
     <footer class="card-foot">
-      <span class="url">marbleheaddata.org/branches</span>
-      <span>Branch names drawn from Marblehead's Revolutionary War history</span>
+      <span class="url">marbleheaddata.org/branches.html</span>
+      <span>Open directory · join a branch</span>
     </footer>
   </main>
 </body>
