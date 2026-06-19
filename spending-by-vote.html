@@ -1,11 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sketch v2: What we paid, and the choices we made</title>
+---
+title: "What we paid, and the choices we made"
+permalink: /spending-by-vote/
+og_title: "What we paid, and the choices we made — Marblehead FY26 spending by who voted on it"
+og_description: "Where each FY26 dollar Marblehead paid came from, and who voted on it: ballot vs Town Meeting vs ratepayer vs state/federal vs revolving vs trusts. With a Choice Qualifier showing how much of GF-Town spend was already locked in before Town Meeting opened."
+og_url: https://marbleheaddata.org/spending-by-vote/
+---
 <style>
-  :root {
+
+  .choice-view .choice-lede-h {
+    font-size: 26px; font-weight: 700; color: var(--c-navy);
+    margin: 16px auto 12px; max-width: 720px; padding: 0 16px; text-align: center;
+    letter-spacing: -0.2px;
+  }
+  .choice-view .hero { padding: 0 0 12px; text-align: center; }
+
+  .choice-view {
     --c-navy: #0b1d3a;
     --c-navy-2: #1a3766;
     --c-teal: #156d68;
@@ -30,7 +39,7 @@
   }
   /* Dark mode (auto via OS, or forced via data-theme on the html element) */
   @media (prefers-color-scheme: dark) {
-    html:not([data-theme="light"]) {
+  html:not([data-theme="light"]) .choice-view {
       --c-navy: #e6edf6;
       --c-navy-2: #8aaad6;
       --c-teal: #4cbab1;
@@ -50,8 +59,8 @@
       --subbucket-border: #4a3d20;
       --subbucket-ballot-bg: #122826;
     }
-  }
-  html[data-theme="dark"] {
+}
+  html[data-theme="dark"] .choice-view {
     --c-navy: #e6edf6;
     --c-navy-2: #8aaad6;
     --c-teal: #4cbab1;
@@ -71,25 +80,6 @@
     --subbucket-border: #4a3d20;
     --subbucket-ballot-bg: #122826;
   }
-  * { box-sizing: border-box; }
-  html, body { background: var(--bg); }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
-    color: var(--text); line-height: 1.5; -webkit-font-smoothing: antialiased;
-  }
-  .nav {
-    background: var(--surface); border-bottom: 1px solid var(--border);
-    padding: 12px 20px; font-size: 13px; color: var(--text-subtle);
-  }
-  .nav strong { color: var(--c-navy); }
-  .page { max-width: var(--max); margin: 0 auto; padding: 28px 20px 80px; }
-
-  .hero { text-align: center; padding: 24px 0 16px; }
-  .crumb { font-size: 12px; color: var(--text-subtle); margin-bottom: 18px; }
-  .h1 { font-size: 30px; font-weight: 700; color: var(--c-navy); margin: 0 0 6px; letter-spacing: -0.4px; }
-  .sub { font-size: 15px; color: var(--text-muted); max-width: 640px; margin: 0 auto 16px; }
-
   /* Finding-led hero replaces the 4-stat panel */
   .finding {
     font-size: 17px; line-height: 1.55; color: var(--text);
@@ -105,8 +95,8 @@
   }
 
   /* Link defaults, substance underlined; can-be-followed affordance */
-  a { color: var(--c-navy-2); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
-  a:hover { color: var(--c-teal); }
+  .choice-view a { color: var(--c-navy-2); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  .choice-view a:hover { color: var(--c-teal); }
   .crumb a { color: var(--text-subtle); }
   .findinglinks a { color: var(--text-muted); }
 
@@ -346,16 +336,6 @@
   .accountedfor b { color: var(--c-teal); }
 
   /* Theme toggle (tiny corner button) */
-  .theme-toggle {
-    position: fixed; top: 10px; right: 14px;
-    background: var(--surface); border: 1px solid var(--border);
-    color: var(--text-muted); font-size: 11px; font-weight: 600;
-    padding: 5px 10px; border-radius: 999px; cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    z-index: 10;
-  }
-  .theme-toggle:hover { color: var(--text); }
-
   /* news */
   .news {
     margin: 36px 0 0;
@@ -403,7 +383,6 @@
 
   /* ===== mobile (<= 720px) ===== */
   @media (max-width: 720px) {
-    .page { padding: 18px 14px 60px; }
     .h1 { font-size: 24px; }
     .sub { font-size: 14px; padding: 0 4px; }
     .freshness { font-size: 11.5px; padding: 5px 12px; white-space: normal; gap: 6px; }
@@ -449,18 +428,10 @@
     .choice-list { gap: 16px; }
   }
 </style>
-</head>
-<body>
 
-<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
-
-<div class="nav"><strong>MHD Data</strong> &middot; sketch v2 &middot; <em>checkbook reframed, real numbers</em></div>
-
-<main class="page">
-
-  <section class="hero">
-    <div class="crumb">Home / Checkbook</div>
-    <h1 class="h1">What we paid, and the choices we made</h1>
+<div class="choice-view">
+<section class="hero">
+    <h2 class="choice-lede-h">What we paid, and the choices we made</h2>
     <p class="finding">
       Through <span data-fill="snapshot.last_payment|date">Jun 9</span>, Marblehead has paid <strong data-fill="snapshot.total_paid|usd">$99.9M</strong> to vendors in FY26.
       Inside <a href="#bucket-tm">General Fund &ndash; Town</a> alone, <strong data-fill="gf_town_carveout.fixed_total|usd">$37.6M</strong>
@@ -470,6 +441,7 @@
     </p>
     <p class="findinglinks">
       <span data-freshness>Snapshot: Jun 9, 2026 &middot; weekly cadence</span>
+      &middot; <a href="/checkbook/">raw transaction ledger</a>
       &middot; <a href="/data/checkbook_view.json">view <abbr class="g" title="JavaScript Object Notation (data file)">JSON</abbr></a>
       &middot; <a href="/data/checkbook_fund_provenance.json">fund &rarr; vote mapping</a>
       &middot; <a href="#about">how this is computed</a>
@@ -870,37 +842,4 @@
     <p>All bucket totals are real, computed from the <code>checkbook_FY26_2026-06-09.csv</code> ledger. Fund-to-vote provenance is in <code>data/checkbook_fund_provenance.json</code> (top 20 funds, 97.8% of paid spend). Vote citations cross-reference <code>data/dor_debt_exclusion_all.csv</code> (MA DOR Proposition 2&frac12; Debt Exclusion Votes) for the ballot bucket.</p>
     <p>Only <b>14.3% of vendor checks out of General Fund &ndash; Town</b> are subject to year-to-year Town Meeting discretion. The other 85.7% (GIC + pension + bond debt + state assessments) is set by outside boards or prior contracts. Payroll, the largest discretionary line, is paid via a separate system and isn't in the ledger.</p>
   </section>
-
-</main>
-
-<script src="checkbook-view.js"></script>
-<script>
-  (function () {
-    var html = document.documentElement;
-    var btn = document.getElementById('theme-toggle');
-    var saved = null;
-    try { saved = localStorage.getItem('mhd-sketch-theme'); } catch (e) {}
-    if (saved === 'dark' || saved === 'light') html.setAttribute('data-theme', saved);
-
-    function label() {
-      var resolved = html.getAttribute('data-theme');
-      if (!resolved) {
-        resolved = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
-      btn.textContent = resolved === 'dark' ? 'Light' : 'Dark';
-    }
-    label();
-    btn.addEventListener('click', function () {
-      var current = html.getAttribute('data-theme');
-      if (!current) {
-        current = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
-      var next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      try { localStorage.setItem('mhd-sketch-theme', next); } catch (e) {}
-      label();
-    });
-  })();
-</script>
-</body>
-</html>
+</div>
