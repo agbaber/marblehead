@@ -144,3 +144,53 @@ def test_budget_lines_ingest():
         assert meta is not None and meta[0] == n
     finally:
         conn.close()
+
+
+def test_meetings_ingest():
+    """meetings ingest scans _transcripts/*.md front-matter."""
+    conn = _open_memory_db()
+    try:
+        n = build_sqlite_db.build_meetings(conn)
+        assert n >= 200, f"Expected at least 200 meeting rows, got {n}"
+
+        cols = [
+            row[1]
+            for row in conn.execute("PRAGMA table_info(meetings)").fetchall()
+        ]
+        assert cols == [
+            "id",
+            "meeting_date",
+            "board",
+            "title",
+            "slug",
+            "has_transcript",
+            "has_digest",
+            "topic_tags",
+            "url",
+        ], f"Unexpected schema: {cols}"
+
+        # Known row: Board of Health 2022-05-31
+        row = conn.execute(
+            "SELECT board, title FROM meetings "
+            "WHERE slug = 'board-of-health-2022-05-31'"
+        ).fetchone()
+        assert row is not None, "Expected board-of-health-2022-05-31 row"
+        assert row[0] == "board-of-health"
+        assert "Board of Health" in row[1]
+
+        # All rows have has_transcript=1
+        without_transcript = conn.execute(
+            "SELECT COUNT(*) FROM meetings WHERE has_transcript != 1"
+        ).fetchone()[0]
+        assert without_transcript == 0, (
+            f"Expected all meetings to have has_transcript=1, got {without_transcript} that don't"
+        )
+
+        # Slugs unique
+        dupes = conn.execute(
+            "SELECT slug, COUNT(*) c FROM meetings "
+            "GROUP BY slug HAVING c > 1 LIMIT 1"
+        ).fetchone()
+        assert dupes is None, f"Duplicate slug found: {dupes}"
+    finally:
+        conn.close()

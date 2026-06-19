@@ -24,6 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
+TRANSCRIPTS_DIR = ROOT / "_transcripts"
 OUT_DIR = ROOT / "assets" / "data"
 OUT_PATH = OUT_DIR / "marbleheaddata.sqlite"
 
@@ -370,6 +371,101 @@ def build_budget_lines(conn: sqlite3.Connection) -> int:
     return len(payload)
 
 
+def _parse_frontmatter(path: Path) -> dict[str, str]:
+    """Read a Jekyll front-matter block. Returns flat dict of key:value strings.
+
+    Assumes the file starts with `---`, a block of `key: value` lines, and ends
+    the front-matter with another `---`. Quoted values have their quotes
+    stripped. We don't try to handle nested YAML; Phase 1 only needs flat keys.
+    """
+    out: dict[str, str] = {}
+    with path.open(encoding="utf-8") as f:
+        first = f.readline().rstrip("\n")
+        if first != "---":
+            return out
+        for line in f:
+            line = line.rstrip("\n")
+            if line == "---":
+                break
+            if ":" not in line:
+                continue
+            key, _, value = line.partition(":")
+            key = key.strip()
+            value = value.strip()
+            # Strip surrounding quotes (single or double).
+            if len(value) >= 2 and value[0] == value[-1] and value[0] in ("'", '"'):
+                value = value[1:-1]
+            out[key] = value
+    return out
+
+
+def build_meetings(conn: sqlite3.Connection) -> int:
+    """Ingest every _transcripts/*.md front-matter into a meetings table."""
+    conn.execute('DROP TABLE IF EXISTS "meetings"')
+    conn.execute(
+        """CREATE TABLE meetings (
+            id INTEGER PRIMARY KEY,
+            meeting_date TEXT,
+            board TEXT,
+            title TEXT,
+            slug TEXT UNIQUE,
+            has_transcript INTEGER,
+            has_digest INTEGER,
+            topic_tags TEXT,
+            url TEXT
+        )"""
+    )
+    conn.execute("CREATE INDEX m_date ON meetings(meeting_date)")
+    conn.execute("CREATE INDEX m_board ON meetings(board)")
+
+    payload: list[tuple] = []
+    seen_slugs: set[str] = set()
+    for md in sorted(TRANSCRIPTS_DIR.glob("*.md")):
+        fm = _parse_frontmatter(md)
+        slug = fm.get("slug") or md.stem
+        if slug in seen_slugs:
+            # Should not happen; defensive only.
+            continue
+        seen_slugs.add(slug)
+        payload.append(
+            (
+                fm.get("date") or None,
+                fm.get("board") or None,
+                fm.get("title") or "",
+                slug,
+                1,                      # has_transcript
+                0,                      # has_digest (future phase)
+                "",                     # topic_tags (future phase)
+                f"/transcripts/{slug}/",
+            )
+        )
+
+    conn.executemany(
+        """INSERT INTO meetings (
+            meeting_date, board, title, slug,
+            has_transcript, has_digest, topic_tags, url
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+        payload,
+    )
+
+    today = date.today().isoformat()
+    conn.execute(
+        'INSERT OR REPLACE INTO _meta '
+        '("table", description, source, row_count, csv_name, last_updated) '
+        "VALUES (?, ?, ?, ?, ?, ?)",
+        (
+            "meetings",
+            "Every town meeting we have a transcript for: date, board, "
+            "title, slug, and a URL into the existing /transcripts/ page.",
+            "_transcripts/*.md front-matter (Jekyll-ingested).",
+            len(payload),
+            "_transcripts/*.md",
+            today,
+        ),
+    )
+    return len(payload)
+
+
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     if OUT_PATH.exists():
@@ -399,6 +495,8 @@ def main() -> None:
         print(f"  {'vendor_payments':32s} {n_vp:>7,} rows  ({_latest_checkbook_csv().name})")
         n_bl = build_budget_lines(conn)
         print(f"  {'budget_lines':32s} {n_bl:>7,} rows  (FY*_budget_summary.json)")
+        n_m = build_meetings(conn)
+        print(f"  {'meetings':32s} {n_m:>7,} rows  (_transcripts/*.md)")
         conn.commit()
         conn.execute("VACUUM")
     finally:
