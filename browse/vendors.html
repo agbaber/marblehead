@@ -34,8 +34,8 @@ window.addEventListener("DOMContentLoaded", function () {
     table: "vendor_payments",
     columns: [
       { column: "payment_date", label: "Date", format: "date" },
-      { column: "vendor", label: "Vendor" },
-      { column: "department", label: "Department" },
+      { column: "vendor", label: "Vendor", linkTemplate: "/browse/vendors/#{slug}" },
+      { column: "department", label: "Department", linkTemplate: "/browse/dept/#{slug}" },
       { column: "fund", label: "Fund" },
       { column: "amount", label: "Amount", format: "money" },
     ],

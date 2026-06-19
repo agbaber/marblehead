@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", function () {
     table: "budget_lines",
     columns: [
       { column: "fiscal_year", label: "FY", format: "date" },
-      { column: "department", label: "Department" },
+      { column: "department", label: "Department", linkTemplate: "/browse/dept/#{slug}" },
       { column: "line_item", label: "Line item" },
       { column: "fund", label: "Fund" },
       { column: "amount", label: "Amount", format: "moneyRound" },
