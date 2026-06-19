@@ -519,6 +519,42 @@ async function testTermsPageLoads(page) {
     : fail('terms h1', `expected "Terms of Use", got "${h1Text}"`);
 }
 
+// ── /browse/ ───────────────────────────────────────────────────────────
+
+async function testBrowseIndex(page) {
+  console.log('\n── /browse/ ──');
+  const res = await page.goto(`${SITE}/browse/`, { waitUntil: 'domcontentloaded' });
+  res && res.status() === 200 ? ok('/browse/ → 200') : fail('/browse/', `status ${res ? res.status() : 'no response'}`);
+  const cards = await page.$$('.browse-card');
+  cards.length === 4 ? ok('4 entity cards') : fail('Browse cards', `expected 4, got ${cards.length}`);
+}
+
+async function testBrowseEntity(page, slug, minRows) {
+  console.log(`\n── /browse/${slug}/ ──`);
+  const res = await page.goto(`${SITE}/browse/${slug}/`, { waitUntil: 'networkidle' });
+  res && res.status() === 200 ? ok(`/browse/${slug}/ → 200`) : fail(`/browse/${slug}/`, `status ${res ? res.status() : 'no response'}`);
+
+  // Shell.
+  const breadcrumb = await page.$('.browse-breadcrumb');
+  breadcrumb ? ok('Breadcrumb present') : fail('Breadcrumb', 'missing');
+  const search = await page.$('.browse-search');
+  search ? ok('Search input present') : fail('Search input', 'missing');
+  const navItems = await page.$$('.browse-nav-item');
+  navItems.length === 4 ? ok('Left nav has 4 entities') : fail('Left nav', `got ${navItems.length}`);
+
+  // Wait for sql.js to load and render rows.
+  try {
+    await page.waitForSelector('.browse-table tbody tr', { timeout: 15000 });
+  } catch (_) {
+    fail(`${slug} table`, 'no rows rendered within 15s');
+    return;
+  }
+  const rows = await page.$$('.browse-table tbody tr');
+  rows.length >= minRows
+    ? ok(`${rows.length} rows rendered (>= ${minRows})`)
+    : fail(`${slug} rows`, `expected at least ${minRows}, got ${rows.length}`);
+}
+
 // ── Run ────────────────────────────────────────────────────────────────
 
 (async () => {
@@ -540,6 +576,11 @@ async function testTermsPageLoads(page) {
     await testVerifyMePageLoads(page1);
     await testProfilePageLoads(page1);
     await testTermsPageLoads(page1);
+    await testBrowseIndex(page1);
+    await testBrowseEntity(page1, 'topics', 10);
+    await testBrowseEntity(page1, 'meetings', 30);
+    await testBrowseEntity(page1, 'budget', 30);
+    await testBrowseEntity(page1, 'vendors', 50);
     await ctx1.close();
   } finally {
     await browser.close();
