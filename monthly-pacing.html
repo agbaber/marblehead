@@ -135,8 +135,8 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 <p class="section-sub">FY26 revised budget vs. year-to-date actual. Snapshot from the town's budget-vs-actual portal, as of <strong>May&nbsp;29,&nbsp;2026</strong>.</p>
 
 <div class="pacing-meta">
-  <span><strong>FY elapsed:</strong> 332/364 days = <strong>91.2%</strong></span>
-  <span><strong>Read:</strong> % used above 91.2% is pacing hot; below is pacing cold.</span>
+  <span><strong>FY26 elapsed:</strong> <strong>91%</strong> (32 days left before the year closes on June 30)</span>
+  <span><strong>Read:</strong> % used above 91% is pacing hot; below is pacing cold.</span>
 </div>
 
 <table class="pace-table" id="pace-table">
@@ -146,7 +146,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
       <th class="num">Revised budget</th>
       <th class="num">YTD actual</th>
       <th class="num">% used</th>
-      <th class="num col-hide-sm">vs. 91.2%</th>
+      <th class="num col-hide-sm">vs. 91%</th>
     </tr>
   </thead>
   <tbody id="pace-body"></tbody>
@@ -249,7 +249,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
     var pillCls = 'var-pill';
     if (delta > 8) pillCls += ' var-pill--hot';
     else if (delta < -8) pillCls += ' var-pill--cold';
-    var deltaStr = (delta >= 0 ? '+' : '') + delta.toFixed(1) + ' pp';
+    var deltaStr = (delta >= 0 ? '+' : '') + delta.toFixed(1) + '%';
     var tr = document.createElement('tr');
     tr.innerHTML =
       '<td class="pace-name">' + (r.name || '') + '</td>' +
