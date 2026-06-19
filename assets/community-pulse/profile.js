@@ -10,6 +10,14 @@ const JWT_KEY = 'verify_jwt';
 function readJwt() { return localStorage.getItem(JWT_KEY); }
 function clearJwt() { localStorage.removeItem(JWT_KEY); }
 
+function track(event, props) {
+  try {
+    if (window.posthog && window.posthog.capture) {
+      window.posthog.capture(event, props || {});
+    }
+  } catch (e) { /* analytics never blocks the user */ }
+}
+
 async function fetchProfile() {
   const jwt = readJwt();
   if (!jwt) return null;
@@ -60,8 +68,11 @@ function renderSignedOut(root) {
     <div class="pf-signedout">
       <h1>Profile</h1>
       <p>You are not signed in. Sign in to manage your verified-resident identity, the ideas you've backed, and how you appear on the site.</p>
-      <a class="pf-signin" href="/verify-me.html">Sign in</a>
+      <a class="pf-signin" id="pf-signin-link" href="/verify-me.html">Sign in</a>
     </div>`;
+  track('verify_profile_viewed', { state: 'signed_out' });
+  document.getElementById('pf-signin-link')
+    ?.addEventListener('click', () => track('verify_signin_clicked', { from: 'profile_page' }));
 }
 
 function renderProfile(root, profile) {
