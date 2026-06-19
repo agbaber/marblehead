@@ -37,3 +37,62 @@ def test_build_script_imports():
     """Smoke test: the build script imports without errors."""
     assert hasattr(build_sqlite_db, "main")
     assert hasattr(build_sqlite_db, "DATASETS")
+
+
+def test_vendor_payments_ingest():
+    """vendor_payments ingest pulls rows from the FY26 checkbook CSV."""
+    conn = _open_memory_db()
+    try:
+        n = build_sqlite_db.build_vendor_payments(conn)
+        assert n > 1000, f"Expected >1000 vendor payment rows, got {n}"
+
+        # Schema check
+        cols = [
+            row[1]
+            for row in conn.execute("PRAGMA table_info(vendor_payments)").fetchall()
+        ]
+        assert cols == [
+            "id",
+            "payment_date",
+            "fiscal_year",
+            "vendor",
+            "department",
+            "category",
+            "amount",
+            "fund",
+            "source_file",
+        ], f"Unexpected schema: {cols}"
+
+        # Fiscal year derivation: July 1, 2025 must be FY26
+        fy_july = conn.execute(
+            "SELECT fiscal_year FROM vendor_payments "
+            "WHERE payment_date = '2025-07-01' LIMIT 1"
+        ).fetchone()
+        assert fy_july is not None, "Expected a row dated 2025-07-01"
+        assert fy_july[0] == "FY26", f"Expected FY26, got {fy_july[0]}"
+
+        # June 2025 must be FY25
+        june_row = conn.execute(
+            "SELECT fiscal_year FROM vendor_payments "
+            "WHERE payment_date LIKE '2025-06-%' LIMIT 1"
+        ).fetchone()
+        if june_row:
+            assert june_row[0] == "FY25", f"Expected FY25, got {june_row[0]}"
+
+        # All amounts are real numbers
+        non_numeric = conn.execute(
+            "SELECT COUNT(*) FROM vendor_payments WHERE amount IS NULL"
+        ).fetchone()[0]
+        assert non_numeric < n // 100, (
+            f"Too many null amounts: {non_numeric} of {n}"
+        )
+
+        # _meta row written
+        meta = conn.execute(
+            "SELECT description, source, row_count FROM _meta "
+            "WHERE \"table\" = 'vendor_payments'"
+        ).fetchone()
+        assert meta is not None, "Expected _meta row for vendor_payments"
+        assert meta[2] == n, f"_meta row_count {meta[2]} != n {n}"
+    finally:
+        conn.close()

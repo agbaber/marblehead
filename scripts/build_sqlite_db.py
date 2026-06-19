@@ -15,6 +15,7 @@ Usage:
 from __future__ import annotations
 
 import csv
+import re
 import sqlite3
 from dataclasses import dataclass
 from datetime import date
@@ -181,6 +182,109 @@ def _build_table(conn: sqlite3.Connection, ds: Dataset) -> int:
     return len(payload)
 
 
+def _massachusetts_fiscal_year(iso_date: str) -> str:
+    """Return e.g. 'FY26' for any date in MA fiscal year 2026 (Jul 1 2025 - Jun 30 2026)."""
+    # iso_date is "YYYY-MM-DD" or "YYYY-MM-DDTHH:MM:SS.sss".
+    m = re.match(r"^(\d{4})-(\d{2})", iso_date)
+    if not m:
+        return ""
+    year = int(m.group(1))
+    month = int(m.group(2))
+    fy = year + 1 if month >= 7 else year
+    return f"FY{fy % 100:02d}"
+
+
+def _latest_checkbook_csv() -> Path:
+    """Return the most recent checkbook_FY26_*.csv in data/, by filename date."""
+    matches = sorted(DATA_DIR.glob("checkbook_FY26_*.csv"))
+    if not matches:
+        raise FileNotFoundError("No checkbook_FY26_*.csv in data/")
+    return matches[-1]
+
+
+def build_vendor_payments(conn: sqlite3.Connection) -> int:
+    """Ingest the latest FY26 checkbook CSV into a vendor_payments table.
+
+    The Open Finance export has columns: Vendor, Fund, Division, Description,
+    Date, Amount. We normalize the date, derive fiscal_year, and write the
+    spec-defined schema.
+    """
+    path = _latest_checkbook_csv()
+    conn.execute('DROP TABLE IF EXISTS "vendor_payments"')
+    conn.execute(
+        """CREATE TABLE vendor_payments (
+            id INTEGER PRIMARY KEY,
+            payment_date TEXT,
+            fiscal_year TEXT,
+            vendor TEXT,
+            department TEXT,
+            category TEXT,
+            amount REAL,
+            fund TEXT,
+            source_file TEXT
+        )"""
+    )
+    conn.execute(
+        "CREATE INDEX vp_vendor ON vendor_payments(vendor)"
+    )
+    conn.execute(
+        "CREATE INDEX vp_department ON vendor_payments(department)"
+    )
+    conn.execute(
+        "CREATE INDEX vp_date ON vendor_payments(payment_date)"
+    )
+
+    with path.open(newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        payload: list[tuple] = []
+        for row in reader:
+            raw_date = (row.get("Date") or "").strip()
+            payment_date = raw_date.split("T", 1)[0] if raw_date else ""
+            fiscal_year = _massachusetts_fiscal_year(payment_date)
+            amount_str = (row.get("Amount") or "").strip().replace(",", "")
+            try:
+                amount = float(amount_str) if amount_str else None
+            except ValueError:
+                amount = None
+            payload.append(
+                (
+                    payment_date or None,
+                    fiscal_year or None,
+                    (row.get("Vendor") or "").strip() or None,
+                    (row.get("Division") or "").strip() or None,
+                    (row.get("Description") or "").strip() or None,
+                    amount,
+                    (row.get("Fund") or "").strip() or None,
+                    path.name,
+                )
+            )
+
+    conn.executemany(
+        """INSERT INTO vendor_payments (
+            payment_date, fiscal_year, vendor, department,
+            category, amount, fund, source_file
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+        payload,
+    )
+
+    today = date.today().isoformat()
+    conn.execute(
+        'INSERT OR REPLACE INTO _meta '
+        '("table", description, source, row_count, csv_name, last_updated) '
+        "VALUES (?, ?, ?, ?, ?, ?)",
+        (
+            "vendor_payments",
+            "Every vendor check the town has paid this fiscal year, "
+            "from the Open Finance portal export.",
+            f"Marblehead Open Finance vendor payments export, {path.name}.",
+            len(payload),
+            path.name,
+            today,
+        ),
+    )
+    return len(payload)
+
+
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     if OUT_PATH.exists():
@@ -206,6 +310,8 @@ def main() -> None:
                 (ds.table, ds.description, ds.source, n, ds.csv_name, today),
             )
             print(f"  {ds.table:32s} {n:>7,} rows  ({ds.csv_name})")
+        n_vp = build_vendor_payments(conn)
+        print(f"  {'vendor_payments':32s} {n_vp:>7,} rows  ({_latest_checkbook_csv().name})")
         conn.commit()
         conn.execute("VACUUM")
     finally:
