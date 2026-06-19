@@ -1,0 +1,63 @@
+---
+title: "Browse: Vendor payments"
+permalink: /browse/vendors/
+layout: browse
+entity: vendors
+entity_label: Vendor payments
+---
+
+<input type="search" class="browse-search" placeholder="search vendors, departments, descriptions...">
+
+<div class="browse-filters"></div>
+<p class="browse-row-count"></p>
+
+<div class="browse-table-wrap">
+  <table class="browse-table">
+    <thead><tr></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<button class="browse-load-more">Load more</button>
+
+<p class="browse-footnote">
+  Source: <code>marbleheaddata.sqlite</code> &rarr; <code>vendor_payments</code>,
+  ingested from the Marblehead Open Finance vendor checks export.
+  Department is the source CSV's Division when present, otherwise
+  falls back to Fund. The label "Unattributed" marks rows with neither.
+</p>
+
+<script src="/assets/browse.js" defer></script>
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+  window.Browse.renderListView({
+    table: "vendor_payments",
+    columns: [
+      { column: "payment_date", label: "Date", format: "date" },
+      { column: "vendor", label: "Vendor" },
+      { column: "department", label: "Department" },
+      { column: "fund", label: "Fund" },
+      { column: "amount", label: "Amount", format: "money" },
+    ],
+    filters: [
+      {
+        column: "fiscal_year",
+        label: "FY",
+        multi: true,
+        valuesFrom: "distinct",
+      },
+      {
+        column: "department",
+        label: "Dept",
+        multi: true,
+        valuesFrom: "distinct",
+        topN: 12,
+      },
+    ],
+    searchColumns: ["vendor", "department", "category", "fund"],
+    defaultSortColumn: "payment_date",
+    defaultSortDesc: true,
+    pageSize: 100,
+  });
+});
+</script>
