@@ -242,6 +242,10 @@ og_url: https://marbleheaddata.org/spending-by-vote/
     display: flex; align-items: center; justify-content: center;
     color: #fff; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums;
     border-right: 1px solid rgba(255,255,255,0.35); padding: 0 4px; white-space: nowrap; overflow: hidden;
+    /* Same defensive treatment as .stack-bar .seg — forces full bar height even
+       when a child's intrinsic height is small. The Debt segment was reportedly
+       half-filling on some browsers; this prevents the same collapse pattern. */
+    align-self: stretch; min-height: 100%;
   }
   .cstack .cseg:last-child { border-right: none; }
   .cstack .cseg.fixed     { background: var(--c-sand); }
