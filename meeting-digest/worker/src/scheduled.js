@@ -5,6 +5,7 @@ import { renderHtml, renderText, renderSubject } from './lib/render.js';
 import { sendMail } from './lib/mail.js';
 import { randomToken } from './lib/email.js';
 import { fetchPrimers, pickPrimer } from './lib/primer.js';
+import { fetchSubscriberStats } from './lib/admin-stats.js';
 
 // Backup crons fire 30 minutes after the primary slot, so we never want to
 // re-send within the same morning. Five days is well past that and well
@@ -74,6 +75,15 @@ export async function runScheduled(event, env, opts = {}) {
     maxPrimerIndex = 0;
   }
 
+  let adminStats = null;
+  try {
+    adminStats = await fetchSubscriberStats(env, now);
+    console.log(`[digest] fetched admin stats: confirmed=${adminStats.confirmed.n} pending=${adminStats.pending_confirmation.n}`);
+  } catch (e) {
+    console.log(`[digest] admin stats fetch failed (continuing without block): ${e.message}`);
+    adminStats = null;
+  }
+
   const weekEnding = new Date(now).toISOString().slice(0, 10);
   let sent = 0, skipped = 0, errored = 0;
 
@@ -88,8 +98,10 @@ export async function runScheduled(event, env, opts = {}) {
     const primer = pickPrimer(primers, s.drip_week_index || 0);
 
     const subject = renderSubject(matches);
-    const html = renderHtml(matches, { manage_token: s.manage_token, email: s.email }, env, weekEnding, primer, maxPrimerIndex);
-    const text = renderText(matches, { manage_token: s.manage_token, email: s.email }, env, weekEnding, primer, maxPrimerIndex);
+    const isAdmin = env.ADMIN_EMAIL && s.email === env.ADMIN_EMAIL;
+    const adminStatsForRecipient = isAdmin ? adminStats : null;
+    const html = renderHtml(matches, { manage_token: s.manage_token, email: s.email }, env, weekEnding, primer, maxPrimerIndex, adminStatsForRecipient);
+    const text = renderText(matches, { manage_token: s.manage_token, email: s.email }, env, weekEnding, primer, maxPrimerIndex, adminStatsForRecipient);
     const unsubMailto = `mailto:unsub@marbleheaddata.org?subject=unsubscribe`;
     const unsubHttp = `${env.SITE_BASE_URL}/api/unsubscribe?token=${encodeURIComponent(s.manage_token)}`;
 
