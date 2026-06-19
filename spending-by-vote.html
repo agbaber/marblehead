@@ -153,7 +153,10 @@ og_url: https://marbleheaddata.org/spending-by-vote/
   .stack-bar .seg { position: relative; display: flex; align-items: center; justify-content: center;
                     color: #fff; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums;
                     border-right: 1px solid rgba(255,255,255,0.35); text-decoration: none;
-                    transition: opacity 0.15s; }
+                    transition: opacity 0.15s;
+                    /* Force segments to fill bar height even with fragile children.
+                       Without this the first segment was collapsing to 4px on mobile. */
+                    align-self: stretch; min-height: 100%; }
   .stack-bar .seg:hover { opacity: 0.85; cursor: pointer; }
   .stack-bar .seg:last-child { border-right: none; }
   .stack-bar .seg.other { color: var(--text); }
@@ -457,7 +460,7 @@ og_url: https://marbleheaddata.org/spending-by-vote/
 
     <div class="stack-wrap">
       <div class="stack-bar" role="navigation" aria-label="Jump to a bucket">
-        <a class="seg ballot" href="#bucket-ballot" data-flex-from="buckets[key:ballot].share" style="flex: 6.7"><span style="padding:0 4px" data-fill="buckets[key:ballot].share|pct-tight">6.7%</span></a>
+        <a class="seg ballot" href="#bucket-ballot" data-flex-from="buckets[key:ballot].share" style="flex: 6.7"><span data-fill="buckets[key:ballot].share|pct-tight">6.7%</span></a>
         <a class="seg tm"     href="#bucket-tm"     data-flex-from="buckets[key:town_meeting].share" style="flex: 54.3">Town Meeting&nbsp;&middot;&nbsp;<span data-fill="buckets[key:town_meeting].share|pct">54.3%</span></a>
         <a class="seg enter"  href="#bucket-ratepayer" data-flex-from="buckets[key:ratepayer].share" style="flex: 31.3">Ratepayer&nbsp;&middot;&nbsp;<span data-fill="buckets[key:ratepayer].share|pct">31.3%</span></a>
         <a class="seg grant"  href="#bucket-statefed" data-flex-from="buckets[key:state_fed].share" style="flex: 5.2"><span data-fill="buckets[key:state_fed].share|pct-tight">5.2%</span></a>
@@ -758,7 +761,7 @@ og_url: https://marbleheaddata.org/spending-by-vote/
   <aside class="news" id="snow-overrun">
     <div class="tag">A choice still to be made</div>
     <h3>Snow Removal is +$582K over its FY26 appropriation (654% overrun)</h3>
-    <p>Town Meeting voted the original snow appropriation last May; this winter cost more than planned. Under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section33B">MGL c.44 &sect;33B</a>, an overrun has to be closed by a <b>supplemental appropriation at a Special Town Meeting</b>. The vote isn't &ldquo;should we have plowed&rdquo;, the plowing already happened. It's about which other line gets reduced, or whether <a href="/where-has-the-money-gone.html#free-cash">free cash</a> absorbs it. see the Snow Removal line in the live ledger &rarr;</p>
+    <p>Town Meeting voted the original snow appropriation last May; this winter cost more than planned. Under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section33B">MGL c.44 &sect;33B</a>, an overrun has to be closed by a <b>supplemental appropriation at a Special Town Meeting</b>. The vote isn't &ldquo;should we have plowed&rdquo;, the plowing already happened. It's about which other line gets reduced, or whether <a href="/where-has-the-money-gone.html#free-cash">free cash</a> absorbs it. <a href="/checkbook/#bva-chart">see the Snow Removal department on the Budget vs actual chart &rarr;</a></p>
   </aside>
 
   <!-- WHAT MOVED panel -->
