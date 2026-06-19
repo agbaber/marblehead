@@ -1,23 +1,33 @@
 /* og-cards/_shared.css
    Shared shell for OG cards. Each card HTML imports this, then sets
    only the bespoke visual block. Card body is fixed 1200x630.
+
+   Dark-theme cards: stop the scroll on a feed full of light surfaces,
+   let accent palette pop, give typography room to breathe.
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --c-fog:     #F4F7FA;
-  --c-surface: #FFFFFF;
-  --c-border:  #D8E1E8;
-  --c-text:    #0F2A3D;
-  --c-mid:     #4A5C6A;
-  --c-sub:     #7A8A98;
-  --c-navy:    #1B3A57;
-  --c-buoy:    #C8553D;
-  --c-teal:    #2F7D8E;
-  --c-brass:   #B8860B;
-  --c-sage:    #5B7553;
-  --c-plum:    #6C4A6E;
+  /* Dark surfaces */
+  --bg-base:    #0A1A24;
+  --bg-deeper:  #06121A;
+  --bg-lift:    #102634;
+  --rule:       #1F3A4D;
+
+  /* Text on dark */
+  --text:       #F4F7FA;
+  --text-mid:   #A6B3BE;
+  --text-sub:   #7A8A98;
+  --text-faint: #4A5C6A;
+
+  /* Accents (same as site palette; pop harder on dark) */
+  --c-buoy:     #E26B52;  /* slightly warmer than site --c-buoy for contrast */
+  --c-teal:     #5BA8B8;
+  --c-brass:    #D9A53E;
+  --c-sage:     #8AB37F;
+  --c-plum:     #B58CB8;
+  --c-navy:     #6FA0C0;  /* lifted navy reads as accent on dark */
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -28,56 +38,101 @@ html, body {
   width: 1200px;
   height: 630px;
   overflow: hidden;
-  background: var(--c-fog);
+  background:
+    radial-gradient(ellipse 1200px 700px at 85% 110%,
+                    rgba(226, 107, 82, 0.08) 0%,
+                    transparent 60%),
+    linear-gradient(180deg, var(--bg-base) 0%, var(--bg-deeper) 100%);
   font-family: 'Libre Franklin', system-ui, -apple-system, sans-serif;
-  color: var(--c-text);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .card {
   width: 1200px;
   height: 630px;
-  padding: 56px 64px;
+  padding: 60px 72px 56px;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 28px;
+  gap: 30px;
 }
 
-.card-mark {
-  font-size: 22px;
+/* Eyebrow: thin uppercase label with a buoy-red rule beneath. */
+.card-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--c-navy);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-sub);
 }
 
-.card-mark::before {
-  content: "";
+.card-eyebrow .mark {
   display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin-right: 10px;
-  border-radius: 50%;
+  width: 28px;
+  height: 3px;
   background: var(--c-buoy);
-  vertical-align: middle;
-  transform: translateY(-2px);
+  border-radius: 1px;
 }
 
+.card-eyebrow .sep {
+  color: var(--text-faint);
+  font-weight: 400;
+}
+
+/* Headline: confident, large, tight. */
 .card-headline {
-  font-size: 56px;
+  font-size: 76px;
   font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.01em;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
   margin: 0;
-  color: var(--c-text);
-  max-width: 1000px;
+  color: var(--text);
+  max-width: 1060px;
 }
 
+.card-headline em {
+  color: var(--c-buoy);
+  font-style: normal;
+}
+
+/* Subhead: optional one-line context under the headline. */
+.card-subhead {
+  margin: 18px 0 0;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text-mid);
+  max-width: 940px;
+}
+
+/* Visual: bespoke per card, sits in the middle-to-lower zone. */
 .card-visual {
   align-self: end;
 }
 
+/* Footer: subtle URL with directional cue. */
 .card-foot {
-  font-size: 18px;
-  color: var(--c-sub);
-  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-sub);
+}
+
+.card-foot .url {
+  color: var(--text-mid);
+}
+
+.card-foot .url::before {
+  content: "→";
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--c-buoy);
+  font-weight: 700;
 }
