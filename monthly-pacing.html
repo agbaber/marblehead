@@ -110,6 +110,30 @@ og_url: https://marbleheaddata.org/monthly-pacing/
     line-height: 1.5;
   }
 
+  /* Visible per-section data stamps */
+  .data-stamp {
+    display: flex; flex-wrap: wrap; gap: 4px 16px;
+    margin: 6px 0 4px;
+    font-size: 11.5px; color: var(--text-muted);
+    line-height: 1.5; font-variant-numeric: tabular-nums;
+  }
+  .data-stamp .stamp-label {
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--text-subtle); margin-right: 4px;
+  }
+  .data-stamp strong { color: var(--text); font-weight: 600; }
+
+  /* "How to read" note under the pacing table */
+  .read-note {
+    font-size: 12.5px; color: var(--text-muted);
+    line-height: 1.55; margin: 8px 0 16px;
+    padding: 10px 14px;
+    border-left: 3px solid var(--c-brass);
+    background: color-mix(in srgb, var(--c-brass) 6%, transparent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+  .read-note strong { color: var(--text); }
+
   @media (max-width: 720px) {
     .pace-table { font-size: 12.5px; }
     .pace-table th, .pace-table td { padding: 5px 6px; }
@@ -132,7 +156,12 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 </div>
 
 <h2 class="section-h">1. Variance to budget, by department</h2>
-<p class="section-sub">FY26 revised budget vs. year-to-date actual. Snapshot from the town's budget-vs-actual portal, as of <strong>May&nbsp;29,&nbsp;2026</strong>.</p>
+<p class="section-sub">FY26 revised budget vs. year-to-date actual.</p>
+
+<div class="data-stamp">
+  <span><span class="stamp-label">Source</span> Town of Marblehead Budget vs Actual portal</span>
+  <span><span class="stamp-label">Data as of</span> <strong>May&nbsp;29,&nbsp;2026</strong> (last refreshed June 1)</span>
+</div>
 
 <div class="pacing-meta">
   <span><strong>FY26 elapsed:</strong> <strong>91%</strong> (32 days left before the year closes on June 30)</span>
@@ -152,17 +181,27 @@ og_url: https://marbleheaddata.org/monthly-pacing/
   <tbody id="pace-body"></tbody>
 </table>
 
+<div class="read-note">
+  <strong>How to read the pacing column.</strong>
+  &ldquo;+8% ahead&rdquo; means the department's spend is 8 points past where straight-line pacing would put it, not 8% over budget. Some categories never pace linearly and the column isn't meaningful for them: <strong>debt service</strong> (a few fixed payment dates per year, mostly early), <strong>capital articles</strong> (lumpy draws, often year-end), <strong>harbor</strong> (seasonal), <strong>snow removal</strong> (winter only). The schools, fire, police, DPW, and water/sewer lines are where the pacing read tells you something useful.
+</div>
+
 <div class="caveats">
   <h3>What's missing for the real version</h3>
   <ul>
     <li><strong>Encumbrances.</strong> A department can look "under-spent" because purchase orders are still open. The Town Accountant's internal report shows expended + encumbered + remaining; this view only shows expended.</li>
-    <li><strong>Per-month budget.</strong> Departments don't spend in twelfths. School payroll concentrates in the academic year; snow removal concentrates Dec-Mar; debt service hits a few dates per year. The 91.2% straight-line is a flag, not a verdict.</li>
+    <li><strong>Per-month budget.</strong> Even for departments that do roughly spend monthly, a flat 1/12 target is a coarse benchmark; the real internal report compares to a department's own historical month-by-month profile.</li>
     <li><strong>Frequency.</strong> This snapshot is from June 1. There is no published monthly feed.</li>
   </ul>
 </div>
 
 <h2 class="section-h">2. Monthly cash-out, by fund</h2>
-<p class="section-sub">Cumulative vendor payments by month, from the <a href="/checkbook/">town's vendor checkbook</a> export. Dashed line is straight-line target.</p>
+<p class="section-sub">Cumulative vendor payments by month. Dashed line is straight-line target.</p>
+
+<div class="data-stamp">
+  <span><span class="stamp-label">Source</span> <a href="/checkbook/">Town of Marblehead Vendor Checkbook</a></span>
+  <span><span class="stamp-label">Data as of</span> <strong>June&nbsp;17,&nbsp;2026</strong> (on-demand export)</span>
+</div>
 
 <div class="burn-wrap">
   <svg class="burn-chart" id="burn-chart" viewBox="0 0 800 320" preserveAspectRatio="none" aria-label="Monthly cumulative spend by fund vs. straight-line target"></svg>
@@ -179,7 +218,12 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 </div>
 
 <h2 class="section-h">3. Town cash balance</h2>
-<p class="section-sub">Year-end certified free cash, FY15&ndash;FY26.</p>
+<p class="section-sub">Year-end certified free cash, FY15&ndash;FY26. One value per year, certified after the prior fiscal year closes.</p>
+
+<div class="data-stamp">
+  <span><span class="stamp-label">Source</span> Massachusetts DOR DLS Gateway (FreeCash2 report)</span>
+  <span><span class="stamp-label">Cadence</span> <strong>Annual</strong> &middot; certified in the fall after the FY closes</span>
+</div>
 
 <svg class="fc-chart" id="fc-chart" viewBox="0 0 800 220" preserveAspectRatio="none" aria-label="Annual certified free cash by fiscal year"></svg>
 
