@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="/assets/browse.css">
+
+<div class="browse-shell">
+  <nav class="browse-nav" aria-label="Browse entities">
+    <p class="browse-nav-eye">BROWSE</p>
+    <ul class="browse-nav-list">
+      <li><a href="/browse/vendors/" class="browse-nav-item{% if page.entity == 'vendors' %} is-active{% endif %}">Vendors</a></li>
+      <li><a href="/browse/budget/" class="browse-nav-item{% if page.entity == 'budget' %} is-active{% endif %}">Budget</a></li>
+      <li><a href="/browse/meetings/" class="browse-nav-item{% if page.entity == 'meetings' %} is-active{% endif %}">Meetings</a></li>
+      <li><a href="/browse/topics/" class="browse-nav-item{% if page.entity == 'topics' %} is-active{% endif %}">Topics</a></li>
+    </ul>
+    <hr class="browse-nav-divider">
+    <a class="browse-nav-download" href="/assets/data/marbleheaddata.sqlite" download>
+      Download the database (4.6 MB)
+    </a>
+  </nav>
+
+  <main class="browse-main">
+    {% if page.entity %}
+      <p class="browse-breadcrumb">
+        <a href="/browse/">Browse</a>
+        <span class="browse-breadcrumb-sep">›</span>
+        <strong>{{ page.entity_label | default: page.entity }}</strong>
+      </p>
+    {% endif %}
+    {{ content }}
+  </main>
+</div>

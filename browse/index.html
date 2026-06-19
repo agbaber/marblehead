@@ -1,0 +1,39 @@
+---
+title: "Browse the data"
+permalink: /browse/
+layout: browse
+og_title: "Browse: Marblehead data"
+og_description: "Tables of vendors, budget lines, meetings, and topics. The town as a database."
+---
+
+<h1>Browse the data</h1>
+
+<p class="browse-index-intro">
+  Marblehead's vendor payments, budget lines, meetings, and topic feeds, organized as browseable tables.
+  Backed by a downloadable
+  <a href="/assets/data/marbleheaddata.sqlite">SQLite database</a>
+  with primary-source citations on every table.
+</p>
+
+<div class="browse-index-cards">
+  <a class="browse-card" href="/browse/vendors/">
+    <p class="browse-card-eye">VENDORS</p>
+    <p class="browse-card-count">{{ site.data.browse_counts.vendor_payments }}</p>
+    <p class="browse-card-summary">Every vendor check the town has paid this fiscal year.</p>
+  </a>
+  <a class="browse-card" href="/browse/budget/">
+    <p class="browse-card-eye">BUDGET</p>
+    <p class="browse-card-count">{{ site.data.browse_counts.budget_lines }}</p>
+    <p class="browse-card-summary">General fund appropriations by department and line item.</p>
+  </a>
+  <a class="browse-card" href="/browse/meetings/">
+    <p class="browse-card-eye">MEETINGS</p>
+    <p class="browse-card-count">{{ site.data.browse_counts.meetings }}</p>
+    <p class="browse-card-summary">Every Select Board, School Committee, FinCom, and other-board meeting with an ingested transcript.</p>
+  </a>
+  <a class="browse-card" href="/browse/topics/">
+    <p class="browse-card-eye">TOPICS</p>
+    <p class="browse-card-count">{{ site.data.browse_counts.topics }}</p>
+    <p class="browse-card-summary">The site's topic-feed pages and what links into each.</p>
+  </a>
+</div>
