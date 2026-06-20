@@ -47,7 +47,16 @@
 {% endif %}{% if page.scripts contains "ballot-picker" %}<script defer src="{{ '/' | relative_url }}assets/ballot-picker.js"></script>
 {% endif %}
 {% assign _og_title = page.og_title | default: page.title | default: site.title %}
-{% assign _og_desc  = page.og_description | default: site.description %}
+{% comment %}
+  Dashboard markers — let any page reference the latest checkbook
+  totals in its frontmatter og_description without going stale. The
+  replace chain is a no-op on pages that don't use the markers.
+  Source: _data/checkbook.json, rewritten on every checkbook-refresh
+  cron tick by scripts/build_checkbook_csv.py.
+{% endcomment %}
+{% assign _og_desc = page.og_description | default: site.description
+  | replace: "__CHECKBOOK_TOTAL_M__", site.data.checkbook.total_M
+  | replace: "__CHECKBOOK_AS_OF__", site.data.checkbook.as_of_human %}
 {% assign _og_image = page.og_image | default: "/assets/og-image-lighthouse.png" | absolute_url %}
 {% assign _og_type  = page.og_type | default: "article" %}
 {% assign _og_url   = page.og_url | default: page.url | absolute_url %}
