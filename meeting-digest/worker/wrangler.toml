@@ -31,8 +31,14 @@ TURNSTILE_TEST_BYPASS_TOKEN = "TEST-OK"
 # Cloudflare's best-effort cron misses the :00 slot. Per-subscriber
 # idempotency in scheduled.js skips anyone already sent in the last 5
 # days, so the retry never double-delivers.
+#
+# Always use the day-name alias (MON), not the numeric form. Cloudflare's
+# cron parser interprets numeric day-of-week differently than POSIX cron:
+# `* * * * 1` fired on Sundays in our prod deployment from Jun 14 onward
+# (verified via workersInvocationsAdaptive). Names are unambiguous across
+# whichever convention Cloudflare uses.
 [triggers]
-crons = ["0 11 * * 1", "30 11 * * 1", "0 12 * * 1", "30 12 * * 1"]
+crons = ["0 11 * * MON", "30 11 * * MON", "0 12 * * MON", "30 12 * * MON"]
 
 [env.staging]
 name = "marblehead-meeting-digest-staging"
