@@ -144,8 +144,8 @@ og_url: https://marbleheaddata.org/
 </style>
 
 <section class="home-hero">
-  <p class="home-eye">FY26 spending so far <span class="dot">&middot;</span> as of May 29</p>
-  <p class="home-big home-big--cost">$98.1M</p>
+  <p class="home-eye">FY26 spending so far <span class="dot">&middot;</span> as of {{ site.data.checkbook.as_of_human }}</p>
+  <p class="home-big home-big--cost">{{ site.data.checkbook.total_M }}</p>
   <p class="home-cap">paid out across departments, vendors, and capital projects this fiscal year.</p>
   <p class="home-cap-sub">$127.3M annual operating budget. Drill into every line, by fund, department, category, division, or object.</p>
   <a class="home-deeper" href="/checkbook/">Open the Checkbook</a>

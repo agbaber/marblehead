@@ -1,0 +1,10 @@
+{
+ "as_of": "2026-06-17",
+ "as_of_human": "Jun 17",
+ "total_amount": 101203657.29,
+ "total_M": "$101.2M",
+ "row_count": 15732,
+ "row_count_human": "15,732",
+ "csv_filename": "checkbook_FY26_2026-06-17.csv",
+ "generated_by": "scripts/build_checkbook_csv.py"
+}

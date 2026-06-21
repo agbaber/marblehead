@@ -254,6 +254,26 @@ def main() -> None:
     total = sum(float(r["Amount"]) for r in out_rows)
     dropped_total = sum(ex["total_amount"] for ex in excluded.values())
     nonempty = sum(1 for r in out_rows if r["Description"] not in ("", WITHHELD))
+
+    # Dashboard JSON read by index.html, checkbook.html, and anything
+    # else that wants to cite the latest published total. Lives under
+    # _data/ so Jekyll loads it as `site.data.checkbook` and the page
+    # values stay locked together with no per-template regex.
+    as_of_dt = date.fromisoformat(as_of)
+    dashboard = {
+        "as_of": as_of,
+        "as_of_human": as_of_dt.strftime("%b ") + str(as_of_dt.day),
+        "total_amount": round(total, 2),
+        "total_M": f"${total / 1_000_000:.1f}M",
+        "row_count": len(out_rows),
+        "row_count_human": f"{len(out_rows):,}",
+        "csv_filename": out_path.name,
+        "generated_by": "scripts/build_checkbook_csv.py",
+    }
+    dashboard_path = REPO_ROOT / "_data" / "checkbook.json"
+    dashboard_path.parent.mkdir(parents=True, exist_ok=True)
+    dashboard_path.write_text(json.dumps(dashboard, indent=1) + "\n")
+
     print(f"input rows:      {len(raw_rows):,}")
     print(f"dropped rows:    {sum(ex['row_count'] for ex in excluded.values()):,} "
           f"(${dropped_total:,.2f}) across {len(excluded)} funds")
@@ -262,8 +282,8 @@ def main() -> None:
           f"{nonempty:,} with a visible description")
     print(f"wrote {out_path.relative_to(REPO_ROOT)}")
     print(f"wrote {disclosure_path.relative_to(REPO_ROOT)}")
+    print(f"wrote {dashboard_path.relative_to(REPO_ROOT)}")
     print(f"wrote {REVIEW_PATH}  <-- review this before committing")
-    print("remember: update CHECKBOOK_URL and the Source files links in checkbook.html")
 
 
 if __name__ == "__main__":
