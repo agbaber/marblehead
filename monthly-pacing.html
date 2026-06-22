@@ -285,15 +285,18 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 
   // ---------- Pacing table ----------
   function renderPace(budgetActual) {
-  // Compute the pacing benchmark from the data's own period-end date so
-  // it stays in lockstep with the daily refresh.
-  var periodEnd = budgetActual && budgetActual.checkbook_period_end;
-  var periodDate = periodEnd ? new Date(periodEnd + 'T00:00:00Z') : new Date();
+  // The portal exposes monthly fiscal-period buckets (e.g. all June
+  // transactions land at fiscalmonth=2026-06-01), so we can't surface
+  // a transaction-level "data through" date. Use the fetch date for
+  // both the date stamp and the FY-elapsed math — that's what "daily
+  // auto-refresh" implies and it's what readers expect to see.
+  var asOf = (budgetActual && budgetActual.as_of) || new Date().toISOString().slice(0, 10);
+  var asOfDate = new Date(asOf + 'T00:00:00Z');
   var elapsedDays = Math.max(0, Math.min(FY_TOTAL_DAYS,
-    Math.round((periodDate - FY_START) / 86400000)));
+    Math.round((asOfDate - FY_START) / 86400000)));
   var pacingPct = elapsedDays / FY_TOTAL_DAYS;
   var daysLeft = Math.max(0, FY_TOTAL_DAYS - elapsedDays);
-  setText('pace-as-of', fmtDateUS(periodEnd));
+  setText('pace-as-of', fmtDateUS(asOf));
   setText('pace-fy-elapsed', (pacingPct * 100).toFixed(0) + '%');
   setText('pace-fy-elapsed-detail',
     daysLeft > 0
