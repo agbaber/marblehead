@@ -68,32 +68,36 @@ og_url: https://marbleheaddata.org/org-chart.html
     <span class="flow-arrow"></span>
   </div>
 
+  {% assign all_boards = site.data.org_chart.boards.emphasized | concat: site.data.org_chart.boards.other %}
   <div class="flow-pillars">
-    {% for pillar in site.data.org_chart.decision_flow.pillars %}
+    {% for pid in site.data.org_chart.decision_flow.pillar_ids %}
+    {% assign board = all_boards | where: "id", pid | first %}
+    {% assign dfd = board.decision_flow_data %}
+    {% assign exec = dfd.hires_executive %}
     <div class="flow-pillar">
       <div class="flow-pillar-header">
-        <span class="flow-pillar-name">{{ pillar.name }}</span>
-        <span class="flow-pillar-members">{{ pillar.members }}</span>
+        <span class="flow-pillar-name">{{ board.name }}</span>
+        <span class="flow-pillar-members">{{ board.seats }} {{ board.kind }}</span>
       </div>
       <div class="flow-pillar-hires">
         <span class="flow-pillar-hires-label">Hires</span>
-        <span class="flow-pillar-hires-value">{{ pillar.hires }}</span>
-        {% if pillar.hires_incumbent %}
+        <span class="flow-pillar-hires-value">{{ exec.title }}</span>
+        {% if exec.incumbent %}
         <span class="flow-pillar-hires-incumbent">
-          {{ pillar.hires_incumbent.name }}
-          <span class="flow-pillar-hires-tenure"{% if pillar.hires_incumbent.since_note %} title="{{ pillar.hires_incumbent.since_note }}"{% endif %}>since {{ pillar.hires_incumbent.since }}{% if pillar.hires_incumbent.until %} &middot; <span class="flow-pillar-hires-until"{% if pillar.hires_incumbent.until_note %} title="{{ pillar.hires_incumbent.until_note }}"{% endif %}>through {{ pillar.hires_incumbent.until }}</span>{% endif %}</span>
+          {{ exec.incumbent.name }}
+          <span class="flow-pillar-hires-tenure"{% if exec.incumbent.since_note %} title="{{ exec.incumbent.since_note }}"{% endif %}>since {{ exec.incumbent.since }}{% if exec.incumbent.until %} &middot; <span class="flow-pillar-hires-until"{% if exec.incumbent.until_note %} title="{{ exec.incumbent.until_note }}"{% endif %}>through {{ exec.incumbent.until }}</span>{% endif %}</span>
         </span>
-        {% if pillar.hires_incumbent.until_badge %}<span class="flow-pillar-hires-badge"{% if pillar.hires_incumbent.until_note %} title="{{ pillar.hires_incumbent.until_note }}"{% endif %}>{{ pillar.hires_incumbent.until_badge }}</span>{% endif %}
+        {% if exec.incumbent.until_badge %}<span class="flow-pillar-hires-badge"{% if exec.incumbent.until_note %} title="{{ exec.incumbent.until_note }}"{% endif %}>{{ exec.incumbent.until_badge }}</span>{% endif %}
         {% else %}
         <span class="flow-pillar-hires-count">1 employee directly</span>
         {% endif %}
       </div>
-      <p class="flow-pillar-reach">{{ pillar.reach }}</p>
-      {% if pillar.sitting %}
+      <p class="flow-pillar-reach">{{ dfd.reach }}</p>
+      {% if dfd.sitting %}
       <div class="flow-pillar-sitting">
         <p class="flow-pillar-list-label">Sitting members</p>
         <ul>
-          {% for m in pillar.sitting %}
+          {% for m in dfd.sitting %}
           <li>
             <span class="flow-pillar-member-name">{{ m.name }}</span>{% if m.appointed %} <span class="flow-pillar-member-appointed" title="Appointed mid-term to fill a vacancy, not elected">appointed</span>{% endif %}
             <span class="flow-pillar-member-tenure"{% if m.since_note %} title="{{ m.since_note }}"{% endif %}>since {{ m.since }} &middot; term ends {{ m.term_ends }}</span>
@@ -104,14 +108,14 @@ og_url: https://marbleheaddata.org/org-chart.html
       {% endif %}
       <div class="flow-pillar-can">
         <p class="flow-pillar-list-label">Can</p>
-        <ul>{% for item in pillar.can %}<li>{{ item }}</li>{% endfor %}</ul>
+        <ul>{% for item in dfd.can %}<li>{{ item }}</li>{% endfor %}</ul>
       </div>
       <div class="flow-pillar-cannot">
         <p class="flow-pillar-list-label">Cannot</p>
-        <ul>{% for item in pillar.cannot %}<li>{{ item }}</li>{% endfor %}</ul>
+        <ul>{% for item in dfd.cannot %}<li>{{ item }}</li>{% endfor %}</ul>
       </div>
-      {% if pillar.sources %}
-      <p class="flow-pillar-sources">Sources{% for s in pillar.sources %}<sup class="cite" data-href="{{ s.url }}" data-source="{{ s.label }}"></sup>{% endfor %}</p>
+      {% if dfd.sources %}
+      <p class="flow-pillar-sources">Sources{% for s in dfd.sources %}<sup class="cite" data-href="{{ s.url }}" data-source="{{ s.label }}"></sup>{% endfor %}</p>
       {% endif %}
     </div>
     {% endfor %}
