@@ -83,25 +83,25 @@ scripts: [chart-tooltip]
 <h1 class="h-center">School Enrollment and Education Staffing</h1>
   <p class="subtitle h-center">Marblehead Public Schools. From <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>s and <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> (Massachusetts Department of Elementary and Secondary Education).</p>
 
-  <p class="chart-label">Student enrollment (FY01&ndash;FY24, from <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>s)</p>
+  <p class="chart-label">Student enrollment (FY01&ndash;FY25, from <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>s)</p>
   <div class="chart-wrapper" data-chart-tooltip>
     <script type="application/json" class="chart-tooltip-data">
     {
-      "xLabels": ["FY01","FY02","FY03","FY04","FY05","FY06","FY07","FY08","FY09","FY10","FY11","FY12","FY13","FY14","FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24"],
-      "xPositions": [70,93,117,140,164,187,211,234,258,281,305,328,352,375,399,422,446,469,493,516,540,563,587,610],
+      "xLabels": ["FY01","FY02","FY03","FY04","FY05","FY06","FY07","FY08","FY09","FY10","FY11","FY12","FY13","FY14","FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25"],
+      "xPositions": [70,93,117,140,164,187,211,234,258,281,305,328,352,375,399,422,446,469,493,516,540,563,587,610,633],
       "valueDecimals": 0,
       "series": [
         {
           "name": "Student enrollment",
           "className": "s-neutral",
-          "values": [2792,2875,2970,3003,3067,3133,3242,3212,3262,3232,3206,3172,3269,3327,3245,3208,3264,3185,3051,2963,2703,2602,2622,2617]
+          "values": [2792,2875,2970,3003,3067,3133,3242,3212,3262,3232,3206,3172,3269,3327,3245,3208,3264,3185,3051,2963,2703,2602,2622,2617,2564]
         }
       ]
     }
     </script>
-    <svg class="chart" viewBox="0 0 740 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart showing Marblehead student enrollment from FY2001 to FY2024, peaking at 3,327 in FY2014 and declining to 2,617.">
+    <svg class="chart" viewBox="0 0 763 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart showing Marblehead student enrollment from FY2001 to FY2025, peaking at 3,327 in FY2014 and declining to 2,564.">
       <!-- Baseline -->
-      <line class="axis-base" x1="70" y1="170" x2="610" y2="170"/>
+      <line class="axis-base" x1="70" y1="170" x2="633" y2="170"/>
 
       <!-- Y ticks -->
       <line class="tick" x1="66" y1="156" x2="70" y2="156"/>
@@ -111,10 +111,10 @@ scripts: [chart-tooltip]
 
       <!-- Enrollment line -->
       <polyline class="data-line s-neutral"
-                points="70,115 93,104 117,90 140,86 164,77 187,67 211,52 234,56 258,49 281,54 305,57 328,62 352,48 375,40 399,52 422,57 446,49 469,60 493,79 516,91 540,128 563,142 587,139 610,140"/>
+                points="70,115 93,104 117,90 140,86 164,77 187,67 211,52 234,56 258,49 281,54 305,57 328,62 352,48 375,40 399,52 422,57 446,49 469,60 493,79 516,91 540,128 563,142 587,139 610,140 633,147"/>
 
       <!-- End label -->
-      <text class="end-label s-neutral" x="616" y="136">2,617</text>
+      <text class="end-label s-neutral" x="639" y="143">2,564</text>
       <!-- Peak label -->
       <text class="annotation" x="375" y="34" text-anchor="middle">peak: 3,327</text>
 
@@ -123,12 +123,12 @@ scripts: [chart-tooltip]
       <text class="tick-label tick-label--minor" x="281" y="190" text-anchor="middle">FY10</text>
       <text class="tick-label tick-label--minor" x="399" y="190" text-anchor="middle">FY15</text>
       <text class="tick-label tick-label--minor" x="516" y="190" text-anchor="middle">FY20</text>
-      <text class="tick-label tick-label--major" x="610" y="190" text-anchor="middle">FY24</text>
+      <text class="tick-label tick-label--major" x="633" y="190" text-anchor="middle">FY25</text>
     </svg>
   </div>
 
   <p class="caption">
-    Student enrollment peaked at 3,327 (FY14) and has declined 21% to 2,617 (FY24). Enrollment from <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> "Demographic and Economic Statistics" tables.
+    Student enrollment peaked at 3,327 (FY14) and has declined 23% to 2,564 (FY25). Enrollment from <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> "Demographic and Economic Statistics" tables.
   </p>
 
   <h2>Has staffing followed enrollment down?</h2>
@@ -144,69 +144,70 @@ scripts: [chart-tooltip]
   <div class="chart-wrapper" data-chart-tooltip>
     <script type="application/json" class="chart-tooltip-data">
     {
-      "xLabels": ["FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24"],
-      "xPositions": [70,130,190,250,310,370,430,490,550,610],
+      "xLabels": ["FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25"],
+      "xPositions": [70,130,190,250,310,370,430,490,550,610,670],
       "valueDecimals": 1,
       "series": [
         {
           "name": "Enrollment",
           "className": "s-neutral",
-          "values": [100.0,98.9,100.6,98.2,94.0,91.3,83.3,80.2,80.8,80.6]
+          "values": [100.0,98.9,100.6,98.2,94.0,91.3,83.3,80.2,80.8,80.6,79.0]
         },
         {
-          "name": "ACFR education FTE",
+          "name": "ACFR education FTE (FY25 ACFR restated FY20-FY24)",
           "className": "s-stoneham",
-          "values": [100.0,99.8,100.6,102.9,98.8,98.0,98.8,98.6,109.6,109.6]
+          "values": [100.0,99.9,100.7,102.9,98.8,110.9,110.9,110.3,118.2,109.8,104.5]
         },
         {
           "name": "DESE total educator FTE",
           "className": "s-marblehead",
-          "values": [100.0,98.6,101.7,100.5,96.4,95.7,92.9,89.6,88.8,86.1]
+          "values": [100.0,98.6,101.7,100.5,96.4,95.7,92.9,89.6,88.8,86.1,84.2]
         },
         {
           "name": "DESE teacher FTE",
           "className": "s-swampscott",
-          "values": [100.0,101.8,102.8,101.6,100.3,100.2,100.0,98.0,97.4,95.7]
+          "values": [100.0,101.8,102.8,101.6,100.3,100.2,100.0,98.0,97.4,95.7,87.7]
         }
       ]
     }
     </script>
-    <svg class="chart" viewBox="0 0 740 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Indexed chart comparing four measures from FY15 to FY24. Enrollment falls to 80.6. ACFR education FTE rises to 109.6 after a FY23 jump. DESE total educator FTE falls to 86.1. DESE teacher FTE falls to 95.7. All indexed to FY15 = 100.">
+    <svg class="chart" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Indexed chart comparing four measures from FY15 to FY25. Enrollment falls to 79.0. ACFR education FTE rises to 118.2 at FY23 (the FY25 ACFR restated FY20-FY22 upward to 110+) then drops to 104.5 by FY25. DESE total educator FTE falls to 84.2. DESE teacher FTE falls to 87.7. All indexed to FY15 = 100.">
       <!-- Baseline -->
-      <line class="axis-base" x1="70" y1="180" x2="610" y2="180"/>
+      <line class="axis-base" x1="70" y1="180" x2="670" y2="180"/>
 
-      <!-- 100 reference line -->
-      <line class="grid-major" x1="70" y1="86" x2="610" y2="86"/>
-      <line class="grid-minor" x1="70" y1="49" x2="610" y2="49"/>
-      <line class="grid-minor" x1="70" y1="124" x2="610" y2="124"/>
-      <line class="grid-minor" x1="70" y1="161" x2="610" y2="161"/>
+      <!-- 100 reference line and gridlines -->
+      <line class="grid-major" x1="70" y1="86" x2="670" y2="86"/>
+      <line class="grid-minor" x1="70" y1="11" x2="670" y2="11"/>
+      <line class="grid-minor" x1="70" y1="49" x2="670" y2="49"/>
+      <line class="grid-minor" x1="70" y1="124" x2="670" y2="124"/>
+      <line class="grid-minor" x1="70" y1="161" x2="670" y2="161"/>
 
       <!-- Y tick labels -->
       <text class="tick-label" x="63" y="165" text-anchor="end">80</text>
       <text class="tick-label" x="63" y="128" text-anchor="end">90</text>
       <text class="tick-label" x="63" y="90" text-anchor="end">100</text>
       <text class="tick-label" x="63" y="53" text-anchor="end">110</text>
+      <text class="tick-label" x="63" y="15" text-anchor="end">120</text>
 
       <!-- Enrollment -->
       <polyline class="data-line s-neutral" data-series="enrollment"
-                points="70,86 130,90 190,84 250,93 310,109 370,119 430,149 490,161 550,158 610,159"/>
-      <text class="end-label s-neutral" x="616" y="155" data-series="enrollment">80.6</text>
+                points="70,86 130,90 190,84 250,93 310,109 370,119 430,149 490,161 550,158 610,159 670,165"/>
+      <text class="end-label s-neutral" x="676" y="169" data-series="enrollment">79.0</text>
 
-      <!-- Town financial report's education line, dashed (flagged as reporting error) -->
+      <!-- Town financial report's education line, dashed. Restated upward for FY20-FY24 by the FY25 ACFR. -->
       <polyline class="data-line data-line--dashed s-stoneham" data-series="acfr"
-                points="70,86 130,87 190,84 250,75 310,91 370,94 430,91 490,92 550,50 610,50"/>
-      <text class="end-label s-stoneham" x="616" y="46" data-series="acfr">109.6</text>
-      <text class="annotation" x="540" y="42" text-anchor="middle" data-series="acfr">FY23 reporting error</text>
+                points="70,86 130,87 190,84 250,75 310,91 370,45 430,45 490,47 550,18 610,49 670,69"/>
+      <text class="end-label s-stoneham" x="676" y="73" data-series="acfr">104.5</text>
 
       <!-- DESE total educator FTE -->
       <polyline class="data-line s-marblehead" data-series="dese-total"
-                points="70,86 130,92 190,80 250,84 310,100 370,102 430,113 490,125 550,128 610,138"/>
-      <text class="end-label s-marblehead" x="616" y="134" data-series="dese-total">86.1</text>
+                points="70,86 130,92 190,80 250,84 310,100 370,102 430,113 490,125 550,128 610,138 670,145"/>
+      <text class="end-label s-marblehead" x="676" y="148" data-series="dese-total">84.2</text>
 
       <!-- DESE teacher FTE -->
       <polyline class="data-line s-swampscott" data-series="dese-teacher"
-                points="70,86 130,80 190,76 250,80 310,85 370,86 430,86 490,94 550,96 610,102"/>
-      <text class="end-label s-swampscott" x="616" y="106" data-series="dese-teacher">95.7</text>
+                points="70,86 130,80 190,76 250,80 310,85 370,86 430,86 490,94 550,96 610,102 670,132"/>
+      <text class="end-label s-swampscott" x="676" y="128" data-series="dese-teacher">87.7</text>
 
       <!-- FY15 = 100 annotation -->
       <text class="annotation annotation--hide-sm" x="55" y="82" text-anchor="end" font-size="10">FY15 = 100</text>
@@ -215,7 +216,8 @@ scripts: [chart-tooltip]
       <text class="tick-label tick-label--major" x="70"  y="200" text-anchor="middle">FY15</text>
       <text class="tick-label tick-label--minor" x="250" y="200" text-anchor="middle">FY18</text>
       <text class="tick-label tick-label--major" x="430" y="200" text-anchor="middle">FY21</text>
-      <text class="tick-label tick-label--major" x="610" y="200" text-anchor="middle">FY24</text>
+      <text class="tick-label tick-label--minor" x="610" y="200" text-anchor="middle">FY24</text>
+      <text class="tick-label tick-label--major" x="670" y="200" text-anchor="middle">FY25</text>
     </svg>
   </div>
 
@@ -242,25 +244,23 @@ scripts: [chart-tooltip]
   </script>
 
   <p class="caption">
-    FY15&ndash;FY24, all series indexed to FY15 = 100. Enrollment fell 19%. Of the three staffing measures, both <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> (state) measures decline (total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr> &minus;13.9%, classroom teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> &minus;4.3%). The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> (town) rises 9.6%, but its FY23 jump is a <a href="../inside-school-staffing.html#the-fy23-mystery">reporting error</a> flagged below.
-  </p>
-  <p class="caption">
-    <strong>Update:</strong> the FY25 ACFR (published June 2026) retroactively restated the Education FTE row for FY20&ndash;FY23 upward, and added FY25 at 512.0. The restatement applies the FY23-and-later methodology to prior years, which would reshape the dashed line above to flatten across the FY20&ndash;FY24 range and add a final downward step in FY25. The chart above still reflects the FY24 ACFR numbers; the <a href="../inside-school-staffing.html#the-fy23-mystery">FY23 data jump</a> explainer covers the restatement in detail.
+    FY15&ndash;FY25, all series indexed to FY15 = 100. Enrollment fell 21%. Both <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> (state) measures continue to decline (total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr> &minus;15.8% to 84.2; classroom teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> &minus;12.3% to 87.7). The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> (town) finishes at 104.5, after the FY25 ACFR restated FY20&ndash;FY22 upward to roughly 110 and FY23 to 118.2. The dashed line's FY20&ndash;FY23 plateau and FY23 peak are not real one-year hiring waves &ndash; they reflect a counting methodology shift the town has now applied retroactively. The <a href="../inside-school-staffing.html#the-fy23-mystery">FY23 data jump</a> explainer covers the restatement in detail.
   </p>
 
   <h3>What each measure counts</h3>
   <ul class="tldr">
-    <li><strong><abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> education <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (town financial report, 490 &rarr; 537): every education employee the town pays, on a broader definition than the state uses. Captures the total cost footprint.</li>
-    <li><strong><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (state, 501.8 &rarr; 431.8): teachers, paraprofessionals, counselors, psychologists, administrators, and office staff in school buildings.</li>
-    <li><strong><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (state, 256.8 &rarr; 245.7): only licensed classroom teachers (general education, special education, English learner).</li>
+    <li><strong><abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> education <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (town financial report, 489.8 &rarr; 512 per the FY25 ACFR; FY20&ndash;FY24 restated upward): every education employee the town pays, on a broader definition than the state uses. Captures the total cost footprint.</li>
+    <li><strong><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total educator <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (state, 501.8 &rarr; 422.6): teachers, paraprofessionals, counselors, psychologists, administrators, and office staff in school buildings.</li>
+    <li><strong><abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr></strong> (state, 256.8 &rarr; 225.1): only licensed classroom teachers (general education, special education, English learner).</li>
   </ul>
   <p>The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> and <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> totals should not be compared as if they measure the same thing. Use whichever fits the question: the <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> for cost footprint, the <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> total for school-side staffing, the <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> teacher count for classroom instruction.</p>
 
-  <h3>The FY23 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> jump is a reporting error</h3>
-  <p>Between FY22 and FY23 the <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>'s education FTE jumped from 483 to 537, then held at exactly 537.0 for two years. Over the same window <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> shows a small <em>decline</em> (450 to 445), and Town payroll rosters show the school workforce went 705 to 699, also a small decline.<sup class="cite" data-href="../data/town_employee_headcount_summary_FY08-26.csv" data-source="Derived from town payroll Employee Earnings History rosters released April 28, 2026 in response to public records request dated April 10, 2026; school-side headcount sums dept 301 (Admin and Systemwide), dept 303 (Custodial, Maintenance, and Transportation), the five school buildings, the School Revolving Fund, and School Grants"></sup> Asked about the discrepancy in 2026, the town's school finance office and <abbr class="g" title="Chief Financial Officer">CFO</abbr> attributed it to a reporting error by prior administrations, not 54 new hires. Strip the jump out and all three measures point the same direction. <a href="../inside-school-staffing.html#the-fy23-mystery">More on the discrepancy</a>.</p>
+  <h3>The FY23 <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> jump, and what the FY25 ACFR did about it</h3>
+  <p>Between FY22 and FY23 the <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr>'s education FTE jumped from 483 to 537. The FY24 ACFR held the line at 537.0 for a second year. Over the same window <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> showed a small <em>decline</em> (450 to 445), and Town payroll rosters showed the school workforce went 705 to 699, also a small decline.<sup class="cite" data-href="../data/town_employee_headcount_summary_FY08-26.csv" data-source="Derived from town payroll Employee Earnings History rosters released April 28, 2026 in response to public records request dated April 10, 2026; school-side headcount sums dept 301 (Admin and Systemwide), dept 303 (Custodial, Maintenance, and Transportation), the five school buildings, the School Revolving Fund, and School Grants"></sup> Asked about the discrepancy in 2026, the town's school finance office and <abbr class="g" title="Chief Financial Officer">CFO</abbr> attributed the jump to a reporting error by prior administrations, not 54 new hires.</p>
+  <p>The FY25 ACFR (June 2026) then formalized that diagnosis by restating FY20&ndash;FY23 upward to apply the FY23-and-later counting methodology to the earlier years too. In the new numbers, FY20&ndash;FY22 sit around 540 (up from ~482), FY23 lands at 579, FY24 at 538, and the newly available FY25 at 512. Only the Education row was restated; the other five town functions (General government, Public safety, Public works, Health and human services, Culture and recreation) carry identical values in both ACFRs &mdash; which isolates the methodology shift to school staff. <a href="../inside-school-staffing.html#the-fy23-mystery">More on the discrepancy</a>.</p>
 
   <h3>The teacher count masks a composition shift</h3>
-  <p>The 4.3% drop in total classroom teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> hides two opposing trends. General education teachers fell 12%; special education teachers grew 27%.</p>
+  <p>The 12.3% drop in total classroom teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> (FY15&ndash;FY25) hides two opposing trends. General education teachers fell 9%; special education teachers fell 34% with a major step down in FY25.</p>
   <div class="legend">
     <span class="legend-item s-neutral"><span class="legend-swatch"></span><span class="legend-text">General education</span></span>
     <span class="legend-item s-marblehead"><span class="legend-swatch"></span><span class="legend-text">Special education</span></span>
@@ -269,30 +269,30 @@ scripts: [chart-tooltip]
   <div class="chart-wrapper" data-chart-tooltip>
     <script type="application/json" class="chart-tooltip-data">
     {
-      "xLabels": ["FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24"],
-      "xPositions": [70,130,190,250,310,370,430,490,550,610],
+      "xLabels": ["FY15","FY16","FY17","FY18","FY19","FY20","FY21","FY22","FY23","FY24","FY25"],
+      "xPositions": [70,130,190,250,310,370,430,490,550,610,670],
       "valueDecimals": 1,
       "series": [
         {
           "name": "General education teachers",
           "className": "s-neutral",
-          "values": [100.0,102.5,103.0,100.1,105.8,110.1,106.5,99.8,92.1,87.8]
+          "values": [100.0,102.5,103.0,100.1,105.8,110.1,106.5,99.8,92.1,87.8,90.6]
         },
         {
           "name": "Special education teachers",
           "className": "s-marblehead",
-          "values": [100.0,97.8,102.0,105.8,69.5,51.3,64.1,92.6,116.1,127.1]
+          "values": [100.0,97.8,102.0,105.8,69.5,51.3,64.1,92.6,116.1,127.1,65.7]
         }
       ]
     }
     </script>
-    <svg class="chart" viewBox="0 0 740 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Indexed chart, FY15 = 100. General education teacher staffing declines to 87.8. Special education teacher staffing rises to 127.1, after a sharp dip to 51.3 in FY20 that coincides with a corresponding rise in general education staffing.">
-      <line class="axis-base" x1="70" y1="180" x2="610" y2="180"/>
+    <svg class="chart" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Indexed chart, FY15 = 100. General education teacher staffing finishes at 90.6 after a 12% dip and partial recovery. Special education teacher staffing peaks at 127.1 in FY24 then drops sharply to 65.7 in FY25, the largest one-year movement in the series; combined with FY19-FY21's similarly dramatic swings, this likely reflects DESE reclassification across categories rather than a clean read on actual SPED staffing.">
+      <line class="axis-base" x1="70" y1="180" x2="670" y2="180"/>
 
       <!-- 100 reference line + minor gridlines -->
-      <line class="grid-major" x1="70" y1="80" x2="610" y2="80"/>
-      <line class="grid-minor" x1="70" y1="30" x2="610" y2="30"/>
-      <line class="grid-minor" x1="70" y1="130" x2="610" y2="130"/>
+      <line class="grid-major" x1="70" y1="80" x2="670" y2="80"/>
+      <line class="grid-minor" x1="70" y1="30" x2="670" y2="30"/>
+      <line class="grid-minor" x1="70" y1="130" x2="670" y2="130"/>
 
       <!-- Y tick labels -->
       <text class="tick-label" x="63" y="184" text-anchor="end">50</text>
@@ -300,15 +300,15 @@ scripts: [chart-tooltip]
       <text class="tick-label" x="63" y="84" text-anchor="end">100</text>
       <text class="tick-label" x="63" y="34" text-anchor="end">125</text>
 
-      <!-- Gen ed teachers (FY15 = 100, scale 50-125 over 100px range, 2 px/unit, y(v) = 280 - 2v) -->
+      <!-- Gen ed teachers (FY15 = 100, scale 2 px/unit) -->
       <polyline class="data-line s-neutral"
-                points="70,80 130,75 190,74 250,80 310,68 370,60 430,67 490,80 550,96 610,104"/>
-      <text class="end-label s-neutral" x="616" y="100">87.8</text>
+                points="70,80 130,75 190,74 250,80 310,68 370,60 430,67 490,80 550,96 610,104 670,99"/>
+      <text class="end-label s-neutral" x="676" y="95">90.6</text>
 
       <!-- SPED teachers -->
       <polyline class="data-line s-marblehead"
-                points="70,80 130,84 190,76 250,68 310,141 370,177 430,152 490,95 550,48 610,26"/>
-      <text class="end-label s-marblehead" x="616" y="22">127.1</text>
+                points="70,80 130,84 190,76 250,68 310,141 370,177 430,152 490,95 550,48 610,26 670,149"/>
+      <text class="end-label s-marblehead" x="676" y="145">65.7</text>
 
       <!-- FY15 = 100 annotation -->
       <text class="annotation annotation--hide-sm" x="55" y="76" text-anchor="end" font-size="10">FY15 = 100</text>
@@ -317,12 +317,13 @@ scripts: [chart-tooltip]
       <text class="tick-label tick-label--major" x="70"  y="200" text-anchor="middle">FY15</text>
       <text class="tick-label tick-label--minor" x="250" y="200" text-anchor="middle">FY18</text>
       <text class="tick-label tick-label--major" x="430" y="200" text-anchor="middle">FY21</text>
-      <text class="tick-label tick-label--major" x="610" y="200" text-anchor="middle">FY24</text>
+      <text class="tick-label tick-label--minor" x="610" y="200" text-anchor="middle">FY24</text>
+      <text class="tick-label tick-label--major" x="670" y="200" text-anchor="middle">FY25</text>
     </svg>
   </div>
 
   <p class="caption">
-    Teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> by program area, FY15&ndash;FY24, indexed to FY15 = 100, from <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr>. General education teachers fell from 210.1 to 184.5 (&minus;12.2%); special education teachers rose from 44.6 to 56.7 (+27.1%). Total teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> fell only 4% (256.8 to 245.7) but the mix shifted toward mandated special education staffing. The FY19&ndash;FY21 dip in special education coincides with a parallel rise in general education, suggesting <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr> reclassification rather than actual cuts. Raw data in <code>data/dese_teacher_fte_by_program.csv</code>.
+    Teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> by program area, FY15&ndash;FY25, indexed to FY15 = 100, from <abbr class="g" title="Department of Elementary and Secondary Education">DESE</abbr>. General education teachers ended FY25 at 190.4 (&minus;9.4% from FY15's 210.1, but +3.2% from FY24's 184.5). Special education teachers fell from 44.6 (FY15) and 56.7 (FY24) to 29.3 (FY25). Total teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr> went 256.8 (FY15) &rarr; 245.7 (FY24) &rarr; 225.1 (FY25), a 12% cumulative decline. The FY19&ndash;FY21 dip and the FY24&rarr;FY25 SPED drop both coincide with offsetting movement in general education or in non-teacher DESE categories, consistent with DESE reclassification rather than clean staff cuts &mdash; though the FY25 total is genuinely down by ~20 teacher FTE. Raw data in <code>data/dese_teacher_fte_by_program.csv</code>.
   </p>
 
   <p class="chart-label">Students per teacher <abbr class="g" title="Full-Time Equivalent">FTE</abbr>, four peer towns</p>
@@ -420,7 +421,7 @@ scripts: [chart-tooltip]
   </div>
 
   <h2 id="school-age-vs-enrollment">Are the kids leaving Marblehead, or just leaving the public schools?</h2>
-  <p>Enrollment fell 21% between FY14 and FY24, but the chart at the top of this page does not say whether the school-age population of Marblehead also fell, or whether resident families left <abbr class="g" title="Marblehead Public Schools">MPS</abbr> for private, charter, or out-of-district schools. The two questions have different answers.</p>
+  <p>Enrollment fell 23% between FY14 and FY25, but the chart at the top of this page does not say whether the school-age population of Marblehead also fell, or whether resident families left <abbr class="g" title="Marblehead Public Schools">MPS</abbr> for private, charter, or out-of-district schools. The two questions have different answers.</p>
 
   <p class="chart-label">Marblehead resident school-age kids vs. <abbr class="g" title="Marblehead Public Schools">MPS</abbr> enrollment, 2014&ndash;2026</p>
 
