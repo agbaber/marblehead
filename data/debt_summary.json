@@ -1,33 +1,38 @@
 {
-  "source": "FY24 Town of Marblehead ACFR (data/town_docs/FY24_Town_of_Marblehead_ACFR.pdf)",
-  "as_of": "2024-06-30",
-  "outstanding_long_term_debt_total": 116507991,
+  "source": "FY25 Town of Marblehead ACFR (https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf)",
+  "prior_source": "FY24 Town of Marblehead ACFR (data/town_docs/FY24_Town_of_Marblehead_ACFR.pdf)",
+  "as_of": "2025-06-30",
+  "outstanding_long_term_debt_total": 107398992,
   "components": {
-    "governmental_general_obligation_bonds_principal": 101065000,
-    "governmental_unamortized_bond_premium": 7730557,
-    "governmental_direct_borrowings": 549347,
-    "water_mwra_notes": 3461580,
-    "municipal_light_mmwec_notes": 3701507
+    "governmental_general_obligation_bonds_principal": 93525000,
+    "governmental_unamortized_bond_premium": 6651413,
+    "governmental_direct_borrowings": 699231,
+    "water_mwra_notes": 3134390,
+    "municipal_light_mmwec_notes": 3388958
   },
-  "credit_rating": "AAA stable (S&P)",
+  "credit_rating": "AAA, outlook revised to negative on 2026-04-10 (S&P)",
+  "credit_rating_consecutive_years": 16,
   "legal_debt_limit": 475181000,
-  "legal_debt_margin_pct_of_limit_used": 12.46,
-  "bond_anticipation_notes_outstanding": 2300000,
+  "legal_debt_margin_pct_of_limit_used": 13.87,
+  "bond_anticipation_notes_outstanding": 4922598,
   "authorized_but_unissued": {
-    "total": 12232625,
+    "total": 23783879,
+    "as_of": "2025-06-30",
     "items": [
       { "project": "Gerry School construction", "amount": 1619627 },
-      { "project": "Mary Alley building roof replacement", "amount": 480000 },
-      { "project": "Franklin Street Fire Station roof", "amount": 130598 },
-      { "project": "Roads and sidewalks", "amount": 8980000 },
-      { "project": "Water projects", "amount": 1022400 }
+      { "project": "Mary Alley building HVAC", "amount": 5750000 },
+      { "project": "High School roof and HVAC", "amount": 8610602 },
+      { "project": "Roads and sidewalks", "amount": 6980000 },
+      { "project": "Water projects", "amount": 823650 }
     ]
   },
-  "fy24_change": {
-    "regular_maturities": -8035853,
-    "issuance": 776653,
-    "premium_amortization": -1127190,
-    "net_change": -8386390
+  "fy25_change": {
+    "regular_maturities_governmental": -7780740,
+    "regular_maturities_business_type": -838489,
+    "issuance_governmental": 390624,
+    "issuance_business_type": 198750,
+    "premium_amortization": -1079144,
+    "net_change": -9108999
   },
   "outstanding_total_by_fiscal_year": [
     { "fy": 2015, "outstanding": 74064865 },
@@ -39,22 +44,23 @@
     { "fy": 2021, "outstanding": 118760783 },
     { "fy": 2022, "outstanding": 119858632 },
     { "fy": 2023, "outstanding": 124894381 },
-    { "fy": 2024, "outstanding": 116507991 }
+    { "fy": 2024, "outstanding": 116507991 },
+    { "fy": 2025, "outstanding": 107398992 }
   ],
   "go_bond_maturity_schedule": {
-    "note": "Governmental Activities general obligation bonds only (principal $101.07M as of 6/30/2024)",
+    "note": "Governmental Activities general obligation bonds only (principal $93.525M as of 6/30/2025), per FY25 ACFR page 59",
     "rows": [
-      { "year_ending_june_30": 2025, "principal": 7540000, "interest": 3453080 },
       { "year_ending_june_30": 2026, "principal": 5955000, "interest": 3162146 },
       { "year_ending_june_30": 2027, "principal": 6225000, "interest": 2889104 },
       { "year_ending_june_30": 2028, "principal": 6500000, "interest": 2607573 },
       { "year_ending_june_30": 2029, "principal": 6720000, "interest": 2316691 },
-      { "year_ending_june_30_range": "2030-2034", "principal": 34005000, "interest": 7501578 },
-      { "year_ending_june_30_range": "2035-2039", "principal": 24810000, "interest": 2716558 },
-      { "year_ending_june_30_range": "2040-2044", "principal": 9310000, "interest": 356025 }
+      { "year_ending_june_30": 2030, "principal": 7020000, "interest": 2021698 },
+      { "year_ending_june_30_range": "2031-2035", "principal": 32850000, "interest": 6309001 },
+      { "year_ending_june_30_range": "2036-2040", "principal": 23000000, "interest": 2081212 },
+      { "year_ending_june_30_range": "2041-2044", "principal": 5255000, "interest": 162250 }
     ],
-    "principal_total": 101065000,
-    "interest_total": 25002755
+    "principal_total": 93525000,
+    "interest_total": 21549675
   },
   "debt_exclusion_record": {
     "source": "data/dor_debt_exclusion_all.csv (MA DOR), filtered to municipality == Marblehead",
@@ -67,19 +73,26 @@
       "department": "Culture and Recreation"
     }
   },
+  "fy25_governmental_fund_debt_service": {
+    "source": "FY25 ACFR Statement of Revenues, Expenditures and Changes in Fund Balances - Governmental Funds (page 32)",
+    "principal": 7780740,
+    "interest": 3479378,
+    "total": 11260118,
+    "note": "Governmental funds debt service for fiscal year ended June 30, 2025."
+  },
   "fy24_excluded_debt_service": {
     "source": "FY24 ACFR Schedule of Revenues, Expenditures and Changes in Fund Balance, Budget and Actual, Excluded Debt section",
     "amount": 11001616,
     "note": "Total Excluded Debt Services in the FY24 budgetary basis statement. Essentially all of the town's annual debt service is paid outside the Proposition 2.5 levy limit via voter-approved exclusions."
   },
   "appropriated_debt_service_recent": [
-    { "fy": 2024, "maturing_debt": 7540000, "interest": 3518075, "total": 11058075 },
-    { "fy": 2025, "maturing_debt": 5955000, "interest": 3359141, "total": 9314141 },
-    { "fy": 2026, "maturing_debt": 7251017, "interest": 3847381, "total": 11098398, "note": "FY27 Proposed Budget column" },
+    { "fy": 2024, "maturing_debt": 7540000, "interest": 3518075, "total": 11058075, "note": "FY24 final budget, FY27 Proposed Budget column" },
+    { "fy": 2025, "maturing_debt": 7540000, "interest": 3545298, "total": 11085298, "note": "FY25 actual per FY25 ACFR Budget and Actual schedule (page 97)" },
+    { "fy": 2026, "maturing_debt": 7251017, "interest": 3847381, "total": 11098398, "note": "FY26 budget, FY27 Proposed Budget column" },
     { "fy": 2027, "maturing_debt": 7251017, "interest": 3847381, "total": 11098398, "note": "FY27 Proposed Budget" }
   ],
   "peer_debt_service_share_fy24": {
-    "source": "data/peer_schedule_a_expenditures.csv (MA DLS Schedule A)",
+    "source": "data/peer_schedule_a_expenditures.csv (MA DLS Schedule A). FY24 still the latest year all 17 peer towns have filed Schedule A as of June 2026; will be refreshed when FY25 Schedule A filings post.",
     "rows": [
       { "town": "Arlington",  "debt_service": 23737977, "total_expenditures": 208917874, "share_pct": 11.36 },
       { "town": "Marblehead", "debt_service": 11006139, "total_expenditures": 100501118, "share_pct": 10.95 },
