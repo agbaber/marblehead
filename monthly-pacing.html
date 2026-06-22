@@ -160,13 +160,13 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 <p class="section-sub">FY26 revised budget vs. year-to-date actual.</p>
 
 <div class="data-stamp">
-  <span><span class="stamp-label">Source</span> Town of Marblehead Budget vs Actual portal</span>
-  <span><span class="stamp-label">Data as of</span> <strong>May&nbsp;29,&nbsp;2026</strong> (last refreshed June 1)</span>
+  <span><span class="stamp-label">Source</span> <a href="https://townofmarblehead-ma-ob.budget.socrata.com/" rel="noopener">Town of Marblehead Open Budget portal</a></span>
+  <span><span class="stamp-label">Data as of</span> <strong><span id="pace-as-of">&hellip;</span></strong> (daily auto-refresh)</span>
 </div>
 
 <div class="pacing-meta">
-  <span><strong>FY26 elapsed:</strong> <strong>91%</strong> (32 days left before the year closes on June 30)</span>
-  <span><strong>Read:</strong> % used above 91% is pacing hot; below is pacing cold.</span>
+  <span><strong>FY26 elapsed:</strong> <strong><span id="pace-fy-elapsed">&hellip;</span></strong> <span id="pace-fy-elapsed-detail"></span></span>
+  <span><strong>Read:</strong> % used above the elapsed-FY mark is pacing hot; below is pacing cold.</span>
 </div>
 
 <table class="pace-table" id="pace-table">
@@ -176,7 +176,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
       <th class="num">Revised budget</th>
       <th class="num">YTD actual</th>
       <th class="num">% used</th>
-      <th class="num col-hide-sm">vs. 91%</th>
+      <th class="num col-hide-sm">vs. pace</th>
     </tr>
   </thead>
   <tbody id="pace-body"></tbody>
@@ -188,25 +188,19 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 </div>
 
 <div class="caveats">
-  <h3>What's missing for the real version</h3>
+  <h3>What's still rough</h3>
   <ul>
-    <li><strong>Encumbrances.</strong> A department can look "under-spent" because purchase orders are still open. The Town Accountant's internal report shows expended + encumbered + remaining; this view only shows expended.</li>
+    <li><strong>Encumbrances aren't shown in the table, but they're in the data.</strong> The portal exposes an <code>encumbrance</code> column per department; this view currently only shows expended. Adding a "% committed" column would surface that.</li>
     <li><strong>Per-month budget.</strong> Even for departments that do roughly spend monthly, a flat 1/12 target is a coarse benchmark; the real internal report compares to a department's own historical month-by-month profile.</li>
-    <li><strong>Frequency.</strong> This snapshot is from June 1. There is no published monthly feed.</li>
   </ul>
 </div>
 
 <h2 class="section-h">2. Monthly cash-out, by fund</h2>
-<p class="section-sub">Cumulative vendor payments by month. Dashed line is straight-line target.</p>
+<p class="section-sub">Cumulative monthly spend by fund (payroll included). Dashed line is straight-line target.</p>
 
 <div class="data-stamp">
-  <span><span class="stamp-label">Source</span> <a href="/checkbook/">Town of Marblehead Vendor Checkbook</a></span>
-  <span><span class="stamp-label">Data as of</span> <strong>June&nbsp;17,&nbsp;2026</strong> (on-demand export)</span>
-</div>
-
-<div class="read-note">
-  <strong>Payroll isn't here.</strong>
-  The vendor checkbook only includes payments to outside companies, not municipal salaries (which run through a separate payroll system). General Fund &ndash; Town below captures roughly 80% of actual town spend; the remaining ~20% is police, fire, DPW, and town hall payroll. General Fund &ndash; School is dropped from this chart entirely: the checkbook only captures ~22% of actual school spend (the rest is teacher and staff payroll). The schools-side YTD total in the pacing table above <em>is</em> complete.
+  <span><span class="stamp-label">Source</span> <a href="https://townofmarblehead-ma-ob.budget.socrata.com/" rel="noopener">Town of Marblehead Open Budget portal</a></span>
+  <span><span class="stamp-label">Data as of</span> <strong><span id="burn-as-of">&hellip;</span></strong> (daily auto-refresh)</span>
 </div>
 
 <div class="burn-wrap">
@@ -215,11 +209,10 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 </div>
 
 <div class="caveats">
-  <h3>What's missing for the real version</h3>
+  <h3>What's still rough</h3>
   <ul>
-    <li><strong>Monthly payroll feed.</strong> See the note above &ndash; once monthly payroll totals by department are available, those would layer onto this chart and close the biggest gap.</li>
-    <li><strong>One-time snapshot.</strong> This is from a single export pulled on June 17, 2026. There's no recurring monthly publish.</li>
-    <li><strong>Lumpy by design.</strong> Some funds spike in July (debt service prepay), some at year-end (capital draws). A flat 1/12-per-month line is the wrong comparison for most of them.</li>
+    <li><strong>Lumpy by design.</strong> Some funds spike in July (debt service prepay), some at year-end (capital draws). A flat 1/12-per-month line is the wrong comparison for most of them &ndash; it's a rough orientation, not a verdict.</li>
+    <li><strong>Top 6 by total spend.</strong> Smaller funds (Harbor, Tax Articles, ARPA, capital projects) aren't charted. Drilling into those is a future iteration.</li>
   </ul>
 </div>
 
@@ -253,9 +246,18 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 <script>
 (function () {
   var BUDGET_URL = '../data/budget_actual_FY26.json';
+  var FY_START = new Date('2025-07-01T00:00:00Z');
+  var FY_END   = new Date('2026-06-30T00:00:00Z');
+  var FY_TOTAL_DAYS = Math.round((FY_END - FY_START) / 86400000);
+
+  function fmtDateUS(iso) {
+    if (!iso) return '';
+    var d = new Date(iso + 'T12:00:00Z');
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+  }
+  function setText(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
   var BURN_URL   = '../data/monthly_burn_FY26.json';
   var FC_URL     = '../data/marblehead_free_cash.csv';
-  var PACING_PCT = 0.912; // 332/364 days elapsed at 2026-05-29
 
   // Minimal CSV parser for the free-cash file (no embedded commas/quotes in this dataset).
   function parseCsv(text) {
@@ -274,7 +276,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
     fetch(BURN_URL).then(function (r) { return r.json(); }),
     fetch(FC_URL).then(function (r) { return r.text(); }).then(parseCsv)
   ]).then(function (results) {
-    renderPace(results[0], PACING_PCT);
+    renderPace(results[0]);
     renderBurn(results[1]);
     renderFreeCash(results[2]);
   }).catch(function (err) {
@@ -282,7 +284,22 @@ og_url: https://marbleheaddata.org/monthly-pacing/
   });
 
   // ---------- Pacing table ----------
-  function renderPace(budgetActual, pacingPct) {
+  function renderPace(budgetActual) {
+  // Compute the pacing benchmark from the data's own period-end date so
+  // it stays in lockstep with the daily refresh.
+  var periodEnd = budgetActual && budgetActual.checkbook_period_end;
+  var periodDate = periodEnd ? new Date(periodEnd + 'T00:00:00Z') : new Date();
+  var elapsedDays = Math.max(0, Math.min(FY_TOTAL_DAYS,
+    Math.round((periodDate - FY_START) / 86400000)));
+  var pacingPct = elapsedDays / FY_TOTAL_DAYS;
+  var daysLeft = Math.max(0, FY_TOTAL_DAYS - elapsedDays);
+  setText('pace-as-of', fmtDateUS(periodEnd));
+  setText('pace-fy-elapsed', (pacingPct * 100).toFixed(0) + '%');
+  setText('pace-fy-elapsed-detail',
+    daysLeft > 0
+      ? '(' + daysLeft + ' days left before the year closes on June 30)'
+      : '(FY26 has closed)');
+
   var rows = ((budgetActual && budgetActual.by_department) || []).filter(function (r) { return (r.revised_budget || 0) > 0; });
   rows.sort(function (a, b) { return (b.revised_budget || 0) - (a.revised_budget || 0); });
   var tbody = document.getElementById('pace-body');
@@ -313,13 +330,10 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 
   // ---------- Monthly burn chart ----------
   function renderBurn(bd) {
+  if (bd && bd.as_of) setText('burn-as-of', fmtDateUS(bd.as_of));
   var svg = document.getElementById('burn-chart');
   var legend = document.getElementById('burn-legend');
   if (bd && bd.funds && svg) {
-    // GENERAL FUND - SCHOOL is dropped: the checkbook captures only ~22% of
-    // actual school spend (the rest is payroll, run through a separate system).
-    // Charting it would mislead. School YTD spend is in the pacing table above.
-    bd.funds = bd.funds.filter(function (f) { return f.fund !== 'GENERAL FUND - SCHOOL'; });
     var W = 800, H = 320;
     var padL = 56, padR = 14, padT = 14, padB = 36;
     var months = bd.fy_months;
@@ -382,9 +396,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
     bd.funds.forEach(function (f, idx) {
       var color = colors[idx % colors.length];
       var name = f.fund.replace('GENERAL FUND - ', 'GF - ').replace(' OPERATING', '').replace(' ENTERPRISE', '');
-      // GF-Town captures ~80% of actual town spend; the missing ~20% is municipal payroll.
-      if (f.fund === 'GENERAL FUND - TOWN') name += ' (no payroll)';
-      var total = ((f.total_through_as_of || f.total_through_jun9 || 0) / 1e6).toFixed(1);
+      var total = ((f.total_through_as_of || 0) / 1e6).toFixed(1);
       legHtml += '<span class="burn-legend-item"><span class="burn-legend-swatch" style="background:' + color + '"></span>' + name + ' &middot; $' + total + 'M</span>';
     });
     legHtml += '<span class="burn-legend-target"><span style="display:inline-block;width:14px;border-top:1.5px dashed var(--text-muted);"></span>straight-line target (refs ' + refFund.fund.replace('GENERAL FUND - ', 'GF - ') + ')</span>';
