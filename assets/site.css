@@ -4930,6 +4930,63 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   font-style: italic;
 }
 
+.flow-pillar-hires-incumbent {
+  font-size: 0.8125rem;
+  color: var(--c-text-mid);
+  margin-top: 2px;
+}
+
+.flow-pillar-hires-since {
+  color: var(--c-text-sub);
+  cursor: help;
+}
+
+.flow-pillar-sitting {
+  border-top: 1px dashed var(--c-border);
+  padding-top: 10px;
+}
+
+.flow-pillar-sitting ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-pillar-sitting li {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 4px 0;
+  border-bottom: 1px dotted var(--c-border);
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+.flow-pillar-sitting li:last-child {
+  border-bottom: none;
+}
+
+.flow-pillar-member-name {
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.flow-pillar-member-appointed {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--c-brass);
+  font-weight: 600;
+  cursor: help;
+  margin-left: 4px;
+}
+
+.flow-pillar-member-tenure {
+  font-size: 0.75rem;
+  color: var(--c-text-sub);
+  cursor: help;
+}
+
 .flow-pillar-reach {
   font-size: 0.875rem;
   color: var(--c-text-mid);

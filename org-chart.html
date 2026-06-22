@@ -78,9 +78,28 @@ og_url: https://marbleheaddata.org/org-chart.html
       <div class="flow-pillar-hires">
         <span class="flow-pillar-hires-label">Hires</span>
         <span class="flow-pillar-hires-value">{{ pillar.hires }}</span>
+        {% if pillar.hires_incumbent %}
+        <span class="flow-pillar-hires-incumbent">
+          {{ pillar.hires_incumbent.name }}<span class="flow-pillar-hires-since" title="{{ pillar.hires_incumbent.since_note }}"> &middot; since {{ pillar.hires_incumbent.since }}</span>
+        </span>
+        {% else %}
         <span class="flow-pillar-hires-count">1 employee directly</span>
+        {% endif %}
       </div>
       <p class="flow-pillar-reach">{{ pillar.reach }}</p>
+      {% if pillar.sitting %}
+      <div class="flow-pillar-sitting">
+        <p class="flow-pillar-list-label">Sitting members</p>
+        <ul>
+          {% for m in pillar.sitting %}
+          <li>
+            <span class="flow-pillar-member-name">{{ m.name }}</span>{% if m.appointed %} <span class="flow-pillar-member-appointed" title="Appointed mid-term to fill a vacancy, not elected">appointed</span>{% endif %}
+            <span class="flow-pillar-member-tenure"{% if m.since_note %} title="{{ m.since_note }}"{% endif %}>since {{ m.since }} &middot; term ends {{ m.term_ends }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
       <div class="flow-pillar-can">
         <p class="flow-pillar-list-label">Can</p>
         <ul>{% for item in pillar.can %}<li>{{ item }}</li>{% endfor %}</ul>
