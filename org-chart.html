@@ -110,6 +110,9 @@ og_url: https://marbleheaddata.org/org-chart.html
         <p class="flow-pillar-list-label">Cannot</p>
         <ul>{% for item in pillar.cannot %}<li>{{ item }}</li>{% endfor %}</ul>
       </div>
+      {% if pillar.sources %}
+      <p class="flow-pillar-sources">Sources{% for s in pillar.sources %}<sup class="cite" data-href="{{ s.url }}" data-source="{{ s.label }}"></sup>{% endfor %}</p>
+      {% endif %}
     </div>
     {% endfor %}
   </div>
@@ -128,7 +131,6 @@ og_url: https://marbleheaddata.org/org-chart.html
     {% endfor %}
   </div>
 
-  <p class="flow-source-note">{{ site.data.org_chart.decision_flow.source_label }}</p>
 </section>
 
 <h2 id="the-chart">The two administrations</h2>
