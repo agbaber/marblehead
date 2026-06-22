@@ -121,7 +121,7 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
     </a>
   </div>
 
-  <p>The property tax levy doubled from $39M in 2005 to $82M in 2024.<sup class="cite" data-href="data/SOURCE_LOOKUP.md" data-source="Marblehead ACFR schedules of Property Tax Levies and Collections (FY05 ACFR p.121, FY14 ACFR p.117, FY24 ACFR p.129)"></sup> Here is where every additional dollar went, who has been checking the books, and what grew faster than it probably should have.</p>
+  <p>The property tax levy more than doubled from $39M in 2005 to $84M in 2025.<sup class="cite" data-href="data/SOURCE_LOOKUP.md" data-source="Marblehead ACFR schedules of Property Tax Levies and Collections (FY05 ACFR p.121, FY14 ACFR p.117, FY25 ACFR p.122). FY25 net levy: $83,947,013."></sup> Here is where every additional dollar went, who has been checking the books, and what grew faster than it probably should have.</p>
 
   <nav class="page-toc" aria-label="On this page">
     <span class="page-toc-label">On this page</span>
@@ -134,7 +134,7 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
   <!-- Act 1: Where it went. Filled by Task 5 (prose and department table) and Task 6 (stacked spending chart). -->
   <h2 id="where-it-went" data-stance-section="where-it-went">Where it went</h2>
 
-  <p>Marblehead's General Fund spending grew from $70.5 million in 2015 to $106.2 million in 2026, an increase of $35.7 million.<sup class="cite" data-href="data/SOURCES.md" data-source="Marblehead ACFR &quot;Schedule of Revenues, Expenditures and Changes in Fund Balance, Budget and Actual, General Fund&quot; (FY2015-FY2024); FY2025/FY2026 columns from the FY2027 Proposed Budget"></sup> These are the town's budgetary-basis General Fund numbers: the money the Finance Committee builds the annual budget around and Town Meeting votes on. They exclude grants, school food service and athletics fees, and state on-behalf payments into the teachers pension fund, which together total roughly $26 million a year in additional money the town does not directly control.</p>
+  <p>Marblehead's General Fund spending grew from $70.5 million in 2015 to $106.2 million in 2026, an increase of $35.7 million.<sup class="cite" data-href="data/SOURCES.md" data-source="Marblehead ACFR &quot;Schedule of Revenues, Expenditures and Changes in Fund Balance, Budget and Actual, General Fund&quot; (FY2015-FY2025; FY25 published June 2026); FY2026 column from the FY2027 Proposed Budget"></sup> These are the town's budgetary-basis General Fund numbers: the money the Finance Committee builds the annual budget around and Town Meeting votes on. They exclude grants, school food service and athletics fees, and state on-behalf payments into the teachers pension fund, which together total roughly $26 million a year in additional money the town does not directly control.</p>
 
   <p>Six categories account for all of that $35.7 million in growth.</p>
 
@@ -215,7 +215,7 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
       ]
     }
     </script>
-    <svg class="chart chart--stacked" viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stacked area chart of Marblehead general fund spending by category from FY2015 to FY2026, showing schools, health insurance, public safety, debt payments, pensions, and everything else. Total rises from 70.5 million in FY2015 to 106.2 million in FY2026. Schools is the largest layer throughout. FY2025 is expended and FY2026 is budget; the rest are audited actuals.">
+    <svg class="chart chart--stacked" viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stacked area chart of Marblehead general fund spending by category from FY2015 to FY2026, showing schools, health insurance, public safety, debt payments, pensions, and everything else. Total rises from 70.5 million in FY2015 to 106.2 million in FY2026. Schools is the largest layer throughout. FY2015 through FY2025 are audited actuals (FY2025 newly added from the FY25 ACFR); FY2026 is budget.">
       <!--
         X axis: x = 60 + (FY - 2015) * 60, so FY15 = 60, FY26 = 720.
         Y axis: y = 280 - dollars * 240 / 110_000_000, so $0 = 280, $110M = 40.
@@ -232,10 +232,10 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
           FY22  s187.0  h159.2  p137.8  d117.2  pn108.9  e 75.8
           FY23  s184.5  h156.1  p133.8  d111.8  pn102.7  e 68.7
           FY24  s179.3  h151.2  p126.5  d102.5  pn 92.6  e 56.9
-          FY25  s179.0  h150.6  p126.9  d102.8  pn 92.1  e 60.8   (expended, not audited)
+          FY25  s179.0  h150.6  p126.9  d102.8  pn 92.1  e 60.8   (audited as of FY25 ACFR; FY25 ACFR governmental fund education $46.92M vs $46.29M shown - within rounding)
           FY26  s172.8  h139.9  p115.4  d 95.0  pn 83.3  e 48.3   (budget, not actual)
-        Vertical annotation line at x = 630 (midway between FY24 at x=600 and FY25 at x=660)
-        marks the boundary between audited actuals and expended/budget figures.
+        Vertical annotation line at x = 690 (midway between FY25 at x=660 and FY26 at x=720)
+        marks the boundary between audited actuals and budget.
       -->
 
       <!-- Grid lines -->
@@ -279,10 +279,10 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
       <!-- X axis base line (drawn over the bottom of the stack) -->
       <line class="axis-base" x1="60" y1="280" x2="720" y2="280"/>
 
-      <!-- Actual / budget boundary between FY24 and FY25 -->
-      <line class="annotation-line" x1="630" y1="40" x2="630" y2="280"/>
-      <text class="annotation annotation--hide-sm" x="626" y="50" text-anchor="end">actual</text>
-      <text class="annotation annotation--hide-sm" x="634" y="50">expended / budget</text>
+      <!-- Audited / budget boundary between FY25 and FY26 -->
+      <line class="annotation-line" x1="690" y1="40" x2="690" y2="280"/>
+      <text class="annotation annotation--hide-sm" x="686" y="50" text-anchor="end">audited &larr;</text>
+      <text class="annotation annotation--hide-sm" x="694" y="50">&rarr; budget</text>
 
       <!-- X axis tick labels -->
       <text class="tick-label tick-label--major" x="60"  y="300" text-anchor="middle">FY15</text>
@@ -773,7 +773,7 @@ og_url: https://marbleheaddata.org/where-has-the-money-gone.html
 
   <details class="notes">
     <summary>Sources and methodology</summary>
-    <p>The stacked spending chart and the FY2015 vs FY2026 prose in the first section are built from the town's independent annual financial reports, specifically the "Schedule of Revenues, Expenditures and Changes in Fund Balance, Budget and Actual, General Fund" for fiscal years 2015 through 2024. FY2025 expended actuals and FY2026 approved budget figures come from the FY2027 Proposed Budget published in April 2026. The chart uses budgetary-basis General Fund data throughout, which is the money the Finance Committee builds the annual budget around and Town Meeting votes on. It deliberately excludes grants, school food service and athletics fees, and state on-behalf payments into the teachers pension fund, because the page is trying to show what the town chose to spend out of its own General Fund, not total activity across every fund.</p>
+    <p>The stacked spending chart and the FY2015 vs FY2026 prose in the first section are built from the town's independent annual financial reports, specifically the "Schedule of Revenues, Expenditures and Changes in Fund Balance, Budget and Actual, General Fund" for fiscal years 2015 through 2025 (FY25 from the FY25 ACFR published June 11, 2026). FY2026 approved budget figures come from the FY2027 Proposed Budget published in April 2026. The chart uses budgetary-basis General Fund data throughout, which is the money the Finance Committee builds the annual budget around and Town Meeting votes on. It deliberately excludes grants, school food service and athletics fees, and state on-behalf payments into the teachers pension fund, because the page is trying to show what the town chose to spend out of its own General Fund, not total activity across every fund.</p>
 
     <p>The department-by-department table in the first section uses FY2015 actual expended from the FY15 annual financial report (pages 76 to 78) and FY2026 budgeted figures from the town's FY2026 budget summary, cross-checked against the FY2027 Proposed Budget's FY2026 Budget column. Departments that did not exist in FY2015, or whose functions were consolidated or split after FY2015, are documented in notes A through F under the table.</p>
 
