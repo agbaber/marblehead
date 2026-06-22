@@ -126,7 +126,7 @@ og_url: https://marbleheaddata.org/org-chart.html
     {% for callout in site.data.org_chart.decision_flow.callouts %}
     <div class="flow-callout">
       <p class="flow-callout-title">{{ callout.title }}</p>
-      <p>{{ callout.body }}</p>
+      <p>{{ callout.body }}{% if callout.source_url %}<sup class="cite" data-href="{{ callout.source_url }}" data-source="{{ callout.source_label }}"></sup>{% endif %}</p>
     </div>
     {% endfor %}
   </div>

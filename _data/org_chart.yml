@@ -1988,11 +1988,26 @@ decision_flow:
         different command structures.
     - title: "Marblehead's unusual Finance Committee"
       body: >-
-        In most Massachusetts towns the Town Moderator appoints the
-        Finance Committee, which keeps it structurally independent of
-        the Select Board. In Marblehead the Select Board appoints
-        FinCom. The committee still votes its own recommendations, but
-        the appointing relationship is uncommon for Massachusetts.
+        The Association of Town Finance Committees' handbook surveyed
+        Massachusetts towns and found that of 97 appointed Finance
+        Committees, 70 are appointed by the Town Moderator, 13 by the
+        Board of Selectmen, and 10 by some combination of officials.
+        Marblehead is in the 13. That keeps its FinCom structurally
+        closer to the Select Board than is typical statewide, even
+        though the committee still votes its own recommendations and
+        is advisory only.
+      source_url: "https://www.southboroughma.gov/DocumentCenter/View/899/MMA-Finance-Committee-Handbook-PDF"
+      source_label: >-
+        Association of Town Finance Committees (a chapter of the
+        Massachusetts Municipal Association), Finance Committee
+        Handbook, Chapter 3, page 18: of the towns responding to the
+        survey, 97 finance committees are appointed and only 21 are
+        elected; 70 of the appointed committees are appointed by the
+        town moderator, 13 by the board of selectmen, and 10 by a
+        combination of the selectmen, town moderator, and finance
+        committee chair or other town officials. Local copy saved at
+        data/external/atfc-finance-committee-handbook.txt (pdftotext
+        layout dump of the southboroughma.gov hosted edition).
   # Per-pillar `sources:` arrays carry the inline cite markers; they
   # roll up into the auto-injected page-bottom Sources footer via
   # assets/citations.js. First-seen years on elected members are
