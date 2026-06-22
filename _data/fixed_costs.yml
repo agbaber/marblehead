@@ -1,0 +1,81 @@
+# Fixed Costs data for /what-is-actually-flexible.html
+#
+# All FY27 dollar values reconcile against data/town_budget_FY27.json
+# (Total General Fund: $109,777,938).
+#
+# Tiers reflect the legal/contractual horizon over which the line is
+# locked:
+#   1 — hard-locked this year (legal or contractual; no FY27 lever)
+#   2 — contract-locked (current CBA; reducible at next bargain)
+#   3 — schedule-locked (multi-decade actuarial schedule)
+
+meta:
+  fy: 27
+  total_general_fund: 109777938
+  source_doc: "FY27 Proposed Budget — No Override"
+  source_url: "https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override"
+
+tiers:
+  - id: hard
+    label: "Hard-locked this year"
+    description: "Legal or contractual obligations the town cannot reduce in FY27."
+    items:
+      - category: "Bonded debt service"
+        fy27_amount: 11098398
+        source_id: town_budget_fy27
+        source_note: "Maturing Bonds + Interest, Other General Government function"
+      - category: "State assessments (MBTA, charter school, county, MAPC, mosquito)"
+        fy27_amount: 2530068
+        source_id: cherry_sheet_fy26
+        source_note: "FY26 Mass. DLS cherry sheet for Marblehead (DOR code 168). FY27 cherry sheet not yet published."
+        caveat: "Using FY26 figure — FY27 cherry sheet not yet published by DLS"
+      - category: "SPED out-of-district tuition + transportation (net of Circuit Breaker + IDEA offsets)"
+        fy27_amount: 4291145
+        source_id: fy27_school_packet
+        source_note: "FY27 school budget packet, Outside Placements + SPED Transportation, net of Circuit Breaker reimbursement and IDEA offset. Gross is $6,627,626."
+
+  - id: contract
+    label: "Contract-locked"
+    description: "Set by current collective bargaining agreements; reducible only by contract renegotiation."
+    items:
+      - category: "Healthcare (employer share, ~83%)"
+        fy27_amount: 16754748
+        source_id: town_budget_fy27
+        source_note: "Group Insurance line, Other General Government function"
+      - category: "Workers compensation insurance"
+        fy27_amount: 978309
+        source_id: town_budget_fy27
+        source_note: "Other Insurance line, Other General Government function"
+      - category: "Unemployment insurance"
+        fy27_amount: 597208
+        source_id: town_budget_fy27
+        source_note: "Unemployment line, Other General Government function"
+
+  - id: schedule
+    label: "Schedule-locked"
+    description: "Long-term funding obligations governed by actuarial schedules."
+    items:
+      - category: "Pension assessment (Marblehead Contributory Retirement)"
+        fy27_amount: 5843360
+        source_id: town_budget_fy27
+        source_note: "Contributory Retirement Fund line, Other General Government function"
+      - category: "Medicare (federal employer match, 1.45%)"
+        fy27_amount: 277629
+        source_id: town_budget_fy27
+        source_note: "Medicare line, Other General Government function"
+      # OPEB intentionally omitted: FY27 No-Override appropriation is $0 (cut
+      # from FY26's $250K). The override would restore only $96,771, still
+      # well below the $10.6M FY24 actuarial ARC. The deferral is called out
+      # in the Caveats section of the page instead — including it as a $0
+      # locked-tier row would misrepresent the page's frame.
+
+sources:
+  town_budget_fy27:
+    href: "https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override"
+    label: "FY27 Proposed Budget — No Override"
+  cherry_sheet_fy26:
+    href: "/data/cherry_sheet_FY26.csv"
+    label: "Mass. DLS FY26 Cherry Sheet (Marblehead)"
+  fy27_school_packet:
+    href: "https://www.marbleheadschools.org/school-committee/files/fy27-proposed-budget-packet"
+    label: "FY27 School Committee Budget Packet"
