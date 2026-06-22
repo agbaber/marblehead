@@ -187,7 +187,79 @@ permalink: /what-is-actually-flexible.html
 
 <section class="waf-section" id="translator">
   <h2>What a cut would mean</h2>
-  <!-- Translator input added in Task 7 -->
+  <style>
+    .waf-translator { background: var(--surface-muted, #f5f7f7); padding: 16px 20px; border-radius: 4px; max-width: 520px; }
+    .waf-translator label { display: block; margin: 8px 0 4px; font-size: 13px; }
+    .waf-translator input[type=number] { font-size: 18px; padding: 6px 8px; width: 200px; font-variant-numeric: tabular-nums; }
+    .waf-translator .waf-radio-row { display: flex; gap: 16px; align-items: center; font-size: 14px; margin: 8px 0; }
+    .waf-translator .waf-result { font-size: 22px; margin-top: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .waf-translator .waf-result-detail { font-size: 13px; color: var(--text-muted, #65706f); margin-top: 4px; }
+  </style>
+
+  <div class="waf-translator">
+    <label for="waf-cut-amount">Cut amount</label>
+    <input type="number" id="waf-cut-amount" min="0" step="10000" placeholder="e.g. 500000" inputmode="numeric"
+      aria-describedby="waf-translator-result">
+
+    <div class="waf-radio-row" role="radiogroup" aria-label="Archetype">
+      {% for arch in site.data.fte_cost.archetypes %}
+        <label>
+          <input type="radio" name="waf-archetype" value="{{ arch.id }}"
+            data-cost="{{ arch.total_cost_to_employ }}"
+            {% if forloop.first %}checked{% endif %}>
+          {{ arch.label }}
+        </label>
+      {% endfor %}
+    </div>
+
+    <div class="waf-result" id="waf-translator-result" aria-live="polite">≈ 0 positions</div>
+    <div class="waf-result-detail" id="waf-translator-detail"></div>
+  </div>
+
+  <script>
+  (function () {
+    'use strict';
+    var amtInput = document.getElementById('waf-cut-amount');
+    var resultEl = document.getElementById('waf-translator-result');
+    var detailEl = document.getElementById('waf-translator-detail');
+
+    function getSelectedCost() {
+      var radios = document.querySelectorAll('input[name="waf-archetype"]');
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) return Number(radios[i].dataset.cost);
+      }
+      return 0;
+    }
+
+    function getSelectedLabel() {
+      var radios = document.querySelectorAll('input[name="waf-archetype"]');
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) return radios[i].parentElement.textContent.trim();
+      }
+      return '';
+    }
+
+    function fmt(n) { return n.toLocaleString('en-US'); }
+
+    function recompute() {
+      var amount = Number(amtInput.value || 0);
+      var cost = getSelectedCost();
+      if (!amount || !cost) {
+        resultEl.textContent = '≈ 0 positions';
+        detailEl.textContent = '';
+        return;
+      }
+      var positions = Math.floor(amount / cost);
+      resultEl.textContent = '≈ ' + fmt(positions) + ' position' + (positions === 1 ? '' : 's');
+      detailEl.textContent = '$' + fmt(amount) + ' ÷ $' + fmt(cost) + ' per ' + getSelectedLabel().toLowerCase() + ' ≈ ' + fmt(positions);
+    }
+
+    amtInput.addEventListener('input', recompute);
+    document.querySelectorAll('input[name="waf-archetype"]').forEach(function (r) {
+      r.addEventListener('change', recompute);
+    });
+  })();
+  </script>
 </section>
 
 <section class="waf-section" id="caveats">
