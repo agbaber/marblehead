@@ -201,7 +201,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
 
 <div class="data-stamp">
   <span><span class="stamp-label">Source</span> <a href="/checkbook/">Town of Marblehead Vendor Checkbook</a></span>
-  <span><span class="stamp-label">Data as of</span> <strong>June&nbsp;17,&nbsp;2026</strong> (on-demand export)</span>
+  <span><span class="stamp-label">Data as of</span> <strong><span id="burn-as-of">&hellip;</span></strong> (daily auto-refresh)</span>
 </div>
 
 <div class="read-note">
@@ -218,7 +218,7 @@ og_url: https://marbleheaddata.org/monthly-pacing/
   <h3>What's missing for the real version</h3>
   <ul>
     <li><strong>Monthly payroll feed.</strong> See the note above &ndash; once monthly payroll totals by department are available, those would layer onto this chart and close the biggest gap.</li>
-    <li><strong>One-time snapshot.</strong> This is from a single export pulled on June 17, 2026. There's no recurring monthly publish.</li>
+    <li><strong>Cadence.</strong> The underlying CSV refreshes daily, so this chart tracks the prior business day. It's not a per-pay-period payroll cadence; the town would need to publish that separately.</li>
     <li><strong>Lumpy by design.</strong> Some funds spike in July (debt service prepay), some at year-end (capital draws). A flat 1/12-per-month line is the wrong comparison for most of them.</li>
   </ul>
 </div>
@@ -315,6 +315,14 @@ og_url: https://marbleheaddata.org/monthly-pacing/
   function renderBurn(bd) {
   var svg = document.getElementById('burn-chart');
   var legend = document.getElementById('burn-legend');
+  // Render the as-of date into the data-stamp so it tracks the daily refresh.
+  if (bd && bd.as_of) {
+    var stamp = document.getElementById('burn-as-of');
+    if (stamp) {
+      var d = new Date(bd.as_of + 'T12:00:00');
+      stamp.textContent = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+  }
   if (bd && bd.funds && svg) {
     // GENERAL FUND - SCHOOL is dropped: the checkbook captures only ~22% of
     // actual school spend (the rest is payroll, run through a separate system).

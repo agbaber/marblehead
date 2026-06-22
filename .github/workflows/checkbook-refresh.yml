@@ -126,6 +126,10 @@ jobs:
           done < refresh.env
           rm refresh.env
 
+      - name: Rebuild monthly burn JSON for the /monthly-pacing/ page
+        if: steps.gate.outputs.skip == 'false'
+        run: python3 scripts/build_monthly_burn.py
+
       - name: Detect changes
         if: steps.gate.outputs.skip == 'false'
         id: changes

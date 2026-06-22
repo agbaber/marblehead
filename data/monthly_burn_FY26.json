@@ -220,8 +220,8 @@
       "series": [
         {
           "month": "2025-07",
-          "cumulative": 0,
-          "monthly": 0
+          "cumulative": 0.0,
+          "monthly": 0.0
         },
         {
           "month": "2025-08",
@@ -413,5 +413,6 @@
       ]
     }
   ],
-  "source": "data/checkbook_FY26_2026-06-17.csv (vendor payments only; excludes payroll)"
+  "source": "data/checkbook_FY26_2026-06-17.csv (vendor payments only; excludes payroll)",
+  "generated_by": "scripts/build_monthly_burn.py"
 }
