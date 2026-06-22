@@ -153,16 +153,11 @@ og_url: https://marbleheaddata.org/spending-by-vote/
   .stack-bar .seg { display: flex; align-items: center; justify-content: center;
                     color: #fff; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums;
                     border-right: 1px solid rgba(255,255,255,0.35); text-decoration: none;
-                    transition: opacity 0.15s;
-                    /* Removed `position: relative` (the previous defense) — it appeared to
-                       interact with the first flex item, displacing only the Ballot
-                       segment 16px down so it overflowed the bar's bottom edge and the top
-                       half of the bar showed the white surface background through. */
-                    height: 100%; box-sizing: border-box; vertical-align: top; }
+                    transition: opacity 0.15s; }
   .stack-bar .seg:hover { opacity: 0.85; cursor: pointer; }
   .stack-bar .seg:last-child { border-right: none; }
   .stack-bar .seg.other { color: var(--text); }
-  .stack-bar .seg.ballot { background: var(--c-teal); }
+  .stack-bar .seg.b-ballot { background: var(--c-teal); }
   .stack-bar .seg.tm     { background: var(--c-navy-2); }
   .stack-bar .seg.enter  { background: var(--c-sand); }
   .stack-bar .seg.grant  { background: var(--c-slate); }
@@ -466,7 +461,7 @@ og_url: https://marbleheaddata.org/spending-by-vote/
 
     <div class="stack-wrap">
       <div class="stack-bar" role="navigation" aria-label="Jump to a bucket">
-        <a class="seg ballot" href="#bucket-ballot" data-flex-from="buckets[key:ballot].share" style="flex: 6.7"><span data-fill="buckets[key:ballot].share|pct-tight">6.7%</span></a>
+        <a class="seg b-ballot" href="#bucket-ballot" data-flex-from="buckets[key:ballot].share" style="flex: 6.7"><span data-fill="buckets[key:ballot].share|pct-tight">6.7%</span></a>
         <a class="seg tm"     href="#bucket-tm"     data-flex-from="buckets[key:town_meeting].share" style="flex: 54.3">Town Meeting&nbsp;&middot;&nbsp;<span data-fill="buckets[key:town_meeting].share|pct">54.3%</span></a>
         <a class="seg enter"  href="#bucket-ratepayer" data-flex-from="buckets[key:ratepayer].share" style="flex: 31.3">Ratepayer&nbsp;&middot;&nbsp;<span data-fill="buckets[key:ratepayer].share|pct">31.3%</span></a>
         <a class="seg grant"  href="#bucket-statefed" data-flex-from="buckets[key:state_fed].share" style="flex: 5.2"><span data-fill="buckets[key:state_fed].share|pct-tight">5.2%</span></a>
