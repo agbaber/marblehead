@@ -80,8 +80,10 @@ og_url: https://marbleheaddata.org/org-chart.html
         <span class="flow-pillar-hires-value">{{ pillar.hires }}</span>
         {% if pillar.hires_incumbent %}
         <span class="flow-pillar-hires-incumbent">
-          {{ pillar.hires_incumbent.name }}<span class="flow-pillar-hires-since" title="{{ pillar.hires_incumbent.since_note }}"> &middot; since {{ pillar.hires_incumbent.since }}</span>
+          {{ pillar.hires_incumbent.name }}
+          <span class="flow-pillar-hires-tenure"{% if pillar.hires_incumbent.since_note %} title="{{ pillar.hires_incumbent.since_note }}"{% endif %}>since {{ pillar.hires_incumbent.since }}{% if pillar.hires_incumbent.until %} &middot; <span class="flow-pillar-hires-until"{% if pillar.hires_incumbent.until_note %} title="{{ pillar.hires_incumbent.until_note }}"{% endif %}>through {{ pillar.hires_incumbent.until }}</span>{% endif %}</span>
         </span>
+        {% if pillar.hires_incumbent.until_badge %}<span class="flow-pillar-hires-badge"{% if pillar.hires_incumbent.until_note %} title="{{ pillar.hires_incumbent.until_note }}"{% endif %}>{{ pillar.hires_incumbent.until_badge }}</span>{% endif %}
         {% else %}
         <span class="flow-pillar-hires-count">1 employee directly</span>
         {% endif %}

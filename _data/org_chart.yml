@@ -1834,6 +1834,14 @@ decision_flow:
         name: "Thatcher W. Kezer III"
         since: 2022
         since_note: "Began as Town Administrator in June 2022 per the Annual Report 2025."
+        until: 2026
+        until_note: >-
+          Retiring effective December 31, 2026. Announced June 15,
+          2026 per the Marblehead Current and Itemlive. His three-year
+          contract (signed June 2025) was set to run through June 2028;
+          he is departing about 1 1/2 years early. The Select Board has
+          begun the recruitment process for a successor.
+        until_badge: "retiring Dec 31, 2026"
       reach: >-
         ~20 town departments, but only through the Town Administrator.
         Day-to-day operations are the TA's job, not the board's.
@@ -1870,6 +1878,8 @@ decision_flow:
         name: "John Robidoux"
         since: 2025
         since_note: "Permanent Superintendent under a three-year contract effective July 1, 2025; previously served as Interim Superintendent."
+        until: 2028
+        until_note: "Three-year contract through June 30, 2028 per data/schools/superintendent/john-robidoux-contract.txt."
       reach: >-
         ~430 school staff, but only through the Superintendent. The
         Superintendent is the sole employer for every teacher,
@@ -1906,7 +1916,9 @@ decision_flow:
       hires_incumbent:
         name: "Jonathan Blair"
         since: 2025
-        since_note: "Selected as the next General Manager in May 2025 per Annual Report 2025 (MMLD chapter)."
+        since_note: "Started September 29, 2025 under a five-year contract with the Light Commission, per the Marblehead Current (July 23, 2025) and Marblehead Independent (September 2025)."
+        until: 2030
+        until_note: "Five-year contract from September 29, 2025 through approximately September 2030."
       reach: >-
         19 employees through the General Manager. A separate municipal
         enterprise governed by the commission, not by the town.
@@ -1967,11 +1979,18 @@ decision_flow:
     -Report-2025.txt, pages 93-100); the June 2026 Annual Election may
     have changed seats whose terms expire 2026, but certified June 2026
     election results were not yet in the data folder when this page was
-    built. The Superintendent's start date is from the John Robidoux
-    contract (data/schools/superintendent/john-robidoux-contract.txt,
-    effective July 1, 2025) and the Melissa Clucas seat-filling
-    appointment is per data/schools/sc-meetings-fy26/minutes-12-18-2025
-    .txt. First-seen years for elected members are derived from a
-    grep across annual reports 2006-2025 (see scripts/extract_officials
-    _history.py); any "since YYYY" earlier than 2006 would not be
-    captured by that method.
+    built. The Superintendent's start date and contract end (June 30,
+    2028) are from the John Robidoux contract (data/schools/
+    superintendent/john-robidoux-contract.txt, effective July 1,
+    2025). The Melissa Clucas seat-filling appointment is per data/
+    schools/sc-meetings-fy26/minutes-12-18-2025.txt. The Town
+    Administrator's December 31, 2026 retirement is sourced from the
+    Marblehead Current article published June 15, 2026
+    (marbleheadcurrent.org/2026/06/15/breaking-news-town-administrator
+    -announces-resignation-at-end-of-year) and Itemlive (same date).
+    The General Manager's September 29, 2025 start and five-year
+    contract are from the Marblehead Current (July 23, 2025) and
+    Marblehead Independent (September 2025). First-seen years for
+    elected members are derived from a grep across annual reports
+    2006-2025 (see scripts/extract_officials_history.py); any "since
+    YYYY" earlier than 2006 would not be captured by that method.

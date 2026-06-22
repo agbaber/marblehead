@@ -4934,11 +4934,36 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   font-size: 0.8125rem;
   color: var(--c-text-mid);
   margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
 
-.flow-pillar-hires-since {
+.flow-pillar-hires-tenure {
+  color: var(--c-text-sub);
+  font-size: 0.75rem;
+  cursor: help;
+}
+
+.flow-pillar-hires-until {
   color: var(--c-text-sub);
   cursor: help;
+}
+
+.flow-pillar-hires-badge {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  color: var(--c-brass);
+  background: rgba(184, 134, 11, 0.08);
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  padding: 2px 6px;
+  border-radius: 3px;
+  cursor: help;
+  align-self: flex-start;
 }
 
 .flow-pillar-sitting {
