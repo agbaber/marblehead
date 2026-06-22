@@ -94,6 +94,10 @@ og_url: https://marbleheaddata.org/spending-by-vote/
     margin: 0 auto 4px;
   }
 
+  /* Tone down inline <b>/<strong> from browser-default 700 to 600. The display-class
+     headings (.title, .amt, .pname, .gname, etc.) still set their own 700 explicitly. */
+  .choice-view b, .choice-view strong { font-weight: 600; }
+
   /* Link defaults, substance underlined; can-be-followed affordance */
   .choice-view a { color: var(--c-navy-2); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
   .choice-view a:hover { color: var(--c-teal); }
