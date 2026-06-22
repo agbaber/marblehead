@@ -1,0 +1,181 @@
+name: Refresh Open Budget data
+
+# Daily refresh of the published budget-vs-actual CSV from the Town's
+# Open Budget portal (townofmarblehead-ma-ob.budget.socrata.com).
+#
+#   scripts/fetch_operating_budget.py
+#     → data/operating_budget_FY26.csv  (publishable; no PII columns)
+#       → scripts/build_budget_actual.py
+#         → data/budget_actual_FY26.json  (pacing table source)
+#       → scripts/build_monthly_burn.py
+#         → data/monthly_burn_FY26.json   (burn-chart source)
+#
+# The /api/operating_budget.csv endpoint is public (a Referer header on
+# the budget portal is the only requirement) and exposes the same
+# dataset that previously required manual UI downloads of five separate
+# Fund_Group CSVs. It also includes encumbrance and unencumbered-balance
+# columns the manual flow didn't pull, and the actuals column INCLUDES
+# payroll (the spending-portal ledger is vendor-only).
+#
+# Required secrets:
+#   INGEST_PAT  Personal access token with `repo` scope. Same as
+#               ingest-meetings.yml, checkbook-refresh.yml, and
+#               data-refresh.yml — bot-authored PRs from GITHUB_TOKEN
+#               do not fire required checks.
+#
+# Manual trigger: `gh workflow run budget-refresh.yml`.
+
+on:
+  schedule:
+    # 10:45 UTC = 5:45am ET (EST) / 6:45am ET (EDT). Sits 15 minutes
+    # after checkbook-refresh.yml so the two don't hit MUNIS at the
+    # exact same instant.
+    - cron: '45 10 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: budget-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.INGEST_PAT }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Skip if an open auto-budget PR already exists
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+        run: |
+          set -euo pipefail
+          gh label create auto-budget \
+            --color 9467bd \
+            --description "Daily auto-refresh of the Open Budget portal CSV" \
+            2>/dev/null || true
+          open_count=$(gh pr list --label auto-budget --state open --json number --jq 'length')
+          if [ "$open_count" -gt 0 ]; then
+            echo "An auto-budget PR is already open (likely failed CI on a prior run). Skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch operating_budget.csv from Open Budget portal
+        if: steps.gate.outputs.skip == 'false'
+        run: python3 scripts/fetch_operating_budget.py
+
+      - name: Rebuild budget_actual_FY26.json
+        if: steps.gate.outputs.skip == 'false'
+        run: python3 scripts/build_budget_actual.py
+
+      - name: Rebuild monthly_burn_FY26.json
+        if: steps.gate.outputs.skip == 'false'
+        id: build
+        run: |
+          set -euo pipefail
+          python3 scripts/build_monthly_burn.py
+
+          # Pull the data's period_end + all_funds_actual for the PR body.
+          python3 <<'PY'
+          import json
+          from pathlib import Path
+          ba = json.loads(Path('data/budget_actual_FY26.json').read_text())
+          period_end = ba.get('checkbook_period_end', 'unknown')
+          actual = ba['totals']['all_funds_actual']
+          budget = ba['totals']['all_funds_revised_budget']
+          pct = (actual / budget * 100) if budget else 0
+          with open(Path('refresh.env'), 'w') as f:
+              f.write(f'PERIOD_END={period_end}\n')
+              f.write(f'ACTUAL_M=${actual / 1e6:.1f}M\n')
+              f.write(f'BUDGET_M=${budget / 1e6:.1f}M\n')
+              f.write(f'PCT_USED={pct:.1f}%\n')
+          PY
+          while IFS='=' read -r k v; do
+            echo "$k=$v" >> "$GITHUB_OUTPUT"
+          done < refresh.env
+          rm refresh.env
+
+      - name: Detect changes
+        if: steps.gate.outputs.skip == 'false'
+        id: changes
+        run: |
+          set -euo pipefail
+          git add data/operating_budget_FY26.csv data/budget_actual_FY26.json data/monthly_burn_FY26.json
+          # The build scripts include an `as_of` field that's today's UTC
+          # date and changes every run. Only treat the run as "changed"
+          # when one of the actual data payloads moved.
+          if git diff --cached --quiet -- data/operating_budget_FY26.csv; then
+            echo "No budget data changes. Done."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit, push, open PR, enable auto-merge
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.INGEST_PAT }}
+          PERIOD_END: ${{ steps.build.outputs.PERIOD_END }}
+          ACTUAL_M: ${{ steps.build.outputs.ACTUAL_M }}
+          BUDGET_M: ${{ steps.build.outputs.BUDGET_M }}
+          PCT_USED: ${{ steps.build.outputs.PCT_USED }}
+        run: |
+          set -euo pipefail
+          today=$(date -u +%Y-%m-%d)
+          branch="bot/budget-refresh-${today}-$(date -u +%H%M)"
+          git config user.name "marblehead-bot"
+          git config user.email "noreply@marbleheaddata.org"
+          git checkout -b "$branch"
+          git commit -m "Refresh Open Budget data (${today})"
+          git push -u origin "$branch"
+
+          cat > /tmp/pr-body.md <<EOF
+          Daily refresh of the Town of Marblehead Open Budget portal
+          (\`townofmarblehead-ma-ob.budget.socrata.com\`).
+
+          **Data through:** ${PERIOD_END}
+          **All funds:** ${ACTUAL_M} actual / ${BUDGET_M} budget (${PCT_USED} used)
+
+          ## Pipeline
+
+          1. \`scripts/fetch_operating_budget.py\` hit
+             \`/api/operating_budget.csv?year=2026\` on the budget portal
+             and wrote the raw CSV to \`data/operating_budget_FY26.csv\`.
+             No PII columns; safe to commit raw.
+          2. \`scripts/build_budget_actual.py\` aggregated the
+             BUDGETED ANNUAL FUNDS slice across five dimensions (fund,
+             department, division, object, category) and wrote
+             \`data/budget_actual_FY26.json\` — the pacing-table source
+             for \`/monthly-pacing/\`.
+          3. \`scripts/build_monthly_burn.py\` aggregated by Fund x
+             fiscalmonth (top 6 by total) and wrote
+             \`data/monthly_burn_FY26.json\` — the burn-chart source
+             for \`/monthly-pacing/\`. Payroll is included.
+
+          Auto-merge is enabled. Required checks (smoke, Secret scan,
+          Content guardrails) gate the merge; on failure this PR stays
+          open and the next daily run is skipped via the
+          \`auto-budget\` label.
+          EOF
+
+          gh pr create \
+            --title "Refresh Open Budget data (${today})" \
+            --body-file /tmp/pr-body.md \
+            --label auto-budget \
+            --base main \
+            --head "$branch"
+
+          gh pr merge "$branch" --auto --squash --delete-branch
