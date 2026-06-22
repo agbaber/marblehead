@@ -377,6 +377,45 @@ async function testTownBudgetPageLoads(page) {
   }
 }
 
+async function testWhatIsActuallyFlexiblePageLoads(page) {
+  console.log('\n── What is Actually Flexible page ──');
+  const resp = await page.goto(`${SITE}/what-is-actually-flexible.html`, { waitUntil: 'domcontentloaded' });
+  resp && resp.status() === 200
+    ? ok('Page returns 200')
+    : fail('what-is-actually-flexible', `status ${resp ? resp.status() : 'no response'}`);
+
+  const h1 = await page.$('h1');
+  h1 ? ok('Page has an h1') : fail('h1', 'missing');
+
+  // Lead claim renders with all three Liquid-computed dollar values
+  const claimStats = await page.$$('.waf-claim-stat');
+  claimStats.length === 3
+    ? ok('Lead claim renders three computed dollar values')
+    : fail('Lead claim stats', `expected 3 .waf-claim-stat spans, got ${claimStats.length}`);
+
+  // Three tier cards
+  const tierCards = await page.$$('.waf-tier-card');
+  tierCards.length === 3
+    ? ok('Three tier cards present')
+    : fail('Tier cards', `expected 3 .waf-tier-card, got ${tierCards.length}`);
+
+  // Two FTE archetype columns
+  const fteCols = await page.$$('.waf-fte-col');
+  fteCols.length === 2
+    ? ok('Two FTE archetype columns present')
+    : fail('FTE columns', `expected 2 .waf-fte-col, got ${fteCols.length}`);
+
+  // Translator math
+  await page.fill('#waf-cut-amount', '1000000');
+  // Default selection is the first archetype (teacher: total $115,540)
+  const resultText = await page.$eval('#waf-translator-result', el => el.textContent);
+  const m = resultText.match(/(\d+)/);
+  const positions = m ? parseInt(m[1], 10) : 0;
+  (positions >= 5 && positions <= 15)
+    ? ok(`Translator reports ≈ ${positions} positions for $1M teacher cut`)
+    : fail('Translator math', `expected 5-15 positions for $1M, got "${resultText}"`);
+}
+
 async function testGeneralGovernmentPeerChart(page) {
   console.log('\n── General Government peer chart (in where-has-money-gone) ──');
   await page.goto(SITE + '/where-has-the-money-gone.html', { waitUntil: 'domcontentloaded' });
@@ -534,6 +573,7 @@ async function testTermsPageLoads(page) {
     await testGeneralGovernmentPeerChart(page1);
     await testSchoolAgeVsEnrollment(page1);
     await testTownBudgetPageLoads(page1);
+    await testWhatIsActuallyFlexiblePageLoads(page1);
     await testM101Landing(page1);
     await testM101ChapterPages(page1);
     await testM101NavLink(page1);
