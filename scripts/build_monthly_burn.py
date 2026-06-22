@@ -48,7 +48,8 @@ def safe_float(s: str | None) -> float:
         return 0.0
 
 
-def latest_period_end(rows: list[dict]) -> str:
+def latest_fiscal_month(rows: list[dict]) -> str | None:
+    """Latest fiscalmonth bucket containing actual activity (YYYY-MM-01)."""
     latest: date | None = None
     for r in rows:
         if safe_float(r.get("actual")) == 0:
@@ -62,7 +63,7 @@ def latest_period_end(rows: list[dict]) -> str:
             continue
         if latest is None or d > latest:
             latest = d
-    return latest.isoformat() if latest else datetime.now(UTC).date().isoformat()
+    return latest.isoformat() if latest else None
 
 
 def main() -> int:
@@ -107,7 +108,8 @@ def main() -> int:
         })
 
     payload = {
-        "as_of": latest_period_end(rows),
+        "as_of": datetime.now(UTC).date().isoformat(),
+        "latest_fiscal_month": latest_fiscal_month(rows),
         "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "fiscal_year": "FY26",
         "fy_months": FY26_MONTHS,
