@@ -1805,3 +1805,94 @@ boards:
       cadence: "Monthly meetings"
       source_url: "https://marbleheadma.gov/coa/"
       source_label: "Town of Marblehead, Council on Aging"
+
+# Decision-flow panel. Distinct from the staffing tree above: this captures
+# the actual reporting hierarchy (who hires whom, who can decide what), not
+# the headcount tree. All claims here are restatements of facts already
+# sourced in the boards/head/independent_enterprises sections above.
+decision_flow:
+  intro: >-
+    The chart above shows who works for whom. This panel shows who
+    decides what. Three elected boards each hire exactly one
+    operational executive, and only Town Meeting can appropriate money.
+  voters:
+    title: "Voters"
+    count_note: "About 17,040 registered, per the boards section above."
+    elect:
+      - "Select Board (5 seats, 3-year terms)"
+      - "School Committee (5 seats, 3-year terms)"
+      - "Light Commission (5 seats, 3-year terms)"
+      - "Town Moderator, Town Clerk, Planning Board, and other elected seats listed below"
+    decide_directly:
+      - "Town Meeting: every appropriation, every bylaw, every warrant article"
+      - "Annual ballot: Prop 2 1/2 overrides, debt exclusions, charter changes"
+  pillars:
+    - name: "Select Board"
+      members: "5 elected"
+      hires: "Town Administrator"
+      reach: >-
+        ~20 town departments, but only through the Town Administrator.
+        Day-to-day operations are the TA's job, not the board's.
+      can:
+        - "Place a Prop 2 1/2 override on the ballot"
+        - "Sign the Town Meeting warrant"
+        - "Appoint the Finance Committee and most non-school boards and committees"
+        - "Hire, evaluate, and fire the Town Administrator"
+      cannot:
+        - "Direct the schools, set the school budget, or hire any school staff"
+        - "Direct the Light Department or set electric rates"
+    - name: "School Committee"
+      members: "5 elected"
+      hires: "Superintendent"
+      reach: >-
+        ~430 school staff, but only through the Superintendent. The
+        Superintendent is the sole employer for every teacher,
+        principal, and aide in the district.
+      can:
+        - "Set the school operating budget request that goes to Town Meeting"
+        - "Approve collective bargaining agreements with school unions"
+        - "Hire, evaluate, and fire the Superintendent"
+      cannot:
+        - "Hire or fire any teacher, principal, or other school staff (the 1993 Massachusetts Education Reform Act assigns that authority to the Superintendent)"
+        - "Place an override on the ballot (that is the Select Board's role)"
+    - name: "Light Commission"
+      members: "5 elected"
+      hires: "General Manager"
+      reach: >-
+        19 employees through the General Manager. A separate municipal
+        enterprise governed by the commission, not by the town.
+      can:
+        - "Set electric rates"
+        - "Approve MMLD's budget directly"
+        - "Hire, evaluate, and fire the General Manager"
+      cannot:
+        - "Spend property-tax revenue (MMLD is ratepayer-funded)"
+        - "Be directed by the Select Board, Town Administrator, or Town Meeting on operations"
+  town_meeting_note: >-
+    Every registered voter is a member of Town Meeting. This is the
+    only body in Marblehead that can appropriate town tax revenue.
+    Boards can propose budgets and the Finance Committee can recommend,
+    but the actual appropriation vote happens on the Town Meeting floor.
+  callouts:
+    - title: "Asymmetric oversight"
+      body: >-
+        The Select Board oversees roughly 20 department heads through
+        the Town Administrator. The School Committee oversees exactly
+        one employee, the Superintendent. Override conversations often
+        talk past each other because the two sides picture very
+        different command structures.
+    - title: "Marblehead's unusual Finance Committee"
+      body: >-
+        In most Massachusetts towns the Town Moderator appoints the
+        Finance Committee, which keeps it structurally independent of
+        the Select Board. In Marblehead the Select Board appoints
+        FinCom. The committee still votes its own recommendations, but
+        the appointing relationship is uncommon for Massachusetts.
+  source_label: >-
+    Reporting authority restated from board/department notes already
+    cited in the sections above (Select Board, School Committee, Light
+    Commission, Finance Committee, Town Administrator, Superintendent).
+    The 1993 Massachusetts Education Reform Act citation is anchored in
+    the Marblehead teacher collective bargaining agreements
+    (data/schools/contracts/) and prior Select Board minutes
+    (data/minutes/select_board/2020-11-18) that invoke the same act.

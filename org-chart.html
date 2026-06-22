@@ -31,10 +31,84 @@ og_url: https://marbleheaddata.org/org-chart.html
 
 <nav class="page-toc" aria-label="On this page">
   <span class="page-toc-label">On this page</span>
+  <a href="#who-decides">Who decides what</a>
   <a href="#the-chart">The two administrations</a>
   <a href="#boards-above">The boards above them</a>
   <a href="#your-role">Your role</a>
 </nav>
+
+<section class="decision-flow-section">
+  <h2 id="who-decides">Who decides what</h2>
+  <p>{{ site.data.org_chart.decision_flow.intro }}</p>
+
+  <div class="flow-voters">
+    <div class="flow-voters-header">
+      <span class="flow-voters-title">{{ site.data.org_chart.decision_flow.voters.title }}</span>
+      <span class="flow-voters-sub">{{ site.data.org_chart.decision_flow.voters.count_note }}</span>
+    </div>
+    <div class="flow-voters-body">
+      <div class="flow-voters-col">
+        <p class="flow-voters-col-label">Elect</p>
+        <ul>
+          {% for item in site.data.org_chart.decision_flow.voters.elect %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </div>
+      <div class="flow-voters-col">
+        <p class="flow-voters-col-label">Decide directly</p>
+        <ul>
+          {% for item in site.data.org_chart.decision_flow.voters.decide_directly %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="flow-arrows" aria-hidden="true">
+    <span class="flow-arrow"></span>
+    <span class="flow-arrow"></span>
+    <span class="flow-arrow"></span>
+  </div>
+
+  <div class="flow-pillars">
+    {% for pillar in site.data.org_chart.decision_flow.pillars %}
+    <div class="flow-pillar">
+      <div class="flow-pillar-header">
+        <span class="flow-pillar-name">{{ pillar.name }}</span>
+        <span class="flow-pillar-members">{{ pillar.members }}</span>
+      </div>
+      <div class="flow-pillar-hires">
+        <span class="flow-pillar-hires-label">Hires</span>
+        <span class="flow-pillar-hires-value">{{ pillar.hires }}</span>
+        <span class="flow-pillar-hires-count">1 employee directly</span>
+      </div>
+      <p class="flow-pillar-reach">{{ pillar.reach }}</p>
+      <div class="flow-pillar-can">
+        <p class="flow-pillar-list-label">Can</p>
+        <ul>{% for item in pillar.can %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+      <div class="flow-pillar-cannot">
+        <p class="flow-pillar-list-label">Cannot</p>
+        <ul>{% for item in pillar.cannot %}<li>{{ item }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="flow-town-meeting">
+    <p class="flow-town-meeting-label">The appropriation step</p>
+    <p>{{ site.data.org_chart.decision_flow.town_meeting_note }}</p>
+  </div>
+
+  <div class="flow-callouts">
+    {% for callout in site.data.org_chart.decision_flow.callouts %}
+    <div class="flow-callout">
+      <p class="flow-callout-title">{{ callout.title }}</p>
+      <p>{{ callout.body }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <p class="flow-source-note">{{ site.data.org_chart.decision_flow.source_label }}</p>
+</section>
 
 <h2 id="the-chart">The two administrations</h2>
 
