@@ -1,0 +1,56 @@
+---
+layout: page
+title: "What's actually flexible in Marblehead's budget?"
+description: "Of FY27's $109.78M general fund, how much is locked by law, contract, or schedule — and how small is the truly discretionary pool?"
+permalink: /what-is-actually-flexible.html
+---
+
+{% assign meta = site.data.fixed_costs.meta %}
+{% assign locked_total = 0 %}
+{% for tier in site.data.fixed_costs.tiers %}
+  {% for item in tier.items %}
+    {% assign locked_total = locked_total | plus: item.fy27_amount %}
+  {% endfor %}
+{% endfor %}
+{% assign flexible_total = meta.total_general_fund | minus: locked_total %}
+
+<style>
+  .waf-lead { font-size: 18px; line-height: 1.55; max-width: 720px; }
+  .waf-claim-stat { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .waf-section { margin: 48px 0; }
+  .waf-section h2 { font-size: 24px; margin-bottom: 16px; }
+  /* visualization styles added in Tasks 5 + 6 */
+</style>
+
+<h1>What's actually flexible in Marblehead's budget?</h1>
+
+<p class="waf-lead">
+  Of the FY27
+  <span class="waf-claim-stat">${{ meta.total_general_fund | divided_by: 1000000.0 | round: 2 }}M</span>
+  general fund, roughly
+  <span class="waf-claim-stat">${{ locked_total | divided_by: 1000000.0 | round: 1 }}M</span>
+  is locked by law, contract, or funding schedule. That leaves about
+  <span class="waf-claim-stat">${{ flexible_total | divided_by: 1000000.0 | round: 1 }}M</span>
+  as discretionary, and most of that is salaries, so "cut spending" almost
+  always means "cut positions."
+</p>
+
+<section class="waf-section" id="whats-locked">
+  <h2>What's locked</h2>
+  <!-- Stacked bar + tier cards added in Task 5 -->
+</section>
+
+<section class="waf-section" id="cost-of-employee">
+  <h2>What it actually costs to employ someone</h2>
+  <!-- Side-by-side archetype columns added in Task 6 -->
+</section>
+
+<section class="waf-section" id="translator">
+  <h2>What a cut would mean</h2>
+  <!-- Translator input added in Task 7 -->
+</section>
+
+<section class="waf-section" id="caveats">
+  <h2>Caveats</h2>
+  <!-- Caveat bullets added in Task 8 -->
+</section>
