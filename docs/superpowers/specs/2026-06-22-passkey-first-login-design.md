@@ -114,7 +114,8 @@ The card appears on `/profile.html` for existing residents and on the post-claim
 | `/api/verify/vouch-request` | POST | Requester creates a vouch request. Body: `{ identity_hash, name, address }`. Returns: `{ token, expires_at }`. |
 | `/api/verify/vouch-status` | GET | Requester polls for resolution. Query: `?token=<token>`. Returns: `{ status: 'pending' \| 'verified' \| 'declined' \| 'expired', jwt?: string }`. JWT is only returned on `verified`. |
 | `/api/verify/vouch-respond` | POST | Voucher confirms or declines. Body: `{ token, decision: 'confirm' \| 'decline' }`. Requires voucher's session JWT. Server side: decrement voucher's `invites_remaining`, create `residents` row on confirm, mint JWT for requester. |
-| `/api/verify/passkey/has-credential` | GET | Frontend checks if the signed-in resident has at least one passkey credential. Returns: `{ has_credential: boolean }`. Used to decide whether to show the passkey-save card. |
+
+The "do you have a passkey yet?" check reuses the existing `/api/profile` endpoint, which already returns `has_passkey: boolean`. No new endpoint needed.
 
 The conditional-UI passkey sign-in piggybacks on the existing `/api/verify/passkey/auth-challenge` and `/api/verify/passkey/auth` endpoints — no Worker changes needed for the sign-in path itself.
 
