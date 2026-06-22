@@ -115,7 +115,74 @@ permalink: /what-is-actually-flexible.html
 
 <section class="waf-section" id="cost-of-employee">
   <h2>What it actually costs to employ someone</h2>
-  <!-- Side-by-side archetype columns added in Task 6 -->
+  <style>
+    .waf-fte-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 16px 0 28px; }
+    .waf-fte-archetype { text-align: center; }
+    .waf-fte-archetype h3 { font-size: 16px; margin: 0 0 6px; }
+    .waf-fte-archetype .waf-fte-total { font-size: 14px; color: var(--text-muted, #65706f); margin-top: 6px; font-variant-numeric: tabular-nums; }
+    .waf-fte-col { width: 100%; height: 320px; display: block; }
+    .waf-fte-col text { font-size: 11px; font-variant-numeric: tabular-nums; }
+    .waf-fte-caveat { font-size: 12px; color: var(--text-muted, #65706f); margin: 0 0 16px; }
+    @media (max-width: 600px) {
+      .waf-fte-grid { grid-template-columns: 1fr; }
+      .waf-fte-col { height: 240px; }
+    }
+  </style>
+
+  {% comment %}Neutral blue-grey ramp: darkest=salary (largest weight), lightest=OPEB (near-zero){% endcomment %}
+  {% assign fte_palette = "#9bb0b2,#b8c8c9,#cfdadb,#dbe7e8,#e8f0f0" | split: "," %}
+
+  <div class="waf-fte-grid">
+    {% for arch in site.data.fte_cost.archetypes %}
+      <div class="waf-fte-archetype">
+        <h3>{{ arch.label }}</h3>
+        <svg class="waf-fte-col" viewBox="0 0 200 320" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="waf-fte-{{ arch.id }}-title">
+          <title id="waf-fte-{{ arch.id }}-title">
+            {{ arch.label }} total cost to employ: ${{ arch.total_cost_to_employ | divided_by: 1000.0 | round: 1 }}K
+          </title>
+          {% assign denom = arch.total_cost_to_employ | times: 1.0 %}
+          {% assign y_cursor = 320 %}
+          {% for c in arch.components %}
+            {% if c.amount > 0 %}
+              {% assign h = c.amount | times: 320.0 | divided_by: denom %}
+              {% assign y_cursor = y_cursor | minus: h %}
+              <rect x="40" y="{{ y_cursor }}" width="120" height="{{ h }}" fill="{{ fte_palette[forloop.index0] }}"></rect>
+              {% if h > 18 %}
+                {% assign label_y = y_cursor | plus: h | minus: 6 %}
+                <text x="100" y="{{ label_y }}" text-anchor="middle" fill="#1a2425">{{ c.name }} ${{ c.amount | divided_by: 1000.0 | round: 0 }}K</text>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </svg>
+        <div class="waf-fte-total">
+          Total cost-to-employ: <strong>${{ arch.total_cost_to_employ | divided_by: 1000.0 | round: 1 }}K</strong>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <p class="waf-fte-caveat">
+    Averages hide spread. A first-year teacher and a senior firefighter both count as one FTE
+    but cost very different amounts. The translator below uses the average for each archetype.
+  </p>
+
+  <details>
+    <summary style="font-size:14px;color:var(--text-muted, #65706f);cursor:pointer;">How these were calculated</summary>
+    <div style="font-size:13px;margin-top:8px;">
+      {% for arch in site.data.fte_cost.archetypes %}
+        <p><strong>{{ arch.label }}:</strong></p>
+        <ul>
+          {% for c in arch.components %}
+            {% assign source = site.data.fte_cost.sources[c.source_id] %}
+            <li>
+              {{ c.name }}: ${{ c.amount }}
+              <sup class="cite" data-href="{{ source.href }}" data-source="{{ source.label }} — {{ c.source_note }}"></sup>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+  </details>
 </section>
 
 <section class="waf-section" id="translator">
