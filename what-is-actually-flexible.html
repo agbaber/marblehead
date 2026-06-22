@@ -37,7 +37,80 @@ permalink: /what-is-actually-flexible.html
 
 <section class="waf-section" id="whats-locked">
   <h2>What's locked</h2>
-  <!-- Stacked bar + tier cards added in Task 5 -->
+
+{% assign tier_palette = "#dbe7e8,#b8c8c9,#7a8e90,#e6c79c" | split: "," %}
+
+<style>
+  /* Palette: three cool greys (light→dark) for locked tiers; warm sand for flexible residual */
+  .waf-bar { width: 100%; height: 56px; display: block; margin: 8px 0 4px; }
+  .waf-bar text { font-size: 11px; font-variant-numeric: tabular-nums; }
+  .waf-bar-legend { display: flex; flex-wrap: wrap; gap: 12px 20px; font-size: 13px; margin-bottom: 24px; }
+  .waf-bar-legend-swatch { display: inline-block; width: 12px; height: 12px; vertical-align: middle; margin-right: 4px; border: 1px solid rgba(0,0,0,0.15); }
+  .waf-tier-card { border: 1px solid var(--c-border, #d0d4d4); padding: 16px 18px; margin: 12px 0; border-radius: 4px; }
+  .waf-tier-card h3 { font-size: 17px; margin: 0 0 4px; }
+  .waf-tier-card .waf-tier-card-desc { font-size: 13px; color: var(--text-muted, #65706f); margin: 0 0 10px; }
+  .waf-tier-card table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .waf-tier-card td { padding: 4px 0; vertical-align: top; }
+  .waf-tier-card td:last-child { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .waf-tier-card .waf-caveat { font-size: 12px; color: var(--text-muted, #65706f); font-style: italic; }
+  @media (max-width: 600px) {
+    .waf-bar { height: 80px; }
+    .waf-bar text { font-size: 10px; }
+  }
+</style>
+
+<svg class="waf-bar" viewBox="0 0 1000 56" preserveAspectRatio="none" role="img" aria-labelledby="waf-bar-title waf-bar-desc">
+  <title id="waf-bar-title">FY27 general fund: locked vs flexible</title>
+  <desc id="waf-bar-desc">
+    Bar showing the FY27 $109.78M general fund divided into three locked
+    tiers and the flexible residual. Each segment's width is proportional
+    to its dollar amount.
+  </desc>
+  {% assign x_cursor = 0 %}
+  {% assign denom = meta.total_general_fund | times: 1.0 %}
+  {% for tier in site.data.fixed_costs.tiers %}
+    {% assign tier_sum = 0 %}
+    {% for item in tier.items %}{% assign tier_sum = tier_sum | plus: item.fy27_amount %}{% endfor %}
+    {% assign tier_pct = tier_sum | times: 1000.0 | divided_by: denom %}
+    {% assign tier_color = tier_palette[forloop.index0] %}
+    <rect x="{{ x_cursor }}" y="0" width="{{ tier_pct }}" height="56" fill="{{ tier_color }}"></rect>
+    {% assign x_cursor = x_cursor | plus: tier_pct %}
+  {% endfor %}
+  {% assign flex_pct = flexible_total | times: 1000.0 | divided_by: denom %}
+  <rect x="{{ x_cursor }}" y="0" width="{{ flex_pct }}" height="56" fill="{{ tier_palette[3] }}"></rect>
+</svg>
+
+<div class="waf-bar-legend">
+  {% for tier in site.data.fixed_costs.tiers %}
+    {% assign tier_sum = 0 %}
+    {% for item in tier.items %}{% assign tier_sum = tier_sum | plus: item.fy27_amount %}{% endfor %}
+    <span><span class="waf-bar-legend-swatch" style="background:{{ tier_palette[forloop.index0] }}"></span>{{ tier.label }} — ${{ tier_sum | divided_by: 1000000.0 | round: 1 }}M</span>
+  {% endfor %}
+  <span><span class="waf-bar-legend-swatch" style="background:{{ tier_palette[3] }}"></span>Flexible — ${{ flexible_total | divided_by: 1000000.0 | round: 1 }}M</span>
+</div>
+
+{% for tier in site.data.fixed_costs.tiers %}
+  <div class="waf-tier-card">
+    <h3>{{ tier.label }}</h3>
+    <p class="waf-tier-card-desc">{{ tier.description }}</p>
+    <table>
+      {% for item in tier.items %}
+        <tr>
+          <td>
+            {{ item.category }}
+            {% if item.caveat %}
+              <div class="waf-caveat">{{ item.caveat }}</div>
+            {% endif %}
+            {% assign source = site.data.fixed_costs.sources[item.source_id] %}
+            <sup class="cite" data-href="{{ source.href }}" data-source="{{ source.label }} — {{ item.source_note }}"></sup>
+          </td>
+          <td>${{ item.fy27_amount | divided_by: 1000.0 | round: 0 }}K</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endfor %}
+
 </section>
 
 <section class="waf-section" id="cost-of-employee">
