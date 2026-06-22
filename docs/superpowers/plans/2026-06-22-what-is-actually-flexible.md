@@ -178,10 +178,10 @@ tiers:
         source_id: cherry_sheet_fy26
         source_note: "FY26 Mass. DLS cherry sheet for Marblehead (DOR code 168). FY27 cherry sheet not yet published."
         caveat: "Using FY26 figure — FY27 cherry sheet not yet published by DLS"
-      - category: "SPED out-of-district tuition + transportation"
-        fy27_amount: <TIER1_SPED_DOLLARS>
+      - category: "SPED out-of-district tuition + transportation (net of Circuit Breaker + IDEA offsets)"
+        fy27_amount: 4291145
         source_id: fy27_school_packet
-        source_note: "FY27 School Committee budget packet, Special Education line"
+        source_note: "FY27 school budget packet, Outside Placements + SPED Transportation, net of Circuit Breaker reimbursement and IDEA offset. Gross is $6,627,626."
 
   - id: contract
     label: "Contract-locked"
@@ -208,14 +208,15 @@ tiers:
         fy27_amount: 5843360
         source_id: town_budget_fy27
         source_note: "Contributory Retirement Fund line, Other General Government function"
-      - category: "OPEB contribution"
-        fy27_amount: <TIER3_OPEB_DOLLARS>
-        source_id: town_budget_fy27
-        source_note: "Town Portion of OPEB Transfer, per FY27 Proposed Budget"
       - category: "Medicare (federal employer match, 1.45%)"
         fy27_amount: 277629
         source_id: town_budget_fy27
         source_note: "Medicare line, Other General Government function"
+      # OPEB intentionally omitted: FY27 No-Override appropriation is $0 (cut
+      # from FY26's $250K). The override would restore only $96,771, still
+      # well below the $10.6M FY24 actuarial ARC. The deferral is called out
+      # in the Caveats section instead — including it as a $0 locked-tier
+      # row would misrepresent the page's frame.
 
 sources:
   town_budget_fy27:
@@ -853,6 +854,7 @@ Replace the `<!-- Caveat bullets added in Task 8 -->` comment with:
   <li><strong>Averages hide spread.</strong> A senior firefighter and a first-year teacher both count as one FTE but cost very different amounts. The archetype values above are midpoints, not forecasts.</li>
   <li><strong>FY27 Proposed — No Override.</strong> Figures use the pre-vote no-override proposal. The adopted FY27 budget (with override revenue included) will be updated here when the town publishes it.</li>
   <li><strong>State assessments use FY26.</strong> The FY27 cherry sheet has not yet been published by the Department of Revenue. This page will update when DLS releases it (typically July–August).</li>
+  <li><strong>OPEB is not in the FY27 No-Override budget at all.</strong> The $250,000 FY26 OPEB transfer was cut to $0. The FY24 actuarially-required contribution was $10.6M; actual was $6.5M; the net OPEB liability has grown to $147M.<sup class="cite" data-href="/data/town_docs/FY24_Town_of_Marblehead_ACFR.pdf" data-source="FY24 Town of Marblehead ACFR, p.92 (Schedule of Town Contributions to OPEB Plan)"></sup> The override would restore only $96,771. This page's locked tiers do not include OPEB because nothing is being paid; the deferral is itself a fiscal choice that compounds over time.</li>
 </ul>
 ```
 
