@@ -18,7 +18,7 @@
 # is descriptive of the structure, not a staff directory.
 
 key_stats:
-  snapshot: "2026-06-14"
+  snapshot: "2026-06-22"
   town_departments: 22
   school_buildings: 5
   elected_seats: 41
@@ -1846,12 +1846,14 @@ decision_flow:
         ~20 town departments, but only through the Town Administrator.
         Day-to-day operations are the TA's job, not the board's.
       sitting:
-        - name: "Erin M. Noonan"
+        - name: "Erin Marie Noonan"
           since: 2021
-          term_ends: 2026
-        - name: "Alexa J. Singer"
-          since: 2021
-          term_ends: 2026
+          since_note: "First elected June 2021; re-elected at the June 9, 2026 Annual Town Election with 4,854 votes (the field leader)."
+          term_ends: 2029
+        - name: "Rossana Ferrante"
+          since: 2026
+          since_note: "Newly elected at the June 9, 2026 Annual Town Election with 4,387 votes. Previously served on the Recreation & Park Commission. Replaces Alexa J. Singer (2021-2026), who did not run for re-election."
+          term_ends: 2029
         - name: "Moses Grader"
           since: 2017
           since_note: "Elected May 2017 to fill the seat Bret Murray vacated, per Annual Report 2017."
@@ -1885,10 +1887,14 @@ decision_flow:
         Superintendent is the sole employer for every teacher,
         principal, and aide in the district.
       sitting:
-        - name: "Jennifer Schaeffner"
-          since: 2023
-          since_note: "Current tenure began 2023; also served a partial term 2019-2020 per Annual Report 2019."
-          term_ends: 2026
+        - name: "Melissa Clucas"
+          since: 2025
+          since_note: "First joined the committee in 2025 by appointment to fill Brian Scott Ota's vacancy (he resigned July 2025; she was seated by the December 18, 2025 SC meeting). Elected to a full three-year term at the June 9, 2026 Annual Town Election with 5,305 votes."
+          term_ends: 2029
+        - name: "Ann Marie Jordan"
+          since: 2026
+          since_note: "Newly elected at the June 9, 2026 Annual Town Election with 5,088 votes. Replaces Jennifer Schaeffner (2023-2026), who ran for Select Board instead but did not win."
+          term_ends: 2029
         - name: "Alfred Williams"
           since: 2024
           term_ends: 2027
@@ -1898,11 +1904,6 @@ decision_flow:
         - name: "Henry Gwazda"
           since: 2025
           term_ends: 2028
-        - name: "Melissa Clucas"
-          since: 2025
-          since_note: "Appointed mid-2025 to fill the seat vacated by Brian Scott Ota (resigned 7/2025). First listed as an SC member in the December 18, 2025 meeting minutes."
-          term_ends: 2026
-          appointed: true
       can:
         - "Set the school operating budget request that goes to Town Meeting"
         - "Approve collective bargaining agreements with school unions"
@@ -1938,7 +1939,8 @@ decision_flow:
           term_ends: 2028
         - name: "Matthew B. Harrington"
           since: 2025
-          term_ends: 2026
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 5,356 votes (uncontested)."
+          term_ends: 2029
       can:
         - "Set electric rates"
         - "Approve MMLD's budget directly"
@@ -1976,14 +1978,17 @@ decision_flow:
     (data/minutes/select_board/2020-11-18) that invoke the same act.
     Sitting officials and term-end dates are sourced from the Town of
     Marblehead 2025 Annual Report (data/town_docs/annual_reports/Annual
-    -Report-2025.txt, pages 93-100); the June 2026 Annual Election may
-    have changed seats whose terms expire 2026, but certified June 2026
-    election results were not yet in the data folder when this page was
-    built. The Superintendent's start date and contract end (June 30,
-    2028) are from the John Robidoux contract (data/schools/
+    -Report-2025.txt, pages 93-100) for incumbents whose terms did not
+    end at the June 9, 2026 Annual Town Election, and from the
+    certified June 9, 2026 election results (data/town_docs/elections/
+    2026-06-09-town-election-official-results.pdf) for seats decided in
+    that election. The Superintendent's start date and contract end
+    (June 30, 2028) are from the John Robidoux contract (data/schools/
     superintendent/john-robidoux-contract.txt, effective July 1,
-    2025). The Melissa Clucas seat-filling appointment is per data/
-    schools/sc-meetings-fy26/minutes-12-18-2025.txt. The Town
+    2025). Melissa Clucas was first seated by appointment in 2025 to
+    fill the Brian Ota vacancy (data/schools/sc-meetings-fy26/minutes-
+    12-18-2025.txt) and then elected to a full three-year term in June
+    2026. The Town
     Administrator's December 31, 2026 retirement is sourced from the
     Marblehead Current article published June 15, 2026
     (marbleheadcurrent.org/2026/06/15/breaking-news-town-administrator
