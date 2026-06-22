@@ -147,16 +147,19 @@ og_url: https://marbleheaddata.org/spending-by-vote/
 
   .stack-wrap { margin: 18px 0 10px; }
   .stack-bar {
-    display: flex; height: 28px; border-radius: var(--radius-sm); overflow: hidden;
+    display: flex; align-items: stretch; height: 28px; border-radius: var(--radius-sm); overflow: hidden;
     border: 1px solid var(--border); background: var(--surface);
   }
   .stack-bar .seg { position: relative; display: flex; align-items: center; justify-content: center;
                     color: #fff; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums;
                     border-right: 1px solid rgba(255,255,255,0.35); text-decoration: none;
                     transition: opacity 0.15s;
-                    /* Force segments to fill bar height even with fragile children.
-                       Without this the first segment was collapsing to 4px on mobile. */
-                    align-self: stretch; min-height: 100%; }
+                    /* The first defense (align-self: stretch + min-height: 100%) made the
+                       segment tall enough but baseline-anchored it downward, displacing the
+                       Ballot segment 16px below the bar top so it appeared as a half-painted
+                       bottom slice with white background above. Definite height: 100% +
+                       border-box-sizing avoids the baseline interaction entirely. */
+                    height: 100%; box-sizing: border-box; }
   .stack-bar .seg:hover { opacity: 0.85; cursor: pointer; }
   .stack-bar .seg:last-child { border-right: none; }
   .stack-bar .seg.other { color: var(--text); }
