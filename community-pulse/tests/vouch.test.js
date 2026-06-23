@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { handleVouchRequest } from '../worker/src/vouch.js';
+import { handleVouchRequest, handleVouchStatus } from '../worker/src/vouch.js';
 
 function makeMockDb(initial = {}) {
   const residents = new Map(Object.entries(initial.residents || {}));
@@ -97,9 +97,6 @@ describe('handleVouchRequest', () => {
     expect(body.existing_token).toBe('tok1');
   });
 });
-
-import { handleVouchStatus } from '../worker/src/vouch.js';
-import { signJWT } from '../worker/src/jwt.js';
 
 const JWT_SECRET = 'jwt-secret';
 

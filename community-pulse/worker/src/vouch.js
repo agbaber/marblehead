@@ -1,6 +1,8 @@
 // Peer-vouch-on-demand: handlers for the three /api/verify/vouch-* endpoints.
 // See docs/superpowers/specs/2026-06-22-passkey-first-login-design.md
 
+import { signJWT } from './jwt.js';
+
 const VOUCH_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 
 function json(body, env, status = 200) {
@@ -61,8 +63,6 @@ export async function handleVouchRequest(request, env) {
 
   return json({ token, expires_at }, env);
 }
-
-import { signJWT } from './jwt.js';
 
 /**
  * GET /api/verify/vouch-status?token=<token>
