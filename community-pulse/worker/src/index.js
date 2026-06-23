@@ -12,6 +12,7 @@ import { STREETS } from './streets.js';
 import { handleFbStart, handleFbCallback } from './fb.js';
 import { handleClaimAddress } from './claim.js';
 import { handleProfileGet, handleProfilePost, handleClaimRelease, handleMePre } from './profile.js';
+import { handleVouchRequest, handleVouchStatus, handleVouchRespond } from './vouch.js';
 
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 const RATE_LIMIT_MAX = 5; // per section per window per ip
@@ -44,6 +45,16 @@ export async function handleRequest(request, env) {
 
   if (url.pathname === '/api/votes') {
     if (request.method === 'POST') return handleVotePost(request, env);
+  }
+
+  if (url.pathname === '/api/verify/vouch-request' && request.method === 'POST') {
+    return handleVouchRequest(request, env);
+  }
+  if (url.pathname === '/api/verify/vouch-status' && request.method === 'GET') {
+    return handleVouchStatus(request, env, env.JWT_SECRET || 'dev-secret-not-for-production');
+  }
+  if (url.pathname === '/api/verify/vouch-respond' && request.method === 'POST') {
+    return handleVouchRespond(request, env, env.JWT_SECRET || 'dev-secret-not-for-production');
   }
 
   // Neighbor verification network endpoints.

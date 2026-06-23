@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { handleVouchRequest, handleVouchStatus, handleVouchRespond } from '../worker/src/vouch.js';
 import { signJWT } from '../worker/src/jwt.js';
+import { handleRequest } from '../worker/src/index.js';
 
 function makeMockDb(initial = {}) {
   const residents = new Map(Object.entries(initial.residents || {}));
@@ -313,5 +314,18 @@ describe('handleVouchRespond', () => {
   it('rejects unauthenticated requests', async () => {
     const res = await postRespond({ token: 'tok1', decision: 'confirm' }, env, 'bad-jwt');
     expect(res.status).toBe(401);
+  });
+});
+
+describe('router wiring', () => {
+  it('POST /api/verify/vouch-request hits handleVouchRequest', async () => {
+    const env = { JWT_SECRET: 'jwt-secret', DB: makeMockDb() };
+    const req = new Request('https://x.example/api/verify/vouch-request', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ identity_hash: 'h1', name: 'S', address: '14 Elm' }),
+    });
+    const res = await handleRequest(req, env);
+    expect(res.status).toBe(200);
   });
 });
