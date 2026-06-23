@@ -44,7 +44,14 @@ async function initRequester() {
 
   // If an active request token is already in localStorage, jump to waiting state.
   const savedToken = localStorage.getItem('vouch_request_token');
-  if (savedToken) { startPolling(savedToken); return true; }
+  if (savedToken) {
+    startPolling(
+      savedToken,
+      localStorage.getItem('vouch_request_name') || '',
+      localStorage.getItem('vouch_request_address') || ''
+    );
+    return true;
+  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -65,10 +72,14 @@ async function initRequester() {
 
     if (status === 200) {
       localStorage.setItem('vouch_request_token', body.token);
-      startPolling(body.token);
+      localStorage.setItem('vouch_request_name', name);
+      localStorage.setItem('vouch_request_address', address);
+      startPolling(body.token, name, address);
     } else if (body && body.error === 'active_request_exists') {
       localStorage.setItem('vouch_request_token', body.existing_token);
-      startPolling(body.existing_token);
+      startPolling(body.existing_token,
+                   localStorage.getItem('vouch_request_name') || '',
+                   localStorage.getItem('vouch_request_address') || '');
     } else if (body && body.error === 'already_verified') {
       renderError('You are already verified. Redirecting to your profile.');
       setTimeout(() => { location.href = '/profile.html'; }, 1500);
@@ -81,14 +92,17 @@ async function initRequester() {
   return true;
 }
 
-function startPolling(token) {
+function startPolling(token, name, address) {
   const formSection = document.getElementById('vr-form-section');
   const waitingSection = document.getElementById('vr-waiting-section');
   if (formSection) formSection.hidden = true;
   if (waitingSection) waitingSection.hidden = false;
 
   const linkEl = document.getElementById('vr-link');
-  const link = `${location.origin}/vouch.html?token=${encodeURIComponent(token)}`;
+  const params = new URLSearchParams({ token });
+  if (name) params.set('n', name);
+  if (address) params.set('a', address);
+  const link = `${location.origin}/vouch.html?${params.toString()}`;
   if (linkEl) {
     linkEl.value = link;
     linkEl.addEventListener('focus', () => linkEl.select());
