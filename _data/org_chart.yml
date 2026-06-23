@@ -1655,11 +1655,13 @@ boards:
           since: 2026
           since_note: "Newly elected at the June 9, 2026 Annual Town Election with 5,088 votes. Replaces Jennifer Schaeffner (2023-2026), who ran for Select Board instead but did not win."
           term_ends: 2029
-        - name: "Alfred Williams"
+        - name: "Al Williams"
           since: 2024
+          since_note: "Listed as Alfred Williams in the Annual Report rosters; goes by Al in School Committee minutes and meetings."
           term_ends: 2027
-        - name: "Katherine B. Schmeckpeper"
+        - name: "Kate Schmeckpeper"
           since: 2025
+          since_note: "Listed as Katherine B. Schmeckpeper in the Annual Report and on the ballot; goes by Kate in School Committee meetings."
           term_ends: 2028
         - name: "Henry Gwazda"
           since: 2025
@@ -1759,13 +1761,13 @@ boards:
       source_url: "https://marbleheadma.gov/moderator/"
       source_label: "Town of Marblehead, Town Moderator page"
       sitting:
-        - name: "John G. Attridge"
+        - name: "Jack Attridge"
           since: 2022
-          since_note: "First listed as Town Moderator in the 2022 Annual Report; turned back a challenge from Peter Jaffe at the June 9, 2026 Annual Town Election, 5,126 votes to 2,105."
+          since_note: "Listed as John G. Attridge on ballots and in Annual Report rosters; goes by Jack in body text of the same report and in town communications. First listed as Town Moderator in the 2022 Annual Report; turned back a challenge from Peter Jaffe at the June 9, 2026 Annual Town Election, 5,126 votes to 2,105."
           term_ends: 2027
       sitting_sources:
         - url: "https://marbleheadma.gov/wp-content/uploads/2026/06/Town-election-official-results-June-9-2026.pdf"
-          label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (data/town_docs/elections/2026-06-09-town-election-official-results.pdf): John G. Attridge re-elected as Town Moderator with 5,126 votes vs Peter Jaffe 2,105."
+          label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (data/town_docs/elections/2026-06-09-town-election-official-results.pdf): John G. Attridge (Jack) re-elected as Town Moderator with 5,126 votes vs Peter Jaffe 2,105."
     - id: town_clerk
       name: "Town Clerk"
       kind: "elected"
