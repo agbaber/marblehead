@@ -1,6 +1,8 @@
 // /profile.html controller. Renders the verified-resident identity card,
 // or a signed-out prompt when no JWT is present.
 
+import { mountPasskeySaveCard, shouldPromptPasskeySave } from './passkey-save.js';
+
 const VERIFY_API = (location.hostname === 'localhost')
   ? 'http://localhost:8787'
   : 'https://marblehead-community-pulse.agbaber.workers.dev';
@@ -121,9 +123,10 @@ function renderProfile(root, profile) {
         <span class="pf-method-state">
           ${profile.has_passkey
             ? '<span class="pf-method-state--on">Connected</span>'
-            : '<a href="/verify.html#add-passkey">Add for faster sign-in</a>'}
+            : '<span class="pf-method-state">Not connected</span>'}
         </span>
       </div>
+      <div id="pf-passkey-save" style="margin-top:18px"></div>
     </section>
 
     <div class="pf-danger">
@@ -154,6 +157,16 @@ function renderProfile(root, profile) {
   document.getElementById('pf-release').addEventListener('click', async () => {
     if (confirm('Release this claim and sign out?')) await releaseClaim();
   });
+
+  // Offer to save a passkey if the user does not have one yet and has not
+  // recently skipped the prompt.
+  if (!profile.has_passkey && shouldPromptPasskeySave()) {
+    const container = document.getElementById('pf-passkey-save');
+    mountPasskeySaveCard(container, {
+      onSaved: () => { /* card replaces itself with success state */ },
+      onSkipped: () => { /* card clears itself */ },
+    });
+  }
 }
 
 async function init() {
