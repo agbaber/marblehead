@@ -503,6 +503,56 @@ async function testProfilePageLoads(page) {
     .catch(() => fail('profile signed-out state', 'no /verify-me.html link rendered after 5s'));
 }
 
+async function testVouchRequestPageLoads(page) {
+  console.log('\n── /vouch-request.html ──');
+  const resp = await page.goto(`${SITE}/vouch-request.html`, { waitUntil: 'domcontentloaded' });
+  if (resp.status() !== 200) {
+    fail('vouch-request.html load', `HTTP ${resp.status()}`);
+    return;
+  }
+  ok('vouch-request.html returns 200');
+
+  const h1 = await page.$('h1');
+  const h1Text = h1 ? (await h1.textContent()).trim() : '';
+  h1Text.length > 0
+    ? ok(`vouch-request h1 renders: "${h1Text.slice(0, 60)}"`)
+    : fail('vouch-request h1', 'h1 empty');
+
+  const form = await page.$('#vr-form');
+  form ? ok('#vr-form present') : fail('#vr-form', 'missing');
+
+  const nameInput = await page.$('#vr-name');
+  const streetInput = await page.$('#vr-street');
+  const numberInput = await page.$('#vr-number');
+  (nameInput && streetInput && numberInput)
+    ? ok('vouch-request form has name, street, and number inputs')
+    : fail('vouch-request inputs', 'one or more of #vr-name, #vr-street, #vr-number missing');
+}
+
+async function testVouchPageLoads(page) {
+  console.log('\n── /vouch.html ──');
+  const resp = await page.goto(`${SITE}/vouch.html?token=fake-smoke-token&n=Test&a=12+Smoke+Street`, {
+    waitUntil: 'domcontentloaded',
+  });
+  if (resp.status() !== 200) {
+    fail('vouch.html load', `HTTP ${resp.status()}`);
+    return;
+  }
+  ok('vouch.html returns 200');
+
+  const root = await page.$('#vc-root');
+  root ? ok('#vc-root present') : fail('#vc-root', 'missing');
+
+  // The page will render either a "sign in to vouch" prompt (no jwt) or an
+  // "unknown token" error. Either is fine for smoke; we just want it to
+  // not throw. Wait briefly for the controller to settle.
+  await page.waitForTimeout(500);
+  const html = await page.content();
+  html.includes('vm-card')
+    ? ok('vouch.html renders some card state (sign-in prompt or error)')
+    : fail('vouch.html card state', 'no .vm-card rendered after 500ms');
+}
+
 async function testTermsPageLoads(page) {
   console.log('\n── /terms.html ──');
   const resp = await page.goto(`${SITE}/terms.html`, { waitUntil: 'domcontentloaded' });
@@ -539,6 +589,8 @@ async function testTermsPageLoads(page) {
     await testM101NavLink(page1);
     await testVerifyMePageLoads(page1);
     await testProfilePageLoads(page1);
+    await testVouchRequestPageLoads(page1);
+    await testVouchPageLoads(page1);
     await testTermsPageLoads(page1);
     await ctx1.close();
   } finally {
