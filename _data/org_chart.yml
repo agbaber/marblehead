@@ -2158,10 +2158,6 @@ boards:
 # the headcount tree. All claims here are restatements of facts already
 # sourced in the boards/head/independent_enterprises sections above.
 decision_flow:
-  intro: >-
-    The chart above shows who works for whom. This panel shows who
-    decides what. Three elected boards each hire exactly one
-    operational executive, and only Town Meeting can appropriate money.
   voters:
     title: "Voters"
     count_note: "About 17,040 registered, per the boards section above."
