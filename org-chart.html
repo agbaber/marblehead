@@ -39,7 +39,6 @@ og_url: https://marbleheaddata.org/org-chart.html
 
 <section class="decision-flow-section">
   <h2 id="who-decides">Who decides what</h2>
-  <p>{{ site.data.org_chart.decision_flow.intro }}</p>
 
   <div class="flow-voters">
     <div class="flow-voters-header">
@@ -93,11 +92,11 @@ og_url: https://marbleheaddata.org/org-chart.html
         {% endif %}
       </div>
       <p class="flow-pillar-reach">{{ dfd.reach }}</p>
-      {% if dfd.sitting %}
+      {% if board.sitting %}
       <div class="flow-pillar-sitting">
         <p class="flow-pillar-list-label">Sitting members</p>
         <ul>
-          {% for m in dfd.sitting %}
+          {% for m in board.sitting %}
           <li>
             <span class="flow-pillar-member-name">{{ m.name }}</span>{% if m.appointed %} <span class="flow-pillar-member-appointed" title="Appointed mid-term to fill a vacancy, not elected">appointed</span>{% endif %}
             <span class="flow-pillar-member-tenure"{% if m.since_note %} title="{{ m.since_note }}"{% endif %}>since {{ m.since }} &middot; term ends {{ m.term_ends }}</span>
@@ -379,7 +378,23 @@ og_url: https://marbleheaddata.org/org-chart.html
       <div class="board-card-body">
         <p class="board-card-decides">{{ board.decides }}</p>
         {% if board.note %}<p class="org-card-note">{{ board.note }}</p>{% endif %}
-        <p class="board-card-link"><a href="{{ board.source_url }}">Visit official page &rarr;</a><sup class="cite" data-href="{{ board.source_url }}" data-source="{{ board.source_label }}"></sup></p>
+        {% if board.sitting %}
+        <div class="board-card-sitting">
+          <p class="board-card-sitting-label">Sitting members</p>
+          <ul>
+            {% for m in board.sitting %}
+            <li>
+              <span class="board-card-member-name">{{ m.name }}</span>
+              {% if m.appointed %} <span class="flow-pillar-member-appointed" title="Appointed mid-term to fill a vacancy, not elected">appointed</span>{% endif %}
+              {% if m.stale %} <span class="board-card-member-stale" title="Term ended at or before the page snapshot date; reappointment may have occurred but the certifying minutes were not in the repo at build time">term ended {{ m.term_ends }}</span>
+              {% else %}<span class="board-card-member-tenure"{% if m.since_note %} title="{{ m.since_note }}"{% endif %}>{% if m.since %}since {{ m.since }} &middot; {% endif %}term ends {{ m.term_ends }}</span>{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% if board.sitting_note %}<p class="board-card-sitting-note">{{ board.sitting_note }}</p>{% endif %}
+        </div>
+        {% endif %}
+        <p class="board-card-link"><a href="{{ board.source_url }}">Visit official page &rarr;</a><sup class="cite" data-href="{{ board.source_url }}" data-source="{{ board.source_label }}"></sup>{% if board.sitting_sources %}{% for s in board.sitting_sources %}<sup class="cite" data-href="{{ s.url }}" data-source="{{ s.label }}"></sup>{% endfor %}{% endif %}</p>
       </div>
     </details>
     {% endfor %}
@@ -401,7 +416,23 @@ og_url: https://marbleheaddata.org/org-chart.html
       <div class="board-card-body">
         <p class="board-card-decides">{{ board.decides }}</p>
         {% if board.note %}<p class="org-card-note">{{ board.note }}</p>{% endif %}
-        <p class="board-card-link"><a href="{{ board.source_url }}">Visit official page &rarr;</a><sup class="cite" data-href="{{ board.source_url }}" data-source="{{ board.source_label }}"></sup></p>
+        {% if board.sitting %}
+        <div class="board-card-sitting">
+          <p class="board-card-sitting-label">Sitting members</p>
+          <ul>
+            {% for m in board.sitting %}
+            <li>
+              <span class="board-card-member-name">{{ m.name }}</span>
+              {% if m.appointed %} <span class="flow-pillar-member-appointed" title="Appointed mid-term to fill a vacancy, not elected">appointed</span>{% endif %}
+              {% if m.stale %} <span class="board-card-member-stale" title="Term ended at or before the page snapshot date; reappointment may have occurred but the certifying minutes were not in the repo at build time">term ended {{ m.term_ends }}</span>
+              {% else %}<span class="board-card-member-tenure"{% if m.since_note %} title="{{ m.since_note }}"{% endif %}>{% if m.since %}since {{ m.since }} &middot; {% endif %}term ends {{ m.term_ends }}</span>{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% if board.sitting_note %}<p class="board-card-sitting-note">{{ board.sitting_note }}</p>{% endif %}
+        </div>
+        {% endif %}
+        <p class="board-card-link"><a href="{{ board.source_url }}">Visit official page &rarr;</a><sup class="cite" data-href="{{ board.source_url }}" data-source="{{ board.source_label }}"></sup>{% if board.sitting_sources %}{% for s in board.sitting_sources %}<sup class="cite" data-href="{{ s.url }}" data-source="{{ s.label }}"></sup>{% endfor %}{% endif %}</p>
       </div>
     </details>
     {% endfor %}

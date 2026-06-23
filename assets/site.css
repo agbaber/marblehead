@@ -4942,11 +4942,17 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 .flow-pillar-hires-tenure {
   color: var(--c-text-sub);
   font-size: 0.75rem;
+}
+
+.flow-pillar-hires-tenure[title] {
   cursor: help;
 }
 
 .flow-pillar-hires-until {
   color: var(--c-text-sub);
+}
+
+.flow-pillar-hires-until[title] {
   cursor: help;
 }
 
@@ -5009,6 +5015,9 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 .flow-pillar-member-tenure {
   font-size: 0.75rem;
   color: var(--c-text-sub);
+}
+
+.flow-pillar-member-tenure[title] {
   cursor: help;
 }
 
@@ -5244,6 +5253,72 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 
 .board-card-link a {
   color: var(--c-navy);
+}
+
+.board-card-sitting {
+  margin: 10px 0 6px;
+  padding: 10px 0 4px;
+  border-top: 1px dashed var(--c-border);
+}
+
+.board-card-sitting-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--c-text-sub);
+  margin: 0 0 6px;
+}
+
+.board-card-sitting ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.board-card-sitting li {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 4px 0;
+  border-bottom: 1px dotted var(--c-border);
+  font-size: 0.8125rem;
+  line-height: 1.35;
+}
+
+.board-card-sitting li:last-child {
+  border-bottom: none;
+}
+
+.board-card-member-name {
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.board-card-member-tenure {
+  font-size: 0.7188rem;
+  color: var(--c-text-sub);
+}
+
+.board-card-member-tenure[title] {
+  cursor: help;
+}
+
+.board-card-member-stale {
+  font-size: 0.7188rem;
+  color: var(--c-text-sub);
+  font-style: italic;
+  cursor: help;
+}
+
+.board-card-sitting-note {
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--c-text-mid);
+  background: var(--c-divider);
+  border-radius: 3px;
 }
 
 @media (max-width: 700px) {
