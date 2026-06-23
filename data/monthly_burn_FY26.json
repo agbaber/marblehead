@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-06-22",
+  "as_of": "2026-06-23",
   "latest_fiscal_month": "2026-06-01",
-  "generated_at": "2026-06-22T18:19:46+00:00",
+  "generated_at": "2026-06-23T11:47:23+00:00",
   "fiscal_year": "FY26",
   "fy_months": [
     "2025-07",
@@ -20,7 +20,7 @@
   "funds": [
     {
       "fund": "GENERAL FUND - TOWN",
-      "total_through_as_of": 55096605.37,
+      "total_through_as_of": 55097678.29,
       "series": [
         {
           "month": "2025-07",
@@ -79,8 +79,8 @@
         },
         {
           "month": "2026-06",
-          "cumulative": 55096605.37,
-          "monthly": 1179086.0
+          "cumulative": 55097678.29,
+          "monthly": 1180158.92
         }
       ]
     },
