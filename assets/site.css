@@ -4942,11 +4942,17 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 .flow-pillar-hires-tenure {
   color: var(--c-text-sub);
   font-size: 0.75rem;
+}
+
+.flow-pillar-hires-tenure[title] {
   cursor: help;
 }
 
 .flow-pillar-hires-until {
   color: var(--c-text-sub);
+}
+
+.flow-pillar-hires-until[title] {
   cursor: help;
 }
 
@@ -5009,6 +5015,9 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 .flow-pillar-member-tenure {
   font-size: 0.75rem;
   color: var(--c-text-sub);
+}
+
+.flow-pillar-member-tenure[title] {
   cursor: help;
 }
 
@@ -5289,6 +5298,9 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 .board-card-member-tenure {
   font-size: 0.7188rem;
   color: var(--c-text-sub);
+}
+
+.board-card-member-tenure[title] {
   cursor: help;
 }
 
