@@ -194,7 +194,7 @@ async function initVoucher() {
     root.innerHTML = renderTokenError('This vouch request was not found.');
     return true;
   }
-  if (body.status !== 'pending') {
+  if (!body || body.status !== 'pending') {
     root.innerHTML = renderTokenError(
       body.status === 'verified' ? 'This request has already been confirmed.' :
       body.status === 'declined' ? 'This request has already been declined.' :
