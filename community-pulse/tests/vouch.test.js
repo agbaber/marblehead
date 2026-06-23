@@ -97,3 +97,106 @@ describe('handleVouchRequest', () => {
     expect(body.existing_token).toBe('tok1');
   });
 });
+
+import { handleVouchStatus } from '../worker/src/vouch.js';
+import { signJWT } from '../worker/src/jwt.js';
+
+const JWT_SECRET = 'jwt-secret';
+
+async function getStatus(token, env) {
+  const req = new Request(`https://x.example/api/verify/vouch-status?token=${token}`);
+  return handleVouchStatus(req, env, JWT_SECRET);
+}
+
+// Extend the makeMockDb to also support vouch-status lookup queries.
+function makeStatusDb(initial = {}) {
+  const residents = new Map(Object.entries(initial.residents || {}));
+  const vouchRequests = new Map(Object.entries(initial.vouchRequests || {}));
+  return {
+    residents, vouchRequests,
+    prepare(sql) {
+      return {
+        bind: (...args) => ({
+          async first() {
+            if (sql.startsWith('SELECT token, requester_hash, status, expires_at, vouched_by FROM vouch_requests WHERE token')) {
+              return vouchRequests.get(args[0]) || null;
+            }
+            if (sql.startsWith('SELECT branch_root FROM residents WHERE identity_hash')) {
+              const r = residents.get(args[0]);
+              return r ? { branch_root: r.branch_root } : null;
+            }
+            return null;
+          },
+          async run() { return {}; },
+        }),
+      };
+    },
+  };
+}
+
+describe('handleVouchStatus', () => {
+  it('returns pending for an unresolved request', async () => {
+    const env = {
+      JWT_SECRET, DB: makeStatusDb({
+        vouchRequests: { tok1: {
+          token: 'tok1', requester_hash: 'h1',
+          status: 'pending', expires_at: Date.now() + 86400000,
+        } },
+      }),
+    };
+    const res = await getStatus('tok1', env);
+    const body = await res.json();
+    expect(body.status).toBe('pending');
+    expect(body.jwt).toBeUndefined();
+  });
+
+  it('returns verified + JWT once status flipped', async () => {
+    const env = {
+      JWT_SECRET, DB: makeStatusDb({
+        residents: { h1: { identity_hash: 'h1', branch_root: 'root1' } },
+        vouchRequests: { tok1: {
+          token: 'tok1', requester_hash: 'h1', status: 'verified',
+          expires_at: Date.now() + 86400000, vouched_by: 'v1',
+        } },
+      }),
+    };
+    const res = await getStatus('tok1', env);
+    const body = await res.json();
+    expect(body.status).toBe('verified');
+    expect(typeof body.jwt).toBe('string');
+  });
+
+  it('returns declined when voucher declined', async () => {
+    const env = {
+      JWT_SECRET, DB: makeStatusDb({
+        vouchRequests: { tok1: {
+          token: 'tok1', requester_hash: 'h1', status: 'declined',
+          expires_at: Date.now() + 86400000,
+        } },
+      }),
+    };
+    const res = await getStatus('tok1', env);
+    const body = await res.json();
+    expect(body.status).toBe('declined');
+  });
+
+  it('returns expired when ttl has passed', async () => {
+    const env = {
+      JWT_SECRET, DB: makeStatusDb({
+        vouchRequests: { tok1: {
+          token: 'tok1', requester_hash: 'h1', status: 'pending',
+          expires_at: Date.now() - 1000,
+        } },
+      }),
+    };
+    const res = await getStatus('tok1', env);
+    const body = await res.json();
+    expect(body.status).toBe('expired');
+  });
+
+  it('returns 404 for unknown token', async () => {
+    const env = { JWT_SECRET, DB: makeStatusDb() };
+    const res = await getStatus('nope', env);
+    expect(res.status).toBe(404);
+  });
+});

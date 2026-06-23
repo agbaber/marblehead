@@ -61,3 +61,39 @@ export async function handleVouchRequest(request, env) {
 
   return json({ token, expires_at }, env);
 }
+
+import { signJWT } from './jwt.js';
+
+/**
+ * GET /api/verify/vouch-status?token=<token>
+ * Returns: { status: 'pending'|'verified'|'declined'|'expired', jwt?: string }
+ *          | 404 if token unknown
+ */
+export async function handleVouchStatus(request, env, secret) {
+  const url = new URL(request.url);
+  const token = url.searchParams.get('token');
+  if (!token) return json({ error: 'missing_token' }, env, 400);
+
+  const row = await env.DB.prepare(
+    'SELECT token, requester_hash, status, expires_at, vouched_by FROM vouch_requests WHERE token = ?'
+  ).bind(token).first();
+
+  if (!row) return json({ error: 'unknown_token' }, env, 404);
+
+  if (row.status === 'pending' && row.expires_at <= Date.now()) {
+    return json({ status: 'expired' }, env);
+  }
+  if (row.status === 'verified') {
+    const resident = await env.DB.prepare(
+      'SELECT branch_root FROM residents WHERE identity_hash = ?'
+    ).bind(row.requester_hash).first();
+    const branch = resident ? resident.branch_root : null;
+    const jwt = await signJWT({
+      sub: row.requester_hash,
+      branch,
+      auth_source: 'peer_vouch',
+    }, secret || env.JWT_SECRET);
+    return json({ status: 'verified', jwt }, env);
+  }
+  return json({ status: row.status }, env);
+}
