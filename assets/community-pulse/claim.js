@@ -2,6 +2,8 @@
 // Drives FB OAuth bootstrap, the claim form, the custom street autocomplete,
 // and result branching.
 
+import { tryConditionalPasskey } from './passkey-signin.js';
+
 const VERIFY_API = (location.hostname === 'localhost')
   ? 'http://localhost:8787'
   : 'https://marblehead-community-pulse.agbaber.workers.dev';
@@ -285,6 +287,16 @@ async function init() {
   const oauth = consumeOAuthFragment();
   const isClaimStep = (oauth && oauth.claim) || location.hash === '#claim';
 
+  // If we don't have a session and we're not handling an OAuth callback,
+  // try conditional-UI passkey sign-in in parallel. The browser surfaces
+  // a biometric prompt only if a passkey exists for this origin; otherwise
+  // it does nothing visible.
+  if (!readJwt() && !oauth) {
+    tryConditionalPasskey().then(r => {
+      if (r && r.token) location.href = '/profile.html';
+    });
+  }
+
   const profile = await fetchSelf();
   if (profile && profile.identity_hash) {
     location.href = '/profile.html';
@@ -298,9 +310,8 @@ async function init() {
   if (primary) primary.hidden = true;
   const or = document.querySelector('.vm-or');
   if (or) or.hidden = true;
-  const fallback = document.querySelector('.vm-fallback');
-  if (fallback) fallback.hidden = true;
-  // Trim the hero copy in the claim step -- the form has its own context.
+  const fallback = document.querySelectorAll('.vm-fallback');
+  fallback.forEach(el => { el.hidden = true; });
   document.querySelectorAll('.vm-hero .vm-cap, .vm-hero .vm-cap-sub')
     .forEach(el => { el.hidden = true; });
 
