@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { handleVouchRequest, handleVouchStatus } from '../worker/src/vouch.js';
+import { handleVouchRequest, handleVouchStatus, handleVouchRespond } from '../worker/src/vouch.js';
+import { signJWT } from '../worker/src/jwt.js';
 
 function makeMockDb(initial = {}) {
   const residents = new Map(Object.entries(initial.residents || {}));
@@ -195,5 +196,122 @@ describe('handleVouchStatus', () => {
     const env = { JWT_SECRET, DB: makeStatusDb() };
     const res = await getStatus('nope', env);
     expect(res.status).toBe(404);
+  });
+});
+
+async function postRespond(body, env, jwt) {
+  const req = new Request('https://x.example/api/verify/vouch-respond', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${jwt}`,
+    },
+    body: JSON.stringify(body),
+  });
+  return handleVouchRespond(req, env, JWT_SECRET);
+}
+
+function makeRespondDb(initial = {}) {
+  const residents = new Map(Object.entries(initial.residents || {}));
+  const vouchRequests = new Map(Object.entries(initial.vouchRequests || {}));
+  return {
+    residents, vouchRequests,
+    prepare(sql) {
+      return {
+        bind: (...args) => ({
+          async first() {
+            if (sql.startsWith('SELECT token, requester_hash, requester_name, requester_address, status, expires_at FROM vouch_requests WHERE token')) {
+              return vouchRequests.get(args[0]) || null;
+            }
+            if (sql.startsWith('SELECT identity_hash, branch_root, invites_remaining FROM residents WHERE identity_hash')) {
+              return residents.get(args[0]) || null;
+            }
+            return null;
+          },
+          async run() {
+            if (sql.startsWith('UPDATE vouch_requests SET status')) {
+              const [status, vouched_by, resolved_at, token] = args;
+              const row = vouchRequests.get(token);
+              if (row) { row.status = status; row.vouched_by = vouched_by; row.resolved_at = resolved_at; }
+            }
+            if (sql.startsWith('INSERT INTO residents')) {
+              const [identity_hash, invited_by, branch_root, created_at] = args;
+              residents.set(identity_hash, {
+                identity_hash, invited_by, branch_root,
+                invites_remaining: 3, created_at,
+                auth_source: 'peer_vouch', claim_source: 'vouched',
+              });
+            }
+            if (sql.startsWith('UPDATE residents SET invites_remaining')) {
+              const r = residents.get(args[0]);
+              if (r) r.invites_remaining -= 1;
+            }
+            return {};
+          },
+        }),
+      };
+    },
+  };
+}
+
+describe('handleVouchRespond', () => {
+  let env;
+  beforeEach(() => {
+    env = {
+      JWT_SECRET,
+      DB: makeRespondDb({
+        residents: { voucher1: {
+          identity_hash: 'voucher1', branch_root: 'root1', invites_remaining: 3,
+        } },
+        vouchRequests: { tok1: {
+          token: 'tok1', requester_hash: 'requester1',
+          requester_name: 'Sarah', requester_address: '14 Elm',
+          status: 'pending', expires_at: Date.now() + 86400000,
+        } },
+      }),
+    };
+  });
+
+  it('confirm creates the resident row and marks the request verified', async () => {
+    const voucherJwt = await signJWT({ sub: 'voucher1', branch: 'root1' }, JWT_SECRET);
+    const res = await postRespond({ token: 'tok1', decision: 'confirm' }, env, voucherJwt);
+    expect(res.status).toBe(200);
+    expect(env.DB.residents.size).toBe(2);
+    const r = env.DB.residents.get('requester1');
+    expect(r.auth_source).toBe('peer_vouch');
+    expect(r.invited_by).toBe('voucher1');
+    expect(env.DB.residents.get('voucher1').invites_remaining).toBe(2);
+    expect(env.DB.vouchRequests.get('tok1').status).toBe('verified');
+  });
+
+  it('decline marks the request declined without creating a resident', async () => {
+    const voucherJwt = await signJWT({ sub: 'voucher1', branch: 'root1' }, JWT_SECRET);
+    const res = await postRespond({ token: 'tok1', decision: 'decline' }, env, voucherJwt);
+    expect(res.status).toBe(200);
+    expect(env.DB.residents.size).toBe(1);
+    expect(env.DB.vouchRequests.get('tok1').status).toBe('declined');
+  });
+
+  it('rejects already-resolved tokens', async () => {
+    env.DB.vouchRequests.get('tok1').status = 'verified';
+    const voucherJwt = await signJWT({ sub: 'voucher1', branch: 'root1' }, JWT_SECRET);
+    const res = await postRespond({ token: 'tok1', decision: 'confirm' }, env, voucherJwt);
+    expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('already_resolved');
+  });
+
+  it('rejects when voucher has no invites left', async () => {
+    env.DB.residents.get('voucher1').invites_remaining = 0;
+    const voucherJwt = await signJWT({ sub: 'voucher1', branch: 'root1' }, JWT_SECRET);
+    const res = await postRespond({ token: 'tok1', decision: 'confirm' }, env, voucherJwt);
+    expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('no_invites_remaining');
+  });
+
+  it('rejects unauthenticated requests', async () => {
+    const res = await postRespond({ token: 'tok1', decision: 'confirm' }, env, 'bad-jwt');
+    expect(res.status).toBe(401);
   });
 });

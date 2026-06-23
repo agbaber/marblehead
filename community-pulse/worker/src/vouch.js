@@ -1,7 +1,7 @@
 // Peer-vouch-on-demand: handlers for the three /api/verify/vouch-* endpoints.
 // See docs/superpowers/specs/2026-06-22-passkey-first-login-design.md
 
-import { signJWT } from './jwt.js';
+import { signJWT, verifyJWT, extractJWT } from './jwt.js';
 
 const VOUCH_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 
@@ -96,4 +96,72 @@ export async function handleVouchStatus(request, env, secret) {
     return json({ status: 'verified', jwt }, env);
   }
   return json({ status: row.status }, env);
+}
+
+/**
+ * POST /api/verify/vouch-respond
+ * Body: { token, decision: 'confirm' | 'decline' }
+ * Auth: Bearer <voucher's session JWT>
+ * Returns: { ok: true } | { error }
+ */
+export async function handleVouchRespond(request, env, secret) {
+  const jwtSecret = secret || env.JWT_SECRET;
+
+  const jwt = extractJWT(request);
+  if (!jwt) return json({ error: 'missing_auth' }, env, 401);
+  let payload;
+  try { payload = await verifyJWT(jwt, jwtSecret); }
+  catch { return json({ error: 'invalid_auth' }, env, 401); }
+  if (!payload || !payload.sub) return json({ error: 'invalid_auth' }, env, 401);
+
+  let body;
+  try { body = await request.json(); }
+  catch { return json({ error: 'invalid_json' }, env, 400); }
+  const { token, decision } = body;
+  if (!token || !['confirm', 'decline'].includes(decision)) {
+    return json({ error: 'missing_or_bad_fields' }, env, 400);
+  }
+
+  const row = await env.DB.prepare(
+    'SELECT token, requester_hash, requester_name, requester_address, status, expires_at FROM vouch_requests WHERE token = ?'
+  ).bind(token).first();
+  if (!row) return json({ error: 'unknown_token' }, env, 404);
+  if (row.status !== 'pending') return json({ error: 'already_resolved' }, env, 400);
+  if (row.expires_at <= Date.now()) return json({ error: 'expired' }, env, 400);
+
+  const voucher = await env.DB.prepare(
+    'SELECT identity_hash, branch_root, invites_remaining FROM residents WHERE identity_hash = ?'
+  ).bind(payload.sub).first();
+  if (!voucher) return json({ error: 'voucher_not_found' }, env, 403);
+
+  const now = Date.now();
+
+  if (decision === 'decline') {
+    await env.DB.prepare(
+      `UPDATE vouch_requests SET status = ?, vouched_by = ?, resolved_at = ? WHERE token = ?`
+    ).bind('declined', voucher.identity_hash, now, token).run();
+    return json({ ok: true }, env);
+  }
+
+  // Confirm.
+  if (voucher.invites_remaining <= 0) {
+    return json({ error: 'no_invites_remaining' }, env, 400);
+  }
+
+  // Create the resident under the voucher's branch.
+  await env.DB.prepare(
+    `INSERT INTO residents
+     (identity_hash, invited_by, branch_root, created_at, auth_source, claim_source)
+     VALUES (?, ?, ?, ?, 'peer_vouch', 'vouched')`
+  ).bind(row.requester_hash, voucher.identity_hash, voucher.branch_root, now).run();
+
+  await env.DB.prepare(
+    'UPDATE residents SET invites_remaining = invites_remaining - 1 WHERE identity_hash = ?'
+  ).bind(voucher.identity_hash).run();
+
+  await env.DB.prepare(
+    `UPDATE vouch_requests SET status = ?, vouched_by = ?, resolved_at = ? WHERE token = ?`
+  ).bind('verified', voucher.identity_hash, now, token).run();
+
+  return json({ ok: true }, env);
 }
