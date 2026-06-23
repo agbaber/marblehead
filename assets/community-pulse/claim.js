@@ -3,6 +3,7 @@
 // and result branching.
 
 import { tryConditionalPasskey } from './passkey-signin.js';
+import { mountPasskeySaveCard, shouldPromptPasskeySave } from './passkey-save.js';
 
 const VERIFY_API = (location.hostname === 'localhost')
   ? 'http://localhost:8787'
@@ -265,7 +266,20 @@ async function onSubmit(e) {
     case 'match':
       if (body.session_jwt) setJwt(body.session_jwt);
       result.innerHTML = renderSuccess(claimed);
-      setTimeout(() => { location.href = '/profile.html'; }, 1500);
+      // Offer to save a passkey before redirecting.
+      if (shouldPromptPasskeySave()) {
+        const container = document.getElementById('claim-passkey-save');
+        await mountPasskeySaveCard(container, {
+          onSaved: () => { setTimeout(() => { location.href = '/profile.html'; }, 1200); },
+          onSkipped: () => { setTimeout(() => { location.href = '/profile.html'; }, 800); },
+        });
+        // If the card was suppressed (unsupported device), still redirect.
+        if (!container.innerHTML) {
+          setTimeout(() => { location.href = '/profile.html'; }, 1500);
+        }
+      } else {
+        setTimeout(() => { location.href = '/profile.html'; }, 1500);
+      }
       break;
     case 'first_initial_mismatch':
       result.innerHTML = renderFirstInitialMismatch(claimed, body.alternatives || []);
