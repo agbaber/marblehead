@@ -72,7 +72,8 @@ function stripPriorBlocks(yaml) {
 export function mergeFrontmatter(existing, summaryCard, topicSegments) {
   const { yaml, body } = splitFile(existing);
   const stripped = stripPriorBlocks(yaml)
-    .replace(/^source: vimeo-auto$/m, 'source: vimeo-auto+llm');
+    .replace(/^source: vimeo-auto$/m, 'source: vimeo-auto+llm')
+    .replace(/^source: youtube-auto$/m, 'source: youtube-auto+llm');
   const newYaml = [
     stripped,
     renderSummaryCard(summaryCard),

@@ -83,3 +83,13 @@ test('mergeFrontmatter uses YAML block scalar (|) for multi-line topic summaries
   assert.match(out, /summary: \|/);
   assert.ok(out.includes('Line two with **bold**.'));
 });
+
+test('mergeFrontmatter upgrades source to youtube-auto+llm for YouTube transcripts', () => {
+  const yt = EXISTING
+    .replace(/^vimeo_id:.*$/m, 'youtube_id: UMABNnY3zeQ')
+    .replace(/^vimeo_url:.*$/m, 'video_url: "https://www.youtube.com/watch?v=UMABNnY3zeQ"')
+    .replace(/^source: vimeo-auto$/m, 'source: youtube-auto');
+  const out = mergeFrontmatter(yt, SUMMARY_CARD, TOPIC_SEGMENTS);
+  assert.match(out, /\nsource: youtube-auto\+llm\n/);
+  assert.doesNotMatch(out, /\nsource: youtube-auto\n/);
+});
