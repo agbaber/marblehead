@@ -3,10 +3,15 @@
 
 const VOUCH_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 
-function json(body, status = 200) {
+function json(body, env, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': (env && env.ALLOWED_ORIGIN) || '*',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    },
   });
 }
 
@@ -24,25 +29,25 @@ function randomToken() {
 export async function handleVouchRequest(request, env) {
   let body;
   try { body = await request.json(); }
-  catch { return json({ error: 'invalid_json' }, 400); }
+  catch { return json({ error: 'invalid_json' }, env, 400); }
 
   const { identity_hash, name, address } = body;
   if (!identity_hash || !name || !address) {
-    return json({ error: 'missing_fields' }, 400);
+    return json({ error: 'missing_fields' }, env, 400);
   }
 
   // Reject if requester is already a verified (non-revoked) resident.
   const existing = await env.DB.prepare(
     'SELECT identity_hash FROM residents WHERE identity_hash = ? AND revoked_at IS NULL'
   ).bind(identity_hash).first();
-  if (existing) return json({ error: 'already_verified' }, 400);
+  if (existing) return json({ error: 'already_verified' }, env, 400);
 
   // Reject if requester already has a pending active request.
   const active = await env.DB.prepare(
     `SELECT token FROM vouch_requests WHERE requester_hash = ?
      AND status = 'pending' AND expires_at > ?`
   ).bind(identity_hash, Date.now()).first();
-  if (active) return json({ error: 'active_request_exists', existing_token: active.token }, 400);
+  if (active) return json({ error: 'active_request_exists', existing_token: active.token }, env, 400);
 
   const token = randomToken();
   const now = Date.now();
@@ -54,5 +59,5 @@ export async function handleVouchRequest(request, env) {
      VALUES (?, ?, ?, ?, ?, ?)`
   ).bind(token, identity_hash, name, address, now, expires_at).run();
 
-  return json({ token, expires_at });
+  return json({ token, expires_at }, env);
 }
