@@ -4782,6 +4782,359 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
   color: var(--c-text-sub);
 }
 
+/* Decision flow panel (sits above the staffing chart) */
+
+.decision-flow-section {
+  margin: 32px 0 48px;
+}
+
+.decision-flow-section > p {
+  max-width: 70ch;
+}
+
+.flow-voters {
+  border: 2px solid var(--c-navy);
+  border-radius: 6px;
+  background: var(--c-divider);
+  padding: 18px 20px;
+  margin-top: 24px;
+}
+
+.flow-voters-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  border-bottom: 1px solid var(--c-border);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.flow-voters-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--c-navy);
+}
+
+.flow-voters-sub {
+  font-size: 0.875rem;
+  color: var(--c-text-mid);
+}
+
+.flow-voters-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.flow-voters-col-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--c-text-sub);
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+
+.flow-voters-col ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.flow-voters-col li {
+  margin-bottom: 4px;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
+.flow-arrows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.flow-arrow {
+  display: block;
+  width: 2px;
+  height: 32px;
+  background: var(--c-navy);
+  margin: 0 auto;
+}
+
+.flow-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.flow-pillar {
+  border: 1px solid var(--c-border);
+  border-top: 4px solid var(--c-navy);
+  border-radius: 4px;
+  background: var(--c-surface);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flow-pillar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.flow-pillar-name {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--c-navy);
+}
+
+.flow-pillar-members {
+  font-size: 0.8125rem;
+  color: var(--c-text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.flow-pillar-hires {
+  background: var(--c-divider);
+  border-radius: 4px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.flow-pillar-hires-label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--c-text-sub);
+  font-weight: 600;
+}
+
+.flow-pillar-hires-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.flow-pillar-hires-count {
+  font-size: 0.75rem;
+  color: var(--c-text-mid);
+  font-style: italic;
+}
+
+.flow-pillar-hires-incumbent {
+  font-size: 0.8125rem;
+  color: var(--c-text-mid);
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.flow-pillar-hires-tenure {
+  color: var(--c-text-sub);
+  font-size: 0.75rem;
+}
+
+.flow-pillar-hires-tenure[title] {
+  cursor: help;
+}
+
+.flow-pillar-hires-until {
+  color: var(--c-text-sub);
+}
+
+.flow-pillar-hires-until[title] {
+  cursor: help;
+}
+
+.flow-pillar-hires-badge {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  color: var(--c-brass);
+  background: rgba(184, 134, 11, 0.08);
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  padding: 2px 6px;
+  border-radius: 3px;
+  cursor: help;
+  align-self: flex-start;
+}
+
+.flow-pillar-sitting {
+  border-top: 1px dashed var(--c-border);
+  padding-top: 10px;
+}
+
+.flow-pillar-sitting ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-pillar-sitting li {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 4px 0;
+  border-bottom: 1px dotted var(--c-border);
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+.flow-pillar-sitting li:last-child {
+  border-bottom: none;
+}
+
+.flow-pillar-member-name {
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.flow-pillar-member-appointed {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--c-brass);
+  font-weight: 600;
+  cursor: help;
+  margin-left: 4px;
+}
+
+.flow-pillar-member-tenure {
+  font-size: 0.75rem;
+  color: var(--c-text-sub);
+}
+
+.flow-pillar-member-tenure[title] {
+  cursor: help;
+}
+
+.flow-pillar-reach {
+  font-size: 0.875rem;
+  color: var(--c-text-mid);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.flow-pillar-list-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.flow-pillar-can .flow-pillar-list-label {
+  color: var(--c-teal);
+}
+
+.flow-pillar-cannot .flow-pillar-list-label {
+  color: var(--c-plum);
+}
+
+.flow-pillar-can ul,
+.flow-pillar-cannot ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.flow-pillar-can li,
+.flow-pillar-cannot li {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin-bottom: 3px;
+}
+
+.flow-town-meeting {
+  border-left: 4px solid var(--c-brass);
+  background: var(--c-divider);
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  border-radius: 0 4px 4px 0;
+}
+
+.flow-town-meeting > p {
+  margin: 0 0 6px;
+}
+
+.flow-town-meeting-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--c-brass);
+  font-weight: 700;
+}
+
+.flow-callouts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.flow-callout {
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  background: var(--c-fog);
+  padding: 14px 16px;
+}
+
+.flow-callout > p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.flow-callout-title {
+  font-weight: 700;
+  color: var(--c-navy);
+  margin: 0 0 6px;
+  font-size: 0.9375rem;
+}
+
+.flow-pillar-sources {
+  margin: 4px 0 0;
+  padding-top: 8px;
+  border-top: 1px dashed var(--c-border);
+  font-size: 0.75rem;
+  color: var(--c-text-sub);
+}
+
+@media (max-width: 720px) {
+  .flow-voters-body {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .flow-arrows {
+    grid-template-columns: 1fr;
+  }
+  .flow-arrow {
+    height: 18px;
+  }
+  .flow-arrow:nth-child(n+2) {
+    display: none;
+  }
+  .flow-pillars {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .flow-callouts {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Boards section */
 
 .board-section {
@@ -4900,6 +5253,72 @@ body.me-subscription-page .ms-pref button[type="submit"] { background: var(--c-n
 
 .board-card-link a {
   color: var(--c-navy);
+}
+
+.board-card-sitting {
+  margin: 10px 0 6px;
+  padding: 10px 0 4px;
+  border-top: 1px dashed var(--c-border);
+}
+
+.board-card-sitting-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--c-text-sub);
+  margin: 0 0 6px;
+}
+
+.board-card-sitting ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.board-card-sitting li {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 4px 0;
+  border-bottom: 1px dotted var(--c-border);
+  font-size: 0.8125rem;
+  line-height: 1.35;
+}
+
+.board-card-sitting li:last-child {
+  border-bottom: none;
+}
+
+.board-card-member-name {
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.board-card-member-tenure {
+  font-size: 0.7188rem;
+  color: var(--c-text-sub);
+}
+
+.board-card-member-tenure[title] {
+  cursor: help;
+}
+
+.board-card-member-stale {
+  font-size: 0.7188rem;
+  color: var(--c-text-sub);
+  font-style: italic;
+  cursor: help;
+}
+
+.board-card-sitting-note {
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--c-text-mid);
+  background: var(--c-divider);
+  border-radius: 3px;
 }
 
 @media (max-width: 700px) {

@@ -42,6 +42,8 @@ import json
 import ssl
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -58,13 +60,48 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://townofmarblehead-ma-oe.spending.socrata.com/api"
 DEFAULT_RAW_PATH = Path("/tmp/checkbook_raw_export.csv")
 
+# Total backoff window 5 + 15 + 45 = 65s across 4 attempts. The portal's
+# observed transient failures are HTTP 503 and TLS read timeouts that
+# clear within seconds, so a short backoff is enough; longer would
+# make a real outage slower to fail without buying additional success
+# rate.
+RETRY_BACKOFFS = (5, 15, 45)
+
+
+def urlopen_with_retry(url: str, *, timeout: int):
+    """urlopen() that retries transient errors with exponential backoff.
+
+    Retries on HTTP 5xx, HTTP 429, and any URLError / TimeoutError /
+    OSError (covers DNS, connect, reset, and socket-level timeouts).
+    Other HTTPErrors (4xx other than 429) are raised immediately —
+    those are caller bugs, not upstream blips.
+    """
+    last_err: BaseException | None = None
+    attempts = len(RETRY_BACKOFFS) + 1
+    for i in range(attempts):
+        try:
+            return urllib.request.urlopen(url, timeout=timeout, context=SSL_CTX)
+        except urllib.error.HTTPError as e:
+            if e.code < 500 and e.code != 429:
+                raise
+            last_err = e
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            last_err = e
+        if i < attempts - 1:
+            wait = RETRY_BACKOFFS[i]
+            print(f"  portal fetch failed ({last_err}); retrying in {wait}s "
+                  f"(attempt {i + 2}/{attempts})", file=sys.stderr, flush=True)
+            time.sleep(wait)
+    assert last_err is not None
+    raise last_err
+
 
 def fetch_meta(year: int) -> dict:
     """Return {'count': N, 'total_amount': X} for the year."""
     url = f"{BASE}/checkbook_data.json?" + urllib.parse.urlencode({
         "year": year, "limit": 1,
     })
-    with urllib.request.urlopen(url, timeout=30, context=SSL_CTX) as r:
+    with urlopen_with_retry(url, timeout=30) as r:
         body = json.loads(r.read())
     return {"count": body["count"], "total_amount": body["total_amount"]}
 
@@ -73,7 +110,7 @@ def fetch_csv(year: int, limit: int, out_path: Path) -> None:
     url = f"{BASE}/checkbook_data.csv?" + urllib.parse.urlencode({
         "year": year, "limit": limit,
     })
-    with urllib.request.urlopen(url, timeout=120, context=SSL_CTX) as r:
+    with urlopen_with_retry(url, timeout=120) as r:
         out_path.write_bytes(r.read())
 
 

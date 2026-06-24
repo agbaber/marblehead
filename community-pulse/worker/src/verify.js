@@ -520,6 +520,7 @@ async function handleMe(request, env, secret) {
     branch_name: branchName,
     branch_size: sizeRow?.size || 0,
     invites_remaining: resident.invites_remaining,
+    display_name: resident.display_name || null,
     invites,
   }, env);
 }
@@ -887,7 +888,7 @@ async function handleRecoveryRedeem(request, env, secret, webauthnOrigin) {
 // ═══════════════════════════════════════════════════════════════
 
 /** Parse JSON body, returning a Response on failure. */
-async function parseBody(request, env) {
+export async function parseBody(request, env) {
   try {
     return await request.json();
   } catch {
@@ -896,7 +897,7 @@ async function parseBody(request, env) {
 }
 
 /** Authenticate via JWT. Returns the payload or a 401 Response. */
-async function authenticate(request, env, secret) {
+export async function authenticate(request, env, secret) {
   const token = extractJWT(request);
   if (!token) return json({ error: 'missing authorization' }, env, 401);
 
@@ -911,9 +912,9 @@ async function authenticate(request, env, secret) {
 }
 
 /** Get an active (non-revoked) resident row. */
-async function getActiveResident(env, identity_hash) {
+export async function getActiveResident(env, identity_hash) {
   return env.DB.prepare(
-    'SELECT identity_hash, branch_root, invited_by, invites_remaining, created_at FROM residents WHERE identity_hash = ? AND revoked_at IS NULL'
+    'SELECT identity_hash, branch_root, invited_by, invites_remaining, created_at, display_name FROM residents WHERE identity_hash = ? AND revoked_at IS NULL'
   ).bind(identity_hash).first();
 }
 
@@ -1006,7 +1007,7 @@ async function getVerifiedTally(env, topic) {
 }
 
 /** Resolve the winning branch name (most votes, ties broken by earliest proposal). */
-async function resolveBranchName(env, branchRoot) {
+export async function resolveBranchName(env, branchRoot) {
   if (!branchRoot) return null;
 
   const row = await env.DB.prepare(
@@ -1050,7 +1051,7 @@ function getWebAuthnOrigin(request, env) {
 }
 
 /** JSON response with CORS headers. */
-function json(data, env, status = 200) {
+export function json(data, env, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
     headers: {

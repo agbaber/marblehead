@@ -16,7 +16,7 @@ export default defineWorkersConfig({
         extends: true,
         test: {
           name: 'worker',
-          include: ['tests/worker.test.js'],
+          include: ['tests/worker.test.js', 'tests/engagement.test.js'],
           poolOptions: {
             workers: {
               singleWorker: true,

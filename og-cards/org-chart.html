@@ -4,64 +4,126 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="_shared.css">
   <style>
-    .tree { width: 100%; max-width: 1060px; }
-    .row { display: flex; justify-content: center; gap: 80px; margin-bottom: 18px; }
-    .pill {
-      background: var(--c-surface);
-      border: 1px solid var(--c-border);
-      border-radius: 10px;
-      padding: 12px 20px;
+    .card-headline.compact { font-size: 64px; line-height: 1.0; }
+    .org { margin-top: 22px; max-width: 1056px; }
+
+    .voters-row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 28px;
+      position: relative;
+    }
+    .voters {
+      background: linear-gradient(180deg, rgba(226,107,82,0.22), rgba(226,107,82,0.05));
+      border: 1px solid var(--c-buoy);
+      color: var(--text);
       font-weight: 700;
-      font-size: 22px;
-      color: var(--c-text);
-      box-shadow: 0 1px 2px rgba(15,42,61,.06);
-    }
-    .pill.voters { background: var(--c-navy); color: white; border-color: var(--c-navy); }
-    .pill.board  { background: var(--c-teal); color: white; border-color: var(--c-teal); }
-    .branches { display: flex; gap: 10px; flex-wrap: wrap; max-width: 480px; justify-content: center; }
-    .leaf {
-      background: var(--c-fog);
-      border: 1px solid var(--c-border);
-      border-radius: 8px;
-      padding: 7px 12px;
       font-size: 17px;
-      color: var(--c-mid);
+      padding: 9px 22px;
+      border-radius: 7px;
+      letter-spacing: 0.01em;
     }
-    .col { display: flex; flex-direction: column; align-items: center; gap: 12px; }
-    .label { font-size: 18px; color: var(--c-sub); letter-spacing: 0.05em; text-transform: uppercase; }
+    .voters-row::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -20px;
+      transform: translateX(-50%);
+      width: 460px;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+      padding-top: 8px;
+      position: relative;
+    }
+    .col { display: flex; flex-direction: column; align-items: center; }
+    .col::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 18px;
+      background: var(--rule);
+    }
+    .col:first-child::before { left: 25%; }
+    .col:last-child::before  { right: 25%; }
+
+    .col-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-sub);
+      margin-bottom: 8px;
+      margin-top: 12px;
+    }
+    .board {
+      background: rgba(91,168,184,0.14);
+      border: 1px solid var(--c-teal);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 17px;
+      padding: 8px 18px;
+      border-radius: 7px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .leaves {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-mid);
+      text-align: center;
+      max-width: 360px;
+    }
+    .leaves .sep {
+      color: var(--text-faint);
+      margin: 0 6px;
+    }
   </style>
 </head>
 <body>
   <main class="card">
-    <header class="card-mark">marbleheaddata.org</header>
-    <h1 class="card-headline">Two parallel governments run Marblehead.</h1>
-    <div class="card-visual">
-      <div class="tree">
-        <div class="row"><div class="pill voters">Registered voters</div></div>
-        <div class="row">
+    <header class="card-eyebrow">
+      <span class="mark"></span>
+      <span>Tool</span>
+      <span class="sep">/</span>
+      <span>Org chart</span>
+    </header>
+
+    <div>
+      <h1 class="card-headline compact">Two parallel governments. <em>One tax base.</em></h1>
+      <div class="org">
+        <div class="voters-row">
+          <div class="voters">Registered voters</div>
+        </div>
+        <div class="columns">
           <div class="col">
-            <div class="label">Town side</div>
-            <div class="pill board">Select Board</div>
-            <div class="branches">
-              <div class="leaf">Admin &amp; Finance</div>
-              <div class="leaf">Public Safety</div>
-              <div class="leaf">Public Works</div>
-              <div class="leaf">Land Use &amp; Health</div>
-              <div class="leaf">Community Services</div>
+            <div class="col-label">Town side · 5 clusters</div>
+            <div class="board">Select Board</div>
+            <div class="leaves">
+              Administration &amp; Finance<span class="sep">·</span>Public Safety<span class="sep">·</span>Public Works<span class="sep">·</span>Land Use &amp; Health<span class="sep">·</span>Community Services
             </div>
           </div>
           <div class="col">
-            <div class="label">School side</div>
-            <div class="pill board">School Committee</div>
-            <div class="branches">
-              <div class="leaf">Central Office</div>
-              <div class="leaf">Buildings</div>
+            <div class="col-label">School side · 2 clusters</div>
+            <div class="board">School Committee</div>
+            <div class="leaves">
+              Central Office<span class="sep">·</span>Buildings
             </div>
           </div>
         </div>
       </div>
     </div>
-    <footer class="card-foot">/org-chart</footer>
+
+    <footer class="card-foot">
+      <span class="url">marbleheaddata.org/org-chart</span>
+      <span>FY26 headcount, named roles</span>
+    </footer>
   </main>
 </body>
 </html>

@@ -85,11 +85,20 @@ permalink: /profile.html
     padding-top: 8px;
   }
   .pf-row-value { font-size: 15px; color: var(--text); }
+  /* Input + Save + saved-flag row: lay out as flex so spacing is consistent
+     when the row wraps on narrow viewports. */
+  .pf-row-value:has(> .pf-input + .pf-btn) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
 
   .pf-input {
     box-sizing: border-box;
     width: 100%;
     max-width: 360px;
+    flex: 1 1 220px;
     border: 1px solid var(--border);
     background: var(--surface);
     border-radius: 8px;
@@ -114,9 +123,9 @@ permalink: /profile.html
     background: var(--c-navy);
     border: none;
     border-radius: 999px;
+    flex: 0 0 auto;
     padding: 8px 16px;
     cursor: pointer;
-    margin-left: 6px;
     transition: filter 0.15s ease, transform 0.12s ease;
   }
   .pf-btn:hover { filter: brightness(1.1); }
@@ -129,7 +138,6 @@ permalink: /profile.html
   .pf-btn--ghost:hover { color: var(--text); border-color: var(--text-muted); }
   .pf-saved {
     display: inline-block;
-    margin-left: 10px;
     font-size: 12px;
     color: var(--c-sage);
     font-weight: 700;

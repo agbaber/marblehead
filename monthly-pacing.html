@@ -1,0 +1,457 @@
+---
+title: "Monthly spending and budget pacing"
+permalink: /monthly-pacing/
+scripts: [citations]
+sitemap: false
+og_title: "Monthly spending, variance to budget, and town cash balance"
+og_description: "A first-draft view of FY26 monthly spending, variance to budget, and town cash balance, built from data the town has published. Each section ends with what's missing for the real version."
+og_url: https://marbleheaddata.org/monthly-pacing/
+---
+<style>
+  .page { max-width: 1080px; }
+
+  .lead-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 18px 22px; margin: 12px 0 24px;
+    font-size: 14px; color: var(--text); line-height: 1.55;
+  }
+  .lead-card strong { color: var(--text); }
+  .lead-card .tag {
+    display: inline-block; font-size: 10.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.8px;
+    color: var(--c-brass); margin-bottom: 6px;
+  }
+
+  .pacing-meta {
+    display: flex; flex-wrap: wrap; gap: 12px 22px;
+    font-size: 12px; color: var(--text-muted);
+    margin: 6px 0 14px; font-variant-numeric: tabular-nums;
+  }
+  .pacing-meta strong { color: var(--text); font-weight: 600; }
+
+  .pace-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 8px 0 6px; }
+  .pace-table th {
+    text-align: left; padding: 7px 8px; border-bottom: 2px solid var(--text);
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--text-muted); font-weight: 600;
+  }
+  .pace-table th.num, .pace-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .pace-table td { padding: 6px 8px; border-bottom: 1px solid var(--border); }
+  .pace-table tr:last-child td { border-bottom: none; }
+  .pace-name { font-weight: 500; }
+
+  /* Variance pill. 91.2% is "on pace" for this snapshot; tint by distance. */
+  .var-pill {
+    display: inline-block; font-variant-numeric: tabular-nums;
+    font-weight: 600; font-size: 12.5px;
+    padding: 2px 8px; border-radius: 999px;
+    background: color-mix(in srgb, var(--text-muted) 12%, transparent);
+    color: var(--text);
+  }
+  .var-pill--hot {
+    background: color-mix(in srgb, var(--c-buoy) 16%, transparent);
+    color: var(--c-buoy);
+  }
+  .var-pill--cold {
+    background: color-mix(in srgb, var(--c-teal) 16%, transparent);
+    color: var(--c-teal);
+  }
+
+  /* Monthly burn chart */
+  .burn-wrap { margin: 12px 0 8px; }
+  .burn-chart { width: 100%; height: 320px; display: block; }
+  .burn-legend {
+    display: flex; flex-wrap: wrap; gap: 12px 18px;
+    font-size: 12px; color: var(--text-muted);
+    margin: 8px 0 0; align-items: center;
+  }
+  .burn-legend-item { display: inline-flex; align-items: center; gap: 6px; }
+  .burn-legend-swatch { width: 14px; height: 3px; border-radius: 2px; }
+  .burn-legend-target {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-style: italic;
+  }
+  .burn-axis-text { font-size: 10.5px; fill: var(--text-muted); font-variant-numeric: tabular-nums; }
+  .burn-grid { stroke: var(--divider); stroke-width: 0.5; }
+  .burn-target {
+    stroke: var(--text-muted); stroke-width: 1; stroke-dasharray: 4 4;
+    fill: none; opacity: 0.7;
+  }
+  .burn-series { fill: none; stroke-width: 1.8; }
+  .burn-dot { stroke-width: 0; }
+
+  /* Free cash chart */
+  .fc-chart { width: 100%; height: 220px; display: block; margin: 8px 0; }
+  .fc-bar { }
+  .fc-axis-text { font-size: 10.5px; fill: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+  /* Caveat block */
+  .caveats {
+    background: color-mix(in srgb, var(--c-brass) 8%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c-brass) 25%, var(--border));
+    border-radius: var(--radius-md);
+    padding: 14px 18px; margin: 14px 0 24px;
+    font-size: 13.5px; line-height: 1.55;
+  }
+  .caveats h3 {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; color: var(--c-brass); margin: 0 0 6px;
+  }
+  .caveats ul { margin: 6px 0 0; padding-left: 20px; }
+  .caveats li { margin: 4px 0; color: var(--text); }
+  .caveats li strong { color: var(--text); }
+
+  h2.section-h {
+    font-size: 17px; font-weight: 700; margin: 36px 0 4px;
+    letter-spacing: -0.2px;
+  }
+  h2.section-h + .section-sub {
+    font-size: 13px; color: var(--text-muted); margin: 0 0 12px;
+    line-height: 1.5;
+  }
+
+  /* Visible per-section data stamps */
+  .data-stamp {
+    display: flex; flex-wrap: wrap; gap: 4px 16px;
+    margin: 6px 0 4px;
+    font-size: 11.5px; color: var(--text-muted);
+    line-height: 1.5; font-variant-numeric: tabular-nums;
+  }
+  .data-stamp .stamp-label {
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--text-subtle); margin-right: 4px;
+  }
+  .data-stamp strong { color: var(--text); font-weight: 600; }
+
+  /* "How to read" note under the pacing table */
+  .read-note {
+    font-size: 12.5px; color: var(--text-muted);
+    line-height: 1.55; margin: 8px 0 16px;
+    padding: 10px 14px;
+    border-left: 3px solid var(--c-brass);
+    background: color-mix(in srgb, var(--c-brass) 6%, transparent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+  .read-note strong { color: var(--text); }
+
+  @media (max-width: 720px) {
+    .pace-table { font-size: 12.5px; }
+    .pace-table th, .pace-table td { padding: 5px 6px; }
+    .pace-table .col-hide-sm { display: none; }
+  }
+</style>
+
+<h1>Monthly spending and budget pacing</h1>
+<p class="subtitle">A first-draft view of FY26 monthly spending, variance to budget, and town cash balance, built from data the town has already published.</p>
+
+<div class="lead-card">
+  <div class="tag">First draft</div>
+  This is a first draft of showing what monthly spending, variance to
+  budget, and the town's cash balance could look like, built from data
+  the town has already published. Those reports exist internally but
+  aren't published externally. Below is the closest version possible
+  from public data: a department-level pacing table (current YTD vs.
+  straight-line target), a monthly burn chart by fund, and the annual
+  free-cash series. Each section ends with what's missing for the real
+  version.
+</div>
+
+<h2 class="section-h">1. Variance to budget, by department</h2>
+<p class="section-sub">FY26 revised budget vs. year-to-date actual.</p>
+
+<div class="data-stamp">
+  <span><span class="stamp-label">Source</span> <a href="https://townofmarblehead-ma-ob.budget.socrata.com/" rel="noopener">Town of Marblehead Open Budget portal</a></span>
+  <span><span class="stamp-label">Data as of</span> <strong><span id="pace-as-of">&hellip;</span></strong> (daily auto-refresh)</span>
+</div>
+
+<div class="pacing-meta">
+  <span><strong>FY26 elapsed:</strong> <strong><span id="pace-fy-elapsed">&hellip;</span></strong> <span id="pace-fy-elapsed-detail"></span></span>
+  <span><strong>Read:</strong> % used above the elapsed-FY mark is pacing hot; below is pacing cold.</span>
+</div>
+
+<table class="pace-table" id="pace-table">
+  <thead>
+    <tr>
+      <th>Department</th>
+      <th class="num">Revised budget</th>
+      <th class="num">YTD actual</th>
+      <th class="num">% used</th>
+      <th class="num col-hide-sm">vs. pace</th>
+    </tr>
+  </thead>
+  <tbody id="pace-body"></tbody>
+</table>
+
+<div class="read-note">
+  <strong>How to read the pacing column.</strong>
+  &ldquo;+8% ahead&rdquo; means the department's spend is 8 points past where straight-line pacing would put it, not 8% over budget. Some categories never pace linearly and the column isn't meaningful for them: <strong>debt service</strong> (a few fixed payment dates per year, mostly early), <strong>capital articles</strong> (lumpy draws, often year-end), <strong>harbor</strong> (seasonal), <strong>snow removal</strong> (winter only). The schools, fire, police, DPW, and water/sewer lines are where the pacing read tells you something useful.
+</div>
+
+<div class="caveats">
+  <h3>What's still rough</h3>
+  <ul>
+    <li><strong>Encumbrances aren't shown in the table, but they're in the data.</strong> The portal exposes an <code>encumbrance</code> column per department; this view currently only shows expended. Adding a "% committed" column would surface that.</li>
+    <li><strong>Per-month budget.</strong> Even for departments that do roughly spend monthly, a flat 1/12 target is a coarse benchmark; the real internal report compares to a department's own historical month-by-month profile.</li>
+  </ul>
+</div>
+
+<h2 class="section-h">2. Monthly cash-out, by fund</h2>
+<p class="section-sub">Cumulative monthly spend by fund (payroll included). Dashed line is straight-line target.</p>
+
+<div class="data-stamp">
+  <span><span class="stamp-label">Source</span> <a href="https://townofmarblehead-ma-ob.budget.socrata.com/" rel="noopener">Town of Marblehead Open Budget portal</a></span>
+  <span><span class="stamp-label">Data as of</span> <strong><span id="burn-as-of">&hellip;</span></strong> (daily auto-refresh)</span>
+</div>
+
+<div class="burn-wrap">
+  <svg class="burn-chart" id="burn-chart" viewBox="0 0 800 320" preserveAspectRatio="none" aria-label="Monthly cumulative spend by fund vs. straight-line target"></svg>
+  <div class="burn-legend" id="burn-legend"></div>
+</div>
+
+<div class="caveats">
+  <h3>What's still rough</h3>
+  <ul>
+    <li><strong>Lumpy by design.</strong> Some funds spike in July (debt service prepay), some at year-end (capital draws). A flat 1/12-per-month line is the wrong comparison for most of them &ndash; it's a rough orientation, not a verdict.</li>
+    <li><strong>Top 6 by total spend.</strong> Smaller funds (Harbor, Tax Articles, ARPA, capital projects) aren't charted. Drilling into those is a future iteration.</li>
+  </ul>
+</div>
+
+<h2 class="section-h">3. Town cash balance</h2>
+<p class="section-sub">Year-end certified free cash, FY15&ndash;FY26. One value per year, certified after the prior fiscal year closes.</p>
+
+<div class="data-stamp">
+  <span><span class="stamp-label">Source</span> Massachusetts DOR DLS Gateway (FreeCash2 report)</span>
+  <span><span class="stamp-label">Cadence</span> <strong>Annual</strong> &middot; certified in the fall after the FY closes</span>
+</div>
+
+<svg class="fc-chart" id="fc-chart" viewBox="0 0 800 220" preserveAspectRatio="none" aria-label="Annual certified free cash by fiscal year"></svg>
+
+<div class="caveats">
+  <h3>What's missing for the real version</h3>
+  <ul>
+    <li><strong>Monthly cash position.</strong> The Treasurer tracks pooled cash continuously. Nothing month-by-month is published. Free cash is a year-end DOR-certified figure, not a running balance.</li>
+    <li><strong>Investments and reserves breakdown.</strong> The Annual Report's Treasurer section gives one year-end pooled cash figure. Stabilization Fund and OPEB Trust balances are in the ACFR, also annually.</li>
+  </ul>
+</div>
+
+<h2 class="section-h">What it would take to publish this for real</h2>
+<p class="section-sub">If the board decided to start sharing this externally each month:</p>
+
+<ul style="font-size: 14px; line-height: 1.6; color: var(--text); margin: 8px 0 24px; padding-left: 22px;">
+  <li><strong>Monthly variance report.</strong> Town Accountant exports a department-by-department expended + encumbered + remaining at month-end. PDF or CSV posted to the Finance page after each month closes.</li>
+  <li><strong>Monthly Treasurer cash report.</strong> Pooled cash, broken out by general fund / enterprise funds / trust funds / restricted. One number per category, end-of-month.</li>
+  <li><strong>Checkbook auto-publish.</strong> Right now the vendor checkbook only exports on demand. A monthly automated CSV drop would make a chart like the one above maintainable without a manual pull.</li>
+</ul>
+
+<script>
+(function () {
+  var BUDGET_URL = '../data/budget_actual_FY26.json';
+  var FY_START = new Date('2025-07-01T00:00:00Z');
+  var FY_END   = new Date('2026-06-30T00:00:00Z');
+  var FY_TOTAL_DAYS = Math.round((FY_END - FY_START) / 86400000);
+
+  function fmtDateUS(iso) {
+    if (!iso) return '';
+    var d = new Date(iso + 'T12:00:00Z');
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+  }
+  function setText(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
+  var BURN_URL   = '../data/monthly_burn_FY26.json';
+  var FC_URL     = '../data/marblehead_free_cash.csv';
+
+  // Minimal CSV parser for the free-cash file (no embedded commas/quotes in this dataset).
+  function parseCsv(text) {
+    var lines = text.replace(/\r/g, '').split('\n').filter(function (l) { return l.length > 0; });
+    var headers = lines[0].split(',');
+    return lines.slice(1).map(function (line) {
+      var cells = line.split(',');
+      var obj = {};
+      headers.forEach(function (h, i) { obj[h] = cells[i] == null ? '' : cells[i]; });
+      return obj;
+    });
+  }
+
+  Promise.all([
+    fetch(BUDGET_URL).then(function (r) { return r.json(); }),
+    fetch(BURN_URL).then(function (r) { return r.json(); }),
+    fetch(FC_URL).then(function (r) { return r.text(); }).then(parseCsv)
+  ]).then(function (results) {
+    renderPace(results[0]);
+    renderBurn(results[1]);
+    renderFreeCash(results[2]);
+  }).catch(function (err) {
+    console.error('monthly-pacing data load failed:', err);
+  });
+
+  // ---------- Pacing table ----------
+  function renderPace(budgetActual) {
+  // The portal exposes monthly fiscal-period buckets (e.g. all June
+  // transactions land at fiscalmonth=2026-06-01), so we can't surface
+  // a transaction-level "data through" date. Use the fetch date for
+  // both the date stamp and the FY-elapsed math — that's what "daily
+  // auto-refresh" implies and it's what readers expect to see.
+  var asOf = (budgetActual && budgetActual.as_of) || new Date().toISOString().slice(0, 10);
+  var asOfDate = new Date(asOf + 'T00:00:00Z');
+  var elapsedDays = Math.max(0, Math.min(FY_TOTAL_DAYS,
+    Math.round((asOfDate - FY_START) / 86400000)));
+  var pacingPct = elapsedDays / FY_TOTAL_DAYS;
+  var daysLeft = Math.max(0, FY_TOTAL_DAYS - elapsedDays);
+  setText('pace-as-of', fmtDateUS(asOf));
+  setText('pace-fy-elapsed', (pacingPct * 100).toFixed(0) + '%');
+  setText('pace-fy-elapsed-detail',
+    daysLeft > 0
+      ? '(' + daysLeft + ' days left before the year closes on June 30)'
+      : '(FY26 has closed)');
+
+  var rows = ((budgetActual && budgetActual.by_department) || []).filter(function (r) { return (r.revised_budget || 0) > 0; });
+  rows.sort(function (a, b) { return (b.revised_budget || 0) - (a.revised_budget || 0); });
+  var tbody = document.getElementById('pace-body');
+  function fmt$(n) {
+    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return '$' + Math.round(n/1e3) + 'K';
+    return '$' + Math.round(n);
+  }
+  rows.forEach(function (r) {
+    var budget = r.revised_budget || 0;
+    var actual = r.actual || 0;
+    var pct = budget > 0 ? actual / budget : 0;
+    var delta = (pct - pacingPct) * 100;
+    var pillCls = 'var-pill';
+    if (delta > 8) pillCls += ' var-pill--hot';
+    else if (delta < -8) pillCls += ' var-pill--cold';
+    var deltaStr = (delta >= 0 ? '+' : '') + delta.toFixed(1) + '%';
+    var tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td class="pace-name">' + (r.name || '') + '</td>' +
+      '<td class="num">' + fmt$(budget) + '</td>' +
+      '<td class="num">' + fmt$(actual) + '</td>' +
+      '<td class="num">' + (pct * 100).toFixed(1) + '%</td>' +
+      '<td class="num col-hide-sm"><span class="' + pillCls + '">' + deltaStr + '</span></td>';
+    tbody.appendChild(tr);
+  });
+  }
+
+  // ---------- Monthly burn chart ----------
+  function renderBurn(bd) {
+  if (bd && bd.as_of) setText('burn-as-of', fmtDateUS(bd.as_of));
+  var svg = document.getElementById('burn-chart');
+  var legend = document.getElementById('burn-legend');
+  if (bd && bd.funds && svg) {
+    var W = 800, H = 320;
+    var padL = 56, padR = 14, padT = 14, padB = 36;
+    var months = bd.fy_months;
+    var n = months.length;
+    var colors = ['#1b3a5b', '#2f7a8c', '#b58a2b', '#c25450', '#5b7a3a', '#7a4b8c'];
+    // Find max cumulative across funds
+    var maxVal = 0;
+    bd.funds.forEach(function (f) {
+      f.series.forEach(function (p) { if (p.cumulative > maxVal) maxVal = p.cumulative; });
+    });
+    // Round up to nice
+    function niceMax(v) {
+      var p = Math.pow(10, Math.floor(Math.log10(v)));
+      var n = v / p;
+      var nn = n < 1.5 ? 1.5 : n < 3 ? 3 : n < 5 ? 5 : n < 7.5 ? 7.5 : 10;
+      return nn * p;
+    }
+    var yMax = niceMax(maxVal);
+    function xAt(i) { return padL + (W - padL - padR) * (i / (n - 1)); }
+    function yAt(v) { return H - padB - (H - padT - padB) * (v / yMax); }
+    var parts = [];
+    // grid + y-axis
+    var ticks = 4;
+    for (var t = 0; t <= ticks; t++) {
+      var yv = yMax * t / ticks;
+      var y = yAt(yv);
+      parts.push('<line class="burn-grid" x1="' + padL + '" x2="' + (W - padR) + '" y1="' + y + '" y2="' + y + '"/>');
+      var lbl = (yv >= 1e6) ? ('$' + (yv/1e6).toFixed(1) + 'M') : ('$' + Math.round(yv/1e3) + 'K');
+      parts.push('<text class="burn-axis-text" x="' + (padL - 6) + '" y="' + (y + 3) + '" text-anchor="end">' + lbl + '</text>');
+    }
+    // x-axis labels (month abbrevs)
+    var monLabels = months.map(function (m) {
+      var d = new Date(m + '-15');
+      return d.toLocaleString('en-US', { month: 'short' });
+    });
+    monLabels.forEach(function (lbl, i) {
+      parts.push('<text class="burn-axis-text" x="' + xAt(i) + '" y="' + (H - padB + 14) + '" text-anchor="middle">' + lbl + '</text>');
+    });
+    // For target line we draw straight-line from 0 to the biggest fund's total to show the slope reference.
+    // Use the General Fund - Town as the reference target (it's the biggest "budgeted" line everyone cares about).
+    var refFund = bd.funds[0]; // already sorted by total desc
+    var refTotal = refFund.total_through_as_of || refFund.total_through_jun9 || 0;
+    var targetPath = 'M ' + xAt(0) + ' ' + yAt(0) + ' L ' + xAt(n - 1) + ' ' + yAt(refTotal);
+    parts.push('<path class="burn-target" d="' + targetPath + '"/>');
+    // Series
+    bd.funds.forEach(function (f, idx) {
+      var color = colors[idx % colors.length];
+      var d = '';
+      f.series.forEach(function (p, i) {
+        d += (i === 0 ? 'M ' : ' L ') + xAt(i) + ' ' + yAt(p.cumulative);
+      });
+      parts.push('<path class="burn-series" stroke="' + color + '" d="' + d + '"/>');
+      // dot at last point
+      var last = f.series[f.series.length - 1];
+      parts.push('<circle class="burn-dot" cx="' + xAt(n - 1) + '" cy="' + yAt(last.cumulative) + '" r="3.5" fill="' + color + '"/>');
+    });
+    svg.innerHTML = parts.join('');
+    // Legend
+    var legHtml = '';
+    bd.funds.forEach(function (f, idx) {
+      var color = colors[idx % colors.length];
+      var name = f.fund.replace('GENERAL FUND - ', 'GF - ').replace(' OPERATING', '').replace(' ENTERPRISE', '');
+      var total = ((f.total_through_as_of || 0) / 1e6).toFixed(1);
+      legHtml += '<span class="burn-legend-item"><span class="burn-legend-swatch" style="background:' + color + '"></span>' + name + ' &middot; $' + total + 'M</span>';
+    });
+    legHtml += '<span class="burn-legend-target"><span style="display:inline-block;width:14px;border-top:1.5px dashed var(--text-muted);"></span>straight-line target (refs ' + refFund.fund.replace('GENERAL FUND - ', 'GF - ') + ')</span>';
+    legend.innerHTML = legHtml;
+  }
+  }
+
+  // ---------- Free cash chart ----------
+  function renderFreeCash(fc) {
+  var fcSvg = document.getElementById('fc-chart');
+  if (fc && fcSvg && Array.isArray(fc)) {
+    // Filter to FY15-FY26, with certified_free_cash present
+    var fcRows = fc.filter(function (r) {
+      if (!r.certified_free_cash) return false;
+      var y = parseInt((r.fiscal_year || '').replace('FY', ''), 10);
+      return y >= 15 && y <= 26;
+    });
+    if (fcRows.length) {
+      var FW = 800, FH = 220, fpadL = 52, fpadR = 14, fpadT = 14, fpadB = 32;
+      var maxFC = Math.max.apply(null, fcRows.map(function (r) { return Number(r.certified_free_cash); }));
+      function niceMaxFC(v) {
+        var p = Math.pow(10, Math.floor(Math.log10(v)));
+        var n = v / p;
+        var nn = n < 1.5 ? 1.5 : n < 3 ? 3 : n < 5 ? 5 : n < 7.5 ? 7.5 : 10;
+        return nn * p;
+      }
+      var fyMax = niceMaxFC(maxFC);
+      var bw = (FW - fpadL - fpadR) / fcRows.length;
+      var fcParts = [];
+      // grid
+      var fticks = 4;
+      for (var ft = 0; ft <= fticks; ft++) {
+        var fv = fyMax * ft / fticks;
+        var fy = FH - fpadB - (FH - fpadT - fpadB) * (fv / fyMax);
+        fcParts.push('<line class="burn-grid" x1="' + fpadL + '" x2="' + (FW - fpadR) + '" y1="' + fy + '" y2="' + fy + '"/>');
+        var flbl = (fv >= 1e6) ? ('$' + (fv/1e6).toFixed(1) + 'M') : ('$' + Math.round(fv/1e3) + 'K');
+        fcParts.push('<text class="fc-axis-text" x="' + (fpadL - 6) + '" y="' + (fy + 3) + '" text-anchor="end">' + flbl + '</text>');
+      }
+      // bars
+      fcRows.forEach(function (r, i) {
+        var val = Number(r.certified_free_cash);
+        var h = (FH - fpadT - fpadB) * (val / fyMax);
+        var x = fpadL + bw * i + bw * 0.18;
+        var w = bw * 0.64;
+        var y = FH - fpadB - h;
+        fcParts.push('<rect class="fc-bar" x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="var(--c-navy)" rx="2"/>');
+        // label
+        fcParts.push('<text class="fc-axis-text" x="' + (fpadL + bw * i + bw / 2) + '" y="' + (FH - fpadB + 14) + '" text-anchor="middle">' + (r.fiscal_year || '').replace('FY', '') + '</text>');
+      });
+      fcSvg.innerHTML = fcParts.join('');
+    }
+  }
+  }
+})();
+</script>

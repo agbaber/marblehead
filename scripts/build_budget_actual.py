@@ -1,290 +1,160 @@
 #!/usr/bin/env python3
 """
-Build data/budget_actual_FY26.json from:
-  - Socrata budget-portal CSV exports in ~/Downloads/ (budget vs. actual,
-    Budgeted Annual Funds group, sliced by Fund/Division/Object/Category/
-    Department) plus the Adopted_Budget top-level rollup.
-  - data/checkbook_FY26_*.csv (15.6k vendor-payment rows) for the
-    checkbook totals card.
+Build data/budget_actual_FY26.json from data/operating_budget_FY26.csv
+(fetched daily by scripts/fetch_operating_budget.py from the Town of
+Marblehead Open Budget portal).
 
-Output is a single normalized JSON file the checkbook/budget tool reads.
+Replaces the prior workflow that required manually downloading five
+Fund_Group CSVs and one Adopted_Budget rollup from the budget portal
+UI. The portal exposes the same underlying ledger as a single public
+CSV via /api/operating_budget.csv. That endpoint also includes
+encumbrance and unencumbered-balance columns the manual export
+omitted, and is keyed by fiscalmonth so monthly granularity is
+available downstream.
 
-Re-runnable: edit the SOURCE_FILES paths below for a future export, then
-`python scripts/build_budget_actual.py`. Prints a sanity summary to stdout.
+Output JSON shape is preserved (modulo the added `encumbrance` field
+on each dimension row) so consumers like /monthly-pacing/ and
+/checkbook/ don't need to be updated in lockstep.
+
+Aggregation rules:
+  - by_fund / by_department / by_category / by_division / by_object:
+    sliced to BUDGETED ANNUAL FUNDS only (matches the prior dimension
+    CSVs the manual flow produced; Other Funds rolls up separately).
+  - segment3 is used as the "Department" dimension (matches the
+    portal's by_department report).
+  - segment4 is used as "Division".
+  - object is used as "Object" (segment7 / character codes are too
+    coarse; this matches the manual export label).
+  - charactercodedescription is used as "Category".
+
+Usage:
+  python3 scripts/build_budget_actual.py
 """
-
 from __future__ import annotations
 
 import csv
 import json
-import os
 import sys
-from collections import OrderedDict
-from datetime import datetime
+from collections import OrderedDict, defaultdict
+from datetime import UTC, date, datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
-DOWNLOADS = Path.home() / "Downloads"
-
-# Source CSV exports (Socrata budget portal). One CSV per dimension; all of
-# them cover the BUDGETED ANNUAL FUNDS group and should each total to the
-# same ~$127.34M.
-SOURCE_FILES = {
-    "all_funds_rollup": DOWNLOADS / "Adopted_Budget - All Funds_20260601.csv",
-    "by_fund":          DOWNLOADS / "Fund_Group_20260601.csv",
-    "by_division":      DOWNLOADS / "Fund_Group_20260601 (1).csv",
-    "by_object":        DOWNLOADS / "Fund_Group_20260601 (2).csv",
-    "by_category":      DOWNLOADS / "Fund_Group_20260601 (3).csv",
-    "by_department":    DOWNLOADS / "Fund_Group_20260601 (4).csv",
-}
-
-CHECKBOOK_CSV = DATA_DIR / "checkbook_FY26_2026-06-02.csv"
-
+SRC = DATA_DIR / "operating_budget_FY26.csv"
 OUT_PATH = DATA_DIR / "budget_actual_FY26.json"
 
-# Reference values from the task description, used only for sanity-check
-# warnings. The script re-derives the real totals from the CSVs.
-REFERENCE = {
-    "all_funds_revised_budget": 206063591.63,
-    "all_funds_actual": 140446487.84,
-    "budgeted_annual_revised": 127338097.88,
-    "budgeted_annual_actual": 118865422.10,
-    "other_funds_revised": 78725493.75,
-    "other_funds_actual": 21581065.74,
-    "checkbook_total": 98488006.04,
-    "checkbook_rows": 15561,
-}
-
-# How close computed totals must match each dimension's own revised-budget
-# total to trust the export. Larger than penny-rounding, smaller than a
-# real discrepancy.
-TOLERANCE_DOLLARS = 1.0
+BUDGETED_ANNUAL = "BUDGETED ANNUAL FUNDS"
 
 
-def parse_amount(raw: str | None) -> float:
-    """Parse a Socrata money string into a float.
-
-    Handles:
-      - empty / None / whitespace -> 0.0
-      - thousands commas
-      - leading/trailing whitespace
-      - parenthesized negatives e.g. "(170.73)"
-      - stray %, $
-    """
-    if raw is None:
-        return 0.0
-    s = str(raw).strip()
-    if not s:
-        return 0.0
-    neg = False
-    if s.startswith("(") and s.endswith(")"):
-        neg = True
-        s = s[1:-1]
-    s = s.replace(",", "").replace("$", "").replace("%", "").strip()
-    if not s or s.upper() in {"N/A", "NA", "-"}:
+def safe_float(s: str | None) -> float:
+    if s is None or s == "":
         return 0.0
     try:
-        v = float(s)
+        return float(s)
     except ValueError:
         return 0.0
-    return -v if neg else v
 
 
-def open_csv(path: Path):
-    """Open with utf-8-sig so any BOM on the first header is stripped."""
-    return open(path, encoding="utf-8-sig", newline="")
-
-
-def normalize_headers(fieldnames: list[str]) -> list[str]:
-    return [h.strip() for h in fieldnames]
-
-
-def read_dimension_csv(path: Path, name_col: str) -> list[dict]:
-    """Read one dimension CSV and return [{name, revised_budget, actual,
-    original_budget}, ...].
-
-    name_col is the canonical column we expect in the first position
-    (e.g. 'Fund', 'Division'). Header BOM and trailing spaces are stripped.
+def aggregate_dimension(rows: list[dict], key_field: str) -> list[dict]:
+    """Aggregate the BUDGETED ANNUAL FUNDS slice by `key_field`, returning
+    [{name, revised_budget, actual, original_budget, encumbrance}, ...] sorted
+    by revised_budget desc.
     """
-    rows: list[dict] = []
-    with open_csv(path) as f:
-        reader = csv.DictReader(f)
-        reader.fieldnames = normalize_headers(reader.fieldnames or [])
-        if name_col not in reader.fieldnames:
-            raise SystemExit(
-                f"{path.name}: expected column '{name_col}' in header "
-                f"{reader.fieldnames!r}"
-            )
-        for raw in reader:
-            name = (raw.get(name_col) or "").strip()
-            if not name:
-                continue
-            rows.append({
-                "name": name,
-                "revised_budget": round(parse_amount(raw.get("Revised Budget")), 2),
-                "actual": round(parse_amount(raw.get("Actual")), 2),
-                "original_budget": round(parse_amount(raw.get("Original Budget")), 2),
-            })
-    rows.sort(key=lambda r: r["revised_budget"], reverse=True)
-    return rows
+    agg: dict[str, dict[str, float]] = defaultdict(
+        lambda: {"revised_budget": 0.0, "actual": 0.0,
+                 "original_budget": 0.0, "encumbrance": 0.0}
+    )
+    for r in rows:
+        if r.get("fundgroup") != BUDGETED_ANNUAL:
+            continue
+        name = (r.get(key_field) or "").strip()
+        if not name:
+            continue
+        agg[name]["revised_budget"] += safe_float(r.get("revisedbudget"))
+        agg[name]["actual"] += safe_float(r.get("actual"))
+        agg[name]["original_budget"] += safe_float(r.get("originalbudget"))
+        agg[name]["encumbrance"] += safe_float(r.get("encumbrance"))
 
-
-def read_fund_group_rollup(path: Path) -> dict:
-    """Parse the All Funds top-level rollup (Budgeted Annual / Other Funds)."""
-    out: dict[str, dict] = {}
-    with open_csv(path) as f:
-        reader = csv.DictReader(f)
-        reader.fieldnames = normalize_headers(reader.fieldnames or [])
-        if "Fund Group" not in reader.fieldnames:
-            raise SystemExit(
-                f"{path.name}: expected 'Fund Group' column in header "
-                f"{reader.fieldnames!r}"
-            )
-        for raw in reader:
-            group = (raw.get("Fund Group") or "").strip()
-            if not group:
-                continue
-            out[group] = {
-                "revised_budget": round(parse_amount(raw.get("Revised Budget")), 2),
-                "actual": round(parse_amount(raw.get("Actual")), 2),
-                "original_budget": round(parse_amount(raw.get("Original Budget")), 2),
-            }
+    out = []
+    for name, vals in agg.items():
+        out.append({
+            "name": name,
+            "revised_budget": round(vals["revised_budget"], 2),
+            "actual": round(vals["actual"], 2),
+            "original_budget": round(vals["original_budget"], 2),
+            "encumbrance": round(vals["encumbrance"], 2),
+        })
+    out.sort(key=lambda r: r["revised_budget"], reverse=True)
     return out
 
 
-def summarize_checkbook(path: Path) -> tuple[float, int, str]:
-    """Sum the Amount column and find the max Date. Returns (total, count,
-    max_date_iso)."""
-    total = 0.0
-    count = 0
-    max_date = ""
-    with open_csv(path) as f:
-        reader = csv.DictReader(f)
-        for raw in reader:
-            amt = parse_amount(raw.get("Amount"))
-            total += amt
-            count += 1
-            d = (raw.get("Date") or "").strip()
-            if d and d > max_date:
-                max_date = d
-    if max_date:
-        # Socrata dumps like '2026-05-29T00:00:00.000' -> keep YYYY-MM-DD
-        max_date = max_date.split("T", 1)[0]
-    return round(total, 2), count, max_date
-
-
-def check(label: str, computed: float, reference: float) -> None:
-    delta = computed - reference
-    flag = "OK" if abs(delta) < TOLERANCE_DOLLARS else "MISMATCH"
-    print(
-        f"  [{flag}] {label}: computed={computed:>15,.2f}  "
-        f"reference={reference:>15,.2f}  delta={delta:+,.2f}"
+def total_by_fundgroup(rows: list[dict]) -> dict[str, dict[str, float]]:
+    out: dict[str, dict[str, float]] = defaultdict(
+        lambda: {"revised_budget": 0.0, "actual": 0.0, "original_budget": 0.0}
     )
+    for r in rows:
+        fg = r.get("fundgroup") or ""
+        if not fg:
+            continue
+        out[fg]["revised_budget"] += safe_float(r.get("revisedbudget"))
+        out[fg]["actual"] += safe_float(r.get("actual"))
+        out[fg]["original_budget"] += safe_float(r.get("originalbudget"))
+    return out
+
+
+def latest_fiscalmonth(rows: list[dict]) -> str | None:
+    """Return the latest fiscalmonth date present that has any non-zero
+    actual amount, ISO-formatted YYYY-MM-DD.
+    """
+    latest: date | None = None
+    for r in rows:
+        if safe_float(r.get("actual")) == 0:
+            continue
+        fm = (r.get("fiscalmonth") or "")[:10]
+        if not fm:
+            continue
+        try:
+            d = date.fromisoformat(fm)
+        except ValueError:
+            continue
+        if latest is None or d > latest:
+            latest = d
+    return latest.isoformat() if latest else None
 
 
 def main() -> int:
-    print("Reading source CSVs...")
-    for key, p in SOURCE_FILES.items():
-        if not p.exists():
-            print(f"  MISSING: {key} -> {p}", file=sys.stderr)
-            return 2
-        print(f"  {key:18s} {p.name}")
+    if not SRC.exists():
+        sys.exit(f"missing {SRC}; run scripts/fetch_operating_budget.py first")
 
-    # All-funds rollup (Budgeted Annual + Other Funds)
-    rollup = read_fund_group_rollup(SOURCE_FILES["all_funds_rollup"])
-    budgeted_annual = rollup.get("BUDGETED ANNUAL FUNDS") or {}
-    other_funds = rollup.get("OTHER FUNDS") or {}
+    with SRC.open(newline="") as f:
+        rows = list(csv.DictReader(f))
+
+    fundgroup_totals = total_by_fundgroup(rows)
+    budgeted_annual = fundgroup_totals.get(BUDGETED_ANNUAL, {})
+    other_funds = fundgroup_totals.get("OTHER FUNDS", {})
 
     all_funds_revised = round(
-        budgeted_annual.get("revised_budget", 0.0) + other_funds.get("revised_budget", 0.0), 2,
-    )
+        budgeted_annual.get("revised_budget", 0.0)
+        + other_funds.get("revised_budget", 0.0), 2)
     all_funds_actual = round(
-        budgeted_annual.get("actual", 0.0) + other_funds.get("actual", 0.0), 2,
-    )
+        budgeted_annual.get("actual", 0.0)
+        + other_funds.get("actual", 0.0), 2)
 
-    # Per-dimension breakdowns (all of these are the Budgeted Annual envelope)
-    by_fund = read_dimension_csv(SOURCE_FILES["by_fund"], "Fund")
-    by_division = read_dimension_csv(SOURCE_FILES["by_division"], "Division")
-    by_object = read_dimension_csv(SOURCE_FILES["by_object"], "Object")
-    by_category = read_dimension_csv(SOURCE_FILES["by_category"], "Category")
-    by_department = read_dimension_csv(SOURCE_FILES["by_department"], "Department")
+    by_fund = aggregate_dimension(rows, "fund")
+    by_department = aggregate_dimension(rows, "segment3")
+    by_division = aggregate_dimension(rows, "segment4")
+    by_object = aggregate_dimension(rows, "object")
+    by_category = aggregate_dimension(rows, "charactercodedescription")
 
-    # Checkbook actuals (vendor payment line items)
-    checkbook_total, checkbook_count, checkbook_max_date = summarize_checkbook(CHECKBOOK_CSV)
+    period_end = latest_fiscalmonth(rows) or date.today().isoformat()
 
-    # ---- sanity checks ---------------------------------------------------
-    print("\nSanity check (computed vs. reference task values):")
-    check("all_funds_revised",      all_funds_revised,                 REFERENCE["all_funds_revised_budget"])
-    check("all_funds_actual",       all_funds_actual,                  REFERENCE["all_funds_actual"])
-    check("budgeted_annual revised", budgeted_annual.get("revised_budget", 0.0), REFERENCE["budgeted_annual_revised"])
-    check("budgeted_annual actual",  budgeted_annual.get("actual", 0.0),         REFERENCE["budgeted_annual_actual"])
-    check("other_funds revised",    other_funds.get("revised_budget", 0.0), REFERENCE["other_funds_revised"])
-    check("other_funds actual",     other_funds.get("actual", 0.0),          REFERENCE["other_funds_actual"])
-    check("checkbook_total",        checkbook_total,                   REFERENCE["checkbook_total"])
-    if checkbook_count != REFERENCE["checkbook_rows"]:
-        print(
-            f"  [MISMATCH] checkbook_rows: computed={checkbook_count} "
-            f"reference={REFERENCE['checkbook_rows']}"
-        )
-    else:
-        print(f"  [OK] checkbook_rows: {checkbook_count}")
-
-    # Cross-dimension check: each Budgeted Annual slice should sum to the same total
-    dim_sums: dict[str, dict[str, float]] = {}
-    for label, rows in [
-        ("by_fund", by_fund),
-        ("by_division", by_division),
-        ("by_object", by_object),
-        ("by_category", by_category),
-        ("by_department", by_department),
-    ]:
-        dim_sums[label] = {
-            "rows": len(rows),
-            "revised_budget": round(sum(r["revised_budget"] for r in rows), 2),
-            "actual": round(sum(r["actual"] for r in rows), 2),
-            "original_budget": round(sum(r["original_budget"] for r in rows), 2),
-        }
-
-    print("\nDimension cross-check (each should sum to BUDGETED ANNUAL FUNDS):")
-    ba_rev = budgeted_annual.get("revised_budget", 0.0)
-    ba_act = budgeted_annual.get("actual", 0.0)
-    biggest_delta = 0.0
-    for label, s in dim_sums.items():
-        d_rev = s["revised_budget"] - ba_rev
-        d_act = s["actual"] - ba_act
-        biggest_delta = max(biggest_delta, abs(d_rev), abs(d_act))
-        flag = "OK" if max(abs(d_rev), abs(d_act)) < TOLERANCE_DOLLARS else "WARN"
-        print(
-            f"  [{flag}] {label:14s} rows={s['rows']:>3}  "
-            f"revised={s['revised_budget']:>15,.2f} (Δ {d_rev:+,.2f})  "
-            f"actual={s['actual']:>15,.2f} (Δ {d_act:+,.2f})"
-        )
-
-    # ---- decide if anything is too far off to ship -----------------------
-    hard_errors = []
-    if abs(all_funds_revised - REFERENCE["all_funds_revised_budget"]) > TOLERANCE_DOLLARS:
-        hard_errors.append("all_funds_revised disagrees with reference by > $1")
-    if abs(all_funds_actual - REFERENCE["all_funds_actual"]) > TOLERANCE_DOLLARS:
-        hard_errors.append("all_funds_actual disagrees with reference by > $1")
-    if abs(checkbook_total - REFERENCE["checkbook_total"]) > TOLERANCE_DOLLARS:
-        hard_errors.append("checkbook_total disagrees with reference by > $1")
-    if checkbook_count != REFERENCE["checkbook_rows"]:
-        hard_errors.append(
-            f"checkbook_rows {checkbook_count} != reference {REFERENCE['checkbook_rows']}"
-        )
-
-    if hard_errors:
-        print("\nHard errors -- not writing output:", file=sys.stderr)
-        for e in hard_errors:
-            print(f"  - {e}", file=sys.stderr)
-        return 1
-
-    # ---- assemble + write ------------------------------------------------
     out = OrderedDict()
-    out["as_of"] = "2026-06-01"
+    out["as_of"] = datetime.now(UTC).date().isoformat()
     out["fiscal_year"] = "FY26"
-    out["checkbook_period_end"] = checkbook_max_date
+    out["checkbook_period_end"] = period_end
+    out["source"] = "data/operating_budget_FY26.csv (Town of Marblehead Open Budget portal, /api/operating_budget.csv)"
+    out["generated_by"] = "scripts/build_budget_actual.py"
     out["totals"] = OrderedDict([
         ("all_funds_revised_budget", all_funds_revised),
         ("all_funds_actual", all_funds_actual),
@@ -298,8 +168,6 @@ def main() -> int:
             ("actual", round(other_funds.get("actual", 0.0), 2)),
             ("original_budget", round(other_funds.get("original_budget", 0.0), 2)),
         ])),
-        ("checkbook_total", checkbook_total),
-        ("checkbook_row_count", checkbook_count),
     ])
     out["by_fund"] = by_fund
     out["by_department"] = by_department
@@ -308,33 +176,17 @@ def main() -> int:
     out["by_object"] = by_object
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    with open(OUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(out, f, indent=2)
-        f.write("\n")
+    OUT_PATH.write_text(json.dumps(out, indent=2) + "\n", encoding="utf-8")
 
-    print(f"\nWrote {OUT_PATH.relative_to(REPO_ROOT)}")
-    print(
-        f"  totals.all_funds_revised_budget = ${out['totals']['all_funds_revised_budget']:,.2f}"
-    )
-    print(
-        f"  totals.all_funds_actual         = ${out['totals']['all_funds_actual']:,.2f}"
-    )
-    print(
-        f"  totals.budgeted_annual.revised  = ${out['totals']['budgeted_annual']['revised_budget']:,.2f}"
-    )
-    print(
-        f"  totals.budgeted_annual.actual   = ${out['totals']['budgeted_annual']['actual']:,.2f}"
-    )
-    print(
-        f"  totals.other_funds.revised      = ${out['totals']['other_funds']['revised_budget']:,.2f}"
-    )
-    print(
-        f"  totals.other_funds.actual       = ${out['totals']['other_funds']['actual']:,.2f}"
-    )
-    print(
-        f"  totals.checkbook_total          = ${out['totals']['checkbook_total']:,.2f} "
-        f"({out['totals']['checkbook_row_count']} rows, through {out['checkbook_period_end']})"
-    )
+    print(f"Wrote {OUT_PATH.relative_to(REPO_ROOT)}")
+    print(f"  rows in source CSV     = {len(rows):,}")
+    print(f"  as_of                  = {out['as_of']}")
+    print(f"  period_end (data)      = {period_end}")
+    print(f"  all_funds_revised      = ${all_funds_revised:>13,.2f}")
+    print(f"  all_funds_actual       = ${all_funds_actual:>13,.2f}")
+    print(f"  budgeted_annual_rev    = ${out['totals']['budgeted_annual']['revised_budget']:>13,.2f}")
+    print(f"  budgeted_annual_actual = ${out['totals']['budgeted_annual']['actual']:>13,.2f}")
+    print(f"  by_department          = {len(by_department)} rows")
     return 0
 
 

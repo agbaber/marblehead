@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "snapshot": {
-    "date": "2026-06-17",
+    "date": "2026-06-22",
     "fiscal_year": "FY26",
-    "row_count": 15732,
-    "total_paid": 101203657.29,
+    "row_count": 15733,
+    "total_paid": 101204730.21,
     "first_payment": "2025-07-01",
-    "last_payment": "2026-06-17",
-    "source_file": "checkbook_FY26_2026-06-17.csv"
+    "last_payment": "2026-06-22",
+    "source_file": "checkbook_FY26_2026-06-22.csv"
   },
   "buckets": [
     {
@@ -42,14 +42,14 @@
     {
       "key": "town_meeting",
       "label": "Ratified at Town Meeting",
-      "amount": 54548699.88,
+      "amount": 54549772.8,
       "share": 0.539,
       "fund_count": 3,
       "top_funds": [
         {
           "name": "GENERAL FUND - TOWN",
-          "amount": 44091772.64,
-          "row_count": 5992
+          "amount": 44092845.56,
+          "row_count": 5993
         },
         {
           "name": "GENERAL FUND - SCHOOL",
@@ -256,12 +256,12 @@
     }
   ],
   "gf_town_carveout": {
-    "total": 44091772.64,
+    "total": 44092845.56,
     "fixed_total": 37637937.65,
     "fixed_share": 0.8536,
     "admin_contracts_total": 2760923.9,
     "admin_contracts_share": 0.0626,
-    "other_recurring_total": 3692911.09,
+    "other_recurring_total": 3693984.01,
     "other_recurring_share": 0.0838,
     "segments": [
       {
@@ -388,9 +388,9 @@
       {
         "key": "other_recurring",
         "label": "Other recurring (refunds, commodities, transfers)",
-        "amount": 3692911.09,
+        "amount": 3693984.01,
         "share": 0.0838,
-        "row_count": 4918,
+        "row_count": 4919,
         "top_vendors": [
           {
             "name": "ONE TIME PAY",
@@ -439,7 +439,7 @@
       "row_count": 86,
       "first_paid": "2025-08-12",
       "last_paid": "2026-06-02",
-      "days_since_last_paid": 15,
+      "days_since_last_paid": 20,
       "status": "active",
       "top_vendors": [
         {
@@ -479,7 +479,7 @@
       "row_count": 42,
       "first_paid": "2025-11-05",
       "last_paid": "2026-05-19",
-      "days_since_last_paid": 29,
+      "days_since_last_paid": 34,
       "status": "active",
       "top_vendors": [
         {
@@ -519,7 +519,7 @@
       "row_count": 10,
       "first_paid": "2025-09-29",
       "last_paid": "2026-06-02",
-      "days_since_last_paid": 15,
+      "days_since_last_paid": 20,
       "status": "engineering",
       "top_vendors": [
         {
@@ -544,7 +544,7 @@
       "row_count": 5,
       "first_paid": "2025-08-27",
       "last_paid": "2026-01-28",
-      "days_since_last_paid": 140,
+      "days_since_last_paid": 145,
       "status": "closing",
       "top_vendors": [
         {

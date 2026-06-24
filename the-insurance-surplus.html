@@ -1,0 +1,345 @@
+---
+title: "The Group Insurance line"
+scripts: [citations]
+og_title: "11 years, $28M, then it stopped"
+og_description: "Marblehead over-budgeted its Group Insurance line by roughly 19% every year for eleven years. In FY25 the pattern broke: the budget was de-appropriated mid-year and the line came in at 2.7%, in line with peer towns. Three honest readings."
+og_url: https://marbleheaddata.org/the-insurance-surplus.html
+community_pulse: off-sections
+---
+<style>
+  /* Bar chart: Group Insurance Budget vs Actual, FY14-FY24 */
+  .gi-chart { display: block; width: 100%; height: auto; max-width: 880px; margin: 8px auto 4px; }
+  .gi-chart .gi-grid { stroke: var(--divider); stroke-width: 1; stroke-dasharray: 2 3; }
+  .gi-chart .gi-axis { stroke: var(--text-muted); stroke-width: 1; }
+  .gi-chart .gi-tick { font-size: 11px; fill: var(--text-muted); font-family: inherit; }
+  .gi-chart .gi-xtick { font-size: 11px; fill: var(--text-muted); font-family: inherit; }
+  .gi-chart .gi-variance { font-size: 10px; fill: var(--text-muted); font-family: inherit; font-weight: 600; }
+  .gi-chart .gi-bar-budget {
+    fill: color-mix(in srgb, var(--c-navy) 22%, transparent);
+    stroke: var(--c-navy);
+    stroke-width: 1;
+  }
+  .gi-chart .gi-bar-actual { fill: var(--c-navy); }
+
+  /* Peer comparison: horizontal bars */
+  .gi-peer-chart { display: block; width: 100%; height: auto; max-width: 720px; margin: 8px auto 4px; }
+  .gi-peer-chart .gi-grid { stroke: var(--divider); stroke-width: 1; stroke-dasharray: 2 3; }
+  .gi-peer-chart .gi-axis { stroke: var(--text-muted); stroke-width: 1; }
+  .gi-peer-chart .gi-tick { font-size: 11px; fill: var(--text-muted); font-family: inherit; }
+  .gi-peer-chart .gi-peer-bar { fill: var(--text-muted); opacity: 0.55; }
+  .gi-peer-chart .gi-peer-bar-mh { fill: var(--c-navy); }
+  .gi-peer-chart .gi-peer-label { font-size: 12px; fill: var(--text-muted); font-family: inherit; }
+  .gi-peer-chart .gi-peer-label-mh { font-size: 12px; fill: var(--c-navy); font-family: inherit; font-weight: 700; }
+  .gi-peer-chart .gi-peer-fy { font-size: 11px; fill: var(--text-muted); font-family: inherit; }
+
+  /* Chart legend */
+  .gi-legend {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin: 6px 0 0;
+    font-size: 12px;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+  }
+  .gi-legend-swatch {
+    display: inline-block;
+    width: 14px;
+    height: 10px;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+  .gi-legend-swatch-budget {
+    background: color-mix(in srgb, var(--c-navy) 22%, transparent);
+    border: 1px solid var(--c-navy);
+  }
+  .gi-legend-swatch-actual { background: var(--c-navy); }
+
+  /* Caption under each chart */
+  .gi-caption {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 6px auto 18px;
+    max-width: 720px;
+    line-height: 1.55;
+  }
+
+  /* Three-framings panel */
+  .gi-framings { display: grid; gap: 14px; margin: 14px 0 18px;
+                 grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .gi-framing { background: var(--surface); border: 1px solid var(--border);
+                border-radius: 6px; padding: 14px 16px 12px;
+                border-left: 4px solid var(--c-teal); }
+  .gi-framing--defensible { border-left-color: var(--c-sage); }
+  .gi-framing--critical { border-left-color: var(--c-buoy); }
+  .gi-framing--override { border-left-color: var(--c-brass); }
+  .gi-framing h3 { margin: 0 0 6px; font-size: 0.98rem; font-weight: 700;
+                   color: var(--text); line-height: 1.25; }
+  .gi-framing p { font-size: 0.875rem; line-height: 1.55; color: var(--text-muted);
+                  margin: 0 0 8px; }
+  .gi-framing p:last-child { margin-bottom: 0; }
+
+  /* Mechanism table */
+  .gi-mech-table { width: 100%; border-collapse: collapse; font-size: 14px;
+                   margin: 12px 0 18px; }
+  .gi-mech-table th { text-align: left; padding: 8px 10px;
+                      border-bottom: 2px solid var(--text); font-size: 12px;
+                      text-transform: uppercase; letter-spacing: 0.5px;
+                      color: var(--text-muted); }
+  .gi-mech-table th.gi-num { text-align: right; }
+  .gi-mech-table td { padding: 7px 10px; border-bottom: 1px solid var(--border);
+                      vertical-align: top; }
+  .gi-mech-table td.gi-num { text-align: right; white-space: nowrap;
+                             font-variant-numeric: tabular-nums; }
+  @media (max-width: 600px) {
+    .gi-mech-table { font-size: 13px; }
+    .gi-mech-table td, .gi-mech-table th { padding: 6px 6px; }
+  }
+
+  /* Block quote from auditor */
+  .gi-quote {
+    background: color-mix(in srgb, var(--c-teal) 6%, transparent);
+    border-left: 3px solid color-mix(in srgb, var(--c-teal) 60%, transparent);
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--text);
+    font-style: italic;
+  }
+  .gi-quote-attribution {
+    display: block;
+    font-style: normal;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+
+  /* Horizontal scroll wrap for narrow viewports */
+  .gi-chart-wrap { margin: 0 -16px; }
+  @media (max-width: 600px) {
+    .gi-chart-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .gi-chart-wrap svg { min-width: 640px; }
+  }
+
+  /* Restore list indent inside this page */
+  h2 + ul, h2 + ol, p + ul, p + ol { padding-left: 22px; list-style: disc; }
+  p + ol, h2 + ol { list-style: decimal; }
+  h2 + ul li, h2 + ol li, p + ul li, p + ol li { margin-bottom: 6px; line-height: 1.55; }
+</style>
+
+<h1>The Group Insurance line</h1>
+
+<p class="page-lead">
+  From <abbr class="g" title="Fiscal Year">FY</abbr>14 through FY24, Marblehead appropriated more for Group Insurance than it actually spent every single year. The average gap was about $2.56&thinsp;million a year, or roughly 19% of the budgeted line. Over the eleven years that came to $28.2&thinsp;million in unused appropriations. None of it was lost or hidden. Each year's leftover was certified as free cash and re-appropriated the following year, mostly to reduce the operating tax rate. The <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> said so in plain language in nearly every year's <abbr class="g" title="Management's Discussion and Analysis">MD&amp;A</abbr> section. Then in FY25 the pattern broke: the budget was de-appropriated by $1.1&thinsp;million mid-year, the line came in 2.7% under final, and the standard insurance-surplus paragraph disappeared from the MD&amp;A.
+</p>
+
+<ul class="tldr">
+  <li><strong>11 years of structural under-spend, then FY25 broke it.</strong> The line came in 12&ndash;22% below its final appropriation every year FY14&ndash;FY24. In FY25 the original $14.47&thinsp;million budget was de-appropriated mid-year to $13.37&thinsp;million, and actual came in 2.7% under that revised number, in line with peer-town discipline.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf" data-source="FY25 ACFR p.97, General Fund Schedule of Revenues, Expenditures and Changes in Fund Balance &ndash; Budget and Actual, Group Insurance line: original $14,473,518, final $13,367,136, actual $13,007,996, variance $359,140"></sup></li>
+  <li><strong>Peer towns book 0&ndash;5%.</strong> Swampscott, Cohasset, and Wellesley all come within 1.5% on the same line. Marblehead's FY14&ndash;FY24 pad was roughly four to fifty times larger than what comparable Massachusetts municipalities leave on it; the FY25 result puts Marblehead inside the peer range for the first time in twelve years.<sup class="cite" data-href="https://www.wellesleyma.gov/DocumentCenter/View/44610/FY24-Financial-Report" data-source="Swampscott FY24 audit p.91, Wellesley FY24 ACFR p.104, Cohasset FY23 ACFR p.82, Hingham FY25 ACFR p.92, Lexington FY24 audit p.83. Compiled in data/peer_group_insurance_budget_vs_actual.csv"></sup></li>
+  <li><strong>The surplus had a destination.</strong> Through FY24, the auditor's own commentary ended in identical language year after year: the surplus "was offset by the use of prior year resources to balance the [next year's] budget."<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY22_ACFR.pdf" data-source="FY16, FY17, FY19, FY20, FY22 ACFRs &ndash; identical MD&amp;A clause; FY23 ACFR rewords as 'most notable is the group insurance appropriation, which ended the year $3.5 million under budget'. The FY25 MD&amp;A drops this clause."></sup></li>
+  <li><strong>The free-cash draw is shrinking with it.</strong> FY24 used $8.0&thinsp;million of unassigned fund balance to balance the operating budget; FY25 used $6.5&thinsp;million; FY26's budget was approved with a smaller planned draw still. The cushion that quietly balanced operations for a decade is no longer there.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf" data-source="FY25 ACFR p.97, Other Budgetary Items, Use of unassigned fund balance: $6,500,000; FY24 ACFR same line: $8,000,000"></sup></li>
+</ul>
+
+<h2>The pattern</h2>
+
+<p>The two bars per year are the Town's <strong>final budgeted</strong> appropriation for Group Insurance (the outlined bar) and the <strong>actual amount spent</strong> by year end (the solid bar). The number above each pair is the percent of the budget that went unspent.</p>
+
+<div class="gi-chart-wrap">
+<svg class="chart gi-chart" viewBox="0 0 880 380" role="img" aria-label="Group Insurance budget versus actual for fiscal years 2014 to 2025">
+  <line class="gi-grid" x1="64" y1="256.0" x2="856" y2="256.0" />
+  <text class="gi-tick" x="56" y="260.0" text-anchor="end">$4M</text>
+  <line class="gi-grid" x1="64" y1="180.0" x2="856" y2="180.0" />
+  <text class="gi-tick" x="56" y="184.0" text-anchor="end">$8M</text>
+  <line class="gi-grid" x1="64" y1="104.0" x2="856" y2="104.0" />
+  <text class="gi-tick" x="56" y="108.0" text-anchor="end">$12M</text>
+  <line class="gi-grid" x1="64" y1="28.0" x2="856" y2="28.0" />
+  <text class="gi-tick" x="56" y="32.0" text-anchor="end">$16M</text>
+  <line class="gi-axis" x1="64" y1="332" x2="856" y2="332" />
+  <rect class="gi-bar-budget" x="73.0" y="110.7" width="22" height="221.3" />
+  <rect class="gi-bar-actual" x="99.0" y="140.4" width="22" height="191.6" />
+  <text class="gi-variance" x="97.0" y="104.7" text-anchor="middle">12%</text>
+  <text class="gi-xtick" x="97.0" y="348.0" text-anchor="middle">FY14</text>
+  <rect class="gi-bar-budget" x="139.0" y="101.2" width="22" height="230.8" />
+  <rect class="gi-bar-actual" x="165.0" y="145.3" width="22" height="186.7" />
+  <text class="gi-variance" x="163.0" y="95.2" text-anchor="middle">19%</text>
+  <text class="gi-xtick" x="163.0" y="348.0" text-anchor="middle">FY15</text>
+  <rect class="gi-bar-budget" x="205.0" y="89.4" width="22" height="242.6" />
+  <rect class="gi-bar-actual" x="231.0" y="134.8" width="22" height="197.2" />
+  <text class="gi-variance" x="229.0" y="83.4" text-anchor="middle">19%</text>
+  <text class="gi-xtick" x="229.0" y="348.0" text-anchor="middle">FY16</text>
+  <rect class="gi-bar-budget" x="271.0" y="78.9" width="22" height="253.1" />
+  <rect class="gi-bar-actual" x="297.0" y="131.0" width="22" height="201.0" />
+  <text class="gi-variance" x="295.0" y="72.9" text-anchor="middle">21%</text>
+  <text class="gi-xtick" x="295.0" y="348.0" text-anchor="middle">FY17</text>
+  <rect class="gi-bar-budget" x="337.0" y="70.2" width="22" height="261.8" />
+  <rect class="gi-bar-actual" x="363.0" y="121.5" width="22" height="210.5" />
+  <text class="gi-variance" x="361.0" y="64.2" text-anchor="middle">20%</text>
+  <text class="gi-xtick" x="361.0" y="348.0" text-anchor="middle">FY18</text>
+  <rect class="gi-bar-budget" x="403.0" y="68.9" width="22" height="263.1" />
+  <rect class="gi-bar-actual" x="429.0" y="120.0" width="22" height="212.0" />
+  <text class="gi-variance" x="427.0" y="62.9" text-anchor="middle">19%</text>
+  <text class="gi-xtick" x="427.0" y="348.0" text-anchor="middle">FY19</text>
+  <rect class="gi-bar-budget" x="469.0" y="63.9" width="22" height="268.1" />
+  <rect class="gi-bar-actual" x="495.0" y="117.2" width="22" height="214.8" />
+  <text class="gi-variance" x="493.0" y="57.9" text-anchor="middle">20%</text>
+  <text class="gi-xtick" x="493.0" y="348.0" text-anchor="middle">FY20</text>
+  <rect class="gi-bar-budget" x="535.0" y="62.0" width="22" height="270.0" />
+  <rect class="gi-bar-actual" x="561.0" y="110.9" width="22" height="221.1" />
+  <text class="gi-variance" x="559.0" y="56.0" text-anchor="middle">18%</text>
+  <text class="gi-xtick" x="559.0" y="348.0" text-anchor="middle">FY21</text>
+  <rect class="gi-bar-budget" x="601.0" y="51.8" width="22" height="280.2" />
+  <rect class="gi-bar-actual" x="627.0" y="102.1" width="22" height="229.9" />
+  <text class="gi-variance" x="625.0" y="45.8" text-anchor="middle">18%</text>
+  <text class="gi-xtick" x="625.0" y="348.0" text-anchor="middle">FY22</text>
+  <rect class="gi-bar-budget" x="667.0" y="31.8" width="22" height="300.2" />
+  <rect class="gi-bar-actual" x="693.0" y="97.7" width="22" height="234.3" />
+  <text class="gi-variance" x="691.0" y="25.8" text-anchor="middle">22%</text>
+  <text class="gi-xtick" x="691.0" y="348.0" text-anchor="middle">FY23</text>
+  <rect class="gi-bar-budget" x="733.0" y="55.3" width="22" height="276.7" />
+  <rect class="gi-bar-actual" x="759.0" y="101.1" width="22" height="230.9" />
+  <text class="gi-variance" x="757.0" y="49.3" text-anchor="middle">17%</text>
+  <text class="gi-xtick" x="757.0" y="348.0" text-anchor="middle">FY24</text>
+  <rect class="gi-bar-budget" x="799.0" y="78.0" width="22" height="254.0" />
+  <rect class="gi-bar-actual" x="825.0" y="84.8" width="22" height="247.2" />
+  <text class="gi-variance" x="823.0" y="72.0" text-anchor="middle">3%</text>
+  <text class="gi-xtick" x="823.0" y="348.0" text-anchor="middle">FY25</text>
+</svg>
+</div>
+<div class="gi-legend">
+  <span><span class="gi-legend-swatch gi-legend-swatch-budget"></span> Budgeted (final appropriation)</span>
+  <span><span class="gi-legend-swatch gi-legend-swatch-actual"></span> Actually spent</span>
+</div>
+<p class="gi-caption">Source: Town of Marblehead Annual Comprehensive Financial Reports, FY14&ndash;FY25, "General Fund Schedule of Revenues, Expenditures and Changes in Fund Balances &ndash; Budget and Actual," Group Insurance line.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf" data-source="FY25 ACFR p.97 and FY14&ndash;FY24 ACFRs, same schedule. Underlying numbers in data/group_insurance_budget_vs_actual_FY14-25.csv"></sup></p>
+
+<h2>Where the surplus goes</h2>
+
+<p>The Town's audited financial reports describe the mechanism in unusually direct language. Five of the eleven <abbr class="g" title="Management's Discussion and Analysis">MD&amp;A</abbr> sections use a nearly identical formulation. Here is FY20, on Marblehead's FY20 results:</p>
+
+<blockquote class="gi-quote">
+  Appropriations exceeded actual expenditures and encumbrances by $4.2&thinsp;million mainly due to group insurance surplus of $2.8&thinsp;million; these surpluses were offset by the use of prior year resources to balance the 2020 budget.
+  <span class="gi-quote-attribution">Town of Marblehead FY20 ACFR, Management's Discussion and Analysis<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY20_ACFR.pdf" data-source="FY20 ACFR, Management's Discussion and Analysis. Substantively identical language appears in the FY16, FY17, FY19, and FY22 ACFRs."></sup></span>
+</blockquote>
+
+<p>"Prior year resources" is the auditor's term for free cash. Unspent appropriations close to fund balance at the end of the fiscal year on June&nbsp;30. The Massachusetts Department of Revenue then certifies a free cash amount each fall, and Town Meeting can re-appropriate that money the next spring. In Marblehead, the largest recurring use of free cash is a single warrant article titled some variation of <em>"Available Funds Appropriated to Reduce the Tax Rate."</em> That article reduces the amount that must be raised from the property tax levy to fund the <em>next</em> fiscal year's operating budget. Capital and stabilization use of free cash is much smaller; in FY22, the breakdown was roughly $8.79&thinsp;million to reduce the tax rate versus about $51,000 split between special articles and prior-year bills.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/FY22_ACFR.pdf" data-source="FY22 ACFR, Notes to the Required Supplementary Information and Other Budgetary Items schedule"></sup></p>
+
+<p>Group Insurance is not the only source of surplus. Other under-spends and revenue over-collections also flow into free cash. Insurance is, however, the single largest contributor that the auditor calls out by name almost every year, and it explains roughly a third of total free cash appropriated to balance the next year's budget.</p>
+
+<table class="gi-mech-table">
+  <thead>
+    <tr><th>Source FY</th><th class="gi-num">Insurance surplus</th><th class="gi-num">Next FY free cash used to balance budget</th><th class="gi-num">Insurance share</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>FY14</td><td class="gi-num">$1.43M</td><td class="gi-num">$4.50M (FY15)</td><td class="gi-num">32%</td></tr>
+    <tr><td>FY15</td><td class="gi-num">$2.32M</td><td class="gi-num">$5.46M (FY16)</td><td class="gi-num">42%</td></tr>
+    <tr><td>FY16</td><td class="gi-num">$2.39M</td><td class="gi-num">$6.03M (FY17)</td><td class="gi-num">40%</td></tr>
+    <tr><td>FY17</td><td class="gi-num">$2.74M</td><td class="gi-num">$7.10M (FY18)</td><td class="gi-num">39%</td></tr>
+    <tr><td>FY18</td><td class="gi-num">$2.70M</td><td class="gi-num">$7.90M (FY19)</td><td class="gi-num">34%</td></tr>
+    <tr><td>FY19</td><td class="gi-num">$2.69M</td><td class="gi-num">$8.58M (FY20)</td><td class="gi-num">31%</td></tr>
+    <tr><td>FY20</td><td class="gi-num">$2.81M</td><td class="gi-num">$7.20M (FY21)</td><td class="gi-num">39%</td></tr>
+    <tr><td>FY21</td><td class="gi-num">$2.57M</td><td class="gi-num">$8.79M (FY22)</td><td class="gi-num">29%</td></tr>
+    <tr><td>FY22</td><td class="gi-num">$2.65M</td><td class="gi-num">$10.20M (FY23)</td><td class="gi-num">26%</td></tr>
+    <tr><td>FY23</td><td class="gi-num">$3.47M</td><td class="gi-num">$8.00M (FY24)</td><td class="gi-num">43%</td></tr>
+    <tr><td>FY24</td><td class="gi-num">$2.41M</td><td class="gi-num">$6.50M (FY25)</td><td class="gi-num">37%</td></tr>
+    <tr><td>FY25</td><td class="gi-num">$0.36M</td><td class="gi-num">FY26 in progress</td><td class="gi-num">n/a</td></tr>
+  </tbody>
+</table>
+
+<p class="gi-caption">Free cash totals come from the General Fund Budgetary Comparison Schedule in each year's ACFR. The Town Meeting article that re-appropriated each year's free cash is the <em>"Available Funds Appropriated to Reduce the Tax Rate"</em> article in the corresponding Annual Town Meeting warrant. FY25 free cash drops to $0.36&thinsp;million from the prior decade's ~$2.5&thinsp;million; the recycling chain is effectively cut.<sup class="cite" data-href="/data/general_fund_budgetary_FY15-24.csv" data-source="data/general_fund_budgetary_FY15-24.csv (free cash appropriated, FY15&ndash;FY24, extracted from each ACFR); FY25 surplus calculated from FY25 ACFR p.97"></sup></p>
+
+<p>The Marblehead Finance Committee flagged this dynamic in its 2019 report, noting the town's growing structural reliance on prior-year surplus to balance the operating budget.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/2019_FinCom_Report.pdf" data-source="Marblehead Finance Committee Report, 2019 (page 14, Line 221 Group Insurance and surrounding commentary on reliance on prior-year resources)"></sup> Six years later, the FY25 ACFR's general-fund narrative drops the standard "insurance surplus" disclosure entirely and replaces it with: <em>"Operations of the general fund were consistent as revenues and expenditures approximated each other."</em><sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf" data-source="FY25 ACFR, Management's Discussion and Analysis, Financial Analysis of the Government's Funds section"></sup></p>
+
+<h2>How this compares to peer towns</h2>
+
+<p>Marblehead's Group Insurance pad is far larger than what comparable Massachusetts municipalities leave on the same line. The bars below show the most recently available <abbr class="g" title="Annual Comprehensive Financial Report">ACFR</abbr> for each town. Wellesley and Cohasset are clean apples-to-apples comparisons because their schedules isolate a single Health Insurance or Group Insurance line. Hingham's broader Employee Benefits line and Lexington's Insurance line bundle in other small items, so their numbers slightly overstate the true health-insurance pad.</p>
+
+<div class="gi-chart-wrap">
+<svg class="chart gi-peer-chart" viewBox="0 0 720 268" role="img" aria-label="Group Insurance under-spend percent across Marblehead and five peer Massachusetts towns">
+  <line class="gi-grid" x1="258.2" y1="14" x2="258.2" y2="244.0" />
+  <text class="gi-tick" x="258.2" y="262.0" text-anchor="middle">5%</text>
+  <line class="gi-grid" x1="376.4" y1="14" x2="376.4" y2="244.0" />
+  <text class="gi-tick" x="376.4" y="262.0" text-anchor="middle">10%</text>
+  <line class="gi-grid" x1="494.5" y1="14" x2="494.5" y2="244.0" />
+  <text class="gi-tick" x="494.5" y="262.0" text-anchor="middle">15%</text>
+  <line class="gi-grid" x1="612.7" y1="14" x2="612.7" y2="244.0" />
+  <text class="gi-tick" x="612.7" y="262.0" text-anchor="middle">20%</text>
+  <line class="gi-axis" x1="140" y1="14" x2="140" y2="244.0" />
+  <rect class="gi-peer-bar" x="140.0" y="19.8" width="1.5" height="21.4" />
+  <text class="gi-peer-label" x="132.0" y="34.4" text-anchor="end">Swampscott</text>
+  <text class="gi-peer-fy" x="147.5" y="34.4">FY24 &middot; 0.0%</text>
+  <rect class="gi-peer-bar" x="140.0" y="52.6" width="7.1" height="21.4" />
+  <text class="gi-peer-label" x="132.0" y="67.3" text-anchor="end">Cohasset</text>
+  <text class="gi-peer-fy" x="153.1" y="67.3">FY23 &middot; 0.3%</text>
+  <rect class="gi-peer-bar" x="140.0" y="85.5" width="35.5" height="21.4" />
+  <text class="gi-peer-label" x="132.0" y="100.1" text-anchor="end">Wellesley</text>
+  <text class="gi-peer-fy" x="181.5" y="100.1">FY24 &middot; 1.5%</text>
+  <rect class="gi-peer-bar" x="140.0" y="118.3" width="99.3" height="21.4" />
+  <text class="gi-peer-label" x="132.0" y="133.0" text-anchor="end">Hingham</text>
+  <text class="gi-peer-fy" x="245.3" y="133.0">FY25 &middot; 4.2%</text>
+  <rect class="gi-peer-bar" x="140.0" y="151.2" width="184.4" height="21.4" />
+  <text class="gi-peer-label" x="132.0" y="165.9" text-anchor="end">Lexington</text>
+  <text class="gi-peer-fy" x="330.4" y="165.9">FY24 &middot; 7.8%</text>
+  <rect class="gi-peer-bar-mh" x="140.0" y="184.0" width="391.2" height="21.4" />
+  <text class="gi-peer-label-mh" x="132.0" y="198.7" text-anchor="end">Marblehead</text>
+  <text class="gi-peer-fy" x="537.2" y="198.7">FY24 &middot; 16.6%</text>
+  <rect class="gi-peer-bar-mh" x="140.0" y="216.9" width="442.0" height="21.4" />
+  <text class="gi-peer-label-mh" x="132.0" y="231.6" text-anchor="end">Marblehead</text>
+  <text class="gi-peer-fy" x="588.0" y="231.6">11-yr avg FY14&ndash;FY24 &middot; 18.7%</text>
+</svg>
+</div>
+<p class="gi-caption">Each town's most recently available ACFR, Group Insurance or Employee Benefits line. Marblehead is shown twice: its FY24 single-year value (16.6%) and the average across all eleven years FY14&ndash;FY24 (18.7%). Sources: Swampscott FY24 audit p.91; Cohasset FY23 ACFR p.82; Wellesley FY24 Financial Report p.104; Hingham FY25 ACFR p.92; Lexington FY24 audit p.83.<sup class="cite" data-href="/data/peer_group_insurance_budget_vs_actual.csv" data-source="data/peer_group_insurance_budget_vs_actual.csv with line-label and scope caveats for each peer extraction"></sup></p>
+
+<p>Cohasset, Wellesley, and Swampscott all participate in the same state-administered <abbr class="g" title="Group Insurance Commission">GIC</abbr> plan that Marblehead joined in July 2012. Their <abbr class="g" title="Group Insurance Commission">GIC</abbr>-driven premium uncertainty is no smaller than Marblehead's, yet they true their budget up to within a couple of percent of actual. Swampscott is particularly worth noting: its FY24 Group Health Insurance line was originally budgeted at $7.53&thinsp;million and was de-appropriated mid-year by $826,405 to a revised $6.71&thinsp;million, almost exactly matching the eventual actual. That kind of mid-year true-up is what discipline on this line looks like; Marblehead's mid-year revisions on the same line are typically under $100K on a $14&thinsp;million budget.<sup class="cite" data-href="https://www.swampscottma.gov/DocumentCenter/View/1212/FY2024-Financial-Audit" data-source="Town of Swampscott FY24 Audit, General Fund Schedule of Revenues, Expenditures and Changes in Fund Balance &ndash; Budget and Actual, p.91 (Group Health Insurance line: original $7,532,701, final $6,706,296, actual $6,705,392)"></sup></p>
+
+<h2>FY25 broke the pattern</h2>
+
+<p>The FY25 ACFR, published in June 2026, shows the line behaving differently for the first time in twelve years. Three things changed at once:</p>
+
+<ol>
+  <li><strong>Mid-year true-up.</strong> The original $14.47&thinsp;million Group Insurance appropriation was de-appropriated by $1.11&thinsp;million during the year, taking the final budget down to $13.37&thinsp;million. In the prior decade, mid-year adjustments to this line never exceeded $130K. The FY25 reduction is the kind of action peer towns like Swampscott book annually.<sup class="cite" data-href="https://github.com/agbaber/marblehead/releases/download/source-archive-v1/fy25_acfr.pdf" data-source="FY25 ACFR p.97, Group Insurance line: original budget $14,473,518, final budget $13,367,136. Carryforward and other intra-year movement details on same page."></sup></li>
+  <li><strong>Actual came in close to revised.</strong> Spending was $13.0&thinsp;million, or 2.7% under the de-appropriated final &ndash; on par with Cohasset (0.3%), Wellesley (1.5%), and Swampscott (0.0%). It is the first year in twelve that Marblehead's Group Insurance line lands inside the peer-discipline range.</li>
+  <li><strong>The MD&amp;A drops the recycling clause.</strong> Every year FY16 through FY23 included some variant of the sentence: <em>"these surpluses were offset by the use of prior year resources to balance the [next] budget."</em> The FY25 ACFR does not. Its general-fund narrative reads: <em>"Operations of the general fund were consistent as revenues and expenditures approximated each other."</em></li>
+</ol>
+
+<p>FY26 in-progress data is consistent with the change holding rather than reversing. Through May&nbsp;29,&nbsp;2026, Group Insurance has spent $14.55&thinsp;million against a $15.20&thinsp;million budget; linear extrapolation to year-end gives roughly $15.88&thinsp;million, or 4% <em>over</em> the original budget.<sup class="cite" data-href="/data/budget_actual_FY26.json" data-source="data/budget_actual_FY26.json (Town checkbook export as of 2026-06-01, period end 2026-05-29)"></sup> If the FY25-style mid-year true-up repeats in FY26, the final budget will be revised up to reflect the actual cost; if it does not, FY26 will be the first year in a decade where the line ends <em>over</em> rather than under. Either way the historical 18%+ pad is gone.</p>
+
+<p>The likeliest mechanical drivers of the change: the <abbr class="g" title="Group Insurance Commission">GIC</abbr> premium hike of 11.1% effective July&nbsp;2025, plus tier-mix shifts and headcount changes, consumed the cushion that had been hidden in the prior decade's appropriation. Whatever the proximate cause, the operating budget no longer has a $2.5&thinsp;million-per-year cushion running through this line.</p>
+
+<h2>Three ways to read this</h2>
+
+<p>The numbers are not contested. The framing is.</p>
+
+<div class="gi-framings">
+  <article class="gi-framing gi-framing--defensible">
+    <h3>Defensible: this is how municipal finance works</h3>
+    <p>Premium rates are set in February for a July&ndash;June fiscal year. Healthcare claims experience is volatile. A conservative appropriation that turns back to free cash and is re-approved by Town Meeting is a standard tool a town can use to manage uncertainty without a separate health-insurance reserve fund. Every dollar was audited, disclosed in the MD&amp;A, and re-appropriated by an open Town Meeting vote. The FY25 mid-year true-up shows the town can also adjust the line down when it has better information.</p>
+  </article>
+  <article class="gi-framing gi-framing--critical">
+    <h3>Critical: a 19% pad is not actuarial uncertainty</h3>
+    <p>Peer towns with the same GIC plan and the same February rate-setting timeline true their budgets up to within 2% every year. An 18.7% pad sustained for eleven years is not a prudent cushion against claims volatility &ndash; it is a deliberate budgeting practice that produces a predictable, recyclable surplus. The Finance Committee itself flagged this in 2019 as a structural rather than incidental pattern. That Marblehead's pad collapsed to 2.7% in FY25 once the budget situation became politically visible is consistent with the practice having been a choice, not a constraint.</p>
+  </article>
+  <article class="gi-framing gi-framing--override">
+    <h3>Override-relevant: the cushion ran out in FY25</h3>
+    <p>If the operating budget was balanced for eleven years using a $2.5&thinsp;million-per-year surplus running through the insurance line, the right question about the FY27 override is not "are costs newly exploding?" but "is the surplus that used to balance the budget no longer there?" The FY25 numbers settle that question: the surplus is gone. The recycling that quietly funded the operating budget for a decade ended at the same moment the override appeared on the calendar.</p>
+  </article>
+</div>
+
+<h2>Open questions</h2>
+
+<ol>
+  <li><strong>Why did the practice change in FY25 specifically?</strong> FY25 closed June&nbsp;30,&nbsp;2025, six months before the FY27 override became a public conversation. The mid-year de-appropriation happened during the year, so the decision to true the line up predates the override debate, but not the FY26 budget tightening that drove it. No public document explains the change in posture.</li>
+  <li><strong>Why didn't the pad narrow sooner?</strong> Peer GIC towns track to within 2% of actual on the same line every year. The town's posted budget books since FY14 do not explain why Marblehead's pad ran four to fifty times larger for so long. The Finance Committee's 2019 report described the reliance on surplus but did not document an internal decision to maintain it.</li>
+  <li><strong>Are other line items doing the same thing on a smaller scale?</strong> The FY22 ACFR breakdown of total general-fund under-spend ($3.3&thinsp;million) versus the Group Insurance component ($2.6&thinsp;million) implies about $700K of additional pad spread across other lines. Identifying those lines would refine the "where did the cushion come from" picture.</li>
+  <li><strong>How will FY27 actual track against the $16.75&thinsp;million budget?</strong> If FY27 also lands within a couple of percent of its final budget, the 2.7% FY25 result is the new baseline. If FY27 under-spends substantially, the pattern has not actually ended &ndash; it just paused for a year.</li>
+</ol>
+
+<details class="notes">
+  <summary>Sources and methodology</summary>
+  <p><strong>FY14&ndash;FY25 budget vs actual.</strong> Each year's Group Insurance row was extracted from the General Fund Schedule of Revenues, Expenditures and Changes in Fund Balances &ndash; Budget and Actual in the corresponding Town of Marblehead ACFR. Original budget, final budget, actual, encumbrances, and variance are recorded in <code>data/group_insurance_budget_vs_actual_FY14-25.csv</code>. ACFR PDFs are at <a href="https://github.com/agbaber/marblehead/releases/tag/source-archive-v1">github.com/agbaber/marblehead/releases/source-archive-v1</a>.</p>
+  <p><strong>MD&amp;A quotes.</strong> Verbatim. The same clause about "use of prior year resources to balance the [next year's] budget" appears in the FY16, FY17, FY19, FY20, and FY22 ACFRs. The FY14, FY15, FY18, and FY23 ACFRs use slightly different wording but report the same mechanism. The FY25 ACFR drops the clause and instead says the general fund's revenues and expenditures "approximated each other."</p>
+  <p><strong>Free cash flow.</strong> Free cash appropriated to balance each subsequent year's budget comes from the General Fund Budgetary Comparison Schedule in each ACFR, captured in <code>data/general_fund_budgetary_FY15-24.csv</code>. FY25 used $6.5&thinsp;million in unassigned fund balance to balance the budget, down from $8.0&thinsp;million in FY24 and $10.2&thinsp;million in FY23.</p>
+  <p><strong>Peer town extractions.</strong> Swampscott FY24 audit (Group Health Insurance line, p.91, final budget de-appropriated mid-year from $7.53M original to $6.71M); Cohasset FY23 ACFR (Health Insurance line, p.82); Wellesley FY24 Financial Report (Group Insurance: Expenses line, p.104); Hingham FY25 ACFR (Employee Benefits aggregate line, p.92); Lexington FY24 audit (Insurance line aggregating health insurance with workers' compensation transfer to internal service fund, p.83). Raw data in <code>data/peer_group_insurance_budget_vs_actual.csv</code>.</p>
+  <p><strong>FY26 in-progress numbers.</strong> From the Town's checkbook export as of 2026-06-01, period end 2026-05-29, captured in <code>data/budget_actual_FY26.json</code>. The full-year projection is a linear extrapolation from month 11 of 12 and is approximate; insurance billings are roughly level monthly but not exactly.</p>
+  <p><strong>Definitions.</strong> "Group Insurance" on the Town's budget schedule is the Town's own appropriation for its share of employee and retiree health insurance premiums, net of payroll-withheld employee contributions. It is not the same as the gross GIC invoice total, which includes the employee share that retirees and active employees pay themselves and which never flows through the Town's appropriation.</p>
+</details>

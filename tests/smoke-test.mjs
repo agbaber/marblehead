@@ -36,9 +36,9 @@ async function testHomepageLoads(page) {
   }
 
   const tiles = await page.$$('.home-tile');
-  tiles.length === 6
-    ? ok(`6 pillar tiles on homepage (incl. 2026 override archive)`)
-    : fail('Homepage tiles', `expected 6 .home-tile, got ${tiles.length}`);
+  tiles.length === 9
+    ? ok(`9 pillar tiles on homepage (incl. the-insurance-surplus)`)
+    : fail('Homepage tiles', `expected 9 .home-tile, got ${tiles.length}`);
 
   const deeper = await page.$('.home-deeper');
   deeper ? ok('Homepage has Checkbook CTA') : fail('Homepage CTA', '.home-deeper missing');
@@ -377,6 +377,45 @@ async function testTownBudgetPageLoads(page) {
   }
 }
 
+async function testWhatIsActuallyFlexiblePageLoads(page) {
+  console.log('\n── What is Actually Flexible page ──');
+  const resp = await page.goto(`${SITE}/what-is-actually-flexible.html`, { waitUntil: 'domcontentloaded' });
+  resp && resp.status() === 200
+    ? ok('Page returns 200')
+    : fail('what-is-actually-flexible', `status ${resp ? resp.status() : 'no response'}`);
+
+  const h1 = await page.$('h1');
+  h1 ? ok('Page has an h1') : fail('h1', 'missing');
+
+  // Lead claim renders with all three Liquid-computed dollar values
+  const claimStats = await page.$$('.waf-claim-stat');
+  claimStats.length === 3
+    ? ok('Lead claim renders three computed dollar values')
+    : fail('Lead claim stats', `expected 3 .waf-claim-stat spans, got ${claimStats.length}`);
+
+  // Three tier cards
+  const tierCards = await page.$$('.waf-tier-card');
+  tierCards.length === 3
+    ? ok('Three tier cards present')
+    : fail('Tier cards', `expected 3 .waf-tier-card, got ${tierCards.length}`);
+
+  // Two FTE archetype columns
+  const fteCols = await page.$$('.waf-fte-col');
+  fteCols.length === 2
+    ? ok('Two FTE archetype columns present')
+    : fail('FTE columns', `expected 2 .waf-fte-col, got ${fteCols.length}`);
+
+  // Translator math
+  await page.fill('#waf-cut-amount', '1000000');
+  // Default selection is the first archetype (teacher: total $115,540)
+  const resultText = await page.$eval('#waf-translator-result', el => el.textContent);
+  const m = resultText.match(/(\d+)/);
+  const positions = m ? parseInt(m[1], 10) : 0;
+  (positions >= 5 && positions <= 15)
+    ? ok(`Translator reports ≈ ${positions} positions for $1M teacher cut`)
+    : fail('Translator math', `expected 5-15 positions for $1M, got "${resultText}"`);
+}
+
 async function testGeneralGovernmentPeerChart(page) {
   console.log('\n── General Government peer chart (in where-has-money-gone) ──');
   await page.goto(SITE + '/where-has-the-money-gone.html', { waitUntil: 'domcontentloaded' });
@@ -569,6 +608,98 @@ async function testTermsPageLoads(page) {
     : fail('terms h1', `expected "Terms of Use", got "${h1Text}"`);
 }
 
+// ── /browse/ ───────────────────────────────────────────────────────────
+
+async function testBrowseIndex(page) {
+  console.log('\n── /browse/ ──');
+  const res = await page.goto(`${SITE}/browse/`, { waitUntil: 'domcontentloaded' });
+  res && res.status() === 200 ? ok('/browse/ → 200') : fail('/browse/', `status ${res ? res.status() : 'no response'}`);
+  const cards = await page.$$('.browse-card');
+  cards.length === 4 ? ok('4 entity cards') : fail('Browse cards', `expected 4, got ${cards.length}`);
+}
+
+async function testBrowseEntity(page, slug, minRows) {
+  console.log(`\n── /browse/${slug}/ ──`);
+  const res = await page.goto(`${SITE}/browse/${slug}/`, { waitUntil: 'networkidle' });
+  res && res.status() === 200 ? ok(`/browse/${slug}/ → 200`) : fail(`/browse/${slug}/`, `status ${res ? res.status() : 'no response'}`);
+
+  // Shell.
+  const breadcrumb = await page.$('.browse-breadcrumb');
+  breadcrumb ? ok('Breadcrumb present') : fail('Breadcrumb', 'missing');
+  const search = await page.$('.browse-search');
+  search ? ok('Search input present') : fail('Search input', 'missing');
+  const navItems = await page.$$('.browse-nav-item');
+  navItems.length === 5 ? ok('Left nav has 5 entities') : fail('Left nav', `got ${navItems.length}`);
+
+  // Wait for sql.js to load and render rows.
+  try {
+    await page.waitForSelector('.browse-table tbody tr', { timeout: 15000 });
+  } catch (_) {
+    fail(`${slug} table`, 'no rows rendered within 15s');
+    return;
+  }
+  const rows = await page.$$('.browse-table tbody tr');
+  rows.length >= minRows
+    ? ok(`${rows.length} rows rendered (>= ${minRows})`)
+    : fail(`${slug} rows`, `expected at least ${minRows}, got ${rows.length}`);
+}
+
+async function testVendorDetail(page) {
+  console.log('\n── /browse/vendors/#<slug> (detail) ──');
+  await page.goto(`${SITE}/browse/vendors/#hilltop-securities-inc`, { waitUntil: 'networkidle' });
+  try {
+    await page.waitForSelector('.detail-header h2', { timeout: 15000 });
+  } catch (_) {
+    fail('vendor detail', 'no header rendered within 15s');
+    return;
+  }
+  const header = (await page.textContent('.detail-header h2')).trim();
+  header.length > 0
+    ? ok(`Vendor detail header rendered: "${header}"`)
+    : fail('vendor detail header', 'empty');
+  const rows = await page.$$('.detail-payments tbody tr');
+  rows.length > 0
+    ? ok(`${rows.length} payment rows in vendor detail`)
+    : fail('vendor detail payments', 'none');
+}
+
+async function testDeptDetail(page) {
+  console.log('\n── /browse/dept/#<slug> (detail) ──');
+  await page.goto(`${SITE}/browse/dept/#electric-enterprise`, { waitUntil: 'networkidle' });
+  try {
+    await page.waitForSelector('.detail-header h2', { timeout: 15000 });
+  } catch (_) {
+    fail('dept detail', 'no header rendered within 15s');
+    return;
+  }
+  const header = (await page.textContent('.detail-header h2')).trim();
+  /ELECTRIC ENTERPRISE/i.test(header)
+    ? ok(`Dept detail header reads "${header}"`)
+    : fail('dept detail header', `expected ELECTRIC ENTERPRISE, got "${header}"`);
+  const vendorRows = await page.$$('.detail-top-vendors tbody tr');
+  vendorRows.length > 0
+    ? ok(`${vendorRows.length} top-vendor rows`)
+    : fail('dept detail top vendors', 'none');
+}
+
+async function testTopicMeetingCounts(page) {
+  console.log('\n── /browse/topics/ meeting_count > 0 ──');
+  await page.goto(`${SITE}/browse/topics/`, { waitUntil: 'networkidle' });
+  try {
+    await page.waitForSelector('.browse-table tbody tr', { timeout: 10000 });
+  } catch (_) {
+    fail('topics counts', 'no rows rendered');
+    return;
+  }
+  const counts = await page.$$eval('.browse-table tbody tr td:nth-child(3)', els =>
+    els.map(e => parseInt((e.textContent || '0').trim(), 10) || 0)
+  );
+  const nonZero = counts.filter(c => c > 0).length;
+  nonZero > 0
+    ? ok(`${nonZero}/${counts.length} topics have non-zero meeting_count`)
+    : fail('topics counts', 'all zero');
+}
+
 // ── Run ────────────────────────────────────────────────────────────────
 
 (async () => {
@@ -584,6 +715,7 @@ async function testTermsPageLoads(page) {
     await testGeneralGovernmentPeerChart(page1);
     await testSchoolAgeVsEnrollment(page1);
     await testTownBudgetPageLoads(page1);
+    await testWhatIsActuallyFlexiblePageLoads(page1);
     await testM101Landing(page1);
     await testM101ChapterPages(page1);
     await testM101NavLink(page1);
@@ -592,6 +724,14 @@ async function testTermsPageLoads(page) {
     await testVouchRequestPageLoads(page1);
     await testVouchPageLoads(page1);
     await testTermsPageLoads(page1);
+    await testBrowseIndex(page1);
+    await testBrowseEntity(page1, 'topics', 10);
+    await testBrowseEntity(page1, 'meetings', 30);
+    await testBrowseEntity(page1, 'budget', 30);
+    await testBrowseEntity(page1, 'vendors', 50);
+    await testVendorDetail(page1);
+    await testDeptDetail(page1);
+    await testTopicMeetingCounts(page1);
     await ctx1.close();
   } finally {
     await browser.close();
