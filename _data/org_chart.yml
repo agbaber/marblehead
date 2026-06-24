@@ -18,7 +18,7 @@
 # is descriptive of the structure, not a staff directory.
 
 key_stats:
-  snapshot: "2026-06-14"
+  snapshot: "2026-06-22"
   town_departments: 22
   school_buildings: 5
   elected_seats: 41
@@ -1556,7 +1556,8 @@ schools:
 
 boards:
   emphasized:
-    - name: "Select Board"
+    - id: select_board
+      name: "Select Board"
       kind: "elected"
       seats: 5
       term_years: 3
@@ -1573,7 +1574,61 @@ boards:
         three-tier override package before voters.
       source_url: "https://marbleheadma.gov/selectboard-office/"
       source_label: "Town of Marblehead, Select Board Office"
-    - name: "School Committee"
+      sitting:
+        - name: "Erin Marie Noonan"
+          since: 2021
+          since_note: "First elected June 2021; re-elected at the June 9, 2026 Annual Town Election with 4,854 votes (the field leader)."
+          term_ends: 2029
+        - name: "Rossana Ferrante"
+          since: 2026
+          since_note: "Newly elected at the June 9, 2026 Annual Town Election with 4,387 votes. Previously served on the Recreation & Park Commission. Replaces Alexa J. Singer (2021-2026), who did not run for re-election."
+          term_ends: 2029
+        - name: "Moses Grader"
+          since: 2017
+          since_note: "Elected May 2017 to fill the seat Bret Murray vacated, per Annual Report 2017."
+          term_ends: 2027
+        - name: "Daniel Fox"
+          since: 2024
+          term_ends: 2027
+        - name: "James Richard Zisson"
+          since: 2025
+          since_note: "Elected to a three-year term at the June 2025 Annual Election."
+          term_ends: 2028
+      decision_flow_data:
+        hires_executive:
+          title: "Town Administrator"
+          incumbent:
+            name: "Thatcher W. Kezer III"
+            since: 2022
+            since_note: "Began as Town Administrator in June 2022 per the Annual Report 2025."
+            until: 2026
+            until_note: >-
+              Retiring effective December 31, 2026. Announced June 15,
+              2026 per the Marblehead Current and Itemlive. His three-year
+              contract (signed June 2025) was set to run through June 2028;
+              he is departing about 1 1/2 years early. The Select Board has
+              begun the recruitment process for a successor.
+            until_badge: "retiring Dec 31, 2026"
+        reach: >-
+          ~20 town departments, but only through the Town Administrator.
+          Day-to-day operations are the TA's job, not the board's.
+        can:
+          - "Place a Prop 2 1/2 override on the ballot"
+          - "Sign the Town Meeting warrant"
+          - "Appoint the Finance Committee and most non-school boards and committees"
+          - "Hire, evaluate, and fire the Town Administrator"
+        cannot:
+          - "Direct the schools, set the school budget, or hire any school staff"
+          - "Direct the Light Department or set electric rates"
+        sources:
+          - url: "https://marbleheadma.gov/wp-content/uploads/2026/06/Town-election-official-results-June-9-2026.pdf"
+            label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (saved at data/town_docs/elections/2026-06-09-town-election-official-results.pdf): Erin Noonan re-elected (4,854 votes) and Rossana Ferrante newly elected (4,387 votes) to three-year terms."
+          - url: "https://marbleheadma.gov/wp-content/uploads/2026/05/Annual-Report-2025.pdf"
+            label: "Town of Marblehead 2025 Annual Report (data/town_docs/annual_reports/Annual-Report-2025.txt, pages 93-100): roster of Moses Grader (term 2027), Daniel Fox (term 2027), and James Richard Zisson (term 2028); Thatcher W. Kezer III as Town Administrator since June 2022."
+          - url: "https://marbleheadcurrent.org/2026/06/15/breaking-news-town-administrator-announces-resignation-at-end-of-year/"
+            label: "Marblehead Current, June 15, 2026: Town Administrator Thatcher W. Kezer III announces retirement effective December 31, 2026, leaving 1 1/2 years before his three-year contract was set to end."
+    - id: school_committee
+      name: "School Committee"
       kind: "elected"
       seats: 5
       term_years: 3
@@ -1591,7 +1646,57 @@ boards:
         ballot themselves; that is the Select Board's role.
       source_url: "https://www.marbleheadschools.org/school-committee"
       source_label: "Marblehead Public Schools, School Committee page; member count and term from /school-committee/committee-subcommittee-members"
-    - name: "Finance Committee"
+      sitting:
+        - name: "Melissa Clucas"
+          since: 2025
+          since_note: "First joined the committee in 2025 by appointment to fill Brian Scott Ota's vacancy (he resigned July 2025; she was seated by the December 18, 2025 SC meeting). Elected to a full three-year term at the June 9, 2026 Annual Town Election with 5,305 votes."
+          term_ends: 2029
+        - name: "Ann Marie Jordan"
+          since: 2026
+          since_note: "Newly elected at the June 9, 2026 Annual Town Election with 5,088 votes. Replaces Jennifer Schaeffner (2023-2026), who ran for Select Board instead but did not win."
+          term_ends: 2029
+        - name: "Al Williams"
+          since: 2024
+          since_note: "Listed as Alfred Williams in the Annual Report rosters; goes by Al in School Committee minutes and meetings."
+          term_ends: 2027
+        - name: "Kate Schmeckpeper"
+          since: 2025
+          since_note: "Listed as Katherine B. Schmeckpeper in the Annual Report and on the ballot; goes by Kate in School Committee meetings."
+          term_ends: 2028
+        - name: "Henry Gwazda"
+          since: 2025
+          term_ends: 2028
+      decision_flow_data:
+        hires_executive:
+          title: "Superintendent"
+          incumbent:
+            name: "John Robidoux"
+            since: 2025
+            since_note: "Permanent Superintendent under a three-year contract effective July 1, 2025; previously served as Interim Superintendent."
+            until: 2028
+            until_note: "Three-year contract through June 30, 2028 per data/schools/superintendent/john-robidoux-contract.txt."
+        reach: >-
+          ~430 school staff, but only through the Superintendent. The
+          Superintendent is the sole employer for every teacher,
+          principal, and aide in the district.
+        can:
+          - "Set the school operating budget request that goes to Town Meeting"
+          - "Approve collective bargaining agreements with school unions"
+          - "Hire, evaluate, and fire the Superintendent"
+        cannot:
+          - "Hire or fire any teacher, principal, or other school staff (the 1993 Massachusetts Education Reform Act assigns that authority to the Superintendent)"
+          - "Place an override on the ballot (that is the Select Board's role)"
+        sources:
+          - url: "https://marbleheadma.gov/wp-content/uploads/2026/06/Town-election-official-results-June-9-2026.pdf"
+            label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (data/town_docs/elections/2026-06-09-town-election-official-results.pdf): Melissa Clucas (5,305 votes) and Ann Marie Jordan (5,088 votes) elected to three-year terms; Jennifer Schaeffner ran for Select Board instead (2,611 votes) and did not win."
+          - url: "https://marbleheadma.gov/wp-content/uploads/2026/05/Annual-Report-2025.pdf"
+            label: "Town of Marblehead 2025 Annual Report (data/town_docs/annual_reports/Annual-Report-2025.txt, page 95): roster of Alfred Williams (term 2027), Katherine B. Schmeckpeper (term 2028), and Henry Gwazda (term 2028)."
+          - url: "https://www.marbleheadschools.org/superintendent"
+            label: "John Robidoux Superintendent contract effective July 1, 2025 through June 30, 2028 (data/schools/superintendent/john-robidoux-contract.txt); previously served as Interim Superintendent."
+          - url: "https://www.marbleheadschools.org/school-committee"
+            label: "Marblehead School Committee meeting minutes, December 18, 2025 (data/schools/sc-meetings-fy26/minutes-12-18-2025.txt): first meeting at which Melissa Clucas is listed as a sitting committee member, by appointment to fill the Brian Ota vacancy."
+    - id: finance_committee
+      name: "Finance Committee"
       kind: "appointed"
       appointed_by: "Select Board"
       seats: 9
@@ -1613,8 +1718,38 @@ boards:
         (data/minutes/select_board/2026-01-14.cleaned.txt and others
         confirm Select Board appointments)
       note: "In most Massachusetts towns the Finance Committee is appointed by the Town Moderator. In Marblehead it is appointed by the Select Board."
+      sitting:
+        - name: "Michael Janko"
+          term_ends: 2028
+        - name: "Timothy Shotmeyer"
+          term_ends: 2028
+        - name: "Pat Franklin"
+          term_ends: 2027
+        - name: "Molly Teets"
+          term_ends: 2027
+        - name: "Mike O'Neil"
+          term_ends: 2027
+        - name: "Eric Knight"
+          term_ends: 2026
+          stale: true
+        - name: "Alec Goolsby"
+          term_ends: 2026
+          stale: true
+        - name: "Lindsay Dube"
+          term_ends: 2026
+          stale: true
+      sitting_note: >-
+        Roster as of the 2025 Annual Report. The Select Board reappoints
+        three-year FinCom seats each summer; reappointments for terms
+        ending 2026 (Knight, Goolsby, Dube) would have been voted on
+        after this page was built but the certified Select Board minutes
+        from after February 2026 are not yet in the repo.
+      sitting_sources:
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/05/Annual-Report-2025.pdf"
+          label: "Town of Marblehead 2025 Annual Report, Finance Committee section (data/town_docs/annual_reports/Annual-Report-2025.txt, lines 5373-5381): rosters of Michael Janko, Timothy Shotmeyer, Eric Knight, Alec Goolsby, Lindsay Dube, Pat Franklin, Molly Teets, and Mike O'Neil. Terra Samuels term expired June 2025 per the same page."
   other:
-    - name: "Town Moderator"
+    - id: town_moderator
+      name: "Town Moderator"
       kind: "elected"
       seats: 1
       term_years: 1
@@ -1625,7 +1760,16 @@ boards:
       cadence: "Active at Town Meetings and called Special Town Meetings"
       source_url: "https://marbleheadma.gov/moderator/"
       source_label: "Town of Marblehead, Town Moderator page"
-    - name: "Town Clerk"
+      sitting:
+        - name: "Jack Attridge"
+          since: 2022
+          since_note: "Listed as John G. Attridge on ballots and in Annual Report rosters; goes by Jack in body text of the same report and in town communications. First listed as Town Moderator in the 2022 Annual Report; turned back a challenge from Peter Jaffe at the June 9, 2026 Annual Town Election, 5,126 votes to 2,105."
+          term_ends: 2027
+      sitting_sources:
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/06/Town-election-official-results-June-9-2026.pdf"
+          label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (data/town_docs/elections/2026-06-09-town-election-official-results.pdf): John G. Attridge (Jack) re-elected as Town Moderator with 5,126 votes vs Peter Jaffe 2,105."
+    - id: town_clerk
+      name: "Town Clerk"
       kind: "elected"
       seats: 1
       term_years: 3
@@ -1636,7 +1780,16 @@ boards:
       cadence: "Office function; not a deliberative board"
       source_url: "https://marbleheadma.gov/town-clerk/"
       source_label: "Town of Marblehead, Town Clerk page"
-    - name: "Planning Board"
+      sitting:
+        - name: "Robin A. Michaud"
+          since: 2007
+          since_note: "First listed as Town Clerk in the 2007 Annual Report; the longest-tenured elected official on this page."
+          term_ends: 2028
+      sitting_sources:
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/05/Annual-Report-2025.pdf"
+          label: "Town of Marblehead 2025 Annual Report (data/town_docs/annual_reports/Annual-Report-2025.txt, line 4927): Robin A. Michaud, term expires 2028. Tenure-start year derived from scripts/extract_officials_history.py greping prior annual reports."
+    - id: planning_board
+      name: "Planning Board"
       kind: "elected"
       seats: 5
       term_years: null
@@ -1644,7 +1797,9 @@ boards:
         Marblehead's Town Planning Board page describes a five-member
         elected board including a Chair and Associate Member but does
         not publish term length on its page. Statutory default under
-        MGL c.41 sec.81A is 5 years.
+        MGL c.41 sec.81A is 5 years, but the term-end pattern in the
+        Annual Report (2026, 2027, 2027, 2028) is consistent with
+        3-year staggered terms.
       decides: >-
         Approves land divisions, nonresidential buildings over 700 sq ft,
         residential construction over 500 sq ft in shoreline/harbor
@@ -1653,19 +1808,64 @@ boards:
       cadence: "Monthly meetings"
       source_url: "https://marbleheadma.gov/town-planning-board/"
       source_label: "Town of Marblehead, Town Planning Board"
-    - name: "Board of Health"
-      kind: "appointed"
-      appointed_by: "Select Board"
+      sitting:
+        - name: "Edward Nilsson"
+          since: 2008
+          since_note: "First listed in the 2008 Annual Report; longest-tenured Planning Board member."
+          term_ends: 2028
+        - name: "Barton Hyte"
+          since: 2015
+          term_ends: 2027
+        - name: "Andrew G. Christensen"
+          since: 2018
+          term_ends: 2027
+        - name: "Robert John Schaeffner Jr."
+          since: 2014
+          since_note: "First listed in the 2014 Annual Report; re-elected at the June 9, 2026 Annual Town Election with 4,127 votes."
+          term_ends: 2029
+        - name: "Marc J. Liebman"
+          since: 2023
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 5,073 votes (the field leader)."
+          term_ends: 2029
+      sitting_sources:
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/06/Town-election-official-results-June-9-2026.pdf"
+          label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (data/town_docs/elections/2026-06-09-town-election-official-results.pdf): Marc J. Liebman (5,073 votes) and Robert John Schaeffner Jr. (4,127 votes) re-elected to the Planning Board."
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/05/Annual-Report-2025.pdf"
+          label: "Town of Marblehead 2025 Annual Report (data/town_docs/annual_reports/Annual-Report-2025.txt, lines 4991-4995): roster of Edward Nilsson (term 2028), Barton Hyte (term 2027), and Andrew G. Christensen (term 2027)."
+    - id: board_of_health
+      name: "Board of Health"
+      kind: "elected"
       seats: 3
-      term_years: null
-      term_years_null_reason: "Term length not published on the Board of Health page."
+      term_years: 3
       decides: >-
         Enforces state and local health regulations, licenses food
         establishments, oversees septic and tobacco regulations, and
         responds to public health emergencies.
       cadence: "Second Tuesday of each month at 7:30 pm (Mary Alley Municipal Building)"
       source_url: "https://marbleheadma.gov/board-of-health/"
-      source_label: "Town of Marblehead, Board of Health"
+      source_label: "Town of Marblehead, Board of Health; Board of Health appears in the ELECTED OFFICIALS section of every Annual Report and on the June 9, 2026 town election ballot, so kind is 'elected' (not appointed)."
+      sitting:
+        - name: "Thomas R. McMahon"
+          since: 2023
+          since_note: "First listed in the 2023 Annual Report; re-elected at the June 9, 2026 Annual Town Election with 4,627 votes (the field leader)."
+          term_ends: 2029
+        - name: "Julie B. Selbst"
+          since: 2026
+          since_note: "Newly elected at the June 9, 2026 Annual Town Election with 4,121 votes."
+          term_ends: 2029
+        - name: "Kristin Elizabeth Dubay Horton"
+          since: 2026
+          since_note: "Newly elected to the Board of Health at the June 9, 2026 Annual Town Election with 3,810 votes; previously served on the Housing Authority."
+          term_ends: 2029
+      sitting_note: >-
+        All three Board of Health seats were on the June 2026 ballot;
+        the previous incumbents Amanda R. Ritvo (term 2028) and Thomas
+        Andrew Massaro (term 2027) presumably resigned before the
+        election, but the resignation minutes were not in the repo
+        when this page was built.
+      sitting_sources:
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/06/Town-election-official-results-June-9-2026.pdf"
+          label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (data/town_docs/elections/2026-06-09-town-election-official-results.pdf): three Board of Health seats elected with Thomas R. McMahon (4,627), Julie B. Selbst (4,121), and Kristin Elizabeth Dubay Horton (3,810)."
     - name: "Board of Assessors"
       kind: "appointed"
       appointed_by: "Select Board"
@@ -1714,7 +1914,8 @@ boards:
       cadence: "Monthly meetings"
       source_url: "https://marbleheadma.gov/historical-commission/"
       source_label: "Town of Marblehead, Historical Commission"
-    - name: "Recreation & Park Commission"
+    - id: recreation_park
+      name: "Recreation & Park Commission"
       kind: "elected"
       seats: 5
       term_years: 1
@@ -1728,7 +1929,36 @@ boards:
         Town of Marblehead, Recreation & Parks Department; election
         warrant in Select Board minutes 2025-05-06 confirms 5 seats for
         1-year terms
-    - name: "Cemetery Commission"
+      sitting:
+        - name: "Christopher E. Kennedy"
+          since: 2026
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 4,708 votes (the field leader)."
+          term_ends: 2027
+        - name: "Shelly Curran Bedrossian"
+          since: 2026
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 4,286 votes."
+          term_ends: 2027
+        - name: "Larry J. Simpson"
+          since: 2026
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 4,082 votes."
+          term_ends: 2027
+        - name: "Michael Ryan McCarthy"
+          since: 2026
+          since_note: "Newly elected at the June 9, 2026 Annual Town Election with 4,005 votes."
+          term_ends: 2027
+        - name: "Karin Linnea Ernst"
+          since: 2026
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 3,945 votes."
+          term_ends: 2027
+      sitting_note: >-
+        All five seats are 1-year terms decided each annual election.
+        Rossana Ferrante (2024-2025 on this commission) left mid-2026
+        to run for Select Board and won.
+      sitting_sources:
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/06/Town-election-official-results-June-9-2026.pdf"
+          label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (data/town_docs/elections/2026-06-09-town-election-official-results.pdf): all five Recreation & Park Commission seats elected (Vote 5) with Kennedy, Bedrossian, McCarthy, Simpson, and Ernst winning; Kenneth S. Klaiman (2,517 votes) did not place."
+    - id: cemetery_commission
+      name: "Cemetery Commission"
       kind: "elected"
       seats: 3
       term_years: 3
@@ -1738,7 +1968,25 @@ boards:
       cadence: "Quarterly or as needed"
       source_url: "https://marbleheadma.gov/cemetery-commission/"
       source_label: "Town of Marblehead, Cemetery Commission"
-    - name: "Light Commission"
+      sitting:
+        - name: "David J. Meyer"
+          since: 2025
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 5,598 votes (uncontested)."
+          term_ends: 2029
+        - name: "David C. Rodgers"
+          since: 2025
+          term_ends: 2027
+        - name: "Sally Bull Sands"
+          since: 2026
+          since_note: "Newly elected to fill Gerald P. Tucker's vacancy (he resigned December 2025) at the June 9, 2026 Annual Town Election with 3,669 votes; the ballot listed this as a two-year unexpired term."
+          term_ends: 2028
+      sitting_sources:
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/06/Town-election-official-results-June-9-2026.pdf"
+          label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (data/town_docs/elections/2026-06-09-town-election-official-results.pdf): David J. Meyer re-elected (5,598 votes); Sally Bull Sands elected to a 2-year unexpired term (3,669 votes vs Rosa A. McCarthy 2,451)."
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/05/Annual-Report-2025.pdf"
+          label: "Town of Marblehead 2025 Annual Report (data/town_docs/annual_reports/Annual-Report-2025.txt, lines 4939-4941): David C. Rodgers (term 2027); Gerald P. Tucker noted as resigned 12/2025."
+    - id: light_commission
+      name: "Light Commission"
       kind: "elected"
       seats: 5
       term_years: 3
@@ -1753,8 +2001,55 @@ boards:
         Town of Marblehead 2025 Annual Report, MMLD chapter (page 245)
         signs out with five commissioners (Chair, Vice Chair, Secretary,
         and two Members); the 2024 MMLD Annual Report likewise lists five.
-        The earlier "3 seats" figure on this page was incorrect.
-    - name: "Board of Water & Sewer Commissioners"
+        The earlier '3 seats' figure on this page was incorrect.
+      sitting:
+        - name: "Michael A. Hull"
+          since: 2013
+          since_note: "First listed in Annual Report 2013; longest-tenured commissioner."
+          term_ends: 2028
+        - name: "Simon David Frechette"
+          since: 2021
+          term_ends: 2027
+        - name: "Adam Robert Smith"
+          since: 2023
+          term_ends: 2027
+        - name: "Jean-Jacques Yarmoff"
+          since: 2023
+          term_ends: 2028
+        - name: "Matthew B. Harrington"
+          since: 2025
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 5,356 votes (uncontested)."
+          term_ends: 2029
+      decision_flow_data:
+        hires_executive:
+          title: "General Manager"
+          incumbent:
+            name: "Jonathan Blair"
+            since: 2025
+            since_note: "Started September 29, 2025 under a five-year contract with the Light Commission, per the Marblehead Current (July 23, 2025) and Marblehead Independent (September 2025)."
+            until: 2030
+            until_note: "Five-year contract from September 29, 2025 through approximately September 2030."
+        reach: >-
+          19 employees through the General Manager. A separate municipal
+          enterprise governed by the commission, not by the town.
+        can:
+          - "Set electric rates"
+          - "Approve MMLD's budget directly"
+          - "Hire, evaluate, and fire the General Manager"
+        cannot:
+          - "Spend property-tax revenue (MMLD is ratepayer-funded)"
+          - "Be directed by the Select Board, Town Administrator, or Town Meeting on operations"
+        sources:
+          - url: "https://marbleheadma.gov/wp-content/uploads/2026/06/Town-election-official-results-June-9-2026.pdf"
+            label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (data/town_docs/elections/2026-06-09-town-election-official-results.pdf): Matthew B. Harrington re-elected to a three-year term (5,356 votes, uncontested)."
+          - url: "https://marbleheadma.gov/wp-content/uploads/2026/05/Annual-Report-2025.pdf"
+            label: "Town of Marblehead 2025 Annual Report, MMLD chapter (data/town_docs/annual_reports/Annual-Report-2025.txt): roster of Michael A. Hull (term 2028), Simon David Frechette (term 2027), Adam Robert Smith (term 2027), and Jean-Jacques Yarmoff (term 2028)."
+          - url: "https://marbleheadcurrent.org/2025/07/23/marblehead-taps-ex-ipswich-chief-as-new-light-manager/"
+            label: "Marblehead Current, July 23, 2025: the Light Commission unanimously voted to hire Jon Blair as the next General Manager under a five-year contract."
+          - url: "https://www.marbleheadindependent.com/marbleheads-mmld-general-manager-starts-sept-29/"
+            label: "Marblehead Independent, September 2025: Jon Blair starts as General Manager on September 29, 2025."
+    - id: water_sewer_commission
+      name: "Board of Water & Sewer Commissioners"
       kind: "elected"
       seats: 5
       term_years: 3
@@ -1765,7 +2060,32 @@ boards:
       cadence: "Monthly meetings"
       source_url: "https://marbleheadma.gov/water-sewer-commission/"
       source_label: "Town of Marblehead, Water & Sewer Commission"
-    - name: "Abbot Public Library Board of Trustees"
+      sitting:
+        - name: "Thomas L. Murray"
+          since: 2017
+          since_note: "First listed in the 2017 Annual Report."
+          term_ends: 2028
+        - name: "James T. Maher"
+          since: 2025
+          term_ends: 2028
+        - name: "Gregory Arthur Bates"
+          since: 2024
+          term_ends: 2027
+        - name: "Gregory W. Burt"
+          since: 2025
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 5,076 votes (the field leader)."
+          term_ends: 2029
+        - name: "Barton Hyte"
+          since: 2020
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 4,885 votes. Also serves on the Planning Board."
+          term_ends: 2029
+      sitting_sources:
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/06/Town-election-official-results-June-9-2026.pdf"
+          label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (data/town_docs/elections/2026-06-09-town-election-official-results.pdf): Gregory W. Burt (5,076 votes) and Barton Hyte (4,885 votes) re-elected to the Water & Sewer Commission."
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/05/Annual-Report-2025.pdf"
+          label: "Town of Marblehead 2025 Annual Report (data/town_docs/annual_reports/Annual-Report-2025.txt, lines 5029-5033): Thomas L. Murray (term 2028), James T. Maher (term 2028), and Gregory Arthur Bates (term 2027)."
+    - id: library_trustees
+      name: "Abbot Public Library Board of Trustees"
       kind: "elected"
       seats: 6
       term_years: 3
@@ -1776,6 +2096,33 @@ boards:
       cadence: "Monthly meetings"
       source_url: "https://abbotlibrary.org/"
       source_label: "Abbot Public Library; six elected trustees on staggered 3-year terms"
+      sitting:
+        - name: "David F. Ross"
+          since: 2017
+          since_note: "First listed in the 2017 Annual Report."
+          term_ends: 2027
+        - name: "John G. Williams"
+          since: 2021
+          term_ends: 2027
+        - name: "Marjorie Norman"
+          since: 2025
+          term_ends: 2028
+        - name: "Kathleen A. Waslov"
+          since: 2025
+          term_ends: 2028
+        - name: "Katherine H. Barker"
+          since: 2023
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 5,113 votes (the field leader)."
+          term_ends: 2029
+        - name: "Gary J. Amberik"
+          since: 2022
+          since_note: "Re-elected at the June 9, 2026 Annual Town Election with 4,907 votes."
+          term_ends: 2029
+      sitting_sources:
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/06/Town-election-official-results-June-9-2026.pdf"
+          label: "Town of Marblehead, certified June 9, 2026 Town Election Official Results (data/town_docs/elections/2026-06-09-town-election-official-results.pdf): Katherine H. Barker (5,113 votes) and Gary J. Amberik (4,907 votes) re-elected to the Library Trustees."
+        - url: "https://marbleheadma.gov/wp-content/uploads/2026/05/Annual-Report-2025.pdf"
+          label: "Town of Marblehead 2025 Annual Report (data/town_docs/annual_reports/Annual-Report-2025.txt, lines 4971-4976): roster of David F. Ross (term 2027), John G. Williams (term 2027), Marjorie Norman (term 2028), and Kathleen A. Waslov (term 2028)."
     - name: "Harbors & Waters Board"
       kind: "appointed"
       appointed_by: "Select Board"
@@ -1805,3 +2152,71 @@ boards:
       cadence: "Monthly meetings"
       source_url: "https://marbleheadma.gov/coa/"
       source_label: "Town of Marblehead, Council on Aging"
+
+# Decision-flow panel. Distinct from the staffing tree above: this captures
+# the actual reporting hierarchy (who hires whom, who can decide what), not
+# the headcount tree. All claims here are restatements of facts already
+# sourced in the boards/head/independent_enterprises sections above.
+decision_flow:
+  voters:
+    title: "Voters"
+    count_note: "About 17,040 registered, per the boards section above."
+    elect:
+      - "Select Board (5 seats, 3-year terms)"
+      - "School Committee (5 seats, 3-year terms)"
+      - "Light Commission (5 seats, 3-year terms)"
+      - "Town Moderator, Town Clerk, Planning Board, and other elected seats listed below"
+    decide_directly:
+      - "Town Meeting: every appropriation, every bylaw, every warrant article"
+      - "Annual ballot: Prop 2 1/2 overrides, debt exclusions, charter changes"
+  # Decision-flow pillars are looked up against the unified `boards`
+  # list above by id. Each board's `decision_flow_data` block holds
+  # the per-pillar fields (hires_executive, reach, sitting, can/cannot,
+  # sources). The same `sitting` and `decision_flow_data` data is
+  # then available to the boards-below section when we extend it to
+  # show members, so there's no double-maintenance.
+  pillar_ids:
+    - select_board
+    - school_committee
+    - light_commission
+  town_meeting_note: >-
+    Every registered voter is a member of Town Meeting. This is the
+    only body in Marblehead that can appropriate town tax revenue.
+    Boards can propose budgets and the Finance Committee can recommend,
+    but the actual appropriation vote happens on the Town Meeting floor.
+  callouts:
+    - title: "Asymmetric oversight"
+      body: >-
+        The Select Board oversees roughly 20 department heads through
+        the Town Administrator. The School Committee oversees exactly
+        one employee, the Superintendent. Override conversations often
+        talk past each other because the two sides picture very
+        different command structures.
+    - title: "Marblehead's unusual Finance Committee"
+      body: >-
+        The Association of Town Finance Committees' handbook surveyed
+        Massachusetts towns and found that of 97 appointed Finance
+        Committees, 70 are appointed by the Town Moderator, 13 by the
+        Board of Selectmen, and 10 by some combination of officials.
+        Marblehead is in the 13. That keeps its FinCom structurally
+        closer to the Select Board than is typical statewide, even
+        though the committee still votes its own recommendations and
+        is advisory only.
+      source_url: "https://www.southboroughma.gov/DocumentCenter/View/899/MMA-Finance-Committee-Handbook-PDF"
+      source_label: >-
+        Association of Town Finance Committees (a chapter of the
+        Massachusetts Municipal Association), Finance Committee
+        Handbook, Chapter 3, page 18: of the towns responding to the
+        survey, 97 finance committees are appointed and only 21 are
+        elected; 70 of the appointed committees are appointed by the
+        town moderator, 13 by the board of selectmen, and 10 by a
+        combination of the selectmen, town moderator, and finance
+        committee chair or other town officials. Local copy saved at
+        data/external/atfc-finance-committee-handbook.txt (pdftotext
+        layout dump of the southboroughma.gov hosted edition).
+  # Per-pillar `sources:` arrays carry the inline cite markers; they
+  # roll up into the auto-injected page-bottom Sources footer via
+  # assets/citations.js. First-seen years on elected members are
+  # derived from scripts/extract_officials_history.py (greps annual
+  # reports 2006-2025); members seated before 2006 cannot be precisely
+  # dated by that method.

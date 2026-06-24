@@ -94,6 +94,35 @@ def test_vendor_payments_ingest():
         ).fetchone()
         assert meta is not None, "Expected _meta row for vendor_payments"
         assert meta[2] == n, f"_meta row_count {meta[2]} != n {n}"
+
+        # Backfill: rows where Division was empty/UNDEFINED in the CSV
+        # should now have department derived from fund.
+        undefined_rows = conn.execute(
+            "SELECT COUNT(*) FROM vendor_payments WHERE department = 'UNDEFINED'"
+        ).fetchone()[0]
+        assert undefined_rows == 0, (
+            f"Expected no UNDEFINED department after backfill, got {undefined_rows}"
+        )
+
+        # Electric Enterprise should be a visible department now
+        # (it was UNDEFINED before the backfill).
+        ee_total = conn.execute(
+            "SELECT ROUND(SUM(amount), 0) FROM vendor_payments "
+            "WHERE department = 'ELECTRIC ENTERPRISE' AND fiscal_year = 'FY26'"
+        ).fetchone()[0]
+        assert ee_total is not None and ee_total > 5_000_000, (
+            f"Expected Electric Enterprise to surface as a department, got total {ee_total}"
+        )
+
+        # Genuinely tagless rows become 'Unattributed' (single label).
+        unattributed = conn.execute(
+            "SELECT COUNT(*) FROM vendor_payments WHERE department = 'Unattributed'"
+        ).fetchone()[0]
+        # We expect some Unattributed rows (the rows with both Division
+        # and Fund empty), but not millions.
+        assert unattributed >= 0 and unattributed < n // 4, (
+            f"Unexpected Unattributed count {unattributed}"
+        )
     finally:
         conn.close()
 
@@ -192,6 +221,28 @@ def test_meetings_ingest():
             "GROUP BY slug HAVING c > 1 LIMIT 1"
         ).fetchone()
         assert dupes is None, f"Duplicate slug found: {dupes}"
+
+        # Phase 1c: topic_tags populated from topic_segments[].topic
+        select_board_2026_04_15 = conn.execute(
+            "SELECT topic_tags FROM meetings WHERE slug = 'select-board-2026-04-15'"
+        ).fetchone()
+        assert select_board_2026_04_15 is not None, "Select Board 2026-04-15 row missing"
+        tags = select_board_2026_04_15[0]
+        # Should contain at least 'override' since the file has that topic_segment.
+        assert "override" in tags, (
+            f"Expected 'override' in topic_tags, got: {tags!r}"
+        )
+        # Sorted, comma-joined, no spaces.
+        if tags:
+            parts = tags.split(",")
+            assert parts == sorted(parts), f"Topic tags not sorted: {tags!r}"
+            assert " " not in tags, f"Topic tags contain spaces: {tags!r}"
+
+        # At least one meeting somewhere should have non-empty topic_tags.
+        with_tags = conn.execute(
+            "SELECT COUNT(*) FROM meetings WHERE topic_tags != ''"
+        ).fetchone()[0]
+        assert with_tags > 0, "Expected at least one meeting with non-empty topic_tags"
     finally:
         conn.close()
 
@@ -227,5 +278,25 @@ def test_topics_ingest():
         n_rows = conn.execute("SELECT COUNT(*) FROM topics").fetchone()[0]
         n_distinct = conn.execute("SELECT COUNT(DISTINCT slug) FROM topics").fetchone()[0]
         assert n_rows == n_distinct, "Slug collision"
+
+        # Phase 1c: also populate meetings + run the JOIN so meeting_count gets values.
+        build_sqlite_db.build_meetings(conn)
+        build_sqlite_db.update_meeting_counts(conn)
+
+        # Phase 1c: meeting_count populated via JOIN against meetings.topic_tags.
+        # At least one topic with known transcripts should have meeting_count > 0.
+        override = conn.execute(
+            "SELECT meeting_count FROM topics WHERE slug = 'override'"
+        ).fetchone()
+        assert override is not None, "override topic row missing"
+        assert override[0] > 0, (
+            f"Expected override meeting_count > 0, got {override[0]}"
+        )
+
+        # Total meeting_count across all topics should be > 0.
+        total = conn.execute(
+            "SELECT SUM(meeting_count) FROM topics"
+        ).fetchone()[0]
+        assert total > 0, f"Expected total meeting_count > 0, got {total}"
     finally:
         conn.close()

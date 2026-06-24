@@ -1,0 +1,87 @@
+---
+title: "Browse: Departments"
+permalink: /browse/dept/
+layout: browse
+entity: dept
+entity_label: Departments
+---
+
+<div class="browse-list-view">
+  <p class="browse-status">
+    Pick a department from the
+    <a href="/browse/vendors/">Vendors</a> or
+    <a href="/browse/budget/">Budget</a>
+    tables to view its detail. The department detail shows every
+    vendor paid, every budget line, and which topics related meetings discussed.
+  </p>
+</div>
+
+<div class="browse-detail-view">
+  <div class="detail-header"></div>
+  <div class="detail-body"></div>
+  <p class="browse-footnote">
+    <a href="/browse/vendors/">&larr; back to vendors</a>
+    &middot;
+    <a href="/browse/budget/">budget</a>
+  </p>
+</div>
+
+<script src="/assets/browse.js" defer></script>
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+  window.Browse.mountListAndDetail(
+    null,
+    {
+      headerQuery: {
+        keyColumn: "department",
+        allSql: "SELECT department, fund, amount FROM vendor_payments WHERE department IS NOT NULL",
+        render: function (rows) {
+          var dept = rows[0].department;
+          var total = 0;
+          var funds = {};
+          for (var i = 0; i < rows.length; i++) {
+            total += Number(rows[i].amount) || 0;
+            if (rows[i].fund) funds[rows[i].fund] = true;
+          }
+          var fmtMoney = function (n) { return "$" + Math.round(n).toLocaleString(); };
+          return (
+            '<h2>' + (dept ? dept.replace(/</g, "&lt;") : "(unnamed)") + '</h2>' +
+            '<dl class="detail-header-grid">' +
+              '<div><dt>Vendor spend this FY</dt><dd>' + fmtMoney(total) + '</dd></div>' +
+              '<div><dt>Vendor payment rows</dt><dd>' + rows.length + '</dd></div>' +
+              '<div><dt>Funds</dt><dd>' + Object.keys(funds).sort().join(", ") + '</dd></div>' +
+            '</dl>'
+          );
+        },
+      },
+      sections: [
+        {
+          heading: "Top vendors by total",
+          className: "detail-section detail-top-vendors",
+          sql: "SELECT vendor, department, COUNT(*) AS n_payments, SUM(amount) AS total FROM vendor_payments GROUP BY vendor, department ORDER BY SUM(amount) DESC",
+          filterBySlug: "department",
+          columns: [
+            { column: "vendor", label: "Vendor", linkTemplate: "/browse/vendors/#{slug}" },
+            { column: "n_payments", label: "Payments" },
+            { column: "total", label: "Total", format: "moneyRound" },
+          ],
+          emptyMessage: "No vendor payments under this department.",
+        },
+        {
+          heading: "Budget lines",
+          className: "detail-section detail-budget",
+          sql: "SELECT fiscal_year, line_item, fund, amount, department FROM budget_lines",
+          filterBySlug: "department",
+          columns: [
+            { column: "fiscal_year", label: "FY", format: "date" },
+            { column: "line_item", label: "Line item" },
+            { column: "fund", label: "Fund" },
+            { column: "amount", label: "Amount", format: "moneyRound" },
+          ],
+          emptyMessage: "No budget_lines rows under this department.",
+        },
+      ],
+    }
+  );
+});
+</script>

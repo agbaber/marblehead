@@ -77,100 +77,41 @@ jobs:
         if: steps.gate.outputs.skip == 'false'
         run: python3 scripts/fetch_checkbook_export.py
 
-      - name: Refresh checkbook.html references
+      - name: Prune superseded CSV + surface metadata for PR body
         if: steps.gate.outputs.skip == 'false'
         id: refresh
         run: |
           set -euo pipefail
           python3 <<'PY'
-          import csv, datetime, json, re, sys
+          import json
           from pathlib import Path
 
-          disclosure = json.loads(Path('data/checkbook_redaction_disclosure.json').read_text())
-          as_of = disclosure['as_of']  # e.g. "2026-06-11"
-          new_csv = Path(f'data/checkbook_FY26_{as_of}.csv')
+          # build_checkbook_csv.py wrote _data/checkbook.json; every page
+          # references it via {{ site.data.checkbook.* }} at Jekyll build
+          # time, so the HTML never needs a regex edit. This step's only
+          # remaining jobs: remove the prior dated CSV (its filename is
+          # keyed on max payment date, so a new as-of date orphans the
+          # old file) and emit step outputs for the PR body downstream.
+          dashboard = json.loads(Path('_data/checkbook.json').read_text())
+          as_of = dashboard['as_of']
+          new_csv = Path('data') / dashboard['csv_filename']
           if not new_csv.exists():
-              sys.exit(f'expected {new_csv} after build, not found')
+              raise SystemExit(f'expected {new_csv} after build, not found')
 
-          with new_csv.open(newline='') as f:
-              rows = list(csv.DictReader(f))
-          total = sum(float(r['Amount']) for r in rows)
-
-          # "Jun 9" / "Jul 14" — abbreviated month, non-zero-padded day.
-          as_of_dt = datetime.date.fromisoformat(as_of)
-          human_date = as_of_dt.strftime('%b ') + str(as_of_dt.day)
-          total_M = f"${total / 1_000_000:.1f}M"
-
-          html_path = Path('checkbook.html')
-          html = html_path.read_text()
-
-          # Six programmatic spots. The page-header hero block exposes
-          # the same three numbers a second time in a different shape
-          # (totals at the top of the page vs. og_description and
-          # source-files at the bottom). Each pattern is tight enough
-          # that we never over-rewrite, but the head-vs-body redundancy
-          # means every refresh edits both ends of the file.
-          row_count = f"{len(rows):,}"
-          replacements = [
-              # Source files <a href="..."> link
-              (
-                  r'data/checkbook_FY26_\d{4}-\d{2}-\d{2}\.csv">checkbook_FY26_\d{4}-\d{2}-\d{2}\.csv',
-                  f'data/checkbook_FY26_{as_of}.csv">checkbook_FY26_{as_of}.csv',
-              ),
-              # JS CHECKBOOK_URL constant
-              (
-                  r"var CHECKBOOK_URL = '\.\./data/checkbook_FY26_\d{4}-\d{2}-\d{2}\.csv';",
-                  f"var CHECKBOOK_URL = '../data/checkbook_FY26_{as_of}.csv';",
-              ),
-              # og_description "$X.XM in vendor checks through Mon D"
-              (
-                  r'\$\d+(?:\.\d+)?M in vendor checks through [A-Z][a-z]+ \d+',
-                  f'{total_M} in vendor checks through {human_date}',
-              ),
-              # Hero block: "Vendor payments" value ($X.XM). Anchored on
-              # the preceding hero-label so we don't collide with other
-              # M-suffix dollar values elsewhere on the page.
-              (
-                  r'(<div class="hero-label">Vendor payments</div>\s*<div class="hero-value">)\$\d+(?:\.\d+)?M(</div>)',
-                  rf'\g<1>{total_M}\g<2>',
-              ),
-              # Hero block: "X,XXX checks, payroll excluded" sub.
-              (
-                  r'<div class="hero-sub">\d{1,3}(?:,\d{3})* checks, payroll excluded</div>',
-                  f'<div class="hero-sub">{row_count} checks, payroll excluded</div>',
-              ),
-              # Hero block: "Through" value (Mon D). Anchored on the
-              # preceding "Through" label so we don't catch the
-              # "11 of 12 months" sub or any other Mon D string.
-              (
-                  r'(<div class="hero-label">Through</div>\s*<div class="hero-value">)[A-Z][a-z]+ \d+(</div>)',
-                  rf'\g<1>{human_date}\g<2>',
-              ),
-          ]
-
-          for pattern, replacement in replacements:
-              new_html, n = re.subn(pattern, replacement, html, count=1)
-              if n == 0:
-                  sys.exit(f'pattern not matched (manual edit upstream?): {pattern}')
-              html = new_html
-
-          html_path.write_text(html)
-
-          # Drop superseded CSV(s). The new file's name is keyed on the
-          # max payment date in the data; if the as-of date moved, the
-          # old CSV is now orphaned and should not be shipped.
           for old in Path('data').glob('checkbook_FY26_*.csv'):
               if old != new_csv:
                   old.unlink()
                   print(f'removed {old}')
 
-          print(f'as_of={as_of} total={total_M} rows={len(rows):,}')
-          # Surface fields for downstream steps via the env file.
+          disclosure = json.loads(Path('data/checkbook_redaction_disclosure.json').read_text())
+          print(f'as_of={as_of} total={dashboard["total_M"]} '
+                f'rows={dashboard["row_count"]:,}')
+
           with open('refresh.env', 'w') as f:
               f.write(f'AS_OF={as_of}\n')
-              f.write(f'AS_OF_HUMAN={human_date}\n')
-              f.write(f'TOTAL_M={total_M}\n')
-              f.write(f'ROW_COUNT={len(rows)}\n')
+              f.write(f'AS_OF_HUMAN={dashboard["as_of_human"]}\n')
+              f.write(f'TOTAL_M={dashboard["total_M"]}\n')
+              f.write(f'ROW_COUNT={dashboard["row_count"]}\n')
               f.write(f'MASKED_COUNT={disclosure["description_masking"]["masked_row_count"]}\n')
           PY
 
@@ -190,7 +131,7 @@ jobs:
         id: changes
         run: |
           set -euo pipefail
-          git add -A data/ checkbook.html
+          git add -A data/ _data/
           if git diff --cached --quiet; then
             echo "No checkbook changes. Done."
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -236,9 +177,11 @@ jobs:
              identifying patterns, and wrote
              \`data/checkbook_FY26_${AS_OF}.csv\` +
              \`data/checkbook_redaction_disclosure.json\`.
-          3. This workflow bumped the CSV filename in three places in
-             \`checkbook.html\` (\`CHECKBOOK_URL\`, the Sources block
-             link, and \`og_description\`) and deleted the prior CSV.
+          3. \`build_checkbook_csv.py\` also rewrote
+             \`_data/checkbook.json\`; \`index.html\`, \`checkbook.html\`,
+             and the OG meta read it via Liquid at Jekyll build time
+             so all six references move together. The prior dated CSV
+             is removed by this workflow.
 
           Auto-merge is enabled. The redaction review TSV is posted
           below as an audit log; if a kept description ever turns

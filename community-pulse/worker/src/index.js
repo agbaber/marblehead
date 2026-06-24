@@ -7,6 +7,7 @@
 // Backed by a D1 database. No auth, no sessions.
 
 import { handleVerify } from './verify.js';
+import { handleEngagement } from './engagement.js';
 import { serveVerifyPage, serveBranchesPage } from './pages.js';
 import { STREETS } from './streets.js';
 import { handleFbStart, handleFbCallback } from './fb.js';
@@ -74,6 +75,12 @@ export async function handleRequest(request, env) {
 
   if (url.pathname === '/api/me/pre' && request.method === 'GET') {
     return handleMePre(request, env);
+  }
+
+  // Backing and reps: residents endorse ideas on what-can-we-do.html.
+  if (url.pathname === '/api/engagement') {
+    const engagementResponse = await handleEngagement(request, env, url);
+    if (engagementResponse) return engagementResponse;
   }
 
   // Street list for address typeahead.

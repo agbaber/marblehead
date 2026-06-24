@@ -1,0 +1,76 @@
+# FTE cost-to-employ data for /what-is-actually-flexible.html
+#
+# Each archetype is a stacked column on the page. Components must sum
+# to total_cost_to_employ within $5 (verified by build script).
+#
+# These are AVERAGES across the archetype's full range; the page itself
+# carries a caveat about spread.
+
+archetypes:
+  - id: teacher
+    label: "Teacher (schools)"
+    components:
+      - name: "Salary (FY27 estimate)"
+        amount: 99103
+        source_id: dese_teacher_salary
+        source_note: "DESE Marblehead avg teacher salary FY24 ($90,696) projected to FY27 at 3% annual growth (3 years compounding). FY27 DESE figure not yet published."
+      - name: "Healthcare (employer share)"
+        amount: 15000
+        source_id: gic_premiums
+        source_note: "Representative average across employees taking family / individual / no plan. GIC 2024 family premium $25,572 × 83% employer share = $21,225 (family-plan upper bound)."
+      - name: "Pension (MTRS — state pays)"
+        amount: 0
+        source_id: mtrs
+        source_note: "Massachusetts Teachers Retirement System is state-funded, not town-funded. The town pays $0 for teacher pensions."
+        flag: "state-paid"
+      - name: "Medicare (1.45%)"
+        amount: 1437
+        source_id: derived
+        source_note: "1.45% federal employer Medicare match on salary ($99,103 × 0.0145)"
+      - name: "OPEB allocation"
+        amount: 0
+        source_id: town_budget_fy27
+        source_note: "FY27 No-Override OPEB transfer cut to $0 from FY26's $250K. See page Caveats for the $147M unfunded liability."
+    total_cost_to_employ: 115540
+
+  - id: town_employee
+    label: "Town employee (non-school)"
+    components:
+      - name: "Salary (FY27 average)"
+        amount: 115809
+        source_id: town_budget_fy27
+        source_note: "FY27 General Fund non-school non-enterprise salary total ($18,645,274) ÷ 161 FTE (post-cut, derived from FinCom 22-FTE-cut-equals-12% math). Includes police/fire which skew the average up."
+      - name: "Healthcare (employer share)"
+        amount: 15000
+        source_id: gic_premiums
+        source_note: "Same methodology as teacher: average across employees taking family / individual / no plan."
+      - name: "Pension (MCRS — town pays)"
+        amount: 36294
+        source_id: town_budget_fy27
+        source_note: "FY27 Contributory Retirement assessment ($5,843,360) ÷ 161 FTE. Funds current retirees and accruing benefits, not just the marginal FTE."
+      - name: "Medicare (1.45%)"
+        amount: 1679
+        source_id: derived
+        source_note: "1.45% federal employer Medicare match on salary ($115,809 × 0.0145)"
+      - name: "OPEB allocation"
+        amount: 0
+        source_id: town_budget_fy27
+        source_note: "FY27 No-Override OPEB transfer cut to $0 from FY26's $250K. See page Caveats for the $147M unfunded liability."
+    total_cost_to_employ: 168782
+
+sources:
+  dese_teacher_salary:
+    href: "/data/dese_marblehead_avg_teacher_salary.csv"
+    label: "DESE Marblehead average teacher salary"
+  gic_premiums:
+    href: "/data/health_premiums.csv"
+    label: "GIC family-plan premium history"
+  mtrs:
+    href: "https://www.mass.gov/orgs/massachusetts-teachers-retirement-system"
+    label: "Massachusetts Teachers Retirement System"
+  town_budget_fy27:
+    href: "https://www.marbleheadma.gov/finance-department/files/fy27-proposed-budget-no-override"
+    label: "FY27 Proposed Budget — No Override"
+  derived:
+    href: "/what-is-actually-flexible.html#methodology"
+    label: "Derived calculation (shown in methodology)"

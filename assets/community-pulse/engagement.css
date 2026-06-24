@@ -1,0 +1,170 @@
+/* Backing and reps widget for what-can-we-do.html.
+   Sits below the editorial content of each idea card. Lighter typography than
+   the editorial blocks; data-cat color is a subtle accent, never a hero color. */
+
+/* Top inline strip, appended to the .idea-num line. */
+.idea-engage-strip {
+  font: inherit;
+  color: var(--c-ink-3, #6b7785);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  letter-spacing: inherit;
+}
+.idea-engage-strip:hover { text-decoration: underline; }
+
+/* Bottom panel. */
+.idea-engage {
+  margin-top: 1.25rem;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--c-fog, #e6ebf0);
+  background: var(--c-fog, #f4f7fa);
+  border-radius: 0 6px 6px 0;
+}
+.idea[data-cat="rev"] .idea-engage { border-left-color: var(--c-teal); }
+.idea[data-cat="cost"] .idea-engage { border-left-color: var(--c-navy); }
+.idea[data-cat="gov"]  .idea-engage { border-left-color: var(--c-brass); }
+
+.idea-engage-h {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-ink-3, #6b7785);
+  margin: 0 0 0.5rem;
+}
+.idea-engage-summary,
+.idea-engage-empty,
+.idea-engage-anononly {
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: var(--c-ink-2, #3c4754);
+  margin: 0.35rem 0;
+}
+.idea-engage-empty { color: var(--c-ink-3, #6b7785); }
+
+.idea-engage-names {
+  list-style: none;
+  margin: 0.35rem 0 0.6rem;
+  padding: 0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--c-ink-2, #3c4754);
+}
+.idea-engage-anon { color: var(--c-ink-3, #6b7785); }
+
+.idea-engage-btn {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--c-surface, #fff);
+  background: var(--c-navy, #1b3a57);
+  border: 1px solid var(--c-navy, #1b3a57);
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.idea-engage-btn:hover { opacity: 0.92; }
+.idea-engage-btn--ghost {
+  color: var(--c-navy, #1b3a57);
+  background: transparent;
+}
+
+/* Modal. */
+.idea-engage-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 32, 44, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+.idea-engage-modal {
+  background: var(--c-surface, #fff);
+  border-radius: 10px;
+  max-width: 440px;
+  width: 100%;
+  padding: 1.4rem 1.4rem 1.2rem;
+  box-shadow: 0 12px 40px rgba(20, 32, 44, 0.25);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.idea-engage-modal-eye {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--c-ink-3, #6b7785);
+  margin: 0 0 0.25rem;
+}
+.idea-engage-modal-title {
+  font-size: 1.02rem;
+  line-height: 1.3;
+  margin: 0 0 1rem;
+  color: var(--c-ink, #1a2530);
+}
+.idea-engage-check {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  margin: 0.55rem 0;
+  color: var(--c-ink-2, #3c4754);
+  cursor: pointer;
+}
+.idea-engage-check input { margin-top: 0.2rem; flex: none; }
+.idea-engage-field {
+  display: block;
+  margin: 0.7rem 0 0.2rem;
+  font-size: 0.82rem;
+  color: var(--c-ink-3, #6b7785);
+}
+.idea-engage-name {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.92rem;
+  border: 1px solid var(--c-line, #d3dbe3);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.idea-engage-modal-note {
+  font-size: 0.78rem;
+  color: var(--c-ink-3, #6b7785);
+  line-height: 1.4;
+  margin: 0.9rem 0 0.4rem;
+}
+.idea-engage-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+.idea-engage-error {
+  color: var(--c-buoy, #c8553d);
+  font-size: 0.82rem;
+  margin: 0.5rem 0 0;
+  min-height: 1em;
+}
+
+/* Editorial note at the top of the idea list. */
+.wcwd-engage-note {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--c-ink-3, #6b7785);
+  max-width: 60ch;
+  margin: 1rem auto 0;
+}
+
+@media (max-width: 560px) {
+  .idea-engage-overlay { align-items: flex-end; padding: 0; }
+  .idea-engage-modal { max-width: 100%; border-radius: 12px 12px 0 0; }
+}

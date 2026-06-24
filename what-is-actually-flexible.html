@@ -1,0 +1,276 @@
+---
+layout: page
+title: "What's actually flexible in Marblehead's budget?"
+description: "Of FY27's $109.78M general fund, how much is locked by law, contract, or schedule — and how small is the truly discretionary pool?"
+permalink: /what-is-actually-flexible.html
+---
+
+{% assign meta = site.data.fixed_costs.meta %}
+{% assign locked_total = 0 %}
+{% for tier in site.data.fixed_costs.tiers %}
+  {% for item in tier.items %}
+    {% assign locked_total = locked_total | plus: item.fy27_amount %}
+  {% endfor %}
+{% endfor %}
+{% assign flexible_total = meta.total_general_fund | minus: locked_total %}
+
+<style>
+  .waf-lead { font-size: 18px; line-height: 1.55; max-width: 720px; }
+  .waf-claim-stat { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .waf-section { margin: 48px 0; }
+  .waf-section h2 { font-size: 24px; margin-bottom: 16px; }
+  /* visualization styles added in Tasks 5 + 6 */
+</style>
+
+<h1>What's actually flexible in Marblehead's budget?</h1>
+
+<p class="waf-lead">
+  Of the FY27
+  <span class="waf-claim-stat">${{ meta.total_general_fund | divided_by: 1000000.0 | round: 2 }}M</span>
+  general fund, roughly
+  <span class="waf-claim-stat">${{ locked_total | divided_by: 1000000.0 | round: 1 }}M</span>
+  is locked by law, contract, or funding schedule. That leaves about
+  <span class="waf-claim-stat">${{ flexible_total | divided_by: 1000000.0 | round: 1 }}M</span>
+  as discretionary, and most of that is salaries, so "cut spending" almost
+  always means "cut positions."
+</p>
+
+<section class="waf-section" id="whats-locked">
+  <h2>What's locked</h2>
+
+{% assign tier_palette = "#dbe7e8,#b8c8c9,#7a8e90,#e6c79c" | split: "," %}
+
+<style>
+  /* Palette: three cool greys (light→dark) for locked tiers; warm sand for flexible residual */
+  .waf-bar { width: 100%; height: 56px; display: block; margin: 8px 0 4px; }
+  .waf-bar text { font-size: 11px; font-variant-numeric: tabular-nums; }
+  .waf-bar-legend { display: flex; flex-wrap: wrap; gap: 12px 20px; font-size: 13px; margin-bottom: 24px; }
+  .waf-bar-legend-swatch { display: inline-block; width: 12px; height: 12px; vertical-align: middle; margin-right: 4px; border: 1px solid rgba(0,0,0,0.15); }
+  .waf-tier-card { border: 1px solid var(--c-border, #d0d4d4); padding: 16px 18px; margin: 12px 0; border-radius: 4px; }
+  .waf-tier-card h3 { font-size: 17px; margin: 0 0 4px; }
+  .waf-tier-card .waf-tier-card-desc { font-size: 13px; color: var(--text-muted, #65706f); margin: 0 0 10px; }
+  .waf-tier-card table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .waf-tier-card td { padding: 4px 0; vertical-align: top; }
+  .waf-tier-card td:last-child { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .waf-tier-card .waf-caveat { font-size: 12px; color: var(--text-muted, #65706f); font-style: italic; }
+  @media (max-width: 600px) {
+    .waf-bar { height: 80px; }
+    .waf-bar text { font-size: 10px; }
+  }
+</style>
+
+<svg class="waf-bar" viewBox="0 0 1000 56" preserveAspectRatio="none" role="img" aria-labelledby="waf-bar-title waf-bar-desc">
+  <title id="waf-bar-title">FY27 general fund: locked vs flexible</title>
+  <desc id="waf-bar-desc">
+    Bar showing the FY27 $109.78M general fund divided into three locked
+    tiers and the flexible residual. Each segment's width is proportional
+    to its dollar amount.
+  </desc>
+  {% assign x_cursor = 0 %}
+  {% assign denom = meta.total_general_fund | times: 1.0 %}
+  {% for tier in site.data.fixed_costs.tiers %}
+    {% assign tier_sum = 0 %}
+    {% for item in tier.items %}{% assign tier_sum = tier_sum | plus: item.fy27_amount %}{% endfor %}
+    {% assign tier_pct = tier_sum | times: 1000.0 | divided_by: denom %}
+    {% assign tier_color = tier_palette[forloop.index0] %}
+    <rect x="{{ x_cursor }}" y="0" width="{{ tier_pct }}" height="56" fill="{{ tier_color }}"></rect>
+    {% assign x_cursor = x_cursor | plus: tier_pct %}
+  {% endfor %}
+  {% assign flex_pct = flexible_total | times: 1000.0 | divided_by: denom %}
+  <rect x="{{ x_cursor }}" y="0" width="{{ flex_pct }}" height="56" fill="{{ tier_palette[3] }}"></rect>
+</svg>
+
+<div class="waf-bar-legend">
+  {% for tier in site.data.fixed_costs.tiers %}
+    {% assign tier_sum = 0 %}
+    {% for item in tier.items %}{% assign tier_sum = tier_sum | plus: item.fy27_amount %}{% endfor %}
+    <span><span class="waf-bar-legend-swatch" style="background:{{ tier_palette[forloop.index0] }}"></span>{{ tier.label }} — ${{ tier_sum | divided_by: 1000000.0 | round: 1 }}M</span>
+  {% endfor %}
+  <span><span class="waf-bar-legend-swatch" style="background:{{ tier_palette[3] }}"></span>Flexible — ${{ flexible_total | divided_by: 1000000.0 | round: 1 }}M</span>
+</div>
+
+{% for tier in site.data.fixed_costs.tiers %}
+  <div class="waf-tier-card">
+    <h3>{{ tier.label }}</h3>
+    <p class="waf-tier-card-desc">{{ tier.description }}</p>
+    <table>
+      {% for item in tier.items %}
+        <tr>
+          <td>
+            {{ item.category }}
+            {% if item.caveat %}
+              <div class="waf-caveat">{{ item.caveat }}</div>
+            {% endif %}
+            {% assign source = site.data.fixed_costs.sources[item.source_id] %}
+            <sup class="cite" data-href="{{ source.href }}" data-source="{{ source.label }} — {{ item.source_note }}"></sup>
+          </td>
+          <td>${{ item.fy27_amount | divided_by: 1000.0 | round: 0 }}K</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endfor %}
+
+</section>
+
+<section class="waf-section" id="cost-of-employee">
+  <h2>What it actually costs to employ someone</h2>
+  <style>
+    .waf-fte-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 16px 0 28px; }
+    .waf-fte-archetype { text-align: center; }
+    .waf-fte-archetype h3 { font-size: 16px; margin: 0 0 6px; }
+    .waf-fte-archetype .waf-fte-total { font-size: 14px; color: var(--text-muted, #65706f); margin-top: 6px; font-variant-numeric: tabular-nums; }
+    .waf-fte-col { width: 100%; height: 320px; display: block; }
+    .waf-fte-col text { font-size: 11px; font-variant-numeric: tabular-nums; }
+    .waf-fte-caveat { font-size: 12px; color: var(--text-muted, #65706f); margin: 0 0 16px; }
+    @media (max-width: 600px) {
+      .waf-fte-grid { grid-template-columns: 1fr; }
+      .waf-fte-col { height: 240px; }
+    }
+  </style>
+
+  {% comment %}Neutral blue-grey ramp: darkest=salary (largest weight), lightest=OPEB (near-zero){% endcomment %}
+  {% assign fte_palette = "#9bb0b2,#b8c8c9,#cfdadb,#dbe7e8,#e8f0f0" | split: "," %}
+
+  <div class="waf-fte-grid">
+    {% for arch in site.data.fte_cost.archetypes %}
+      <div class="waf-fte-archetype">
+        <h3>{{ arch.label }}</h3>
+        <svg class="waf-fte-col" viewBox="0 0 200 320" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="waf-fte-{{ arch.id }}-title">
+          <title id="waf-fte-{{ arch.id }}-title">
+            {{ arch.label }} total cost to employ: ${{ arch.total_cost_to_employ | divided_by: 1000.0 | round: 1 }}K
+          </title>
+          {% assign denom = arch.total_cost_to_employ | times: 1.0 %}
+          {% assign y_cursor = 320 %}
+          {% for c in arch.components %}
+            {% if c.amount > 0 %}
+              {% assign h = c.amount | times: 320.0 | divided_by: denom %}
+              {% assign y_cursor = y_cursor | minus: h %}
+              <rect x="40" y="{{ y_cursor }}" width="120" height="{{ h }}" fill="{{ fte_palette[forloop.index0] }}"></rect>
+              {% if h > 18 %}
+                {% assign label_y = y_cursor | plus: h | minus: 6 %}
+                <text x="100" y="{{ label_y }}" text-anchor="middle" fill="#1a2425">{{ c.name }} ${{ c.amount | divided_by: 1000.0 | round: 0 }}K</text>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </svg>
+        <div class="waf-fte-total">
+          Total cost-to-employ: <strong>${{ arch.total_cost_to_employ | divided_by: 1000.0 | round: 1 }}K</strong>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <p class="waf-fte-caveat">
+    Averages hide spread. A first-year teacher and a senior firefighter both count as one FTE
+    but cost very different amounts. The translator below uses the average for each archetype.
+  </p>
+
+  <details>
+    <summary style="font-size:14px;color:var(--text-muted, #65706f);cursor:pointer;">How these were calculated</summary>
+    <div style="font-size:13px;margin-top:8px;">
+      {% for arch in site.data.fte_cost.archetypes %}
+        <p><strong>{{ arch.label }}:</strong></p>
+        <ul>
+          {% for c in arch.components %}
+            {% assign source = site.data.fte_cost.sources[c.source_id] %}
+            <li>
+              {{ c.name }}: ${{ c.amount }}
+              <sup class="cite" data-href="{{ source.href }}" data-source="{{ source.label }} — {{ c.source_note }}"></sup>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+  </details>
+</section>
+
+<section class="waf-section" id="translator">
+  <h2>What a cut would mean</h2>
+  <style>
+    .waf-translator { background: var(--surface-muted, #f5f7f7); padding: 16px 20px; border-radius: 4px; max-width: 520px; }
+    .waf-translator label { display: block; margin: 8px 0 4px; font-size: 13px; }
+    .waf-translator input[type=number] { font-size: 18px; padding: 6px 8px; width: 200px; font-variant-numeric: tabular-nums; }
+    .waf-translator .waf-radio-row { display: flex; gap: 16px; align-items: center; font-size: 14px; margin: 8px 0; }
+    .waf-translator .waf-result { font-size: 22px; margin-top: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .waf-translator .waf-result-detail { font-size: 13px; color: var(--text-muted, #65706f); margin-top: 4px; }
+  </style>
+
+  <div class="waf-translator">
+    <label for="waf-cut-amount">Cut amount</label>
+    <input type="number" id="waf-cut-amount" min="0" step="10000" placeholder="e.g. 500000" inputmode="numeric"
+      aria-describedby="waf-translator-result">
+
+    <div class="waf-radio-row" role="radiogroup" aria-label="Archetype">
+      {% for arch in site.data.fte_cost.archetypes %}
+        <label>
+          <input type="radio" name="waf-archetype" value="{{ arch.id }}"
+            data-cost="{{ arch.total_cost_to_employ }}"
+            {% if forloop.first %}checked{% endif %}>
+          {{ arch.label }}
+        </label>
+      {% endfor %}
+    </div>
+
+    <div class="waf-result" id="waf-translator-result" aria-live="polite">≈ 0 positions</div>
+    <div class="waf-result-detail" id="waf-translator-detail"></div>
+  </div>
+
+  <script>
+  (function () {
+    'use strict';
+    var amtInput = document.getElementById('waf-cut-amount');
+    var resultEl = document.getElementById('waf-translator-result');
+    var detailEl = document.getElementById('waf-translator-detail');
+
+    function getSelectedCost() {
+      var radios = document.querySelectorAll('input[name="waf-archetype"]');
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) return Number(radios[i].dataset.cost);
+      }
+      return 0;
+    }
+
+    function getSelectedLabel() {
+      var radios = document.querySelectorAll('input[name="waf-archetype"]');
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) return radios[i].parentElement.textContent.trim();
+      }
+      return '';
+    }
+
+    function fmt(n) { return n.toLocaleString('en-US'); }
+
+    function recompute() {
+      var amount = Number(amtInput.value || 0);
+      var cost = getSelectedCost();
+      if (!amount || !cost) {
+        resultEl.textContent = '≈ 0 positions';
+        detailEl.textContent = '';
+        return;
+      }
+      var positions = Math.floor(amount / cost);
+      resultEl.textContent = '≈ ' + fmt(positions) + ' position' + (positions === 1 ? '' : 's');
+      detailEl.textContent = '$' + fmt(amount) + ' ÷ $' + fmt(cost) + ' per ' + getSelectedLabel().toLowerCase() + ' ≈ ' + fmt(positions);
+    }
+
+    amtInput.addEventListener('input', recompute);
+    document.querySelectorAll('input[name="waf-archetype"]').forEach(function (r) {
+      r.addEventListener('change', recompute);
+    });
+  })();
+  </script>
+</section>
+
+<section class="waf-section" id="caveats">
+  <h2>Caveats</h2>
+  <ul>
+    <li><strong>"Locked this year" ≠ "locked forever."</strong> CBAs expire and re-bargain (the union pool sets next year's number), debt is paid off and refinanced, pension and OPEB schedules can be re-amortized with PERAC approval.</li>
+    <li><strong>Teacher pension is state-paid via MTRS</strong>, so the town avoids a direct contribution for teachers — but the state's bill is funded from taxes Marblehead residents also pay. The $0 entry above is "what the town's general fund pays," not "what teachers cost the public."</li>
+    <li><strong>Averages hide spread.</strong> A senior firefighter and a first-year teacher both count as one FTE but cost very different amounts. The archetype values above are midpoints, not forecasts.</li>
+    <li><strong>FY27 Proposed — No Override.</strong> Figures use the pre-vote no-override proposal. The adopted FY27 budget (with override revenue included) will be updated here when the town publishes it.</li>
+    <li><strong>State assessments use FY26.</strong> The FY27 cherry sheet has not yet been published by the Department of Revenue. This page will update when DLS releases it (typically July–August).</li>
+    <li><strong>OPEB is not in the FY27 No-Override budget at all.</strong> The $250,000 FY26 OPEB transfer was cut to $0. The FY24 actuarially-required contribution was $10.6M; actual was $6.5M; the net OPEB liability has grown to $147M.<sup class="cite" data-href="/data/town_docs/FY24_Town_of_Marblehead_ACFR.pdf" data-source="FY24 Town of Marblehead ACFR, p.92 (Schedule of Town Contributions to OPEB Plan)"></sup> The override would restore only $96,771. This page's locked tiers do not include OPEB because nothing is being paid; the deferral is itself a fiscal choice that compounds over time.</li>
+    <li><strong>"Flexible" overstates true discretion.</strong> Most of the $67M flexible residual is salaries that are themselves under collective bargaining agreements. In practice, the within-FY27 lever is hiring freezes and position cuts — which is exactly what the translator above measures.</li>
+  </ul>
+</section>
