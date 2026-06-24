@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-06-23",
+  "as_of": "2026-06-24",
   "latest_fiscal_month": "2026-06-01",
-  "generated_at": "2026-06-23T11:47:23+00:00",
+  "generated_at": "2026-06-24T11:42:45+00:00",
   "fiscal_year": "FY26",
   "fy_months": [
     "2025-07",
@@ -20,7 +20,7 @@
   "funds": [
     {
       "fund": "GENERAL FUND - TOWN",
-      "total_through_as_of": 55097678.29,
+      "total_through_as_of": 55483253.88,
       "series": [
         {
           "month": "2025-07",
@@ -79,14 +79,14 @@
         },
         {
           "month": "2026-06",
-          "cumulative": 55097678.29,
-          "monthly": 1180158.92
+          "cumulative": 55483253.88,
+          "monthly": 1565734.51
         }
       ]
     },
     {
       "fund": "GENERAL FUND - SCHOOL",
-      "total_through_as_of": 45203020.67,
+      "total_through_as_of": 45194349.31,
       "series": [
         {
           "month": "2025-07",
@@ -145,14 +145,14 @@
         },
         {
           "month": "2026-06",
-          "cumulative": 45203020.67,
-          "monthly": 7604690.75
+          "cumulative": 45194349.31,
+          "monthly": 7596019.39
         }
       ]
     },
     {
       "fund": "ELECTRIC ENTERPRISE",
-      "total_through_as_of": 14014865.25,
+      "total_through_as_of": 14066517.53,
       "series": [
         {
           "month": "2025-07",
@@ -211,14 +211,14 @@
         },
         {
           "month": "2026-06",
-          "cumulative": 14014865.25,
-          "monthly": 215026.11
+          "cumulative": 14066517.53,
+          "monthly": 266678.39
         }
       ]
     },
     {
       "fund": "WATER ENTERPRISE OPERATING",
-      "total_through_as_of": 5704511.19,
+      "total_through_as_of": 5723664.57,
       "series": [
         {
           "month": "2025-07",
@@ -277,14 +277,14 @@
         },
         {
           "month": "2026-06",
-          "cumulative": 5704511.19,
-          "monthly": 60516.29
+          "cumulative": 5723664.57,
+          "monthly": 79669.67
         }
       ]
     },
     {
       "fund": "A11 2022 CAPITAL IMPROVEMENT",
-      "total_through_as_of": 5086890.86,
+      "total_through_as_of": 5094253.98,
       "series": [
         {
           "month": "2025-07",
@@ -343,14 +343,14 @@
         },
         {
           "month": "2026-06",
-          "cumulative": 5086890.86,
-          "monthly": 23652.1
+          "cumulative": 5094253.98,
+          "monthly": 31015.22
         }
       ]
     },
     {
       "fund": "SEWER ENTERPRISE OPERATING",
-      "total_through_as_of": 5068467.96,
+      "total_through_as_of": 5089953.52,
       "series": [
         {
           "month": "2025-07",
@@ -409,8 +409,8 @@
         },
         {
           "month": "2026-06",
-          "cumulative": 5068467.96,
-          "monthly": 67052.08
+          "cumulative": 5089953.52,
+          "monthly": 88537.64
         }
       ]
     }
