@@ -12,8 +12,8 @@
   {
    "name": "WORKERS COMPENSATION FUND",
    "reason": "Pays for medical care of named town employees with workers-compensation claims. Same identifiability concern as 111F.",
-   "row_count": 440,
-   "total_amount": 405604.12,
+   "row_count": 446,
+   "total_amount": 412304.78,
    "distinct_vendors": 43
   }
  ],
