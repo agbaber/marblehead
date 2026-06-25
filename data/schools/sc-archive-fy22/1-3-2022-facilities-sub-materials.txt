@@ -1,0 +1,33 @@
+         School             Status                                   Item                              Critical repair estimate with price increase
+
+                                                     Critical Need Above $25,000.00
+          MHS             Critical #1                       Fire Alarms ( MHS)                                        $175,000.00
+          MHS             Critical #2                            Roof (MHS)                                          $3,900,000.00
+          Vets            Critical #3                            Roof ( Vets)                                         $170,000.00
+          MHS             Critical #4                           Boilers ( MHS)                                        $220,000.00
+          MHS             Critical #5                       Roof Top Units (MHS)                                      $160,000.00
+   MHS,Village, Vets      Critical #6            Comp Controls and repairs (MHS,Village,Vets)                         $740,000.00
+          MHS             Critical #7                      Main Entry (doors MHS)                                     $104,000.00
+         Village          Critical #8        Building Systems - Replace security system ( Village)                     $35,000.00
+         Village          Critical #9                Walkin Freezers and Fridge ( Village)                             $29,507.00
+      District Wide       Critical #10         Playground upgrade ( pricing is a rough estimate)                      $100,000.00
+          Vets            Critical #11                        Gym Floor ( Vets)                                        $40,000.00
+
+          Vets            Critical #12                     Building Interiors ( Vets)                                  $43,900.00
+          MHS             Critical #13                     Security Cameras (MHS)                                     $250,000.00
+      District Wide       Critical #14           Radio upgrade ( district wide except Brown)                           $54,000.00
+                                                       Critical Need Below $25,000.00
+    Village and Vets      Critical #1                         Facades ( Village)                                       $20,000.00
+Village,Vets,MHS, Glover Critical #2                    Building Systems ( completed)                                   $6,000.00
+          MHS             Critical #3        Windows & Doors - work wil be completed in house                           $3,600.00
+         Village          Critical #4         Building Interiors- work will be completed in house                       $720.00
+         Village          Critical #5           Landscaping - work will be completed in house                           $300.00
+          Vets            Critical #6    Landscape & Site Improvent- work will be completed in house                    $440.00
+
+
+
+
+                                                                Grand Total:                                         $6,052,467.00
+
+                                                             Remaining Total:                                        $6,041,407.00
+
