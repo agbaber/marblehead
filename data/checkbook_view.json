@@ -5,6 +5,8 @@
     "fiscal_year": "FY26",
     "row_count": 15819,
     "total_paid": 102822177.56,
+    "interfund_total": 1412249.11,
+    "external_paid": 101409928.45,
     "first_payment": "2025-07-01",
     "last_payment": "2026-06-22",
     "source_file": "checkbook_FY26_2026-06-22.csv"
@@ -393,14 +395,6 @@
         "row_count": 4957,
         "top_vendors": [
           {
-            "name": "ONE TIME PAY",
-            "amount": 267822.0
-          },
-          {
-            "name": "TOWN OF MARBLEHEAD",
-            "amount": 235945.16
-          },
-          {
             "name": "DENNIS K BURKE INC",
             "amount": 146116.33
           },
@@ -423,6 +417,14 @@
           {
             "name": "PRO AV SYSTEMS INC",
             "amount": 80263.0
+          },
+          {
+            "name": "CATALIS TAX & CAMA INC",
+            "amount": 79995.86
+          },
+          {
+            "name": "OPENGOV INC",
+            "amount": 79202.46
           }
         ]
       }

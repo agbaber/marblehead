@@ -1,11 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sketch v2: What we paid, and the choices we made</title>
+---
+title: "What we paid, and the choices we made"
+permalink: /spending-by-vote/
+og_title: "What we paid, and the choices we made — Marblehead FY26 spending by who voted on it"
+og_description: "Where each FY26 dollar Marblehead paid came from, and who voted on it: ballot vs Town Meeting vs ratepayer vs state/federal vs revolving vs trusts. With a Choice Qualifier showing how much of GF-Town spend was already locked in before Town Meeting opened."
+og_url: https://marbleheaddata.org/spending-by-vote/
+---
 <style>
-  :root {
+
+  .choice-view .choice-lede-h {
+    font-size: 26px; font-weight: 700; color: var(--c-navy);
+    margin: 16px auto 12px; max-width: 720px; padding: 0 16px; text-align: center;
+    letter-spacing: -0.2px;
+  }
+  .choice-view .hero { padding: 0 0 12px; text-align: center; }
+
+  .choice-view {
     --c-navy: #0b1d3a;
     --c-navy-2: #1a3766;
     --c-teal: #156d68;
@@ -30,7 +39,7 @@
   }
   /* Dark mode (auto via OS, or forced via data-theme on the html element) */
   @media (prefers-color-scheme: dark) {
-    html:not([data-theme="light"]) {
+  html:not([data-theme="light"]) .choice-view {
       --c-navy: #e6edf6;
       --c-navy-2: #8aaad6;
       --c-teal: #4cbab1;
@@ -50,8 +59,8 @@
       --subbucket-border: #4a3d20;
       --subbucket-ballot-bg: #122826;
     }
-  }
-  html[data-theme="dark"] {
+}
+  html[data-theme="dark"] .choice-view {
     --c-navy: #e6edf6;
     --c-navy-2: #8aaad6;
     --c-teal: #4cbab1;
@@ -71,25 +80,6 @@
     --subbucket-border: #4a3d20;
     --subbucket-ballot-bg: #122826;
   }
-  * { box-sizing: border-box; }
-  html, body { background: var(--bg); }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
-    color: var(--text); line-height: 1.5; -webkit-font-smoothing: antialiased;
-  }
-  .nav {
-    background: var(--surface); border-bottom: 1px solid var(--border);
-    padding: 12px 20px; font-size: 13px; color: var(--text-subtle);
-  }
-  .nav strong { color: var(--c-navy); }
-  .page { max-width: var(--max); margin: 0 auto; padding: 28px 20px 80px; }
-
-  .hero { text-align: center; padding: 24px 0 16px; }
-  .crumb { font-size: 12px; color: var(--text-subtle); margin-bottom: 18px; }
-  .h1 { font-size: 30px; font-weight: 700; color: var(--c-navy); margin: 0 0 6px; letter-spacing: -0.4px; }
-  .sub { font-size: 15px; color: var(--text-muted); max-width: 640px; margin: 0 auto 16px; }
-
   /* Finding-led hero replaces the 4-stat panel */
   .finding {
     font-size: 17px; line-height: 1.55; color: var(--text);
@@ -104,9 +94,13 @@
     margin: 0 auto 4px;
   }
 
+  /* Tone down inline <b>/<strong> from browser-default 700 to 600. The display-class
+     headings (.title, .amt, .pname, .gname, etc.) still set their own 700 explicitly. */
+  .choice-view b, .choice-view strong { font-weight: 600; }
+
   /* Link defaults, substance underlined; can-be-followed affordance */
-  a { color: var(--c-navy-2); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
-  a:hover { color: var(--c-teal); }
+  .choice-view a { color: var(--c-navy-2); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  .choice-view a:hover { color: var(--c-teal); }
   .crumb a { color: var(--text-subtle); }
   .findinglinks a { color: var(--text-muted); }
 
@@ -157,17 +151,17 @@
 
   .stack-wrap { margin: 18px 0 10px; }
   .stack-bar {
-    display: flex; height: 28px; border-radius: var(--radius-sm); overflow: hidden;
+    display: flex; align-items: stretch; height: 28px; border-radius: var(--radius-sm); overflow: hidden;
     border: 1px solid var(--border); background: var(--surface);
   }
-  .stack-bar .seg { position: relative; display: flex; align-items: center; justify-content: center;
+  .stack-bar .seg { display: flex; align-items: center; justify-content: center;
                     color: #fff; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums;
                     border-right: 1px solid rgba(255,255,255,0.35); text-decoration: none;
                     transition: opacity 0.15s; }
   .stack-bar .seg:hover { opacity: 0.85; cursor: pointer; }
   .stack-bar .seg:last-child { border-right: none; }
   .stack-bar .seg.other { color: var(--text); }
-  .stack-bar .seg.ballot { background: var(--c-teal); }
+  .stack-bar .seg.b-ballot { background: var(--c-teal); }
   .stack-bar .seg.tm     { background: var(--c-navy-2); }
   .stack-bar .seg.enter  { background: var(--c-sand); }
   .stack-bar .seg.grant  { background: var(--c-slate); }
@@ -230,7 +224,7 @@
     border-radius: 0 6px 6px 0; font-size: 12.5px;
   }
   .subbucket h4 { margin: 0 0 4px; font-size: 13px; color: var(--text); font-weight: 700; }
-  .subbucket p { margin: 0 0 8px; color: var(--text-muted); line-height: 1.55; }
+  .subbucket p { margin: 0 0 8px; font-size: 13px; color: var(--text-muted); line-height: 1.55; }
   .subbucket .bars { display: grid; gap: 4px; margin-top: 8px; }
   .subbucket .barrow { display: grid; grid-template-columns: 1fr 90px 70px; align-items: center; gap: 10px; font-size: 12px; }
   .subbucket .barrow .lbl { color: var(--text); font-weight: 500; }
@@ -249,6 +243,10 @@
     display: flex; align-items: center; justify-content: center;
     color: #fff; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums;
     border-right: 1px solid rgba(255,255,255,0.35); padding: 0 4px; white-space: nowrap; overflow: hidden;
+    /* Same defensive treatment as .stack-bar .seg — forces full bar height even
+       when a child's intrinsic height is small. The Debt segment was reportedly
+       half-filling on some browsers; this prevents the same collapse pattern. */
+    align-self: stretch; min-height: 100%;
   }
   .cstack .cseg:last-child { border-right: none; }
   .cstack .cseg.fixed     { background: var(--c-sand); }
@@ -346,16 +344,6 @@
   .accountedfor b { color: var(--c-teal); }
 
   /* Theme toggle (tiny corner button) */
-  .theme-toggle {
-    position: fixed; top: 10px; right: 14px;
-    background: var(--surface); border: 1px solid var(--border);
-    color: var(--text-muted); font-size: 11px; font-weight: 600;
-    padding: 5px 10px; border-radius: 999px; cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    z-index: 10;
-  }
-  .theme-toggle:hover { color: var(--text); }
-
   /* news */
   .news {
     margin: 36px 0 0;
@@ -403,7 +391,6 @@
 
   /* ===== mobile (<= 720px) ===== */
   @media (max-width: 720px) {
-    .page { padding: 18px 14px 60px; }
     .h1 { font-size: 24px; }
     .sub { font-size: 14px; padding: 0 4px; }
     .freshness { font-size: 11.5px; padding: 5px 12px; white-space: normal; gap: 6px; }
@@ -449,18 +436,10 @@
     .choice-list { gap: 16px; }
   }
 </style>
-</head>
-<body>
 
-<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark</button>
-
-<div class="nav"><strong>MHD Data</strong> &middot; sketch v2 &middot; <em>checkbook reframed, real numbers</em></div>
-
-<main class="page">
-
-  <section class="hero">
-    <div class="crumb">Home / Checkbook</div>
-    <h1 class="h1">What we paid, and the choices we made</h1>
+<div class="choice-view">
+<section class="hero">
+    <h2 class="choice-lede-h">What we paid, and the choices we made</h2>
     <p class="finding">
       Through <span data-fill="snapshot.last_payment|date">Jun 9</span>, Marblehead has paid <strong data-fill="snapshot.total_paid|usd">$99.9M</strong> to vendors in FY26.
       Inside <a href="#bucket-tm">General Fund &ndash; Town</a> alone, <strong data-fill="gf_town_carveout.fixed_total|usd">$37.6M</strong>
@@ -470,6 +449,7 @@
     </p>
     <p class="findinglinks">
       <span data-freshness>Snapshot: Jun 9, 2026 &middot; weekly cadence</span>
+      &middot; <a href="/checkbook/">raw transaction ledger</a>
       &middot; <a href="/data/checkbook_view.json">view <abbr class="g" title="JavaScript Object Notation (data file)">JSON</abbr></a>
       &middot; <a href="/data/checkbook_fund_provenance.json">fund &rarr; vote mapping</a>
       &middot; <a href="#about">how this is computed</a>
@@ -485,7 +465,7 @@
 
     <div class="stack-wrap">
       <div class="stack-bar" role="navigation" aria-label="Jump to a bucket">
-        <a class="seg ballot" href="#bucket-ballot" data-flex-from="buckets[key:ballot].share" style="flex: 6.7"><span style="padding:0 4px" data-fill="buckets[key:ballot].share|pct-tight">6.7%</span></a>
+        <a class="seg b-ballot" href="#bucket-ballot" data-flex-from="buckets[key:ballot].share" style="flex: 6.7"><span data-fill="buckets[key:ballot].share|pct-tight">6.7%</span></a>
         <a class="seg tm"     href="#bucket-tm"     data-flex-from="buckets[key:town_meeting].share" style="flex: 54.3">Town Meeting&nbsp;&middot;&nbsp;<span data-fill="buckets[key:town_meeting].share|pct">54.3%</span></a>
         <a class="seg enter"  href="#bucket-ratepayer" data-flex-from="buckets[key:ratepayer].share" style="flex: 31.3">Ratepayer&nbsp;&middot;&nbsp;<span data-fill="buckets[key:ratepayer].share|pct">31.3%</span></a>
         <a class="seg grant"  href="#bucket-statefed" data-flex-from="buckets[key:state_fed].share" style="flex: 5.2"><span data-fill="buckets[key:state_fed].share|pct-tight">5.2%</span></a>
@@ -493,11 +473,11 @@
         <a class="seg other"  href="#bucket-other" data-flex-from="buckets[key:other].share" style="flex: 1.2"></a>
       </div>
       <div class="stack-legend">
-        <span><i class="sw-ballot"></i> Ballot, you voted directly</span>
+        <span><i class="sw-ballot"></i> Debt exclusions (voted at the ballot)</span>
         <span><i class="sw-tm"></i> Town Meeting, you, in person, if you went</span>
         <span><i class="sw-enter"></i> Ratepayer, not your tax bill</span>
         <span><i class="sw-grant"></i> State / federal grants</span>
-        <span><i class="sw-rev"></i> Revolving (user fees)</span>
+        <span><i class="sw-rev"></i> Revolving (recreation / trash fees)</span>
         <span><i class="sw-other"></i> Trusts &amp; donations</span>
       </div>
     </div>
@@ -507,7 +487,7 @@
       <!-- BALLOT -->
       <article class="choice" id="bucket-ballot">
         <span class="accent ballot"></span>
-        <h3 class="title">Voted by you, at the ballot</h3>
+        <h3 class="title">Debt exclusions (voted at the ballot)</h3>
         <div class="amt"><span data-fill="buckets[key:ballot].amount|usd">$6.73M</span><small><span data-fill="buckets[key:ballot].share|pct">6.7%</span> of FY26 spend</small></div>
         <p class="who"><b>Who chose this:</b> Marblehead voters at past ballot elections, approving debt exclusions to fund specific capital projects outside Proposition 2&frac12;.</p>
         <div class="whenset"><span class="whentag">When set</span><span><b>Past ballot elections (2015&ndash;2025).</b> Once a debt exclusion passes, the bond term locks payments in for 10&ndash;30 years. FY26 is the year on the amortization schedule, not the year of the decision.</span></div>
@@ -634,7 +614,7 @@
         <!-- The honesty box: the carve-out inside this bucket -->
         <div class="subbucket" id="tm-carveout">
           <h4>Choice qualifier: essentially none of this <span data-fill="gf_town_carveout.total|usd">$43.91M</span> was a fresh Town Meeting decision this year</h4>
-          <p>Inside <b>General Fund &ndash; Town</b>, <b><span data-fill="gf_town_carveout.fixed_total|usd">$37.63M</span> (<span data-fill="gf_town_carveout.fixed_share|pct">86%</span>)</b> was set by outside boards or past ballots, <b><span data-fill="gf_town_carveout.admin_contracts_total|usd">$4.43M</span> (<span data-fill="gf_town_carveout.admin_contracts_share|pct">10%</span>)</b> is multi-year contracts the Town Administrator signed in prior years (trash, <abbr class="g" title="Information Technology">IT</abbr>/SaaS, dental, deferred-comp admin, audit, legal), and <b><span data-fill="gf_town_carveout.other_recurring_total|usd">$1.85M</span> (<span data-fill="gf_town_carveout.other_recurring_share|pct">4%</span>)</b> is recurring professional services, refunds, commodities, and interfund transfers. The portion that was actually a fresh choice at the May 2025 Annual Town Meeting: close to zero.</p>
+          <p>Inside <b>General Fund &ndash; Town</b>, <b><span data-fill="gf_town_carveout.fixed_total|usd">$37.63M</span> (<span data-fill="gf_town_carveout.fixed_share|pct">86%</span>)</b> was set by outside boards or past ballots, <b><span data-fill="gf_town_carveout.admin_contracts_total|usd">$4.43M</span> (<span data-fill="gf_town_carveout.admin_contracts_share|pct">10%</span>)</b> is multi-year contracts the Town Administrator signed in prior years (trash, <abbr class="g" title="Information Technology">IT</abbr>/SaaS, dental, deferred-comp admin, audit, legal), and <b><span data-fill="gf_town_carveout.other_recurring_total|usd">$1.85M</span> (<span data-fill="gf_town_carveout.other_recurring_share|pct">4%</span>)</b> is recurring professional services, refunds, commodities, and interfund transfers. The portion that was actually a fresh choice at the May 2025 Annual Town Meeting was close to zero. Town Meeting could in principle add new spending from the floor, but adding to a balanced budget requires either cutting another line, drawing on Free Cash or Stabilization, or authorizing a new revenue source, and none of that happened materially in May 2025.</p>
 
           <div class="cstack" role="img" aria-label="Composition of GF-Town vendor spend by what locked it in">
             <div class="cseg fixed a"   data-flex-from="gf_town_carveout.segments[key:gic_insurance].share" style="flex: 33.4">GIC&nbsp;<span data-fill="gf_town_carveout.segments[key:gic_insurance].share|pct-tight">33%</span></div>
@@ -757,7 +737,7 @@
       <!-- REVOLVING -->
       <article class="choice" id="bucket-revolving">
         <span class="accent rev"></span>
-        <h3 class="title">Revolving funds (paid by users of the service)</h3>
+        <h3 class="title">Revolving funds: recreation programs, commercial trash, similar fee-funded services</h3>
         <div class="amt"><span data-fill="buckets[key:revolving].amount|usd">$1.28M</span><small><span data-fill="buckets[key:revolving].share|pct">1.3%</span> of FY26 spend</small></div>
         <p class="who"><b>Who chose this:</b> Town Meeting authorizes each revolving fund under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section53E1~2">MGL c.44 &sect;53E&frac12;</a>. The dollars come from program fees, not tax revenue, and can only be spent on that program.</p>
         <div class="whenset"><span class="whentag">When set</span><span><b>Re-authorized at each Annual Town Meeting.</b> Each revolving fund's spending cap and purpose has to be renewed annually by vote. The actual cash comes in as participating businesses or recreation users pay fees.</span></div>
@@ -786,7 +766,7 @@
   <aside class="news" id="snow-overrun">
     <div class="tag">A choice still to be made</div>
     <h3>Snow Removal is +$582K over its FY26 appropriation (654% overrun)</h3>
-    <p>Town Meeting voted the original snow appropriation last May; this winter cost more than planned. Under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section33B">MGL c.44 &sect;33B</a>, an overrun has to be closed by a <b>supplemental appropriation at a Special Town Meeting</b>. The vote isn't &ldquo;should we have plowed&rdquo;, the plowing already happened. It's about which other line gets reduced, or whether <a href="/where-has-the-money-gone.html#free-cash">free cash</a> absorbs it. see the Snow Removal line in the live ledger &rarr;</p>
+    <p>Town Meeting voted the original snow appropriation last May; this winter cost more than planned. Under <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter44/Section33B">MGL c.44 &sect;33B</a>, an overrun has to be closed by a <b>supplemental appropriation at a Special Town Meeting</b>. The vote isn't &ldquo;should we have plowed&rdquo;, the plowing already happened. It's about which other line gets reduced, or whether <a href="/where-has-the-money-gone.html#free-cash">free cash</a> absorbs it. <a href="/checkbook/#bva-chart">see the Snow Removal department on the Budget vs actual chart &rarr;</a></p>
   </aside>
 
   <!-- WHAT MOVED panel -->
@@ -794,7 +774,6 @@
     <h3>What moved since the last snapshot (Jun 2 &rarr; Jun 9)</h3>
     <p><b>+$3.22M</b> in new payments across <b>1,181</b> new ledger rows. <b>837</b> prior rows were edited or reversed (normal end-of-month reconciliation). The motion concentrated in fewer than 10 vendors. <span class="src" style="display: block; margin-top: 6px;">Sources: <a href="/data/checkbook_FY26_2026-06-09.csv">Jun 9 snapshot</a> vs. the Jun 2 snapshot (in <a href="https://github.com/agbaber/marblehead/commits/main/data">commit history</a>).</span></p>
     <ul>
-      <li><span><span class="name">Town of Marblehead</span><span class="src">interfund / payroll-adjacent transfers, 863 rows</span></span><span class="v">+$1.37M</span></li>
       <li><span><span class="name">Berkshire Wind Power Cooperative</span><span class="src">Light Dept wholesale, ratepayer not tax</span></span><span class="v">+$1.05M</span></li>
       <li><span><span class="name">Boston Higashi School</span><span class="src">out-of-district SpEd tuition placement</span></span><span class="v">+$0.15M</span></li>
       <li><span><span class="name">Melmark New England</span><span class="src">out-of-district SpEd tuition placement</span></span><span class="v">+$0.10M</span></li>
@@ -870,37 +849,4 @@
     <p>All bucket totals are real, computed from the <code>checkbook_FY26_2026-06-09.csv</code> ledger. Fund-to-vote provenance is in <code>data/checkbook_fund_provenance.json</code> (top 20 funds, 97.8% of paid spend). Vote citations cross-reference <code>data/dor_debt_exclusion_all.csv</code> (MA DOR Proposition 2&frac12; Debt Exclusion Votes) for the ballot bucket.</p>
     <p>Only <b>14.3% of vendor checks out of General Fund &ndash; Town</b> are subject to year-to-year Town Meeting discretion. The other 85.7% (GIC + pension + bond debt + state assessments) is set by outside boards or prior contracts. Payroll, the largest discretionary line, is paid via a separate system and isn't in the ledger.</p>
   </section>
-
-</main>
-
-<script src="checkbook-view.js"></script>
-<script>
-  (function () {
-    var html = document.documentElement;
-    var btn = document.getElementById('theme-toggle');
-    var saved = null;
-    try { saved = localStorage.getItem('mhd-sketch-theme'); } catch (e) {}
-    if (saved === 'dark' || saved === 'light') html.setAttribute('data-theme', saved);
-
-    function label() {
-      var resolved = html.getAttribute('data-theme');
-      if (!resolved) {
-        resolved = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
-      btn.textContent = resolved === 'dark' ? 'Light' : 'Dark';
-    }
-    label();
-    btn.addEventListener('click', function () {
-      var current = html.getAttribute('data-theme');
-      if (!current) {
-        current = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
-      var next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      try { localStorage.setItem('mhd-sketch-theme', next); } catch (e) {}
-      label();
-    });
-  })();
-</script>
-</body>
-</html>
+</div>
